@@ -2,12 +2,13 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-22T00:32:29Z"
+  "at": "2026-10-23T06:28:14Z"
  },
  "lists": "css",
  "title": "Math Inquirers P3: Lesson 8 – Angle and Line Detectives",
  "order": [
   "p3l8-title",
+  "p3l8-tool",
   "p3l8-warmcheck",
   "p3l8-warm1",
   "p3l8-warm2",
@@ -21,7 +22,6 @@
   "p3l8-key",
   "p3l8-break",
   "p3l8-we1",
-  "p3l8-try1",
   "p3l8-ws1",
   "p3l8-ws1ans",
   "p3l8-teachgrid",

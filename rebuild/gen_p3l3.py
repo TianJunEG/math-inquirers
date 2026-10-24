@@ -31,7 +31,7 @@ def talk_slide(sid,q,notes):
     body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p(q,42,600))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38,600))
     return sec(sid,'70–80 MIN',body,notes)
 def exit_slide(sid,q,notes):
-    body=h2('Exit ticket')+card(chip('EXIT TICKET')+p(q,46,600))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
+    body=h2('Exit ticket')+card(chip('EXIT TICKET')+p(q,46,600))+card(p('Write your answer on a slip of paper. Tick it when your tutor shows the answer. Then collect your stamp in your inquiry journal.',34,400))
     return sec(sid,'80–90 MIN',body,notes)
 def check_rows(sid,time,title,rows,notes,lw=210,gap=128,size=38):
     body=h2(title)
@@ -90,27 +90,27 @@ body+=pin(128,340,1664,svgwrap('Numbers 1 to 40 with Buzz on 7, 14, 21, 28 and 3
 body+=pin(128,580,1664,p('The 7s are on the strip: 7, 14, 21, 28, 35. Missed one? That is a tricky one. Let us check on the strip together.',36,700),None,WHITE,20,'20px 28px')
 body+=answer(128,740,1664,'7s Buzz numbers up to 40: 7, 14, 21, 28, 35')
 put('p3l3-warm1',sec('p3l3-warm1','0–5 MIN',body,
- 'Minutes 5 to 8. Buzz! Count round the group (online: in the order of the names on screen) from 1 to 40. Any number in the 7 times table is replaced by an open palm held up to the camera (and the word "Buzz" if you like): the 7s strip stays on the screen, so nobody has to remember the table. Play it light and kind. If someone misses a Buzz or says the number, say "That is a tricky one, let us check on the strip" and carry on from that number; never start again from 1 and never name who missed. '
+ 'Minutes 5 to 8. Buzz! Play TWO short rounds only: round 1 counts from 1 to 40 starting with the first name on screen, round 2 starts from a different child. Count round the group (online: in the order of the names on screen) from 1 to 40. Any number in the 7 times table is replaced by an open palm (a Buzz) (and the word "Buzz" if you like): the 7s strip stays on the screen, so nobody has to remember the table. Play it light and kind. If someone misses a Buzz or says the number, say "That is a tricky one, let us check on the strip" and carry on from that number; never start again from 1 and never name who missed. '
  'Click to show the 7s Buzz numbers at the end and read them together. Only the 7s are played here (the 6s and 8s rounds are not needed today). '
  'Ask volunteers: "What do you notice about the Buzz numbers?" (they go up by 7 each time; the last digits are 7, 4, 1, 8, 5). Watch for children who count on their fingers from 0 each time: encourage them to add 7 to the last Buzz.'))
 
 # ---------- 3 warm2 ----------
-qs=[('1.','6 × 7 = ?','42'),('2.','9 × 9 = ?','81'),('3.','8 × ? = 64','8'),('4.','Which is bigger: 6 × 8 or 7 × 7?','7 × 7, by 1')]
+qs=[('1.','6 × 7 = ?','42'),('2.','9 × 9 = ?','81'),('3.','8 × ? = 64','8')]
 body=h2('Quick questions')+''.join(qrow(128,260+i*150,1250,a,b,40) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,260+i*150,372,c) for i,(a,b,c) in enumerate(qs))
-put('p3l3-warm2',sec('p3l3-warm2','5–10 MIN',body,'Minutes 5 to 10. Children write on whiteboards and show together, then click to reveal. For each one ask: "How did you work it out? Which fact did you use?" Answers: 1) 42  2) 81  3) 8  4) 7 × 7 = 49 is 1 more than 6 × 8 = 48. For 4, ask: "Can you see why they are so close?" (Anyone may notice 6 × 8 is one less than 7 × 7; do not explain it yet.)'))
+put('p3l3-warm2',sec('p3l3-warm2','5–10 MIN',body,'Minutes 5 to 10. Children write on whiteboards and show together, then click to reveal. For each one ask: "How did you work it out? Which fact did you use?" Answers: 1) 42  2) 81  3) 8. Three quick questions only. The question "Which is bigger: 6 × 8 or 7 × 7?" (7 × 7 = 49 is 1 more than 6 × 8 = 48) has moved to talk time.'))
 
 # ---------- 4 explore1 ----------
 pic=svgwrap('Three digit circles: the 6 times table joined as a star, and empty circles for the 4s and 8s',1500,330,
-    digit_circle(250,140,96,6,'6s: 6, 2, 8, 4, 0')+digit_circle(750,140,96,None,'4s: your turn')+digit_circle(1250,140,96,None,'8s: your turn'))
-put('p3l3-explore1',explore1('p3l3-explore1',['Draw 10 dots round a circle. Label them 0 to 9, like a clock.','Write the 6 times table. Circle the last digit of each answer.','Join the last digits in order: 6 → 2 → 8 → 4 → 0 → back to 6.','Now do the same for the 4s and the 8s. Compare the shapes.'],pic,
- 'Minutes 10 to 15. Pairs work with: dot paper or plain paper, coloured pencils, a ruler. Each pair draws three digit circles. Model the first two lines of the 6s on the slide: 6 × 1 = 6, so start at 6; 6 × 2 = 12, last digit 2, so draw a line from 6 to 2. Then pairs finish the 6s and do the 4s and the 8s with a different colour each. '
- 'Online: children draw on paper and hold the circles up to the camera. Early finishers: try the 7s and the 3s (they make the same 10-pointed star, which uses every digit).'))
+    digit_circle(250,140,96,6,'6s: 6, 2, 8, 4, 0')+digit_circle(750,140,96,None,'4s: your turn')+digit_circle(1250,140,96,None,'8s: Go further'))
+put('p3l3-explore1',explore1('p3l3-explore1',['Draw 10 dots round a circle. Label them 0 to 9, like a clock.','With your tutor: write the 6 times table and circle the last digit of each answer.','Join the last digits in order: 6 → 2 → 8 → 4 → 0 → back to 6.','Now make ONE more circle yourselves: the 4s. Compare the two shapes.'],pic,
+ 'Minutes 10 to 15. Pairs work with: dot paper or plain paper, coloured pencils, a ruler. Each pair draws three digit circles. Do the whole 6s circle WITH the class on the shared screen: 6 × 1 = 6, so start at 6; 6 × 2 = 12, last digit 2, so draw a line from 6 to 2, and so on (about 2 minutes). Then each pair makes ONE more circle, the 4s, in a different colour (about 6 minutes of pair work). The 8s and the comparison with the 4s and 6s are the Go further card or take-home. '
+ 'Online: children draw circles on paper and describe them aloud. Ready for more: the Go further card on the slide (the 8s, then the 5s and the 9s). Or try the 7s and the 3s (they make the same 10-pointed star, which uses every digit).'))
 
 # ---------- 5 explore2 ----------
 eq=[('1.','Which tables made the same shape?'),('2.','Why does the 6s shape never touch an odd digit?'),('3.','Predict: which table makes the same shape as the 3s? Test it.')]
 put('p3l3-explore2',sec('p3l3-explore2','15–25 MIN',h2('Explore: talk about it')+numbered(eq,40),
- 'Minutes 15 to 25. Let pairs keep working, then gather them for these three questions. Take ideas before giving any answer and ask "How could we test that?" '
- 'Answers: 1) The 4s and the 6s make the same 5-pointed star, going round opposite ways (4, 8, 2, 6, 0 and 6, 2, 8, 4, 0). The 2s and the 8s make the same 5-sided shape. '
+ 'Minutes 15 to 25. Gather the pairs for these three questions. Take ideas before giving any answer and ask "How could we test that?" '
+ 'Answers: 1) The 4s and the 6s make the same 5-pointed star, going round opposite ways (4, 8, 2, 6, 0 and 6, 2, 8, 4, 0). (Pairs who also did the 8s: the 2s and the 8s make the same 5-sided shape.) '
  '2) Every answer in the 6 times table is even: 6 groups can always be put into 3 pairs of groups, so nothing is left over. '
  '3) The 7s, because 3 + 7 = 10, just like 4 + 6 and 2 + 8. Let a pair test it on a new circle. Keep the circles: we use last digits again in the teaching.'))
 
@@ -128,17 +128,15 @@ put('p3l3-teach1',sec('p3l3-teach1','25–27 MIN',body,
  'Think-aloud: "Look at the 8 times table: 8, 16, 24, 32, 40, 48 … The last digits go 8, 6, 4, 2, 0, then again. So the pattern repeats every 5." Do not teach the 9s patterns here: children discover them in worksheet Q1.'))
 
 # ---------- 7 we1 ----------
-body=h2('Worked example: the last digit')+card(p('What is the last digit of 8 × 23? Do not work out the whole answer.',44,700))
-body+=step(1,'Split 23 into 20 and 3.  8 × 20 = 160 ends in 0.',top=420,size=38)
-body+=step(2,'So only 8 × 3 decides the last digit.  8 × 3 = 24 ends in 4.',top=530,size=38)
-body+=step(3,'The last digit of 8 × 23 is 4.',top=640,size=38)
-body+=step(4,'Check: 8 × 23 = 160 + 24 = 184.  It ends in 4 ✓',top=750,size=38)
-put('p3l3-we1',sec('p3l3-we1','27–28 MIN',body,'Click to reveal each step. Before each click ask the group to predict it. Stress step 2: "Only the ones digit of 23 matters for the last digit." Think-aloud: "8 × 20 ends in 0, so only 8 × 3 matters. 8 × 3 = 24, so 8 × 23 ends in 4. Check: 8 × 23 = 184. Yes." Then ask: "What is the last digit of 8 × 33? 8 × 43?" (still 4).'))
 
 # ---------- 8 try1 ----------
-put('p3l3-try1',try_slide('p3l3-try1','28–29 MIN','Your turn: last digits','Only the ones digit matters. Then check by working it out.',
- [('a','Last digit of 6 × 14?','4'),('b','Last digit of 8 × 17?','6'),('c','Last digit of 9 × 12?','8')],
- 'Whiteboards, hold up together, then click. a) 6 × 4 = 24, so 4 (6 × 14 = 84). b) 8 × 7 = 56, so 6 (8 × 17 = 136). c) 9 × 2 = 18, so 8 (9 × 12 = 108). Ask a child to explain c out loud using the words "only the ones digit".'))
+body=h2('The last digit: only the ones digit matters')
+body+=pin(128,230,1664,p('Example: the last digit of 8 × 23?  8 × 20 ends in 0, so only 8 × 3 = 24 matters. It ends in 4.  Check: 8 × 23 = 184 ✓',36,700),None,SOFT,20,'22px 30px')
+body+=pin(128,430,1664,p('Your turn. Write it, say the answer together on three, then click.',34,600,MUTED),None)
+for i_,(a_,b_,c_) in enumerate([('a','Last digit of 6 × 14?','4'),('b','Last digit of 8 × 17?','6'),('c','Last digit of 9 × 12?','8')]):
+    body+=qrow(128,510+i_*130,1250,a_,b_,40)+answer(1420,510+i_*130,372,c_)
+put('p3l3-try1',sec('p3l3-try1','28–29 MIN',body,
+ 'Worked example and your turn in one slide (the old separate worked-example slide was merged here). Think-aloud: "8 × 20 ends in 0, so only 8 × 3 matters. 8 × 3 = 24, so 8 × 23 ends in 4. Check: 8 × 23 = 184. Yes." Stress: "Only the ones digit of 23 matters for the last digit." Ask: "What is the last digit of 8 × 33? 8 × 43?" (still 4). Then whiteboards, say the answer together on three, then click. a) 6 × 4 = 24, so 4 (6 × 14 = 84). b) 8 × 7 = 56, so 6 (8 × 17 = 136). c) 9 × 2 = 18, so 8 (9 × 12 = 108). Ask a child to explain c out loud using the words "only the ones digit".'))
 
 # ---------- 9 teach2: split an array ----------
 arr=svgwrap('An array of 6 rows of 8 dots split into 5 rows and 1 row',760,400,dot_array(6,8,5,40,34,56,18,'5 × 8','1 × 8'))
@@ -192,7 +190,7 @@ body+=step(1,'63 can only be 7 × 9. 72 can only be 8 × 9. They share the first
 body+=step(2,'Then the rows are 8 (8 × 9 = 72) and 7 (7 × 9 = 63).',left=800,top=420,width=932,size=34)
 body+=step(3,'42 = 7 × 6, so the second column is 6.',left=800,top=530,width=932,size=34)
 body+=step(4,'Fill the gap: 8 × 6 = 48. Check every number ✓',left=800,top=640,width=932,size=34)
-put('p3l3-teachgrid',sec('p3l3-teachgrid','54–56 MIN',body,'Teach before worksheet page 2 (Q4 is a 3 by 3 grid puzzle). Ask first: "Which number can be made in only ONE way with numbers from 1 to 10?" Children list factor pairs: 72 = 8 × 9 only; 63 = 7 × 9 only; 42 = 6 × 7 only. Click order: steps 1 to 3, then the finished grid fades in, then step 4. On the worksheet the hint gives the starting facts (81 = 9 × 9 and 56 = 7 × 8), and Q4 is marked (if time).'))
+put('p3l3-teachgrid',sec('p3l3-teachgrid','54–56 MIN',body,'Teach before worksheet page 2 (Q4 is a 3 by 3 grid puzzle). Ask first: "Which number can be made in only ONE way with numbers from 1 to 10?" Children list factor pairs: 72 = 8 × 9 only; 63 = 7 × 9 only; 42 = 6 × 7 only. Click order: steps 1 to 3, then the finished grid fades in, then step 4. On the worksheet the hint gives the starting facts (81 = 9 × 9 and 56 = 7 × 8), and Q4 is marked (if time): show this slide quickly, and only children who start Q4 need it. Children who skip Q4 can use the time to start Q5.'))
 
 # ---------- 17 teach list ----------
 LW=[170,280,190]
@@ -213,7 +211,7 @@ body+=step(3,'Add the digits: 2 + 1 = 3 ✓   (42 → 6,  63 → 9,  84 → 12) 
 put('p3l3-teachboth',sec('p3l3-teachboth','57–58 MIN',body,'Teach before worksheet Q6. Strategy: list the numbers for ONE clue in order, then test the other clues one at a time. Ask: "Why list the 7s, not the 3s?" (There are fewer of them, so the list is shorter.) Children may notice 21, 42, 63, 84 go up in 21s. Do not do Q6 (6 and 8) here.'))
 
 # ---------- 19-20 worksheet page 2 ----------
-put('p3l3-ws2',ws_preview('p3l3-ws2','58–66 MIN','Worksheet page 2: on your own',[('Q4','(if time) Grid puzzle. The hint gives the two starting facts: 81 = 9 × 9 and 56 = 7 × 8.'),('Q5','Every way to put 36 chairs in equal rows. Go in order. Only write the ways that work.'),('Q6','If time: number riddle. List one clue, then test the others.')],'Ready for more? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up next lesson. For Q4, if a child is stuck after a few minutes, ask "Which number is in only one times table up to 10 × 10?" (81).'))
+put('p3l3-ws2',ws_preview('p3l3-ws2','58–66 MIN','Worksheet page 2: on your own',[('Q4','(if time) Grid puzzle. The first row number (7) is given. Start with 56 ÷ 7 and 81 = 9 × 9.'),('Q5','Every way to put 36 chairs in equal rows. Go in order. Only write the ways that work.'),('Q6','If time: number riddle. List one clue, then test the others.')],'Ready for more? Stretch and Challenge come next.','Children work alone. Q4 is an (if time) item but comes first on the page: say that any child may start with Q5 (the compulsory question) and come back to Q4. Page 2 is a little longer in this lesson so that Q5 can be done without hurry. Note who needs a short catch-up next lesson. For Q4, if a child is stuck after a few minutes, ask "Which number is in only one times table up to 10 × 10?" (81).'))
 put('p3l3-ws2ans',check_rows('p3l3-ws2ans','66–68 MIN','Page 2: check together',[
  ('Q4','Rows 7, 9, 6.   Columns 8, 6, 9.'),
  ('Q4','56, 42, 63  /  72, 54, 81  /  48, 36, 54'),
@@ -258,11 +256,11 @@ for i,t in enumerate(['Last digits repeat every 5: 6, 2, 8, 4, 0.','So 8 comes o
 put('p3l3-chwalk',sec('p3l3-chwalk','Challenge',body,'Use after pairs have tried. Q1: the same idea as the worksheet grid: find the number with only one factor pair. Q2: children who wrote all 20 answers are right too; ask them to look for the shortcut. 6 × 13 = 78 and 6 × 18 = 108.'))
 
 # ---------- 25-26 talk, exit ----------
-put('p3l3-talk',talk_slide('p3l3-talk','Why is every answer in the 6 times table even, but the 7 times table has odd and even answers?','Minutes 70 to 80. Pairs talk for 2 minutes, then share. Praise the reasons, not only the answers. Expected: 6 groups can always be put into 3 pairs of groups, so nothing is left over and the answer is even. With 7 groups one group has no partner, so when each group is odd (7 × 3 = 21) the answer is odd. Use counters in 6 or 7 groups to show it.'))
+put('p3l3-talk',talk_slide('p3l3-talk','Why is every answer in the 6 times table even, but the 7 times table has odd and even answers?','Minutes 70 to 80. Pairs talk for 2 minutes, then share. Praise the reasons, not only the answers. Extra question (moved here from the quick questions): "Which is bigger, 6 × 8 or 7 × 7? Can you see why they are so close?" (49 is 1 more than 48; do not explain it fully.) Expected: 6 groups can always be put into 3 pairs of groups, so nothing is left over and the answer is even. With 7 groups one group has no partner, so when each group is odd (7 × 3 = 21) the answer is odd. Use counters in 6 or 7 groups to show it.'))
 put('p3l3-exit',exit_slide('p3l3-exit','What is the last digit of 6 × 47? Explain how you know without working out 6 × 47.','Minutes 80 to 90. Answer: 2. Only 6 × 7 = 42 decides the last digit, because 6 × 40 ends in 0. (6 × 47 = 282.) Extension: draw last-digit circles for all the tables from 1 to 9 and group the tables that make the same shape.'))
 
 # ---------- write ----------
-order=['p3l3-title','p3l3-warm1','p3l3-warm2','p3l3-explore1','p3l3-explore2','p3l3-teach1','p3l3-we1','p3l3-try1','p3l3-teach2','p3l3-we2','p3l3-try2','p3l3-key','p3l3-break','p3l3-ws1','p3l3-ws1ans','p3l3-teachlist','p3l3-teachgrid','p3l3-teachboth','p3l3-ws2','p3l3-ws2ans','p3l3-stretch','p3l3-challenge','p3l3-chdiag','p3l3-chwalk','p3l3-talk','p3l3-exit']
+order=['p3l3-title','p3l3-warm1','p3l3-warm2','p3l3-explore1','p3l3-explore2','p3l3-teach1','p3l3-try1','p3l3-teach2','p3l3-we2','p3l3-try2','p3l3-key','p3l3-break','p3l3-ws1','p3l3-ws1ans','p3l3-teachlist','p3l3-teachgrid','p3l3-teachboth','p3l3-ws2','p3l3-ws2ans','p3l3-stretch','p3l3-challenge','p3l3-chdiag','p3l3-chwalk','p3l3-talk','p3l3-exit']
 import p3_gifted; order[:]=p3_gifted.add(S,order,3)  # close-the-gaps: warm-up check + look-back slides
 assert set(order)==set(S), set(order)^set(S)
 for f in os.listdir(os.path.join(D,'slides')):

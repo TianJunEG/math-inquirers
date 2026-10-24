@@ -1,6 +1,6 @@
 # Final stories, Level P2 (ages 7-9)
 
-Lessons 2 (Gauss) and 7 (Ahmes) are kept unchanged from p2.json (only the story_words count was added). Lessons 1, 3, 4, 5, 6, 8, 9, 10 are new. Women in the level: Shakuntala Devi, Hertha Ayrton, Mary Somerville, Alicia Boole Stott (4 of 10). Countries: India 2 (Aryabhata, Shakuntala Devi), Britain 2 (Ayrton in England, Somerville in Scotland), and one each for Germany, Egypt, Italy, Ireland, Greece/Turkey (Miletus), Hungary. Centuries run from about 1550 BC to the 20th century.
+Lessons 2 (Gauss) and 7 (Ahmes) are kept unchanged from p2.json (only the story_words count was added). Lessons 1, 3, 4, 5, 6, 8, 9, 10 are new. Women in the level: Shakuntala Devi, Hertha Ayrton, Mary Somerville, Jean Pedersen (4 of 10). Countries: India 2 (Aryabhata, Shakuntala Devi), Britain 2 (Ayrton in England, Somerville in Scotland), and one each for Germany, Egypt, Italy, United States, Greece/Turkey (Miletus), Hungary. Centuries run from about 1550 BC to the 20th century.
 
 | L | Person | Years | Where | Link to lesson | Legend / confidence |
 |---|---|---|---|---|---|
@@ -11,7 +11,7 @@ Lessons 2 (Gauss) and 7 (Ahmes) are kept unchanged from p2.json (only the story_
 | 5 | Mary Somerville | 1780-1872 | Scotland (and later Italy) | The X and Y in her magazine stood for mystery numbers, just like the unknown numbers you find by working backwards today. | The magazine puzzle is an episode from her own memories, told in later accounts; the exact age is not certain. / medium |
 | 6 | Luca Pacioli | about 1447 - 1517 (sources differ) | Italy | Pacioli taught merchants to write down what they spent and what they had left, just like keeping track of money and change on Market Day. | none / medium |
 | 7 | Ahmes the scribe | about 1550 BC (date on the papyrus copy; sources differ) | Egypt | Ahmes's roll shows how people long ago wrote and used fractions, the same fractions you share and compare today. | none / medium |
-| 8 | Alicia Boole Stott | 1860-1940 | Ireland (born in Cork; later lived in England) | Alicia made solid shapes by joining flat pieces of card, the same idea as folding a net into a 3D shape. | none / medium |
+| 8 | Jean Pedersen | 1934-2016 | United States (born in Utah; worked in California) | Jean built solid shapes from flat paper, the same idea as folding a net into a 3D shape. | none / medium |
 | 9 | Thales of Miletus | about 624 - about 547 BC | Miletus, a Greek city (now in Turkey) | The story is about measuring a length by using a shadow and choosing the right time of day, which links to measuring length and telling the time. | A story told by later writers ... (historians cannot be sure it happened like this). / medium |
 | 10 | Paul Erdos | 1913-1996 | Hungary | Erdos shows that tricky problems are easier and more fun when you share ideas with a partner, which is how Challenge Day works. | none / high |
 
@@ -59,11 +59,11 @@ Try it: Share 1 loaf of bread equally among 4 children. What fraction of the loa
 Answer: Each child gets 1/4 of the loaf. Three children get 3/4 together.  
 Icon idea: A papyrus scroll with a bread loaf cut in 4 equal parts and a reed pen.
 
-**8. Alicia Boole Stott** (73 words)  
-Alicia Boole Stott was born in Cork, Ireland, in 1860. She never went to university. She learned from her mother and from geometry books. As a young woman she played with wooden cubes to think about shapes in new ways. Later she cut and joined cardboard to build models of very unusual shapes that are hard to draw. A Dutch mathematician, Pieter Schoute, saw her models and they worked together for many years.  
-Try it: A cube is built from flat square pieces. How many square faces does a cube have? How many edges does it have?  
-Answer: A cube has 6 square faces and 12 edges.  
-Icon idea: A hand-folded cardboard polyhedron with a flat net of squares beside it.
+**8. Jean Pedersen** (81 words)  
+Jean Pedersen was an American mathematician who loved making paper models of solid shapes. She was born in Utah in 1934 and taught at Santa Clara University in California, where she was the first woman to teach maths. She found that the five Platonic solids, such as the cube, can be braided from strips of paper. The writer Martin Gardner wrote about this in 1971. Later she wrote books about building your own polyhedra, which are solid shapes with flat faces.  
+Try it: Jean built cubes out of flat paper. How many square faces does a cube have, and how many edges? How many squares are in a net that folds into a cube?  
+Answer: A cube has 6 square faces and 12 edges. A net that folds into a cube has 6 squares.  
+Icon idea: A woven strip of paper folded into a small cube beside a flat net of six squares.
 
 **9. Thales of Miletus** (84 words)  
 Thales lived in the Greek city of Miletus, which is now in Turkey, about 2,600 years ago. A story told by writers who lived long after him says he measured the height of a pyramid in Egypt. He waited for the time of day when a person's shadow is as long as the person is tall. At that time the pyramid's shadow is as long as the pyramid is tall. (Historians cannot be sure it happened like this. None of his own writings survive.)  
@@ -84,7 +84,7 @@ Icon idea: Two overlapping speech-bubble shapes with a puzzle piece in the overl
 - Hertha Ayrton: the year she began the sand-ripple work differs (Britannica 1901, History Today 1903), so the story says "she studied". Who read her 1904 Royal Society paper aloud differs (History Today: her husband), so the story says "present". Her Hughes Medal (1906) and Girton maths study were left out because only one opened source covered each.
 - Mary Somerville: the magazine puzzle comes from her own later recollections as retold in a 19th-century sketch, a university women's-biography page and Encyclopedia.com. Her age is not given in the sketch (about 15 in Encyclopedia.com), so no age is stated. The "candles taken away" anecdote was left out as unverified.
 - Pacioli: dates differ (born about 1445-1448; death 1517, but one dictionary says 1571). Double-entry bookkeeping was an existing Venetian practice, not his invention. Sources say the Summa borrowed heavily from earlier writers, and Vasari accused him of plagiarising Piero della Francesca. These points are in the story only as "he wrote down what merchants already did".
-- Alicia Boole Stott: sources agree on the cardboard models, polytope, Schoute and the 1914 Groningen degree. Her models were of 3D cross-sections of 4D shapes, so the link to nets is a loose one, stated as "joining flat pieces of card". The story avoids saying she invented the polytopes (Schlafli found them earlier).
+- Jean Pedersen: her birthplace differs (Wikipedia: Salt Lake City; Santa Clara University notice: Provo), so the story says only Utah. The braided Platonic solids and the 1971 Martin Gardner column rest on Wikipedia; the Polya page (mi.sanu.ac.rs) confirms the polyhedron models in her office (1969 visit) and the SCU notice confirms polyhedral geometry and the first-woman firsts. The nets link is our reading: she made solids from flat paper, but no opened source says she used nets. Her death (2016) is only given as a date, no details.
 - Thales: no writing of his survives. The pyramid shadow story comes from Hieronymus (via Diogenes Laertius), Pliny and Plutarch, centuries later, and the three versions differ. It is labelled as a story. The Egypt link may be tradition.
 - Paul Erdos: papers (about 1,000 to 1,500) and collaborators (about 500 to 511) differ between sources, so the story says "more than 500" and "well over a thousand". The child-prodigy anecdotes (multiplying at age three, negative numbers) are from one obituary only and were left out. Prize amounts differ between sources, so none is stated.
 
@@ -96,3 +96,4 @@ Icon idea: Two overlapping speech-bubble shapes with a puzzle piece in the overl
 - Ramanujan (the old L1 choice) is kept elsewhere and cannot be reused.
 - Leibniz (binary digits) was considered for lesson 1 but was too abstract for age 7.
 - Emilie du Chatelet was rejected for the money lesson because her money story is about gambling.
+- Alicia Boole Stott (lesson 8, replaced): her cardboard models were 3D cross-sections of 4D shapes, so the link to nets and ordinary solid shapes was loose. Albrecht Durer (nets in his 1525 book; MacTutor and Wikipedia) was the stronger link but is a man, which would cut the women in the level from 4 to 3, so Pedersen was chosen.

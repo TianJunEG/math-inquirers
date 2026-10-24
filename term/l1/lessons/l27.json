@@ -1,0 +1,2871 @@
+{
+ "schema_version": 1,
+ "level": 1,
+ "ages": "6-8",
+ "look_back": {
+  "hardest": [
+   "counting on",
+   "the day before",
+   "dates on the month page",
+   "something else"
+  ],
+  "helped": [
+   "the day cards",
+   "the month page",
+   "checking my answer",
+   "I was not stuck"
+  ],
+  "next": [
+   "counting on from tomorrow",
+   "using the month page",
+   "explaining why",
+   "asking a question"
+  ]
+ },
+ "spare_time_rules": [
+  "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
+  "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+  "Never teach anything the next lesson needs. If the class is ahead, slow down: ask 'How do you know?' and let children explain, rather than rushing on."
+ ],
+ "id": "l1-t3-07",
+ "term": 3,
+ "lesson": 27,
+ "lesson_in_term": 7,
+ "title": "Calendar Detective",
+ "big_idea": "Days and weeks go round in a cycle of 7",
+ "child_idea": "After Sunday comes Monday again. A week is 7 days, so the same day comes back every 7 days, and we can count on to find a day or a date.",
+ "skill": "Cycles and counting on",
+ "spine": {
+  "main": "pattern",
+  "also": [
+   "actout"
+  ],
+  "role": "A",
+  "reason": "The week repeats every 7 days, so a day later or a week later follows the pattern; children act it out with the 7 day cards and the month page."
+ },
+ "moe": {
+  "strand": "Time: days of the week, weeks and dates (Primary 1 time and the process skills)",
+  "topics": [
+   "Time: days of the week and a week as 7 days (Primary 1 Time; days of the week are not a listed outcome in the syllabus pages for Primary 1: flagged for tutor review)",
+   "Counting on within a cycle and on a month page (number patterns, Primary 1, p. 31)",
+   "Choosing between counting on from tomorrow and the month page, and saying why (process skills, Primary 1)"
+  ],
+  "note": "Strand label for the tutor only. This is an added lesson (gap: time and calendar). Days of the week and dates are not a listed Primary 1 outcome (Primary 1 Time items are clock items), so the lesson is flagged for tutor review; no Primary 1 school paper in the sample tests the calendar. Start here is approachable: the days in order, the day before and after, three days later (no wrap), the number of days in a week and a week after a date on a month page. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only: 'two days after the day before yesterday', the 10th day from Monday, 3 weeks, a fortnight, the date of a day on a month page, every Wednesday of a month (the same weekday every 7 days), and 'Hundred Days Later' (100 days is 14 weeks and 2 days, so Monday plus 100 days is Wednesday; dividing by 7 with a left-over is a Primary 3 outcome, so the lesson says 14 weeks and 2 days over). Every lesson names a beyond item; Start here stays approachable. Do not describe the lesson as MOE-aligned. This lesson moved here from Term 3 Lesson 10 (owner decision X10-BEFORE, 23 Oct 2026); it replaces Fill the Grid, which is retired. Term 3 Lesson 10 has a calendar gate in Mi's Challenge Quest that reuses the Start here idea (days later, and a week on the month page). Contest tag (tutor only): day-of-the-week cycles; counting on; a week as a unit. Non-routine types (tutor only): a context fact (a week, a fortnight), a pattern (the cycle of 7), a logic puzzle (two days after the day before yesterday)."
+ },
+ "contest_moves": [
+  "day-of-the-week cycles: counting on round a cycle of 7, and a left-over after whole weeks",
+  "a logic puzzle with days: two days after the day before yesterday",
+  "a pattern on a month page: the same weekday every 7 days, every Wednesday of a month",
+  "a context fact as a unit: a week is 7 days and a fortnight is 14 days"
+ ],
+ "contest_where": "Think harder, Go further and the Investigation",
+ "objectives": [
+  "Put the days of the week in order, say the day before and the day after, and say that after Sunday comes Monday again.",
+  "Say the day 3 days later or 4 days later by counting on from tomorrow (not from today).",
+  "Read dates on a month page and say the date a week after, and use a week as a unit of 7 days.",
+  "Think harder: two days after the day before yesterday, the 10th day from Monday, 3 weeks and a fortnight, and the day of a date on a month page.",
+  "Go further: Hundred Days Later (a left-over after whole weeks), every Wednesday of a month, and the date 3 weeks later."
+ ],
+ "joining_cold": {
+  "remember": [
+   "Count in 7s along a row of the calendar from 3 (Term 2 Lesson 6, taught again with a calendar row)",
+   "1st to 10th (Term 2 Lesson 1, taught again with a picture)",
+   "The day cards in order, Monday to Sunday (taught again with 7 cards)"
+  ],
+  "assumes": "Only counting to 31. Nothing from earlier lessons is needed: the warm-up counts in 7s along a calendar row, says 1st to 10th and puts 7 day cards in order. The words week, fortnight, day before and days later are taught in Explore and the Mini-lesson.",
+  "holiday_topics_revisited": [
+   "Counting on in equal jumps (Count with the Frog)"
+  ],
+  "safe_to_miss": true,
+  "note": "Fairly safe to miss: no later lesson needs it, but Mi's Challenge Quest in Term 3 Lesson 10 has a gate on counting on from tomorrow and a week on the month page. A child who misses it watches the recording and does workbook pages 1 and 2 before the Quest. A child who joins here cold can follow: the lesson needs only counting to 31, and the warm-up counts in 7s along a calendar row, says 1st to 10th and puts 7 day cards in order."
+ },
+ "materials": {
+  "child": [
+   "Your Term 3 book: the calendar page, torn out along the dashed line, with the 7 day cards cut out by a grown-up beforehand (the month page is not cut)",
+   "No cutting? Write the 7 days on 7 small pieces of paper. A calendar from the house works instead of the month page",
+   "A pencil, a rubber and spare paper"
+  ],
+  "tutor": [
+   "The slide deck",
+   "Your own day cards and a month page to show on camera, if you wish",
+   "A visible clock"
+  ],
+  "kit_pages": [
+   "Calendar page (page 6): a month page with 31 days that starts on a Wednesday (not cut) and 7 day cards, Monday to Sunday, for a grown-up to cut out. No year and no public holidays are printed"
+  ],
+  "ruler": false,
+  "notes": "No ruler is needed. Nothing needs to be bought. Small pieces stay on the table: nothing goes in the mouth or ears; keep them away from younger brothers and sisters. No matches, toothpicks or anything sharp. Nobody cuts during the lesson; a grown-up cut the cards beforehand. The month is made up: it is not a real month of a real year.",
+  "kit_contract": [
+   {
+    "piece": "day cards (Monday to Sunday)",
+    "supplied": 7,
+    "max_used": 7,
+    "used_by": [
+     "explore",
+     "mini"
+    ]
+   },
+   {
+    "piece": "month page (not cut)",
+    "supplied": 1,
+    "max_used": 1,
+    "used_by": [
+     "explore",
+     "mini",
+     "S5",
+     "T4",
+     "G2"
+    ]
+   }
+  ]
+ },
+ "timing": {
+  "parts": [
+   {
+    "id": "opening",
+    "title": "Opening",
+    "start": 0,
+    "end": 2
+   },
+   {
+    "id": "remember",
+    "title": "Remember warm-up",
+    "start": 2,
+    "end": 8
+   },
+   {
+    "id": "sneak",
+    "title": "Sneak-peek puzzles",
+    "start": 8,
+    "end": 12
+   },
+   {
+    "id": "explore",
+    "title": "Explore",
+    "start": 12,
+    "end": 24
+   },
+   {
+    "id": "mini",
+    "title": "Mini-lesson",
+    "start": 24,
+    "end": 34
+   },
+   {
+    "id": "break",
+    "title": "Brain break",
+    "start": 34,
+    "end": 38
+   },
+   {
+    "id": "work",
+    "title": "Workbook",
+    "start": 38,
+    "end": 70
+   },
+   {
+    "id": "talk",
+    "title": "Talk time",
+    "start": 70,
+    "end": 76
+   },
+   {
+    "id": "exit",
+    "title": "Exit ticket",
+    "start": 76,
+    "end": 82
+   },
+   {
+    "id": "look",
+    "title": "Look-back",
+    "start": 82,
+    "end": 84
+   },
+   {
+    "id": "flex",
+    "title": "Flex time and goodbye",
+    "start": 84,
+    "end": 90
+   }
+  ],
+  "optional_slide": "s-opt",
+  "include_rules": false,
+  "notes": "Opening is 2 minutes. Explore has 12 minutes: the day cards in order, counting on round the cycle, a week on the month page, and what we noticed. The mini-lesson has 10: days later, the day before, a week and a fortnight on the month page. The workbook has 32 minutes: Start here takes a middle child about 17 minutes, so pages 3 to 5 are for home for most children. The exit ticket is done live (E1 to E3). The last 6 minutes are the standing buffer; nothing new is started in it.",
+  "skip_order": [
+   "In a slow class the workbook part runs over: take the time from the 5-minute flex buffer and shorten choice time (pages 3 to 5 can go home)",
+   "the optional slide and the Spare-time menu",
+   "the fortnight slide in the Mini-lesson"
+  ]
+ },
+ "sneak_peek": {
+  "q1": "Today is Monday. What day is it tomorrow?",
+  "q2": "Today is Thursday. What day is it 5 days later? I know because ___.",
+  "a1": "Tuesday.",
+  "a2": "Tuesday. Count on from tomorrow: Friday 1, Saturday 2, Sunday 3, Monday 4, Tuesday 5. After Sunday the days start again.",
+  "val1": "Tuesday"
+ },
+ "rec": {
+  "opening": {
+   "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook, your day cards. Pause or rewind any time.",
+   "action": "Gather your workbook, day cards, pencil, paper. Press play when ready."
+  },
+  "remember": {
+   "say": "Recording: join in! Say your answers out loud before I say them. Pause if you need longer.",
+   "action": "Play along. Say each answer out loud before the video does."
+  },
+  "sneak": {
+   "say": "Recording: pause now and try both puzzles on your paper. Guessing is fine. Press play for the next part.",
+   "action": "Pause. Try both puzzles on your own paper. A guess is fine."
+  },
+  "explore": {
+   "say": "Recording: pause now. Put your day cards in order, then count on round the week and find a date on the month page.",
+   "action": "Pause. Put the 7 day cards in order. Count on to find a day and a date."
+  },
+  "mini": {
+   "say": "Recording: keep watching and copy the examples. Rewind if you miss a step.",
+   "action": "Watch and copy the examples. Rewind any step you missed."
+  },
+  "break": {
+   "say": "Recording: stand up and join in! Say the days of the week and stamp once for each day.",
+   "action": "Stand up. Stamp softly for each day of the week, then sit down."
+  },
+  "exit": {
+   "say": "Recording: pause and do the exit ticket on your own. Then press play to check it.",
+   "action": "Pause. Do the exit ticket alone, then play to check it."
+  },
+  "work": {
+   "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
+   "action": "Pause. Do page 1, then play to check. Then page 2. Then choose a page to try."
+  },
+  "talk": {
+   "say": "Recording: pause. Tell a grown-up how you can tell what day it is 10 days later.",
+   "action": "Pause. Explain your answer to someone at home and show how you know."
+  },
+  "look": {
+   "say": "Recording: pause and fill in your look-back box. You can pass.",
+   "action": "Pause. Fill in the look-back box, or pass."
+  },
+  "flex": {
+   "say": "Recording: well done for finishing! Show a grown-up one thing you found out.",
+   "action": "Show a grown-up your workbook and tell them one thing you found out."
+  }
+ },
+ "slides": [
+  {
+   "id": "s-title",
+   "part": "opening",
+   "kind": "title",
+   "title": "Calendar Detective",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "TODAY WE WILL",
+     "items": [
+      "Find days and dates on a calendar.",
+      "Say what day it is, days later."
+     ]
+    }
+   ],
+   "note": "Lesson 7 of Term 3, 90 minutes. Objective: put the days in order, count on to find a day, and find a date a week later on a month page. Plain statement for families: days of the week are not a listed Primary 1 outcome; the days, the day before and after and a week as 7 days are approachable, and two days after the day before yesterday, a fortnight, every Wednesday of a month and Hundred Days Later go past the school Primary 1 syllabus on purpose. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 24, mini-lesson 24 to 34, brain break 34 to 38, workbook 38 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 84, flex time and goodbye 84 to 90 (the buffer: do not start anything new). Say the recording notice in one line: you and the screen only; a child may keep the camera off.",
+   "subtitle": "Days and weeks go round",
+   "mascot": {
+    "size": "l",
+    "say": "Hi, I'm Mi. Let's notice, test and explain why!"
+   }
+  },
+  {
+   "id": "s-rem1",
+   "part": "remember",
+   "kind": "light",
+   "title": "Count in 7s",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "seq",
+     "items": [
+      3,
+      10,
+      17,
+      null
+     ],
+     "gaps": [
+      "+7",
+      "+7",
+      "+7"
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "3, 10, 17, ... Count on 7 each time."
+    }
+   ],
+   "note": "Counting in 7s (Term 2 Lesson 6, taught again). Say: 3, then 7 more is 10, then 7 more is 17. Ask: what comes next (24). A child who is unsure adds 10 and takes away 3: 17 and 10 is 27, take away 3 is 24. On a calendar, going down one row is 7 days. Children answer aloud. No writing.",
+   "mascot": {
+    "size": "s",
+    "say": "Take your time!"
+   }
+  },
+  {
+   "id": "s-rem2",
+   "part": "remember",
+   "kind": "light",
+   "title": "1st to 10th",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "line_up",
+     "n": 6,
+     "labels": "ordinal",
+     "highlight": [
+      3
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Count the places. Which place is the child with a ring round them?"
+    }
+   ],
+   "note": "Places in a line (Term 2 Lesson 1, taught again). Dates use the same words: the 1st, 2nd, 3rd, 4th ... 10th. Ask: which place is the highlighted child (3rd). Say: the 3rd of the month is the third day. A child who is unsure counts from the front. Children answer aloud. No writing."
+  },
+  {
+   "id": "s-rem3",
+   "part": "remember",
+   "kind": "light",
+   "title": "The days in order",
+   "blocks": [
+    {
+     "t": "table",
+     "header": false,
+     "rows": [
+      [
+       "Monday",
+       "Tuesday",
+       "Wednesday",
+       "Thursday"
+      ],
+      [
+       "Friday",
+       "Saturday",
+       "Sunday",
+       "?"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Seven days make a week. What comes after Sunday?"
+    }
+   ],
+   "note": "The days in order (taught again with the 7 day cards). Say them together: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. Ask: what comes after Sunday (Monday: the week starts again). Do not chant the days in a song; say them calmly. A child who is unsure points along the cards. Children answer aloud. No writing."
+  },
+  {
+   "id": "s-sneak",
+   "part": "sneak",
+   "kind": "light",
+   "title": "Sneak-peek puzzles",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Ideas we have not learnt yet. A guess is a great start. Your paper is not collected."
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 1: anyone can try",
+        "items": [
+         "Today is Monday.",
+         "What day is it tomorrow?"
+        ]
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 2: think",
+        "items": [
+         "Today is Thursday.",
+         "What day is it 5 days later?",
+         "I know because ___."
+        ]
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Puzzle 1 (Tuesday) is an access question. Puzzle 2 is a thinking question on the lesson idea: 5 days later than Thursday is Tuesday, counting on from tomorrow (Friday is day 1) and going round past Sunday to Monday and Tuesday. A child who counts Thursday as day 1 gets Monday: say nothing yet. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; your paper is not collected. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: Tuesday; Tuesday. Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
+  },
+  {
+   "id": "s-explore1",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: the days in a row",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "Take your 7 day cards.",
+      "Put them in a row. Start with Monday.",
+      "What comes after Sunday?"
+     ]
+    }
+   ],
+   "note": "Round 1, about 2 minutes. Each child puts the 7 day cards in order from Monday. Ask: what comes after Sunday. Children answer aloud: Monday. Then ask them to move the Monday card to the end of the row and say: the days go round, like a clock. A child with no cards writes the 7 days on small papers. The row is on the next slide."
+  },
+  {
+   "id": "s-explore1-ans",
+   "part": "explore",
+   "kind": "light",
+   "title": "The week goes round",
+   "blocks": [
+    {
+     "t": "table",
+     "header": false,
+     "rows": [
+      [
+       "Mon",
+       "Tue",
+       "Wed",
+       "Thu",
+       "Fri",
+       "Sat",
+       "Sun",
+       "Mon"
+      ],
+      [
+       "1",
+       "2",
+       "3",
+       "4",
+       "5",
+       "6",
+       "7",
+       "1"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "After Sunday, the week starts again."
+    }
+   ],
+   "note": "The days in order and the week starting again: after Sunday comes Monday. Say: seven days make a week. Children check their row and tick. Nobody holds cards up to the camera."
+  },
+  {
+   "id": "s-explore2",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: count on",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "Put your finger on Tuesday.",
+      "Jump 5 days later. Do not count Tuesday.",
+      "Which day do you land on?"
+     ]
+    }
+   ],
+   "note": "Round 2, about 3 minutes. Children put a finger on the Tuesday card, then count on 5 days: Wednesday 1, Thursday 2, Friday 3, Saturday 4, Sunday 5. They land on Sunday. Say: we start counting from tomorrow, so we do not count today. Then try Sunday to Wednesday: 3 days later (Monday 1, Tuesday 2, Wednesday 3). Children say the day aloud and show a thumb when they agree. The answer is on the next slide. A child who counts today as 1 lands one day early: ask them to start from tomorrow."
+  },
+  {
+   "id": "s-explore2-ans",
+   "part": "explore",
+   "kind": "light",
+   "title": "Counting on",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Today",
+       "Days later",
+       "Day"
+      ],
+      [
+       "Tuesday",
+       "5",
+       "Sunday"
+      ],
+      [
+       "Sunday",
+       "3",
+       "Wednesday"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Start counting from tomorrow."
+    }
+   ],
+   "note": "The answers for round 2: Tuesday and 5 days later is Sunday; Sunday and 3 days later is Wednesday. Say: we do not count today; tomorrow is day 1. Children tick their own work."
+  },
+  {
+   "id": "s-explore3",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: a month page",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "calendar",
+     "start": "Wed",
+     "days": 31,
+     "highlight": [
+      5
+     ],
+     "size": 68,
+     "mark": [
+      5
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "The day with a ring round it is the 5th. Count on 7 days. Which date do you land on?"
+    }
+   ],
+   "note": "Round 3, about 3 minutes. The month page is not a real month: it starts on a Wednesday and has 31 days. The 5th has a ring round it, a Sunday. Count on 7 days: the 6th is 1, the 7th is 2 ... the 12th is 7. Children count along the page with a finger and say the date. Ask: which day of the week is the 12th (Sunday too). The answer is on the next slide. A child with no month page uses a calendar from the house or writes the numbers in rows of 7."
+  },
+  {
+   "id": "s-explore3-ans",
+   "part": "explore",
+   "kind": "light",
+   "title": "A week later is the 12th",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "calendar",
+     "start": "Wed",
+     "days": 31,
+     "highlight": [
+      5,
+      12
+     ],
+     "size": 68,
+     "mark": [
+      5,
+      12
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "The 5th and the 12th are both Sundays. A week is 7 days."
+    }
+   ],
+   "note": "The answer for round 3: 7 days after the 5th is the 12th, and both are Sundays. Say: go down one row, and you are a week later. Children tick their own work."
+  },
+  {
+   "id": "s-explore4",
+   "part": "explore",
+   "kind": "light",
+   "title": "What did we notice?",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      "Why is the 12th a Sunday too?",
+      "What happens to the day when we count on 7?",
+      "Which dates in a column are the same day?"
+     ]
+    }
+   ],
+   "note": "Take one or two answers from volunteers. Key ideas: after 7 days we are back on the same day, so a week later is the same day of the week; the dates in one column of the month page are all the same day and go up by 7 (5, 12, 19, 26 are Sundays). Repeat a child answer in your own words so the recording picks it up. Do not give the rule before the children say it."
+  },
+  {
+   "id": "s-m1",
+   "part": "mini",
+   "kind": "light",
+   "title": "Days later",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Today is Thursday. What day is it 4 days later?"
+    }
+   ],
+   "note": "Worked example. Today is Thursday. Count 4 days later from tomorrow: Friday is 1, Saturday 2, Sunday 3, Monday 4. Children count with the cards and say the day. Ask: what day (Monday). Say: we never count today, and after Sunday comes Monday. A child who says Sunday counted Thursday as day 1. The answer is on the next slide."
+  },
+  {
+   "id": "s-m1-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "Monday, counting on from tomorrow",
+   "blocks": [
+    {
+     "t": "answer",
+     "text": "Friday 1, Saturday 2, Sunday 3, Monday 4. It is Monday. We start from tomorrow."
+    }
+   ],
+   "note": "The answer for the example on the slide before. Friday 1, Saturday 2, Sunday 3, Monday 4. It is Monday. We start from tomorrow. Read it aloud so that children can tick their own work, and say what the example showed."
+  },
+  {
+   "id": "s-m2",
+   "part": "mini",
+   "kind": "light",
+   "title": "The day before",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "What is the day before Monday?"
+    }
+   ],
+   "note": "Worked example. The day before Monday is Sunday, because the week goes round backwards too. Ask: what is the day before Monday (Sunday); what is the day after Saturday (Sunday). Say: yesterday is the day before today and tomorrow is the day after. Children answer aloud. The answer is on the next slide."
+  },
+  {
+   "id": "s-m2-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "Sunday",
+   "blocks": [
+    {
+     "t": "answer",
+     "text": "The day before Monday is Sunday. Going back, the week goes round too."
+    }
+   ],
+   "note": "The answer for the example on the slide before. The day before Monday is Sunday. Going back, the week goes round too. Read it aloud so that children can tick their own work, and say what the example showed."
+  },
+  {
+   "id": "s-m3",
+   "part": "mini",
+   "kind": "light",
+   "title": "A week on the month page",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "calendar",
+     "start": "Wed",
+     "days": 31,
+     "highlight": [
+      9
+     ],
+     "size": 68,
+     "mark": [
+      9
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "The day with a ring round it is the 9th. What date is a week later?"
+    }
+   ],
+   "note": "Worked example. A week after the 9th is 7 days later: the 16th, the date straight below the 9th on the month page. Ask: what date (16). Check: 9 and 7 make 16. Say: a week later is the same day of the week. Children answer aloud. The answer is on the next slide."
+  },
+  {
+   "id": "s-m3-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "The 16th",
+   "blocks": [
+    {
+     "t": "answer",
+     "text": "A week is 7 days. 9 and 7 make 16. The 16th is a week after the 9th."
+    }
+   ],
+   "note": "The answer for the example on the slide before. A week is 7 days. 9 and 7 make 16. The 16th is a week after the 9th. Read it aloud so that children can tick their own work, and say what the example showed."
+  },
+  {
+   "id": "s-m4",
+   "part": "mini",
+   "kind": "light",
+   "title": "A fortnight",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "calendar",
+     "start": "Wed",
+     "days": 31,
+     "highlight": [
+      4
+     ],
+     "size": 68,
+     "mark": [
+      4
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "A fortnight is 2 weeks. The day with a ring round it is the 4th. What date is a fortnight later?"
+    }
+   ],
+   "note": "Worked example. A fortnight is 2 weeks, which is 14 days. A fortnight after the 4th: one week is the 11th, two weeks is the 18th. Check: 4 and 14 make 18. Ask: what date (18). Say: a fortnight is 2 weeks or 14 days. Children answer aloud. The answer is on the next slide. A child who adds 2 gave the number of weeks, not days."
+  },
+  {
+   "id": "s-m4-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "The 18th",
+   "blocks": [
+    {
+     "t": "answer",
+     "text": "2 weeks is 14 days. 4 and 14 make 18. A fortnight after the 4th is the 18th."
+    }
+   ],
+   "note": "The answer for the example on the slide before. 2 weeks is 14 days. 4 and 14 make 18. A fortnight after the 4th is the 18th. Read it aloud so that children can tick their own work, and say what the example showed."
+  },
+  {
+   "id": "s-break",
+   "part": "break",
+   "kind": "dark",
+   "title": "Say the days",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Stand up. Say the days of the week, and stamp softly for each day."
+    },
+    {
+     "t": "p",
+     "text": "Then start on Thursday. Say 7 days."
+    },
+    {
+     "t": "p",
+     "text": "Sip some water."
+    }
+   ],
+   "note": "Four minutes. Stand up on camera with a little clear space. Say the days from Monday to Sunday slowly together and stamp softly once for each day. Then start on a different day (Thursday) and go round to Wednesday: the days never stop. Then count in 7s with a soft clap: 7, 14, 21, 28. No equipment, no running. A child may stay seated and tap the desk softly. Do not give prizes or compare children. Then ask everyone to sit down with a pencil and their day cards ready."
+  },
+  {
+   "id": "s-ws1",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 1: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 1 to 4. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read questions 1 to 4 aloud. Children work on their own with the day cards; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 4 any child may choose to carry on or try Think harder. Question 1: two missing days in the week. Question 2: the day before and the day after. Question 3: 3 days later and 4 days later. Question 4: 2 days later than Saturday."
+  },
+  {
+   "id": "s-ws1ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 1",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 Wednesday and Saturday. Q2 Tuesday and Sunday. Q3 Friday, then Saturday. Q4 Monday."
+  },
+  {
+   "id": "s-ws2",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 2: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 5 and 6. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S5",
+      "S6"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read questions 5 and 6 aloud. Question 5: a week, and a week after the date with a ring round it, on the month page. Question 6: tick True or False for four statements. Wait 10 seconds before helping."
+  },
+  {
+   "id": "s-ws2ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 2",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S5",
+      "S6"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud so a child watching the recording can tick their own work. Never ask a child to show a wrong answer to the group. Answers: Q5 7 days; the 13th. Q6 True, False, True, True."
+  },
+  {
+   "id": "s-choice",
+   "part": "work",
+   "kind": "light",
+   "title": "Choose your next page",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Page",
+       "What it is"
+      ],
+      [
+       "Think harder (page 3)",
+       "Two days after the day before yesterday, day 10, weeks"
+      ],
+      [
+       "Go further (page 4)",
+       "Hundred Days Later, every Wednesday, 3 weeks"
+      ],
+      [
+       "Investigation (page 5)",
+       "Which days come 5 times?"
+      ],
+      [
+       "Check",
+       "Finish and check your own work"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Everyone may choose. Not finished? Pages 3 to 5 are for home too."
+    }
+   ],
+   "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 4 minutes."
+  },
+  {
+   "id": "s-talk",
+   "part": "talk",
+   "kind": "light",
+   "title": "Talk and explain",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "TWO CHILDREN SAY",
+     "items": [
+      "Today is Monday.",
+      "One child: 10 days later is Thursday.",
+      "Another child: 10 days later is Tuesday."
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Who is right? How do you know?"
+    },
+    {
+     "t": "chip",
+     "text": "I think ... because ..."
+    }
+   ],
+   "note": "One minute of talk to the grown-up next to you, or to your screen. Volunteers first; a pass is always fine; never call a child by name to answer. Model answer: the first child is right. 7 days later is Monday again, a whole week changes nothing. Then 3 more days: Tuesday, Wednesday, Thursday. The second child counted only 8 days. Children may also count on 10 days one at a time with the cards. Link to Explore: a week later is the same day. Repeat each child answer in your own words for the recording. The two children are in another class: no cast name is given the wrong answer."
+  },
+  {
+   "id": "s-sneakans",
+   "part": "talk",
+   "kind": "light",
+   "title": "Back to the sneak-peek",
+   "blocks": [
+    {
+     "t": "answer",
+     "text": "Puzzle 1: Tuesday. Puzzle 2: Tuesday. Friday 1, Saturday 2, Sunday 3, Monday 4, Tuesday 5."
+    }
+   ],
+   "note": "Reveal both puzzles now. Say: many of you wrote a good reason. Do not read out anyone earlier answer. Puzzle 1: Tuesday. Puzzle 2: 5 days after Thursday is Tuesday: count on from tomorrow. It was the same idea as Explore: start counting from tomorrow, and after Sunday the days start again."
+  },
+  {
+   "id": "s-exit",
+   "part": "exit",
+   "kind": "light",
+   "title": "Exit ticket",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "On your own. No looking back."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ],
+     "short": false
+    }
+   ],
+   "note": "Children answer on page 5. Read E1, E2 and E3 aloud, and the four options of E2. Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
+  },
+  {
+   "id": "s-exitans",
+   "part": "exit",
+   "kind": "light",
+   "title": "Check the exit ticket",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: E1 Tuesday; E2 option 2, the 18th; E3 the 11th."
+  },
+  {
+   "id": "s-look",
+   "part": "look",
+   "kind": "lookback",
+   "title": "Look-back",
+   "blocks": [
+    {
+     "t": "lookback"
+    }
+   ],
+   "note": "Two minutes. Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session at the start of next term. Never a direct message to a child.",
+   "mascot": {
+    "size": "s",
+    "say": "Take your time. You can pass."
+   }
+  },
+  {
+   "id": "s-end",
+   "part": "flex",
+   "kind": "dark",
+   "title": "Well done, inquirers!",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Show a grown-up how you counted on to find a day."
+    },
+    {
+     "t": "card",
+     "head": "NEXT LESSON",
+     "items": [
+      "Make a Table",
+      "Have ready: the strip page, cut out by a grown-up (14 strips)."
+     ]
+    }
+   ],
+   "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. Remind families that the next lesson needs the strip page, with the 14 strips cut out by a grown-up (no matches or toothpicks: paper strips only), and a pencil. If the whole class is ahead, show the optional slides and use the Spare-time menu from the tutor guide.",
+   "mascot": {
+    "size": "l",
+    "say": "Great thinking today!"
+   }
+  },
+  {
+   "id": "s-opt",
+   "part": "flex",
+   "kind": "light",
+   "title": "Go further: the 15th",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "A month has 31 days. The 1st is a Wednesday."
+    },
+    {
+     "t": "p",
+     "text": "What day is the 15th?"
+    }
+   ],
+   "note": "Optional, only if you are on time. The 15th is 14 days after the 1st, which is 2 weeks, so it is a Wednesday too. Take two answers and move on. This links to the fortnight in the Mini-lesson and to the month page questions on page 4.",
+   "optional": true
+  },
+  {
+   "id": "s-menu",
+   "part": "flex",
+   "kind": "light",
+   "title": "If we have time: pick one",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Activity",
+       "What we do"
+      ],
+      [
+       "Is it always true?",
+       "Does a week later always give the same day? Test it."
+      ],
+      [
+       "Make a puzzle",
+       "Write a days-later puzzle for your grown-up."
+      ],
+      [
+       "Teach it back",
+       "Show a toy how to count on to find a day."
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Optional. Everyone may join."
+    }
+   ],
+   "note": "Optional Spare-time menu, used only if the whole class is ahead. Pick one or two activities (3 to 5 minutes each); full tutor lines and answers are in the tutor guide. Never start new content and never name who is ahead. Slow down with how do you know rather than rushing on. These minutes come from the flex buffer and are not part of the 90-minute sum.",
+   "optional": true
+  }
+ ],
+ "script": {
+  "segments": [
+   {
+    "part": "opening",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-title",
+      "s": 15
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "DO",
+      "text": "Greet each child by first name as they arrive. Then start the recording. While it runs, avoid names. Check that you can see each child.",
+      "s": 12
+     },
+     {
+      "k": "SAY",
+      "text": "Hello, inquirers! Please stay muted unless I invite you to speak. Cameras on if you can, so I can see you; cameras off is fine too. Pencil ready, and your day cards on the table."
+     },
+     {
+      "k": "SAY",
+      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is unmuted. You may mute and keep your camera off."
+     },
+     {
+      "k": "SAY",
+      "text": "Today we are calendar detectives. We put the days in order and count on to find a day and a date. If you are not sure, a guess is a great start."
+     },
+     {
+      "k": "SAY",
+      "text": "Today's tool is Spot the pattern. Look for what repeats or grows.",
+      "spine": "opening"
+     },
+     {
+      "k": "DO",
+      "text": "Point at the tool on page 1 of the workbook.",
+      "s": 4,
+      "spine": "opening"
+     },
+     {
+      "k": "NOTE",
+      "text": "Say the recording notice in the SAY line above in your own words after the recording has started: the recording has the tutor, the shared screen and any unmuted voice; children may mute and keep the camera off. The routine and the four inquirer rules were introduced earlier in the term: do not re-teach them."
+     },
+     {
+      "k": "NOTE",
+      "text": "Plain statement for families when it comes up: days of the week are not a listed Primary 1 outcome; two days after the day before yesterday, a fortnight, every Wednesday of a month and Hundred Days Later go beyond Primary 1 on purpose."
+     },
+     {
+      "k": "NOTE",
+      "text": "New here? Say in one minute: our three rule words (notice it, test it, explain why); a guess is fine and you can always pass; after Start here you may choose Think harder, Go further or the Investigation; nobody holds paper to the camera. The first recording of the term shows the full routine."
+     }
+    ]
+   },
+   {
+    "part": "remember",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-rem1",
+      "s": 15
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Counting in sevens. Three, then ten, then seventeen. We add seven each time."
+     },
+     {
+      "k": "ASK",
+      "text": "What comes next after seventeen?",
+      "resp": 30
+     },
+     {
+      "k": "WORK",
+      "text": "Your turn. Start at five and count on in sevens: five, twelve, nineteen. Say it with me.",
+      "s": 40
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem2",
+      "s": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Dates use the same words as places in a line: the first, the second, the third, up to the tenth."
+     },
+     {
+      "k": "ASK",
+      "text": "Which place is the child with a ring round them?",
+      "resp": 25
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem3",
+      "s": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Seven days make a week. Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. Say them with me, slowly."
+     },
+     {
+      "k": "ASK",
+      "text": "What comes after Sunday?",
+      "resp": 25
+     },
+     {
+      "k": "WORK",
+      "text": "Put your seven day cards in a row, from Monday to Sunday. Then say the days with your finger on each card.",
+      "s": 70
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child is unsure how to count in 7s, add 10 and take away 3. For places, count from the front. For the days, point along the cards."
+     },
+     {
+      "k": "NOTE",
+      "text": "Answers: 24; third; Monday. Children answer with a whisper, fingers or hands. Nobody writes. Joining cold: all you need is counting to 31 and the pictures."
+     }
+    ]
+   },
+   {
+    "part": "sneak",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-sneak",
+      "s": 12
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Your paper is not collected."
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle one. Today is Monday. What day is it tomorrow?"
+     },
+     {
+      "k": "WORK",
+      "text": "Children write on their own paper.",
+      "s": 30
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle two. Today is Thursday. What day is it 5 days later? I know because blank."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write or draw their answer.",
+      "s": 85
+     },
+     {
+      "k": "SAY",
+      "text": "Keep your paper. Nobody shows it. We will check our own thinking later, at Talk time."
+     },
+     {
+      "k": "NOTE",
+      "text": "Puzzle 1 answer: Tuesday. Puzzle 2 answer: Tuesday (Friday 1, Saturday 2, Sunday 3, Monday 4, Tuesday 5). A child who counts Thursday as day 1 gets Monday: say nothing yet. Look for good ideas to praise later. Do not write scores or keep a list."
+     }
+    ]
+   },
+   {
+    "part": "explore",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1",
+      "s": 15
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "The day cards are the teachers today. Take your seven day cards and put them in a row. Start with Monday."
+     },
+     {
+      "k": "WORK",
+      "text": "Children put the cards in order. Tutor scans the cameras.",
+      "s": 55
+     },
+     {
+      "k": "ASK",
+      "text": "What comes after Sunday?",
+      "resp": 25
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "After Sunday, the week starts again with Monday. The days go round like a clock."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2",
+      "s": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Round two. Put your finger on Tuesday. Jump five days later. Do not count Tuesday: start from tomorrow."
+     },
+     {
+      "k": "WORK",
+      "text": "Children count on with the cards and say the day.",
+      "s": 65
+     },
+     {
+      "k": "ASK",
+      "text": "Which day do you land on? Now start on Sunday and jump three days.",
+      "resp": 40
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Tuesday and five days later is Sunday. Sunday and three days later is Wednesday. We start counting from tomorrow."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore3",
+      "s": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Round three. This month page starts on a Wednesday. The fifth has a ring round it. Count on seven days. Which date do you land on?"
+     },
+     {
+      "k": "WORK",
+      "text": "Children count on along the month page with a finger.",
+      "s": 60
+     },
+     {
+      "k": "ASK",
+      "text": "Which date? Which day of the week is it?",
+      "resp": 30
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore3-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "The twelfth. A week later, and it is a Sunday too."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore4",
+      "s": 8
+     },
+     {
+      "k": "ASK",
+      "text": "Why is the twelfth a Sunday too? What happens to the day when we count on seven?",
+      "resp": 55
+     },
+     {
+      "k": "SAY",
+      "text": "After seven days we are back on the same day. In one column of the month page, every date is the same day, and the dates go up by seven."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who counts today as day 1 lands one day early: ask them to start from tomorrow. A child who loses the place on the cards: slide a finger along. A child with no cards writes the seven days on paper."
+     },
+     {
+      "k": "NOTE",
+      "text": "Main room only. Answers: Monday; Sunday; Wednesday; the 12th, a Sunday. Do not say the rule before the children do."
+     }
+    ]
+   },
+   {
+    "part": "mini",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-m1",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Today is Thursday. We want the day four days later. Count on from tomorrow."
+     },
+     {
+      "k": "ASK",
+      "text": "What day is it four days later?",
+      "resp": 35
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m1-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Friday is one, Saturday two, Sunday three, Monday four. It is Monday. We never count today."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m2",
+      "s": 8
+     },
+     {
+      "k": "ASK",
+      "text": "What is the day before Monday?",
+      "resp": 30
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m2-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Sunday. The week goes round backwards too. Yesterday is the day before today, and tomorrow is the day after."
+     },
+     {
+      "k": "READ",
+      "text": "Your turn. What is the day after Friday? What is the day before Thursday? Write them."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write on their own paper. Wait 10 seconds before helping.",
+      "s": 35
+     },
+     {
+      "k": "SAY",
+      "text": "The day after Friday is Saturday. The day before Thursday is Wednesday."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "A week on the month page. The day with a ring round it is the ninth."
+     },
+     {
+      "k": "ASK",
+      "text": "What date is a week later?",
+      "resp": 35
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "A week is seven days. Nine and seven make sixteen. It is the date straight below."
+     },
+     {
+      "k": "READ",
+      "text": "Your turn. The day with a ring round it is the 2nd. What date is a week later? Write the number."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write on their own paper. Wait 10 seconds before helping.",
+      "s": 40
+     },
+     {
+      "k": "SAY",
+      "text": "Two and seven make nine. A week after the second is the ninth."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "A fortnight is two weeks. That is fourteen days. The day with a ring round it is the fourth."
+     },
+     {
+      "k": "ASK",
+      "text": "What date is a fortnight later?",
+      "resp": 40
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Two weeks is fourteen days. Four and fourteen make eighteen. The eighteenth is a fortnight after the fourth."
+     },
+     {
+      "k": "READ",
+      "text": "Your turn. A holiday lasts one week. How many days is that? And a fortnight? Write the two numbers."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write on their own paper. Wait 10 seconds before helping.",
+      "s": 30
+     },
+     {
+      "k": "SAY",
+      "text": "A week is seven days. A fortnight is fourteen days."
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child counts today as day 1, ask them to start from tomorrow. If a child says a week after the 9th is the 17th, ask them to count the 7 days one at a time. If a child cannot go before Monday, show the cards in a ring."
+     },
+     {
+      "k": "NOTE",
+      "text": "Key words to use every time: day, week, fortnight, tomorrow, yesterday, days later, date. Say 1st, 2nd, 3rd for dates. The slides keep the answers off the screen while you ask: read every question aloud."
+     }
+    ]
+   },
+   {
+    "part": "break",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-break",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Stand up and get a sip of water. Say the days of the week slowly with me, and stamp softly for each day. Then we start on Thursday and go round."
+     },
+     {
+      "k": "WORK",
+      "text": "Say Monday to Sunday with a soft stamp for each. Then start on Thursday and go round to Wednesday. Then count in 7s with a soft clap: 7, 14, 21, 28. Children may stay seated and tap the table.",
+      "s": 145
+     },
+     {
+      "k": "NOTE",
+      "text": "Quiet movement only. After the break say: please sit down, put your day cards in front of you, and have a pencil ready."
+     }
+    ]
+   },
+   {
+    "part": "work",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "Page 1, Start here. Question 1: write the missing days of the week. Question 2: part a: the day before Wednesday is blank. Part b: the day after Saturday is blank. Question 3: today is Tuesday. Part a: 3 days later it is blank. Part b: 4 days later it is blank. Question 4: today is Saturday. What day is it 2 days later? Write the day."
+     },
+     {
+      "k": "WORK",
+      "text": "Page 1, questions 1 to 4. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
+      "s": 570
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1ans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Question 1: Wednesday and Saturday. Question 2: Tuesday, then Sunday. Question 3: Friday, then Saturday. Question 4: Monday. Tick your own page with a tick."
+     },
+     {
+      "k": "SAY",
+      "text": "After question 4 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Page 2. Question 5: look at the month page. The day with a ring round it is the 6th. Part a: a week has blank days. Part b: a week after the 6th is the blank th. Question 6: tick True or False for each statement."
+     },
+     {
+      "k": "WORK",
+      "text": "Page 2, questions 5 and 6.",
+      "s": 360
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2ans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Question 5: 7 days, and the 13th. Question 6: True, False, True, True. Tick your own page."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-choice",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time. Anything not finished is for home too."
+     },
+     {
+      "k": "MOVE",
+      "text": "Stand and stretch for 30 seconds, then sit down and choose.",
+      "s": 30
+     },
+     {
+      "k": "WORK",
+      "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
+      "s": 420
+     },
+     {
+      "k": "STUCK",
+      "text": "Q1: say the days from Monday with the cards. Q2: the day before is one step back, the day after one step on. Q3: count on from tomorrow, three steps. Q4: Sunday is 1, then Monday. Q5: a week is 7 days; go down one row on the month page. Q6: say each statement with the cards."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who is still stuck ticks I am still stuck on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp (never a personal phone). You then help in the open session at the start of next term. Never a private message to a child."
+     },
+     {
+      "k": "NOTE",
+      "text": "Think harder has two days after the day before yesterday, the 10th day from Monday, weeks and a fortnight, and the day of a date on the month page (beyond Primary 1 on purpose). Go further has Hundred Days Later, every Wednesday of a month and 3 weeks later. Do not announce who is on which page. Start here takes a middle child about 16 minutes: say that pages 3 to 5 are for home. Slow class: take the extra minutes from the flex time and do not skip the answer slides."
+     }
+    ]
+   },
+   {
+    "part": "talk",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-talk",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "Today is Monday. One child in another class says: 10 days later is Thursday. Another child says: 10 days later is Tuesday. Who is right? How do you know?"
+     },
+     {
+      "k": "WORK",
+      "text": "Think about it with your day cards: count on 10 days, one at a time, or use a whole week.",
+      "s": 60
+     },
+     {
+      "k": "WORK",
+      "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
+      "s": 60
+     },
+     {
+      "k": "ASK",
+      "text": "Who would like to share? Volunteers first. A pass is always fine.",
+      "resp": 85
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-sneakans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Remember the sneak-peek? Puzzle one: Tuesday. Puzzle two: Tuesday. Count on from tomorrow, and after Sunday the days start again."
+     },
+     {
+      "k": "ASK",
+      "text": "Did anyone change their mind while we worked? You can just nod.",
+      "resp": 10
+     },
+     {
+      "k": "ASK",
+      "text": "Where did you use Spot the pattern today?",
+      "resp": 10,
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Listen for the tool being named, not the answer. Volunteers first, a pass is always fine.",
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Model answer: the first child is right; 7 days later is Monday again, then 3 more days is Thursday. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
+     }
+    ]
+   },
+   {
+    "part": "exit",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-exit",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
+     },
+     {
+      "k": "READ",
+      "text": "E1. Today is Sunday. What day is it 2 days later? E2. A week after the eleventh is which date? Choose the correct answer. Option 1: the seventeenth. Option 2: the eighteenth. Option 3: the nineteenth. Option 4: the twenty-fifth. Write its number in the bracket. E3. Ben swims every 7 days. He swims on the fourth. The next time he swims is the blank th.",
+      "s": 75
+     },
+     {
+      "k": "WORK",
+      "text": "Children answer E1 to E3 on their own.",
+      "s": 190
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-exitans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "E1: Tuesday. E2: option 2, the eighteenth. E3: the eleventh."
+     },
+     {
+      "k": "SAY",
+      "text": "Tick your own ticket with a tick. Well done."
+     },
+     {
+      "k": "NOTE",
+      "text": "Nothing is collected or marked live. Children tick their own ticket. If many children miss one question, spend two minutes on it at the start of the next lesson, in the open session, no names. Do not read out any child result."
+     }
+    ]
+   },
+   {
+    "part": "look",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-look",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+      "spine": "look"
+     },
+     {
+      "k": "WORK",
+      "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+      "s": 60,
+      "spine": "look"
+     }
+    ]
+   },
+   {
+    "part": "flex",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-end",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Well done, inquirers. Next lesson is Make a Table. Please have the strip page cut out by a grown-up, fourteen paper strips. Goodbye, and thank you to the grown-ups."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-opt",
+      "s": 8,
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Optional, only if you are on time: a month has 31 days, and the first is a Wednesday. What day is the fifteenth?",
+      "optional": true
+     },
+     {
+      "k": "WORK",
+      "text": "Short think time, then take two answers.",
+      "s": 90,
+      "optional": true
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-menu",
+      "s": 8,
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
+      "optional": true
+     },
+     {
+      "k": "NOTE",
+      "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: Wednesday (14 days is 2 weeks after the 1st). If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+     }
+    ]
+   }
+  ]
+ },
+ "tiers": {
+  "start": [
+   {
+    "id": "S1",
+    "page": 1,
+    "tier": "start",
+    "text": "Write the missing days of the week.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "The missing days are ______ and ______ .",
+      "ans": "Wednesday; Saturday",
+      "val": [
+       "Wednesday",
+       "Saturday"
+      ]
+     }
+    ],
+    "answer": "Wednesday; Saturday",
+    "val": [
+     "Wednesday",
+     "Saturday"
+    ],
+    "hint": "Say the days from Monday. Which two are missing?",
+    "solution": "The days in order are Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. The missing days are Wednesday and Saturday.",
+    "mistakes": [
+     "Writing a day twice.",
+     "Writing Sunday before Saturday."
+    ],
+    "mins": 2,
+    "visual": {
+     "type": "table",
+     "head": [],
+     "rows": [
+      [
+       "Monday",
+       "Tuesday",
+       "[]",
+       "Thursday"
+      ],
+      [
+       "Friday",
+       "[]",
+       "Sunday",
+       ""
+      ]
+     ]
+    }
+   },
+   {
+    "id": "S2",
+    "page": 1,
+    "tier": "start",
+    "text": "Fill in the blanks.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "The day before Wednesday is ____ .",
+      "ans": "Tuesday",
+      "val": "Tuesday"
+     },
+     {
+      "l": "b",
+      "text": "The day after Saturday is ____ .",
+      "ans": "Sunday",
+      "val": "Sunday"
+     }
+    ],
+    "answer": "Tuesday; Sunday",
+    "val": [
+     "Tuesday",
+     "Sunday"
+    ],
+    "hint": "Before means one step back. After means one step on.",
+    "solution": "One step back from Wednesday is Tuesday. One step on from Saturday is Sunday.",
+    "mistakes": [
+     "Writing Thursday for before.",
+     "Writing Monday after Saturday."
+    ],
+    "mins": 3
+   },
+   {
+    "id": "S3",
+    "page": 1,
+    "tier": "start",
+    "text": "Today is Tuesday. Count on from tomorrow.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "3 days later it is ____ .",
+      "ans": "Friday",
+      "val": "Friday"
+     },
+     {
+      "l": "b",
+      "text": "4 days later it is ____ .",
+      "ans": "Saturday",
+      "val": "Saturday"
+     }
+    ],
+    "answer": "Friday; Saturday",
+    "val": [
+     "Friday",
+     "Saturday"
+    ],
+    "hint": "Count on from tomorrow. Wednesday is 1.",
+    "solution": "Wednesday is 1, Thursday is 2, Friday is 3. It is Friday. Four days later: Saturday is 4. It is Saturday.",
+    "mistakes": [
+     "Counting Tuesday as day 1 and writing Thursday.",
+     "Writing Wednesday.",
+     "(b) Writing Friday (counting Tuesday as day 1)."
+    ],
+    "mins": 3,
+    "visual": {
+     "type": "table",
+     "head": [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+     ],
+     "rows": [
+      [
+       "",
+       "today",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     ]
+    }
+   },
+   {
+    "id": "S4",
+    "page": 1,
+    "tier": "start",
+    "text": "Today is Saturday. What day is it 2 days later?",
+    "parts": [
+     {
+      "l": "a",
+      "text": "2 days later it is ____ .",
+      "ans": "Monday",
+      "val": "Monday"
+     }
+    ],
+    "answer": "Monday",
+    "val": [
+     "Monday"
+    ],
+    "hint": "Sunday is 1. What comes after Sunday?",
+    "solution": "Sunday is 1. After Sunday the week starts again, so Monday is 2. It is Monday.",
+    "mistakes": [
+     "Writing Sunday.",
+     "Writing Tuesday."
+    ],
+    "mins": 2.5
+   },
+   {
+    "id": "S5",
+    "page": 2,
+    "tier": "start",
+    "text": "Look at the month page. The day with a ring round it is the 6th.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "A week has ____ days.",
+      "ans": "7",
+      "val": 7
+     },
+     {
+      "l": "b",
+      "text": "A week after the 6th is the ____ th.",
+      "ans": "13",
+      "val": 13
+     }
+    ],
+    "answer": "7; 13",
+    "val": [
+     7,
+     13
+    ],
+    "hint": "A week later is the date straight below on the month page.",
+    "solution": "A week has 7 days. 6 and 7 make 13. The 13th is a week after the 6th, straight below it.",
+    "mistakes": [
+     "Writing 12 or 14.",
+     "Writing 7 for part b."
+    ],
+    "mins": 3.5,
+    "visual": {
+     "type": "calendar",
+     "start": "Wed",
+     "days": 31,
+     "highlight": [
+      6
+     ],
+     "mark": [
+      6
+     ]
+    }
+   },
+   {
+    "id": "S6",
+    "page": 2,
+    "tier": "start",
+    "text": "Tick True or False for each statement.",
+    "parts": [],
+    "answer": "True; False; True; True",
+    "val": [
+     "True",
+     "False",
+     "True",
+     "True"
+    ],
+    "hint": "Say the days in order with your cards. Which comes first?",
+    "solution": "Monday comes after Sunday: true. Friday is the day after Thursday, so Friday is not the day before Thursday: false. Wednesday is between Tuesday and Thursday: true. Saturday is the day before Sunday: true.",
+    "mistakes": [
+     "Ticking True for every statement.",
+     "Mixing up before and after."
+    ],
+    "mins": 3,
+    "tf": [
+     {
+      "s": "Monday is the day after Sunday."
+     },
+     {
+      "s": "Friday is the day before Thursday."
+     },
+     {
+      "s": "Wednesday is between Tuesday and Thursday."
+     },
+     {
+      "s": "Saturday is the day before Sunday."
+     }
+    ]
+   }
+  ],
+  "think": [
+   {
+    "id": "T1",
+    "page": 3,
+    "tier": "think",
+    "text": "Today is Thursday.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Two days after the day before yesterday is ____ .",
+      "ans": "Thursday",
+      "val": "Thursday"
+     },
+     {
+      "l": "b",
+      "text": "Two days before tomorrow is ____ .",
+      "ans": "Wednesday",
+      "val": "Wednesday"
+     }
+    ],
+    "answer": "Thursday; Wednesday",
+    "val": [
+     "Thursday",
+     "Wednesday"
+    ],
+    "hint": "Find yesterday first. Then the day before that.",
+    "solution": "Yesterday was Wednesday, so the day before yesterday was Tuesday. Two days after Tuesday is Thursday, which is today. Tomorrow is Friday. Two days before Friday is Wednesday.",
+    "mistakes": [
+     "Counting forward from today only.",
+     "Writing Friday for part b."
+    ],
+    "mins": 5
+   },
+   {
+    "id": "T2",
+    "page": 3,
+    "tier": "think",
+    "text": "Mei starts a swimming course on Monday. Monday is day 1.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Day 7 is ____ .",
+      "ans": "Sunday",
+      "val": "Sunday"
+     },
+     {
+      "l": "b",
+      "text": "Day 10 is ____ .",
+      "ans": "Wednesday",
+      "val": "Wednesday"
+     }
+    ],
+    "answer": "Sunday; Wednesday",
+    "val": [
+     "Sunday",
+     "Wednesday"
+    ],
+    "hint": "Day 8 is back on Monday. Then count on.",
+    "solution": "Day 1 Monday to day 7 Sunday. Day 8 is Monday again, day 9 is Tuesday and day 10 is Wednesday.",
+    "mistakes": [
+     "Writing Tuesday for day 10 by counting Monday as day 0.",
+     "Writing Thursday."
+    ],
+    "mins": 5
+   },
+   {
+    "id": "T3",
+    "page": 3,
+    "tier": "think",
+    "text": "A holiday lasts 3 weeks. A fortnight is 2 weeks.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "A holiday of 3 weeks is ____ days.",
+      "ans": "21",
+      "val": 21
+     },
+     {
+      "l": "b",
+      "text": "A fortnight is ____ days.",
+      "ans": "14",
+      "val": 14
+     }
+    ],
+    "answer": "21; 14",
+    "val": [
+     21,
+     14
+    ],
+    "hint": "One week is 7 days. Count in 7s.",
+    "solution": "3 weeks is 7 + 7 + 7, which is 21 days. A fortnight is 2 weeks: 7 + 7, which is 14 days.",
+    "mistakes": [
+     "Writing 3 times 3 = 9.",
+     "Writing 14 for 3 weeks."
+    ],
+    "mins": 4
+   },
+   {
+    "id": "T4",
+    "page": 3,
+    "tier": "think",
+    "text": "Look at the first week of a month with 31 days. Mei's party is on the 18th.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "The 18th is a ____ .",
+      "ans": "Saturday",
+      "val": "Saturday"
+     },
+     {
+      "l": "b",
+      "text": "One week later is the ____ th.",
+      "ans": "25",
+      "val": 25
+     }
+    ],
+    "answer": "Saturday; 25",
+    "val": [
+     "Saturday",
+     25
+    ],
+    "hint": "The 1st is a Wednesday. Which dates are Wednesdays?",
+    "solution": "Wednesdays are the 1st, 8th and 15th. The 18th is 3 days after the 15th: Thursday 16th, Friday 17th, Saturday 18th. A week later is 18 and 7, which is the 25th.",
+    "mistakes": [
+     "Writing Wednesday for the 18th.",
+     "Writing 24 or 26."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "calendar",
+     "start": "Wed",
+     "days": 31,
+     "week": 0
+    }
+   }
+  ],
+  "go": [
+   {
+    "id": "G1",
+    "page": 4,
+    "tier": "go",
+    "text": "Today is Monday.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "100 days is ____ weeks and ____ days over.",
+      "ans": "14 weeks and 2 days",
+      "val": [
+       14,
+       2
+      ]
+     },
+     {
+      "l": "b",
+      "text": "100 days later it is ____ .",
+      "ans": "Wednesday",
+      "val": "Wednesday"
+     }
+    ],
+    "answer": "14 weeks and 2 days; Wednesday",
+    "val": [
+     14,
+     2,
+     "Wednesday"
+    ],
+    "hint": "Whole weeks bring us back to Monday. How many days are left over?",
+    "solution": "14 weeks is 14 times 7, which is 98 days. 98 days later it is Monday again. 100 is 2 more days, so it is Wednesday.",
+    "mistakes": [
+     "Writing Monday (forgetting the 2 days over).",
+     "Counting 100 days one at a time."
+    ],
+    "mins": 6,
+    "lines": 3
+   },
+   {
+    "id": "G2",
+    "page": 4,
+    "tier": "go",
+    "text": "A month has 31 days. Look at its first week.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "The Wednesdays are 1, [2], [2], [2], [2].",
+      "ans": "8, 15, 22, 29",
+      "val": [
+       8,
+       15,
+       22,
+       29
+      ]
+     },
+     {
+      "l": "b",
+      "text": "The 31st is a ____ .",
+      "ans": "Friday",
+      "val": "Friday"
+     }
+    ],
+    "answer": "8, 15, 22, 29; Friday",
+    "val": [
+     8,
+     15,
+     22,
+     29,
+     "Friday"
+    ],
+    "hint": "Each Wednesday is 7 more than the one before.",
+    "solution": "1 + 7 = 8, 8 + 7 = 15, 15 + 7 = 22, 22 + 7 = 29. After the 29th, Wednesday, the 30th is Thursday and the 31st is Friday.",
+    "mistakes": [
+     "Counting in 6s or 8s.",
+     "Writing Wednesday for the 31st."
+    ],
+    "mins": 6,
+    "visual": {
+     "type": "calendar",
+     "start": "Wed",
+     "days": 31,
+     "week": 0,
+     "highlight": [
+      1
+     ],
+     "mark": [
+      1
+     ]
+    }
+   },
+   {
+    "id": "G3",
+    "page": 4,
+    "tier": "go",
+    "text": "Today is the 6th. It is a Monday. Mei's trip is 3 weeks later.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "3 weeks is ____ days.",
+      "ans": "21",
+      "val": 21
+     },
+     {
+      "l": "b",
+      "text": "The trip is on the ____ th.",
+      "ans": "27",
+      "val": 27
+     },
+     {
+      "l": "c",
+      "text": "It is a ____ .",
+      "ans": "Monday",
+      "val": "Monday"
+     }
+    ],
+    "answer": "21; 27; Monday",
+    "val": [
+     21,
+     27,
+     "Monday"
+    ],
+    "hint": "Count 7, 14, 21 days on from the 6th.",
+    "solution": "3 weeks is 21 days. 6 and 21 make 27. Whole weeks later is the same day, so the 27th is a Monday.",
+    "mistakes": [
+     "Writing 9 (6 + 3).",
+     "Writing Tuesday."
+    ],
+    "mins": 5,
+    "lines": 1
+   }
+  ],
+  "investigation": {
+   "id": "I1",
+   "page": 5,
+   "tier": "investigation",
+   "title": "Which days come 5 times?",
+   "first": "A month has 31 days. The 1st is a Wednesday. Write the dates of every Wednesday. How many Wednesdays are there?",
+   "text": "Which other days of the week come 5 times in this month? Write them.",
+   "lines": 4,
+   "answer": "First: 1, 8, 15, 22 and 29, which is 5 Wednesdays. Thursdays are 2, 9, 16, 23 and 30, and Fridays are 3, 10, 17, 24 and 31, so Wednesday, Thursday and Friday come 5 times. The other days (Saturday, Sunday, Monday and Tuesday) come 4 times. 31 days is 4 weeks and 3 days over, and the 3 days over are the first 3 days of the month.",
+   "val": [
+    "5",
+    "Thursday",
+    "Friday"
+   ],
+   "look_for": "A child who writes the dates of each day in rows of 7 and counts them, or who says that the 3 days over are Wednesday, Thursday and Friday. Credit any clear method. A child who finds Thursday only is partly there: ask about Friday.",
+   "mistakes": [
+    "Saying only Wednesday comes 5 times.",
+    "Counting Saturday or Tuesday 5 times."
+   ],
+   "mins": 8
+  }
+ },
+ "talk": {
+  "question": "Today is Monday. One child in another class says: 10 days later is Thursday. Another child says: 10 days later is Tuesday. Who is right? How do you know?",
+  "starter": "I think ... because ...",
+  "answer": "The first child is right. 7 days later is Monday again, because a week changes nothing. Then 3 more days is Tuesday, Wednesday, Thursday. The other child counted only 8 days.",
+  "look_for": "A child who uses a whole week, or who counts on 10 days with the cards. Not just a name."
+ },
+ "exit": [
+  {
+   "id": "E1",
+   "text": "Today is Sunday. What day is it 2 days later?",
+   "parts": [
+    {
+     "l": "",
+     "text": "2 days later it is ____ .",
+     "ans": "Tuesday",
+     "val": "Tuesday"
+    }
+   ],
+   "answer": "Tuesday",
+   "val": [
+    "Tuesday"
+   ],
+   "solution": "Monday is 1 and Tuesday is 2. After Sunday the week starts again.",
+   "mistakes": [
+    "Writing Monday.",
+    "Counting Sunday as day 1."
+   ]
+  },
+  {
+   "id": "E2",
+   "text": "Look at the month page. A week after the 11th is which date? Write its number in the bracket.",
+   "parts": [],
+   "answer": "(2) the 18th",
+   "val": [
+    2
+   ],
+   "solution": "A week is 7 days. 11 and 7 make 18.",
+   "mistakes": [
+    "Choosing (1) the 17th.",
+    "Choosing (4) the 25th (two weeks)."
+   ],
+   "mcq": {
+    "options": [
+     "the 17th",
+     "the 18th",
+     "the 19th",
+     "the 25th"
+    ],
+    "bracket": true
+   }
+  },
+  {
+   "id": "E3",
+   "text": "Ben swims every 7 days. He swims on the 4th.",
+   "parts": [
+    {
+     "l": "",
+     "text": "The next time he swims is the ____ th.",
+     "ans": "11",
+     "val": 11
+    }
+   ],
+   "answer": "11",
+   "val": [
+    11
+   ],
+   "solution": "Every 7 days means a week later. 4 and 7 make 11.",
+   "mistakes": [
+    "Writing 5 or 7.",
+    "Writing 14."
+   ]
+  }
+ ],
+ "home_practice": [
+  {
+   "id": "H1",
+   "tier": "start",
+   "text": "Today is Wednesday. What day is it 4 days later? It is ____ .",
+   "answer": "Sunday",
+   "val": "Sunday",
+   "solution": "Count on from tomorrow: Thursday 1, Friday 2, Saturday 3, Sunday 4."
+  },
+  {
+   "id": "H2",
+   "tier": "start",
+   "text": "Look at the month page in your book. The 10th is a ____ .",
+   "answer": "Friday",
+   "val": "Friday",
+   "solution": "The 1st is a Wednesday and the 8th is a Wednesday. The 10th is 2 days later: Thursday 9th, Friday 10th."
+  },
+  {
+   "id": "H3",
+   "tier": "start",
+   "text": "A week after the 14th is the ____ th. Then a fortnight after the 14th is the ____ th.",
+   "answer": "21 and 28",
+   "val": [
+    21,
+    28
+   ],
+   "solution": "A week is 7 days: 14 and 7 make 21. A fortnight is 14 days: 14 and 14 make 28.",
+   "visual": {
+    "type": "calendar",
+    "start": "Wed",
+    "days": 31,
+    "highlight": [
+     14
+    ],
+    "mark": [
+     14
+    ],
+    "hw": 62
+   }
+  },
+  {
+   "id": "H4",
+   "tier": "think",
+   "text": "Today is Saturday. What day is it 9 days later? It is ____ . I know because ___.",
+   "answer": "Monday",
+   "val": "Monday",
+   "solution": "7 days later is Saturday again. 2 more days: Sunday, Monday."
+  },
+  {
+   "id": "H5",
+   "tier": "start",
+   "rewind_of": "Term 1 Lesson 10",
+   "text": "Mei has 36 stickers. She gets 10 more. Then she gives 4 away. Mei has ____ stickers now.",
+   "answer": "42",
+   "val": 42,
+   "solution": "Step 1: 36 and 10 make 46. Step 2: 46 take away 4 is 42."
+  }
+ ],
+ "online_practice": {
+  "key": "t3l27",
+  "title": "Calendar Detective",
+  "topic": "Days, weeks and dates",
+  "items": [
+   {
+    "id": "c1",
+    "tier": "core",
+    "type": "number",
+    "q": "A week after the 5th is which date? Write the number.",
+    "hint": "A week is 7 days. Add 7.",
+    "steps": [
+     "A week is 7 days.",
+     "5 and 7 make 12.",
+     "A week after the 5th is the 12th."
+    ],
+    "answer": 12,
+    "slips": [
+     {
+      "a": [
+       7
+      ],
+      "say": "7 is the days in a week. Add them to the date."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3,
+       5,
+       8,
+       9,
+       11,
+       14,
+       16,
+       20
+      ]
+     },
+     "derive": {},
+     "q": "A week after the {a|ord} is which date? Write the number.",
+     "answer": "a+7",
+     "hint": "A week is 7 days. Add 7.",
+     "steps": [
+      "A week is 7 days.",
+      "{a} and 7 make {ans}.",
+      "A week after the {a|ord} is the {ans|ord}."
+     ]
+    }
+   },
+   {
+    "id": "c2",
+    "tier": "core",
+    "type": "number",
+    "q": "How many days are in 2 weeks?",
+    "hint": "One week is 7 days. Count in 7s.",
+    "steps": [
+     "One week is 7 days.",
+     "7 and 7 make 14.",
+     "2 weeks is 14 days."
+    ],
+    "answer": 14,
+    "slips": [
+     {
+      "a": [
+       2
+      ],
+      "say": "2 is the number of weeks. Count the days: 7 for each week."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "w": [
+       2,
+       3,
+       4
+      ]
+     },
+     "derive": {},
+     "q": "How many days are in {w} weeks?",
+     "answer": "7*w",
+     "hint": "One week is 7 days. Count in 7s.",
+     "steps": [
+      "One week is 7 days.",
+      "Count in 7s, {w} times.",
+      "{w} weeks is {ans} days."
+     ]
+    }
+   },
+   {
+    "id": "c3",
+    "tier": "core",
+    "type": "choice",
+    "q": "Today is Thursday. What day is it 2 days later?",
+    "hint": "Count on from tomorrow.",
+    "steps": [
+     "Friday is 1.",
+     "Saturday is 2.",
+     "It is Saturday."
+    ],
+    "options": [
+     "Friday",
+     "Saturday",
+     "Sunday"
+    ],
+    "answer": "Saturday",
+    "slips": []
+   },
+   {
+    "id": "c4",
+    "tier": "core",
+    "type": "choice",
+    "q": "What day comes after Sunday?",
+    "hint": "After Sunday the week starts again.",
+    "steps": [
+     "The days go round.",
+     "After Sunday comes Monday.",
+     "Monday."
+    ],
+    "options": [
+     "Saturday",
+     "Monday",
+     "Wednesday"
+    ],
+    "answer": "Monday",
+    "slips": []
+   },
+   {
+    "id": "c5",
+    "tier": "core",
+    "type": "number",
+    "q": "Count in 7s: 3, 10, 17, ___. What is the next number?",
+    "hint": "Add 7 each time.",
+    "steps": [
+     "Add 7 each time.",
+     "17 and 7 make 24.",
+     "The next number is 24."
+    ],
+    "answer": 24,
+    "slips": [
+     {
+      "a": [
+       20
+      ],
+      "say": "20 adds 3. Add 7 to the last number."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "s": [
+       2,
+       3,
+       4,
+       5,
+       6
+      ]
+     },
+     "derive": {
+      "t": "s+7",
+      "u": "s+14"
+     },
+     "q": "Count in 7s: {s}, {t}, {u}, ___. What is the next number?",
+     "answer": "s+21",
+     "hint": "Add 7 each time.",
+     "steps": [
+      "Add 7 each time.",
+      "{u} and 7 make {ans}.",
+      "The next number is {ans}."
+     ]
+    }
+   },
+   {
+    "id": "t1",
+    "tier": "stretch",
+    "type": "number",
+    "q": "Ben swims every 7 days. He swims on the 4th. What date is his 3rd swim?",
+    "hint": "Add 7 for each swim after the first.",
+    "steps": [
+     "The 2nd swim is the 4th and 7 more, the 11th.",
+     "The 3rd swim is 7 more, the 18th.",
+     "His 3rd swim is on the 18th."
+    ],
+    "answer": 18,
+    "slips": [
+     {
+      "a": [
+       11
+      ],
+      "say": "11 is the 2nd swim. Add 7 once more."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       8,
+       9
+      ]
+     },
+     "derive": {},
+     "q": "Ben swims every 7 days. He swims on the {a|ord}. What date is his 3rd swim?",
+     "answer": "a+14",
+     "hint": "Add 7 for each swim after the first.",
+     "steps": [
+      "The 2nd swim is {a} and 7 more.",
+      "The 3rd swim is 7 more again.",
+      "His 3rd swim is on the {ans|ord}."
+     ]
+    },
+    "easier": "c1"
+   },
+   {
+    "id": "t2",
+    "tier": "stretch",
+    "type": "choice",
+    "q": "Today is Tuesday. One day after the day before yesterday is which day?",
+    "hint": "Find yesterday first.",
+    "steps": [
+     "Yesterday was Monday.",
+     "The day before yesterday was Sunday.",
+     "One day after Sunday is Monday."
+    ],
+    "options": [
+     "Sunday",
+     "Monday",
+     "Tuesday"
+    ],
+    "answer": "Monday",
+    "slips": [],
+    "easier": "c3"
+   },
+   {
+    "id": "t3",
+    "tier": "stretch",
+    "type": "number",
+    "q": "A fortnight is 14 days. A trip lasts 2 fortnights. How many days is the trip?",
+    "hint": "Count in 14s.",
+    "steps": [
+     "A fortnight is 14 days.",
+     "14 and 14 make 28.",
+     "The trip lasts 28 days."
+    ],
+    "answer": 28,
+    "slips": [
+     {
+      "a": [
+       14
+      ],
+      "say": "14 is one fortnight. The trip is 2 fortnights."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "w": [
+       2,
+       3
+      ]
+     },
+     "derive": {},
+     "q": "A fortnight is 14 days. A trip lasts {w} fortnights. How many days is the trip?",
+     "answer": "14*w",
+     "hint": "Count in 14s.",
+     "steps": [
+      "A fortnight is 14 days.",
+      "Add 14, {w} times.",
+      "The trip lasts {ans} days."
+     ]
+    },
+    "easier": "c2"
+   },
+   {
+    "id": "g1",
+    "tier": "challenge",
+    "type": "number",
+    "q": "A month has 31 days. The 2nd is a Monday. How many Mondays are in the month?",
+    "hint": "List the Mondays. Each is 7 more than the one before.",
+    "steps": [
+     "The Mondays are the 2nd, 9th, 16th, 23rd and 30th.",
+     "The next Monday would be the 37th, which is too late.",
+     "There are 5 Mondays."
+    ],
+    "answer": 5,
+    "slips": [
+     {
+      "a": [
+       4
+      ],
+      "say": "Count the Mondays one by one: 2, 9, 16, 23, 30."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7
+      ]
+     },
+     "derive": {},
+     "q": "A month has 31 days. The {a|ord} is a Monday. How many Mondays are in the month?",
+     "answer": "(31-a)//7+1",
+     "hint": "List the Mondays. Each is 7 more than the one before.",
+     "steps": [
+      "List the Mondays, adding 7 each time.",
+      "Stop before 31 is passed.",
+      "There are {ans} Mondays."
+     ]
+    },
+    "easier": "t1"
+   },
+   {
+    "id": "g2",
+    "tier": "challenge",
+    "type": "choice",
+    "q": "Today is Tuesday. What day is it 50 days later?",
+    "hint": "50 days is 7 weeks and 1 day over.",
+    "steps": [
+     "7 weeks is 49 days.",
+     "49 days later is Tuesday again.",
+     "1 more day is Wednesday."
+    ],
+    "options": [
+     "Tuesday",
+     "Wednesday",
+     "Thursday"
+    ],
+    "answer": "Wednesday",
+    "slips": [],
+    "easier": "t2"
+   },
+   {
+    "id": "g3",
+    "tier": "challenge",
+    "type": "selfcheck",
+    "q": "Make your own days-later puzzle. Write a day and a number of days later. Ask a grown-up to find the day, then check by counting on.",
+    "hint": "Pick a day first, then count on from tomorrow.",
+    "steps": [
+     "Pick a day.",
+     "Pick a number of days.",
+     "Count on from tomorrow to check."
+    ],
+    "easier": "c3"
+   }
+  ]
+ },
+ "parent": {
+  "summary": "We found days and dates on a calendar. Your child put the days in order, counted on to find the day 3 or 4 days later, and found the date a week and a fortnight later on a month page. Some Think harder and Go further questions go past the school Primary 1 syllabus on purpose; Start here stays within it.",
+  "words": [
+   "week: 7 days",
+   "fortnight: 2 weeks, or 14 days",
+   "days later: count on from tomorrow, not from today",
+   "date: the number of the day in the month",
+   "the day before: one step back"
+  ],
+  "try_home": [
+   "Look at a calendar. Ask: what day is it 3 days later? Count on from tomorrow.",
+   "Pick a date. Ask: what date is a week later? Look straight down one row.",
+   "Ask: today is Monday. What day is it 10 days later? Use a whole week first."
+  ],
+  "ask": [
+   "Do we count today?",
+   "What happens after Sunday?",
+   "How many days make a week?"
+  ],
+  "when_stuck": "Let your child use the day cards and the month page and wait 10 seconds before helping. Asking 'What is tomorrow?' works better than giving the answer. Please do not chant the days; say them calmly. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
+  "next": "Next lesson: Make a Table. Online practice: your tutor will share the link. The recording has the tutor, the shared screen and any voice that is unmuted. Please do not share the link.",
+  "quote": "After Sunday comes Monday again. A week later is the same day.",
+  "report_line": "Your child is learning to count on round the days of the week and to find a date on a month page. This week: days later, a week and a fortnight.",
+  "term_line": "Your child is learning to give a reason, and to read time and money in real life.",
+  "next_materials": [
+   "Your Term 3 book (Book 6): tear out the strip page along the dashed line, then a grown-up cuts out the 14 paper strips (no matches or toothpicks)",
+   "A pencil, a rubber and paper"
+  ]
+ },
+ "safeguarding": [
+  "The day cards and the month page are paper or card. Small pieces stay on the table: nothing goes in the mouth or ears. No matches or toothpicks. Nobody cuts during the lesson; a grown-up cut the cards beforehand.",
+  "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
+  "Nobody holds paper or a card up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on a count of three, or show fingers or a thumb for a choice. There is no private chat.",
+  "Never read out a child's name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is unmuted. Children may mute and keep their cameras off. A child's page is never shown.",
+  "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. Stamping is soft; a child may stay seated and tap the table.",
+  "A child who is still stuck ticks 'I am still stuck' on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for 90 days after the program ends. The tutor then helps in the open session next term. No private messages to children.",
+  "The look-back is never collected in front of the group or read out. A pass is always allowed."
+ ],
+ "tutor_prep": [
+  "Solve every workbook question yourself first. Check the answers: S1 Wednesday, Saturday; S2 Tuesday, Sunday; S3 Friday, Saturday; S4 Monday; S5 7, the 13th; S6 True, False, True, True; T1 Thursday, Wednesday; T2 Sunday, Wednesday; T3 21, 14; T4 Saturday, the 25th; G1 14 weeks and 2 days, Wednesday; G2 8, 15, 22, 29 and Friday; G3 21, the 27th, Monday; I1 Wednesday, Thursday and Friday.",
+  "Tell parents a week before: the calendar page torn out along the dashed line, with the 7 day cards cut out by a grown-up (the month page is not cut). The next lesson needs the strip page, with the 14 strips cut out (no matches or toothpicks).",
+  "Have the slides open. Practise the stamp-and-count break. Have your own day cards and a month page to show on camera if you wish.",
+  "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded. Greet each child by first name as they arrive, then start the recording, then say the notice; avoid first names while it runs. The business WhatsApp number is never said or shown on a slide.",
+  "Be plain with families: days of the week are not a listed Primary 1 outcome (flagged for tutor review); the days, day before and after and a week as 7 days are approachable, and two days after the day before yesterday, a fortnight, every Wednesday of a month and Hundred Days Later go beyond the Primary 1 syllabus on purpose. Do not call the lesson MOE-aligned. The month is made up: no year, no public holidays."
+ ],
+ "spare_time": {
+  "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
+  "rules": [
+   "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
+   "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+   "Never teach anything the next lesson needs. If the class is ahead, slow down: ask 'How do you know?' and let children explain, rather than rushing on."
+  ],
+  "menu": [
+   {
+    "id": "M1",
+    "title": "Does a week later always match?",
+    "minutes": 4,
+    "tutor": "A child says: a week later is always the same day of the week. Is that always true? Test it with Monday, then with Friday, then with 14 days.",
+    "rec": "Recording: pause. Test whether a week later is always the same day. Try Monday, then Friday, then 14 days.",
+    "answer": "Yes. 7 days is a whole week, so we are back on the same day. 14 days is 2 weeks, so it is the same day too."
+   },
+   {
+    "id": "M2",
+    "title": "Make a puzzle for your grown-up",
+    "minutes": 4,
+    "tutor": "Pick a day and a number of days later. Ask your grown-up what day it is, then check together by counting on from tomorrow.",
+    "rec": "Recording: pause. Pick a day and a number of days later. Ask a grown-up to find the day, then check.",
+    "answer": "No single answer. Check by counting on from tomorrow, and use whole weeks first for big numbers."
+   },
+   {
+    "id": "M3",
+    "title": "Teach it back",
+    "minutes": 3,
+    "tutor": "Pretend your grown-up or a toy has never counted on round a week. Show how 10 days after Monday is Thursday, using a whole week first.",
+    "rec": "Recording: pause. Show a grown-up how 10 days after Monday is Thursday, using a whole week first.",
+    "answer": "7 days after Monday is Monday again. 3 more days is Tuesday, Wednesday, Thursday."
+   }
+  ]
+ },
+ "workbook": {
+  "header": "Time: days, weeks and dates",
+  "hint_p1": "Use your day cards. Say the days in order. Count on from tomorrow.",
+  "hint_p2": "A week is 7 days. A week later is the same day. Use the month page.",
+  "hint_p3": "Use your day cards and the month page. Count in 7s for weeks. Choose any question.",
+  "hint_p4": "Whole weeks bring us back to the same day. Choose any question. You do not have to finish them all.",
+  "choice_after": 4,
+  "inv_intro": "",
+  "inv_first_label": "First:",
+  "inv_then_label": "Next:",
+  "home_hint": "Use your day cards and the month page, or a calendar from the house. Small pieces stay on the table, away from little brothers and sisters.",
+  "kits": [
+   {
+    "type": "calendar_cards",
+    "start": "Wed",
+    "days": 31,
+    "title": "Kit page: calendar and day cards",
+    "intro": "The month page is not cut: keep it flat. A grown-up cuts out the 7 day cards before the lesson. The month is made up: it starts on a Wednesday and has 31 days. No cards? Write the 7 days on 7 small pieces of paper."
+   }
+  ]
+ },
+ "beyond": {
+  "name": "Hundred Days Later",
+  "where": [
+   "G1"
+  ],
+  "text": "Finding the day 100 days later (14 weeks and 2 days over, so Monday plus 100 days is Wednesday) by using whole weeks and the left-over days. Dividing by 7 with a left-over is a Primary 3 outcome (remainders), so the lesson says weeks and days over and never writes a division. The other Think harder and Go further items (two days after the day before yesterday, the 10th day from Monday, a fortnight, every Wednesday of a month, 3 weeks later) go past the Primary 1 time outcomes too. Named puzzle: Hundred Days Later.",
+  "parent": "Finding the day 100 days later (using whole weeks and the days left over), a fortnight and every Wednesday of a month go past the school Primary 1 syllabus on purpose; days of the week are not a listed Primary 1 topic."
+ }
+}

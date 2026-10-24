@@ -1,0 +1,317 @@
+=== /portal/ ===
+Skip to content
+?
+Math Inquirers
+Parent portal
+
+Next step: choose a group and reserve a place, or look at the extension books. Go there
+
+Hello, Tone Parent
+Log out
+Home
+My children
+Extension books
+Trial class
+Places and payments
+
+Nothing reserved yet.
+
+My children
+
+Use a first name or nickname. We do not collect photos, school or NRIC.
+
+Kai Level 2
+Edit
+Remove
+Add a child
+
+Use a first name or a nickname. We do not ask for photos, school or NRIC. The PIN is what your child types to sign in; we store it scrambled and cannot show it again.
+
+First name or nickname
+
+Birth year (optional)
+Prefer not to say
+2023
+2022
+2021
+2020
+2019
+2018
+2017
+2016
+2015
+2014
+2013
+2012
+2011
+2010
+2009
+2008
+
+Level
+Level 1 (ages 6 to 8)
+Level 2 (ages 7 to 9)
+Level 3 (ages 8 to 10)
+Level 4 (ages 9 to 11)
+Level 5 (ages 10 to 12)
+Level 6 (ages 11 to 13)
+
+PIN (4 to 6 digits)
+
+Add child
+Online practice, books and trial classes
+
+For every family, with or without a live group.
+
+My children and their practice
+Buy an extension book
+Ask about a trial class
+Agreements
+
+Choose what you will use, then read the terms and the privacy notice and tick what applies. Nothing is ticked for you. You can change your mind at any time.
+
+Terms and refund policy
+Privacy and recording notice
+
+What will you use Math Inquirers for?
+Online practice or an extension book (no class)
+A live group class
+Both a live group class and online practice
+For everyone
+Needed: I agree to Math Inquirers (Preciouslyours Pte Ltd) using my details to arrange the class or order and contact me about it.
+Needed: I have read the terms and refund policy and agree to them.
+If your child uses online practice
+
+Needed so your child's answers can be sent to us. Without it, practice pages still work on your child's own device but nothing is sent.
+
+Needed: I am the parent or legal guardian of this child. I agree that when my child presses "Submit" on an online practice page, Math Inquirers (Preciouslyours Pte Ltd) receives my child's answers, marks them again on our server, and keeps them with my child's profile (first name or nickname and level) to make practice reports for me and, if my child is in one of our groups, for my child's tutor. We do not use my child's answers for advertising. We keep them for 12 months after the last submission, or until 90 days after my child's online access ends, whichever is sooner, and then delete them. I can ask to see, correct or delete them, or withdraw this agreement, at any time.
+Only for live group classes
+
+Needed to join a live, recorded group. Not asked of families who only buy a book.
+
+Needed: I agree that live lessons are recorded as described in the privacy notice, and that recordings are shared only with the enrolled families of my child's group.
+Needed: I agree that Math Inquirers keeps photos of my child's work, practice answers and short progress notes, as described in the privacy notice. I am the parent or legal guardian of the child.
+If you order a printed book
+
+We ask again when you order, so you can leave this for now.
+
+I agree that Math Inquirers (Preciouslyours Pte Ltd) may give my delivery name, Singapore address, postal code and phone number to its printer and courier, only to print and deliver the book I ordered, and will delete them 30 days after the parcel is confirmed delivered.
+Optional
+
+Say yes only if you would like it. It never changes what your child can do.
+
+(Optional) I agree that Math Inquirers may contact me by email or WhatsApp to suggest a trial class or a next book, including a suggestion based on how my child did in the online practice. I can say stop at any time and we will stop. I do not have to agree to use the online practice or to ask for a trial class.
+(Optional) I agree that my feedback may be used, without my child's name, to improve and describe the program.
+
+Last saved 24 Oct 2026, 1:17 pm (terms terms-2026-10d-draft, privacy privacy-2026-10d-draft).
+
+Update agreements
+Choose a group
+
+Beta: 5 weeks, 10 lessons of 90 minutes (Singapore time), groups of up to 8.
+
+Kai (Level 2)
+Level 2 · Group A (ages 7 to 9)
+Tue 10:45-12:15 and Fri 10:45-12:15, first lesson Tue 24 Nov, last Thu 24 Dec
+8 of 8 seats left | S$250.00 for all 10 lessons
+Reserve a place
+Child sign-in
+
+Your child signs in with this family code, their display name and their PIN.
+
+C29UNV
+
+Open the child sign-in page
+Your details and data
+
+Name
+
+Phone (optional)
+
+Signed in as tone@example.com
+
+Save details
+Delete my data
+
+=== /portal/children/ ===
+Skip to content
+?
+Math Inquirers
+My children
+My children
+Log out
+Home
+My children
+Extension books
+Trial class
+Kai
+Level 2
+What Kai can open
+Extension Workbook, Level 2: online practice.
+Practice pages
+
+Kai signs in first (family code, name and PIN) so the answers can be sent to us. Without signing in, the pages still work but nothing is sent.
+
+Extension book, Level 2, unit 1: Digit detectives
+Extension book, Level 2, unit 2: Make a number
+How it is going
+
+This shows what Kai has done. Every child learns at their own pace, and a skipped question is a fine choice.
+
+Extension book, Level 2, unit 1: Digit detectives
+Last sent 24 Nov 2026: answered 5 of 6 questions, 1 left for later, 1 done on paper (1 ticked "I got it").
+Hide details
+Worth looking at together
+Place value
+Said 6: gave the digit, not the value.
+
+A good way to help: ask your child to explain how they got one of these answers, and listen for the idea behind it. Please do not worry about the wrong answer itself.
+
+Open the child sign-in page
+Buy a book for Kai
+Delete practice answers
+For grown-ups: a possible next step
+Add another child
+
+To change a name, level or PIN, go to the home page. Child sign-in family code: C29UNV
+
+=== /portal/books/?child=c-2 ===
+Skip to content
+?
+Math Inquirers
+Extension books
+Extension books
+Log out
+Home
+My children
+Extension books
+Trial class
+Order an extension book
+
+Extra problems to stretch your child. Choose a printed workbook, online practice, or both. You do not need to be in any class.
+
+1. Which level?
+
+Extension Workbook level
+Level 1
+Level 2
+Level 3
+Level 4
+Level 5
+Level 6
+
+Ten units of extra problems for the level. The level of the book does not have to match your child's level.
+
+2. How would you like it?
+Workbook only (printed, posted to you)
+S$13.00
+Online only (practice pages for one child)
+S$11.00
+Workbook and online
+S$22.00
+3. Which child is it for?
+Kai Level 2
+
+One purchase is for one child. Online access is set up for this child only; a brother or sister needs their own.
+
+Choose an option to see the price.
+
+Place order This does not charge you. You pay afterwards by PayNow with your reference.
+
+Not sure about the price or which one to pick? Ask us and we will reply.
+
+Your orders
+
+No orders yet.
+
+=== /portal/trial/ ===
+Skip to content
+?
+Math Inquirers
+Trial class
+Ask about a trial class
+Log out
+Home
+My children
+Extension books
+Trial class
+A trial class
+
+For parents. Tell us the level and some times that could suit you, and we will be in touch to talk it through. It is fine to ask even if your child has only used a workbook, and you do not need an enrolment.
+
+Which child is it for? (optional)
+Not sure yet
+Kai (Level 2)
+
+Which level would you like to try?
+Level 1
+Level 2
+Level 3
+Level 4
+Level 5
+Level 6
+
+Times that could suit you (tick any)
+Weekday afternoons
+Weekday evenings
+Weekend mornings
+Weekend afternoons
+
+These are only wishes. We will talk to you about real times.
+
+Phone or WhatsApp (optional)
+We will reply to tone@example.com unless you add a number.
+
+Anything you would like us to know? (optional, up to 300 characters)
+
+Agreements
+
+Terms and refund policy
+Privacy and recording notice
+
+(Optional) I agree that Math Inquirers may contact me by email or WhatsApp to suggest a trial class or a next book, including a suggestion based on how my child did in the online practice. I can say stop at any time and we will stop. I do not have to agree to use the online practice or to ask for a trial class.
+
+Only the first two are needed to ask for a trial class. The optional one lets us message you first with a suggestion later; leave it empty if you prefer.
+
+Send my request No payment, no obligation. You can withdraw the request below at any time.
+
+Your requests
+
+No requests yet.
+
+=== /portal/child/ ===
+Skip to content
+?
+Math Inquirers
+Child sign-in
+Hi! Sign in to practise
+
+Family code (from your grown-up)
+
+Your name
+
+Your PIN
+
+Sign in
+
+When you press Submit on a practice page, your answers are sent to your tutor at Math Inquirers so they can see what to help with.
+
+Grown-up? Parent portal
+
+=== /portal/practice/ (child) ===
+Skip to content
+?
+Math Inquirers
+Practice
+Hello, Kai!
+Sign out
+
+Pick a page to practise. You can skip a question and come back to it.
+
+Notice it. Test it. Explain why.
+
+Extension book
+Extension book, Level 2, unit 1: Digit detectives
+Extension book, Level 2, unit 2: Make a number
+
+Using a shared tablet? Press Sign out when you are done. You are also signed out after 30 minutes without touching the screen.

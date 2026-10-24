@@ -8,6 +8,7 @@
  "title": "Math Inquirers: Lesson 3 – Fruit Party Graphs",
  "order": [
   "l3-title",
+  "l3-tool",
   "l3-warm1",
   "l3-warm2",
   "l3-warmcheck",
@@ -18,7 +19,6 @@
   "l3-teach2",
   "l3-try2",
   "l3-teach3",
-  "l3-try3",
   "l3-key",
   "l3-break",
   "l3-ws1",
@@ -29,7 +29,9 @@
   "l3-ws2ans",
   "l3-stretch",
   "l3-challenge",
+  "l3-chdiag",
   "l3-chwalk",
+  "l3-skill1",
   "l3-talk",
   "l3-exit",
   "l3-reflect"

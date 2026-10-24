@@ -2,6 +2,7 @@
 // Every answer below was worked out and checked by computer: letter numbers A = 0 … Z = 25,
 // code number = (letter number + shift) mod 26; clock and calendar answers use mod 12 and mod 7. The Python program was run.
 
+const FG = require('../../levels/figs_l4_6.js');
 const NAVY = '#1B2A49', YEL = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WHITE = '#FFFFFF';
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
@@ -97,10 +98,10 @@ module.exports = {
     n: 8, week: 4, session: 'B', title: 'Secret Codes', topic: 'Clock (Modular) Arithmetic',
     objective: 'Do clock arithmetic (counting past the end wraps round to the start), use n mod m as the remainder when n is divided by m, solve clock and calendar puzzles with mod 12 and mod 7, code and decode Caesar ciphers with letter numbers (A = 0 … Z = 25, code = (letter + shift) mod 26), crack a code, and test it all with a Scratch program that uses a list of letters and mod.',
     skills: 'Remainders and mod, clock and calendar arithmetic, negative numbers on a clock, Caesar ciphers, cracking codes by reasoning, lists and letters in code, tracing code in a table',
-    materials: 'A laptop or desktop with Scratch 3 open (the tutor builds and shares a starter project with a list called alphabet holding A to Z; no .sb3 file exists in this repository, so build it beforehand), mini whiteboards, paper for code strips, scissors.',
-    online: 'Children make their code strips on paper and hold them to the camera. Children hold up their coded name on paper to the camera, or the tutor reads out the coded names; partners decode on paper. Pairs use breakout rooms for the coding part; the driver shares the screen. Starter project: the tutor shares an .sb3 file (not a link only) containing the list alphabet with A to Z already filled in, and the loop already built; children add the three cipher blocks. Block colours on our slides are simplified; in Scratch, list blocks are red-orange (Variables palette) and you find blocks by the category name on the left, not by colour.',
-    warmup: 'Clock jumps: the tutor shows a clock and asks “It is 9 o’clock. What time is it 4 hours later?” Children answer on whiteboards. Then times past 12, times going backwards, 24 hours later, and a day-of-the-week jump.',
-    explore: 'Pairs make a shift-3 code strip (the alphabet, with the alphabet again underneath starting at D). They code their first names, swap and decode, then decode the tutor’s message PDWK LV IXQ. What happens to X, Y and Z? How do you decode?',
+    materials: 'A laptop or desktop with Scratch 3 open (the tutor shares the starter file L8_Code_Machine.sb3, which has a list called alphabet holding A to Z and the loop already built), mini whiteboards, paper for code strips, scissors.',
+    online: 'Children make their code strips on paper and use them in the lesson (nothing is held up to the camera). The tutor reads out the coded names (nothing is held up to the camera); partners decode on paper. Pairs use breakout rooms for the coding part; the driver shares the screen. Starter project: the tutor shares the file L8_Code_Machine.sb3 (not a link only; children use File, Load from your computer, no account needed) containing the list alphabet with A to Z already filled in, and the loop already built; children add the three cipher blocks. Block colours on our slides are simplified; in Scratch, list blocks are red-orange (Variables palette) and you find blocks by the category name on the left, not by colour.',
+    warmup: 'Clock jumps: four calls. The tutor shows a clock and asks “It is 9 o’clock. What time is it 4 hours later?” Children answer on whiteboards. Then times past 12, times going backwards and 12 hours later.',
+    explore: 'Pairs use the shift-3 code strip on the slide (the alphabet, with the alphabet again underneath starting at D). They code their first names, swap and decode, then decode the tutor’s message PDWK LV IXQ. What happens to X, Y and Z? How do you decode?',
     mini: 'Clock arithmetic: 9 o’clock + 5 hours = 2 o’clock, because 14 mod 12 = 2 (mod = the remainder). A week is a 7-day clock: 45 days after Thursday is Sunday (45 mod 7 = 3). Letters are numbers 0 to 25 on a 26-hour clock: Caesar code = (letter + shift) mod 26 (ZOO with shift 5 is ETT); decode by shifting back and adding 26 if you go below 0 (AEB with shift 4 is WAX). Before page 2: trace the code in a table (SKY, shift 10 gives CUI), crack a code from a short word (YMNX NX KZS is THIS IS FUN), and combine shifts (15 then 15 is shift 4).',
     share: 'Why does a shift of 26 change nothing? Why is decoding a shift-3 message the same as coding it again with shift 23?',
     exit: { q: 'Code the word HI with a shift of 25. What do you notice?', a: 'GH (H = 7, 7 + 25 = 32, 32 mod 26 = 6 = G; I = 8, 33 mod 26 = 7 = H). A shift of 25 is the same as shifting back 1, because 25 = 26 − 1.' },
@@ -130,19 +131,19 @@ module.exports = {
 
   deck: {
     today: 'Use clock arithmetic (mod) to solve time and calendar puzzles, make and break secret codes, and build a code machine in Scratch.',
-    warmGame: 'Clock jumps. The tutor shows a clock and calls a time and a jump (“9 o’clock, 4 hours later?”). Answer on whiteboards. Then jumps past 12, jumps backwards, and a day-of-the-week jump.',
-    warmQs: [['17 ÷ 5: what is the remainder?', '2'], ['30 ÷ 7: what is the remainder?', '2'], ['26 ÷ 26: what is the remainder?', '0'], ['40 ÷ 12: what is the remainder?', '4'], ['Which of 7, 9, 10, 12 leave remainder 1 when divided by 3?', '7 and 10']],
-    expSetup: ['Make a code strip: write A to Z. Underneath, write the alphabet again starting at D (A → D, B → E …).', 'Code your first name with shift 3. Swap with your partner and decode each other’s.', 'Decode the tutor’s message: PDWK LV IXQ', 'What happens to X, Y and Z? How do you decode: which way do you shift?'],
+    warmGame: 'Clock jumps. The tutor shows a clock and calls a time and a jump (“9 o’clock, 4 hours later?”). Answer on whiteboards. Four calls: a jump past 12, a jump backwards and 12 hours later.',
+    warmQs: [['17 ÷ 5: what is the remainder?', '2'], ['26 ÷ 26: what is the remainder?', '0'], ['40 ÷ 12: what is the remainder?', '4']],
+    expSetup: ['Look at the code strip on the slide: the alphabet with the alphabet again underneath, starting at D (A → D, B → E …).', 'Code your first name with shift 3. Swap with your partner and decode each other’s.', 'Decode the tutor’s message: PDWK LV IXQ', 'What happens to X, Y and Z? How do you decode: which way do you shift?'],
     expPic: 'two rows of letters: A to Z on top, and underneath the shift-3 row starting D, E, F … ending A, B, C, with X, Y and Z highlighted and arrows showing them wrap round to A, B, C.',
-    expAsk: [['What do X, Y and Z become with shift 3?', 'A, B and C: after Z the alphabet wraps round to the start.'], ['How do you decode a shift-3 message?', 'Shift each letter back 3 (or forward 23). PDWK LV IXQ is MATH IS FUN.'], ['What does a shift of 26 do?', 'Nothing: every letter goes once round and lands on itself.']],
+    expAsk: [['What do X, Y and Z become with shift 3?', 'A, B and C: after Z the alphabet wraps round to the start.'], ['How do you decode a shift-3 message?', 'Shift each letter back 3 (or forward 23). PDWK LV IXQ is MATH IS FUN.']],
     mini1: { head: 'Clock arithmetic: 9 o’clock + 5 hours', body: ['Count on 5: 10, 11, 12, 1, 2.', 'Adding gives 14. A clock wraps round after 12: 14 − 12 = 2.', '14 mod 12 = 2: the remainder when 14 is divided by 12.', 'Thursday + 45 days: 45 mod 7 = ?'], ans: '2 o’clock. 45 mod 7 = 3, so Sunday.' },
     mini2: { head: 'Caesar code: ZOO with shift 5', body: ['Letter numbers: Z = 25, O = 14.', 'Z: 25 + 5 = 30, 30 mod 26 = 4 = E.', 'O: 14 + 5 = 19 = T.', 'Decode AEB (shift 4): A = 0, 0 − 4 = −4, + 26 = 22 = W …'], ans: 'ZOO → ETT.  AEB → WAX.' },
     keyHead: 'Key idea: wrap round like a clock',
     keyBig: 'n mod m is the remainder when n is divided by m. On a clock with m numbers, counting past the end wraps round to the start.',
     keySmall: 'Caesar code: code number = (letter number + shift) mod 26. Decode: shift back (add 26 if you go below 0), or shift forward by 26 − shift.',
     brk: 'Clock arms. Your arm is the hour hand. The tutor calls a time and you point to it. Then “add 5 hours!” and you sweep your arm round to the new time. Try “add 12 hours!”',
-    ws1: 'Page 1, in pairs: Q1 clock and calendar puzzles with mod, Q2 code and decode with a Caesar shift (test it in Scratch).',
-    ws2: 'Page 2, on your own: Q3 trace the code machine in a table, Q4 crack a secret message, Q5 combine two shifts.'
+    ws1: 'Page 1, in pairs: Q1 clock and calendar puzzles with mod (the clock and week circles are printed beside it). Q2, code and decode with a Caesar shift (test it in Scratch), is at the top of the next sheet.',
+    ws2: 'Then on your own, on the sheet after that: Q3 trace the code machine in a table, Q4 crack a secret message, Q5 combine two shifts.'
   },
 
   moved: [
@@ -177,7 +178,7 @@ module.exports = {
       { q: 'Ali codes a message with a shift of k, then codes the result again with the same shift k. It is the same as one shift of 6. What could k be? Find every answer from 0 to 25.', a: '3 or 16 (3 + 3 = 6; 16 + 16 = 32 and 32 mod 26 = 6)' },
       { q: 'Write your own secret message of at least 8 letters and code it with a shift of your choice. Write clear instructions telling a friend how to decode it, and explain how a friend could crack it without being told the shift. Swap and decode.', a: 'Open. Check the code by decoding it, and that the cracking idea is sensible: try every shift from 1 to 25, or use the commonest letter (often E) or a short word (A or I). Example: MEET AT SIX with a shift of 3 is PHHW DW VLA.' },
       { q: 'Ali codes a message with a shift of 7. Mei codes Ali’s result with another shift. The final message is the same as the original coded with a shift of 2. What shift did Mei use?', a: '21 (7 + 21 = 28, and 28 mod 26 = 2)' },
-      { q: 'Start at 12 on a clock and keep jumping forward 5 hours. Do you land on every number before you get back to 12? What about jumps of 4 hours?', a: 'Jumps of 5: yes, all 12 numbers (5, 10, 3, 8, 1, 6, 11, 4, 9, 2, 7, 12). Jumps of 4: no, only 4, 8 and 12, because 4 shares a factor with 12.' }
+      { q: 'Start at 12 on a clock and keep jumping forward 5 hours. Do you land on every number before you get back to 12? What about jumps of 4 hours?', fig: FG.rings([{ n: 12, labels: [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], cap: 'jumps of 5 hours', hl: 0, solid: true }, { n: 12, labels: [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], cap: 'jumps of 4 hours', hl: 0, solid: true }], { r: 52, cw: 290, label: 'Two clock circles with 12 at the top marked as the start, to draw the jumps on.' }), a: 'Jumps of 5: yes, all 12 numbers (5, 10, 3, 8, 1, 6, 11, 4, 9, 2, 7, 12). Jumps of 4: no, only 4, 8 and 12, because 4 shares a factor with 12.' }
     ]
   },
 
@@ -190,9 +191,13 @@ module.exports = {
       H.p('Letter numbers (we start at A = 0). Use them for every code question in this lesson.', { after: 10 }),
       H.fig(strip()),
       H.q(1, 'Clock and calendar puzzles. A clock wraps round after 12; a week wraps round after 7 days.', { before: 40, keepNext: true }),
-      H.sub('a', 'It is 8 o’clock. 7 hours later it is  ______ o’clock.      (b)  It is 11 o’clock. 30 hours later (count 12 hours at a time):  ______ o’clock.', { after: 60 }),
-      H.sub('c', 'It is 4 o’clock. 9 hours ago it was  ______ o’clock.      (d)  Today is Saturday. In 100 days:  __________ .', { after: 60 }),
-      H.sub('e', 'Today is Saturday. 30 days ago it was  __________ .', { after: 60 }),
+      ((figH, subsH) => '<div class="p img" style="display:flex;align-items:center;gap:6px;text-align:left"><div style="flex:1;min-width:0">' + subsH + '</div><div style="flex:none">' + figH + '</div></div>')(
+        FG.rings([{ n: 12, labels: [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], cap: 'a 12-hour clock', solid: true }, { n: 7, labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'], cap: 'a week of 7 days', hl: 6, solid: true, dotR: 11, size: 17 }], { r: 46, cw: 215, label: 'Two circles to count round. Left: the 12 hours of a clock, 12 at the top. Right: the 7 days of a week, with Saturday marked.' }),
+        [
+          H.sub('a', 'It is 8 o’clock. 7 hours later it is  ______ o’clock.      (b)  It is 11 o’clock. 30 hours later (count 12 hours at a time):  ______ o’clock.', { after: 60 }),
+          H.sub('c', 'It is 4 o’clock. 9 hours ago it was  ______ o’clock.      (d)  Today is Saturday. In 100 days:  __________ .', { after: 60 }),
+          H.sub('e', 'Today is Saturday. 30 days ago it was  __________ .', { after: 60 })
+        ].join('')),
       H.q(2, 'Caesar codes. Code number = (letter number + shift) mod 26. Test your answers in Scratch (type the message in capital letters; the starter keeps the spaces).', { keepNext: true }),
       H.sub('a', 'Code the word PIZZA with a shift of 7.      ______________________', { after: 60 }),
       H.sub('b', 'Decode this message. It was made with a shift of 10:   MYNO SC PEX      ______________________', { after: 60 }),
@@ -208,7 +213,7 @@ module.exports = {
       H.sub('a', 'Which 3-letter word appears twice?  ________   What English word could it be?  ________', { after: 60 }),
       H.sub('b', 'If you are right, what shift turns T into B?  ______', { after: 60 }),
       H.sub('c', 'Decode the first word of the message with that shift:   ____________'),
-      H.q(5, 'Two shifts in a row. Shifts add up like jumps on a 26-hour clock.', { keepNext: true }),
+      H.q(5, '★ Take-home. Two shifts in a row. Shifts add up like jumps on a 26-hour clock. (Example: shift 2 then shift 3 moves A to C to F, the same as shift 5.)', { keepNext: true }),
       H.sub('a', 'Shift 6, then shift 9 is the same as one shift of  ______ .      (b)  Shift 19, then shift 12:  one shift of  ______ .', { after: 60 }),
       H.sub('c', 'Ben codes a message with shift 9, then codes the result with shift 17. What does he get? Why?', { after: 20 }), ...H.lines(1),
       H.sub('d', 'Which shift (not 0), used twice, always gives back the original message?   ______')

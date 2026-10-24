@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Tutor remote | Math Inquirers</title>
+<link rel="stylesheet" href="/fonts.css">
+<style>
+:root{--navy:#1B2A49;--cream:#FFF8E7;--yellow:#FFC93C;--teal:#1F7A6F;--red:#C9372C;--ink:#1B2A49;--card:#fff;--line:#d9d2bd;--mut:#5b6478}
+@media (prefers-color-scheme:dark){:root{--cream:#101a30;--ink:#f3efe2;--card:#1a2646;--line:#33436b;--mut:#a8b2cc}}
+*{box-sizing:border-box}html,body{margin:0}body{background:var(--cream);color:var(--ink);font:16px/1.45 'Nunito Sans',Arial,sans-serif;padding:max(12px,env(safe-area-inset-top)) max(14px,env(safe-area-inset-right)) max(90px,env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left))}
+.top{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--mut)}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:#c9372c;margin-right:6px}.dot.on{background:#1f9d6f}
+#join{display:grid;gap:10px;margin-top:18vh;text-align:center}
+#join input{font:600 34px Fredoka,Arial;text-transform:uppercase;letter-spacing:6px;text-align:center;padding:12px;border-radius:14px;border:2px solid var(--line);background:var(--card);color:var(--ink);width:100%}
+button{font:inherit;font-weight:700;border-radius:14px;border:2px solid var(--ink);background:var(--card);color:var(--ink);padding:12px 10px;min-height:48px}
+button.main{background:var(--yellow);color:#1B2A49;font-size:22px;min-height:76px;box-shadow:0 4px 0 var(--ink)}
+button:active{transform:translateY(2px)}
+#run{display:none}
+.clock{font:600 76px Fredoka,Arial;line-height:1;font-variant-numeric:tabular-nums;text-align:center;margin:8px 0 0}
+.clock.warn{color:#b87a00}.clock.over{color:var(--red)}
+.part{text-align:center;font:600 20px Fredoka,Arial;margin:2px 0}
+.sub{text-align:center;color:var(--mut);font-size:14px}
+.bar{height:10px;border-radius:5px;background:var(--line);overflow:hidden;margin:10px 0}.bar i{display:block;height:100%;background:var(--teal);width:0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 14px;margin:10px 0}
+.card h3{margin:0 0 6px;font:600 15px Fredoka,Arial;text-transform:uppercase;letter-spacing:.05em;color:var(--mut)}
+.card p{margin:.35em 0}.tag{display:inline-block;min-width:3.4em;font-weight:800;font-size:12px;letter-spacing:.04em;color:var(--teal)}
+.tag.do{color:#8a6500}.tag.stuck{color:var(--red)}
+details summary{cursor:pointer;font-weight:700}
+.nextup{font-size:14px;color:var(--mut);text-align:center}
+#stickynext{position:fixed;left:0;right:0;bottom:0;padding:10px max(14px,env(safe-area-inset-right)) max(10px,env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left));background:linear-gradient(transparent,var(--cream) 30%);}
+</style></head><body>
+<div class="top"><span><i class="dot" id="dot"></i><span id="conn">connecting</span></span><span id="roomlbl"></span></div>
+<div id="join"><h1 style="font:600 28px Fredoka,Arial;margin:0">Tutor remote</h1><p class="sub">Type the 4-letter code shown on your lesson screen.</p>
+<input id="codein" maxlength="4" autocomplete="off" autocapitalize="characters" aria-label="Room code"><button class="main" id="joinbtn">Connect</button></div>
+<div id="run">
+  <div class="part" id="part">—</div>
+  <div class="clock" id="clock">0:00</div>
+  <div class="sub" id="sub"></div>
+  <div class="bar"><i id="fill"></i></div>
+  <div class="nextup" id="nextup"></div>
+  <div class="grid">
+    <button id="bprev">◀ Back</button><button id="btoggle">Start</button>
+    <button id="badd">+1 min</button><button id="bskip">Skip optional</button>
+    <button id="bpart">Next part</button><button id="bbig">Big timer</button>
+  </div>
+  <div class="card" id="slidenote"><h3>This slide</h3><p class="sub" style="text-align:left">No note.</p></div>
+  <div class="card" id="script"><h3>This part</h3></div>
+  <div class="card" id="answers" style="display:none"><h3>Answers</h3></div>
+  <div id="stickynext"><button class="main" id="bnext" style="width:100%">Next slide ▶</button></div>
+</div>
+<script src="/common.js"></script>
+<script>
+(function () {
+  var q = new URLSearchParams(location.search), $ = function (id) { return document.getElementById(id); };
+  var room = (q.get('room') || '').toUpperCase(), key = q.get('key') || '', conn, st = null, recv = 0, notes = null, notesFor = '';
+  function start(r) {
+    room = r; $('join').style.display = 'none'; $('run').style.display = 'block'; $('roomlbl').textContent = 'Room ' + room;
+    conn = MI.connect(room, 'remote', function (m) {
+      if (m.type === 'state') { st = m; recv = Date.now(); if (notesFor !== m.lesson) loadNotes(m.lesson); render(); }
+      else if (m.type === 'screen') { $('conn').textContent = m.online ? 'lesson screen connected' : 'waiting for lesson screen'; $('dot').className = 'dot' + (m.online ? ' on' : ''); }
+    }, function (ok) { if (!ok) { $('conn').textContent = 'reconnecting'; $('dot').className = 'dot'; } });
+  }
+  function loadNotes(id) {
+    notesFor = id; fetch('/data/' + id + '.notes.json' + (key ? '?key=' + encodeURIComponent(key) : '')).then(function (r) { return r.ok ? r.json() : null; }).then(function (n) { notes = n; render(); });
+  }
+  function el(tag, cls, txt) { var e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; }
+  var shown = '';
+  function render() {
+    if (!st) return;
+    $('part').textContent = st.partTitle; $('nextup').textContent = 'Next: ' + st.next;
+    $('btoggle').textContent = st.running ? 'Pause' : 'Start';
+    var sig = st.slideId + '|' + st.part + '|' + (notes ? 1 : 0);
+    if (sig === shown) return; shown = sig;
+    var sn = $('slidenote'); sn.innerHTML = ''; sn.appendChild(el('h3', null, 'This slide · ' + (st.slide + 1) + ' of ' + st.nslides));
+    var n = notes && notes.slides && notes.slides[st.slideId];
+    if (n && n.note) n.note.split(/\n+/).forEach(function (t) { sn.appendChild(el('p', null, t)); }); else sn.appendChild(el('p', 'sub', notes ? 'No note for this slide.' : 'Loading notes…'));
+    var sc = $('script'); sc.innerHTML = ''; sc.appendChild(el('h3', null, 'This part · ' + st.partTitle));
+    var p = notes && notes.parts && notes.parts[st.part];
+    if (p) { [['say', 'SAY'], ['do', 'DO'], ['stuck', 'IF STUCK']].forEach(function (k) { (p[k[0]] || []).forEach(function (t) { var d = el('p'); d.appendChild(el('span', 'tag ' + k[0], k[1])); d.appendChild(document.createTextNode(' ' + t)); sc.appendChild(d); }); });
+      if (!(p.say || []).length && !(p.do || []).length) sc.appendChild(el('p', 'sub', 'No script lines for this part.')); } else sc.appendChild(el('p', 'sub', notes ? 'No script for this part.' : 'Loading notes…'));
+    var an = $('answers'); an.innerHTML = ''; an.style.display = 'none';
+    if (p && p.ask && p.ask.length) { an.style.display = 'block'; an.appendChild(el('h3', null, 'Ask / expect')); p.ask.forEach(function (a) { var d = el('p'); d.appendChild(el('b', null, a[0])); d.appendChild(document.createElement('br')); d.appendChild(document.createTextNode(a[1])); an.appendChild(d); }); }
+  }
+  setInterval(function () {
+    if (!st) return;
+    var add = st.running ? (Date.now() - recv) / 1000 : 0, el_ = st.partElapsed + add, rem = st.partBudget - el_;
+    $('clock').textContent = (rem < 0 ? '+' : '') + MI.fmt(Math.abs(rem));
+    $('clock').className = 'clock' + (rem < 0 ? ' over' : rem < 60 ? ' warn' : '');
+    $('sub').textContent = 'of ' + MI.fmt(st.partBudget) + ' · lesson ' + MI.fmt(st.totalElapsed + add) + ' of 90:00' + (st.optional ? ' · optional slide' : '');
+    $('fill').style.width = Math.min(100, (st.totalElapsed + add) / 54) + '%';
+  }, 250);
+  function send(c, extra) { conn && conn.send(Object.assign({ type: 'cmd', cmd: c }, extra || {})); if (navigator.vibrate) navigator.vibrate(12); }
+  $('bnext').onclick = function () { send('next'); }; $('bprev').onclick = function () { send('prev'); };
+  $('btoggle').onclick = function () { send('toggle'); }; $('badd').onclick = function () { send('add', { secs: 60 }); };
+  $('bskip').onclick = function () { send('skipOptional'); }; $('bpart').onclick = function () { send('nextPart'); }; $('bbig').onclick = function () { send('big'); };
+  $('joinbtn').onclick = function () { var c = $('codein').value.trim().toUpperCase(); if (c.length >= 3) start(c); };
+  $('codein').addEventListener('keydown', function (e) { if (e.key === 'Enter') $('joinbtn').click(); });
+  if (room) start(room);
+})();
+</script></body></html>

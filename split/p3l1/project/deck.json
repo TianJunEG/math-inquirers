@@ -2,12 +2,13 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-22T00:31:42Z"
+  "at": "2026-10-23T06:27:52Z"
  },
  "lists": "css",
  "title": "Math Inquirers P3: Lesson 1 – Number Sleuths",
  "order": [
   "p3l1-title",
+  "p3l1-tool",
   "p3l1-warmcheck",
   "p3l1-warm1",
   "p3l1-warm2",
@@ -25,8 +26,6 @@
   "p3l1-ws1ans",
   "p3l1-teachrename",
   "p3l1-teachclues",
-  "p3l1-tryclues",
-  "p3l1-teachsum",
   "p3l1-ws2",
   "p3l1-ws2ans",
   "p3l1-stretch",

@@ -1,0 +1,881 @@
+{
+ "schema_version": 1,
+ "level": 1,
+ "unit": 4,
+ "id": "L1U04",
+ "title": "Patterns that go on",
+ "topic": "Repeating and growing patterns",
+ "holiday_lesson": 4,
+ "goal": "I can find the core of a pattern and use it to find a shape far along. I can follow a growing pattern and find the rule.",
+ "learn": {
+  "intro": "A repeating pattern has a core that goes round and round. Count in the size of the core to find a far place. A growing pattern gets larger by the same amount each time.",
+  "example": {
+   "problem": "The pattern keeps going. What is the 14th shape?",
+   "figure": {
+    "type": "shape_row",
+    "items": [
+     "triangle",
+     "circle",
+     "circle",
+     "triangle",
+     "circle",
+     "circle",
+     "triangle",
+     "circle",
+     "circle",
+     "triangle",
+     "circle",
+     "circle"
+    ],
+    "per_row": 6
+   },
+   "steps": [
+    "Find the core. It is triangle, circle, circle: 3 shapes.",
+    "Count in 3s: 3, 6, 9, 12. Place 12 is the end of a core.",
+    "Places 13 and 14 start a new core. Place 13 is a triangle and place 14 is a circle."
+   ],
+   "answer": "The 14th shape is a circle."
+  },
+  "howto": {
+   "title": "How to find a far place",
+   "steps": [
+    "Find the core and count its shapes.",
+    "Count in that size. Stop at or before your place.",
+    "Count on from the last full core."
+   ]
+  },
+  "try": {
+   "id": "L1U04-L01",
+   "text": "The pattern keeps going. What is the 10th shape? {circ:circle|square|triangle|star}",
+   "figure": {
+    "type": "shape_row",
+    "items": [
+     "circle",
+     "square",
+     "triangle",
+     "star",
+     "circle",
+     "square",
+     "triangle",
+     "star"
+    ]
+   },
+   "answer": {
+    "value": [
+     "square"
+    ],
+    "text": "square"
+   },
+   "explanation": "The core has 4 shapes. Place 8 ends a core. Place 9 is a circle and place 10 is a square."
+  },
+  "example2": {
+   "problem": "Ali has 4 marbles on day 1. Each day he has 5 more than the day before. How many marbles on day 5?",
+   "figure": {
+    "type": "grow_table",
+    "head": "Day",
+    "label": "Marbles",
+    "values": [
+     4,
+     9,
+     14,
+     19,
+     24
+    ],
+    "step": "+5",
+    "width_mm": 74
+   },
+   "steps": [
+    "Make a table. Write 4 under day 1.",
+    "Each day has 5 more. The rule is add 5: 9, 14, 19, 24.",
+    "Check: 4 hops of 5 is 20. 4 + 20 = 24."
+   ],
+   "answer": "On day 5 he has 24 marbles."
+  },
+  "tight": true,
+  "pair": true
+ },
+ "items": [
+  {
+   "id": "L1U04-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "Circle the shape that comes next. {circ:triangle|circle}",
+   "figure": {
+    "type": "shape_row",
+    "items": [
+     "triangle",
+     "circle",
+     "triangle",
+     "circle",
+     "triangle",
+     "circle"
+    ]
+   },
+   "answer": {
+    "value": [
+     "triangle"
+    ],
+    "text": "triangle"
+   },
+   "explanation": "The core is triangle, circle. It repeats. The last shape is a circle, so a triangle comes next."
+  },
+  {
+   "id": "L1U04-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "Draw the next 3 shapes in the boxes. Then circle the 9th shape. {circ:star|heart}",
+   "figure": {
+    "type": "shape_row",
+    "items": [
+     "star",
+     "heart",
+     "heart",
+     "star",
+     "heart",
+     "heart",
+     "star",
+     null,
+     null,
+     null
+    ]
+   },
+   "answer": {
+    "value": [
+     "heart"
+    ],
+    "text": "heart"
+   },
+   "explanation": "The core is star, heart, heart. Place 7 is a star. Places 8 and 9 are hearts and place 10 is a star. The 9th shape is a heart."
+  },
+  {
+   "id": "L1U04-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "Dark beads and white beads make a pattern. What is the 12th bead? {circ:dark|white}",
+   "figure": {
+    "type": "shape_row",
+    "items": [
+     "dark",
+     "dark",
+     "white",
+     "dark",
+     "dark",
+     "white",
+     "dark",
+     "dark"
+    ]
+   },
+   "answer": {
+    "value": [
+     "white"
+    ],
+    "text": "white"
+   },
+   "explanation": "The core is dark, dark, white: 3 beads. Count in 3s: 3, 6, 9, 12. Place 12 is the end of a core, so it is white."
+  },
+  {
+   "id": "L1U04-S04",
+   "tier": "start",
+   "page": 1,
+   "text": "Write the next 2 letters. M, N, O, M, N, O, M, {l} {l}",
+   "answer": {
+    "value": [
+     "N",
+     "O"
+    ],
+    "text": "N, O"
+   },
+   "explanation": "The core is M, N, O. After M comes N and then O."
+  },
+  {
+   "id": "L1U04-S05",
+   "tier": "start",
+   "page": 1,
+   "text": "Ravi claps and stomps. The pattern is clap, clap, stomp, clap, clap, stomp, and so on. What is the 10th action? {circ:clap|stomp}",
+   "answer": {
+    "value": [
+     "clap"
+    ],
+    "text": "clap"
+   },
+   "explanation": "The core is clap, clap, stomp: 3 actions. Count in 3s: 3, 6, 9. Place 9 is a stomp. Place 10 starts a new core, so it is a clap.",
+   "figure": {
+    "type": "shape_row",
+    "items": [
+     "C",
+     "C",
+     "S",
+     "C",
+     "C",
+     "S",
+     null,
+     null,
+     null,
+     null
+    ],
+    "per_row": 10,
+    "width_mm": 120
+   }
+  },
+  {
+   "id": "L1U04-S06",
+   "tier": "start",
+   "page": 1,
+   "text": "The pattern keeps going. What is the 16th shape? {circ:square|star|circle}",
+   "figure": {
+    "type": "shape_row",
+    "items": [
+     "square",
+     "star",
+     "star",
+     "circle",
+     "square",
+     "star",
+     "star",
+     "circle"
+    ]
+   },
+   "answer": {
+    "value": [
+     "circle"
+    ],
+    "text": "circle"
+   },
+   "explanation": "The core is square, star, star, circle: 4 shapes. Count in 4s: 4, 8, 12, 16. Place 16 ends a core, so it is a circle."
+  },
+  {
+   "id": "L1U04-S07",
+   "tier": "start",
+   "page": 2,
+   "text": "Look at the pattern. Circle the right shape.",
+   "figure": {
+    "type": "shape_row",
+    "items": [
+     "triangle",
+     "circle",
+     "square",
+     "triangle",
+     "circle",
+     "square"
+    ]
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "The 9th shape is a {circ:triangle|circle|square}.",
+     "answer": {
+      "value": [
+       "square"
+      ],
+      "text": "square"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The 12th shape is a {circ:triangle|circle|square}.",
+     "answer": {
+      "value": [
+       "square"
+      ],
+      "text": "square"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The 13th shape is a {circ:triangle|circle|square}.",
+     "answer": {
+      "value": [
+       "triangle"
+      ],
+      "text": "triangle"
+     }
+    }
+   ],
+   "explanation": "The core has 3 shapes. Places 9 and 12 end a core (3, 6, 9, 12), so they are squares. Place 13 starts a new core: a triangle."
+  },
+  {
+   "id": "L1U04-S08",
+   "tier": "start",
+   "page": 2,
+   "text": "Look at the pattern in Question 7. The circles are in places 2, 5 and 8. Write the next 3 places that have a circle. {b} {b} {b}",
+   "answer": {
+    "value": [
+     "11",
+     "14",
+     "17"
+    ],
+    "text": "Places 11, 14 and 17",
+    "list": false
+   },
+   "explanation": "A circle comes once in every core of 3 shapes. So the circles are 3 places apart: 2, 5, 8, 11, 14, 17."
+  },
+  {
+   "id": "L1U04-S09",
+   "tier": "start",
+   "page": 2,
+   "text": "A pattern repeats every 4 shapes. Circle True or False.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The 8th shape is the same as the 4th shape. {circ:True|False}",
+     "answer": {
+      "value": [
+       "True"
+      ],
+      "text": "True"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The 10th shape is the same as the 4th shape. {circ:True|False}",
+     "answer": {
+      "value": [
+       "False"
+      ],
+      "text": "False"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The 13th shape is the same as the 1st shape. {circ:True|False}",
+     "answer": {
+      "value": [
+       "True"
+      ],
+      "text": "True"
+     }
+    }
+   ],
+   "explanation": "Places 4, 8, 12 end a core, and places 1, 5, 9, 13 start a core. (a) 4 and 8 both end a core: true. (b) 10 is the 2nd shape of a core: false. (c) 13 starts a core: true."
+  },
+  {
+   "id": "L1U04-S10",
+   "tier": "start",
+   "page": 2,
+   "text": "The pattern keeps going. How many circles are in the first 12 shapes? {b} circles",
+   "figure": {
+    "type": "shape_row",
+    "items": [
+     "star",
+     "circle",
+     "circle",
+     "star",
+     "circle",
+     "circle"
+    ]
+   },
+   "answer": {
+    "value": [
+     "8"
+    ],
+    "text": "8 circles"
+   },
+   "explanation": "The core has 3 shapes and 2 are circles. 12 shapes make 4 cores. Count the circles in 2s: 2, 4, 6, 8."
+  },
+  {
+   "id": "L1U04-S11",
+   "tier": "start",
+   "page": 2,
+   "text": "Lily puts 3 beads on a string on day 1. She adds 2 beads each day.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many beads does she have on day 5? {b} beads",
+     "answer": {
+      "value": [
+       "11"
+      ],
+      "text": "11 beads"
+     }
+    },
+    {
+     "label": "b",
+     "text": "On which day does she have 15 beads? Day {b}",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "Day 7"
+     }
+    }
+   ],
+   "explanation": "Day 1: 3. Then add 2 each day: 3, 5, 7, 9, 11, 13, 15. Day 5 is 11 and 15 is day 7.",
+   "figure": {
+    "type": "grow_table",
+    "head": "Day",
+    "label": "Beads",
+    "values": [
+     3,
+     "",
+     "",
+     "",
+     ""
+    ],
+    "step": "+2",
+    "width_mm": 80
+   },
+   "figright": true
+  },
+  {
+   "id": "L1U04-S12",
+   "tier": "start",
+   "page": 3,
+   "text": "The towers grow in a pattern. Draw Tower 4. Fill in the blanks.",
+   "figure": {
+    "type": "towers",
+    "counts": [
+     2,
+     5,
+     8,
+     null
+    ],
+    "width_mm": 90,
+    "frame": 13
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Tower 4 has {b} blocks.",
+     "answer": {
+      "value": [
+       "11"
+      ],
+      "text": "11 blocks"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Tower 6 has {b} blocks.",
+     "answer": {
+      "value": [
+       "17"
+      ],
+      "text": "17 blocks"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The tower with 23 blocks is Tower {b}.",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "Tower 8"
+     }
+    }
+   ],
+   "explanation": "Each tower has 3 more blocks than the one before: 2, 5, 8, 11, 14, 17, 20, 23. Tower 4 has 11 and Tower 6 has 17. 23 is the 8th number, so it is Tower 8."
+  },
+  {
+   "id": "L1U04-S13",
+   "tier": "start",
+   "page": 3,
+   "text": "Aisha makes a row of triangles with straws.",
+   "figure": {
+    "type": "stick_rows",
+    "rows": [
+     {
+      "kind": "tri",
+      "n": 1,
+      "label": "1 triangle"
+     },
+     {
+      "kind": "tri",
+      "n": 2,
+      "label": "2 triangles"
+     },
+     {
+      "kind": "tri",
+      "n": 3,
+      "label": "3 triangles"
+     }
+    ]
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Count the straws. 2 triangles use {b} straws.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5 straws"
+     }
+    },
+    {
+     "label": "b",
+     "text": "3 triangles use {b} straws.",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7 straws"
+     }
+    },
+    {
+     "label": "c",
+     "text": "4 triangles use {b} straws.",
+     "answer": {
+      "value": [
+       "9"
+      ],
+      "text": "9 straws"
+     }
+    }
+   ],
+   "explanation": "1 triangle uses 3 straws. Each new triangle shares a side, so it needs only 2 more straws: 3, 5, 7, 9."
+  },
+  {
+   "id": "L1U04-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "The pattern keeps going.",
+   "figure": {
+    "type": "shape_row",
+    "items": [
+     "heart",
+     "star",
+     "star",
+     "heart",
+     "star",
+     "star",
+     "heart",
+     "star",
+     "star"
+    ]
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "What is the 15th shape? {circ:heart|star}",
+     "answer": {
+      "value": [
+       "star"
+      ],
+      "text": "star"
+     }
+    },
+    {
+     "label": "b",
+     "text": "How many stars are in the first 18 shapes? {b} stars",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12 stars"
+     }
+    },
+    {
+     "label": "c",
+     "text": "In which place is the 5th star? Place {b}",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "Place 8"
+     }
+    }
+   ],
+   "hint": "Find the core. How many stars are in one core?",
+   "explanation": "(a) The core has 3 shapes and 15 ends a core, so it is a star. (b) 18 shapes make 6 cores with 2 stars each: 12. (c) The stars are in places 2, 3, 5, 6, 8. The 5th star is in place 8."
+  },
+  {
+   "id": "L1U04-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "Siti has 24 straws. She makes a row of triangles.",
+   "figure": {
+    "type": "stick_rows",
+    "rows": [
+     {
+      "kind": "tri",
+      "n": 1,
+      "label": "1 triangle"
+     },
+     {
+      "kind": "tri",
+      "n": 2,
+      "label": "2 triangles"
+     },
+     {
+      "kind": "tri",
+      "n": 3,
+      "label": "3 triangles"
+     }
+    ]
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many triangles can she make? {b} triangles",
+     "answer": {
+      "value": [
+       "11"
+      ],
+      "text": "11 triangles"
+     }
+    },
+    {
+     "label": "b",
+     "text": "How many straws are left? {b} straw",
+     "answer": {
+      "value": [
+       "1"
+      ],
+      "text": "1 straw"
+     }
+    }
+   ],
+   "hint": "How many straws for 1 triangle? How many for each new one?",
+   "explanation": "The numbers of straws are 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23. 11 triangles use 23 straws. 12 triangles need 25, which is too many. 24 - 23 = 1 straw is left."
+  },
+  {
+   "id": "L1U04-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "Mei has 5 stickers on day 1, 8 stickers on day 2 and 11 stickers on day 3. The pattern keeps going.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many stickers does she have on day 6? {b} stickers",
+     "answer": {
+      "value": [
+       "20"
+      ],
+      "text": "20 stickers"
+     }
+    },
+    {
+     "label": "b",
+     "text": "On which day does she have 32 stickers? Day {b}",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "Day 10"
+     }
+    }
+   ],
+   "hint": "Make a table. Write the day and the stickers.",
+   "explanation": "Add 3 each day: 5, 8, 11, 14, 17, 20, 23, 26, 29, 32. Day 6 is 20. 32 is the 10th number, so it is day 10.",
+   "figure": {
+    "type": "grow_table",
+    "head": "Day",
+    "label": "Stickers",
+    "values": [
+     5,
+     8,
+     11,
+     "",
+     "",
+     ""
+    ],
+    "step": "?",
+    "width_mm": 84
+   },
+   "figright": true
+  },
+  {
+   "id": "L1U04-G01",
+   "tier": "go",
+   "page": 5,
+   "text": "Look at the number pattern: 1, 2, 4, 7, 11. The jumps are not the same.",
+   "beyond": "Jumps that grow",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Write the next 2 numbers. {b} {b}",
+     "answer": {
+      "value": [
+       "16",
+       "22"
+      ],
+      "text": "16 and 22",
+      "list": false
+     }
+    },
+    {
+     "label": "b",
+     "text": "What is the 8th number in the pattern? {b}",
+     "answer": {
+      "value": [
+       "29"
+      ],
+      "text": "29"
+     }
+    }
+   ],
+   "hint": "Write the jump between each pair of numbers.",
+   "explanation": "The jumps are 1, 2, 3, 4 and then 5, 6, 7. So 11 + 5 = 16 and 16 + 6 = 22. Then 22 + 7 = 29. The numbers are 1, 2, 4, 7, 11, 16, 22, 29. The 8th is 29."
+  },
+  {
+   "id": "L1U04-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "Ravi makes 3 triangles that do not touch. Mei makes a row of 3 triangles that share sides.",
+   "beyond": "Two ways to build",
+   "figure": {
+    "type": "stick_rows",
+    "rows": [
+     {
+      "kind": "tri_sep",
+      "n": 3,
+      "label": "Ravi"
+     },
+     {
+      "kind": "tri",
+      "n": 3,
+      "label": "Mei"
+     }
+    ],
+    "mark": true,
+    "lab": 85,
+    "width_mm": 76
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Ravi needs {b} straws for 7 triangles.",
+     "answer": {
+      "value": [
+       "21"
+      ],
+      "text": "21 straws"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Mei needs {b} straws for 7 triangles.",
+     "answer": {
+      "value": [
+       "15"
+      ],
+      "text": "15 straws"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Mei uses {b} fewer straws than Ravi for 7 triangles.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6 straws"
+     }
+    }
+   ],
+   "hint": "How many straws does each new triangle add?",
+   "explanation": "Ravi: 3, 6, 9, 12, 15, 18, 21. Mei: 3, 5, 7, 9, 11, 13, 15. The gap is 21 - 15 = 6 straws."
+  },
+  {
+   "id": "L1U04-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "Mei lays 2 patterns, one above the other. The top pattern is circle, star, circle, star. The bottom pattern is A, B, C, A, B, C.",
+   "beyond": "Two patterns together",
+   "figure": {
+    "type": "shape_row",
+    "items": [
+     "circle",
+     "star",
+     "circle",
+     "star",
+     "circle",
+     "star",
+     "circle",
+     "star"
+    ],
+    "per_row": 8,
+    "items2": [
+     "A",
+     "B",
+     "C",
+     "A",
+     "B",
+     "C",
+     "A",
+     "B"
+    ]
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "The first place with a star above a C is place {b}.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "Place 6"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The next place with a star above a C is place {b}.",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "Place 12"
+     }
+    }
+   ],
+   "hint": "Which places does each pattern use? Make 2 lists.",
+   "explanation": "Stars are in even places. Cs are in places 3, 6, 9, 12, 15, 18, 21, 24. The places in both lists are 6, 12, 18 and 24."
+  },
+  {
+   "id": "L1U04-C01",
+   "tier": "quiz",
+   "page": 5,
+   "text": "The pattern is sun, moon, moon, sun, moon, moon. The 9th one is {circ:sun|moon}",
+   "answer": {
+    "value": [
+     "moon"
+    ],
+    "text": "moon"
+   },
+   "explanation": "The core is sun, moon, moon: 3 words. Place 9 ends a core (3, 6, 9), so it is a moon."
+  },
+  {
+   "id": "L1U04-C02",
+   "tier": "quiz",
+   "page": 5,
+   "text": "The letters P, Q, R, S go round and round. The 18th letter is {circ:P|Q|R|S}",
+   "answer": {
+    "value": [
+     "Q"
+    ],
+    "text": "Q"
+   },
+   "explanation": "The core has 4 letters. Place 16 ends a core, so place 17 is P and place 18 is Q."
+  },
+  {
+   "id": "L1U04-C03",
+   "tier": "quiz",
+   "page": 5,
+   "text": "Tower 1 has 3 blocks. Each tower adds 4. Tower 5 has {b} blocks.",
+   "answer": {
+    "value": [
+     "19"
+    ],
+    "text": "19 blocks"
+   },
+   "explanation": "Add 4 each time: 3, 7, 11, 15, 19. Tower 5 has 19 blocks."
+  },
+  {
+   "id": "L1U04-C04",
+   "tier": "quiz",
+   "page": 5,
+   "text": "1 triangle uses 3 straws. Each new one adds 2. 6 triangles use {b} straws.",
+   "answer": {
+    "value": [
+     "13"
+    ],
+    "text": "13 straws"
+   },
+   "explanation": "Count on in 2s: 3, 5, 7, 9, 11, 13. 6 triangles use 13 straws."
+  }
+ ],
+ "snug": [
+  "go"
+ ]
+}

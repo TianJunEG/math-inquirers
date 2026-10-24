@@ -101,7 +101,7 @@ def ans_rows(rows,top=250,gapy=130,lw=200,size=36):
     for i,(a,c) in enumerate(rows):
         t=top+i*gapy
         b+=pin(128,t,lw-20,f'<p style="font-size:36px;font-weight:800;color:{TEAL}">{E(a)}</p>',None,WHITE,20,'18px 24px')
-        b+=pin(128+lw,t,1664-lw,f'<p style="font-size:{size}px;font-weight:800;line-height:1.2">{E(c)}</p>','pop',YEL,20,'18px 26px')
+        b+=pin(128+lw,t,1664-lw,f'<p style="font-size:{size}px;font-weight:800;line-height:1.2">{E(c)}</p>',None,YEL,20,'18px 26px')
     return b
 
 PY_MAIN='n = int(input("IN? "))\nout = n * 3 + 2\nprint("OUT:", out)'
@@ -117,7 +117,7 @@ put(f'{L}-title',title_slide(f'{L}-title',4,2,'Algebra Machines','Expressions an
  'Time plan: warm-up 0 to 10, explore at the computer 10 to 25, teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 75 with short teaching before each page and a check-together slide after it, talk time 75 to 82, exit ticket 82 to 90.'))
 
 # ---------- 2 warm1: guess my rule ----------
-rounds=[('Round A','3 → 8|7 → 12|20 → 25','add 5:   n + 5'),('Round B','2 → 10|5 → 25|9 → 45','times 5:   5n'),('Round C','2 → 3|6 → 11|10 → 19','× 2, then − 1:   2n − 1'),('Round D','1 → 5|4 → 14|10 → 32','× 3, then + 2:   3n + 2')]
+rounds=[('Round A','2 → 10|5 → 25|9 → 45','times 5:   5n'),('Round B','2 → 3|6 → 11|10 → 19','× 2, then − 1:   2n − 1'),('Round C','1 → 5|4 → 14|10 → 32','× 3, then + 2:   3n + 2')]
 body=h2('Warm-up: guess my rule')+p('I am a machine. Here is what came out. What is my rule?',34,600,MUTED)
 for i,(r,pairs,a) in enumerate(rounds):
     Lf=128+(i%2)*848; T=300+(i//2)*290
@@ -125,30 +125,30 @@ for i,(r,pairs,a) in enumerate(rounds):
     body+=pin(Lf+24,T+150,768,f'<p style="font-size:36px;font-weight:800">{E(a)}</p>','pop',SOFT,16,'12px 20px',f'box-sizing:border-box;border:3px solid {NAVY}')
 put(f'{L}-warm1',sec(f'{L}-warm1','0–5 MIN',body,
  'Minutes 0 to 5. Guess my rule. Play each round live first: children call out an IN number, you say the OUT (use the rule on the card), and they guess. Then click to show the rule. Ask: "Which IN numbers helped most?" '
- 'Round C and D need two steps. Check the rule on EVERY pair: Round D, 1 × 3 + 2 = 5, 4 × 3 + 2 = 14, 10 × 3 + 2 = 32. Some children say "add 4" for 1 → 5: it fails at 4 → 14. '
- 'Write each rule with the letter n: n + 5, 5n (5 × n, we leave out the × sign), 2n − 1, 3n + 2. Round D is the machine they will build in the explore.'))
+ 'Three rounds only (the one-step n + 5 round was cut to fit the warm-up). Rounds B and C need two steps. Check the rule on EVERY pair: Round C, 1 × 3 + 2 = 5, 4 × 3 + 2 = 14, 10 × 3 + 2 = 32. Some children say "add 4" for 1 → 5: it fails at 4 → 14. '
+ 'Write each rule with the letter n: 5n (5 × n, we leave out the × sign), 2n − 1, 3n + 2. Round C is the machine they will build in the explore.'))
 
 # ---------- 3 warm2 ----------
-qs=[('1.','n = 6. What is 4n?','24'),('2.','n = 6. What is n + 9?','15'),('3.','n = 6. What is 3n − 5?','13'),('4.','2n = 18. What is n?','9'),('5.','n = 6. What is (n + 4) × 2?','20')]
+qs=[('1.','n = 6. What is 4n?','24'),('2.','n = 6. What is 3n − 5?','13'),('3.','2n = 18. What is n?','9')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b,36) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put(f'{L}-warm2',sec(f'{L}-warm2','5–10 MIN',body,'Minutes 5 to 10. Whiteboards, then click. Answers: 1) 24 (4n means 4 × n).  2) 15.  3) 13 (multiply first: 18 − 5).  4) 9.  5) 20 (brackets first: 10 × 2). Watch for 4n read as "46" in question 1, and 3n − 5 worked as 3 × 1 = 3 or as 3 × (6 − 5) = 3 in question 3.'))
+put(f'{L}-warm2',sec(f'{L}-warm2','5–10 MIN',body,'Minutes 5 to 10. Whiteboards, then click. Three questions only. Answers: 1) 24 (4n means 4 × n).  2) 13 (multiply first: 18 − 5).  3) 9. Watch for 4n read as "46" in question 1, and 3n − 5 worked as 3 × 1 = 3 or as 3 × (6 − 5) = 3 in question 2.'))
 
 # ---------- 4 explore1 ----------
-steps=['Open the Machine starter your tutor sent (or build the machine on the right). Change the 3 and the 2 to numbers of your own. (* means ×.)','Then make it your OWN secret two-step rule.','Share your screen. Your partner calls IN numbers; you type them in.','Your partner writes your rule with n. Fewest IN numbers wins. Then swap.']
+steps=['Watch your tutor build the machine (2 minutes). Then open the Machine starter, or build the one on the right. (* means ×.)','Change the 3 and the 2 to make your OWN secret two-step rule. One partner shares their screen.','The other partner calls IN numbers and writes the rule with n. Fewest IN numbers wins.']
 left=card(chip('EXPLORE AT THE COMPUTER')+'<ol style="font-size:31px;font-weight:600;padding-left:44px;display:flex;flex-direction:column;gap:10px;line-height:1.3">'+''.join(f'<li>{E(s)}</li>' for s in steps)+'</ol>',extra='flex:1;min-width:0')
 mpic=machine([('IN','q'),('× 3','op'),('+ 2','op'),('OUT','res')],w=700).replace('width:700px;height:130px','width:700px;height:130px;flex:none')
 right=card(mpic+blocks_svg(MACH,28,'Machine program: when green flag clicked, ask IN? and wait, set out to answer times 3 plus 2, say out'),extra='flex:none;width:780px;padding:24px 28px;gap:24px')
 body=h2('Explore: build a secret machine')+f'<div style="display:flex;gap:32px;align-items:flex-start">{left}{right}</div>'
 put(f'{L}-explore1',sec(f'{L}-explore1','10–15 MIN',body,
  'Minutes 10 to 15. Screen-share Scratch for 2 minutes and build the machine together: "ask" is in Sensing (light blue), "answer" is the round block under it, the * and + blocks are in Operators (green); put the * block INSIDE the + block. Make a variable called out. Type 4: it says 14. '
- 'Then pairs go to breakout rooms. Each child changes the rule to a secret two-step rule (one × and one + or −), shares their screen, and types in the IN numbers the partner calls out. The partner tries to write the rule with n using as few IN numbers as possible. '
- 'If a pair wants more: put the ask and say inside a "forever" loop so the machine keeps going; or make a three-step machine. Tutor: build the Machine starter beforehand from the picture and share it through the approved channel (no .sb3 file exists in this repository). The child only has to change the 3 and the 2 to numbers of their own. '
+ 'Then pairs go to breakout rooms. Each pair does ONE direction: one child changes the rule to a secret two-step rule (one × and one + or −), shares their screen and types in the IN numbers the partner calls out; the partner tries to write the rule with n using as few IN numbers as possible. The swap is the Go further what-if (below), so nobody waits. '
+ 'If a pair wants more: put the ask and say inside a "forever" loop so the machine keeps going; or make a three-step machine. Tutor: the Machine starter is the file L4_Function_Machine.sb3 (sent to families with the workbook; share it through the approved channel only). The child only has to change the 3 and the 2 to numbers of their own. '
  +PY_NOTE))
 
 # ---------- 5 explore2 ----------
-ex=[('1.','Which IN numbers were the most useful for cracking a rule? Why?'),('2.','How did you write your partner’s rule with n?'),('3.','My machine is × 3, then + 2. It says 20. How can you find the IN without trying lots of numbers?')]
+ex=[('1.','How did you write your partner’s rule with n?'),('2.','My machine is × 3, then + 2. It says 20. How can you find the IN without trying lots of numbers?')]
 body=h2('Explore: talk about it')+''.join(card_q(a,b,40) for a,b in ex)
-put(f'{L}-explore2',sec(f'{L}-explore2','15–25 MIN',body,'Minutes 15 to 25. Let pairs keep working, then gather them. Answers: 1) Numbers in a row (1, 2, 3) show the × part: OUT goes up by the × number each time. IN 0 shows the + part straight away (0 × 3 + 2 = 2). 2) Times part first, then the add part: 3n + 2 means n × 3, then + 2. 3) Run it backwards: undo + 2 first (20 − 2 = 18), then undo × 3 (18 ÷ 3 = 6). Check: 6 × 3 + 2 = 20.'))
+put(f'{L}-explore2',sec(f'{L}-explore2','15–25 MIN',body,'Minutes 15 to 25. Let pairs keep working, then gather them. Two questions only (which IN numbers were most useful: numbers in a row, 1, 2, 3, show the × part, and IN 0 shows the + part straight away, 0 × 3 + 2 = 2, can be said in passing). Answers: 1) Times part first, then the add part: 3n + 2 means n × 3, then + 2. 2) Run it backwards: undo + 2 first (20 − 2 = 18), then undo × 3 (18 ÷ 3 = 6). Check: 6 × 3 + 2 = 20.'))
 
 # ---------- 6 teach1: from a table to a rule ----------
 W=[200,150,150,150,150]
@@ -168,9 +168,6 @@ body+=step(1,'IN goes up by 3 (2 to 5). OUT goes up by 9 (3 to 12). 9 ÷ 3 = 3, 
 body+=step(2,'Test: 3 × 2 = 6. OUT is 3, so take away 3.',top=570,size=36)
 body+=step(3,'Rule: OUT = 3n − 3.   Check IN 10: 3 × 10 − 3 = 27 ✓',top=680,size=36)
 put(f'{L}-we1',sec(f'{L}-we1','27–29 MIN',body,'Click through the steps. Ask before step 1: "The IN numbers jump. How can we still find the times part?" (share the OUT jump by the IN jump). Think-aloud: "IN went up 3, OUT went up 9, so each 1 in IN is worth 3 in OUT: times 3. 2 times 3 is 6, but OUT is 3, so take away 3." Check on the pair we did not use (10 → 27).'))
-
-# ---------- 8 try1 ----------
-put(f'{L}-try1',try_slide(f'{L}-try1','29–30 MIN','Your turn: find the rule','Write OUT = … with n. Check it on every pair.',[('a','IN 1, 2, 3  →  OUT 5, 7, 9','2n + 3'),('b','IN 1, 2, 3  →  OUT 2, 8, 14','6n − 4'),('c','IN 0, 1, 2  →  OUT 4, 11, 18','7n + 4')],'Whiteboards. a) up 2 each time, 2 × 1 = 2, need 5: + 3.  b) up 6, 6 × 1 = 6, need 2: − 4.  c) up 7; IN 0 gives the add part straight away: 4. Ask: "Why is IN 0 a helpful number?"',size=40))
 
 # ---------- 9 teach2: order matters ----------
 body=h2('Order matters: use brackets')
@@ -201,40 +198,26 @@ put(f'{L}-key',sec(f'{L}-key','34–35 MIN',body,'Say the key idea together. Com
 put(f'{L}-break',break_slide(f'{L}-break','Brain break','Jumping machine. Rule: double it, then take away 1. I call an IN number; you do that many OUT star jumps, counting aloud. IN 2, 3, 4, 5.','Then: a drink of water and back to the computer.','Five minutes. OUT jumps: 3, 5, 7, 9. Last round: "I did 11 jumps. What was my IN?" (6). Online: children stay in view of the camera and jump in place.'))
 
 # ---------- 14 ws1 ----------
-put(f'{L}-ws1',ws_preview(f'{L}-ws1','40–52 MIN','Worksheet page 1: with your partner',[('Q1','Guess my rule: four tables, the first is one step. Write each rule with n.'),('Q2','Two machines, same steps, different order.'),('Q3','Run machines backwards to find n. Check forwards.')],'Stuck? Look at how much OUT goes up each time IN goes up by 1.','Minutes 40 to 52. Paper only (laptops turned away). Walk around (online: visit breakout rooms). Ask "Did you check your rule on every pair?" and "Which step did you undo first?" before giving help.'))
+put(f'{L}-ws1',ws_preview(f'{L}-ws1','40–52 MIN','Worksheet page 1: with your partner',[('Q1','Guess my rule: four tables, the first is one step. Write each rule with n.'),('Q2','Two machines, same steps, different order.'),('Q3','Run machines backwards to find n. Check forwards.')],'Stuck? Look at how much OUT goes up each time IN goes up by 1.','Minutes 40 to 52. Paper only (laptops turned away). Walk around (online: visit breakout rooms). Ask "Did you check your rule on every pair?" and "Which step did you undo first?" before giving help. Show this preview, do not read it aloud.'))
 
 # ---------- 15 ws1ans ----------
 rows=[('Q1','a) n + 3, OUT 13   b) 3n + 3, OUT 33   c) 5n − 2, IN 10   d) 4n − 3, OUT 77'),('Q2','a) P 32, Q 23   b) P = (n + 3) × 4,  Q = 4n + 3   c) No'),('Q3','a) 8    b) 10    c) 12    d) 24')]
-put(f'{L}-ws1ans',sec(f'{L}-ws1ans','52–54 MIN',h2('Page 1: check together')+ans_rows(rows,size=34),'Click each answer after a pair explains. Q1a: OUT is always 3 more, so n + 3 (a one-step rule). Q1d: IN goes up 1, OUT goes up 4, so × 4; 4 × 1 = 4, OUT 1, so − 3; IN 20: 80 − 3 = 77. Q2c: (n + 3) × 4 is 4n + 12, so P is always 9 more than Q (32 − 23 = 9 for IN 5): they can never match. Q3: a) 43 + 5 = 48, ÷ 6 = 8; b) 74 − 4 = 70, ÷ 7 = 10; c) 45 ÷ 5 = 9, + 3 = 12; d) 15 − 9 = 6, × 4 = 24.'))
+put(f'{L}-ws1ans',sec(f'{L}-ws1ans','52–54 MIN',h2('Page 1: check together')+ans_rows(rows,size=34),'All the answers are shown at once. Children mark in a different colour; ask ONE volunteer to explain only Q3 (run the machine backwards: undo the last step first), about 35 seconds a question. Q1a: OUT is always 3 more, so n + 3 (a one-step rule). Q1d: IN goes up 1, OUT goes up 4, so × 4; 4 × 1 = 4, OUT 1, so − 3; IN 20: 80 − 3 = 77. Q2c: (n + 3) × 4 is 4n + 12, so P is always 9 more than Q (32 − 23 = 9 for IN 5): they can never match. Q3: a) 43 + 5 = 48, ÷ 6 = 8; b) 74 − 4 = 70, ÷ 7 = 10; c) 45 ÷ 5 = 9, + 3 = 12; d) 15 − 9 = 6, × 4 = 24.'))
 
 # ---------- 16 teach code ----------
 body=h2('Predict what the code says')
 body+=pin(128,240,860,blocks_svg([(0,'event','when green flag clicked'),(0,'looks','ask [IN?] and wait'),(0,'var','set out to [(answer * 4) − 1]'),(0,'looks','say [out]')],32,'when green flag clicked, ask IN? and wait, set out to answer times 4 minus 1, say out'),None)
 for i,(q,a) in enumerate([('You type 5. It says …','19'),('You type 0. It says …','−1'),('What do you type to get 35?','9  (35 + 1 = 36, 36 ÷ 4 = 9)')]):
-    body+=qrow(128,520+i*120,980,'',q,34)+answer(1140,520+i*120,652,a)
-put(f'{L}-teachcode',sec(f'{L}-teachcode','54–55 MIN',body,'Teach before worksheet page 2 (Q4). "answer" holds whatever was typed in. * means ×. The rule is OUT = 4n − 1. Ask: "Typing 0 gives a negative number. Where have we seen that before?" (Lesson 3). The last one is the machine run backwards. Python version: n = int(input("IN? ")) | out = n * 4 - 1 | print(out)  (typing 5 prints 19).'))
-
-# ---------- 17 teach search ----------
-body=h2('Let the computer search')+card(p('Solve 6n + 5 = 71 by trying n = 0, 1, 2, 3 … until it works.',38,700))
-body+=pin(128,400,900,blocks_svg([(0,'event','when green flag clicked'),(0,'var','set n to [0]'),(0,'control','repeat until [(n * 6) + 5 = 71]'),(1,'var','change n by [1]'),(0,'looks','say [n]')],32,'set n to 0, repeat until n times 6 plus 5 equals 71: change n by 1, then say n'),None)
-body+=step(1,'n = 0 gives 5, n = 1 gives 11, n = 2 gives 17 … not 71 yet, keep going.',left=1020,top=400,width=712,size=32)
-body+=step(2,'It stops when n = 11 (66 + 5 = 71) and says 11.',left=1020,top=560,width=712,size=32)
-body+=step(3,'By hand, backwards: 71 − 5 = 66, 66 ÷ 6 = 11 ✓',left=1020,top=700,width=712,size=32)
-put(f'{L}-teachsearch',sec(f'{L}-teachsearch','55–56 MIN',body,'Teach before worksheet page 2 (Q6 plans a search). "repeat until" is in Control; the = block is in Operators. The computer is not clever, it is fast: it tries every n. Our backwards method is clever: it goes straight there. Both give 11. Ask: "What happens if the equation has no whole-number answer, like 6n + 5 = 70?" (it never stops: press the red stop sign). Python version: n = 0 | while n * 6 + 5 != 71: n = n + 1 | print(n)  (prints 11).'))
-
-# ---------- 18 teach trick ----------
-body=h2('Why does the trick always work?')+card(p('Think of a number. Add 3. Double it. Take away 6. Halve it. You get your number back!',38,700))
-for i,(a,b) in enumerate([('Think of a number','n'),('Add 3','n + 3'),('Double it','2n + 6'),('Take away 6','2n'),('Halve it','n')]):
-    body+=pin(128,400+i*95,700,p(a,34,700),None,WHITE,16,'14px 24px',f'box-sizing:border-box;height:80px')+pin(860,400+i*95,520,p(b,38,800),'rise',SKY,16,'12px 24px',f'box-sizing:border-box;height:80px')
-body+=pin(1420,400,372,p('Try 7: 10, 20, 14, 7 ✓',32,700),None,SOFT,16,'18px 22px')
-put(f'{L}-teachtrick',sec(f'{L}-teachtrick','56–57 MIN',body,'Teach before worksheet page 2 (Q7). First try it with a number (7: 10, 20, 14, 7). Then click to build the n column. "Testing one number shows it works once; the letter shows it works for EVERY number." Doubling n + 3 doubles both parts: 2n + 6. This is the Secondary 1 idea of simplifying an expression.'))
+    body+=qrow(128,522+i*95,980,'',q,34)+answer(1140,522+i*95,652,a)
+body+=pin(128,818,1664,p('Q6, plan a search: repeat until (n × 6) + 5 = 71, change n by 1. It stops at n = 11 (backwards: 71 − 5 = 66, 66 ÷ 6).',30,700),'fade',SOFT,20,'14px 28px')
+put(f'{L}-teachcode',sec(f'{L}-teachcode','54–55 MIN',body,'Teach before worksheet page 2 (Q4, and the second panel is the Q6 search; Q7 is the take-home question, so there is no live teaching for it). "answer" holds whatever was typed in. * means ×. The rule is OUT = 4n − 1. Ask: "Typing 0 gives a negative number. Where have we seen that before?" (Lesson 3). The last one is the machine run backwards. Python version: n = int(input("IN? ")) | out = n * 4 - 1 | print(out)  (typing 5 prints 19). Second panel, Q6 plans a search: "repeat until" is in Control; the = block is in Operators. Solve 6n + 5 = 71 by trying n = 0, 1, 2, 3 … until it works: the computer is not clever, it is fast, and it stops at n = 11. Our backwards method goes straight there (71 − 5 = 66, 66 ÷ 6 = 11). If the equation has no whole-number answer, like 6n + 5 = 70, it never stops: press the red stop sign. Python: n = 0 | while n * 6 + 5 != 71: n = n + 1 | print(n)  (prints 11).'))
 
 # ---------- 19 ws2 ----------
-put(f'{L}-ws2',ws_preview(f'{L}-ws2','57–72 MIN','Worksheet page 2: on your own',[('Q4','Predict what the machine code says.'),('Q5','Trace the loop in the table. Write its rule with n.'),('Q6','Plan a search for 8n − 5 = 91, then check backwards.'),('Q7','The number trick: try it, then use n to explain it.')],'Finished early? Build Q4 to Q6 in Scratch to test, or try the Python box.','Children work alone, paper first, then they may build Q4 to Q6 in Scratch to test. Note who needs a short catch-up next lesson.'))
+put(f'{L}-ws2',ws_preview(f'{L}-ws2','57–72 MIN','Worksheet page 2: on your own',[('Q4','Predict what the machine code says.'),('Q5','Trace the loop in the table. Write its rule with n.'),('Q6','Plan a search for 8n − 5 = 91, then check backwards.'),('Q7','★ Take-home: the number trick. Try it, then use n to explain it.')],'Finished early? Build Q4 to Q6 in Scratch to test, or try the Python box.','Children work alone on Q4 to Q6; Q7 (the number trick) is the take-home question, marked with a star in the workbook. Show this preview, do not read it aloud. Paper first, then they may build Q4 to Q6 in Scratch to test. Note who needs a short catch-up next lesson.'))
 
 # ---------- 20 ws2ans ----------
-rows=[('Q4','a) 13    b) −1    c) 16'),('Q5','says 5, 9, 13, 17.   b) 4n + 1   c) 41'),('Q6','set n to 0, until (n * 8) − 5 = 91, change n by 1.  Says 12.'),('Q7','Always 3:  n + 5,  2n + 10,  2n + 6,  n + 3,  3')]
-put(f'{L}-ws2ans',sec(f'{L}-ws2ans','72–75 MIN',h2('Page 2: check together')+ans_rows(rows,size=34),'Click after a child explains. Q4: OUT = 2n − 7; 2 × 3 − 7 = −1; backwards: 25 + 7 = 32, ÷ 2 = 16. Q5: n goes 1, 2, 3, 4 and then becomes 5 after the last repeat; with repeat 10 the last n is 10: 4 × 10 + 1 = 41. Q6: backwards 91 + 5 = 96, 96 ÷ 8 = 12. Q7: with 7: 12, 24, 20, 10, 3; with 10: 15, 30, 26, 13, 3. Halving 2n + 6 gives n + 3; taking away n leaves 3.'))
+rows=[('Q4','a) 13    b) −1    c) 16'),('Q5','says 5, 9, 13, 17.   b) 4n + 1   c) 41'),('Q6','set n to 0, until (n * 8) − 5 = 91, change n by 1.  Says 12.'),('Q7 ★','Take-home. Always 3:  n + 5,  2n + 10,  2n + 6,  n + 3,  3')]
+put(f'{L}-ws2ans',sec(f'{L}-ws2ans','72–75 MIN',h2('Page 2: check together')+ans_rows(rows,size=34),'All the answers are shown at once. Children mark in a different colour; ask ONE volunteer to explain only Q4 (the code and its rule). Q7 is the take-home question: its answer is here so children can mark it at home, and you take it up at the start of the next lesson. Q4: OUT = 2n − 7; 2 × 3 − 7 = −1; backwards: 25 + 7 = 32, ÷ 2 = 16. Q5: n goes 1, 2, 3, 4 and then becomes 5 after the last repeat; with repeat 10 the last n is 10: 4 × 10 + 1 = 41. Q6: backwards 91 + 5 = 96, 96 ÷ 8 = 12. Q7: with 7: 12, 24, 20, 10, 3; with 10: 15, 30, 26, 13, 3. Halving 2n + 6 gives n + 3; taking away n leaves 3.'))
 
 # ---------- 21 stretch (new) ----------
 st=[('1.','IN 3 gives OUT 11. IN 7 gives OUT 23. The rule is "× a number, then + a number". Find it.'),('2.','set n to 2, then repeat 3 times: set n to (n × 2) + 1. Then say n. What does it say?'),('3.','Solve (n + 6) × 4 = 60.')]
@@ -266,13 +249,13 @@ put(f'{L}-chwalk',sec(f'{L}-chwalk','Challenge',body,'Use after pairs have tried
 
 # ---------- 25 talk ----------
 body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p('To solve 4n + 7 = 43, Ravi tries n = 1, 2, 3 … like the computer. Mei runs the machine backwards. Which way is better, and when?',40,600))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38,600))
-put(f'{L}-talk',sec(f'{L}-talk','75–82 MIN',body,'Minutes 75 to 82. Pairs talk for 2 minutes, then share. Both get n = 9. Backwards is quicker by hand and works for big numbers (4n + 7 = 4007 would take Ravi 1000 tries). Trying every n is easy to code and also works when there is no easy backwards step, like n × n + n = 90 (n = 9). But a search must stop: if there is no whole-number answer, it would run forever. Praise answers that say WHEN each is better.'))
+put(f'{L}-talk',sec(f'{L}-talk','75–82 MIN',body,'Minutes 75 to 82. One question only. Pairs talk for 90 seconds, then volunteers share. Both get n = 9. Backwards is quicker by hand and works for big numbers (4n + 7 = 4007 would take Ravi 1000 tries). Trying every n is easy to code and also works when there is no easy backwards step, like n × n + n = 90 (n = 9). But a search must stop: if there is no whole-number answer, it would run forever. Praise answers that say WHEN each is better.'))
 
 # ---------- 26 exit ----------
-body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('A machine does × 4, then + 5.   (a) IN 6: what is OUT?   (b) OUT 45: what was IN?',46,600))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
+body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('A machine does × 4, then + 5.   (a) IN 6: what is OUT?   (b) OUT 45: what was IN?',46,600))+card(p('Write your answer on a slip of paper. When your tutor says, say your answer together on three. Then collect your stamp in your inquiry journal.',34,400))
 put(f'{L}-exit',sec(f'{L}-exit','82–90 MIN',body,'Minutes 82 to 90. Answers: (a) 29 (6 × 4 + 5).  (b) 10 (45 − 5 = 40, 40 ÷ 4 = 10; check 10 × 4 + 5 = 45). Extension: write the rule with n (4n + 5) and build it in Scratch.'))
 
-order=['title','warm1','warm2','explore1','explore2','teach1','we1','try1','teach2','we2','try2','key','break','ws1','ws1ans','teachcode','teachsearch','teachtrick','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']
+order=['title','warm1','warm2','explore1','explore2','teach1','we1','teach2','we2','try2','key','break','ws1','ws1ans','teachcode','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']
 order=[f'{L}-{x}' for x in order]
 assert set(order)==set(S), set(order)^set(S)
 for f in os.listdir(os.path.join(D,'slides')):

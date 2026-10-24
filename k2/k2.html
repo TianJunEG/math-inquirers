@@ -1,0 +1,82 @@
+<!doctype html><html><head><meta charset="utf-8"><style>@font-face{font-family:'Fredoka';font-weight:400;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/fredoka/files/fredoka-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Fredoka';font-weight:500;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/fredoka/files/fredoka-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Fredoka';font-weight:600;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/fredoka/files/fredoka-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Fredoka';font-weight:700;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/fredoka/files/fredoka-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-weight:400;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-weight:600;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-weight:700;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-weight:800;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-800-normal.woff2') format('woff2')}
+@font-face{font-family:'Nunito Sans';font-style:italic;font-weight:400;src:url('file:///home/user/math-inquirers/fonts/node_modules/@fontsource/nunito-sans/files/nunito-sans-latin-400-italic.woff2') format('woff2')}@page{size:A4;margin:13mm 13mm 15mm}
+html,body{background:#EAF3FB}
+body{margin:0;font-family:'Nunito Sans',Arial,sans-serif;color:#1B2A49;font-size:14.6px;line-height:1.6;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.cover{background:#1B2A49;color:#FFF9EC;border-radius:22px;padding:26px 30px;margin-bottom:18px;position:relative;overflow:hidden}
+.cover:after{content:"";position:absolute;right:-30px;top:-30px;width:160px;height:160px;border-radius:50%;background:#FFC93C;opacity:.9}
+.cover:before{content:"";position:absolute;right:90px;bottom:-40px;width:90px;height:90px;border-radius:50%;background:#1F7A6F}
+.cover .tag{display:inline-block;background:#FFC93C;color:#1B2A49;font:700 11px 'Nunito Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:4px 12px}
+.cover h1{font:600 32px/1.1 Fredoka,sans-serif;margin:12px 0 6px;max-width:75%;position:relative;z-index:1}
+.cover .sub{font-size:14px;color:#C9D3E6;max-width:75%;position:relative;z-index:1}
+.cover .slog{font:500 15px Fredoka,sans-serif;color:#FFC93C;margin-top:10px;position:relative;z-index:1}
+h1.title{font:600 26px Fredoka,sans-serif;margin:6px 0 10px}
+h2{font:600 21px/1.2 Fredoka,sans-serif;color:#1B2A49;margin:16px 0 8px;padding:6px 14px;background:#fff;border-left:8px solid #FFC93C;border-radius:10px;break-after:avoid}
+h3{font:600 16px/1.25 Fredoka,sans-serif;color:#1F7A6F;margin:12px 0 5px;break-after:avoid}
+p{margin:0 0 8px}
+p.c,div.c{text-align:center}
+ul{margin:2px 0 8px;padding-left:22px}
+li{margin:2px 0}
+li::marker{color:#1F7A6F}
+.sp{height:6px}
+b{font-weight:800}
+img{max-width:100%;height:auto}
+.tb{width:100%;border-collapse:separate;border-spacing:0;margin:6px 0 12px;background:#fff;border:1.5px solid #1B2A49;border-radius:12px;overflow:hidden;font-size:13.2px}
+.tb td{border-top:1px solid #C9D7E6;border-left:1px solid #C9D7E6;padding:6px 8px;vertical-align:top}
+.tb tr:first-child td{border-top:0}
+.tb td:first-child{border-left:0}
+.tb td.hd{background:#FFE7A8;font-weight:700}
+.tb td div{margin:1px 0}
+.tb tr{break-inside:avoid}
+.brk{break-before:page;height:0}
+
+.q{display:flex;gap:10px;align-items:flex-start;margin:7px 0 3px;break-inside:avoid;break-after:avoid}
+.qn{flex:none;width:26px;height:26px;border-radius:50%;background:#FFC93C;border:1.5px solid #1B2A49;display:flex;align-items:center;justify-content:center;font:600 13px Fredoka,sans-serif;margin-top:1px}
+.qt{flex:1}
+.work{height:34px;margin:1px 0 4px 36px;border-bottom:2px dotted #8FA7C2;background:#fff;border-radius:8px 8px 0 0;padding:4px 10px;break-inside:avoid}
+.work span{font-size:11px;font-weight:800;color:#8FA7C2;text-transform:uppercase;letter-spacing:.06em}
+.lv{display:inline-block;font:600 14px Fredoka,sans-serif;border-radius:999px;padding:2px 14px;margin:8px 0 0;border:1.5px solid #1B2A49}
+.lv-core{background:#D3F1E4}.lv-think-harder{background:#D6E9FB}.lv-challenge{background:#FFE2D6}
+
+.tb td{font-size:12.6px}
+.sc{white-space:nowrap;text-align:center}
+.sc span{display:inline-block;width:22px;height:22px;border:1.5px solid #1B2A49;border-radius:5px;margin:0 2px;font:700 11px 'Nunito Sans';line-height:20px;background:#fff}
+.box{background:#fff;border:1.5px solid #1B2A49;border-radius:12px;padding:12px 16px;margin:8px 0 12px}
+.band{display:grid;grid-template-columns:110px 1fr;gap:0;border:1.5px solid #1B2A49;border-radius:12px;overflow:hidden;margin:8px 0}
+.band div{padding:10px 14px;border-top:1px solid #C9D7E6}.band div:nth-child(-n+2){border-top:0}
+.band .k{font:600 18px Fredoka;display:flex;align-items:center}
+.g{background:#D3F1E4}.y{background:#FFF0C4}.r{background:#FFE2D6}
+.child{font-family:Fredoka;font-size:26px}
+.child .bx{display:inline-block;width:64px;height:64px;border:3px solid #1B2A49;border-radius:10px;margin:6px 10px 6px 0;background:#fff;vertical-align:middle}
+.child h3{font-size:22px;margin-top:22px}
+</style></head><body><div class="cover"><div class="tag">Math Inquirers Holiday Program</div><h1>K2 Readiness Check</h1><div class="sub">A 15-minute check for K2 children who want to join before starting Primary 1</div><div class="slog">Notice it. Test it. Explain why.</div></div><h2>Why we check</h2><p>Math Inquirers uses topics chosen to complement the Primary 1 syllabus and goes beyond them. K2 children have not met P1 maths yet, so some will fly and some will feel lost. The check tells us who will enjoy the group, who needs a little support first, and who will get more from a later intake. It is short and friendly: children should feel they played some number games.</p>
+<h2>How to run it</h2><ul><li><b>Time:</b> about 15 minutes, one child at a time. On video, with the parent setting out the counters beside the child.</li>
+<li><b>You need:</b> about 25 counters (buttons or coins are fine), number cards 9, 14, 17 and 20, the child sheet (last page) and a pencil.</li>
+<li><b>Parent:</b> may sit in, but asks them not to help or prompt. Online, the parent only moves objects when asked.</li>
+<li><b>Tone:</b> say "Let's play some number games." Praise effort, not right answers. Never say "wrong"; say "Let's try another one."</li>
+<li><b>Stop early</b> if the child is upset or has scored 0 on four items in a row. Note it and move to the decision.</li></ul>
+<h2>Scoring</h2><div class="box"><b>2</b> = correct, without help. &emsp;<b>1</b> = correct with a hint, or slow (counting from 1, using fingers for everything). &emsp;<b>0</b> = not yet, or no answer. Total out of 24.</div>
+<h2>Watch for these too</h2><table class="tb"><tr><td class="hd">Behaviour</td><td class="hd">Yes / not yet</td></tr><tr><td>Stays with the task for 15 minutes with only small reminders</td><td></td></tr><tr><td>Follows a two-step instruction ("Count out 7, then put them in two groups")</td><td></td></tr><tr><td>Tries again when stuck instead of giving up</td><td></td></tr><tr><td>Can hold a pencil and write numbers to 20</td><td></td></tr></table>
+<div class="brk"></div>
+<h2>Script and score sheet</h2><p>Child's name: ______________________ &emsp; Date: ____________ &emsp; Tutor: ______________</p>
+<table class="tb"><colgroup><col style="width:5%"><col style="width:46%"><col style="width:33%"><col style="width:16%"></colgroup><tr><td class="hd">#</td><td class="hd">Say or do</td><td class="hd">Look for (2 marks)</td><td class="hd">Score</td></tr><tr><td><b>1</b></td><td>Put about 25 counters in a pile. "Count out 17 for me."</td><td>Touches each one once, stops at 17.</td><td class="sc"><span>0</span><span>1</span><span>2</span></td></tr><tr><td><b>2</b></td><td>Show number cards 9, 14, 17, 20. "Read these numbers."</td><td>Reads all four without counting up.</td><td class="sc"><span>0</span><span>1</span><span>2</span></td></tr><tr><td><b>3</b></td><td>"Write 6, 12 and 19 in the boxes." (child sheet, part A)</td><td>Numerals formed correctly, not reversed (12 not 21).</td><td class="sc"><span>0</span><span>1</span><span>2</span></td></tr><tr><td><b>4</b></td><td>"Count on from 8 to 15." Then: "Count back from 10 to 1."</td><td>Starts at 8 without going back to 1; counts back smoothly.</td><td class="sc"><span>0</span><span>1</span><span>2</span></td></tr><tr><td><b>5</b></td><td>"Which is more, 13 or 18? How do you know?"</td><td>Says 18, and gives a reason ("18 comes after 13", "it has more ones").</td><td class="sc"><span>0</span><span>1</span><span>2</span></td></tr><tr><td><b>6</b></td><td>"What is one more than 14? One less than 10?"</td><td>15 and 9 without counting from 1.</td><td class="sc"><span>0</span><span>1</span><span>2</span></td></tr><tr><td><b>7</b></td><td>Give 7 counters. "Put them into two groups. Can you do it another way?"</td><td>Makes 7 in at least two different ways (e.g. 5 and 2, 4 and 3).</td><td class="sc"><span>0</span><span>1</span><span>2</span></td></tr><tr><td><b>8</b></td><td>"I have 5 sweets and get 3 more. How many?" Then: "I have 9 and eat 4. How many left?"</td><td>8 and 5, with or without counters.</td><td class="sc"><span>0</span><span>1</span><span>2</span></td></tr><tr><td><b>9</b></td><td>"Ali has 3 apples. Mei gives him 2 more. How many now? How did you work it out?"</td><td>Correct (5) and can say or show how.</td><td class="sc"><span>0</span><span>1</span><span>2</span></td></tr><tr><td><b>10</b></td><td>Lay out red, red, blue, red, red, blue. "What comes next? And next?"</td><td>Red, red. Can say the rule ("two reds then a blue").</td><td class="sc"><span>0</span><span>1</span><span>2</span></td></tr><tr><td><b>11</b></td><td>"2, 4, 6 … what comes next? And next?" (child sheet, part B)</td><td>8 and 10. Score 1 if counting by ones to get there.</td><td class="sc"><span>0</span><span>1</span><span>2</span></td></tr><tr><td><b>12</b></td><td>Child sheet, part C: "Name these shapes. How many sides does the triangle have?"</td><td>Circle, triangle, square, rectangle; 3 sides.</td><td class="sc"><span>0</span><span>1</span><span>2</span></td></tr><tr><td></td><td colspan="2" style="text-align:right"><b>Total (out of 24)</b></td><td></td></tr></table>
+<div class="brk"></div>
+<h2>Decision</h2><div class="band"><div class="k g">18–24</div><div class="g"><b>Ready.</b> Joins any group like a Primary 1 child. Tell the tutor in the class list that the child is in K2 and keep an eye on Lessons 5 and 6 (working backwards and money), which are the biggest jump.</div>
+<div class="k y">12–17</div><div class="y"><b>Ready with support.</b> Joins, with three conditions: we send the K2 Starter Pack two weeks before the program (numbers to 20, writing numbers, number bonds to 10, coins); the child sits with a buddy; and the tutor reminds the child that they may choose any section and can start with Start here.</div>
+<div class="k r">0–11</div><div class="r"><b>Not yet.</b> Recommend a later intake (the March or June holidays) and give the free home activity sheet. Say it positively: "Your child will get much more out of it after a term of Primary 1."</div></div>
+<h3>Override rules</h3><ul><li>Score 0 on item 3 (writing numbers) → <b>Ready with support</b> at best, because the workbook needs writing.</li><li>"Stays with the task" ticked "not yet" → recommend the online group with a parent nearby, or a later intake.</li><li>Child scores 22+ and explains reasons well → note "strong", so the tutor points out the Think harder and Go further pages. Every child may choose any section; nobody is placed in a tier.</li></ul>
+<h2>Telling the parent</h2><p>Within a day, send a short message with the result band, one thing the child did well, and the next step. Sample for "Ready with support":</p>
+<div class="box"><i>"Thank you for bringing Ethan for the number games today. He counted and compared numbers confidently and loved the pattern game. Primary 1 maths will be new to him, so we will send a short Starter Pack to try at home over the next two weeks, and he can start with the Start here questions in class. We think he will enjoy the program. His place is confirmed."</i></div>
+<h2>If several K2 children sign up</h2><p>If four or more K2 children register for the same period, consider a separate K2 group. Teach the same ten lessons with smaller numbers (to 20 instead of 100), more objects and fewer written questions. This can grow into a "Little Inquirers" K2 program later.</p>
+<div class="brk"></div>
+<div class="child"><h2 style="font-size:26px">Number games</h2><p style="font-size:20px">Name: _______________________</p>
+<h3>A. Write these numbers</h3><span class="bx"></span><span class="bx"></span><span class="bx"></span>
+<h3>B. What comes next?</h3><p>2, &nbsp;4, &nbsp;6, &nbsp;<span class="bx"></span> <span class="bx"></span></p>
+<h3>C. Name the shapes</h3><svg viewBox="0 0 640 170" width="100%"><circle cx="80" cy="85" r="62" fill="#D6E9FB" stroke="#1B2A49" stroke-width="5"/><polygon points="240,25 310,150 170,150" fill="#FFF0C4" stroke="#1B2A49" stroke-width="5" stroke-linejoin="round"/><rect x="360" y="35" width="110" height="110" fill="#D3F1E4" stroke="#1B2A49" stroke-width="5"/><rect x="500" y="55" width="130" height="80" fill="#FFE2D6" stroke="#1B2A49" stroke-width="5"/></svg>
+<h3>D. Draw what comes next</h3><svg viewBox="0 0 640 90" width="100%"><circle cx="45" cy="45" r="26" fill="#D64545" stroke="#1B2A49" stroke-width="4"/><circle cx="115" cy="45" r="26" fill="#D64545" stroke="#1B2A49" stroke-width="4"/><circle cx="185" cy="45" r="26" fill="#3B6FC9" stroke="#1B2A49" stroke-width="4"/><circle cx="255" cy="45" r="26" fill="#D64545" stroke="#1B2A49" stroke-width="4"/><circle cx="325" cy="45" r="26" fill="#D64545" stroke="#1B2A49" stroke-width="4"/><circle cx="395" cy="45" r="26" fill="#3B6FC9" stroke="#1B2A49" stroke-width="4"/><rect x="462" y="19" width="52" height="52" rx="8" fill="#fff" stroke="#1B2A49" stroke-width="3" stroke-dasharray="7 5"/><rect x="532" y="19" width="52" height="52" rx="8" fill="#fff" stroke="#1B2A49" stroke-width="3" stroke-dasharray="7 5"/></svg></div></body></html>

@@ -1,0 +1,128 @@
+#!/usr/bin/env python3
+"""Turn a BUILT online unit (practice/ext/dist/lNuXX/data/lNuXX.json) into the server-side answer key and tags.
+
+    python3 practice/submit/make_keys.py 2 1         # -> practice/submit/out/ext-l2u01.keys.json and .sql   (git-ignored; nothing is loaded anywhere)
+
+Output:
+  keys.json  [{id, marking_mode, type, key, ordered, equivalent, paper_only, slips, + unit, pre, grouped, words, poly, equiv_frac when set}]  what handler.js marks with (the stub server reads it)
+  .sql       INSERTs for practice_units, practice_item_tags and practice_item_keys. The owner (or an agent with the service role) runs it after
+             reviewing; unit_version = first 8 chars of the data file's SHA-256, so a changed question can never be marked with an old key.
+marking_mode:  auto  = a number, boxes, list, choice (Phase 2: fraction, decimal, text)   self = selfcheck items (compare with the shown solution; includes
+               every paper-only drawing/ruler/kit task and every 'Explain' item that has a model answer)   none = truly open items (no objective fact: many answers are right;
+               reports show them as open, not as checked on paper).
+               A holiday data file says which in each selfcheck item's own `marking_mode` ('self' or 'none'; build_holiday.py sets it from the lesson file's marking_mode 'self' | 'open',
+               with a documented default), and this file honours it. Older data without that field (the extension units): open=True or a model answer starting 'Open' is none, else self.
+               Paper-only is always self.
+Other item flags are passed on: unit:false, words:true (number words), poly:'n' (algebra rule compared as a polynomial), equiv_frac:true (equal fractions in a list), accept_prefix:false|[...] (lead-ins such as 'It is' in a text answer), time:true (fields: hours box + minutes box; '5:25' typed in the first box alone is 5 h 25 min), clock:true (an hour: '3', "3 o'clock", '3:00', '3 pm'; per-box list for fields), dollars_ok:true ('$0.48' for 48 cents), accept_by:true ('6 by 6 square' for a sides answer).
+Tags: practice/submit/tags/<unit>.json may give {"strand": "...", "skill_by_item": {"S01": "..."}}; otherwise strand/skill fall back to the unit topic.
+"""
+import hashlib, json, os, sys
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(os.path.dirname(HERE))
+
+
+def build(level, unit, holiday=None):
+    """holiday = level key such as 'p1' builds the holiday lesson practice/holiday/<key>/<NN>/dist; otherwise the extension unit."""
+    if holiday:
+        key = f'{holiday}l{unit:02d}'
+        path = os.path.join(ROOT, 'practice', 'holiday', holiday, f'{unit:02d}', 'dist', 'data', key + '.json')
+    else:
+        key = f'l{level}u{unit:02d}'
+        path = os.path.join(ROOT, 'practice', 'ext', 'dist', key, 'data', key + '.json')
+    raw = open(path, 'rb').read()
+    d = json.loads(raw)
+    ver = hashlib.sha256(raw).hexdigest()[:8]
+    tagfile = os.path.join(HERE, 'tags', f'ext-{key}.json')
+    tags = json.load(open(tagfile)) if os.path.exists(tagfile) else {}
+    keys, tag_rows = [], []
+    for pos, it in enumerate(d['items'], 1):
+        t = it['type']
+        if t == 'selfcheck':
+            openq = bool(it.get('open')) or (bool(it['steps']) and it['steps'][0].lstrip().lower().startswith('open'))   # open = many answers are right: reported as 'open', never as 'checked on paper'
+            if it.get('marking_mode') in ('self', 'none', 'open'):      # the built data says which: honour it (a paper-only item is always self)
+                openq = it['marking_mode'] != 'self' and not it.get('paper_only')
+            rec = dict(marking_mode='none' if openq else 'self', type='open' if openq else 'selfcheck', key=None)
+        elif t == 'fields':
+            rec = dict(marking_mode='auto', type='fields', key=[f['answer'] for f in it['fields']])
+            if any(f.get('pre') for f in it['fields']):
+                rec['pre'] = [f.get('pre', '') for f in it['fields']]
+        elif t == 'set':
+            rec = dict(marking_mode='auto', type='set', key=it['answer'], ordered=bool(it['ordered']))
+            if it.get('grouped') is not None:
+                rec['grouped'] = bool(it['grouped'])
+        elif t == 'choice':
+            rec = dict(marking_mode='auto', type='choice', key=it['answer'], options=it['options'])
+        elif t == 'number':
+            rec = dict(marking_mode='auto', type='number', key=it['answer'])
+        elif t == 'text':
+            rec = dict(marking_mode='auto', type='text', key=it['answer'])
+        else:
+            raise SystemExit(f'{it["id"]}: item type {t} has no marking rule yet')
+        if it.get('unit') is False and t in ('number', 'fields'):
+            rec['unit'] = False
+        if it.get('words') and t in ('number', 'fields'):
+            rec['words'] = True
+        if t == 'number' and it.get('cents'):
+            rec['cents'] = True                                   # amount in cents: '65c' ok, '$65' refused
+        if t == 'fields' and any(f.get('cents') for f in it['fields']):
+            rec['cents'] = [bool(f.get('cents')) for f in it['fields']]
+        if it.get('range') and t in ('set', 'text'):
+            rec['range'] = True                                   # '1-7' = 1 to 7
+        if t == 'number' and it.get('clock'):
+            rec['clock'] = True                                   # hour: '3', "3 o'clock", '3:00', '3 pm' (never '3:30')
+        if t == 'fields':
+            if it.get('clock'):
+                rec['clock'] = True
+            elif any(f.get('clock') for f in it['fields']):
+                rec['clock'] = [bool(f.get('clock')) for f in it['fields']]
+            if any(f.get('time') for f in it['fields']):
+                rec['time'] = [bool(f.get('time')) for f in it['fields']]   # hours box followed by a minutes box: '5:25' in the first box alone
+        if it.get('dollars_ok') and t in ('number', 'fields'):
+            rec['dollars_ok'] = True                              # '$0.48' for 48 cents
+        if t == 'text':
+            if it.get('poly'):
+                rec['poly'] = it['poly']
+            if it.get('equiv_frac'):
+                rec['equiv_frac'] = True
+            if it.get('accept_by'):
+                rec['accept_by'] = True                           # '6 by 6 square' / '6 x 6' for a sides answer
+            if it.get('accept_prefix') is not None:
+                rec['accept_prefix'] = it['accept_prefix']      # False = no 'It is ...' lead-in; a list adds lead-ins
+        rec.update(id=it['id'], paper_only=bool(it.get('paper_only')), slips=it.get('slips') or [])
+        keys.append(rec)
+        by = tags.get('skill_by_item', {})
+        tag_rows.append(dict(id=it['id'], pos=pos, tier=it.get('tier'), strand=(it.get('tags') or {}).get('strand') or tags.get('strand', d.get('topic')), skill=(it.get('tags') or {}).get('skill') or by.get(it['id'], d.get('topic')),
+                             topic=d.get('topic'), marking_mode=rec['marking_mode'], paper_only=rec['paper_only'], slips=rec['slips']))
+    return key, ver, d, keys, tag_rows
+
+
+def q(s):
+    return 'null' if s is None else "'" + str(s).replace("'", "''") + "'"
+
+
+def main():
+    holiday = None
+    if sys.argv[1] == 'holiday':          # python3 practice/submit/make_keys.py holiday p1 1
+        holiday, level, unit = sys.argv[2], 0, int(sys.argv[3])
+    else:
+        level, unit = int(sys.argv[1]), int(sys.argv[2])
+    key, ver, d, keys, tag_rows = build(level, unit, holiday)
+    uk = ('hol-' if holiday else 'ext-') + key
+    out = os.path.join(HERE, 'out'); os.makedirs(out, exist_ok=True)
+    json.dump(dict(unit=uk, version=ver, keys=keys), open(os.path.join(out, uk + '.keys.json'), 'w'), indent=1)
+    sql = ['-- generated by practice/submit/make_keys.py; review, then run with the service role. NOT applied by the author.', 'begin;',
+           f"insert into public.practice_units (unit_key, unit_version, product, level, title, unit_no, access, published) values ({q(uk)}, {q(ver)}, {q('holiday' if holiday else 'extension')}, {d['level']}, {q(d['title'])}, {unit}, 'purchased', false) on conflict do nothing;"]
+    for t in tag_rows:
+        sql.append(f"insert into public.practice_item_tags (unit_key, unit_version, item_id, position, tier, marking_mode, paper_only, strand, skill, topic, slips) values ({q(uk)}, {q(ver)}, {q(t['id'])}, {t['pos']}, {q(t['tier'])}, {q(t['marking_mode'])}, {str(t['paper_only']).lower()}, {q(t['strand'])}, {q(t['skill'])}, {q(t['topic'])}, {q(json.dumps(t['slips']))}::jsonb) on conflict do nothing;")
+    for k in keys:
+        sql.append(f"insert into public.practice_item_keys (unit_key, unit_version, item_id, answer_type, answer_key, ordered, equivalent, rules) values ({q(uk)}, {q(ver)}, {q(k['id'])}, {q(k['type'])}, {q(json.dumps(k['key']))}::jsonb, {str(k.get('ordered', False)).lower()}, {str(k.get('equivalent', False)).lower()}, {q(json.dumps({r: k[r] for r in ('unit', 'pre', 'grouped', 'words', 'poly', 'equiv_frac', 'accept_prefix', 'clock', 'time', 'cents', 'range', 'dollars_ok', 'accept_by') if r in k}))}::jsonb) on conflict do nothing;")
+    sql += ["-- publish only after the owner has approved the privacy wording:", f"-- update public.practice_units set published = true where unit_key = {q(uk)} and unit_version = {q(ver)};", 'commit;']
+    open(os.path.join(out, uk + '.sql'), 'w').write('\n'.join(sql) + '\n')
+    modes = {}
+    for k in keys: modes[k['marking_mode']] = modes.get(k['marking_mode'], 0) + 1
+    print(f'{uk} version {ver}: {len(keys)} items {modes}')
+
+
+if __name__ == '__main__':
+    main()

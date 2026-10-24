@@ -10,6 +10,7 @@ Date 2026-10-22. Read-only review. Files written: this report and `docs/audit/jo
 - **Score order everywhere:** P = can participate, D = difficulty fit, F = fun and interest, C = confidence and self-esteem, M = motivation, S = social/online experience.
 - **Persona definitions used.** LOW: post-PSLE, school maths is hard, slow reader and writer, shaky multiplication and division facts, has done only a little Scratch at school, discouraged easily. MID: typical, knows Scratch basics, needs support on new ideas. HIGH: fast, may code already, bored by repetition, rushes.
 - **Things I could not check:** the Scratch editor itself (no starter `.sb3` files exist anywhere in the repo, so I could not open or test them); the MOE syllabus (school-year placements below are my belief, to verify); how a real tutor spends the minutes.
+- **Verified against MOE syllabus (Oct 2025):** the school-year placements in this file were checked against the PDF. Two are wrong as written: warm-up W4 (speed) is not P6 school content, because "speed" is in no primary year (rate is P5, p. 41); and W2 (discount) is a **P5** topic (Percentage 1.4, p. 41), not P6. The simulated "wrong about 1 time in 5" for a pre-PSLE P5 child therefore rests on W2 and W4 being harder than the syllabus makes them for that child; treat that figure as overstated. Other placements (percentage change and finding the whole P6, p. 43; average P6, p. 44) hold. Full list: `docs/moe/verification_report.md`.
 
 ## 1. Part 1: lesson-by-lesson journey
 

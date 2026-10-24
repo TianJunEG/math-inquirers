@@ -1,0 +1,3936 @@
+{
+ "schema_version": 1,
+ "level": 1,
+ "ages": "6-8",
+ "spare_time_rules": [
+  "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
+  "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+  "Never teach anything the next lesson needs. If the class is ahead, slow down: ask 'How do you know?' and let children explain, rather than rushing on."
+ ],
+ "id": "l1-t3-10",
+ "term": 3,
+ "lesson": 30,
+ "lesson_in_term": 10,
+ "title": "Tool Detectives",
+ "big_idea": "Pick a tool, say why, and check your answer another way",
+ "child_idea": "We have seven tools. Look at a problem, pick the tool you would start with, say why, and check. If one tool gets stuck, try another.",
+ "skill": "Choosing a method",
+ "spine": {
+  "main": "choose",
+  "also": [],
+  "role": "C",
+  "reason": "Choose-the-tool lesson (consolidation plan): the child picks one of the seven tools met by Term 3 and hosts Mi's Challenge Quest."
+ },
+ "moe": {
+  "strand": "Processes and heuristics (pp. 13 to 14 of the syllabus pages we hold: problem solving, representing, reasoning and communicating; no list of named heuristics); Mi's Challenge Quest for the term",
+  "topics": [
+   "Choosing a way to start a one- or two-step problem and saying why (process skills, Primary 1)",
+   "Revisiting the content of the term in fresh numbers: reading a clock and adding half an hour or an hour, coins, change and prices, the calendar, a growing pattern and checking a sum (Primary 1 time, money and number patterns; see Term 3 Lessons 1 to 9)",
+   "Mi's Challenge Quest: 8 short gates (6 visit the lessons of the term and 2 are mixed gates with no lesson tag) and an optional secret cave (all at Start here level)"
+  ],
+  "note": "Strand label for the tutor only. This is a consolidation lesson (owner decision X10-BEFORE, 23 Oct 2026): it teaches no new idea and spirals Term 3 in fresh numbers. The syllabus pages we hold name no list of heuristics, so the seven tool names are this program's own (the same names as the Toolbox Card; Try something simpler joins in Term 4). Start here names the tool only on the answer line (the child writes the tool used and ticks I checked) and never in the question. Think harder names the tools. Go further names none. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only: switching tool when the first one gets stuck, a table of tries, elimination with a table, a pattern with a rule of 4 more each time, and a cycle of 3 days on a week of 7. Do not describe the lesson as MOE-aligned. This lesson also holds Mi's Challenge Quest (20 minutes, minutes 35 to 55, straight after the brain break; a game with Mi, not a test). Gates: 1 clock to 5 minutes, am or pm and half an hour later (Term 3 Lessons 1 to 3), 2 coins and change (24), 3 compare prices and exactly $10 (25 and 26), 4 days later and a week on the month page (27, moved here from the old Term 3 Lesson 10), 5 sticks (28), 6 a wrong sum (29), 7 and 8 mixed gates (work backwards with money, and coins by guess and check) with no lesson tag; the secret cave is an unseen puzzle joining money and listing. Fill the Grid is retired: its elimination idea survives as Think harder T3, solved with a table. Non-routine types (tutor only): a pattern (add the same each time), work backwards (stickers given away), guess and check (5-cent and 10-cent coins), logic by elimination with a table (caps), list every way (two tags that cost exactly an amount), a cycle (swims every 3 days)."
+ },
+ "contest_moves": [
+  "choose the tool that fits and say why, then check a second way",
+  "switch tool when the first one is too slow (drawing the 8th picture, then a table)",
+  "work backwards with the tool not named: stickers given away and some left",
+  "guess and check with a table of tries: 5 coins worth 35 cents",
+  "logic by elimination with a table: three children, three caps, three clues",
+  "a cycle on a week of 7: swims every 3 days"
+ ],
+ "contest_where": "Think harder, Go further and the Investigation",
+ "objectives": [
+  "Name the seven tools and say when each one helps.",
+  "Start here: pick a tool for a mixed problem from the term, write the tool used, solve it and tick I checked.",
+  "Think harder: solve one problem with two tools and say which was quicker, switch tool when the first one is too slow, use a table to find who has which pet, and use guess and check.",
+  "Go further: choose the tool without a hint for a money problem with two steps, a problem with two kinds of things, and a cycle of 3 days.",
+  "Play Mi's Challenge Quest, a game with Mi on private paper: 8 short gates that visit the lessons of the term, and choose a tool at each one."
+ ],
+ "joining_cold": {
+  "remember": [
+   "The seven tools and when each helps (taught again on the toolbox page of this lesson)",
+   "Draw two strips to find how many more (Term 2 Lesson 2, taught again with a picture)",
+   "Work backwards from the end on a number line, and spot a pattern that adds the same each time (taught again)"
+  ],
+  "assumes": "Only counting to 31 and adding and taking away small numbers. Nothing from earlier lessons is needed: the warm-up shows the tool names with a use for each, and three tools are used on tiny problems. Every problem in the lesson is in fresh numbers.",
+  "holiday_topics_revisited": [
+   "Counting on in equal jumps (Count with the Frog)",
+   "Choosing a tool (the holiday toolbox lesson)"
+  ],
+  "safe_to_miss": false,
+  "note": "Try not to miss this lesson: it holds Mi's Challenge Quest. A child who misses it plays at the make-up slot (small group, a parent beside the child on camera) BEFORE watching the recording: the quest is not in the recording. The lesson itself needs only counting to 31, so a child who joins here cold can follow the warm-up and the first workbook page; the family may leave out gates for lessons the child did not attend."
+ },
+ "materials": {
+  "child": [
+   "Your Term 3 book: the tool-card page, torn out along the dashed line, with the 7 tool cards cut out by a grown-up beforehand",
+   "The Quest Log (4 pages, in your Term 3 book), kept closed in an envelope until the tutor says to open it, a quest partner (a grown-up or a brother or sister), and a pencil and rubber",
+   "No cutting? Write the 7 tool names on 7 small pieces of paper",
+   "Your clock and play money from earlier in the term are optional helpers in the Quest; they are not needed",
+   "A pencil, a rubber and spare paper"
+  ],
+  "tutor": [
+   "The slide deck and the quest files (tutor notes with the private notes sheet, grown-up note)",
+   "Your own tool cards to show on camera, if you wish",
+   "Your own watch or clock, out of sight of the camera. No timer or clock is shown during the quest"
+  ],
+  "kit_pages": [
+   "Tool cards (page 6): 7 cards with the tool names, for a grown-up to cut out. Children lay them in a row and point to the tool they would start with. Keep the cards in an envelope"
+  ],
+  "ruler": false,
+  "notes": "No ruler is needed. Nothing needs to be bought. Small pieces stay on the table: nothing goes in the mouth or ears; keep them away from younger brothers and sisters. No matches, toothpicks or anything sharp. Nobody cuts during the lesson; a grown-up cut the cards beforehand. Coins and notes in the problems are play money or pictures: no real money is needed.",
+  "kit_contract": [
+   {
+    "piece": "tool cards",
+    "supplied": 7,
+    "max_used": 7,
+    "used_by": [
+     "explore",
+     "mini",
+     "S1"
+    ]
+   }
+  ]
+ },
+ "timing": {
+  "parts": [
+   {
+    "id": "opening",
+    "title": "Opening",
+    "start": 0,
+    "end": 2
+   },
+   {
+    "id": "remember",
+    "title": "Remember warm-up",
+    "start": 2,
+    "end": 8
+   },
+   {
+    "id": "sneak",
+    "title": "Sneak-peek puzzles",
+    "start": 8,
+    "end": 12
+   },
+   {
+    "id": "explore",
+    "title": "Explore",
+    "start": 12,
+    "end": 22
+   },
+   {
+    "id": "mini",
+    "title": "Mini-lesson",
+    "start": 22,
+    "end": 31
+   },
+   {
+    "id": "break",
+    "title": "Brain break",
+    "start": 31,
+    "end": 35
+   },
+   {
+    "id": "exit",
+    "title": "Mi's Challenge Quest",
+    "start": 35,
+    "end": 55
+   },
+   {
+    "id": "work",
+    "title": "Workbook",
+    "start": 55,
+    "end": 80
+   },
+   {
+    "id": "talk",
+    "title": "Talk time",
+    "start": 80,
+    "end": 84
+   },
+   {
+    "id": "look",
+    "title": "Look-back",
+    "start": 84,
+    "end": 86
+   },
+   {
+    "id": "flex",
+    "title": "Flex time and goodbye",
+    "start": 86,
+    "end": 90
+   }
+  ],
+  "optional_slide": "s-opt",
+  "include_rules": false,
+  "notes": "Term 3 Lesson 10 is the last lesson of Term 3, so it holds Mi's Challenge Quest. The quest is taken straight after the brain break (minutes 35 to 55, the part Mi's Challenge Quest) while children are fresh; the Start here workbook follows it (minutes 55 to 80, 25 minutes: Start here takes a middle child about 17 minutes, so pages 3 to 5 are for home for most children). The exit ticket (E1 to E3) is not done live: the quest is the exit, and the ticket is an optional item in the flex time and a page for home. Explore has 10 minutes (the tool market: six problem cards, nobody solves, point to a tool and say why); the Mini-lesson has 9 (one problem with two tools and a check, then a problem where the first tool is too slow). The quest has 8 short gates and one optional secret cave item; a middle child needs about 17 minutes of reading aloud and quiet work. The last 4 minutes are the standing buffer; nothing new is started in it.",
+  "skip_order": [
+   "In a slow class the workbook part runs over: take the time from the 4-minute flex buffer and shorten choice time (pages 3 to 5 can go home)",
+   "the optional slide and the optional exit ticket",
+   "the second card of the tool market (cards 4 to 6): do two of them",
+   "never shorten Mi's Challenge Quest"
+  ]
+ },
+ "sneak_peek": {
+  "q1": "Today is Monday. What day is it 3 days later? Write the day.",
+  "q2": "A number add 6 is 15. What is the number? I know because ___.",
+  "a1": "Thursday.",
+  "a2": "9. Start at 15 and go back 6, or check: 9 and 6 make 15.",
+  "val1": "Thursday"
+ },
+ "rec": {
+  "opening": {
+   "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook, your tool cards and your Quest Log. Pause or rewind any time.",
+   "action": "Gather your workbook, tool cards, pencil, paper and the closed Quest Log. Press play when ready."
+  },
+  "remember": {
+   "say": "Recording: join in! Say your answers out loud before I say them. Pause if you need longer.",
+   "action": "Play along. Say each answer out loud before the video does."
+  },
+  "sneak": {
+   "say": "Recording: pause now and try both puzzles on your paper. Guessing is fine. Press play for the next part.",
+   "action": "Pause. Try both puzzles on your own paper. A guess is fine."
+  },
+  "explore": {
+   "say": "Recording: pause now. For each problem card, point to the tool you would start with and say why.",
+   "action": "Pause. For each problem card, pick a tool card and say why."
+  },
+  "mini": {
+   "say": "Recording: keep watching and copy the examples. Rewind if you miss a step.",
+   "action": "Watch and copy the examples. Rewind any step you missed."
+  },
+  "break": {
+   "say": "Recording: stand up and join in! Mime each tool with me, then sit down.",
+   "action": "Stand up. Mime each tool, then sit down."
+  },
+  "exit": {
+   "say": "Recording: Mi's Challenge Quest is not recorded. Skip ahead to the workbook. Play the quest as your tutor arranges.",
+   "action": "Skip to the workbook. Play Mi's Challenge Quest live, or at the make-up slot, not from the video."
+  },
+  "work": {
+   "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
+   "action": "Pause. Do page 1, then play to check. Then page 2. Then choose a page to try."
+  },
+  "talk": {
+   "say": "Recording: pause. Tell a grown-up which tool you would pick for the 20th picture, and why.",
+   "action": "Pause. Explain your tool and why to someone at home."
+  },
+  "look": {
+   "say": "Recording: pause and fill in your look-back box. You can pass.",
+   "action": "Pause. Fill in the look-back box, or pass."
+  },
+  "flex": {
+   "say": "Recording: well done for finishing the term! Show a grown-up one tool you like and why.",
+   "action": "Show a grown-up your tool cards and tell them one tool you like."
+  }
+ },
+ "beyond": {
+  "name": "Too Slow? Switch Tools",
+  "where": [
+   "T2",
+   "T3",
+   "G3"
+  ],
+  "text": "Changing tool when the first one is too slow (drawing the 8th square of a pattern, then a table), finding who has which pet by elimination with a table, and a cycle of 3 days on a week of 7 (swims every 3 days) go past the Primary 1 syllabus on purpose; the syllabus pages we hold name no list of heuristics. Named puzzle: Too Slow? Switch Tools.",
+  "parent": "Choosing between tools, switching tool when the first one is too slow, and working out who has which pet from clues go past the school Primary 1 syllabus on purpose."
+ },
+ "rec_pause_say": "Say once to the camera: the recording pauses now for Mi's Challenge Quest, and starts again for the workbook. Pause the recording before you read the first gate.",
+ "look_back": {
+  "hardest": [
+   "picking a tool",
+   "checking my answer",
+   "explaining why",
+   "something else"
+  ],
+  "helped": [
+   "the tool cards",
+   "drawing it",
+   "checking my answer",
+   "I was not stuck"
+  ],
+  "next": [
+   "picking a tool and saying why",
+   "checking another way",
+   "trying a second tool",
+   "asking a question"
+  ]
+ },
+ "slides": [
+  {
+   "id": "s-title",
+   "part": "opening",
+   "kind": "title",
+   "title": "Tool Detectives",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "TODAY WE WILL",
+     "items": [
+      "Pick a tool and say why.",
+      "Play Mi's Challenge Quest."
+     ]
+    }
+   ],
+   "note": "Lesson 10 of Term 3, 90 minutes, the last lesson of the term. Objective: look at a problem, pick a tool, say why, and check; try a second tool when the first is too slow. This lesson also holds Mi's Challenge Quest (20 minutes, after the brain break, a game with Mi on private paper). It teaches no new idea: it uses what we met in the term in fresh numbers. Plain statement for families: choosing between tools, switching tool when one is too slow, and working out who has which pet from clues go past the school Primary 1 syllabus on purpose. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 22, mini-lesson 22 to 31, brain break 31 to 35, Mi's Challenge Quest 35 to 55, workbook 55 to 80, talk 80 to 84, look-back 84 to 86, flex time and goodbye 86 to 90 (the buffer: do not start anything new). Say the recording notice in one line: you and the screen only; a child may keep the camera off.",
+   "subtitle": "Choose a tool. Say why. Check.",
+   "mascot": {
+    "size": "l",
+    "say": "Hi, I'm Mi. Let's notice, test and explain why!"
+   }
+  },
+  {
+   "id": "s-rem1",
+   "part": "remember",
+   "kind": "light",
+   "title": "Your seven tools",
+   "blocks": [
+    {
+     "type": "table",
+     "head": [
+      "Tool",
+      "Use it when"
+     ],
+     "rows": [
+      [
+       "Draw it",
+       "You can make a picture or a bar."
+      ],
+      [
+       "Act it out",
+       "You can use counters, cards or a clock."
+      ],
+      [
+       "Spot the pattern",
+       "Something repeats or grows."
+      ],
+      [
+       "List every way",
+       "You need every way."
+      ],
+      [
+       "Make a table",
+       "You can put what you know in rows."
+      ],
+      [
+       "Work backwards",
+       "You know the end, not the start."
+      ],
+      [
+       "Guess and check",
+       "You can pick a number and test it."
+      ]
+     ],
+     "col_w": [
+      4,
+      7
+     ],
+     "cell_h": 64,
+     "font": 28,
+     "size": 88,
+     "t": "visual"
+    },
+    {
+     "t": "chip",
+     "text": "Lay your 7 tool cards in a row. Which tool have you used before?"
+    }
+   ],
+   "note": "The toolbox page for the tools we have met in the term, one use for each (taught again for anyone who joins cold). Read each row aloud. Children lay the 7 tool cards in a row and point to one they have used. Say: today we do not learn a new tool; we practise choosing one. A child with no cards writes the 7 names on small papers. Children answer aloud. No writing.",
+   "mascot": {
+    "size": "s",
+    "say": "Take your time!"
+   }
+  },
+  {
+   "id": "s-rem2",
+   "part": "remember",
+   "kind": "light",
+   "title": "Draw it: two strips",
+   "blocks": [
+    {
+     "type": "bar_model",
+     "mode": "compare",
+     "bars": [
+      {
+       "name": "Ali",
+       "len": 9,
+       "text": "9"
+      },
+      {
+       "name": "Mei",
+       "len": 5,
+       "text": "5"
+      }
+     ],
+     "gap": {
+      "between": [
+       0,
+       1
+      ],
+      "text": "?"
+     },
+     "size": 100,
+     "t": "visual"
+    },
+    {
+     "t": "chip",
+     "text": "Ali has 9 sweets. Mei has 5 sweets. How many more sweets does Ali have?"
+    }
+   ],
+   "note": "Draw it, used on a tiny problem (Term 2 Lesson 2, taught again). The gap between the two strips is how many more: 9 take away 5 is 4. Children answer aloud: 4. A child who is unsure counts the extra squares on the long strip."
+  },
+  {
+   "id": "s-rem3",
+   "part": "remember",
+   "kind": "light",
+   "title": "Work backwards: go back",
+   "blocks": [
+    {
+     "type": "number_line",
+     "start": 0,
+     "end": 12,
+     "step": 1,
+     "label_every": 1,
+     "hide": [
+      7
+     ],
+     "jumps": [
+      [
+       7,
+       11,
+       "+4"
+      ]
+     ],
+     "size": 100,
+     "t": "visual"
+    },
+    {
+     "t": "chip",
+     "text": "I think of a number. I add 4. I get 11. What is my number?"
+    }
+   ],
+   "note": "Work backwards, used on a tiny problem. Start at the end, 11, and go back 4: 7. Check forwards: 7 and 4 make 11. Children answer aloud: 7. A child who is unsure counts back 4 on fingers from 11."
+  },
+  {
+   "id": "s-rem4",
+   "part": "remember",
+   "kind": "light",
+   "title": "Spot the pattern",
+   "blocks": [
+    {
+     "type": "seq",
+     "items": [
+      3,
+      6,
+      9,
+      null
+     ],
+     "gaps": [
+      "+3",
+      "+3",
+      "+3"
+     ],
+     "t": "visual"
+    },
+    {
+     "t": "chip",
+     "text": "3, 6, 9, ... What comes next? What do we add each time?"
+    }
+   ],
+   "note": "Spot the pattern, used on a tiny problem. Each number is 3 more than the one before, so the next number is 12. Children answer aloud: 12 and add 3. A child who is unsure counts on 3 from 9 on fingers. No writing."
+  },
+  {
+   "id": "s-sneak",
+   "part": "sneak",
+   "kind": "light",
+   "title": "Sneak-peek puzzles",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Ideas we have not learnt yet. A guess is a great start. Your paper is not collected."
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 1: anyone can try",
+        "items": [
+         "Today is Monday.",
+         "What day is it 3 days later?"
+        ]
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 2: think",
+        "items": [
+         "A number add 6 is 15.",
+         "What is the number?",
+         "I know because ___."
+        ]
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Puzzle 1 is an access question; puzzle 2 is a thinking question. Neither says which tool to use. Puzzle 1: 3 days later than Monday is Thursday (count on from tomorrow). Puzzle 2: 15 take away 6 is 9. A child who adds 15 and 6 gets 21: say nothing yet. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; your paper is not collected. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Do not reveal answers until Talk time. Do not write scores or keep a list."
+  },
+  {
+   "id": "s-explore1",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: tool market, cards 1 to 3",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Card",
+       "Problem"
+      ],
+      [
+       "1",
+       "A film starts at 3:30 and lasts 1 hour. When does it end?"
+      ],
+      [
+       "2",
+       "Ben pays exactly $12 with two tags. The tags say $3, $5, $8 and $9. Which two?"
+      ],
+      [
+       "3",
+       "Row 1 has 2 stars, row 2 has 4 stars, row 3 has 6 stars. How many stars are in row 8?"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Nobody solves. Point to the tool you would start with. Say: I will ... because ..."
+    }
+   ],
+   "note": "Tool market, round 1, about 4 minutes. Nobody solves the problems: for each card, children point to one tool card and say I will, tool, because, reason. Read every card aloud. Card 1 fits Draw it (a number line) or Act it out (a clock). Card 2 fits List every way, or Guess and check. Card 3 fits Make a table or Spot the pattern. If a child starts to solve, say: lovely, we will solve it later; which tool did you start with? Answers are on the next slide, shown after the children have chosen."
+  },
+  {
+   "id": "s-explore1-ans",
+   "part": "explore",
+   "kind": "light",
+   "title": "A tool I could start with: 1 to 3",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Card",
+       "A tool I could start with"
+      ],
+      [
+       "1",
+       "Draw it, or Act it out"
+      ],
+      [
+       "2",
+       "List every way, or Guess and check"
+      ],
+      [
+       "3",
+       "Make a table, or Spot the pattern"
+      ]
+     ]
+    },
+    {
+     "t": "answer",
+     "text": "More than one tool can fit. A good reason matters more than the name."
+    }
+   ],
+   "note": "Show after the children have chosen. Say: many problems can start with more than one tool, and a good reason matters more than the name. Praise a reason, for example: I will draw it because I can see the hour jump. Never say one child chose the wrong tool."
+  },
+  {
+   "id": "s-explore2",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: tool market, cards 4 to 6",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Card",
+       "Problem"
+      ],
+      [
+       "4",
+       "I think of a number. I take away 7. I get 12. What is my number?"
+      ],
+      [
+       "5",
+       "Ali has 4 coins. They are 5-cent and 10-cent coins. They make 30 cents. How many of each?"
+      ],
+      [
+       "6",
+       "Today is Wednesday. What day is it 10 days later?"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Nobody solves. Point to the tool you would start with. Say: I will ... because ..."
+    }
+   ],
+   "note": "Tool market, round 2, about 4 minutes. Read each card aloud. Card 4 fits Work backwards. Card 5 fits Guess and check, or List every way. Card 6 fits Act it out (the day cards) or Spot the pattern (a week is 7 days). Same routine as round 1: nobody solves."
+  },
+  {
+   "id": "s-explore2-ans",
+   "part": "explore",
+   "kind": "light",
+   "title": "A tool I could start with: 4 to 6",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Card",
+       "A tool I could start with"
+      ],
+      [
+       "4",
+       "Work backwards"
+      ],
+      [
+       "5",
+       "Guess and check, or List every way"
+      ],
+      [
+       "6",
+       "Act it out, or Spot the pattern"
+      ]
+     ]
+    },
+    {
+     "t": "answer",
+     "text": "Did the words tell us the tool? Not always. We looked at the problem."
+    }
+   ],
+   "note": "Show after the children have chosen. Say: the words did not tell us the tool, we looked at the problem. Praise a reason, never speed."
+  },
+  {
+   "id": "s-explore3",
+   "part": "explore",
+   "kind": "light",
+   "title": "What did we notice?",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      "Did one word tell us the tool?",
+      "Can two tools fit the same problem?",
+      "What can we do if a tool is too slow?"
+     ]
+    }
+   ],
+   "note": "About 2 minutes. Ask each question and take volunteers. Listen for: no single word gives the tool; two tools can fit; a different tool can be quicker. Do not give the rule first. Say: in the Mini-lesson we solve one problem with two tools, and then one where the first tool is too slow."
+  },
+  {
+   "id": "s-m1",
+   "part": "mini",
+   "kind": "light",
+   "title": "Tool 1: draw it",
+   "blocks": [
+    {
+     "type": "bar_model",
+     "mode": "compare",
+     "bars": [
+      {
+       "name": "Kumar",
+       "len": 15,
+       "segments": [
+        {
+         "v": 6,
+         "text": "6"
+        },
+        {
+         "v": 4,
+         "text": "4"
+        },
+        {
+         "v": 5,
+         "text": "?"
+        }
+       ]
+      }
+     ],
+     "brace": {
+      "text": "15",
+      "over": "all"
+     },
+     "size": 100,
+     "t": "visual"
+    },
+    {
+     "t": "chip",
+     "text": "Kumar has $15. He buys a cup for $6 and a rubber for $4. How much money is left?"
+    }
+   ],
+   "note": "One problem, two tools. Tool 1: Draw it. One long strip of 15, mark off 6, then 4. What is left is the last part. Children draw their own strip on paper while you wait 10 seconds. Answer on the next slide."
+  },
+  {
+   "id": "s-m1-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "Draw it: $5 left",
+   "blocks": [
+    {
+     "type": "bar_model",
+     "mode": "compare",
+     "bars": [
+      {
+       "name": "Kumar",
+       "len": 15,
+       "segments": [
+        {
+         "v": 6,
+         "text": "6"
+        },
+        {
+         "v": 4,
+         "text": "4"
+        },
+        {
+         "v": 5,
+         "text": "5"
+        }
+       ]
+      }
+     ],
+     "brace": {
+      "text": "15",
+      "over": "all"
+     },
+     "size": 100,
+     "t": "visual"
+    },
+    {
+     "t": "answer",
+     "text": "6 and 4 are spent. 5 is left. Kumar has $5 left."
+    }
+   ],
+   "note": "The strip shows 6, then 4, and 5 left. Say: draw it works well when we can see the parts."
+  },
+  {
+   "id": "s-m2",
+   "part": "mini",
+   "kind": "light",
+   "title": "Tool 2: work backwards",
+   "blocks": [
+    {
+     "type": "table",
+     "head": [],
+     "rows": [
+      [
+       "15",
+       "take away 6",
+       "[]",
+       "take away 4",
+       "[]"
+      ]
+     ],
+     "cell_h": 84,
+     "font": 30,
+     "size": 100,
+     "t": "visual"
+    },
+    {
+     "t": "chip",
+     "text": "Same problem. Start at 15. Take away 6. Then take away 4."
+    }
+   ],
+   "note": "Tool 2: Work backwards (here it is just taking away, step by step, from what Kumar had). Children say 15 take away 6 is 9, then 9 take away 4 is 5. Answer on the next slide."
+  },
+  {
+   "id": "s-m2-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "Both tools say $5",
+   "blocks": [
+    {
+     "type": "table",
+     "head": [],
+     "rows": [
+      [
+       "15",
+       "take away 6",
+       "9",
+       "take away 4",
+       "5"
+      ]
+     ],
+     "cell_h": 84,
+     "font": 30,
+     "size": 100,
+     "t": "visual"
+    },
+    {
+     "t": "answer",
+     "text": "Both tools say 5. Check a third way: 6 + 4 + 5 = 15."
+    }
+   ],
+   "note": "Both tools give 5. Ask: which tool was quicker for you? Take two answers; both are fine. Then show the check a third way: spent 6 and 4, left 5; 6 and 4 make 10, and 10 and 5 make 15, which is what Kumar had. Say: when two tools agree and the check works, we can trust the answer."
+  },
+  {
+   "id": "s-m3",
+   "part": "mini",
+   "kind": "light",
+   "title": "The first tool is too slow",
+   "blocks": [
+    {
+     "type": "stick_pattern",
+     "shape": "square",
+     "n": 3,
+     "label_each": true,
+     "t": "visual",
+     "handle": true
+    },
+    {
+     "t": "chip",
+     "text": "1 square with a handle uses 5 sticks. 2 squares use 8 sticks. 3 squares use 11 sticks. How many sticks do 8 squares use?"
+    }
+   ],
+   "note": "A problem where the first tool gets stuck. Say: try draw it. Children start to draw 8 squares with sticks on paper. After about a minute stop them: it is slow, we may slip, and the picture is huge. Say: Wait. Try a tool. Ask: which tool could be quicker? Take volunteers (a table or a pattern). Do not say the answer yet."
+  },
+  {
+   "id": "s-m3-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "Make a table: 26 sticks",
+   "blocks": [
+    {
+     "type": "table",
+     "head": [
+      "Squares",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+     ],
+     "rows": [
+      [
+       "Sticks",
+       "5",
+       "8",
+       "11",
+       "14",
+       "17",
+       "20",
+       "23",
+       "26"
+      ]
+     ],
+     "cell_h": 70,
+     "font": 28,
+     "size": 100,
+     "t": "visual"
+    },
+    {
+     "t": "answer",
+     "text": "Each square adds 3 sticks. 8 squares use 26 sticks."
+    }
+   ],
+   "note": "The table: 5, 8, 11, then add 3 each time: 14, 17, 20, 23, 26. Check another way: the first square and its handle use 5, and 7 more squares each add 3 sticks: 5 and 21 make 26. Say: when a tool is too slow, we change tool. We did not do anything wrong: drawing was a good start."
+  },
+  {
+   "id": "s-m4",
+   "part": "mini",
+   "kind": "light",
+   "title": "When we are stuck",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "Wait.",
+      "Try a tool.",
+      "Try a smaller case.",
+      "Ask."
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Say it with me."
+    }
+   ],
+   "note": "The stuck routine, in the same words as the Toolbox Card: Wait. Try a tool. Try a smaller case. Ask. Say it with the children twice. A smaller case means smaller numbers, for example 2 squares first. A child who is still stuck may tick I am still stuck on the look-back page."
+  },
+  {
+   "id": "s-break",
+   "part": "break",
+   "kind": "dark",
+   "title": "Mime the tools",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Stand up. Mime each tool with me."
+    },
+    {
+     "t": "p",
+     "text": "Draw a long strip in the air. Count on your fingers. Tap a table."
+    },
+    {
+     "t": "p",
+     "text": "Sip some water."
+    }
+   ],
+   "note": "Four minutes. Stand up on camera with a little clear space. Mime each tool slowly: draw a long strip in the air (Draw it); walk on the spot with counters in your hands (Act it out); clap a steady beat that gets louder each time (Spot the pattern); write a list in the air (List every way); tap a table (Make a table); walk backwards two steps (Work backwards); point, then thumbs up or thumbs down (Guess and check). No equipment, no running. A child may stay seated and tap the desk softly. Do not give prizes or compare children. Then ask everyone to take out the closed Quest Log and a pencil, ready for Mi's Challenge Quest."
+  },
+  {
+   "id": "s-quest1",
+   "part": "exit",
+   "kind": "light",
+   "title": "Mi's Challenge Quest",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Your own paper. Mi swims with you."
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "Open your Quest Log. Name on page 1.",
+      "Pencil ready. Counters are fine.",
+      "Your quest partner sits beside you.",
+      "I read each gate. Then you write.",
+      "Under each gate, circle the tool you used.",
+      "You may skip a gate. It is not a race."
+     ]
+    },
+    {
+     "t": "card",
+     "head": "AFTER",
+     "items": [
+      "A grown-up takes a photo of each page and sends it to the program's business WhatsApp.",
+      "Nothing is shown to the group."
+     ]
+    }
+   ],
+   "note": "Introduce the quest for about a minute: Mi the dolphin swims to the Pearl Cave through 8 gates and an optional secret cave (about 20 minutes), on your own private paper with a quest partner beside you; a game, not a race; you may skip any gate; under each gate you circle the tool you used and tick I checked; no answers are read out; nothing is shown to the group; no clock or timer is shown. Pause the recording first. Children take out the closed Quest Log only now. The paper lies flat on the table. Quest partners sit beside the child and may talk about how, but do not give answers. Follow the quest tutor notes (L30_Quest_Tutor_Notes.pdf). The number is in the grown-up note, never on a slide.",
+   "no_record": true,
+   "mascot": {
+    "size": "s",
+    "say": "Let's swim to the Pearl Cave!"
+   }
+  },
+  {
+   "id": "s-quest2",
+   "part": "exit",
+   "kind": "light",
+   "title": "The Pearl Cave",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "Make sure your name is on every page.",
+      "Close the Quest Log. Put your pencil down.",
+      "A grown-up takes one photo of each page, flat and from above.",
+      "A grown-up sends the photos to the program's business WhatsApp number in the grown-up note, and nowhere else."
+     ]
+    },
+    {
+     "t": "card",
+     "head": "WELL DONE",
+     "items": [
+      "You reached the Pearl Cave! Mi will tell your grown-up one thing we saw."
+     ]
+    }
+   ],
+   "note": "Say thank you. The grown-up takes one clear photo of each of the 4 pages, with the whole page in view and the name on each page, and sends them today to the program's business WhatsApp, as in the grown-up note. The tutor never asks a child for the sheet and never comments on a child's work in front of the group. Remind the group that no answers will be read out and nothing is added up. Children who did not finish may use a few minutes of the workbook time to finish. Restart the recording for the workbook. The number is in the grown-up note, never on a slide.",
+   "no_record": true
+  },
+  {
+   "id": "s-ws1",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 1: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 1 to 3. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read questions 1 to 3 aloud. Children work on their own with the tool cards; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. At the end of each question the child writes the tool they used and ticks I checked: a card name is fine, and so is No tool. After question 3 any child may choose to carry on or try Think harder. Question 1: a bus trip of 1 hour and a game of half an hour. Question 2: money left from $20. Question 3: which two tags cost exactly $15."
+  },
+  {
+   "id": "s-ws1ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 1",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud so a child watching the recording can tick their own work. Never ask a child to show a wrong answer to the group. Answers: Q1 8:30 and 3:30. Q2 $7. Q3 $7 and $8. Any tool that fits is right for the tool line."
+  },
+  {
+   "id": "s-ws2",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 2: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 4 to 6. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S4",
+      "S5",
+      "S6"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read questions 4 to 6 aloud. Question 4: a path of tiles with 5, 8 and 11 tiles. Question 5: 6 days later than Thursday. Question 6: a child in another class writes a sum; check it and say if it is right. Wait 10 seconds before helping."
+  },
+  {
+   "id": "s-ws2ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 2",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S4",
+      "S5",
+      "S6"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud so a child watching the recording can tick their own work. Answers: Q4 14 tiles. Q5 Wednesday. Q6 the check is 73, No, and the right answer is 35."
+  },
+  {
+   "id": "s-choice",
+   "part": "work",
+   "kind": "light",
+   "title": "Choose your next page",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Page",
+       "What it is"
+      ],
+      [
+       "Think harder (page 3)",
+       "Two tools for one problem, switch tools, who has which pet, guess and check"
+      ],
+      [
+       "Go further (page 4)",
+       "No tool named: you choose"
+      ],
+      [
+       "Investigation (page 5)",
+       "Write a problem that needs a tool"
+      ],
+      [
+       "Check",
+       "Finish and check your own work"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Everyone may choose. Not finished? Pages 3 to 5 are for home too."
+    }
+   ],
+   "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 3 minutes."
+  },
+  {
+   "id": "s-talk",
+   "part": "talk",
+   "kind": "light",
+   "title": "Talk and explain",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "TWO CHILDREN SAY",
+     "items": [
+      "A pattern has 20 pictures. Each one has 3 more sticks.",
+      "One child: I will draw all 20 pictures.",
+      "Another child: I will make a table."
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Which tool would you pick first? Why?"
+    },
+    {
+     "t": "chip",
+     "text": "I would pick ... because ..."
+    }
+   ],
+   "note": "One minute of talk to the grown-up next to you, or to your screen. Volunteers first; a pass is always fine; never call a child by name to answer. Model answer: both tools can work, but a table is quicker for the 20th picture because we add 3 each time, and drawing 20 pictures is slow and easy to slip on. A child may also say they would spot the pattern: 4 and 19 lots of 3. Repeat each child answer in your own words for the recording. The two children are in another class: no cast name is given a wrong answer."
+  },
+  {
+   "id": "s-sneakans",
+   "part": "talk",
+   "kind": "light",
+   "title": "Back to the sneak-peek",
+   "blocks": [
+    {
+     "t": "answer",
+     "text": "Puzzle 1: Thursday. Friday 1, Saturday 2, Sunday 3. Puzzle 2: 9. 15 take away 6 is 9, and 9 and 6 make 15."
+    }
+   ],
+   "note": "Reveal both puzzles now. Say: many of you wrote a good reason. Do not read out anyone earlier answer. Puzzle 1: Thursday (count on from tomorrow). Puzzle 2: 9 (work backwards from 15, then check forwards). Ask: which tool did you start with?"
+  },
+  {
+   "id": "s-look",
+   "part": "look",
+   "kind": "lookback",
+   "title": "Look-back",
+   "blocks": [
+    {
+     "t": "lookback"
+    }
+   ],
+   "note": "Two minutes. Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session at the start of next term. Never a direct message to a child.",
+   "mascot": {
+    "size": "s",
+    "say": "Take your time. You can pass."
+   }
+  },
+  {
+   "id": "s-end",
+   "part": "flex",
+   "kind": "dark",
+   "title": "Well done, inquirers!",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Show a grown-up one tool you like and say why."
+    },
+    {
+     "t": "card",
+     "head": "NEXT TERM",
+     "items": [
+      "Term 4: the first lesson is Half and Quarter.",
+      "Have ready: your Term 4 book with the 10 fold shapes cut out, a ruler, a coloured pencil, and 8 coins or buttons. Your tutor will tell you the start date."
+     ]
+    }
+   ],
+   "note": "Say goodbye and thank the grown-ups. Minutes 86 to 90 are flex time: the buffer. A child who needs longer to finish the quest may use it; otherwise finish any open item. Do not start anything new. If the whole class is ahead, show the optional slides and use the Spare-time menu from the tutor guide. Remind families that the tutor sends one line about what we saw in Mi's Challenge Quest, never a mark, and that the next term needs the Term 4 book with the cut-out fold shapes, a ruler, a coloured pencil and 8 small things (coins or buttons) for the warm-up.",
+   "mascot": {
+    "size": "l",
+    "say": "Great thinking this term!"
+   }
+  },
+  {
+   "id": "s-opt",
+   "part": "flex",
+   "kind": "light",
+   "title": "Go further: the card",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Mei has 3 five-dollar notes and 2 two-dollar notes."
+    },
+    {
+     "t": "p",
+     "text": "She spends $10. How much is left?"
+    }
+   ],
+   "note": "Optional, only if you are on time. 3 five-dollar notes and 2 two-dollar notes make 15 and 4, which is $19. Spending $10 leaves $9. Children may use any tool. Take two answers and move on.",
+   "optional": true
+  },
+  {
+   "id": "s-menu",
+   "part": "flex",
+   "kind": "light",
+   "title": "If we have time: pick one",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Activity",
+       "What we do"
+      ],
+      [
+       "Is it always true?",
+       "Can two different tools give the same answer? Try one."
+      ],
+      [
+       "Make a puzzle",
+       "Pick a tool card and write a problem for your grown-up."
+      ],
+      [
+       "Teach it back",
+       "Show a toy how to check an answer another way."
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Optional. Everyone may join."
+    }
+   ],
+   "note": "Optional Spare-time menu, used only if the whole class is ahead. Pick one or two activities (3 to 5 minutes each); full tutor lines and answers are in the tutor guide. Never start new content and never name who is ahead. Slow down with how do you know rather than rushing on. These minutes come from the flex buffer and are not part of the 90-minute sum.",
+   "optional": true
+  },
+  {
+   "id": "s-exit",
+   "part": "flex",
+   "kind": "light",
+   "title": "Exit ticket (optional)",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "On your own. No looking back."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ],
+     "short": false
+    }
+   ],
+   "note": "Optional and not done live: the quest was the exit. If time allows or the whole class is ahead, children answer on page 5. Read E1, E2 and E3 aloud, and the four options of E2. Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat.",
+   "optional": true
+  },
+  {
+   "id": "s-exitans",
+   "part": "flex",
+   "kind": "light",
+   "title": "Check the exit ticket",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: E1 4:30; E2 option 2, $8; E3 11.",
+   "optional": true
+  }
+ ],
+ "tiers": {
+  "start": [
+   {
+    "id": "S1",
+    "page": 1,
+    "tier": "start",
+    "text": "Look at the clock. A bus leaves at 7:30. The trip takes 1 hour.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "The bus arrives at ______ .",
+      "ans": "8:30",
+      "val": "8:30"
+     },
+     {
+      "l": "b",
+      "text": "A game starts at 3:00. It lasts half an hour. It ends at ______ .",
+      "ans": "3:30",
+      "val": "3:30"
+     },
+     {
+      "l": "c",
+      "text": "Tool I used: ______ . I checked: [ ]",
+      "ans": "Any tool that fits. A reason matters more than the name.",
+      "val": "any"
+     }
+    ],
+    "answer": "8:30; 3:30",
+    "val": [
+     "8:30",
+     "3:30"
+    ],
+    "hint": "Look at the clock, then count on.",
+    "solution": "1 hour after 7:30 is 8:30. Half an hour after 3:00 is 3:30. A number line or a clock both work.",
+    "mistakes": [
+     "7:60 or 8:00.",
+     "3:50 or 3:00."
+    ],
+    "mins": 3,
+    "visual": {
+     "type": "clock",
+     "h": 7,
+     "m": 30,
+     "size": 80
+    }
+   },
+   {
+    "id": "S2",
+    "page": 1,
+    "tier": "start",
+    "text": "Siti has $20. She buys a book for $13.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "She has $______ left.",
+      "ans": "7",
+      "val": 7
+     },
+     {
+      "l": "b",
+      "text": "Tool I used: ______ . I checked: [ ]",
+      "ans": "Any tool that fits. A reason matters more than the name.",
+      "val": "any"
+     }
+    ],
+    "answer": "$7",
+    "val": [
+     7
+    ],
+    "hint": "Draw a strip for 20. Mark off 13.",
+    "solution": "20 take away 13 is 7. A strip shows 13 spent and 7 left. Check: 7 and 13 make 20.",
+    "mistakes": [
+     "33 (adding).",
+     "13."
+    ],
+    "mins": 2
+   },
+   {
+    "id": "S3",
+    "page": 1,
+    "tier": "start",
+    "text": "Mei has $15. She buys two things. The tags say $5, $7, $8 and $12.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Two tags cost exactly $15. They are $______ and $______ .",
+      "ans": "7 and 8",
+      "val": [
+       7,
+       8
+      ]
+     },
+     {
+      "l": "b",
+      "text": "Tool I used: ______ . I checked: [ ]",
+      "ans": "Any tool that fits. A reason matters more than the name.",
+      "val": "any"
+     }
+    ],
+    "answer": "$7 and $8",
+    "val": [
+     7,
+     8
+    ],
+    "hint": "Start with the smallest tag. Which tag goes with it?",
+    "solution": "Try each tag with the others: 5 and 7 make 12, 5 and 8 make 13, 5 and 12 make 17, 7 and 8 make 15. Only 7 and 8 make exactly 15.",
+    "mistakes": [
+     "$5 and $12 (17).",
+     "$7 and $12 (19)."
+    ],
+    "mins": 3.5,
+    "visual": {
+     "type": "table",
+     "head": [],
+     "rows": [
+      [
+       "pen $5",
+       "ruler $7",
+       "cup $8",
+       "book $12"
+      ]
+     ],
+     "font": 26
+    }
+   },
+   {
+    "id": "S4",
+    "page": 2,
+    "tier": "start",
+    "text": "A path is made of tiles. Each path has 3 more tiles than the path before.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Path 4 has ______ tiles.",
+      "ans": "14",
+      "val": 14
+     },
+     {
+      "l": "b",
+      "text": "Tool I used: ______ . I checked: [ ]",
+      "ans": "Any tool that fits. A reason matters more than the name.",
+      "val": "any"
+     }
+    ],
+    "answer": "14 tiles",
+    "val": [
+     14
+    ],
+    "hint": "What do we add each time?",
+    "solution": "5, 8, 11, then 11 and 3 make 14. Path 4 has 14 tiles.",
+    "mistakes": [
+     "12.",
+     "15."
+    ],
+    "mins": 3,
+    "visual": {
+     "type": "table",
+     "head": [
+      "Path",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "rows": [
+      [
+       "Tiles",
+       "5",
+       "8",
+       "11",
+       "[]"
+      ]
+     ]
+    }
+   },
+   {
+    "id": "S5",
+    "page": 2,
+    "tier": "start",
+    "text": "Today is Thursday.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "6 days later it is ______ .",
+      "ans": "Wednesday",
+      "val": "Wednesday"
+     },
+     {
+      "l": "b",
+      "text": "Tool I used: ______ . I checked: [ ]",
+      "ans": "Any tool that fits. A reason matters more than the name.",
+      "val": "any"
+     }
+    ],
+    "answer": "Wednesday",
+    "val": [
+     "Wednesday"
+    ],
+    "hint": "Count on from tomorrow. After Sunday comes Monday.",
+    "solution": "Friday 1, Saturday 2, Sunday 3, Monday 4, Tuesday 5, Wednesday 6.",
+    "mistakes": [
+     "Tuesday (counting Thursday as day 1).",
+     "Thursday."
+    ],
+    "mins": 2.5,
+    "visual": {
+     "type": "table",
+     "head": [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+     ],
+     "rows": [
+      [
+       "",
+       "",
+       "",
+       "today",
+       "",
+       "",
+       ""
+      ]
+     ],
+     "font": 24
+    }
+   },
+   {
+    "id": "S6",
+    "page": 2,
+    "tier": "start",
+    "text": "A child in another class writes: 63 take away 28 equals 45.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Check by adding. 45 plus 28 equals ______ .",
+      "ans": "73",
+      "val": 73
+     },
+     {
+      "l": "b",
+      "text": "Is the answer right? Circle Yes or No.",
+      "ans": "No",
+      "val": "No"
+     },
+     {
+      "l": "c",
+      "text": "63 take away 28 equals ______ .",
+      "ans": "35",
+      "val": 35
+     },
+     {
+      "l": "d",
+      "text": "Tool I used: ______ . I checked: [ ]",
+      "ans": "Any tool that fits. A reason matters more than the name.",
+      "val": "any"
+     }
+    ],
+    "answer": "73; No; 35",
+    "val": [
+     73,
+     "No",
+     35
+    ],
+    "hint": "Add the answer to the part taken away. Do you get back to 63?",
+    "solution": "45 and 28 make 73, not 63, so 45 is wrong. 63 take away 28: 63 take away 30 is 33, and 2 back is 35. Check: 35 and 28 make 63.",
+    "mistakes": [
+     "Yes (not checking).",
+     "45 (a slip with the ones)."
+    ],
+    "mins": 4
+   }
+  ],
+  "think": [
+   {
+    "id": "T1",
+    "page": 3,
+    "tier": "think",
+    "text": "Ali had some stickers. He gave 7 stickers to Mei. Now Ali has 9 stickers.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Draw it. Ali had ______ stickers at first.",
+      "ans": "16",
+      "val": 16
+     },
+     {
+      "l": "b",
+      "text": "Work backwards. Ali had ______ stickers at first.",
+      "ans": "16",
+      "val": 16
+     },
+     {
+      "l": "c",
+      "text": "Which tool was quicker for you? Choose one.",
+      "ans": "Either. A reason matters more than the choice.",
+      "val": "any",
+      "choices": [
+       "DRAW IT",
+       "WORK BACKWARDS",
+       "THE SAME"
+      ]
+     }
+    ],
+    "answer": "16; 16; either",
+    "val": [
+     16,
+     16
+    ],
+    "hint": "Draw a strip: 9 left and 7 given away. Or start at 9 and put the 7 back.",
+    "solution": "The strip has a part of 9 and a part of 7, which make 16. Going backwards: 9 and 7 make 16. Both tools say 16. Check: 16 take away 7 is 9.",
+    "mistakes": [
+     "2 (taking away).",
+     "Two different answers: check again."
+    ],
+    "mins": 5
+   },
+   {
+    "id": "T2",
+    "page": 3,
+    "tier": "think",
+    "text": "Steps are made of blocks. Each step has 4 more blocks than the step before. Drawing 8 steps is slow. Make a table.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Fill in the empty boxes of the table.",
+      "ans": "15 and 19",
+      "val": [
+       15,
+       19
+      ]
+     },
+     {
+      "l": "b",
+      "text": "Step 8 has ______ blocks.",
+      "ans": "31",
+      "val": 31
+     }
+    ],
+    "answer": "15 and 19; 31",
+    "val": [
+     15,
+     19,
+     31
+    ],
+    "hint": "Add 4 each time.",
+    "solution": "3, 7, 11, 15, 19, 23. Then 27 for step 7 and 31 for step 8. Check: 3 and 7 lots of 4 make 31.",
+    "mistakes": [
+     "14 and 18.",
+     "32 for step 8."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "table",
+     "head": [
+      "Step",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "rows": [
+      [
+       "Blocks",
+       "3",
+       "7",
+       "11",
+       "[]",
+       "[]",
+       "23"
+      ]
+     ]
+    }
+   },
+   {
+    "id": "T3",
+    "page": 3,
+    "tier": "think",
+    "text": "Kumar, Lily and Wei each wear one cap: red, blue or green. Lily's cap is not red and not blue. Kumar's cap is not green. Wei's cap is not blue. Tick a box when it is true.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Wei wears the ______ cap.",
+      "ans": "red",
+      "val": "red"
+     },
+     {
+      "l": "b",
+      "text": "Kumar wears the ______ cap.",
+      "ans": "blue",
+      "val": "blue"
+     }
+    ],
+    "answer": "red; blue",
+    "val": [
+     "red",
+     "blue"
+    ],
+    "hint": "Tick Lily and green first. Then which caps are left for Kumar and Wei?",
+    "solution": "Lily's cap is not red and not blue, so Lily wears green. Wei's cap is not blue and not green, so Wei wears red. Kumar wears blue. Check: three different caps, and Kumar's cap is not green.",
+    "mistakes": [
+     "Wei wears the green cap.",
+     "Kumar wears the red cap."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "table",
+     "head": [
+      "",
+      "red",
+      "blue",
+      "green"
+     ],
+     "rows": [
+      [
+       "Kumar",
+       "[ ]",
+       "[ ]",
+       "[ ]"
+      ],
+      [
+       "Lily",
+       "[ ]",
+       "[ ]",
+       "[ ]"
+      ],
+      [
+       "Wei",
+       "[ ]",
+       "[ ]",
+       "[ ]"
+      ]
+     ]
+    }
+   },
+   {
+    "id": "T4",
+    "page": 3,
+    "tier": "think",
+    "text": "Mei has 5 coins. They are 5-cent coins and 10-cent coins. They make 35 cents. Use guess and check.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Try 2 five-cent coins and 3 ten-cent coins. They make ______ cents.",
+      "ans": "40",
+      "val": 40
+     },
+     {
+      "l": "b",
+      "text": "Is that too high or too low? Circle one.",
+      "ans": "Too high",
+      "val": "Too high",
+      "choices": [
+       "TOO HIGH",
+       "TOO LOW"
+      ]
+     },
+     {
+      "l": "c",
+      "text": "Mei has ______ five-cent coins and ______ ten-cent coins.",
+      "ans": "3 and 2",
+      "val": [
+       3,
+       2
+      ]
+     }
+    ],
+    "answer": "40; too high; 3 and 2",
+    "val": [
+     40,
+     "Too high",
+     3,
+     2
+    ],
+    "hint": "Too high? Use fewer 10-cent coins and try again.",
+    "solution": "2 five-cent and 3 ten-cent make 10 and 30, which is 40: too high. Try 3 five-cent and 2 ten-cent: 15 and 20 make 35. That is 5 coins. Check: 3 and 2 make 5 coins.",
+    "mistakes": [
+     "35 (adding the coins).",
+     "2 and 3 the wrong way round."
+    ],
+    "mins": 5
+   }
+  ],
+  "go": [
+   {
+    "id": "G1",
+    "page": 4,
+    "tier": "go",
+    "text": "Ben has $30. He buys 2 notebooks at $6 each and a pen. Now he has $9 left.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "The 2 notebooks cost $______ .",
+      "ans": "12",
+      "val": 12
+     },
+     {
+      "l": "b",
+      "text": "The pen costs $______ .",
+      "ans": "9",
+      "val": 9
+     }
+    ],
+    "answer": "$12; $9",
+    "val": [
+     12,
+     9
+    ],
+    "hint": "Find the notebooks first.",
+    "solution": "2 notebooks cost 6 and 6, which is 12. 30 take away 12 is 18. 18 take away 9 is 9, so the pen costs $9. Check: 12 and 9 and 9 make 30.",
+    "mistakes": [
+     "$18 for the pen (forgetting the $9 left).",
+     "$6 for the notebooks."
+    ],
+    "mins": 6,
+    "lines": 2
+   },
+   {
+    "id": "G2",
+    "page": 4,
+    "tier": "go",
+    "text": "A shop sells pens for $3 and rulers for $5. Ali buys exactly 4 things and pays exactly $16.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "He buys ______ pens and ______ rulers.",
+      "ans": "2 and 2",
+      "val": [
+       2,
+       2
+      ]
+     }
+    ],
+    "answer": "2 pens and 2 rulers",
+    "val": [
+     2,
+     2
+    ],
+    "hint": "Try 2 pens first. How much do the other things cost?",
+    "solution": "2 pens cost $6 and 2 rulers cost $10, which is $16 for 4 things. Try 3 pens and 1 ruler: 9 and 5 make 14, too low. Try 1 pen and 3 rulers: 3 and 15 make 18, too high. Only 2 and 2 work.",
+    "mistakes": [
+     "3 pens and 1 ruler ($14).",
+     "1 pen and 3 rulers ($18)."
+    ],
+    "mins": 6,
+    "lines": 2
+   },
+   {
+    "id": "G3",
+    "page": 4,
+    "tier": "go",
+    "text": "Mi swims every 3 days. Swim 1 is on Monday.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Swim 2 is on ______ .",
+      "ans": "Thursday",
+      "val": "Thursday"
+     },
+     {
+      "l": "b",
+      "text": "Swim 5 is on ______ .",
+      "ans": "Saturday",
+      "val": "Saturday"
+     }
+    ],
+    "answer": "Thursday; Saturday",
+    "val": [
+     "Thursday",
+     "Saturday"
+    ],
+    "hint": "Count on 3 days from each swim.",
+    "solution": "Swim 2 is Thursday. Swim 3 is Sunday. Swim 4 is Wednesday. Swim 5 is Saturday: 4 jumps of 3 days is 12 days, which is a week and 5 days.",
+    "mistakes": [
+     "Friday for swim 2 (counting Monday as day 1).",
+     "Sunday for swim 5."
+    ],
+    "mins": 6,
+    "lines": 2
+   }
+  ],
+  "investigation": {
+   "id": "I1",
+   "page": 5,
+   "tier": "investigation",
+   "title": "Write a problem for a tool",
+   "first": "Look at a problem from today. Change the numbers and write it again. Which tool do you need?",
+   "text": "Pick a tool card. Write a short problem that needs that tool. Then solve it.",
+   "lines": 4,
+   "answer": "Many answers are right. A good problem names a thing to find, has numbers that fit the tool, and has one answer. For example, for Work backwards: Mei had some sweets. She ate 4 and has 7 left. How many sweets did Mei have? Answer: 11.",
+   "val": [
+    "any"
+   ],
+   "look_for": "A child who writes a problem that really needs the tool, with a question and an answer. Credit any clear problem. A child who copies a problem with new numbers has done the easy first step: ask which tool it needs and why.",
+   "mistakes": [
+    "A problem with no question.",
+    "A problem that needs a different tool from the one chosen (ask why)."
+   ],
+   "mins": 8
+  }
+ },
+ "exit": [
+  {
+   "id": "E1",
+   "text": "A film starts at 4:00. It lasts half an hour.",
+   "parts": [
+    {
+     "l": "",
+     "text": "It ends at ______ .",
+     "ans": "4:30",
+     "val": "4:30"
+    }
+   ],
+   "answer": "4:30",
+   "val": [
+    "4:30"
+   ],
+   "solution": "Half an hour after 4:00 is 4:30.",
+   "mistakes": [
+    "4:50.",
+    "5:00."
+   ]
+  },
+  {
+   "id": "E2",
+   "text": "Mei has $20. She buys a book for $12. How much money is left? Write its number in the bracket.",
+   "parts": [],
+   "answer": "(2) $8",
+   "val": [
+    2
+   ],
+   "solution": "20 take away 12 is 8. Check: 8 and 12 make 20.",
+   "mistakes": [
+    "Choosing (4) $32 (adding).",
+    "Choosing (1) $6."
+   ],
+   "mcq": {
+    "options": [
+     "$6",
+     "$8",
+     "$10",
+     "$32"
+    ],
+    "bracket": true
+   }
+  },
+  {
+   "id": "E3",
+   "text": "I think of a number. I take away 3. I get 8.",
+   "parts": [
+    {
+     "l": "",
+     "text": "My number is ______ .",
+     "ans": "11",
+     "val": 11
+    }
+   ],
+   "answer": "11",
+   "val": [
+    11
+   ],
+   "solution": "Work backwards: 8 and 3 make 11. Check: 11 take away 3 is 8.",
+   "mistakes": [
+    "5 (taking away again)."
+   ]
+  }
+ ],
+ "home_practice": [
+  {
+   "id": "H1",
+   "tier": "start",
+   "text": "Ravi has $20. He buys a ball for $9. How much money is left? $______",
+   "answer": "11",
+   "val": 11,
+   "solution": "20 take away 9 is 11. Check: 11 and 9 make 20."
+  },
+  {
+   "id": "H2",
+   "tier": "start",
+   "text": "Mei buys two things for exactly $13. The tags say $4, $5, $7 and $9. The two prices are $______ and $______ .",
+   "answer": "4 and 9",
+   "val": [
+    4,
+    9
+   ],
+   "solution": "4 and 9 make 13. The other pairs make 9, 11, 12, 14 and 16.",
+   "visuals": [
+    {
+     "type": "price_tag",
+     "item": "pen",
+     "price": "$4",
+     "hw": 29
+    },
+    {
+     "type": "price_tag",
+     "item": "book",
+     "price": "$5",
+     "hw": 29
+    },
+    {
+     "type": "price_tag",
+     "item": "bag",
+     "price": "$7",
+     "hw": 29
+    },
+    {
+     "type": "price_tag",
+     "item": "hat",
+     "price": "$9",
+     "hw": 29
+    }
+   ]
+  },
+  {
+   "id": "H3",
+   "tier": "start",
+   "text": "A lesson starts at 9:00. It lasts half an hour. It ends at ______ .",
+   "answer": "9:30",
+   "val": "9:30",
+   "solution": "Half an hour after 9:00 is 9:30."
+  },
+  {
+   "id": "H4",
+   "tier": "think",
+   "text": "Path 1 has 4 tiles. Path 2 has 6 tiles. Path 3 has 8 tiles. Each path has 2 more tiles. Path 6 has ______ tiles. I know because ___.",
+   "answer": "14",
+   "val": 14,
+   "solution": "4, 6, 8, 10, 12, 14. Path 6 has 14 tiles. A table helps."
+  },
+  {
+   "id": "H5",
+   "tier": "start",
+   "rewind_of": "Term 1 Lesson 10",
+   "text": "Wei has 52 stickers. He gives 20 to Ali. Then he gets 7 more. Wei has ______ stickers now.",
+   "answer": "39",
+   "val": 39,
+   "solution": "Step 1: 52 take away 20 is 32. Step 2: 32 and 7 make 39."
+  }
+ ],
+ "online_practice": {
+  "key": "t3l30",
+  "title": "Tool Detectives",
+  "topic": "Choosing a tool",
+  "items": [
+   {
+    "id": "c1",
+    "tier": "core",
+    "type": "number",
+    "q": "Ali has $15. He buys a book for $6. How many dollars are left?",
+    "hint": "Take away what he spends.",
+    "steps": [
+     "Ali had 15 and spends 6.",
+     "15 take away 6 is 9.",
+     "He has 9 dollars left."
+    ],
+    "answer": 9,
+    "slips": [
+     {
+      "a": [
+       21
+      ],
+      "say": "You added. Ali spends money, so take away."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "m": [
+       12,
+       15,
+       18,
+       20
+      ],
+      "b": [
+       4,
+       5,
+       6,
+       7,
+       8
+      ]
+     },
+     "derive": {},
+     "q": "Ali has ${m}. He buys a book for ${b}. How many dollars are left?",
+     "answer": "m-b",
+     "hint": "Take away what he spends.",
+     "steps": [
+      "Ali had {m} and spends {b}.",
+      "{m} take away {b} is {ans}.",
+      "He has {ans} dollars left."
+     ]
+    }
+   },
+   {
+    "id": "c2",
+    "tier": "core",
+    "type": "number",
+    "q": "A class starts at 3 o'clock. It lasts 1 hour. It ends at ___ o'clock. Write the hour.",
+    "hint": "One hour later is the next hour.",
+    "steps": [
+     "One hour later is 1 more.",
+     "3 and 1 make 4.",
+     "It ends at 4 o'clock."
+    ],
+    "answer": 4,
+    "slips": [
+     {
+      "a": [
+       3
+      ],
+      "say": "3 is when it starts. Add 1 hour."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "h": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10
+      ]
+     },
+     "derive": {},
+     "q": "A class starts at {h} o'clock. It lasts 1 hour. It ends at ___ o'clock. Write the hour.",
+     "answer": "h+1",
+     "hint": "One hour later is the next hour.",
+     "steps": [
+      "One hour later is 1 more.",
+      "{h} and 1 make {ans}.",
+      "It ends at {ans} o'clock."
+     ]
+    }
+   },
+   {
+    "id": "c3",
+    "tier": "core",
+    "type": "choice",
+    "q": "I think of a number. I add 6. I get 15. Which tool helps most?",
+    "hint": "You know the end, not the start.",
+    "steps": [
+     "We know the end, 15.",
+     "We undo the add 6.",
+     "Work backwards: 15 take away 6 is 9."
+    ],
+    "options": [
+     "Work backwards",
+     "Make a table",
+     "List every way"
+    ],
+    "answer": "Work backwards",
+    "slips": []
+   },
+   {
+    "id": "c4",
+    "tier": "core",
+    "type": "number",
+    "q": "A pattern adds 3 each time: 2, 5, 8, ___. What comes next?",
+    "hint": "Add 3 to the last number.",
+    "steps": [
+     "Add 3 each time.",
+     "8 and 3 make 11.",
+     "The next number is 11."
+    ],
+    "answer": 11,
+    "slips": [
+     {
+      "a": [
+       10
+      ],
+      "say": "The pattern adds 3, not 2."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       1,
+       2,
+       3,
+       4,
+       5
+      ],
+      "d": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     "derive": {
+      "b": "a+d",
+      "c": "a+2*d"
+     },
+     "q": "A pattern adds {d} each time: {a}, {b}, {c}, ___. What comes next?",
+     "answer": "a+3*d",
+     "hint": "Add {d} to the last number.",
+     "steps": [
+      "Add {d} each time.",
+      "{c} and {d} make {ans}.",
+      "The next number is {ans}."
+     ]
+    }
+   },
+   {
+    "id": "c5",
+    "tier": "core",
+    "type": "number",
+    "q": "3 pens cost $4 each. How much do 3 pens cost altogether?",
+    "hint": "Add 4 three times.",
+    "steps": [
+     "Each pen costs 4.",
+     "4 and 4 and 4 make 12.",
+     "They cost 12 dollars."
+    ],
+    "answer": 12,
+    "slips": [
+     {
+      "a": [
+       7
+      ],
+      "say": "There are 3 pens at $4 each. Add 4 three times."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "n": [
+       2,
+       3,
+       4,
+       5
+      ],
+      "p": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     "derive": {},
+     "q": "{n} pens cost ${p} each. How much do {n} pens cost altogether?",
+     "answer": "n*p",
+     "hint": "Add {p}, {n} times.",
+     "steps": [
+      "Each pen costs {p}.",
+      "Add {p}, {n} times.",
+      "They cost {ans} dollars."
+     ]
+    }
+   },
+   {
+    "id": "t1",
+    "tier": "stretch",
+    "type": "number",
+    "q": "Mei had some sweets. She ate 5 and has 8 left. How many sweets did Mei have?",
+    "hint": "Put the 5 back.",
+    "steps": [
+     "She ate 5 and has 8 left.",
+     "Work backwards: 8 and 5 make 13.",
+     "Mei had 13 sweets."
+    ],
+    "answer": 13,
+    "slips": [
+     {
+      "a": [
+       3
+      ],
+      "say": "Put the sweets back: add, do not take away."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "e": [
+       3,
+       4,
+       5,
+       6,
+       7
+      ],
+      "l": [
+       6,
+       7,
+       8,
+       9
+      ]
+     },
+     "derive": {},
+     "q": "Mei had some sweets. She ate {e} and has {l} left. How many sweets did Mei have?",
+     "answer": "e+l",
+     "hint": "Put the {e} back.",
+     "steps": [
+      "She ate {e} and has {l} left.",
+      "Work backwards: {l} and {e} make {ans}.",
+      "Mei had {ans} sweets."
+     ]
+    },
+    "easier": "c1"
+   },
+   {
+    "id": "t2",
+    "tier": "stretch",
+    "type": "choice",
+    "q": "A pattern adds 4 each time. You want the 20th picture. Drawing 20 pictures is slow. Which tool is quicker?",
+    "hint": "Put the numbers in rows.",
+    "steps": [
+     "Drawing 20 is slow.",
+     "A table adds 4 each time.",
+     "Make a table is quicker."
+    ],
+    "options": [
+     "Make a table",
+     "Draw all 20",
+     "Act it out"
+    ],
+    "answer": "Make a table",
+    "slips": [],
+    "easier": "c3"
+   },
+   {
+    "id": "t3",
+    "tier": "stretch",
+    "type": "number",
+    "q": "Path 1 has 4 tiles. Each path has 3 more tiles. How many tiles are in path 5?",
+    "hint": "Make a table. Add 3 each time.",
+    "steps": [
+     "4, 7, 10, 13, 16.",
+     "Each path adds 3.",
+     "Path 5 has 16 tiles."
+    ],
+    "answer": 16,
+    "slips": [
+     {
+      "a": [
+       19
+      ],
+      "say": "Path 5 adds 3 four times, not five times."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3,
+       4,
+       5
+      ],
+      "n": [
+       4,
+       5,
+       6,
+       7
+      ]
+     },
+     "derive": {},
+     "q": "Path 1 has {a} tiles. Each path has 3 more tiles. How many tiles are in path {n}?",
+     "answer": "a+3*(n-1)",
+     "hint": "Make a table. Add 3 each time.",
+     "steps": [
+      "Start at {a} and add 3 each time.",
+      "Path {n} adds 3, {n} take away 1 times.",
+      "Path {n} has {ans} tiles."
+     ]
+    },
+    "easier": "c4"
+   },
+   {
+    "id": "g1",
+    "tier": "challenge",
+    "type": "number",
+    "q": "Ali buys 4 things. Pens cost $3 and rulers cost $5. He pays exactly $16. How many rulers does he buy?",
+    "hint": "Guess a number of pens and check the total.",
+    "steps": [
+     "Try 2 pens and 2 rulers: 6 and 10 make 16.",
+     "That is 4 things.",
+     "He buys 2 rulers."
+    ],
+    "answer": 2,
+    "slips": [
+     {
+      "a": [
+       1,
+       3
+      ],
+      "say": "Check the total: it must be exactly 16."
+     }
+    ],
+    "easier": "t1"
+   },
+   {
+    "id": "g2",
+    "tier": "challenge",
+    "type": "choice",
+    "q": "Mi swims every 3 days. Swim 1 is on Monday. Swim 3 is on which day?",
+    "hint": "Count on 3 days, then 3 more.",
+    "steps": [
+     "Swim 2 is Thursday.",
+     "Swim 3 is 3 days after Thursday.",
+     "Swim 3 is Sunday."
+    ],
+    "options": [
+     "Saturday",
+     "Sunday",
+     "Monday"
+    ],
+    "answer": "Sunday",
+    "slips": [],
+    "easier": "t2"
+   },
+   {
+    "id": "g3",
+    "tier": "challenge",
+    "type": "selfcheck",
+    "q": "Pick a tool card. Write a problem for your grown-up that needs that tool. Ask your grown-up to solve it, then check together.",
+    "hint": "Pick a tool first, then choose the numbers.",
+    "steps": [
+     "Pick a tool.",
+     "Write a problem that needs it.",
+     "Check the answer another way."
+    ],
+    "easier": "c3"
+   }
+  ]
+ },
+ "challenge_quest": {
+  "title": "Mi's Challenge Quest",
+  "minutes": 20,
+  "tool_row": "term",
+  "quest_map": false,
+  "where": "Term 3 Lesson 10 (the last lesson of the term), minutes 35 to 55, the part Mi's Challenge Quest, straight after the brain break; or at the make-up slot",
+  "plan_note": "The end-of-term slot is a game with Mi, not a test. The group plays it in pairs (a child and a quest partner) or as a group quest with Mi, on private paper. No score or mark is shown to the child, there is no ranking and no visible timer. The tutor keeps private notes only, for one line to each grown-up and for advice for next term's group. It keeps the 20-minute slot after the break: 8 short gates and one optional secret cave item, all at Start here level. Six gates visit the lessons of the term (Term 3 Lessons 1 to 3 share gate 1, Term 3 Lessons 5 and 6 share gate 3); gates 7 and 8 are mixed gates with no lesson tag. Under each gate the child circles the tool they used and ticks I checked: the quest is where the child chooses the tool, so no gate names one. Gate 6 asks the child to check a sum a friend wrote. The secret cave joins two ideas the group has met (money and listing) in an unseen way and asks why the child chose a tool. A middle child needs about 17 minutes of reading aloud and quiet work; a slower child may use a few minutes of the workbook time to finish. The Quest Log carries the Term 3 pictures (a clock, coins, price tags, a calendar and a stick pattern). Time is written as digits with am or pm; money with the cent sign.",
+  "sheet_pages": 4,
+  "story": "Mi the dolphin is swimming to the Pearl Cave. Eight gates are in the way, and each gate has one puzzle. At the end there is an optional secret cave.",
+  "child_rules": [
+   "Mi needs your help at 8 gates. Talk with your quest partner, then write your own answer.",
+   "It is not a race. Your answers are private. You may skip a gate: Mi swims round it."
+  ],
+  "child_footer": "Math Inquirers Term 3 Mi's Challenge Quest.",
+  "page_instructions": [
+   "Gates 1 and 2: Mi needs your help. Write your answers in the spaces.",
+   "Gates 3 and 4: keep swimming.",
+   "Gates 5 and 6: nearly there. Circle Yes or No where you see it.",
+   "Gates 7 and 8, and the secret cave: the last stretch."
+  ],
+  "questions": [
+   {
+    "id": "C1",
+    "lesson": [
+     21,
+     22,
+     23
+    ],
+    "strand": "time",
+    "page": 1,
+    "tier": "start",
+    "skill": "Read a clock to 5 minutes, am or pm, and half an hour later (Term 3 Lessons 1 to 3)",
+    "text": "Look at the clock.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "The time is ___ .",
+      "ans": "4:35",
+      "val": "4:35"
+     },
+     {
+      "l": "b",
+      "text": "Breakfast is at 7:00. Write am or pm: ___",
+      "ans": "am",
+      "val": "am"
+     },
+     {
+      "l": "c",
+      "text": "A film starts at 2:30. It lasts half an hour. It ends at ___ .",
+      "ans": "3:00",
+      "val": "3:00"
+     }
+    ],
+    "say": "Gate 1. Look at the clock. Part a: the time is blank. Part b: breakfast is at 7:00. Write am or pm. Part c: a film starts at 2:30. It lasts half an hour. It ends at blank.",
+    "answer": "4:35; am; 3:00",
+    "val": [
+     "4:35",
+     "am",
+     "3:00"
+    ],
+    "solution": "The long hand is on the 7, which is 35 minutes. The short hand is just before the 5, so the hour is 4: 4:35. Breakfast is in the morning: am. Half an hour after half past 2 is 3 o'clock.",
+    "right": "All three correct.",
+    "partly": "Two of the three correct.",
+    "mistakes": [
+     "(a) 7:20 or 5:35 (the two hands read the wrong way round).",
+     "(b) pm.",
+     "(c) 2:60 or 2:00."
+    ],
+    "visual": {
+     "type": "clock",
+     "h": 4,
+     "m": 35,
+     "size": 28
+    },
+    "tools": [
+     "draw",
+     "actout"
+    ]
+   },
+   {
+    "id": "C2",
+    "lesson": 24,
+    "strand": "money",
+    "page": 1,
+    "tier": "start",
+    "skill": "Count coins and find the change (Term 3 Lesson 4)",
+    "text": "Look at the coins.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "The coins make ___ cents.",
+      "ans": "95",
+      "val": 95
+     },
+     {
+      "l": "b",
+      "text": "Mei pays $10 for a toy that costs $7. Her change is $___ .",
+      "ans": "3",
+      "val": 3
+     }
+    ],
+    "say": "Gate 2. Look at the coins. Part a: the coins make blank cents. Part b: Mei pays 10 dollars for a toy that costs 7 dollars. Her change is blank dollars.",
+    "answer": "95; 3",
+    "val": [
+     95,
+     3
+    ],
+    "solution": "50 and 20 make 70, and 20 more is 90, and 5 more is 95 cents. Count up from 7 to 10: 3 dollars change.",
+    "right": "Both correct.",
+    "partly": "One of the two correct.",
+    "mistakes": [
+     "(a) 85 or 100 (a counting slip).",
+     "(b) 17 (adding) or 7."
+    ],
+    "visual": {
+     "type": "money",
+     "items": [
+      {
+       "v": "50c"
+      },
+      {
+       "v": "20c",
+       "n": 2
+      },
+      {
+       "v": "5c"
+      }
+     ],
+     "label": "PLAY MONEY",
+     "size": 36
+    },
+    "tools": [
+     "actout",
+     "draw"
+    ]
+   },
+   {
+    "id": "C3",
+    "lesson": [
+     25,
+     26
+    ],
+    "strand": "money",
+    "page": 2,
+    "tier": "start",
+    "skill": "Compare two prices, and two items that cost exactly $10 (Term 3 Lessons 5 and 6)",
+    "text": "A pen costs $6 and a ruler costs $9.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Which costs more? Write pen or ruler: ___",
+      "ans": "ruler",
+      "val": "ruler"
+     },
+     {
+      "l": "b",
+      "text": "How much more? $___",
+      "ans": "3",
+      "val": 3
+     },
+     {
+      "l": "c",
+      "text": "Three tags say $4, $5 and $6. Two of them cost exactly $10. They are $___ and $___ .",
+      "ans": "4 and 6",
+      "val": [
+       4,
+       6
+      ]
+     }
+    ],
+    "say": "Gate 3. A pen costs 6 dollars and a ruler costs 9 dollars. Part a: which costs more? Write pen or ruler. Part b: how much more does it cost? Part c: the tags say 4 dollars, 5 dollars and 6 dollars. Two of them cost exactly 10 dollars. Write the two prices.",
+    "answer": "ruler; $3; $4 and $6",
+    "val": [
+     "ruler",
+     3,
+     4,
+     6
+    ],
+    "solution": "9 is more than 6, so the ruler costs more. Count up from 6 to 9: $3 more. 4 and 6 make 10, and 5 and 5 would need two $5 tags.",
+    "right": "All correct (the two prices in either order).",
+    "partly": "Two of the three correct.",
+    "mistakes": [
+     "(a) pen.",
+     "(b) 15 (adding) or 9.",
+     "(c) $4 and $5 (without adding) or $5 and $6."
+    ],
+    "visuals": [
+     {
+      "type": "price_tag",
+      "item": "pen",
+      "price": "$6",
+      "size": 20
+     },
+     {
+      "type": "price_tag",
+      "item": "ruler",
+      "price": "$9",
+      "size": 20
+     }
+    ],
+    "tools": [
+     "list",
+     "guess"
+    ]
+   },
+   {
+    "id": "C4",
+    "lesson": 27,
+    "strand": "time",
+    "page": 2,
+    "tier": "start",
+    "skill": "Days later and a week on the month page (Term 3 Lesson 7)",
+    "text": "Today is Friday. Look at the calendar. The day with a ring round it is the 3rd.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Three days later it is ___ .",
+      "ans": "Monday",
+      "val": "Monday"
+     },
+     {
+      "l": "b",
+      "text": "A week after the 3rd is the ___ th.",
+      "ans": "10",
+      "val": 10
+     }
+    ],
+    "say": "Gate 4. Today is Friday. Part a: three days later it is blank. Part b: look at the calendar. The day with a ring round it is the 3rd. A week later is the blank th.",
+    "answer": "Monday; 10",
+    "val": [
+     "Monday",
+     10
+    ],
+    "solution": "Saturday is 1, Sunday is 2, Monday is 3. A week is 7 days: 3 and 7 make 10.",
+    "right": "Both correct.",
+    "partly": "One of the two correct.",
+    "mistakes": [
+     "(a) Sunday (counting Friday as day 1).",
+     "(b) 9 or 11."
+    ],
+    "visual": {
+     "type": "calendar",
+     "start": "Wed",
+     "days": 31,
+     "highlight": [
+      3
+     ],
+     "size": 46,
+     "mark": [
+      3
+     ]
+    },
+    "tools": [
+     "actout",
+     "pattern"
+    ]
+   },
+   {
+    "id": "C5",
+    "lesson": 28,
+    "strand": "puzzles",
+    "page": 3,
+    "tier": "start",
+    "skill": "A growing stick pattern (Term 3 Lesson 8)",
+    "text": "1 triangle with a handle uses 4 sticks. 2 triangles use 6 sticks. The picture shows 3 triangles: 8 sticks.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "4 triangles use ___ sticks.",
+      "ans": "10",
+      "val": 10
+     },
+     {
+      "l": "b",
+      "text": "5 triangles use ___ sticks.",
+      "ans": "12",
+      "val": 12
+     }
+    ],
+    "say": "Gate 5. 1 triangle with a handle uses 4 sticks. 2 triangles use 6 sticks. The picture shows 3 triangles: 8 sticks. Part a: 4 triangles use blank sticks. Part b: 5 triangles use blank sticks.",
+    "answer": "10; 12",
+    "val": [
+     10,
+     12
+    ],
+    "solution": "Each new triangle adds 2 sticks: 4, 6, 8, 10, 12. A row of 4 triangles uses 10 sticks and a row of 5 triangles uses 12 sticks.",
+    "right": "Both correct.",
+    "partly": "One of the two correct.",
+    "mistakes": [
+     "(a) 9 (adding 1).",
+     "(b) 16 (5 times 3 and 1 more)."
+    ],
+    "visual": {
+     "type": "stick_pattern",
+     "shape": "triangle",
+     "n": 3,
+     "label_each": true,
+     "size": 28,
+     "handle": true
+    },
+    "tools": [
+     "draw",
+     "pattern",
+     "table"
+    ]
+   },
+   {
+    "id": "C6",
+    "lesson": 29,
+    "strand": "reasoning",
+    "page": 3,
+    "tier": "start",
+    "skill": "Check a sum a friend wrote (Term 3 Lesson 9)",
+    "text": "A child in another class writes 49 + 38 = 77.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Is the answer right? Circle Yes or No. [yesno]",
+      "ans": "No",
+      "val": "No"
+     },
+     {
+      "l": "b",
+      "text": "The right answer is ___ .",
+      "ans": "87",
+      "val": 87
+     }
+    ],
+    "say": "Gate 6. A child in another class writes 49 plus 38 equals 77. Part a: is the answer right? Circle Yes or No. Part b: the right answer is blank.",
+    "answer": "No; 87",
+    "val": [
+     "No",
+     87
+    ],
+    "solution": "77 take away 38 is 39, not 49, so 77 is wrong. 9 and 8 make 17: 1 ten and 7 ones, so 40 and 30 and 10 and 7 make 87.",
+    "right": "No and 87.",
+    "partly": "One of the two correct.",
+    "mistakes": [
+     "(a) Yes (not checking).",
+     "(b) 77 again or 97."
+    ],
+    "tools": [
+     "backwards"
+    ]
+   },
+   {
+    "id": "C7",
+    "lesson": "mixed",
+    "strand": "choose",
+    "page": 4,
+    "tier": "start",
+    "tools": [
+     "draw",
+     "backwards"
+    ],
+    "skill": "Money left over, and how much there was at first (mixed: no lesson tag)",
+    "text": "Mei buys a toy for $6. Now she has $9 left.",
+    "parts": [
+     {
+      "l": "",
+      "text": "Mei had $___ at first.",
+      "ans": "15",
+      "val": 15
+     }
+    ],
+    "say": "Gate 7. Mei buys a toy for 6 dollars. Now she has 9 dollars left. Mei had blank dollars at first.",
+    "answer": "$15",
+    "val": [
+     15
+    ],
+    "solution": "She spent 6 and has 9 left, so she had 9 and 6, which is 15. Check: 15 take away 6 is 9.",
+    "right": "Both correct.",
+    "partly": "One of the two correct.",
+    "mistakes": [
+     "3 (taking away).",
+     "14 or 16."
+    ]
+   },
+   {
+    "id": "C8",
+    "lesson": "mixed",
+    "strand": "choose",
+    "page": 4,
+    "tier": "start",
+    "tools": [
+     "guess",
+     "list",
+     "table"
+    ],
+    "skill": "Four coins that make an amount (mixed: no lesson tag)",
+    "text": "Ben has 4 coins. They are 5-cent coins and 10-cent coins. They make 25 cents.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Ben has ___ five-cent coins and ___ ten-cent coins.",
+      "ans": "3 and 1",
+      "val": [
+       3,
+       1
+      ]
+     }
+    ],
+    "say": "Gate 8. Ben has 4 coins. They are 5-cent coins and 10-cent coins. They make 25 cents. Write how many five-cent coins and how many ten-cent coins.",
+    "answer": "3 five-cent and 1 ten-cent",
+    "val": [
+     3,
+     1
+    ],
+    "solution": "Try 2 and 2: 10 and 20 make 30, too high. Try 3 and 1: 15 and 10 make 25. That is 4 coins.",
+    "right": "Both numbers correct.",
+    "partly": "-",
+    "mistakes": [
+     "2 and 2 (30 cents).",
+     "1 and 3 the wrong way round."
+    ]
+   }
+  ],
+  "optional": {
+   "id": "CT",
+   "tier": "think",
+   "optional": true,
+   "lesson": "beyond",
+   "strand": "cave",
+   "skill": "Exactly $14 with $2 notes and $5 notes (money and listing joined)",
+   "text": "Think harder (optional). Ali has lots of $2 notes and $5 notes. He pays exactly $14.",
+   "parts": [
+    {
+     "l": "a",
+     "text": "One way: ___ two-dollar notes and ___ five-dollar notes.",
+     "ans": "7 and 0, or 2 and 2",
+     "val": [
+      7,
+      0
+     ]
+    },
+    {
+     "l": "b",
+     "text": "Is there another way? Circle Yes or No. [yesno]",
+     "ans": "Yes",
+     "val": "Yes"
+    }
+   ],
+   "say": "The secret cave has one more puzzle, and it is optional. You may skip it. Ali has lots of 2-dollar notes and 5-dollar notes. He pays exactly 14 dollars. Part a: write one way. Part b: is there another way? Circle Yes or No.",
+   "answer": "Seven $2 notes, or two $2 notes and two $5 notes; yes, there are 2 ways",
+   "val": [
+    7,
+    0
+   ],
+   "solution": "Seven $2 notes make 14. Two $5 notes make 10, and 2 two-dollar notes make 4, so 10 and 4 make 14. One $5 note leaves 9 and three $5 notes make 15, which do not work, so there are exactly 2 ways.",
+   "mistakes": [
+    "A way that does not add to 14.",
+    "Saying there is only one way."
+   ],
+   "note": "Never marked and never counted. Whether the child tried it adds one neutral phrase to the line for the grown-up; a skipped cave adds nothing.",
+   "because": true,
+   "tools": [
+    "list",
+    "guess",
+    "table"
+   ]
+  },
+  "strands": [
+   {
+    "id": "time",
+    "parent_name": "Time: clocks and the calendar",
+    "moe_label": "Time",
+    "lessons": [
+     21,
+     22,
+     23,
+     27
+    ],
+    "questions": [
+     "C1",
+     "C4"
+    ],
+    "looked_at": "reading a clock to 5 minutes, am and pm, half an hour later, and counting on days and weeks on a calendar",
+    "saw_examples": [
+     "[Name] read a clock to 5 minutes and said am or pm.",
+     "[Name] found the time half an hour later, with a clock or a number line.",
+     "[Name] counted on from tomorrow to find the day 3 days later."
+    ],
+    "next_examples": [
+     "Say the time on a real clock at different times of the day, and ask am or pm.",
+     "Look at a calendar and ask: what day is it 3 days later?"
+    ]
+   },
+   {
+    "id": "money",
+    "parent_name": "Money: coins, change and prices",
+    "moe_label": "Money",
+    "lessons": [
+     24,
+     25,
+     26
+    ],
+    "questions": [
+     "C2",
+     "C3"
+    ],
+    "looked_at": "counting coins, finding the change, comparing two prices and finding two items that cost an exact amount",
+    "saw_examples": [
+     "[Name] counted coins by adding in tens and fives.",
+     "[Name] found the change by counting up, and found how much more one price was than another.",
+     "[Name] found two items that cost exactly an amount."
+    ],
+    "next_examples": [
+     "Play shop with real things and play money; count the change up.",
+     "Pick two prices from a leaflet and ask how much more one costs."
+    ]
+   },
+   {
+    "id": "puzzles",
+    "parent_name": "Patterns",
+    "moe_label": "Number patterns",
+    "lessons": [
+     28
+    ],
+    "questions": [
+     "C5"
+    ],
+    "looked_at": "a growing pattern of sticks",
+    "saw_examples": [
+     "[Name] found the next picture of a stick pattern and counted how many sticks were added each time."
+    ],
+    "next_examples": [
+     "Build triangles in a row with paper strips and count the sticks."
+    ]
+   },
+   {
+    "id": "reasoning",
+    "parent_name": "Checking and explaining",
+    "moe_label": "Process skills; Addition and Subtraction",
+    "lessons": [
+     29
+    ],
+    "questions": [
+     "C6"
+    ],
+    "looked_at": "checking a sum a friend wrote and finding the right answer",
+    "saw_examples": [
+     "[Name] checked a sum by adding back and found the right answer."
+    ],
+    "next_examples": [
+     "Write a sum with one mistake and ask your child to check it a different way."
+    ]
+   },
+   {
+    "id": "choose",
+    "parent_name": "Choosing a tool",
+    "moe_label": "Process skills; choosing a method",
+    "lessons": [
+     30
+    ],
+    "questions": [
+     "C7",
+     "C8"
+    ],
+    "looked_at": "choosing a way to start a new problem with money and coins, and checking the answer",
+    "saw_examples": [
+     "[Name] chose a tool for a problem that was new and said why.",
+     "[Name] checked an answer a second way."
+    ],
+    "next_examples": [
+     "Ask: which tool will you start with, and why? Then ask: how can you check it another way?"
+    ]
+   }
+  ],
+  "give": [
+   "A week before: send the grown-up note (L30_Quest_Parent_Note.pdf). The Quest Log (4 pages) is in each child's Term 3 book: families keep it closed in an envelope and find a quest partner (a grown-up or a brother or sister). A family whose book has a missing or damaged Quest Log page tells you: arrange another way (for example the make-up slot, with L30_Quest_Log.pdf sent to the family another way).",
+   "Tell the group in the opening and at slide s-quest1: this is Mi's Challenge Quest, a game with Mi. Everyone works on their own paper with a quest partner beside them. It is not a race, a gate may be skipped, and nothing is shown to the group.",
+   "Start at minute 35 (straight after the brain break) and finish by minute 55. Children open the Quest Log only when you say. The paper lies flat on the table and is never held up. The quest partner may talk about how to start and ask 'how do you know?', but does not give answers. Cameras may be on or off. Use your own watch out of sight of the camera: no clock, countdown or timer is ever shown to the children.",
+   "Read each page aloud, one gate at a time (the script has the words), then leave quiet working time: about 2.5 minutes for page 1, 3 for page 2, 3 for page 3 and 3 for page 4. After each page say that the gates are open and Mi swims on, whatever the answers. Say nothing about right or wrong, and read no answers. A middle child needs about 17 minutes in all; a slower child may finish in the first minutes of the workbook.",
+   "Allowed: fingers, counters and talk with the quest partner. Not allowed: a calculator, a grown-up giving answers, looking at the workbook. A child who finishes early turns the Quest Log over and draws quietly.",
+   "After page 2, take a one-minute stretch (stand, shake out, sip water). After page 4, show slide s-quest2. Do not collect or look at any Quest Log. While children work, notice (do not write on the shared screen) how they start: counters, a clock face, coins, drawing, talking to the partner."
+  ],
+  "after": [
+   "Same day: the grown-up takes ONE clear photo of each of the 4 pages (page flat, taken straight from above, the whole page in view, and the name on each page) and sends them to the program's business WhatsApp, +65 9880 5962, and to no other number. Never to a child, never to a personal phone, never into the class chat.",
+   "Within 3 days: open the photos only on the business WhatsApp (never on a personal phone) and write your private notes (section 5) for each child, from the photos and what you saw on camera. Section 4 shows what each answer tells you. Nothing is written on the child's paper, nothing is added up and no order of children is made. Nothing about the quest goes back to the child or the group except thanks.",
+   "Write ONE line for each grown-up from your notes (section 7): what we saw, in plain words, and one small next step if it helps. It is sent to the parent only. No marks, no x out of 8, no ranking, no comparison with other children, no prediction.",
+   "Fill in the group advice sheet (section 6): what several children were still working on, with no names, and what you will do in the first lessons of next term. It is kept for next term's tutor and is never shown to families.",
+   "Once the line is sent, save the photos to the program's private file store and delete them from the business WhatsApp chat. The program keeps the photos for 90 days after the program ends, then deletes them, as the privacy notice says. Delete each child's notes sheet when the line is sent (keep only the line in the family file, and the group advice sheet). Never forward the photos or save them to a personal phone or any other device.",
+   "At the start of next term say to the whole group: thank you for playing Mi's Challenge Quest; there is nothing to share and nothing to fear. Never name a child or an answer."
+  ],
+  "late": [
+   "A child who was away or whose family prefers another time: plays the quest at the make-up slot BEFORE watching the recording (the quest is not on the recording, so no gate is given away). It is a small group or a pair with Mi, with a parent beside the child on camera. The tutor never sits alone with one child on a private call.",
+   "A child who joined late: the family may choose to leave out gates for lessons the child did not attend. Write nothing for those gates; if no gate of an area was taught, the line for the grown-up says nothing about that area.",
+   "A family that does not want the quest: no problem. The child does the Term 3 Lesson 10 work as usual and the line for the grown-up uses your own notes from the lessons only.",
+   "A child who is upset or stuck: remind the group (open session) that every gate can be skipped and Mi swims round it. Do not single the child out. The grown-up may stop the quest at any time.",
+   "A family whose Quest Log is missing or damaged: tell the family to say so a week before and arrange another way (for example the make-up slot, with L30_Quest_Log.pdf sent to the family another way). Never ask a child about it in front of the group."
+  ],
+  "privacy_checklist": [
+   "Quest Logs are never held up to the camera and never read out.",
+   "No answer is said aloud during or after the quest. Gates open for everyone, whatever the answers.",
+   "No clock, countdown or timer is shown; nobody is told who finished first or last.",
+   "Photos come to the program's business WhatsApp (+65 9880 5962) only; tutors never use a personal phone; photos are kept 90 days after the program ends, then deleted; the line goes to the parent only; no private message to any child.",
+   "No score, no x out of 8, no ranking, no comparison between children, and no tally or count of any kind on a child's page or anywhere a family can see. In your own notes: words only. You may circle one of the three words (with help / with a prompt / on their own) for each habit in the private notes sheet (section 5); never add the circles up, never compare children, and never say or show the words to a child or a grown-up.",
+   "The recording captures the tutor, the shared screen and any voice that is not muted: the recording is paused for the whole quest (slides s-quest1 and s-quest2) and restarted for the workbook. The WhatsApp number is never on a slide."
+  ],
+  "notes_sheet": {
+   "how": "Fill this in after the lesson, from the photos and what you saw on camera. Write what the child did and said in your own words. No ticks for right or wrong, no points, nothing added up. The gate numbers are only reminders of where to look.",
+   "prompts": [
+    "Something the child did well (a named strength, for example: read a clock to 5 minutes and said am or pm)",
+    "How they started: which tool they circled, and counters, a clock face, coins, drawing, or in their head",
+    "Where they paused or turned to their partner, what helped, and what they did when a first try did not work",
+    "One next step for home (small and concrete)",
+    "Did they try the secret cave? (a neutral note only)"
+   ],
+   "group_how": "When all the notes are written, look across them without names. Write what several children were still working on and how you will use the first two lessons of next term (a warm-up, a picture, a game). This page never goes to families.",
+   "group_prompts": [
+    "Gates or ideas where several children paused (no names)",
+    "A warm-up or game to bring back in the first lesson of next term",
+    "What worked well about the quest as a game, to keep next time"
+   ]
+  },
+  "saw_line": {
+   "heading": "Mi's Challenge Quest: [Name]",
+   "pattern": "In Mi's Challenge Quest, [Name] [one specific thing you saw, in plain words]. [Optional: one small next step at home.]",
+   "how": "One or two sentences at most. Say what the child did (counted coins in tens and fives, read a clock to 5 minutes, explained a step), not how many answers were right. Use the lines below as patterns and always add your own detail from your notes.",
+   "example": "In Mi's Challenge Quest, Mei counted the coins in tens and fives, and read a clock to 5 minutes. A good next step: say the time on a real clock at different times of the day, and ask am or pm.",
+   "parent_example": "For example: In Mi's Challenge Quest, Mei counted coins in tens and fives.",
+   "closing": "This line describes [Name]'s own thinking in the game. It does not compare children."
+  },
+  "parent_note": {
+   "title": "Mi's Challenge Quest: a note for grown-ups",
+   "what": "In the last lesson of the term we play Mi's Challenge Quest. Mi the dolphin swims to the Pearl Cave and meets 8 gates, each with a short puzzle, plus an optional secret cave. It takes about 20 minutes, straight after the break. Your child works on private paper with you (or a brother or sister) as quest partner. It is a game: nothing is added up, there is no league table and nobody is compared with anyone else. It helps us see what each child enjoyed and what to practise next. The gates look back over Term 3: clocks, money, the calendar, a pattern and checking a sum, and two gates mix the ideas. Every gate is at Start here level, in fresh numbers, so no gate needs a Think harder idea.",
+   "before": [
+    "The Quest Log (4 pages) is in your child's Term 3 book. Keep it closed, in an envelope, until the tutor says to open it. If your book has not arrived or is damaged, message us on WhatsApp within 7 days and we will send you the PDF straight away.",
+    "We send you this note a week before the lesson.",
+    "Have a pencil, a rubber and a quiet table. Counters and fingers are fine."
+   ],
+   "during": [
+    "Be the quest partner: sit beside your child. You may talk about how to start and ask 'how do you know?', but please do not give answers or hints.",
+    "Skipping a gate is fine; Mi swims round it. If your child is upset, you may stop at any time.",
+    "The paper stays flat on the table. Cameras may be on or off."
+   ],
+   "after": [
+    "The same day, take ONE clear photo of each of the 4 pages: page flat, straight from above, the whole page in view. Make sure your child's name is on each page.",
+    "Send the photos to the program's business WhatsApp, +65 9880 5962. Please send them to this number only: not to a tutor's own phone, not to the class chat, and never through a child.",
+    "We use the photos only to write one line about your child. WhatsApp is a messaging service run by another company. We keep the photos for 90 days after the program ends, then delete them, as our privacy notice says."
+   ],
+   "back": "Within a few days we send you ONE line, written from our private notes, about what we saw your child do in the quest, with a small next step if it helps. It only describes what your child did, and it never compares children. If you would rather not play the quest, tell us: that is fine.",
+   "make_up": "Missed the lesson or need another time? The quest is not on the recording, but your child can play it at the make-up slot, before watching the recording."
+  },
+  "timing_model": {
+   "child_seconds": {
+    "C1": 80,
+    "C2": 80,
+    "C3": 90,
+    "C4": 80,
+    "C5": 70,
+    "C6": 80,
+    "C7": 80,
+    "C8": 70
+   },
+   "stretch_seconds": 60,
+   "slow_child_factor": 1.4
+  }
+ },
+ "script": {
+  "segments": [
+   {
+    "part": "opening",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-title",
+      "s": 20
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "DO",
+      "text": "Greet each child by first name as they arrive. Then start the recording.",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Hello, inquirers! Please stay muted unless I invite you to speak. Cameras on if you can, so I can see you; cameras off is fine too. Pencil ready, and your tool cards and your closed Quest Log on the table."
+     },
+     {
+      "k": "SAY",
+      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is unmuted. You may mute and keep your camera off."
+     },
+     {
+      "k": "SAY",
+      "text": "Today we are tool detectives. We look at a problem, pick a tool, say why, and check. After our break we play Mi's Challenge Quest, a game with Mi, on our own paper. It is not a race. Your answers are private: only your grown-up and your tutor may see them."
+     },
+     {
+      "k": "NOTE",
+      "text": "Say the recording notice in the SAY line above in your own words after the recording has started: the recording has the tutor, the shared screen and any unmuted voice; children may mute and keep the camera off. The routine and the four inquirer rules were introduced earlier in the term: do not re-teach them."
+     },
+     {
+      "k": "NOTE",
+      "text": "Plain statement for families when it comes up: picking a tool and checking are process skills; switching tool when one is too slow, who has which pet from clues and a cycle of 3 days go beyond Primary 1 on purpose."
+     },
+     {
+      "k": "NOTE",
+      "text": "New here? Say in one minute: our three rule words (notice it, test it, explain why); a guess is fine and you can always pass; after Start here you may choose Think harder, Go further or the Investigation; nobody holds paper to the camera. The first recording of the term shows the full routine."
+     }
+    ]
+   },
+   {
+    "part": "remember",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-rem1",
+      "s": 15
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Today you choose the tool.",
+      "spine": "remember"
+     },
+     {
+      "k": "DO",
+      "text": "Point at the row of tools on page 1 of the workbook.",
+      "s": 4,
+      "spine": "remember"
+     },
+     {
+      "k": "SAY",
+      "text": "These are our seven tools. Each tool is a way to start a problem. Put your tool cards in a row."
+     },
+     {
+      "k": "READ",
+      "text": "Draw it. Act it out. Spot the pattern. List every way. Make a table. Work backwards. Guess and check.",
+      "s": 25
+     },
+     {
+      "k": "ASK",
+      "text": "Which tool have you used before? Say it, or point to its card.",
+      "resp": 45
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem2",
+      "s": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Let us use three tools on tiny problems. Tool one, draw it. Ali has nine sweets. Mei has five sweets. Look at the two strips."
+     },
+     {
+      "k": "ASK",
+      "text": "How many more sweets does Ali have than Mei?",
+      "resp": 25
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem3",
+      "s": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Tool two, work backwards. I think of a number. I add four. I get eleven."
+     },
+     {
+      "k": "ASK",
+      "text": "What is my number? Start at eleven and go back four.",
+      "resp": 30
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem4",
+      "s": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Tool three, spot the pattern. Three, six, nine."
+     },
+     {
+      "k": "ASK",
+      "text": "What comes next? What do we add each time?",
+      "resp": 40
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child is unsure how many more, count the extra squares on the long strip. For the number, count back four on fingers from eleven. For the pattern, count on three from nine on fingers."
+     },
+     {
+      "k": "NOTE",
+      "text": "Answers: 4; 7; 12 and add 3. Children answer with a whisper, fingers or hands. Nobody writes. Joining cold: the toolbox page is all you need; the three tiny problems need only counting to 12."
+     }
+    ]
+   },
+   {
+    "part": "sneak",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-sneak",
+      "s": 12
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked."
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle one. Today is Monday. What day is it three days later? Write the day."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write the day on their own paper.",
+      "s": 45
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle two. A number add six is fifteen. What is the number? I know because blank."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write or draw their answer.",
+      "s": 85
+     },
+     {
+      "k": "SAY",
+      "text": "Keep your paper. Nobody shows it. We will check our own thinking later, at Talk time."
+     },
+     {
+      "k": "NOTE",
+      "text": "Puzzle 1 answer: Thursday. Puzzle 2 answer: 9. Look for good ideas to praise later (a child who counted on from tomorrow, or who went back 6 from 15). Do not write scores or keep a list."
+     }
+    ]
+   },
+   {
+    "part": "explore",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1",
+      "s": 15
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Welcome to the tool market. Nobody solves anything now. For each card, point to the tool card you would start with. Then say: I will, blank, because, blank."
+     },
+     {
+      "k": "READ",
+      "text": "Card one. A film starts at three thirty and lasts one hour. When does it end? Card two. Ben pays exactly twelve dollars with two tags. The tags say three, five, eight and nine dollars. Which two? Card three. Row one has two stars, row two has four stars, row three has six stars. How many stars are in row eight?",
+      "s": 40
+     },
+     {
+      "k": "WORK",
+      "text": "Children point to a tool card for each problem. Tutor scans the cameras.",
+      "s": 65
+     },
+     {
+      "k": "ASK",
+      "text": "Who would like to say a tool and why? Volunteers first.",
+      "resp": 70
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Many tools can fit. For card one, drawing a number line works, and so does acting it out with a clock. A good reason matters more than the name."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2",
+      "s": 15
+     },
+     {
+      "k": "READ",
+      "text": "Card four. I think of a number. I take away seven. I get twelve. What is my number? Card five. Ali has four coins. They are five-cent and ten-cent coins. They make thirty cents. How many of each? Card six. Today is Wednesday. What day is it ten days later?",
+      "s": 40
+     },
+     {
+      "k": "WORK",
+      "text": "Children point to a tool card for each problem.",
+      "s": 65
+     },
+     {
+      "k": "ASK",
+      "text": "Which tool, and why?",
+      "resp": 60
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Did one word tell us the tool? Not always. We looked at the problem."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore3",
+      "s": 8
+     },
+     {
+      "k": "ASK",
+      "text": "Can two tools fit the same problem? What can we do if a tool is too slow?",
+      "resp": 50
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who starts to solve: say lovely, we will solve it later, which tool did you start with? A child who cannot choose: ask what the problem is about, a picture, a pattern, a start and an end, or a number to test."
+     },
+     {
+      "k": "NOTE",
+      "text": "Main room only. Never say a tool is wrong. Listen for a reason, not a name. Do not say the rule before the children notice it."
+     }
+    ]
+   },
+   {
+    "part": "mini",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-m1",
+      "s": 15
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Now one problem with two tools. Kumar has fifteen dollars. He buys a cup for six dollars and a rubber for four dollars. How much money is left?"
+     },
+     {
+      "k": "SAY",
+      "text": "Tool one: draw it. Draw one long strip for fifteen. Mark off six, then four."
+     },
+     {
+      "k": "WORK",
+      "text": "Children draw a strip on their own paper.",
+      "s": 45
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m1-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Six and four are spent. Five is left. Kumar has five dollars left."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m2",
+      "s": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Tool two: work backwards. Start at fifteen. Take away six. Then take away four."
+     },
+     {
+      "k": "WORK",
+      "text": "Children say the two steps.",
+      "s": 30
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m2-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Fifteen take away six is nine. Nine take away four is five. Both tools say five dollars."
+     },
+     {
+      "k": "ASK",
+      "text": "Which tool was quicker for you?",
+      "resp": 30
+     },
+     {
+      "k": "SAY",
+      "text": "Check a third way. Six and four and five make fifteen. When two tools agree and the check works, we can trust the answer."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3",
+      "s": 15
+     },
+     {
+      "k": "SAY",
+      "text": "A new problem. Squares in a row with a handle, made of sticks. One square uses five sticks, two squares use eight, three squares use eleven. How many sticks do eight squares use? Try draw it."
+     },
+     {
+      "k": "WORK",
+      "text": "Children start to draw eight squares. Stop them after about a minute.",
+      "s": 60
+     },
+     {
+      "k": "SAY",
+      "text": "Wait. Drawing eight squares takes too long, and we might slip. Try another tool."
+     },
+     {
+      "k": "ASK",
+      "text": "Which tool could be quicker?",
+      "resp": 30
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Make a table. Five, eight, eleven. Each square adds three sticks: fourteen, seventeen, twenty, twenty-three, twenty-six. Eight squares use twenty-six sticks."
+     },
+     {
+      "k": "ASK",
+      "text": "How can we check twenty-six another way?",
+      "resp": 30
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "When we are stuck, we say: Wait. Try a tool. Try a smaller case. Ask. Say it with me."
+     },
+     {
+      "k": "WORK",
+      "text": "Say the four steps together, twice.",
+      "s": 20
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who adds the wrong amount in the table: ask what each square adds. A child who wants to draw all 8: that was a good start, now try a table."
+     },
+     {
+      "k": "NOTE",
+      "text": "Answers: 5; 5; 25. A check for 25: the first square uses 4 and 7 more squares each add 3, so 4 and 21 make 25. Say the child words: tool, check, why. Read every question aloud."
+     }
+    ]
+   },
+   {
+    "part": "break",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-break",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Stand up and get a sip of water. We mime each tool. Draw a long strip in the air."
+     },
+     {
+      "k": "WORK",
+      "text": "Mime the seven tools: draw a strip in the air, walk on the spot, clap a growing beat, write a list in the air, tap a table, walk back two steps, point and thumbs up. Children may stay seated and tap the table. Then everyone takes out the closed Quest Log and a pencil.",
+      "s": 150
+     },
+     {
+      "k": "NOTE",
+      "text": "Quiet movement only. After the break say: please sit down, put the closed Quest Log flat on your table, and have a pencil ready."
+     }
+    ]
+   },
+   {
+    "part": "exit",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-quest1",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Now it is time for Mi's Challenge Quest! Mi the dolphin is swimming to the Pearl Cave, and eight gates are in the way. At each gate there is a puzzle for you. You work on your own paper with your quest partner beside you."
+     },
+     {
+      "k": "SAY",
+      "text": "It is a game, not a race, and nobody gets a score. Your answers are private: only your grown-up and your tutor may see them. You may skip a gate and Mi will swim round it. I will not say any answers, and I will not show anyone's paper."
+     },
+     {
+      "k": "SAY",
+      "text": "Under each gate there is a row of tools. Circle the tool you used. There is no wrong tool. When you have checked your answer, tick I checked."
+     },
+     {
+      "k": "SAY",
+      "text": "The recording pauses now for Mi's Challenge Quest, and starts again for the workbook."
+     },
+     {
+      "k": "DO",
+      "text": "Pause the recording now. Children open the closed Quest Log, with a pencil. Quest partners sit beside the child and may talk about how to start, but do not give answers. Paper flat on the table, never held up. Name on page 1. Counters and fingers are fine.",
+      "s": 30
+     },
+     {
+      "k": "READ",
+      "text": "Page 1. Gate 1. Look at the clock. Part a: the time is blank. Part b: breakfast is at 7:00. Write am or pm. Part c: a film starts at 2:30. It lasts half an hour. It ends at blank. Gate 2. Look at the coins. Part a: the coins make blank cents. Part b: Mei pays 10 dollars for a toy that costs 7 dollars. Her change is blank dollars."
+     },
+     {
+      "k": "WORK",
+      "text": "Children work quietly on page 1 (gates 1 and 2); partners may whisper about how, not about the answer. Look around the gallery; say nothing about right or wrong. If asked, re-read a gate to the whole group.",
+      "s": 140
+     },
+     {
+      "k": "SAY",
+      "text": "Gates one and two are open! Mi swims on. Turn to page 2."
+     },
+     {
+      "k": "READ",
+      "text": "Gate 3. A pen costs 6 dollars and a ruler costs 9 dollars. Part a: which costs more? Write pen or ruler. Part b: how much more does it cost? Part c: the tags say 4 dollars, 5 dollars and 6 dollars. Two of them cost exactly 10 dollars. Write the two prices. Gate 4. Today is Friday. Part a: three days later it is blank. Part b: look at the calendar. The day with a ring round it is the 3rd. A week later is the blank th."
+     },
+     {
+      "k": "WORK",
+      "text": "Children work quietly on page 2 (gates 3 and 4).",
+      "s": 150
+     },
+     {
+      "k": "SAY",
+      "text": "Gates three and four are open!"
+     },
+     {
+      "k": "MOVE",
+      "text": "One-minute stretch: stand, shake out your hands, sip some water. Paper stays on the table.",
+      "s": 40
+     },
+     {
+      "k": "SAY",
+      "text": "Turn to page 3. The Pearl Cave is getting closer."
+     },
+     {
+      "k": "READ",
+      "text": "Gate 5. 1 triangle with a handle uses 4 sticks. 2 triangles use 6 sticks. The picture shows 3 triangles: 8 sticks. Part a: 4 triangles use blank sticks. Part b: 5 triangles use blank sticks. Gate 6. A child in another class writes 49 plus 38 equals 77. Part a: is the answer right? Circle Yes or No. Part b: the right answer is blank."
+     },
+     {
+      "k": "WORK",
+      "text": "Children work quietly on page 3 (gates 5 and 6).",
+      "s": 135
+     },
+     {
+      "k": "SAY",
+      "text": "Gates five and six are open! Two gates left. Turn to page 4."
+     },
+     {
+      "k": "READ",
+      "text": "Gate 7. Mei buys a toy for 6 dollars. Now she has 9 dollars left. Mei had blank dollars at first. Gate 8. Ben has 4 coins. They are 5-cent coins and 10-cent coins. They make 25 cents. Write how many five-cent coins and how many ten-cent coins. The secret cave has one more puzzle, and it is optional. You may skip it. Ali pays exactly 14 dollars with 2-dollar notes and 5-dollar notes. Write one way to do it. Then write why you chose your tool."
+     },
+     {
+      "k": "WORK",
+      "text": "Children work quietly on page 4: gates 7 and 8, then the optional secret cave item if they wish.",
+      "s": 160
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-quest2",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "You reached the Pearl Cave! Make sure your name is on every page and close your Quest Log. Well done for trying your best. Grown-ups, please take one photo of each page today and send them to the business WhatsApp, as in the note. Mi's tutor will send you one line about what we saw, never a mark."
+     },
+     {
+      "k": "DO",
+      "text": "Say nothing about answers. Remind the group that nothing is added up and no answer is read out. Restart the recording for the workbook. Children who did not finish may use a few minutes of the workbook time.",
+      "s": 25
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who says they cannot do a gate: say to the whole group that skipping is fine, Mi swims round it, and they may come back. A child who is upset: the grown-up may stop at any time; do not single the child out. Never give a hint to one child about an answer, and never name a tool."
+     },
+     {
+      "k": "NOTE",
+      "text": "The answers, your private notes sheet for each child, the group advice sheet and the one-line templates for the grown-up are in L30_Quest_Tutor_Notes.pdf. Do not collect or look at any paper during the lesson. Photos arrive only on the program's business WhatsApp and the line goes to the parent only; never a message to a child, and never a personal phone. The exit ticket on workbook page 5 is for home this lesson: the quest is the exit."
+     }
+    ]
+   },
+   {
+    "part": "work",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "Page 1, Start here. Under each question, write the tool you used, and tick I checked. Question 1: a bus leaves at 7:30. The trip takes 1 hour. Part a: the bus arrives at blank. Part b: a game starts at 3:00. It lasts half an hour. It ends at blank. Question 2: Siti has 20 dollars. She buys a book for 13 dollars. She has blank dollars left. Question 3: Mei has 15 dollars. She buys two things. The tags say 5, 7, 8 and 12 dollars. Two tags cost exactly 15 dollars. They are blank and blank dollars."
+     },
+     {
+      "k": "WORK",
+      "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
+      "s": 500
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1ans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Question 1: eight thirty, then three thirty. Question 2: seven dollars. Question 3: seven dollars and eight dollars. Any tool that fits is right. Tick your own page with a tick."
+     },
+     {
+      "k": "SAY",
+      "text": "After question 3 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Page 2. Question 4: a path is made of tiles. Each path has 3 more tiles than the path before. Path 4 has blank tiles. Question 5: today is Thursday. 6 days later it is blank. Question 6: a child in another class writes 63 take away 28 equals 45. Part a: check by adding. 45 plus 28 equals blank. Part b: is the answer right? Circle Yes or No. Part c: 63 take away 28 equals blank."
+     },
+     {
+      "k": "WORK",
+      "text": "Page 2, questions 4 to 6.",
+      "s": 400
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2ans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Question 4: fourteen tiles. Question 5: Wednesday. Question 6: seventy-three, No, and thirty-five. Tick your own page."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-choice",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose, at any time."
+     },
+     {
+      "k": "MOVE",
+      "text": "Stand and stretch for 30 seconds, then sit down and choose.",
+      "s": 30
+     },
+     {
+      "k": "WORK",
+      "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check page 1 and 2.",
+      "s": 120
+     },
+     {
+      "k": "STUCK",
+      "text": "Q1: draw a clock or a number line. Q2: draw a strip for 20. Q3: try the smallest tag with each of the others. Q4: what do we add each time? Q5: count on from tomorrow. Q6: add the answer to the part taken away."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who is still stuck ticks I am still stuck on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp (never a personal phone). You then help in the open session at the start of next term. Never a private message to a child."
+     },
+     {
+      "k": "NOTE",
+      "text": "Think harder has the same problem with two tools, a table when drawing is too slow, who has which pet, and guess and check (beyond Primary 1 on purpose). Go further names no tool. Do not announce who is on which page. The quest came first, so some children are tired, and Start here takes a middle child about 17 minutes: say that pages 3 to 5 are for home. Slow class: take the extra minutes from the flex time and do not skip the answer slides."
+     }
+    ]
+   },
+   {
+    "part": "talk",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-talk",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "A pattern has twenty pictures. Each one has three more sticks. One child in another class says: I will draw all twenty pictures. Another child says: I will make a table. Which tool would you pick first? Why?"
+     },
+     {
+      "k": "WORK",
+      "text": "Think about it: how long would drawing twenty pictures take?",
+      "s": 30
+     },
+     {
+      "k": "WORK",
+      "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I would pick... because...",
+      "s": 40
+     },
+     {
+      "k": "ASK",
+      "text": "Who would like to share? Volunteers first. A pass is always fine.",
+      "resp": 50
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-sneakans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Remember the sneak-peek? Puzzle one: Thursday. Puzzle two: nine. Fifteen take away six is nine, and nine and six make fifteen."
+     },
+     {
+      "k": "ASK",
+      "text": "Did anyone change their mind while we worked? You can just nod.",
+      "resp": 12
+     },
+     {
+      "k": "NOTE",
+      "text": "Optional, no time modelled: ask which tool the group chose and why. Volunteers first; listen for a tool being named and a reason.",
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Model answer: both tools can work, but a table is quicker for the 20th picture because we add the same each time. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed. Ask once: which tool did you pick first today, and why?"
+     }
+    ]
+   },
+   {
+    "part": "look",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-look",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+      "spine": "look"
+     },
+     {
+      "k": "WORK",
+      "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+      "s": 60,
+      "spine": "look"
+     }
+    ]
+   },
+   {
+    "part": "flex",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-end",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Well done, inquirers, for the whole term. Next term starts with Half and Quarter, the first lesson of Term 4. You need your Term 4 book with the paper shapes cut out by a grown-up, a ruler, a coloured pencil and 8 coins or buttons. Your tutor will tell you the start date. Goodbye, and thank you to the grown-ups."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-opt",
+      "s": 8,
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Optional, only if you are on time: Mei has three five-dollar notes and two two-dollar notes. She spends ten dollars. How much is left?",
+      "optional": true
+     },
+     {
+      "k": "WORK",
+      "text": "Short think time, then take two answers.",
+      "s": 90,
+      "optional": true
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-menu",
+      "s": 8,
+      "optional": true
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-exit",
+      "s": 8,
+      "optional": true
+     },
+     {
+      "k": "READ",
+      "text": "Optional exit ticket. Question 1: a film starts at 4:00. It lasts half an hour. It ends at blank. Question 2: Mei has 20 dollars. She buys a book for 12 dollars. How much money is left? Option 1: 6 dollars. Option 2: 8 dollars. Option 3: 10 dollars. Option 4: 32 dollars. Write its number in the bracket. Question 3: I think of a number. I take away 3. I get 8. My number is blank.",
+      "optional": true
+     },
+     {
+      "k": "WORK",
+      "text": "Children answer E1 to E3 on page 5 on their own.",
+      "s": 100,
+      "optional": true
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-exitans",
+      "s": 8,
+      "optional": true
+     },
+     {
+      "k": "READ",
+      "text": "Question 1: 4:30. Question 2: option 2, 8 dollars. Question 3: eleven. Tick your own ticket with a tick.",
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
+      "optional": true
+     },
+     {
+      "k": "NOTE",
+      "text": "This is the standing buffer. A child who needs more time for the quest may use it. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: $9. If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+     }
+    ]
+   }
+  ]
+ },
+ "talk": {
+  "question": "A pattern has 20 pictures. Each one has 3 more sticks. One child in another class says: I will draw all 20 pictures. Another child says: I will make a table. Which tool would you pick first? Why?",
+  "starter": "I would pick ... because ...",
+  "answer": "Both tools can work. A table is quicker for the 20th picture, because we add 3 each time and drawing 20 pictures is slow. Spotting the pattern also works: 4 and 19 lots of 3.",
+  "look_for": "A tool named with a reason, not just a name. Credit any reason about speed, slips or being able to see it."
+ },
+ "workbook": {
+  "header": "Choose a tool: say why, then check",
+  "hint_p1": "Use your tool cards. Pick a tool. Write its name and tick I checked.",
+  "hint_p2": "Pick a tool for each question. A guess is a good start.",
+  "hint_p3": "Use the tools named in each question. Choose any question.",
+  "hint_p4": "No tool is named: you choose. Choose any question. You do not have to finish them all.",
+  "choice_after": 3,
+  "inv_intro": "",
+  "inv_first_label": "First:",
+  "inv_then_label": "Next:",
+  "home_hint": "Use your tool cards, drawings or real things. Name the tool, then check your answer.",
+  "kits": [
+   {
+    "type": "cards",
+    "labels": [
+     "Draw it",
+     "Act it out",
+     "Spot the pattern",
+     "List every way",
+     "Make a table",
+     "Work backwards",
+     "Guess and check"
+    ],
+    "cols": 2,
+    "w": 330,
+    "h": 64,
+    "title": "Kit page: tool cards",
+    "intro": "A grown-up cuts out the 7 tool cards before the lesson. Lay them in a row and point to the tool you would start with. No cutting? Write the 7 tool names on 7 small pieces of paper."
+   }
+  ]
+ },
+ "spare_time": {
+  "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
+  "rules": [
+   "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
+   "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+   "Never teach anything the next lesson needs. If the class is ahead, slow down: ask 'How do you know?' and let children explain, rather than rushing on."
+  ],
+  "menu": [
+   {
+    "id": "M1",
+    "title": "Can two tools agree?",
+    "minutes": 4,
+    "tutor": "A child says: two different tools can give the same answer. Is that always true? Try it with: a number add 8 is 17.",
+    "rec": "Recording: pause. Solve a number add 8 is 17 with two tools. Do both tools agree?",
+    "answer": "Yes, if both are used well. Work backwards: 17 take away 8 is 9. Guess and check: try 9, and 9 and 8 make 17."
+   },
+   {
+    "id": "M2",
+    "title": "Make a puzzle for your grown-up",
+    "minutes": 4,
+    "tutor": "Pick a tool card. Write a problem that needs it. Ask your grown-up to solve it, then check together.",
+    "rec": "Recording: pause. Pick a tool card and write a problem for a grown-up. Check it together.",
+    "answer": "No single answer. Check that the problem has one answer and that the tool fits."
+   },
+   {
+    "id": "M3",
+    "title": "Teach it back",
+    "minutes": 3,
+    "tutor": "Pretend a toy has never checked an answer. Show how to check 15 take away 6 is 9 another way.",
+    "rec": "Recording: pause. Show a grown-up how to check 15 take away 6 is 9 another way.",
+    "answer": "Add back: 9 and 6 make 15."
+   }
+  ]
+ },
+ "parent": {
+  "summary": "We looked back over Term 3 and practised picking a tool for a problem, saying why, and checking. We also played Mi's Challenge Quest, our end-of-term game with Mi, on private paper; your tutor then sends one line about what we saw. Some Think harder and Go further questions go past the school Primary 1 syllabus on purpose; Start here stays within it.",
+  "words": [
+   "tool: a way to start a problem",
+   "check: do it another way to see if it agrees",
+   "work backwards: start at the end and undo each step",
+   "guess and check: pick a number, test it, try a better one"
+  ],
+  "try_home": [
+   "Give a problem and ask: which tool will you start with, and why?",
+   "Ask: how can you check that another way?",
+   "Ask: if drawing takes too long, what could you try instead?"
+  ],
+  "ask": [
+   "Which tool did you pick first?",
+   "Why that tool?",
+   "Does a second tool give the same answer?"
+  ],
+  "when_stuck": "Let your child use the tool cards, drawings or counters and wait 10 seconds before helping. Asking 'Which tool could you try?' works better than giving the answer. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
+  "next": "Next term, the first lesson of Term 4: Half and Quarter. Your tutor will tell you the start date. Online practice: your tutor will share the practice link. Mi's Challenge Quest: please send one photo of each of the 4 pages to the business WhatsApp today. The recording link is private: please do not share it.",
+  "quote": "Pick a tool, say why, and check it another way.",
+  "report_line": "Your child is learning to pick a tool for a problem, say why and check. This week: tools for time, money and patterns, and Mi's Challenge Quest.",
+  "term_line": "Your child is learning to give a reason, and to read time and money in real life.",
+  "next_materials": [
+   "Your Term 4 book (Book 7): tear out the 3 fold-shapes kit pages along the dashed line, then a grown-up cuts out the 10 fold shapes",
+   "A ruler, a coloured pencil, a pencil and rubber, and 8 coins or buttons (or draw 8 dots)"
+  ]
+ },
+ "safeguarding": [
+  "The tool cards are paper or card. Small pieces stay on the table: nothing goes in the mouth or ears. No matches or toothpicks. Nobody cuts during the lesson; a grown-up cut the cards beforehand.",
+  "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
+  "Nobody holds paper or a card up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on a count of three, or show fingers or a thumb for a choice. Mi's Challenge Quest stays flat on the table and is never held up or read out, and nothing is added up in front of the group. There is no private chat.",
+  "Never read out a child's name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is unmuted. Children may mute and keep their cameras off. A child's page is never shown.",
+  "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. Stamping is soft; a child may stay seated and tap the table.",
+  "A child who is still stuck ticks 'I am still stuck' on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for 90 days after the program ends. The tutor then helps in the open session next term. The quest photos follow the same route and are opened only on the business WhatsApp, never on a personal phone. No private messages to children.",
+  "The look-back is never collected in front of the group or read out. A pass is always allowed."
+ ],
+ "tutor_prep": [
+  "Solve every workbook question and every quest gate (and the secret cave item) yourself first, with the quest tutor notes (L30_Quest_Tutor_Notes.pdf): the answers, the private notes sheet for each child and the group advice sheet. Workbook answers: S1 8:30, 3:30; S2 $7; S3 $7 and $8; S4 14; S5 Wednesday; S6 73, No, 35; T1 16, 16; T2 15 and 19, 31; T3 bird, cat; T4 40, too high, 3 and 2; G1 $12, $9; G2 2 pens and 2 rulers; G3 Thursday, Saturday. The tool line is any tool that fits.",
+  "A week before, tell the families to have ready: the Quest Log (4 pages, in the Term 3 book), kept closed in an envelope; a quest partner (a grown-up or a brother or sister); and the tool-card page torn out, with the 7 tool cards cut out by a grown-up. Send them the grown-up note (L30_Quest_Parent_Note.pdf). A family whose Quest Log is missing or damaged tells you: arrange the make-up slot.",
+  "Have the slides open. The quest is straight after the brain break, minutes 35 to 55, then the workbook. Have the quest tutor notes ready and your own watch where only you can see it. Never show a clock, countdown or timer on the shared screen during the quest. Delete each child's notes sheet when the line is sent.",
+  "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded. Greet each child by first name as they arrive, then start the recording, then say the notice; avoid first names while it runs. PAUSE the recording for the whole quest (minutes 35 to 55) and restart it for the workbook. The business WhatsApp number is never said or shown on a slide; it is in the grown-up note.",
+  "Be plain with families: picking a tool and checking are process skills in the syllabus pages we hold, which name no list of heuristics, so the seven tool names are our own. Switching tool when one is too slow, who has which pet from clues, a table of tries and a cycle of 3 days go beyond Primary 1 on purpose. Do not call the lesson MOE-aligned. Whole dollars and cents only."
+ ]
+}

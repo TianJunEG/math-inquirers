@@ -1,0 +1,15 @@
+{
+ "regions": 15,
+ "tally": {
+  "yellow": 3,
+  "red": 4,
+  "blue": 4,
+  "green": 2,
+  "orange": 2
+ },
+ "mirror_pairs_same_colour": true,
+ "questions_correct_and_unique": true,
+ "single_slip_detected": 150,
+ "single_slip_total": 150,
+ "single_slip_rate": 1.0
+}

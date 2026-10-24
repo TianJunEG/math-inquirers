@@ -75,7 +75,7 @@ put(PFX+'title',title_slide(PFX+'title','LESSON 7  •  WEEK 4','Area Architects
  'Find every rectangle with the same fence, push steps out to find perimeters fast, and cut up or fill in shapes to find their area.',
  'Objective: Find the area and perimeter of figures made of squares and rectangles, list every rectangle with a given perimeter in order, and change the shape (push the steps out; cut it up or fill it in) to find perimeters and areas quickly. Heuristics taught today: (1) make a list in order, (2) change the shape. '
  'Materials: 12 square tiles (or 12 squares cut from 1 cm grid paper) per child, 1 cm grid paper, mini whiteboards, a ruler. '
- 'Online: children cut 12 squares from squared paper (or draw on squared paper) and hold their rectangles up to the camera; annotate the grid slides with the pen tool. '
+ 'Online: children cut 12 squares from squared paper (or draw on squared paper) and check them against the grid slides, which are annotated with the pen tool. '
  'Time plan: warm-up 0 to 10, explore 10 to 25, teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket 80 to 90. Stretch and Challenge are for early finishers. If the class is behind, children finish the last question of each page at home; the check slides cover it.'))
 
 # ================= 2. warm-up game =================
@@ -93,9 +93,9 @@ put(PFX+'warm1',S_(PFX+'warm1','0–5 MIN',body+cards+ans,
  'Ask each time: "Does the job go ROUND the edge, or does it COVER the inside?" Quick finisher: "Which unit would you use for the fence: m or m²? For the tiles?" (m for the fence, m² for the floor). Watch for children who think a frame is area because it is a flat thing: it only goes round the edge.'))
 
 # ================= 3. quick questions =================
-qs=[('1.','8 × 7 = ?','56'),('2.','A square has sides of 6 cm. What is its perimeter?','24 cm'),('3.','A rectangle is 8 cm by 3 cm. What is its area?','24 cm²'),('4.','A square has an area of 49 cm². How long is each side?','7 cm')]
+qs=[('1.','8 × 7 = ?','56'),('2.','A square has sides of 6 cm. What is its perimeter?','24 cm'),('3.','A rectangle is 8 cm by 3 cm. What is its area?','24 cm²')]
 body=h2('Quick questions')+''.join(qrow(128,260+i*150,1250,a,b) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,260+i*150,372,c) for i,(a,b,c) in enumerate(qs))
-put(PFX+'warm2',S_(PFX+'warm2','5–10 MIN',body,'Minutes 5 to 10. Whiteboards. Read each question, give thinking time, then click to show the answer. Answers: 1) 56  2) 24 cm (6 + 6 + 6 + 6, or 4 × 6)  3) 24 cm² (8 × 3)  4) 7 cm (7 × 7 = 49). Ask after 2 and 3: "Both answers are 24. Are they the same?" No: 24 cm is a length round the edge; 24 cm² is 24 squares of space inside. Check every child writes cm² for an area.'))
+put(PFX+'warm2',S_(PFX+'warm2','5–10 MIN',body,'Minutes 5 to 10. Whiteboards. Read each question, give thinking time, then click to show the answer. Answers: 1) 56  2) 24 cm (6 + 6 + 6 + 6, or 4 × 6)  3) 24 cm² (8 × 3). Three quick questions only; the square-root question (a square has an area of 49 cm²: each side 7 cm) is on the take-home box of the Go further page in the workbook. Ask after 2 and 3: "Both answers are 24. Are they the same?" No: 24 cm is a length round the edge; 24 cm² is 24 squares of space inside. Check every child writes cm² for an area.'))
 
 # ================= 4. explore: what to do =================
 ex=''
@@ -106,34 +106,34 @@ for i in range(12):
     ex+=f'<g transform="rotate({r} {x+28} {y+28})">'+R(x,y,56,56,SKY,NAVY,3)+'</g>'
 ex+=ARW(470,120,600,120,TEAL,8,26)
 tx=640; cw_=190
-for j,hd in enumerate(['Length','Breadth','Perimeter']):
+for j,hd in enumerate(['Length','Width','Perimeter']):
     ex+=R(tx+j*cw_,20,cw_,54,YEL,NAVY,3)+T(tx+j*cw_+cw_/2,57,hd,28)
     for k in range(3): ex+=R(tx+j*cw_,74+k*50,cw_,50,WHITE,NAVY,3)
 ex+=R(1250,40,320,150,SOFT,NAVY,3,14)+T(1410,100,'Use ALL 12.',32)+T(1410,150,'Every rectangle?',30,TEAL)
-exsvg=SV(1600,236,ex,'Twelve loose squares, an arrow, and an empty table with columns Length, Breadth and Perimeter')
-steps='<ol style="font-size:34px;font-weight:600;padding-left:48px;display:flex;flex-direction:column;gap:4px;margin:0"><li>Take 12 squares.</li><li>Make a rectangle using ALL 12 squares.</li><li>Record its length, breadth and perimeter in a table.</li><li>Make every different rectangle. Which has the longest perimeter?</li></ol>'
+exsvg=SV(1600,236,ex,'Twelve loose squares, an arrow, and an empty table with columns Length, Width and Perimeter')
+steps='<ol style="font-size:34px;font-weight:600;padding-left:48px;display:flex;flex-direction:column;gap:4px;margin:0"><li>Take 12 squares.</li><li>Make a rectangle using ALL 12 squares.</li><li>Record its length, width and perimeter in a table.</li><li>Make every different rectangle (there are three). Which has the longest perimeter?</li></ol>'
 body=h2('Explore: what to do')+card(chip('EXPLORE')+steps,extra='padding:22px 40px')+card(exsvg,extra='padding:14px 32px')
-put(PFX+'explore1',S_(PFX+'explore1','10–15 MIN',body,'Minutes 10 to 15. Pairs (or each child online) build rectangles with exactly 12 squares and fill in the table on a whiteboard or squared paper. Predict first: "Will every rectangle have the same perimeter?" Remind: a rectangle turned round is the same rectangle. Hints: "Put 2 squares in each row. How many rows?" "Run your finger round the edge and count every side you pass." Ready for more: "Can you make a 12-square rectangle with a perimeter of 20 cm?" (No.) Online: cut squares from squared paper, or just draw the rectangles on squared paper.'))
+put(PFX+'explore1',S_(PFX+'explore1','10–15 MIN',body,'Minutes 10 to 15. Pairs (or each child online) build rectangles with exactly 12 squares (1 by 12, 2 by 6 and 3 by 4: three rectangles) and record them in the 3-row table on a whiteboard or squared paper (about 6 minutes of pair work). Predict first: "Will every rectangle have the same perimeter?" Remind: a rectangle turned round is the same rectangle. Hints: "Put 2 squares in each row. How many rows?" "Run your finger round the edge and count every side you pass." Ready for more: "Can you make a 12-square rectangle with a perimeter of 20 cm?" (No.) Online: cut squares from squared paper, or just draw the rectangles on squared paper.'))
 
 # ================= 5. explore: talk =================
 put(PFX+'explore2',cards_slide(PFX+'explore2','15–25 MIN','Explore: talk about it',[('1.','How many different rectangles did you make with 12 squares?'),('2.','They all have the same area. Do they have the same perimeter?'),('3.','Which has the longest perimeter? Why do you think so?')],
  'Minutes 15 to 25. Let pairs keep working, then gather the group. Make a class table in order: 1 by 12, 2 by 6, 3 by 4. Answers: 1) 3 rectangles (12 by 1, 6 by 2, 4 by 3; turning one round does not make a new one). 2) No: 26 cm, 16 cm and 14 cm. Same area, different perimeters! 3) The long thin 12 by 1: when squares are in a long line, fewer of their sides touch, so more sides are on the outside. The fattest one (4 by 3, closest to a square) has the shortest perimeter. Ask: "How do you know you have them all?" (We tried 1 row, 2 rows, 3 rows; 4 rows is the 3 by 4 turned round; 5 rows does not work.) That is listing in order: today\'s first heuristic.',size=40))
 
 # ================= 6. teach 1: list in order =================
-body=h2('Same fence, different gardens')+stitle('Ravi has 20 m of fence for a rectangular garden. Each side is a whole number of metres. Which gardens can he make?')
-body+=step(1,'Half the fence goes on one length and one breadth: 20 ÷ 2 = 10 m. So length + breadth = 10.',top=330,size=34)
+body=h2('Same fence, different gardens')+stitle('Ravi has 20 m of fence. Each side is a whole number of metres.')
+body+=step(1,'Half the fence: 20 ÷ 2 = 10 m. So length + width = 10.',top=330,size=34)
 W3=[220,220,300]
-body+=trow(128,460,['Breadth','Length','Area'],W3,None,True,32)
+body+=trow(128,460,['Width','Length','Area'],W3,None,True,32)
 for k,(b_,l_) in enumerate([(1,9),(2,8),(3,7),(4,6),(5,5)]):
     body+=trow(128,532+k*72,[f'{b_} m',f'{l_} m',f'{b_*l_} m²'],W3,'rise',False,32)
-body+=soft(1010,460,782,'Step 2. List in order: breadth 1, 2, 3 … Stop at 5 and 5. After that the gardens are the same ones turned round.',32)
-body+=answer(1010,720,782,'5 gardens. Same fence, different areas. Biggest: 5 m by 5 m = 25 m²')
-put(PFX+'teach1',S_(PFX+'teach1','25–27 MIN',body,'Teach heuristic 1: make a list in order. Click 1: half the fence. Ask: "Why half?" (The fence goes length, breadth, length, breadth: one length and one breadth is half of it.) Clicks 2 to 6: build the table row by row; children call out each row. Click 7: the stop rule. Click 8: the answer. '
- 'Think-aloud: "If I guess gardens at random I might miss one or write one twice. So I start with breadth 1 and go up by 1 each time. When breadth and length are both 5 I stop, because 6 and 4 is just 4 and 6 turned round." Point at the Area column: "Same fence, but the areas go 9, 16, 21, 24, 25. The closer to a square, the bigger the area." This is a parallel example: the worksheet uses 18 m.'))
+body+=soft(1010,460,782,'Step 2. List in order: width 1, 2, 3 … Stop at 5 and 5.',32)
+body+=answer(1010,720,782,'5 gardens. Biggest: 5 m by 5 m = 25 m²')
+put(PFX+'teach1',S_(PFX+'teach1','25–27 MIN',body,'Teach heuristic 1: make a list in order. Click 1: half the fence. Ask: "Why half?" (The fence goes length, width, length, width: one length and one width is half of it.) Clicks 2 to 6: build the table row by row; children call out each row. Click 7: the stop rule. Click 8: the answer. '
+ 'Think-aloud: "If I guess gardens at random I might miss one or write one twice. So I start with width 1 and go up by 1 each time. When width and length are both 5 I stop, because 6 and 4 is just 4 and 6 turned round." Point at the Area column: "Same fence, but the areas go 9, 16, 21, 24, 25. The closer to a square, the bigger the area." This is a parallel example: the worksheet uses 18 m.'))
 
 # ================= 7. try 1 =================
 put(PFX+'try1',foot(try_slide(PFX+'try1','27–28 MIN','Your turn: list in order','Whiteboards. Halve the perimeter first.',[('a','Perimeter 12 cm, whole-cm sides. How many rectangles?','3'),('b','Which of those rectangles has the biggest area?','3 by 3: 9 cm²'),('c','A rectangle has perimeter 14 cm and area 12 cm². Its sides?','4 cm and 3 cm')],
- 'Whiteboards together, then click. a) Length + breadth = 6: 5 and 1, 4 and 2, 3 and 3. That is 3 rectangles. b) Areas 5, 8, 9 cm²: the 3 by 3 square is biggest. c) Length + breadth = 7: list 6 and 1 (area 6), 5 and 2 (10), 4 and 3 (12). So 4 cm and 3 cm. Ask a child to explain how the list helped in c.',size=36)))
+ 'Whiteboards together, then click. a) Length + width = 6: 5 and 1, 4 and 2, 3 and 3. That is 3 rectangles. b) Areas 5, 8, 9 cm²: the 3 by 3 square is biggest. c) Length + width = 7: list 6 and 1 (area 6), 5 and 2 (10), 4 and 3 (12). So 4 cm and 3 cm. Ask a child to explain how the list helped in c.',size=36)))
 
 # ================= 8. teach 2: push the steps out (grid) =================
 c=100; o=40
@@ -159,20 +159,6 @@ put(PFX+'teach2',S_(PFX+'teach2','28–30 MIN',body,'Teach heuristic 2: change t
  'Think-aloud: "Counting edges works, but it is slow and I can lose my place. When a shape goes down in steps, I can push the steps out. The pieces facing up slide up and make the top. The pieces facing right slide right and make the right side. Nothing gets longer or shorter, so the perimeter is the same as the big square." Click 4: the warning about dents (we test it in Your turn c). This is a parallel example: the worksheet staircase has 4 steps.'))
 
 # ================= 9. worked example: no grid, steps unmarked =================
-s_=50; ox=120; oy=34
-def P(x,y): return (ox+x*s_, oy+(6-y)*s_)
-pts=[(0,0),(8,0),(8,2),(5,2),(5,4),(3,4),(3,6),(0,6)]
-base=SV(580,400,PG([P(*q) for q in pts],SKY,NAVY,6)+T(ox+200,oy+300+46,'8 cm',34)+T(ox-14,oy+162,'6 cm',34,NAVY,700,'end'),'A staircase shape 8 cm wide and 6 cm tall with three steps. The step lengths are not marked.')
-up=[((0,6),(3,6)),((3,4),(5,4)),((5,2),(8,2))]; rt=[((3,6),(3,4)),((5,4),(5,2)),((8,2),(8,0))]
-ov1=SV(580,400,''.join(LN(*P(*a),*P(*b),YEL,12) for a,b in up)+LN(*P(0,6),*P(8,6),TEAL,5,'14 10')+ARW(*P(4,4.1),*P(4,5.9),RED,6,16)+ARW(*P(6.5,2.1),*P(6.5,5.9),RED,6,16),'pieces facing up slide to the top')
-ov2=SV(580,400,''.join(LN(*P(*a),*P(*b),RED,12) for a,b in rt)+LN(*P(8,6),*P(8,0),TEAL,5,'14 10')+ARW(*P(3.1,5),*P(7.9,5),RED,6,16)+ARW(*P(5.1,3),*P(7.9,3),RED,6,16),'pieces facing right slide to the right side')
-body=h2('Worked example: the steps have no numbers!')+stitle('Find the perimeter of this staircase.')
-body+=pin(128,300,580,base)
-body+=ostep(128,300,1,'Slide every piece that faces up to the top. Together they are as long as the bottom: 8 cm.',ov1,580,400,dx=620,dy=0,tw=1044)
-body+=ostep(128,300,2,'Slide every piece that faces right. Together they are as tall as the left side: 6 cm.',ov2,580,400,dx=620,dy=150,tw=1044)
-body+=answer(748,610,1044,'Perimeter = 8 + 6 + 8 + 6 = 28 cm')
-put(PFX+'we2',S_(PFX+'we2','30–31 MIN',body,'Ask first: "Can we find the perimeter when we do not know how long each step is?" Many will say no. Click 1: the yellow pieces all face up; they slide up and make a top side as long as the bottom, 8 cm. Click 2: the red pieces face right; they slide right and make a right side as tall as the left, 6 cm. Click 3: 8 + 6 + 8 + 6 = 28 cm. '
- 'Think-aloud: "I do not need the step lengths. The up-facing pieces must add up to the bottom, because the shape goes all the way across. The right-facing pieces must add up to the left side, because the shape goes all the way up." (Check: the steps are 3, 2, 3 cm across and 2, 2, 2 cm up.)'))
 
 # ================= 10. try 2 (with dent) =================
 def mini(cells,c,lab):
@@ -184,12 +170,12 @@ sqn=[(x,y) for x in range(6) for y in range(6) if not (2<=x<4 and y<2)]
 rows=[('a',mini(st7,18,'a staircase 7 wide and 4 tall'),'A staircase is 7 cm wide and 4 cm tall. Perimeter?','22 cm'),
       ('b',mini(sqn if False else sqc,20,'a 6 by 6 square with a 2 by 2 corner cut away'),'A 6 cm square has a 2 cm square cut from one corner. Perimeter?','24 cm'),
       ('c',mini(sqn,20,'a 6 by 6 square with a 2 by 2 dent cut from the middle of the top'),'Now the 2 cm square is cut from the middle of a side. Perimeter?','28 cm')]
-body=h2('Your turn: push out, but watch for dents')+stitle('Whiteboards. Draw it first.')
+body=h2('Push out the steps, but watch for dents')+stitle('Method: slide the pieces that face up to the top and the pieces that face right to the side. Draw it first.')
 for i,(l,pic,t,a) in enumerate(rows):
     tp=300+i*190
     body+=pin(128,tp,1250,f'<div style="display:flex;align-items:center;gap:28px"><p style="font-size:38px;font-weight:800;color:{TEAL};flex:none">{l}</p><div style="flex:none;width:140px;display:flex;justify-content:center">{pic}</div><p style="font-size:34px;font-weight:600;line-height:1.3">{E(t)}</p></div>',None,WHITE,20,'14px 28px')
     body+=answer(1420,tp+20,372,a)
-put(PFX+'try2',S_(PFX+'try2','31–32 MIN',body,'Whiteboards, then click. a) Push out: a 7 by 4 rectangle, 7 + 4 + 7 + 4 = 22 cm, whatever the steps are. b) A cut corner pushes out: still 6 + 6 + 6 + 6 = 24 cm (the area drops to 32 cm², but the perimeter stays the same!). c) A dent: pushing out gives 24 cm, but the dent has two walls of 2 cm inside it, so 24 + 2 + 2 = 28 cm. Ask: "Why are b and c different?" In b the cut pieces face out and slide out; in c the two walls of the dent face each other and cannot slide anywhere.'))
+put(PFX+'try2',S_(PFX+'try2','31–32 MIN',body,'Worked example and your turn in one slide (the old separate worked-example slide was merged here). First show the method with a staircase whose steps have no numbers (8 cm wide, 6 cm tall): the pieces facing up slide to the top and together are as long as the bottom, 8 cm; the pieces facing right slide to the side and together are as tall as the left side, 6 cm; perimeter 8 + 6 + 8 + 6 = 28 cm. "I do not need the step lengths." Then whiteboards, then click. a) Push out: a 7 by 4 rectangle, 7 + 4 + 7 + 4 = 22 cm, whatever the steps are. b) A cut corner pushes out: still 6 + 6 + 6 + 6 = 24 cm (the area drops to 32 cm², but the perimeter stays the same!). c) A dent: pushing out gives 24 cm, but the dent has two walls of 2 cm inside it, so 24 + 2 + 2 = 28 cm. Ask: "Why are b and c different?" In b the cut pieces face out and slide out; in c the two walls of the dent face each other and cannot slide anywhere.'))
 
 # ================= 11. teach 3: area two ways =================
 k_=45; ox=110; oy=40
@@ -224,29 +210,14 @@ body+=soft(128,760,1664,'The rectangle\'s area is only 9 × 3 = 27 cm². Same pe
 put(PFX+'teachsq',S_(PFX+'teachsq','40–41 MIN',body,'Teach before worksheet page 1 (Q3 asks the same kind of question with different numbers). Click through the steps. Ask before step 2: "What do we know about the sides of a square?" (all 4 the same). Think-aloud: "Same perimeter means the same fence. I find the fence of the rectangle, then share it equally among the 4 sides of the square." Point out the link to teach 1: the square has the bigger area.'))
 
 # ================= 15/16. page 1 =================
-put(PFX+'ws1',preview(PFX+'ws1','41–52 MIN','Worksheet page 1: with your partner',[('Q1','Area and perimeter on a grid. Then compare the four figures.'),('Q2','Every garden with an 18 m fence. Halve it, then list in order.'),('Q3','A square with the same perimeter as a rectangle.')],'Stuck? Count the edges with your pencil tip, and write cm² for area.','Minutes 41 to 52. Walk around. Ask "How do you know?" before giving any help. Q1: check children count edges, not squares, for the perimeter, and push out where they can (B is a staircase). Q2: "What do length and breadth add up to?" (9).'))
+put(PFX+'ws1',preview(PFX+'ws1','41–52 MIN','Worksheet page 1: with your partner',[('Q1','Area and perimeter on a grid. Then compare the four figures.'),('Q2','Every garden with an 18 m fence. Halve it, then list in order.'),('Q3','A square with the same perimeter as a rectangle.')],'Stuck? Count the edges with your pencil tip, and write cm² for area.','Minutes 41 to 52. Walk around. Ask "How do you know?" before giving any help. Q1: check children count edges, not squares, for the perimeter, and push out where they can (B is a staircase). Q2: "What do length and width add up to?" (9).'))
 put(PFX+'ws1ans',checkrows(PFX+'ws1ans','52–54 MIN','Page 1: check together',[('Q1','A: 8 cm², 12 cm.  B: 8 cm², 14 cm.  C: 9 cm², 12 cm.  D: 5 cm², 12 cm.'),('Q1 a, b','a) A and B: same area 8 cm².   b) A, C and D: all 12 cm.'),('Q2','8 by 1: 8 m²,  7 by 2: 14 m²,  6 by 3: 18 m²,  5 by 4: 20 m².  Biggest: 5 m by 4 m.'),('Q3','20 cm round the rectangle, so the square has 5 cm sides: 5 × 5 = 25 cm².')],
- 'Click each answer after a pair explains theirs. Q1: B pushes out to a 5 by 2 rectangle: 5 + 2 + 5 + 2 = 14. D has a dent: pushing out gives a 3 by 2 rectangle (10 cm), plus the 2 walls of the dent: 12 cm. Q1b is surprising: three very different figures, one perimeter. Q2: length + breadth = 9. Q3: 7 + 3 + 7 + 3 = 20, 20 ÷ 4 = 5.',lw=230,size=32,gap=140))
+ 'Click each answer after a pair explains theirs. Q1: B pushes out to a 5 by 2 rectangle: 5 + 2 + 5 + 2 = 14. D has a dent: pushing out gives a 3 by 2 rectangle (10 cm), plus the 2 walls of the dent: 12 cm. Q1b is surprising: three very different figures, one perimeter. Q2: length + width = 9. Q3: 7 + 3 + 7 + 3 = 20, 20 ÷ 4 = 5.',lw=230,size=32,gap=140))
 
 # ================= 17. teach before page 2: add one square =================
-c=70
-L3=[(0,0),(0,1),(1,1)]
-def panel(x,extra_cells,title,sub,col=SKY):
-    g=bgrid(x+40,10,4,3,c)+cellsfig(L3,x+40+c,10,c)
-    if extra_cells: g+=cellsfig(L3+extra_cells,x+40+c,10,c,SKY)+R(x+40+c+extra_cells[0][0]*c,10+extra_cells[0][1]*c,c,c,YEL,NAVY,6)
-    return g+T(x+180,262,title,30)+T(x+180,302,sub,28,TEAL)
-pA=SV(540,320,panel(0,None,'Start: 3 squares','perimeter 8 cm'),'An L of 3 squares, perimeter 8 cm')
-pB=SV(540,320,panel(0,[(2,1)],'Touches 1 side','8 + 4 − 2 = 10 cm'),'A new square touching 1 side: perimeter 10 cm')
-pC=SV(540,320,panel(0,[(1,0)],'Touches 2 sides','8 + 4 − 4 = 8 cm'),'A new square touching 2 sides: perimeter stays 8 cm')
-body=h2('Add one square: what happens to the perimeter?')+stitle('Each square is 1 cm. The new square is yellow.')
-body+=pin(128,290,540,pA)+pin(690,290,540,pB,'fade')+pin(1252,290,540,pC,'fade')
-body+=soft(128,640,1664,'A new square brings 4 new edges. Every side it touches hides 2 edges: one of its own and one of the shape\'s.',32)
-body+=answer(128,790,1664,'Touch 1 side: + 2 cm.   Touch 2 sides: no change.   Touch 3 sides: − 2 cm.')
-put(PFX+'teachadd',S_(PFX+'teachadd','54–56 MIN',body,'Teach before worksheet page 2 (Q6 adds one square to an L of 4 squares; this L has 3). Show panel 1 and count the edges together: 8. Click 1: the yellow square touches the L along 1 side. Count: 10. Click 2: the yellow square fills the gap and touches 2 sides: still 8, and now it is a 2 by 2 square. Click 3 and 4: the reason and the rule. '
- 'Think-aloud: "The new square has 4 edges. Where it touches the shape, that edge is inside now, and so is the shape\'s edge it touches. So each touch hides 2 edges." Ask: "What would a square that touches 3 sides do?" (take away 2). "Where would it have to go?" (into a gap with walls on 3 sides).'))
 
 # ================= 18/19. page 2 =================
-put(PFX+'ws2',preview(PFX+'ws2','56–68 MIN','Worksheet page 2: on your own',[('Q4','An L-shape: find the missing sides, then the area and the perimeter.'),('Q5','A staircase. Push the steps out.'),('Q6','If time: add one square to an L. Count the sides it touches.')],'Ready for more? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up next lesson. Q4: check the missing sides first (take away). Q6b has only one answer: ask "How many sides must the new square touch?"'))
+put(PFX+'ws2',preview(PFX+'ws2','56–68 MIN','Worksheet page 2: on your own',[('Q4','An L-shape: find the missing sides, then the area and the perimeter.'),('Q5','A staircase. Push the steps out.'),('Q6','If time: add one square to an L. Count the sides it touches.')],'Ready for more? Stretch and Challenge come next.','Children work alone (page 2 has no teaching slide in front of it for Q6; Q6 is if time). Note who needs a short catch-up next lesson. Q4: check the missing sides first (take away). Q6b has only one answer: ask "How many sides must the new square touch?"'))
 put(PFX+'ws2ans',checkrows(PFX+'ws2ans','68–70 MIN','Page 2: check together',[('Q4','Missing sides 4 cm and 3 cm.  Area 58 cm².  Perimeter 34 cm.'),('Q5','a) 10 cm²   b) 16 cm   c) perimeter stays 16 cm; area goes up by 6 cm² to 16 cm²'),('Q6','a) any square touching 1 side   b) only the gap beside the middle square   c) no')],
  'Click each answer after a child explains. Q4: 10 − 6 = 4 and 7 − 4 = 3. Area: 6 × 7 + 4 × 4 = 42 + 16 = 58, or 10 × 7 − 4 × 3 = 70 − 12 = 58. Perimeter: push the step out: 10 + 7 + 10 + 7 = 34. Q5: pushing out the steps gives the 4 by 4 square, so filling it in does not change the perimeter; 16 − 10 = 6 more squares. Q6: the only empty square touching 2 sides of the L is the one to the right of the middle square. For 8 cm the new square would need to touch 3 sides: there is no gap like that.',lw=200,size=32,gap=170))
 
@@ -256,7 +227,7 @@ put(PFX+'stretch',cards_slide(PFX+'stretch','For early finishers','Stretch',[('1
 
 # ================= 21. challenge =================
 put(PFX+'challenge',cards_slide(PFX+'challenge','65–80 MIN','Challenge',[('1.','Ali joins 5 same-size squares with sides of 2 cm, whole sides touching. What is the biggest perimeter his shape can have? The smallest?'),('2.','A rectangle 7 cm by 5 cm has a 1 cm square cut out of each of its 4 corners. Find the new area and the new perimeter.')],
- 'Use as a pair challenge or in talk time. Ask for the reason every time. Answers: 1) Biggest 24 cm (12 edges of 2 cm, e.g. a row of 5); smallest 20 cm (10 edges: a 2 by 2 square with one more square on a side). 2) Area 35 − 4 = 31 cm². Perimeter 24 cm, the same as before. More are in the question bank.',size=36))
+ 'SUPPORT FOR Q6 (if time; this replaces the old add-one-square slide), only for a child who chooses it: start with an L of 3 squares (perimeter 8 cm). A new square brings 4 new edges, and every side it touches hides 2 edges: touching 1 side adds 2 cm, touching 2 sides changes nothing, touching 3 sides takes away 2 cm. Use as a pair challenge or in talk time. Ask for the reason every time. Answers: 1) Biggest 24 cm (12 edges of 2 cm, e.g. a row of 5); smallest 20 cm (10 edges: a 2 by 2 square with one more square on a side). 2) Area 35 − 4 = 31 cm². Perimeter 24 cm, the same as before. More are in the question bank.',size=36))
 
 # ================= 22. challenge: see it =================
 g1=''.join(R(40+i*120,40,90,90,SKY,NAVY,4) for i in range(5))+T(85,165,'2 cm',26)+T(330,240,'Join whole sides.',30)+T(330,290,'Push them apart or squeeze them together.',26,TEAL)
@@ -280,11 +251,11 @@ body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p('Two gardens have the sam
 put(PFX+'talk',S_(PFX+'talk','70–80 MIN',body,'Minutes 70 to 80. Pairs talk for 2 minutes, then share. Answer: No. A 9 m by 1 m garden and a 5 m by 5 m garden both have a 20 m fence, but the areas are 9 m² and 25 m². Follow-up: "When does pushing out the steps NOT work?" (When the shape has a dent: the walls of the dent are extra.) Praise the reasons, not only the answers.'))
 
 # ================= 25. exit =================
-body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('A rectangle has a perimeter of 12 cm. Its length is 4 cm. What is its area?',46,600))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
-put(PFX+'exit',S_(PFX+'exit','80–90 MIN',body,'Minutes 80 to 90. Answer: 8 cm². Length + breadth = 12 ÷ 2 = 6, so the breadth is 2 cm; 4 × 2 = 8. Children who write 48 multiplied 12 × 4; children who write 8 cm found the breadth as 12 − 4. Extension: find all the rectangles with whole-cm sides and a perimeter of 24 cm. Which has the biggest area? (6 rectangles; 6 by 6, 36 cm²)'))
+body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('A rectangle has a perimeter of 12 cm. Its length is 4 cm. What is its area?',46,600))+card(p('Write your answer on a slip of paper. Tick it when your tutor shows the answer. Then collect your stamp in your inquiry journal.',34,400))
+put(PFX+'exit',S_(PFX+'exit','80–90 MIN',body,'Minutes 80 to 90. Answer: 8 cm². Length + width = 12 ÷ 2 = 6, so the width is 2 cm; 4 × 2 = 8. Children who write 48 multiplied 12 × 4; children who write 8 cm found the width as 12 − 4. Extension: find all the rectangles with whole-cm sides and a perimeter of 24 cm. Which has the biggest area? (6 rectangles; 6 by 6, 36 cm²)'))
 
 # ---------- write ----------
-order=['title','warm1','warm2','explore1','explore2','teach1','try1','teach2','we2','try2','teach3','key','break','teachsq','ws1','ws1ans','teachadd','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']
+order=['title','warm1','warm2','explore1','explore2','teach1','try1','teach2','try2','teach3','key','break','teachsq','ws1','ws1ans','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']
 order=[PFX+o for o in order]
 os.makedirs(os.path.join(D,'slides'),exist_ok=True)
 import p3_gifted; order[:]=p3_gifted.add(S,order,7)  # close-the-gaps: warm-up check + look-back slides

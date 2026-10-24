@@ -1,0 +1,3253 @@
+{
+  "schema_version": 1,
+  "id": "l1-t1-07",
+  "level": 1,
+  "term": 1,
+  "lesson": 7,
+  "lesson_in_term": 7,
+  "title": "Take Away, Count Up",
+  "big_idea": "The difference is a gap",
+  "child_idea": "To find how many are left, take away. To find how far apart two numbers are, count up the gap from the smaller number to the greater number.",
+  "skill": "Choosing a method",
+  "spine": {
+    "main": "draw",
+    "also": [
+      "actout"
+    ],
+    "role": "P",
+    "reason": "Bars and a number line show the gap; children also take away and count up with real bars and squares."
+  },
+  "ages": "6-8",
+  "moe": {
+    "strand": "Addition and Subtraction",
+    "topics": [
+      "Subtraction within 100 (tens and ones, no renaming)",
+      "Subtraction as a gap: how many more, how many fewer",
+      "Relation between addition and subtraction (check by adding)"
+    ],
+    "note": "Strand label for the tutor only. Term 1 goes beyond the school Primary 1 syllabus on purpose (for example two-digit minus two-digit within 100 and counting up across a ten), so Start here items such as 68 - 25 are explored in class with the kit and a worked first step before children try them alone; if a child cannot reach one after the class exploration, point them to the Think harder page. This is not a claim that the program matches or covers the school syllabus, and it must not appear on child or parent pages as MOE-aligned. Counting up as a subtraction method and the word difference sit inside the Primary 1 subtraction and inverse-relationship outcomes (docs/moe/syllabus_by_level.md, p. 31). The written renaming (borrowing) layout is not taught here."
+  },
+  "contest_moves": [
+    "difference as a gap (how many more)",
+    "the gap stays the same when both numbers move by the same amount",
+    "work backwards: a take-away story with the start unknown (T5)"
+  ],
+  "objectives": [
+    "Take away tens and then ones from a number within 100 (no renaming), and say what is left.",
+    "Check a subtraction by adding the answer back (57 - 24 = 33 because 33 + 24 = 57).",
+    "Find how many more one number is than another by counting up: to the next ten, by tens, then to the number.",
+    "Choose a method: count up when the two numbers are close together, take away when the number taken away is small or a whole number of tens."
+  ],
+  "joining_cold": {
+    "remember": [
+      "Bars and squares: a bar is a ten and a square is a one (tens and ones of a number)",
+      "Fingers to make 10: how many more to reach the next ten",
+      "Count on in tens from any number (34, 44, 54)"
+    ],
+    "assumes": "Counting in tens to 100, pairs that make 10, and adding and taking away small numbers within 10 with fingers or objects. The warm-up teaches the bars and squares again. Taking away small numbers within 10 is done with fingers or objects.",
+    "holiday_topics_revisited": [
+      "Skip counting in 10s (Count with the Frog)",
+      "Number bonds to 10 (Number Bond Inquiry)"
+    ],
+    "safe_to_miss": false,
+    "note": "Lesson 7 is one of the hardest to miss in Term 1 (plan, section 2). Lesson 6 (jumps of tens and hops of ones) helps most: a child who missed it watches the Lesson 6 recording or does its workbook pages 1 and 2 first. The mini-lesson says once that a hop is a small step of ones and a jump is a big step of tens. A child who misses Lesson 7 watches the recording and does workbook pages 1 and 2 before Lesson 8."
+  },
+  "materials": {
+    "child": [
+      "The printed workbook (pages 1 to 5) and the kit page (tens bars and ones squares), already cut out by a grown-up",
+      "A pencil, a rubber and spare paper",
+      "A pencil of a different colour for checking your own work",
+      "An envelope or small cup to keep the bars and squares in"
+    ],
+    "tutor": [
+      "A slide deck and a visible clock or a timer on your own device (the deck has no timer slide)",
+      "Your own set of tens bars and ones squares to show on camera if you wish"
+    ],
+    "kit_pages": [
+      "Tens bars (9) and ones squares (20), printed on page 6 of the workbook: the same cut-outs as Lesson 1, so keep them all term and cut a new set only if you lost some"
+    ],
+    "ruler": false,
+    "notes": "No ruler is needed. Nothing needs to be bought: the kit page is cut from the workbook. A grown-up does the cutting before the lesson; children never use scissors in the session. No matches, toothpicks or anything sharp. Small things never go near the mouth or ears."
+  },
+  "timing": {
+    "parts": [
+      {
+        "id": "opening",
+        "title": "Opening",
+        "start": 0,
+        "end": 2
+      },
+      {
+        "id": "remember",
+        "title": "Remember warm-up",
+        "start": 2,
+        "end": 8
+      },
+      {
+        "id": "sneak",
+        "title": "Sneak-peek puzzles",
+        "start": 8,
+        "end": 12
+      },
+      {
+        "id": "explore",
+        "title": "Explore",
+        "start": 12,
+        "end": 28
+      },
+      {
+        "id": "mini",
+        "title": "Mini-lesson",
+        "start": 28,
+        "end": 38
+      },
+      {
+        "id": "break",
+        "title": "Brain break",
+        "start": 38,
+        "end": 42
+      },
+      {
+        "id": "work",
+        "title": "Workbook",
+        "start": 42,
+        "end": 70
+      },
+      {
+        "id": "talk",
+        "title": "Talk time",
+        "start": 70,
+        "end": 76
+      },
+      {
+        "id": "exit",
+        "title": "Exit ticket",
+        "start": 76,
+        "end": 82
+      },
+      {
+        "id": "look",
+        "title": "Look-back",
+        "start": 82,
+        "end": 85
+      },
+      {
+        "id": "flex",
+        "title": "Flex time and goodbye",
+        "start": 85,
+        "end": 90
+      }
+    ],
+    "optional_slide": "s-opt",
+    "include_rules": false,
+    "notes": "The opening is 2 minutes (the routine was taught in Lesson 1 and is said again in one line), so Explore has 16 minutes. The last 5 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time.",
+    "skip_order": [
+      "In a slow class the workbook runs about 3 minutes over: take it from the 5-minute flex buffer and shorten choice time, not the exit ticket",
+      "optional items and extra quick questions first",
+      "then the second explore round",
+      "then any quick-fire in the mini-lesson",
+      "then the optional slide"
+    ]
+  },
+  "sneak_peek": {
+    "q1": "There are 15 stars. Take away 4 of them. How many stars are left? You may draw them.",
+    "q2": "Ali has 58 cards. Ben has 62 cards. How many more cards does Ben have? Write the answer. Write how you found it.",
+    "a1": "11",
+    "a2": "4 more. From 58 to 60 is 2, and from 60 to 62 is 2 more. 2 and 2 make 4.",
+    "val1": 11
+  },
+  "rec": {
+    "opening": {
+      "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook and your bars and squares. Pause or rewind any time.",
+      "action": "Gather your workbook, pencil, paper, and your bars and squares. Press play when ready."
+    },
+    "remember": {
+      "say": "Recording: join in! Say the numbers out loud and show your fingers. Pause if you need longer.",
+      "action": "Play along. Say and show each answer before the video does."
+    },
+    "sneak": {
+      "say": "Recording: pause now and try both puzzles on your paper. Guessing is fine. Press play for the next part.",
+      "action": "Pause. Try both puzzles on your own paper. A guess is fine."
+    },
+    "explore": {
+      "say": "Recording: pause now. Build each number with your bars and squares, then take away or add on. Press play when you have tried.",
+      "action": "Pause. Build, take away and add on with your bars and squares. Write what you find."
+    },
+    "mini": {
+      "say": "Recording: keep watching and copy the examples. Rewind if you miss a step.",
+      "action": "Watch and copy the examples. Rewind any step you missed."
+    },
+    "break": {
+      "say": "Recording: stand up and join in! Small hops to the next ten, big jumps for the tens.",
+      "action": "Stand up. Hop the ones and jump the tens."
+    },
+    "work": {
+      "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
+      "action": "Pause. Do page 1, then play to check. Then page 2. Then choose a page to try."
+    },
+    "talk": {
+      "say": "Recording: pause. Tell a grown-up your answer to the talk question, and say why.",
+      "action": "Pause. Explain your answer to someone at home, with a reason."
+    },
+    "exit": {
+      "say": "Recording: pause and do the exit ticket on your own. Then press play to check it.",
+      "action": "Pause. Do the exit ticket alone, then play to check it."
+    },
+    "look": {
+      "say": "Recording: pause and fill in your look-back box. You can pass.",
+      "action": "Pause. Fill in the look-back box, or pass."
+    },
+    "flex": {
+      "say": "Recording: well done for finishing! Show a grown-up one thing you found out.",
+      "action": "Show a grown-up your workbook and tell them one thing you found out."
+    }
+  },
+  "script": {
+    "segments": [
+      {
+        "part": "opening",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-title"
+          },
+          {
+            "k": "DO",
+            "text": "Greet the whole group warmly, before the recording starts. Check that you can see each child, or ask the grown-up.",
+            "s": 1
+          },
+          {
+            "k": "SAY",
+            "text": "Hello, inquirers! Pencil ready, bars and squares on the table. Cameras can be on or off, as you like."
+          },
+          {
+            "k": "SAY",
+            "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+          },
+          {
+            "k": "DO",
+            "text": "Start the recording now. Do not use children's first names on the recording.",
+            "s": 3
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
+          },
+          {
+            "k": "SAY",
+            "text": "Two towers of blocks stand side by side. One is taller."
+          },
+          {
+            "k": "ASK",
+            "text": "Tell your screen or your grown-up: how could we find how much taller?",
+            "resp": 10
+          },
+          {
+            "k": "SAY",
+            "text": "Today we learn two ways for that: taking away, and counting up."
+          },
+          {
+            "k": "DO",
+            "text": "Greet the whole group warmly. Do not use children's first names on the recording.",
+            "s": 8
+          },
+          {
+            "k": "NOTE",
+            "text": "Keep this to two minutes. Say the recording statement and the microphone routine in the same words every lesson, for anyone who joined late. The inquirer rules were introduced in Lesson 1; one sentence is enough for a new child: notice it, test it, explain why, mistakes help us."
+          }
+        ]
+      },
+      {
+        "part": "remember",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-rem1"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Today's tool is Draw it. Draw a picture or a bar of what the story says.",
+            "spine": "remember"
+          },
+          {
+            "k": "DO",
+            "text": "Point at the tool on page 1 of the workbook.",
+            "s": 4,
+            "spine": "remember"
+          },
+          {
+            "k": "SAY",
+            "text": "A bar is a ten. A square is a one. Look at the picture."
+          },
+          {
+            "k": "ASK",
+            "text": "How many bars, how many squares, and what number is it?",
+            "resp": 15
+          },
+          {
+            "k": "SAY",
+            "text": "Four tens and six ones. We say forty-six. A few more, using fingers or whispers."
+          },
+          {
+            "k": "ASK",
+            "text": "Two tens and seven ones. What number?",
+            "resp": 12
+          },
+          {
+            "k": "ASK",
+            "text": "Five tens and no ones?",
+            "resp": 12
+          },
+          {
+            "k": "ASK",
+            "text": "Eight tens and three ones?",
+            "resp": 12
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-rem2"
+          },
+          {
+            "k": "SAY",
+            "text": "Fingers to ten. Look at the ten-frame. I say a number. Show me with your fingers how many more make ten."
+          },
+          {
+            "k": "ASK",
+            "text": "Seven. How many more to make ten?",
+            "resp": 12
+          },
+          {
+            "k": "ASK",
+            "text": "Four?",
+            "resp": 12
+          },
+          {
+            "k": "ASK",
+            "text": "Nine?",
+            "resp": 12
+          },
+          {
+            "k": "ASK",
+            "text": "Two?",
+            "resp": 12
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-rem3"
+          },
+          {
+            "k": "SAY",
+            "text": "Now count on in tens, starting at thirty-four. Clap on every number."
+          },
+          {
+            "k": "WORK",
+            "text": "Tutor counts on in tens (34, 44, 54, 64, 74) and claps; children count quietly along. Then ask for the next ten after a few other starting numbers, such as 6 and 29, with fingers or whispers.",
+            "s": 30
+          },
+          {
+            "k": "SAY",
+            "text": "Next, how far to the next ten? It is the same trick as the fingers."
+          },
+          {
+            "k": "ASK",
+            "text": "From thirty-eight, how many more to reach forty?",
+            "resp": 12
+          },
+          {
+            "k": "ASK",
+            "text": "From forty-seven to fifty?",
+            "resp": 12
+          },
+          {
+            "k": "ASK",
+            "text": "From fifty-six to sixty?",
+            "resp": 12
+          },
+          {
+            "k": "STUCK",
+            "text": "If a child hesitates on 38 to 40 or 47 to 50, show the squares on the slide or your own kit: 38 is 3 bars and 8 squares, and 2 more squares fill the row. Do not move on until most children have answered; counting up to the next ten is the heart of the lesson."
+          },
+          {
+            "k": "NOTE",
+            "text": "Answers: 46, 27, 50, 83, then 3, 6, 1, 8, then 2, 3, 4. Children answer with fingers, thumbs or a whispered number. Nobody writes. A child new to bars and squares sees them on the first slide, then says the number."
+          }
+        ]
+      },
+      {
+        "part": "sneak",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-sneak"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked."
+          },
+          {
+            "k": "READ",
+            "text": "Puzzle one. There are 15 stars on the screen. Take away 4 of them. How many stars are left? You may draw stars on your paper."
+          },
+          {
+            "k": "WORK",
+            "text": "Children count or draw, and write how many stars are left on their own paper.",
+            "s": 45
+          },
+          {
+            "k": "READ",
+            "text": "Puzzle two. Ali has 58 cards. Ben has 62 cards. How many more cards does Ben have? Write the answer. Write how you found it."
+          },
+          {
+            "k": "WORK",
+            "text": "Children write or draw their answer.",
+            "s": 70
+          },
+          {
+            "k": "SAY",
+            "text": "Thank you. Keep your paper and your own answer: nobody shows it. We will come back to puzzle two a little later, and you can check your own thinking then."
+          },
+          {
+            "k": "NOTE",
+            "text": "Puzzle 1 answer: 11 stars. Puzzle 2 answer: 4 more (count up 58 to 60 to 62, or 62 take away 58). Look for good ideas to praise later: a child who counted on, who drew two piles, or who used the next ten. Do not write scores or keep a list."
+          }
+        ]
+      },
+      {
+        "part": "explore",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-explore1"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Today your bars and squares are the teachers. A bar is a ten and a square is a one. First we take away. Build the number I say."
+          },
+          {
+            "k": "SAY",
+            "text": "Build fifty-seven: 5 bars and 7 squares."
+          },
+          {
+            "k": "WORK",
+            "text": "Children build 57 with their kit and show a thumbs up when ready.",
+            "s": 40
+          },
+          {
+            "k": "SAY",
+            "text": "Take away 2 bars. Put them to one side."
+          },
+          {
+            "k": "WORK",
+            "text": "Children move 2 bars away.",
+            "s": 20
+          },
+          {
+            "k": "ASK",
+            "text": "What number is left on the table?",
+            "resp": 25
+          },
+          {
+            "k": "SAY",
+            "text": "Now take away 4 squares."
+          },
+          {
+            "k": "WORK",
+            "text": "Children move 4 squares away.",
+            "s": 20
+          },
+          {
+            "k": "ASK",
+            "text": "What number is left now?",
+            "resp": 25
+          },
+          {
+            "k": "SAY",
+            "text": "We took away 2 tens and then 4 ones. That is 24 altogether. Fifty-seven take away twenty-four leaves thirty-three. Tens first, then ones."
+          },
+          {
+            "k": "SAY",
+            "text": "Your turn. Build seventy-six. Take away 2 bars and 5 squares. Write what is left on your paper."
+          },
+          {
+            "k": "WORK",
+            "text": "Children build 76, take away 2 bars and 5 squares, and write the number left.",
+            "s": 80
+          },
+          {
+            "k": "ASK",
+            "text": "What is left? How did you take away?",
+            "resp": 40
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-explore2"
+          },
+          {
+            "k": "SAY",
+            "text": "New question. Ali has forty-seven stickers. Mei has fifty-two stickers. Build Ali's number. Then add pieces until you reach Mei's number."
+          },
+          {
+            "k": "WORK",
+            "text": "Children build 47, then add squares until they reach 52.",
+            "s": 70
+          },
+          {
+            "k": "ASK",
+            "text": "What is the gap between forty-seven and fifty-two? How many did you add in all?",
+            "resp": 40
+          },
+          {
+            "k": "SAY",
+            "text": "We added 3 squares to make a full row of fifty. Then 2 more squares to reach fifty-two. The gap from forty-seven to fifty-two is 5."
+          },
+          {
+            "k": "SAY",
+            "text": "One more. Build thirty-eight. Add 2 squares: now you have ten squares, so swap them for one bar. Keep adding until you reach sixty-two. Count what you add."
+          },
+          {
+            "k": "WORK",
+            "text": "Children build 38 and add squares and bars until they reach 62, counting what they add.",
+            "s": 100
+          },
+          {
+            "k": "ASK",
+            "text": "What is the gap? How far did you go from thirty-eight to sixty-two? Say it as two, twenty, two.",
+            "resp": 45
+          },
+          {
+            "k": "SAY",
+            "text": "Two squares to reach forty. Two bars to reach sixty. Two squares to reach sixty-two. That is 2, and 20, and 2: twenty-four."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-explore3"
+          },
+          {
+            "k": "ASK",
+            "text": "What did you notice? When did we take away, and when did we count up?",
+            "resp": 45
+          },
+          {
+            "k": "SAY",
+            "text": "Taking away tells us what is left. Counting up tells us how big the gap is between two numbers."
+          },
+          {
+            "k": "STUCK",
+            "text": "A child who counts the pieces left instead of the pieces added: say, this time we are starting at the smaller number and adding on. Count the pieces you put down."
+          },
+          {
+            "k": "STUCK",
+            "text": "A child with too few squares: ten squares can be swapped for a bar, so there are always enough on the kit page."
+          },
+          {
+            "k": "STUCK",
+            "text": "A child who counts the starting number (47 to 52 becomes 6): say, count the steps you take, not the number you stand on."
+          },
+          {
+            "k": "NOTE",
+            "text": "Main room only: no breakout rooms. Pairs are optional: a grown-up may check the building. Take away: tens first, then ones. Gap: next ten, then tens, then ones. Answers: 37, 33, 51, 5, 24."
+          }
+        ]
+      },
+      {
+        "part": "mini",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-m1"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Look. Fifty-seven is 5 tens and 7 ones. Take away 24. First the tens: fifty-seven take away twenty is thirty-seven. Then the ones: thirty-seven take away 4 is thirty-three."
+          },
+          {
+            "k": "ASK",
+            "text": "When we took away tens, which digit changed, the tens or the ones?",
+            "resp": 15
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m2"
+          },
+          {
+            "k": "SAY",
+            "text": "Subtraction has a friend: addition. If thirty-three and twenty-four make fifty-seven, then we can check. Add the answer back."
+          },
+          {
+            "k": "ASK",
+            "text": "If 33 + 24 makes 57, what is 57 take away 33?",
+            "resp": 15
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m3"
+          },
+          {
+            "k": "SAY",
+            "text": "Now a different question. Ali has 47 and Mei has 52. How many more does Mei have? The difference is the gap between the two numbers. Count up from 47 to the next ten, then on to 52."
+          },
+          {
+            "k": "ASK",
+            "text": "Your turn to count up. What is the gap between forty-six and fifty-three?",
+            "resp": 20
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m4"
+          },
+          {
+            "k": "SAY",
+            "text": "A longer gap: from 38 to 62. A small step of ones is a hop. A big step of tens is a jump. Hop to the next ten. Jump by tens. Hop to the number. Two, then twenty, then two."
+          },
+          {
+            "k": "ASK",
+            "text": "Your turn. How far is it from twenty-nine to fifty-four? Hop, jump, hop.",
+            "resp": 30
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m5"
+          },
+          {
+            "k": "READ",
+            "text": "Your turn. Count up to find 81 take away 78. Take away to find 65 take away 23. Write both answers on your paper."
+          },
+          {
+            "k": "WORK",
+            "text": "Children write two answers. Wait until most have stopped writing.",
+            "s": 75
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m5a"
+          },
+          {
+            "k": "READ",
+            "text": "Three, and forty-two. 78 to 80 is 2, and 80 to 81 is 1. 65 take away 20 is 45, and 45 take away 3 is 42."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m6"
+          },
+          {
+            "k": "SAY",
+            "text": "Two ways. Count up when the two numbers are close together. Take away when you take away a small number or whole tens. Both ways give the same answer."
+          },
+          {
+            "k": "ASK",
+            "text": "Which way for 62 take away 59, and which for 62 take away 20?",
+            "resp": 25
+          },
+          {
+            "k": "STUCK",
+            "text": "If a child counts down by ones for 81 - 78, that works too: say, nice, and now let us see if counting up from 78 is shorter."
+          },
+          {
+            "k": "NOTE",
+            "text": "Key words every time: take away (what is left), count up (the gap), difference (the gap between two numbers). Do not teach the written borrowing layout. Do not teach regrouping beyond swapping ten squares for one bar, which the kit needs: the Think harder page uses counting up instead."
+          }
+        ]
+      },
+      {
+        "part": "break",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-break"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Stand up and get a sip of water. We hop to the next ten, then jump the tens. I say two numbers. You hop and jump the gap."
+          },
+          {
+            "k": "WORK",
+            "text": "Call 8 to 30, 25 to 40, 47 to 52, 36 to 71. Children hop the ones to the next ten, jump the tens, hop the last ones. Say the counts clearly; children count quietly along.",
+            "s": 150
+          }
+        ]
+      },
+      {
+        "part": "work",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-ws1"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "READ",
+            "text": "Page 1, Start here. Question 1: here is 68 as bars and squares. Cross out 2 bars. How many tens and ones are left? Then sixty-eight take away twenty. Question 2: subtract. Fifty-seven take away twenty; fifty-seven take away four; eighty-six take away thirty; eighty-six take away five. Question 3: find sixty-eight take away twenty-five. Sixty-eight take away twenty; then forty-eight take away five."
+          },
+          {
+            "k": "WORK",
+            "text": "Page 1, questions 1 to 3. Tutor looks around the gallery, asks how do you know. Wait 10 seconds before helping. Move to the answer slide only when most children have stopped writing; anyone not finished keeps going and checks later.",
+            "s": 520
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-ws1ans"
+          },
+          {
+            "k": "READ",
+            "text": "Answers for page 1. If you are still working, carry on and check later. Four tens and eight ones; forty-eight. Thirty-seven, fifty-three, fifty-six, eighty-one. Forty-eight, then forty-three. Check your own page in another colour."
+          },
+          {
+            "k": "SAY",
+            "text": "After question 3 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-ws2"
+          },
+          {
+            "k": "READ",
+            "text": "Page 2. Question 4: subtract, then add to check. Forty-six take away twelve; thirty-four plus twelve. Question 5: Mei has 45 stickers and gives away 13. How many are left? Draw a bar for each ten and a square for each one. Question 6: Kumar says fifty-nine take away twenty is fifty-seven. Is Kumar right? Circle Yes or No. Then write fifty-nine take away twenty. Question 7: a bus has 64 seats. 21 children are sitting. How many seats are empty?"
+          },
+          {
+            "k": "WORK",
+            "text": "Page 2, questions 4 to 7. Move to the answer slide only when most children have stopped writing.",
+            "s": 540
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-ws2ans"
+          },
+          {
+            "k": "READ",
+            "text": "Answers for page 2. If you are still working, carry on and check later. Thirty-four and forty-six. Thirty-two. No: thirty-nine. Forty-three seats are empty."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-choice"
+          },
+          {
+            "k": "SAY",
+            "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time."
+          },
+          {
+            "k": "WORK",
+            "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page.",
+            "s": 240
+          },
+          {
+            "k": "STUCK",
+            "text": "Q1: ask how many bars are left after you cross out 2. Q5: draw bars as tall rectangles and squares as small boxes. Q6: build 59 with the kit, take away 2 bars, and say what is left. Q7: ask, what does empty mean? Which way will you use?"
+          },
+          {
+            "k": "STUCK",
+            "text": "Think harder T1 to T4: ask, what is the next ten after the smaller number? How far is that? Then how many tens? Then the last hop. T3: draw two towers, one taller than the other, and add 10 to both. T5: count up from the buns that are left to the buns the baker started with: to the next ten, then the tens, then the ones."
+          },
+          {
+            "k": "STUCK",
+            "text": "A child who is still stuck ticks I am still stuck on their own look-back page. The grown-up may photograph that page and send it to the business WhatsApp after class. Open the next lesson with one short catch-up question for the whole group. Never a private message to a child, never a private room."
+          },
+          {
+            "k": "NOTE",
+            "text": "Think harder is for count-up in a new setting. Go further asks which way is quicker, and why. Do not announce who is on which page. Pairs are never split unless both children agree."
+          }
+        ]
+      },
+      {
+        "part": "talk",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-talk"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "READ",
+            "text": "Ravi finds 52 take away 49 by taking away 40, then 9. Siti counts up from 49. They both get the same answer. Whose way is quicker? Why?"
+          },
+          {
+            "k": "WORK",
+            "text": "Think for a moment. Use your bars and squares or your fingers if you like.",
+            "s": 40
+          },
+          {
+            "k": "WORK",
+            "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
+            "s": 60
+          },
+          {
+            "k": "ASK",
+            "text": "Who would like to share? Volunteers first. A pass is always fine.",
+            "resp": 90
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-sneakans"
+          },
+          {
+            "k": "SAY",
+            "text": "Remember puzzle two? Ali has 58 cards and Ben has 62. The gap is 4: from fifty-eight to sixty is 2, and 2 more is sixty-two."
+          },
+          {
+            "k": "ASK",
+            "text": "Did anyone change their mind about puzzle two while we worked? You can just nod.",
+            "resp": 20
+          },
+          {
+            "k": "ASK",
+            "text": "Where did you use Draw it today?",
+            "resp": 10,
+            "spine": "talk"
+          },
+          {
+            "k": "NOTE",
+            "text": "Listen for the tool being named, not the answer. Volunteers first, a pass is always fine.",
+            "spine": "talk"
+          },
+          {
+            "k": "NOTE",
+            "text": "Model answer: both answers are 3. Siti is quicker: 49 to 50 is 1, and 50 to 52 is 2. Ravi has to take away 40 and then 9 from 12, which is harder. When two numbers are close, counting up is short. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
+          }
+        ]
+      },
+      {
+        "part": "exit",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-exit"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5. I will read them to you."
+          },
+          {
+            "k": "READ",
+            "text": "Question 1: subtract. Fifty-eight take away twenty-four. Question 2: fill in the blanks. Part a: fifty-seven plus what makes sixty-two? Part b: sixty-two take away fifty-seven. Question 3: find ninety take away eighty-seven. Circle the way you used: take away or count up."
+          },
+          {
+            "k": "WORK",
+            "text": "Children answer E1 to E3 on their own.",
+            "s": 150
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-exitans"
+          },
+          {
+            "k": "READ",
+            "text": "Thirty-four. Five, and five. Three. Counting up from eighty-seven to ninety is short, because the numbers are close."
+          },
+          {
+            "k": "SAY",
+            "text": "Tick the ones you got right, in a different colour. Well done. Show your ticket to a grown-up."
+          },
+          {
+            "k": "ASK",
+            "text": "Show me with your fingers how many you got right: three, two, one, or none yet. A pass is fine.",
+            "resp": 15
+          },
+          {
+            "k": "NOTE",
+            "text": "Look at the room as a whole, not at any one tile. If many children show one or two fingers, spend two minutes at the start of Lesson 8 on taking away and counting up, in the open session, no names. Do not write a child's name next to an answer and do not read out anyone's result."
+          }
+        ]
+      },
+      {
+        "part": "look",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-look"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+            "spine": "look"
+          },
+          {
+            "k": "WORK",
+            "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+            "s": 100,
+            "spine": "look"
+          }
+        ]
+      },
+      {
+        "part": "flex",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-end"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Well done, inquirers. Next lesson is Balance and Swap. You need about 30 small things such as buttons or pasta, two plates or bowls, a pencil and paper. Goodbye, and thank you to the grown-ups."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-opt",
+            "optional": true
+          },
+          {
+            "k": "SAY",
+            "text": "Optional, only if you are on time: the gap from 58 to 62 is 4. What is the gap from 59 to 63? And from 68 to 72? What do you notice?",
+            "optional": true
+          },
+          {
+            "k": "WORK",
+            "text": "Short think time, then take two answers.",
+            "s": 90,
+            "optional": true
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-menu",
+            "optional": true
+          },
+          {
+            "k": "SAY",
+            "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
+            "optional": true
+          },
+          {
+            "k": "NOTE",
+            "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: 4 and 4; when both numbers move up by the same amount, the gap stays the same. If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+          }
+        ]
+      }
+    ]
+  },
+  "slides": [
+    {
+      "id": "s-title",
+      "part": "opening",
+      "kind": "title",
+      "title": "Take Away, Count Up",
+      "subtitle": "Subtraction: how many are left, and how far apart",
+      "blocks": [
+        {
+          "t": "card",
+          "head": "TODAY WE WILL",
+          "items": [
+            "Take away tens and ones, and count up to find a gap."
+          ]
+        }
+      ],
+      "note": "Lesson 7 of Term 1, 90 minutes. Objective: take away tens and ones within 100, count up to find the gap between two numbers, and choose the quicker way. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 28, mini-lesson 28 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Nobody is told which page they should be on. Tell the group the lesson is recorded (the tutor, the screen and any voice that is not muted) and that a child may keep the microphone and camera off.",
+      "mascot": {
+        "size": "l",
+        "say": "Hi, I'm Mi. Let's notice, test and explain why!"
+      }
+    },
+    {
+      "id": "s-rem1",
+      "part": "remember",
+      "kind": "light",
+      "title": "Warm-up: bars and squares",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "A bar is a ten. A square is a one."
+        },
+        {
+          "t": "visual",
+          "type": "bundles",
+          "tens": 4,
+          "ones": 6,
+          "style": "kit",
+          "size": "s",
+          "label": "How many bars? How many squares?"
+        },
+        {
+          "t": "numrow",
+          "items": [
+            "2 tens 7 ones",
+            "5 tens",
+            "8 tens 3 ones"
+          ]
+        }
+      ],
+      "note": "Say: a bar is a ten, a square is a one. Children say the number for 4 bars and 6 squares, then the quick-fire three. Answers: 46, 27, 50, 83. This re-teaches tens and ones so a child who has not met them can join. No writing, no marks.",
+      "mascot": {
+        "size": "s",
+        "say": "Clap along with me!"
+      }
+    },
+    {
+      "id": "s-rem2",
+      "part": "remember",
+      "kind": "light",
+      "title": "Fingers to ten",
+      "blocks": [
+        {
+          "t": "visual",
+          "type": "ten_frame",
+          "filled": 7,
+          "extra": 0
+        },
+        {
+          "t": "p",
+          "text": "Look at the ten-frame: 7 counters. How many more make 10?"
+        },
+        {
+          "t": "numrow",
+          "items": [
+            7,
+            4,
+            9,
+            2
+          ]
+        }
+      ],
+      "note": "Say each number; children show on their fingers how many more make ten. Answers: 7 needs 3, 4 needs 6, 9 needs 1, 2 needs 8. Fingers or a thumbs up are fine. No writing, no marks. This is the number-bond idea you will use to hop to the next ten."
+    },
+    {
+      "id": "s-rem3",
+      "part": "remember",
+      "kind": "light",
+      "title": "Count on to the next ten",
+      "blocks": [
+        {
+          "t": "p",
+          "text": "Start at 34. Count on in tens. Clap each one."
+        },
+        {
+          "t": "p",
+          "text": "How many more from 38 to reach 40?"
+        },
+        {
+          "t": "numrow",
+          "items": [
+            38,
+            "?",
+            40
+          ]
+        }
+      ],
+      "note": "Count on in tens from 34 (34, 44, 54, 64, 74) with a clap on each number. Then ask the next-ten questions: 38 to 40 is 2, 47 to 50 is 3, 56 to 60 is 4. Use the squares and a full row if a child is unsure. This is the hop you will use all lesson."
+    },
+    {
+      "id": "s-sneak",
+      "part": "sneak",
+      "kind": "light",
+      "title": "Sneak-peek puzzles",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Ideas we have not learnt yet. A guess is a great start. Nobody is marked."
+        },
+        {
+          "t": "cols",
+          "cols": [
+            [
+              {
+                "t": "card",
+                "head": "PUZZLE 1: anyone can try",
+                "items": [
+                  "There are 15 stars. Take away 4 of them.",
+                  "How many stars are left? You may draw them."
+                ]
+              },
+              {
+                "t": "visual",
+                "type": "scatter",
+                "n": 15,
+                "seed": 5
+              }
+            ],
+            [
+              {
+                "t": "card",
+                "head": "PUZZLE 2: think",
+                "items": [
+                  "Ali has 58 cards.",
+                  "Ben has 62 cards.",
+                  "How many more cards does Ben have?",
+                  "Write the answer. Write how you found it."
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "note": "Puzzle 1 (15 stars, cross out 4) is an access question: any child can try it by crossing out and counting. Puzzle 2 is a thinking question on the lesson idea, the gap between two numbers. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper up to the camera: children keep their own answer and check it at Talk time. No private chat and no board in front of the group. Answers: 11; 4 more. Do not reveal Puzzle 2 until Talk time. Do not write scores."
+    },
+    {
+      "id": "s-explore1",
+      "part": "explore",
+      "kind": "light",
+      "title": "Explore: take away",
+      "blocks": [
+        {
+          "t": "list",
+          "ordered": true,
+          "items": [
+            "Build 57: 5 bars and 7 squares.",
+            "Take away 2 bars. What is left?",
+            "Take away 4 squares. What is left?",
+            "Say: 57 take away 24 leaves ___."
+          ]
+        },
+        {
+          "t": "card",
+          "head": "YOUR TURN",
+          "items": [
+            "Build 76. Take away 2 bars and 5 squares."
+          ]
+        }
+      ],
+      "note": "Round 1, about 6 minutes. Objects first, no writing yet except the final number. Children build 57, take away 2 bars (37), then 4 squares (33). Then they build 76 and take away 2 bars and 5 squares (51). Ask how they took away. Key idea: tens first, then ones. A child with few squares can swap ten squares for a bar; the kit page has enough."
+    },
+    {
+      "id": "s-explore2",
+      "part": "explore",
+      "kind": "light",
+      "title": "Explore: how far to go?",
+      "blocks": [
+        {
+          "t": "p",
+          "text": "Build the smaller number. Add pieces until you reach the greater number."
+        },
+        {
+          "t": "cols",
+          "cols": [
+            [
+              {
+                "t": "visual",
+                "type": "bundles",
+                "tens": 4,
+                "ones": 7,
+                "style": "kit",
+                "size": "s",
+                "label": "Ali 47"
+              }
+            ],
+            [
+              {
+                "t": "visual",
+                "type": "bundles",
+                "tens": 5,
+                "ones": 2,
+                "style": "kit",
+                "size": "s",
+                "label": "Mei 52"
+              }
+            ]
+          ]
+        },
+        {
+          "t": "numrow",
+          "items": [
+            38,
+            62
+          ]
+        }
+      ],
+      "note": "Round 2, about 7 minutes, main room. Ten squares make one bar: swap them. Ali has 47 and Mei has 52: children add 3 squares to make 50, then 2 more to make 52, so the gap is 5. Then 38 to 62: 2 squares to make 40, 2 bars to make 60, 2 squares to make 62: 2 + 20 + 2 = 24. Children count what they add, not what they have. Ask them to say it as hop, jump, hop."
+    },
+    {
+      "id": "s-explore3",
+      "part": "explore",
+      "kind": "light",
+      "title": "What did we notice?",
+      "blocks": [
+        {
+          "t": "list",
+          "items": [
+            "When did we take away?",
+            "When did we count up?",
+            "What does the gap tell us?"
+          ]
+        }
+      ],
+      "note": "Take one or two answers from volunteers. Key idea: taking away tells us what is left; counting up tells us how far apart two numbers are, the difference. Repeat a child's answer in your own words so the recording picks it up. Both ways use the same bars and squares."
+    },
+    {
+      "id": "s-m1",
+      "part": "mini",
+      "kind": "light",
+      "title": "Take away tens, then ones",
+      "blocks": [
+        {
+          "t": "cols",
+          "cols": [
+            [
+              {
+                "t": "visual",
+                "type": "bundles",
+                "tens": 5,
+                "ones": 7,
+                "style": "kit",
+                "size": "s",
+                "label": "57"
+              }
+            ],
+            [
+              {
+                "t": "visual",
+                "type": "bundles",
+                "tens": 3,
+                "ones": 3,
+                "style": "kit",
+                "size": "s",
+                "label": "33"
+              }
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "text": "57 - 20 = 37. Then 37 - 4 = 33."
+        }
+      ],
+      "note": "Think aloud: 57 is 5 tens and 7 ones. Take away 2 tens first: 37. Then take away 4 ones: 33. The picture on the right is what is left. Ask: which digit changes when we take away tens? Answer: the tens digit. Keep it to about a minute; children have just done this with the kit."
+    },
+    {
+      "id": "s-m2",
+      "part": "mini",
+      "kind": "light",
+      "title": "Check by adding",
+      "blocks": [
+        {
+          "t": "table",
+          "header": true,
+          "rows": [
+            [
+              "Take away",
+              "Add to check"
+            ],
+            [
+              "57 - 24 = 33",
+              "33 + 24 = 57"
+            ]
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Subtraction and addition are friends."
+        }
+      ],
+      "note": "Show that the answer plus the number taken away gives back the start. 33 + 24 = 57, so 57 - 24 = 33 is right, and also 57 - 33 = 24. Ask: if 33 + 24 makes 57, what is 57 take away 33? Answer: 24. This is the relation between addition and subtraction, with no new vocabulary."
+    },
+    {
+      "id": "s-m3",
+      "part": "mini",
+      "kind": "light",
+      "title": "How many more? The gap",
+      "blocks": [
+        {
+          "t": "cols",
+          "cols": [
+            [
+              {
+                "t": "visual",
+                "type": "bundles",
+                "tens": 4,
+                "ones": 7,
+                "style": "kit",
+                "size": "s",
+                "label": "Ali 47"
+              }
+            ],
+            [
+              {
+                "t": "visual",
+                "type": "bundles",
+                "tens": 5,
+                "ones": 2,
+                "style": "kit",
+                "size": "s",
+                "label": "Mei 52"
+              }
+            ]
+          ]
+        },
+        {
+          "t": "numrow",
+          "items": [
+            "47",
+            "+?",
+            "50",
+            "+?",
+            "52"
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Count up to the next ten, then on."
+        }
+      ],
+      "note": "The difference between two numbers is the gap. Start at the smaller number and count up to the greater: 47 to 50 is 3, 50 to 52 is 2, so the gap is 5. The picture shows the steps without the answer. Ask the new question: what is the gap between 46 and 53? Answer: 7 (46 to 50 is 4, 50 to 53 is 3). Say it as how many more."
+    },
+    {
+      "id": "s-m4",
+      "part": "mini",
+      "kind": "light",
+      "title": "Count up in jumps",
+      "blocks": [
+        {
+          "t": "numrow",
+          "items": [
+            "38",
+            "+2",
+            "40",
+            "+20",
+            "60",
+            "+2",
+            "62"
+          ]
+        },
+        {
+          "t": "p",
+          "text": "Hop to the next ten. Jump by tens. Hop to the number."
+        },
+        {
+          "t": "chip",
+          "text": "2 + 20 + 2 = 24"
+        }
+      ],
+      "note": "Think aloud: from 38 hop 2 to reach 40; jump 2 tens to reach 60 (that is 20); hop 2 to reach 62. Add the hops and the jump: 2 + 20 + 2 = 24. Then ask the new question: how far is it from 29 to 54? Answer: 25 (hop 1 to 30, jump 20 to 50, hop 4 to 54). This is the same count as the explore with the bars and squares."
+    },
+    {
+      "id": "s-m5",
+      "part": "mini",
+      "kind": "light",
+      "title": "Your turn",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Write on your paper. About 2 minutes"
+        },
+        {
+          "t": "p",
+          "text": "Count up: 81 - 78 = ___"
+        },
+        {
+          "t": "p",
+          "text": "Take away: 65 - 23 = ___"
+        }
+      ],
+      "note": "Each child writes on their own paper. Wait until most children have stopped writing. Do not ask children to hold boards up in front of the group. The first is a short gap, so counting up is quick; the second is a small number of tens and ones, so taking away is quick."
+    },
+    {
+      "id": "s-m5a",
+      "part": "mini",
+      "kind": "light",
+      "title": "Check: your turn",
+      "blocks": [
+        {
+          "t": "answer",
+          "text": "81 - 78 = 3: 78 to 80 is 2, then 1 more."
+        },
+        {
+          "t": "answer",
+          "text": "65 - 23 = 42: 65 - 20 = 45, then 45 - 3 = 42."
+        }
+      ],
+      "note": "Answers: 3 and 42. Read each answer aloud so a child watching the recording can mark their own work. Never ask a child to show a wrong answer to the group."
+    },
+    {
+      "id": "s-m6",
+      "part": "mini",
+      "kind": "light",
+      "title": "Choose your way",
+      "blocks": [
+        {
+          "t": "table",
+          "header": true,
+          "rows": [
+            [
+              "Way",
+              "It is quick when"
+            ],
+            [
+              "Count up",
+              "the two numbers are close together"
+            ],
+            [
+              "Take away",
+              "you take away a small number or whole tens"
+            ]
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Both ways give the same answer."
+        }
+      ],
+      "note": "Ask: which way for 62 take away 59, and which for 62 take away 20? Answer: count up for the first (3), take away for the second (42). This is the rule of thumb the Go further page asks children to explain. Both ways give the same answer; choosing is about being quick and being right."
+    },
+    {
+      "id": "s-break",
+      "part": "break",
+      "kind": "dark",
+      "title": "Hop to the ten, jump the tens",
+      "blocks": [
+        {
+          "t": "p",
+          "text": "Small hops to the next ten. Big jumps for the tens."
+        },
+        {
+          "t": "p",
+          "text": "8 to 30"
+        },
+        {
+          "t": "p",
+          "text": "25 to 40"
+        },
+        {
+          "t": "p",
+          "text": "47 to 52"
+        },
+        {
+          "t": "p",
+          "text": "36 to 71"
+        },
+        {
+          "t": "p",
+          "text": "Sip some water."
+        }
+      ],
+      "note": "Four minutes. Stand up on camera. Call each pair of numbers and have children hop the ones to the next ten, jump the tens, then hop the last ones; count the hops and jumps aloud. Gaps: 22, 15, 5, 35. No equipment. Keep it gentle for small spaces."
+    },
+    {
+      "id": "s-ws1",
+      "part": "work",
+      "kind": "light",
+      "title": "Workbook page 1: Start here",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Questions 1 to 3. About 8 minutes"
+        },
+        {
+          "t": "qs",
+          "ids": [
+            "S1",
+            "S2",
+            "S3"
+          ],
+          "short": false
+        }
+      ],
+      "note": "Read questions 1 to 3 aloud with their numbers. Children work on their own; the tutor looks around the gallery and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder."
+    },
+    {
+      "id": "s-ws1ans",
+      "part": "work",
+      "kind": "light",
+      "title": "Check page 1",
+      "blocks": [
+        {
+          "t": "answers",
+          "ids": [
+            "S1",
+            "S2",
+            "S3"
+          ]
+        }
+      ],
+      "note": "Read each answer aloud. Children mark their own page in a different colour. Never ask a child to show a wrong answer to the group."
+    },
+    {
+      "id": "s-ws2",
+      "part": "work",
+      "kind": "light",
+      "title": "Workbook page 2: Start here",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Questions 4 to 7. About 9 minutes"
+        },
+        {
+          "t": "qs",
+          "ids": [
+            "S4",
+            "S5",
+            "S6",
+            "S7"
+          ],
+          "short": false
+        }
+      ],
+      "note": "Read question 6 aloud: it is a spot-the-mistake. Read question 7 aloud as well. Children may draw bars and squares to decide. Question 4 asks them to check by adding."
+    },
+    {
+      "id": "s-ws2ans",
+      "part": "work",
+      "kind": "light",
+      "title": "Check page 2",
+      "blocks": [
+        {
+          "t": "answers",
+          "ids": [
+            "S4",
+            "S5",
+            "S6",
+            "S7"
+          ]
+        }
+      ],
+      "note": "Read each answer aloud so a child watching the recording can mark their own work. Question 6 answer: no, 39, because Kumar took away 2 ones instead of 2 tens. Never ask a child to show a wrong answer to the group."
+    },
+    {
+      "id": "s-choice",
+      "part": "work",
+      "kind": "light",
+      "title": "Choose your next page",
+      "blocks": [
+        {
+          "t": "table",
+          "header": true,
+          "rows": [
+            [
+              "Page",
+              "What it is"
+            ],
+            [
+              "Think harder (page 3)",
+              "Count up in a new setting"
+            ],
+            [
+              "Go further (page 4)",
+              "Which way is quicker?"
+            ],
+            [
+              "Investigation (page 5)",
+              "When is counting up quicker?"
+            ],
+            [
+              "Check",
+              "Finish and check your own work"
+            ]
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Everyone may choose. You can swap at any time."
+        }
+      ],
+      "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 4 minutes."
+    },
+    {
+      "id": "s-talk",
+      "part": "talk",
+      "kind": "light",
+      "title": "Talk and explain",
+      "blocks": [
+        {
+          "t": "card",
+          "head": "RAVI AND SITI",
+          "items": [
+            "Ravi finds 52 - 49 by taking away 40, then 9.",
+            "Siti counts up from 49."
+          ]
+        },
+        {
+          "t": "p",
+          "text": "Whose way is quicker? Why?"
+        },
+        {
+          "t": "chip",
+          "text": "I think ... because ..."
+        }
+      ],
+      "note": "One minute of talk to the grown-up next to you, or to your screen. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: both get 3. Siti is quicker, because 49 and 52 are close: 49 to 50 is 1, and 50 to 52 is 2. Repeat each child's answer in your own words for the recording."
+    },
+    {
+      "id": "s-sneakans",
+      "part": "talk",
+      "kind": "light",
+      "title": "Back to the sneak-peek",
+      "blocks": [
+        {
+          "t": "numrow",
+          "items": [
+            "58",
+            "+2",
+            "60",
+            "+2",
+            "62"
+          ]
+        },
+        {
+          "t": "answer",
+          "text": "Ben has 4 more cards than Ali."
+        }
+      ],
+      "note": "Reveal puzzle 2 now. Say: some of you may have found a good reason. Do not read out anyone's earlier answer. The gap from 58 to 62 is 2 and 2, which is 4. Some children will have taken away 62 - 58 or counted on one by one: all are good."
+    },
+    {
+      "id": "s-exit",
+      "part": "exit",
+      "kind": "light",
+      "title": "Exit ticket",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "On your own. No looking back. About 3 minutes"
+        },
+        {
+          "t": "qs",
+          "ids": [
+            "E1",
+            "E2",
+            "E3"
+          ],
+          "short": false
+        }
+      ],
+      "note": "Children answer on page 5. Read the three questions aloud. Nobody holds the ticket up to the camera: children check their own ticket on the next slide and show fingers for how many they got right."
+    },
+    {
+      "id": "s-exitans",
+      "part": "exit",
+      "kind": "light",
+      "title": "Check the exit ticket",
+      "blocks": [
+        {
+          "t": "answers",
+          "ids": [
+            "E1",
+            "E2",
+            "E3"
+          ]
+        }
+      ],
+      "note": "Read each answer aloud. Children check their own ticket in a different colour."
+    },
+    {
+      "id": "s-look",
+      "part": "look",
+      "kind": "lookback",
+      "title": "Look-back",
+      "blocks": [
+        {
+          "t": "lookback"
+        }
+      ],
+      "note": "Three minutes. Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, the grown-up may photograph the page and send it to the business WhatsApp after class; open the next lesson with one catch-up question for the whole group. Never a direct message.",
+      "mascot": {
+        "size": "s",
+        "say": "Take your time. You can pass."
+      }
+    },
+    {
+      "id": "s-end",
+      "part": "flex",
+      "kind": "dark",
+      "title": "Well done, inquirers!",
+      "blocks": [
+        {
+          "t": "p",
+          "text": "Show a grown-up one thing you found out today."
+        },
+        {
+          "t": "card",
+          "head": "NEXT LESSON",
+          "items": [
+            "Balance and Swap",
+            "Bring about 30 small things, two plates or bowls, a pencil and paper."
+          ]
+        }
+      ],
+      "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. If the whole class is ahead, show the optional menu slide and use the Spare-time menu from the tutor guide.",
+      "mascot": {
+        "size": "l",
+        "say": "Great thinking today!"
+      }
+    },
+    {
+      "id": "s-opt",
+      "part": "flex",
+      "kind": "light",
+      "optional": true,
+      "title": "Go further: what if?",
+      "blocks": [
+        {
+          "t": "p",
+          "text": "The gap from 58 to 62 is 4."
+        },
+        {
+          "t": "p",
+          "text": "What is the gap from 59 to 63? And from 68 to 72?"
+        },
+        {
+          "t": "numrow",
+          "items": [
+            "58",
+            "62",
+            "59",
+            "63",
+            "68",
+            "72"
+          ]
+        }
+      ],
+      "note": "Optional, only if you are on time. Answer: 4 and 4. Both numbers move up by the same amount, so the gap stays the same. Take two answers and move on. This is the same idea as Think harder question 3."
+    },
+    {
+      "id": "s-menu",
+      "part": "flex",
+      "kind": "light",
+      "optional": true,
+      "title": "If we have time: pick one",
+      "blocks": [
+        {
+          "t": "table",
+          "header": true,
+          "rows": [
+            [
+              "Activity",
+              "What we do"
+            ],
+            [
+              "Is it always true?",
+              "Add 10 to both numbers. Does the gap stay the same?"
+            ],
+            [
+              "Make a puzzle",
+              "Write a gap story for your grown-up"
+            ],
+            [
+              "Teach it back",
+              "Show how to count up from 58 to 62"
+            ]
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Optional. Everyone may join."
+        }
+      ],
+      "note": "Optional Spare-time menu, used only if the whole class is ahead. Pick one or two activities (3 to 5 minutes each); full tutor lines and answers are in the tutor guide. Never start new content and never name who is ahead. Slow down with how do you know rather than rushing on. These minutes come from the flex buffer and are not part of the 90-minute sum."
+    }
+  ],
+  "tiers": {
+    "start": [
+      {
+        "id": "S1",
+        "page": 1,
+        "tier": "start",
+        "text": "Here is 68 as bars and squares. Cross out 2 bars. Then fill in the blanks.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "___ tens and ___ ones are left.",
+            "ans": "4 tens, 8 ones",
+            "val": [
+              4,
+              8
+            ]
+          },
+          {
+            "l": "b",
+            "text": "68 - 20 = ___",
+            "ans": "48",
+            "val": 48
+          }
+        ],
+        "visual": {
+          "type": "bundles",
+          "tens": 6,
+          "ones": 8,
+          "style": "kit"
+        },
+        "answer": "4 tens and 8 ones are left; 68 - 20 = 48",
+        "val": [
+          4,
+          8,
+          48
+        ],
+        "hint": "A bar is a ten. Cross out 2 bars, then count the bars and squares that are left.",
+        "solution": "68 is 6 tens and 8 ones. Take away 2 tens: 4 tens and 8 ones are left. That is 48. The ones did not change.",
+        "mistakes": [
+          "Crossing out 2 squares instead of 2 bars (66).",
+          "Writing 84 or 4 + 8 = 12."
+        ],
+        "mins": 2.5,
+        "lines": 0
+      },
+      {
+        "id": "S2",
+        "page": 1,
+        "tier": "start",
+        "text": "Subtract. Use your kit if you like.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "57 - 20 = ___",
+            "ans": "37",
+            "val": 37
+          },
+          {
+            "l": "b",
+            "text": "57 - 4 = ___",
+            "ans": "53",
+            "val": 53
+          },
+          {
+            "l": "c",
+            "text": "86 - 30 = ___",
+            "ans": "56",
+            "val": 56
+          },
+          {
+            "l": "d",
+            "text": "86 - 5 = ___",
+            "ans": "81",
+            "val": 81
+          }
+        ],
+        "answer": "37, 53, 56, 81",
+        "val": [
+          37,
+          53,
+          56,
+          81
+        ],
+        "hint": "Taking away tens changes the tens digit. Taking away ones changes the ones digit.",
+        "solution": "(a) 5 tens take away 2 tens is 3 tens: 37. (b) 7 ones take away 4 ones is 3 ones: 53. (c) 8 tens take away 3 tens is 5 tens: 56. (d) 6 ones take away 5 is 1: 81.",
+        "mistakes": [
+          "Changing the wrong digit (57 - 20 = 55).",
+          "Taking away from both digits."
+        ],
+        "mins": 3,
+        "lines": 0
+      },
+      {
+        "id": "S3",
+        "page": 1,
+        "tier": "start",
+        "text": "Find 68 - 25. Fill in the blanks.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "68 - 20 = ___",
+            "ans": "48",
+            "val": 48
+          },
+          {
+            "l": "b",
+            "text": "48 - 5 = ___",
+            "ans": "43",
+            "val": 43
+          }
+        ],
+        "answer": "48, then 43",
+        "val": [
+          48,
+          43
+        ],
+        "hint": "25 is 2 tens and 5 ones. Take away the 2 tens first. Then take away the 5 ones from what is left.",
+        "solution": "68 take away 20 is 48. Then 48 take away 5 is 43. So 68 - 25 = 43.",
+        "mistakes": [
+          "Taking away 25 as 2 + 5 = 7 (61).",
+          "Forgetting to start part (b) from 48."
+        ],
+        "mins": 2.5,
+        "lines": 0
+      },
+      {
+        "id": "S4",
+        "page": 2,
+        "tier": "start",
+        "text": "Subtract. Then add to check.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "46 - 12 = ___",
+            "ans": "34",
+            "val": 34
+          },
+          {
+            "l": "b",
+            "text": "34 + 12 = ___",
+            "ans": "46",
+            "val": 46
+          }
+        ],
+        "answer": "34, then 46 (the same as the start, so it checks)",
+        "val": [
+          34,
+          46
+        ],
+        "hint": "Take away 1 ten, then 2 ones. To check, add 12 to your answer. Do you get 46 back?",
+        "solution": "46 take away 10 is 36, and 36 take away 2 is 34. Check: 34 + 12 = 46, the number we started with. So 46 - 12 = 34 is right.",
+        "mistakes": [
+          "Not adding back the number taken away (adding 46 + 12).",
+          "Writing 58 for the check."
+        ],
+        "mins": 2.5,
+        "lines": 0,
+        "visual": {
+          "type": "bundles",
+          "tens": 4,
+          "ones": 6,
+          "style": "kit"
+        }
+      },
+      {
+        "id": "S5",
+        "page": 2,
+        "tier": "start",
+        "text": "Mei has 45 stickers. She gives away 13. How many stickers are left? Draw a bar for each ten and a square for each one.",
+        "draw": true,
+        "parts": [
+          {
+            "l": "",
+            "text": "Mei has ___ stickers left.",
+            "ans": "32",
+            "val": 32
+          }
+        ],
+        "answer": "32 (4 bars and 5 squares drawn; 1 bar and 3 squares crossed out)",
+        "val": [
+          32
+        ],
+        "hint": "Draw 4 bars and 5 squares. Cross out 1 bar and 3 squares. Count what is left.",
+        "solution": "45 is 4 tens and 5 ones. 13 is 1 ten and 3 ones. 45 take away 10 is 35. 35 take away 3 is 32. So Mei has 32 left.",
+        "mistakes": [
+          "Crossing out 13 squares.",
+          "Writing 58 (adding instead of taking away)."
+        ],
+        "mins": 3.5,
+        "lines": 0,
+        "draw_strokes": 14
+      },
+      {
+        "id": "S6",
+        "page": 2,
+        "tier": "start",
+        "text": "Kumar says 59 - 20 = 57.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "Is Kumar right? Circle Yes or No.",
+            "ans": "No",
+            "val": "no"
+          },
+          {
+            "l": "b",
+            "text": "59 - 20 = ___",
+            "ans": "39",
+            "val": 39
+          }
+        ],
+        "answer": "No. 39. He took away 2 ones instead of 2 tens (57 is 59 - 2).",
+        "val": [
+          39
+        ],
+        "hint": "Build 59 with your kit. Take away 2 bars, not 2 squares. What is left?",
+        "solution": "59 is 5 tens and 9 ones. Take away 2 tens: 3 tens and 9 ones, which is 39. Kumar took away 2 ones, so he got 57.",
+        "mistakes": [
+          "Saying he is right.",
+          "Writing 79 (adding 20)."
+        ],
+        "mins": 2,
+        "lines": 0
+      },
+      {
+        "id": "S7",
+        "page": 2,
+        "tier": "start",
+        "text": "A bus has 64 seats. 21 children are sitting. How many seats are empty?",
+        "parts": [
+          {
+            "l": "",
+            "text": "___ seats are empty.",
+            "ans": "43",
+            "val": 43
+          }
+        ],
+        "answer": "43 seats",
+        "val": [
+          43
+        ],
+        "hint": "Empty seats are the seats left when we take away the seats that have a child. Take away the 2 tens first.",
+        "solution": "64 take away 20 is 44. Then 44 take away 1 is 43. So 43 seats are empty.",
+        "mistakes": [
+          "Adding 64 + 21 = 85.",
+          "Taking away only 2 or only 1."
+        ],
+        "mins": 3,
+        "lines": 1
+      }
+    ],
+    "think": [
+      {
+        "id": "T1",
+        "page": 3,
+        "tier": "think",
+        "text": "Mei has 62 beads. Ravi has 38 beads. Find how many more beads Mei has than Ravi.",
+        "parts": [
+          {
+            "l": "",
+            "text": "Mei has ___ more beads.",
+            "ans": "24",
+            "val": 24
+          }
+        ],
+        "answer": "24 more beads (38 to 40 is 2, 40 to 60 is 20, 60 to 62 is 2)",
+        "val": [
+          24
+        ],
+        "hint": "38 needs 2 more to reach 40. Then jump by tens to 60. Then hop to 62. Add up the hops and the jump.",
+        "solution": "38 to 40 is 2. 40 to 60 is 20. 60 to 62 is 2. The whole gap is 2 + 20 + 2 = 24. Check: 38 + 24 = 62.",
+        "mistakes": [
+          "Forgetting that two tens is 20 (writing 2).",
+          "Writing 62 - 38 as 36 or 34.",
+          "Subtracting the smaller digit from the larger in each column (62 - 38 = 36)."
+        ],
+        "mins": 4,
+        "lines": 1,
+        "visual": {
+          "type": "number_line",
+          "start": 30,
+          "end": 70,
+          "step": 2,
+          "label_every": 20,
+          "marks": [
+            38,
+            62
+          ],
+          "highlight": [
+            38,
+            62
+          ]
+        }
+      },
+      {
+        "id": "T2",
+        "page": 3,
+        "tier": "think",
+        "text": "Find 83 - 77. Show how you found it.",
+        "parts": [
+          {
+            "l": "",
+            "text": "83 - 77 = ___",
+            "ans": "6",
+            "val": 6
+          }
+        ],
+        "answer": "6 (77 to 80 is 3, 80 to 83 is 3)",
+        "val": [
+          6
+        ],
+        "hint": "What is the next ten after 77? How far is it? Then how far from that ten to 83?",
+        "solution": "77 to 80 is 3. 80 to 83 is 3. The gap is 3 + 3 = 6. Check: 77 + 6 = 83.",
+        "mistakes": [
+          "Writing only one hop (3).",
+          "Taking away 83 - 7 = 76.",
+          "Subtracting the smaller digit from the larger in each column (83 - 77 = 14)."
+        ],
+        "mins": 3,
+        "lines": 2
+      },
+      {
+        "id": "T3",
+        "page": 3,
+        "tier": "think",
+        "text": "Ali has 24 stickers and Ben has 31 stickers. Then each child gets 10 more stickers. Find how many more stickers Ben has than Ali now.",
+        "parts": [
+          {
+            "l": "",
+            "text": "Ben has ___ more stickers.",
+            "ans": "7",
+            "val": 7
+          }
+        ],
+        "answer": "7 more (the gap stays the same: 34 and 41, and 41 - 34 = 7)",
+        "val": [
+          7
+        ],
+        "hint": "Find how many stickers each child has now. Or draw two towers and add the same 10 to both.",
+        "solution": "Ali now has 34 and Ben has 41. The gap from 34 to 41 is 7. It was 7 before too (24 to 31), because both children got the same 10 more.",
+        "mistakes": [
+          "Writing 17 (7 + 10).",
+          "Writing 41 (Ben's number)."
+        ],
+        "mins": 5,
+        "lines": 1
+      },
+      {
+        "id": "T4",
+        "page": 3,
+        "tier": "think",
+        "text": "A book has 71 pages. Ravi has read 46 pages. How many pages are left?",
+        "parts": [
+          {
+            "l": "",
+            "text": "___ pages are left.",
+            "ans": "25",
+            "val": 25
+          }
+        ],
+        "answer": "25 pages (46 to 50 is 4, 50 to 70 is 20, 70 to 71 is 1)",
+        "val": [
+          25
+        ],
+        "hint": "Start at 46. Hop to the next ten, jump by tens, then hop to 71. Add up all the hops and jumps.",
+        "solution": "46 to 50 is 4. 50 to 70 is 20. 70 to 71 is 1. The gap is 4 + 20 + 1 = 25. Check: 46 + 25 = 71.",
+        "mistakes": [
+          "Adding 71 + 46.",
+          "Forgetting the last hop of 1 (24).",
+          "Subtracting the smaller digit from the larger in each column (71 - 46 = 35)."
+        ],
+        "mins": 4,
+        "lines": 2
+      },
+      {
+        "id": "T5",
+        "page": 3,
+        "tier": "think",
+        "text": "A baker bakes 82 buns. At closing time 57 buns are left. How many buns were sold?",
+        "parts": [
+          {
+            "l": "",
+            "text": "___ buns were sold.",
+            "ans": "25",
+            "val": 25
+          }
+        ],
+        "answer": "25 buns (57 to 60 is 3, 60 to 80 is 20, 80 to 82 is 2: 3 + 20 + 2 = 25)",
+        "val": [
+          25
+        ],
+        "hint": "Count up from the buns that are left to the buns the baker started with. Hop to the next ten first.",
+        "solution": "The buns sold are the gap between 57 and 82. Count up: 57 to 60 is 3, 60 to 80 is 20, 80 to 82 is 2. 3 + 20 + 2 = 25. Check: 57 + 25 = 82.",
+        "mistakes": [
+          "Adding: 82 + 57 = 139.",
+          "Taking the smaller digit from the bigger one in each place (8 - 5 = 3 tens, 7 - 2 = 5 ones) and writing 35.",
+          "Stopping after the first hop (3) or the tens jump (20)."
+        ],
+        "mins": 4,
+        "lines": 2
+      }
+    ],
+    "go": [
+      {
+        "id": "G1",
+        "page": 4,
+        "tier": "go",
+        "text": "Fill in the blanks. Circle the quicker way for each.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "71 - 68 = ___",
+            "ans": "3",
+            "val": 3,
+            "choices": [
+              "take away",
+              "count up"
+            ]
+          },
+          {
+            "l": "b",
+            "text": "71 - 20 = ___",
+            "ans": "51",
+            "val": 51,
+            "choices": [
+              "take away",
+              "count up"
+            ]
+          },
+          {
+            "l": "c",
+            "text": "I know because ___.",
+            "ans": "",
+            "val": "open"
+          }
+        ],
+        "answer": "71 - 68 = 3 (count up: the numbers are close). 71 - 20 = 51 (take away: 2 tens).",
+        "val": [
+          3,
+          51
+        ],
+        "hint": "For 71 - 68, how far is it from 68 up to 71? For 71 - 20, what happens to the tens digit?",
+        "solution": "71 - 68: count up. 68 to 70 is 2 and 70 to 71 is 1, so 3. The numbers are close, so the gap is short. 71 - 20: take away 2 tens to get 5 tens and 1 one, which is 51. Counting up 20 would be a long way.",
+        "mistakes": [
+          "Taking away 68 from 71 one at a time.",
+          "Counting up from 20 to 71 (too long)."
+        ],
+        "mins": 6,
+        "lines": 2
+      },
+      {
+        "id": "G2",
+        "page": 4,
+        "tier": "go",
+        "text": "A crate has 100 eggs. Ali sells 64 of them. How many eggs are left? Find the answer two ways.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "By taking away: ___ eggs are left.",
+            "ans": "36",
+            "val": 36
+          },
+          {
+            "l": "b",
+            "text": "By counting up: ___ eggs are left.",
+            "ans": "36",
+            "val": 36
+          },
+          {
+            "l": "c",
+            "text": "Do the two answers match? Circle Yes or No.",
+            "ans": "Yes",
+            "val": "yes"
+          }
+        ],
+        "answer": "36 eggs. Take away: 100 - 60 = 40, then 40 - 4 = 36. Count up: 64 to 70 is 6, then 70 to 100 is 30, so 36. They match.",
+        "val": [
+          36
+        ],
+        "hint": "Take away: take away the 6 tens, then the 4 ones. Count up: hop from 64 to 70, then jump by tens to 100. You can draw a number line from 64 to 100.",
+        "solution": "Take away: 100 - 60 = 40, and 40 - 4 = 36. Count up: 64 to 70 is 6, and 70 to 100 is 30, so 6 + 30 = 36. Both ways give 36. Check: 64 + 36 = 100.",
+        "mistakes": [
+          "Writing 164 (adding).",
+          "Writing 40 (forgetting to take away the 4 ones)."
+        ],
+        "mins": 6,
+        "lines": 2
+      },
+      {
+        "id": "G3",
+        "page": 4,
+        "tier": "go",
+        "text": "Mei says 83 - 47 and 86 - 50 have the same answer.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "83 - 47 = ___",
+            "ans": "36",
+            "val": 36
+          },
+          {
+            "l": "b",
+            "text": "86 - 50 = ___",
+            "ans": "36",
+            "val": 36
+          },
+          {
+            "l": "c",
+            "text": "Is Mei correct? Circle Yes or No.",
+            "ans": "Yes",
+            "val": "yes"
+          },
+          {
+            "l": "d",
+            "text": "I know because ___.",
+            "ans": "",
+            "val": "open"
+          }
+        ],
+        "answer": "Yes. Both are 36. Both numbers go up by 3, so the gap does not change.",
+        "val": [
+          36,
+          36
+        ],
+        "hint": "Count up from 47 to 83 for the first. Take away 5 tens for the second. Then look at how 83 and 47 changed.",
+        "solution": "83 - 47: 47 to 50 is 3, 50 to 80 is 30, 80 to 83 is 3, so 36. 86 - 50 = 36. 83 became 86 and 47 became 50: both went up by 3, so the gap between them stayed 36.",
+        "mistakes": [
+          "Finding only one answer.",
+          "Saying the answers differ because the numbers differ."
+        ],
+        "mins": 6,
+        "lines": 1
+      }
+    ],
+    "investigation": {
+      "id": "I1",
+      "page": 5,
+      "tier": "investigation",
+      "title": "When is counting up quicker?",
+      "first": "Find 52 - 49 and 52 - 10. Try take away and count up for each one. Which way is quicker for each?",
+      "text": "Write two subtractions where counting up is quicker, and two where taking away is quicker. Many answers are right. Then finish: Counting up is quicker when ___.",
+      "lines": 4,
+      "answer": "Counting up is quicker when the two numbers are close together, so the gap is short (52 - 49 is 3). Taking away is quicker when the number taken away is small or a whole number of tens (52 - 10 is 42). If the numbers are far apart and the small number is awkward, both ways take longer.",
+      "val": [
+        "close together: count up",
+        "small or whole tens: take away"
+      ],
+      "look_for": "A child who tries several pairs, says what they notice about how far apart the numbers are, and gives a reason. Accept any clear rule that matches examples. A child who also checks by adding is doing well.",
+      "mistakes": [
+        "Choosing a way without looking at how far apart the numbers are.",
+        "Saying one way is always quicker (it depends on the numbers)."
+      ],
+      "mins": 8
+    }
+  },
+  "talk": {
+    "question": "Ravi finds 52 - 49 by taking away 40, then 9. Siti counts up from 49. They both get the same answer. Whose way is quicker? Why?",
+    "starter": "I think ... because ...",
+    "answer": "Siti's way is quicker. 49 to 50 is 1, and 50 to 52 is 2, so the answer is 3. The numbers are close together, so the gap is short. Ravi's way gets 3 too, but he has to take away 9 from 12.",
+    "look_for": "A reason about the numbers being close, with the hops (1 and 2). Praise any clear reason; both ways are right."
+  },
+  "exit": [
+    {
+      "id": "E1",
+      "text": "Subtract.",
+      "parts": [
+        {
+          "l": "",
+          "text": "58 - 24 = ___",
+          "ans": "34",
+          "val": 34
+        }
+      ],
+      "answer": "34",
+      "val": [
+        34
+      ],
+      "solution": "58 take away 20 is 38, and 38 take away 4 is 34.",
+      "mistakes": [
+        "Writing 82 (adding).",
+        "Writing 36 (took away 2 and 2)."
+      ]
+    },
+    {
+      "id": "E2",
+      "text": "Fill in the blanks.",
+      "parts": [
+        {
+          "l": "a",
+          "text": "57 + ___ = 62",
+          "ans": "5",
+          "val": 5
+        },
+        {
+          "l": "b",
+          "text": "62 - 57 = ___",
+          "ans": "5",
+          "val": 5
+        }
+      ],
+      "answer": "5, then 5",
+      "val": [
+        5,
+        5
+      ],
+      "solution": "57 to 60 is 3, and 60 to 62 is 2. That is 5. So 62 - 57 = 5.",
+      "mistakes": [
+        "Writing only the first hop (3).",
+        "Writing 15 (62 - 47)."
+      ]
+    },
+    {
+      "id": "E3",
+      "text": "Find 90 - 87. Circle the way you used: take away or count up.",
+      "parts": [
+        {
+          "l": "",
+          "text": "90 - 87 = ___",
+          "ans": "3",
+          "val": 3
+        }
+      ],
+      "answer": "3. Either way is fine; counting up from 87 to 90 is short because the numbers are close together.",
+      "val": [
+        3
+      ],
+      "solution": "87 to 90 is 3, so 90 - 87 = 3. Counting up is quick because the numbers are close.",
+      "mistakes": [
+        "Taking away 87 from 90 one at a time.",
+        "Writing 13."
+      ],
+      "choices": [
+        "take away",
+        "count up"
+      ]
+    }
+  ],
+  "look_back": {
+    "hardest": [
+      "taking away tens and ones",
+      "hopping to the next ten",
+      "counting up in jumps",
+      "choosing a way",
+      "something else"
+    ],
+    "helped": [
+      "bars and squares",
+      "drawing it",
+      "trying again",
+      "I asked for help",
+      "I was not stuck"
+    ],
+    "next": [
+      "drawing it",
+      "using objects",
+      "checking my answer",
+      "asking a question"
+    ]
+  },
+  "home_practice": [
+    {
+      "id": "H1",
+      "tier": "start",
+      "text": "A jar has 78 sweets. Ali eats 20 of them. How many sweets are left?",
+      "answer": "58",
+      "val": 58,
+      "solution": "78 is 7 tens and 8 ones. Take away 2 tens: 5 tens and 8 ones, which is 58."
+    },
+    {
+      "id": "H2",
+      "tier": "start",
+      "text": "Subtract: 76 - 43 = ___. Check: ___ + 43 = 76.",
+      "answer": "33; 33 + 43 = 76",
+      "val": [
+        33,
+        76
+      ],
+      "solution": "76 take away 40 is 36, and 36 take away 3 is 33. Check: 33 + 43 = 76."
+    },
+    {
+      "id": "H3",
+      "tier": "start",
+      "text": "Subtract: 89 - 36 = ___",
+      "answer": "53",
+      "val": 53,
+      "solution": "89 take away 30 is 59. 59 take away 6 is 53."
+    },
+    {
+      "id": "H4",
+      "tier": "think",
+      "text": "Ben has 47 cards. Ali has 71 cards. How many more cards does Ali have than Ben?",
+      "answer": "Ali has 24 more (47 to 50 is 3, 50 to 70 is 20, 70 to 71 is 1)",
+      "val": 24,
+      "solution": "47 to 50 is 3. 50 to 70 is 20. 70 to 71 is 1. 3 + 20 + 1 = 24.",
+      "visual": {
+        "type": "jump_lines",
+        "start": 44,
+        "end": 74,
+        "step": 1,
+        "label_every": 10,
+        "rows": [
+          {
+            "points": [
+              47,
+              71
+            ]
+          }
+        ],
+        "room": false,
+        "hw": 120,
+        "below": true
+      }
+    },
+    {
+      "id": "H5",
+      "tier": "go",
+      "text": "Pick two page numbers between 20 and 99, such as 38 and 71. How many pages from one to the other? Find it two ways: take away, then count up. Do the two ways match? Circle Yes or No.",
+      "answer": "For 38 and 71: 71 - 38 = 33, and counting up gives 2 + 30 + 1 = 33. Both ways match.",
+      "val": "open",
+      "solution": "A grown-up checks that the child adds the hops and jumps, then adds the answer back to the smaller page number to get the greater one."
+    }
+  ],
+  "online_practice": {
+    "key": "t1l07",
+    "title": "Take Away, Count Up",
+    "topic": "Subtraction within 100: take away and count up",
+    "items": [
+      {
+        "id": "c1",
+        "tier": "core",
+        "type": "number",
+        "q": "What is 58 - 20?",
+        "answer": 38,
+        "hint": "Take away 2 tens. The ones stay the same.",
+        "steps": [
+          "58 is 5 tens and 8 ones.",
+          "Take away 2 tens: 3 tens and 8 ones.",
+          "58 - 20 = 38."
+        ],
+        "slips": [
+          {
+            "a": [
+              56
+            ],
+            "say": "56 is what you get if you take away 2 ones. Take away 2 tens (20) instead."
+          },
+          {
+            "a": [
+              78
+            ],
+            "say": "78 is 58 + 20. We take away."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "a": [
+              47,
+              58,
+              63,
+              76,
+              84,
+              95
+            ],
+            "t": [
+              2,
+              3,
+              4
+            ]
+          },
+          "derive": {
+            "b": "t*10"
+          },
+          "q": "What is {a} - {b}?",
+          "answer": "a-b",
+          "hint": "Take away {t} tens. The ones stay the same.",
+          "steps": [
+            "{a} is made of tens and ones.",
+            "Take away {t} tens, which is {b}.",
+            "The answer is {ans}."
+          ]
+        }
+      },
+      {
+        "id": "c2",
+        "tier": "core",
+        "type": "number",
+        "q": "What is 76 - 3?",
+        "answer": 73,
+        "hint": "Take away 3 ones. The tens stay the same.",
+        "steps": [
+          "76 is 7 tens and 6 ones.",
+          "Take away 3 ones: 7 tens and 3 ones.",
+          "76 - 3 = 73."
+        ],
+        "slips": [
+          {
+            "a": [
+              79
+            ],
+            "say": "79 is 76 + 3. We take away."
+          },
+          {
+            "a": [
+              46
+            ],
+            "say": "46 is what you get if you take away 3 tens. Take away 3 ones instead."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "a": [
+              47,
+              58,
+              63,
+              76,
+              89,
+              95
+            ],
+            "o": [
+              2,
+              3
+            ]
+          },
+          "q": "What is {a} - {o}?",
+          "answer": "a-o",
+          "hint": "Take away {o} ones. The tens stay the same.",
+          "steps": [
+            "{a} is made of tens and ones.",
+            "Take away {o} ones. The tens do not change.",
+            "The answer is {ans}."
+          ]
+        }
+      },
+      {
+        "id": "c3",
+        "tier": "core",
+        "type": "number",
+        "q": "What is 68 - 25?",
+        "answer": 43,
+        "hint": "25 is 2 tens and 5 ones. Take away 2 tens first, then 5 ones.",
+        "steps": [
+          "68 - 20 = 48.",
+          "48 - 5 = 43.",
+          "68 - 25 = 43."
+        ],
+        "slips": [
+          {
+            "a": [
+              93
+            ],
+            "say": "93 is 68 + 25. We take away."
+          },
+          {
+            "a": [
+              53
+            ],
+            "say": "53 is 68 - 15. Take away 2 tens, not 1."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "ta": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "oa": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "tb": [
+              2,
+              3,
+              4
+            ],
+            "ob": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "derive": {
+            "a": "ta*10+oa",
+            "b": "tb*10+ob",
+            "x": "tb*10"
+          },
+          "q": "What is {a} - {b}?",
+          "answer": "a-b",
+          "hint": "{b} is {tb} tens and {ob} ones. Take away the tens first, then the ones.",
+          "steps": [
+            "Take away {tb} tens: {a} - {x}.",
+            "Then take away {ob} ones.",
+            "The answer is {ans}."
+          ]
+        }
+      },
+      {
+        "id": "c4",
+        "tier": "core",
+        "type": "number",
+        "q": "A bus has 86 seats. 32 children are sitting. How many seats are empty?",
+        "answer": 54,
+        "hint": "Empty seats are what is left when we take away the seats that have a child.",
+        "steps": [
+          "86 - 30 = 56.",
+          "56 - 2 = 54.",
+          "54 seats are empty."
+        ],
+        "slips": [
+          {
+            "a": [
+              118
+            ],
+            "say": "118 is 86 + 32. Empty means we take away."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "a": [
+              64,
+              75,
+              86,
+              97
+            ],
+            "b": [
+              21,
+              32,
+              43,
+              14
+            ]
+          },
+          "q": "A bus has {a} seats. {b} children are sitting. How many seats are empty?",
+          "answer": "a-b",
+          "hint": "Empty seats are what is left when we take away the seats that have a child.",
+          "steps": [
+            "Take away the tens of {b} from {a}.",
+            "Then take away the ones.",
+            "{ans} seats are empty."
+          ]
+        },
+        "fig": {
+          "type": "bar_model",
+          "bars": [
+            {
+              "name": "Seats",
+              "len": "{a}",
+              "segments": [
+                {
+                  "v": "{b}",
+                  "text": "{b}"
+                },
+                {
+                  "v": "{=a-b}",
+                  "text": "?"
+                }
+              ]
+            }
+          ],
+          "brace": {
+            "text": "{a}",
+            "over": 0
+          },
+          "size": "m"
+        },
+        "fig_base": {
+          "type": "bar_model",
+          "bars": [
+            {
+              "name": "Seats",
+              "len": 64,
+              "segments": [
+                {
+                  "v": 21,
+                  "text": 21
+                },
+                {
+                  "v": 43,
+                  "text": "?"
+                }
+              ]
+            }
+          ],
+          "brace": {
+            "text": 64,
+            "over": 0
+          },
+          "size": "m"
+        }
+      },
+      {
+        "id": "c5",
+        "tier": "core",
+        "type": "choice",
+        "q": "57 - 24 = 33. Which addition checks it?",
+        "options": [
+          "33 + 24 = 57",
+          "57 + 24 = 81",
+          "33 + 57 = 90",
+          "24 - 33 = 9"
+        ],
+        "answer": "33 + 24 = 57",
+        "hint": "To check a take away, add the answer back to the number you took away. Do you get the start?",
+        "steps": [
+          "The answer is 33. The number taken away is 24.",
+          "Add them: 33 + 24 = 57.",
+          "57 is the number we started with, so the take away is right."
+        ],
+        "slips": [
+          {
+            "a": [
+              "57 + 24 = 81"
+            ],
+            "say": "57 + 24 starts from the big number. Add the answer 33 to the 24 instead."
+          }
+        ]
+      },
+      {
+        "id": "t1",
+        "tier": "stretch",
+        "type": "number",
+        "q": "Ben has 38 stickers. Mei has 62 stickers. How many more stickers does Mei have than Ben?",
+        "answer": 24,
+        "easier": "c4",
+        "hint": "Count up from 38: hop to the next ten, jump by tens, hop to 62.",
+        "steps": [
+          "38 to 40 is 2.",
+          "40 to 60 is 20, and 60 to 62 is 2.",
+          "2 + 20 + 2 = 24."
+        ],
+        "slips": [
+          {
+            "a": [
+              100
+            ],
+            "say": "100 is 38 + 62. We want the gap between them."
+          },
+          {
+            "a": [
+              36
+            ],
+            "say": "36 does not count the 2 tens jump. 40 to 60 is 20."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "x": [
+              28,
+              38,
+              47,
+              56,
+              65,
+              74
+            ],
+            "g": [
+              12,
+              23,
+              24,
+              25
+            ]
+          },
+          "derive": {
+            "y": "x+g"
+          },
+          "q": "Ben has {x} stickers. Mei has {y} stickers. How many more stickers does Mei have than Ben?",
+          "answer": "y-x",
+          "hint": "Count up from {x}: hop to the next ten, jump by tens, hop to {y}.",
+          "steps": [
+            "Start at {x}. Count up to the next ten.",
+            "Jump by tens, then hop to {y}.",
+            "Add the hops and jumps: the gap is {ans}."
+          ]
+        }
+      },
+      {
+        "id": "t2",
+        "tier": "stretch",
+        "type": "number",
+        "q": "Find 62 - 58.",
+        "answer": 4,
+        "easier": "c2",
+        "hint": "What is the next ten after 58? How far is it? Then how far to 62?",
+        "steps": [
+          "58 to 60 is 2.",
+          "60 to 62 is 2.",
+          "2 + 2 = 4, so 62 - 58 = 4."
+        ],
+        "slips": [
+          {
+            "a": [
+              120
+            ],
+            "say": "120 is 62 + 58. We want the gap."
+          },
+          {
+            "a": [
+              14
+            ],
+            "say": "14 is 62 - 48. Count up from 58 to 62."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "b": [
+              29,
+              47,
+              58,
+              66,
+              75,
+              88
+            ],
+            "g": [
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          "derive": {
+            "a": "b+g"
+          },
+          "q": "Find {a} - {b}.",
+          "answer": "a-b",
+          "hint": "What is the next ten after {b}? How far is it? Then how far to {a}?",
+          "steps": [
+            "Hop from {b} to the next ten.",
+            "Then hop on to {a}.",
+            "Add the hops: {ans}."
+          ]
+        }
+      },
+      {
+        "id": "t3",
+        "tier": "stretch",
+        "type": "number",
+        "q": "Ali has 24 stickers and Ben has 31 stickers. Then each child gets 10 more stickers. Find how many more stickers Ben has than Ali now.",
+        "answer": 7,
+        "easier": "c1",
+        "hint": "Find each child's new number. Or think: both got the same 10 more.",
+        "steps": [
+          "Ali now has 34. Ben now has 41.",
+          "The gap from 34 to 41 is 7.",
+          "The gap was 7 before, because both got the same amount."
+        ],
+        "slips": [
+          {
+            "a": [
+              17
+            ],
+            "say": "17 is 7 + 10. Both children get 10, so the gap does not change."
+          },
+          {
+            "a": [
+              41
+            ],
+            "say": "41 is Ben's number now. We want how many MORE than Ali."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "a": [
+              14,
+              21,
+              24,
+              33
+            ],
+            "g": [
+              5,
+              6,
+              7,
+              8
+            ],
+            "c": [
+              10,
+              20
+            ]
+          },
+          "derive": {
+            "b": "a+g"
+          },
+          "q": "Ali has {a} stickers and Ben has {b} stickers. Then each child gets {c} more stickers. Find how many more stickers Ben has than Ali now.",
+          "answer": "(b+c)-(a+c)",
+          "hint": "Find each child's new number. Or think: both got the same {c} more.",
+          "steps": [
+            "Add {c} to both numbers.",
+            "Find the gap between the two new numbers.",
+            "The gap is {ans}."
+          ]
+        }
+      },
+      {
+        "id": "t4",
+        "tier": "stretch",
+        "type": "choice",
+        "q": "To find 82 - 79, which way is quickest?",
+        "options": [
+          "Take away 7 tens, then take away 9 ones",
+          "Count up from 79 to 82",
+          "Add 82 and 79 together"
+        ],
+        "answer": "Count up from 79 to 82",
+        "easier": "c1",
+        "hint": "Look at the two numbers. Are they close together or far apart?",
+        "steps": [
+          "79 and 82 are close together.",
+          "79 to 80 is 1, and 80 to 82 is 2.",
+          "Counting up gives 3 in two short steps, so it is quickest."
+        ],
+        "slips": [
+          {
+            "a": [
+              "Add 82 and 79 together"
+            ],
+            "say": "Adding gives a greater number. We want the gap between them."
+          }
+        ]
+      },
+      {
+        "id": "g1",
+        "tier": "challenge",
+        "type": "number",
+        "q": "A crate has 100 eggs. Ali sells 64 of them. How many eggs are left?",
+        "answer": 36,
+        "easier": "t2",
+        "hint": "Count up from 64: hop to the next ten, then jump by tens to 100.",
+        "steps": [
+          "64 to 70 is 6.",
+          "70 to 100 is 30.",
+          "6 + 30 = 36 eggs are left."
+        ],
+        "slips": [
+          {
+            "a": [
+              164
+            ],
+            "say": "164 is 100 + 64. Ali sold some eggs, so take away."
+          },
+          {
+            "a": [
+              46
+            ],
+            "say": "46 is 100 - 54. Count up from 64."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "n": [
+              36,
+              48,
+              57,
+              64,
+              73,
+              86
+            ]
+          },
+          "q": "A crate has 100 eggs. Ali sells {n} of them. How many eggs are left?",
+          "answer": "100-n",
+          "hint": "Count up from {n}: hop to the next ten, then jump by tens to 100.",
+          "steps": [
+            "Hop from {n} to the next ten.",
+            "Then jump by tens to 100.",
+            "Add the hop and the jumps: {ans} eggs are left."
+          ]
+        }
+      },
+      {
+        "id": "g2",
+        "tier": "challenge",
+        "type": "number",
+        "q": "83 - 47 = 86 - ___. What number goes in the blank?",
+        "answer": 50,
+        "easier": "t3",
+        "hint": "83 went up by 3 to make 86. What must 47 do so the gap stays the same?",
+        "steps": [
+          "The top number went up by 3: 83 to 86.",
+          "The bottom number must go up by 3 too: 47 to 50.",
+          "83 - 47 and 86 - 50 are both 36."
+        ],
+        "slips": [
+          {
+            "a": [
+              47
+            ],
+            "say": "47 is the old bottom number. The top number went up by 3, so the bottom number goes up by 3 too."
+          },
+          {
+            "a": [
+              44
+            ],
+            "say": "44 is 47 - 3. Add the same number to both."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "a": [
+              83,
+              74,
+              92,
+              65
+            ],
+            "b": [
+              47,
+              38,
+              56,
+              29
+            ],
+            "c": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          "derive": {
+            "a2": "a+c"
+          },
+          "q": "{a} - {b} = {a2} - ___. What number goes in the blank?",
+          "answer": "b+c",
+          "hint": "{a} went up by {c} to make {a2}. What must {b} do so the gap stays the same?",
+          "steps": [
+            "The top number went up by {c}.",
+            "The bottom number must go up by {c} too.",
+            "The blank is {ans}."
+          ]
+        }
+      },
+      {
+        "id": "g3",
+        "tier": "challenge",
+        "type": "number",
+        "q": "Ali has fewer stickers than Mei. The gap is 24. Mei has 71 stickers. How many stickers does Ali have?",
+        "answer": 47,
+        "easier": "t1",
+        "hint": "Ali is 24 below Mei. Take away the gap from Mei's number.",
+        "steps": [
+          "Ali is 24 below Mei.",
+          "71 - 20 = 51, then 51 - 4 = 47.",
+          "Check: 47 + 24 = 71."
+        ],
+        "slips": [
+          {
+            "a": [
+              95
+            ],
+            "say": "95 is 71 + 24. Ali has fewer, so take away."
+          },
+          {
+            "a": [
+              24
+            ],
+            "say": "24 is the gap. Ali has 24 fewer than Mei, so take 24 away from Mei's number."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "m": [
+              62,
+              71,
+              83,
+              90
+            ],
+            "g": [
+              8,
+              17,
+              24,
+              35
+            ]
+          },
+          "q": "Ali has fewer stickers than Mei. The gap is {g}. Mei has {m} stickers. How many stickers does Ali have?",
+          "answer": "m-g",
+          "hint": "Ali is {g} below Mei. Take away the gap from Mei's number.",
+          "steps": [
+            "Ali is {g} below Mei.",
+            "Take {g} away from {m}.",
+            "Ali has {ans}. Check: {ans} + {g} = {m}."
+          ]
+        }
+      },
+      {
+        "id": "g4",
+        "tier": "challenge",
+        "type": "selfcheck",
+        "q": "Make up a story about the gap between two numbers, like two piles or two towers. Find the gap by counting up. Then check by adding.",
+        "hint": "Pick two numbers first, one greater than the other. Then write the story.",
+        "steps": [
+          "Write the two numbers in your story and ask how many more.",
+          "Count up from the smaller number: hop to the next ten, jump by tens, hop to the greater number.",
+          "Check: the smaller number plus your gap makes the greater number. For example, 47 + 24 = 71."
+        ]
+      }
+    ]
+  },
+  "parent": {
+    "summary": "We learned two ways to find the answer to a subtraction. To find how many are left, we take away the tens, then the ones. To find how far apart two numbers are (the difference), we count up the gap. This term goes beyond the school Primary 1 syllabus on purpose, with bars and squares to help. Each week we suggest Home Practice (about 15 minutes); pages 3 to 5 and online practice are optional.",
+    "words": [
+      "take away: find what is left (57 - 24 = 33)",
+      "count up: find the gap from the smaller number to the greater number",
+      "difference: the gap between two numbers",
+      "check: add the answer back to the number taken away"
+    ],
+    "try_home": [
+      "Two piles: make two piles of small things, such as 38 and 62 coins or buttons. Ask: how many more in the big pile? Count up the gap together: hop to the next ten, jump by tens, hop to the number.",
+      "Take it away: say a number up to 80 and a number to take away, such as 68 take away 25 (not 62 take away 28: the ones must fit). Take the tens first, then the ones. Then check by adding back.",
+      "Spot it: look at two page numbers, two house numbers or two ages. Ask: how far from one to the other? Which way is quicker, taking away or counting up?"
+    ],
+    "ask": [
+      "How do you know?",
+      "Which is quicker here, taking away or counting up? Why?",
+      "How can you check your answer?"
+    ],
+    "when_stuck": "Let your child use real things or draw bars and squares, and wait 10 seconds before helping. Asking 'What is the next ten?' works better than giving the answer. Please do not teach the column method yet. If your child ticked I am still stuck on the look-back page, photograph that page and send it to the business WhatsApp, +65 9880 5962, after class. Photos are kept for 90 days after the program ends, then deleted.",
+    "next": "Lesson 8: Balance and Swap. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. The recording link is private to your family: please do not share it.",
+    "report_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why. This week: taking away tens and ones, and counting up to find the gap between two numbers.",
+    "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why.",
+    "quote": "The difference is a gap. Take away to see what is left. Count up to see the gap.",
+    "next_materials": [
+      "About 30 small things of one kind (buttons, pasta, paper clips); keep your bars and squares from the first lesson",
+      "Two plates or bowls, marked LEFT and RIGHT",
+      "The printed Lesson 8 workbook, a pencil and spare paper"
+    ]
+  },
+  "workbook": {
+    "choice_after": 3,
+    "home_hint": "Use bars and squares, or draw them.",
+    "header": "Addition and Subtraction",
+    "hint_p1": "Use your kit, a drawing or your fingers. Say your answer out loud, then write it.",
+    "hint_p3": "Use your kit, draw a picture or count up. Then write how you know. Choose any question, in any order.",
+    "kits": [
+      {
+        "type": "base_ten",
+        "title": "Kit page: tens bars and ones squares",
+        "intro": "A grown-up cuts these out before the lesson. A bar is a ten. A square is a one. Keep them in an envelope."
+      }
+    ]
+  },
+  "safeguarding": [
+    "The kit pieces stay on the table: nothing goes in the mouth or ears. No matches, toothpicks or anything sharp. A grown-up cuts out the kit page before the lesson; children do not use scissors in the session.",
+    "This lesson uses the main room only: no breakout rooms. A parent sits nearby but does not give answers.",
+    "Nobody holds paper or work up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on three, or show fingers or a thumb for a choice. There is no private chat and no board held up in front of the group.",
+    "Never read out a child's name with a right or wrong answer. The recording captures the tutor, the shared screen and any voice that is not muted. Children may mute and keep their cameras off. Never show a child's page on the recording.",
+    "A child who needs help ticks I am still stuck on their own look-back page. The grown-up may photograph that page and send it to the program's business WhatsApp after class (never to a personal phone); the tutor replies to the grown-up only. The next lesson starts with one short catch-up question for the whole group. No private messages to children and no private room.",
+    "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. A child may march on the spot or stay seated.",
+    "The look-back is never collected in front of the group or read out. A pass is always allowed."
+  ],
+  "tutor_prep": [
+    "Solve every workbook question yourself first, both by taking away and by counting up.",
+    "Tell parents a week before: print workbook pages 1 to 6, cut out the kit page (page 6) and keep the bars and squares in an envelope.",
+    "Have the slides open. To show your own bars and squares to the recording, use a shared whiteboard or a blank slide; the recording does not show your webcam tile. If a family cannot print, the slides show every sum so children can copy them onto plain paper.",
+    "Test the recording once with several tiles before the first live class: check that it captures the tutor, the shared screen and any unmuted voice, and not the children's faces. Write the setting you used in your tutor notes.",
+    "Say plainly if a parent asks: Term 1 goes beyond the school Primary 1 syllabus on purpose. Every Start here item is built to be reached with bars, bundles or a number line and a worked step, and the program does not claim to match any school syllabus. Items that need more than that sit at Think harder."
+  ],
+  "spare_time": {
+    "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
+    "rules": [
+      "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content. If you are more than 3 minutes ahead at minute 42, use one menu activity then.",
+      "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+      "Never teach anything the next lesson needs. If the class is ahead, slow down: ask \"How do you know?\" and let children explain, rather than rushing on."
+    ],
+    "menu": [
+      {
+        "id": "M1",
+        "title": "Is it always true?",
+        "minutes": 4,
+        "tutor": "Mei says: if you add 10 to both numbers, the gap stays the same. Try 12 and 20, then 22 and 30, then 32 and 40. Is Mei always right?",
+        "rec": "Recording: pause. Try the gap from 12 to 20, then 22 to 30. Is the gap the same?",
+        "answer": "Yes. 12 to 20 is 8, 22 to 30 is 8, 32 to 40 is 8. Both numbers move up by the same amount, so the gap stays the same."
+      },
+      {
+        "id": "M2",
+        "title": "Make a puzzle for your grown-up",
+        "minutes": 4,
+        "tutor": "Write a short story about the gap between two numbers, such as two plants of different heights or two piles of cards. Give it to your grown-up to solve by counting up.",
+        "rec": "Recording: pause. Write a gap story with two numbers for a grown-up to solve.",
+        "answer": "No single answer. Check that the story has two numbers and asks how many more, and that counting up and adding back agree."
+      },
+      {
+        "id": "M3",
+        "title": "Teach it back",
+        "minutes": 3,
+        "tutor": "Pretend your grown-up or a toy has never counted up. Teach them how to find the gap from 58 to 62.",
+        "rec": "Recording: pause. Teach a grown-up how to count up from 58 to 62.",
+        "answer": "58 to 60 is 2, and 60 to 62 is 2, so the gap is 4. Hop to the next ten, then hop to the number."
+      }
+    ]
+  }
+}

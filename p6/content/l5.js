@@ -1,3 +1,4 @@
+const FG = require('../../levels/figs_l4_6.js');
 // Math Inquirers P6 — Lesson 5: Every Possible Way (counting / combinatorics; nested loops that list every case)
 // Every counting answer below was enumerated by a program and checked by hand.
 
@@ -67,11 +68,11 @@ const cards = ds => {
 };
 // 3 by 3 grid of streets, A bottom left, B top right, puddle at P (1 along, 1 up). Small circles at the corners to write in.
 const grid = () => {
-  const c = 44, x0 = 34, y0 = 26; let s = `<svg aria-label="A 3 by 3 grid of streets from A at the bottom left to B at the top right, with a puddle at point P" viewBox="0 0 220 190" xmlns="http://www.w3.org/2000/svg" style="width:220px;max-width:100%">`;
+  const c = 52, x0 = 36, y0 = 30; let s = `<svg aria-label="A 3 by 3 grid of streets from A at the bottom left to B at the top right. A puddle at point P is a hatched circle." viewBox="0 0 250 220" xmlns="http://www.w3.org/2000/svg" style="width:250px;max-width:100%">${FG.DEFS}`;
   for (let i = 0; i <= 3; i++) s += `<line x1="${x0}" y1="${y0 + i * c}" x2="${x0 + 3 * c}" y2="${y0 + i * c}" stroke="${NAVY}" stroke-width="4"/><line x1="${x0 + i * c}" y1="${y0}" x2="${x0 + i * c}" y2="${y0 + 3 * c}" stroke="${NAVY}" stroke-width="4"/>`;
-  for (let i = 0; i <= 3; i++) for (let j = 0; j <= 3; j++) { const isP = i === 1 && j === 1; s += `<circle cx="${x0 + i * c}" cy="${y0 + (3 - j) * c}" r="15" fill="${isP ? SKY : WHITE}" stroke="${NAVY}" stroke-width="2.5"/>`; }
-  s += `<text x="${x0 - 30}" y="${y0 + 3 * c + 30}" font-size="22" font-weight="700" fill="${TEAL}" font-family="Arial">A</text><text x="${x0 + 3 * c + 12}" y="${y0 - 8}" font-size="22" font-weight="700" fill="${TEAL}" font-family="Arial">B</text>`;
-  s += `<text x="${x0 + c + 18}" y="${y0 + 2 * c + 32}" font-size="18" font-weight="700" fill="${NAVY}" font-family="Arial">P</text>`;
+  for (let i = 0; i <= 3; i++) for (let j = 0; j <= 3; j++) { const isP = i === 1 && j === 1; s += `<circle cx="${x0 + i * c}" cy="${y0 + (3 - j) * c}" r="${isP ? 19 : 17}" fill="${isP ? 'url(#mi-hatch)' : WHITE}" stroke="${NAVY}" stroke-width="${isP ? 4 : 2.5}"/>`; }
+  s += `<text x="${x0 - 30}" y="${y0 + 3 * c + 34}" font-size="24" font-weight="700" fill="${TEAL}" font-family="Arial">A</text><text x="${x0 + 3 * c + 20}" y="${y0 - 14}" font-size="24" font-weight="700" fill="${TEAL}" font-family="Arial">B</text>`;
+  s += `<rect x="${x0 + c + 14}" y="${y0 + 2 * c + 14}" width="26" height="24" rx="4" fill="#fff" stroke="${NAVY}" stroke-width="2"/><text x="${x0 + c + 27}" y="${y0 + 2 * c + 33}" font-size="22" font-weight="700" text-anchor="middle" fill="${NAVY}" font-family="Arial">P</text>`;
   return s + '</svg>';
 };
 
@@ -83,10 +84,10 @@ module.exports = {
     n: 5, week: 3, session: 'A', title: 'Every Possible Way', topic: 'Counting',
     objective: 'Count every possible case without missing one or counting one twice: list in order, use the multiplication rule for choices made one after another, take care with order and with 0 in digit puzzles, count handshakes and grid routes, and test each count with nested loops in code.',
     skills: 'Systematic listing, the multiplication rule, avoiding double counting, adding as you go (grid routes), tracing and planning nested loops',
-    materials: 'Laptop or desktop with Scratch 3 (scratch.mit.edu) open, the starter project “Every Order” (one loop that says each tea), mini whiteboards, digit cards 0 to 9, squared paper.',
-    online: 'Children share their screen when they test code. The tutor shares the starter project as an .sb3 file in the chat (children use File, Load from your computer; no account needed), and the three starter blocks are also on the slide. Block colours on our slides are simplified; in Scratch, find blocks by the category name on the left, not by colour. Digit cards can be cut from paper. Breakout rooms in pairs for the Explore.',
-    warmup: 'Count it, don’t list it: six quick counting puzzles (pages 15 to 40, lamp posts, numbers with a 7 in them …). Pairs work out each one at their own speed and say how they counted. No racing and no points.',
-    explore: 'The bubble tea shop: 3 teas and 2 toppings. Pairs list every order on paper, then predict how many there are when sizes M and L are added. At the computer, they add a second loop inside the starter project so the sprite says every order.',
+    materials: 'Laptop or desktop with Scratch 3 (scratch.mit.edu) open, the starter file L5_Every_Order.sb3, “Every Order” (one loop that says each tea number), mini whiteboards, digit cards 0 to 9, squared paper.',
+    online: 'Children share their screen when they test code. The tutor shares the starter file L5_Every_Order.sb3 in the chat (children use File, Load from your computer; no account needed), and the three starter blocks are also on the slide. Block colours on our slides are simplified; in Scratch, find blocks by the category name on the left, not by colour. Digit cards can be cut from paper. Breakout rooms in pairs for the Explore.',
+    warmup: 'Count it, don’t list it: four quick counting puzzles (two-digit numbers, multiples of 5, lamp posts, numbers with a 7 in them). Pairs work out each one at their own speed and say how they counted. No racing and no points.',
+    explore: 'The bubble tea shop: 3 teas and 2 toppings. Pairs list every order on paper, then predict how many there are when sizes M and L are added. The nested loop that lists every order is built once, live, in the mini-lesson.',
     mini: 'Fix the first choice and run through every second choice: a tree shows why 3 shirts and 2 shorts make 3 × 2 = 6 outfits. A nested loop does the same thing: the inner loop runs all the way round for each turn of the outer loop. When order does not matter (handshakes), each pair is counted twice, so halve, or let the code keep only a < b.',
     share: 'Why does the multiplication rule work for outfits, but 5 × 5 gives the wrong answer for handshakes between 5 friends?',
     exit: { q: 'Six friends meet. Every pair of friends shakes hands once. How many handshakes are there? Show how you know.', a: '15 (5 + 4 + 3 + 2 + 1, or 6 × 5 ÷ 2).' },
@@ -104,24 +105,25 @@ module.exports = {
 
   script: {
     hook: ['Welcome back, inquirers! Today’s question sounds easy: how many ways? But counting every possible way, with none missing and none counted twice, is a skill that mathematicians and programmers use every day.', 'By the end of today you will make the computer list every case for you, and you will know when its answer is right.'],
-    warmIntro: ['Six puzzles. Do not list them all: find a quick way to count, and be ready to say how you counted. Take your time: there is no race.', 'First one: a book, pages 15 to 40. How many pages? Careful, it is not 25!'],
+    warmIntro: ['Four puzzles. Do not list them all: find a quick way to count, and be ready to say how you counted. Take your time: there is no race.', 'First one: how many two-digit numbers are there? Careful, it is not 99!'],
     predict: ['The bubble tea shop has 3 teas and 2 toppings. Before you list them, write your guess: how many different orders? Now the shop adds sizes M and L. Will the number of orders go up by 2, or double, or something else? Write a prediction.'],
-    exploreHints: ['Stuck listing: write the first tea, then every topping with it. Then the next tea.', 'Code stuck: drag a second repeat block INSIDE the first one. Which loop should say the topping?', 'Finished early: add sugar levels 0%, 50% and 100%. Predict the number of orders first, then add a third loop to test it.'],
+    exploreHints: ['Stuck listing: write the first tea, then every topping with it. Then the next tea.', 'Finished early: add sugar levels 0%, 50% and 100%. Predict the number of orders first, on paper.'],
     think: ['“3 shirts and 2 pairs of shorts. I fix the red shirt and try every pair of shorts: red with black, red with grey. That is 2. Every shirt gets the same 2, so 3 shirts give 3 groups of 2: 3 × 2 = 6. Add 2 caps: each of the 6 outfits splits into 2, so 12.”', '“In code, the outer loop picks the shirt and the inner loop picks the shorts. The inner loop goes all the way round for EACH shirt, so the say block runs 3 × 2 = 6 times.”', '“5 friends shaking hands. Friend A shakes 4 hands. B has already shaken A’s, so 3 new ones. C: 2 new. D: 1 new. E: none left. 4 + 3 + 2 + 1 = 10. Or: 5 people times 4 hands is 20, but each handshake has two people in it, so I counted every one twice: 20 ÷ 2 = 10.”'],
     circulate: ['Ask: “Which choice did you fix first? How do you know you have them all?”', 'Ask: “Point to the inner loop. How many times does it run for one turn of the outer loop?”', 'Ask: “Have you counted any pair twice? Has anyone shaken their own hand?”'],
     hints: ['Hint 1: “Fix the first choice, then run through every second choice.”', 'Hint 2: “Draw a tree, or a table with a row for each first choice.”', 'Hint 3: “If the order does not matter, has your method counted each pair twice?”'],
-    talk: ['“Why does the multiplication rule work for outfits, but 5 × 5 gives the wrong answer for handshakes between 5 friends?”', '“How would you change a program that lists every pair so that it lists each handshake once?”'],
+    talk: ['“Why does the multiplication rule work for outfits, but 5 × 5 gives the wrong answer for handshakes between 5 friends?”'],
+    talkNext: '“How would you change a program that lists every pair so that it lists each handshake once?”',
     talkAns: 'For outfits, every shirt goes with every pair of shorts and a shirt-and-shorts outfit is different from any other, so 3 × 2 counts each outfit once. For handshakes, 5 × 5 = 25 includes each person with themselves (5 cases) and counts A with B and B with A as two, so 25 − 5 = 20 and 20 ÷ 2 = 10. In code, keep only the pairs with a < b.',
     close: ['“Today you counted things that would take ages to list: you fixed one choice, multiplied, and halved when you counted twice. Then the computer listed every case to test you. Notice it, test it, explain why.”']
   },
 
   deck: {
     today: 'Count every possible way without missing one or counting one twice, use the multiplication rule, and make nested loops list every case for us.',
-    warmGame: 'Count it, don’t list it. Six quick counting puzzles (pages 15 to 40, two-digit numbers, multiples of 5, lamp posts, numbers with a 7, even numbers). Pairs say how they counted. No racing and no points.',
-    warmQs: [['3 × 4 × 2 = ?', '24'], ['1 + 2 + 3 + … + 10 = ?', '55'], ['How many whole numbers from 100 to 999?', '900'], ['6 × 5 ÷ 2 = ?', '15'], ['repeat 5 { repeat 2 { say hi } }: how many his?', '10']],
-    expSetup: ['A bubble tea shop has 3 teas (milk, green, taro) and 2 toppings (pearls, jelly).', 'On paper, list every order of 1 tea and 1 topping. How do you know you have them all?', 'The shop adds sizes M and L. Predict how many orders now, then check.', 'At the computer: open “Every Order” and put a second loop inside the first so the sprite says every order. (Teas are numbered 1 = milk, 2 = green, 3 = taro; toppings 1 = pearls, 2 = jelly. The sprite says join tea topping, so 21 means green with pearls.)'],
-    expPic: 'the menu board: three tea cups (milk, green, taro), two toppings (pearls, jelly) and sizes M and L, next to the starter code (repeat 3: say tea, change tea by 1).',
-    expAsk: [['How many orders with 3 teas and 2 toppings? With sizes M and L too?', '6 orders; with sizes, 12 (each of the 6 orders comes in 2 sizes: 6 × 2).'], ['How did you make sure you had every order, with none twice?', 'Fix the tea, go through every topping, then move to the next tea: a list in order, like a tree.'], ['In your code, which loop goes round faster?', 'The inner loop: it runs all the way round (2 toppings) for every single turn of the outer loop (each tea).']],
+    warmGame: 'Count it, don’t list it. Four quick counting puzzles (two-digit numbers, multiples of 5, lamp posts, numbers with a 7). Pairs say how they counted. No racing and no points.',
+    warmQs: [['3 × 4 × 2 = ?', '24'], ['How many whole numbers from 100 to 999?', '900'], ['repeat 5 { repeat 2 { say hi } }: how many his?', '10']],
+    expSetup: ['A bubble tea shop has 3 teas (milk, green, taro) and 2 toppings (pearls, jelly).', 'On paper, list every order of 1 tea and 1 topping. How do you know you have them all?', 'The shop adds sizes M and L. Predict how many orders now, then check.'],
+    expPic: 'the menu board: three tea cups (milk, green, taro), two toppings (pearls, jelly) and sizes M and L.',
+    expAsk: [['How many orders with 3 teas and 2 toppings? With sizes M and L too?', '6 orders; with sizes, 12 (each of the 6 orders comes in 2 sizes: 6 × 2).'], ['How did you make sure you had every order, with none twice?', 'Fix the tea, go through every topping, then move to the next tea: a list in order, like a tree.']],
     mini1: { head: 'The multiplication rule: 3 shirts and 2 pairs of shorts', body: ['Fix a shirt, then try every pair of shorts: 2 outfits for each shirt.', '3 shirts give 3 groups of 2: 3 × 2.', 'Add 2 caps: each outfit splits into 2.'], ans: '6 outfits; with caps, 6 × 2 = 12.' },
     mini2: { head: 'Handshakes: 5 friends, every pair shakes once', body: ['A shakes 4 new hands, B 3 new, C 2, D 1, E 0.', 'Or: 5 × 4 = 20 counts every handshake twice.', 'In code: check every pair (a, b) and keep only a < b.'], ans: '4 + 3 + 2 + 1 = 10, or 20 ÷ 2 = 10 handshakes.' },
     keyHead: 'Key idea: every case, exactly once',
@@ -181,7 +183,7 @@ module.exports = {
     const planAndPy = H.tbl([4200, 5700], [H.row([
       H.cell('<div style="text-align:left">' + blocks(planCode, 'Plan with gaps: set count to 0, set a to 1, repeat a gap: set b to 1, repeat a gap: if a gap then change count by 1; change b by 1; change a by 1; say count', 14) + '</div>', 4200, { h: 30 }),
       H.cell('<div>' + tx(L('(a)') + 'What will the program say? ' + blank(50) + '<br>Does it agree with Q4(a)? ' + blank(50) + '<br>' + L('(b)') + 'If the test is changed to <b>a = b</b>, what will it say? What is it counting now?<br>' + blank(330) + '<br>') + py + '</div>', 5700, { h: 30 })])]);
-    const routes = H.tbl([3600, 6300], [H.row([H.cell('<div>' + grid() + '</div>', 3600, { h: 20 }), H.cell(tx('Write in each circle the number of routes from A to it. A gets 1. Each other circle = the number on its left + the number below it.<br>' + L('(a)') + 'How many routes go from A to B? ' + blank(60) + '<br>' + L('(b)') + 'A puddle covers the blue point P. Do it again with 0 at P. How many routes avoid P? ' + blank(60)), 6300, { h: 40 })])]);
+    const routes = H.tbl([3900, 6000], [H.row([H.cell('<div>' + grid() + '</div>', 3900, { h: 20 }), H.cell(tx('Write in each circle the number of routes from A to it. A gets 1. Each other circle = the number on its left + the number below it.<br>' + L('(a)') + 'How many routes go from A to B? ' + blank(60) + '<br>' + L('(b)') + 'A puddle covers the hatched circle marked P. Do it again with 0 at P. How many routes avoid P? ' + blank(60)), 6000, { h: 40 })])]);
     return [
       H.q(1, 'Mei packs 4 T-shirts, 3 pairs of shorts and 2 caps for camp.', { before: 20, keepNext: true }),
       H.sub('a', 'Outfits of 1 T-shirt and 1 pair of shorts: how many?  _____    (b)  With a cap too?  _____'),
@@ -194,9 +196,9 @@ module.exports = {
       ...H.lines(1),
       H.sub('b', 'Ali says, “7 × 6 = 42 handshakes.” What is wrong? Fix it.', { keepNext: true }),
       ...H.lines(1),
-      H.q(5, 'Routes on a grid. Walk along the lines from A to B, going only right or up.', { keepNext: true }),
+      H.q(5, '★ Take-home. Routes on a grid. Walk along the lines from A to B, going only right or up.', { keepNext: true }),
       routes,
-      H.q(6, 'Plan your code. Fill the 3 gaps so it counts the handshakes of the 7 friends in Q4.', { keepNext: true }),
+      H.q(6, 'Plan your code. Fill the 3 gaps so it counts the handshakes of the 7 friends in Q4. (Hint: a handshake between friend 2 and friend 5 is the same as one between 5 and 2, so count each pair once, when a is smaller than b.)', { keepNext: true }),
       planAndPy
     ];
   }

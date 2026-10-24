@@ -1,4 +1,6 @@
 // Math Inquirers P4 Holiday Program — Lesson 4: Fraction Frontier (Fractions)
+const tip = require('../tip.js');
+const FG = require('../../levels/figs_l4_6.js');
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', WH = '#FFFFFF';
 const F = 'Fredoka, Arial, sans-serif';
 const tx = (x, y, s, size = 22, fill = N, anchor = 'middle', weight = 700) =>
@@ -52,11 +54,18 @@ const setSvg = () => {
 // Q4c scaffold: two bars of the same length, 4/9 and 5/8 shaded (drawn, no glyphs)
 const cmpSvg = () => {
   const x0 = 120, W = 360;
-  let s = `<svg aria-label="Two bars of the same length. The top bar is cut into 9 equal parts with 4 shaded. The bottom bar is cut into 8 equal parts with 5 shaded." viewBox="0 0 600 130" width="400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">`;
-  [[9, 4, 14], [8, 5, 72]].forEach(([n, k, y]) => {
+  let s = `<svg aria-label="Two bars of the same length. The top bar is cut into 9 equal parts with 4 shaded. The bottom bar is cut into 8 equal parts with 5 shaded." viewBox="0 0 600 104" width="400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">`;
+  [[9, 4, 6], [8, 5, 56]].forEach(([n, k, y]) => {
     for (let i = 0; i < n; i++) s += `<rect x="${x0 + i * W / n}" y="${y}" width="${W / n}" height="40" fill="${i < k ? Y : WH}" stroke="${N}" stroke-width="2.5"/>`;
     s += sfr(60, y + 16, k, n, 17);
   });
+  return s + '</svg>';
+};
+
+// Q6 scaffold: an empty strip of 12 equal boxes (twelfths), numbered 1 to 12, for shading
+const stripSvg = () => {
+  let s = `<svg aria-label="A strip of 12 equal boxes, numbered 1 to 12, ready to shade" viewBox="0 0 600 70" width="440" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">`;
+  for (let i = 0; i < 12; i++) s += `<rect x="${20 + i * 46}" y="8" width="46" height="34" fill="${WH}" stroke="${N}" stroke-width="2.5"/>` + tx(43 + i * 46, 62, i + 1, 14, TEAL);
   return s + '</svg>';
 };
 
@@ -66,7 +75,7 @@ module.exports = {
     objective: 'Change between improper fractions and mixed numbers using fraction bars and number lines, find a fraction of a set (and the whole set from a part) with a bar model, and compare fractions with different denominators by making the denominators the same, comparing with one half, or comparing pieces of the same numerator.',
     skills: 'Drawing a fraction model, using a number line, drawing a bar model, making a list in order, comparing with a benchmark, explaining a comparison',
     materials: 'Paper strips (one per child, to fold into halves, quarters and eighths), the three pizza circles from the cut-out page (to cut into quarters), 30 counters, mini whiteboards and markers.',
-    online: 'Before the lesson children cut out the 3 pizza circles from the kit page and cut each into 4 equal slices; they fold paper strips on camera and hold up mini whiteboards.',
+    online: 'Before the lesson children cut out the 3 pizza circles from the kit page and cut each into 4 equal slices; they fold paper strips on camera and write on mini whiteboards (no hold-ups to the camera).',
     warmup: 'More or less than a half? The tutor shows a fraction card (3/8, 5/9, 6/12, 7/10, 2/5, 4/7). Thumbs up if it is more than a half, thumbs down if less, flat hand if it is exactly a half. Then explain how you know.',
     explore: 'Pizza party: every pizza is cut into 4 equal slices and Ravi\'s group eats 11 slices. Pairs use paper quarter-slices to build whole pizzas, then write how many pizzas were eaten in two ways (11/4 and 2 3/4) and decide how many slices make exactly 3 pizzas.',
     mini: 'Improper fraction to mixed number with bars: 7/3 = 3 thirds + 3 thirds + 1 third = 2 1/3. Mixed number to improper fraction: 4 2/3 = 12 thirds + 2 thirds = 14/3. Fractions on a number line in thirds. Fraction of a set with a bar model: 3/5 of 30 (5 units = 30, 1 unit = 6, 3 units = 18). Before page 2: compare unlike fractions by making the denominators the same (2/3 = 6/9 > 5/9), by comparing with one half, or by the size of the pieces (2/5 > 2/9); find the whole from a part (2/3 of a bag is 24 marbles, so 36); find ALL fractions between two fractions by changing to the same denominator.',
@@ -100,18 +109,21 @@ module.exports = {
     ],
     circulate: ['Ask: "How many of these pieces make one whole?"', 'Ask: "Draw the bar. How many units? What is one unit worth?"', 'Ask: "Can you make the bottom numbers the same? Is it more or less than a half?"'],
     hints: ['Hint 1: "The denominator tells you how many pieces make one whole."', 'Hint 2: "For a fraction of a set, divide by the bottom number first, then multiply by the top number."', 'Hint 3: "To compare, change one fraction so both have the same denominator, or compare each with a half."'],
-    talk: ['"Which is more: 2 1/3 pizzas or 9/4 pizzas? Mei says 9/4 because 9 is a big number."', '"Ravi says 3/7 is bigger than 3/5 because 7 is bigger than 5. What would you tell him?"'],
-    talkAns: '2 1/3 is more. 9/4 = 2 1/4, and both have 2 wholes. A third is bigger than a quarter (sharing one pizza among 3 gives bigger slices than sharing among 4), so 2 1/3 is bigger. Mei looked at the 9 alone, but quarters are small pieces. For Ravi: 3/5 is bigger, because fifths are bigger pieces than sevenths.',
+    talk: ["\"Which is more: 2 1/3 pizzas or 9/4 pizzas? Mei says 9/4 because 9 is a big number.\""],
+    talkWeekly: ["\"Ravi says 3/7 is bigger than 3/5 because 7 is bigger than 5. What would you tell him?\""],
+    talkAns: "2 1/3 is more. 9/4 = 2 1/4, and both have 2 wholes. A third is bigger than a quarter (sharing one pizza among 3 gives bigger slices than sharing among 4), so 2 1/3 is bigger. Mei looked at the 9 alone, but quarters are small pieces.",
+    talkWeeklyAns: "For Ravi: 3/5 is bigger, because fifths are bigger pieces than sevenths.",
     close: ['"You were real fraction explorers today: you built fractions, lined them up and compared them with good reasons."', '"Hand me your exit ticket and I will stamp your inquiry journal."']
   },
 
   deck: {
     today: 'Change between improper fractions and mixed numbers, find a fraction of a set with a bar model, and compare fractions with different denominators.',
     warmGame: 'More or less than a half? Thumbs up for more, thumbs down for less, flat hand for exactly a half: 3/8, 5/9, 6/12, 7/10, 2/5, 4/7.',
-    warmQs: [['1/2 of 18 = ?', '9'], ['1/4 of 20 = ?', '5'], ['2/3 = ?/12', '8'], ['3/4 + 1/8 = ?', '7/8'], ['1 − 3/10 = ?', '7/10']],
+    warmQs: [["1/2 of 18 = ?", "9"], ["1/4 of 20 = ?", "5"], ["2/3 = ?/12", "8"]],
+    warmWeekly: [["3/4 + 1/8 = ?", "7/8"], ["1 − 3/10 = ?", "7/10"]],
     expSetup: ['Cut paper circles into 4 equal slices (quarters).', 'Ravi\'s group eats 11 slices. Take 11 quarter-slices.', 'Put the slices together to build whole pizzas.', 'Write how many pizzas they ate in two different ways.'],
     expPic: 'three pizzas cut into quarters: two whole pizzas and one pizza with 3 of its 4 slices, next to the question "11 slices = ? pizzas".',
-    expAsk: [['How many pizzas did they eat?', '2 whole pizzas and 3 quarters: 11/4 = 2 3/4.'], ['How many slices make exactly 3 pizzas?', '12 slices: 12/4 = 3.'], ['What if each pizza had 6 slices and they ate 11?', '11/6 = 1 5/6: one whole pizza and 5 sixths.']],
+    expAsk: [["How many pizzas did they eat?", "2 whole pizzas and 3 quarters: 11/4 = 2 3/4."], ["How many slices make exactly 3 pizzas?", "12 slices: 12/4 = 3."]],
     mini1: { head: 'Improper fraction to mixed number', body: ['7/3: fill whole bars of 3 thirds.', '3 + 3 + 1 = 7 thirds.', '2 wholes and 1 third.'], ans: '7/3 = 2 1/3' },
     mini2: { head: 'Fraction of a set', body: ['3/5 of 30 stickers.', '5 units = 30, so 1 unit = 6.', '3 units = ?'], ans: '18 stickers' },
     keyHead: 'Key idea: fractions can be more than 1', keyBig: 'The denominator tells how many pieces make 1 whole: 7/3 = 2 1/3.', keySmall: 'Fraction of a set: the denominator gives the units. Find 1 unit, then the units you need.',
@@ -131,12 +143,12 @@ module.exports = {
     ],
     stretch: [
       { q: 'Ben ate 7/4 pizzas and Ravi ate 1 5/8 pizzas. Who ate more?', a: 'Ben. 7/4 = 14/8 = 1 6/8, which is more than 1 5/8.' },
-      { q: 'Siti has 40 beads. 3/8 of them are blue. How many beads are NOT blue?', a: '25 (1 unit = 5, blue = 15, not blue = 5 units = 25).' },
+      { q: 'Siti has 40 beads. 3/8 of them are blue. How many beads are NOT blue?', a: '25 (1 unit = 5, blue = 15, not blue = 5 units = 25).', fig: FG.barModel({ left: 20, rows: [{ segs: [{ u: 1, f: 'shade' }, { u: 1, f: 'shade' }, { u: 1, f: 'shade' }, { u: 1 }, { u: 1 }, { u: 1 }, { u: 1 }, { u: 1 }] }], ann: [{ k: 'brace', row: 0, from: 0, to: 8, t: '40 beads' }, { k: 'brace', row: 0, from: 0, to: 3, side: 'bottom', t: 'blue' }], label: 'A bar of 8 equal parts for 40 beads. 3 parts are shaded blue.' }) },
       { q: 'Put these fractions in order, smallest first: 2/3, 1/2, 5/6, 7/12', a: '1/2, 7/12, 2/3, 5/6 (6/12, 7/12, 8/12, 10/12).' },
       { q: 'Who am I? I am an improper fraction. My denominator is 6. I am between 2 and 3. My numerator is an odd number. I am closer to 3 than to 2. Make a list, then cross out the ones that do not fit.', a: '17/6 = 2 5/6. Between 2 and 3: 13/6, 14/6, 15/6, 16/6, 17/6. Odd numerators: 13/6, 15/6, 17/6. 15/6 = 2 1/2 is exactly in the middle and 13/6 is closer to 2, so only 17/6 is closer to 3.' },
       { q: 'Find ALL the fractions with denominator 10 that are bigger than 1/5 but smaller than 1/2.', a: '3/10 and 4/10 (1/5 = 2/10 and 1/2 = 5/10 do not count).' },
-      { q: 'A ribbon is 3 m long. Mei cuts it into pieces that are each 1/4 m long. How many pieces does she get?', a: '12 pieces (4 in each metre).' },
-      { q: 'How many quarters are there in 4 3/4?', a: '19 (4 wholes = 16 quarters, plus 3).' },
+      { q: 'A ribbon is 3 m long. Mei cuts pieces that are each 1/4 m long. How many pieces can she cut? (Count the quarters in each metre.)', a: '12 pieces (4 in each metre).' },
+      { q: 'Mei has a ribbon 4 3/4 m long. She cuts it into pieces that are each 1/4 m long. She uses 5 of the pieces for a bow. How much ribbon is left? Write the answer as a mixed number.', a: '3 1/2 m. 4 3/4 m is 19 quarters; 19 − 5 = 14 quarters left, and 14/4 = 3 2/4 = 3 1/2.' },
       { q: 'Ravi says 3/7 is bigger than 3/5 because 7 is bigger than 5. Is he right? Explain.', a: 'No. Both have 3 pieces, but sevenths are smaller pieces than fifths, so 3/5 is bigger.' },
       { q: '2/5 of a number is 16. What is the number?', a: '40 (2 units = 16, 1 unit = 8, 5 units = 40).' }
     ],
@@ -147,9 +159,9 @@ module.exports = {
       { q: 'Use two of the digit cards 2, 3, 5 and 7 to make a fraction smaller than 1 that is as close to 1 as possible.', a: '5/7. It is 2/7 short of 1. The next best, 2/3, is 1/3 = 2/6 short, and 2/7 is less than 2/6.' },
       { q: 'In a bag of marbles, 1/4 are red and 1/3 are blue. The other 10 marbles are green. How many marbles are in the bag?', a: '24. Red 3/12 and blue 4/12, so green is 5/12. 5 units = 10, 1 unit = 2, 12 units = 24.' },
       { q: 'Ben gives 1/3 of his marbles to Ali and 1/4 of his marbles to Mei. Ali gets 2 more marbles than Mei. How many marbles did Ben have at first?', a: '24 marbles. Ali gets 4/12 and Mei gets 3/12, so Ali gets 1/12 more than Mei. 1/12 = 2 marbles, so 12/12 = 24. Check: Ali 8, Mei 6.' },
-      { q: 'Mei takes 1/2 of the sweets in a jar. Ali takes 1/3 of the sweets. There are 5 sweets left. (a) How many sweets were in the jar at first? (b) What if 7 sweets were left? (c) Make up your own puzzle with two other fractions taken from a jar and a number of sweets left, and solve it.', a: '(a) 30 sweets: 1/2 + 1/3 = 5/6 are taken, so 1/6 is left; 1/6 = 5, so 6/6 = 30. (b) 42 sweets (1/6 = 7). The jar always holds 6 times the number left. (c) Puzzles will vary: check that the fractions taken add to less than 1 and that the left-over fraction was found first.' },
+      { q: 'Mei takes 1/2 of the sweets in a jar. Ali takes 1/3 of the sweets. There are 5 sweets left. (a) How many sweets were in the jar at first? (b) What if 7 sweets were left? (c) Make up your own puzzle with two other fractions taken from a jar and a number of sweets left, and solve it.', fig: FG.barModel({ left: 20, rows: [{ segs: [{ u: 6 }] }], ann: [{ k: 'brace', row: 0, from: 0, to: 3, t: 'Mei takes 1/2' }, { k: 'brace', row: 0, from: 3, to: 5, side: 'bottom', t: 'Ali takes 1/3' }, { k: 'brace', row: 0, from: 5, to: 6, t: '5 left' }], label: 'One undivided bar for the jar. A brace over the first half is Mei’s one half, a brace under the next part is Ali’s one third, and a brace at the end marks the 5 sweets left.' }), a: '(a) 30 sweets: 1/2 + 1/3 = 5/6 are taken, so 1/6 is left; 1/6 = 5, so 6/6 = 30. (b) 42 sweets (1/6 = 7). The jar always holds 6 times the number left. (c) Puzzles will vary: check that the fractions taken add to less than 1 and that the left-over fraction was found first.' },
       { q: 'Half of a number is 3 more than a third of the number. What is the number?', a: '18. Half = 3 sixths and a third = 2 sixths, so 1 sixth = 3 and the number is 6 sixths = 18. Check: 9 is 3 more than 6.' },
-      { q: 'Siti read 2/5 of her book on Monday. On Tuesday she read half of the pages that were left. She still has 45 pages to read. How many pages are in the book?', a: '150 pages. Cut each fifth in half to make tenths: Monday 4 tenths, the rest is 6 tenths, Tuesday 3 tenths, 3 tenths left = 45. 1 tenth = 15, 10 tenths = 150.' }
+      { q: 'Siti read 2/5 of her book on Monday. On Tuesday she read half of the pages that were left. She still has 45 pages to read. How many pages are in the book?', fig: FG.barModel({ left: 20, rows: [{ segs: [{ u: 1, f: 'shade', t: 'Mon' }, { u: 1, f: 'shade', t: 'Mon' }, { u: 1 }, { u: 1 }, { u: 1 }] }], ann: [{ k: 'brace', row: 0, from: 0, to: 5, t: '? pages in the book' }, { k: 'brace', row: 0, from: 2, to: 5, side: 'bottom', t: 'Tuesday: half of these. 45 pages still to read' }], label: 'A bar for the book cut into 5 equal parts. 2 parts are shaded for Monday. The other 3 parts are what was left. Tuesday takes half of those and 45 pages are still to read.' }), a: '150 pages. Cut each fifth in half to make tenths: Monday 4 tenths, the rest is 6 tenths, Tuesday 3 tenths, 3 tenths left = 45. 1 tenth = 15, 10 tenths = 150.' }
     ]
   },
 
@@ -170,21 +182,23 @@ module.exports = {
     W.push(H.sub('a', ['How many wear glasses? ______      <b style="color:#1F7A6F">b</b>  How many do NOT wear glasses? ______']));
 
     W.push(H.q(4, 'Compare. Write > or < in each box. Your fraction wall or a drawing helps. In (c), write how you know.', { pb: true, before: 0, keepNext: true }));
+    W.push(tip('fold a strip into quarters, then fold each quarter in half. 3 quarters = ____ eighths.'));
     W.push(H.sub('a', [fr(3, 4), box, fr(5, 8)]));
     W.push(H.sub('b', [fr(2, 3), box, fr(7, 12)]));
-    W.push(H.sub('c', [fr(4, 9), box, fr(5, 8), '     The two bars below are the same length. Write how you know:  ______________________']));
+    W.push(H.sub('c', [fr(4, 9), box, fr(5, 8), '    The bars are the same length. Why? ____________']));
     W.push(H.fig(cmpSvg()));
     W.push(H.sub('d', [fr(3, 5), box, fr(3, 7)]));
     W.push(H.sub('e', ['Put in order, smallest first:   ', fr(2, 3), ',  ', fr(5, 6), ',  ', fr(7, 12), '        ________,  ________,  ________']));
     W.push(H.q(5, ['', fr(3, 5), ' of the sweets in a jar are red. There are 27 red sweets.'], { keepNext: true }));
-    W.push(H.sub('a', 'Draw a bar model. How many sweets are in the jar?'));
-    W.push(H.gap(700));
-    W.push(H.ans());
-    W.push(H.sub('b', 'How many sweets are NOT red?'));
-    W.push(H.ans());
-    W.push(H.q(6, ['Find ALL the fractions with denominator 12 that are bigger than ', fr(1, 3), ' but smaller than ', fr(3, 4), '. Hint: draw a strip of 12 equal boxes and shade ', fr(1, 3), ' of it, then ', fr(3, 4), '.'], { keepNext: true }));
-    W.push(...H.lines(2));
-    W.push(H.ans('How many?'));
+    W.push(tip('put 27 counters into 3 equal groups. How many in each group?  ______'));
+    W.push(H.sub('a', 'Use the bar model: the whole jar is cut into 5 equal parts. How many sweets are in the jar?  ________'));
+    W.push(H.fig(FG.barModel({ left: 120, rowH: 38, rows: [{ name: 'Jar', segs: [{ u: 1, f: 'shade' }, { u: 1, f: 'shade' }, { u: 1, f: 'shade' }, { u: 1 }, { u: 1 }] }],
+      ann: [{ k: 'brace', row: 0, from: 0, to: 3, side: 'bottom', t: '27 red sweets' }, { k: 'brace', row: 0, from: 0, to: 5, t: '? sweets in the jar' }],
+      label: 'A bar for the jar cut into 5 equal parts. 3 parts are shaded and marked 27 red sweets. A brace over all 5 parts is marked with a question mark.' })));
+    W.push(H.sub('b', 'How many sweets are NOT red?  ________'));
+    W.push(H.q(6, ['Find ALL the fractions with denominator 12 that are bigger than ', fr(1, 3), ' but smaller than ', fr(3, 4), '. Start here: on the strip, shade ', fr(1, 3), ' of the boxes, then ', fr(3, 4), '.'], { keepNext: true }));
+    W.push(H.fig(stripSvg()));
+    W.push(H.ans('Fractions found, and how many:'));
     return W;
   }
 };
@@ -220,10 +234,12 @@ module.exports.gaps = {
   "key": "(a) 12, 8, 4, 3. For 1/5: 24 does not share equally into 5 (4 each, 4 left over), so it is not a whole number. (b) 1/2, 1/3, 1/4, 1/6, 1/8 and 1/12: exactly the denominators that are factors of 24 (checked by brute force). (c) 60, the smallest common multiple of 2, 3, 4, 5 and 6 (1/2 = 30, 1/3 = 20, 1/4 = 15, 1/5 = 12, 1/6 = 10). Guess and check is fine: 24 fails for 1/5, 30 fails for 1/4, 60 works. Look for the link to factors and common multiples from Lesson 1.",
   "easy": "Draw 24 dots. Circle them in 2 equal groups: how many dots are in one group? That is 1/2 of 24. Now try 3 equal groups."
  },
- "reflect": "Something I did well: I drew fraction bars. The hardest part was comparing 3/8 and 3/5. What helped me: drawing two bars of the same length.",
+ "reflect": "Something I did well: I drew fraction bars. The hardest part was comparing 3/8 and 3/5. What helped me: drawing two bars of the same length. One thing I could try next: drawing both bars before I compare.",
  "go2": {
   "q": "What if each pizza had 8 slices and they ate 19? How many pizzas is that?",
   "a": "2 pizzas and 3 slices: 19/8 = 2 3/8."
  },
- "cap": "Page 2 is on your own. Aim for Q4 and Q5 first. Q6 is a choice for the last few minutes."
+ "cap": "Page 2 is on your own. Aim for Q4 and Q5 first. Q6 is a choice for the last few minutes.",
+ "p1": "After question 3 you may choose: carry on, or try Think harder.",
+ "plan": ["Aim for Q4 and Q5 on page 2. Q6 (fractions with denominator 12 between 1/3 and 3/4, about 4 minutes) is a real choice question that now fits after the buffer."]
 };

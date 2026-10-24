@@ -34,7 +34,7 @@ def talk_slide(sid,time,q,notes):
     body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p(q,42))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38))
     return sec(sid,time,body,notes)
 def exit_slide(sid,time,q,notes):
-    body=h2('Exit ticket')+card(chip('EXIT TICKET')+p(q,46))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
+    body=h2('Exit ticket')+card(chip('EXIT TICKET')+p(q,46))+card(p('Write your answer on a slip of paper. Tick it when your tutor shows the answer. Then collect your stamp in your inquiry journal.',34,400))
     return sec(sid,time,body,notes)
 def svgwrap(label,vw,vh,inner,w=None,h=None,extra=''):
     w=w or vw; h=h or vh
@@ -73,7 +73,7 @@ put('p2l4-title',title_slide('p2l4-title','P2  •  LESSON 4  •  WEEK 2','Patt
  'Objective: Find far places in a repeating pattern by counting in groups (the ends of the groups are in a times table); count how many of one shape there are; describe a growing pattern with a table and a rule and use it forwards and backwards; find the numbers that two counting patterns share. Tables used: 2, 3, 4, 5 and 10 only. '
  'Thinking strategies taught today: LOOK FOR A PATTERN (group size, where groups end) and MAKE A TABLE / MAKE A LIST (growing patterns, two counting lists). '
  'Materials: Linking cubes in 3 colours (about 20 per pair), mini whiteboards, matchsticks or lolly sticks (about 25 per pair), counters. '
- 'Online: Coloured pencils and squared paper (or Lego bricks) for the cube train; children draw sticks for the growing pattern and hold up their tables. '
+ 'Online: Coloured pencils and squared paper (or Lego bricks) for the cube train; children draw sticks for the growing pattern and check their tables against the slide. '
  'Time plan: warm-up 0 to 8, explore 8 to 20 (explore2 talk is 6 minutes), teaching 20 to 32 (click to reveal each step and answer), brain break 32 to 36, worksheet page 1 36 to 50 then check together 50 to 52, short teaching 52 to 57, worksheet page 2 57 to 69 then check together 69 to 72, talk time 72 to 80, exit ticket 80 to 90. Stretch and Challenge slides are for early finishers.'))
 
 # ---------- 2. warm-up game ----------
@@ -87,12 +87,12 @@ for i,(q,a) in enumerate([('Beat 9?','STOMP: 9 is in the 3 times table'),('Beat 
     body+=pin(L,500,533,p(q,48,700),None,WHITE,24,'24px 28px',f'box-sizing:border-box;height:330px;border:4px solid {NAVY};box-shadow:8px 8px 0 {NAVY}')
     body+=pin(L+20,640,493,f'<p style="font-size:32px;font-weight:800;line-height:1.25">{E(a)}</p>','pop',SOFT,16,'14px 20px',f'box-sizing:border-box;border:3px solid {NAVY}')
 put('p2l4-warm1',sec('p2l4-warm1','0–5 MIN',body,
- 'Minutes 0 to 5. Pattern rhythm. Everyone stands. Do clap, clap, stomp together for a few rounds while counting the beats aloud. Freeze, then ask each question; take predictions before clicking. '
+ 'Minutes 0 to 5. Pattern rhythm: about 90 seconds of rhythm, then the three beat questions. Everyone stands. Do clap, clap, stomp together for a few rounds while counting the beats aloud. Freeze, then ask each question; take predictions before clicking. '
  'Answers: beat 9 is a stomp (stomps are on 3, 6, 9: the 3 times table); beat 10 is a clap (9 ends a group, so 10 is the first beat of the next group); beat 20 is a clap (18 ends a group, 19 is clap 1, 20 is clap 2). '
  'Ask: "Which beats are stomps?" (3, 6, 9, 12 …). "How did you find beat 20 without clapping 20 times?" Online: children clap and stomp in view of the camera.'))
-qs=[('1.','4, 8, 12, __','16'),('2.','50, 45, 40, __','35'),('3.','3, 6, 9, 12, __','15'),('4.','Count in 4s from 4. What is the 10th number?','40'),('5.','2, 5, 8, 11, __','14')]
+qs=[('1.','4, 8, 12, __','16'),('2.','3, 6, 9, 12, __','15')]   # questions 1 and 3 of the guide table; 2, 4 and 5 are spare
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put('p2l4-warm2',sec('p2l4-warm2','5–8 MIN',body,'Minutes 5 to 8. Read each one aloud, take answers, then click to show. Answers: 16, 35, 15, 40, 14. Ask for the rule each time: add 4; take away 5; add 3; the 10th number in the 4 times table is 4 × 10; add 3. For 5 ask: "Is this the 3 times table?" (No: it starts at 2. Each number is 1 less than a 3 times table number.)'))
+put('p2l4-warm2',sec('p2l4-warm2','5–8 MIN',body,'Minutes 5 to 8. Read each one aloud, take answers, then click to show. Answers: 16 and 15. Ask for the rule each time: add 4; add 3. Spare questions in the guide table: 50, 45, 40, __ is 35 (take away 5); the 10th number counting in 4s is 40; 2, 5, 8, 11, __ is 14 (not the 3 times table: each number is 1 less than a 3 times table number).'))
 
 # ---------- 3. explore ----------
 CC={'R':RED,'B':BLUE}
@@ -138,9 +138,9 @@ put('p2l4-key',sec('p2l4-key','30–32 MIN',h2('Key idea: count in groups')+card
 put('p2l4-break',break_slide('p2l4-break','32–36 MIN','Brain break','Pattern moves! Jump, jump, squat, jump, jump, squat … Keep going to 15 moves. Before you start: what will move 15 be?','Then: a drink of water and back to our seats.','Four minutes. Take predictions first. Move 15 is a squat (15 is in the 3 times table, so it ends a group). Online: children move in view of the camera.'))
 
 # ---------- 5. worksheet page 1 ----------
-put('p2l4-ws1',ws_preview('p2l4-ws1','36–50 MIN','Worksheet page 1: with your partner',[('Q1','The shape pattern. Draw a line after each group of 5.'),('Q2','M, A, T, H. Where do the groups end?'),('Q3','The bead string. Count the groups first.')],'Mark the end of each group. Use the times table to jump ahead.','Minutes 36 to 50. Walk around. Ask "How long is one group? Where does each group end?" before giving any help.'))
-put('p2l4-ws1ans',check_slide('p2l4-ws1ans','50–52 MIN','Page 1: check together',[('Q1','a) square   b) circle   c) triangle'),('Q2','a) A   b) place 40   c) 7 Ts'),('Q3','18 yellow beads,  30 beads altogether')],
- 'Click each answer after a pair explains. Q1: 20 ends a group (square); 23 is the 3rd shape (circle); 40 ends a group, so 41 is the 1st shape (triangle); (the circles in the first 30 shapes is Think harder 1: 6 groups with 2 circles each). Q2: 16 ends a group, so 18 is the 2nd letter, A; every H ends a group, the 10th at 4 × 10 = 40; Ts are at 3, 7, 11, 15, 19, 23, 27, and 29, 30 are M, A. Q3: 12 red is 6 groups; 6 × 3 = 18 yellow; 6 × 5 = 30 beads.'))
+put('p2l4-ws1',ws_preview('p2l4-ws1','36–50 MIN','Worksheet page 1: with your partner',[('Q1','The shape pattern. Draw a line after each group of 5.'),('Q2','M, A, T, H. Where do the groups end? (Part c is a ★ take-home star.)'),('Q3','The bead string. Count the groups first. (Part b is a ★ take-home star.)')],'Mark the end of each group. Use the times table to jump ahead.','Minutes 36 to 50. Walk around. Ask "How long is one group? Where does each group end?" before giving any help. Q2(c) (30 letters, count the Ts) and Q3(b) (beads altogether) are marked ★ take-home on the page: children do them at home.'))
+put('p2l4-ws1ans',check_slide('p2l4-ws1ans','50–52 MIN','Page 1: check together',[('Q1','a) square   b) circle   c) triangle'),('Q2','a) A   b) place 40   ★ take-home:  c) 7 Ts'),('Q3','18 yellow beads;   ★ take-home:  30 beads altogether')],
+ 'Click each answer after a pair explains. Q1: 20 ends a group (square); 23 is the 3rd shape (circle); 40 ends a group, so 41 is the 1st shape (triangle); (the circles in the first 30 shapes is Think harder 1: 6 groups with 2 circles each). Q2: 16 ends a group, so 18 is the 2nd letter, A; every H ends a group, the 10th at 4 × 10 = 40; Ts are at 3, 7, 11, 15, 19, 23, 27, and 29, 30 are M, A. Q3: 12 red is 6 groups; 6 × 3 = 18 yellow; 6 × 5 = 30 beads. Q2(c) and Q3(b) are take-home stars: the answers stay here so children can mark them at home.'))
 
 # ---------- 6. teaching before page 2 ----------
 W7=[190,110,110,110,110,110]
@@ -149,7 +149,7 @@ body+=trow(128,360,['Stools','1','2','3','4','5'],W7,None,True)+trow(128,450,['L
 body+=step(1,'The rule: 3 legs for every stool. Legs = stools × 3.',top=570,size=36)
 body+=step(2,'10 stools: 10 × 3 = 30 legs.',top=680,size=36)
 body+=answer(128,790,1664,'24 legs? Count in 3s to 24: 8 stools.')
-put('p2l4-teachtimes',sec('p2l4-teachtimes','52–54 MIN',body,'Teach before worksheet page 2 (Q4, flower petals). Click: the legs row, the rule, going forwards, going backwards. Think-aloud: "Each stool adds 3 legs, so the table is the 3 times table. To go forwards I multiply: 10 × 3 = 30. To go backwards from 24 legs I count in 3s until I reach 24: 3, 6, 9 … 24 is 8 threes, so 8 stools." '
+put('p2l4-teachtimes',sec('p2l4-teachtimes','52–54 MIN',body,'Teach (moved into the mini-lesson, ahead of worksheet page 2 Q4, flower petals). Click: the legs row, the rule, going forwards, going backwards. Think-aloud: "Each stool adds 3 legs, so the table is the 3 times table. To go forwards I multiply: 10 × 3 = 30. To go backwards from 24 legs I count in 3s until I reach 24: 3, 6, 9 … 24 is 8 threes, so 8 stools." '
  'Ask: "What about 20 legs?" (6 stools use 18, and 2 legs are left over: not enough for another stool.)'))
 def squares(n,x0,s=80):
     g=''
@@ -163,7 +163,7 @@ body+=trow(128,440,['Squares','1','2','3','4','5','6'],W8,None,True)+trow(128,53
 body+=pin(1330,440,462,p('+3 each time: a new square shares one side.',32,700),'fade',SOFT,20,'18px 24px')
 body+=step(1,'Keep adding 3: 22, 25, 28, 31. 10 squares need 31 sticks.',top=650,size=36)
 body+=answer(128,770,1664,'22 sticks? 4, 7, 10, 13, 16, 19, 22: 7 squares.')
-put('p2l4-teachgrow',sec('p2l4-teachgrow','54–55 MIN',body,'Teach before worksheet page 2 (Q5, tables and chairs). Build the squares with lolly sticks. Ask: "How many more sticks for the next square? Why not 4?" (it shares a side with the square before). Click: the sticks row, the note, the step, the answer. '
+put('p2l4-teachgrow',sec('p2l4-teachgrow','54–55 MIN',body,'Teach (moved into the mini-lesson, ahead of worksheet page 2 Q5, tables and chairs). Build the squares with lolly sticks. Ask: "How many more sticks for the next square? Why not 4?" (it shares a side with the square before). Click: the sticks row, the note, the step, the answer. '
  'Think-aloud: "I make a table. 4, 7, 10: it goes up by 3 each time. I keep adding 3 to reach 10 squares: 31. To go backwards from 22 sticks, I keep adding 3 until I reach 22 and read the squares: 7." Watch for: 10 × 3 = 30 or 10 × 4 = 40. Point at the first square: it needs 4, not 3.'))
 body=h2('In both patterns: make two lists')+pin(128,240,1664,p('Ali counts in 2s. Mei counts in 5s. Which numbers up to 30 do they BOTH say?',38,700),None,WHITE,20,'18px 28px')
 body+=pin(128,380,1664,p('Ali:  2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30',38,600),'rise',WHITE,20,'18px 28px')
@@ -171,13 +171,10 @@ body+=pin(128,490,1664,p('Mei:  5, 10, 15, 20, 25, 30',38,600),'rise',WHITE,20,'
 body+=answer(128,610,1664,'Both say: 10, 20, 30')
 body+=pin(128,730,1664,p('They go up by 10 each time: they are in the 2 AND the 5 times tables.',34,700),'fade',SOFT,20,'18px 28px')
 put('p2l4-teachboth',sec('p2l4-teachboth','55–56 MIN',body,'Teach before worksheet page 2 (Q6 uses 3s and 4s). Click: Ali\'s list, Mei\'s list, the answer, the note. Children circle the numbers that appear in both lists. Say: "MAKE A LIST: write both counts in order, then look for the numbers in both." Ask: "What would the next one after 30 be?" (40).'))
-put('p2l4-try2',try_slide('p2l4-try2','56–57 MIN','Your turn: pattern machines','Make a table or a list. Then click to check.',[('a','Each car has 4 wheels. How many wheels on 7 cars?','28'),('b','Squares of sticks: 4, 7, 10 … How many sticks for 8 squares?','25'),('c','Counting in 2s and in 3s: which numbers up to 20 are in both?','6, 12, 18')],
- 'Minutes 56 to 57. Whiteboards. a) 4, 8, 12, 16, 20, 24, 28. b) 4, 7, 10, 13, 16, 19, 22, 25. c) 2s: 2, 4, 6 … 20; 3s: 3, 6, 9, 12, 15, 18; both: 6, 12, 18.',size=36))
-
 # ---------- 7. worksheet page 2 ----------
-put('p2l4-ws2',ws_preview('p2l4-ws2','57–69 MIN','Worksheet page 2: on your own',[('Q4','Flower petals: a times-table pattern. Forwards and backwards.'),('Q5','Tables and chairs: fill in the table, find the rule.'),('Q6','Counting in 3s and 4s: make two lists.')],'Finished early? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up next lesson. For Q5 ask: "How many more children when you add a table? Why?"'))
-put('p2l4-ws2ans',check_slide('p2l4-ws2ans','69–72 MIN','Page 2: check together',[('Q4','5, 10, 15, 20, 25, 30.  50 petals.  7 flowers.  4 flowers, 3 left'),('Q5','4, 6, 8, 10, 12, 14.   22 children.   9 tables'),('Q6','Both say 12, 24, 36.  They go up by 12.')],
- 'Click each answer after a child explains. Q4: 23 petals: 4 flowers use 20, 3 petals left over. Q5: the rule is add 2: each new table adds 1 child on top and 1 below, and the 2 end seats stay; 10 tables seat 22; 9 tables seat 20. Q6: Ali 3, 6, 9 … 36 (12 numbers); Mei 4, 8 … 36 (9 numbers); both 12, 24, 36.'))
+put('p2l4-ws2',ws_preview('p2l4-ws2','57–69 MIN','Worksheet page 2: on your own',[('Q4','Flower petals: a times-table pattern. Forwards and backwards. (Part d is a ★ take-home star.)'),('Q5','Tables and chairs: fill in the table, find the rule. (Part d is a ★ take-home star.)'),('Q6','Counting in 3s and 4s: make two lists.')],'Finished early? Stretch and Challenge come next.','Children work alone. Q4(d) (23 petals) and Q5(d) (why does it go up by 2) are marked ★ take-home on the page: children do them at home. Note who needs a short catch-up next lesson. For Q5 ask: "How many more children when you add a table?" (the why is the take-home part).'))
+put('p2l4-ws2ans',check_slide('p2l4-ws2ans','69–72 MIN','Page 2: check together',[('Q4','5, 10, 15, 20, 25, 30.  50 petals.  7 flowers.  ★ take-home:  4 flowers, 3 left'),('Q5','4, 6, 8, 10, 12, 14.   22 children.   9 tables.   ★ take-home (d): each table adds 1 child on top and 1 below'),('Q6','Both say 12, 24, 36.  They go up by 12.')],
+ 'Click each answer after a child explains (answer lines only). Q4(d) and Q5(d) are take-home stars: do not use class time on them. Q4: 23 petals: 4 flowers use 20, 3 petals left over. Q5: the rule is add 2: each new table adds 1 child on top and 1 below, and the 2 end seats stay; 10 tables seat 22; 9 tables seat 20. Q6: Ali 3, 6, 9 … 36 (12 numbers); Mei 4, 8 … 36 (9 numbers); both 12, 24, 36.'))
 
 # ---------- 8. stretch and challenge ----------
 st=[('1.','A pattern goes 1, 2, 3, 1, 2, 3 … What is the total of the first 15 numbers?'),('2.','Ben’s pattern is 2, 5, 8, 11 … Will 30 be in his pattern? Explain.'),('3.','Square, circle, circle, square, circle, circle … Mei draws 20 shapes. How many squares?')]
@@ -206,9 +203,12 @@ body+=pin(992,250,800,p('Q2: make two lists',38,800,TEAL))
 for i,t in enumerate(['A:  4, 8, 12, 16, 20, 24, 28','B:  5, 8, 11, 14, 17, 20, 23, 26, 29','Both: 8 and 20 ✓']): body+=pin(992,330+i*110,800,p(t,34),'rise',WHITE)
 put('p2l4-chwalk',sec('p2l4-chwalk','Challenge',body,'Use after pairs have tried. Q1: each tower has 3 more cubes than the one before; keep the table going until 29. A strong child may notice each tower is 1 less than the 3 times table (tower 10: 30 − 1 = 29), which answers the extra questions: 50 + 1 = 51 is in the 3 times table (17 × 3), so tower 17 has 50 cubes; 100 + 1 = 101 is not (99 and 102 are), so no tower has 100. '
  'Q2: list each frog\'s landings in order up to 30 and circle the numbers in both lists. The next shared number would be 32 (they meet every 12 steps: 8, 20, 32).'))
-put('p2l4-talk',talk_slide('p2l4-talk','72–80 MIN','A pattern repeats every 5 shapes. Is the 10th shape always the same as the 20th? What if it repeats every 3 shapes?','Minutes 72 to 80. Pairs talk for 2 minutes, then share. Answer: Every 5: yes, 10 and 20 are both in the 5 times table, so both are the LAST shape of a group. Every 3: no. 9 ends a group, so 10 is the 1st shape; 18 ends a group, so 20 is the 2nd shape. Praise the reasons, not only the answers.'))
+put('p2l4-talk',talk_slide('p2l4-talk','72–80 MIN','A pattern repeats every 5 shapes. Is the 10th shape always the same as the 20th?','Minutes 72 to 80. Pairs talk for 90 seconds, then two volunteers share. Answer: yes, 10 and 20 are both in the 5 times table, so both are the LAST shape of a group. (If a pair finishes early and wants more, not as a second question for the group: what if it repeats every 3 shapes? Then 9 ends a group, so 10 is the 1st shape, and 18 ends a group, so 20 is the 2nd.) Praise the reasons, not only the answers.'))
 put('p2l4-exit',exit_slide('p2l4-exit','80–90 MIN','The pattern goes triangle, circle, square, triangle, circle, square … What is the 17th shape? How do you know?','Minutes 80 to 90. Answer: a circle. 15 ends a group (5 groups of 3), so 16 is a triangle and 17 is a circle. Extension: make your own repeating pattern of 4 shapes and write 3 far-place questions about it for a partner, with the answers.'))
 
+# the two machine/growing-pattern slides move into the mini-lesson, after teachcount (re-budget)
+for _k in ('teachtimes','teachgrow'): ORDER.remove(f'p2l4-{_k}')
+_i=ORDER.index('p2l4-teachcount')+1; ORDER[_i:_i]=['p2l4-teachtimes','p2l4-teachgrow']
 p2gaps.add(S,4); ORDER[:]=p2gaps.order(ORDER,4)
 # ---------- write ----------
 if os.path.isdir(os.path.join(D,'slides')): shutil.rmtree(os.path.join(D,'slides'))

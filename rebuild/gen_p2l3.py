@@ -34,7 +34,7 @@ def talk_slide(sid,time,q,notes):
     body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p(q,42))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38))
     return sec(sid,time,body,notes)
 def exit_slide(sid,time,q,notes):
-    body=h2('Exit ticket')+card(chip('EXIT TICKET')+p(q,46))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
+    body=h2('Exit ticket')+card(chip('EXIT TICKET')+p(q,46))+card(p('Write your answer on a slip of paper. Tick it when your tutor shows the answer. Then collect your stamp in your inquiry journal.',34,400))
     return sec(sid,time,body,notes)
 def svgwrap(label,vw,vh,inner,w=None,h=None,extra=''):
     w=w or vw; h=h or vh
@@ -78,7 +78,7 @@ put('p2l3-title',title_slide('p2l3-title','P2  •  LESSON 3  •  WEEK 2','Legs
  'Objective: Read an array as rows of equal groups and write two multiplication and two division sentences for it; solve "how many of each" legs and wheels puzzles with a table; share with leftovers and decide what the leftover means; find all the arrays for a number. Tables used: 2, 3, 4, 5 and 10 only. '
  'Level note: sharing with leftovers (Q4, Q5) is division with a remainder, which is a P3 topic. It is a natural lead-in, so say "3 left over" in words and do not write remainders as "r 3". Thinking strategies taught today: DRAW IT (arrays, plates, boats) and MAKE A TABLE (start with all of one kind, swap one at a time; guess and check). '
  'Materials: About 30 counters per pair, mini whiteboards, squared paper. Optional picture cards of hens and goats, bicycles and tricycles. '
- 'Online: Each child has 30 small objects (buttons, beans or Lego bricks) and a whiteboard or paper; children hold arrays and tables up to the camera. '
+ 'Online: Each child has 30 small objects (buttons, beans or Lego bricks) and a whiteboard or paper; children check arrays and tables against the slide. '
  'Time plan: warm-up 0 to 8, explore 8 to 20 (explore2 talk is 6 minutes), teaching 20 to 32 (click to reveal each step and answer), brain break 32 to 36, worksheet page 1 36 to 50 then check together 50 to 52, short teaching 52 to 57, worksheet page 2 57 to 69 then check together 69 to 72, talk time 72 to 80, exit ticket 80 to 90. Stretch and Challenge slides are for early finishers.'))
 
 # ---------- 2. warm-up game ----------
@@ -88,7 +88,8 @@ cards=[([('car',g_car())],'4 cars','How many wheels?','16 wheels: 4, 8, 12, 16')
        ([('dog',g_dog())],'5 dogs','How many legs?','20 legs: 4, 8, 12, 16, 20'),
        ([('hen',g_hen())],'6 hens','How many legs?','12 legs: 2, 4, 6, 8, 10, 12'),
        ([('car',g_car()),('bicycle',g_bike())],'2 cars and 1 bicycle','How many wheels?','10 wheels: 8 + 2')]
-body=h2('Warm-up: count the legs and wheels')+p('Count in 2s, 3s, 4s or 5s. Not in 1s!',36,600,MUTED)
+cards=[cards[0],cards[4],cards[1]]   # three picture cards only (cars, hens, bicycles): count in 2s and 4s, about 2.5 minutes
+body=h2('Warm-up: count the legs and wheels')+p('Count in 2s and 4s. Not in 1s!',36,600,MUTED)
 CW=533; cs=''; ans=''
 for i,(ics,name,q,a) in enumerate(cards):
     L=128+(i%3)*(CW+32); Tp=290+(i//3)*300
@@ -99,15 +100,15 @@ for i,(ics,name,q,a) in enumerate(cards):
     cs+=pin(L,Tp,CW,inner,None,WHITE,24,'16px 22px',f'box-sizing:border-box;height:276px;border:4px solid {NAVY};box-shadow:8px 8px 0 {NAVY}')
     ans+=pin(L+20,Tp+196,CW-40,f'<p style="font-size:30px;font-weight:800;line-height:1.2">{E(a)}</p>','pop',SOFT,16,'12px 18px',f'box-sizing:border-box;border:3px solid {NAVY}')
 put('p2l3-warm1',sec('p2l3-warm1','0–5 MIN',body+cs+ans,
- 'Minutes 0 to 5. Legs and wheels count. Point to one card at a time. Children count in 2s, 3s, 4s or 5s (not in 1s) and show the number on fingers or a whiteboard, then you click to show the answer (clicks reveal the cards in order: cars, bicycles, tricycles, dogs, hens, mixed). '
- 'Answers: 4 cars 16 wheels; 5 bicycles 10 wheels; 3 tricycles 9 wheels; 5 dogs 20 legs; 6 hens 12 legs; 2 cars and 1 bicycle 10 wheels (8 + 2). '
- 'Ask: "Which times table did you use for the cars?" (4s). "For the tricycles?" (3s). For the last card: "Why can we not count all of them in 4s?" (the bicycle has only 2 wheels). '
+ 'Minutes 0 to 5. Legs and wheels count, three cards only. Point to one card at a time. Children count in 2s and 4s (not in 1s) and show the number on fingers or a whiteboard, then you click to show the answer (clicks reveal the cards in order: cars, hens, bicycles). '
+ 'Answers: 4 cars 16 wheels; 6 hens 12 legs; 5 bicycles 10 wheels. (Spare cards, not shown: 3 tricycles 9 wheels; 5 dogs 20 legs; 2 cars and 1 bicycle 10 wheels.) '
+ 'Ask: "Which times table did you use for the cars?" (4s). "For the hens and the bicycles?" (2s). '
  'Watch for children counting every wheel in 1s; ask them to point to each car and count "4, 8, 12, 16".'))
 
 # ---------- 3. quick questions ----------
-qs=[('1.','3 × 5 = ?','15'),('2.','4 groups of 4. How many altogether?','16'),('3.','20 ÷ 2 = ?','10'),('4.','30 shared equally by 10 children. How many each?','3'),('5.','How many 5s make 35?','7')]
+qs=[('1.','3 × 5 = ?','15'),('2.','20 ÷ 2 = ?','10')]   # questions 1 and 3 of the guide table; 2, 4 and 5 are spare
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put('p2l3-warm2',sec('p2l3-warm2','5–8 MIN',body,'Minutes 5 to 8. Read each one aloud, give thinking time, take answers, then click to show. Answers: 15, 16, 10, 3, 7. For 5 ask: "How did you know?" (count in 5s: 5, 10, 15, 20, 25, 30, 35, that is 7 fives). For 4 ask: "Is that a multiplication or a division?" (division: sharing).'))
+put('p2l3-warm2',sec('p2l3-warm2','5–8 MIN',body,'Minutes 5 to 8. Read each one aloud, give thinking time, take answers, then click to show. Answers: 15 and 10. For question 2 ask: "Is that a multiplication or a division?" (division: sharing). Spare questions in the guide table: 4 groups of 4 is 16; 30 shared by 10 children is 3 each; how many 5s make 35 is 7.'))
 
 # ---------- 4. explore ----------
 pen=(f'<rect x="20" y="96" width="680" height="300" rx="20" fill="#E8F3E0" stroke="{NAVY}" stroke-width="4"/>'
@@ -119,7 +120,7 @@ pen=(f'<rect x="20" y="96" width="680" height="300" rx="20" fill="#E8F3E0" strok
 put('p2l3-explore1',explore1('p2l3-explore1','8–14 MIN',['A pen has only hens (2 legs) and goats (4 legs).','The farmer counts 16 legs altogether.','Use counters or drawings to find a mix of hens and goats.','Find EVERY mix. Record each one.'],
  svgwrap('A farm pen with a hen (2 legs) and a goat (4 legs) and a sign that says 16 legs',720,410,pen,700,400),
  'Minutes 8 to 14. Pairs use counters: 2 counters stand for a hen\'s legs, 4 for a goat\'s, or they draw circles for heads and sticks for legs. Ask for a prediction first: "Is there only one answer?" '
- 'Do not show a method yet; let them try. Push early finishers: "How do you know you have them all?" Online: children draw on paper and hold it up. The 5 mixes are in the next slide\'s notes.'))
+ 'Do not show a method yet; let them try. Push early finishers: "How do you know you have them all?" Online: children draw on paper and describe it aloud. The 5 mixes are in the next slide\'s notes.'))
 put('p2l3-explore2',sec('p2l3-explore2','14–20 MIN',h2('Explore: talk about it')+numbered_cards([('1.','How many different mixes did you find?'),('2.','How do you know you have them all?'),('3.','What happens when you swap 2 hens for 1 goat?')]),
  'Minutes 14 to 20. Gather the pairs and take answers. Write the mixes on the board IN ORDER of goats: 0 goats and 8 hens; 1 goat and 6 hens; 2 goats and 4 hens; 3 goats and 2 hens; 4 goats and 0 hens. That is 5 mixes (4 if the pen must have both kinds; accept either if the child says which). '
  'Answers: 1) 5 mixes. 2) The goats go 0, 1, 2, 3, 4; 5 goats would need 20 legs, too many. 3) The legs stay at 16: 2 hens have 4 legs, the same as 1 goat. Say: "Going in order made sure we did not miss one. Today we use tables to go in order."'))
@@ -133,8 +134,6 @@ for i,t in enumerate(['Count the rows: 3. Count how many in each row: 4.','3 row
     body+=step(i+1,t,left=900,top=250+i*150,width=892,size=34)
 put('p2l3-teach1',sec('p2l3-teach1','20–22 MIN',body,'Teach. Build 3 rows of 4 counters while the children copy. Click to reveal each step. Think-aloud: "3 rows of 4 dots. I count the rows: 3. I count how many in each row: 4. 4, 8, 12. So 3 × 4 = 12. If I turn my head, it is 4 rows of 3, so 4 × 3 = 12 too. Sharing 12 into 3 rows gives 4 in each row: 12 ÷ 3 = 4. Putting 12 in groups of 4 gives 3 groups: 12 ÷ 4 = 3." '
  'Ask: "One array, how many number sentences?" (four: two × and two ÷). Say: "An array is a DRAW IT tool: it shows the groups so we can see the times table."'))
-put('p2l3-try1',try_slide('p2l3-try1','22–24 MIN','Your turn: arrays','Draw dots if it helps. Then click to check.',[('a','2 rows of 10 chairs. How many chairs?','20'),('b','15 cakes in 3 equal rows. How many in each row?','5'),('c','40 dots in 4 equal rows. How many in each row?','10')],
- 'Whiteboards up together, then click. a) 2 × 10 = 20. b) 15 ÷ 3 = 5 (count in 3s: 3, 6, 9, 12, 15, that is 5 threes, or 3 rows of 5). c) 40 ÷ 4 = 10. For c ask: "Which fact helped?" (4 × 10 = 40).',size=38))
 
 # ---------- 6. worked example: hidden array ----------
 tray=f'<rect x="10" y="10" width="700" height="460" rx="26" fill="{SKY}" stroke="{NAVY}" stroke-width="5"/>'
@@ -158,8 +157,8 @@ body+=pin(1100,550,692,p('Swap 1 bicycle for a car: 2 more wheels each time.',34
 body+=pin(1100,690,692,p('4 bicycles and 2 cars.',38,800)+p('Check: 8 + 8 = 16 wheels, 4 + 2 = 6 ✓',30,600),'fade',SOFT,20,'20px 26px')
 put('p2l3-teach2',sec('p2l3-teach2','26–28 MIN',body,'Teach. Click: the first note, then each table row, then the swap note and the answer (or reveal the rows as the children call them out). Think-aloud: "6 vehicles, bicycles and cars, 16 wheels. I start with all bicycles: 6 bicycles is 12 wheels. Too few. I swap one bicycle for a car: a car has 2 more wheels than a bicycle, so that adds 2 wheels, 14. Swap again: 16. So 4 bicycles and 2 cars. Check BOTH clues: 8 + 8 = 16 wheels, 4 + 2 = 6 vehicles." '
  'Say: "This is MAKE A TABLE. It is also guess and check, but tidy: every row is a guess, and the table shows us the pattern so we know which way to go."'))
-put('p2l3-try2',try_slide('p2l3-try2','28–31 MIN','Your turn: how many of each?','Make a table. Start with all of one kind, then swap.',[('a','Hens and goats: 4 animals, 10 legs.','3 hens, 1 goat'),('b','Bicycles and tricycles: 5 of them, 12 wheels.','3 bikes, 2 trikes'),('c','Stools (3 legs) and chairs (4 legs): 3 seats, 10 legs.','2 stools, 1 chair')],
- 'Whiteboards, then click. a) 4 hens = 8 legs; swap 1: 10 legs, so 3 hens and 1 goat. b) 5 bicycles = 10 wheels; each swap to a tricycle adds 1 wheel; 2 swaps make 12, so 3 bicycles and 2 tricycles. c) 3 stools = 9 legs; 1 swap adds 1 leg: 2 stools and 1 chair. Ask about b: "Why does each swap add only 1 this time?" (3 − 2 = 1).',size=36))
+put('p2l3-try2',try_slide('p2l3-try2','28–31 MIN','Your turn: how many of each?','Make a table. Start with all of one kind, then swap.',[('a','Hens and goats: 4 animals, 10 legs.','3 hens, 1 goat'),('b','Bicycles and tricycles: 5 of them, 12 wheels.','3 bikes, 2 trikes')],
+ 'Whiteboards, then click. a) 4 hens = 8 legs; swap 1: 10 legs, so 3 hens and 1 goat. b) 5 bicycles = 10 wheels; each swap to a tricycle adds 1 wheel; 2 swaps make 12, so 3 bicycles and 2 tricycles. Ask about b: "Why does each swap add only 1 this time?" (3 − 2 = 1). Two items only: the stools and chairs item is dropped, the worksheet has the same type.',size=36))
 put('p2l3-key',sec('p2l3-key','31–32 MIN',h2('Key idea: draw it, then make a table')+card(p('An array is rows of equal groups: rows × number in each row. For "how many of each", start with all of one kind and swap one at a time in a table.',44,700))+card(p('Every swap changes the total by the same amount. Check both clues at the end.',38,600,MUTED)),
  'Say the key idea together. Common mistakes to watch for during the worksheet: (1) Counting the hidden part of an array one by one, or counting the corner twice, instead of rows × number in each row minus the ones you can see. (2) Giving the number of whole groups when the leftover still needs a place (28 children, vans of 5: writing 5 vans instead of 6). (3) In "how many of each" puzzles, matching the legs but forgetting to check the number of animals.'))
 put('p2l3-break',break_slide('p2l3-break','32–36 MIN','Brain break','Array moves! "3 rows of 4": do 3 rows of 4 claps, counting 4, 8, 12. Then 5 rows of 2 jumps and 2 rows of 10 stomps.','Then: a drink of water and back to our seats.','Four minutes. Online: children stay in view of the camera and move in place. Count the totals aloud together: 12 claps, 10 jumps, 20 stomps.'))
@@ -205,8 +204,6 @@ body+=pin(1100,640,692,p('7 rows of 2 needs 14 chairs: too many. Stop.',32,700),
 body+=answer(1100,780,692,'4 ways')
 put('p2l3-teachall',sec('p2l3-teachall','55–56 MIN',body,'Teach before worksheet page 2 (Q6). Use 12 counters to build each array as you click each row. Think-aloud: "2 rows: 12 shared into 2 rows is 6 in each row. 3 rows: 3, 6, 9, 12, that is 4 in each row. 4 rows of 3. 5 rows: 5, 10, 15, I jump over 12, so no. 6 rows of 2. 7 rows would need 14 chairs for 2 in each row, so I stop." '
  'Answer: 4 ways (2 rows of 6, 3 rows of 4, 4 rows of 3, 6 rows of 2). Ask: "Are 3 rows of 4 and 4 rows of 3 different?" (Yes for chairs in a hall: the rows look different. On the worksheet we count them as different ways.)'))
-put('p2l3-try3',try_slide('p2l3-try3','56–57 MIN','Your turn: share, seat, list','Draw it or use counters. Then click to check.',[('a','22 marbles in 5 bags, the same in each. How many in each bag? How many left?','4 each, 2 left'),('b','14 children. Each car holds 4. How many cars?','4 cars'),('c','15 chairs. All the arrays (2 or more rows, 2 or more in each row)?','3 of 5, 5 of 3')],
- 'Minutes 56 to 57. Whiteboards. a) 5, 10, 15, 20: 4 rounds use 20, 2 left over. b) 3 cars carry 12, 2 children are left, so 4 cars. c) 3 rows of 5 and 5 rows of 3 (2 and 4 rows do not work: 15 is odd, and 4 rows of 3 is 12, 4 rows of 4 is 16).',size=34))
 
 # ---------- 10. worksheet page 2 ----------
 put('p2l3-ws2',ws_preview('p2l3-ws2','57–69 MIN','Worksheet page 2: on your own',[('Q4','Ravi’s 23 stickers. Share them, then think about the leftover.'),('Q5','Vans for 28 children. Leftovers need a seat too!'),('Q6','All the arrays for 20 chairs. Try 2 rows, 3 rows ... Stop at 10 rows.')],'Finished early? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up next lesson. Bicycles and tricycles with 17 wheels (find ALL the ways) is Think harder 1: point to the table idea "Start with 1 tricycle. How many wheels are left for the bicycles?" Q4: suggest drawing 4 friends and dealing out the stickers.'))
@@ -239,7 +236,7 @@ for i,t in enumerate(['1 goat, 3 hens: 4 + 6 = 10 legs','2 goats, 4 hens: 8 + 8 
 body+=pin(992,670,800,p('Each try adds 6 legs: one more goat (4) and one more hen (2).',30,600,MUTED),'fade')
 put('p2l3-chwalk',sec('p2l3-chwalk','Challenge',body,'Use after pairs have tried. Q1: the 4 times table numbers from 20 to 28 are 20, 24, 28; add 3 to get 23, 27 (31 is too big). The 5 times table numbers are 20, 25; add 2 to get 22, 27. Only 27 is in both. Check: 27 = 6 fours + 3 = 5 fives + 2. '
  'Q2: keep the "2 more hens" rule in every guess, and change the number of goats by 1 each time. 5 hens and 3 goats: 10 + 12 = 22 legs.'))
-put('p2l3-talk',talk_slide('p2l3-talk','72–80 MIN','Ravi shares stickers equally among 4 friends. Can the number left over ever be 4 or more? Why?','Minutes 72 to 80. Pairs talk for 2 minutes, then share. Answer: No. If 4 or more were left, Ravi could give each friend one more, so the leftover is always 0, 1, 2 or 3. Follow-up: "And when he shares among 5 friends?" (0 to 4). Praise the reasons, not only the answers.'))
+put('p2l3-talk',talk_slide('p2l3-talk','72–80 MIN','Ravi shares stickers equally among 4 friends. Can the number left over ever be 4 or more? Why?','Minutes 72 to 80. Pairs talk for 90 seconds, then two volunteers share. Answer: No. If 4 or more were left, Ravi could give each friend one more, so the leftover is always 0, 1, 2 or 3. Praise the reasons, not only the answers.'))
 put('p2l3-exit',exit_slide('p2l3-exit','80–90 MIN','A pen has hens and goats. There are 5 animals and 14 legs. How many hens and how many goats?','Minutes 80 to 90. Answer: 3 hens and 2 goats (6 + 8 = 14 legs, 3 + 2 = 5 animals). Look for a table starting with 5 hens (10 legs). Extension: find all the arrays (at least 2 rows, at least 2 in each row) for 16 counters (3 ways: 2 rows of 8, 4 rows of 4, 8 rows of 2).'))
 
 p2gaps.add(S,3); ORDER[:]=p2gaps.order(ORDER,3)

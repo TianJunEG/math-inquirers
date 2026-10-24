@@ -54,7 +54,7 @@ body+=pin(128,770,1664,p('A rule lets us test any number. We do not guess: we ke
 put('l1-we1',sec('l1-we1','27–29 MIN',body,'Click to reveal each step. Before each click, ask the group to predict it. Many children say "yes" to 30 because it "feels close". Ask: "How can we test it?" Think-aloud: "My rule is add 6. 26 + 6 = 32. The pattern lands on 26 and then on 32. It never lands on 30, so 30 is not in the pattern. Is 38 in it? 32 + 6 = 38, yes." Count on from 26 on the strip if children are unsure: 27, 28, 29, 30, 31, 32.'))
 
 # ---- try 1 ----
-put('l1-try1',rows_slide('l1-try1','29–30 MIN','Your turn: whiteboards','Find the rule first. Then answer.',[('a','5, 9, 13, __, __','17, 21'),('b','31, 28, 25, __','22'),('c','4, 9, 14, 19 … Is 30 in it?','No')],'Children write on whiteboards and hold them up together. Click for each answer. a) Add 4: 13 + 4 = 17, 17 + 4 = 21. b) The numbers go down, so take away 3: 25 − 3 = 22. Anyone who writes 28 has added: ask "Are the numbers getting bigger or smaller?" c) Add 5: 19, 24, 29, 34. It jumps from 29 to 34, so 30 is not in the pattern.'))
+put('l1-try1',rows_slide('l1-try1','29–30 MIN','Your turn: whiteboards','Find the rule first. Then answer.',[('a','5, 9, 13, __, __','17, 21'),('b','31, 28, 25, __','22'),('c','4, 9, 14, 19 … Is 30 in it?','No')],'Children write on whiteboards and say the answer together on three. Click for each answer. a) Add 4: 13 + 4 = 17, 17 + 4 = 21. b) The numbers go down, so take away 3: 25 − 3 = 22. Anyone who writes 28 has added: ask "Are the numbers getting bigger or smaller?" c) Add 5: 19, 24, 29, 34. It jumps from 29 to 34, so 30 is not in the pattern.'))
 
 # ---- worked example 2: going down, with gaps ----
 body=h2('Worked example: going down, with gaps')+card(p('40, 36, __, 28, __, 20     Find the rule. Fill the gaps.',44,700))
@@ -130,3 +130,4 @@ import p1fix
 p1fix.finish(D,1,{'l1-ws2':'58–68 MIN'})
 p1fix.patch(D,'routine',[('<td>40–70</td><td><b>Worksheet</b></td><td>Pairs, then on your own, then stretch</td>','<td>40–72</td><td><b>Worksheet</b></td><td>Pairs, then on your own, then check together. Think Harder and Challenge are for early finishers or home.</td>'),('<td>70–80</td>','<td>72–80</td>')])
 import p1neutral; p1neutral.apply(D,1)
+import p1budget; p1budget.apply(D,1)

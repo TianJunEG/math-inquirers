@@ -1,0 +1,110 @@
+{
+ "note": "Pairs of puzzles of the same sub-structure at two levels whose sentence frames score 0.90 or more by the function-word skeleton rule of verify_bank.py and that a reader accepted (AUDIT_ROUND6 H1, section 3.2 Tier B: the same idea at another age, other story, other numbers, other difficulty). An entry protects a pair only while the wording of both questions is unchanged (hash) and the score has not risen. Tier A pairs (the same puzzle again) never belong here: they are rewritten. Accepted by the delegate of the owner as an adopted default; revocable.",
+ "accepted": [
+  {
+   "a": "L1-fruitmatch",
+   "b": "L2-clubmatch",
+   "score": 1.0,
+   "hash": "5ad9c5010eef",
+   "reason": "Tier B (AUDIT_ROUND6 3.2, M6): the \"who has which\" genre; the stock clue sentences \"X does not play A or B\" belong to the genre; the story, the cast and the numbers of options differ at every level"
+  },
+  {
+   "a": "L1-matchhouse",
+   "b": "L3-sticksdisplay",
+   "score": 0.96,
+   "hash": "e32a2be1a87d",
+   "reason": "Tier B: counting the sticks or bars of a run of numbers from a digit table, the genre sentence \"as the table shows\"; other story, other numbers, other digit range"
+  },
+  {
+   "a": "L1-threefifty",
+   "b": "L4-page5",
+   "score": 0.9,
+   "hash": "570325106fb2",
+   "reason": "Tier B: how many of the numbers 1 to N contain a digit; other digit and other range"
+  },
+  {
+   "a": "L2-busroutes",
+   "b": "L5-routeplan",
+   "score": 1.0,
+   "hash": "785c8fc1acba",
+   "reason": "Tier B: a list of road lengths and \"What is the shortest way from A to B\"; the list format is the genre; other map and numbers"
+  },
+  {
+   "a": "L2-clubmatch",
+   "b": "L4-hobbies",
+   "score": 0.9,
+   "hash": "74f7f0a21627",
+   "reason": "Tier B (AUDIT_ROUND6 3.2, M6): the \"who has which\" genre; the stock clue sentences \"X does not play A or B\" belong to the genre; the story, the cast and the numbers of options differ at every level"
+  },
+  {
+   "a": "L2-clubmatch",
+   "b": "L5-subjects",
+   "score": 1.0,
+   "hash": "12da7fe303ea",
+   "reason": "Tier B (AUDIT_ROUND6 3.2, M6): the \"who has which\" genre; the stock clue sentences \"X does not play A or B\" belong to the genre; the story, the cast and the numbers of options differ at every level"
+  },
+  {
+   "a": "L2-clubmatch",
+   "b": "L6-sixclubs",
+   "score": 1.0,
+   "hash": "4c60a15cbe99",
+   "reason": "Tier B (AUDIT_ROUND6 3.2, M6): the \"who has which\" genre; the stock clue sentences \"X does not play A or B\" belong to the genre; the story, the cast and the numbers of options differ at every level"
+  },
+  {
+   "a": "L2-hairclips",
+   "b": "L5-nametagpacks",
+   "score": 0.94,
+   "hash": "447d2ae5381a",
+   "reason": "Tier B: a unit price against an offer and a saving; other offer type"
+  },
+  {
+   "a": "L3-bandmatch",
+   "b": "L4-hobbies",
+   "score": 0.91,
+   "hash": "c5a27f76f64f",
+   "reason": "Tier B (AUDIT_ROUND6 3.2, M6): the \"who has which\" genre; the stock clue sentences \"X does not play A or B\" belong to the genre; the story, the cast and the numbers of options differ at every level"
+  },
+  {
+   "a": "L3-raffledays",
+   "b": "L4-visitortable",
+   "score": 0.9,
+   "hash": "943fecdd7456",
+   "reason": "Tier B: a total of four or five counts from a list; other story, other numbers"
+  },
+  {
+   "a": "L4-hobbies",
+   "b": "L5-subjects",
+   "score": 0.9,
+   "hash": "2555c0c3b4c2",
+   "reason": "Tier B (AUDIT_ROUND6 3.2, M6): the \"who has which\" genre; the stock clue sentences \"X does not play A or B\" belong to the genre; the story, the cast and the numbers of options differ at every level"
+  },
+  {
+   "a": "L4-hobbies",
+   "b": "L6-sixclubs",
+   "score": 0.9,
+   "hash": "9c9ba1a14ad3",
+   "reason": "Tier B (AUDIT_ROUND6 3.2, M6): the \"who has which\" genre; the stock clue sentences \"X does not play A or B\" belong to the genre; the story, the cast and the numbers of options differ at every level"
+  },
+  {
+   "a": "L4-stamps4",
+   "b": "L5-henstock",
+   "score": 0.93,
+   "hash": "c47a27c703b9",
+   "reason": "Tier B: a fraction of a set; other fraction, other story"
+  },
+  {
+   "a": "L5-orangeprofit",
+   "b": "L6-tvprofit",
+   "score": 0.9,
+   "hash": "9d6c852fd37a",
+   "reason": "Tier B: profit as a percentage of the cost price; other numbers and goods"
+  },
+  {
+   "a": "L5-subjects",
+   "b": "L6-sixclubs",
+   "score": 1.0,
+   "hash": "408f8db63655",
+   "reason": "Tier B (AUDIT_ROUND6 3.2, M6): the \"who has which\" genre; the stock clue sentences \"X does not play A or B\" belong to the genre; the story, the cast and the numbers of options differ at every level"
+  }
+ ]
+}

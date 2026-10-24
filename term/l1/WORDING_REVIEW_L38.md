@@ -1,0 +1,15 @@
+# Wording review: Lesson 38 (Graph Detectives)
+
+Every child-facing sentence (slides, workbook, exit ticket, home sheet, online practice, parent page) was read aloud against WORDING_GUIDE rules 1 to 25 and `docs/books/p1_school_paper_patterns.md` section 5 (picture graphs).
+
+- Commands: Study the graph; Look at the graph in question N; Circle the child / the kind with ...; Circle True or False; Circle Yes or No; Draw ... in the empty boxes; Write its number in the brackets. Same command for the same job every time (rules 2, 14, 23). 'Study the graph. ... Answer questions 1 to 3.' and 'Look at the graph in question 1.' follow the school-paper habit of one graph for several questions (rule 23).
+- Fixed question forms from the papers: 'Mei read [] more books than Ben.'; 'There are [] fewer plums than pears.'; 'The 4 children read [] books in all.'; 'Ludo and cards: [] children altogether.'; 'Ali and ___ read the same number of books.'; 'Circle the kind with the most.'; 'Each picture stands for 1 fruit.' (rule 12; patterns section 5.3). 'more ... than', 'fewer ... than', 'fewest', 'most', 'in all', 'altogether'; never 'bigger'.
+- Numbers are digits ('1 book', '2 shells', '3 stickers'); a box comes before the unit; answer frames end with the noun (rules 15, 16, 17).
+- The key: every graph a child reads says 'Each picture stands for N ...' in the stem or draws the key. The drawn key is left out of Start here graphs only where the stem says it (page space); it is always drawn when N is 2 or 3. 'Read the key first' is the lesson's one repeated phrase and is said before every graph question.
+- Words taught in Remember, Explore and the Mini-lesson: key, row, total, fewer. 'Total' and 'row' appear on the grown-up page word list and in tutor lines, and 'fewer' is taught with a matched pair of rows before it is asked.
+- Wrong working belongs to 'a child in another class' (T3, the Talk question). Cast names appear only in stories and clues (Ali, Mei, Ben, Siti, Ravi, Lily, Kumar, Aisha, Jamie) and never with a wrong answer. T3 states what the child says ('Coral has 4 shells') and not her reasoning (rule 19); the Yes or No and the number are asked in parts (a) and (b).
+- No teaching sentence inside a question (rule 24): 'Each picture stands for 3 stickers.' is a fact the key states, not a method; hints carry the method ('Count in 3s').
+- Rule 25 and the Primary 1 papers: Start here keeps a key of 1 and rows of 9 pictures or fewer; the missing bar from a total and a difference clue is the school-level 'complete the graph' item. A key of 2 or 3 and 'which question can the graph not answer' are Think harder and Go further.
+- Singapore English and context (rules 3, 22): books, fruit, fish, shells, stamps, stickers, birds, pens, apples; 'maths'.
+- Changed during review: 'circle one' frames became 'Circle the ...' commands; T3 no longer states the child's reason; the Mini-lesson graph numbers changed so that no workbook graph repeats the numbers and key of a class graph; the exit ticket keeps a key of 1 only.
+- Open: no Primary 1 paper uses a key above 1 or asks what a graph cannot tell us, so those parts are marked unverified.

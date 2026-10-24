@@ -3,7 +3,7 @@
 
 // ---------- bar-model SVG helpers for the workbook (viewBox 600 wide) ----------
 const NAVY = '#1B2A49', YEL = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', WHITE = '#FFFFFF';
-const txt = (x, y, s, o = {}) => `<text x="${x}" y="${y}" font-size="${o.size || 17}" font-weight="${o.w || 700}" text-anchor="${o.a || 'middle'}" fill="${o.fill || NAVY}" font-family="Arial">${s}</text>`;
+const txt = (x, y, s, o = {}) => `<text x="${x}" y="${y}" font-size="${o.size || 20}" font-weight="${o.w || 700}" text-anchor="${o.a || 'middle'}" fill="${o.fill || NAVY}" font-family="Arial">${s}</text>`;
 const rect = (x, y, w, h, fill, label, o = {}) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}" stroke="${NAVY}" stroke-width="2.5"${o.dash ? ' stroke-dasharray="7 5"' : ''}/>` + (label ? txt(x + w / 2, y + h / 2 + 6, label, o) : '');
 // horizontal curly brace from x0 to x1; ends sit on y; up=true points up
 const braceH = (x0, x1, y, up, label) => {
@@ -49,7 +49,7 @@ module.exports = {
     objective: 'Draw bar models for part-whole, comparison, times-as-many and before-and-after word problems, and use them to solve two-step problems and check the answers.',
     skills: 'Draw a model, before and after, look for what stays the same, check the answer',
     materials: 'Multilink cubes (about 30 per pair), strips of squared paper, scissors, mini whiteboards and markers. For the sneak-peek puzzles: paper, a pencil and a few counters or small objects for each child.',
-    online: 'Tutor builds the bars on a shared slide. Each child uses Lego bricks, coins or paper strips at home, and a whiteboard or paper to draw bars. Print the workbook before the lesson. Pairs work in one breakout room for 10 minutes, then return for the check slide.',
+    online: 'Tutor builds the bars on a shared slide. Each child uses Lego bricks, coins or paper strips at home, and a whiteboard or paper to draw bars. Print the workbook before the lesson. Pairs sit in pre-assigned breakout rooms (auto-move in, auto-close with a timer) for page 1, then return for the 60-second self-check slide.',
     warmup: 'Arm bars. The tutor reads a sentence such as "Ali has 5 more than Ben". Children show the two bars with their hands, then draw them on whiteboards in 10 seconds.',
     explore: 'Cube towers. Pairs build two towers with 20 cubes altogether where one tower has 4 more cubes than the other. Then two towers with 20 cubes where one is 3 times as tall as the other. Then they draw each pair of towers as bars.',
     mini: 'Part-whole: one bar for the whole, cut into parts. Comparison: a bar for each person, longer for more, with the difference marked. Times as many: equal units. Before and after: ask what stays the same (the total, or the difference).',
@@ -95,21 +95,21 @@ module.exports = {
       'Hint 2: "Put a question mark on the part you need to find."',
       'Hint 3: "Look for equal units. How many units are there altogether?"'
     ],
-    talk: ['"Mei and Siti are each given $5. Why does the difference between them stay the same?"', '"How can a model help you check your answer?"'],
-    talkAns: 'Both bars grow by the same piece, so the gap between their ends does not change. To check, put your answers back into the model: the parts must make the whole and the difference must match the story.',
+    talk: ['"Mei and Siti are each given $5. Why does the difference between them stay the same?"', '"Ravi says Mei must give Siti 38 stickers, because 85 − 47 = 38. What mistake did Ravi make?"', '"Could you make 3 times as tall with 22 cubes? Why not?"', '"How can a model help you check your answer?"'],
+    talkAns: 'Both bars grow by the same piece, so the gap between their ends does not change. To check, put your answers back into the model: the parts must make the whole and the difference must match the story. Ravi gave the whole difference (38), so they would just swap places: she gives half, 19. 22 cubes cannot make 3 times as tall: we need 4 equal parts and 22 cannot be shared into 4 equal parts.',
     close: ['"You turned words into pictures today. Next time a word problem looks hard, draw it first."']
   },
 
   deck: {
     today: 'Draw bar models for word problems: parts of a whole, comparing, times as many, and before and after.',
     warmGame: 'Arm bars. The tutor reads a sentence. Children show the two bars with their hands, then draw them on whiteboards in 10 seconds.',
-    warmQs: [['348 + 52', '400'], ['1000 − 365', '635'], ['3 units = 27. What is 1 unit?', '9'], ['Ben has 40. Ali has 15 more than Ben. How many does Ali have?', '55'], ['Mei has 60. Siti has 12 fewer than Mei. How many does Siti have?', '48']],
-    expSetup: ['Take 20 cubes. Build two towers. One tower must have 4 more cubes than the other.', 'Stand the towers side by side. How many cubes are in each?', 'Now use 20 cubes again: one tower must be 3 times as tall as the other.', 'Draw each pair of towers as two bars on your whiteboard.'],
+    warmQs: [['348 + 52', '400'], ['1000 − 365', '635'], ['3 units = 27. What is 1 unit?', '9']],
+    takeHome: [['Ben has 40. Ali has 15 more than Ben. How many does Ali have?', '55'], ['Mei has 60. Siti has 12 fewer than Mei. How many does Siti have?', '48']],
+    expSetup: ['Take 20 cubes. Build two towers. One tower must have 4 more cubes than the other.', 'Stand the towers side by side. How many cubes are in each?', 'Draw the two towers as two bars on your whiteboard.'],
     expPic: 'two cube towers side by side, the taller one with its extra cubes in yellow, and a brace showing 20 cubes altogether.',
     expAsk: [
-      ['How did you find the two towers?', 'Take away the extra 4 (16 left), share 16 into two equal towers of 8, then put the 4 back: 8 and 12.'],
-      ['How many cubes are in each tower when one is 3 times as tall?', '5 and 15. Together the towers make 4 equal parts of 5.'],
-      ['Could you make "3 times as tall" with 22 cubes? Why?', 'No. We need 4 equal parts, and 22 cannot be shared into 4 equal parts (5 each leaves 2).']
+      ['Use 20 cubes again: one tower is 3 times as tall as the other. How many cubes in each? (Done together on the shared screen.)', '5 and 15. Together the towers make 4 equal parts of 5.'],
+      ['How did you find the two towers for "4 more"?', 'Take away the extra 4 (16 left), share 16 into two equal towers of 8, then put the 4 back: 8 and 12.']
     ],
     mini1: { head: 'Part-whole model', body: ['A hall has 1500 seats: 645 are red, 480 are blue and the rest are green.', 'Draw one bar for 1500 and cut it into 645, 480 and ?.', 'Whole take away the parts: 1500 − 645 − 480.'], ans: '375 green seats.' },
     mini2: { head: 'Comparison model', body: ['Ravi has 236 cards. Siti has 167 more cards than Ravi. Ben has 95 fewer cards than Siti.', 'Draw a bar for each child. Siti: 236 + 167.', 'Ben: Siti’s number − 95.'], ans: 'Siti 403, Ben 308.' },
@@ -118,7 +118,7 @@ module.exports = {
     keySmall: 'Then ask: what stays the same? The total, or the difference?',
     brk: 'Stretch and shrink. Tutor calls "longer bar": stretch your arms wide. "Shorter bar": bring them close. "3 times as long": take three big steps.',
     ws1: 'Page 1, in pairs: Q1 part-whole, Q2 comparison with three children, Q3 times as many.',
-    ws2: 'Page 2, on your own: Q4 total and difference, Q5 give to make equal, Q6 same amount given to both (the difference stays the same).'
+    ws2: 'Page 2, on your own: Q4 total and difference, Q5 give to make equal, Q6 (if time) same amount given to both (the difference stays the same).'
   },
 
   qbank: {
@@ -177,16 +177,13 @@ module.exports = {
     // ---------- page 2 ----------
     out.push(H.q(4, 'Ali and Ben have 150 marbles altogether. Ali has 24 more marbles than Ben. How many marbles does each boy have?', { pb: true, before: 0, keepNext: true }));
     out.push(H.p('Hint: you can guess and check. Try Ben = 50, so Ali = 74. Is the total 150? Too big or too small? Try again.', { after: 20 }));
-    out.push(H.fig(drawBox(100)));
     out.push(H.sub('', 'Ben: ________      Ali: ________'));
     out.push(H.q(5, 'Mei has 85 stickers. Siti has 47 stickers. Mei gives some stickers to Siti so that they both have the same number.', { keepNext: true }));
     out.push(H.p('Hint: try giving 10 stickers. Do they have the same number now? Keep trying.', { after: 20 }));
-    out.push(H.fig(drawBox(100)));
     out.push(H.sub('a', 'How many stickers does Mei give Siti?   ________'));
-    out.push(H.sub('b', 'Ravi says, "Mei must give Siti 38 stickers, because 85 − 47 = 38." What mistake did Ravi make?'));
+    out.push(H.sub('b', '(if time) Ravi says, "Mei must give Siti 38 stickers, because 85 − 47 = 38." What mistake did Ravi make?'));
     out.push(...H.lines(2));
-    out.push(H.q(6, 'Ali has $45. Ben has $18. Grandma gives each boy $10.', { keepNext: true }));
-    out.push(H.fig(drawBox(120)));
+    out.push(H.q(6, '(if time) Ali has $45. Ben has $18. Grandma gives each boy $10.', { keepNext: true }));
     out.push(H.sub('a', 'How much more money does Ali have than Ben now?   ________'));
     out.push(H.sub('b', 'How much more did Ali have than Ben before Grandma gave the money?   ________'));
     out.push(H.sub('c', 'What do you notice? Why?'));

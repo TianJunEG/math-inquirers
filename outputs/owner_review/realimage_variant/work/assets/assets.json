@@ -1,0 +1,91 @@
+{
+ "coin_5": {
+  "src": "ts5cfull.jpg",
+  "crop_px": [
+   76,
+   76
+  ],
+  "bbox_in_left_half": [
+   27,
+   27,
+   103,
+   103
+  ]
+ },
+ "coin_10": {
+  "src": "ts10cfull.jpg",
+  "crop_px": [
+   86,
+   86
+  ],
+  "bbox_in_left_half": [
+   22,
+   22,
+   108,
+   108
+  ]
+ },
+ "coin_20": {
+  "src": "ts20cfull.jpg",
+  "crop_px": [
+   97,
+   97
+  ],
+  "bbox_in_left_half": [
+   17,
+   17,
+   114,
+   114
+  ]
+ },
+ "coin_50": {
+  "src": "ts50cfull.jpg",
+  "crop_px": [
+   106,
+   106
+  ],
+  "bbox_in_left_half": [
+   12,
+   12,
+   118,
+   118
+  ]
+ },
+ "coin_100": {
+  "src": "ts1dfull.jpg",
+  "crop_px": [
+   102,
+   102
+  ],
+  "bbox_in_left_half": [
+   14,
+   14,
+   116,
+   116
+  ]
+ },
+ "note_2": {
+  "src": "portrait-2-front-polymer.jpg",
+  "px": [
+   3000,
+   1485
+  ],
+  "aspect": 2.0202
+ },
+ "note_5": {
+  "src": "portrait-series-5-front.jpg",
+  "px": [
+   2142,
+   1056
+  ],
+  "aspect": 2.0284
+ },
+ "note_10": {
+  "src": "portrait-10-front-polymer.jpg",
+  "px": [
+   3000,
+   1473
+  ],
+  "aspect": 2.0367
+ }
+}

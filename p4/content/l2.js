@@ -1,4 +1,6 @@
 // Math Inquirers P4 Holiday Program — Lesson 2: Big Number Puzzles (Numbers to 100 000)
+const tip = require('../tip.js');
+const FG = require('../../levels/figs_l4_6.js');
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WH = '#FFFFFF';
 const F = 'Fredoka, Arial, sans-serif';
 const txt = (x, y, s, size = 18, fill = N, anchor = 'middle', weight = 700) =>
@@ -38,7 +40,7 @@ module.exports = {
     warmup: 'Place It Right (5 digits): the tutor draws digit cards one at a time. After each card, children must write it in the ten thousands, thousands, hundreds, tens or ones box straight away. Round 1: biggest number wins. Round 2: closest to 50 000 wins.',
     explore: 'Pairs use the digit cards 2, 4, 5, 7 and 9 once each to make 5-digit numbers. Which of their numbers round to 50 000 when rounded to the nearest thousand? They try to find them all and decide which one is closest to 50 000.',
     mini: 'Round with a number line: 36 482 lies between 36 000 and 37 000; the halfway mark is 36 500, so it rounds to 36 000 (to the nearest hundred, 36 500). Work backwards: a number that rounds to 25 000 (nearest thousand) is from 24 500 to 25 499. Estimate 7 × 3 089 as 7 × 3 000 = 21 000; the exact answer (21 623) is more, because 3 089 was rounded down. Before page 2: a riddle that starts with a rounding clue (20 003); number patterns (find the rule, then continue); digit-card puzzles: the ones digit decides odd or even, and 0 cannot go first.',
-    share: 'Siti says 49 999 rounds to 50 000 to the nearest 10, the nearest 100 and the nearest 1000. Ravi says 45 000 rounds to 40 000 to the nearest ten thousand. Who is right?',
+    share: 'Siti says 49 999 rounds to 50 000 to the nearest 10, the nearest 100 and the nearest 1000. Is she right?',
     exit: { q: 'Round 74 652 to the nearest thousand. Then write the smallest whole number that rounds to 74 000 to the nearest thousand.', a: '75 000. The smallest is 73 500.' },
     mistakes: [
       'Rounding by looking at the wrong digit, or forgetting to carry when the digit to change is a 9 (63 950 to the nearest hundred written as 63 900 or 63 000 instead of 64 000).',
@@ -68,23 +70,26 @@ module.exports = {
     ],
     circulate: ['Ask: “Which two round numbers is it between? Where is the halfway mark?”', 'Ask: “Could the number be bigger than that and still round to the same number?”', 'Ask: “Which clue gives you the fewest numbers to try? Start there.”'],
     hints: ['Hint 1: “Draw a number line. Mark the two round numbers and halfway.”', 'Hint 2: “Look only at the digit to the right of the place you round to.”', 'Hint 3: “For odd or even, choose the ones digit FIRST.”'],
-    talk: ['“Siti says 49 999 rounds to 50 000 to the nearest 10, 100 AND 1000. Is she right?”', '“Ravi says 45 000 rounds to 40 000 to the nearest ten thousand. Is he right?”'],
-    talkAns: 'Siti is right: 49 999 is only 1 away from 50 000, so it rounds to 50 000 every time. Ravi is wrong: 45 000 is exactly halfway between 40 000 and 50 000, and halfway rounds up, so it rounds to 50 000.',
+    talk: ["“Siti says 49 999 rounds to 50 000 to the nearest 10, 100 AND 1000. Is she right?”"],
+    talkWeekly: ["“Ravi says 45 000 rounds to 40 000 to the nearest ten thousand. Is he right?”"],
+    talkAns: "Siti is right: 49 999 is only 1 away from 50 000, so it rounds to 50 000 every time.",
+    talkWeeklyAns: "Ravi is wrong: 45 000 is exactly halfway between 40 000 and 50 000, and halfway rounds up, so it rounds to 50 000.",
     close: ['“Today you used number lines to round, and you worked backwards to find what a rounded number could really be.”', '“Hand me your exit ticket and I will stamp your inquiry journal.”']
   },
 
   deck: {
     today: 'Round big numbers on a number line, work backwards from a rounded number, and solve 5-digit riddles and patterns.',
     warmGame: 'Place It Right (5 digits). The tutor turns over digit cards one at a time. Write each in a box straight away. Round 1: biggest wins. Round 2: closest to 50 000 wins.',
-    warmQs: [['What is the 7 worth in 47 352?', '7000'], ['Sixty thousand and forty-five in numerals?', '60 045'], ['1000 more than 59 600?', '60 600'], ['40 000 + 3000 + 50 + 8 = ?', '43 058'], ['36 815 to the nearest 1000?', '37 000']],
+    warmQs: [["What is the 7 worth in 47 352?", "7000"], ["Sixty thousand and forty-five in numerals?", "60 045"], ["1000 more than 59 600?", "60 600"]],
+    warmWeekly: [["40 000 + 3000 + 50 + 8 = ?", "43 058"], ["36 815 to the nearest 1000?", "37 000"]],
     expSetup: ['Take the digit cards 2, 4, 5, 7 and 9.', 'Make a 5-digit number using each card once. Write it down.', 'Round it to the nearest thousand. Does it round to 50 000?', 'Find ALL the numbers that round to 50 000. Which is closest to 50 000?'],
     expPic: 'five yellow digit cards 2, 4, 5, 7 and 9 above a number line from 49 000 to 51 000 with 49 500 and 50 500 marked.',
-    expAsk: [['Which numbers round to 50 000?', '49 527, 49 572, 49 725, 49 752.'], ['How do you know you have them all?', 'They must be from 49 500 to 50 499. With no 0 card, they start 49 and then 5 or 7: 2 numbers each.'], ['Which is closest to 50 000?', '49 752 (248 away).']],
+    expAsk: [["Which numbers round to 50 000?", "49 527, 49 572, 49 725, 49 752."], ["How do you know you have them all?", "They must be from 49 500 to 50 499. With no 0 card, they start 49 and then 5 or 7: 2 numbers each."]],
     mini1: { head: 'Round 36 482 to the nearest thousand', body: ['Which two thousands is it between? 36 000 and 37 000.', 'Halfway is 36 500.', 'Is 36 482 before or after halfway?'], ans: '36 000 (it is before halfway). To the nearest hundred it is 36 500.' },
     mini2: { head: 'Work backwards: what rounds to 25 000?', body: ['Rounded to the nearest thousand, a number is 25 000.', 'The halfway marks are 24 500 and 25 500.', 'What are the smallest and largest whole numbers it can be?'], ans: 'Smallest 24 500, largest 25 499 (25 500 rounds up to 26 000).' },
     keyHead: 'Key idea: find the halfway mark', keyBig: 'To round, find the two round numbers and the halfway mark. Halfway or more rounds up.', keySmall: 'Working backwards: the smallest number IS the halfway mark below; the largest is 1 less than the halfway mark above.',
     brk: 'Human number line. Five children hold 10 000, 20 000, 30 000, 40 000, 50 000. The tutor calls a number: everyone points to the nearest ten thousand.',
-    ws1: 'Page 1, in pairs: Q1 rounding table, Q2 working backwards, Q3 estimating.',
+    ws1: 'Page 1, in pairs: Q1 rounding table, Q2 working backwards. Q3 estimating is the first question on your own.',
     ws2: 'Page 2, on your own: Q4 number riddles, Q5 patterns, Q6 digit cards.'
   },
 
@@ -104,8 +109,8 @@ module.exports = {
       { q: 'How many whole numbers round to 3500 when rounded to the nearest hundred?', a: '100 (from 3450 to 3549).' },
       { q: 'A whole number rounds to 5350 to the nearest 10, AND to 5400 to the nearest 100. Find ALL the numbers it could be.', a: '5350, 5351, 5352, 5353, 5354 (5 numbers). To the nearest 10 it is 5345 to 5354; to the nearest 100 it is 5350 to 5449; both: 5350 to 5354.' },
       { q: 'Estimate 8 × 6102 by rounding 6102 to the nearest thousand first. Is the exact answer more or less than your estimate?', a: '8 × 6000 = 48 000. More, because 6102 was rounded down (exact: 48 816).' },
-      { q: 'The crowd at the first concert was 38 000 to the nearest thousand. At the second concert it was 41 000 to the nearest thousand. What is the smallest and the largest the difference between the two crowds could be?', a: 'Smallest 2001 (40 500 − 38 499). Largest 3999 (41 499 − 37 500).' },
-      { q: 'What is the largest 5-digit odd number with all its digits different?', a: '98 765' }
+      { q: 'The crowd at a concert was 38 000 when rounded to the nearest thousand. What is the smallest and the largest the crowd could have been?', a: 'Smallest 37 500 and largest 38 499 (37 499 rounds down to 37 000 and 38 500 rounds up to 39 000).' },
+      { q: 'What is the largest 5-digit odd number with all its digits different that rounds to 90 000 when rounded to the nearest ten thousand?', a: '94 875. Numbers that round to 90 000 go up to 94 999. The first two digits are 9 and 4, then the biggest digits left are 8 and 7, and the ones digit must be odd, so 5 (not 6).' }
     ],
     challenge: [
       { q: 'Ali counts on in 1000s, starting at 3456. He stops at the last number below 100 000. What is the last number he says? How many numbers does he say?', a: '99 456. He says 97 numbers (3456, 4456, … 99 456).' },
@@ -127,14 +132,17 @@ module.exports = {
       H.row(['Number', 'to the nearest 10', 'to the nearest 100', 'to the nearest 1000'].map(s => H.cell(s, 2475, { bold: true, fill: 'EDEDED', h: 30 }))),
       ...['47 285', '63 950'].map(n => H.row([H.cell(n, 2475, { bold: true, h: 50 }), H.cell('', 2475, { h: 50 }), H.cell('', 2475, { h: 50 }), H.cell('', 2475, { h: 50 })]))
     ]));
+    W.push(H.fig(FG.numberLine({ min: 47000, max: 48000, major: 500, minor: 100, fmt: v => String(v).replace(/(\d)(\d{3})$/, '$1 $2'), size: 18, label: 'A number line from 47 000 to 48 000 with ticks every 100 and 47 500 labelled, for marking 47 285.' })));
+    W.push(H.sub('', 'Mark 47 285 on the line with an X. Which thousand is it closer to?  ________'));
     W.push(H.gap(40));
     W.push(H.sub('', 'Try next, if you have time:   9049  →  ________  ________  ________        80 503  →  ________  ________  ________'));
     W.push(H.q(2, 'Work backwards.', { keepNext: true }));
     W.push(H.sub('a', 'The number of people at a concert is 63 000 when rounded to the nearest thousand. What is the smallest and the largest number of people there could be?', { keepNext: true }));
     W.push(H.fig(lineSvg()));
-    W.push(H.sub('', 'Start here: 63 500 is halfway between 63 000 and 64 000. Does it round up or down?  ____________', { keepNext: true }));
+    W.push(tip('63 500 is halfway between 63 000 and 64 000. Does it round up or down?  ____________'));
     W.push(H.sub('', 'Smallest:  ____________          Largest:  ____________'));
-    W.push(H.sub('b', 'A whole number rounds to 5350 to the nearest 10. Find ALL the numbers it could be. Start at 5340 and check each one.'));
+    W.push(H.sub('b', 'A whole number rounds to 5350 to the nearest 10. Find ALL the numbers it could be. Start at 5340 and check each one.', { keepNext: true }));
+    W.push(tip('5345 is halfway between 5340 and 5350. Does 5345 round up or down? What about 5344?  ____________'));
     W.push(H.ans('Numbers:'));
     W.push(H.q(3, 'A bakery bakes 4982 buns every day for 6 days.', { keepNext: true }));
     W.push(H.sub('a', 'Round 4982 to the nearest thousand and estimate the total.   Estimate:  ____________'));
@@ -146,7 +154,8 @@ module.exports = {
     W.push(H.sub('a', 'I am a 5-digit number. Rounded to the nearest thousand, I am 48 000. My hundreds digit is 6. My ones digit is 1 and my tens digit is double my ones digit.', { keepNext: true }));
     W.push(H.sub('', 'Hint: the numbers that round to 48 000 are from 47 500 to 48 499. Which of them have 6 in the hundreds place?', { keepNext: true }));
     W.push(H.ans('I am:'));
-    W.push(H.sub('b', 'I am a 5-digit number. My digits add up to 2. Find ALL the numbers I could be. List them in order.'));
+    W.push(H.sub('b', 'I am a 5-digit number. My digits add up to 2. Find ALL the numbers I could be. List them in order.', { keepNext: true }));
+    W.push(tip('the digits are two 1s (and zeros) or one 2 (and zeros). The first digit cannot be 0. Write 20 000 and 10 001, then move the digits around.'));
     W.push(...H.lines(2));
     W.push(H.ans('How many numbers?'));
     W.push(H.q(5, 'Find the rule. Write the next numbers.', { keepNext: true }));
@@ -194,10 +203,12 @@ module.exports.gaps = {
   "key": "Mei is not always right. 3 280 gives 3 300 then 3 000, and straight to 3 000: the same. 1 449 gives 1 400 then 1 000, and straight to 1 000: the same. 1 450 gives 1 500 then 2 000, but straight to the nearest thousand it is 1 000: different. Every number whose last three digits are 450 to 499 breaks the idea (checked by brute force for every whole number below 100 000). Why: rounding to the nearest hundred first turns a number just BELOW the halfway mark into exactly the halfway mark, which then rounds up. Look for children who test numbers near the halfway mark instead of only easy numbers, and who say \"I tested ...\" before they say \"I think ...\".",
   "easy": "Round 3 280 to the nearest hundred. Then round your answer to the nearest thousand. Now round 3 280 straight to the nearest thousand. Did you get the same answer both ways?"
  },
- "reflect": "Something I did well: I drew the number line. The hardest part was working out which way a number like 450 rounds. What helped me: marking the halfway point on the number line.",
+ "reflect": "Something I did well: I drew the number line. The hardest part was working out which way a number like 450 rounds. What helped me: marking the halfway point on the number line. One thing I could try next: a number line for every rounding question.",
  "go2": {
   "q": "Which number you can make is closest to 70 000? Why can you not make 70 000?",
   "a": "72 459 (2 459 away). 70 000 needs a 0 card and there is none; with the cards 2, 4, 5, 7 and 9 the closest below is 59 742 (10 258 away)."
  },
- "cap": "Page 2 is on your own. Aim for Q4a, Q5 and Q6a first. The other parts are a choice for the last few minutes."
+ "cap": "Page 2 is on your own. Do question 3 first, then Q4a, Q5 and Q6a. The rest is a choice for the end.",
+ "p1": "Pairs: Q1 and Q2. Then Q3 alone. After question 3 you may choose: carry on, or try Think harder.",
+ "plan": ["Pairs do Q1 and Q2 (about 10 minutes of work; Q2a and Q2b stay). Q3, the bakery question, is the first question each child does on their own at the start of page 2 time. Its answer is checked together with page 2, which takes about 30 seconds longer."]
 };

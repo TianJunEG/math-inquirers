@@ -20,19 +20,20 @@ const rad = d => d * Math.PI / 180;
 // a 90 (turned), b 45, c 120, d 90 (one short arm), e 150, f 70 (long arms)
 const ANG = [['a', 25, 90, 62, 62], ['b', 60, 45, 66, 66], ['c', 10, 120, 58, 58], ['d', 0, 90, 70, 34], ['e', 200, 150, 52, 52], ['f', 100, 60, 72, 72]];
 const q1Fig = () => {
-  let b = '';
+  // six angles in 2 rows of 3, arms about 1.5 times longer than before so the right-angle checker fits them
+  let b = ''; const K = 1.5;
   ANG.forEach(([l, d1, sz, L1, L2], i) => {
-    const d2 = d1 + sz;
+    const d2 = d1 + sz; L1 *= K; L2 *= K;
     const p1 = [L1 * Math.cos(rad(d1)), -L1 * Math.sin(rad(d1))], p2 = [L2 * Math.cos(rad(d2)), -L2 * Math.sin(rad(d2))];
     const xs = [0, p1[0], p2[0]], ys = [0, p1[1], p2[1]];
-    const cx = 50 + i * 100, cy = 62;
+    const cx = 100 + (i % 3) * 200, cy = 76 + Math.floor(i / 3) * 170;
     const vx = cx - (Math.min(...xs) + Math.max(...xs)) / 2, vy = cy - (Math.min(...ys) + Math.max(...ys)) / 2;
-    const r = 16, a1 = [vx + r * Math.cos(rad(d1)), vy - r * Math.sin(rad(d1))], a2 = [vx + r * Math.cos(rad(d2)), vy - r * Math.sin(rad(d2))];
+    const r = 22, a1 = [vx + r * Math.cos(rad(d1)), vy - r * Math.sin(rad(d1))], a2 = [vx + r * Math.cos(rad(d2)), vy - r * Math.sin(rad(d2))];
     b += `<path d="M${a1[0].toFixed(1)} ${a1[1].toFixed(1)} A${r} ${r} 0 0 0 ${a2[0].toFixed(1)} ${a2[1].toFixed(1)}" fill="none" stroke="${G}" stroke-width="3"/>`;
     b += ln(vx, vy, vx + p1[0], vy + p1[1]) + ln(vx, vy, vx + p2[0], vy + p2[1]) + dot(vx, vy, 4);
-    b += txt(cx, 148, l, { size: 22 });
+    b += txt(cx, cy + 80, l, { size: 24 });
   });
-  return svg(600, 158, b, 'Six angles labelled a to f, each marked with a small arc. Some are turned, and the arms have different lengths.', 500);
+  return svg(600, 332, b, 'Six angles labelled a to f, each marked with a small arc. Some are turned, and the arms have different lengths.', 600);
 };
 // Q3 worked example: 3 lines from one point make 3 angles
 const exFig = () => {
@@ -55,14 +56,14 @@ const q2Fig = () => {
   const trap = [[0, 0], [5, 0], [3, 3], [0, 3]];
   let b = poly(shapeAt(plus, 40, 54, u, 3)) + poly(shapeAt(stair, 175, 54, u, 3)) + poly(shapeAt(house, 300, 0, u, 5)) + poly(shapeAt(trap, 440, 54, u, 3));
   [['A', 82], ['B', 217], ['C', 356], ['D', 510]].forEach(([l, x]) => { b += txt(x, 172, l, { size: 22 }); });
-  return svg(600, 180, b, 'Four shapes: A a plus sign, B a staircase with 3 steps, C a house shape with a pointed roof, D a shape with a long bottom, a slanted right side and two square corners on the left', 320);
+  return svg(600, 180, b, 'Four shapes: A a plus sign, B a staircase with 3 steps, C a house shape with a pointed roof, D a shape with a long bottom, a slanted right side and two square corners on the left', 500);
 };
 // Q3: 6 lines from one point, spread out like a fan (5 gaps of 30 degrees)
 const q3Fig = () => {
   const ox = 190, oy = 196, L = 170; let b = '';
   [15, 45, 75, 105, 135, 165].forEach(d => { b += ln(ox, oy, ox + L * Math.cos(rad(d)), oy - L * Math.sin(rad(d)), { sw: 4 }); });
   b += dot(ox, oy, 6) + txt(ox, oy + 26, 'O', { size: 22 });
-  return svg(380, 228, b, 'Six straight lines going out from one point O, spread out like a fan', 215);
+  return svg(380, 228, b, 'Six straight lines going out from one point O, spread out like a fan', 300);
 };
 // Q4: letters made of straight lines
 const q4Fig = () => {
@@ -96,7 +97,7 @@ module.exports = {
     objective: 'Compare angles with a right angle using a folded-paper checker, count the angles at a point and the right angles in shapes and figures in an organised way, find a pattern in the counts, and find and draw perpendicular and parallel lines.',
     skills: 'Organised counting, pattern spotting, checking with a tool, explaining',
     materials: 'Scrap paper to fold a right-angle checker, a ruler, mini whiteboards, square grid paper. For the sneak-peek puzzles: paper, a pencil and a few counters or small objects for each child.',
-    online: 'Each child folds a right-angle checker on camera and goes on a 2-minute right-angle hunt at home; the tutor shares the grid slides to draw on. Print the workbook before the lesson. Pairs work in one breakout room for 10 minutes, then return for the check slide.',
+    online: 'Each child folds a right-angle checker on camera and goes on a 2-minute right-angle hunt at home; the tutor shares the grid slides to draw on. Print the workbook before the lesson. Pairs sit in pre-assigned breakout rooms (auto-move in, auto-close with a timer) for page 1, then return for the 60-second self-check slide.',
     warmup: 'Clock angles: is the angle between the hands at 3, 1, 5, 9, 10 and 4 o’clock a right angle, smaller or bigger? Show it with your arms. Then quick questions.',
     explore: 'Fold any scrap of paper twice to make a right-angle checker. Hunt for 3 right angles, 1 angle smaller and 1 angle bigger than a right angle. Why is the folded corner always a right angle?',
     mini: 'The size of an angle is how far it opens, not how long its arms are. Count the angles at a point: small ones first (4 lines: 3 + 2 + 1 = 6) and look for the pattern 1, 3, 6, 10. Count right angles inside a shape corner by corner (an L has 6 corners but 5 right angles inside); count right angles where lines meet point by point. Perpendicular and parallel lines: list every pair. Before page 2: parallel and perpendicular lines on a square grid (same steps; swap the steps and turn).',
@@ -130,7 +131,8 @@ module.exports = {
   deck: {
     today: 'Compare angles with a right angle, count angles and right angles without missing any, and find perpendicular and parallel lines.',
     warmGame: 'Clock angles. Make the clock hands with your arms: is the angle at 3, 1, 5, 9, 10 and 4 o’clock a right angle, smaller or bigger?',
-    warmQs: [['How many right angles does a rectangle have?', '4'], ['How many sides does a hexagon have?', '6'], ['Name a capital letter made of 2 lines that meet at a right angle.', 'L (or T)'], ['Do the two long edges of a ruler ever meet?', 'No: they are parallel']],
+    warmQs: [['How many right angles does a rectangle have?', '4'], ['How many sides does a hexagon have?', '6'], ['Name a capital letter made of 2 lines that meet at a right angle.', 'L (or T)']],
+    takeHome: [['Do the two long edges of a ruler ever meet?', 'No: they are parallel']],
     expSetup: ['Take any scrap of paper.', 'Fold it in half to make a straight fold.', 'Fold again so the fold lies exactly on itself.', 'Use the corner to hunt for right angles, smaller angles and bigger angles.'],
     expPic: 'a scrap of paper folded twice; the corner of the folds is a right angle, used as a checker.',
     expAsk: [['Why is the folded corner always a right angle?', 'The first fold makes a straight line. Folding it onto itself cuts the straight line into 2 equal angles: each is a right angle.'], ['Is an angle bigger if its arms are longer?', 'No. The size is how far the arms open, not how long they are.'], ['Where did you find angles bigger than a right angle?', 'For example an open laptop, a door opened wide, a clock at 5 o’clock.']],
@@ -180,7 +182,7 @@ module.exports = {
     const side = (fig, right) => `<div class="p img" style="display:flex;align-items:center;gap:22px;text-align:left"><div style="flex:none">${fig}</div><div style="flex:1">${right}</div></div>`;
     const W6 = [2100, 1300, 1300, 1300, 1300, 1300, 1300];
     return [
-      H.q(1, 'Fold a right-angle checker. Use it to sort the angles a to f.', { before: 20, keepNext: true }),
+      H.q(1, 'Use the right-angle checker you folded in Explore (fold a new one if you lost it). Use it to sort the angles a to f.', { before: 20, keepNext: true }),
       H.fig(q1Fig()),
       H.sub('', 'Smaller: ________    Right angle: ________    Bigger: ________'),
       H.q(2, 'How many right angles are INSIDE each shape? Check every corner with your checker. A corner that dents INTO the shape is bigger than a right angle: do not count it. A is done for you.', { keepNext: true }),
@@ -191,12 +193,12 @@ module.exports = {
       ]),
       H.q(3, 'These 6 lines all start at point O. (Example: 3 lines make 3 angles: 1 + 1 + 1.)', { keepNext: true }),
       side(q3Fig(), H.sub('a', 'How many angles? Count the small ones first, then those made of 2 small ones, and so on.') + H.sub('', 'Made of 1: ___  2: ___  3: ___  4: ___  5: ___') + H.sub('', 'Total: ________')),
-      H.sub('b', 'Look for a pattern. 8 lines start at one point, spread out like these. How many angles are there?   ________'),
+      H.sub('b', '★ Take-home. Look for a pattern. 8 lines start at one point, spread out like these. How many angles are there?   ________'),
 
-      H.q(4, 'Look at the lines in these letters. Parallel lines never meet and stay the same distance apart, like train tracks. Perpendicular lines meet at a right angle (a square corner). Write Yes or No in the table.', { pb: true, before: 0, keepNext: true }),
+      H.q(4, 'Look at the lines in these letters. Parallel lines never meet and stay the same distance apart, like train tracks. Perpendicular lines meet at a right angle (a square corner). Write Yes or No in the table. Do E, H, T and L in the lesson. Z and N (starred) are take-home.', { pb: true, before: 0, keepNext: true }),
       H.fig(q4Fig()),
       H.tbl(W6, [
-        H.row(['Letter', 'E', 'H', 'T', 'L', 'Z', 'N'].map((s, i) => H.cell(s, W6[i], { bold: true, fill: 'EDEDED' }))),
+        H.row(['Letter', 'E', 'H', 'T', 'L', '★ Z', '★ N'].map((s, i) => H.cell(s, W6[i], { bold: true, fill: 'EDEDED' }))),
         H.row([H.cell('Parallel lines?', W6[0], { bold: true, size: 20 }), ...W6.slice(1).map(w => H.cell(' ', w, { h: 30 }))]),
         H.row([H.cell('Perpendicular lines?', W6[0], { bold: true, size: 20 }), ...W6.slice(1).map(w => H.cell(' ', w, { h: 30 }))])
       ]),
@@ -205,7 +207,7 @@ module.exports = {
       H.fig(q5Fig()),
       H.sub('a', 'Through C, draw a line parallel to AB.     (b)  Through D, draw a line perpendicular to AB.'),
       H.sub('c', 'Think harder (if you have time): through G, draw a line perpendicular to EF. Check it with your checker. Hint: try 1 right and 2 down.'),
-      H.q(6, 'How many right angles can you find in this window?', { keepNext: true }),
+      H.q(6, '(if time) How many right angles can you find in this window?', { keepNext: true }),
       side(q6Fig(), H.sub('', 'Visit every point where lines meet. Write how many right angles are at each point, then add.') + H.sub('', 'Right angles altogether:  ________'))
     ];
   }

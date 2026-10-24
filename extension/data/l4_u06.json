@@ -1,0 +1,901 @@
+{
+ "schema_version": 1,
+ "level": 4,
+ "unit": 6,
+ "id": "L4U06",
+ "title": "Angle Turns",
+ "topic": "Angles",
+ "holiday_lesson": 6,
+ "goal": "I can measure angles and find missing angles. I can find the angle between clock hands and turn on the 8-point compass.",
+ "learn": {
+  "intro": "You need a 180° protractor and a ruler for this unit. A full turn is 360°, a half turn is 180° and a quarter turn is 90°. To measure, count up from the 0 on one arm.",
+  "example": {
+   "problem": "How big is the angle? Use the scale that starts at 0 on the arm.",
+   "figure": {
+    "type": "l4_proto",
+    "angle": 55,
+    "flip": false,
+    "label_step": 30,
+    "width_mm": 70
+   },
+   "steps": [
+    "Put the centre of the protractor on the corner. Put the 0 line on one arm.",
+    "Read the scale that starts at 0 on that arm."
+   ],
+   "answer": "The angle is 55°."
+  },
+  "example2": {
+   "problem": "What is the angle between the clock hands at 4 o'clock?",
+   "figure": {
+    "type": "l4_clock",
+    "clocks": [
+     {
+      "h": 4,
+      "m": 0
+     }
+    ],
+    "r": 120,
+    "width_mm": 48
+   },
+   "steps": [
+    "A clock has 12 equal spaces in 360°. 360 ÷ 12 = 30, so 1 space is 30°.",
+    "At 4 o'clock the hands are 4 spaces apart: 4 × 30°."
+   ],
+   "answer": "The angle is 120°."
+  },
+  "pair": true,
+  "tight": true,
+  "howto": {
+   "title": "How to measure",
+   "steps": [
+    "Estimate first. Is it less than 90° or more?",
+    "Centre on the corner. 0 line on one arm.",
+    "Read from the 0 on that arm. Check with your estimate."
+   ]
+  },
+  "facts": {
+   "title": "Good to know",
+   "lines": [
+    "Compass: 1 step = 45°.",
+    "Clock: 1 space = 30°.",
+    "Minute hand: 1 minute = 6°.",
+    "∠AOC is the angle at O between OA and OC."
+   ]
+  },
+  "try": {
+   "id": "L4U06-L01",
+   "text": "Ali faces NE. He turns 135° clockwise. Which way does he face now? {circ:E|SE|S|SW}",
+   "answer": {
+    "value": [
+     "S"
+    ],
+    "text": "S"
+   },
+   "explanation": "135° is 3 steps of 45°. Clockwise from NE: E, SE, S. He faces S."
+  }
+ },
+ "items": [
+  {
+   "id": "L4U06-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "Estimate each angle. Then measure it with your protractor. Use a ruler to make the arms longer first.",
+   "figure": {
+    "type": "l4_angle",
+    "angles": [
+     {
+      "d1": 0,
+      "d2": 25,
+      "label": "a"
+     },
+     {
+      "d1": 0,
+      "d2": 65,
+      "label": "b"
+     },
+     {
+      "d1": 0,
+      "d2": 130,
+      "label": "c"
+     }
+    ],
+    "cols": 3,
+    "width_mm": 160,
+    "len": 150
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "a = {b}°",
+     "answer": {
+      "value": [
+       "25"
+      ],
+      "text": "25"
+     }
+    },
+    {
+     "label": "b",
+     "text": "b = {b}°",
+     "answer": {
+      "value": [
+       "65"
+      ],
+      "text": "65"
+     }
+    },
+    {
+     "label": "c",
+     "text": "c = {b}°",
+     "answer": {
+      "value": [
+       "130"
+      ],
+      "text": "130"
+     }
+    }
+   ],
+   "explanation": "Each angle starts at 0 on the horizontal arm. a = 25°, b = 65° and c = 130°. Answers within 2° are fine. Angle c is greater than a right angle, so a good estimate is more than 90°.",
+   "partsrow": true
+  },
+  {
+   "id": "L4U06-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "Read the angle from the protractor.",
+   "figure": {
+    "type": "l4_proto",
+    "angle": 52,
+    "flip": true,
+    "width_mm": 92
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "The angle is {b}°",
+     "answer": {
+      "value": [
+       "52"
+      ],
+      "text": "52"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Is it smaller or greater than a right angle? {circ:smaller|greater}",
+     "answer": {
+      "value": [
+       "smaller"
+      ],
+      "text": "smaller"
+     }
+    }
+   ],
+   "explanation": "Read the scale that starts at 0 on the arm along the baseline: 52°. It is smaller than a right angle. The other scale says 128°, measured from the other arm.",
+   "figside": true
+  },
+  {
+   "id": "L4U06-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "Rays OA, OB, OC and OD leave O. The 3 small angles lie side by side. Find the angles.",
+   "figure": {
+    "type": "l4_fan",
+    "rays": [
+     {
+      "d": 20,
+      "label": "A"
+     },
+     {
+      "d": 45,
+      "label": "B"
+     },
+     {
+      "d": 80,
+      "label": "C"
+     },
+     {
+      "d": 120,
+      "label": "D"
+     }
+    ],
+    "arcs": [
+     {
+      "i": 0,
+      "j": 1,
+      "text": "25°"
+     },
+     {
+      "i": 1,
+      "j": 2,
+      "text": "35°"
+     },
+     {
+      "i": 2,
+      "j": 3,
+      "text": "40°"
+     }
+    ],
+    "width_mm": 78,
+    "len": 320
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "∠AOC = {b}°",
+     "answer": {
+      "value": [
+       "60"
+      ],
+      "text": "60"
+     }
+    },
+    {
+     "label": "b",
+     "text": "∠BOD = {b}°",
+     "answer": {
+      "value": [
+       "75"
+      ],
+      "text": "75"
+     }
+    },
+    {
+     "label": "c",
+     "text": "∠AOD = {b}°",
+     "answer": {
+      "value": [
+       "100"
+      ],
+      "text": "100"
+     }
+    },
+    {
+     "label": "d",
+     "text": "How many angles are there in all? {b}",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    }
+   ],
+   "explanation": "The angles add. ∠AOC = 25° + 35° = 60°. ∠BOD = 35° + 40° = 75°. ∠AOD = 25° + 35° + 40° = 100°. The angles are AOB, BOC, COD, AOC, BOD and AOD: 6 angles.",
+   "partsrow": true,
+   "figside": true
+  },
+  {
+   "id": "L4U06-S04",
+   "tier": "start",
+   "page": 2,
+   "text": "Each step round the compass is 45°. Find the direction.",
+   "figure": {
+    "type": "l4_compass",
+    "width_mm": 50
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Ali faces W. He turns 90° clockwise. He now faces {b}",
+     "answer": {
+      "value": [
+       "N"
+      ],
+      "text": "N"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Mei faces SE. She turns 180°. She now faces {b}",
+     "answer": {
+      "value": [
+       "NW"
+      ],
+      "text": "NW"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Siti faces NE. She turns 270° clockwise. She now faces {b}",
+     "answer": {
+      "value": [
+       "NW"
+      ],
+      "text": "NW"
+     }
+    },
+    {
+     "label": "d",
+     "text": "Ravi turns 135° anticlockwise and now faces S. At first he faced {b}",
+     "answer": {
+      "value": [
+       "NW"
+      ],
+      "text": "NW"
+     }
+    }
+   ],
+   "explanation": "(a) 90° is 2 steps: W, NW, N. (b) 180° is 4 steps: SE, S, SW, W, NW. (c) 270° is 6 steps: NE, E, SE, S, SW, W, NW. (d) 135° is 3 steps clockwise from S: SW, W, NW.",
+   "figside": true
+  },
+  {
+   "id": "L4U06-S05",
+   "tier": "start",
+   "page": 2,
+   "text": "Find the smaller angle between the clock hands.",
+   "figure": {
+    "type": "l4_clock",
+    "clocks": [
+     {
+      "h": 5,
+      "m": 0,
+      "cap": "5 o'clock"
+     },
+     {
+      "h": 8,
+      "m": 0,
+      "cap": "8 o'clock"
+     },
+     {
+      "h": 11,
+      "m": 0,
+      "cap": "11 o'clock"
+     }
+    ],
+    "r": 120,
+    "width_mm": 150
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "5 o'clock: {b}°",
+     "answer": {
+      "value": [
+       "150"
+      ],
+      "text": "150"
+     }
+    },
+    {
+     "label": "b",
+     "text": "8 o'clock: {b}°",
+     "answer": {
+      "value": [
+       "120"
+      ],
+      "text": "120"
+     }
+    },
+    {
+     "label": "c",
+     "text": "11 o'clock: {b}°",
+     "answer": {
+      "value": [
+       "30"
+      ],
+      "text": "30"
+     }
+    }
+   ],
+   "explanation": "Each space between numbers is 30°. At 5 o'clock the hands are 5 spaces apart: 150°. At 8 o'clock they are 4 spaces apart the short way: 120°. At 11 o'clock they are 1 space apart: 30°.",
+   "partsrow": true
+  },
+  {
+   "id": "L4U06-S06",
+   "tier": "start",
+   "page": 2,
+   "text": "Ben faces W. He wants to face NE. What is his smallest turn?",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The turn is {b}°",
+     "answer": {
+      "value": [
+       "135"
+      ],
+      "text": "135"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The direction is {circ:clockwise|anticlockwise}",
+     "answer": {
+      "value": [
+       "clockwise"
+      ],
+      "text": "clockwise"
+     }
+    }
+   ],
+   "explanation": "Clockwise from W: NW, N, NE is 3 steps, 135°. Anticlockwise from W: SW, S, SE, E, NE is 5 steps, 225°. The smallest turn is 135° clockwise."
+  },
+  {
+   "id": "L4U06-S07",
+   "tier": "start",
+   "page": 3,
+   "text": "Each rectangle corner is 90°. Lines split the corners. Find the angles a and b. The drawings are not to scale.",
+   "figure": {
+    "type": "l4_corner",
+    "figs": [
+     {
+      "parts": [
+       {
+        "deg": 53,
+        "text": "a"
+       },
+       {
+        "deg": 37,
+        "text": "37°"
+       }
+      ]
+     },
+     {
+      "parts": [
+       {
+        "deg": 43,
+        "text": "b"
+       },
+       {
+        "deg": 19,
+        "text": "19°"
+       },
+       {
+        "deg": 28,
+        "text": "28°"
+       }
+      ]
+     }
+    ],
+    "width_mm": 120,
+    "len": 200
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "a = {b}°",
+     "answer": {
+      "value": [
+       "53"
+      ],
+      "text": "53"
+     }
+    },
+    {
+     "label": "b",
+     "text": "b = {b}°",
+     "answer": {
+      "value": [
+       "43"
+      ],
+      "text": "43"
+     }
+    }
+   ],
+   "explanation": "(a) a + 37° = 90°, so a = 90° − 37° = 53°. (b) The three angles add to 90°: b = 90° − 19° − 28° = 43°.",
+   "partsrow": true
+  },
+  {
+   "id": "L4U06-S08",
+   "tier": "start",
+   "page": 3,
+   "text": "A robot faces E. It turns 135° anticlockwise. Then it turns 90° clockwise. Then it turns 45° clockwise.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "It now faces {b}",
+     "answer": {
+      "value": [
+       "E"
+      ],
+      "text": "E"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The turns add up to {b}°",
+     "answer": {
+      "value": [
+       "270"
+      ],
+      "text": "270"
+     }
+    }
+   ],
+   "explanation": "135° anticlockwise from E: NE, N, NW. 90° clockwise from NW: N, NE. 45° clockwise from NE: E. It faces E. The turns add to 135° + 90° + 45° = 270°."
+  },
+  {
+   "id": "L4U06-S09",
+   "tier": "start",
+   "page": 3,
+   "text": "A corner of a rectangle is split into 2 angles. One angle is 5 times the other.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The smaller angle is {b}°",
+     "answer": {
+      "value": [
+       "15"
+      ],
+      "text": "15"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The greater angle is {b}°",
+     "answer": {
+      "value": [
+       "75"
+      ],
+      "text": "75"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Draw a bar model here.",
+     ""
+    ]
+   },
+   "explanation": "The corner is 90° and is made of 1 + 5 = 6 equal parts. 90° ÷ 6 = 15° for 1 part. The greater angle is 5 × 15° = 75°."
+  },
+  {
+   "id": "L4U06-S10",
+   "tier": "start",
+   "page": 3,
+   "text": "How long does the minute hand take to turn through each angle?",
+   "parts": [
+    {
+     "label": "a",
+     "text": "90°: {b} minutes",
+     "answer": {
+      "value": [
+       "15"
+      ],
+      "text": "15"
+     }
+    },
+    {
+     "label": "b",
+     "text": "180°: {b} minutes",
+     "answer": {
+      "value": [
+       "30"
+      ],
+      "text": "30"
+     }
+    },
+    {
+     "label": "c",
+     "text": "270°: {b} minutes",
+     "answer": {
+      "value": [
+       "45"
+      ],
+      "text": "45"
+     }
+    },
+    {
+     "label": "d",
+     "text": "60°: {b} minutes",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    }
+   ],
+   "explanation": "The minute hand turns 6° each minute. 90° ÷ 6 = 15. 180° ÷ 6 = 30. 270° ÷ 6 = 45. 60° ÷ 6 = 10.",
+   "partsrow": true
+  },
+  {
+   "id": "L4U06-T01",
+   "tier": "think",
+   "beyond": "Angles on a line and at a point",
+   "page": 4,
+   "text": "Angles on a straight line add up to 180°. Angles around a point add up to 360°.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "On a straight line the angles are 47°, 85° and a. a = {b}°",
+     "answer": {
+      "value": [
+       "48"
+      ],
+      "text": "48"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Around a point the angles are 95°, 120°, 78° and b. b = {b}°",
+     "answer": {
+      "value": [
+       "67"
+      ],
+      "text": "67"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:",
+     ""
+    ]
+   },
+   "hint": "Add the angles you know. Then take the sum away from the total.",
+   "explanation": "(a) 47° + 85° = 132°, and 180° − 132° = 48°. (b) 95° + 120° + 78° = 293°, and 360° − 293° = 67°."
+  },
+  {
+   "id": "L4U06-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "Find the smaller angle between the clock hands.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "At 7:30 it is {b}°",
+     "answer": {
+      "value": [
+       "45"
+      ],
+      "text": "45"
+     }
+    },
+    {
+     "label": "b",
+     "text": "At 1:30 it is {b}°",
+     "answer": {
+      "value": [
+       "135"
+      ],
+      "text": "135"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     ""
+    ]
+   },
+   "hint": "At half past, the hour hand is halfway between 2 numbers.",
+   "explanation": "At 7:30 the minute hand is on the 6 and the hour hand is halfway between 7 and 8, 1 and a half spaces away: 45°. At 1:30 the hour hand is 4 and a half spaces from the 6: 4 × 30° + 15° = 135°."
+  },
+  {
+   "id": "L4U06-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "A robot faces N. It turns 90° clockwise, then 135° anticlockwise, then 225° clockwise, then 45° anticlockwise.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "It now faces {b}",
+     "answer": {
+      "value": [
+       "SE"
+      ],
+      "text": "SE"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The turns add up to {b}°",
+     "answer": {
+      "value": [
+       "495"
+      ],
+      "text": "495"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:",
+     ""
+    ]
+   },
+   "hint": "Count the steps of 45°. Clockwise is plus, anticlockwise is minus.",
+   "explanation": "In steps of 45°: +2, −3, +5, −1. From N: 2 steps is E, then 3 steps back is NW, then 5 steps forward is S, then 1 step back is SE. The turns add to 90° + 135° + 225° + 45° = 495°."
+  },
+  {
+   "id": "L4U06-G01",
+   "tier": "go",
+   "page": 5,
+   "text": "Four rays leave a point O on a straight line. They make 4 angles. Each angle is 10° greater than the one before it.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The smallest angle is {b}°",
+     "answer": {
+      "value": [
+       "30"
+      ],
+      "text": "30"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The greatest angle is {b}°",
+     "answer": {
+      "value": [
+       "60"
+      ],
+      "text": "60"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "hint": "The 4 angles add up to 180°. Take away the extra degrees first.",
+   "explanation": "The extras are 0, 10, 20 and 30, which make 60°. 180° − 60° = 120°, shared by 4 equal angles: 30°. The greatest is 30° + 30° = 60°.",
+   "partsrow": true
+  },
+  {
+   "id": "L4U06-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "A Ferris wheel has 12 equal seats, numbered 1 to 12 clockwise. Seat 1 is at the top.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The seat at the bottom is Seat {b}",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The smaller angle at the centre between Seat 2 and Seat 9: {b}°",
+     "answer": {
+      "value": [
+       "150"
+      ],
+      "text": "150"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The wheel turns 270° clockwise. Seat 1 is now where Seat {b} was",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "hint": "12 seats share 360°. What is the angle between neighbours?",
+   "explanation": "(a) Seat 1 is opposite Seat 7. (b) Seats 2 to 9 are 7 steps of 30°, which is 210°. The smaller way is 360° − 210° = 150°. (c) 270° ÷ 30° = 9 steps, and 1 + 9 = Seat 10."
+  },
+  {
+   "id": "L4U06-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "A round pizza is cut from the centre into 4 slices. The 2nd slice is 2 times the 1st. The 3rd and 4th slices are each 3 times the 1st.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The smallest slice: {b}°",
+     "answer": {
+      "value": [
+       "40"
+      ],
+      "text": "40"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The 4th slice: {b}°",
+     "answer": {
+      "value": [
+       "120"
+      ],
+      "text": "120"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "hint": "Count the equal parts: 1 + 2 + 3 + 3. All round is 360°.",
+   "explanation": "The slices are 1, 2, 3 and 3 parts. 9 parts = 360°, so 1 part = 40°. The smallest is 40° and the 4th is 3 × 40° = 120°.",
+   "partsrow": true
+  },
+  {
+   "id": "L4U06-G04",
+   "tier": "go",
+   "page": 5,
+   "text": "Think about the smaller angle between the clock hands at each o'clock time. Which times give an angle between 100° and 160°?",
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many times are there? {b}",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Write the times: {b} {b} {b} {b}",
+     "answer": {
+      "value": [
+       "4",
+       "5",
+       "7",
+       "8"
+      ],
+      "text": "4, 5, 7 and 8 o'clock"
+     }
+    }
+   ],
+   "hint": "Write the angle for every o'clock time first.",
+   "explanation": "The angle at 1 to 12 o'clock is 30°, 60°, 90°, 120°, 150°, 180°, 150°, 120°, 90°, 60°, 30°, 0°. Those between 100° and 160° are 120°, 150°, 150° and 120°, at 4, 5, 7 and 8 o'clock."
+  },
+  {
+   "id": "L4U06-C01",
+   "tier": "quiz",
+   "text": "Find the smaller angle between the clock hands at 7 o'clock. {b}°",
+   "answer": {
+    "value": [
+     "150"
+    ],
+    "text": "150"
+   },
+   "explanation": "At 7 o'clock the hands are 5 spaces apart the short way. 5 × 30° = 150°."
+  },
+  {
+   "id": "L4U06-C02",
+   "tier": "quiz",
+   "text": "Aisha faces S and turns 135° clockwise. Which way does she face now? {b}",
+   "answer": {
+    "value": [
+     "NW"
+    ],
+    "text": "NW"
+   },
+   "explanation": "135° is 3 steps of 45°. Clockwise from S: SW, W, NW."
+  },
+  {
+   "id": "L4U06-C03",
+   "tier": "quiz",
+   "text": "A corner of a square is split into 2 angles. One angle is 41°. How big is the other? {b}°",
+   "answer": {
+    "value": [
+     "49"
+    ],
+    "text": "49"
+   },
+   "explanation": "The corner is 90°. 90° − 41° = 49°."
+  },
+  {
+   "id": "L4U06-C04",
+   "tier": "quiz",
+   "text": "The minute hand moves from 5:10 to 5:35. How many degrees does it turn? {b}°",
+   "answer": {
+    "value": [
+     "150"
+    ],
+    "text": "150"
+   },
+   "explanation": "From 5:10 to 5:35 is 25 minutes. 25 × 6° = 150°."
+  }
+ ]
+}

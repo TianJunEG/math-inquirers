@@ -1,3 +1,4 @@
+const FG = require('../../levels/figs_l4_6.js');
 // Math Inquirers P6 (post-PSLE maths + coding bridge) — Lesson 9: Data Detectives (averages and data; lists, adding up, mean)
 // Every answer below was worked out by hand and checked (means computed exactly; Python programs run).
 
@@ -86,10 +87,10 @@ module.exports = {
     n: 9, week: 5, session: 'A', title: 'Data Detectives', topic: 'Averages and Data',
     objective: 'Find the mean as total ÷ number of values and as levelling out, use total = mean × number of values to find a missing value, predict how changing the data changes the mean, compare the mean with the median and mode when one value is extreme, and build a list program that adds up the data and finds the mean.',
     skills: 'Mean, working back from a mean to a total, reasoning about change, median and mode, lists and loops in code, tracing code',
-    materials: 'Laptop or desktop with Scratch 3 (scratch.mit.edu; free, in the browser), workbook, pencil, mini whiteboard, about 25 linking cubes or counters for levelling towers. A calculator only for checking.',
-    online: 'Data is collected in the chat. Children share their screen to show their code. The tutor shares a starter project as an .sb3 file (one sprite with an empty list called data; children use File, Load from your computer) or children build it from the slide in 5 minutes. Block colours on our slides are simplified; in Scratch, find blocks by the category name on the left, not by colour. The mean is familiar from primary school; the new parts are lists and loops, median and mode, and misleading averages.',
-    warmup: 'Quick-eye mean: the tutor flashes five numbers for 5 seconds; children write an estimate of the mean on paper and then we talk about how they guessed. No points. Then five quick questions on the slide.',
-    explore: 'Class data hunt: everyone posts the number of letters in their full name (no spaces). Estimate the mean, work it out by hand, then type the data into a Scratch list and run the mean program to check. Predict, then test: what happens to the mean when the tutor adds a value of 30?',
+    materials: 'Laptop or desktop with Scratch 3 (scratch.mit.edu; free, in the browser), starter file L9_Mean_Machine.sb3, workbook, pencil, mini whiteboard, about 25 linking cubes or counters for levelling towers. A calculator only for checking.',
+    online: 'Data is collected in the chat. Children share their screen to show their code. The tutor shares the starter file L9_Mean_Machine.sb3 (one sprite with an empty list called data, total and i set up and an empty repeat; children use File, Load from your computer) or children build it from the slide in 5 minutes. Block colours on our slides are simplified; in Scratch, find blocks by the category name on the left, not by colour. The mean is familiar from primary school; the new parts are lists and loops, median and mode, and misleading averages.',
+    warmup: 'Quick-eye mean: the tutor flashes five numbers for 5 seconds; children write an estimate of the mean on paper and then we talk about how they guessed. No points. Two rounds, then three quick questions on the slide.',
+    explore: 'Class data hunt: everyone posts the number of letters in their full name (no spaces). Estimate the mean and work it out by hand. Predict, then test by hand: what happens to the mean when the tutor adds a value of 30? (The list-and-loop mean program is built once, live, in the mini-lesson.)',
     mini: 'Mean = total ÷ how many. It is the level when the towers are evened out, so the amounts above and below it balance. Total = mean × how many, so a missing value = total − the known values. A new value above the mean pulls it up; a new value equal to the mean leaves it the same. One extreme value can make the mean misleading: the median (the middle value in order) or the mode (the most common value) may describe a typical value better. In code, a loop adds each item of the list to total, then we divide by the length of the list.',
     share: 'Can the mean be a number that nobody in the group has? Can the mean be bigger than every value in the list?',
     exit: { q: 'The mean of 3 numbers is 9. Two of them are 5 and 12. What is the third number? A fourth number, 13, is added. What is the new mean?', a: '10 (total 3 × 9 = 27; 27 − 5 − 12 = 10). New mean 10 (27 + 13 = 40, 40 ÷ 4 = 10).' },
@@ -106,33 +107,34 @@ module.exports = {
   },
 
   script: {
-    hook: ['Welcome back, data detectives! Newspapers, games and sports scores all come with averages. Today we find out what the mean really is, how one number can trick it, and how a computer adds up a whole list in a blink.', 'Our rule today: work it out by hand first, then let the code test it. Notice it. Test it. Explain why.'],
+    hook: ['Welcome back, data detectives! Newspapers, games and sports scores all come with averages. Today we find out what the average (mean) really is, how one number can trick it, and how a computer adds up a whole list in a blink.', 'Our rule today: work it out by hand first, then let the code test it. Notice it. Test it. Explain why.'],
     warmIntro: ['Quick-eye mean! I will show five numbers for five seconds only. No working out: just write your best guess of the mean. This is a guess, so any estimate is welcome. There are no points.', 'How did you guess so fast? Who looked for a number in the middle and checked that the big ones and small ones balance?'],
     predict: ['Before we add anything up: the mean number of letters in our names. Will it be bigger or smaller than the number of letters in YOUR name? Write a prediction.', 'If our tutor joins with a 30-letter name, will the mean go up a little or a lot? Thumbs up for a lot, sideways for a little.'],
-    exploreHints: ['Stuck on the hand calculation: add the values two at a time and write each running total, just like the variable total in the code.', 'Code says something strange: check that every value is in the list once, and that you divide by the length of the list, not by a number you typed.', 'Finished early: find a new value you could add that keeps the mean exactly the same. Test it in the program.'],
+    exploreHints: ['Stuck on the hand calculation: add the values two at a time and write each running total, just like the variable total in the code.', 'Finished early: find a new value you could add that keeps the mean exactly the same. Test it in the program.'],
     think: ['“Goals in 5 matches: 3, 0, 4, 1, 2. The 0 is a real value: that match counts. Total 3 + 0 + 4 + 1 + 2 = 10. Five matches, so the mean is 10 ÷ 5 = 2. Check by balancing: 3 is 1 above, 4 is 2 above: 3 above in all. 0 is 2 below, 1 is 1 below: 3 below in all. They balance, so 2 is right.”', '“The mean of 4 test scores is 15, so the total must be 4 × 15 = 60. The three I know make 12 + 18 + 14 = 44. The missing score is 60 − 44 = 16. I never subtract from the mean: I subtract from the total.”', '“Goals by 7 players: 1, 2, 2, 3, 4, 5, 25. The mean is 42 ÷ 7 = 6, but 6 of the 7 players scored fewer than 6! The one big value pulled the mean up. The median, the middle value in order, is 3. That describes a typical player better.”'],
     circulate: ['Ask: “What is the total? How many values are there? Did you count the 0?”', 'Ask: “Before you calculate: will the mean go up, go down or stay the same? Why?”', 'Ask: “Point to the block that adds up. What is total after the second time round the loop?”'],
     hints: ['Hint 1: “Find the total first. Mean × how many gives the total.”', 'Hint 2: “Draw the values as towers. Move cubes from tall towers to short ones until they are level.”', 'Hint 3: “For a trace table, do one loop at a time: which item? what is total now? then change i by 1.”'],
-    talk: ['“Can the mean be a number that nobody in the group has?”', '“Can the mean be bigger than every value in the list? Why or why not?”'],
+    talk: ['“Can the mean be a number that nobody in the group has?”'],
+    talkNext: '“Can the mean be bigger than every value in the list? Why or why not?” (Only if flex is left; otherwise it is the opener of the next lesson.)',
     talkAns: 'Yes: the mean of 2 and 3 is 2.5, a number nobody in the group has. No: the mean is always between the smallest and the largest value. Levelling out moves cubes from taller towers to shorter ones, so the level can never be higher than the tallest tower or lower than the shortest.',
     close: ['“Today you found means by levelling and by dividing, worked backwards from a mean to a total, and caught a misleading average. And your code added up a whole list for you. Next lesson is our Showcase Challenge: start thinking about a puzzle you would like to turn into a program.”', 'Homework thought for next lesson: decide which starter you will change (A, B, C or Clock Jumper) and what your twist will be, so you can start building straight away.']
   },
 
   deck: {
     today: 'Find the mean by levelling and by dividing, work back from a mean to a total, catch a misleading average, and make a program that finds the mean of a list.',
-    warmGame: 'Quick-eye mean. The tutor flashes five numbers for 5 seconds. Write your best estimate of the mean, no working out. Then we talk about how you guessed. No points. Three rounds.',
-    warmQs: [['Find the mean of 4, 6 and 8.', '6'], ['Find the mean of 10, 20, 30 and 40.', '25'], ['5 children have a mean of 12 sweets. How many sweets altogether?', '60'], ['Find the mean of 3, 3, 3, 3 and 100.', '22.4'], ['Find the mean of 2.5 and 3.5.', '3']],
-    expSetup: ['Everyone posts in the chat the number of letters in their full name (no spaces). Write the list.', 'Estimate the mean. Then work it out by hand: total ÷ how many.', 'Type the data into the Scratch list called data and run the mean program. Same answer?', 'Predict, then test: add a value of 30 to the list. What happens to the mean?'],
+    warmGame: 'Quick-eye mean. The tutor flashes five numbers for 5 seconds. Write your best estimate of the mean, no working out. Then we talk about how you guessed. No points. Two rounds.',
+    warmQs: [['Find the mean of 4, 6 and 8.', '6'], ['5 children have a mean of 12 sweets. How many sweets altogether?', '60'], ['Find the mean of 3, 3, 3, 3 and 100.', '22.4']],
+    expSetup: ['Everyone posts in the chat the number of letters in their full name (no spaces). Write the list.', 'Estimate the mean. Then work it out by hand: total ÷ how many.', 'Predict, then test: add a value of 30 to the list. What happens to the mean? Work it out by hand.'],
     expPic: 'a list panel called data holding the name-letter counts, an arrow to the mean program blocks (set total to 0, repeat length of data, change total by item i of data), and a yellow box saying mean = ?',
-    expAsk: [['Was your estimate close? How did you estimate?', 'Pick a value in the middle, then check that the values above it and below it roughly balance.'], ['What happened to the mean when 30 was added?', 'It went up, a lot, because 30 is far above every other value. One big value pulls the mean towards it.'], ['Did the program and your hand calculation agree?', 'They should. If not, look for a value typed twice or missed, or dividing by the wrong number.']],
+    expAsk: [['Was your estimate close? How did you estimate?', 'Pick a value in the middle, then check that the values above it and below it roughly balance.'], ['What happened to the mean when 30 was added?', 'It went up, a lot, because 30 is far above every other value. One big value pulls the mean towards it.']],
     mini1: { head: 'Find the mean, then balance-check', body: ['Goals in 5 matches: 3, 0, 4, 1, 2.', 'Total: 3 + 0 + 4 + 1 + 2 = 10. There are 5 values (the 0 counts).', 'Mean = 10 ÷ 5. Check: above the mean and below the mean should balance.'], ans: '2. Above: +1 and +2. Below: −2 and −1. They balance.' },
     mini2: { head: 'Missing value: use the total', body: ['The mean of 4 test scores is 15. Three of them are 12, 18 and 14.', 'Total of all 4: 4 × 15 = 60.', 'Known: 12 + 18 + 14 = 44. Missing score = 60 − 44.'], ans: '16. A 5th score of 15 would keep the mean at 15.' },
-    keyHead: 'Key idea: mean = total ÷ how many',
-    keyBig: 'Mean = total ÷ how many values. Turn it round: total = mean × how many. The values above and below the mean always balance.',
+    keyHead: 'Key idea: average (mean) = total ÷ how many',
+    keyBig: 'The average (mean) = total ÷ how many values. Turn it round: total = mean × how many. The values above and below the mean always balance.',
     keySmall: 'One extreme value can pull the mean a long way. Then the median (middle value) or mode (most common) may describe a typical value better.',
     brk: 'Dice jumps. Roll two dice on screen: everyone does that many star jumps. Three rounds. What was the mean number of jumps per round?',
-    ws1: 'Page 1, in pairs: Q1 mean and balance check, Q2 missing score from the total, Q3 predict how the mean changes, Q4 a misleading mean (median and mode).',
-    ws2: 'Page 2, on your own: Q5 trace the mean program, Q6 Singapore temperatures and plan the code that counts the days above the mean.'
+    ws1: 'Page 1, in pairs: Q1 mean and balance check, Q2 missing score from the total, Q3 predict how the mean changes. Q4, a misleading mean (median and mode, with the dot plot), is at the top of the next sheet.',
+    ws2: 'On your own, on the next sheet after Q4: Q5 trace the mean program, Q6 Singapore temperatures and plan the code that counts the days above the mean.'
   },
 
   qbank: {
@@ -176,22 +178,17 @@ module.exports = {
     const side = (l, r) => `<div class="p img" style="display:flex;gap:14px;align-items:flex-start;justify-content:space-between;margin:4px 0 8px"><div style="flex:none">${l}</div><div style="flex:1;min-width:0">${r}</div></div>`;
     return [
       H.q(1, 'Five friends counted the books they read in the holidays:   4,   7,   2,   8,   9', { before: 0, keepNext: true }),
-      H.sub('a', 'What is the total?   ________          (b)  What is the mean?   ________'),
-      H.sub('c', 'Balance check: how far is each value above (+) or below (−) the mean?', { after: 40, keepNext: true }),
-      H.sub('', '4 → ____     7 → ____     2 → ____     8 → ____     9 → ____      Add them up: ____'),
+      side(FG.dotPlot({ min: 0, max: 10, data: [4, 7, 2, 8, 9], w: 420, axis: 'books read', label: 'A dot plot of books read: one dot each at 2, 4, 7, 8 and 9 on a scale from 0 to 10.' }), [H.sub('a', 'What is the total?   ________          (b)  The average (mean)?   ________'), H.sub('c', 'Balance check: how far is each value above (+) or below (−) the mean?', { after: 40, keepNext: true }), H.sub('', '4 → ____     7 → ____     2 → ____     8 → ____     9 → ____      Add them up: ____')].join('')),
       H.q(2, 'Siti played 4 games. Her mean score was 17. Her first three scores were 15, 20 and 14.', { keepNext: true }),
-      H.sub('a', 'Her total for the 4 games?  ______          (b)  Her 4th score?  ______'),
-      H.sub('c', 'She plays a 5th game. What must she score to make her mean exactly 18?   ______'),
+      H.sub('a', 'Her total for the 4 games?  ______      (b)  Her 4th score?  ______      (c)  A 5th game: what score makes her mean exactly 18?  ______'),
       H.q(3, 'The data 6, 8, 10, 12, 14 has a mean of 10. Predict first: up, down or the same? Then work out the new mean.', { keepNext: true }),
       H.tbl(w3, [
         H.row(['Change', 'Up, down or the same?', 'New mean'].map((s, i) => H.cell(s, w3[i], { bold: true, fill: 'EDEDED', h: 40 }))),
-        ...['(a) Add a new value, 10.', '(b) Add 3 to every value.', '(c) Remove the 14.', '(d) Change the 14 to 44.'].map(s => H.row([H.cell(s, w3[0], { align: 'left', h: 45 }), H.cell('', w3[1], { h: 45 }), H.cell('', w3[2], { h: 45 })]))
+        ...['(a) Add a new value, 10.', '(b) Add 3 to every value.', '(c) Remove the 14.', '(d) Change the 14 to 44.'].map(s => H.row([H.cell(s, w3[0], { align: 'left', h: 30 }), H.cell('', w3[1], { h: 30 }), H.cell('', w3[2], { h: 30 })]))
       ]),
       H.q(4, 'Seven P6 pupils get this pocket money each week:   $10,  $12,  $12,  $15,  $16,  $20,  $69', { keepNext: true }),
-      H.sub('a', 'Mean (total $154)  ____     (b)  Median  ____     (c)  Mode  ____'),
-      H.sub('d', 'How many of the pupils get less than the mean?   ________'),
-      H.sub('e', 'Jun says, “A typical pupil gets $22 a week.” Is that fair? Which average describes a typical pupil better? Explain.'),
-      ...H.lines(2),
+      side(FG.dotPlot({ min: 8, max: 22, data: [10, 12, 12, 15, 16, 20], w: 460, axis: 'dollars a week', fmt: v => '$' + v, tick: 2, extra: (x0, x1, y) => FG.T(x1 + 24, y - 20, '$69 →', { size: 18, anchor: 'end', fill: FG.RED }), label: 'A dot plot of pocket money from $8 to $22: dots at 10, 12 (two), 15, 16 and 20. The seventh pupil, $69, is off the scale to the right.' }), [H.sub('a', 'Mean (total $154)  ____     (b)  Median  ____     (c)  Mode  ____'), H.sub('d', 'How many of the pupils get less than the mean?   ________'), H.sub('e', 'Jun says, “A typical pupil gets $22 a week.” Is that fair? Which average describes a typical pupil better? Explain.')].join('')),
+            ...H.lines(1),
 
       H.q(5, 'Trace the code. The list called scores holds 5, 9, 6 and 12 (item 1 is 5, item 2 is 9, and so on). Fill in the trace table, one row for each time round the loop.', { pb: true, before: 0, keepNext: true }),
       side(codeSvg(meanProg, 'Code blocks: when green flag clicked, set total to 0, set i to 1, repeat 4 (change total by item i of scores, change i by 1), say total divided by 4.'),
@@ -202,7 +199,7 @@ module.exports = {
       H.sub('a', 'What does the sprite say?   ________'),
       H.sub('b', 'Jo adds a 5th score, 13, to the list. Which two blocks must change so the program works for a list of ANY length? What should it say now?'),
       ...H.lines(2),
-      H.q(6, 'The highest temperature each day for a week in Singapore, in °C:   29,  31,  33,  30,  32,  34,  28', { keepNext: true }),
+      H.q(6, '★ Take-home. The highest temperature each day for a week in Singapore, in °C:   29,  31,  33,  30,  32,  34,  28', { keepNext: true }),
       H.sub('a', 'Mean temperature?  ____ °C          (b)  Days hotter than the mean?  ____'),
       H.sub('c', 'Plan your code. The variable mean already holds your answer to (a). Fill in the two blanks so the program counts the days hotter than the mean. What will it say?', { keepNext: true }),
       side(codeSvg(planProg, 'Code blocks with two blanks: set count to 0, set i to 1, repeat length of temps (if item i of temps is greater than blank then change blank by 1; change i by 1), say count.'),

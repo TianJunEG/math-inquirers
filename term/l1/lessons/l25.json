@@ -1,0 +1,3706 @@
+{
+ "schema_version": 1,
+ "id": "l1-t3-05",
+ "level": 1,
+ "term": 3,
+ "lesson": 25,
+ "lesson_in_term": 5,
+ "title": "Price Tags: Compare and Choose",
+ "big_idea": "Which costs more, and by how much? The difference is the gap.",
+ "child_idea": "A price tag says how much one thing costs. To find how much more one costs than another, count up from the smaller price to the bigger price. That gap is how much more.",
+ "skill": "Comparing",
+ "spine": {
+  "main": "guess",
+  "also": [
+   "draw"
+  ],
+  "role": "I",
+  "reason": "Try two tags, check the total or the gap, then try again; strips show how much more."
+ },
+ "ages": "6-8",
+ "moe": {
+  "strand": "Money: compare prices, add and subtract money in dollars (Primary 1)",
+  "topics": [
+   "Money in dollars up to $100, and addition and subtraction within 100 in money stories (Primary 1, Whole Numbers and Money, p. 31)",
+   "Decimal notation for money such as $1.50 (Primary 2, p. 33): not used, whole dollars only",
+   "Finding two unknown quantities from their total and their difference (a strip model, taught at Primary 3 and 4): beyond Primary 1"
+  ],
+  "note": "Strand label for the tutor only. NEW TOPIC: this price-comparison lesson is an added lesson, so a tutor or the owner should check it against the syllabus before first use. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only. Start here is Primary 1 money work: which of two prices is more, how much more (a gap within $20), the total of two items, the change from $20, the least of three, and how much more money is needed (the 'how much more money does he need' item appears in Primary 1 papers). Think harder: the gap among three prices, change from a fifty-dollar note, is a total enough for a budget, which two (and which three) prices add to an exact amount (choose-and-check), and a small total-and-difference story with a strip. Go further is beyond Primary 1: a total-and-difference story at $52 ('The Hidden Price', two unknown prices found from their sum and gap), three prices found from clues, and a hundred-dollar change story. Owner decision, 22 and 23 Oct 2026: strong content with scaffolding, said plainly to families; every lesson names a beyond item. Do not describe the lesson as MOE-aligned. Money wording follows the Primary 1 paper patterns of 23 Oct: dollars as $12, cents (not needed here) as 50¢, whole dollars only, no $20 note (Singapore has none: a $20 payment is two ten-dollar notes), 'How much more ...?', 'How much change ...?', 'How much more money does he need?', 'cashier'. Non-routine types (tutor only): compare with a difference, guess and check (which two items), choose numbers that add to a total, build prices from clues."
+ },
+ "contest_moves": [
+  "compare: how much more (a gap), three prices, a total and a difference",
+  "guess and check: which two items cost exactly this much",
+  "choose numbers that add to a total (three prices that make $14)",
+  "build prices from clues (three toys)",
+  "work backwards: the change is known, find the cost"
+ ],
+ "contest_where": "Think harder, Go further and the Investigation",
+ "objectives": [
+  "Say which of two or three prices costs more, costs less, costs the most and costs the least.",
+  "Find how much more one price is than another by counting up from the smaller price, on a number line and with strips.",
+  "Find the total of two prices and the change from $20, and say how much more money is needed.",
+  "Think harder: the gap among three prices, change from $50, whether a budget is enough, and which two (or three) prices make an exact amount.",
+  "Go further: two prices from their total and their difference (The Hidden Price), three prices from clues, and a change story at $100."
+ ],
+ "joining_cold": {
+  "remember": [
+   "Which of two numbers is greater (Term 1 Lesson 3, taught again with tens bars)",
+   "Count up from one number to another to find the gap (Term 1 Lesson 7, taught again on a number line)",
+   "Two strips and the gap between them (Term 2 Lesson 2, taught again with a picture)"
+  ],
+  "assumes": "Only counting to 20 and the price tags from the kit. Nothing from the lessons before is needed: the warm-up compares two numbers with tens bars, counts up on a line and shows two strips with a gap. The words costs more, how much more, altogether and change are taught in Explore and the Mini-lesson. The play money from the lesson before is used for one example only.",
+  "holiday_topics_revisited": [
+   "Skip counting in 5s and 10s (Count with the Frog)"
+  ],
+  "safe_to_miss": false,
+  "note": "Not easy to miss: the next lesson uses the same price tags and Mi's Challenge Quest has a gate on this idea (which costs more, and by how much). A child who misses it watches the recording, does workbook pages 1 and 2 and cuts out the price-tag page before the next lesson. A child who joins here cold can follow: the warm-up compares numbers, counts up and draws strips again, and Start here keeps to prices within $20 with strips and a number line."
+ },
+ "materials": {
+  "child": [
+   "Your Term 3 workbook, pages 1 to 5, and the price-tag page (page 6), which a grown-up cuts out before the lesson: 12 price tags (9 with a price, 3 blank)",
+   "The play money from the lesson before (coins, notes and the $1 tokens), kept in its envelope: we use it for one example only",
+   "No printer or no cutting? Small pieces of paper with an item and a price written on each one",
+   "A pencil, a rubber and spare paper"
+  ],
+  "tutor": [
+   "The slide deck",
+   "Your own set of price tags and play money to show on camera, if you wish",
+   "A visible clock"
+  ],
+  "kit_pages": [
+   "Price tags (page 6): 12 tags to cut out, 9 with a picture and a price and 3 blank to write on. Keep the tags in an envelope with the play money: they come back in the next lesson and in the Quest."
+  ],
+  "ruler": false,
+  "notes": "No ruler is needed. Nothing needs to be bought: everything can be found at home. The money is PLAY MONEY, not real money. Small pieces stay on the table: nothing goes in the mouth or ears; keep them away from younger brothers and sisters. No matches, toothpicks or anything sharp. Nobody cuts during the lesson; a grown-up cuts the tags beforehand.",
+  "kit_contract": [
+   {
+    "piece": "price tags with a price",
+    "supplied": 9,
+    "max_used": 5,
+    "used_by": [
+     "explore",
+     "mini",
+     "T4"
+    ]
+   },
+   {
+    "piece": "blank price tags",
+    "supplied": 3,
+    "max_used": 1,
+    "used_by": [
+     "I1"
+    ]
+   },
+   {
+    "piece": "ten-dollar notes (from the money pages)",
+    "supplied": 3,
+    "max_used": 2,
+    "used_by": [
+     "explore",
+     "mini"
+    ]
+   },
+   {
+    "piece": "$1 tokens (Term 2 Lesson 9)",
+    "supplied": 30,
+    "max_used": 0,
+    "used_by": []
+   }
+  ]
+ },
+ "timing": {
+  "parts": [
+   {
+    "id": "opening",
+    "title": "Opening",
+    "start": 0,
+    "end": 2
+   },
+   {
+    "id": "remember",
+    "title": "Remember warm-up",
+    "start": 2,
+    "end": 8
+   },
+   {
+    "id": "sneak",
+    "title": "Sneak-peek puzzles",
+    "start": 8,
+    "end": 12
+   },
+   {
+    "id": "explore",
+    "title": "Explore",
+    "start": 12,
+    "end": 23
+   },
+   {
+    "id": "mini",
+    "title": "Mini-lesson",
+    "start": 23,
+    "end": 34
+   },
+   {
+    "id": "break",
+    "title": "Brain break",
+    "start": 34,
+    "end": 38
+   },
+   {
+    "id": "work",
+    "title": "Workbook",
+    "start": 38,
+    "end": 70
+   },
+   {
+    "id": "talk",
+    "title": "Talk time",
+    "start": 70,
+    "end": 76
+   },
+   {
+    "id": "exit",
+    "title": "Exit ticket",
+    "start": 76,
+    "end": 82
+   },
+   {
+    "id": "look",
+    "title": "Look-back",
+    "start": 82,
+    "end": 85
+   },
+   {
+    "id": "flex",
+    "title": "Flex time and goodbye",
+    "start": 85,
+    "end": 90
+   }
+  ],
+  "optional_slide": "s-opt",
+  "include_rules": false,
+  "notes": "Opening is 2 minutes (the routine and rules were taught in the first lesson of Term 1). Explore has 11 minutes: order three tags, count up between two tags, then notice. The mini-lesson has 11 because it shows how much more twice (one worked, one your turn), the total of two items, change by counting up and which two tags make an exact amount. The workbook has 32 minutes: Start here takes a middle child about 17 minutes, so pages 3 to 5 are for home for most children. The last 5 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time.",
+  "skip_order": [
+   "Start with: shorten Explore round 3 (what did we notice) to one question",
+   "Then: cut the your-turn change example on the change slide (s-m4)",
+   "Then: take the extra minutes from the flex time"
+  ]
+ },
+ "sneak_peek": {
+  "q1": "A bag costs $15. A hat costs $9. Which costs more? Write bag or hat.",
+  "q2": "A kite costs $5 less than a book. The book costs $14. How much does the kite cost? I know because ___.",
+  "a1": "The bag ($15 is more than $9).",
+  "a2": "$9. The kite costs $5 less than $14, and 14 take away 5 is 9.",
+  "val1": 15,
+  "val2": 9
+ },
+ "rec": {
+  "opening": {
+   "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook and your price tags. Pause or rewind any time.",
+   "action": "Gather your workbook, price tags, pencil and paper. Press play when ready."
+  },
+  "remember": {
+   "say": "Recording: join in! Look at each picture and say your answer out loud. Pause if you need longer.",
+   "action": "Play along. Say each answer out loud before the video does."
+  },
+  "sneak": {
+   "say": "Recording: pause now and try both puzzles on your paper. Guessing is fine. Press play for the next part.",
+   "action": "Pause. Try both puzzles on your own paper. A guess is fine."
+  },
+  "explore": {
+   "say": "Recording: pause now. Put your tags in order, then count up between two tags. Press play when you have tried.",
+   "action": "Pause. Order the tags, then count up between two tags with your fingers."
+  },
+  "mini": {
+   "say": "Recording: keep watching and copy the examples. Rewind if you miss a step.",
+   "action": "Watch and copy the examples. Rewind any step you missed."
+  },
+  "break": {
+   "say": "Recording: stand up and join in! Reach up high for big prices and crouch low for small ones.",
+   "action": "Stand up. Reach high for big prices and crouch low for small prices."
+  },
+  "work": {
+   "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
+   "action": "Pause. Do page 1, then play to check. Then page 2. Then choose a page to try."
+  },
+  "talk": {
+   "say": "Recording: pause. Tell a grown-up who is right, and show how you know with a number line.",
+   "action": "Pause. Explain your answer to someone at home and show it on a number line."
+  },
+  "exit": {
+   "say": "Recording: pause and do the exit ticket on your own. Then press play to check it.",
+   "action": "Pause. Do the exit ticket alone, then play to check it."
+  },
+  "look": {
+   "say": "Recording: pause and fill in your look-back box. You can pass.",
+   "action": "Pause. Fill in the look-back box, or pass."
+  },
+  "flex": {
+   "say": "Recording: well done for finishing! Show a grown-up one thing you found out.",
+   "action": "Show a grown-up your workbook and tell them one thing you found out."
+  }
+ },
+ "slides": [
+  {
+   "id": "s-title",
+   "part": "opening",
+   "kind": "title",
+   "title": "Price Tags: Compare and Choose",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "TODAY WE WILL",
+     "items": [
+      "Find which costs more, and how much more."
+     ]
+    }
+   ],
+   "note": "Lesson 5 of Term 3, 90 minutes. Objective: say which price is more, find how much more by counting up, find a total and a change, and choose items that make an exact amount. Plain statement for families: comparing prices, the gap, the total and the change within $20 are Primary 1 work; the gap among three prices, change from $50, choosing prices that make an exact amount and finding two prices from their total and gap go past the school Primary 1 syllabus on purpose. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 23, mini-lesson 23 to 34, brain break 34 to 38, workbook 38 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Say the recording notice in one line: the recording has the tutor, the shared screen and any voice that is not muted; a child may keep the microphone and camera off.",
+   "subtitle": "Which costs more? How much more?",
+   "mascot": {
+    "size": "l",
+    "say": "Hi, I'm Mi. Let's notice, test and explain why!"
+   }
+  },
+  {
+   "id": "s-rem1",
+   "part": "remember",
+   "kind": "light",
+   "title": "Warm-up: which is greater?",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Which number is greater?"
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "bundles",
+        "tens": 3,
+        "ones": 6,
+        "style": "kit",
+        "label": "36"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "bundles",
+        "tens": 6,
+        "ones": 3,
+        "style": "kit",
+        "label": "63"
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Two numbers made with tens bars and ones squares: 36 (3 bars, 6 squares) and 63 (6 bars, 3 squares). Ask: which number is greater (63). Why (6 tens is more than 3 tens; look at the tens first). This is Term 1 Lesson 3 taught again. A price with more dollars costs more, so today we compare numbers all the time. A child who is unsure counts the bars first. Children answer aloud. No writing, no marks. Joining cold: the picture teaches it.",
+   "mascot": {
+    "size": "s",
+    "say": "Take your time!"
+   }
+  },
+  {
+   "id": "s-rem2",
+   "part": "remember",
+   "kind": "light",
+   "title": "Count up to find the gap",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "number_line",
+     "start": 25,
+     "end": 38,
+     "step": 1,
+     "label_every": 5,
+     "marks": [
+      28,
+      35
+     ],
+     "hide": [],
+     "size": "l"
+    },
+    {
+     "t": "chip",
+     "text": "From 28 up to 35. How many steps in all?"
+    }
+   ],
+   "note": "A gap by counting up on a number line (Term 1 Lesson 7, taught again). From 28 count up to the next ten (30): 2 steps. Then from 30 up to 35: 5 steps. 2 and 5 make 7, so the gap between 28 and 35 is 7. Ask: how many steps from 28 to 30 (2); from 30 to 35 (5); how many in all (7). The line has no jumps drawn while you ask; the jumps appear on the next slide after the children have answered. Read the line aloud as you ask. A child who is unsure counts the ticks with a finger. Children answer aloud. No writing."
+  },
+  {
+   "id": "s-rem2-ans",
+   "part": "remember",
+   "kind": "light",
+   "title": "Count up: the gap is 7",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "number_line",
+     "start": 25,
+     "end": 38,
+     "step": 1,
+     "label_every": 5,
+     "marks": [
+      28,
+      35
+     ],
+     "hide": [],
+     "size": "l",
+     "jumps": [
+      [
+       28,
+       30,
+       "+2"
+      ],
+      [
+       30,
+       35,
+       "+5"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "2 and 5 make 7. The gap between 28 and 35 is 7."
+    }
+   ],
+   "note": "The answer for the warm-up gap: from 28 up to 30 is 2 steps and from 30 up to 35 is 5 steps, so 7 in all. Children check their own count aloud."
+  },
+  {
+   "id": "s-rem3",
+   "part": "remember",
+   "kind": "light",
+   "title": "Two strips and the gap",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "Ali",
+       "len": 8,
+       "text": "8"
+      },
+      {
+       "name": "Mei",
+       "len": 3,
+       "text": "3"
+      }
+     ],
+     "gap": {
+      "between": [
+       0,
+       1
+      ],
+      "text": "[]"
+     },
+     "size": "m"
+    },
+    {
+     "t": "chip",
+     "text": "Ali has 8 stickers. Mei has 3. How many more does Ali have?"
+    }
+   ],
+   "note": "Two strips drawn to scale (Term 2 Lesson 2, taught again): Ali 8 and Mei 3, with the gap shown and an empty box. Ask: whose strip is longer (Ali's); how many more stickers does Ali have (5). Say: the gap is how many more. Today a price is a strip too: the more it costs, the longer the strip. A child who is unsure counts the squares of the gap or counts up from 3 to 8 on fingers. Answers: Ali; 5. Children answer aloud. No writing."
+  },
+  {
+   "id": "s-sneak",
+   "part": "sneak",
+   "kind": "light",
+   "title": "Sneak-peek puzzles",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Ideas we have not learnt yet. A guess is a great start. Nobody is marked."
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 1: anyone can try",
+        "items": [
+         "A bag costs $15.",
+         "A hat costs $9.",
+         "Which costs more? Write bag or hat."
+        ]
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 2: think",
+        "items": [
+         "A kite costs $5 less than a book.",
+         "The book costs $14.",
+         "How much does the kite cost? I know because ___."
+        ]
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Puzzle 1 (bag $15, hat $9: the bag) is an access question: any child can compare two prices. Puzzle 2 is a thinking question on the lesson idea: the kite costs $5 less than the $14 book, so $14 take away $5 is $9. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: bag; $9. Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
+  },
+  {
+   "id": "s-explore1",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: put the tags in order",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "list",
+        "ordered": true,
+        "items": [
+         "Take the pencil tag, the glue tag and the ruler tag.",
+         "Line them up. Put the tag that costs the least first.",
+         "Which tag costs the most?"
+        ]
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Round 1, about 4 minutes. Each child takes three tags from the price-tag page: pencil, glue and ruler. They line them up with the one that costs the least first. Ask: which costs the most; which costs the least; how do you know (the biggest number of dollars). The prices are on the tags, so the slide shows no price. The picture appears on the next slide, after the children have answered. A child with no tags writes the three prices on paper (3, 5, 7) and orders them. Do not name a child with a wrong answer. Answer: pencil $3, glue $5, ruler $7, so the ruler costs the most and the pencil the least."
+  },
+  {
+   "id": "s-explore1-ans",
+   "part": "explore",
+   "kind": "light",
+   "title": "In order: least to most",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "price_tag",
+        "item": "pencil",
+        "price": "$3",
+        "size": "m"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "price_tag",
+        "item": "glue",
+        "price": "$5",
+        "size": "m"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "price_tag",
+        "item": "ruler",
+        "price": "$7",
+        "size": "m"
+       }
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "The ruler costs the most. The pencil costs the least."
+    }
+   ],
+   "note": "The answer for round 1: pencil $3, glue $5, ruler $7. Say: the tag that costs the least goes first. Children check their line against the picture. Words to use every time: costs more, costs less, costs the most, costs the least. Nobody holds tags up to the camera: children say the order and show a thumb when they agree."
+  },
+  {
+   "id": "s-explore2",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: how much more?",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "Take the cup tag and the jar tag.",
+      "Which costs more?",
+      "Count up from the cup price to the jar price. Use your fingers.",
+      "How many more dollars is the jar?"
+     ]
+    },
+    {
+     "t": "visual",
+     "type": "number_line",
+     "start": 7,
+     "end": 15,
+     "step": 1,
+     "label_every": 1,
+     "size": "l"
+    }
+   ],
+   "note": "Round 2, about 5 minutes. Children take the cup tag ($8) and the jar tag ($14). Ask: which costs more (the jar). Then: how much more? Count up from 8 to 14 with fingers or on the line: 9, 10, 11, 12, 13, 14, six fingers. Some children go to 10 first (2 steps) and then to 14 (4 steps): 2 and 4 make 6. Both ways are right; ask a child to say how they counted. The line has no jumps drawn, so the answer is not shown. A child with no tags writes 8 and 14 on paper. Answer: $6 more. Say the answer in a full sentence: the jar costs $6 more than the cup."
+  },
+  {
+   "id": "s-explore2-ans",
+   "part": "explore",
+   "kind": "light",
+   "title": "The gap is how much more",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "number_line",
+     "start": 7,
+     "end": 15,
+     "step": 1,
+     "label_every": 1,
+     "marks": [
+      8,
+      14
+     ],
+     "jumps": [
+      [
+       8,
+       10,
+       "+2"
+      ],
+      [
+       10,
+       14,
+       "+4"
+      ]
+     ],
+     "size": "l"
+    },
+    {
+     "t": "chip",
+     "text": "2 and 4 make 6. The jar costs $6 more than the cup."
+    }
+   ],
+   "note": "The answer for round 2, shown on the line: from 8 up to 10 is 2 steps and from 10 up to 14 is 4 steps, so the gap is 6. Another way is to count 6 single steps. Say: the gap is how much more. Children check their own count with a tick."
+  },
+  {
+   "id": "s-explore3",
+   "part": "explore",
+   "kind": "light",
+   "title": "What did we notice?",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      "The tag that costs more has the bigger number.",
+      "How did you find how much more?",
+      "What is the same about a gap on a line and a gap in two strips?"
+     ]
+    }
+   ],
+   "note": "Take one or two answers from volunteers. Key ideas: the item that costs more has the bigger price; count up from the smaller price to the bigger price; the gap is the number of steps; the gap on a number line is the same as the gap between two strips. Repeat a child answer in your own words so the recording picks it up. Do not give the rule before the children say it. If nobody says it, show the two strips from the warm-up again."
+  },
+  {
+   "id": "s-m1",
+   "part": "mini",
+   "kind": "light",
+   "title": "How much more?",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "price_tag",
+        "item": "car",
+        "price": "$11",
+        "size": 40
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "price_tag",
+        "item": "sock",
+        "price": "$4",
+        "size": 40
+       }
+      ]
+     ]
+    },
+    {
+     "t": "visual",
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "Car",
+       "len": 11,
+       "text": "11"
+      },
+      {
+       "name": "Sock",
+       "len": 4,
+       "text": "4"
+      }
+     ],
+     "gap": {
+      "between": [
+       0,
+       1
+      ],
+      "text": "[]"
+     },
+     "size": "m"
+    },
+    {
+     "t": "chip",
+     "text": "How much more does the car cost than the sock?"
+    }
+   ],
+   "note": "Worked example. The toy car costs $11 and the sock costs $4. Ask: which costs more (the car). How much more? The strips show the gap as an empty box. Count up from 4 to 10 (6 steps), then from 10 to 11 (1 step): 6 and 1 make 7. The car costs $7 more than the sock. Children say the answer in a full sentence after they have tried. The next slide shows the number line and the answer. Fixed question words every time: How much more does ... cost than ...? A child who subtracts 11 take away 4 gets the same: 7."
+  },
+  {
+   "id": "s-m1a",
+   "part": "mini",
+   "kind": "light",
+   "title": "Count up: the gap is 7",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "number_line",
+     "start": 3,
+     "end": 12,
+     "step": 1,
+     "label_every": 1,
+     "marks": [
+      4,
+      11
+     ],
+     "jumps": [
+      [
+       4,
+       10,
+       "+6"
+      ],
+      [
+       10,
+       11,
+       "+1"
+      ]
+     ],
+     "size": "l"
+    },
+    {
+     "t": "chip",
+     "text": "6 and 1 make 7. The car costs $7 more than the sock."
+    }
+   ],
+   "note": "The answer for the car and the sock, shown on a line: 4 up to 10 is 6, then 10 up to 11 is 1, so 7. Say it as a sentence: the car costs $7 more than the sock. Link to the strips: the gap is the part of the car's strip that the jar's strip does not cover."
+  },
+  {
+   "id": "s-m2",
+   "part": "mini",
+   "kind": "light",
+   "title": "Your turn: how much more?",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "price_tag",
+        "item": "bike",
+        "price": "$13",
+        "size": "m"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "price_tag",
+        "item": "spoon",
+        "price": "$5",
+        "size": "m"
+       }
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "How much more does the bike cost than the spoon? Write the number on your paper."
+    }
+   ],
+   "note": "Your turn, one try. The bike costs $13 and the spoon costs $5. Children write how much more on their own paper; wait 10 seconds before helping. Read the answer aloud afterwards: 8 (5 up to 10 is 5, 10 up to 13 is 3, and 5 and 3 make 8). Nobody holds paper up. A child who writes 18 added the prices: ask which is the question, the total or the gap. A child who writes 5 or 13 gave a price, not a gap. Answer: $8 more."
+  },
+  {
+   "id": "s-m2a",
+   "part": "mini",
+   "kind": "light",
+   "title": "Check: the gap is 8",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "number_line",
+     "start": 4,
+     "end": 14,
+     "step": 1,
+     "label_every": 1,
+     "marks": [
+      5,
+      13
+     ],
+     "jumps": [
+      [
+       5,
+       10,
+       "+5"
+      ],
+      [
+       10,
+       13,
+       "+3"
+      ]
+     ],
+     "size": "l"
+    },
+    {
+     "t": "chip",
+     "text": "5 and 3 make 8. The bike costs $8 more than the spoon."
+    }
+   ],
+   "note": "Read the answer aloud so a child watching the recording can tick their own work: the bike costs $8 more than the spoon. Never ask a child to show a wrong answer to the group."
+  },
+  {
+   "id": "s-m3",
+   "part": "mini",
+   "kind": "light",
+   "title": "Altogether",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "price_tag",
+        "item": "shoe",
+        "price": "$10",
+        "size": "m"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "price_tag",
+        "item": "button",
+        "price": "$2",
+        "size": "m"
+       }
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Ben buys the shoe and the button. How much does he pay altogether?"
+    }
+   ],
+   "note": "Altogether means add. The shoe costs $10 and the button costs $2. Ask: how much does Ben pay altogether (12). Say it as a number sentence: 10 and 2 make 12. The total is on the next slide. Then a second one, read aloud without a picture: a sticker book costs $3 and a toy bird costs $13; how much altogether (16). Children write the second total on their own paper. Fixed question words: How much ... altogether? A child who writes 8 found the gap instead of the total: ask which word is in the question, more or altogether."
+  },
+  {
+   "id": "s-m3a",
+   "part": "mini",
+   "kind": "light",
+   "title": "Altogether: add the prices",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "price_tag",
+        "item": "shoe",
+        "price": "$10",
+        "size": "m"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "price_tag",
+        "item": "button",
+        "price": "$2",
+        "size": "m"
+       }
+      ]
+     ]
+    },
+    {
+     "t": "answer",
+     "text": "$10 + $2 = $12. Ben pays $12 altogether."
+    },
+    {
+     "t": "chip",
+     "text": "A sticker book $3 and a toy bird $13: $3 + $13 = $16."
+    }
+   ],
+   "note": "The answers: $12 for the shoe and the button, $16 for the sticker book and the toy bird. Read them aloud and children tick their own work. Say: the gap uses take away or count up; altogether uses add."
+  },
+  {
+   "id": "s-m4",
+   "part": "mini",
+   "kind": "light",
+   "title": "Change: count up",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "price_tag",
+        "item": "car",
+        "price": "$16",
+        "size": 40
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "money",
+        "items": [
+         {
+          "v": "$10",
+          "n": 2
+         }
+        ],
+        "size": 85
+       }
+      ]
+     ]
+    },
+    {
+     "t": "visual",
+     "type": "number_line",
+     "start": 14,
+     "end": 21,
+     "step": 1,
+     "label_every": 1,
+     "marks": [
+      16,
+      20
+     ],
+     "hide": [],
+     "size": "l"
+    },
+    {
+     "t": "chip",
+     "text": "Mei pays with two ten-dollar notes. Count up from 16 to 20. How much change?"
+    }
+   ],
+   "note": "Change is the money the cashier gives back. The toy car costs $16 and Mei pays with two ten-dollar notes, which is $20 (there is no twenty-dollar note). Count up from the price to what she paid: 16 up to 20 is 4 steps. She gets $4 change. Ask: how much change; how do you know. Children answer aloud, then try one on paper: a cap costs $11 and the cashier gets $20; how much change (9: 11 up to 20 is 9). Say 'cashier' and 'change' in full sentences. The answer for the car is on the next slide. A child who adds 16 and 20 is finding a total: ask what the cashier gives back."
+  },
+  {
+   "id": "s-m4a",
+   "part": "mini",
+   "kind": "light",
+   "title": "Change: count up to what was paid",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "number_line",
+     "start": 14,
+     "end": 21,
+     "step": 1,
+     "label_every": 1,
+     "marks": [
+      16,
+      20
+     ],
+     "jumps": [
+      [
+       16,
+       20,
+       "+4"
+      ]
+     ],
+     "size": "l"
+    },
+    {
+     "t": "chip",
+     "text": "16 up to 20 is 4. The change is $4. For the cap: 11 up to 20 is $9."
+    }
+   ],
+   "note": "The answers: the car's change is $4 (16 up to 20), the cap's change is $9 (11 up to 20). Read them aloud and children tick their own work. Say: to find the change, count up from the price to the money that was paid."
+  },
+  {
+   "id": "s-m5",
+   "part": "mini",
+   "kind": "light",
+   "title": "Which two cost exactly $15?",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "price_tag",
+        "item": "pencil",
+        "price": "$3",
+        "size": 55
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "price_tag",
+        "item": "glue",
+        "price": "$5",
+        "size": 55
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "price_tag",
+        "item": "ruler",
+        "price": "$7",
+        "size": 55
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "price_tag",
+        "item": "cup",
+        "price": "$8",
+        "size": 55
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "price_tag",
+        "item": "book",
+        "price": "$12",
+        "size": 55
+       }
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Ravi buys two things. They cost exactly $15. There are two answers."
+    }
+   ],
+   "note": "Guess and check, with the tags the children hold: pencil $3, glue $5, ruler $7, cup $8 and book $12. Ask: which two of these five tags cost exactly $15? There are two answers. Model a way to be sure: start with the tag that costs the least, $3, and ask what partner it needs (12: the book, yes). Then $5 needs 10 (no tag). Then $7 needs 8 (the cup, yes). Then $8 and $12 have been used. So the two answers are $3 and $12, and $7 and $8. Children try with their own tags or on paper first; wait 15 seconds. Do not say the starting rule until after they have tried; then say: start with the tag that costs the least and look for its partner, so we do not miss one. The answer is on the next slide."
+  },
+  {
+   "id": "s-m5a",
+   "part": "mini",
+   "kind": "light",
+   "title": "Two answers: start with the least",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Tag",
+       "Needs",
+       "A match?"
+      ],
+      [
+       "$3",
+       "$12",
+       "Yes: the book"
+      ],
+      [
+       "$5",
+       "$10",
+       "No tag costs $10"
+      ],
+      [
+       "$7",
+       "$8",
+       "Yes: the cup"
+      ],
+      [
+       "$8",
+       "$7",
+       "Already found"
+      ],
+      [
+       "$12",
+       "$3",
+       "Already found"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "$3 and $12, and $7 and $8."
+    }
+   ],
+   "note": "The answers: $3 and $12 (pencil and book), and $7 and $8 (ruler and cup). The table shows the starting rule: take each tag in turn and ask what it needs to make $15. Read it row by row. This is the same idea as listing every way: start with the tag that costs the least and work along, so none is missed."
+  },
+  {
+   "id": "s-break",
+   "part": "break",
+   "kind": "dark",
+   "title": "Shopper moves",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Stand up. Be a shopper."
+    },
+    {
+     "t": "p",
+     "text": "Big price: reach up high. Small price: crouch down low."
+    },
+    {
+     "t": "p",
+     "text": "Sip some water."
+    }
+   ],
+   "note": "Four minutes. Stand up on camera with a little clear space. Call prices and children show them with their bodies: a small price ($2) means crouch low, a middle price ($10) means hands at the waist, a big price ($50) means reach up high. Call pairs and ask which one is higher: $3 or $8, $12 or $9, $20 or $15. Then call: how much higher? Show with fingers for small gaps. No equipment, no running. A child may stay seated and use arms only. Do not give prizes or compare children."
+  },
+  {
+   "id": "s-ws1",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 1: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 1 to 3. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read questions 1 to 3 aloud. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: look at two price tags, which costs more. Question 2: a hat costs $6 and a toy car costs $15; how much more does the toy car cost. Question 3: a pen costs $4 and a ruler costs $7; how much altogether; write the number sentence."
+  },
+  {
+   "id": "s-ws1ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 1",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 bag; Q2 $9; Q3 $4 + $7 = $11, so $11 altogether."
+  },
+  {
+   "id": "s-ws2",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 2: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 4 to 6. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S4",
+      "S5",
+      "S6"
+     ],
+     "short": true,
+     "vw": 250
+    }
+   ],
+   "note": "Read questions 4 to 6 aloud. Question 4: three price tags, which costs the least. Question 5: a shoe costs $12 and Ravi pays with two ten-dollar notes; how much change. Question 6: a toy fish costs $17 and Mei has $12; how much more money does she need. Children may use a number line or fingers to count up. Wait 10 seconds before helping."
+  },
+  {
+   "id": "s-ws2ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 2",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S4",
+      "S5",
+      "S6"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud so a child watching the recording can tick their own work. Never ask a child to show a wrong answer to the group. Answers: Q4 pen; Q5 $8 change; Q6 $5 more."
+  },
+  {
+   "id": "s-choice",
+   "part": "work",
+   "kind": "light",
+   "title": "Choose your next page",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Page",
+       "What it is"
+      ],
+      [
+       "Think harder (page 3)",
+       "Three prices, change from $50, two or three tags that make an exact amount"
+      ],
+      [
+       "Go further (page 4)",
+       "The Hidden Price, three toys from clues"
+      ],
+      [
+       "Investigation (page 5)",
+       "Mind the gap"
+      ],
+      [
+       "Check",
+       "Finish and check your own work"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Everyone may choose. Not finished? Pages 3 to 5 are for home too."
+    }
+   ],
+   "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 5 minutes."
+  },
+  {
+   "id": "s-talk",
+   "part": "talk",
+   "kind": "light",
+   "title": "Talk and explain",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "TWO CHILDREN SAY",
+     "items": [
+      "A kite costs $17. A top costs $12.",
+      "One child: the top costs $5 more than the kite.",
+      "Another child: the kite costs $5 more than the top."
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Who is right? How could we show it on a number line?"
+    },
+    {
+     "t": "chip",
+     "text": "I think ... because ..."
+    }
+   ],
+   "note": "One minute of talk to the grown-up next to you, or to your screen. Children test it on a number line or with fingers: count up from 12 to 17. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: the second child is right. The kite costs more because 17 is greater than 12, and the gap is 5, so the kite costs $5 more than the top. The first child swapped them: the top costs $5 less than the kite. Repeat each child answer in your own words for the recording. The two children are in another class: no cast name is given the wrong answer."
+  },
+  {
+   "id": "s-sneakans",
+   "part": "talk",
+   "kind": "light",
+   "title": "Back to the sneak-peek",
+   "blocks": [
+    {
+     "t": "answer",
+     "text": "Puzzle 1: the bag. Puzzle 2: $9. $5 less than $14 is $9."
+    }
+   ],
+   "note": "Reveal both puzzles now. Say: many of you wrote a good reason. Do not read out anyone earlier answer. Puzzle 1: $15 is more than $9, so the bag costs more. Puzzle 2: the kite costs $5 less than the $14 book, so count back 5 from 14 to get 9. It was the same idea as the two children, with different numbers."
+  },
+  {
+   "id": "s-exit",
+   "part": "exit",
+   "kind": "light",
+   "title": "Exit ticket",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "On your own. No looking back."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ],
+     "short": false
+    }
+   ],
+   "note": "Children answer on page 5. Read E1, E2 and E3 aloud, and the four options of E2 (the figures on the slide are small). Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
+  },
+  {
+   "id": "s-exitans",
+   "part": "exit",
+   "kind": "light",
+   "title": "Check the exit ticket",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: $8 more; option 3, $15; $7 change."
+  },
+  {
+   "id": "s-look",
+   "part": "look",
+   "kind": "lookback",
+   "title": "Look-back",
+   "blocks": [
+    {
+     "t": "lookback"
+    }
+   ],
+   "note": "Three minutes. Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child.",
+   "mascot": {
+    "size": "s",
+    "say": "Take your time. You can pass."
+   }
+  },
+  {
+   "id": "s-end",
+   "part": "flex",
+   "kind": "dark",
+   "title": "Well done, inquirers!",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Show a grown-up one thing you found out today."
+    },
+    {
+     "t": "card",
+     "head": "NEXT LESSON",
+     "items": [
+      "The School Shop",
+      "Have ready: your price tags and play money in their envelope. Nothing new to cut."
+     ]
+    }
+   ],
+   "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. Remind families that the next lesson uses the price tags and the play money again, and that nothing new needs to be cut. If the whole class is ahead, show the optional slides and use the Spare-time menu from the tutor guide.",
+   "mascot": {
+    "size": "l",
+    "say": "Great thinking today!"
+   }
+  },
+  {
+   "id": "s-opt",
+   "part": "flex",
+   "kind": "light",
+   "title": "Go further: the same price",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "A pen and a rubber cost $11 together. The pen costs $9."
+    },
+    {
+     "t": "p",
+     "text": "How much does the rubber cost?"
+    }
+   ],
+   "note": "Optional, only if you are on time. The pen and the rubber cost $11 together and the pen costs $9, so the rubber costs 11 take away 9, which is $2. Count up from 9 to 11 to check. Take two answers and move on. This links to the Hidden Price in Go further.",
+   "optional": true
+  },
+  {
+   "id": "s-menu",
+   "part": "flex",
+   "kind": "light",
+   "title": "If we have time: pick one",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Activity",
+       "What we do"
+      ],
+      [
+       "Is it always true?",
+       "The item that costs more always has the bigger number. Try two prices with the same tens."
+      ],
+      [
+       "Make a puzzle",
+       "Pick two tags. Ask how much more."
+      ],
+      [
+       "Teach it back",
+       "Show a toy how to find the change by counting up."
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Optional. Everyone may join."
+    }
+   ],
+   "note": "Optional Spare-time menu, used only if the whole class is ahead. Pick one or two activities (3 to 5 minutes each); full tutor lines and answers are in the tutor guide. Never start new content and never name who is ahead. Slow down with how do you know rather than rushing on. These minutes come from the flex buffer and are not part of the 90-minute sum.",
+   "optional": true
+  }
+ ],
+ "script": {
+  "segments": [
+   {
+    "part": "opening",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-title",
+      "s": 20
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Hello, inquirers! Pencil ready, and your price tags on the table. Cameras can be on or off, as you like."
+     },
+     {
+      "k": "SAY",
+      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+     },
+     {
+      "k": "SAY",
+      "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
+     },
+     {
+      "k": "SAY",
+      "text": "Today we look at price tags. Which costs more? And how much more? We also find a total and the change."
+     },
+     {
+      "k": "DO",
+      "text": "Greet the whole group warmly. Do not use children's first names on the recording.",
+      "s": 12
+     },
+     {
+      "k": "NOTE",
+      "text": "Keep this to two minutes. Say the recording statement and the microphone routine in the same words every lesson, for anyone who joined late. The routine and the four inquirer rules were introduced in the first lesson of Term 1: do not re-teach them."
+     },
+     {
+      "k": "NOTE",
+      "text": "Plain statement for families when it comes up: comparing prices, the gap, the total and the change within $20 are Primary 1 work; the gap among three prices, change from $50, choosing prices for an exact amount and finding two prices from their total and gap go beyond Primary 1 on purpose."
+     },
+     {
+      "k": "NOTE",
+      "text": "New here? Say in one minute: our three rule words (notice it, test it, explain why); a guess is fine and you can always pass; after Start here you may choose Think harder, Go further or the Investigation; nobody holds paper to the camera. A child without the price tags writes an item and a price on small pieces of paper."
+     }
+    ]
+   },
+   {
+    "part": "remember",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-rem1",
+      "s": 15
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Today's tool is Guess and check. Pick a number, test it, then try a better one.",
+      "spine": "remember"
+     },
+     {
+      "k": "DO",
+      "text": "Point at the tool on page 1 of the workbook.",
+      "s": 4,
+      "spine": "remember"
+     },
+     {
+      "k": "SAY",
+      "text": "Look at the two numbers. Each bar is a ten and each square is a one. Look at the tens first."
+     },
+     {
+      "k": "ASK",
+      "text": "Which number is greater, thirty-six or sixty-three?",
+      "resp": 20
+     },
+     {
+      "k": "ASK",
+      "text": "How do you know?",
+      "resp": 25
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem2",
+      "s": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Now a gap. We count up from twenty-eight to thirty-five. First up to the next ten, then the rest."
+     },
+     {
+      "k": "WORK",
+      "text": "Count up together from twenty-eight to thirty-five. Point to each tick on the line and say the number.",
+      "s": 35
+     },
+     {
+      "k": "ASK",
+      "text": "How many steps from twenty-eight to thirty?",
+      "resp": 18
+     },
+     {
+      "k": "ASK",
+      "text": "How many steps from thirty to thirty-five? How many steps in all?",
+      "resp": 22
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem2-ans",
+      "s": 8
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem3",
+      "s": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Two strips. Ali has eight stickers and Mei has three. The dashed line shows the gap."
+     },
+     {
+      "k": "ASK",
+      "text": "How many more stickers does Ali have than Mei?",
+      "resp": 20
+     },
+     {
+      "k": "ASK",
+      "text": "Show me with your fingers: count up from three to eight. How many steps?",
+      "resp": 20
+     },
+     {
+      "k": "SAY",
+      "text": "The gap is how many more. Today a price is a strip too: the more it costs, the longer the strip."
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child is unsure which number is greater, count the bars first, then the squares. For the gap, count the ticks with a finger. For the strips, count the squares of the gap or count up from 3 to 8 on fingers."
+     },
+     {
+      "k": "NOTE",
+      "text": "Answers: 63, because 6 tens is more than 3 tens; 2 steps, 5 steps, 7 in all; Ali, 5 more. Children answer with a whisper, fingers or hands. Nobody writes. Joining cold: all you need is counting to 20 and the pictures."
+     }
+    ]
+   },
+   {
+    "part": "sneak",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-sneak",
+      "s": 12
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked."
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle one. A bag costs fifteen dollars. A hat costs nine dollars. Which costs more? Write bag or hat."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write bag or hat on their own paper.",
+      "s": 45
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle two. A kite costs five dollars less than a book. The book costs fourteen dollars. How much does the kite cost? I know because blank."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write or draw their answer.",
+      "s": 80
+     },
+     {
+      "k": "SAY",
+      "text": "Keep your paper. Nobody shows it. We will check our own thinking later, at Talk time."
+     },
+     {
+      "k": "NOTE",
+      "text": "Puzzle 1 answer: the bag. Puzzle 2 answer: $9 (not $19: costs less means take away). Look for good ideas to praise later (a child who counted back 5 from 14, or drew two strips). Do not write scores or keep a list."
+     }
+    ]
+   },
+   {
+    "part": "explore",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1",
+      "s": 15
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "The price tags are the teachers today. Take the pencil tag, the glue tag and the ruler tag. Put them in a line with the tag that costs the least first."
+     },
+     {
+      "k": "WORK",
+      "text": "Children line up the three tags, least first. Tutor scans the cameras.",
+      "s": 75
+     },
+     {
+      "k": "ASK",
+      "text": "Which tag costs the most? Which tag costs the least? How do you know?",
+      "resp": 40
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "The pencil costs the least and the ruler costs the most. The bigger the number of dollars, the more it costs."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2",
+      "s": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Round two. Take the cup tag and the jar tag. Which costs more?"
+     },
+     {
+      "k": "ASK",
+      "text": "Which costs more, the cup or the jar?",
+      "resp": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Now count up from the cup price to the jar price. Use your fingers. How many more dollars is the jar?"
+     },
+     {
+      "k": "WORK",
+      "text": "Children count up on fingers from the cup price to the jar price.",
+      "s": 80
+     },
+     {
+      "k": "ASK",
+      "text": "How many more dollars does the jar cost? How did you count?",
+      "resp": 45
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Up from eight to ten is two. Up from ten to fourteen is four. Two and four make six. The jar costs six dollars more than the cup."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore3",
+      "s": 8
+     },
+     {
+      "k": "ASK",
+      "text": "What did you notice? How did you find how much more?",
+      "resp": 60
+     },
+     {
+      "k": "SAY",
+      "text": "The one that costs more has the bigger number. To find how much more, count up from the smaller price. The gap is how much more."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who counts 8 as the first finger counts one too many: say count the steps, not the numbers; start at 8 and say 9 for the first step. A child with no tags writes the prices on paper. A child who says 22 added the prices: ask whether the question is altogether or how much more."
+     },
+     {
+      "k": "NOTE",
+      "text": "Main room only; you cannot see small tags, so ask children to say the order and show a thumb. Answers: pencil $3, glue $5, ruler $7; the jar costs $6 more than the cup. Accept any child who counts up in ones or by going to ten first. Do not say the rule before the children do."
+     }
+    ]
+   },
+   {
+    "part": "mini",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-m1",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Worked example. The toy car costs eleven dollars. The sock costs four dollars. The strips show the gap."
+     },
+     {
+      "k": "ASK",
+      "text": "How much more does the car cost than the sock? Count up from four.",
+      "resp": 35
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m1a",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Four up to ten is six. Ten up to eleven is one. Six and one make seven. The car costs seven dollars more than the sock."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m2",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Your turn. The bike costs thirteen dollars. The spoon costs five dollars. How much more does the bike cost than the spoon? Write the number on your paper."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write how much more. Wait 10 seconds before helping.",
+      "s": 55
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m2a",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "The bike costs eight dollars more than the spoon. Tick your own work with a tick."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Altogether means add. Ben buys the shoe and the button."
+     },
+     {
+      "k": "ASK",
+      "text": "How much does Ben pay altogether?",
+      "resp": 25
+     },
+     {
+      "k": "READ",
+      "text": "Your turn. A sticker book costs three dollars. A toy bird costs thirteen dollars. How much altogether? Write the total on your paper."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write the total. Wait 10 seconds before helping.",
+      "s": 45
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3a",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "The shoe and the button: twelve dollars. The sticker book and the toy bird: sixteen dollars. Tick your own work."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Change is the money the cashier gives back. The toy car costs sixteen dollars. Mei gives the cashier two ten-dollar notes, which is twenty dollars. Count up from the price to what she paid."
+     },
+     {
+      "k": "ASK",
+      "text": "How much change does Mei get?",
+      "resp": 35
+     },
+     {
+      "k": "READ",
+      "text": "Your turn. A cap costs eleven dollars. The cashier gets twenty dollars. How much change? Write the number."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write the change. Wait 10 seconds before helping.",
+      "s": 45
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4a",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "The car: four dollars change. The cap: nine dollars change. Tick your own work."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m5",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Ravi buys two things. They cost exactly fifteen dollars. Look at your five tags: pencil, glue, ruler, cup and book. Which two? There are two answers."
+     },
+     {
+      "k": "WORK",
+      "text": "Children try on their paper. Wait 15 seconds before helping.",
+      "s": 75
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m5a",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Start with the tag that costs the least and ask what partner it needs. Three needs twelve: the book. Five needs ten: no tag. Seven needs eight: the cup. So the two answers are three and twelve, and seven and eight."
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child adds a tag to itself, say two different things. If a child finds one answer and stops, ask what the next tag needs. If a child writes 18 for how much more, ask whether the question says altogether."
+     },
+     {
+      "k": "NOTE",
+      "text": "Key words to use every time: costs more, costs less, how much more, altogether, change, cashier, exactly. Fixed question forms: How much more does ... cost than ...? How much ... altogether? How much change? Do not teach take away as the only method: counting up is the method of the lesson. Do not use decimals: whole dollars only."
+     }
+    ]
+   },
+   {
+    "part": "break",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-break",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Stand up and get a sip of water. We are shoppers. A small price: crouch down low. A big price: reach up high. Two dollars: low."
+     },
+     {
+      "k": "WORK",
+      "text": "Call prices: $2, $10, $50, $20, $5. Then pairs: which is higher, $3 or $8; $12 or $9; $20 or $15. Children show with their bodies; seated children use arms only.",
+      "s": 160
+     }
+    ]
+   },
+   {
+    "part": "work",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "Page 1, Start here. Question 1: look at the two price tags. Which costs more? Circle one. Question 2: a hat costs six dollars. A toy car costs fifteen dollars. How much more does the toy car cost than the hat? Question 3: Siti buys a pen for four dollars and a ruler for seven dollars. How much does she pay altogether? Write the number sentence."
+     },
+     {
+      "k": "WORK",
+      "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
+      "s": 490
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1ans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Question 1: the bag. Question 2: nine dollars. Question 3: four plus seven is eleven dollars. Tick your own page with a tick."
+     },
+     {
+      "k": "SAY",
+      "text": "After question 3 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Page 2. Question 4: look at the three tags. Which costs the least? Circle one. Question 5: a shoe costs twelve dollars. Ravi pays with two ten-dollar notes. How much change does he get? Question 6: a toy fish costs seventeen dollars. Mei has twelve dollars. How much more money does she need?"
+     },
+     {
+      "k": "WORK",
+      "text": "Page 2, questions 4 to 6.",
+      "s": 520
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2ans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Question 4: the pen. Question 5: eight dollars change. Question 6: five dollars more. Tick your own page."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-choice",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time. Anything not finished is for home too."
+     },
+     {
+      "k": "MOVE",
+      "text": "Stand and reach up for 30 seconds, then sit down and choose.",
+      "s": 30
+     },
+     {
+      "k": "WORK",
+      "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
+      "s": 240
+     },
+     {
+      "k": "STUCK",
+      "text": "Q1: look at the dollars, the bigger number costs more. Q2: count up from 6 to 15: first to 10, then the rest. Q3: add the two prices; use tens: 4 and 6 make 10. Q4: put the three prices in order. Q5: count up from 12 to 20. Q6: count up from 12 to 17."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who is still stuck ticks I am still stuck on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp (never a personal phone). You then help in the open session in the next lesson. Never a private message to a child."
+     },
+     {
+      "k": "NOTE",
+      "text": "Think harder has three prices, a total and a difference, change from $50, and choosing tags for an exact amount. Go further has The Hidden Price and three toys from clues (beyond Primary 1 on purpose). Do not announce who is on which page. Start here takes a middle child about 17 minutes, so the choice time is short: for most children pages 3 to 5 are for home. Say so plainly, do not skip the answer slides, and take any extra minutes from the flex time."
+     }
+    ]
+   },
+   {
+    "part": "talk",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-talk",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "A kite costs seventeen dollars. A top costs twelve dollars. One child says: the top costs five dollars more than the kite. Another child says: the kite costs five dollars more than the top. Who is right? How could we show it on a number line?"
+     },
+     {
+      "k": "WORK",
+      "text": "Test it: count up from 12 to 17 with your fingers or on a line.",
+      "s": 60
+     },
+     {
+      "k": "WORK",
+      "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
+      "s": 40
+     },
+     {
+      "k": "ASK",
+      "text": "Who would like to share? Volunteers first. A pass is always fine.",
+      "resp": 100
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-sneakans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Remember the sneak-peek? Puzzle one: the bag costs more. Puzzle two: five dollars less than fourteen is nine dollars."
+     },
+     {
+      "k": "ASK",
+      "text": "Did anyone change their mind while we worked? You can just nod.",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Where did you use Guess and check today?",
+      "resp": 10,
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Listen for the tool being named, not the answer. Volunteers first, a pass is always fine.",
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Model answer: the second child is right. 17 is greater than 12, so the kite costs more; counting up from 12 to 17 is 5 steps, so the kite costs $5 more. The first child swapped them. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
+     }
+    ]
+   },
+   {
+    "part": "exit",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-exit",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
+     },
+     {
+      "k": "READ",
+      "text": "E1. A hat costs seventeen dollars. A scarf costs nine dollars. How much more does the hat cost than the scarf? E2. Ali buys a book for nine dollars and a pen for six dollars. How much does he pay altogether? Choose the correct answer. Option 1: three dollars. Option 2: fourteen dollars. Option 3: fifteen dollars. Option 4: sixteen dollars. Write its number in the bracket. E3. A toy costs thirteen dollars. Ben gives the cashier twenty dollars. How much change does he get?",
+      "s": 60
+     },
+     {
+      "k": "WORK",
+      "text": "Children answer E1 to E3 on their own.",
+      "s": 170
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-exitans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "E1: eight dollars more. E2: option 3, fifteen dollars. E3: seven dollars change."
+     },
+     {
+      "k": "SAY",
+      "text": "Tick your own ticket with a tick. Well done."
+     },
+     {
+      "k": "NOTE",
+      "text": "Nothing is collected or marked live. Children tick their own ticket. If many children miss one question, spend two minutes on it at the start of the next lesson, in the open session, no names. Do not read out any child result."
+     }
+    ]
+   },
+   {
+    "part": "look",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-look",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+      "spine": "look"
+     },
+     {
+      "k": "WORK",
+      "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+      "s": 110,
+      "spine": "look"
+     }
+    ]
+   },
+   {
+    "part": "flex",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-end",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Well done, inquirers. Next lesson is The School Shop. Please keep your price tags and your play money in their envelope. Nothing new to cut. Goodbye, and thank you to the grown-ups."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-opt",
+      "s": 8,
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Optional, only if you are on time: a pen and a rubber cost eleven dollars together. The pen costs nine dollars. How much does the rubber cost?",
+      "optional": true
+     },
+     {
+      "k": "WORK",
+      "text": "Short think time, then take two answers.",
+      "s": 90,
+      "optional": true
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-menu",
+      "s": 8,
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
+      "optional": true
+     },
+     {
+      "k": "NOTE",
+      "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: the rubber costs $2 (11 take away 9; count up from 9 to 11). If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+     }
+    ]
+   }
+  ]
+ },
+ "tiers": {
+  "start": [
+   {
+    "id": "S1",
+    "page": 1,
+    "tier": "start",
+    "text": "Look at the two price tags.",
+    "parts": [
+     {
+      "l": "",
+      "text": "Which costs more? Circle one.",
+      "ans": "bag",
+      "val": "bag",
+      "choices": [
+       "book",
+       "bag"
+      ]
+     }
+    ],
+    "answer": "bag ($18 is more than $12)",
+    "val": [
+     "bag"
+    ],
+    "hint": "Look at the two prices. Which number is bigger?",
+    "solution": "The book costs $12 and the bag costs $18. 18 is greater than 12, so the bag costs more.",
+    "mistakes": [
+     "Circling the first tag because it is on the left.",
+     "Choosing the item with the bigger picture."
+    ],
+    "mins": 2,
+    "visuals": [
+     {
+      "type": "price_tag",
+      "item": "book",
+      "price": "$12",
+      "size": 75
+     },
+     {
+      "type": "price_tag",
+      "item": "bag",
+      "price": "$18",
+      "size": 75
+     }
+    ]
+   },
+   {
+    "id": "S2",
+    "page": 1,
+    "tier": "start",
+    "text": "A hat costs $6. A toy car costs $15. How much more does the toy car cost than the hat?",
+    "parts": [
+     {
+      "l": "",
+      "text": "The toy car costs $____ more.",
+      "ans": "$9",
+      "val": 9
+     }
+    ],
+    "answer": "$9",
+    "val": [
+     9
+    ],
+    "hint": "Count up from 6 to 15. Go to 10 first.",
+    "solution": "Count up from 6 to 10: 4. Then from 10 to 15: 5. 4 and 5 make 9. The toy car costs $9 more than the hat.",
+    "mistakes": [
+     "Adding 6 and 15 to get 21.",
+     "Writing 15 or 6, a price, instead of the gap."
+    ],
+    "mins": 3,
+    "visual": {
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "Hat",
+       "len": 6,
+       "text": "6"
+      },
+      {
+       "name": "Car",
+       "len": 15,
+       "text": "15"
+      }
+     ],
+     "gap": {
+      "between": [
+       0,
+       1
+      ],
+      "text": "?"
+     },
+     "size": "m"
+    }
+   },
+   {
+    "id": "S3",
+    "page": 1,
+    "tier": "start",
+    "text": "Siti buys a pen for $4 and a ruler for $7. How much does she pay altogether?",
+    "parts": [
+     {
+      "l": "",
+      "text": "Write the number sentence. $[] + $[] = $[]",
+      "ans": "$4 + $7 = $11",
+      "val": [
+       4,
+       7,
+       11
+      ]
+     }
+    ],
+    "answer": "$4 + $7 = $11",
+    "val": [
+     4,
+     7,
+     11
+    ],
+    "hint": "Altogether means add the two prices. 4 and 6 make 10.",
+    "solution": "4 and 7: 4 and 6 make 10, and 1 more makes 11. Siti pays $11 altogether.",
+    "mistakes": [
+     "Finding the gap, 7 take away 4, which is 3.",
+     "Writing $47 by joining the digits."
+    ],
+    "mins": 3,
+    "visuals": [
+     {
+      "type": "price_tag",
+      "item": "pen",
+      "price": "$4",
+      "size": 70
+     },
+     {
+      "type": "price_tag",
+      "item": "ruler",
+      "price": "$7",
+      "size": 70
+     }
+    ]
+   },
+   {
+    "id": "S4",
+    "page": 2,
+    "tier": "start",
+    "text": "Look at the three price tags.",
+    "parts": [
+     {
+      "l": "",
+      "text": "Which costs the least? Circle one.",
+      "ans": "pen",
+      "val": "pen",
+      "choices": [
+       "jar",
+       "pen",
+       "cup"
+      ]
+     }
+    ],
+    "answer": "pen ($4 is the smallest)",
+    "val": [
+     "pen"
+    ],
+    "hint": "Put the three prices in order, least first.",
+    "solution": "The jar costs $14, the pen costs $4 and the cup costs $8. In order, least first, they are 4, 8, 14. The pen costs the least.",
+    "mistakes": [
+     "Choosing the one that costs the most.",
+     "Choosing the first tag in the row."
+    ],
+    "mins": 2.5,
+    "visuals": [
+     {
+      "type": "price_tag",
+      "item": "jar",
+      "price": "$14",
+      "size": 100
+     },
+     {
+      "type": "price_tag",
+      "item": "pen",
+      "price": "$4",
+      "size": 100
+     },
+     {
+      "type": "price_tag",
+      "item": "cup",
+      "price": "$8",
+      "size": 100
+     }
+    ]
+   },
+   {
+    "id": "S5",
+    "page": 2,
+    "tier": "start",
+    "text": "A shoe costs $12. Ravi pays with two ten-dollar notes. How much change does he get?",
+    "parts": [
+     {
+      "l": "",
+      "text": "He gets $____ change.",
+      "ans": "$8",
+      "val": 8
+     }
+    ],
+    "answer": "$8",
+    "val": [
+     8
+    ],
+    "hint": "Two ten-dollar notes are $20. Count up from 12 to 20.",
+    "solution": "Two ten-dollar notes make $20. Count up from 12 to 15: 3. Then from 15 to 20: 5. 3 and 5 make 8. Ravi gets $8 change.",
+    "mistakes": [
+     "Adding 12 and 20.",
+     "Counting up only to 15 and writing 3."
+    ],
+    "mins": 3,
+    "visuals": [
+     {
+      "type": "price_tag",
+      "item": "shoe",
+      "price": "$12",
+      "size": 55
+     },
+     {
+      "type": "money",
+      "items": [
+       {
+        "v": "$10",
+        "n": 2
+       }
+      ],
+      "size": 80
+     }
+    ]
+   },
+   {
+    "id": "S6",
+    "page": 2,
+    "tier": "start",
+    "text": "Mei wants a toy fish that costs $17. She has $12. How much more money does Mei need?",
+    "parts": [
+     {
+      "l": "",
+      "text": "She needs $____ more.",
+      "ans": "$5",
+      "val": 5
+     }
+    ],
+    "answer": "$5",
+    "val": [
+     5
+    ],
+    "hint": "Count up from 12 to 17.",
+    "solution": "Count up from 12 to 17. That is 5 steps. Mei needs $5 more.",
+    "mistakes": [
+     "Adding 12 and 17.",
+     "Writing 17, the price of the toy fish."
+    ],
+    "mins": 3,
+    "visual": {
+     "type": "price_tag",
+     "item": "fish",
+     "price": "$17",
+     "size": 55
+    }
+   }
+  ],
+  "think": [
+   {
+    "id": "T1",
+    "page": 3,
+    "tier": "think",
+    "text": "Look at the three price tags.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Which costs the most? Circle one.",
+      "ans": "car",
+      "val": "car",
+      "choices": [
+       "car",
+       "shoe",
+       "fish"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "It costs $____ more than the one that costs the least.",
+      "ans": "$28",
+      "val": 28
+     }
+    ],
+    "answer": "car; $28",
+    "val": [
+     "car",
+     28
+    ],
+    "hint": "Find the biggest price and the smallest price. Count up from the smallest.",
+    "solution": "The car costs $43, the shoe $26 and the fish $15. The car costs the most and the fish costs the least. Count up from 15 to 43: 15 to 20 is 5, 20 to 40 is 20, 40 to 43 is 3. 5 and 20 and 3 make 28.",
+    "mistakes": [
+     "Finding the gap between the car and the shoe, which is 17.",
+     "Adding the three prices."
+    ],
+    "mins": 4.5,
+    "visuals": [
+     {
+      "type": "price_tag",
+      "item": "car",
+      "price": "$43",
+      "size": 62
+     },
+     {
+      "type": "price_tag",
+      "item": "shoe",
+      "price": "$26",
+      "size": 62
+     },
+     {
+      "type": "price_tag",
+      "item": "fish",
+      "price": "$15",
+      "size": 62
+     }
+    ]
+   },
+   {
+    "id": "T2",
+    "page": 3,
+    "tier": "think",
+    "text": "A mug and a lamp cost $16 together. The lamp costs $6 more than the mug.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "The mug costs $____.",
+      "ans": "$5",
+      "val": 5
+     },
+     {
+      "l": "b",
+      "text": "The lamp costs $____.",
+      "ans": "$11",
+      "val": 11
+     }
+    ],
+    "answer": "$5; $11",
+    "val": [
+     5,
+     11
+    ],
+    "hint": "Try a price for the mug. Add 6 for the lamp. Do they make 16?",
+    "solution": "Try $5 for the mug: the lamp is 5 and 6 more, which is 11. 5 and 11 make 16. So the mug costs $5 and the lamp costs $11.",
+    "mistakes": [
+     "Giving 16 and 6 as the two prices.",
+     "Halving 16 to get 8 and 8 and stopping."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "Mug",
+       "len": 5,
+       "text": "?"
+      },
+      {
+       "name": "Lamp",
+       "len": 11,
+       "text": "?"
+      }
+     ],
+     "gap": {
+      "between": [
+       0,
+       1
+      ],
+      "text": "6"
+     },
+     "size": "m"
+    }
+   },
+   {
+    "id": "T3",
+    "page": 3,
+    "tier": "think",
+    "text": "A robot costs $27. A drum costs $18.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "The robot and the drum cost $____ together.",
+      "ans": "$45",
+      "val": 45
+     },
+     {
+      "l": "b",
+      "text": "Kumar pays for the robot with a fifty-dollar note. His change is $____.",
+      "ans": "$23",
+      "val": 23
+     },
+     {
+      "l": "c",
+      "text": "Ali has $40. Is that enough for both? Circle Yes or No.",
+      "ans": "No",
+      "val": "No",
+      "choices": [
+       "Yes",
+       "No"
+      ]
+     }
+    ],
+    "answer": "$45; $23; No",
+    "val": [
+     45,
+     23,
+     "No"
+    ],
+    "hint": "For part b, count up from 27 to 30, then on to 50.",
+    "solution": "27 and 18 make 45. For the change, count up from 27 to 30: 3. Then from 30 to 50: 20. 3 and 20 make 23. 45 is more than 40, so $40 is not enough.",
+    "mistakes": [
+     "Subtracting 50 take away 27 and getting 33.",
+     "Saying Yes because 40 is a big number."
+    ],
+    "mins": 5.5
+   },
+   {
+    "id": "T4",
+    "page": 3,
+    "tier": "think",
+    "text": "Look at the five price tags. Ben spends all his money each time and uses each tag once. There are two ways each time.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Ben has $11 and buys two things. Way 1: $____ and $____. Way 2: $____ and $____.",
+      "ans": "$3 and $8; $4 and $7",
+      "val": [
+       3,
+       8,
+       4,
+       7
+      ]
+     },
+     {
+      "l": "b",
+      "text": "Ben has $14 and buys three things. Way 1: $____, $____ and $____. Way 2: $____, $____ and $____.",
+      "ans": "$2, $4 and $8; $3, $4 and $7",
+      "val": [
+       2,
+       4,
+       8,
+       3,
+       4,
+       7
+      ]
+     }
+    ],
+    "answer": "$3 and $8; $4 and $7. $2, $4 and $8; $3, $4 and $7",
+    "val": [
+     3,
+     8,
+     4,
+     7,
+     2,
+     4,
+     8,
+     3,
+     4,
+     7
+    ],
+    "hint": "Start with the tag that costs the least. What partner does it need?",
+    "solution": "For $11, start with the tag that costs the least: $2 needs 9 (no tag), $3 needs 8 (the cup, yes), $4 needs 7 (the ruler, yes). For $14 with three different tags, start with $2: $2 and $3 need 9 (no tag); $2 and $4 need 8 (the cup, yes); $2 and $7 need 5 (no tag). Then start with $3 (without $2): $3 and $4 need 7 (the ruler, yes); $3 and $7 need 4 (the pen, the same way again). So the two ways are $2, $4 and $8, and $3, $4 and $7. Any order is fine.",
+    "mistakes": [
+     "Stopping after the first way.",
+     "Using the same tag twice."
+    ],
+    "mins": 6,
+    "visuals": [
+     {
+      "type": "price_tag",
+      "item": "rubber",
+      "price": "$2",
+      "size": 56
+     },
+     {
+      "type": "price_tag",
+      "item": "pencil",
+      "price": "$3",
+      "size": 56
+     },
+     {
+      "type": "price_tag",
+      "item": "pen",
+      "price": "$4",
+      "size": 56
+     },
+     {
+      "type": "price_tag",
+      "item": "ruler",
+      "price": "$7",
+      "size": 56
+     },
+     {
+      "type": "price_tag",
+      "item": "cup",
+      "price": "$8",
+      "size": 56
+     }
+    ]
+   }
+  ],
+  "go": [
+   {
+    "id": "G1",
+    "page": 4,
+    "tier": "go",
+    "text": "The Hidden Price. A cake costs $12 more than a pie. A cake and a pie cost $52 together.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "The pie costs $____.",
+      "ans": "$20",
+      "val": 20
+     },
+     {
+      "l": "b",
+      "text": "The cake costs $____.",
+      "ans": "$32",
+      "val": 32
+     }
+    ],
+    "answer": "$20; $32",
+    "val": [
+     20,
+     32
+    ],
+    "hint": "Take the $12 away first. Share what is left.",
+    "solution": "Take the extra $12 away: 52 take away 12 is 40. Share 40 into two equal parts: 20 and 20. The pie costs $20. The cake costs $12 more: $32. Check: 20 and 32 make 52.",
+    "mistakes": [
+     "Writing 52 and 12 as the prices.",
+     "Halving 52 to get 26 and 26."
+    ],
+    "mins": 6,
+    "visual": {
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "Pie",
+       "len": 20,
+       "text": "?"
+      },
+      {
+       "name": "Cake",
+       "len": 32,
+       "text": "?"
+      }
+     ],
+     "gap": {
+      "between": [
+       0,
+       1
+      ],
+      "text": "12"
+     },
+     "size": "m"
+    }
+   },
+   {
+    "id": "G2",
+    "page": 4,
+    "tier": "go",
+    "text": "A scooter costs $7 more than a puzzle. A doll costs $5 less than the scooter. The puzzle, the scooter and the doll cost $33 together.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "The puzzle costs $____.",
+      "ans": "$8",
+      "val": 8
+     },
+     {
+      "l": "b",
+      "text": "The scooter costs $____.",
+      "ans": "$15",
+      "val": 15
+     },
+     {
+      "l": "c",
+      "text": "The doll costs $____.",
+      "ans": "$10",
+      "val": 10
+     }
+    ],
+    "answer": "$8; $15; $10",
+    "val": [
+     8,
+     15,
+     10
+    ],
+    "hint": "Try a price for the puzzle. Find the scooter and the doll. Do the three make 33?",
+    "solution": "Try $5 for the puzzle: the scooter is 12, the doll is 7 and the three make 24. Too small. Try $8: the scooter is 15, the doll is 10 and 8 and 15 and 10 make 33.",
+    "mistakes": [
+     "Giving 33 divided into three equal parts, 11 each.",
+     "Making the doll cost $5 more instead of $5 less."
+    ],
+    "mins": 6
+   },
+   {
+    "id": "G3",
+    "page": 4,
+    "tier": "go",
+    "text": "Mei has $100. She buys a shoe for $27 and a toy car for $16.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "The shoe and the toy car cost $____ together.",
+      "ans": "$43",
+      "val": 43
+     },
+     {
+      "l": "b",
+      "text": "Mei gets $____ change.",
+      "ans": "$57",
+      "val": 57
+     },
+     {
+      "l": "c",
+      "text": "The shoe costs $____ more than the toy car.",
+      "ans": "$11",
+      "val": 11
+     }
+    ],
+    "answer": "$43; $57; $11",
+    "val": [
+     43,
+     57,
+     11
+    ],
+    "hint": "Add the two prices first. Then count up to 100.",
+    "solution": "27 and 16 make 43. Count up from 43 to 50: 7. Then from 50 to 100: 50. 7 and 50 make 57. The shoe costs 27 take away 16, which is 11, more than the toy car.",
+    "mistakes": [
+     "Subtracting only the shoe: 100 take away 27.",
+     "Writing 43 as the change."
+    ],
+    "mins": 6,
+    "visuals": [
+     {
+      "type": "price_tag",
+      "item": "shoe",
+      "price": "$27",
+      "size": 60
+     },
+     {
+      "type": "price_tag",
+      "item": "car",
+      "price": "$16",
+      "size": 60
+     }
+    ]
+   }
+  ],
+  "investigation": {
+   "id": "I1",
+   "page": 5,
+   "tier": "investigation",
+   "title": "Mind the gap",
+   "first": "Pick the $3 tag. Which tag costs exactly $4 more?",
+   "text": "The tags say $2, $3, $5, $7, $8, $11 and $12. Write $11 on a blank tag. Pick two so that one costs exactly $4 more than the other. How many pairs can you find? Write each pair.",
+   "lines": 4,
+   "answer": "First: $7 (3 and 4 more is 7). There are 3 pairs: $3 and $7, $7 and $11, $8 and $12. Check each: 7 take away 3 is 4; 11 take away 7 is 4; 12 take away 8 is 4. No other pair has a gap of exactly 4.",
+   "val": [
+    "3"
+   ],
+   "look_for": "A child who picks a tag and counts up 4 to see if the new price is on a tag; a child who finds all 3 pairs by working through the tags in order; a child who notices that $7 is in two pairs. Credit any clear method. Do not mark a child down for stopping at one or two pairs.",
+   "mistakes": [
+    "Finding a pair with a gap of 3 or 5.",
+    "Counting the same pair twice in the other order."
+   ],
+   "mins": 8
+  }
+ },
+ "talk": {
+  "question": "A kite costs $17. A top costs $12. One child says: the top costs $5 more than the kite. Another child says: the kite costs $5 more than the top. Who is right? How could we show it on a number line?",
+  "starter": "I think ... because ...",
+  "answer": "The second child is right. 17 is greater than 12, so the kite costs more. Count up from 12 to 17: that is 5 steps, so the kite costs $5 more than the top. The top costs $5 less than the kite.",
+  "look_for": "A child who counts up on the line, or says the one that costs more has the bigger number, or says the gap is the same from either end. Not just a name."
+ },
+ "exit": [
+  {
+   "id": "E1",
+   "text": "A hat costs $17. A scarf costs $9. How much more does the hat cost than the scarf?",
+   "parts": [
+    {
+     "l": "",
+     "text": "The hat costs $____ more.",
+     "ans": "$8",
+     "val": 8
+    }
+   ],
+   "answer": "$8",
+   "val": [
+    8
+   ],
+   "solution": "Count up from 9 to 17: 9 up to 10 is 1, and 10 up to 17 is 7. 1 and 7 make 8.",
+   "mistakes": [
+    "Adding 17 and 9 to get 26.",
+    "Writing 17, the price of the hat."
+   ]
+  },
+  {
+   "id": "E2",
+   "text": "Ali buys a book for $9 and a pen for $6. How much does he pay altogether? Choose the correct answer. Write its number in the bracket.",
+   "parts": [],
+   "answer": "(3) $15",
+   "val": [
+    3
+   ],
+   "solution": "Altogether means add. 9 and 6 make 15.",
+   "mistakes": [
+    "Choosing (1) $3, which is the gap.",
+    "Choosing (2) $14 or (4) $16 after a counting slip."
+   ],
+   "mcq": {
+    "options": [
+     "$3",
+     "$14",
+     "$15",
+     "$16"
+    ],
+    "bracket": true
+   }
+  },
+  {
+   "id": "E3",
+   "text": "A toy costs $13. Ben gives the cashier $20. How much change does he get?",
+   "parts": [
+    {
+     "l": "",
+     "text": "He gets $____ change.",
+     "ans": "$7",
+     "val": 7
+    }
+   ],
+   "answer": "$7",
+   "val": [
+    7
+   ],
+   "solution": "Count up from the price to the money paid: 13 up to 20 is 7. Ben gets $7 change.",
+   "mistakes": [
+    "Adding 13 and 20.",
+    "Writing 13, the price of the toy."
+   ]
+  }
+ ],
+ "look_back": {
+  "hardest": [
+   "how much more",
+   "the change",
+   "which two make the amount",
+   "something else"
+  ],
+  "helped": [
+   "the number line",
+   "the strips",
+   "checking my answer",
+   "I was not stuck"
+  ],
+  "next": [
+   "using a number line",
+   "drawing two strips",
+   "checking my answer",
+   "asking a question"
+  ]
+ },
+ "home_practice": [
+  {
+   "id": "H1",
+   "tier": "start",
+   "text": "Siti has $12. A toy costs $18. How much more money does Siti need? She needs $____ more.",
+   "answer": "6",
+   "val": 6,
+   "solution": "Count up from 12 to 18. That is 6 steps, so Siti needs $6 more.",
+   "visual": {
+    "type": "price_tag",
+    "item": "ball",
+    "price": "$18",
+    "hw": 34
+   }
+  },
+  {
+   "id": "H2",
+   "tier": "start",
+   "text": "Lily buys a pen for $4 and a book for $10. How much does she pay altogether? She pays $____ altogether.",
+   "answer": "14",
+   "val": 14,
+   "solution": "Altogether means add. 4 and 10 make 14.",
+   "visuals": [
+    {
+     "type": "price_tag",
+     "item": "pen",
+     "price": "$4",
+     "hw": 31
+    },
+    {
+     "type": "price_tag",
+     "item": "book_m",
+     "price": "$10",
+     "hw": 31
+    }
+   ]
+  },
+  {
+   "id": "H3",
+   "tier": "start",
+   "text": "Mei has $15. She buys a bag for $8 and a cap for $7. Does Mei have enough money? Circle Yes or No. I know because ___.",
+   "answer": "Yes. 8 and 7 make 15, and Mei has $15.",
+   "val": "Yes",
+   "solution": "Add the prices: 8 and 7 make 15. Mei has exactly $15, so she has enough."
+  },
+  {
+   "id": "H4",
+   "tier": "think",
+   "text": "Mei pays with two ten-dollar notes and gets $6 change. How much does her book cost? The book costs $____.",
+   "answer": "$14",
+   "val": 14,
+   "solution": "The book and the change make 20. 20 take away 6 is 14. The book costs $14."
+  },
+  {
+   "id": "H5",
+   "tier": "start",
+   "rewind_of": "Term 1 Lesson 5",
+   "text": "Add. 37 + 6 = ___.",
+   "answer": "43",
+   "val": 43,
+   "solution": "37 needs 3 more to make 40. 6 is 3 and 3. 40 + 3 = 43."
+  }
+ ],
+ "spare_time": {
+  "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
+  "rules": [
+   "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
+   "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+   "Never teach anything the next lesson needs. If the class is ahead, slow down: ask 'How do you know?' and let children explain, rather than rushing on."
+  ],
+  "menu": [
+   {
+    "id": "M1",
+    "title": "Is it always true?",
+    "minutes": 4,
+    "tutor": "Mei says: the item with the bigger number of dollars always costs more. Is that always true? Test it with $9 and $12, then $20 and $15, then $50 and $5.",
+    "rec": "Recording: pause. Mei says the bigger number always costs more. Test it with three pairs of prices.",
+    "answer": "Yes, when the prices are in dollars: 12 is more than 9, 20 is more than 15 and 50 is more than 5. The bigger the number, the more it costs. The gap tells how much more."
+   },
+   {
+    "id": "M2",
+    "title": "Make a puzzle for your grown-up",
+    "minutes": 4,
+    "tutor": "Pick two price tags. Write one question: how much more does one cost than the other? Give it to your grown-up, then check together by counting up.",
+    "rec": "Recording: pause. Pick two price tags and ask your grown-up how much more one costs than the other.",
+    "answer": "No single answer. Check by counting up from the smaller price to the bigger price: the number of steps is how much more."
+   },
+   {
+    "id": "M3",
+    "title": "Teach it back",
+    "minutes": 3,
+    "tutor": "Pretend your grown-up or a toy has never found change. Teach them how to find the change from $20 for a toy that costs $13 by counting up.",
+    "rec": "Recording: pause. Teach a grown-up how to find the change from $20 for a $13 toy by counting up.",
+    "answer": "Count up from 13 to 15 (2), then from 15 to 20 (5). 2 and 5 make 7, so the change is $7. Counting up from the price to the money paid gives the change."
+   }
+  ]
+ },
+ "parent": {
+  "summary": "We compared price tags. Your child found which costs more, counted up to find how much more, added two prices and found the change. Comparing prices, the total and the change within $20 are Primary 1 work. Some Think harder and Go further questions go past the school Primary 1 syllabus on purpose; Start here stays within it.",
+  "words": [
+   "costs more: has the bigger price",
+   "how much more: the gap between two prices; count up from the smaller price",
+   "altogether: add the prices",
+   "change: the money the cashier gives back",
+   "exactly: no more and no less"
+  ],
+  "try_home": [
+   "Look at two prices in a shop or a leaflet. Ask: which costs more, and how much more? Count up together.",
+   "Pick two items and ask: how much altogether? Then: if we pay with $20, how much change?",
+   "Say you have $12 and an item costs $18. Ask how much more money you need."
+  ],
+  "ask": [
+   "Which costs more? How do you know?",
+   "How did you count up to find how much more?",
+   "Is the question a total or a gap? Which word tells you?"
+  ],
+  "when_stuck": "Let your child count up on fingers or on a number line and wait 10 seconds before helping. Asking 'Is the question altogether, or how much more?' works better than giving the answer. Please do not teach 'always take away'; counting up from the smaller price is the method. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
+  "next": "Next lesson: The School Shop. Online practice: your tutor will share the link. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. The recording link is private to your family: please do not share it.",
+  "quote": "To find how much more, count up from the smaller price. The gap is how much more.",
+  "report_line": "Your child is learning to compare prices, find how much more one costs than another and work out the total and the change. This week: counting up to find the gap, adding two prices and finding change from $20.",
+  "term_line": "Your child is learning to give a reason, and to read time and money in real life.",
+  "next_materials": [
+   "Your price tags and your play money, kept in their envelope (nothing new to cut)",
+   "Your next workbook, for the next five lessons of Term 3, is in the house",
+   "Pencil, rubber and paper"
+  ]
+ },
+ "safeguarding": [
+  "The price tags and the play money are paper or card. Small pieces stay on the table: nothing goes in the mouth or ears. No matches or toothpicks. Nobody cuts during the lesson; a grown-up cut the tags beforehand.",
+  "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
+  "Nobody holds paper or a tag up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on a count of three, or show fingers or a thumb for a choice. There is no private chat.",
+  "Never read out a child's name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is unmuted. Children may mute and keep their cameras off. A child's page is never shown.",
+  "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. Reaching and crouching are gentle; a child may stay seated and use arms only.",
+  "A child who is still stuck ticks 'I am still stuck' on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for 90 days after the program ends. The tutor then helps in the open session next lesson. No private messages to children, and no personal phones.",
+  "The look-back is never collected in front of the group or read out. A pass is always allowed."
+ ],
+ "tutor_prep": [
+  "Solve every workbook question yourself first. Check the answers: S1 bag; S2 $9; S3 $11; S4 pen; S5 $8; S6 $5; T1 car and $28; T2 mug $5 and lamp $11; T3 $45, $23 and No; T4 $3 and $8 or $4 and $7, and $2, $4, $8 or $3, $4, $7; G1 pie $20 and cake $32; G2 puzzle $8, scooter $15, doll $10; G3 $43, $57, $11.",
+  "Tell parents a week before: your book has the workbook and the price-tag page (page 6): a grown-up cuts out the 12 tags (9 with a price, 3 blank) before the lesson. The play money from the lesson before is used for one example only. The next lesson uses the tags and the play money again and has nothing new to cut.",
+  "Have the slides open. Have your own price tags and play money to show on camera if you wish. Practise the shopper moves for the break.",
+  "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded. Greet the whole group warmly, then start the recording, then say the notice; do not use children's first names on the recording.",
+  "Be plain with families: comparing prices, the gap, the total and the change within $20 are Primary 1 work; the gap among three prices, change from $50, choosing prices for an exact amount and finding two prices from their total and gap go beyond Primary 1 on purpose. Do not call the lesson MOE-aligned. Money is whole dollars: no $1.50, no decimals. There is no $20 note: a $20 payment is two ten-dollar notes.",
+  "Slides s-m1 to s-m5 keep the answers off the screen while you ask: the number line and the answer appear on the next slide. Read every question with its prices, and the four options of E2, aloud: the figures on the slides are small. Use the words costs more, how much more, altogether, change and cashier every time."
+ ],
+ "workbook": {
+  "header": "Money: price tags",
+  "hint_p1": "Use a number line, your fingers or your price tags. Count up from the smaller price.",
+  "hint_p2": "Read the prices first. Count up to find the gap or the change.",
+  "hint_p3": "Use a number line, price tags or a drawing. This page is for home too.",
+  "hint_p4": "Try a price and check it. Choose any question. This page is for home too.",
+  "choice_after": 3,
+  "inv_intro": "",
+  "inv_first_label": "First:",
+  "inv_then_label": "Next:",
+  "home_hint": "Use your price tags and play money. Small pieces stay on the table, away from little brothers and sisters.",
+  "kits": [
+   {
+    "type": "price_tags",
+    "title": "Kit page: price tags",
+    "prices": [
+     "$2",
+     "$3",
+     "$4",
+     "$5",
+     "$7",
+     "$8",
+     "$12",
+     "$14",
+     "$18"
+    ],
+    "items": [
+     "rubber",
+     "pencil",
+     "pen",
+     "glue",
+     "ruler",
+     "cup",
+     "book",
+     "jar",
+     "bag"
+    ],
+    "blank": 3,
+    "intro": "A grown-up cuts out all 12 price tags before the lesson: 9 with a picture and a price and 3 blank ones to write on. Keep the tags in an envelope with the play money: they come back in the next lesson and in the Quest. No printer or no cutting? Write an item and a price on small pieces of paper."
+   }
+  ]
+ },
+ "beyond": {
+  "name": "The Hidden Price",
+  "where": [
+   "G1",
+   "G2"
+  ],
+  "text": "Finding two unknown prices from their total and their difference (a cake costs $12 more than a pie, and the two cost $52 together), and three prices from clues (G2). Primary 1 papers set the work-back forms ('paid $50, got $12 back'; '$27 used, $48 left') and the count-up gap, so those are school level; the sum-and-difference story with a strip is Primary 3 and 4 work. Named puzzle: The Hidden Price. Non-routine types (tutor only): compare with a difference, guess and check, choose numbers that add to a total, build from clues.",
+  "parent": "Finding two prices from their total and how much more one costs (The Hidden Price), and three prices from clues, go past the school Primary 1 syllabus on purpose; so do the gap among three prices, change from $50 and choosing prices for an exact amount."
+ },
+ "online_practice": {
+  "key": "t3l25",
+  "title": "Price Tags: Compare and Choose",
+  "topic": "Which costs more, and how much more",
+  "items": [
+   {
+    "id": "c1",
+    "tier": "core",
+    "type": "number",
+    "q": "A bag costs $17. A cup costs $8. How much more does the bag cost than the cup?",
+    "hint": "Count up from 8 to 17. Go to 10 first.",
+    "steps": [
+     "Count up from 8 to 17.",
+     "17 take away 8 is 9.",
+     "The bag costs $9 more."
+    ],
+    "answer": 9,
+    "slips": [
+     {
+      "a": [
+       25
+      ],
+      "say": "25 is the total. The question asks how much more, so find the gap."
+     }
+    ],
+    "fig": {
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "Cup",
+       "len": "{b}",
+       "text": "{b}"
+      },
+      {
+       "name": "Bag",
+       "len": "{a}",
+       "text": "{a}"
+      }
+     ],
+     "gap": {
+      "between": [
+       0,
+       1
+      ],
+      "text": "?"
+     },
+     "size": "m"
+    },
+    "fig_base": {
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "Cup",
+       "len": 8,
+       "text": "8"
+      },
+      {
+       "name": "Bag",
+       "len": 17,
+       "text": "17"
+      }
+     ],
+     "gap": {
+      "between": [
+       0,
+       1
+      ],
+      "text": "?"
+     },
+     "size": "m"
+    },
+    "tpl": {
+     "vars": {
+      "a": [
+       12,
+       13,
+       14,
+       15,
+       16,
+       17,
+       18,
+       19
+      ],
+      "b": [
+       3,
+       4,
+       5,
+       7,
+       8,
+       9
+      ]
+     },
+     "derive": {},
+     "q": "A bag costs {a|usd}. A cup costs {b|usd}. How much more does the bag cost than the cup?",
+     "answer": "a-b",
+     "hint": "Count up from {b} to {a}. Go to 10 first.",
+     "steps": [
+      "Count up from {b} to {a}.",
+      "{a} take away {b} is {ans}.",
+      "The bag costs {ans|usd} more."
+     ]
+    }
+   },
+   {
+    "id": "c2",
+    "tier": "core",
+    "type": "number",
+    "q": "A pen costs $7 and a rubber costs $5. How much do they cost altogether?",
+    "hint": "Altogether means add.",
+    "steps": [
+     "Altogether means add.",
+     "7 and 5 make 12.",
+     "They cost $12 altogether."
+    ],
+    "answer": 12,
+    "slips": [
+     {
+      "a": [
+       2
+      ],
+      "say": "2 is the gap. Altogether means add the two prices."
+     }
+    ],
+    "fig": {
+     "type": "price_tag",
+     "item": "pen",
+     "price": "${a}"
+    },
+    "fig_base": {
+     "type": "price_tag",
+     "item": "pen",
+     "price": "$7"
+    },
+    "tpl": {
+     "vars": {
+      "a": [
+       3,
+       4,
+       5,
+       7,
+       8,
+       9,
+       11,
+       12
+      ],
+      "b": [
+       2,
+       3,
+       5,
+       6,
+       8
+      ]
+     },
+     "derive": {},
+     "q": "A pen costs {a|usd} and a rubber costs {b|usd}. How much do they cost altogether?",
+     "answer": "a+b",
+     "hint": "Altogether means add.",
+     "steps": [
+      "Altogether means add.",
+      "{a} and {b} make {ans}.",
+      "They cost {ans|usd} altogether."
+     ]
+    }
+   },
+   {
+    "id": "c3",
+    "tier": "core",
+    "type": "number",
+    "q": "A toy costs $13. You give the cashier $20. How much change do you get?",
+    "hint": "Count up from the price to $20.",
+    "steps": [
+     "Count up from 13 to 20.",
+     "13 up to 15 is 2, and 15 up to 20 is 5.",
+     "The change is $7."
+    ],
+    "answer": 7,
+    "slips": [
+     {
+      "a": [
+       33
+      ],
+      "say": "33 adds the price and the money paid. Change is the money given back: count up from the price to 20."
+     }
+    ],
+    "fig": {
+     "type": "price_tag",
+     "item": "car",
+     "price": "${p}"
+    },
+    "fig_base": {
+     "type": "price_tag",
+     "item": "car",
+     "price": "$13"
+    },
+    "tpl": {
+     "vars": {
+      "p": [
+       11,
+       12,
+       13,
+       14,
+       15,
+       16,
+       17,
+       18,
+       19
+      ]
+     },
+     "derive": {},
+     "q": "A toy costs {p|usd}. You give the cashier $20. How much change do you get?",
+     "answer": "20-p",
+     "hint": "Count up from {p} to 20.",
+     "steps": [
+      "Count up from {p} to 20.",
+      "20 take away {p} is {ans}.",
+      "The change is {ans|usd}."
+     ]
+    }
+   },
+   {
+    "id": "c4",
+    "tier": "core",
+    "type": "choice",
+    "q": "A book costs $15 and a cup costs $8. Which costs more?",
+    "hint": "Look at the dollars. Which number is bigger?",
+    "steps": [
+     "The book costs $15.",
+     "The cup costs $8.",
+     "15 is more than 8, so the book costs more."
+    ],
+    "options": [
+     "book",
+     "cup"
+    ],
+    "answer": "book",
+    "slips": [],
+    "tpl": {
+     "vars": {
+      "u": [
+       11,
+       12,
+       13,
+       14,
+       15,
+       16,
+       17,
+       18
+      ],
+      "v": [
+       3,
+       4,
+       5,
+       7,
+       8,
+       9
+      ],
+      "k": [
+       0,
+       1
+      ]
+     },
+     "derive": {
+      "x": "u*(1-k)+v*k",
+      "y": "v*(1-k)+u*k"
+     },
+     "q": "A book costs {x|usd} and a cup costs {y|usd}. Which costs more?",
+     "options": [
+      "book",
+      "cup"
+     ],
+     "answer_index": "k",
+     "hint": "Look at the dollars. Which number is bigger?",
+     "steps": [
+      "The book costs {x|usd}.",
+      "The cup costs {y|usd}.",
+      "The bigger price costs more."
+     ]
+    }
+   },
+   {
+    "id": "c5",
+    "tier": "core",
+    "type": "number",
+    "q": "Aisha has $9. A book costs $16. How much more money does Aisha need?",
+    "hint": "Count up from what she has to the price.",
+    "steps": [
+     "Count up from 9 to 16.",
+     "9 up to 10 is 1, and 10 up to 16 is 6.",
+     "She needs $7 more."
+    ],
+    "answer": 7,
+    "slips": [
+     {
+      "a": [
+       25
+      ],
+      "say": "25 is the total of the two. The question asks how much more money she needs."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       3,
+       4,
+       5,
+       7,
+       8,
+       9,
+       10
+      ],
+      "b": [
+       13,
+       14,
+       15,
+       16,
+       17,
+       18
+      ]
+     },
+     "derive": {},
+     "q": "Aisha has {a|usd}. A book costs {b|usd}. How much more money does Aisha need?",
+     "answer": "b-a",
+     "hint": "Count up from {a} to {b}.",
+     "steps": [
+      "Count up from {a} to {b}.",
+      "{b} take away {a} is {ans}.",
+      "She needs {ans|usd} more."
+     ]
+    }
+   },
+   {
+    "id": "t1",
+    "tier": "stretch",
+    "type": "number",
+    "q": "A bag costs $43, a book costs $26 and a jar costs $15. How much more does the one that costs the most cost than the one that costs the least?",
+    "hint": "Find the biggest price and the smallest price first.",
+    "steps": [
+     "The bag costs the most, $43. The jar costs the least, $15.",
+     "Count up from 15 to 43.",
+     "The bag costs $28 more than the jar."
+    ],
+    "answer": 28,
+    "slips": [
+     {
+      "a": [
+       17
+      ],
+      "say": "17 is the gap between the bag and the book. Use the one that costs the most and the one that costs the least."
+     }
+    ],
+    "easier": "c1",
+    "tpl": {
+     "vars": {
+      "a": [
+       40,
+       43,
+       45,
+       48
+      ],
+      "b": [
+       22,
+       25,
+       28
+      ],
+      "c": [
+       11,
+       14,
+       17
+      ]
+     },
+     "derive": {},
+     "q": "A bag costs {a|usd}, a book costs {b|usd} and a jar costs {c|usd}. How much more does the one that costs the most cost than the one that costs the least?",
+     "answer": "a-c",
+     "hint": "Find the biggest price and the smallest price first.",
+     "steps": [
+      "The bag costs the most, {a|usd}. The jar costs the least, {c|usd}.",
+      "Count up from {c} to {a}.",
+      "The bag costs {ans|usd} more than the jar."
+     ]
+    }
+   },
+   {
+    "id": "t2",
+    "tier": "stretch",
+    "type": "number",
+    "q": "A mug and a lamp cost $16 together. The lamp costs $6 more than the mug. How much does the mug cost?",
+    "hint": "Try a price for the mug. Add 6 for the lamp. Do they make 16?",
+    "steps": [
+     "Try $5 for the mug. The lamp is 5 and 6 more, which is 11.",
+     "5 and 11 make 16.",
+     "The mug costs $5."
+    ],
+    "answer": 5,
+    "slips": [
+     {
+      "a": [
+       8
+      ],
+      "say": "Half of 16 is 8, but the two prices are not the same. The lamp costs more."
+     }
+    ],
+    "easier": "c2",
+    "tpl": {
+     "vars": {
+      "a": [
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9
+      ],
+      "d": [
+       2,
+       4,
+       6
+      ]
+     },
+     "derive": {
+      "t": "2*a+d",
+      "m": "a+d"
+     },
+     "q": "A mug and a lamp cost {t|usd} together. The lamp costs {d|usd} more than the mug. How much does the mug cost?",
+     "answer": "a",
+     "hint": "Try a price for the mug. Add {d} for the lamp. Do they make {t}?",
+     "steps": [
+      "Try {a|usd} for the mug. The lamp is {a} and {d} more, which is {m}.",
+      "{a} and {m} make {t}.",
+      "The mug costs {a|usd}."
+     ]
+    }
+   },
+   {
+    "id": "t3",
+    "tier": "stretch",
+    "type": "choice",
+    "q": "A book costs $18 and a toy costs $15. Is $30 enough? Choose Yes or No.",
+    "hint": "Add the two prices. Is the total more than $30?",
+    "steps": [
+     "18 and 15 make 33.",
+     "33 is more than 30.",
+     "No, $30 is not enough."
+    ],
+    "options": [
+     "Yes",
+     "No"
+    ],
+    "answer": "No",
+    "slips": [],
+    "easier": "c2",
+    "tpl": {
+     "vars": {
+      "x": [
+       12,
+       14,
+       16,
+       18
+      ],
+      "y": [
+       11,
+       13,
+       15,
+       16
+      ],
+      "m": [
+       25,
+       28,
+       30
+      ]
+     },
+     "derive": {
+      "w": "x+y+100-m",
+      "s": "x+y"
+     },
+     "q": "A book costs {x|usd} and a toy costs {y|usd}. Is {m|usd} enough? Choose Yes or No.",
+     "options": [
+      "Yes",
+      "No"
+     ],
+     "answer_index": "w//101",
+     "hint": "Add the two prices. Is the total more than {m|usd}?",
+     "steps": [
+      "{x} and {y} make {s}.",
+      "Compare {s} with {m|usd}.",
+      "Enough only if the total is not more than {m|usd}."
+     ]
+    }
+   },
+   {
+    "id": "t4",
+    "tier": "stretch",
+    "type": "number",
+    "q": "Mei pays with two ten-dollar notes and gets $6 change. How much does her book cost?",
+    "hint": "The book and the change make $20.",
+    "steps": [
+     "The book and the change make 20.",
+     "20 take away 6 is 14.",
+     "The book costs $14."
+    ],
+    "answer": 14,
+    "slips": [
+     {
+      "a": [
+       26
+      ],
+      "say": "26 adds the change to the 20. The book and the change make 20, so take the change away."
+     }
+    ],
+    "easier": "c3",
+    "tpl": {
+     "vars": {
+      "c": [
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9
+      ]
+     },
+     "derive": {},
+     "q": "Mei pays with two ten-dollar notes and gets {c|usd} change. How much does her book cost?",
+     "answer": "20-c",
+     "hint": "The book and the change make $20.",
+     "steps": [
+      "The book and the change make 20.",
+      "20 take away {c} is {ans}.",
+      "The book costs {ans|usd}."
+     ]
+    }
+   },
+   {
+    "id": "g1",
+    "tier": "challenge",
+    "type": "number",
+    "q": "A cake costs $12 more than a pie. A cake and a pie cost $52 together. How much does the pie cost?",
+    "hint": "Take the extra $12 away first. Then share what is left.",
+    "steps": [
+     "52 take away 12 is 40.",
+     "40 shared into two equal parts is 20.",
+     "The pie costs $20."
+    ],
+    "answer": 20,
+    "slips": [
+     {
+      "a": [
+       26
+      ],
+      "say": "26 is half of 52, but the cake costs more than the pie. Take the extra away first."
+     }
+    ],
+    "easier": "t2",
+    "tpl": {
+     "vars": {
+      "p": [
+       10,
+       14,
+       18,
+       20,
+       24,
+       28,
+       30
+      ],
+      "d": [
+       6,
+       8,
+       12,
+       14
+      ]
+     },
+     "derive": {
+      "t": "2*p+d",
+      "r": "2*p"
+     },
+     "q": "A cake costs {d|usd} more than a pie. A cake and a pie cost {t|usd} together. How much does the pie cost?",
+     "answer": "p",
+     "hint": "Take the extra {d|usd} away first. Then share what is left.",
+     "steps": [
+      "{t} take away {d} is {r}, two equal prices.",
+      "{r} shared into two equal parts is {p}.",
+      "The pie costs {p|usd}."
+     ]
+    }
+   },
+   {
+    "id": "g2",
+    "tier": "challenge",
+    "type": "number",
+    "q": "Mei has $100. She buys a shoe for $27 and a toy car for $16. How much change does she get?",
+    "hint": "Add the two prices first. Then count up to 100.",
+    "steps": [
+     "27 and 16 make 43.",
+     "Count up from 43 to 100.",
+     "Mei gets $57 change."
+    ],
+    "answer": 57,
+    "slips": [
+     {
+      "a": [
+       43
+      ],
+      "say": "43 is what Mei spends. The change is what is left of her $100."
+     }
+    ],
+    "easier": "c3",
+    "tpl": {
+     "vars": {
+      "a": [
+       21,
+       27,
+       33,
+       38
+      ],
+      "b": [
+       12,
+       16,
+       19,
+       24
+      ]
+     },
+     "derive": {
+      "s": "a+b"
+     },
+     "q": "Mei has $100. She buys a shoe for {a|usd} and a toy car for {b|usd}. How much change does she get?",
+     "answer": "100-a-b",
+     "hint": "Add the two prices first. Then count up to 100.",
+     "steps": [
+      "{a} and {b} make {s}.",
+      "Count up from {s} to 100.",
+      "Mei gets {ans|usd} change."
+     ]
+    }
+   },
+   {
+    "id": "g3",
+    "tier": "challenge",
+    "type": "selfcheck",
+    "q": "Make a price puzzle for a grown-up. Pick two of your tags and ask how much more one costs than the other. Check by counting up.",
+    "hint": "Pick the two tags first, then count up from the smaller price.",
+    "steps": [
+     "Write the two prices.",
+     "Ask: how much more does the one that costs more cost?",
+     "Count up together to check."
+    ],
+    "easier": "c1"
+   }
+  ]
+ }
+}

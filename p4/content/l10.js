@@ -1,13 +1,31 @@
-// Math Inquirers P4 Holiday Program — Lesson 10: Challenge Day (mixed heuristics)
+// Math Inquirers P4 Holiday Program — Lesson 10: Puzzle Day (mixed heuristics)
 // Every answer below was worked out and checked with a script; each logic puzzle was checked by trying every
 // arrangement, and has exactly one answer. "Find all" questions list every case.
+const tip = require('../tip.js');
+const FG = require('../../levels/figs_l4_6.js');
+const { T, C, L, N, Y, TEAL, RED } = FG;
+// Q5: two queues. (a) Mei counted from the front and from the back; (b) 20 people with Ben marked. Nothing is counted for the child.
+const queueFig = () => {
+  let s = T(8, 24, '(a)', { size: 20, fill: TEAL, anchor: 'start' });
+  s += T(70, 24, 'FRONT', { size: 16, fill: '#5B6785' }) + T(578, 24, 'BACK', { size: 16, anchor: 'end', fill: '#5B6785' });
+  for (let i = 0; i < 7; i++) { const x = 70 + i * 46, mei = i === 6; s += C(x, 62, 18, { fill: mei ? Y : '#fff', w: mei ? 4 : 3 }) + T(x, 68, i + 1, { size: 17 }); }
+  s += T(70 + 6 * 46, 30, 'Mei', { size: 19, fill: TEAL }) + T(70 + 7 * 46 + 60, 70, '. . . . . . . .', { size: 30 });
+  s += `<path d="M52 88 q0 10 10 10 L${70 + 6 * 46 + 8} 98 q10 0 10 -10" fill="none" stroke="${N}" stroke-width="3"/>` + T(70 + 3 * 46, 124, '7th from the front', { size: 18, fill: TEAL });
+  s += `<path d="M${70 + 6 * 46 - 18} 88 q0 10 10 10 L568 98 q10 0 10 -10" fill="none" stroke="${RED}" stroke-width="3" stroke-dasharray="7 4"/>` + T((70 + 6 * 46 + 568) / 2, 124, 'Mei is 12th from the back', { size: 18, fill: RED });
+  return FG.svg(600, 140, s, 'A queue of circles. Seven numbered circles from the front with Mei the 7th, then dots for the rest of the queue to the back. A bracket marks 7th from the front, and a dashed bracket from Mei to the back marks that Mei is 12th from the back.');
+};
+// Q6: the bars for "in 5 years"
+const ageFig = () => FG.barModel({ rowH: 38, left: 150, right: 130, rows: [{ name: 'Ben in 5 yrs', segs: [{ u: 1 }] }, { name: 'Father in 5 yrs', segs: [{ u: 1 }, { u: 1 }, { u: 1 }] }],
+  ann: [{ k: 'rbrace', r1: 0, r2: 1, at: 3, t: '? years' }],
+  label: 'Bars for their ages in 5 years. Ben has 1 equal part and his father has 3 equal parts of the same size. A brace on the right is marked with a question mark.' });
+
 module.exports = {
   lesson: {
-    n: 10, week: 5, session: 'B', title: 'Challenge Day', topic: 'Mixed heuristics',
+    n: 10, week: 5, session: 'B', title: 'Puzzle Day', topic: 'Mixed heuristics',
     objective: 'Choose a way into a non-routine problem (guess and check with a table, suppose they are all the same, work backwards, a logic grid, draw it) and use it on competition-style puzzles, checking every answer against every fact.',
     skills: 'Choosing a strategy, guess and check, supposition, working backwards, logical deduction, checking and explaining',
-    materials: 'Four puzzle cards (A to D) for the explore stations (pairs choose three), mini whiteboards, counters or cubes, certificates, stamps.',
-    online: 'Pairs go to breakout rooms with the puzzle cards (each pair chooses three of the four) and volunteers report back; the tutor ticks and crosses the logic grid on the slide as children call out.',
+    materials: 'Four puzzle cards (A to D) for the explore stations (cards A and B live; C and D take-home), mini whiteboards, counters or cubes, certificates, stamps.',
+    online: 'Pairs go to breakout rooms with the puzzle cards (cards A and B live, one room for the whole explore; C and D are take-home) and volunteers report back; the tutor ticks and crosses the logic grid on the slide as children call out.',
     warmup: 'Who am I? A 1 to 100 grid and four clues revealed one at a time (2-digit, in the 7 times table, digits add up to 10, odd). Children cross out numbers after each clue until one is left (91).',
     explore: 'Four puzzle stations, one for each way in: A guess and check (two next-door numbers multiply to 210), B heads and legs (10 spiders and beetles, 68 legs), C work backwards (double a number, add 7, get 43), D logic (who has the fish?). Pairs solve as many as they can and write how they started.',
     mini: 'Four ways in. Guess and check with a table: next-door numbers multiplying to 342 (try 20 × 21, too big; 17 × 18, too small; 18 × 19 ✓). Suppose they are all the same: 15 bicycles and tricycles with 38 wheels (all bicycles gives 30 wheels, 8 short, each swap adds 1, so 8 tricycles). Work backwards: half, then − $4, leaves $11 (11 + 4 = 15, 15 × 2 = 30). Before page 2: a logic grid with ticks and crosses; draw a queue (5th from the front and 8th from the back is 4 + 1 + 7 = 12); ages (everyone gets older by the same amount, so the total grows by 2 × the years).',
@@ -30,7 +48,7 @@ module.exports = {
   },
 
   script: {
-    hook: ['Welcome to Challenge Day! Today there is no new topic. Instead, you get the puzzles that mathematicians love, the ones where you do not know how to start.', 'Good problem solvers are not people who know every answer. They know how to START. Notice it. Test it. Explain why.'],
+    hook: ['Welcome to Puzzle Day! Today there is no new topic. Instead, you get the puzzles that mathematicians love, the ones where you do not know how to start.', 'Good problem solvers are not people who know every answer. They know how to START. Notice it. Test it. Explain why.'],
     warmIntro: ['I am thinking of a number from 1 to 100. I will give you one clue at a time. After each clue, cross out every number it cannot be.', 'Clue 1: I am a 2-digit number. Which numbers can you cross out straight away?'],
     predict: ['Look at the four puzzle cards. Which one do you think will be hardest? Write the letter in the corner of your whiteboard. We will check at the end.'],
     exploreHints: ['Stuck on card A: try 10 × 11, then a bigger pair. Is the answer too big or too small?', 'Stuck on card B: what if all 10 bugs were beetles? How many legs would that be?', 'Stuck on card C: start at 43 and undo the last thing first.', 'Finished early: make up a new card for one of the stations.'],
@@ -43,23 +61,25 @@ module.exports = {
     hints: ['Hint 1: “Make a table and try a number. Was it too big or too small?”', 'Hint 2: “What if they were all the same? How far off are you?”', 'Hint 3: “Start at the end and undo, last step first.”'],
     talk: ['“Which way in did you use most today?”', '“If you would like to, pick one puzzle and tell us your way in, in two sentences. Volunteers first. You can pass.”'],
     talkAns: 'Open answers. Listen for the name of the strategy (guess and check, suppose, work backwards, logic grid, draw it) and a check against every fact.',
-    close: ['“You are real inquirers now: you can start a problem you have never seen before.”', 'Give each child a certificate and their stamped inquiry journal. Tell each one a specific thing they did well this holiday.']
+    farewell: ['“Well done, inquirers. Three volunteers, please: tell us one puzzle you enjoyed and one way in you will use again. About twenty seconds each.”', '“This group tried hard puzzles, said what they were thinking and checked every answer. Notice it. Test it. Explain why. Goodbye, and see you in Primary 5!”'],
+    close: ['“You are real inquirers now: you can start a problem you have never seen before.”', 'Certificates and stamped journals go out after the lesson, each with a personal sentence you wrote before it (never read out in class).']
   },
 
   deck: {
     today: 'Choose a way into tricky puzzles: guess and check, suppose, work backwards, and logic. Then check every fact.',
     warmGame: 'Who am I? Four clues, one at a time, on a 1 to 100 grid. Cross out every number that does not fit each clue until one is left.',
-    warmQs: [['Buses every 6 min and every 8 min leave together at 9:00. Next together?', '9:24'], ['Round 45 678 to the nearest thousand.', '46 000'], ['3/4 of 24 = ?', '18'], ['0.6 × 4 = ?', '2.4'], ['Turn clockwise from N to SW. How many degrees?', '225°']],
+    warmQs: [["Buses every 6 min and every 8 min leave together at 9:00. Next together?", "9:24"], ["Round 45 678 to the nearest thousand.", "46 000"], ["3/4 of 24 = ?", "18"]],
+    warmWeekly: [["0.6 × 4 = ?", "2.4"], ["Turn clockwise from N to SW. How many degrees?", "225°"]],
     expSetup: ['Four puzzle cards, A to D. Start with any card.', 'Read the card aloud with your partner.', 'Try something: a guess, a drawing or a table.', 'Write the answer AND how you got it.'],
     expPic: 'four puzzle cards: A "next-door numbers multiply to 210", B "10 bugs, 68 legs", C "double it, add 7, get 43", D "who has the fish?".',
-    expAsk: [['How did you start card B?', 'Suppose all 10 are beetles: 60 legs, 8 short; each spider adds 2 legs, so 4 spiders and 6 beetles.'], ['Which card was hardest? What helped?', 'Open answers: a table, a drawing, or starting at the end.'], ['Could any card have two answers? How do you know?', 'No: each one was checked. A: 14 × 15 = 210. C: 18. D: Ali fish, Mei cat, Ravi dog.']],
+    expAsk: [["How did you start card B?", "Suppose all 10 are beetles: 60 legs, 8 short; each spider adds 2 legs, so 4 spiders and 6 beetles."], ["Which card was hardest? What helped?", "Open answers: a table, a drawing, or starting at the end."]],
     mini1: { head: 'Guess and check with a table', table: [['Try', 'Product', ''], ['20 × 21', '420', 'too big'], ['17 × 18', '306', 'too small'], ['18 × 19', '342', 'just right']], body: ['Two next-door numbers multiply to make 342.', 'Each try tells you to go up or down.'], ans: '18 and 19' },
     mini2: { head: 'Suppose they are all the same', body: ['15 bicycles and tricycles have 38 wheels.', 'Suppose all are bicycles: 30 wheels. 8 short.', 'Each swap to a tricycle adds 1 wheel.'], ans: '8 tricycles and 7 bicycles. Check: 14 + 24 = 38.' },
     keyHead: 'Key idea: pick a way in',
     keyBig: 'Guess and check with a table, suppose they are all the same, or work backwards from the end.',
     keySmall: 'Then check your answer against every fact in the question.',
     brk: 'Heads and legs! The tutor calls "3 chickens and 2 goats": stamp that many legs (14). Then "5 animals, 16 legs": who can say the animals?',
-    ws1: 'Page 1, in pairs: Q1 guess and check, Q2 heads and legs, Q3 work backwards.',
+    ws1: 'Page 1, in pairs: Q1a guess and check (Q1b is take-home), Q2 heads and legs. Q3 work backwards is the first question on your own.',
     ws2: 'Page 2, on your own: Q4 the logic grid, Q5 queues, Q6 ages.'
   },
 
@@ -76,10 +96,10 @@ module.exports = {
       { q: 'There are 20 bicycles and tricycles with 47 wheels altogether. How many tricycles are there?', a: '7 tricycles (and 13 bicycles). All bicycles: 40 wheels, 7 short, each swap adds 1.' },
       { q: 'Two next-door even numbers (like 6 and 8) multiply to make 624. What are they?', a: '24 and 26' },
       { q: 'Ravi spent $15 on a book. Then he spent half of the money left on a bag. He had $18 left. How much money did he have at first?', a: '$51 (18 × 2 = 36, 36 + 15 = 51)' },
-      { q: 'Ali, Ben and Siti are 9, 10 and 11 years old. Ben is older than Siti. Siti is not the youngest. How old is each child?', a: 'Ben 11, Siti 10, Ali 9.' },
-      { q: 'Mei is 9th from the front and 14th from the back of a queue. How many people are in the queue?', a: '22 (8 + 1 + 13)' },
+      { q: 'Ali, Ben, Mei and Siti are 8, 9, 10 and 11 years old, in some order. Ali is 2 years older than Siti. Ben is older than Mei. Siti is older than Mei. How old is each child?', a: 'Ali 11, Ben 10, Siti 9, Mei 8. Ali is 2 more than Siti, so (Siti, Ali) is (8, 10) or (9, 11). Mei is younger than both Siti and Ben. If Siti were 8, Mei would have to be younger than 8. So Siti is 9 and Ali is 11, and Mei is 8. Ben is the one left, 10.' },
+      { q: 'In a queue, Ali is 8th from the front and Ben is 6th from the back. There are 7 children between Ali and Ben. How many children are in the queue? Draw the queue first.', a: '21. Ali is 8th, the 7 children in between are 9th to 15th, and Ben is 16th. Ben is 6th from the back, so 5 children are behind him: 16 + 5 = 21.' },
       { q: 'There are 12 spiders (8 legs) and ants (6 legs) with 82 legs altogether. How many spiders are there?', a: '5 spiders (and 7 ants). All ants: 72 legs, 10 short, each swap adds 2.' },
-      { q: 'Three next-door numbers add up to 117. What is the biggest of the three?', a: '40 (38 + 39 + 40)' },
+      { q: 'Two next-door odd numbers (like 7 and 9) multiply to make 783. What are they?', a: '27 and 29. 28 × 28 = 784 is just above 783, so try the odd numbers on either side of 28: 27 × 29 = 783.' },
       { q: 'Siti and her dad are 48 years old altogether. In 6 years, her dad will be 4 times as old as Siti. How old is Siti now?', a: '6 (in 6 years the total is 60: 5 equal bars, so Siti will be 12)' }
     ],
     challenge: [
@@ -89,7 +109,7 @@ module.exports = {
       { q: 'Ali, Ben, Mei and Siti sit in a row of 4 seats, numbered 1 to 4 from the left. Mei sits at one end. Ben sits next to Mei. Ali does not sit next to Ben. Ali sits in seat 1 or seat 2. Who sits in each seat?', a: 'Seat 1 Ali, seat 2 Siti, seat 3 Ben, seat 4 Mei.' },
       { q: 'A cake costs $3 more than a drink. 4 cakes and 3 drinks cost $40. How much does a drink cost?', a: '$4 (a cake is $7). Suppose all 7 are drinks: take away 4 × $3 = $12, then $28 ÷ 7 = $4.' },
       { q: 'Ben’s uncle is 4 times as old as Ben. In 10 years, his uncle will be only twice as old as Ben. How old is Ben now?', a: '5 (uncle 20; in 10 years 15 and 30)' },
-      { q: 'A hawker centre has 15 tables. Some seat 4 people and some seat 6 people. There are 76 seats altogether. How many tables seat 6?', a: '8 tables seat 6 (and 7 seat 4). All seat 4: 60 seats, 16 short, each swap adds 2.' },
+      { q: 'A hawker centre has 15 tables. Some seat 4 people and some seat 6 people. There are 76 seats altogether. (a) How many tables seat 6? (b) What is the fewest and the most seats 15 tables could have? (c) Could the centre have 77 seats? Explain.', a: '(a) 8 tables seat 6 (and 7 seat 4). All seat 4: 60 seats, 16 short, each swap adds 2. (b) Fewest 60 (all seat 4), most 90 (all seat 6). (c) No. Every table seats an even number of people, so the total must be even, and 77 is odd.' },
       { q: 'Mei gave Ali half of her stickers and 2 more. Then she gave Ben half of the stickers left and 2 more. She had 5 stickers left. How many did she have at first?', a: '32. Work backwards: (5 + 2) × 2 = 14, (14 + 2) × 2 = 32.' },
       { q: 'Make up your own heads-and-legs puzzle (chickens and goats, or bicycles and cars) that has exactly ONE answer. Check it by trying every number of one animal. Then explain why a farmer who counts 12 heads and 35 legs on a farm with only chickens and goats must have counted wrong.', a: 'Puzzles will vary: check by trying every possible number. Model: 10 vehicles, 32 wheels, cars (4 wheels) and motorcycles (2 wheels): 6 cars and 4 motorcycles is the only way. Why 35 is impossible: every chicken has 2 legs and every goat has 4, so the total number of legs is always even, and 35 is odd.' }
     ]
@@ -101,7 +121,7 @@ module.exports = {
     W.push(H.sub('a', 'Two consecutive numbers (next-door numbers, like 7 and 8) multiply to make 552. What are they?'));
     W.push(...H.lines(1));
     W.push(H.ans('Answer:'));
-    W.push(H.sub('b', 'Mei buys some $4 pens and some $7 notebooks for exactly $50. Find ALL the ways.', { keepNext: true }));
+    W.push(H.sub('b', '★ take-home: Mei buys some $4 pens and some $7 notebooks for exactly $50. Find ALL the ways.', { keepNext: true }));
     const w = [2200, 1100, 1100, 1100, 1100, 1100, 1100, 1100];
     const cl = (c, i, head) => H.cell(c, w[i], i === 0 || head ? { bold: true, fill: 'EDEDED', h: 40 } : { h: 60 });
     W.push(H.tbl(w, [H.row(['Notebooks', '1', '2', '3', '4', '5', '6', '7'].map((c, i) => cl(c, i, true))),
@@ -129,13 +149,14 @@ module.exports = {
       ...['Ali', 'Ben', 'Mei', 'Siti'].map(n => H.row([H.cell(n, g[0], { bold: true, fill: 'EDEDED', h: 70 }), ...[1, 2, 3, 4].map(i => H.cell('', g[i], { h: 70 }))]))]));
     W.push(H.gap(40));
     W.push(H.sub('a', 'Ali: ___________   Ben: ___________   Mei: ___________   Siti: ___________'));
-    W.push(H.q(5, 'Draw the queue.', { keepNext: true }));
-    W.push(H.sub('a', 'Mei is 7th from the front and 12th from the back of a queue at the MRT gantry. How many people are in the queue?'));
-    W.push(H.ans());
+    W.push(H.q(5, 'The queue for (a) is drawn for you. Count carefully: who is counted twice?', { keepNext: true }));
+    W.push(H.fig(queueFig()));
+    W.push(H.sub('a', 'Mei is 7th from the front and 12th from the back of a queue at the MRT gantry. How many people are in the queue?   ________'));
     W.push(H.sub('b', '20 people are in a queue. Ben is 6th from the front. What is his place from the back?   ________'));
-    W.push(H.q(6, 'Ben and his father are 50 years old altogether. In 5 years, his father will be 3 times as old as Ben. How old is Ben now? Draw bars.', { keepNext: true }));
-    W.push(...H.lines(3));
-    W.push(H.ans());
+    W.push(H.q(6, 'Ben and his father are 50 years old altogether. In 5 years, his father will be 3 times as old as Ben. How old is Ben now? The bars show their ages in 5 years.', { keepNext: true }));
+    W.push(H.fig(ageFig()));
+    W.push(tip('try an age and check it. Try 1: Ben is 6, so his father is 44. In 5 years: Ben 11, father 49. Is 49 three times 11? No (33). Try again with a different age.'));
+    W.push(H.ans('Ben is now (years):'));
     return W;
   }
 };
@@ -171,10 +192,12 @@ module.exports.gaps = {
   "key": "(a) You cannot get 1, 2, 4 or 7. You can get 3, 5, 6 (3 + 3), 8 (3 + 5), 9 (3 + 3 + 3), 10 (5 + 5) and every score from 8 up to 20 (checked by brute force up to 30). (b) After 7 you can get every score: 8, 9 and 10 can be made, and adding a 3 gives the next ones. (c) With 4 and 6 every score is even, so all the odd scores are impossible, and 2 as well (every even score from 4 up is possible). Why: both rings score even numbers, and even + even is even. Look for a systematic list or table, and for children who can say WHY about the even scores.",
   "easy": "List the scores you can get with ONE ring: 3 or 5. Then with TWO rings: 3 + 3, 3 + 5 and 5 + 5. Write each total."
  },
- "reflect": "Something I did well: I tried a table when I was stuck. The hardest part was choosing which way in to use. What helped me: trying a table first, then checking every fact.",
+ "reflect": "Something I did well: I tried a table when I was stuck. The hardest part was choosing which way in to use. What helped me: trying a table first, then checking every fact. One thing I could try next: making a table of my tries.",
  "go2": {
   "q": "What if 10 bugs have 65 legs? Could that happen? Why or why not?",
   "a": "No. Spiders have 8 legs and beetles 6: both are even numbers, so the total number of legs is always even, and 65 is odd."
  },
- "cap": "Page 2 is on your own. Aim for Q4 and Q5 first. Q6 is a choice for the last few minutes."
+ "cap": "Page 2 is on your own. Do question 3 first, then Q4 and Q5. Q6 is a choice for the end.",
+ "p1": "Pairs: Q1a, Q2. Then Q3 alone. After Q3 choose: carry on, or try Think harder.",
+ "plan": ["Pairs do Q1a and Q2 (about 9 minutes of work). Q1b (all the ways to buy pens and notebooks, a 24-cell table) is a ★ take-home question. Q3, working backwards, is the first question each child does on their own; its answer is checked with page 2."]
 };

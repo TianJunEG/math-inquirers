@@ -1,0 +1,827 @@
+{
+ "lessons": {
+  "1": {
+   "parts": [
+    {
+     "title": "Opening",
+     "start": 0.0,
+     "end": 2.0
+    },
+    {
+     "title": "Sneak-peek puzzles",
+     "start": 2.0,
+     "end": 6.5
+    },
+    {
+     "title": "Warm-up",
+     "start": 6.5,
+     "end": 12.5
+    },
+    {
+     "title": "Explore",
+     "start": 12.5,
+     "end": 26.5
+    },
+    {
+     "title": "Mini-lesson",
+     "start": 26.5,
+     "end": 37.5
+    },
+    {
+     "title": "Brain break",
+     "start": 37.5,
+     "end": 42.0
+    },
+    {
+     "title": "Worksheet page 1 (pairs)",
+     "start": 42.0,
+     "end": 56.5
+    },
+    {
+     "title": "Check page 1",
+     "start": 56.5,
+     "end": 60.5
+    },
+    {
+     "title": "Short teaching before page 2",
+     "start": 60.5,
+     "end": 63.5
+    },
+    {
+     "title": "Worksheet page 2 (alone)",
+     "start": 63.5,
+     "end": 71.5
+    },
+    {
+     "title": "Check page 2",
+     "start": 71.5,
+     "end": 74.5
+    },
+    {
+     "title": "Talk time",
+     "start": 74.5,
+     "end": 80.0
+    },
+    {
+     "title": "Exit ticket, reflection and close",
+     "start": 80.0,
+     "end": 88.0
+    },
+    {
+     "title": "Buffer (floating time)",
+     "start": 88.0,
+     "end": 90.0
+    }
+   ],
+   "optional_slides": [
+    "p5l1-stretch",
+    "p5l1-stretch2",
+    "p5l1-gofurther",
+    "p5l1-challenge",
+    "p5l1-chdiag",
+    "p5l1-chwalk"
+   ]
+  },
+  "2": {
+   "parts": [
+    {
+     "title": "Opening",
+     "start": 0.0,
+     "end": 2.0
+    },
+    {
+     "title": "Sneak-peek puzzles",
+     "start": 2.0,
+     "end": 6.5
+    },
+    {
+     "title": "Warm-up",
+     "start": 6.5,
+     "end": 13.0
+    },
+    {
+     "title": "Explore",
+     "start": 13.0,
+     "end": 27.0
+    },
+    {
+     "title": "Mini-lesson",
+     "start": 27.0,
+     "end": 38.0
+    },
+    {
+     "title": "Brain break",
+     "start": 38.0,
+     "end": 42.0
+    },
+    {
+     "title": "Worksheet page 1 (pairs)",
+     "start": 42.0,
+     "end": 57.5
+    },
+    {
+     "title": "Check page 1",
+     "start": 57.5,
+     "end": 61.5
+    },
+    {
+     "title": "Short teaching before page 2",
+     "start": 61.5,
+     "end": 63.0
+    },
+    {
+     "title": "Worksheet page 2 (alone)",
+     "start": 63.0,
+     "end": 71.0
+    },
+    {
+     "title": "Check page 2",
+     "start": 71.0,
+     "end": 74.0
+    },
+    {
+     "title": "Talk time",
+     "start": 74.0,
+     "end": 79.5
+    },
+    {
+     "title": "Exit ticket, reflection and close",
+     "start": 79.5,
+     "end": 87.5
+    },
+    {
+     "title": "Buffer (floating time)",
+     "start": 87.5,
+     "end": 90.0
+    }
+   ],
+   "optional_slides": [
+    "p5l2-stretch",
+    "p5l2-gofurther",
+    "p5l2-gofurther2",
+    "p5l2-challenge",
+    "p5l2-chdiag",
+    "p5l2-chwalk"
+   ]
+  },
+  "3": {
+   "parts": [
+    {
+     "title": "Opening",
+     "start": 0.0,
+     "end": 2.0
+    },
+    {
+     "title": "Sneak-peek puzzles",
+     "start": 2.0,
+     "end": 6.5
+    },
+    {
+     "title": "Warm-up",
+     "start": 6.5,
+     "end": 13.0
+    },
+    {
+     "title": "Explore",
+     "start": 13.0,
+     "end": 26.5
+    },
+    {
+     "title": "Mini-lesson",
+     "start": 26.5,
+     "end": 38.5
+    },
+    {
+     "title": "Brain break",
+     "start": 38.5,
+     "end": 42.5
+    },
+    {
+     "title": "Worksheet page 1 (pairs)",
+     "start": 42.5,
+     "end": 56.5
+    },
+    {
+     "title": "Check page 1",
+     "start": 56.5,
+     "end": 60.0
+    },
+    {
+     "title": "Short teaching before page 2",
+     "start": 60.0,
+     "end": 61.5
+    },
+    {
+     "title": "Worksheet page 2 (alone)",
+     "start": 61.5,
+     "end": 69.5
+    },
+    {
+     "title": "Check page 2",
+     "start": 69.5,
+     "end": 71.5
+    },
+    {
+     "title": "Talk time",
+     "start": 71.5,
+     "end": 77.0
+    },
+    {
+     "title": "Exit ticket, reflection and close",
+     "start": 77.0,
+     "end": 86.5
+    },
+    {
+     "title": "Buffer (floating time)",
+     "start": 86.5,
+     "end": 90.0
+    }
+   ],
+   "optional_slides": [
+    "p5l3-stretch",
+    "p5l3-stretch2",
+    "p5l3-gofurther",
+    "p5l3-gofurther2",
+    "p5l3-challenge",
+    "p5l3-chdiag",
+    "p5l3-chwalk"
+   ]
+  },
+  "4": {
+   "parts": [
+    {
+     "title": "Opening",
+     "start": 0.0,
+     "end": 2.0
+    },
+    {
+     "title": "Sneak-peek puzzles",
+     "start": 2.0,
+     "end": 6.5
+    },
+    {
+     "title": "Warm-up",
+     "start": 6.5,
+     "end": 12.5
+    },
+    {
+     "title": "Explore",
+     "start": 12.5,
+     "end": 25.5
+    },
+    {
+     "title": "Mini-lesson",
+     "start": 25.5,
+     "end": 36.5
+    },
+    {
+     "title": "Brain break",
+     "start": 36.5,
+     "end": 41.0
+    },
+    {
+     "title": "Worksheet page 1 (pairs)",
+     "start": 41.0,
+     "end": 53.5
+    },
+    {
+     "title": "Check page 1",
+     "start": 53.5,
+     "end": 57.0
+    },
+    {
+     "title": "Short teaching before page 2",
+     "start": 57.0,
+     "end": 60.0
+    },
+    {
+     "title": "Worksheet page 2 (alone)",
+     "start": 60.0,
+     "end": 70.0
+    },
+    {
+     "title": "Check page 2",
+     "start": 70.0,
+     "end": 73.0
+    },
+    {
+     "title": "Talk time",
+     "start": 73.0,
+     "end": 78.5
+    },
+    {
+     "title": "Exit ticket, reflection and close",
+     "start": 78.5,
+     "end": 85.5
+    },
+    {
+     "title": "Buffer (floating time)",
+     "start": 85.5,
+     "end": 90.0
+    }
+   ],
+   "optional_slides": [
+    "p5l4-stretch",
+    "p5l4-stretch2",
+    "p5l4-gofurther",
+    "p5l4-gofurther2",
+    "p5l4-gofurther3",
+    "p5l4-challenge",
+    "p5l4-chdiag",
+    "p5l4-chwalk"
+   ]
+  },
+  "5": {
+   "parts": [
+    {
+     "title": "Opening",
+     "start": 0.0,
+     "end": 3.5
+    },
+    {
+     "title": "Sneak-peek puzzles",
+     "start": 3.5,
+     "end": 8.0
+    },
+    {
+     "title": "Warm-up",
+     "start": 8.0,
+     "end": 14.5
+    },
+    {
+     "title": "Explore",
+     "start": 14.5,
+     "end": 28.0
+    },
+    {
+     "title": "Mini-lesson",
+     "start": 28.0,
+     "end": 40.0
+    },
+    {
+     "title": "Brain break",
+     "start": 40.0,
+     "end": 44.5
+    },
+    {
+     "title": "Worksheet page 1 (pairs)",
+     "start": 44.5,
+     "end": 59.5
+    },
+    {
+     "title": "Check page 1",
+     "start": 59.5,
+     "end": 63.0
+    },
+    {
+     "title": "Worksheet page 2 (alone)",
+     "start": 63.0,
+     "end": 70.0
+    },
+    {
+     "title": "Check page 2",
+     "start": 70.0,
+     "end": 72.0
+    },
+    {
+     "title": "Talk time",
+     "start": 72.0,
+     "end": 77.5
+    },
+    {
+     "title": "Exit ticket, reflection and close",
+     "start": 77.5,
+     "end": 86.0
+    },
+    {
+     "title": "Buffer (floating time)",
+     "start": 86.0,
+     "end": 90.0
+    }
+   ],
+   "optional_slides": [
+    "p5l5-stretch",
+    "p5l5-stretch2",
+    "p5l5-gofurther",
+    "p5l5-gofurther2",
+    "p5l5-challenge",
+    "p5l5-chdiag",
+    "p5l5-chwalk"
+   ]
+  },
+  "6": {
+   "parts": [
+    {
+     "title": "Opening",
+     "start": 0.0,
+     "end": 2.0
+    },
+    {
+     "title": "Sneak-peek puzzles",
+     "start": 2.0,
+     "end": 6.0
+    },
+    {
+     "title": "Warm-up",
+     "start": 6.0,
+     "end": 12.0
+    },
+    {
+     "title": "Explore",
+     "start": 12.0,
+     "end": 26.0
+    },
+    {
+     "title": "Mini-lesson",
+     "start": 26.0,
+     "end": 38.5
+    },
+    {
+     "title": "Brain break",
+     "start": 38.5,
+     "end": 42.5
+    },
+    {
+     "title": "Worksheet page 1 (pairs)",
+     "start": 42.5,
+     "end": 57.0
+    },
+    {
+     "title": "Check page 1",
+     "start": 57.0,
+     "end": 61.0
+    },
+    {
+     "title": "Short teaching before page 2",
+     "start": 61.0,
+     "end": 62.5
+    },
+    {
+     "title": "Worksheet page 2 (alone)",
+     "start": 62.5,
+     "end": 71.5
+    },
+    {
+     "title": "Check page 2",
+     "start": 71.5,
+     "end": 74.5
+    },
+    {
+     "title": "Talk time",
+     "start": 74.5,
+     "end": 80.0
+    },
+    {
+     "title": "Exit ticket, reflection and close",
+     "start": 80.0,
+     "end": 88.5
+    },
+    {
+     "title": "Buffer (floating time)",
+     "start": 88.5,
+     "end": 90.0
+    }
+   ],
+   "optional_slides": [
+    "p5l6-stretch",
+    "p5l6-stretch2",
+    "p5l6-gofurther",
+    "p5l6-gofurther2",
+    "p5l6-challenge",
+    "p5l6-chdiag",
+    "p5l6-chwalk"
+   ]
+  },
+  "7": {
+   "parts": [
+    {
+     "title": "Opening",
+     "start": 0.0,
+     "end": 2.0
+    },
+    {
+     "title": "Sneak-peek puzzles",
+     "start": 2.0,
+     "end": 6.5
+    },
+    {
+     "title": "Warm-up",
+     "start": 6.5,
+     "end": 12.0
+    },
+    {
+     "title": "Explore",
+     "start": 12.0,
+     "end": 24.5
+    },
+    {
+     "title": "Mini-lesson",
+     "start": 24.5,
+     "end": 35.5
+    },
+    {
+     "title": "Brain break",
+     "start": 35.5,
+     "end": 40.0
+    },
+    {
+     "title": "Worksheet page 1 (pairs)",
+     "start": 40.0,
+     "end": 54.0
+    },
+    {
+     "title": "Check page 1",
+     "start": 54.0,
+     "end": 57.5
+    },
+    {
+     "title": "Short teaching before page 2",
+     "start": 57.5,
+     "end": 59.0
+    },
+    {
+     "title": "Worksheet page 2 (alone)",
+     "start": 59.0,
+     "end": 70.5
+    },
+    {
+     "title": "Check page 2",
+     "start": 70.5,
+     "end": 73.5
+    },
+    {
+     "title": "Talk time",
+     "start": 73.5,
+     "end": 79.0
+    },
+    {
+     "title": "Exit ticket, reflection and close",
+     "start": 79.0,
+     "end": 88.0
+    },
+    {
+     "title": "Buffer (floating time)",
+     "start": 88.0,
+     "end": 90.0
+    }
+   ],
+   "optional_slides": [
+    "p5l7-teachchange",
+    "p5l7-teachdeal",
+    "p5l7-stretch",
+    "p5l7-stretch2",
+    "p5l7-gofurther",
+    "p5l7-challenge",
+    "p5l7-chdiag",
+    "p5l7-chwalk"
+   ]
+  },
+  "8": {
+   "parts": [
+    {
+     "title": "Opening",
+     "start": 0.0,
+     "end": 2.0
+    },
+    {
+     "title": "Sneak-peek puzzles",
+     "start": 2.0,
+     "end": 6.0
+    },
+    {
+     "title": "Warm-up",
+     "start": 6.0,
+     "end": 12.0
+    },
+    {
+     "title": "Explore",
+     "start": 12.0,
+     "end": 24.5
+    },
+    {
+     "title": "Mini-lesson",
+     "start": 24.5,
+     "end": 36.5
+    },
+    {
+     "title": "Brain break",
+     "start": 36.5,
+     "end": 41.0
+    },
+    {
+     "title": "Worksheet page 1 (pairs)",
+     "start": 41.0,
+     "end": 54.0
+    },
+    {
+     "title": "Check page 1",
+     "start": 54.0,
+     "end": 57.5
+    },
+    {
+     "title": "Short teaching before page 2",
+     "start": 57.5,
+     "end": 60.5
+    },
+    {
+     "title": "Worksheet page 2 (alone)",
+     "start": 60.5,
+     "end": 68.0
+    },
+    {
+     "title": "Check page 2",
+     "start": 68.0,
+     "end": 71.0
+    },
+    {
+     "title": "Talk time",
+     "start": 71.0,
+     "end": 76.5
+    },
+    {
+     "title": "Exit ticket, reflection and close",
+     "start": 76.5,
+     "end": 85.0
+    },
+    {
+     "title": "Buffer (floating time)",
+     "start": 85.0,
+     "end": 90.0
+    }
+   ],
+   "optional_slides": [
+    "p5l8-stretch",
+    "p5l8-stretch2",
+    "p5l8-gofurther",
+    "p5l8-gofurther2",
+    "p5l8-chdiag",
+    "p5l8-chwalk"
+   ]
+  },
+  "9": {
+   "parts": [
+    {
+     "title": "Opening",
+     "start": 0.0,
+     "end": 2.0
+    },
+    {
+     "title": "Sneak-peek puzzles",
+     "start": 2.0,
+     "end": 6.5
+    },
+    {
+     "title": "Warm-up",
+     "start": 6.5,
+     "end": 12.0
+    },
+    {
+     "title": "Explore",
+     "start": 12.0,
+     "end": 25.5
+    },
+    {
+     "title": "Mini-lesson",
+     "start": 25.5,
+     "end": 37.0
+    },
+    {
+     "title": "Brain break",
+     "start": 37.0,
+     "end": 41.0
+    },
+    {
+     "title": "Worksheet page 1 (pairs)",
+     "start": 41.0,
+     "end": 55.0
+    },
+    {
+     "title": "Check page 1",
+     "start": 55.0,
+     "end": 59.0
+    },
+    {
+     "title": "Short teaching before page 2",
+     "start": 59.0,
+     "end": 62.5
+    },
+    {
+     "title": "Worksheet page 2 (alone)",
+     "start": 62.5,
+     "end": 71.5
+    },
+    {
+     "title": "Check page 2",
+     "start": 71.5,
+     "end": 74.5
+    },
+    {
+     "title": "Talk time",
+     "start": 74.5,
+     "end": 80.0
+    },
+    {
+     "title": "Exit ticket, reflection and close",
+     "start": 80.0,
+     "end": 89.0
+    },
+    {
+     "title": "Buffer (floating time)",
+     "start": 89.0,
+     "end": 90.0
+    }
+   ],
+   "optional_slides": [
+    "p5l9-stretch",
+    "p5l9-gofurther",
+    "p5l9-gofurther2",
+    "p5l9-challenge",
+    "p5l9-chdiag",
+    "p5l9-chwalk"
+   ]
+  },
+  "10": {
+   "parts": [
+    {
+     "title": "Opening",
+     "start": 0.0,
+     "end": 2.0
+    },
+    {
+     "title": "Sneak-peek puzzles",
+     "start": 2.0,
+     "end": 6.5
+    },
+    {
+     "title": "Warm-up",
+     "start": 6.5,
+     "end": 13.0
+    },
+    {
+     "title": "Explore",
+     "start": 13.0,
+     "end": 27.5
+    },
+    {
+     "title": "Mini-lesson",
+     "start": 27.5,
+     "end": 38.0
+    },
+    {
+     "title": "Brain break",
+     "start": 38.0,
+     "end": 42.0
+    },
+    {
+     "title": "Worksheet page 1 (pairs)",
+     "start": 42.0,
+     "end": 55.5
+    },
+    {
+     "title": "Check page 1",
+     "start": 55.5,
+     "end": 58.5
+    },
+    {
+     "title": "Short teaching before page 2",
+     "start": 58.5,
+     "end": 60.5
+    },
+    {
+     "title": "Worksheet page 2 (alone)",
+     "start": 60.5,
+     "end": 68.0
+    },
+    {
+     "title": "Check page 2",
+     "start": 68.0,
+     "end": 71.0
+    },
+    {
+     "title": "Talk time",
+     "start": 71.0,
+     "end": 76.5
+    },
+    {
+     "title": "Exit ticket, reflection and close",
+     "start": 76.5,
+     "end": 87.0
+    },
+    {
+     "title": "Buffer (floating time)",
+     "start": 87.0,
+     "end": 90.0
+    }
+   ],
+   "optional_slides": [
+    "p5l10-stretch",
+    "p5l10-stretch2",
+    "p5l10-gofurther",
+    "p5l10-gofurther2",
+    "p5l10-challenge",
+    "p5l10-chdiag",
+    "p5l10-chwalk"
+   ]
+  }
+ }
+}

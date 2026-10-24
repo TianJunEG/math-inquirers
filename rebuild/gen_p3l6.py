@@ -113,26 +113,26 @@ for i,(sv,a) in enumerate(shapes):
     body+=pin(L,320,CW,f'<div style="display:flex;justify-content:center">{sv}</div>',None,WHITE,24,'20px 20px',f'box-sizing:border-box;border:4px solid {NAVY};box-shadow:8px 8px 0 {NAVY}')
     body+=pin(L,640,CW,f'<p style="font-size:44px;font-weight:800;text-align:center">{a}</p>','pop',YEL,20,'12px 18px','box-sizing:border-box')
 put('p3l6-warm1',sec('p3l6-warm1','0–5 MIN',body,
- 'Minutes 0 to 5. Fraction Flash. Point to one shape at a time. Children count the equal parts (bottom number) and the shaded parts (top number), write the fraction, hold it up, then click to reveal (clicks go left to right). '
+ 'Minutes 0 to 5. Fraction Flash. Point to one shape at a time. Children count the equal parts (bottom number) and the shaded parts (top number), write the fraction, say it together on three, then click to reveal (clicks go left to right). '
  'Answers: circle 3/8; rectangle 4/6, which is the same as 2/3 (the 4 shaded parts fill two of the three columns); hexagon 5/6; bar 7/10. '
  'Ask every time: "How do you know the parts are equal?" (same size triangles, same size squares). Ask: "What fraction is NOT shaded?" (5/8, 2/6, 1/6, 3/10).'))
 
 # ---------- 3. quick questions ----------
-qs=[('1.','How many quarters make one whole?','4'),('2.','Which is bigger: '+F(1,3)+' or '+F(1,5)+'?',F(1,3)),('3.',F(1,2)+' = '+F(BOX,10),'5'),('4.',F(2,9)+' + '+F(4,9),F(6,9)),('5.','1 − '+F(2,5),F(3,5))]
+qs=[('1.','How many quarters make one whole?','4'),('2.','Which is bigger: '+F(1,3)+' or '+F(1,5)+'?',F(1,3)),('3.',F(1,2)+' = '+F(BOX,10),'5')]
 body=h2('Quick questions')+''.join(qr(128,230+i*130,1250,a,b,34) for i,(a,b,c) in enumerate(qs))+''.join(aw(1420,230+i*130,372,c,'pop',34) for i,(a,b,c) in enumerate(qs))
 put('p3l6-warm2',sec('p3l6-warm2','5–10 MIN',body,
- 'Minutes 5 to 10. Whiteboards, then click. Ask for a reason each time. Answers: 1) 4.  2) 1/3: the whole is cut into fewer pieces, so each piece is bigger.  3) 5.  4) 6/9: we add the ninths; the bottom number stays 9.  5) 3/5: one whole is 5/5, and 5/5 − 2/5 = 3/5. '
+ 'Minutes 5 to 10. Whiteboards, then click. Ask for a reason each time. Answers: 1) 4.  2) 1/3: the whole is cut into fewer pieces, so each piece is bigger.  3) 5.  4) 6/9: we add the ninths; the bottom number stays 9.  Questions 4 and 5 are take-home (2/9 + 4/9 = 6/9; 1 − 2/5 = 3/5): ask only 1 to 3. '
  'Watch for children who write 6/18 for question 4: we come back to this mistake later.'))
 
 # ---------- 4. explore: what to do ----------
 mini=wall_svg([1,2,4,8],1400,52,None,24,0.5,'A fraction wall with one whole, halves, quarters and eighths and a dashed line at one half').replace('style="width:1400px;height:216px;display:block"','style="width:100%;height:auto;display:block"')
-steps_html='<ol style="font-size:32px;font-weight:600;padding-left:48px;display:flex;flex-direction:column;gap:6px">'+''.join(f'<li>{E(s)}</li>' for s in ['Take the 7 strips from the printed strip page (or 7 paper strips, all the same length).','Keep one whole. Use the strips for 2, 4, 8, 3, 6 and 12 equal parts (or fold or mark paper strips).','Label every part and stack the strips into a wall.','Ask: which pieces line up exactly?'])+'</ol>'
+steps_html='<ol style="font-size:32px;font-weight:600;padding-left:48px;display:flex;flex-direction:column;gap:6px">'+''.join(f'<li>{E(s)}</li>' for s in ['Take the 7 strips you cut out BEFORE the lesson (the printed strip page).','Keep one whole. Mark halves, quarters and eighths on three strips. The thirds, sixths and twelfths are already printed.','Label every part and stack the strips into a wall.','Ask: which pieces line up exactly?'])+'</ol>'
 body=h2('Explore: what to do')+card(chip('EXPLORE')+steps_html,extra='padding:22px 40px;gap:8px')+card(mini,extra='padding:16px 24px')
 put('p3l6-explore1',sec('p3l6-explore1','10–15 MIN',body,
- 'Minutes 10 to 15. Predict first: "Which is bigger, one sixth or one eighth of the same strip?" Pairs use the printed strips (online) or fold halves, quarters and eighths (face to face: fold in half again and again). For thirds, sixths and twelfths, mark every 8 cm, 4 cm and 2 cm on a 24 cm strip (or roll the strip into an S until the three parts match). '
+ 'Minutes 10 to 15. Predict first: "Which is bigger, one sixth or one eighth of the same strip?" Parents cut the printed strips out BEFORE the lesson (the one-week-before message says so), so nobody spends time finding or cutting strips. Pairs only MARK halves, quarters and eighths (fold in half again and again), then compare them with the printed thirds, sixths and twelfths (about 6.5 minutes of pair work). '
  'Children label every part (1/2, 1/4 …) and stack the strips. Stress: the parts in a row must be equal, or they are not halves, thirds … '
  'Hints: "Which pieces line up with the dashed line at one half?" Ready for more: "Find three different pieces that together cover exactly one half." (with three DIFFERENT pieces the only way is 1/4 + 1/6 + 1/12; 1/4 + 1/8 + 1/8 repeats a piece). '
- 'Online: children hold their wall up to the camera.'))
+ 'Online: children describe their wall aloud.'))
 
 # ---------- 5. explore: talk ----------
 body=h2('Explore: talk about it')+items([('1.','How many '+F(1,8)+' pieces fit exactly on '+F(1,2)+'?'),('2.','Which is bigger, '+F(1,6)+' or '+F(1,8)+'? Why?'),('3.','Can eighths cover '+F(1,3)+' exactly?')],40)
@@ -160,7 +160,7 @@ put('p3l6-we1',sec('p3l6-we1','26–28 MIN',body,
 # ---------- 8. try: equal fractions ----------
 put('p3l6-try1',try_raw('p3l6-try1','28–29 MIN','Your turn: equal fractions','What goes in the box? Use the wall or multiply.',
  [('a',F(1,3)+' = '+F(BOX,9),'3'),('b',F(3,5)+' = '+F(6,BOX),'10'),('c',F(5,6)+' = '+F(BOX,12),'10')],
- 'Whiteboards up together, then click. a) 3 × 3 = 9, so 1 × 3 = 3: 3/9 (ninths are not on our wall: multiplying works anyway). b) 3 × 2 = 6, so 5 × 2 = 10. c) 6 × 2 = 12, so 5 × 2 = 10. Ask a child to explain c with the wall.',38,165))
+ 'Write it, say the answer together on three, then click. a) 3 × 3 = 9, so 1 × 3 = 3: 3/9 (ninths are not on our wall: multiplying works anyway). b) 3 × 2 = 6, so 5 × 2 = 10. c) 6 × 2 = 12, so 5 × 2 = 10. Ask a child to explain c with the wall.',38,165))
 
 # ---------- 9. worked example: compare ----------
 bars2=(T(150,46,'5/6',34,TEAL)+bar(300,10,1340,56,12,[TEAL]*10,3,False)+T(150,126,'3/4',34,TEAL)+bar(300,90,1340,56,12,[YEL]*9,3,False))
@@ -191,9 +191,9 @@ put('p3l6-break',break_slide('p3l6-break','35–40 MIN','Fraction turns. “A qu
 
 # ---------- 13-14. worksheet page 1 ----------
 put('p3l6-ws1',ws_preview('p3l6-ws1','40–52 MIN','Worksheet page 1: with your partner',
- [('Q1','The fraction wall: fill in the equal fractions. What pattern do you see?'),('Q2','Compare with >, < or =, then put four fractions in order.')],
+ [('Q1','The fraction wall: fill in the equal fractions (a), (b) and (d). (c) is a ★ take-home question.'),('Q2','Compare with >, < or =, then put four fractions in order.')],
  'Stuck? Find both fractions on the wall. Which one reaches further?',
- 'Minutes 40 to 52. Walk around. Ask "Are the parts the same size? Which fraction did you change?" before giving any help. For Q2(g) suggest changing every fraction to twelfths.'))
+ 'Minutes 40 to 52. Walk around. Ask "Are the parts the same size? Which fraction did you change?" before giving any help. In Q1 do (a), (b) and (d) in class: Q1(c) is a take-home question (starred in the workbook). For Q2(g) suggest changing every fraction to twelfths.'))
 put('p3l6-ws1ans',check_raw('p3l6-ws1ans','52–54 MIN','Page 1: check together',
  [('Q1','(a) 2, 3, 4, 6   (b) 4, 8   (c) 6, 9   (d) the bottom is double the top'),('Q2','(a) &gt;   (b) &lt;   (c) =   (d) &gt;   (e) &lt;   (f) &lt;'),('Q2g',F(1,3)+',  '+F(5,12)+',  '+F(1,2)+',  '+F(3,4))],
  'Click after a pair explains. Q1(d): 1/2 = 2/4 = 3/6 = 4/8 = 6/12; the bottom number is always double the top (top and bottom multiplied by the same number). Q2: (d) 3/4 = 6/8; (e) same top number, sevenths are bigger than ninths; (f) 2/3 = 8/12 and 3/4 = 9/12. (g) In twelfths: 4/12, 5/12, 6/12, 9/12.',165,34))
@@ -210,44 +210,17 @@ put('p3l6-teachadd',sec('p3l6-teachadd','54–56 MIN',body,
  'Teach before worksheet page 2 (Q4 and Q5). Heuristic: DRAW A BAR. Click 1: the bar cut into sixths; the two teal parts are the third (the 1/3 label sits across both), the yellow part is the extra sixth. '
  'Think-aloud: "1/3 and 1/6 are different-sized parts, so I change 1/3 into sixths: 2/6. Now 2 sixths and 1 sixth make 3 sixths. The parts are still sixths, so the bottom number stays 6." '
  'Show the mistake: "Ben says 1/3 + 1/6 = 2/9. Is a ninth bigger or smaller than a sixth? He drank MORE than 1/3, but 2/9 is less than 1/3. So 2/9 cannot be right."'))
-put('p3l6-tryadd',try_raw('p3l6-tryadd','56–57 MIN','Your turn: add and subtract','Change one fraction first. Then add or take away the top numbers.',
- [('a',F(3,10)+' + '+F(1,5),F(5,10)+' = '+F(1,2)),('b',F(1,2)+' + '+F(3,8),F(7,8)),('c',F(7,9)+' − '+F(1,3),F(4,9))],
- 'Whiteboards. a) 1/5 = 2/10, 3/10 + 2/10 = 5/10 = 1/2. b) 1/2 = 4/8, 4/8 + 3/8 = 7/8. c) 1/3 = 3/9, 7/9 − 3/9 = 4/9. Check that nobody adds the bottom numbers.',38,165))
 
 # ---------- 17. teach: partners that make one whole ----------
-psv=svgwrap('A bar cut into 10 equal parts with 3 parts shaded',1664,100,bar(4,8,1656,84,10,[YEL]*3,4,True,26))
-body=h2('Partners that make one whole')+card(rp('Which fraction joins '+F(3,10)+' to make one whole?',38,700))
-body+=pin(128,400,1664,psv)
-body+=step(1,'One whole = '+F(10,10)+'.   '+F(10,10)+' − '+F(3,10)+' = '+F(7,10)+'  fills the gap.',top=540,size=32)
-body+=step(2,'Which joins '+F(2,5)+'? Change it first:  '+F(2,5)+' = '+F(4,10)+',  so the partner is  '+F(6,10)+'  (or '+F(3,5)+').',top=660,size=32)
-body+=pin(128,790,1664,p('A whole bar has no empty parts. The partner fills exactly the gap.',32,700),'fade',SOFT,20,'16px 30px')
-put('p3l6-teachpairs',sec('p3l6-teachpairs','57–58 MIN',body,
- 'Teach before worksheet page 2 (Q6, partner cards). Point at the bar: 3 tenths shaded, 7 tenths empty. Then step 2: the partner of 2/5 can be written as 6/10 or 3/5; both are right. '
- 'Tip for Q6: change each yellow card to the same parts as a blue card, or ask "what is missing to make a whole?" for each yellow card, then look for it among the blue cards (it may be written differently).'))
 
 # ---------- 18. teach: all the fractions between ----------
-nl=''
-x0,x1=60,1600; n=8; pw=(x1-x0)/n
-nl+=f'<line x1="{x0}" y1="60" x2="{x1}" y2="60" stroke="{NAVY}" stroke-width="5"/>'
-for i in range(n+1):
-    X=x0+i*pw; big=i in (2,6)
-    nl+=f'<line x1="{X:.1f}" y1="40" x2="{X:.1f}" y2="80" stroke="{NAVY}" stroke-width="4"/>'
-    nl+=f'<circle cx="{X:.1f}" cy="60" r="14" fill="{YEL}" stroke="{NAVY}" stroke-width="3"/>' if big else ''
-    nl+=sfr(X,122,i,8,28,TEAL if big else NAVY) if 0<i<8 else T(X,138,str(i//8),30)
-nlsv=svgwrap('A number line from 0 to 1 marked in 8 equal steps, with 2 eighths and 6 eighths circled',1664,170,nl)
-body=h2('Find ALL the fractions in between')+card(rp('Find all the fractions with bottom number 8 that are between '+F(1,4)+' and '+F(3,4)+'.',38,700))
-body+=pin(128,410,1664,nlsv)
-body+=step(1,'Change the ends to eighths:  '+F(1,4)+' = '+F(2,8)+',   '+F(3,4)+' = '+F(6,8),top=600,size=32)
-body+=step(2,'In between:  '+F(3,8)+',  '+F(4,8)+',  '+F(5,8)+'.  The ends are not “between”. So 3 fractions.',top=720,size=32)
-put('p3l6-teachbetween',sec('p3l6-teachbetween','58–59 MIN',body,
- 'Teach before page 2 (it also prepares Think harder 1). The number line is cut into 8 equal steps from 0 to 1. Click through. Stress: list them in order so none is missed, and do not count the end fractions. Ask: "Which of the three is the same as 1/2?" (4/8).'))
 
 SP='&nbsp;&nbsp;&nbsp;'
 # ---------- 19-20. worksheet page 2 ----------
 put('p3l6-ws2',ws_preview('p3l6-ws2','59–66 MIN','Worksheet page 2: on your own',
- [('Q3','Which shapes show one quarter? Count the equal parts.'),('Q4','Add and subtract: make the parts the same size first.'),('Q5','Ravi paints a fence: draw a bar.'),('Q6','Partner cards that make one whole.'),('TH','Think harder: ALL the twelfths between one half and three quarters.')],
+ [('Q3','Which shapes show one quarter? Count the equal parts.'),('Q4','Add and subtract: make the parts the same size first.'),('Q5','Ravi paints a fence: draw a bar.'),('Q6','★ Take-home: partner cards that make one whole.'),('TH','Think harder: ALL the twelfths between one half and three quarters.')],
  'Ready for more? Stretch and Challenge come next.',
- 'Children work alone. Note who needs a short catch-up next lesson. Watch for adding the bottom numbers in Q4 and Q5.'))
+ 'Children work alone. Note who needs a short catch-up next lesson. Watch for adding the bottom numbers in Q4 and Q5. Page 2 is Q4 and Q5 only (Q6 is take-home).'))
 put('p3l6-ws2ans',check_raw('p3l6-ws2ans','66–70 MIN','Page 2: check together',
  [('Q3','(a) A, B, D   (b) C: '+F(2,6)+' = '+F(1,3)+',  E: '+F(3,8)),
   ('Q4',(SP).join(['(a) '+F(5,7),'(b) '+F(5,8),'(c) '+F(9,12)+' = '+F(3,4),'(d) '+F(3,6)+' = '+F(1,2),'(e) '+F(7,10),'(f) '+F(8,10)+' = '+F(4,5)])),
@@ -260,7 +233,7 @@ put('p3l6-ws2ans',check_raw('p3l6-ws2ans','66–70 MIN','Page 2: check together'
 # ---------- 21. stretch (new items) ----------
 body=h2('Stretch')+items([('1.',F(1,3)+' + '+BOX+' = '+F(5,6)+'.  What goes in the box?'),('2.','Put in order, smallest first:  '+F(1,2)+',  '+F(2,5)+',  '+F(7,10)),('3.','Find all the fractions with bottom number 10 between '+F(1,5)+' and '+F(1,2)+'.')],36)
 put('p3l6-stretch',sec('p3l6-stretch','For early finishers',body,
- 'For children who finish early. Answers: 1) 1/2, or 3/6 (1/3 = 2/6, and 5/6 − 2/6 = 3/6). 2) 2/5, 1/2, 7/10 (4/10, 5/10, 7/10). 3) 3/10 and 4/10 (1/5 = 2/10 and 1/2 = 5/10; the ends do not count).'))
+ 'SUPPORT FOR THINK HARDER 1 (this replaces the old teach-between slide; show it only to a pair who chooses Think harder): the number line is cut into 8 equal steps from 0 to 1. Change the ends to eighths: 1/4 = 2/8 and 3/4 = 6/8. In between: 3/8, 4/8, 5/8, so 3 fractions; list them in order and do not count the end fractions. Which of the three is the same as 1/2? (4/8). Answers: 1) 1/2, or 3/6 (1/3 = 2/6, and 5/6 − 2/6 = 3/6). 2) 2/5, 1/2, 7/10 (4/10, 5/10, 7/10). 3) 3/10 and 4/10 (1/5 = 2/10 and 1/2 = 5/10; the ends do not count).'))
 
 # ---------- 22. challenge ----------
 body=h2('Challenge')+items([('1.','Fill one whole bar using exactly 5 pieces. You may use '+F(1,2)+', '+F(1,4)+' and '+F(1,8)+' pieces, as many of each as you like. Find all the ways.'),('2.','Find a fraction that is bigger than '+F(2,3)+' but smaller than '+F(3,4)+'. Hint: cut every part into smaller equal parts. Can you find another one?')],34)
@@ -304,7 +277,7 @@ put('p3l6-talk',sec('p3l6-talk','70–80 MIN',body,
  'Answer: The same whole is cut into more pieces, so each eighth is smaller than each sixth. 1/3 + 1/3 is two thirds; the pieces are still thirds, so we add only the top numbers (2/6 is just 1/3). Praise the reasons, not only the answers.'))
 
 # ---------- 26. exit ----------
-body=h2('Exit ticket')+card(chip('EXIT TICKET')+rp('Ali says  '+F(1,4)+' + '+F(1,8)+' = '+F(2,12)+'.  Is he right? Write the correct answer and show how you know.',44))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
+body=h2('Exit ticket')+card(chip('EXIT TICKET')+rp('Ali says  '+F(1,4)+' + '+F(1,8)+' = '+F(2,12)+'.  Is he right? Write the correct answer and show how you know.',44))+card(p('Write your answer on a slip of paper. Tick it when your tutor shows the answer. Then collect your stamp in your inquiry journal.',34,400))
 put('p3l6-exit',sec('p3l6-exit','80–90 MIN',body,
  'Minutes 80 to 90. Answer: No. 1/4 = 2/8, so 1/4 + 1/8 = 2/8 + 1/8 = 3/8. We add the parts, not the bottom numbers. Extension: How many different ways can you fill one whole bar using 1/2, 1/4 and 1/8 pieces, as many of each as you like? (9 ways.)'))
 

@@ -1,0 +1,730 @@
+[
+ {
+  "tag": "01_parent_signup",
+  "caption": "Parent sign-up (account tab). The agreements come after sign-in, on the home page.",
+  "w": 375,
+  "scheme": "light",
+  "file": "01_parent_signup_375_light.png"
+ },
+ {
+  "tag": "02_home_online_family",
+  "caption": "Home after sign-up: next step, children, agreements card for an ONLINE / extension-book family (no recording agreements), nothing pre-ticked.",
+  "w": 375,
+  "scheme": "light",
+  "file": "02_home_online_family_375_light.png"
+ },
+ {
+  "tag": "02a_consent_card_online",
+  "caption": "Agreements card, family type \"Online practice or an extension book\": contact, terms, online practice, book delivery, optional marketing and feedback.",
+  "w": 375,
+  "scheme": "light",
+  "file": "02a_consent_card_online_375_light.png"
+ },
+ {
+  "tag": "02b_consent_card_live",
+  "caption": "Agreements card, family type \"A live group class\": contact, terms, recording, child's work; online practice is offered separately; optional lines.",
+  "w": 375,
+  "scheme": "light",
+  "file": "02b_consent_card_live_375_light.png"
+ },
+ {
+  "tag": "02c_consent_card_both",
+  "caption": "Agreements card, family type \"Both\": every agreement line appears; optional ones stay un-ticked.",
+  "w": 375,
+  "scheme": "light",
+  "file": "02c_consent_card_both_375_light.png"
+ },
+ {
+  "tag": "03_add_child",
+  "caption": "Add a child (first child, no enrolment needed): nickname, optional birth year, level, PIN.",
+  "w": 375,
+  "scheme": "light",
+  "file": "03_add_child_375_light.png"
+ },
+ {
+  "tag": "04_my_children_empty",
+  "caption": "My children: two children, nothing open yet (kind empty state, no scores).",
+  "w": 375,
+  "scheme": "light",
+  "file": "04_my_children_empty_375_light.png"
+ },
+ {
+  "tag": "05_buy_form_workbook",
+  "caption": "Buy an extension book: level, option with prices, child, Singapore address (printed options only), agreements for this order.",
+  "w": 375,
+  "scheme": "light",
+  "file": "05_buy_form_workbook_375_light.png"
+ },
+ {
+  "tag": "06_buy_no_price",
+  "caption": "Buy flow when the owner has not set a price: \"Price coming soon\" and an Ask us button, no order button.",
+  "w": 375,
+  "scheme": "light",
+  "file": "06_buy_no_price_375_light.png"
+ },
+ {
+  "tag": "07_order_pending",
+  "caption": "Order placed: pending payment page with PayNow reference, how it is switched on, quiet parent-only trial-class note.",
+  "w": 375,
+  "scheme": "light",
+  "file": "07_order_pending_375_light.png"
+ },
+ {
+  "tag": "07a_orders_list",
+  "caption": "Your orders list: one order \"waiting for payment\" with Cancel.",
+  "w": 375,
+  "scheme": "light",
+  "file": "07a_orders_list_375_light.png"
+ },
+ {
+  "tag": "08_child_signin",
+  "caption": "Child sign-in: family code, name, PIN. Friendly, one purpose.",
+  "w": 375,
+  "scheme": "light",
+  "file": "08_child_signin_375_light.png"
+ },
+ {
+  "tag": "09_child_signin_error",
+  "caption": "Child sign-in, wrong PIN: the same quiet message whatever was wrong.",
+  "w": 375,
+  "scheme": "light",
+  "file": "09_child_signin_error_375_light.png"
+ },
+ {
+  "tag": "10a_practice_list_unpaid",
+  "caption": "Practice list before payment: nothing open yet, asks the child to ask a grown-up.",
+  "w": 375,
+  "scheme": "light",
+  "file": "10a_practice_list_unpaid_375_light.png"
+ },
+ {
+  "tag": "11_admin_book_orders",
+  "caption": "Admin, Book orders tab: the pending order with Mark paid and give access / Cancel.",
+  "w": 375,
+  "scheme": "light",
+  "file": "11_admin_book_orders_375_light.png"
+ },
+ {
+  "tag": "12_admin_prices",
+  "caption": "Admin, owner price entry (no prices in the repo; empty rows say \"not set\").",
+  "w": 375,
+  "scheme": "light",
+  "file": "12_admin_prices_375_light.png"
+ },
+ {
+  "tag": "13_admin_access",
+  "caption": "Admin, Access tab: who has which book access, grant and revoke with a reason.",
+  "w": 375,
+  "scheme": "light",
+  "file": "13_admin_access_375_light.png"
+ },
+ {
+  "tag": "10_practice_list",
+  "caption": "Child practice list after payment: only entitled, published units, plain links, no scores or timers.",
+  "w": 375,
+  "scheme": "light",
+  "file": "10_practice_list_375_light.png"
+ },
+ {
+  "tag": "14_my_children_progress",
+  "caption": "My children with an entitlement, practice links and the progress summary opened to \"Worth looking at together\" (no marks, no ranks).",
+  "w": 375,
+  "scheme": "light",
+  "file": "14_my_children_progress_375_light.png"
+ },
+ {
+  "tag": "15_trial_request",
+  "caption": "Ask about a trial class: parent-only, no scarcity wording, optional marketing agreement un-ticked.",
+  "w": 375,
+  "scheme": "light",
+  "file": "15_trial_request_375_light.png"
+ },
+ {
+  "tag": "16_trial_sent",
+  "caption": "Trial request sent: thank-you and the request list with Withdraw.",
+  "w": 375,
+  "scheme": "light",
+  "file": "16_trial_sent_375_light.png"
+ },
+ {
+  "tag": "17_admin_trials_previews",
+  "caption": "Admin, Trials and previews: trial requests with status buttons, preview sign-ups, funnel.",
+  "w": 375,
+  "scheme": "light",
+  "file": "17_admin_trials_previews_375_light.png"
+ },
+ {
+  "tag": "18_admin_funnel",
+  "caption": "Admin, Funnel: counts of rows that already exist (no cookies, no tracking).",
+  "w": 375,
+  "scheme": "light",
+  "file": "18_admin_funnel_375_light.png"
+ },
+ {
+  "tag": "19_admin_group_report",
+  "caption": "Admin / tutor, Group report: skills in words, children alphabetical (never ranked), common misconceptions.",
+  "w": 375,
+  "scheme": "light",
+  "file": "19_admin_group_report_375_light.png"
+ },
+ {
+  "tag": "20_admin_enrolments",
+  "caption": "Admin, Enrolments tab (existing screen).",
+  "w": 375,
+  "scheme": "light",
+  "file": "20_admin_enrolments_375_light.png"
+ },
+ {
+  "tag": "21_home_live_family",
+  "caption": "Home for a LIVE-group family: agreements for live classes, choose a group, reserve a place.",
+  "w": 375,
+  "scheme": "light",
+  "file": "21_home_live_family_375_light.png"
+ },
+ {
+  "tag": "01_parent_signup",
+  "caption": "Parent sign-up (account tab). The agreements come after sign-in, on the home page.",
+  "w": 1100,
+  "scheme": "light",
+  "file": "01_parent_signup_1100_light.png"
+ },
+ {
+  "tag": "02_home_online_family",
+  "caption": "Home after sign-up: next step, children, agreements card for an ONLINE / extension-book family (no recording agreements), nothing pre-ticked.",
+  "w": 1100,
+  "scheme": "light",
+  "file": "02_home_online_family_1100_light.png"
+ },
+ {
+  "tag": "02a_consent_card_online",
+  "caption": "Agreements card, family type \"Online practice or an extension book\": contact, terms, online practice, book delivery, optional marketing and feedback.",
+  "w": 1100,
+  "scheme": "light",
+  "file": "02a_consent_card_online_1100_light.png"
+ },
+ {
+  "tag": "02b_consent_card_live",
+  "caption": "Agreements card, family type \"A live group class\": contact, terms, recording, child's work; online practice is offered separately; optional lines.",
+  "w": 1100,
+  "scheme": "light",
+  "file": "02b_consent_card_live_1100_light.png"
+ },
+ {
+  "tag": "02c_consent_card_both",
+  "caption": "Agreements card, family type \"Both\": every agreement line appears; optional ones stay un-ticked.",
+  "w": 1100,
+  "scheme": "light",
+  "file": "02c_consent_card_both_1100_light.png"
+ },
+ {
+  "tag": "03_add_child",
+  "caption": "Add a child (first child, no enrolment needed): nickname, optional birth year, level, PIN.",
+  "w": 1100,
+  "scheme": "light",
+  "file": "03_add_child_1100_light.png"
+ },
+ {
+  "tag": "04_my_children_empty",
+  "caption": "My children: two children, nothing open yet (kind empty state, no scores).",
+  "w": 1100,
+  "scheme": "light",
+  "file": "04_my_children_empty_1100_light.png"
+ },
+ {
+  "tag": "05_buy_form_workbook",
+  "caption": "Buy an extension book: level, option with prices, child, Singapore address (printed options only), agreements for this order.",
+  "w": 1100,
+  "scheme": "light",
+  "file": "05_buy_form_workbook_1100_light.png"
+ },
+ {
+  "tag": "06_buy_no_price",
+  "caption": "Buy flow when the owner has not set a price: \"Price coming soon\" and an Ask us button, no order button.",
+  "w": 1100,
+  "scheme": "light",
+  "file": "06_buy_no_price_1100_light.png"
+ },
+ {
+  "tag": "07_order_pending",
+  "caption": "Order placed: pending payment page with PayNow reference, how it is switched on, quiet parent-only trial-class note.",
+  "w": 1100,
+  "scheme": "light",
+  "file": "07_order_pending_1100_light.png"
+ },
+ {
+  "tag": "07a_orders_list",
+  "caption": "Your orders list: one order \"waiting for payment\" with Cancel.",
+  "w": 1100,
+  "scheme": "light",
+  "file": "07a_orders_list_1100_light.png"
+ },
+ {
+  "tag": "08_child_signin",
+  "caption": "Child sign-in: family code, name, PIN. Friendly, one purpose.",
+  "w": 1100,
+  "scheme": "light",
+  "file": "08_child_signin_1100_light.png"
+ },
+ {
+  "tag": "09_child_signin_error",
+  "caption": "Child sign-in, wrong PIN: the same quiet message whatever was wrong.",
+  "w": 1100,
+  "scheme": "light",
+  "file": "09_child_signin_error_1100_light.png"
+ },
+ {
+  "tag": "10a_practice_list_unpaid",
+  "caption": "Practice list before payment: nothing open yet, asks the child to ask a grown-up.",
+  "w": 1100,
+  "scheme": "light",
+  "file": "10a_practice_list_unpaid_1100_light.png"
+ },
+ {
+  "tag": "11_admin_book_orders",
+  "caption": "Admin, Book orders tab: the pending order with Mark paid and give access / Cancel.",
+  "w": 1100,
+  "scheme": "light",
+  "file": "11_admin_book_orders_1100_light.png"
+ },
+ {
+  "tag": "12_admin_prices",
+  "caption": "Admin, owner price entry (no prices in the repo; empty rows say \"not set\").",
+  "w": 1100,
+  "scheme": "light",
+  "file": "12_admin_prices_1100_light.png"
+ },
+ {
+  "tag": "13_admin_access",
+  "caption": "Admin, Access tab: who has which book access, grant and revoke with a reason.",
+  "w": 1100,
+  "scheme": "light",
+  "file": "13_admin_access_1100_light.png"
+ },
+ {
+  "tag": "10_practice_list",
+  "caption": "Child practice list after payment: only entitled, published units, plain links, no scores or timers.",
+  "w": 1100,
+  "scheme": "light",
+  "file": "10_practice_list_1100_light.png"
+ },
+ {
+  "tag": "14_my_children_progress",
+  "caption": "My children with an entitlement, practice links and the progress summary opened to \"Worth looking at together\" (no marks, no ranks).",
+  "w": 1100,
+  "scheme": "light",
+  "file": "14_my_children_progress_1100_light.png"
+ },
+ {
+  "tag": "15_trial_request",
+  "caption": "Ask about a trial class: parent-only, no scarcity wording, optional marketing agreement un-ticked.",
+  "w": 1100,
+  "scheme": "light",
+  "file": "15_trial_request_1100_light.png"
+ },
+ {
+  "tag": "16_trial_sent",
+  "caption": "Trial request sent: thank-you and the request list with Withdraw.",
+  "w": 1100,
+  "scheme": "light",
+  "file": "16_trial_sent_1100_light.png"
+ },
+ {
+  "tag": "17_admin_trials_previews",
+  "caption": "Admin, Trials and previews: trial requests with status buttons, preview sign-ups, funnel.",
+  "w": 1100,
+  "scheme": "light",
+  "file": "17_admin_trials_previews_1100_light.png"
+ },
+ {
+  "tag": "18_admin_funnel",
+  "caption": "Admin, Funnel: counts of rows that already exist (no cookies, no tracking).",
+  "w": 1100,
+  "scheme": "light",
+  "file": "18_admin_funnel_1100_light.png"
+ },
+ {
+  "tag": "19_admin_group_report",
+  "caption": "Admin / tutor, Group report: skills in words, children alphabetical (never ranked), common misconceptions.",
+  "w": 1100,
+  "scheme": "light",
+  "file": "19_admin_group_report_1100_light.png"
+ },
+ {
+  "tag": "20_admin_enrolments",
+  "caption": "Admin, Enrolments tab (existing screen).",
+  "w": 1100,
+  "scheme": "light",
+  "file": "20_admin_enrolments_1100_light.png"
+ },
+ {
+  "tag": "21_home_live_family",
+  "caption": "Home for a LIVE-group family: agreements for live classes, choose a group, reserve a place.",
+  "w": 1100,
+  "scheme": "light",
+  "file": "21_home_live_family_1100_light.png"
+ },
+ {
+  "tag": "01_parent_signup",
+  "caption": "Parent sign-up (account tab). The agreements come after sign-in, on the home page.",
+  "w": 375,
+  "scheme": "dark",
+  "file": "01_parent_signup_375_dark.png"
+ },
+ {
+  "tag": "02_home_online_family",
+  "caption": "Home after sign-up: next step, children, agreements card for an ONLINE / extension-book family (no recording agreements), nothing pre-ticked.",
+  "w": 375,
+  "scheme": "dark",
+  "file": "02_home_online_family_375_dark.png"
+ },
+ {
+  "tag": "02a_consent_card_online",
+  "caption": "Agreements card, family type \"Online practice or an extension book\": contact, terms, online practice, book delivery, optional marketing and feedback.",
+  "w": 375,
+  "scheme": "dark",
+  "file": "02a_consent_card_online_375_dark.png"
+ },
+ {
+  "tag": "02b_consent_card_live",
+  "caption": "Agreements card, family type \"A live group class\": contact, terms, recording, child's work; online practice is offered separately; optional lines.",
+  "w": 375,
+  "scheme": "dark",
+  "file": "02b_consent_card_live_375_dark.png"
+ },
+ {
+  "tag": "02c_consent_card_both",
+  "caption": "Agreements card, family type \"Both\": every agreement line appears; optional ones stay un-ticked.",
+  "w": 375,
+  "scheme": "dark",
+  "file": "02c_consent_card_both_375_dark.png"
+ },
+ {
+  "tag": "03_add_child",
+  "caption": "Add a child (first child, no enrolment needed): nickname, optional birth year, level, PIN.",
+  "w": 375,
+  "scheme": "dark",
+  "file": "03_add_child_375_dark.png"
+ },
+ {
+  "tag": "04_my_children_empty",
+  "caption": "My children: two children, nothing open yet (kind empty state, no scores).",
+  "w": 375,
+  "scheme": "dark",
+  "file": "04_my_children_empty_375_dark.png"
+ },
+ {
+  "tag": "05_buy_form_workbook",
+  "caption": "Buy an extension book: level, option with prices, child, Singapore address (printed options only), agreements for this order.",
+  "w": 375,
+  "scheme": "dark",
+  "file": "05_buy_form_workbook_375_dark.png"
+ },
+ {
+  "tag": "06_buy_no_price",
+  "caption": "Buy flow when the owner has not set a price: \"Price coming soon\" and an Ask us button, no order button.",
+  "w": 375,
+  "scheme": "dark",
+  "file": "06_buy_no_price_375_dark.png"
+ },
+ {
+  "tag": "07_order_pending",
+  "caption": "Order placed: pending payment page with PayNow reference, how it is switched on, quiet parent-only trial-class note.",
+  "w": 375,
+  "scheme": "dark",
+  "file": "07_order_pending_375_dark.png"
+ },
+ {
+  "tag": "07a_orders_list",
+  "caption": "Your orders list: one order \"waiting for payment\" with Cancel.",
+  "w": 375,
+  "scheme": "dark",
+  "file": "07a_orders_list_375_dark.png"
+ },
+ {
+  "tag": "08_child_signin",
+  "caption": "Child sign-in: family code, name, PIN. Friendly, one purpose.",
+  "w": 375,
+  "scheme": "dark",
+  "file": "08_child_signin_375_dark.png"
+ },
+ {
+  "tag": "09_child_signin_error",
+  "caption": "Child sign-in, wrong PIN: the same quiet message whatever was wrong.",
+  "w": 375,
+  "scheme": "dark",
+  "file": "09_child_signin_error_375_dark.png"
+ },
+ {
+  "tag": "10a_practice_list_unpaid",
+  "caption": "Practice list before payment: nothing open yet, asks the child to ask a grown-up.",
+  "w": 375,
+  "scheme": "dark",
+  "file": "10a_practice_list_unpaid_375_dark.png"
+ },
+ {
+  "tag": "11_admin_book_orders",
+  "caption": "Admin, Book orders tab: the pending order with Mark paid and give access / Cancel.",
+  "w": 375,
+  "scheme": "dark",
+  "file": "11_admin_book_orders_375_dark.png"
+ },
+ {
+  "tag": "12_admin_prices",
+  "caption": "Admin, owner price entry (no prices in the repo; empty rows say \"not set\").",
+  "w": 375,
+  "scheme": "dark",
+  "file": "12_admin_prices_375_dark.png"
+ },
+ {
+  "tag": "13_admin_access",
+  "caption": "Admin, Access tab: who has which book access, grant and revoke with a reason.",
+  "w": 375,
+  "scheme": "dark",
+  "file": "13_admin_access_375_dark.png"
+ },
+ {
+  "tag": "10_practice_list",
+  "caption": "Child practice list after payment: only entitled, published units, plain links, no scores or timers.",
+  "w": 375,
+  "scheme": "dark",
+  "file": "10_practice_list_375_dark.png"
+ },
+ {
+  "tag": "14_my_children_progress",
+  "caption": "My children with an entitlement, practice links and the progress summary opened to \"Worth looking at together\" (no marks, no ranks).",
+  "w": 375,
+  "scheme": "dark",
+  "file": "14_my_children_progress_375_dark.png"
+ },
+ {
+  "tag": "15_trial_request",
+  "caption": "Ask about a trial class: parent-only, no scarcity wording, optional marketing agreement un-ticked.",
+  "w": 375,
+  "scheme": "dark",
+  "file": "15_trial_request_375_dark.png"
+ },
+ {
+  "tag": "16_trial_sent",
+  "caption": "Trial request sent: thank-you and the request list with Withdraw.",
+  "w": 375,
+  "scheme": "dark",
+  "file": "16_trial_sent_375_dark.png"
+ },
+ {
+  "tag": "17_admin_trials_previews",
+  "caption": "Admin, Trials and previews: trial requests with status buttons, preview sign-ups, funnel.",
+  "w": 375,
+  "scheme": "dark",
+  "file": "17_admin_trials_previews_375_dark.png"
+ },
+ {
+  "tag": "18_admin_funnel",
+  "caption": "Admin, Funnel: counts of rows that already exist (no cookies, no tracking).",
+  "w": 375,
+  "scheme": "dark",
+  "file": "18_admin_funnel_375_dark.png"
+ },
+ {
+  "tag": "19_admin_group_report",
+  "caption": "Admin / tutor, Group report: skills in words, children alphabetical (never ranked), common misconceptions.",
+  "w": 375,
+  "scheme": "dark",
+  "file": "19_admin_group_report_375_dark.png"
+ },
+ {
+  "tag": "20_admin_enrolments",
+  "caption": "Admin, Enrolments tab (existing screen).",
+  "w": 375,
+  "scheme": "dark",
+  "file": "20_admin_enrolments_375_dark.png"
+ },
+ {
+  "tag": "21_home_live_family",
+  "caption": "Home for a LIVE-group family: agreements for live classes, choose a group, reserve a place.",
+  "w": 375,
+  "scheme": "dark",
+  "file": "21_home_live_family_375_dark.png"
+ },
+ {
+  "tag": "01_parent_signup",
+  "caption": "Parent sign-up (account tab). The agreements come after sign-in, on the home page.",
+  "w": 1100,
+  "scheme": "dark",
+  "file": "01_parent_signup_1100_dark.png"
+ },
+ {
+  "tag": "02_home_online_family",
+  "caption": "Home after sign-up: next step, children, agreements card for an ONLINE / extension-book family (no recording agreements), nothing pre-ticked.",
+  "w": 1100,
+  "scheme": "dark",
+  "file": "02_home_online_family_1100_dark.png"
+ },
+ {
+  "tag": "02a_consent_card_online",
+  "caption": "Agreements card, family type \"Online practice or an extension book\": contact, terms, online practice, book delivery, optional marketing and feedback.",
+  "w": 1100,
+  "scheme": "dark",
+  "file": "02a_consent_card_online_1100_dark.png"
+ },
+ {
+  "tag": "02b_consent_card_live",
+  "caption": "Agreements card, family type \"A live group class\": contact, terms, recording, child's work; online practice is offered separately; optional lines.",
+  "w": 1100,
+  "scheme": "dark",
+  "file": "02b_consent_card_live_1100_dark.png"
+ },
+ {
+  "tag": "02c_consent_card_both",
+  "caption": "Agreements card, family type \"Both\": every agreement line appears; optional ones stay un-ticked.",
+  "w": 1100,
+  "scheme": "dark",
+  "file": "02c_consent_card_both_1100_dark.png"
+ },
+ {
+  "tag": "03_add_child",
+  "caption": "Add a child (first child, no enrolment needed): nickname, optional birth year, level, PIN.",
+  "w": 1100,
+  "scheme": "dark",
+  "file": "03_add_child_1100_dark.png"
+ },
+ {
+  "tag": "04_my_children_empty",
+  "caption": "My children: two children, nothing open yet (kind empty state, no scores).",
+  "w": 1100,
+  "scheme": "dark",
+  "file": "04_my_children_empty_1100_dark.png"
+ },
+ {
+  "tag": "05_buy_form_workbook",
+  "caption": "Buy an extension book: level, option with prices, child, Singapore address (printed options only), agreements for this order.",
+  "w": 1100,
+  "scheme": "dark",
+  "file": "05_buy_form_workbook_1100_dark.png"
+ },
+ {
+  "tag": "06_buy_no_price",
+  "caption": "Buy flow when the owner has not set a price: \"Price coming soon\" and an Ask us button, no order button.",
+  "w": 1100,
+  "scheme": "dark",
+  "file": "06_buy_no_price_1100_dark.png"
+ },
+ {
+  "tag": "07_order_pending",
+  "caption": "Order placed: pending payment page with PayNow reference, how it is switched on, quiet parent-only trial-class note.",
+  "w": 1100,
+  "scheme": "dark",
+  "file": "07_order_pending_1100_dark.png"
+ },
+ {
+  "tag": "07a_orders_list",
+  "caption": "Your orders list: one order \"waiting for payment\" with Cancel.",
+  "w": 1100,
+  "scheme": "dark",
+  "file": "07a_orders_list_1100_dark.png"
+ },
+ {
+  "tag": "08_child_signin",
+  "caption": "Child sign-in: family code, name, PIN. Friendly, one purpose.",
+  "w": 1100,
+  "scheme": "dark",
+  "file": "08_child_signin_1100_dark.png"
+ },
+ {
+  "tag": "09_child_signin_error",
+  "caption": "Child sign-in, wrong PIN: the same quiet message whatever was wrong.",
+  "w": 1100,
+  "scheme": "dark",
+  "file": "09_child_signin_error_1100_dark.png"
+ },
+ {
+  "tag": "10a_practice_list_unpaid",
+  "caption": "Practice list before payment: nothing open yet, asks the child to ask a grown-up.",
+  "w": 1100,
+  "scheme": "dark",
+  "file": "10a_practice_list_unpaid_1100_dark.png"
+ },
+ {
+  "tag": "11_admin_book_orders",
+  "caption": "Admin, Book orders tab: the pending order with Mark paid and give access / Cancel.",
+  "w": 1100,
+  "scheme": "dark",
+  "file": "11_admin_book_orders_1100_dark.png"
+ },
+ {
+  "tag": "12_admin_prices",
+  "caption": "Admin, owner price entry (no prices in the repo; empty rows say \"not set\").",
+  "w": 1100,
+  "scheme": "dark",
+  "file": "12_admin_prices_1100_dark.png"
+ },
+ {
+  "tag": "13_admin_access",
+  "caption": "Admin, Access tab: who has which book access, grant and revoke with a reason.",
+  "w": 1100,
+  "scheme": "dark",
+  "file": "13_admin_access_1100_dark.png"
+ },
+ {
+  "tag": "10_practice_list",
+  "caption": "Child practice list after payment: only entitled, published units, plain links, no scores or timers.",
+  "w": 1100,
+  "scheme": "dark",
+  "file": "10_practice_list_1100_dark.png"
+ },
+ {
+  "tag": "14_my_children_progress",
+  "caption": "My children with an entitlement, practice links and the progress summary opened to \"Worth looking at together\" (no marks, no ranks).",
+  "w": 1100,
+  "scheme": "dark",
+  "file": "14_my_children_progress_1100_dark.png"
+ },
+ {
+  "tag": "15_trial_request",
+  "caption": "Ask about a trial class: parent-only, no scarcity wording, optional marketing agreement un-ticked.",
+  "w": 1100,
+  "scheme": "dark",
+  "file": "15_trial_request_1100_dark.png"
+ },
+ {
+  "tag": "16_trial_sent",
+  "caption": "Trial request sent: thank-you and the request list with Withdraw.",
+  "w": 1100,
+  "scheme": "dark",
+  "file": "16_trial_sent_1100_dark.png"
+ },
+ {
+  "tag": "17_admin_trials_previews",
+  "caption": "Admin, Trials and previews: trial requests with status buttons, preview sign-ups, funnel.",
+  "w": 1100,
+  "scheme": "dark",
+  "file": "17_admin_trials_previews_1100_dark.png"
+ },
+ {
+  "tag": "18_admin_funnel",
+  "caption": "Admin, Funnel: counts of rows that already exist (no cookies, no tracking).",
+  "w": 1100,
+  "scheme": "dark",
+  "file": "18_admin_funnel_1100_dark.png"
+ },
+ {
+  "tag": "19_admin_group_report",
+  "caption": "Admin / tutor, Group report: skills in words, children alphabetical (never ranked), common misconceptions.",
+  "w": 1100,
+  "scheme": "dark",
+  "file": "19_admin_group_report_1100_dark.png"
+ },
+ {
+  "tag": "20_admin_enrolments",
+  "caption": "Admin, Enrolments tab (existing screen).",
+  "w": 1100,
+  "scheme": "dark",
+  "file": "20_admin_enrolments_1100_dark.png"
+ },
+ {
+  "tag": "21_home_live_family",
+  "caption": "Home for a LIVE-group family: agreements for live classes, choose a group, reserve a place.",
+  "w": 1100,
+  "scheme": "dark",
+  "file": "21_home_live_family_1100_dark.png"
+ }
+]

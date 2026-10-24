@@ -1,0 +1,115 @@
+{
+ "note": "Reserved cohorts: held in the calendar, not published. Release one for a level when its group is full (8 children). Re-derived with 15-minute breaks between classes and a 60-minute lunch (12:15-1:15pm on Wed/Thu). R4 avoids Sunday morning (church) and Level 6 Saturday evening. Updated 23 Oct 2026 (owner answers 15 and 16): R1-R3 week-5 lessons move from Thu 24 Dec to Wed 23 Dec at the same times; Sunday 2:00pm is not available, so the old R4 (Sat 9:00 + Sun 2:00pm) is withdrawn and replaced by the PROPOSED R4B (Sat 9:00-10:30am + Sun 6:00-7:30pm), to be confirmed by the owner.",
+ "reserved": [
+  {
+   "id": "R1",
+   "pair": [
+    [
+     "Wed",
+     "09:00",
+     "10:30"
+    ],
+    [
+     "Thu",
+     "09:00",
+     "10:30"
+    ]
+   ],
+   "for_levels": [
+    1,
+    2
+   ],
+   "week5": {
+    "thu_24_dec_lesson_moves_to": [
+     "Wed",
+     "09:00",
+     "10:30"
+    ],
+    "date": "2026-12-23",
+    "decision": "owner, 23 Oct 2026",
+    "open_point": "the Wednesday lesson of week 5 is also Wed 23 Dec at this time, so both week-5 lessons now share one slot; the owner must choose a different time or day for one of them"
+   }
+  },
+  {
+   "id": "R2",
+   "pair": [
+    [
+     "Wed",
+     "10:45",
+     "12:15"
+    ],
+    [
+     "Thu",
+     "10:45",
+     "12:15"
+    ]
+   ],
+   "for_levels": [
+    1,
+    2,
+    3
+   ],
+   "week5": {
+    "thu_24_dec_lesson_moves_to": [
+     "Wed",
+     "10:45",
+     "12:15"
+    ],
+    "date": "2026-12-23",
+    "decision": "owner, 23 Oct 2026",
+    "open_point": "the Wednesday lesson of week 5 is also Wed 23 Dec at this time, so both week-5 lessons now share one slot; the owner must choose a different time or day for one of them"
+   }
+  },
+  {
+   "id": "R3",
+   "pair": [
+    [
+     "Wed",
+     "13:15",
+     "14:45"
+    ],
+    [
+     "Thu",
+     "13:15",
+     "14:45"
+    ]
+   ],
+   "for_levels": [
+    3,
+    4
+   ],
+   "week5": {
+    "thu_24_dec_lesson_moves_to": [
+     "Wed",
+     "13:15",
+     "14:45"
+    ],
+    "date": "2026-12-23",
+    "decision": "owner, 23 Oct 2026",
+    "open_point": "the Wednesday lesson of week 5 is also Wed 23 Dec at this time, so both week-5 lessons now share one slot; the owner must choose a different time or day for one of them"
+   }
+  },
+  {
+   "id": "R4B",
+   "status": "PROPOSED, not confirmed by the owner",
+   "replaces": "R4 (Sat 9:00-10:30am + Sun 2:00-3:30pm), withdrawn because Sunday 2:00pm is not available",
+   "pair": [
+    [
+     "Sat",
+     "09:00",
+     "10:30"
+    ],
+    [
+     "Sun",
+     "18:00",
+     "19:30"
+    ]
+   ],
+   "for_levels": [
+    5,
+    6
+   ],
+   "why": "Sunday church to about 11:15am and lunch 12:30-2:00pm leave no Sunday morning slot; Sun 6:00-7:30pm follows Level 5 (4:15-5:45pm) with a 15-minute break and ends before 9:00pm. Alternative if the owner prefers the afternoon: Sun 2:15-3:45pm."
+  }
+ ]
+}

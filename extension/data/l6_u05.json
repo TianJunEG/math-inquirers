@@ -1,0 +1,1095 @@
+{
+ "schema_version": 1,
+ "level": 6,
+ "unit": 5,
+ "id": "L6U05",
+ "title": "Every possible way",
+ "topic": "Counting",
+ "holiday_lesson": 5,
+ "goal": "I can count every possible case without missing one or counting one twice. I can use multiplication for choices made one after another.",
+ "learn": {
+  "intro": "To count every possible case, list them in order and do not miss one. Choices made one after another multiply. When the order does not matter, each pair is counted twice, so halve the total.",
+  "example": {
+   "problem": "A cafe sells 3 sandwiches and 4 drinks. A meal is 1 sandwich and 1 drink. How many different meals are there?",
+   "figure": {
+    "type": "l6_grid",
+    "rows": [
+     [
+      "",
+      "Tea",
+      "Juice",
+      "Milk",
+      "Water"
+     ],
+     [
+      "Egg",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     [
+      "Ham",
+      "5",
+      "6",
+      "7",
+      "8"
+     ],
+     [
+      "Tuna",
+      "9",
+      "10",
+      "11",
+      "12"
+     ]
+    ],
+    "cw": [
+     22,
+     22,
+     22,
+     22,
+     22
+    ],
+    "rowhead": true,
+    "ch": 8.5
+   },
+   "steps": [
+    "Fix one sandwich. It goes with each of the 4 drinks, so there are 4 meals.",
+    "There are 3 sandwiches, so there are 3 groups of 4 meals.",
+    "3 × 4 = 12 meals. Each cell of the table is one meal.",
+    "Add a choice of 2 fruits. Every meal splits in 2 ways: 12 × 2 = 24."
+   ],
+   "answer": "12 meals (24 meals if there is also a choice of 2 fruits)."
+  },
+  "howto": {
+   "title": "How to count every possible way",
+   "steps": [
+    "List the choices in order. Fix the first choice, then run through the next.",
+    "Choices made one after another multiply: 3 × 4.",
+    "If the order does not matter, each pair is counted twice. So halve.",
+    "Check a small case by listing it all."
+   ]
+  },
+  "try": {
+   "id": "L6U05-L01",
+   "tier": "start",
+   "text": "A pizza place has 4 crusts and 6 toppings. A pizza has 1 crust and 1 topping. How many different pizzas are there? {b}",
+   "answer": {
+    "value": [
+     "24"
+    ],
+    "text": "24"
+   },
+   "explanation": "Choices one after another multiply: 4 × 6 = 24. Check: each of the 4 crusts goes with 6 toppings, which makes 4 groups of 6."
+  }
+ },
+ "items": [
+  {
+   "id": "L6U05-S01",
+   "tier": "start",
+   "text": "A bike shop builds a bike from 1 frame, 1 seat and 1 bell. There are 5 frames, 3 seats and 2 bells.",
+   "page": 1,
+   "parts": [
+    {
+     "label": "a",
+     "text": "There are {b} different bikes.",
+     "answer": {
+      "value": [
+       "30"
+      ],
+      "text": "30"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The shop adds 1 more frame. Now there are {b} bikes.",
+     "answer": {
+      "value": [
+       "36"
+      ],
+      "text": "36"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Red is one of the 5 frames. {b} bikes have a red frame.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    }
+   ],
+   "explanation": "Choices one after another multiply: 5 × 3 × 2 = 30. With 6 frames: 6 × 3 × 2 = 36. A red frame is 1 frame choice: 1 × 3 × 2 = 6."
+  },
+  {
+   "id": "L6U05-S02",
+   "tier": "start",
+   "text": "Flip a coin and roll a dice. A result looks like H3 (heads and 3). Use the table to list the results.",
+   "page": 1,
+   "parts": [
+    {
+     "label": "a",
+     "text": "There are {b} different results.",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Tails and a number greater than 4: {b} results.",
+     "answer": {
+      "value": [
+       "2"
+      ],
+      "text": "2"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Heads and an even number: {b} results.",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_grid",
+    "rows": [
+     [
+      "",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     [
+      "H",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+     ],
+     [
+      "T",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+     ]
+    ],
+    "cw": [
+     14,
+     16,
+     16,
+     16,
+     16,
+     16,
+     16
+    ],
+    "rowhead": true,
+    "ch": 8
+   },
+   "explanation": "The coin has 2 results and the dice has 6, so 2 × 6 = 12 results, one for each cell. Tails with more than 4: T5 and T6, so 2. Heads with an even number: H2, H4 and H6, so 3.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U05-S05",
+   "tier": "start",
+   "text": "A walker goes only right or up from Start to End. Each number shows how many routes reach that corner. Fill in the empty circles.",
+   "page": 1,
+   "parts": [
+    {
+     "label": "a",
+     "text": "There are {b} routes from Start to End.",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_routes",
+    "cols": 3,
+    "rows": 2,
+    "cell": 15,
+    "nums": {
+     "0,0": 1,
+     "1,0": 1,
+     "2,0": 1,
+     "3,0": 1,
+     "0,1": 1,
+     "0,2": 1,
+     "1,1": null,
+     "2,1": null,
+     "3,1": null,
+     "1,2": null,
+     "2,2": null,
+     "3,2": null
+    }
+   },
+   "explanation": "A corner is reached from the corner on its left or the corner below, so add those 2 numbers. Middle row: 2, 3, 4. Top row: 3, 6, 10. There are 10 routes to End.",
+   "figside": true
+  },
+  {
+   "id": "L6U05-S03",
+   "tier": "start",
+   "text": "In a chess club, any 2 players play exactly 1 game against each other.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "With 8 players there are {b} games.",
+     "answer": {
+      "value": [
+       "28"
+      ],
+      "text": "28"
+     }
+    },
+    {
+     "label": "b",
+     "text": "With 11 players there are {b} games.",
+     "answer": {
+      "value": [
+       "55"
+      ],
+      "text": "55"
+     }
+    },
+    {
+     "label": "c",
+     "text": "A club plays 66 games. It has {b} players.",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_dots",
+    "groups": [
+     {
+      "n": 4,
+      "all": true,
+      "caption": "4 players: 6 games",
+      "r": 11
+     }
+    ]
+   },
+   "explanation": "Each new player plays all the earlier players. 8 players: 1 + 2 + ... + 7 = 28. 11 players: 1 + 2 + ... + 10 = 55. 66 = 1 + 2 + ... + 11, so there are 12 players.",
+   "figside": true
+  },
+  {
+   "id": "L6U05-S04",
+   "tier": "start",
+   "text": "The inner loop does all its repeats each time the outer loop goes round. Predict what the sprite says.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "It says A {b} times.",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    },
+    {
+     "label": "b",
+     "text": "It says B {b} times.",
+     "answer": {
+      "value": [
+       "15"
+      ],
+      "text": "15"
+     }
+    },
+    {
+     "label": "c",
+     "text": "In all it says {b} things.",
+     "answer": {
+      "value": [
+       "18"
+      ],
+      "text": "18"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_code",
+    "prog": [
+     [
+      "ctl",
+      "repeat (3)",
+      [
+       [
+        "look",
+        "say (A) for (1) seconds"
+       ],
+       [
+        "ctl",
+        "repeat (5)",
+        [
+         [
+          "look",
+          "say (B) for (1) seconds"
+         ]
+        ]
+       ]
+      ]
+     ]
+    ]
+   },
+   "explanation": "A is said once for each turn of the outer repeat: 3 times. B is said 5 times in each turn: 3 × 5 = 15 times. In all it says 3 + 15 = 18 things.",
+   "figside": true
+  },
+  {
+   "id": "L6U05-S06",
+   "tier": "start",
+   "text": "A password has 3 letters. Each letter is A, B, C or D.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "Letters may repeat: {b} passwords.",
+     "answer": {
+      "value": [
+       "64"
+      ],
+      "text": "64"
+     }
+    },
+    {
+     "label": "b",
+     "text": "No letter may repeat: {b} passwords.",
+     "answer": {
+      "value": [
+       "24"
+      ],
+      "text": "24"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Letters may repeat, and the first letter is A: {b} passwords.",
+     "answer": {
+      "value": [
+       "16"
+      ],
+      "text": "16"
+     }
+    }
+   ],
+   "explanation": "Letters may repeat: 4 × 4 × 4 = 64. No repeats: 4 choices, then 3, then 2: 4 × 3 × 2 = 24. First letter A and repeats allowed: 1 × 4 × 4 = 16."
+  },
+  {
+   "id": "L6U05-S10",
+   "tier": "start",
+   "text": "An octagon has 8 corners. Join every pair of corners with a straight line.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "There are {b} lines in all.",
+     "answer": {
+      "value": [
+       "28"
+      ],
+      "text": "28"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Diagonals (lines that are not sides): {b}",
+     "answer": {
+      "value": [
+       "20"
+      ],
+      "text": "20"
+     }
+    },
+    {
+     "label": "c",
+     "text": "A shape with 10 corners has {b} diagonals.",
+     "answer": {
+      "value": [
+       "35"
+      ],
+      "text": "35"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_dots",
+    "groups": [
+     {
+      "n": 8,
+      "r": 14,
+      "edges": []
+     }
+    ]
+   },
+   "explanation": "Every pair of corners gives a line: 8 × 7 ÷ 2 = 28. 8 of the lines are the sides, so 28 − 8 = 20 are diagonals. 10 corners: 10 × 9 ÷ 2 = 45 lines, 10 are sides, so 35 diagonals.",
+   "figside": true
+  },
+  {
+   "id": "L6U05-S07",
+   "tier": "start",
+   "text": "There are 5 runners in a race. Gold, silver and bronze go to 3 different runners.",
+   "page": 3,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The medals can be given in {b} different ways.",
+     "answer": {
+      "value": [
+       "60"
+      ],
+      "text": "60"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Ali is one of the runners and must win gold. Then there are {b} ways.",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    }
+   ],
+   "explanation": "Gold has 5 choices, then silver 4, then bronze 3: 5 × 4 × 3 = 60. If Ali wins gold, silver has 4 choices and bronze 3: 4 × 3 = 12."
+  },
+  {
+   "id": "L6U05-S08",
+   "tier": "start",
+   "text": "This code lists pairs. The outer repeat changes a and the inner repeat changes b. Predict what it says.",
+   "page": 3,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The 3rd number it says is {b}.",
+     "answer": {
+      "value": [
+       "21"
+      ],
+      "text": "21"
+     }
+    },
+    {
+     "label": "b",
+     "text": "It says {b} numbers.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "c",
+     "text": "With repeat 4 as the inner repeat, it says {b} numbers.",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_code",
+    "prog": [
+     [
+      "var",
+      "set a to (1)"
+     ],
+     [
+      "ctl",
+      "repeat (3)",
+      [
+       [
+        "var",
+        "set b to (1)"
+       ],
+       [
+        "ctl",
+        "repeat (2)",
+        [
+         [
+          "look",
+          "say (a × 10 + b) for (1) seconds"
+         ],
+         [
+          "var",
+          "change b by (1)"
+         ]
+        ]
+       ],
+       [
+        "var",
+        "change a by (1)"
+       ]
+      ]
+     ]
+    ]
+   },
+   "explanation": "For each a the inner repeat says 2 numbers: 11, 12, then 21, 22, then 31, 32. The 3rd is 21 and it says 6 numbers. With 4 inner repeats it says 3 × 4 = 12 numbers.",
+   "figside": true
+  },
+  {
+   "id": "L6U05-S09",
+   "tier": "start",
+   "text": "Make 3-digit numbers from the cards, using no card twice. A number cannot start with 0.",
+   "page": 3,
+   "parts": [
+    {
+     "label": "a",
+     "text": "There are {b} different numbers.",
+     "answer": {
+      "value": [
+       "18"
+      ],
+      "text": "18"
+     }
+    },
+    {
+     "label": "b",
+     "text": "{b} of them are odd.",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_cards",
+    "cards": [
+     "0",
+     "1",
+     "2",
+     "3"
+    ],
+    "card": 11
+   },
+   "explanation": "First digit: 3 choices (not 0), second: 3 (0 is allowed), third: 2. 3 × 3 × 2 = 18. Odd numbers end in 1 or 3; then the first digit has 2 choices and the middle digit 2: 2 × 2 × 2 = 8.",
+   "figside": true
+  },
+  {
+   "id": "L6U05-S11",
+   "tier": "start",
+   "text": "A rectangle in a row of squares can be 1, 2, 3, ... squares long. Count every rectangle.",
+   "page": 3,
+   "parts": [
+    {
+     "label": "a",
+     "text": "This row of 5 squares has {b} rectangles.",
+     "answer": {
+      "value": [
+       "15"
+      ],
+      "text": "15"
+     }
+    },
+    {
+     "label": "b",
+     "text": "A row of 7 squares has {b} rectangles.",
+     "answer": {
+      "value": [
+       "28"
+      ],
+      "text": "28"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_grid",
+    "rows": [
+     [
+      "",
+      "",
+      "",
+      "",
+      ""
+     ]
+    ],
+    "cw": [
+     13,
+     13,
+     13,
+     13,
+     13
+    ],
+    "rowhead": false,
+    "ch": 13
+   },
+   "explanation": "Row of 5: 5 + 4 + 3 + 2 + 1 = 15 (5 of length 1, 4 of length 2, ...). Row of 7: 7 + 6 + 5 + 4 + 3 + 2 + 1 = 28.",
+   "figside": true
+  },
+  {
+   "id": "L6U05-T01",
+   "tier": "think",
+   "text": "A walker goes only right or up from Start to End. X is a point on the way.",
+   "page": 4,
+   "parts": [
+    {
+     "label": "a",
+     "text": "Routes from Start to X: {b}. Routes from X to End: {b}.",
+     "answer": {
+      "value": [
+       "3",
+       "6"
+      ],
+      "text": "3, 6"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Routes that go through X: {b}.",
+     "answer": {
+      "value": [
+       "18"
+      ],
+      "text": "18"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_routes",
+    "cols": 4,
+    "rows": 3,
+    "cell": 10,
+    "mark": [
+     "2,1"
+    ]
+   },
+   "hint": "A route through X has 2 parts. Count each part.",
+   "explanation": "Routes to X: right 2 and up 1, so 3 routes (RRU, RUR, URR). Routes from X to End: right 2 and up 2, so 6 routes. Every route through X is one of the 3 followed by one of the 6: 3 × 6 = 18.",
+   "figright": true,
+   "partsrow": true
+  },
+  {
+   "id": "L6U05-T02",
+   "tier": "think",
+   "text": "You have 4 digit cards: 1, 2, 3, 4. Put all 4 cards in a row to make a 4-digit number.",
+   "page": 4,
+   "parts": [
+    {
+     "label": "a",
+     "text": "There are {b} numbers in all.",
+     "answer": {
+      "value": [
+       "24"
+      ],
+      "text": "24"
+     }
+    },
+    {
+     "label": "b",
+     "text": "{b} of them are even.",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    },
+    {
+     "label": "c",
+     "text": "{b} of them are multiples of 4.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    }
+   ],
+   "hint": "Which two-digit endings are in the 4 times table?",
+   "explanation": "4 × 3 × 2 × 1 = 24 numbers. Even numbers end in 2 or 4: 2 × 3 × 2 × 1 = 12. Multiples of 4 end in 12, 24 or 32, and each leaves 2 numbers: 3 × 2 = 6.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U05-T03",
+   "tier": "think",
+   "text": "P is not on the line. A triangle uses P and 2 of the points on the line.",
+   "page": 4,
+   "parts": [
+    {
+     "label": "a",
+     "text": "With 4 points on the line there are {b} triangles.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "b",
+     "text": "With 5 points there are {b} triangles.",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    },
+    {
+     "label": "c",
+     "text": "With 8 points there are {b} triangles.",
+     "answer": {
+      "value": [
+       "28"
+      ],
+      "text": "28"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_dots",
+    "groups": [
+     {
+      "pts": [
+       [
+        26,
+        0,
+        "P"
+       ],
+       [
+        0,
+        20,
+        "1"
+       ],
+       [
+        13,
+        20,
+        "2"
+       ],
+       [
+        26,
+        20,
+        "3"
+       ],
+       [
+        39,
+        20,
+        "4"
+       ],
+       [
+        52,
+        20,
+        "5"
+       ]
+      ],
+      "edges": [
+       [
+        0,
+        1
+       ],
+       [
+        0,
+        2
+       ],
+       [
+        0,
+        3
+       ],
+       [
+        0,
+        4
+       ],
+       [
+        0,
+        5
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        2,
+        3
+       ],
+       [
+        3,
+        4
+       ],
+       [
+        4,
+        5
+       ]
+      ]
+     }
+    ]
+   },
+   "hint": "Each triangle is a pair of points on the line. Count pairs.",
+   "explanation": "Each pair of points on the line makes one triangle with P. 4 points: 4 × 3 ÷ 2 = 6 pairs. 5 points: 5 × 4 ÷ 2 = 10. 8 points: 8 × 7 ÷ 2 = 28. This is the handshake count again.",
+   "figright": true,
+   "partsrow": true
+  },
+  {
+   "id": "L6U05-G01",
+   "tier": "go",
+   "text": "A code has 3 digits. Each digit is 1, 2, 3, 4 or 5, and digits may repeat.",
+   "page": 5,
+   "parts": [
+    {
+     "label": "a",
+     "text": "There are {b} codes in all.",
+     "answer": {
+      "value": [
+       "125"
+      ],
+      "text": "125"
+     }
+    },
+    {
+     "label": "b",
+     "text": "{b} codes have no 5.",
+     "answer": {
+      "value": [
+       "64"
+      ],
+      "text": "64"
+     }
+    },
+    {
+     "label": "c",
+     "text": "{b} codes have at least one 5.",
+     "answer": {
+      "value": [
+       "61"
+      ],
+      "text": "61"
+     }
+    }
+   ],
+   "hint": "Count the codes with no 5. Take them from the total.",
+   "explanation": "All codes: 5 × 5 × 5 = 125. Codes with no 5 use only 1, 2, 3 or 4: 4 × 4 × 4 = 64. Every other code has at least one 5: 125 − 64 = 61.",
+   "beyond": "Count the opposite"
+  },
+  {
+   "id": "L6U05-G02",
+   "tier": "go",
+   "text": "This code checks every pair of numbers a and b. Predict what it says.",
+   "page": 5,
+   "parts": [
+    {
+     "label": "a",
+     "text": "It checks {b} pairs.",
+     "answer": {
+      "value": [
+       "16"
+      ],
+      "text": "16"
+     }
+    },
+    {
+     "label": "b",
+     "text": "It says {b}.",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Both repeats change to 6. It says {b}.",
+     "answer": {
+      "value": [
+       "27"
+      ],
+      "text": "27"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_code",
+    "prog": [
+     [
+      "var",
+      "set count to (0)"
+     ],
+     [
+      "var",
+      "set a to (1)"
+     ],
+     [
+      "ctl",
+      "repeat (4)",
+      [
+       [
+        "var",
+        "set b to (1)"
+       ],
+       [
+        "ctl",
+        "repeat (4)",
+        [
+         [
+          "var",
+          "set p to (a × b)"
+         ],
+         [
+          "ctl",
+          "if <(p mod 2) = (0)> then",
+          [
+           [
+            "var",
+            "change count by (1)"
+           ]
+          ]
+         ],
+         [
+          "var",
+          "change b by (1)"
+         ]
+        ]
+       ],
+       [
+        "var",
+        "change a by (1)"
+       ]
+      ]
+     ],
+     [
+      "look",
+      "say (count)"
+     ]
+    ]
+   },
+   "hint": "When is a × b odd? Count those pairs first.",
+   "explanation": "Each repeat runs 4 times: 4 × 4 = 16 pairs. a × b is odd only when both are odd: 2 × 2 = 4 pairs. So 16 − 4 = 12 even products. With 6 and 6: 36 pairs, 9 odd, 27 even.",
+   "figside": true
+  },
+  {
+   "id": "L6U05-G03",
+   "tier": "go",
+   "text": "A child climbs a staircase. Each move goes up 1 step or 2 steps. Count the ways to reach the top.",
+   "page": 5,
+   "parts": [
+    {
+     "label": "a",
+     "text": "3 steps: {b} ways.",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    },
+    {
+     "label": "b",
+     "text": "4 steps: {b} ways.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "c",
+     "text": "6 steps: {b} ways.",
+     "answer": {
+      "value": [
+       "13"
+      ],
+      "text": "13"
+     }
+    },
+    {
+     "label": "d",
+     "text": "8 steps: {b} ways.",
+     "answer": {
+      "value": [
+       "34"
+      ],
+      "text": "34"
+     }
+    }
+   ],
+   "hint": "Look at the last move. It was 1 step or 2 steps.",
+   "explanation": "The last move onto step n is 1 step from step n − 1 or 2 steps from step n − 2, so ways(n) = ways(n − 1) + ways(n − 2). For 1 to 8 steps: 1, 2, 3, 5, 8, 13, 21, 34.",
+   "partsrow": true,
+   "beyond": "A counting chain"
+  },
+  {
+   "id": "L6U05-C01",
+   "tier": "quiz",
+   "text": "A cafe has 5 soups and 3 breads. A meal is 1 soup and 1 bread. There are {b} different meals.",
+   "page": 6,
+   "answer": {
+    "value": [
+     "15"
+    ],
+    "text": "15"
+   },
+   "explanation": "Choices one after another multiply: 5 × 3 = 15."
+  },
+  {
+   "id": "L6U05-C02",
+   "tier": "quiz",
+   "text": "In a league of 5 teams, each team meets each of the others at home and away. There are {b} matches.",
+   "page": 6,
+   "answer": {
+    "value": [
+     "20"
+    ],
+    "text": "20"
+   },
+   "explanation": "Each of the 5 teams plays 4 other teams at home: 5 × 4 = 20 matches. (Each pair is counted once for home and once for away.)"
+  },
+  {
+   "id": "L6U05-C03",
+   "tier": "quiz",
+   "text": "Cards 2, 5 and 8 make 3-digit numbers when each card is used once. How many numbers? {b}",
+   "page": 6,
+   "answer": {
+    "value": [
+     "6"
+    ],
+    "text": "6"
+   },
+   "explanation": "3 choices, then 2, then 1: 3 × 2 × 1 = 6 (258, 285, 528, 582, 825, 852)."
+  },
+  {
+   "id": "L6U05-C04",
+   "tier": "quiz",
+   "text": "A code is 2 letters from A to E, then 1 digit from 1 to 4. Letters and digits may repeat. There are {b} codes.",
+   "page": 6,
+   "answer": {
+    "value": [
+     "100"
+    ],
+    "text": "100"
+   },
+   "explanation": "5 × 5 × 4 = 100."
+  }
+ ]
+}

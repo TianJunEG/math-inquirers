@@ -1,4 +1,5 @@
 // Math Inquirers P5 — Lesson 4: Triangle Areas (area of a triangle; base and height, heights outside the triangle,
+const { TKQ, TKP } = require('./take.js');
 // same base and same height, triangles in composite figures, shaded-area puzzles).
 // Every figure is drawn to scale from cm coordinates, and every area was checked with exact arithmetic (shoelace formula in Python).
 
@@ -73,8 +74,8 @@ module.exports = {
     n: 4, week: 2, session: 'B', title: 'Triangle Areas', topic: 'Area of Triangle',
     objective: 'Find the area of a triangle as 1/2 × base × height, choosing a base and the height that meets it at a right angle (also when the height is outside the triangle); use “same base, same height” to explain equal areas; find areas of composite figures and shaded parts by splitting into triangles or by taking away.',
     skills: 'Spotting the height, ignoring lengths that are not needed, reasoning with same base and same height, splitting a figure, taking away from a rectangle, explaining why an area does not change',
-    materials: 'Square grid paper (cut-out page at the back of the workbook), scissors, ruler, set square or the corner of a card, mini whiteboard and marker, workbook, pencil.',
-    online: 'The tutor shares the slides and clicks to draw heights and reveal each step. For the explore, children draw and cut their rectangle with the camera up as usual, and hold the cut pieces up to the camera to show they fit (or use the interactive version on the slide). Whiteboards are held up together for the quick questions.',
+    materials: 'Square grid paper (cut-out page at the back of the workbook) with an 8 cm by 6 cm rectangle already drawn on it the day before, scissors, ruler, set square or the corner of a card, mini whiteboard and marker, workbook, pencil.',
+    online: 'The tutor shares the slides and clicks to draw heights and reveal each step. For the explore, children draw and cut their rectangle with the camera up as usual, and check by laying the pieces together at home that they fit (or use the interactive version on the slide). Children write on whiteboards for the quick questions and say the answer together on three.',
     warmup: 'Half or not? Three rectangles each have one shaded triangle. Children vote: is the shaded triangle exactly half of the rectangle? (Diagonal: yes. Top corner on the opposite side: yes. Corner to the middle of a side: no, it is 1/4.)',
     explore: 'Cut a rectangle. Pairs draw a rectangle 8 cm by 6 cm on grid paper, mark any point on the top side and join it to the two bottom corners. They cut out the triangle and the two leftover pieces. Do the two pieces cover the triangle exactly? Try a different point. What is the area of the triangle?',
     mini: 'Area of a triangle = 1/2 × base × height. The height meets the base (or the base extended) at a right angle; slanting sides are not heights. Triangles with the same base and the same height have the same area. For harder figures, split into triangles or take the white triangles away from a rectangle.',
@@ -83,7 +84,7 @@ module.exports = {
     mistakes: ['Using a slanting side as the height (1/2 × 14 × 13 for a 13-14-15 triangle).', 'Forgetting the 1/2 and giving the area of the whole rectangle.', 'For a height outside the triangle, measuring the base all the way to the foot of the height (adding the dashed extension to the base).'],
     extension: 'On a grid, draw as many different triangles as you can with area 6 cm² using a base of 4 cm. Where can the top corner go? (Anywhere on the line 3 cm above the base.)',
     key: [
-      ['Q1', '(a) 24 cm² (1/2 × 8 × 6)  (b) 84 cm² (1/2 × 14 × 12)  (c) 36 cm² (1/2 × 9 × 8)  (d) 13 cm and 15 cm: they are slanting sides, not at a right angle to the base.'],
+      ['Q1', '(a) 24 cm² (half of the 8 by 6 rectangle: 48 ÷ 2; or 1/2 × 8 × 6)  (b) 84 cm² (1/2 × 14 × 12)  (c) 36 cm² (1/2 × 9 × 8)  (d) 13 cm and 15 cm: they are slanting sides, not at a right angle to the base.'],
       ['Q2', '(a) 30 cm²  (b) 30 cm²  (c) Both have base DC = 10 cm and height 6 cm (P and Q are on AB, 6 cm above DC).'],
       ['Q3', '(a) 5 cm; 35 cm² (1/2 × 14 × 5)  (b) 3 cm; 21 cm² (1/2 × 14 × 3)  (c) 56 cm²'],
       ['Q4', '(a) 96 cm²  (b) ADE 16 cm², EBF 16 cm², FCD 24 cm²  (c) 40 cm² (96 − 56)'],
@@ -95,7 +96,7 @@ module.exports = {
     hook: ['Welcome back, inquirers! A triangle is half of something. Today we find out half of WHAT, and why a squashed, leaning triangle can have exactly the same area as a neat one.', 'Notice it, test it, explain why. Today “test it” means cutting paper.'],
     warmIntro: ['Here are three rectangles, each with a shaded triangle. Thumbs up if you think the triangle is exactly half of the rectangle, thumbs down if not. Decide for each one before I click.', 'For the one that is not half: how much of the rectangle is it? How do you know?'],
     predict: ['You will draw a rectangle 8 cm by 6 cm and a triangle inside it with its top corner on the top side. Predict: what fraction of the rectangle is the triangle? Does it matter where the top corner is?'],
-    exploreHints: ['Stuck: fold each leftover piece along a grid line and lay it on the triangle.', 'Pieces do not fit: check that your top corner is exactly on the top side and the bottom corners are the rectangle’s corners.', 'Finished early: move the top corner right to the end of the top side. What kind of triangle is it now? Is it still half?'],
+    exploreHints: ['Stuck: fold each leftover piece along a grid line and lay it on the triangle.', 'Pieces do not fit: check that your top corner is exactly on the top side and the bottom corners are the rectangle’s corners.', 'If a pair wants more: move the top corner right to the end of the top side. What kind of triangle is it now? Is it still half?'],
     think: ['“This triangle has sides 5, 12 and 13. Which two do I multiply? The height must meet the base at a right angle. I look for the square corner: 12 and 5 meet there. 13 is slanting, so I do not use it. 1/2 × 12 × 5 = 30.”', '“Here the top corner is past the end of the base. I extend the base with a dashed line and drop the height to it: 12 cm. The base is still only 11 cm: the dashed part is not part of the triangle. 1/2 × 11 × 12 = 66.”', '“All three triangles sit on the bottom of the same rectangle with their top corner on the top side. Same base, 14 cm. Same height, 9 cm. So they all have the same area, 63 cm², even though they look different.”'],
     circulate: ['Ask: “Point to the height. How do you know it meets the base at a right angle?”', 'Ask: “Which length did you not need? Why not?”', 'Ask: “Did you split the figure or take away? Could you do it the other way to check?”'],
     hints: ['Hint 1: “Find the square corner (the right angle). The two lines that make it are a base and a height.”', 'Hint 2: “If there is no square corner, look for a dashed line drawn at a right angle to a side.”', 'Hint 3: “Box the shape in a rectangle. Find the rectangle’s area, then take away the white triangles.”'],
@@ -107,10 +108,10 @@ module.exports = {
   deck: {
     today: 'Find the base and the height of any triangle, explain why triangles with the same base and height have the same area, and solve shaded-area puzzles.',
     warmGame: 'Half or not? Three rectangles each have one shaded triangle: one cut along a diagonal, one with its top corner on the top side, one from a corner to the middle of a side. Vote: is the shaded part exactly half?',
-    warmQs: [['Area of a rectangle 7 cm by 6 cm?', '42 cm²'], ['Half of 42 cm²?', '21 cm²'], ['1/2 × 9 × 4 = ?', '18'], ['A square has an area of 49 cm². How long is each side?', '7 cm'], ['1/2 × 15 × 8 = ?', '60']],
+    warmQs: [['Area of a rectangle 7 cm by 6 cm?', '42 cm²'], ['Half of 42 cm²?', '21 cm²'], ['1/2 × 9 × 4 = ?', '18'], ['A square has an area of 49 cm². How long is each side?', '7 cm']],
     expSetup: ['Draw a rectangle 8 cm by 6 cm on grid paper.', 'Mark any point on the top side. Join it to the two bottom corners.', 'Cut out the triangle and the two leftover pieces.', 'Do the two pieces cover the triangle exactly? Try again with a different point.'],
     expPic: 'a rectangle 8 cm by 6 cm on a 1 cm grid with a point on the top side joined to the two bottom corners; the middle triangle is yellow and the two leftover corner pieces are blue.',
-    expAsk: [['Do the two leftover pieces cover the triangle exactly?', 'Yes, so the triangle is half of the rectangle.'], ['What is the area of the triangle?', '24 cm² (half of 8 × 6 = 48)'], ['Does it matter where the point on the top side is?', 'No: the base is always 8 cm and the height is always 6 cm.']],
+    expAsk: [['Do the two leftover pieces cover the triangle exactly?', 'Yes, so the triangle is half of the rectangle.'], ['What is the area of the triangle?', '24 cm² (half of 8 × 6 = 48)']],
     mini1: { head: 'Height outside the triangle', body: ['A triangle has a base of 11 cm. Its top corner is past the end of the base. The height to the base extended is 12 cm, and its sides are 13 cm and 20 cm.', 'What is its area?'], ans: '66 cm² (1/2 × 11 × 12; the 13 cm and 20 cm sides are not needed).' },
     mini2: { head: 'Same base, same height', body: ['A rectangle is 14 cm by 9 cm. Three triangles each use the bottom side as the base, with the top corner at different points on the top side.', 'What is the area of each triangle?'], ans: '63 cm² each (1/2 × 14 × 9), half of the rectangle.' },
     keyHead: 'Key idea: 1/2 × base × height',
@@ -118,7 +119,7 @@ module.exports = {
     keySmall: 'Same base and same height: same area, whatever the shape.',
     brk: 'Triangle stretch. Make a triangle with your arms above your head. Now make a right angle with one arm. Lean your triangle to the left and to the right: did its height change?',
     ws1: 'Page 1, in pairs: Q1 base and height in three triangles, Q2 triangles in a rectangle.',
-    ws2: 'Page 2, on your own: Q3 split into triangles, Q4 take away the white triangles, Q5 same area, different triangles.'
+    ws2: 'Page 2, on your own: Q5 same area, different triangles, Q4 take away the white triangles (Q3, split into triangles, is take-home).'
   },
 
   qbank: {
@@ -157,7 +158,7 @@ module.exports = {
     H.p('Area of a triangle = 1/2 × base × height. The height meets the base at a right angle.', { after: 40 }),
     H.q(1, 'Find the area of each triangle. The drawings are to scale.', { before: 40, keepNext: true }),
     H.fig(q1Fig()),
-    H.p(['<b style="color:#1F7A6F">Start here:</b> the little square marks a right angle. The height is the side that makes a right angle with the base. A slanting side is NOT the height. A dashed line shows a height. In (c) the height is outside the triangle: the dashed base line is only there to meet it.'], { after: 20 }),
+    H.p(['<b style="color:#1F7A6F">Start here:</b> triangle (a) is half of an 8 cm by 6 cm rectangle: half of ______ = ______ cm². In (b) and (c) the height makes a right angle (the little square) with the base. A slanting side is NOT the height.'], { after: 20 }),
     H.sub('a', 'Area of (a) = __________ cm²       (b)  Area of (b) = __________ cm²       (c)  Area of (c) = __________ cm²'),
     H.sub('d', 'In (b), which lengths did you NOT need?   ______________________'),
     H.q(2, 'ABCD is a rectangle 10 cm by 6 cm. P and Q are points on AB.', { keepNext: true }),
@@ -165,17 +166,17 @@ module.exports = {
     H.sub('a', 'Area of triangle PDC = ____________ cm²          (b)  Area of triangle QDC = ____________ cm²'),
     H.sub('c', 'Explain why the two triangles have the same area.'), ...H.lines(1),
 
-    H.q(3, 'Find the area of the figure ABCD. Split it into two triangles along AC.', { pb: true, before: 0, keepNext: true }),
+    H.q(3, [TKQ, 'Find the area of the figure ABCD. Split it into two triangles along AC.'], { pb: true, before: 0, keepNext: true }),
     H.fig(splitFig()),
     H.p(['<b style="color:#1F7A6F">Start here:</b> AC = 14 cm is the base of BOTH triangles. Read the two heights from the picture.'], { after: 20 }),
     H.sub('a', 'Height of triangle ABC = ______ cm.   Area of ABC = ______ cm²'),
     H.sub('b', 'Height of triangle ACD = ______ cm.   Area of ACD = ______ cm²'),
     H.sub('c', 'Area of ABCD = ______________ cm²'),
     H.q(4, 'ABCD is a rectangle. Find the area of the shaded triangle DEF.', { keepNext: true }),
-    H.p(['<b style="color:#1F7A6F">Start here:</b> the three white triangles ADE, EBF and FCD are what is left over. Find their areas, then take them away from the rectangle.'], { after: 20 }),
+    H.p(['<b style="color:#1F7A6F">Start here:</b> the three white triangles are what is left over. Each has a square corner, so each is half of a rectangle. Example: ADE is half of 4 cm by 8 cm, so ADE = 16 cm².'], { after: 20 }),
     H.fig(takeFig()),
     H.sub('a', 'Area of the rectangle ABCD = ______________ cm²'),
-    H.sub('b', 'ADE = ______ cm²    EBF = ______ cm²    FCD = ______ cm²'),
+    H.sub('b', 'ADE = 16 cm²    EBF = ______ cm²    FCD = ______ cm²'),
     H.sub('c', 'Area of the shaded triangle DEF = ______________ cm²'),
     H.q(5, 'Mei draws a triangle with a base of 8 cm and a height of 6 cm.', { keepNext: true }),
     H.sub('a', 'What is the area of Mei’s triangle?   ____________ cm²'),
@@ -183,3 +184,34 @@ module.exports = {
     H.sub('c', 'One more triangle with the same area:  base ______ cm, height ______ cm')
   ]
 };
+
+// ---- figures for the printed Think harder (A2 to A4) and Go further (B1 to B3) items (the workbook prints them under the question) ----
+{
+  const fsv = (w, h, label, g, k = 0.8) => { FS = 17; const o = svg(w, h, label, g, k); FS = 19; return o; };
+  const lab = (x, y, s, a = 'middle') => T(x, y, s, { anchor: a });
+  // A2: right-angled triangle 12, 16, 20 with the right angle at the bottom left
+  { const P = M(70, 150, 7); let g = poly([P(0, 0), P(16, 0), P(0, 12)], SKY) + ra(P(0, 0), 1, -1);
+    g += lab(70 + 56, 168, '16 cm') + lab(62, 110, '12 cm', 'end') + lab(70 + 80, 100, '20 cm', 'start');
+    module.exports.qbank.stretch[1].fig = fsv(300, 180, 'A right-angled triangle with the two short sides 12 cm and 16 cm and the long side 20 cm', g, 0.75); }
+  // A3: a square of side 6 cm and a triangle with base 9 cm and an unknown height
+  { let g = poly([[20, 30], [20 + 6 * 12, 30], [20 + 6 * 12, 30 + 6 * 12], [20, 30 + 6 * 12]], YEL) + lab(20 + 36, 30 + 6 * 12 + 18, '6 cm') + lab(20 + 36, 30 + 40, 'square');
+    const x0 = 130; g += poly([[x0, 102], [x0 + 9 * 12, 102], [x0 + 3 * 12, 22]], SKY) + ln([x0 + 3 * 12, 22], [x0 + 3 * 12, 102], true) + ra([x0 + 3 * 12, 102], 1, -1) + lab(x0 + 54, 120, '9 cm') + lab(x0 + 9 * 12 + 6, 62, 'height ?', 'start');
+    module.exports.qbank.stretch[2].fig = fsv(340, 130, 'A square with sides 6 cm and a triangle with base 9 cm and an unknown height; the two have the same area', g, 0.8); }
+  // A4: a rectangle and a triangle with the same base 12 cm and the same height 7 cm
+  { let g = poly([[20, 20], [20 + 12 * 11, 20], [20 + 12 * 11, 20 + 7 * 11], [20, 20 + 7 * 11]], YEL) + lab(20 + 66, 20 + 7 * 11 + 18, '12 cm') + lab(26, 20 + 44, '7 cm', 'start');
+    const x0 = 200; g += poly([[x0, 97], [x0 + 12 * 11, 97], [x0 + 4 * 11, 20]], SKY) + ln([x0 + 4 * 11, 20], [x0 + 4 * 11, 97], true) + ra([x0 + 4 * 11, 97], 1, -1) + lab(x0 + 66, 115, '12 cm') + `<rect x="${x0 + 4 * 11 - 24}" y="48" width="48" height="22" fill="#DDEBF7"/>` + lab(x0 + 4 * 11, 64, '7 cm');
+    module.exports.qbank.stretch[3].fig = fsv(350, 130, 'A rectangle 12 cm by 7 cm and a triangle with base 12 cm and height 7 cm side by side', g, 0.8); }
+  // B1: right-angled triangle 15, 20, 25 with the 25 cm side as the base
+  { const P = M(80, 150, 6.4); let g = poly([P(0, 0), P(20, 0), P(0, 15)], SKY) + ra(P(0, 0), 1, -1) + lab(80 + 64, 168, '20 cm') + lab(72, 110, '15 cm', 'end') + lab(80 + 90, 88, '25 cm', 'start');
+    module.exports.qbank.challenge[6].fig = fsv(300, 180, 'A right-angled triangle with the two short sides 15 cm and 20 cm and the long side 25 cm', g, 0.75); }
+  // B2: two squares side by side (10 cm and 6 cm) and the triangle joining three corners
+  { const s = 11, x0 = 30, y0 = 130; const X = x => x0 + x * s, Y = y => y0 - y * s;
+    let g = poly([[X(0), Y(0)], [X(10), Y(0)], [X(10), Y(10)], [X(0), Y(10)]], WHITE) + poly([[X(10), Y(0)], [X(16), Y(0)], [X(16), Y(6)], [X(10), Y(6)]], WHITE);
+    g += poly([[X(0), Y(0)], [X(10), Y(10)], [X(16), Y(6)]], YEL);
+    g += lab(X(5), Y(0) + 16, '10 cm') + lab(X(13), Y(0) + 16, '6 cm');
+    module.exports.qbank.challenge[7].fig = fsv(310, 175, 'Two squares side by side, a big one with side 10 cm and a small one with side 6 cm. A triangle joins the bottom-left corner of the big square, the top-right corner of the big square and the top-right corner of the small square.', g, 0.9); }
+  // B3: triangle ABC with D on BC, BD = 4 cm, DC = 8 cm
+  { let g = poly([[30, 110], [30 + 12 * 18, 110], [30 + 5 * 18, 20]], SKY) + ln([30 + 5 * 18, 20], [30 + 4 * 18, 110], false) ;
+    g += lab(30 - 4, 118, 'B', 'end') + lab(30 + 12 * 18 + 4, 118, 'C', 'start') + lab(30 + 5 * 18, 14, 'A') + lab(30 + 4 * 18, 128, 'D') + lab(30 + 2 * 18, 140, '4 cm') + lab(30 + 8 * 18, 140, '8 cm');
+    module.exports.qbank.challenge[8].fig = fsv(300, 150, 'Triangle ABC with D on the side BC; BD is 4 cm and DC is 8 cm; A is joined to D', g, 0.9); }
+}

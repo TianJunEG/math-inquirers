@@ -2,7 +2,7 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-22T00:27:04Z"
+  "at": "2026-10-23T06:27:53Z"
  },
  "lists": "css",
  "title": "Math Inquirers P5: Lesson 1 – Million Puzzles",
@@ -24,14 +24,18 @@
   "p5l1-ws1ans",
   "p5l1-teachest",
   "p5l1-teachbrackets",
-  "p5l1-trybrackets",
-  "p5l1-teachfind",
   "p5l1-ws2",
   "p5l1-ws2ans",
   "p5l1-stretch",
+  "p5l1-stretch2",
+  "p5l1-gofurther",
   "p5l1-challenge",
   "p5l1-chdiag",
   "p5l1-chwalk",
+  "p5l1-gap-digit",
+  "p5l1-gap-parity",
+  "p5l1-gap-cr1",
+  "p5l1-gap-cr2",
   "p5l1-talk",
   "p5l1-exit",
   "p5l1-reflect"

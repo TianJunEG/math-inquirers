@@ -4,7 +4,7 @@ import sys,os,re,glob
 ACC={'1':('#1F7A6F','#14574F'),'2':('#2A7DC9','#1B5A94'),'3':('#3E8E41','#2B6A2E'),'4':('#7B4FB5','#5A3787'),'5':('#D9662B','#A84A1B'),'6':('#C2386B','#8F2551')}
 def level_of(path):
     k=os.path.basename(path.rstrip('/'))
-    m=re.match(r'p(\d)l',k); return m.group(1) if m else '1'
+    m=re.match(r'p(\d)l',k) or re.match(r'preview_l(\d)',k); return m.group(1) if m else '1'   # preview_lN = DRAFT free-preview-class decks
 def bar(a):
     return ('<div data-deco="bar" style="position:absolute;left:0;top:0;width:1920px;height:18px;display:flex">'
             f'<div style="flex:5;background:#1B2A49"></div><div style="flex:3;background:{a}"></div><div style="flex:1;background:#FFC93C"></div></div>')
@@ -19,7 +19,15 @@ def bubbles(kind,a):
      '<text x="1750" y="868" font-size="120" font-weight="800" text-anchor="middle" fill="#1B2A49" font-family="Fredoka, Arial, sans-serif">!</text></g></g></svg></div>')
 OLDB=re.compile(r'<div data-deco="bubbles".*?</svg></div>',re.S)
 OLD=re.compile(r'<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:hidden"><div style="position:absolute;right:-180px.*?</div></div>',re.S)
+PILL=re.compile(r'<p style="position:absolute;right:128px;top:\d+px;[^"]*">[^<]*MIN</p>\n?')
+def dedupe_pills(s):
+    """Keep one time pill per slide (a gen_* re-run on a patched deck can stack identical pills)."""
+    seen=[0]
+    def f(m):
+        seen[0]+=1; return m.group(0) if seen[0]==1 else ''
+    return PILL.sub(f,s)
 def fix(s,lv):
+    s=dedupe_pills(s)
     a,ad=ACC[lv]
     m=re.search(r'<section ([^>]*)style="([^"]*)"',s)
     if not m: return s
@@ -53,4 +61,13 @@ for d in sys.argv[1:]:
     for f in glob.glob(os.path.join(d,'project','slides','*.html')):
         a=open(f).read(); b=fix(a,lv)
         if a!=b: open(f,'w').write(b); n+=1
+    try:
+        sys.path.insert(0,os.path.dirname(os.path.abspath(__file__))); import spine_deco; n+=spine_deco.apply(d)   # strategy of the day + common look-back (idempotent; Level 1 only until rolled out, see spine_deco.LEVELS_ON); must run BEFORE mi_deco
+    except ImportError: pass
+    try:
+        sys.path.insert(0,os.path.dirname(os.path.abspath(__file__))); import mi_deco; n+=mi_deco.apply(d)   # Mi the dolphin (levels 1-3), idempotent
+    except ImportError: pass
+    try:
+        sys.path.insert(0,os.path.dirname(os.path.abspath(__file__))); import gap_slides; n+=gap_slides.apply(d,fix)   # optional skill-gap slides, Levels 4-6 (levels/gap_items.py); idempotent, GAPS-SLIDES-NOW
+    except ImportError: pass
     print(d,n)

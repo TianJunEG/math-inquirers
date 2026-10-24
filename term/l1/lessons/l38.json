@@ -1,0 +1,3382 @@
+{
+ "schema_version": 1,
+ "id": "l1-t4-08",
+ "level": 1,
+ "term": 4,
+ "lesson": 38,
+ "lesson_in_term": 8,
+ "title": "Graph Detectives",
+ "big_idea": "Scales save space, and a graph can answer some questions and not others",
+ "child_idea": "Read the key first: it says what one picture stands for. Count in 2s or 3s when a picture stands for more than 1. A graph can answer some questions and not others.",
+ "skill": "Critical reading",
+ "spine": {
+  "main": "backwards",
+  "also": [
+   "draw"
+  ],
+  "role": "A",
+  "reason": "A missing bar is the total take away the bars you know; graphs are drawn from clues."
+ },
+ "ages": "6-8",
+ "moe": {
+  "strand": "Statistics: picture graphs (read and interpret, Primary 1, p. 32). A picture graph where each picture stands for more than 1 (a scale of 2 or 3) is Primary 2 (p. 34); saying what a graph cannot tell us is critical reading and not a listed outcome",
+  "topics": [
+   "Reading a picture graph with 1 picture for 1 thing: most, fewest, how many more, how many in all, the same number, True or False (Primary 1)",
+   "Completing a graph from a total and a difference clue (Primary 1 school papers, Ai Tong Term 4)",
+   "Beyond Primary 1 on purpose: reading a key where each picture stands for 2 or 3, how many more with a key of 2, and a missing bar with a key of 3 (Primary 2, p. 34)",
+   "Beyond Primary 1 on purpose: which question a graph can and cannot answer (critical reading, not a listed outcome)"
+  ],
+  "note": "Strand label for the tutor only. Reading a picture graph with 1 picture for 1 thing is the Primary 1 outcome and the school papers set it in most Term 4 papers (most, fewest, how many more, in all, the same number, True or False; complete the graph from a difference clue and a total). Start here is that reading and nothing else: no key above 1 and nothing unfamiliar. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only: reading a key where each picture stands for 2 (Think harder), a missing bar when each picture stands for 3 (Go further), and saying what a graph cannot tell us (Go further). Named puzzle: Missing Bar. Non-routine types (tutor only): the missing bar given the total and a difference clue (work backwards), more and fewer from a graph, a graph from clues. The syllabus keeps scales for Primary 2, so the Level 2 plan keeps keys of 2, 3 or 5 only. Owner decisions, 22 and 23 Oct 2026: strong content with scaffolding, said plainly to families; every lesson names a beyond item; picture graphs are always 1 picture for 1 thing at Start here. Do not describe the lesson as MOE-aligned. Wording rule (Term 1 audit, pre-flight D18): wrong working is always 'a child' or 'a child in another class', never a cast name."
+ },
+ "contest_moves": [
+  "find the missing bar from a total and a difference clue: work backwards from the total",
+  "more and fewer from a graph: a difference of pictures is a difference of things when the key is the same",
+  "build a graph from clues: the same number, a number more than, and a total",
+  "the longest row is not always the most things: read the key first (a key of 2 and a key of 3, beyond Primary 1)"
+ ],
+ "contest_where": "Think harder, Go further and the Investigation",
+ "objectives": [
+  "Read a picture graph where each picture stands for 1: most, fewest, the same number, how many more, how many in all.",
+  "Say what one picture stands for before reading a graph, and count in 2s when each picture stands for 2.",
+  "Think harder: complete a graph from a total and a clue, read how many more with a key of 2, and say why the longest row is not always the most.",
+  "Go further: find a missing bar when each picture stands for 3, build a graph from clues, and say which question a graph cannot answer."
+ ],
+ "joining_cold": {
+  "remember": [
+   "Reading a picture graph: who has the most, and how many more (taught again with a picture)",
+   "Counting in 2s and in 3s along a number line (Term 2 Lesson 6, taught again on a number line)",
+   "Counting in 2s along a row of pictures that each stand for 2 (taught with a picture)"
+  ],
+  "assumes": "Only counting to 20. Nothing from the lessons before is needed: the warm-up re-teaches reading a graph, counting in 2s and 3s, and reading a row where each picture stands for 2. The words key, row and total are taught in Explore and the Mini-lesson.",
+  "holiday_topics_revisited": [
+   "Picture graphs (Fruit Party)",
+   "Skip counting in 2s and 3s (Count with the Frog)"
+  ],
+  "safe_to_miss": false,
+  "note": "Not safe to miss: Mi's Challenge Quest in the last lesson of the year has a gate that reads a graph where each picture stands for 2. A child who misses it watches the recording and does workbook pages 1 and 2. A child who joins here cold can follow without Lesson 37: the warm-up re-teaches reading a graph, and Start here only reads graphs with 1 picture for 1 thing."
+ },
+ "materials": {
+  "child": [
+   "Your Term 4 book (Book 8) and workbook pages 1 to 5",
+   "Coloured pencils (optional), a pencil, a rubber and spare paper",
+   "Nothing to find at home and nothing to cut out"
+  ],
+  "tutor": [
+   "The slide deck",
+   "A visible clock"
+  ],
+  "kit_pages": [],
+  "ruler": false,
+  "notes": "Nothing needs to be bought. There is no kit page. Nobody cuts during the lesson. No matches, toothpicks or anything sharp.",
+  "kit_contract": []
+ },
+ "timing": {
+  "parts": [
+   {
+    "id": "opening",
+    "title": "Opening",
+    "start": 0,
+    "end": 2
+   },
+   {
+    "id": "remember",
+    "title": "Remember warm-up",
+    "start": 2,
+    "end": 8
+   },
+   {
+    "id": "sneak",
+    "title": "Sneak-peek puzzles",
+    "start": 8,
+    "end": 12
+   },
+   {
+    "id": "explore",
+    "title": "Explore",
+    "start": 12,
+    "end": 23
+   },
+   {
+    "id": "mini",
+    "title": "Mini-lesson",
+    "start": 23,
+    "end": 34
+   },
+   {
+    "id": "break",
+    "title": "Brain break",
+    "start": 34,
+    "end": 38
+   },
+   {
+    "id": "work",
+    "title": "Workbook",
+    "start": 38,
+    "end": 70
+   },
+   {
+    "id": "talk",
+    "title": "Talk time",
+    "start": 70,
+    "end": 76
+   },
+   {
+    "id": "exit",
+    "title": "Exit ticket",
+    "start": 76,
+    "end": 82
+   },
+   {
+    "id": "look",
+    "title": "Look-back",
+    "start": 82,
+    "end": 85
+   },
+   {
+    "id": "flex",
+    "title": "Flex time and goodbye",
+    "start": 85,
+    "end": 90
+   }
+  ],
+  "optional_slide": "s-opt",
+  "include_rules": false,
+  "notes": "Opening is 2 minutes. Explore has 11 minutes: make pairs of dots so that 1 picture stands for 2, then compare two graphs with different keys. The Mini-lesson has 11: read the key and how many more, draw with a key of 2, find a missing bar from clues, and say which question a graph cannot answer. The workbook has 32 minutes: Start here takes a middle child about 17 minutes (page 1 about 8, page 2 about 9), so pages 3 to 5 are for home for most children. The last 5 minutes are the standing buffer.",
+  "skip_order": [
+   "Start with: shorten Explore round 3 (what did we notice) to one question",
+   "Then: cut the question a graph cannot answer (s-m4) to the answer only",
+   "Then: take the extra minutes from the flex time"
+  ]
+ },
+ "sneak_peek": {
+  "q1": "How many pictures are in Ravi's row? Write the number.",
+  "q2": "Each picture stands for 2 stickers. How many stickers does Ravi have? I know because ___.",
+  "a1": "3 pictures.",
+  "a2": "6 stickers. Each picture stands for 2, so count in 2s: 2, 4, 6."
+ },
+ "rec": {
+  "opening": {
+   "say": "If you are watching the recording: hello! Get a pencil, paper and your workbook. Pause or rewind any time.",
+   "action": "Gather your workbook, pencil and paper. Press play when ready."
+  },
+  "remember": {
+   "say": "Recording: join in! Say your answers out loud before I say them. Pause if you need longer.",
+   "action": "Play along. Say each answer out loud before the video does."
+  },
+  "sneak": {
+   "say": "Recording: pause now and try both puzzles on your paper. Guessing is fine. Press play for the next part.",
+   "action": "Pause. Try both puzzles on your own paper. A guess is fine."
+  },
+  "explore": {
+   "say": "Recording: pause now. Draw the dots and loops on your paper. Then decide which row shows more things. Press play when you have tried.",
+   "action": "Pause. Draw 8 dots and loop every 2. Then think which row shows more things and why."
+  },
+  "mini": {
+   "say": "Recording: keep watching and copy the examples on your paper. Rewind if you miss a step.",
+   "action": "Watch and copy the examples. Rewind any step you missed."
+  },
+  "break": {
+   "say": "Recording: stand up and join in! Count in 2s with a jump, then count in 3s with a clap.",
+   "action": "Stand up. Count in 2s and 3s with the movements, then sit down."
+  },
+  "work": {
+   "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
+   "action": "Pause. Do page 1, then play to check. Then page 2. Then choose a page to try."
+  },
+  "talk": {
+   "say": "Recording: pause. Tell a grown-up how you could check a missing bar by adding.",
+   "action": "Pause. Explain your answer to someone at home and show how you know."
+  },
+  "exit": {
+   "say": "Recording: pause and do the exit ticket on your own. Then press play to check it.",
+   "action": "Pause. Do the exit ticket alone, then play to check it."
+  },
+  "look": {
+   "say": "Recording: pause and fill in your look-back box. You can pass.",
+   "action": "Pause. Fill in the look-back box, or pass."
+  },
+  "flex": {
+   "say": "Recording: well done for finishing! Show a grown-up a graph and say what one picture stands for.",
+   "action": "Show a grown-up a graph and say what one picture stands for."
+  }
+ },
+ "slides": [
+  {
+   "id": "s-title",
+   "part": "opening",
+   "kind": "title",
+   "title": "Graph Detectives",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "TODAY WE WILL",
+     "items": [
+      "Read the key first.",
+      "Find a missing bar.",
+      "Ask what a graph cannot tell us."
+     ]
+    }
+   ],
+   "note": "Lesson 8 of Term 4, 90 minutes. Objective: read a picture graph carefully: the key first, then the rows; read a graph where each picture stands for 2; find a missing bar from a total; and say what a graph cannot tell us. Plain statement for families: reading a graph with 1 picture for 1 thing is Primary 1 work; a key where each picture stands for 2 or 3 is Primary 2, and saying what a graph cannot tell us is not a listed outcome, so these go beyond Primary 1 on purpose, at Think harder and Go further only. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 23, mini-lesson 23 to 34, brain break 34 to 38, workbook 38 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Say the recording notice before you start the recording, in one line: you, the shared screen and any unmuted voice; a child may keep the camera off.",
+   "subtitle": "Read the key before you read the graph",
+   "mascot": {
+    "size": "l",
+    "say": "Hi, I'm Mi. Let's notice, test and explain why!"
+   }
+  },
+  {
+   "id": "s-rem1",
+   "part": "remember",
+   "kind": "light",
+   "title": "Warm-up: read a graph",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "picture_graph",
+     "rows": [
+      {
+       "label": "Ali",
+       "n": 7
+      },
+      {
+       "label": "Siti",
+       "n": 4
+      },
+      {
+       "label": "Ben",
+       "n": 5
+      }
+     ],
+     "icon": "sticker",
+     "title": "Cards collected",
+     "size": "m"
+    },
+    {
+     "t": "chip",
+     "text": "Each picture is 1 card. Who has the most cards? How many more cards does Ali have than Ben?"
+    }
+   ],
+   "note": "Reading a picture graph (taught again with a picture). Ali has 7 cards, Siti 4 and Ben 5. Ask: who has the most cards (Ali); how many more cards does Ali have than Ben (2). A child who is unsure matches Ali's pictures with Ben's one by one and counts the pictures that are left. Your turn, no new picture: how many cards in all (16). Children answer aloud. No writing."
+  },
+  {
+   "id": "s-rem2",
+   "part": "remember",
+   "kind": "light",
+   "title": "Count in 2s and 3s",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "number_line",
+     "start": 0,
+     "end": 12,
+     "step": 2,
+     "label_every": 2,
+     "hide": [
+      4,
+      10
+     ],
+     "size": "m"
+    },
+    {
+     "t": "visual",
+     "type": "number_line",
+     "start": 0,
+     "end": 18,
+     "step": 3,
+     "label_every": 3,
+     "hide": [
+      6,
+      12
+     ],
+     "size": "m"
+    },
+    {
+     "t": "chip",
+     "text": "Count in 2s. Then count in 3s. Say the missing numbers."
+    }
+   ],
+   "note": "Counting in 2s and in 3s (Term 2 Lesson 6, taught again on number lines). The first line goes 0, 2, 4, and so on to 12 with two empty boxes (4 and 10). The second goes 0, 3, 6, and so on to 18 with two empty boxes (6 and 12). Count together and pause at each box. A child who is unsure counts on fingers, two or three at a time. Your turn: count in 3s from 12 to 18 without the picture (12, 15, 18). Children answer aloud. No writing.",
+   "mascot": {
+    "size": "s",
+    "say": "Take your time!"
+   }
+  },
+  {
+   "id": "s-rem3",
+   "part": "remember",
+   "kind": "light",
+   "title": "Pictures that stand for 2",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "picture_graph",
+     "rows": [
+      {
+       "label": "Shells",
+       "n": 4,
+       "icon": "shell"
+      }
+     ],
+     "each": 2,
+     "size": "m",
+     "icon": "shell"
+    },
+    {
+     "t": "chip",
+     "text": "Each picture stands for 2. Count in 2s along the row. How many shells are there?"
+    }
+   ],
+   "note": "A row where each picture stands for 2 (taught with a picture). The key says each picture stands for 2 shells. The row has 4 pictures. Count in 2s along the row: 2, 4, 6, 8. Ask: how many shells (8). A child who is unsure touches each picture and says the next number in 2s. Your turn: 3 pictures, each standing for 2: how many shells (6). Children answer aloud. No writing. Say: always look at the key first."
+  },
+  {
+   "id": "s-sneak",
+   "part": "sneak",
+   "kind": "light",
+   "title": "Sneak-peek puzzles",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Ideas we have not learnt yet. A guess is a great start. Nobody is marked."
+    },
+    {
+     "t": "visual",
+     "type": "picture_graph",
+     "rows": [
+      {
+       "label": "Ravi",
+       "n": 3,
+       "icon": "sticker"
+      },
+      {
+       "label": "Jamie",
+       "n": 5,
+       "icon": "sticker"
+      }
+     ],
+     "icon": "sticker",
+     "title": "Stickers",
+     "each": 2,
+     "size": "s"
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 1: anyone can try",
+        "items": [
+         "How many pictures are in Ravi's row?",
+         "Write the number."
+        ]
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 2: think",
+        "items": [
+         "Each picture stands for 2 stickers.",
+         "How many stickers does Ravi have?",
+         "I know because ___."
+        ]
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Puzzle 1 is an access question: count the pictures in Ravi's row (3). Puzzle 2 is a thinking question on the lesson idea: each picture stands for 2 stickers, so Ravi has 6 stickers; count in 2s. A child who writes 3 has counted pictures, not stickers: that is the idea of the lesson, so do not correct it now. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: 3 pictures; 6 stickers. Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
+  },
+  {
+   "id": "s-explore1",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: make pairs",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "Draw 8 dots in a row on your paper.",
+      "Draw a loop around every 2 dots.",
+      "Each loop is 1 picture. How many pictures?"
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Now try 12 dots. How many pictures?"
+    }
+   ],
+   "note": "Round 1, about 5 minutes. Read the three steps one at a time. Children draw 8 small dots in a row on their own paper and draw a loop around each pair. Each loop is 1 picture that stands for 2 dots. Ask: how many pictures. Then children try 12 dots and ask again. Answers are on the next slide: 8 dots make 4 pictures; 12 dots make 6 pictures. Nobody holds paper to the camera: children say the number aloud or show fingers. A child who loops 3 dots at a time has made a different picture: ask, how many dots does each loop hold?"
+  },
+  {
+   "id": "s-explore1-ans",
+   "part": "explore",
+   "kind": "light",
+   "title": "4 pictures and 6 pictures",
+   "blocks": [
+    {
+     "t": "answer",
+     "text": "8 dots make 4 pictures. 12 dots make 6 pictures. Each picture stands for 2 dots."
+    }
+   ],
+   "note": "The answer for round 1. 8 dots in pairs make 4 loops, so 4 pictures. 12 dots make 6 loops, so 6 pictures. Say: when each picture stands for 2, the row is half as long as the number of things. Children check their own paper with a tick. Do not name any child."
+  },
+  {
+   "id": "s-explore2",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: two graphs",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "picture_graph",
+        "rows": [
+         {
+          "label": "Pens",
+          "n": 4,
+          "icon": "pen"
+         }
+        ],
+        "title": "Graph A",
+        "size": "l",
+        "icon": "pen"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "picture_graph",
+        "rows": [
+         {
+          "label": "Rulers",
+          "n": 4,
+          "icon": "ruler"
+         }
+        ],
+        "title": "Graph B",
+        "each": 2,
+        "size": "l",
+        "icon": "ruler"
+       }
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Both rows have 4 pictures. Which row shows more things? How do you know?"
+    }
+   ],
+   "note": "Round 2, about 5 minutes. Two graphs have rows of the same length: 4 pictures. Graph A has a key of 1 (each picture stands for 1 pen) and Graph B has a key of 2 (each picture stands for 2 rulers). Ask: which row shows more things; how do you know. Take guesses first, then ask children to look at the keys. The answer is on the next slide. Do not give the rule before the children say it: the mini-lesson makes it exact. A child who says the same because the rows are the same length has not looked at the key: ask, what does one picture stand for in each graph?"
+  },
+  {
+   "id": "s-explore2-ans",
+   "part": "explore",
+   "kind": "light",
+   "title": "Read the key first",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "picture_graph",
+        "rows": [
+         {
+          "label": "Pens",
+          "n": 4,
+          "icon": "pen"
+         }
+        ],
+        "title": "Graph A",
+        "size": "l",
+        "icon": "pen"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "picture_graph",
+        "rows": [
+         {
+          "label": "Rulers",
+          "n": 4,
+          "icon": "ruler"
+         }
+        ],
+        "title": "Graph B",
+        "each": 2,
+        "size": "l",
+        "icon": "ruler"
+       }
+      ]
+     ]
+    },
+    {
+     "t": "answer",
+     "text": "Graph B shows more. Graph A shows 4 pens. Graph B shows 4 pictures of 2: 8 rulers."
+    }
+   ],
+   "note": "The answer for round 2. Graph A: 4 pictures of 1 is 4 pens. Graph B: 4 pictures of 2 is 8 rulers. The rows are the same length but the keys are different. Say: read the key first, then count. Children check their own thinking with a tick. Do not name any child."
+  },
+  {
+   "id": "s-explore3",
+   "part": "explore",
+   "kind": "light",
+   "title": "What did we notice?",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      "What does the key tell us?",
+      "Is the longest row always the most things?"
+     ]
+    }
+   ],
+   "note": "Take one or two answers from volunteers. Key ideas: the key says what one picture stands for; the same number of pictures can mean different numbers of things; we count in 2s when each picture stands for 2; so we read the key before we read the rows. Repeat each child answer in your own words so the recording picks it up. Do not give the rule before the children say it; the mini-lesson makes it exact."
+  },
+  {
+   "id": "s-m1",
+   "part": "mini",
+   "kind": "light",
+   "title": "Read the key first",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "picture_graph",
+     "rows": [
+      {
+       "label": "Mei",
+       "n": 2
+      },
+      {
+       "label": "Ali",
+       "n": 6
+      },
+      {
+       "label": "Siti",
+       "n": 4
+      }
+     ],
+     "icon": "apple",
+     "title": "Apples picked",
+     "each": 2,
+     "size": "m"
+    },
+    {
+     "t": "chip",
+     "text": "Read the key first. How many apples did Ali pick? How many more apples did Ali pick than Mei?"
+    }
+   ],
+   "note": "Worked example. The key says each picture stands for 2 apples. Mei has 2 pictures, Ali 6 and Siti 4. Ask: how many apples did Ali pick (12: count in 2s along the row); how many more apples did Ali pick than Mei (8). Say: match the rows first: Ali has 4 more pictures than Mei, and each picture is 2 apples, so 4 more pictures are 8 more apples. The answer is on the next slide. A child who says 6 has counted pictures, not apples: ask, what does one picture stand for?"
+  },
+  {
+   "id": "s-m1-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "Ali picked 12 apples",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "picture_graph",
+     "rows": [
+      {
+       "label": "Mei",
+       "n": 2
+      },
+      {
+       "label": "Ali",
+       "n": 6
+      },
+      {
+       "label": "Siti",
+       "n": 4
+      }
+     ],
+     "icon": "apple",
+     "title": "Apples picked",
+     "each": 2,
+     "size": "m"
+    },
+    {
+     "t": "answer",
+     "text": "Ali picked 12 apples: 2, 4, 6, 8, 10, 12. Ali picked 8 more apples than Mei: 4 more pictures of 2."
+    }
+   ],
+   "note": "The answer for the example on the slide before. 6 pictures of 2 is 12 apples. 6 pictures take away 2 pictures is 4 pictures; 4 pictures of 2 is 8 apples. Read it aloud so that children can tick their own work. Say: the difference in pictures is not the difference in apples until we use the key."
+  },
+  {
+   "id": "s-m2",
+   "part": "mini",
+   "kind": "light",
+   "title": "Draw with a key",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "picture_graph",
+     "rows": [
+      {
+       "label": "Mei",
+       "n": 2
+      },
+      {
+       "label": "Ali",
+       "n": 6
+      },
+      {
+       "label": "Siti",
+       "n": 4
+      },
+      {
+       "label": "Ben",
+       "n": 6,
+       "hide": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+       ]
+      }
+     ],
+     "icon": "apple",
+     "title": "Apples picked",
+     "each": 2,
+     "size": "m"
+    },
+    {
+     "t": "chip",
+     "text": "Ben picked 8 apples. Each picture stands for 2. Draw Ben's row."
+    }
+   ],
+   "note": "Worked example. Ben picked 8 apples. Each picture stands for 2 apples. Children work out how many pictures and draw them on their own paper. Ask: how many pictures does Ben's row need (4). Say: count in 2s until you reach 8: 2, 4, 6, 8; that is 4 pictures. The answer is on the next slide. A child who draws 8 pictures has forgotten the key: ask, what does one picture stand for? A child who draws 6 pictures has used all the empty boxes: the boxes are more than we need."
+  },
+  {
+   "id": "s-m2-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "4 pictures for 8 apples",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "picture_graph",
+     "rows": [
+      {
+       "label": "Mei",
+       "n": 2
+      },
+      {
+       "label": "Ali",
+       "n": 6
+      },
+      {
+       "label": "Siti",
+       "n": 4
+      },
+      {
+       "label": "Ben",
+       "n": 4
+      }
+     ],
+     "icon": "apple",
+     "title": "Apples picked",
+     "each": 2,
+     "size": "m"
+    },
+    {
+     "t": "answer",
+     "text": "8 apples: 2, 4, 6, 8. That is 4 pictures."
+    }
+   ],
+   "note": "The answer for the example on the slide before. 8 apples is 4 pictures of 2. Read it aloud so that children can tick their own work."
+  },
+  {
+   "id": "s-m3",
+   "part": "mini",
+   "kind": "light",
+   "title": "The missing bar",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "picture_graph",
+     "rows": [
+      {
+       "label": "Cups",
+       "n": 7,
+       "icon": "cup"
+      },
+      {
+       "label": "Plates",
+       "n": 9,
+       "hide": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+       ],
+       "icon": "plate"
+      },
+      {
+       "label": "Bowls",
+       "n": 9,
+       "hide": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+       ],
+       "icon": "bowl"
+      }
+     ],
+     "title": "Things on a table",
+     "size": "m",
+     "icon": "cup"
+    },
+    {
+     "t": "chip",
+     "text": "Each picture stands for 1. There are 16 things in all. There are 3 fewer plates than cups. Draw the plates and the bowls."
+    }
+   ],
+   "note": "Worked example. Each picture stands for 1 thing. The cups row has 7 pictures. There are 3 fewer plates than cups. There are 16 things in all. Children work out how many plates and how many bowls and draw them on their own paper. Ask: how many plates (4); how many cups and plates together (11); how many bowls (5). The answer is on the next slide. Say: first the clue, then the total: we work backwards from the total. A child who draws 9 bowls has used all the empty boxes. Check by adding: 7 + 4 + 5 = 16."
+  },
+  {
+   "id": "s-m3-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "4 plates and 5 bowls",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "picture_graph",
+     "rows": [
+      {
+       "label": "Cups",
+       "n": 7,
+       "icon": "cup"
+      },
+      {
+       "label": "Plates",
+       "n": 4,
+       "icon": "plate"
+      },
+      {
+       "label": "Bowls",
+       "n": 5,
+       "icon": "bowl"
+      }
+     ],
+     "title": "Things on a table",
+     "size": "m",
+     "icon": "cup"
+    },
+    {
+     "t": "answer",
+     "text": "7 take away 3 is 4 plates. 7 + 4 = 11. 16 take away 11 is 5 bowls. Check: 7 + 4 + 5 = 16."
+    }
+   ],
+   "note": "The answer for the example on the slide before. Plates: 7 take away 3 is 4. Cups and plates make 11. The total is 16, so the bowls row has 5. Check by adding all three rows: 16. Read it aloud so that children can tick their own work. Say: we can always check a missing bar by adding the rows back up."
+  },
+  {
+   "id": "s-m4",
+   "part": "mini",
+   "kind": "light",
+   "title": "What can a graph not tell us?",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "picture_graph",
+     "rows": [
+      {
+       "label": "Red",
+       "n": 6,
+       "icon": "fish_red"
+      },
+      {
+       "label": "Blue",
+       "n": 4,
+       "icon": "fish_blue"
+      },
+      {
+       "label": "Gold",
+       "n": 5,
+       "icon": "fish_gold"
+      }
+     ],
+     "title": "Fish in a pond",
+     "size": 62,
+     "icon": "fish_red"
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "How many gold fish are there?",
+      "Which fish is the happiest?",
+      "How many more red fish than blue fish?"
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Which question can the graph not answer? How do you know?"
+    }
+   ],
+   "note": "Worked example. A graph shows what was counted and nothing else. Read the three questions one at a time. Ask: can the graph answer this one? Question 1 yes (5). Question 2 no: the graph does not show feelings. Question 3 yes (2). The answer is on the next slide. Say: a graph can answer questions about the numbers it shows, and no others. If we want other answers, we ask other questions and make another graph."
+  },
+  {
+   "id": "s-m4-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "Question 2 cannot be answered",
+   "blocks": [
+    {
+     "t": "answer",
+     "text": "Question 2. The graph shows how many fish of each colour there are. It does not show feelings."
+    }
+   ],
+   "note": "The answer for the example on the slide before. Question 2 cannot be answered from the graph. Question 1: 5 gold fish. Question 3: 2 more red fish than blue. Read it aloud so that children can tick their own work. Say: read the key, read the rows, and ask what the graph really shows."
+  },
+  {
+   "id": "s-break",
+   "part": "break",
+   "kind": "dark",
+   "title": "Count and move break",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Stand up. Count in 2s and jump each time."
+    },
+    {
+     "t": "p",
+     "text": "Now count in 3s and clap each time."
+    },
+    {
+     "t": "p",
+     "text": "Sip some water."
+    }
+   ],
+   "note": "Four minutes. Stand up on camera with a little clear space. Count in 2s from 0 to 20 together, with a small jump or a step each time. Then count in 3s to 18 with a clap each time. Ask: how many claps did we make to reach 18 (6). Call a different start for the 2s and let children tell the next two numbers. No equipment, no running. A child may stay seated and move one arm. Do not give prizes or compare children."
+  },
+  {
+   "id": "s-ws1",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 1: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 1 to 3. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read questions 1 to 3 aloud. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. All three questions use the same graph of books read. Question 1: who read the most and who read the same number. Question 2: how many more and how many in all. Question 3: tick True or False for four sentences."
+  },
+  {
+   "id": "s-ws1ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 1",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 Mei and Siti. Q2 5 more books and 25 books in all. Q3 True, True, False, False."
+  },
+  {
+   "id": "s-ws2",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 2: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 4 to 6. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S4",
+      "S5",
+      "S6"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read questions 4 to 6 aloud. All three questions use the same graph of fruit in a basket. Question 4: how many kinds and which kind has the same number as pears. Question 5: how many fewer, and how many fruits altogether for two kinds. Question 6: how many fruits in all and which kind has the most. Wait 10 seconds before helping."
+  },
+  {
+   "id": "s-ws2ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 2",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S4",
+      "S5",
+      "S6"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud so a child watching the recording can tick their own work. Never ask a child to show a wrong answer to the group. Answers: Q4 4 kinds and oranges. Q5 2 fewer plums than pears and 11 fruits. Q6 21 fruits in all and apples."
+  },
+  {
+   "id": "s-choice",
+   "part": "work",
+   "kind": "light",
+   "title": "Choose your next page",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Page",
+       "What it is"
+      ],
+      [
+       "Think harder (page 3)",
+       "A graph from clues, a key of 2, why the longest row is not always the most"
+      ],
+      [
+       "Go further (page 4)",
+       "Missing Bar, a graph from clues, which question it cannot answer"
+      ],
+      [
+       "Investigation (page 5)",
+       "Look, count and ask"
+      ],
+      [
+       "Check",
+       "Finish and check your own work"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Everyone may choose. Not finished? Pages 3 to 5 are for home too."
+    }
+   ],
+   "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 5 minutes."
+  },
+  {
+   "id": "s-talk",
+   "part": "talk",
+   "kind": "light",
+   "title": "Talk and explain",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "A CHILD IN ANOTHER CLASS SAYS",
+     "items": [
+      "There are 21 books in all.",
+      "The first bar has 6 books and the second has 9 books.",
+      "So the third bar has 8 books."
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Do you agree? How could we check?"
+    },
+    {
+     "t": "chip",
+     "text": "I think ... because ..."
+    }
+   ],
+   "note": "One minute of talk to the grown-up next to you, or to your screen. Volunteers first; a pass is always fine; never call a child by name to answer. Model answer: no, we do not agree. We can check by adding all three bars back up: 6 + 9 + 8 is 23, not 21. 6 and 9 make 15 and 21 take away 15 is 6, so the third bar has 6 books. Link to the mini-lesson: we always check a missing bar by adding. Repeat each child answer in your own words for the recording. The child in the story is in another class: no cast name is given the wrong answer."
+  },
+  {
+   "id": "s-sneakans",
+   "part": "talk",
+   "kind": "light",
+   "title": "Back to the sneak-peek",
+   "blocks": [
+    {
+     "t": "answer",
+     "text": "Puzzle 1: 3 pictures. Puzzle 2: 6 stickers. Each picture stands for 2, so count in 2s: 2, 4, 6."
+    }
+   ],
+   "note": "Reveal both puzzles now. Say: many of you wrote a good answer. Do not read out anyone earlier answer. Puzzle 1: 3 pictures. Puzzle 2: the key says each picture stands for 2 stickers, so 3 pictures are 6 stickers. It was the same idea as the explore and the mini-lesson: read the key first."
+  },
+  {
+   "id": "s-exit",
+   "part": "exit",
+   "kind": "light",
+   "title": "Exit ticket",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "On your own. No looking back."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ],
+     "short": false
+    }
+   ],
+   "note": "Children answer on page 5. Read E1, E2 and E3 aloud, with the numbers (the figures on the slide are small). Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
+  },
+  {
+   "id": "s-exitans",
+   "part": "exit",
+   "kind": "light",
+   "title": "Check the exit ticket",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: E1 Siti; E2 16 stickers; E3 True."
+  },
+  {
+   "id": "s-look",
+   "part": "look",
+   "kind": "lookback",
+   "title": "Look-back",
+   "blocks": [
+    {
+     "t": "lookback"
+    }
+   ],
+   "note": "Three minutes. Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child.",
+   "mascot": {
+    "size": "s",
+    "say": "Take your time. You can pass."
+   }
+  },
+  {
+   "id": "s-end",
+   "part": "flex",
+   "kind": "dark",
+   "title": "Well done, inquirers!",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Show a grown-up a graph. Say what one picture stands for."
+    },
+    {
+     "t": "card",
+     "head": "NEXT LESSON",
+     "items": [
+      "The Problem-Solving Toolbox",
+      "Have ready: the tool-and-problem cards page from your book, with the 15 cards cut out by a grown-up."
+     ]
+    }
+   ],
+   "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. Remind families that the next lesson needs the tool-and-problem cards page of Book 8, torn out along the dashed line, with the 15 cards cut out by a grown-up beforehand. If the whole class is ahead, show the optional slide and use the Spare-time menu from the tutor guide.",
+   "mascot": {
+    "size": "l",
+    "say": "Great thinking today!"
+   }
+  },
+  {
+   "id": "s-opt",
+   "part": "flex",
+   "kind": "light",
+   "title": "Go further: each picture is 3",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "picture_graph",
+     "rows": [
+      {
+       "label": "Stamps",
+       "n": 4,
+       "icon": "stamp"
+      }
+     ],
+     "title": "Mi's stamps",
+     "each": 3,
+     "size": "m",
+     "icon": "stamp"
+    },
+    {
+     "t": "chip",
+     "text": "Each picture stands for 3 stamps. How many stamps are in the row?"
+    }
+   ],
+   "note": "Optional, only if you are on time. The key says each picture stands for 3. The row has 4 pictures. Ask: how many stamps (12). Count in 3s along the row: 3, 6, 9, 12. This links to counting in 3s in the warm-up. Take two answers and move on. Say: always look at the key first.",
+   "optional": true
+  },
+  {
+   "id": "s-menu",
+   "part": "flex",
+   "kind": "light",
+   "title": "If we have time: pick one",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Activity",
+       "What we do"
+      ],
+      [
+       "Is it always true?",
+       "When every picture stands for 2, is the longest row always the most things?"
+      ],
+      [
+       "Make a puzzle",
+       "Draw a graph with a key of 2 and hide one bar. Tell your grown-up the total."
+      ],
+      [
+       "Teach it back",
+       "Tell a toy why we read the key first."
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Optional. Everyone may join."
+    }
+   ],
+   "note": "Optional Spare-time menu, used only if the whole class is ahead. Pick one or two activities (3 to 5 minutes each); full tutor lines and answers are in the tutor guide. Never start new content and never name who is ahead. Slow down with how do you know rather than rushing on. These minutes come from the flex buffer and are not part of the 90-minute sum.",
+   "optional": true
+  }
+ ],
+ "script": {
+  "segments": [
+   {
+    "part": "opening",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-title",
+      "s": 10
+     },
+     {
+      "k": "DO",
+      "text": "Greet the whole group warmly, before the recording starts. Check that you can see each child, or ask the grown-up.",
+      "s": 12
+     },
+     {
+      "k": "SAY",
+      "text": "Hello, inquirers! Pencil ready, and your workbook. Cameras can be on or off, as you like."
+     },
+     {
+      "k": "SAY",
+      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+     },
+     {
+      "k": "DO",
+      "text": "Start the recording now. Do not use children's first names on the recording.",
+      "s": 5
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
+     },
+     {
+      "k": "SAY",
+      "text": "Today we are graph detectives. We read the key first, we find a missing bar, and we ask what a graph can and cannot tell us."
+     },
+     {
+      "k": "SAY",
+      "text": "Today's tool is Work backwards. Start at the end and undo each step.",
+      "spine": "opening"
+     },
+     {
+      "k": "DO",
+      "text": "Point at the tool on page 1 of the workbook.",
+      "s": 4,
+      "spine": "opening"
+     },
+     {
+      "k": "NOTE",
+      "text": "Say the recording statement and the microphone routine in the same words every lesson, for anyone who joined late. Say the notice before you start the recording, and do not use children's first names once it is running. The routine and the four inquirer rules were introduced earlier in the year: do not re-teach them."
+     },
+     {
+      "k": "NOTE",
+      "text": "Plain statement for families when it comes up: reading a picture graph with 1 picture for 1 thing is Primary 1 work; a key where each picture stands for 2 or 3 is Primary 2, and saying what a graph cannot tell us is not a listed outcome, so these go beyond Primary 1 on purpose, at Think harder and Go further only."
+     },
+     {
+      "k": "NOTE",
+      "text": "New here? Say in one minute: our three rule words (notice it, test it, explain why); a guess is fine and you can always pass; after Start here you may choose Think harder, Go further or the Investigation; nobody holds paper to the camera. Nothing from earlier lessons is needed."
+     }
+    ]
+   },
+   {
+    "part": "remember",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-rem1",
+      "s": 12
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "A picture graph. Each picture is one card."
+     },
+     {
+      "k": "ASK",
+      "text": "Who has the most cards? How many more cards does Ali have than Ben?",
+      "resp": 35
+     },
+     {
+      "k": "WORK",
+      "text": "Your turn. How many cards are there in all? Say it with me.",
+      "s": 30
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem2",
+      "s": 12
+     },
+     {
+      "k": "SAY",
+      "text": "Counting in twos, then in threes. Pause at each empty box."
+     },
+     {
+      "k": "ASK",
+      "text": "What are the missing numbers? Count with me.",
+      "resp": 35
+     },
+     {
+      "k": "WORK",
+      "text": "Your turn. Count in threes from twelve to eighteen. Use your fingers.",
+      "s": 25
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem3",
+      "s": 12
+     },
+     {
+      "k": "SAY",
+      "text": "Each picture stands for two. We count in twos along the row."
+     },
+     {
+      "k": "ASK",
+      "text": "How many shells are there?",
+      "resp": 30
+     },
+     {
+      "k": "WORK",
+      "text": "Your turn. Three pictures, each standing for two. How many shells?",
+      "s": 25
+     },
+     {
+      "k": "WORK",
+      "text": "Say each answer with me: Ali has the most, two more than Ben; sixteen cards; four, ten, six, twelve; eight shells; six shells. Then stretch your fingers.",
+      "s": 22
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child is unsure how to read the graph, match the rows picture by picture. For counting in twos and threes, show two or three fingers at a time. For the row, touch each picture and say the next number."
+     },
+     {
+      "k": "NOTE",
+      "text": "Answers: Ali has the most and 2 more than Ben; 16 cards in all; the missing numbers are 4, 10, 6 and 12; 8 shells. Your turns: 16; 12, 15, 18; 6 shells. Children answer with a whisper, fingers or hands. Nobody writes. Joining cold: all you need is counting to 20 and the pictures."
+     }
+    ]
+   },
+   {
+    "part": "sneak",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-sneak",
+      "s": 12
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked."
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle one. How many pictures are in Ravi's row? Write the number."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write on their own paper.",
+      "s": 30
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle two. Each picture stands for two stickers. How many stickers does Ravi have? I know because blank."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write or draw their answer.",
+      "s": 80
+     },
+     {
+      "k": "SAY",
+      "text": "Keep your paper. Nobody shows it. We will check our own thinking later, at Talk time."
+     },
+     {
+      "k": "NOTE",
+      "text": "Puzzle 1 answer: 3 pictures. Puzzle 2 answer: 6 stickers (count in 2s). A child who writes 3 for puzzle 2 has counted pictures: do not correct it now. Look for good ideas to praise later (a child who counted in 2s). Do not write scores or keep a list."
+     }
+    ]
+   },
+   {
+    "part": "explore",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1",
+      "s": 12
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Today we are pair makers. Draw eight dots in a row on your paper. Draw a loop around every two dots. Each loop is one picture."
+     },
+     {
+      "k": "WORK",
+      "text": "Children draw the dots and loops. Tutor scans the cameras.",
+      "s": 130
+     },
+     {
+      "k": "ASK",
+      "text": "How many pictures are there? Now try twelve dots. How many pictures?",
+      "resp": 60
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Eight dots make four pictures. Twelve dots make six pictures. Each picture stands for two dots."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2",
+      "s": 12
+     },
+     {
+      "k": "SAY",
+      "text": "Round two. Two graphs. Both rows have four pictures."
+     },
+     {
+      "k": "ASK",
+      "text": "Which row shows more things? How do you know? Take a guess first.",
+      "resp": 90
+     },
+     {
+      "k": "WORK",
+      "text": "Now look at the key of each graph. Talk to the grown-up next to you or to your screen.",
+      "s": 80
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Graph B shows more. Graph A shows four pens. Graph B shows four pictures of two, which is eight rulers. Read the key first."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore3",
+      "s": 8
+     },
+     {
+      "k": "ASK",
+      "text": "What does the key tell us? Is the longest row always the most things?",
+      "resp": 60
+     },
+     {
+      "k": "SAY",
+      "text": "The key says what one picture stands for. The same number of pictures can mean different numbers of things. Next we say it exactly."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who loops 3 dots at a time: ask, how many dots in each loop? A child who says both rows show the same: ask, what does one picture stand for in each graph? A child who is unsure about the pairs counts the dots in 2s on their fingers."
+     },
+     {
+      "k": "NOTE",
+      "text": "Main room only. Answers: 8 dots make 4 pictures; 12 dots make 6 pictures; Graph B shows 8 rulers and Graph A shows 4 pens. Do not say the rule before the children do."
+     }
+    ]
+   },
+   {
+    "part": "mini",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-m1",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Graph detectives look at the key first. Each picture stands for two apples."
+     },
+     {
+      "k": "ASK",
+      "text": "How many apples did Ali pick? How many more apples did Ali pick than Mei?",
+      "resp": 75
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m1-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Ali picked twelve apples: two, four, six, eight, ten, twelve. Ali picked eight more apples than Mei: four more pictures, and each picture is two apples."
+     },
+     {
+      "k": "WORK",
+      "text": "Your turn. Siti has four pictures. How many apples did Siti pick? Say it with me.",
+      "s": 30
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m2",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Ben picked eight apples. Each picture stands for two. Draw Ben's row. First work out how many pictures."
+     },
+     {
+      "k": "WORK",
+      "text": "Children work out how many pictures and draw them on their own paper. Wait 10 seconds before helping.",
+      "s": 90
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m2-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Eight apples. Count in twos: two, four, six, eight. That is four pictures."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Now each picture stands for one. There are sixteen things in all. There are three fewer plates than cups. The cups row has seven pictures."
+     },
+     {
+      "k": "ASK",
+      "text": "How many plates are there? How many bowls? Draw them.",
+      "resp": 120
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Seven take away three is four plates. Seven and four make eleven. Sixteen take away eleven is five bowls. Check: seven, four and five make sixteen."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "One: how many gold fish are there? Two: which fish is the happiest? Three: how many more red fish than blue fish?"
+     },
+     {
+      "k": "ASK",
+      "text": "Which question can the graph not answer? How do you know?",
+      "resp": 60
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Question two. The graph shows how many fish of each colour there are. It does not show feelings. Read the key, read the rows, and ask what the graph really shows."
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child says 5 for how many apples Ali picked, ask: what does one picture stand for? If a child draws 8 pictures for Ben, say each picture stands for two apples. If a child draws 9 bowls, say the boxes are more than we need: work out how many first. Check a missing bar by adding the rows back up."
+     },
+     {
+      "k": "NOTE",
+      "text": "Key words to use every time: key, row, total, fewer. Fixed question forms: How many more ___ than ___? How many in all? Which has the fewest? The slides keep the answers off the screen while you ask: read every question with its numbers aloud. Class numbers are not used in the workbook."
+     }
+    ]
+   },
+   {
+    "part": "break",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-break",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Stand up and get a sip of water. We count in twos with a jump. Then we count in threes with a clap."
+     },
+     {
+      "k": "WORK",
+      "text": "Count in twos from zero to twenty with a small jump or step each time. Then count in threes to eighteen with a clap each time. Ask how many claps to reach eighteen. Seated children move one arm.",
+      "s": 170
+     }
+    ]
+   },
+   {
+    "part": "work",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "Page 1, Start here. Study the graph. Each picture stands for one book. Question 1: who read the most books? Ali and who read the same number of books? Question 2: how many more books did Mei read than Ben? How many books did the four children read in all? Question 3: tick True or False for each sentence."
+     },
+     {
+      "k": "WORK",
+      "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
+      "s": 540
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1ans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Question 1: Mei, and Siti. Question 2: five more books, and twenty-five books in all. Question 3: true, true, false, false. Tick your own page with a tick."
+     },
+     {
+      "k": "SAY",
+      "text": "After question 3 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Page 2. Study the graph of fruit in a basket. Each picture stands for one fruit. Question 4: how many kinds of fruit are there? Which kind has the same number as pears? Question 5: how many fewer plums than pears? How many apples and plums altogether? Question 6: how many fruits in all? Which kind has the most?"
+     },
+     {
+      "k": "WORK",
+      "text": "Page 2, questions 4 to 6.",
+      "s": 500
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2ans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Question 4: four kinds, and oranges. Question 5: two fewer plums than pears, and eleven fruits. Question 6: twenty-one fruits in all, and apples. Tick your own page."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-choice",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time. Anything not finished is for home too."
+     },
+     {
+      "k": "MOVE",
+      "text": "Stand and reach up for 30 seconds, then sit down and choose.",
+      "s": 30
+     },
+     {
+      "k": "WORK",
+      "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
+      "s": 200
+     },
+     {
+      "k": "STUCK",
+      "text": "Q1: find the longest row. Q2: match the rows to see how many more, then add all four rows. Q3: count the pictures in each row first. Q4: count the rows for the kinds. Q5: match the rows. Q6: add all four rows."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who is still stuck ticks I am still stuck on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp (never a personal phone). You then help in the open session in the next lesson. Never a private message to a child."
+     },
+     {
+      "k": "NOTE",
+      "text": "Think harder has a missing bar from clues, a graph where each picture stands for 2 (beyond Primary 1 on purpose), and a child who reads the pictures and not the key. Go further has Missing Bar (each picture stands for 3, beyond Primary 1 on purpose), a graph from clues and a question a graph cannot answer. Do not announce who is on which page. Start here takes a middle child about 17 minutes, so the choice time may be short. Slow class: take the extra minutes from the flex time and do not skip the answer slides."
+     }
+    ]
+   },
+   {
+    "part": "talk",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-talk",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "A child in another class says: There are twenty-one books in all. The first bar has six books and the second has nine books. So the third bar has eight books. Do you agree? How could we check?"
+     },
+     {
+      "k": "WORK",
+      "text": "Think about it. You may use your paper.",
+      "s": 50
+     },
+     {
+      "k": "WORK",
+      "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
+      "s": 40
+     },
+     {
+      "k": "ASK",
+      "text": "Who would like to share? Volunteers first. A pass is always fine.",
+      "resp": 100
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-sneakans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Remember the sneak-peek? Puzzle one: three pictures. Puzzle two: six stickers. Each picture stands for two."
+     },
+     {
+      "k": "ASK",
+      "text": "Did anyone change their mind while we worked? You can just nod.",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Where did you use Work backwards today?",
+      "resp": 10,
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Listen for the tool being named, not the answer. Volunteers first, a pass is always fine.",
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Model answer: no, we do not agree. We can check by adding the three bars back up: six, nine and eight make twenty-three, not twenty-one. Six and nine make fifteen, and twenty-one take away fifteen is six, so the third bar has six books. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
+     }
+    ]
+   },
+   {
+    "part": "exit",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-exit",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
+     },
+     {
+      "k": "READ",
+      "text": "E1. Look at the graph. Who has the fewest stickers? Circle one. E2. Look at the graph in E1. How many stickers do the children have altogether? E3. Mei has three more stickers than Ali. Circle True or False."
+     },
+     {
+      "k": "WORK",
+      "text": "Children answer E1 to E3 on their own.",
+      "s": 215
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-exitans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "E1: Siti. E2: sixteen stickers. E3: true."
+     },
+     {
+      "k": "SAY",
+      "text": "Tick your own ticket with a tick. Well done."
+     },
+     {
+      "k": "NOTE",
+      "text": "Nothing is collected or marked live. Children tick their own ticket. If many children miss one question, spend two minutes on it at the start of the next lesson, in the open session, no names. Do not read out any child result."
+     }
+    ]
+   },
+   {
+    "part": "look",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-look",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+      "spine": "look"
+     },
+     {
+      "k": "WORK",
+      "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+      "s": 110,
+      "spine": "look"
+     }
+    ]
+   },
+   {
+    "part": "flex",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-end",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Well done, inquirers. Next lesson is The Problem-Solving Toolbox. Please have the tool-and-problem cards page from your book, with the fifteen cards cut out by a grown-up. Goodbye, and thank you to the grown-ups."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-opt",
+      "s": 8,
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Optional, only if you are on time. Each picture stands for three stamps. The row has four pictures. How many stamps are in the row?",
+      "optional": true
+     },
+     {
+      "k": "WORK",
+      "text": "Short think time, then take two answers.",
+      "s": 90,
+      "optional": true
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-menu",
+      "s": 8,
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
+      "optional": true
+     },
+     {
+      "k": "NOTE",
+      "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: 12 stamps, counting in threes. If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+     }
+    ]
+   }
+  ]
+ },
+ "tiers": {
+  "start": [
+   {
+    "id": "S1",
+    "page": 1,
+    "tier": "start",
+    "text": "Study the graph. Each picture stands for 1 book. Answer S1, S2 and S3.",
+    "answer": "Mei; Siti",
+    "val": [
+     "Mei",
+     "Siti"
+    ],
+    "hint": "The longest row has the most pictures. Match the rows to find the same number.",
+    "solution": "Mei has 9 pictures. That is the longest row, so Mei read the most books. Ali has 6 pictures. Siti also has 6, so Ali and Siti read the same number of books.",
+    "mistakes": [
+     "Choosing Ali because his name is first.",
+     "Writing 6 instead of a name."
+    ],
+    "mins": 2.5,
+    "parts": [
+     {
+      "l": "a",
+      "text": "Circle the child who read the most books.",
+      "ans": "Mei",
+      "val": "Mei",
+      "choices": [
+       "Ali",
+       "Mei",
+       "Ben",
+       "Siti"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "Ali and ___ read the same number of books.",
+      "ans": "Siti",
+      "val": "Siti"
+     }
+    ],
+    "visual": {
+     "type": "picture_graph",
+     "rows": [
+      {
+       "label": "Ali",
+       "n": 6
+      },
+      {
+       "label": "Mei",
+       "n": 9
+      },
+      {
+       "label": "Ben",
+       "n": 4
+      },
+      {
+       "label": "Siti",
+       "n": 6
+      }
+     ],
+     "icon": "book",
+     "title": "Books read",
+     "key": false,
+     "size": 66
+    }
+   },
+   {
+    "id": "S2",
+    "page": 1,
+    "tier": "start",
+    "text": "Look at the graph in S1.",
+    "answer": "5 more books; 25 books in all",
+    "val": [
+     5,
+     25
+    ],
+    "hint": "Match Mei's pictures with Ben's. The pictures left over are the extra.",
+    "solution": "Mei 9 and Ben 4. 9 take away 4 is 5 more books. All four rows: 6 + 9 + 4 + 6 = 25 books.",
+    "mistakes": [
+     "Adding 9 and 4 to find how many more.",
+     "Leaving out a row when finding the total."
+    ],
+    "mins": 3,
+    "parts": [
+     {
+      "l": "a",
+      "text": "Mei read [] more books than Ben.",
+      "ans": "5",
+      "val": 5
+     },
+     {
+      "l": "b",
+      "text": "The 4 children read [] books in all.",
+      "ans": "25",
+      "val": 25
+     }
+    ]
+   },
+   {
+    "id": "S3",
+    "page": 1,
+    "tier": "start",
+    "text": "Look at the graph in S1.",
+    "answer": "True, True, False, False",
+    "val": [
+     "True",
+     "True",
+     "False",
+     "False"
+    ],
+    "hint": "Count the pictures in each row first. Then read each sentence.",
+    "solution": "Ben has 4 pictures, the fewest: true. Mei 9 and Ali 6: 9 take away 6 is 3 more: true. Ali 6 and Siti 6 are the same, so Ali did not read more: false. 6 + 9 + 4 + 6 = 25, not 24: false.",
+    "mistakes": [
+     "Saying Ali read more than Siti because Ali is first.",
+     "Adding only three rows to find the total."
+    ],
+    "mins": 3,
+    "tf": [
+     {
+      "s": "Ben read the fewest books."
+     },
+     {
+      "s": "Mei read 3 more books than Ali."
+     },
+     {
+      "s": "Ali read more books than Siti."
+     },
+     {
+      "s": "The children read 24 books in all."
+     }
+    ]
+   },
+   {
+    "id": "S4",
+    "page": 2,
+    "tier": "start",
+    "text": "Study the graph. Each picture stands for 1 fruit. Answer S4, S5 and S6.",
+    "answer": "4 kinds; Oranges",
+    "val": [
+     4,
+     "Oranges"
+    ],
+    "hint": "Count the rows for the kinds. Match the pears row with the other rows.",
+    "solution": "There are 4 rows: apples, pears, plums and oranges. Pears have 5 pictures and oranges have 5 pictures: the same number.",
+    "mistakes": [
+     "Counting the pictures instead of the rows.",
+     "Choosing plums because it is next to pears."
+    ],
+    "mins": 2.5,
+    "parts": [
+     {
+      "l": "a",
+      "text": "There are [] kinds of fruit.",
+      "ans": "4",
+      "val": 4
+     },
+     {
+      "l": "b",
+      "text": "Circle the kind with the same number as pears.",
+      "ans": "Oranges",
+      "val": "Oranges",
+      "choices": [
+       "Apples",
+       "Plums",
+       "Oranges"
+      ]
+     }
+    ],
+    "visual": {
+     "type": "picture_graph",
+     "rows": [
+      {
+       "label": "Apples",
+       "n": 8,
+       "icon": "apple"
+      },
+      {
+       "label": "Pears",
+       "n": 5,
+       "icon": "pear"
+      },
+      {
+       "label": "Plums",
+       "n": 3,
+       "icon": "plum"
+      },
+      {
+       "label": "Oranges",
+       "n": 5,
+       "icon": "orange"
+      }
+     ],
+     "title": "Fruit in a basket",
+     "key": false,
+     "size": 74,
+     "icon": "apple"
+    }
+   },
+   {
+    "id": "S5",
+    "page": 2,
+    "tier": "start",
+    "text": "Look at the graph in S4.",
+    "answer": "2 fewer plums than pears; 11 fruits",
+    "val": [
+     2,
+     11
+    ],
+    "hint": "Match the plums with the pears. The pictures left over are the difference.",
+    "solution": "Pears 5 and plums 3. 5 take away 3 is 2 fewer plums. Apples 8 and plums 3: 8 + 3 = 11 fruits.",
+    "mistakes": [
+     "Adding 5 and 3 to find how many fewer.",
+     "Adding the pears as well."
+    ],
+    "mins": 3,
+    "parts": [
+     {
+      "l": "a",
+      "text": "There are [] fewer plums than pears.",
+      "ans": "2",
+      "val": 2
+     },
+     {
+      "l": "b",
+      "text": "Apples and plums: [] fruits altogether.",
+      "ans": "11",
+      "val": 11
+     }
+    ]
+   },
+   {
+    "id": "S6",
+    "page": 2,
+    "tier": "start",
+    "text": "Look at the graph in S4.",
+    "answer": "21 fruits in all; Apples",
+    "val": [
+     21,
+     "Apples"
+    ],
+    "hint": "Add all four rows. The longest row has the most.",
+    "solution": "8 + 5 + 3 + 5 = 21 fruits. Apples have 8 pictures, the longest row, so there are the most apples.",
+    "mistakes": [
+     "Leaving out a row when finding the total.",
+     "Choosing the kind with the most letters."
+    ],
+    "mins": 3,
+    "parts": [
+     {
+      "l": "a",
+      "text": "There are [] fruits in all.",
+      "ans": "21",
+      "val": 21
+     },
+     {
+      "l": "b",
+      "text": "Circle the kind with the most.",
+      "ans": "Apples",
+      "val": "Apples",
+      "choices": [
+       "Apples",
+       "Pears",
+       "Plums",
+       "Oranges"
+      ]
+     }
+    ]
+   }
+  ],
+  "think": [
+   {
+    "id": "T1",
+    "page": 3,
+    "tier": "think",
+    "text": "There are 18 fish in all. There are 2 fewer blue fish than red fish. Draw the blue fish and the gold fish in the empty boxes.",
+    "answer": "Blue 5; gold 6",
+    "val": [
+     5,
+     6
+    ],
+    "hint": "Find the blue fish first. Then add red and blue. Take that total away from 18.",
+    "solution": "Blue: 7 take away 2 is 5. Red and blue make 7 + 5 = 12. 18 take away 12 is 6 gold fish. Check: 7 + 5 + 6 = 18.",
+    "mistakes": [
+     "Writing 2 for the blue fish (the number fewer, not the number of fish).",
+     "Drawing a picture in every empty box."
+    ],
+    "mins": 5,
+    "parts": [
+     {
+      "l": "a",
+      "text": "There are [] blue fish.",
+      "ans": "5",
+      "val": 5
+     },
+     {
+      "l": "b",
+      "text": "There are [] gold fish.",
+      "ans": "6",
+      "val": 6
+     }
+    ],
+    "visual": {
+     "type": "picture_graph",
+     "rows": [
+      {
+       "label": "Red",
+       "n": 7,
+       "icon": "fish_red"
+      },
+      {
+       "label": "Blue",
+       "n": 8,
+       "hide": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+       ],
+       "icon": "fish_blue"
+      },
+      {
+       "label": "Gold",
+       "n": 8,
+       "hide": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+       ],
+       "icon": "fish_gold"
+      }
+     ],
+     "title": "Fish in a tank",
+     "size": 62,
+     "icon": "fish_red"
+    }
+   },
+   {
+    "id": "T2",
+    "page": 3,
+    "tier": "think",
+    "text": "Study the graph. Each picture stands for 2 shells. Answer questions T2 and T3.",
+    "answer": "Pearl 6 shells; 4 more shells",
+    "val": [
+     6,
+     4
+    ],
+    "hint": "Count in 2s along the row. 2 more pictures are 4 more shells.",
+    "solution": "Pearl has 3 pictures: 2, 4, 6 is 6 shells. Reef has 5 pictures: 2, 4, 6, 8, 10 is 10 shells. Reef has 2 more pictures than Pearl, and 2 pictures are 4 shells, so Reef has 4 more shells.",
+    "mistakes": [
+     "Writing 3 for the shells in Pearl's row (counting pictures).",
+     "Writing 2 for how many more shells (2 more pictures)."
+    ],
+    "mins": 4,
+    "parts": [
+     {
+      "l": "a",
+      "text": "Pearl has [] shells.",
+      "ans": "6",
+      "val": 6
+     },
+     {
+      "l": "b",
+      "text": "Reef has [] more shells than Pearl.",
+      "ans": "4",
+      "val": 4
+     }
+    ],
+    "visual": {
+     "type": "picture_graph",
+     "rows": [
+      {
+       "label": "Pearl",
+       "n": 3,
+       "icon": "shell"
+      },
+      {
+       "label": "Coral",
+       "n": 4,
+       "icon": "shell"
+      },
+      {
+       "label": "Reef",
+       "n": 5,
+       "icon": "shell"
+      }
+     ],
+     "title": "Shells found",
+     "each": 2,
+     "size": 62,
+     "icon": "shell"
+    }
+   },
+   {
+    "id": "T3",
+    "page": 3,
+    "tier": "think",
+    "text": "A child in another class looks at the graph in question T2. She says Coral has 4 shells.",
+    "answer": "No; 8 shells",
+    "val": [
+     "No",
+     8
+    ],
+    "hint": "Read the key first. What does one picture stand for?",
+    "solution": "The key says each picture stands for 2 shells. Coral has 4 pictures: 2, 4, 6, 8. Coral has 8 shells, not 4.",
+    "mistakes": [
+     "Agreeing because she counted 4 pictures.",
+     "Writing 4 for the number of shells."
+    ],
+    "mins": 3,
+    "parts": [
+     {
+      "l": "a",
+      "text": "Is she right? Circle Yes or No.",
+      "ans": "No",
+      "val": "No"
+     },
+     {
+      "l": "b",
+      "text": "Coral has [] shells.",
+      "ans": "8",
+      "val": 8
+     }
+    ]
+   }
+  ],
+  "go": [
+   {
+    "id": "G1",
+    "page": 4,
+    "tier": "go",
+    "text": "Mei's graph uses a key. Each picture stands for 3 stickers. There are 24 stickers in all. Draw the pictures for Lily in the empty boxes.",
+    "answer": "15 stickers; 3 pictures",
+    "val": [
+     15,
+     3
+    ],
+    "hint": "Count in 3s to find the stickers in each row. Take that total away from 24. Then count in 3s.",
+    "solution": "Mei has 3 pictures: 3, 6, 9 is 9 stickers. Ravi has 2 pictures: 3, 6 is 6 stickers. 9 + 6 = 15. 24 take away 15 is 9 stickers for Lily: 3, 6, 9 is 3 pictures. Check: 8 pictures of 3 are 24.",
+    "mistakes": [
+     "Writing 9 pictures for Lily (the number of stickers, not pictures).",
+     "Counting the pictures as 1 sticker each."
+    ],
+    "mins": 6,
+    "parts": [
+     {
+      "l": "a",
+      "text": "Mei and Ravi have [] stickers.",
+      "ans": "15",
+      "val": 15
+     },
+     {
+      "l": "b",
+      "text": "Lily needs [] pictures.",
+      "ans": "3",
+      "val": 3
+     }
+    ],
+    "visual": {
+     "type": "picture_graph",
+     "rows": [
+      {
+       "label": "Mei",
+       "n": 3,
+       "icon": "sticker"
+      },
+      {
+       "label": "Ravi",
+       "n": 2,
+       "icon": "sticker"
+      },
+      {
+       "label": "Lily",
+       "n": 6,
+       "hide": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+       ],
+       "icon": "sticker"
+      }
+     ],
+     "title": "Stickers",
+     "each": 3,
+     "size": 62,
+     "icon": "sticker"
+    }
+   },
+   {
+    "id": "G2",
+    "page": 4,
+    "tier": "go",
+    "text": "A graph shows 18 birds in all. There are the same number of ducks and geese. There are 3 more hens than ducks.",
+    "answer": "Ducks 5; hens 8",
+    "val": [
+     5,
+     8
+    ],
+    "hint": "Try a number for the ducks. Then find the geese and the hens. Does the total come to 18?",
+    "solution": "Try 4 ducks: 4 geese and 7 hens make 15, too few. Try 5 ducks: 5 geese and 8 hens make 18. So ducks 5, geese 5, hens 8. Check: 5 + 5 + 8 = 18.",
+    "mistakes": [
+     "Writing 3 for the hens (the number more, not the number of hens).",
+     "Forgetting that the geese are the same as the ducks."
+    ],
+    "mins": 6,
+    "parts": [
+     {
+      "l": "a",
+      "text": "There are [] ducks.",
+      "ans": "5",
+      "val": 5
+     },
+     {
+      "l": "b",
+      "text": "There are [] hens.",
+      "ans": "8",
+      "val": 8
+     }
+    ]
+   },
+   {
+    "id": "G3",
+    "page": 4,
+    "tier": "go",
+    "text": "Each picture stands for 1 book. Which question can the graph not answer? Write its number in the brackets.",
+    "answer": "(2)",
+    "val": [
+     2
+    ],
+    "hint": "A graph can only answer a question about the numbers it shows.",
+    "solution": "The graph shows how many books of each kind there are. Question (2) asks which book is the best: the graph does not show that. The other three can be answered: 9 story books; 5 more story books than art books; 24 books in all.",
+    "mistakes": [
+     "Choosing (3) because it needs a sum.",
+     "Choosing a question that has a number in it."
+    ],
+    "mins": 4,
+    "mcq": {
+     "options": [
+      "How many story books are there?",
+      "Which book is the best?",
+      "How many more story books than art books are there?",
+      "How many books are there in all?"
+     ],
+     "bracket": true
+    },
+    "visual": {
+     "type": "picture_graph",
+     "rows": [
+      {
+       "label": "Story",
+       "n": 9,
+       "icon": "book_s"
+      },
+      {
+       "label": "Maths",
+       "n": 6,
+       "icon": "book_m"
+      },
+      {
+       "label": "Art",
+       "n": 4,
+       "icon": "book_a"
+      },
+      {
+       "label": "Science",
+       "n": 5,
+       "icon": "book_sc"
+      }
+     ],
+     "title": "Books in a library",
+     "key": false,
+     "size": 60,
+     "icon": "book_s"
+    }
+   }
+  ],
+  "investigation": {
+   "id": "I1",
+   "page": 5,
+   "tier": "investigation",
+   "title": "Look, count and ask",
+   "first": "Look at 3 kinds of things in one room. How many of each? ____, ____ and ____",
+   "text": "Draw a graph for them on paper. Write one question it can answer and one question it cannot.",
+   "lines": 3,
+   "draw": 0,
+   "answer": "Many answers are right. A good graph has a title, the kinds named, one picture for each thing, the same size, and a key. A question it can answer is about the numbers (how many, how many more); a question it cannot answer is about likes, feelings or reasons.",
+   "val": [
+    "open"
+   ],
+   "look_for": "A child who counts three kinds, draws one picture for each, and writes one question about the numbers and one about likes or reasons that the graph cannot answer. Credit any clear pair. A child who writes two questions the graph can answer has not yet met the idea: ask, what does the graph not show? A child who uses a key of 2 has gone further.",
+   "mistakes": [
+    "Writing two questions the graph can answer.",
+    "Drawing more or fewer pictures than things."
+   ],
+   "mins": 8
+  }
+ },
+ "talk": {
+  "question": "A child in another class says: There are 21 books in all. The first bar has 6 books and the second has 9 books. So the third bar has 8 books. Do you agree? How could we check?",
+  "starter": "I think ... because ...",
+  "answer": "No. We can check by adding the three bars back up: 6 + 9 + 8 is 23, not 21. 6 and 9 make 15, and 21 take away 15 is 6, so the third bar has 6 books.",
+  "look_for": "A child who adds the three bars back up, or who takes the two bars away from the total. Not just yes or no."
+ },
+ "exit": [
+  {
+   "id": "E1",
+   "text": "Look at the graph. Each picture stands for 1 sticker.",
+   "parts": [
+    {
+     "l": "",
+     "text": "Circle the child with the fewest stickers.",
+     "ans": "Siti",
+     "val": "Siti",
+     "choices": [
+      "Ali",
+      "Mei",
+      "Siti"
+     ]
+    }
+   ],
+   "answer": "Siti",
+   "val": [
+    "Siti"
+   ],
+   "solution": "Siti has 3 pictures. That is the shortest row, so Siti has the fewest stickers.",
+   "mistakes": [
+    "Choosing the longest row.",
+    "Choosing the first name."
+   ],
+   "visual": {
+    "type": "picture_graph",
+    "rows": [
+     {
+      "label": "Ali",
+      "n": 5
+     },
+     {
+      "label": "Mei",
+      "n": 8
+     },
+     {
+      "label": "Siti",
+      "n": 3
+     }
+    ],
+    "icon": "sticker",
+    "key": false,
+    "size": 44
+   }
+  },
+  {
+   "id": "E2",
+   "text": "Look at the graph in E1.",
+   "parts": [
+    {
+     "l": "",
+     "text": "The children have [] stickers altogether.",
+     "ans": "16",
+     "val": 16
+    }
+   ],
+   "answer": "16 stickers",
+   "val": 16,
+   "solution": "Ali 5, Mei 8 and Siti 3. 5 + 8 + 3 = 16 stickers.",
+   "mistakes": [
+    "Leaving out a row.",
+    "Writing the number of rows."
+   ]
+  },
+  {
+   "id": "E3",
+   "text": "Look at the graph in E1. Mei has 3 more stickers than Ali.",
+   "parts": [
+    {
+     "l": "",
+     "text": "Circle True or False.",
+     "ans": "True",
+     "val": "True"
+    }
+   ],
+   "answer": "True",
+   "val": [
+    "True"
+   ],
+   "solution": "Mei 8 and Ali 5. 8 take away 5 is 3 more: true.",
+   "mistakes": [
+    "Saying false because Ali comes first.",
+    "Adding 8 and 5."
+   ]
+  }
+ ],
+ "look_back": {
+  "hardest": [
+   "reading the key",
+   "counting in 2s",
+   "missing bars",
+   "something else"
+  ],
+  "helped": [
+   "reading the key first",
+   "counting in 2s",
+   "adding to check",
+   "I was not stuck"
+  ],
+  "next": [
+   "reading the key",
+   "missing bars",
+   "questions a graph cannot answer",
+   "asking a question"
+  ]
+ },
+ "home_practice": [
+  {
+   "id": "H1",
+   "tier": "start",
+   "text": "In a graph, each picture stands for 1 stamp. Kumar's row has 8 pictures and Aisha's row has 5 pictures. How many stamps do they have altogether? They have ___ stamps.",
+   "answer": "13",
+   "val": 13,
+   "solution": "8 and 5 make 13 stamps.",
+   "visual": {
+    "type": "picture_graph",
+    "rows": [
+     {
+      "label": "Kumar",
+      "n": 8,
+      "icon": "stamp"
+     },
+     {
+      "label": "Aisha",
+      "n": 5,
+      "icon": "stamp"
+     }
+    ],
+    "icon": "counter",
+    "key": false,
+    "hw": 100,
+    "below": true
+   }
+  },
+  {
+   "id": "H2",
+   "tier": "start",
+   "text": "In a graph, each picture stands for 1 pen. The blue row has 9 pictures. The red row has 4 fewer pictures than the blue row. How many pens are in the red row? There are ___ red pens.",
+   "answer": "5",
+   "val": 5,
+   "solution": "9 take away 4 is 5. Check: 5 and 4 more make 9."
+  },
+  {
+   "id": "H3",
+   "tier": "start",
+   "text": "A graph shows 12 books in all. The story row has 7 books and the maths row has 3 books. The rest are art books. How many art books? There are ___ art books.",
+   "answer": "2",
+   "val": 2,
+   "solution": "7 and 3 make 10. 12 take away 10 is 2 art books. Check: 7 + 3 + 2 = 12."
+  },
+  {
+   "id": "H4",
+   "tier": "think",
+   "text": "A graph shows 20 pets in all. There are 8 cats. There are 3 fewer dogs than cats. The rest are fish. How many fish? There are ___ fish.",
+   "answer": "7",
+   "val": 7,
+   "solution": "Dogs: 8 take away 3 is 5. Cats and dogs make 13. 20 take away 13 is 7 fish. Check: 8 + 5 + 7 = 20."
+  },
+  {
+   "id": "H5",
+   "tier": "start",
+   "rewind_of": "Term 2 Lesson 8",
+   "text": "Ali has 3 boxes with 4 pens in each box and 5 loose pens. He has [2] pens in all.",
+   "answer": "17",
+   "val": [
+    17
+   ],
+   "solution": "3 boxes of 4 pens is 12. 12 and 5 loose pens make 17."
+  }
+ ],
+ "online_practice": {
+  "key": "t4l38",
+  "title": "Graph Detectives",
+  "topic": "Read the key, find a missing bar, and say what a graph cannot tell us",
+  "items": [
+   {
+    "id": "c1",
+    "tier": "core",
+    "type": "number",
+    "q": "The graph shows 8 red kites and 3 blue kites. How many more red kites than blue kites?",
+    "hint": "Match the red kites with the blue kites. Count the red kites that are left over.",
+    "steps": [
+     "There are 8 red kites and 3 blue kites.",
+     "8 take away 3 is 5.",
+     "There are 5 more red kites than blue kites."
+    ],
+    "answer": 5,
+    "slips": [
+     {
+      "a": [
+       11
+      ],
+      "say": "Do not add. More means the extra pictures: match the rows."
+     }
+    ],
+    "fig": {
+     "type": "picture_graph",
+     "rows": [
+      {
+       "label": "Red",
+       "n": "{a}",
+       "icon": "kite"
+      },
+      {
+       "label": "Blue",
+       "n": "{b}",
+       "icon": "kite_blue"
+      }
+     ],
+     "title": "Kites",
+     "size": "m",
+     "icon": "kite"
+    },
+    "fig_base": {
+     "type": "picture_graph",
+     "rows": [
+      {
+       "label": "Red",
+       "n": 8,
+       "icon": "kite"
+      },
+      {
+       "label": "Blue",
+       "n": 3,
+       "icon": "kite_blue"
+      }
+     ],
+     "title": "Kites",
+     "size": "m",
+     "icon": "kite"
+    },
+    "tpl": {
+     "vars": {
+      "a": [
+       7,
+       8,
+       9
+      ],
+      "b": [
+       3,
+       4,
+       5
+      ]
+     },
+     "derive": {},
+     "q": "The graph shows {a} red kites and {b} blue kites. How many more red kites than blue kites?",
+     "answer": "a-b",
+     "hint": "Match the red kites with the blue kites. Count the red kites that are left over.",
+     "steps": [
+      "There are {a} red kites and {b} blue kites.",
+      "{a} take away {b} is {ans}.",
+      "There are {ans} more red kites than blue kites."
+     ]
+    }
+   },
+   {
+    "id": "c2",
+    "tier": "core",
+    "type": "number",
+    "q": "The graph has rows of 2, 4 and 3 pictures. Each picture stands for 1 stamp. How many stamps are there in all?",
+    "hint": "Add the three rows.",
+    "steps": [
+     "The rows have 2, 4 and 3 pictures.",
+     "2 and 4 make 6. 6 and 3 make 9.",
+     "There are 9 stamps in all."
+    ],
+    "answer": 9,
+    "slips": [
+     {
+      "a": [
+       4
+      ],
+      "say": "That is the longest row. Add all three rows."
+     }
+    ],
+    "fig": {
+     "type": "picture_graph",
+     "rows": [
+      {
+       "label": "Ali",
+       "n": "{a}",
+       "icon": "stamp"
+      },
+      {
+       "label": "Mei",
+       "n": "{b}",
+       "icon": "stamp"
+      },
+      {
+       "label": "Ben",
+       "n": "{c}",
+       "icon": "stamp"
+      }
+     ],
+     "title": "Stamps",
+     "size": "m",
+     "icon": "stamp"
+    },
+    "fig_base": {
+     "type": "picture_graph",
+     "rows": [
+      {
+       "label": "Ali",
+       "n": 2,
+       "icon": "stamp"
+      },
+      {
+       "label": "Mei",
+       "n": 4,
+       "icon": "stamp"
+      },
+      {
+       "label": "Ben",
+       "n": 3,
+       "icon": "stamp"
+      }
+     ],
+     "title": "Stamps",
+     "size": "m",
+     "icon": "stamp"
+    },
+    "tpl": {
+     "vars": {
+      "a": [
+       1,
+       2,
+       3,
+       4
+      ],
+      "b": [
+       1,
+       2,
+       3,
+       4
+      ],
+      "c": [
+       1,
+       2,
+       3,
+       4
+      ]
+     },
+     "derive": {},
+     "q": "The graph has rows of {a}, {b} and {c} pictures. Each picture stands for 1 stamp. How many stamps are there in all?",
+     "answer": "a+b+c",
+     "hint": "Add the three rows.",
+     "steps": [
+      "The rows have {a}, {b} and {c} pictures.",
+      "Add the three rows.",
+      "There are {ans} stamps in all."
+     ]
+    }
+   },
+   {
+    "id": "c3",
+    "tier": "core",
+    "type": "choice",
+    "q": "Look at the graph. Which kind has the most?",
+    "hint": "The most is the longest row.",
+    "steps": [
+     "Cups have 3 pictures.",
+     "Plates have 6 pictures. Bowls have 4.",
+     "The longest row is plates, so plates have the most."
+    ],
+    "answer": "plates",
+    "slips": [
+     {
+      "a": [
+       "cups"
+      ],
+      "say": "Cups is the shortest row. The most is the longest row."
+     }
+    ],
+    "options": [
+     "cups",
+     "plates",
+     "bowls"
+    ],
+    "fig": {
+     "type": "picture_graph",
+     "rows": [
+      {
+       "label": "Cups",
+       "n": 3,
+       "icon": "cup"
+      },
+      {
+       "label": "Plates",
+       "n": 6,
+       "icon": "plate"
+      },
+      {
+       "label": "Bowls",
+       "n": 4,
+       "icon": "bowl"
+      }
+     ],
+     "title": "Things on a shelf",
+     "size": "m",
+     "icon": "cup"
+    }
+   },
+   {
+    "id": "c4",
+    "tier": "core",
+    "type": "choice",
+    "q": "Each picture stands for 1 book. Mei's row is longer than Ben's row. Who has more books?",
+    "hint": "A longer row has more pictures. Each picture is 1 book.",
+    "steps": [
+     "Each picture stands for 1 book.",
+     "Mei has more pictures than Ben.",
+     "So Mei has more books."
+    ],
+    "answer": "Mei",
+    "slips": [
+     {
+      "a": [
+       "Ben"
+      ],
+      "say": "Ben has the shorter row, so Ben has fewer books."
+     }
+    ],
+    "options": [
+     "Mei",
+     "Ben",
+     "the same"
+    ]
+   },
+   {
+    "id": "c5",
+    "tier": "core",
+    "type": "number",
+    "q": "There are 12 fruits in all. 5 are apples and the rest are pears. How many pears?",
+    "hint": "Take the apples away from all the fruits.",
+    "steps": [
+     "There are 12 fruits in all.",
+     "5 are apples.",
+     "12 take away 5 is 7 pears."
+    ],
+    "answer": 7,
+    "slips": [
+     {
+      "a": [
+       17
+      ],
+      "say": "Do not add. Take the apples away from all the fruits."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "t": [
+       9,
+       10,
+       11,
+       12
+      ],
+      "a": [
+       3,
+       4,
+       5
+      ]
+     },
+     "derive": {},
+     "q": "There are {t} fruits in all. {a} are apples and the rest are pears. How many pears?",
+     "answer": "t-a",
+     "hint": "Take the apples away from all the fruits.",
+     "steps": [
+      "There are {t} fruits in all.",
+      "{a} are apples.",
+      "{t} take away {a} is {ans} pears."
+     ]
+    }
+   },
+   {
+    "id": "t1",
+    "tier": "stretch",
+    "type": "number",
+    "q": "A graph shows 20 things in all. The first row has 8. The second row has 3 fewer than the first row. How many things are in the third row?",
+    "hint": "Find the second row first. Add the two rows. Take that total away from 20.",
+    "steps": [
+     "The second row has 8 take away 3, which is 5.",
+     "8 and 5 make 13.",
+     "20 take away 13 is 7."
+    ],
+    "answer": 7,
+    "slips": [
+     {
+      "a": [
+       13
+      ],
+      "say": "That is the first two rows. Take it away from 20."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       6,
+       7,
+       8
+      ],
+      "d": [
+       1,
+       2,
+       3
+      ],
+      "c": [
+       2,
+       3,
+       4
+      ]
+     },
+     "derive": {
+      "b": "a-d",
+      "t": "a+a-d+c"
+     },
+     "q": "A graph shows {t} things in all. The first row has {a}. The second row has {d} fewer than the first row. How many things are in the third row?",
+     "answer": "c",
+     "hint": "Find the second row first. Add the two rows. Take that total away from {t}.",
+     "steps": [
+      "The second row has {b}.",
+      "{a} and {b} make a total.",
+      "Take that total away from {t}."
+     ]
+    },
+    "easier": "c5"
+   },
+   {
+    "id": "t2",
+    "tier": "stretch",
+    "type": "number",
+    "q": "Each picture stands for 2. One row has 7 pictures and another row has 3 pictures. How many more things are in the first row?",
+    "hint": "Find how many more pictures. Then count in 2s.",
+    "steps": [
+     "7 take away 3 is 4 more pictures.",
+     "Each picture stands for 2.",
+     "4 pictures of 2 is 8 things."
+    ],
+    "answer": 8,
+    "slips": [
+     {
+      "a": [
+       4
+      ],
+      "say": "That is 4 more pictures. Each picture stands for 2 things."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "n": [
+       5,
+       6,
+       7
+      ],
+      "m": [
+       2,
+       3,
+       4
+      ]
+     },
+     "derive": {},
+     "q": "Each picture stands for 2. One row has {n} pictures and another row has {m} pictures. How many more things are in the first row?",
+     "answer": "2*(n-m)",
+     "hint": "Find how many more pictures. Then count in 2s.",
+     "steps": [
+      "{n} take away {m} is the number of pictures more.",
+      "Each picture stands for 2.",
+      "There are {ans} more things in the first row."
+     ]
+    },
+    "easier": "c1"
+   },
+   {
+    "id": "t3",
+    "tier": "stretch",
+    "type": "choice",
+    "q": "Graph A: each picture stands for 1, and a row has 6 pictures. Graph B: each picture stands for 2, and a row has 4 pictures. Which row shows more things?",
+    "hint": "Read the key first. Then count.",
+    "steps": [
+     "Graph A: 6 pictures of 1 is 6 things.",
+     "Graph B: 4 pictures of 2 is 8 things.",
+     "8 is more than 6, so Graph B shows more."
+    ],
+    "answer": "Graph B",
+    "slips": [
+     {
+      "a": [
+       "Graph A"
+      ],
+      "say": "Graph A has the longer row, but each picture only stands for 1. Read the key first."
+     }
+    ],
+    "options": [
+     "Graph A",
+     "Graph B",
+     "the same"
+    ],
+    "easier": "c3"
+   },
+   {
+    "id": "g1",
+    "tier": "challenge",
+    "type": "number",
+    "q": "Each picture stands for 3. A row has 4 pictures. How many things is that?",
+    "hint": "Count in 3s.",
+    "steps": [
+     "Each picture stands for 3.",
+     "Count in 3s four times: 3, 6, 9, 12.",
+     "The row shows 12 things."
+    ],
+    "answer": 12,
+    "slips": [
+     {
+      "a": [
+       4
+      ],
+      "say": "That is the number of pictures. Each picture stands for 3 things."
+     }
+    ],
+    "fig": {
+     "type": "picture_graph",
+     "rows": [
+      {
+       "label": "Stamps",
+       "n": "{n}",
+       "icon": "stamp"
+      }
+     ],
+     "title": "Stamps",
+     "each": 3,
+     "size": "m",
+     "icon": "stamp"
+    },
+    "fig_base": {
+     "type": "picture_graph",
+     "rows": [
+      {
+       "label": "Stamps",
+       "n": 4,
+       "icon": "stamp"
+      }
+     ],
+     "title": "Stamps",
+     "each": 3,
+     "size": "m",
+     "icon": "stamp"
+    },
+    "tpl": {
+     "vars": {
+      "n": [
+       2,
+       3,
+       4,
+       5,
+       6
+      ]
+     },
+     "derive": {},
+     "q": "Each picture stands for 3. A row has {n} pictures. How many things is that?",
+     "answer": "3*n",
+     "hint": "Count in 3s.",
+     "steps": [
+      "Each picture stands for 3.",
+      "Count in 3s {n} times.",
+      "The row shows {ans} things."
+     ]
+    },
+    "easier": "t2"
+   },
+   {
+    "id": "g2",
+    "tier": "challenge",
+    "type": "number",
+    "q": "Each picture stands for 3. There are 21 things in all. Two rows have 3 pictures and 2 pictures. How many pictures does the third row need?",
+    "hint": "Count the pictures in all. Take the two rows away.",
+    "steps": [
+     "21 things is 7 pictures of 3.",
+     "The two rows have 3 and 2 pictures: 5 pictures.",
+     "7 take away 5 is 2 pictures."
+    ],
+    "answer": 2,
+    "slips": [
+     {
+      "a": [
+       6
+      ],
+      "say": "That is how many things the third row has. Count how many pictures that is."
+     }
+    ],
+    "easier": "t2"
+   },
+   {
+    "id": "g3",
+    "tier": "challenge",
+    "type": "selfcheck",
+    "q": "Make a graph of the shoes or socks in your house. Write one question it can answer and one it cannot.",
+    "hint": "Count each kind first. Then draw.",
+    "steps": [
+     "Count each kind of thing.",
+     "Draw one picture for each thing.",
+     "Write one question about the numbers and one about likes."
+    ],
+    "easier": "c2"
+   },
+   {
+    "id": "r1",
+    "tier": "core",
+    "type": "number",
+    "q": "Ravi reads 5 pages each day. How many pages does he read in 4 days?",
+    "hint": "Count on in 5s.",
+    "steps": [
+     "Each day adds 5 pages.",
+     "5, 10, 15, 20.",
+     "He reads 20 pages in 4 days."
+    ],
+    "answer": 20,
+    "slips": [
+     {
+      "a": [
+       9
+      ],
+      "say": "Do not add 5 and 4. Each day adds 5 pages."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "p": [
+       2,
+       3,
+       4,
+       5,
+       6
+      ],
+      "k": [
+       3,
+       4,
+       5
+      ]
+     },
+     "derive": {
+      "t": "p*k"
+     },
+     "q": "Ravi reads {p} pages each day. How many pages does he read in {k} days?",
+     "answer": "t",
+     "hint": "Count on in {p}s.",
+     "steps": [
+      "Each day adds {p} pages.",
+      "Count on {k} times.",
+      "He reads {t} pages in {k} days."
+     ]
+    },
+    "rewind_of": "Term 3 Lesson 8"
+   },
+   {
+    "id": "r2",
+    "tier": "core",
+    "type": "number",
+    "q": "The sticks in a pattern are 2, 5, 8, and so on. Each number is 3 more than the one before. What is the next number?",
+    "hint": "Add 3 to the last number.",
+    "steps": [
+     "The last number is 8.",
+     "Add 3: 8 and 3 make 11.",
+     "The next number is 11."
+    ],
+    "answer": 11,
+    "slips": [
+     {
+      "a": [
+       10
+      ],
+      "say": "Add 3 to 8, not 2."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "s": [
+       2,
+       3,
+       4,
+       5
+      ],
+      "e": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     "derive": {
+      "a": "s+e",
+      "b": "s+2*e",
+      "t": "s+3*e"
+     },
+     "q": "The sticks in a pattern are {s}, {a}, {b}, and so on. Each number is {e} more than the one before. What is the next number?",
+     "answer": "t",
+     "hint": "Add {e} to the last number.",
+     "steps": [
+      "The last number is {b}.",
+      "Add {e}: the next number is {t}.",
+      "The next number is {t}."
+     ]
+    },
+    "rewind_of": "Term 3 Lesson 8"
+   }
+  ]
+ },
+ "parent": {
+  "summary": "We read picture graphs like detectives: the key first, then the rows. We counted in 2s and 3s when each picture stood for more than 1, found a missing bar from a total, and asked what a graph can and cannot tell us. Some Think harder and Go further questions go past the school Primary 1 syllabus on purpose; Start here stays within it.",
+  "words": [
+   "key: a note that says what one picture stands for",
+   "row: one line of pictures in a graph",
+   "total: all the numbers added together",
+   "fewer: a smaller number; 5 fewer than 9 is 4"
+  ],
+  "try_home": [
+   "Draw a graph of the shoes or socks in your house. Ask: what does one picture stand for?",
+   "Draw a graph where each picture stands for 2. Ask your child to read one row.",
+   "Ask: what question can this graph not answer?"
+  ],
+  "ask": [
+   "What does one picture stand for?",
+   "How do you know which row has the most things?",
+   "How could you check the missing bar?"
+  ],
+  "when_stuck": "Let your child look at the key and wait 10 seconds before helping. Please do not give the answer: ask 'What does one picture stand for?' instead. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
+  "next": "Next lesson: The Problem-Solving Toolbox. Online practice: your tutor will share the link. The recording has the tutor, the shared screen and any voice that is unmuted. Please do not share the link.",
+  "quote": "Read the key first. A graph tells us some things and not others.",
+  "report_line": "Your child is learning to read picture graphs carefully and to say what a graph can and cannot tell us. This week: reading the key first, counting in 2s and 3s, and finding a missing bar.",
+  "term_line": "Your child is learning to choose a way to solve a problem, and to make and test their own puzzles.",
+  "next_materials": [
+   "Your Term 4 book (Book 8): tear out the tool-and-problem cards page along the dashed line, then a grown-up cuts out the 15 cards",
+   "A pencil, a rubber and paper"
+  ]
+ },
+ "safeguarding": [
+  "There are no small pieces and nothing to cut in this lesson. No matches or toothpicks, nothing sharp.",
+  "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
+  "Nobody holds paper or a drawing up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on a count of three, or show fingers or a thumb for a choice. There is no private chat.",
+  "Wrong working belongs to 'a child' or 'a child in another class', never to a child in the group, and never to a name. Never read out a child's name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is unmuted. Children may mute and keep their cameras off. A child's page is never shown.",
+  "The graphs use made-up data. There is no class poll and no count by child, so no child is named with a number or a choice.",
+  "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. Moves are gentle; a child may stay seated and move one arm.",
+  "A child who is still stuck ticks 'I am still stuck' on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for 90 days after the program ends. The tutor then helps in the open session next lesson. No private messages to children, and no personal phones.",
+  "The look-back is never collected in front of the group or read out. A pass is always allowed."
+ ],
+ "tutor_prep": [
+  "Solve every workbook question yourself first. Check the answers: S1 Mei and Siti; S2 5 and 25; S3 True, True, False, False; S4 4 and oranges; S5 2 and 11; S6 21 and apples; T1 5 and 6; T2 6 and 4; T3 No and 8; G1 15 and 3; G2 5 and 8; G3 (2); I1 open.",
+  "Tell parents a week before: nothing to find at home and nothing to cut out; coloured pencils are optional. The next lesson needs the tool-and-problem cards page of Book 8 torn out, with its 15 cards cut out by a grown-up.",
+  "Have the slides open. Practise the count-in-2s-and-3s break. Say the fixed question forms every time: How many more ___ than ___? How many in all? Which has the fewest? Always read the key first, out loud, before any question about a graph.",
+  "Check the recording captures the tutor and the shared screen. Children's video is excluded; any unmuted voice is recorded. Greet the whole group first, say the notice, then start the recording; avoid first names while it runs.",
+  "Be plain with families: reading a picture graph with 1 picture for 1 thing is Primary 1 work; a key where each picture stands for 2 or 3 is Primary 2; saying what a graph cannot tell us is not a listed outcome. These go beyond Primary 1 on purpose, at Think harder and Go further only. Do not call the lesson MOE-aligned.",
+  "Wording rule: wrong working belongs to 'a child' or 'a child in another class', never to a cast name and never to a child in the group. The data are made up: no class poll. Slides keep the answers off the screen while you ask: read every question with its numbers aloud. A child who reads the pictures and not the key is not wrong to start with: ask what one picture stands for."
+ ],
+ "spare_time": {
+  "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
+  "rules": [
+   "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
+   "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+   "Never teach anything the next lesson needs. If the class is ahead, slow down: ask 'How do you know?' and let children explain, rather than rushing on."
+  ],
+  "menu": [
+   {
+    "id": "M1",
+    "title": "Is it always true?",
+    "minutes": 4,
+    "tutor": "In a graph where every picture stands for 2, is the longest row always the most things? Test it with rows of 3, 5 and 4 pictures. Then say what changes if the rows have different keys.",
+    "rec": "Recording: pause. Test whether the longest row has the most when every picture stands for 2.",
+    "answer": "Yes, when every row has the same key: 3, 5 and 4 pictures are 6, 10 and 8 things, and the longest row has the most. With different keys it is not always true."
+   },
+   {
+    "id": "M2",
+    "title": "Make a puzzle for your grown-up",
+    "minutes": 4,
+    "tutor": "Draw a graph where each picture stands for 2. Hide one bar with your hand. Tell your grown-up the total and ask how many pictures the hidden bar has.",
+    "rec": "Recording: pause. Draw a graph, hide one bar and ask a grown-up to find it from the total.",
+    "answer": "No single answer. Check: the hidden bar is the total take away the other bars, and then count in 2s."
+   },
+   {
+    "id": "M3",
+    "title": "Teach it back",
+    "minutes": 3,
+    "tutor": "Tell a toy why we read the key first. Show it two rows of 4 pictures with different keys.",
+    "rec": "Recording: pause. Tell a toy why we read the key before we read the rows.",
+    "answer": "The key says what one picture stands for. Two rows can have the same number of pictures and show different numbers of things."
+   }
+  ]
+ },
+ "workbook": {
+  "header": "Graphs: read the key first",
+  "hint_p1": "Read the key first. Each picture stands for 1. Match the rows to see how many more.",
+  "hint_p2": "Each picture stands for 1. Add all the rows to find how many in all.",
+  "hint_p3": "Read the key first. Choose any question, in any order.",
+  "hint_p4": "Read the key first. Choose any question. You do not have to finish them all.",
+  "choice_after": 3,
+  "inv_intro": "",
+  "inv_first_label": "First:",
+  "inv_then_label": "Next:",
+  "home_hint": "Draw it. Read the key first.",
+  "kits": []
+ },
+ "beyond": {
+  "name": "Missing Bar",
+  "where": [
+   "T2",
+   "T3",
+   "G1"
+  ],
+  "text": "Each picture stands for 3 stickers and there are 24 in all: Mei has 3 pictures and Ravi 2, so Lily needs 24 take away 15, which is 9 stickers, and that is 3 pictures. Reading a key where each picture stands for 2 (Think harder) and saying why the longest row is not always the most are the steps before it. Picture graphs with a scale are Primary 2 (p. 34); the Level 2 plan keeps keys of 2, 3 or 5 only. School papers at Primary 1 always use 1 picture for 1 thing. Named puzzle: Missing Bar.",
+  "parent": "A key where each picture stands for 2 or 3 goes past the Primary 1 syllabus on purpose."
+ }
+}

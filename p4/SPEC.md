@@ -1,8 +1,8 @@
 # Math Inquirers P4 Holiday Program — content spec
 
-**Who:** children finishing Primary 4 (going into P5 in 2027), age 10. Online-first, live video, groups of up to 8.
+**Who:** ages 9 to 11 (builds on Primary 4 maths). Online-first, live video, groups of up to 8.
 **Format:** 10 lessons × 90 minutes over 5 weeks (2 a week), same routine as the P1 program.
-**Approach:** enrichment, non-routine puzzles and heuristics, tagged to the P4 syllabus. Slogan: "Notice it. Test it. Explain why."
+**Approach:** enrichment, non-routine puzzles and heuristics, on topics chosen to complement the P4 school year. Slogan: "Notice it. Test it. Explain why."
 Syllabus source: Tampines North Primary 2026 P4 scheme of work (numbers to 100 000; factors and multiples; four operations; tables and line graphs; fractions; angles; rectangles and squares; decimals and their four operations; area and perimeter; nets; symmetry).
 
 ## The 10 lessons
@@ -17,10 +17,10 @@ Syllabus source: Tampines North Primary 2026 P4 scheme of work (numbers to 100 0
 | 7 | 4A | Area Architects II | Area and perimeter, rectangles and squares | composite figures, fixed area with largest and smallest perimeter, cutting and rearranging rectangles |
 | 8 | 4B | Symmetry and Nets | Symmetry, nets | completing symmetric figures, lines of symmetry, which nets fold into a cube, opposite faces on a dice net |
 | 9 | 5A | Data Detectives | Tables and line graphs | reading trends, missing values, comparing two lines, spotting a misleading graph |
-| 10 | 5B | Challenge Day | Mixed heuristics | guess and check, supposition (heads and legs), working backwards, logic; competition-style problems |
+| 10 | 5B | Puzzle Day | Mixed heuristics | guess and check, supposition (heads and legs), working backwards, logic; competition-style problems |
 
 ## P4 level rules
-- Children know: numbers to 100 000; factors, multiples, common factors and common multiples; four operations including multiplying up to 4 digits by 2 digits and dividing up to 4 digits by 1 digit; order of operations; fractions: mixed numbers, improper fractions, fraction of a set, adding and subtracting fractions with denominators up to 12; decimals to 3 places and the four operations with a decimal and a 1-digit whole number; measuring angles with a protractor; 8-point compass; properties of rectangles and squares; area and perimeter of composite rectilinear figures; line symmetry; nets of cubes and cuboids; tables and line graphs.
+- Children know: numbers to 100 000; factors, multiples, common factors and common multiples; four operations including multiplying up to 4 digits by 2 digits and dividing up to 4 digits by 1 digit; order of operations is a P5 topic in the MOE syllabus (Oct 2025), so Level 4 Lesson 3 treats it as a labelled P5 preview; fractions: mixed numbers, improper fractions, fraction of a set, adding and subtracting fractions with denominators up to 12; decimals to 3 places and the four operations with a decimal and a 1-digit whole number; measuring angles with a protractor; compass directions (turns on a compass are not named in the MOE primary syllabus, so keep them as enrichment); properties of rectangles and squares; area and perimeter of composite rectilinear figures; line symmetry; nets of cubes and cuboids; tables and line graphs.
 - Do NOT use: percentages; ratio; algebra letters; speed; area of triangles; negative numbers; numbers above 100 000.
 - Every answer must be worked out and checked; puzzles with "find all" must list every case; logic puzzles must have exactly one solution.
 - Plain English. Singapore context (names like Ali, Mei, Ravi, Siti, Ben; $ and ¢; hawker, MRT, HDB are fine).

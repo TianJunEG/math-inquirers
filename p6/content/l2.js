@@ -84,10 +84,10 @@ module.exports = {
     n: 2, week: 1, session: 'B', title: 'Prime Hunters', topic: 'Primes, Factors and Prime Factorisation',
     objective: 'Find all the factors of a number using factor pairs, decide whether a number is prime by testing small divisors, write a number as a product of primes with a factor tree, use mod (the remainder), if and a counter in code to count factors, and explore Goldbach pairs and numbers with exactly 3 factors.',
     skills: 'Systematic listing (factor pairs), testing and ruling out, reasoning about when to stop, tracing code, generalising (squares of primes)',
-    materials: 'Laptop or desktop with Scratch 3 open, a printed 1 to 100 grid (or squared paper), two coloured pencils, mini whiteboard, workbook. Optional: a Python editor for children who already know Python.',
-    online: 'Share the 1 to 100 grid on screen and annotate it while children work on their own printed or hand-drawn grid. Build the prime checker together in your shared Scratch window; the blocks are also on the slide. Block colours on our slides are simplified; in Scratch, find blocks by the category name on the left, not by colour. Children hold their grid up to the camera at minute 22.',
-    warmup: 'Factor pair hunt: six number cards (12, 16, 20, 24, 29, 30). With a partner, find every factor pair for each card and explain one pair you found. One card has only one pair: which one, and why? No racing and no points.',
-    explore: 'The sieve of Eratosthenes by hand on a 1 to 100 grid: cross out 1, circle 2 and cross out its other multiples, then do the same for 3, 5 and 7. Count the primes and decide why we can stop after 7.',
+    materials: 'Laptop or desktop with Scratch 3 open, a printed 1 to 100 grid (or squared paper), two coloured pencils, mini whiteboard, workbook. Starter file: L2_Prime_Checker.sb3. Optional: a Python editor for children who already know Python.',
+    online: 'Share the 1 to 100 grid on screen and annotate it while children work on their own printed or hand-drawn grid. Build the prime checker together in your shared Scratch window; the blocks are also on the slide. Anyone who would rather not build it can open the starter file L2_Prime_Checker.sb3 (File, Load from your computer; no account needed): it has n, d and count set up and an empty repeat n, so the child adds the if n mod d = 0 test and change d by 1. Block colours on our slides are simplified; in Scratch, find blocks by the category name on the left, not by colour. Children put pencils down at the end of the explore and check their grid against the slide.',
+    warmup: 'Factor pair hunt: four number cards (12, 16, 24, 29). With a partner, find every factor pair for each card and explain one pair you found. One card has only one pair: which one, and why? No racing and no points.',
+    explore: 'The sieve of Eratosthenes by hand on a 1 to 100 grid: cross out 1, circle 2 and cross out its other multiples, then do the same for 3, 5 and 7. Count the primes. (Why we can stop after 7 is taken in the mini-lesson.)',
     mini: 'Factors come in pairs; stop when the pairs meet (36 has 9 factors because 6 × 6 counts once). A prime has exactly 2 factors; 1 is not prime. Test 91: 2, 3 and 5 fail, 7 works (7 × 13), so it is not prime; stop testing once d × d is bigger than the number. Factor trees: 60 = 2 × 2 × 3 × 5 whichever way you split it. Code: n mod d is the remainder; if it is 0, d is a factor; a counter counts the factors; count = 2 means prime. Before page 2: trace a loop with mod, Goldbach pairs (20 = 3 + 17 = 7 + 13), and counting the factors of square numbers.',
     share: 'Why does a square number like 36 have an odd number of factors, when most numbers have an even number?',
     exit: { q: '(a) Is 111 prime? Show your test. (b) Write 66 as a product of primes. (c) Optional: is 133 prime?', a: '(a) No. 1 + 1 + 1 = 3, so 3 divides it: 111 = 3 × 37.  (b) 66 = 2 × 3 × 11  (c) No. 133 = 7 × 19.' },
@@ -120,18 +120,19 @@ module.exports = {
     ],
     circulate: ['Ask: “How do you know you have found every factor?”', 'Ask: “Why can you stop testing at 7 for numbers below 100?”', 'Ask: “Point to the block that adds 1 to count. When does it run?”'],
     hints: ['Hint 1: “Start with 1 × the number, then try 2, 3, 4 … and stop when the pairs meet.”', 'Hint 2: “Use the quick tests: even? digits add to a multiple of 3? ends in 0 or 5? Then try 7.”', 'Hint 3: “Split the number into any two factors you know, then keep splitting until every branch ends in a prime.”'],
-    talk: ['“Why does a square number like 36 have an odd number of factors?”', '“Is there a biggest prime? What do you think?”'],
+    talk: ['“Why does a square number like 36 have an odd number of factors?”'],
+    talkNext: '“Is there a biggest prime? What do you think?” (Take-home, or the opener of the next lesson.)',
     talkAns: 'Factors come in pairs that multiply to the number. For a square number one pair is a number times itself (6 × 6), and that factor is counted only once, so the total is odd. There is no biggest prime: Euclid showed this about 2300 years ago (a teaser for secondary school).',
     close: ['“You sieved, you tested, you split numbers into primes, and you taught a computer to count factors. Real prime hunters!”', '“Do the exit ticket on your own, then show me.”']
   },
 
   deck: {
     today: 'Find factors in pairs, test whether a number is prime, split numbers into primes, and teach a computer to count factors with mod.',
-    warmGame: 'Factor pair hunt. Six number cards. With a partner, find every factor pair and explain one. One card has only one pair: which one?',
-    warmQs: [['17 ÷ 5 = 3 remainder __', '2'], ['30 ÷ 6 = 5 remainder __', '0'], ['23 ÷ 4 = 5 remainder __', '3'], ['100 ÷ 7: what is the remainder?', '2 (7 × 14 = 98)'], ['A remainder of 0 means …?', 'It divides exactly: it is a factor.']],
+    warmGame: 'Factor pair hunt. Four number cards. With a partner, find every factor pair and explain one. One card has only one pair: which one?',
+    warmQs: [['17 ÷ 5 = 3 remainder __', '2'], ['100 ÷ 7: what is the remainder?', '2 (7 × 14 = 98)'], ['A remainder of 0 means …?', 'It divides exactly: it is a factor.']],
     expSetup: ['On the 1 to 100 grid, cross out 1. It is not prime.', 'Circle 2. Cross out every other multiple of 2.', 'Circle the next number not crossed out (3) and cross out its multiples. Do the same for 5 and 7.', 'Circle every number left. Count the primes.'],
     expPic: 'the first three rows of a 1 to 100 grid with 2 and 3 circled and the multiples of 2 crossed out.',
-    expAsk: [['How many primes are there from 1 to 100?', '25.'], ['Why could we stop after crossing out the multiples of 7?', 'The next prime is 11, and 11 × 11 = 121 is bigger than 100. Every smaller multiple of 11 (22, 33, … 99) has a smaller factor, so it is already crossed out.'], ['Is 1 prime? Is 2 prime?', '1 is not: it has only one factor. 2 is prime (factors 1 and 2), the only even prime.']],
+    expAsk: [['How many primes are there from 1 to 100?', '25.'], ['Is 1 prime? Is 2 prime?', '1 is not: it has only one factor. 2 is prime (factors 1 and 2), the only even prime.']],
     mini1: { head: 'Is 91 prime?', body: ['Not even; 9 + 1 = 10 is not a multiple of 3; does not end in 0 or 5.', 'Try 7: 91 ÷ 7 = 13.', 'Stop testing once d × d is bigger than the number (10 × 10 = 100).'], ans: 'Not prime: 91 = 7 × 13.' },
     mini2: { head: 'Prime checker in code (n = 15)', body: ['repeat n: if n mod d = 0 then change count by 1; change d by 1.', 'n mod d is the remainder. 0 means d is a factor.', 'At the end, count = 2 means prime.'], ans: 'Factors 1, 3, 5 and 15: count = 4, not 2, so 15 is not prime.' },
     keyHead: 'Key idea: exactly two factors',
@@ -166,7 +167,7 @@ module.exports = {
       { q: 'A number between 20 and 40 leaves remainder 1 when divided by 2, by 3 and by 4. Find both possible numbers.', a: '25 and 37. Each is 1 more than a multiple of 12.' }
     ],
     challenge: [
-      { q: 'What is the largest prime number below 200?', a: '199. Test 2, 3, 5, 7, 11 and 13 (14 × 14 = 196, 15 × 15 = 225): none of them divides 199.' },
+      { q: 'Find the smallest number with exactly 8 factors, and then the smallest ODD number with exactly 8 factors. Why is the odd one so much bigger?', a: '24 (1, 2, 3, 4, 6, 8, 12, 24) and 105 (1, 3, 5, 7, 15, 21, 35, 105). 8 factors need either three different primes multiplied (like 3 × 5 × 7) or a prime cubed times another prime (like 2 × 2 × 2 × 3). With only odd primes the smallest choices are 3 × 5 × 7 = 105 (3 × 3 × 3 × 5 = 135 is bigger), but one factor of 2 makes the number much smaller.' },
       { q: 'Ali multiplies two different primes and gets 91. Mei multiplies three different primes and gets 105. Which primes did each of them use?', a: 'Ali: 7 × 13. Mei: 3 × 5 × 7.' },
       { q: 'Find the smallest number that can be divided exactly by 2, 3, 4, 5 and 6.', a: '60. It needs 2 × 2 (for 4), a 3 and a 5: 2 × 2 × 3 × 5 = 60.' },
       { q: '1001 = 7 × 11 × 13. Use this to write 3003 and 5005 as products of primes.', a: '3003 = 3 × 7 × 11 × 13 and 5005 = 5 × 7 × 11 × 13.' },
@@ -200,7 +201,7 @@ module.exports = {
     W.push(H.p([`<div style="border:2px solid ${N};border-radius:12px;background:#FFF4D1;padding:6px 14px;margin-left:40px"><div style="font-size:14px;color:#3B4A6B"><b style="color:${TEAL};font-size:15px">Python corner (optional): a factor finder.</b>  n % d is n mod d. It lists the factors of n and counts them. Change n to check Q1.</div><pre style="margin:4px 0 2px;font-family:'Courier New',monospace;font-size:14px;line-height:1.3;white-space:pre">${esc('n = 28\nf = [d for d in range(1, n + 1) if n % d == 0]\nprint(f, len(f))')}</pre></div>`], { after: 0 }));
 
     // ---- page 2 ----
-    W.push(H.q(3, 'Predict, then trace. This code counts the factors of 6. Fill in the trace table.', { pb: true, before: 0, keepNext: true }));
+    W.push(H.q(3, 'Predict, then trace. This code counts the factors of 6 (6 mod d = left over). Fill in the table.', { pb: true, before: 0, keepNext: true }));
     { const tr = H.tbl([1300, 2200, 2200], [H.row(['d', '6 mod d', 'count after'].map((s, i) => H.cell(s, [1300, 2200, 2200][i], { bold: true, fill: 'EDEDED', h: 20 }))),
         ...[1, 2, 3, 4, 5, 6].map(k => H.row([H.cell(String(k), 1300, { h: 5 }), H.cell(k === 1 ? '0' : '', 2200, { h: 12 }), H.cell(k === 1 ? '1' : '', 2200, { h: 12 })]))]);
       W.push(side(blocks([hat, ['var', 'set count to (0)'], ['var', 'set d to (1)'], ['ctl', 'repeat (6)', [['ctl', 'if (6 mod d = 0) then', [['var', 'change count by (1)']]], ['var', 'change d by (1)']]], ['look', 'say (count)']], 'Code: set count to 0, d to 1; repeat 6: if 6 mod d = 0 then change count by 1; change d by 1; then say count', 14), 4100,
@@ -210,7 +211,7 @@ module.exports = {
     W.push(H.sub('a', '24 in every way:  ________________________________'));
     W.push(H.sub('b', 'Explain why 27 cannot be the sum of two primes.'));
     // Q5 exactly 3 factors
-    W.push(H.q(5, 'Exactly 3 factors.', { keepNext: true }));
+    W.push(H.q(5, '★ Take-home. Exactly 3 factors.', { keepNext: true }));
     W.push(H.sub('a', 'All the numbers from 1 to 30 with exactly 3 factors (there are 3):  ______________'));
     W.push(H.sub('b', 'What do you notice?  ______________________________'));
     // Q6 plan

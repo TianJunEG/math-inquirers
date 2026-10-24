@@ -1,0 +1,737 @@
+{
+ "passed": 762,
+ "failed": 0,
+ "failures": [],
+ "worksheets": {
+  "CBC-01": {
+   "single_slip": {
+    "double_cases": 1680,
+    "double_detected": 1678,
+    "double_rate": 0.9988,
+    "swap_cases": 88,
+    "swap_detected": 86,
+    "swap_rate": 0.9773,
+    "wrong_values": 150,
+    "in_key": 60,
+    "detected_all": 150,
+    "rate_all": 1.0,
+    "detected_in_key": 60,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.8
+   },
+   "min_pupil_font_mm": 4.9,
+   "min_teacher_font_mm": 4.8,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 34.0
+  },
+  "CBC-02": {
+   "single_slip": {
+    "double_cases": 1920,
+    "double_detected": 1919,
+    "double_rate": 0.9995,
+    "swap_cases": 100,
+    "swap_detected": 99,
+    "swap_rate": 0.99,
+    "wrong_values": 320,
+    "in_key": 64,
+    "detected_all": 320,
+    "rate_all": 1.0,
+    "detected_in_key": 64,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.875
+   },
+   "min_pupil_font_mm": 4.9,
+   "min_teacher_font_mm": 4.9,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 35.0
+  },
+  "CBC-03": {
+   "single_slip": {
+    "double_cases": 1456,
+    "double_detected": 1456,
+    "double_rate": 1.0,
+    "swap_cases": 76,
+    "swap_detected": 76,
+    "swap_rate": 1.0,
+    "wrong_values": 280,
+    "in_key": 56,
+    "detected_all": 280,
+    "rate_all": 1.0,
+    "detected_in_key": 56,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 1.0
+   },
+   "min_pupil_font_mm": 4.9,
+   "min_teacher_font_mm": 4.9,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 34.9
+  },
+  "CBC-04": {
+   "single_slip": {
+    "double_cases": 2176,
+    "double_detected": 2173,
+    "double_rate": 0.9986,
+    "swap_cases": 114,
+    "swap_detected": 111,
+    "swap_rate": 0.9737,
+    "wrong_values": 170,
+    "in_key": 68,
+    "detected_all": 170,
+    "rate_all": 1.0,
+    "detected_in_key": 68,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.8235
+   },
+   "min_pupil_font_mm": 4.9,
+   "min_teacher_font_mm": 4.7,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 34.0
+  },
+  "CBC-05": {
+   "single_slip": {
+    "double_cases": 1248,
+    "double_detected": 1245,
+    "double_rate": 0.9976,
+    "swap_cases": 67,
+    "swap_detected": 64,
+    "swap_rate": 0.9552,
+    "wrong_values": 1300,
+    "in_key": 52,
+    "detected_all": 1300,
+    "rate_all": 1.0,
+    "detected_in_key": 52,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.7692
+   },
+   "min_pupil_font_mm": 4.5,
+   "min_teacher_font_mm": 4.5,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 34.6
+  },
+  "CBC-06": {
+   "single_slip": {
+    "double_cases": 1456,
+    "double_detected": 1456,
+    "double_rate": 1.0,
+    "swap_cases": 76,
+    "swap_detected": 76,
+    "swap_rate": 1.0,
+    "wrong_values": 1400,
+    "in_key": 56,
+    "detected_all": 1400,
+    "rate_all": 1.0,
+    "detected_in_key": 56,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.8571
+   },
+   "min_pupil_font_mm": 4.9,
+   "min_teacher_font_mm": 4.8,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 39.8
+  },
+  "CBC-07": {
+   "single_slip": {
+    "double_cases": 1248,
+    "double_detected": 1247,
+    "double_rate": 0.9992,
+    "swap_cases": 67,
+    "swap_detected": 66,
+    "swap_rate": 0.9851,
+    "wrong_values": 260,
+    "in_key": 52,
+    "detected_all": 260,
+    "rate_all": 1.0,
+    "detected_in_key": 52,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.8462
+   },
+   "min_pupil_font_mm": 4.2,
+   "min_teacher_font_mm": 4.2,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 36.2
+  },
+  "CBC-08": {
+   "single_slip": {
+    "double_cases": 1456,
+    "double_detected": 1456,
+    "double_rate": 1.0,
+    "swap_cases": 76,
+    "swap_detected": 76,
+    "swap_rate": 1.0,
+    "wrong_values": 322,
+    "in_key": 56,
+    "detected_all": 322,
+    "rate_all": 1.0,
+    "detected_in_key": 56,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 1.0
+   },
+   "min_pupil_font_mm": 4.8,
+   "min_teacher_font_mm": 3.4,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 35.2
+  },
+  "CBC-09": {
+   "single_slip": {
+    "double_cases": 1248,
+    "double_detected": 1245,
+    "double_rate": 0.9976,
+    "swap_cases": 67,
+    "swap_detected": 64,
+    "swap_rate": 0.9552,
+    "wrong_values": 260,
+    "in_key": 52,
+    "detected_all": 260,
+    "rate_all": 1.0,
+    "detected_in_key": 52,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.7692
+   },
+   "min_pupil_font_mm": 4.7,
+   "min_teacher_font_mm": 4.7,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 34.7
+  },
+  "CBC-10": {
+   "single_slip": {
+    "double_cases": 2176,
+    "double_detected": 2173,
+    "double_rate": 0.9986,
+    "swap_cases": 115,
+    "swap_detected": 112,
+    "swap_rate": 0.9739,
+    "wrong_values": 204,
+    "in_key": 68,
+    "detected_all": 204,
+    "rate_all": 1.0,
+    "detected_in_key": 68,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.8235
+   },
+   "min_pupil_font_mm": 4.4,
+   "min_teacher_font_mm": 4.2,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 34.0
+  },
+  "CBC-11": {
+   "single_slip": {
+    "double_cases": 1248,
+    "double_detected": 1247,
+    "double_rate": 0.9992,
+    "swap_cases": 67,
+    "swap_detected": 66,
+    "swap_rate": 0.9851,
+    "wrong_values": 520,
+    "in_key": 52,
+    "detected_all": 520,
+    "rate_all": 1.0,
+    "detected_in_key": 52,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.8462
+   },
+   "min_pupil_font_mm": 4.9,
+   "min_teacher_font_mm": 4.8,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 37.0
+  },
+  "CBC-12": {
+   "single_slip": {
+    "double_cases": 2176,
+    "double_detected": 2174,
+    "double_rate": 0.9991,
+    "swap_cases": 114,
+    "swap_detected": 112,
+    "swap_rate": 0.9825,
+    "wrong_values": 340,
+    "in_key": 68,
+    "detected_all": 340,
+    "rate_all": 1.0,
+    "detected_in_key": 68,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.8235
+   },
+   "min_pupil_font_mm": 4.2,
+   "min_teacher_font_mm": 4.1,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 38.0
+  },
+  "CBC-13": {
+   "single_slip": {
+    "double_cases": 1456,
+    "double_detected": 1456,
+    "double_rate": 1.0,
+    "swap_cases": 76,
+    "swap_detected": 76,
+    "swap_rate": 1.0,
+    "wrong_values": 280,
+    "in_key": 56,
+    "detected_all": 280,
+    "rate_all": 1.0,
+    "detected_in_key": 56,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 1.0
+   },
+   "min_pupil_font_mm": 4.7,
+   "min_teacher_font_mm": 4.6,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 34.9
+  },
+  "CBC-14": {
+   "single_slip": {
+    "double_cases": 1248,
+    "double_detected": 1247,
+    "double_rate": 0.9992,
+    "swap_cases": 67,
+    "swap_detected": 66,
+    "swap_rate": 0.9851,
+    "wrong_values": 130,
+    "in_key": 52,
+    "detected_all": 130,
+    "rate_all": 1.0,
+    "detected_in_key": 52,
+    "rate_in_key": 1.0,
+    "caught_by_structure_checks": 0.8462
+   },
+   "min_pupil_font_mm": 4.9,
+   "min_teacher_font_mm": 4.4,
+   "teacher_short_labels": 0,
+   "narrowest_region_width_at_label_mm": 34.2
+  }
+ },
+ "banks_and_pictures": {
+  "bank add tier 1": {
+   "questions": 625,
+   "forms": [
+    "make",
+    "miss",
+    "more",
+    "rev",
+    "sum_"
+   ],
+   "bad": 0
+  },
+  "bank add tier 2": {
+   "questions": 578,
+   "forms": [
+    "miss",
+    "more",
+    "sum_",
+    "three",
+    "three_miss",
+    "two"
+   ],
+   "bad": 0
+  },
+  "bank sub tier 1": {
+   "questions": 575,
+   "forms": [
+    "diff",
+    "fewer",
+    "first",
+    "miss",
+    "take"
+   ],
+   "bad": 0
+  },
+  "bank sub tier 2": {
+   "questions": 620,
+   "forms": [
+    "diff",
+    "fewer",
+    "miss",
+    "mix",
+    "two"
+   ],
+   "bad": 0
+  },
+  "bank bonds tier 1": {
+   "questions": 1000,
+   "forms": [
+    "f1",
+    "f2",
+    "f3",
+    "f4",
+    "f5",
+    "f6",
+    "f7",
+    "f8"
+   ],
+   "bad": 0
+  },
+  "bank bonds tier 2": {
+   "questions": 1000,
+   "forms": [
+    "f1",
+    "f2",
+    "f3",
+    "f4",
+    "f5",
+    "f6",
+    "f7",
+    "f8"
+   ],
+   "bad": 0
+  },
+  "bank place tier 1": {
+   "questions": 750,
+   "forms": [
+    "ones_a",
+    "ones_b",
+    "ones_c",
+    "tens_a",
+    "tens_b",
+    "tens_c"
+   ],
+   "bad": 0
+  },
+  "bank place tier 2": {
+   "questions": 975,
+   "forms": [
+    "less10",
+    "more10",
+    "ones_a",
+    "ones_b",
+    "ones_c",
+    "tens_a",
+    "tens_b",
+    "tens_c"
+   ],
+   "bad": 0
+  },
+  "bank count tier 1": {
+   "questions": 460,
+   "forms": [
+    "f_back",
+    "f_back2",
+    "f_norule",
+    "f_rule"
+   ],
+   "bad": 0
+  },
+  "bank count tier 2": {
+   "questions": 618,
+   "forms": [
+    "f_back",
+    "f_back2",
+    "f_norule",
+    "f_rule",
+    "f_steps"
+   ],
+   "bad": 0
+  },
+  "bank compare tier 1": {
+   "questions": 775,
+   "forms": [
+    "between",
+    "greatest",
+    "less1",
+    "less10",
+    "more1",
+    "more10",
+    "smallest"
+   ],
+   "bad": 0
+  },
+  "bank compare tier 2": {
+   "questions": 975,
+   "forms": [
+    "greatest",
+    "less1",
+    "less10",
+    "middle",
+    "more1",
+    "more10",
+    "smallest",
+    "two",
+    "two_b"
+   ],
+   "bad": 0
+  },
+  "bank money tier 1": {
+   "questions": 875,
+   "forms": [
+    "coins_",
+    "coins_row",
+    "fewer",
+    "miss",
+    "more",
+    "spend",
+    "sum_"
+   ],
+   "bad": 0
+  },
+  "bank money tier 2": {
+   "questions": 750,
+   "forms": [
+    "both",
+    "fewer",
+    "left",
+    "more",
+    "notes_",
+    "sum_"
+   ],
+   "bad": 0
+  },
+  "bank time tier 1": {
+   "questions": 1375,
+   "forms": [
+    "clock_alone",
+    "clock_row",
+    "clock_short",
+    "clock_stack",
+    "digital",
+    "earlier",
+    "later",
+    "later1",
+    "short_plus",
+    "short_plus2",
+    "spare"
+   ],
+   "bad": 0
+  },
+  "bank time tier 2": {
+   "questions": 1525,
+   "forms": [
+    "before",
+    "clock_alone",
+    "clock_row",
+    "clock_short",
+    "clock_stack",
+    "digital",
+    "earlier",
+    "later",
+    "later1",
+    "later2",
+    "short_plus",
+    "short_plus2",
+    "spare"
+   ],
+   "bad": 0
+  },
+  "bank length tier 1": {
+   "questions": 1125,
+   "forms": [
+    "cut",
+    "longer",
+    "ruler0",
+    "ruler_cap",
+    "ruler_s",
+    "shorter",
+    "sub_c",
+    "sum_",
+    "sum_c"
+   ],
+   "bad": 0
+  },
+  "bank length tier 2": {
+   "questions": 1105,
+   "forms": [
+    "cut",
+    "longer",
+    "ruler0",
+    "ruler_cap",
+    "ruler_s",
+    "shorter",
+    "sub_c",
+    "sum_",
+    "sum_c"
+   ],
+   "bad": 0
+  },
+  "bank shapes tier 1": {
+   "questions": 875,
+   "forms": [
+    "blank_row",
+    "blank_stack",
+    "corners1_row",
+    "corners1_stack",
+    "corners2_stack",
+    "corners_short_row",
+    "cornersq_stack"
+   ],
+   "bad": 0
+  },
+  "bank shapes tier 2": {
+   "questions": 875,
+   "forms": [
+    "blank_row",
+    "blank_stack",
+    "both1_row",
+    "both1_stack",
+    "both2_stack",
+    "both_short_row",
+    "bothq_stack"
+   ],
+   "bad": 0
+  },
+  "bank mult tier 1": {
+   "questions": 875,
+   "forms": [
+    "arr",
+    "bags",
+    "grp",
+    "grp_short",
+    "grpart",
+    "rep",
+    "times"
+   ],
+   "bad": 0
+  },
+  "bank mult tier 2": {
+   "questions": 875,
+   "forms": [
+    "arr",
+    "bags",
+    "grp",
+    "grp_short",
+    "grpart",
+    "rep",
+    "times"
+   ],
+   "bad": 0
+  },
+  "bank share tier 1": {
+   "questions": 957,
+   "forms": [
+    "gart",
+    "group",
+    "group_s",
+    "into",
+    "into_s",
+    "most",
+    "share",
+    "share_s",
+    "sharer"
+   ],
+   "bad": 0
+  },
+  "bank share tier 2": {
+   "questions": 596,
+   "forms": [
+    "gart",
+    "group",
+    "group_s",
+    "into",
+    "into_s",
+    "most",
+    "share",
+    "share_s",
+    "sharer"
+   ],
+   "bad": 0
+  },
+  "bank pgraph tier 1": {
+   "questions": 725,
+   "forms": [
+    "more",
+    "read",
+    "read2",
+    "row1",
+    "row1b",
+    "two"
+   ],
+   "bad": 0
+  },
+  "bank pgraph tier 2": {
+   "questions": 525,
+   "forms": [
+    "more",
+    "read",
+    "read2",
+    "row1",
+    "row1b",
+    "two"
+   ],
+   "bad": 0
+  },
+  "bank ordinal tier 1": {
+   "questions": 1356,
+   "forms": [
+    "after",
+    "before",
+    "beforek",
+    "between",
+    "gap",
+    "next_",
+    "prev_",
+    "row_l",
+    "row_r",
+    "seq",
+    "seq_down"
+   ],
+   "bad": 0
+  },
+  "bank ordinal tier 2": {
+   "questions": 1080,
+   "forms": [
+    "after",
+    "before",
+    "beforek",
+    "between",
+    "gap",
+    "next_",
+    "prev_",
+    "row_l",
+    "row_r",
+    "seq",
+    "seq_down"
+   ],
+   "bad": 0
+  },
+  "picture rocket": {
+   "regions": 15,
+   "pairs": 6,
+   "twins": 0
+  },
+  "picture fish": {
+   "regions": 16,
+   "pairs": 0,
+   "twins": 6
+  },
+  "picture house": {
+   "regions": 17,
+   "pairs": 0,
+   "twins": 6
+  },
+  "picture butterfly": {
+   "regions": 14,
+   "pairs": 7,
+   "twins": 0
+  },
+  "picture icecream": {
+   "regions": 13,
+   "pairs": 5,
+   "twins": 0
+  },
+  "picture owl": {
+   "regions": 14,
+   "pairs": 5,
+   "twins": 1
+  },
+  "picture sailboat": {
+   "regions": 13,
+   "pairs": 0,
+   "twins": 5
+  },
+  "picture castle": {
+   "regions": 17,
+   "pairs": 7,
+   "twins": 0
+  },
+  "picture car": {
+   "regions": 13,
+   "pairs": 0,
+   "twins": 5
+  },
+  "picture elephant": {
+   "regions": 14,
+   "pairs": 6,
+   "twins": 0
+  },
+  "picture dinosaur": {
+   "regions": 15,
+   "pairs": 0,
+   "twins": 6
+  }
+ }
+}

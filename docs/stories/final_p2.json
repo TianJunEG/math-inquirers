@@ -142,22 +142,23 @@
   },
   {
     "lesson": 8,
-    "name": "Alicia Boole Stott",
-    "years": "1860-1940",
-    "country_or_region": "Ireland (born in Cork; later lived in England)",
-    "who": "An Irish-born mathematician who built cardboard models of unusual shapes.",
-    "story": "Alicia Boole Stott was born in Cork, Ireland, in 1860. She never went to university. She learned from her mother and from geometry books. As a young woman she played with wooden cubes to think about shapes in new ways. Later she cut and joined cardboard to build models of very unusual shapes that are hard to draw. A Dutch mathematician, Pieter Schoute, saw her models and they worked together for many years.",
-    "link_to_lesson": "Alicia made solid shapes by joining flat pieces of card, the same idea as folding a net into a 3D shape.",
-    "try_it": "A cube is built from flat square pieces. How many square faces does a cube have? How many edges does it have?",
-    "try_it_answer": "A cube has 6 square faces and 12 edges.",
+    "name": "Jean Pedersen",
+    "years": "1934-2016",
+    "country_or_region": "United States (born in Utah; worked in California)",
+    "who": "An American mathematician who built solid shapes from folded and braided paper.",
+    "story": "Jean Pedersen was an American mathematician who loved making paper models of solid shapes. She was born in Utah in 1934 and taught at Santa Clara University in California, where she was the first woman to teach maths. She found that the five Platonic solids, such as the cube, can be braided from strips of paper. The writer Martin Gardner wrote about this in 1971. Later she wrote books about building your own polyhedra, which are solid shapes with flat faces.",
+    "link_to_lesson": "Jean built solid shapes from flat paper, the same idea as folding a net into a 3D shape.",
+    "try_it": "Jean built cubes out of flat paper. How many square faces does a cube have, and how many edges? How many squares are in a net that folds into a cube?",
+    "try_it_answer": "A cube has 6 square faces and 12 edges. A net that folds into a cube has 6 squares.",
     "source_urls": [
-      "https://en.wikipedia.org/wiki/Alicia_Boole_Stott",
-      "https://theriverside.ucc.ie/alicia-boole-1860-1940-the-woman-from-cork-who-saw-the-fourth-dimension/"
+      "https://en.wikipedia.org/wiki/Jean_Pedersen",
+      "https://www.mi.sanu.ac.rs/vismath/hil/ped6.htm",
+      "https://magazine.scu.edu/classnote/jean-pedersen"
     ],
     "confidence": "medium",
     "legend_note": "",
-    "icon_idea": "A hand-folded cardboard polyhedron with a flat net of squares beside it.",
-    "story_words": 73
+    "icon_idea": "A woven strip of paper folded into a small cube beside a flat net of six squares.",
+    "story_words": 81
   },
   {
     "lesson": 9,

@@ -1,0 +1,103 @@
+{
+ "schema": 1,
+ "note": "Delivery manifest: product:format -> private R2 key. See docs/shop/delivery_plan.md. Entries whose source file is not built yet (the extension workbooks) are skipped by the checker and the uploader until the PDF exists; the source path of an unbuilt book is a PLACEHOLDER to adjust. beta-workbook-* are the colour print-layout PDFs used as the late-registration fallback (printed copies are the black and white ones in outputs/print/bw/).",
+ "bucket": "mi-delivery",
+ "files": {
+  "beta-workbook-l1:pdf": {
+   "title": "Math Inquirers Level 1 holiday workbook (colour PDF)",
+   "source": "outputs/print/Math_Inquirers_P1_Workbook_PRINT.pdf",
+   "r2_key": "files/beta-workbook-l1/v1/Math_Inquirers_P1_Workbook.pdf",
+   "filename": "Math_Inquirers_P1_Workbook.pdf",
+   "version": "v1",
+   "sha256": "59c1d79ba7ac35b3b49cc7dd1f9567dba9bd21e9c24370fd36c811b8c0fe29cd",
+   "bytes": 6089485
+  },
+  "beta-workbook-l2:pdf": {
+   "title": "Math Inquirers Level 2 holiday workbook (colour PDF)",
+   "source": "outputs/print/Math_Inquirers_P2_Workbook_PRINT.pdf",
+   "r2_key": "files/beta-workbook-l2/v1/Math_Inquirers_P2_Workbook.pdf",
+   "filename": "Math_Inquirers_P2_Workbook.pdf",
+   "version": "v1",
+   "sha256": "f36a226bf7372a702b7df8519b8d99fc9709b68428999d88ced1f5779a1e438f",
+   "bytes": 7278998
+  },
+  "beta-workbook-l3:pdf": {
+   "title": "Math Inquirers Level 3 holiday workbook (colour PDF)",
+   "source": "outputs/print/Math_Inquirers_P3_Workbook_PRINT.pdf",
+   "r2_key": "files/beta-workbook-l3/v1/Math_Inquirers_P3_Workbook.pdf",
+   "filename": "Math_Inquirers_P3_Workbook.pdf",
+   "version": "v1",
+   "sha256": "1b0652e608d570fcc792c8438c8e6b187177cfef32fbb26d4e532d6c486e98ca",
+   "bytes": 7346675
+  },
+  "beta-workbook-l4:pdf": {
+   "title": "Math Inquirers Level 4 holiday workbook (colour PDF)",
+   "source": "outputs/print/Math_Inquirers_P4_Workbook_PRINT.pdf",
+   "r2_key": "files/beta-workbook-l4/v1/Math_Inquirers_P4_Workbook.pdf",
+   "filename": "Math_Inquirers_P4_Workbook.pdf",
+   "version": "v1",
+   "sha256": "3d6c30d71f781b4e5a960a87ea119b61f8034897c1bd7f8a5ca0a05b0fb51ab6",
+   "bytes": 6785461
+  },
+  "beta-workbook-l5:pdf": {
+   "title": "Math Inquirers Level 5 holiday workbook (colour PDF)",
+   "source": "outputs/print/Math_Inquirers_P5_Workbook_PRINT.pdf",
+   "r2_key": "files/beta-workbook-l5/v1/Math_Inquirers_P5_Workbook.pdf",
+   "filename": "Math_Inquirers_P5_Workbook.pdf",
+   "version": "v1",
+   "sha256": "fe7ac8338cde20a58ea56c99ba773a26193c41cb2a49c5babbedd5487800f296",
+   "bytes": 7008758
+  },
+  "beta-workbook-l6:pdf": {
+   "title": "Math Inquirers Level 6 holiday workbook (colour PDF)",
+   "source": "outputs/print/Math_Inquirers_P6_Workbook_PRINT.pdf",
+   "r2_key": "files/beta-workbook-l6/v1/Math_Inquirers_P6_Workbook.pdf",
+   "filename": "Math_Inquirers_P6_Workbook.pdf",
+   "version": "v1",
+   "sha256": "371b9fe95c6b3c0a5475f4a28836c569b39bf420a4f28ef58d4ef6b132da902b",
+   "bytes": 6102573
+  },
+  "ext-l1:pdf": {
+   "title": "Extension Workbook, Level 1 (soft copy, colour)",
+   "source": "outputs/extension/ext_l1/Math_Inquirers_Extension_Workbook_L1.pdf",
+   "r2_key": "files/ext-l1/v1/Math_Inquirers_Extension_Workbook_L1.pdf",
+   "filename": "Math_Inquirers_Extension_Workbook_L1.pdf",
+   "version": "v1"
+  },
+  "ext-l2:pdf": {
+   "title": "Extension Workbook, Level 2 (soft copy, colour)",
+   "source": "outputs/extension/ext_l2/Math_Inquirers_Extension_Workbook_L2.pdf",
+   "r2_key": "files/ext-l2/v1/Math_Inquirers_Extension_Workbook_L2.pdf",
+   "filename": "Math_Inquirers_Extension_Workbook_L2.pdf",
+   "version": "v1"
+  },
+  "ext-l3:pdf": {
+   "title": "Extension Workbook, Level 3 (soft copy, colour)",
+   "source": "outputs/extension/ext_l3/Math_Inquirers_Extension_Workbook_L3.pdf",
+   "r2_key": "files/ext-l3/v1/Math_Inquirers_Extension_Workbook_L3.pdf",
+   "filename": "Math_Inquirers_Extension_Workbook_L3.pdf",
+   "version": "v1"
+  },
+  "ext-l4:pdf": {
+   "title": "Extension Workbook, Level 4 (soft copy, colour)",
+   "source": "outputs/extension/ext_l4/Math_Inquirers_Extension_Workbook_L4.pdf",
+   "r2_key": "files/ext-l4/v1/Math_Inquirers_Extension_Workbook_L4.pdf",
+   "filename": "Math_Inquirers_Extension_Workbook_L4.pdf",
+   "version": "v1"
+  },
+  "ext-l5:pdf": {
+   "title": "Extension Workbook, Level 5 (soft copy, colour)",
+   "source": "outputs/extension/ext_l5/Math_Inquirers_Extension_Workbook_L5.pdf",
+   "r2_key": "files/ext-l5/v1/Math_Inquirers_Extension_Workbook_L5.pdf",
+   "filename": "Math_Inquirers_Extension_Workbook_L5.pdf",
+   "version": "v1"
+  },
+  "ext-l6:pdf": {
+   "title": "Extension Workbook, Level 6 (soft copy, colour)",
+   "source": "outputs/extension/ext_l6/Math_Inquirers_Extension_Workbook_L6.pdf",
+   "r2_key": "files/ext-l6/v1/Math_Inquirers_Extension_Workbook_L6.pdf",
+   "filename": "Math_Inquirers_Extension_Workbook_L6.pdf",
+   "version": "v1"
+  }
+ }
+}

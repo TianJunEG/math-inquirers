@@ -2,10 +2,10 @@
 // Heuristics taught: work backwards (groups × size + leftover) and make a list (then test each clue).
 const NV = '#1B2A49', YL = '#FFC93C';
 const shareSvg = () => {
-  let s = `<svg aria-label="Six empty plates and 47 counters to share" viewBox="0 0 600 190" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:480px">`;
+  let s = `<svg aria-label="Six empty plates and 47 counters to share" viewBox="0 0 600 210" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:480px">`;
   for (let i = 0; i < 6; i++) s += `<circle cx="${60 + i * 96}" cy="42" r="34" fill="#fff" stroke="${NV}" stroke-width="3" stroke-dasharray="7 5"/>`;
-  s += `<text x="300" y="104" font-size="16" font-weight="700" text-anchor="middle" fill="#1F7A6F" font-family="Arial">47 counters to share among the 6 plates</text>`;
-  for (let k = 0; k < 47; k++) s += `<circle cx="${40 + (k % 12) * 46}" cy="${126 + Math.floor(k / 12) * 20}" r="8" fill="${YL}" stroke="${NV}" stroke-width="2"/>`;
+  s += `<text x="300" y="104" font-size="18" font-weight="700" text-anchor="middle" fill="#1F7A6F" font-family="Arial">47 counters to share among the 6 plates</text>`;
+  for (let k = 0; k < 47; k++) s += `<circle cx="${40 + (k % 12) * 46}" cy="${128 + Math.floor(k / 12) * 22}" r="9" fill="${YL}" stroke="${NV}" stroke-width="2"/>`;
   return s + '</svg>';
 };
 
@@ -17,7 +17,7 @@ module.exports = {
     objective: 'Divide with remainders, check that the remainder is smaller than the number we divide by, decide what the leftover means in a story, work backwards from groups and leftovers, and solve "what number am I?" riddles by making a list.',
     skills: 'Division with remainders, interpreting the remainder (one more group or leave it out), working backwards (groups × size + leftover), making a systematic list and testing each clue, making a table',
     materials: '25 counters per child (or beans or buttons), 6 small cups for groups, mini whiteboards and markers. For the sneak-peek puzzles: paper, a pencil and a few counters or small objects for each child.',
-    online: 'Children use 25 small things at home (dried beans, buttons, LEGO bricks) and a few cups or bowls. Share the screen for the slides; children hold whiteboards up to the camera. Print the workbook before the lesson. Pairs work in one breakout room for 10 minutes, then return for the check slide.',
+    online: 'Children use 25 small things at home (dried beans, buttons, LEGO bricks) and a few cups or bowls. Share the screen for the slides; children write on whiteboards and say the answer together on three. Print the workbook before the lesson. Pairs sit in pre-assigned breakout rooms (auto-move in, auto-close with a timer) for page 1, then return for the 60-second self-check slide.',
     warmup: 'Leftover Lucky Dip: the tutor calls a number of sweets and a group size (23 in 4s). Children show the number of groups on one hand and the leftover on the other, then explain with a times-table fact.',
     explore: 'Pairs put 25 counters into groups of 2, 3, 4, 5 and 6 and record the groups and the leftover in a table. They notice that 25 leaves 1 over for 2, 3, 4 and 6, and nothing for 5, and explain why (24 is in the 2, 3, 4 and 6 tables).',
     mini: 'The remainder is always smaller than the number we divide by. Check with groups × size + leftover. Then read the story: does the leftover need one more group (vans), or do only full groups count (boxes, things you can buy)?',
@@ -71,7 +71,8 @@ module.exports = {
   deck: {
     today: 'Divide with leftovers, decide what the leftover means in a story, work backwards, and crack “what number am I?” riddles with a list.',
     warmGame: 'Leftover Lucky Dip. The tutor calls a number of sweets and a group size (23 in 4s, 17 in 3s, 26 in 8s, 41 in 6s). Children show the groups on one hand and the leftover on the other.',
-    warmQs: [['17 ÷ 5', '3 r 2'], ['30 ÷ 7', '4 r 2'], ['45 ÷ 6', '7 r 3'], ['50 ÷ 8', '6 r 2'], ['63 ÷ 9', '7 r 0 (nothing left over)']],
+    warmQs: [['17 ÷ 5', '3 r 2'], ['30 ÷ 7', '4 r 2'], ['45 ÷ 6', '7 r 3']],
+    takeHome: [['50 ÷ 8', '6 r 2'], ['63 ÷ 9', '7 r 0 (nothing left over)']],
     expSetup: ['Take 25 counters.', 'Put them in groups of 2, then 3, 4, 5 and 6.', 'Record the groups and the leftover in a table.', 'Ask: what do you notice about the leftovers?'],
     expPic: '25 counters in six groups of 4 with 1 left over, next to a table with columns Group size, Groups and Left over.',
     expAsk: [
@@ -110,7 +111,7 @@ module.exports = {
     ],
     challenge: [
       { q: 'I am a 2-digit number. When I am divided by 3, by 4 or by 5, the remainder is always 2. What number am I?', a: '62 (60 is in the 3, 4 and 5 tables; 60 + 2 = 62; the next one, 122, has 3 digits)' },
-      { q: 'A box has more than 30 but fewer than 50 chocolates. They can be shared equally among 2, 3, 4 or 6 children with none left over. Find all the numbers of chocolates there could be.', a: '36 and 48 (numbers in the 12 times table)' },
+      { q: 'A box has more than 30 but fewer than 100 chocolates. They can be shared equally among 2, 3, 4 or 6 children with none left over. When they are shared among 5 children, 2 are left over. How many chocolates are there?', a: '72 (the numbers in the 12 times table between 30 and 100 are 36, 48, 60, 72, 84, 96; only 72 leaves remainder 2 when divided by 5: 72 = 14 × 5 + 2)' },
       { q: 'A number is divided by 6. The answer and the remainder are the same number, and it is not 0. Find all the numbers it could be.', a: '7, 14, 21, 28 and 35 (1 r 1, 2 r 2, 3 r 3, 4 r 4, 5 r 5; the remainder cannot be 6 or more)' },
       { q: 'Ben counts his marbles in 5s and has 3 left over. He counts them in 7s and has 3 left over. He has more than 50 and fewer than 100 marbles. How many does he have?', a: '73 (35 is in both tables; 35 + 3 = 38 is too small; 70 + 3 = 73)' },
       { q: 'When 100 is divided by a 1-digit number, the remainder is 1. Find all the numbers it could be.', a: '3 and 9 (100 ÷ 3 = 33 r 1, 100 ÷ 9 = 11 r 1; 99 is only in the 1, 3 and 9 tables, and dividing by 1 leaves no remainder)' },
@@ -136,8 +137,7 @@ module.exports = {
     W.push(H.sub('b', '$60. 1 book costs $7. How many books can Mei buy?   ____'));
     W.push(H.sub('c', '87 eggs. 1 box holds 6 eggs. How many boxes are FULL?   ____', { keepNext: true }));
     W.push(H.sub('d', 'How many boxes hold ALL the eggs?   ____'));
-    W.push(H.q(3, 'Ravi packs marbles into bags of 8. He fills 12 bags and has 5 marbles left over.', { keepNext: true }));
-    W.push(H.p('Hint: draw 12 bags of 8, then 5 more.', { after: 20 }));
+    W.push(H.q(3, 'Ravi packs marbles into bags of 8 (draw them to help). He fills 12 bags and has 5 marbles left over.', { keepNext: true }));
     W.push(H.sub('a', 'How many marbles does Ravi have?   ____'));
     W.push(H.sub('b', '(if time) He tips them all out and packs them again into bags of 9. How many full bags does he get? How many marbles are left over?', { keepNext: true }));
     W.push(H.ans('Full bags: ______     Left over:'));
@@ -156,6 +156,7 @@ module.exports = {
     W.push(H.ans());
     W.push(H.sub('b', 'A number between 60 and 70 is divided by 8. The remainder is as big as it can be. What is the number?   ____'));
     W.push(H.q(6, '(if time) At a class party, children sit at tables. If 6 children sit at each table, 5 children have no seat. If 7 children sit at each table, every seat is filled and nobody is left over.', { keepNext: true }));
+    W.push(H.p('Hint: fill in the table. Each new table adds 6 children in the first row and 7 in the second. Look for the column where both rows show the same number.', { after: 40, keepNext: true }));
     const tw = [3300, 1100, 1100, 1100, 1100, 1100, 1100];
     W.push(H.tbl(tw, [
       H.row([H.cell('Number of tables', tw[0], { bold: true, fill: 'D9D9D9', size: 22 }), ...[1, 2, 3, 4, 5, 6].map(i => H.cell(String(i), tw[i], { bold: true, fill: 'D9D9D9' }))]),

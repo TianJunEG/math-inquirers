@@ -1,0 +1,54 @@
+PASS artwork text 'SINGAPORE' is a real word or numeral
+PASS artwork text '2' is a real word or numeral
+PASS artwork text 'SPECIMEN' is a real word or numeral
+PASS artwork text 'SINGAPORE' is a real word or numeral
+PASS artwork text '5' is a real word or numeral
+PASS artwork text 'SPECIMEN' is a real word or numeral
+PASS artwork text 'SINGAPORE' is a real word or numeral
+PASS artwork text '10' is a real word or numeral
+PASS artwork text 'SPECIMEN' is a real word or numeral
+PASS artwork text 'SINGAPORE' is a real word or numeral
+PASS artwork text '50' is a real word or numeral
+PASS artwork text 'SPECIMEN' is a real word or numeral
+PASS artwork text 'SINGAPORE' is a real word or numeral
+PASS artwork text '100' is a real word or numeral
+PASS artwork text 'SPECIMEN' is a real word or numeral
+PASS artwork text '5' is a real word or numeral
+PASS artwork text 'CENTS' is a real word or numeral
+PASS artwork text '10' is a real word or numeral
+PASS artwork text 'CENTS' is a real word or numeral
+PASS artwork text '20' is a real word or numeral
+PASS artwork text 'CENTS' is a real word or numeral
+PASS artwork text '50' is a real word or numeral
+PASS artwork text 'CENTS' is a real word or numeral
+PASS artwork text '$1' is a real word or numeral
+sheet furniture words (outside the artwork): $1 $10 $100 $2 $5 $50 . 10 10c 126 133 141 156 16.75 162 18.50 20c 21.00 23.00 24.65 50c 5c 60% 63 66 69 74 77 80% BACK Coins Edge HELD Not Notes Original Pictures Plain Portrait README.md. Sheet Singapore Sizes actual and answers any are area at bi blue book brass centre colours dots drawn face for from green hints illustration image. in interrupted lawyer likeness. lines metallic mm money neutral nickel no not of on only. orange owner placeholder plain plated print. purple question real red reeded reeded. reeding review review. rim ring sample scalloped see size. small stand style the traced until use x
+artwork strings: ['$1', '10', '100', '2', '20', '5', '50', 'CENTS', 'SINGAPORE', 'SPECIMEN']
+OCR dot-pattern noise (no real letters): ['cece', 'eee', 'eeee', 'eeeee', 'eeeeee', 'eoecececececeeceececoece', 'eoeceeceeeceeceeoceeeeceee', 'eoeceeeeecceceeoeeesece', 'eoeececececeeeceeoeceee', 'eoeeeee', 'eoeeescecececececececeeeeeeeeeee', 'eooce']
+OCR fragments of drawn words: ['APORE', 'SING', 'SINGA', 'SINGAP']
+OCR words (>=3 letters): APORE BACK Coins Edge HELD Not Notes Original Pictures Plain Portrait README SING SINGA SINGAP SINGAPORE SPECIMEN Sheet Singapore Sizes actual and answers any are area blue book brass cece centre colours dots drawn eee eeee eeeee eeeeee eoecececececeeceececoece eoeceeceeeceeceeoceeeeceee eoeceeeeecceceeoeeesece eoeececececeeeceeoeceee eoeeeee eoeeescecececececececeeeeeeeeeee eooce face for from green hints illustration image interrupted lawyer likeness lines metallic money neutral nickel not only orange owner placeholder plain plated print purple question real red reeded reeding review rim ring sample scalloped see size small stand style the traced until use
+PASS OCR found no word outside the drawn text; unexpected: []
+PASS coin 5c: drawn 13.43 mm vs spec x0.80 = 13.40 mm (+0.23%)
+PASS coin 10c: drawn 14.80 mm vs spec x0.80 = 14.80 mm (-0.03%)
+PASS coin 20c: drawn 16.80 mm vs spec x0.80 = 16.80 mm (-0.03%)
+PASS coin 50c: drawn 18.38 mm vs spec x0.80 = 18.40 mm (-0.09%)
+PASS coin $1: drawn 19.72 mm vs spec x0.80 = 19.72 mm (-0.02%)
+PASS ratio to $1 coin 5c: 0.681 vs 0.680
+PASS ratio to $1 coin 10c: 0.750 vs 0.751
+PASS ratio to $1 coin 20c: 0.852 vs 0.852
+PASS ratio to $1 coin 50c: 0.932 vs 0.933
+PASS ratio to $1 coin $1: 1.000 vs 1.000
+colour table (sampled in the note body, left of the portrait):
+PASS note $2: aspect 2.000 vs real 2.000; drawn 75.6 x 37.8 mm = 60.0% of real
+PASS note $2 purple: sampled #dcd1ee hue 263 deg (accepted 255-290); outline #6b4a9e
+PASS note $5: aspect 2.015 vs real 2.015; drawn 79.8 x 39.6 mm = 60.0% of real
+PASS note $5 green: sampled #d2ecd6 hue 129 deg (accepted 90-170); outline #2f8a4a
+PASS note $10: aspect 2.043 vs real 2.043; drawn 84.6 x 41.4 mm = 60.0% of real
+PASS note $10 red: sampled #f8d2d0 hue 3 deg (accepted -15-15); outline #c8372f
+PASS note $50: aspect 2.108 vs real 2.108; drawn 93.6 x 44.4 mm = 60.0% of real
+PASS note $50 blue: sampled #d0e3f8 hue 212 deg (accepted 200-235); outline #2a62a8
+PASS note $100: aspect 2.104 vs real 2.104; drawn 97.2 x 46.2 mm = 60.0% of real
+PASS note $100 orange: sampled #fae0c0 hue 33 deg (accepted 22-45); outline #d9791c
+PASS notes at <= 60% of real size (MAS books rule)
+PASS notes grow with value ($2 < $5 < $10 < $50 < $100)
+RESULT: ALL PASS

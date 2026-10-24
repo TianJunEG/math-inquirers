@@ -1,4 +1,6 @@
 // Math Inquirers P4 Holiday Program — Lesson 1: Factor Hunters (Factors and multiples)
+const tip = require('../tip.js');
+const FG = require('../../levels/figs_l4_6.js');
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WH = '#FFFFFF';
 const F = 'Fredoka, Arial, sans-serif';
 const txt = (x, y, s, size = 18, fill = N, anchor = 'middle', weight = 700) =>
@@ -58,18 +60,21 @@ module.exports = {
     ],
     circulate: ['Ask: “How do you know you have found every factor pair? Where did you stop?”', 'Ask: “Is that a factor or a multiple? Which is bigger?”', 'Ask: “Which list did you write: the factors, or the multiples? Which do you need for this question?”'],
     hints: ['Hint 1: “Try 1, 2, 3, 4 … in order. Does it go in exactly?”', 'Hint 2: “Draw the rectangles, or make them with tiles.”', 'Hint 3: “Write the first few multiples of each number in two rows. Circle the numbers in both rows.”'],
-    talk: ['“Ali says: bigger numbers always have more factors. Who agrees? Can you find an example that proves him wrong?”', '“Why did the 36-tile rectangles give an odd number of factors?”'],
-    talkAns: 'Ali is wrong. 24 has 8 factors but 29, which is bigger, has only 2 (1 and 29). 36 has an odd number of factors because one of its pairs is 6 × 6, and 6 is only counted once.',
+    talk: ["“Ali says: bigger numbers always have more factors. Who agrees? Can you find an example that proves him wrong?”"],
+    talkWeekly: ["“Why did the 36-tile rectangles give an odd number of factors?”"],
+    talkAns: "Ali is wrong. 24 has 8 factors but 29, which is bigger, has only 2 (1 and 29).",
+    talkWeeklyAns: "36 has an odd number of factors because one of its pairs is 6 × 6, and 6 is only counted once.",
     close: ['“Today you hunted factors in order, so none could hide. You found common factors for sharing and common multiples for timetables.”', '“Hand me your exit ticket and I will stamp your inquiry journal.”']
   },
 
   deck: {
     today: 'Hunt down every factor of a number, use common factors and common multiples to solve puzzles, and crack multiple riddles.',
     warmGame: 'Fizz-Buzz. Count round the group from 1. Say "Fizz" for a multiple of 3, "Buzz" for a multiple of 4 and "Fizz-Buzz" for a multiple of both.',
-    warmQs: [['Is 7 a factor of 56?', 'Yes: 7 × 8 = 56'], ['The first five multiples of 6?', '6, 12, 18, 24, 30'], ['Name a common multiple of 4 and 6.', '12 (or 24, 36 …)'], ['Is 45 a multiple of 4?', 'No: 44 and 48 are'], ['18 as a product, 3 ways?', '1 × 18, 2 × 9, 3 × 6']],
+    warmQs: [["Is 7 a factor of 56?", "Yes: 7 × 8 = 56"], ["The first five multiples of 6?", "6, 12, 18, 24, 30"], ["Name a common multiple of 4 and 6.", "12 (or 24, 36 …)"]],
+    warmWeekly: [["Is 45 a multiple of 4?", "No: 44 and 48 are"], ["18 as a product, 3 ways?", "1 × 18, 2 × 9, 3 × 6"]],
     expSetup: ['Take 24 square tiles.', 'Use ALL the tiles to make a rectangle. Write it as a multiplication, like 2 × 12.', 'Make as many different rectangles as you can. A 2 by 12 and a 12 by 2 count as the same.', 'How do you know you have found them all?'],
     expPic: 'a rectangle of 24 tiles in 3 rows of 8, next to an empty grid for the next rectangle.',
-    expAsk: [['How many rectangles did you make?', '4: 1 × 24, 2 × 12, 3 × 8, 4 × 6.'], ['How do you know you have them all?', 'Try 1, 2, 3, 4, 5, 6 rows in order. 5 rows does not work; 6 rows is the 4 × 6 turned round.'], ['What do the side lengths tell us about 24?', 'They are the factors of 24: 1, 2, 3, 4, 6, 8, 12, 24.']],
+    expAsk: [["How many rectangles did you make?", "4: 1 × 24, 2 × 12, 3 × 8, 4 × 6."], ["How do you know you have them all?", "Try 1, 2, 3, 4, 5, 6 rows in order. 5 rows does not work; 6 rows is the 4 × 6 turned round."]],
     mini1: { head: 'All the factor pairs of 36', body: ['Try 1, 2, 3 … in order: 1 × 36, 2 × 18, 3 × 12, 4 × 9.', '5 is not a factor. 6 × 6. The pairs have met.', 'How many factors? Draw a factor rainbow.'], ans: '9 factors: 1, 2, 3, 4, 6, 9, 12, 18, 36.' },
     mini2: { head: 'When do the buses meet again?', body: ['Bus A leaves every 6 minutes, bus B every 8 minutes.', 'Both leave at 7:00 am. List the multiples of 6 and of 8.', 'Which number is in both lists first?'], ans: '24 minutes, so 7:24 am. 24 is the smallest common multiple of 6 and 8.' },
     keyHead: 'Key idea: hunt in order', keyBig: 'Factors: try 1, 2, 3 … in order until the pairs meet. Multiples: list them and look for the first number in both lists.', keySmall: 'A factor goes into a number exactly. A multiple is in its times table.',
@@ -117,23 +122,22 @@ module.exports = {
     W.push(H.tbl([1650, 1650, 1650, 1650, 1650, 1650], [
       H.row(['1 × 48', '__ × __', '__ × __', '__ × __', '__ × __', '__ × __'].map(s => H.cell(s, 1650, { h: 70 })))
     ]));
-    W.push(H.gap(60));
     W.push(H.sub('b', 'List all the factors of 48 in order.'));
     W.push(H.ans('Factors:'));
     W.push(H.sub('c', 'How many factors does 48 have? ______   How did you know when to stop looking?'));
     W.push(...H.lines(1));
     W.push(H.q(2, 'A gardener plants 40 trees in equal rows. There are at least 2 rows, and at least 2 trees in each row. (2 rows of 20 trees and 20 rows of 2 trees are different ways to plant.)', { keepNext: true }));
     W.push(H.sub('a', 'Find every way. One way is 4 rows of 10 trees. Fill in the table. You may not need every column.', { keepNext: true }));
+    W.push(H.fig((() => { let g = ''; for (let r = 0; r < 4; r++) for (let c = 0; c < 10; c++) g += FG.C(30 + c * 26, 16 + r * 24, 9, { fill: FG.SKY, w: 2.5 }); g += FG.T(420, 62, 'the example: 4 rows of 10 trees', { size: 18, fill: FG.TEAL, anchor: 'start' }); return FG.svg(680, 106, g, 'An array of 40 trees: 4 rows with 10 trees in each row.', 400); })()));
     W.push(H.tbl([2298, 1086, 1086, 1086, 1086, 1086, 1086, 1086], [
       H.row([H.cell('Rows', 2298, { bold: true, fill: 'EDEDED', h: 50 }), ...['4', '', '', '', '', '', ''].map(s => H.cell(s, 1086, { h: 50 }))]),
       H.row([H.cell('Trees in each row', 2298, { bold: true, fill: 'EDEDED', h: 50 }), ...['10', '', '', '', '', '', ''].map(s => H.cell(s, 1086, { h: 50 }))])
     ]));
-    W.push(H.gap(60));
     W.push(H.ans('How many ways?'));
     W.push(H.q(3, 'Mei has 18 red beads and 24 blue beads. She puts them into identical packs. Every pack has the same number of red beads and the same number of blue beads. No beads are left over.', { keepNext: true }));
-    W.push(H.sub('a', 'Factors of 18:  _______________     Factors of 24:  ____________________'));
+    W.push(H.sub('a', 'Factors of 18:  ____________     Factors of 24:  ________________'));
     W.push(H.sub('b', 'Common factors of 18 and 24:  ________________________'));
-    W.push(H.sub('c', 'Greatest number of packs:  ______    Each pack has  ______ red and  ______ blue.'));
+    W.push(H.sub('c', 'Most packs:  ____    Each pack has  ____ red and  ____ blue.'));
 
     W.push(H.q(4, 'At an interchange, Bus 33 leaves every 10 minutes and Bus 51 leaves every 15 minutes. Both buses leave at 6:00 am.', { pb: true, before: 0, keepNext: true }));
     W.push(H.fig(busSvg()));
@@ -142,13 +146,14 @@ module.exports = {
     W.push(H.sub('b', 'How many times do they leave together from 6:00 am to 8:00 am? Count 6:00 and 8:00 too.'));
     W.push(H.ans('Number of times:'));
     W.push(H.q(5, 'Count the factors.', { keepNext: true }));
+    W.push(tip('use 6 counters. Make equal rows: 1 row of 6, 2 rows of 3, 3 rows of 2, 6 rows of 1. Each different number of rows is a factor. Then try 9 counters.'));
     W.push(H.sub('a', 'Fill in the table.', { keepNext: true }));
     W.push(H.tbl([2400, 1250, 1250, 1250, 1250, 1250, 1250], [
       H.row([H.cell('Number', 2400, { bold: true, fill: 'EDEDED' }), ...['6', '9', '10', '15', '16', '25'].map(s => H.cell(s, 1250, { bold: true, fill: 'EDEDED' }))]),
       H.row([H.cell('How many factors?', 2400, { bold: true }), ...Array(6).fill('').map(s => H.cell(s, 1250, { h: 130 }))])
     ]));
     W.push(H.gap(60));
-    W.push(H.sub('b', 'Which of these numbers have exactly 3 factors? What do you notice about them?'));
+    W.push(H.sub('b', 'Which of these numbers have exactly 3 factors? What do you notice about them? (Tip: write each number as pairs, like 6 = 1 × 6 and 2 × 3. A pair like 3 × 3 counts one factor.)'));
     W.push(...H.lines(1));
     W.push(H.sub('c', 'Is 49 a number with exactly 3 factors? List its factors to check. How could your answer to (b) have told you?'));
     W.push(H.ans('Factors of 49:'));
@@ -157,7 +162,8 @@ module.exports = {
     W.push(H.sub('', 'Step 1: the numbers between 30 and 70 that are multiples of 3 AND 4 (count in 12s): ______, ______, ______', { keepNext: true }));
     W.push(H.sub('', 'Step 2: cross out any multiple of 8. Left: ______ and ______.   Step 3: use the last clue.', { keepNext: true }));
     W.push(H.ans('I am:'));
-    W.push(H.sub('b', 'Ravi says: "Every multiple of 6 is also a multiple of 3." Mei says: "Every multiple of 3 is also a multiple of 6." Who is right? Explain with an example.'));
+    W.push(H.sub('b', 'Ravi says: "Every multiple of 6 is also a multiple of 3." Mei says: "Every multiple of 3 is also a multiple of 6." Who is right? Explain with an example.', { keepNext: true }));
+    W.push(tip('write the first six multiples of 3 on one line and of 6 on another. Is every number in the 6 line also in the 3 line? Is every number in the 3 line also in the 6 line?'));
     W.push(...H.lines(2));
     return W;
   }
@@ -169,7 +175,7 @@ module.exports.gaps = {
  "check": [
   {
    "q": "Ali has 12 sweets. He puts them into bags so that every bag has the same number of sweets, with none left over. Use counters or draw dots. Write ONE way he can do it, like 2 bags of 6.",
-   "a": "Any one of these is right: 1 bag of 12, 2 bags of 6, 3 bags of 4, 4 bags of 3, 6 bags of 2 or 12 bags of 1. The numbers of sweets in a bag (1, 2, 3, 4, 6, 12) are the factors of 12. A child with one way has had a win: you may ask the whole group, can anyone find another?",
+   "a": "Any one of these is right: 1 bag of 12, 2 bags of 6, 3 bags of 4, 4 bags of 3, 6 bags of 2 or 12 bags of 1. The numbers of sweets in a bag (1, 2, 3, 4, 6, 12) are the factors of 12. A child with one way has had a win.",
    "s": "2 bags of 6, 3 bags of 4, 4 bags of 3 ... any way that uses all 12 is right.",
    "kind": "access"
   },
@@ -194,10 +200,12 @@ module.exports.gaps = {
   "key": "(a) 18, 12, 30, 42 minutes. (b) The meeting time is always a multiple of both gaps (the smallest common multiple), and never smaller than the bigger gap. When the gaps share no factor except 1 (6 and 5, 6 and 7) the meeting time is their product (30, 42). Accept any true pattern. (c) Six pairs: 2 and 12, 3 and 4, 3 and 12, 4 and 6, 4 and 12, 6 and 12 (checked by brute force). Look for a systematic list (fix one gap, test the others) rather than guesses. A child with 3 or 4 pairs who can explain how they know is doing well. Extension: choose your own meeting time (such as 30) and find all the pairs.",
   "easy": "Write the first five times Bus A leaves (7:00, 7:06, 7:12, ...) and the first five for Bus B (7:00, 7:08, ...). Circle a time that is in both lists."
  },
- "reflect": "Something I did well: I wrote the factor pairs in order. The hardest part was knowing when to stop listing factors. What helped me: writing the pairs in order and asking my partner.",
+ "reflect": "Something I did well: I wrote the factor pairs in order. The hardest part was knowing when to stop listing factors. What helped me: writing the pairs in order and asking my partner. One thing I could try next: making a table of the factor pairs.",
  "go2": {
   "q": "What if we use 36 tiles? What is special about one of the rectangles?",
   "a": "5 rectangles: 1 × 36, 2 × 18, 3 × 12, 4 × 9 and 6 × 6. The 6 × 6 is a square: 6 is its own partner, so 36 has an odd number (9) of factors."
  },
- "cap": "Page 2 is on your own. Aim for Q4 and Q5 first. Q6 is a choice for the last few minutes."
+ "cap": "Page 2 is on your own. Aim for Q4 and Q5 first. Q6 is a choice for the last few minutes.",
+ "p1": "After question 3 you may choose: carry on, or try Think harder.",
+ "plan": ["Page 1 (Start here) is Q1 to Q3 in pairs. On page 2 aim for Q4 and Q5; Q6 (about 6 minutes) is a choice that most children will take home."]
 };

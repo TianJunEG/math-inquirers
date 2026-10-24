@@ -1,0 +1,3242 @@
+{
+ "schema_version": 1,
+ "level": 1,
+ "ages": "6-8",
+ "look_back": {
+  "hardest": [
+   "checking a different way",
+   "finding the wrong step",
+   "the time or money story",
+   "something else"
+  ],
+  "helped": [
+   "the cards",
+   "adding back",
+   "checking my answer",
+   "I was not stuck"
+  ],
+  "next": [
+   "adding back",
+   "checking a different way",
+   "explaining why",
+   "asking a question"
+  ]
+ },
+ "spare_time_rules": [
+  "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
+  "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+  "Never teach anything the next lesson needs. If the class is ahead, slow down: ask 'How do you know?' and let children explain, rather than rushing on."
+ ],
+ "id": "l1-t3-09",
+ "term": 3,
+ "lesson": 29,
+ "lesson_in_term": 9,
+ "title": "Spot the Mistake",
+ "big_idea": "Check with a different method; a wrong answer leaves a clue",
+ "child_idea": "A neat answer can still be wrong. We check it a second way, such as adding back, and we find the one step that went wrong.",
+ "skill": "Checking and explaining",
+ "spine": {
+  "main": "backwards",
+  "also": [],
+  "role": "A",
+  "reason": "Add back, or take away, to check a sum; the wrong step is found by undoing the working."
+ },
+ "moe": {
+  "strand": "Checking work across adding, taking away, time and money (Primary 1 process skills: reasoning and communicating)",
+  "topics": [
+   "Addition and subtraction within 100, and checking a take away by adding back (Primary 1, Addition and Subtraction, p. 31)",
+   "Time: half an hour and 1 hour later (Primary 1, Time, p. 32) and money: total and left in whole dollars (Primary 1, Money, p. 31)",
+   "Process skills: reasoning, communicating, and checking an answer (syllabus pp. 13 to 14)"
+  ],
+  "note": "Strand label for the tutor only. This is an added lesson (new topic): it is not a listed Primary 1 content outcome. It is error analysis across the strands of the term, and it belongs to the process skills (reasoning, communicating). Start here is Primary 1 work with scaffolding: add back to check a take away, say whether an answer is right, find the one wrong step in a worked sum of 2 or 3 steps, and spot a wrong time or total in a story (o'clock and half past only; whole dollars; numbers within 100). BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only: two ways to check the same sum, a wrong 'fewer than' sum, a subtraction done by taking away one too many, 'Does It Make Sense?' (telling that an answer cannot be right by thinking about how big it must be, using the words about and near, never round: estimating is a Primary 4 outcome), spotting the wrong digit in a column sum, and writing a sum with one mistake for a partner. Owner decisions, 22 and 23 Oct 2026: strong content with scaffolding, said plainly to families; every lesson names a beyond item; Start here stays approachable. Do not describe the lesson as MOE-aligned. Wording rule (Term 1 audit, pre-flight D18): wrong working is always 'a child' or 'a child in another class', never a cast name. Non-routine types (tutor only): explain the wrong step, catch a wrong 'fewer than' sum, spot the wrong digit in a column sum, estimate to test an answer."
+ },
+ "contest_moves": [
+  "find the one wrong step and say why (explain a worked sum)",
+  "check a take away by adding back, and check an add by taking away (a second method)",
+  "catch a wrong 'fewer than' sum (the one with more is found by adding)",
+  "spot the wrong digit in a column sum",
+  "about how big: an answer that cannot be right (estimate with about and near)"
+ ],
+ "contest_where": "Think harder, Go further and the Investigation",
+ "objectives": [
+  "Check a take away by adding back, and an add by taking away, and say whether an answer is right.",
+  "Find the one wrong step in a worked sum, say what the right step is, and fix the steps after it.",
+  "Spot a wrong time (o'clock and half past) and a wrong total or amount left in a money story.",
+  "Think harder: two ways to check the same sum, a take away done by taking away one too many, a wrong 'fewer than' sum, and a time that cannot be shown on a clock.",
+  "Go further: tell that an answer cannot be right by thinking about how big it must be, spot the wrong digit in a column sum, and write a sum with one mistake for a partner."
+ ],
+ "joining_cold": {
+  "remember": [
+   "Check a take away by adding back (Term 1 Lesson 7, taught again with a number line)",
+   "Add tens with a jump (Term 1 Lesson 6, taught again with a number line)",
+   "One hour later on a clock (Term 3 Lesson 3, taught again with a picture of a clock)"
+  ],
+  "assumes": "Only counting to 100 in tens and ones. Nothing from the lessons before is needed: the warm-up adds back on a number line, makes a tens jump and shows a clock one hour later. The words check, wrong step and right step are taught in Explore and the Mini-lesson.",
+  "holiday_topics_revisited": [
+   "Counting on and back in tens (Count with the Frog)"
+  ],
+  "safe_to_miss": true,
+  "note": "Fairly safe to miss: this lesson applies Lessons 6, 7, 23 and 24, and Mi's Challenge Quest has a gate on this idea (a sum that is wrong, with the right answer). A child who misses it watches the recording and does workbook pages 1 and 2 before the Quest. A child who joins here cold can follow: the warm-up re-teaches adding back, the tens jump and one hour later, and Start here keeps to numbers within 100."
+ },
+ "materials": {
+  "child": [
+   "Your Term 3 workbook, pages 1 to 5",
+   "The mistake-card page (page 6 of your book): a grown-up cuts out the 8 cards beforehand. The RIGHT and WRONG mat on it is not cut",
+   "No cards? Write each sum on a small piece of paper, and make two piles on the table",
+   "Your clock from the first lesson of Term 3 is a help for the time questions, but it is not needed",
+   "A pencil, a rubber and spare paper"
+  ],
+  "tutor": [
+   "The slide deck",
+   "Your own set of mistake cards to show on camera, if you wish",
+   "A visible clock"
+  ],
+  "kit_pages": [
+   "Mistake cards (page 6): 8 cards (4 right and 4 with one mistake) and a RIGHT and WRONG mat. A grown-up cuts out the 8 cards; the mat is not cut."
+  ],
+  "ruler": false,
+  "notes": "No ruler is needed. Nothing needs to be bought. Small pieces stay on the table: nothing goes in the mouth or ears; keep them away from younger brothers and sisters. No matches, toothpicks or anything sharp. Nobody cuts during the lesson; a grown-up cut the cards beforehand. The cards show sums with one mistake on purpose: wrong working is never given a name, and no child is told they made it.",
+  "kit_contract": [
+   {
+    "piece": "mistake cards",
+    "supplied": 8,
+    "max_used": 8,
+    "used_by": [
+     "explore"
+    ]
+   },
+   {
+    "piece": "RIGHT and WRONG mat (not cut)",
+    "supplied": 1,
+    "max_used": 1,
+    "used_by": [
+     "explore"
+    ]
+   }
+  ]
+ },
+ "timing": {
+  "parts": [
+   {
+    "id": "opening",
+    "title": "Opening",
+    "start": 0,
+    "end": 2
+   },
+   {
+    "id": "remember",
+    "title": "Remember warm-up",
+    "start": 2,
+    "end": 8
+   },
+   {
+    "id": "sneak",
+    "title": "Sneak-peek puzzles",
+    "start": 8,
+    "end": 12
+   },
+   {
+    "id": "explore",
+    "title": "Explore",
+    "start": 12,
+    "end": 23
+   },
+   {
+    "id": "mini",
+    "title": "Mini-lesson",
+    "start": 23,
+    "end": 34
+   },
+   {
+    "id": "break",
+    "title": "Brain break",
+    "start": 34,
+    "end": 38
+   },
+   {
+    "id": "work",
+    "title": "Workbook",
+    "start": 38,
+    "end": 70
+   },
+   {
+    "id": "talk",
+    "title": "Talk time",
+    "start": 70,
+    "end": 76
+   },
+   {
+    "id": "exit",
+    "title": "Exit ticket",
+    "start": 76,
+    "end": 82
+   },
+   {
+    "id": "look",
+    "title": "Look-back",
+    "start": 82,
+    "end": 85
+   },
+   {
+    "id": "flex",
+    "title": "Flex time and goodbye",
+    "start": 85,
+    "end": 90
+   }
+  ],
+  "optional_slide": "s-opt",
+  "include_rules": false,
+  "notes": "Opening is 2 minutes. Explore has 11 minutes: sort 8 cards into RIGHT and WRONG by checking each a different way, then fix the 4 wrong cards and notice what a wrong answer tells us. The Mini-lesson has 11: add back, check by a different way, find the wrong step in a worked sum, a wrong time and a wrong total. The workbook has 32 minutes: Start here takes a middle child about 17 minutes (page 1 about 9, page 2 about 8), so pages 3 to 5 are for home for most children. The last 5 minutes are the standing buffer.",
+  "skip_order": [
+   "Start with: shorten Explore round 3 (what did we notice) to one question",
+   "Then: cut the money example (s-m5)",
+   "Then: take the extra minutes from the flex time"
+  ]
+ },
+ "sneak_peek": {
+  "q1": "A child in another class writes 40 + 20 = 70. Is the answer right? Circle Yes or No.",
+  "q2": "A child in another class writes 27 + 16 = 33. Is the answer right? I know because ___.",
+  "a1": "No. 40 + 20 = 60.",
+  "a2": "No. 27 + 16 = 43. The child forgot the ten: 7 + 6 = 13, which is 1 ten and 3 ones. A check: 33 take away 16 is 17, not 27.",
+  "val1": "No"
+ },
+ "rec": {
+  "opening": {
+   "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook and your mistake cards. Pause or rewind any time.",
+   "action": "Gather your workbook, mistake cards, pencil and paper. Press play when ready."
+  },
+  "remember": {
+   "say": "Recording: join in! Look at each picture and say your answer out loud. Pause if you need longer.",
+   "action": "Play along. Say each answer out loud before the video does."
+  },
+  "sneak": {
+   "say": "Recording: pause now and try both puzzles on your paper. Guessing is fine. Press play for the next part.",
+   "action": "Pause. Try both puzzles on your own paper. A guess is fine."
+  },
+  "explore": {
+   "say": "Recording: pause now. Sort your 8 cards into RIGHT and WRONG. Then fix each wrong card. Press play when you have tried.",
+   "action": "Pause. Check each card a different way, sort the 8 cards, and fix the wrong ones."
+  },
+  "mini": {
+   "say": "Recording: keep watching and copy the examples. Rewind if you miss a step.",
+   "action": "Watch and copy the examples. Rewind any step you missed."
+  },
+  "break": {
+   "say": "Recording: stand up and join in! Tick-tock with your arms, then say the right answer with a big voice.",
+   "action": "Stand up. Swing your arms like a clock hand and call the answers, then sit down."
+  },
+  "work": {
+   "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
+   "action": "Pause. Do page 1, then play to check. Then page 2. Then choose a page to try."
+  },
+  "talk": {
+   "say": "Recording: pause. Tell a grown-up whether checking the same way again is a good check, and why.",
+   "action": "Pause. Explain your answer to someone at home and show how you know."
+  },
+  "exit": {
+   "say": "Recording: pause and do the exit ticket on your own. Then press play to check it.",
+   "action": "Pause. Do the exit ticket alone, then play to check it."
+  },
+  "look": {
+   "say": "Recording: pause and fill in your look-back box. You can pass.",
+   "action": "Pause. Fill in the look-back box, or pass."
+  },
+  "flex": {
+   "say": "Recording: well done for finishing! Show a grown-up one mistake you spotted today.",
+   "action": "Show a grown-up your workbook and tell them one mistake you spotted."
+  }
+ },
+ "slides": [
+  {
+   "id": "s-title",
+   "part": "opening",
+   "kind": "title",
+   "title": "Spot the Mistake",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "TODAY WE WILL",
+     "items": [
+      "Check an answer a different way.",
+      "Find the one step that went wrong."
+     ]
+    }
+   ],
+   "note": "Lesson 9 of Term 3, 90 minutes. Objective: check a take away by adding back, find the one wrong step in a worked sum, and spot a wrong time or total in a story. Plain statement for families: checking by adding back, finding a wrong step and wrong times and totals in stories are Primary 1 work with help; telling that an answer cannot be right by thinking about how big it must be (estimating), spotting the wrong digit in a column sum and writing a wrong sum for a partner go past the school Primary 1 syllabus on purpose. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 23, mini-lesson 23 to 34, brain break 34 to 38, workbook 38 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Say the recording notice in one line: you and the screen only; a child may keep the camera off.",
+   "subtitle": "A neat answer can still be wrong",
+   "mascot": {
+    "size": "l",
+    "say": "Hi, I'm Mi. Let's notice, test and explain why!"
+   }
+  },
+  {
+   "id": "s-rem1",
+   "part": "remember",
+   "kind": "light",
+   "title": "Warm-up: add back",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "number_line",
+     "start": 25,
+     "end": 40,
+     "step": 5,
+     "label_every": 5,
+     "marks": [
+      25
+     ],
+     "hide": [
+      40
+     ],
+     "jumps": [
+      [
+       25,
+       35,
+       "+10"
+      ],
+      [
+       35,
+       40,
+       "+5"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "40 − 15 = 25. Check: 25 + 15 = ?"
+    }
+   ],
+   "note": "Adding back (Term 1 Lesson 7, taught again). On the line, 25 is the start; jumps of 10 and 5 reach the empty box. Say 40 take away 15 is 25, and to check we add the 15 back: 25 and 15 make 40. If we get back to the number we started with, the take away is right. Ask: what is 25 plus 15 (40). A child who is unsure counts on from 25 in tens and ones with fingers. Children answer aloud. No writing.",
+   "mascot": {
+    "size": "s",
+    "say": "Take your time!"
+   }
+  },
+  {
+   "id": "s-rem2",
+   "part": "remember",
+   "kind": "light",
+   "title": "Jump a ten",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "number_line",
+     "start": 46,
+     "end": 76,
+     "step": 10,
+     "label_every": 10,
+     "marks": [
+      46
+     ],
+     "hide": [
+      76
+     ],
+     "jumps": [
+      [
+       46,
+       76,
+       "+30"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "46 + 30. Jump three tens. Where do you land?"
+    }
+   ],
+   "note": "A tens jump (Term 1 Lesson 6, taught again): from 46, three jumps of ten reach 56, 66, 76. The ones stay the same. Ask: where do you land (76). Say: tens change, ones stay. A child who is unsure counts three jumps of ten on fingers. Children answer aloud. No writing."
+  },
+  {
+   "id": "s-rem3",
+   "part": "remember",
+   "kind": "light",
+   "title": "One hour later",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 3,
+        "m": 30,
+        "digital": "start",
+        "size": 62
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 4,
+        "m": 30,
+        "hide_hands": true,
+        "digital": "end",
+        "size": 62
+       }
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "It is 3:30. What time is it one hour later?"
+    }
+   ],
+   "note": "One hour later (Term 3 Lesson 3, taught again). The first clock shows 3:30. One hour later the short hand moves to the next number and the long hand stays on the 6: 4:30. Ask: what time is it one hour later (4:30). A child who is unsure counts the hours on the clock face, 3 to 4, with the long hand staying still. Children answer aloud. The second clock has no hands so the answer is not shown. No writing."
+  },
+  {
+   "id": "s-sneak",
+   "part": "sneak",
+   "kind": "light",
+   "title": "Sneak-peek puzzles",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Ideas we have not learnt yet. A guess is a great start. Nobody is marked."
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 1: anyone can try",
+        "items": [
+         "A child in another class writes",
+         "40 + 20 = 70.",
+         "Is the answer right?",
+         "Circle Yes or No."
+        ]
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 2: think",
+        "items": [
+         "A child in another class writes",
+         "27 + 16 = 33.",
+         "Is the answer right?",
+         "I know because ___."
+        ]
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Puzzle 1 (40 + 20 = 70 is wrong, it is 60) is an access question. Puzzle 2 is a thinking question on the lesson idea: 27 + 16 = 33 is wrong (43) because the ten from 7 + 6 = 13 was forgotten. A child who says 'it is not right because 7 and 6 make 13' or who checks by taking away has done well. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: No; No (27 + 16 = 43). Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
+  },
+  {
+   "id": "s-explore1",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: right or wrong?",
+   "blocks": [
+    {
+     "t": "table",
+     "header": false,
+     "rows": [
+      [
+       "45 + 28 = 63",
+       "70 − 30 = 40"
+      ],
+      [
+       "84 − 6 = 82",
+       "18 + 4 = 22"
+      ],
+      [
+       "53 − 20 = 73",
+       "62 − 8 = 54"
+      ],
+      [
+       "17 + 5 = 21",
+       "38 + 24 = 62"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Put each card on RIGHT or WRONG. Check it a different way."
+    }
+   ],
+   "note": "Round 1, about 5 minutes. Each child has the 8 mistake cards and the RIGHT and WRONG mat. The slide shows the same 8 sums, without saying which are right. Children check each card a different way (adding back for a take away, taking away for an add, or counting on) and place it on RIGHT or WRONG. Four are right: 70 take away 30, 18 + 4, 62 take away 8 and 38 + 24. Four are wrong, each in exactly one way: 45 + 28 = 63 (the answer is 73), 84 take away 6 = 82 (78), 53 take away 20 = 73 (33) and 17 + 5 = 21 (22). The sorted answer is on the next slide. Ask: how did you check the first one? A child with no cards writes the 8 sums on paper and makes two lists. Nobody holds a card up to the camera: children say the sum and show a thumb for right or a flat hand for wrong."
+  },
+  {
+   "id": "s-explore1-ans",
+   "part": "explore",
+   "kind": "light",
+   "title": "Four right, four wrong",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "WRONG",
+       "RIGHT"
+      ],
+      [
+       "45 + 28 = 63",
+       "70 − 30 = 40"
+      ],
+      [
+       "84 − 6 = 82",
+       "18 + 4 = 22"
+      ],
+      [
+       "53 − 20 = 73",
+       "62 − 8 = 54"
+      ],
+      [
+       "17 + 5 = 21",
+       "38 + 24 = 62"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "How did you check? Adding back, taking away, counting on."
+    }
+   ],
+   "note": "The sorted answer for round 1: WRONG are 45 + 28 = 63, 84 take away 6 = 82, 53 take away 20 = 73 and 17 + 5 = 21. RIGHT are 70 take away 30 = 40, 18 + 4 = 22, 62 take away 8 = 54 and 38 + 24 = 62. Say: a neat answer can still be wrong, so we check. Children tick their own sorting. Nobody holds cards up."
+  },
+  {
+   "id": "s-explore2",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: fix the wrong cards",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "Take the 4 WRONG cards.",
+      "What went wrong in each one?",
+      "Write the right answer on your paper."
+     ]
+    }
+   ],
+   "note": "Round 2, about 4 minutes. Children take the 4 WRONG cards and say what went wrong and what the right answer is, then write the four right answers on paper. Right answers: 45 + 28 = 73 (5 and 8 make 13, and the ten was forgotten, so the answer is 10 too small); 84 take away 6 = 78 (4 is less than 6, so 6 take away 4 was done instead of 4 take away 6: 6 take away 4 is 2); 53 take away 20 = 33 (the answer 73 is more than 53, so a plus sign was used); 17 + 5 = 22 (one short, a counting slip). Accept any clear words. The table is on the next slide. Children say the right answer aloud together on a count of three."
+  },
+  {
+   "id": "s-explore2-ans",
+   "part": "explore",
+   "kind": "light",
+   "title": "The right answers",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Wrong card",
+       "Right answer",
+       "What went wrong?"
+      ],
+      [
+       "45 + 28 = 63",
+       "73",
+       "the ten was lost"
+      ],
+      [
+       "84 − 6 = 82",
+       "78",
+       "6 take away 4 was done"
+      ],
+      [
+       "53 − 20 = 73",
+       "33",
+       "a plus sign was used"
+      ],
+      [
+       "17 + 5 = 21",
+       "22",
+       "one short"
+      ]
+     ]
+    }
+   ],
+   "note": "The right answers for round 2 and what went wrong in each: 73 (the ten was lost), 78 (6 take away 4 was done instead of 4 take away 6), 33 (a plus sign was used instead of take away) and 22 (one short, a counting slip). Children tick their own page. Say: each wrong answer leaves a clue about what went wrong."
+  },
+  {
+   "id": "s-explore3",
+   "part": "explore",
+   "kind": "light",
+   "title": "What did we notice?",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      "How far was each wrong answer from the right one?",
+      "Does the size of the mistake give a clue?"
+     ]
+    }
+   ],
+   "note": "Take one or two answers from volunteers. Key ideas: a wrong answer leaves a clue. 63 is 10 away from 73 (a lost ten). 82 is 4 away from 78 (6 take away 4 was done). 73 is 40 away from 33 (the wrong sign). 21 is 1 away from 22 (a counting slip). A different way of checking, such as adding back, finds the mistake. Keep the idea of checking the same way again for Talk time: do not say it now. Repeat a child answer in your own words so the recording picks it up. Do not give the rule before the children say it."
+  },
+  {
+   "id": "s-m1",
+   "part": "mini",
+   "kind": "light",
+   "title": "Add back to check",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "A child in another class writes 71 − 26 = 55."
+    },
+    {
+     "t": "chip",
+     "text": "Check: 55 + 26 = ?"
+    }
+   ],
+   "note": "Worked example. The child wrote 71 take away 26 equals 55. To check, add the 26 back to the answer: 55 and 26 make 81. We should get back to 71, but we get 81. So the answer is wrong. The right answer is 45, because 45 and 26 make 71. Ask: what is 55 plus 26 (81); do we get 71 (no); is the answer right (no). The answer is on the next slide. Say: if adding back does not give the number we started with, there is a mistake. Then the your-turn question: 60 take away 18 equals 52, check it. Answer: 52 + 18 = 70, not 60; the right answer is 42."
+  },
+  {
+   "id": "s-m1-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "Add back: 81, not 71",
+   "blocks": [
+    {
+     "t": "answer",
+     "text": "55 + 26 = 81. That is not 71. So 55 is wrong. 45 + 26 = 71, so the right answer is 45."
+    }
+   ],
+   "note": "The answer for the example on the slide before. 55 + 26 = 81. That is not 71. So 55 is wrong. 45 + 26 = 71, so the right answer is 45. Read it aloud so that children can tick their own work, and say what the check showed."
+  },
+  {
+   "id": "s-m2",
+   "part": "mini",
+   "kind": "light",
+   "title": "Check with a different way",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "A child in another class writes 29 + 35 = 54."
+    },
+    {
+     "t": "visual",
+     "type": "number_line",
+     "start": 29,
+     "end": 64,
+     "step": 5,
+     "label_every": 5,
+     "marks": [
+      29
+     ],
+     "jumps": [
+      [
+       29,
+       59,
+       "+30"
+      ],
+      [
+       59,
+       64,
+       "+5"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Jump on the line. Do you land on 54?"
+    }
+   ],
+   "note": "A different way to check an add. The child wrote 29 plus 35 equals 54. On the number line jump 30 to land on 59, then 5 more to land on 64. The line says 64, but the child wrote 54, so the two ways disagree and there is a mistake. Check the new answer by taking away: 64 take away 35 is 29. Ask: where do you land (64); does it match 54 (no). Say: two different ways must agree. If they do not, look for the mistake. Children answer aloud. The answer is on the next slide. A child who gets 54 again may have repeated the same slip: ask them to count the ones, 9 and 5 make 14."
+  },
+  {
+   "id": "s-m2-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "The two ways disagree",
+   "blocks": [
+    {
+     "t": "answer",
+     "text": "29 + 30 = 59. 59 + 5 = 64. The jump lands on 64, not 54. The right answer is 64."
+    }
+   ],
+   "note": "The answer for the example on the slide before. 29 + 30 = 59. 59 + 5 = 64. The jump lands on 64, not 54. The right answer is 64. Read it aloud so that children can tick their own work, and say what the check showed."
+  },
+  {
+   "id": "s-m3",
+   "part": "mini",
+   "kind": "light",
+   "title": "Which step is wrong?",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Step",
+       "Working"
+      ],
+      [
+       "1",
+       "56 + 20 = 76"
+      ],
+      [
+       "2",
+       "76 + 4 = 80"
+      ],
+      [
+       "3",
+       "80 + 3 = 82"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "A child adds 56 + 27 in three steps. Which step is wrong?"
+    }
+   ],
+   "note": "Worked example. A child works out 56 plus 27 in three steps: 56 plus 20 is 76 (right); 76 plus 4 is 80 (right); 80 plus 3 is 82 (wrong, it is 83). Only step 3 is wrong. Ask: check each step in turn; which one is wrong (3). What is the right step (80 + 3 = 83). Then check the answer: 83 take away 27 is 56. Say: we find the one wrong step, we fix it, and the steps before it were fine. The answer is on the next slide. Your-turn question, children write: 92 take away 35 in two steps: step 1 92 take away 30 is 72; step 2 72 take away 5 is 67. Which step is wrong? Step 1 (92 take away 30 is 62), and step 2 is right working from the wrong number: fix step 1 and then do step 2 again: 62 take away 5 is 57. The answer is 57, check 57 + 35 = 92."
+  },
+  {
+   "id": "s-m3-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "Step 3 is wrong",
+   "blocks": [
+    {
+     "t": "answer",
+     "text": "Step 3 is wrong: 80 + 3 = 83. The right answer is 83. Check: 83 − 27 = 56."
+    }
+   ],
+   "note": "The answer for the example on the slide before. Step 3 is wrong: 80 + 3 = 83. The right answer is 83. Check: 83 − 27 = 56. Read it aloud so that children can tick their own work, and say what the check showed."
+  },
+  {
+   "id": "s-m4",
+   "part": "mini",
+   "kind": "light",
+   "title": "A wrong time",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 9,
+        "m": 0,
+        "digital": "leaves",
+        "size": 62
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 9,
+        "m": 0,
+        "hide_hands": true,
+        "digital": "arrives",
+        "size": 62
+       }
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "The bus leaves at 9:00. The trip takes half an hour. A child says it arrives at 9:50. Is that right?"
+    }
+   ],
+   "note": "A wrong time. The bus leaves at 9 o'clock and the trip takes half an hour. A child says it arrives at 9:50. Ask: is that right (no). How can we check? Move the long hand from the 12 to the 6: that is half way round, 30 minutes: 9:30. Say: half an hour is 30 minutes; checking on a clock shows the mistake. The answer is on the next slide. A child who says 9:50 may think half of 100 is 50: ask them to count minutes in fives, 5, 10, 15, 20, 25, 30. Children answer aloud. The second clock has no hands so the answer is not shown."
+  },
+  {
+   "id": "s-m4-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "Half an hour is 30 minutes",
+   "blocks": [
+    {
+     "t": "answer",
+     "text": "Half an hour after 9:00 is 9:30. A half hour is 30 minutes, not 50. The bus arrives at 9:30."
+    }
+   ],
+   "note": "The answer for the example on the slide before. Half an hour after 9:00 is 9:30. A half hour is 30 minutes, not 50. The bus arrives at 9:30. Read it aloud so that children can tick their own work, and say what the check showed."
+  },
+  {
+   "id": "s-m5",
+   "part": "mini",
+   "kind": "light",
+   "title": "A wrong total",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "price_tag",
+        "item": "pen",
+        "price": "$4",
+        "size": 45
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "price_tag",
+        "item": "book",
+        "price": "$9",
+        "size": 45
+       }
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "A pen costs $4 and a book costs $9. A child says they cost $15 altogether. Is that right?"
+    }
+   ],
+   "note": "A wrong total. A pen costs 4 dollars and a book costs 9 dollars. A child says they cost 15 dollars altogether. Ask: is that right (no). Add 4 and 9: 9 and 1 make 10, and 3 more make 13. Check the child's total by taking the book away: 15 take away 9 is 6, but the pen costs 4, so 15 is not right. Say: we add prices to find the total, and we can check the total by taking one price away. The answer is on the next slide. Children answer aloud. A child who gives 15 may have added 4 and 9 and a slip of 2: ask them to count on from 9."
+  },
+  {
+   "id": "s-m5-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "13 dollars, not 15",
+   "blocks": [
+    {
+     "t": "answer",
+     "text": "4 + 9 = 13. The cost is $13, not $15. Check: 15 − 9 = 6, and 6 is not 4."
+    }
+   ],
+   "note": "The answer for the example on the slide before. 4 + 9 = 13. The cost is $13, not $15. Check: 15 − 9 = 6, and 6 is not 4. Read it aloud so that children can tick their own work, and say what the check showed."
+  },
+  {
+   "id": "s-break",
+   "part": "break",
+   "kind": "dark",
+   "title": "Tick-tock break",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Stand up. Swing your arms like the hands of a clock."
+    },
+    {
+     "t": "p",
+     "text": "I say a sum. Say the right answer in a big voice."
+    },
+    {
+     "t": "p",
+     "text": "Sip some water."
+    }
+   ],
+   "note": "Four minutes. Stand up on camera with a little clear space. Swing both arms slowly like the hands of a clock: one hour is a big swing, half an hour is a half swing. Then call quick facts for children to answer aloud together: 10 plus 5, 20 plus 30, 50 take away 20, 7 and 3, 40 take away 10. Ask: is 6 plus 6 equals 13 right? Wrong! Say the right answer: 12. No equipment, no running. A child may stay seated and swing one arm. Do not give prizes or compare children."
+  },
+  {
+   "id": "s-ws1",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 1: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 1 to 3. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read questions 1 to 3 aloud. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: a take away, check by adding back, is it right. Question 2: the same with a different sum. Question 3: a worked sum in three steps, which step is wrong, and the right answer."
+  },
+  {
+   "id": "s-ws1ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 1",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1: 41, Yes. Q2: 60, No, 27. Q3: step 2, and 64."
+  },
+  {
+   "id": "s-ws2",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 2: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 4 to 6. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S4",
+      "S5",
+      "S6"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read questions 4 to 6 aloud. Question 4: a clock at 2:30, reads for one hour, a child says 3:00; is the child right and what time does he stop. Question 5: a bag and a cup, a child says $10 altogether. Question 6: tick True or False for four sums. Wait 10 seconds before helping."
+  },
+  {
+   "id": "s-ws2ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 2",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S4",
+      "S5",
+      "S6"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud so a child watching the recording can tick their own work. Never ask a child to show a wrong answer to the group. Answers: Q4 No; 3:30. Q5 No; $12. Q6 True, False, True, False."
+  },
+  {
+   "id": "s-choice",
+   "part": "work",
+   "kind": "light",
+   "title": "Choose your next page",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Page",
+       "What it is"
+      ],
+      [
+       "Think harder (page 3)",
+       "Which step is wrong, two ways to check, fewer than, a clock"
+      ],
+      [
+       "Go further (page 4)",
+       "Does it make sense? A column sum, your own puzzle"
+      ],
+      [
+       "Investigation (page 5)",
+       "The same mistake three times"
+      ],
+      [
+       "Check",
+       "Finish and check your own work"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Everyone may choose. Not finished? Pages 3 to 5 are for home too."
+    }
+   ],
+   "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 5 minutes."
+  },
+  {
+   "id": "s-talk",
+   "part": "talk",
+   "kind": "light",
+   "title": "Talk and explain",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "A CHILD IN ANOTHER CLASS SAYS",
+     "items": [
+      "45 + 28 = 63.",
+      "I worked it out again the same way.",
+      "I got 63 again. So it must be right."
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Do you agree? How could she check?"
+    },
+    {
+     "t": "chip",
+     "text": "I think ... because ..."
+    }
+   ],
+   "note": "One minute of talk to the grown-up next to you, or to your screen. Volunteers first; a pass is always fine; never call a child by name to answer. Model answer: no, we do not agree. Doing it the same way again can make the same mistake again. A different way, such as taking away 28 from 63, gives 35, not 45, so 63 is wrong. The right answer is 73. Link to Explore: that was one of the wrong cards. Repeat each child answer in your own words for the recording. The child in the story is in another class: no cast name is given the wrong answer."
+  },
+  {
+   "id": "s-sneakans",
+   "part": "talk",
+   "kind": "light",
+   "title": "Back to the sneak-peek",
+   "blocks": [
+    {
+     "t": "answer",
+     "text": "Puzzle 1: No. 40 + 20 = 60. Puzzle 2: No. 27 + 16 = 43, because 7 + 6 = 13 and the ten was forgotten."
+    }
+   ],
+   "note": "Reveal both puzzles now. Say: many of you wrote a good reason. Do not read out anyone earlier answer. Puzzle 1: 40 plus 20 is 60, so 70 is wrong. Puzzle 2: 27 plus 16 is 43, so 33 is wrong, 10 too small. A check that works: 33 take away 16 is 17, not 27. It was the same idea as Explore: check a different way, and look at how far the wrong answer is from the right one."
+  },
+  {
+   "id": "s-exit",
+   "part": "exit",
+   "kind": "light",
+   "title": "Exit ticket",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "On your own. No looking back."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ],
+     "short": false
+    }
+   ],
+   "note": "Children answer on page 5. Read E1, E2 and E3 aloud, and the three options of E2 (the figures on the slide are small). Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
+  },
+  {
+   "id": "s-exitans",
+   "part": "exit",
+   "kind": "light",
+   "title": "Check the exit ticket",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: E1 92 then No; E2 option 2; E3 No then 8."
+  },
+  {
+   "id": "s-look",
+   "part": "look",
+   "kind": "lookback",
+   "title": "Look-back",
+   "blocks": [
+    {
+     "t": "lookback"
+    }
+   ],
+   "note": "Three minutes. Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child.",
+   "mascot": {
+    "size": "s",
+    "say": "Take your time. You can pass."
+   }
+  },
+  {
+   "id": "s-end",
+   "part": "flex",
+   "kind": "dark",
+   "title": "Well done, inquirers!",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Show a grown-up one mistake you spotted today."
+    },
+    {
+     "t": "card",
+     "head": "NEXT LESSON",
+     "items": [
+      "Tool Detectives, and Mi's Challenge Quest",
+      "Have ready: the Quest Log, closed. A quest partner. The 7 tool cards, cut out by a grown-up."
+     ]
+    }
+   ],
+   "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. Remind families that the next lesson is the last of Term 3 and holds Mi's Challenge Quest, a game with Mi: they need the Quest Log closed in its envelope, a quest partner (a grown-up or a brother or sister), and the tool-card page with its 7 tool cards cut out by a grown-up. If the whole class is ahead, show the optional slides and use the Spare-time menu from the tutor guide.",
+   "mascot": {
+    "size": "l",
+    "say": "Great thinking today!"
+   }
+  },
+  {
+   "id": "s-opt",
+   "part": "flex",
+   "kind": "light",
+   "title": "Go further: be the detective",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "A child writes 8 + 7 = 14. She checks: 14 − 7 = 7."
+    },
+    {
+     "t": "p",
+     "text": "Is the answer right? Does the check work?"
+    }
+   ],
+   "note": "Optional, only if you are on time. The sum 8 + 7 = 14 is wrong (15). The check 14 take away 7 is 7, not 8: so the check shows the mistake. Ask: does the check agree with the sum (no, 14 take away 7 is 7 but the first number was 8). So there is a mistake and the right answer is 15. Take two answers and move on. This links to adding back in the Mini-lesson.",
+   "optional": true
+  },
+  {
+   "id": "s-menu",
+   "part": "flex",
+   "kind": "light",
+   "title": "If we have time: pick one",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Activity",
+       "What we do"
+      ],
+      [
+       "Is it always true?",
+       "Does adding back always find a mistake in a take away? Test it."
+      ],
+      [
+       "Make a puzzle",
+       "Write a sum with one mistake for your grown-up."
+      ],
+      [
+       "Teach it back",
+       "Show a toy how to find the wrong step."
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Optional. Everyone may join."
+    }
+   ],
+   "note": "Optional Spare-time menu, used only if the whole class is ahead. Pick one or two activities (3 to 5 minutes each); full tutor lines and answers are in the tutor guide. Never start new content and never name who is ahead. Slow down with how do you know rather than rushing on. These minutes come from the flex buffer and are not part of the 90-minute sum.",
+   "optional": true
+  }
+ ],
+ "script": {
+  "segments": [
+   {
+    "part": "opening",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-title",
+      "s": 20
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "DO",
+      "text": "Greet each child by first name as they arrive. Then start the recording. While it runs, avoid names. Check that you can see each child.",
+      "s": 22
+     },
+     {
+      "k": "SAY",
+      "text": "Hello, inquirers! Please stay muted unless I invite you to speak. Cameras on if you can, so I can see you; cameras off is fine too. Pencil ready, and your mistake cards and mat on the table."
+     },
+     {
+      "k": "SAY",
+      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is unmuted. You may mute and keep your camera off."
+     },
+     {
+      "k": "SAY",
+      "text": "Today we are mistake detectives. A neat answer can still be wrong. We check an answer a different way, and we find the one step that went wrong. Finding a mistake is clever."
+     },
+     {
+      "k": "NOTE",
+      "text": "Say the recording notice in the SAY line above in your own words after the recording has started: the recording has the tutor, the shared screen and any unmuted voice; children may mute and keep the camera off. The routine and the four inquirer rules were introduced in the first lesson of Term 1: do not re-teach them."
+     },
+     {
+      "k": "NOTE",
+      "text": "Plain statement for families when it comes up: checking by adding back, finding a wrong step and wrong times and totals in stories are Primary 1 work with help; telling that an answer cannot be right by thinking about how big it must be, and the wrong digit in a column sum, go beyond Primary 1 on purpose."
+     },
+     {
+      "k": "NOTE",
+      "text": "New here? Say in one minute: our three rule words (notice it, test it, explain why); a guess is fine and you can always pass; after Start here you may choose Think harder, Go further or the Investigation; nobody holds paper to the camera. A child without cards writes the 8 sums on paper. Wrong working in this lesson belongs to a child in another class, never to a child in the group."
+     }
+    ]
+   },
+   {
+    "part": "remember",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-rem1",
+      "s": 15
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Today's tool is Work backwards. Start at the end and undo each step.",
+      "spine": "remember"
+     },
+     {
+      "k": "DO",
+      "text": "Point at the tool on page 1 of the workbook.",
+      "s": 4,
+      "spine": "remember"
+     },
+     {
+      "k": "SAY",
+      "text": "Take away, then check by adding back. Forty take away fifteen is twenty-five. To check, we add the fifteen back to the answer."
+     },
+     {
+      "k": "ASK",
+      "text": "What is twenty-five plus fifteen? Do we get back to forty?",
+      "resp": 30
+     },
+     {
+      "k": "WORK",
+      "text": "Your turn. Fifty take away twenty is thirty. Add back to check. Say it with me.",
+      "s": 25
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem2",
+      "s": 15
+     },
+     {
+      "k": "SAY",
+      "text": "A tens jump. Forty-six plus thirty. We jump three tens, and the ones stay the same."
+     },
+     {
+      "k": "ASK",
+      "text": "Where do we land after three jumps of ten?",
+      "resp": 30
+     },
+     {
+      "k": "WORK",
+      "text": "Your turn. Fifty-three plus twenty. Where do you land?",
+      "s": 25
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem3",
+      "s": 15
+     },
+     {
+      "k": "SAY",
+      "text": "A clock. It is three thirty. One hour later, the short hand moves to the next number. The long hand stays on the six."
+     },
+     {
+      "k": "ASK",
+      "text": "What time is it one hour later?",
+      "resp": 30
+     },
+     {
+      "k": "WORK",
+      "text": "Your turn. It is eight o'clock. What time is it one hour later?",
+      "s": 25
+     },
+     {
+      "k": "WORK",
+      "text": "Say each answer with me: forty, seventy-six, four thirty. Now the your-turn answers: fifty, seventy-three, nine o'clock. Then stretch your fingers.",
+      "s": 25
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child is unsure how to add back, count on from 25 to 40 in fives on fingers. For the tens jump, three fingers for three tens. For the clock, count one hour from 3 to 4 and show the long hand stays still."
+     },
+     {
+      "k": "NOTE",
+      "text": "Answers: 40; 76; 4:30. Your turns: 50 (30 + 20); 73; 9:00. Children answer with a whisper, fingers or hands. Nobody writes. Joining cold: all you need is counting to 100 in tens and the pictures."
+     }
+    ]
+   },
+   {
+    "part": "sneak",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-sneak",
+      "s": 12
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked."
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle one. A child in another class writes forty plus twenty equals seventy. Is the answer right? Circle Yes or No."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write on their own paper.",
+      "s": 40
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle two. A child in another class writes twenty-seven plus sixteen equals thirty-three. Is the answer right? I know because blank."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write or draw their answer.",
+      "s": 85
+     },
+     {
+      "k": "SAY",
+      "text": "Keep your paper. Nobody shows it. We will check our own thinking later, at Talk time."
+     },
+     {
+      "k": "NOTE",
+      "text": "Puzzle 1 answer: No (40 + 20 = 60). Puzzle 2 answer: No (27 + 16 = 43; the ten from 7 + 6 = 13 was forgotten). Look for good ideas to praise later (a child who checked by taking away, or who said 7 and 6 make 13). Do not write scores or keep a list."
+     }
+    ]
+   },
+   {
+    "part": "explore",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1",
+      "s": 15
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "The cards are the teachers today. Some sums on your cards are right and some are wrong. Check each card a different way. Then put it on RIGHT or on WRONG."
+     },
+     {
+      "k": "WORK",
+      "text": "Children check each card and sort it onto the mat. Tutor scans the cameras.",
+      "s": 180
+     },
+     {
+      "k": "ASK",
+      "text": "Which card did you put on WRONG? How did you check it?",
+      "resp": 45
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Four are right and four are wrong. A neat answer can still be wrong, so we check."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2",
+      "s": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Round two. Take the four wrong cards. What went wrong in each one? Write the right answer on your paper."
+     },
+     {
+      "k": "WORK",
+      "text": "Children fix the four wrong cards and write the right answers.",
+      "s": 100
+     },
+     {
+      "k": "ASK",
+      "text": "Which card did you fix first? What went wrong?",
+      "resp": 40
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Seventy-three: the ten was lost. Seventy-eight: 6 take away 4 was done instead of 4 take away 6. Thirty-three: a plus sign was used. Twenty-two: one short."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore3",
+      "s": 8
+     },
+     {
+      "k": "ASK",
+      "text": "How far was each wrong answer from the right one? Does the size of the mistake give a clue?",
+      "resp": 40
+     },
+     {
+      "k": "SAY",
+      "text": "A wrong answer leaves a clue. A lost ten is ten away. So we check a different way."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who cannot decide on a card: check it by adding back or taking away. A child who puts a right card on WRONG: ask them to show the check. A child with no cards writes the 8 sums on paper and makes two lists."
+     },
+     {
+      "k": "NOTE",
+      "text": "Main room only; you cannot see small cards, so ask children to say the sum and to show a thumb for right or a flat hand for wrong. Answers: RIGHT 70-30=40, 18+4=22, 62-8=54, 38+24=62; WRONG 45+28=63 (73), 84-6=82 (78), 53-20=73 (33), 17+5=21 (22). Do not say the rule before the children do."
+     }
+    ]
+   },
+   {
+    "part": "mini",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-m1",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "A child in another class writes seventy-one take away twenty-six equals fifty-five. We check by adding back."
+     },
+     {
+      "k": "ASK",
+      "text": "What is fifty-five plus twenty-six? Do we get back to seventy-one?",
+      "resp": 40
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m1-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Fifty-five and twenty-six make eighty-one, not seventy-one. So fifty-five is wrong. Forty-five and twenty-six make seventy-one, so the right answer is forty-five."
+     },
+     {
+      "k": "READ",
+      "text": "Your turn. A child writes sixty take away eighteen equals fifty-two. Add back to check. Is it right? Write Yes or No, and the right answer."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write on their own paper. Wait 10 seconds before helping.",
+      "s": 38
+     },
+     {
+      "k": "SAY",
+      "text": "Fifty-two and eighteen make seventy, not sixty. So it is wrong. The right answer is forty-two."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m2",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Another way to check. A child writes twenty-nine plus thirty-five equals fifty-four. We jump on the line: thirty, then five."
+     },
+     {
+      "k": "ASK",
+      "text": "Where do we land? Does it match fifty-four?",
+      "resp": 30
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m2-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "We land on sixty-four. The two ways do not agree, so there is a mistake. Two different ways must agree."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "A sum worked in three steps. A child adds fifty-six and twenty-seven."
+     },
+     {
+      "k": "ASK",
+      "text": "Check each step in turn. Which step is wrong?",
+      "resp": 40
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Step three is wrong. Eighty plus three is eighty-three. We find the one wrong step and fix it."
+     },
+     {
+      "k": "READ",
+      "text": "Your turn. A child works out ninety-two take away thirty-five in two steps. Step one: ninety-two take away thirty is seventy-two. Step two: seventy-two take away five is sixty-seven. Which step is wrong? Write the right answer."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write on their own paper. Wait 10 seconds before helping.",
+      "s": 50
+     },
+     {
+      "k": "SAY",
+      "text": "Step one is wrong: ninety-two take away thirty is sixty-two. Step two is fine, but it started from the wrong number. Fix step one, then do step two again: fifty-seven."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "A wrong time. The bus leaves at nine o'clock. The trip takes half an hour. A child says it arrives at nine fifty."
+     },
+     {
+      "k": "ASK",
+      "text": "Is that right? Where does the long hand go in half an hour?",
+      "resp": 30
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Half an hour is thirty minutes, so the bus arrives at nine thirty. Nine fifty is a mistake."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m5",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "A wrong total. A pen costs four dollars and a book costs nine dollars. A child says they cost fifteen dollars altogether."
+     },
+     {
+      "k": "ASK",
+      "text": "How much do they cost altogether? Is fifteen right?",
+      "resp": 35
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m5-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Four and nine make thirteen. We can check the child by taking the nine away from fifteen. That leaves six, but the pen costs four, so fifteen is wrong."
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child cannot check by adding back, put the answer and the number taken away on a number line. If a child fixes the wrong step but not the steps after it, ask: what number does the next step start from? If a child says a neat answer must be right, ask for a second way."
+     },
+     {
+      "k": "NOTE",
+      "text": "Key words to use every time: check, add back, a different way, the wrong step, the right answer. Fixed question forms: Is the answer right? Which step is wrong? What is the right answer? Wrong working belongs to a child in another class. The slides keep the answers off the screen while you ask: read every question with its numbers aloud."
+     }
+    ]
+   },
+   {
+    "part": "break",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-break",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Stand up and get a sip of water. Swing your arms slowly like the hands of a clock. A big swing is one hour. A half swing is half an hour."
+     },
+     {
+      "k": "WORK",
+      "text": "Call quick sums for the group to answer aloud: 10 + 5, 20 + 30, 50 - 20, 7 and 3, 40 - 10. Then call one wrong on purpose (6 + 6 = 13) and the children call the right answer in a big voice. Seated children swing one arm.",
+      "s": 160
+     }
+    ]
+   },
+   {
+    "part": "work",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "Page 1, Start here. Question 1: A child writes forty-one take away seventeen equals twenty-four. Part a: check. Twenty-four plus seventeen equals blank. Part b: is the answer right? Circle Yes or No. Question 2: A child writes fifty take away twenty-three equals thirty-seven. Part a: check. Thirty-seven plus twenty-three equals blank. Part b: is the answer right? Circle Yes or No. Part c: fifty take away twenty-three equals blank. Question 3: A child adds thirty-six and twenty-eight in three steps. Look at the steps. Part a: which step is wrong? Circle one. Part b: the right answer is blank."
+     },
+     {
+      "k": "WORK",
+      "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
+      "s": 540
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1ans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Question 1: the check is forty-one. Yes, it is right. Question 2: the check is sixty. No. The right answer is twenty-seven. Question 3: step two. The right answer is sixty-four. Tick your own page with a tick."
+     },
+     {
+      "k": "SAY",
+      "text": "After question 3 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Page 2. Question 4: Ravi starts to read at the time on the clock. He reads for 1 hour. A child says he stops at 3:00. Part a: is the child right? Circle Yes or No. Part b: Ravi stops at blank. Question 5: A bag costs 7 dollars and a cup costs 5 dollars. A child says they cost 10 dollars altogether. Part a: is the child right? Circle Yes or No. Part b: they cost blank dollars altogether. Question 6: tick True or False for each sum."
+     },
+     {
+      "k": "WORK",
+      "text": "Page 2, questions 4 to 6.",
+      "s": 500
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2ans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Question 4: No. Ravi stops at 3:30. Question 5: No. They cost twelve dollars. Question 6: True, False, True, False. Tick your own page."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-choice",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time. Anything not finished is for home too."
+     },
+     {
+      "k": "MOVE",
+      "text": "Stand and reach up for 30 seconds, then sit down and choose.",
+      "s": 30
+     },
+     {
+      "k": "WORK",
+      "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
+      "s": 200
+     },
+     {
+      "k": "STUCK",
+      "text": "Q1: add back 24 and 17. Q2: add back, then take away 23 from 50. Q3: check each step in turn. Q4: move the long hand 1 hour round; the short hand moves to the next number. Q5: add 7 and 5. Q6: do each sum another way."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who is still stuck ticks I am still stuck on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp (never a personal phone). You then help in the open session in the next lesson. Never a private message to a child."
+     },
+     {
+      "k": "NOTE",
+      "text": "Think harder has a wrong step in a take away, two ways to check the same sum, a wrong fewer-than sum and a time that cannot be shown on a clock. Go further has Does It Make Sense? (beyond Primary 1 on purpose), a wrong digit in a column sum and writing a sum with one mistake. Do not announce who is on which page. Start here takes a middle child about 17 minutes, so the choice time may be short. Slow class: take the extra minutes from the flex time and do not skip the answer slides."
+     }
+    ]
+   },
+   {
+    "part": "talk",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-talk",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "A child in another class writes forty-five plus twenty-eight equals sixty-three. She works it out again the same way and gets sixty-three again. She says it must be right. Do you agree? How could she check?"
+     },
+     {
+      "k": "WORK",
+      "text": "Think about it with the cards from Explore: what could she do that is a different way?",
+      "s": 50
+     },
+     {
+      "k": "WORK",
+      "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
+      "s": 40
+     },
+     {
+      "k": "ASK",
+      "text": "Who would like to share? Volunteers first. A pass is always fine.",
+      "resp": 100
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-sneakans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Remember the sneak-peek? Puzzle one: no, forty plus twenty is sixty. Puzzle two: no, twenty-seven plus sixteen is forty-three. The ten was forgotten."
+     },
+     {
+      "k": "ASK",
+      "text": "Did anyone change their mind while we worked? You can just nod.",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Where did you use Work backwards today?",
+      "resp": 10,
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Listen for the tool being named, not the answer. Volunteers first, a pass is always fine.",
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Model answer: no, we do not agree. Doing the sum the same way again can make the same mistake again. A different way, such as taking away 28 from 63, gives 35, not 45, so 63 is wrong; the right answer is 73. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
+     }
+    ]
+   },
+   {
+    "part": "exit",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-exit",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
+     },
+     {
+      "k": "READ",
+      "text": "E1. A child writes eighty-two take away forty-seven equals forty-five. Part a: check. Forty-five plus forty-seven equals blank. Part b: is the answer right? Circle Yes or No. E2. A child works out twenty-eight plus fifteen in steps. Which step is wrong? Option 1: twenty-eight plus two equals thirty. Option 2: fifteen take away two equals twelve. Option 3: thirty plus twelve equals forty-two. Write its number in the bracket. E3. Lily has 20 dollars. She spends 12 dollars. A child says she has 9 dollars left. Part a: is the child right? Circle Yes or No. Part b: she has blank dollars left."
+     },
+     {
+      "k": "WORK",
+      "text": "Children answer E1 to E3 on their own.",
+      "s": 190
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-exitans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "E1: ninety-two. No. E2: option 2. E3: No. Eight dollars."
+     },
+     {
+      "k": "SAY",
+      "text": "Tick your own ticket with a tick. Well done."
+     },
+     {
+      "k": "NOTE",
+      "text": "Nothing is collected or marked live. Children tick their own ticket. If many children miss one question, spend two minutes on it at the start of the next lesson, in the open session, no names. Do not read out any child result."
+     }
+    ]
+   },
+   {
+    "part": "look",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-look",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+      "spine": "look"
+     },
+     {
+      "k": "WORK",
+      "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+      "s": 110,
+      "spine": "look"
+     }
+    ]
+   },
+   {
+    "part": "flex",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-end",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Well done, inquirers. Next lesson is Tool Detectives, the last lesson of Term 3, and we play Mi's Challenge Quest, a game with Mi. Please have the Quest Log closed in its envelope, a quest partner, and the seven tool cards cut out by a grown-up. Goodbye, and thank you to the grown-ups."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-opt",
+      "s": 8,
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Optional, only if you are on time: a child writes eight plus seven equals fourteen, and checks it with fourteen take away seven equals seven. Does the check agree with the sum?",
+      "optional": true
+     },
+     {
+      "k": "WORK",
+      "text": "Short think time, then take two answers.",
+      "s": 90,
+      "optional": true
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-menu",
+      "s": 8,
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
+      "optional": true
+     },
+     {
+      "k": "NOTE",
+      "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: the check gives 7, not 8, so the sum has a mistake; 8 + 7 = 15. If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+     }
+    ]
+   }
+  ]
+ },
+ "tiers": {
+  "start": [
+   {
+    "id": "S1",
+    "page": 1,
+    "tier": "start",
+    "text": "A child writes 41 − 17 = 24.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Check: 24 + 17 = [2]",
+      "ans": "41",
+      "val": 41
+     },
+     {
+      "l": "b",
+      "text": "Is the answer right? Circle Yes or No.",
+      "ans": "Yes",
+      "val": "Yes",
+      "choices": [
+       "Yes",
+       "No"
+      ]
+     }
+    ],
+    "answer": "41; Yes",
+    "val": [
+     41,
+     "Yes"
+    ],
+    "hint": "Add the answer and the 17 back. Do you get 41?",
+    "solution": "24 + 17 = 41. Adding back gives the number we started with, so the answer is right.",
+    "mistakes": [
+     "Writing 24 + 17 = 31 (a counting slip).",
+     "Saying No without adding back."
+    ],
+    "mins": 2.5
+   },
+   {
+    "id": "S2",
+    "page": 1,
+    "tier": "start",
+    "text": "A child writes 50 − 23 = 37.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Check: 37 + 23 = [2]",
+      "ans": "60",
+      "val": 60
+     },
+     {
+      "l": "b",
+      "text": "Is the answer right? Circle Yes or No.",
+      "ans": "No",
+      "val": "No",
+      "choices": [
+       "Yes",
+       "No"
+      ]
+     },
+     {
+      "l": "c",
+      "text": "50 − 23 = [2]",
+      "ans": "27",
+      "val": 27
+     }
+    ],
+    "answer": "60; No; 27",
+    "val": [
+     60,
+     "No",
+     27
+    ],
+    "hint": "Add back. Do you get 50?",
+    "solution": "37 + 23 = 60, not 50. So 37 is wrong. 27 + 23 = 50, so the right answer is 27.",
+    "mistakes": [
+     "Saying Yes because 37 looks about right.",
+     "Writing 73 (adding 50 and 23)."
+    ],
+    "mins": 3
+   },
+   {
+    "id": "S3",
+    "page": 1,
+    "tier": "start",
+    "text": "A child adds 36 + 28 in three steps. One step is wrong.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Which step is wrong? Circle 1, 2 or 3.",
+      "ans": "2",
+      "val": "2",
+      "choices": [
+       "1",
+       "2",
+       "3"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "The right answer is [2].",
+      "ans": "64",
+      "val": 64
+     }
+    ],
+    "answer": "Step 2; 64",
+    "val": [
+     "2",
+     64
+    ],
+    "hint": "Check each step on its own. Step 1: does 36 + 4 make 40?",
+    "solution": "Step 1: 36 + 4 = 40, right. Step 2: 40 + 20 = 60, not 50. Step 3 then starts from 60: 60 + 4 = 64. The right answer is 64. Check: 64 − 28 = 36.",
+    "mistakes": [
+     "Circling step 3 because it is the last step.",
+     "Writing 54 (the child's answer)."
+    ],
+    "mins": 3.5,
+    "visual": {
+     "type": "table",
+     "head": [
+      "Step",
+      "Working"
+     ],
+     "rows": [
+      [
+       "1",
+       "36 + 4 = 40"
+      ],
+      [
+       "2",
+       "40 + 20 = 50"
+      ],
+      [
+       "3",
+       "50 + 4 = 54"
+      ]
+     ],
+     "col_w": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "id": "S4",
+    "page": 2,
+    "tier": "start",
+    "text": "Ravi starts to read at the time on the clock. He reads for 1 hour. A child says he stops at 3:00.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Is the child right? Circle Yes or No.",
+      "ans": "No",
+      "val": "No",
+      "choices": [
+       "Yes",
+       "No"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "Ravi stops at ____ .",
+      "ans": "3:30",
+      "val": "3:30"
+     }
+    ],
+    "answer": "No; 3:30",
+    "val": [
+     "No",
+     "3:30"
+    ],
+    "hint": "The short hand moves to the next number. Where does the long hand stay?",
+    "solution": "It starts at half past 2. One hour later the short hand moves to the next number and the long hand stays on the 6. That is half past 3, or 3:30. The child forgot the half hour.",
+    "mistakes": [
+     "Saying Yes because the hour changed.",
+     "Writing 3:00 or 2:30."
+    ],
+    "mins": 2.5,
+    "visual": {
+     "type": "clock",
+     "h": 2,
+     "m": 30,
+     "digital": "starts",
+     "size": 80
+    }
+   },
+   {
+    "id": "S5",
+    "page": 2,
+    "tier": "start",
+    "text": "A bag costs $7 and a cup costs $5. A child says they cost $10 altogether.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Is the child right? Circle Yes or No.",
+      "ans": "No",
+      "val": "No",
+      "choices": [
+       "Yes",
+       "No"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "They cost $____ altogether.",
+      "ans": "$12",
+      "val": 12
+     }
+    ],
+    "answer": "No; $12",
+    "val": [
+     "No",
+     12
+    ],
+    "hint": "Altogether means add. 7 and 3 make 10.",
+    "solution": "7 and 5: 7 and 3 make 10, and 2 more make 12. They cost $12. Check: 10 take away 7 is 3, and the cup costs 5, so 10 is wrong.",
+    "mistakes": [
+     "Saying Yes because 10 is close.",
+     "Taking away: 7 take away 5 is 2."
+    ],
+    "mins": 2.5,
+    "visuals": [
+     {
+      "type": "price_tag",
+      "item": "bag",
+      "price": "$7",
+      "size": 55
+     },
+     {
+      "type": "price_tag",
+      "item": "cup",
+      "price": "$5",
+      "size": 55
+     }
+    ]
+   },
+   {
+    "id": "S6",
+    "page": 2,
+    "tier": "start",
+    "text": "Tick True or False for each sum.",
+    "parts": [],
+    "answer": "True; False; True; False",
+    "val": [
+     "True",
+     "False",
+     "True",
+     "False"
+    ],
+    "hint": "Do each sum a different way. Add back to check a take away.",
+    "solution": "25 + 30 = 55 is true. 56 − 20 = 36, not 46, so it is false. 24 + 9 = 33 is true. 80 − 5 = 75, not 85, so it is false.",
+    "mistakes": [
+     "Ticking True for every sum.",
+     "Taking away the tens digit by mistake: 56 − 20 = 46."
+    ],
+    "mins": 3,
+    "tf": [
+     {
+      "s": "25 + 30 = 55"
+     },
+     {
+      "s": "56 − 20 = 46"
+     },
+     {
+      "s": "24 + 9 = 33"
+     },
+     {
+      "s": "80 − 5 = 85"
+     }
+    ]
+   }
+  ],
+  "think": [
+   {
+    "id": "T1",
+    "page": 3,
+    "tier": "think",
+    "text": "A child works out 74 − 29 in two steps. Step 1 takes away 30 on purpose, because 29 is close to 30. That is a good first step.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Which step is wrong? Circle 1 or 2.",
+      "ans": "2",
+      "val": "2",
+      "choices": [
+       "1",
+       "2"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "The right answer is [2].",
+      "ans": "45",
+      "val": 45
+     }
+    ],
+    "answer": "Step 2; 45",
+    "val": [
+     "2",
+     45
+    ],
+    "hint": "Check the answer by adding 29 back. Do you get 74?",
+    "solution": "Step 1: 74 − 30 = 44. Taking away 30 is a good first step, but 29 is 1 less than 30, so we took away 1 too many. Step 2 must add 1 back: 44 + 1 = 45. The child took away another 1 instead. Check: 45 + 29 = 74.",
+    "mistakes": [
+     "Circling step 1: taking away 30 is allowed, it only takes away 1 too many.",
+     "Writing 44 (stopping after step 1)."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "table",
+     "head": [
+      "Step",
+      "Working"
+     ],
+     "rows": [
+      [
+       "1",
+       "74 − 30 = 44"
+      ],
+      [
+       "2",
+       "44 − 1 = 43"
+      ]
+     ],
+     "col_w": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "id": "T2",
+    "page": 3,
+    "tier": "think",
+    "text": "Two children work out 58 + 27. One child writes 75. The other child writes 85.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Check: 75 − 27 = [2]",
+      "ans": "48",
+      "val": 48
+     },
+     {
+      "l": "b",
+      "text": "Check: 85 − 27 = [2]",
+      "ans": "58",
+      "val": 58
+     },
+     {
+      "l": "c",
+      "text": "Who is right? Circle 75 or 85.",
+      "ans": "85",
+      "val": "85",
+      "choices": [
+       "75",
+       "85"
+      ]
+     }
+    ],
+    "answer": "48; 58; 85",
+    "val": [
+     48,
+     58,
+     "85"
+    ],
+    "hint": "If 58 + 27 is right, taking 27 away must give 58.",
+    "solution": "75 − 27 = 48, not 58. 85 − 27 = 58, which is where we started. So 85 is right.",
+    "mistakes": [
+     "Choosing 75 because 5 + 7 is 12 and the ten is forgotten.",
+     "Adding instead of taking away when checking."
+    ],
+    "mins": 5
+   },
+   {
+    "id": "T3",
+    "page": 3,
+    "tier": "think",
+    "text": "Mei has 28 pencils. Mei has 6 fewer pencils than Aisha. A child writes 28 − 6 = 22 to find how many pencils Aisha has.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Is the child right? Circle Yes or No.",
+      "ans": "No",
+      "val": "No",
+      "choices": [
+       "Yes",
+       "No"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "Aisha has ____ pencils.",
+      "ans": "34",
+      "val": 34
+     }
+    ],
+    "answer": "No; 34",
+    "val": [
+     "No",
+     34
+    ],
+    "hint": "Who has more, Mei or Aisha? Draw two strips.",
+    "solution": "Mei has fewer, so Aisha has more. Aisha has 6 more than 28: 28 + 6 = 34. Check: 34 has 6 more than 28, and 28 has 6 fewer than 34.",
+    "mistakes": [
+     "Saying Yes because fewer means take away.",
+     "Writing 22."
+    ],
+    "mins": 5
+   },
+   {
+    "id": "T4",
+    "page": 3,
+    "tier": "think",
+    "text": "Ravi leaves home at 7:30. He walks for half an hour. A child says he gets there at 7:60. Look at the clocks.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Which clock shows when Ravi gets there? Circle A, B or C.",
+      "ans": "B",
+      "val": "B",
+      "choices": [
+       "A",
+       "B",
+       "C"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "Ravi gets there at ____ .",
+      "ans": "8:00",
+      "val": "8:00"
+     }
+    ],
+    "answer": "B; 8:00",
+    "val": [
+     "B",
+     "8:00"
+    ],
+    "hint": "Half an hour is 30 minutes. 30 minutes after half past is on the hour.",
+    "solution": "A half hour after half past 7 is 8 o'clock. There is no 7:60 on a clock: after 7:59 comes 8:00. Clock B shows 8:00.",
+    "mistakes": [
+     "Choosing clock A (7:00) or C (8:30).",
+     "Writing 7:60."
+    ],
+    "mins": 4,
+    "visuals": [
+     {
+      "type": "clock",
+      "h": 7,
+      "m": 0,
+      "digital": "A",
+      "size": 70
+     },
+     {
+      "type": "clock",
+      "h": 8,
+      "m": 0,
+      "digital": "B",
+      "size": 70
+     },
+     {
+      "type": "clock",
+      "h": 8,
+      "m": 30,
+      "digital": "C",
+      "size": 70
+     }
+    ]
+   }
+  ],
+  "go": [
+   {
+    "id": "G1",
+    "page": 4,
+    "tier": "go",
+    "text": "A child writes 52 + 39 = 191.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Do not add exactly. Circle the best guess for 52 + 39.",
+      "ans": "about 90",
+      "val": "about 90",
+      "choices": [
+       "about 30",
+       "about 90",
+       "about 150"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "Can 191 be right? Circle Yes or No.",
+      "ans": "No",
+      "val": "No",
+      "choices": [
+       "Yes",
+       "No"
+      ]
+     },
+     {
+      "l": "c",
+      "text": "The right answer is [2].",
+      "ans": "91",
+      "val": 91
+     }
+    ],
+    "answer": "about 90; No; 91",
+    "val": [
+     "about 90",
+     "No",
+     91
+    ],
+    "hint": "52 is near 50. 39 is near 40.",
+    "solution": "52 is near 50 and 39 is near 40, and 50 and 40 make 90. So the answer is about 90. 191 is much too big, so it cannot be right. 52 + 39 = 91.",
+    "mistakes": [
+     "Guessing about 150 because both numbers have a 9 or a 5.",
+     "Saying Yes because 191 looks like 52 and 39 joined."
+    ],
+    "mins": 6
+   },
+   {
+    "id": "G2",
+    "page": 4,
+    "tier": "go",
+    "text": "A child adds 47 + 38 in columns and writes 75. One digit is wrong.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Which column has the wrong digit? Circle Tens or Ones.",
+      "ans": "Tens",
+      "val": "Tens",
+      "choices": [
+       "Tens",
+       "Ones"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "The right answer is [2].",
+      "ans": "85",
+      "val": 85
+     }
+    ],
+    "answer": "Tens; 85",
+    "val": [
+     "Tens",
+     85
+    ],
+    "hint": "Add the ones first. Is there a ten to carry?",
+    "solution": "Ones: 7 + 8 = 15. Write 5 and carry 1 ten. Tens: 4 + 3 + the 1 carried ten = 8. The child forgot the carried ten, so the tens digit should be 8. The right answer is 85.",
+    "mistakes": [
+     "Circling Ones because 7 + 8 looks hard.",
+     "Writing 75 again."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "table",
+     "head": [
+      "",
+      "Tens",
+      "Ones"
+     ],
+     "rows": [
+      [
+       "",
+       "4",
+       "7"
+      ],
+      [
+       "+",
+       "3",
+       "8"
+      ],
+      [
+       "",
+       "7",
+       "5"
+      ]
+     ],
+     "col_w": [
+      1,
+      2,
+      2
+     ]
+    }
+   },
+   {
+    "id": "G3",
+    "page": 4,
+    "tier": "go",
+    "text": "Write a sum with one mistake for a grown-up to find. Many answers are right.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "My sum: [2] + [2] = [2]",
+      "ans": "any sum with one mistake",
+      "val": "open"
+     },
+     {
+      "l": "b",
+      "text": "The right answer is [2].",
+      "ans": "the right sum",
+      "val": "open"
+     },
+     {
+      "l": "c",
+      "text": "The mistake is ___________ .",
+      "ans": "one mistake named",
+      "val": "open"
+     }
+    ],
+    "answer": "Many answers are right: the sum has exactly one mistake and the right answer is given",
+    "val": [
+     "open"
+    ],
+    "hint": "Pick two numbers. Work out the right answer first. Then change one thing.",
+    "solution": "For example 38 + 15 = 43: the right answer is 53, and the mistake is that the ten was forgotten. Check: add back 43 − 15 = 28, not 38.",
+    "mistakes": [
+     "Writing a sum with no mistake.",
+     "Changing two things at once."
+    ],
+    "mins": 5
+   }
+  ],
+  "investigation": {
+   "id": "I1",
+   "page": 5,
+   "tier": "investigation",
+   "title": "The same mistake three times",
+   "first": "A child writes 25 + 19 = 34. Check it: 34 − 19 = ____ . Is it right? Yes or No.",
+   "text": "The same child writes 36 + 27 = 53 and 48 + 35 = 73. What does the child forget each time? Write one more sum this child would get wrong.",
+   "lines": 4,
+   "answer": "First: 34 − 19 = 15, not 25, so it is wrong. The right answer is 44. Each wrong answer is 10 less than the right one (44, 63 and 83). The child forgets the ten made by adding the ones. Another sum the child gets wrong needs 10 or more in the ones, for example 29 + 14 = 33 (right: 43).",
+   "val": [
+    "44"
+   ],
+   "look_for": "A child who finds that every wrong answer is exactly 10 less than the right one, or who says the child forgets the carried ten. Credit any clear reason. A new sum must make 10 or more in the ones; a sum with no carry is not a good example.",
+   "mistakes": [
+    "Saying the child cannot add.",
+    "Writing a new sum with no ten to carry."
+   ],
+   "mins": 8
+  }
+ },
+ "talk": {
+  "question": "A child in another class writes 45 + 28 = 63. She works it out again the same way and gets 63 again. She says it must be right. Do you agree? How could she check?",
+  "starter": "I think ... because ...",
+  "answer": "No. Doing the sum the same way again can make the same mistake again. A different way, such as taking 28 away from 63, gives 35 and not 45, so 63 is wrong. The right answer is 73.",
+  "look_for": "A child who says to check a different way, or who adds back. Not just yes or no."
+ },
+ "exit": [
+  {
+   "id": "E1",
+   "text": "A child writes 82 − 47 = 45.",
+   "parts": [
+    {
+     "l": "a",
+     "text": "Check: 45 + 47 = [2]",
+     "ans": "92",
+     "val": 92
+    },
+    {
+     "l": "b",
+     "text": "Is the answer right? Circle Yes or No.",
+     "ans": "No",
+     "val": "No",
+     "choices": [
+      "Yes",
+      "No"
+     ]
+    }
+   ],
+   "answer": "92; No",
+   "val": [
+    92,
+    "No"
+   ],
+   "solution": "45 + 47 = 92, not 82. So 45 is wrong. The right answer is 35, because 35 + 47 = 82.",
+   "mistakes": [
+    "Saying Yes because 45 looks right.",
+    "Writing 82 for part a."
+   ]
+  },
+  {
+   "id": "E2",
+   "text": "A child works out 28 + 15 in steps. Which step is wrong? Write its number in the bracket.",
+   "parts": [],
+   "answer": "(2) 15 − 2 = 12",
+   "val": [
+    2
+   ],
+   "solution": "15 split into 2 and 13. 15 − 2 = 13, not 12. Then 30 + 13 = 43.",
+   "mistakes": [
+    "Choosing (3) because it is the last step.",
+    "Choosing (1) because 28 + 2 looks odd."
+   ],
+   "mcq": {
+    "options": [
+     "28 + 2 = 30",
+     "15 − 2 = 12",
+     "30 + 12 = 42"
+    ],
+    "bracket": true
+   }
+  },
+  {
+   "id": "E3",
+   "text": "Lily has $20. She spends $12. A child says she has $9 left.",
+   "parts": [
+    {
+     "l": "a",
+     "text": "Is the child right? Circle Yes or No.",
+     "ans": "No",
+     "val": "No",
+     "choices": [
+      "Yes",
+      "No"
+     ]
+    },
+    {
+     "l": "b",
+     "text": "Lily has $____ left.",
+     "ans": "$8",
+     "val": 8
+    }
+   ],
+   "answer": "No; $8",
+   "val": [
+    "No",
+    8
+   ],
+   "solution": "Count up from 12 to 20: 8. Check: 8 and 12 make 20. The child's 9 and 12 make 21, so 9 is wrong.",
+   "mistakes": [
+    "Saying Yes.",
+    "Adding 20 and 12."
+   ]
+  }
+ ],
+ "home_practice": [
+  {
+   "id": "H1",
+   "tier": "start",
+   "text": "A child writes 34 + 18 = 42. Is the answer right? Circle Yes or No. I know because ______________________________ .",
+   "answer": "No. 34 + 18 = 52.",
+   "val": "No",
+   "solution": "A check: 42 − 18 = 24, not 34. 4 + 8 = 12, so the ten was forgotten. The right answer is 52."
+  },
+  {
+   "id": "H2",
+   "tier": "start",
+   "text": "The bus leaves at 3:30. The trip takes half an hour. A child says it arrives at 3:00. Is the child right? Circle Yes or No. The bus arrives at ____ .",
+   "answer": "No. 4:00.",
+   "val": [
+    "No",
+    "4:00"
+   ],
+   "solution": "Half an hour after half past 3 is 4 o'clock. The long hand goes round from the 6 to the 12, and the short hand moves to the 4."
+  },
+  {
+   "id": "H3",
+   "tier": "start",
+   "text": "Siti has $15. She buys a book for $6. A child says she has $11 left. Is the child right? Circle Yes or No. Siti has $____ left.",
+   "answer": "No. $9.",
+   "val": [
+    "No",
+    9
+   ],
+   "solution": "6 and 9 make 15, so $9 is left. A check: 11 and 6 make 17, not 15."
+  },
+  {
+   "id": "H4",
+   "tier": "think",
+   "text": "Two children work out 46 + 38. One writes 74. The other writes 84. Use taking away to check. Who is right? Circle 74 or 84.",
+   "answer": "84",
+   "val": "84",
+   "choices": [
+    "74",
+    "84"
+   ],
+   "solution": "84 − 38 = 46, which is where we started. 74 − 38 = 36, not 46. So 84 is right."
+  },
+  {
+   "id": "H5",
+   "tier": "start",
+   "rewind_of": "Term 1 Lesson 9",
+   "text": "Line A is 14 cm long. Line B is 9 cm long. Line A is ____ cm longer than Line B.",
+   "answer": "5",
+   "val": 5,
+   "solution": "Count up from 9 to 14. That is 5 steps, so Line A is 5 cm longer.",
+   "visual": {
+    "type": "bar_model",
+    "bars": [
+     {
+      "name": "Line A",
+      "len": 14,
+      "text": "14"
+     },
+     {
+      "name": "Line B",
+      "len": 9,
+      "text": "9"
+     }
+    ],
+    "gap": {
+     "between": [
+      0,
+      1
+     ],
+     "text": "?"
+    },
+    "hw": 84,
+    "below": true
+   }
+  }
+ ],
+ "online_practice": {
+  "key": "t3l29",
+  "title": "Spot the Mistake",
+  "topic": "Check an answer another way and find the wrong step",
+  "items": [
+   {
+    "id": "c1",
+    "tier": "core",
+    "type": "number",
+    "q": "A child writes 70 − 30 = 40. Add back to check. What is 40 + 30?",
+    "hint": "Add the answer and the number you took away.",
+    "steps": [
+     "Add back: 40 and 30.",
+     "40 and 30 make 70.",
+     "We get back to 70, so the take away is right."
+    ],
+    "answer": 70,
+    "slips": [
+     {
+      "a": [
+       10
+      ],
+      "say": "10 is the gap. To check, add the answer and the number taken away."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       14,
+       16,
+       18,
+       24,
+       27,
+       32
+      ],
+      "b": [
+       11,
+       12,
+       13,
+       15,
+       23
+      ]
+     },
+     "derive": {
+      "s": "a+b"
+     },
+     "q": "A child writes {s} − {b} = {a}. Add back to check. What is {a} + {b}?",
+     "answer": "a+b",
+     "hint": "Add the answer and the number you took away.",
+     "steps": [
+      "Add back: {a} and {b}.",
+      "{a} and {b} make {ans}.",
+      "We get back to {s}, so the take away is right."
+     ]
+    }
+   },
+   {
+    "id": "c2",
+    "tier": "core",
+    "type": "choice",
+    "q": "A child writes 37 + 25 = 52. Is the answer right? Choose Yes or No.",
+    "hint": "Check by taking away: 52 take away 25.",
+    "steps": [
+     "Take away: 52 take away 25 is 27.",
+     "27 is not 37.",
+     "So 52 is wrong. The right answer is 62."
+    ],
+    "options": [
+     "Yes",
+     "No"
+    ],
+    "answer": "No",
+    "slips": [],
+    "tpl": {
+     "vars": {
+      "a": [
+       26,
+       37,
+       45,
+       48,
+       54
+      ],
+      "b": [
+       15,
+       17,
+       25,
+       27,
+       38
+      ],
+      "f": [
+       0,
+       1
+      ]
+     },
+     "derive": {
+      "w": "a+b-10*f"
+     },
+     "q": "A child writes {a} + {b} = {w}. Is the answer right? Choose Yes or No.",
+     "options": [
+      "Yes",
+      "No"
+     ],
+     "answer_index": "f",
+     "hint": "Check by taking away: {w} take away {b}.",
+     "steps": [
+      "Take away: {w} take away {b}.",
+      "Do we get {a}?",
+      "If not, the sum has a mistake."
+     ]
+    }
+   },
+   {
+    "id": "c3",
+    "tier": "core",
+    "type": "number",
+    "q": "A child forgot the ten when adding. The child wrote 39 + 24 = 53. What is the right answer?",
+    "hint": "The ones make more than 9. Do not forget the ten.",
+    "steps": [
+     "9 and 4 make 13.",
+     "13 is 1 ten and 3 ones.",
+     "39 + 24 = 63."
+    ],
+    "answer": 63,
+    "slips": [
+     {
+      "a": [
+       53
+      ],
+      "say": "53 is the answer with the ten missing. Add the ten."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       35,
+       46,
+       28,
+       39,
+       47
+      ],
+      "b": [
+       27,
+       38,
+       45,
+       16,
+       19
+      ]
+     },
+     "derive": {
+      "w": "a+b-10"
+     },
+     "q": "A child forgot the ten when adding. The child wrote {a} + {b} = {w}. What is the right answer?",
+     "answer": "a+b",
+     "hint": "The ones make more than 9. Do not forget the ten.",
+     "steps": [
+      "Add the ones. They make more than 9.",
+      "Write the ones and add the ten.",
+      "{a} + {b} = {ans}."
+     ]
+    }
+   },
+   {
+    "id": "c4",
+    "tier": "core",
+    "type": "choice",
+    "q": "A child adds 58 + 15. Step 1: 58 + 2 = 61. Step 2: 61 + 10 = 71. Step 3: 71 + 3 = 74. Which step is wrong?",
+    "hint": "Check each step on its own.",
+    "steps": [
+     "Step 1: 58 + 2 = 60, not 61. Wrong.",
+     "Step 2: 60 + 10 = 70. Step 3: 70 + 3 = 73. These steps are fine when they start from the right number.",
+     "The right answer is 73."
+    ],
+    "options": [
+     "Step 1",
+     "Step 2",
+     "Step 3"
+    ],
+    "answer": "Step 1",
+    "slips": []
+   },
+   {
+    "id": "c5",
+    "tier": "core",
+    "type": "choice",
+    "q": "A film starts at 4:30. It lasts half an hour. What time does it end?",
+    "hint": "Half an hour is 30 minutes. 30 minutes after half past is on the hour.",
+    "steps": [
+     "Half an hour is 30 minutes.",
+     "Half past 4 and 30 minutes is 5 o'clock.",
+     "It ends at 5:00."
+    ],
+    "options": [
+     "4:60",
+     "5:00",
+     "5:30"
+    ],
+    "answer": "5:00",
+    "slips": [],
+    "fig": {
+     "type": "clock",
+     "h": 4,
+     "m": 30,
+     "digital": "starts",
+     "size": 60
+    }
+   },
+   {
+    "id": "t1",
+    "tier": "stretch",
+    "type": "number",
+    "q": "Lily has 42 stickers. She has 8 more than Ben. How many stickers does Ben have?",
+    "hint": "Lily has more. So Ben has fewer. Take away.",
+    "steps": [
+     "Lily has more than Ben.",
+     "Ben has 8 fewer than Lily.",
+     "42 take away 8 is 34."
+    ],
+    "answer": 34,
+    "slips": [
+     {
+      "a": [
+       50
+      ],
+      "say": "50 adds the 8. Lily has more, so Ben has fewer."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       24,
+       31,
+       35,
+       42,
+       53
+      ],
+      "b": [
+       5,
+       6,
+       7,
+       8,
+       9
+      ]
+     },
+     "derive": {},
+     "q": "Lily has {a} stickers. She has {b} more than Ben. How many stickers does Ben have?",
+     "answer": "a-b",
+     "hint": "Lily has more. So Ben has fewer. Take away.",
+     "steps": [
+      "Lily has more than Ben.",
+      "Ben has {b} fewer than Lily.",
+      "{a} take away {b} is {ans}."
+     ]
+    },
+    "easier": "c1"
+   },
+   {
+    "id": "t2",
+    "tier": "stretch",
+    "type": "choice",
+    "q": "A child writes 48 + 41 = 189. Do not add exactly. Is 189 too small, about right or too big?",
+    "hint": "48 is near 50. 41 is near 40. Think about how big the answer must be.",
+    "steps": [
+     "48 is near 50 and 41 is near 40.",
+     "50 and 40 make 90.",
+     "189 is much more than 90, so it is too big."
+    ],
+    "options": [
+     "too small",
+     "about right",
+     "too big"
+    ],
+    "answer": "too big",
+    "slips": [],
+    "easier": "c2",
+    "tpl": {
+     "vars": {
+      "a": [
+       47,
+       48,
+       51,
+       52,
+       53
+      ],
+      "b": [
+       38,
+       41,
+       42,
+       43
+      ],
+      "f": [
+       0,
+       1,
+       2
+      ]
+     },
+     "derive": {
+      "w": "a+b+40*f-40"
+     },
+     "q": "A child writes {a} + {b} = {w}. Do not add exactly. Is {w} too small, about right or too big?",
+     "options": [
+      "too small",
+      "about right",
+      "too big"
+     ],
+     "answer_index": "f",
+     "hint": "{a} and {b} are each near a ten. Think about how big the answer must be.",
+     "steps": [
+      "Each number is near a ten.",
+      "Add the two tens.",
+      "Compare {w} with that."
+     ]
+    }
+   },
+   {
+    "id": "t3",
+    "tier": "stretch",
+    "type": "number",
+    "q": "Mei has 36 pencils. Mei has 7 fewer pencils than Aisha. How many pencils does Aisha have?",
+    "hint": "Mei has fewer. So Aisha has more. Add.",
+    "steps": [
+     "Mei has fewer than Aisha.",
+     "So Aisha has 7 more than Mei.",
+     "36 and 7 make 43."
+    ],
+    "answer": 43,
+    "slips": [
+     {
+      "a": [
+       29
+      ],
+      "say": "29 takes away the 7. Aisha has more than Mei, so add."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       24,
+       31,
+       35,
+       36,
+       42
+      ],
+      "b": [
+       5,
+       6,
+       7,
+       8,
+       9
+      ]
+     },
+     "derive": {},
+     "q": "Mei has {a} pencils. Mei has {b} fewer pencils than Aisha. How many pencils does Aisha have?",
+     "answer": "a+b",
+     "hint": "Mei has fewer. So Aisha has more. Add.",
+     "steps": [
+      "Mei has fewer than Aisha.",
+      "So Aisha has {b} more than Mei.",
+      "{a} and {b} make {ans}."
+     ]
+    },
+    "easier": "t1"
+   },
+   {
+    "id": "g1",
+    "tier": "challenge",
+    "type": "number",
+    "q": "Lily has $50. She buys a pen for $12 and a book for $9. A child says she has $38 left. How much does she really have left?",
+    "hint": "Take away both prices.",
+    "steps": [
+     "12 and 9 make 21.",
+     "50 take away 21 is 29.",
+     "Lily has $29 left. The child only took away the pen."
+    ],
+    "answer": 29,
+    "slips": [
+     {
+      "a": [
+       38
+      ],
+      "say": "38 only takes away the pen. Take away the book too."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "m": [
+       40,
+       50
+      ],
+      "a": [
+       8,
+       12,
+       14
+      ],
+      "b": [
+       7,
+       9,
+       11
+      ]
+     },
+     "derive": {
+      "w": "m-a"
+     },
+     "q": "Lily has {m|usd}. She buys a pen for {a|usd} and a book for {b|usd}. A child says she has {w|usd} left. How much does she really have left?",
+     "answer": "m-a-b",
+     "hint": "Take away both prices.",
+     "steps": [
+      "{a} and {b} make the total.",
+      "Take the total away from {m}.",
+      "Lily has {ans|usd} left."
+     ]
+    },
+    "easier": "t1"
+   },
+   {
+    "id": "g2",
+    "tier": "challenge",
+    "type": "number",
+    "q": "A child works out 63 − 29. Step 1: 63 − 30 = 33. Step 2: 33 − 1 = 32. What is the right answer?",
+    "hint": "We took away 1 too many.",
+    "steps": [
+     "29 is 1 less than 30.",
+     "We took away 1 too many, so add 1 back.",
+     "33 and 1 make 34."
+    ],
+    "answer": 34,
+    "slips": [
+     {
+      "a": [
+       32
+      ],
+      "say": "32 is the child's answer. Add 1 back to 33."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       55,
+       64,
+       72,
+       83,
+       92
+      ]
+     },
+     "derive": {},
+     "q": "A child works out {a} − 29. Step 1: {a} − 30. Step 2: take away 1 more. What is the right answer?",
+     "answer": "a-29",
+     "hint": "We took away 1 too many.",
+     "steps": [
+      "29 is 1 less than 30.",
+      "We took away 1 too many, so add 1 back.",
+      "The right answer is {ans}."
+     ]
+    },
+    "easier": "t3"
+   },
+   {
+    "id": "g3",
+    "tier": "challenge",
+    "type": "selfcheck",
+    "q": "Make your own spot-the-mistake puzzle. Write a sum with one mistake for a grown-up. Check it by adding back or taking away.",
+    "hint": "Work out the right answer first. Then change one thing.",
+    "steps": [
+     "Write the right sum.",
+     "Change one thing.",
+     "Ask a grown-up to find the mistake."
+    ],
+    "easier": "c1"
+   }
+  ]
+ },
+ "parent": {
+  "summary": "We learnt that a neat answer can still be wrong. Your child checked sums a second way, sorted right and wrong sum cards, found the one wrong step, and spotted a wrong time and a wrong total. Some Think harder and Go further questions go past the school Primary 1 syllabus on purpose; Start here stays within it.",
+  "words": [
+   "check: do it a different way",
+   "add back: the answer plus the number taken away",
+   "wrong step: the one step that went wrong",
+   "about: near, not exact",
+   "a clue: how far the wrong answer is from the right one"
+  ],
+  "try_home": [
+   "Write three take-away sums. Ask your child to check each by adding back. Make one wrong on purpose.",
+   "Find the wrong step: 45 + 38. Step 1: 45 + 30 = 75. Step 2: 75 + 8 = 85. (Step 2 is wrong: it is 83.)",
+   "Say a time that cannot be right: half an hour after half past 4 is 4:60. Can your child say the right time?"
+  ],
+  "ask": [
+   "How can you check it another way?",
+   "Which step is wrong?",
+   "How far is it from the right answer?"
+  ],
+  "when_stuck": "Let your child use the cards, a number line or a clock and wait 10 seconds before helping. Asking 'What do you get if you add it back?' works better than giving the answer. Please say 'the sum has a mistake', not 'you made a mistake'. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
+  "next": "Next lesson: Tool Detectives, the last lesson of Term 3. It also holds Mi's Challenge Quest, a game with Mi. Online practice: your tutor will share the link. The recording link is private: please do not share it.",
+  "quote": "A wrong answer leaves a clue. Check it a different way.",
+  "report_line": "Your child is learning to check an answer a second way and to find the one step that went wrong. This week: right and wrong sums, a wrong time and a wrong total.",
+  "term_line": "Your child is learning to give a reason, and to read time and money in real life.",
+  "next_materials": [
+   "Your Term 3 book: the tool-card page torn out, with its 7 tool cards cut out by a grown-up",
+   "Mi's Challenge Quest Log (4 pages, in your book), closed in an envelope",
+   "A quest partner: a grown-up, brother or sister",
+   "Pencil, rubber and paper"
+  ]
+ },
+ "safeguarding": [
+  "The mistake cards are paper or card. Small pieces stay on the table: nothing goes in the mouth or ears. No matches or toothpicks. Nobody cuts during the lesson; a grown-up cut the cards beforehand.",
+  "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
+  "Nobody holds paper or a card up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on a count of three, or show fingers or a thumb for a choice. There is no private chat.",
+  "Wrong working belongs to 'a child in another class', never to a child in the group, and never to a name. The tutor says 'the sum has a mistake', not 'you made a mistake'. Never read out a child's name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is unmuted. Children may mute and keep their cameras off. A child's page is never shown.",
+  "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. Arm swings are gentle; a child may stay seated and swing one arm.",
+  "A child who is still stuck ticks 'I am still stuck' on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for 90 days after the program ends. The tutor then helps in the open session next lesson. No private messages to children, and no personal phones.",
+  "The look-back is never collected in front of the group or read out. A pass is always allowed."
+ ],
+ "tutor_prep": [
+  "Solve every workbook question yourself first. Check the answers: S1 41, Yes; S2 60, No, 27; S3 step 2, 64; S4 No, 3:30; S5 No, $12; S6 True, False, True, False; T1 step 2, 45; T2 48, 58, 85; T3 No, 34; T4 B, 8:00; G1 about 90, No, 91; G2 Tens, 85; G3 any sum with one mistake; I1 no (44), forgets the ten.",
+  "Tell parents a week before: the mistake-card page (page 6 of the book) needs 8 cards cut out by a grown-up, and the mat is not cut. The next lesson, Tool Detectives, holds Mi's Challenge Quest: the Quest Log stays closed in its envelope, each child needs a quest partner, and a grown-up tears out the tool-card page and cuts out its 7 tool cards.",
+  "Have the slides open. Have your own mistake cards to show on camera if you wish. Practise the arm-swing break.",
+  "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded. Greet each child by first name as they arrive, then start the recording, then say the notice; avoid first names while it runs.",
+  "Be plain with families: checking by adding back, finding a wrong step and wrong times and totals in stories are Primary 1 work with help; telling that an answer cannot be right by thinking about how big it must be (estimating, with the words about and near, never round) and spotting the wrong digit in a column sum are beyond Primary 1 on purpose. Do not call the lesson MOE-aligned.",
+  "Wording rule: wrong working belongs to 'a child' or 'a child in another class', never to a cast name and never to a child in the group. Say 'the sum has a mistake'. Slides keep the answers off the screen while you ask: read every question with its numbers aloud, and the three options of E2."
+ ],
+ "spare_time": {
+  "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
+  "rules": [
+   "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
+   "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+   "Never teach anything the next lesson needs. If the class is ahead, slow down: ask 'How do you know?' and let children explain, rather than rushing on."
+  ],
+  "menu": [
+   {
+    "id": "M1",
+    "title": "Does adding back always work?",
+    "minutes": 4,
+    "tutor": "A child says: if a take away adds back to the start number, the answer is right. If it does not, there is a mistake. Is that always true? Test it with 30 take away 12 equals 18, then with 30 take away 12 equals 20.",
+    "rec": "Recording: pause. Test adding back on 30 take away 12 equals 18, then on 30 take away 12 equals 20.",
+    "answer": "Yes. 18 + 12 = 30, so 18 is right. 20 + 12 = 32, not 30, so 20 is wrong. Adding back to the start number is a check that always works for a take away."
+   },
+   {
+    "id": "M2",
+    "title": "Make a puzzle for your grown-up",
+    "minutes": 4,
+    "tutor": "Write a sum with one mistake. Give it to your grown-up. They check it a different way and find the mistake. Then check the right answer together.",
+    "rec": "Recording: pause. Write a sum with one mistake and ask a grown-up to check it a different way.",
+    "answer": "No single answer. Check the right answer by adding back or taking away."
+   },
+   {
+    "id": "M3",
+    "title": "Teach it back",
+    "minutes": 3,
+    "tutor": "Pretend your grown-up or a toy has never found a wrong step. Show how 45 + 28 = 63 is 10 away from 73, and what that tells us.",
+    "rec": "Recording: pause. Show a grown-up how a wrong answer that is 10 away tells us a ten was lost.",
+    "answer": "63 is 10 less than 73, so a ten was lost: 5 + 8 = 13 and the ten was forgotten. The size of the mistake is a clue to what went wrong."
+   }
+  ]
+ },
+ "workbook": {
+  "header": "Checking: spot the mistake",
+  "hint_p1": "Add back to check a take away. If you get the number you started with, the answer is right.",
+  "hint_p2": "Check a different way. A clock, a number line or tens and ones can help.",
+  "hint_p3": "Find the wrong step, fix it, and then check again. Choose any question, in any order.",
+  "hint_p4": "Think about how big the answer must be. Choose any question. You do not have to finish them all.",
+  "choice_after": 3,
+  "inv_intro": "",
+  "inv_first_label": "First:",
+  "inv_then_label": "Next:",
+  "home_hint": "Use your mistake cards, a number line or a clock. Small pieces stay on the table, away from little brothers and sisters.",
+  "kits": [
+   {
+    "type": "mistake_cards",
+    "cards": [
+     "45 + 28 = 63",
+     "70 − 30 = 40",
+     "84 − 6 = 82",
+     "18 + 4 = 22",
+     "53 − 20 = 73",
+     "62 − 8 = 54",
+     "17 + 5 = 21",
+     "38 + 24 = 62"
+    ],
+    "title": "Kit page: mistake cards",
+    "intro": "A grown-up cuts out the 8 cards before the lesson. Some sums are right and some have one mistake. The RIGHT and WRONG mat is not cut. No cards? Write each sum on a small piece of paper."
+   }
+  ]
+ },
+ "beyond": {
+  "name": "Does It Make Sense?",
+  "where": [
+   "G1"
+  ],
+  "text": "Telling that an answer cannot be right by thinking about how big it must be (52 + 39 is about 50 + 40, so 191 is far too big; the right answer is 91), using the words about and near, never round. Estimating an answer is a Primary 4 outcome (the rounding and estimating strand), so it is beyond the school Primary 1 syllabus on purpose. The other Go further items (the wrong digit in a column sum and writing a sum with one mistake) are checking and explaining tasks. Named puzzle: Does It Make Sense?",
+  "parent": "Telling that an answer cannot be right by thinking how big it must be (an estimate) and spotting a wrong digit in a column sum go past the Primary 1 syllabus on purpose. Please say about and near, not rounding."
+ }
+}

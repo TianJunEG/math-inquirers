@@ -1,0 +1,649 @@
+{
+ "lessons": {
+  "1": {
+   "parts": [
+    {
+     "title": "Opening",
+     "start": 0,
+     "end": 4
+    },
+    {
+     "title": "Warm-up",
+     "start": 4,
+     "end": 10
+    },
+    {
+     "title": "Sneak-peek",
+     "start": 10,
+     "end": 14
+    },
+    {
+     "title": "Explore",
+     "start": 14,
+     "end": 28
+    },
+    {
+     "title": "Mini-lesson",
+     "start": 28,
+     "end": 38
+    },
+    {
+     "title": "Brain break",
+     "start": 38,
+     "end": 42
+    },
+    {
+     "title": "Worksheet",
+     "start": 42,
+     "end": 72
+    },
+    {
+     "title": "Talk time",
+     "start": 72,
+     "end": 79
+    },
+    {
+     "title": "Exit ticket",
+     "start": 79,
+     "end": 85
+    },
+    {
+     "title": "Look-back",
+     "start": 85,
+     "end": 88
+    },
+    {
+     "title": "Flex time",
+     "start": 88,
+     "end": 90
+    }
+   ],
+   "optional_slides": [
+    "l1-stretch",
+    "l1-challenge",
+    "l1-chwalk"
+   ]
+  },
+  "2": {
+   "parts": [
+    {
+     "title": "Opening",
+     "start": 0,
+     "end": 2
+    },
+    {
+     "title": "Warm-up",
+     "start": 2,
+     "end": 8
+    },
+    {
+     "title": "Sneak-peek",
+     "start": 8,
+     "end": 12
+    },
+    {
+     "title": "Explore",
+     "start": 12,
+     "end": 26
+    },
+    {
+     "title": "Mini-lesson",
+     "start": 26,
+     "end": 36
+    },
+    {
+     "title": "Brain break",
+     "start": 36,
+     "end": 40
+    },
+    {
+     "title": "Worksheet",
+     "start": 40,
+     "end": 72
+    },
+    {
+     "title": "Talk time",
+     "start": 72,
+     "end": 79
+    },
+    {
+     "title": "Exit ticket",
+     "start": 79,
+     "end": 85
+    },
+    {
+     "title": "Look-back",
+     "start": 85,
+     "end": 88
+    },
+    {
+     "title": "Flex time",
+     "start": 88,
+     "end": 90
+    }
+   ],
+   "optional_slides": [
+    "l2-stretch",
+    "l2-challenge",
+    "l2-chwalk"
+   ]
+  },
+  "3": {
+   "parts": [
+    {
+     "title": "Opening",
+     "start": 0,
+     "end": 2
+    },
+    {
+     "title": "Warm-up",
+     "start": 2,
+     "end": 8
+    },
+    {
+     "title": "Sneak-peek",
+     "start": 8,
+     "end": 12
+    },
+    {
+     "title": "Explore",
+     "start": 12,
+     "end": 26
+    },
+    {
+     "title": "Mini-lesson",
+     "start": 26,
+     "end": 37
+    },
+    {
+     "title": "Brain break",
+     "start": 37,
+     "end": 41
+    },
+    {
+     "title": "Worksheet",
+     "start": 41,
+     "end": 72
+    },
+    {
+     "title": "Talk time",
+     "start": 72,
+     "end": 79
+    },
+    {
+     "title": "Exit ticket",
+     "start": 79,
+     "end": 85
+    },
+    {
+     "title": "Look-back",
+     "start": 85,
+     "end": 88
+    },
+    {
+     "title": "Flex time",
+     "start": 88,
+     "end": 90
+    }
+   ],
+   "optional_slides": [
+    "l3-stretch",
+    "l3-challenge",
+    "l3-chwalk"
+   ]
+  },
+  "4": {
+   "parts": [
+    {
+     "title": "Opening",
+     "start": 0,
+     "end": 2
+    },
+    {
+     "title": "Warm-up",
+     "start": 2,
+     "end": 8
+    },
+    {
+     "title": "Sneak-peek",
+     "start": 8,
+     "end": 12
+    },
+    {
+     "title": "Explore",
+     "start": 12,
+     "end": 26
+    },
+    {
+     "title": "Mini-lesson",
+     "start": 26,
+     "end": 37
+    },
+    {
+     "title": "Brain break",
+     "start": 37,
+     "end": 41
+    },
+    {
+     "title": "Worksheet",
+     "start": 41,
+     "end": 72
+    },
+    {
+     "title": "Talk time",
+     "start": 72,
+     "end": 79
+    },
+    {
+     "title": "Exit ticket",
+     "start": 79,
+     "end": 85
+    },
+    {
+     "title": "Look-back",
+     "start": 85,
+     "end": 88
+    },
+    {
+     "title": "Flex time",
+     "start": 88,
+     "end": 90
+    }
+   ],
+   "optional_slides": [
+    "l4-stretch",
+    "l4-challenge",
+    "l4-chwalk"
+   ]
+  },
+  "5": {
+   "parts": [
+    {
+     "title": "Opening",
+     "start": 0,
+     "end": 2
+    },
+    {
+     "title": "Warm-up",
+     "start": 2,
+     "end": 8
+    },
+    {
+     "title": "Sneak-peek",
+     "start": 8,
+     "end": 12
+    },
+    {
+     "title": "Explore",
+     "start": 12,
+     "end": 26
+    },
+    {
+     "title": "Mini-lesson",
+     "start": 26,
+     "end": 36
+    },
+    {
+     "title": "Brain break",
+     "start": 36,
+     "end": 40
+    },
+    {
+     "title": "Worksheet",
+     "start": 40,
+     "end": 72
+    },
+    {
+     "title": "Talk time",
+     "start": 72,
+     "end": 79
+    },
+    {
+     "title": "Exit ticket",
+     "start": 79,
+     "end": 85
+    },
+    {
+     "title": "Look-back",
+     "start": 85,
+     "end": 88
+    },
+    {
+     "title": "Flex time",
+     "start": 88,
+     "end": 90
+    }
+   ],
+   "optional_slides": [
+    "l5-stretch",
+    "l5-challenge",
+    "l5-chwalk"
+   ]
+  },
+  "6": {
+   "parts": [
+    {
+     "title": "Opening",
+     "start": 0,
+     "end": 2
+    },
+    {
+     "title": "Warm-up",
+     "start": 2,
+     "end": 8
+    },
+    {
+     "title": "Sneak-peek",
+     "start": 8,
+     "end": 12
+    },
+    {
+     "title": "Explore",
+     "start": 12,
+     "end": 26
+    },
+    {
+     "title": "Mini-lesson",
+     "start": 26,
+     "end": 36
+    },
+    {
+     "title": "Brain break",
+     "start": 36,
+     "end": 40
+    },
+    {
+     "title": "Worksheet",
+     "start": 40,
+     "end": 72
+    },
+    {
+     "title": "Talk time",
+     "start": 72,
+     "end": 79
+    },
+    {
+     "title": "Exit ticket",
+     "start": 79,
+     "end": 85
+    },
+    {
+     "title": "Look-back",
+     "start": 85,
+     "end": 88
+    },
+    {
+     "title": "Flex time",
+     "start": 88,
+     "end": 90
+    }
+   ],
+   "optional_slides": [
+    "l6-teachnotes",
+    "l6-trynotes",
+    "l6-stretch",
+    "l6-teachexact",
+    "l6-teachswap",
+    "l6-challenge",
+    "l6-chwalk"
+   ]
+  },
+  "7": {
+   "parts": [
+    {
+     "title": "Opening",
+     "start": 0,
+     "end": 2
+    },
+    {
+     "title": "Warm-up",
+     "start": 2,
+     "end": 8
+    },
+    {
+     "title": "Sneak-peek",
+     "start": 8,
+     "end": 12
+    },
+    {
+     "title": "Explore",
+     "start": 12,
+     "end": 28
+    },
+    {
+     "title": "Mini-lesson",
+     "start": 28,
+     "end": 36
+    },
+    {
+     "title": "Brain break",
+     "start": 36,
+     "end": 40
+    },
+    {
+     "title": "Worksheet",
+     "start": 40,
+     "end": 72
+    },
+    {
+     "title": "Talk time",
+     "start": 72,
+     "end": 79
+    },
+    {
+     "title": "Exit ticket",
+     "start": 79,
+     "end": 85
+    },
+    {
+     "title": "Look-back",
+     "start": 85,
+     "end": 88
+    },
+    {
+     "title": "Flex time",
+     "start": 88,
+     "end": 90
+    }
+   ],
+   "optional_slides": [
+    "l7-stretch",
+    "l7-we2",
+    "l7-try2",
+    "l7-we3",
+    "l7-challenge",
+    "l7-chwalk"
+   ]
+  },
+  "8": {
+   "parts": [
+    {
+     "title": "Opening",
+     "start": 0,
+     "end": 2
+    },
+    {
+     "title": "Warm-up",
+     "start": 2,
+     "end": 8
+    },
+    {
+     "title": "Sneak-peek",
+     "start": 8,
+     "end": 12
+    },
+    {
+     "title": "Explore",
+     "start": 12,
+     "end": 26
+    },
+    {
+     "title": "Mini-lesson",
+     "start": 26,
+     "end": 36
+    },
+    {
+     "title": "Brain break",
+     "start": 36,
+     "end": 40
+    },
+    {
+     "title": "Worksheet",
+     "start": 40,
+     "end": 72
+    },
+    {
+     "title": "Talk time",
+     "start": 72,
+     "end": 79
+    },
+    {
+     "title": "Exit ticket",
+     "start": 79,
+     "end": 85
+    },
+    {
+     "title": "Look-back",
+     "start": 85,
+     "end": 88
+    },
+    {
+     "title": "Flex time",
+     "start": 88,
+     "end": 90
+    }
+   ],
+   "optional_slides": [
+    "l8-stretch",
+    "l8-challenge",
+    "l8-chwalk"
+   ]
+  },
+  "9": {
+   "parts": [
+    {
+     "title": "Opening",
+     "start": 0,
+     "end": 2
+    },
+    {
+     "title": "Warm-up",
+     "start": 2,
+     "end": 8
+    },
+    {
+     "title": "Sneak-peek",
+     "start": 8,
+     "end": 12
+    },
+    {
+     "title": "Explore",
+     "start": 12,
+     "end": 27
+    },
+    {
+     "title": "Mini-lesson",
+     "start": 27,
+     "end": 37
+    },
+    {
+     "title": "Brain break",
+     "start": 37,
+     "end": 41
+    },
+    {
+     "title": "Worksheet",
+     "start": 41,
+     "end": 72
+    },
+    {
+     "title": "Talk time",
+     "start": 72,
+     "end": 79
+    },
+    {
+     "title": "Exit ticket",
+     "start": 79,
+     "end": 85
+    },
+    {
+     "title": "Look-back",
+     "start": 85,
+     "end": 88
+    },
+    {
+     "title": "Flex time",
+     "start": 88,
+     "end": 90
+    }
+   ],
+   "optional_slides": [
+    "l9-stretch",
+    "l9-challenge",
+    "l9-chwalk"
+   ]
+  },
+  "10": {
+   "parts": [
+    {
+     "title": "Opening",
+     "start": 0,
+     "end": 2
+    },
+    {
+     "title": "Warm-up",
+     "start": 2,
+     "end": 6
+    },
+    {
+     "title": "Sneak-peek",
+     "start": 6,
+     "end": 10
+    },
+    {
+     "title": "Explore",
+     "start": 10,
+     "end": 28
+    },
+    {
+     "title": "Mini-lesson",
+     "start": 28,
+     "end": 37
+    },
+    {
+     "title": "Brain break",
+     "start": 37,
+     "end": 41
+    },
+    {
+     "title": "Worksheet",
+     "start": 41,
+     "end": 71
+    },
+    {
+     "title": "Talk time",
+     "start": 71,
+     "end": 79
+    },
+    {
+     "title": "Exit ticket",
+     "start": 79,
+     "end": 87
+    },
+    {
+     "title": "Look-back",
+     "start": 87,
+     "end": 90
+    }
+   ],
+   "optional_slides": [
+    "l10-teachgraph",
+    "l10-teachtri",
+    "l10-teachlen",
+    "l10-stretch",
+    "l10-challenge",
+    "l10-chwalk"
+   ]
+  }
+ }
+}

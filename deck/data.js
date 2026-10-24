@@ -122,7 +122,7 @@ module.exports = {
  mini1: { head: 'Compare lengths', body: ['A pencil is 6 cubes long. A book is 9 cubes long.', 'How many cubes longer is the book?', 'Draw two bars to help.'], ans: '3 cubes longer (9 − 6).' },
  mini2: { head: 'Bigger unit, smaller count', body: ['1 clip is as long as 2 erasers.', 'A pen is 4 clips long. How many erasers long is the pen?', 'Why is the number of erasers bigger?'], ans: '8 erasers. Each eraser is shorter, so you need more of them.' },
  keyHead: 'Key idea: equal units', keyBig: 'Use equal units, no gaps, no overlaps, and start at zero.', keySmall: 'A bigger unit gives a smaller number.',
- brk: 'Giant steps. Take your biggest step and your smallest step across the room. Count each: which needs more steps?',
+ brk: 'Giant steps, in place. Take 5 giant steps on the spot, then 5 tiny steps. Which would take you further across a room? Why?',
  ws1: 'Page 1, in pairs: Q1 compare lengths, Q2 estimate and measure.',
  ws2: 'Page 2, on your own: Q3 hand spans, Q4 clips and erasers, Q5 cube puzzles, Q6 measure with a cm ruler.'
 },
@@ -130,7 +130,7 @@ module.exports = {
  today: 'Use everything we have learned in new puzzles and explain our thinking.',
  warmGame: 'Mental maths relay. The tutor asks a quick question from each lesson and passes it round the group.',
  warmQs: [['Count in 3s: 3, 6, 9, __', '12'], ['10 = 4 + __', '6'], ['Red 4, blue 6: how many more are blue?', '2'], ['I think of a number, add 4, get 9. What is it?', '5'], ['Which coins make 15¢ with two coins?', '10¢ + 5¢']],
- expSetup: ['Four puzzle cards: coins, patterns, logic, measuring. Pairs get ONE card for 10 minutes.', 'Read the card aloud and test your idea with objects.', 'Then swap cards with another pair for a second 4-minute round.', 'Write your answer and why you know. Online: one card per breakout room; each pair reports in 30 seconds.'],
+ expSetup: ['Four puzzle cards: coins, patterns, logic, measuring. Pairs get ONE card for 6 minutes.', 'Read the card aloud and test your idea with objects.', 'Then swap cards with another pair for a second 4-minute round.', 'Write your answer and why you know. Online: one card per breakout room; each pair reports in 30 seconds.'],
  expPic: 'four puzzle cards (coins, patterns, logic, measuring) with materials: play coins, a pattern strip, a clue card and linking cubes.',
  expAsk: [['What did you do first with each card?', 'Open answers.'], ['Which puzzle was hardest? Why?', 'Open answers.'], ['What helped you when you were stuck?', 'An inquirer rule: notice, test, check, explain.']],
  mini1: { head: 'Cards 1 and 2: coins and patterns', body: ['Coins: make 45¢ using exactly 3 coins from 5¢, 10¢, 20¢ and 50¢.', 'Pattern: 5, 8, 11, 14 … What is the 10th number?'], ans: 'Coins: 20¢ + 20¢ + 5¢. Pattern: add 3. Count on: 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, so the 10th is 32.' },

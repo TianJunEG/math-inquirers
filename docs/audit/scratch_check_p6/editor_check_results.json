@@ -1,0 +1,1894 @@
+{
+ "static": {
+  "L3_Below_Zero_ANSWER.sb3": {
+   "opcodes": {
+    "event_whenkeypressed": 1,
+    "motion_gotoxy": 1,
+    "motion_changexby": 2,
+    "motion_xposition": 1,
+    "looks_say": 1,
+    "data_changevariableby": 1,
+    "looks_sayforsecs": 1,
+    "event_whenflagclicked": 1,
+    "data_setvariableto": 1,
+    "control_repeat": 1
+   },
+   "scripts": {
+    "Stage": {
+     "blocks": 0,
+     "top": 0
+    },
+    "Friend": {
+     "blocks": 11,
+     "top": 2
+    }
+   },
+   "problems": [],
+   "sprites": [
+    {
+     "name": "Friend",
+     "x": 0,
+     "y": 0,
+     "dir": 90,
+     "size": 100,
+     "visible": true,
+     "costumes": 1,
+     "inStage": true
+    }
+   ],
+   "undrawn": 0,
+   "topScripts": 2,
+   "overlaps": 0,
+   "lists": {},
+   "extensions": []
+  },
+  "L2_Prime_Checker_ANSWER.sb3": {
+   "opcodes": {
+    "operator_mod": 1,
+    "operator_equals": 2,
+    "data_changevariableby": 2,
+    "control_if": 1,
+    "operator_join": 2,
+    "looks_say": 2,
+    "control_if_else": 1,
+    "event_whenflagclicked": 1,
+    "data_setvariableto": 3,
+    "control_repeat": 1
+   },
+   "scripts": {
+    "Stage": {
+     "blocks": 0,
+     "top": 0
+    },
+    "Friend": {
+     "blocks": 16,
+     "top": 1
+    }
+   },
+   "problems": [],
+   "sprites": [
+    {
+     "name": "Friend",
+     "x": 0,
+     "y": 0,
+     "dir": 90,
+     "size": 100,
+     "visible": true,
+     "costumes": 1,
+     "inStage": true
+    }
+   ],
+   "undrawn": 0,
+   "topScripts": 1,
+   "overlaps": 0,
+   "lists": {},
+   "extensions": []
+  },
+  "L2_Prime_Checker.sb3": {
+   "opcodes": {
+    "looks_say": 1,
+    "event_whenflagclicked": 1,
+    "data_setvariableto": 3,
+    "control_repeat": 1
+   },
+   "scripts": {
+    "Stage": {
+     "blocks": 0,
+     "top": 0
+    },
+    "Friend": {
+     "blocks": 6,
+     "top": 1
+    }
+   },
+   "problems": [],
+   "sprites": [
+    {
+     "name": "Friend",
+     "x": 0,
+     "y": 0,
+     "dir": 90,
+     "size": 100,
+     "visible": true,
+     "costumes": 1,
+     "inStage": true
+    }
+   ],
+   "undrawn": 0,
+   "topScripts": 1,
+   "overlaps": 0,
+   "lists": {},
+   "extensions": []
+  },
+  "L1_Sequence_Tester.sb3": {
+   "opcodes": {
+    "data_setvariableto": 1,
+    "control_repeat": 1,
+    "looks_say": 1,
+    "event_whenflagclicked": 1
+   },
+   "scripts": {
+    "Stage": {
+     "blocks": 0,
+     "top": 0
+    },
+    "Friend": {
+     "blocks": 4,
+     "top": 1
+    }
+   },
+   "problems": [],
+   "sprites": [
+    {
+     "name": "Friend",
+     "x": 0,
+     "y": 0,
+     "dir": 90,
+     "size": 100,
+     "visible": true,
+     "costumes": 1,
+     "inStage": true
+    }
+   ],
+   "undrawn": 0,
+   "topScripts": 1,
+   "overlaps": 0,
+   "lists": {},
+   "extensions": []
+  },
+  "L1_Sequence_Tester_ANSWER.sb3": {
+   "opcodes": {
+    "data_setvariableto": 3,
+    "data_changevariableby": 3,
+    "control_repeat": 1,
+    "looks_say": 2,
+    "event_whenflagclicked": 1,
+    "event_whenkeypressed": 1,
+    "operator_gt": 1,
+    "control_repeat_until": 1,
+    "operator_join": 3
+   },
+   "scripts": {
+    "Stage": {
+     "blocks": 0,
+     "top": 0
+    },
+    "Friend": {
+     "blocks": 16,
+     "top": 2
+    }
+   },
+   "problems": [],
+   "sprites": [
+    {
+     "name": "Friend",
+     "x": 0,
+     "y": 0,
+     "dir": 90,
+     "size": 100,
+     "visible": true,
+     "costumes": 1,
+     "inStage": true
+    }
+   ],
+   "undrawn": 0,
+   "topScripts": 2,
+   "overlaps": 0,
+   "lists": {},
+   "extensions": []
+  },
+  "L3_Below_Zero.sb3": {
+   "opcodes": {
+    "event_whenkeypressed": 1,
+    "motion_gotoxy": 1,
+    "motion_xposition": 1,
+    "looks_say": 1,
+    "event_whenflagclicked": 1,
+    "data_setvariableto": 1,
+    "control_repeat": 1
+   },
+   "scripts": {
+    "Stage": {
+     "blocks": 0,
+     "top": 0
+    },
+    "Friend": {
+     "blocks": 7,
+     "top": 2
+    }
+   },
+   "problems": [],
+   "sprites": [
+    {
+     "name": "Friend",
+     "x": 0,
+     "y": 0,
+     "dir": 90,
+     "size": 100,
+     "visible": true,
+     "costumes": 1,
+     "inStage": true
+    }
+   ],
+   "undrawn": 0,
+   "topScripts": 2,
+   "overlaps": 0,
+   "lists": {},
+   "extensions": []
+  },
+  "L4_Function_Machine.sb3": {
+   "opcodes": {
+    "sensing_answer": 1,
+    "event_whenflagclicked": 1,
+    "sensing_askandwait": 1,
+    "data_setvariableto": 1,
+    "looks_say": 1
+   },
+   "scripts": {
+    "Stage": {
+     "blocks": 0,
+     "top": 0
+    },
+    "Friend": {
+     "blocks": 5,
+     "top": 1
+    }
+   },
+   "problems": [],
+   "sprites": [
+    {
+     "name": "Friend",
+     "x": 0,
+     "y": 0,
+     "dir": 90,
+     "size": 100,
+     "visible": true,
+     "costumes": 1,
+     "inStage": true
+    }
+   ],
+   "undrawn": 0,
+   "topScripts": 1,
+   "overlaps": 0,
+   "lists": {},
+   "extensions": []
+  },
+  "L4_Function_Machine_ANSWER.sb3": {
+   "opcodes": {
+    "sensing_answer": 1,
+    "operator_multiply": 3,
+    "operator_add": 2,
+    "event_whenflagclicked": 1,
+    "sensing_askandwait": 1,
+    "data_setvariableto": 3,
+    "looks_say": 3,
+    "event_whenkeypressed": 2,
+    "operator_subtract": 1,
+    "operator_equals": 2,
+    "data_changevariableby": 2,
+    "control_repeat_until": 2
+   },
+   "scripts": {
+    "Stage": {
+     "blocks": 0,
+     "top": 0
+    },
+    "Friend": {
+     "blocks": 23,
+     "top": 3
+    }
+   },
+   "problems": [],
+   "sprites": [
+    {
+     "name": "Friend",
+     "x": 0,
+     "y": 0,
+     "dir": 90,
+     "size": 100,
+     "visible": true,
+     "costumes": 1,
+     "inStage": true
+    }
+   ],
+   "undrawn": 0,
+   "topScripts": 3,
+   "overlaps": 0,
+   "lists": {},
+   "extensions": []
+  },
+  "L5_Every_Order.sb3": {
+   "opcodes": {
+    "event_whenflagclicked": 1,
+    "data_setvariableto": 1,
+    "looks_sayforsecs": 1,
+    "data_changevariableby": 1,
+    "control_repeat": 1
+   },
+   "scripts": {
+    "Stage": {
+     "blocks": 0,
+     "top": 0
+    },
+    "Friend": {
+     "blocks": 5,
+     "top": 1
+    }
+   },
+   "problems": [],
+   "sprites": [
+    {
+     "name": "Friend",
+     "x": 0,
+     "y": 0,
+     "dir": 90,
+     "size": 100,
+     "visible": true,
+     "costumes": 1,
+     "inStage": true
+    }
+   ],
+   "undrawn": 0,
+   "topScripts": 1,
+   "overlaps": 0,
+   "lists": {},
+   "extensions": []
+  },
+  "L5_Every_Order_ANSWER.sb3": {
+   "opcodes": {
+    "event_whenflagclicked": 1,
+    "data_setvariableto": 2,
+    "operator_join": 1,
+    "looks_sayforsecs": 1,
+    "data_changevariableby": 2,
+    "control_repeat": 2
+   },
+   "scripts": {
+    "Stage": {
+     "blocks": 0,
+     "top": 0
+    },
+    "Friend": {
+     "blocks": 9,
+     "top": 1
+    }
+   },
+   "problems": [],
+   "sprites": [
+    {
+     "name": "Friend",
+     "x": 0,
+     "y": 0,
+     "dir": 90,
+     "size": 100,
+     "visible": true,
+     "costumes": 1,
+     "inStage": true
+    }
+   ],
+   "undrawn": 0,
+   "topScripts": 1,
+   "overlaps": 0,
+   "lists": {},
+   "extensions": []
+  },
+  "L6_Chance_Lab.sb3": {
+   "opcodes": {
+    "event_whenflagclicked": 1,
+    "data_setvariableto": 3,
+    "operator_random": 3,
+    "operator_equals": 1,
+    "data_changevariableby": 1,
+    "control_if": 1,
+    "control_repeat": 1,
+    "looks_say": 2,
+    "event_whenkeypressed": 1,
+    "operator_add": 1
+   },
+   "scripts": {
+    "Stage": {
+     "blocks": 0,
+     "top": 0
+    },
+    "Friend": {
+     "blocks": 15,
+     "top": 2
+    }
+   },
+   "problems": [],
+   "sprites": [
+    {
+     "name": "Friend",
+     "x": 0,
+     "y": 0,
+     "dir": 90,
+     "size": 100,
+     "visible": true,
+     "costumes": 1,
+     "inStage": true
+    }
+   ],
+   "undrawn": 0,
+   "topScripts": 2,
+   "overlaps": 0,
+   "lists": {},
+   "extensions": []
+  },
+  "L6_Chance_Lab_ANSWER.sb3": {
+   "opcodes": {
+    "event_whenflagclicked": 1,
+    "data_setvariableto": 6,
+    "operator_random": 5,
+    "operator_equals": 2,
+    "data_changevariableby": 2,
+    "control_if": 2,
+    "control_repeat": 2,
+    "looks_say": 3,
+    "event_whenkeypressed": 2,
+    "operator_add": 1
+   },
+   "scripts": {
+    "Stage": {
+     "blocks": 0,
+     "top": 0
+    },
+    "Friend": {
+     "blocks": 26,
+     "top": 3
+    }
+   },
+   "problems": [],
+   "sprites": [
+    {
+     "name": "Friend",
+     "x": 0,
+     "y": 0,
+     "dir": 90,
+     "size": 100,
+     "visible": true,
+     "costumes": 1,
+     "inStage": true
+    }
+   ],
+   "undrawn": 0,
+   "topScripts": 3,
+   "overlaps": 0,
+   "lists": {},
+   "extensions": []
+  },
+  "L7_Turtle_Start_ANSWER.sb3": {
+   "opcodes": {
+    "event_whenflagclicked": 1,
+    "pen_clear": 5,
+    "motion_gotoxy": 5,
+    "motion_pointindirection": 5,
+    "pen_penDown": 5,
+    "motion_movesteps": 5,
+    "motion_turnright": 5,
+    "control_repeat": 5,
+    "event_whenkeypressed": 4
+   },
+   "scripts": {
+    "Stage": {
+     "blocks": 0,
+     "top": 0
+    },
+    "Turtle": {
+     "blocks": 40,
+     "top": 5
+    }
+   },
+   "problems": [],
+   "sprites": [
+    {
+     "name": "Turtle",
+     "x": -50,
+     "y": 100,
+     "dir": 90,
+     "size": 100,
+     "visible": true,
+     "costumes": 1,
+     "inStage": true
+    }
+   ],
+   "undrawn": 0,
+   "topScripts": 5,
+   "overlaps": 0,
+   "lists": {},
+   "extensions": [
+    "pen"
+   ]
+  },
+  "L7_Turtle_Start.sb3": {
+   "opcodes": {
+    "event_whenflagclicked": 1,
+    "pen_clear": 1,
+    "motion_gotoxy": 1,
+    "motion_pointindirection": 1,
+    "pen_penDown": 1
+   },
+   "scripts": {
+    "Stage": {
+     "blocks": 0,
+     "top": 0
+    },
+    "Turtle": {
+     "blocks": 5,
+     "top": 1
+    }
+   },
+   "problems": [],
+   "sprites": [
+    {
+     "name": "Turtle",
+     "x": -50,
+     "y": 100,
+     "dir": 90,
+     "size": 100,
+     "visible": true,
+     "costumes": 1,
+     "inStage": true
+    }
+   ],
+   "undrawn": 0,
+   "topScripts": 1,
+   "overlaps": 0,
+   "lists": {},
+   "extensions": [
+    "pen"
+   ]
+  },
+  "L8_Code_Machine_ANSWER.sb3": {
+   "opcodes": {
+    "sensing_answer": 5,
+    "operator_letter_of": 6,
+    "data_itemnumoflist": 4,
+    "operator_subtract": 3,
+    "data_setvariableto": 15,
+    "operator_add": 4,
+    "operator_mod": 2,
+    "data_itemoflist": 2,
+    "operator_join": 7,
+    "operator_length": 2,
+    "operator_gt": 2,
+    "control_if_else": 2,
+    "data_changevariableby": 3,
+    "control_repeat": 3,
+    "event_whenflagclicked": 1,
+    "sensing_askandwait": 2,
+    "looks_say": 1,
+    "event_whenkeypressed": 1,
+    "looks_sayforsecs": 1
+   },
+   "scripts": {
+    "Stage": {
+     "blocks": 0,
+     "top": 0
+    },
+    "Friend": {
+     "blocks": 66,
+     "top": 2
+    }
+   },
+   "problems": [],
+   "sprites": [
+    {
+     "name": "Friend",
+     "x": 0,
+     "y": 0,
+     "dir": 90,
+     "size": 100,
+     "visible": true,
+     "costumes": 1,
+     "inStage": true
+    }
+   ],
+   "undrawn": 0,
+   "topScripts": 2,
+   "overlaps": 0,
+   "lists": {
+    "alphabet": 26
+   },
+   "extensions": []
+  },
+  "L8_Code_Machine.sb3": {
+   "opcodes": {
+    "sensing_answer": 3,
+    "operator_length": 1,
+    "operator_letter_of": 2,
+    "data_itemnumoflist": 1,
+    "operator_gt": 1,
+    "operator_join": 1,
+    "data_setvariableto": 4,
+    "control_if_else": 1,
+    "data_changevariableby": 1,
+    "control_repeat": 1,
+    "event_whenflagclicked": 1,
+    "sensing_askandwait": 1,
+    "looks_say": 1
+   },
+   "scripts": {
+    "Stage": {
+     "blocks": 0,
+     "top": 0
+    },
+    "Friend": {
+     "blocks": 19,
+     "top": 1
+    }
+   },
+   "problems": [],
+   "sprites": [
+    {
+     "name": "Friend",
+     "x": 0,
+     "y": 0,
+     "dir": 90,
+     "size": 100,
+     "visible": true,
+     "costumes": 1,
+     "inStage": true
+    }
+   ],
+   "undrawn": 0,
+   "topScripts": 1,
+   "overlaps": 0,
+   "lists": {
+    "alphabet": 26
+   },
+   "extensions": []
+  },
+  "L9_Mean_Machine.sb3": {
+   "opcodes": {
+    "event_whenflagclicked": 1,
+    "data_setvariableto": 2,
+    "data_lengthoflist": 2,
+    "control_repeat": 1,
+    "operator_divide": 1,
+    "looks_say": 1
+   },
+   "scripts": {
+    "Stage": {
+     "blocks": 0,
+     "top": 0
+    },
+    "Friend": {
+     "blocks": 8,
+     "top": 1
+    }
+   },
+   "problems": [],
+   "sprites": [
+    {
+     "name": "Friend",
+     "x": 0,
+     "y": 0,
+     "dir": 90,
+     "size": 100,
+     "visible": true,
+     "costumes": 1,
+     "inStage": true
+    }
+   ],
+   "undrawn": 0,
+   "topScripts": 1,
+   "overlaps": 0,
+   "lists": {
+    "data": 0
+   },
+   "extensions": []
+  },
+  "L9_Mean_Machine_ANSWER.sb3": {
+   "opcodes": {
+    "data_itemoflist": 4,
+    "data_changevariableby": 3,
+    "event_whenflagclicked": 1,
+    "data_setvariableto": 5,
+    "data_lengthoflist": 3,
+    "control_repeat": 2,
+    "operator_divide": 1,
+    "looks_say": 2,
+    "event_whenkeypressed": 1,
+    "operator_gt": 1,
+    "control_if": 1
+   },
+   "scripts": {
+    "Stage": {
+     "blocks": 0,
+     "top": 0
+    },
+    "Friend": {
+     "blocks": 24,
+     "top": 2
+    }
+   },
+   "problems": [],
+   "sprites": [
+    {
+     "name": "Friend",
+     "x": 0,
+     "y": 0,
+     "dir": 90,
+     "size": 100,
+     "visible": true,
+     "costumes": 1,
+     "inStage": true
+    }
+   ],
+   "undrawn": 0,
+   "topScripts": 2,
+   "overlaps": 0,
+   "lists": {
+    "data": 4
+   },
+   "extensions": []
+  },
+  "L10A_Mystery_Machine.sb3": {
+   "opcodes": {
+    "operator_multiply": 1,
+    "operator_add": 1,
+    "event_whenflagclicked": 1,
+    "operator_random": 1,
+    "data_setvariableto": 2,
+    "operator_join": 2,
+    "looks_sayforsecs": 3,
+    "sensing_askandwait": 1,
+    "sensing_answer": 1,
+    "operator_equals": 1,
+    "control_if_else": 1
+   },
+   "scripts": {
+    "Stage": {
+     "blocks": 0,
+     "top": 0
+    },
+    "Friend": {
+     "blocks": 15,
+     "top": 1
+    }
+   },
+   "problems": [],
+   "sprites": [
+    {
+     "name": "Friend",
+     "x": 0,
+     "y": 0,
+     "dir": 90,
+     "size": 100,
+     "visible": true,
+     "costumes": 1,
+     "inStage": true
+    }
+   ],
+   "undrawn": 0,
+   "topScripts": 1,
+   "overlaps": 0,
+   "lists": {},
+   "extensions": []
+  },
+  "L10A_Mystery_Machine_ANSWER.sb3": {
+   "opcodes": {
+    "operator_multiply": 1,
+    "operator_subtract": 1,
+    "event_whenflagclicked": 1,
+    "operator_random": 1,
+    "data_setvariableto": 2,
+    "operator_join": 2,
+    "looks_sayforsecs": 3,
+    "sensing_askandwait": 1,
+    "sensing_answer": 1,
+    "operator_equals": 1,
+    "control_if_else": 1
+   },
+   "scripts": {
+    "Stage": {
+     "blocks": 0,
+     "top": 0
+    },
+    "Friend": {
+     "blocks": 15,
+     "top": 1
+    }
+   },
+   "problems": [],
+   "sprites": [
+    {
+     "name": "Friend",
+     "x": 0,
+     "y": 0,
+     "dir": 90,
+     "size": 100,
+     "visible": true,
+     "costumes": 1,
+     "inStage": true
+    }
+   ],
+   "undrawn": 0,
+   "topScripts": 1,
+   "overlaps": 0,
+   "lists": {},
+   "extensions": []
+  },
+  "L10B_Prime_or_Not.sb3": {
+   "opcodes": {
+    "event_whenflagclicked": 1,
+    "sensing_askandwait": 1,
+    "sensing_answer": 1,
+    "data_setvariableto": 3,
+    "operator_mod": 1,
+    "operator_equals": 2,
+    "data_changevariableby": 2,
+    "control_if": 1,
+    "control_repeat": 1,
+    "operator_join": 2,
+    "looks_say": 2,
+    "control_if_else": 1
+   },
+   "scripts": {
+    "Stage": {
+     "blocks": 0,
+     "top": 0
+    },
+    "Friend": {
+     "blocks": 18,
+     "top": 1
+    }
+   },
+   "problems": [],
+   "sprites": [
+    {
+     "name": "Friend",
+     "x": 0,
+     "y": 0,
+     "dir": 90,
+     "size": 100,
+     "visible": true,
+     "costumes": 1,
+     "inStage": true
+    }
+   ],
+   "undrawn": 0,
+   "topScripts": 1,
+   "overlaps": 0,
+   "lists": {},
+   "extensions": []
+  },
+  "L10C_Lucky_Seven.sb3": {
+   "opcodes": {
+    "event_whenflagclicked": 1,
+    "data_setvariableto": 3,
+    "operator_random": 2,
+    "operator_add": 1,
+    "operator_equals": 1,
+    "data_changevariableby": 1,
+    "control_if": 1,
+    "control_repeat": 1,
+    "looks_say": 1
+   },
+   "scripts": {
+    "Stage": {
+     "blocks": 0,
+     "top": 0
+    },
+    "Friend": {
+     "blocks": 12,
+     "top": 1
+    }
+   },
+   "problems": [],
+   "sprites": [
+    {
+     "name": "Friend",
+     "x": 0,
+     "y": 0,
+     "dir": 90,
+     "size": 100,
+     "visible": true,
+     "costumes": 1,
+     "inStage": true
+    }
+   ],
+   "undrawn": 0,
+   "topScripts": 1,
+   "overlaps": 0,
+   "lists": {},
+   "extensions": []
+  },
+  "L10B_Prime_or_Not_ANSWER.sb3": {
+   "opcodes": {
+    "event_whenflagclicked": 1,
+    "data_setvariableto": 4,
+    "operator_mod": 1,
+    "operator_equals": 2,
+    "data_changevariableby": 4,
+    "control_if": 2,
+    "control_repeat": 2,
+    "operator_join": 1,
+    "looks_say": 1
+   },
+   "scripts": {
+    "Stage": {
+     "blocks": 0,
+     "top": 0
+    },
+    "Friend": {
+     "blocks": 18,
+     "top": 1
+    }
+   },
+   "problems": [],
+   "sprites": [
+    {
+     "name": "Friend",
+     "x": 0,
+     "y": 0,
+     "dir": 90,
+     "size": 100,
+     "visible": true,
+     "costumes": 1,
+     "inStage": true
+    }
+   ],
+   "undrawn": 0,
+   "topScripts": 1,
+   "overlaps": 0,
+   "lists": {},
+   "extensions": []
+  },
+  "L10C_Lucky_Seven_ANSWER.sb3": {
+   "opcodes": {
+    "event_whenflagclicked": 1,
+    "data_setvariableto": 4,
+    "operator_random": 2,
+    "operator_add": 1,
+    "operator_equals": 1,
+    "data_changevariableby": 1,
+    "control_if": 1,
+    "control_repeat": 1,
+    "looks_say": 1
+   },
+   "scripts": {
+    "Stage": {
+     "blocks": 0,
+     "top": 0
+    },
+    "Friend": {
+     "blocks": 13,
+     "top": 1
+    }
+   },
+   "problems": [],
+   "sprites": [
+    {
+     "name": "Friend",
+     "x": 0,
+     "y": 0,
+     "dir": 90,
+     "size": 100,
+     "visible": true,
+     "costumes": 1,
+     "inStage": true
+    }
+   ],
+   "undrawn": 0,
+   "topScripts": 1,
+   "overlaps": 0,
+   "lists": {},
+   "extensions": []
+  },
+  "L10D_Clock_Jumper.sb3": {
+   "opcodes": {
+    "event_whenflagclicked": 1,
+    "sensing_askandwait": 2,
+    "sensing_answer": 2,
+    "data_setvariableto": 4,
+    "operator_add": 1,
+    "operator_mod": 1,
+    "operator_equals": 1,
+    "control_if": 1,
+    "operator_join": 1,
+    "looks_say": 1
+   },
+   "scripts": {
+    "Stage": {
+     "blocks": 0,
+     "top": 0
+    },
+    "Friend": {
+     "blocks": 15,
+     "top": 1
+    }
+   },
+   "problems": [],
+   "sprites": [
+    {
+     "name": "Friend",
+     "x": 0,
+     "y": 0,
+     "dir": 90,
+     "size": 100,
+     "visible": true,
+     "costumes": 1,
+     "inStage": true
+    }
+   ],
+   "undrawn": 0,
+   "topScripts": 1,
+   "overlaps": 0,
+   "lists": {},
+   "extensions": []
+  },
+  "L10D_Clock_Jumper_ANSWER.sb3": {
+   "opcodes": {
+    "event_whenflagclicked": 1,
+    "sensing_askandwait": 2,
+    "sensing_answer": 2,
+    "data_setvariableto": 3,
+    "operator_subtract": 1,
+    "operator_add": 2,
+    "operator_mod": 1,
+    "data_itemoflist": 1,
+    "operator_join": 1,
+    "looks_say": 1
+   },
+   "scripts": {
+    "Stage": {
+     "blocks": 0,
+     "top": 0
+    },
+    "Friend": {
+     "blocks": 15,
+     "top": 1
+    }
+   },
+   "problems": [],
+   "sprites": [
+    {
+     "name": "Friend",
+     "x": 0,
+     "y": 0,
+     "dir": 90,
+     "size": 100,
+     "visible": true,
+     "costumes": 1,
+     "inStage": true
+    }
+   ],
+   "undrawn": 0,
+   "topScripts": 1,
+   "overlaps": 0,
+   "lists": {
+    "days": 7
+   },
+   "extensions": []
+  }
+ },
+ "run": [
+  {
+   "file": "L3_Below_Zero_ANSWER.sb3",
+   "trigger": " ",
+   "answers": [],
+   "ok": true,
+   "said": [
+    "-150"
+   ],
+   "x": -150,
+   "y": 0,
+   "vars": {
+    "temp": 0
+   }
+  },
+  {
+   "file": "L2_Prime_Checker_ANSWER.sb3",
+   "trigger": "flag",
+   "answers": [],
+   "ok": true,
+   "said": [
+    "15 is not prime"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "n": "15",
+    "d": 16,
+    "count": 4
+   }
+  },
+  {
+   "file": "L1_Sequence_Tester.sb3",
+   "trigger": "flag",
+   "answers": [],
+   "ok": true,
+   "said": [
+    "5"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "term": "5"
+   }
+  },
+  {
+   "file": "L2_Prime_Checker.sb3",
+   "trigger": "flag",
+   "answers": [],
+   "ok": true,
+   "said": [
+    "0"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "n": "15",
+    "d": "1",
+    "count": "0"
+   }
+  },
+  {
+   "file": "L1_Sequence_Tester_ANSWER.sb3",
+   "trigger": "flag",
+   "answers": [],
+   "ok": true,
+   "said": [
+    "302"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "term": 302,
+    "pos": 0
+   }
+  },
+  {
+   "file": "L1_Sequence_Tester_ANSWER.sb3",
+   "trigger": "e",
+   "answers": [],
+   "ok": true,
+   "said": [
+    "term 333 is 1001"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "term": 1001,
+    "pos": 333
+   }
+  },
+  {
+   "file": "L3_Below_Zero_ANSWER.sb3",
+   "trigger": "flag",
+   "answers": [],
+   "ok": true,
+   "said": [
+    "2",
+    "-1",
+    "-4",
+    "-7",
+    "-10",
+    "-13"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "temp": -13
+   }
+  },
+  {
+   "file": "L3_Below_Zero.sb3",
+   "trigger": " ",
+   "answers": [],
+   "ok": true,
+   "said": [
+    "0"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "temp": 0
+   }
+  },
+  {
+   "file": "L4_Function_Machine.sb3",
+   "trigger": "flag",
+   "answers": [
+    7
+   ],
+   "ok": true,
+   "said": [
+    "IN?",
+    "",
+    "7"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "out": "7"
+   }
+  },
+  {
+   "file": "L4_Function_Machine_ANSWER.sb3",
+   "trigger": "flag",
+   "answers": [
+    7
+   ],
+   "ok": true,
+   "said": [
+    "IN?",
+    "",
+    "23"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "out": 23,
+    "n": 0
+   }
+  },
+  {
+   "file": "L4_Function_Machine_ANSWER.sb3",
+   "trigger": "s",
+   "answers": [],
+   "ok": true,
+   "said": [
+    "12"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "out": 0,
+    "n": 12
+   }
+  },
+  {
+   "file": "L5_Every_Order.sb3",
+   "trigger": "flag",
+   "answers": [],
+   "ok": true,
+   "said": [
+    "1",
+    "2",
+    "3"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "a": 4,
+    "b": 0
+   }
+  },
+  {
+   "file": "L5_Every_Order_ANSWER.sb3",
+   "trigger": "flag",
+   "answers": [],
+   "ok": true,
+   "said": [
+    "11",
+    "12",
+    "21",
+    "22",
+    "31",
+    "32"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "a": 4,
+    "b": 3
+   }
+  },
+  {
+   "file": "L6_Chance_Lab.sb3",
+   "trigger": "flag",
+   "answers": [],
+   "ok": true,
+   "said": [
+    "504"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "heads": 504,
+    "a": 0,
+    "b": 0,
+    "doubles": 0
+   }
+  },
+  {
+   "file": "L6_Chance_Lab_ANSWER.sb3",
+   "trigger": "p",
+   "answers": [],
+   "ok": true,
+   "said": [
+    "157"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "heads": 0,
+    "a": 2,
+    "b": 2,
+    "doubles": 157
+   }
+  },
+  {
+   "file": "L4_Function_Machine_ANSWER.sb3",
+   "trigger": "n",
+   "answers": [],
+   "ok": true,
+   "said": [
+    "9"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "out": 0,
+    "n": 9
+   }
+  },
+  {
+   "file": "L6_Chance_Lab.sb3",
+   "trigger": "d",
+   "answers": [],
+   "ok": true,
+   "said": [
+    "4"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "heads": 0,
+    "a": 1,
+    "b": 3,
+    "doubles": 0
+   }
+  },
+  {
+   "file": "L7_Turtle_Start_ANSWER.sb3",
+   "trigger": "flag",
+   "answers": [],
+   "ok": true,
+   "said": [],
+   "x": -49.999999999999986,
+   "y": 100.00000000000001,
+   "vars": {}
+  },
+  {
+   "file": "L7_Turtle_Start.sb3",
+   "trigger": "flag",
+   "answers": [],
+   "ok": true,
+   "said": [],
+   "x": -50,
+   "y": 100,
+   "vars": {}
+  },
+  {
+   "file": "L8_Code_Machine_ANSWER.sb3",
+   "trigger": "flag",
+   "answers": [
+    "MATH IS FUN"
+   ],
+   "ok": true,
+   "said": [
+    "Type a message in CAPITAL letters",
+    "",
+    "PDWK LV IXQ"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "shift": "3",
+    "code": "PDWK LV IXQ",
+    "i": 12,
+    "n": 13,
+    "m": 16,
+    "msg": "",
+    "s": 1,
+    "alphabet": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G",
+     "H",
+     "I",
+     "J",
+     "K",
+     "L",
+     "M",
+     "N",
+     "O",
+     "P",
+     "Q",
+     "R",
+     "S",
+     "T",
+     "U",
+     "V",
+     "W",
+     "X",
+     "Y",
+     "Z"
+    ]
+   }
+  },
+  {
+   "file": "L8_Code_Machine.sb3",
+   "trigger": "flag",
+   "answers": [
+    "A B"
+   ],
+   "ok": true,
+   "said": [
+    "Type a message in CAPITAL letters",
+    "",
+    " "
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "shift": "3",
+    "code": " ",
+    "i": 4,
+    "n": 0,
+    "m": 0,
+    "alphabet": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G",
+     "H",
+     "I",
+     "J",
+     "K",
+     "L",
+     "M",
+     "N",
+     "O",
+     "P",
+     "Q",
+     "R",
+     "S",
+     "T",
+     "U",
+     "V",
+     "W",
+     "X",
+     "Y",
+     "Z"
+    ]
+   }
+  },
+  {
+   "file": "L7_Turtle_Start_ANSWER.sb3",
+   "trigger": "t",
+   "answers": [],
+   "ok": true,
+   "said": [],
+   "x": -50.00000000000002,
+   "y": 100.00000000000004,
+   "vars": {}
+  },
+  {
+   "file": "L9_Mean_Machine.sb3",
+   "trigger": "flag",
+   "answers": [],
+   "ok": true,
+   "said": [
+    "NaN"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "total": "0",
+    "i": "1",
+    "data": []
+   }
+  },
+  {
+   "file": "L8_Code_Machine_ANSWER.sb3",
+   "trigger": "flag",
+   "answers": [
+    "XYZ"
+   ],
+   "ok": true,
+   "said": [
+    "Type a message in CAPITAL letters",
+    "",
+    "ABC"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "shift": "3",
+    "code": "ABC",
+    "i": 4,
+    "n": 25,
+    "m": 2,
+    "msg": "",
+    "s": 1,
+    "alphabet": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G",
+     "H",
+     "I",
+     "J",
+     "K",
+     "L",
+     "M",
+     "N",
+     "O",
+     "P",
+     "Q",
+     "R",
+     "S",
+     "T",
+     "U",
+     "V",
+     "W",
+     "X",
+     "Y",
+     "Z"
+    ]
+   }
+  },
+  {
+   "file": "L7_Turtle_Start_ANSWER.sb3",
+   "trigger": "h",
+   "answers": [],
+   "ok": true,
+   "said": [],
+   "x": -49.999999999999986,
+   "y": 100.00000000000006,
+   "vars": {}
+  },
+  {
+   "file": "L9_Mean_Machine_ANSWER.sb3",
+   "trigger": "flag",
+   "answers": [],
+   "ok": true,
+   "said": [
+    "8"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "total": 32,
+    "i": 5,
+    "max": 0,
+    "data": [
+     5,
+     9,
+     6,
+     12
+    ]
+   }
+  },
+  {
+   "file": "L10A_Mystery_Machine.sb3",
+   "trigger": "flag",
+   "answers": [
+    0
+   ],
+   "ok": true,
+   "said": [
+    "OUT is 64",
+    "What was n?",
+    "",
+    "No, n was 20"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "n": 20,
+    "out": 64
+   }
+  },
+  {
+   "file": "L7_Turtle_Start_ANSWER.sb3",
+   "trigger": "s",
+   "answers": [],
+   "ok": true,
+   "said": [],
+   "x": -49.99999999999999,
+   "y": 100.00000000000001,
+   "vars": {}
+  },
+  {
+   "file": "L9_Mean_Machine_ANSWER.sb3",
+   "trigger": "m",
+   "answers": [],
+   "ok": true,
+   "said": [
+    "12"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "total": 0,
+    "i": 5,
+    "max": 12,
+    "data": [
+     5,
+     9,
+     6,
+     12
+    ]
+   }
+  },
+  {
+   "file": "L10A_Mystery_Machine_ANSWER.sb3",
+   "trigger": "flag",
+   "answers": [
+    0
+   ],
+   "ok": true,
+   "said": [
+    "OUT is 3",
+    "What was n?",
+    "",
+    "No, n was 1"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "n": 1,
+    "out": 3
+   }
+  },
+  {
+   "file": "L8_Code_Machine_ANSWER.sb3",
+   "trigger": "k",
+   "answers": [
+    "PDWK LV IXQ"
+   ],
+   "ok": true,
+   "said": [
+    "shift 18: XLES TD QFY",
+    "shift 19: WKDR SC PEX",
+    "shift 20: VJCQ RB ODW",
+    "shift 21: UIBP QA NCV",
+    "shift 22: THAO PZ MBU",
+    "shift 23: SGZN OY LAT",
+    "shift 24: RFYM NX KZS",
+    "shift 25: QEXL MW JYR"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "shift": 3,
+    "code": "QEXL MW JYR",
+    "i": 12,
+    "n": 16,
+    "m": 17,
+    "msg": "PDWK LV IXQ",
+    "s": 26,
+    "alphabet": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G",
+     "H",
+     "I",
+     "J",
+     "K",
+     "L",
+     "M",
+     "N",
+     "O",
+     "P",
+     "Q",
+     "R",
+     "S",
+     "T",
+     "U",
+     "V",
+     "W",
+     "X",
+     "Y",
+     "Z"
+    ]
+   }
+  },
+  {
+   "file": "L10B_Prime_or_Not.sb3",
+   "trigger": "flag",
+   "answers": [
+    91
+   ],
+   "ok": true,
+   "said": [
+    "Which number?",
+    "",
+    "91 is not prime"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "n": "91",
+    "d": 92,
+    "count": 4
+   }
+  },
+  {
+   "file": "L10B_Prime_or_Not_ANSWER.sb3",
+   "trigger": "flag",
+   "answers": [],
+   "ok": true,
+   "said": [
+    "Primes up to 30: 10"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "n": 31,
+    "d": 31,
+    "count": 8,
+    "primes": 10
+   }
+  },
+  {
+   "file": "L10C_Lucky_Seven.sb3",
+   "trigger": "flag",
+   "answers": [],
+   "ok": true,
+   "said": [
+    "167"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "a": 1,
+    "b": 1,
+    "sevens": 167,
+    "target": 7
+   }
+  },
+  {
+   "file": "L10C_Lucky_Seven_ANSWER.sb3",
+   "trigger": "flag",
+   "answers": [],
+   "ok": true,
+   "said": [
+    "139"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "a": 3,
+    "b": 6,
+    "sevens": 139,
+    "target": "8"
+   }
+  },
+  {
+   "file": "L10B_Prime_or_Not.sb3",
+   "trigger": "flag",
+   "answers": [
+    97
+   ],
+   "ok": true,
+   "said": [
+    "Which number?",
+    "",
+    "97 is prime"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "n": "97",
+    "d": 98,
+    "count": 2
+   }
+  },
+  {
+   "file": "L10D_Clock_Jumper.sb3",
+   "trigger": "flag",
+   "answers": [
+    9,
+    5
+   ],
+   "ok": true,
+   "said": [
+    "Start hour (1 to 12)?",
+    "",
+    "Jump how many hours?",
+    "",
+    "The clock shows 2"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "hour": 2,
+    "jump": "5"
+   }
+  },
+  {
+   "file": "L10D_Clock_Jumper_ANSWER.sb3",
+   "trigger": "flag",
+   "answers": [
+    4,
+    45
+   ],
+   "ok": true,
+   "said": [
+    "Today is day number (1 = Monday, 7 = Sunday)?",
+    "",
+    "Jump how many days?",
+    "",
+    "That day is Sunday"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "hour": 6,
+    "jump": "45",
+    "today": "4",
+    "days": [
+     "Monday",
+     "Tuesday",
+     "Wednesday",
+     "Thursday",
+     "Friday",
+     "Saturday",
+     "Sunday"
+    ]
+   }
+  },
+  {
+   "file": "L10D_Clock_Jumper.sb3",
+   "trigger": "flag",
+   "answers": [
+    7,
+    5
+   ],
+   "ok": true,
+   "said": [
+    "Start hour (1 to 12)?",
+    "",
+    "Jump how many hours?",
+    "",
+    "The clock shows 12"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "hour": "12",
+    "jump": "5"
+   }
+  }
+ ]
+}

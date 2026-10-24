@@ -2,7 +2,7 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-22T00:26:50Z"
+  "at": "2026-10-23T06:27:56Z"
  },
  "lists": "css",
  "title": "Math Inquirers P6: Lesson 2 – Prime Hunters",
@@ -12,11 +12,9 @@
   "p6l2-warm1",
   "p6l2-warm2",
   "p6l2-explore1",
-  "p6l2-go",
   "p6l2-explore2",
   "p6l2-teach1",
   "p6l2-we1",
-  "p6l2-try1",
   "p6l2-we2",
   "p6l2-we3",
   "p6l2-key",
@@ -25,14 +23,15 @@
   "p6l2-ws1ans",
   "p6l2-teachtrace",
   "p6l2-teachgold",
-  "p6l2-teachsq",
-  "p6l2-teachplan",
   "p6l2-ws2",
   "p6l2-ws2ans",
   "p6l2-stretch",
   "p6l2-challenge",
   "p6l2-chdiag",
   "p6l2-chwalk",
+  "p6l2-gap-d9",
+  "p6l2-gap-d45",
+  "p6l2-gap-zero",
   "p6l2-talk",
   "p6l2-exit",
   "p6l2-reflect"

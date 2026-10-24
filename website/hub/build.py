@@ -38,7 +38,7 @@ extra='''
 .ask{display:grid;gap:10px}
 .note{font-size:13.5px;color:var(--muted)}
 .empty{padding:24px;text-align:center;color:var(--muted)}
-@media (max-width:820px){.layout{grid-template-columns:1fr}.side{position:static;grid-template-columns:1fr 1fr}}
+@media (max-width:820px){.layout{grid-template-columns:1fr}.side{position:static;grid-template-columns:1fr 1fr}.side .ask{grid-column:1/-1}}
 '''
 page=f'''<title>Math Inquirers Parent Questions</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -47,14 +47,15 @@ page=f'''<title>Math Inquirers Parent Questions</title>
 <script type="application/ld+json">{json.dumps(schema,ensure_ascii=False)}</script>
 <style>{css}{extra}</style>
 <div class="wrap">
-<header class="bar"><span class="brand"><i>?</i><span>Math Inquirers</span></span><nav class="nav" aria-label="Site"><span class="tab" aria-current="true">Parent questions</span><span class="tab">Puzzles</span><span class="tab">Program</span><span class="btn yel sm" style="margin-left:6px;padding:8px 16px">Register</span></nav></header>
-<main>
-<section class="hero" style="grid-template-columns:1fr"><div class="hubhead"><span class="eyebrow">Parent questions</span><h1>Questions parents ask us about <mark>Primary 1</mark> maths</h1><p class="lead">Straight answers from our teachers on getting ready for P1, the topics your child will meet, helping at home and stretching strong learners.</p><div class="search"><input id="q" type="search" placeholder="Search, e.g. number bonds, GEP, holidays" aria-label="Search questions"></div></div></section>
+<a class="skip" href="#top">Skip to main content</a>
+<header class="bar"><a class="brand" href="/" style="text-decoration:none"><i>?</i><span>Math Inquirers</span></a><nav class="nav" aria-label="Site"><a class="tab" href="/#program">Program</a><a class="tab" href="/#levels">Levels</a><a class="tab" href="/parent-questions/" aria-current="true">Parent questions</a><a class="tab" href="/weekly-dose/">Puzzles</a><a class="tab" href="/shop/">Shop</a><a class="btn yel sm" href="/#register" style="margin-left:6px;padding:8px 16px">Register</a></nav></header>
+<main id="top">
+<section class="hero" style="grid-template-columns:1fr"><div class="hubhead"><span class="eyebrow">Parent questions</span><h1>Questions parents ask us about <mark>Primary 1</mark> maths</h1><p class="lead">Straight answers from our teachers on getting ready for P1, the topics your child will meet, helping at home and stretching strong learners.</p><div class="search"><input id="q" type="search" placeholder="Search, e.g. number bonds" aria-label="Search the questions"></div></div></section>
 <section class="layout"><aside class="side" aria-label="Topics"><button class="cat on" data-c="all"><span class="dot" style="background:#fff"></span>All questions<span class="n">{len(QA)}</span></button>{cats}
-<div class="card ask" style="margin-top:10px"><h3 style="font-size:18px">Ask a question</h3><textarea id="askq" placeholder="Type your question" style="min-height:80px"></textarea><button class="btn sm" id="askb">Send question</button><div id="askmsg"></div><p class="note">We answer the most common questions here. Your name is never shown.</p></div></aside>
+<div class="card ask" style="margin-top:10px"><h3 style="font-size:18px">Ask a question</h3><label for="askq" class="small" style="font-weight:800">Your question</label><textarea id="askq" placeholder="Type your question" style="min-height:80px"></textarea><button class="btn sm" id="askb">Send on WhatsApp</button><div id="askmsg"></div><p class="note">This opens WhatsApp with your question ready to send to us. We add answers to the most common questions here, without names.</p></div></aside>
 <div class="list" id="list">{cards}<div class="empty" id="none" hidden>No questions match. Try another word, or ask us.</div></div></section>
 </main>
-<footer><div><b>Math Inquirers</b><p style="margin-top:6px">Primary 1 maths enrichment by Preciouslyours Pte Ltd, Singapore. Not affiliated with MOE.</p></div><div><b>About these answers</b><p style="margin-top:6px">Questions are ones parents commonly ask us. Answers are written by our teachers and checked against MOE sources where facts are involved.</p></div><div><b>Contact</b><p style="margin-top:6px">hello@mathinquirers.example (to confirm)</p></div></footer>
+<footer><div><b>Math Inquirers</b><p style="margin-top:6px">Primary 1 maths enrichment by Preciouslyours Pte Ltd, Singapore. Not affiliated with MOE.</p></div><div><b>About these answers</b><p style="margin-top:6px">Questions are ones parents commonly ask us. Answers are written by our teachers and checked against MOE sources where facts are involved.</p></div><div><b>Contact</b><p style="margin-top:6px">WhatsApp: +65 9880 5962</p><p style="margin-top:6px"><a href="/">Home</a> · <a href="/shop/">Shop</a> · <a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a></p></div></footer>
 </div>
 <script>
 (function(){{"use strict";
@@ -65,7 +66,7 @@ document.addEventListener("click",function(e){{var h=e.target.closest(".thhead")
 var c=e.target.closest(".cat");if(c){{cat=c.dataset.c;document.querySelectorAll(".cat").forEach(function(x){{x.classList.toggle("on",x===c)}});filter();return}}
 var hp=e.target.closest("[data-help]");if(hp){{hp.textContent="Thanks for telling us";hp.disabled=true;return}}
 var lk=e.target.closest("[data-link]");if(lk){{var u=location.href.split("#")[0]+"#"+lk.dataset.link;if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(u).then(function(){{lk.textContent="Link copied"}},function(){{lk.textContent=u}});else lk.textContent=u;return}}
-if(e.target.id==="askb"){{var v=document.getElementById("askq").value.trim();document.getElementById("askmsg").innerHTML=v?'<div class="msg ok">Thank you. We will add an answer if other parents ask this too.</div>':'<div class="msg no">Type your question first.</div>';if(v)document.getElementById("askq").value="";}}
+if(e.target.id==="askb"){{var v=document.getElementById("askq").value.trim();document.getElementById("askmsg").innerHTML=v?'<div class="msg ok">Tap to send your question on WhatsApp. <a href="https://wa.me/6598805962?text='+encodeURIComponent("Hi! A question for Math Inquirers: "+v).replace(/'/g,"%27")+'" target="_blank" rel="noopener">Open WhatsApp</a></div>':'<div class="msg no">Type your question first.</div>';if(!v)document.getElementById("askq").focus();}}
 }});
 document.getElementById("q").addEventListener("input",filter);
 var h=(location.hash||"").slice(1),t=h&&document.getElementById(h);if(t&&t.classList.contains("th")){{open(t,true);t.scrollIntoView()}}

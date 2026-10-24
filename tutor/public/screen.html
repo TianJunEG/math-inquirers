@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lesson screen | Math Inquirers</title>
+<link rel="stylesheet" href="/fonts.css">
+<style>
+:root{--navy:#1B2A49;--cream:#FFF8E7;--yellow:#FFC93C;--teal:#1F7A6F;--red:#C9372C;--bar:84px}
+*{box-sizing:border-box}html,body{margin:0;height:100%;background:#0f1730;color:#fff;font-family:'Nunito Sans',Arial,sans-serif;overflow:hidden}
+#stage{position:absolute;inset:0 0 var(--bar) 0;display:grid;place-items:center;background:#0f1730}
+#frame{width:1920px;height:1080px;border:0;transform-origin:center center;background:#fff;position:absolute}
+#bar{position:absolute;left:0;right:0;bottom:0;height:var(--bar);display:flex;align-items:center;gap:20px;padding:0 24px;background:var(--navy);border-top:4px solid var(--yellow)}
+#part{font:600 28px Fredoka,Arial,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
+#part small{display:block;font:400 16px 'Nunito Sans';opacity:.75}
+#clock{font:600 56px Fredoka,Arial,sans-serif;font-variant-numeric:tabular-nums;min-width:150px;text-align:right}
+#clock.warn{color:var(--yellow)}#clock.over{color:#ff8a80}
+#track{width:min(28vw,360px);height:14px;border-radius:7px;background:rgba(255,255,255,.2);overflow:hidden}
+#fill{height:100%;width:0;background:var(--yellow)}
+#pair{position:absolute;right:16px;top:12px;background:rgba(15,23,48,.88);border:2px solid var(--yellow);border-radius:14px;padding:8px 14px;font-size:16px;line-height:1.35;z-index:5}
+#pair b{font:600 30px Fredoka,Arial,sans-serif;letter-spacing:4px;color:var(--yellow)}
+#pair.on{border-color:#5fd0a5}
+#big{position:absolute;inset:0;display:none;place-items:center;text-align:center;background:var(--navy);z-index:8}
+#big.show{display:grid}#big div{font:600 min(34vw,520px) Fredoka,Arial,sans-serif;line-height:1;font-variant-numeric:tabular-nums}
+#big p{font:600 min(5vw,56px) Fredoka;margin:0}
+#big.warn div{color:var(--yellow)}#big.over div{color:#ff8a80}
+#hint{position:absolute;left:12px;top:12px;font-size:13px;opacity:.55;z-index:5;max-width:44ch}
+.hide #pair,.hide #hint,.paired #pair{display:none}
+</style></head><body>
+<div id="stage"><iframe id="frame" title="Lesson slide" sandbox="allow-same-origin"></iframe></div>
+<div id="hint">Share THIS window only. Never share your whole screen. H hides this note and the code.</div>
+<div id="pair">Phone code <b id="code">----</b><br><span id="pairmsg">waiting for your phone</span></div>
+<div id="big"><div id="bigclock">0:00</div><p id="bigtitle"></p></div>
+<div id="bar"><div id="part"><span id="ptitle">Loading…</span><small id="pnext"></small></div><div id="track"><div id="fill"></div></div><div id="clock">0:00</div></div>
+<script src="/common.js"></script>
+<script>
+(function () {
+  var q = new URLSearchParams(location.search), lessonId = q.get('lesson') || 'p4l3';
+  var room = (q.get('room') || '').toUpperCase() || MI.newCode();
+  var L = null, slide = 0, part = 0, running = false, partStart = 0, banked = 0, extra = {}, bigOn = false, totalBase = 0, totalStart = 0;
+  document.getElementById('code').textContent = room;
+  var $ = function (id) { return document.getElementById(id); };
+  var frame = $('frame');
+
+  function fit() { var s = Math.min(innerWidth / 1920, (innerHeight - 84) / 1080); frame.style.transform = 'scale(' + s + ')'; }
+  addEventListener('resize', fit); fit();
+
+  function budget(i) { return ((L.parts[i].min * 60) + (extra[i] || 0)); }
+  function partElapsed() { return banked + (running ? (Date.now() - partStart) / 1000 : 0); }
+  function totalElapsed() { return totalBase + (running ? (Date.now() - totalStart) / 1000 : 0); }
+  function startClock() { if (!running) { running = true; partStart = Date.now(); totalStart = Date.now(); } }
+  function pauseClock() { if (running) { banked += (Date.now() - partStart) / 1000; totalBase += (Date.now() - totalStart) / 1000; running = false; } }
+  function enterPart(i) { if (i === part) return; var was = running; pauseClock(); part = i; banked = 0; if (was) startClock(); }
+
+  function showSlide(i) {
+    slide = Math.max(0, Math.min(L.slides.length - 1, i));
+    var s = L.slides[slide];
+    fetch('/slides/' + L.deck + '/' + s.id + '.html').then(function (r) { return r.text(); }).then(function (h) {
+      // strip speaker notes so they can never reach the shared window
+      h = h.replace(/<aside[\s\S]*?<\/aside>/g, '');
+      frame.srcdoc = '<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="/fonts.css"><style>html,body{margin:0;width:1920px;height:1080px;overflow:hidden}section{width:1920px;height:1080px;box-sizing:border-box;position:relative;overflow:hidden}p,h1,h2,h3{margin:0}table{border-collapse:collapse}td,th{padding:12px 24px}</style></head><body>' + h + '</body></html>';
+    });
+    if (s.part != null) enterPart(s.part);
+    push();
+  }
+  function go(d) { showSlide(slide + d); }
+  function skipOptional() { var i = slide + 1; while (i < L.slides.length && L.slides[i].optional) i++; showSlide(Math.min(i, L.slides.length - 1)); }
+
+  function snapshot() {
+    var p = L.parts[part];
+    return { type: 'state', lesson: L.id, slide: slide, slideId: L.slides[slide].id, nslides: L.slides.length, part: part, partTitle: p.title, partMin: p.min,
+      partBudget: budget(part), partElapsed: partElapsed(), totalElapsed: totalElapsed(), totalBudget: 5400, running: running, big: bigOn,
+      next: L.slides[Math.min(slide + 1, L.slides.length - 1)].title || L.slides[Math.min(slide + 1, L.slides.length - 1)].id, optional: !!L.slides[slide].optional, t: Date.now() };
+  }
+  var conn;
+  function push() { if (conn && L) conn.send(snapshot()); }
+  function tick() {
+    if (!L) return;
+    var rem = budget(part) - partElapsed();
+    $('ptitle').textContent = L.parts[part].title;
+    $('pnext').textContent = 'Slide ' + (slide + 1) + ' of ' + L.slides.length + (L.slides[slide].optional ? ' · optional' : '');
+    $('clock').textContent = (rem < 0 ? '+' : '') + MI.fmt(Math.abs(rem));
+    var cls = rem < 0 ? 'over' : (rem < 60 ? 'warn' : '');
+    $('clock').className = cls; $('big').className = (bigOn ? 'show ' : '') + cls;
+    $('bigclock').textContent = (rem < 0 ? '+' : '') + MI.fmt(Math.abs(rem)); $('bigtitle').textContent = L.parts[part].title;
+    $('fill').style.width = Math.min(100, totalElapsed() / 54) + '%';
+  }
+  function cmd(c) {
+    switch (c.cmd) {
+      case 'next': go(1); break; case 'prev': go(-1); break;
+      case 'toggle': running ? pauseClock() : startClock(); break;
+      case 'add': extra[part] = (extra[part] || 0) + (c.secs || 60); break;
+      case 'skipOptional': skipOptional(); break;
+      case 'big': bigOn = !bigOn; break;
+      case 'goto': showSlide(c.slide); break;
+      case 'nextPart': var i = L.slides.findIndex(function (s, k) { return k > slide && s.part != null && s.part > part; }); if (i > -1) showSlide(i); break;
+      case 'reset': pauseClock(); banked = 0; totalBase = 0; extra = {}; part = 0; showSlide(0); break;
+    }
+    push(); tick();
+  }
+  addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight' || e.key === 'PageDown') cmd({ cmd: 'next' });
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') cmd({ cmd: 'prev' });
+    else if (e.key === ' ') { e.preventDefault(); cmd({ cmd: 'toggle' }); }
+    else if (e.key === 'f' || e.key === 'F') cmd({ cmd: 'big' });
+    else if (e.key === 'h' || e.key === 'H') document.body.classList.toggle('hide');
+  });
+
+  fetch('/data/' + lessonId + '.public.json').then(function (r) { return r.json(); }).then(function (data) {
+    L = data; document.title = L.title + ' | Lesson screen';
+    conn = MI.connect(room, 'screen', function (m) { if (m.type === 'cmd') cmd(m); else if (m.type === 'remotes') document.body.classList.toggle('paired', m.n > 0); }, function (ok) {
+      $('pairmsg').innerHTML = ok ? 'on <u>' + location.host + '/remote.html</u>' : 'reconnecting…'; $('pair').classList.toggle('on', ok); if (ok) push();
+    });
+    showSlide(0); setInterval(function () { tick(); }, 250); setInterval(push, 1000);
+  });
+})();
+</script></body></html>

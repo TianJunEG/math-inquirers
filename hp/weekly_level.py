@@ -14,8 +14,15 @@ def first_line(t):
 
 wb = texts(WB); tg = texts(TG); fl = [first_line(t) for t in wb]
 starts = {}
+# Lesson start: first page (not the journal) whose first lines, in reading order (not -layout), contain "Lesson N".
+# -layout can put a side banner first ("START HERE ..." in P2, "SEQUENCES" in P6), and some start pages put the
+# label after the title (P6 Lesson 3: "NEGATIVE NUMBERS Lesson 3"), so the label is not always the first line.
+def head_text(path, i):
+    t = subprocess.run(['pdftotext', '-f', str(i + 1), '-l', str(i + 1), path, '-'], capture_output=True, text=True).stdout
+    return ' '.join([l.strip() for l in t.splitlines() if l.strip()][:6])
 for i, f in enumerate(fl):
-    m = re.match(r'Lesson (\d+)\b', f)
+    if f.startswith('My Inquiry Journal'): continue
+    m = re.search(r'\bLesson\s+(\d+)\b', head_text(WB, i))
     if m and int(m.group(1)) not in starts: starts[int(m.group(1))] = i
 journal = [i for i, f in enumerate(fl) if f.startswith('My Inquiry Journal')]
 cert = [i for i, f in enumerate(fl) if f.startswith('CERTIFICATE')]

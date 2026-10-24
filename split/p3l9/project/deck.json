@@ -2,12 +2,13 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-22T00:32:36Z"
+  "at": "2026-10-22T03:41:49Z"
  },
  "lists": "css",
  "title": "Math Inquirers P3: Lesson 9 – Measure and Money Masters",
  "order": [
   "p3l9-title",
+  "p3l9-tool",
   "p3l9-warmcheck",
   "p3l9-warm1",
   "p3l9-warm2",
@@ -23,7 +24,6 @@
   "p3l9-ws1ans",
   "p3l9-teach2",
   "p3l9-we2",
-  "p3l9-teach24",
   "p3l9-ws2",
   "p3l9-ws2ans",
   "p3l9-stretch",

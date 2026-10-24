@@ -1,0 +1,3478 @@
+{
+ "schema_version": 1,
+ "id": "l1-t3-03",
+ "level": 1,
+ "term": 3,
+ "lesson": 23,
+ "lesson_in_term": 3,
+ "title": "Time Passes",
+ "big_idea": "Time can be added: one hour later, half an hour later",
+ "child_idea": "A clock can look forward. One hour later, the short hand moves on one number. Half an hour later, the long hand goes half way round.",
+ "skill": "Measuring how long",
+ "spine": {
+  "main": "backwards",
+  "also": [
+   "draw"
+  ],
+  "role": "A",
+  "reason": "From the end time, count back to find the start; a time line shows the jumps."
+ },
+ "ages": "6-8",
+ "moe": {
+  "strand": "Measurement: Time (1 hour and half an hour)",
+  "topics": [
+   "Telling time to 5 minutes (Primary 1, Measurement, p. 32)",
+   "Time in hours and half hours: how long something lasts, and the time 1 hour or half an hour later or earlier, with am and pm (Primary 1, p. 32)",
+   "Start, finish and any duration (Primary 3, p. 36)"
+  ],
+  "note": "Strand label for the tutor only. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only. The time 1 hour or half an hour after an o'clock or half past start, how long between two clocks that are 1 hour or half an hour apart, and finding the start of a 1-hour or half-hour event are Primary 1 work (Primary 1 school papers set them in the last term of the year): Start here stays inside that. Think harder adds starts at quarter times (4:15, 9:45), the half-hour step that changes the hour, counting back to a start, and a timetable. Go further is beyond Primary 1: a trip in two stages (1 hour and then half an hour, which is 90 minutes) found backwards, a time that crosses noon from am to pm, and comparing two starts that share one end (duration in general is Primary 3, p. 36). Owner decision, 22 and 23 Oct 2026: strong content with scaffolding, said plainly to families; every lesson names a beyond item. Do not describe the lesson as MOE-aligned. Time words follow the Primary 1 paper patterns of 23 Oct: o'clock and half past in words, every time also as digits (7:30), times to 5 minutes as digits only, am and pm with no full stops and a space before (8:30 am). Quarter past and quarter to are tutor words only and stay out of the child pages. Contest tag (tutor only): durations, find the start, a trip in stages, crossing noon."
+ },
+ "contest_moves": [
+  "add 1 hour or half an hour to a time",
+  "count back from the end to find the start",
+  "a plan of three jobs found backwards (1 hour, half an hour, half an hour)",
+  "a time that crosses noon"
+ ],
+ "contest_where": "Think harder, Go further and the Investigation",
+ "objectives": [
+  "Find the time 1 hour or half an hour after an o'clock or half past start, on the clock and on a time line.",
+  "Say how long something lasts from a start clock and an end clock that are 1 hour or half an hour apart.",
+  "See that the hour changes when the long hand passes 12, and that 1 hour later keeps the long hand where it was.",
+  "Think harder: start at quarter times, add half an hour across the hour, and find the start by counting back.",
+  "Go further: a trip in two stages found backwards, a time that crosses noon (am to pm), and two starts that share one end."
+ ],
+ "joining_cold": {
+  "remember": [
+   "Read a clock at o'clock and half past (taught again with three clocks)",
+   "Count in 5s round the clock to 60, so that 6 fives are half an hour (taught again with a clock picture)",
+   "A jump of ten on a number line (Term 1 Lesson 6, taught again): an hour is a jump on a time line"
+  ],
+  "assumes": "Only counting to 20 and the cut-out clock from the first lesson of Term 3 (or a real clock, or a paper plate clock). Nothing from the lessons before is needed: the warm-up reads o'clock and half past again, counts in 5s round the clock, and shows a jump on a line with a picture. Words used again: short hand (hour), long hand (minutes), o'clock, half past.",
+  "holiday_topics_revisited": [
+   "Skip counting in 5s (Count with the Frog)"
+  ],
+  "safe_to_miss": false,
+  "note": "Not the easiest lesson to miss: Mi's Challenge Quest in the last lesson of Term 3 has a gate on this idea (the time 1 hour or half an hour later). A child who misses it watches the recording and does workbook pages 1 and 2 before the Quest. A child who joins here without the two clock lessons can follow, because the warm-up reads the clock again and Start here uses o'clock and half past only."
+ },
+ "materials": {
+  "child": [
+   "Your Term 3 workbook, pages 1 to 5",
+   "The cut-out clock from the first lesson of Term 3: 2 clock faces, 3 short hour hands and 3 long minute hands, kept in their envelope. A real clock also works",
+   "No clock pieces? A paper plate with 1 to 12 written round the edge and two strips of card for hands",
+   "A pencil, a rubber and spare paper"
+  ],
+  "tutor": [
+   "The slide deck",
+   "A cut-out or real clock to show on camera, if you wish",
+   "A visible clock"
+  ],
+  "kit_pages": [
+   "No new kit page this lesson. Keep the clock pieces from the first lesson of Term 3 in their envelope (the clock comes back in the Quest)."
+  ],
+  "ruler": false,
+  "notes": "No ruler is needed. Nothing needs to be bought: everything can be found at home. No pins, fasteners, matches, toothpicks or anything sharp: the clock hands are loose paper strips that lie flat on the face. Nobody cuts during the lesson; a grown-up cut the pieces before the first lesson of Term 3.",
+  "kit_contract": [
+   {
+    "piece": "clock faces (from the first lesson of Term 3)",
+    "supplied": 2,
+    "max_used": 2,
+    "used_by": [
+     "explore",
+     "mini"
+    ]
+   },
+   {
+    "piece": "short hour hands",
+    "supplied": 3,
+    "max_used": 2,
+    "used_by": [
+     "explore",
+     "mini"
+    ]
+   },
+   {
+    "piece": "long minute hands",
+    "supplied": 3,
+    "max_used": 2,
+    "used_by": [
+     "explore",
+     "mini"
+    ]
+   }
+  ]
+ },
+ "timing": {
+  "parts": [
+   {
+    "id": "opening",
+    "title": "Opening",
+    "start": 0,
+    "end": 2
+   },
+   {
+    "id": "remember",
+    "title": "Remember warm-up",
+    "start": 2,
+    "end": 8
+   },
+   {
+    "id": "sneak",
+    "title": "Sneak-peek puzzles",
+    "start": 8,
+    "end": 12
+   },
+   {
+    "id": "explore",
+    "title": "Explore",
+    "start": 12,
+    "end": 23
+   },
+   {
+    "id": "mini",
+    "title": "Mini-lesson",
+    "start": 23,
+    "end": 34
+   },
+   {
+    "id": "break",
+    "title": "Brain break",
+    "start": 34,
+    "end": 38
+   },
+   {
+    "id": "work",
+    "title": "Workbook",
+    "start": 38,
+    "end": 70
+   },
+   {
+    "id": "talk",
+    "title": "Talk time",
+    "start": 70,
+    "end": 76
+   },
+   {
+    "id": "exit",
+    "title": "Exit ticket",
+    "start": 76,
+    "end": 82
+   },
+   {
+    "id": "look",
+    "title": "Look-back",
+    "start": 82,
+    "end": 85
+   },
+   {
+    "id": "flex",
+    "title": "Flex time and goodbye",
+    "start": 85,
+    "end": 90
+   }
+  ],
+  "optional_slide": "s-opt",
+  "include_rules": false,
+  "notes": "Opening is 2 minutes (the routine and rules were taught in the first lesson of Term 1). Explore has 11 minutes on the kit clock. The mini-lesson has 11 because it shows the hour jump, the half-hour jump, counting back (with one try), reading two clocks and a start-lasts-ends table. The workbook has 32 minutes: Start here takes a middle child about 17 minutes, so pages 3 to 5 are for home for most children. The last 5 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time.",
+  "skip_order": [
+   "Start with: shorten Explore round 3 (what did we notice) to one question",
+   "Then: cut the second pair on the How long? slide (s-m4)",
+   "Then: take the extra minutes from the flex time"
+  ]
+ },
+ "sneak_peek": {
+  "q1": "A clock shows 4 o'clock. What time will it show 1 hour later? Write the time.",
+  "q2": "Mei starts to read at half past 8. She reads for half an hour. What time does she stop? I know because ___.",
+  "a1": "5:00 (5 o'clock)",
+  "a2": "9:00 (9 o'clock). Half an hour is 30 minutes, and 8:30 and 30 minutes more is 9:00.",
+  "val1": 5
+ },
+ "rec": {
+  "opening": {
+   "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook and your cut-out clock. Pause or rewind any time.",
+   "action": "Gather your workbook, clock pieces, pencil and paper. Press play when ready."
+  },
+  "remember": {
+   "say": "Recording: join in! Look at each clock and say the time out loud. Pause if you need longer.",
+   "action": "Play along. Say each time out loud before the video does."
+  },
+  "sneak": {
+   "say": "Recording: pause now and try both puzzles on your paper. Guessing is fine. Press play for the next part.",
+   "action": "Pause. Try both puzzles on your own paper. A guess is fine."
+  },
+  "explore": {
+   "say": "Recording: pause now. Set your clock, then move the hands to show one hour later, and half an hour later. Press play when you have tried.",
+   "action": "Pause. Set your clock, move the hands one hour later, then half an hour later."
+  },
+  "mini": {
+   "say": "Recording: keep watching and copy the examples. Rewind if you miss a step.",
+   "action": "Watch and copy the examples. Rewind any step you missed."
+  },
+  "break": {
+   "say": "Recording: stand up and join in! Make clock hands with your arms.",
+   "action": "Stand up. Make the clock hands with your arms for each time."
+  },
+  "work": {
+   "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
+   "action": "Pause. Do page 1, then play to check. Then page 2. Then choose a page to try."
+  },
+  "talk": {
+   "say": "Recording: pause. Tell a grown-up who is right, and check it on your clock.",
+   "action": "Pause. Explain your answer to someone at home, and check it on your clock."
+  },
+  "exit": {
+   "say": "Recording: pause and do the exit ticket on your own. Then press play to check it.",
+   "action": "Pause. Do the exit ticket alone, then play to check it."
+  },
+  "look": {
+   "say": "Recording: pause and fill in your look-back box. You can pass.",
+   "action": "Pause. Fill in the look-back box, or pass."
+  },
+  "flex": {
+   "say": "Recording: well done for finishing! Show a grown-up one thing you found out.",
+   "action": "Show a grown-up your workbook and tell them one thing you found out."
+  }
+ },
+ "slides": [
+  {
+   "id": "s-title",
+   "part": "opening",
+   "kind": "title",
+   "title": "Time Passes",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "TODAY WE WILL",
+     "items": [
+      "Add an hour or half an hour to a time."
+     ]
+    }
+   ],
+   "note": "Lesson 3 of Term 3, 90 minutes. Objective: find the time 1 hour or half an hour after a start time on the clock and on a time line, say how long between two clocks, and find the start by counting back. Plain statement for families: adding 1 hour or half an hour from an o'clock or half past start is Primary 1 work; starts at quarter times, a trip in two stages and a time that crosses noon go past the school Primary 1 syllabus on purpose. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 23, mini-lesson 23 to 34, brain break 34 to 38, workbook 38 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Say the recording notice in one line: you and the screen only; a child may keep the camera off.",
+   "subtitle": "Later by an hour, later by half an hour",
+   "mascot": {
+    "size": "l",
+    "say": "Hi, I'm Mi. Let's notice, test and explain why!"
+   }
+  },
+  {
+   "id": "s-rem1",
+   "part": "remember",
+   "kind": "light",
+   "title": "Warm-up: read the clock",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Say the time. Short hand: the hour. Long hand: the minutes."
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 3,
+        "m": 0
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 6,
+        "m": 30
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 12,
+        "m": 0
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Three clocks: 3 o'clock, half past 6 and 12 o'clock. Ask for each in turn: what time does it show? Long hand on 12 means o'clock; long hand on 6 means half past; the short hand names the hour (for half past 6 it sits half way between 6 and 7). Children answer aloud or with fingers. No writing, no marks. A child who is unsure points to the long hand first, then the short hand. Joining cold: this re-teaches o'clock and half past with nothing but the picture.",
+   "mascot": {
+    "size": "s",
+    "say": "Take your time!"
+   }
+  },
+  {
+   "id": "s-rem2",
+   "part": "remember",
+   "kind": "light",
+   "title": "Count in 5s round the clock",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 12,
+        "m": 0
+       }
+      ],
+      [
+       {
+        "t": "chip",
+        "text": "Point to each number and say the minutes."
+       },
+       {
+        "t": "numrow",
+        "items": [
+         5,
+         10,
+         15,
+         20,
+         25,
+         30,
+         35,
+         40,
+         45,
+         50,
+         55,
+         60
+        ]
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Count in 5s round the clock, pointing to the numbers 1 to 12 on the face: 5 minutes at 1, 10 at 2, 15 at 3, and so on to 60 at 12. Ask: how many fives to get all the way round (12); how many minutes is half way round (30, at the 6). This is Term 1 Lesson 4 (skip counting in 5s) taught again. A child who has not counted in 5s counts along the number row on the slide. Twelve steps of 5 minutes make 1 hour; six steps make half an hour."
+  },
+  {
+   "id": "s-rem3",
+   "part": "remember",
+   "kind": "light",
+   "title": "Jump on a line",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "number_line",
+     "start": 30,
+     "end": 50,
+     "step": 1,
+     "label_every": 10,
+     "marks": [
+      34
+     ],
+     "hide": [
+      44
+     ],
+     "jumps": [
+      [
+       34,
+       44,
+       "+10"
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Start at 34. Jump 10. Where do you land?"
+    }
+   ],
+   "note": "A tens jump on a number line (Term 1 Lesson 6, taught again). Ask: where do I land from 34 with a jump of 10 (44); from 52 with a jump of 10 (62). Then say: on a clock, one hour is one jump too; today we jump on a time line. A child who is unsure counts ten ticks along the line with a finger, or counts on in tens: 34, 44. Children answer aloud. No writing."
+  },
+  {
+   "id": "s-sneak",
+   "part": "sneak",
+   "kind": "light",
+   "title": "Sneak-peek puzzles",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Ideas we have not learnt yet. A guess is a great start. Nobody is marked."
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 1: anyone can try",
+        "items": [
+         "A clock shows 4 o'clock.",
+         "What time will it show 1 hour later? Write the time."
+        ]
+       },
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 4,
+        "m": 0,
+        "size": "s"
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 2: think",
+        "items": [
+         "Mei starts to read at half past 8.",
+         "She reads for half an hour.",
+         "What time does she stop? I know because ___."
+        ]
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Puzzle 1 (4 o'clock, 1 hour later: 5:00) is an access question: any child can move the clock on by one number. Puzzle 2 is a thinking question on the lesson idea: half past 8 and half an hour more is 9 o'clock, not 8:60 and not 9:30. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: 5:00; 9:00. Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
+  },
+  {
+   "id": "s-explore1",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: one hour later",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 1,
+        "m": 0
+       }
+      ],
+      [
+       {
+        "t": "list",
+        "ordered": true,
+        "items": [
+         "Set your clock to 1 o'clock.",
+         "A film starts now. It lasts 1 hour.",
+         "Move the hands to show when it ends."
+        ]
+       },
+       {
+        "t": "chip",
+        "text": "Which hand moved? Which hand stayed?"
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Round 1, about 4 minutes. Children use their cut-out clock (a face, one short hour hand, one long minute hand; a real clock or a paper plate clock is fine). Set 1 o'clock: short hand on 1, long hand on 12. A film lasts 1 hour: they move the hands to show the end. Ask what time it shows now (2 o'clock, 2:00), then which hand moved (the short hand, on by 1 number) and which stayed (the long hand, on 12). Then do half past 1 with 1 hour later (2:30). The slide shows only the start clock: the end is never on the slide. Do not name a child with a wrong answer. A child with no clock pieces uses a real clock or draws the hands."
+  },
+  {
+   "id": "s-explore2",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: half an hour later",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 1,
+        "m": 0
+       }
+      ],
+      [
+       {
+        "t": "list",
+        "ordered": true,
+        "items": [
+         "Set your clock to 1 o'clock.",
+         "A game lasts half an hour. Move the hands to show when it ends.",
+         "The game goes on for another half an hour. Move the hands again."
+        ]
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Round 2, about 5 minutes. From 1 o'clock, half an hour later is half past 1: the long hand goes half way round to the 6 (30 minutes) and the short hand sits half way between 1 and 2. Another half an hour later is 2 o'clock: the long hand goes the rest of the way round to the 12 and the short hand is now on 2. Ask: where is the long hand now; where is the short hand; what happened to the short hand when the long hand passed 12 (it moved on to the next number, the hour changed). The loose hands lie flat, so check the short hand sits between the numbers at half past. Answers: 1:30 then 2:00. The numbers differ from the sneak-peek puzzle."
+  },
+  {
+   "id": "s-explore3",
+   "part": "explore",
+   "kind": "light",
+   "title": "What did we notice?",
+   "blocks": [
+    {
+     "t": "list",
+     "items": [
+      "One hour later: which hand moved? Which hand stayed?",
+      "Half an hour later: where did the long hand go?",
+      "What happened to the short hand when the long hand passed 12?"
+     ]
+    }
+   ],
+   "note": "Take one or two answers from volunteers. Key ideas: one hour later keeps the long hand where it was and moves the short hand on by one number; half an hour later moves the long hand half way round (30 minutes); when the long hand passes 12, the hour changes. Repeat a child answer in your own words so the recording picks it up. Do not give the rule before the children say it."
+  },
+  {
+   "id": "s-m1",
+   "part": "mini",
+   "kind": "light",
+   "title": "One hour later",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 10,
+        "m": 0,
+        "digital": true,
+        "size": "s"
+       }
+      ],
+      [
+       {
+        "t": "say",
+        "text": "+ 1 hour"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 11,
+        "m": 0,
+        "digital": true,
+        "size": "s"
+       }
+      ]
+     ],
+     "weights": [
+      4,
+      3,
+      4
+     ]
+    },
+    {
+     "t": "card",
+     "head": "NOTICE",
+     "items": [
+      "The short hand moves on 1 number.",
+      "The long hand stays on the 12."
+     ]
+    }
+   ],
+   "note": "Worked example: it is 10 o'clock and a job lasts 1 hour. One hour later it is 11 o'clock. The short hand moves on 1 number (10 to 11); the long hand stays on 12. Say it both ways: 10 o'clock, then 11 o'clock; digits 10:00 and 11:00. The digits show the same time as the clock. Then ask a new one on the children's clocks: it is 12 o'clock and a film lasts 1 hour; what time does it end (1:00: after 12 the numbers go round to 1). Link to Explore: this is what the hands did on your clock."
+  },
+  {
+   "id": "s-m2",
+   "part": "mini",
+   "kind": "light",
+   "title": "Half an hour later",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 10,
+        "m": 0,
+        "digital": true,
+        "size": "s"
+       }
+      ],
+      [
+       {
+        "t": "say",
+        "text": "+ half an hour"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 10,
+        "m": 30,
+        "digital": true,
+        "size": "s"
+       }
+      ]
+     ],
+     "weights": [
+      4,
+      4,
+      4
+     ]
+    },
+    {
+     "t": "visual",
+     "type": "number_line",
+     "start": 0,
+     "end": 2,
+     "step": 1,
+     "label_every": 1,
+     "labels": {
+      "0": "10:00",
+      "1": "10:30"
+     },
+     "hide": [
+      2
+     ],
+     "jumps": [
+      [
+       0,
+       1,
+       "+30 min"
+      ],
+      [
+       1,
+       2,
+       "+30 min"
+      ]
+     ],
+     "size": "m"
+    }
+   ],
+   "note": "Worked example: 10 o'clock and half an hour later is half past 10 (10:30): the long hand goes half way round, 30 minutes. On the time line each jump is half an hour (30 minutes). A second half an hour from 10:30 lands on 11 o'clock (11:00): two half hours make 1 hour, and the hour changes from 10 to 11. The last tick is an empty box while you ask: what is half an hour after half past 10 (11:00)? Children answer aloud. Say that half an hour is the same as 30 minutes."
+  },
+  {
+   "id": "s-m3",
+   "part": "mini",
+   "kind": "light",
+   "title": "Going back",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "number_line",
+     "start": 0,
+     "end": 2,
+     "step": 1,
+     "label_every": 1,
+     "labels": {
+      "1": "5:30",
+      "2": "6:00"
+     },
+     "hide": [
+      0
+     ],
+     "jumps": [
+      [
+       2,
+       0,
+       "back 1 hour"
+      ]
+     ],
+     "size": "m"
+    },
+    {
+     "t": "p",
+     "text": "The film ended at 6 o'clock. It lasted 1 hour. When did it start?"
+    }
+   ],
+   "note": "Counting back to find a start. The film ended at 6 o'clock and lasted 1 hour, so jump back 1 hour on the time line: 5 o'clock (5:00). Ask: when did it start? Say the answer after the children have tried; the box on the line is empty until then. The short hand goes back one number and the long hand stays. This is the move for Think harder: the end and how long are known, the start is the missing number. Answer: 5:00."
+  },
+  {
+   "id": "s-m3b",
+   "part": "mini",
+   "kind": "light",
+   "title": "Your turn: going back",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "number_line",
+     "start": 0,
+     "end": 2,
+     "step": 1,
+     "label_every": 1,
+     "labels": {
+      "0": "9:00",
+      "2": "10:00"
+     },
+     "hide": [
+      1
+     ],
+     "jumps": [
+      [
+       2,
+       1,
+       "back half an hour"
+      ]
+     ],
+     "size": "m"
+    },
+    {
+     "t": "p",
+     "text": "The class ended at 10 o'clock. It lasted half an hour. When did it start?"
+    },
+    {
+     "t": "chip",
+     "text": "Write the start time on your paper."
+    }
+   ],
+   "note": "Your turn, one try at going back. The class ended at 10 o'clock and lasted half an hour, so jump back half an hour (one tick on this line) to 9:30. Children write the start time on their own paper; wait 10 seconds before helping. Read the answer aloud afterwards: 9:30. Nobody holds paper up. A child who writes 9:00 went back 1 hour; a child who writes 10:30 added instead of going back: show it on the clock. Answer: 9:30."
+  },
+  {
+   "id": "s-m4",
+   "part": "mini",
+   "kind": "light",
+   "title": "How long?",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 7,
+        "m": 0,
+        "digital": "A start",
+        "size": "m"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 8,
+        "m": 0,
+        "digital": "A end",
+        "size": "m"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 7,
+        "m": 0,
+        "digital": "B start",
+        "size": "m"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "clock",
+        "h": 7,
+        "m": 30,
+        "digital": "B end",
+        "size": "m"
+       }
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "How long does each one last?"
+    }
+   ],
+   "note": "Two pairs of clocks. A starts at 7 o'clock and ends at 8 o'clock: the short hand moved on 1 number and the long hand did not move, so it lasted 1 hour. B starts at 7 o'clock and ends at half past 7: the long hand went half way round, so it lasted half an hour. Ask: how long does A last; how long does B last. Say the answers after the children have tried. A child who is unsure counts the 5-minute steps the long hand makes (12 steps is 1 hour, 6 steps is half an hour)."
+  },
+  {
+   "id": "s-m5",
+   "part": "mini",
+   "kind": "light",
+   "title": "Starts, lasts, ends",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "table",
+     "head": [
+      "Job",
+      "Starts",
+      "Lasts",
+      "Ends"
+     ],
+     "rows": [
+      [
+       "Tea",
+       "3:00",
+       "half an hour",
+       "3:30"
+      ],
+      [
+       "Games",
+       "9:00",
+       "1 hour",
+       "[]"
+      ],
+      [
+       "Craft",
+       "11:00",
+       "half an hour",
+       "[]"
+      ]
+     ],
+     "col_w": [
+      2,
+      2,
+      3,
+      2
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Your turn: find the end of Games and Craft. Write on your paper."
+    }
+   ],
+   "note": "A start, lasts, ends table. The first row is worked: tea starts at 3:00 and lasts half an hour, so it ends at 3:30. Your turn: games start at 9:00 and last 1 hour (ends 10:00); craft starts at 11:00 and lasts half an hour (ends 11:30). Children write the two ends on their own paper; walk the cameras and wait 10 seconds before helping. Nobody holds paper up. The next slide shows the filled table and children tick their own work. Answers: 10:00; 11:30."
+  },
+  {
+   "id": "s-m5a",
+   "part": "mini",
+   "kind": "light",
+   "title": "Check: starts, lasts, ends",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "table",
+     "head": [
+      "Job",
+      "Starts",
+      "Lasts",
+      "Ends"
+     ],
+     "rows": [
+      [
+       "Tea",
+       "3:00",
+       "half an hour",
+       "3:30"
+      ],
+      [
+       "Games",
+       "9:00",
+       "1 hour",
+       "10:00"
+      ],
+      [
+       "Craft",
+       "11:00",
+       "half an hour",
+       "11:30"
+      ]
+     ],
+     "col_w": [
+      2,
+      2,
+      3,
+      2
+     ]
+    }
+   ],
+   "note": "Read the two answers aloud so a child watching the recording can tick their own work: games end at 10:00 and craft ends at 11:30. Never ask a child to show a wrong answer to the group. A child who wrote 9:30 for games added half an hour instead of 1 hour: show it on the clock."
+  },
+  {
+   "id": "s-break",
+   "part": "break",
+   "kind": "dark",
+   "title": "Clock arms",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Stand up. Make a clock with your arms."
+    },
+    {
+     "t": "p",
+     "text": "One arm points up for the 12. The other arm is the short hand."
+    },
+    {
+     "t": "p",
+     "text": "Sip some water."
+    }
+   ],
+   "note": "Four minutes. Stand up on camera with a little clear space. Call times and children make the hands with their arms: one arm is the long hand, one is the short hand. Call 12 o'clock (both arms up), 3 o'clock (long arm up, short arm out to the side), 6 o'clock (long arm up, short arm down), 9 o'clock (long arm up, short arm out the other side), then half past 6 (long arm down, short arm half way between 6 and 7). Then call one hour later from 3 o'clock. No equipment, no running. A child may stay seated and use fingers. Do not give prizes or compare children."
+  },
+  {
+   "id": "s-ws1",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 1: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 1 to 3. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ],
+     "short": true,
+    "vw": 190
+    }
+   ],
+   "note": "Read questions 1 to 3 aloud. Children work on their own with their clock; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: a class starts at 8 o'clock and lasts 1 hour; draw the hands on the empty clock and write the end. Question 2: read the start clock; the film lasts 1 hour. Question 3: Ali swims from 8:30 am for 1 hour."
+  },
+  {
+   "id": "s-ws1ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 1",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 9:00 (short hand on 9, long hand on 12); Q2 3:00; Q3 9:30 am."
+  },
+  {
+   "id": "s-ws2",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 2: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Question 4. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S4"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read question 4 aloud: it is 6 o'clock now; which of three clocks shows half an hour later? The clocks have their own slide so that the hands are large. Children may use their clock to check. Wait 10 seconds before helping. Question 5 is on the next slide and question 6 on the one after."
+  },
+  {
+   "id": "s-ws2c",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 2: question 5",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Question 5. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S5"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Question 5: two clocks show when the painting starts and ends; how long is it? Read the question aloud and say the two times (10:30 and 11:30) if a child cannot see the hands. Children may use their clock to check. Wait 10 seconds before helping."
+  },
+  {
+   "id": "s-ws2b",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 2: question 6",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Question 6. Fill in the time each job ends."
+    },
+    {
+     "t": "visual",
+     "type": "table",
+     "head": [
+      "Job",
+      "Starts",
+      "Lasts",
+      "Ends"
+     ],
+     "rows": [
+      [
+       "Swimming",
+       "3:00",
+       "1 hour",
+       "[]"
+      ],
+      [
+       "Reading",
+       "8:00",
+       "half an hour",
+       "[]"
+      ],
+      [
+       "Painting",
+       "9:00",
+       "half an hour",
+       "[]"
+      ]
+     ],
+     "col_w": [
+      3,
+      2,
+      3,
+      2
+     ]
+    }
+   ],
+   "note": "Question 6 is on its own slide so that the table is big enough to read. Read it row by row: swimming starts at 3:00 and lasts 1 hour; reading starts at 8:00 and lasts half an hour; painting starts at 9:00 and lasts half an hour. Children fill in the Ends column in their workbook. Use the clock to check one row if a child is unsure. Wait 10 seconds before helping."
+  },
+  {
+   "id": "s-ws2ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 2",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S4",
+      "S5",
+      "S6"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud so a child watching the recording can tick their own work. Never ask a child to show a wrong answer to the group. Answers: Q4 clock B (6:30); Q5 1 hour; Q6 4:00, 8:30 and 9:30."
+  },
+  {
+   "id": "s-choice",
+   "part": "work",
+   "kind": "light",
+   "title": "Choose your next page",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Page",
+       "What it is"
+      ],
+      [
+       "Think harder (page 3)",
+       "Starts at 4:15 and 9:45, going back, a zoo timetable"
+      ],
+      [
+       "Go further (page 4)",
+       "A trip in two stages, and crossing noon"
+      ],
+      [
+       "Investigation (page 5)",
+       "Plan the afternoon"
+      ],
+      [
+       "Check",
+       "Finish and check your own work"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Everyone may choose. Not finished? Pages 3 to 5 are for home too."
+    }
+   ],
+   "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 5 minutes."
+  },
+  {
+   "id": "s-talk",
+   "part": "talk",
+   "kind": "light",
+   "title": "Talk and explain",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "TWO CHILDREN SAY",
+     "items": [
+      "One child: half an hour after 7:30 is 8:00.",
+      "Another child: half an hour after 7:30 is 8:30."
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Who is right? How could we check on the clock?"
+    },
+    {
+     "t": "chip",
+     "text": "I think ... because ..."
+    }
+   ],
+   "note": "One minute of talk to the grown-up next to you, or to your screen. Children test it on the clock: set 7:30, move the long hand half an hour on (half way round, from 6 to 12) and see where the short hand lands. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: the first child is right. Half an hour is 30 minutes. From 7:30 the long hand goes from the 6 to the 12 and the short hand moves on to the 8, so it is 8:00. 8:30 is a whole hour after 7:30. Repeat each child answer in your own words for the recording. The two children are in another class: no cast name is given the wrong answer."
+  },
+  {
+   "id": "s-sneakans",
+   "part": "talk",
+   "kind": "light",
+   "title": "Back to the sneak-peek",
+   "blocks": [
+    {
+     "t": "answer",
+     "text": "Puzzle 1: 5:00. Puzzle 2: 9:00. Half past 8 and half an hour more is 9 o'clock."
+    }
+   ],
+   "note": "Reveal both puzzles now. Say: many of you wrote a good reason. Do not read out anyone earlier answer. Puzzle 1: 4 o'clock and 1 hour later is 5 o'clock. Puzzle 2: half past 8 and half an hour later is 9 o'clock, because the long hand goes round to 12 and the short hand moves on to 9. It was the same idea as the two children, with different numbers."
+  },
+  {
+   "id": "s-exit",
+   "part": "exit",
+   "kind": "light",
+   "title": "Exit ticket",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "On your own. No looking back."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ],
+     "short": false
+    }
+   ],
+   "note": "Children answer on page 5. Read E1, E2 and E3 aloud, and the four options of E2 (the figures on the slide are small). Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
+  },
+  {
+   "id": "s-exitans",
+   "part": "exit",
+   "kind": "light",
+   "title": "Check the exit ticket",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: 7:30; option 3, 2:30; clock A (4:30)."
+  },
+  {
+   "id": "s-look",
+   "part": "look",
+   "kind": "lookback",
+   "title": "Look-back",
+   "blocks": [
+    {
+     "t": "lookback"
+    }
+   ],
+   "note": "Three minutes. Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child.",
+   "mascot": {
+    "size": "s",
+    "say": "Take your time. You can pass."
+   }
+  },
+  {
+   "id": "s-end",
+   "part": "flex",
+   "kind": "dark",
+   "title": "Well done, inquirers!",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Show a grown-up one thing you found out today."
+    },
+    {
+     "t": "card",
+     "head": "NEXT LESSON",
+     "items": [
+      "Dollars and Change",
+      "Have ready: the two play-money pages, cut out by a grown-up (29 pieces), and the $1 tokens from Term 2. Keep your clock."
+     ]
+    }
+   ],
+   "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. Remind families that the next lesson needs the two play-money pages cut out by a grown-up (29 pieces: a week's notice, the most cutting of the term) and the $1 tokens from Term 2 Lesson 9, and that the clock stays in its envelope. If the whole class is ahead, show the optional slides and use the Spare-time menu from the tutor guide.",
+   "mascot": {
+    "size": "l",
+    "say": "Great thinking today!"
+   }
+  },
+  {
+   "id": "s-opt",
+   "part": "flex",
+   "kind": "light",
+   "title": "Go further: both ways",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "A game lasts 1 hour. Another game lasts half an hour. Both end at 8:30."
+    },
+    {
+     "t": "p",
+     "text": "Write the time each game started. Who started first?"
+    }
+   ],
+   "note": "Optional, only if you are on time. Both games end at 8:30. The 1-hour game started at 7:30 and the half-hour game started at 8:00, so the 1-hour game started first. The longer a game lasts, the earlier it must start to end at the same time. Take two answers and move on. This links to Go further and the Investigation.",
+   "optional": true
+  },
+  {
+   "id": "s-menu",
+   "part": "flex",
+   "kind": "light",
+   "title": "If we have time: pick one",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Activity",
+       "What we do"
+      ],
+      [
+       "Is it always true?",
+       "One hour later, the long hand stays. Try 12 o'clock too."
+      ],
+      [
+       "Make a puzzle",
+       "Pick a start and how long. Ask when it ends."
+      ],
+      [
+       "Teach it back",
+       "Show a toy why half an hour after half past 5 is 6 o'clock."
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Optional. Everyone may join."
+    }
+   ],
+   "note": "Optional Spare-time menu, used only if the whole class is ahead. Pick one or two activities (3 to 5 minutes each); full tutor lines and answers are in the tutor guide. Never start new content and never name who is ahead. Slow down with how do you know rather than rushing on. These minutes come from the flex buffer and are not part of the 90-minute sum.",
+   "optional": true
+  }
+ ],
+ "script": {
+  "segments": [
+   {
+    "part": "opening",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-title",
+      "s": 15
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Hello, inquirers! Pencil ready, and your cut-out clock on the table. Cameras can be on or off, as you like."
+     },
+     {
+      "k": "SAY",
+      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+     },
+     {
+      "k": "SAY",
+      "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
+     },
+     {
+      "k": "SAY",
+      "text": "Today we look forward on the clock. If a film starts now, when does it end? We add one hour, and we add half an hour."
+     },
+     {
+      "k": "SAY",
+      "text": "Today's tool is Work backwards. Start at the end and undo each step.",
+      "spine": "opening"
+     },
+     {
+      "k": "DO",
+      "text": "Point at the tool on page 1 of the workbook.",
+      "s": 4,
+      "spine": "opening"
+     },
+     {
+      "k": "DO",
+      "text": "Greet the whole group warmly. Do not use children's first names on the recording.",
+      "s": 12
+     },
+     {
+      "k": "NOTE",
+      "text": "Keep this to two minutes. Say the recording statement and the microphone routine in the same words every lesson, for anyone who joined late. The routine and the four inquirer rules were introduced in the first lesson of Term 1: do not re-teach them."
+     },
+     {
+      "k": "NOTE",
+      "text": "Plain statement for families when it comes up: adding 1 hour or half an hour from an o'clock or half past start is Primary 1 work; starts at quarter times, a trip in two stages and a time that crosses noon go beyond Primary 1 on purpose, always with the clock in hand."
+     },
+     {
+      "k": "NOTE",
+      "text": "New here? Say in one minute: our three rule words (notice it, test it, explain why); a guess is fine and you can always pass; after Start here you may choose Think harder, Go further or the Investigation; nobody holds paper to the camera. A child without the cut-out clock uses a real clock or a paper plate clock."
+     }
+    ]
+   },
+   {
+    "part": "remember",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-rem1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Look at the three clocks. The short hand shows the hour. The long hand shows the minutes. Long hand on 12 means o'clock. Long hand on 6 means half past."
+     },
+     {
+      "k": "ASK",
+      "text": "What time does the first clock show?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "The second clock?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "The third clock?",
+      "resp": 12
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem2"
+     },
+     {
+      "k": "SAY",
+      "text": "Now count in fives round the clock. Point to each number on your clock and say the minutes: five, ten, fifteen, all the way round."
+     },
+     {
+      "k": "WORK",
+      "text": "Count in 5s round the clock together, pointing to each number on the clock, to 60.",
+      "s": 35
+     },
+     {
+      "k": "ASK",
+      "text": "How many fives did we count to get all the way round?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Half way round is how many minutes?",
+      "resp": 12
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem3"
+     },
+     {
+      "k": "SAY",
+      "text": "A jump on a line. I start at thirty-four and jump ten."
+     },
+     {
+      "k": "ASK",
+      "text": "Where do I land?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Jump ten from fifty-two. Where do you land?",
+      "resp": 12
+     },
+     {
+      "k": "SAY",
+      "text": "A jump on a clock works the same way. Today we jump on a time line."
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child is unsure on the clock, point to the long hand first (12 or 6), then to the short hand. For counting in fives, count along the number row on the slide. For the jump, count ten ticks along the line with a finger."
+     },
+     {
+      "k": "NOTE",
+      "text": "Answers: 3 o'clock, half past 6, 12 o'clock; 12 fives, 30 minutes; 44, 62. Children answer with a whisper, fingers or hands. Nobody writes. Joining cold: all you need is counting to 20 and the picture."
+     }
+    ]
+   },
+   {
+    "part": "sneak",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-sneak"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked."
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle one. A clock shows 4 o'clock. What time will it show 1 hour later? Write the time."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write the time on their own paper. A clock is fine to use.",
+      "s": 45
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle two. Mei starts to read at half past 8. She reads for half an hour. What time does she stop? I know because blank."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write or draw their answer.",
+      "s": 65
+     },
+     {
+      "k": "SAY",
+      "text": "Keep your paper. Nobody shows it. We will check our own thinking later, at Talk time."
+     },
+     {
+      "k": "NOTE",
+      "text": "Puzzle 1 answer: 5:00. Puzzle 2 answer: 9:00 (not 8:60, not 9:30). Look for good ideas to praise later (a child who moved the clock on, or said half an hour is 30 minutes). Do not write scores or keep a list."
+     }
+    ]
+   },
+   {
+    "part": "explore",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Your clock is the teacher today. Set it to 1 o'clock: short hand on 1, long hand on 12. A film starts now, and it lasts 1 hour. Move the hands to show when it ends."
+     },
+     {
+      "k": "WORK",
+      "text": "Children set 1 o'clock and move the hands one hour later. Tutor scans the cameras and the clocks.",
+      "s": 60
+     },
+     {
+      "k": "ASK",
+      "text": "What time does your clock show now? Which hand moved?",
+      "resp": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Two o'clock. The short hand moved on one number. The long hand stayed on the 12."
+     },
+     {
+      "k": "SAY",
+      "text": "Again. Set half past 1: the long hand on 6, the short hand half way between 1 and 2. The film lasts 1 hour. Move the hands."
+     },
+     {
+      "k": "WORK",
+      "text": "Children set half past 1 and move the hands one hour later.",
+      "s": 55
+     },
+     {
+      "k": "ASK",
+      "text": "What time is it now?",
+      "resp": 15
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2"
+     },
+     {
+      "k": "SAY",
+      "text": "Round two. Set your clock to 1 o'clock. A game lasts half an hour. Move the long hand to show when it ends."
+     },
+     {
+      "k": "WORK",
+      "text": "Children set 1 o'clock and move the hands half an hour later.",
+      "s": 55
+     },
+     {
+      "k": "ASK",
+      "text": "Where is the long hand now? Where is the short hand?",
+      "resp": 20
+     },
+     {
+      "k": "SAY",
+      "text": "Half past 1. The long hand went half way round, 30 minutes. The short hand is half way between 1 and 2. Now the game goes on for another half an hour. Move your hands again."
+     },
+     {
+      "k": "WORK",
+      "text": "Children move the hands another half an hour: from 1:30 to 2:00.",
+      "s": 50
+     },
+     {
+      "k": "ASK",
+      "text": "What time is it now? What happened to the short hand?",
+      "resp": 20
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore3"
+     },
+     {
+      "k": "ASK",
+      "text": "What did you notice? Which hand moved when it was one hour later? What happened to the short hand when the long hand passed the 12?",
+      "resp": 40
+     },
+     {
+      "k": "SAY",
+      "text": "One hour later, the short hand moves on one number and the long hand stays. When the long hand goes past the 12, the hour changes."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child whose short hand sits on 1 at half past 1: show the short hand half way between 1 and 2. A child who moves both hands one hour: the long hand should not move. A child with no clock pieces uses a real clock or draws the hands."
+     },
+     {
+      "k": "NOTE",
+      "text": "Main room only; you cannot see small clocks, so ask children to say what time their clock shows and to tilt the camera if they like. Answers: 2:00, 2:30; 1:30, 2:00. Accept any child who explains with the hands or with the minutes. Do not say the rule before the children do."
+     }
+    ]
+   },
+   {
+    "part": "mini",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-m1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Look. It is 10 o'clock and a job lasts 1 hour. One hour later it is 11 o'clock. The short hand moves on one number and the long hand stays on the 12."
+     },
+     {
+      "k": "ASK",
+      "text": "Your turn on your clock. It is 12 o'clock and a film lasts 1 hour. What time does it end?",
+      "resp": 15
+     },
+     {
+      "k": "SAY",
+      "text": "One o'clock. After 12 the numbers go round to 1 again."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m2"
+     },
+     {
+      "k": "SAY",
+      "text": "Half an hour later. From 10 o'clock, the long hand goes half way round. That is half past 10, or 10:30. Half an hour is 30 minutes. On the time line each jump is half an hour."
+     },
+     {
+      "k": "ASK",
+      "text": "Another half an hour from half past 10. What time do we land on?",
+      "resp": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Eleven o'clock. Two half hours make one hour, and the hour changed."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3"
+     },
+     {
+      "k": "SAY",
+      "text": "We can jump back too. The film ended at 6 o'clock. It lasted 1 hour. To find when it started, jump back one hour."
+     },
+     {
+      "k": "ASK",
+      "text": "When did it start?",
+      "resp": 15
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3b"
+     },
+     {
+      "k": "READ",
+      "text": "Your turn. The class ended at 10 o'clock. It lasted half an hour. When did it start? Write the start time on your paper."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write the start time. Wait 10 seconds before helping.",
+      "s": 35
+     },
+     {
+      "k": "READ",
+      "text": "It started at 9:30. Tick your own work with a tick."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4"
+     },
+     {
+      "k": "SAY",
+      "text": "Two pairs of clocks. Each pair shows when something starts and when it ends. We find how long it lasts."
+     },
+     {
+      "k": "ASK",
+      "text": "How long does A last?",
+      "resp": 15
+     },
+     {
+      "k": "ASK",
+      "text": "How long does B last?",
+      "resp": 15
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m5"
+     },
+     {
+      "k": "SAY",
+      "text": "A table. Tea starts at 3:00 and lasts half an hour, so it ends at 3:30. Your turn. Games start at 9:00 and last 1 hour. Craft starts at 11:00 and lasts half an hour. Write when each one ends."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write the two end times on their own paper. Wait 10 seconds before helping.",
+      "s": 75
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m5a"
+     },
+     {
+      "k": "READ",
+      "text": "Games end at 10:00. Craft ends at 11:30. Tick your own work with a tick."
+     },
+     {
+      "k": "NOTE",
+      "text": "Key words to use every time: later, lasts, starts, ends, half an hour (30 minutes), hour hand, minute hand. Say the time both ways: o'clock or half past in words, then the digits. Do not teach quarter past or quarter to; it is in Think harder as digits only. Do not teach the 24-hour clock or the word clockwise."
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child adds 1 to the minutes (10:01), show 10 o'clock on a clock and move the short hand on by one number. If a child writes 10:60 or 8:60, show the long hand going all the way round to 12. If a child cannot read the end clock, count the 5-minute steps the long hand made."
+     }
+    ]
+   },
+   {
+    "part": "break",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-break"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Stand up and get a sip of water. We make a clock with our arms. One arm is the long hand, one arm is the short hand. Twelve o'clock: both arms up."
+     },
+     {
+      "k": "WORK",
+      "text": "Call 12 o'clock, 3 o'clock, 6 o'clock, 9 o'clock, half past 6, then one hour later from 3 o'clock. Children make the hands with their arms; fingers are fine for a child who sits.",
+      "s": 150
+     }
+    ]
+   },
+   {
+    "part": "work",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "Page 1, Start here. Question 1: the class starts at 8 o'clock. It lasts 1 hour. Draw the hands on the end clock, then write the end time. Question 2: the film starts at the time shown. It lasts 1 hour. What time does it end? Question 3: Ali starts to swim at 8:30 am. He swims for 1 hour. What time does he stop?"
+     },
+     {
+      "k": "WORK",
+      "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
+      "s": 480
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1ans"
+     },
+     {
+      "k": "READ",
+      "text": "Question 1: 9:00. Question 2: 3:00. Question 3: 9:30 am. Tick your own page with a tick."
+     },
+     {
+      "k": "SAY",
+      "text": "After question 3 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2"
+     },
+     {
+      "k": "READ",
+      "text": "Page 2. Question 4: it is 6 o'clock now. Which clock shows half an hour later? Circle A, B or C."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2c"
+     },
+     {
+      "k": "READ",
+      "text": "Question 5: the clocks show when the painting starts and ends. How long does the painting last? Circle one."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2b"
+     },
+     {
+      "k": "READ",
+      "text": "Question 6: fill in the time each job ends. Swimming starts at 3:00 and lasts 1 hour. Reading starts at 8:00 and lasts half an hour. Painting starts at 9:00 and lasts half an hour."
+     },
+     {
+      "k": "WORK",
+      "text": "Page 2, questions 4 to 6.",
+      "s": 540
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2ans"
+     },
+     {
+      "k": "READ",
+      "text": "Question 4: clock B. Question 5: 1 hour. Question 6: 4:00, 8:30, 9:30."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-choice"
+     },
+     {
+      "k": "SAY",
+      "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time. Anything not finished is for home too."
+     },
+     {
+      "k": "MOVE",
+      "text": "Stand and reach up for 30 seconds, then sit down and choose.",
+      "s": 30
+     },
+     {
+      "k": "WORK",
+      "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
+      "s": 240
+     },
+     {
+      "k": "STUCK",
+      "text": "Q1: move the short hand on one number and keep the long hand on 12. Q2: read the short hand, then add one. Q3: the minutes stay 30; the hour goes on by one. Q4: half an hour later from 6 o'clock puts the long hand on the 6. Q5: did the short hand move on a whole number or did the long hand go half way round? Q6: do one row at a time with the clock."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who is still stuck ticks I am still stuck on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp (never a personal phone). You then help in the open session in the next lesson. Never a private message to a child."
+     },
+     {
+      "k": "NOTE",
+      "text": "Think harder has quarter-time starts (4:15, 9:45), counting back to a start and a zoo timetable. Go further has a trip in two stages and a time that crosses noon (beyond Primary 1 on purpose). Do not announce who is on which page. Start here takes a middle child about 17 minutes, so the choice time is short: for most children pages 3 to 5 are for home. Say so plainly, do not skip the answer slides, and take any extra minutes from the flex time."
+     }
+    ]
+   },
+   {
+    "part": "talk",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-talk"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "One child says: half an hour after 7:30 is 8:00. Another child says: half an hour after 7:30 is 8:30. Who is right? How could we check on the clock?"
+     },
+     {
+      "k": "WORK",
+      "text": "Test it on your clock: set 7:30 and move the hands half an hour.",
+      "s": 50
+     },
+     {
+      "k": "WORK",
+      "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
+      "s": 40
+     },
+     {
+      "k": "ASK",
+      "text": "Who would like to share? Volunteers first. A pass is always fine.",
+      "resp": 70
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-sneakans"
+     },
+     {
+      "k": "SAY",
+      "text": "Remember the sneak-peek? Puzzle one: 4 o'clock and one hour later is 5 o'clock. Puzzle two: half past 8 and half an hour later is 9 o'clock."
+     },
+     {
+      "k": "ASK",
+      "text": "Did anyone change their mind while we worked? You can just nod.",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Where did you use Work backwards today?",
+      "resp": 10,
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Listen for the tool being named, not the answer. Volunteers first, a pass is always fine.",
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Model answer: the first child is right. Half an hour is 30 minutes; from 7:30 the long hand goes from the 6 to the 12 and the short hand moves on to 8, so it is 8:00. 8:30 is a whole hour after 7:30. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
+     }
+    ]
+   },
+   {
+    "part": "exit",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-exit"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
+     },
+     {
+      "k": "READ",
+      "text": "E1. The game starts at 6:30. It lasts 1 hour. What time does the game end? E2. It is 2 o'clock. What time is it half an hour later? Choose the correct answer. Option 1: 2:05. Option 2: 2:15. Option 3: 2:30. Option 4: 3:00. Write its number in the bracket. E3. The class ends at 5 o'clock. It lasted half an hour. Which clock shows when it started? Circle A, B or C.",
+      "s": 60
+     },
+     {
+      "k": "WORK",
+      "text": "Children answer E1 to E3 on their own.",
+      "s": 170
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-exitans"
+     },
+     {
+      "k": "READ",
+      "text": "E1: 7:30. E2: option 3, 2:30. E3: clock A."
+     },
+     {
+      "k": "SAY",
+      "text": "Tick your own ticket with a tick. Well done."
+     },
+     {
+      "k": "NOTE",
+      "text": "Nothing is collected or marked live. Children tick their own ticket. If many children miss one question, spend two minutes on it at the start of the next lesson, in the open session, no names. Do not read out any child result."
+     }
+    ]
+   },
+   {
+    "part": "look",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-look"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+      "spine": "look"
+     },
+     {
+      "k": "WORK",
+      "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+      "s": 90,
+      "spine": "look"
+     }
+    ]
+   },
+   {
+    "part": "flex",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-end"
+     },
+     {
+      "k": "SAY",
+      "text": "Well done, inquirers. Next lesson is Dollars and Change. Please have your Term 3 book, the two play-money pages cut out by a grown-up, and the dollar tokens from Term 2. Keep your clock in its envelope. Goodbye, and thank you to the grown-ups."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-opt",
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Optional, only if you are on time: a game lasts one hour. Another game lasts half an hour. Both end at 6:00. Which game started first?",
+      "optional": true
+     },
+     {
+      "k": "WORK",
+      "text": "Short think time, then take two answers.",
+      "s": 90,
+      "optional": true
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-menu",
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
+      "optional": true
+     },
+     {
+      "k": "NOTE",
+      "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: the 1-hour game started at 5:00 and the half-hour game at 5:30, so the 1-hour game started first. If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+     }
+    ]
+   }
+  ]
+ },
+ "tiers": {
+  "start": [
+   {
+    "id": "S1",
+    "page": 1,
+    "tier": "start",
+    "text": "The class starts at 8 o'clock. It lasts 1 hour. Draw the hands to show when it ends.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Draw the hands on the end clock.",
+      "ans": "short hand on 9, long hand on 12",
+      "val": "9:00"
+     },
+     {
+      "l": "b",
+      "text": "The class ends at ____ .",
+      "ans": "9:00",
+      "val": "9:00"
+     }
+    ],
+    "answer": "9:00; 9:00",
+    "val": [
+     "9:00",
+     "9:00"
+    ],
+    "hint": "The class lasts 1 hour. Move the short hand on one number. The long hand stays on the 12.",
+    "solution": "One hour later, the short hand moves from 8 to 9 and the long hand stays on the 12. So the class ends at 9 o'clock, written 9:00.",
+    "mistakes": [
+     "Moving the long hand as well.",
+     "Drawing the short hand on 8 and the long hand on 9."
+    ],
+    "mins": 3,
+    "visuals": [
+     {
+      "type": "clock",
+      "h": 8,
+      "m": 0,
+      "digital": "start",
+      "size": 100
+     },
+     {
+      "type": "clock",
+      "h": 8,
+      "m": 0,
+      "hide_hands": true,
+      "digital": "end",
+      "size": 100
+     }
+    ]
+   },
+   {
+    "id": "S2",
+    "page": 1,
+    "tier": "start",
+    "text": "The film starts at the time shown. It lasts 1 hour. What time does it end?",
+    "parts": [
+     {
+      "l": "",
+      "text": "The film ends at ____ .",
+      "ans": "3:00",
+      "val": "3:00"
+     }
+    ],
+    "answer": "3:00",
+    "val": [
+     "3:00"
+    ],
+    "hint": "Read the clock first. Then move the short hand on one number.",
+    "solution": "The clock shows 2 o'clock. One hour later the short hand is on 3 and the long hand is still on the 12. The film ends at 3:00.",
+    "mistakes": [
+     "Writing 2:00 (the start).",
+     "Writing 2:01 or 2:10 (adding 1 to the minutes)."
+    ],
+    "mins": 2,
+    "visual": {
+     "type": "clock",
+     "h": 2,
+     "m": 0,
+     "size": 100
+    }
+   },
+   {
+    "id": "S3",
+    "page": 1,
+    "tier": "start",
+    "text": "Ali starts to swim at 8:30 am. He swims for 1 hour. What time does he stop?",
+    "parts": [
+     {
+      "l": "",
+      "text": "He stops at ____ am.",
+      "ans": "9:30 am",
+      "val": "9:30 am"
+     }
+    ],
+    "answer": "9:30 am",
+    "val": [
+     "9:30 am"
+    ],
+    "hint": "The long hand stays on the 6. Only the hour goes on.",
+    "solution": "One hour later is the next hour with the same minutes: 8:30 am and 1 hour is 9:30 am.",
+    "mistakes": [
+     "Writing 8:30 (the start) or 9:00 (half an hour instead of 1 hour).",
+     "Writing 9:30 pm."
+    ],
+    "mins": 2.5
+   },
+   {
+    "id": "S4",
+    "page": 2,
+    "tier": "start",
+    "text": "It is 6 o'clock now. Which clock shows half an hour later?",
+    "parts": [
+     {
+      "l": "",
+      "text": "Circle A, B or C.",
+      "ans": "B",
+      "val": "B",
+      "choices": [
+       "A",
+       "B",
+       "C"
+      ]
+     }
+    ],
+    "answer": "B",
+    "val": [
+     "B"
+    ],
+    "hint": "Half an hour later, the long hand is half way round, on the 6.",
+    "solution": "Half an hour after 6 o'clock is half past 6, 6:30. Clock B has the long hand on the 6 and the short hand half way between 6 and 7. Clock A is 7:00 and clock C is 7:30.",
+    "mistakes": [
+     "Choosing A (1 hour later).",
+     "Choosing C (1 hour and half an hour later)."
+    ],
+    "mins": 3,
+    "visuals": [
+     {
+      "type": "clock",
+      "h": 7,
+      "m": 0,
+      "digital": "A",
+      "size": 100
+     },
+     {
+      "type": "clock",
+      "h": 6,
+      "m": 30,
+      "digital": "B",
+      "size": 100
+     },
+     {
+      "type": "clock",
+      "h": 7,
+      "m": 30,
+      "digital": "C",
+      "size": 100
+     }
+    ]
+   },
+   {
+    "id": "S5",
+    "page": 2,
+    "tier": "start",
+    "text": "The clocks show when the painting starts and ends.",
+    "parts": [
+     {
+      "l": "",
+      "text": "How long? Circle one.",
+      "ans": "1 hour",
+      "val": "1 hour",
+      "choices": [
+       "half an hour",
+       "1 hour"
+      ]
+     }
+    ],
+    "answer": "1 hour",
+    "val": [
+     "1 hour"
+    ],
+    "hint": "Look at the long hand. Did it go half way round, or all the way round?",
+    "solution": "The painting starts at 10:30 and ends at 11:30. The short hand moved on one number and the long hand stayed on the 6, so the painting lasted 1 hour.",
+    "mistakes": [
+     "Circling half an hour because the long hand points to the 6.",
+     "Counting the numbers on the clock instead of the hands."
+    ],
+    "mins": 2.5,
+    "visuals": [
+     {
+      "type": "clock",
+      "h": 10,
+      "m": 30,
+      "digital": "start",
+      "size": 100
+     },
+     {
+      "type": "clock",
+      "h": 11,
+      "m": 30,
+      "digital": "end",
+      "size": 100
+     }
+    ]
+   },
+   {
+    "id": "S6",
+    "page": 2,
+    "tier": "start",
+    "text": "Fill in the time each job ends.",
+    "parts": [],
+    "answer": "4:00; 8:30; 9:30",
+    "val": [
+     "4:00",
+     "8:30",
+     "9:30"
+    ],
+    "hint": "Do one row at a time. Use your clock if you like.",
+    "solution": "Swimming: 3:00 and 1 hour is 4:00. Reading: 8:00 and half an hour is 8:30. Painting: 9:00 and half an hour is 9:30.",
+    "mistakes": [
+     "Writing 4:30 for swimming (half an hour instead of 1 hour).",
+     "Writing 8:00 for reading (the start) or 9:00 for painting (the start)."
+    ],
+    "mins": 3.5,
+    "visual": {
+     "type": "table",
+     "head": [
+      "Job",
+      "Starts",
+      "Lasts",
+      "Ends"
+     ],
+     "rows": [
+      [
+       "Swimming",
+       "3:00",
+       "1 hour",
+       "[]"
+      ],
+      [
+       "Reading",
+       "8:00",
+       "half an hour",
+       "[]"
+      ],
+      [
+       "Painting",
+       "9:00",
+       "half an hour",
+       "[]"
+      ]
+     ],
+     "col_w": [
+      3,
+      2,
+      3,
+      2
+     ]
+    }
+   }
+  ],
+  "think": [
+   {
+    "id": "T1",
+    "page": 3,
+    "tier": "think",
+    "text": "Ravi starts to read at 5:30.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "He reads for 1 hour. He stops at ____ .",
+      "ans": "6:30",
+      "val": "6:30"
+     },
+     {
+      "l": "b",
+      "text": "On another day he reads for half an hour. He stops at ____ .",
+      "ans": "6:00",
+      "val": "6:00"
+     }
+    ],
+    "answer": "6:30; 6:00",
+    "val": [
+     "6:30",
+     "6:00"
+    ],
+    "hint": "The long hand starts on the 6. Where is it after half an hour?",
+    "solution": "One hour after 5:30 is 6:30. Half an hour after 5:30 is 6:00: the long hand goes from the 6 round to the 12, and the short hand moves on to the 6.",
+    "mistakes": [
+     "Writing 5:60 for half an hour later.",
+     "Writing 6:30 for both parts."
+    ],
+    "mins": 4
+   },
+   {
+    "id": "T2",
+    "page": 3,
+    "tier": "think",
+    "text": "Lily starts to paint at 4:15. Kumar starts to paint at 9:45. Each child paints for half an hour.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Lily stops at ____ .",
+      "ans": "4:45",
+      "val": "4:45"
+     },
+     {
+      "l": "b",
+      "text": "Kumar stops at ____ .",
+      "ans": "10:15",
+      "val": "10:15"
+     }
+    ],
+    "answer": "4:45; 10:15",
+    "val": [
+     "4:45",
+     "10:15"
+    ],
+    "hint": "Half an hour is 30 minutes. Count on 15 minutes to the next hour, then 15 more.",
+    "solution": "4:15 and 30 minutes is 4:45. 9:45 and 30 minutes goes past the hour: 15 minutes makes 10:00, and 15 more makes 10:15.",
+    "mistakes": [
+     "Writing 4:30 or 4:75.",
+     "Writing 9:75 or 9:15 for Kumar."
+    ],
+    "mins": 4
+   },
+   {
+    "id": "T3",
+    "page": 3,
+    "tier": "think",
+    "text": "The table shows two lessons at school. The start times are missing. Fill them in.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Art starts at ____ .",
+      "ans": "11:00",
+      "val": "11:00"
+     },
+     {
+      "l": "b",
+      "text": "Story time starts at ____ .",
+      "ans": "12:00",
+      "val": "12:00"
+     }
+    ],
+    "answer": "11:00; 12:00",
+    "val": [
+     "11:00",
+     "12:00"
+    ],
+    "hint": "Use the Ends column. Go back by how long the lesson lasts.",
+    "solution": "Art ends at 12:00 and lasts 1 hour, so it started at 11:00. Story time ends at 12:30 and lasts half an hour, so it started at 12:00. Check: Art ends at 12:00, the same time story time starts.",
+    "mistakes": [
+     "Going back half an hour for Art (11:30).",
+     "Going back 1 hour for story time (11:30)."
+    ],
+    "mins": 4,
+    "visual": {
+     "type": "table",
+     "head": [
+      "Lesson",
+      "Starts",
+      "Lasts",
+      "Ends"
+     ],
+     "rows": [
+      [
+       "Art",
+       "[]",
+       "1 hour",
+       "12:00"
+      ],
+      [
+       "Story time",
+       "[]",
+       "half an hour",
+       "12:30"
+      ]
+     ],
+     "col_w": [
+      3,
+      2,
+      3,
+      2
+     ]
+    }
+   },
+   {
+    "id": "T4",
+    "page": 3,
+    "tier": "think",
+    "text": "The table shows the zoo shows this afternoon.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Which show lasted 1 hour? Circle one.",
+      "ans": "Seals",
+      "val": "Seals",
+      "choices": [
+       "Penguins",
+       "Seals",
+       "Parrots"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "The next show starts straight after the Parrots. It lasts 1 hour. It ends at ____ pm.",
+      "ans": "7:00 pm",
+      "val": "7:00 pm"
+     }
+    ],
+    "answer": "Seals; 7:00 pm",
+    "val": [
+     "Seals",
+     "7:00 pm"
+    ],
+    "hint": "Work out how long each show lasted from its start and end.",
+    "solution": "Penguins 4:00 to 4:30 is half an hour. Seals 4:30 to 5:30 is 1 hour. Parrots 5:30 to 6:00 is half an hour. The next show starts at 6:00 and lasts 1 hour, so it ends at 7:00 pm.",
+    "mistakes": [
+     "Circling Penguins or Parrots (half an hour).",
+     "Writing 6:30 pm for the last show (half an hour)."
+    ],
+    "mins": 4,
+    "visual": {
+     "type": "table",
+     "head": [
+      "Show",
+      "Starts",
+      "Ends"
+     ],
+     "rows": [
+      [
+       "Penguins",
+       "4:00",
+       "4:30"
+      ],
+      [
+       "Seals",
+       "4:30",
+       "5:30"
+      ],
+      [
+       "Parrots",
+       "5:30",
+       "6:00"
+      ]
+     ],
+     "col_w": [
+      3,
+      2,
+      2
+     ]
+    }
+   }
+  ],
+  "go": [
+   {
+    "id": "G1",
+    "page": 4,
+    "tier": "go",
+    "text": "Mi's class has a morning plan. Story time lasts half an hour. Then PE lasts 1 hour. PE ends at 10:45 am. Siti says story time started at 9:45 am.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Is Siti right? Circle Yes or No.",
+      "ans": "No",
+      "val": "No",
+      "choices": [
+       "Yes",
+       "No"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "PE started at ____ am.",
+      "ans": "9:45 am",
+      "val": "9:45 am"
+     },
+     {
+      "l": "c",
+      "text": "Story time started at ____ am.",
+      "ans": "9:15 am",
+      "val": "9:15 am"
+     }
+    ],
+    "answer": "No; 9:45 am; 9:15 am",
+    "val": [
+     "No",
+     "9:45 am",
+     "9:15 am"
+    ],
+    "hint": "Start at the end of the morning and jump back. Go back 1 hour for PE. Then go back half an hour for story time.",
+    "solution": "PE ends at 10:45 am and lasts 1 hour, so it started at 9:45 am. Story time ends when PE starts, at 9:45 am. It lasts half an hour, so it started at 9:15 am. Siti said 9:45 am, which is when story time ended, so she is not right. Check: 9:15, half an hour, 9:45, 1 hour, 10:45.",
+    "mistakes": [
+     "Saying Yes because 9:45 am is the time PE started.",
+     "Going back half an hour for PE (10:15 am).",
+     "Stopping at 9:45 am (when story time ended)."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "number_line",
+     "start": 0,
+     "end": 3,
+     "step": 1,
+     "label_every": 1,
+     "labels": {
+      "2": "",
+      "3": "10:45"
+     },
+     "hide": [
+      0,
+      1
+     ],
+     "jumps": [
+      [
+       0,
+       1,
+       "story|30 min"
+      ],
+      [
+       1,
+       3,
+       "PE|1 hour"
+      ]
+     ],
+     "width": 640
+    }
+   },
+   {
+    "id": "G2",
+    "page": 4,
+    "tier": "go",
+    "text": "Kumar goes to the cinema. A film starts at 11:30 am. Write am or pm after each time.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "One day the film lasts 1 hour. It ends at ____ .",
+      "ans": "12:30 pm",
+      "val": "12:30 pm"
+     },
+     {
+      "l": "b",
+      "text": "Another day the film is longer: 1 hour, then half an hour more. It ends at ____ .",
+      "ans": "1:00 pm",
+      "val": "1:00 pm"
+     }
+    ],
+    "answer": "12:30 pm; 1:00 pm",
+    "val": [
+     "12:30 pm",
+     "1:00 pm"
+    ],
+    "hint": "After 11:30 the hour goes on to 12, and the morning turns into the afternoon.",
+    "solution": "11:30 am and 1 hour is 12:30 pm: the clock goes from 11 to 12 and it is now pm. 1 hour and half an hour is 90 minutes: 12:30 pm and half an hour is 1:00 pm.",
+    "mistakes": [
+     "Writing 12:30 am.",
+     "Writing 12:00 pm for 1 hour and half an hour."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "clock",
+     "h": 11,
+     "m": 30,
+     "digital": true,
+     "ampm": "am"
+    }
+   },
+   {
+    "id": "G3",
+    "page": 4,
+    "tier": "go",
+    "text": "Mei and Ali both finish their homework at 4:30 pm. Mei works for 1 hour. Ali works for half an hour.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Mei starts at ____ pm.",
+      "ans": "3:30 pm",
+      "val": "3:30 pm"
+     },
+     {
+      "l": "b",
+      "text": "Ali starts at ____ pm.",
+      "ans": "4:00 pm",
+      "val": "4:00 pm"
+     },
+     {
+      "l": "c",
+      "text": "Who starts first? Circle one.",
+      "ans": "Mei",
+      "val": "Mei",
+      "choices": [
+       "Mei",
+       "Ali"
+      ]
+     }
+    ],
+    "answer": "3:30 pm; 4:00 pm; Mei",
+    "val": [
+     "3:30 pm",
+     "4:00 pm",
+     "Mei"
+    ],
+    "hint": "Go back from 4:30 pm. Who goes back further?",
+    "solution": "Mei: back 1 hour from 4:30 pm is 3:30 pm. Ali: back half an hour from 4:30 pm is 4:00 pm. 3:30 pm is earlier than 4:00 pm, so Mei started first.",
+    "mistakes": [
+     "Saying Ali started first because his time is bigger.",
+     "Writing 5:30 pm for Mei."
+    ],
+    "mins": 5
+   }
+  ],
+  "investigation": {
+   "id": "I1",
+   "page": 5,
+   "tier": "investigation",
+   "title": "Plan the afternoon",
+   "first": "Start at 12:30 pm. Swim for 1 hour. What time is it now? It is ____ pm.",
+   "text": "Mi has from 12:30 pm to 3:00 pm. Jobs: swim 1 hour, painting 1 hour, story half an hour, snack half an hour. Use each job once at most. Fill the time exactly. Write each start and end.",
+   "lines": 5,
+   "answer": "First: 1:30 pm. From 12:30 pm to 3:00 pm is 2 hours and half an hour. Only 1 hour + 1 hour + half an hour fits: swim and painting plus either the story or the snack, in any order. For example: swim 12:30 to 1:30, painting 1:30 to 2:30, story 2:30 to 3:00. Or swim, painting, snack. There are 2 different sets of jobs. Using all four jobs needs 3 hours, which is too long.",
+   "val": [
+    "2"
+   ],
+   "look_for": "A child who writes a plan whose times join up (each job starts when the one before ends) and ends exactly at 3:00 pm; a child who finds the second set by swapping the story for the snack; a child who says why all four jobs do not fit. Credit any clear reason. Do not mark a child down for stopping at one plan. Any order of the jobs is fine. Do not ask a child how many sets there are: the count is for the tutor.",
+   "mistakes": [
+    "A gap between two jobs.",
+    "Adding up to more than 2 hours and half an hour."
+   ],
+   "mins": 8
+  }
+ },
+ "talk": {
+  "question": "One child says: half an hour after 7:30 is 8:00. Another child says: half an hour after 7:30 is 8:30. Who is right? How could we check on the clock?",
+  "starter": "I think ... because ...",
+  "answer": "The first child is right. Half an hour is 30 minutes, so the long hand goes from the 6 to the 12, and the short hand moves on to the 8: 8:00. 8:30 is a whole hour after 7:30. We can check by moving the hands on the clock.",
+  "look_for": "A child who tests it on the clock, or says half an hour is 30 minutes, or says the hour changes when the long hand passes 12. Not just a name."
+ },
+ "exit": [
+  {
+   "id": "E1",
+   "text": "The game starts at 6:30. It lasts 1 hour. What time does the game end?",
+   "parts": [
+    {
+     "l": "",
+     "text": "The game ends at ____ .",
+     "ans": "8:30",
+     "val": "8:30"
+    }
+   ],
+   "answer": "7:30",
+   "val": [
+    "7:30"
+   ],
+   "solution": "The game starts at 6:30. One hour later is 7:30: the short hand moves on to 7 and the long hand stays on the 6.",
+   "mistakes": [
+    "Writing 6:30.",
+    "Writing 7:00."
+   ]
+  },
+  {
+   "id": "E2",
+   "text": "It is 2 o'clock. What time is it half an hour later? Choose the correct answer. Write its number in the bracket.",
+   "parts": [],
+   "answer": "(3) 2:30",
+   "val": [
+    3
+   ],
+   "solution": "Half an hour is 30 minutes. 2 o'clock and 30 minutes is 2:30.",
+   "mistakes": [
+    "Choosing (4) 3:00, which is 1 hour later.",
+    "Choosing (1) 2:05 or (2) 2:15 after counting 5 or 15 minutes."
+   ],
+   "mcq": {
+    "options": [
+     "2:05",
+     "2:15",
+     "2:30",
+     "3:00"
+    ],
+    "bracket": true
+   }
+  },
+  {
+   "id": "E3",
+   "text": "The class ends at 5 o'clock. It lasted half an hour. Which clock shows when it started?",
+   "parts": [
+    {
+     "l": "",
+     "text": "Circle A, B or C.",
+     "ans": "A",
+     "val": "A",
+     "choices": [
+      "A",
+      "B",
+      "C"
+     ]
+    }
+   ],
+   "answer": "A",
+   "val": [
+    "A"
+   ],
+   "solution": "Half an hour before 5 o'clock is 4:30. Clock A shows 4:30. Clock B shows 5:30 (half an hour after) and clock C shows 4:00 (1 hour before).",
+   "mistakes": [
+    "Choosing B (going forward).",
+    "Choosing C (going back 1 hour)."
+   ],
+   "visuals": [
+    {
+     "type": "clock",
+     "h": 4,
+     "m": 30,
+     "digital": "A",
+     "size": 60
+    },
+    {
+     "type": "clock",
+     "h": 5,
+     "m": 30,
+     "digital": "B",
+     "size": 60
+    },
+    {
+     "type": "clock",
+     "h": 4,
+     "m": 0,
+     "digital": "C",
+     "size": 60
+    }
+   ]
+  }
+ ],
+ "look_back": {
+  "hardest": [
+   "going back to the start",
+   "half an hour across the hour",
+   "reading the clock",
+   "something else"
+  ],
+  "helped": [
+   "my clock",
+   "the time line",
+   "checking my answer",
+   "I was not stuck"
+  ],
+  "next": [
+   "using my clock",
+   "drawing a time line",
+   "checking my answer",
+   "asking a question"
+  ]
+ },
+ "home_practice": [
+  {
+   "id": "H1",
+   "tier": "start",
+   "text": "A film starts at 9:30 am. It lasts 1 hour. It ends at ____ am.",
+   "answer": "10:30",
+   "val": "10:30",
+   "solution": "One hour later is the next hour with the same minutes: 9:30 am and 1 hour is 10:30 am.",
+   "visual": {
+    "type": "clock",
+    "h": 9,
+    "m": 30,
+    "hw": 34
+   }
+  },
+  {
+   "id": "H2",
+   "tier": "start",
+   "text": "The swimming lesson starts at 5 o'clock. It lasts half an hour. It ends at ____ .",
+   "answer": "5:30",
+   "val": "5:30",
+   "solution": "Half an hour after 5 o'clock is half past 5, written 5:30.",
+   "visual": {
+    "type": "clock",
+    "h": 5,
+    "m": 0,
+    "hw": 34
+   }
+  },
+  {
+   "id": "H3",
+   "tier": "think",
+   "text": "Ben starts to paint at 3:45 pm. He paints for half an hour. He stops at ____ pm.",
+   "answer": "4:15",
+   "val": "4:15",
+   "solution": "3:45 and 15 minutes is 4:00. 15 more minutes makes 30 in all, so he stops at 4:15 pm.",
+   "visual": {
+    "type": "clock",
+    "h": 3,
+    "m": 45,
+    "hw": 34
+   }
+  },
+  {
+   "id": "H4",
+   "tier": "go",
+   "text": "Kumar reads from 4:00 pm to 4:30 pm. Aisha reads for the same time. She starts at 6:00 pm. She stops at ____ pm.",
+   "answer": "6:30",
+   "val": "6:30",
+   "solution": "Kumar reads from 4:00 to 4:30, which is half an hour. Aisha reads for half an hour too. Half an hour after 6:00 pm is 6:30 pm."
+  },
+  {
+   "id": "H5",
+   "tier": "start",
+   "rewind_of": "Term 1 Lesson 3",
+   "text": "Arrange these in order. Begin with the smallest number: 72, 27, 70, 17.",
+   "answer": "17, 27, 70, 72",
+   "val": [
+    17,
+    27,
+    70,
+    72
+   ],
+   "solution": "Look at the tens first: 17 has 1 ten, 27 has 2 tens, 70 and 72 have 7 tens. 70 has no ones, so it comes before 72."
+  }
+ ],
+ "online_practice": {
+  "key": "t3l23",
+  "title": "Time Passes",
+  "topic": "One hour and half an hour later",
+  "items": [
+   {
+    "id": "c1",
+    "tier": "core",
+    "type": "fields",
+    "q": "The film starts at 3 o'clock and lasts 1 hour. What time does it end?",
+    "hint": "The short hand moves on one number. The long hand stays on the 12.",
+    "steps": [
+     "The film starts at 3 o'clock.",
+     "One hour later, the short hand is on 4.",
+     "The film ends at 4 : 00."
+    ],
+    "slips": [],
+    "frame": "The film ends at {a} : {b}.",
+    "fields": [
+     {
+      "id": "a",
+      "answer": 4
+     },
+     {
+      "id": "b",
+      "answer": 0,
+      "pad": 2
+     }
+    ],
+    "fig": {
+     "type": "clock",
+     "h": "{h}",
+     "m": 0,
+     "size": "m"
+    },
+    "fig_base": {
+     "type": "clock",
+     "h": 3,
+     "m": 0,
+     "size": "m"
+    },
+    "tpl": {
+     "vars": {
+      "h": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10
+      ]
+     },
+     "derive": {
+      "e": "h+1"
+     },
+     "q": "The film starts at {h} o'clock and lasts 1 hour. What time does it end?",
+     "frame": "The film ends at {a} : {b}.",
+     "answers": {
+      "a": "e",
+      "b": "0"
+     },
+     "pad": {
+      "b": 2
+     },
+     "hint": "The short hand moves on one number. The long hand stays on the 12.",
+     "steps": [
+      "The film starts at {h} o'clock.",
+      "One hour later, the short hand is on {e}.",
+      "The film ends at {e} : 00."
+     ]
+    }
+   },
+   {
+    "id": "c2",
+    "tier": "core",
+    "type": "fields",
+    "q": "The game starts at 5 o'clock and lasts half an hour. What time does it end?",
+    "hint": "The long hand goes half way round, to the 6.",
+    "steps": [
+     "Half an hour is 30 minutes.",
+     "The long hand goes from the 12 to the 6.",
+     "The game ends at 5 : 30."
+    ],
+    "slips": [],
+    "frame": "The game ends at {a} : {b}.",
+    "fields": [
+     {
+      "id": "a",
+      "answer": 5
+     },
+     {
+      "id": "b",
+      "answer": 30
+     }
+    ],
+    "fig": {
+     "type": "clock",
+     "h": "{h}",
+     "m": 0,
+     "size": "m"
+    },
+    "fig_base": {
+     "type": "clock",
+     "h": 5,
+     "m": 0,
+     "size": "m"
+    },
+    "tpl": {
+     "vars": {
+      "h": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11
+      ]
+     },
+     "derive": {},
+     "q": "The game starts at {h} o'clock and lasts half an hour. What time does it end?",
+     "frame": "The game ends at {a} : {b}.",
+     "answers": {
+      "a": "h",
+      "b": "30"
+     },
+     "hint": "The long hand goes half way round, to the 6.",
+     "steps": [
+      "Half an hour is 30 minutes.",
+      "The long hand goes from the 12 to the 6.",
+      "The game ends at {h} : 30."
+     ]
+    }
+   },
+   {
+    "id": "c3",
+    "tier": "core",
+    "type": "fields",
+    "q": "The lesson starts at half past 2 and lasts 1 hour. What time does it end?",
+    "hint": "The long hand stays on the 6. The short hand moves on one number.",
+    "steps": [
+     "The lesson starts at 2 : 30.",
+     "One hour later, the short hand moves on one number.",
+     "The lesson ends at 3 : 30."
+    ],
+    "slips": [],
+    "frame": "The lesson ends at {a} : {b}.",
+    "fields": [
+     {
+      "id": "a",
+      "answer": 3
+     },
+     {
+      "id": "b",
+      "answer": 30
+     }
+    ],
+    "fig": {
+     "type": "clock",
+     "h": "{h}",
+     "m": 30,
+     "size": "m"
+    },
+    "fig_base": {
+     "type": "clock",
+     "h": 2,
+     "m": 30,
+     "size": "m"
+    },
+    "tpl": {
+     "vars": {
+      "h": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10
+      ]
+     },
+     "derive": {
+      "e": "h+1"
+     },
+     "q": "The lesson starts at half past {h} and lasts 1 hour. What time does it end?",
+     "frame": "The lesson ends at {a} : {b}.",
+     "answers": {
+      "a": "e",
+      "b": "30"
+     },
+     "hint": "The long hand stays on the 6. The short hand moves on one number.",
+     "steps": [
+      "The lesson starts at {h} : 30.",
+      "One hour later, the short hand moves on one number.",
+      "The lesson ends at {e} : 30."
+     ]
+    }
+   },
+   {
+    "id": "c4",
+    "tier": "core",
+    "type": "choice",
+    "q": "The class starts at 4:00 and ends at 4:30. How long is the class?",
+    "hint": "Did the short hand move on, or did only the long hand move?",
+    "steps": [
+     "The class starts at 4:00.",
+     "It ends at 4:30. The long hand went half way round.",
+     "The class lasts half an hour."
+    ],
+    "options": [
+     "half an hour",
+     "1 hour"
+    ],
+    "answer": "half an hour",
+    "slips": [
+     {
+      "a": [
+       "1 hour"
+      ],
+      "say": "The long hand went half way round, not all the way round. That is half an hour."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "h": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10
+      ],
+      "k": [
+       0,
+       1
+      ]
+     },
+     "derive": {
+      "e": "h+k",
+      "m": "30-30*k"
+     },
+     "q": "The class starts at {h}:00 and ends at {e}:{m|mm}. How long is the class?",
+     "options": [
+      "half an hour",
+      "1 hour"
+     ],
+     "answer_index": "k",
+     "hint": "Did the short hand move on, or did only the long hand move?",
+     "steps": [
+      "The class starts at {h}:00.",
+      "It ends at {e}:{m|mm}.",
+      "The class lasts {ans}."
+     ]
+    }
+   },
+   {
+    "id": "c5",
+    "tier": "core",
+    "type": "number",
+    "q": "A film lasts half an hour. How many minutes is that?",
+    "hint": "An hour is 60 minutes. Half of 60 is?",
+    "steps": [
+     "1 hour is 60 minutes.",
+     "Half of 60 is 30.",
+     "Half an hour is 30 minutes."
+    ],
+    "answer": 30,
+    "slips": [
+     {
+      "a": [
+       60
+      ],
+      "say": "60 minutes is a whole hour. Half an hour is half of that."
+     },
+     {
+      "a": [
+       15
+      ],
+      "say": "15 minutes is half of half an hour. Half an hour is 30 minutes."
+     }
+    ]
+   },
+   {
+    "id": "t1",
+    "tier": "stretch",
+    "type": "fields",
+    "q": "Ravi starts to read at half past 4. He reads for half an hour. What time does he stop?",
+    "hint": "The long hand goes from the 6 round to the 12. The hour changes.",
+    "steps": [
+     "Half an hour is 30 minutes.",
+     "The long hand goes from the 6 to the 12, so the short hand moves on.",
+     "He stops at 5 : 00."
+    ],
+    "slips": [],
+    "easier": "c3",
+    "frame": "He stops at {a} : {b}.",
+    "fields": [
+     {
+      "id": "a",
+      "answer": 5
+     },
+     {
+      "id": "b",
+      "answer": 0,
+      "pad": 2
+     }
+    ],
+    "fig": {
+     "type": "clock",
+     "h": "{h}",
+     "m": 30,
+     "size": "m"
+    },
+    "fig_base": {
+     "type": "clock",
+     "h": 4,
+     "m": 30,
+     "size": "m"
+    },
+    "tpl": {
+     "vars": {
+      "h": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10
+      ]
+     },
+     "derive": {
+      "e": "h+1"
+     },
+     "q": "Ravi starts to read at half past {h}. He reads for half an hour. What time does he stop?",
+     "frame": "He stops at {a} : {b}.",
+     "answers": {
+      "a": "e",
+      "b": "0"
+     },
+     "pad": {
+      "b": 2
+     },
+     "hint": "The long hand goes from the 6 round to the 12. The hour changes.",
+     "steps": [
+      "Half an hour is 30 minutes.",
+      "The long hand goes from the 6 to the 12, so the short hand moves on.",
+      "He stops at {e} : 00."
+     ]
+    }
+   },
+   {
+    "id": "t2",
+    "tier": "stretch",
+    "type": "fields",
+    "q": "Lily starts to paint at 3:15. She paints for half an hour. What time does she stop?",
+    "hint": "Count on 30 minutes from 15 minutes past.",
+    "steps": [
+     "15 and 30 more is 45.",
+     "The hour stays the same.",
+     "She stops at 3 : 45."
+    ],
+    "slips": [],
+    "easier": "c2",
+    "frame": "She stops at {a} : {b}.",
+    "fields": [
+     {
+      "id": "a",
+      "answer": 3
+     },
+     {
+      "id": "b",
+      "answer": 45
+     }
+    ],
+    "fig": {
+     "type": "clock",
+     "h": "{h}",
+     "m": 15,
+     "size": "m"
+    },
+    "fig_base": {
+     "type": "clock",
+     "h": 3,
+     "m": 15,
+     "size": "m"
+    },
+    "tpl": {
+     "vars": {
+      "h": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11
+      ]
+     },
+     "derive": {},
+     "q": "Lily starts to paint at {h}:15. She paints for half an hour. What time does she stop?",
+     "frame": "She stops at {a} : {b}.",
+     "answers": {
+      "a": "h",
+      "b": "45"
+     },
+     "hint": "Count on 30 minutes from 15 minutes past.",
+     "steps": [
+      "15 and 30 more is 45.",
+      "The hour stays the same.",
+      "She stops at {h} : 45."
+     ]
+    }
+   },
+   {
+    "id": "t3",
+    "tier": "stretch",
+    "type": "fields",
+    "q": "The concert starts at 7 o'clock. Siti sits down half an hour before it starts. What time does she sit down?",
+    "hint": "Go back half an hour from 7 o'clock.",
+    "steps": [
+     "Go back 30 minutes from 7 : 00.",
+     "The hour goes back one and the long hand is on the 6.",
+     "She sits down at 6 : 30."
+    ],
+    "slips": [],
+    "easier": "c2",
+    "frame": "She sits down at {a} : {b}.",
+    "fields": [
+     {
+      "id": "a",
+      "answer": 6
+     },
+     {
+      "id": "b",
+      "answer": 30
+     }
+    ],
+    "fig": {
+     "type": "clock",
+     "h": "{h}",
+     "m": 0,
+     "size": "m"
+    },
+    "fig_base": {
+     "type": "clock",
+     "h": 7,
+     "m": 0,
+     "size": "m"
+    },
+    "tpl": {
+     "vars": {
+      "h": [
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11
+      ]
+     },
+     "derive": {
+      "s": "h-1"
+     },
+     "q": "The concert starts at {h} o'clock. Siti sits down half an hour before it starts. What time does she sit down?",
+     "frame": "She sits down at {a} : {b}.",
+     "answers": {
+      "a": "s",
+      "b": "30"
+     },
+     "hint": "Go back half an hour from {h} o'clock.",
+     "steps": [
+      "Go back 30 minutes from {h} : 00.",
+      "The hour goes back one and the long hand is on the 6.",
+      "She sits down at {s} : 30."
+     ]
+    }
+   },
+   {
+    "id": "g1",
+    "tier": "challenge",
+    "type": "fields",
+    "q": "Mei starts to jog at 4:30. She jogs for 1 hour, then she stretches for half an hour. What time does she stop stretching?",
+    "hint": "Add 1 hour to 4:30. Then add half an hour.",
+    "steps": [
+     "1 hour after 4:30 is 5:30.",
+     "Half an hour after 5:30 is 6:00.",
+     "She stops stretching at 6 : 00."
+    ],
+    "slips": [],
+    "easier": "t1",
+    "frame": "She stops stretching at {a} : {b}.",
+    "fields": [
+     {
+      "id": "a",
+      "answer": 6
+     },
+     {
+      "id": "b",
+      "answer": 0,
+      "pad": 2
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "h": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10
+      ]
+     },
+     "derive": {
+      "p": "h+1",
+      "e": "h+2"
+     },
+     "q": "Mei starts to jog at {h}:30. She jogs for 1 hour, then she stretches for half an hour. What time does she stop stretching?",
+     "frame": "She stops stretching at {a} : {b}.",
+     "answers": {
+      "a": "e",
+      "b": "0"
+     },
+     "hint": "Add 1 hour to {h}:30. Then add half an hour.",
+     "steps": [
+      "1 hour after {h}:30 is {p}:30.",
+      "Half an hour after {p}:30 is {e}:00.",
+      "She stops stretching at {e} : 00."
+     ],
+     "pad": {
+      "b": 2
+     }
+    }
+   },
+   {
+    "id": "g2",
+    "tier": "challenge",
+    "type": "number",
+    "q": "A film lasts 1 hour and half an hour. How many minutes is that?",
+    "hint": "1 hour is 60 minutes. Add half an hour.",
+    "steps": [
+     "1 hour is 60 minutes.",
+     "Half an hour is 30 minutes.",
+     "60 and 30 make 90 minutes."
+    ],
+    "answer": 90,
+    "easier": "c5",
+    "slips": [
+     {
+      "a": [
+       60
+      ],
+      "say": "60 minutes is only the 1 hour. Add the half an hour too."
+     },
+     {
+      "a": [
+       130
+      ],
+      "say": "1 hour and half an hour is not 130. 1 hour is 60 minutes and half an hour is 30 minutes."
+     }
+    ]
+   },
+   {
+    "id": "g3",
+    "tier": "challenge",
+    "type": "selfcheck",
+    "q": "Make a time puzzle for a grown-up. Pick a start time, say how long it lasts, and ask when it ends. Check the answer on your clock.",
+    "hint": "Pick the start first, then move the hands.",
+    "steps": [
+     "Write the start time and how long it lasts.",
+     "Move the hands on your clock to find the end.",
+     "Ask a grown-up, then check together."
+    ],
+    "easier": "c1"
+   }
+  ]
+ },
+ "spare_time": {
+  "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
+  "rules": [
+   "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
+   "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+   "Never teach anything the next lesson needs. If the class is ahead, slow down: ask 'How do you know?' and let children explain, rather than rushing on."
+  ],
+  "menu": [
+   {
+    "id": "M1",
+    "title": "Is it always true?",
+    "minutes": 4,
+    "tutor": "Mei says: one hour later, the long hand stays where it was and the short hand moves on one number. Is that always true? Test it with your clock at 3 o'clock, half past 7, 11 o'clock and 12 o'clock.",
+    "rec": "Recording: pause. Mei says the long hand stays when it is one hour later. Test it at 11 and 12 o'clock.",
+    "answer": "Yes. The long hand stays put because an hour is a whole trip round. At 12 o'clock the short hand moves on to 1, not to 13: the numbers on the clock go round. 11 o'clock and 1 hour is 12 o'clock."
+   },
+   {
+    "id": "M2",
+    "title": "Make a puzzle for your grown-up",
+    "minutes": 4,
+    "tutor": "Pick a start time and say how long it lasts: 1 hour or half an hour. Write the start and ask when it ends. Give it to your grown-up, then check together on the clock.",
+    "rec": "Recording: pause. Write a start time and how long it lasts. Ask your grown-up when it ends.",
+    "answer": "No single answer. Check the end time on the clock: 1 hour keeps the long hand and moves the short hand on one; half an hour moves the long hand half way round."
+   },
+   {
+    "id": "M3",
+    "title": "Teach it back",
+    "minutes": 3,
+    "tutor": "Pretend your grown-up or a toy has never added time. Teach them why half an hour after half past 5 is 6 o'clock and not 5:60.",
+    "rec": "Recording: pause. Teach a grown-up why half an hour after half past 5 is 6 o'clock.",
+    "answer": "Half an hour is 30 minutes. From half past 5 the long hand goes from the 6 all the way round to the 12. When the long hand reaches 12 it is a new hour, so it is 6 o'clock."
+   }
+  ]
+ },
+ "parent": {
+  "summary": "We added time on the clock. Your child set a cut-out clock one hour and half an hour later, read how long something lasts from two clocks, and counted back to find a start. One hour or half an hour later from an o'clock or half past start is Primary 1 work. Some Think harder and Go further questions go past the school Primary 1 syllabus on purpose; Start here stays within it.",
+  "words": [
+   "later: after (2:00 is 1 hour later than 1:00)",
+   "lasts: how long something takes",
+   "half an hour: 30 minutes",
+   "am and pm: before noon and after noon (8:30 am, 8:30 pm)"
+  ],
+  "try_home": [
+   "Pick a start (a bus, a show, tea) and say it lasts half an hour. Ask: what time does it end? Check on a real or toy clock.",
+   "Say when something ended and how long it lasted. Ask for the start, then check by adding the time on.",
+   "Say that half an hour after 4:30 is 5:30. Let your child show you with the clock hands."
+  ],
+  "ask": [
+   "Which hand moved? Which hand stayed?",
+   "How do you know the hour changed?",
+   "How could we check on the clock?"
+  ],
+  "when_stuck": "Let your child move the clock hands and wait 10 seconds before helping. Asking 'where is the long hand now?' works better than giving the answer. Please do not teach a rule such as 'add 60' or 'clockwise'; the clock hands are the method. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
+  "next": "Next lesson: Dollars and Change. The play-money pages are the most cutting of the term, so please allow a week. Online practice: your tutor will share the link. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. The recording link is private to your family: please do not share it.",
+  "quote": "One hour later, the short hand moves on one number. Half an hour later, the long hand goes half way round.",
+  "report_line": "Your child is learning to add an hour or half an hour to a time on the clock and to count back to a start. This week: setting the clock later, reading two clocks and finding a start time.",
+  "term_line": "Your child is learning to give a reason, and to read time and money in real life.",
+  "next_materials": [
+   "Both play-money pages cut out by a grown-up (29 pieces)",
+   "The $1 tokens from Term 2",
+   "Your clock, kept in its envelope",
+   "Pencil, rubber and paper"
+  ]
+ },
+ "safeguarding": [
+  "The clock pieces are loose paper strips: no pins, fasteners or anything sharp. Small things stay on the table: nothing goes in the mouth or ears. No matches or toothpicks. Nobody cuts during the lesson; a grown-up cut the pieces beforehand.",
+  "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
+  "Nobody holds paper or a board up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on a count of three, or show fingers or a thumb for a choice. There is no private chat.",
+  "Never read out a child's name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is unmuted. Children may mute and keep their cameras off. A child's page is never shown.",
+  "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. Arm clocks are quiet; a child may stay seated and use fingers.",
+  "A child who is still stuck ticks 'I am still stuck' on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for 90 days after the program ends. The tutor then helps in the open session next lesson. No private messages to children, and no personal phones.",
+  "The look-back is never collected in front of the group or read out. A pass is always allowed."
+ ],
+ "tutor_prep": [
+  "Solve every workbook question yourself first, on a real clock. Check the pairs: S1 9:00; S3 9:30 am; S4 clock B; S6 4:00, 8:30, 9:30; T1 6:30 and 6:00; T2 4:45 and 10:15; T3 6:30 pm and 4:30 pm; G1 3:30 pm and 2:30 pm; G2 12:30 pm and 1:00 pm; G3 3:30 pm, 4:00 pm and Mei.",
+  "Tell parents a week before: your book has the workbook; no new cutting this lesson, but the clock pieces from the first lesson of Term 3 must be in their envelope (a real clock or a paper plate clock also works). The next lesson needs the two play-money pages cut out (29 pieces): it is the most cutting of the term, so give a week's notice.",
+  "Have the slides open. Have your own clock to show on camera if you wish. Practise the arm clocks for the break.",
+  "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded. Greet the whole group warmly, then start the recording, then say the notice; do not use children's first names on the recording.",
+  "Be plain with families: adding 1 hour or half an hour from an o'clock or half past start is Primary 1 work; quarter-time starts, a trip in two stages and crossing noon are beyond Primary 1 on purpose. Do not call the lesson MOE-aligned. Say the time both ways every time (half past 7, 7:30). Do not teach the 24-hour clock.",
+  "Slides s-m3, s-m4 and s-m5 keep the answers off the screen while you ask: the filled table appears on s-m5a. Read every question with its times, and the four options of E2, aloud. The clocks on the slides are large, but a child cannot see small hands on a phone: say the time out loud too. A child who tilts the camera at the clock tilts it to the table, not the room."
+ ],
+ "workbook": {
+  "header": "Measurement: time passes",
+  "hint_p1": "Use your clock. Move the hands to check your answer.",
+  "hint_p2": "Read the clocks and the table. Use your clock if you like.",
+  "hint_p3": "Use your clock or a time line. Choose any question, in any order. Not finished? This page is for home too.",
+  "hint_p4": "Write am or pm where it is asked. Choose any question. Not finished? This page is for home too.",
+  "choice_after": 3,
+  "inv_intro": "",
+  "inv_first_label": "First:",
+  "inv_then_label": "Next:",
+  "home_hint": "Use a real clock or your cut-out clock. Pieces stay on the table, away from little brothers and sisters.",
+  "kits": []
+ },
+ "beyond": {
+  "name": "Find the Start",
+  "where": [
+   "G1",
+   "G2"
+  ],
+  "text": "A plan of three jobs found backwards (1 hour, half an hour and half an hour make 2 hours) and a time that crosses noon from am to pm. One-stage find-the-start with 1 hour or half an hour is Primary 1 work (Think harder T3); durations in general are Primary 3 (p. 36). Named puzzle: Find the Start.",
+  "parent": "Quarter-time starts, and Find the Start (a plan of three jobs, and a film that crosses noon), go past the school Primary 1 syllabus on purpose."
+ }
+}

@@ -1,0 +1,9 @@
+Repo: /home/user/math-inquirers. You are an INDEPENDENT auditor of Level 1 TERM 2 lessons (11-20, ages 6-8, Primary 1; lesson_in_term 1-10). You did not write them; be sceptical. Do NOT edit any lesson or tool file: audit only.
+For each assigned lesson NN, do THREE audits and write three files in term/l1/audit/: 
+ 1. WORKBOOK_AUDIT_LNN.md - follow term/l1/audit/AUDIT_BRIEF.txt exactly (substitute Term 2 / lessons 11-20; plan rows are Term 2 rows in docs/terms/level_1_year_plan.md; spec in docs/terms/l1_term2_preflight.md).
+ 2. GUIDE_DECK_AUDIT_LNN.md - follow term/l1/audit/AUDIT2_BRIEF.txt part for tutor guide and deck.
+ 3. HOME_PARENT_PRACTICE_AUDIT_LNN.md - follow AUDIT2_BRIEF.txt part for home practice, parent summary and online practice (run the practice in Playwright; test that pictures render and ordered/multi-answer marking is right, wrong orders refused).
+Also read docs/terms/owner_decisions.md, term/l1/audit/TERM_WIDE_AUDIT.md and FIXES2_L*.md (known Term 1 failure patterns: hand-off materials truth, camera/paper hold-ups, recording statements vs privacy.html, photo route WhatsApp-only, Think harder reachable, Start here approachable, rounding/unfamiliar words, timing for slow class). Specifically check Term 2 risks: multiplication reading order wording, beyond-P1 statements present, odd/even and division honesty, figure legibility on A4, x and ÷ glyphs, picture-text mismatches, answers shown while asking. Independently solve every question. Score with the same instruments as Term 1. Verdict Ready / Ready after minor fixes / Needs rework; numbered findings with severity, location, evidence, suggested fix. Commit only your audit files with explicit git add; message ending:
+Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01Wmstm4fTDLXm5Z35vo5Mv2
+Do NOT push. Final report max 100 words per lesson: verdict, score, High/Medium counts, three worst problems.

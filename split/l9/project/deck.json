@@ -8,6 +8,7 @@
  "title": "Math Inquirers: Lesson 9 – Measure It",
  "order": [
   "l9-title",
+  "l9-tool",
   "l9-warm1",
   "l9-warm2",
   "l9-warmcheck",
@@ -25,13 +26,14 @@
   "l9-ws1ans",
   "l9-teachunit",
   "l9-teachconv",
-  "l9-tryconv",
   "l9-teachmore",
   "l9-ws2",
   "l9-ws2ans",
   "l9-stretch",
   "l9-challenge",
+  "l9-chdiag",
   "l9-chwalk",
+  "l9-skill1",
   "l9-talk",
   "l9-exit",
   "l9-reflect"

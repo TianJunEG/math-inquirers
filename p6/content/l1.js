@@ -93,10 +93,10 @@ module.exports = {
     n: 1, week: 1, session: 'A', title: 'Code the Pattern', topic: 'Sequences and the nth Term',
     objective: 'Continue a sequence, find the rule for the nth term of a sequence with a constant difference, use it to find far terms such as the 100th, work backwards to decide whether a number is in a sequence, and test predictions with a loop and a variable in Scratch.',
     skills: 'Pattern spotting, generalising with a letter, predicting, testing in code, debugging (counting the jumps)',
-    materials: 'Laptop or desktop with Scratch 3 open (scratch.mit.edu, no account needed), about 25 matchsticks or toothpicks per child (or squared paper), mini whiteboard, workbook. Optional: a Python editor for children who already know Python.',
-    online: 'The tutor shares the slides and a Scratch window. Share your Scratch window and build the four blocks together on screen; the blocks are also on the slide. Block colours on our slides are simplified; in Scratch, find blocks by the category name on the left, not by colour. Scratch is free at scratch.mit.edu and needs no account in class. Children hold paper up to the camera or share their screen when asked. Matchsticks can be drawn as lines.',
-    warmup: 'Next! Pattern quick-fire: six sequence cards (add, take away, square numbers, doubling, Fibonacci, decimals). Pairs type the next two terms in the chat and say the rule if they spot it. No racing and no points.',
-    explore: 'Pairs build matchstick triangles in a row (3, 5, 7 sticks), make a table, predict the sticks for pattern 10 and pattern 100 without building them, then check pattern 10 with a loop and a variable in Scratch.',
+    materials: 'Laptop or desktop with Scratch 3 open (scratch.mit.edu, no account needed), about 25 matchsticks or toothpicks per child (or squared paper), mini whiteboard, workbook. Starter file: L1_Sequence_Tester.sb3. Optional: a Python editor for children who already know Python.',
+    online: 'The tutor shares the slides and a Scratch window. Share your Scratch window and build the four blocks together on screen; the blocks are also on the slide. Anyone who would rather not build it can open the starter file L1_Sequence_Tester.sb3 (File, Load from your computer; no account needed): it has the variable term, set term to 5 and an empty repeat 99, so the child only adds change term by 3 (the tutor answer file also has the extension that stops above 1000). Block colours on our slides are simplified; in Scratch, find blocks by the category name on the left, not by colour. Scratch is free at scratch.mit.edu and needs no account in class. Children tick their own work against the answer slide or share their screen when asked; nothing is held up to the camera. Matchsticks can be drawn as lines.',
+    warmup: 'Next! Pattern quick-fire: four sequence cards (add, take away, square numbers, Fibonacci). Pairs type the next two terms in the chat and say the rule if they spot it. No racing and no points.',
+    explore: 'Pairs build matchstick triangles in a row (3, 5, 7 sticks), make a table and predict the sticks for pattern 10 and pattern 100 without building them. The loop that checks a pattern in Scratch is built once, live, in the mini-lesson.',
     mini: 'Term-to-term rule (add 3) versus the rule for the nth term (3n + 2): the difference tells you the times table, then compare to find what to add or take away. Find the 100th term. Test it in code: set term to the 1st term, repeat 99, change term by 3, say term. The 100th term is only 99 jumps from the 1st. Before page 1: work backwards to decide whether a number is in a sequence. Before page 2: trace a loop in a table, plan a program (say first, then change) and find a jump-count bug.',
     share: 'Ali says the 100th term of 7, 10, 13, … is 7 + 3 × 100 = 307. Is he right? Explain with a rule, a picture or code.',
     exit: { q: 'The sequence 8, 11, 14, 17, … (a) Write the rule for the nth term. (b) Find the 100th term. (c) A loop starts at the 1st term. How many times must it repeat "change by 3" to reach the 100th term?', a: '(a) 3n + 5  (b) 305  (c) 99 times' },
@@ -111,7 +111,7 @@ module.exports = {
       ['Q2', '(a) difference 4; 4n + 2; 402  (b) 5; 5n − 4; 496  (the other two sequences of this question are now Think harder 4)'],
       ['Q3', '(a) 4n + 1  (b) Yes. 101 − 1 = 100 = 4 × 25, so 101 is the 25th term.  (c) No. Every term is 1 more than a multiple of 4, so every term is odd; 150 is even. (150 − 1 = 149 is not a multiple of 4.)'],
       ['Q4', 'Trace: x is 7, 12, 17, 22.  (a) 22  (b) 502. x starts at 2 and 100 jumps of 5 add 500.'],
-      ['Q5', 'Program: when green flag clicked; set n to 4; repeat 20 [say n for 1 seconds; change n by 6]. Say must come before change (or start n at −2 and change first).  (a) 118 (the 20th term: 6 × 20 − 2), the last number it says. It says one term per second.'],
+      ['Q5', '(Take-home question.) Program: when green flag clicked; set n to 4; repeat 20 [say n for 1 seconds; change n by 6]. Say must come before change (or start n at −2 and change first).  (a) 118 (the 20th term: 6 × 20 − 2), the last number it says. It says one term per second.'],
       ['Q6', '(a) 203 (3 + 50 × 4)  (b) 199 (4 × 50 − 1)  (c) Change repeat 50 to repeat 49. The 1st term is already there before the loop starts, so the 50th term is only 49 jumps away.']
     ]
   },
@@ -120,7 +120,7 @@ module.exports = {
     hook: ['Welcome to Math Inquirers P6! The PSLE is done, so there is no exam today: just puzzles, patterns and code.', 'Every lesson we notice a pattern, test it in code, and explain why. Today’s question: how can you find the 100th number in a pattern without writing out all 100?'],
     warmIntro: ['Pairs. I will show a sequence card. Take your time and type the next two terms in the chat. If you spot the rule, say it. There is no race and there are no points.', 'Careful: not every card adds the same amount each time.'],
     predict: ['Pattern 1 is a triangle made of 3 matchsticks. Each new pattern adds one more triangle in the row. Before you build anything: how many sticks will pattern 100 need? Write your guess in the corner of your whiteboard.'],
-    exploreHints: ['Stuck building: lay the triangles point up, point down, point up, so each new triangle shares a stick.', 'Stuck on pattern 100: “How many sticks does each new triangle add? How many new triangles come after the first one?”', 'Finished early: in Scratch, set sticks to 3, repeat 9, change sticks by 2, say sticks. Does it match your pattern 10? Now change it to reach pattern 100.'],
+    exploreHints: ['Stuck building: lay the triangles point up, point down, point up, so each new triangle shares a stick.', 'Stuck on pattern 100: “How many sticks does each new triangle add? How many new triangles come after the first one?”'],
     think: [
       '“5, 8, 11, 14. The term-to-term rule is add 3. That is great for the next term, but slow for the 100th: I would have to add 3 ninety-nine times.”',
       '“Adding 3 each time is like the 3 times table: 3, 6, 9, 12. Each term is 2 more than the times-table number. So the nth term is 3 × n + 2, which we write 3n + 2. Check the 4th term: 3 × 4 + 2 = 14. Yes.”',
@@ -128,18 +128,19 @@ module.exports = {
     ],
     circulate: ['Ask: “What is the difference? Which times table is it like?”', 'Ask: “Check your rule with the 1st term AND the 4th term. Does it work for both?”', 'Ask: “How many jumps are there from the 1st term to the 20th term?”'],
     hints: ['Hint 1: “Write the times table of the difference under the sequence.”', 'Hint 2: “How far is each term from the times-table number under it?”', 'Hint 3: “Count the jumps for a small case first: from the 1st term to the 4th term is 3 jumps.”'],
-    talk: ['“Ali says the 100th term of 7, 10, 13, … is 7 + 3 × 100 = 307. Is he right?”', '“When is the nth-term rule better than adding on? When is code better than both?”'],
+    talk: ['“Ali says the 100th term of 7, 10, 13, … is 7 + 3 × 100 = 307. Is he right?”'],
+    talkNext: '“When is the nth-term rule better than adding on? When is code better than both?” (Only if flex is left; otherwise it is the opener of the next lesson.)',
     talkAns: 'No. The 1st term is already 7 before any jump, so the 100th term is only 99 jumps away: 7 + 3 × 99 = 304. The rule 3n + 4 gives 304 too. The rule is fastest for one far term; code is best for listing many terms or checking an answer.',
     close: ['“Today you found the 100th term without writing 100 numbers, and you tested it in code. That is what mathematicians and programmers both do.”', '“Do the exit ticket on your own, then show me.”']
   },
 
   deck: {
     today: 'Find the rule for the nth term of a pattern, predict the 100th term, and test it with a loop in code.',
-    warmGame: 'Next! Pattern quick-fire. Six sequence cards. Pairs type the next two terms in the chat and say the rule if they spot it. No racing and no points.',
-    warmQs: [['4, 9, 14, 19, __', '24'], ['The 10th term of 2, 4, 6, 8, …', '20'], ['The 10th term of 3, 5, 7, 9, …', '21'], ['Ali has $12 and saves $5 a week. How much does he have after 6 weeks?', '$42'], ['100, 93, 86, __', '79']],
-    expSetup: ['Build matchstick triangles in a row: pattern 1 has 1 triangle, pattern 2 has 2, pattern 3 has 3.', 'Count the sticks in each pattern. Make a table.', 'Predict the sticks in pattern 10 and in pattern 100. Do not build them!', 'Check pattern 10 in Scratch with a loop and a variable.'],
+    warmGame: 'Next! Pattern quick-fire. Four sequence cards. Pairs type the next two terms in the chat and say the rule if they spot it. No racing and no points.',
+    warmQs: [['The 10th term of 2, 4, 6, 8, …', '20'], ['The 10th term of 3, 5, 7, 9, …', '21'], ['Ali has $12 and saves $5 a week. How much does he have after 6 weeks?', '$42']],
+    expSetup: ['Build matchstick triangles in a row: pattern 1 has 1 triangle, pattern 2 has 2, pattern 3 has 3.', 'Count the sticks in each pattern. Make a table.', 'Predict the sticks in pattern 10 and in pattern 100. Do not build them!'],
     expPic: 'three rows of matchstick triangles (3, 5 and 7 sticks) and a small table with question marks for pattern 10 and pattern 100.',
-    expAsk: [['How many sticks are in pattern 10?', '21'], ['How many in pattern 100? How did you get it without building it?', '201. Each new triangle adds 2 sticks: 3 + 2 × 99 = 201, or 2 × 100 + 1.'], ['Which pattern uses exactly 75 sticks?', 'Pattern 37: 2 × 37 + 1 = 75.']],
+    expAsk: [['How many in pattern 100? How did you get it without building it?', '201. Each new triangle adds 2 sticks: 3 + 2 × 99 = 201, or 2 × 100 + 1.'], ['Which pattern uses exactly 75 sticks?', 'Pattern 37: 2 × 37 + 1 = 75.']],
     mini1: { head: 'The 100th term of 5, 8, 11, 14, …', table: [['n', '1', '2', '3', '4'], ['3 × n', '3', '6', '9', '12'], ['term', '5', '8', '11', '14']], body: ['The difference is 3, so compare with the 3 times table.', 'Each term is 2 more: nth term = 3n + 2.', 'Check the 4th term: 3 × 4 + 2 = 14.'], ans: '3 × 100 + 2 = 302.' },
     mini2: { head: 'Test it in code', body: ['set term to 5 (the 1st term).', 'repeat 99: change term by 3 (99 jumps from the 1st term to the 100th).', 'say term.'], ans: 'It says 302, the same as the rule.' },
     keyHead: 'Key idea: the rule for the nth term',
@@ -160,7 +161,7 @@ module.exports = {
       { q: 'Matchstick triangles in a row. Pattern 1 is 1 triangle (3 sticks). Pattern 2 is 2 triangles side by side (5 sticks). Pattern 3 is 3 triangles (7 sticks). Use matchsticks or draw them. How many sticks does pattern 4 need?', a: '9 sticks (3, 5, 7, 9). Each new triangle adds 2 sticks, because it shares one side with the triangle before it.' },
       { q: 'Write out the terms one by one to find the 10th term of 7, 10, 13, 16, …', a: '34 (7, 10, 13, 16, 19, 22, 25, 28, 31, 34; the rule 3n + 4 gives 3 × 10 + 4 = 34 too)' },
       { q: 'Write the next two terms: 40, 36, 32, 28, …', a: '24, 20 (take away 4)' },
-      { q: 'What does this code say?  set n to 10, then repeat 3 [change n by 4], then say n.', a: '22 (10 + 4 + 4 + 4)' },
+      { q: 'This small program keeps a number called n. “set n to 10” means n starts as 10. “repeat 3 [change n by 4]” means add 4 to n, three times. “say n” shows what n is now. Write n after each repeat. What does it say at the end?', a: '22 (10 + 4 + 4 + 4)' },
       { q: 'A straight fence is 12 m long with a post every 4 m, including a post at each end. Draw it and count the posts. Then work out how many posts a 60 m fence needs.', a: '4 posts for the 12 m fence (3 gaps). The 60 m fence needs 16 posts: 60 ÷ 4 = 15 gaps, and there is one more post than gaps.' }
     ],
     stretch: [
@@ -174,7 +175,7 @@ module.exports = {
       { q: 'How many terms of 3, 7, 11, 15, … are less than 500?', a: '125. The rule is 4n − 1. The 125th term is 499 and the 126th is 503.' }
     ],
     challenge: [
-      { q: 'Pattern 1 is 1 tile, pattern 2 is a 2 by 2 square of tiles, pattern 3 is a 3 by 3 square. How many tiles are in pattern 10? How many more tiles does pattern 11 need than pattern 10?', a: '100 tiles. Pattern 11 has 121 tiles, so 21 more. The differences are 3, 5, 7, 9, …, so this is NOT a constant-difference sequence.' },
+      { q: 'The rule for a sequence is 5n + 2. Ali circles every 4th term (the 4th, 8th, 12th, … terms). Write the first three circled terms. Is the circled list a constant-difference sequence? Find the rule for the mth circled term and use it to find the 50th circled term.', a: '22, 42, 62 (the 4th, 8th and 12th terms). Yes: the difference is 20 (4 jumps of 5). The rule for the mth circled term is 20m + 2, so the 50th circled term is 1002 (check: it is the 200th term, 5 × 200 + 2 = 1002).' },
       { q: 'Ben counts 6, 11, 16, 21, … and Mei counts 83, 81, 79, 77, … They say their terms at the same time. When do they say the same number, and what is it?', a: 'At the 12th term they both say 61. The gap starts at 77 and closes by 7 each time (Ben +5, Mei −2): 77 ÷ 7 = 11 jumps after the 1st term. Check: 5 × 12 + 1 = 61 and 85 − 2 × 12 = 61.' },
       { q: 'The rule for a sequence is 6n − 4. Ben says every term is even. Is he right? Explain.', a: 'Yes. 6 × n is always even, and an even number take away 4 is even (2, 8, 14, 20, …).' },
       { q: 'Find the first term of 5, 8, 11, 14, … that is bigger than 1000. Which term is it? Then find the first term bigger than 1000 that ends in 0.', a: '1001, the 333rd term (3n + 2: the 332nd term is 998). The first one bigger than 1000 that ends in 0 is 1010, the 336th term (1001, 1004, 1007, 1010).' },
@@ -200,13 +201,13 @@ module.exports = {
     W.push(H.sub('b', 'Complete the rule:   sticks  =  ______ × n  +  ______'));
     W.push(H.sub('c', 'Pattern 100 has ______ sticks.    (d)  Which pattern has 61 sticks? ____'));
     // Q2 rules
-    W.push(H.q(2, 'For each sequence, write the difference, the rule for the nth term and the 100th term. (Two more are on the Think harder page.)', { keepNext: true }));
+    W.push(H.q(2, 'For each sequence, write the difference, the rule for the nth term and the 100th term. (Two more are on the Think harder page.) Hint: the 100th term is 99 jumps after the 1st term.', { keepNext: true }));
     { const ws = [3300, 1900, 2500, 2200];
       W.push(H.tbl(ws, [H.row(['Sequence', 'Difference', 'nth term', '100th term'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'D9D9D9', h: 40 }))),
         ...[['a', '6,  10,  14,  18,  …'], ['b', '1,  6,  11,  16,  …']].map(([l, s]) =>
           H.row([H.cell(`(${l})   ${s}`, ws[0], { h: 50, align: 'left' }), H.cell('', ws[1]), H.cell('', ws[2]), H.cell('', ws[3])]))])); }
     // Q3 in the sequence?
-    W.push(H.q(3, 'Look at the sequence   5,  9,  13,  17,  …', { keepNext: true }));
+    W.push(H.q(3, 'Look at the sequence   5,  9,  13,  17,  …   (each term is 4 more than the one before)', { keepNext: true }));
     W.push(H.sub('a', 'nth term:  __________     (b)  Is 101 a term? Which one?  __________'));
     W.push(H.sub('c', 'Is 150 in the sequence? Explain.  ____________________________'));
     W.push(pyBox(H, 'Python corner (optional): a term tester', 'term = 5\nfor pos in range(1, 101):\n    print(pos, term)\n    term = term + 3',
@@ -220,10 +221,10 @@ module.exports = {
     W.push(H.sub('b', 'With repeat 100, what is the last number? Explain without running it.'));
     W.push(...H.lines(1));
     // Q5 plan
-    W.push(H.q(5, 'Plan your code. Use only these blocks to say the first 20 terms of  4, 10, 16, 22, …', { keepNext: true }));
+    W.push(H.q(5, '★ Take-home. Plan your code with these blocks to say the first 20 terms of  4, 10, 16, 22, …', { keepNext: true }));
     { const pal = ps => '<div style="display:flex;flex-direction:column;gap:6px;align-items:flex-start">' + ps.map(([p, i]) => blocks(p, 'Block ' + i, 14).replace('max-width:100%', 'flex:none')).join('') + '</div>';
       W.push(side('<div style="display:flex;gap:10px">' + pal([[[hat], 1], [[['var', 'set n to ( )']], 2], [[['var', 'change n by ( )']], 3]]) + pal([[[['ctl', 'repeat ( )', []]], 4], [[['look', 'say (n) for (1) seconds']], 5]]) + '</div>', 4300,
-        ['<div style="text-align:left;color:#8A94AD;font-size:14px;padding:0 6px;height:150px">My program:</div>', '<div style="text-align:left;padding:0 6px">(a)  The last number it says:  ________</div>'])); }
+        ['<div style="text-align:left;color:#8A94AD;font-size:14px;padding:0 6px;height:132px">My program:</div>', '<div style="text-align:left;padding:0 6px">(a)  The last number it says:  ________</div>'])); }
     // Q6 bug
     W.push(H.q(6, 'Spot the bug. Mei wants her sprite to say the 50th term of   3,  7,  11,  15,  …   Here is her code.', { keepNext: true }));
     W.push(side(blocks([hat, ['var', 'set n to (3)'], ['ctl', 'repeat (50)', [['var', 'change n by (4)']]], ['look', 'say (n)']], 'Mei’s code: set n to 3, repeat 50: change n by 4, then say n', 14), 4300,

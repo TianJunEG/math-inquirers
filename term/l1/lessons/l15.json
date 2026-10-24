@@ -1,0 +1,3418 @@
+{
+ "schema_version": 1,
+ "id": "l1-t2-05",
+ "level": 1,
+ "term": 2,
+ "lesson": 15,
+ "lesson_in_term": 5,
+ "title": "Equal Groups",
+ "big_idea": "Same-size groups can be counted fast",
+ "child_idea": "Equal groups have the same number in every group. We can count in jumps, add the same number again and again, or write it with the × sign: 4 groups of 3 is 4 × 3.",
+ "skill": "Representing multiplication",
+ "spine": {
+  "main": "table",
+  "also": [
+   "draw",
+   "list"
+  ],
+  "role": "I",
+  "reason": "Groups, number in each group and total go in a table; plates are drawn and ways to group 12 are listed.",
+  "chip": "compact"
+ },
+ "ages": "6-8",
+ "moe": {
+  "strand": "Multiplication and Division",
+  "topics": [
+   "Equal groups and repeated addition (Primary 1, Multiplication and Division 3.1 to 3.4, p. 31)",
+   "The multiplication sign × and multiplying within 40",
+   "Rows and columns of an array: 3 × 4 = 4 × 3"
+  ],
+  "note": "Strand label for the tutor only. Equal groups, the × sign and multiplying within 40 are in the school Primary 1 syllabus (p. 31), so the lesson stays inside Primary 1 except for one named beyond-syllabus challenge item (owner decision, 22 Oct 2026): Go further G2 part (c), which uses doubling the number of groups (6 groups of 5 = 30, so 12 groups of 5 = 60), a product above the school range of 40. Products stay within 20 at Start here and within 40 elsewhere. The holiday course has no multiplication, so this is new for every child. Reading order (owner default, 22 Oct 2026): \"3 groups of 4\" is written 3 × 4, groups first, the usual school convention; either order is accepted as correct in an answer, and Think harder shows that 3 × 4 = 4 × 3. Sharing and the division sign are Term 2 Lesson 7, not here. Do not describe the lesson as MOE-aligned or syllabus-aligned. Contest tag (tutor only): list all the ways (Go further G3)."
+ },
+ "contest_moves": [
+  "list the ways to make equal groups of 24 (G3)",
+  "count in jumps instead of one by one",
+  "turn an array: 2 × 8 = 8 × 2",
+  "true or false about equal groups: 3 groups of 4 is not 3 + 4, and 4 groups of 3 holds the same apples (T3)"
+ ],
+ "objectives": [
+  "Say whether groups are equal (the same number in every group) and add counters to make unequal groups equal.",
+  "Write \"4 groups of 3 = 12\" and 3 + 3 + 3 + 3 = 12 for a picture or a story, with products to 20.",
+  "Write the multiplication sentence 4 × 3 = 12 and read × as \"groups of\" (the number of groups first, then the number in each group).",
+  "Think harder: read an array as rows, turn it and see that 3 × 4 = 4 × 3; find a missing group size in a table of equal groups.",
+  "Go further: two kinds of groups in one story (bikes and cars) and totals close to 40."
+ ],
+ "joining_cold": {
+  "remember": [
+   "Count in 2s, 5s and 10s along a number square (Term 1)",
+   "Bundles of ten are equal groups: 3 tens and 4 ones (Term 1)",
+   "Add by making a ten: 9 + 4, 7 + 5, 6 + 8 (Term 1)"
+  ],
+  "assumes": "Only counting to 20 and adding small numbers. Nothing from an earlier lesson is needed: the warm-up counts in jumps along a number square, shows 3 bundles of ten as a picture and makes a ten with two coloured ten-frames. The words group, each and equal and the × sign are taught in Explore and the Mini-lesson.",
+  "holiday_topics_revisited": [
+   "Skip counting in 2s, 5s and 10s (Count with the Frog)"
+  ],
+  "safe_to_miss": false,
+  "note": "Term 2 Lessons 5 to 8 build on one another (groups, tables, sharing, stories), so try not to miss this lesson. A child who misses it watches the recording, does workbook pages 1 and 2 and tells the tutor in the open session. A child who joins at Term 2 Lesson 6 or later can follow, because that warm-up shows 5 groups of 6 as repeated addition with a picture."
+ },
+ "materials": {
+  "child": [
+   "The printed workbook, kept flat, with the groups mat (page 6) and the array mat that follows it (nothing to cut)",
+   "About 20 small things of one kind (counters, buttons, dry pasta, coins)",
+   "4 plates or bowls (paper plates are fine), or use the printed groups mat instead",
+   "A pencil, a rubber and spare paper",
+   "Optional: a muffin tray or an egg box for making rows"
+  ],
+  "tutor": [
+   "The slide deck",
+   "Plates and counters to show on camera if you wish",
+   "A visible clock"
+  ],
+  "kit_pages": [
+   "Groups mat (page 6): six plates to lay counters on. Nothing to cut. Use it if you do not have plates or bowls",
+   "Array mat (the next kit page): a grid of squares to lay counters on in rows. Nothing to cut"
+  ],
+  "ruler": false,
+  "notes": "No ruler is needed. Nothing needs to be bought: everything can be found at home. No matches, toothpicks or anything sharp. Small things never go near the mouth or ears. Nothing in Explore needs more than 20 counters or 4 plates."
+ },
+ "timing": {
+  "parts": [
+   {
+    "id": "opening",
+    "title": "Opening",
+    "start": 0,
+    "end": 2
+   },
+   {
+    "id": "remember",
+    "title": "Remember warm-up",
+    "start": 2,
+    "end": 8
+   },
+   {
+    "id": "sneak",
+    "title": "Sneak-peek puzzles",
+    "start": 8,
+    "end": 12
+   },
+   {
+    "id": "explore",
+    "title": "Explore",
+    "start": 12,
+    "end": 26
+   },
+   {
+    "id": "mini",
+    "title": "Mini-lesson",
+    "start": 26,
+    "end": 38
+   },
+   {
+    "id": "break",
+    "title": "Brain break",
+    "start": 38,
+    "end": 42
+   },
+   {
+    "id": "work",
+    "title": "Workbook",
+    "start": 42,
+    "end": 70
+   },
+   {
+    "id": "talk",
+    "title": "Talk time",
+    "start": 70,
+    "end": 76
+   },
+   {
+    "id": "exit",
+    "title": "Exit ticket",
+    "start": 76,
+    "end": 82
+   },
+   {
+    "id": "look",
+    "title": "Look-back",
+    "start": 82,
+    "end": 85
+   },
+   {
+    "id": "flex",
+    "title": "Flex time and goodbye",
+    "start": 85,
+    "end": 90
+   }
+  ],
+  "optional_slide": "s-opt",
+  "include_rules": false,
+  "notes": "Opening is 2 minutes (the routine and rules were taught earlier in the term; give the recording, muting and camera notice). Explore has 14 minutes of plates and counters: equal groups, equal or not, and two ways to see 12. The mini-lesson has 12 because it carries the × sign and the array. The last 5 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time.",
+  "skip_order": [
+   "Start with: cut the Mini-lesson check slide to three sums",
+   "Then: shorten Explore round 3 to one way (3 groups of 4)",
+   "Then: take the extra minutes from the flex time"
+  ]
+ },
+ "sneak_peek": {
+  "q1": "Mei puts 2 cookies on each of 3 plates. How many cookies are there altogether? You may draw to help.",
+  "q2": "Ben has 4 bags with 3 sweets in each bag. Siti has 3 bags with 4 sweets in each bag. Who has more sweets? Circle Ben, Siti or Same. Then write or draw how you know.",
+  "a1": "6",
+  "a2": "Same. Each of them has 12 sweets: 4 groups of 3 and 3 groups of 4 are both 12.",
+  "val1": 6
+ },
+ "rec": {
+  "opening": {
+   "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook, your plates and counters. Pause or rewind any time.",
+   "action": "Gather your workbook, pencil, paper, plates and counters. Press play when ready."
+  },
+  "remember": {
+   "say": "Recording: join in! Touch the numbers and say your answers before I say them. Pause if you need longer.",
+   "action": "Play along. Say each answer out loud before the video does."
+  },
+  "sneak": {
+   "say": "Recording: pause now and try both puzzles on your paper. Guessing is fine. Press play for the next part.",
+   "action": "Pause. Try both puzzles on your own paper. A guess is fine."
+  },
+  "explore": {
+   "say": "Recording: pause now. Put counters on your plates and make equal groups. Press play when you have tried.",
+   "action": "Pause. Make equal groups with your counters, count in jumps, and test the pictures I show."
+  },
+  "mini": {
+   "say": "Recording: keep watching and copy the examples. Rewind if you miss a step.",
+   "action": "Watch and copy the examples. Rewind any step you missed."
+  },
+  "break": {
+   "say": "Recording: stand up and join in! Clap in groups and say the total out loud.",
+   "action": "Stand up. Clap in groups, then say each total out loud."
+  },
+  "work": {
+   "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
+   "action": "Pause. Do page 1, then play to check. Then page 2. Then choose a page to try."
+  },
+  "talk": {
+   "say": "Recording: pause. Tell a grown-up if Mei is right, and show them with counters.",
+   "action": "Pause. Explain your answer to someone at home, with counters and a reason."
+  },
+  "exit": {
+   "say": "Recording: pause and do the exit ticket on your own. Then press play to check it.",
+   "action": "Pause. Do the exit ticket alone, then play to check it."
+  },
+  "look": {
+   "say": "Recording: pause and fill in your look-back box. You can pass.",
+   "action": "Pause. Fill in the look-back box, or pass."
+  },
+  "flex": {
+   "say": "Recording: well done for finishing! Show a grown-up one thing you found out.",
+   "action": "Show a grown-up your workbook and tell them one thing you found out."
+  }
+ },
+ "slides": [
+  {
+   "id": "s-title",
+   "part": "opening",
+   "kind": "title",
+   "title": "Equal Groups",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "TODAY WE WILL",
+     "items": [
+      "Make equal groups and count them fast."
+     ]
+    }
+   ],
+   "note": "Term 2 Lesson 5, 90 minutes. Objective: make and recognise equal groups, write 4 groups of 3 = 12 and 4 × 3 = 12, read an array in rows and see that 3 × 4 = 4 × 3. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 26, mini-lesson 26 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Greet by first name, then say the recording notice in one line (you and the screen only; a child may keep the camera off), then start the recording.",
+   "subtitle": "Same-size groups, counted fast",
+   "mascot": {
+    "size": "l",
+    "say": "Hi, I'm Mi. Let's notice, test and explain why!"
+   }
+  },
+  {
+   "id": "s-rem1",
+   "part": "remember",
+   "kind": "light",
+   "title": "Warm-up: count in jumps",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Touch the yellow numbers as we say them"
+    },
+    {
+     "t": "visual",
+     "type": "hundred",
+     "rows": [
+      1,
+      4
+     ],
+     "cols": [
+      1,
+      10
+     ],
+     "shade": [
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40
+     ],
+     "cell": 66
+    },
+    {
+     "t": "p",
+     "text": "Count in 5s: 5, 10, 15 ..."
+    },
+    {
+     "t": "numrow",
+     "items": [
+      "2s",
+      "5s",
+      "10s"
+     ]
+    }
+   ],
+   "note": "The yellow numbers are the numbers we say when we count in fives. Count together up to 40, touching each yellow number. Then count in twos (touch every second number) and count in tens together. Ask: after 25 in fives (30), after 14 in twos (16). No writing, no marks. A child who is unsure touches each number on the screen.",
+   "mascot": {
+    "size": "s",
+    "say": "Counting in jumps is fun!"
+   }
+  },
+  {
+   "id": "s-rem2",
+   "part": "remember",
+   "kind": "light",
+   "title": "Bundles of ten",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "bundles",
+     "tens": 3,
+     "ones": 4,
+     "style": "kit",
+     "label": "3 tens and 4 ones"
+    },
+    {
+     "t": "p",
+     "text": "Every bundle has the same number of sticks."
+    },
+    {
+     "t": "numrow",
+     "items": [
+      "3 bundles"
+     ]
+    }
+   ],
+   "note": "Each bundle is a ten, so the bundles are equal groups. 3 bundles of ten and 4 singles make 34. Ask: how many sticks in 3 bundles (30). Children answer aloud or with fingers. A child who has not met tens and ones can count the squares in a bar, then count the bars in jumps."
+  },
+  {
+   "id": "s-rem3",
+   "part": "remember",
+   "kind": "light",
+   "title": "Make a ten",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "ten_frame",
+     "filled": [
+      8,
+      0
+     ],
+     "extra": [
+      0,
+      6
+     ]
+    },
+    {
+     "t": "p",
+     "text": "8 + 6: fill the first frame to make 10, then add the rest."
+    },
+    {
+     "t": "numrow",
+     "items": [
+      "9 + 4",
+      "7 + 5"
+     ]
+    }
+   ],
+   "note": "Eight red counters and six yellow counters. Move 2 yellow counters to fill the first frame: that makes 10 and 4 more, so 14. Ask: 9 + 4 (13), 7 + 5 (12). Children answer aloud. A child who is unsure fills the frame with their own counters. This is the skill we need to add the same number again and again."
+  },
+  {
+   "id": "s-sneak",
+   "part": "sneak",
+   "kind": "light",
+   "title": "Sneak-peek puzzles",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Ideas we have not learnt yet. A guess is a great start. Nobody is marked."
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 1: anyone can try",
+        "items": [
+         "Mei puts 2 cookies on each of 3 plates.",
+         "How many cookies are there altogether?",
+         "You may draw to help."
+        ]
+       },
+       {
+        "t": "visual",
+        "type": "groups",
+        "container": "plate",
+        "n": 3,
+        "each": 2,
+        "icon": "cookie",
+        "per_row": 3
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 2: think",
+        "items": [
+         "Ben has 4 bags with 3 sweets in each bag.",
+         "Siti has 3 bags with 4 sweets in each bag.",
+         "Who has more sweets? Circle Ben, Siti or Same.",
+         "Then write or draw how you know."
+        ]
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Puzzle 1 (3 plates with 2 cookies on each; 6 cookies) is an access question: any child can count the picture or draw. Puzzle 2 is a thinking question on the lesson idea: 4 groups of 3 and 3 groups of 4. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: 6; the same, 12 each. Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
+  },
+  {
+   "id": "s-explore1",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: equal groups",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "Put 3 counters on each of 4 plates.",
+      "Every plate has the same number. The groups are equal.",
+      "Count all the counters in jumps of 3.",
+      "Now try 5 counters on each of 3 plates."
+     ]
+    },
+    {
+     "t": "visual",
+     "type": "groups",
+     "container": "plate",
+     "n": 4,
+     "each": 3,
+     "icon": "counter_red",
+     "per_row": 4
+    }
+   ],
+   "note": "Round 1, about 4 minutes. Objects first, no writing. Children put 3 counters on each of 4 plates (or on the groups mat), then count them in jumps of 3: 3, 6, 9, 12. Say the words once: group, each, equal, 4 groups of 3. Then 3 plates with 5 counters each (15). Ask: how many plates, how many on each plate, how many altogether. A child with fewer counters uses 3 plates of 3. The picture shows 4 groups of 3."
+  },
+  {
+   "id": "s-explore2",
+   "part": "explore",
+   "kind": "light",
+   "title": "Are the groups equal?",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "1 finger for equal. 2 fingers for not equal."
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "groups",
+        "container": "plate",
+        "n": 3,
+        "each": 2,
+        "icon": "counter_red",
+        "per_row": 3
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "text": "Picture A"
+       }
+      ]
+     ],
+     "weights": [
+      3,
+      1
+     ]
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "groups",
+        "container": "plate",
+        "counts": [
+         3,
+         2,
+         3
+        ],
+        "icon": "counter_red",
+        "per_row": 3
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "text": "Picture B"
+       }
+      ]
+     ],
+     "weights": [
+      3,
+      1
+     ]
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "groups",
+        "container": "plate",
+        "n": 2,
+        "each": 4,
+        "icon": "counter_red",
+        "per_row": 3
+       }
+      ],
+      [
+       {
+        "t": "p",
+        "text": "Picture C"
+       }
+      ]
+     ],
+     "weights": [
+      3,
+      1
+     ]
+    }
+   ],
+   "note": "Round 2, about 4 minutes. A is 3 plates of 2 (equal), B is 3, 2 and 3 (not equal), C is 2 plates of 4 (equal). Children show 1 finger for equal and 2 fingers for not equal; do not name a child with a wrong answer. Then children lay out picture B with counters and add counters to make the groups equal: they add 1 counter to the plate with 2. Ask how many more counters they added (1)."
+  },
+  {
+   "id": "s-explore3",
+   "part": "explore",
+   "kind": "light",
+   "title": "Two ways to see 12",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Use the same 12 counters both times."
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "groups",
+        "container": "plate",
+        "n": 3,
+        "each": 4,
+        "icon": "counter_red",
+        "per_row": 3
+       },
+       {
+        "t": "p",
+        "text": "3 groups of 4"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "groups",
+        "container": "plate",
+        "n": 4,
+        "each": 3,
+        "icon": "counter_red",
+        "per_row": 4
+       },
+       {
+        "t": "p",
+        "text": "4 groups of 3"
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Round 3, about 4 minutes. Take 12 counters. First make 3 plates with 4 on each (3 groups of 4). Then put the same 12 counters on 4 plates, 3 on each (4 groups of 3). Ask what children notice: the total is the same, 12, but the groups are different. Do not say 3 × 4 = 4 × 3 yet: we see it again with an array in the mini-lesson. Do not say share: the word sharing belongs to Term 2 Lesson 7."
+  },
+  {
+   "id": "s-explore4",
+   "part": "explore",
+   "kind": "light",
+   "title": "What did we notice?",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      "What makes groups equal?",
+      "How can we count equal groups fast?",
+      "What stayed the same when we changed 3 groups of 4 to 4 groups of 3?"
+     ]
+    }
+   ],
+   "note": "Take one or two answers from volunteers. Key ideas: equal groups have the same number in every group; we can count in jumps (3, 6, 9, 12) instead of one by one; the total stayed 12 when we turned 3 groups of 4 into 4 groups of 3. Repeat a child’s answer in your own words so the recording picks it up. Say: next we learn a short way to write it."
+  },
+  {
+   "id": "s-m1",
+   "part": "mini",
+   "kind": "light",
+   "title": "Groups of",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "groups",
+     "container": "plate",
+     "n": 4,
+     "each": 3,
+     "icon": "cookie",
+     "per_row": 4
+    },
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Say it",
+       "Add it"
+      ],
+      [
+       "4 groups of 3",
+       "3 + 3 + 3 + 3 = 12"
+      ]
+     ],
+     "reveal": true
+    }
+   ],
+   "note": "Look at 4 plates with 3 cookies on each. We say 4 groups of 3. We can add the same number again and again: 3 + 3 + 3 + 3 = 12. Point to each plate as you add. Ask: how many groups, how many in each, how many altogether. Say that 4 is the number of groups and 3 is the number in each group."
+  },
+  {
+   "id": "s-m2",
+   "part": "mini",
+   "kind": "light",
+   "title": "The × sign",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Groups of",
+       "Add",
+       "× sentence"
+      ],
+      [
+       "4 groups of 3",
+       "3 + 3 + 3 + 3 = 12",
+       "4 × 3 = 12"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "× means groups of: the first number is how many groups."
+    },
+    {
+     "t": "answer",
+     "text": "5 groups of 2: 2 + 2 + 2 + 2 + 2 = 10, so 5 × 2 = 10.",
+     "reveal": true
+    }
+   ],
+   "note": "The sign × is a short way to write groups of. 4 × 3 means 4 groups of 3. Read it as 4 groups of 3 (or 4 times 3). The first number is how many groups; the second is how many in each group. Only the worked row is on the question slide: 5 groups of 2 is asked aloud. Children say the total first; the answer comes on the next slide. Accept 3 × 4 as a correct way to write the same total (we meet this in the array); frames in the workbook use groups first."
+  },
+  {
+   "id": "s-m3",
+   "part": "mini",
+   "kind": "light",
+   "title": "Equal groups only",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "groups",
+        "container": "plate",
+        "n": 3,
+        "each": 3,
+        "icon": "cookie",
+        "per_row": 3
+       },
+       {
+        "t": "p",
+        "text": "Equal groups: 3 groups of 3. We can write 3 × 3."
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "groups",
+        "container": "plate",
+        "counts": [
+         3,
+         2,
+         3
+        ],
+        "icon": "cookie",
+        "per_row": 3
+       },
+       {
+        "t": "p",
+        "text": "Not equal groups: 3, 2 and 3. We cannot write a × sentence yet."
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "We use × only when every group has the same number. The left picture is 3 groups of 3 (9). The right picture has 3, 2 and 3, so it is not equal groups. Ask: what could we do to make it equal? Add 1 cookie to the plate with 2. This links to the how many more to make equal groups question in Think harder."
+  },
+  {
+   "id": "s-m4",
+   "part": "mini",
+   "kind": "light",
+   "title": "Rows and columns",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "array",
+        "rows": 3,
+        "cols": 4,
+        "icon": "ball"
+       },
+       {
+        "t": "p",
+        "text": "3 rows of 4: 3 × 4 = 12"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "array",
+        "rows": 4,
+        "cols": 3,
+        "icon": "ball"
+       },
+       {
+        "t": "p",
+        "text": "Turn it: 4 rows of 3: 4 × 3 = 12"
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "An array is equal groups in rows. 3 rows with 4 balls in each row is 3 × 4 = 12. Turn the page on its side: now there are 4 rows with 3 in each row, 4 × 3 = 12. The balls are the same, so the total is the same: 3 × 4 = 4 × 3. Ask: does the picture work for 2 rows of 5 and 5 rows of 2 (both 10)? Link back to the sneak-peek: 4 bags of 3 and 3 bags of 4."
+  },
+  {
+   "id": "s-m5",
+   "part": "mini",
+   "kind": "light",
+   "title": "Your turn",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Write the sum, the × sentence and the total."
+    },
+    {
+     "t": "numrow",
+     "items": [
+      "2 groups of 6",
+      "3 groups of 6",
+      "4 groups of 4"
+     ]
+    }
+   ],
+   "note": "Each child writes the three totals on their own paper: for example 2 groups of 6 is 6 + 6 = 12, so 2 × 6 = 12. Walk the cameras; do not ask children to hold papers up. Wait 10 seconds before helping. Answers: 12, 18, 16. Children may use counters or draw groups."
+  },
+  {
+   "id": "s-m5a",
+   "part": "mini",
+   "kind": "light",
+   "title": "Check: groups of",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Groups of",
+       "Add",
+       "Total"
+      ],
+      [
+       "2 groups of 6",
+       "6 + 6",
+       "12"
+      ],
+      [
+       "3 groups of 6",
+       "6 + 6 + 6",
+       "18"
+      ],
+      [
+       "4 groups of 4",
+       "4 + 4 + 4 + 4",
+       "16"
+      ]
+     ]
+    }
+   ],
+   "note": "Answers: 12, 18, 16. Read each answer aloud so a child watching the recording can mark their own work. Children tick their own. Never ask a child to show a wrong answer to the group. Link back: 2 groups of 6 is 6 + 6, a double (Term 2 Lesson 3)."
+  },
+  {
+   "id": "s-break",
+   "part": "break",
+   "kind": "dark",
+   "title": "Clap in groups",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "I say a group. Clap softly in groups and pause."
+    },
+    {
+     "t": "p",
+     "text": "Say the total out loud together."
+    },
+    {
+     "t": "p",
+     "text": "Stand up. Sip some water."
+    }
+   ],
+   "note": "Four minutes. Stand up on camera. Call: 2 groups of 3 (clap 3, pause, clap 3: 6), 3 groups of 2 (6), 4 groups of 2 (8), 3 groups of 5 (15). Children clap softly or tap their thighs, pausing between groups, and say the total together. No equipment, no running, a little clear space. A child may stay seated and tap the table."
+  },
+  {
+   "id": "s-ws1",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 1: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 1 to 3. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read questions 1 to 3 aloud. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: equal or not, circle Yes or No. Question 2: a picture of 3 plates, fill in the blanks. Question 3: 5 jars with 2 sweets, add and write groups of."
+  },
+  {
+   "id": "s-ws1ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 1",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children tick their own page. Never ask a child to show a wrong answer to the group. Answers: Q1 left Yes, right No; Q2 3 plates, 5 cookies on each plate, 3 groups of 5 = 15; Q3 2 + 2 + 2 + 2 + 2 = 10 and 5 groups of 2 = 10."
+  },
+  {
+   "id": "s-ws2",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 2: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 4 to 6. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S4",
+      "S5",
+      "S6"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read questions 4 to 6 aloud. Question 4: draw 4 dots on each plate, then write 3 groups of 4. Question 5: fill in the table of groups, in each and total. Question 6: a story about 4 boxes of pencils; write the number sentence with a sign in the circle, then the answer."
+  },
+  {
+   "id": "s-ws2ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 2",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S4",
+      "S5",
+      "S6"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud so a child watching the recording can mark their own work. Question 6: the sign in the circle is ×. Never ask a child to show a wrong answer to the group. Answers: Q4 3 groups of 4 = 12; Q5 15, 8, 10; Q6 4 × 5 = 20 and 20 pencils."
+  },
+  {
+   "id": "s-choice",
+   "part": "work",
+   "kind": "light",
+   "title": "Choose your next page",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Page",
+       "What it is"
+      ],
+      [
+       "Think harder (page 3)",
+       "Arrays and missing numbers"
+      ],
+      [
+       "Go further (page 4)",
+       "Two kinds of groups"
+      ],
+      [
+       "Investigation (page 5)",
+       "Arrays with 12 counters"
+      ],
+      [
+       "Check",
+       "Finish and check your own work"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Everyone may choose. Not finished? Pages 3 to 5 are for home too."
+    }
+   ],
+   "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 5 minutes."
+  },
+  {
+   "id": "s-talk",
+   "part": "talk",
+   "kind": "light",
+   "title": "Talk and explain",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "MEI TRIES 2 GROUPS OF 5 AND 5 GROUPS OF 2",
+     "items": [
+      "She says: swap the numbers and the total stays the same."
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Is Mei right? How could we be sure?"
+    },
+    {
+     "t": "chip",
+     "text": "I think ... because ..."
+    }
+   ],
+   "note": "One minute of talk to the grown-up next to you, or to your screen. Children try 2 groups of 5 and 5 groups of 2 with counters, then another pair such as 4 and 2. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: yes for these, both are 10; turn an array of 2 rows of 5 and it becomes 5 rows of 2; test more pairs. Repeat each child’s answer in your own words for the recording."
+  },
+  {
+   "id": "s-sneakans",
+   "part": "talk",
+   "kind": "light",
+   "title": "Back to the sneak-peek",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "groups",
+        "container": "bag",
+        "n": 4,
+        "each": 3,
+        "icon": "sweet",
+        "per_row": 4
+       },
+       {
+        "t": "p",
+        "text": "Ben: 4 bags of 3"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "groups",
+        "container": "bag",
+        "n": 3,
+        "each": 4,
+        "icon": "sweet",
+        "per_row": 3
+       },
+       {
+        "t": "p",
+        "text": "Siti: 3 bags of 4"
+       }
+      ]
+     ]
+    },
+    {
+     "t": "answer",
+     "text": "The same! 12 each. 4 × 3 = 3 × 4."
+    }
+   ],
+   "note": "Reveal puzzle 2 now. Say: many of you wrote a good reason. Do not read out anyone’s earlier answer. Ben has 4 groups of 3 and Siti has 3 groups of 4; both are 12 sweets, because turning the groups gives the same total. Puzzle 1: 3 plates with 2 cookies is 6."
+  },
+  {
+   "id": "s-exit",
+   "part": "exit",
+   "kind": "light",
+   "title": "Exit ticket",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "On your own. No looking back."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ],
+     "short": false
+    }
+   ],
+   "note": "Children answer on page 5. Read E1, E2 and E3 aloud (the questions are on the slide). Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
+  },
+  {
+   "id": "s-exitans",
+   "part": "exit",
+   "kind": "light",
+   "title": "Check the exit ticket",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children tick their own ticket. Answers: 20; option 2, 3 + 3 + 3 + 3; the sentence 3 × 4 = 12 and 12 pencils."
+  },
+  {
+   "id": "s-look",
+   "part": "look",
+   "kind": "lookback",
+   "title": "Look-back",
+   "blocks": [
+    {
+     "t": "lookback"
+    }
+   ],
+   "note": "Three minutes. Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child.",
+   "mascot": {
+    "size": "s",
+    "say": "Take your time. You can pass."
+   }
+  },
+  {
+   "id": "s-end",
+   "part": "flex",
+   "kind": "dark",
+   "title": "Well done, inquirers!",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Show a grown-up one thing you found out today."
+    },
+    {
+     "t": "card",
+     "head": "NEXT LESSON",
+     "items": [
+      "Skip-Count Tables",
+      "Have ready: your Term 2 Lesson 6 workbook with its 100 square page, 2 or 3 coloured pencils, about 20 counters, pencil and paper."
+     ]
+    }
+   ],
+   "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. If the whole class is ahead, show the optional slides and use the Spare-time menu from the tutor guide.",
+   "mascot": {
+    "size": "l",
+    "say": "Great thinking today!"
+   }
+  },
+  {
+   "id": "s-opt",
+   "part": "flex",
+   "kind": "light",
+   "title": "Go further: what if?",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Mei has 3 bags with 5 sweets in each bag. Ali has 5 bags with 3 sweets in each bag."
+    },
+    {
+     "t": "p",
+     "text": "Who has more sweets?"
+    },
+    {
+     "t": "chip",
+     "text": "Try it with counters, then tell a friend how you know."
+    }
+   ],
+   "note": "Optional, only if you are on time. Answer (say it aloud after the children have tried): the same, 15 each. Turning the groups gives the same total (3 × 5 = 5 × 3). Take two answers and move on. This repeats the sneak-peek idea with new numbers.",
+   "optional": true
+  },
+  {
+   "id": "s-menu",
+   "part": "flex",
+   "kind": "light",
+   "title": "If we have time: pick one",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Activity",
+       "What we do"
+      ],
+      [
+       "Is it always true?",
+       "Swap two numbers. Does the total stay the same?"
+      ],
+      [
+       "Make a puzzle",
+       "Draw equal groups. Ask your grown-up for the total."
+      ],
+      [
+       "Teach it back",
+       "Show a toy 3 groups of 5 with counters"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Optional. Everyone may join."
+    }
+   ],
+   "note": "Optional Spare-time menu, used only if the whole class is ahead. Pick one or two activities (3 to 5 minutes each); full tutor lines and answers are in the tutor guide. Never start new content and never name who is ahead. Slow down with how do you know rather than rushing on. These minutes come from the flex buffer and are not part of the 90-minute sum.",
+   "optional": true
+  }
+ ],
+ "script": {
+  "segments": [
+   {
+    "part": "opening",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-title",
+      "s": 15
+     },
+     {
+      "k": "DO",
+      "text": "Greet the whole group warmly, before the recording starts. Check that you can see each child, or ask the grown-up.",
+      "s": 12
+     },
+     {
+      "k": "SAY",
+      "text": "Hello, inquirers! Pencil ready, and your plates, counters and workbook on the table. Cameras can be on or off, as you like."
+     },
+     {
+      "k": "SAY",
+      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+     },
+     {
+      "k": "DO",
+      "text": "Start the recording now. Do not use children's first names on the recording.",
+      "s": 5
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
+     },
+     {
+      "k": "SAY",
+      "text": "Today we make equal groups. Equal means the same number in every group. We will count them fast, and we will meet a new sign."
+     },
+     {
+      "k": "NOTE",
+      "text": "Say the recording statement and the microphone routine in the same words every lesson, for anyone who joined late. Say the notice before you start the recording, and do not use children's first names once it is running. The routine and the four inquirer rules were introduced earlier in the term: do not re-teach them."
+     },
+     {
+      "k": "NOTE",
+      "text": "New here? Say in one minute: our three rule words (notice it, test it, explain why); a guess is fine and you can always pass; after Start here you may choose Think harder, Go further or the Investigation; nobody holds paper to the camera. The first recording of the term shows the full routine."
+     }
+    ]
+   },
+   {
+    "part": "remember",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-rem1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Today's tool is Make a table. Put what you know in rows and columns.",
+      "spine": "remember"
+     },
+     {
+      "k": "DO",
+      "text": "Point at the tool on page 1 of the workbook.",
+      "s": 4,
+      "spine": "remember"
+     },
+     {
+      "k": "SAY",
+      "text": "Counting in jumps. Touch the yellow numbers as we count in fives: five, ten, fifteen, twenty. Count with me up to forty."
+     },
+     {
+      "k": "ASK",
+      "text": "Count in fives. What comes after twenty-five?",
+      "resp": 30
+     },
+     {
+      "k": "SAY",
+      "text": "Now count in twos: two, four, six, eight. Touch every second number."
+     },
+     {
+      "k": "ASK",
+      "text": "What comes after fourteen when we count in twos?",
+      "resp": 30
+     },
+     {
+      "k": "SAY",
+      "text": "And in tens: ten, twenty, thirty, forty. Count with me."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem2"
+     },
+     {
+      "k": "SAY",
+      "text": "Bundles of ten. Every bundle is the same size, so the bundles are equal groups. Three bundles of ten and four singles make thirty-four."
+     },
+     {
+      "k": "ASK",
+      "text": "How many sticks are in three bundles of ten?",
+      "resp": 30
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem3"
+     },
+     {
+      "k": "SAY",
+      "text": "Make a ten. Eight and six. Move two counters to fill the first frame: that is ten, and four more."
+     },
+     {
+      "k": "ASK",
+      "text": "Nine plus four?",
+      "resp": 30
+     },
+     {
+      "k": "ASK",
+      "text": "Seven plus five?",
+      "resp": 30
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child is unsure about counting in jumps, touch each number on the screen and count slowly. For bundles, count the squares in one bar, then the bars. For the ten-frame, fill the first frame with counters and count on."
+     },
+     {
+      "k": "NOTE",
+      "text": "Answers: 30, 16; 30; 13, 12. Children answer with a whisper, fingers or hands. Nobody writes. Do not say multiply yet. Joining cold: all you need is counting to 20 and adding small numbers."
+     }
+    ]
+   },
+   {
+    "part": "sneak",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-sneak"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked."
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle one. Mei puts 2 cookies on each of 3 plates. How many cookies are there altogether? You may draw to help."
+     },
+     {
+      "k": "WORK",
+      "text": "Children draw or count and write the number on their own paper.",
+      "s": 40
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle two. Ben has 4 bags with 3 sweets in each bag. Siti has 3 bags with 4 sweets in each bag. Who has more sweets? Circle Ben, Siti or Same. Then write or draw how you know."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write or draw their answer.",
+      "s": 60
+     },
+     {
+      "k": "SAY",
+      "text": "Keep your paper. Nobody shows it. We will check our own thinking later, at Talk time."
+     },
+     {
+      "k": "NOTE",
+      "text": "Puzzle 1 answer: 6 cookies. Puzzle 2 answer: the same, 12 sweets each (4 groups of 3 and 3 groups of 4). Look for good ideas to praise later (a child who drew the bags or counted in jumps). Do not write scores or keep a list."
+     }
+    ]
+   },
+   {
+    "part": "explore",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Your hands are the teachers. Put 3 counters on each of 4 plates. Every plate has the same number: these are equal groups."
+     },
+     {
+      "k": "WORK",
+      "text": "Children put 3 counters on each of 4 plates (or on the groups mat).",
+      "s": 40
+     },
+     {
+      "k": "ASK",
+      "text": "How many plates? How many counters on each plate?",
+      "resp": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Count all the counters in jumps of three: three, six, nine, twelve. We say: 4 groups of 3 is 12 altogether."
+     },
+     {
+      "k": "WORK",
+      "text": "Children count in threes, touching each plate: 12.",
+      "s": 30
+     },
+     {
+      "k": "SAY",
+      "text": "Now put 5 counters on each of 3 plates. How many groups, and how many in each group?"
+     },
+     {
+      "k": "WORK",
+      "text": "Children make 3 groups of 5.",
+      "s": 40
+     },
+     {
+      "k": "ASK",
+      "text": "How many counters are there altogether?",
+      "resp": 15
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2"
+     },
+     {
+      "k": "SAY",
+      "text": "Round two. Are the groups equal? Look at each picture. Show one finger for equal and two fingers for not equal."
+     },
+     {
+      "k": "ASK",
+      "text": "Picture A. Equal or not equal?",
+      "resp": 15
+     },
+     {
+      "k": "ASK",
+      "text": "Picture B. Equal or not equal?",
+      "resp": 15
+     },
+     {
+      "k": "ASK",
+      "text": "Picture C. Equal or not equal?",
+      "resp": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Picture B has 3, 2 and 3. Put counters on three plates the same way. Add counters so that every plate has the same number."
+     },
+     {
+      "k": "WORK",
+      "text": "Children lay out 3, 2 and 3 and add counters until every plate has 3: they add 1.",
+      "s": 50
+     },
+     {
+      "k": "ASK",
+      "text": "How many more counters did you add?",
+      "resp": 15
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore3"
+     },
+     {
+      "k": "SAY",
+      "text": "Round three. Take 12 counters. Make 3 plates with 4 counters on each. That is 3 groups of 4."
+     },
+     {
+      "k": "WORK",
+      "text": "Children make 3 groups of 4 with 12 counters.",
+      "s": 40
+     },
+     {
+      "k": "SAY",
+      "text": "Now put the same 12 counters on 4 plates, with 3 on each. That is 4 groups of 3."
+     },
+     {
+      "k": "WORK",
+      "text": "Children make 4 groups of 3 with the same 12 counters.",
+      "s": 50
+     },
+     {
+      "k": "ASK",
+      "text": "What do you notice about the total? What changed, and what stayed the same?",
+      "resp": 45
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore4"
+     },
+     {
+      "k": "ASK",
+      "text": "What makes groups equal? How can we count equal groups fast?",
+      "resp": 45
+     },
+     {
+      "k": "SAY",
+      "text": "Equal groups let us count in jumps. Next we learn a short way to write them."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who is unsure if groups are equal: count each plate and say the numbers aloud: 3, 2, 3. A child with few counters: use the printed groups mat, or draw circles and dots. A child who counts one by one: show jumps of 3."
+     },
+     {
+      "k": "NOTE",
+      "text": "Main room only; children say their answers aloud and show fingers; you cannot see builds on small tiles. Answers: 4 groups of 3 is 12; 3 groups of 5 is 15; A equal, B not equal, C equal; 1 more counter; 3 groups of 4 and 4 groups of 3 are both 12. Do not say 3 × 4 = 4 × 3 yet and do not use the word share: it belongs to Term 2 Lesson 7. Nothing here needs more than 20 counters or 4 plates."
+     }
+    ]
+   },
+   {
+    "part": "mini",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-m1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Look at 4 plates with 3 cookies on each. We say 4 groups of 3."
+     },
+     {
+      "k": "ASK",
+      "text": "How many groups? How many in each group? How many altogether?",
+      "resp": 35
+     },
+     {
+      "k": "SAY",
+      "text": "We can add the same number again and again: three plus three plus three plus three is twelve."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m2"
+     },
+     {
+      "k": "SAY",
+      "text": "There is a short way to write groups of. We use the sign ×. Four times three means 4 groups of 3. The first number is how many groups. The second is how many in each group."
+     },
+     {
+      "k": "ASK",
+      "text": "Look at 5 groups of 2. What is the total? How would you write it with the sign?",
+      "resp": 45
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3"
+     },
+     {
+      "k": "SAY",
+      "text": "We use the sign only when every group has the same number. The left picture is equal. The right picture has 3, 2 and 3: not equal groups."
+     },
+     {
+      "k": "ASK",
+      "text": "What could we do to make the right picture equal?",
+      "resp": 45
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4"
+     },
+     {
+      "k": "SAY",
+      "text": "Here are 12 balls in rows. 3 rows of 4 is three times four. Turn the page on its side: 4 rows of 3 is four times three. The balls are the same, so the total is the same: twelve."
+     },
+     {
+      "k": "ASK",
+      "text": "Does the same work for 2 rows of 5 and 5 rows of 2?",
+      "resp": 40
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m5"
+     },
+     {
+      "k": "READ",
+      "text": "Your turn. Write the sum, the times sentence and the total. 2 groups of 6. 3 groups of 6. 4 groups of 4."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write the sum, the times sentence and the total for three groups on their own paper.",
+      "s": 110
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m5a"
+     },
+     {
+      "k": "READ",
+      "text": "Twelve. Eighteen. Sixteen. Tick your own."
+     },
+     {
+      "k": "NOTE",
+      "text": "Key words to use every time: group, each, equal, in all, groups of, times. Do not say that × means multiply by: say groups of. This lesson is within the Primary 1 syllabus (multiplication within 40); keep the pace gentle and use the pictures. Accept 3 × 4 or 4 × 3 as a correct way to write a total in a child’s own work; our frames put the number of groups first."
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child writes 4 + 3 for 4 groups of 3, ask them to build it: 4 plates, 3 on each. If a child says the groups are equal when they are not, ask them to count each group aloud."
+     }
+    ]
+   },
+   {
+    "part": "break",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-break"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Stand up and get a sip of water. I say a group. Clap softly in groups, with a pause between groups, and say the total."
+     },
+     {
+      "k": "WORK",
+      "text": "Call 2 groups of 3, 3 groups of 2, 4 groups of 2, 3 groups of 5. Children clap softly (or tap their thighs) in groups, pausing between groups, and say the total aloud together.",
+      "s": 150
+     }
+    ]
+   },
+   {
+    "part": "work",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "Page 1, Start here. Question 1: are the groups equal? Circle Yes or No for each picture. Question 2: look at the picture and fill in the blanks. Question 3: Mei has 5 jars. Each jar has 2 sweets. Fill in the blanks."
+     },
+     {
+      "k": "WORK",
+      "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
+      "s": 450
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1ans"
+     },
+     {
+      "k": "READ",
+      "text": "Question 1: left, yes. Right, no. Question 2: 3 plates, 5 cookies on each plate, 3 groups of 5 is 15. Question 3: ten, ten, and ten sweets in all. Tick your own page."
+     },
+     {
+      "k": "SAY",
+      "text": "After question 3 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2"
+     },
+     {
+      "k": "READ",
+      "text": "Page 2. Question 4: draw 4 dots on each plate, then fill in the blank. Question 5: fill in the table. Question 6: Aisha has 4 boxes. Each box has 5 pencils. Write a number sentence with a sign in the circle, then fill in the blank."
+     },
+     {
+      "k": "WORK",
+      "text": "Page 2, questions 4 to 6.",
+      "s": 480
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2ans"
+     },
+     {
+      "k": "READ",
+      "text": "Question 4: 3 groups of 4 is 12. Question 5: 15, 8, 10. Question 6: 4 times 5 is 20, and Aisha has 20 pencils."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-choice"
+     },
+     {
+      "k": "SAY",
+      "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time. Anything not finished is for home too."
+     },
+     {
+      "k": "MOVE",
+      "text": "Stand and stretch for 30 seconds, then sit down and choose.",
+      "s": 30
+     },
+     {
+      "k": "WORK",
+      "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
+      "s": 200
+     },
+     {
+      "k": "STUCK",
+      "text": "Q1: count each group aloud. Q2: count the plates, then the cookies on one plate. Q3: add 2 again and again, or count in twos. Q4: draw 4 dots on one plate, then copy. Q5: groups first, then in each. Q6: 4 boxes of 5, add 5 four times. Think harder T3: deal the apples onto the plates, then deal the same apples onto 4 plates."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who is still stuck ticks ‘I am still stuck’ on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp (never a personal phone). You then help in the open session in the next lesson. Never a private message to a child."
+     },
+     {
+      "k": "NOTE",
+      "text": "Think harder is for arrays, how many more to make equal groups and a table with missing numbers. Go further has two kinds of groups and totals near 40. Do not announce who is on which page. Slow class: the workbook part needs about 30 minutes against 28, so Start here may fill most of it. Take the extra minutes from the flex time, do not skip the answer slides, and say that pages 3 to 5 are for home."
+     }
+    ]
+   },
+   {
+    "part": "talk",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-talk"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "Mei tries 2 groups of 5 and 5 groups of 2. She says: swap the numbers and the total stays the same. Is Mei right? How could we be sure?"
+     },
+     {
+      "k": "WORK",
+      "text": "Try 2 groups of 5 and 5 groups of 2 with counters. Then try another pair, such as 4 groups of 2 and 2 groups of 4.",
+      "s": 50
+     },
+     {
+      "k": "WORK",
+      "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
+      "s": 40
+     },
+     {
+      "k": "ASK",
+      "text": "Who would like to share? Volunteers first. A pass is always fine.",
+      "resp": 80
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-sneakans"
+     },
+     {
+      "k": "SAY",
+      "text": "Remember puzzle two? Ben has 4 bags of 3 and Siti has 3 bags of 4. Both have twelve sweets. Turning the groups gives the same total."
+     },
+     {
+      "k": "ASK",
+      "text": "Did anyone change their mind about puzzle two while we worked? You can just nod.",
+      "resp": 15
+     },
+     {
+      "k": "ASK",
+      "text": "Where did you use Make a table today?",
+      "resp": 10,
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Listen for the tool being named, not the answer. Volunteers first, a pass is always fine.",
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Model answer: yes for these pairs, both are 10 and both are 8; turn the groups, or turn an array, and the total stays the same. We tested a few pairs, and the array picture shows why. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed. Do not claim it is proved for every pair of numbers: we tested and used a picture."
+     }
+    ]
+   },
+   {
+    "part": "exit",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-exit"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
+     },
+     {
+      "k": "READ",
+      "text": "E1. Fill in the blank. Five plus five plus five plus five is what? E2. Which is the same as 4 groups of 3? Write its number in the bracket. E3. Ali has 3 boxes. Each box has 4 pencils. Write a number sentence with a sign in the circle, then fill in the blank.",
+      "s": 45
+     },
+     {
+      "k": "WORK",
+      "text": "Children answer E1 to E3 on their own.",
+      "s": 170
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-exitans"
+     },
+     {
+      "k": "READ",
+      "text": "E1: twenty. E2: option 2, three plus three plus three plus three. E3: 3 times 4 is 12, and Ali has 12 pencils."
+     },
+     {
+      "k": "SAY",
+      "text": "Check your own ticket and put a tick by each one you got right. Well done."
+     },
+     {
+      "k": "NOTE",
+      "text": "Nothing is collected or marked live. Children tick their own ticket. If many children miss one question, spend two minutes on it at the start of the next lesson, in the open session, no names. Do not read out any child’s result."
+     }
+    ]
+   },
+   {
+    "part": "look",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-look"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+      "spine": "look"
+     },
+     {
+      "k": "WORK",
+      "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+      "s": 90,
+      "spine": "look"
+     }
+    ]
+   },
+   {
+    "part": "flex",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-end"
+     },
+     {
+      "k": "SAY",
+      "text": "Well done, inquirers. Next lesson is Skip-Count Tables. Please have your Term 2 Lesson 6 workbook with its 100 square page, and have two or three coloured pencils, about 20 counters, a pencil and paper. Goodbye, and thank you to the grown-ups."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-opt",
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Optional, only if you are on time: Mei has 3 bags with 5 sweets in each bag. Ali has 5 bags with 3 sweets in each bag. Who has more sweets? Try it with counters.",
+      "optional": true
+     },
+     {
+      "k": "WORK",
+      "text": "Short think time, then take two answers.",
+      "s": 90,
+      "optional": true
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-menu",
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
+      "optional": true
+     },
+     {
+      "k": "NOTE",
+      "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: the same, 15 each (3 × 5 = 5 × 3). If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+     }
+    ]
+   }
+  ]
+ },
+ "tiers": {
+  "start": [
+   {
+    "id": "S1",
+    "page": 1,
+    "tier": "start",
+    "text": "Are the groups equal? Circle Yes or No for each picture.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Left picture:",
+      "ans": "Yes",
+      "val": "Yes",
+      "choices": [
+       "Yes",
+       "No"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "Right picture:",
+      "ans": "No",
+      "val": "No",
+      "choices": [
+       "Yes",
+       "No"
+      ]
+     }
+    ],
+    "answer": "Left: Yes. Right: No.",
+    "val": [
+     "Yes",
+     "No"
+    ],
+    "hint": "Count what is in each group. Are all the groups the same?",
+    "solution": "The left picture has 3 bags with 4 sweets in each bag: the groups are equal. The right picture has 2, 3 and 2 cookies: the groups are not equal.",
+    "mistakes": [
+     "Counting only the number of groups.",
+     "Saying Yes because the pictures look alike."
+    ],
+    "mins": 1.5,
+    "visuals": [
+     {
+      "type": "groups",
+      "container": "bag",
+      "n": 3,
+      "each": 4,
+      "icon": "sweet",
+      "per_row": 3
+     },
+     {
+      "type": "groups",
+      "container": "plate",
+      "counts": [
+       2,
+       3,
+       2
+      ],
+      "icon": "cookie",
+      "per_row": 3
+     }
+    ]
+   },
+   {
+    "id": "S2",
+    "page": 1,
+    "tier": "start",
+    "text": "Look at the picture. Fill in the blanks.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "There are [] plates.",
+      "ans": "3",
+      "val": 3
+     },
+     {
+      "l": "b",
+      "text": "There are [] cookies on each plate.",
+      "ans": "5",
+      "val": 5
+     },
+     {
+      "l": "c",
+      "text": "[] groups of [] = [2]",
+      "ans": "3, 5, 15",
+      "val": [
+       3,
+       5,
+       15
+      ]
+     }
+    ],
+    "answer": "3 plates; 5 cookies on each plate; 3 groups of 5 = 15",
+    "val": [
+     3,
+     5,
+     3,
+     5,
+     15
+    ],
+    "hint": "Count the plates. Then count the cookies on one plate.",
+    "solution": "There are 3 plates and each plate has 5 cookies. 5 + 5 + 5 = 15, so 3 groups of 5 = 15.",
+    "mistakes": [
+     "Writing 5 groups of 3.",
+     "Counting the cookies on every plate and losing count."
+    ],
+    "mins": 3,
+    "visual": {
+     "type": "groups",
+     "container": "plate",
+     "n": 3,
+     "each": 5,
+     "icon": "cookie",
+     "per_row": 3
+    }
+   },
+   {
+    "id": "S3",
+    "page": 1,
+    "tier": "start",
+    "text": "Mei has 5 jars. Each jar has 2 sweets. How many sweets does Mei have in all?",
+    "parts": [
+     {
+      "l": "a",
+      "text": "2 + 2 + 2 + 2 + 2 = [2]",
+      "ans": "10",
+      "val": 10
+     },
+     {
+      "l": "b",
+      "text": "5 groups of 2 = [2]",
+      "ans": "10",
+      "val": 10
+     }
+    ],
+    "answer": "2 + 2 + 2 + 2 + 2 = 10; 5 groups of 2 = 10",
+    "val": [
+     10,
+     10
+    ],
+    "hint": "Add 2 again and again, or count in twos.",
+    "solution": "5 jars with 2 sweets each: 2 + 2 + 2 + 2 + 2 = 10. So 5 groups of 2 = 10 and Mei has 10 sweets in all.",
+    "mistakes": [
+     "Adding 5 + 2 = 7.",
+     "Losing count of the jars."
+    ],
+    "mins": 3,
+    "visual": {
+     "type": "groups",
+     "container": "jar",
+     "n": 5,
+     "each": 2,
+     "icon": "sweet",
+     "per_row": 3,
+     "size": 82
+    }
+   },
+   {
+    "id": "S4",
+    "page": 2,
+    "tier": "start",
+    "text": "Draw 4 dots on each plate. Then fill in the blank.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "3 groups of 4 = [2]",
+      "ans": "12",
+      "val": 12
+     }
+    ],
+    "answer": "3 groups of 4 = 12",
+    "val": [
+     12
+    ],
+    "hint": "Draw 4 dots on one plate. Then draw 4 dots on each of the other plates.",
+    "solution": "3 plates with 4 dots on each: 4 + 4 + 4 = 12, so 3 groups of 4 = 12.",
+    "mistakes": [
+     "Drawing 3 dots on 4 plates.",
+     "Drawing different numbers of dots on the plates."
+    ],
+    "mins": 2.5,
+    "visual": {
+     "type": "groups",
+     "container": "plate",
+     "n": 3,
+     "each": 4,
+     "icon": "dot",
+     "per_row": 3,
+     "empty": true
+    }
+   },
+   {
+    "id": "S5",
+    "page": 2,
+    "tier": "start",
+    "text": "Fill in the table.",
+    "parts": [],
+    "answer": "15, 8, 10",
+    "val": [
+     15,
+     8,
+     10
+    ],
+    "hint": "The first number is how many groups. The second is how many in each group.",
+    "solution": "3 groups of 5 = 5 + 5 + 5 = 15. 4 groups of 2 = 2 + 2 + 2 + 2 = 8. 2 groups of 5 = 5 + 5 = 10.",
+    "mistakes": [
+     "Adding the two numbers: 3 + 5 = 8.",
+     "Writing the number of groups in the Total box."
+    ],
+    "mins": 2.5,
+    "visual": {
+     "type": "table",
+     "head": [
+      "Groups",
+      "In each",
+      "Total"
+     ],
+     "rows": [
+      [
+       "3",
+       "5",
+       "[2]"
+      ],
+      [
+       "4",
+       "2",
+       "[]"
+      ],
+      [
+       "2",
+       "5",
+       "[2]"
+      ]
+     ]
+    }
+   },
+   {
+    "id": "S6",
+    "page": 2,
+    "tier": "start",
+    "text": "Aisha has 4 boxes. Each box has 5 pencils. How many pencils does Aisha have in all?",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Write a number sentence. {eq}",
+      "ans": "4 × 5 = 20",
+      "val": [
+       4,
+       5,
+       20
+      ]
+     },
+     {
+      "l": "b",
+      "text": "Aisha has [2] pencils in all.",
+      "ans": "20",
+      "val": 20
+     }
+    ],
+    "answer": "4 × 5 = 20 (5 × 4 = 20 is also right); 20 pencils",
+    "val": [
+     4,
+     5,
+     20,
+     20
+    ],
+    "hint": "Count the boxes. Count the pencils in one box. Write the sign in the circle.",
+    "solution": "4 boxes with 5 pencils in each box. 5 + 5 + 5 + 5 = 20. The number sentence is 4 × 5 = 20 and Aisha has 20 pencils.",
+    "mistakes": [
+     "Writing + in the circle.",
+     "Writing 4 × 5 = 9."
+    ],
+    "mins": 3,
+    "visual": {
+     "type": "groups",
+     "container": "box",
+     "n": 4,
+     "each": 5,
+     "icon": "pencil",
+     "per_row": 2
+    }
+   }
+  ],
+  "think": [
+   {
+    "id": "T1",
+    "page": 3,
+    "tier": "think",
+    "text": "Look at the stars in rows. Fill in the blanks.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Rows of stars: [] × [] = [2]",
+      "ans": "2, 8, 16",
+      "val": [
+       2,
+       8,
+       16
+      ]
+     },
+     {
+      "l": "b",
+      "text": "Turn the picture on its side. [] × [] = [2]",
+      "ans": "8, 2, 16",
+      "val": [
+       8,
+       2,
+       16
+      ]
+     },
+     {
+      "l": "c",
+      "text": "Is 2 × 8 = 8 × 2? Circle Yes or No.",
+      "ans": "Yes",
+      "val": "Yes"
+     }
+    ],
+    "answer": "2 × 8 = 16; 8 × 2 = 16; Yes. (In (a) 8 × 2 = 16 is also right if the child counted the stars in one row first; then (b) is 2 × 8.)",
+    "val": [
+     2,
+     8,
+     16,
+     8,
+     2,
+     16,
+     "Yes"
+    ],
+    "hint": "Count the rows. Then count the stars in one row.",
+    "solution": "The picture has 2 rows with 8 stars in each row: 2 × 8 = 16. Turned on its side it has 8 rows with 2 stars in each row: 8 × 2 = 16. The totals are the same, so 2 × 8 = 8 × 2.",
+    "mistakes": [
+     "Adding 2 + 8 = 10.",
+     "Thinking the totals must be different because the pictures look different."
+    ],
+    "mins": 4,
+    "visual": {
+     "type": "array",
+     "rows": 2,
+     "cols": 8,
+     "icon": "sticker",
+     "cell": 36
+    }
+   },
+   {
+    "id": "T2",
+    "page": 3,
+    "tier": "think",
+    "text": "Each plate should have 3 cookies. Look at the picture. How many more cookies are needed to make the groups equal?",
+    "parts": [
+     {
+      "l": "",
+      "text": "[] more cookies are needed.",
+      "ans": "3",
+      "val": 3
+     }
+    ],
+    "answer": "3 more cookies",
+    "val": [
+     3
+    ],
+    "hint": "Count the cookies on each plate. How many are missing from each plate?",
+    "solution": "The plates have 3, 1 and 2 cookies. The second plate needs 2 more and the third plate needs 1 more. 2 + 1 = 3 more cookies.",
+    "mistakes": [
+     "Writing 6 (the number of cookies now).",
+     "Adding only the missing cookies of one plate."
+    ],
+    "mins": 3,
+    "visual": {
+     "type": "groups",
+     "container": "plate",
+     "counts": [
+      3,
+      1,
+      2
+     ],
+     "icon": "cookie",
+     "per_row": 3
+    }
+   },
+   {
+    "id": "T3",
+    "page": 3,
+    "tier": "think",
+    "text": "Kumar has 3 plates with 4 apples on each plate. Is each sentence true or false?",
+    "parts": [],
+    "answer": "False, True (3 groups of 4 is 12, not 7; turned round it is 4 groups of 3)",
+    "val": [
+     "False",
+     "True"
+    ],
+    "hint": "Add the apples on the 3 plates: 4 + 4 + 4. Then count in jumps of 3 to 12: do 4 plates of 3 make the same apples?",
+    "solution": "3 groups of 4 apples: 4 + 4 + 4 = 12. 7 is 3 + 4, which is not the same as 3 groups of 4, so the first sentence is false. 4 groups of 3 is 3 + 3 + 3 + 3 = 12, the same apples, so the second sentence is true.",
+    "mistakes": [
+     "Saying true because 3 + 4 = 7.",
+     "Saying false for the second sentence because the numbers are different."
+    ],
+    "mins": 3,
+    "lines": 0,
+    "tf": [
+     {
+      "s": "Kumar has 3 + 4 = 7 apples."
+     },
+     {
+      "s": "Kumar can put the same apples on 4 plates, with 3 on each plate."
+     }
+    ]
+   },
+   {
+    "id": "T4",
+    "page": 3,
+    "tier": "think",
+    "text": "Jenny has 12 stickers. She puts them into equal groups in different ways. Fill in the table.",
+    "parts": [],
+    "answer": "3, 3",
+    "val": [
+     3,
+     3
+    ],
+    "hint": "Put 12 counters on 4 plates with the same number on each plate. How many are on one plate?",
+    "solution": "4 groups of 3 = 12, so each of the 4 groups has 3. 3 groups of 4 = 12, so the number of groups is 3.",
+    "mistakes": [
+     "Writing the total in every box.",
+     "Choosing numbers that do not make 12."
+    ],
+    "mins": 4,
+    "visual": {
+     "type": "table",
+     "head": [
+      "Groups",
+      "In each",
+      "Total"
+     ],
+     "rows": [
+      [
+       "6",
+       "2",
+       "12"
+      ],
+      [
+       "4",
+       "[]",
+       "12"
+      ],
+      [
+       "[]",
+       "4",
+       "12"
+      ]
+     ]
+    }
+   }
+  ],
+  "go": [
+   {
+    "id": "G1",
+    "page": 4,
+    "tier": "go",
+    "text": "A shed has 3 bikes and 4 cars. Each bike has 2 wheels. Each car has 4 wheels. How many wheels are there in all?",
+    "parts": [
+     {
+      "l": "a",
+      "text": "3 bikes have [] wheels.",
+      "ans": "6",
+      "val": 6
+     },
+     {
+      "l": "b",
+      "text": "4 cars have [2] wheels.",
+      "ans": "16",
+      "val": 16
+     },
+     {
+      "l": "c",
+      "text": "There are [2] wheels in all.",
+      "ans": "22",
+      "val": 22
+     }
+    ],
+    "answer": "6 wheels, 16 wheels, 22 wheels",
+    "val": [
+     6,
+     16,
+     22
+    ],
+    "hint": "First find the wheels on the bikes. Then find the wheels on the cars.",
+    "solution": "3 bikes have 2 + 2 + 2 = 6 wheels. 4 cars have 4 + 4 + 4 + 4 = 16 wheels. 6 + 16 = 22 wheels in all.",
+    "mistakes": [
+     "Counting a car as 2 wheels.",
+     "Forgetting to add the wheels of the bikes and the cars."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "objects",
+     "items": [
+      {
+       "icon": "bike",
+       "n": 3
+      },
+      {
+       "icon": "car",
+       "n": 4
+      }
+     ],
+     "per_row": 4
+    }
+   },
+   {
+    "id": "G2",
+    "page": 4,
+    "tier": "go",
+    "text": "Jamie has 6 jars. Each jar has 5 marbles. Jamie needs 40 marbles. How many more marbles does he need?",
+    "parts": [
+     {
+      "l": "a",
+      "text": "6 groups of 5 = [2]",
+      "ans": "30",
+      "val": 30
+     },
+     {
+      "l": "b",
+      "text": "Jamie needs [2] more marbles.",
+      "ans": "10",
+      "val": 10
+     },
+     {
+      "l": "c",
+      "text": "Jamie's sister has double the jars: 12 jars with 5 marbles in each jar. Use part (a). 12 groups of 5 = [2]",
+      "ans": "60",
+      "val": 60
+     }
+    ],
+    "answer": "6 × 5 = 30; 10 more marbles; 12 × 5 = 60",
+    "val": [
+     30,
+     10,
+     60
+    ],
+    "hint": "Find how many marbles are in the jars now. Then see how many more make 40. For (c), 12 groups is double 6 groups.",
+    "solution": "6 jars with 5 marbles in each jar: 5 + 5 + 5 + 5 + 5 + 5 = 30 marbles. 40 - 30 = 10 more marbles. (c) 12 groups is double 6 groups, so double 30: 30 + 30 = 60 marbles. This is above the school Primary 1 range of 40: doubling the number of groups doubles the total.",
+    "mistakes": [
+     "Writing 40 - 6.",
+     "Stopping after finding 30.",
+     "Part (c): doubling both numbers, or adding 12 + 5 = 17."
+    ],
+    "mins": 7
+   },
+   {
+    "id": "G3",
+    "page": 4,
+    "tier": "go",
+    "text": "Wei has 24 sweets. Show 3 different ways to put them into equal groups. Use a different number of groups each time. Many answers are right.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "[2] groups of [2] = 24",
+      "ans": "2, 12",
+      "val": "open"
+     },
+     {
+      "l": "b",
+      "text": "[2] groups of [2] = 24",
+      "ans": "3, 8",
+      "val": "open"
+     },
+     {
+      "l": "c",
+      "text": "[2] groups of [2] = 24",
+      "ans": "4, 6",
+      "val": "open"
+     }
+    ],
+    "answer": "For example 2 groups of 12, 3 groups of 8, 4 groups of 6 (also 6 of 4, 8 of 3, 12 of 2, 1 of 24, 24 of 1)",
+    "val": "open",
+    "hint": "Try counting in jumps: 4, 8, 12 ... or 6, 12, 18 ... Do the jumps land on 24?",
+    "solution": "2 × 12 = 24, 3 × 8 = 24, 4 × 6 = 24. Turning each one gives 12 × 2, 8 × 3 and 6 × 4.",
+    "mistakes": [
+     "Choosing numbers that do not make 24.",
+     "Writing the same way twice."
+    ],
+    "mins": 5
+   }
+  ],
+  "investigation": {
+   "id": "I1",
+   "page": 5,
+   "tier": "investigation",
+   "title": "Rows with 12 counters",
+   "first": "Put 12 counters in 2 rows of 6. Turn the grid on its side. How many rows now? Write the number on the first line.",
+   "text": "Make rows and columns with 12 counters in other ways, such as 3 rows of 4. Write a × sentence for each on the lines. Try 5 rows. Does it work?",
+   "lines": 4,
+   "answer": "Six ways: 1 × 12, 2 × 6, 3 × 4, 4 × 3, 6 × 2 and 12 × 1. Turning a picture gives a second one (2 × 6 and 6 × 2). 5 rows does not work: 5 rows of 2 uses 10 counters and 2 are left over.",
+   "val": [
+    "six ways"
+   ],
+   "look_for": "A child who builds several arrays, writes a × sentence for each and notices that turning one gives another. Credit a child who tries 5 rows and finds counters left over. Do not mark a child down for finding only three ways.",
+   "mistakes": [
+    "Making rows of different lengths.",
+    "Counting the same picture twice (2 × 6 and 6 × 2 are the same counters turned, but both are good sentences)."
+   ],
+   "mins": 8,
+   "draw": false
+  }
+ },
+ "talk": {
+  "question": "Mei tries 2 groups of 5 and 5 groups of 2. She says: swap the numbers and the total stays the same. Is Mei right? How could we be sure?",
+  "starter": "I think ... because ...",
+  "answer": "Yes for these: both are 10. We can turn an array of 2 rows of 5 and get 5 rows of 2. A few tests are good evidence; the picture of the same counters in rows and columns shows why.",
+  "look_for": "A child who says test more pairs, or who turns an array or draws it both ways. Not just \"yes\" or \"no\"."
+ },
+ "exit": [
+  {
+   "id": "E1",
+   "text": "Fill in the blank.",
+   "parts": [
+    {
+     "l": "a",
+     "text": "5 + 5 + 5 + 5 = [2]",
+     "ans": "20",
+     "val": 20
+    }
+   ],
+   "answer": "20",
+   "val": [
+    20
+   ],
+   "solution": "4 fives: 5 + 5 + 5 + 5 = 20, so 4 groups of 5 = 20.",
+   "mistakes": [
+    "Writing 9 (5 + 4).",
+    "Losing count of the fives."
+   ]
+  },
+  {
+   "id": "E2",
+   "text": "Which is the same as 4 groups of 3? Write its number in the bracket.",
+   "parts": [],
+   "answer": "(2) 3 + 3 + 3 + 3",
+   "val": [
+    2
+   ],
+   "solution": "4 groups of 3 means 3 four times: 3 + 3 + 3 + 3.",
+   "mistakes": [
+    "Choosing 4 + 3.",
+    "Choosing 3 + 3 + 3."
+   ],
+   "mcq": {
+    "options": [
+     "4 + 3",
+     "3 + 3 + 3 + 3",
+     "3 + 3 + 3",
+     "4 + 4 + 4 + 4"
+    ],
+    "bracket": true
+   }
+  },
+  {
+   "id": "E3",
+   "text": "Ali has 3 boxes. Each box has 4 pencils. How many pencils does Ali have in all?",
+   "parts": [
+    {
+     "l": "a",
+     "text": "Write a number sentence. {eq}",
+     "ans": "3 × 4 = 12",
+     "val": [
+      3,
+      4,
+      12
+     ]
+    },
+    {
+     "l": "b",
+     "text": "Ali has [2] pencils in all.",
+     "ans": "12",
+     "val": 12
+    }
+   ],
+   "answer": "3 × 4 = 12 (4 × 3 = 12 is also right); 12 pencils",
+   "val": [
+    3,
+    4,
+    12,
+    12
+   ],
+   "solution": "3 boxes with 4 pencils in each box: 4 + 4 + 4 = 12. The sign in the circle is ×.",
+   "mistakes": [
+    "Writing + in the circle.",
+    "Writing 3 + 4 = 7."
+   ]
+  }
+ ],
+ "look_back": {
+  "hardest": [
+   "telling equal from not equal",
+   "counting the groups",
+   "writing the × sentence",
+   "something else"
+  ],
+  "helped": [
+   "counters on plates",
+   "drawing it",
+   "counting in jumps",
+   "I was not stuck"
+  ],
+  "next": [
+   "drawing it",
+   "using objects",
+   "checking my answer",
+   "asking a question"
+  ]
+ },
+ "home_practice": [
+  {
+   "id": "H1",
+   "tier": "start",
+   "text": "Ali puts 3 sweets on each of 4 plates. Fill in the blanks. (a) 3 + 3 + 3 + 3 = [2]  (b) 4 groups of 3 = [2]",
+   "answer": "12 and 12",
+   "val": [
+    12,
+    12
+   ],
+   "solution": "4 plates with 3 sweets on each: 3 + 3 + 3 + 3 = 12.",
+   "visual": {
+    "type": "groups",
+    "container": "plate",
+    "n": 4,
+    "each": 3,
+    "icon": "sweet",
+    "per_row": 4,
+    "hw": 74
+   }
+  },
+  {
+   "id": "H2",
+   "tier": "start",
+   "text": "Mei has 2 bags with 3 sweets in each bag and 1 bag with 4 sweets. Are the groups equal? Circle Yes or No.",
+   "answer": "No",
+   "val": [
+    "No"
+   ],
+   "solution": "The bags have 3, 3 and 4 sweets. The groups are not equal.",
+   "visual": {
+    "type": "groups",
+    "container": "bag",
+    "counts": [
+     3,
+     3,
+     4
+    ],
+    "icon": "sweet",
+    "per_row": 3,
+    "hw": 74
+   }
+  },
+  {
+   "id": "H3",
+   "tier": "start",
+   "text": "Fill in the blanks. (a) 5 + 5 + 5 = [2]  (b) 3 groups of 5 = [2]  (c) 3 × 5 = [2]",
+   "answer": "15, 15, 15",
+   "val": [
+    15,
+    15,
+    15
+   ],
+   "solution": "5 + 5 + 5 = 15. 3 groups of 5 and 3 × 5 mean the same: 15. 5 × 3 = 15 is also right."
+  },
+  {
+   "id": "H4",
+   "tier": "think",
+   "text": "Is 2 × 6 = 6 × 2? Circle Yes or No. Use 12 counters or draw dots to check.",
+   "answer": "Yes",
+   "val": [
+    "Yes"
+   ],
+   "solution": "2 rows of 6 is 12 and 6 rows of 2 is 12, so the totals are the same."
+  },
+  {
+   "id": "H5",
+   "tier": "go",
+   "text": "A tricycle has 3 wheels. A bike has 2 wheels. How many wheels do 4 tricycles and 3 bikes have in all? ___ wheels",
+   "answer": "18",
+   "val": 18,
+   "solution": "4 tricycles: 3 + 3 + 3 + 3 = 12. 3 bikes: 2 + 2 + 2 = 6. 12 + 6 = 18."
+  }
+ ],
+ "online_practice": {
+  "key": "t2l15",
+  "title": "Equal Groups",
+  "topic": "Equal groups and multiplication",
+  "items": [
+   {
+    "id": "c1",
+    "tier": "core",
+    "type": "fields",
+    "q": "Look at the picture. Fill in the boxes.",
+    "hint": "Count the plates. Then count the cookies on one plate.",
+    "steps": [
+     "Count the plates.",
+     "Count the cookies on one plate.",
+     "4 groups of 3 = 12."
+    ],
+    "slips": [],
+    "frame": "{a} groups of {b} = {c}",
+    "fields": [
+     {
+      "id": "a",
+      "answer": 4
+     },
+     {
+      "id": "b",
+      "answer": 3
+     },
+     {
+      "id": "c",
+      "answer": 12
+     }
+    ],
+    "fig": {
+     "type": "groups",
+     "container": "plate",
+     "n": "{a}",
+     "each": "{b}",
+     "icon": "cookie",
+     "per_row": 5
+    },
+    "fig_base": {
+     "type": "groups",
+     "container": "plate",
+     "n": 4,
+     "each": 3,
+     "icon": "cookie",
+     "per_row": 5
+    },
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3,
+       4,
+       5
+      ],
+      "b": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     "q": "Look at the picture. Fill in the boxes.",
+     "frame": "{a} groups of {b} = {c}",
+     "answers": {
+      "a": "a",
+      "b": "b",
+      "c": "a*b"
+     },
+     "derive": {
+      "c": "a*b"
+     },
+     "hint": "Count the plates. Then count the cookies on one plate.",
+     "steps": [
+      "Count the plates.",
+      "Count the cookies on one plate.",
+      "{a} groups of {b} = {c}."
+     ]
+    }
+   },
+   {
+    "id": "c2",
+    "tier": "core",
+    "type": "number",
+    "q": "How many sweets are there altogether?",
+    "answer": 12,
+    "hint": "Count in jumps: one bag at a time.",
+    "steps": [
+     "Count the sweets in one bag.",
+     "Add that number for every bag.",
+     "There are 12 sweets."
+    ],
+    "slips": [
+     {
+      "a": [
+       4
+      ],
+      "say": "4 is the number of bags. Count all the sweets."
+     }
+    ],
+    "fig": {
+     "type": "groups",
+     "container": "bag",
+     "n": "{a}",
+     "each": "{b}",
+     "icon": "sweet",
+     "per_row": 5
+    },
+    "fig_base": {
+     "type": "groups",
+     "container": "bag",
+     "n": 3,
+     "each": 4,
+     "icon": "sweet",
+     "per_row": 5
+    },
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3,
+       4,
+       5
+      ],
+      "b": [
+       2,
+       3,
+       4
+      ]
+     },
+     "q": "How many sweets are there altogether?",
+     "answer": "a*b",
+     "hint": "Count in jumps: one bag at a time.",
+     "steps": [
+      "Count the sweets in one bag.",
+      "Add that number for every bag.",
+      "There are {ans} sweets."
+     ]
+    }
+   },
+   {
+    "id": "c3",
+    "tier": "core",
+    "type": "choice",
+    "q": "Are the groups equal?",
+    "options": [
+     "yes",
+     "no"
+    ],
+    "answer": "no",
+    "hint": "Count what is in each group.",
+    "steps": [
+     "The plates have 3, 2 and 3.",
+     "They are not the same.",
+     "The groups are not equal."
+    ],
+    "slips": [
+     {
+      "a": [
+       "yes"
+      ],
+      "say": "Count each plate: 3, 2 and 3. Are they all the same?"
+     }
+    ],
+    "fig": {
+     "type": "groups",
+     "container": "plate",
+     "counts": [
+      "{x}",
+      "{y}",
+      "{x}"
+     ],
+     "icon": "cookie",
+     "per_row": 3
+    },
+    "fig_base": {
+     "type": "groups",
+     "container": "plate",
+     "counts": [
+      3,
+      2,
+      3
+     ],
+     "icon": "cookie",
+     "per_row": 3
+    },
+    "tpl": {
+     "vars": {
+      "x": [
+       2,
+       3,
+       4
+      ],
+      "y": [
+       2,
+       3,
+       4
+      ]
+     },
+     "q": "Are the groups equal?",
+     "options": [
+      "yes",
+      "no"
+     ],
+     "answer_index": "((x-y)*(x-y))%3",
+     "hint": "Count what is in each group.",
+     "steps": [
+      "The plates have {x}, {y} and {x}.",
+      "Are they all the same?",
+      "The answer is {ans}."
+     ]
+    }
+   },
+   {
+    "id": "c4",
+    "tier": "core",
+    "type": "number",
+    "q": "What is 5 groups of 2?",
+    "answer": 10,
+    "hint": "Add 2 again and again, or count in twos.",
+    "steps": [
+     "2 + 2 + 2 + 2 + 2.",
+     "Count in twos: 2, 4, 6, 8, 10.",
+     "5 groups of 2 = 10."
+    ],
+    "slips": [
+     {
+      "a": [
+       7
+      ],
+      "say": "7 is 5 + 2. Make 5 groups with 2 in each."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3,
+       4,
+       5,
+       6
+      ],
+      "b": [
+       2,
+       3,
+       5
+      ]
+     },
+     "q": "What is {a} groups of {b}?",
+     "answer": "a*b",
+     "hint": "Add {b} again and again, or count in jumps of {b}.",
+     "steps": [
+      "Write {b} for each of the {a} groups.",
+      "Add them up.",
+      "{a} groups of {b} = {ans}."
+     ]
+    }
+   },
+   {
+    "id": "c5",
+    "tier": "core",
+    "type": "choice",
+    "q": "Which is the same as 4 groups of 3?",
+    "options": [
+     "3 + 3 + 3 + 3",
+     "4 + 3",
+     "4 + 4 + 4 + 4",
+     "3 + 3 + 3"
+    ],
+    "answer": "3 + 3 + 3 + 3",
+    "hint": "Write 3 four times.",
+    "steps": [
+     "4 groups of 3 means 3 four times.",
+     "3 + 3 + 3 + 3."
+    ],
+    "slips": [
+     {
+      "a": [
+       "4 + 4 + 4 + 4"
+      ],
+      "say": "That is 4 groups of 4. We need 4 groups of 3."
+     }
+    ]
+   },
+   {
+    "id": "c6",
+    "tier": "core",
+    "type": "fields",
+    "q": "Look at the dots. Fill in the boxes.",
+    "hint": "Count the rows. Then count the dots in one row.",
+    "steps": [
+     "Count the rows.",
+     "Count the dots in one row.",
+     "Add the same number again and again."
+    ],
+    "slips": [],
+    "frame": "{a} rows of {b} = {c}",
+    "fields": [
+     {
+      "id": "a",
+      "answer": 3
+     },
+     {
+      "id": "b",
+      "answer": 4
+     },
+     {
+      "id": "c",
+      "answer": 12
+     }
+    ],
+    "fig": {
+     "type": "array",
+     "rows": "{a}",
+     "cols": "{b}",
+     "icon": "dot"
+    },
+    "fig_base": {
+     "type": "array",
+     "rows": 3,
+     "cols": 4,
+     "icon": "dot"
+    },
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3,
+       4
+      ],
+      "b": [
+       3,
+       4,
+       5
+      ]
+     },
+     "q": "Look at the dots. Fill in the boxes.",
+     "frame": "{a} rows of {b} = {c}",
+     "answers": {
+      "a": "a",
+      "b": "b",
+      "c": "a*b"
+     },
+     "derive": {
+      "c": "a*b"
+     },
+     "hint": "Count the rows. Then count the dots in one row.",
+     "steps": [
+      "{a} rows.",
+      "{b} dots in each row.",
+      "{a} rows of {b} = {c}."
+     ]
+    }
+   },
+   {
+    "id": "t1",
+    "tier": "stretch",
+    "type": "number",
+    "q": "Each plate should have 3 cookies. How many more cookies are needed to make the groups equal?",
+    "answer": 3,
+    "easier": "c3",
+    "hint": "How many are missing from each plate?",
+    "steps": [
+     "The second plate needs 2 more.",
+     "The third plate needs 1 more.",
+     "2 + 1 = 3."
+    ],
+    "slips": [
+     {
+      "a": [
+       6
+      ],
+      "say": "6 is how many cookies there are now. How many more are needed?"
+     }
+    ],
+    "fig": {
+     "type": "groups",
+     "container": "plate",
+     "counts": [
+      3,
+      "{a}",
+      "{b}"
+     ],
+     "icon": "cookie",
+     "per_row": 3
+    },
+    "fig_base": {
+     "type": "groups",
+     "container": "plate",
+     "counts": [
+      3,
+      1,
+      2
+     ],
+     "icon": "cookie",
+     "per_row": 3
+    },
+    "tpl": {
+     "vars": {
+      "a": [
+       0,
+       1,
+       2
+      ],
+      "b": [
+       1,
+       2
+      ]
+     },
+     "q": "Each plate should have 3 cookies. How many more cookies are needed to make the groups equal?",
+     "answer": "6-a-b",
+     "hint": "How many are missing from each plate?",
+     "steps": [
+      "The second plate has {a}, so it needs {p} more.",
+      "The third plate has {b}, so it needs {q} more.",
+      "{ans} more cookies are needed."
+     ],
+     "derive": {
+      "p": "3-a",
+      "q": "3-b"
+     }
+    }
+   },
+   {
+    "id": "t2",
+    "tier": "stretch",
+    "type": "choice",
+    "q": "Mei has 3 bags with 5 sweets in each bag. Ali has 5 bags with 3 sweets in each bag. Who has more sweets?",
+    "options": [
+     "Mei",
+     "Ali",
+     "the same"
+    ],
+    "answer": "the same",
+    "easier": "c4",
+    "hint": "Work out each total.",
+    "steps": [
+     "3 groups of 5 = 15.",
+     "5 groups of 3 = 15.",
+     "Both have 15."
+    ],
+    "slips": [
+     {
+      "a": [
+       "Mei"
+      ],
+      "say": "Work out Ali’s total too: 5 groups of 3."
+     },
+     {
+      "a": [
+       "Ali"
+      ],
+      "say": "Work out Mei’s total too: 3 groups of 5."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3,
+       4
+      ],
+      "b": [
+       5,
+       6,
+       7
+      ]
+     },
+     "q": "Mei has {a} bags with {b} sweets in each bag. Ali has {b} bags with {a} sweets in each bag. Who has more sweets?",
+     "options": [
+      "Mei",
+      "Ali",
+      "the same"
+     ],
+     "answer_index": "2",
+     "hint": "Work out each total.",
+     "steps": [
+      "{a} groups of {b} = {s}.",
+      "{b} groups of {a} = {s}.",
+      "Both have {s}."
+     ],
+     "derive": {
+      "s": "a*b"
+     }
+    }
+   },
+   {
+    "id": "t3",
+    "tier": "stretch",
+    "type": "number",
+    "q": "A bike has 2 wheels. How many wheels do 6 bikes have?",
+    "answer": 12,
+    "easier": "c4",
+    "hint": "Count in twos for each bike.",
+    "steps": [
+     "Each bike has 2 wheels.",
+     "2 + 2 + 2 + 2 + 2 + 2.",
+     "6 groups of 2 = 12."
+    ],
+    "slips": [
+     {
+      "a": [
+       8
+      ],
+      "say": "8 is 6 + 2. Each bike has 2 wheels: make 6 groups of 2."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "n": [
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9
+      ]
+     },
+     "q": "A bike has 2 wheels. How many wheels do {n} bikes have?",
+     "answer": "2*n",
+     "hint": "Count in twos for each bike.",
+     "steps": [
+      "Each bike has 2 wheels.",
+      "Make {n} groups of 2.",
+      "{n} groups of 2 = {ans}."
+     ]
+    }
+   },
+   {
+    "id": "t4",
+    "tier": "stretch",
+    "type": "number",
+    "q": "Ali has 3 bags with 4 sweets in each bag and 2 more sweets. How many sweets does Ali have in all?",
+    "answer": 14,
+    "easier": "t3",
+    "hint": "First find the sweets in the bags. Then add the 2 more.",
+    "steps": [
+     "3 groups of 4 = 12.",
+     "12 + 2 = 14."
+    ],
+    "slips": [
+     {
+      "a": [
+       12
+      ],
+      "say": "12 is the sweets in the bags. Add the 2 more sweets."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3,
+       4
+      ],
+      "b": [
+       3,
+       4,
+       5
+      ],
+      "c": [
+       2,
+       5,
+       7
+      ]
+     },
+     "q": "Ali has {a} bags with {b} sweets in each bag and {c} more sweets. How many sweets does Ali have in all?",
+     "answer": "a*b+c",
+     "hint": "First find the sweets in the bags. Then add the {c} more.",
+     "steps": [
+      "{a} groups of {b} = {s}.",
+      "{s} + {c} = {ans}."
+     ],
+     "derive": {
+      "s": "a*b"
+     }
+    }
+   },
+   {
+    "id": "g1",
+    "tier": "challenge",
+    "type": "number",
+    "q": "A bike has 2 wheels. A car has 4 wheels. How many wheels do 3 bikes and 4 cars have in all?",
+    "answer": 22,
+    "easier": "t3",
+    "hint": "Find the wheels on the bikes. Then find the wheels on the cars.",
+    "steps": [
+     "3 bikes: 3 groups of 2 = 6.",
+     "4 cars: 4 groups of 4 = 16.",
+     "6 + 16 = 22."
+    ],
+    "slips": [
+     {
+      "a": [
+       10
+      ],
+      "say": "Each car has 4 wheels, not 2."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3,
+       4
+      ],
+      "b": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     "q": "A bike has 2 wheels. A car has 4 wheels. How many wheels do {a} bikes and {b} cars have in all?",
+     "answer": "2*a+4*b",
+     "hint": "Find the wheels on the bikes. Then find the wheels on the cars.",
+     "steps": [
+      "{a} bikes: {a} groups of 2 = {x}.",
+      "{b} cars: {b} groups of 4 = {y}.",
+      "{x} + {y} = {ans}."
+     ],
+     "derive": {
+      "x": "2*a",
+      "y": "4*b"
+     }
+    }
+   },
+   {
+    "id": "g2",
+    "tier": "challenge",
+    "type": "number",
+    "q": "Jamie has 6 jars. Each jar has 5 marbles. He needs 40 marbles. How many more marbles does he need?",
+    "answer": 10,
+    "easier": "t4",
+    "hint": "Find the marbles in the jars now. Then see how many more make 40.",
+    "steps": [
+     "6 groups of 5 = 30.",
+     "40 - 30 = 10."
+    ],
+    "slips": [
+     {
+      "a": [
+       30
+      ],
+      "say": "30 is the marbles in the jars. How many more make 40?"
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       4,
+       5,
+       6,
+       7
+      ]
+     },
+     "q": "Jamie has {a} jars. Each jar has 5 marbles. He needs 40 marbles. How many more marbles does he need?",
+     "answer": "40-5*a",
+     "hint": "Find the marbles in the jars now. Then see how many more make 40.",
+     "steps": [
+      "{a} groups of 5 = {s}.",
+      "40 - {s} = {ans}."
+     ],
+     "derive": {
+      "s": "5*a"
+     }
+    }
+   },
+   {
+    "id": "g3",
+    "tier": "challenge",
+    "type": "set",
+    "q": "4 + 4 + 4 + 4 + 4 + 4 = ___ × ___. Type exactly two numbers with a comma between them, like 3, 5.",
+    "answer": [
+     6,
+     4
+    ],
+    "easier": "c4",
+    "hint": "Count how many 4s there are. That is the number of groups.",
+    "steps": [
+     "There are 6 fours.",
+     "6 groups of 4: 6 × 4 = 24."
+    ],
+    "slips": []
+   },
+   {
+    "id": "g4",
+    "tier": "challenge",
+    "type": "selfcheck",
+    "q": "Draw equal groups. Ask a grown-up to find the total. Check by counting in jumps. Many answers are right.",
+    "hint": "Pick the number of groups and the number in each group first.",
+    "steps": [
+     "Draw 3 or 4 plates with the same number on each.",
+     "Ask: how many in all?",
+     "Count in jumps to check."
+    ],
+    "slips": [],
+    "easier": "c1"
+   }
+  ]
+ },
+ "spare_time": {
+  "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
+  "rules": [
+   "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
+   "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+   "Never teach anything the next lesson needs. If the class is ahead, slow down: ask ‘How do you know?’ and let children explain, rather than rushing on."
+  ],
+  "menu": [
+   {
+    "id": "M1",
+    "title": "Is it always true?",
+    "minutes": 4,
+    "tutor": "Mei says: swap the two numbers and the total stays the same. Test 2 groups of 7 and 7 groups of 2, then 4 groups of 5 and 5 groups of 4. Lay the counters in rows on the array mat. Can you find a pair that breaks it?",
+    "rec": "Recording: pause. Test 2 groups of 7 with 7 groups of 2, and 4 groups of 5 with 5 groups of 4.",
+    "answer": "14 and 14; 20 and 20. No pair breaks it: turning the same counters in rows and columns never changes the total."
+   },
+   {
+    "id": "M2",
+    "title": "Make a puzzle for your grown-up",
+    "minutes": 4,
+    "tutor": "Draw 3 or 4 plates with the same number of dots on each plate. Ask your grown-up: how many dots altogether? Then count in jumps together to check.",
+    "rec": "Recording: pause. Draw equal groups. Ask a grown-up how many in all, then check by counting in jumps.",
+    "answer": "No single answer. Check that the groups are equal and that the total is the number of groups times the number in each group."
+   },
+   {
+    "id": "M3",
+    "title": "Teach it back",
+    "minutes": 3,
+    "tutor": "Pretend your grown-up or a toy has never seen equal groups. Show them 3 groups of 5 with counters and tell them how many altogether.",
+    "rec": "Recording: pause. Show a grown-up 3 groups of 5 with counters and say how many in all.",
+    "answer": "3 groups of 5: 5, 10, 15. There are 15 counters altogether. 3 × 5 = 15."
+   }
+  ]
+ },
+ "parent": {
+  "summary": "We made equal groups with plates and counters. Equal means the same number in every group. We counted in jumps, added the same number again and again (3 + 3 + 3 + 3 = 12) and met the × sign: 4 groups of 3 is 4 × 3. Rows of dots showed that 3 × 4 and 4 × 3 make the same total. Equal groups and × are Primary 1 work at school; we start from objects and pictures. One Go further item, doubling 6 groups of 5 to make 60, goes past the school range of 40 on purpose.",
+  "words": [
+   "equal groups: the same number in every group",
+   "in each: how many in one group",
+   "in all: the total",
+   "×: groups of (4 × 3 is 4 groups of 3)"
+  ],
+  "try_home": [
+   "Plates: put 3 small things on each of 4 plates. How many altogether? Count in jumps of 3. Keep small things away from mouths.",
+   "Equal or not? Make 3 groups with 3, 2 and 3 things. How many more make them equal?",
+   "Turn it: make 2 rows of 5 buttons. Turn the tray. How many rows now? Does the total change?"
+  ],
+  "ask": [
+   "How many groups? How many in each group?",
+   "Are all the groups equal? How do you know?"
+  ],
+  "when_stuck": "Please say ‘groups of’ for the × sign. Either order is fine for your child’s own sentence: 3 × 5 and 5 × 3 both make 15. Let your child use counters on plates or draw dots, and wait 10 seconds before helping. If the look-back page says ‘I am still stuck’, photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
+  "next": "Term 2 Lesson 6: Skip-Count Tables. Online practice: your tutor shares the link. A missing workbook page: your tutor sends a PDF to print at 100%. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. To have your child muted, tell us when you register. The link is private to your group's families: please do not share it.",
+  "quote": "Equal groups can be counted fast: count in jumps and write it with ×.",
+  "report_line": "Your child is learning to see equal groups, count them fast and write them with the × sign. This week: equal groups, repeated addition and 4 groups of 3 = 4 × 3.",
+  "term_line": "This term: odd and even and testing claims so far; now equal groups and the times sign; next, tables, sharing and stories.",
+  "next_materials": [
+   "Your Term 2 Lesson 6 workbook, with its 100 square page (nothing to cut)",
+   "2 or 3 coloured pencils",
+   "About 20 small things (counters, buttons)"
+  ]
+ },
+ "safeguarding": [
+  "Counters and small things stay on the table: nothing goes in the mouth or ears. No matches, toothpicks or anything sharp. Keep small things away from younger brothers and sisters. Use paper plates or the printed groups mat rather than glass or china.",
+  "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
+  "Nobody holds paper or a board up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on a count of three, or show fingers for a choice. There is no private chat.",
+  "Never read out a child’s name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is not muted. Children may mute and keep their cameras off. A child’s page is never shown.",
+  "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. Clapping is soft; a child may stay seated and tap the table.",
+  "A child who is still stuck ticks ‘I am still stuck’ on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for 90 days after the program ends. The tutor then helps in the open session next lesson. No private messages to children, and no personal phones.",
+  "The look-back is never collected in front of the group or read out. A pass is always allowed."
+ ],
+ "tutor_prep": [
+  "Solve every workbook question yourself first. Check the Think harder table (T4) and the Go further totals (22 wheels, 30 marbles) so you can answer a child who finds another way to make 24.",
+  "Tell parents a week before: use the workbook pages from the printed term book (send a PDF only if a page is missing, to print at 100%); the kit pages need no cutting, and find 4 plates or bowls and about 20 small things. Small things stay away from mouths and younger children. Check each family has the next workbook in their term book (it needs the 100 square page); send a PDF only if a page is missing.",
+  "Have the slides open and check the groups mat is visible on screen share. Have 4 plates and counters to show on camera if you wish.",
+  "Check the recording captures the tutor and the shared screen. Children's video is excluded; any voice that is not muted is recorded. Greet the whole group warmly, say the recording notice, then start the recording, and do not use children's first names while it runs.",
+  "Read groups of as number of groups first: 4 groups of 3 is 4 × 3. Accept 3 × 4 as a correct way to write the same total in a child’s own work. Say plainly to families that equal groups and × are Primary 1 work. Do not call the lesson MOE-aligned. Term 2 Lessons 5 to 8 build on one another."
+ ],
+ "workbook": {
+  "header": "Multiplication: equal groups",
+  "hint_p1": "Use counters and plates, or draw it.",
+  "hint_p2": "Draw it, count it, then write it.",
+  "hint_p3": "Use counters or draw dots in rows. Choose any question, in any order.",
+  "hint_p4": "Choose any question. You do not have to finish them all.",
+  "choice_after": 3,
+  "inv_intro": "",
+  "home_hint": "Use counters on plates or draw dots. Small things stay on the table, away from mouths and little brothers and sisters.",
+  "kits": [
+   {
+    "type": "groups_mat",
+    "n": 6,
+    "container": "plate",
+    "title": "Kit page: groups mat",
+    "intro": "Nothing to cut. Lay counters on the plates. Use it if you do not have plates or bowls."
+   },
+   {
+    "type": "array_mat",
+    "rows": 5,
+    "cols": 8,
+    "title": "Kit page: array mat",
+    "intro": "Nothing to cut. Lay counters in rows and columns on the squares."
+   }
+  ]
+ },
+ "contest_where": "Go further (G3 lists the ways; Think harder T4 is a missing group size)",
+ "limits": {
+  "max_parent_words": 100
+ }
+}

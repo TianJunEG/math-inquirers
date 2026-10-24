@@ -13,7 +13,7 @@ body=h2('Bonds of 10: list them in order')+p('Start with 0. Each time, the first
 for i,r in enumerate(rows): body+=pin(128+(i%3)*560,300+(i//3)*130,520,p(r,48,700),'rise',WHITE,20,'18px 30px')
 body+=pin(128,580,1664,p('The first number goes up by 1, the second goes down by 1. When we reach 5 + 5, the next ones are the same pairs turned round (6 + 4, 7 + 3 …). That is how we know we have them all.',36,700),'fade',SOFT,20,'22px 30px')
 put('l2-teach1',sec('l2-teach1','25–27 MIN',body,'Teach. Click to add each bond while children say it with you; show each on a ten-frame (red and yellow counters). Think-aloud: "Let me list them in order: 0 + 10, 1 + 9, 2 + 8. What do you notice? The first number goes up by 1 and the second goes down by 1. That is how I know I have them all." Then the summary: 11 bonds from 0 + 10 to 10 + 0, or 6 different pairs if 3 + 7 and 7 + 3 count as the same.'))
-put('l2-try1',try_slide('l2-try1','27–28 MIN','Your turn: whiteboards','Write the missing number.',[('a','10 = 3 + __','7'),('b','10 = __ + 6','4'),('c','Which pair is missing? 0+10, 1+9, 2+8, 4+6, 5+5','3 + 7')],'Whiteboards up together, then click. For c, ask how they found it: "the list goes 2 + 8 then 4 + 6, so 3 + 7 is missing".'))
+put('l2-try1',try_slide('l2-try1','27–28 MIN','Your turn: whiteboards','Write the missing number.',[('a','10 = 3 + __','7'),('b','10 = __ + 6','4'),('c','Which pair is missing? 0+10, 1+9, 2+8, 4+6, 5+5','3 + 7')],'Write it, say the answer together on three, then click. For c, ask how they found it: "the list goes 2 + 8 then 4 + 6, so 3 + 7 is missing".'))
 # teach2 bonds of 20
 tb=[('Bond of 10','Bond of 20'),('7 + 3 = 10','17 + 3 = 20'),('8 + 2 = 10','18 + 2 = 20'),('4 + 6 = 10','14 + 6 = 20')]
 body=h2('Bonds of 10 help us make 20')
@@ -74,3 +74,4 @@ import p1gaps; p1gaps.apply(D,2)
 import p1fix
 p1fix.finish(D,2,{'l2-ws1':'40–54 MIN','l2-ws1ans':'54–56 MIN','l2-teachpage2':'56–58 MIN','l2-ws2':'58–68 MIN'})
 import p1neutral; p1neutral.apply(D,2)
+import p1budget; p1budget.apply(D,2)

@@ -68,8 +68,9 @@ module.exports = {
 
   deck: {
     today: 'Build 4-digit numbers, make the greatest and smallest, list every number in order and crack clue puzzles.',
-    warmGame: 'Biggest number wins. Draw four digits one at a time; children place each in Th, H, T or O straight away and cannot move it. Biggest number scores. Then play for the smallest.',
-    warmQs: [['What is the value of the 7 in 4719?', '700'], ['3000 + 40 + 5 = ?', '3045'], ['What is 1 more than 4999?', '5000'], ['What is 100 less than 6050?', '5950'], ['Which is greater: 7089 or 7098?', '7098']],
+    warmGame: 'Biggest number wins. Draw four digits one at a time; children place each in Th, H, T or O straight away and cannot move it. Biggest number scores. Then play for the smallest (two rounds in all).',
+    warmQs: [['What is the value of the 7 in 4719?', '700'], ['3000 + 40 + 5 = ?', '3045'], ['What is 1 more than 4999?', '5000']],
+    takeHome: [['What is 100 less than 6050?', '5950'], ['Which is greater: 7089 or 7098?', '7098']],
     expSetup: ['Take the cards 2, 4, 6 and 8.', 'Make 4-digit numbers between 4000 and 6000.', 'Write each one on your whiteboard.', 'Which one is closest to 5000?'],
     expPic: 'digit cards 2, 4, 6, 8 above a number line from 4000 to 6000 with 5000 marked.',
     expAsk: [
@@ -156,8 +157,9 @@ module.exports = {
     H.ans('Greatest:'),
     H.ans('Smallest:'),
     H.q(6, '(if time) How many 4-digit numbers have digits that add up to 3? Make a list in order. Start with the biggest thousands digit.', { keepNext: true }),
+    H.p('Hint: take 3 counters and put them in the 4 places (thousands, hundreds, tens, ones). The thousands place needs at least 1. With 3 in the thousands place, all the other places are 0, so the first number is already written for you.', { after: 40 }),
     H.tbl([2400, 7500], [
-      H.row([H.cell('Thousands digit 3', 2400, { bold: true, fill: 'EDEDED', h: 120 }), H.cell('', 7500)]),
+      H.row([H.cell('Thousands digit 3', 2400, { bold: true, fill: 'EDEDED', h: 120 }), H.cell('3000', 7500)]),
       H.row([H.cell('Thousands digit 2', 2400, { bold: true, fill: 'EDEDED', h: 120 }), H.cell('', 7500)]),
       H.row([H.cell('Thousands digit 1', 2400, { bold: true, fill: 'EDEDED', h: 120 }), H.cell('', 7500)])
     ]),

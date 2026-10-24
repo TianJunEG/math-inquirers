@@ -54,12 +54,12 @@ module.exports = {
 
   script: {
     hook: ['Today we are treasure hunters inside the times tables. The 6, 7, 8 and 9 tables are full of hidden patterns. If you can spot a pattern, you can use it to check answers and to find answers you have never learnt.'],
-    warmIntro: ['We are going to count round the group up to 40. The 7s strip is on the screen. When it is a number in the 7 times table, do not say it: hold up an open palm. That is a Buzz! If anyone misses one, that is fine: it is a tricky one and we check on the strip.', 'Which numbers did we Buzz? What do you notice about them?'],
-    predict: ['Here is a circle with the digits 0 to 9, like a clock. I write the 6 times table and look only at the last digit: 6, 12, 18 … the last digits are 6, 2, 8. If I join those dots in order, what shape do you think we will get? Will it ever touch an odd digit?'],
+    warmIntro: ['We are going to count round the group up to 40. The 7s strip is on the screen. When it is a number in the 7 times table, do not say it: hold up an open palm. That is a Buzz! Two rounds only.', 'Which numbers did we Buzz? What do you notice about them?'],
+    predict: ['I write the 6 times table and look only at the last digit: 6, 2, 8. If I join the dots in order, what shape? Will it ever touch an odd digit?'],
     exploreHints: [
       'Stuck: write the table down the side of your page first, then circle the last digit of each answer.',
       'Confused: "Look only at the ones digit. 6 × 3 = 18, so we join to the 8."',
-      'Ready for more: the Go further what-if on the slide (the 5s and the 9s). Or try the 7s and the 3s and compare.'
+      'Ready for more: the Go further what-if on the slide (the 5s and the 9s). Or try the 7s and the 3s and compare. (The 6s are done together on the shared screen; each pair makes just ONE more circle, the 4s.)'
     ],
     think: [
       '"Look at the 8 times table: 8, 16, 24, 32, 40, 48 … The last digits go 8, 6, 4, 2, 0, then 8, 6, 4, 2, 0 again. So the pattern repeats every 5."',
@@ -76,19 +76,19 @@ module.exports = {
       'Hint 2: "Split the big fact into two smaller facts you know, then add."',
       'Hint 3: "For a grid puzzle, start with a number that can only be made in one way, like 81 or 49."'
     ],
-    talk: ['"Why is every answer in the 6 times table even?"', '"Why does the 7 times table have odd and even answers?"'],
-    talkAns: '6 groups can always be put into 3 pairs of groups, so nothing is left over: the answer is even. With 7 groups one group has no partner, so when each group is odd the answer is odd.',
+    talk: ['"Why is every answer in the 6 times table even?"', '"Why does the 7 times table have odd and even answers?"', '"Which is bigger, 6 × 8 or 7 × 7? Can you see why they are so close?"'],
+    talkAns: '6 groups can always be put into 3 pairs of groups, so nothing is left over: the answer is even. With 7 groups one group has no partner, so when each group is odd the answer is odd. Extra question: 7 × 7 = 49 is 1 more than 6 × 8 = 48 (do not explain it fully).',
     close: ['"You found patterns, tested them and explained why they work. That is exactly what mathematicians do."']
   },
 
   deck: {
     today: 'Find hidden patterns in the 6, 7, 8 and 9 times tables, use them to check answers, and solve times-table puzzles in order.',
-    warmGame: 'Buzz! Count round the group from 1 to 40 with the 7s strip on the screen. Hold up an open palm (Buzz) instead of saying a number in the 7 times table. Only the 7s are played.',
-    warmQs: [['6 × 7 = ?', '42'], ['9 × 9 = ?', '81'], ['8 × ? = 64', '8'], ['Which is bigger: 6 × 8 or 7 × 7?', '7 × 7 = 49 is 1 more than 6 × 8 = 48']],
-    expSetup: ['Draw 10 dots round a circle. Label them 0 to 9, like a clock.', 'Write the 6 times table. Circle the last digit of each answer.', 'Join the last digits in order: 6 → 2 → 8 → 4 → 0 → back to 6.', 'Now do the same for the 4s and the 8s. Compare the shapes.'],
+    warmGame: 'Buzz! Count round the group from 1 to 40 with the 7s strip on the screen. Hold up an open palm (Buzz) instead of saying a number in the 7 times table. Only the 7s are played, in two short rounds.',
+    warmQs: [['6 × 7 = ?', '42'], ['9 × 9 = ?', '81'], ['8 × ? = 64', '8']],
+    expSetup: ['Draw 10 dots round a circle. Label them 0 to 9, like a clock.', 'With your tutor: write the 6 times table and circle the last digit of each answer.', 'Join the last digits in order: 6 → 2 → 8 → 4 → 0 → back to 6.', 'Now make ONE more circle yourselves: the 4s. Compare the two shapes.'],
     expPic: 'a circle of 10 dots labelled 0 to 9 with a star joining 6, 2, 8, 4, 0.',
     expAsk: [
-      ['Which tables made the same shape?', 'The 4s and the 6s make the same star (going round opposite ways). The 2s and the 8s make the same shape.'],
+      ['Which tables made the same shape?', 'The 4s and the 6s make the same star (going round opposite ways). Pairs who also did the 8s: the 2s and the 8s make the same shape.'],
       ['Why does the 6s shape never touch an odd digit?', 'Every answer in the 6 times table is even: 6 groups can be put into 3 pairs of groups.'],
       ['Which table do you think makes the same shape as the 3s?', 'The 7s, because 3 + 7 = 10, just like 4 + 6 and 2 + 8.']
     ],
@@ -127,7 +127,7 @@ module.exports = {
       { q: 'How many numbers from 1 to 200 can be divided exactly by both 6 and 9?', a: '11. They are the numbers in the 18 times table: 18, 36, 54 … 198.' },
       { q: 'In the 8 times table, which digits can NEVER be the last digit of an answer? Explain why. Is the same true for the 6 times table?', a: 'The odd digits 1, 3, 5, 7 and 9 never appear. 8 × any number is even (8 × n = 2 × 4 × n), so its last digit is even, and the last digits cycle through 8, 6, 4, 2, 0. The same is true for the 6 times table (6 × n = 2 × 3 × n, so the last digits cycle 6, 2, 8, 4, 0).' },
       { q: 'Siti says the answer to 6 × 7 × 8 × 9 ends in 4. Is she right? Use last digits only.', a: 'Yes. 6 × 7 = 42 → 2; 2 × 8 = 16 → 6; 6 × 9 = 54 → 4. (The answer is 3024.)' },
-      { q: 'Mei has between 40 and 60 sweets. She can share them equally among 6 friends with none left over. She can also share them equally among 9 friends with none left over. How many sweets does she have?', a: '54. Numbers that work for 6 and 9 are 18, 36, 54, 72 …; only 54 is between 40 and 60.' },
+      { q: 'Mei has fewer than 100 sweets. She can share them equally among 6 friends, among 9 friends and among 4 friends, with none left over each time. Find ALL the numbers of sweets she could have. What do you notice about the answers? Why?', a: '36 and 72. Numbers in the 6, 9 and 4 times tables together are 36, 72, 108 …, so the answers are 36 apart. (36 = 6 × 6 = 9 × 4 = 4 × 9; 72 = 6 × 12 = 9 × 8 = 4 × 18. The first number that works is 36, and then it repeats every 36.)' },
       { q: 'Make up your own riddle: "I am a 2-digit number in the ___ times table …" Write 2 or 3 clues (about odd or even, the digits, being between two numbers). Check that only ONE number fits, by listing the table. Swap with a partner.', a: 'Answers vary. Check that the secret number is in the table, every clue is true, and listing the table leaves exactly one number. Example: "I am a 2-digit number in the 7 times table. I am odd. My digits add up to 10." The 2-digit odd numbers in the 7 table are 21, 35, 49, 63, 77 and 91, and only 91 has digits that add up to 10.' },
       { q: 'Ben keeps multiplying by 7: 7, 49, 343 … He writes only the last digit each time: 7, 9, 3 … What is the last digit when he has multiplied 8 sevens together? Explain the pattern.', a: '1. The last digits go 7, 9, 3, 1 and then repeat, so the 4th and the 8th are both 1.' },
       { q: 'I am a 3-digit number less than 200. I can be divided exactly by 7 and by 9. My digits add up to 9. What number am I?', a: '126. Numbers that work for 7 and 9 are 63, 126, 189 …; the 3-digit ones below 200 are 126 and 189, and only 1 + 2 + 6 = 9.' }
@@ -166,17 +166,17 @@ module.exports = {
     out.push(H.sub('b', 'Split 9 × 6 into two facts you know. Show your working.'));
     out.push(...H.lines(1));
     // ---------- page 2 ----------
-    out.push(H.q(4, '(if time) Grid puzzle. Each number in the grid is the row number × the column number. The row and column numbers are all from 1 to 10. Find the six missing row and column numbers, then fill in the grid.', { pb: true, before: 0, keepNext: true }));
+    out.push(H.q(4, '(if time) Grid puzzle. Each number in the grid is the row number × the column number. The row and column numbers are all from 1 to 10. Find the missing row and column numbers (the first row number, 7, is given), then fill in the grid.', { pb: true, before: 0, keepNext: true }));
     { const ws = [2475, 2475, 2475, 2475];
       const hd = s => C(s, 2475, { bold: true, fill: 'D9D9D9', h: 120, size: 26 });
       const v = s => C(s, 2475, { bold: true, h: 120, size: 26 });
       out.push(H.tbl(ws, [
         H.row([hd('×'), hd(''), hd(''), hd('')]),
-        H.row([hd(''), v('56'), v(''), v('')]),
+        H.row([hd('7'), v('56'), v(''), v('')]),
         H.row([hd(''), v(''), v(''), v('81')]),
         H.row([hd(''), v('48'), v('36'), v('')])
       ])); }
-    out.push(H.p('Hint: 81 = 9 × 9 and 56 = 7 × 8.', { after: 60 }));
+    out.push(H.p('Hint: 56 ÷ 7 = ? gives the first column number. And 81 = 9 × 9.', { after: 60 }));
     out.push(H.q(5, 'Ben puts 36 chairs in equal rows (at least 2 rows, at least 2 chairs in each row). Find ALL the ways. Try 2 rows, then 3 rows, then 4 rows, and so on.', { keepNext: true }));
     out.push(H.sub('a', 'Write only the ways that work. 3 rows of 12 is different from 12 rows of 3. Stop when you have all of them.', { keepNext: true }));
     { const ws = [2300, 950, 950, 950, 950, 950, 950, 950, 950];
@@ -188,7 +188,7 @@ module.exports = {
     out.push(H.sub('c', 'Most ways come in pairs, like 2 rows of 18 and 18 rows of 2. Which way has no partner? Why?'));
     out.push(...H.lines(2));
     out.push(H.q(6, '(if time) Number riddle.', { keepNext: true }));
-    out.push(H.sub('a', 'Find ALL the 2-digit numbers that can be divided exactly by 6 AND by 8. Hint: list the 2-digit numbers you can divide exactly by 8 (16, 24, 32 …), then test each one.'));
+    out.push(H.sub('a', 'Find ALL the 2-digit numbers that can be divided exactly by 6 AND by 8. Here are the 2-digit numbers in the 8 times table: 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96. Circle the ones that are also in the 6 times table (6, 12, 18, 24 …).'));
     out.push(...H.lines(2));
     out.push(H.sub('b', 'I am one of your numbers. My digits add up to 12. What number am I?'));
     out.push(H.ans());

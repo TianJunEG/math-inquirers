@@ -36,6 +36,26 @@ SUBS = [
     ('Keep report-backs to 30 seconds each; shorten them if time is tight.', 'Report-backs are optional and short: one thing you tried, not the answer. Ask for volunteers.'),
     ('Mental maths relay. The tutor asks a quick question from each lesson and passes it round the group.', 'Whiteboard round. The tutor asks a quick question from each lesson. Everybody writes the answer at the same time. No passing round and nobody on the spot.'),
     ('Mental maths relay: a chain of quick questions from all 9 lessons passed around the group.', 'Whiteboard round: quick questions from the 9 lessons. Everybody writes the answer at the same time. No passing round, nobody on the spot.'),
+    # ---- re-audit fix pass: no boards or paper held up in front of the group or to the camera (private-paper rule); no "Challenge" label ----
+    ('Children write on whiteboards and say the answer together on three.', 'Children write on their own paper or whiteboard. Nobody holds a board or paper up in front of the group or to the camera: face to face, each child keeps the paper low so only the tutor sees it; online, children say answers together on three or use fingers.'),
+    ('Write it, say the answer together on three, then click.', 'Children write on their own paper and say the answer together on three (online: nothing is held up to the camera). Never ask for boards or paper held up in front of the group or to the camera. Then click.'),
+    ('Children write the answer on whiteboards, then click.', 'Children write the answer on their own paper and say it together on three, then click.'),
+    ('Whiteboards, then click.', 'Own paper; say the answer together on three, then click.'),
+    ('Whiteboards again.', 'Own paper again, ticked against the answer slide.'),
+    ('Whiteboards. ', 'Own paper, ticked against the answer slide. '),
+    ('Whiteboard round.', 'Whiteboard round (boards stay low or on the desk; nobody holds a board or paper up in front of the group or to the camera).'),
+    ('take answers on whiteboards, then click', 'take answers on each child\'s own paper (ticked against the answer slide), then click'),
+    ('Your turn: whiteboards, then click.', 'Your turn: write it on your own paper, then click.'),
+    ('Your turn: whiteboards', 'Your turn: write it'),
+    ('Your turn: children count on whiteboards, then click', 'Your turn: children count on their own paper (ticked against the answer slide), then click'),
+    ('Then whiteboards for the &quot;your turn&quot; and click for 7.', 'Then children write the &quot;your turn&quot; answer on their own paper (ticked against the answer slide) and click for 7.'),
+    ('after children try it on whiteboards.', 'after children try it on their own paper (ticked against the answer slide).'),
+    ('Draw it on your whiteboard.', 'Draw it on your own paper.'),
+    ('Draw a grid on your whiteboard.', 'Draw a grid on your own paper.'),
+    ('Ask a child to show the part that sticks out on their bars for a.', 'Ask for a volunteer (never a named child) to show the part that sticks out on their bars for a, or show it yourself.'),
+    ('Ask a child who got b right to explain the order out loud.', 'Ask for a volunteer to explain the order out loud (never pick a named child).'),
+    ('Answers are in the Challenge slide notes', 'Answers are in the Go further slide notes'),
+    ('Show after pairs have tried the Challenge,', 'Show after pairs have tried Go further,'),
     ('Note who needs a short catch-up next lesson.', 'Note who may need a short catch-up next lesson (never in front of the group).'),
 ]
 
@@ -149,6 +169,7 @@ def apply(D, n):
     pill(D, p_ + 'end', '90 MIN', dark=True)
     add_whatif(D, n); ws_note(D, n); talk_fix(D, n)
     globals()['fix_l%d' % n](D)
+    reaudit(D, n)
     # replace stale 'Open investigation' wording
     p1fix.sub_all(D, [('Open investigation', 'Investigation')])
 
@@ -165,6 +186,10 @@ def fix_l1(D):
 def fix_l2(D):
     p1fix.patch(D, 'l2-ws2', [('Magic triangle. Think about which numbers go in the corners.', 'Magic triangle. Every corner counts in two sides: think about which numbers go in the corners.'),
                               ('Q6</span>  Two numbers.', 'Q6</span>  Two numbers (if you have time).')], must=False)
+    # re-audit fix pass: the corners 1, 2, 3 are given in Q5 (Core approachable untaught); choosing the corners is part (b), if you have time
+    p1fix.patch(D, 'l2-ws2', [('Magic triangle. Every corner counts in two sides: think about which numbers go in the corners.', 'Magic triangle. Sides of 9: the corners 1, 2, 3 are given, so find the numbers between them. (If you have time: sides of 10, you choose the corners.)')], must=False)
+    p1fix.patch(D, 'l2-teachpage2', [('On the worksheet the target is 9: ask "Small sides... so which numbers should go in the corners?" but do not tell them.', 'On the worksheet the target is 9 and the corners 1, 2, 3 are given, so children only find the numbers between them. Part (b), if you have time, is sides of 10 with the corners to choose: ask "Small sides... so which numbers should go in the corners?" but do not tell them.')], must=False)
+    p1fix.patch(D, 'l2-ws2ans', [('Q5: small sides need small corners, so 1, 2, 3 go in the corners for 9.', 'Q5: the corners 1, 2, 3 are given for 9 (small sides need small corners).')], must=False)
 
 
 def fix_l3(D):
@@ -172,7 +197,7 @@ def fix_l3(D):
 
 
 def fix_l4(D):
-    p1fix.patch(D, 'l4-ws2', [('Ben has 15 sticks. How many triangles can he make?', 'If you have time: Ben has 15 sticks. How many triangles can he make?')], must=False)
+    p1fix.patch(D, 'l4-ws2', [('Q8</span>  Ben has 15 sticks. How many triangles can he make?', 'Q8</span>  If you have time: Ben has 15 sticks. How many triangles can he make?')], must=False)
 
 
 def fix_l5(D):
@@ -186,6 +211,8 @@ def fix_l5(D):
     for sid, lab in (('l5-teachm', '40–42 MIN'), ('l5-teachbar', '42–44 MIN'), ('l5-ws1', '44–52 MIN'), ('l5-ws1ans', '52–54 MIN'), ('l5-teachq1', '54–56 MIN'), ('l5-teachq2', '56–58 MIN')):
         p1fix.relabel(D, sid, lab)
     p1fix.patch(D, 'l5-teachbar', [('Teach before worksheet page 2', 'Teach now, before page 1, so that minutes 54 to 58 only have the queue idea (bars are used again in Q3 on page 2)')], must=False)
+    p1fix.patch(D, 'l5-ws1', [('For Q1c (two steps) check that pairs undo the last step first.', 'For Q1c (two steps) the workbook says "Try a number and check it", so pairs may guess and check with counters; then show undoing the last step first.')], must=False)
+    p1fix.patch(D, 'l5-ws1', [('Number machines. Find the rule from every pair, then fill the gaps.', 'Number machines. Find the rule from every pair, then fill the gaps. (If you have time: OUT 30 means IN what?)')], must=False)
     p1fix.patch(D, 'l5-ws2', [('Marble puzzle. Draw a bar for each child.', 'Marble puzzle. Colour the boxes: one box for each marble. (Part d is if you have time.)')], must=False)
 
 
@@ -208,15 +235,15 @@ def fix_l6(D):
         [('Q1', '4 ways: 20 / 10+10 / 10+5+5 / 5+5+5+5.  Fewest: one 20¢.  Most: four 5¢.'), ('Q2', '4 ways: 20+5, 10+10+5, 10+5+5+5, five 5¢')],
         'Click after pairs explain. Q1c: "We started with the biggest coin and went one fewer each time until there were none." Q2: the same table as the worked example. Thirty cents (6 ways) is on the Think harder page (T4).'))
     _w(D, 'l6-ws2', ws_preview('l6-ws2', '58–68 MIN', 'Worksheet page 2: on your own',
-        [('Q3', '85¢ with the fewest coins. (If you have time: a way with exactly 6 coins.)'), ('Q4', 'Can 35¢ be made with 2 coins? Explain.')],
+        [('Q3', '85¢ with the fewest coins. (If you have time: a way with exactly 6 coins.)'), ('Q4', 'Can 35¢ be made with 2 coins? Explain.'), ('Q5–Q6', 'Count the money: how much does Ali have? How much does Mei have?')],
         'Want more? You may choose Think harder T1 in your workbook.',
-        'Children work alone. Note who may need a short catch-up next lesson. Dollars are now on the Think harder page (T5), not on this page.'))
+        'Children work alone. Q5 and Q6 are short "count the money" items (Ali 20¢ + 10¢ + 5¢ = 35¢; Mei 20¢ + 20¢ + 5¢ = 45¢). Note who may need a short catch-up next lesson. Dollars are now on the Think harder page (T5), not on this page.'))
     _w(D, 'l6-ws2ans', check_slide('l6-ws2ans', '68–72 MIN', 'Page 2: check together',
-        [('Q3', '4 coins: 50 + 20 + 10 + 5.  6 coins: e.g. 50 + 10 + 10 + 5 + 5 + 5'), ('Q4', 'No: two coins make 10, 15, 20, 25, 30, 40, 55, 60, 70 or 100')],
-        'Click after a child explains. Think harder T3 (Sam): six 10¢ = 60¢; each swap to a 20¢ adds 10¢; 30¢ more means 3 swaps.'))
+        [('Q3', '4 coins: 50 + 20 + 10 + 5.  6 coins: e.g. 50 + 10 + 10 + 5 + 5 + 5'), ('Q4', 'No: two coins make 10, 15, 20, 25, 30, 40, 55, 60, 70 or 100'), ('Q5, Q6', 'Q5: 35¢.   Q6: 45¢.')],
+        'Click after a child explains. Q5: 20, 30, 35. Q6: 20 + 20 = 40, then 45. Think harder T3 (Sam): six 10¢ = 60¢; each swap to a 20¢ adds 10¢; 30¢ more means 3 swaps.'))
     p1fix.stretch_chip(D, 'l6-ws2ans')
     p1fix.relabel(D, 'l6-teachfew', '54–58 MIN')
-    for sid in ('l6-teachnotes', 'l6-trynotes'): p1fix.relabel(D, sid, 'Your choice')
+    for sid in ('l6-teachnotes', 'l6-trynotes'): p1fix.relabel(D, sid, 'Optional, if you finish early')
     p1fix.patch(D, 'l6-teachnotes', [('Teach before worksheet page 2 (Q5 uses dollars).', 'Optional: dollars are now Think harder T5.')], must=False)
     p1fix.patch(D, 'l6-exit', [('Make 40¢ using exactly three coins from 5¢, 10¢, 20¢, 50¢.', 'Show one way to make 30¢ with 20¢, 10¢ and 5¢ coins.'),
                                ('Answer: 20¢ + 10¢ + 10¢.', 'Answer: any correct way, for example 20¢ + 10¢, or 10¢ + 10¢ + 10¢, or 20¢ + 5¢ + 5¢.')], must=False)
@@ -225,7 +252,7 @@ def fix_l6(D):
 def fix_l7(D):
     body = h2('Exit ticket')
     inner = chip('EXIT TICKET', TEAL, CREAM, 28) + p('A shape has 6 sides. How many corners does it have? What is the shape called?', 46, 600)
-    body += card(inner, WHITE, CARD_X) + card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.', 34, 500), WHITE, CARD_X)
+    body += card(inner, WHITE, CARD_X) + card(p('Write your answer on a slip of paper. Tick it when your tutor shows the answer. Then collect your stamp in your inquiry journal.', 34, 500), WHITE, CARD_X)
     notes = ('Minutes 80 to 88. Answer: 6 corners; it is a hexagon (the same number of corners as sides). This replaces the 14-squares grid, which is a hard ending for the lesson. '
              'Extension: how many squares are in a 3 by 3 grid? (14: 9 + 4 + 1).')
     _w(D, 'l7-exit', sec('l7-exit', '80–88 MIN', body, notes))
@@ -241,7 +268,7 @@ def fix_l8(D):
         [('Q3', 'Ali: fish.    Mei: cat.    Ben: dog.'), ('Q4', '1st Mei,   2nd Ali,   3rd Ben,   4th Sam'), ('Q5', 'a) 15   (Think harder T5: 30 and 14)'), ('Q6', '11: we do not say it counting in 3s.  Or 6: the only even number.')],
         'Click each answer after a child explains. Q3: Ali has no cat and no dog, so fish. Mei has no dog, and the fish is taken, so cat. Ben has the dog. Q4: Mei is 1st; Ali is in front of Ben and Ben is in front of Sam, so the order of the last three is Ali, Ben, Sam. Q5a: between 10 and 20, odd, in the 5s: 15. Think harder T5: a) 30 (20 and 40 are not between 20 and 40); b) 14 (1 + 4 = 5, less than 20). Q6: also accept "11 is the only number with 2 digits".'))
     p1fix.stretch_chip(D, 'l8-ws2ans')
-    p1fix.patch(D, 'l8-teachriddle', [('Teach before worksheet page 2 (Q5 has three number riddles).', 'Teach before worksheet page 2 (Q5 has one number riddle; two more are Think harder T5).')], must=False)
+    
 
 
 def fix_l9(D):
@@ -253,7 +280,7 @@ def fix_l9(D):
 
 
 def fix_l10(D):
-    body = h2('Warm-up: Challenge Day') + chip('Whiteboard round: everybody writes at the same time. No passing round.', TEAL, CREAM, 28)
+    body = h2('Warm-up: Puzzle Day') + chip('Whiteboard round: everybody writes at the same time. No passing round.', TEAL, CREAM, 28)
     body += card(p('Quick questions from our nine lessons.', 44, 700) + p('Write your answer on a whiteboard or paper. Not sure? Guess or draw it.', 36, 600, MUTED), WHITE, CARD_X)
     qs = [('Count in 5s: 5, 10, 15, __', '20'), ('10 = 4 + __', '6'), ('Pay 15¢ with two coins', '10¢ + 5¢'), ('What shape has 3 sides?', 'Triangle'), ('I think of a number, add 2 and get 9. My number?', '7')]
     inner = ''.join(f'<div style="display:flex;gap:20px;align-items:center"><p style="font-size:36px;font-weight:600;flex:1">{E(a)}</p><div data-build-in="pop" style="background:{YEL};border-radius:16px;padding:8px 22px"><p style="font-size:34px;font-weight:800">{E(b)}</p></div></div>' for a, b in qs)
@@ -262,3 +289,17 @@ def fix_l10(D):
              'Ask one question at a time, give thinking time, then click to show the answer to everyone. If answers differ, say "Different ideas are a good thing to talk about." Never groan at a wrong answer. Answers: 20; 6; 10¢ + 5¢ (or 5¢ + 5¢ + 5¢ is three coins); triangle; 7.')
     _w(D, 'l10-warm1', sec('l10-warm1', '0–5 MIN', body, notes))
     p1fix.sub_all(D, [('Pairs get ONE card for 10 minutes', 'Each pair chooses ONE card for 10 minutes')])
+
+
+def reaudit(D, n):
+    """Re-audit fix pass: Core items approachable untaught (tips, pictures, starters); slide text matches the workbook."""
+    if n == 6:
+        p1fix.patch(D, 'l6-ws2', [('85¢ with the fewest coins. (If you have time: a way with exactly 6 coins.)', '85¢ with the fewest coins. Use play coins: pay 85¢ any way you can, then try fewer coins. (If you have time: a way with exactly 6 coins.)')], must=False)
+    if n == 9:
+        p1fix.patch(D, 'l9-ws2', [('Hand spans. Measure one line with paper clips, then with cubes: which unit gives the bigger number?', 'Hand spans. Look at the picture of two bars: Ali 6 spans, Mei 8 spans for the same desk. Whose hand span is longer? How do you know?'),
+                                   ('If you have time: clips and erasers, both ways. Draw the bars and count in groups.', 'If you have time: clips and erasers, both ways (1 clip = 2 erasers). Draw it or count in 2s.')], must=False)
+    if n == 10:
+        p1fix.patch(D, 'l10-ws2', [('Mystery number. Draw the machine and go backwards.', 'Mystery number (if you have time). Try a number and check it, or draw the machine and go backwards.')], must=False)
+    if n == 7:
+        for sid in ('l7-challenge', 'l7-chwalk'):
+            p1fix.patch(D, sid, [('(add 2, 3, 4, 5, 6 each time)', '(the number added grows by 1 each time: +3, +4, +5, +6)')], must=False)

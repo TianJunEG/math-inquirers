@@ -1,4 +1,5 @@
 // Math Inquirers P4 Holiday Program — Lesson 7: Area Architects II (Area and perimeter, rectangles and squares)
+const tip = require('../tip.js');
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WH = '#FFFFFF';
 const F = 'Fredoka, Arial, sans-serif';
 
@@ -91,28 +92,30 @@ module.exports = {
     think: [
       '“An L-shape. I need every side. The bottom is 8 cm and the top part is 5 cm, so the step across must be 8 − 5 = 3 cm. The left is 6 cm and the right is 4 cm, so the step down is 6 − 4 = 2 cm.”',
       '“For the area I can split it into a 5 by 6 rectangle and a 3 by 4 rectangle: 30 + 12 = 42. Or I can draw the big 8 by 6 rectangle and take away the missing 3 by 2 piece: 48 − 6 = 42. Same answer, so I trust it.”',
-      '“For the perimeter, I push the two step sides out. The 3 cm piece slides up to the top and the 2 cm piece slides across to the right. Now it is an 8 by 6 rectangle, so the perimeter is 8 + 6 + 8 + 6 = 28 cm.”',
-      '“Area 20: I list the pairs in order. 1 × 20, 2 × 10, 3 does not work, 4 × 5, and 5 × 4 is the same as 4 × 5, so I stop. Perimeters 42, 24, 18. Long and thin is biggest; close to a square is smallest.”'
+      '“For the perimeter, I push the two step sides out. The 3 cm piece slides up to the top and the 2 cm piece slides across to the right. Now it is an 8 by 6 rectangle, so the perimeter is 8 + 6 + 8 + 6 = 28 cm.”'
     ],
     circulate: ['Ask: “Which side is opposite this one? How can that help you find the missing length?”', 'Ask: “Can you find the area another way to check?”', 'Ask: “You cut the shape and moved a piece. What stayed the same? What changed?”'],
     hints: ['Hint 1: “Mark every side with its length before you start. Use the opposite sides.”', 'Hint 2: “Draw the big rectangle round the shape. What is missing?”', 'Hint 3: “Push the steps out. Does the outline become a rectangle?”'],
-    talk: ['“Ben says a bigger area always means a bigger perimeter. Can you find two rectangles that prove him wrong?”', '“When we cut a shape and move the pieces, which stays the same, area or perimeter? Why?”'],
-    talkAns: 'Ben is wrong. A 1 cm by 12 cm rectangle has area 12 cm² and perimeter 26 cm, but a 4 cm by 4 cm square has a bigger area (16 cm²) and a smaller perimeter (16 cm). When we cut and move pieces, nothing is added or lost, so the area stays the same; the outline changes, so the perimeter can change.',
+    talk: ["“Ben says a bigger area always means a bigger perimeter. Can you find two rectangles that prove him wrong?”"],
+    talkWeekly: ["“When we cut a shape and move the pieces, which stays the same, area or perimeter? Why?”"],
+    talkAns: "Ben is wrong. A 1 cm by 12 cm rectangle has area 12 cm² and perimeter 26 cm, but a 4 cm by 4 cm square has a bigger area (16 cm²) and a smaller perimeter (16 cm).",
+    talkWeeklyAns: "When we cut and move pieces, nothing is added or lost, so the area stays the same; the outline changes, so the perimeter can change.",
     close: ['“Today you were real architects: you split shapes, took pieces away and pushed steps out instead of counting every square.”', '“Hand me your exit ticket and I will stamp your inquiry journal.”']
   },
 
   deck: {
     today: 'Find the area and perimeter of tricky shapes the smart way, and find out why the same area can have different perimeters.',
     warmGame: 'Area or Perimeter? The tutor reads a job. Hold up A if it covers the inside, P if it goes round the edge. Then explain why.',
-    warmQs: [['Area of a rectangle 7 cm by 6 cm?', '42 cm²'], ['Perimeter of a square with sides of 9 cm?', '36 cm'], ['A rectangle has area 48 cm² and length 8 cm. Breadth?', '6 cm'], ['Perimeter of a rectangle 12 cm by 5 cm?', '34 cm'], ['A square has perimeter 28 cm. Its area?', '49 cm²']],
+    warmQs: [["Area of a rectangle 7 cm by 6 cm?", "42 cm²"], ["Perimeter of a square with sides of 9 cm?", "36 cm"], ["A rectangle has area 48 cm² and length 8 cm. Breadth?", "6 cm"]],
+    warmWeekly: [["Perimeter of a rectangle 12 cm by 5 cm?", "34 cm"], ["A square has perimeter 28 cm. Its area?", "49 cm²"]],
     expSetup: ['Take 12 square tiles. Each is 1 cm by 1 cm.', 'Use all 12 to make a rectangle. Write its length, breadth and perimeter.', 'Make every different rectangle you can.', 'Which has the longest perimeter? The shortest? What do you notice?'],
     expPic: 'twelve yellow square tiles next to a 1 cm grid with a 2 by 6 rectangle drawn on it, and a small table with the columns length, breadth and perimeter.',
-    expAsk: [['How many different rectangles did you make?', '3: 1 by 12, 2 by 6 and 3 by 4 (turning one round does not make a new one).'], ['Which has the longest perimeter? The shortest?', '1 by 12 has 26 cm; 3 by 4 has 14 cm.'], ['What do you notice?', 'All have area 12 cm², but the perimeters differ. Long and thin is biggest; closest to a square is smallest.']],
+    expAsk: [["How many different rectangles did you make?", "3: 1 by 12, 2 by 6 and 3 by 4 (turning one round does not make a new one)."], ["Which has the longest perimeter? The shortest?", "1 by 12 has 26 cm; 3 by 4 has 14 cm."]],
     mini1: { head: 'Area of an L-shape: split or take away', body: ['An 8 cm by 6 cm rectangle with a 3 cm by 2 cm piece missing from one corner.', 'Split: 5 × 6 + 3 × 4.', 'Take away: 8 × 6 − 3 × 2.'], ans: '42 cm² both ways.' },
     mini2: { head: 'Perimeter: push the steps out', body: ['The same L-shape. Two sides have no labels.', 'Slide the step sides out to the edges.', 'It becomes an 8 cm by 6 cm rectangle.'], ans: '28 cm, the same as the rectangle.' },
     keyHead: 'Key idea: split, take away, push out', keyBig: 'Area: split into rectangles or take the missing piece away. Perimeter: push the steps out to make a rectangle.', keySmall: 'The same area can have different perimeters. Close to a square gives the smallest perimeter.',
     brk: 'Body shapes! "Long and thin": stretch your arms out wide. "Square": hug yourself tight. Which shape has the shorter way round?',
-    ws1: 'Page 1, in pairs: Q1 the L-shape, Q2 every rectangle with area 24 cm², Q3 six tiles.',
+    ws1: 'Page 1, in pairs: Q1 the L-shape, Q2 every rectangle with area 24 cm². Q3 six tiles is the first question on your own.',
     ws2: 'Page 2, on your own: Q4 the staircase, Q5 cut and rearrange, Q6 the photo frame.'
   },
 
@@ -169,6 +172,7 @@ module.exports = {
     W.push(H.sub('b', 'Draw the shape with the SMALLEST perimeter and one with the LARGEST.   Smallest:  ______   Largest:  ______'));
 
     W.push(H.q(4, 'Ravi says, "I cannot find the perimeter of this staircase, because the steps are not labelled."', { pb: true, before: 0, keepNext: true }));
+    W.push(tip('walk a finger along the edge of the staircase. How far across? How far down?'));
     W.push(side(q4Svg(), 300, [
       H.sub('a', 'Show Ravi how to find the perimeter WITHOUT measuring each step. Push the steps out: the shape then fits in a ___ cm by ___ cm rectangle.'),
       H.sub('', '___ + ___ + ___ + ___ = ___ cm.   Perimeter:  ________', { after: 40 }),
@@ -180,6 +184,7 @@ module.exports = {
     W.push(H.sub('c', 'Ali says, "The area stayed the same, so the perimeter stayed the same too." Is he right? Explain.'));
     W.push(...H.lines(1));
     W.push(H.q(6, 'A photo 8 cm long and 6 cm wide is put in a frame. The frame is 1 cm wide all round.', { keepNext: true }));
+    W.push(tip('draw the 8 by 6 photo and its frame on squared paper. Count the frame squares.'));
     W.push(side(q6Svg(), 210, [
       H.sub('a', 'How long and how wide is the whole thing (photo and frame)?  ____ cm by ____ cm'),
       H.sub('b', 'Find the area of the frame only.   Area of frame:  ________'),
@@ -219,10 +224,12 @@ module.exports.gaps = {
   "key": "(a) 1 by 11: area 11 cm², perimeter 24 cm. 4 by 4: area 16 cm², perimeter 16 cm. The square has the bigger area but the smaller perimeter, so Ali is wrong. (b) Two sides add up to 12 cm: 1 by 11 (11 cm²), 2 by 10 (20), 3 by 9 (27), 4 by 8 (32), 5 by 7 (35), 6 by 6 (36). Six rectangles (checked by brute force). (c) The 6 by 6 square has the biggest area. For the same perimeter, the closer to a square, the bigger the area. Look for an ordered list, and for children who see that the pair of sides adds up to half the perimeter.",
   "easy": "Draw a 4 cm by 4 cm square on the Square grid. Write its area and its perimeter."
  },
- "reflect": "Something I did well: I wrote the lengths on the picture. The hardest part was finding the missing lengths on the staircase. What helped me: writing every length I could work out on the picture.",
+ "reflect": "Something I did well: I wrote the lengths on the picture. The hardest part was finding the missing lengths on the staircase. What helped me: writing every length I could work out on the picture. One thing I could try next: pushing the steps out to make a rectangle.",
  "go2": {
   "q": "What if you use 24 tiles? Make every rectangle. Which has the smallest perimeter?",
   "a": "4 rectangles: 1 × 24 (perimeter 50 cm), 2 × 12 (28 cm), 3 × 8 (22 cm) and 4 × 6 (20 cm). The 4 by 6 has the smallest perimeter: it is the closest to a square."
  },
- "cap": "Page 2 is on your own. Aim for Q4 and Q5 first. Q6 is a choice for the last few minutes."
+ "cap": "Page 2 is on your own. Do question 3 first, then Q4 and Q5. Q6 is a choice for the end.",
+ "p1": "Pairs: Q1 and Q2. Then Q3 alone. After question 3 you may choose: carry on, or try Think harder.",
+ "plan": ["Split Q1 between the partners: partner A splits the L-shape into two rectangles, partner B uses the big rectangle minus the missing piece, then they compare (about 4 minutes, not 6). Pairs also do Q2. Q3, six tiles, is the first question each child does on their own; its answer is checked with page 2."]
 };

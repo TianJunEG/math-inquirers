@@ -1,0 +1,3978 @@
+{
+ "version": 2,
+ "rules": {
+  "quarter": "calendar quarter of the batch month (Jan-Mar, Apr-Jun, Jul-Sep, Oct-Dec)",
+  "max_per_sub_per_quarter": 1,
+  "max_per_family_per_quarter": 3,
+  "min_gap_days": {
+   "1": 60,
+   "2": 60
+  },
+  "min_gap_days_across_quarters": 30,
+  "family_window_days": 60,
+  "family_max_in_window": 3,
+  "answer_window_days": 60,
+  "answer_small_max_in_window": 2,
+  "capacity_min_slack": 10,
+  "run_words_fail": 7,
+  "number_overlap_fail": 3,
+  "note": "Levels 3 to 6 (owner TEASER-STRICT): a sub-structure at most once per calendar quarter and also at least min_gap_days_across_quarters apart (circular); a family at most max_per_family_per_quarter times per quarter; (ANSWER-WINDOW, round 6, adopted default of the owner's delegate, revocable) the same answer value not twice within answer_window_l36_days (60) days and never with the same sub-structure within answer_same_sub_days (92) days; this replaces the full-year answer rule. Levels 1 and 2 (owner L1L2-GAP60): a sub-structure returns after at least min_gap_days days (circular over the year, leap and non-leap), a family at most family_max_in_window times in any family_window_days consecutive days and never on two consecutive days, an answer not twice within answer_window_days days and a single-digit answer at most answer_small_max_in_window times in that window. sub = the specific maths structure (what has to be worked out and how); family = the broad kind (topic). A different story or different numbers is NOT a different sub-structure.",
+  "answer_window_l36_days": 60,
+  "answer_same_sub_days": 92,
+  "frame_review": 0.8,
+  "frame_fail": 0.9,
+  "text_min_per_month": {
+   "1": 3,
+   "2": 3,
+   "3": 3,
+   "4": 3,
+   "5": 4,
+   "6": 4
+  },
+  "text_gate_months_exempt": [
+   "11",
+   "12"
+  ]
+ },
+ "fixed_fallback": {
+  "1": "sequence.count_on",
+  "2": "counting_choices.digit_cards_arrangements",
+  "3": "remainders.two_conditions",
+  "4": "multiples.common_multiple",
+  "5": "fractions.fraction_of_remainder",
+  "6": "sequence.which_term"
+ },
+ "families": {
+  "ages": {
+   "name": "Ages",
+   "cite": "MOE P1-P3 NA Addition and Subtraction word problems, pp.31-35"
+  },
+  "algebra": {
+   "name": "Algebra",
+   "cite": "Ages 11-13 page list \"algebra\"; MOE P6 NA algebra (p.43); L6 lesson 4 (Algebra Machines)"
+  },
+  "angles": {
+   "name": "Angles",
+   "cite": "MOE P3 MG angles: right angle, greater or smaller than a right angle (p.36); P4 measure (p.39); P5 line, point, triangle, quadrilateral (p.42); L3 lesson 8; L4 lesson 6; L5 lesson 8"
+  },
+  "arrays": {
+   "name": "Arrays: rows and columns",
+   "cite": "MOE P1 NA Multiplication 3.1-3.3, p.31; P2 tables of 2, 3, 4, 5 and 10, p.33; P3 Area and Perimeter, p.36"
+  },
+  "averages": {
+   "name": "Averages",
+   "cite": "MOE P6 ST average (p.44); L6 lesson 9 (Averages and Data); Ages 11-13 page list \"data\""
+  },
+  "backwards": {
+   "name": "Working backwards",
+   "cite": "L1 lesson 5 and L2 lesson 5 (Working Backwards); MOE P1 NA 2.4 (inverse), p.31"
+  },
+  "bar_model": {
+   "name": "Bar models",
+   "cite": "L3 lesson 4 (Model Makers: bar models); MOE P1-P3 NA Addition and Subtraction, pp.31-35"
+  },
+  "bonds": {
+   "name": "Number bonds",
+   "cite": "L1 lesson 2 (Number Bonds); MOE P1 NA Addition and Subtraction 2.1-2.7, p.31"
+  },
+  "calendar": {
+   "name": "Calendar and days of the week",
+   "cite": "MOE P1 MG Time (days, weeks), p.32; P2 time, p.34"
+  },
+  "clock_reading": {
+   "name": "Reading the clock",
+   "cite": "MOE P1 MG Time 2.1-2.2, p.32; P3 MG Time 2.3 24-hour clock, p.36"
+  },
+  "codes": {
+   "name": "Codes and binary",
+   "cite": "Ages 11-13 page list \"codes\"; L6 lesson 8 (Secret Codes)"
+  },
+  "coins": {
+   "name": "Coin combinations",
+   "cite": "L1 lesson 6 (Coin Combos); MOE P1 NA Money, p.31; Singapore coins 5, 10, 20, 50 cents and $1 only"
+  },
+  "consecutive": {
+   "name": "Consecutive numbers",
+   "cite": "L3 lesson 1 (Number Sleuths); L4 lesson 3; L6 lesson 4 (Algebra Machines)"
+  },
+  "counting_choices": {
+   "name": "Counting choices and orders",
+   "cite": "L1-L3 lesson 10 (Puzzle Day); L6 lesson 5 (Every Possible Way)"
+  },
+  "counting_grid": {
+   "name": "Counting shapes in a grid",
+   "cite": "L1 lesson 7; L3 lesson 10; MOE P1 MG 1.3 identify the shapes in a figure, p.32"
+  },
+  "counting_line": {
+   "name": "Counting along a line or loop",
+   "cite": "L1 lesson 10; MOE P1 NA 1.7 ordinals (p.31)"
+  },
+  "counting_pairs": {
+   "name": "Counting pairs",
+   "cite": "L1 lesson 10; L2 lesson 10 (Puzzle Day); L3 lesson 10 (logic and counting)"
+  },
+  "counting_range": {
+   "name": "Counting a range",
+   "cite": "MOE P1 NA 1.1-1.7 counting and ordering numbers to 100, p.31"
+  },
+  "counting_routes": {
+   "name": "Counting routes on a grid",
+   "cite": "L3 lesson 10; L4 lesson 10 (Mixed heuristics); L6 lesson 5 (Every Possible Way)"
+  },
+  "counting_ways": {
+   "name": "Counting ways (steps and tilings)",
+   "cite": "L3 lesson 10; L4 lesson 10 (Mixed heuristics); L6 lesson 5"
+  },
+  "cubes": {
+   "name": "Cubes and cuboids",
+   "cite": "MOE P4 MG nets, P5 volume (p.42); L4 lesson 8 (Symmetry and Nets)"
+  },
+  "decimals": {
+   "name": "Decimals",
+   "cite": "MOE P4 NA decimals: operations with 1-digit whole numbers (p.38); L4 lesson 5 (Decimal Detectives)"
+  },
+  "digit_cards": {
+   "name": "Digit cards",
+   "cite": "L2 lesson 1 (Digit Detectives); L3 lesson 1; MOE P1 NA 1.5 compare and order numbers, p.31"
+  },
+  "digit_puzzles": {
+   "name": "Digit puzzles",
+   "cite": "L1 lesson 1; L2 lesson 1 (Digit Detectives); L3 lesson 1 (Number Sleuths); L4 lesson 2"
+  },
+  "division": {
+   "name": "Sharing and grouping (division)",
+   "cite": "MOE P1 NA Multiplication and Division 3.1-3.4 (p.31); P2 (p.33); P3 remainders (p.35)"
+  },
+  "durations": {
+   "name": "Time taken (durations)",
+   "cite": "MOE P2 MG Time, p.34; P3 MG Time 2.3, p.36"
+  },
+  "factors": {
+   "name": "Factors",
+   "cite": "MOE P4 NA factors and multiples (p.37); L3 lesson 3 (tables); L4 lesson 1 (Factor Hunters)"
+  },
+  "figure_rule": {
+   "name": "Rules for growing figures",
+   "cite": "L5 lesson 9 (Pattern Generalisers); L4 lesson 10 (Mixed heuristics); MOE P4 NA number-sequence patterns (p.37)"
+  },
+  "fractions": {
+   "name": "Fractions",
+   "cite": "L2 lesson 7; L3 lesson 6; L4 lesson 4; L5 lessons 2-3"
+  },
+  "function_machine": {
+   "name": "Number machines",
+   "cite": "MOE P1 NA Whole Numbers 1.6, p.31; P4 number patterns, p.37; Problem solving: look for a pattern, p.13"
+  },
+  "graphs": {
+   "name": "Reading graphs and tables",
+   "cite": "L1 lesson 3 (Picture Graphs); MOE P1 ST picture graphs, p.32; P2 scales, p.34; P3 bar graphs, p.36"
+  },
+  "growing_pattern": {
+   "name": "Growing patterns",
+   "cite": "L1 lesson 4; MOE P1 NA 1.6, p.31; L2 lesson 4 Pattern Machines"
+  },
+  "guess_check": {
+   "name": "Guess and check",
+   "cite": "MOE Problem solving: guess and check, p.13"
+  },
+  "invariant": {
+   "name": "Always one less (invariants)",
+   "cite": "MOE Problem solving: look for a pattern, p.13"
+  },
+  "logic_grid": {
+   "name": "Logic: fill the grid",
+   "cite": "MOE Problem solving: make a list or table, p.13"
+  },
+  "logic_match": {
+   "name": "Logic: who has what",
+   "cite": "L1 lesson 8 (Logic and Sorting)"
+  },
+  "logic_order": {
+   "name": "Logic: putting in order",
+   "cite": "L1 lesson 8 (Logic and Sorting); L3 lesson 10"
+  },
+  "logic_truth": {
+   "name": "Logic: who is telling the truth",
+   "cite": "L3 lesson 10 (bar graphs and logic); L5 lesson 10; L6 lesson 10"
+  },
+  "measurement": {
+   "name": "Measuring length",
+   "cite": "L1 lesson 9 (Length); MOE P1 MG Measurement 1.1-1.4, p.32"
+  },
+  "missing_number": {
+   "name": "Missing numbers",
+   "cite": "L1 lesson 5 (Working Backwards); L2 lesson 2 (Missing Digit Mysteries); MOE P1 NA 2.4 inverse relationship, p.31"
+  },
+  "modular": {
+   "name": "Clock arithmetic",
+   "cite": "L6 lesson 8 (Clock (Modular) Arithmetic)"
+  },
+  "money": {
+   "name": "Money",
+   "cite": "L1 lesson 6; L2 lesson 6; L3 lesson 9; MOE P1 NA Money (cents to $1, dollars to $100), p.31"
+  },
+  "moves": {
+   "name": "Up and down moves",
+   "cite": "MOE P1 NA 2 addition and subtraction on a number line, p.31; L1 lesson 1"
+  },
+  "multiples": {
+   "name": "Common multiples",
+   "cite": "L4 lesson 1 (Factor Hunters); MOE P4 NA factors and multiples, p.37"
+  },
+  "multiplication": {
+   "name": "Groups and arrays (multiplication)",
+   "cite": "MOE P1 NA 3.1-3.4 (p.31); P2 tables (p.33); L2 lesson 3 (Legs, Wheels and Arrays)"
+  },
+  "negative_numbers": {
+   "name": "Negative numbers",
+   "cite": "Ages 11-13 page list \"negative numbers\"; L6 lesson 3 (Below Zero)"
+  },
+  "networks": {
+   "name": "Routes on a network",
+   "cite": "MOE P2 MG length, p.34; P3 km and m, p.36"
+  },
+  "number_grid": {
+   "name": "Number pyramids and grids",
+   "cite": "L1-L3 lesson 10 (Puzzle Day); L2 lesson 2 (Missing Digit Mysteries); L3 lesson 2 (Cryptarithm Crackers)"
+  },
+  "number_line": {
+   "name": "Numbers on a line",
+   "cite": "MOE P1 NA Whole Numbers 1.5 and 1.6, p.31"
+  },
+  "number_names": {
+   "name": "Number names",
+   "cite": "MOE P1 NA Whole Numbers 1.3, p.31"
+  },
+  "number_properties": {
+   "name": "Odd, even and multiples",
+   "cite": "MOE P1 NA multiplication concepts 3.1 (p.31); P2 tables 2, 3, 4, 5, 10 (p.33); L1 lesson 1 counting patterns"
+  },
+  "order_ops": {
+   "name": "Order of operations",
+   "cite": "MOE P5 NA order of operations (p.41); Ages 9-11 page list says \"order of operations\"; L4 lesson 3 (Operation Detectives)"
+  },
+  "paper_folding": {
+   "name": "Folding and cutting",
+   "cite": "MOE Problem solving: act it out, p.13"
+  },
+  "percentage": {
+   "name": "Percentage",
+   "cite": "MOE P5 NA percentage: part of a whole, discount, GST (p.41); Ages 10-12 page list \"percentage\"; L5 lesson 7 (Percentage Puzzles). Finding the whole and percentage change are Primary 6 and are not used at Level 5"
+  },
+  "perimeter_area": {
+   "name": "Perimeter and area",
+   "cite": "MOE P3 MG Area and Perimeter, p.36; P4 p.39; L3 lesson 7; L4 lesson 7. At Level 1: perimeter as the distance round a shape (L1 lesson 7 Shape Safari)"
+  },
+  "place_value": {
+   "name": "Place value",
+   "cite": "MOE P1 NA 1.2 tens and ones (p.31), P2 hundreds (p.33), P3 thousands (p.35); L1 lesson 1; L2 lesson 1; L3 lesson 1"
+  },
+  "polygons": {
+   "name": "Angles and diagonals of polygons",
+   "cite": "Ages 11-13 page list (angles in polygons); L6 lesson 7 (Turtle Geometry)"
+  },
+  "polyominoes": {
+   "name": "Shapes made of squares",
+   "cite": "MOE P1 MG 2D Shapes 1.2, p.32; P4 Geometry p.39"
+  },
+  "primes": {
+   "name": "Primes",
+   "cite": "Ages 11-13 page list \"primes\"; L6 lesson 2 (Prime Hunters)"
+  },
+  "probability": {
+   "name": "Probability",
+   "cite": "Ages 11-13 page list \"probability\"; L6 lesson 6 (Fair or Unfair?)"
+  },
+  "programs": {
+   "name": "Simple programs",
+   "cite": "Ages 11-13 page list (explored in Scratch); L6 lessons 1, 7, 10"
+  },
+  "rate": {
+   "name": "Rate",
+   "cite": "MOE P5 NA rate (p.41); Ages 10-12 page list \"rate\"; L5 lesson 6 (Rate Racers)"
+  },
+  "ratio": {
+   "name": "Ratio",
+   "cite": "MOE P6 NA ratio (p.43); L6 mixed lessons. Ratio is Primary 6, so it is used at Level 6 only"
+  },
+  "remainders": {
+   "name": "Remainders",
+   "cite": "L3 lesson 5 (Remainder Riddles); MOE P3 NA division with remainder, p.35"
+  },
+  "repeating_pattern": {
+   "name": "Repeating patterns",
+   "cite": "L1 lesson 4 (Repeating and Growing Patterns); MOE P1 NA 1.6 number-sequence patterns, p.31"
+  },
+  "rounding": {
+   "name": "Rounding",
+   "cite": "MOE P3 NA 1.4 rounding to the nearest 10, 100 (p.35), P4 to the nearest 1000 (p.37), P5 (p.41); L3 lesson 1; L4 lesson 2; L5 lesson 1"
+  },
+  "sequence": {
+   "name": "Number sequences",
+   "cite": "L1 lesson 1; L6 lesson 1 (Sequences and the nth Term)"
+  },
+  "series_sum": {
+   "name": "Adding a list of numbers",
+   "cite": "MOE P1 NA Addition 2.3 (add more than two 1-digit numbers, p.31); L1 lesson 10 Mixed Puzzles"
+  },
+  "shapes": {
+   "name": "Shapes and solids",
+   "cite": "L1 lesson 7 (2D Shapes); MOE P1 MG 2D shapes 1.1-1.3, p.32; P2 3D shapes, p.34"
+  },
+  "sorting": {
+   "name": "Sorting and sets",
+   "cite": "L1 lesson 8 (Logic and Sorting): sort by a rule, groups that overlap"
+  },
+  "spatial": {
+   "name": "Directions and turns",
+   "cite": "MOE P1-P2 MG position (left, right, turns) and P4 angle turns (p.39); L4 lesson 6 Angle Turns"
+  },
+  "stacks": {
+   "name": "Stacks and layers",
+   "cite": "MOE P2 NA multiplication, p.33; P3 MG area of a square, p.36"
+  },
+  "strategy": {
+   "name": "Strategy and worst case",
+   "cite": "MOE Problem solving: reasoning, p.13"
+  },
+  "symbols": {
+   "name": "Symbols and signs",
+   "cite": "MOE P1 NA Addition and Subtraction 2.2 use of + - =, p.31; Problem solving: guess and check, p.13"
+  },
+  "symmetry": {
+   "name": "Line symmetry",
+   "cite": "MOE P4 MG line symmetry (p.39); L4 lesson 8 (Symmetry and Nets)"
+  },
+  "triangle_area": {
+   "name": "Area of a triangle",
+   "cite": "MOE P5 MG area of a triangle and composite figures (p.42); Ages 10-12 page list \"area of a triangle\"; L5 lesson 4 (Triangle Areas)"
+  },
+  "volume": {
+   "name": "Volume",
+   "cite": "MOE P5 MG volume of a cuboid, litres and cm3 (p.42); Ages 10-12 page list \"volume\"; L5 lesson 5 (Volume Vault)"
+  },
+  "word_problems": {
+   "name": "Compare and equalise (word problems)",
+   "cite": "MOE P1 NA 1.4 compare sets, 2.1 addition and subtraction concepts, p.31"
+  },
+  "containers": {
+   "name": "Pouring and measuring with jugs",
+   "cite": "MOE Problem solving: act it out, p.13"
+  },
+  "number_arrangement": {
+   "name": "Placing numbers so that lines add up",
+   "cite": "MOE P1 NA Addition and Subtraction 2.4-2.5, p.31; Problem solving: guess and check, make a list, p.13"
+  },
+  "digit_display": {
+   "name": "Digits on a display",
+   "cite": "MOE P1 NA Whole Numbers 1.3 reading and writing numbers in numerals, p.31"
+  }
+ },
+ "subs": {
+  "ages.age_gap": {
+   "name": "the gap between two ages stays the same: an age later on",
+   "levels": [
+    3
+   ],
+   "kinds": [
+    "age_gap"
+   ],
+   "cite": "MOE P1 NA Addition and Subtraction 2.1-2.5, p.31; P2-P3 add and subtract word problems, pp.33, 35",
+   "round": 2,
+   "levels_before": [
+    1,
+    2,
+    3
+   ],
+   "note": "round 3: \"Ali is 9, his aunt is 34, how old will she be when ...\" is in docs/books word_problems_g1_g2_original_draft B10.1; kept only at Level 3"
+  },
+  "algebra.equation_both_sides": {
+   "name": "an unknown on both sides of an equation",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "equation"
+   ],
+   "where": {
+    "form": [
+     "ax+b=cx+d"
+    ]
+   }
+  },
+  "algebra.linear_word": {
+   "name": "a fixed charge plus a charge per unit: find the units",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "equation"
+   ],
+   "where": {
+    "form": [
+     "ax+b=c"
+    ]
+   }
+  },
+  "algebra.substitute": {
+   "name": "find the value of an expression for given values of the letters",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "substitute"
+   ]
+  },
+  "angles.clock_hands": {
+   "name": "angle between the hour hand and the minute hand",
+   "levels": [],
+   "kinds": [
+    "angle"
+   ],
+   "where": {
+    "kind": [
+     "clock"
+    ]
+   },
+   "levels_before": [
+    4,
+    5
+   ],
+   "retired": "round 5: \"the smaller angle between the hands of a clock at 5 o'clock\" is in the P5 Question Bank and p5/content/l8.js with the answer 150; AUDIT_ROUND5 High"
+  },
+  "angles.isosceles_base_angles": {
+   "name": "the two equal base angles of an isosceles triangle",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "angle"
+   ],
+   "where": {
+    "kind": [
+     "isos_base"
+    ]
+   }
+  },
+  "angles.missing_angle": {
+   "name": "the missing angle on a straight line or in a four-sided shape",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "angle"
+   ],
+   "where": {
+    "total": [
+     180,
+     360
+    ],
+    "kind": [
+     "sum"
+    ]
+   },
+   "merged_from": [
+    "angles.on_a_straight_line",
+    "angles.quadrilateral_sum"
+   ]
+  },
+  "angles.right_angle_turns": {
+   "name": "how many right angles does a clock hand turn through",
+   "levels": [
+    3,
+    4
+   ],
+   "kinds": [
+    "quarter_turns"
+   ]
+  },
+  "arrays.border_tiles": {
+   "name": "tiles round the edge of a rectangle of tiles",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "border_tiles"
+   ],
+   "cite": "MOE P2 NA multiplication tables, p.33; P3 MG Area and Perimeter concepts, p.36",
+   "round": 2,
+   "note": "round 4: extended to Level 6 with larger numbers and a new story (restores the Level 6 quarter capacity after the round-4 retirements; a puzzle that uses it is checked when it is written). Round 5: extended to Level 1 (a rectangle of at most 5 by 6 tiles, counting the tiles along the edge) so that the Level 1 slack stays at the owner minimum of 10 after odd and even moved to Level 2; a puzzle that uses it is checked when it is written.",
+   "levels_before": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ]
+  },
+  "arrays.seat_number": {
+   "name": "seats numbered row by row: the seat number from the row and place, or the row from the seat number",
+   "levels": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "kinds": [
+    "seat_number"
+   ],
+   "cite": "MOE P1 NA Whole Numbers 1.7 ordinals and Multiplication 3.1-3.3, p.31; P2 tables of 2, 3, 4, 5 and 10, p.33",
+   "round": 2
+  },
+  "averages.mean": {
+   "name": "the mean of some marks",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "stats"
+   ],
+   "where": {
+    "ask": [
+     "mean"
+    ]
+   }
+  },
+  "averages.missing": {
+   "name": "a missing value for a target mean, or the value removed when the mean changes",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "mean_missing",
+    "mean_remove"
+   ],
+   "merged_from": [
+    "averages.missing_value",
+    "averages.remove_one"
+   ]
+  },
+  "backwards.undo_steps": {
+   "name": "undo the steps of a \"think of a number\" machine (one, two or three steps)",
+   "levels": [
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "mystery"
+   ],
+   "merged_from": [
+    "backwards.two_step",
+    "backwards.undo_double",
+    "backwards.three_step",
+    "missing_number.missing_addend"
+   ],
+   "note": "round 4: the number-machine frame (P2 tutor guide, SASMO drafts, P6 Algebra Machines) is removed from Levels 1, 2 and 6"
+  },
+  "bar_model.sum_difference": {
+   "name": "two amounts: total and difference known",
+   "levels": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "kinds": [
+    "sum_diff"
+   ]
+  },
+  "bar_model.three_amounts": {
+   "name": "three amounts that differ by known extras, total known: find the smallest or largest",
+   "levels": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "bar_three"
+   ],
+   "cite": "L3 lesson 4 (Model Makers: bar models); MOE P1-P3 NA Addition and Subtraction, pp.31-35; Problem solving: draw a model, p.13",
+   "round": 2,
+   "note": "round 4: extended to Level 6 with larger numbers and a new story (restores the Level 6 quarter capacity after the round-4 retirements; a puzzle that uses it is checked when it is written)."
+  },
+  "bar_model.times_as_many": {
+   "name": "one amount is a number of times the other: total or difference known",
+   "levels": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "times_as_many"
+   ],
+   "merged_from": [
+    "bar_model.times_as_many",
+    "bar_model.times_difference"
+   ]
+  },
+  "bonds.pairs_to_total": {
+   "name": "count the pairs of numbers that make a total (from all whole numbers, or from a given list)",
+   "levels": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "kinds": [
+    "bond_pairs",
+    "pairs_with_sum"
+   ],
+   "merged_from": [
+    "bonds.pairs_to_total",
+    "counting_pairs.pairs_with_sum"
+   ]
+  },
+  "bonds.part_whole": {
+   "name": "whole minus several given parts",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "kinds": [
+    "part_whole"
+   ]
+  },
+  "bonds.three_cards_total": {
+   "name": "three cards (from a list) that make a total: find the biggest, middle or smallest card",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "kinds": [
+    "triple_sum"
+   ],
+   "cite": "MOE P1 NA Addition and Subtraction 2.4 adding more than two 1-digit numbers and 2.5 within 100, p.31; P2 add and subtract to 3 digits, p.33",
+   "round": 2
+  },
+  "calendar.date_in_month": {
+   "name": "the date after some days, going into the next month (days in a month)",
+   "levels": [
+    2,
+    3,
+    4
+   ],
+   "kinds": [
+    "date_after"
+   ],
+   "cite": "MOE P1 MG Time (days, weeks), p.32; P2 Time, p.34",
+   "round": 2
+  },
+  "calendar.nth_weekday_date": {
+   "name": "date of the nth given weekday of a month",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "calendar_nth"
+   ],
+   "cite": "MOE P1 MG Time (days, weeks), p.32 (Level 1); P2 Time, p.34",
+   "note": "round 4: extended to Level 6 with larger numbers and a new story (restores the Level 6 quarter capacity after the round-4 retirements; a puzzle that uses it is checked when it is written)."
+  },
+  "calendar.weekday_after": {
+   "name": "which day of the week after some days",
+   "levels": [],
+   "kinds": [
+    "weekday"
+   ],
+   "retired": "round 3: \"which day of the week N days later\" is in our books at Levels 1, 3, 4, 5 and 6 (Skill Additions sheets, term l1, holiday P3 week 5, extension l6_u08)",
+   "levels_before": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ]
+  },
+  "clock_reading.am_pm": {
+   "name": "which time is latest or earliest with am and pm, or how many hours between an am time and a pm time",
+   "levels": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "kinds": [
+    "am_pm",
+    "clock_span"
+   ],
+   "cite": "MOE P1 MG Time 2.2 use of am and pm, p.32; P2 hours and minutes, p.34",
+   "round": 2,
+   "note": "round 6: clock_span added (the stall or shuttle is open for a number of minutes, with or without a break): hours-only questions were P1 to P2 content at Levels 3 and 4 (AUDIT_ROUND6 section 5)."
+  },
+  "clock_reading.hours_on": {
+   "name": "count on whole hours round a clock face",
+   "levels": [
+    1,
+    2
+   ],
+   "kinds": [
+    "clock_end_hour"
+   ],
+   "merged_from": [
+    "time.clock_hours_on"
+   ]
+  },
+  "clock_reading.minute_hand": {
+   "name": "where the minute hand points (or what the clock shows) after some minutes",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "kinds": [
+    "clock_hand"
+   ],
+   "cite": "MOE P1 MG Time 2.1 telling time to 5 minutes, p.32",
+   "round": 2
+  },
+  "clock_reading.twenty_four_hour": {
+   "name": "the 24-hour clock: the time after some hours and minutes, written like 2225",
+   "levels": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "twenty_four"
+   ],
+   "cite": "MOE P3 MG Time 2.3 24-hour clock, p.36",
+   "round": 2,
+   "note": "round 4: extended to Level 6 with larger numbers and a new story (restores the Level 6 quarter capacity after the round-4 retirements; a puzzle that uses it is checked when it is written)."
+  },
+  "codes.binary": {
+   "name": "change between binary and ordinary numbers",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "binary"
+   ],
+   "where": {
+    "ask": [
+     "to_dec",
+     "to_bin"
+    ]
+   },
+   "merged_from": [
+    "codes.binary_to_decimal",
+    "codes.decimal_to_binary"
+   ]
+  },
+  "codes.caesar_shift": {
+   "name": "decode a letter-shift cipher",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "cipher"
+   ]
+  },
+  "coins.amounts_made": {
+   "name": "how many different totals can be made by picking some of the coins",
+   "levels": [],
+   "kinds": [
+    "coin_amounts"
+   ],
+   "cite": "MOE P1 NA Money 1.1 counting amounts of money, p.31; L1 lesson 6 (Coin Combos)",
+   "round": 2,
+   "levels_before": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "retired": "round 4: \"he picks some coins: how many different totals\" is extension l4 u10 S02 and docs/audit/gifted_p1.md"
+  },
+  "coins.cannot_pay": {
+   "name": "which amounts can be paid exactly with only certain coins",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "cannot_pay"
+   ],
+   "cite": "MOE P1 NA Money 1.1, p.31; P2 Money: compare and convert amounts, p.33; L1 lesson 6 (Coin Combos)",
+   "round": 2,
+   "note": "round 4: extended to Level 5 with larger numbers and a new story (restores the Level 5 quarter capacity after the round-4 retirements; a puzzle that uses it is checked when it is written)."
+  },
+  "coins.make_amount": {
+   "name": "make an amount from coins: how many different sets, or the fewest coins",
+   "levels": [],
+   "kinds": [
+    "coin_ways",
+    "fewest_coins"
+   ],
+   "merged_from": [
+    "coins.coin_ways",
+    "coins.fewest_coins"
+   ],
+   "retired": "round 3: the frame \"pay exactly N cents with 5-, 10- and 20-cent coins: how many different sets\" is in our own books (docs/audit mkgifted_p3.py and holiday P6 week 5); the fewest-coins version was retired earlier for the same reason",
+   "levels_before": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ]
+  },
+  "consecutive.consecutive_total": {
+   "name": "consecutive numbers with a known total: find the smallest",
+   "levels": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "consec"
+   ]
+  },
+  "counting_choices.combinations": {
+   "name": "one from each set: multiply the choices",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "combos"
+   ]
+  },
+  "counting_choices.digit_cards_arrangements": {
+   "name": "FIXED PUZZLE (Ages 7-9 page): how many different numbers (or letter arrangements) from items with a repeated item",
+   "levels": [],
+   "kinds": [
+    "count_arrangements",
+    "anagram"
+   ]
+  },
+  "counting_choices.orders": {
+   "name": "number of orders: everyone in a line, or some people chosen in order",
+   "levels": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "perm_count"
+   ],
+   "merged_from": [
+    "counting_choices.line_up",
+    "counting_choices.permutations_k"
+   ]
+  },
+  "counting_choices.restricted_codes": {
+   "name": "codes with different digits, a fixed first digit rule and parity",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "scan"
+   ],
+   "where": {
+    "pred": [
+     "distinct"
+    ]
+   }
+  },
+  "counting_choices.round_table": {
+   "name": "ways to seat people round a table (turning the table does not count)",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "round_table"
+   ],
+   "cite": "L1-L3 lesson 10 (counting choices); Ages 11-13 page list \"counting\"; Problem solving: make a list, p.13",
+   "round": 2
+  },
+  "counting_grid.rectangles_in_grid": {
+   "name": "all the rectangles in a grid (choose two lines each way)",
+   "levels": [],
+   "kinds": [
+    "grid_count"
+   ],
+   "where": {
+    "what": [
+     "rectangles"
+    ]
+   },
+   "levels_before": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "retired": "round 4: all the rectangles of a grid is the same frame as the squares in a grid (split/l7, split/p2l8, term l36, extension L3 workbook)"
+  },
+  "counting_grid.squares_in_grid": {
+   "name": "all the squares (big and small) in a square grid",
+   "levels": [],
+   "kinds": [
+    "grid_count"
+   ],
+   "where": {
+    "what": [
+     "squares"
+    ]
+   },
+   "levels_before": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "retired": "round 4: all the squares of a grid is in tutor/data/p1l7.notes.json (3 by 3 = 14), split/l7, split/p2l8 and the extension L3 workbook; AUDIT_ROUND4 High"
+  },
+  "counting_grid.triangles_in_fan": {
+   "name": "how many triangles of every size in a fan of thin triangles",
+   "levels": [],
+   "kinds": [
+    "fan_triangles"
+   ],
+   "cite": "MOE P1 MG 2D Shapes 1.3 identifying the 2D shapes that make up a given figure, p.32",
+   "round": 2,
+   "levels_before": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "retired": "round 4: triangles in a fan of lines from one corner is in the P1 Student Workbook (Go further C1: 3 triangles, 6, 10; how many with 4 lines), split/l7 and holiday P5; AUDIT_ROUND4 High"
+  },
+  "counting_line.position_from_back": {
+   "name": "place from the back when the place from the front and the total are known",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "kinds": [
+    "position_from_back"
+   ]
+  },
+  "counting_line.posts_loop": {
+   "name": "items spaced round a closed loop",
+   "levels": [],
+   "kinds": [
+    "fence"
+   ],
+   "where": {
+    "closed": [
+     true
+    ]
+   },
+   "retired": "round 3: posts and gaps on a path or round a pond is in the Skill Additions sheets (L2-POST1, L2-POST2, rebuild/skill_items_l1_3.py)",
+   "levels_before": [
+    1,
+    2,
+    3
+   ]
+  },
+  "counting_pairs.choose_k": {
+   "name": "choose a team: order does not matter",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "choose"
+   ]
+  },
+  "counting_pairs.handshakes": {
+   "name": "every pair once (handshakes, high fives, games)",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "pairs"
+   ],
+   "note": "round 3: not at Level 6 (holiday P6 week 5 uses \"every team plays every other\")"
+  },
+  "counting_range.count_numbers": {
+   "name": "count the days or numbers from one to another (both ends in, or strictly between)",
+   "levels": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "kinds": [
+    "count_between"
+   ],
+   "where": {
+    "inclusive": [
+     true,
+     false
+    ]
+   },
+   "merged_from": [
+    "counting_range.inclusive",
+    "counting_range.exclusive"
+   ]
+  },
+  "counting_range.days_in_common": {
+   "name": "two stretches of days overlap: how many days are in both",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "days_in_common"
+   ],
+   "cite": "MOE P1 NA Whole Numbers 1.4 comparing sets, p.31; P1 Time (days, weeks), p.32",
+   "round": 2,
+   "note": "round 4: extended to Level 5 with larger numbers and a new story (restores the Level 5 quarter capacity after the round-4 retirements; a puzzle that uses it is checked when it is written)."
+  },
+  "counting_routes.grid_routes": {
+   "name": "routes across a grid moving only right and down (also with one point blocked)",
+   "levels": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "lattice"
+   ],
+   "where": {
+    "blocked": [
+     [],
+     [
+      [
+       1,
+       1
+      ]
+     ],
+     [
+      [
+       2,
+       1
+      ]
+     ],
+     [
+      [
+       1,
+       2
+      ]
+     ]
+    ]
+   },
+   "merged_from": [
+    "counting_routes.grid_routes",
+    "counting_routes.routes_avoiding_point"
+   ]
+  },
+  "counting_ways.stairs_steps": {
+   "name": "ways to climb steps taking 1 or 2 (or 3) at a time",
+   "levels": [],
+   "kinds": [
+    "stairs"
+   ],
+   "levels_before": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "retired": "round 4: climbing 1 or 2 steps is in the P5 workbook (Ali climbs a staircase) and the L6 extension; one strip story ran at four levels"
+  },
+  "cubes.dice_faces": {
+   "name": "a die has opposite faces adding to 7: find the faces you cannot see",
+   "levels": [],
+   "kinds": [
+    "dice_opposite"
+   ],
+   "cite": "MOE P2 MG 3D shapes: cube, p.34; P2 NA addition, p.33",
+   "round": 2,
+   "levels_before": [
+    2,
+    3,
+    4
+   ],
+   "retired": "round 3: three dice in a tower with opposite faces adding to 7 is in levels/gap_items.py (the Level 2 gap items)"
+  },
+  "cubes.painted": {
+   "name": "painted cube cut into small cubes: count those with a given number of painted faces",
+   "levels": [],
+   "kinds": [
+    "painted_cube"
+   ],
+   "where": {
+    "faces": [
+     1,
+     0
+    ]
+   },
+   "merged_from": [
+    "cubes.one_face",
+    "cubes.unpainted_inside"
+   ],
+   "levels_before": [
+    4,
+    5,
+    6
+   ],
+   "retired": "round 4: a painted cube cut into small cubes is in split/p5l4, extension l5_u05 (L5U05-T01) and the L2 and L5 extension workbooks"
+  },
+  "decimals.add_subtract": {
+   "name": "add or subtract decimals",
+   "levels": [
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "decimals"
+   ],
+   "where": {
+    "op": [
+     "+",
+     "-"
+    ]
+   },
+   "merged_from": [
+    "decimals.add",
+    "decimals.subtract"
+   ],
+   "note": "round 4: extended to Level 6 with larger numbers and a new story (restores the Level 6 quarter capacity after the round-4 retirements; a puzzle that uses it is checked when it is written)."
+  },
+  "decimals.multiply_divide": {
+   "name": "multiply or divide a decimal by a whole number",
+   "levels": [
+    4,
+    5
+   ],
+   "kinds": [
+    "decimals"
+   ],
+   "where": {
+    "op": [
+     "*",
+     "/"
+    ]
+   },
+   "merged_from": [
+    "decimals.multiply_whole",
+    "decimals.divide_whole"
+   ]
+  },
+  "digit_cards.make_number": {
+   "name": "make the smallest or largest number (also odd or even) from digit cards",
+   "levels": [
+    1,
+    2
+   ],
+   "kinds": [
+    "digits_extreme"
+   ],
+   "where": {
+    "ask": [
+     "largest",
+     "smallest",
+     "smallest_even",
+     "smallest_odd",
+     "largest_even",
+     "largest_odd"
+    ]
+   },
+   "merged_from": [
+    "digit_cards.largest_two_digit",
+    "digit_cards.smallest_number",
+    "digit_cards.smallest_even",
+    "digit_cards.smallest_odd"
+   ]
+  },
+  "digit_cards.max_sum": {
+   "name": "biggest sum when all cards make two numbers",
+   "levels": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "cards_sum"
+   ]
+  },
+  "digit_puzzles.count_by_digit_rule": {
+   "name": "count the numbers in a range that obey a rule about their digits",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "scan"
+   ],
+   "where": {
+    "pred": [
+     "contains",
+     "ends_in",
+     "same_digits",
+     "digit_less",
+     "digit_product",
+     "increasing",
+     "digit_sum"
+    ]
+   },
+   "merged_from": [
+    "digit_puzzles.contains_digit_count",
+    "digit_puzzles.last_digit_count",
+    "digit_puzzles.same_digit_count",
+    "digit_puzzles.digit_compare_count",
+    "digit_puzzles.digit_product_count",
+    "digit_puzzles.climbing_digits"
+   ]
+  },
+  "digit_puzzles.digit_clues": {
+   "name": "a secret number from clues about its digits",
+   "levels": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "kinds": [
+    "scan"
+   ],
+   "where": {
+    "pred": [
+     "digit_eq",
+     "digit_plus",
+     "digit_times",
+     "digit_sum"
+    ],
+    "ask": [
+     "only"
+    ]
+   },
+   "cite": "MOE P1 NA Whole Numbers 1.2 tens and ones, p.31 (Level 1); P2 numbers to 1000, p.33"
+  },
+  "digit_puzzles.palindromes": {
+   "name": "how many palindromes in a range",
+   "levels": [],
+   "kinds": [
+    "scan"
+   ],
+   "where": {
+    "pred": [
+     "palindrome"
+    ]
+   },
+   "levels_before": [
+    3,
+    4,
+    5
+   ],
+   "retired": "round 4: palindromes in a range are in the P4 and P5 Question Banks (\"5-digit palindromes between 40 000 and 50 000\")"
+  },
+  "digit_puzzles.smallest_with_digit_sum": {
+   "name": "smallest number whose digits add to a total",
+   "levels": [
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "scan"
+   ],
+   "where": {
+    "pred": [
+     "digit_sum"
+    ],
+    "ask": [
+     "min"
+    ]
+   }
+  },
+  "digit_puzzles.sum_of_all_digits": {
+   "name": "the sum of all the digits written when counting from one number to another",
+   "levels": [],
+   "kinds": [
+    "digit_sum_total"
+   ],
+   "cite": "MOE P3 NA Whole Numbers (numbers to 10 000, place value), p.35; Problem solving: look for a pattern, p.13",
+   "round": 2,
+   "retired": "same structure as extension l5_u01 (add all the digits written from 1 to 999); replaced by new structures"
+  },
+  "division.leftover": {
+   "name": "what is left over after sharing equally",
+   "levels": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "share"
+   ],
+   "where": {
+    "ask": [
+     "left"
+    ]
+   }
+  },
+  "division.share": {
+   "name": "share equally, pack into boxes or make groups (how many each, boxes or groups)",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "share"
+   ],
+   "where": {
+    "ask": [
+     "each",
+     "boxes",
+     "groups"
+    ]
+   },
+   "merged_from": [
+    "division.equal_share",
+    "division.boxes_needed",
+    "division.groups_count"
+   ]
+  },
+  "durations.elapsed": {
+   "name": "time between two clock times (also across midnight)",
+   "levels": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "elapsed",
+    "elapsed_overnight"
+   ],
+   "merged_from": [
+    "time.elapsed_minutes",
+    "time.across_midnight"
+   ]
+  },
+  "durations.hours_to_minutes": {
+   "name": "change hours and minutes to minutes",
+   "levels": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "kinds": [
+    "time_convert"
+   ],
+   "merged_from": [
+    "time.hours_to_minutes"
+   ],
+   "note": "round 4: extended to Level 1 (1 hour and a few minutes, or half hours; MOE P1 MG Time 2.4 duration of one hour and half hour, p.31; P2 hours and minutes, p.34)"
+  },
+  "durations.minutes_seconds": {
+   "name": "songs or races written in minutes and seconds: the total in seconds",
+   "levels": [
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "minutes_seconds"
+   ],
+   "cite": "MOE P3 MG Time: seconds, p.36",
+   "round": 2
+  },
+  "durations.timetable_wait": {
+   "name": "a bus or train leaves at regular times: how long is the wait for the next one",
+   "levels": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "timetable_wait"
+   ],
+   "cite": "MOE P2 MG Time: hours and minutes, convert to minutes, p.34; P3 Time 2.3 start, finish or duration, p.36",
+   "round": 2
+  },
+  "factors.count_factors": {
+   "name": "how many factors a number has (using its prime factors)",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "factor_count"
+   ]
+  },
+  "factors.divisibility_digit": {
+   "name": "which digits make a number with a hidden digit a multiple of a given number",
+   "levels": [
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "divisible_digit"
+   ],
+   "cite": "MOE P4 NA Whole Numbers 2.4 test whether a number is a multiple of a 1-digit number, p.37",
+   "round": 2
+  },
+  "factors.greatest_common_factor": {
+   "name": "the biggest number that divides two numbers exactly",
+   "levels": [
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "gcd_bags"
+   ]
+  },
+  "factors.rectangular_arrays": {
+   "name": "ways to arrange a number of tiles in equal rows (factor pairs)",
+   "levels": [],
+   "kinds": [
+    "factor_count"
+   ],
+   "cite": "MOE P2 tables of 2, 3, 4, 5 and 10, p.33 (Level 2); P4 factors and multiples, p.37",
+   "levels_before": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "retired": "round 5: chairs or tiles put in equal rows (how many ways) are in the P2 holiday lesson 3 (Mr Tan puts 20 chairs in equal rows), the L3 Extension Workbook (Mei puts 30 tiles in equal rows) and split/p4l1; AUDIT_ROUND5 Medium"
+  },
+  "factors.smallest_with_n_factors": {
+   "name": "smallest number with exactly n factors",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "scan"
+   ],
+   "where": {
+    "pred": [
+     "factor_count"
+    ]
+   }
+  },
+  "figure_rule.nth_figure": {
+   "name": "number of tiles in the nth figure from the first three figures",
+   "levels": [],
+   "kinds": [
+    "nth_term"
+   ],
+   "levels_before": [
+    4
+   ],
+   "note": "round 3: Levels 5 and 6 removed: \"Figure 1 has 5 tiles and figure 2 has 9 tiles ...\" is the plus-sign tile pattern of extension l5_u09; kept at Level 4",
+   "retired": "round 5: \"Figure 1 uses 5 sticks, Figure 2 uses 8, Figure 3 uses 11\" is EX-PAT-2 of docs/books/p6_non_routine_catalogue.md and the plus-sign pattern of extension l5_u09; AUDIT_ROUND5 Medium"
+  },
+  "fractions.arithmetic": {
+   "name": "add, subtract or multiply fractions and mixed numbers",
+   "levels": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "frac_arith"
+   ],
+   "where": {
+    "op": [
+     "+",
+     "-",
+     "*"
+    ]
+   },
+   "merged_from": [
+    "fractions.add",
+    "fractions.subtract",
+    "fractions.multiply"
+   ]
+  },
+  "fractions.compare_order": {
+   "name": "order three fractions with different denominators: find the middle one",
+   "levels": [
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "fraction_order"
+   ],
+   "cite": "MOE P3 NA Fractions: compare and order unlike fractions, denominators up to 12, p.35",
+   "round": 2
+  },
+  "fractions.divide": {
+   "name": "divide a fraction by a fraction (how many pieces)",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "frac_arith"
+   ],
+   "where": {
+    "op": [
+     "/"
+    ]
+   }
+  },
+  "fractions.equivalent_missing": {
+   "name": "equivalent fractions: find the missing numerator",
+   "levels": [
+    3,
+    4
+   ],
+   "kinds": [
+    "equiv_fraction"
+   ]
+  },
+  "fractions.fraction_of_remainder": {
+   "name": "FIXED PUZZLE (Ages 10-12 page): a fraction, then a fraction of what is left",
+   "levels": [],
+   "kinds": [
+    "fraction_seq"
+   ]
+  },
+  "fractions.improper_mixed": {
+   "name": "change a mixed number to an improper fraction (how many pieces)",
+   "levels": [
+    4,
+    5
+   ],
+   "kinds": [
+    "improper"
+   ],
+   "cite": "MOE P4 NA Fractions 1.1 mixed numbers and improper fractions, p.37",
+   "round": 2
+  },
+  "fractions.of_set": {
+   "name": "a fraction of a set, or the difference between two fractions of the same amount",
+   "levels": [
+    4,
+    5
+   ],
+   "kinds": [
+    "fraction_of",
+    "fraction_diff"
+   ],
+   "merged_from": [
+    "fractions.of_set",
+    "fractions.compare_unit"
+   ]
+  },
+  "fractions.parts_left": {
+   "name": "a whole cut into equal parts: what fraction is left after some are used",
+   "levels": [
+    2,
+    3
+   ],
+   "kinds": [
+    "fraction_parts"
+   ],
+   "cite": "MOE P2 NA Fractions 1.1 part of a whole, 1.2 notation, 2.1 add and subtract like fractions within one whole, p.33",
+   "round": 2
+  },
+  "fractions.whole_from_part": {
+   "name": "the amount left is given: find the whole",
+   "levels": [
+    4,
+    5
+   ],
+   "kinds": [
+    "fraction_whole"
+   ]
+  },
+  "function_machine.find_the_rule": {
+   "name": "a number machine: work out its rule from examples, then use it",
+   "levels": [],
+   "kinds": [
+    "function_machine"
+   ],
+   "cite": "MOE P1 NA Whole Numbers 1.6 patterns in number sequences, p.31; Problem solving: look for a pattern, p.13; P4 number patterns, p.37",
+   "round": 2,
+   "retired": "round 3: IN and OUT machine with a hidden rule is in the P2 tutor guide, the P6 Algebra Machines lesson and the SASMO drafts",
+   "levels_before": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ]
+  },
+  "graphs.line_graph_biggest_change": {
+   "name": "biggest rise (or fall) between neighbouring readings of a line graph",
+   "levels": [
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "series_gap"
+   ]
+  },
+  "graphs.most_least_gap": {
+   "name": "difference between the most and the least in a list",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "stats"
+   ],
+   "where": {
+    "ask": [
+     "range"
+    ]
+   },
+   "cite": "MOE P2 NA Money: compare two or three amounts, p.33 (Level 2); P3 ST bar graphs, p.36",
+   "note": "round 4: extended to Level 1 (how many more: MOE P1 NA addition and subtraction within 100, p.31, with a list of three or four numbers below 100)"
+  },
+  "graphs.pictograph_scale": {
+   "name": "picture graph where each symbol stands for more than one: find the difference",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "kinds": [
+    "scaled_diff"
+   ]
+  },
+  "graphs.pie_sector": {
+   "name": "a pie chart sector (an angle) and the total: how many in that sector",
+   "levels": [
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "pie_sector"
+   ],
+   "cite": "MOE P4 ST read and interpret tables, line graphs and pie charts, p.40",
+   "round": 2
+  },
+  "graphs.table_total": {
+   "name": "add the values in a small table",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "stats"
+   ],
+   "where": {
+    "ask": [
+     "total"
+    ]
+   }
+  },
+  "growing_pattern.doubling": {
+   "name": "a quantity that doubles each step",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "doubling"
+   ]
+  },
+  "growing_pattern.growing_gaps": {
+   "name": "a pattern whose jumps grow by 1 each time",
+   "levels": [],
+   "kinds": [
+    "growing_gaps"
+   ],
+   "retired": "round 3: same frame as holiday P1 lesson 1 (the gaps are 1, 2, 3, 4 ...)",
+   "levels_before": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ]
+  },
+  "growing_pattern.recurrence": {
+   "name": "each term is the sum of the two before it",
+   "levels": [
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "fib_like"
+   ]
+  },
+  "growing_pattern.stick_grid": {
+   "name": "sticks needed for a grid of small squares",
+   "levels": [
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "matchsticks"
+   ],
+   "where": {
+    "shape": [
+     "grid"
+    ]
+   }
+  },
+  "growing_pattern.stick_row": {
+   "name": "sticks needed for a row of n joined squares or triangles (add the same number each time)",
+   "levels": [],
+   "kinds": [
+    "matchsticks"
+   ],
+   "where": {
+    "shape": [
+     "sq",
+     "tri"
+    ]
+   },
+   "retired": "same structure as catalogue EX-PAT-1; replaced by new structures"
+  },
+  "guess_check.heads_and_legs": {
+   "name": "animals with two kinds of legs: how many of each from the heads and legs",
+   "levels": [],
+   "kinds": [
+    "heads_legs"
+   ],
+   "cite": "MOE Problem solving: guess and check, p.13; P3 NA multiplication, p.35",
+   "round": 2,
+   "levels_before": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "retired": "round 4: heads and legs (two kinds of creature or vehicle, a count and a total of legs or wheels) is in the P2 Question Bank (cars and motorcycles), extension L5 unit 9 (stools and chairs), p5/content/l9.js (bicycles and tricycles) and docs/books word problems A4.1; the verifier found it again in every new story"
+  },
+  "guess_check.sum_product": {
+   "name": "two numbers with a known sum and a known product",
+   "levels": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "sum_product"
+   ],
+   "cite": "MOE P2 tables of 2, 3, 4, 5 and 10, p.33; P3 tables of 6 to 9, p.35; Problem solving: guess and check, p.13",
+   "round": 2,
+   "note": "round 4: extended to Level 6 with larger numbers and a new story (restores the Level 6 quarter capacity after the round-4 retirements; a puzzle that uses it is checked when it is written)."
+  },
+  "invariant.one_less": {
+   "name": "knock-out matches or snaps of a chocolate bar: always one fewer than the number of players or pieces",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "knockout",
+    "snaps"
+   ],
+   "cite": "MOE Problem solving: look for a pattern, p.13; P1 NA Addition and Subtraction 2.5, p.31; P2 multiplication, p.33",
+   "round": 2,
+   "note": "round 4: extended to Level 5 with larger numbers and a new story (restores the Level 5 quarter capacity after the round-4 retirements; a puzzle that uses it is checked when it is written)."
+  },
+  "logic_grid.latin_square": {
+   "name": "fill a small grid so that each row and column has each number once",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "latin_square"
+   ],
+   "cite": "MOE Problem solving: make a list or table, p.13; P1 NA Whole Numbers 1.1, p.31",
+   "round": 2
+  },
+  "logic_match.match_people_things": {
+   "name": "match people to things from \"does not have\" clues",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "match_assign"
+   ]
+  },
+  "logic_order.rank": {
+   "name": "put three, four or five people in order from clues: find the one in a given place",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "order_logic"
+   ],
+   "merged_from": [
+    "logic_order.order_three",
+    "logic_order.order_four",
+    "logic_order.order_five"
+   ]
+  },
+  "logic_truth.truth_tellers": {
+   "name": "exactly some of the statements are true: who did or has it",
+   "levels": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "liar"
+   ]
+  },
+  "measurement.compound_units": {
+   "name": "add, subtract or repeat lengths, masses, volumes or times written with two units",
+   "levels": [
+    2,
+    3,
+    4
+   ],
+   "kinds": [
+    "compound_units"
+   ],
+   "cite": "MOE P2 MG Measurement: m, kg and g, litres, hours and minutes, p.34; P3 compound units and conversions, p.36",
+   "round": 2
+  },
+  "measurement.ruler_offset": {
+   "name": "length of an object that does not start at 0 on a ruler",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "kinds": [
+    "span"
+   ]
+  },
+  "measurement.unit_convert": {
+   "name": "change between metres and centimetres, or kilograms and grams (also with decimals)",
+   "levels": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "unit_convert",
+    "decimal_convert"
+   ],
+   "merged_from": [
+    "measurement.unit_convert",
+    "measurement.decimal_convert"
+   ]
+  },
+  "missing_number.cryptarithm_add_times": {
+   "name": "letters stand for digits in an addition or a multiplication",
+   "levels": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "cryptarithm"
+   ],
+   "where": {
+    "pattern": [
+     "AB+CB=BBC",
+     "AB*3=CCB"
+    ]
+   },
+   "merged_from": [
+    "missing_number.cryptarithm_add",
+    "missing_number.cryptarithm_times"
+   ]
+  },
+  "missing_number.cryptarithm_reverse": {
+   "name": "letters for digits where a number is reversed",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "cryptarithm"
+   ],
+   "where": {
+    "pattern": [
+     "ABCD*4=DCBA"
+    ]
+   }
+  },
+  "missing_number.equal_sides": {
+   "name": "both sides of an equals sign must be the same: find the missing number",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "kinds": [
+    "equal_sides"
+   ]
+  },
+  "missing_number.missing_digit": {
+   "name": "a hidden digit in an addition",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "kinds": [
+    "missing_digit"
+   ]
+  },
+  "modular.clock_hours": {
+   "name": "what the clock shows after a large number of hours",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "clock_end_hour"
+   ]
+  },
+  "modular.last_digit_power": {
+   "name": "the last digit of a power (a repeating cycle)",
+   "levels": [],
+   "kinds": [
+    "last_digit"
+   ],
+   "retired": "round 3: \"multiply 7 by itself 45 times: last digit\" is in docs/sasmo/g6_original_problems_draft.md 2.2",
+   "levels_before": [
+    6
+   ]
+  },
+  "money.offers": {
+   "name": "two shop offers (each, a pack, or some free): the cost or the saving",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "best_deal"
+   ],
+   "cite": "MOE P1 NA Money 1.1, p.31; P2 compare two or three amounts of money, p.33; P3 add and subtract money, p.35",
+   "round": 2
+  },
+  "money.profit": {
+   "name": "profit as a percentage of the cost price",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "profit_pct"
+   ],
+   "cite": "MOE P5 NA Percentage 1.4 (a part of a whole as a percentage), p.41",
+   "round": 2
+  },
+  "money.shopping": {
+   "name": "total cost of several items, or the change from a payment",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "shopping"
+   ],
+   "where": {
+    "ask": [
+     "change",
+     "total"
+    ]
+   },
+   "merged_from": [
+    "money.change",
+    "money.total_cost"
+   ]
+  },
+  "money.unitary_price": {
+   "name": "price of one, then price of many (unitary method)",
+   "levels": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "unit_price"
+   ]
+  },
+  "moves.climb_and_slip": {
+   "name": "climbs up by day and slips back by night: on which day does it reach the top",
+   "levels": [],
+   "kinds": [
+    "climb_slip"
+   ],
+   "retired": "same structure and story as our own hp question bank G5 and extension l1_u05; replaced by new structures"
+  },
+  "moves.ups_and_downs": {
+   "name": "where you end, or the highest or lowest point reached, after ups and downs",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "moves"
+   ],
+   "where": {
+    "ask": [
+     "final",
+     "max",
+     "min"
+    ]
+   },
+   "merged_from": [
+    "moves.lift_final",
+    "moves.max_reach"
+   ]
+  },
+  "multiples.common_multiple": {
+   "name": "FIXED PUZZLE (Ages 9-11 page): when two repeating events next coincide (lowest common multiple)",
+   "levels": [],
+   "kinds": [
+    "lcm_meet"
+   ]
+  },
+  "multiplication.groups": {
+   "name": "equal groups (plus some more), or groups of groups",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "groups_plus",
+    "equiv_chain"
+   ],
+   "merged_from": [
+    "multiplication.groups_plus",
+    "multiplication.groups_of_groups"
+   ]
+  },
+  "multiplication.two_kinds_total": {
+   "name": "total value or number from two kinds of groups (two kinds of coins, shapes, legs, wheels)",
+   "levels": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "kinds": [
+    "dot"
+   ],
+   "merged_from": [
+    "coins.coin_total",
+    "shapes.corners_total",
+    "multiplication.two_groups_total"
+   ]
+  },
+  "negative_numbers.distance_between": {
+   "name": "distance between a point above and a point below zero",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "neg_diff"
+   ]
+  },
+  "negative_numbers.sum_of_integers": {
+   "name": "sum of the whole numbers from a negative to a positive number",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "int_sum"
+   ]
+  },
+  "negative_numbers.temperature_change": {
+   "name": "final temperature after rises and falls through zero",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "moves"
+   ],
+   "where": {
+    "ask": [
+     "final"
+    ],
+    "start": [
+     -12,
+     -11,
+     -10,
+     -9,
+     -8,
+     -7,
+     -6,
+     -5,
+     -4,
+     -3,
+     -2,
+     -1
+    ]
+   }
+  },
+  "networks.shortest_route": {
+   "name": "the shortest way along roads between places",
+   "levels": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "network_shortest"
+   ],
+   "cite": "MOE P2 MG length in m and cm, compare and order, p.34; P3 km and m, p.36; Problem solving: make a list, p.13",
+   "round": 2
+  },
+  "number_grid.grid_totals": {
+   "name": "a table with row totals and column totals: find a missing entry",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "kinds": [
+    "grid_totals"
+   ],
+   "cite": "MOE P1 NA Addition and Subtraction 2.1-2.5, p.31; P2 add and subtract, p.33; Problem solving: draw a table, p.13",
+   "round": 2
+  },
+  "number_grid.hundred_chart": {
+   "name": "moves on a 1 to 100 chart (down a row is +10): which number do you reach",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "kinds": [
+    "hundred_chart"
+   ],
+   "cite": "MOE P1 NA Whole Numbers 1.1, 1.5 and 1.6 (numbers to 100, order, patterns), p.31",
+   "round": 2
+  },
+  "number_grid.magic_square": {
+   "name": "complete a 3 by 3 magic square",
+   "levels": [
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "magic"
+   ]
+  },
+  "number_grid.number_pyramid": {
+   "name": "a number pyramid where each brick is the sum of the two below",
+   "levels": [],
+   "kinds": [
+    "pyramid"
+   ],
+   "retired": "round 3: same frame as extension l3_u02 (pyramids with a hidden number)",
+   "levels_before": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ]
+  },
+  "number_line.halfway": {
+   "name": "the number exactly halfway between two numbers",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "halfway",
+    "halfway_end"
+   ],
+   "cite": "MOE P1 NA Whole Numbers 1.5 comparing and ordering numbers and 1.6 patterns, p.31; P2 numbers to 1000, p.33",
+   "round": 2,
+   "note": "round 4: extended to Level 5 with larger numbers and a new story (restores the Level 5 quarter capacity after the round-4 retirements; a puzzle that uses it is checked when it is written)."
+  },
+  "number_names.letters_in_words": {
+   "name": "how many letters are needed to write the numbers from one to another in words",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "kinds": [
+    "number_words"
+   ],
+   "cite": "MOE P1 NA Whole Numbers 1.3 reading and writing numbers in numerals and in words, p.31",
+   "round": 2
+  },
+  "number_properties.multiples_count": {
+   "name": "how many multiples of a number in a range",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "scan"
+   ],
+   "where": {
+    "pred": [
+     "multiple"
+    ]
+   }
+  },
+  "number_properties.odd_even_rule": {
+   "name": "will a sum be odd or even",
+   "levels": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "parity"
+   ],
+   "levels_before": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "note": "round 5 (C4): odd and even numbers are Primary 2 (MOE NA Whole Numbers 1.6); removed from Level 1 (L1-fourodds replaced)"
+  },
+  "order_ops.evaluate": {
+   "name": "work out an expression with brackets and mixed operations in the right order",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "expr_form"
+   ],
+   "where": {
+    "form": [
+     "D",
+     "A",
+     "F",
+     "G",
+     "B",
+     "C"
+    ]
+   },
+   "merged_from": [
+    "order_ops.bracket_times_bracket",
+    "order_ops.brackets_first",
+    "order_ops.divide_then_multiply",
+    "order_ops.multiply_first",
+    "order_ops.two_products"
+   ],
+   "note": "round 4: order of operations and brackets are Primary 5 (MOE NA Whole Numbers 2.2, 2.3, p.41); removed from Level 4"
+  },
+  "paper_folding.fold_and_cut": {
+   "name": "a strip folded in half some times and cut once: how many pieces",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "fold_cut"
+   ],
+   "cite": "MOE Problem solving: act it out, look for a pattern, p.13; P2 multiplication tables, p.33",
+   "round": 2,
+   "note": "round 4: extended to Level 1 (one or two folds only: MOE P1-P2 shapes and Problem solving: act it out, p.13)"
+  },
+  "percentage.add_or_take_off": {
+   "name": "add GST to a price, or take a percentage discount off",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "pct_add",
+    "pct"
+   ],
+   "merged_from": [
+    "percentage.gst",
+    "percentage.discount"
+   ]
+  },
+  "percentage.find_whole_or_change": {
+   "name": "find the whole from a part and its percentage, or a percentage rise followed by a fall",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "pct"
+   ],
+   "where": {
+    "kind": [
+     "whole",
+     "then"
+    ]
+   },
+   "merged_from": [
+    "percentage.find_whole",
+    "percentage.successive_change"
+   ]
+  },
+  "percentage.of_quantity": {
+   "name": "a percentage of a quantity",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "pct"
+   ],
+   "where": {
+    "kind": [
+     "of"
+    ]
+   }
+  },
+  "percentage.simple_interest": {
+   "name": "simple interest on savings for some years",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "simple_interest"
+   ],
+   "cite": "MOE P5 NA Percentage 1.4 finding discount, GST and annual interest, p.41",
+   "round": 2
+  },
+  "percentage.what_percent": {
+   "name": "express one number as a percentage of another",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "pct_express"
+   ]
+  },
+  "perimeter_area.area_rectangle": {
+   "name": "area of a rectangle or square in square units (also how many tiles cover it)",
+   "levels": [
+    3,
+    4
+   ],
+   "kinds": [
+    "rect"
+   ],
+   "where": {
+    "ask": [
+     "area"
+    ]
+   },
+   "cite": "MOE P3 MG Area and Perimeter: area in square units, area of rectangle and square, p.36",
+   "round": 2
+  },
+  "perimeter_area.find_unknown": {
+   "name": "a missing side from the area or perimeter, or the area or perimeter of a rectangle with a corner cut out",
+   "levels": [
+    3,
+    4
+   ],
+   "kinds": [
+    "rect",
+    "cells"
+   ],
+   "where": {
+    "ask": [
+     "width_from_area",
+     "width_from_perimeter",
+     "square_perimeter_from_area",
+     "square_area_from_perimeter",
+     "area",
+     "perimeter"
+    ]
+   },
+   "merged_from": [
+    "perimeter_area.missing_side_from_area",
+    "perimeter_area.missing_side_from_perimeter",
+    "perimeter_area.square_from_area",
+    "perimeter_area.square_from_perimeter",
+    "perimeter_area.area_cutout",
+    "perimeter_area.perimeter_cutout"
+   ],
+   "note": "round 4: removed from Level 5 (a Primary 3 and 4 skill, AUDIT_ROUND4 section 3)"
+  },
+  "perimeter_area.perimeter_basic": {
+   "name": "distance round a rectangle, a shape with equal sides, or a square fence with a gap",
+   "levels": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "rect",
+    "perimeter_regular",
+    "groups_plus"
+   ],
+   "merged_from": [
+    "perimeter_area.perimeter_rectangle",
+    "perimeter_area.perimeter_regular",
+    "perimeter_area.perimeter_with_gap"
+   ]
+  },
+  "place_value.build_number": {
+   "name": "build a number from bundles and loose ones, or compare the values of two digits of a number",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "regroup",
+    "digit_value_diff"
+   ],
+   "merged_from": [
+    "place_value.regroup",
+    "place_value.digit_value_gap"
+   ]
+  },
+  "place_value.digits_written": {
+   "name": "how many digits are written for the numbers (or page numbers) from one number to another",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "page_digits"
+   ],
+   "cite": "MOE P1 NA Whole Numbers 1.2 tens and ones, 1.3 numerals, p.31; P2 numbers to 1000, p.33",
+   "round": 2
+  },
+  "polygons.diagonals": {
+   "name": "number of diagonals of a polygon",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "diag"
+   ]
+  },
+  "polygons.interior_angle": {
+   "name": "each angle of a regular polygon",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "angle"
+   ],
+   "where": {
+    "kind": [
+     "regular"
+    ]
+   }
+  },
+  "polygons.turtle_repeat": {
+   "name": "a turtle that repeats a move and a turn until it is home",
+   "levels": [],
+   "kinds": [
+    "turtle"
+   ],
+   "retired": "round 3: \"walk a square: forward, turn on the spot, until back at the start\" is in p6/content/l7.js",
+   "levels_before": [
+    6
+   ]
+  },
+  "polyominoes.count_shapes": {
+   "name": "how many different shapes can be made by joining squares edge to edge",
+   "levels": [],
+   "kinds": [
+    "polyomino"
+   ],
+   "cite": "MOE P1 MG 2D Shapes 1.2 forming figures, p.32; P4 Geometry: rectangle and square, nets, p.39; Problem solving: make a list, p.13",
+   "round": 2,
+   "levels_before": [
+    3,
+    4,
+    5
+   ],
+   "retired": "round 4: \"4 squares joined edge to edge: 5 different shapes\" is stated in the P4 Question Bank, P4 workbook and split/l7 key; AUDIT_ROUND4 High"
+  },
+  "primes.count_primes": {
+   "name": "how many primes in a range",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "scan"
+   ],
+   "where": {
+    "pred": [
+     "prime"
+    ]
+   }
+  },
+  "primes.prime_factor_sum": {
+   "name": "sum of the different prime factors",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "prime_factor_sum"
+   ]
+  },
+  "primes.sum_of_two_primes": {
+   "name": "ways to write a number as a sum of two primes",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "prime_sum_pairs"
+   ]
+  },
+  "probability.at_least_heads": {
+   "name": "probability of at least some heads when tossing coins",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "prob"
+   ],
+   "where": {
+    "kind": [
+     "coins"
+    ]
+   }
+  },
+  "probability.two_dice_sum": {
+   "name": "probability of a given total with two dice",
+   "levels": [],
+   "kinds": [
+    "prob"
+   ],
+   "where": {
+    "kind": [
+     "dice"
+    ]
+   },
+   "levels_before": [
+    6
+   ],
+   "retired": "round 5: the probability of a total with two dice (total 8 = 5/36) is the exit slip of practice/holiday/p6/06; AUDIT_ROUND5 High"
+  },
+  "probability.without_replacement": {
+   "name": "probability of two in a row without replacement",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "prob"
+   ],
+   "where": {
+    "kind": [
+     "marbles"
+    ],
+    "draws": [
+     2
+    ]
+   }
+  },
+  "programs.nested_loop": {
+   "name": "trace a program with a loop inside a loop",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "nested"
+   ]
+  },
+  "programs.trace_loop": {
+   "name": "trace a program that repeats some operations or loops while a condition holds",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "prog",
+    "while_count"
+   ],
+   "merged_from": [
+    "programs.repeat_ops",
+    "programs.while_loop"
+   ]
+  },
+  "rate.average_speed": {
+   "name": "average speed for a round trip",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "avg_speed"
+   ]
+  },
+  "rate.fill_with_leak": {
+   "name": "a tap fills a tank while a leak empties it: net rate",
+   "levels": [],
+   "kinds": [
+    "fill"
+   ],
+   "retired": "round 3: tap and leak is in extension l5_u05",
+   "levels_before": [
+    5,
+    6
+   ]
+  },
+  "rate.meeting_time": {
+   "name": "two people walk towards each other: when do they meet",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "meet"
+   ]
+  },
+  "rate.speed_distance": {
+   "name": "speed, distance or time from the other two",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "speed",
+    "distance"
+   ],
+   "merged_from": [
+    "rate.speed",
+    "rate.distance_from_speed"
+   ],
+   "note": "round 4: Level 6 only (docs/moe says speed is not in the syllabus; AUDIT_ROUND4 Low)"
+  },
+  "rate.work_and_time": {
+   "name": "the same job with more or fewer workers: how many days",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "work_time"
+   ],
+   "cite": "MOE P5 NA Rate, p.41; P3 NA multiplication and division, p.35; Problem solving: unitary method",
+   "round": 2,
+   "note": "round 5 (C4): work and time (inverse proportion by finding the total work) is not an MOE rate outcome; kept as enrichment at Levels 5 and 6 with the hint that gives the method; Low"
+  },
+  "ratio.make_equal_by_adding": {
+   "name": "add to one part to make the two parts equal",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "ratio"
+   ],
+   "where": {
+    "kind": [
+     "add_equal"
+    ]
+   }
+  },
+  "ratio.share_or_whole": {
+   "name": "share an amount in a ratio, or find the whole from one part",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "ratio"
+   ],
+   "where": {
+    "kind": [
+     "share",
+     "whole"
+    ]
+   },
+   "merged_from": [
+    "ratio.share",
+    "ratio.whole_from_part"
+   ]
+  },
+  "remainders.two_conditions": {
+   "name": "FIXED PUZZLE (Ages 8-10 page): a number between two limits with two remainder conditions",
+   "levels": [],
+   "kinds": [
+    "remainder_pair"
+   ]
+  },
+  "repeating_pattern.cycle": {
+   "name": "a repeating pattern: the item at a place, or how many of one item",
+   "levels": [
+    1,
+    2,
+    4
+   ],
+   "kinds": [
+    "repeat_pattern"
+   ],
+   "where": {
+    "ask": [
+     "at",
+     "count"
+    ]
+   },
+   "merged_from": [
+    "repeating_pattern.cycle_at",
+    "repeating_pattern.cycle_count"
+   ],
+   "note": "round 4: removed from Level 3 (\"red, red, blue, green, the 30th\" is in the P2 Tutor Guide Workbook Think harder 2)"
+  },
+  "rounding.count_that_round": {
+   "name": "how many numbers round to a given number",
+   "levels": [
+    4,
+    5
+   ],
+   "kinds": [
+    "rounding_count"
+   ]
+  },
+  "rounding.round_to_place": {
+   "name": "round a number to the nearest 10, 100 or 1000",
+   "levels": [
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "rounding"
+   ]
+  },
+  "sequence.count_on": {
+   "name": "FIXED PUZZLE (home page and Ages 6-8 page): the nth number when counting on in equal steps (frog hops)",
+   "levels": [],
+   "kinds": [
+    "seq_term"
+   ]
+  },
+  "sequence.which_term": {
+   "name": "FIXED PUZZLE (Ages 11-13 page): is a number a term of an arithmetic sequence / which term is it",
+   "levels": [],
+   "kinds": [
+    "seq_pos",
+    "term_index"
+   ]
+  },
+  "series_sum.add_in_pairs": {
+   "name": "add a list of equally spaced numbers by pairing first and last",
+   "levels": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "sum_range"
+   ],
+   "merged_from": [
+    "series_sum.one_to_n",
+    "series_sum.arithmetic_series"
+   ]
+  },
+  "shapes.name_the_shape": {
+   "name": "name the shape (flat or solid) from clues about its sides, edges, faces or corners",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "kinds": [
+    "shape_riddle"
+   ],
+   "cite": "MOE P1 MG 2D Shapes 1.1 identify, name, describe and classify, p.32; P2 3D shapes cube, cuboid, cone, cylinder, sphere, p.34",
+   "round": 2
+  },
+  "shapes.solid_parts": {
+   "name": "faces, edges or vertices of solid shapes",
+   "levels": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "solid_parts"
+   ]
+  },
+  "sorting.odd_one_out": {
+   "name": "four of five numbers share a rule (the same times table): find the odd one out",
+   "levels": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "kinds": [
+    "odd_one_out"
+   ],
+   "cite": "MOE P1 NA Whole Numbers 1.6 number patterns and Multiplication 3.1, p.31; P2 tables of 2, 3, 4, 5 and 10, p.33",
+   "round": 2
+  },
+  "sorting.overlap_both": {
+   "name": "two overlapping groups: how many are in both",
+   "levels": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "venn_both"
+   ],
+   "cite": "MOE P2 NA Whole Numbers addition and subtraction word problems (p.33) and P3 NA Whole Numbers addition and subtraction up to 4 digits (p.35); Problem solving: draw a diagram, make a table (p.13). Two groups only; no formula; not at Level 1.",
+   "note": "round 4: removed from Level 1 (inclusion-exclusion at ages 6 to 8, AUDIT_ROUND4 section 3)"
+  },
+  "sorting.rule_count": {
+   "name": "count the numbers that obey two sorting rules at once",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "kinds": [
+    "filter_count"
+   ]
+  },
+  "spatial.circle_opposite": {
+   "name": "children numbered round a circle: who is opposite, or how many are between",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "circle_opposite"
+   ],
+   "cite": "MOE P1 NA Whole Numbers 1.6 patterns and 1.7 ordinals, p.31; Problem solving: draw a diagram, p.13",
+   "round": 2
+  },
+  "spatial.turns_facing": {
+   "name": "which way is someone facing after left and right turns",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "turns"
+   ]
+  },
+  "stacks.layers_of_cubes": {
+   "name": "cubes in a stack whose layers are 1 by 1, 2 by 2, 3 by 3 ...",
+   "levels": [],
+   "kinds": [
+    "square_stack"
+   ],
+   "cite": "MOE P2 NA multiplication tables, p.33; P3 MG area of a square, p.36; Problem solving: look for a pattern, p.13",
+   "round": 2,
+   "levels_before": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "retired": "round 4: layers of 1, 4, 9 ... cubes is in rebuild/skill_items_l1_3.py and the L2 Skill Additions sheet, and one story ran at three levels"
+  },
+  "strategy.take_away_game": {
+   "name": "a two-player take-away game: which first move always wins",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "take_away_game"
+   ],
+   "cite": "MOE Problem solving: look for a pattern, p.13; P2 tables of 2, 3, 4, 5, p.33",
+   "round": 2,
+   "note": "round 4: extended to Level 1 (take 1 to 4 from a pile of at most 30: MOE P1 NA addition and subtraction within 20/100 and counting in 5s, with Problem solving: look for a pattern, p.13)"
+  },
+  "strategy.worst_case": {
+   "name": "the fewest you must take to be sure of a match (the unlucky case)",
+   "levels": [],
+   "kinds": [
+    "worst_case"
+   ],
+   "cite": "MOE Problem solving: reasoning and making a list, p.13; P2-P3 addition and multiplication, pp.33-35",
+   "round": 2,
+   "levels_before": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "retired": "round 5: the colour-pigeonhole draw (\"how many must she pick to be sure of one of every colour / of 7 of one colour\") is in docs/sasmo/g2_original_problems_draft.md 5.3 (a jar of mint, lemon and cherry sweets) and the L6 Skill Additions tutor sheet (socks of the same colour); AUDIT_ROUND5 High/Medium"
+  },
+  "symbols.insert_signs": {
+   "name": "put + or - between numbers to reach a target: how many ways",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "insert_signs"
+   ],
+   "cite": "MOE P1 NA Addition and Subtraction 2.2 use of + - =, 2.7 mental calculation, p.31",
+   "round": 2
+  },
+  "symbols.symbol_equations": {
+   "name": "pictures stand for numbers: work out the value from several sums",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "symbols"
+   ],
+   "cite": "MOE P1 NA Addition and Subtraction 2.2 use of + - =, 2.3 inverse, p.31; Problem solving: guess and check, p.13; P6 Algebra 1.1 a letter for an unknown, p.43 (Level 6)",
+   "round": 2
+  },
+  "symmetry.lines_total": {
+   "name": "lines of symmetry of several shapes",
+   "levels": [
+    4,
+    5
+   ],
+   "kinds": [
+    "symmetry"
+   ]
+  },
+  "triangle_area.triangle": {
+   "name": "area of a triangle, its height from the area, or a rectangle with a triangle on top",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "tri_area",
+    "rect_tri_area"
+   ],
+   "merged_from": [
+    "triangle_area.triangle_area",
+    "triangle_area.triangle_height",
+    "triangle_area.rectangle_plus_triangle"
+   ]
+  },
+  "volume.capacity_in_litres": {
+   "name": "capacity of a tank in litres from its measurements",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "volume_litres"
+   ]
+  },
+  "volume.cuboid": {
+   "name": "volume of a cuboid by counting unit cubes",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "volume"
+   ]
+  },
+  "volume.water_depth": {
+   "name": "depth of water poured into a tank (litres and cm3)",
+   "levels": [],
+   "kinds": [
+    "water_rise"
+   ],
+   "levels_before": [
+    5,
+    6
+   ],
+   "retired": "round 5: pouring litres into a tank of given base and asking for the depth is the P5 holiday/split p5l5 tank frame (base 30 cm by 25 cm, 8 cm deep, 6 L) and p5/content/l5.js; AUDIT_ROUND5 High"
+  },
+  "word_problems.compare_amounts": {
+   "name": "compare two amounts: how many more, a chain of \"more than\" statements, or how many to give so both are equal",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "neg_diff",
+    "chain",
+    "equalise"
+   ],
+   "merged_from": [
+    "word_problems.compare",
+    "word_problems.chain_more_than",
+    "word_problems.equalise"
+   ],
+   "note": "round 4: extended to Level 6 with larger numbers and a new story (restores the Level 6 quarter capacity after the round-4 retirements; a puzzle that uses it is checked when it is written)."
+  },
+  "counting_line.cuts_and_pieces": {
+   "name": "equal gaps between repeated actions: n cuts, strikes or knocks take a time, so find the time for another number",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "intervals"
+   ],
+   "cite": "MOE Problem solving: draw a diagram, look for a pattern, p.13; P1 NA Addition and Subtraction 2.5 (one fewer than the marks), p.31; P2 tables of 2, 3, 4, 5 and 10, p.33",
+   "round": 3
+  },
+  "fractions.unit_compare": {
+   "name": "unit fractions of the same whole: who has the biggest or smallest share, or how many small pieces fit in a bigger one",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "kinds": [
+    "unit_compare"
+   ],
+   "cite": "MOE P2 NA Fractions 1.3 compare and order unit fractions, denominators up to 12, p.33; P1 NA Whole Numbers 1.4 comparing sets, p.31",
+   "round": 3
+  },
+  "calendar.weeks_and_days": {
+   "name": "change between days and weeks with days over",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "kinds": [
+    "weeks_days"
+   ],
+   "cite": "MOE P1 MG Time (days, weeks), p.32; P3 NA Multiplication and Division 3.3 division with remainder, p.35",
+   "round": 3
+  },
+  "sorting.fewest_swaps": {
+   "name": "fewest swaps of two neighbours to put a row in order",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "swaps"
+   ],
+   "cite": "MOE Problem solving: make a list or table, act it out, p.13; P1 NA Whole Numbers 1.5 comparing and ordering numbers, p.31",
+   "round": 3
+  },
+  "measurement.overlapping_chain": {
+   "name": "a chain of equal pieces that overlap: the whole length, or how many pieces",
+   "levels": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "kinds": [
+    "overlap_chain"
+   ],
+   "cite": "MOE P1 MG Length 1.1-1.3 measuring and comparing lengths in cm, p.32; P2 NA multiplication tables, p.33; Problem solving: draw a diagram, p.13",
+   "round": 3
+  },
+  "moves.ferry_trips": {
+   "name": "a boat that holds a few people and needs a rower: how many crossings for everyone",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "ferry_trips"
+   ],
+   "cite": "MOE Problem solving: act it out, draw a diagram, look for a pattern, p.13; P2 NA multiplication and division, p.33",
+   "round": 3,
+   "note": "round 4: extended to Level 6 with larger numbers and a new story (restores the Level 6 quarter capacity after the round-4 retirements; a puzzle that uses it is checked when it is written)."
+  },
+  "counting_pairs.dice_sum_ways": {
+   "name": "ways two dice can add up to a total (ordered, or without counting the swapped pair twice)",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "dice_ways"
+   ],
+   "cite": "MOE P1 NA Addition and Subtraction 2.4 adding more than two 1-digit numbers, p.31; Problem solving: make a list or table, p.13",
+   "round": 3,
+   "note": "round 4: extended to Level 6 with larger numbers and a new story (restores the Level 6 quarter capacity after the round-4 retirements; a puzzle that uses it is checked when it is written)."
+  },
+  "arrays.checkerboard": {
+   "name": "dark and light squares alternate on a board: count the dark squares, or only those on the edge",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "checkerboard"
+   ],
+   "cite": "MOE P1 NA Whole Numbers 1.6 patterns, p.31; P2 NA multiplication tables and odd and even numbers 1.6, p.33; Problem solving: look for a pattern, p.13",
+   "round": 3
+  },
+  "number_line.equal_marks": {
+   "name": "a number line with equally spaced marks and only the ends known: the number at a mark, or the gap between marks",
+   "levels": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "kinds": [
+    "equal_marks"
+   ],
+   "cite": "MOE P1 NA Whole Numbers 1.5 comparing and ordering numbers and 1.6 patterns, p.31; P2 numbers to 1000, p.33",
+   "round": 3
+  },
+  "ages.sum_later": {
+   "name": "two ages grow together: when will they add up to a total",
+   "levels": [],
+   "kinds": [
+    "sum_later"
+   ],
+   "cite": "MOE P1 NA Addition and Subtraction 2.1-2.5, p.31; P3 add and subtract word problems, p.35; Problem solving: guess and check, p.13",
+   "round": 3,
+   "levels_before": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "retired": "round 4: \"Ravi is 7 and his sister is 3: in how many years will their ages add up to 30\" is G6 of the P3 holiday week 4 lesson (practice/holiday/p3/04, with variants 9 and 5, 30); L1-siblingsages was that template"
+  },
+  "sorting.order_by_digit_rule": {
+   "name": "put numbers in order by a rule about their digits (digit sum or digit product) and name the one in a place",
+   "levels": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "kinds": [
+    "order_by_key"
+   ],
+   "cite": "MOE P1 NA Whole Numbers 1.2 tens and ones and 1.5 comparing and ordering, p.31; P3 numbers to 10 000, p.35",
+   "round": 3
+  },
+  "number_names.alphabetical": {
+   "name": "write the numbers in words and put the words in dictionary order",
+   "levels": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "kinds": [
+    "alpha_numbers"
+   ],
+   "cite": "MOE P1 NA Whole Numbers 1.3 reading and writing numbers in numerals and in words, p.31",
+   "round": 3
+  },
+  "sequence.alternating_steps": {
+   "name": "a number that goes up and down by turns: its value after some steps, or when it first reaches a target",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "alt_steps"
+   ],
+   "cite": "MOE P1 NA Whole Numbers 1.6 patterns in number sequences, p.31; P3 mental calculation, p.35; Problem solving: look for a pattern, p.13",
+   "round": 3,
+   "note": "round 4: extended to Level 6 with larger numbers and a new story (restores the Level 6 quarter capacity after the round-4 retirements; a puzzle that uses it is checked when it is written)."
+  },
+  "counting_line.race_places": {
+   "name": "a place in a race or queue after some people are passed and some pass you",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "pass_places"
+   ],
+   "cite": "MOE P1 NA Whole Numbers 1.7 ordinal numbers, p.31; P2 add and subtract within 1000, p.33",
+   "round": 3
+  },
+  "spatial.net_displacement": {
+   "name": "walks north, east, south and west on a street grid: how far from the start along the streets",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "displacement"
+   ],
+   "cite": "MOE Problem solving: draw a diagram, p.13; P1 NA Addition and Subtraction 2.5, p.31; P2 length in m, p.34",
+   "round": 3
+  },
+  "durations.schedule_with_breaks": {
+   "name": "several equal parts with breaks between them (one fewer break than parts): the whole time, or the finishing time",
+   "levels": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "schedule_breaks"
+   ],
+   "cite": "MOE P2 MG Time (hours and minutes, minutes), p.34; P3 MG Time 2.3 start, finish or duration, p.36",
+   "round": 3
+  },
+  "division.reverse_division": {
+   "name": "a number is divided with a quotient and a remainder: find the number, or what happens after adding to it",
+   "levels": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "reverse_division"
+   ],
+   "cite": "MOE P3 NA Multiplication and Division 3.3 division with remainder, p.35; P4 NA Whole Numbers 3.2 division algorithm, p.37",
+   "round": 3
+  },
+  "strategy.fake_coin": {
+   "name": "one coin is heavier: the fewest weighings on a balance scale to find it, or the most coins that can be searched",
+   "levels": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "fake_coin"
+   ],
+   "cite": "MOE Problem solving p.13 (heuristics: make a list or table, look for a pattern) and p.14 (processes: reasoning, representing); content needed is the table of 3 (MOE P3 NA Whole Numbers multiplication tables 6 to 9 and 2 to 5, p.35, docs/moe/syllabus_by_level.md P3). Enrichment: the syllabus names the processes, not this puzzle",
+   "round": 3,
+   "enrichment": true
+  },
+  "clock_reading.mirror_time": {
+   "name": "a clock seen in a mirror: the real hour or minutes",
+   "levels": [],
+   "kinds": [
+    "mirror_time"
+   ],
+   "cite": "MOE P2 MG Time (to the minute), p.34; P3 MG Time 2.1-2.3, p.36; Problem solving: draw a diagram, p.13",
+   "round": 3,
+   "retired": "round 3: \"looks at a wall clock in a mirror\" is in docs/sasmo/g1_original_problems_draft.md 4.3",
+   "levels_before": [
+    3,
+    4,
+    5,
+    6
+   ]
+  },
+  "place_value.swap_digits": {
+   "name": "swap two digits of a number: by how much it changes, or the number from the change",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "swap_digits"
+   ],
+   "cite": "MOE P3 NA Whole Numbers (numbers to 10 000, place value), p.35; P4 numbers to 100 000, p.37; P1 NA Whole Numbers 1.2 tens and ones (two-digit numbers), p.31",
+   "round": 3
+  },
+  "perimeter_area.notched_perimeter": {
+   "name": "distance round a rectangle with squares cut from its corners",
+   "levels": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "notch_perimeter"
+   ],
+   "cite": "MOE P3 MG Area and Perimeter: perimeter of rectilinear figure, p.36; P4 composite figures, p.39",
+   "round": 3
+  },
+  "measurement.container_and_contents": {
+   "name": "a jar weighed full and part full: the jar alone or its contents",
+   "levels": [],
+   "kinds": [
+    "container_mass"
+   ],
+   "cite": "MOE P3 MG Measurement (kg and g, compound units), p.36; P4 NA Fractions (fraction of a set), p.37; Problem solving: draw a model, p.13",
+   "round": 3,
+   "levels_before": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "retired": "round 4: \"a jug full of water weighs 1.45 kg, half full 0.85 kg: mass of the empty jug\" is Go further 7 of the P4 holiday week 5 lesson (practice/holiday/p4/05/lesson.py); the jar and rice and the juice bottle were the same frame"
+  },
+  "series_sum.missing_term": {
+   "name": "one number is left out when adding 1 to n: which one",
+   "levels": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "missing_term"
+   ],
+   "cite": "MOE P3 NA Addition and Subtraction (4-digit), p.35; Problem solving: look for a pattern, work backwards, p.13",
+   "round": 3
+  },
+  "containers.jug_pouring": {
+   "name": "two jugs and a tap: the fewest pours to measure an amount",
+   "levels": [],
+   "kinds": [
+    "jug_steps"
+   ],
+   "cite": "MOE Problem solving: act it out, make a list, guess and check, p.13; P3 MG Measurement (volume in l and ml), p.36",
+   "round": 3,
+   "retired": "round 3: the jug puzzle (a 4 L jug and a 9 L jug with no marks) is in our P2 lesson 9 (split/p2l9)",
+   "levels_before": [
+    3,
+    4,
+    5,
+    6
+   ]
+  },
+  "networks.draw_without_lifting": {
+   "name": "a figure of points and lines drawn without lifting the pencil: the fewest lifts",
+   "levels": [],
+   "kinds": [
+    "euler_lifts"
+   ],
+   "cite": "MOE Problem solving: draw a diagram, make a list, p.13; P2 MG Geometry (shapes and figures), p.34",
+   "round": 3,
+   "levels_before": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "retired": "round 4: odd-vertex parity at ages 8 to 12 is not in the MOE syllabus (the P2 Geometry cite did not support it)"
+  },
+  "counting_grid.diagonal_squares": {
+   "name": "squares a diagonal passes through in a rectangle of squares",
+   "levels": [],
+   "kinds": [
+    "diagonal_squares"
+   ],
+   "cite": "MOE P4 NA Whole Numbers 2.1-2.5 factors and common factors, p.37; Problem solving: look for a pattern, p.13",
+   "round": 3,
+   "levels_before": [
+    4,
+    5,
+    6
+   ],
+   "retired": "round 4: w + h - gcd is not in the MOE syllabus (the P4 factors cite did not support it)"
+  },
+  "shapes.cube_net_opposite": {
+   "name": "a net of a cube is folded: which face is opposite",
+   "levels": [],
+   "kinds": [
+    "net_opposite"
+   ],
+   "cite": "MOE P4 MG Geometry: nets of cube, cuboid, prism and pyramid, p.39",
+   "round": 3,
+   "note": "round 4: removed from Level 4 (a text net is hard for ages 9 to 11, AUDIT_ROUND4 Low)",
+   "levels_before": [
+    5,
+    6
+   ],
+   "retired": "round 4: \"a net of six squares marked A to F: which letter is opposite\" is item 2 of the P4 holiday week 4 lesson 8 (practice/holiday/p4/08), and split/p5l4; a text net is also hard for ages 9 to 12"
+  },
+  "symmetry.complete_figure": {
+   "name": "squares to shade so that a figure is symmetric about a line",
+   "levels": [
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "symmetry_add"
+   ],
+   "cite": "MOE P4 MG Geometry: line symmetry, complete a symmetric figure on a square grid, p.39",
+   "round": 3
+  },
+  "sorting.three_sets": {
+   "name": "three overlapping groups: how many are in none, or in exactly one",
+   "levels": [],
+   "kinds": [
+    "venn3"
+   ],
+   "cite": "MOE Problem solving: draw a diagram, make a list, p.13; P5 NA Whole Numbers (addition and subtraction), p.41",
+   "round": 3,
+   "levels_before": [
+    5,
+    6
+   ],
+   "retired": "round 4: three-set inclusion-exclusion is not in the MOE syllabus (only \"Problem solving\" was cited)"
+  },
+  "triangle_area.cut_corners": {
+   "name": "area of a rectangle with right-angled corners cut off",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "cut_corners_area"
+   ],
+   "cite": "MOE P5 MG Area of triangle: composite figures of rectangles, squares and triangles, p.42",
+   "round": 3
+  },
+  "averages.combined_groups": {
+   "name": "the mean of two groups put together, or the mean of one group from the overall mean",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "combined_mean"
+   ],
+   "cite": "MOE P6 ST average as total value divided by the number of data and the relationship between average, total and number of data, p.44",
+   "round": 3
+  },
+  "ratio.ratio_changes": {
+   "name": "a ratio changes after something is added or given away: find a quantity",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "ratio_change"
+   ],
+   "cite": "MOE P6 NA Ratio 1.1-1.7 (equivalent ratios, divide a quantity in a ratio, missing term), p.43",
+   "round": 3
+  },
+  "fractions.share_fraction": {
+   "name": "a fraction of something shared equally: what fraction each gets",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "share_fraction"
+   ],
+   "cite": "MOE P6 NA Fractions 1.1 divide a proper fraction by a whole number, p.43",
+   "round": 3,
+   "note": "round 3: the story must not repeat extension l5_u02 (5/6 of a cake shared among children)"
+  },
+  "programs.branching": {
+   "name": "trace a program with a loop and an if that does one thing for even and another for odd",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "branch_prog"
+   ],
+   "cite": "Ages 11-13 page list (explored in Scratch); L6 lessons 1, 7, 10; MOE Problem solving: work backwards, make a list, p.13",
+   "round": 3
+  },
+  "clock_reading.faulty_clock": {
+   "name": "a clock that gains time every hour: the real time that has passed",
+   "levels": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "faulty_clock"
+   ],
+   "cite": "MOE P2 MG Time, p.34; P3 MG Time 2.3, p.36; P3 NA multiplication and division, p.35",
+   "round": 3
+  },
+  "number_arrangement.triangle_sides": {
+   "name": "six numbers on the corners and sides of a triangle with equal side sums: which numbers are in the corners",
+   "levels": [],
+   "kinds": [
+    "triangle_sides"
+   ],
+   "cite": "MOE P1 NA Addition and Subtraction 2.4 adding more than two 1-digit numbers and 2.5 within 100, p.31; Problem solving: guess and check, make a list, p.13",
+   "round": 3,
+   "levels_before": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "retired": "round 3: the verifier found the same story as docs/sasmo/g3_original_problems_draft.md (numbers on the sides of a triangle with equal side sums); kept as a tested kind but not used"
+  },
+  "digit_display.segments": {
+   "name": "sticks or segments needed to show a run of numbers on a display (table given)",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "digit_segments"
+   ],
+   "cite": "MOE P1 NA Whole Numbers 1.2-1.3 tens and ones, numerals, p.31; P2 numbers to 1000, p.33",
+   "round": 3,
+   "note": "round 4: extended to Level 6 with larger numbers and a new story (restores the Level 6 quarter capacity after the round-4 retirements; a puzzle that uses it is checked when it is written)."
+  },
+  "spatial.circle_elimination": {
+   "name": "children in a circle sit down every k-th: who is last standing",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "circle_out"
+   ],
+   "cite": "MOE Problem solving: act it out, look for a pattern, p.13; P2 tables of 2, 3, 4, 5 and 10, p.33",
+   "round": 3
+  },
+  "probability.one_pick": {
+   "name": "probability that one pick from a box is (or is not) a colour",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "prob"
+   ],
+   "where": {
+    "kind": [
+     "marbles"
+    ],
+    "draws": [
+     1
+    ]
+   },
+   "round": 5
+  },
+  "angles.parallelogram_rhombus": {
+   "name": "unknown angles in a parallelogram, a rhombus or a trapezium (opposite angles, angles between the parallel sides, a diagonal that halves an angle)",
+   "levels": [
+    5
+   ],
+   "kinds": [
+    "quad_angles"
+   ],
+   "cite": "MOE P5 MG Geometry, p.42: parallelogram, rhombus and trapezium, their properties and unknown angles; P4 MG angles, p.39",
+   "round": 6
+  },
+  "fractions.whole_division": {
+   "name": "a whole number shared by a whole number as a fraction or a decimal (7 m cut into 4 equal pieces: 7/4 m = 1.75 m)",
+   "levels": [
+    5
+   ],
+   "kinds": [
+    "frac_quotient"
+   ],
+   "cite": "MOE P5 NA Fractions 1.1 divide a whole number by a whole number with a fraction quotient, 1.2 express fractions as decimals, p.41",
+   "round": 6
+  },
+  "rate.compare_rates": {
+   "name": "which of three amounts per time is the fastest or slowest, or by how much (taps, typing, printing); text answer: a name",
+   "levels": [
+    5
+   ],
+   "kinds": [
+    "rate_compare"
+   ],
+   "cite": "MOE P5 NA Rate: the rate as the amount of one quantity per unit of another, find the rate, p.41",
+   "round": 6
+  },
+  "order_ops.bracket_placements": {
+   "name": "where one pair of brackets can go in a sum with + - x: the greatest value, how many different values, how many placements give a target",
+   "levels": [
+    5
+   ],
+   "kinds": [
+    "bracket_values"
+   ],
+   "cite": "MOE P5 NA Whole Numbers 2.2 order of operations and 2.3 brackets without a calculator, p.41",
+   "round": 6
+  },
+  "triangle_area.two_heights": {
+   "name": "the height of a right-angled triangle when its longest side is the base (area from the two short sides)",
+   "levels": [
+    5
+   ],
+   "kinds": [
+    "right_triangle_height"
+   ],
+   "cite": "MOE P5 MG Area of triangle: the concepts of base and height, area, p.42",
+   "round": 6
+  },
+  "graphs.who_has_most": {
+   "name": "who has the most, the least or the second most in a table of named children; text answer: a name",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "table_who"
+   ],
+   "cite": "MOE P1 ST picture graph p.32; P2 picture graph with scales p.34; P3 bar graph p.36; P4 read tables p.40",
+   "round": 6
+  },
+  "money.cheaper_shop": {
+   "name": "which of three shops is the cheapest for a given number of items (each price, a pack price, or one free for every few bought); text answer: a shop letter",
+   "levels": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "shop_choice"
+   ],
+   "cite": "MOE P2 NA Money compare two or three amounts of money, p.33; P3 add and subtract money, p.35; P4 money in decimal form, p.38",
+   "round": 6
+  },
+  "word_problems.who_has_more": {
+   "name": "who has more after gifts, earnings and spending; text answer: a name",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "gift_who"
+   ],
+   "cite": "MOE P1 NA add and subtract within 100, p.31; P3 add and subtract money, p.35; Problem solving: draw a model, p.13",
+   "round": 6
+  },
+  "networks.first_stop": {
+   "name": "which place is passed first (or last) on the shortest of several routes on a map of roads; text answer: a place name",
+   "levels": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "route_via"
+   ],
+   "cite": "MOE P2 MG length in m and cm, compare and order, p.34; P3 km and m, p.36; Problem solving: make a list, p.13",
+   "round": 6
+  },
+  "shapes.classify_triangle": {
+   "name": "what kind of triangle: by its sides (equilateral, isosceles, scalene) or by two of its angles (acute, right-angled, obtuse); text answer: a word",
+   "levels": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "classify_triangle"
+   ],
+   "cite": "MOE P3 MG right angle, p.36; P4 MG angles measure, p.39; P5 MG triangle: properties of isosceles, equilateral and right-angled triangles, angle sum, p.42",
+   "round": 6
+  },
+  "measurement.heavier_after_units": {
+   "name": "which of three amounts written in different ways (3 kg 250 g, 3,300 g, 3.2 kg) is the heaviest or lightest; text answer: a letter",
+   "levels": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "unit_heavier"
+   ],
+   "cite": "MOE P3 MG compound units of mass, length, volume, p.36; P5 NA Decimals 1.2 convert a measure to a larger or smaller unit in decimal form, p.41",
+   "round": 6
+  }
+ },
+ "same_idea_groups": {
+  "division_with_remainder": [
+   "division.share",
+   "division.leftover",
+   "division.reverse_division"
+  ],
+  "days_in_a_range": [
+   "counting_range.days_in_common",
+   "counting_range.count_numbers"
+  ],
+  "box_volume": [
+   "volume.capacity_in_litres",
+   "volume.cuboid"
+  ],
+  "overlapping_sets": [
+   "sorting.overlap_both",
+   "sorting.three_sets"
+  ],
+  "ratio_after_a_change": [
+   "ratio.ratio_changes",
+   "ratio.make_equal_by_adding"
+  ],
+  "trace_a_loop": [
+   "programs.nested_loop",
+   "programs.trace_loop"
+  ]
+ },
+ "retired_frames": [
+  {
+   "id": "fan_triangles",
+   "why": "triangles in a fan of lines from one corner (practice P5 and the P1 workbook Go further use it)",
+   "all": [
+    "triangle",
+    "(?:lines?|cuts?) (?:drawn )?from (?:its|the|a) (?:top )?(?:corner|vertex|apex)"
+   ]
+  },
+  {
+   "id": "count_in_grid",
+   "why": "count every square or rectangle in a grid (tutor notes, split l7 / p2l8, extension L3 workbook)",
+   "all": [
+    "how many (?:different )?(?:squares|rectangles)",
+    "\\b(?:grid|board|chessboard|across|window)\\b"
+   ]
+  },
+  {
+   "id": "tetromino",
+   "why": "how many different shapes from squares joined edge to edge (P4 question bank and workbook state the answer)",
+   "all": [
+    "edge to edge",
+    "(?:different|new) shapes?"
+   ]
+  },
+  {
+   "id": "dice_total",
+   "why": "the probability of a total with two dice (the exit slip of practice/holiday/p6/06 uses 'total is 8', answer 5/36)",
+   "all": [
+    "\\bdice\\b|\\bdie\\b",
+    "probab"
+   ]
+  },
+  {
+   "id": "clock_hands_angle",
+   "why": "the angle between the hour hand and the minute hand of a clock (P5 Question Bank, p5/content/l8.js)",
+   "all": [
+    "angle",
+    "hour hand",
+    "minute hand"
+   ]
+  },
+  {
+   "id": "tank_litres_depth",
+   "why": "litres poured into a tank (or mould, barrel, container) of given base: the depth of the water (split p5l5, p5/content/l5.js)",
+   "all": [
+    "\\bbase\\b",
+    "litres?",
+    "(?:depth|deep)"
+   ]
+  },
+  {
+   "id": "equal_rows_ways",
+   "why": "chairs or tiles put in equal rows: how many ways (P2 holiday lesson 3, the L3 Extension Workbook, split p4l1)",
+   "all": [
+    "(?:chairs|tiles)",
+    "equal rows",
+    "how many (?:different )?ways"
+   ]
+  },
+  {
+   "id": "seat_rows_grow",
+   "why": "rows of seats that grow by the same number each row, all rows added (the L3 Extension Workbook hall of 8 rows)",
+   "all": [
+    "rows? of seats|seats in (?:the )?(?:first|each|every) row|row 1 has",
+    "(?:more|extra) seats"
+   ]
+  },
+  {
+   "id": "card_corner_cut",
+   "why": "a card with a corner (square) cut off: the edge or perimeter left (school/p4 S2 puzzles, 'A card is 23 cm by 9 cm')",
+   "all": [
+    "\\bcard\\b",
+    "corner",
+    "(?:cut|chipped|snipped)"
+   ]
+  },
+  {
+   "id": "colour_pigeonhole",
+   "why": "how many must you pick without looking to be sure of one of every colour or of k of one colour (g2 draft 5.3, L6 skill additions)",
+   "all": [
+    "without looking",
+    "to be sure"
+   ]
+  }
+ ]
+}

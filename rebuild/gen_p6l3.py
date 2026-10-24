@@ -101,7 +101,7 @@ def ans_rows(rows,top=250,gapy=130,lw=200,size=36):
     for i,(a,c) in enumerate(rows):
         t=top+i*gapy
         b+=pin(128,t,lw-20,f'<p style="font-size:36px;font-weight:800;color:{TEAL}">{E(a)}</p>',None,WHITE,20,'18px 24px')
-        b+=pin(128+lw,t,1664-lw,f'<p style="font-size:{size}px;font-weight:800;line-height:1.2">{E(c)}</p>','pop',YEL,20,'18px 26px')
+        b+=pin(128+lw,t,1664-lw,f'<p style="font-size:{size}px;font-weight:800;line-height:1.2">{E(c)}</p>',None,YEL,20,'18px 26px')
     return b
 
 PY_MAIN='temp = 5\nfor hour in range(6):\n    temp = temp + (-3)\n    print(temp)'
@@ -128,12 +128,12 @@ body+=qrow(128,790,1100,'Then:','How many degrees warmer is Tokyo than Seoul?',3
 put(f'{L}-warm1',sec(f'{L}-warm1','0–5 MIN',body,
  'Minutes 0 to 5. Cold city line-up. Give each child a city (online: type the city names in the chat in order, coldest first, then reveal). Ask: "Which is colder, Beijing at −9 or Seoul at −7? Nine is bigger than seven, so why is −9 colder?" Let them argue before any click. '
  'Click 1 puts the cities on the number line (Har = Harbin, Bei = Beijing, Seo = Seoul, Tok = Tokyo, Sin = Singapore). Click 2 shows the order. Click 3 shows the gap Tokyo to Seoul: from −7 up to 0 is 7, then up to 3 is 3 more, 10 degrees. '
- 'Extra: "How much warmer is Singapore than Harbin?" (22 up to 0, then 25 more: 47 degrees). Watch for children who say −9 is warmer than −7 because 9 > 7: we fix this with the number line in a moment.'))
+ 'Keep it to about 150 seconds: the order and the Tokyo to Seoul gap only (the Singapore to Harbin extra is cut). Watch for children who say −9 is warmer than −7 because 9 > 7: we fix this with the number line in a moment.'))
 
 # ---------- 3 warm2 ----------
-qs=[('1.','It is 3 °C. It falls 5 degrees. What is it now?','−2 °C'),('2.','Which is colder: −7 °C or −2 °C?','−7 °C'),('3.','Count back in 3s: 6, 3, 0, __, __','−3, −6'),('4.','What number is 4 less than 1?','−3'),('5.','A lift is at B1. It goes down 2 floors. Where is it?','B3')]
+qs=[('1.','It is 3 °C. It falls 5 degrees. What is it now?','−2 °C'),('2.','Which is colder: −7 °C or −2 °C?','−7 °C'),('3.','A lift is at B1. It goes down 2 floors. Where is it?','B3')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b,36) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put(f'{L}-warm2',sec(f'{L}-warm2','5–10 MIN',body,'Minutes 5 to 10. Whiteboards: write, hold up together, then click. Answers: 1) −2 °C (3 down to 0, then 2 more).  2) −7 °C (further below 0).  3) −3, −6 (the pattern keeps going past 0).  4) −3.  5) B3. Ask: "Where have you seen numbers below zero?" (freezer, weather apps for Japan or Korea, basement lifts, golf scores, a bank balance that is overdrawn, sea level.)'))
+put(f'{L}-warm2',sec(f'{L}-warm2','5–10 MIN',body,'Minutes 5 to 10. Whiteboards: write, say the answer together on three, then click. Three questions only. Answers: 1) −2 °C (3 down to 0, then 2 more).  2) −7 °C (further below 0).  3) B3. Ask: "Where have you seen numbers below zero?" (freezer, weather apps for Japan or Korea, basement lifts, golf scores, a bank balance that is overdrawn, sea level.)'))
 
 # ---------- 4 explore1 ----------
 stage=(f'<svg aria-label="The Scratch stage is a number line: x goes from minus 240 to 240" viewBox="0 0 760 330" xmlns="http://www.w3.org/2000/svg" style="width:700px;height:304px;flex:none">'
@@ -148,7 +148,7 @@ left=card(chip('EXPLORE AT THE COMPUTER')+'<ol style="font-size:32px;font-weight
 right=card(stage+blocks_svg(THERMO,26,'Thermometer program: when green flag clicked, set temp to 5, repeat 6: change temp by minus 3, say temp for 1 seconds'),extra='flex:none;width:760px;padding:20px 24px;gap:10px')
 body=h2('Explore: the stage is a number line')+f'<div style="display:flex;gap:32px;align-items:flex-start">{left}{right}</div>'
 put(f'{L}-explore1',sec(f'{L}-explore1','10–15 MIN',body,
- 'Minutes 10 to 15. SAY OUT LOUD at minute 10: "Type the minus sign with the minus key on your keyboard. Do not copy and paste it from the slide or the chat, because Scratch will not accept the pasted one and you would think you were wrong." Screen-share Scratch for 1 minute: show the x number under the stage as you drag the sprite left and right. "The stage is a number line. The middle is 0. Left of the middle is negative." Then children work in pairs (breakout rooms online), each on their own computer. '
+ 'Minutes 10 to 15. SAY OUT LOUD at the start of the explore: "Type the minus sign with the minus key on your keyboard. Do not copy and paste it from the slide or the chat, because Scratch will not accept the pasted one and you would think you were wrong." Screen-share Scratch for 1 minute: show the x number under the stage as you drag the sprite left and right. "The stage is a number line. The middle is 0. Left of the middle is negative." Then children work in pairs (breakout rooms online), each on their own computer. '
  'Step 2: Dot starts at 0, change x by 100 takes it to 100, change x by −250 takes it to −150. Step 3: make the variable live in your screen share: Variables, Make a Variable, type temp, OK (children copy you). Type negative numbers with the keyboard minus key, never by pasting from the slide. There is no "decrease" block: to go down you change by a negative number. Step 4: they must write the prediction on the whiteboard BEFORE clicking. '
  'The program says 2, −1, −4, −7, −10, −13. Early finishers: add "if temp < 0 then say Below zero!" inside the loop, or make Dot glide to x = temp × 10 each time so it walks along the stage. '
  +PY_NOTE))
@@ -206,11 +206,11 @@ put(f'{L}-key',sec(f'{L}-key','34–35 MIN',body,'Say the key idea together. Com
 put(f'{L}-break',break_slide(f'{L}-break','Brain break','Human lift. Standing tall is floor 0. Up 1: reach higher. Down 1: bend lower. Moves: up 3, down 5, down 2, up 6. Call out your floor after each move.','Then: a drink of water and back to the computer.','Five minutes. Floors after each move: 3, −2, −4, 2. Online: children stay in view of the camera and move in place.'))
 
 # ---------- 14 ws1 ----------
-put(f'{L}-ws1',ws_preview(f'{L}-ws1','40–52 MIN','Worksheet page 1: with your partner',[('Q1','Read the number line, put numbers in order, and use < or >.'),('Q2','Harbin temperatures: rises, falls and the gap to Singapore.'),('Q3','Sea level: heights above and below 0 m.')],'Stuck? Draw a number line and split every jump at 0.','Minutes 40 to 52. Paper only for page 1 (laptops closed or turned away). Walk around (online: visit breakout rooms). Ask "Which way did you move? Where did you cross zero?" before giving help.'))
+put(f'{L}-ws1',ws_preview(f'{L}-ws1','40–52 MIN','Worksheet page 1: with your partner',[('Q1','Read the number line, put numbers in order, and use < or >.'),('Q2','Harbin temperatures: rises, falls and the gap to Singapore.'),('Q3','Sea level: heights above and below 0 m.')],'Stuck? Draw a number line and split every jump at 0.','Minutes 40 to 52. Paper only for page 1 (laptops closed or turned away). Walk around (online: visit breakout rooms). Ask "Which way did you move? Where did you cross zero?" before giving help. Show this preview, do not read it aloud.'))
 
 # ---------- 15 ws1ans ----------
 rows=[('Q1','a) A −8, B −3, C 4    b) −12, −5, −1, 0, 3, 7    c) >,  <,  <'),('Q2','a) 3 p.m. (−11 °C)  b) 11 degrees  c) 9 degrees  d) −25 °C  e) 44 degrees'),('Q3','a) 15 m    b) 9 m    c) −13 m')]
-put(f'{L}-ws1ans',sec(f'{L}-ws1ans','52–54 MIN',h2('Page 1: check together')+ans_rows(rows,size=34),'Click each answer after a pair explains theirs. Q1c: −4 > −9 because −4 is further right (warmer). Q2b: −24 up to −13 is 11. Q2e: 13 up to 0, then 31 more: 44. Q3a: from −6 up to 9 is 6 + 9 = 15 m. Q3c: −6 + 4 = −2, then −2 − 11 = −13 m.'))
+put(f'{L}-ws1ans',sec(f'{L}-ws1ans','52–54 MIN',h2('Page 1: check together')+ans_rows(rows,size=34),'All the answers are shown at once. Children mark in a different colour; ask ONE volunteer to explain only Q1 (which is bigger, −4 or −9, and why), about 35 seconds a question. Q1c: −4 > −9 because −4 is further right (warmer). Q2b: −24 up to −13 is 11. Q2e: 13 up to 0, then 31 more: 44. Q3a: from −6 up to 9 is 6 + 9 = 15 m. Q3c: −6 + 4 = −2, then −2 − 11 = −13 m.'))
 
 # ---------- 16 teach trace ----------
 body=h2('Trace the code in a table')
@@ -219,23 +219,16 @@ W=[300,300]
 body+=trow(1000,240,['After repeat','x'],W,None,True)
 body+=trow(1000,320,['start','20'],W,None)
 for i,(r,v) in enumerate([('1','5'),('2','−10'),('3','−25')]): body+=trow(1000,400+i*80,[r,v],W,'rise')
-body+=pin(128,690,1664,p('Write one row each time the loop runs. Then read the last row: the sprite says −25.',36,700),'fade',SOFT,20,'20px 28px')
-put(f'{L}-teachtrace',sec(f'{L}-teachtrace','54–56 MIN',body,'Teach before worksheet page 2 (Q5 traces a program). Click to fill each row while the children call out the value: 20 − 15 = 5, 5 − 15 = −10, −10 − 15 = −25. Point out: the "start" row is not one of the repeats. The "say" block is outside the loop, so it only speaks once, at the end. Optional Python version of this trace: x = 20 | for i in range(3): x = x - 15 | print(x)  (prints -25).'))
-
-# ---------- 17 teach bug ----------
-body=h2('Find the bug')+card(p('Ravi wants a countdown that says 3, 2, 1, 0, −1. His code says 3, 4, 5, 6, 7.',38,700))
-body+=pin(128,400,760,blocks_svg([(0,'event','when green flag clicked'),(0,'var','set n to [3]'),(0,'control','repeat [5]'),(1,'looks','say [n] for [1] seconds'),(1,'var','change n by [1]')],32,'Ravi\'s code: set n to 3, repeat 5: say n, change n by 1'),None)
-body+=step(1,'Read each block. Which one makes n go UP?',left=960,top=400,width=772,size=34)
-body+=step(2,'Fix it: change n by −1. Now n goes 3, 2, 1, 0, −1 ✓',left=960,top=530,width=772,size=34)
-body+=step(3,'Test it: run the code and check the last number.',left=960,top=680,width=772,size=34)
-put(f'{L}-teachbug',sec(f'{L}-teachbug','56–57 MIN',body,'Teach before worksheet page 2 (Q6 has a lift bug and Q7 asks them to plan code). Ask first: "Which block is wrong? How do you know?" Only one block needs to change. Show that 5 repeats are still right: 3, 2, 1, 0, −1 is five numbers. Planning tip for Q7: write the start value, how many repeats, and the change each time.'))
+body+=pin(128,660,1664,p('Write one row each time the loop runs. Then read the last row: the sprite says −25.',36,700),'fade',SOFT,20,'20px 28px')
+body+=pin(128,790,1664,p('Bug hunt (Q6): which block makes the number go UP? Change it to change by −1.',34,700),'fade',YEL,20,'16px 28px')
+put(f'{L}-teachtrace',sec(f'{L}-teachtrace','54–56 MIN',body,'Teach before worksheet page 2 (Q5 traces a program, and the second panel is the Q6 bug hunt). Click to fill each row while the children call out the value: 20 − 15 = 5, 5 − 15 = −10, −10 − 15 = −25. Point out: the "start" row is not one of the repeats. The "say" block is outside the loop, so it only speaks once, at the end. Optional Python version of this trace: x = 20 | for i in range(3): x = x - 15 | print(x)  (prints -25). Bug hunt for Q6 and the Q7 plan (second panel): Ravi wants a countdown that says 3, 2, 1, 0, −1 but his code says 3, 4, 5, 6, 7. Ask first: "Which block is wrong? How do you know?" Only one block needs to change: change n by −1. Show that 5 repeats are still right (3, 2, 1, 0, −1 is five numbers). Planning tip for Q7: write the start value, how many repeats and the change each time.'))
 
 # ---------- 18 ws2 ----------
-put(f'{L}-ws2',ws_preview(f'{L}-ws2','57–72 MIN','Worksheet page 2: on your own',[('Q4','Six calculations. Draw the jumps.'),('Q5','Trace the sprite code in the table.'),('Q6','The lift bug: predict, fix, predict again.'),('Q7','Plan the diver\'s code. Then build it in Scratch to test.')],'Finished early? Build Q5 to Q7 in Scratch, or try the Python box.','Children work alone. Paper first, then they may build Q5 to Q7 in Scratch to test their answers. Note who needs a short catch-up next lesson.'))
+put(f'{L}-ws2',ws_preview(f'{L}-ws2','57–72 MIN','Worksheet page 2: on your own',[('Q4','Six calculations. Draw the jumps.'),('Q5','Trace the sprite code in the table.'),('Q6','The lift bug: predict, fix, predict again.'),('Q7','Plan the diver\'s code. Then build it in Scratch to test.')],'Finished early? Build Q5 to Q7 in Scratch, or try the Python box.','Children work alone. Show this preview, do not read it aloud. Paper first, then they may build Q5 to Q7 in Scratch to test their answers. Note who needs a short catch-up next lesson.'))
 
 # ---------- 19 ws2ans ----------
 rows=[('Q4','a) 3   b) −7   c) −8   d) −8   e) 8   f) 6'),('Q5','10, −20, −50, −80. It says −80.   b) 4 more repeats'),('Q6','a) 13   b) change floor by −1   c) −3 (B3)'),('Q7','set depth to 0, repeat 7, change depth by −4.   b) 28')]
-put(f'{L}-ws2ans',sec(f'{L}-ws2ans','72–75 MIN',h2('Page 2: check together')+ans_rows(rows,size=34),'Click each answer after a child explains. Q4e: from −3 to 5 is 8 steps right. Q4f: from −7 to −1 is 6 steps right. Q5b: −80 to −200 is 120 more, and 120 ÷ 30 = 4. Q6a: 5 + 8 = 13 (the lift goes UP to floor 13). Q6c: 5 − 8 = −3, the third basement. Q7: 7 × 4 = 28, so 7 repeats reach −28; to come back up in one block, change depth by 28.'))
+put(f'{L}-ws2ans',sec(f'{L}-ws2ans','72–75 MIN',h2('Page 2: check together')+ans_rows(rows,size=34),'All the answers are shown at once. Children mark in a different colour; ask ONE volunteer to explain only Q5 (the trace). Q4e: from −3 to 5 is 8 steps right. Q4f: from −7 to −1 is 6 steps right. Q5b: −80 to −200 is 120 more, and 120 ÷ 30 = 4. Q6a: 5 + 8 = 13 (the lift goes UP to floor 13). Q6c: 5 − 8 = −3, the third basement. Q7: 7 × 4 = 28, so 7 repeats reach −28; to come back up in one block, change depth by 28.'))
 
 # ---------- 20 stretch (new) ----------
 st=[('1.','At 6 a.m. it was −4 °C. By 2 p.m. it was 7 °C. By 10 p.m. it had fallen 9 degrees. How much did it rise by 2 p.m.? What was it at 10 p.m.?'),('2.','set n to 10, then repeat 5 times: change n by −4. Then say n. What does it say?'),('3.','What number is exactly halfway between −9 and 3?')]
@@ -278,13 +271,13 @@ put(f'{L}-chwalk',sec(f'{L}-chwalk','Challenge',body,'Use after pairs have tried
 
 # ---------- 24 talk ----------
 body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p('Ben says −8 is bigger than −3 because 8 is bigger than 3. Is he right? Use a thermometer or a lift to explain.',42,600))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38,600))
-put(f'{L}-talk',sec(f'{L}-talk','75–82 MIN',body,'Minutes 75 to 82. Pairs talk for 2 minutes, then share. Answer: No. −8 is further left on the number line, so it is smaller: −8 °C is colder than −3 °C, and floor −8 is lower than floor −3. The digits 8 and 3 tell us how FAR from 0, not which side. Praise reasons that use a picture or a real example. Second question if time: "Why does change by −3 make a number go down?"'))
+put(f'{L}-talk',sec(f'{L}-talk','75–82 MIN',body,'Minutes 75 to 82. Both questions are kept in this lesson (it has the flex). Pairs talk for 2 minutes, then share. Answer: No. −8 is further left on the number line, so it is smaller: −8 °C is colder than −3 °C, and floor −8 is lower than floor −3. The digits 8 and 3 tell us how FAR from 0, not which side. Praise reasons that use a picture or a real example. Second question if time: "Why does change by −3 make a number go down?"'))
 
 # ---------- 25 exit ----------
-body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('It is −3 °C. The temperature falls 6 degrees, then rises 4 degrees. What is the temperature now?',46,600))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
+body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('It is −3 °C. The temperature falls 6 degrees, then rises 4 degrees. What is the temperature now?',46,600))+card(p('Write your answer on a slip of paper. When your tutor says, say your answer together on three. Then collect your stamp in your inquiry journal.',34,400))
 put(f'{L}-exit',sec(f'{L}-exit','82–90 MIN',body,'Minutes 82 to 90. Answer: −5 °C (−3 − 6 = −9, then −9 + 4 = −5). Extension: write a Scratch program that starts temp at −3 and shows each change, then try it.'))
 
-order=['title','warm1','warm2','explore1','explore2','teach1','we1','try1','teach2','we2','try2','key','break','ws1','ws1ans','teachtrace','teachbug','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']
+order=['title','warm1','warm2','explore1','explore2','teach1','we1','try1','teach2','we2','try2','key','break','ws1','ws1ans','teachtrace','ws2','ws2ans','stretch','challenge','chdiag','chwalk','talk','exit']
 order=[f'{L}-{x}' for x in order]
 assert set(order)==set(S), set(order)^set(S)
 for f in os.listdir(os.path.join(D,'slides')):

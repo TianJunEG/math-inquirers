@@ -2,7 +2,7 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-22T00:36:51Z"
+  "at": "2026-10-22T03:41:04Z"
  },
  "lists": "css",
  "title": "Math Inquirers P4: Lesson 9 – Data Detectives",
@@ -15,7 +15,6 @@
   "p4l9-explore2",
   "p4l9-teach1",
   "p4l9-we1",
-  "p4l9-try1",
   "p4l9-we2",
   "p4l9-try2",
   "p4l9-key",
@@ -31,6 +30,7 @@
   "p4l9-challenge",
   "p4l9-chdiag",
   "p4l9-chwalk",
+  "p4l9-gap-spin",
   "p4l9-talk",
   "p4l9-exit",
   "p4l9-reflect"

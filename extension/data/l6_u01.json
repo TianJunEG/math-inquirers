@@ -1,0 +1,1082 @@
+{
+ "schema_version": 1,
+ "level": 6,
+ "unit": 1,
+ "id": "L6U01",
+ "title": "Code the pattern",
+ "topic": "Sequences and the nth term",
+ "holiday_lesson": 1,
+ "goal": "I can find the rule for the nth term of a pattern and use it for the 100th term. I can test my rule with a loop.",
+ "learn": {
+  "intro": "A rule for the nth term jumps straight to any term, such as the 100th. The difference tells you which times table to compare with. A loop in code adds the difference again and again, so you can test your rule. Code blocks are explained on page 27.",
+  "example": {
+   "problem": "A sequence begins 9, 14, 19, 24, ... Find the rule that gives term n. Then find the 100th term.",
+   "figure": {
+    "type": "l6_grid",
+    "rows": [
+     [
+      "n",
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     [
+      "5 × n",
+      "5",
+      "10",
+      "15",
+      "20"
+     ],
+     [
+      "term",
+      "9",
+      "14",
+      "19",
+      "24"
+     ]
+    ],
+    "cw": [
+     26,
+     18,
+     18,
+     18,
+     18
+    ],
+    "rowhead": true,
+    "ch": 9
+   },
+   "steps": [
+    "The difference is 5, so compare each term with the 5 times table.",
+    "Each term is 4 more than the number above it. The rule is 5n + 4.",
+    "Check the 4th term: 5 × 4 + 4 = 24. It matches.",
+    "The 100th term is 5 × 100 + 4 = 504.",
+    "Test it in code: set term to 9, then repeat 99 times: change term by 5. The 100th term is 99 jumps after the 1st term."
+   ],
+   "answer": "The rule is 5n + 4. The 100th term is 504."
+  },
+  "howto": {
+   "title": "How to find the rule for the nth term",
+   "steps": [
+    "Find the difference between neighbouring terms.",
+    "Write that times table under n: 5, 10, 15, ...",
+    "Find how much to add or take away to reach each term.",
+    "Check the rule on 2 terms. Then use it for any term."
+   ]
+  },
+  "try": {
+   "id": "L6U01-L01",
+   "tier": "start",
+   "text": "A sequence starts 3, 10, 17, 24, ...\nThe rule for the nth term is {b} × n − {b}. The 100th term is {b}.",
+   "answer": {
+    "value": [
+     "7",
+     "4",
+     "696"
+    ],
+    "text": "7, 4, 696"
+   },
+   "explanation": "The difference is 7, so compare with 7, 14, 21, 28. Each term is 4 less than the number under it. The rule is 7n − 4. The 100th term is 7 × 100 − 4 = 696."
+  },
+  "tight": true
+ },
+ "items": [
+  {
+   "id": "L6U01-S01",
+   "tier": "start",
+   "text": "Matchsticks make 2 rows of squares. Pattern 2 has 2 columns and pattern 3 has 3 columns.",
+   "page": 1,
+   "parts": [
+    {
+     "label": "a",
+     "text": "Pattern 3 has {b} sticks. Each new column adds {b} sticks.",
+     "answer": {
+      "value": [
+       "17",
+       "5"
+      ],
+      "text": "17, 5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The rule: sticks = {b} × n + {b}",
+     "answer": {
+      "value": [
+       "5",
+       "2"
+      ],
+      "text": "5, 2"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Pattern 40 has {b} sticks.",
+     "answer": {
+      "value": [
+       "202"
+      ],
+      "text": "202"
+     }
+    },
+    {
+     "label": "d",
+     "text": "Pattern {b} has 92 sticks.",
+     "answer": {
+      "value": [
+       "18"
+      ],
+      "text": "18"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_sticks",
+    "shape": "sq",
+    "rows": 2,
+    "ks": [
+     1,
+     2,
+     3
+    ],
+    "side": 9
+   },
+   "explanation": "Pattern 1 has 7 sticks, pattern 2 has 12, pattern 3 has 17: each column adds 5, so the rule is 5n + 2. Pattern 40: 202. For 92: 5n = 90, n = 18.",
+   "figright": true,
+   "partsrow": true
+  },
+  {
+   "id": "L6U01-S02",
+   "tier": "start",
+   "text": "Complete the table for each sequence.",
+   "page": 1,
+   "answer": {
+    "value": [
+     "6",
+     "6n + 2",
+     "602",
+     "5",
+     "5n - 2",
+     "498"
+    ],
+    "text": "(a) 6, 6n + 2, 602   (b) 5, 5n − 2, 498",
+    "list": true
+   },
+   "figure": {
+    "type": "l6_grid",
+    "rows": [
+     [
+      "(a) 8, 14, 20, 26, ...",
+      "",
+      "",
+      ""
+     ],
+     [
+      "(b) 3, 8, 13, 18, ...",
+      "",
+      "",
+      ""
+     ]
+    ],
+    "cw": [
+     50,
+     25,
+     38,
+     24
+    ],
+    "rowhead": false,
+    "ch": 10,
+    "head": [
+     "Sequence",
+     "Difference",
+     "Rule for term n",
+     "Term 100"
+    ]
+   },
+   "explanation": "(a) The difference is 6; each term is 2 more than 6, 12, 18, 24: 6n + 2, and 602. (b) The difference is 5; each term is 2 less than 5, 10, 15, 20: 5n − 2, and 498."
+  },
+  {
+   "id": "L6U01-S04",
+   "tier": "start",
+   "text": "Trace the code. The sprite says x first, then changes it. Fill in the trace table. The key to the code blocks is on page 27.",
+   "page": 1,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The last number it says is {b}.",
+     "answer": {
+      "value": [
+       "21"
+      ],
+      "text": "21"
+     }
+    },
+    {
+     "label": "b",
+     "text": "With repeat 50, the last number it says is {b}.",
+     "answer": {
+      "value": [
+       "297"
+      ],
+      "text": "297"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_code",
+    "prog": [
+     [
+      "hat",
+      "when green flag clicked"
+     ],
+     [
+      "var",
+      "set x to (3)"
+     ],
+     [
+      "ctl",
+      "repeat (4)",
+      [
+       [
+        "look",
+        "say (x) for (1) seconds"
+       ],
+       [
+        "var",
+        "change x by (6)"
+       ]
+      ]
+     ]
+    ],
+    "trace": {
+     "cols": [
+      "Loop",
+      "x said",
+      "x after"
+     ],
+     "rows": 4,
+     "first": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "cw": 21
+    }
+   },
+   "explanation": "Loop 1 says 3, then x = 9. Loop 2 says 9, x = 15. Loop 3 says 15, x = 21. Loop 4 says 21, x = 27. The last number said is 21, and x ends as 27. With repeat 50 the last said is 3 + 49 × 6 = 297.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U01-S03",
+   "tier": "start",
+   "text": "A sequence has the rule 5n + 2. Its first terms are 7, 12, 17, 22, ...",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "Is 157 a term?  {circ:Yes|No}   If yes, it is term number {b}.",
+     "answer": {
+      "value": [
+       "Yes",
+       "31"
+      ],
+      "text": "Yes, term 31"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Is 205 a term?  {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The 60th term is {b}.",
+     "answer": {
+      "value": [
+       "302"
+      ],
+      "text": "302"
+     }
+    }
+   ],
+   "explanation": "(a) 157 − 2 = 155 = 5 × 31, so 157 is the 31st term. (b) 205 − 2 = 203 is not a multiple of 5. The terms end in 2 or 7, so 205 is not one. (c) 5 × 60 + 2 = 302."
+  },
+  {
+   "id": "L6U01-S05",
+   "tier": "start",
+   "text": "Complete the code so that the sprite says the first 15 terms of 11, 18, 25, 32, ...",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "set n to {b}",
+     "answer": {
+      "value": [
+       "11"
+      ],
+      "text": "11"
+     }
+    },
+    {
+     "label": "b",
+     "text": "repeat {b}",
+     "answer": {
+      "value": [
+       "15"
+      ],
+      "text": "15"
+     }
+    },
+    {
+     "label": "c",
+     "text": "change n by {b}",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    },
+    {
+     "label": "d",
+     "text": "The last number it says is {b}.",
+     "answer": {
+      "value": [
+       "109"
+      ],
+      "text": "109"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_code",
+    "prog": [
+     [
+      "hat",
+      "when green flag clicked"
+     ],
+     [
+      "var",
+      "set n to ( )"
+     ],
+     [
+      "ctl",
+      "repeat ( )",
+      [
+       [
+        "look",
+        "say (n) for (1) seconds"
+       ],
+       [
+        "var",
+        "change n by ( )"
+       ]
+      ]
+     ]
+    ]
+   },
+   "explanation": "The 1st term is 11, so set n to 11. Each jump adds 7. The sprite says a term, then changes n, and 15 terms need 15 says: repeat 15. The last number said is the 15th term: 7 × 15 + 4 = 109.",
+   "figside": true
+  },
+  {
+   "id": "L6U01-S06",
+   "tier": "start",
+   "text": "Siti's code should say the 30th term of 4, 9, 14, 19, ...",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "Her code says {b}.",
+     "answer": {
+      "value": [
+       "154"
+      ],
+      "text": "154"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The 30th term really is {b}.",
+     "answer": {
+      "value": [
+       "149"
+      ],
+      "text": "149"
+     }
+    },
+    {
+     "label": "c",
+     "text": "To fix it, change repeat 30 to repeat {b}.",
+     "answer": {
+      "value": [
+       "29"
+      ],
+      "text": "29"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_code",
+    "prog": [
+     [
+      "hat",
+      "when green flag clicked"
+     ],
+     [
+      "var",
+      "set n to (4)"
+     ],
+     [
+      "ctl",
+      "repeat (30)",
+      [
+       [
+        "var",
+        "change n by (5)"
+       ]
+      ]
+     ],
+     [
+      "look",
+      "say (n)"
+     ]
+    ]
+   },
+   "explanation": "The loop adds 5 thirty times: 4 + 5 × 30 = 154. That is the 31st term. The 30th term is 5 × 30 − 1 = 149. From the 1st to the 30th term there are only 29 jumps, so use repeat 29.",
+   "figside": true
+  },
+  {
+   "id": "L6U01-S08",
+   "tier": "start",
+   "text": "Circle the rule that gives each sequence. Test n = 1 and n = 2.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "4, 9, 14, 19, ...   {circ:4n + 1|5n − 1|5n + 4}",
+     "answer": {
+      "value": [
+       "5n - 1"
+      ],
+      "text": "5n − 1"
+     }
+    },
+    {
+     "label": "b",
+     "text": "10, 13, 16, 19, ...   {circ:3n + 10|10n + 3|3n + 7}",
+     "answer": {
+      "value": [
+       "3n + 7"
+      ],
+      "text": "3n + 7"
+     }
+    },
+    {
+     "label": "c",
+     "text": "3, 11, 19, 27, ...   {circ:8n + 3|8n − 5|3n + 8}",
+     "answer": {
+      "value": [
+       "8n - 5"
+      ],
+      "text": "8n − 5"
+     }
+    }
+   ],
+   "explanation": "Put n = 1 and n = 2 into each rule. (a) 5 − 1 = 4 and 10 − 1 = 9. (b) 3 + 7 = 10 and 6 + 7 = 13. (c) 8 − 5 = 3 and 16 − 5 = 11. The other rules fail on the 1st term."
+  },
+  {
+   "id": "L6U01-S07",
+   "tier": "start",
+   "text": "Ali has $15 on Day 1. Every day after that he adds $7. So on Day 2 he has $22.",
+   "page": 3,
+   "parts": [
+    {
+     "label": "a",
+     "text": "On Day 4 he has ${b}.",
+     "answer": {
+      "value": [
+       "36"
+      ],
+      "text": "36"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Money on Day n = {b} × n + {b} dollars.",
+     "answer": {
+      "value": [
+       "7",
+       "8"
+      ],
+      "text": "7, 8"
+     }
+    },
+    {
+     "label": "c",
+     "text": "On Day 30 he has ${b}.",
+     "answer": {
+      "value": [
+       "218"
+      ],
+      "text": "218"
+     }
+    },
+    {
+     "label": "d",
+     "text": "He first has more than $200 on Day {b}.",
+     "answer": {
+      "value": [
+       "28"
+      ],
+      "text": "28"
+     }
+    }
+   ],
+   "explanation": "Each day adds $7, so the rule is 7n + 8. Day 4: 36. Day 30: 7 × 30 + 8 = 218. 7n + 8 > 200 needs 7n > 192: 7 × 27 = 189 is too small and 7 × 28 = 196 works, so Day 28 ($204).",
+   "partsrow": true
+  },
+  {
+   "id": "L6U01-S09",
+   "tier": "start",
+   "text": "A program begins on the 1st term of a sequence. Each repeat moves it on to the next term.",
+   "page": 3,
+   "parts": [
+    {
+     "label": "a",
+     "text": "To reach the 60th term, repeat {b} times.",
+     "answer": {
+      "value": [
+       "59"
+      ],
+      "text": "59"
+     }
+    },
+    {
+     "label": "b",
+     "text": "After repeat 40, the sprite is at term number {b}.",
+     "answer": {
+      "value": [
+       "41"
+      ],
+      "text": "41"
+     }
+    },
+    {
+     "label": "c",
+     "text": "To go from the 8th term to the 25th term, repeat {b} times.",
+     "answer": {
+      "value": [
+       "17"
+      ],
+      "text": "17"
+     }
+    }
+   ],
+   "explanation": "The 1st term needs 0 repeats and each repeat adds 1 to the term number. (a) 60 − 1 = 59 repeats. (b) 1 + 40 = the 41st term. (c) 25 − 8 = 17 repeats. The repeats count the jumps, not the terms.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U01-S10",
+   "tier": "start",
+   "text": "This code uses n as a counter and says a rule. Predict what it says.",
+   "page": 3,
+   "parts": [
+    {
+     "label": "a",
+     "text": "It starts: {l}",
+     "answer": {
+      "value": [
+       "4",
+       "7",
+       "10"
+      ],
+      "text": "4, 7, 10",
+      "list": true
+     }
+    },
+    {
+     "label": "b",
+     "text": "The last number it says is {b}.",
+     "answer": {
+      "value": [
+       "25"
+      ],
+      "text": "25"
+     }
+    },
+    {
+     "label": "c",
+     "text": "To say 5, 9, 13, ... use {b} × n + {b}",
+     "answer": {
+      "value": [
+       "4",
+       "1"
+      ],
+      "text": "4, 1"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_code",
+    "prog": [
+     [
+      "hat",
+      "when green flag clicked"
+     ],
+     [
+      "var",
+      "set n to (1)"
+     ],
+     [
+      "ctl",
+      "repeat (8)",
+      [
+       [
+        "look",
+        "say (3 × n + 1) for (1) seconds"
+       ],
+       [
+        "var",
+        "change n by (1)"
+       ]
+      ]
+     ]
+    ]
+   },
+   "explanation": "(a) n = 1, 2, 3 give 3 × 1 + 1 = 4, 7, 10. (b) The 8th number is 3 × 8 + 1 = 25. (c) 5, 9, 13 go up by 4, so use 4 × n + 1: 4 × 1 + 1 = 5.",
+   "figside": true
+  },
+  {
+   "id": "L6U01-S11",
+   "tier": "start",
+   "text": "Aisha looks at 2, 8, 14, 20, ... The difference is 6, so she says the rule is 6n.",
+   "page": 3,
+   "parts": [
+    {
+     "label": "a",
+     "text": "Is she right?  {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The rule 6n gives {b} for the 1st term, but the 1st term is {b}.",
+     "answer": {
+      "value": [
+       "6",
+       "2"
+      ],
+      "text": "6, 2"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The correct rule is {b} × n − {b}.",
+     "answer": {
+      "value": [
+       "6",
+       "4"
+      ],
+      "text": "6, 4"
+     }
+    }
+   ],
+   "explanation": "The rule 6n gives 6 for the 1st term, but the 1st term is 2. Each term is 4 less than 6n: 6 − 4 = 2, 12 − 4 = 8. The difference only tells you the times table. You must still compare with the terms."
+  },
+  {
+   "id": "L6U01-T01",
+   "tier": "think",
+   "text": "A sequence goes down by the same amount each time: 58, 53, 48, 43, ...",
+   "page": 4,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The rule for the nth term is {b} − 5n.",
+     "answer": {
+      "value": [
+       "63"
+      ],
+      "text": "63"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The 10th term is {b}.",
+     "answer": {
+      "value": [
+       "13"
+      ],
+      "text": "13"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The last term above 0 is term number {b}.",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    }
+   ],
+   "hint": "By how much do the terms change each step? Build the rule from it.",
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "(a) The terms go down by 5: 5 × 1 = 5 and 58 + 5 = 63, so 63 − 5n. (b) 63 − 50 = 13. (c) 5 × 12 = 60 gives 3, and 5 × 13 = 65 would be below 0: term 12.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U01-T02",
+   "tier": "think",
+   "text": "Program P starts at the 1st term of 6, 10, 14, 18, ... Program Q starts at the 5th term of the same sequence. Both change by 4 each repeat.",
+   "page": 4,
+   "parts": [
+    {
+     "label": "a",
+     "text": "Q ends at term number {b}.",
+     "answer": {
+      "value": [
+       "21"
+      ],
+      "text": "21"
+     }
+    },
+    {
+     "label": "b",
+     "text": "To end at the same term, P must repeat {b} times.",
+     "answer": {
+      "value": [
+       "20"
+      ],
+      "text": "20"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Both programs say {b}.",
+     "answer": {
+      "value": [
+       "86"
+      ],
+      "text": "86"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_code",
+    "prog": [
+     [
+      "hat",
+      "Program Q"
+     ],
+     [
+      "var",
+      "set n to (22)"
+     ],
+     [
+      "ctl",
+      "repeat (16)",
+      [
+       [
+        "var",
+        "change n by (4)"
+       ]
+      ]
+     ],
+     [
+      "look",
+      "say (n)"
+     ]
+    ]
+   },
+   "hint": "Count how many terms Q moves on. P starts 4 terms earlier.",
+   "explanation": "The 5th term is 4 × 5 + 2 = 22. Q adds 4 sixteen times: 22 + 64 = 86, which is term 5 + 16 = 21. P starts at the 1st term, so it needs 21 − 1 = 20 repeats (6 + 20 × 4 = 86).",
+   "figside": true
+  },
+  {
+   "id": "L6U01-T03",
+   "tier": "think",
+   "text": "A sequence goes up by the same amount each time. Its 4th term is 23 and its 9th term is 53.",
+   "page": 4,
+   "parts": [
+    {
+     "label": "a",
+     "text": "From the 4th term to the 9th term is {b} jumps.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Each jump is {b}.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The 1st term is {b}.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "d",
+     "text": "The rule is {b} × n − {b}.",
+     "answer": {
+      "value": [
+       "6",
+       "1"
+      ],
+      "text": "6, 1"
+     }
+    }
+   ],
+   "hint": "How many jumps are there between the 2 known terms?",
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "From the 4th to the 9th term is 5 jumps and the terms rose by 30, so each jump is 6. Back 3 jumps from 23: 5. The rule is 6n − 1.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U01-G01",
+   "tier": "go",
+   "text": "Matchsticks make staircases. Look at staircases 1, 2 and 3.",
+   "page": 5,
+   "parts": [
+    {
+     "label": "a",
+     "text": "Count the sticks. Staircase 2 has {b} and staircase 3 has {b}.",
+     "answer": {
+      "value": [
+       "10",
+       "18"
+      ],
+      "text": "10, 18"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The extra sticks go up by the same amount each time. Staircase 4 has {b} sticks and staircase 5 has {b}.",
+     "answer": {
+      "value": [
+       "28",
+       "40"
+      ],
+      "text": "28, 40"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Staircase 10 has {b} sticks.",
+     "answer": {
+      "value": [
+       "130"
+      ],
+      "text": "130"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_sticks",
+    "shape": "stairs",
+    "ks": [
+     1,
+     2,
+     3
+    ],
+    "side": 8
+   },
+   "hint": "Find how many extra sticks each staircase adds. Look for a pattern.",
+   "explanation": "The extra sticks are 6, 8, then 10 and 12 (they go up by 2): 18 + 10 = 28 and 28 + 12 = 40. Staircase 10: 4 + 6 + 8 + ... + 22 = 130. (The rule is n × n + 3n.)",
+   "beyond": "Second differences",
+   "figright": true
+  },
+  {
+   "id": "L6U01-G02",
+   "tier": "go",
+   "text": "A sprite says these numbers in order: 3, 20, 7, 25, 11, 30, 15, 35, ...",
+   "page": 5,
+   "parts": [
+    {
+     "label": "a",
+     "text": "Places 1, 3, 5, ... go up by {b}. Places 2, 4, 6, ... go up by {b}.",
+     "answer": {
+      "value": [
+       "4",
+       "5"
+      ],
+      "text": "4, 5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The number in place 15 is {b}.",
+     "answer": {
+      "value": [
+       "31"
+      ],
+      "text": "31"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The number in place 20 is {b}.",
+     "answer": {
+      "value": [
+       "65"
+      ],
+      "text": "65"
+     }
+    }
+   ],
+   "hint": "Split it into 2 sequences. Which one is place 15 in?",
+   "explanation": "Places 1, 3, 5, ... say 3, 7, 11, ...: up by 4. Places 2, 4, 6, ... say 20, 25, 30, ...: up by 5. Place 15 is the 8th of the first kind: 3 + 7 × 4 = 31. Place 20 is the 10th of the second: 20 + 9 × 5 = 65.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U01-G03",
+   "tier": "go",
+   "text": "What does this code say? Write t after each repeat.",
+   "page": 5,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The code says {b}.",
+     "answer": {
+      "value": [
+       "14"
+      ],
+      "text": "14"
+     }
+    },
+    {
+     "label": "b",
+     "text": "When it stops, t is {b}.",
+     "answer": {
+      "value": [
+       "105"
+      ],
+      "text": "105"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_code",
+    "prog": [
+     [
+      "var",
+      "set t to (0)"
+     ],
+     [
+      "var",
+      "set k to (0)"
+     ],
+     [
+      "ctl",
+      "repeat until <(t) {gt} (100)>",
+      [
+       [
+        "var",
+        "change k by (1)"
+       ],
+       [
+        "var",
+        "change t by (k)"
+       ]
+      ]
+     ],
+     [
+      "look",
+      "say (k)"
+     ]
+    ]
+   },
+   "hint": "Write t after every repeat: 1, 3, 6, ... Where does it pass 100?",
+   "explanation": "t after each repeat: 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78, 91, 105. It stops when t is above 100, after repeat 14: k = 14, t = 105. (Triangle numbers.)",
+   "beyond": "Triangle numbers",
+   "figside": true
+  },
+  {
+   "id": "L6U01-C01",
+   "tier": "quiz",
+   "text": "Find the rule for 9, 15, 21, 27, ... The rule is {b} × n + {b}. The 100th term is {b}.",
+   "page": 6,
+   "answer": {
+    "value": [
+     "6",
+     "3",
+     "603"
+    ],
+    "text": "6, 3, 603"
+   },
+   "explanation": "The difference is 6. Each term is 3 more than 6, 12, 18, 24, so the rule is 6n + 3. The 100th term is 6 × 100 + 3 = 603."
+  },
+  {
+   "id": "L6U01-C02",
+   "tier": "quiz",
+   "text": "Is 125 a term of 7, 12, 17, 22, ...?  {circ:Yes|No}",
+   "page": 6,
+   "answer": {
+    "value": [
+     "No"
+    ],
+    "text": "No"
+   },
+   "explanation": "The rule is 5n + 2. 125 − 2 = 123 is not a multiple of 5. The terms end in 2 or 7, so 125 is not a term."
+  },
+  {
+   "id": "L6U01-C03",
+   "tier": "quiz",
+   "text": "The code is: set n to 8, then repeat 20 times: change n by 6. At the end n = {b}, which is term number {b} of 8, 14, 20, ...",
+   "page": 6,
+   "answer": {
+    "value": [
+     "128",
+     "21"
+    ],
+    "text": "128, term 21"
+   },
+   "explanation": "8 + 20 × 6 = 128. From the 1st term to the 21st term there are 20 jumps, so 128 is the 21st term. Check: 6 × 21 + 2 = 128."
+  },
+  {
+   "id": "L6U01-C04",
+   "tier": "quiz",
+   "text": "Mei starts at n = 5. She repeats 4 times: change n by 3, then say n. What is the first number it says?  {b}",
+   "page": 6,
+   "answer": {
+    "value": [
+     "8"
+    ],
+    "text": "8"
+   },
+   "explanation": "The code changes n before it says it. 5 + 3 = 8, so the first number said is 8, not the 1st term 5. To say 5 first, say n before changing it."
+  }
+ ]
+}

@@ -1,0 +1,992 @@
+{
+ "schema_version": 1,
+ "level": 6,
+ "unit": 3,
+ "id": "L6U03",
+ "title": "Below zero",
+ "topic": "Negative numbers",
+ "holiday_lesson": 3,
+ "goal": "I can order negative numbers and add and subtract by jumping along a number line. I can follow a variable that goes below 0 in code.",
+ "learn": {
+  "intro": "Numbers below 0 have a minus sign. On a number line, greater numbers are to the right. To add, jump right. To subtract, jump left. When a jump crosses 0, split it at 0. If it does not cross 0, just count the steps.",
+  "example": {
+   "problem": "A freezer thermometer reads −8 °C. The door is opened and it rises 5 degrees. Then the door is shut and it falls 9 degrees. What does it read now?",
+   "figure": {
+    "type": "l6_nline",
+    "lo": -14,
+    "hi": 2,
+    "mm": 8,
+    "every": 2,
+    "marks": [
+     {
+      "at": -8,
+      "lab": "start"
+     }
+    ],
+    "jumps": [
+     {
+      "a": -8,
+      "b": -3,
+      "lab": "+5"
+     },
+     {
+      "a": -3,
+      "b": -12,
+      "lab": "−9"
+     }
+    ],
+    "unit": "°C"
+   },
+   "steps": [
+    "Start at −8. Rising moves right: 5 steps to −3.",
+    "Falling moves left. From −3, move 9 steps left to −12. It does not cross 0.",
+    "The thermometer reads −12 °C.",
+    "Check by adding: −8 + 5 − 9 = −12."
+   ],
+   "answer": "It reads −12 °C."
+  },
+  "howto": {
+   "title": "How to add and subtract with negative numbers",
+   "steps": [
+    "Mark the start on the number line.",
+    "Adding moves right. Subtracting moves left.",
+    "If the jump crosses 0, split it at 0. If not, count the steps.",
+    "Count the steps in the direction of the jump: never turn round.",
+    "Check by jumping back to the start."
+   ]
+  },
+  "try": {
+   "id": "L6U03-L01",
+   "tier": "start",
+   "text": "It is −3 °C. It falls 8 degrees. What is the temperature now? {b} °C",
+   "answer": {
+    "value": [
+     "-11"
+    ],
+    "text": "−11"
+   },
+   "explanation": "Falling moves left. From −3 jump left 8 steps: −3 + (−8) = −11. Check: from −11 jump right 8 to reach −3."
+  },
+  "tight": true
+ },
+ "items": [
+  {
+   "id": "L6U03-S01",
+   "tier": "start",
+   "text": "Put the numbers in order. Begin with the smallest.",
+   "page": 1,
+   "parts": [
+    {
+     "label": "a",
+     "text": "2, −6, −11, 0, −3, 8  gives  {ll}",
+     "answer": {
+      "value": [
+       "-11",
+       "-6",
+       "-3",
+       "0",
+       "2",
+       "8"
+      ],
+      "text": "−11, −6, −3, 0, 2, 8",
+      "list": true
+     }
+    },
+    {
+     "label": "b",
+     "text": "Circle > or <:   −4  {circ:>|<}  −10        0  {circ:>|<}  −2        −15  {circ:>|<}  1",
+     "answer": {
+      "value": [
+       ">",
+       ">",
+       "<"
+      ],
+      "text": ">, >, <"
+     }
+    }
+   ],
+   "explanation": "The smallest number is the furthest left on the number line: −11, −6, −3, 0, 2, 8. (b) On the number line, the number on the right is greater. −4 is to the right of −10, 0 is right of −2, and −15 is left of 1."
+  },
+  {
+   "id": "L6U03-S02",
+   "tier": "start",
+   "text": "Read the number line. Each mark is 1 step.",
+   "page": 1,
+   "parts": [
+    {
+     "label": "a",
+     "text": "A = {b}   B = {b}   C = {b}",
+     "answer": {
+      "value": [
+       "-9",
+       "-3",
+       "5"
+      ],
+      "text": "−9, −3, 5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "From A to B is {b} steps. From B to C is {b} steps.",
+     "answer": {
+      "value": [
+       "6",
+       "8"
+      ],
+      "text": "6, 8"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_nline",
+    "lo": -12,
+    "hi": 8,
+    "mm": 7,
+    "every": 2,
+    "marks": [
+     {
+      "at": -9,
+      "lab": "A"
+     },
+     {
+      "at": -3,
+      "lab": "B"
+     },
+     {
+      "at": 5,
+      "lab": "C"
+     }
+    ]
+   },
+   "explanation": "A is 1 step right of −10: −9. B is 1 step left of −2: −3. C is 1 step left of 6: 5. From −9 to −3 is 6 steps. From −3 to 5 is 3 + 5 = 8 steps."
+  },
+  {
+   "id": "L6U03-S03",
+   "tier": "start",
+   "text": "The thermometer shows 3 readings on one day.",
+   "page": 1,
+   "parts": [
+    {
+     "label": "a",
+     "text": "At 6 a.m.: {b} °C",
+     "answer": {
+      "value": [
+       "-6"
+      ],
+      "text": "−6"
+     }
+    },
+    {
+     "label": "b",
+     "text": "At noon: {b} °C",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    },
+    {
+     "label": "c",
+     "text": "At 9 p.m.: {b} °C",
+     "answer": {
+      "value": [
+       "-3"
+      ],
+      "text": "−3"
+     }
+    },
+    {
+     "label": "d",
+     "text": "From 6 a.m. to noon it rose {b} degrees.",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    },
+    {
+     "label": "e",
+     "text": "From noon to 9 p.m. it fell {b} degrees.",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_vline",
+    "lo": -8,
+    "hi": 6,
+    "mm": 6.5,
+    "marks": [
+     {
+      "at": -6,
+      "lab": "6 a.m."
+     },
+     {
+      "at": 4,
+      "lab": "noon"
+     },
+     {
+      "at": -3,
+      "lab": "9 p.m."
+     }
+    ],
+    "title": "°C"
+   },
+   "explanation": "Read each mark: 6 a.m. is −6 °C, noon is 4 °C and 9 p.m. is −3 °C. From −6 up to 4 is 6 steps to 0 and 4 more: 10 degrees. From 4 down to −3 is 4 steps to 0 and 3 more: 7 degrees.",
+   "figside": true
+  },
+  {
+   "id": "L6U03-S04",
+   "tier": "start",
+   "text": "Find the value of each one. Use a number line to help.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "−6 + 10 = {b}",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    },
+    {
+     "label": "b",
+     "text": "3 − 9 = {b}",
+     "answer": {
+      "value": [
+       "-6"
+      ],
+      "text": "−6"
+     }
+    },
+    {
+     "label": "c",
+     "text": "−7 − 5 = {b}",
+     "answer": {
+      "value": [
+       "-12"
+      ],
+      "text": "−12"
+     }
+    },
+    {
+     "label": "d",
+     "text": "−4 + 15 = {b}",
+     "answer": {
+      "value": [
+       "11"
+      ],
+      "text": "11"
+     }
+    }
+   ],
+   "explanation": "(a) From −6 jump right 10: 4 steps to 0, then 6 more: 4. (b) From 3 jump left 9: 3 steps to 0, then 6 more: −6. (c) From −7 jump left 5: −12. (d) From −4 jump right 15: 4 steps to 0, then 11 more: 11.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U03-S05",
+   "tier": "start",
+   "text": "Find the missing number.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "−5 + {b} = 6",
+     "answer": {
+      "value": [
+       "11"
+      ],
+      "text": "11"
+     }
+    },
+    {
+     "label": "b",
+     "text": "4 − {b} = −3",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    },
+    {
+     "label": "c",
+     "text": "{b} + 8 = 2",
+     "answer": {
+      "value": [
+       "-6"
+      ],
+      "text": "−6"
+     }
+    },
+    {
+     "label": "d",
+     "text": "{b} − 5 = −9",
+     "answer": {
+      "value": [
+       "-4"
+      ],
+      "text": "−4"
+     }
+    }
+   ],
+   "explanation": "(a) From −5 to 6 is 5 steps to 0 and 6 more: 11. (b) 4 − 7 = −3, so 7. (c) −6 + 8 = 2, so the missing number is −6. (d) −4 − 5 = −9, so the missing number is −4.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U03-S06",
+   "tier": "start",
+   "text": "How far is it from the first number to the second? Count the steps, splitting at 0.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "−9 to 4:  {b} steps",
+     "answer": {
+      "value": [
+       "13"
+      ],
+      "text": "13"
+     }
+    },
+    {
+     "label": "b",
+     "text": "−6 to −1:  {b} steps",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "c",
+     "text": "−14 °C to 31 °C:  {b} degrees",
+     "answer": {
+      "value": [
+       "45"
+      ],
+      "text": "45"
+     }
+    }
+   ],
+   "explanation": "(a) From −9 to 4: 9 steps to 0 and 4 more is 13. (b) From −6 to −1: 5 steps, no need to cross 0. (c) From −14 to 31: 14 steps to 0 and 31 more is 45.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U03-S08",
+   "tier": "start",
+   "text": "A sprite starts at x = 100. Fill in the blocks.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "It ends at x = 0. change x by {b}",
+     "answer": {
+      "value": [
+       "-25"
+      ],
+      "text": "−25"
+     }
+    },
+    {
+     "label": "b",
+     "text": "With repeat 8 and change x by (−20), it ends at x = {b}.",
+     "answer": {
+      "value": [
+       "-60"
+      ],
+      "text": "−60"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_code",
+    "prog": [
+     [
+      "hat",
+      "when green flag clicked"
+     ],
+     [
+      "var",
+      "set x to (100)"
+     ],
+     [
+      "ctl",
+      "repeat (4)",
+      [
+       [
+        "var",
+        "change x by ( )"
+       ]
+      ]
+     ]
+    ]
+   },
+   "explanation": "(a) 4 equal moves must go from 100 down to 0. That is 100 left in 4 moves, so each move is −25. (b) 8 moves of −20 make −160, and 100 − 160 = −60.",
+   "figside": true
+  },
+  {
+   "id": "L6U03-S11",
+   "tier": "start",
+   "text": "Think about how far each number is from 0.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "Circle the number closest to 0:   −9    5    −3    7    −4",
+     "answer": {
+      "value": [
+       "-3"
+      ],
+      "text": "−3"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Which is further from 0?   {circ:−8|6}",
+     "answer": {
+      "value": [
+       "-8"
+      ],
+      "text": "−8"
+     }
+    }
+   ],
+   "explanation": "(a) The distances from 0 are 9, 5, 3, 7 and 4. −3 is only 3 steps from 0. (b) −8 is 8 steps from 0 and 6 is 6 steps from 0, so −8 is further."
+  },
+  {
+   "id": "L6U03-S07",
+   "tier": "start",
+   "text": "Trace the code. The sprite changes x, then says it.",
+   "page": 3,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The 3rd number it says is {b}.",
+     "answer": {
+      "value": [
+       "-15"
+      ],
+      "text": "−15"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The last number it says is {b}.",
+     "answer": {
+      "value": [
+       "-65"
+      ],
+      "text": "−65"
+     }
+    },
+    {
+     "label": "c",
+     "text": "It says {b} numbers that are below 0.",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_code",
+    "prog": [
+     [
+      "var",
+      "set x to (60)"
+     ],
+     [
+      "ctl",
+      "repeat (5)",
+      [
+       [
+        "var",
+        "change x by (−25)"
+       ],
+       [
+        "look",
+        "say (x) for (1) seconds"
+       ]
+      ]
+     ]
+    ],
+    "trace": {
+     "cols": [
+      "Loop",
+      "x said"
+     ],
+     "rows": 5,
+     "first": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "cw": 24,
+     "ch": 8
+    }
+   },
+   "explanation": "x starts at 60. Loop 1: 60 − 25 = 35. Loop 2: 10. Loop 3: −15. Loop 4: −40. Loop 5: −65. The 3rd number said is −15. The last is −65. The numbers below 0 are −15, −40 and −65: 3 of them.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U03-S09",
+   "tier": "start",
+   "text": "A balance of −15 dollars means Ali owes 15 dollars. Ali has 25 dollars.",
+   "page": 3,
+   "parts": [
+    {
+     "label": "a",
+     "text": "He buys a game for 40 dollars. His balance is {b} dollars.",
+     "answer": {
+      "value": [
+       "-15"
+      ],
+      "text": "−15"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Then he is given 30 dollars. His balance is {b} dollars.",
+     "answer": {
+      "value": [
+       "15"
+      ],
+      "text": "15"
+     }
+    },
+    {
+     "label": "c",
+     "text": "To go from −15 dollars up to 20 dollars, he needs {b} dollars.",
+     "answer": {
+      "value": [
+       "35"
+      ],
+      "text": "35"
+     }
+    }
+   ],
+   "explanation": "(a) 25 − 40 = −15. (b) −15 + 30 = 15. (c) From −15 up to 20: 15 dollars to reach 0, then 20 more, 35 dollars."
+  },
+  {
+   "id": "L6U03-S10",
+   "tier": "start",
+   "text": "In a card game, scores can go below 0. Ali has −35 points, Ben has 48 points and Cy has −6 points.",
+   "page": 3,
+   "parts": [
+    {
+     "label": "a",
+     "text": "Ben is {b} points ahead of Ali.",
+     "answer": {
+      "value": [
+       "83"
+      ],
+      "text": "83"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Cy is {b} points ahead of Ali.",
+     "answer": {
+      "value": [
+       "29"
+      ],
+      "text": "29"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Ben wins a round and gets 12 more points. He has {b} points.",
+     "answer": {
+      "value": [
+       "60"
+      ],
+      "text": "60"
+     }
+    }
+   ],
+   "explanation": "(a) From −35 up to 0 is 35, then 48 more: 83 points. (b) From −35 up to −6 is 29 points. (c) 48 + 12 = 60 points."
+  },
+  {
+   "id": "L6U03-T01",
+   "tier": "think",
+   "text": "To find 6 − (−4), count the steps from −4 up to 6.",
+   "page": 4,
+   "parts": [
+    {
+     "label": "a",
+     "text": "6 − (−4) = {b}",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    },
+    {
+     "label": "b",
+     "text": "−2 − (−5) = {b}",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    },
+    {
+     "label": "c",
+     "text": "So taking away −4 gives the same result as adding {b}.",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    }
+   ],
+   "hint": "Picture both numbers on a number line.",
+   "space": {
+    "rows": [
+     "Number line:",
+     ""
+    ]
+   },
+   "explanation": "(a) 6 − (−4): from −4 to 6 is 10 steps. (b) −2 − (−5): from −5 to −2 is 3 steps. (c) In both, subtracting a negative number gave the same answer as adding the matching positive number: 6 + 4 and −2 + 5.",
+   "partsrow": true,
+   "beyond": "Subtracting a negative number"
+  },
+  {
+   "id": "L6U03-T02",
+   "tier": "think",
+   "text": "A sprite starts at x = −90. The loop stops as soon as x is greater than 40 at the start of a repeat.",
+   "page": 4,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The loop repeats {b} times.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The sprite says {b}.",
+     "answer": {
+      "value": [
+       "60"
+      ],
+      "text": "60"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_code",
+    "prog": [
+     [
+      "var",
+      "set x to (−90)"
+     ],
+     [
+      "ctl",
+      "repeat until <(x) {gt} (40)>",
+      [
+       [
+        "var",
+        "change x by (35)"
+       ],
+       [
+        "var",
+        "change x by (−10)"
+       ]
+      ]
+     ],
+     [
+      "look",
+      "say (x)"
+     ]
+    ]
+   },
+   "hint": "Write x after each repeat. Is it more than 40 yet?",
+   "explanation": "Each repeat changes x by 35 − 10 = 25. After the repeats x is −65, −40, −15, 10, 35, 60. After 5 repeats x = 35, which is not greater than 40, so it repeats a 6th time. It stops with x = 60.",
+   "figside": true
+  },
+  {
+   "id": "L6U03-T03",
+   "tier": "think",
+   "text": "On Monday at noon it was 3 °C. On Tuesday it was 11 degrees colder than Monday. On Wednesday it was 6 degrees warmer than Tuesday. On Thursday it was −4 °C.",
+   "page": 4,
+   "parts": [
+    {
+     "label": "a",
+     "text": "Tuesday: {b} °C",
+     "answer": {
+      "value": [
+       "-8"
+      ],
+      "text": "−8"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Wednesday: {b} °C",
+     "answer": {
+      "value": [
+       "-2"
+      ],
+      "text": "−2"
+     }
+    },
+    {
+     "label": "c",
+     "text": "From Monday to Thursday it fell {b} degrees.",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    }
+   ],
+   "hint": "Draw a number line. Mark Monday first, then each change.",
+   "space": {
+    "rows": [
+     "Number line:",
+     ""
+    ]
+   },
+   "explanation": "Tuesday: 3 − 11 = −8. Wednesday: −8 + 6 = −2. Thursday is −4, which is 2 below Wednesday. From Monday (3) to Thursday (−4): 3 steps to 0 and 4 more, so it fell 7 degrees.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U03-G01",
+   "tier": "go",
+   "text": "Two divers: A is at −12 m and goes down 4 m every minute. B is at −40 m and comes up 6 m every minute.",
+   "page": 5,
+   "parts": [
+    {
+     "label": "a",
+     "text": "After 3 minutes, A is at {b} m and B is at {b} m.",
+     "answer": {
+      "value": [
+       "-24",
+       "-22"
+      ],
+      "text": "−24, −22"
+     }
+    },
+    {
+     "label": "b",
+     "text": "B is first above A after minute {b}.",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    },
+    {
+     "label": "c",
+     "text": "After 5 minutes they are {b} m apart.",
+     "answer": {
+      "value": [
+       "22"
+      ],
+      "text": "22"
+     }
+    }
+   ],
+   "hint": "Make a table: minute, depth of A, depth of B.",
+   "space": {
+    "rows": [
+     "Working:",
+     ""
+    ]
+   },
+   "explanation": "After 3 minutes A is at −24 and B at −22, so B is above A (after 2 minutes A −20 and B −28). After 5 minutes A −32 and B −10: 22 m apart.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U03-G02",
+   "tier": "go",
+   "text": "This code uses a and b. Run it for each pair of numbers.",
+   "page": 5,
+   "parts": [
+    {
+     "label": "a",
+     "text": "a = −8 and b = 5. It says {b}.",
+     "answer": {
+      "value": [
+       "13"
+      ],
+      "text": "13"
+     }
+    },
+    {
+     "label": "b",
+     "text": "a = −3 and b = −9. It says {b}.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "c",
+     "text": "a = −6 and b = −6. It says {b}.",
+     "answer": {
+      "value": [
+       "0"
+      ],
+      "text": "0"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_code",
+    "prog": [
+     [
+      "ctl",
+      "if <(a) {gt} (b)> then",
+      [
+       [
+        "look",
+        "say (a − b)"
+       ]
+      ],
+      [
+       [
+        "look",
+        "say (b − a)"
+       ]
+      ]
+     ]
+    ]
+   },
+   "hint": "Is a greater than b? Choose the right branch first.",
+   "explanation": "It says how far apart a and b are. a = −8, b = 5: a is not greater, so 5 − (−8) = 13. a = −3, b = −9: a is greater, so −3 − (−9) = 6. Equal numbers give 0.",
+   "figside": true
+  },
+  {
+   "id": "L6U03-G03",
+   "tier": "go",
+   "text": "There is no year 0. The year after 1 BC is AD 1. Count the years one by one.",
+   "page": 5,
+   "parts": [
+    {
+     "label": "a",
+     "text": "From 5 BC to 1 BC is {b} years.",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    },
+    {
+     "label": "b",
+     "text": "From 3 BC to AD 4 is {b} years.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "c",
+     "text": "A person born in 10 BC dies in AD 12. They are {b} years old.",
+     "answer": {
+      "value": [
+       "21"
+      ],
+      "text": "21"
+     }
+    }
+   ],
+   "hint": "Which year comes straight after 1 BC? Count carefully.",
+   "space": {
+    "rows": [
+     "Working:",
+     ""
+    ]
+   },
+   "explanation": "(a) 5, 4, 3, 2, 1 BC: 4 steps. (b) 3 BC, 2 BC, 1 BC, AD 1, 2, 3, 4: 6 steps. (c) 10 BC to 1 BC is 9 steps, 1 more to AD 1, then 11 to AD 12: 21 years.",
+   "beyond": "A calendar with no year 0",
+   "partsrow": true
+  },
+  {
+   "id": "L6U03-C01",
+   "tier": "quiz",
+   "text": "−9 + 14 = {b}     6 − 13 = {b}",
+   "page": 6,
+   "answer": {
+    "value": [
+     "5",
+     "-7"
+    ],
+    "text": "5, −7"
+   },
+   "explanation": "From −9 jump right 14: 9 steps to 0 and 5 more is 5. From 6 jump left 13: 6 steps to 0 and 7 more is −7."
+  },
+  {
+   "id": "L6U03-C02",
+   "tier": "quiz",
+   "text": "Put in order, smallest first:  4, −7, −2, 0  {ll}",
+   "page": 6,
+   "answer": {
+    "value": [
+     "-7",
+     "-2",
+     "0",
+     "4"
+    ],
+    "text": "−7, −2, 0, 4",
+    "list": true
+   },
+   "explanation": "On a number line, from left to right: −7, −2, 0, 4."
+  },
+  {
+   "id": "L6U03-C03",
+   "tier": "quiz",
+   "text": "It is −6 °C. It rises 11 degrees, then falls 8 degrees. It is now {b} °C.",
+   "page": 6,
+   "answer": {
+    "value": [
+     "-3"
+    ],
+    "text": "−3"
+   },
+   "explanation": "−6 + 11 = 5. Then 5 − 8 = −3."
+  },
+  {
+   "id": "L6U03-C04",
+   "tier": "quiz",
+   "text": "A sprite starts at x = 20. It runs repeat 3 [change x by −15]. Then x = {b}.",
+   "page": 6,
+   "answer": {
+    "value": [
+     "-25"
+    ],
+    "text": "−25"
+   },
+   "explanation": "3 moves of −15 make −45. 20 − 45 = −25."
+  }
+ ]
+}

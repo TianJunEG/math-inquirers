@@ -1,0 +1,52 @@
+# Guide and deck audit: Level 1 Term 3 Lesson 23 (Time Passes)
+
+Auditor: independent desk review. Read all 21 pages of `L23_Tutor_Guide.pdf`, viewed all 30 slides of `L23_Deck.pdf` (45 dpi contact sheets, plus word-box measurements of every slide with `pdftotext -bbox`), read `lessons/l23.json` (script, slides, rec, timing, safeguarding, spare_time, tutor_prep, kit contract), the neighbouring lessons' hand-off fields (`l20` to `l22`, `l24`, `l25`), `l30.json` (the Quest gates that lean on this lesson), `website/privacy.html`, `docs/terms/owner_decisions.md` (Term 2 defaults 5 to 10), `l1_term3_term4_preflight.md` sections 1, 4, 5, 8, 13, `TERM_WIDE_AUDIT.md`, `FIXES2_L*.md` and the Term 2 guide and deck audits. Maths re-checked: warm-up (3 o'clock, half past 6, 12 o'clock; 12 fives, 30 minutes; 34 + 10 is 44 and 52 + 10 is 62), sneak-peek (5:00; 9:00), Explore (2:00, 2:30; 1:30, 2:00), Mini-lesson (11:00; 1:00; 10:30, 11:00; start 5:00; start 9:30; A 1 hour, B half an hour; Games end 10:00, Craft 11:30), workbook S1 to G3, the Investigation, talk time (8:00 is right), exit ticket, optional slide (1-hour game started 5:00, half-hour game 5:30): all correct.
+
+Instruments: AUTHORING 16-point rubric, delivery items 3, 7, 8, 9, 15: 3 PASS (parts sum to 90; script 68:21, slow class 80:51, no part OVER), 7 PASS (every REC cue is at most 26 words, with a child-watching-later action; chapter table in guide section 8), 8 PASS, 9 PASS, 15 PASS; instrument A re-score for delivery 17 / 24; timing model of `timing_p1.md` as in the guide's section 9. Verdict: **Ready after minor fixes**.
+
+Findings: High 0, Medium 4, Low 7.
+
+## What works
+
+The script is calm and teaches one idea at a time: first one hour later (the long hand stays), then half an hour later (the long hand goes half way round, the hour changes), then back, then two clocks, then a table. Answers are held back: the Explore slides carry no times, `s-m3` shows a blank box, `s-m5` has empty cells and the filled table is on `s-m5a`. Check slides follow every workbook page. The recording cues are short, and a child watching later is told to pause, to set the clock and to say each time out loud. Safeguarding is consistent with the script: main room only, no paper to the camera ("tick your own work, answer on a count of three, show fingers"), no private chat, no names with answers, WhatsApp-only route for "I am still stuck". The recording and greeting lines are word for word those of L20 and L22. The materials are true: the clock comes from the first lesson of Term 3 (2 faces, 3 + 3 hands; this lesson uses 2 + 2, kit contract holds), with a paper plate fallback, and the next lesson's cutting (29 play-money pieces) is flagged "give a week's notice" in the guide, the deck's end slide (28) and the parent page. The beyond-P1 statement is in the guide (strand note, "Plain statement" NOTE, tutor_prep) and says plainly that the one- and half-hour adds are P1 and that quarter-time starts, the two-stage trip and noon are beyond. No "MOE-aligned" claim. The Quest dependency ("the Quest has a gate on this idea") is true: Quest gate C2 is "A film starts at 2:30, half an hour; one hour after 5..." (`l30.json`).
+
+## Timing and tutor load
+
+Script 68:21 of 90, slow class 80:51, last 5 minutes untouched buffer: realistic. The workbook allotment (32:00; page 1 8:00, page 2 9:00, choice 4:00) fits the guide's own middle-child estimates (7.5 and 9.0 minutes), unlike the Term 2 lessons that overran. Explore asks 8 children to set a cut-out clock twice and to move hands again for half an hour, with a 1:00 to 1:10 allowance each time and the tutor "scanning the cameras"; the guide admits "you cannot see small clocks" and substitutes "say what time your clock shows". That is workable for 8 six-year-olds only if the tutor keeps to one question at a time (it does). One tutor can run it. No breakout room time is counted and none is used.
+
+## Slide audit (30 slides)
+
+Clean: 3 to 12, 14 to 16, 18, 20, 21, 23 to 26, 29 (warm-up, sneak-peek, explore, mini-lesson, break, check slides, talk, exit, optional); slides 1, 2, 27, 28 are clean except for the calculator Mi. Mi appears on the title, two small bubbles (slides 2 and 27) and the end slide (28); speech bubbles carry no numbers or answers ("Take your time!", "Great thinking today!"). Every slide has a speaker note. Minute tags match the guide's part table. Maths on every slide is right. Concerns:
+
+- Slides 13 ("How long?"), 17 and 19 (workbook pages 1 and 2 as slides): clocks are drawn 8 to 11% of the slide width (about 165 to 210 px at 1920 wide) and the four clocks of `s-m4` leave the lower 60% of the slide empty. The guide's own prep line says "the figures on the slides are small". Finding 2.
+- Slide 22 ("Choose your next page") and slide 30 (spare-time menu): "Quarter times" and "why the hour changes at half past" (findings 3 and 5).
+- Mi's calculator on slides 1, 2, 27 and 28 (finding 1).
+- Slide 24 ("Back to the sneak-peek") fills the top third and leaves the rest empty: Low, fine.
+
+## Findings
+
+| # | Sev | Location | Evidence | Suggested fix |
+|---|---|---|---|---|
+| 1 | Medium | Deck slides 1, 2, 27, 28 (Mi), guide cover, parent page | The deck was built at 02:18; `term/l1/assets/mi_dolphin_nocalc.png` was added at 03:08 and is picked up automatically by `common.py`. Mi holds a calculator in all four poses (owner default 6: Mi never uses or mentions it) | Rebuild all Term 3 decks after the swap; add a build check that fails while the image on a slide hashes to the calculator version |
+| 2 | Medium | Slide 13 `s-m4` "How long?", slides 17 and 19 (`s-ws1`, `s-ws2`) | Four clocks at about 8% of slide width on a 1080p share, 60% of the slide blank; S4 and S5 clocks on the workbook slides are about 1.3 cm tall on a laptop; the guide tells the tutor to read every time aloud because "the figures on the slides are small". These are exactly the slides where a child checks a hand position | Draw the clocks at 20 to 25% of slide width (two per row for `s-m4`), give each pair a "start/end" label and digits only after the answer; for workbook slides show one question per slide when the figure is a clock |
+| 3 | Medium | Slide 30 `s-menu`, row "Teach it back" | Slide says "Show a toy why the hour changes at half past." The guide and the workbook both teach that the hour changes when the long hand reaches 12 (after half past 5 comes 6 o'clock). The slide plants the misconception "the hour changes at half past" (the hour hand is half way, not changed) | Reword to "Show a toy why half an hour after half past 5 is 6 o'clock." (matches the guide's activity) |
+| 4 | Medium (term chain) | Lesson 20 hand-off, checked from this lesson's chain | `L20_Parent_Summary` and `l20.json` still say "print it a week before" and "a toy or real clock ... (optional)", with no mention of cutting the six clock hands or keeping the $1 tokens. Lesson 21's clock is what this lesson needs; a family that follows the L20 note arrives without a clock | Fix `l20.json` (`parent.next_materials`, `s-end`, goodbye SAY, `tutor_prep`) and rebuild L20; the chain 21 to 22 to 23 to 24 itself is true |
+| 5 | Low | Slide 22 `s-choice` | Shows children "Quarter times, going back, a zoo timetable". The patterns file and the guide both make "quarter past/to" tutor vocabulary only and the guide says "do not teach quarter" | Say "Starts at 4:15 and 9:45, going back, a zoo timetable" |
+| 6 | Low | Guide section 9, assumption line | "papers to the camera 30 s" remains in the timing assumptions although paper hold-ups were removed (Term 2 default 9) | Delete the clause |
+| 7 | Low | Guide opening lines (0:26 to 0:56) | The DO line starts the recording after the greeting; the notice is said at 0:56, about 30 seconds into the recording. Same wording as L20 and L22 (so consistent) and `privacy.html` says "we tell the group at the start of each lesson". The brief's reading ("notice before recording starts") would need "Before I press record: this lesson is recorded ...". Carried over from Term 2, flagged again | Owner to confirm the order; if the notice must precede the recording, change the DO line and REC cue in all Term 3 lessons together |
+| 8 | Low | `s-opt` "Go further: both ways" | The optional slide has G3's exact structure (1 hour and half an hour, one end time, who started first), so using it pre-teaches G3 | Change the numbers, or ask the children to find the start times (not only who is first) |
+| 9 | Low | Warm-up slide 4 `s-rem3` (+10 from 34) | A number-line jump of ten is introduced as "a jump on a time line" but the line shows 30 to 50, not time; a child who joined cold may not see the link | Add one tick label "1 hour" in the next slide or use 5:00 then 6:00 on the line |
+| 10 | Low | Slide 3 `s-rem2` | The clock with the 5, 10 ... 60 chips is right, but 12 (60) and 6 (30) are not marked for the "half way = 30" question | Highlight 6 and 12 |
+| 11 | Low | Safeguarding NOTE vs spare-time | "A child may stay seated and use fingers" is said for the break only; the Explore "tilt the camera" suggestion invites a child to move a camera that may show the room | Say "tilt the camera to the table, not the room" |
+
+## Deck text sizes
+
+Word-box heights on 28 slides range from 28.6 pt to 45 pt on the 1440-pt wide page, so body text is roughly 22 to 34 px at 1080p. This is within what the earlier Term 1 and 2 decks were accepted at; the rubric asks 34 px for body text and several workbook-question slides (S4 to S6, the Choose slide) sit near 22 to 26. Low; flagged for the term-wide pass.
+
+## Joining cold, misconceptions, inclusion
+
+The warm-up re-teaches o'clock and half past from pictures, with a plain "joining cold" line and IF STUCK lines for the three common errors (10:01, 8:60, unreadable end clock). Misconceptions anticipated in the script: adding 1 to the minutes, 5:60, half an hour versus half past, short hand on the wrong side at half past, noon turning to pm. The tutor responses are concrete (show 10 o'clock and move the short hand on). Names and cast are inclusive; Mei in the spare-time menu speaks a true statement (fine). No child is named with an answer.
+
+## Scores
+
+AUTHORING delivery items: 5 of 5 PASS (item 7 passes on word count; the order of recording versus notice is finding 7). Instrument A (delivery): 17 / 24. Slide audit: 30 slides, 21 clean, 3 with a figure too small (13, 17, 19), 1 with a wrong idea in the optional menu (30), 1 with a quarter word (22), 4 with only the calculator Mi (1, 2, 27, 28).

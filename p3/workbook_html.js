@@ -6,11 +6,25 @@ const L = require('./data.js');
 const PROG = L.program, SLOGAN = L.slogan, QB = L.qbank;
 const H = Object.assign({}, C, { fig: s => '<div class="p img" style="text-align:center">' + s + '</div>' });
 const W = [];
-const hdr = (n, topic, title, pb = true) => [
-  `<div class="p lh${pb ? ' pb' : ''}"><span class="lbadge">Lesson ${n}</span><span class="ltopic">${topic}</span></div>`,
-  `<div class="p ltitle">${title}</div>`,
-  `<div class="p namer"><b>Name</b><span></span><b>Group</b><span style="max-width:90px"></span><b>Date</b><span style="max-width:110px"></span></div>`
-];
+const FG = require('./figs_l3.js').FX;   // Level 3 figures (shared helper hp/figs_l1_3.js); keys '<lesson>.<q>', '<lesson>.<q><part>', '<lesson>.t<n>', '<lesson>.c<n>'
+let CUR = 0, LASTQ = 0;
+H.q = (n, text, o) => { LASTQ = n; return C.q(n, text, o) + (FG[CUR + '.' + n] ? '\n' + FG[CUR + '.' + n]() : ''); };
+H.sub = (l, text, o) => C.sub(l, text, o) + (l && FG[CUR + '.' + LASTQ + l] ? '\n' + FG[CUR + '.' + LASTQ + l]() : '');
+const SP = require('../levels/spine_wb.js');   // strategy card + common look-back (docs/pedagogy/spine_routine_spec.md); wording in levels/spine.json
+const LEVEL = 3;
+const COMPACT = new Set([3, 5, 7, 10]);   // lessons whose first page is too full for the full card: compact chip in the header row (see docs/pedagogy/spine_routine_build_notes.md)
+const hdr = (n, topic, title, pb = true, first = false) => {   // first = the lesson's "Start here" page: it carries the strategy card
+  const choose = first && SP.DATA.lessons[`${LEVEL}.${n}`].main === 'choose';
+  const compact = first && COMPACT.has(n) && !choose;
+  const card = first && !compact ? SP.card(LEVEL, n, choose && COMPACT.has(n)) : '';
+  const chip = compact ? SP.card(LEVEL, n, true) : '';
+  return [
+  `<div class="p lh${pb ? ' pb' : ''}"><span class="lbadge" style="white-space:nowrap">Lesson ${n}</span><span class="ltopic">${topic}</span>${chip}</div>`,
+  choose || !card ? `<div class="p ltitle">${title}</div>` : `<div class="p ltrow" style="display:flex;align-items:center;justify-content:space-between;gap:4mm;margin:4px 0 6px"><div class="ltitle" style="flex:1;min-width:0;margin:0 0 8px;${title.length > 15 ? 'font-size:29px;line-height:1.12' : ''}">${title}</div>${card}</div>`,
+  `<div class="p namer"><b>Name</b><span></span><b>Group</b><span style="max-width:90px"></span><b>Date</b><span style="max-width:110px"></span></div>`,
+  ...(choose ? [card] : [])
+  ];
+};
 
 // ---- gifted-style additions: fast track note, investigation, look-back reflection (data in p3/gifted.json) ----
 const NAVY = '#1B2A49';
@@ -20,10 +34,10 @@ const rich = s => esc2(s).replace(/\[\[(\d+)\/(\d+)\]\]/g, (m, n, d) => fr(n, d)
 const tick = `<span style="display:inline-block;width:13px;height:13px;border:2px solid ${NAVY};border-radius:3px;background:#fff;vertical-align:-2px;margin:0 5px 0 14px"></span>`;
 const startHere = () => C.tbl([9900], [C.row([C.cell([`<div style="text-align:left;font-size:12.5px;line-height:1.4"><b>Start here.</b> After question 3 you may choose: carry on, or try Think harder.</div>`], 9900, { align: 'left', fill: 'F2F2F2', h: 25 })])]);
 const stairsSvg = () => {
-  const u = 26; let s = `<svg aria-label="Staircases with 1, 2 and 3 steps" viewBox="0 0 600 110" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px">`;
+  const u = 26; let s = `<svg aria-label="Staircases with 1, 2 and 3 steps" viewBox="0 0 600 110" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:520px">`;
   [[1, 20], [2, 130], [3, 270]].forEach(([k, x0]) => {
     for (let c = 1; c <= k; c++) for (let r = 0; r < c; r++) s += `<rect x="${x0 + (c - 1) * u}" y="${90 - (r + 1) * u}" width="${u}" height="${u}" fill="#FFC93C" stroke="${NAVY}" stroke-width="2.5"/>`;
-    s += `<text x="${x0 + k * u / 2}" y="106" font-size="14" font-weight="700" text-anchor="middle" fill="${NAVY}" font-family="Arial">${k} step${k > 1 ? 's' : ''}</text>`;
+    s += `<text x="${x0 + k * u / 2}" y="106" font-size="18" font-weight="700" text-anchor="middle" fill="${NAVY}" font-family="Arial">${k} step${k > 1 ? 's' : ''}</text>`;
   });
   return s + '</svg>';
 };
@@ -38,36 +52,32 @@ const investigation = (n) => {
     if (i === 0 && g.table) {
       const nc = g.table.cols.length, hasLab = g.table.rows.some(r => r !== ''), first = hasLab ? 1700 : 0;
       const w = hasLab ? [first, ...Array(nc - 1).fill(Math.floor((9900 - first) / (nc - 1)))] : Array(nc).fill(Math.floor(9900 / nc));
-      const rh = g.table.rows.length > 8 ? 34 : 70;
-      out.push(C.tbl(w, [C.row(g.table.cols.map((c, j) => C.cell(c, w[j], { bold: true, fill: 'D9D9D9', size: 18, h: 40 }))), ...g.table.rows.map(r => C.row(w.map((ww, j) => (j === 0 && hasLab) ? C.cell(r, ww, { bold: true, fill: 'EDEDED', size: 20, h: rh }) : C.cell('', ww, { h: rh }))))]));
+      const rh = g.table.rows.length > 8 ? 150 : 90;
+      out.push(C.tbl(w, [C.row(g.table.cols.map((c, j) => C.cell(c, w[j], { bold: true, fill: 'FFFFFF', size: 22, h: 40 }))), ...g.table.rows.map(r => C.row(w.map((ww, j) => (j === 0 && hasLab) ? C.cell(r, ww, { bold: true, fill: 'FFFFFF', size: 22, h: rh }) : C.cell('', ww, { h: rh }))))]).replace(/<td style="/g, '<td style="border:1.6px solid #1B2A49;'));   // white cells and dark borders so the table reads in black and white
       out.push(C.gap(40));
     }
   });
   out.push(...lines(g.table ? g.lines : g.lines + 3));
   return out;
 };
-const lookBack = (n) => {
-  const g = GF[String(n)], out = [];
-  const box = (label, items, extra) => `<div style="text-align:left;font-size:14px;line-height:2.0"><b>${label}</b> ${items.map(o => tick + esc2(o)).join('')}${extra || ''}</div>`;
-  const r1 = box('Something I did well:', g.didwell, tick + 'something else: ______________');
-  const r2 = box('The hardest part was:', g.reflect, tick + 'something else: ______________');
-  const r3 = box('What helped me:', ['drawing a picture', 'making a list', 'trying a number and checking', 'I asked for help', 'I am still stuck (my tutor will check in with me)']);
-  const r4 = `<div style="text-align:left;font-size:12.5px;line-height:1.5;color:#444"><i>Two minutes. Tick or write. You may pass on any line. This page is yours: your tutor does not read it out or collect it.</i></div>`;
-  out.push(banner('Look back'));
-  out.push(C.tbl([9900], [C.row([C.cell([r1, r2, r3, r4], 9900, { align: 'left', fill: 'EDEDED', h: 50 })])]));
-  return out;
-};
+const lookBack = (n) => [SP.lookback(LEVEL)];   // common look-back (three prompts, tool ticks, still stuck / pass); replaces the old reflection box
 const extra = (n) => {
   const ls = L.lessons[n - 1], b = QB[String(n)];
   const out = [...hdr(n, ls.topic, 'THINK HARDER')];
   out.push(p(t('Draw a model, make a list or make a table. Then write how you know.', { italics: true, size: 24 }), { after: 80, align: AlignmentType.CENTER }));
   out.push(p(t('Think harder is for anyone who wants it. Try a question, then try the Investigation on the last page of this lesson if you like.', { italics: true, size: 20, color: '1F7A6F' }), { after: 60, align: AlignmentType.CENTER }));
   out.push(banner('Think harder'));
-  b.stretch.slice(0, 4).forEach((x, i) => { out.push(q(i + 1, x.q, { before: 140, after: 40, keepNext: true })); out.push(...lines(3)); });
+  b.stretch.slice(0, 4).forEach((x, i) => { out.push(q(i + 1, x.q, { before: 140, after: 40, keepNext: true })); const fx = FG[n + '.t' + (i + 1)]; if (fx) out.push(fx()); out.push(...lines(fx ? 1 : (n === 8 ? 2 : 3))); });
   out.push(p('', { pb: true, after: 0 }));
   out.push(p(t('Lesson ' + n + '  •  ' + ls.topic.toUpperCase(), { bold: true, size: 22, color: '666666' }), { after: 60 }));
   out.push(banner('Go further'));
-  b.challenge.slice(-3).forEach((x, i) => { out.push(q(i + 5, x.q, { before: 200, after: 40, keepNext: true })); out.push(...lines(4)); });
+  b.challenge.slice(-3).forEach((x, i) => { out.push(q(i + 5, x.q, { before: 200, after: 40, keepNext: true })); const fx = FG[n + '.c' + (i + 5)]; if (fx) out.push(fx()); out.push(...lines(fx ? 2 : 4)); });
+  const th = (L.content[n - 1].deck.takeHome || []);   // quick questions the lesson did not have time for (answers are in the tutor guide)
+  if (th.length) {
+    out.push(banner('★ Take-home'));
+    out.push(p(t('For home, if you like. These were extra warm-up questions. They are not for the lesson.', { italics: true, size: 20, color: '1F7A6F' }), { after: 60 }));
+    th.forEach((x, i) => out.push(C.sub('abc'[i], x[0] + '   ______________', { after: 70 })));
+  }
   out.push(...hdr(n, ls.topic, 'INVESTIGATION AND LOOK BACK'));
   out.push(...investigation(n));
   out.push(...lookBack(n));
@@ -79,7 +89,8 @@ W.push(`<div class="cover"><svg viewBox="0 0 680 320" width="100%"><g transform=
 W.push(`<div class="p pb jr"><div class="jt">My Inquiry Journal</div><div class="jsub">Your tutor stamps each lesson.</div><div class="sg">${stamps}</div><div class="p" style="margin-top:18px">Tutor: ______________________&nbsp;&nbsp;&nbsp; Program dates: ______________________</div></div>`);
 L.content.forEach(c => {
   const l = c.lesson;
-  W.push(...hdr(l.n, l.topic, l.title.toUpperCase()));
+  CUR = l.n;
+  W.push(...hdr(l.n, l.topic, l.title.toUpperCase(), true, true));
   W.push(startHere());
   W.push(...c.workbook(H));
   W.push(coreEnd(l.n));

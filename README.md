@@ -10,7 +10,7 @@ This repository holds the source files that build every program document, plus c
 | Folder | What is in it |
 |---|---|
 | `outputs/workbook/` | Student workbook: designed PDF (A + D style) and the Word version |
-| `outputs/designed/` | Tutor guide, question bank, Weekly Dose of Thinking Math (parent practice pack), Lesson 6 trial, readiness tracker, weekly email pack, What Learners Get, weekly PDFs (zip), free taster, K2 readiness check, lesson review |
+| `outputs/designed/` | Tutor guide, question bank, Weekly Dose of Thinking Math (parent practice pack), Lesson 6 trial, readiness tracker, weekly email pack, What Learners Get, weekly PDFs (zip), free taster, K2 readiness check, K2 Starter Pack, lesson review |
 | `outputs/brand/` | Workbook style options, mascot sketches |
 | `outputs/older/` | Earlier versions kept for reference |
 
@@ -23,7 +23,7 @@ This repository holds the source files that build every program document, plus c
 | `split/` | The 10 published lesson decks and the 60-minute trial deck (`project/deck.json` + `project/slides/*.html`) |
 | `diag/` | Diagram slides added to the decks |
 | `taster/` | Free taster PDF for parents |
-| `k2/` | K2 readiness check |
+| `k2/` | K2 readiness check and K2 Starter Pack (parent PDF, `k2_starter_pack.py`) |
 | `wbstyles/` | Workbook style mock-ups |
 | `mascot/` | Mascot sketches (placeholders until a designer draws the final) |
 | `website/` | Website prototype (`referral.html`), sign-up page (`mi_signup.html`, built by `lp_build.py`), parent questions hub (`hub/`), Weekly Dose Online puzzle practice (`weekly_dose_online.html`) |
@@ -65,7 +65,7 @@ python3 weekly.py
 python3 docx2pdf_designed.py <file.docx> <out.pdf> "<Title>" "<Subtitle>" "<Footer text>"
 ```
 
-Other builds: `python3 taster/gen.py && python3 taster/pdf.py` (run in `taster/`), `python3 k2/k2.py` (in `k2/`), `python3 lp_build.py` (in `website/`), `python3 build.py` (in `website/hub/`).
+Other builds: `python3 taster/gen.py && python3 taster/pdf.py` (run in `taster/`), `python3 k2/k2.py` and `python3 k2_starter_pack.py` (in `k2/`), `python3 lp_build.py` (in `website/`), `python3 build.py` (in `website/hub/`).
 
 ## Published pages (private until shared)
 
@@ -75,3 +75,8 @@ Other builds: `python3 taster/gen.py && python3 taster/pdf.py` (run in `taster/`
 ## Open items
 
 See the "To-do list" section in the Math Inquirers: All Documents doc.
+
+## Update 23 Oct 2026 (appended; the text above describes only the original Primary 1 holiday program)
+The repository now also holds: `term/` (new term lessons, Level 1 first), `school/`, `extension/` and `levels/` (other workbooks), `p2/`-`p6/` (higher-level holiday sources), `portal/` (parent portal, Cloudflare Functions in `portal/functions`, Supabase SQL in `portal/supabase`, tests in `portal/tests`), `website/` (all pages; build with `cd website && python3 lp_build.py` then `python3 website/build_site.py`, private-preview by default; `--public` and `--with-portal` only on the owner's go-ahead), `practice/`, `tutor/`, `docs/` (decisions in `docs/terms/owner_decisions.md`, schedule in `docs/schedule/`, audits in `docs/audit_final/`, open owner questions in `docs/audit_final/open_owner_items.md`).
+Private copyrighted reference notes (`docs/sasmo/private_*`, `docs/books/private_*`) are git-ignored and must never be committed. Third-party font licences (SIL OFL) are in `website/licenses/`. Payments: manual PayNow during the beta; Stripe is built but not live.
+

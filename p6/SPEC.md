@@ -20,7 +20,7 @@
 | 10 | 5B | Showcase Challenge | Mixed | each child builds and shares a small puzzle program | a mixed maths challenge round, then a 3-minute showcase of their program |
 
 ## P6 level rules
-- Children know all of primary maths: whole numbers, fractions, decimals, percentage, ratio, rate and speed, simple algebra with one letter (expressions and simple equations), average, angles, circles, area and volume, pie charts.
+- Speed does not appear in any primary year of the MOE syllabus (Oct 2025; rate is P5). The holiday course does not teach it; the term program may include it as a labelled enrichment preview. Children know all of primary maths: whole numbers, fractions, decimals, percentage, ratio and rate, simple algebra with one letter (expressions and simple equations), average, angles, circles, area and volume, pie charts.
 - Ideas that lead towards secondary maths are introduced gently and concretely: negative numbers, primes and prime factorisation, sequences and the nth term, simple equations with a letter. Say "enrichment toward secondary maths and coding", not "Secondary 1 content".
 - Blocks assumed known before Lesson 1 (a 10-minute Scratch warm-up video or one-page handout is sent beforehand): green flag, repeat, make a variable, set and change a variable, say ... for ... seconds. Taught inside the lessons: if, mod, ask and answer (L4), lists (L8, L9), the Pen extension (L7). Use only block names from the official Scratch 3 palette; see docs/audit/fixes_p6.md for the editor check list. No index notation beyond squares, no surds, no formal proofs.
 - Coding stays small: each program is under about 15 blocks (or 20 lines of Python). The maths comes first; code is the way we test and extend it.

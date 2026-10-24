@@ -1,0 +1,3114 @@
+{
+ "schema_version": 1,
+ "id": "l1-t4-06",
+ "level": 1,
+ "term": 4,
+ "lesson": 36,
+ "lesson_in_term": 6,
+ "title": "Count Everything",
+ "big_idea": "Count with a system, so you miss none and count none twice",
+ "child_idea": "To count everything, use a system: count by rows, make a list with a rule, or count the new ones each time. Then nothing is missed and nothing is counted twice.",
+ "skill": "Systematic listing",
+ "spine": {
+  "main": "simpler",
+  "also": [
+   "list",
+   "table"
+  ],
+  "role": "I",
+  "reason": "Handshakes among 2, 3, then 4 children, and squares in 1 by 1 then 2 by 2 grids, show how the count grows."
+ },
+ "ages": "6-8",
+ "moe": {
+  "strand": "Not a listed Primary 1 outcome as a lesson. Counting a set and equal groups (Whole Numbers, p. 31) are Primary 1; shapes in a figure (Geometry, p. 32) are Primary 1; listing all possibilities is not in the syllabus (a problem-solving heuristic, pp. 13-14)",
+  "topics": [
+   "Counting squares in a grid by rows, and the squares of every size (counting a set and shapes in a figure are Primary 1; every size is beyond)",
+   "Equal groups and a table of flags (equal groups are Primary 1; a table of all the pairs is a heuristic, pp. 13-14)",
+   "Handshakes: every pair once, counted by the new ones each time (beyond Primary 1: a counting-ways idea)",
+   "Listing every pair that makes a total without repeats; routes in two stages (beyond Primary 1)"
+  ],
+  "note": "Strand label for the tutor only. This is a Primary 1 plan lesson on counting with a system (cross-strand: figures, ways and routes). It is not a listed content outcome. Start here is counting by rows, equal groups, counting lines and listing the pairs that make a total, with the fixed forms of Primary 1 papers. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only: Handshake Party (four children, every pair once: 3 + 2 + 1 = 6), a table of outfits, squares of every size in a grid, every pair with a total, handshakes for 5 and 6 children, squares of every size in a 3 by 3 grid, and routes in two stages. Named puzzle: Handshake Party. Wording rule (Term 1 audit, pre-flight D18): wrong working is always 'a child' or 'a child in another class', never a cast name. No Primary 1 paper in the 32 files read holds these counting items, so the wording is unverified. Owner decisions, 22 and 23 Oct 2026: strong content with scaffolding, said plainly to families; every lesson names a beyond item. Do not describe the lesson as MOE-aligned. Non-routine types (tutor only): ways (outfits and handshakes), table (all the pairs that make a total), list (every pair without repeats)."
+ },
+ "contest_moves": [
+  "ways: flags with two stripes of different colours, counted in a table (every top stripe with every other bottom stripe)",
+  "ways: handshakes, every pair once; a group of 4 gives 3 + 2 + 1 = 6, because each child counts only the new ones",
+  "table and list: every pair that makes a total, found by starting at the smallest and stopping when the pairs repeat",
+  "count the squares of every size in a grid: small ones first, then the bigger ones",
+  "routes in two stages: ways to the middle times ways from the middle, plus the direct way"
+ ],
+ "contest_where": "Think harder, Go further and the Investigation",
+ "objectives": [
+  "Count a set by rows or by equal groups, and count the lines in a picture, so that none is missed.",
+  "Fill in a list of the pairs that make a total, starting at 1 and stopping when the pairs repeat.",
+  "Think harder: Handshake Party (every pair once), a table of flags, the squares of every size in a 2 by 3 grid, and every pair of stickers that makes a total.",
+  "Go further: handshakes for 5 and 6 children, the squares of every size in a 3 by 3 grid, and routes in two stages with a direct way."
+ ],
+ "joining_cold": {
+  "remember": [
+   "Counting dots in an array by rows (Term 2 Lesson 5, taught again with a picture)",
+   "Adding four numbers by making tens (Term 1 Lesson 5, taught again)",
+   "Listing every way to make a number with two numbers, starting at 1 (taught with fingers)"
+  ],
+  "assumes": "Only counting to 20 and adding two small numbers. Nothing from the lessons before is needed: the warm-up re-teaches counting by rows, adding by making tens and listing with a rule. The words system, handshake and list are taught in Explore and the Mini-lesson.",
+  "holiday_topics_revisited": [
+   "Counting in ones to 20",
+   "Number bonds"
+  ],
+  "safe_to_miss": true,
+  "note": "Fairly safe to miss: no other lesson needs it, but Mi's Challenge Quest in the last lesson of the year has a gate on counting everything (handshakes and squares). A child who misses it watches the recording and does workbook pages 1 and 2. A child who joins here cold can follow: the warm-up re-teaches rows, making tens and listing, and Start here keeps to counts under 20."
+ },
+ "materials": {
+  "child": [
+   "Your Term 4 book (Book 8), workbook pages 1 to 5, and the paper-people page (page 6): the 8 paper people are cut out by a grown-up beforehand",
+   "No printer or no cutting? Use 6 coins, buttons or small toys instead of paper people",
+   "A pencil, a rubber and spare paper"
+  ],
+  "tutor": [
+   "The slide deck",
+   "Your own 6 paper people or coins, if you wish, to show on camera (not for the children)",
+   "A visible clock"
+  ],
+  "kit_pages": [
+   "Paper people (page 6): 8 people to cut out. A grown-up cuts them out. Children only stand them on the table."
+  ],
+  "ruler": false,
+  "notes": "Nothing needs to be bought. Paper people and coins are small pieces: they stay on the table; nothing goes in the mouth or ears; keep them away from younger brothers and sisters. No matches, toothpicks or anything sharp. Nobody cuts during the lesson: a grown-up cut the people beforehand.",
+  "kit_contract": [
+   {
+    "piece": "paper people",
+    "supplied": 8,
+    "max_used": 6,
+    "used_by": [
+     "explore",
+     "G1"
+    ]
+   }
+  ]
+ },
+ "timing": {
+  "parts": [
+   {
+    "id": "opening",
+    "title": "Opening",
+    "start": 0,
+    "end": 2
+   },
+   {
+    "id": "remember",
+    "title": "Remember warm-up",
+    "start": 2,
+    "end": 8
+   },
+   {
+    "id": "sneak",
+    "title": "Sneak-peek puzzles",
+    "start": 8,
+    "end": 12
+   },
+   {
+    "id": "explore",
+    "title": "Explore",
+    "start": 12,
+    "end": 23
+   },
+   {
+    "id": "mini",
+    "title": "Mini-lesson",
+    "start": 23,
+    "end": 34
+   },
+   {
+    "id": "break",
+    "title": "Brain break",
+    "start": 34,
+    "end": 38
+   },
+   {
+    "id": "work",
+    "title": "Workbook",
+    "start": 38,
+    "end": 70
+   },
+   {
+    "id": "talk",
+    "title": "Talk time",
+    "start": 70,
+    "end": 76
+   },
+   {
+    "id": "exit",
+    "title": "Exit ticket",
+    "start": 76,
+    "end": 82
+   },
+   {
+    "id": "look",
+    "title": "Look-back",
+    "start": 82,
+    "end": 85
+   },
+   {
+    "id": "flex",
+    "title": "Flex time and goodbye",
+    "start": 85,
+    "end": 90
+   }
+  ],
+  "optional_slide": "s-opt",
+  "include_rules": false,
+  "notes": "Opening is 2 minutes. Explore has 11 minutes: handshakes with 3 paper people, then every square in a 2 by 2 grid. The Mini-lesson has 11: count the new handshakes, a table of outfits, a list of pairs that make 8, and spot the repeat. The workbook has 32 minutes: Start here takes a middle child about 16 minutes (page 1 about 8, page 2 about 8), so pages 3 to 5 are for home for most children. The last 5 minutes are the standing buffer.",
+  "skip_order": [
+   "Start with: shorten Explore round 3 (what did we notice) to one question",
+   "Then: cut spot the repeat (s-m4)",
+   "Then: take the extra minutes from the flex time"
+  ]
+ },
+ "sneak_peek": {
+  "q1": "How many small squares are in the picture? Write the number.",
+  "q2": "Ali has 2 hats and 3 scarves. He wears one hat and one scarf. How many different ways can he do it? Write or draw them.",
+  "a1": "8 small squares.",
+  "a2": "6 ways: each of the 2 hats goes with each of the 3 scarves."
+ },
+ "rec": {
+  "opening": {
+   "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook and your paper people. Pause or rewind any time.",
+   "action": "Gather your workbook, paper people, pencil and paper. Press play when ready."
+  },
+  "remember": {
+   "say": "Recording: join in! Say your answers out loud before I say them. Pause if you need longer.",
+   "action": "Play along. Say each answer out loud before the video does."
+  },
+  "sneak": {
+   "say": "Recording: pause now and try both puzzles on your paper. Guessing is fine. Press play for the next part.",
+   "action": "Pause. Try both puzzles on your own paper. A guess is fine."
+  },
+  "explore": {
+   "say": "Recording: pause now. Stand 3 paper people up and list every handshake. Then find every square in the grid. Press play when ready.",
+   "action": "Pause. Stand 3 people up and list every handshake. Then find every square in the grid."
+  },
+  "mini": {
+   "say": "Recording: keep watching and count with the system. Rewind if you miss a step.",
+   "action": "Watch and count with the system. Rewind any step you missed."
+  },
+  "break": {
+   "say": "Recording: stand up and join in! Try every arm move with every leg move.",
+   "action": "Stand up. Try every arm move with every leg move. Then sit down."
+  },
+  "work": {
+   "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
+   "action": "Pause. Do page 1, then play to check. Then page 2. Then choose a page to try."
+  },
+  "talk": {
+   "say": "Recording: pause. Tell a grown-up how you can be sure you have counted every handshake once.",
+   "action": "Pause. Explain to someone at home how to count every handshake once."
+  },
+  "exit": {
+   "say": "Recording: pause and do the exit ticket on your own. Then press play to check it.",
+   "action": "Pause. Do the exit ticket alone, then play to check it."
+  },
+  "look": {
+   "say": "Recording: pause and fill in your look-back box. You can pass.",
+   "action": "Pause. Fill in the look-back box, or pass."
+  },
+  "flex": {
+   "say": "Recording: well done for finishing! Ask a grown-up how many handshakes there would be at a party of 4.",
+   "action": "Ask a grown-up to count the handshakes for 4 people, using your system."
+  }
+ },
+ "slides": [
+  {
+   "id": "s-title",
+   "part": "opening",
+   "kind": "title",
+   "title": "Count Everything",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "TODAY WE WILL",
+     "items": [
+      "Count with a system.",
+      "Miss none. Count none twice.",
+      "Count handshakes and squares."
+     ]
+    }
+   ],
+   "note": "Lesson 6 of Term 4, 90 minutes. Objective: count with a system (by rows, by groups, with a list that has a rule) so that nothing is missed and nothing is counted twice; Handshake Party and the squares of every size are Think harder and Go further. Plain statement for families: counting a set, equal groups and shapes in a picture are Primary 1; listing every pair, handshakes, squares of every size and routes in two stages go beyond Primary 1 on purpose, always with real objects or pictures first. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 23, mini-lesson 23 to 34, brain break 34 to 38, workbook 38 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Say the recording notice before you start the recording, in one line: you, the shared screen and any unmuted voice; a child may keep the camera off.",
+   "subtitle": "A system means no misses and no repeats",
+   "mascot": {
+    "size": "l",
+    "say": "Hi, I'm Mi. Let's notice, test and explain why!"
+   }
+  },
+  {
+   "id": "s-rem1",
+   "part": "remember",
+   "kind": "light",
+   "title": "Warm-up: count by rows",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "array",
+     "rows": 3,
+     "cols": 4,
+     "icon": "dot",
+     "size": "s"
+    },
+    {
+     "t": "chip",
+     "text": "Count the dots by rows. How many rows? How many dots in each row? How many in all?"
+    }
+   ],
+   "note": "Counting by rows (Term 2 Lesson 5, taught again). 3 rows of 4 dots: 4 and 4 and 4 make 12. Ask: how many rows (3), how many in each row (4), how many in all (12). A child who is unsure points along each row. Your turn, no picture: 2 rows of 6; how many in all (12). Children answer aloud. No writing."
+  },
+  {
+   "id": "s-rem2",
+   "part": "remember",
+   "kind": "light",
+   "title": "Warm-up: make tens",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "7 + 3 + 6 + 4"
+    },
+    {
+     "t": "chip",
+     "text": "Find the pairs that make 10 first. What is the total?"
+    }
+   ],
+   "note": "Adding four numbers by making tens (Term 1 Lesson 5, taught again). 7 and 3 make 10. 6 and 4 make 10. 10 and 10 make 20. Ask: which two make 10 (7 and 3), which two more (6 and 4), what is the total (20). A child who is unsure holds up 7 fingers, then 3 more. Your turn, no picture: 8 + 2 + 5 + 5 (20). Children answer aloud. No writing."
+  },
+  {
+   "id": "s-rem3",
+   "part": "remember",
+   "kind": "light",
+   "title": "Warm-up: a list with a rule",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Ways to make 6 with two numbers."
+    },
+    {
+     "t": "chip",
+     "text": "Start with 1. 1 + 5 = 6. What comes next? Stop when the pairs repeat."
+    }
+   ],
+   "note": "Listing with a rule (taught with fingers). Start at 1: 1 and 5; 2 and 4; 3 and 3. After 3 and 3 the pairs repeat (4 and 2 is 2 and 4). Ask: what is the next pair after 1 and 5 (2 and 4); and after that (3 and 3); do we need 4 and 2 (no, it is 2 and 4 again). There are 3 pairs. Children answer aloud. No writing. A child who is unsure holds 6 fingers and folds 1, then 2.",
+   "mascot": {
+    "size": "s",
+    "say": "Take your time!"
+   }
+  },
+  {
+   "id": "s-sneak",
+   "part": "sneak",
+   "kind": "light",
+   "title": "Sneak-peek puzzles",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Ideas we have not learnt yet. A guess is a great start. Nobody is marked."
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 1: anyone can try",
+        "items": [
+         "How many small squares are in the picture?",
+         "Write the number."
+        ]
+       },
+       {
+        "t": "visual",
+        "type": "grid",
+        "rows": 2,
+        "cols": 4,
+        "kind": "squares",
+        "cell": 50,
+        "size": "m"
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 2: think",
+        "items": [
+         "Ali has 2 hats and 3 scarves.",
+         "He wears one hat and one scarf.",
+         "How many different ways can he do it?",
+         "Write or draw them."
+        ]
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Puzzle 1 is an access question: a grid of 2 rows of 4 small squares, 8 in all. The question says small squares on purpose: the grid also holds bigger squares (the 2 by 2 ones), and the children find those later in the lesson. Puzzle 2 is a thinking question on the lesson idea: 2 hats and 3 scarves make 6 ways, because each hat goes with each scarf. A child who writes pairs such as hat 1 with scarf 1, hat 1 with scarf 2 and so on has done well. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: 8 small squares; 6 ways. Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
+  },
+  {
+   "id": "s-explore1",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: the handshakes",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "Stand 3 paper people up in a ring.",
+      "Every two people shake hands once.",
+      "List the handshakes. No repeats. None missed."
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "How many handshakes are there?"
+    }
+   ],
+   "note": "Round 1, about 6 minutes. Each child has 3 paper people (or 3 coins). They name them A, B and C and list every pair that shakes hands, for example A with B. Rule: each pair shakes hands once, and A with B is the same handshake as B with A. Ask: how did you make sure you missed none; how did you make sure you counted none twice. Many children will start with A: A with B, A with C. Then B with C. Do not tell the answer. Nobody holds the people up to the camera: children say the pairs aloud and show fingers for how many. A child with no people draws 3 dots and joins them. Answers on the next slide."
+  },
+  {
+   "id": "s-explore1-ans",
+   "part": "explore",
+   "kind": "light",
+   "title": "3 handshakes",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "network",
+     "n": 3,
+     "all": true,
+     "labels": [
+      "A",
+      "B",
+      "C"
+     ],
+     "size": 45
+    },
+    {
+     "t": "answer",
+     "text": "A with B. A with C. B with C. That is 3 handshakes. Each line is one handshake."
+    }
+   ],
+   "note": "Children check their own list. 3 handshakes: A with B, A with C, B with C. The picture shows each handshake as one line between two dots. Say: B with A is the same line as A with B, so it is counted once. Ticks only. Do not name any child."
+  },
+  {
+   "id": "s-explore2",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: find every square",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "grid",
+     "rows": 2,
+     "cols": 2,
+     "kind": "squares",
+     "cell": 60,
+     "size": 42
+    },
+    {
+     "t": "chip",
+     "text": "How many squares can you find? Look for small squares and a big one."
+    }
+   ],
+   "note": "Round 2, about 4 minutes. A grid of 2 by 2 small squares. Children count the small squares first (4), then look for bigger squares: the whole grid is one big square, 5 in all. Children draw the grid on paper and trace each square with a pencil in turn if they like. Ask: how many small squares (4); is there a bigger square (yes, the whole grid); how many squares in all (5). Do not tell the answer. Nobody holds a drawing up to the camera: children say the number aloud. Answer on the next slide."
+  },
+  {
+   "id": "s-explore2-ans",
+   "part": "explore",
+   "kind": "light",
+   "title": "5 squares",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "grid",
+     "rows": 2,
+     "cols": 2,
+     "kind": "squares",
+     "cell": 60,
+     "squares": [
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       1
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "size": 42
+    },
+    {
+     "t": "answer",
+     "text": "4 small squares and 1 big square. 4 and 1 make 5 squares."
+    }
+   ],
+   "note": "The picture shows the big square in yellow. 4 small squares and 1 big one make 5. Say: we counted the small ones first, then the big one, so we missed none. Ticks only."
+  },
+  {
+   "id": "s-explore3",
+   "part": "explore",
+   "kind": "light",
+   "title": "What did we notice?",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      "How did you know you had every handshake?",
+      "How did you find the big square?"
+     ]
+    }
+   ],
+   "note": "Take one or two answers from volunteers. Key ideas: we started with one child and then the next; we wrote the pairs in a list; we counted the small squares first and then the bigger one. Repeat each child answer in your own words so the recording picks it up. Do not give the rule before the children say it; the mini-lesson makes it exact."
+  },
+  {
+   "id": "s-m1",
+   "part": "mini",
+   "kind": "light",
+   "title": "Count the new ones",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "network",
+     "n": 3,
+     "labels": [
+      "A",
+      "B",
+      "C"
+     ],
+     "size": 45
+    },
+    {
+     "t": "chip",
+     "text": "A shakes hands with the others. How many handshakes does A make? Then B shakes hands with the ones not counted yet. How many new ones?"
+    }
+   ],
+   "note": "Worked example, with the 3 children of Explore. A shakes hands with B and C: 2 handshakes. B has already shaken hands with A, so B makes only 1 new handshake, with C. C has no new handshake. 2 and 1 make 3. Ask: how many does A make (2); how many new ones does B make (1); how many does C make (0); how many in all (3). The answer is on the next slide. Say: each child counts only the new ones, so no handshake is counted twice."
+  },
+  {
+   "id": "s-m1-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "Only the new ones",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "network",
+     "n": 3,
+     "all": true,
+     "labels": [
+      "A",
+      "B",
+      "C"
+     ],
+     "size": 45
+    },
+    {
+     "t": "answer",
+     "text": "A makes 2. B makes 1 new one. C makes 0 new ones. 2 + 1 = 3 handshakes."
+    }
+   ],
+   "note": "The answer for the example on the slide before. Read it aloud so that children can tick their own work. Say the rule in one line: count only the new handshakes each time."
+  },
+  {
+   "id": "s-m2",
+   "part": "mini",
+   "kind": "light",
+   "title": "A table of outfits",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "table",
+     "head": [
+      "",
+      "skirt 1",
+      "skirt 2"
+     ],
+     "rows": [
+      [
+       "[ ]",
+       "[ ]"
+      ],
+      [
+       "[ ]",
+       "[ ]"
+      ]
+     ],
+     "size": 90
+    },
+    {
+     "t": "chip",
+     "text": "Mei has 2 tops and 2 skirts. Each box is one outfit. How many outfits can she make?"
+    }
+   ],
+   "note": "Worked example. A table has one row for each top and one column for each skirt, so each box is one outfit: top 1 with skirt 1, top 1 with skirt 2, top 2 with skirt 1, top 2 with skirt 2. 4 boxes, 4 outfits. Ask: what does each row stand for (a top); what does each column stand for (a skirt); how many boxes (4). The answer is on the next slide. Say: a table is a system: every top meets every skirt once."
+  },
+  {
+   "id": "s-m2-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "4 outfits",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "table",
+     "head": [
+      "",
+      "skirt 1",
+      "skirt 2"
+     ],
+     "rows": [
+      [
+       "top 1",
+       "top 1 + skirt 1",
+       "top 1 + skirt 2"
+      ],
+      [
+       "top 2",
+       "top 2 + skirt 1",
+       "top 2 + skirt 2"
+      ]
+     ],
+     "size": 90
+    },
+    {
+     "t": "answer",
+     "text": "2 tops, and each top goes with 2 skirts. 2 and 2 make 4 outfits."
+    }
+   ],
+   "note": "The answer for the example on the slide before. Read it aloud so that children can tick their own work. 2 tops with 2 skirts each is 2 and 2 more: 4 outfits."
+  },
+  {
+   "id": "s-m3",
+   "part": "mini",
+   "kind": "light",
+   "title": "A list that stops",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Every pair of numbers that make 8."
+    },
+    {
+     "t": "chip",
+     "text": "Start with 1. 1 + 7 = 8. What is next? When do we stop?"
+    }
+   ],
+   "note": "Worked example. Start at 1 and go up: 1 and 7; 2 and 6; 3 and 5; 4 and 4. After 4 and 4 the pairs repeat: 5 and 3 is the same pair as 3 and 5. So there are 4 pairs. Ask: what is the next pair after 1 and 7 (2 and 6); and next (3 and 5); and next (4 and 4); when do we stop (when the pairs repeat). The answer is on the next slide. Say: a list with a rule, starting at the smallest, shows when to stop."
+  },
+  {
+   "id": "s-m3-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "4 pairs",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "First",
+       "Second"
+      ],
+      [
+       "1",
+       "7"
+      ],
+      [
+       "2",
+       "6"
+      ],
+      [
+       "3",
+       "5"
+      ],
+      [
+       "4",
+       "4"
+      ]
+     ]
+    },
+    {
+     "t": "answer",
+     "text": "1 + 7, 2 + 6, 3 + 5, 4 + 4. We stop at 4 + 4, because the next pairs repeat. 4 pairs."
+    }
+   ],
+   "note": "The answer for the example on the slide before. Read it aloud so that children can tick their own work. 4 and 4 is one pair: both numbers are the same."
+  },
+  {
+   "id": "s-m4",
+   "part": "mini",
+   "kind": "light",
+   "title": "Spot the repeat",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "A CHILD IN ANOTHER CLASS LISTS HANDSHAKES",
+     "items": [
+      "A with B",
+      "A with C",
+      "B with A",
+      "B with C"
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "She says: 4 handshakes. Is she right? What went wrong?"
+    }
+   ],
+   "note": "Worked example. The child lists 4 handshakes but B with A is the same handshake as A with B, so there are 3. Ask: is she right (no); which one is a repeat (B with A); how many handshakes are there (3). The answer is on the next slide. The child in the story is in another class: no cast name is given the wrong answer. Say: a list with a rule has no repeats."
+  },
+  {
+   "id": "s-m4-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "B with A is a repeat",
+   "blocks": [
+    {
+     "t": "answer",
+     "text": "B with A is the same handshake as A with B. It is counted twice. There are 3 handshakes, not 4."
+    }
+   ],
+   "note": "The answer for the example on the slide before. Read it aloud so that children can tick their own work. A list with a rule (A first, then B) never repeats."
+  },
+  {
+   "id": "s-break",
+   "part": "break",
+   "kind": "light",
+   "title": "Every move with every move",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Stand up. Arms up or arms out."
+    },
+    {
+     "t": "p",
+     "text": "Legs: jump or squat."
+    },
+    {
+     "t": "p",
+     "text": "Try every arm move with every leg move."
+    }
+   ],
+   "note": "Four minutes. Stand up on camera with a little clear space. 2 arm moves (arms up, arms out) and 2 leg moves (jump, squat). Children try every arm move with every leg move: arms up and jump, arms up and squat, arms out and jump, arms out and squat. Ask: how many moves (4); did we miss any. Then add a third arm move (arms down): 6 moves in all. No equipment, no running. A child may stay seated and do the arm moves only. Do not give prizes or compare children."
+  },
+  {
+   "id": "s-ws1",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 1: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 1 to 3. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read questions 1 to 3 aloud. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: count the squares by rows. Question 2: count the marbles in the jars. Question 3: count the lines."
+  },
+  {
+   "id": "s-ws1ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 1",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1: 10 squares. Q2: 15 marbles. Q3: 5 lines."
+  },
+  {
+   "id": "s-ws2",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 2: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 4 to 6. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S4",
+      "S5",
+      "S6"
+     ],
+     "short": true,
+    "vw": 270
+    }
+   ],
+   "note": "Read questions 4 to 6 aloud. Question 4: fill in the missing numbers in the list; every pair makes 9. Question 5: count the dots by rows. Question 6: how many squares are not yellow. Wait 10 seconds before helping."
+  },
+  {
+   "id": "s-ws2ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 2",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S4",
+      "S5",
+      "S6"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud so a child watching the recording can tick their own work. Never ask a child to show a wrong answer to the group. Answers: Q4 7, 6 and 5. Q5 20 dots. Q6 5 squares."
+  },
+  {
+   "id": "s-choice",
+   "part": "work",
+   "kind": "light",
+   "title": "Choose your next page",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Page",
+       "What it is"
+      ],
+      [
+       "Think harder (page 3)",
+       "Handshake Party, outfits, squares of every size, pairs"
+      ],
+      [
+       "Go further (page 4)",
+       "More handshakes, a bigger grid, two roads"
+      ],
+      [
+       "Investigation (page 5)",
+       "Every pair that makes 7"
+      ],
+      [
+       "Check",
+       "Finish and check your own work"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Everyone may choose. Not finished? Pages 3 to 5 are for home too."
+    }
+   ],
+   "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 5 minutes."
+  },
+  {
+   "id": "s-talk",
+   "part": "talk",
+   "kind": "light",
+   "title": "Talk and explain",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "A CHILD IN ANOTHER CLASS SAYS",
+     "items": [
+      "Four friends shake hands.",
+      "Each one shakes hands with 3 others.",
+      "So there are 4 times 3 handshakes."
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Do you agree? How could we check?"
+    },
+    {
+     "t": "chip",
+     "text": "I think ... because ..."
+    }
+   ],
+   "note": "One minute of talk to the grown-up next to you, or to your screen. Volunteers first; a pass is always fine; never call a child by name to answer. Model answer: no, we do not agree. A handshake between A and B is counted once by A and once by B, so 4 times 3 counts every handshake twice. We can check by listing the pairs (A with B, A with C, A with D, B with C, B with D, C with D: 6). Link to Explore and the mini-lesson. Repeat each child answer in your own words for the recording. The child in the story is in another class: no cast name is given the wrong answer. Do not say the answer 6 before children try the Think harder question; the model answer is for the tutor."
+  },
+  {
+   "id": "s-sneakans",
+   "part": "talk",
+   "kind": "light",
+   "title": "Back to the sneak-peek",
+   "blocks": [
+    {
+     "t": "answer",
+     "text": "Puzzle 1: 8 small squares. Puzzle 2: 6 ways. Each of the 2 hats goes with each of the 3 scarves."
+    }
+   ],
+   "note": "Reveal both puzzles now. Say: many of you wrote a good answer. Do not read out anyone earlier answer. Puzzle 1: 2 rows of 4 small squares make 8. (The picture also holds bigger squares, which we count later today.) Puzzle 2: hat 1 with each of 3 scarves is 3 ways, and hat 2 with each of 3 scarves is 3 more ways, so 6. It was the same idea as the table of outfits."
+  },
+  {
+   "id": "s-exit",
+   "part": "exit",
+   "kind": "light",
+   "title": "Exit ticket",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "On your own. No looking back."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ],
+     "short": false
+    }
+   ],
+   "note": "Children answer on page 5. Read E1, E2 and E3 aloud, with the numbers (the figures on the slide are small). Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
+  },
+  {
+   "id": "s-exitans",
+   "part": "exit",
+   "kind": "light",
+   "title": "Check the exit ticket",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: E1 15 squares; E2 9 ways; E3 the missing pair is C and D."
+  },
+  {
+   "id": "s-look",
+   "part": "look",
+   "kind": "lookback",
+   "title": "Look-back",
+   "blocks": [
+    {
+     "t": "lookback"
+    }
+   ],
+   "note": "Three minutes. Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child.",
+   "mascot": {
+    "size": "s",
+    "say": "Take your time. You can pass."
+   }
+  },
+  {
+   "id": "s-end",
+   "part": "flex",
+   "kind": "dark",
+   "title": "Well done, inquirers!",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Ask a grown-up: how many handshakes at a party of 4?"
+    },
+    {
+     "t": "card",
+     "head": "NEXT LESSON",
+     "items": [
+      "Make Your Own Graph",
+      "Have ready: Book 8 and about 12 small things from the house to sort."
+     ]
+    }
+   ],
+   "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. Remind families that the next lesson needs Book 8 with the graph-mat page (no cutting) and about 12 small things from the house in 3 or 4 kinds (not food). If the whole class is ahead, show the optional slides and use the Spare-time menu from the tutor guide.",
+   "mascot": {
+    "size": "l",
+    "say": "Great thinking today!"
+   }
+  },
+  {
+   "id": "s-opt",
+   "part": "flex",
+   "kind": "light",
+   "title": "Go further: which handshake is missing?",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "network",
+     "n": 4,
+     "lines": [
+      [
+       0,
+       1
+      ],
+      [
+       0,
+       2
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       3
+      ],
+      [
+       2,
+       3
+      ]
+     ],
+     "labels": [
+      "A",
+      "B",
+      "C",
+      "D"
+     ],
+     "size": 45
+    },
+    {
+     "t": "chip",
+     "text": "Four friends shake hands once with each other. Each line is a handshake. Which pair has not shaken hands yet?"
+    }
+   ],
+   "note": "Optional, only if you are on time. The lines show 5 handshakes; the pair A and D has not shaken hands. Ask: how many handshakes in all when everyone has shaken hands (6); which pair is missing (A and D). Take two answers and move on.",
+   "optional": true
+  },
+  {
+   "id": "s-menu",
+   "part": "flex",
+   "kind": "light",
+   "title": "If we have time: pick one",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Activity",
+       "What we do"
+      ],
+      [
+       "Is it always true?",
+       "Does a bigger group always make more handshakes?"
+      ],
+      [
+       "Make a puzzle",
+       "Make a counting puzzle for your grown-up."
+      ],
+      [
+       "Teach it back",
+       "Tell a toy how to count every handshake once."
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Optional. Everyone may join."
+    }
+   ],
+   "note": "Optional Spare-time menu, used only if the whole class is ahead. Pick one or two activities (3 to 5 minutes each); full tutor lines and answers are in the tutor guide. Never start new content and never name who is ahead. Slow down with how do you know rather than rushing on. These minutes come from the flex buffer and are not part of the 90-minute sum.",
+   "optional": true
+  }
+ ],
+ "script": {
+  "segments": [
+   {
+    "part": "opening",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-title",
+      "s": 10
+     },
+     {
+      "k": "DO",
+      "text": "Greet the whole group warmly, before the recording starts. Check that you can see each child, or ask the grown-up.",
+      "s": 12
+     },
+     {
+      "k": "SAY",
+      "text": "Hello, inquirers! Pencil ready, and your paper people on the table. Cameras can be on or off, as you like."
+     },
+     {
+      "k": "SAY",
+      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+     },
+     {
+      "k": "DO",
+      "text": "Start the recording now. Do not use children's first names on the recording.",
+      "s": 5
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
+     },
+     {
+      "k": "SAY",
+      "text": "Today we count everything with a system. We miss none, and we count none twice."
+     },
+     {
+      "k": "SAY",
+      "text": "Today's tool is Try something simpler. Try it with smaller numbers first.",
+      "spine": "opening"
+     },
+     {
+      "k": "DO",
+      "text": "Point at the tool on page 1 of the workbook.",
+      "s": 4,
+      "spine": "opening"
+     },
+     {
+      "k": "NOTE",
+      "text": "Say the recording statement and the microphone routine in the same words every lesson, for anyone who joined late. Say the notice before you start the recording, and do not use children's first names once it is running. The routine and the four inquirer rules were introduced earlier in the year: do not re-teach them."
+     },
+     {
+      "k": "NOTE",
+      "text": "Plain statement for families when it comes up: counting a set, equal groups and shapes in a picture are Primary 1; listing every pair, handshakes, squares of every size and routes in two stages go beyond Primary 1 on purpose. There is no school-paper evidence for these topics, so the wording is unverified."
+     },
+     {
+      "k": "NOTE",
+      "text": "New here? Say in one minute: our three rule words (notice it, test it, explain why); a guess is fine and you can always pass; after Start here you may choose Think harder, Go further or the Investigation; nobody holds paper to the camera. A child without paper people uses coins or buttons, or draws dots."
+     }
+    ]
+   },
+   {
+    "part": "remember",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-rem1",
+      "s": 12
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Dots in rows. Count by rows."
+     },
+     {
+      "k": "ASK",
+      "text": "How many rows are there? How many dots are in each row? How many in all?",
+      "resp": 35
+     },
+     {
+      "k": "WORK",
+      "text": "Your turn. Two rows of six. How many in all? Say it with me.",
+      "s": 30
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem2",
+      "s": 12
+     },
+     {
+      "k": "SAY",
+      "text": "Make tens first. Look for two numbers that make ten."
+     },
+     {
+      "k": "ASK",
+      "text": "Which two numbers make ten? Which two more? What is the total?",
+      "resp": 40
+     },
+     {
+      "k": "WORK",
+      "text": "Your turn. Eight and two and five and five. What is the total?",
+      "s": 30
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem3",
+      "s": 12
+     },
+     {
+      "k": "SAY",
+      "text": "A list with a rule. We want every way to make six with two numbers. Start with one."
+     },
+     {
+      "k": "ASK",
+      "text": "One and five make six. What is the next pair? When do the pairs start to repeat?",
+      "resp": 45
+     },
+     {
+      "k": "WORK",
+      "text": "Say each answer with me: three rows, four in each row, twelve; seven and three, six and four, twenty; one and five, two and four, three and three. Then stretch your fingers.",
+      "s": 25
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child is unsure how to count the rows, run a finger along each row. For making tens, hold up 7 fingers, then 3 more. For the list, hold up 6 fingers and fold 1, then 2, then 3."
+     },
+     {
+      "k": "NOTE",
+      "text": "Answers: 3 rows, 4 in each row, 12; your turn 12; 7 and 3, 6 and 4, total 20; your turn 20; the pairs 1 and 5, 2 and 4, 3 and 3, and 4 and 2 is a repeat. Children answer with a whisper, fingers or hands. Nobody writes. Joining cold: all you need is counting to 20 and the pictures."
+     }
+    ]
+   },
+   {
+    "part": "sneak",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-sneak",
+      "s": 12
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked."
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle one. How many small squares are in the picture? Write the number."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write on their own paper.",
+      "s": 35
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle two. Ali has two hats and three scarves. He wears one hat and one scarf. How many different ways can he do it? Write or draw them."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write or draw their answer.",
+      "s": 90
+     },
+     {
+      "k": "SAY",
+      "text": "Keep your paper. Nobody shows it. We will check our own thinking later, at Talk time."
+     },
+     {
+      "k": "NOTE",
+      "text": "Puzzle 1 answer: 8 small squares. Puzzle 2 answer: 6 ways (each hat with each scarf). Look for good ideas to praise later (a child who listed hat 1 with every scarf first). Do not write scores or keep a list."
+     }
+    ]
+   },
+   {
+    "part": "explore",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1",
+      "s": 12
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Today we are counters. Take three paper people. Name them A, B and C. Stand them up in a ring."
+     },
+     {
+      "k": "READ",
+      "text": "Every two people shake hands once. List the handshakes. No repeats. None missed. How many handshakes are there?"
+     },
+     {
+      "k": "WORK",
+      "text": "Children list the handshakes aloud to their grown-up. Tutor scans the cameras and listens.",
+      "s": 140
+     },
+     {
+      "k": "ASK",
+      "text": "Who would like to tell us how they made sure they missed none?",
+      "resp": 55
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "A with B. A with C. B with C. Three handshakes. B with A is the same handshake as A with B, so we count it once."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2",
+      "s": 12
+     },
+     {
+      "k": "SAY",
+      "text": "Round two. Look at the grid. Count the small squares first. Then look for a bigger square."
+     },
+     {
+      "k": "READ",
+      "text": "How many squares can you find?"
+     },
+     {
+      "k": "WORK",
+      "text": "Children count the small squares, then look for a big one. Wait before anyone answers.",
+      "s": 100
+     },
+     {
+      "k": "ASK",
+      "text": "How many small squares? Is there a bigger square?",
+      "resp": 50
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Four small squares and one big square. Five squares in all."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore3",
+      "s": 8
+     },
+     {
+      "k": "ASK",
+      "text": "How did you know you had every handshake? How did you find the big square?",
+      "resp": 65
+     },
+     {
+      "k": "SAY",
+      "text": "We counted one thing at a time. A system means we miss none and count none twice."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who lists A with B and B with A: say they are the same handshake, and ask them to write only A with B. A child who counts only the small squares: ask, is the whole grid a square too? A child with no people draws 3 dots and joins them with lines."
+     },
+     {
+      "k": "NOTE",
+      "text": "Main room only; you cannot see small people, so ask children to say the pairs aloud and show fingers. Answers: 3 handshakes; 4 small squares and 1 big square, 5 in all. Do not say the rule before the children do."
+     }
+    ]
+   },
+   {
+    "part": "mini",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-m1",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Three friends again. A shakes hands with the others. Then B shakes hands with the ones not counted yet."
+     },
+     {
+      "k": "ASK",
+      "text": "How many handshakes does A make? How many new ones does B make? How many does C make?",
+      "resp": 80
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m1-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "A makes two. B makes one new one. C makes none new. Two and one make three. We count only the new ones."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m2",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "A table of outfits. One row for each top. One column for each skirt. Each box is one outfit."
+     },
+     {
+      "k": "ASK",
+      "text": "What does each row stand for? What does each column stand for? How many boxes are there?",
+      "resp": 80
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m2-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Two tops, and each top goes with two skirts. Two and two make four outfits."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "A list that stops. We want every pair of numbers that make eight. Start with one."
+     },
+     {
+      "k": "ASK",
+      "text": "One and seven make eight. What is next? When do we stop?",
+      "resp": 90
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "One and seven. Two and six. Three and five. Four and four. We stop at four and four, because the next pairs repeat. Four pairs."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "A child in another class lists handshakes: A with B, A with C, B with A, B with C. She says four handshakes."
+     },
+     {
+      "k": "ASK",
+      "text": "Is she right? Which one is a repeat? How many handshakes are there?",
+      "resp": 70
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "B with A is the same handshake as A with B. It is counted twice. There are three handshakes, not four."
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child cannot see the repeat, ask them to cross out the pair that has the same two letters as an earlier pair. If a child loses count in the table, ask them to point to each box once. If a child cannot stop the list, ask: is four and four the last, or does five and three give a new pair?"
+     },
+     {
+      "k": "NOTE",
+      "text": "Key words to use every time: system, list, repeat, handshake, table. Fixed question forms: How many handshakes? How many outfits? How many pairs? The slides keep the answers off the screen while you ask: read every question aloud. Class numbers are not used in the workbook."
+     }
+    ]
+   },
+   {
+    "part": "break",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-break",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Stand up and get a sip of water. Two arm moves and two leg moves. We try every arm move with every leg move."
+     },
+     {
+      "k": "WORK",
+      "text": "Call movements: arms up and jump, arms up and squat, arms out and jump, arms out and squat. Ask how many moves, then add arms down: six moves. Seated children do the arm moves only.",
+      "s": 165
+     }
+    ]
+   },
+   {
+    "part": "work",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "Page 1, Start here. Question 1: count the squares by rows. Write the number. Question 2: there are 3 jars, and each jar has 5 marbles. How many marbles in all? Question 3: each line joins two dots. How many lines are there?"
+     },
+     {
+      "k": "WORK",
+      "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
+      "s": 540
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1ans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Question 1: ten squares. Question 2: fifteen marbles. Question 3: five lines. Tick your own page with a tick."
+     },
+     {
+      "k": "SAY",
+      "text": "After question 3 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Page 2. Question 4: every pair makes 9. Fill in the missing numbers. Question 5: count the dots by rows. Question 6: there are 9 squares and some are yellow. How many squares are not yellow?"
+     },
+     {
+      "k": "WORK",
+      "text": "Page 2, questions 4 to 6.",
+      "s": 500
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2ans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Question 4: seven, six and five. Question 5: twenty dots. Question 6: five squares. Tick your own page."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-choice",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time. Anything not finished is for home too."
+     },
+     {
+      "k": "MOVE",
+      "text": "Stand and reach up for 30 seconds, then sit down and choose.",
+      "s": 30
+     },
+     {
+      "k": "WORK",
+      "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
+      "s": 200
+     },
+     {
+      "k": "STUCK",
+      "text": "Q1: count the squares in each row, then add the rows. Q2: add 5 three times. Q3: touch each line once and count. Q4: what must you add to 2 to make 9? Q5: count the dots in one row, then add the rows. Q6: count the yellow squares, then take them away from 9."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who is still stuck ticks I am still stuck on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp (never a personal phone). You then help in the open session in the next lesson. Never a private message to a child."
+     },
+     {
+      "k": "NOTE",
+      "text": "Think harder has Handshake Party (beyond Primary 1 on purpose), a table of outfits, the squares of every size and every pair of stickers. Go further has handshakes for 5 and 6 children, the squares in a 3 by 3 grid and two roads with a direct way. Do not announce who is on which page. Start here takes a middle child about 16 minutes, so the choice time may be short. Slow class: take the extra minutes from the flex time and do not skip the answer slides."
+     }
+    ]
+   },
+   {
+    "part": "talk",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-talk",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "A child in another class says: four friends shake hands. Each one shakes hands with 3 others. So there are 4 times 3 handshakes. Do you agree? How could we check?"
+     },
+     {
+      "k": "WORK",
+      "text": "Think about it. You may use your paper people.",
+      "s": 50
+     },
+     {
+      "k": "WORK",
+      "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
+      "s": 40
+     },
+     {
+      "k": "ASK",
+      "text": "Who would like to share? Volunteers first. A pass is always fine.",
+      "resp": 100
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-sneakans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Remember the sneak-peek? Puzzle one: eight squares. Puzzle two: six ways. Each of the two hats goes with each of the three scarves."
+     },
+     {
+      "k": "ASK",
+      "text": "Did anyone change their mind while we worked? You can just nod.",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Where did you use Try something simpler today?",
+      "resp": 10,
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Listen for the tool being named, not the answer. Volunteers first, a pass is always fine.",
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Model answer: no, we do not agree. A handshake between A and B is counted once by A and once by B, so 4 times 3 counts every handshake twice. We can check by listing the pairs with a rule. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
+     }
+    ]
+   },
+   {
+    "part": "exit",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-exit",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
+     },
+     {
+      "k": "READ",
+      "text": "E1. How many squares are in the grid? Write the number. E2. Ali crosses the river by one of 3 bridges. Then he takes one of 3 buses home. Each box is one way to go home. How many ways are there? E3. Four friends make pairs. One pair is missing from the list. Write the missing pair."
+     },
+     {
+      "k": "WORK",
+      "text": "Children answer E1 to E3 on their own.",
+      "s": 190
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-exitans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "E1: fifteen squares. E2: nine ways. E3: C and D."
+     },
+     {
+      "k": "SAY",
+      "text": "Tick your own ticket with a tick. Well done."
+     },
+     {
+      "k": "NOTE",
+      "text": "Nothing is collected or marked live. Children tick their own ticket. If many children miss one question, spend two minutes on it at the start of the next lesson, in the open session, no names. Do not read out any child result."
+     }
+    ]
+   },
+   {
+    "part": "look",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-look",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+      "spine": "look"
+     },
+     {
+      "k": "WORK",
+      "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+      "s": 110,
+      "spine": "look"
+     }
+    ]
+   },
+   {
+    "part": "flex",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-end",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Well done, inquirers. Next lesson is Make Your Own Graph. Please have Book 8 ready, and about twelve small things from the house to sort. Goodbye, and thank you to the grown-ups."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-opt",
+      "s": 8,
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Optional, only if you are on time. Four friends shake hands once with each other. The lines show five handshakes. Which pair has not shaken hands yet?",
+      "optional": true
+     },
+     {
+      "k": "WORK",
+      "text": "Short think time, then take two answers.",
+      "s": 90,
+      "optional": true
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-menu",
+      "s": 8,
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
+      "optional": true
+     },
+     {
+      "k": "NOTE",
+      "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: A and D. If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+     }
+    ]
+   }
+  ]
+ },
+ "tiers": {
+  "start": [
+   {
+    "id": "S1",
+    "page": 1,
+    "tier": "start",
+    "text": "Count the squares by rows.",
+    "parts": [
+     {
+      "l": "",
+      "text": "There are [] squares.",
+      "ans": "10",
+      "val": 10
+     }
+    ],
+    "answer": "10 squares",
+    "val": 10,
+    "hint": "Count the squares in one row. Then add the rows.",
+    "solution": "Each row has 5 squares. There are 2 rows. 5 and 5 make 10 squares.",
+    "mistakes": [
+     "Counting a square twice.",
+     "Counting only one row."
+    ],
+    "mins": 2.5,
+    "visual": {
+     "type": "grid",
+     "rows": 2,
+     "cols": 5,
+     "kind": "squares",
+     "cell": 60,
+     "mm": 9
+    }
+   },
+   {
+    "id": "S2",
+    "page": 1,
+    "tier": "start",
+    "text": "There are 3 jars. Each jar has 5 marbles.",
+    "parts": [
+     {
+      "l": "",
+      "text": "There are [] marbles in all.",
+      "ans": "15",
+      "val": 15
+     }
+    ],
+    "answer": "15 marbles",
+    "val": 15,
+    "hint": "Add the marbles in each jar. 5, then 5, then 5.",
+    "solution": "5 and 5 make 10. 10 and 5 make 15. There are 15 marbles in all.",
+    "mistakes": [
+     "Writing 3 for the jars.",
+     "Counting only two jars."
+    ],
+    "mins": 2.5,
+    "visual": {
+     "type": "groups",
+     "container": "jar",
+     "counts": [
+      5,
+      5,
+      5
+     ],
+     "icon": "marble",
+     "size": "m"
+    }
+   },
+   {
+    "id": "S3",
+    "page": 1,
+    "tier": "start",
+    "text": "Each line joins two dots.",
+    "parts": [
+     {
+      "l": "",
+      "text": "There are [] lines.",
+      "ans": "5",
+      "val": 5
+     }
+    ],
+    "answer": "5 lines",
+    "val": 5,
+    "hint": "Touch each line once and count. Do not count the dots.",
+    "solution": "The lines are A to B, B to C, C to D, D to A and A to C. That is 5 lines.",
+    "mistakes": [
+     "Counting the dots (4).",
+     "Counting a line twice."
+    ],
+    "mins": 3,
+    "visual": {
+     "type": "network",
+     "n": 4,
+     "lines": [
+      [
+       0,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       3,
+       0
+      ],
+      [
+       0,
+       2
+      ]
+     ],
+     "labels": [
+      "A",
+      "B",
+      "C",
+      "D"
+     ],
+     "size": "m"
+    }
+   },
+   {
+    "id": "S4",
+    "page": 2,
+    "tier": "start",
+    "text": "Every pair of numbers makes 9. Fill in the missing numbers.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "2 + [] = 9",
+      "ans": "7",
+      "val": 7
+     },
+     {
+      "l": "b",
+      "text": "3 + [] = 9",
+      "ans": "6",
+      "val": 6
+     },
+     {
+      "l": "c",
+      "text": "4 + [] = 9",
+      "ans": "5",
+      "val": 5
+     }
+    ],
+    "answer": "7; 6; 5",
+    "val": [
+     7,
+     6,
+     5
+    ],
+    "hint": "What must you add to 2 to make 9? Count up from 2.",
+    "solution": "2 and 7 make 9. 3 and 6 make 9. 4 and 5 make 9. The list goes 1 and 8, 2 and 7, 3 and 6, 4 and 5.",
+    "mistakes": [
+     "Writing 9 in every box.",
+     "Taking 2 away from 9 the wrong way round."
+    ],
+    "mins": 3
+   },
+   {
+    "id": "S5",
+    "page": 2,
+    "tier": "start",
+    "text": "Count the flowers by rows.",
+    "parts": [
+     {
+      "l": "",
+      "text": "There are [] flowers.",
+      "ans": "20",
+      "val": 20
+     }
+    ],
+    "answer": "20 flowers",
+    "val": 20,
+    "hint": "Count the flowers in one row. Then add the rows.",
+    "solution": "Each row has 5 flowers. There are 4 rows. 5 and 5 make 10, and 5 and 5 make 10. 10 and 10 make 20 flowers.",
+    "mistakes": [
+     "Counting only one row.",
+     "Counting a row twice."
+    ],
+    "mins": 2.5,
+    "visual": {
+     "type": "array",
+     "rows": 4,
+     "cols": 5,
+     "icon": "flower",
+     "size": "m"
+    }
+   },
+   {
+    "id": "S6",
+    "page": 2,
+    "tier": "start",
+    "text": "There are 9 squares. Some squares are yellow.",
+    "parts": [
+     {
+      "l": "",
+      "text": "[] squares are not yellow.",
+      "ans": "5",
+      "val": 5
+     }
+    ],
+    "answer": "5 squares",
+    "val": 5,
+    "hint": "Count the yellow squares. Take them away from 9.",
+    "solution": "There are 4 yellow squares. 9 take away 4 is 5. So 5 squares are not yellow.",
+    "mistakes": [
+     "Writing 4, the number of yellow squares.",
+     "Counting a square twice."
+    ],
+    "mins": 3,
+    "visual": {
+     "type": "grid",
+     "rows": 3,
+     "cols": 3,
+     "kind": "squares",
+     "cell": 60,
+     "squares": [
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       2
+      ],
+      [
+       2,
+       0
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "mm": 11
+    }
+   }
+  ],
+  "think": [
+   {
+    "id": "T1",
+    "page": 3,
+    "tier": "think",
+    "text": "Handshake Party. Four children, A, B, C and D, shake hands once with each other. A has already shaken hands with B, C and D.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "B shakes hands with [] more children.",
+      "ans": "2",
+      "val": 2
+     },
+     {
+      "l": "b",
+      "text": "C shakes hands with [] more child.",
+      "ans": "1",
+      "val": 1
+     },
+     {
+      "l": "c",
+      "text": "There are [] handshakes in all.",
+      "ans": "6",
+      "val": 6
+     }
+    ],
+    "answer": "2; 1; 6",
+    "val": [
+     2,
+     1,
+     6
+    ],
+    "hint": "B has shaken hands with A. Count only the new ones.",
+    "solution": "A made 3 handshakes. B has already shaken hands with A, so B makes 2 new ones, with C and with D. C has shaken hands with A and B, so C makes 1 new one, with D. D has none new. 3 + 2 + 1 = 6 handshakes.",
+    "mistakes": [
+     "Writing 12 (4 times 3): every handshake is counted twice.",
+     "Counting B with A again."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "network",
+     "n": 4,
+     "lines": [
+      [
+       0,
+       1
+      ],
+      [
+       0,
+       2
+      ],
+      [
+       0,
+       3
+      ]
+     ],
+     "labels": [
+      "A",
+      "B",
+      "C",
+      "D"
+     ],
+     "size": 75
+    }
+   },
+   {
+    "id": "T2",
+    "page": 3,
+    "tier": "think",
+    "text": "Mi paints a flag with 2 stripes, a top stripe and a bottom stripe. Each stripe is red, blue or green. The two stripes must be different colours.",
+    "parts": [
+     {
+      "l": "",
+      "text": "There are [] different flags in all.",
+      "ans": "6",
+      "val": 6
+     }
+    ],
+    "answer": "6 flags",
+    "val": 6,
+    "hint": "Draw a table with a row for the top stripe and a column for the bottom stripe. Cross out the boxes with the same colour twice. Count the other boxes.",
+    "solution": "Each of the 3 top stripes goes with 2 different bottom stripes. 2 and 2 and 2 make 6 flags. In the table there are 9 boxes, and 3 of them have the same colour twice, so 6 boxes are left.",
+    "mistakes": [
+     "Writing 9 (counting the flags with the same colour twice).",
+     "Writing 3, the number of colours."
+    ],
+    "mins": 4
+   },
+   {
+    "id": "T3",
+    "page": 3,
+    "tier": "think",
+    "text": "A domino covers 2 squares that touch, like the yellow one. The board has 2 rows of 3 squares.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "There are [] places for a domino that lies along a row.",
+      "ans": "4",
+      "val": 4
+     },
+     {
+      "l": "b",
+      "text": "There are [] places for a domino that stands up in a column.",
+      "ans": "3",
+      "val": 3
+     },
+     {
+      "l": "c",
+      "text": "There are [] places for a domino in all.",
+      "ans": "7",
+      "val": 7
+     }
+    ],
+    "answer": "4; 3; 7",
+    "val": [
+     4,
+     3,
+     7
+    ],
+    "hint": "Count the places along the top row. Then the bottom row. Then count the places that stand up in each column.",
+    "solution": "Each row has 3 squares, so a domino can start on the 1st or the 2nd square: 2 places in each row, and 2 and 2 make 4. A domino that stands up covers a whole column of 2 squares, so there is 1 place in each of the 3 columns: 3. 4 and 3 make 7 places in all.",
+    "mistakes": [
+     "Counting 6, one for each square.",
+     "Counting only the dominoes that lie along a row (4)."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "grid",
+     "rows": 2,
+     "cols": 3,
+     "kind": "squares",
+     "cell": 60,
+     "squares": [
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       1
+      ]
+     ],
+     "size": 66
+    }
+   },
+   {
+    "id": "T4",
+    "page": 3,
+    "tier": "think",
+    "text": "Six children have 3, 5, 6, 8, 9 and 11 stickers. Two children together have 14 stickers. Find every pair. Start with the child who has 3.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "3 + [] = 14",
+      "ans": "11",
+      "val": 11
+     },
+     {
+      "l": "b",
+      "text": "5 + [] = 14",
+      "ans": "9",
+      "val": 9
+     },
+     {
+      "l": "c",
+      "text": "6 + [] = 14",
+      "ans": "8",
+      "val": 8
+     }
+    ],
+    "answer": "11; 9; 8",
+    "val": [
+     11,
+     9,
+     8
+    ],
+    "hint": "Start with the child who has 3 stickers. What must be added to make 14? Is there such a child?",
+    "solution": "3 and 11 make 14. 5 and 9 make 14. 6 and 8 make 14. The children with 8, 9 and 11 stickers are already in a pair, so these are all the pairs: 3 and 11, 5 and 9, 6 and 8.",
+    "mistakes": [
+     "Missing one of the three pairs.",
+     "Counting 3 and 11 and 11 and 3 as two pairs."
+    ],
+    "mins": 5
+   }
+  ],
+  "go": [
+   {
+    "id": "G1",
+    "page": 4,
+    "tier": "go",
+    "text": "Handshake Party. Children shake hands once with every other child. Think of A, B, C and so on. Use your paper people if you like.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "5 children: [] handshakes.",
+      "ans": "10",
+      "val": 10
+     },
+     {
+      "l": "b",
+      "text": "6 children: [] handshakes.",
+      "ans": "15",
+      "val": 15
+     }
+    ],
+    "answer": "10; 15",
+    "val": [
+     10,
+     15
+    ],
+    "hint": "For 4 children it was 3 + 2 + 1. For 5 children, start at 4.",
+    "solution": "5 children: A makes 4, B makes 3 new ones, C makes 2, D makes 1. 4 + 3 + 2 + 1 = 10. 6 children: 5 + 4 + 3 + 2 + 1 = 15.",
+    "mistakes": [
+     "Writing 5 times 4 (20): every handshake is counted twice.",
+     "Stopping the list one number too soon."
+    ],
+    "mins": 7
+   },
+   {
+    "id": "G2",
+    "page": 4,
+    "tier": "go",
+    "text": "A grid is 3 squares across and 3 squares down. Count the squares of every size. The yellow one is a 2 by 2 square.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Small squares: [].",
+      "ans": "9",
+      "val": 9
+     },
+     {
+      "l": "b",
+      "text": "2 by 2 squares: [].",
+      "ans": "4",
+      "val": 4
+     },
+     {
+      "l": "c",
+      "text": "3 by 3 squares: [].",
+      "ans": "1",
+      "val": 1
+     },
+     {
+      "l": "d",
+      "text": "All the squares: [].",
+      "ans": "14",
+      "val": 14
+     }
+    ],
+    "answer": "9; 4; 1; 14",
+    "val": [
+     9,
+     4,
+     1,
+     14
+    ],
+    "hint": "A 2 by 2 square can start in 2 places across and 2 places down.",
+    "solution": "There are 9 small squares. A 2 by 2 square can start in 2 columns and 2 rows, so there are 2 and 2 which is 4. There is 1 big square, the whole grid. 9 + 4 + 1 = 14.",
+    "mistakes": [
+     "Counting only the 9 small squares.",
+     "Forgetting the whole grid."
+    ],
+    "mins": 7,
+    "visual": {
+     "type": "grid",
+     "rows": 3,
+     "cols": 3,
+     "kind": "squares",
+     "cell": 60,
+     "squares": [
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       1
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "size": 55
+    }
+   },
+   {
+    "id": "G3",
+    "page": 4,
+    "tier": "go",
+    "text": "Look at the table of roads.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "[] ways go through the Park.",
+      "ans": "8",
+      "val": 8
+     },
+     {
+      "l": "b",
+      "text": "Add the direct road. There are [] ways in all.",
+      "ans": "9",
+      "val": 9
+     }
+    ],
+    "answer": "8; 9",
+    "val": [
+     8,
+     9
+    ],
+    "hint": "Each road from Home to the Park goes with each road from the Park to School.",
+    "solution": "There are 2 roads from Home to the Park and 4 from the Park to School. Each of the 2 first roads goes with each of the 4 second roads: 4 and 4 make 8 ways through the Park. Add 1 direct road: 9 ways.",
+    "mistakes": [
+     "Adding 2 and 4 to make 6.",
+     "Forgetting the direct road."
+    ],
+    "mins": 7,
+    "visual": {
+     "type": "table",
+     "head": [
+      "From",
+      "To",
+      "Roads"
+     ],
+     "rows": [
+      [
+       "Home",
+       "Park",
+       "2"
+      ],
+      [
+       "Park",
+       "School",
+       "4"
+      ],
+      [
+       "Home",
+       "School",
+       "1"
+      ]
+     ],
+     "px": 400
+    }
+   }
+  ],
+  "investigation": {
+   "id": "I1",
+   "page": 5,
+   "tier": "investigation",
+   "title": "Every pair that makes 7",
+   "first": "Two numbers make 7. 1 + 6 = 7. Write the next pair: 2 + ____ = 7.",
+   "text": "Now list every pair that makes 7. Stop when the pairs repeat. How do you know you have them all?",
+   "lines": 4,
+   "draw": 0,
+   "answer": "The pairs are 1 + 6, 2 + 5 and 3 + 4. After 3 + 4 the pairs repeat (4 + 3 is the same pair). So there are 3 pairs.",
+   "val": [
+    5
+   ],
+   "look_for": "A child who lists 1 + 6, 2 + 5, 3 + 4 in order and says the next pair would be a repeat. Credit any clear reason. A child who counts 0 + 7 has found one more pair; accept it if it is explained.",
+   "mistakes": [
+    "Listing 3 + 4 and 4 + 3 as two pairs.",
+    "Missing a pair because the list has no rule."
+   ],
+   "mins": 8
+  }
+ },
+ "talk": {
+  "question": "A child in another class says: four friends shake hands. Each one shakes hands with 3 others. So there are 4 times 3 handshakes. Do you agree? How could we check?",
+  "starter": "I think ... because ...",
+  "answer": "No. A handshake between A and B is counted once by A and once by B, so 4 times 3 counts every handshake twice. We can check by listing the pairs with a rule.",
+  "look_for": "A child who says a handshake is counted twice, or who says to list the pairs. Not just yes or no."
+ },
+ "exit": [
+  {
+   "id": "E1",
+   "text": "Count the squares by rows.",
+   "parts": [
+    {
+     "l": "",
+     "text": "There are [] squares.",
+     "ans": "15",
+     "val": 15
+    }
+   ],
+   "answer": "15 squares",
+   "val": 15,
+   "solution": "Each row has 5 squares. There are 3 rows. 5 and 5 and 5 make 15.",
+   "mistakes": [
+    "Counting only one row.",
+    "Counting a square twice."
+   ],
+   "visual": {
+    "type": "grid",
+    "rows": 3,
+    "cols": 5,
+    "kind": "squares",
+    "cell": 50,
+    "mm": 8
+   }
+  },
+  {
+   "id": "E2",
+   "text": "Ali crosses the river by one of 3 bridges. Then he takes one of 3 buses home. Each box is one way to go home.",
+   "parts": [
+    {
+     "l": "",
+     "text": "There are [] ways.",
+     "ans": "9",
+     "val": 9
+    }
+   ],
+   "answer": "9 ways",
+   "val": 9,
+   "solution": "There are 3 bridges and 3 buses. Each bridge goes with each bus: 3 and 3 and 3 make 9 boxes, so 9 ways.",
+   "mistakes": [
+    "Writing 6 (3 and 3).",
+    "Counting only one row."
+   ],
+   "visual": {
+    "type": "table",
+    "head": [
+     "",
+     "red bus",
+     "blue bus",
+     "green bus"
+    ],
+    "rows": [
+     [
+      "bridge 1",
+      "[ ]",
+      "[ ]",
+      "[ ]"
+     ],
+     [
+      "bridge 2",
+      "[ ]",
+      "[ ]",
+      "[ ]"
+     ],
+     [
+      "bridge 3",
+      "[ ]",
+      "[ ]",
+      "[ ]"
+     ]
+    ],
+    "px": 380
+   }
+  },
+  {
+   "id": "E3",
+   "text": "Four friends, A, B, C and D, make pairs. Here are 5 of the 6 pairs: AB, AC, AD, BC, BD.",
+   "parts": [
+    {
+     "l": "",
+     "text": "The missing pair is ___.",
+     "ans": "CD",
+     "val": "CD"
+    }
+   ],
+   "answer": "C and D",
+   "val": [
+    "CD"
+   ],
+   "solution": "The 6 pairs are AB, AC, AD, BC, BD and CD. The pair CD is not in the list.",
+   "mistakes": [
+    "Writing DC, which is the same pair (accept it).",
+    "Writing a pair that is already in the list."
+   ]
+  }
+ ],
+ "look_back": {
+  "hardest": [
+   "handshakes",
+   "squares",
+   "the list of pairs",
+   "something else"
+  ],
+  "helped": [
+   "my paper people",
+   "a system",
+   "a list",
+   "I was not stuck"
+  ],
+  "next": [
+   "counting with a system",
+   "handshakes",
+   "listing pairs",
+   "asking a question"
+  ]
+ },
+ "home_practice": [
+  {
+   "id": "H1",
+   "tier": "start",
+   "text": "A grid has 4 rows of 4 squares. How many squares are in the grid? There are ___ squares.",
+   "answer": "16",
+   "val": 16,
+   "solution": "Each row has 4 squares. 4 and 4 and 4 and 4 make 16.",
+   "visual": {
+    "type": "grid",
+    "rows": 4,
+    "cols": 4,
+    "kind": "squares",
+    "cell": 50,
+    "hw": 41
+   }
+  },
+  {
+   "id": "H2",
+   "tier": "start",
+   "text": "Mei buys an ice cream with 2 scoops, a top scoop and a bottom scoop. She picks each scoop from 3 flavours: vanilla, mango or berry. The scoops can be the same. How many ways can she choose? There are ___ ways.",
+   "answer": "9",
+   "val": 9,
+   "solution": "The top scoop can be any of 3 flavours. Each top scoop goes with 3 bottom scoops. 3 and 3 and 3 make 9 ways."
+  },
+  {
+   "id": "H3",
+   "tier": "start",
+   "text": "Every pair of numbers makes 10. 1 + 9 = 10. 2 + ___ = 10. 3 + ___ = 10. Write the missing numbers.",
+   "answer": "8 and 7",
+   "val": [
+    8,
+    7
+   ],
+   "solution": "2 and 8 make 10. 3 and 7 make 10."
+  },
+  {
+   "id": "H4",
+   "tier": "think",
+   "text": "Lily puts 8 marbles into a red cup and a blue cup. Each cup has at least 1 marble. Start with 1 marble in the red cup. How many different ways are there? There are ___ ways.",
+   "answer": "7",
+   "val": 7,
+   "solution": "Red 1 and blue 7, red 2 and blue 6, red 3 and blue 5, red 4 and blue 4, red 5 and blue 3, red 6 and blue 2, red 7 and blue 1. That is 7 ways."
+  },
+  {
+   "id": "H5",
+   "tier": "start",
+   "rewind_of": "Term 2 Lesson 6",
+   "text": "A bundle has 10 straws. How many straws are in 3 bundles? 3 × 10 = [2]",
+   "answer": "30",
+   "val": 30,
+   "solution": "3 jumps of 10: 10, 20, 30."
+  }
+ ],
+ "online_practice": {
+  "key": "t4l36",
+  "title": "Count Everything",
+  "topic": "Count squares, groups, handshakes, outfits and pairs with a system",
+  "items": [
+   {
+    "id": "c1",
+    "tier": "core",
+    "type": "number",
+    "q": "A grid has 3 rows with 4 squares in each row. How many squares are in the grid?",
+    "hint": "Count the squares in one row. Then add the rows.",
+    "steps": [
+     "Each row has 4 squares.",
+     "There are 3 rows.",
+     "4 and 4 and 4 make 12 squares."
+    ],
+    "answer": 12,
+    "slips": [
+     {
+      "a": [
+       7
+      ],
+      "say": "7 is 3 and 4 added. Add 4 three times."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "r": [
+       2,
+       3,
+       4
+      ],
+      "c": [
+       3,
+       4,
+       5,
+       6
+      ]
+     },
+     "derive": {},
+     "q": "A grid has {r} rows with {c} squares in each row. How many squares are in the grid?",
+     "answer": "r*c",
+     "hint": "Count the squares in one row. Then add the rows.",
+     "steps": [
+      "Each row has {c} squares.",
+      "There are {r} rows.",
+      "Add {c} once for each row: {ans} squares."
+     ]
+    }
+   },
+   {
+    "id": "c2",
+    "tier": "core",
+    "type": "number",
+    "q": "4 bags have 3 sweets in each bag. How many sweets are there in all?",
+    "hint": "Add the sweets in each bag.",
+    "steps": [
+     "Each bag has 3 sweets.",
+     "There are 4 bags.",
+     "3 and 3 and 3 and 3 make 12 sweets."
+    ],
+    "answer": 12,
+    "slips": [
+     {
+      "a": [
+       7
+      ],
+      "say": "Do not add 4 and 3 only. Add 3 once for each bag."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3,
+       4,
+       5
+      ],
+      "b": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     "derive": {},
+     "q": "{a} bags have {b} sweets in each bag. How many sweets are there in all?",
+     "answer": "a*b",
+     "hint": "Add the sweets in each bag.",
+     "steps": [
+      "Each bag has {b} sweets.",
+      "There are {a} bags.",
+      "Add {b} once for each bag: {ans} sweets."
+     ]
+    }
+   },
+   {
+    "id": "c3",
+    "tier": "core",
+    "type": "number",
+    "q": "Three friends shake hands once with each other. How many handshakes are there?",
+    "hint": "List the pairs: A with B, A with C, then B with C.",
+    "steps": [
+     "A with B.",
+     "A with C.",
+     "B with C. That is 3 handshakes."
+    ],
+    "answer": 3,
+    "slips": [
+     {
+      "a": [
+       6
+      ],
+      "say": "B with A is the same handshake as A with B. Count each pair once."
+     }
+    ],
+    "fig": {
+     "type": "network",
+     "n": 3,
+     "all": true,
+     "labels": [
+      "A",
+      "B",
+      "C"
+     ],
+     "size": "m"
+    }
+   },
+   {
+    "id": "c4",
+    "tier": "core",
+    "type": "choice",
+    "q": "A child lists handshakes: A with B, A with C, B with A, B with C. Which one is a repeat?",
+    "hint": "Which pair has the same two letters as an earlier pair?",
+    "steps": [
+     "A with B and B with A have the same two letters.",
+     "They are the same handshake.",
+     "B with A is the repeat."
+    ],
+    "options": [
+     "A with B",
+     "A with C",
+     "B with A",
+     "B with C"
+    ],
+    "answer": "B with A",
+    "slips": [
+     {
+      "a": [
+       "A with B"
+      ],
+      "say": "A with B comes first. Which pair comes again with the letters the other way round?"
+     }
+    ]
+   },
+   {
+    "id": "c5",
+    "tier": "core",
+    "type": "number",
+    "q": "A castle has 2 gates in its north wall and 3 gates in its south wall. A guard walks in by a north gate and out by a south gate. How many different ways can she go?",
+    "hint": "Each north gate goes with every south gate.",
+    "steps": [
+     "One north gate goes with 3 south gates.",
+     "There are 2 north gates.",
+     "3 and 3 make 6 ways."
+    ],
+    "answer": 6,
+    "slips": [
+     {
+      "a": [
+       5
+      ],
+      "say": "Do not add 2 and 3. Each north gate goes with every south gate."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3
+      ],
+      "b": [
+       2,
+       3,
+       4
+      ]
+     },
+     "derive": {},
+     "q": "A castle has {a} gates in its north wall and {b} gates in its south wall. A guard walks in by a north gate and out by a south gate. How many different ways can she go?",
+     "answer": "a*b",
+     "hint": "Each north gate goes with every south gate.",
+     "steps": [
+      "One north gate goes with {b} south gates.",
+      "There are {a} north gates.",
+      "Add {b} once for each north gate: {ans} ways."
+     ]
+    }
+   },
+   {
+    "id": "t1",
+    "tier": "stretch",
+    "type": "number",
+    "q": "5 children shake hands once with every other child. How many handshakes are there?",
+    "hint": "Count only the new handshakes: 4, then 3, then 2, then 1.",
+    "steps": [
+     "The first child makes 4.",
+     "The next makes 3 new ones, then 2, then 1.",
+     "4 + 3 + 2 + 1 = 10 handshakes."
+    ],
+    "answer": 10,
+    "slips": [
+     {
+      "a": [
+       20
+      ],
+      "say": "That counts every handshake twice. Count only the new ones."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "n": [
+       3,
+       4,
+       5,
+       6
+      ]
+     },
+     "derive": {},
+     "q": "{n} children shake hands once with every other child. How many handshakes are there?",
+     "answer": "n*(n-1)//2",
+     "hint": "Count only the new handshakes each time.",
+     "steps": [
+      "The first child makes the most handshakes.",
+      "Each next child makes one fewer new handshake.",
+      "There are {ans} handshakes in all."
+     ]
+    },
+    "easier": "c3"
+   },
+   {
+    "id": "t2",
+    "tier": "stretch",
+    "type": "number",
+    "q": "How many squares of any size are in a 2 by 2 grid?",
+    "hint": "Count the small squares first. Then look for a bigger one.",
+    "steps": [
+     "There are 4 small squares.",
+     "The whole grid is 1 big square.",
+     "4 and 1 make 5 squares."
+    ],
+    "answer": 5,
+    "slips": [
+     {
+      "a": [
+       4
+      ],
+      "say": "The whole grid is a square too. Count the big one."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "k": [
+       2,
+       3
+      ]
+     },
+     "derive": {},
+     "q": "How many squares of any size are in a {k} by {k} grid?",
+     "answer": "k*(k+1)*(2*k+1)//6",
+     "hint": "Count the small squares first. Then look for bigger ones.",
+     "steps": [
+      "Count the small squares.",
+      "Then count the bigger squares of each size.",
+      "There are {ans} squares in all."
+     ]
+    },
+    "easier": "c1"
+   },
+   {
+    "id": "t3",
+    "tier": "stretch",
+    "type": "number",
+    "q": "How many pairs of whole numbers make 8? Count 1 + 7, then 2 + 6, and so on. The same two numbers in another order are the same pair.",
+    "hint": "Start at 1. Stop when the pairs repeat.",
+    "steps": [
+     "1 + 7, 2 + 6, 3 + 5 and 4 + 4.",
+     "The next pairs are repeats.",
+     "There are 4 pairs."
+    ],
+    "answer": 4,
+    "slips": [
+     {
+      "a": [
+       7,
+       8
+      ],
+      "say": "Count 3 + 5 and 5 + 3 once. Stop at 4 + 4."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "t": [
+       6,
+       7,
+       8,
+       9,
+       10
+      ]
+     },
+     "derive": {},
+     "q": "How many pairs of whole numbers make {t}? Start at 1. The same two numbers in another order are the same pair.",
+     "answer": "t//2",
+     "hint": "Start at 1. Stop when the pairs repeat.",
+     "steps": [
+      "List the pairs starting at 1.",
+      "Stop when the pairs repeat.",
+      "There are {ans} pairs."
+     ]
+    },
+    "easier": "c3"
+   },
+   {
+    "id": "g1",
+    "tier": "challenge",
+    "type": "number",
+    "q": "There are 2 paths from Home to the Park and 4 paths from the Park to School. There is also 1 direct path from Home to School. How many ways are there from Home to School?",
+    "hint": "Each path to the Park goes with each path from the Park.",
+    "steps": [
+     "Each of the 2 first paths goes with each of the 4 second paths: 8 ways.",
+     "Add the direct path: 1 more.",
+     "8 and 1 make 9 ways."
+    ],
+    "answer": 9,
+    "slips": [
+     {
+      "a": [
+       7
+      ],
+      "say": "2 and 4 are not added. Each first path goes with every second path."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3
+      ],
+      "b": [
+       2,
+       3,
+       4
+      ]
+     },
+     "derive": {},
+     "q": "There are {a} paths from Home to the Park and {b} paths from the Park to School. There is also 1 direct path from Home to School. How many ways are there from Home to School?",
+     "answer": "a*b+1",
+     "hint": "Each path to the Park goes with each path from the Park.",
+     "steps": [
+      "Each of the {a} first paths goes with each of the {b} second paths.",
+      "Add the direct path: 1 more.",
+      "There are {ans} ways."
+     ]
+    },
+    "easier": "t1"
+   },
+   {
+    "id": "g2",
+    "tier": "challenge",
+    "type": "number",
+    "q": "How many squares of any size are in a 4 by 4 grid?",
+    "hint": "Count by size: 1 by 1, then 2 by 2, then 3 by 3, then 4 by 4.",
+    "steps": [
+     "1 by 1: 16. 2 by 2: 9.",
+     "3 by 3: 4. 4 by 4: 1.",
+     "16 + 9 + 4 + 1 = 30 squares."
+    ],
+    "answer": 30,
+    "slips": [
+     {
+      "a": [
+       16
+      ],
+      "say": "There are bigger squares too: 2 by 2, 3 by 3 and 4 by 4."
+     }
+    ],
+    "easier": "t2"
+   },
+   {
+    "id": "g3",
+    "tier": "challenge",
+    "type": "selfcheck",
+    "q": "Make a counting puzzle for a grown-up with pairs, outfits or handshakes. Check your answer with a list or a table.",
+    "hint": "Use a list with a rule.",
+    "steps": [
+     "Pick a counting idea.",
+     "Write the puzzle and the answer.",
+     "Ask a grown-up to check it with a list."
+    ],
+    "easier": "c3"
+   },
+   {
+    "id": "r1",
+    "tier": "core",
+    "type": "number",
+    "q": "A ruler costs $6 and a glue stick costs $5. How much do they cost altogether?",
+    "hint": "Altogether means add.",
+    "steps": [
+     "Altogether means add.",
+     "6 and 5 make 11.",
+     "They cost $11 altogether."
+    ],
+    "answer": 11,
+    "slips": [
+     {
+      "a": [
+       1
+      ],
+      "say": "1 is the gap. Altogether means add the two prices."
+     }
+    ],
+    "fig": {
+     "type": "price_tag",
+     "item": "ruler",
+     "price": "${a}"
+    },
+    "fig_base": {
+     "type": "price_tag",
+     "item": "ruler",
+     "price": "$6"
+    },
+    "tpl": {
+     "vars": {
+      "a": [
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9
+      ],
+      "b": [
+       2,
+       3,
+       5,
+       6,
+       8,
+       9
+      ]
+     },
+     "derive": {},
+     "q": "A ruler costs {a|usd} and a glue stick costs {b|usd}. How much do they cost altogether?",
+     "answer": "a+b",
+     "hint": "Altogether means add.",
+     "steps": [
+      "Altogether means add.",
+      "{a} and {b} make {ans}.",
+      "They cost {ans|usd} altogether."
+     ]
+    },
+    "rewind_of": "Term 3 Lesson 6"
+   },
+   {
+    "id": "r2",
+    "tier": "core",
+    "type": "number",
+    "q": "A ruler costs $7. Mei buys 3 rulers. How much do the rulers cost altogether?",
+    "hint": "Add the same price three times.",
+    "steps": [
+     "Add 7 three times.",
+     "7 and 7 make 14. 14 and 7 make 21.",
+     "The rulers cost $21 altogether."
+    ],
+    "answer": 21,
+    "slips": [
+     {
+      "a": [
+       7
+      ],
+      "say": "7 is one ruler. Mei buys 3."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "p": [
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9
+      ]
+     },
+     "derive": {},
+     "q": "A ruler costs {p|usd}. Mei buys 3 rulers. How much do the rulers cost altogether?",
+     "answer": "3*p",
+     "hint": "Add {p} three times.",
+     "steps": [
+      "Add {p} three times.",
+      "{p} and {p} and {p} make {ans}.",
+      "The rulers cost {ans|usd} altogether."
+     ]
+    },
+    "rewind_of": "Term 3 Lesson 6"
+   }
+  ]
+ },
+ "parent": {
+  "summary": "We counted with a system: by rows, by groups and with a list that has a rule. We counted handshakes, outfits and squares of every size, so that none is missed and none is counted twice. Some Think harder and Go further questions go past the school Primary 1 syllabus on purpose; Start here stays within it.",
+  "words": [
+   "system: a way of counting that misses none and counts none twice",
+   "handshake: A with B is the same as B with A",
+   "list: pairs written with a rule"
+  ],
+  "try_home": [
+   "Count the handshakes for 3, then 4 family members. Count only the new ones.",
+   "Lay out 2 tops and 3 pairs of socks. How many outfits?",
+   "List every pair that makes 10. When do the pairs repeat?"
+  ],
+  "ask": [
+   "How did you make sure you missed none?",
+   "Is that the same pair twice?"
+  ],
+  "when_stuck": "Let your child use paper people, coins or drawings, and wait 10 seconds before helping. Please do not give the answer: ask \"Which one is new?\" or \"Is that a repeat?\" If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
+  "next": "Next lesson: Make Your Own Graph. Online practice: your tutor will share the link. The recording has the tutor, the shared screen and any voice that is unmuted. Please do not share the link.",
+  "quote": "A system means you miss none and count none twice.",
+  "report_line": "Your child is learning to count with a system so that nothing is missed or counted twice. This week: counting by rows and groups, handshakes, outfits, squares of every size and listing every pair.",
+  "term_line": "Your child is learning to choose a way to solve a problem, and to make and test their own puzzles.",
+  "next_materials": [
+   "Your Term 4 book (Book 8): the graph-mat page is in the book. No cutting is needed",
+   "About 12 small things from around the house in 3 or 4 kinds (spoons, socks, buttons). Not food. No small things? Draw 12 things on paper",
+   "Coloured pencils (optional), a pencil, a rubber and paper"
+  ]
+ },
+ "safeguarding": [
+  "Paper people, coins and buttons are small pieces. They stay on the table: nothing goes in the mouth or ears. No matches or toothpicks. Nobody cuts during the lesson; a grown-up cut the paper people beforehand.",
+  "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
+  "Nobody holds paper, people or a drawing up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on a count of three, or show fingers or a thumb for a choice. There is no private chat.",
+  "Wrong working belongs to 'a child' or 'a child in another class', never to a child in the group, and never to a name. Never read out a child's name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is unmuted. Children may mute and keep their cameras off. A child's page is never shown.",
+  "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. Moves are gentle; a child may stay seated and move one arm.",
+  "A child who is still stuck ticks 'I am still stuck' on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for 90 days after the program ends. The tutor then helps in the open session next lesson. No private messages to children, and no personal phones.",
+  "The look-back is never collected in front of the group or read out. A pass is always allowed."
+ ],
+ "tutor_prep": [
+  "Solve every workbook question yourself first. Check the answers: S1 10; S2 15; S3 5; S4 7, 6 and 5; S5 20; S6 5; T1 2, 1 and 6; T2 8; T3 4, 3 and 7; T4 11, 9 and 8; G1 10 and 15; G2 9, 4, 1 and 14; G3 8 and 9; I1 1 + 6, 2 + 5 and 3 + 4.",
+  "Tell parents a week before: Book 8 is the book for the last five lessons (36 to 40) and its paper-people page needs the 8 people cut out by a grown-up. The next lesson needs the graph-mat page (no cutting) and about 12 small things from the house in 3 or 4 kinds, not food. Printing and postage are included in the program fee (owner decision, 23 Oct 2026). Parcel policy (owner decision, 23 Oct 2026): a family whose book has not arrived or is damaged messages the business WhatsApp within 7 days and gets the PDF straight away; there is one free resend; a second loss is discussed. Delivery name, address and phone are deleted 30 days after the parcel is confirmed delivered, or after any resend is finished, whichever is later.",
+  "Have the slides open. Have your own 3 paper people or coins ready. Practise the arm and leg break. When you ask about handshakes, say the rule in the same words every time: count only the new ones.",
+  "Check the recording captures the tutor and the shared screen. Children's video is excluded; any unmuted voice is recorded. Greet the whole group first, say the notice, then start the recording; avoid first names while it runs.",
+  "Be plain with families: counting by rows and groups is Primary 1; handshakes, every pair, squares of every size and routes in two stages go beyond Primary 1 on purpose. Do not call the lesson MOE-aligned.",
+  "Wording rule: wrong working belongs to 'a child' or 'a child in another class', never to a cast name and never to a child in the group. Slides keep the answers off the screen while you ask: read every question aloud. Say B with A is the same as A with B every time."
+ ],
+ "spare_time": {
+  "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
+  "rules": [
+   "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
+   "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+   "Never teach anything the next lesson needs. If the class is ahead, slow down: ask 'How do you know?' and let children explain, rather than rushing on."
+  ],
+  "menu": [
+   {
+    "id": "M1",
+    "title": "Is it always true?",
+    "minutes": 4,
+    "tutor": "A child says: a bigger group always makes more handshakes. Is that always true? Count the handshakes for 3 children and for 4 children.",
+    "rec": "Recording: pause. Count the handshakes for 3 children and for 4 children. Does a bigger group make more?",
+    "answer": "Yes. 3 children make 3 handshakes and 4 children make 6. Each new child shakes hands with everyone who is already there."
+   },
+   {
+    "id": "M2",
+    "title": "Make a puzzle for your grown-up",
+    "minutes": 4,
+    "tutor": "Make an outfit puzzle: pick some tops and some skirts, and ask your grown-up how many outfits. Check with a table.",
+    "rec": "Recording: pause. Make an outfit puzzle for a grown-up and check the answer with a table.",
+    "answer": "No single answer. The number of outfits is the number of boxes in the table."
+   },
+   {
+    "id": "M3",
+    "title": "Teach it back",
+    "minutes": 3,
+    "tutor": "Pretend a toy counts handshakes with A with B and B with A. Teach the toy why that is a repeat.",
+    "rec": "Recording: pause. Teach a toy why A with B and B with A are the same handshake.",
+    "answer": "A with B and B with A are the same two children shaking hands once, so we count it once."
+   }
+  ]
+ },
+ "workbook": {
+  "header": "Count Everything: a system",
+  "hint_p1": "Count by rows. Touch each one once so you miss none and count none twice.",
+  "hint_p2": "Use a list with a rule. Count the rows, then add.",
+  "hint_p3": "Use your paper people or draw. Choose any question, in any order.",
+  "hint_p4": "Count only the new ones. Choose any question. You do not have to finish them all.",
+  "choice_after": 3,
+  "inv_intro": "",
+  "inv_first_label": "First:",
+  "inv_then_label": "Next:",
+  "home_hint": "Use real things and paper. Small pieces stay on the table, away from little brothers and sisters.",
+  "kits": [
+   {
+    "type": "people",
+    "n": 8,
+    "title": "Kit page: paper people",
+    "intro": "A grown-up cuts out the 8 paper people before the lesson. Children stand them on the table. No cutting? Use 6 coins or buttons."
+   }
+  ]
+ },
+ "beyond": {
+  "name": "Handshake Party",
+  "where": [
+   "T1",
+   "G1"
+  ],
+  "text": "Four children shake hands once with every other child: 3 + 2 + 1 = 6 handshakes, counting only the new ones each time (not 4 times 3, which counts every handshake twice). Go further: 5 children make 10 and 6 children make 15. Also beyond Primary 1: the squares of every size in a grid, every pair that makes a total, and routes in two stages. Counting a set and equal groups are Primary 1. Named puzzle: Handshake Party.",
+  "parent": "Handshake Party (every pair once, counted with a system) goes past the Primary 1 syllabus on purpose."
+ }
+}
