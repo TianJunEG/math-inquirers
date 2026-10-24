@@ -28,7 +28,7 @@ alter table public.consents add constraint consents_consent_type_check
   check (consent_type in ('contact','terms','recording','childs_work','feedback_quotes','online_practice','book_delivery','marketing_contact'));
 
 create or replace function public.record_consents(p_items jsonb, p_terms text, p_privacy text) returns void
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare uid uuid := public._require_parent(); k text; v jsonb;
 begin
   if jsonb_typeof(p_items) <> 'object' then raise exception 'bad_items'; end if;
@@ -41,7 +41,7 @@ begin
 end $$;
 
 create or replace function public._has_consent(p_parent uuid, p_type text) returns boolean
-language sql stable security definer set search_path = public as $$
+language sql stable security definer set search_path = public, pg_temp as $$
   select coalesce((select c.granted from public.consents c where c.parent_id = p_parent and c.consent_type = p_type order by c.seq desc limit 1), false);
 $$;
 
@@ -62,7 +62,7 @@ create index if not exists child_sessions_child_idx on public.child_sessions (ch
 -- Returns one row on success and nothing on any failure, so the caller cannot tell which part was wrong.
 create or replace function public.child_start_session(p_family_code text, p_name text, p_pin text)
 returns table (token text, child_id uuid, display_name text, level smallint, expires_at timestamptz)
-language plpgsql security definer set search_path = public, extensions as $$
+language plpgsql security definer set search_path = public, extensions, pg_temp as $$
 declare c record; pid uuid; tok text;
 begin
   select * into c from public.child_sign_in(p_family_code, p_name, p_pin);
@@ -79,7 +79,7 @@ begin
 end $$;
 
 create or replace function public.child_end_session(p_token text) returns void
-language sql security definer set search_path = public, extensions as $$
+language sql security definer set search_path = public, extensions, pg_temp as $$
   update public.child_sessions set revoked_at = now() where token_hash = encode(extensions.digest(p_token, 'sha256'), 'hex') and revoked_at is null;
 $$;
 
@@ -166,12 +166,12 @@ create table if not exists public.tutor_groups (
 );
 
 create or replace function public.is_tutor_of_child(p_child uuid) returns boolean
-language sql stable security definer set search_path = public as $$
+language sql stable security definer set search_path = public, pg_temp as $$
   select exists (select 1 from public.tutor_groups tg join public.enrolments e on e.group_id = tg.group_id
                   where tg.user_id = auth.uid() and e.child_id = p_child and e.status = 'confirmed');
 $$;
 create or replace function public.is_tutor_of_group(p_group text) returns boolean
-language sql stable security definer set search_path = public as $$
+language sql stable security definer set search_path = public, pg_temp as $$
   select exists (select 1 from public.tutor_groups tg where tg.user_id = auth.uid() and tg.group_id = p_group);
 $$;
 
@@ -244,12 +244,12 @@ create unique index if not exists child_book_access_order_uq on public.child_boo
 -- Consents needed to SEND answers (every family type): contact + terms + online_practice, all currently granted.
 -- Not needed: recording, childs_work (live-lesson consents). See docs/online_submission_design.md, section 5.
 create or replace function public._practice_consents_ok(p_parent uuid) returns boolean
-language sql stable security definer set search_path = public as $$
+language sql stable security definer set search_path = public, pg_temp as $$
   select public._has_consent(p_parent, 'contact') and public._has_consent(p_parent, 'terms') and public._has_consent(p_parent, 'online_practice');
 $$;
 
 create or replace function public._can_access(p_child uuid, p_unit text, p_version text) returns boolean
-language sql stable security definer set search_path = public as $$
+language sql stable security definer set search_path = public, pg_temp as $$
   select exists (
     select 1 from public.practice_units u join public.children c on c.id = p_child
      where u.unit_key = p_unit and u.unit_version = p_version and u.published and u.access <> 'open'
@@ -263,19 +263,26 @@ $$;
 -- 1. create_ext_order: parent picks child + level + format; price from ext_prices (no price = no order). Shipping details for workbook / both only.
 create or replace function public.create_ext_order(p_child uuid, p_level int, p_format text, p_ship_name text default null, p_ship_address text default null,
                                                     p_ship_postal text default null, p_ship_phone text default null) returns uuid
-language plpgsql security definer set search_path = public, extensions as $$
+language plpgsql security definer set search_path = public, extensions, pg_temp as $$
 declare uid uuid := public._require_parent(); ch public.children; price int; oid uuid; ref text; tries int := 0;
 begin
   select * into ch from public.children where id = p_child and parent_id = uid;
   if not found then raise exception 'not_found'; end if;
-  if p_format not in ('workbook','online','both') or p_level not between 1 and 6 then raise exception 'bad_product'; end if;
+  if p_format is null or p_level is null or p_format not in ('workbook','online','both') or p_level not between 1 and 6 then raise exception 'bad_product'; end if;
+  -- R1-L2: at most 12 orders per parent per hour (any status), so a script cannot fill the table or burn reference codes
+  if (select count(*) from public.ext_orders where parent_id = uid and created_at > now() - interval '1 hour') >= 12 then raise exception 'too_many_orders'; end if;
   select amount_cents into price from public.ext_prices where product_id = 'ext-l' || p_level || '-' || p_format and active;
   if price is null then raise exception 'price_not_set'; end if;
   if not public._has_consent(uid, 'terms') or not public._has_consent(uid, 'contact') then raise exception 'consents_missing:contact,terms'; end if;
   if p_format <> 'workbook' and not public._has_consent(uid, 'online_practice') then raise exception 'consents_missing:online_practice'; end if;   -- online AND both send answers to us
-  if p_format <> 'online' then
+  if p_format = 'online' then
+    -- R1-M4: an online-only order never carries a delivery address, whatever an API caller sends (data minimisation)
+    if coalesce(btrim(p_ship_name),'') <> '' or coalesce(btrim(p_ship_address),'') <> '' or coalesce(btrim(p_ship_postal),'') <> '' or coalesce(btrim(p_ship_phone),'') <> '' then raise exception 'bad_address'; end if;
+  else
     if not public._has_consent(uid, 'book_delivery') then raise exception 'consents_missing:book_delivery'; end if;
-    if coalesce(btrim(p_ship_name),'') = '' or coalesce(btrim(p_ship_address),'') = '' or p_ship_postal !~ '^[0-9]{6}$' then raise exception 'bad_address'; end if;   -- Singapore postal code
+    -- R1-M4: postal code is REQUIRED for a printed option (NULL used to slip through the OR chain): 6 digits, Singapore sector 01 to 82
+    if coalesce(btrim(p_ship_name),'') = '' or coalesce(btrim(p_ship_address),'') = '' or p_ship_postal is null or p_ship_postal !~ '^[0-9]{6}$'
+       or substr(p_ship_postal, 1, 2)::int not between 1 and 82 then raise exception 'bad_address'; end if;
   end if;
   if exists (select 1 from public.child_book_access a where a.child_id = p_child and a.level = p_level and a.status = 'active' and a.format in ('online','both') and p_format in ('online','both')) then
     raise exception 'already_has_online'; end if;
@@ -286,7 +293,8 @@ begin
     ref := 'MI-' || public.gen_code(6); tries := tries + 1;
     begin
       insert into public.ext_orders (reference, parent_id, child_id, child_label, level, format, amount_cents, ship_name, ship_address, ship_postal, ship_phone, ship_status)
-      values (ref, uid, p_child, ch.display_name, p_level, p_format, price, nullif(btrim(p_ship_name),''), nullif(btrim(p_ship_address),''), p_ship_postal, p_ship_phone,
+      values (ref, uid, p_child, ch.display_name, p_level, p_format, price, nullif(btrim(p_ship_name),''), nullif(btrim(p_ship_address),''),
+              case when p_format = 'online' then null else p_ship_postal end, case when p_format = 'online' then null else nullif(btrim(p_ship_phone),'') end,
               case when p_format = 'online' then 'not_needed' else 'to_ship' end) returning id into oid;
       exit;
     exception when unique_violation then if tries > 5 then raise; end if; end;
@@ -296,7 +304,7 @@ end $$;
 
 -- 2. paid -> access. One internal function, used by the owner (PayNow beta) and by the Stripe webhook (service role). Idempotent.
 create or replace function public._order_paid(p_order uuid, p_source text, p_provider_ref text) returns void
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare o public.ext_orders;
 begin
   select * into o from public.ext_orders where id = p_order for update;
@@ -308,48 +316,62 @@ begin
   insert into public.child_book_access (child_id, level, format, source, order_id) values (o.child_id, o.level, o.format, p_source, o.id) on conflict do nothing;
 end $$;
 create or replace function public.admin_mark_ext_order_paid(p_order uuid) returns void
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
   perform public._order_paid(p_order, 'paynow_manual', null);
 end $$;
+-- R1-M3: a Stripe payment for an order the parent had CANCELLED (the Checkout Session was already open) used to raise bad_status: Stripe had the money and the
+-- database recorded nothing. Now it is recorded (paid_after_cancel_at, provider_ref) and flagged refund_due for the owner, who refunds it or, for an
+-- online-only order, reinstates it (admin_reinstate_ext_order). It grants NO access by itself. Idempotent: a webhook retry changes nothing.
+-- A REFUNDED order still refuses a late payment (bad_status): that cannot happen with a normal Checkout Session and must be looked at by hand.
 create or replace function public.service_ext_order_paid(p_order uuid, p_session_id text, p_amount_cents int, p_currency text) returns void
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare o public.ext_orders;
 begin
-  select * into o from public.ext_orders where id = p_order;
+  select * into o from public.ext_orders where id = p_order for update;
   if not found or o.amount_cents <> p_amount_cents or upper(p_currency) <> 'SGD' then raise exception 'amount_mismatch'; end if;   -- same check as service_mark_paid for enrolments
+  if o.status = 'cancelled' then
+    if o.paid_after_cancel_at is null then
+      update public.ext_orders set refund_due = true, paid_after_cancel_at = now(), provider_ref = coalesce(provider_ref, p_session_id), method = 'stripe',
+             admin_note = left(coalesce(admin_note || ' | ', '') || 'Stripe payment received after the order was cancelled: refund it, or reinstate it if online-only', 500)
+       where id = o.id;
+    end if;
+    return;
+  end if;
   perform public._order_paid(p_order, 'stripe', p_session_id);
 end $$;
 create or replace function public.service_ext_order_for_checkout(p_order uuid, p_parent uuid)
 returns table (order_id uuid, reference text, status text, amount_cents int, currency text, product_id text, child_label text, parent_email text)
-language sql stable security definer set search_path = public as $$
+language sql stable security definer set search_path = public, pg_temp as $$
   select o.id, o.reference, o.status, o.amount_cents, o.currency, o.product_id, o.child_label, p.email
     from public.ext_orders o join public.parents p on p.id = o.parent_id where o.id = p_order and o.parent_id = p_parent;
 $$;
 create or replace function public.service_ext_order_attach_session(p_order uuid, p_session_id text) returns void
-language sql security definer set search_path = public as $$
+language sql security definer set search_path = public, pg_temp as $$
   update public.ext_orders set provider_ref = p_session_id, method = 'stripe' where id = p_order and status = 'pending_payment' and provider_ref is null;
 $$;
 -- Refund: revoke the access. The child's past answers stay until the retention rule removes them.
 create or replace function public._order_refunded(p_order uuid) returns void
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 begin
-  update public.ext_orders set status = 'refunded' where id = p_order and status = 'paid';
+  -- R1-M1: nothing is left to post after a refund, so the delivery name, address and phone go at once
+  update public.ext_orders set status = 'refunded', refund_due = false, ship_name = null, ship_address = null, ship_postal = null, ship_phone = null, ship_cleared_at = coalesce(ship_cleared_at, now())
+   where id = p_order and status = 'paid';
   update public.child_book_access set status = 'refunded', ended_at = now() where order_id = p_order and status = 'active';
 end $$;
 create or replace function public.admin_refund_ext_order(p_order uuid) returns void
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
   perform public._order_refunded(p_order);
 end $$;
 create or replace function public.service_ext_order_refunded(p_order uuid) returns void
-language sql security definer set search_path = public as $$ select public._order_refunded(p_order); $$;
+language sql security definer set search_path = public, pg_temp as $$ select public._order_refunded(p_order); $$;
 
 -- ---- admin: grant / revoke / orders / shipping ----
 create or replace function public.admin_grant_book_access(p_child uuid, p_level int, p_format text, p_note text) returns uuid
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare id uuid;
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
@@ -357,36 +379,95 @@ begin
   return id;
 end $$;
 create or replace function public.admin_revoke_book_access(p_access uuid) returns void
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
   update public.child_book_access set status = 'revoked', ended_at = now() where id = p_access and status = 'active';
 end $$;
-create or replace function public.admin_list_ext_orders() returns table (id uuid, reference text, parent_email text, child_label text, product_id text, status text, ship_status text, paid_at timestamptz, created_at timestamptz)
-language plpgsql stable security definer set search_path = public as $$
+drop function if exists public.admin_list_ext_orders();      -- R1: the result gained columns (refund_due, paid_after_cancel_at, admin_note); a changed result type needs drop + create
+create or replace function public.admin_list_ext_orders() returns table (id uuid, reference text, parent_email text, child_label text, product_id text, status text, ship_status text, paid_at timestamptz, created_at timestamptz,
+                                                                      refund_due boolean, paid_after_cancel_at timestamptz, admin_note text)
+language plpgsql stable security definer set search_path = public, pg_temp as $$
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
-  return query select o.id, o.reference, p.email, o.child_label, o.product_id, o.status, o.ship_status, o.paid_at, o.created_at
-                 from public.ext_orders o join public.parents p on p.id = o.parent_id order by o.created_at desc limit 500;
+  return query select o.id, o.reference, p.email, o.child_label, o.product_id, o.status, o.ship_status, o.paid_at, o.created_at, o.refund_due, o.paid_after_cancel_at, o.admin_note
+                 from public.ext_orders o join public.parents p on p.id = o.parent_id order by o.refund_due desc, o.created_at desc limit 500;
 end $$;
+-- R1-L2: only a PAID order can be posted. (An unpaid, cancelled or refunded order used to be markable as shipped.)
 create or replace function public.admin_set_ship_status(p_order uuid, p_status text) returns void
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
   if p_status not in ('to_ship','shipped','delivered') then raise exception 'bad_status'; end if;
   update public.ext_orders set ship_status = p_status, shipped_at = case when p_status = 'shipped' then now() else shipped_at end,
-         delivered_at = case when p_status = 'delivered' then now() else delivered_at end where id = p_order and format <> 'online';
+         delivered_at = case when p_status = 'delivered' then now() else delivered_at end where id = p_order and format <> 'online' and status = 'paid';
+  if not found then raise exception 'bad_status'; end if;
 end $$;
--- Clears the delivery name, address and phone 30 days after delivery (privacy page wording, owner to confirm). Run daily or from the admin page.
-create or replace function public.admin_clear_delivered_addresses() returns int
-language plpgsql security definer set search_path = public as $$
-declare n int;
+-- The owner has refunded a flagged order in Stripe / by PayNow (a late payment on a cancelled order, or a paid order of a deleted account): clear the flag.
+create or replace function public.admin_resolve_ext_refund(p_order uuid, p_note text default null) returns void
+language plpgsql security definer set search_path = public, pg_temp as $$
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
-  update public.ext_orders set ship_name = null, ship_address = null, ship_postal = null, ship_phone = null, ship_cleared_at = now()
-   where ship_status = 'delivered' and delivered_at < now() - interval '30 days' and ship_cleared_at is null;
+  update public.ext_orders set refund_due = false, admin_note = left(coalesce(admin_note || ' | ', '') || 'refund done ' || to_char(now(), 'YYYY-MM-DD') || coalesce(': ' || left(p_note, 100), ''), 500)
+   where id = p_order and refund_due;
+  if not found then raise exception 'not_found'; end if;
+end $$;
+-- A parent cancelled an online-only order but then paid anyway (the Checkout page was still open) and wants the book after all: switch it on instead of refunding.
+-- Printed options cannot be reinstated here (the delivery address was deleted on cancel): refund them and ask the parent to order again.
+create or replace function public.admin_reinstate_ext_order(p_order uuid) returns void
+language plpgsql security definer set search_path = public, pg_temp as $$
+declare o public.ext_orders;
+begin
+  if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
+  select * into o from public.ext_orders where id = p_order for update;
+  if not found or o.status <> 'cancelled' or o.paid_after_cancel_at is null then raise exception 'not_found'; end if;
+  if o.format <> 'online' then raise exception 'address_deleted_refund_instead'; end if;
+  if o.child_id is null then raise exception 'child_missing'; end if;
+  if exists (select 1 from public.child_book_access a where a.child_id = o.child_id and a.level = o.level and a.status = 'active' and a.format in ('online','both')) then raise exception 'already_has_online'; end if;
+  update public.ext_orders set status = 'pending_payment' where id = o.id;
+  perform public._order_paid(o.id, 'stripe', o.provider_ref);
+  update public.ext_orders set refund_due = false, admin_note = left(coalesce(admin_note || ' | ', '') || 'reinstated ' || to_char(now(), 'YYYY-MM-DD'), 500) where id = o.id;
+end $$;
+
+-- ---------- 5b2. retention (R1-M1, R1-M2): one internal function per rule, one entry point for a schedule ----------
+-- The _purge_* functions have NO is_admin() check and NO grant to any API role: they are meant to be run by pg_cron (which runs as the database owner) or by the
+-- admin_* wrappers below. How to schedule them (nothing is scheduled by this file): portal/README.md, "Retention schedule".
+--   delivery details : cleared 30 days after delivered_at; 30 days after shipped_at if never marked delivered; at once on cancel and refund; 90 days after payment
+--                      if the book was never posted (the owner must look at it before then); unpaid orders are cancelled after 14 days (and then cleared).
+--   practice answers : 12 months after the last submission, or 90 days after the child's online access ENDED (refund, revoke, enrolment cancelled), whichever is sooner;
+--                      never while the child (or, for holiday/term, the family) still has access.
+--   trial requests   : expires_at (12 months).   child sessions : 7 days after they end.   PIN lock alerts : 30 days.
+create or replace function public._expire_unpaid_ext_orders(p_days int default 14) returns int
+language plpgsql security definer set search_path = public, pg_temp as $$
+declare n int;
+begin
+  update public.ext_orders set status = 'cancelled', ship_status = 'not_needed', ship_name = null, ship_address = null, ship_postal = null, ship_phone = null, ship_cleared_at = coalesce(ship_cleared_at, now()),
+         admin_note = left(coalesce(admin_note || ' | ', '') || 'unpaid for ' || p_days || ' days: cancelled automatically', 500)
+   where status = 'pending_payment' and created_at < now() - make_interval(days => p_days);
   get diagnostics n = row_count;
   return n;
+end $$;
+create or replace function public._purge_ext_addresses() returns int
+language plpgsql security definer set search_path = public, pg_temp as $$
+declare n int;
+begin
+  perform public._expire_unpaid_ext_orders(14);
+  update public.ext_orders set ship_name = null, ship_address = null, ship_postal = null, ship_phone = null, ship_cleared_at = now(),
+         admin_note = case when status = 'paid' and ship_status = 'to_ship' then left(coalesce(admin_note || ' | ', '') || 'address deleted after 90 days unposted: contact the parent', 500) else admin_note end
+   where ship_cleared_at is null and (ship_name is not null or ship_address is not null or ship_postal is not null or ship_phone is not null)
+     and ( status in ('cancelled','refunded')
+        or (ship_status = 'delivered' and delivered_at < now() - interval '30 days')
+        or (ship_status = 'shipped' and shipped_at < now() - interval '30 days')
+        or (status = 'paid' and ship_status = 'to_ship' and paid_at < now() - interval '90 days') );
+  get diagnostics n = row_count;
+  return n;
+end $$;
+-- Kept under its old name for the admin button: it now runs the whole address rule above.
+create or replace function public.admin_clear_delivered_addresses() returns int
+language plpgsql security definer set search_path = public, pg_temp as $$
+begin
+  if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
+  return public._purge_ext_addresses();
 end $$;
 
 -- ---------- 5c. funnel to a trial class (extension books -> parents only) ----------
@@ -408,28 +489,30 @@ create table if not exists public.trial_requests (
 create index if not exists trial_requests_parent_idx on public.trial_requests (parent_id);
 
 create or replace function public.request_trial(p_child uuid, p_level int, p_preferred text[], p_note text, p_source text) returns uuid
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare uid uuid := public._require_parent(); tid uuid;
 begin
   if p_child is not null and not exists (select 1 from public.children where id = p_child and parent_id = uid) then raise exception 'not_found'; end if;
   if not (public._has_consent(uid, 'contact') and public._has_consent(uid, 'terms')) then raise exception 'consents_missing:contact,terms'; end if;
   if (select count(*) from public.trial_requests where parent_id = uid and created_at > now() - interval '24 hours') >= 3 then raise exception 'too_many'; end if;
+  -- R1-L9: each preferred-time label is a short id ('weekday-evening', a slot id), not free text
+  if exists (select 1 from unnest(coalesce(p_preferred, '{}')) x where x is null or char_length(x) > 40) then raise exception 'bad_input'; end if;
   insert into public.trial_requests (parent_id, child_id, level, preferred, note, source) values (uid, p_child, p_level, coalesce(p_preferred, '{}'), left(p_note, 300), p_source) returning trial_requests.id into tid;
   return tid;
 end $$;
 create or replace function public.withdraw_trial_request(p_id uuid) returns void
-language sql security definer set search_path = public as $$
+language sql security definer set search_path = public, pg_temp as $$
   update public.trial_requests set status = 'withdrawn', status_at = now() where id = p_id and parent_id = auth.uid() and status = 'new';
 $$;
 create or replace function public.admin_list_trial_requests() returns table (id uuid, parent_email text, parent_name text, parent_phone text, child_label text, level smallint, preferred text[], note text, source text, status text, created_at timestamptz)
-language plpgsql stable security definer set search_path = public as $$
+language plpgsql stable security definer set search_path = public, pg_temp as $$
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
   return query select t.id, p.email, p.full_name, p.phone, c.display_name, t.level, t.preferred, t.note, t.source, t.status, t.created_at
                  from public.trial_requests t join public.parents p on p.id = t.parent_id left join public.children c on c.id = t.child_id order by t.created_at desc limit 500;
 end $$;
 create or replace function public.admin_set_trial_status(p_id uuid, p_status text) returns void
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
   if p_status not in ('new','contacted','attended','enrolled','declined','withdrawn') then raise exception 'bad_status'; end if;
@@ -437,7 +520,7 @@ begin
 end $$;
 -- Simple funnel counts for the owner: no cookies, no per-visitor tracking, only rows that already exist. Distinct families / children, no names.
 create or replace function public.admin_funnel_counts() returns jsonb
-language plpgsql stable security definer set search_path = public as $$
+language plpgsql stable security definer set search_path = public, pg_temp as $$
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
   return jsonb_build_object(
@@ -454,7 +537,7 @@ end $$;
 create or replace function public.admin_practice_overview(p_unit text default null)
 returns table (child_id uuid, display_name text, parent_email text, has_group boolean, unit_key text, received_at timestamptz,
                n_auto smallint, n_right smallint, n_wrong smallint, n_skipped smallint, n_self smallint, n_self_got smallint, n_open smallint)
-language plpgsql stable security definer set search_path = public as $$
+language plpgsql stable security definer set search_path = public, pg_temp as $$
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
   return query
@@ -509,22 +592,23 @@ create policy tutor_groups_own on public.tutor_groups for select to authenticate
 
 -- ---------- 7. service functions (service_role only) ----------
 create or replace function public._child_for_token(p_hash text) returns uuid
-language sql stable security definer set search_path = public as $$
+language sql stable security definer set search_path = public, pg_temp as $$
   select s.child_id from public.child_sessions s join public.children c on c.id = s.child_id join public.parents p on p.id = c.parent_id
    where s.token_hash = p_hash and s.revoked_at is null and s.expires_at > now() and s.last_seen_at > now() - interval '60 minutes' and p.deleted_at is null;
 $$;
 -- R1-L6: every successful use of the token refreshes the idle clock (called by the volatile service functions and child_session_overview).
 create or replace function public._touch_child_session(p_hash text) returns void
-language sql security definer set search_path = public as $$
+language sql security definer set search_path = public, pg_temp as $$
   update public.child_sessions set last_seen_at = now() where token_hash = p_hash and revoked_at is null and expires_at > now();
 $$;
 
 -- Step 1 for the Worker: who is this, may they submit, and the keys to mark with. Rate limits: 20 submissions per child per hour, 3000 per hour in all.
 create or replace function public.service_practice_keys(p_token_hash text, p_unit text, p_version text) returns jsonb
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare cid uuid := public._child_for_token(p_token_hash); pid uuid; keys jsonb;
 begin
   if cid is null then return jsonb_build_object('ok', false, 'error', 'session'); end if;
+  perform public._touch_child_session(p_token_hash);
   select parent_id into pid from public.children where id = cid;
   if not public._practice_consents_ok(pid) then return jsonb_build_object('ok', false, 'error', 'consent'); end if;
   if not exists (select 1 from public.practice_units where unit_key = p_unit and unit_version = p_version and published and access <> 'open') then
@@ -543,10 +627,11 @@ end $$;
 -- Step 2: store the already re-marked rows. Idempotent on (child, client_sid): same rev = duplicate, lower rev = stale, higher rev replaces.
 -- Counts are recomputed here from the rows; nothing the browser or the Worker computed is trusted for them.
 create or replace function public.service_practice_record(p_token_hash text, p_unit text, p_version text, p_sid uuid, p_rev int, p_rows jsonb) returns jsonb
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare cid uuid := public._child_for_token(p_token_hash); pid uuid; sub public.practice_submissions; r jsonb; n_bad int;
 begin
   if cid is null then return jsonb_build_object('ok', false, 'error', 'session'); end if;
+  perform public._touch_child_session(p_token_hash);
   select parent_id into pid from public.children where id = cid;
   if not public._practice_consents_ok(pid) then return jsonb_build_object('ok', false, 'error', 'consent'); end if;
   if not public._can_access(cid, p_unit, p_version) then return jsonb_build_object('ok', false, 'error', 'entitlement'); end if;
@@ -558,8 +643,12 @@ begin
       or ((x->>'marking_mode') = 'auto' and (x->>'mark') in ('self','open'))
       or ((x->>'marking_mode') <> 'auto' and (x->>'mark') in ('right','wrong','skipped'));
   if n_bad > 0 then return jsonb_build_object('ok', false, 'error', 'bad_rows'); end if;
+  -- R1-M6: the same item twice in one request is a clean error, not a unique-violation
+  if (select count(distinct x->>'item_id') from jsonb_array_elements(p_rows) x) <> jsonb_array_length(p_rows) then return jsonb_build_object('ok', false, 'error', 'bad_rows'); end if;
   select * into sub from public.practice_submissions where child_id = cid and client_sid = p_sid for update;
   if found then
+    -- R1-M6: a client_sid belongs to ONE unit. Reusing it for another unit would swap the rows under the first unit's name (reports would join the wrong tags)
+    if sub.unit_key <> p_unit or sub.unit_version <> p_version then return jsonb_build_object('ok', false, 'error', 'sid_unit'); end if;
     if p_rev = sub.rev then return jsonb_build_object('ok', true, 'duplicate', true, 'rev', sub.rev); end if;
     if p_rev < sub.rev then return jsonb_build_object('ok', true, 'stale', true, 'rev', sub.rev); end if;
     delete from public.practice_attempts where submission_id = sub.id;
@@ -592,7 +681,7 @@ end $$;
 create or replace function public.tutor_group_practice(p_group text, p_unit text default null)
 returns table (child_id uuid, display_name text, unit_key text, unit_version text, received_at timestamptz,
                n_auto smallint, n_right smallint, n_wrong smallint, n_skipped smallint, n_self smallint, n_self_got smallint, n_open smallint)
-language plpgsql stable security definer set search_path = public as $$
+language plpgsql stable security definer set search_path = public, pg_temp as $$
 begin
   if not (public.is_admin() or public.is_tutor_of_group(p_group)) then raise exception 'forbidden' using errcode = '42501'; end if;
   return query
@@ -607,7 +696,7 @@ end $$;
 create or replace function public.practice_child_detail(p_child uuid, p_unit text)
 returns table (item_id text, item_pos int, tier text, strand text, skill text, topic text, marking_mode text, paper_only boolean, mark text,
                answer_text text, partial_found smallint, partial_of smallint, misconception text, self_result text, answered boolean, received_at timestamptz)
-language plpgsql stable security definer set search_path = public as $$
+language plpgsql stable security definer set search_path = public, pg_temp as $$
 begin
   if not (public.is_admin() or public.is_tutor_of_child(p_child)
           or exists (select 1 from public.children ch where ch.id = p_child and ch.parent_id = auth.uid())) then
@@ -624,7 +713,7 @@ end $$;
 
 -- A parent can delete a child's practice answers without deleting the account (also what 'withdraw practice consent + delete' uses).
 create or replace function public.delete_child_practice(p_child uuid) returns int
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare uid uuid := public._require_parent(); n int;
 begin
   if not exists (select 1 from public.children where id = p_child and parent_id = uid) then raise exception 'not_found'; end if;
@@ -634,24 +723,151 @@ begin
   return n;
 end $$;
 
--- Retention (suggested, for the owner and a lawyer to confirm): answers are deleted 12 months after the latest submission, AND 90 days after the child's
--- online access has ended (refund/revoke) with no confirmed enrolment; for a live group the owner also runs admin_purge_practice_for_group() 90 days after the program ends.
+-- ---------- 8b. deleting a child, moving paid access, deleting the whole account (R1-M5, R1-H1) ----------
+-- Deleting a child used to cascade away paid online access without a word. Now:
+--   delete_child(child)                      refuses while the child has ACTIVE online access (error has_online_access): move it first or confirm giving it up;
+--   transfer_book_access(from, to)           moves the active online access of one child to a brother or sister who has none at that book level;
+--   delete_child_and_access(child, true)     the explicit, confirmed "I give up the access I paid for" path.
+-- Any unpaid order for the child is cancelled (and its address deleted) so it can not be paid for a child who no longer exists.
+create or replace function public._delete_child_now(p_child uuid) returns void
+language plpgsql security definer set search_path = public, pg_temp as $$
+begin
+  update public.ext_orders set status = 'cancelled', ship_status = 'not_needed', ship_name = null, ship_address = null, ship_postal = null, ship_phone = null, child_label = null, ship_cleared_at = coalesce(ship_cleared_at, now())
+   where child_id = p_child and status = 'pending_payment';
+  update public.ext_orders set child_label = null where child_id = p_child;       -- the nickname snapshot goes too; a paid order stays as a record without it
+  delete from public.children where id = p_child;   -- sessions, submissions, answers, access rows and PIN alerts cascade; enrolments.child_id and ext_orders.child_id are set null
+end $$;
+create or replace function public.delete_child(p_child uuid) returns void
+language plpgsql security definer set search_path = public, pg_temp as $$
+declare uid uuid := public._require_parent();
+begin
+  if not exists (select 1 from public.children where id = p_child and parent_id = uid) then raise exception 'not_found'; end if;
+  if exists (select 1 from public.enrolments where child_id = p_child and status <> 'cancelled') then raise exception 'cancel_enrolment_first'; end if;
+  if exists (select 1 from public.child_book_access a where a.child_id = p_child and a.status = 'active' and a.format in ('online','both')) then raise exception 'has_online_access'; end if;
+  perform public._delete_child_now(p_child);
+end $$;
+create or replace function public.delete_child_and_access(p_child uuid, p_confirm boolean) returns void
+language plpgsql security definer set search_path = public, pg_temp as $$
+declare uid uuid := public._require_parent();
+begin
+  if p_confirm is distinct from true then raise exception 'confirmation_needed'; end if;
+  if not exists (select 1 from public.children where id = p_child and parent_id = uid) then raise exception 'not_found'; end if;
+  if exists (select 1 from public.enrolments where child_id = p_child and status <> 'cancelled') then raise exception 'cancel_enrolment_first'; end if;
+  perform public._delete_child_now(p_child);
+end $$;
+create or replace function public.transfer_book_access(p_from uuid, p_to uuid) returns int
+language plpgsql security definer set search_path = public, pg_temp as $$
+declare uid uuid := public._require_parent(); a record; n int := 0; to_name text;
+begin
+  if p_from = p_to or (select count(*) from public.children where id in (p_from, p_to) and parent_id = uid) <> 2 then raise exception 'not_found'; end if;
+  select display_name into to_name from public.children where id = p_to;
+  for a in select * from public.child_book_access where child_id = p_from and status = 'active' and format in ('online','both') for update loop
+    if exists (select 1 from public.child_book_access x where x.child_id = p_to and x.level = a.level and x.status = 'active' and x.format in ('online','both')) then raise exception 'target_has_access'; end if;
+    update public.child_book_access set child_id = p_to where id = a.id;
+    update public.ext_orders set child_id = p_to, child_label = to_name where id = a.order_id;
+    n := n + 1;
+  end loop;
+  return n;
+end $$;
+
+-- DELETE MY DATA (R1-H1): the full version. It replaces the one in schema.sql / finish_setup.sql, which pre-date extension orders. Removes the children and everything
+-- hanging off them (PINs, sessions, practice answers, access rows, PIN alerts), cancels open places AND unpaid book orders (they can no longer be paid), strips the delivery
+-- name, address, postal code, phone and the child's nickname from every book order, deletes trial requests (free-text note included), recording views and any free preview-class
+-- registration made with the account email (and its attendance hashes, as admin_preview_delete_person does), strips the parent row and deletes the login.
+-- Kept without personal details: payments, consents, deletion_requests, paid book orders (financial records). A PAID place or book is flagged "refund due" for the owner.
+create or replace function public.delete_my_data() returns void
+language plpgsql security definer set search_path = public, pg_temp as $$
+declare uid uuid := public._require_parent(); em text;
+begin
+  select email into em from public.parents where id = uid;
+  update public.payments set status = case when status = 'paid' then 'paid' else 'cancelled' end,
+         note = case when status = 'paid' then coalesce(note || ' | ', '') || 'account deleted by parent: refund due per terms' else note end, updated_at = now()
+   where status in ('pending','paid') and enrolment_id in (select id from public.enrolments where parent_id = uid and status <> 'cancelled');
+  update public.enrolments set status = 'cancelled', cancelled_at = now(), child_label = null where parent_id = uid;
+  update public.ext_orders set
+         refund_due = refund_due or status = 'paid',
+         admin_note = case when status = 'paid' then left(coalesce(admin_note || ' | ', '') || 'account deleted by parent: refund due per terms', 500) else admin_note end,
+         status = case when status = 'pending_payment' then 'cancelled' else status end,
+         ship_status = case when ship_status = 'to_ship' then 'not_needed' else ship_status end,
+         ship_name = null, ship_address = null, ship_postal = null, ship_phone = null, child_label = null, ship_cleared_at = coalesce(ship_cleared_at, now())
+   where parent_id = uid;
+  delete from public.trial_requests where parent_id = uid;
+  if to_regclass('public.recording_views') is not null then execute 'delete from public.recording_views where parent_id = $1' using uid; end if;                       -- recordings.sql
+  if em is not null and to_regprocedure('public._pv_delete_person(text)') is not null then execute 'select public._pv_delete_person($1)' using em; end if;               -- preview_class.sql
+  delete from public.children where parent_id = uid;
+  update public.parents set email = null, full_name = null, phone = null, deleted_at = now() where id = uid;
+  insert into public.deletion_requests (parent_id) values (uid);
+  delete from auth.users where id = uid;
+end $$;
+
+-- ---------- 8c. retention: answers, trial requests, sessions, alerts (addresses: section 5b2) ----------
+-- Practice answers are deleted 12 months after the last submission, OR 90 days after the child's online access ended (R1-M2: counted from the END of access,
+-- as the consent text says, not from the submission date), whichever is sooner. "Ended" = the latest refund/revoke of a book access row or cancelled enrolment of
+-- the family. Never while the child still has active online access or the family has a confirmed place. With no access history at all it falls back to the submission date.
+create or replace function public._purge_expired_practice() returns int
+language plpgsql security definer set search_path = public, pg_temp as $$
+declare n int;
+begin
+  delete from public.practice_submissions s
+   where s.received_at < now() - interval '12 months'
+      or ( not exists (select 1 from public.child_book_access a where a.child_id = s.child_id and a.status = 'active' and a.format in ('online','both'))
+           and not exists (select 1 from public.enrolments e where e.status = 'confirmed' and e.parent_id = (select c.parent_id from public.children c where c.id = s.child_id))
+           and coalesce((select max(t.ended) from (
+                           select a.ended_at as ended from public.child_book_access a where a.child_id = s.child_id and a.status <> 'active'
+                           union all
+                           select e.cancelled_at from public.enrolments e where e.parent_id = (select c.parent_id from public.children c where c.id = s.child_id)) t),
+                        s.received_at) < now() - interval '90 days' );
+  get diagnostics n = row_count;
+  return n;
+end $$;
+create or replace function public._purge_trial_requests() returns int
+language plpgsql security definer set search_path = public, pg_temp as $$
+declare n int;
+begin delete from public.trial_requests where expires_at < now(); get diagnostics n = row_count; return n; end $$;
+create or replace function public._purge_child_sessions() returns int
+language plpgsql security definer set search_path = public, pg_temp as $$
+declare n int;
+begin delete from public.child_sessions where expires_at < now() - interval '7 days' or revoked_at < now() - interval '7 days'; get diagnostics n = row_count; return n; end $$;
+create or replace function public._purge_pin_events() returns int
+language plpgsql security definer set search_path = public, pg_temp as $$
+declare n int;
+begin delete from public.pin_lock_events where locked_at < now() - interval '30 days'; get diagnostics n = row_count; return n; end $$;
+
+-- ONE entry point for a schedule: runs every rule above plus the ones in the other draft files, when those files have been applied. Returns the counts.
+-- Not granted to any API role. Run it daily; see portal/README.md "Retention schedule" for the pg_cron lines (not enabled by any file).
+create or replace function public.run_retention_jobs() returns jsonb
+language plpgsql security definer set search_path = public, pg_temp as $$
+declare r jsonb := '{}'::jsonb; n int;
+begin
+  r := r || jsonb_build_object('practice_submissions', public._purge_expired_practice(), 'trial_requests', public._purge_trial_requests(),
+                               'child_sessions', public._purge_child_sessions(), 'pin_lock_events', public._purge_pin_events(), 'order_addresses', public._purge_ext_addresses());
+  if to_regprocedure('public.admin_purge_preview_internal()') is not null then execute 'select public.admin_purge_preview_internal()' into n; r := r || jsonb_build_object('preview', n); end if;      -- preview_class.sql
+  if to_regclass('public.recordings') is not null then
+    execute 'update public.recordings set status = ''expired'', updated_at = now() where status = ''published'' and expires_at <= now()'; get diagnostics n = row_count;                                 -- recordings.sql (flips the status; deleting the file stays a human step)
+    r := r || jsonb_build_object('recordings_expired', n);
+  end if;
+  if to_regprocedure('public.service_purge_delivery_log(integer)') is not null then execute 'select public.service_purge_delivery_log(90)' into n; r := r || jsonb_build_object('delivery_log', n); end if;   -- delivery.sql
+  return r;
+end $$;
+create or replace function public.admin_run_retention() returns jsonb
+language plpgsql security definer set search_path = public, pg_temp as $$
+begin
+  if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
+  return public.run_retention_jobs();
+end $$;
+
+-- Kept under its old names for the admin buttons.
 create or replace function public.admin_purge_expired_practice() returns int
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare n int;
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
-  delete from public.practice_submissions s where s.received_at < now() - interval '12 months'
-     or (s.received_at < now() - interval '90 days'                                  -- access ended (refund/revoke) or never had any, and no confirmed enrolment
-         and not exists (select 1 from public.child_book_access a where a.child_id = s.child_id and a.status = 'active' and a.format in ('online','both'))
-         and not exists (select 1 from public.enrolments e where e.child_id = s.child_id and e.status = 'confirmed'));
-  get diagnostics n = row_count;
-  delete from public.trial_requests where expires_at < now();
-  delete from public.child_sessions where expires_at < now() - interval '7 days';
+  n := public._purge_expired_practice();
+  perform public._purge_trial_requests(); perform public._purge_child_sessions(); perform public._purge_pin_events();
   return n;
 end $$;
 create or replace function public.admin_purge_practice_for_group(p_group text, p_before timestamptz) returns int
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare n int;
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
@@ -686,6 +902,15 @@ grant execute on function public.tutor_group_practice(text, text), public.practi
   public.admin_purge_expired_practice(), public.admin_purge_practice_for_group(text, timestamptz) to authenticated;   -- each checks who the caller is inside
 grant execute on function public.service_practice_keys(text, text, text), public.service_practice_record(text, text, text, uuid, int, jsonb) to service_role;
 -- _has_consent(), _practice_consents_ok(), _child_for_token(), _can_access(), _order_paid(), _order_refunded() are internal: not granted to any API role.
+-- R1 additions (same pattern: revoke first, grant narrowly).
+revoke all on function public._touch_child_session(text), public._delete_child_now(uuid), public.delete_child(uuid), public.delete_child_and_access(uuid, boolean), public.transfer_book_access(uuid, uuid),
+  public.delete_my_data(), public._expire_unpaid_ext_orders(int), public._purge_ext_addresses(), public._purge_expired_practice(), public._purge_trial_requests(), public._purge_child_sessions(),
+  public._purge_pin_events(), public.run_retention_jobs(), public.admin_run_retention(), public.admin_resolve_ext_refund(uuid, text), public.admin_reinstate_ext_order(uuid)
+  from public, anon, authenticated;
+grant execute on function public.delete_child(uuid), public.delete_child_and_access(uuid, boolean), public.transfer_book_access(uuid, uuid), public.delete_my_data() to authenticated;   -- _require_parent() inside
+grant execute on function public.admin_run_retention(), public.admin_resolve_ext_refund(uuid, text), public.admin_reinstate_ext_order(uuid) to authenticated;                         -- is_admin() inside
+-- The _purge_* functions, run_retention_jobs() and _expire_unpaid_ext_orders() are for the database owner / pg_cron only: not granted to any API role.
+
 
 -- Owner set-up by hand in the SQL editor (not a function: it is rare):
 --   insert into public.tutors (user_id, note) select id, 'Tutor name' from auth.users where email = 'tutor@example.com';

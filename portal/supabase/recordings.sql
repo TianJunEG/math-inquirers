@@ -22,7 +22,7 @@ create extension if not exists pgcrypto with schema extensions;
 
 -- same definition as practice_submissions.sql (create or replace is safe if both files are applied)
 create or replace function public._has_consent(p_parent uuid, p_type text) returns boolean
-language sql stable security definer set search_path = public as $$
+language sql stable security definer set search_path = public, pg_temp as $$
   select coalesce((select c.granted from public.consents c where c.parent_id = p_parent and c.consent_type = p_type order by c.seq desc limit 1), false);
 $$;
 
@@ -64,7 +64,7 @@ create index if not exists recording_views_rec_idx on public.recording_views (re
 -- ---------- 2. access rule (one place) ----------
 -- true when p_parent has a child with a confirmed enrolment (or a cancelled one that was PAID) in p_group, and the 'recording' consent is on.
 create or replace function public._can_watch_group(p_parent uuid, p_group text, p_child uuid default null) returns boolean
-language sql stable security definer set search_path = public as $$
+language sql stable security definer set search_path = public, pg_temp as $$
   select public._has_consent(p_parent, 'recording')
      and exists (
        select 1 from public.enrolments e
@@ -80,7 +80,7 @@ $$;
 create or replace function public.my_recordings()
 returns table (recording_id uuid, child_id uuid, child_name text, group_id text, lesson_no smallint, title text, duration_min smallint,
                recorded_on date, published_at timestamptz, expires_at timestamptz)
-language sql stable security definer set search_path = public as $$
+language sql stable security definer set search_path = public, pg_temp as $$
   select r.id, e.child_id, coalesce(c.display_name, e.child_label), r.group_id, r.lesson_no, r.title, r.duration_min, r.recorded_on, r.published_at, r.expires_at
     from public.recordings r
     join public.enrolments e on e.group_id = r.group_id and e.parent_id = auth.uid()
@@ -95,7 +95,7 @@ $$;
 -- No row = the function must answer 404 (never say whether the recording exists).
 create or replace function public.recording_playback(p_recording uuid, p_child uuid default null)
 returns table (provider text, provider_id text, title text, expires_at timestamptz)
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 #variable_conflict use_column
 declare r public.recordings; uid uuid := auth.uid();
 begin
@@ -111,7 +111,7 @@ end $$;
 create or replace function public.admin_list_recordings()
 returns table (id uuid, group_id text, lesson_no smallint, title text, provider text, provider_id text, status text, recorded_on date,
                published_at timestamptz, expires_at timestamptz, views bigint, review jsonb, provider_deleted_at timestamptz)
-language plpgsql stable security definer set search_path = public as $$
+language plpgsql stable security definer set search_path = public, pg_temp as $$
 begin
   if not public.is_admin() then raise exception 'forbidden'; end if;
   return query select r.id, r.group_id, r.lesson_no, r.title, r.provider, r.provider_id, r.status, r.recorded_on, r.published_at, r.expires_at,
@@ -122,7 +122,7 @@ end $$;
 -- Create or update the DRAFT for a group lesson (after the owner has uploaded the trimmed file and has its provider id).
 create or replace function public.admin_save_recording(p_group text, p_lesson smallint, p_title text, p_provider text, p_provider_id text,
                                                        p_recorded_on date, p_expires_at timestamptz, p_duration_min smallint default null)
-returns uuid language plpgsql security definer set search_path = public as $$
+returns uuid language plpgsql security definer set search_path = public, pg_temp as $$
 declare rid uuid;
 begin
   if not public.is_admin() then raise exception 'forbidden'; end if;
@@ -141,7 +141,7 @@ end $$;
 -- Publish only with a completed review checklist (all three required keys true). p_review example:
 --   {"no_private_info":true,"no_child_names_faces":true,"on_topic":true,"trimmed":true,"reviewer":"Jasmine"}
 create or replace function public.admin_publish_recording(p_recording uuid, p_review jsonb)
-returns void language plpgsql security definer set search_path = public as $$
+returns void language plpgsql security definer set search_path = public, pg_temp as $$
 begin
   if not public.is_admin() then raise exception 'forbidden'; end if;
   if coalesce((p_review->>'no_private_info')::boolean, false) is not true
@@ -155,7 +155,7 @@ end $$;
 -- Pull a recording at once (something private was found, a parent withdrew consent, a mistake). Playback stops immediately; the provider file
 -- is deleted by the owner and confirmed below.
 create or replace function public.admin_withdraw_recording(p_recording uuid, p_reason text default null)
-returns void language plpgsql security definer set search_path = public as $$
+returns void language plpgsql security definer set search_path = public, pg_temp as $$
 begin
   if not public.is_admin() then raise exception 'forbidden'; end if;
   update public.recordings set status = 'withdrawn', updated_at = now(),
@@ -168,7 +168,7 @@ end $$;
 -- state explicit) and RETURNS the provider files that must now be deleted (expired + withdrawn, not yet confirmed deleted).
 create or replace function public.admin_recordings_due_for_deletion()
 returns table (id uuid, group_id text, lesson_no smallint, provider text, provider_id text, status text, expires_at timestamptz)
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 #variable_conflict use_column
 begin
   if not public.is_admin() then raise exception 'forbidden'; end if;
@@ -179,7 +179,7 @@ end $$;
 
 -- After the owner has deleted the file at Cloudflare/Drive: blank the provider id and delete the view log for that recording.
 create or replace function public.admin_confirm_recording_deleted(p_recording uuid)
-returns void language plpgsql security definer set search_path = public as $$
+returns void language plpgsql security definer set search_path = public, pg_temp as $$
 begin
   if not public.is_admin() then raise exception 'forbidden'; end if;
   update public.recordings set provider_id = null, provider_deleted_at = now(), updated_at = now()
@@ -214,6 +214,4 @@ grant execute on function public.admin_confirm_recording_deleted(uuid)   to auth
 -- select cron.schedule('recordings-expire', '15 19 * * *', $$ update public.recordings set status = 'expired', updated_at = now() where status = 'published' and expires_at <= now() $$);
 
 -- ---------- 7. account deletion ----------
--- delete_my_data() removes the parent row; recording_views rows for that parent should go too. Add this line inside delete_my_data() when this
--- file is merged into schema.sql (do not edit schema.sql from this draft):
---   delete from public.recording_views where parent_id = uid;
+-- delete_my_data() (the full version in practice_submissions.sql) already deletes this parent's recording_views rows when this table exists (R1-H1).

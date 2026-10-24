@@ -66,4 +66,4 @@ select pg_temp.chk('parent report has no scores/percentages/ranks fields (my_chi
 select pg_temp.note('parent can read per-question right/wrong (practice_child_detail, practice_attempts.correct); the UI shows only "worth looking at together" text, but the API returns every mark and the wrong answer_text', 'Low', 'fine for the owner design ("reports"), only matters for the "no scores" wording promise to children, who cannot call these');
 
 -- ===== the HTTP Worker contract: what the browser may learn after Submit (read from practice/submit/handler.js, not SQL) =====
-select pg_temp.note('Worker reply returns marks (right/wrong/skipped) for every item after each Submit and up to 200 revisions of one sid are allowed: a child (or script) can discover the answer key by submit/adjust/resubmit', 'Low', 'inherent in instant marking; rate limit is 20 distinct submissions per hour per child, not per revision. Decide whether marks should be shown only after a final submit');
+select pg_temp.note('R1-L4: the Worker reply (practice/submit/handler.js) no longer returns per-item marks or counts, so resubmitting reveals nothing; marks are stored for the reports only', 'Low');

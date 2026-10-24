@@ -10,8 +10,10 @@
   var F = { level: 0, format: '', child: q.get('child') || '', name: '', address: '', postal: '', phone: '' };
   var D = { prices: {}, orders: [], access: [], missing: false, last: null, ticks: {} }, flashMsg = null, ready = false;
   function flash(kind, text) { flashMsg = text ? { kind: kind, text: text } : null; }
-  function draw(nodes) { M.clear(app); [].concat(nodes).forEach(function (n) { if (n) app.appendChild(n); }); }
-  async function run(fn, ok) { flash(null); try { await fn(); if (ok) flash('ok', ok); } catch (e) { flash('err', M.errText(e)); } await refresh(); }
+  // keep keyboard focus on the same control across a redraw (clearing the container would drop it to <body>)
+  function draw(nodes) { var k = M.focusKey(app); M.clear(app); [].concat(nodes).forEach(function (n) { if (n) app.appendChild(n); }); M.focusRestore(app, k); }
+  // after every action the result message (or the page heading) takes keyboard focus and is announced
+  async function run(fn, ok) { flash(null); try { await fn(); if (ok) flash('ok', ok); } catch (e) { flash('err', M.errText(e)); } await refresh(); M.focusResult(app); }
   var FORMATS = ['workbook', 'online', 'both'];
   function sku() { return F.level && F.format ? 'ext-l' + F.level + '-' + F.format : ''; }
   function price() { var c = D.prices[sku()]; return c == null ? null : c; }
@@ -127,15 +129,16 @@
       await P.saveConsents(got.items);
       var id = await M.rpc('create_ext_order', { p_child: c.id, p_level: F.level, p_format: F.format,
         p_ship_name: ship ? F.name.trim() : null, p_ship_address: ship ? F.address.trim() : null, p_ship_postal: ship ? F.postal.trim() : null, p_ship_phone: ship ? (F.phone.trim() || null) : null });
-      D.last = id; flash('ok', 'Order placed. Please pay with the reference below so we can switch it on.');
+      D.last = id; flash('ok', 'Order placed. Please pay with the reference below so we can switch it on. An order that is not paid within 14 days is cancelled automatically.');
       F.format = ''; F.name = F.address = F.postal = F.phone = '';
     } catch (e) { flash('err', M.errText(e)); }
     await refresh();
+    M.focusResult(app);
   }
 
   function payBlock(o) {
     var box = h('div', { class: 'msg info pay', 'data-pay-for': o.reference });
-    box.appendChild(h('div', null, 'Pay ' + M.money(o.amount_cents) + ' by PayNow to ' + M.CFG.PAYNOW_TO + '.'));
+    box.appendChild(h('div', { 'data-paynow-line': '1', text: M.paynowLine(o.amount_cents) }));
     box.appendChild(h('div', null, 'Put this reference in the PayNow comment: ', h('span', { class: 'code', 'data-ref': '1', text: o.reference })));
     box.appendChild(h('div', { class: 'small', text: 'We tick it off by hand, usually within a day. This page will then show "paid" and ' + (o.format === 'workbook' ? 'we will post your book.' : 'online access is switched on for ' + (o.child_label || 'your child') + '.') }));
     if (M.CFG.PAYMENT_MODE === 'stripe') {
@@ -149,8 +152,8 @@
       var r = await fetch('/api/stripe-create-ext-checkout', { method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + S.session.access_token }, body: JSON.stringify({ order_id: o.id }) });
       var j = await r.json().catch(function () { return {}; });
       if (!r.ok || !j.url) throw M.say('Could not start the payment. Nothing was charged. Please try again.');
-      location.href = j.url;
-    } catch (e) { btn.disabled = false; btn.textContent = 'Try again'; M.notice(box.appendChild(h('div')), 'err', M.errText(e)); }
+      M.goToStripe(j.url);   // only https://checkout.stripe.com/... is followed
+    } catch (e) { btn.disabled = false; btn.textContent = 'Try again'; var eb = box.querySelector('[data-pay-error]') || box.appendChild(h('div', { 'data-pay-error': '1' })); M.notice(eb, 'err', M.errText(e)); M.focusResult(eb); }
   }
   var STATUS = { pending_payment: 'waiting for payment', paid: 'paid', cancelled: 'cancelled', refunded: 'refunded' };
   var SHIP = { to_ship: 'We are getting your book ready to post', shipped: 'Posted', delivered: 'Delivered' };
@@ -198,7 +201,7 @@
     }
     var open = D.orders.filter(function (o) { return o.id !== D.last; });
     out.push(h('section', { class: 'card', id: 'orders' }, h('h2', { text: 'Your orders' }),
-      open.length ? open.map(orderCard) : h('p', { class: 'muted empty', 'data-no-orders': '1', text: 'No orders yet.' })));
+      open.length ? open.map(orderCard) : h('p', { class: 'muted empty', 'data-no-orders': '1', text: last ? 'Your new order is shown above. Earlier orders will be listed here.' : 'No orders yet.' })));
     draw(out);
   }
 

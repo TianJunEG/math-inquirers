@@ -266,6 +266,21 @@ details.ans p{margin-top:8px}
 @media(max-width:420px){.srow{grid-template-columns:70px 1fr;gap:6px}.chips label,.slotchip{padding:6px 10px}}
 .fine2{font-size:13px;color:var(--muted)}
 .field .err{color:var(--red);font-weight:700;font-size:14px}
+
+.pzcode{font:600 17px/1.5 ui-monospace,Menlo,Consolas,monospace;background:var(--bg);border:2px dashed var(--line);border-radius:12px;padding:10px 14px;margin:8px 0;white-space:pre;overflow-x:auto;max-width:100%}
+.pzmeta{margin-top:10px}
+.pzl .msg b{font-weight:800}
+#pzMsg,#pzdMsg{margin-top:6px}
+#pzdMsg:focus{outline:3px solid var(--ink);outline-offset:3px;border-radius:14px}
+.pzdaily{display:contents}
+.pzlab{font:800 13px var(--body);color:var(--muted)}
+[hidden]{display:none!important}
+/* light mode: the hint (red) and the worked answer (green) text need 4.5:1 on their tinted boxes; dark mode keeps the page colours */
+.pzl{--pzno:#A82D2D;--pzok:#17655B}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .pzl{--pzno:var(--red);--pzok:var(--teal)}}
+:root[data-theme="dark"] .pzl{--pzno:var(--red);--pzok:var(--teal)}
+.pzl .msg.no{color:var(--pzno)}
+.pzl .msg.ok{color:var(--pzok)}
 </style>
 <div class="wrap">
 <a class="skip" href="#top">Skip to main content</a>
@@ -286,7 +301,7 @@ details.ans p{margin-top:8px}
 <section class="two"><div class="tile yel"><span class="tag">In the kit</span><h3>Cut-outs in the workbook</h3><ul class="klist"><li>A fraction wall</li><li>A square grid</li><li>A dot grid</li><li>A cube net</li></ul><p class="small muted">Nothing needs to be bought for the kit. The kit is the cut-out pages at the back of your child's workbook. We post the printed workbook to your home before the first lesson (Singapore addresses), and your child cuts out the pieces and keeps them in one envelope.</p></div>
 <div class="tile mint"><span class="tag">At home</span><h3>What your child needs</h3><ul class="klist"><li>A laptop or tablet with a camera, on a table with space for the kit</li><li>Pencil, coloured pencils, a ruler, scissors and a protractor</li><li>A mini whiteboard and marker</li><li>A calculator (a phone calculator is fine); the lessons use it to check, not to do the thinking</li><li>About 30 one-centimetre cubes, dice or similar, matchsticks or toothpicks, counters and squared paper</li></ul><p class="small muted">These come from the lesson plans for this level.</p></div></section>
 
-<section class="sec" id="puzzle"><div class="shead"><span class="eyebrow">Try one now</span><h2>A sample puzzle</h2></div><div class="pzcard"><div class="pzl"><span class="tag">Think harder · Lesson 2</span><div class="big">1/3 then 1/4</div><p style="font-size:18px">Ben ate 1/3 of a pizza. Ali ate 1/4 of what was left. What fraction of the pizza is left?</p><details class="ans"><summary>Show the answer</summary><p>1/2. 2/3 was left after Ben. Ali ate 1/4 of that, so 3/4 of 2/3 = 1/2 is left.</p></details></div><div class="pzr"><h3>In class, the answer is only half the job</h3><p class="muted">Children then explain how they know, and hear other ways of seeing the same puzzle. That is where the thinking grows.</p><a class="btn sm alt" href="/?level=5#register" style="justify-self:start">Register for Level 5</a></div></div></section>
+<section class="sec" id="puzzle"><div class="shead"><span class="eyebrow">Try one now</span><h2>A puzzle to try</h2></div><div class="pzcard"><div class="pzl" id="pzBox"><span class="tag">Think harder · Lesson 2</span><div class="big">1/3 then 1/4</div><p style="font-size:18px">Ben ate 1/3 of a pizza. Ali ate 1/4 of what was left. What fraction of the pizza is left?</p><details class="ans"><summary>Show the answer</summary><p>1/2. 2/3 was left after Ben. Ali ate 1/4 of that, so 3/4 of 2/3 = 1/2 is left.</p></details></div><div class="pzr"><h3>In class, the answer is only half the job</h3><p class="muted">Children then explain how they know, and hear other ways of seeing the same puzzle. That is where the thinking grows.</p><a class="btn sm alt" href="/?level=5#register" style="justify-self:start">Register for Level 5</a></div></div></section>
 
 <section class="sec" id="placement"><div class="shead"><span class="eyebrow">Placement</span><h2>Is Ages 10-12 right for my child?</h2></div><p class="muted">Levels are named by age, and each spans three ages and overlaps the next, so children can join the level that suits how they are learning now. This level is for ages 10-12 and builds on Primary 5 maths.</p><p>Take the free 30-minute diagnostic for the level that matches your child's school year (the Math Inquirers Placement Check for that level). Then:</p><ul><li>The check is scored out of 10. 7 to 10: enrol at this level.</li><li>4 to 6: enrol at this level (the tutor will note that support may help), or choose one level down (<a href="/ages-9-11/">Ages 9-11</a>).</li><li>0 to 3: we recommend one level down (<a href="/ages-9-11/">Ages 9-11</a>).</li><li>If it was too easy (9 or 10 out of 10), your child may also try the diagnostic one level up (<a href="/ages-11-13/">Ages 11-13</a>).</li></ul><p>You have the final say. You can change the level before lesson 1 at no cost, and the price is the same at every level.</p></section>
 
@@ -301,3 +316,300 @@ details.ans p{margin-top:8px}
 <footer><div><b>Math Inquirers</b><p style="margin-top:6px">An independent maths enrichment program by Preciouslyours Pte Ltd, Singapore. Not affiliated with MOE or the Gifted Education Programme. We do not identify or test for giftedness and we do not promise exam or competition results. See how the levels line up with the Singapore syllabus on the <a href="/syllabus/">syllabus map</a>.</p></div><div><b>Register</b><p style="margin-top:6px"><a href="/?level=5#register">Register for Level 5</a><br><a href="/">Back to the home page</a><br><a href="/shop/">Shop: extension workbooks (coming soon)</a></p></div><div><b>Your details</b><p style="margin-top:6px">We use your details only to arrange the class and reply to you, in line with the PDPA. <a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a></p></div></footer>
 </div>
 <script src="/shop/cart.js" defer></script>
+<script>
+/* Math Inquirers daily teaser: static, no cookies, no tracking, no timers for the puzzle, no scores.
+   The puzzle for a day is chosen from the Singapore calendar date (UTC+8, no daylight saving),
+   so every visitor sees the same puzzle that day and it changes at midnight Singapore time.
+
+   MiTeaser.init({box, level, ages, released, inline, base, now}):
+     box       the element that holds the page's fixed puzzle (kept in the page; it is the fallback)
+     released  months (MM) that have a released batch
+     inline    {MM: {MM-DD: puzzle}} batches built into the page (the latest released months)
+     base      folder to fetch other released months from
+   If the date has a puzzle (inline, or fetched in time), it is shown and labelled with its date.
+   If not (month not released, fetch failed or slow), the page's own fixed puzzle stays exactly as it is:
+   it is never labelled with a date. A slow reply is accepted when it arrives, unless the visitor has
+   already started on the fixed puzzle. */
+(function (g) {
+  'use strict';
+  var DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var WAIT_MS = 8000;
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+
+  /* Singapore date from a UTC millisecond timestamp. SGT is a fixed UTC+8, so the browser's own
+     time zone never matters. */
+  function sgt(ms) {
+    var shifted = ms + 8 * 3600000;
+    var d = new Date(shifted);
+    return {
+      mm: pad(d.getUTCMonth() + 1), dd: pad(d.getUTCDate()), year: d.getUTCFullYear(),
+      day: Math.floor(shifted / 86400000), dow: d.getUTCDay(), month: d.getUTCMonth(),
+      key: pad(d.getUTCMonth() + 1) + '-' + pad(d.getUTCDate()),
+      label: DAYS[d.getUTCDay()] + ' ' + d.getUTCDate() + ' ' + MONTHS[d.getUTCMonth()]
+    };
+  }
+
+  /* ---------- answer checking ---------- */
+  function gcd(a, b) { a = Math.abs(a); b = Math.abs(b); while (b) { var t = a % b; a = b; b = t; } return a; }
+  function cleanNum(s) {
+    s = s.replace(/−|–|—/g, '-').replace(/[⁄∕]/g, '/').replace(/\s+/g, ' ').trim();
+    if (/^\+\d/.test(s)) s = s.slice(1);
+    if (/^-?\d{1,3}(,\d{3})+(\.\d+)?$/.test(s)) s = s.replace(/,/g, '');
+    else if (/^-?\d{1,3}( \d{3})+(\.\d+)?$/.test(s)) s = s.replace(/ /g, '');
+    return s;
+  }
+  /* returns {n, d, red} (value n/d, red = fraction written in lowest terms) or null */
+  function parseNum(s) {
+    s = cleanNum(s);
+    var m;
+    if ((m = /^(-?)(\d+)$/.exec(s))) return { n: (m[1] ? -1 : 1) * parseInt(m[2], 10), d: 1, red: true };
+    if ((m = /^(-?)(\d*)\.(\d+)$/.exec(s))) {
+      var den = Math.pow(10, m[3].length);
+      return { n: (m[1] ? -1 : 1) * (parseInt(m[2] || '0', 10) * den + parseInt(m[3], 10)), d: den, red: true };
+    }
+    if ((m = /^(-?)(\d+) ?\/ ?(\d+)$/.exec(s))) {
+      var dd = parseInt(m[3], 10);
+      if (!dd) return null;
+      var nn = parseInt(m[2], 10);
+      return { n: (m[1] ? -1 : 1) * nn, d: dd, red: gcd(nn, dd) === 1 };
+    }
+    if ((m = /^(\d+) (\d+) ?\/ ?(\d+)$/.exec(s))) {
+      var d3 = parseInt(m[3], 10), n3 = parseInt(m[2], 10);
+      if (!d3) return null;
+      return { n: parseInt(m[1], 10) * d3 + n3, d: d3, red: gcd(n3, d3) === 1 };
+    }
+    return null;
+  }
+  function norm(s) {
+    return String(s).toLowerCase().replace(/[’‘]/g, "'").replace(/ /g, ' ').replace(/\s+/g, ' ').trim()
+      .replace(/^=\s*/, '').replace(/[.!]+$/, '').trim();
+  }
+  function byLen(a, b) { return b.length - a.length; }
+  function squash(t) { return t.replace(/[^a-z0-9' ]/g, ' ').replace(/\s+/g, ' ').trim(); }
+  /* result: 'ok' | 'simplify' | 'no' | 'empty' | 'format' */
+  function check(p, input) {
+    var s = norm(input || '');
+    if (!s) return 'empty';
+    if (p.t === 's') {
+      var t = squash(s).replace(/^((it is|it was|it's|on|in|the|a|an) )+/, '').trim();
+      var ok = [p.a].concat(p.x || []);
+      for (var i = 0; i < ok.length; i++) {
+        var want = squash(ok[i].toLowerCase());
+        if (t === want || t.replace(/ /g, '') === want.replace(/ /g, '')) return 'ok';
+      }
+      return 'no';
+    }
+    var wantN = parseNum(p.a);
+    var pre = (p.p || []).slice().sort(byLen), uni = (p.u || []).map(function (x) { return x.toLowerCase(); }).sort(byLen);
+    var asMinutes = uni.indexOf('minutes') >= 0 || uni.indexOf('min') >= 0;
+    var asPercent = uni.indexOf('%') >= 0;
+    var m;
+    /* ordinal suffix: 21st, 2nd, 5 th */
+    if ((m = /^(\d+) ?(st|nd|rd|th)$/.exec(s))) s = m[1];
+    /* 1 h 30 min for a minutes answer */
+    if (asMinutes && (m = /^(\d+) ?(h|hr|hrs|hour|hours) ?(\d+) ?(m|min|mins|minute|minutes)?$/.exec(s))) {
+      s = String(parseInt(m[1], 10) * 60 + parseInt(m[3], 10));
+    }
+    var cands = [s], i2, j;
+    for (i2 = 0; i2 < pre.length; i2++) {
+      if (s.indexOf(pre[i2]) === 0) cands.push(s.slice(pre[i2].length).trim());
+    }
+    var more = [];
+    for (i2 = 0; i2 < cands.length; i2++) {
+      for (j = 0; j < uni.length; j++) {
+        var c = cands[i2];
+        if (c.length > uni[j].length && c.slice(-uni[j].length) === uni[j]) more.push(c.slice(0, -uni[j].length).trim());
+      }
+    }
+    cands = cands.concat(more);
+    var got = null;
+    for (i2 = 0; i2 < cands.length && !got; i2++) got = parseNum(cands[i2]);
+    if (!got) return /\d/.test(s) ? 'no' : 'format';
+    if (got.n * wantN.d === wantN.n * got.d) {
+      if (p.e && !got.red) return 'simplify';
+      return 'ok';
+    }
+    /* a percentage written as a decimal: 0.96 for 96% */
+    if (asPercent && s.indexOf('.') >= 0 && got.n * 100 * wantN.d === wantN.n * got.d) return 'ok';
+    return 'no';
+  }
+
+  /* ---------- rendering ---------- */
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text != null) e.textContent = text;
+    return e;
+  }
+  function build(opts, p, when, source) {
+    var wrap = el('div', 'pzdaily');
+    wrap.setAttribute('data-pzdaily', '1');
+    wrap.appendChild(el('span', 'tag', 'Ages ' + opts.ages + ' · Puzzle for ' + when.label));
+    if (p.b) wrap.appendChild(el('div', 'big', p.b));
+    var q = el('p', 'pzq', p.q);
+    q.style.fontSize = '18px';
+    wrap.appendChild(q);
+    if (p.c) {
+      var pre = el('pre', 'pzcode', p.c);
+      pre.setAttribute('role', 'group');
+      pre.setAttribute('aria-label', 'Puzzle diagram or program');
+      wrap.appendChild(pre);
+    }
+    var lab = el('label', 'pzlab', 'Your answer');
+    lab.setAttribute('for', 'pzdA');
+    wrap.appendChild(lab);
+    var row = el('div', 'row');
+    var inp = document.createElement('input');
+    inp.id = 'pzdA';
+    inp.setAttribute('placeholder', 'Type it here');
+    inp.setAttribute('autocomplete', 'off');
+    inp.setAttribute('autocapitalize', 'off');
+    inp.setAttribute('spellcheck', 'false');
+    inp.setAttribute('inputmode', /^\d+$/.test(p.a) ? 'numeric' : 'text');
+    inp.style.maxWidth = '200px';
+    var btn = el('button', 'btn yel', 'Check');
+    btn.id = 'pzdCheck';
+    btn.type = 'button';
+    row.appendChild(inp);
+    row.appendChild(btn);
+    wrap.appendChild(row);
+    var msg = el('div');
+    msg.id = 'pzdMsg';
+    msg.setAttribute('role', 'status');
+    msg.setAttribute('aria-live', 'polite');
+    msg.setAttribute('tabindex', '-1');
+    wrap.appendChild(msg);
+    wrap.appendChild(el('p', 'small muted pzmeta', 'A new puzzle every day at midnight, Singapore time. Nothing is saved or counted.'));
+
+    function show(cls, text) {
+      msg.innerHTML = '';
+      var d = el('div', 'msg ' + cls);
+      d.appendChild(document.createTextNode(text));
+      msg.appendChild(d);
+      return d;
+    }
+    function reveal() {
+      msg.innerHTML = '';
+      var d = el('div', 'msg info');
+      d.appendChild(el('b', null, 'The answer is ' + p.s + '.'));
+      d.appendChild(document.createElement('br'));
+      d.appendChild(document.createTextNode(p.w));
+      msg.appendChild(d);
+      msg.focus();   /* the button that was pressed is gone: move focus to the explanation so keyboard and screen-reader users stay in place */
+    }
+    function go() {
+      var r = check(p, inp.value);
+      if (r === 'empty') { show('info', 'Type your answer first, then press Check.'); return; }
+      if (r === 'ok') {
+        msg.innerHTML = '';
+        var d = el('div', 'msg ok');
+        d.appendChild(el('b', null, 'Correct! '));
+        d.appendChild(document.createTextNode(p.w));
+        d.appendChild(document.createElement('br'));
+        d.appendChild(document.createTextNode('Now ask: how do you know?'));
+        msg.appendChild(d);
+        return;
+      }
+      if (r === 'simplify') { show('info', 'That is the right amount. Can you write it in its simplest form?'); return; }
+      if (r === 'format') { show('info', 'Try writing your answer with digits, like 12' + (p.t === 's' ? ' or a word' : '') + '.'); return; }
+      show('no', 'Not yet. Hint: ' + p.h);
+      var more = el('button', 'btn sm alt', 'Show me how');
+      more.type = 'button';
+      more.style.marginTop = '8px';
+      more.addEventListener('click', reveal);
+      msg.appendChild(more);
+    }
+    btn.addEventListener('click', go);
+    inp.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); go(); } });
+    return wrap;
+  }
+
+  function init(opts) {
+    var box = opts.box;
+    if (!box) return;
+    var now = opts.now || function () { return Date.now(); };
+    var fixedNodes = Array.prototype.slice.call(box.childNodes);
+    var daily = null, handled = null, token = 0;
+    box.setAttribute('data-teaser-source', 'fixed');
+
+    function fixedTouched() {
+      for (var i = 0; i < fixedNodes.length; i++) {
+        var n = fixedNodes[i];
+        if (n.nodeType !== 1) continue;
+        var inner = n.querySelectorAll ? n.querySelectorAll('input') : [];
+        var all = (n.tagName === 'INPUT' ? [n] : []).concat(Array.prototype.slice.call(inner));
+        for (var k = 0; k < all.length; k++) if (all[k].value) return true;
+        var d2 = (n.tagName === 'DETAILS' ? [n] : []).concat(Array.prototype.slice.call(n.querySelectorAll ? n.querySelectorAll('details') : []));
+        for (k = 0; k < d2.length; k++) if (d2[k].open) return true;
+        var m2 = n.id === 'pzMsg' ? n : (n.querySelector ? n.querySelector('#pzMsg') : null);
+        if (m2 && m2.childNodes.length) return true;
+      }
+      return false;
+    }
+    function setFixed(hidden) {
+      for (var i = 0; i < fixedNodes.length; i++) if (fixedNodes[i].nodeType === 1) fixedNodes[i].hidden = hidden;
+    }
+    function showFixed() {
+      if (daily && daily.parentNode) daily.parentNode.removeChild(daily);
+      daily = null;
+      setFixed(false);
+      box.setAttribute('data-teaser-source', 'fixed');
+      box.removeAttribute('data-teaser');
+      box.removeAttribute('data-teaser-date');
+      box.setAttribute('data-teaser-state', 'done');
+    }
+    function showDaily(p, when, source) {
+      if (daily && daily.parentNode) daily.parentNode.removeChild(daily);
+      daily = build(opts, p, when, source);
+      setFixed(true);
+      box.appendChild(daily);
+      box.setAttribute('data-teaser', p.i);
+      box.setAttribute('data-teaser-date', when.key);
+      box.setAttribute('data-teaser-source', source);
+      box.setAttribute('data-teaser-state', 'done');
+    }
+    function released(mm) { return !opts.released || opts.released.indexOf(mm) >= 0; }
+
+    function run() {
+      var when = sgt(now());
+      if (handled === when.key) return;
+      handled = when.key;
+      var my = ++token;
+      box.setAttribute('data-teaser-state', 'loading');
+      var month = null;
+      if (opts.data) month = opts.data(opts.level, when.mm);                 /* previews: month data supplied in the page */
+      else if (opts.inline && opts.inline[when.mm]) month = opts.inline[when.mm];
+      if (month) {
+        if (month[when.key]) showDaily(month[when.key], when, 'month'); else showFixed();
+        return;
+      }
+      if (opts.data || !released(when.mm) || !opts.base || typeof fetch !== 'function') { showFixed(); return; }
+      /* a released month that is not built into the page: fetch it, keep the fixed puzzle meanwhile */
+      showFixed();
+      box.setAttribute('data-teaser-state', 'loading');
+      var timer = setTimeout(function () { if (my === token) box.setAttribute('data-teaser-state', 'done'); }, WAIT_MS);
+      fetch(opts.base + 'L' + opts.level + '-' + when.mm + '.json').then(function (r) {
+        if (!r.ok) throw new Error('no batch');
+        return r.json();
+      }).then(function (j) {
+        clearTimeout(timer);
+        if (my !== token) return;
+        if (j && j[when.key] && !fixedTouched()) showDaily(j[when.key], when, 'month');
+        else box.setAttribute('data-teaser-state', 'done');
+      }).catch(function () { clearTimeout(timer); if (my === token) box.setAttribute('data-teaser-state', 'done'); });
+    }
+    run();
+    /* if the page stays open past midnight Singapore time, pick up the new day when the visitor comes back to it */
+    if (opts.listen !== false) {
+      document.addEventListener('visibilitychange', function () { if (!document.hidden) run(); });
+      g.addEventListener('focus', run);
+    }
+    return { refresh: run };
+  }
+
+  g.MiTeaser = { sgt: sgt, check: check, init: init, parseNum: parseNum };
+})(window);
+
+(function(){var b=document.getElementById("pzBox");if(!b||!window.MiTeaser)return;try{MiTeaser.init({box:b,level:5,ages:"10-12",released:["11", "12"],inline:{"11":{"11-01":{"i":"L5-pct35","g":"Percentage","q":"A school has 360 Primary 5 pupils. 35% of them walk to school. How many pupils walk to school?","a":"126","t":"n","s":"126 pupils","h":"10% of 360 is 36. Use that to build 35%.","w":"10% of 360 is 36. 30% is 108. 5% is 18. 35% = 108 + 18 = 126 pupils.","u":["pupils","pupil"]},"11-02":{"i":"L5-ricecost","g":"Rate","q":"8 kg of rice cost $26.40. At the same price for each kilogram, how much do 5 kg of rice cost?","a":"16.5","t":"n","s":"$16.50","h":"Find the cost of 1 kg first.","w":"1 kg costs $3.30. 5 kg cost 5 × $3.30 = $16.50.","u":["dollars","dollar"],"p":["$","s$"]},"11-03":{"i":"L5-walkmeet","g":"Rate","q":"Kai and Dina live 3,120 m apart on the same road. They walk towards each other, Kai at 80 m a minute and Dina at 76 m a minute. After how many minutes do they meet?","a":"20","t":"n","s":"20 minutes","h":"Each minute the gap between them closes by Kai's speed plus Dina's speed.","w":"Each minute they get 156 m closer. 3,120 ÷ 156 = 20 minutes.","u":["min","mins","minute","minutes"]},"11-04":{"i":"L5-fishtank","g":"Volume","q":"A fish tank has a length of 60 cm, a width of 40 cm and a height of 30 cm. How many litres of water fit into it? (1 litre = 1000 cm³.)","a":"72","t":"n","s":"72 L","h":"Find the volume in cm³ first. Then change cm³ to litres.","w":"60 × 40 × 30 = 72000 cm³. 72000 ÷ 1000 = 72 L.","u":["l","litre","litres","liter","liters"]},"11-05":{"i":"L5-ropecm","g":"Measures","q":"A rope is 3.45 m long. How many centimetres is that?","a":"345","t":"n","s":"345 cm","h":"1 m is 100 cm. Multiplying by 100 moves the decimal point two places.","w":"3.45 × 100 = 345 cm.","u":["cm","centimetre","centimetres","centimeter","centimeters"]},"11-06":{"i":"L5-orangeprofit","g":"Percentage","q":"Uncle buys a crate of oranges for $40 and sells all the oranges for $50. What is his profit as a percentage of the cost price?","a":"25","t":"n","s":"25%","h":"Find the profit in dollars first. Then write it as a fraction of the cost.","w":"Profit: $50 − $40 = $10. 10/40 = 25/100, which is 25%.","u":["%","percent","per cent"]},"11-07":{"i":"L5-house","g":"Area","q":"A model house has a rectangular wall, 12 cm wide and 7 cm tall, with a triangular roof on top. The roof has the same base as the wall and is 5 cm tall. Find the combined area of the wall and the roof.","a":"114","t":"n","s":"114 cm²","h":"Find the area of the rectangle. Then find the area of the triangle. Add them.","w":"Rectangle: 12 × 7 = 84. Triangle: 12 × 5 ÷ 2 = 30. 84 + 30 = 114 cm².","u":["cm²","cm2","cm^2","sq cm","square cm","square centimetres","square centimeters"]},"11-08":{"i":"L5-busdistance","g":"Rate","q":"A bus travels at 72 km/h for 2 hours 30 minutes. How far does it travel?","a":"180","t":"n","s":"180 km","h":"Change the time to hours first. 30 minutes is half an hour.","w":"2 hours 30 minutes is 2.5 hours. 72 × 2.5 = 180 km.","u":["km","kilometre","kilometres","kilometer","kilometers"]},"11-09":{"i":"L5-colourdraw","g":"Worst case","q":"A bowl holds 20 pink, 15 green and 12 orange raffle tickets. Hui Min takes tickets from the bowl without looking. How many must she take to be sure of having 7 tickets of the same colour?","a":"19","t":"n","s":"19 tickets","h":"Think of the unluckiest case: she takes as many cards as possible without having 7 tickets of any colour.","w":"The unluckiest case is 6 pink, 6 green and 6 orange tickets, which is 18 tickets. The next ticket must make 7 of one colour, so she must take 18 + 1 = 19 tickets.","u":["tickets","ticket"]},"11-10":{"i":"L5-queue5","g":"Logic","q":"Nurul is older than Farhan. Ravi is older than Hui Min. Arjun is older than Nurul. Hui Min is older than Arjun. Who is the middle person in age order?","a":"arjun","t":"s","s":"Arjun","h":"Write the five names in a row from oldest to youngest.","w":"From oldest to youngest: Ravi, Hui Min, Arjun, Nurul, Farhan. The middle person is Arjun."},"11-11":{"i":"L5-savingsinterest","g":"Percentage","q":"Aisha puts $2,000 in a savings account. The bank pays 3% simple interest each year on the $2,000. How much interest does she earn in 4 years?","a":"240","t":"n","s":"$240","h":"Find the interest for one year first. Simple interest is the same amount every year.","w":"3% of $2,000 is $60 for one year. For 4 years: 4 × $60 = $240.","u":["dollars","dollar"],"p":["$","s$"]},"11-12":{"i":"L5-cube4","g":"Cubes and nets","q":"A big cube is made of 4 by 4 by 4 small blocks. It is painted blue outside and then split into its 64 blocks. How many of the blocks have paint on exactly 1 face?","a":"24","t":"n","s":"24 cubes","h":"Look at one face of the big cube. Which small cubes on it are not on an edge?","w":"On each face of the big cube, the middle 2 by 2 block of small cubes is not on an edge: 4 cubes. There are 6 faces. 6 × 4 = 24 cubes.","u":["cubes","cube"]},"11-13":{"i":"L5-leak","g":"Rate","q":"A tap pours 25 L into an empty 600 L tank every minute, but a small leak lets 5 L out every minute. How long, in minutes, until the tank is full?","a":"30","t":"n","s":"30 minutes","h":"How much water does the tank gain each minute, after the leak?","w":"The tank gains 25 − 5 = 20 L each minute. 600 ÷ 20 = 30 minutes.","u":["min","mins","minute","minutes"]},"11-14":{"i":"L5-cubes","g":"Volume","q":"A box is 6 cm long, 5 cm wide and 4 cm tall. Wei Jie fills it with 1 cm cubes, with no gaps. How many cubes does he need?","a":"120","t":"n","s":"120 cubes","h":"Find how many cubes fit in the bottom layer. Then count the layers.","w":"The bottom layer has 6 × 5 = 30 cubes. There are 4 layers. 30 × 4 = 120 cubes.","u":["cubes","cube"]},"11-15":{"i":"L5-frogsteps","g":"Counting ways","q":"A frog climbs 7 steps. Each jump goes up 1, 2 or 3 steps. In how many different ways can it climb all 7 steps?","a":"44","t":"n","s":"44 ways","h":"Find the ways for 1, 2 and 3 steps first. Each new total uses the three totals just before it.","w":"Ways for 1 to 7 steps: 1, 2, 4, 7, 13, 24, 44. Each new total comes from adding the three totals before it, so 7 steps can be climbed in 44 ways.","u":["ways","way"]},"11-16":{"i":"L5-cafemenu","g":"Ways to choose","q":"A cafe sells 3 kinds of cake, 8 drinks and 4 sizes. A set is one cake, one drink and one size. How many different sets can a customer choose?","a":"96","t":"n","s":"96 sets","h":"Pick a cake. How many drink and size choices go with it?","w":"3 × 8 × 4 = 96 sets.","u":["sets","set"]},"11-17":{"i":"L5-fieldwidth","g":"Missing sides","q":"A rectangular field has a perimeter of 176 m and is 51 m long. How wide is the field?","a":"37","t":"n","s":"37 m","h":"Half of the perimeter is the length plus the width.","w":"Half of 176 is 88. The width is 88 − 51 = 37 m.","u":["m","metre","metres","meter","meters"]},"11-18":{"i":"L5-moneyleft","g":"Fractions","q":"Siti spends 3/8 of her savings on a gift and still has $50. What were her savings at first?","a":"80","t":"n","s":"$80","h":"If she spent 3 out of 8 equal parts, how many parts are left?","w":"5 of the 8 equal parts are left, and they are $50. One part is $10. All 8 parts are 8 × $10 = $80.","u":["dollars","dollar"],"p":["$","s$"]},"11-19":{"i":"L5-bracketmult","g":"Order of operations","q":"Mei Ling types 6 × (13 + 8) − 25 into a calculator that follows the order of operations. What answer should it show?","a":"101","t":"n","s":"101","h":"Work out the brackets first. Then multiply. Then subtract.","w":"Brackets first: 13 + 8 = 21. Then 6 × 21 = 126. Then 126 − 25 = 101."},"11-20":{"i":"L5-palin5","g":"Digit patterns","q":"A number is a palindrome if its digits are the same when you read them from right to left, like 48384. How many 5-digit palindromes are there?","a":"900","t":"n","s":"900 numbers","h":"The first digit decides the last digit, and the second digit decides the fourth. Which digits are free to choose?","w":"The first digit has 9 choices (not 0). The second digit has 10 choices. The middle digit has 10 choices. The other two digits are decided. 9 × 10 × 10 = 900 numbers.","u":["numbers","number"]},"11-21":{"i":"L5-tincoins","g":"Number patterns","q":"Ravi saves coins in a tin. After day 1 the tin has 4 coins, after day 2 it has 7, after day 3 it has 11, and after day 4 it has 16. Each day he adds one more coin than the day before. How many coins are in the tin after day 10?","a":"67","t":"n","s":"67 coins","h":"Look at how many coins he adds each day: 3, then 4, then 5. Keep going.","w":"The coins added are 3, 4, 5, 6, 7, 8, 9, 10, 11. The tin holds 4, 7, 11, 16, 22, 29, 37, 46, 56, 67. After day 10 there are 67 coins.","u":["coins","coin"]},"11-22":{"i":"L5-cubetower9","g":"Stacks","q":"A tower is built from cubes in 9 layers. The top layer is 1 cube. Each layer below is a square one cube wider each way: 2 by 2, 3 by 3 and so on, down to the bottom layer. Find the total number of cubes in the tower.","a":"285","t":"n","s":"285 cubes","h":"Find the number of cubes in each layer: 1, 4, 9 and so on. Then add the layers.","w":"The layers are 1 + 4 + 9 + 16 + 25 + 36 + 49 + 64 + 81. Added together they make 285 cubes.","u":["cubes","cube"]},"11-23":{"i":"L5-stairs60","g":"Adding in order","q":"A model staircase has 60 steps. Step 1 uses 1 block, step 2 uses 2 blocks, step 3 uses 3 blocks, and so on up to step 60. How many blocks are used altogether?","a":"1830","t":"n","s":"1830 blocks","h":"Pair step 1 with step 60, step 2 with step 59, and so on.","w":"Each pair adds to 1 + 60 = 61. There are 30 pairs. 30 × 61 = 1830 blocks.","u":["blocks","block"]},"11-24":{"i":"L5-gstbill","g":"Percentage","q":"A restaurant bill comes to $200 without GST. GST adds 9% of that amount. What is the final bill?","a":"218","t":"n","s":"$218","h":"Find the GST first. Then add it to the bill.","w":"1% of $200 is $2, so 9% is $18. $200 + $18 = $218.","u":["dollars","dollar"],"p":["$","s$"]},"11-25":{"i":"L5-figures","g":"Pattern rules","q":"Figure 1 uses 5 tiles, Figure 2 uses 8 tiles and Figure 3 uses 11 tiles. Each figure has the same number more tiles than the one before. How many tiles does Figure 25 use?","a":"77","t":"n","s":"77 tiles","h":"How many more tiles does each figure have? Write the rule using Figure number × that jump.","w":"Each figure adds 3 tiles, and Figure 1 has 5. So the rule is 3 × figure number + 2. For Figure 25: 3 × 25 + 2 = 77 tiles.","u":["tiles","tile"]},"11-26":{"i":"L5-ropes","g":"Factors","q":"Two ropes are 84 cm and 126 cm long. Siti cuts both ropes into pieces of the same length, with no rope left over. What is the longest possible length of each piece?","a":"42","t":"n","s":"42 cm","h":"The piece length must divide both 84 and 126.","w":"The common factors of 84 and 126 include 1, 2, 3, 6, 7, 14, 21 and 42. The longest is 42 cm.","u":["cm","centimetre","centimetres","centimeter","centimeters"]},"11-27":{"i":"L5-bottleshare","g":"Fractions","q":"A bottle holds 3/4 L of juice. Priya drinks 2/3 of the juice in the bottle. How many litres of juice does she drink?","a":"1/2","t":"n","s":"1/2 L","h":"\"2/3 of 3/4\" means 2/3 × 3/4. Multiply the tops and multiply the bottoms, then simplify.","w":"2/3 × 3/4 = 6/12, and 6/12 is the same as 1/2. She drinks 1/2 L.","u":["l","litre","litres","liter","liters"],"e":1},"11-28":{"i":"L5-town","g":"Large numbers","q":"The population of a town is 3,486,215. What is this number rounded to the nearest hundred thousand?","a":"3500000","t":"n","s":"3,500,000","h":"Look at the ten thousands digit to decide whether to round up or down.","w":"The ten thousands digit is 8, so round up the 4 in the hundred thousands place to 5. The answer is 3,500,000."},"11-29":{"i":"L5-tank","g":"Volume","q":"Jun Hao pours 6 litres of water into an empty tank shaped like a cuboid. The base of the tank measures 30 cm by 25 cm. What is the depth of the water, in centimetres? (1 litre = 1000 cm³.)","a":"8","t":"n","s":"8 cm","h":"Change the litres into cm³. The volume of water is base area times depth.","w":"6 litres = 6000 cm³. The base area is 30 × 25 = 750 cm². 6000 ÷ 750 = 8 cm.","u":["cm","centimetre","centimetres","centimeter","centimeters"]},"11-30":{"i":"L5-isosceles","g":"Angles","q":"A triangle has two sides of equal length. The angle between the two equal sides is 40°. How big is each of the other two angles?","a":"70","t":"n","s":"70°","h":"The three angles of a triangle add up to 180°. The two other angles are equal.","w":"180° − 40° = 140°. Share equally: 140° ÷ 2 = 70°.","u":["°","deg","degree","degrees"]}},"12":{"12-01":{"i":"L5-cycling","g":"Decimals","q":"On Saturday, Daniel cycles 12.75 km. On Sunday he cycles 8.9 km. How far does he cycle altogether?","a":"21.65","t":"n","s":"21.65 km","h":"Write 8.9 as 8.90, and line up the decimal points.","w":"12.75 + 8.9 = 21.65 km.","u":["km","kilometre","kilometres","kilometer","kilometers"]},"12-02":{"i":"L5-climbing","g":"Number puzzles","q":"A 3-digit number is a climbing number if each digit is bigger than the digit before it, like 358. How many 3-digit climbing numbers are there?","a":"84","t":"n","s":"84 numbers","h":"No climbing number can have a 0, because a 0 in the tens or ones place would be smaller than the digit before. Choose 3 different digits from 1 to 9 and write them in order.","w":"Each set of 3 different digits from 1 to 9 gives exactly one climbing number. There are 9 × 8 × 7 ÷ (3 × 2 × 1) = 504 ÷ 6 = 84 numbers.","u":["numbers","number"]},"12-03":{"i":"L5-sevendigit","g":"Place value","q":"The digits 4 and 6 in 4,652,801 are worth different amounts. Work out the gap between what the 4 is worth and what the 6 is worth.","a":"3400000","t":"n","s":"3,400,000","h":"The 4 is in the millions place and the 6 is in the hundred thousands place. Write the value of each.","w":"The 4 means 4,000,000. The 6 means 600,000. 4,000,000 − 600,000 = 3,400,000."},"12-04":{"i":"L5-cardsmax5","g":"Digit cards","q":"Wei Jie has five digit cards: 3, 8, 1, 6 and 4. He uses every card to make one 3-digit number and one 2-digit number. What is the biggest total he can make by adding the two numbers?","a":"904","t":"n","s":"904","h":"The biggest digits belong in the places with the most value.","w":"Put 8 at the front of the 3-digit number. The next biggest digits, 6 and 4, lead the tens columns. The rest fill the ones columns, so the numbers are 863 + 41. Their total is 904."},"12-05":{"i":"L5-christmas","g":"Days of the week","q":"On Saturday 14 November, Mei Ling counts the days to Christmas Day on 25 December. What day of the week is 25 December?","a":"friday","t":"s","s":"Friday","h":"How many days are there from 14 November to 25 December? Then count the days left over after whole weeks.","w":"From 14 November to 14 December is 30 days. 14 December to 25 December is 11 more days. 30 + 11 = 41 days = 5 weeks and 6 days. Six days after Saturday is Friday.","x":["fri"]},"12-06":{"i":"L5-subjects","g":"Who has what?","q":"Ali, Ben, Chen, Dina and Emily each choose a different club: robotics, art, choir, chess or drama. Ali chooses neither art nor drama. Ben chooses chess. Chen chooses neither robotics nor drama. Dina chooses none of art, choir or robotics. Emily chooses neither art nor choir. Who chooses robotics?","a":"emily","t":"s","s":"Emily","h":"Ben has chess, so nobody else does. Then work through what each remaining person can choose.","w":"Ali chooses choir, Ben chooses chess, Chen chooses art, Dina chooses drama, Emily chooses robotics. So Emily chooses robotics."},"12-07":{"i":"L5-twelves","g":"Multiples","q":"How many multiples of 12 are there between 100 and 500?","a":"33","t":"n","s":"33 multiples","h":"Find the first multiple of 12 above 100. Then find the last one below 500.","w":"The first is 108 = 9 × 12 and the last is 492 = 41 × 12. From the 9th to the 41st multiple is 41 − 9 + 1 = 33 multiples.","u":["multiples","multiple"]},"12-08":{"i":"L5-redeye","g":"Time","q":"A flight leaves at 23:35 and lands at 03:10 the next day. How many minutes is the flight?","a":"215","t":"n","s":"215 minutes","h":"Count the time from 23:35 to midnight. Then add the time from midnight to 03:10.","w":"From 23:35 to midnight is 25 minutes. From midnight to 03:10 is 190 minutes. 25 + 190 = 215 minutes.","u":["min","mins","minute","minutes"]},"12-09":{"i":"L5-teams16","g":"Pairs","q":"15 teams are in a league. Every team plays every other team exactly once. How many matches are played?","a":"105","t":"n","s":"105 matches","h":"Each team plays 15 − 1 matches, but each match has two teams.","w":"Each of the 15 teams plays 14 matches, which makes 210. Each match was counted twice, so 210 ÷ 2 = 105 matches.","u":["matches","matche"]},"12-10":{"i":"L5-rects43","g":"Counting shapes","q":"A grid of small squares is 4 squares across and 3 squares down. How many rectangles of every size can you find in the grid, including squares?","a":"60","t":"n","s":"60 rectangles","h":"Count the ways to choose a width along the top and the ways to choose a height down the side. Then multiply.","w":"Along 4 squares there are 4 + 3 + 2 + 1 = 10 widths. Down 3 squares there are 3 + 2 + 1 = 6 heights. 10 × 6 = 60 rectangles.","u":["rectangles","rectangle"]},"12-11":{"i":"L5-robotfive","g":"Left and right","q":"A drone faces east. It turns left, then turns left again, then turns to face the opposite way, then turns right, then turns right. Which way does it face now: north, east, south or west?","a":"west","t":"s","s":"west","h":"Draw a small compass. Turn one step at a time and write the direction after each turn.","w":"Facing east, then north, then west, then east, then south, then west. After the turns the drone faces west."},"12-12":{"i":"L5-eggboxes","g":"Remainders","q":"A school has 4583 chairs to store. Each stack holds 36 chairs, and a stack is made only when it is full. How many chairs are left over after the full stacks are made?","a":"11","t":"n","s":"11 chairs","h":"Divide 4583 by 36. What is the remainder?","w":"127 × 36 = 4572, and 4583 − 4572 = 11. 11 chairs are left over.","u":["chairs","chair"]},"12-13":{"i":"L5-fivebricks","g":"Number pyramid","q":"In a number pyramid every brick is the sum of the two bricks under it. The bottom row has five bricks: 2, 5, ?, 4, 1. The top brick is 81. What number is the hidden brick?","a":"7","t":"n","s":"7","h":"The hidden brick is counted several times in the top brick. Try a value and work up, then adjust.","w":"In the top brick the bricks of the bottom row are counted 1, 4, 6, 4 and 1 times. The known ones give 2 + 20 + 16 + 1 = 39, and 81 − 39 = 42 = 6 × 7."},"12-14":{"i":"L5-ballholder","g":"Logic","q":"Kumar, Aisha and Ravi each say one thing about who is holding the school football. Kumar says: \"Aisha has the ball.\" Aisha says: \"Ravi has the ball.\" Ravi says: \"Aisha does not have the ball.\" Exactly two of them are telling the truth. Who is holding the football?","a":"ravi","t":"s","s":"Ravi","h":"Try each child as the one holding the ball. Count the true statements each time.","w":"If Ravi has the ball: Kumar is false, Aisha is true, Ravi is true. That is exactly 2 true. No other child gives exactly 2 true. The answer is Ravi."},"12-15":{"i":"L5-roundtable","g":"Counting orders","q":"7 friends sit round a circular table. Turning everyone round the table by the same number of seats does not make a new seating plan. How many different seating plans are there?","a":"720","t":"n","s":"720 plans","h":"Fix one friend in one seat. Then the other friends can be arranged in the seats that remain.","w":"Fix one friend. The other 6 friends can fill the other seats in 6 × 5 × 4 × 3 × 2 × 1 ways, which is 720 plans.","u":["plans","plan"]},"12-16":{"i":"L5-schooltwo","g":"Sets that overlap","q":"In a school of 400 pupils, 240 have a library card and 180 have a swimming badge. 70 pupils have neither. How many pupils have both a library card and a swimming badge?","a":"90","t":"n","s":"90 pupils","h":"Find how many pupils have at least one of the two. Then add the two groups and compare.","w":"330 pupils have at least one. 240 + 180 = 420, which is 90 more than 330. Those 90 were counted twice, so 90 pupils have both.","u":["pupils","pupil"]},"12-17":{"i":"L5-penboxes","g":"Bar models","q":"A box of red pens has 4 times as many pens as a box of blue pens. Together the two boxes hold 85 pens. How many pens are in the box of red pens?","a":"68","t":"n","s":"68 pens","h":"Draw one bar for the blue pens and a bar 4 times as long for the red pens.","w":"Blue is 1 part and red is 4 parts, so there are 5 parts. 85 ÷ 5 = 17 blue pens. Red: 4 × 17 = 68 pens.","u":["pens","pen"]},"12-18":{"i":"L5-prismpyramid","g":"Solid shapes","q":"How many faces do a triangular prism and a square pyramid have altogether? A triangular prism has two triangle ends and three rectangle sides.","a":"10","t":"n","s":"10 faces","h":"Count the faces of each solid separately. Then add.","w":"Counting separately, a triangular prism has 5 faces and a square pyramid has 5 faces. Altogether that is 10 faces.","u":["faces","face"]},"12-19":{"i":"L5-mangoes","g":"Working backwards","q":"A fruit seller sold half of her mangoes in the morning. In the afternoon she sold 12 more. She has 19 mangoes left. How many mangoes did she have at the start of the day?","a":"62","t":"n","s":"62 mangoes","h":"Work backwards. Put back the mangoes sold in the afternoon. Then double.","w":"Put back the 12: 19 + 12 = 31. These are half of the mangoes, so double: 31 × 2 = 62 mangoes.","u":["mangoes","mangoe"]},"12-20":{"i":"L5-routeplan","g":"Routes","q":"Roads in kilometres: Home to Mall 12, Home to Park 10, Mall to Park 4, Mall to Pool 16, Park to Pool 20, Park to Zoo 26, Pool to Zoo 6. What is the shortest way from Home to the Zoo, in kilometres?","a":"34","t":"n","s":"34 km","h":"List the routes from Home to the Zoo, and add up the road lengths on each route.","w":"The best route is Home-Mall-Pool-Zoo: 12 + 16 + 6 = 34 km. Home-Park-Zoo is 10 + 26 = 36, and Home-Park-Pool-Zoo is 10 + 20 + 6 = 36.","u":["km","kilometre","kilometres","kilometer","kilometers"]},"12-21":{"i":"L5-machinesix","g":"Number machines","q":"A number machine multiplies every number by the same amount and then takes away the same amount. It turns 6 into 26 and 11 into 51. What does it turn 15 into?","a":"71","t":"n","s":"71","h":"Going from 6 to 11 adds 5 to the input. How much does the output grow?","w":"The input grew by 5 and the output grew by 25, so the machine multiplies by 5. 6 × 5 = 30, and 30 − 26 = 4, so it then takes away 4. For 15: 15 × 5 − 4 = 71."},"12-22":{"i":"L5-culture","g":"Growing patterns","q":"A culture of bacteria has 250 cells. The number of cells doubles every hour. How many cells are there after 6 hours?","a":"16000","t":"n","s":"16,000 cells","h":"Double the number for each hour. Or multiply by 2 as many times as there are hours.","w":"The number doubles 6 times: 250, 500, 1000, 2000, 4000, 8000, 16000. After 6 hours there are 16,000 cells.","u":["cells","cell"]},"12-23":{"i":"L5-fiftycents","g":"Counting ways","q":"Priya pays exactly 120 cents using 50-cent, 20-cent, 10-cent and 5-cent coins. She may leave out a kind of coin if she likes. How many different sets of coins can she use?","a":"73","t":"n","s":"73 sets","h":"Count by the number of 50-cent coins: none, one or two. Then count the ways to make the rest with the smaller coins.","w":"With no 50-cent coin: 49 ways. With one 50-cent coin, 70 cents are left: 20 ways. With two 50-cent coins, 20 cents are left: 4 ways. 49 + 20 + 4 = 73 sets.","u":["sets","set","ways","way"]},"12-24":{"i":"L5-stampgive","g":"Sharing fairly","q":"Mei Ling has 215 stamps and Ben has 143 stamps. Mei Ling hands some stamps to Ben so that each child ends up with the same number. How many stamps does she hand over?","a":"36","t":"n","s":"36 stamps","h":"Find how many more stamps Mei Ling has. Each stamp she gives moves across the gap.","w":"Mei Ling has 72 more. Each stamp given makes the gap 2 smaller, so she gives half of 72, which is 36 stamps. Check: they both have 179.","u":["stamps","stamp"]},"12-25":{"i":"L5-fourside","g":"Angles","q":"Three angles of a four-sided shape are 95°, 110° and 70°. The four angles of any four-sided shape add up to 360°. How big is the fourth angle?","a":"85","t":"n","s":"85°","h":"Add the three angles you know. Then take the total away from 360°.","w":"95 + 110 + 70 = 275. 360 − 275 = 85°.","u":["°","deg","degree","degrees"]},"12-26":{"i":"L5-sunflowerfall","g":"Line graphs","q":"A line graph shows the height of a tree in cm at the end of each year: 120, 135, 158, 170 and 205. In which year did the tree grow the most? Give the growth in that year in centimetres.","a":"35","t":"n","s":"35 cm","h":"Find the growth in each year by taking each reading from the next one.","w":"The growths are 15, 23, 12, 35. The biggest is 35 cm.","u":["cm","centimetre","centimetres","centimeter","centimeters"]},"12-27":{"i":"L5-committee","g":"Choosing officers","q":"A club of 9 members chooses a president, a secretary and a treasurer. No member can have two jobs. In how many different ways can the three jobs be filled?","a":"504","t":"n","s":"504 ways","h":"Choose the president first. Then see how many members are left for secretary.","w":"9 choices for president, 8 for secretary and 7 for treasurer. 9 × 8 × 7 = 504 ways.","u":["ways","way"]},"12-28":{"i":"L5-flourbags","g":"Decimals","q":"Each bag of flour weighs 0.35 kg. Aunty buys 12 bags. Find the total weight of the flour in kilograms.","a":"4.2","t":"n","s":"4.2 kg","h":"Multiply 35 × 12 first. Then think about where the decimal point goes.","w":"0.35 × 12 = 4.2 kg.","u":["kg","kilogram","kilograms","kilogramme","kilogrammes"]},"12-29":{"i":"L5-sixpages","g":"Number puzzles","q":"The page numbers of six pages that follow each other add up to 255. What is the smallest page number?","a":"40","t":"n","s":"40","h":"Call the smallest page number n. The others are n + 1, n + 2, up to n + 5.","w":"The six numbers add to 6n + 15 = 255. So 6n = 240 and n = 40."},"12-30":{"i":"L5-blockedroute","g":"Counting routes","q":"A delivery robot moves along a grid from the top-left corner to the bottom-right corner. It goes only 4 blocks right and 3 blocks down, in any order. It must not pass the corner after 2 blocks right and 1 block down. How many routes can it take?","a":"17","t":"n","s":"17 routes","h":"First count all the routes. Then take away the routes that pass through the blocked corner.","w":"All routes: 35. Routes through the blocked corner: 3 ways to reach it × 6 ways to go on from it = 18. 35 − 18 = 17 routes.","u":["routes","route"]},"12-31":{"i":"L5-fourthwednesday","g":"Calendars","q":"In one month, the 3rd is a Saturday. What is the date of the 4th Wednesday in that month?","a":"28","t":"n","s":"28","h":"Find the first Wednesday of the month. Then add 7 for each next one.","w":"The first Wednesday is the 7th. Adding 7 each time gives the 7th, 14th, 21st and 28th. The 4th Wednesday is the 28th."}}},base:"/teasers/"})}catch(e){}})();
+</script>

@@ -117,10 +117,10 @@ def scenario(b, w, scheme):
     for t in ['contact', 'terms', 'online_practice']: page.check('#consent-' + t)
     page.click('#save-consents'); expect(page.locator('.msg.ok')).to_contain_text('Agreements saved')
     page.goto(BASE + '/portal/children/'); expect(page.locator('#first-child')).to_be_visible()
-    page.fill('#cname', 'Kai'); page.fill('#cpin', '1234'); page.select_option('#clevel', '2'); page.select_option('#cbirth', str(page.evaluate('new Date().getFullYear()') - 8))
+    page.fill('#cname', 'Kai'); page.fill('#cpin', '7391'); page.select_option('#clevel', '2'); page.select_option('#cbirth', str(page.evaluate('new Date().getFullYear()') - 8))
     S('03_add_child', 'Add a child (first child, no enrolment needed): nickname, optional birth year, level, PIN.', locator='#first-child')
     page.get_by_role('button', name='Add my child').click(); expect(page.locator('[data-child-card]')).to_have_count(1)
-    page.locator('#add-another summary').click(); page.fill('#add-another #cname', 'Lia'); page.fill('#add-another #cpin', '2345'); page.locator('#add-another').get_by_role('button', name='Add child').click()
+    page.locator('#add-another summary').click(); page.fill('#add-another #cname', 'Lia'); page.fill('#add-another #cpin', '7142'); page.locator('#add-another').get_by_role('button', name='Add child').click()
     expect(page.locator('[data-child-card]')).to_have_count(2)
     S('04_my_children_empty', 'My children: two children, nothing open yet (kind empty state, no scores).')
     kai = mockdb(page)['children'][0]['id']; lia = mockdb(page)['children'][1]['id']
@@ -141,9 +141,9 @@ def scenario(b, w, scheme):
     S_c = lambda tag, cap, **kw: shot(cp, tag, cap, w, scheme, **kw)
     S_c('08_child_signin', 'Child sign-in: family code, name, PIN. Friendly, one purpose.')
     fam = [p for p in mockdb(page)['parents'] if p['email'] == 'kim@example.com'][0]['family_code']
-    cp.fill('#code', fam); cp.fill('#name', 'Kai'); cp.fill('#pin', '9999'); cp.get_by_role('button', name='Sign in').click(); expect(cp.locator('.msg.err')).to_be_visible()
+    cp.fill('#code', fam); cp.fill('#name', 'Kai'); cp.fill('#pin', '1873'); cp.get_by_role('button', name='Sign in').click(); expect(cp.locator('.msg.err')).to_be_visible()
     S_c('09_child_signin_error', 'Child sign-in, wrong PIN: the same quiet message whatever was wrong.')
-    cp.fill('#pin', '1234'); cp.get_by_role('button', name='Sign in').click(); expect(cp.locator('#hello')).to_be_visible()
+    cp.fill('#pin', '7391'); cp.get_by_role('button', name='Sign in').click(); expect(cp.locator('#hello')).to_be_visible()
     S_c('10a_practice_list_unpaid', 'Practice list before payment: nothing open yet, asks the child to ask a grown-up.')
     cp.close()
     # admin: orders
@@ -155,7 +155,7 @@ def scenario(b, w, scheme):
     admin_tab(page, 'Access'); S('13_admin_access', 'Admin, Access tab: who has which book access, grant and revoke with a reason.')
     page.click('#signout')
     # child after paid
-    cp = ctx.new_page(); cp.goto(BASE + '/portal/child/'); cp.fill('#code', fam); cp.fill('#name', 'Kai'); cp.fill('#pin', '1234'); cp.get_by_role('button', name='Sign in').click(); expect(cp.locator('#hello')).to_be_visible()
+    cp = ctx.new_page(); cp.goto(BASE + '/portal/child/'); cp.fill('#code', fam); cp.fill('#name', 'Kai'); cp.fill('#pin', '7391'); cp.get_by_role('button', name='Sign in').click(); expect(cp.locator('#hello')).to_be_visible()
     shot(cp, '10_practice_list', 'Child practice list after payment: only entitled, published units, plain links, no scores or timers.', w, scheme)
     cp.close()
     # parent dashboard with progress
@@ -183,7 +183,7 @@ def scenario(b, w, scheme):
     signup(p2, 'Lee Parent', 'lee@example.com', query='?for=live')
     for t in ['contact', 'terms', 'recording', 'childs_work']: p2.check('#consent-' + t)
     p2.click('#save-consents'); expect(p2.locator('.msg.ok')).to_be_visible()
-    p2.fill('#cname', 'Mia'); p2.select_option('#clevel', '1'); p2.fill('#cpin', '1234'); p2.get_by_role('button', name='Add child').click()
+    p2.fill('#cname', 'Mia'); p2.select_option('#clevel', '1'); p2.fill('#cpin', '7391'); p2.get_by_role('button', name='Add child').click()
     p2.locator('input[name^="grp-"]').first.check()
     shot(p2, '21_home_live_family', 'Home for a LIVE-group family: agreements for live classes, choose a group, reserve a place.', w, scheme)
     c2.close()
@@ -201,7 +201,7 @@ def attacks(b):
     signup(page, P, 'xss@example.com', query='?for=online')
     for t in ['contact', 'terms', 'online_practice', 'book_delivery']: page.check('#consent-' + t)
     page.click('#save-consents'); expect(page.locator('.msg.ok')).to_be_visible()
-    page.goto(BASE + '/portal/children/'); page.fill('#cname', XSS[1][:30]); page.fill('#cpin', '1234'); page.get_by_role('button', name='Add my child').click(); expect(page.locator('[data-child-card]')).to_have_count(1)
+    page.goto(BASE + '/portal/children/'); page.fill('#cname', XSS[1][:30]); page.fill('#cpin', '7391'); page.get_by_role('button', name='Add my child').click(); expect(page.locator('[data-child-card]')).to_have_count(1)
     kid = mockdb(page)['children'][0]['id']
     page.goto(BASE + '/portal/books/?child=' + XSS[1]); page.select_option('#book-level', '2'); page.check('#fmt-both'); page.check('#kid-' + kid)
     page.fill('#ship-name', XSS[0]); page.fill('#ship-phone', XSS[2]); page.fill('#ship-address', XSS[3] + XSS[0]); page.fill('#ship-postal', '123456')
@@ -258,7 +258,7 @@ def attacks(b):
     signup(page, 'Red Parent', 'red@example.com', query='?for=online')
     for t in ['contact', 'terms', 'online_practice']: page.check('#consent-' + t)
     page.click('#save-consents'); expect(page.locator('.msg.ok')).to_be_visible()
-    page.goto(BASE + '/portal/children/'); page.fill('#cname', 'Rae'); page.fill('#cpin', '1234'); page.select_option('#clevel', '2'); page.get_by_role('button', name='Add my child').click(); expect(page.locator('[data-child-card]')).to_have_count(1)
+    page.goto(BASE + '/portal/children/'); page.fill('#cname', 'Rae'); page.fill('#cpin', '7391'); page.select_option('#clevel', '2'); page.get_by_role('button', name='Add my child').click(); expect(page.locator('[data-child-card]')).to_have_count(1)
     page.goto(BASE + '/portal/books/'); page.select_option('#book-level', '2'); page.check('#fmt-online'); page.check('input[name=book-child]'); page.click('#place-order'); expect(page.locator('#order-done')).to_be_visible()
     page.locator('[data-pay-online]').first.click(); page.wait_for_timeout(800)
     check('payment redirect only goes to checkout.stripe.com (a tampered /api reply must not send the parent elsewhere)', lambda: (not hit) or (_ for _ in ()).throw(AssertionError('browser navigated to %s: location.href = j.url is not validated (books.js, app.js)' % hit[0])), 'Low')
@@ -269,14 +269,21 @@ def attacks(b):
     signup(page, 'Tok Parent', 'tok@example.com', query='?for=online')
     for t in ['contact', 'terms', 'online_practice']: page.check('#consent-' + t)
     page.click('#save-consents'); expect(page.locator('.msg.ok')).to_be_visible()
-    page.goto(BASE + '/portal/children/'); page.fill('#cname', 'Tim'); page.fill('#cpin', '4321'); page.get_by_role('button', name='Add my child').click(); expect(page.locator('[data-child-card]')).to_have_count(1)
+    page.goto(BASE + '/portal/children/'); page.fill('#cname', 'Tim'); page.fill('#cpin', '9152'); page.get_by_role('button', name='Add my child').click(); expect(page.locator('[data-child-card]')).to_have_count(1)
     fam = [p for p in mockdb(page)['parents'] if p['email'] == 'tok@example.com'][0]['family_code']
-    cp = ctx.new_page(); cp.goto(BASE + '/portal/child/'); cp.fill('#code', fam); cp.fill('#name', 'Tim'); cp.fill('#pin', '4321'); cp.get_by_role('button', name='Sign in').click(); expect(cp.locator('#hello')).to_be_visible()
+    cp = ctx.new_page(); cp.goto(BASE + '/portal/child/'); cp.fill('#code', fam); cp.fill('#name', 'Tim'); cp.fill('#pin', '9152'); cp.get_by_role('button', name='Sign in').click(); expect(cp.locator('#hello')).to_be_visible()
     ss = cp.evaluate("sessionStorage.getItem('mi-child')"); ls = cp.evaluate("Object.keys(localStorage).filter(k => k !== 'mock-db').map(k => k + '=' + localStorage.getItem(k)).join('|')")   # 'mock-db' is the test double's own database
     tok = json.loads(ss)['token']
     check('child token lives in sessionStorage only (cleared with the tab), not in localStorage or the URL', lambda: (tok not in ls and tok not in cp.url) or (_ for _ in ()).throw(AssertionError('token found in localStorage/url')), 'Medium')
     check('child session record holds name, level, token, expiry (no PIN, no family code, no parent data)', lambda: (set(json.loads(ss).keys()) == {'id', 'name', 'level', 'token', 'expires_at'}) or (_ for _ in ()).throw(AssertionError(ss[:200])), 'Low')
-    log('NOTE', 'child token: no inactivity timeout in practice.js (only the 4-hour server expiry and the Sign out button); on a shared tablet the next person stays signed in as the child until the tab closes', 'Low')
+    def idle_out():
+        expect(cp.locator('#bye')).to_be_visible()   # Sign out is at the top of the list, not only at the bottom
+        cp.evaluate("sessionStorage.setItem('mi-child-seen', String(Date.now() - 31 * 60 * 1000))")
+        cp.goto(BASE + '/portal/practice/'); cp.wait_for_url('**/portal/child/**')
+        assert 'ended=idle' in cp.url, cp.url
+        assert cp.evaluate("sessionStorage.getItem('mi-child')") is None, 'the token must be removed from the tab'
+        assert [s for s in mockdb(cp)['child_sessions'] if s['token'] == tok][0]['revoked'], 'the token must be revoked in the database'
+    check('child token: 31 minutes idle signs the child out (token removed and revoked); Sign out is visible at the top', idle_out, 'Low')
     ctx.close()
 
 # ---------------------------------------------------------------- accessibility, mobile, tone
@@ -307,7 +314,7 @@ def quality(b):
         signup(page, 'Q Parent', 'q@example.com', query='?for=online')
         for t in ['contact', 'terms', 'online_practice']: page.check('#consent-' + t)
         page.click('#save-consents'); expect(page.locator('.msg.ok')).to_be_visible()
-        page.goto(BASE + '/portal/children/'); page.fill('#cname', 'Kai'); page.fill('#cpin', '1234'); page.select_option('#clevel', '2'); page.get_by_role('button', name='Add my child').click(); expect(page.locator('[data-child-card]')).to_have_count(1)
+        page.goto(BASE + '/portal/children/'); page.fill('#cname', 'Kai'); page.fill('#cpin', '7391'); page.select_option('#clevel', '2'); page.get_by_role('button', name='Add my child').click(); expect(page.locator('[data-child-card]')).to_have_count(1)
         patch(page, "db.consents.length;")
         res = {}
         for path in ['/portal/', '/portal/children/', '/portal/books/', '/portal/trial/', '/portal/child/']:
@@ -320,7 +327,7 @@ def quality(b):
     # keyboard and focus
     ctx = new_ctx(b, 375); page = ctx.new_page(); page.on('dialog', lambda d: d.accept())
     signup(page, 'K Parent', 'k@example.com', query='?for=online')
-    page.goto(BASE + '/portal/children/'); page.fill('#cname', 'Kay'); page.fill('#cpin', '1234'); page.get_by_role('button', name='Add my child').click(); expect(page.locator('[data-child-card]')).to_have_count(1)
+    page.goto(BASE + '/portal/children/'); page.fill('#cname', 'Kay'); page.fill('#cpin', '7391'); page.get_by_role('button', name='Add my child').click(); expect(page.locator('[data-child-card]')).to_have_count(1)
     def focus_ring():
         page.goto(BASE + '/portal/books/'); page.wait_for_selector('main h1')
         page.keyboard.press('Tab'); page.keyboard.press('Tab')
@@ -340,7 +347,7 @@ def quality(b):
     check('one <main> and one <h1> on the parent home', landmarks, 'Low')
     def focus_after_action():
         page.goto(BASE + '/portal/children/'); page.wait_for_selector('main h1')
-        page.locator('#add-another summary').click(); page.fill('#add-another #cname', 'Zed'); page.fill('#add-another #cpin', '1234'); page.locator('#add-another').get_by_role('button', name='Add child').click(); page.wait_for_timeout(400)
+        page.locator('#add-another summary').click(); page.fill('#add-another #cname', 'Zed'); page.fill('#add-another #cpin', '7391'); page.locator('#add-another').get_by_role('button', name='Add child').click(); page.wait_for_timeout(400)
         act = page.evaluate("document.activeElement ? document.activeElement.tagName + '#' + document.activeElement.id : 'none'")
         assert act not in ('BODY#', 'BODY#app', 'none'), 'focus fell back to <%s> after the page re-rendered, so keyboard and screen-reader users lose their place after every action (add child, save, cancel, order)' % act
     check('after an action the page keeps or moves keyboard focus somewhere sensible and announces the result', focus_after_action, 'Medium')
@@ -370,7 +377,7 @@ def quality(b):
         signup(page, 'Averyveryveryverylongparentnamewithoutanyspaces' * 2, 'long@example.com', query='?for=online')
         for t in ['contact', 'terms', 'online_practice']: page.check('#consent-' + t)
         page.click('#save-consents')
-        page.goto(BASE + '/portal/children/'); page.fill('#cname', 'WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW'); page.fill('#cpin', '1234'); page.get_by_role('button', name='Add my child').click(); page.wait_for_timeout(300)
+        page.goto(BASE + '/portal/children/'); page.fill('#cname', 'WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW'); page.fill('#cpin', '7391'); page.get_by_role('button', name='Add my child').click(); page.wait_for_timeout(300)
         def ov():
             bad = []
             for path in ['/portal/', '/portal/children/', '/portal/books/', '/portal/trial/', '/portal/child/']:
@@ -383,14 +390,15 @@ def quality(b):
 
 # tone / wording / Singapore English scan over the visible text of every screen
 TONE_BAD = [r'\bscore', r'\brank', r'\bstreak', r'leaderboard', r'\bpoints?\b', r'\bwrong\b', r'\bfail', r'(fall|fell|falling|left|lag|lagging) behind', r'\bbest\b', r'\btop\b', r'congrat', r'\bperfect\b', r'\bbadge', r'\blevel up', r'hurry', r'limited', r'last chance', r'only today', r'countdown', r'\bdeadline\b']
-US_SPELL = [r'\bcolor', r'\bcenter\b', r'\bprogram\b', r'(?:to|can|will|please|let.s|should) practice\b', r'\bfavorite', r'\bbehavior', r'\borganiz', r'\brecogniz', r'\bauthoriz', r'\bcatalog\b', r'\bmom\b', r'\bzip code', r'\bgrade [0-9]', r'\bfall\b', r'\bapartment\b', r'\btutor\b(?= them)', r'\benroll\b']
+# 'program' is NOT in this list: the whole site (terms, privacy, sign-up, consent lines) spells it 'program' and keeps 'Programme' for the proper noun (Gifted Education Programme). Consent wording must match privacy.html.
+US_SPELL = [r'\bcolor', r'\bcenter\b', r'(?:to|can|will|please|let.s|should) practice\b', r'\bfavorite', r'\bbehavior', r'\borganiz', r'\brecogniz', r'\bauthoriz', r'\bcatalog\b', r'\bmom\b', r'\bzip code', r'\bgrade [0-9]', r'\bfall\b', r'\bapartment\b', r'\btutor\b(?= them)', r'\benroll\b']
 def tone(b):
     ctx = new_ctx(b, 1100); page = ctx.new_page(); page.on('dialog', lambda d: d.accept())
     texts = {}
     signup(page, 'Tone Parent', 'tone@example.com', query='?for=both')
     for t in ['contact', 'terms', 'online_practice', 'recording', 'childs_work']: page.check('#consent-' + t)
     page.click('#save-consents')
-    page.goto(BASE + '/portal/children/'); page.fill('#cname', 'Kai'); page.fill('#cpin', '1234'); page.select_option('#clevel', '2'); page.get_by_role('button', name='Add my child').click(); page.wait_for_timeout(300)
+    page.goto(BASE + '/portal/children/'); page.fill('#cname', 'Kai'); page.fill('#cpin', '7391'); page.select_option('#clevel', '2'); page.get_by_role('button', name='Add my child').click(); page.wait_for_timeout(300)
     kai = mockdb(page)['children'][0]['id']
     patch(page, "var k=db.children[0].id;db.access.push({id:'a1',child_id:k,level:2,format:'online',source:'admin',status:'active',created_at:'2026-11-01T00:00:00Z'});db.submissions.push({child_id:k,unit_key:'ext-l2u01',received_at:'2026-11-24T08:42:00Z',n_auto:6,n_skipped:1,n_self:1,n_self_got:1,n_open:1});db.attempts.push({child_id:k,unit_key:'ext-l2u01',item_id:'q2',skill:'Place value',mark:'wrong',misconception:'Said 6: gave the digit, not the value.',received_at:'x'})")
     for path in ['/portal/', '/portal/children/', '/portal/books/?child=' + kai, '/portal/trial/', '/portal/child/']:
@@ -399,7 +407,7 @@ def tone(b):
             page.locator('[data-detail]').first.click(); page.wait_for_timeout(200)
         texts[path] = page.inner_text('body')
     cp = ctx.new_page(); fam = [p for p in mockdb(page)['parents'] if p['email'] == 'tone@example.com'][0]['family_code']
-    cp.goto(BASE + '/portal/child/'); cp.fill('#code', fam); cp.fill('#name', 'Kai'); cp.fill('#pin', '1234'); cp.get_by_role('button', name='Sign in').click(); expect(cp.locator('#hello')).to_be_visible()
+    cp.goto(BASE + '/portal/child/'); cp.fill('#code', fam); cp.fill('#name', 'Kai'); cp.fill('#pin', '7391'); cp.get_by_role('button', name='Sign in').click(); expect(cp.locator('#hello')).to_be_visible()
     texts['/portal/practice/ (child)'] = cp.inner_text('body')
     # the child-facing texts are held to the strictest rules; the parent pages may say "wrong" in the consent/delete wording but not in reports
     child_text = (texts['/portal/child/'] + ' ' + texts['/portal/practice/ (child)']).lower()
@@ -432,14 +440,16 @@ def consent_ui(b):
         page.click('#save-consents'); msg = page.locator('.msg').first.inner_text()
         got = {c['consent_type']: c['granted'] for c in mockdb(page)['consents']}
         needed = ['contact', 'terms', 'online_practice']
-        assert 'saved' not in msg.lower() or all(got.get(t) for t in needed), 'Saving with the needed boxes NOT ticked says "%s" and records %s: the page claims success although the family still cannot use online practice. Say which needed agreement is missing.' % (msg, got)
+        assert 'agreements saved' not in msg.lower() or all(got.get(t) for t in needed), 'Saving with the needed boxes NOT ticked says "%s" and records %s: the page claims success although the family still cannot use online practice. Say which needed agreement is missing.' % (msg, got)
+        assert 'terms' in msg.lower() and 'not ticked' in msg.lower(), 'the message must name what is missing: ' + msg
+        assert page.evaluate('document.activeElement.className').find('msg') >= 0, 'focus should move to the message'
     check('saving with a needed agreement left empty does not say "Agreements saved" as if all is well', needed_not_ticked_saved, 'Medium')
     def marketing_gate():
         got = [c for c in mockdb(page)['consents'] if c['consent_type'] == 'marketing_contact']
         assert not got, got
     check('marketing_contact is not recorded unless the parent ticks it', marketing_gate, 'High')
     def book_address_only_workbook():
-        page.goto(BASE + '/portal/children/'); page.fill('#cname', 'Cee'); page.fill('#cpin', '1234'); page.get_by_role('button', name='Add my child').click(); page.wait_for_timeout(300)
+        page.goto(BASE + '/portal/children/'); page.fill('#cname', 'Cee'); page.fill('#cpin', '7391'); page.get_by_role('button', name='Add my child').click(); page.wait_for_timeout(300)
         page.goto(BASE + '/portal/books/'); page.select_option('#book-level', '2'); page.check('#fmt-online')
         assert page.locator('#ship-box').count() == 0
         page.check('#fmt-workbook'); assert page.locator('#ship-box').count() == 1

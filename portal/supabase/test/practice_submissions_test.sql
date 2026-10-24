@@ -32,7 +32,7 @@ insert into public.practice_item_keys (unit_key, unit_version, item_id, answer_t
 -- ===== parent A: child Mia, consents, enrolment =====
 set role authenticated; select set_config('request.jwt.claim.sub','a1a1a1a1-0000-0000-0000-0000000000a1',false);
 do $$ declare c uuid; e uuid; begin
-  c := public.add_child('Mia', 1, '1234');
+  c := public.add_child('Mia', 1, '7391');
   perform public.record_consents('{"contact":true,"terms":true,"recording":true,"childs_work":true}', 't1', 'p1');
   e := public.enrol_child(c, 'L1A');
 end $$;
@@ -42,7 +42,7 @@ select public.admin_mark_paid((select id from public.payments where enrolment_id
 reset role;
 -- ===== parent B: child Ben, no enrolment, no practice consent =====
 set role authenticated; select set_config('request.jwt.claim.sub','b2b2b2b2-0000-0000-0000-0000000000b2',false);
-do $$ begin perform public.add_child('Ben', 1, '4321'); perform public.record_consents('{"contact":true,"terms":true,"recording":true,"childs_work":true}', 't1', 'p1'); end $$;
+do $$ begin perform public.add_child('Ben', 1, '9152'); perform public.record_consents('{"contact":true,"terms":true,"recording":true,"childs_work":true}', 't1', 'p1'); end $$;
 reset role;
 
 -- ===== sessions: need the online_practice consent; wrong PIN gives nothing; same silent failure =====
@@ -50,9 +50,9 @@ create temp table codes as select 'x'::text as a, (select family_code from publi
 grant all on codes to anon, authenticated, service_role;
 set role anon; select set_config('request.jwt.claim.sub','',false);
 do $$ declare ca text := (select ca from codes); cb text := (select cb from codes); begin
-  assert (select count(*) from public.child_start_session(ca, 'Mia', '1234')) = 0, 'no session before the online_practice consent';
-  assert (select count(*) from public.child_start_session(cb, 'Ben', '4321')) = 0, 'B has no consent';
-  assert (select count(*) from public.child_start_session(ca, 'Mia', '0000')) = 0, 'wrong PIN';
+  assert (select count(*) from public.child_start_session(ca, 'Mia', '7391')) = 0, 'no session before the online_practice consent';
+  assert (select count(*) from public.child_start_session(cb, 'Ben', '9152')) = 0, 'B has no consent';
+  assert (select count(*) from public.child_start_session(ca, 'Mia', '8264')) = 0, 'wrong PIN';
   assert pg_temp.fails('select * from public.child_sessions', 'permission denied'), 'anon can not read sessions';
   assert pg_temp.fails('select * from public.practice_item_keys', 'permission denied'), 'anon can not read keys';
   assert pg_temp.fails('select * from public.practice_attempts', 'permission denied');
@@ -62,7 +62,7 @@ set role authenticated; select set_config('request.jwt.claim.sub','a1a1a1a1-0000
 select public.record_consents('{"online_practice":true}', 't2', 'p2');
 reset role;
 set role anon;
-create temp table tok as select * from public.child_start_session((select ca from codes), 'Mia', '1234');
+create temp table tok as select * from public.child_start_session((select ca from codes), 'Mia', '7391');
 reset role;
 grant all on tok to service_role;
 do $$ begin assert (select count(*) from tok) = 1 and (select length(token) from tok) = 43, 'session minted'; assert (select count(*) from public.child_sessions) = 1; end $$;
@@ -171,7 +171,7 @@ do $$ begin assert (select count(*) from public.practice_submissions) = 1; asser
 -- ===== extension-only family (no enrolment, no group): parent B, children Ben and Bo. One purchase = one child. =====
 set role authenticated; select set_config('request.jwt.claim.sub','b2b2b2b2-0000-0000-0000-0000000000b2',false);
 do $$ begin
-  perform public.add_child('Bo', 1, '5555');
+  perform public.add_child('Bo', 1, '3584');
   assert pg_temp.fails($q$select public.create_ext_order((select id from public.children where display_name = 'Ben' and parent_id = auth.uid()), 1, 'online')$q$, 'price_not_set'), 'no price, no order';
 end $$;
 reset role;
@@ -198,8 +198,8 @@ create temp table bids as select (select id from public.children where display_n
 grant all on bids to authenticated, service_role;
 -- real session for Ben (needs contact + terms + online_practice: now granted); Bo has a session too
 set role anon;
-create temp table bentok as select * from public.child_start_session((select cb from codes), 'Ben', '4321');
-create temp table botok as select * from public.child_start_session((select cb from codes), 'Bo', '5555');
+create temp table bentok as select * from public.child_start_session((select cb from codes), 'Ben', '9152');
+create temp table botok as select * from public.child_start_session((select cb from codes), 'Bo', '3584');
 reset role;
 grant all on bentok, botok to service_role;
 do $$ begin assert (select count(*) from bentok) = 1 and (select count(*) from botok) = 1, 'extension-only family: sessions without any enrolment or group'; end $$;
@@ -295,6 +295,11 @@ do $$ begin assert public.service_practice_keys(pg_temp.h((select token from ben
 reset role;
 do $$ begin assert (select status from public.child_book_access where order_id = (select ord from bids)) = 'refunded'; assert (select count(*) from public.practice_submissions where child_id = (select ben from bids)) = 1, 'answers stay after refund'; end $$;
 update public.practice_submissions set received_at = now() - interval '100 days' where child_id = (select ben from bids);
+set role authenticated; select set_config('request.jwt.claim.sub','e5e5e5e5-0000-0000-0000-0000000000e5',false);
+-- R1-M2: the 90 days count from when access ENDED (the refund, just now), not from the submission date: a 100-day-old submission is kept today
+do $$ begin assert public.admin_purge_expired_practice() = 0 and (select count(*) from public.practice_submissions where child_id = (select ben from bids)) = 1, '100-day-old answers kept: access ended only today'; end $$;
+reset role;
+update public.child_book_access set ended_at = now() - interval '91 days' where order_id = (select ord from bids);
 set role authenticated; select set_config('request.jwt.claim.sub','e5e5e5e5-0000-0000-0000-0000000000e5',false);
 do $$ declare pn int := public.admin_purge_expired_practice(); begin raise notice 'purged %', pn; assert pn = 1 and (select count(*) from public.practice_submissions where child_id = (select ben from bids)) = 0, '90 days after access ended: answers deleted'; end $$;
 -- manual admin grant (free) for a child

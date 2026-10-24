@@ -223,7 +223,7 @@ def b_shape_riddle(pool, clue):
 @brute
 def b_seat_number(per_row, ask, row=None, col=None, seat=None):
     seats = []
-    for r in range(1, 40):
+    for r in range(1, 400):
         for c in range(1, per_row + 1):
             seats.append((r, c))
     if ask == 'seat':

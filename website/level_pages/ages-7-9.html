@@ -266,6 +266,21 @@ details.ans p{margin-top:8px}
 @media(max-width:420px){.srow{grid-template-columns:70px 1fr;gap:6px}.chips label,.slotchip{padding:6px 10px}}
 .fine2{font-size:13px;color:var(--muted)}
 .field .err{color:var(--red);font-weight:700;font-size:14px}
+
+.pzcode{font:600 17px/1.5 ui-monospace,Menlo,Consolas,monospace;background:var(--bg);border:2px dashed var(--line);border-radius:12px;padding:10px 14px;margin:8px 0;white-space:pre;overflow-x:auto;max-width:100%}
+.pzmeta{margin-top:10px}
+.pzl .msg b{font-weight:800}
+#pzMsg,#pzdMsg{margin-top:6px}
+#pzdMsg:focus{outline:3px solid var(--ink);outline-offset:3px;border-radius:14px}
+.pzdaily{display:contents}
+.pzlab{font:800 13px var(--body);color:var(--muted)}
+[hidden]{display:none!important}
+/* light mode: the hint (red) and the worked answer (green) text need 4.5:1 on their tinted boxes; dark mode keeps the page colours */
+.pzl{--pzno:#A82D2D;--pzok:#17655B}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .pzl{--pzno:var(--red);--pzok:var(--teal)}}
+:root[data-theme="dark"] .pzl{--pzno:var(--red);--pzok:var(--teal)}
+.pzl .msg.no{color:var(--pzno)}
+.pzl .msg.ok{color:var(--pzok)}
 </style>
 <div class="wrap">
 <a class="skip" href="#top">Skip to main content</a>
@@ -286,7 +301,7 @@ details.ans p{margin-top:8px}
 <section class="two"><div class="tile yel"><span class="tag">In the kit</span><h3>Cut-outs in the workbook</h3><ul class="klist"><li>Place-value cards</li><li>Two sets of digit cards 0 to 9</li><li>Fraction strips</li><li>A paper clock</li><li>Paper strips of numbered squares</li><li>Cube nets</li><li>Play coins and play notes, with $1 coins</li></ul><p class="small muted">Nothing needs to be bought for the kit. The kit is the cut-out pages at the back of your child's workbook. We post the printed workbook to your home before the first lesson (Singapore addresses), and your child cuts out the pieces and keeps them in one envelope.</p></div>
 <div class="tile mint"><span class="tag">At home</span><h3>What your child needs</h3><ul class="klist"><li>A laptop or tablet with a camera, on a table with space for the kit</li><li>Pencil, coloured pencils, scissors and squared paper</li><li>A mini whiteboard and marker</li><li>Counters, and linking cubes in 3 colours if you have them</li><li>Everyday things the lessons use, such as paper cups, string, a coat hanger, two cups or bottles of different sizes, and a little dry rice or sand</li></ul><p class="small muted">These come from the lesson plans for this level.</p></div></section>
 
-<section class="sec" id="puzzle"><div class="shead"><span class="eyebrow">Try one now</span><h2>A sample puzzle</h2></div><div class="pzcard"><div class="pzl"><span class="tag">Think harder · Lesson 1</span><div class="big">4 4 7</div><p style="font-size:18px">Use the digit cards 4, 4 and 7. How many different 3-digit numbers can you make? Why is it not 6?</p><details class="ans"><summary>Show the answer</summary><p>3 numbers: 447, 474 and 744. The two 4s look the same, so swapping them does not make a new number.</p></details></div><div class="pzr"><h3>In class, the answer is only half the job</h3><p class="muted">Children then explain how they know, and hear other ways of seeing the same puzzle. That is where the thinking grows.</p><a class="btn sm alt" href="/?level=2#register" style="justify-self:start">Register for Level 2</a></div></div></section>
+<section class="sec" id="puzzle"><div class="shead"><span class="eyebrow">Try one now</span><h2>A puzzle to try</h2></div><div class="pzcard"><div class="pzl" id="pzBox"><span class="tag">Think harder · Lesson 1</span><div class="big">4 4 7</div><p style="font-size:18px">Use the digit cards 4, 4 and 7. How many different 3-digit numbers can you make? Why is it not 6?</p><details class="ans"><summary>Show the answer</summary><p>3 numbers: 447, 474 and 744. The two 4s look the same, so swapping them does not make a new number.</p></details></div><div class="pzr"><h3>In class, the answer is only half the job</h3><p class="muted">Children then explain how they know, and hear other ways of seeing the same puzzle. That is where the thinking grows.</p><a class="btn sm alt" href="/?level=2#register" style="justify-self:start">Register for Level 2</a></div></div></section>
 
 <section class="sec" id="placement"><div class="shead"><span class="eyebrow">Placement</span><h2>Is Ages 7-9 right for my child?</h2></div><p class="muted">Levels are named by age, and each spans three ages and overlaps the next, so children can join the level that suits how they are learning now. This level is for ages 7-9 and builds on Primary 2 maths.</p><p>Take the free 30-minute diagnostic for the level that matches your child's school year (the Math Inquirers Placement Check for that level). Then:</p><ul><li>The check is scored out of 10. 7 to 10: enrol at this level.</li><li>4 to 6: enrol at this level (the tutor will note that support may help), or choose one level down (<a href="/ages-6-8/">Ages 6-8</a>).</li><li>0 to 3: we recommend one level down (<a href="/ages-6-8/">Ages 6-8</a>).</li><li>If it was too easy (9 or 10 out of 10), your child may also try the diagnostic one level up (<a href="/ages-8-10/">Ages 8-10</a>).</li></ul><p>You have the final say. You can change the level before lesson 1 at no cost, and the price is the same at every level.</p></section>
 
@@ -301,3 +316,300 @@ details.ans p{margin-top:8px}
 <footer><div><b>Math Inquirers</b><p style="margin-top:6px">An independent maths enrichment program by Preciouslyours Pte Ltd, Singapore. Not affiliated with MOE or the Gifted Education Programme. We do not identify or test for giftedness and we do not promise exam or competition results. See how the levels line up with the Singapore syllabus on the <a href="/syllabus/">syllabus map</a>.</p></div><div><b>Register</b><p style="margin-top:6px"><a href="/?level=2#register">Register for Level 2</a><br><a href="/">Back to the home page</a><br><a href="/shop/">Shop: extension workbooks (coming soon)</a></p></div><div><b>Your details</b><p style="margin-top:6px">We use your details only to arrange the class and reply to you, in line with the PDPA. <a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a></p></div></footer>
 </div>
 <script src="/shop/cart.js" defer></script>
+<script>
+/* Math Inquirers daily teaser: static, no cookies, no tracking, no timers for the puzzle, no scores.
+   The puzzle for a day is chosen from the Singapore calendar date (UTC+8, no daylight saving),
+   so every visitor sees the same puzzle that day and it changes at midnight Singapore time.
+
+   MiTeaser.init({box, level, ages, released, inline, base, now}):
+     box       the element that holds the page's fixed puzzle (kept in the page; it is the fallback)
+     released  months (MM) that have a released batch
+     inline    {MM: {MM-DD: puzzle}} batches built into the page (the latest released months)
+     base      folder to fetch other released months from
+   If the date has a puzzle (inline, or fetched in time), it is shown and labelled with its date.
+   If not (month not released, fetch failed or slow), the page's own fixed puzzle stays exactly as it is:
+   it is never labelled with a date. A slow reply is accepted when it arrives, unless the visitor has
+   already started on the fixed puzzle. */
+(function (g) {
+  'use strict';
+  var DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var WAIT_MS = 8000;
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+
+  /* Singapore date from a UTC millisecond timestamp. SGT is a fixed UTC+8, so the browser's own
+     time zone never matters. */
+  function sgt(ms) {
+    var shifted = ms + 8 * 3600000;
+    var d = new Date(shifted);
+    return {
+      mm: pad(d.getUTCMonth() + 1), dd: pad(d.getUTCDate()), year: d.getUTCFullYear(),
+      day: Math.floor(shifted / 86400000), dow: d.getUTCDay(), month: d.getUTCMonth(),
+      key: pad(d.getUTCMonth() + 1) + '-' + pad(d.getUTCDate()),
+      label: DAYS[d.getUTCDay()] + ' ' + d.getUTCDate() + ' ' + MONTHS[d.getUTCMonth()]
+    };
+  }
+
+  /* ---------- answer checking ---------- */
+  function gcd(a, b) { a = Math.abs(a); b = Math.abs(b); while (b) { var t = a % b; a = b; b = t; } return a; }
+  function cleanNum(s) {
+    s = s.replace(/−|–|—/g, '-').replace(/[⁄∕]/g, '/').replace(/\s+/g, ' ').trim();
+    if (/^\+\d/.test(s)) s = s.slice(1);
+    if (/^-?\d{1,3}(,\d{3})+(\.\d+)?$/.test(s)) s = s.replace(/,/g, '');
+    else if (/^-?\d{1,3}( \d{3})+(\.\d+)?$/.test(s)) s = s.replace(/ /g, '');
+    return s;
+  }
+  /* returns {n, d, red} (value n/d, red = fraction written in lowest terms) or null */
+  function parseNum(s) {
+    s = cleanNum(s);
+    var m;
+    if ((m = /^(-?)(\d+)$/.exec(s))) return { n: (m[1] ? -1 : 1) * parseInt(m[2], 10), d: 1, red: true };
+    if ((m = /^(-?)(\d*)\.(\d+)$/.exec(s))) {
+      var den = Math.pow(10, m[3].length);
+      return { n: (m[1] ? -1 : 1) * (parseInt(m[2] || '0', 10) * den + parseInt(m[3], 10)), d: den, red: true };
+    }
+    if ((m = /^(-?)(\d+) ?\/ ?(\d+)$/.exec(s))) {
+      var dd = parseInt(m[3], 10);
+      if (!dd) return null;
+      var nn = parseInt(m[2], 10);
+      return { n: (m[1] ? -1 : 1) * nn, d: dd, red: gcd(nn, dd) === 1 };
+    }
+    if ((m = /^(\d+) (\d+) ?\/ ?(\d+)$/.exec(s))) {
+      var d3 = parseInt(m[3], 10), n3 = parseInt(m[2], 10);
+      if (!d3) return null;
+      return { n: parseInt(m[1], 10) * d3 + n3, d: d3, red: gcd(n3, d3) === 1 };
+    }
+    return null;
+  }
+  function norm(s) {
+    return String(s).toLowerCase().replace(/[’‘]/g, "'").replace(/ /g, ' ').replace(/\s+/g, ' ').trim()
+      .replace(/^=\s*/, '').replace(/[.!]+$/, '').trim();
+  }
+  function byLen(a, b) { return b.length - a.length; }
+  function squash(t) { return t.replace(/[^a-z0-9' ]/g, ' ').replace(/\s+/g, ' ').trim(); }
+  /* result: 'ok' | 'simplify' | 'no' | 'empty' | 'format' */
+  function check(p, input) {
+    var s = norm(input || '');
+    if (!s) return 'empty';
+    if (p.t === 's') {
+      var t = squash(s).replace(/^((it is|it was|it's|on|in|the|a|an) )+/, '').trim();
+      var ok = [p.a].concat(p.x || []);
+      for (var i = 0; i < ok.length; i++) {
+        var want = squash(ok[i].toLowerCase());
+        if (t === want || t.replace(/ /g, '') === want.replace(/ /g, '')) return 'ok';
+      }
+      return 'no';
+    }
+    var wantN = parseNum(p.a);
+    var pre = (p.p || []).slice().sort(byLen), uni = (p.u || []).map(function (x) { return x.toLowerCase(); }).sort(byLen);
+    var asMinutes = uni.indexOf('minutes') >= 0 || uni.indexOf('min') >= 0;
+    var asPercent = uni.indexOf('%') >= 0;
+    var m;
+    /* ordinal suffix: 21st, 2nd, 5 th */
+    if ((m = /^(\d+) ?(st|nd|rd|th)$/.exec(s))) s = m[1];
+    /* 1 h 30 min for a minutes answer */
+    if (asMinutes && (m = /^(\d+) ?(h|hr|hrs|hour|hours) ?(\d+) ?(m|min|mins|minute|minutes)?$/.exec(s))) {
+      s = String(parseInt(m[1], 10) * 60 + parseInt(m[3], 10));
+    }
+    var cands = [s], i2, j;
+    for (i2 = 0; i2 < pre.length; i2++) {
+      if (s.indexOf(pre[i2]) === 0) cands.push(s.slice(pre[i2].length).trim());
+    }
+    var more = [];
+    for (i2 = 0; i2 < cands.length; i2++) {
+      for (j = 0; j < uni.length; j++) {
+        var c = cands[i2];
+        if (c.length > uni[j].length && c.slice(-uni[j].length) === uni[j]) more.push(c.slice(0, -uni[j].length).trim());
+      }
+    }
+    cands = cands.concat(more);
+    var got = null;
+    for (i2 = 0; i2 < cands.length && !got; i2++) got = parseNum(cands[i2]);
+    if (!got) return /\d/.test(s) ? 'no' : 'format';
+    if (got.n * wantN.d === wantN.n * got.d) {
+      if (p.e && !got.red) return 'simplify';
+      return 'ok';
+    }
+    /* a percentage written as a decimal: 0.96 for 96% */
+    if (asPercent && s.indexOf('.') >= 0 && got.n * 100 * wantN.d === wantN.n * got.d) return 'ok';
+    return 'no';
+  }
+
+  /* ---------- rendering ---------- */
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text != null) e.textContent = text;
+    return e;
+  }
+  function build(opts, p, when, source) {
+    var wrap = el('div', 'pzdaily');
+    wrap.setAttribute('data-pzdaily', '1');
+    wrap.appendChild(el('span', 'tag', 'Ages ' + opts.ages + ' · Puzzle for ' + when.label));
+    if (p.b) wrap.appendChild(el('div', 'big', p.b));
+    var q = el('p', 'pzq', p.q);
+    q.style.fontSize = '18px';
+    wrap.appendChild(q);
+    if (p.c) {
+      var pre = el('pre', 'pzcode', p.c);
+      pre.setAttribute('role', 'group');
+      pre.setAttribute('aria-label', 'Puzzle diagram or program');
+      wrap.appendChild(pre);
+    }
+    var lab = el('label', 'pzlab', 'Your answer');
+    lab.setAttribute('for', 'pzdA');
+    wrap.appendChild(lab);
+    var row = el('div', 'row');
+    var inp = document.createElement('input');
+    inp.id = 'pzdA';
+    inp.setAttribute('placeholder', 'Type it here');
+    inp.setAttribute('autocomplete', 'off');
+    inp.setAttribute('autocapitalize', 'off');
+    inp.setAttribute('spellcheck', 'false');
+    inp.setAttribute('inputmode', /^\d+$/.test(p.a) ? 'numeric' : 'text');
+    inp.style.maxWidth = '200px';
+    var btn = el('button', 'btn yel', 'Check');
+    btn.id = 'pzdCheck';
+    btn.type = 'button';
+    row.appendChild(inp);
+    row.appendChild(btn);
+    wrap.appendChild(row);
+    var msg = el('div');
+    msg.id = 'pzdMsg';
+    msg.setAttribute('role', 'status');
+    msg.setAttribute('aria-live', 'polite');
+    msg.setAttribute('tabindex', '-1');
+    wrap.appendChild(msg);
+    wrap.appendChild(el('p', 'small muted pzmeta', 'A new puzzle every day at midnight, Singapore time. Nothing is saved or counted.'));
+
+    function show(cls, text) {
+      msg.innerHTML = '';
+      var d = el('div', 'msg ' + cls);
+      d.appendChild(document.createTextNode(text));
+      msg.appendChild(d);
+      return d;
+    }
+    function reveal() {
+      msg.innerHTML = '';
+      var d = el('div', 'msg info');
+      d.appendChild(el('b', null, 'The answer is ' + p.s + '.'));
+      d.appendChild(document.createElement('br'));
+      d.appendChild(document.createTextNode(p.w));
+      msg.appendChild(d);
+      msg.focus();   /* the button that was pressed is gone: move focus to the explanation so keyboard and screen-reader users stay in place */
+    }
+    function go() {
+      var r = check(p, inp.value);
+      if (r === 'empty') { show('info', 'Type your answer first, then press Check.'); return; }
+      if (r === 'ok') {
+        msg.innerHTML = '';
+        var d = el('div', 'msg ok');
+        d.appendChild(el('b', null, 'Correct! '));
+        d.appendChild(document.createTextNode(p.w));
+        d.appendChild(document.createElement('br'));
+        d.appendChild(document.createTextNode('Now ask: how do you know?'));
+        msg.appendChild(d);
+        return;
+      }
+      if (r === 'simplify') { show('info', 'That is the right amount. Can you write it in its simplest form?'); return; }
+      if (r === 'format') { show('info', 'Try writing your answer with digits, like 12' + (p.t === 's' ? ' or a word' : '') + '.'); return; }
+      show('no', 'Not yet. Hint: ' + p.h);
+      var more = el('button', 'btn sm alt', 'Show me how');
+      more.type = 'button';
+      more.style.marginTop = '8px';
+      more.addEventListener('click', reveal);
+      msg.appendChild(more);
+    }
+    btn.addEventListener('click', go);
+    inp.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); go(); } });
+    return wrap;
+  }
+
+  function init(opts) {
+    var box = opts.box;
+    if (!box) return;
+    var now = opts.now || function () { return Date.now(); };
+    var fixedNodes = Array.prototype.slice.call(box.childNodes);
+    var daily = null, handled = null, token = 0;
+    box.setAttribute('data-teaser-source', 'fixed');
+
+    function fixedTouched() {
+      for (var i = 0; i < fixedNodes.length; i++) {
+        var n = fixedNodes[i];
+        if (n.nodeType !== 1) continue;
+        var inner = n.querySelectorAll ? n.querySelectorAll('input') : [];
+        var all = (n.tagName === 'INPUT' ? [n] : []).concat(Array.prototype.slice.call(inner));
+        for (var k = 0; k < all.length; k++) if (all[k].value) return true;
+        var d2 = (n.tagName === 'DETAILS' ? [n] : []).concat(Array.prototype.slice.call(n.querySelectorAll ? n.querySelectorAll('details') : []));
+        for (k = 0; k < d2.length; k++) if (d2[k].open) return true;
+        var m2 = n.id === 'pzMsg' ? n : (n.querySelector ? n.querySelector('#pzMsg') : null);
+        if (m2 && m2.childNodes.length) return true;
+      }
+      return false;
+    }
+    function setFixed(hidden) {
+      for (var i = 0; i < fixedNodes.length; i++) if (fixedNodes[i].nodeType === 1) fixedNodes[i].hidden = hidden;
+    }
+    function showFixed() {
+      if (daily && daily.parentNode) daily.parentNode.removeChild(daily);
+      daily = null;
+      setFixed(false);
+      box.setAttribute('data-teaser-source', 'fixed');
+      box.removeAttribute('data-teaser');
+      box.removeAttribute('data-teaser-date');
+      box.setAttribute('data-teaser-state', 'done');
+    }
+    function showDaily(p, when, source) {
+      if (daily && daily.parentNode) daily.parentNode.removeChild(daily);
+      daily = build(opts, p, when, source);
+      setFixed(true);
+      box.appendChild(daily);
+      box.setAttribute('data-teaser', p.i);
+      box.setAttribute('data-teaser-date', when.key);
+      box.setAttribute('data-teaser-source', source);
+      box.setAttribute('data-teaser-state', 'done');
+    }
+    function released(mm) { return !opts.released || opts.released.indexOf(mm) >= 0; }
+
+    function run() {
+      var when = sgt(now());
+      if (handled === when.key) return;
+      handled = when.key;
+      var my = ++token;
+      box.setAttribute('data-teaser-state', 'loading');
+      var month = null;
+      if (opts.data) month = opts.data(opts.level, when.mm);                 /* previews: month data supplied in the page */
+      else if (opts.inline && opts.inline[when.mm]) month = opts.inline[when.mm];
+      if (month) {
+        if (month[when.key]) showDaily(month[when.key], when, 'month'); else showFixed();
+        return;
+      }
+      if (opts.data || !released(when.mm) || !opts.base || typeof fetch !== 'function') { showFixed(); return; }
+      /* a released month that is not built into the page: fetch it, keep the fixed puzzle meanwhile */
+      showFixed();
+      box.setAttribute('data-teaser-state', 'loading');
+      var timer = setTimeout(function () { if (my === token) box.setAttribute('data-teaser-state', 'done'); }, WAIT_MS);
+      fetch(opts.base + 'L' + opts.level + '-' + when.mm + '.json').then(function (r) {
+        if (!r.ok) throw new Error('no batch');
+        return r.json();
+      }).then(function (j) {
+        clearTimeout(timer);
+        if (my !== token) return;
+        if (j && j[when.key] && !fixedTouched()) showDaily(j[when.key], when, 'month');
+        else box.setAttribute('data-teaser-state', 'done');
+      }).catch(function () { clearTimeout(timer); if (my === token) box.setAttribute('data-teaser-state', 'done'); });
+    }
+    run();
+    /* if the page stays open past midnight Singapore time, pick up the new day when the visitor comes back to it */
+    if (opts.listen !== false) {
+      document.addEventListener('visibilitychange', function () { if (!document.hidden) run(); });
+      g.addEventListener('focus', run);
+    }
+    return { refresh: run };
+  }
+
+  g.MiTeaser = { sgt: sgt, check: check, init: init, parseNum: parseNum };
+})(window);
+
+(function(){var b=document.getElementById("pzBox");if(!b||!window.MiTeaser)return;try{MiTeaser.init({box:b,level:2,ages:"7-9",released:["11", "12"],inline:{"11":{"11-01":{"i":"L2-cardtriple2","g":"Number cards","q":"Priya has six number cards: 14, 23, 31, 38, 45 and 52. Only one set of three cards adds up to 135. What is the smallest card in that set?","a":"38","t":"n","s":"38","h":"Start with the biggest card, and ask which two cards would be needed to reach the total.","w":"38 + 45 + 52 = 135. The three cards are 38, 45 and 52, so the smallest is 38."},"11-02":{"i":"L2-tilebed","g":"Rows and columns","q":"A rectangle is made of square tiles in 7 rows, with 11 tiles in each row. Dina paints only the tiles that touch the edge of the rectangle. How many tiles does she paint?","a":"32","t":"n","s":"32 tiles","h":"Count the tiles along the top and bottom rows first. Then the tiles at the ends of the middle rows.","w":"The top and bottom rows have 11 tiles each: 2 × 11 = 22. The other 7 − 2 = 5 rows each have 2 painted tiles at the ends: 5 × 2 = 10. In all, 22 + 10 = 32 tiles.","u":["tiles","tile"]},"11-03":{"i":"L2-swimlesson","g":"Time","q":"Mrs Lim's piano class is from 1:50 to 3:15. How long is the class, in minutes?","a":"85","t":"n","s":"85 minutes","h":"Split the time at 2:00 and at 3:00. Add up the three parts.","w":"1:50 to 2:00 is 10 minutes. 2:00 to 3:00 is 60 minutes. 3:00 to 3:15 is 15 minutes. 10 + 60 + 15 = 85 minutes.","u":["min","mins","minute","minutes"]},"11-04":{"i":"L2-ticketnotes","g":"Money","q":"A ticket machine takes only $2 notes and $5 notes and gives no change. Which prices can you pay? Look at the 30 prices $1, $2, $3 and so on up to $30. How many of these 30 prices can be paid exactly?","a":"28","t":"n","s":"28 prices","h":"Find the prices you cannot pay. Try the smallest prices first.","w":"Only $1 and $3 cannot be paid. Every other price can be, for example $4 = $2 + $2, $6 = $2 + $2 + $2 and $7 = $5 + $2. That is 30 − 2 = 28 prices.","u":["prices","price"]},"11-05":{"i":"L2-threesavers","g":"Bar models","q":"Ali, Ben and Chen save money. Ben saves $12 more than Ali. Chen saves $18 more than Ali. Together they save $96. How much does Ali save?","a":"22","t":"n","s":"$22","h":"Take away the extra money first. What is left is three equal shares.","w":"The extras are $12 + $18 = $30. Without them the total is $96 − $30 = $66, shared by 3 equal savers: $66 ÷ 3 = $22.","u":["dollars","dollar"],"p":["$","s$"]},"11-06":{"i":"L2-pizzachoice","g":"Ways to choose","q":"A pizza shop offers 3 sizes, 4 toppings and 2 kinds of crust. A pizza has one size, one topping and one crust. How many different pizzas can you order?","a":"24","t":"n","s":"24 pizzas","h":"Choose the size and topping first. How many pairs is that? Then add the crust.","w":"3 sizes × 4 toppings = 12 pairs. Each pair has 2 crusts, so 12 × 2 = 24 pizzas.","u":["pizzas","pizza"]},"11-07":{"i":"L2-machine3","g":"Working backwards","q":"Ravi thinks of a number. He multiplies it by 3, takes away 7, and then doubles the answer. He gets 58. What was his number?","a":"12","t":"n","s":"12","h":"Start with the final step and reverse each step in turn.","w":"Undo doubling: 58 ÷ 2 = 29. Undo taking away 7: 29 + 7 = 36. Undo multiplying by 3: 36 ÷ 3 = 12."},"11-08":{"i":"L2-duedate","g":"Dates","q":"Aisha borrows a book on 25 October. It is due 17 days later, in the next month. On which day of the next month is it due?","a":"11","t":"n","s":"11","h":"Count how many days are left in the month she borrows it. Then count the rest into the next month.","w":"October has 31 days. From 25 October, 31 − 25 = 6 days take her to the end of the month. The other 17 − 6 = 11 days are in the next month, so the book is due on day 11."},"11-09":{"i":"L2-machine4","g":"Number machines","q":"A number machine multiplies every number by the same amount and then adds the same amount. It turns 3 into 11 and 5 into 17. What does it turn 9 into?","a":"29","t":"n","s":"29","h":"Going from 3 to 5 adds 2 to the input. How much does the output grow?","w":"The input grew by 2 and the output grew by 6, so the machine multiplies by 3. 3 × 3 = 9, and 11 − 9 = 2, so it then adds 2. For 9: 9 × 3 + 2 = 29."},"11-10":{"i":"L2-sleephours","g":"am and pm","q":"Mei goes to bed at 8 pm and wakes up at 6 am the next morning. For how many hours does she sleep?","a":"10","t":"n","s":"10 hours","h":"Count the hours from 8 pm to midnight. Then count the hours from midnight to 6 am.","w":"From 8 pm to midnight is 4 hours. From midnight to 6 am is 6 hours. In all, 4 + 6 = 10 hours.","u":["h","hr","hrs","hour","hours"]},"11-11":{"i":"L2-deliveryrobot","g":"Counting routes","q":"A delivery robot is at the top-left corner of a block grid. It moves only 4 blocks right and 3 blocks down, in any order, to reach the bottom-right corner. How many different routes can it take?","a":"35","t":"n","s":"35 routes","h":"Count the routes to each corner of the grid, starting next to the start.","w":"Add the routes from the left and from above at every corner. The bottom-right corner gets 35 routes.","u":["routes","route"]},"11-12":{"i":"L2-cinemarow","g":"Rows and places","q":"A theatre has 12 seats in every row. Seats are numbered 1, 2, 3 and on, one row after another, from the stage. Which row has seat number 480?","a":"40","t":"n","s":"40","h":"Divide the seat number by the number of seats in a row. Take care with the remainder.","w":"39 full rows hold 39 × 12 = 468 seats. Seat 480 comes after them, so it is in row 39 + 1 = 40."},"11-13":{"i":"L2-signsscale","g":"Graphs with a scale","q":"In a graph, each book sign stands for 20 books. Class A has 9 signs and Class B has 4 signs. How many more books does Class A have than Class B?","a":"100","t":"n","s":"100 books","h":"First find how many more signs Class A has. Then think about what each sign is worth.","w":"Class A has 5 more signs. Each sign is worth 20 books, so 5 × 20 = 100 books.","u":["books","book"]},"11-14":{"i":"L2-jarcoins","g":"Number bonds","q":"A bakery bakes 500 buns. It sells 215 buns before lunch and 140 buns after lunch. How many buns are not sold?","a":"145","t":"n","s":"145 buns","h":"Add the buns sold at the two times first. Then take the total from 500.","w":"Sold: 215 + 140 = 355. Not sold: 500 − 355 = 145 buns.","u":["buns","bun"]},"11-15":{"i":"L2-dicetops","g":"Dice","q":"On a die, the numbers on opposite faces add up to 7. Four dice sit on a table. Their top faces show 6, 6, 5 and 4. Add up the four faces on the bottom.","a":"7","t":"n","s":"7","h":"The face underneath is opposite the top face. What number goes with a 2 to make 7?","w":"Faces underneath: 1, 1, 2, 3. Their total is 7."},"11-16":{"i":"L2-mooncakes","g":"Remainders","q":"A baker has 247 mooncakes. She packs them into boxes of 12, filling as many full boxes as possible. How many mooncakes remain unpacked?","a":"7","t":"n","s":"7 mooncakes","h":"Find how many full boxes of 12 she can make. Then see what is left.","w":"20 full boxes use 20 × 12 = 240 mooncakes. 247 − 240 = 7 mooncakes are left over.","u":["mooncakes","mooncake"]},"11-17":{"i":"L2-filmlength","g":"Time","q":"A film lasts 3 hours and 40 minutes. How many minutes is that?","a":"220","t":"n","s":"220 minutes","h":"One hour is 60 minutes. Change the hours to minutes first.","w":"3 hours is 180 minutes. 180 + 40 = 220 minutes.","u":["min","mins","minute","minutes"]},"11-18":{"i":"L2-cakeparts","g":"Fractions","q":"A round cake is divided into 12 slices of the same size. Dad eats 3 slices and Mum eats 2 slices. What fraction of the whole cake is left? Write it in its simplest form.","a":"7/12","t":"n","s":"7/12","h":"Add the slices eaten. Take that from the total. Then write the slices left over the total number of slices.","w":"Eaten: 3 + 2 = 5 slices. Left: 12 − 5 = 7 slices out of 12, which is 7/12 of the cake.","e":1},"11-19":{"i":"L2-clubdays","g":"Overlapping days","q":"The school hall is booked on days 8 to 45 of the term for the chess club and on days 30 to 62 for the drama club. Both clubs have the first and last day of their booking. On how many days is the hall booked by both clubs?","a":"16","t":"n","s":"16 days","h":"Find the first day when both clubs have the hall, and the last day when both have it.","w":"Both clubs have the hall from day 30 to day 45. That is 45 − 30 + 1 = 16 days.","u":["day","days"]},"11-20":{"i":"L2-fivecoins","g":"Coins","q":"Ali has five coins: 5 cents, 10 cents, 20 cents, 50 cents and $1. He picks some of them, at least one. How many different totals can he make?","a":"31","t":"n","s":"31 totals","h":"Think about each coin in turn: it is either in the pick or out of the pick.","w":"Each coin is in or out, so there are 2 × 2 × 2 × 2 × 2 = 32 choices. One choice is picking nothing, so there are 32 − 1 = 31 picks. No two picks have the same total, so he can make 31 totals.","u":["totals","total","amounts"]},"11-21":{"i":"L2-fourthsunday","g":"Calendars","q":"In one month, the 1st is a Thursday. What is the date of the 4th Sunday in that month?","a":"25","t":"n","s":"25","h":"Find the first Sunday of the month. Then add 7 for each next one.","w":"The first Sunday is the 4th. Adding 7 each time gives the 11th, 18th and 25th. The 4th Sunday is the 25th."},"11-22":{"i":"L2-secret643","g":"Digit clues","q":"A secret 3-digit number has three clues. Its digits add up to 13. Its hundreds digit is twice its units digit. Its tens digit is 1 more than its units digit. What is the secret number?","a":"643","t":"n","s":"643","h":"Call the units digit u. Write the hundreds digit and the tens digit using u.","w":"If the units digit is 3, the tens digit is 4 and the hundreds digit is 6. The digits add up to 6 + 4 + 3 = 13. The number is 643."},"11-23":{"i":"L2-beadswhole","g":"Fractions","q":"Mei Ling gave 1/3 of her beads to her sister and kept 30 beads. Find the number of beads she owned in the beginning.","a":"45","t":"n","s":"45 beads","h":"If 1/3 was given away, what fraction was kept? How many beads are in each third?","w":"She kept 2/3, which is 30 beads. One third is 30 ÷ 2 = 15 beads. The whole is 3 × 15 = 45 beads.","u":["beads","bead"]},"11-24":{"i":"L2-grandpaage","g":"Ages","q":"Ben is 8 years old. His grandfather is 57 years older than Ben. How old will his grandfather be when Ben is 20?","a":"77","t":"n","s":"77 years","h":"The difference between their ages never changes.","w":"The gap is always 57 years. When Ben is 20, his grandfather is 20 + 57 = 77 years.","u":["year","years"]},"11-25":{"i":"L2-ttgames","g":"Pairs","q":"9 friends are in a table-tennis club. Each friend plays one game against every other friend. How many games are played?","a":"36","t":"n","s":"36 games","h":"Call the friends A, B, C and so on. A plays 8 games. How many new games does B play?","w":"A plays 8 games. B has 7 new games, C has 6, D has 5 and so on. 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 = 36 games.","u":["games","game"]},"11-26":{"i":"L2-savingsrange","g":"Money","q":"Four friends have saved $47, $128, $85 and $63. How much more has the friend with the most saved than the friend with the least?","a":"81","t":"n","s":"$81","h":"Find the biggest amount and the smallest amount first.","w":"The most is $128 and the least is $47. $128 − $47 = $81.","u":["dollars","dollar"],"p":["$","s$"]},"11-27":{"i":"L2-lampring","g":"Around a loop","q":"A jogging path goes round a pond and is 270 m long. A lamp post stands every 9 m, all the way round. How many lamp posts are on the path?","a":"30","t":"n","s":"30 lamp posts","h":"The path is a loop, so the last lamp post is right next to the first one.","w":"270 ÷ 9 = 30 lamp posts. Round a loop, there are as many posts as gaps.","u":["lamp posts","lamp post"]},"11-28":{"i":"L2-busstop","g":"Timetables","q":"A bus comes to the stop every 25 minutes, and the first one comes at 6:00 in the morning. Mei Lin arrives at 8:07. How long is her wait for the next bus, in minutes?","a":"23","t":"n","s":"23 minutes","h":"List the bus times: 6:00, 6:25, 6:50 and so on. Which is the first one after 8:07?","w":"The buses leave at 6:00, 6:25, 6:50, 7:15, 7:40, 8:05, 8:30. The 8:05 bus has gone, so she takes the 8:30 bus. From 8:07 to 8:30 is 23 minutes.","u":["min","mins","minute","minutes"]},"11-29":{"i":"L2-schoolbus","g":"Equal groups","q":"A school trip has 250 children. Each bus seats 12 children. How many buses must the school book so that every child has a seat?","a":"21","t":"n","s":"21 buses","h":"Divide the children by the seats on a bus. What do you do with the remainder?","w":"20 buses carry 20 × 12 = 240 children. 10 children are left, and they need another bus. So the school needs 21 buses.","u":["buses","buse"]},"11-30":{"i":"L2-ticketnumbers","g":"Counting numbers","q":"Raffle tickets are numbered from 1 to 400. Ben wins a prize with ticket 140. Dina wins a prize with ticket 210. How many tickets have numbers between Ben's ticket and Dina's ticket? Do not count their own tickets.","a":"69","t":"n","s":"69 tickets","h":"Take the smaller number from the bigger number. Then take away 1, because neither end counts.","w":"210 − 140 = 70. Neither end counts, so take away 1: 69 tickets.","u":["tickets","ticket"]}},"12":{"12-01":{"i":"L2-scarf","g":"Patterns","q":"A scarf has stripes in this pattern again and again: gold, green, green, gold, blue. The scarf has 47 stripes. How many of the stripes are green?","a":"19","t":"n","s":"19 stripes","h":"Each pattern has 5 stripes. Count the green stripes in one pattern, then count the full patterns.","w":"There are 9 full patterns with 2 green stripes each: 9 × 2 = 18. The last 2 stripes are gold and green, which adds 1 green stripe. 18 + 1 = 19 stripes.","u":["stripes","stripe"]},"12-02":{"i":"L2-sudoku4","g":"Fill the grid","q":"Fill a 4 by 4 grid with 1, 2, 3 and 4. Every row and every column must have each number once. The top row begins 1, 2. The row below has a 1 in its third square. The third row begins with 3. The bottom-right square is 2. What number goes in the bottom-left square?","a":"4","t":"n","s":"4","h":"The top row can only end 3, 4 or 4, 3. Use the bottom-right square to decide.","w":"The grid is 1 2 4 3 / 2 3 1 4 / 3 4 2 1 / 4 1 3 2. The bottom-left square holds 4."},"12-03":{"i":"L2-digitvalue2","g":"Place value","q":"In the number 683, how much more is the value of the digit 6 than the value of the digit 8?","a":"520","t":"n","s":"520","h":"Find the value of each digit: the digit 6 is in the hundreds place and the digit 8 is in the tens place.","w":"The value of 6 is 600 and the value of 8 is 80. 600 − 80 = 520."},"12-04":{"i":"L2-flourgrams","g":"Measures","q":"Mum buys 3 kg 40 g of flour for baking. How many grams of flour is that?","a":"3040","t":"n","s":"3040 g","h":"One kilogram is 1000 grams. Change the kilograms to grams first.","w":"3 kg is 3000 g. 3000 + 40 = 3040 g.","u":["g","gram","grams"]},"12-05":{"i":"L2-beanleaves","g":"Growing patterns","q":"A bean plant has 3 leaves in week 1. The number of leaves doubles every week. How many leaves does the plant have in week 5?","a":"48","t":"n","s":"48 leaves","h":"Doubling means two times as many. Write down the leaves for each week.","w":"Week 1 has 3, then doubling each week: 3, 6, 12, 24, 48. Week 5 has 48 leaves.","u":["leaves","leave"]},"12-06":{"i":"L2-chocbar","g":"Always one less","q":"A chocolate bar has 4 rows of 7 squares. Each snap breaks one piece into two pieces along a line. How many snaps are needed to break the bar into single squares?","a":"27","t":"n","s":"27 snaps","h":"Each snap makes one more piece. How many pieces do you want at the end?","w":"At the start there is 1 piece. At the end there are 28 pieces. Each snap makes one more piece, so 28 − 1 = 27 snaps are needed.","u":["snaps","snap"]},"12-07":{"i":"L2-recyclegrid","g":"Tables","q":"Class 2A and Class 2B recycle paper for three weeks. In week 1, 2A recycled 18 kg. In week 3, 2B recycled 27 kg. The class totals are 58 kg for 2A and 72 kg for 2B. The week totals are 30 kg, 50 kg and 50 kg. How many kilograms did 2B recycle in week 2?","a":"33","t":"n","s":"33 kg","h":"Draw a table with two rows and three columns. Fill in what you know. Then find the missing numbers one at a time.","w":"Week 1: 2B recycled 30 − 18 = 12 kg. Then in week 2, 2B recycled 72 − 12 − 27 = 33 kg.","u":["kg","kilogram","kilograms","kilogramme","kilogrammes"]},"12-08":{"i":"L2-mangoes","g":"Money","q":"6 mangoes cost $7.80. Aunty buys 11 mangoes at the same price each. How much does she pay?","a":"14.3","t":"n","s":"$14.30","h":"Find the price of 1 mango first.","w":"1 mango costs $1.30. 11 mangoes cost 11 × $1.30 = $14.30.","u":["dollars","dollar"],"p":["$","s$"]},"12-09":{"i":"L2-solidclue","g":"Solid shapes","q":"Dina is thinking of a solid shape. It has 2 flat faces and 1 curved face. Is it a cube, a cone, a cylinder or a sphere?","a":"cylinder","t":"s","s":"cylinder","h":"A sphere has no flat face. A cone has just one.","w":"A cube has 6 flat faces and a sphere has none. A cone has 1 flat face and 1 curved face. The solid with 2 flat faces and 1 curved face is a cylinder."},"12-10":{"i":"L2-shellrows","g":"Number patterns","q":"Ravi lays out shells in rows. Row 1 has 2 shells, row 2 has 5, row 3 has 9, row 4 has 14. Each row has more shells than the one before, and the extra shells grow by 1 each time. How many shells are in row 9?","a":"54","t":"n","s":"54 shells","h":"Write down the extra shells each time: 3, then 4, then 5.","w":"The extras are 3, 4, 5, 6, 7, 8, 9, 10. The rows have 2, 5, 9, 14, 20, 27, 35, 44, 54 shells. Row 9 has 54 shells.","u":["shells","shell"]},"12-11":{"i":"L2-seesaw","g":"Missing numbers","q":"A balance scale is level. The left pan holds weights of 63 g and 29 g. The right pan holds a 45 g weight and one more weight. How heavy is the extra weight?","a":"47","t":"n","s":"47 g","h":"Add up the left pan first. The right pan must weigh the same.","w":"63 + 29 = 92. The right pan must also weigh 92 g, so 45 + 47 = 92. The extra weight is 47 g.","u":["g","gram","grams"]},"12-12":{"i":"L2-busroutes","g":"Routes","q":"Roads join four places. The road lengths in kilometres are: School to Park 12, School to Market 8, Market to Park 3, Park to Library 9, Market to Library 16. What is the shortest way from School to Library, in kilometres?","a":"20","t":"n","s":"20 km","h":"List the different routes from School to Library. Add the road lengths for each route.","w":"The routes are School-Park-Library 21, School-Market-Library 24, and School-Market-Park-Library 8 + 3 + 9 = 20. The shortest is 20 km.","u":["km","kilometre","kilometres","kilometer","kilometers"]},"12-13":{"i":"L2-racesecond","g":"Who is it?","q":"Kai is faster than Zack. Mira is faster than Kai. Zack is faster than Lena. Who came second in the race?","a":"kai","t":"s","s":"Kai","h":"Put the four names in a row from the fastest runner to the slowest runner.","w":"From fastest to slowest: Mira, Kai, Zack, Lena. Kai came second."},"12-14":{"i":"L2-stadiumrows","g":"Adding in order","q":"A small stadium has 10 rows of seats. Row 1 has 4 seats, row 2 has 7 seats, row 3 has 10 seats, and each next row has 3 more seats. Row 10 has 31 seats. How many seats are in all 10 rows?","a":"175","t":"n","s":"175 seats","h":"Pair the first row with the last, the second row with the one before last.","w":"Pairs: 4 + 31, 7 + 28, 10 + 25, 13 + 22, 16 + 19. Each pair is 35. 5 pairs make 175 seats.","u":["seats","seat"]},"12-15":{"i":"L2-tworopes","g":"Lengths","q":"One rope is 2 m 45 cm long. Another rope is 1 m 80 cm long. They are tied end to end, and the knot uses no length. How many centimetres long are the two ropes together?","a":"425","t":"n","s":"425 cm","h":"Change each length to centimetres first. One metre is 100 centimetres.","w":"2 m 45 cm is 245 cm and 1 m 80 cm is 180 cm. 245 + 180 = 425 cm.","u":["cm","centimetre","centimetres","centimeter","centimeters"]},"12-16":{"i":"L2-libraryhalves","g":"Two numbers","q":"Two class libraries have 84 books together. Library A has 18 more books than Library B. How many books does Library A have?","a":"51","t":"n","s":"51 books","h":"If the two libraries had the same number of books, each would have half. Then move some books across.","w":"Library A has 51 books and Library B has 33. They add to 84 and differ by 18. So Library A has 51 books.","u":["books","book"]},"12-17":{"i":"L2-twonumbers","g":"Guess and check","q":"Two whole numbers add up to 33. When you multiply them, the answer is 270. What is the bigger of the two numbers?","a":"18","t":"n","s":"18","h":"List pairs that add up to 33, such as 16 and 17, then 15 and 18. Multiply each pair until you reach 270.","w":"15 and 18 add up to 33 and multiply to 270. The bigger number is 18."},"12-18":{"i":"L2-stickgame","g":"Strategy","q":"Two players take turns to take 1, 2 or 3 sticks from a pile of 26 sticks. The player who takes the last stick wins. You go first. How many sticks should you take now to be sure of winning?","a":"2","t":"n","s":"2 sticks","h":"Try to leave a multiple of 4 sticks for your friend. Then copy your friend's move to make 4 each round.","w":"Take away 2 sticks to leave 24, which is a multiple of 4. Whatever your friend takes, you take enough to make 4 in that round, and you take the last stick.","u":["sticks","stick"]},"12-19":{"i":"L2-bookcase","g":"Groups","q":"A bookcase has 8 shelves with 9 books on each shelf. Then 6 books are borrowed. How many books are left in the bookcase?","a":"66","t":"n","s":"66 books","h":"Find the number of books on all the shelves first. Then take away the books borrowed.","w":"8 shelves of 9 books make 72 books. Take away 6: 72 − 6 = 66 books.","u":["books","book"]},"12-20":{"i":"L2-barleycafe","g":"Money","q":"At a cafe, Priya buys 3 cups of barley water at $3.60 each and a slice of cake for $4.50. She pays with $20. How much change does she get?","a":"4.7","t":"n","s":"$4.70","h":"Find the cost of the 3 cups first.","w":"3 cups cost 3 × $3.60 = $10.80. With the cake: $10.80 + $4.50 = $15.30. Change: $20 − $15.30 = $4.70.","u":["dollars","dollar"],"p":["$","s$"]},"12-21":{"i":"L2-edgecount","g":"Solid shapes","q":"How many edges do two cubes and four cuboids have altogether?","a":"72","t":"n","s":"72 edges","h":"Count the edges of one solid at a time. Then add.","w":"A cube has 12 edges and a cuboid has 12 edges too, so each of the 6 solids has 12 edges. 6 × 12 = 72 edges.","u":["edges","edge"]},"12-22":{"i":"L2-foldcut","g":"Folding and cutting","q":"A long strip of paper is folded in half four times in a row. Then one straight cut is made across the middle of the folded strip. When the strip is opened up, how many separate pieces are there?","a":"17","t":"n","s":"17 pieces","h":"After 1 fold the strip has 2 layers. Think about how the layers grow, and how many cut marks the open strip shows.","w":"4 folds make 2 × 2 × 2 × 2 = 16 layers, so the cut goes through 16 places on the open strip. 16 cuts make 16 + 1 = 17 pieces.","u":["pieces","piece"]},"12-23":{"i":"L2-sevens","g":"Times tables","q":"Farhan writes down the numbers from 1 to 100 that you reach by counting in 7s. How many numbers does he write down?","a":"14","t":"n","s":"14 numbers","h":"Count in 7s: 7, 14, 21 and so on. You can also divide 100 by 7.","w":"The 14th number in the 7 times table is 98, and the 15th is 105, which is too big. So Farhan writes 14 numbers.","u":["numbers","number"]},"12-24":{"i":"L2-clubmatch","g":"Who has what?","q":"Dina, Arjun, Hui Min and Wei each join one club: choir, chess, drama or football. Dina joins neither the choir, the chess club nor football. Arjun joins neither the choir nor football. Hui Min does not join football. Who joins the choir?","a":"hui min","t":"s","s":"Hui Min","h":"Dina has only one club left to choose from. Then see who else is left.","w":"Dina joins the drama, Arjun joins the chess, Hui Min joins the choir, Wei joins the football. So Hui Min joins the choir."},"12-25":{"i":"L2-tankwater","g":"Up and down","q":"A water tank holds 40 litres at the start of Monday. On the next four days, it gets 15, then loses 28, then gets 33, then loses 41. What is the most water the tank holds at any time?","a":"60","t":"n","s":"60 litres","h":"Write down the amount in the tank after each day. Then pick the biggest.","w":"The amounts in order are 40, 55, 27, 60, 19. The most is 60 litres.","u":["litres","litre"]},"12-26":{"i":"L2-gardenfence","g":"Perimeter","q":"A garden is a rectangle 20 m long and 11 m wide. Uncle puts a fence all the way round the edge of the garden. How long is the fence?","a":"62","t":"n","s":"62 m","h":"The fence goes along all four sides. Add the two lengths and the two widths.","w":"Two lengths: 2 × 20 = 40. Two widths: 2 × 11 = 22. The fence is 40 + 22 = 62 m.","u":["m","metre","metres","meter","meters"]},"12-27":{"i":"L2-beadchain","g":"More and fewer","q":"Siti has 230 beads. Ahmad has 85 fewer beads than Siti. Kim has 120 more beads than Ahmad. How many beads does Kim have?","a":"265","t":"n","s":"265 beads","h":"Find Ahmad's beads first.","w":"Ahmad has 230 − 85 = 145. Kim has 145 + 120 = 265 beads.","u":["beads","bead"]},"12-28":{"i":"L2-pencilcase","g":"Worst case","q":"A pencil case holds 9 blue, 7 black and 6 red pens. Mei takes pens out without looking. How many pens must she take to be sure of having 5 pens of the same colour?","a":"13","t":"n","s":"13 pens","h":"Think of the unluckiest case: she takes as many marbles as possible without having 5 pens of any colour.","w":"The unluckiest case is 4 blue, 4 black and 4 red pens, which is 12 pens with no colour having 5. The next pen must make 5 of one colour, so she must take 12 + 1 = 13 pens.","u":["pens","pen"]},"12-29":{"i":"L2-notebooks","g":"Shop offers","q":"Notebooks cost $6 each. A pack of 5 notebooks costs $25. A school needs 15 notebooks. How many dollars does it save by buying packs instead of single notebooks?","a":"15","t":"n","s":"$15","h":"Work out the cost with single notebooks. Then work out how many packs are needed.","w":"Single: 15 × $6 = $90. Packs: 15 ÷ 5 = 3 packs, 3 × $25 = $75. The school saves $90 − $75 = $15.","u":["dollars","dollar"],"p":["$","s$"]},"12-30":{"i":"L2-sortrule2","g":"Sorting","q":"Mei Ling sorts these numbers: 19, 27, 33, 48, 18, 52, 36, 21, 63 and 42. She keeps only the numbers that are in the 3 times table and bigger than 25. How many numbers does she keep?","a":"6","t":"n","s":"6 numbers","h":"Check each number twice: is it in the 3 times table, and is it bigger than 25?","w":"The numbers that pass both checks are 27, 33, 48, 36, 63, 42. That is 6 numbers.","u":["numbers","number"]},"12-31":{"i":"L2-cubestack","g":"Stacks","q":"A stack of cubes has 6 layers. The top layer is 1 cube. The next layer is a square of 2 by 2 cubes, the next is 3 by 3 cubes, and so on down to the bottom layer. How many cubes are in the whole stack?","a":"91","t":"n","s":"91 cubes","h":"Find the number of cubes in each layer: 1, then 2 × 2, then 3 × 3. Add them up.","w":"The layers are 1 + 4 + 9 + 16 + 25 + 36. Added together they make 91 cubes.","u":["cubes","cube"]}}},base:"/teasers/"})}catch(e){}})();
+</script>

@@ -18,8 +18,8 @@ do $$ begin assert (select count(*) from public.groups) = 6, 'groups seeded'; en
 set role authenticated; select set_config('request.jwt.claim.sub','aaaaaaaa-0000-0000-0000-000000000001',false);
 do $$ declare c1 uuid; c2 uuid; e uuid; n int; begin
   assert (select count(*) from public.parents) = 1, 'A sees only own parent row';
-  c1 := public.add_child('Mia', 1, '1234');
-  c2 := public.add_child('Ben', 3, '4321');
+  c1 := public.add_child('Mia', 1, '7391');
+  c2 := public.add_child('Ben', 3, '9152');
   assert (select count(*) from public.children) = 2;
   assert pg_temp.fails($q$select pin_hash from public.children$q$, 'permission denied'), 'pin_hash not selectable';
   assert pg_temp.fails($q$select pin_failed from public.children$q$, 'permission denied');
@@ -28,7 +28,7 @@ do $$ declare c1 uuid; c2 uuid; e uuid; n int; begin
   assert pg_temp.fails($q$update public.children set level=2$q$, 'permission denied');
   assert pg_temp.fails($q$select public.add_child('Z', 1, 'abcd')$q$, 'pin_format');
   assert pg_temp.fails($q$select public.add_child('Z', 1, '12')$q$, 'pin_format');
-  assert pg_temp.fails($q$select public.add_child('mia', 1, '1111')$q$), 'duplicate name per family';
+  assert pg_temp.fails($q$select public.add_child('mia', 1, '5827')$q$), 'duplicate name per family';
   -- enrolling needs consents first
   assert pg_temp.fails(format('select public.enrol_child(%L,%L)', c1, 'L1A'), 'consents_missing');
   perform public.record_consents('{"contact":true,"terms":true,"recording":true,"childs_work":true,"feedback_quotes":false}', 'terms-v1', 'privacy-v1');
@@ -84,7 +84,7 @@ do $$ begin
   assert (select count(*) from public.groups) = 6, 'anon reads groups';
   assert pg_temp.fails($q$select * from public.parents$q$, 'permission denied');
   assert pg_temp.fails($q$select count(*) from public.payments$q$, 'permission denied');
-  assert pg_temp.fails($q$select public.add_child('x',1,'1234')$q$, 'permission denied');
+  assert pg_temp.fails($q$select public.add_child('x',1,'7391')$q$, 'permission denied');
   assert pg_temp.fails($q$select * from public.my_enrolments()$q$, 'permission denied');
   assert pg_temp.fails($q$select * from public.group_fill()$q$, 'permission denied');
 end $$;
@@ -95,22 +95,22 @@ do $$ declare fc text; begin
 end $$;
 set role anon;
 do $$ declare fc text := current_setting('t.fc'); i int; begin
-  assert (select count(*) from public.child_sign_in(fc, 'mia', '1234')) = 1, 'good pin, case-insensitive name';
-  assert (select count(*) from public.child_sign_in(lower(fc), ' Mia ', '1234')) = 1;
-  assert (select count(*) from public.child_sign_in(fc, 'Mia', '9999')) = 0;
-  assert (select count(*) from public.child_sign_in('ZZZZZZ', 'Mia', '1234')) = 0;
-  assert (select count(*) from public.child_sign_in(fc, 'Nobody', '1234')) = 0;
-  for i in 1..5 loop perform * from public.child_sign_in(fc, 'Ben', '0000'); end loop;
-  assert (select count(*) from public.child_sign_in(fc, 'Ben', '4321')) = 0, 'locked after 5 failures even with right PIN';
+  assert (select count(*) from public.child_sign_in(fc, 'mia', '7391')) = 1, 'good pin, case-insensitive name';
+  assert (select count(*) from public.child_sign_in(lower(fc), ' Mia ', '7391')) = 1;
+  assert (select count(*) from public.child_sign_in(fc, 'Mia', '1873')) = 0;
+  assert (select count(*) from public.child_sign_in('ZZZZZZ', 'Mia', '7391')) = 0;
+  assert (select count(*) from public.child_sign_in(fc, 'Nobody', '7391')) = 0;
+  for i in 1..5 loop perform * from public.child_sign_in(fc, 'Ben', '8264'); end loop;
+  assert (select count(*) from public.child_sign_in(fc, 'Ben', '9152')) = 0, 'locked after 5 failures even with right PIN';
 end $$;
 reset role;
 do $$ begin
   assert (select pin_hash from public.children where display_name='Mia') like '$2%', 'bcrypt hash stored';
-  assert (select count(*) from public.children where pin_hash in ('1234','4321')) = 0, 'no plaintext pin';
+  assert (select count(*) from public.children where pin_hash in ('7391','9152')) = 0, 'no plaintext pin';
   update public.children set pin_locked_until = now() - interval '1 minute' where display_name='Ben';
 end $$;
 set role anon;
-do $$ begin assert (select count(*) from public.child_sign_in(current_setting('t.fc'), 'Ben', '4321')) = 1, 'lock expires'; end $$;
+do $$ begin assert (select count(*) from public.child_sign_in(current_setting('t.fc'), 'Ben', '9152')) = 1, 'lock expires'; end $$;
 reset role;
 
 -- ===== capacity =====
@@ -119,7 +119,7 @@ do $$ declare i int; pid uuid; cid uuid; begin
     insert into auth.users (id, email) values (gen_random_uuid(), 'f'||i||'@x.com') returning id into pid;
     perform set_config('request.jwt.claim.sub', pid::text, false);
     set local role authenticated;
-    cid := public.add_child('K'||i, 1, '1234');
+    cid := public.add_child('K'||i, 1, '7391');
     perform public.record_consents('{"contact":true,"terms":true,"recording":true,"childs_work":true}', 'v', 'v');
     perform public.enrol_child(cid, 'L1A');
     reset role;
@@ -128,7 +128,7 @@ do $$ declare i int; pid uuid; cid uuid; begin
   insert into auth.users (id, email) values ('dddddddd-0000-0000-0000-000000000004', 'late@x.com');
   perform set_config('request.jwt.claim.sub', 'dddddddd-0000-0000-0000-000000000004', false);
   set local role authenticated;
-  cid := public.add_child('Late', 1, '1234');
+  cid := public.add_child('Late', 1, '7391');
   perform public.record_consents('{"contact":true,"terms":true,"recording":true,"childs_work":true}', 'v', 'v');
   assert pg_temp.fails(format('select public.enrol_child(%L,%L)', cid, 'L1A'), 'group_full'), 'ninth is refused';
   reset role;
@@ -216,7 +216,7 @@ reset role;
 
 -- ===== cancel + delete my data =====
 set role authenticated; select set_config('request.jwt.claim.sub','bbbbbbbb-0000-0000-0000-000000000002',false);
-do $$ begin perform public.add_child('Zed', 2, '5555'); perform public.delete_my_data(); end $$;
+do $$ begin perform public.add_child('Zed', 2, '3584'); perform public.delete_my_data(); end $$;
 reset role;
 do $$ begin
   assert not exists (select 1 from auth.users where id='bbbbbbbb-0000-0000-0000-000000000002'), 'login deleted';

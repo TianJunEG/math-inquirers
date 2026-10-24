@@ -3,8 +3,12 @@
 (function () {
   var M = window.MI, h = M.h, app = document.getElementById('app');
   document.getElementById('top').appendChild(M.header('Owner admin'));
-  function mount() { M.mount.apply(M, arguments); M.stack(app); }
-  function msgBox(m) { return m ? (typeof m === 'object' ? h('p', { class: 'msg err', role: 'alert', text: m.err }) : h('p', { class: 'msg ok', role: 'status', text: m })) : null; }
+  // After a redraw keep keyboard focus on the same control, and after an action move it to the result message (data-result), which is announced.
+  function mount() {
+    var k = M.focusKey(app); M.mount.apply(M, arguments); M.stack(app); M.focusRestore(app, k);
+    var r = app.querySelector('[data-result]'); if (r) { r.setAttribute('tabindex', '-1'); try { r.focus(); } catch (e) {} }
+  }
+  function msgBox(m) { return m ? (typeof m === 'object' ? h('p', { class: 'msg err', role: 'alert', 'data-result': '1', text: m.err }) : h('p', { class: 'msg ok', role: 'status', 'data-result': '1', text: m })) : null; }
   var filter = 'pending', view = 'enrol', slotLabels = null, productNames = null;
   var EXT = window.MI_ADMIN_VIEWS || [];   // extra tabs (orders, access, trials, funnel, group report) registered by admin_ext.js, which loads first
   var WINDOWS = { 'wkday-am': 'Weekday mornings', 'wkday-pm': 'Weekday afternoons', 'wkday-eve': 'Weekday evenings', sat: 'Saturday', sun: 'Sunday' };

@@ -61,19 +61,61 @@ The public `/shop/` page lists the extension workbooks as coming soon, with no p
 - **Build:** the form saves to Supabase only in a `--with-portal` build with real `SUPABASE_URL` / `SUPABASE_ANON_KEY` (same switch as the timing form); otherwise it writes a WhatsApp message to +65 9880 5962.
 - **Tests:** `python3 website/tests/interest_test.py` (also runs `website/tests/shop_test.py`; Playwright, RPC mocked), `bash portal/supabase/test/run_sql_test.sh` (includes `test/product_interest_test.sql`).
 
+## Retention schedule (pg_cron) and account deletion
+
+Nothing below is enabled by any file. The privacy promises (30-day delivery details, 12-month and 90-day practice answers, 12-month trial requests, 30-day preview contact details) only hold if these rules actually run, so schedule them once the SQL has been applied and tested on a scratch project.
+
+| Rule | Function (database owner / pg_cron only; no API role can run it) | What it does |
+|---|---|---|
+| Delivery name, address, postal code, phone | `_purge_ext_addresses()` | clears 30 days after `delivered_at`; 30 days after `shipped_at` if never marked delivered; at once when an order is cancelled or refunded; 90 days after payment if the book was never posted (the order is flagged "contact the parent"); first cancels orders unpaid for 14 days (`_expire_unpaid_ext_orders`) |
+| Practice answers | `_purge_expired_practice()` | 12 months after the last submission, or 90 days after the child's online access **ended** (refund, revoke, cancelled place), whichever is sooner; never while the child has active online access or the family has a confirmed place |
+| Trial requests (free-text note) | `_purge_trial_requests()` | `expires_at` (12 months) |
+| Child sign-in sessions, PIN lock alerts | `_purge_child_sessions()`, `_purge_pin_events()` | 7 days after a session ended; alerts after 30 days |
+| Free preview class | `admin_purge_preview_internal()` (preview_class.sql) | contact details 30 days after the class (6 months with marketing consent); the readable birth year always 30 days; exclusion hashes 7 months |
+| Recordings | status flip only (recordings.sql); deleting the file at the provider stays a human step | |
+| Download log | `service_purge_delivery_log(90)` (delivery.sql) | |
+
+`public.run_retention_jobs()` runs every rule above that exists in the database (it skips the parts of files that were not applied) and returns the counts as JSON. The owner can also press "Run the address clean-up now" in Admin > Book orders, or run `select public.admin_run_retention();` when logged in as an admin. To schedule it daily (03:20 Singapore time) in the Supabase SQL editor, after enabling the `pg_cron` extension (Database > Extensions):
+
+```sql
+select cron.schedule('mi-retention', '20 19 * * *', $$select public.run_retention_jobs()$$);   -- 19:20 UTC = 03:20 SGT
+-- check:  select * from cron.job;   and   select * from cron.job_run_details order by start_time desc limit 5;
+-- stop:   select cron.unschedule('mi-retention');
+```
+
+Not automated (decide with the lawyer, then add a rule): payments, consents and `deletion_requests` rows kept without personal details after an account is deleted (financial and evidence records; their period is the lawyer's call), practice answers of a live group 90 days after the programme ends (`admin_purge_practice_for_group(group, date)` is manual: groups have no end date column yet), `interest_requests` and `product_interest` (own purge buttons and cron lines in their files), signed-in marketing contact.
+
+**Delete my data** (`delete_my_data()`, the version in `practice_submissions.sql`, which replaces the older one in `schema.sql` / `finish_setup.sql`): removes the children and everything under them (PINs, sessions, practice answers, access rows, PIN alerts); cancels open places **and unpaid book orders** (a later Stripe payment for them is recorded and flagged, never lost); clears the delivery name, address, postal code, phone and the child's nickname from every book order; deletes trial requests (note included), the parent's recording views and any free preview-class registration and attendance hashes made with the account email; strips the parent row; deletes the login. Paid places and paid book orders are kept without personal details and flagged **refund due** for the owner (Admin > Book orders > "Refund due"). Deleting a single child who holds online access is blocked until the parent moves the access to a brother or sister or explicitly gives it up (`transfer_book_access`, `delete_child_and_access`).
+
+## Origin, headers and the shared-origin risk
+
+`website/build_site.py` writes `_headers` with three separate sections, because Cloudflare joins the same header from every matching rule (two CSPs would both apply):
+
+- site pages (each path listed, not `/*`): the existing CSP (inline scripts allowed, the pages are single files) and `Referrer-Policy: strict-origin-when-cross-origin`; the common security headers (nosniff, `X-Frame-Options: DENY`, Permissions-Policy, robots) stay on `/*`;
+- `/portal/*`: `default-src 'self'; script-src 'self'; connect-src 'self'` plus your Supabase origin, `frame-ancestors 'none'`, `Cache-Control: no-store`;
+- `/practice` and `/practice/*` (new): `default-src 'self'; script-src 'self'` (no inline script), `style-src 'self' 'unsafe-inline'`, `connect-src 'self'` plus the Worker origin if it is a different origin (build env `PRACTICE_WORKER_ORIGIN=https://...`), `object-src 'none'`, `form-action 'self'`, `base-uri 'self'`, `frame-ancestors 'none'`, `Referrer-Policy: no-referrer`, `Cache-Control: no-store` (a page that held a child's token must not be kept by a shared tablet's cache).
+
+**The practice pages currently carry one inline `<script>window.MI_LESSON=...;window.MI_SUBMIT=...</script>`** (written by `practice/holiday/build_holiday.py` and `practice/ext/build_ext.py`), which the strict CSP blocks. `python3 website/build_site.py --practice-dir DIR` copies the built practice pages into `dist/practice/` and moves every inline script into `mi-inline-N.js` next to its page (same position, same order), so the strict CSP holds without changing the generators. Without that flag the build prints a warning. Header generation is tested (without touching `website/dist`) by `python3 website/tests/headers_test.py`.
+
+**Shared-origin risk (still open).** The portal (parent session in `localStorage`, owner admin session), the public site (its CSP allows `'unsafe-inline'` scripts) and `/practice/*` (child token in `sessionStorage`) are one browser origin. Anything that gets a script to run on a public page can read a parent's or the owner's session from the same origin. The strict CSPs above shrink this for the portal and the practice pages, but the public site is still a path to the portal's storage. **Recommendation:** serve `/portal/` (and ideally `/practice/`) from their own subdomain, for example `portal.YOUR-DOMAIN` and `learn.YOUR-DOMAIN`, as separate Cloudflare projects or routes: storage and cookies are then per origin, the public site's looser CSP no longer touches them, and `connect-src` and CORS can name exactly one counterpart. Before that move: update the Supabase redirect URLs, `SITE_URL`, the Stripe `success_url`/`cancel_url`, the Worker's `Origin` check and `MI_SUBMIT` endpoints.
+
 ## Local tests
 
 ```
 bash portal/supabase/test/run_sql_test.sh        # needs postgresql server binaries; starts a throwaway cluster
+bash portal/supabase/test/audit_run.sh           # independent attack suite (audit_00..audit_08), prints PASS/FAIL per check
+python3 website/tests/headers_test.py            # _headers generation, in a scratch --out directory
 node --test portal/tests/functions.test.mjs      # Node 20+; Stripe + Supabase mocked (no network, no keys)
 python3 portal/tests/frontend_test.py            # Playwright 1.56.0 + chromium; mocked Supabase client
+python3 portal/tests/portal_ui_test.py           # the portal screens (children, books, trial, practice list, admin tabs), same mock
+python3 portal/audit_shots/audit_frontend.py     # front-end attack checks + screenshots (rewrites the PNGs in audit_shots/)
 python3 portal/tools/gen_groups_seed.py --check  # seed file matches beta_schedule.json
 ```
 
 ## How it works (security design)
 
 - **No direct writes.** Browsers can only read their own rows (RLS) and call SECURITY DEFINER functions (`add_child`, `enrol_child`, `record_consents`, `delete_my_data`, ...). The one direct write is the parent's own name/phone.
-- **PIN** is hashed in the database with bcrypt (`pgcrypto crypt`). `pin_hash`, `pin_failed`, `pin_locked_until` are not readable by any API role (column grants). `child_sign_in()` returns a row only on success, never says which part was wrong, and locks a child for 15 minutes after 5 wrong PINs. PINs are 4-6 digits: weak by nature, which is why the lockout exists.
+- **PIN** is hashed in the database with bcrypt (`pgcrypto crypt`). `pin_hash`, `pin_failed`, `pin_locked_until` are not readable by any API role (column grants). `child_sign_in()` returns a row only on success, never says which part was wrong, and locks a child after 5 wrong PINs with an **escalating** lock: 15 minutes, then 1 hour, 6 hours and 24 hours for each further lock without a correct sign-in in between (a level not raised for 7 days falls back to 15 minutes). Every lock writes a `pin_lock_events` row and the parent sees an alert on the home page and on My children (`my_pin_alerts()`, dismissed with "Got it" or by setting a new PIN, which also clears the lock). PINs are 4-6 digits: weak by nature, which is why the lockout exists, and why `_pin_check()` refuses the easy guesses when a PIN is set: the same digit repeated (0000), a run up or down (1234, 4321, 123456), a repeated pair or triple (1212, 123123), a few very common PINs (2580, 1004) and birth-year patterns (a 4-digit year 1940-2039, year+month in 6 digits). The page explains this before anything is sent.
 - **Child sign-in is a stub.** It checks family code + display name + PIN and stores the name in `sessionStorage` for the placeholder page. It is not a server session; when the practice area starts saving answers, it must mint a real, short-lived token for the child.
 - **Seats** are checked under a row lock in `enrol_child`, so two parents cannot take the last seat. Level must match the group.
 - **Admin** is a row in `public.admins`. Every `admin_*` function checks it server-side; the admin page is only a viewer. An admin cannot read PIN hashes either.
@@ -86,7 +128,7 @@ python3 portal/tools/gen_groups_seed.py --check  # seed file matches beta_schedu
 - [ ] Bump `VERSIONS` in `public/common.js` to the reviewed text's version/date.
 - [ ] Supabase: confirm region, turn on database backups (paid plan for PITR), keep "Confirm email" on, set an SMTP sender, restrict dashboard access to you (and 2FA on your Supabase, Cloudflare and Stripe accounts).
 - [ ] Row level security is enabled on every table (check Table Editor shows RLS on). Never expose the service_role key; rotate it if it ever leaks.
-- [ ] Retention: privacy.html promises payment/registration records for 12 months, recordings and work for shorter periods. `delete_my_data()` keeps only anonymised payment/consent rows. You must purge those after the retention period (consents has an append-only trigger: `alter table public.consents disable trigger consents_append_only;` for the purge, then enable again).
+- [ ] Retention: schedule `run_retention_jobs()` (section "Retention schedule" above) so the 30-day, 90-day and 12-month promises do not depend on remembering a button. privacy.html promises payment/registration records for 12 months, recordings and work for shorter periods. `delete_my_data()` keeps only anonymised payment/consent rows. You must purge those after the retention period (consents has an append-only trigger: `alter table public.consents disable trigger consents_append_only;` for the purge, then enable again).
 - [ ] Handle access/correction/delete requests within the promised days. A parent can self-serve delete in the portal; it does NOT refund: check the payment note "refund due" and refund per the terms (Stripe dashboard for online payments, PayNow for manual ones).
 - [ ] Children's data stays minimal: display name (tell parents to use a first name or nickname), level, PIN hash. No photo, school, NRIC, birth date.
 - [ ] Recordings and photos of work are not stored by this portal; store them privately elsewhere as the privacy notice says.

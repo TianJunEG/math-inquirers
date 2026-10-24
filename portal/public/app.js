@@ -12,14 +12,23 @@
     both: { label: 'Both a live group class and online practice', need: ['contact', 'terms', 'online_practice', 'recording', 'childs_work'] }
   };
   var LIVE_NEED = FAMILY.live.need;
+  var AGREEMENT_NAME = { contact: 'contact and arranging the class or order', terms: 'terms and refund policy', online_practice: 'sending my child\'s answers (online practice)', recording: 'live lesson recording', childs_work: 'my child\'s work and progress notes' };
 
-  function render(nodes) { M.clear(app); [].concat(nodes).forEach(function (n) { if (n) app.appendChild(n); }); }
+  // Redrawing clears the container, which would drop keyboard focus to <body>: remember the focused control and put focus back on its twin.
+  function render(nodes) { var k = M.focusKey(app); M.clear(app); [].concat(nodes).forEach(function (n) { if (n) app.appendChild(n); }); M.focusRestore(app, k); }
+  // an inline message inside a form (sign-in, sign-up, reset): shown, announced, and given keyboard focus
+  function note(box, kind, text) { M.notice(box, kind, text); M.focusResult(box); }
   function flash(kind, text) { S.flash = text ? { kind: kind, text: text } : null; }
   function flashBox() { var b = h('div'); if (S.flash) M.notice(b, S.flash.kind, S.flash.text); return b; }
+  // okText: a string, or a function (result) -> string | { kind, text } so a save can say "saved, but ..." instead of claiming success.
   async function run(fn, okText) {
     S.flash = null;
-    try { await fn(); if (okText) flash('ok', okText); } catch (e) { flash('err', M.errText(e)); }
+    try {
+      var res = await fn(); var t = typeof okText === 'function' ? okText(res) : okText;
+      if (t) { if (typeof t === 'string') flash('ok', t); else flash(t.kind, t.text); }
+    } catch (e) { flash('err', M.errText(e)); }
     await refresh();
+    M.focusResult(app);          // after every action the result message (or the page heading) takes keyboard focus and is announced
   }
 
   // ---------------- data ----------------
@@ -40,6 +49,7 @@
       S.fill = {}; (res[3].data || []).forEach(function (f) { S.fill[f.group_id] = f; });
       S.enrols = res[4].data || [];
       S.consents = {}; (res[5].data || []).forEach(function (c) { S.consents[c.consent_type] = c; });
+      await M.P.loadAlerts();
     } catch (e) { flash('err', M.errText(e)); }
     draw();
   }
@@ -52,30 +62,30 @@
     var name = h('input', { type: 'text', id: 'fullname', autocomplete: 'name', maxlength: 100 });
     var form = h('form', { novalidate: true, onsubmit: async function (ev) {
       ev.preventDefault(); var sb = M.sb(); var em = email.value.trim();
-      if (!em) { M.notice(box, 'err', 'Please enter your email.'); return email.focus(); }
+      if (!em) { note(box, 'err', 'Please enter your email.'); return email.focus(); }
       try {
         if (S.tab === 'forgot') {
           var f = await sb.auth.resetPasswordForEmail(em, { redirectTo: location.origin + '/portal/' });
           // Same message whether or not the email has an account. Only real trouble (rate limit, no network) is shown.
           if (f.error && /rate limit|too many|failed to fetch|network|load failed/i.test(String(f.error.message || ''))) throw f.error;
-          return M.notice(box, 'ok', 'If that email has an account, a reset link is on its way. Check your inbox (and spam), then click the link on this device.');
+          return note(box, 'ok', 'If that email has an account, a reset link is on its way. Check your inbox (and spam), then click the link on this device.');
         }
         if (S.tab === 'magic') {
           var r = await sb.auth.signInWithOtp({ email: em, options: { emailRedirectTo: location.origin + '/portal/' } });
-          if (r.error) throw r.error; return M.notice(box, 'ok', 'Check your email for a log-in link.');
+          if (r.error) throw r.error; return note(box, 'ok', 'Check your email for a log-in link.');
         }
-        if (pw.value.length < 8) { M.notice(box, 'err', 'Password needs at least 8 characters.'); return pw.focus(); }
+        if (pw.value.length < 8) { note(box, 'err', 'Password needs at least 8 characters.'); return pw.focus(); }
         if (S.tab === 'signup') {
-          if (!name.value.trim()) return M.notice(box, 'err', 'Please enter your name.');
+          if (!name.value.trim()) return note(box, 'err', 'Please enter your name.');
           var s = await sb.auth.signUp({ email: em, password: pw.value, options: { data: { full_name: name.value.trim() }, emailRedirectTo: location.origin + '/portal/' } });
           if (s.error) throw s.error;
-          if (!s.data.session) return M.notice(box, 'ok', 'Almost there: check your email and click the link to confirm your address, then log in.');
+          if (!s.data.session) return note(box, 'ok', 'Almost there: check your email and click the link to confirm your address, then log in.');
         } else {
           var l = await sb.auth.signInWithPassword({ email: em, password: pw.value });
           if (l.error) throw l.error;
         }
         await refresh();
-      } catch (e) { M.notice(box, 'err', M.errText(e)); }
+      } catch (e) { note(box, 'err', M.errText(e)); }
     } },
       S.tab === 'signup' ? h('p', null, h('label', { for: 'fullname', text: 'Your name (parent or guardian)' }), name) : null,
       h('p', null, h('label', { for: 'email', text: 'Email' }), email),
@@ -104,15 +114,15 @@
     var show = h('input', { type: 'checkbox', id: 'showpw', onchange: function () { p1.type = p2.type = show.checked ? 'text' : 'password'; } });
     var form = h('form', { novalidate: true, onsubmit: async function (ev) {
       ev.preventDefault();
-      if (p1.value.length < 8) { M.notice(box, 'err', 'Your new password needs at least 8 characters.'); return p1.focus(); }
-      if (p1.value !== p2.value) { M.notice(box, 'err', 'The two passwords are not the same. Please type them again.'); return p2.focus(); }
+      if (p1.value.length < 8) { note(box, 'err', 'Your new password needs at least 8 characters.'); return p1.focus(); }
+      if (p1.value !== p2.value) { note(box, 'err', 'The two passwords are not the same. Please type them again.'); return p2.focus(); }
       var btn = form.querySelector('button[type=submit]'); btn.disabled = true;
       try {
         var r = await M.sb().auth.updateUser({ password: p1.value });
         if (r.error) throw r.error;
         S.recovery = false; flash('ok', 'Your password is changed. You are logged in.');
         await refresh();
-      } catch (e) { btn.disabled = false; M.notice(box, 'err', M.errText(e)); p1.focus(); }
+      } catch (e) { btn.disabled = false; note(box, 'err', M.errText(e)); p1.focus(); }
     } },
       h('p', null, h('label', { for: 'newpw', text: 'New password' }), p1, h('span', { class: 'small muted', text: 'At least 8 characters.' })),
       h('p', null, h('label', { for: 'newpw2', text: 'Type it again' }), p2),
@@ -154,7 +164,26 @@
         row.appendChild(h('div', { class: 'row' },
           h('button', { class: 'btn alt sm', type: 'button', text: 'Edit', onclick: edit }),
           h('button', { class: 'btn alt sm', type: 'button', text: 'Remove', onclick: function () {
-            if (confirm('Remove ' + ch.display_name + ' and their PIN?')) run(function () { return rpc('delete_child', { p_child: ch.id }); }, 'Removed.'); } })));
+            if (!confirm('Remove ' + ch.display_name + ' and their PIN?')) return;
+            // A child who holds online access that was paid for (or granted) is not removed silently: the database answers has_online_access and we ask what to do with it.
+            run(async function () {
+              try { await rpc('delete_child', { p_child: ch.id }); S.askAccess = null; }
+              catch (e) { if (/has_online_access/.test(String(e && e.message))) S.askAccess = ch.id; throw e; }
+            }, 'Removed.'); } })));
+      };
+      var ask = function () {
+        var sibs = S.children.filter(function (x) { return x.id !== ch.id; });
+        var pick = sibs.length ? h('select', { id: 'move-to-' + ch.id, 'aria-label': 'Move the online access to' }, sibs.map(function (x) { return h('option', { value: x.id, text: x.display_name }); })) : null;
+        var give = h('button', { class: 'btn danger sm', type: 'button', disabled: true, 'data-giveup': ch.id, text: 'Give up the access and remove ' + ch.display_name, onclick: function () {
+          S.askAccess = null; run(function () { return rpc('delete_child_and_access', { p_child: ch.id, p_confirm: true }); }, 'Removed. The online access ended with the profile.'); } });
+        var ack = h('input', { type: 'checkbox', id: 'giveup-' + ch.id, onchange: function () { give.disabled = !ack.checked; } });
+        row.appendChild(h('div', { class: 'ask', role: 'group', 'aria-label': 'Online access for ' + ch.display_name },
+          h('p', { class: 'msg warn', text: ch.display_name + ' has online access that was paid for (or given to you). Removing ' + ch.display_name + ' would end it.' }),
+          pick ? h('p', null, h('label', { for: 'move-to-' + ch.id, text: 'Move the access to your other child' }), pick,
+            h('button', { class: 'btn sm', type: 'button', 'data-move': ch.id, text: 'Move the access, then remove ' + ch.display_name, onclick: function () {
+              S.askAccess = null; run(async function () { await rpc('transfer_book_access', { p_from: ch.id, p_to: pick.value }); await rpc('delete_child', { p_child: ch.id }); }, 'Access moved, and ' + ch.display_name + ' removed.'); } })) : null,
+          h('p', { class: 'check' }, ack, h('label', { for: 'giveup-' + ch.id, class: 'inline', text: 'I understand the online access will end and cannot be brought back.' })),
+          h('div', { class: 'row' }, give, h('button', { class: 'btn alt sm', type: 'button', text: 'Keep ' + ch.display_name, onclick: function () { S.askAccess = null; draw(); } }))));
       };
       var edit = function () {
         M.clear(row);
@@ -171,7 +200,8 @@
             }, 'Saved.'); } }),
           h('button', { class: 'btn alt sm', type: 'button', text: 'Cancel', onclick: show })));
       };
-      show(); c.appendChild(row);
+      if (S.askAccess === ch.id) ask(); else show();
+      c.appendChild(row);
     });
     var ages = {}; S.groups.forEach(function (g) { ages[g.level] = g.ages; });
     c.appendChild(M.P.childForm({ run: run, ages: ages }));
@@ -189,8 +219,7 @@
   function consentCard() {
     var type = famType(), need = FAMILY[type].need, boxes = {};
     var c = section('Agreements', 'Choose what you will use, then read the terms and the privacy notice and tick what applies. Nothing is ticked for you. You can change your mind at any time.', 'agreements');
-    c.appendChild(h('p', { class: 'small' }, h('a', { href: '/terms/', target: '_blank', rel: 'noopener', text: 'Terms and refund policy' }), ' | ',
-      h('a', { href: '/privacy/', target: '_blank', rel: 'noopener', text: 'Privacy and recording notice' })));
+    c.appendChild(M.P.legalLinks());
     c.appendChild(h('fieldset', { class: 'ftype' }, h('legend', { text: 'What will you use Math Inquirers for?' }),
       Object.keys(FAMILY).map(function (k) {
         return h('label', { class: 'opt' }, h('input', { type: 'radio', name: 'ftype', id: 'ftype-' + k, value: k, checked: k === type, onchange: function () { collect(); S.ftype = k; draw(); var e = document.getElementById('ftype-' + k); if (e) e.focus(); } }),
@@ -220,9 +249,18 @@
         var prev = S.consents[t], now = boxes[t].checked;
         if (!prev ? (now || need.indexOf(t) >= 0) : prev.granted !== now) items[t] = now;   // first answer for the needed ones, then only changes
       });
-      if (!Object.keys(items).length) return run(async function () {}, 'Nothing changed.');
+      // What will be on record after this save, and which NEEDED agreements are still not ticked. We never say "saved" as if all is well when they are not.
+      var after = function (t) { return items[t] != null ? items[t] : isOn(t); };
+      var missing = need.filter(function (t) { return !after(t); });
+      var result = function (didSave) {
+        if (!missing.length) return didSave ? 'Agreements saved.' : 'Nothing changed.';
+        var names = missing.map(function (t) { return AGREEMENT_NAME[t]; }).join(', ');
+        return { kind: 'warn', text: (didSave ? 'Saved, but ' : 'Nothing changed. ') + 'these needed agreements are still not ticked: ' + names + '. Until they are ticked, ' +
+          (type === 'live' ? 'a place in a live group cannot be reserved.' : 'online practice and ordering a book will not work for your child.') + ' Tick them and press the button again.' };
+      };
+      if (!Object.keys(items).length) return run(async function () {}, result(false));
       S.pending = {};
-      run(function () { return rpc('record_consents', { p_items: items, p_terms: M.VERSIONS.terms, p_privacy: M.VERSIONS.privacy }); }, 'Agreements saved.');
+      run(function () { return rpc('record_consents', { p_items: items, p_terms: M.VERSIONS.terms, p_privacy: M.VERSIONS.privacy }); }, function () { return result(true); });
     } }));
     return c;
   }
@@ -270,7 +308,7 @@
           d.appendChild(h('button', { class: 'btn', type: 'button', text: 'Pay ' + M.money(e.amount_cents) + ' online (card or PayNow)', 'data-pay-online': '1', onclick: function (ev) { payOnline(e.enrolment_id, d, ev.currentTarget); } }));
         } else {
           d.appendChild(h('div', { class: 'msg info' },
-            h('div', null, 'Pay ' + M.money(e.amount_cents) + ' by PayNow to ' + M.CFG.PAYNOW_TO + '.'),
+            h('div', { 'data-paynow-line': '1', text: M.paynowLine(e.amount_cents) }),
             h('div', null, 'Put this reference in the PayNow comment: ', h('span', { class: 'code', 'data-ref': '1', text: e.payment_reference })),
             h('div', { class: 'small', text: 'We tick it off by hand, usually within a day. This page will then show "paid" and your place becomes confirmed.' })));
         }
@@ -290,8 +328,8 @@
       var r = await fetch('/api/stripe-create-checkout', { method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + tok }, body: JSON.stringify({ enrolment_id: enrolmentId }) });
       var j = await r.json().catch(function () { return {}; });
       if (!r.ok || !j.url) throw M.say('Could not start the payment. Nothing was charged. Please try again.');
-      location.href = j.url;   // top-level redirect to Stripe Checkout; card details never touch our pages
-    } catch (e) { if (btn) { btn.disabled = false; btn.textContent = 'Try again'; } M.notice(box.appendChild(h('div')), 'err', M.errText(e)); }
+      M.goToStripe(j.url);   // only https://checkout.stripe.com/... is followed (card details never touch our pages)
+    } catch (e) { if (btn) { btn.disabled = false; btn.textContent = 'Try again'; } var eb = box.querySelector('[data-pay-error]') || box.appendChild(h('div', { 'data-pay-error': '1' })); M.notice(eb, 'err', M.errText(e)); M.focusResult(eb); }
   }
 
   function moreCard() {
@@ -346,7 +384,7 @@
     var q = new URLSearchParams(location.search);
     var back = q.get('paid') ? h('div', { class: 'msg info', 'data-return': 'paid', text: 'Thanks. We confirm your place when Stripe tells us the payment has gone through. For a card this takes a few seconds; PayNow can take a little longer. Refresh this page in a minute if it still says pending.' })
       : q.get('cancelled') ? h('div', { class: 'msg info', 'data-return': 'cancelled', text: 'Payment cancelled, nothing was charged. Your place is still held while payment is pending; use the Pay button below to try again.' }) : null;
-    render([flashBox(), back, nextStep(),
+    render([flashBox(), back, M.P.alertsCard(run), nextStep(),
       h('div', { class: 'row' }, h('h1', { text: 'Hello' + (S.parent.full_name ? ', ' + S.parent.full_name : '') }),
         h('button', { class: 'btn alt sm', type: 'button', id: 'signout', text: 'Log out', onclick: async function () { await M.sb().auth.signOut(); flash(null); await refresh(); } })),
       M.P.nav('home'), paymentCard(), childrenCard(), moreCard(), consentCard(), enrolCard(), familyCard(), accountCard()]);

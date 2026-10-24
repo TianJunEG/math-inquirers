@@ -52,7 +52,7 @@ create table if not exists public.preview_registrations (
   email          text        not null check (char_length(email) <= 120 and email ~ '^[^@\s]+@[^@\s]+\.[^@\s]+$'),
   phone          text        check (phone is null or phone ~ '^[0-9]{8,15}$'),
   child_first_name text      not null check (char_length(btrim(child_first_name)) between 1 and 30),
-  child_birth_year smallint  not null check (child_birth_year between 2008 and 2022),
+  child_birth_year smallint  check (child_birth_year is null or child_birth_year between 2008 and 2022),   -- R1-M11: cleared 30 days after the class even if the contact details stay longer (marketing consent); the long-term record holds only keyed hashes
   school_year    text        not null check (school_year in ('P1','P2','P3','P4','P5','P6')),
   email_h        text        not null,
   phone_h        text,
@@ -95,7 +95,8 @@ create table if not exists public.preview_attended (
   phone_h      text,
   child_h      text not null,
   name_h       text not null,
-  birth_year   smallint not null
+  year_hs      text[] not null                -- R1-M11: NOT the birth year. Keyed hashes of year-1, year and year+1, so the 'similar child, year within 1' rule still works
+                                              -- while the long-term store holds no readable birth year (the lawyer note says "only keyed hashes ... of the child's birth year")
 );
 create index if not exists preview_att_email_idx on public.preview_attended (email_h);
 create index if not exists preview_att_phone_idx on public.preview_attended (phone_h) where phone_h is not null;
@@ -124,9 +125,14 @@ create or replace function public._pv_norm_name(p text) returns text language sq
   select regexp_replace(lower(split_part(btrim(regexp_replace(coalesce(p,''), '[^[:alpha:] ]', ' ', 'g')), ' ', 1)), '[^[:alpha:]]', '', 'g');
 $$;
 create or replace function public._pv_h(label text, val text) returns text
-language sql stable security definer set search_path = public, extensions as $$
+language sql stable security definer set search_path = public, extensions, pg_temp as $$
   select case when val is null or val = '' then null
          else encode(extensions.hmac(label || ':' || val, (select value from public.preview_config where key = 'pepper'), 'sha256'), 'hex') end;
+$$;
+
+create or replace function public._pv_year_hs(p_year int) returns text[]
+language sql stable security definer set search_path = public, pg_temp as $$
+  select array[public._pv_h('year', (p_year - 1)::text), public._pv_h('year', p_year::text), public._pv_h('year', (p_year + 1)::text)];
 $$;
 
 -- ---------- eligibility (internal; also used by the admin check) ----------
@@ -136,14 +142,14 @@ $$;
 -- review_no_show : the same child key registered and never turned up twice or more in the window (a human checks that nothing is wrong).
 -- ok             : everything else, including a sibling (same parent contact, different first name) and a stranger with the same name and year.
 create or replace function public._pv_eligibility(p_email_h text, p_phone_h text, p_child_h text, p_name_h text, p_birth_year int) returns text
-language plpgsql stable security definer set search_path = public as $$
+language plpgsql stable security definer set search_path = public, pg_temp as $$
 declare win interval := ((select value from public.preview_config where key = 'exclusion_months') || ' months')::interval;
 begin
   if exists (select 1 from public.preview_attended a
               where a.attended_at > now() - win and a.child_h = p_child_h
                 and (a.email_h = p_email_h or (p_phone_h is not null and a.phone_h = p_phone_h))) then return 'blocked'; end if;
   if exists (select 1 from public.preview_attended a
-              where a.attended_at > now() - win and a.name_h = p_name_h and abs(a.birth_year - p_birth_year) <= 1
+              where a.attended_at > now() - win and a.name_h = p_name_h and public._pv_h('year', p_birth_year::text) = any (a.year_hs)
                 and (a.email_h = p_email_h or (p_phone_h is not null and a.phone_h = p_phone_h))) then return 'review_similar'; end if;
   if (select count(*) from public.preview_registrations r
        where r.status = 'no_show' and r.child_h = p_child_h and r.created_at > now() - win) >= 2 then return 'review_no_show'; end if;
@@ -162,7 +168,7 @@ create or replace function public.register_preview(
   p_parent_present boolean, p_consent_contact boolean, p_consent_terms boolean, p_consent_exclusion boolean, p_consent_marketing boolean,
   p_consent_version text, p_hp text default null
 ) returns jsonb
-language plpgsql volatile security definer set search_path = public as $$
+language plpgsql volatile security definer set search_path = public, pg_temp as $$
 declare
   v_pname text := btrim(regexp_replace(coalesce(p_parent_first,''), '[[:cntrl:]]', ' ', 'g'));
   v_cname text := btrim(regexp_replace(coalesce(p_child_first,''),  '[[:cntrl:]]', ' ', 'g'));
@@ -230,7 +236,7 @@ end $$;
 
 -- ---------- parent-facing: which sessions can I register for? (no counts; only open/full) ----------
 create or replace function public.preview_open_sessions() returns table (id uuid, starts_at timestamptz, band text, is_full boolean)
-language sql stable security definer set search_path = public as $$
+language sql stable security definer set search_path = public, pg_temp as $$
   select s.id, s.starts_at, s.band,
          (select count(*) from public.preview_registrations r where r.session_id = s.id and r.status in ('confirmed','pending_review')) >= s.capacity
     from public.preview_sessions s where s.status = 'open' and s.starts_at > now() + interval '1 hour' and s.starts_at < now() + interval '45 days' order by s.starts_at;
@@ -238,7 +244,7 @@ $$;
 
 -- A parent cancels with the join code AND the email used. Returns true if a registration was cancelled.
 create or replace function public.cancel_preview(p_session uuid, p_join_code text, p_email text) returns boolean
-language plpgsql volatile security definer set search_path = public as $$
+language plpgsql volatile security definer set search_path = public, pg_temp as $$
 declare n int;
 begin
   update public.preview_registrations set status = 'cancelled'
@@ -249,12 +255,12 @@ begin
 end $$;
 
 -- ---------- admin ----------
-create or replace function public._pv_admin() returns void language plpgsql stable security definer set search_path = public as $$
+create or replace function public._pv_admin() returns void language plpgsql stable security definer set search_path = public, pg_temp as $$
 begin if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if; end $$;
 
 create or replace function public.admin_preview_create_session(p_starts_at timestamptz, p_band text, p_capacity int default 40, p_live_cap int default 30,
   p_lesson_version text default 'v1', p_warmup_ref text default null) returns uuid
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare i uuid;
 begin
   perform public._pv_admin();
@@ -266,7 +272,7 @@ end $$;
 create or replace function public.admin_preview_list(p_session uuid) returns table (
   id uuid, status text, review_reason text, join_code text, parent_first_name text, email text, phone text, child_first_name text, child_birth_year smallint,
   school_year text, consent_marketing boolean, wants_trial boolean, followup_status text, reminded_24h boolean, reminded_1h boolean)
-language plpgsql stable security definer set search_path = public as $$
+language plpgsql stable security definer set search_path = public, pg_temp as $$
 begin
   perform public._pv_admin();
   return query select r.id, r.status, r.review_reason, r.join_code, r.parent_first_name, r.email, r.phone, r.child_first_name, r.child_birth_year, r.school_year,
@@ -276,7 +282,7 @@ end $$;
 
 -- A person decides a pending_review registration: 'confirm' or 'decline'.
 create or replace function public.admin_preview_decide(p_id uuid, p_decision text) returns void
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 begin
   perform public._pv_admin();
   if p_decision not in ('confirm','decline') then raise exception 'invalid_input' using errcode = '22023'; end if;
@@ -284,7 +290,7 @@ begin
 end $$;
 
 create or replace function public.admin_preview_promote_waitlist(p_session uuid, p_n int) returns int
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare k int;
 begin
   perform public._pv_admin();
@@ -298,7 +304,7 @@ end $$;
 -- off a Meet attendance report if the edition provides one). Codes are minutes-paired: p_minutes[i] is how long code p_codes[i] was present.
 -- Only a registration that is confirmed and present for at least p_min_minutes becomes 'attended' and writes the hash-only exclusion row.
 create or replace function public.admin_preview_mark_attendance(p_session uuid, p_codes text[], p_minutes int[], p_min_minutes int default 15) returns int
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare i int; r public.preview_registrations%rowtype; n int := 0; c text;
 begin
   perform public._pv_admin();
@@ -310,7 +316,7 @@ begin
     update public.preview_registrations set attended_minutes = greatest(coalesce(attended_minutes, 0), p_minutes[i]) where id = r.id;
     if p_minutes[i] >= p_min_minutes and r.status = 'confirmed' then
       update public.preview_registrations set status = 'attended' where id = r.id;
-      insert into public.preview_attended (email_h, phone_h, child_h, name_h, birth_year) values (r.email_h, r.phone_h, r.child_h, r.name_h, r.child_birth_year);
+      insert into public.preview_attended (email_h, phone_h, child_h, name_h, year_hs) values (r.email_h, r.phone_h, r.child_h, r.name_h, coalesce(public._pv_year_hs(r.child_birth_year), '{}'::text[]));
       n := n + 1;
     end if;
   end loop;
@@ -319,7 +325,7 @@ end $$;
 
 -- Close the session: confirmed people who never came are 'no_show' (they may try again), counts are stored, the session is 'held'.
 create or replace function public.admin_preview_close_session(p_session uuid) returns jsonb
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare st jsonb;
 begin
   perform public._pv_admin();
@@ -334,7 +340,7 @@ end $$;
 
 -- The parent asked for a trial/next step (button on the thank-you page or a reply): counts for the funnel, nothing is sent from here.
 create or replace function public.admin_preview_set_followup(p_id uuid, p_status text, p_wants boolean default null) returns void
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 begin
   perform public._pv_admin();
   if p_status not in ('none','contacted','trial_booked','trial_attended','enrolled','declined') then raise exception 'invalid_input' using errcode = '22023'; end if;
@@ -343,7 +349,7 @@ end $$;
 
 -- "Can this family come?" for the owner answering a parent by WhatsApp. Same rule as the form. Returns ok | blocked | review_similar | review_no_show.
 create or replace function public.admin_preview_check(p_email text, p_phone text, p_child_first text, p_birth_year int) returns text
-language plpgsql stable security definer set search_path = public as $$
+language plpgsql stable security definer set search_path = public, pg_temp as $$
 begin
   perform public._pv_admin();
   return public._pv_eligibility(public._pv_h('email', public._pv_norm_email(p_email)), public._pv_h('phone', public._pv_norm_phone(p_phone)),
@@ -352,13 +358,13 @@ end $$;
 
 -- 6-month enforcement report (hash-only, no names): how many exclusion rows are live, and how many registrations were turned away in the last 30 days is NOT kept (nothing stored on a block).
 create or replace function public.admin_preview_exclusion_count() returns bigint
-language plpgsql stable security definer set search_path = public as $$
+language plpgsql stable security definer set search_path = public, pg_temp as $$
 begin perform public._pv_admin(); return (select count(*) from public.preview_attended where attended_at > now() - interval '6 months'); end $$;
 
 -- Funnel counts (no tracking, only rows that exist). One row per band: sessions held, registered, attended, asked for a trial, trial attended, enrolled.
 -- Counts of people are taken from registrations still stored (30 days / 6 months); older sessions are covered by preview_sessions.stats.
 create or replace function public.admin_preview_funnel() returns table (band text, sessions_held bigint, registered bigint, attended bigint, wants_trial bigint, trial_attended bigint, enrolled bigint)
-language plpgsql stable security definer set search_path = public as $$
+language plpgsql stable security definer set search_path = public, pg_temp as $$
 begin
   perform public._pv_admin();
   return query
@@ -369,33 +375,43 @@ begin
 end $$;
 
 -- PDPA deletion on request: removes the family's registrations AND their exclusion rows (so they may attend again; that is the cost of deleting).
-create or replace function public.admin_preview_delete_person(p_email text) returns int
-language plpgsql security definer set search_path = public as $$
+-- _pv_delete_person() is also what delete_my_data() (practice_submissions.sql) calls for a portal parent who deletes their account (R1-H1).
+create or replace function public._pv_delete_person(p_email text) returns int
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare h text := public._pv_h('email', public._pv_norm_email(p_email)); n int; m int;
 begin
-  perform public._pv_admin();
+  if h is null then return 0; end if;
   delete from public.preview_registrations where email_h = h; get diagnostics n = row_count;
   delete from public.preview_attended where email_h = h;       get diagnostics m = row_count;
   return n + m;
+end $$;
+create or replace function public.admin_preview_delete_person(p_email text) returns int
+language plpgsql security definer set search_path = public, pg_temp as $$
+begin
+  perform public._pv_admin();
+  return public._pv_delete_person(p_email);
 end $$;
 
 -- Retention: contact details 30 days after the class (6 months with marketing consent); exclusion hashes 7 months after attendance.
 -- Schedule with pg_cron, for example:  select cron.schedule('purge-preview', '30 3 * * *', $$select public.admin_purge_preview_internal()$$);
 create or replace function public.admin_purge_preview_internal() returns int
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare a int; b int;
 begin
+  update public.preview_registrations r set child_birth_year = null from public.preview_sessions s2     -- R1-M11: the readable birth year lives 30 days after the class at most
+   where s2.id = r.session_id and r.child_birth_year is not null and s2.starts_at < now() - interval '30 days';
   delete from public.preview_registrations where expires_at < now(); get diagnostics a = row_count;
   delete from public.preview_attended where expires_at < now();      get diagnostics b = row_count;
   return a + b;
 end $$;
 create or replace function public.admin_purge_preview() returns int
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 begin perform public._pv_admin(); return public.admin_purge_preview_internal(); end $$;
 
 -- ---------- grants ----------
 revoke all on function public._pv_norm_email(text), public._pv_norm_phone(text), public._pv_norm_name(text), public._pv_h(text, text),
-  public._pv_eligibility(text, text, text, text, int), public._pv_band_of(text), public._pv_admin(), public.admin_purge_preview_internal() from public, anon, authenticated;
+  public._pv_eligibility(text, text, text, text, int), public._pv_band_of(text), public._pv_admin(), public.admin_purge_preview_internal(),
+  public._pv_year_hs(int), public._pv_delete_person(text) from public, anon, authenticated;
 revoke all on function public.register_preview(uuid, text, text, text, text, int, text, boolean, boolean, boolean, boolean, boolean, text, text) from public, anon, authenticated;
 revoke all on function public.cancel_preview(uuid, text, text), public.preview_open_sessions() from public, anon, authenticated;
 revoke all on function public.admin_preview_create_session(timestamptz, text, int, int, text, text), public.admin_preview_list(uuid), public.admin_preview_decide(uuid, text),

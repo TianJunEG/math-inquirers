@@ -21,7 +21,7 @@ DEFS = [
     P('counterbox', 'sum_diff', 'Two numbers',
       'A box holds {S} red and blue counters. There are {D} more red counters than blue counters. How many red counters are in the box?',
       'If the two colours had the same number, each would be half of the total. Then move some across.',
-      'The red counters number {big} and the blue counters number {small}. They add to {S} and differ by {D}. So there are {ans} red counters.',
+      'The red counters number {big} and the blue counters number {small}. They add to {S} and differ by {D}. So the number of red counters is {ans}.',
       p=dict(S=56, D=12, ask='larger'), unit='counters', sub='bar_model.sum_difference'),
     P('twobags', 'bond_pairs', 'Pairs that make a total',
       'A baker puts {total} buns into two bags, with at least 1 bun in each bag. The bags look the same, so 5 and 19 is the same split as 19 and 5. How many different splits are there?',

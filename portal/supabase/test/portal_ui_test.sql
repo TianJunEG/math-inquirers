@@ -35,18 +35,18 @@ do $$ begin
   assert (select count(*) from public.list_ext_prices() where product_id = 'ext-l4-online') = 0, 'inactive price not listed';
   assert (select count(*) from public.list_ext_prices() where product_id = 'ext-l5-online') = 0, 'unset price: no row = price coming soon';
   assert pg_temp.fails('select * from public.ext_prices', 'permission denied'), 'table closed';
-  assert pg_temp.fails($q$select public.add_child_profile('x', 1, '1234', 2020)$q$), 'anon can not add a child';
+  assert pg_temp.fails($q$select public.add_child_profile('x', 1, '7391', 2020)$q$), 'anon can not add a child';
 end $$;
 reset role;
 
 -- ===== 2. parent A: two children, birth year optional and checked =====
 set role authenticated; select set_config('request.jwt.claim.sub','11110000-0000-0000-0000-00000000aa01',false);
 do $$ declare yr int := extract(year from now())::int; k uuid; l uuid; begin
-  assert pg_temp.fails(format('select public.add_child_profile(%L, 2, %L, %s)', 'Old', '1234', yr - 40), 'bad_birth_year'), 'too old';
-  assert pg_temp.fails(format('select public.add_child_profile(%L, 2, %L, %s)', 'Baby', '1234', yr), 'bad_birth_year'), 'too young';
+  assert pg_temp.fails(format('select public.add_child_profile(%L, 2, %L, %s)', 'Old', '7391', yr - 40), 'bad_birth_year'), 'too old';
+  assert pg_temp.fails(format('select public.add_child_profile(%L, 2, %L, %s)', 'Baby', '7391', yr), 'bad_birth_year'), 'too young';
   assert pg_temp.fails(format('select public.add_child_profile(%L, 2, %L)', 'Short', '12'), 'pin_format'), 'PIN rules of add_child still apply';
-  k := public.add_child_profile('Kai', 2, '1234', yr - 8);
-  l := public.add_child_profile('Lia', 2, '2345');
+  k := public.add_child_profile('Kai', 2, '7391', yr - 8);
+  l := public.add_child_profile('Lia', 2, '7142');
   assert (select birth_year from public.children where id = k) = yr - 8, 'birth year saved, readable by the parent';
   assert (select birth_year from public.children where id = l) is null, 'birth year is optional';
   perform public.update_child_birth_year(l, yr - 6);
@@ -61,7 +61,7 @@ reset role;
 -- ===== 3. parent B: enrolled in L2A (live group family), one child =====
 set role authenticated; select set_config('request.jwt.claim.sub','11110000-0000-0000-0000-00000000bb02',false);
 do $$ declare m uuid; begin
-  m := public.add_child_profile('Max', 2, '9999', null);
+  m := public.add_child_profile('Max', 2, '1873', null);
   perform public.record_consents('{"contact":true,"terms":true,"recording":true,"childs_work":true,"online_practice":true}', 'tui', 'pui');
   perform public.enrol_child(m, 'L2A');
 end $$;
@@ -107,7 +107,7 @@ reset role;
 insert into auth.users (id, email) values ('11110000-0000-0000-0000-00000000cc03','uic@example.com');
 set role authenticated; select set_config('request.jwt.claim.sub','11110000-0000-0000-0000-00000000cc03',false);
 do $$ declare c uuid; begin
-  c := public.add_child_profile('Cy', 3, '1234');
+  c := public.add_child_profile('Cy', 3, '7391');
   perform public.record_consents('{"contact":true,"terms":true,"book_delivery":true}', 'tui', 'pui');
   assert pg_temp.fails(format('select public.create_ext_order(%L, 3, %L, %L, %L, %L)', c, 'both', 'C', '1 Road', '123456'), 'consents_missing:online_practice'), 'both needs online_practice';
   perform public.create_ext_order(c, 3, 'workbook', 'C', '1 Road', '123456', null);   -- ext-l3-workbook has no price yet
@@ -152,9 +152,9 @@ create temp table utok (who text, token text);
 grant all on utok to anon, authenticated, service_role;
 set role anon; select set_config('request.jwt.claim.sub','',false);
 do $$ begin
-  insert into utok select 'kai', token from public.child_start_session((select ca from uids), 'Kai', '1234');
-  insert into utok select 'lia', token from public.child_start_session((select ca from uids), 'Lia', '2345');
-  insert into utok select 'max', token from public.child_start_session((select cb from uids), 'Max', '9999');
+  insert into utok select 'kai', token from public.child_start_session((select ca from uids), 'Kai', '7391');
+  insert into utok select 'lia', token from public.child_start_session((select ca from uids), 'Lia', '7142');
+  insert into utok select 'max', token from public.child_start_session((select cb from uids), 'Max', '1873');
   assert (select count(*) from utok) = 3, 'three sessions';
 end $$;
 do $$ declare k jsonb; l jsonb; m jsonb; begin

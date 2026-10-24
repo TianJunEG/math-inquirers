@@ -44,7 +44,7 @@ with sync_playwright() as pw:
     errors = []; external = []
     page.on('pageerror', lambda e: errors.append(str(e)))
     page.on('console', lambda m: errors.append(m.text) if m.type == 'error' and 'Failed to load resource' not in m.text else None)
-    page.on('request', lambda r: external.append(r.url) if not r.url.startswith(BASE) and not r.url.startswith('data:') else None)
+    page.on('request', lambda r: external.append(r.url) if not r.url.startswith(BASE) and not r.url.startswith('data:') and not r.url.startswith('https://checkout.stripe.com/') else None)
     def overflow(): return page.evaluate('document.documentElement.scrollWidth - document.documentElement.clientWidth')
 
     # --- signed-out ---
@@ -67,15 +67,15 @@ with sync_playwright() as pw:
         expect(page.locator('.msg.err')).to_contain_text('4 to 6 digits')
     check('PIN must be 4-6 digits', add_child_bad_pin)
     def add_child():
-        page.fill('#cname', 'Mia'); page.select_option('#clevel', '1'); page.fill('#cpin', '1234'); page.get_by_role('button', name='Add child').click()
+        page.fill('#cname', 'Mia'); page.select_option('#clevel', '1'); page.fill('#cpin', '7391'); page.get_by_role('button', name='Add child').click()
         expect(page.locator('[data-child]')).to_have_count(1); expect(page.locator('[data-child]')).to_contain_text('Mia')
     check('add child', add_child)
     def dup():
-        page.fill('#cname', 'mia'); page.fill('#cpin', '4321'); page.get_by_role('button', name='Add child').click()
+        page.fill('#cname', 'mia'); page.fill('#cpin', '9152'); page.get_by_role('button', name='Add child').click()
         expect(page.locator('.msg.err')).to_contain_text('already have a child')
     check('duplicate name rejected', dup)
     def xss():
-        page.fill('#cname', '<img src=x onerror=window.__x=1>'); page.select_option('#clevel', '2'); page.fill('#cpin', '5555'); page.get_by_role('button', name='Add child').click()
+        page.fill('#cname', '<img src=x onerror=window.__x=1>'); page.select_option('#clevel', '2'); page.fill('#cpin', '3584'); page.get_by_role('button', name='Add child').click()
         expect(page.locator('[data-child]')).to_have_count(2)
         assert page.evaluate('window.__x') is None and page.locator('[data-child] img').count() == 0
     check('child name is rendered as text (no HTML injection)', xss)
@@ -110,13 +110,14 @@ with sync_playwright() as pw:
         MODE[0] = 'stripe'
         seen = []
         def fake(r):
-            seen.append(r.request.post_data_json); r.fulfill(status=200, content_type='application/json', body=json.dumps({'url': BASE + '/portal/stripe-fake-checkout'}))
+            seen.append(r.request.post_data_json); r.fulfill(status=200, content_type='application/json', body=json.dumps({'url': 'https://checkout.stripe.com/c/pay/cs_test_fake1'}))
         page.route('**/api/stripe-create-checkout', fake)
+        page.route('https://checkout.stripe.com/**', lambda r: r.fulfill(status=200, content_type='text/html', body='<p>stripe stand-in</p>'))   # only Stripe's own host may be navigated to
         page.goto(BASE + '/portal/?cancelled=x')
         expect(page.locator('[data-return="cancelled"]')).to_contain_text('nothing was charged')
         expect(page.locator('[data-ref]')).to_have_count(0)            # no manual PayNow reference in stripe mode
         page.locator('[data-pay-online]').click()
-        page.wait_for_url('**/stripe-fake-checkout'); assert len(seen) == 1 and 'enrolment_id' in seen[0], seen
+        page.wait_for_url('https://checkout.stripe.com/**'); assert len(seen) == 1 and 'enrolment_id' in seen[0], seen
         page.goto(BASE + '/portal/?paid=x&session_id=cs_test')
         expect(page.locator('[data-return="paid"]')).to_contain_text('Stripe')
         MODE[0] = 'paynow_manual'; page.unroute('**/api/stripe-create-checkout'); page.goto(BASE + '/portal/')
@@ -143,13 +144,13 @@ with sync_playwright() as pw:
     check('child wrong PIN gives generic error', child_wrong)
     def child_needs_online_consent():
         # a live-group family that has not ticked the online practice agreement: sign-in is refused quietly (child_start_session needs it)
-        cp.fill('#code', fam); cp.fill('#name', 'Mia'); cp.fill('#pin', '1234'); cp.get_by_role('button', name='Sign in').click()
+        cp.fill('#code', fam); cp.fill('#name', 'Mia'); cp.fill('#pin', '7391'); cp.get_by_role('button', name='Sign in').click()
         expect(cp.locator('.msg.err')).to_contain_text('did not work'); assert cp.url.endswith('/portal/child/')
         page.check('#consent-online_practice'); page.click('#save-consents'); expect(page.locator('.msg.ok')).to_contain_text('Agreements saved')
     check('child sign-in needs the online practice agreement', child_needs_online_consent)
     def child_ok():
         cp.goto(BASE + '/portal/child/')   # a fresh page reads the saved agreements (the mock keeps one copy of the data per page load)
-        cp.fill('#code', fam.lower()); cp.fill('#name', ' mia '); cp.fill('#pin', '1234'); cp.get_by_role('button', name='Sign in').click()
+        cp.fill('#code', fam.lower()); cp.fill('#name', ' mia '); cp.fill('#pin', '7391'); cp.get_by_role('button', name='Sign in').click()
         expect(cp.locator('#hello')).to_have_text('Hello, Mia!'); assert cp.url.endswith('/portal/practice/')
         expect(cp.locator('#nothing-open')).to_be_visible()      # a live-group child with no published unit yet: nothing to open, no links
     check('child name+PIN leads to the practice list', child_ok)
@@ -210,7 +211,7 @@ with sync_playwright() as pw:
     def full_group():
         p2 = ctx.new_page(); p2.goto(BASE + '/portal/')
         p2.get_by_role('button', name='Sign up').click(); p2.fill('#fullname', 'Fam Two'); p2.fill('#email', 'two@example.com'); p2.fill('#password', 'longenough2'); p2.get_by_role('button', name='Create parent account').click()
-        p2.fill('#cname', 'Zoe'); p2.select_option('#clevel', '2'); p2.fill('#cpin', '9999'); p2.get_by_role('button', name='Add child').click()
+        p2.fill('#cname', 'Zoe'); p2.select_option('#clevel', '2'); p2.fill('#cpin', '1873'); p2.get_by_role('button', name='Add child').click()
         opt = p2.locator('[data-enrol-for] label.opt'); expect(opt.first).to_contain_text('Full'); expect(opt.first.locator('input')).to_be_disabled()
     check('full group cannot be chosen', full_group)
     def magic():

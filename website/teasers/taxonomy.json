@@ -431,12 +431,12 @@
     "angle"
    ],
    "where": {
-    "kind": [
-     "sum"
-    ],
     "total": [
      180,
      360
+    ],
+    "kind": [
+     "sum"
     ]
    },
    "merged_from": [
@@ -567,12 +567,6 @@
    "kinds": [
     "times_as_many"
    ],
-   "where": {
-    "has": [
-     "total",
-     "diff"
-    ]
-   },
    "merged_from": [
     "bar_model.times_as_many",
     "bar_model.times_difference"
@@ -1129,10 +1123,7 @@
    "name": "make the smallest or largest number (also odd or even) from digit cards",
    "levels": [
     1,
-    2,
-    3,
-    4,
-    5
+    2
    ],
    "kinds": [
     "digits_extreme"
@@ -1142,7 +1133,9 @@
      "largest",
      "smallest",
      "smallest_even",
-     "smallest_odd"
+     "smallest_odd",
+     "largest_even",
+     "largest_odd"
     ]
    },
    "merged_from": [
@@ -1257,17 +1250,13 @@
   },
   "digit_puzzles.sum_of_all_digits": {
    "name": "the sum of all the digits written when counting from one number to another",
-   "levels": [
-    3,
-    4,
-    5,
-    6
-   ],
+   "levels": [],
    "kinds": [
     "digit_sum_total"
    ],
    "cite": "MOE P3 NA Whole Numbers (numbers to 10 000, place value), p.35; Problem solving: look for a pattern, p.13",
-   "round": 2
+   "round": 2,
+   "retired": "same structure as extension l5_u01 (add all the digits written from 1 to 999); replaced by new structures"
   },
   "division.leftover": {
    "name": "what is left over after sharing equally",
@@ -1705,10 +1694,7 @@
   },
   "growing_pattern.stick_row": {
    "name": "sticks needed for a row of n joined squares or triangles (add the same number each time)",
-   "levels": [
-    3,
-    4
-   ],
+   "levels": [],
    "kinds": [
     "matchsticks"
    ],
@@ -1717,7 +1703,8 @@
      "sq",
      "tri"
     ]
-   }
+   },
+   "retired": "same structure as catalogue EX-PAT-1; replaced by new structures"
   },
   "guess_check.heads_and_legs": {
    "name": "animals with two kinds of legs: how many of each from the heads and legs",
@@ -2005,16 +1992,11 @@
   },
   "moves.climb_and_slip": {
    "name": "climbs up by day and slips back by night: on which day does it reach the top",
-   "levels": [
-    2,
-    3,
-    4,
-    5,
-    6
-   ],
+   "levels": [],
    "kinds": [
     "climb_slip"
-   ]
+   ],
+   "retired": "same structure and story as our own hp question bank G5 and extension l1_u05; replaced by new structures"
   },
   "moves.ups_and_downs": {
    "name": "where you end, or the highest or lowest point reached, after ups and downs",
@@ -2114,6 +2096,12 @@
      "final"
     ],
     "start": [
+     -12,
+     -11,
+     -10,
+     -9,
+     -8,
+     -7,
      -6,
      -5,
      -4,
@@ -2651,7 +2639,6 @@
   "rate.work_and_time": {
    "name": "the same job with more or fewer workers: how many days",
    "levels": [
-    4,
     5,
     6
    ],

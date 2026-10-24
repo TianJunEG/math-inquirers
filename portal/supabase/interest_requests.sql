@@ -52,7 +52,7 @@ create or replace function public.submit_interest_request(
   p_first_name text, p_whatsapp text, p_email text, p_note text,
   p_consent boolean, p_consent_version text, p_hp text default null
 ) returns jsonb
-language plpgsql volatile security definer set search_path = public as $$
+language plpgsql volatile security definer set search_path = public, pg_temp as $$
 declare
   v_wa    text;
   v_em    text;
@@ -112,7 +112,7 @@ end $$;
 -- Tally: one row per (level, kind, key). kind = 'slot' (a placeholder slot id), 'window' (a day/time chip) or 'other' (free text given).
 -- Each request counts once per distinct key. key = '*' with kind 'total' gives the number of requests for that level.
 create or replace function public.admin_interest_tally() returns table (level smallint, kind text, key text, n bigint)
-language plpgsql stable security definer set search_path = public as $$
+language plpgsql stable security definer set search_path = public, pg_temp as $$
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
   return query
@@ -129,7 +129,7 @@ end $$;
 create or replace function public.admin_list_interest_requests() returns table (
   id uuid, created_at timestamptz, expires_at timestamptz, level smallint, age_band text, slots text[], windows text[], other_time text,
   parent_first_name text, contact_whatsapp text, contact_email text, note text, status text)
-language plpgsql stable security definer set search_path = public as $$
+language plpgsql stable security definer set search_path = public, pg_temp as $$
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
   return query
@@ -139,7 +139,7 @@ begin
 end $$;
 
 create or replace function public.admin_set_interest_status(p_id uuid, p_status text) returns void
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
   if p_status not in ('new','contacted','closed') then raise exception 'invalid_input' using errcode = '22023'; end if;
@@ -148,7 +148,7 @@ end $$;
 
 -- Deletion on request (PDPA) or when a parent asks to be removed.
 create or replace function public.admin_delete_interest_request(p_id uuid) returns void
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
   delete from public.interest_requests where id = p_id;
@@ -158,7 +158,7 @@ end $$;
 -- or schedule it (Supabase: Database > Extensions > pg_cron), for example:
 --   select cron.schedule('purge-interest-requests', '15 3 * * *', $$delete from public.interest_requests where expires_at < now()$$);
 create or replace function public.admin_purge_expired_interest_requests() returns int
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare n int;
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;

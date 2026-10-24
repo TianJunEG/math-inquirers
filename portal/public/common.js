@@ -39,6 +39,11 @@
     level_mismatch: 'That group is for a different level.',
     already_enrolled: 'This child already has a place.',
     pin_format: 'The PIN must be 4 to 6 digits.',
+    pin_weak: 'That PIN is too easy to guess (for example 1234, 0000, the same digit repeated, or a year). Please choose another 4 to 6 digits.',
+    has_online_access: 'This child has online access that was paid for. Removing the child would end it. You can move the access to a brother or sister, or confirm that you want to give it up.',
+    target_has_access: 'That brother or sister already has online access to the same book level, so it cannot be moved there.',
+    confirmation_needed: 'Please confirm first.',
+    too_many_orders: 'You have made quite a few orders in the last hour. Please wait a little while, then try again.',
     too_many_children: 'You can add up to 6 children.',
     level_locked_by_enrolment: 'The level cannot change while the child has a place in a group. Cancel the place first.',
     cancel_enrolment_first: 'Cancel this child\'s place first.',
@@ -51,6 +56,7 @@
     bad_address: 'Please check the delivery details. We post to Singapore addresses only, and the postal code has 6 digits.',
     bad_birth_year: 'Please choose a birth year from the list, or leave it blank.',
     cannot_cancel_order: 'That order cannot be cancelled here. If it is already paid, please message us.',
+    bad_input: 'Something in that form was not accepted. Please reload the page and try again.',
     too_many: 'You have sent a few requests today already. We will reply soon, so please wait a day before sending another.',
     not_found: 'We could not find that. Please reload the page and try again.'
   };
@@ -73,6 +79,11 @@
     if (/jwt|expired|not authenticated/i.test(m)) return 'Please log in again.';
     return GENERIC;
   }
+  // R1-L10: if the owner has not set PORTAL_PAYNOW_TO at build time the config still says "(to confirm)"; do not show that to a parent as if it were a PayNow number.
+  function paynowLine(cents) {
+    var to = String(CFG.PAYNOW_TO || ''), real = to && !/to confirm|PAYNOW_TO/i.test(to);
+    return real ? 'Pay ' + money(cents) + ' by PayNow to ' + to + '.' : 'Pay ' + money(cents) + ' by PayNow. Message us on WhatsApp for the PayNow details and quote the reference below.';
+  }
   function money(cents) { return 'S$' + (cents / 100).toFixed(2); }
   function sessionsText(sessions) {
     return (sessions || []).map(function (s) { return s.day + ' ' + s.start + '-' + s.end; }).join(' and ');
@@ -80,8 +91,49 @@
   function fmtDate(iso) {
     try { return new Date(iso).toLocaleString('en-SG', { timeZone: 'Asia/Singapore', dateStyle: 'medium', timeStyle: 'short' }); } catch (e) { return iso; }
   }
+  // A result message. tabindex -1 lets it take keyboard focus (focusResult below); role=alert for errors, status for the rest, so it is announced.
   function notice(box, kind, text) {
-    clear(box); if (text) box.appendChild(h('p', { class: 'msg ' + kind, role: kind === 'err' ? 'alert' : 'status', text: text }));
+    clear(box); if (text) box.appendChild(h('p', { class: 'msg ' + kind, role: kind === 'err' ? 'alert' : 'status', tabindex: -1, text: text }));
+  }
+  /* ---------- keyboard focus after an action (the pages redraw by clearing the container, which drops focus to <body>) ---------- */
+  // focusKey() remembers WHICH control had focus (id, a data-* attribute, or tag + visible text); focusRestore() puts focus back on its twin after the redraw.
+  function focusKey(root) {
+    var a = document.activeElement; if (!a || a === document.body || (root && !root.contains(a))) return null;
+    var k = { tag: a.tagName, id: a.id || '', text: (a.textContent || '').trim().slice(0, 60), name: a.getAttribute('name') || '', value: a.getAttribute('value') || '' };
+    [].some.call(a.attributes, function (at) { if (/^data-/.test(at.name)) { k.data = [at.name, at.value]; return true; } });
+    return k;
+  }
+  function focusRestore(root, k) {
+    if (!k || !root) return;
+    var n = null;
+    if (k.id) n = document.getElementById(k.id);
+    if (!n && k.data) n = root.querySelector('[' + k.data[0] + '="' + String(k.data[1]).replace(/"/g, '') + '"]');
+    if (!n) n = [].filter.call(root.querySelectorAll(k.tag.toLowerCase()), function (e) { return (e.textContent || '').trim().slice(0, 60) === k.text && (e.getAttribute('name') || '') === k.name && (e.getAttribute('value') || '') === k.value; })[0];
+    if (n) try { n.focus(); } catch (e) {}
+  }
+  // After an action: move focus to the result message (it is announced and the person lands where the news is); with no message, to the page heading.
+  function focusResult(root) {
+    root = root || document;
+    var m = root.querySelector('.msg.err[role], .msg.warn[role], .msg.ok[role]');
+    var t = m || root.querySelector('h1');
+    if (!t) return;
+    if (!t.hasAttribute('tabindex')) t.setAttribute('tabindex', '-1');
+    try { t.focus(); if (m && t.scrollIntoView) t.scrollIntoView({ block: 'nearest' }); } catch (e) {}
+  }
+  // A polite live region that is never redrawn, for news that is not a message (e.g. "signed out because you were away").
+  function announce(text) {
+    var r = document.getElementById('mi-live');
+    if (!r) { r = h('div', { id: 'mi-live', class: 'sr', 'aria-live': 'polite', role: 'status' }); document.body.appendChild(r); }
+    r.textContent = ''; setTimeout(function () { r.textContent = text; }, 30);
+  }
+  // The payment page address must be Stripe's own: a tampered /api reply must not be able to send the parent anywhere else.
+  function stripeUrl(u) {
+    try { var x = new URL(String(u)); return x.protocol === 'https:' && x.hostname === 'checkout.stripe.com' && !x.username && !x.password && (!x.port || x.port === '443') ? x.href : null; } catch (e) { return null; }
+  }
+  function goToStripe(u) {
+    var ok = stripeUrl(u);
+    if (!ok) throw say('Could not start the payment. Nothing was charged. Please try again.');
+    location.href = ok;   // top-level redirect to Stripe Checkout; card details never touch our pages
   }
   function themeInit() {
     try { var t = localStorage.getItem('mi-theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
@@ -132,5 +184,6 @@
   async function rpc(name, args) { var r = await sb().rpc(name, args || {}); if (r.error) throw r.error; return r.data; }
   function dayText(iso) { try { return new Date(iso).toLocaleDateString('en-SG', { timeZone: 'Asia/Singapore', day: 'numeric', month: 'short', year: 'numeric' }); } catch (e) { return iso; } }
   window.MI = { rpc: rpc, CONSENTS: CONSENTS, FORMATS: FORMATS, FORMAT_SHORT: FORMAT_SHORT, waLink: waLink, unitUrl: unitUrl, unitLabel: unitLabel, dayText: dayText, stack: stack, say: say, h: h, mount: mount, clear: clear, configured: configured, sb: sb, errText: errText, money: money, sessionsText: sessionsText,
-                fmtDate: fmtDate, notice: notice, header: header, CFG: CFG, VERSIONS: VERSIONS };
+                fmtDate: fmtDate, paynowLine: paynowLine, notice: notice, header: header, CFG: CFG, VERSIONS: VERSIONS,
+                focusKey: focusKey, focusRestore: focusRestore, focusResult: focusResult, announce: announce, stripeUrl: stripeUrl, goToStripe: goToStripe };
 })();

@@ -2,7 +2,8 @@
 """Assemble the deployable static site into website/dist/ .
 
     python3 lp_build.py && python3 level_pages.py && python3 shop_build.py && (cd hub && python3 build.py)   # regenerate the page sources first
-    python3 build_site.py [--base https://example.com] [--with-portal] [--out DIR]   # --with-portal also copies ../portal/public to dist/portal/
+    python3 build_site.py [--base https://example.com] [--with-portal] [--practice-dir DIR] [--out DIR]   # --with-portal also copies ../portal/public to dist/portal/
+                                                                                                     # --practice-dir DIR copies DIR to dist/practice/ and moves inline scripts into files (strict CSP)
 
 Takes the four page fragments (sign-up, parent questions hub, Weekly Dose online, referral is left out)
 and wraps each in a full HTML document, self-hosts the Fredoka and Nunito Sans fonts (no request to Google),
@@ -26,6 +27,34 @@ BASE = (sys.argv[sys.argv.index('--base') + 1] if '--base' in sys.argv else '').
 # PRIVATE PREVIEW (default until launch): ask search engines not to index or archive the site (robots.txt Disallow, X-Robots-Tag header, robots meta).
 # Build with --public (or MI_PUBLIC=1) at launch to allow indexing and write the sitemap. This is only a stopgap: it does not stop anyone who has the link.
 PUBLIC = '--public' in sys.argv or os.environ.get('MI_PUBLIC') == '1'
+# Practice pages (/practice/*) read the child's sign-in token from sessionStorage and send answers to the Worker. They get their OWN strict headers (see main()):
+# script-src 'self' only, so a script injected into any page cannot run, plus connect-src 'self' and, if the Worker lives on another origin, that one origin.
+PRACTICE_DIR = os.path.abspath(sys.argv[sys.argv.index('--practice-dir') + 1]) if '--practice-dir' in sys.argv else None
+PRACTICE_ORIGIN = os.environ.get('PRACTICE_WORKER_ORIGIN', '').rstrip('/')
+if not re.fullmatch(r'https://[a-z0-9.-]+(:[0-9]{2,5})?', PRACTICE_ORIGIN):
+    PRACTICE_ORIGIN = ''
+
+INLINE_SCRIPT = re.compile(r'<script(?![^>]*\bsrc=)(?![^>]*\btype=["\'](?!text/javascript|module))([^>]*)>(.*?)</script>', re.S | re.I)
+
+def externalize_inline_scripts(root):
+    """Strict CSP (script-src 'self') blocks <script>...</script> bodies. For every HTML file under root, move each inline script into a file next to the page
+    (mi-inline-1.js, mi-inline-2.js ...) and point a <script src> at it, in the same position, so execution order is unchanged. Returns the number of scripts moved."""
+    n = 0
+    for dp, _, files in os.walk(root):
+        for f in files:
+            if not f.endswith('.html'):
+                continue
+            p = os.path.join(dp, f); page = open(p, encoding='utf-8').read(); k = [0]
+            def move(m):
+                if not m.group(2).strip():
+                    return m.group(0)
+                k[0] += 1; name = 'mi-inline-%d.js' % k[0]
+                open(os.path.join(dp, name), 'w', encoding='utf-8').write(m.group(2).strip() + '\n')
+                return '<script src="%s"></script>' % name
+            new = INLINE_SCRIPT.sub(move, page)
+            if k[0]:
+                open(p, 'w', encoding='utf-8').write(new); n += k[0]
+    return n
 
 PAGES = [  # (source, output path, title, description)
     ('mi_signup.html', 'index.html', 'Math Inquirers Holiday Program',
@@ -134,22 +163,33 @@ def main():
         open(os.path.join(DIST, 'sitemap.xml'), 'w').write(
             '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + urls + '</urlset>\n')
     # _headers / _redirects work on Cloudflare Pages and Netlify
-    sec = ('  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  X-Frame-Options: DENY\n'
+    # Cloudflare JOINS the same header from every matching rule, so a header that differs between sections (Referrer-Policy) is NOT in the /* block: each
+    # section (site pages, /portal/*, /practice/*) states its own once.
+    sec = ('  X-Content-Type-Options: nosniff\n  X-Frame-Options: DENY\n'
            "  Permissions-Policy: camera=(), microphone=(), geolocation=()\n")
+    referrer = '  Referrer-Policy: strict-origin-when-cross-origin\n'
     if not PUBLIC:
         sec += '  X-Robots-Tag: noindex, nofollow, noarchive\n'
     site_csp = ("  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self' https://wa.me; base-uri 'self'; frame-ancestors 'none'\n")
     if INTEREST_PORTAL:   # the site pages (not only /portal/*) may POST the interest form to the Supabase origin
         site_csp = site_csp.replace("connect-src 'self';", "connect-src 'self' %s;" % SB_URL)
+    # Cloudflare joins the same header from every matching rule, so two CSPs would BOTH apply. /portal/* and /practice/* therefore must not
+    # match the site-wide CSP rule: the common security headers stay on /*, the site CSP (and Referrer-Policy) is listed per site path.
+    hdr = '/*\n' + sec
+    tops = sorted({o.split('/')[0] for _, o, _, _ in PAGES if o != 'index.html'} | {'syllabus'})
+    for pth in ['/', '/index.html', '/404.html'] + [p for t in tops for p in ('/%s' % t, '/%s/*' % t)]:
+        hdr += pth + '\n' + referrer + site_csp
+    # /practice/*: the child's sign-in token is read here and answers are sent from here. Strict: no inline script (script-src 'self'; the generators' inline
+    # config script is moved to a file by externalize_inline_scripts), no object/embed, no framing, no form posts off-site, connect only to this origin (+ the
+    # Worker origin if it is a different one: PRACTICE_WORKER_ORIGIN), never send a Referer, never cache (a shared tablet must not keep a page that held a token).
+    # style-src keeps 'unsafe-inline' because the pages carry inline style attributes (no script can come from a style).
+    practice_hdr = ("  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; "
+                    "connect-src 'self'%s; object-src 'none'; form-action 'self'; base-uri 'self'; frame-ancestors 'none'\n"
+                    "  Referrer-Policy: no-referrer\n  Cache-Control: no-store\n") % ((' ' + PRACTICE_ORIGIN) if PRACTICE_ORIGIN else '')
+    hdr += '/practice\n' + practice_hdr + '/practice/*\n' + practice_hdr
     if not WITH_PORTAL:
-        hdr = '/*\n' + sec + site_csp + '/fonts/*\n  Cache-Control: public, max-age=31536000, immutable\n'
+        hdr += '/fonts/*\n  Cache-Control: public, max-age=31536000, immutable\n'
     else:
-        # Cloudflare joins the same header from every matching rule, so two CSPs would BOTH apply. The portal therefore must not
-        # match the site-wide CSP rule: security headers stay on /*, the site CSP is listed per non-portal path.
-        hdr = '/*\n' + sec
-        tops = sorted({o.split('/')[0] for _, o, _, _ in PAGES if o != 'index.html'} | {'syllabus'})
-        for pth in ['/', '/index.html', '/404.html'] + [p for t in tops for p in ('/%s' % t, '/%s/*' % t)]:
-            hdr += pth + '\n' + site_csp
         origin = os.environ.get('SUPABASE_URL', '').rstrip('/')
         origin = origin if re.fullmatch(r'https://[a-z0-9-]+\.supabase\.co', origin) else 'https://*.supabase.co'
         # Stripe needs no entry: the Pay button calls our own /api/stripe-create-checkout ('self') and then does a top-level navigation
@@ -157,11 +197,16 @@ def main():
         # not Stripe.js or an embedded element, so js.stripe.com is NOT allowed. Card/PayNow details never touch our pages.
         # If an embedded Stripe element is ever added, script-src/frame-src/connect-src must be widened deliberately (js.stripe.com, api.stripe.com).
         hdr += ('/portal/*\n  Content-Security-Policy: default-src \'self\'; script-src \'self\'; style-src \'self\' \'unsafe-inline\'; img-src \'self\' data:; font-src \'self\'; '
-                'connect-src \'self\' %s; form-action \'self\'; base-uri \'self\'; frame-ancestors \'none\'\n  Cache-Control: no-store\n' % origin)
+                'connect-src \'self\' %s; form-action \'self\'; base-uri \'self\'; frame-ancestors \'none\'\n  Referrer-Policy: strict-origin-when-cross-origin\n  Cache-Control: no-store\n' % origin)
         hdr += '/fonts/*\n  Cache-Control: public, max-age=31536000, immutable\n'
     if TH.enabled():   # per-level, per-month teaser files are static JSON; one hour of caching so a new month shows up promptly
         hdr += '/teasers/*\n  Cache-Control: public, max-age=3600\n'
     open(os.path.join(DIST, '_headers'), 'w').write(hdr)
+    if PRACTICE_DIR:   # optional: bring the built practice pages into the site and make them satisfy the strict CSP above
+        shutil.copytree(PRACTICE_DIR, os.path.join(DIST, 'practice'))
+        todo.append(('practice/', 'Practice pages copied from %s; %d inline script(s) moved into mi-inline-N.js files so script-src \'self\' holds' % (PRACTICE_DIR, externalize_inline_scripts(os.path.join(DIST, 'practice')))))
+    else:
+        todo.append(('practice/', "_headers gives /practice/* a strict CSP (script-src 'self'). The practice generators currently write one inline <script>window.MI_LESSON=...</script> per page, which that CSP blocks: build with --practice-dir DIR (moves it into a file), or change the generators, before the practice pages go live"))
     if WITH_PORTAL:
         shutil.copytree(PORTAL_SRC, os.path.join(DIST, 'portal'))
         url, key = os.environ.get('SUPABASE_URL', ''), os.environ.get('SUPABASE_ANON_KEY', '')

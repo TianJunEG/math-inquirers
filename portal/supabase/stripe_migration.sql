@@ -39,7 +39,7 @@ drop function if exists public.service_mark_hitpay_paid(uuid, text, text, int);
 create or replace function public.service_begin_payment(p_enrolment uuid, p_parent uuid)
 returns table (payment_id uuid, amount_cents int, currency text, group_fee_cents int, group_name text, reference text,
                payment_status text, enrolment_status text, parent_email text, parent_name text, attempt int)
-language sql stable security definer set search_path = public as $$
+language sql stable security definer set search_path = public, pg_temp as $$
   select p.id, p.amount_cents, p.currency, g.fee_cents, g.name, p.reference, p.status, e.status, pa.email, pa.full_name, p.provider_attempt
     from public.enrolments e
     join public.payments p on p.enrolment_id = e.id
@@ -50,7 +50,7 @@ $$;
 
 -- Remember which Checkout Session belongs to the payment. Only touches a payment that is still pending.
 create or replace function public.service_attach_session(p_payment uuid, p_session_id text) returns void
-language sql security definer set search_path = public as $$
+language sql security definer set search_path = public, pg_temp as $$
   update public.payments set method = 'stripe', provider_ref = p_session_id, updated_at = now()
    where id = p_payment and status = 'pending';
 $$;
@@ -63,7 +63,7 @@ $$;
 --    recorded as paid and the owner decides: re-open the seat if it is still free, or refund.
 -- A mismatch changes nothing: the owner sees it in the Cloudflare log and handles it by hand.
 create or replace function public.service_mark_paid(p_payment uuid, p_session_id text, p_payment_intent text, p_amount_cents int, p_currency text)
-returns text language plpgsql security definer set search_path = public as $$
+returns text language plpgsql security definer set search_path = public, pg_temp as $$
 declare pay public.payments; est text;
 begin
   select p.* into pay from public.payments p where p.id = p_payment for update;
@@ -92,7 +92,7 @@ end $$;
 -- but the session reference is cleared and the retry counter moves on so the next attempt gets a fresh idempotency key.
 -- Returns: reset | ignored (not pending, or a different/newer session) | not_found
 create or replace function public.service_mark_session_failed(p_payment uuid, p_session_id text) returns text
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare pay public.payments;
 begin
   select p.* into pay from public.payments p where p.id = p_payment for update;
@@ -109,7 +109,7 @@ end $$;
 -- expire_unpaid_reservations(). Default 7 days: OWNER TO CONFIRM (docs/audit_final/open_owner_items.md). A payment that arrives afterwards
 -- is recorded and reported as paid_enrolment_cancelled (late payment), never silently lost.
 create or replace function public._expire_stale_reservations(p_group text default null, p_days int default 7) returns int
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare n int;
 begin
   with stale as (
@@ -126,10 +126,10 @@ begin
 end $$;
 
 create or replace function public.expire_unpaid_reservations(p_days int default 7) returns int
-language sql security definer set search_path = public as $$ select public._expire_stale_reservations(null, p_days); $$;
+language sql security definer set search_path = public, pg_temp as $$ select public._expire_stale_reservations(null, p_days); $$;
 
 create or replace function public.enrol_child(p_child uuid, p_group text) returns uuid
-language plpgsql security definer set search_path = public, extensions as $$
+language plpgsql security definer set search_path = public, extensions, pg_temp as $$
 declare uid uuid := public._require_parent(); ch public.children; g public.groups; eid uuid; ref text; tries int := 0; taken int; missing text;
 begin
   select * into ch from public.children where id = p_child and parent_id = uid;

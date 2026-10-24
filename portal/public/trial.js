@@ -8,11 +8,13 @@
   var SOURCES = ['book', 'post_purchase', 'after_submit', 'report', 'website', 'other'];
   var source = SOURCES.indexOf(q.get('from')) >= 0 ? q.get('from') : 'other';
   var TIMES = [['weekday-afternoon', 'Weekday afternoons'], ['weekday-evening', 'Weekday evenings'], ['weekend-morning', 'Weekend mornings'], ['weekend-afternoon', 'Weekend afternoons']];
-  var F = { child: q.get('child') || '', level: 0, times: {}, note: '', phone: '', ticks: {} }, D = { reqs: [], missing: false, done: false }, flashMsg = null, ready = false;
+  var F = { child: q.get('child') || '', level: 0, times: {}, note: '', phone: '', savePhone: false, ticks: {} }, D = { reqs: [], missing: false, done: false }, flashMsg = null, ready = false;
   var STATUS = { new: 'received', contacted: 'we have been in touch', attended: 'attended', enrolled: 'joined a class', declined: 'not going ahead', withdrawn: 'withdrawn' };
   function flash(kind, text) { flashMsg = text ? { kind: kind, text: text } : null; }
-  function draw(nodes) { M.clear(app); [].concat(nodes).forEach(function (n) { if (n) app.appendChild(n); }); }
-  async function run(fn, ok) { flash(null); try { await fn(); if (ok) flash('ok', ok); } catch (e) { flash('err', M.errText(e)); } await refresh(); }
+  // keep keyboard focus on the same control across a redraw (clearing the container would drop it to <body>)
+  function draw(nodes) { var k = M.focusKey(app); M.clear(app); [].concat(nodes).forEach(function (n) { if (n) app.appendChild(n); }); M.focusRestore(app, k); }
+  // after every action the result message (or the page heading) takes keyboard focus and is announced
+  async function run(fn, ok) { flash(null); try { await fn(); if (ok) flash('ok', ok); } catch (e) { flash('err', M.errText(e)); } await refresh(); M.focusResult(app); }
   function childById(id) { return S.children.filter(function (c) { return c.id === id; })[0]; }
 
   async function refresh() {
@@ -37,13 +39,18 @@
     flash(null);
     try {
       await P.saveConsents(got.items);
-      if (F.phone.trim() !== (S.parent.phone || '')) {
-        var u = await M.sb().from('parents').update({ phone: F.phone.trim() || null }).eq('id', S.parent.id); if (u.error) throw u.error;
+      // The account phone is changed only when there is none yet, or the parent ticked the box. Otherwise a different number typed here goes into this request's note only.
+      var typed = F.phone.trim(), note = F.note.trim();
+      if (typed !== (S.parent.phone || '')) {
+        if (!S.parent.phone || F.savePhone) {
+          var u = await M.sb().from('parents').update({ phone: typed || null }).eq('id', S.parent.id); if (u.error) throw u.error;
+        } else if (typed) note = (note ? note + ' | ' : '') + 'phone for this request: ' + typed;
       }
-      await M.rpc('request_trial', { p_child: F.child || null, p_level: F.level, p_preferred: prefs, p_note: F.note.trim() || null, p_source: source });
+      await M.rpc('request_trial', { p_child: F.child || null, p_level: F.level, p_preferred: prefs, p_note: note.slice(0, 300) || null, p_source: source });
       D.done = true; F.note = ''; F.times = {};
     } catch (e) { flash('err', M.errText(e)); }
     await refresh();
+    M.focusResult(app);
   }
 
   var lines = null;
@@ -61,7 +68,9 @@
           return h('label', { class: 'consent', for: 'time-' + t[0] }, h('input', { type: 'checkbox', id: 'time-' + t[0], checked: !!F.times[t[0]], onchange: function (e) { F.times[t[0]] = e.target.checked; } }), h('span', { text: t[1] }));
         }), h('p', { class: 'small muted', text: 'These are only wishes. We will talk to you about real times.' })),
       h('p', null, h('label', { for: 'trial-phone', text: 'Phone or WhatsApp (optional)' }), h('input', { type: 'tel', id: 'trial-phone', maxlength: 30, autocomplete: 'tel', value: F.phone, oninput: function (e) { F.phone = e.target.value; } }),
-        h('span', { class: 'small muted', text: 'We will reply to ' + S.parent.email + ' unless you add a number.' })),
+        h('span', { class: 'small muted', text: 'We will reply to ' + S.parent.email + ' unless you add a number.' }),
+        S.parent.phone ? h('span', { class: 'consent', style: 'margin-top:8px' }, h('input', { type: 'checkbox', id: 'trial-savephone', checked: F.savePhone, onchange: function (e) { F.savePhone = e.target.checked; } }),
+          h('label', { for: 'trial-savephone', class: 'inline', text: 'If I typed a different number, also change the phone saved on my account' })) : null),
       h('p', null, h('label', { for: 'trial-note', text: 'Anything you would like us to know? (optional, up to 300 characters)' }),
         h('textarea', { id: 'trial-note', maxlength: 300, rows: 3, oninput: function (e) { F.note = e.target.value; } }, F.note)),
       lines.missing.length || ['marketing_contact'].some(function (t) { return !P.granted(t); }) ? h('fieldset', { id: 'agree-box' }, h('legend', { text: 'Agreements' }), P.legalLinks(), lines.node,

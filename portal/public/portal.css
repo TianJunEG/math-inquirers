@@ -115,3 +115,22 @@ details.nextstep{margin:12px 0 0}details.nextstep>summary{cursor:pointer;font-we
 table.wide{min-width:560px}
 .preview-list{margin-top:8px}
 @media (max-width:640px){table.wide{min-width:0}}
+
+/* ---- round-1 audit fixes ---- */
+/* a long unbroken nickname (30 characters) must not push the page sideways at 320 or 375px: overflow-wrap is inherited, so every paragraph, list item and cell breaks a too-long word */
+main,.top{overflow-wrap:break-word}
+.btn,.pill,.msg,legend,label,.code,.sub,.brand span{overflow-wrap:anywhere}
+.btn{max-width:100%;white-space:normal}
+.row>*{min-width:0;max-width:100%}
+main,.card{min-width:0}
+/* a result message can take keyboard focus after an action; show where it is without a heavy box */
+.msg:focus{outline:3px solid var(--focus);outline-offset:2px}
+.msg.warn{background:var(--peach);border:2px solid var(--coral)}
+#mi-live,.sr{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;padding:0}
+/* Links in a sentence: the clickable box grows to at least 24px tall (WCAG 2.2 target size) without changing line spacing (vertical padding on an inline box does not move text).
+   Links that stand on their own ("Go there", the terms and privacy links) are 44px tall like the buttons. */
+a:not(.btn):not(.skip):not(.brand){padding-block:4px}
+.next a,.legal a,.row>a:not(.btn),a.standalone{display:inline-flex;align-items:center;min-height:44px;padding:0 4px}
+.legal{display:flex;flex-wrap:wrap;gap:0 12px;align-items:center}
+.ask{width:100%}
+.ask select{max-width:100%;margin:4px 0 8px}

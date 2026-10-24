@@ -264,7 +264,7 @@ NAMES = set('''mei ling ben siti kumar priya farhan wei jie aisha hui min xin yi
 nurul ravi sue ann li lee tan lim ong ng zack zara noah nina omar ahmad aminah rina rahim sara sarah john mary david peter anna
 ken kai lin lian meng yan yuan bao ying hong huiling jiayi kevin shan tom tim emma jack jill chen emily daniel farid mr mrs uncle aunty mum dad
 xavier yusof zhi hui jing ming kiat siew mei-ling'''.split())
-STORY_STOP_EXTRA = set('north south east west face turn left right clockwise cent coin pay buy sell money dollar doe ha wa get got use make find work take give show tell try need want let put keep say ask think know see look '
+STORY_STOP_EXTRA = set('north south east west face turn left right clockwise cent coin pay buy sell money dollar circle triangle square rectangle pentagon hexagon cube cuboid cone cylinder sphere prism pyramid curved flat solid edge corner vertex probability fair dice roll fraction percentage ratio decimal angle average perimeter area volume binary prime factor multiple digit doe ha wa get got use make find work take give show tell try need want let put keep say ask think know see look '
                        'call name write read count list add check each first second third fourth then also still even only just '
                        'yes no true false answer question puzzle number numbers way ways kind different same new old big small '
                        'long short much many one two three four five six seven eight nine ten hundred thousand'.split())
@@ -644,9 +644,10 @@ def answer_feasibility(all_by_level):
     return out, warn
 
 
-def mk(lv, date, sub, fam, ans, n):
+def mk(lv, date, sub, fam, ans, n, q=None):
     """A synthetic bank entry for the self-test (nothing else about it matters to the structure rules)."""
-    return (date[:2], dict(id='L%d-t%d' % (lv, n), date=date, level=lv, frame='t%d_%d' % (lv, n), sub=sub, family=fam, ans=ans, q='Item %d for test %d zebra%d.' % (n * 7 + 11, n, n)))
+    return (date[:2], dict(id='L%d-t%d' % (lv, n), date=date, level=lv, frame='t%d_%d' % (lv, n), sub=sub, family=fam, ans=ans,
+                           q=q or 'Item %d for test %d zebra%d.' % (n * 7 + 11, n, n)))
 
 
 def selftest():
@@ -662,9 +663,9 @@ def selftest():
     clean, _ = structure_rules(base, stock)
     cases, bad = [], []
 
-    def synth(lv, rows):
+    def synth(lv, rows, qs=None):
         """rows = [(date, sub, family, ans)] -> structure failures for a synthetic level."""
-        d = {lv: [mk(lv, dt, sub, fam, ans, i) for i, (dt, sub, fam, ans) in enumerate(rows)]}
+        d = {lv: [mk(lv, dt, sub, fam, ans, i, qs[i] if qs else None) for i, (dt, sub, fam, ans) in enumerate(rows)]}
         f, _ = structure_rules(d, stock)
         return f
 
@@ -705,8 +706,13 @@ def selftest():
         f, _ = structure_rules(d, stock)
         new = [x for x in f if x not in clean]
         cases.append((name, any(want in x for x in new), new[:2]))
-    mutate('a 7-word run shared by two puzzles of a level', lambda d: d[4][1][1].__setitem__('q', d[4][0][1]['q'] + ' ' + d[4][1][1]['q']), 'word run')
-    mutate('two puzzles of a level with the same numbers', lambda d: d[6][1][1].__setitem__('q', d[6][0][1]['q'].replace('?', '') + ' ' + d[6][1][1]['q']), 'share the numbers')
+    two = [('05-01', 'a.s1', 'a', '41'), ('09-01', 'b.s2', 'b', '42')]
+    expect('a 7-word run shared by two puzzles of a level fails',
+           synth(4, two, ['Quince umbrellas travel beyond violet harbours before sunrise tomorrow morning at 17.', 'Cedar lanterns drift beyond violet harbours before sunrise tomorrow morning at 19.']), 'word run')
+    expect('two puzzles of a level with the same four numbers fail',
+           synth(6, two, ['Alder kites hold 14 pearls and 25 shells and 36 acorns and 47 stones.', 'Birch drums keep 14 coins, 25 beads, 36 nails and 47 pins tonight.']), 'share the numbers')
+    expect('two puzzles of a level with different numbers pass',
+           synth(6, two, ['Alder kites hold 14 pearls and 25 shells.', 'Birch drums keep 63 coins and 8 beads tonight.']), None)
     # --- the story check
     sidx = story_index()
     for name, q, want in (
@@ -743,8 +749,7 @@ def selftest():
             if not good:
                 print('FAIL kind %s %s: solver %s checker %s' % (k, p, a, b))
                 bad.append('kind ' + k)
-    print('kinds checked: %d, every round-2 sub-structure kind in taxonomy has a sample: %s' % (
-        len(samples_r2.SAMPLES), all(any(k in samples_r2.SAMPLES for k in d['kinds']) for d in TAX.SUBS.values() if d.get('round') == 2)))
+    print('kinds checked: %d' % len(samples_r2.SAMPLES))
     for d in TAX.SUBS.values():
         if d.get('round') == 2 and not any(k in samples_r2.SAMPLES for k in d['kinds']) and d['kinds'] != ['rect']:
             print('FAIL no sample for', d['name'])

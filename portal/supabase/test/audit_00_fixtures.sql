@@ -26,14 +26,14 @@ insert into public.ext_prices (product_id, amount_cents) values ('ext-l1-online'
 
 set role authenticated; select set_config('request.jwt.claim.sub','aaaaaaaa-0000-0000-0000-00000000000a',false);
 do $$ declare c uuid; k uuid; begin
-  c := public.add_child('Mia', 1, '1234'); k := public.add_child('Kai', 1, '2468');
+  c := public.add_child('Mia', 1, '7391'); k := public.add_child('Kai', 1, '2468');
   perform public.record_consents('{"contact":true,"terms":true,"recording":true,"childs_work":true,"online_practice":true,"book_delivery":true}', 't1', 'p1');
   perform public.enrol_child(c, 'L1A');
 end $$;
 reset role;
 set role authenticated; select set_config('request.jwt.claim.sub','bbbbbbbb-0000-0000-0000-00000000000b',false);
 do $$ begin
-  perform public.add_child('Ben', 1, '4321'); perform public.add_child('Zoe', 2, '1357');
+  perform public.add_child('Ben', 1, '9152'); perform public.add_child('Zoe', 2, '1357');
   perform public.record_consents('{"contact":true,"terms":true,"online_practice":true,"book_delivery":true}', 't1', 'p1');
 end $$;
 reset role;

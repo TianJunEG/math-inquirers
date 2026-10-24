@@ -70,7 +70,8 @@ Agreements
 
 Choose what you will use, then read the terms and the privacy notice and tick what applies. Nothing is ticked for you. You can change your mind at any time.
 
-Terms and refund policy | Privacy and recording notice
+Terms and refund policy
+Privacy and recording notice
 
 What will you use Math Inquirers for?
 Online practice or an extension book (no class)
@@ -102,7 +103,7 @@ Say yes only if you would like it. It never changes what your child can do.
 (Optional) I agree that Math Inquirers may contact me by email or WhatsApp to suggest a trial class or a next book, including a suggestion based on how my child did in the online practice. I can say stop at any time and we will stop. I do not have to agree to use the online practice or to ask for a trial class.
 (Optional) I agree that my feedback may be used, without my child's name, to improve and describe the program.
 
-Last saved 24 Oct 2026, 12:36 pm (terms terms-2026-10d-draft, privacy privacy-2026-10d-draft).
+Last saved 24 Oct 2026, 1:05 pm (terms terms-2026-10d-draft, privacy privacy-2026-10d-draft).
 
 Update agreements
 Choose a group
@@ -118,7 +119,7 @@ Child sign-in
 
 Your child signs in with this family code, their display name and their PIN.
 
-VSQGH9
+Q9Y7FQ
 
 Open the child sign-in page
 Your details and data
@@ -172,7 +173,7 @@ Delete practice answers
 For grown-ups: a possible next step
 Add another child
 
-To change a name, level or PIN, go to the home page. Child sign-in family code: VSQGH9
+To change a name, level or PIN, go to the home page. Child sign-in family code: Q9Y7FQ
 
 === /portal/books/?child=c-2 ===
 Skip to content
@@ -265,7 +266,8 @@ Anything you would like us to know? (optional, up to 300 characters)
 
 Agreements
 
-Terms and refund policy | Privacy and recording notice
+Terms and refund policy
+Privacy and recording notice
 
 (Optional) I agree that Math Inquirers may contact me by email or WhatsApp to suggest a trial class or a next book, including a suggestion based on how my child did in the online practice. I can say stop at any time and we will stop. I do not have to agree to use the online practice or to ask for a trial class.
 
@@ -302,6 +304,7 @@ Skip to content
 Math Inquirers
 Practice
 Hello, Kai!
+Sign out
 
 Pick a page to practise. You can skip a question and come back to it.
 
@@ -311,4 +314,4 @@ Extension book
 Extension book, Level 2, unit 1: Digit detectives
 Extension book, Level 2, unit 2: Make a number
 
-Sign out
+Using a shared tablet? Press Sign out when you are done. You are also signed out after 30 minutes without touching the screen.

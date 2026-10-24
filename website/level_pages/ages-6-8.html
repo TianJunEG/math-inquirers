@@ -266,6 +266,21 @@ details.ans p{margin-top:8px}
 @media(max-width:420px){.srow{grid-template-columns:70px 1fr;gap:6px}.chips label,.slotchip{padding:6px 10px}}
 .fine2{font-size:13px;color:var(--muted)}
 .field .err{color:var(--red);font-weight:700;font-size:14px}
+
+.pzcode{font:600 17px/1.5 ui-monospace,Menlo,Consolas,monospace;background:var(--bg);border:2px dashed var(--line);border-radius:12px;padding:10px 14px;margin:8px 0;white-space:pre;overflow-x:auto;max-width:100%}
+.pzmeta{margin-top:10px}
+.pzl .msg b{font-weight:800}
+#pzMsg,#pzdMsg{margin-top:6px}
+#pzdMsg:focus{outline:3px solid var(--ink);outline-offset:3px;border-radius:14px}
+.pzdaily{display:contents}
+.pzlab{font:800 13px var(--body);color:var(--muted)}
+[hidden]{display:none!important}
+/* light mode: the hint (red) and the worked answer (green) text need 4.5:1 on their tinted boxes; dark mode keeps the page colours */
+.pzl{--pzno:#A82D2D;--pzok:#17655B}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .pzl{--pzno:var(--red);--pzok:var(--teal)}}
+:root[data-theme="dark"] .pzl{--pzno:var(--red);--pzok:var(--teal)}
+.pzl .msg.no{color:var(--pzno)}
+.pzl .msg.ok{color:var(--pzok)}
 </style>
 <div class="wrap">
 <a class="skip" href="#top">Skip to main content</a>
@@ -286,7 +301,7 @@ details.ans p{margin-top:8px}
 <section class="two"><div class="tile yel"><span class="tag">In the kit</span><h3>Cut-outs in the workbook</h3><ul class="klist"><li>Play coins and play notes, with $1 coins</li><li>Paper cube strips</li><li>Ten-frames and 20 paper counters (10 red, 10 yellow)</li><li>Number strips 0 to 50 and 0 to 20</li><li>24 shape and sorting tiles (4 shapes, 3 colours, 2 sizes)</li></ul><p class="small muted">Nothing needs to be bought for the kit. The kit is the cut-out pages at the back of your child's workbook. We post the printed workbook to your home before the first lesson (Singapore addresses), and your child cuts out the pieces and keeps them in one envelope.</p></div>
 <div class="tile mint"><span class="tag">At home</span><h3>What your child needs</h3><ul class="klist"><li>A laptop or tablet with a camera, on a table with space for the kit</li><li>Pencil, crayons, scissors and a cm ruler</li><li>A mini whiteboard and marker</li><li>Everyday things the lessons use, such as paper cups, straws or lolly sticks (never real matches), paper clips, erasers and buttons (small objects only with a grown-up nearby)</li></ul><p class="small muted">These come from the lesson plans for this level.</p></div></section>
 
-<section class="sec" id="puzzle"><div class="shead"><span class="eyebrow">Try one now</span><h2>A sample puzzle</h2></div><div class="pzcard"><div class="pzl"><span class="tag">Go further · Lesson 1</span><div class="big">3, 7, 11 …</div><p style="font-size:18px">Frog A starts at 3 and jumps 4 each time. Frog B starts at 5 and jumps 3 each time. Which numbers up to 40 do both frogs land on?</p><details class="ans"><summary>Show the answer</summary><p>11, 23 and 35.</p></details></div><div class="pzr"><h3>In class, the answer is only half the job</h3><p class="muted">Children then explain how they know, and hear other ways of seeing the same puzzle. That is where the thinking grows.</p><a class="btn sm alt" href="/?level=1#register" style="justify-self:start">Register for Level 1</a></div></div></section>
+<section class="sec" id="puzzle"><div class="shead"><span class="eyebrow">Try one now</span><h2>A puzzle to try</h2></div><div class="pzcard"><div class="pzl" id="pzBox"><span class="tag">Go further · Lesson 1</span><div class="big">3, 7, 11 …</div><p style="font-size:18px">Frog A starts at 3 and jumps 4 each time. Frog B starts at 5 and jumps 3 each time. Which numbers up to 40 do both frogs land on?</p><details class="ans"><summary>Show the answer</summary><p>11, 23 and 35.</p></details></div><div class="pzr"><h3>In class, the answer is only half the job</h3><p class="muted">Children then explain how they know, and hear other ways of seeing the same puzzle. That is where the thinking grows.</p><a class="btn sm alt" href="/?level=1#register" style="justify-self:start">Register for Level 1</a></div></div></section>
 
 <section class="sec" id="placement"><div class="shead"><span class="eyebrow">Placement</span><h2>Is Ages 6-8 right for my child?</h2></div><p class="muted">Levels are named by age, and each spans three ages and overlaps the next, so children can join the level that suits how they are learning now. This level is for ages 6-8 and builds on Primary 1 maths.</p><p>Take the free 30-minute diagnostic for the level that matches your child's school year (the Math Inquirers Placement Check for that level). Then:</p><ul><li>The check is scored out of 10. 7 to 10: enrol at this level.</li><li>4 to 6: enrol at this level (the tutor will note that support may help), or choose one level down.</li><li>0 to 3: we recommend one level down.</li><li>If it was too easy (9 or 10 out of 10), your child may also try the diagnostic one level up (<a href="/ages-7-9/">Ages 7-9</a>).</li></ul><p>You have the final say. You can change the level before lesson 1 at no cost, and the price is the same at every level. Ages 6-8 is the lowest level: if your child finds it hard, they start with the free taster and a tutor chat.</p></section>
 
@@ -301,3 +316,300 @@ details.ans p{margin-top:8px}
 <footer><div><b>Math Inquirers</b><p style="margin-top:6px">An independent maths enrichment program by Preciouslyours Pte Ltd, Singapore. Not affiliated with MOE or the Gifted Education Programme. We do not identify or test for giftedness and we do not promise exam or competition results. See how the levels line up with the Singapore syllabus on the <a href="/syllabus/">syllabus map</a>.</p></div><div><b>Register</b><p style="margin-top:6px"><a href="/?level=1#register">Register for Level 1</a><br><a href="/">Back to the home page</a><br><a href="/shop/">Shop: extension workbooks (coming soon)</a></p></div><div><b>Your details</b><p style="margin-top:6px">We use your details only to arrange the class and reply to you, in line with the PDPA. <a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a></p></div></footer>
 </div>
 <script src="/shop/cart.js" defer></script>
+<script>
+/* Math Inquirers daily teaser: static, no cookies, no tracking, no timers for the puzzle, no scores.
+   The puzzle for a day is chosen from the Singapore calendar date (UTC+8, no daylight saving),
+   so every visitor sees the same puzzle that day and it changes at midnight Singapore time.
+
+   MiTeaser.init({box, level, ages, released, inline, base, now}):
+     box       the element that holds the page's fixed puzzle (kept in the page; it is the fallback)
+     released  months (MM) that have a released batch
+     inline    {MM: {MM-DD: puzzle}} batches built into the page (the latest released months)
+     base      folder to fetch other released months from
+   If the date has a puzzle (inline, or fetched in time), it is shown and labelled with its date.
+   If not (month not released, fetch failed or slow), the page's own fixed puzzle stays exactly as it is:
+   it is never labelled with a date. A slow reply is accepted when it arrives, unless the visitor has
+   already started on the fixed puzzle. */
+(function (g) {
+  'use strict';
+  var DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var WAIT_MS = 8000;
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+
+  /* Singapore date from a UTC millisecond timestamp. SGT is a fixed UTC+8, so the browser's own
+     time zone never matters. */
+  function sgt(ms) {
+    var shifted = ms + 8 * 3600000;
+    var d = new Date(shifted);
+    return {
+      mm: pad(d.getUTCMonth() + 1), dd: pad(d.getUTCDate()), year: d.getUTCFullYear(),
+      day: Math.floor(shifted / 86400000), dow: d.getUTCDay(), month: d.getUTCMonth(),
+      key: pad(d.getUTCMonth() + 1) + '-' + pad(d.getUTCDate()),
+      label: DAYS[d.getUTCDay()] + ' ' + d.getUTCDate() + ' ' + MONTHS[d.getUTCMonth()]
+    };
+  }
+
+  /* ---------- answer checking ---------- */
+  function gcd(a, b) { a = Math.abs(a); b = Math.abs(b); while (b) { var t = a % b; a = b; b = t; } return a; }
+  function cleanNum(s) {
+    s = s.replace(/−|–|—/g, '-').replace(/[⁄∕]/g, '/').replace(/\s+/g, ' ').trim();
+    if (/^\+\d/.test(s)) s = s.slice(1);
+    if (/^-?\d{1,3}(,\d{3})+(\.\d+)?$/.test(s)) s = s.replace(/,/g, '');
+    else if (/^-?\d{1,3}( \d{3})+(\.\d+)?$/.test(s)) s = s.replace(/ /g, '');
+    return s;
+  }
+  /* returns {n, d, red} (value n/d, red = fraction written in lowest terms) or null */
+  function parseNum(s) {
+    s = cleanNum(s);
+    var m;
+    if ((m = /^(-?)(\d+)$/.exec(s))) return { n: (m[1] ? -1 : 1) * parseInt(m[2], 10), d: 1, red: true };
+    if ((m = /^(-?)(\d*)\.(\d+)$/.exec(s))) {
+      var den = Math.pow(10, m[3].length);
+      return { n: (m[1] ? -1 : 1) * (parseInt(m[2] || '0', 10) * den + parseInt(m[3], 10)), d: den, red: true };
+    }
+    if ((m = /^(-?)(\d+) ?\/ ?(\d+)$/.exec(s))) {
+      var dd = parseInt(m[3], 10);
+      if (!dd) return null;
+      var nn = parseInt(m[2], 10);
+      return { n: (m[1] ? -1 : 1) * nn, d: dd, red: gcd(nn, dd) === 1 };
+    }
+    if ((m = /^(\d+) (\d+) ?\/ ?(\d+)$/.exec(s))) {
+      var d3 = parseInt(m[3], 10), n3 = parseInt(m[2], 10);
+      if (!d3) return null;
+      return { n: parseInt(m[1], 10) * d3 + n3, d: d3, red: gcd(n3, d3) === 1 };
+    }
+    return null;
+  }
+  function norm(s) {
+    return String(s).toLowerCase().replace(/[’‘]/g, "'").replace(/ /g, ' ').replace(/\s+/g, ' ').trim()
+      .replace(/^=\s*/, '').replace(/[.!]+$/, '').trim();
+  }
+  function byLen(a, b) { return b.length - a.length; }
+  function squash(t) { return t.replace(/[^a-z0-9' ]/g, ' ').replace(/\s+/g, ' ').trim(); }
+  /* result: 'ok' | 'simplify' | 'no' | 'empty' | 'format' */
+  function check(p, input) {
+    var s = norm(input || '');
+    if (!s) return 'empty';
+    if (p.t === 's') {
+      var t = squash(s).replace(/^((it is|it was|it's|on|in|the|a|an) )+/, '').trim();
+      var ok = [p.a].concat(p.x || []);
+      for (var i = 0; i < ok.length; i++) {
+        var want = squash(ok[i].toLowerCase());
+        if (t === want || t.replace(/ /g, '') === want.replace(/ /g, '')) return 'ok';
+      }
+      return 'no';
+    }
+    var wantN = parseNum(p.a);
+    var pre = (p.p || []).slice().sort(byLen), uni = (p.u || []).map(function (x) { return x.toLowerCase(); }).sort(byLen);
+    var asMinutes = uni.indexOf('minutes') >= 0 || uni.indexOf('min') >= 0;
+    var asPercent = uni.indexOf('%') >= 0;
+    var m;
+    /* ordinal suffix: 21st, 2nd, 5 th */
+    if ((m = /^(\d+) ?(st|nd|rd|th)$/.exec(s))) s = m[1];
+    /* 1 h 30 min for a minutes answer */
+    if (asMinutes && (m = /^(\d+) ?(h|hr|hrs|hour|hours) ?(\d+) ?(m|min|mins|minute|minutes)?$/.exec(s))) {
+      s = String(parseInt(m[1], 10) * 60 + parseInt(m[3], 10));
+    }
+    var cands = [s], i2, j;
+    for (i2 = 0; i2 < pre.length; i2++) {
+      if (s.indexOf(pre[i2]) === 0) cands.push(s.slice(pre[i2].length).trim());
+    }
+    var more = [];
+    for (i2 = 0; i2 < cands.length; i2++) {
+      for (j = 0; j < uni.length; j++) {
+        var c = cands[i2];
+        if (c.length > uni[j].length && c.slice(-uni[j].length) === uni[j]) more.push(c.slice(0, -uni[j].length).trim());
+      }
+    }
+    cands = cands.concat(more);
+    var got = null;
+    for (i2 = 0; i2 < cands.length && !got; i2++) got = parseNum(cands[i2]);
+    if (!got) return /\d/.test(s) ? 'no' : 'format';
+    if (got.n * wantN.d === wantN.n * got.d) {
+      if (p.e && !got.red) return 'simplify';
+      return 'ok';
+    }
+    /* a percentage written as a decimal: 0.96 for 96% */
+    if (asPercent && s.indexOf('.') >= 0 && got.n * 100 * wantN.d === wantN.n * got.d) return 'ok';
+    return 'no';
+  }
+
+  /* ---------- rendering ---------- */
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text != null) e.textContent = text;
+    return e;
+  }
+  function build(opts, p, when, source) {
+    var wrap = el('div', 'pzdaily');
+    wrap.setAttribute('data-pzdaily', '1');
+    wrap.appendChild(el('span', 'tag', 'Ages ' + opts.ages + ' · Puzzle for ' + when.label));
+    if (p.b) wrap.appendChild(el('div', 'big', p.b));
+    var q = el('p', 'pzq', p.q);
+    q.style.fontSize = '18px';
+    wrap.appendChild(q);
+    if (p.c) {
+      var pre = el('pre', 'pzcode', p.c);
+      pre.setAttribute('role', 'group');
+      pre.setAttribute('aria-label', 'Puzzle diagram or program');
+      wrap.appendChild(pre);
+    }
+    var lab = el('label', 'pzlab', 'Your answer');
+    lab.setAttribute('for', 'pzdA');
+    wrap.appendChild(lab);
+    var row = el('div', 'row');
+    var inp = document.createElement('input');
+    inp.id = 'pzdA';
+    inp.setAttribute('placeholder', 'Type it here');
+    inp.setAttribute('autocomplete', 'off');
+    inp.setAttribute('autocapitalize', 'off');
+    inp.setAttribute('spellcheck', 'false');
+    inp.setAttribute('inputmode', /^\d+$/.test(p.a) ? 'numeric' : 'text');
+    inp.style.maxWidth = '200px';
+    var btn = el('button', 'btn yel', 'Check');
+    btn.id = 'pzdCheck';
+    btn.type = 'button';
+    row.appendChild(inp);
+    row.appendChild(btn);
+    wrap.appendChild(row);
+    var msg = el('div');
+    msg.id = 'pzdMsg';
+    msg.setAttribute('role', 'status');
+    msg.setAttribute('aria-live', 'polite');
+    msg.setAttribute('tabindex', '-1');
+    wrap.appendChild(msg);
+    wrap.appendChild(el('p', 'small muted pzmeta', 'A new puzzle every day at midnight, Singapore time. Nothing is saved or counted.'));
+
+    function show(cls, text) {
+      msg.innerHTML = '';
+      var d = el('div', 'msg ' + cls);
+      d.appendChild(document.createTextNode(text));
+      msg.appendChild(d);
+      return d;
+    }
+    function reveal() {
+      msg.innerHTML = '';
+      var d = el('div', 'msg info');
+      d.appendChild(el('b', null, 'The answer is ' + p.s + '.'));
+      d.appendChild(document.createElement('br'));
+      d.appendChild(document.createTextNode(p.w));
+      msg.appendChild(d);
+      msg.focus();   /* the button that was pressed is gone: move focus to the explanation so keyboard and screen-reader users stay in place */
+    }
+    function go() {
+      var r = check(p, inp.value);
+      if (r === 'empty') { show('info', 'Type your answer first, then press Check.'); return; }
+      if (r === 'ok') {
+        msg.innerHTML = '';
+        var d = el('div', 'msg ok');
+        d.appendChild(el('b', null, 'Correct! '));
+        d.appendChild(document.createTextNode(p.w));
+        d.appendChild(document.createElement('br'));
+        d.appendChild(document.createTextNode('Now ask: how do you know?'));
+        msg.appendChild(d);
+        return;
+      }
+      if (r === 'simplify') { show('info', 'That is the right amount. Can you write it in its simplest form?'); return; }
+      if (r === 'format') { show('info', 'Try writing your answer with digits, like 12' + (p.t === 's' ? ' or a word' : '') + '.'); return; }
+      show('no', 'Not yet. Hint: ' + p.h);
+      var more = el('button', 'btn sm alt', 'Show me how');
+      more.type = 'button';
+      more.style.marginTop = '8px';
+      more.addEventListener('click', reveal);
+      msg.appendChild(more);
+    }
+    btn.addEventListener('click', go);
+    inp.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); go(); } });
+    return wrap;
+  }
+
+  function init(opts) {
+    var box = opts.box;
+    if (!box) return;
+    var now = opts.now || function () { return Date.now(); };
+    var fixedNodes = Array.prototype.slice.call(box.childNodes);
+    var daily = null, handled = null, token = 0;
+    box.setAttribute('data-teaser-source', 'fixed');
+
+    function fixedTouched() {
+      for (var i = 0; i < fixedNodes.length; i++) {
+        var n = fixedNodes[i];
+        if (n.nodeType !== 1) continue;
+        var inner = n.querySelectorAll ? n.querySelectorAll('input') : [];
+        var all = (n.tagName === 'INPUT' ? [n] : []).concat(Array.prototype.slice.call(inner));
+        for (var k = 0; k < all.length; k++) if (all[k].value) return true;
+        var d2 = (n.tagName === 'DETAILS' ? [n] : []).concat(Array.prototype.slice.call(n.querySelectorAll ? n.querySelectorAll('details') : []));
+        for (k = 0; k < d2.length; k++) if (d2[k].open) return true;
+        var m2 = n.id === 'pzMsg' ? n : (n.querySelector ? n.querySelector('#pzMsg') : null);
+        if (m2 && m2.childNodes.length) return true;
+      }
+      return false;
+    }
+    function setFixed(hidden) {
+      for (var i = 0; i < fixedNodes.length; i++) if (fixedNodes[i].nodeType === 1) fixedNodes[i].hidden = hidden;
+    }
+    function showFixed() {
+      if (daily && daily.parentNode) daily.parentNode.removeChild(daily);
+      daily = null;
+      setFixed(false);
+      box.setAttribute('data-teaser-source', 'fixed');
+      box.removeAttribute('data-teaser');
+      box.removeAttribute('data-teaser-date');
+      box.setAttribute('data-teaser-state', 'done');
+    }
+    function showDaily(p, when, source) {
+      if (daily && daily.parentNode) daily.parentNode.removeChild(daily);
+      daily = build(opts, p, when, source);
+      setFixed(true);
+      box.appendChild(daily);
+      box.setAttribute('data-teaser', p.i);
+      box.setAttribute('data-teaser-date', when.key);
+      box.setAttribute('data-teaser-source', source);
+      box.setAttribute('data-teaser-state', 'done');
+    }
+    function released(mm) { return !opts.released || opts.released.indexOf(mm) >= 0; }
+
+    function run() {
+      var when = sgt(now());
+      if (handled === when.key) return;
+      handled = when.key;
+      var my = ++token;
+      box.setAttribute('data-teaser-state', 'loading');
+      var month = null;
+      if (opts.data) month = opts.data(opts.level, when.mm);                 /* previews: month data supplied in the page */
+      else if (opts.inline && opts.inline[when.mm]) month = opts.inline[when.mm];
+      if (month) {
+        if (month[when.key]) showDaily(month[when.key], when, 'month'); else showFixed();
+        return;
+      }
+      if (opts.data || !released(when.mm) || !opts.base || typeof fetch !== 'function') { showFixed(); return; }
+      /* a released month that is not built into the page: fetch it, keep the fixed puzzle meanwhile */
+      showFixed();
+      box.setAttribute('data-teaser-state', 'loading');
+      var timer = setTimeout(function () { if (my === token) box.setAttribute('data-teaser-state', 'done'); }, WAIT_MS);
+      fetch(opts.base + 'L' + opts.level + '-' + when.mm + '.json').then(function (r) {
+        if (!r.ok) throw new Error('no batch');
+        return r.json();
+      }).then(function (j) {
+        clearTimeout(timer);
+        if (my !== token) return;
+        if (j && j[when.key] && !fixedTouched()) showDaily(j[when.key], when, 'month');
+        else box.setAttribute('data-teaser-state', 'done');
+      }).catch(function () { clearTimeout(timer); if (my === token) box.setAttribute('data-teaser-state', 'done'); });
+    }
+    run();
+    /* if the page stays open past midnight Singapore time, pick up the new day when the visitor comes back to it */
+    if (opts.listen !== false) {
+      document.addEventListener('visibilitychange', function () { if (!document.hidden) run(); });
+      g.addEventListener('focus', run);
+    }
+    return { refresh: run };
+  }
+
+  g.MiTeaser = { sgt: sgt, check: check, init: init, parseNum: parseNum };
+})(window);
+
+(function(){var b=document.getElementById("pzBox");if(!b||!window.MiTeaser)return;try{MiTeaser.init({box:b,level:1,ages:"6-8",released:["11", "12"],inline:{"11":{"11-01":{"i":"L1-noodleset","g":"Ways to choose","q":"A kopitiam sells 4 kinds of noodles and 5 kinds of drinks. A set is one noodle dish and one drink. How many different sets can you order?","a":"20","t":"n","s":"20 sets","h":"Pick one noodle dish. How many sets does it make with the drinks?","w":"Each of the 4 noodle dishes goes with 5 drinks: 5 + 5 + 5 + 5 = 20 sets.","u":["sets","set"]},"11-02":{"i":"L1-bikesigns","g":"Sign graphs","q":"In a sign graph, each bicycle sign stands for 10 bicycles. Block A has 8 signs and Block B has 2 signs. How many more bicycles does Block A have than Block B?","a":"60","t":"n","s":"60 bicycles","h":"First find how many more signs Block A has. Then think about what each sign is worth.","w":"Block A has 6 more signs. Each sign is worth 10 bicycles, so 6 × 10 = 60 bicycles.","u":["bicycles","bicycle"]},"11-03":{"i":"L1-drinksmachine","g":"Coins","q":"A drinks machine takes only 20-cent and 50-cent coins and gives no change. Its prices go 10 cents, 20 cents, 30 cents and so on, up to 150 cents. That is 15 prices. How many of the 15 prices can be paid exactly?","a":"13","t":"n","s":"13 prices","h":"Find the prices that cannot be paid. Start with the small prices.","w":"10 cents and 30 cents cannot be paid. All the others can, for example 40 = 20 + 20, 70 = 20 + 50 and 90 = 20 + 20 + 50. That is 15 − 2 = 13 prices.","u":["prices","price"]},"11-04":{"i":"L1-seatrow","g":"Rows and places","q":"A cinema has 9 seats in every row. Tickets give each seat a number, counting 1, 2, 3 and on, one row after another, starting at the screen. Kai sits in the 4th row, in the 5th seat from the left. What is his seat number?","a":"32","t":"n","s":"32","h":"Count the seats in the full rows before Kai's row first.","w":"There are 3 full rows before Kai's row: 3 × 9 = 27 seats. Kai is the 5th seat in his row: 27 + 5 = 32."},"11-05":{"i":"L1-openingtimes","g":"am and pm","q":"Four stalls at the night market open at 6 am, 11 am, 4 pm and 2 pm. Which opening time is the latest in the day?","a":"4 pm","t":"s","s":"4 pm","h":"Times with pm come after times with am in the same day.","w":"The am times are in the morning and the pm times are in the afternoon. Of 4 pm and 2 pm, the later one is 4 pm.","x":["4pm","4 p.m."]},"11-06":{"i":"L1-rungrow","g":"Number patterns","q":"Hui Min writes the pattern 3, 4, 6, 9, 13, ... Each jump is 1 bigger than the jump before. What is the 8th number in her pattern?","a":"31","t":"n","s":"31","h":"Write down the jumps: 1, then 2, then 3. Keep going and keep adding.","w":"The jumps are 1, 2, 3, 4, 5, 6, 7. The numbers are 3, 4, 6, 9, 13, 18, 24, 31. The 8th number is 31.","b":"3, 4, 6, 9, 13, ..."},"11-07":{"i":"L1-bamboo","g":"Equal shares","q":"Uncle cuts a bamboo pole that is 84 cm long into 4 pieces of the same length. How long is each piece?","a":"21","t":"n","s":"21 cm","h":"Share the length into equal parts. Which number times 4 makes 84?","w":"4 pieces of 21 cm each: 21 + 21 + 21 + 21 = 84, so each piece is 21 cm long.","u":["cm","centimetre","centimetres","centimeter","centimeters"]},"11-08":{"i":"L1-borrowdays","g":"Days of the week","q":"Siti borrows a library book on a Monday and must return it 12 days later. Which weekday is the return day?","a":"saturday","t":"s","s":"Saturday","h":"One week is 7 days. Seven days later brings you back to the same weekday.","w":"12 days is 1 week and 5 days. One week later is a Monday again. Then count on 5 more days: Tuesday, Wednesday, Thursday, Friday, Saturday. The return day is Saturday.","x":["sat"]},"11-09":{"i":"L1-cousindays","g":"Overlapping days","q":"Aisha's cousin Jia stays at her house from the 1st to the 27th of the month. Her cousin Zack stays from the 6th to the 28th. Each cousin is there on the first and last day too. On how many days are both cousins at her house?","a":"22","t":"n","s":"22 days","h":"Find the first day when both are there, and the last day when both are there.","w":"Both cousins are there from the 6th to the 27th. That is 27 − 6 + 1 = 22 days.","u":["day","days"]},"11-10":{"i":"L1-ageplus","g":"Ages","q":"Dina is 7 years old. Her cousin Ravi is 4 years older than Dina. How old will Ravi be when Dina is 12?","a":"16","t":"n","s":"16 years","h":"Ravi is always the same number of years older than Dina.","w":"The gap stays 4 years. When Dina is 12, Ravi is 12 + 4 = 16 years.","u":["year","years"]},"11-11":{"i":"L1-mrtdays","g":"Tables","q":"A table shows how many pupils took the MRT to school: Monday 14, Tuesday 8, Wednesday 16 and Thursday 12. How many pupils took the MRT on these four days altogether?","a":"50","t":"n","s":"50 pupils","h":"Add two numbers first, then add the next number.","w":"14 + 8 = 22. Then 22 + 16 = 38. Then 38 + 12 = 50 pupils.","u":["pupils","pupil"]},"11-12":{"i":"L1-queuebus","g":"Places in a line","q":"28 children queue for the school bus. Dina is 5th from the front. Counting from the back, which place is she in?","a":"24","t":"n","s":"24","h":"Draw a dot for each child. Mark Dina's dot and count the dots behind her.","w":"4 children stand in front of Dina, so 28 − 4 = 24 children are from Dina to the back. She is 24th from the back."},"11-13":{"i":"L1-picnicend","g":"Time","q":"A picnic at East Coast Park starts at 10 o'clock in the morning. It lasts 4 hours. At what o'clock does the picnic end?","a":"2","t":"n","s":"2 o'clock","h":"Count on the hours on a clock face. After 12 comes 1.","w":"Count on from 10 o'clock: 11, 12, 1, 2. The picnic ends at 2 o'clock.","u":["o'clock","oclock","o’clock"]},"11-14":{"i":"L1-rpsgames","g":"Pairs","q":"10 children play rock-paper-scissors. Every child plays one game against each of the other children. How many games are played?","a":"45","t":"n","s":"45 games","h":"Call the children A, B, C and so on. List the games that A plays, then the new games that B plays.","w":"A plays 9 games. B has 8 new games, C has 7 new games and so on, down to 1 new game. So 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 = 45 games.","u":["games","game"]},"11-15":{"i":"L1-swimcourse","g":"Counting days","q":"Aisha's swimming course starts on the 12th and ends on the 29th. The first day and the last day both count. How many days is the course?","a":"18","t":"n","s":"18 days","h":"Count the days from the first to the last. Do not forget the first day.","w":"From the 12th to the 29th is 29 − 12 = 17 days after the first day. The first day counts too: 17 + 1 = 18 days.","u":["day","days"]},"11-16":{"i":"L1-secret63","g":"Digit clues","q":"A secret 2-digit number has two clues. Its two digits add up to 9. Its tens digit is 3 more than its ones digit. What is the secret number?","a":"63","t":"n","s":"63","h":"Try different ones digits. Which tens digit goes with each one?","w":"The tens digit is 3 more than the ones digit. A ones digit of 3 gives a tens digit of 6, and 6 + 3 = 9. The number is 63."},"11-17":{"i":"L1-counterbox","g":"Two numbers","q":"A box holds 56 red and blue counters. There are 12 more red counters than blue counters. How many red counters are in the box?","a":"34","t":"n","s":"34 counters","h":"If the two colours had the same number, each would be half of the total. Then move some across.","w":"The red counters number 34 and the blue counters number 22. They add to 56 and differ by 12. So the number of red counters is 34 counters.","u":["counters","counter"]},"11-18":{"i":"L1-busminute","g":"The minute hand","q":"It is 20 minutes past 4. Mum says the bus will come in 35 minutes. When the bus comes, the minute hand points to which number on the clock?","a":"11","t":"n","s":"11","h":"Each number on the clock face is 5 minutes. Find the minutes past the hour first.","w":"20 + 35 = 55 minutes past 4. The minute hand points to the number 55 ÷ 5 = 11."},"11-19":{"i":"L1-threefifty","g":"Looking at digits","q":"Wei Jie writes all the numbers from 1 to 50. How many of the numbers have the digit 3 in them? (3, 13 and 35 are some of them.)","a":"14","t":"n","s":"14 numbers","h":"Count the numbers with 3 in the ones place. Then count the numbers with 3 in the tens place. Take care with 33.","w":"Ones digit 3: 3, 13, 23, 33, 43, which is 5 numbers. Tens digit 3: 30 to 39, which is 10 numbers. 33 is in both lists, so 5 + 10 − 1 = 14 numbers.","u":["numbers","number"]},"11-20":{"i":"L1-jarsweets","g":"Number bonds","q":"A jar holds 100 sweets. Ali eats 35 of them and Dina eats 28. How many sweets are left in the jar?","a":"37","t":"n","s":"37 sweets","h":"Find how many sweets were eaten in all. Then take that from the jar.","w":"Eaten: 35 + 28 = 63. Left: 100 − 63 = 37 sweets.","u":["sweets","sweet"]},"11-21":{"i":"L1-trackflags","g":"Around a loop","q":"A running track round the school field is 108 m long. A flag stands every 3 m, all the way round the track. How many flags are there?","a":"36","t":"n","s":"36 flags","h":"The track is a loop, so the last flag is right next to the first flag.","w":"108 ÷ 3 = 36 flags. On a loop there are as many flags as gaps between them.","u":["flags","flag"]},"11-22":{"i":"L1-machine1","g":"Working backwards","q":"Mei chooses a secret number. First she adds 8, and then she doubles what she has. Her final number is 100. What was the secret number?","a":"42","t":"n","s":"42","h":"Work backwards. Undo the doubling first, then undo the adding.","w":"Undo the doubling: 100 ÷ 2 = 50. Undo the adding: 50 − 8 = 42. Check: 42 + 8 = 50, and double 50 is 100."},"11-23":{"i":"L1-fanlines","g":"Shapes in a picture","q":"A big triangle is cut by 3 straight lines from its top corner down to its bottom side. This makes 4 thin triangles side by side. Count the thin triangles and the bigger triangles made of neighbours. What is the total number of triangles?","a":"10","t":"n","s":"10 triangles","h":"Count the thin ones first. Then count the triangles made of 2 neighbours, then 3, then all 4.","w":"Thin triangles: 4. Made of 2 neighbours: 3. Made of 3 neighbours: 2. All 4 together: 1. That makes 4 + 3 + 2 + 1 = 10 triangles.","u":["triangles","triangle"]},"11-24":{"i":"L1-ants","g":"Growing patterns","q":"On Monday there are 5 ants on the window sill. Every day the number of ants doubles. How many ants are there on Thursday?","a":"40","t":"n","s":"40 ants","h":"Doubling means two times as many. Write the number for each day.","w":"Monday 5, then doubling each day: 5, 10, 20, 40. On Thursday there are 40 ants.","u":["ants","ant"]},"11-25":{"i":"L1-twobags","g":"Pairs that make a total","q":"A baker puts 24 buns into two bags, with at least 1 bun in each bag. The bags look the same, so 5 and 19 is the same split as 19 and 5. How many different splits are there?","a":"12","t":"n","s":"12 splits","h":"List the splits from the smallest bag: 1 and 23, then 2 and 22. Stop when the two numbers meet.","w":"The smaller bag can hold 1, 2, 3 and so on up to 12 buns. When it holds 12, the other bag holds 12 too. That makes 12 splits in all.","u":["splits","split","ways","way"]},"11-26":{"i":"L1-bigtwo","g":"Number cards","q":"Ravi has four number cards: 6, 2, 8 and 4. He uses two of them to make the biggest 2-digit number he can. What number does he make?","a":"86","t":"n","s":"86","h":"The biggest digit should go in the tens place.","w":"Put the biggest card, 8, in the tens place and the next biggest card, 6, in the ones place. The number is 86."},"11-27":{"i":"L1-machine5","g":"Number machines","q":"A number machine follows one rule. It either adds the same number each time or multiplies by the same number each time. It turns 4 into 9 and 7 into 12. What does it turn 20 into?","a":"25","t":"n","s":"25","h":"Look at how much bigger each answer is than the number that went in.","w":"9 − 4 = 5 and 12 − 7 = 5, so the machine adds 5. Multiplying cannot turn both 4 and 7 into these numbers. 20 becomes 25."},"11-28":{"i":"L1-fourcoins","g":"Coins","q":"Kumar has four coins: a 5-cent coin, a 10-cent coin, a 20-cent coin and a 50-cent coin. He picks one coin, or two, or three, or all four. How many different totals can he make?","a":"15","t":"n","s":"15 totals","h":"Make the totals with 1 coin first, then with 2 coins, then with 3 coins, then with all 4.","w":"1 coin: 4 totals. 2 coins: 6 totals. 3 coins: 4 totals. All 4 coins: 1 total. No two totals are the same, so 4 + 6 + 4 + 1 = 15 totals.","u":["totals","total","amounts"]},"11-29":{"i":"L1-marblecontest","g":"Always one less","q":"44 children enter a marbles contest. Every game is between 2 children and the loser is out. If an odd number of children are left in a round, one child waits for the next round. How many games are played until one winner is left?","a":"43","t":"n","s":"43 games","h":"Each game sends exactly one child out. How many children must go out?","w":"Only 1 winner is left, so 43 children must be knocked out. Each game knocks out 1 child, so the contest needs 43 games.","u":["games","game"]},"11-30":{"i":"L1-cardtriple","g":"Number cards","q":"Mei Ling has six number cards: 7, 12, 18, 25, 30 and 41. Exactly three of the cards add up to 62. What is the biggest of those three cards?","a":"30","t":"n","s":"30","h":"Pick one card, then ask which two other cards would make the total.","w":"7 + 25 + 30 = 62. The three cards are 7, 25 and 30, so the biggest is 30."}},"12":{"12-01":{"i":"L1-rulerbill","g":"Money","q":"Kai buys 3 rulers at $4 each and a story book for $9. He pays with $50. How much change does he get?","a":"29","t":"n","s":"$29","h":"Find the cost of the 3 rulers first.","w":"3 rulers cost 3 × $4 = $12. With the book that is $12 + $9 = $21. Change: $50 − $21 = $29.","u":["dollars","dollar"],"p":["$","s$"]},"12-02":{"i":"L1-storypages","g":"Digits","q":"A story book has 30 pages. The page numbers start at 1 and go up to 30. How many digits are printed in the page numbers altogether?","a":"51","t":"n","s":"51 digits","h":"Pages 1 to 9 have one digit each. Pages 10 and up have two digits each.","w":"Pages 1 to 9 use 9 digits. Pages 10 to 30 are 21 pages with 2 digits each, which is 42 digits. 9 + 42 = 51 digits.","u":["digits","digit"]},"12-03":{"i":"L1-flagline","g":"Patterns","q":"A string of flags has this colour pattern again and again: red, white, white, red, white, white, ... What colour is the 20th flag?","a":"white","t":"s","s":"white","h":"Each pattern has 3 flags. Write the pattern out in rows of 3.","w":"The pattern repeats after every 3 flags. 18 is a multiple of 3, so the 18th flag ends a pattern. The 20th flag is the 2nd flag of a new pattern, which is white."},"12-04":{"i":"L1-signsgap","g":"Plus and minus","q":"Put + or − in each gap: 9 _ 5 _ 3 _ 2 = 5. How many different ways make the sum true?","a":"1","t":"n","s":"1 way","h":"There are 2 choices for each of the 3 gaps. Try them in an order and write down the ones that work.","w":"Only one way works: 9 − 5 + 3 − 2 = 5. So the answer is 1 way.","u":["ways","way"]},"12-05":{"i":"L1-coinsets","g":"Coins","q":"Zack pays exactly 45 cents using 5-cent, 10-cent and 20-cent coins. He may leave out a kind of coin if he likes. How many different sets of coins can he use?","a":"9","t":"n","s":"9 sets","h":"Start with no 20-cent coins and see how many ways there are with 5-cent and 10-cent coins. Then try one 20-cent coin.","w":"With no 20-cent coin there are 5 ways, with one 20-cent coin there are 3 ways, and with two 20-cent coins there is 1 way. 5 + 3 + 1 = 9 sets.","u":["sets","set","ways","way"]},"12-06":{"i":"L1-lampbench","g":"Numbers on a line","q":"Lamp posts along a path are marked with how many metres they are from the gate. One lamp post is at 18 m and another is at 64 m. A bench is exactly halfway between them. How many metres from the gate is the bench?","a":"41","t":"n","s":"41 m","h":"Find how far apart the two lamp posts are. Half of that is how far the bench is from each post.","w":"The posts are 64 − 18 = 46 m apart. Half of 46 is 23. The bench is 23 m from the first post, so it is 18 + 23 = 41 m from the gate.","u":["m","metre","metres","meter","meters"]},"12-07":{"i":"L1-marblesmore","g":"More and fewer","q":"Ben has 92 marbles and Siti has 45 marbles. How many more marbles does Ben have than Siti?","a":"47","t":"n","s":"47 marbles","h":"Take the smaller number away from the bigger number.","w":"92 − 45 = 47 marbles. Ben has 47 marbles more than Siti.","u":["marbles","marble"]},"12-08":{"i":"L1-traysame","g":"Missing numbers","q":"Two trays hold the same number of counters. The first tray has 24 red counters and 19 blue counters. The second tray has 17 yellow counters and some green counters. How many green counters are there?","a":"26","t":"n","s":"26 counters","h":"Find how many counters are in the first tray. The second tray must have the same.","w":"24 + 19 = 43. The second tray must also have 43, so 17 + 26 = 43. There are 26 counters green ones.","u":["counters","counter"]},"12-09":{"i":"L1-chartwalk","g":"Number chart","q":"A number chart shows 1 to 100 in order, with 10 numbers in each row. Zack puts a counter on 34. He moves it down 3 rows, then right 2 squares, then up 1 row. Which number is the counter on now?","a":"56","t":"n","s":"56","h":"Moving down one row adds 10. Moving right one square adds 1.","w":"34 + 30 = 64 after going down 3 rows. Then 64 + 2 = 66. Going up 1 row takes away 10: 66 − 10 = 56."},"12-10":{"i":"L1-toycars","g":"Shop offers","q":"A toy car costs $9 at both Shop A and Shop B. Shop B gives 1 car free for every 3 cars you buy. Dina needs 8 cars and shops where she pays less. How much does she pay?","a":"54","t":"n","s":"$54","h":"Work out what Dina pays at Shop A. Then work out what she pays at Shop B.","w":"Shop A: 8 × $9 = $72. At Shop B every 4 cars cost only 3 cars' money, so 8 cars cost 2 × 3 × $9 = $54. Shop B is cheaper, so Dina pays $54.","u":["dollars","dollar"],"p":["$","s$"]},"12-11":{"i":"L1-swimbike","g":"Sets that overlap","q":"In a group of 50 children, 45 can swim and 40 can ride a bicycle. Every child can do at least one of the two. How many children can do both?","a":"35","t":"n","s":"35 children","h":"Add the swimmers and the cyclists. The total is bigger than the group, so some children were counted twice.","w":"45 + 40 = 85. The group has only 50 children, so 85 − 50 = 35 children were counted twice. They can do both.","u":["children","children"]},"12-12":{"i":"L1-fourodds","g":"Odd and even","q":"Add four odd numbers together, such as 3 + 5 + 7 + 9. Will the answer be odd or even?","a":"even","t":"s","s":"even","h":"Try it with some other four odd numbers, like 1 + 1 + 1 + 1. Add them in pairs.","w":"Two odd numbers add to an even number. Four odd numbers make two pairs, and even + even is even. The answer is always even."},"12-13":{"i":"L1-shapeclue","g":"Flat shapes","q":"Mei Ling is thinking of a flat shape. It has 2 straight sides and 1 curved edge. Is the shape a circle, a half circle, a quarter circle or a triangle?","a":"quarter circle","t":"s","s":"quarter circle","h":"Think about the straight sides first. A circle has none.","w":"A circle has no straight sides and a triangle has no curved edge. A half circle has only 1 straight side. The shape with 2 straight sides and 1 curved edge is a quarter circle.","x":["quarter-circle","a quarter circle"]},"12-14":{"i":"L1-sudoku3","g":"Fill the grid","q":"Fill a 3 by 3 grid with 1, 2 and 3. Every row and every column must have each number once. The top-left square is 1 and the middle square is 3. What number goes in the bottom-left square?","a":"3","t":"n","s":"3","h":"Fill the top row first. Which number cannot go above the 3?","w":"Top row: 1, 2, 3. Middle row: 2, 3, 1. Bottom row: 3, 1, 2. The bottom-left square holds 3."},"12-15":{"i":"L1-tenwords","g":"Number words","q":"Siti writes the numbers one, two, three and so on up to ten in words. How many letters does she write in all?","a":"39","t":"n","s":"39 letters","h":"Count the letters in each word and add them up. The word \"one\" has 3 letters.","w":"one 3, two 3, three 5, four 4, five 4, six 3, seven 5, eight 5, nine 4, ten 3. Adding: 3 + 3 + 5 + 4 + 4 + 3 + 5 + 5 + 4 + 3 = 39 letters.","u":["letters","letter"]},"12-16":{"i":"L1-oddnumber","g":"Odd one out","q":"Four of these numbers are in one times table. One number is not: 15, 25, 35, 45 and 52. Which one is it?","a":"52","t":"n","s":"52","h":"Try the times tables one at a time. Which one has four of the five numbers?","w":"15, 25, 35 and 45 are all in the 5 times table, but 52 is not. The number that does not belong is 52."},"12-17":{"i":"L1-cardstrip","g":"Measuring","q":"A strip of card lies along a ruler. One end of the strip is at the 2 cm mark. The other end is at the 30 cm mark. How long is the strip?","a":"28","t":"n","s":"28 cm","h":"Careful: the strip does not start at zero. Work out the difference between the two marks.","w":"The strip is 30 − 2 = 28 cm long.","u":["cm","centimetre","centimetres","centimeter","centimeters"]},"12-18":{"i":"L1-circlekids","g":"Round a circle","q":"60 children stand in a circle. They are numbered 1 to 60 in order, going round. Which child is exactly opposite child number 8?","a":"38","t":"n","s":"38","h":"Opposite means halfway round the circle. How many children are in half of the circle?","w":"Half of 60 is 30. Count on 30 places from 8: 8 + 30 = 38."},"12-19":{"i":"L1-stickertable","g":"Tables","q":"Mei and Ben collect stickers on Friday, Saturday and Sunday. Mei got 12 on Friday. Ben got 11 on Sunday. Together they got 20 on Friday, 57 on Saturday and 25 on Sunday. Mei got 35 in all. How many stickers did Ben get on Saturday?","a":"48","t":"n","s":"48 stickers","h":"Draw a table with two rows and three columns. Fill in the numbers you know. Then find what you can.","w":"Mei got 25 − 11 = 14 on Sunday, because the two children got 25 together. Then Mei got 35 − 12 − 14 = 9 on Saturday. On Saturday they got 57 together, so Ben got 57 − 9 = 48 stickers.","u":["stickers","sticker"]},"12-20":{"i":"L1-hiddensum","g":"Missing digits","q":"One digit in this sum is hidden: 3_ + 28 = 64. Which digit goes in the blank?","a":"6","t":"n","s":"6","h":"Look at the ones column: 8 plus what digit gives a number that ends in 4?","w":"Check 36 + 28 = 64. The hidden digit is 6."},"12-21":{"i":"L1-purse","g":"Coins","q":"Mei empties her money box. It holds 3 twenty-cent coins and 2 ten-cent coins. What is the total in cents?","a":"80","t":"n","s":"80 cents","h":"Find the cents in the twenty-cent coins first. Then add the cents in the ten-cent coins.","w":"3 × 20 = 60 and 2 × 10 = 20. Together: 60 + 20 = 80.","u":["c","cent","cents"]},"12-22":{"i":"L1-eggtrays","g":"Tens and ones","q":"Aunty sells eggs in trays of 10. She has 4 full trays and 17 extra eggs in a bag. How many eggs is that altogether?","a":"57","t":"n","s":"57 eggs","h":"Each full tray holds 10 eggs. Count the eggs on the trays first.","w":"4 trays of 10 is 4 × 10 = 40 eggs. Add the extra eggs: 40 + 17 = 57 eggs.","u":["eggs","egg"]},"12-23":{"i":"L1-whichsun","g":"Pictures for numbers","q":"A star, a moon and a sun each stand for a whole number. Star + star = 24. Star + moon = 40. Moon + sun + sun = 62. What number does the sun stand for?","a":"17","t":"n","s":"17","h":"Find the star first. Then find the moon. Then the sun.","w":"Star: 24 ÷ 2 = 12. Moon: 40 − 12 = 28. Two suns: 62 − 28 = 34, so one sun is 34 ÷ 2 = 17."},"12-24":{"i":"L1-boxpyramid","g":"Number pyramid","q":"In a number triangle, each circle shows the sum of the two circles just below it. The lowest line of circles shows 4, 7 and 5. What number is in the circle at the peak?","a":"23","t":"n","s":"23","h":"Work out the middle line first. It has two circles.","w":"The middle line is 11 and 12. The circle at the peak is the sum of those two numbers: 23."},"12-25":{"i":"L1-fruitmatch","g":"Who has what?","q":"Ali, Siti and Ravi each bring one fruit to school: a mango, a papaya or a banana. Ali brings neither the mango nor the papaya. Siti does not bring the mango. Who brings the mango?","a":"ravi","t":"s","s":"Ravi","h":"Start with the friend who has only one fruit left to choose from.","w":"Ali brings neither the mango nor the papaya, so Ali brings the banana. Siti does not bring the mango and the banana is taken, so Siti brings the papaya. Ravi brings the mango. So Ravi brings the mango."},"12-26":{"i":"L1-fivetable","g":"Times tables","q":"Zara lists every number from 1 to 95 that is in the 5 times table. How many numbers are on her list?","a":"19","t":"n","s":"19 numbers","h":"Count on in fives, starting from 5, until you pass 95.","w":"The numbers are 5, 10, 15 and so on up to 95. Every 10 numbers hold 2 of them, so 90 numbers hold 18, and 95 is one more: 19 numbers.","u":["numbers","number"]},"12-27":{"i":"L1-oddbig","g":"Sorting","q":"Zack sorts these numbers: 17, 24, 8, 39, 42, 31, 26, 55, 12 and 48. He keeps only the numbers that are odd and bigger than 20. How many numbers does he keep?","a":"3","t":"n","s":"3 numbers","h":"Check each number twice: is it odd, and is it bigger than 20?","w":"The numbers that pass both checks are 39, 31, 55. That is 3 numbers.","u":["numbers","number"]},"12-28":{"i":"L1-westturns","g":"Left and right","q":"Aisha faces west. She turns right, then right again, then right again. Which way does she face now: north, east, south or west?","a":"south","t":"s","s":"south","h":"Draw a small compass. Turn one step at a time and write the direction after each turn.","w":"Facing west, then north, then east, then south. After the three turns Aisha faces south."},"12-29":{"i":"L1-robottrack","g":"Moving along","q":"A toy robot starts on square 21 of a number track. It moves forward 15, then back 8, then forward 25. Which square is the robot on now?","a":"53","t":"n","s":"53","h":"Move one step at a time on the number track, or add and take away.","w":"The squares in order are 21, 36, 28, 53. The robot ends on square 53."},"12-30":{"i":"L1-shortestkid","g":"Who is it?","q":"Priya is taller than Hui Min. Arjun is taller than Priya. Who is the shortest?","a":"hui min","t":"s","s":"Hui Min","h":"Draw three lines. Make the shortest person's line the shortest.","w":"Priya is taller than Hui Min, and Arjun is taller than Priya. From tallest: Arjun, Priya, Hui Min. So Hui Min is the shortest."},"12-31":{"i":"L1-bookshelf","g":"Groups","q":"A library shelf has 5 rows of 6 books. Then 3 more books are put on the table beside it. How many books are there altogether?","a":"33","t":"n","s":"33 books","h":"Find the books on the shelf first. Then add the books on the table.","w":"5 rows of 6 books make 30 books. Add the 3 more books: 33 books.","u":["books","book"]}}},base:"/teasers/"})}catch(e){}})();
+</script>

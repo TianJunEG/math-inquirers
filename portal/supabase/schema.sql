@@ -5,7 +5,7 @@ create extension if not exists pgcrypto with schema extensions;
 
 -- ---------- helpers ----------
 create or replace function public.gen_code(n int) returns text
-language plpgsql volatile set search_path = public, extensions as $$
+language plpgsql volatile set search_path = public, extensions, pg_temp as $$
 declare alphabet constant text := 'ABCDEFGHJKMNPQRSTUVWXYZ23456789'; -- no 0/O/1/I/L
         out text := ''; i int;
 begin
@@ -151,7 +151,7 @@ create table public.deletion_requests (
 
 -- ---------- sign-up trigger: create the parents row ----------
 create or replace function public.handle_new_user() returns trigger
-language plpgsql security definer set search_path = public, extensions as $$
+language plpgsql security definer set search_path = public, extensions, pg_temp as $$
 declare code text; tries int := 0;
 begin
   loop
@@ -172,12 +172,12 @@ create trigger on_auth_user_created after insert on auth.users
 -- EXECUTE is granted explicitly in policies.sql (default PUBLIC execute is revoked there).
 -- ======================================================================
 create or replace function public.is_admin() returns boolean
-language sql stable security definer set search_path = public as $$
+language sql stable security definer set search_path = public, pg_temp as $$
   select exists (select 1 from public.admins where user_id = auth.uid());
 $$;
 
 create or replace function public._require_parent() returns uuid
-language plpgsql stable security definer set search_path = public as $$
+language plpgsql stable security definer set search_path = public, pg_temp as $$
 declare uid uuid := auth.uid();
 begin
   if uid is null then raise exception 'not_signed_in' using errcode = '28000'; end if;
@@ -191,7 +191,7 @@ end $$;
 -- all the same digit (0000, 1111), a run up or down (1234, 4321, 7890, 123456), a repeated pair or triple (1212, 123123), a few very common PINs (2580, 1004 ...)
 -- and birth-year patterns (a 4-digit year 1940-2039, or year+month / month+year in 6 digits). The lockout in child_sign_in is the second line of defence.
 create or replace function public._pin_check(p_pin text) returns void
-language plpgsql immutable set search_path = public as $$
+language plpgsql immutable set search_path = public, pg_temp as $$
 begin
   if p_pin is null or p_pin !~ '^[0-9]{4,6}$' then raise exception 'pin_format'; end if;
   if p_pin ~ '^(.)\1+$'
@@ -204,7 +204,7 @@ begin
 end $$;
 
 create or replace function public.add_child(p_name text, p_level int, p_pin text) returns uuid
-language plpgsql security definer set search_path = public, extensions as $$
+language plpgsql security definer set search_path = public, extensions, pg_temp as $$
 declare uid uuid := public._require_parent(); cid uuid;
 begin
   perform public._pin_check(p_pin);
@@ -216,7 +216,7 @@ begin
 end $$;
 
 create or replace function public.update_child(p_child uuid, p_name text, p_level int, p_pin text default null) returns void
-language plpgsql security definer set search_path = public, extensions as $$
+language plpgsql security definer set search_path = public, extensions, pg_temp as $$
 declare uid uuid := public._require_parent(); c public.children;
 begin
   select * into c from public.children where id = p_child and parent_id = uid for update;
@@ -233,7 +233,7 @@ begin
 end $$;
 
 create or replace function public.delete_child(p_child uuid) returns void
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare uid uuid := public._require_parent();
 begin
   if not exists (select 1 from public.children where id = p_child and parent_id = uid) then raise exception 'not_found'; end if;
@@ -251,7 +251,7 @@ end $$;
 -- raised for 7 days falls back to the first step.
 create or replace function public.child_sign_in(p_family_code text, p_name text, p_pin text)
 returns table (child_id uuid, display_name text, level smallint)
-language plpgsql security definer set search_path = public, extensions as $$
+language plpgsql security definer set search_path = public, extensions, pg_temp as $$
 declare c public.children; lvl int; dur interval;
 begin
   select ch.* into c from public.children ch join public.parents p on p.id = ch.parent_id
@@ -280,28 +280,28 @@ end $$;
 
 -- What the parent sees on the dashboard: locks of their children in the last 14 days that they have not yet dismissed.
 create or replace function public.my_pin_alerts() returns table (child_id uuid, child_name text, locked_at timestamptz, locked_until timestamptz, lock_level smallint, still_locked boolean)
-language sql stable security definer set search_path = public as $$
+language sql stable security definer set search_path = public, pg_temp as $$
   select e.child_id, c.display_name, e.locked_at, e.locked_until, e.lock_level, e.locked_until > now()
     from public.pin_lock_events e join public.children c on c.id = e.child_id
    where c.parent_id = public._require_parent() and e.seen_at is null and e.locked_at > now() - interval '14 days'
    order by e.locked_at desc limit 20;
 $$;
 create or replace function public.dismiss_pin_alerts() returns void
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare uid uuid := public._require_parent();
 begin
   update public.pin_lock_events e set seen_at = now() from public.children c where c.id = e.child_id and c.parent_id = uid and e.seen_at is null;
 end $$;
 
 create or replace function public.group_fill() returns table (group_id text, seats int, taken int)
-language sql stable security definer set search_path = public as $$
+language sql stable security definer set search_path = public, pg_temp as $$
   select g.id, g.seats,
          (select count(*)::int from public.enrolments e where e.group_id = g.id and e.status <> 'cancelled')
     from public.groups g where g.active;
 $$;
 
 create or replace function public.record_consents(p_items jsonb, p_terms text, p_privacy text) returns void
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare uid uuid := public._require_parent(); k text; v jsonb;
 begin
   if jsonb_typeof(p_items) <> 'object' then raise exception 'bad_items'; end if;
@@ -314,7 +314,7 @@ begin
 end $$;
 
 create or replace function public.my_consents() returns table (consent_type text, granted boolean, terms_version text, privacy_version text, created_at timestamptz)
-language sql stable security definer set search_path = public as $$
+language sql stable security definer set search_path = public, pg_temp as $$
   select distinct on (c.consent_type) c.consent_type, c.granted, c.terms_version, c.privacy_version, c.created_at
     from public.consents c where c.parent_id = auth.uid() order by c.consent_type, c.seq desc;
 $$;
@@ -324,7 +324,7 @@ $$;
 -- expire_unpaid_reservations(). Default 7 days: OWNER TO CONFIRM (docs/audit_final/open_owner_items.md). A payment that arrives afterwards
 -- is recorded and reported as paid_enrolment_cancelled (late payment), never silently lost.
 create or replace function public._expire_stale_reservations(p_group text default null, p_days int default 7) returns int
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare n int;
 begin
   with stale as (
@@ -341,10 +341,10 @@ begin
 end $$;
 
 create or replace function public.expire_unpaid_reservations(p_days int default 7) returns int
-language sql security definer set search_path = public as $$ select public._expire_stale_reservations(null, p_days); $$;
+language sql security definer set search_path = public, pg_temp as $$ select public._expire_stale_reservations(null, p_days); $$;
 
 create or replace function public.enrol_child(p_child uuid, p_group text) returns uuid
-language plpgsql security definer set search_path = public, extensions as $$
+language plpgsql security definer set search_path = public, extensions, pg_temp as $$
 declare uid uuid := public._require_parent(); ch public.children; g public.groups; eid uuid; ref text; tries int := 0; taken int; missing text;
 begin
   select * into ch from public.children where id = p_child and parent_id = uid;
@@ -370,7 +370,7 @@ begin
 end $$;
 
 create or replace function public.cancel_my_enrolment(p_enrolment uuid) returns void
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare uid uuid := public._require_parent(); pay public.payments;
 begin
   select p.* into pay from public.payments p join public.enrolments e on e.id = p.enrolment_id
@@ -383,7 +383,7 @@ end $$;
 create or replace function public.my_enrolments() returns table (
   enrolment_id uuid, child_id uuid, child_name text, group_id text, enrolment_status text,
   payment_id uuid, payment_method text, payment_status text, payment_reference text, amount_cents int, paid_at timestamptz, created_at timestamptz)
-language sql stable security definer set search_path = public as $$
+language sql stable security definer set search_path = public, pg_temp as $$
   select e.id, e.child_id, coalesce(c.display_name, e.child_label), e.group_id, e.status,
          p.id, p.method, p.status, p.reference, p.amount_cents, p.paid_at, e.created_at
     from public.enrolments e join public.payments p on p.enrolment_id = e.id left join public.children c on c.id = e.child_id
@@ -394,7 +394,7 @@ $$;
 create or replace function public.admin_list_enrolments() returns table (
   enrolment_id uuid, created_at timestamptz, parent_email text, parent_name text, parent_phone text, child_name text, level smallint,
   group_id text, enrolment_status text, payment_id uuid, payment_method text, payment_status text, payment_reference text, amount_cents int, paid_at timestamptz)
-language plpgsql stable security definer set search_path = public as $$
+language plpgsql stable security definer set search_path = public, pg_temp as $$
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
   return query
@@ -406,7 +406,7 @@ begin
 end $$;
 
 create or replace function public.admin_mark_paid(p_payment uuid, p_note text default null) returns void
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare pay public.payments;
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
@@ -419,7 +419,7 @@ begin
 end $$;
 
 create or replace function public.admin_cancel_enrolment(p_enrolment uuid, p_note text default null) returns void
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
   update public.enrolments set status = 'cancelled', cancelled_at = now() where id = p_enrolment and status <> 'cancelled';
@@ -436,7 +436,7 @@ end $$;
 create or replace function public.service_begin_payment(p_enrolment uuid, p_parent uuid)
 returns table (payment_id uuid, amount_cents int, currency text, group_fee_cents int, group_name text, reference text,
                payment_status text, enrolment_status text, parent_email text, parent_name text, attempt int)
-language sql stable security definer set search_path = public as $$
+language sql stable security definer set search_path = public, pg_temp as $$
   select p.id, p.amount_cents, p.currency, g.fee_cents, g.name, p.reference, p.status, e.status, pa.email, pa.full_name, p.provider_attempt
     from public.enrolments e
     join public.payments p on p.enrolment_id = e.id
@@ -447,7 +447,7 @@ $$;
 
 -- Remember which Checkout Session belongs to the payment. Only touches a payment that is still pending.
 create or replace function public.service_attach_session(p_payment uuid, p_session_id text) returns void
-language sql security definer set search_path = public as $$
+language sql security definer set search_path = public, pg_temp as $$
   update public.payments set method = 'stripe', provider_ref = p_session_id, updated_at = now()
    where id = p_payment and status = 'pending';
 $$;
@@ -460,7 +460,7 @@ $$;
 --    recorded as paid and the owner decides: re-open the seat if it is still free, or refund.
 -- A mismatch changes nothing: the owner sees it in the Cloudflare log and handles it by hand.
 create or replace function public.service_mark_paid(p_payment uuid, p_session_id text, p_payment_intent text, p_amount_cents int, p_currency text)
-returns text language plpgsql security definer set search_path = public as $$
+returns text language plpgsql security definer set search_path = public, pg_temp as $$
 declare pay public.payments; est text;
 begin
   select p.* into pay from public.payments p where p.id = p_payment for update;
@@ -489,7 +489,7 @@ end $$;
 -- but the session reference is cleared and the retry counter moves on so the next attempt gets a fresh idempotency key.
 -- Returns: reset | ignored (not pending, or a different/newer session) | not_found
 create or replace function public.service_mark_session_failed(p_payment uuid, p_session_id text) returns text
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare pay public.payments;
 begin
   select p.* into pay from public.payments p where p.id = p_payment for update;
@@ -506,7 +506,7 @@ end $$;
 -- Payment and consent rows are kept (anonymised: they only point at the now-empty parents row) for the retention
 -- period in privacy.html, then purged by the owner. Paid enrolments are cancelled but NOT refunded here: the owner refunds per the terms.
 create or replace function public.delete_my_data() returns void
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare uid uuid := public._require_parent();
 begin
   update public.payments set status = case when status = 'paid' then 'paid' else 'cancelled' end,

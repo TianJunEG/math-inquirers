@@ -30,7 +30,7 @@ select pg_temp.as_('authenticated',:'A',format($q$select * from public.recording
 select pg_temp.chk('withdrawing the recording consent stops playback at once', :'r' = 'ok:0', 'High', :'r');
 select pg_temp.as_('authenticated','cccccccc-0000-0000-0000-00000000000c',format($q$select * from public.recording_playback(%L)$q$, :'rid')) as r \gset
 select pg_temp.chk('a tutor (not enrolled) has no playback (design says add later)', :'r' = 'ok:0', 'Low', :'r');
-select pg_temp.note('recording_views holds parent_id with no FK and delete_my_data() does not delete it (recordings.sql section 7 only comments the line to add); rows live until the recording is deleted', 'Low');
+select pg_temp.note('R1: delete_my_data() now deletes the parent''s recording_views rows (checked in audit_08)', 'Low');
 set role authenticated; select set_config('request.jwt.claim.sub',:'A',false);
 select public.record_consents('{"recording":true}','t7','p7'); reset role;
 

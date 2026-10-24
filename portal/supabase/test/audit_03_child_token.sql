@@ -8,7 +8,7 @@ select set_config('audit.code_a', (select code_a from public.audit_ctx), false),
 create temp table tok(who text primary key, token text, child uuid);
 grant all on tok to anon, authenticated;
 set role anon; select set_config('request.jwt.claim.sub','',false);
-insert into tok select 'mia', token, child_id from public.child_start_session(current_setting('audit.code_a'), 'Mia', '1234');
+insert into tok select 'mia', token, child_id from public.child_start_session(current_setting('audit.code_a'), 'Mia', '7391');
 reset role;
 select pg_temp.chk('Mia can start a session with correct code/name/PIN', (select count(*) from tok where who='mia') = 1, 'High');
 select pg_temp.chk('token is stored only as a SHA-256 hash (no plaintext token in child_sessions)', not exists (select 1 from public.child_sessions s, tok t where s.token_hash = t.token), 'High');
@@ -50,7 +50,7 @@ set role authenticated; select set_config('request.jwt.claim.sub','aaaaaaaa-0000
 select public.record_consents('{"online_practice":false}','t2','p2');
 reset role;
 select pg_temp.chk('withdrawing online_practice: existing token cannot fetch keys (consent)', public.service_practice_keys((select h from h2),'hol-l1l01','v1')->>'error' = 'consent', 'High');
-select pg_temp.chk('withdrawing online_practice: no new child session', (select count(*) from (select * from public.child_start_session(current_setting('audit.code_a'),'Mia','1234')) s) = 0, 'High');
+select pg_temp.chk('withdrawing online_practice: no new child session', (select count(*) from (select * from public.child_start_session(current_setting('audit.code_a'),'Mia','7391')) s) = 0, 'High');
 select pg_temp.chk('withdrawing online_practice: overview says can_submit=false (and still lists units)', pg_temp.val('anon',null,format($q$select public.child_session_overview(%L)->>'can_submit'$q$, (select token from tok where who='mia'))) = 'false', 'Low');
 set role authenticated; select set_config('request.jwt.claim.sub','aaaaaaaa-0000-0000-0000-00000000000a',false);
 select public.record_consents('{"online_practice":true}','t3','p3');
@@ -81,23 +81,23 @@ do $$ declare i int; ok int := 0; code text := current_setting('audit.code_a'); 
      'a 4-digit PIN falls in at most ~500 hours of patient guessing; a griefer who knows family code + name can keep a child locked out. Suggest escalating lock (15 min, 1 h, 24 h) and an email to the parent');
   update public.children set pin_failed = 0, pin_locked_until = null where display_name = 'Kai';
 end $$;
-select pg_temp.chk('unknown family code and unknown name give the same empty result as a wrong PIN', pg_temp.try_pin('ZZZZZZ','Mia','1234') = 0 and pg_temp.try_pin(current_setting('audit.code_a'),'Nobody','1234') = 0, 'Medium');
-select pg_temp.chk('a PIN from the OTHER family does not work (Ben''s PIN on Mia)', pg_temp.try_pin(current_setting('audit.code_a'),'Mia','4321') = 0, 'High');
-select pg_temp.chk('child_start_session does not allow a name in family A to sign in with B''s code', pg_temp.try_pin(current_setting('audit.code_b'),'Mia','1234') = 0, 'High');
-select pg_temp.chk('child_sign_in: PIN with SQL metacharacters is just a wrong PIN', pg_temp.try_pin(current_setting('audit.code_a'),'Mia', $$1234' or '1'='1$$) = 0 and pg_temp.try_pin(current_setting('audit.code_a'), $$Mia' or '1'='1$$, '1234') = 0, 'High');
-select pg_temp.chk('wildcards in the name do not match (LIKE injection)', pg_temp.try_pin(current_setting('audit.code_a'),'%','1234') = 0 and pg_temp.try_pin(current_setting('audit.code_a'),'M_a','1234') = 0, 'High');
+select pg_temp.chk('unknown family code and unknown name give the same empty result as a wrong PIN', pg_temp.try_pin('ZZZZZZ','Mia','7391') = 0 and pg_temp.try_pin(current_setting('audit.code_a'),'Nobody','7391') = 0, 'Medium');
+select pg_temp.chk('a PIN from the OTHER family does not work (Ben''s PIN on Mia)', pg_temp.try_pin(current_setting('audit.code_a'),'Mia','9152') = 0, 'High');
+select pg_temp.chk('child_start_session does not allow a name in family A to sign in with B''s code', pg_temp.try_pin(current_setting('audit.code_b'),'Mia','7391') = 0, 'High');
+select pg_temp.chk('child_sign_in: PIN with SQL metacharacters is just a wrong PIN', pg_temp.try_pin(current_setting('audit.code_a'),'Mia', $$1234' or '1'='1$$) = 0 and pg_temp.try_pin(current_setting('audit.code_a'), $$Mia' or '1'='1$$, '7391') = 0, 'High');
+select pg_temp.chk('wildcards in the name do not match (LIKE injection)', pg_temp.try_pin(current_setting('audit.code_a'),'%','7391') = 0 and pg_temp.try_pin(current_setting('audit.code_a'),'M_a','7391') = 0, 'High');
 select pg_temp.chk('NULL arguments do not sign anyone in', pg_temp.try_pin(null,null,null) = 0 and pg_temp.try_pin(current_setting('audit.code_a'),'Mia',null) = 0, 'High');
 -- family code enumeration: how guessable?
 select pg_temp.note('family code space: 6 chars from a 31-letter alphabet (~887M); no per-IP throttle exists in SQL', 'Low', 'rely on Supabase API rate limits / Cloudflare; the code alone gives nothing without name + PIN');
 
 -- ===== session count limit =====
 do $$ declare i int; begin
-  for i in 1..8 loop perform pg_temp.try_pin(current_setting('audit.code_a'),'Mia','1234'); end loop;
+  for i in 1..8 loop perform pg_temp.try_pin(current_setting('audit.code_a'),'Mia','7391'); end loop;
   perform pg_temp.chk('at most 5 live sessions per child', (select count(*) from public.child_sessions s join public.children c on c.id=s.child_id where c.display_name='Mia' and s.revoked_at is null and s.expires_at > now()) <= 5, 'Low');
 end $$;
 
 -- ===== rate limit on submissions (20 per child per hour) =====
-do $$ declare i int; th text := (select encode(extensions.digest(token,'sha256'),'hex') from (select token from public.child_start_session(current_setting('audit.code_a'),'Mia','1234') limit 1) t); r jsonb; begin
+do $$ declare i int; th text := (select encode(extensions.digest(token,'sha256'),'hex') from (select token from public.child_start_session(current_setting('audit.code_a'),'Mia','7391') limit 1) t); r jsonb; begin
   delete from public.practice_submissions where child_id = (select mia from public.audit_ctx);
   for i in 1..20 loop
     perform public.service_practice_record(th,'hol-l1l01','v1',gen_random_uuid(),1,'[{"item_id":"q1","marking_mode":"auto","mark":"right","answered":true,"answer_text":"9"}]');

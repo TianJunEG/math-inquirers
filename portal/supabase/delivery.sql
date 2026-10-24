@@ -68,7 +68,7 @@ create or replace function public.service_grant_entitlement(
   p_r2_key text, p_filename text, p_version text, p_sha256 text,
   p_nonce text, p_token_hash text, p_expires_at timestamptz, p_max int,
   p_source text default 'stripe', p_note text default null, p_created_by uuid default null)
-returns jsonb language plpgsql security definer set search_path = public as $$
+returns jsonb language plpgsql security definer set search_path = public, pg_temp as $$
 declare r public.entitlements; made boolean := true;
 begin
   insert into public.entitlements (order_id, stripe_session_id, product_id, format, buyer_email, r2_key, filename, file_version, file_sha256,
@@ -90,7 +90,7 @@ end $$;
 create or replace function public.service_order_entitlements(p_session_id text)
 returns table (id uuid, order_id text, product_id text, format text, filename text, link_nonce text, expires_at timestamptz,
                max_downloads int, download_count int, revoked boolean, buyer_email text, emailed_at timestamptz)
-language sql stable security definer set search_path = public as $$
+language sql stable security definer set search_path = public, pg_temp as $$
   select e.id, e.order_id, e.product_id, e.format, e.filename, e.link_nonce, e.expires_at, e.max_downloads, e.download_count,
          (e.revoked_at is not null), e.buyer_email, e.emailed_at
   from public.entitlements e where e.stripe_session_id = p_session_id and p_session_id is not null order by e.created_at, e.product_id;
@@ -98,7 +98,7 @@ $$;
 
 -- Atomic lease: returns true to exactly one caller per 10 minutes while the order's email is not yet sent.
 create or replace function public.service_claim_email(p_session_id text) returns boolean
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare n int;
 begin
   update public.entitlements set email_claimed_at = now()
@@ -109,7 +109,7 @@ begin
 end $$;
 
 create or replace function public.service_mark_emailed(p_session_id text) returns void
-language sql security definer set search_path = public as $$
+language sql security definer set search_path = public, pg_temp as $$
   update public.entitlements set emailed_at = now() where stripe_session_id = p_session_id and emailed_at is null;
 $$;
 
@@ -119,7 +119,7 @@ $$;
 --                     download, so ranges cannot be used to fetch the file without ever being counted.
 create or replace function public.service_download_begin(p_token_hash text, p_ip_hash text, p_count boolean,
                                                          p_rate_max int default 30, p_rate_window_min int default 10)
-returns jsonb language plpgsql security definer set search_path = public as $$
+returns jsonb language plpgsql security definer set search_path = public, pg_temp as $$
 declare e public.entitlements; recent int; st text;
 begin
   if p_ip_hash is not null then
@@ -154,7 +154,7 @@ end $$;
 
 -- Give the download back when the file could not be read from storage (our fault, not the buyer's).
 create or replace function public.service_download_release(p_entitlement uuid) returns void
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 begin
   update public.entitlements set download_count = greatest(download_count - 1, 0) where id = p_entitlement;
   insert into public.delivery_log (entitlement_id, order_id, outcome) select id, order_id, 'storage_missing' from public.entitlements where id = p_entitlement;
@@ -162,7 +162,7 @@ end $$;
 
 -- Success-page lookups share the same rate limit table (outcome 'links_view').
 create or replace function public.service_links_rate(p_ip_hash text, p_max int default 20, p_window_min int default 10) returns boolean
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare recent int;
 begin
   select count(*) into recent from public.delivery_log where ip_hash = p_ip_hash and outcome = 'links_view' and at > now() - make_interval(mins => p_window_min);
@@ -172,7 +172,7 @@ begin
 end $$;
 
 create or replace function public.service_purge_delivery_log(p_days int default 90) returns int
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare n int;
 begin
   delete from public.delivery_log where at < now() - make_interval(days => p_days);
@@ -186,7 +186,7 @@ create or replace function public.admin_list_entitlements(p_limit int default 10
 returns table (id uuid, order_id text, product_id text, format text, filename text, buyer_email text, source text, note text,
                expires_at timestamptz, max_downloads int, download_count int, last_download_at timestamptz, revoked_at timestamptz,
                emailed_at timestamptz, created_at timestamptz)
-language plpgsql stable security definer set search_path = public as $$
+language plpgsql stable security definer set search_path = public, pg_temp as $$
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
   return query select e.id, e.order_id, e.product_id, e.format, e.filename, e.buyer_email, e.source, e.note, e.expires_at, e.max_downloads,
@@ -195,7 +195,7 @@ begin
 end $$;
 
 create or replace function public.admin_revoke_entitlement(p_id uuid, p_reason text default null) returns boolean
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare n int;
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
@@ -208,7 +208,7 @@ end $$;
 -- Returns what the Function needs to rebuild the same link and email it.
 create or replace function public.admin_prepare_resend(p_id uuid, p_extend_days int default 14, p_reset_count boolean default false)
 returns table (id uuid, order_id text, product_id text, filename text, buyer_email text, link_nonce text, expires_at timestamptz, max_downloads int)
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
   return query
@@ -224,7 +224,7 @@ end $$;
 -- Manual link (beta PDF fallback, WhatsApp delivery) without payment. The Function generates nonce + token_hash and passes them in.
 create or replace function public.admin_create_manual_entitlement(
   p_label text, p_r2_key text, p_filename text, p_email text, p_nonce text, p_token_hash text, p_days int default 14, p_max int default 5, p_note text default null)
-returns jsonb language plpgsql security definer set search_path = public as $$
+returns jsonb language plpgsql security definer set search_path = public, pg_temp as $$
 declare r public.entitlements;
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
@@ -236,7 +236,7 @@ begin
 end $$;
 
 create or replace function public.admin_purge_delivery_log(p_days int default 90) returns int
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare n int;
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;

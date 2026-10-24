@@ -26,15 +26,33 @@
     { id: 'i2', created_at: '2026-10-21T01:00:00Z', expires_at: '2027-10-21T01:00:00Z', level: 2, age_band: '6-7', slots: ['R1'], windows: [], other_time: 'Tue 4pm', parent_first_name: 'Sam', contact_whatsapp: null, contact_email: 'sam@example.com', note: 'sibling', status: 'new' }]; return db.interest; }
   window.__mockDb = function () { return db; };
 
+  // same rule as _pin_check in schema.sql
+  function weakPin(p) {
+    return /^(.)\1+$/.test(p) || '01234567890'.indexOf(p) >= 0 || '09876543210'.indexOf(p) >= 0 || /^(..)\1+$/.test(p) || /^(...)\1$/.test(p)
+      || ['2580', '0852', '1004', '1010', '1122', '1313', '2000', '2001', '6969', '7410', '8520', '1230', '3210', '123321', '112233', '121314', '654321'].indexOf(p) >= 0
+      || /^(19[4-9][0-9]|20[0-3][0-9])$/.test(p) || /^(19[4-9][0-9]|20[0-3][0-9])(0[1-9]|1[0-2])$/.test(p) || /^(0[1-9]|1[0-2])(19[4-9][0-9]|20[0-3][0-9])$/.test(p);
+  }
   var rpcs = {
-    add_child: function (a) { var u = me(); if (!/^[0-9]{4,6}$/.test(a.p_pin)) throw err('pin_format');
+    add_child: function (a) { var u = me(); if (!/^[0-9]{4,6}$/.test(a.p_pin)) throw err('pin_format'); if (weakPin(a.p_pin)) throw err('pin_weak');
       if (db.children.some(function (c) { return c.parent_id === u.id && c.display_name.toLowerCase() === a.p_name.trim().toLowerCase(); })) throw err('duplicate key children_parent_name_uq');
       db.children.push({ id: id('c'), parent_id: u.id, display_name: a.p_name.trim(), level: a.p_level, pin: 'hash:' + a.p_pin, created_at: new Date().toISOString(), failed: 0 }); return null; },
     update_child: function (a) { var c = db.children.filter(function (x) { return x.id === a.p_child; })[0]; if (!c) throw err('not_found');
       if (a.p_level !== c.level && db.enrolments.some(function (e) { return e.child_id === c.id && e.status !== 'cancelled'; })) throw err('level_locked_by_enrolment');
-      c.display_name = a.p_name; c.level = a.p_level; if (a.p_pin) c.pin = 'hash:' + a.p_pin; return null; },
+      if (a.p_pin) { if (!/^[0-9]{4,6}$/.test(a.p_pin)) throw err('pin_format'); if (weakPin(a.p_pin)) throw err('pin_weak'); c.pin = 'hash:' + a.p_pin; c.failed = 0; c.locked_until = null; c.lock_level = 0; (db.pin_alerts || []).forEach(function (x) { if (x.child_id === c.id) x.seen = true; }); }
+      c.display_name = a.p_name; c.level = a.p_level; return null; },
     delete_child: function (a) { if (db.enrolments.some(function (e) { return e.child_id === a.p_child && e.status !== 'cancelled'; })) throw err('cancel_enrolment_first');
-      db.children = db.children.filter(function (c) { return c.id !== a.p_child; }); return null; },
+      if (db.access.some(function (x) { return x.child_id === a.p_child && x.status === 'active' && x.format !== 'workbook'; })) throw err('has_online_access');
+      return rpcs._delete_child_now(a); },
+    _delete_child_now: function (a) { db.ext_orders.forEach(function (o) { if (o.child_id === a.p_child) { if (o.status === 'pending_payment') { o.status = 'cancelled'; o.ship_status = 'not_needed'; o.ship_name = o.ship_address = o.ship_postal = o.ship_phone = null; } o.child_label = null; o.child_id = null; } });
+      db.access = db.access.filter(function (x) { return x.child_id !== a.p_child; }); db.children = db.children.filter(function (c) { return c.id !== a.p_child; }); return null; },
+    delete_child_and_access: function (a) { if (a.p_confirm !== true) throw err('confirmation_needed'); if (!ownChild(a.p_child)) throw err('not_found');
+      if (db.enrolments.some(function (e) { return e.child_id === a.p_child && e.status !== 'cancelled'; })) throw err('cancel_enrolment_first'); return rpcs._delete_child_now(a); },
+    transfer_book_access: function (a) { if (!ownChild(a.p_from) || !ownChild(a.p_to) || a.p_from === a.p_to) throw err('not_found'); var n = 0;
+      db.access.filter(function (x) { return x.child_id === a.p_from && x.status === 'active' && x.format !== 'workbook'; }).forEach(function (x) {
+        if (db.access.some(function (y) { return y.child_id === a.p_to && y.level === x.level && y.status === 'active' && y.format !== 'workbook'; })) throw err('target_has_access'); x.child_id = a.p_to; n++; }); return n; },
+    my_pin_alerts: function () { var u = me(); return (db.pin_alerts || []).filter(function (x) { var c = db.children.filter(function (k) { return k.id === x.child_id; })[0]; return c && c.parent_id === u.id && !x.seen; })
+      .map(function (x) { return { child_id: x.child_id, child_name: db.children.filter(function (k) { return k.id === x.child_id; })[0].display_name, locked_at: x.locked_at, locked_until: x.locked_until, lock_level: x.lock_level, still_locked: new Date(x.locked_until) > new Date() }; }); },
+    dismiss_pin_alerts: function () { var u = me(); (db.pin_alerts || []).forEach(function (x) { var c = db.children.filter(function (k) { return k.id === x.child_id; })[0]; if (c && c.parent_id === u.id) x.seen = true; }); return null; },
     group_fill: function () { return db.groups.map(function (g) { return { group_id: g.id, seats: g.seats, taken: taken(g.id) }; }); },
     my_consents: function () { var m = latest(me().id); return Object.keys(m).map(function (k) { return m[k]; }); },
     record_consents: function (a) { Object.keys(a.p_items).forEach(function (k) { db.consents.push({ parent_id: me().id, consent_type: k, granted: a.p_items[k], terms_version: a.p_terms, privacy_version: a.p_privacy, created_at: new Date().toISOString() }); }); return null; },
@@ -51,8 +69,9 @@
       return { enrolment_id: e.id, child_id: e.child_id, child_name: e.child_label, group_id: e.group_id, enrolment_status: e.status, payment_id: p.id, payment_method: p.method, payment_status: p.status, payment_reference: p.reference, amount_cents: p.amount_cents, paid_at: p.paid_at, created_at: e.created_at }; }); },
     child_sign_in: function (a) { var par = db.parents.filter(function (p) { return p.family_code === String(a.p_family_code).trim().toUpperCase(); })[0]; if (!par) return [];
       var c = db.children.filter(function (x) { return x.parent_id === par.id && x.display_name.toLowerCase() === a.p_name.trim().toLowerCase(); })[0]; if (!c) return [];
-      if (c.locked) return []; if (c.pin === 'hash:' + a.p_pin) { c.failed = 0; return [{ child_id: c.id, display_name: c.display_name, level: c.level }]; }
-      c.failed++; if (c.failed >= 5) c.locked = true; return []; },
+      if (c.locked_until && new Date(c.locked_until) > new Date()) return []; if (c.pin === 'hash:' + a.p_pin) { c.failed = 0; c.lock_level = 0; c.locked_until = null; return [{ child_id: c.id, display_name: c.display_name, level: c.level }]; }
+      c.failed = (c.failed || 0) + 1; if (c.failed >= 5) { c.failed = 0; c.lock_level = Math.min((c.lock_level || 0) + 1, 4); var mins = [0, 15, 60, 360, 1440][c.lock_level]; c.locked_until = new Date(Date.now() + mins * 60000).toISOString();
+        (db.pin_alerts = db.pin_alerts || []).push({ child_id: c.id, locked_at: new Date().toISOString(), locked_until: c.locked_until, lock_level: c.lock_level, seen: false }); } return []; },
     admin_interest_tally: function () { if (!isAdmin()) throw err('forbidden'); var rows = interest(), out = [], m = {};
       rows.forEach(function (r) { var k = [r.level, 'total', '*'].join('|'); m[k] = (m[k] || 0) + 1; r.slots.forEach(function (s) { k = [r.level, 'slot', s].join('|'); m[k] = (m[k] || 0) + 1; }); });
       Object.keys(m).forEach(function (k) { var p = k.split('|'); out.push({ level: +p[0], kind: p[1], key: p[2], n: m[k] }); }); return out; },
@@ -64,7 +83,8 @@
       return { enrolment_id: e.id, created_at: e.created_at, parent_email: pa.email, parent_name: pa.full_name, parent_phone: pa.phone, child_name: e.child_label, level: 1, group_id: e.group_id, enrolment_status: e.status, payment_id: p.id, payment_method: p.method, payment_status: p.status, payment_reference: p.reference, amount_cents: p.amount_cents, paid_at: p.paid_at }; }); },
     admin_mark_paid: function (a) { if (!isAdmin()) throw err('forbidden'); var p = db.payments.filter(function (x) { return x.id === a.p_payment; })[0]; p.status = 'paid'; p.paid_at = new Date().toISOString();
       db.enrolments.forEach(function (e) { if (e.id === p.enrolment_id && e.status === 'pending_payment') e.status = 'confirmed'; }); return null; },
-    delete_my_data: function () { var u = me(); db.children = db.children.filter(function (c) { return c.parent_id !== u.id; }); db.enrolments.forEach(function (e) { if (e.parent_id === u.id) e.status = 'cancelled'; });
+    delete_my_data: function () { var u = me(); db.ext_orders.forEach(function (o) { if (o.parent_id === u.id) { if (o.status === 'pending_payment') o.status = 'cancelled'; else if (o.status === 'paid') o.refund_due = true; o.ship_name = o.ship_address = o.ship_postal = o.ship_phone = o.child_label = null; if (o.ship_status === 'to_ship') o.ship_status = 'not_needed'; } });
+      db.trials = db.trials.filter(function (t) { return t.parent_id !== u.id; }); db.children = db.children.filter(function (c) { return c.parent_id !== u.id; }); db.enrolments.forEach(function (e) { if (e.parent_id === u.id) e.status = 'cancelled'; });
       db.parents = db.parents.filter(function (p) { return p.id !== u.id; }); db.users = db.users.filter(function (x) { return x.id !== u.id; }); return null; }
   };
 
@@ -98,7 +118,7 @@
   }
   function validYear(y) { var n = new Date().getFullYear(); return y == null || (y >= n - 18 && y <= n - 3); }
   function tokenStr() { var a = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_-', s = ''; for (var i = 0; i < 43; i++) s += a[Math.floor(Math.random() * a.length)]; return s; }
-  function adminOrder(o) { var p = db.parents.filter(function (x) { return x.id === o.parent_id; })[0]; return { id: o.id, reference: o.reference, parent_email: p && p.email, child_label: o.child_label, product_id: o.product_id, status: o.status, ship_status: o.ship_status, paid_at: o.paid_at, created_at: o.created_at }; }
+  function adminOrder(o) { var p = db.parents.filter(function (x) { return x.id === o.parent_id; })[0]; return { id: o.id, reference: o.reference, parent_email: p && p.email, child_label: o.child_label, product_id: o.product_id, status: o.status, ship_status: o.ship_status, paid_at: o.paid_at, created_at: o.created_at, refund_due: !!o.refund_due, paid_after_cancel_at: o.paid_after_cancel_at || null, admin_note: o.admin_note || null }; }
   Object.assign(rpcs, {
     add_child_profile: function (a) { if (!validYear(a.p_birth_year)) throw err('bad_birth_year'); rpcs.add_child(a); var u = me(); db.children.filter(function (c) { return c.parent_id === u.id && c.display_name.toLowerCase() === a.p_name.trim().toLowerCase(); })[0].birth_year = a.p_birth_year || null; return null; },
     update_child_birth_year: function (a) { if (!validYear(a.p_year)) throw err('bad_birth_year'); var c = ownChild(a.p_child); if (!c) throw err('not_found'); c.birth_year = a.p_year; return null; },
@@ -111,8 +131,8 @@
       if (a.p_format !== 'workbook' && !hasC(u.id, 'online_practice')) throw err('consents_missing:online_practice');
       if (a.p_format !== 'online') {
         if (!hasC(u.id, 'book_delivery')) throw err('consents_missing:book_delivery');
-        if (!(a.p_ship_name || '').trim() || !(a.p_ship_address || '').trim() || !/^[0-9]{6}$/.test(a.p_ship_postal || '')) throw err('bad_address');
-      }
+        if (!(a.p_ship_name || '').trim() || !(a.p_ship_address || '').trim() || !/^[0-9]{6}$/.test(a.p_ship_postal || '') || Number(a.p_ship_postal.slice(0, 2)) < 1 || Number(a.p_ship_postal.slice(0, 2)) > 82) throw err('bad_address');
+      } else if ((a.p_ship_name || '').trim() || (a.p_ship_address || '').trim() || (a.p_ship_postal || '').trim() || (a.p_ship_phone || '').trim()) throw err('bad_address');
       if (a.p_format !== 'workbook' && db.access.some(function (x) { return x.child_id === c.id && x.level === a.p_level && x.status === 'active' && x.format !== 'workbook'; })) throw err('already_has_online');
       if (db.ext_orders.some(function (o) { return o.child_id === c.id && o.level === a.p_level && o.status === 'pending_payment' && (o.format === a.p_format || (o.format !== 'workbook' && a.p_format !== 'workbook')); })) throw err('already_pending');
       var o = { id: id('o'), reference: 'MI-' + code(6), parent_id: u.id, child_id: c.id, child_label: c.display_name, level: a.p_level, format: a.p_format, product_id: key, amount_cents: price, currency: 'SGD', method: 'paynow_manual',
@@ -152,7 +172,10 @@
       o.status = 'paid'; o.paid_at = nowIso(); db.access.push({ id: id('a'), child_id: o.child_id, level: o.level, format: o.format, source: 'paynow_manual', order_id: o.id, source_note: null, status: 'active', created_at: nowIso(), ended_at: null }); return null; },
     admin_cancel_ext_order: function (a) { adm(); var o = db.ext_orders.filter(function (x) { return x.id === a.p_order && x.status === 'pending_payment'; })[0]; if (!o) throw err('cannot_cancel_order'); o.status = 'cancelled'; o.ship_status = 'not_needed'; o.ship_name = o.ship_address = o.ship_postal = o.ship_phone = null; return null; },
     admin_refund_ext_order: function (a) { adm(); db.ext_orders.forEach(function (o) { if (o.id === a.p_order && o.status === 'paid') o.status = 'refunded'; }); db.access.forEach(function (x) { if (x.order_id === a.p_order && x.status === 'active') x.status = 'refunded'; }); return null; },
-    admin_set_ship_status: function (a) { adm(); db.ext_orders.forEach(function (o) { if (o.id === a.p_order && o.format !== 'online') { o.ship_status = a.p_status; if (a.p_status === 'shipped') o.shipped_at = nowIso(); if (a.p_status === 'delivered') o.delivered_at = nowIso(); } }); return null; },
+    admin_resolve_ext_refund: function (a) { adm(); var o = db.ext_orders.filter(function (x) { return x.id === a.p_order && x.refund_due; })[0]; if (!o) throw err('not_found'); o.refund_due = false; o.admin_note = (o.admin_note ? o.admin_note + ' | ' : '') + 'refund done' + (a.p_note ? ': ' + a.p_note : ''); return null; },
+    admin_reinstate_ext_order: function (a) { adm(); var o = db.ext_orders.filter(function (x) { return x.id === a.p_order && x.status === 'cancelled' && x.paid_after_cancel_at; })[0]; if (!o) throw err('not_found'); if (o.format !== 'online') throw err('address_deleted_refund_instead');
+      o.status = 'paid'; o.refund_due = false; db.access.push({ id: id('a'), child_id: o.child_id, level: o.level, format: o.format, source: 'stripe', order_id: o.id, status: 'active', created_at: nowIso(), ended_at: null }); return null; },
+    admin_set_ship_status: function (a) { adm(); db.ext_orders.forEach(function (o) { if (o.id === a.p_order && o.format !== 'online' && o.status === 'paid') { o.ship_status = a.p_status; if (a.p_status === 'shipped') o.shipped_at = nowIso(); if (a.p_status === 'delivered') o.delivered_at = nowIso(); } }); return null; },
     admin_clear_delivered_addresses: function () { adm(); return 0; },
     admin_list_children: function () { adm(); return db.children.map(function (c) { var p = db.parents.filter(function (x) { return x.id === c.parent_id; })[0]; return { child_id: c.id, display_name: c.display_name, level: c.level, birth_year: c.birth_year || null, parent_email: p.email, parent_name: p.full_name }; }); },
     admin_list_book_access: function () { adm(); return db.access.map(function (a) { var c = db.children.filter(function (x) { return x.id === a.child_id; })[0], p = db.parents.filter(function (x) { return x.id === c.parent_id; })[0];
@@ -192,7 +215,7 @@
         if (name === 'ext_orders' || name === 'trial_requests') return isAdmin() || r.parent_id === u.id;
         return r.parent_id === u.id;
       });
-      return rows.map(function (r) { var c = Object.assign({}, r); delete c.pin; delete c.failed; delete c.locked; return c; });
+      return rows.map(function (r) { var c = Object.assign({}, r); delete c.pin; delete c.failed; delete c.locked; delete c.locked_until; delete c.lock_level; return c; });
     }
     var b = {
       select: function () { return b; }, single: function () { q.single = true; return b; },

@@ -51,7 +51,7 @@ create or replace function public.submit_product_interest(
   p_first_name text, p_whatsapp text, p_email text, p_items jsonb, p_note text,
   p_consent boolean, p_consent_version text, p_hp text default null
 ) returns jsonb
-language plpgsql volatile security definer set search_path = public as $$
+language plpgsql volatile security definer set search_path = public, pg_temp as $$
 declare
   v_wa    text;
   v_em    text;
@@ -118,7 +118,7 @@ end $$;
 -- Tally: one row per (product, format): how many requests asked for it (requests) and how many copies (copies: physical quantities, soft = 1 each).
 -- product '*' / format '*' gives the number of requests in total.
 create or replace function public.admin_product_interest_tally() returns table (product text, format text, requests bigint, copies bigint)
-language plpgsql stable security definer set search_path = public as $$
+language plpgsql stable security definer set search_path = public, pg_temp as $$
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
   return query
@@ -132,7 +132,7 @@ end $$;
 create or replace function public.admin_list_product_interest() returns table (
   id uuid, created_at timestamptz, expires_at timestamptz, parent_first_name text, contact_whatsapp text, contact_email text,
   items jsonb, note text, status text)
-language plpgsql stable security definer set search_path = public as $$
+language plpgsql stable security definer set search_path = public, pg_temp as $$
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
   return query
@@ -141,7 +141,7 @@ begin
 end $$;
 
 create or replace function public.admin_set_product_interest_status(p_id uuid, p_status text) returns void
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
   if p_status not in ('new','notified','closed') then raise exception 'invalid_input' using errcode = '22023'; end if;
@@ -150,7 +150,7 @@ end $$;
 
 -- Deletion on request (PDPA) or when a parent asks to be removed.
 create or replace function public.admin_delete_product_interest(p_id uuid) returns void
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
   delete from public.product_interest where id = p_id;
@@ -160,7 +160,7 @@ end $$;
 -- or schedule it (Supabase: Database > Extensions > pg_cron), for example:
 --   select cron.schedule('purge-product-interest', '20 3 * * *', $$delete from public.product_interest where expires_at < now()$$);
 create or replace function public.admin_purge_expired_product_interest() returns int
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare n int;
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;

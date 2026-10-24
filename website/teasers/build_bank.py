@@ -147,6 +147,8 @@ def manifest():
 def edge(mm, lv, which):
     """The family/kind of the last puzzle of the previous month (which = -1) or the first of the next month (which = 0), if that month's bank exists."""
     other = '%02d' % ((int(mm) - 2) % 12 + 1 if which == -1 else int(mm) % 12 + 1)
+    if which == 0 and mm == '12' and str(lv) in TAX.RULES['min_gap_days'] and os.path.exists(os.path.join(HERE, 'batches', 'm11', 'bank.json')):
+        other = '11'      # Levels 1 and 2 repeat the released order every 61 days (see plan_year), so 31 Dec is followed by what was 1 Nov
     p = os.path.join(HERE, 'batches', 'm%s' % other, 'bank.json')
     if not os.path.exists(p):
         return None
@@ -189,7 +191,57 @@ def build_month(mm):
     print('month %s: %s' % (mm, {k: len(v) for k, v in out.items()}))
 
 
+def plan_year():
+    """Levels 1 and 2 (gap rule, 60 days): write batches/YEAR_PLAN.md.  With 61 days released (1 Nov to 31 Dec) and 61 distinct sub-structures, the
+    only calendar that keeps every sub-structure at least 60 days apart is a rotation: day k of the year (counted from 1 Nov, 366 dates including 29 Feb)
+    uses the sub-structure of released day (k mod 61).  366 = 6 x 61, so every sub-structure returns exactly every 61 days in a leap year and every 60 or 61 days
+    in an ordinary year.  The plan is checked with verify_bank's own gap and family rules for a 365-day and a 366-day year."""
+    import verify_bank as V
+    man = manifest()
+    if man['released'] != ['11', '12']:
+        print('plan_year: written for the released months 11 and 12 only (a rotation needs the 61 released days)')
+        return
+    months = [('11', 30), ('12', 31)] + [(m, DAYS_IN[m]) for m in ('01', '02', '03', '04', '05', '06', '07', '08', '09', '10')]
+    dates = ['%s-%02d' % (m, d) for m, n in months for d in range(1, n + 1)]
+    assert len(dates) == 366
+    lines = ['# Year plan for Levels 1 and 2 (owner L1L2-GAP60)', '',
+             'Day k of the year, counted from 1 Nov (366 dates, 29 Feb included), uses the sub-structure of released day k mod 61.  366 = 6 x 61, so a sub-structure '
+             'returns exactly 61 days later (60 days in an ordinary year, because 29 Feb is missing).  A new story and new numbers are written for every return; '
+             'the answer of a puzzle must not equal any answer within 60 days (checked by verify_bank.py as the months are written).', '']
+    bad = []
+    for lv in (1, 2):
+        released = []
+        for mm in man['released']:
+            released += json.load(open(os.path.join(HERE, 'batches', 'm%s' % mm, 'bank.json'), encoding='utf-8'))['levels'][str(lv)]
+        released.sort(key=lambda e: e['date'][:2] != '11' and 1 or 0)
+        released = sorted(released, key=lambda e: (0 if e['date'][:2] == '11' else 1, e['date']))
+        assert len(released) == 61
+        entries = []
+        for k, d in enumerate(dates):
+            r = released[k % 61]
+            entries.append(('', dict(id='L%d-%s' % (lv, d), date=d, sub=r['sub'], family=r['family'], ans='P%d' % k)))
+        fails = []
+        V.gap_rules(lv, entries, fails)
+        wrap = released[60]['family'] == released[0]['family']
+        if wrap:
+            fails.append('L%d: 31 Dec and 1 Nov of the next cycle are the same family' % lv)
+        lines += ['## Level %d' % lv, '', 'Checked with the gap rules for a 365-day and a 366-day year: %s.' % ('no violation' if not fails else '%d violation(s): %s' % (len(fails), '; '.join(fails[:3]))), '',
+                  '| Released day | Date | Sub-structure | Later dates it returns on |', '|---|---|---|---|']
+        for i, r in enumerate(released):
+            ret = [dates[k] for k in range(i + 61, 366, 61)]
+            lines.append('| %d | %s | %s | %s |' % (i + 1, r['date'], r['sub'], ', '.join(ret)))
+        lines.append('')
+        bad += fails
+    open(os.path.join(HERE, 'batches', 'YEAR_PLAN.md'), 'w', encoding='utf-8').write('\n'.join(lines) + '\n')
+    print('year plan written: %d violation(s)' % len(bad))
+    for b in bad:
+        print('  ', b)
+
+
 def main():
+    if '--plan' in sys.argv:
+        plan_year()
+        return
     months = sys.argv[1:] or manifest()['released']
     for mm in months:
         build_month(mm)

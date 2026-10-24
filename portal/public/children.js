@@ -6,8 +6,10 @@
   document.getElementById('top').appendChild(M.header('My children'));
   var D = { access: [], units: [], progress: [], missing: false, open: {}, detail: {} }, flashMsg = null;
   function flash(kind, text) { flashMsg = text ? { kind: kind, text: text } : null; }
-  function draw(nodes) { M.clear(app); [].concat(nodes).forEach(function (n) { if (n) app.appendChild(n); }); }
-  async function run(fn, ok) { flash(null); try { await fn(); if (ok) flash('ok', ok); } catch (e) { flash('err', M.errText(e)); } await refresh(); }
+  // keep keyboard focus on the same control across a redraw (clearing the container would drop it to <body>)
+  function draw(nodes) { var k = M.focusKey(app); M.clear(app); [].concat(nodes).forEach(function (n) { if (n) app.appendChild(n); }); M.focusRestore(app, k); }
+  // after every action the result message (or the page heading) takes keyboard focus and is announced
+  async function run(fn, ok) { flash(null); try { await fn(); if (ok) flash('ok', ok); } catch (e) { flash('err', M.errText(e)); } await refresh(); M.focusResult(app); }
   var by = function (list, id) { return list.filter(function (x) { return x.child_id === id; }); };
 
   async function refresh() {
@@ -121,7 +123,7 @@
     if (!S.session) return draw([fb, P.signedOut()]);
     if (!S.parent) return draw([fb, h('section', { class: 'card' }, h('p', { text: 'We could not load your account. Please reload the page.' }))]);
     if (D.missing) return draw([P.nav('children'), P.missingSql()]);
-    var out = [fb, h('div', { class: 'row' }, h('h1', { text: 'My children' }), P.signOutButton(function () { flash(null); refresh(); })), P.nav('children')];
+    var out = [fb, h('div', { class: 'row' }, h('h1', { text: 'My children' }), P.signOutButton(function () { flash(null); refresh(); })), P.nav('children'), P.alertsCard(run)];
     if (!S.children.length) {
       out.push(h('section', { class: 'card pop', id: 'first-child' }, h('h2', { text: 'Add your first child' }),
         h('p', { class: 'muted', text: 'You do not need to join a class. A child profile is what lets a book or a class be set up for the right child.' }),

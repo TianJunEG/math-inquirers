@@ -41,9 +41,9 @@ delete from public.ext_orders where ship_postal is null and format = 'workbook';
 select pg_temp.chk('postal code must be a real Singapore sector (first two digits 01-82)', pg_temp.denied(pg_temp.as_('authenticated',:'A',$q$select public.create_ext_order((select kai from public.audit_ctx),1,'workbook','N','Addr','000000','9')$q$)), 'Low', 'only the 6-digit shape is checked; a stricter check is cheap');
 delete from public.ext_orders where ship_postal = '000000';
 -- online-only order must not keep an address even if a client sends one (data minimisation at API level)
-select pg_temp.as_('authenticated',:'A',$q$select public.create_ext_order((select kai from public.audit_ctx),1,'online','Sneaky Name','Sneaky Address','654321','98765432')$q$);
-select pg_temp.chk('online-only order does not store an address even if the API caller sends one', (select ship_name is null and ship_address is null and ship_phone is null from public.ext_orders where child_label='Kai' and format='online'), 'Medium', 'create_ext_order inserts ship_* whatever the format; the UI never sends them');
-select pg_temp.as_('authenticated',:'A',$q$select public.cancel_my_ext_order((select id from public.ext_orders where child_label='Kai' and format='online'))$q$);
+select pg_temp.as_('authenticated',:'A',$q$select public.create_ext_order((select kai from public.audit_ctx),1,'online','Sneaky Name','Sneaky Address','654321','98765432')$q$) as r \gset
+select pg_temp.chk('online-only order with an address is REJECTED (bad_address) and nothing is stored (R1-M4)', :'r' like '%bad_address%' and (select count(*) from public.ext_orders where format='online' and (ship_name is not null or ship_address is not null or ship_phone is not null or ship_postal is not null)) = 0, 'Medium', :'r');
+select pg_temp.chk('online-only order with only a phone number is also rejected', pg_temp.as_('authenticated',:'A',$q$select public.create_ext_order((select kai from public.audit_ctx),1,'online',null,null,null,'98765432')$q$) like '%bad_address%', 'Low');
 -- injection stored literally
 select pg_temp.as_('authenticated',:'A',$q$select public.create_ext_order((select mia from public.audit_ctx),1,'workbook',$$<img src=x onerror=alert(1)>$$,$$'); drop table public.children;-- <script>$$,'123456','+65 9123 4567')$q$);
 select pg_temp.chk('hostile text in address is stored literally; tables intact', (select ship_address from public.ext_orders where format='workbook' and child_label='Mia') like '%drop table%' and to_regclass('public.children') is not null, 'High');
@@ -132,7 +132,7 @@ select pg_temp.chk('address kept inside 30 days after delivery', (select ship_ad
 update public.ext_orders set delivered_at = now() - interval '31 days' where ship_name='Deliv One';
 select pg_temp.as_('authenticated',:'ADM','select public.admin_clear_delivered_addresses()');
 select pg_temp.chk('address (name, address, postal, phone) cleared 31 days after delivery', (select count(*) from public.ext_orders where status='paid' and ship_status='delivered' and (ship_address is not null or ship_name is not null or ship_phone is not null or ship_postal is not null)) = 0, 'High');
-select pg_temp.note('the 30-day address clear is not scheduled anywhere in the SQL (no pg_cron example for it, unlike practice/preview purges); it needs the owner to press the button', 'Medium', 'the privacy promise depends on a manual step');
+select pg_temp.note('R1: the address rule is now _purge_ext_addresses(), run daily by run_retention_jobs() (pg_cron lines in portal/README.md, not enabled by any file); see audit_08', 'Low');
 
 -- ===== deleting a child who has a paid book =====
 select pg_temp.as_('authenticated',:'ADM',$q$select public.admin_grant_book_access((select zoe from public.audit_ctx),2,'online','audit')$q$);

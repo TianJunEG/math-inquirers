@@ -36,8 +36,10 @@
       toship: function (r) { return r.status === 'paid' && r.ship_status === 'to_ship'; },
       shipped: function (r) { return r.ship_status === 'shipped'; },
       delivered: function (r) { return r.ship_status === 'delivered'; },
+      refund: function (r) { return !!r.refund_due; },
       all: function () { return true; } };
-    var labels = { pending: 'Awaiting payment', toship: 'To post', shipped: 'Posted', delivered: 'Delivered', all: 'All' };
+    var labels = { pending: 'Awaiting payment', toship: 'To post', shipped: 'Posted', delivered: 'Delivered', refund: 'Refund due', all: 'All' };
+    var nRefund = rows.filter(tests.refund).length;
     var shown = rows.filter(tests[ofilter]);
     var tabs = h('div', { class: 'tabs', id: 'order-filter' }, Object.keys(labels).map(function (f) {
       return h('button', { type: 'button', 'data-filter': f, 'aria-pressed': String(ofilter === f), text: labels[f] + ' (' + rows.filter(tests[f]).length + ')', onclick: function () { ofilter = f; ctx.reload(); } });
@@ -51,7 +53,8 @@
         return h('tr', { 'data-order': r.reference },
           h('td', { text: r.reference }), h('td', { class: 'small', text: r.parent_email }), h('td', { text: r.child_label || '(removed)' }), h('td', { text: bookText(r.level, r.format) }),
           h('td', { class: 'nw', text: M.money(r.amount_cents) }),
-          h('td', null, h('span', { class: 'pill ' + r.status, text: STATUS[r.status] || r.status })),
+          h('td', null, h('span', { class: 'pill ' + r.status, text: STATUS[r.status] || r.status }),
+            r.refund_due ? [' ', h('span', { class: 'pill refunded', 'data-refund-due': r.reference, text: 'refund due' }), h('div', { class: 'small', 'data-admin-note': r.reference, text: r.admin_note || '' })] : null),
           h('td', null, SHIP[r.ship_status] ? h('span', { class: 'pill', 'data-ship-status': r.ship_status, text: SHIP[r.ship_status] }) : null, addr),
           h('td', null,
             r.status === 'pending_payment' ? [h('button', { class: 'btn sm', type: 'button', 'data-mark-paid': r.reference, text: 'Mark paid and give access', onclick: async function () {
@@ -59,6 +62,11 @@
               var x = await sb().rpc('admin_mark_ext_order_paid', { p_order: r.id }); ctx.reload(x.error ? { err: M.errText(x.error) } : 'Marked ' + r.reference + ' paid.'); } }), ' ',
               h('button', { class: 'btn alt sm', type: 'button', 'data-cancel': r.reference, text: 'Cancel', onclick: function () {
                 if (confirm('Cancel the unpaid order ' + r.reference + '? Its address is deleted.')) act(ctx, function () { return sb().rpc('admin_cancel_ext_order', { p_order: r.id }); }, 'Cancelled.')(); } })] : null,
+            r.refund_due && r.status === 'cancelled' && r.paid_after_cancel_at && r.format === 'online' ? [h('button', { class: 'btn sm', type: 'button', 'data-reinstate': r.reference, text: 'Reinstate (switch the book on)', onclick: function () {
+              if (confirm('The parent cancelled ' + r.reference + ' but then paid. Switch on ' + bookText(r.level, r.format) + ' for ' + (r.child_label || 'the child') + ' instead of refunding?')) act(ctx, function () { return sb().rpc('admin_reinstate_ext_order', { p_order: r.id }); }, 'Reinstated ' + r.reference + '.')(); } }), ' '] : null,
+            r.refund_due ? [h('button', { class: 'btn alt sm', type: 'button', 'data-refund-done': r.reference, text: 'Refund done', onclick: function () {
+              var note = prompt('Refund of ' + r.reference + ' done in Stripe or by PayNow. A short note (optional):', ''); if (note === null) return;
+              act(ctx, function () { return sb().rpc('admin_resolve_ext_refund', { p_order: r.id, p_note: note }); }, 'Refund recorded for ' + r.reference + '.')(); } }), ' '] : null,
             r.status === 'paid' && r.ship_status === 'to_ship' ? ship(r, 'shipped', 'Marked posted.') : null,
             r.status === 'paid' && r.ship_status === 'shipped' ? ship(r, 'delivered', 'Marked delivered.') : null,
             r.status === 'paid' ? [' ', h('button', { class: 'btn alt sm', type: 'button', 'data-refund': r.reference, text: 'Refund and remove access', onclick: function () {
@@ -74,10 +82,11 @@
           p && p.active ? [' ', h('button', { class: 'btn alt sm', type: 'button', 'data-off-price': id, text: 'Turn off', onclick: act(ctx, function () { return sb().rpc('admin_set_ext_price', { p_product: id, p_cents: p.amount_cents, p_active: false }); }, 'Price turned off; families see "price coming soon".') })] : null));
     });
     ctx.mount(ctx.app, ctx.viewTabs(), head(ctx, 'Extension book orders'), ctx.msgBox(ctx.msg),
+      nRefund ? h('p', { class: 'msg warn', id: 'refund-banner', role: 'status', text: nRefund + ' order' + (nRefund === 1 ? ' needs' : 's need') + ' a refund decision (money was taken but the order is cancelled or the account was deleted). Open the "Refund due" tab.' }) : null,
       h('section', { class: 'card' }, h('h2', { text: shown.length + ' shown' }), tabs, table,
         h('p', { class: 'small muted', text: 'Mark paid only after the PayNow money has arrived. It switches on online access for the one child named on the order.' }),
-        h('button', { class: 'btn alt sm', type: 'button', id: 'clear-addresses', text: 'Clear addresses delivered over 30 days ago', onclick: async function () {
-          if (!confirm('Delete the delivery name, address and phone of every order delivered more than 30 days ago?')) return;
+        h('button', { class: 'btn alt sm', type: 'button', id: 'clear-addresses', text: 'Run the address clean-up now', onclick: async function () {
+          if (!confirm('Delete the delivery name, address and phone of every order that is delivered or posted more than 30 days ago, cancelled, refunded, or paid but never posted for 90 days, and cancel orders unpaid for 14 days? (This also runs by itself if the daily schedule is set up: see portal/README.md.)')) return;
           var x = await sb().rpc('admin_clear_delivered_addresses'); ctx.reload(x.error ? { err: M.errText(x.error) } : 'Cleared ' + x.data + ' address(es).'); } })),
       h('details', { class: 'card', id: 'price-card' }, h('summary', { text: 'Prices (owner only)' }),
         h('p', { class: 'small muted', text: 'Nothing is filled in for you. A book with no price shows "price coming soon" and an "Ask us" button to families, and cannot be ordered.' }),

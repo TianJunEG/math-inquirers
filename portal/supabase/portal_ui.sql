@@ -17,12 +17,12 @@ alter table public.children add column if not exists birth_year smallint check (
 grant select (birth_year) on public.children to authenticated;      -- the column-level select list in policies.sql does not include it
 
 create or replace function public._valid_birth_year(p int) returns boolean
-language sql stable set search_path = public as $$
+language sql stable set search_path = public, pg_temp as $$
   select p is null or (p between extract(year from now())::int - 18 and extract(year from now())::int - 3);
 $$;
 
 create or replace function public.add_child_profile(p_name text, p_level int, p_pin text, p_birth_year int default null) returns uuid
-language plpgsql security definer set search_path = public, extensions as $$
+language plpgsql security definer set search_path = public, extensions, pg_temp as $$
 declare cid uuid;
 begin
   if not public._valid_birth_year(p_birth_year) then raise exception 'bad_birth_year'; end if;
@@ -32,7 +32,7 @@ begin
 end $$;
 
 create or replace function public.update_child_birth_year(p_child uuid, p_year int) returns void
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare uid uuid := public._require_parent();
 begin
   if not public._valid_birth_year(p_year) then raise exception 'bad_birth_year'; end if;
@@ -42,7 +42,7 @@ end $$;
 
 -- ---------- 2. prices the buy screen may show (active rows only; empty table = "price coming soon") ----------
 create or replace function public.list_ext_prices() returns table (product_id text, amount_cents int)
-language sql stable security definer set search_path = public as $$
+language sql stable security definer set search_path = public, pg_temp as $$
   select p.product_id, p.amount_cents from public.ext_prices p where p.active order by p.product_id;
 $$;
 
@@ -50,7 +50,7 @@ $$;
 -- 'enrolled' rows: a confirmed enrolment (any child of the same parent) in a group of that level opens the holiday and term practice of that level.
 -- 'book' rows: child_book_access for THIS child only (a sibling gets nothing from it). format 'workbook' means a posted book only: no online access.
 create or replace function public._entitlements(p_child uuid) returns table (kind text, level smallint, format text, source text, access_id uuid, since timestamptz)
-language sql stable security definer set search_path = public as $$
+language sql stable security definer set search_path = public, pg_temp as $$
   select 'enrolled'::text, g.level, null::text, 'enrolment'::text, null::uuid, min(e.created_at)
     from public.enrolments e join public.groups g on g.id = e.group_id
     join public.children c2 on c2.id = e.child_id join public.children c on c.id = p_child
@@ -62,7 +62,7 @@ $$;
 
 -- Published units this child may open right now (the newest version of each unit). Same rule as _can_access(): not 'open' sample pages.
 create or replace function public._child_units(p_child uuid) returns table (unit_key text, unit_version text, product text, level smallint, unit_no smallint, title text)
-language sql stable security definer set search_path = public as $$
+language sql stable security definer set search_path = public, pg_temp as $$
   select x.unit_key, x.unit_version, x.product, x.level, x.unit_no, x.title from (
     select distinct on (u.unit_key) u.unit_key, u.unit_version, u.product, u.level, u.unit_no, u.title
       from public.practice_units u where u.published and public._can_access(p_child, u.unit_key, u.unit_version)
@@ -71,14 +71,14 @@ language sql stable security definer set search_path = public as $$
 $$;
 
 create or replace function public.my_children_access() returns table (child_id uuid, kind text, level smallint, format text, source text, access_id uuid, since timestamptz)
-language sql stable security definer set search_path = public as $$
+language sql stable security definer set search_path = public, pg_temp as $$
   select c.id, x.kind, x.level, x.format, x.source, x.access_id, x.since
     from public.children c cross join lateral public._entitlements(c.id) x
    where c.parent_id = public._require_parent() order by c.created_at, x.kind, x.level;
 $$;
 
 create or replace function public.my_children_units() returns table (child_id uuid, unit_key text, unit_version text, product text, level smallint, unit_no smallint, title text)
-language sql stable security definer set search_path = public as $$
+language sql stable security definer set search_path = public, pg_temp as $$
   select c.id, u.unit_key, u.unit_version, u.product, u.level, u.unit_no, u.title
     from public.children c cross join lateral public._child_units(c.id) u
    where c.parent_id = public._require_parent() order by c.created_at;
@@ -88,7 +88,7 @@ $$;
 -- no time. (Question-level "worth looking at together" comes from practice_child_detail(), which the parent may already call for their own child.)
 create or replace function public.my_children_progress() returns table (child_id uuid, unit_key text, title text, product text, level smallint, unit_no smallint,
   tries int, last_received_at timestamptz, n_auto smallint, n_skipped smallint, n_self smallint, n_self_got smallint, n_open smallint)
-language sql stable security definer set search_path = public as $$
+language sql stable security definer set search_path = public, pg_temp as $$
   select l.child_id, l.unit_key, u.title, u.product, u.level, u.unit_no, l.tries::int, l.received_at, l.n_auto, l.n_skipped, l.n_self, l.n_self_got, l.n_open
     from (select distinct on (s.child_id, s.unit_key) s.child_id, s.unit_key, s.unit_version, s.received_at, s.n_auto, s.n_skipped, s.n_self, s.n_self_got, s.n_open,
                  count(*) over (partition by s.child_id, s.unit_key) as tries
@@ -99,16 +99,17 @@ language sql stable security definer set search_path = public as $$
    order by l.received_at desc;
 $$;
 
--- The child's own practice list, from the 4-hour token that child_start_session() gave them. Returns null for an unknown, expired or revoked token
+-- The child's own practice list, from the 4-hour token (and at most 60 minutes idle) that child_start_session() gave them. Returns null for an unknown, expired or revoked token
 -- (the page then sends the child back to sign in). Only what THIS child may open; the answer keys are never involved.
 create or replace function public.child_session_overview(p_token text) returns jsonb
-language plpgsql stable security definer set search_path = public, extensions as $$
+language plpgsql security definer set search_path = public, extensions, pg_temp as $$
 declare h text; cid uuid; c public.children; s public.child_sessions;
 begin
   if p_token is null or p_token !~ '^[A-Za-z0-9_-]{32,128}$' then return null; end if;
   h := encode(extensions.digest(p_token, 'sha256'), 'hex');
   cid := public._child_for_token(h);
   if cid is null then return null; end if;
+  perform public._touch_child_session(h);        -- R1-L6: using the list keeps the 60-minute idle clock alive; an unused session stops working
   select * into c from public.children where id = cid;
   select * into s from public.child_sessions where token_hash = h;
   return jsonb_build_object(
@@ -122,7 +123,7 @@ end $$;
 
 -- ---------- 4. parent cancels an unpaid order; owner helpers ----------
 create or replace function public.cancel_my_ext_order(p_order uuid) returns void
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 declare uid uuid := public._require_parent();
 begin
   update public.ext_orders set status = 'cancelled', ship_status = 'not_needed', ship_name = null, ship_address = null, ship_postal = null, ship_phone = null, ship_cleared_at = now()
@@ -131,7 +132,7 @@ begin
 end $$;
 
 create or replace function public.admin_cancel_ext_order(p_order uuid) returns void
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
   update public.ext_orders set status = 'cancelled', ship_status = 'not_needed', ship_name = null, ship_address = null, ship_postal = null, ship_phone = null, ship_cleared_at = now()
@@ -140,7 +141,7 @@ begin
 end $$;
 
 create or replace function public.admin_list_children() returns table (child_id uuid, display_name text, level smallint, birth_year smallint, parent_email text, parent_name text)
-language plpgsql stable security definer set search_path = public as $$
+language plpgsql stable security definer set search_path = public, pg_temp as $$
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
   return query select c.id, c.display_name, c.level, c.birth_year, p.email, p.full_name
@@ -149,7 +150,7 @@ end $$;
 
 create or replace function public.admin_list_book_access() returns table (access_id uuid, child_id uuid, child_name text, parent_email text, level smallint, format text,
   source text, source_note text, status text, created_at timestamptz, ended_at timestamptz)
-language plpgsql stable security definer set search_path = public as $$
+language plpgsql stable security definer set search_path = public, pg_temp as $$
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
   return query select a.id, a.child_id, c.display_name, p.email, a.level, a.format, a.source, a.source_note, a.status, a.created_at, a.ended_at
@@ -158,7 +159,7 @@ begin
 end $$;
 
 create or replace function public.admin_list_ext_prices() returns table (product_id text, amount_cents int, active boolean)
-language plpgsql stable security definer set search_path = public as $$
+language plpgsql stable security definer set search_path = public, pg_temp as $$
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
   return query select p.product_id, p.amount_cents, p.active from public.ext_prices p order by p.product_id;
@@ -166,7 +167,7 @@ end $$;
 
 -- The OWNER sets a price (cents, Singapore dollars). Nothing in the repo contains a price; an order cannot be made until this has been called.
 create or replace function public.admin_set_ext_price(p_product text, p_cents int, p_active boolean default true) returns void
-language plpgsql security definer set search_path = public as $$
+language plpgsql security definer set search_path = public, pg_temp as $$
 begin
   if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
   insert into public.ext_prices (product_id, amount_cents, active) values (p_product, p_cents, coalesce(p_active, true))
@@ -178,7 +179,7 @@ end $$;
 -- that counts the checked-on-paper items (those are never mixed into the auto-marked counts).
 create or replace function public.tutor_group_skill_report(p_group text, p_unit text)
 returns table (child_id uuid, display_name text, skill text, n_right int, n_wrong int, n_skipped int, n_self_got int, n_self_notyet int, n_self_checked int)
-language plpgsql stable security definer set search_path = public as $$
+language plpgsql stable security definer set search_path = public, pg_temp as $$
 #variable_conflict use_column
 begin
   if not (public.is_admin() or public.is_tutor_of_group(p_group)) then raise exception 'forbidden' using errcode = '42501'; end if;
@@ -203,7 +204,7 @@ end $$;
 -- The most common listed wrong answers (with the kindly worded likely misconception) across the group's newest submissions, for planning the next lesson.
 create or replace function public.tutor_group_slips(p_group text, p_unit text)
 returns table (item_id text, item_pos int, skill text, say text, n_children int, n_sent int)
-language plpgsql stable security definer set search_path = public as $$
+language plpgsql stable security definer set search_path = public, pg_temp as $$
 #variable_conflict use_column
 begin
   if not (public.is_admin() or public.is_tutor_of_group(p_group)) then raise exception 'forbidden' using errcode = '42501'; end if;
