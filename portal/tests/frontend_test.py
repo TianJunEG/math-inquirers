@@ -148,8 +148,10 @@ with sync_playwright() as pw:
         page.check('#consent-online_practice'); page.click('#save-consents'); expect(page.locator('.msg.ok')).to_contain_text('Agreements saved')
     check('child sign-in needs the online practice agreement', child_needs_online_consent)
     def child_ok():
+        cp.goto(BASE + '/portal/child/')   # a fresh page reads the saved agreements (the mock keeps one copy of the data per page load)
         cp.fill('#code', fam.lower()); cp.fill('#name', ' mia '); cp.fill('#pin', '1234'); cp.get_by_role('button', name='Sign in').click()
-        cp.goto(BASE + '/portal/child/'); cp.fill('#code', fam.lower()); cp.fill('#name', ' mia '); cp.fill('#pin', '1234'); cp.get_by_role('button', name='Sign in').click(); expect(cp.locator('#hello')).to_have_text('Hello, Mia!'); assert cp.url.endswith('/portal/practice/')
+        expect(cp.locator('#hello')).to_have_text('Hello, Mia!'); assert cp.url.endswith('/portal/practice/')
+        expect(cp.locator('#nothing-open')).to_be_visible()      # a live-group child with no published unit yet: nothing to open, no links
     check('child name+PIN leads to the practice list', child_ok)
     def child_out():
         cp.click('#bye'); expect(cp.get_by_role('heading', name='Hi! Sign in to practise')).to_be_visible()
