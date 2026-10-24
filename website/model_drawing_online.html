@@ -1,0 +1,212 @@
+<title>Model Drawing Online</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,800&display=swap">
+<style>
+/* Layout: one question at a time. Tabs on top, then the question, a model that builds as steps are solved, and a column of steps. */
+:root{
+  --bg:#FFFFFF; --fg:#1B2A49; --muted:#56637F; --rule:#1B2A49; --line:#C9D3E3;
+  --panel:#F2F6FA; --teal:#1F7A6F; --red:#C93D3D; --yellow:#FFC93C; --ok:#1F7A6F; --okbg:#E3F3EF; --nobg:#FBEAEA;
+  --field:#FFFFFF;
+  --head:'Fredoka',ui-rounded,'Arial Rounded MT Bold',Arial,sans-serif;
+  --body:'Nunito Sans',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121A2B; --fg:#E9EEF7; --muted:#A9B4C9; --rule:#E9EEF7; --line:#34425E;
+  --panel:#1B2740; --teal:#5CC4B4; --red:#F08A8A; --yellow:#FFC93C; --ok:#5CC4B4; --okbg:#173A36; --nobg:#3D2228; --field:#18233A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121A2B; --fg:#E9EEF7; --muted:#A9B4C9; --rule:#E9EEF7; --line:#34425E;
+  --panel:#1B2740; --teal:#5CC4B4; --red:#F08A8A; --yellow:#FFC93C; --ok:#5CC4B4; --okbg:#173A36; --nobg:#3D2228; --field:#18233A; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.5;margin:0}
+.wrap{max-width:980px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 48px}
+h1,h2,h3{font-family:var(--head);font-weight:600;margin:0;text-wrap:balance}
+.kick{font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.top{display:grid;gap:10px;border-bottom:3px solid var(--rule);padding-bottom:18px}
+.top h1{font-size:clamp(34px,6vw,52px);line-height:1}
+.top h1 span{color:var(--teal)}
+.lede{color:var(--muted);max-width:62ch;margin:0}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 6px}
+.tab{font:600 16px var(--head);background:transparent;color:var(--fg);border:2px solid var(--line);border-radius:10px;padding:8px 14px;cursor:pointer;display:flex;gap:8px;align-items:baseline}
+.tab small{font:700 12px var(--body);color:var(--muted)}
+.tab[aria-selected="true"]{border-color:var(--teal);background:var(--teal);color:var(--bg)}
+.tab[aria-selected="true"] small{color:var(--bg)}
+.tab.done small:after{content:" \2713"}
+.tab:focus-visible,.btn:focus-visible,.ch:focus-visible,input:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+.how{font-size:14px;color:var(--muted);margin:0 0 6px}
+.hd{display:flex;align-items:flex-end;gap:14px;border-bottom:3px solid var(--rule);padding-bottom:10px;margin:26px 0 16px}
+.big{font:600 64px/0.8 var(--head);color:var(--teal);font-variant-numeric:tabular-nums}
+.tp{color:var(--muted);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.hd h2{font-size:28px;line-height:1.1}
+.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}
+@media (max-width:760px){.cols{grid-template-columns:1fr}.big{font-size:52px}}
+.problem{font-size:18px;font-weight:600;margin:0 0 14px}
+.board{background:var(--panel);border-top:5px solid var(--teal);padding:14px 15px;position:sticky;top:8px}
+.board h3{font-size:17px;color:var(--teal);margin-bottom:6px}
+.board svg{width:100%;height:auto;display:block}
+.empty{color:var(--muted);font-size:14.5px;margin:0}
+.step{border-left:4px solid var(--line);padding:2px 0 2px 14px;margin-bottom:18px}
+.step.cur{border-color:var(--red)}
+.step.ok{border-color:var(--teal)}
+.sn{font:800 12px var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.step.ok .sn{color:var(--ok)}
+.qt{font-weight:700;margin:2px 0 10px}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+input.ans{font:700 18px var(--body);width:130px;padding:8px 10px;border:2px solid var(--line);border-radius:10px;background:var(--field);color:var(--fg);font-variant-numeric:tabular-nums}
+.ch{font:600 15px var(--body);padding:9px 14px;border:2px solid var(--line);border-radius:10px;background:var(--field);color:var(--fg);cursor:pointer;text-align:left}
+.opts{display:grid;gap:8px}
+.btn{font:700 14px var(--body);padding:9px 14px;border-radius:10px;border:2px solid var(--fg);background:var(--fg);color:var(--bg);cursor:pointer}
+.btn.ghost{background:transparent;color:var(--fg);border-color:var(--line)}
+.msg{font-size:14.5px;font-weight:700;margin-top:8px;padding:8px 12px;border-radius:10px}
+.msg.ok{background:var(--okbg);color:var(--ok)}
+.msg.no{background:var(--nobg);color:var(--red)}
+.note{font-size:14.5px;margin-top:8px;padding:10px 12px;border-left:4px solid var(--yellow);background:var(--panel)}
+.note b{color:var(--teal)}
+.fin{margin-top:6px;padding:14px;border:2px solid var(--teal);background:var(--okbg);border-radius:12px}
+.fin b{font-family:var(--head);font-size:20px}
+.cell{fill:var(--field);stroke:var(--fg);stroke-width:2}
+.cell.sh{fill:var(--teal);fill-opacity:.85}
+.mt{fill:var(--fg);font:700 14px var(--body);text-anchor:middle}
+.mt.sh{fill:var(--bg)}
+.ml{fill:var(--muted);font:800 11px var(--body);letter-spacing:.06em;text-transform:uppercase}
+.br{stroke:var(--red);stroke-width:2.5;fill:none}
+.bt{fill:var(--red);font:700 13px var(--body);text-anchor:middle}
+.foot{margin-top:40px;border-top:1px solid var(--line);padding-top:12px;font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+.reset{background:none;border:none;color:var(--muted);text-decoration:underline;cursor:pointer;font:inherit;padding:0}
+@media (prefers-reduced-motion:no-preference){.msg,.note,.step.cur{animation:in .18s ease-out}@keyframes in{from{opacity:.4;transform:translateY(-2px)}to{opacity:1;transform:none}}}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="kick">Math Inquirers  •  Model Drawing</div>
+    <h1>Model Drawing <span>Online</span></h1>
+    <p class="lede">Read the problem, say it in plain words, then build the bar model one step at a time. The page checks every step, and a hint and the "why" are there when you need them. Primary 4 to 6.</p>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Questions" id="tabs"></nav>
+  <p class="how">Try each step first. Wrong answer? Tap <b>Hint</b>. Then draw the same model on paper in your own words.</p>
+
+  <section id="stage" aria-live="polite"></section>
+
+  <div class="foot"><span>Progress is saved on this device only.</span><button class="reset" id="reset" type="button">Start again</button></div>
+</div>
+
+<script>
+/* Each question: type label, text, and steps. A step has a prompt, a kind (choice or num), the right answer,
+   a hint, a "why", and the model (bars) shown once the step is solved. bars: {l:label, p:parts, s:shaded, t:text in each part, b:[from,to,text] brace}. */
+var Q=[
+{type:"Find the whole",text:"Mei has some stickers. 3/5 of them are stars. She has 24 stars. How many stickers does she have?",unit:"stickers",steps:[
+ {k:"c",q:"Say it in plain words. Which sentence matches the problem?",o:["3 out of 5 equal parts of all the stickers are 24 stars.","3 + 5 stickers make 24.","5/3 of the stickers are stars."],a:0,h:"The fraction 3/5 means 3 of 5 equal parts of the whole.",w:"The whole is all the stickers, cut into 5 equal parts. The stars are 3 of those parts.",m:[]},
+ {k:"n",q:"How many equal units does the whole bar have?",a:5,h:"Look at the bottom number of 3/5.",w:"The bottom number tells how many equal units make the whole.",m:[{l:"All stickers",p:5}]},
+ {k:"n",q:"Shade the stars. How many units are shaded?",a:3,h:"Look at the top number of 3/5.",w:"The top number is how many units are shaded. These 3 units are 24 stars.",m:[{l:"All stickers",p:5,s:3,b:[0,3,"24 stars"]}]},
+ {k:"n",q:"3 units = 24. How many stickers is 1 unit?",a:8,h:"Share 24 equally into 3 units.",w:"24 ÷ 3 = 8, so every unit is 8 stickers.",m:[{l:"All stickers",p:5,s:3,t:"8",b:[0,3,"24 stars"]}]},
+ {k:"n",q:"How many stickers in all? The whole is 5 units.",a:40,h:"5 units of 8.",w:"5 × 8 = 40 stickers.",m:[{l:"All stickers",p:5,s:3,t:"8",b:[0,5,"? = 40"]}]}
+]},
+{type:"Fraction of the remainder",text:"Ravi had $60. He spent 1/3 of it on a book and 1/4 of the remainder on a pen. How much money did he have left?",unit:"dollars",steps:[
+ {k:"c",q:"Which amount is the whole for the pen's 1/4?",o:["The $60 Ravi started with","The money left after buying the book","The price of the book"],a:1,h:"The pen is 1/4 of the remainder. Remainder of what?",w:"\"The remainder\" means what was left after the book. So the pen's fraction is of that smaller amount, not of $60.",m:[]},
+ {k:"n",q:"Draw $60 as 3 units. How many dollars is 1 unit?",a:20,h:"60 ÷ 3.",w:"Each unit is $20, and the book takes 1 unit.",m:[{l:"$60",p:3,s:1,t:"20",b:[0,1,"book"]}]},
+ {k:"n",q:"How many dollars are left after the book?",a:40,h:"2 units of $20, or 60 − 20.",w:"$40 remains. This is the new whole for the pen.",m:[{l:"$60",p:3,s:1,t:"20"},{l:"Remainder $40",p:4}]},
+ {k:"n",q:"Cut the $40 into 4 units. The pen is 1 unit. How much is the pen?",a:10,h:"40 ÷ 4.",w:"Each unit of the remainder is $10, so the pen costs $10.",m:[{l:"$60",p:3,s:1,t:"20"},{l:"Remainder $40",p:4,s:1,t:"10",b:[0,1,"pen"]}]},
+ {k:"n",q:"How much money did Ravi have left in the end?",a:30,h:"Remainder minus the pen.",w:"40 − 10 = $30. (Check: 3 units of $10.)",m:[{l:"$60",p:3,s:1,t:"20"},{l:"Remainder $40",p:4,s:1,t:"10",b:[1,4,"? = 30"]}]}
+]},
+{type:"Times as many",text:"Amir has 3 times as many marbles as Ben. Together they have 48 marbles. How many marbles does Amir have?",unit:"marbles",steps:[
+ {k:"c",q:"Say it in plain words. Which sentence is right?",o:["Ben has 1 unit, Amir has 3 units, and together that is 4 units = 48.","Ben has 3 units and Amir has 1 unit.","Amir has 48 marbles and Ben has 3."],a:0,h:"\"3 times as many\" means 3 of Ben's units.",w:"Ben is the smaller amount: 1 unit. Amir is 3 of those units.",m:[]},
+ {k:"n",q:"How many units are there altogether?",a:4,h:"Add Ben's units and Amir's units.",w:"1 + 3 = 4 units. These 4 units are 48 marbles.",m:[{l:"Ben",p:1},{l:"Amir",p:3,b:[0,3,"together 48"]}]},
+ {k:"n",q:"4 units = 48. How many marbles is 1 unit?",a:12,h:"48 ÷ 4.",w:"Each unit is 12 marbles, so Ben has 12.",m:[{l:"Ben",p:1,t:"12"},{l:"Amir",p:3,t:"12"}]},
+ {k:"n",q:"Amir has 3 units. How many marbles does Amir have?",a:36,h:"3 × 12.",w:"3 × 12 = 36. (Check: 12 + 36 = 48.)",m:[{l:"Ben",p:1,t:"12"},{l:"Amir",p:3,t:"12",b:[0,3,"? = 36"]}]}
+]},
+{type:"Fraction and gap",text:"Lina has 2/5 as many beads as Joy. Joy has 15 more beads than Lina. How many beads does Joy have?",unit:"beads",steps:[
+ {k:"c",q:"Which model matches the problem?",o:["Joy has 5 units, Lina has 2 units, and the gap between them is 15 beads.","Lina has 5 units and Joy has 2 units.","Joy and Lina together have 15 beads."],a:0,h:"Lina has 2/5 of Joy's beads. Who has the bigger bar?",w:"Joy is the whole (5 units). Lina is 2 of those units. The extra units that Joy has are the gap.",m:[]},
+ {k:"n",q:"How many units are in the gap?",a:3,h:"Joy's units minus Lina's units.",w:"5 − 2 = 3 units, and these 3 units are 15 beads.",m:[{l:"Joy",p:5,b:[2,5,"gap 15"]},{l:"Lina",p:2}]},
+ {k:"n",q:"3 units = 15. How many beads is 1 unit?",a:5,h:"15 ÷ 3.",w:"Each unit is 5 beads.",m:[{l:"Joy",p:5,t:"5",b:[2,5,"gap 15"]},{l:"Lina",p:2,t:"5"}]},
+ {k:"n",q:"Joy has 5 units. How many beads does Joy have?",a:25,h:"5 × 5.",w:"5 × 5 = 25. (Check: Lina has 10, and 25 − 10 = 15.)",m:[{l:"Joy",p:5,t:"5",b:[0,5,"? = 25"]},{l:"Lina",p:2,t:"5"}]}
+]},
+{type:"Make them equal",text:"Sam has 50 cards and Tom has 30 cards. How many cards must Sam give to Tom so that they have the same number?",unit:"cards",steps:[
+ {k:"c",q:"What is the smart first move?",o:["Find the gap, then split the gap in half.","Subtract 30 from 50 and give all of that to Tom.","Add 50 and 30 and give half to Tom."],a:0,h:"If Sam gives 1 card, the gap shrinks by 2 (Sam loses 1 and Tom gains 1).",w:"Each card moved changes the gap by 2. So Sam gives half of the gap.",m:[]},
+ {k:"n",q:"Each part is 10 cards. How many cards is the gap?",a:20,h:"Sam has 5 parts, Tom has 3 parts. 2 parts = ?",w:"The gap is 2 parts of 10, which is 20 cards.",m:[{l:"Sam",p:5,t:"10"},{l:"Tom",p:3,t:"10",b:[3,5,"gap 20"]}]},
+ {k:"n",q:"Split the gap into two equal halves. How many cards does Sam give?",a:10,h:"Half of 20.",w:"Sam gives 10. Then Sam has 40 and Tom has 40.",m:[{l:"Sam after",p:4,t:"10",b:[0,4,"40"]},{l:"Tom after",p:4,t:"10",b:[0,4,"40"]}]}
+]},
+{type:"Percentage as a fraction",text:"A shirt costs $80. It is on sale at 25% off. What is the sale price?",unit:"dollars",steps:[
+ {k:"c",q:"25% means 25 out of 100. In simplest form, 25% is which fraction?",o:["1/4","1/25","2/5"],a:0,h:"Divide the top and bottom of 25/100 by 25.",w:"25/100 = 1/4. Now this is just a fraction problem.",m:[]},
+ {k:"n",q:"Draw $80 as a bar. How many equal units, so that the discount is 1 unit?",a:4,h:"The discount is 1/4. What is the bottom number?",w:"4 units. One unit is the discount.",m:[{l:"Original $80",p:4}]},
+ {k:"n",q:"4 units = $80. How many dollars is 1 unit?",a:20,h:"80 ÷ 4.",w:"Each unit is $20, so the discount is $20.",m:[{l:"Original $80",p:4,s:1,t:"20",b:[0,1,"off"]}]},
+ {k:"n",q:"The sale price is the other 3 units. How much?",a:60,h:"3 × 20, or 80 − 20.",w:"3 × 20 = $60.",m:[{l:"Original $80",p:4,s:1,t:"20",b:[1,4,"sale price ? = 60"]}]}
+]},
+{type:"Decimals",text:"A rope is 3.6 m long. 3/4 of it is used. How long is the part that is used?",unit:"m",steps:[
+ {k:"c",q:"What is the whole in this problem?",o:["The whole rope, 3.6 m","The part that is used","The part that is left"],a:0,h:"\"3/4 of it\": what is \"it\"?",w:"\"It\" is the rope. So 3.6 m is the whole, cut into 4 units.",m:[]},
+ {k:"n",q:"How many equal units does the rope bar have?",a:4,h:"The bottom number of 3/4.",w:"4 units make 3.6 m.",m:[{l:"Rope 3.6 m",p:4}]},
+ {k:"n",q:"4 units = 3.6 m. How many metres is 1 unit?",a:0.9,h:"3.6 ÷ 4. Try 36 ÷ 4 first, then place the decimal point.",w:"36 ÷ 4 = 9, so 3.6 ÷ 4 = 0.9 m.",m:[{l:"Rope 3.6 m",p:4,t:"0.9"}]},
+ {k:"n",q:"The used part is 3 units. How many metres?",a:2.7,h:"3 × 0.9.",w:"3 × 0.9 = 2.7 m. (Check: 0.9 m is left, and 2.7 + 0.9 = 3.6.)",m:[{l:"Rope 3.6 m",p:4,s:3,t:"0.9",b:[0,3,"used ? = 2.7"]}]}
+]}
+];
+
+var KEY="mi_modeldrawing_v1", cur=0, prog={}, hints={}, wrong={};
+function load(){try{var s=localStorage.getItem(KEY);if(s)prog=JSON.parse(s)||{}}catch(e){prog={}}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(prog))}catch(e){}}
+function stepOf(i){return prog[i]||0}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function num(s){var t=String(s).replace(/[^0-9.\-\/]/g,"");if(t.indexOf("/")>0){var p=t.split("/");return +p[0]/+p[1]}return parseFloat(t)}
+
+function modelSVG(bars){
+  if(!bars||!bars.length)return '<p class="empty">Your bar model builds here as you solve each step.</p>';
+  var maxP=Math.max.apply(null,bars.map(function(b){return b.p})),uw=Math.min(64,Math.floor(440/maxP)),pad=6,y=4,out="",W=maxP*uw+pad*2;
+  bars.forEach(function(b){
+    out+='<text class="ml" x="'+pad+'" y="'+(y+12)+'">'+esc(b.l)+'</text>';y+=18;
+    for(var i=0;i<b.p;i++){var sh=b.s&&i<b.s,x=pad+i*uw;
+      out+='<rect class="cell'+(sh?' sh':'')+'" x="'+x+'" y="'+y+'" width="'+uw+'" height="34"/>';
+      if(b.t)out+='<text class="mt'+(sh?' sh':'')+'" x="'+(x+uw/2)+'" y="'+(y+22)+'">'+esc(b.t)+'</text>'}
+    y+=34;
+    if(b.b){var x1=pad+b.b[0]*uw+2,x2=pad+b.b[1]*uw-2;
+      out+='<path class="br" d="M'+x1+' '+(y+6)+' v6 H'+x2+' v-6"/><text class="bt" x="'+((x1+x2)/2)+'" y="'+(y+28)+'">'+esc(b.b[2])+'</text>';y+=34}
+    else y+=12;
+  });
+  return '<svg viewBox="0 0 '+W+' '+(y+4)+'" role="img" aria-label="Bar model">'+out+'</svg>'}
+
+function render(){
+  var q=Q[cur],st=stepOf(cur),n=q.steps.length,h="";
+  document.getElementById("tabs").innerHTML=Q.map(function(x,i){
+    return '<button class="tab'+(stepOf(i)>=x.steps.length?' done':'')+'" role="tab" aria-selected="'+(i===cur)+'" data-i="'+i+'">Q'+(i+1)+' <small>'+esc(x.type)+'</small></button>'}).join("");
+  var model=st>0?q.steps[Math.min(st,n)-1].m:[];
+  h+='<div class="hd"><div class="big">'+(cur+1)+'</div><div><div class="tp">'+esc(q.type)+'</div><h2>Step by step</h2></div></div>';
+  h+='<p class="problem">'+esc(q.text)+'</p><div class="cols"><div>';
+  for(var i=0;i<=Math.min(st,n-1);i++){
+    var s=q.steps[i],done=i<st;
+    h+='<div class="step '+(done?'ok':'cur')+'"><div class="sn">Step '+(i+1)+' of '+n+(done?' ✓':'')+'</div><p class="qt">'+esc(s.q)+'</p>';
+    if(done){h+='<div class="note"><b>Why:</b> '+esc(s.w)+'</div>'}
+    else{
+      if(s.k==="c"){h+='<div class="opts">'+s.o.map(function(o,j){return '<button class="ch" type="button" data-c="'+j+'">'+esc(o)+'</button>'}).join("")+'</div>'}
+      else{h+='<div class="row"><input class="ans" id="ans" inputmode="decimal" autocomplete="off" aria-label="Your answer"><button class="btn" id="chk" type="button">Check</button></div>'}
+      h+='<div class="row" style="margin-top:8px"><button class="btn ghost" id="hint" type="button">Hint</button></div><div id="fb">';
+      if(wrong[cur+"-"+i])h+='<div class="msg no">Not quite. Have another go.</div>';
+      if(hints[cur+"-"+i])h+='<div class="note"><b>Hint:</b> '+esc(s.h)+'</div>';
+      h+='</div>'}
+    h+='</div>'}
+  if(st>=n){var last=q.steps[n-1];
+    h+='<div class="fin"><b>Done!</b> Answer: '+esc(String(last.a))+' '+esc(q.unit)+'.<div class="row" style="margin-top:10px">'+
+       (cur<Q.length-1?'<button class="btn" id="next" type="button">Next question</button>':'')+
+       '<button class="btn ghost" id="redo" type="button">Try this one again</button></div></div>'}
+  h+='</div><aside class="board"><h3>Your model</h3>'+modelSVG(model)+'</aside></div>';
+  document.getElementById("stage").innerHTML=h}
+
+function advance(){prog[cur]=stepOf(cur)+1;save();render();var f=document.querySelector(".step.cur input");if(f)f.focus()}
+function attempt(ok){
+  var key=cur+"-"+stepOf(cur);
+  if(ok){delete wrong[key];advance()}
+  else{wrong[key]=1;var fb=document.getElementById("fb");
+    if(fb&&!fb.querySelector(".msg"))fb.insertAdjacentHTML("afterbegin",'<div class="msg no">Not quite. Have another go.</div>');
+    var inp=document.getElementById("ans");if(inp){inp.select()}}}
+function checkNum(){var s=Q[cur].steps[stepOf(cur)],v=num(document.getElementById("ans").value);
+  attempt(!isNaN(v)&&Math.abs(v-s.a)<1e-9)}
+
+document.addEventListener("click",function(e){
+  var t=e.target.closest("button");if(!t)return;
+  if(t.dataset.i!==undefined){cur=+t.dataset.i;render();return}
+  if(t.dataset.c!==undefined){attempt(+t.dataset.c===Q[cur].steps[stepOf(cur)].a);return}
+  if(t.id==="chk"){checkNum();return}
+  if(t.id==="hint"){hints[cur+"-"+stepOf(cur)]=1;render();return}
+  if(t.id==="next"){cur++;render();window.scrollTo(0,0);return}
+  if(t.id==="redo"){prog[cur]=0;save();render();return}
+  if(t.id==="reset"){if(confirm("Start all questions again?")){prog={};save();cur=0;render()}}});
+document.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.id==="ans")checkNum()});
+load();render();
+</script>
