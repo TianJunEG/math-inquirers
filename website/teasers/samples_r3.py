@@ -1,0 +1,48 @@
+"""One or more worked instances per round-3 kind.  verify_bank.py --selftest solves each with kinds.py and with brute.py and
+requires exactly one answer, equal in both (so every new sub-structure has been exercised by its independent checker even
+before a month of puzzles uses it)."""
+CROSS = {'A': (1, 0), 'B': (0, 1), 'C': (1, 1), 'D': (2, 1), 'E': (3, 1), 'F': (1, 2)}
+STAIR = {'A': (0, 0), 'B': (1, 0), 'C': (1, 1), 'D': (2, 1), 'E': (2, 2), 'F': (3, 2)}
+TWO_ROWS = {'A': (0, 0), 'B': (1, 0), 'C': (2, 0), 'D': (1, 1), 'E': (1, 2), 'F': (1, 3)}   # 1-3-1-1 : a column of four with two arms
+SAMPLES = {
+    'intervals': [dict(n1=4, t1=9, n2=7), dict(n1=3, t1=8, n2=6)],
+    'unit_compare': [dict(dens=[4, 6, 3], names=['Ali', 'Ben', 'Cia'], ask='most'), dict(dens=[4, 6, 3], names=['Ali', 'Ben', 'Cia'], ask='least'),
+                     dict(dens=[2, 8], names=['a', 'b'], ask='fit')],
+    'weeks_days': [dict(mode='total', w=3, d=4), dict(mode='rest', n=45), dict(mode='weeks', n=45), dict(mode='longer', w=4, d=2, n=25)],
+    'swaps': [dict(order=[3, 5, 1, 4, 2]), dict(order=[2, 1, 3, 4]), dict(order=[6, 5, 4, 3, 2, 1])],
+    'overlap_chain': [dict(ask='total', n=6, length=5, overlap=1), dict(ask='count', length=5, overlap=1, total=25)],
+    'ferry_trips': [dict(people=7, cap=3), dict(people=11, cap=4), dict(people=5, cap=2)],
+    'dice_ways': [dict(sides=6, total=8, ordered=True), dict(sides=6, total=8, ordered=False), dict(sides=6, total=7, ordered=True)],
+    'checkerboard': [dict(rows=8, cols=8, ask='dark'), dict(rows=5, cols=7, ask='light'), dict(rows=6, cols=9, ask='edge_dark')],
+    'equal_marks': [dict(start=20, end=70, marks=6, k=4, ask='value'), dict(start=0, end=90, marks=10, k=1, ask='step')],
+    'sum_later': [dict(a=8, b=5, target=29)],
+    'order_by_key': [dict(numbers=[48, 61, 35, 29, 90], rule='digit_sum', place=3), dict(numbers=[36, 23, 45, 17, 52], rule='digit_product', place=2)],
+    'alpha_numbers': [dict(lo=1, hi=10, place=4), dict(lo=1, hi=12, place=1)],
+    'alt_steps': [dict(start=3, deltas=[5, -2], ask='after', n=9), dict(start=3, deltas=[5, -2], ask='first', target=30)],
+    'pass_places': [dict(start=8, moves=[['pass', 3], ['passed', 2]], total=12, ask='place'), dict(start=8, moves=[['pass', 3], ['passed', 2]], total=12, ask='behind')],
+    'displacement': [dict(moves=[['N', 5], ['E', 4], ['S', 2]])],
+    'schedule_breaks': [dict(start_h=14, start_m=20, parts=3, part_min=35, break_min=10, ask='total'), dict(start_h=14, start_m=20, parts=3, part_min=35, break_min=10, ask='end24')],
+    'reverse_division': [dict(divisor=7, quotient=12, remainder=5, ask='number'), dict(divisor=7, quotient=12, remainder=5, ask='new', add=10)],
+    'fake_coin': [dict(ask='min', n=27), dict(ask='min', n=28), dict(ask='max_coins', w=4)],
+    'mirror_time': [dict(h=3, m=40, ask='hour'), dict(h=3, m=40, ask='minutes'), dict(h=12, m=0, ask='hour')],
+    'swap_digits': [dict(ask='difference', number=5732, pos=[0, 3]), dict(ask='number', diff=396, t=5, h=2)],
+    'notch_perimeter': [dict(w=10, h=7, notches=[['tr', 3, 2], ['bl', 2, 2]], unit=1)],
+    'container_mass': [dict(full=900, part=520, num=1, den=2, ask='jar'), dict(full=900, part=520, num=1, den=2, ask='contents')],
+    'missing_term': [dict(n=20, got=197)],
+    'jug_steps': [dict(a=3, b=5, target=4), dict(a=5, b=7, target=6)],
+    'euler_lifts': [dict(edges=[['A', 'B'], ['B', 'C'], ['C', 'D'], ['D', 'A'], ['A', 'C'], ['B', 'D']]), dict(edges=[['A', 'B'], ['B', 'C'], ['C', 'D'], ['D', 'A']]),
+                    dict(edges=[['A', 'B'], ['A', 'C'], ['A', 'D'], ['A', 'E']])],
+    'diagonal_squares': [dict(w=4, h=6), dict(w=5, h=3)],
+    'net_opposite': [dict(cells=CROSS, ask='B'), dict(cells=CROSS, ask='A'), dict(cells=STAIR, ask='A'), dict(cells=STAIR, ask='C'), dict(cells=TWO_ROWS, ask='A')],
+    'symmetry_add': [dict(grid=['#...', '.#..', '..#.', '....'], axis='vertical'), dict(grid=['##..', '#...', '....', '....'], axis='horizontal')],
+    'venn3': [dict(total=40, a=18, b=15, c=12, ab=6, ac=5, bc=4, abc=2, ask='none'), dict(total=40, a=18, b=15, c=12, ab=6, ac=5, bc=4, abc=2, ask='only_one')],
+    'cut_corners_area': [dict(w=12, h=8, cuts=[[4, 3], [2, 2]], unit=1)],
+    'combined_mean': [dict(groups=[[20, 70], [30, 80]], ask='mean'), dict(groups=[[20, 70], [30, 80]], ask='last', overall=76)],
+    'ratio_change': [dict(mode='add', a=3, b=5, c=5, d=6, k=7, ask='second'), dict(mode='give', a=7, b=3, c=1, d=1, k=16, ask='total')],
+    'share_fraction': [dict(num=3, den=4, people=6)],
+    'branch_prog': [dict(start=7, n=5, even_op=['half', 0], odd_op=['times3plus1', 0]), dict(start=20, n=4, even_op=['sub', 3], odd_op=['add', 5])],
+    'faulty_clock': [dict(g=5, clock_min=130)],
+    'triangle_sides': [dict(first=1, ask='largest_corner', side=9), dict(first=1, ask='smallest_middle', side=12), dict(first=3, ask='largest_corner', side=15)],
+    'digit_segments': [dict(lo=11, hi=15, table={str(i): v for i, v in enumerate([6, 2, 5, 5, 4, 5, 6, 3, 7, 6])})],
+    'circle_out': [dict(n=7, k=2), dict(n=10, k=3), dict(n=12, k=2)],
+}
