@@ -2037,38 +2037,38 @@
     "id": "T3",
     "page": 3,
     "tier": "think",
-    "text": "A big square is made of 4 small squares, like the yellow one.",
+    "text": "A domino covers 2 squares that touch, like the yellow one. The board has 2 rows of 3 squares.",
     "parts": [
      {
       "l": "a",
-      "text": "There are [] small squares.",
-      "ans": "6",
-      "val": 6
+      "text": "There are [] places for a domino that lies along a row.",
+      "ans": "4",
+      "val": 4
      },
      {
       "l": "b",
-      "text": "There are [] big squares.",
-      "ans": "2",
-      "val": 2
+      "text": "There are [] places for a domino that stands up in a column.",
+      "ans": "3",
+      "val": 3
      },
      {
       "l": "c",
-      "text": "There are [] squares in all.",
-      "ans": "8",
-      "val": 8
+      "text": "There are [] places for a domino in all.",
+      "ans": "7",
+      "val": 7
      }
     ],
-    "answer": "6; 2; 8",
+    "answer": "4; 3; 7",
     "val": [
-     6,
-     2,
-     8
+     4,
+     3,
+     7
     ],
-    "hint": "Count the small squares first. Then look for big squares that are made of 4 small ones.",
-    "solution": "There are 2 rows of 3 small squares: 6 small squares. A big square covers 2 columns, and it can start in column 1 or column 2. So there are 2 big squares. 6 and 2 make 8 squares in all.",
+    "hint": "Count the places along the top row. Then the bottom row. Then count the places that stand up in each column.",
+    "solution": "Each row has 3 squares, so a domino can start on the 1st or the 2nd square: 2 places in each row, and 2 and 2 make 4. A domino that stands up covers a whole column of 2 squares, so there is 1 place in each of the 3 columns: 3. 4 and 3 make 7 places in all.",
     "mistakes": [
-     "Counting only the 6 small squares.",
-     "Counting the whole rectangle as a square."
+     "Counting 6, one for each square.",
+     "Counting only the dominoes that lie along a row (4)."
     ],
     "mins": 5,
     "visual": {
@@ -2084,14 +2084,6 @@
       ],
       [
        0,
-       1
-      ],
-      [
-       1,
-       0
-      ],
-      [
-       1,
        1
       ]
      ],
@@ -2359,7 +2351,7 @@
   },
   {
    "id": "E2",
-   "text": "Each box is one way to wear a hat and a scarf.",
+   "text": "Ali crosses the river by one of 3 bridges. Then he takes one of 3 buses home. Each box is one way to go home.",
    "parts": [
     {
      "l": "",
@@ -2370,7 +2362,7 @@
    ],
    "answer": "9 ways",
    "val": 9,
-   "solution": "There are 3 hats and 3 scarves. 3 and 3 and 3 make 9 boxes, so 9 ways.",
+   "solution": "There are 3 bridges and 3 buses. Each bridge goes with each bus: 3 and 3 and 3 make 9 boxes, so 9 ways.",
    "mistakes": [
     "Writing 6 (3 and 3).",
     "Counting only one row."
@@ -2379,25 +2371,25 @@
     "type": "table",
     "head": [
      "",
-     "scarf 1",
-     "scarf 2",
-     "scarf 3"
+     "red bus",
+     "blue bus",
+     "green bus"
     ],
     "rows": [
      [
-      "hat 1",
+      "bridge 1",
       "[ ]",
       "[ ]",
       "[ ]"
      ],
      [
-      "hat 2",
+      "bridge 2",
       "[ ]",
       "[ ]",
       "[ ]"
      ],
      [
-      "hat 3",
+      "bridge 3",
       "[ ]",
       "[ ]",
       "[ ]"
@@ -3044,7 +3036,7 @@
   "The look-back is never collected in front of the group or read out. A pass is always allowed."
  ],
  "tutor_prep": [
-  "Solve every workbook question yourself first. Check the answers: S1 10; S2 15; S3 5; S4 7, 6 and 5; S5 20; S6 5; T1 2, 1 and 6; T2 8; T3 6, 2 and 8; T4 11, 9 and 8; G1 10 and 15; G2 9, 4, 1 and 14; G3 8 and 9; I1 1 + 6, 2 + 5 and 3 + 4.",
+  "Solve every workbook question yourself first. Check the answers: S1 10; S2 15; S3 5; S4 7, 6 and 5; S5 20; S6 5; T1 2, 1 and 6; T2 8; T3 4, 3 and 7; T4 11, 9 and 8; G1 10 and 15; G2 9, 4, 1 and 14; G3 8 and 9; I1 1 + 6, 2 + 5 and 3 + 4.",
   "Tell parents a week before: Book 8 is the book for the last five lessons (36 to 40) and its paper-people page needs the 8 people cut out by a grown-up. The next lesson needs the graph-mat page (no cutting) and about 12 small things from the house in 3 or 4 kinds, not food. Printing and postage are included in the program fee (owner decision, 23 Oct 2026). Parcel policy (owner decision, 23 Oct 2026): a family whose book has not arrived or is damaged messages the business WhatsApp within 7 days and gets the PDF straight away; there is one free resend; a second loss is discussed. Delivery name, address and phone are deleted 30 days after the parcel is confirmed delivered, or after any resend is finished, whichever is later.",
   "Have the slides open. Have your own 3 paper people or coins ready. Practise the arm and leg break. When you ask about handshakes, say the rule in the same words every time: count only the new ones.",
   "Check the recording captures the tutor and the shared screen. Children's video is excluded; any unmuted voice is recorded. Greet the whole group first, say the notice, then start the recording; avoid first names while it runs.",

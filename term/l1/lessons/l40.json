@@ -2238,19 +2238,19 @@
         "id": "G2",
         "page": 4,
         "tier": "go",
-        "text": "A child in another class wrote a puzzle: Two numbers add up to 10. One number is 4 more than the other. The numbers are 6 and 4.",
-        "answer": "No; 2; 3 and 7",
+        "text": "A child in another class wrote a puzzle: A pattern starts at 4 and goes up by 4. The first four numbers are 4, 7, 10 and 13.",
+        "answer": "No; 3; 8 and 12",
         "val": [
           "No",
-          2,
           3,
-          7
+          8,
+          12
         ],
-        "hint": "Check each clue. Do 6 and 4 add up to 10? Is 6 four more than 4?",
-        "solution": "6 + 4 = 10, so the first clue fits. 6 take away 4 is 2, not 4, so the second clue does not fit. The numbers that fit are 3 and 7: 3 + 7 = 10 and 7 take away 3 is 4.",
+        "hint": "Check each clue. How far is it from 4 to 7? From 7 to 10? From 10 to 13?",
+        "solution": "4 to 7 is 3, 7 to 10 is 3 and 10 to 13 is 3. The numbers go up by 3, not by 4, so the puzzle is not right. A pattern that starts at 4 and goes up by 4 goes 4, 8, 12, 16, so the next two numbers after 4 are 8 and 12.",
         "mistakes": [
-          "Saying Yes because the numbers add up to 10.",
-          "Writing 4 for the difference."
+          "Saying Yes because the pattern starts at 4.",
+          "Writing 4 for the jump."
         ],
         "mins": 6,
         "parts": [
@@ -2266,17 +2266,17 @@
           },
           {
             "l": "b",
-            "text": "6 and 4 are [] apart.",
-            "ans": "2",
-            "val": 2
+            "text": "From 4 to 7 the numbers go up by [] .",
+            "ans": "3",
+            "val": 3
           },
           {
             "l": "c",
-            "text": "The numbers that fit are [] and [] .",
-            "ans": "3 and 7",
+            "text": "A pattern that starts at 4 and goes up by 4 is 4, [] , [] .",
+            "ans": "8 and 12",
             "val": [
-              3,
-              7
+              8,
+              12
             ]
           }
         ]
@@ -2442,13 +2442,10 @@
     {
       "id": "H2",
       "tier": "start",
-      "text": "Two numbers add up to 14. One number is 2 more than the other. The numbers are ___ and ___ .",
-      "answer": "6 and 8",
-      "val": [
-        6,
-        8
-      ],
-      "solution": "List the pairs: 6 and 8 add up to 14, and 8 is 2 more than 6. Check: no other pair that adds up to 14 is 2 apart."
+      "text": "A puzzle says: I am a number between 20 and 30. My ones digit is 3 more than my tens digit. What number am I? ___",
+      "answer": "25",
+      "val": 25,
+      "solution": "Between 20 and 30 means the tens digit is 2. The ones digit is 2 and 3 more, which is 5. I am 25. Check: 25 is between 20 and 30."
     },
     {
       "id": "H3",

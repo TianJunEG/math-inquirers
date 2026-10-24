@@ -29,7 +29,7 @@
   "contest_moves": [
     "choose the tool that fits (draw it, act it out, spot the pattern, list every way, make a table, work backwards, guess and check, try something simpler) and say why",
     "work backwards with the tool not named: paid, the change and one price are given, find the other price",
-    "draw it: 4th from the front and 3rd from the back, so the line has 6 (the child is counted once)",
+    "draw it: steps below a child on a staircase, one move after another",
     "guess and check with a table of tries: 7 coins worth 50 cents, 4 five-cent and 3 ten-cent",
     "make equal: Ali 9, Ben 15, Mei 12, so each ends with 12 and Ben gives 3 to Ali",
     "solve one problem two ways and check that they agree: 3 times as many with a total of 36, by drawing it (a strip) and by guess and check (a table of tries)"
@@ -2395,17 +2395,17 @@
         "id": "T3",
         "page": 3,
         "tier": "think",
-        "text": "Siti is 4th from the front of a line. She is also 3rd from the back. How many children are in the line? Use the box to show your thinking.",
-        "answer": "3 children; 6 children",
+        "text": "Ali, Ben and Mei stand on a staircase. Mei is on step 7. Ali is 2 steps below Mei. Ben is 1 step below Ali. Use the box to show your thinking.",
+        "answer": "Ali on step 5; Ben on step 4",
         "val": [
-          3,
-          6
+          5,
+          4
         ],
-        "hint": "Show the line with a dot for each child. Put Siti in the right place.",
-        "solution": "There are 3 children in front of Siti. There are 2 children behind Siti, because she is 3rd from the back. 3 + 1 + 2 = 6 children. Siti is counted once.",
+        "hint": "Draw the steps and put a dot on step 7. Go down 2 steps for Ali, then down 1 more for Ben.",
+        "solution": "Mei is on step 7. Ali is 2 steps below, so he is on step 7 - 2 = 5. Ben is 1 step below Ali, so he is on step 5 - 1 = 4. Check by counting up from Ben: step 4, 5 (Ali), 6, 7 (Mei).",
         "mistakes": [
-          "Writing 7 (4 + 3, counting Siti twice).",
-          "Writing 5."
+          "Writing 9 or 8 (going up instead of down).",
+          "Taking both steps from Mei and writing 4 for Ali."
         ],
         "mins": 5,
         "draw": true,
@@ -2413,15 +2413,15 @@
         "parts": [
           {
             "l": "a",
-            "text": "[] children are in front of Siti.",
-            "ans": "3",
-            "val": 3
+            "text": "Ali is on step [] .",
+            "ans": "5",
+            "val": 5
           },
           {
             "l": "b",
-            "text": "There are [] children in the line.",
-            "ans": "6",
-            "val": 6
+            "text": "Ben is on step [] .",
+            "ans": "4",
+            "val": 4
           }
         ]
       },
