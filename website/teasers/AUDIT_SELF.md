@@ -1,4 +1,6 @@
-# Self-audit of the daily teasers (author's checklist, before the independent audit)
+# Self-audit of the daily teasers (author's checklist)
+
+**Updated after fix round 1: section 6 is the current result and supersedes the numbers and the fallback-pool wording in sections 1 to 5, which describe the first version (the pool was removed; the page's fixed puzzle is now the fallback).**
 
 Scope: batches **November 2026 (30 days) and December 2026 (31 days)** for all six levels = 366 puzzles, the browser code, the page wiring, the
 preview. Nothing in `website/dist` was changed or built; the live site is untouched (`site_enabled` is `false`).
@@ -35,9 +37,9 @@ Run on 24 Oct 2026. "Pass" means the command below printed 0 FAIL.
 
 What the time-zone tests cover (with the browser clock fixed, browser time zone set to each of Asia/Singapore, America/Los_Angeles, Pacific/Kiritimati (UTC+14), Pacific/Pago_Pago (UTC-11), Europe/London, UTC):
 
-- 24 Nov 10:00; **30 Nov 23:59:30 SGT** (still 30 Nov); **1 Dec 00:00:00 and 00:00:30 SGT** (1 Dec, even where the browser's own date is still 30 Nov); 31 Dec 23:59:59 SGT; **1 Jan 2027 00:00:01 SGT** (year end, no January batch yet, so fallback pool); 28 Feb 23:59:59 and 1 Mar 2027; leap day 29 Feb 2028; 24 Oct 2026 (before the first batch). Each on all six pages. The puzzle shown equals the expected bank entry (or the expected fallback-pool entry, day number mod 30 / 31).
+- 24 Nov 10:00; **30 Nov 23:59:30 SGT** (still 30 Nov); **1 Dec 00:00:00 and 00:00:30 SGT** (1 Dec, even where the browser's own date is still 30 Nov); 31 Dec 23:59:59 SGT; **1 Jan 2027 00:00:01 SGT** (year end, no January batch yet, so the fixed puzzle stays); 28 Feb 23:59:59 and 1 Mar 2027; leap day 29 Feb 2028; 24 Oct 2026 (before the first batch). Each on all six pages. The puzzle shown equals the expected bank entry (or the page's fixed puzzle).
 - The same instant gives the same puzzle in all six browser time zones.
-- Fetch of the month file blocked: the page shows a fallback-pool puzzle. JavaScript off: the old fixed puzzle is on the page (home: frog hops with its Check button; level pages: the sample puzzle with "Show the answer").
+- Fetch of the month file blocked: the page keeps its fixed puzzle. JavaScript off: the old fixed puzzle is on the page (home: frog hops with its Check button; level pages: the sample puzzle with "Show the answer").
 - Accepted formats for every released puzzle (as displayed, with the number alone, with spaces, thousands commas or spaces, `$`, units that are listed) and rejected wrong answers (wrong numbers, a wrong unit, the answer with an extra digit, the answer with a made-up unit). Edge cases: `12 m` for a `12 cm` answer is wrong, `2/4` for `1/2` asks for the simplest form, `-6` and `−6`, text answers with capitals and a full stop.
 - UI flow: Enter key; wrong answer shows "Not yet. Hint: ..." plus a "Show me how" button; right answer shows "Correct!" and the worked explanation.
 - Privacy: 0 cookies, 0 localStorage or sessionStorage entries, 0 requests to any host other than the site itself, no timers used for the puzzle (a single 2.5 second timeout guards the fetch only).
@@ -55,11 +57,26 @@ What the time-zone tests cover (with the browser clock fixed, browser time zone 
 
 ## 5. Known limits and open points for the independent audit
 
-- Only November and December exist. January to October (305 puzzles per level) are not written; until then those dates use the fallback pool (November's puzzles by day number), so a regular visitor will see November puzzles again in January and later.
+- Only November and December exist. January to October (305 puzzles per level) are not written; until then those dates show the page's fixed puzzle.
 - Home page: no level picker exists, so it always shows Ages 6-8; `?level=` links only pre-fill the sign-up form.
 - "Frame" is interpreted as the story/setting plus what is asked. The same maths structure returns in other stories (for example "work backwards", "arrays", "pairs") on other days; kind counts per level are in each report. An auditor who reads "frame" as the maths structure would find repeats within a month (at most 5 of one kind in a 31-day month).
-- The fetch adds one small request to the page; if it fails the visitor gets a fallback-pool puzzle, not a blank. The fallback pool is inline in each page (about 25 KB).
+- The fetch adds one small request to the page; if it fails the visitor keeps the fixed puzzle, not a blank.
 - Answers are normalised leniently (a wrong unit is rejected, a missing unit is accepted). Text answers (names, days, colours, shapes) accept the full word or the listed short forms.
 - The hint is shown after a wrong try and the worked explanation after a right one or after "Show me how"; there is no way to see the answer before trying once. (Easy to change if the owner wants the button from the start.)
 - Some L5/L6 puzzles use a definition inside the question (prime, mode, range, palindrome) because the level range assumes the idea but not every child has met the word; the wording defines it where it matters.
 - The preview page (`outputs/owner_review/teasers_preview/index.html`) carries an answer key for the owner. Do not publish that page.
+
+## 6. Fix round 1 (24 Oct 2026): re-run results
+
+Fixes are listed in `FIXES_ROUND1.md`. Final state of every check:
+
+| Check | Result |
+|---|---|
+| `build_bank.py` | 30 puzzles per level for November, 31 for December (366 in all) |
+| `verify_bank.py` | November 0 FAIL (38 REVIEW), December 0 FAIL (28 REVIEW), structure rules 0 FAIL; REVIEW lines read by hand: example numbers in the wording, and two skeleton matches (`L3-petshop`, `L4-yearlater`) with 0 shared numbers |
+| `verify_bank.py --selftest` | 9 of 9 rule probes fire as intended (sub-structure twice in a quarter, 4 of a family, repeated answer, 7-word run, repeated numbers; same sub in another quarter allowed; taxonomy matcher) |
+| `brute.py` / `brute_more.py` | every one of the 366 puzzles has exactly one valid answer, equal to the bank answer, by an independent search |
+| `test_site.py` on a rebuilt scratch site | 431 checks, 0 failed (date matrix over 6 time zones, no-puzzle date, blocked / slow / failed / late fetch, no-JS, answer matcher, light and dark UI, contrast at least 4.5:1, focus, privacy, layout on three dates) |
+| Flag off | `site_enabled` false; generators unchanged; `website/dist` untouched |
+
+Changes to the earlier limits: the fallback is the page's fixed puzzle, not a pool; "frame" now means the maths structure (taxonomy).
