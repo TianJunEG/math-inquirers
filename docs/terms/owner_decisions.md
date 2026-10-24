@@ -395,3 +395,6 @@ Consequences: (1) three options per extension level: WORKBOOK ONLY (printed, pos
 
 ## 2026-10-24 — EXTENSION BUYERS NEED NOT BE ENROLLED
 Owner: "parents who purchase extension book need not be enrolled in any program". A parent can create a portal account and a child profile and buy an extension book (workbook / online / both) with no enrolment in any holiday or term group. Consents for these families cover only what applies to them (terms, contact, practice-answer collection and reports; NOT live-lesson recording). Entitlement is independent of enrolments/groups.
+
+## 2026-10-24 — EXTENSION BOOKS AS A FUNNEL TO TRIAL CLASSES
+Owner: "extension book serve as a funnel for parents to sign up their kids for trial class". The extension book and its online practice are a funnel: parents (never children) are invited to book a trial class. Needs: an in-book page and a post-purchase/online-practice call to action (link/QR to trial sign-up, domain needed: D9), a trial-class sign-up path in the portal for non-enrolled families, a parent-facing report-based "next step" suggestion, and a separate, optional marketing/contact consent (PDPA, Do Not Call). Not pushy: no countdowns, no scores, no pressure on children.
