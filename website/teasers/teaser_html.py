@@ -14,7 +14,17 @@ CSS = '''
 .pzcode{font:600 17px/1.5 ui-monospace,Menlo,Consolas,monospace;background:var(--bg);border:2px dashed var(--line);border-radius:12px;padding:10px 14px;margin:8px 0;white-space:pre;overflow-x:auto;max-width:100%}
 .pzmeta{margin-top:10px}
 .pzl .msg b{font-weight:800}
-#pzMsg{margin-top:6px}
+#pzMsg,#pzdMsg{margin-top:6px}
+#pzdMsg:focus{outline:3px solid var(--ink);outline-offset:3px;border-radius:14px}
+.pzdaily{display:contents}
+.pzlab{font:800 13px var(--body);color:var(--muted)}
+[hidden]{display:none!important}
+/* light mode: the hint (red) and the worked answer (green) text need 4.5:1 on their tinted boxes; dark mode keeps the page colours */
+.pzl{--pzno:#A82D2D;--pzok:#17655B}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .pzl{--pzno:var(--red);--pzok:var(--teal)}}
+:root[data-theme="dark"] .pzl{--pzno:var(--red);--pzok:var(--teal)}
+.pzl .msg.no{color:var(--pzno)}
+.pzl .msg.ok{color:var(--pzok)}
 '''
 
 
@@ -52,20 +62,13 @@ def released():
     return manifest()['released']
 
 
-def fallback_pool(level):
-    """Used when the visitor's month has no released batch (or the batch file cannot be fetched):
-    the puzzles of the first released month for this level, in date order."""
-    first = sorted(released())[0]
-    return [compact(e) for e in load_month(first)['levels'][str(level)]]
-
-
 def month_json(level, mm):
     """{ 'MM-DD': puzzle } for one level and one released month."""
     return {e['date']: compact(e) for e in load_month(mm)['levels'][str(level)]}
 
 
 def export_public(dest):
-    """Write the per-level, per-month files the pages fetch (dest/teasers/L<n>-<MM>.json)."""
+    """Write the per-level, per-month files the pages can fetch (dest/teasers/L<n>-<MM>.json) for released months that are not built into the page."""
     d = os.path.join(dest, 'teasers')
     os.makedirs(d, exist_ok=True)
     n = 0
@@ -77,10 +80,19 @@ def export_public(dest):
     return n
 
 
+INLINE_MONTHS = 2     # the latest released months are built into every page, so the day's puzzle never depends on the network
+
+
+def inline_months():
+    return sorted(released())[-INLINE_MONTHS:]
+
+
 def widget_script(level, box_id='pzBox'):
     js = open(os.path.join(HERE, 'teasers.js'), encoding='utf-8').read()
-    pool = json.dumps(fallback_pool(level), ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
+    inline = {mm: month_json(level, mm) for mm in inline_months()}
+    data = json.dumps(inline, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
     boot = ('(function(){var b=document.getElementById("%s");if(!b||!window.MiTeaser)return;'
-            'try{MiTeaser.init({box:b,level:%d,ages:"%s",pool:%s,base:"/teasers/"})}catch(e){}})();'
-            % (box_id, level, LEVEL_AGES[level], pool))
+            'try{MiTeaser.init({box:b,level:%d,ages:"%s",released:%s,inline:%s,base:"/teasers/"})}catch(e){}})();'
+            % (box_id, level, LEVEL_AGES[level], json.dumps(sorted(released())), data))
     return '<script>\n' + js + '\n' + boot + '\n</script>'
+

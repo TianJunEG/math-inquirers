@@ -371,3 +371,116 @@ def b_series_gap(values, ask):
         else:
             best = d if best is None or d < best else best
     return {abs(best)}
+
+
+# ================================================================== Level 5 structures
+@brute
+def b_pct_add(price, p):
+    price = Fr(price)
+    total = price
+    for _ in range(p):
+        total += price / 100
+    return {total}
+
+
+@brute
+def b_distance(v, h, m):
+    minutes = h * 60 + m
+    d = Fr(0)
+    for _ in range(minutes):
+        d += Fr(v, 60)
+    return {d}
+
+
+@brute
+def b_volume_litres(l, w, h):
+    cubes = sum(1 for _ in itertools.product(range(l), range(w), range(h)))
+    out = set()
+    for litres in range(0, 10000):
+        if litres * 1000 == cubes:
+            out.add(litres)
+    return out
+
+
+@brute
+def b_decimal_convert(value, factor):
+    from decimal import Decimal
+    s = str(Decimal(str(value)) * Decimal(factor))
+    return {Fr(s)}
+
+
+# ================================================================== Level 6 structures
+@brute
+def b_fib_like(a, b, n):
+    memo = {1: a, 2: b}
+
+    def t(i):
+        if i not in memo:
+            memo[i] = t(i - 1) + t(i - 2)
+        return memo[i]
+    return {t(n)}
+
+
+@brute
+def b_int_sum(lo, hi):
+    total = 0
+    for v in range(lo, hi + 1):
+        total += v
+    return {total}
+
+
+@brute
+def b_substitute(expr, vals):
+    import ast
+    tree = ast.parse(expr, mode='eval')
+
+    def ev(node):
+        if isinstance(node, ast.Expression):
+            return ev(node.body)
+        if isinstance(node, ast.Constant):
+            return Fr(node.value)
+        if isinstance(node, ast.Name):
+            return Fr(vals[node.id])
+        if isinstance(node, ast.BinOp):
+            l, r = ev(node.left), ev(node.right)
+            return {ast.Add: l + r, ast.Sub: l - r, ast.Mult: l * r}[type(node.op)] if not isinstance(node.op, ast.Div) else l / r
+        raise ValueError(ast.dump(node))
+    return {ev(tree)}
+
+
+@brute
+def b_prime_sum_pairs(n):
+    def prime(m):
+        return m >= 2 and len([d for d in range(1, m + 1) if m % d == 0]) == 2
+    found = set()
+    for p in range(2, n):
+        q = n - p
+        if prime(p) and prime(q):
+            found.add(frozenset((p, q)))
+    return {len(found)}
+
+
+@brute
+def b_choose(n, k):
+    return {sum(1 for _ in itertools.combinations(range(n), k))}
+
+
+@brute
+def b_last_digit(base, exp):
+    x = 1
+    for _ in range(exp):
+        x = (x * base) % 10
+    return {x}
+
+
+@brute
+def b_while_count(start, mult, limit, ask):
+    k = 0
+    while start * mult ** k < limit:
+        k += 1
+    return {k} if ask == 'count' else {start * mult ** k}
+
+
+@brute
+def b_pct_express(part, whole):
+    return {Fr(p) for p in range(0, 1001) if Fr(p) * whole == part * 100}

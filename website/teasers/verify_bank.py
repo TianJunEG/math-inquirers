@@ -246,48 +246,11 @@ def stock_local():
     return ph
 
 
-def main():
-    man = json.load(open(os.path.join(HERE, 'manifest.json')))
-    months = sys.argv[1:] or man['released']
-    banks = {}
-    for mm in man['released']:
-        banks[mm] = json.load(open(os.path.join(HERE, 'batches', 'm%s' % mm, 'bank.json'), encoding='utf-8'))
-    levels = sorted({int(lv) for b in banks.values() for lv in b['levels']})
-    fails_all = 0
-    global_fails = []
-    # ---------------------------------------------------------------- corpora for the wording check
-    corp = {}
-    if dup_check:
-        for lv in range(1, 7):
-            cs = dup_check.corpora(lv)
-            corp[lv] = {k: dup_check.grams(dup_check.toks(dup_check.read_corpus(v)), NGF) for k, v in cs.items()}
-            corp[lv]['_ext_missing'] = not cs['external']
-        ext_texts = []
-        for f in glob.glob(os.path.join(ROOT, 'extension', 'data', 'l*_u*.json')):
-            try:
-                ext_texts.append(' . '.join(t for _, t in dup_check.question_texts(json.load(open(f, encoding='utf-8')))))
-            except Exception:
-                pass
-        ext_grams = dup_check.grams(dup_check.toks(' . '.join(ext_texts)), NGF)
-        stock = dup_check.stock(NGF) | stock_local()
-    fixed = fixed_puzzles()
-    fixed_grams = {k: dup_check.grams(dup_check.toks(v), NGF) for k, v in fixed.items()} if dup_check else {}
-    texts, index = structure_index()
-    print('structure index: %d source questions, %d skeleton 4-grams' % (len(texts), len(index)))
-    reserved_kinds = {}
-    for lv, sid in TAX.FIXED.items():
-        reserved_kinds[sid] = TAX.SUBS[sid]['kinds'] if sid in TAX.SUBS else []
-
-    # ---------------------------------------------------------------- structure rules over all released months (per level and quarter)
-    struct_lines = ['# Structure report (taxonomy.json)', '',
-                    'Rules: per level and calendar quarter at most %d puzzle per sub-structure and %d per family (kind); no answer repeats inside a level; '
-                    'the sub-structures used by the fixed puzzles on the level pages (%s) are never used by the bank.' % (
-                        TAX.RULES['max_per_sub_per_quarter'], TAX.RULES['max_per_family_per_quarter'], ', '.join(sorted(TAX.FIXED.values()))), '']
-    all_by_level = {lv: [] for lv in levels}
-    for mm in man['released']:
-        for lv, items in banks[mm]['levels'].items():
-            for e in items:
-                all_by_level[int(lv)].append((mm, e))
+def structure_rules(all_by_level, stock):
+    """The per-level structure rules over every released month.  all_by_level = {level: [(month, entry), ...]}.
+    Returns (failures, report lines)."""
+    global_fails, struct_lines = [], []
+    levels = sorted(all_by_level)
     for lv in levels:
         by_q = {}
         for mm, e in all_by_level[lv]:
@@ -340,6 +303,130 @@ def main():
                         global_fails.append('L%d: %s and %s share the %d-word run "%s"' % (lv, seen[x], e['id'], NGF, x))
                     seen[x] = e['id']
 
+    return global_fails, struct_lines
+
+
+def capacity_lines(levels):
+    """How many distinct sub-structures and families the taxonomy offers per level, against what a full quarter and year need."""
+    out = ['', '## Capacity of the taxonomy (full year)', '',
+           'A quarter has 90 to 92 days, and each sub-structure may be used once per level and quarter, so a level needs at least 92 sub-structures (and 31 families at 3 each) to fill a quarter, and the same sub-structures can be used again in the next quarter with a new story and new numbers.', '',
+           '| Level | Sub-structures offered | Families | Largest quarter it can fill | Needed (92) |', '|---|---|---|---|---|']
+    for lv in range(1, 7):
+        subs = [s for s, d in TAX.SUBS.items() if lv in d['levels']]
+        fams = {s.split('.')[0] for s in subs}
+        out.append('| %d | %d | %d | %d | %s |' % (lv, len(subs), len(fams), min(len(subs), 3 * len(fams)), 'enough' if min(len(subs), 3 * len(fams)) >= 92 else 'short by %d' % (92 - min(len(subs), 3 * len(fams)))))
+    return out
+
+
+def selftest():
+    """Break the real bank in known ways and check that the rules notice (python3 verify_bank.py --selftest)."""
+    import copy
+    man = json.load(open(os.path.join(HERE, 'manifest.json')))
+    base = {}
+    for mm in man['released']:
+        for lv, items in json.load(open(os.path.join(HERE, 'batches', 'm%s' % mm, 'bank.json'), encoding='utf-8'))['levels'].items():
+            for e in items:
+                base.setdefault(int(lv), []).append((mm, e))
+    stock = (dup_check.stock(NGF) | stock_local()) if dup_check else set()
+    clean, _ = structure_rules(base, stock)
+    cases = []
+
+    def case(name, mutate, want):
+        d = copy.deepcopy(base)
+        mutate(d)
+        f, _ = structure_rules(d, stock)
+        new = [x for x in f if x not in clean]
+        good = any(want in x for x in new)
+        cases.append((name, good, new[:2]))
+    case('same sub-structure twice in a quarter', lambda d: d[3][1][1].__setitem__('sub', d[3][0][1]['sub']), 'sub-structure')
+    def fam4(d):
+        fam = d[2][0][1]['family']
+        k = 0
+        for mm, e in d[2][1:]:
+            if e['family'] != fam and k < 3:
+                e['family'] = fam
+                k += 1
+    case('four puzzles of one family in a quarter', fam4, 'family')
+    def dup_ans(d):
+        a = [e for mm, e in d[5] if e['ans'].isdigit() and int(e['ans']) >= 10][:2]
+        a[1]['ans'] = a[0]['ans']
+    case('the same answer (10 or more) twice in a level', dup_ans, 'answer')
+    def same_run(d):
+        d[4][1][1]['q'] = d[4][0][1]['q'] + ' ' + d[4][1][1]['q']
+    case('a 7-word run shared by two puzzles of a level', same_run, 'word run')
+    def same_nums(d):
+        d[6][1][1]['q'] = d[6][0][1]['q'].replace('?', '') + ' ' + d[6][1][1]['q']
+    case('two puzzles of a level with the same numbers', same_nums, 'share the numbers')
+    def other_quarter(d):
+        e = d[1][1][1]
+        d[1][1] = ('02', dict(e, sub=d[1][0][1]['sub'], id='L1-x'))   # a different quarter: allowed
+    f_ok = copy.deepcopy(base)
+    other_quarter(f_ok)
+    ff, _ = structure_rules(f_ok, stock)
+    cases.append(('the same sub-structure in a different quarter is allowed', not [x for x in ff if x not in clean and 'sub-structure' in x], ff[:1]))
+    bad = [c for c in cases if not c[1]]
+    for c in cases:
+        print(('PASS ' if c[1] else 'FAIL ') + c[0], '' if c[1] else c[2])
+    # taxonomy matching
+    ent = dict(kind='scan', p=dict(preds=[['palindrome', None]]))
+    cases2 = [('digit_puzzles.palindromes' , ent, True), ('digit_puzzles.same_digit_count', ent, False), ('money.change', ent, False)]
+    for sid, e, want in cases2:
+        got = TAX.matches(sid, e)[0]
+        print(('PASS ' if got == want else 'FAIL ') + 'taxonomy match %s -> %s' % (sid, got))
+        if got != want:
+            bad.append(sid)
+    print('selftest: %d problems' % len(bad))
+    sys.exit(1 if bad else 0)
+
+
+def main():
+    if '--selftest' in sys.argv:
+        selftest()
+    man = json.load(open(os.path.join(HERE, 'manifest.json')))
+    months = sys.argv[1:] or man['released']
+    banks = {}
+    for mm in man['released']:
+        banks[mm] = json.load(open(os.path.join(HERE, 'batches', 'm%s' % mm, 'bank.json'), encoding='utf-8'))
+    levels = sorted({int(lv) for b in banks.values() for lv in b['levels']})
+    fails_all = 0
+    global_fails = []
+    # ---------------------------------------------------------------- corpora for the wording check
+    corp = {}
+    if dup_check:
+        for lv in range(1, 7):
+            cs = dup_check.corpora(lv)
+            corp[lv] = {k: dup_check.grams(dup_check.toks(dup_check.read_corpus(v)), NGF) for k, v in cs.items()}
+            corp[lv]['_ext_missing'] = not cs['external']
+        ext_texts = []
+        for f in glob.glob(os.path.join(ROOT, 'extension', 'data', 'l*_u*.json')):
+            try:
+                ext_texts.append(' . '.join(t for _, t in dup_check.question_texts(json.load(open(f, encoding='utf-8')))))
+            except Exception:
+                pass
+        ext_grams = dup_check.grams(dup_check.toks(' . '.join(ext_texts)), NGF)
+        stock = dup_check.stock(NGF) | stock_local()
+    fixed = fixed_puzzles()
+    fixed_grams = {k: dup_check.grams(dup_check.toks(v), NGF) for k, v in fixed.items()} if dup_check else {}
+    texts, index = structure_index()
+    print('structure index: %d source questions, %d skeleton 4-grams' % (len(texts), len(index)))
+    reserved_kinds = {}
+    for lv, sid in TAX.FIXED.items():
+        reserved_kinds[sid] = TAX.SUBS[sid]['kinds'] if sid in TAX.SUBS else []
+
+    # ---------------------------------------------------------------- structure rules over all released months (per level and quarter)
+    struct_lines = ['# Structure report (taxonomy.json)', '',
+                    'Rules: per level and calendar quarter at most %d puzzle per sub-structure and %d per family (kind); no answer repeats inside a level; '
+                    'the sub-structures used by the fixed puzzles on the level pages (%s) are never used by the bank.' % (
+                        TAX.RULES['max_per_sub_per_quarter'], TAX.RULES['max_per_family_per_quarter'], ', '.join(sorted(TAX.FIXED.values()))), '']
+    all_by_level = {lv: [] for lv in levels}
+    for mm in man['released']:
+        for lv, items in banks[mm]['levels'].items():
+            for e in items:
+                all_by_level[int(lv)].append((mm, e))
+    global_fails, more_lines = structure_rules(all_by_level, stock)
+    struct_lines += more_lines
+    struct_lines += capacity_lines(levels)
+
     review_struct = []
     for mm in months:
         fails, reviews, lines, generic = [], [], [], []
@@ -385,6 +472,8 @@ def main():
                 elif got != want:
                     fails.append('%s: brute force says %s but bank says %s' % (tag, got, want))
                 if e['type'] == 'n' and any(Fr(w) == Fr(e['ans']) for w in e['wrong'] if re.fullmatch(r'[\d./]+', w)):
+                    fails.append('%s: a listed wrong answer equals the answer' % tag)
+                if e['type'] == 's' and any(w.lower() == e['ans'] for w in e['wrong']):
                     fails.append('%s: a listed wrong answer equals the answer' % tag)
                 # 2. wording
                 words = len(e['q'].split())

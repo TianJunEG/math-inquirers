@@ -17,9 +17,17 @@
   "6": "sequence.which_term"
  },
  "families": {
+  "algebra": {
+   "name": "Algebra",
+   "cite": "Ages 11-13 page list \"algebra\"; MOE P6 NA algebra (p.43); L6 lesson 4 (Algebra Machines)"
+  },
   "angles": {
    "name": "Angles",
    "cite": "MOE P3 MG angles: right angle, greater or smaller than a right angle (p.36); P4 measure (p.39); P5 line, point, triangle, quadrilateral (p.42); L3 lesson 8; L4 lesson 6; L5 lesson 8"
+  },
+  "averages": {
+   "name": "Averages",
+   "cite": "MOE P6 ST average (p.44); L6 lesson 9 (Averages and Data); Ages 11-13 page list \"data\""
   },
   "backwards": {
    "name": "Working backwards",
@@ -36,6 +44,10 @@
   "calendar": {
    "name": "Calendar and days of the week",
    "cite": "MOE P1 MG Time (days, weeks), p.32; P2 time, p.34"
+  },
+  "codes": {
+   "name": "Codes and binary",
+   "cite": "Ages 11-13 page list \"codes\"; L6 lesson 8 (Secret Codes)"
   },
   "coins": {
    "name": "Coin combinations",
@@ -133,6 +145,10 @@
    "name": "Missing numbers",
    "cite": "L1 lesson 5 (Working Backwards); L2 lesson 2 (Missing Digit Mysteries); MOE P1 NA 2.4 inverse relationship, p.31"
   },
+  "modular": {
+   "name": "Clock arithmetic",
+   "cite": "L6 lesson 8 (Clock (Modular) Arithmetic)"
+  },
   "money": {
    "name": "Money",
    "cite": "L1 lesson 6; L2 lesson 6; L3 lesson 9; MOE P1 NA Money (cents to $1, dollars to $100), p.31"
@@ -149,6 +165,10 @@
    "name": "Groups and arrays (multiplication)",
    "cite": "MOE P1 NA 3.1-3.4 (p.31); P2 tables (p.33); L2 lesson 3 (Legs, Wheels and Arrays)"
   },
+  "negative_numbers": {
+   "name": "Negative numbers",
+   "cite": "Ages 11-13 page list \"negative numbers\"; L6 lesson 3 (Below Zero)"
+  },
   "number_grid": {
    "name": "Number pyramids and grids",
    "cite": "L1-L3 lesson 10 (Puzzle Day); L2 lesson 2 (Missing Digit Mysteries); L3 lesson 2 (Cryptarithm Crackers)"
@@ -161,6 +181,10 @@
    "name": "Order of operations",
    "cite": "MOE P5 NA order of operations (p.41); Ages 9-11 page list says \"order of operations\"; L4 lesson 3 (Operation Detectives)"
   },
+  "percentage": {
+   "name": "Percentage",
+   "cite": "MOE P5 NA percentage: part of a whole, discount, GST (p.41); Ages 10-12 page list \"percentage\"; L5 lesson 7 (Percentage Puzzles). Finding the whole and percentage change are Primary 6 and are not used at Level 5"
+  },
   "perimeter_area": {
    "name": "Perimeter and area",
    "cite": "MOE P3 MG Area and Perimeter, p.36; P4 p.39; L3 lesson 7; L4 lesson 7. At Level 1: perimeter as the distance round a shape (L1 lesson 7 Shape Safari)"
@@ -168,6 +192,30 @@
   "place_value": {
    "name": "Place value",
    "cite": "MOE P1 NA 1.2 tens and ones (p.31), P2 hundreds (p.33), P3 thousands (p.35); L1 lesson 1; L2 lesson 1; L3 lesson 1"
+  },
+  "polygons": {
+   "name": "Angles and diagonals of polygons",
+   "cite": "Ages 11-13 page list (angles in polygons); L6 lesson 7 (Turtle Geometry)"
+  },
+  "primes": {
+   "name": "Primes",
+   "cite": "Ages 11-13 page list \"primes\"; L6 lesson 2 (Prime Hunters)"
+  },
+  "probability": {
+   "name": "Probability",
+   "cite": "Ages 11-13 page list \"probability\"; L6 lesson 6 (Fair or Unfair?)"
+  },
+  "programs": {
+   "name": "Simple programs",
+   "cite": "Ages 11-13 page list (explored in Scratch); L6 lessons 1, 7, 10"
+  },
+  "rate": {
+   "name": "Rate",
+   "cite": "MOE P5 NA rate (p.41); Ages 10-12 page list \"rate\"; L5 lesson 6 (Rate Racers)"
+  },
+  "ratio": {
+   "name": "Ratio",
+   "cite": "MOE P6 NA ratio (p.43); L6 mixed lessons. Ratio is Primary 6, so it is used at Level 6 only"
   },
   "remainders": {
    "name": "Remainders",
@@ -209,12 +257,57 @@
    "name": "Time",
    "cite": "MOE P1 MG Time 2.1-2.4 (p.32), P2 minute (p.34), P3 start/finish/duration and 24-hour (p.36)"
   },
+  "triangle_area": {
+   "name": "Area of a triangle",
+   "cite": "MOE P5 MG area of a triangle and composite figures (p.42); Ages 10-12 page list \"area of a triangle\"; L5 lesson 4 (Triangle Areas)"
+  },
+  "volume": {
+   "name": "Volume",
+   "cite": "MOE P5 MG volume of a cuboid, litres and cm3 (p.42); Ages 10-12 page list \"volume\"; L5 lesson 5 (Volume Vault)"
+  },
   "word_problems": {
    "name": "Compare and equalise (word problems)",
    "cite": "MOE P1 NA 1.4 compare sets, 2.1 addition and subtraction concepts, p.31"
   }
  },
  "subs": {
+  "algebra.equation_both_sides": {
+   "name": "an unknown on both sides of an equation",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "equation"
+   ],
+   "where": {
+    "form": [
+     "ax+b=cx+d"
+    ]
+   }
+  },
+  "algebra.linear_word": {
+   "name": "a fixed charge plus a charge per unit: find the units",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "equation"
+   ],
+   "where": {
+    "form": [
+     "ax+b=c"
+    ]
+   }
+  },
+  "algebra.substitute": {
+   "name": "find the value of an expression for given values of the letters",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "substitute"
+   ]
+  },
   "angles.clock_hands": {
    "name": "angle between the hour hand and the minute hand",
    "levels": [
@@ -230,6 +323,57 @@
     ]
    }
   },
+  "angles.isosceles_base_angles": {
+   "name": "the two equal base angles of an isosceles triangle",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "angle"
+   ],
+   "where": {
+    "kind": [
+     "isos_base"
+    ]
+   }
+  },
+  "angles.on_a_straight_line": {
+   "name": "angles on a straight line add to 180 degrees",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "angle"
+   ],
+   "where": {
+    "kind": [
+     "sum"
+    ],
+    "total": [
+     180
+    ]
+   }
+  },
+  "angles.quadrilateral_sum": {
+   "name": "the fourth angle of a four-sided shape (angles add to 360)",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "angle"
+   ],
+   "where": {
+    "kind": [
+     "sum"
+    ],
+    "total": [
+     360
+    ]
+   }
+  },
   "angles.right_angle_turns": {
    "name": "how many right angles does a clock hand turn through",
    "levels": [
@@ -238,6 +382,48 @@
    ],
    "kinds": [
     "quarter_turns"
+   ]
+  },
+  "averages.mean": {
+   "name": "the mean of some marks",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "stats"
+   ],
+   "where": {
+    "ask": [
+     "mean"
+    ]
+   }
+  },
+  "averages.missing_value": {
+   "name": "the mark needed to reach a target mean",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "mean_missing"
+   ]
+  },
+  "averages.remove_one": {
+   "name": "the mean changes when one value is removed: find that value",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "mean_remove"
+   ]
+  },
+  "backwards.three_step": {
+   "name": "undo three steps",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "mystery"
    ]
   },
   "backwards.two_step": {
@@ -281,7 +467,8 @@
    "levels": [
     3,
     4,
-    5
+    5,
+    6
    ],
    "kinds": [
     "times_as_many"
@@ -297,7 +484,8 @@
    "levels": [
     3,
     4,
-    5
+    5,
+    6
    ],
    "kinds": [
     "times_as_many"
@@ -356,6 +544,43 @@
     "weekday"
    ]
   },
+  "codes.binary_to_decimal": {
+   "name": "read a binary number",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "binary"
+   ],
+   "where": {
+    "ask": [
+     "to_dec"
+    ]
+   }
+  },
+  "codes.caesar_shift": {
+   "name": "decode a letter-shift cipher",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "cipher"
+   ]
+  },
+  "codes.decimal_to_binary": {
+   "name": "write a whole number in binary",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "binary"
+   ],
+   "where": {
+    "ask": [
+     "to_bin"
+    ]
+   }
+  },
   "coins.coin_total": {
    "name": "total value of a few coins of two kinds",
    "levels": [
@@ -374,7 +599,8 @@
     2,
     3,
     4,
-    5
+    5,
+    6
    ],
    "kinds": [
     "coin_ways"
@@ -386,7 +612,8 @@
     1,
     2,
     3,
-    4
+    4,
+    5
    ],
    "kinds": [
     "fewest_coins"
@@ -410,17 +637,20 @@
     1,
     2,
     3,
-    4
+    4,
+    5,
+    6
    ],
    "kinds": [
     "combos"
    ]
   },
   "counting_choices.digit_cards_arrangements": {
-   "name": "FIXED PUZZLE (Ages 7-9 page): how many different numbers from digit cards with a repeated digit",
+   "name": "FIXED PUZZLE (Ages 7-9 page): how many different numbers (or letter arrangements) from items with a repeated item",
    "levels": [],
    "kinds": [
-    "count_arrangements"
+    "count_arrangements",
+    "anagram"
    ]
   },
   "counting_choices.line_up": {
@@ -453,6 +683,21 @@
     ]
    }
   },
+  "counting_choices.restricted_codes": {
+   "name": "codes with different digits, a fixed first digit rule and parity",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "scan"
+   ],
+   "where": {
+    "pred": [
+     "distinct"
+    ]
+   }
+  },
   "counting_grid.rectangles_in_grid": {
    "name": "all the rectangles in a grid (choose two lines each way)",
    "levels": [
@@ -476,7 +721,9 @@
     1,
     2,
     3,
-    4
+    4,
+    5,
+    6
    ],
    "kinds": [
     "grid_count"
@@ -513,6 +760,15 @@
      true
     ]
    }
+  },
+  "counting_pairs.choose_k": {
+   "name": "choose a team: order does not matter",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "choose"
+   ]
   },
   "counting_pairs.handshakes": {
    "name": "every pair once (handshakes, high fives, games)",
@@ -636,6 +892,22 @@
     "stairs"
    ]
   },
+  "cubes.one_face": {
+   "name": "small cubes with exactly one painted face",
+   "levels": [
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "painted_cube"
+   ],
+   "where": {
+    "faces": [
+     1
+    ]
+   }
+  },
   "cubes.unpainted_inside": {
    "name": "small cubes with no paint from a painted cube",
    "levels": [
@@ -732,7 +1004,8 @@
    "levels": [
     3,
     4,
-    5
+    5,
+    6
    ],
    "kinds": [
     "cards_sum"
@@ -785,6 +1058,21 @@
     ]
    }
   },
+  "digit_puzzles.climbing_digits": {
+   "name": "numbers whose digits climb (each bigger than the one before)",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "scan"
+   ],
+   "where": {
+    "pred": [
+     "increasing"
+    ]
+   }
+  },
   "digit_puzzles.contains_digit_count": {
    "name": "how many numbers contain a digit",
    "levels": [
@@ -833,6 +1121,21 @@
    "where": {
     "pred": [
      "digit_less"
+    ]
+   }
+  },
+  "digit_puzzles.digit_product_count": {
+   "name": "how many numbers have digits with a given product",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "scan"
+   ],
+   "where": {
+    "pred": [
+     "digit_product"
     ]
    }
   },
@@ -963,7 +1266,9 @@
    "levels": [
     2,
     3,
-    4
+    4,
+    5,
+    6
    ],
    "kinds": [
     "share"
@@ -974,11 +1279,21 @@
     ]
    }
   },
+  "factors.count_factors": {
+   "name": "how many factors a number has (using its prime factors)",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "factor_count"
+   ]
+  },
   "factors.greatest_common_factor": {
    "name": "the biggest number that divides two numbers exactly",
    "levels": [
     4,
-    5
+    5,
+    6
    ],
    "kinds": [
     "gcd_bags"
@@ -995,6 +1310,20 @@
     "factor_count"
    ]
   },
+  "factors.smallest_with_n_factors": {
+   "name": "smallest number with exactly n factors",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "scan"
+   ],
+   "where": {
+    "pred": [
+     "factor_count"
+    ]
+   }
+  },
   "figure_rule.nth_figure": {
    "name": "number of tiles in the nth figure from the first three figures",
    "levels": [
@@ -1006,8 +1335,8 @@
     "nth_term"
    ]
   },
-  "fractions.add_related": {
-   "name": "add fractions whose denominators are related",
+  "fractions.add": {
+   "name": "add fractions or mixed numbers (related or unlike denominators)",
    "levels": [
     3,
     4,
@@ -1033,6 +1362,20 @@
     "fraction_diff"
    ]
   },
+  "fractions.divide": {
+   "name": "divide a fraction by a fraction (how many pieces)",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "frac_arith"
+   ],
+   "where": {
+    "op": [
+     "/"
+    ]
+   }
+  },
   "fractions.equivalent_missing": {
    "name": "equivalent fractions: find the missing numerator",
    "levels": [
@@ -1050,33 +1393,18 @@
     "fraction_seq"
    ]
   },
-  "fractions.mixed_add": {
-   "name": "add mixed numbers with related denominators",
+  "fractions.multiply": {
+   "name": "multiply a fraction by a fraction (a fraction of a fraction)",
    "levels": [
-    4,
-    5
+    5,
+    6
    ],
    "kinds": [
     "frac_arith"
    ],
    "where": {
     "op": [
-     "+"
-    ]
-   }
-  },
-  "fractions.mixed_subtract": {
-   "name": "subtract mixed numbers with related denominators",
-   "levels": [
-    4,
-    5
-   ],
-   "kinds": [
-    "frac_arith"
-   ],
-   "where": {
-    "op": [
-     "-"
+     "*"
     ]
    }
   },
@@ -1091,6 +1419,21 @@
    "kinds": [
     "fraction_of"
    ]
+  },
+  "fractions.subtract": {
+   "name": "subtract fractions or mixed numbers",
+   "levels": [
+    4,
+    5
+   ],
+   "kinds": [
+    "frac_arith"
+   ],
+   "where": {
+    "op": [
+     "-"
+    ]
+   }
   },
   "fractions.whole_from_part": {
    "name": "the amount left is given: find the whole",
@@ -1108,7 +1451,8 @@
    "name": "biggest rise (or fall) between neighbouring readings of a line graph",
    "levels": [
     4,
-    5
+    5,
+    6
    ],
    "kinds": [
     "series_gap"
@@ -1187,6 +1531,17 @@
     "growing_gaps"
    ]
   },
+  "growing_pattern.recurrence": {
+   "name": "each term is the sum of the two before it",
+   "levels": [
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "fib_like"
+   ]
+  },
   "growing_pattern.stick_grid": {
    "name": "sticks needed for a grid of small squares",
    "levels": [
@@ -1252,7 +1607,8 @@
     2,
     3,
     4,
-    5
+    5,
+    6
    ],
    "kinds": [
     "order_logic"
@@ -1281,6 +1637,16 @@
     "liar"
    ]
   },
+  "measurement.decimal_convert": {
+   "name": "change metres to centimetres (or similar) by moving the decimal point",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "decimal_convert"
+   ]
+  },
   "measurement.ruler_offset": {
    "name": "length of an object that does not start at 0 on a ruler",
    "levels": [
@@ -1297,7 +1663,8 @@
    "levels": [
     2,
     3,
-    4
+    4,
+    5
    ],
    "kinds": [
     "unit_convert"
@@ -1317,6 +1684,20 @@
    "where": {
     "pattern": [
      "AB+CB=BBC"
+    ]
+   }
+  },
+  "missing_number.cryptarithm_reverse": {
+   "name": "letters for digits where a number is reversed",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "cryptarithm"
+   ],
+   "where": {
+    "pattern": [
+     "ABCD*4=DCBA"
     ]
    }
   },
@@ -1368,6 +1749,24 @@
     "missing_digit"
    ]
   },
+  "modular.clock_hours": {
+   "name": "what the clock shows after a large number of hours",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "clock_end_hour"
+   ]
+  },
+  "modular.last_digit_power": {
+   "name": "the last digit of a power (a repeating cycle)",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "last_digit"
+   ]
+  },
   "money.change": {
    "name": "change from a payment",
    "levels": [
@@ -1410,7 +1809,8 @@
     2,
     3,
     4,
-    5
+    5,
+    6
    ],
    "kinds": [
     "unit_price"
@@ -1422,7 +1822,8 @@
     2,
     3,
     4,
-    5
+    5,
+    6
    ],
    "kinds": [
     "climb_slip"
@@ -1450,7 +1851,8 @@
     2,
     3,
     4,
-    5
+    5,
+    6
    ],
    "kinds": [
     "moves"
@@ -1504,6 +1906,46 @@
     "dot"
    ]
   },
+  "negative_numbers.distance_between": {
+   "name": "distance between a point above and a point below zero",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "neg_diff"
+   ]
+  },
+  "negative_numbers.sum_of_integers": {
+   "name": "sum of the whole numbers from a negative to a positive number",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "int_sum"
+   ]
+  },
+  "negative_numbers.temperature_change": {
+   "name": "final temperature after rises and falls through zero",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "moves"
+   ],
+   "where": {
+    "ask": [
+     "final"
+    ],
+    "start": [
+     -6,
+     -5,
+     -4,
+     -3,
+     -2,
+     -1
+    ]
+   }
+  },
   "number_grid.magic_square": {
    "name": "complete a 3 by 3 magic square",
    "levels": [
@@ -1522,7 +1964,8 @@
     2,
     3,
     4,
-    5
+    5,
+    6
    ],
    "kinds": [
     "pyramid"
@@ -1534,7 +1977,9 @@
     1,
     2,
     3,
-    4
+    4,
+    5,
+    6
    ],
    "kinds": [
     "scan"
@@ -1558,6 +2003,21 @@
    "kinds": [
     "parity"
    ]
+  },
+  "order_ops.bracket_times_bracket": {
+   "name": "two brackets multiplied",
+   "levels": [
+    4,
+    5
+   ],
+   "kinds": [
+    "expr_form"
+   ],
+   "where": {
+    "form": [
+     "D"
+    ]
+   }
   },
   "order_ops.brackets_first": {
    "name": "brackets first, then multiply and subtract",
@@ -1604,6 +2064,99 @@
      "B"
     ]
    }
+  },
+  "order_ops.two_products": {
+   "name": "two products added together",
+   "levels": [
+    4,
+    5
+   ],
+   "kinds": [
+    "expr_form"
+   ],
+   "where": {
+    "form": [
+     "C"
+    ]
+   }
+  },
+  "percentage.discount": {
+   "name": "sale price after a percentage off",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "pct"
+   ],
+   "where": {
+    "kind": [
+     "discount"
+    ]
+   }
+  },
+  "percentage.find_whole": {
+   "name": "a part and its percentage are known: find the whole",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "pct"
+   ],
+   "where": {
+    "kind": [
+     "whole"
+    ]
+   }
+  },
+  "percentage.gst": {
+   "name": "add GST (a percentage of the price) to a price",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "pct_add"
+   ]
+  },
+  "percentage.of_quantity": {
+   "name": "a percentage of a quantity",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "pct"
+   ],
+   "where": {
+    "kind": [
+     "of"
+    ]
+   }
+  },
+  "percentage.successive_change": {
+   "name": "a percentage increase followed by a percentage decrease",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "pct"
+   ],
+   "where": {
+    "kind": [
+     "then"
+    ]
+   }
+  },
+  "percentage.what_percent": {
+   "name": "express one number as a percentage of another",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "pct_express"
+   ]
   },
   "perimeter_area.area_cutout": {
    "name": "area of a rectangle with a corner cut out",
@@ -1745,7 +2298,9 @@
     1,
     2,
     3,
-    4
+    4,
+    5,
+    6
    ],
    "kinds": [
     "digit_value_diff"
@@ -1763,6 +2318,230 @@
    "kinds": [
     "regroup"
    ]
+  },
+  "polygons.diagonals": {
+   "name": "number of diagonals of a polygon",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "diag"
+   ]
+  },
+  "polygons.interior_angle": {
+   "name": "each angle of a regular polygon",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "angle"
+   ],
+   "where": {
+    "kind": [
+     "regular"
+    ]
+   }
+  },
+  "polygons.turtle_repeat": {
+   "name": "a turtle that repeats a move and a turn until it is home",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "turtle"
+   ]
+  },
+  "primes.count_primes": {
+   "name": "how many primes in a range",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "scan"
+   ],
+   "where": {
+    "pred": [
+     "prime"
+    ]
+   }
+  },
+  "primes.prime_factor_sum": {
+   "name": "sum of the different prime factors",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "prime_factor_sum"
+   ]
+  },
+  "primes.sum_of_two_primes": {
+   "name": "ways to write a number as a sum of two primes",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "prime_sum_pairs"
+   ]
+  },
+  "probability.at_least_heads": {
+   "name": "probability of at least some heads when tossing coins",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "prob"
+   ],
+   "where": {
+    "kind": [
+     "coins"
+    ]
+   }
+  },
+  "probability.two_dice_sum": {
+   "name": "probability of a given total with two dice",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "prob"
+   ],
+   "where": {
+    "kind": [
+     "dice"
+    ]
+   }
+  },
+  "probability.without_replacement": {
+   "name": "probability of two in a row without replacement",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "prob"
+   ],
+   "where": {
+    "kind": [
+     "marbles"
+    ]
+   }
+  },
+  "programs.nested_loop": {
+   "name": "trace a program with a loop inside a loop",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "nested"
+   ]
+  },
+  "programs.repeat_ops": {
+   "name": "trace a program that repeats some operations",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "prog"
+   ]
+  },
+  "programs.while_loop": {
+   "name": "trace a while loop",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "while_count"
+   ]
+  },
+  "rate.average_speed": {
+   "name": "average speed for a round trip",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "avg_speed"
+   ]
+  },
+  "rate.distance_from_speed": {
+   "name": "distance from speed and time",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "distance"
+   ]
+  },
+  "rate.fill_with_leak": {
+   "name": "a tap fills a tank while a leak empties it: net rate",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "fill"
+   ]
+  },
+  "rate.meeting_time": {
+   "name": "two people walk towards each other: when do they meet",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "meet"
+   ]
+  },
+  "rate.speed": {
+   "name": "speed from distance and time (kilometres per hour)",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "speed"
+   ]
+  },
+  "ratio.make_equal_by_adding": {
+   "name": "add to one part to make the two parts equal",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "ratio"
+   ],
+   "where": {
+    "kind": [
+     "add_equal"
+    ]
+   }
+  },
+  "ratio.share": {
+   "name": "share an amount in a ratio",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "ratio"
+   ],
+   "where": {
+    "kind": [
+     "share"
+    ]
+   }
+  },
+  "ratio.whole_from_part": {
+   "name": "one part of a ratio is known: find the whole",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "ratio"
+   ],
+   "where": {
+    "kind": [
+     "whole"
+    ]
+   }
   },
   "remainders.two_conditions": {
    "name": "FIXED PUZZLE (Ages 8-10 page): a number between two limits with two remainder conditions",
@@ -1821,7 +2600,8 @@
    "levels": [
     3,
     4,
-    5
+    5,
+    6
    ],
    "kinds": [
     "rounding"
@@ -1848,7 +2628,8 @@
     2,
     3,
     4,
-    5
+    5,
+    6
    ],
    "kinds": [
     "sum_range"
@@ -1883,7 +2664,8 @@
     2,
     3,
     4,
-    5
+    5,
+    6
    ],
    "kinds": [
     "solid_parts"
@@ -1895,7 +2677,9 @@
     1,
     2,
     3,
-    4
+    4,
+    5,
+    6
    ],
    "kinds": [
     "venn_both"
@@ -1918,7 +2702,9 @@
     1,
     2,
     3,
-    4
+    4,
+    5,
+    6
    ],
    "kinds": [
     "turns"
@@ -1939,7 +2725,8 @@
    "levels": [
     3,
     4,
-    5
+    5,
+    6
    ],
    "kinds": [
     "elapsed_overnight"
@@ -1978,6 +2765,76 @@
    ],
    "kinds": [
     "time_convert"
+   ]
+  },
+  "triangle_area.rectangle_plus_triangle": {
+   "name": "area of a rectangle with a triangle on top",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "rect_tri_area"
+   ]
+  },
+  "triangle_area.triangle_area": {
+   "name": "area of a triangle from base and height",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "tri_area"
+   ],
+   "where": {
+    "ask": [
+     "area"
+    ]
+   }
+  },
+  "triangle_area.triangle_height": {
+   "name": "height of a triangle from its area and base",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "tri_area"
+   ],
+   "where": {
+    "ask": [
+     "height"
+    ]
+   }
+  },
+  "volume.capacity_in_litres": {
+   "name": "capacity of a tank in litres from its measurements",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "volume_litres"
+   ]
+  },
+  "volume.cuboid": {
+   "name": "volume of a cuboid by counting unit cubes",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "volume"
+   ]
+  },
+  "volume.water_depth": {
+   "name": "depth of water poured into a tank (litres and cm3)",
+   "levels": [
+    5,
+    6
+   ],
+   "kinds": [
+    "water_rise"
    ]
   },
   "word_problems.chain_more_than": {

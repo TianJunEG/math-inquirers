@@ -427,6 +427,8 @@ def b_frac_arith(op, a, b):
         return {Fr(x + y, D)}
     if op == '-':
         return {Fr(x - y, D)}
+    if op == '/':
+        return {Fr(n1 * d2, d1 * n2)}
     return {Fr(n1 * n2, d1 * d2)}
 
 

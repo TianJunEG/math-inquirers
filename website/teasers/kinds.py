@@ -365,7 +365,7 @@ def _mixed(t):
 
 def frac_arith(op, a, b):
     A, B = _mixed(a), _mixed(b)
-    return {'+': A + B, '-': A - B, '*': A * B}[op], {}
+    return {'+': A + B, '-': A - B, '*': A * B, '/': (A / B if B else None)}[op], {}
 
 
 def decimals(op, a, b):

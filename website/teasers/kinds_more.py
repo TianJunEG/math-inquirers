@@ -315,4 +315,80 @@ def series_gap(values, ask):
     return abs(gaps[i]), {'gaps': ', '.join(str(abs(g)) for g in gaps), 'from': values[i], 'to': values[i + 1], 'at': i + 1}
 
 
+# ================================================================== Level 5 structures
+@kind
+def pct_add(price, p):
+    return Fr(price) * (100 + p) / 100, {'extra': Fr(price) * p / 100}
+
+
+@kind
+def distance(v, h, m):
+    return Fr(v) * (Fr(h) + Fr(m, 60)), {'hours': Fr(h) + Fr(m, 60)}
+
+
+@kind
+def volume_litres(l, w, h):
+    assert (l * w * h) % 1000 == 0
+    return l * w * h // 1000, {'cm3': l * w * h}
+
+
+@kind
+def decimal_convert(value, factor):
+    return Fr(value) * factor, {}
+
+
+# ================================================================== Level 6 structures
+@kind
+def fib_like(a, b, n):
+    t = [a, b]
+    while len(t) < n:
+        t.append(t[-1] + t[-2])
+    return t[n - 1], {'terms': _j(t[:6]), 'all': _j(t)}
+
+
+@kind
+def int_sum(lo, hi):
+    return sum(range(lo, hi + 1)), {'count': hi - lo + 1}
+
+
+@kind
+def substitute(expr, vals):
+    return Fr(eval(expr, {}, {k: Fr(v) for k, v in vals.items()})), {}
+
+
+def _isprime(n):
+    return n > 1 and all(n % d for d in range(2, math.isqrt(n) + 1))
+
+
+@kind
+def prime_sum_pairs(n):
+    prs = [(p, n - p) for p in range(2, n // 2 + 1) if _isprime(p) and _isprime(n - p)]
+    return len(prs), {'list': ', '.join('%d + %d' % x for x in prs)}
+
+
+@kind
+def choose(n, k):
+    return math.comb(n, k), {}
+
+
+@kind
+def last_digit(base, exp):
+    return pow(base, exp, 10), {'cycle': _j(pow(base, i, 10) for i in range(1, 6))}
+
+
+@kind
+def while_count(start, mult, limit, ask):
+    x, c = start, 0
+    lines = ['x = %d' % start, 'count = 0', 'while x < %d:' % limit, '    x = x * %d' % mult, '    count = count + 1']
+    while x < limit:
+        x *= mult
+        c += 1
+    return (c if ask == 'count' else x), {'code': '\n'.join(lines), 'final': x, 'rounds': c}
+
+
+@kind
+def pct_express(part, whole):
+    return Fr(part * 100, whole), {}
+
+
 SOLVE_NAMES = list(SOLVE)

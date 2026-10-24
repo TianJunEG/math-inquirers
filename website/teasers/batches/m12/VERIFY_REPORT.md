@@ -8,10 +8,12 @@ Method: every puzzle is re-solved by `brute.py` (independent of the author solve
 | 2 | 31 | 29 | 2 | 25 | 3 | 31 |
 | 3 | 31 | 28 | 2 | 25 | 2 | 31 |
 | 4 | 31 | 29 | 2 | 30 | 2 | 31 |
+| 5 | 31 | 28 | 2 | 28 | 2 | 31 |
+| 6 | 31 | 29 | 2 | 25 | 2 | 31 |
 
 Similarity sources checked: holiday banks, own term lessons, all extension workbook data, the school booklets, our book drafts and catalogues, external private source files, and the seven fixed website puzzles.
 
-FAIL count: 0. REVIEW items: 22.
+FAIL count: 0. REVIEW items: 28.
 
 
 - REVIEW L1-bondten [12-10]: number 0 in the question is not a parameter (written in the wording; check)
@@ -27,7 +29,8 @@ FAIL count: 0. REVIEW items: 22.
 - REVIEW L3-strawbridge [12-21]: number 5 in the question is not a parameter (written in the wording; check)
 - REVIEW L3-cryptsum [12-22]: number 3 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-unpainted [12-08]: number 64 in the question is not a parameter (written in the wording; check)
-- REVIEW L4-liftmin [12-09]: number 3 in the question is not a parameter (written in the wording; check)
+- REVIEW L4-liftmin [12-09]: number 9 in the question is not a parameter (written in the wording; check)
+- REVIEW L4-liftmin [12-09]: number 4 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-shellpiles [12-14]: number 1 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-tilefigures [12-18]: number 2 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-tilefigures [12-18]: number 3 in the question is not a parameter (written in the wording; check)
@@ -36,3 +39,8 @@ FAIL count: 0. REVIEW items: 22.
 - REVIEW L4-stationery [12-20]: number 10 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-palyears [12-29]: number 1331 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-palyears [12-29]: number 4 in the question is not a parameter (written in the wording; check)
+- REVIEW L5-climbing [12-02]: number 358 in the question is not a parameter (written in the wording; check)
+- REVIEW L6-jarcoins [12-13]: number 1 in the question is not a parameter (written in the wording; check)
+- REVIEW L6-tilepattern6 [12-24]: number 3 in the question is not a parameter (written in the wording; check)
+- REVIEW L6-gaussjar [12-28]: number 10 in the question is not a parameter (written in the wording; check)
+- REVIEW L6-gaussjar [12-28]: number 15 in the question is not a parameter (written in the wording; check)

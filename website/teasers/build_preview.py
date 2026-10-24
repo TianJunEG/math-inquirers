@@ -31,10 +31,15 @@ def main():
         full[str(lv)] = []
         for mm in sorted(TH.released()):
             for e in TH.load_month(mm)['levels'][str(lv)]:
-                full[str(lv)].append(dict(date=e['date'], topic=e['topic'], q=e['q'], shown=e['shown'], kind=e['kind'], id=e['id']))
-    pools = {str(lv): TH.fallback_pool(lv) for lv in range(1, 7)}
+                full[str(lv)].append(dict(date=e['date'], family=e['family'], sub=e['sub'], q=e['q'], shown=e['shown'], id=e['id']))
+    fixed = {}
+    sys.path.insert(0, HERE)
+    import verify_bank as VB
+    ft = VB.fixed_puzzles()
+    for lv in range(1, 7):
+        fixed[str(lv)] = ft.get('1' if lv == 1 else 'L%d' % lv, '')
     js = open(os.path.join(HERE, 'teasers.js'), encoding='utf-8').read()
-    data = json.dumps({'months': months, 'pools': pools, 'full': full, 'ages': TH.LEVEL_AGES, 'released': TH.released()}, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
+    data = json.dumps({'months': months, 'fixed': fixed, 'full': full, 'ages': TH.LEVEL_AGES, 'released': TH.released()}, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
     page = '''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Daily teaser preview</title>
@@ -62,7 +67,7 @@ details.keys{background:var(--card);border:2px solid var(--ink);border-radius:14
 <div class="status" id="status"></div>
 <section class="sec" style="padding:0"><div class="pzcard"><div class="pzl" id="pzBox"></div><div class="pzr"><h3>In class, the answer is only half the job</h3><p class="muted">Children then explain how they know. This panel stays as it is on the real page.</p></div></div></section>
 <details class="keys"><summary><b>All puzzles for this level</b> (answer key for you, not shown to children)</summary><div id="keys"></div></details>
-<p class="small muted">Fallback rule: months that are not released yet use the first released month, chosen by day number modulo its length. Released months: <span id="rel"></span>.</p>
+<p class="small muted">Fallback rule (owner decision TEASER-DAILY-GO): a date with no released puzzle shows the page's own fixed puzzle, with no date on it. Released months: <span id="rel"></span>.</p>
 </div>
 <script>''' + js + '''</script>
 <script>
@@ -76,12 +81,14 @@ function mount(){
   var lv=+$("lv").value;
   nowMs=parse();
   var box=$("pzBox");box.innerHTML="";
-  ctl=MiTeaser.init({box:box,level:lv,ages:DATA.ages[lv],pool:DATA.pools[lv],listen:false,now:function(){return nowMs},
+  var tg=document.createElement("span");tg.className="tag";tg.textContent="Ages "+DATA.ages[lv]+" \u00b7 fixed puzzle on the page";box.appendChild(tg);
+  var fp=document.createElement("p");fp.style.fontSize="18px";fp.textContent=DATA.fixed[lv];box.appendChild(fp);
+  ctl=MiTeaser.init({box:box,level:lv,ages:DATA.ages[lv],released:DATA.released,listen:false,now:function(){return nowMs},
     data:function(l,mm){return DATA.months["L"+l+"-"+mm]||null}});
   var s=box.getAttribute("data-teaser-source");
-  $("status").textContent="Simulated time: "+fmtSGT(nowMs)+"  |  date key "+box.getAttribute("data-teaser-date")+"  |  puzzle "+box.getAttribute("data-teaser")+"  |  "+(s==="month"?"from the released batch":"fallback (this month has no released batch)");
-  var rows=DATA.full[lv].map(function(e){return "<tr><td>"+e.date+"</td><td>"+e.topic+"</td><td>"+e.q.replace(/</g,"&lt;")+"</td><td><b>"+e.shown+"</b></td></tr>"}).join("");
-  $("keys").innerHTML='<table class="keys"><tr><th>Date</th><th>Topic</th><th>Question</th><th>Answer</th></tr>'+rows+"</table>";
+  $("status").textContent="Simulated time: "+fmtSGT(nowMs)+"  |  date key "+(box.getAttribute("data-teaser-date")||"-")+"  |  puzzle "+(box.getAttribute("data-teaser")||"none")+"  |  "+(s==="month"?"from the released batch":"no puzzle for this date: the page's own fixed puzzle stays (no date shown)");
+  var rows=DATA.full[lv].map(function(e){return "<tr><td>"+e.date+"</td><td>"+e.family+"<br><span class=\"muted\">"+e.sub+"</span></td><td>"+e.q.replace(/</g,"&lt;")+"</td><td><b>"+e.shown+"</b></td></tr>"}).join("");
+  $("keys").innerHTML='<table class="keys"><tr><th>Date</th><th>Kind / sub-structure</th><th>Question</th><th>Answer</th></tr>'+rows+"</table>";
 }
 function shift(n){var d=$("dt").value.split("-");var x=new Date(Date.UTC(+d[0],+d[1]-1,+d[2]+n));$("dt").value=x.toISOString().slice(0,10);mount()}
 $("lv").onchange=mount;$("dt").onchange=mount;$("tm").onchange=mount;

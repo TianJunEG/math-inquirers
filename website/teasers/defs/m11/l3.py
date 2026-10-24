@@ -150,7 +150,7 @@ DEFS = [
       'Mei Ling eats 1/4 of a pizza and Ben eats 3/8 of the same pizza. What fraction of the pizza did they eat altogether?',
       'Change 1/4 into eighths so both fractions have the same bottom number.',
       '1/4 is the same as 2/8. 2/8 + 3/8 = {ans}.',
-      p=dict(op='+', a=[0, 1, 4], b=[0, 3, 8]), fmt='frac', sub='fractions.add_related'),
+      p=dict(op='+', a=[0, 1, 4], b=[0, 3, 8]), fmt='frac', sub='fractions.add'),
     P('solidedges', 'solid_parts', 'Solid shapes',
       'How many edges do a cube and a square pyramid have altogether? A square pyramid has a square base and four triangle faces.',
       'Count the edges of each solid separately. Then add.',
