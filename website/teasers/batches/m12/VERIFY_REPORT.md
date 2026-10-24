@@ -13,7 +13,7 @@ Method: every puzzle is re-solved by `brute.py` (independent of the author solve
 
 Similarity sources checked: holiday banks, own term lessons, all extension workbook data, external private source files.
 
-FAIL count: 0. REVIEW items: 44.
+FAIL count: 0. REVIEW items: 43.
 
 
 Generic 7-8 word stems shared with other sources (ordinary maths question stems, reviewed, not copied sentences): 32
@@ -51,7 +51,6 @@ Generic 7-8 word stems shared with other sources (ordinary maths question stems,
 - stem L6-dicediff [12-30] vs holiday: "as a fraction in its simplest form"
 
 - REVIEW L1-dotrows [12-14]: number 2 in the question is not a parameter (written in the wording; check)
-- REVIEW L1-weekstickers [12-17]: longest sentence 21 words (limit 20)
 - REVIEW L1-stairsupdown [12-23]: number 5 in the question is not a parameter (written in the wording; check)
 - REVIEW L1-toyshop [12-30]: number 5 in the question is not a parameter (written in the wording; check)
 - REVIEW L2-savedays [12-10]: number 1 in the question is not a parameter (written in the wording; check)

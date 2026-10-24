@@ -2,7 +2,7 @@
 """Assemble the deployable static site into website/dist/ .
 
     python3 lp_build.py && python3 level_pages.py && python3 shop_build.py && (cd hub && python3 build.py)   # regenerate the page sources first
-    python3 build_site.py [--base https://example.com] [--with-portal]   # --with-portal also copies ../portal/public to dist/portal/
+    python3 build_site.py [--base https://example.com] [--with-portal] [--out DIR]   # --with-portal also copies ../portal/public to dist/portal/
 
 Takes the four page fragments (sign-up, parent questions hub, Weekly Dose online, referral is left out)
 and wraps each in a full HTML document, self-hosts the Fredoka and Nunito Sans fonts (no request to Google),
@@ -13,7 +13,7 @@ import os, re, shutil, sys, html
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
-DIST = os.path.join(HERE, 'dist')
+DIST = os.path.abspath(sys.argv[sys.argv.index('--out') + 1]) if '--out' in sys.argv else os.path.join(HERE, 'dist')   # --out DIR builds somewhere else (previews); the default is dist/
 FONTS = os.path.join(ROOT, 'fonts', 'node_modules', '@fontsource')
 WITH_PORTAL = '--with-portal' in sys.argv or os.environ.get('MI_PORTAL') == '1'   # opt-in: copies ../portal/public to dist/portal
 PORTAL_SRC = os.path.join(ROOT, 'portal', 'public')
@@ -45,6 +45,8 @@ PAGES = [  # (source, output path, title, description)
 from level_pages import LEVELS, register_by
 import json
 import shop_build
+sys.path.insert(0, os.path.join(HERE, 'teasers'))
+import teaser_html as TH   # daily teaser batches (copied only when the teaser is enabled)
 _SHOP_PRODUCTS, SHOP_WARNINGS = shop_build.load()   # data/products.json; any price_cents is reported in the build notes
 REGBY_LABEL, REGBY_SET = register_by(json.load(open(os.path.join(HERE, 'data', 'beta_schedule.json'), encoding='utf-8')))
 for _L in LEVELS:
@@ -107,6 +109,8 @@ def main():
         shutil.copy(os.path.join(HERE, 'shop', f), os.path.join(DIST, 'shop', f))
     # product names only (no prices, no notes): the portal admin 'Shop interest' tab reads this to show names instead of ids
     json.dump({p['id']: p['name'] for p in _SHOP_PRODUCTS}, open(os.path.join(DIST, 'shop-products.json'), 'w', encoding='utf-8'), indent=1)
+    if TH.enabled():
+        todo.append(('teasers/', 'Daily teaser files written: %d (released months %s)' % (TH.export_public(DIST), ', '.join(TH.released()))))
     # third-party licence notices (SIL OFL texts for the shipped fonts): must travel with the font files
     shutil.copytree(os.path.join(HERE, 'licenses'), os.path.join(DIST, 'licenses'))
     # syllabus map is a self-contained full document: copy it, do not wrap it
@@ -155,6 +159,8 @@ def main():
         hdr += ('/portal/*\n  Content-Security-Policy: default-src \'self\'; script-src \'self\'; style-src \'self\' \'unsafe-inline\'; img-src \'self\' data:; font-src \'self\'; '
                 'connect-src \'self\' %s; form-action \'self\'; base-uri \'self\'; frame-ancestors \'none\'\n  Cache-Control: no-store\n' % origin)
         hdr += '/fonts/*\n  Cache-Control: public, max-age=31536000, immutable\n'
+    if TH.enabled():   # per-level, per-month teaser files are static JSON; one hour of caching so a new month shows up promptly
+        hdr += '/teasers/*\n  Cache-Control: public, max-age=3600\n'
     open(os.path.join(DIST, '_headers'), 'w').write(hdr)
     if WITH_PORTAL:
         shutil.copytree(PORTAL_SRC, os.path.join(DIST, 'portal'))

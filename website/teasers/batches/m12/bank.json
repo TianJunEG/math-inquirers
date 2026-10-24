@@ -666,7 +666,7 @@
      "20",
      "300"
     ],
-    "q": "Mei Ling puts 2 stickers on her chart on Monday, then 4, 6, 8 and 10 on the next four days. How many stickers does she put on her chart in all?",
+    "q": "Mei Ling puts 2 stickers on her chart on Monday. Then she puts 4, 6, 8 and 10 on the next four days. How many stickers does she put on her chart in all?",
     "hint": "Add in pairs. 2 + 10 and 4 + 8 both make the same number.",
     "why": "2 + 10 = 12 and 4 + 8 = 12, and 6 is left. 12 + 12 + 6 = 30 stickers.",
     "date": "12-17"

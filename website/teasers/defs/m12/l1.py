@@ -119,7 +119,7 @@ DEFS = [
       'A number plus itself is 18. 9 + 9 = 18, so Kumar had {ans}.',
       p=dict(ops=[['*', 2]], result=18), unit='marbles'),
     P('weekstickers', 'sum_range', 'Adding in order',
-      'Mei Ling puts 2 stickers on her chart on Monday, then 4, 6, 8 and 10 on the next four days. How many stickers does she put on her chart in all?',
+      'Mei Ling puts 2 stickers on her chart on Monday. Then she puts 4, 6, 8 and 10 on the next four days. How many stickers does she put on her chart in all?',
       'Add in pairs. 2 + 10 and 4 + 8 both make the same number.',
       '2 + 10 = 12 and 4 + 8 = 12, and 6 is left. 12 + 12 + 6 = {ans}.',
       p=dict(lo=2, hi=10, step=2), unit='stickers'),

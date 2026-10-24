@@ -192,6 +192,11 @@
       if (rendered === when.key) return;
       rendered = when.key;
       var usePool = function () { render(box, opts, pickFromPool(opts.pool, when.day), when, 'pool'); };
+      if (opts.data) {   /* previews: month data supplied in the page instead of fetched */
+        var local = opts.data(opts.level, when.mm);
+        if (local && local[when.key]) render(box, opts, local[when.key], when, 'month'); else usePool();
+        return;
+      }
       if (!opts.base || typeof fetch !== 'function') { usePool(); return; }
       var done = false;
       var timer = setTimeout(function () { if (!done) { done = true; usePool(); } }, 2500);
@@ -206,8 +211,10 @@
     }
     run();
     /* if the page stays open past midnight Singapore time, pick up the new day when the visitor comes back to it */
-    document.addEventListener('visibilitychange', function () { if (!document.hidden) run(); });
-    g.addEventListener('focus', run);
+    if (opts.listen !== false) {
+      document.addEventListener('visibilitychange', function () { if (!document.hidden) run(); });
+      g.addEventListener('focus', run);
+    }
     return { refresh: run };
   }
 

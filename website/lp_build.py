@@ -1,5 +1,9 @@
 from level_pages import LEVEL_CSS, level_index_cards, register_by, register_by_line
 import interest_ui
+import os, sys
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'teasers'))
+import teaser_html as TH   # daily teaser (off unless manifest site_enabled or MI_TEASERS=1)
+TEASER_ON = TH.enabled()
 WA_NUM,WA_SHOW='6598805962','+65 9880 5962'   # business WhatsApp (CONFIG in the page script and the no-JS note are filled from these)
 css=open('lp_parts.txt').read()+LEVEL_CSS
 hero=open('lp_hero.js').read()
@@ -21,7 +25,7 @@ extra='''
 .waout{display:grid;gap:10px}
 .waout pre{white-space:pre-wrap;background:var(--bg);border:2px dashed var(--line);border-radius:12px;padding:12px;font:14px/1.5 var(--body);margin:0}
 @media (max-width:820px){.pricebox{grid-template-columns:1fr}}
-'''+interest_ui.CSS
+'''+interest_ui.CSS+(TH.CSS if TEASER_ON else '')
 html='''<title>Math Inquirers December Holiday Program</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito+Sans:wght@400;600;800&display=swap">
@@ -55,7 +59,7 @@ html='''<title>Math Inquirers December Holiday Program</title>
 <section class="two"><div class="tile yel"><span class="tag">Your child takes home</span><ul style="padding-left:18px;display:grid;gap:6px"><li>A printed Math Inquirers workbook, posted to your home</li><li>The Inquirer Kit: cut-out pages at the back of the workbook (for Ages 6-8: play coins, ten-frames, counters, number strips and tiles)</li><li>An Inquiry Journal page in the workbook, stamped after every lesson</li><li>A certificate page, signed on Puzzle Day</li></ul></div>
 <div class="tile mint"><span class="tag">You get</span><ul style="padding-left:18px;display:grid;gap:6px"><li>A short note each week: what we did and one thing to try at home</li><li>Notes on where your child is ready to be stretched further</li><li>Free weekly puzzles by email</li></ul><p class="small muted">Nothing to buy. We post the printed workbook (with the Inquirer Kit cut-out pages) to your home before the first lesson. Singapore addresses only.</p></div></section>
 
-<section class="sec" id="tryit"><div class="shead"><span class="eyebrow">Try one now</span><h2>A taste of Lesson 1</h2></div><div class="pzcard"><div class="pzl"><span class="tag">Ages 6-8 · Frog hops</span><div class="big">3, 6, 9, ?</div><p style="font-size:18px">A frog starts at 0 and hops 3 steps each time: 3, 6, 9 … Where does it land on its 7th hop?</p><div class="row"><input id="pzA" aria-label="Your answer" placeholder="Your answer" inputmode="numeric" style="max-width:170px"><button class="btn yel" id="pzCheck" type="button">Check</button></div><div id="pzMsg"></div></div><div class="pzr"><h3>In class, the answer is only half the job</h3><p class="muted">Children then explain how they know: counting on a number line, adding 3 seven times, or spotting that every landing spot is in the 3 times table. Hearing three different ways is how thinking grows.</p><a class="btn sm alt" href="#register" style="justify-self:start">Register for the program</a></div></div></section>
+<section class="sec" id="tryit"><div class="shead"><span class="eyebrow">Try one now</span><h2>'''+('A puzzle to try' if TEASER_ON else 'A taste of Lesson 1')+'''</h2></div><div class="pzcard"><div class="pzl"'''+(' id="pzBox"' if TEASER_ON else '')+'''><span class="tag">Ages 6-8 · Frog hops</span><div class="big">3, 6, 9, ?</div><p style="font-size:18px">A frog starts at 0 and hops 3 steps each time: 3, 6, 9 … Where does it land on its 7th hop?</p><div class="row"><input id="pzA" aria-label="Your answer" placeholder="Your answer" inputmode="numeric" style="max-width:170px"><button class="btn yel" id="pzCheck" type="button">Check</button></div><div id="pzMsg"></div></div><div class="pzr"><h3>In class, the answer is only half the job</h3><p class="muted">Children then explain how they know: counting on a number line, adding 3 seven times, or spotting that every landing spot is in the 3 times table. Hearing three different ways is how thinking grows.</p><a class="btn sm alt" href="#register" style="justify-self:start">Register for the program</a></div></div></section>
 
 <section class="sec" id="classes"><div class="shead"><span class="eyebrow">November beta · Singapore time</span><h2>Choose a group</h2><p class="muted">Lessons start in the week of <b>Mon 23 Nov</b> (first lessons Tue 24 to Fri 27 Nov, see each group). Each group meets twice a week for 5 weeks, 90 minutes a lesson, live online, up to 8 children. If a group fills, we open another.</p><div class="draft">Beta fee: S$<span id="betaPer"></span> a lesson, S$<span id="betaTot"></span> for all 10 lessons. The fee includes the printed workbook posted to your home. We confirm payment details on WhatsApp after you register.</div></div><div class="sessions" id="sess"></div><p class="small muted" style="margin-top:12px">No lessons on Fri 25 Dec (Christmas Day). Otherwise each group keeps the same two weekly times for all 5 weeks; where the final week differs it is shown on the card.</p><p style="margin-top:8px"><b>None of these times suit you?</b> <a href="#request-time">Request another time</a>. Each card also lists other times we may open if enough families are interested.</p></section>
 
@@ -153,7 +157,7 @@ $("reg").addEventListener("submit",function(e){
 '''+interest_js+'''
 })();
 </script>
-<script src="/shop/cart.js" defer></script>'''
+<script src="/shop/cart.js" defer></script>'''+(TH.widget_script(1) if TEASER_ON else '')
 import json
 sch=json.load(open('data/beta_schedule.json'))
 import datetime as _dt
@@ -170,5 +174,7 @@ _slots=interest_ui.load_slots()
 cls=[dict(id=g['id'],level=g['level'],ages=g['ages'],seats=g['seats'],sessions=g['sessions'],first=g['first'],last=g['last'],exc=_exc(g),other=interest_ui.other_times_block(g['level'],_slots)) for g in sch['groups']]
 _int=dict(consent=interest_ui.CONSENT_VERSION,bands=dict(interest_ui.AGE_BANDS),levels={n:'Level %d (ages %s)'%(n,a) for n,a in interest_ui.LEVEL_AGES.items()})
 html=html.replace('__REGBYFAQ__',_faq_regby(sch)).replace('__REGBYLABEL__',register_by(sch)[0]).replace('__REGBY__',register_by_line(sch)).replace('__INTEREST_FORM__',interest_ui.form_section(WA_NUM,WA_SHOW)).replace('__WASHOW__',WA_SHOW).replace('__WA__',WA_NUM).replace('__INTEREST__',json.dumps(_int)).replace('__CLASSES__',json.dumps(cls)).replace('__BETA__',json.dumps(dict(per=sch['price']['per_lesson'],total=sch['price']['total'])))
+if TEASER_ON:   # the right-hand note must not talk about frog hops when the daily puzzle is showing
+    html=html.replace("Children then explain how they know: counting on a number line, adding 3 seven times, or spotting that every landing spot is in the 3 times table. Hearing three different ways is how thinking grows.","Children then explain how they know, and hear other ways of seeing the same puzzle. That is where the thinking grows.")
 open('mi_signup.html','w').write(html)
 print(len(html))

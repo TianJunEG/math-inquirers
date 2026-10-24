@@ -18,7 +18,6 @@ sys.path.insert(0, HERE)
 import kinds                                   # noqa: E402
 from defs_common import FMT, UNIT_SYN, LEVEL_AGES, dec_str, show_frac   # noqa: E402
 
-BANK = os.path.join(HERE, 'bank.json')
 
 
 def solve(d):

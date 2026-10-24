@@ -158,6 +158,14 @@ def main():
                     fails.append('%s: hint gives the answer away' % tag)
                 if e['type'] == 'n' and Fr(e['ans']) >= 20 and re.search(r'(?<![\d.,])' + re.escape(e['ans']) + r'(?![\d.,])', e['hint']):
                     reviews.append('%s: hint contains the answer number %s' % (tag, e['ans']))
+                if e['kind'] == 'repeat_pattern':   # the pattern printed in the wording must be the pattern that was solved
+                    at = 0
+                    for item in e['p']['unit']:
+                        k = e['q'].find(item, at)
+                        if k < 0:
+                            fails.append('%s: pattern item %r is not in the question in order' % (tag, item))
+                            break
+                        at = k + len(item)
                 # 3. numbers in the question should come from the parameters
                 known = set()
                 flat(e['p'], known)

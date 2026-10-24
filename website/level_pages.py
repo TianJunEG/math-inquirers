@@ -15,6 +15,10 @@ import json
 import os
 
 import interest_ui
+import sys
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'teasers'))
+import teaser_html as TH   # daily teaser (off unless manifest site_enabled or MI_TEASERS=1)
+TEASER_ON = TH.enabled()
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'level_pages')
@@ -176,7 +180,7 @@ details.ans p{margin-top:8px}
 
 
 def css():
-    return open(os.path.join(HERE, 'lp_parts.txt'), encoding='utf-8').read() + LEVEL_CSS + PAGE_CSS + interest_ui.CSS
+    return open(os.path.join(HERE, 'lp_parts.txt'), encoding='utf-8').read() + LEVEL_CSS + PAGE_CSS + interest_ui.CSS + (TH.CSS if TEASER_ON else '')
 
 
 def level_index_cards(current=None):
@@ -267,7 +271,7 @@ def page(L, lessons, sch):
 <section class="two"><div class="tile yel"><span class="tag">In the kit</span><h3>Cut-outs in the workbook</h3><ul class="klist">%(kit)s</ul><p class="small muted">Nothing needs to be bought for the kit. The kit is the cut-out pages at the back of your child's workbook. We post the printed workbook to your home before the first lesson (Singapore addresses), and your child cuts out the pieces and keeps them in one envelope.</p></div>
 <div class="tile mint"><span class="tag">At home</span><h3>What your child needs</h3><ul class="klist">%(home)s</ul><p class="small muted">These come from the lesson plans for this level.</p></div></section>
 
-<section class="sec" id="puzzle"><div class="shead"><span class="eyebrow">Try one now</span><h2>A sample puzzle</h2></div><div class="pzcard"><div class="pzl"><span class="tag">%(ptag)s</span><div class="big">%(pbig)s</div><p style="font-size:18px">%(pq)s</p><details class="ans"><summary>Show the answer</summary><p>%(pa)s</p></details></div><div class="pzr"><h3>In class, the answer is only half the job</h3><p class="muted">Children then explain how they know, and hear other ways of seeing the same puzzle. That is where the thinking grows.</p><a class="btn sm alt" href="/?level=%(n)d#register" style="justify-self:start">Register for Level %(n)d</a></div></div></section>
+<section class="sec" id="puzzle"><div class="shead"><span class="eyebrow">Try one now</span><h2>%(ph2)s</h2></div><div class="pzcard"><div class="pzl"%(pzid)s><span class="tag">%(ptag)s</span><div class="big">%(pbig)s</div><p style="font-size:18px">%(pq)s</p><details class="ans"><summary>Show the answer</summary><p>%(pa)s</p></details></div><div class="pzr"><h3>In class, the answer is only half the job</h3><p class="muted">Children then explain how they know, and hear other ways of seeing the same puzzle. That is where the thinking grows.</p><a class="btn sm alt" href="/?level=%(n)d#register" style="justify-self:start">Register for Level %(n)d</a></div></div></section>
 
 <section class="sec" id="placement"><div class="shead"><span class="eyebrow">Placement</span><h2>Is Ages %(ages)s right for my child?</h2></div>%(placement)s</section>
 
@@ -282,12 +286,12 @@ def page(L, lessons, sch):
 <footer><div><b>Math Inquirers</b><p style="margin-top:6px">An independent maths enrichment program by Preciouslyours Pte Ltd, Singapore. Not affiliated with MOE or the Gifted Education Programme. We do not identify or test for giftedness and we do not promise exam or competition results.%(syl)s</p></div><div><b>Register</b><p style="margin-top:6px"><a href="/?level=%(n)d#register">Register for Level %(n)d</a><br><a href="/">Back to the home page</a><br><a href="/shop/">Shop: extension workbooks (coming soon)</a></p></div><div><b>Your details</b><p style="margin-top:6px">We use your details only to arrange the class and reply to you, in line with the PDPA. <a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a></p></div></footer>
 </div>
 <script src="/shop/cart.js" defer></script>
-''' % dict(
+%(tscript)s''' % dict(
         title=esc(title), desc=esc('Math Inquirers Level %d for ages %s, building on %s: 10 live online lessons, three tiers of puzzles, kit contents, placement guidance and November beta class times.' % (n, L['ages'], L['builds'])),
         css=css(), n=n, ages=L['ages'], builds=esc(L['builds']), mins=sch['lesson_minutes'], weeks=sch['weeks'], seats=g['seats'],
         per=sch['price']['per_lesson'], tot=sch['price']['total'], blurb=esc(L['blurb']), note=note, cards=cards,
         kit=''.join('<li>%s</li>' % esc(k) for k in L['kit']), home=''.join('<li>%s</li>' % esc(k) for k in L['home']),
-        ptag=esc(p['tag']), pbig=esc(p['big']), pq=esc(p['q']), pa=esc(p['a']),
+        ph2=('A puzzle to try' if TEASER_ON else 'A sample puzzle'), pzid=(' id="pzBox"' if TEASER_ON else ''), tscript=(TH.widget_script(n) if TEASER_ON else ''), ptag=esc(p['tag']), pbig=esc(p['big']), pq=esc(p['q']), pa=esc(p['a']),
         placement=placement_block(L), sched=schedule_block(L, sch), gid=g['id'], index=level_index_cards(n), syl=syl, regby=register_by_line(sch))
 
 
