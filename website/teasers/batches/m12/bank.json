@@ -1712,7 +1712,7 @@
      "23",
      "330"
     ],
-    "q": "Classes 2A and 2B recycle paper for three weeks. In week 1, 2A recycled 18 kg. In week 3, 2B recycled 27 kg. The totals are 58 kg for 2A and 72 kg for 2B. The three weeks had 30 kg, 50 kg and 50 kg in all. How many kilograms did 2B recycle in week 2?",
+    "q": "Classes 2A and 2B recycle paper for three weeks. 2A recycled 18 kg in week 1. 2B recycled 27 kg in week 3. The totals are 58 kg for 2A and 72 kg for 2B. The weeks gave 30, 50 and 50 kg in all. How many kg did 2B recycle in week 2?",
     "hint": "Draw a table with two rows and three columns. Fill in what you know. Then find the missing numbers one at a time.",
     "why": "Week 1: 2B recycled 30 − 18 = 12 kg. Then in week 2, 2B recycled 72 − 12 − 27 = 33 kg.",
     "date": "12-07"

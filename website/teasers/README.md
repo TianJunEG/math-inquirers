@@ -72,7 +72,7 @@ The home page uses the Ages 6-8 set (there is no level picker on the home page).
 | `teasers.js` | The browser code (date, picking, answer checking, rendering). |
 | `teaser_html.py` | Glue used by `lp_build.py`, `level_pages.py` and `build_site.py`; exports the per-month files. |
 | `build_preview.py` | Writes `outputs/owner_review/teasers_preview/index.html` (date and time selector, midnight buttons, answer key). |
-| `test_site.py` | Chromium (Playwright) tests on a built site directory (446 checks, flag-off check first). |
+| `test_site.py` | Chromium (Playwright) tests on a built site directory (482 checks, flag-off check first). |
 | `AUDIT_SELF.md` | The author's own checklist of what was checked and the results. |
 
 ## Commands

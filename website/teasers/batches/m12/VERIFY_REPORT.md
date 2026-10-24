@@ -11,7 +11,7 @@ Method: every puzzle is re-solved by `brute.py` (independent of the author solve
 | 5 | 31 | 29 | 2 | 26 | 2 | 31 |
 | 6 | 31 | 30 | 2 | 24 | 2 | 31 |
 
-Sources searched (whole working tree, tracked or not): 6678 files, 1357.9 MB, sha256 bc0f02eff198ac01a0fbeacd.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 303, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
+Sources searched (whole working tree, tracked or not): 6679 files, 1357.8 MB, sha256 97c5b935f9542dd397d148f6.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 304, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
 
 Similarity sources checked: holiday banks, own term lessons, all extension workbook data, the school booklets, our book drafts and catalogues, external private source files, and the seven fixed website puzzles.
 
@@ -35,8 +35,8 @@ FAIL count: 0. REVIEW items: 85.
 - REVIEW L1-robottrack [12-29]: number 8 in the question is not a parameter (written in the wording; check)
 - REVIEW L1-bookshelf [12-31]: story words 3 of 4 like "Q: The books in the library were placed on 30 shelves with an equal number of books on eac ..." (docs/books/private_p3_papers/non_routine_questions.md)
 - REVIEW L2-chocbar [12-06]: rule C: two four-word runs shared with "| C1 | Fill in the box: 1/2 = ?/10 | A chocolate bar has 10 equal pieces. ..." (docs/audit/gifted_fixes_p3.md): a chocolate bar has / chocolate bar has #
-- REVIEW L2-recyclegrid [12-07]: question has 57 words (limit 55)
 - REVIEW L2-recyclegrid [12-07]: number 3 in the question is not a parameter (written in the wording; check)
+- REVIEW L2-recyclegrid [12-07]: rule B: 3 of the same numbers ['18', '27', '3'] as "<section class="sec" id="tryit"><div class="shead"><span class="eyebrow">Try one ..." (website/lp_build.py)
 - REVIEW L2-stripchain [12-08]: story words 5 of 8 like "- [SA2_2020_Nanyang P2-17, 5m, Black white squares pattern, diff 3, pic] Black 1,5,13...;  ..." (docs/books/private_p5_papers/non_routine_questions.md)
 - REVIEW L2-seesaw [12-11]: story words 5 of 8 like "l2_scale level balance scales: scales [{left: [obj, ...], right: [obj, ...], label?}], obj ..." (extension/tools/figs_l2_u09.py)
 - REVIEW L2-stickgame [12-18]: number 1 in the question is not a parameter (written in the wording; check)

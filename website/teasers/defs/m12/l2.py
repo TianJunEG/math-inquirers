@@ -84,7 +84,7 @@ DEFS = [
       'The routes are Pier-Hill-Dock 21, Pier-Cove-Dock 24, and Pier-Cove-Hill-Dock 8 + 3 + 9 = 20. The shortest is {ans}.',
       p=dict(edges=[['Pier', 'Hill', 12], ['Pier', 'Cove', 8], ['Cove', 'Hill', 3], ['Hill', 'Dock', 9], ['Cove', 'Dock', 16]], a='Pier', b='Dock'), unit='km', sub='networks.shortest_route'),
     P('recyclegrid', 'grid_totals', 'Tables',
-      'Classes 2A and 2B recycle paper for three weeks. In week 1, 2A recycled 18 kg. In week 3, 2B recycled 27 kg. The totals are 58 kg for 2A and 72 kg for 2B. The three weeks had 30 kg, 50 kg and 50 kg in all. How many kilograms did 2B recycle in week 2?',
+      'Classes 2A and 2B recycle paper for three weeks. 2A recycled 18 kg in week 1. 2B recycled 27 kg in week 3. The totals are 58 kg for 2A and 72 kg for 2B. The weeks gave 30, 50 and 50 kg in all. How many kg did 2B recycle in week 2?',
       'Draw a table with two rows and three columns. Fill in what you know. Then find the missing numbers one at a time.',
       'Week 1: 2B recycled 30 − 18 = 12 kg. Then in week 2, 2B recycled 72 − 12 − 27 = {ans}.',
       p=dict(rows=[58, 72], cols=[30, 50, 50], known=[[0, 0, 18], [1, 2, 27]], ask=[1, 1]), unit='kg', sub='number_grid.grid_totals'),
