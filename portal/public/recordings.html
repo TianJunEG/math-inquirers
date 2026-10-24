@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Lesson recordings (PROTOTYPE) | Math Inquirers</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" href="/fonts.css"><link rel="stylesheet" href="/portal/portal.css">
+<!-- PROTOTYPE. Static mock-up with FAKE data (fake children, fake groups, fake dates). No script, no Supabase call, no video.
+     Not linked from anywhere. Design: docs/recordings_design.md. Draft SQL (not applied): portal/supabase/recordings.sql.
+     portal/public is copied wholesale by `build_site.py --with-portal`: DELETE or exclude this file before a real portal build. -->
+</head><body>
+<main id="app" tabindex="-1">
+<header class="top"><a class="brand" href="/"><i>?</i><span>Math Inquirers</span></a><span class="sub">Lesson recordings</span></header>
+
+<p class="msg err" role="note"><b>PROTOTYPE, not live.</b> Everything on this page is made up. The buttons do nothing. Real recordings will appear here only after the owner approves the design and the database file is applied.</p>
+
+<section class="card pop">
+  <h1>Recordings for your family</h1>
+  <p class="muted">Only for families enrolled in the same group. Please do not share, download or record them: they can include other children's voices. Each recording is removed on the date shown.</p>
+
+  <h2>Mia (Level 3, Group L3A)</h2>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>Lesson</th><th>Held on</th><th>Length</th><th>Available until</th><th></th></tr></thead>
+    <tbody>
+      <tr><td>Lesson 3: Number bonds (fake title)</td><td>Fri 4 Dec 2026</td><td>72 min</td><td>Sun 24 Jan 2027</td><td><a class="btn sm" href="#watch-demo" aria-describedby="demo-note">Watch recording</a></td></tr>
+      <tr><td>Lesson 2: Place value (fake title)</td><td>Tue 1 Dec 2026</td><td>68 min</td><td>Sun 24 Jan 2027</td><td><a class="btn sm" href="#watch-demo">Watch recording</a></td></tr>
+      <tr><td>Lesson 1: Warm-up and number sense (fake title)</td><td>Fri 27 Nov 2026</td><td>75 min</td><td>Sun 24 Jan 2027</td><td><a class="btn sm" href="#watch-demo">Watch recording</a></td></tr>
+      <tr><td>Lesson 4</td><td>Tue 8 Dec 2026</td><td colspan="2"><span class="pill pending">Being checked by your tutor. Usually ready within 24 hours.</span></td><td><button class="btn sm" type="button" disabled>Watch recording</button></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="small muted" id="demo-note">Missed a lesson? Watch the recording, then do the workbook pages and the <a href="#practice-demo">online practice</a> for that lesson. You can also ask to join the same lesson in another class of your level if a seat is free.</p>
+
+  <h2>Leo (Level 1, Group L1A)</h2>
+  <div class="empty"><p><b>No recordings yet.</b> The first lesson is on Tue 24 Nov 2026 (fake). The recording appears here within 24 hours after each lesson.</p></div>
+</section>
+
+<section class="card" id="watch-demo">
+  <h2>What the watch page will look like</h2>
+  <p class="small muted">The real page asks the server for a short-lived viewing pass each time. It checks you are logged in and enrolled; the video address is never shown on this page.</p>
+  <div class="empty" role="img" aria-label="Video player placeholder"><p>[ video player placeholder: Lesson 3: Number bonds ]</p><p class="small muted">Chapters: 0:00 Welcome · 6:30 Warm-up · 18:00 New idea · 40:15 Practice time · 62:00 Answers</p></div>
+  <p class="small">Workbook pages: 14 to 19 (fake). Materials: ruler, pencil, blank paper.</p>
+  <p class="small muted">Available until Sun 24 Jan 2027 (30 days after Group L3A's last lesson), then it is deleted. <a href="/privacy/">Privacy and recording notice</a></p>
+</section>
+
+<section class="card" id="states">
+  <h2>Messages the page can show (all fake)</h2>
+  <p class="msg info" role="status">This recording has been removed. Message us on WhatsApp if you need it.</p>
+  <p class="msg info" role="status">This recording has ended and been deleted (recordings are kept for 30 days after the group's last lesson).</p>
+  <p class="msg err" role="alert">Recordings are switched off for your family because the recording agreement was withdrawn. Message us on WhatsApp to talk about it.</p>
+  <p class="msg err" role="alert">We could not start the video. Check your internet connection, then press Watch recording again.</p>
+</section>
+
+<section class="card" id="practice-demo">
+  <h2>Owner view (fake): publish queue</h2>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>Group</th><th>Lesson</th><th>Status</th><th>Review</th><th>Expires</th><th></th></tr></thead>
+    <tbody>
+      <tr><td>L3A</td><td>4</td><td><span class="pill pending">in review</span></td><td>No private info [ ] · No child names or faces [ ] · On topic [ ] · Trimmed [ ]</td><td>24 Jan 2027</td><td><button class="btn sm" type="button" disabled>Publish</button></td></tr>
+      <tr><td>L3A</td><td>3</td><td><span class="pill paid">published</span></td><td>All ticked by owner</td><td>24 Jan 2027</td><td><button class="btn sm danger" type="button">Pull it</button></td></tr>
+      <tr><td>L1A</td><td>1</td><td><span class="pill cancelled">expired: delete the file</span></td><td>All ticked</td><td>12 Dec 2026 (fake)</td><td><button class="btn sm alt" type="button">Confirm file deleted</button></td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+</main>
+</body></html>
