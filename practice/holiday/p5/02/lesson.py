@@ -345,3 +345,6 @@ VARIANTS = {
                  steps=['With 10 equal units, the game takes 4, the book takes 3 and 3 units are left.', '3 units = ${L}, so 1 unit = ${L} ÷ 3.', 'Ravi had 10 units, which is ${ans}.']),
         oracle=lambda e: ravi_story(e['L'])[0]),
 }
+
+
+polish(ITEMS, VARIANTS)

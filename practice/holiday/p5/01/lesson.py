@@ -422,3 +422,6 @@ VARIANTS = {
                  steps=['Going down: {n} 499 499 rounds down to {n} 499 000, but {n} 499 500 rounds up to {n} 500 000.', 'Going up: {n} 500 499 rounds down to {n} 500 000, but {n} 500 500 rounds up to {n} 501 000.', 'The smallest is the first number and the greatest is the second: the answers are {ans}.']),
         oracle=lambda e: _round_range(e['n'])),
 }
+
+
+polish(ITEMS, VARIANTS)

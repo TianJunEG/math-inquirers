@@ -92,10 +92,20 @@
     function set(val) { S.a[it.id] = val; save(); nav(); bar(); }
     if (it.type === 'fields') {
       var cur_ = Array.isArray(v) ? v : it.fields.map(function () { return ''; });
-      it.frame.split(/(\{\w+\})/).forEach(function (part) {
+      // the word just before a box (and the punctuation just after it) stays with the box, so '1/' and its box never split over two lines
+      var fparts = it.frame.split(/(\{\w+\})/), prevG = null, tail = '';
+      fparts.forEach(function (part, pi) {
         var m = /^\{(\w+)\}$/.exec(part), idx = m ? it.fields.map(function (f) { return f.id; }).indexOf(m[1]) : -1;
-        if (idx > -1) { var inp = h('input', { type: 'text', inputmode: 'numeric', autocomplete: 'off', 'data-f': m[1], 'aria-label': 'Box ' + (idx + 1), style: 'width:5rem;text-align:center' }); inp.value = cur_[idx] || ''; if (locked) inp.disabled = true; inp.addEventListener('input', function () { var a = it.fields.map(function (f, i) { return i === idx ? inp.value : (cur_[i] || ''); }); cur_ = a; set(a); }); box.appendChild(inp); }
-        else if (part) box.appendChild(h('span', { class: 'fr', text: part }));
+        if (idx > -1) {
+          var inp = h('input', { type: 'text', inputmode: 'numeric', autocomplete: 'off', 'data-f': m[1], 'aria-label': 'Box ' + (idx + 1), style: 'width:5rem;text-align:center' }); inp.value = cur_[idx] || ''; if (locked) inp.disabled = true; inp.addEventListener('input', function () { var a = it.fields.map(function (f, i) { return i === idx ? inp.value : (cur_[i] || ''); }); cur_ = a; set(a); });
+          prevG = h('span', { class: 'fg', style: 'display:inline-flex;align-items:center;gap:.25rem;white-space:nowrap' }, [tail ? h('span', { class: 'fr', text: tail }) : null, inp]); tail = ''; box.appendChild(prevG);
+        } else if (part) {
+          if (prevG) { var lead = /^[^ \n\t]+/.exec(part); if (lead) { prevG.appendChild(h('span', { class: 'fr', text: lead[0] })); part = part.slice(lead[0].length); } }
+          var nextIsBox = pi + 1 < fparts.length && /^\{\w+\}$/.test(fparts[pi + 1]);
+          if (nextIsBox) { var tl = /[^ \n\t]+(?=[ \n\t]*$)/.exec(part); if (tl) { tail = tl[0]; part = part.slice(0, tl.index); } }
+          prevG = null;
+          if (part.trim()) box.appendChild(h('span', { class: 'fr', text: part }));
+        }
       });
     } else if (it.type === 'text') {
       var inp4 = h('input', { type: 'text', autocomplete: 'off', autocapitalize: 'none', spellcheck: 'false', 'aria-label': 'Your answer' }); inp4.value = v || ''; if (locked) inp4.disabled = true; inp4.addEventListener('input', function () { set(inp4.value); }); box.appendChild(inp4);

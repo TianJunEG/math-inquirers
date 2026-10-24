@@ -284,7 +284,7 @@ def sticker_bar():
 def ravi_bar():
     x0, w, y, h = 30, 320, 40, 40
     u = w / 5
-    b = bar_cells(x0, y, 2 * u, h, 2, (0, 1)) + T(x0 + u, y + h / 2 + 5, 'game', 15, 'middle', 800)
+    b = Re(x0, y, 2 * u, h, SKY, NAVY, 2.4) + T(x0 + u, y + h / 2 + 5, 'game: 2 parts', 14, 'middle', 800)
     b += Re(x0 + 2 * u, y, 1.5 * u, h, '#fff', NAVY, 2.4) + T(x0 + 2.75 * u, y + h / 2 + 5, 'book', 15, 'middle', 800)
     b += Re(x0 + 3.5 * u, y, 1.5 * u, h, '#fff', NAVY, 2.4) + T(x0 + 4.25 * u, y + h / 2 + 5, '$36 left', 14, 'middle', 800, TEAL)
     b += f'<path d="M{x0} {y - 6} V{y - 16} H{x0 + w} V{y - 6}" fill="none" stroke="{NAVY}" stroke-width="2.5"/>' + T(x0 + w / 2, y - 24, '? at first', 16, 'middle', 800)
@@ -316,3 +316,23 @@ def twelve_bar():
     xx = x0 + 3 * w / 12
     b += Re(xx, 30, w / 12, 34, YEL, WARM, 3.2) + T(xx + w / 24, 150, '1 part = 1/12', 15, 'middle', 800, WARM) + Ln(xx + w / 24, 118, xx + w / 24, 134, 2.4, WARM)
     return svg(390, 162, b, 'A bar cut into 12 equal parts. 1/3 is 4 parts. 1/4 is 3 parts. The difference is 1 part, which is 1/12.')
+
+
+# ---------------------------------------------------------------- keep a big number on one line:  2 500 000  (no-break spaces between the groups of three)
+def nb(s):
+    return re.sub(r'(?<=[\d}]) (?=\d{3}(?!\d))', ' ', s) if isinstance(s, str) else s
+
+
+def polish(items, variants=None):
+    """Apply nb() to the text children see (question, boxes, hint, worked steps); the printed-source strings and the answers are not touched."""
+    for it in items:
+        for k in ('q', 'frame', 'hint', 'shown'):
+            if k in it:
+                it[k] = nb(it[k])
+        it['steps'] = [nb(x) for x in it['steps']]
+    for v in (variants or {}).values():
+        tp = v['tpl']
+        for k in ('q', 'frame', 'hint'):
+            if k in tp:
+                tp[k] = nb(tp[k])
+        tp['steps'] = [nb(x) for x in tp['steps']]
