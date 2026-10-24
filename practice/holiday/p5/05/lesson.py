@@ -116,10 +116,13 @@ def most_cubelike(ts):
     return best
 
 
-def one_box_choice(options):
-    one = [n for n in options if len(triples(n)) == 1]
-    assert len(one) == 1
-    return one[0]
+def one_box_between(lo, hi):
+    """Numbers n with lo < n < hi that make exactly one box shape (search)."""
+    return [n for n in range(lo + 1, hi) if len(triples(n)) == 1]
+
+
+ONE_BOX = one_box_between(12, 30)
+assert ONE_BOX == [13, 17, 19, 23, 29]
 
 
 def a2_capacity():
@@ -194,7 +197,7 @@ ITEMS = [
       steps=['Listed in order of the shortest edge: ' + ', '.join(fmt3(t) for t in T36) + '.', 'That is 8 cuboids.'],
       src=['How many are there?']),
     D(id='2b', tier='core', no='2(b)', type='set', ordered=True, grouped=False, skill='fitting in a box', answer=flat3([t for t in T36 if fits_5(t)]),
-      q='Which of Ravi’s cuboids can fit inside a box 5 cm long, 5 cm wide and 5 cm high? Type its three edges, smallest first, with commas.',
+      q='Which of Ravi’s cuboids can fit inside a box 5 cm long, 5 cm wide and 5 cm high? Type the three edges, smallest first, with commas.',
       check=lambda: flat3([t for t in T36 if fits_5(t)]),
       hint='A cuboid fits in the box only if none of its edges is longer than 5 cm. Look at the longest edge of each cuboid on your list.',
       steps=['The box is 5 cm long, 5 cm wide and 5 cm high, so every edge of the cuboid must be 5 cm or less.', 'The longest edges of the eight cuboids are ' + ', '.join(str(t[2]) for t in T36) + ' cm.',
@@ -333,12 +336,12 @@ ITEMS = [
       hint='Use the same method: go in order of the shortest edge and see what the other two edges multiply to.',
       steps=['The boxes for 64 cubes: ' + ', '.join(fmt3(t) for t in T64) + '.', 'That is 7 boxes.'],
       src=['What if the shop packs 64 cubes? How many different boxes now?']),
-    D(id='Cc2', tier='invest', no='C(c) one box', label='C(c) one', type='choice', skill='numbers with one box shape', options=['15 cubes', '16 cubes', '17 cubes', '18 cubes'], answer='17 cubes',
-      q='Is there a number of cubes that gives only ONE box shape? Which of these numbers of cubes gives only one?',
-      check=lambda: f'{one_box_choice([15, 16, 17, 18])} cubes',
-      hint='Every number of cubes gives the box 1 × 1 × that number. For each choice, look for a second box.',
-      steps=['15 cubes: 1 × 1 × 15 and 1 × 3 × 5. 16 cubes: 1 × 1 × 16, 1 × 2 × 8, 1 × 4 × 4 and 2 × 2 × 4. 17 cubes: only 1 × 1 × 17. 18 cubes: 1 × 1 × 18, 1 × 2 × 9, 1 × 3 × 6 and 2 × 3 × 3.',
-             '17 is a prime number: its only whole-number factors are 1 and 17. So 17 cubes give only one box shape. The same is true for every prime number of cubes.'],
+    D(id='Cc2', tier='invest', no='C(c) one box', label='C(c) one', type='set', ordered=False, grouped=False, skill='numbers with one box shape', answer=ONE_BOX,
+      q='Is there a number of cubes that gives only ONE box shape? Search the numbers of cubes between 12 and 30. Type every number that gives only one box shape, with commas, in any order.',
+      check=lambda: one_box_between(12, 30),
+      hint='Every number of cubes gives the box 1 × 1 × that number. For each number, look for a second box. Try 15, 16, 17, 18 and so on.',
+      steps=['Search each number: 15 cubes also make 1 × 3 × 5; 16 cubes also make 1 × 2 × 8; 18 cubes also make 1 × 2 × 9; and so on. Most numbers have a second box.',
+             'Only these numbers between 12 and 30 give just one box shape: ' + ', '.join(str(n) for n in ONE_BOX) + '. They are the prime numbers: the only whole-number factors of each are 1 and itself. So yes, there is such a number, and the same is true for every prime number of cubes.'],
       src=['Is there a number of cubes that gives only ONE box shape?']),
 
     # ================= Think harder (A1 to A4)
@@ -391,7 +394,7 @@ ITEMS = [
              'Adding the whole block, 10 × 10 × 15 = 1500 cm³, to the water would be wrong: the block sticks out of the water.'],
       src=['A tank has a base 30 cm by 20 cm and water 10 cm deep. A block 10 cm by 10 cm by 15 cm is stood upright on the bottom. How deep is the water now?']),
     D(id='pose', tier='challenge', no='Make up your own', label='Make up', type='selfcheck', open=True, marking_mode='open', skill='making up a problem',
-      q='Make up a tank puzzle with a stone: choose the base, the depth of the water and the stone. Swap and solve. (Think for 30 seconds before anyone speaks.)',
+      q='Make up a tank puzzle with a stone: choose the base, the depth of the water and the stone. Then solve your own puzzle to check it works.',
       hint='Choose the base and the depth first. Then pick a stone whose volume makes a nice rise, such as a volume that fits a whole number of layers.',
       steps=['This question is open: many puzzles are right.', 'Check your puzzle by solving it two ways, for example by finding the volume of water before and after.',
              'Sample: a tank has a base 25 cm by 20 cm and water 10 cm deep. A stone of 1000 cm³ sinks. The base is 500 cm², so the water rises 1000 ÷ 500 = 2 cm and is 12 cm deep.'],

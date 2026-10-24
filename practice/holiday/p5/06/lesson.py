@@ -367,7 +367,7 @@ ITEMS = [
       steps=['Pretend the bath holds 60 litres. The tap puts in 60 ÷ 12 = 5 litres a minute.', 'With the plug out, 60 ÷ 20 = 3 litres a minute drain away. So 5 − 3 = 2 litres stay in each minute.', '60 ÷ 2 = 30, so the bath takes 30 minutes. (The answer is the same for any size of bath.)'],
       src=['A tap fills an empty bath in 12 minutes. With the plug out, a full bath empties in 20 minutes. Ben turns on the tap but forgets the plug. How long does the bath take to fill?']),
     D(id='pose', tier='challenge', no='Make up your own', label='Make up', type='selfcheck', open=True, marking_mode='open', skill='making up a problem',
-      q='Make up a better-buy puzzle with three packs of the same thing. Which pack is the best buy? Swap and check. (Think for 30 seconds before anyone speaks.)',
+      q='Make up a better-buy puzzle with three packs of the same thing. Which pack is the best buy? Then check your puzzle by working it out.',
       hint='Choose the number of items and the price of each pack. Then work out the price of 1 item for every pack.',
       steps=['This question is open: many puzzles are right.', 'Check your puzzle by finding the price of 1 item in each pack. The best buy is the pack where 1 item costs the least, and the biggest pack is not always that one.',
              'Sample: 6 for $3.00 (50¢ each), 10 for $5.50 (55¢ each) and 12 for $7.20 (60¢ each): the 6-pack is the best buy.'],

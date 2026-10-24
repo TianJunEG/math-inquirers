@@ -291,7 +291,7 @@ ITEMS = [
          steps=['Two 20-cent coins make 40 cents. The other 10 cents is paid with one 10-cent coin, or with two 5-cent coins.', 'So 2 ways: 20 + 20 + 10, and 20 + 20 + 5 + 5.'],
          src=['First step: list every way to pay 50 cents that uses two 20-cent coins.']),
     dict(id='I2', tier='invest', no='Investigation 2', type='number', strand=CT, skill='listing in order', answer=12, label='Inv 2',
-         q='Find all the ways. Pay exactly 50 cents using only 5-cent, 10-cent and 20-cent coins (as many of each as you like). Keep an organised list on paper. How many ways are there altogether?',
+         q='Find all the ways. Pay exactly 50 cents using only 5-cent, 10-cent and 20-cent coins (as many of each as you like). Keep an organised list. How many ways are there altogether?',
          check=lambda: len(pay(50, [20, 10, 5])),
          hint='Sort your list by the number of 20-cent coins. For each number of 20-cent coins, list the ways to pay the rest.',
          steps=['Two 20-cent coins: 2 ways.', 'One 20-cent coin (30 cents left for 10-cent and 5-cent coins): 4 ways.', 'No 20-cent coin (50 cents with 10-cent and 5-cent coins): 6 ways.', '2 + 4 + 6 = 12 ways.'],

@@ -138,12 +138,12 @@ ITEMS = [
     D(id='1est', tier='core', no='1', label='1 est', type='text', skill='estimating angles', accept=letters_accepts(['b', 'd']), shown='b, d', svg=four_angles(),
       check=lambda: ', '.join(n for n in 'abcd' if FOUR[n][1] - FOUR[n][0] > 90),
       q='Estimate each angle first. Here are four angles drawn to size. Which of them are bigger than a right angle, the corner of a sheet of paper (90°)? Type the letters with a comma between them.',
-      hint='Hold the corner of a sheet of paper up to each angle. Is the angle smaller or bigger than the corner?',
+      hint='Compare each angle with the corner of a sheet of paper. Is the angle smaller or bigger than the corner?',
       steps=['Compare each angle with a right angle, 90°.', 'Angles b and d are wider open than a right angle. Angles a and c are narrower.', 'So the answer is b and d.'],
       src=['Estimate each angle first. Then measure it with your protractor.']),
     D(id='1measure', tier='core', no='1', label='1 measure', type='selfcheck', paper=True, skill='measuring angles with a protractor', svg=four_angles(),
       check=lambda: {n: FOUR[n][1] - FOUR[n][0] for n in 'abcd'}, sol_fig=lambda f: four_angles(sizes=True),
-      q='Measure angles a, b, c and d with your protractor on your printed workbook page. The arms are short: draw them longer with a ruler first. Write your estimate and your measurement for each angle.',
+      q='Measure angles a, b, c and d with your protractor on a copy of the angles. The arms are short: draw them longer with a ruler first. Write your estimate and your measurement for each angle.',
       hint='Put the centre of the protractor on the corner. Count up from the 0 that lines up with one arm. Check your measurement with your estimate.',
       steps=['The angles measure a = 40°, b = 115°, c = 75° and d = 150°.', 'Your measurement is good if it is within 2° of these. An estimate within about 20° is a good estimate.',
              'If you read 140° for angle a, you read the wrong scale. Start counting from the 0 that lines up with one arm.'],
@@ -296,7 +296,7 @@ ITEMS = [
 
     # ================= Go further (qbank.challenge[-3:], printed Q5 to Q7)
     D(id='G5', tier='challenge', no='Go further 5', label='G5', type='selfcheck', open=True, marking_mode='open', skill='making up a clock-angle puzzle',
-      svg=clocks([dict(hands=False, cap='my time'), dict(hands=False, cap='a second time')], r=60, label='Two blank clock faces to use for your puzzle.'),
+      svg=clocks([dict(hands=False, cap='my time'), dict(hands=False, cap='a second time')], r=60, label='Two blank clock faces for your puzzle.'),
       check=lambda: (clock_angle(9, 30), clock_angle(2, 30)),
       q='Make up your own clock-angle puzzle. Choose a time that is NOT an o\'clock time (half past is easiest) and work out the angle between the hands. Then find a second time with the same angle.',
       hint='Think about where the hour hand is at half past: it is halfway between two numbers.',
