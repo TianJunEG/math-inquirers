@@ -174,7 +174,7 @@ ITEMS = [
 
     D(id='6-start', tier='core', no='6 (start here)', type='fields', skill='fractions between two fractions', frame='1/3 of the 12 boxes is {f1} boxes.   3/4 of the 12 boxes is {f2} boxes.',
       answer=[4, 9], svg=twelfths_strip(), check=lambda: [share(12, 3), 3 * share(12, 4)],
-      q='Find ALL the fractions with denominator 12 that are bigger than 1/3 but smaller than 3/4. Start here: on the strip, shade 1/3 of the boxes, then 3/4. How many boxes is that?',
+      q='Find ALL the fractions with denominator 12 that are bigger than 1/3 but smaller than 3/4. Start here: look at the strip of 12 boxes. How many boxes make 1/3 of the strip, and how many make 3/4 of the strip?',
       hint='Share the 12 boxes equally into 3 groups for 1/3. For 3/4, share into 4 equal groups and take 3.',
       steps=['1/3 of 12: 12 ÷ 3 = 4 boxes.', '3/4 of 12: 12 ÷ 4 = 3 boxes in a group, and 3 groups = 9 boxes.', 'So 1/3 = 4/12 and 3/4 = 9/12.'],
       src=['Find ALL the fractions with denominator 12 that are bigger than', 'on the strip, shade']),
@@ -275,7 +275,7 @@ ITEMS = [
     D(id='G6', tier='challenge', no='Go further 6', type='number', skill='fractions of an unknown number', answer=18,
       check=lambda: [n for n in range(1, 1000) if Fr(n, 2) - Fr(n, 3) == 3][0],
       q='Half of a number is 3 more than a third of the number. What is the number?',
-      hint='Draw a bar for the number and cut it so that you can see both a half and a third.',
+      hint='Picture a bar for the number, cut so that you can see both a half and a third.',
       steps=['Cut the number into 6 equal parts (sixths). Half is 3 sixths and a third is 2 sixths.', 'Half is 1 sixth more than a third, so that 1 sixth is 3.', 'The whole number is 6 sixths: 6 × 3 = 18.', 'Check: half of 18 is 9, a third of 18 is 6, and 9 is 3 more than 6.'],
       src=['Half of a number is 3 more than a third of the number. What is the number?']),
     D(id='G7', tier='challenge', no='Go further 7', type='number', skill='fractions of a remainder', answer=150, svg=book_bar(),

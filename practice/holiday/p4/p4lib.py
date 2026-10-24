@@ -323,21 +323,22 @@ def signs_figure(nums, total):
         if i < len(nums) - 1:
             toks.append(('c', None))
     toks += [('t', '='), ('n', total)]
-    step = min(46, 296 / len(toks))
-    W = int(step * len(toks) + 12)
-    b, x = '', 6 + step / 2
+    wid = {'n': lambda v: 17 * len(str(v)) + 14, 'c': lambda v: 44, 't': lambda v: 34}
+    W = int(sum(wid[k](v) for k, v in toks) + 12)
+    b, x = '', 6
     for kind, v in toks:
+        w = wid[kind](v)
         if kind == 'c':
-            b += Ci(x, 28, 16, '#fff', NAVY, 2.6)
+            b += Ci(x + w / 2, 28, 16, '#fff', NAVY, 2.6)
         else:
-            b += T(x, 38, v, 28)
-        x += step
+            b += T(x + w / 2, 38, v, 28)
+        x += w
     return svg(W, 56, b, ' '.join(str(n) if k != 'c' else 'empty circle' for k, n in toks))
 
 
 def machine_figure(first='?', last='30', mid=('× 6', '− 18', '÷ 4')):
     cells = [first] + list(mid) + [last]
-    bw, gp = 52, 14
+    bw, gp = 50, 18
     W = len(cells) * bw + (len(cells) - 1) * gp + 12
     b = ''
     for i, c in enumerate(cells):

@@ -32,3 +32,40 @@ Open questions:
 
 ## Audit fixes (week 1)
 Hints rewritten so they nudge and never give the answer (L1 3(a), L2 4(b)); paper words removed from the screen text (box, circle, cross out, draw); L1 6(a) steps no longer print earlier answers; number-line figure labels no longer clipped.
+
+# Week 2 (lessons 3 and 4, Tue 1 Dec and Fri 4 Dec, `website/data/beta_schedule.json`)
+
+Build: `python3 practice/holiday/build_holiday.py p4 3` (and `p4 4`); test: `python3 practice/holiday/test_holiday.py p4 3` (and `4`). Output in `p4/03/dist/`, `p4/04/dist/` (git-ignored, not deployed); screenshots in `p4/NN/proof/`.
+Source: `p4/workbook_html.js` from `p4/content/l3.js` and `l4.js` (`workbook()`, `gaps.invest`, `qbank.stretch[0:4]`, `qbank.challenge[-3:]`). Code, not JSON, so every question is transcribed into `p4/NN/lesson.py` with an independent checker (Python's own order of operations, exact fractions, brute-force search; helpers in `p4lib.py`); the build stops if a checker and the printed answer differ and proves every printed string occurs in the source. The printed keys (`key`, `gaps.invest.key`, `qbank.a`) were also compared by hand with every checker.
+No shared file was edited (`sheet.js`, `mark.js`, `build_holiday.py`, `hlib.py`, `test_holiday.py` unchanged); only `p4lib.py` (own level) gained helpers.
+
+| | Lesson 3 Operation Detectives | Lesson 4 Fraction Frontier |
+|---|---|---|
+| Items (Start here / Investigation / Think harder / Go further) | 42 (24 / 10 / 4 / 4) | 40 (25 / 6 / 4 / 5) |
+| Auto-marked (number, choice, boxes, typed sentence/fraction/list) | 35 | 36 |
+| Self-check with a model answer (writing box) | 6 (4 open) | 3 (3 open) |
+| Paper-only (shown with the correct drawing) | 1 (6(a) finish the bar model) | 1 (2(b) mark 9/4 on the number line) |
+| Variant families (every combination run against an oracle) | 2 (104 combinations) | 3 (188 combinations) |
+| Question text exactly as printed / reworded to fit one screen | 23 / 19 | 24 / 16 |
+
+Audit rules from week 1 applied from the start: no card shows another card's answer in its stem, hint or example (checked by reading every stem and hint; where a printed stem gave it away it was reworded, see below); hints nudge only; examples are never an answer; screen wording (no "circle/cross out/underline/draw/take-home", "choice question" for the ★ item); typed explanations are self-checks; bracket answers have exactly one accepted place (proved by search) and a trailing "= 57" is fine; fractions are matched exactly (a question asking for a mixed number accepts only the mixed number, one asking for an improper fraction only n/d; "write the number at the arrow" accepts any equal fraction, mixed number or decimal); one shared figure per question, not a repeated riddle.
+
+Not mirrored, or mirrored differently, and why:
+- The common "Looking back" box: generic reflection, no answer (as in week 1).
+- L3 Q5 number trick: the printed table is for the child's own numbers. Online it is two fixed tries (6 and 20) in boxes, then "what do you notice" (self-check) and the two blanks as two items (a choice, then two boxes). Stems say "always the same" where the printed Think harder 4 and Go further 7 say "always 7", so they do not give away Q5(a).
+- L3 Q4(b) "check it going forwards" and Investigation (b)/(c): self-checks with a model (the child's own number / own sentence cannot be marked).
+- L3 Q6(a) "finish the bar model": paper-only, correct model shown after Submit. Q6(b), (c) are auto-marked.
+- L3 Investigation (a) "as many of 1 to 12 as you can": three easy-step sentences (6, 8, 10 with + and − only) and four targets (1, 7, 9, 12) are typed and auto-marked against every sentence a search finds (38 to 356 accepted forms each, extra brackets that do not change the answer included); the other targets are not asked one by one, but the Investigation (b) item (can every target from 1 to 12 be made? No) is proved by the same search.
+- L3 Go further 5 "find ALL the ways": the child types the signs of every way (both are needed, either order, signs or whole sentences); the count of ways is not given.
+- L3 Go further 7(b) "make up your own trick": open self-check with a model trick.
+- L4 Q1(a) (three boxes) became three items (how many fifths, improper fraction, mixed number); Q2(a) became one item per arrow; Q4 start-here, (a) to (e) are one item each, with (c) "write how you know" a self-check; Q6 became start-here boxes (4 and 9 boxes), the list of fractions, and the count (the printed "Fractions found, and how many").
+- L4 Q2(b) "mark 9/4 with an X": paper-only; the correct number line (X after the 2) is shown after Submit.
+- L4 Q4 > and < : two choices that show both fractions ("3/4 > 5/8" / "3/4 < 5/8").
+- L4 Investigation (a) "1/5 of 24": a yes/no choice ("is it a whole number?") plus the "what do you notice" self-check, because 4 4/5 is not what the printed key asks for. Investigation (b) is typed as the fractions (1/2, 1/3, 1/4, 1/6, 1/8, 1/12, any order, 2 880 accepted writings).
+- L4 Go further 5(c) "make up your own puzzle": open self-check with a model puzzle.
+- Paper tools ("fold a strip", "fraction wall", counters) are not needed online; the start-here steps are asked as ordinary questions.
+
+Open questions:
+- Typed fractions need a slash and mixed numbers a space ("2 3/5"); words ("two and three fifths") are not matched. Typed-fraction and sentence items use the normal text keyboard (no `inputmode`), plain-number items the number pad; worth a real-phone check.
+- L3 target sentences accept every writing found by search; very unusual extra brackets (more than are needed for a sentence of four numbers) are not accepted. Any other correct sentence is accepted.
+- The L4 workbook text writes fractions stacked (HTML); online they are written 3/8, as in the print for the Think harder and Go further pages.
