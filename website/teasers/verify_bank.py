@@ -271,6 +271,11 @@ def lock_problems(per_override=None):
     npdf = sum(1 for f in source_files() if f.endswith('.pdf'))
     if npdf < lock.get('min_pdfs', 0):
         bad.append('only %d PDFs among the sources, the lock needs at least %d (PDFs are read as text since round 4; incomplete checkout?)' % (npdf, lock['min_pdfs']))
+    rels = [os.path.relpath(f, ROOT).replace(os.sep, '/') for f in source_files()]
+    for prefix, need in sorted((lock.get('min_under') or {}).items()):
+        have = sum(1 for r in rels if r == prefix or r.startswith(prefix + '/'))
+        if have < need:
+            bad.append('source folder %s has %d files, the lock needs at least %d (round 5: the folders behind the near-copy checks must be complete)' % (prefix, have, need))
     for d in lock.get('must_exist', []):
         if not glob.glob(os.path.join(ROOT, d)):
             bad.append('required source %s is missing (git-ignored private sources not present?)' % d)
@@ -279,10 +284,17 @@ def lock_problems(per_override=None):
 
 def update_lock():
     _, n, total, per = source_digest()
-    lock = {'note': 'Minimum number of source files per root for a valid verification (written by verify_bank.py --update-lock). The verifier refuses to give a verdict on a checkout with fewer.',
-            'min_files': {r: int(c * 0.95) for r, c in sorted(per.items())},
-            'min_pdfs': int(sum(1 for f in source_files() if f.endswith('.pdf')) * 0.95),
-            'must_exist': ['docs/books/private_p1_papers', 'docs/books/private_p6_papers', 'docs/books/private_word_problems_notes.md', 'extension/data', 'outputs/skill_additions', 'practice/holiday', 'docs/audit', 'term/l1/lessons', 'term/l1/out', 'outputs/workbook/Math_Inquirers_P1_Student_Workbook_Designed.pdf', 'school/p3/out', 'p2/Math_Inquirers_P2_Tutor_Guide.html'],
+    rels = [os.path.relpath(f, ROOT).replace(os.sep, '/') for f in source_files()]
+    under = ['practice', 'practice/holiday', 'practice/holiday/p2', 'practice/holiday/p3', 'practice/holiday/p4', 'practice/holiday/p5', 'practice/holiday/p6',
+             'term/l1', 'outputs/designed', 'outputs/print', 'split', 'school/p3', 'school/p4', 'school/p5', 'school/p6', 'docs/books', 'docs/sasmo']
+    lock = {'note': 'Minimum number of source files per root (and per folder behind the near-copy checks) for a valid verification (written by verify_bank.py --update-lock; round 5: 99% of the counts when the lock was written). The verifier refuses to give a verdict on a checkout with fewer.',
+            'min_files': {r: int(c * 0.99) for r, c in sorted(per.items())},
+            'min_under': {u: int(sum(1 for r in rels if r == u or r.startswith(u + '/')) * 0.99) for u in under},
+            'min_pdfs': int(sum(1 for f in source_files() if f.endswith('.pdf')) * 0.99),
+            'must_exist': ['docs/books/private_p1_papers', 'docs/books/private_p6_papers', 'docs/books/private_word_problems_notes.md', 'extension/data', 'outputs/skill_additions', 'practice/holiday', 'docs/audit', 'term/l1/lessons', 'term/l1/out', 'outputs/workbook/Math_Inquirers_P1_Student_Workbook_Designed.pdf', 'school/p3/out', 'p2/Math_Inquirers_P2_Tutor_Guide.html',
+                           'practice/holiday/p6/06/lesson.py', 'practice/holiday/p2/03/lesson.py', 'practice/holiday/p5/05', 'practice/holiday/p3/04', 'split/p5l5', 'outputs/designed/Math_Inquirers_P2_Question_Bank.pdf', 'outputs/designed/Math_Inquirers_P5_Question_Bank.pdf',
+                           'outputs/designed/Math_Inquirers_P6_Question_Bank.pdf', 'outputs/schemes/Math_Inquirers_P5_Scheme_of_Work.pdf', 'outputs/diagnostics/Math_Inquirers_Level3_Placement_Check.pdf', 'p5/content/l5.js', 'p5/content/l8.js',
+                           'school/p4/out/P4_S2_Puzzles.pdf', 'extension/data/l3_u03.json', 'docs/sasmo/g2_original_problems_draft.md', 'docs/books/p6_non_routine_catalogue.md', 'docs/audit/gifted_fixes_p3.md'],
             'files_at_update': n, 'bytes_at_update': total}
     json.dump(lock, open(LOCK_FILE, 'w', encoding='utf-8'), indent=1)
     print('source lock written:', lock['min_files'])
@@ -858,6 +870,30 @@ def quarter_rules(lv, items, fails):
             fails.append('L%d: answer %s repeats (%s)' % (lv, a, ', '.join(ids)))
 
 
+def masked_tokens(text):
+    """Words of a question with every number masked '#' and every name masked '@'."""
+    out = []
+    for tok in re.findall(r"\d[\d,]*\.?\d*|[a-z']+", text.lower().replace('\u2019', "'")):
+        if tok[0].isdigit():
+            tok = '#'
+        elif tok.replace("'s", '') in NAMES:
+            tok = '@'
+        out.append(tok)
+    return out
+
+
+def word_grams(tk, n):
+    return {' '.join(tk[i:i + n]) for i in range(len(tk) - n + 1)}
+
+
+UNITS = set('cm m km kg g l ml mm minutes minute seconds second hours hour days day dollars dollar cents cent months weeks week years year litres litre square squares cubic'.split())
+
+
+def has_content(gram):
+    """A four-gram counts only when it carries a word that is not a function word, a mask or a unit ('# cm # cm' is a list of measurements, not a sentence frame)."""
+    return any(w not in FUNC and w not in UNITS and w not in ('#', '@') for w in gram.split())
+
+
 def structure_rules(all_by_level, stock):
     """The per-level structure rules over every released month.  all_by_level = {level: [(month, entry), ...]}.
     Levels 1 and 2 follow the gap rules (L1L2-GAP60), Levels 3 to 6 the quarter rules (TEASER-STRICT).  Returns (failures, report lines)."""
@@ -945,6 +981,30 @@ def structure_rules(all_by_level, stock):
                 cov = len(w) / min(len(wa), len(wb))
                 if (len(w) >= 4 and cov >= 0.75) or (len(w) >= 5 and cov >= 0.6):
                     global_fails.append('%s (L%d) and %s (L%d): the same story skeleton at two levels (shared words %s)' % (a['id'], la, b['id'], lb, ','.join(sorted(w))))
+    # round 5 (owner ruling C3, 'new story AND new frame'): a sentence frame appears at ONE level only.  Question wording with numbers and names masked: shared
+    # word four-grams that carry a content word and are not in the common stock (found in 8 or more questions of the bank).  The same sub-structure (or the same-idea
+    # group) at two levels: 6 or more shared four-grams is a FAIL (5 is a REVIEW line of the structure report); any two puzzles at two levels: 8 or more.
+    mt = {e['id']: masked_tokens(e['q']) for _, e in flat_all}
+    df = {}
+    for _, e in flat_all:
+        for g in word_grams(mt[e['id']], 4):
+            df[g] = df.get(g, 0) + 1
+    generic = {g for g, c in df.items() if c >= 8}
+    grams = {e['id']: {g for g in word_grams(mt[e['id']], 4) if g not in generic and has_content(g)} for _, e in flat_all}
+    for i in range(len(flat_all)):
+        for j in range(i + 1, len(flat_all)):
+            (la, a), (lb, b) = flat_all[i], flat_all[j]
+            if la == lb:
+                continue
+            sh = grams[a['id']] & grams[b['id']]
+            if not sh:
+                continue
+            same = gsub(a) == gsub(b)
+            if same and len(sh) == 5:
+                struct_lines.append('- REVIEW %s (L%d) and %s (L%d): %d shared four-word runs (e.g. "%s"), same sub-structure' % (a['id'], la, b['id'], lb, len(sh), sorted(sh)[0]))
+            if (same and len(sh) >= 6) or len(sh) >= 8:
+                global_fails.append('%s (L%d) and %s (L%d): the same sentence frame at two levels (%d shared four-word runs, e.g. "%s"%s)' % (
+                    a['id'], la, b['id'], lb, len(sh), sorted(sh)[0], ', same sub-structure' if same else ''))
     return global_fails, struct_lines
 
 
@@ -1095,6 +1155,39 @@ def selftest():
         got = [sev for sev, _ in (story_hits(pr['q'], sidx, ans=pr['ans'], sol=pr['sol']) + list_hits(pr['q'], sidx, ans=pr['ans']) + frame_hits(pr['q'], TAX.T.get('retired_frames', [])))]
         cases.append(('round 4 probe %s (round-3 wording) is a FAIL of the round-4 text rules' % pid, 'FAIL' in got, got))
         cases.append(('round 4 probe %s: its frame %s is not allowed at Level %d any more' % (pid, pr['sub'], pr['level']), pr['sub'] in TAX.SUBS and pr['level'] not in TAX.SUBS[pr['sub']]['levels'], TAX.SUBS.get(pr['sub'], {}).get('levels')))
+    # round 5 (C2): one-sentence questions, numbers with units, the answer counted; the retired frames and sub-structures of AUDIT_ROUND5
+    cwi = cw_index(sidx)
+    load_stock_sentences()
+    for pid, pr in probes.get('round5', {}).items():
+        got = [sev for sev, _ in extra_hits(pr['q'], pr['ans'] if re.fullmatch(r'\d[\d,]*\.?\d*', pr['ans']) else None, pr['sol'], cwi)]
+        if pr['text_rule'] == 'FAIL':
+            cases.append(('round 5 probe %s (round-3 wording) is a FAIL of rules S, S3, N2 or G' % pid, 'FAIL' in got, got))
+        elif pr['text_rule'] == 'ANY':
+            cases.append(('round 5 probe %s (round-3 wording) is at least a REVIEW of rules S, S3 or G' % pid, bool(got), got))
+        if pr['retired_frame']:
+            fh = [d for _, d in frame_hits(pr['q'], TAX.T.get('retired_frames', []))]
+            cases.append(('round 5 probe %s is caught by a retired frame of taxonomy.json' % pid, bool(fh), fh))
+    for pid, sub in probes.get('round5_retired_sub', {}).items():
+        cases.append(('round 5 probe %s: sub-structure %s is retired (no level allows it)' % (pid, sub), TAX.SUBS[sub]['levels'] == [], TAX.SUBS[sub]['levels']))
+    # the new cross-level sentence-frame rule: the same sentence frame at two levels is a FAIL, a new frame with the same maths is not
+    def two_levels(q3, q5, sub='calendar.nth_weekday_date', fam='calendar'):
+        d = {3: [('12', dict(id='L3-ta', date='12-01', level=3, frame='ta', sub=sub, family=fam, ans='17', q=q3, type='n'))],
+             5: [('12', dict(id='L5-tb', date='12-02', level=5, frame='tb', sub=sub, family=fam, ans='28', q=q5, type='n'))]}
+        f, _ = structure_rules(d, stock)
+        return f
+    wk3 = 'In one month, the 5th is a Thursday. What is the date of the 3rd Tuesday in that month?'
+    wk5 = 'In one month, the 3rd is a Saturday. What is the date of the 4th Wednesday in that month?'
+    cases.append(('cross-level frame rule: the weekday sentence at Levels 3 and 5 is a FAIL', any('same sentence frame' in x for x in two_levels(wk3, wk5)), two_levels(wk3, wk5)[:1]))
+    newq = 'Hana swims on every Saturday. Her first lesson of the month is on the 6th. What is the date of her lesson in week 4 of that month?'
+    cases.append(('cross-level frame rule: a new sentence for the same maths is not a FAIL', not any('same sentence frame' in x for x in two_levels(wk3, newq)), two_levels(wk3, newq)[:1]))
+    cases.append(('cross-level frame rule: the real bank has no repeated sentence frame', not any('same sentence frame' in x for x in clean), [x for x in clean if 'same sentence frame' in x][:2]))
+    # the source lock: 99% of the counts and the near-copy folders must stay complete
+    lk = json.load(open(LOCK_FILE, encoding='utf-8'))
+    _, _, _, per_now = source_digest()
+    cases.append(('the source lock needs 99% of the practice, term, outputs, docs and school files', all(lk['min_files'][r] >= int(per_now[r] * 0.98) for r in ('practice', 'term', 'outputs', 'docs', 'school')), {r: (lk['min_files'][r], per_now[r]) for r in ('practice', 'term', 'outputs', 'docs', 'school')}))
+    cases.append(('the source lock refuses a tree that lost 2% of the practice files', bool(lock_problems(dict(per_now, practice=int(per_now['practice'] * 0.98)))), ''))
+    for must in ('practice/holiday/p6/06/lesson.py', 'split/p5l5', 'outputs/designed/Math_Inquirers_P5_Question_Bank.pdf'):
+        cases.append(('the source lock requires %s' % must, must in lk['must_exist'], ''))
     for pid, sub in probes['retired_sub'].items():
         cases.append(('round 3 probe %s: sub-structure %s is retired (no level allows it)' % (pid, sub), TAX.SUBS[sub]['levels'] == [], TAX.SUBS[sub]['levels']))
     rels = {os.path.relpath(f, ROOT).replace(os.sep, '/') for f in source_files()}
@@ -1215,7 +1308,7 @@ def num_unit_grams(sentence):
     out = set()
     for i in range(len(t) - 2):
         g = t[i:i + 3]
-        if any(x[0].isdigit() for x in g) and any((not x[0].isdigit()) and x not in FUNC for x in g):
+        if any(x[0].isdigit() for x in g) and any(x[0].isalpha() and x not in FUNC for x in g):
             if any(x in ('cent', 'cents', 'c') for x in g) and all((not x[0].isdigit()) or x in ('5', '10', '20', '50') for x in g):
                 continue                 # Singapore coin denominations ("20-cent and 50-cent coins") are not a number-unit fingerprint
             out.add(' '.join(g))
@@ -1323,7 +1416,7 @@ def extra_hits(q, ans, sol, cw):
             # S, whole question against a window
             if not why and len(S) >= 5 and len(shared) >= 5 and len(shared) / len(S) >= 0.7 and (not mine or mine <= nums):
                 spec_n = len([w for w in shared if cw.df.get(w, 0) <= 2500])
-                if len(txt) <= 400 and spec_n >= 2 and (mine or len(shared) >= 7) and '?' in txt:
+                if len(txt) <= 400 and spec_n >= 1 and mine and '?' in txt:
                     why = 'rule S (window): %d of %d content words (%s) and all the numbers in "%s ..."' % (len(shared), len(S), ','.join(sorted(shared)), txt[:90])
                 elif review is None:
                     review = ('REVIEW', 'rule S (window): %d of %d content words (%s) in "%s ..." (%s)' % (len(shared), len(S), ','.join(sorted(shared)), txt[:70], ix.rels[ix.file[a]]))

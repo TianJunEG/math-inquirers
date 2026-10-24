@@ -136,6 +136,26 @@ t('poly a different letter', { ...rule('3k+2'), poly: 'k' }, '2+3×k', 'right');
 t('poly keeps the printed forms too', rule('n + 3', '3 + n'), '3 + n', 'right'); t('poly never runs code', P, 'process.exit()', 'wrong'); t('poly never runs code 2', P, '(()=>1)()', 'wrong'); t('poly huge product refused', P, '(n+1)'.repeat(40), 'wrong');
 t('poly with a leading label word', rule('4n+3'), 'OUT = 4n + 3', 'right'); t('poly rule with a number key sides', rule('4n+3'), 'OUT=3+4n', 'right');
 t('poly mixes text mode off', { marking_mode: 'auto', type: 'text', key: ['5 1/2'], poly: 'n' }, '1 1/2', 'wrong');
+// a leading plus sign is not a unit: always accepted, even with unit:false; '+-1' and '1+' are not numbers
+const pn = (key, extra) => ({ marking_mode: 'auto', type: 'number', key, ...extra });
+for (const v of ['+1', '+ 1', ' +1 ', '+01', '(+1)', '+1 cm', '+1.0']) t('plus ' + v, pn(1), v, 'right');
+for (const v of ['+1', '+ 1']) t('plus unit:false ' + v, pn(1, { unit: false }), v, 'right');
+for (const v of ['+-1', '1+', '+', '++1', '+ +1', '-+1', '1 +', '+1+']) t('not a number ' + v, pn(1), v, 'wrong');
+for (const v of ['+-1', '+ -1']) t('plus then minus is not -1 ' + v, pn(-1), v, 'wrong');
+t('plus does not make a negative key right', pn(-1), '+1', 'wrong'); t('negative still right', pn(-1), '-1', 'right'); t('negative with spaces unit:false', pn(-5, { unit: false }), ' -5 ', 'right');
+t('plus in a field box', { marking_mode: 'auto', type: 'fields', key: [3, -4] }, ['+3', '-4'], 'right'); t('plus on a negative field wrong', { marking_mode: 'auto', type: 'fields', key: [3, -4] }, ['3', '+4'], 'wrong');
+t('plus words off', pn(5, { words: true }), '+five', 'wrong');
+// time of day in two boxes: a whole time typed in the first box with the second empty
+const tm = { marking_mode: 'auto', type: 'fields', key: [5, 25], time: [true, false] };
+for (const v of ['5:25', '5.25', '5 25', ' 5 : 25 ', '05:25', '5:25 ']) t('time first box ' + v, tm, [v, ''], 'right');
+t('time both boxes as before', tm, ['5', '25'], 'right'); t('time both boxes wrong minutes', tm, ['5', '30'], 'wrong'); t('time key 5:30 with 5:25 wrong', { ...tm, key: [5, 30] }, ['5:25', ''], 'wrong');
+t('time key 5:30 right', { ...tm, key: [5, 30] }, ['5:30', ''], 'right'); t('time 5:00 key', { ...tm, key: [5, 0] }, ['5:00', ''], 'right'); t('time 5:00 key hour only', { ...tm, key: [5, 0] }, ['5', ''], 'wrong');
+t('time wrong hour', tm, ['6:25', ''], 'wrong'); t('time one-digit minutes refused', tm, ['5:2', ''], 'wrong'); t('time in the second box only', tm, ['', '5:25'], 'wrong');
+t('time both boxes filled keeps a typed time as typed', tm, ['5:25', '25'], 'wrong'); t('time 3 digit refused', tm, ['5:255', ''], 'wrong');
+t('time without the flag is not split', { marking_mode: 'auto', type: 'fields', key: [5, 25] }, ['5:25', ''], 'wrong');
+t('time flag false in list', { ...tm, time: [false, false] }, ['5:25', ''], 'wrong');
+t('time in a later pair', { marking_mode: 'auto', type: 'fields', key: [9, 7, 25], time: [false, true, false] }, ['9', '7:25', ''], 'right');
+t('time both blank skipped', tm, ['', ''], 'skipped'); t('time slip still found', { ...tm, slips: [{ a: [5, 52], say: 'x' }] }, ['5:52', ''], 'wrong', { detail: { boxes: [true, false] }, slip: 0 });
 // the shared reading code is the same text in sheet.js and mark.js (they must agree on every answer)
 import { readFileSync } from 'node:fs';
 const blk = f => { const x = readFileSync(new URL(f, import.meta.url), 'utf8'); const a = x.indexOf('// BEGIN SHARED'), b = x.indexOf('// END SHARED'); assert.ok(a > 0 && b > a, f + ' has the shared block'); return x.slice(a, b); };

@@ -70,8 +70,8 @@
     return m ? m[1].replace(/^0+(?=\d)/, '') : null;
   }
   function toNum(s, opt) {
-    s = minus(s).trim();
-    var pb = /^\(\s*([^()]*?)\s*\)\s*(.*)$/.exec(s); if (pb) s = pb[2] ? pb[1] + ' ' + pb[2] : pb[1];   // '(-25)' and '(-25) °C'
+    s = minus(s).trim().replace(/^\+\s*(?=\d)/, '');   // a leading plus sign ('+1', '+ 1') is not a unit and is always accepted; '+-1' and '1+' are not numbers
+    var pb = /^\(\s*([^()]*?)\s*\)\s*(.*)$/.exec(s); if (pb) s = (pb[2] ? pb[1] + ' ' + pb[2] : pb[1]).replace(/^\+\s*(?=\d)/, '');   // '(-25)' and '(-25) °C'
     if (opt && opt.clock) { var ck = clockHour(s); if (ck !== null) s = ck; }
     if (opt && opt.dollars_ok) { var dm = /^\$\s*0?\.(\d\d)\s*\.?$/.exec(s); if (dm) return +dm[1]; }   // '$0.48' for 48 cents, only when the item says dollars_ok
     if (opt && opt.words) { var wn = wordsToNum(s); if (wn !== null) return wn; }
@@ -82,6 +82,19 @@
     if (!opt || opt.unit !== false) { var u = UNITRE.exec(s); if (u && !/\d\s*c(?![a-z])/.test(s)) s = u[1].trim().replace(/\.0+$/, ''); }
     if (/^-?\d{1,3}(?:[, ]\d{3})+$/.test(s)) s = s.replace(/[, ]/g, '');
     return /^-?\d+$/.test(s) ? +s : null;
+  }
+  // Time of day in two boxes (hours, minutes; the builder flags the hours box, item flag time:true): a whole time typed in the FIRST box with the second left empty ('5:25', '5.25', '5 25')
+  // is read as hours 5, minutes 25. Minutes need two digits. A time typed in both boxes is read as typed. flags = list with true at the hours box.
+  function timeFix(arr, flags) {
+    if (!Array.isArray(arr) || !Array.isArray(flags)) return arr;
+    var out = arr.slice(), i, m;
+    for (i = 0; i + 1 < out.length; i++) {
+      if (flags[i] && str(out[i]).trim() !== '' && str(out[i + 1]).trim() === '') {
+        m = /^(\d{1,2})\s*(?:[:.]|\s)\s*(\d{2})$/.exec(minus(str(out[i])).trim());
+        if (m) { out[i] = m[1]; out[i + 1] = m[2]; }
+      }
+    }
+    return out;
   }
   // Reading a typed list. Rule: a comma or space is a thousands separator ONLY when the item is 'grouped' (its answers are 5-digit or longer numbers, or the item
   // says grouped:true) AND the run is a leading group of 1-3 digits followed only by groups of exactly 3 digits joined by a comma or ONE space ('12,500', '12 500').
@@ -238,6 +251,7 @@
     if (it.type === 'choice') return v === it.answer ? 'right' : 'wrong';
     if (it.type === 'text') return textMatch(it, it.answer, v) ? 'right' : 'wrong';
     if (it.type === 'number') return toNum(v, { unit: it.unit, words: it.words, clock: it.clock === true, dollars_ok: it.dollars_ok }) === it.answer ? 'right' : 'wrong';
+    if (it.type === 'fields') v = timeFix(v, it.fields.map(function (f) { return !!f.time; }));
     if (it.type === 'fields') return it.fields.every(function (f, i) { return toNum(v[i], { unit: it.unit, words: it.words, pre: f.pre, clock: it.clock === true || !!f.clock, dollars_ok: it.dollars_ok }) === f.answer; }) ? 'right' : 'wrong';
     return setMatch(v, it.answer, it.ordered, it.grouped).ok ? 'right' : 'wrong';
   }
@@ -427,7 +441,7 @@
     var locked = S.sub;
     card.appendChild(h('p', { class: 'q', tabindex: '-1', text: it.q }));
     var f = fig(it); if (f && !(S.sub && sim[it.id] && it.tpl)) card.appendChild(f);   // while a similar question is shown, the first question's picture (old numbers) is hidden
-    if (it.type === 'selfcheck' && it.paper) card.appendChild(h('p', { class: 'fb plain', id: 'paper', text: 'Do this on paper, then check your drawing against the answer shown on screen.' }));
+    if (it.type === 'selfcheck' && it.paper) card.appendChild(h('p', { class: 'fb plain', id: 'paper', text: it.paper_note || 'Do this on paper (or with your own things), then check it against the answer shown on screen.' }));
     if (it.type === 'set') card.appendChild(h('p', { class: 'sub', style: 'margin:0 0 .5rem', text: 'Type every answer, with a comma between. Use commas between numbers.' }));
     card.appendChild(control(it, locked));
     if (!S.sub) {

@@ -13,7 +13,7 @@ marking_mode:  auto  = a number, boxes, list, choice (Phase 2: fraction, decimal
                A holiday data file says which in each selfcheck item's own `marking_mode` ('self' or 'none'; build_holiday.py sets it from the lesson file's marking_mode 'self' | 'open',
                with a documented default), and this file honours it. Older data without that field (the extension units): open=True or a model answer starting 'Open' is none, else self.
                Paper-only is always self.
-Other item flags are passed on: unit:false, words:true (number words), poly:'n' (algebra rule compared as a polynomial), equiv_frac:true (equal fractions in a list), accept_prefix:false|[...] (lead-ins such as 'It is' in a text answer), clock:true (an hour: '3', "3 o'clock", '3:00', '3 pm'; per-box list for fields), dollars_ok:true ('$0.48' for 48 cents), accept_by:true ('6 by 6 square' for a sides answer).
+Other item flags are passed on: unit:false, words:true (number words), poly:'n' (algebra rule compared as a polynomial), equiv_frac:true (equal fractions in a list), accept_prefix:false|[...] (lead-ins such as 'It is' in a text answer), time:true (fields: hours box + minutes box; '5:25' typed in the first box alone is 5 h 25 min), clock:true (an hour: '3', "3 o'clock", '3:00', '3 pm'; per-box list for fields), dollars_ok:true ('$0.48' for 48 cents), accept_by:true ('6 by 6 square' for a sides answer).
 Tags: practice/submit/tags/<unit>.json may give {"strand": "...", "skill_by_item": {"S01": "..."}}; otherwise strand/skill fall back to the unit topic.
 """
 import hashlib, json, os, sys
@@ -70,6 +70,8 @@ def build(level, unit, holiday=None):
                 rec['clock'] = True
             elif any(f.get('clock') for f in it['fields']):
                 rec['clock'] = [bool(f.get('clock')) for f in it['fields']]
+            if any(f.get('time') for f in it['fields']):
+                rec['time'] = [bool(f.get('time')) for f in it['fields']]   # hours box followed by a minutes box: '5:25' in the first box alone
         if it.get('dollars_ok') and t in ('number', 'fields'):
             rec['dollars_ok'] = True                              # '$0.48' for 48 cents
         if t == 'text':
@@ -108,7 +110,7 @@ def main():
     for t in tag_rows:
         sql.append(f"insert into public.practice_item_tags (unit_key, unit_version, item_id, position, tier, marking_mode, paper_only, strand, skill, topic, slips) values ({q(uk)}, {q(ver)}, {q(t['id'])}, {t['pos']}, {q(t['tier'])}, {q(t['marking_mode'])}, {str(t['paper_only']).lower()}, {q(t['strand'])}, {q(t['skill'])}, {q(t['topic'])}, {q(json.dumps(t['slips']))}::jsonb) on conflict do nothing;")
     for k in keys:
-        sql.append(f"insert into public.practice_item_keys (unit_key, unit_version, item_id, answer_type, answer_key, ordered, equivalent, rules) values ({q(uk)}, {q(ver)}, {q(k['id'])}, {q(k['type'])}, {q(json.dumps(k['key']))}::jsonb, {str(k.get('ordered', False)).lower()}, {str(k.get('equivalent', False)).lower()}, {q(json.dumps({r: k[r] for r in ('unit', 'pre', 'grouped', 'words', 'poly', 'equiv_frac', 'accept_prefix', 'clock', 'dollars_ok', 'accept_by') if r in k}))}::jsonb) on conflict do nothing;")
+        sql.append(f"insert into public.practice_item_keys (unit_key, unit_version, item_id, answer_type, answer_key, ordered, equivalent, rules) values ({q(uk)}, {q(ver)}, {q(k['id'])}, {q(k['type'])}, {q(json.dumps(k['key']))}::jsonb, {str(k.get('ordered', False)).lower()}, {str(k.get('equivalent', False)).lower()}, {q(json.dumps({r: k[r] for r in ('unit', 'pre', 'grouped', 'words', 'poly', 'equiv_frac', 'accept_prefix', 'clock', 'time', 'dollars_ok', 'accept_by') if r in k}))}::jsonb) on conflict do nothing;")
     sql += ["-- publish only after the owner has approved the privacy wording:", f"-- update public.practice_units set published = true where unit_key = {q(uk)} and unit_version = {q(ver)};", 'commit;']
     open(os.path.join(out, uk + '.sql'), 'w').write('\n'.join(sql) + '\n')
     modes = {}

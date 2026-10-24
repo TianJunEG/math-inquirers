@@ -21,7 +21,7 @@ strings that must occur in the workbook source), plus by type
     number / fields: unit=False = no unit word is accepted after the number (default: '301 sticks', '20 min', '29.', '20.0' are all accepted)
     text      rule=('add', 3)  or  accept=[...], check()    check() -> ('add', 3) / str   (a counting rule; the accepted wordings come from hlib.rule_accepts)
     selfcheck paper=True|False, facts=<value>, check()      shown only: the child compares with the worked solution; never auto-marked.
-              paper=True = drawing / ruler / kit task: shown with 'Do this on paper, then check your drawing against the answer shown on screen.'
+              paper=True = drawing / ruler / kit task: shown with 'Do this on paper (or with your own things), then check it against the answer shown on screen.'; paper_note='...' replaces that sentence
               open=True  = no objective fact to check (an explanation); the model answer is a worked example
               marking_mode='self' | 'open'  how the TUTOR REPORT counts it (make_keys.py reads it): 'self' = the child compares with a model answer (every paper-only drawing, every
               'Explain / why / how do you know' item); 'open' = truly open, no objective fact (make up your own, many answers are right). Paper-only is always 'self'.
@@ -40,6 +40,8 @@ strings that must occur in the workbook source), plus by type
     number / fields: clock=True | False  an hour: '3', "3 o'clock", '3:00', '03:00', '3.00', '3 pm' are all right for the key 3 (minutes must be 00; '3:30' stays wrong). Set AUTOMATICALLY when the stem or frame contains o'clock and the key is a bare hour 1-12
                      (fields: the boxes printed right before o'clock); clock=False switches the automatic setting off, e.g. "How many hours from 3 o'clock to 8 o'clock?".
     number / fields: dollars_ok=True  '$0.48' is also right where the key is 48 (cents). DEFAULT off.
+    fields: time=True | False  two adjacent boxes for hours and minutes: a whole time ('5:25', '5.25', '5 25') typed in the FIRST box with the second left empty is read as hours 5, minutes 25 (page and server). Set AUTOMATICALLY when the
+                     boxes are labelled hours/minutes (h/min, hr/min); time=True without such labels uses the first two boxes; time=False switches the automatic setting off. A time typed in both boxes is read as typed ('5:25' for 5:30 stays wrong).
     text: accept_by=True  '6 by 6 square', '6 by 6', '6 x 6' (an optional 'a'/'the' and 'square'/'rectangle'/'cm') are right for a sides answer; a one-number key stands for n by n. DEFAULT off.
     svg (question figure) and sol_fig (callable(facts) -> svg of the correct drawing, built from the CHECKED values)
 
@@ -181,6 +183,34 @@ def clock_flag(it):
     return bool(re.search(r"o['\u2019]?clock", (it.get('q', '') + ' ' + it.get('frame', '')), re.I))
 
 
+_HR = r'(?:h|hr|hrs|hours?)'
+_MN = r'(?:m|min|mins|minutes?)'
+
+
+def time_boxes(it, nbox):
+    """Index of the hours box of an hours + minutes pair of adjacent boxes (or None). Automatic when the frame labels the boxes hours / minutes ('{f1} h {f2} min', 'Hours: {f1} Minutes: {f2}');
+    time=True without such labels means the first two boxes; time=False turns it off."""
+    t = it.get('time')
+    if t is False or nbox < 2:
+        return None
+    parts = re.split(r'(\{f\d+\})', it['frame'])
+    pos = [k for k, p in enumerate(parts) if re.fullmatch(r'\{f\d+\}', p)]
+
+    def lab(n, rx):
+        k = pos[n]
+        after = parts[k + 1] if k + 1 < len(parts) and (n + 1 >= len(pos) or pos[n + 1] != k + 1) else ''
+        before = parts[k - 1] if k >= 1 and (n == 0 or pos[n - 1] != k - 1) else ''
+        if re.match(r'\s*' + rx + r'\b(?!\s*:)', after, re.I):      # '{f1} h' (a word followed by a colon labels the NEXT box)
+            return True
+        return bool(re.search(r'\b' + rx + r'\s*:\s*$', before, re.I))   # 'Hours: {f1}'
+    for n in range(nbox - 1):
+        if pos[n + 1] == pos[n] + 2 and lab(n, _HR) and lab(n + 1, _MN) and not lab(n, _MN) and not lab(n + 1, _HR):
+            return n
+    if t:
+        return 0
+    return None
+
+
 def make_item(src):
     it = dict(src)
     i, t = it['id'], it['type']
@@ -211,6 +241,8 @@ def make_item(src):
         out['accept_by'] = True
     if t == 'number' and clock_flag(it):
         out['clock'] = True
+    if it.get('time') and t != 'fields':
+        raise Fail(f'{i}: time=True is only for fields items')
     if it.get('label'):
         if not isinstance(it['label'], str) or len(it['label']) > 12:
             raise Fail(f'{i}: label must be a short string (at most 12 characters)')
@@ -220,6 +252,10 @@ def make_item(src):
     if t == 'selfcheck':
         out['paper'] = bool(it.get('paper'))
         out['paper_only'] = out['paper']
+        if it.get('paper_note'):                  # replaces the default 'Do this on paper (or with your own things), ...' sentence for this item
+            if not isinstance(it['paper_note'], str) or not out['paper']:
+                raise Fail(f'{i}: paper_note must be a string and only goes with paper=True')
+            out['paper_note'] = it['paper_note']
         out['marking_mode'] = self_mode(it)
         facts = it.get('facts')
         chk = it.get('check')
@@ -264,6 +300,15 @@ def make_item(src):
             for n, f in enumerate(out['fields']):
                 if 1 <= f['answer'] <= 12 and (re.search(r"\{" + f['id'] + r"\}\s*o['\u2019]?clock", it['frame'], re.I) or (len(out['fields']) == 1 and clock_flag(it))):
                     f['clock'] = True
+        th = time_boxes(it, nbox)
+        if th is not None:                # hours box followed by a minutes box: '5:25' typed in the hours box alone is 5 h 25 min
+            if not (0 <= out['fields'][th]['answer'] <= 24 and 0 <= out['fields'][th + 1]['answer'] <= 59):
+                if it.get('time'):
+                    raise Fail(f'{i}: time=True but the two boxes are not hours and minutes')
+            else:
+                out['fields'][th]['time'] = True
+        elif it.get('time'):
+            raise Fail(f'{i}: time=True needs a fields item with two boxes')
         out['answer'] = [int(a) for a in it['answer']]
     elif t == 'number':
         if not same(it, got):

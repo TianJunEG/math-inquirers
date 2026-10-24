@@ -409,10 +409,7 @@
   },
   "angles.clock_hands": {
    "name": "angle between the hour hand and the minute hand",
-   "levels": [
-    4,
-    5
-   ],
+   "levels": [],
    "kinds": [
     "angle"
    ],
@@ -420,7 +417,12 @@
     "kind": [
      "clock"
     ]
-   }
+   },
+   "levels_before": [
+    4,
+    5
+   ],
+   "retired": "round 5: \"the smaller angle between the hands of a clock at 5 o'clock\" is in the P5 Question Bank and p5/content/l8.js with the answer 150; AUDIT_ROUND5 High"
   },
   "angles.isosceles_base_angles": {
    "name": "the two equal base angles of an isosceles triangle",
@@ -1448,16 +1450,18 @@
   },
   "factors.rectangular_arrays": {
    "name": "ways to arrange a number of tiles in equal rows (factor pairs)",
-   "levels": [
+   "levels": [],
+   "kinds": [
+    "factor_count"
+   ],
+   "cite": "MOE P2 tables of 2, 3, 4, 5 and 10, p.33 (Level 2); P4 factors and multiples, p.37",
+   "levels_before": [
     2,
     3,
     4,
     5
    ],
-   "kinds": [
-    "factor_count"
-   ],
-   "cite": "MOE P2 tables of 2, 3, 4, 5 and 10, p.33 (Level 2); P4 factors and multiples, p.37"
+   "retired": "round 5: chairs or tiles put in equal rows (how many ways) are in the P2 holiday lesson 3 (Mr Tan puts 20 chairs in equal rows), the L3 Extension Workbook (Mei puts 30 tiles in equal rows) and split/p4l1; AUDIT_ROUND5 Medium"
   },
   "factors.smallest_with_n_factors": {
    "name": "smallest number with exactly n factors",
@@ -1475,18 +1479,15 @@
   },
   "figure_rule.nth_figure": {
    "name": "number of tiles in the nth figure from the first three figures",
-   "levels": [
-    4
-   ],
+   "levels": [],
    "kinds": [
     "nth_term"
    ],
    "levels_before": [
-    4,
-    5,
-    6
+    4
    ],
-   "note": "round 3: Levels 5 and 6 removed: \"Figure 1 has 5 tiles and figure 2 has 9 tiles ...\" is the plus-sign tile pattern of extension l5_u09; kept at Level 4"
+   "note": "round 3: Levels 5 and 6 removed: \"Figure 1 has 5 tiles and figure 2 has 9 tiles ...\" is the plus-sign tile pattern of extension l5_u09; kept at Level 4",
+   "retired": "round 5: \"Figure 1 uses 5 sticks, Figure 2 uses 8, Figure 3 uses 11\" is EX-PAT-2 of docs/books/p6_non_routine_catalogue.md and the plus-sign pattern of extension l5_u09; AUDIT_ROUND5 Medium"
   },
   "fractions.arithmetic": {
    "name": "add, subtract or multiply fractions and mixed numbers",
@@ -2622,9 +2623,7 @@
   },
   "probability.two_dice_sum": {
    "name": "probability of a given total with two dice",
-   "levels": [
-    6
-   ],
+   "levels": [],
    "kinds": [
     "prob"
    ],
@@ -2632,7 +2631,11 @@
     "kind": [
      "dice"
     ]
-   }
+   },
+   "levels_before": [
+    6
+   ],
+   "retired": "round 5: the probability of a total with two dice (total 8 = 5/36) is the exit slip of practice/holiday/p6/06; AUDIT_ROUND5 High"
   },
   "probability.without_replacement": {
    "name": "probability of two in a row without replacement",
@@ -2645,6 +2648,9 @@
    "where": {
     "kind": [
      "marbles"
+    ],
+    "draws": [
+     2
     ]
    }
   },
@@ -2727,7 +2733,8 @@
     "work_time"
    ],
    "cite": "MOE P5 NA Rate, p.41; P3 NA multiplication and division, p.35; Problem solving: unitary method",
-   "round": 2
+   "round": 2,
+   "note": "round 5 (C4): work and time (inverse proportion by finding the total work) is not an MOE rate outcome; kept as enrichment at Levels 5 and 6 with the hint that gives the method; Low"
   },
   "ratio.make_equal_by_adding": {
    "name": "add to one part to make the two parts equal",
@@ -2974,18 +2981,20 @@
   },
   "strategy.worst_case": {
    "name": "the fewest you must take to be sure of a match (the unlucky case)",
-   "levels": [
+   "levels": [],
+   "kinds": [
+    "worst_case"
+   ],
+   "cite": "MOE Problem solving: reasoning and making a list, p.13; P2-P3 addition and multiplication, pp.33-35",
+   "round": 2,
+   "levels_before": [
     2,
     3,
     4,
     5,
     6
    ],
-   "kinds": [
-    "worst_case"
-   ],
-   "cite": "MOE Problem solving: reasoning and making a list, p.13; P2-P3 addition and multiplication, pp.33-35",
-   "round": 2
+   "retired": "round 5: the colour-pigeonhole draw (\"how many must she pick to be sure of one of every colour / of 7 of one colour\") is in docs/sasmo/g2_original_problems_draft.md 5.3 (a jar of mint, lemon and cherry sweets) and the L6 Skill Additions tutor sheet (socks of the same colour); AUDIT_ROUND5 High/Medium"
   },
   "symbols.insert_signs": {
    "name": "put + or - between numbers to reach a target: how many ways",
@@ -3066,13 +3075,15 @@
   },
   "volume.water_depth": {
    "name": "depth of water poured into a tank (litres and cm3)",
-   "levels": [
+   "levels": [],
+   "kinds": [
+    "water_rise"
+   ],
+   "levels_before": [
     5,
     6
    ],
-   "kinds": [
-    "water_rise"
-   ]
+   "retired": "round 5: pouring litres into a tank of given base and asking for the depth is the P5 holiday/split p5l5 tank frame (base 30 cm by 25 cm, 8 cm deep, 6 L) and p5/content/l5.js; AUDIT_ROUND5 High"
   },
   "word_problems.compare_amounts": {
    "name": "compare two amounts: how many more, a chain of \"more than\" statements, or how many to give so both are equal",
@@ -3653,6 +3664,24 @@
    ],
    "cite": "MOE Problem solving: act it out, look for a pattern, p.13; P2 tables of 2, 3, 4, 5 and 10, p.33",
    "round": 3
+  },
+  "probability.one_pick": {
+   "name": "probability that one pick from a box is (or is not) a colour",
+   "levels": [
+    6
+   ],
+   "kinds": [
+    "prob"
+   ],
+   "where": {
+    "kind": [
+     "marbles"
+    ],
+    "draws": [
+     1
+    ]
+   },
+   "round": 5
   }
  },
  "same_idea_groups": {
@@ -3705,6 +3734,66 @@
    "all": [
     "edge to edge",
     "(?:different|new) shapes?"
+   ]
+  },
+  {
+   "id": "dice_total",
+   "why": "the probability of a total with two dice (the exit slip of practice/holiday/p6/06 uses 'total is 8', answer 5/36)",
+   "all": [
+    "\\bdice\\b|\\bdie\\b",
+    "probab"
+   ]
+  },
+  {
+   "id": "clock_hands_angle",
+   "why": "the angle between the hour hand and the minute hand of a clock (P5 Question Bank, p5/content/l8.js)",
+   "all": [
+    "angle",
+    "hour hand",
+    "minute hand"
+   ]
+  },
+  {
+   "id": "tank_litres_depth",
+   "why": "litres poured into a tank (or mould, barrel, container) of given base: the depth of the water (split p5l5, p5/content/l5.js)",
+   "all": [
+    "\\bbase\\b",
+    "litres?",
+    "(?:depth|deep)"
+   ]
+  },
+  {
+   "id": "equal_rows_ways",
+   "why": "chairs or tiles put in equal rows: how many ways (P2 holiday lesson 3, the L3 Extension Workbook, split p4l1)",
+   "all": [
+    "(?:chairs|tiles)",
+    "equal rows",
+    "how many (?:different )?ways"
+   ]
+  },
+  {
+   "id": "seat_rows_grow",
+   "why": "rows of seats that grow by the same number each row, all rows added (the L3 Extension Workbook hall of 8 rows)",
+   "all": [
+    "rows? of seats|seats in (?:the )?(?:first|each|every) row|row 1 has",
+    "(?:more|extra) seats"
+   ]
+  },
+  {
+   "id": "card_corner_cut",
+   "why": "a card with a corner (square) cut off: the edge or perimeter left (school/p4 S2 puzzles, 'A card is 23 cm by 9 cm')",
+   "all": [
+    "\\bcard\\b",
+    "corner",
+    "(?:cut|chipped|snipped)"
+   ]
+  },
+  {
+   "id": "colour_pigeonhole",
+   "why": "how many must you pick without looking to be sure of one of every colour or of k of one colour (g2 draft 5.3, L6 skill additions)",
+   "all": [
+    "without looking",
+    "to be sure"
    ]
   }
  ]

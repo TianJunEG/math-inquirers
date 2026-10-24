@@ -67,5 +67,145 @@
    "level": 4
   }
  },
- "round4_note": "Round-3 wording of the four High near-copies of AUDIT_ROUND4 section 1 (and L4-fanten, the same fan frame): verify_bank.py --selftest requires the round-4 text rules (story/number rule N, listed-sequence rule L, retired-frame patterns) to FAIL each one, and the frame to be retired in the taxonomy."
+ "round4_note": "Round-3 wording of the four High near-copies of AUDIT_ROUND4 section 1 (and L4-fanten, the same fan frame): verify_bank.py --selftest requires the round-4 text rules (story/number rule N, listed-sequence rule L, retired-frame patterns) to FAIL each one, and the frame to be retired in the taxonomy.",
+ "round5": {
+  "L6-dice8": {
+   "q": "Two fair dice are rolled. Their numbers are added to get a total. Find the probability of a total of 8, as a fraction in its simplest form.",
+   "ans": "5/36",
+   "sol": "List all the pairs that make 8. There are 36 pairs in all. The pairs are (2,6), (3,5), (4,4), (5,3) and (6,2): 5 pairs out of 36. The probability is 5/36.",
+   "sub": "probability.two_dice_sum",
+   "level": 6,
+   "text_rule": "FAIL",
+   "retired_frame": true
+  },
+  "L4-clockfive": {
+   "q": "At 5 o'clock, what is the smaller angle between a clock's hour hand and its minute hand?",
+   "ans": "150",
+   "sol": "The 12 numbers are equally spaced round the clock, and a full turn is 360°. How many degrees is one number? A full turn of 360° is shared by 12 numbers, so one number is 30°. At 5 o'clock the minute hand points at 12 and the hour hand at 5. 5 × 30 = 150°.",
+   "sub": "angles.clock_hands",
+   "level": 4,
+   "text_rule": "FAIL",
+   "retired_frame": true
+  },
+  "L5-tank": {
+   "q": "Jun Hao pours 6 litres of water into an empty tank shaped like a cuboid. The base of the tank measures 30 cm by 25 cm. What is the depth of the water, in centimetres? (1 litre = 1000 cm³.)",
+   "ans": "8",
+   "sol": "Change the litres into cm³. The volume of water is base area times depth. 6 litres = 6000 cm³. The base area is 30 × 25 = 750 cm². 6000 ÷ 750 = 8 cm.",
+   "sub": "volume.water_depth",
+   "level": 5,
+   "text_rule": "FAIL",
+   "retired_frame": true
+  },
+  "L4-chairs24": {
+   "q": "Mr Tan puts 24 chairs in equal rows for a concert. Every row has the same number of chairs. How many different ways can he arrange them? (1 row of 24 counts as one way.)",
+   "ans": "8",
+   "sol": "Find all pairs of numbers that multiply to 24. The pairs are 1 × 24, 2 × 12, 3 × 8, 4 × 6, 6 × 4, 8 × 3, 12 × 2 and 24 × 1. Rows and chairs in a row swap, so there are 8 ways.",
+   "sub": "factors.rectangular_arrays",
+   "level": 4,
+   "text_rule": "FAIL",
+   "retired_frame": true
+  },
+  "L2-tworopes": {
+   "q": "One rope is 2 m 45 cm long. Another rope is 1 m 80 cm long. They are tied end to end, and the knot uses no length. How many centimetres long are the two ropes together?",
+   "ans": "425",
+   "sol": "Change each length to centimetres first. One metre is 100 centimetres. 2 m 45 cm is 245 cm and 1 m 80 cm is 180 cm. 245 + 180 = 425 cm.",
+   "sub": "measurement.compound_units",
+   "level": 2,
+   "text_rule": "ANY",
+   "retired_frame": false
+  },
+  "L3-twentyfour": {
+   "q": "Mei Ling's evening class starts at 8:35 pm and lasts 1 hour 50 minutes. Write the time when the class ends in 24-hour time, as four digits, like 0915.",
+   "ans": "2225",
+   "sol": "Change the start time to 24-hour time first: add 12 to the hour for a pm time. 8:35 pm is 2035 in 24-hour time. One hour later is 2135. Then 50 more minutes make 2225. The class ends at 2225.",
+   "sub": "clock_reading.twenty_four_hour",
+   "level": 3,
+   "text_rule": "ANY",
+   "retired_frame": false
+  },
+  "L6-waterbarrel": {
+   "q": "A water barrel shaped like a cuboid is 80 cm long, 50 cm wide and 45 cm high. How many litres of water does it hold when it is full? (1 litre = 1000 cm³.)",
+   "ans": "180",
+   "sol": "Find the volume in cm³ first. Then change cm³ to litres. 80 × 50 × 45 = 180000 cm³. 180000 ÷ 1000 = 180 L.",
+   "sub": "volume.capacity_in_litres",
+   "level": 6,
+   "text_rule": "FAIL",
+   "retired_frame": false
+  },
+  "L3-tilearrays": {
+   "q": "Mei Ling has 48 square tiles. She puts all of them in equal rows, with the same number of tiles in every row. How many different ways can she do this? (1 row of 48 is one way. 2 rows of 24 and 24 rows of 2 are different ways.)",
+   "ans": "10",
+   "sol": "Try 1 row, 2 rows, 3 rows ... and see which numbers of rows work. The numbers of rows that work are 1, 2, 3, 4, 6, 8, 12, 16, 24 and 48. That is 10 ways.",
+   "sub": "factors.rectangular_arrays",
+   "level": 3,
+   "text_rule": null,
+   "retired_frame": true
+  },
+  "L3-cardcorners": {
+   "q": "A rectangle of card is 14 cm long and 9 cm wide. A square of side 3 cm is cut out of the top right corner. A rectangle 2 cm by 4 cm is cut out of the bottom left corner. How long is the whole edge of the card that is left, all the way round?",
+   "ans": "46",
+   "sol": "Look at what happens to the edge where a corner is cut away: it goes in and then comes out again. A corner cut makes the edge go in and then out again by the same distances, so the edge is as long as before. 2 × (14 + 9) = 46 cm.",
+   "sub": "perimeter_area.notched_perimeter",
+   "level": 3,
+   "text_rule": "ANY",
+   "retired_frame": true
+  },
+  "L3-keyringtray": {
+   "q": "A tray holds 12 pink, 10 orange and 8 purple keyrings. Priya picks keyrings without looking. How many must she pick to be sure of getting at least one of every colour?",
+   "ans": "23",
+   "sol": "Think of the unluckiest case: she keeps picking the two colours with the most keyrings. In the unluckiest case she picks all the pink and orange keyrings first: 12 + 10 = 22. The next keyring must be purple. So she must pick 22 + 1 = 23 keyrings.",
+   "sub": "strategy.worst_case",
+   "level": 3,
+   "text_rule": null,
+   "retired_frame": true
+  },
+  "L4-theatrerows": {
+   "q": "A hall has 20 rows of seats. Row 1 has 15 seats, row 2 has 18 seats, row 3 has 21 seats, and each next row has 3 more seats. Row 20 has 72 seats. How many seats are in all 20 rows?",
+   "ans": "870",
+   "sol": "Pair the first row with the last row, the second row with the one before last, and so on. Row 1 and row 20 have 15 + 72 = 87 seats. Row 2 and row 19 also add to 87. There are 10 such pairs: 10 × 87 = 870 seats.",
+   "sub": "series_sum.add_in_pairs",
+   "level": 4,
+   "text_rule": null,
+   "retired_frame": true
+  },
+  "L5-colourdraw": {
+   "q": "A bowl holds 20 pink, 15 green and 12 orange raffle tickets. Hui Min takes tickets from the bowl without looking. How many must she take to be sure of having 7 tickets of the same colour?",
+   "ans": "19",
+   "sol": "Think of the unluckiest case: she takes as many tickets as possible without having 7 tickets of any colour. The unluckiest case is 6 pink, 6 green and 6 orange tickets, which is 18 tickets. The next ticket must make 7 of one colour, so she must take 18 + 1 = 19 tickets.",
+   "sub": "strategy.worst_case",
+   "level": 5,
+   "text_rule": "ANY",
+   "retired_frame": true
+  },
+  "L4-tilefigures": {
+   "q": "Figure 1 uses 5 tiles, Figure 2 uses 9 tiles and Figure 3 uses 13 tiles. The figures keep growing in the same way. How many tiles does Figure 15 use?",
+   "ans": "61",
+   "sol": "How many tiles does each figure add? Use it to build a rule from the figure number. Each figure adds 4 tiles. The rule is 4 × figure number + 1. For Figure 15: 4 × 15 + 1 = 61 tiles.",
+   "sub": "figure_rule.nth_figure",
+   "level": 4,
+   "text_rule": null,
+   "retired_frame": false
+  },
+  "L6-tankdepth": {
+   "q": "A builder pours 33 litres of liquid concrete into an empty cuboid mould. The base of the mould measures 48 cm by 25 cm. How deep is the concrete, in centimetres? (1 litre = 1000 cm³.)",
+   "ans": "27.5",
+   "sol": "Change the litres into cm³. The volume of the concrete is the area of the base times the depth. 33 litres = 33000 cm³. The area of the base is 48 × 25 = 1200 cm². 33000 ÷ 1200 = 27.5 cm.",
+   "sub": "volume.water_depth",
+   "level": 6,
+   "text_rule": null,
+   "retired_frame": true
+  }
+ },
+ "round5_note": "Round-3 and round-5 wordings of the three High items and the Medium frame copies of AUDIT_ROUND5 section 1. --selftest requires: the text rules S, S3, N2 and G (verify_bank.extra_hits) to FAIL those marked FAIL and to report at least a REVIEW for those marked ANY; the retired_frames patterns of taxonomy.json to catch those marked retired_frame; and the sub-structure to be retired (no level allows it) for L6-dice8, L4-clockfive, L5-tank, L4-chairs24 (factors.rectangular_arrays), L4-tilefigures, L3-keyringtray (strategy.worst_case) and L6-tankdepth.",
+ "round5_retired_sub": {
+  "L6-dice8": "probability.two_dice_sum",
+  "L4-clockfive": "angles.clock_hands",
+  "L5-tank": "volume.water_depth",
+  "L4-chairs24": "factors.rectangular_arrays",
+  "L3-tilearrays": "factors.rectangular_arrays",
+  "L4-tilefigures": "figure_rule.nth_figure",
+  "L3-keyringtray": "strategy.worst_case",
+  "L5-colourdraw": "strategy.worst_case",
+  "L6-tankdepth": "volume.water_depth"
+ }
 }

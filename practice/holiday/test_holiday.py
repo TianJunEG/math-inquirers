@@ -106,6 +106,21 @@ if [bool(f.get('clock')) for f in _fo['fields']] != [False, False, True]: fail('
 if not _flags(dollars_ok=True).get('dollars_ok') or _flags().get('dollars_ok'): fail('dollars_ok default / pass-through')
 _ta = dict(type='text', answer=None, accept=['6'], check=lambda: '6')
 if not _flags(accept_by=True, **_ta).get('accept_by') or _flags(**_ta).get('accept_by'): fail('accept_by default / pass-through')
+# time flag: automatic for hours / minutes labels, time=True for any two boxes, time=False off, paper_note
+def _tm(frame, ans=(5, 25), **kw): return _flags(type='fields', q='What time?', frame=frame, answer=list(ans), check=lambda: list(ans), **kw)
+def _tflags(o): return [bool(f.get('time')) for f in o['fields']]
+for _fr in ('{f1} h {f2} min', '{f1} hours {f2} minutes', '{f1} hr {f2} mins', 'Hours: {f1} Minutes: {f2}', 'The film ends at {f1} h {f2} min.', '{f1} hour {f2} minute'):
+    if _tflags(_tm(_fr)) != [True, False]: fail(f'time not set automatically for {_fr!r}')
+if _tflags(_tm('{f1}:{f2}')) != [False, False]: fail('h:mm boxes must not get time automatically')
+if _tflags(_tm('{f1} h {f2} min', time=False)) != [False, False]: fail('time=False did not switch off')
+if _tflags(_tm('{f1}:{f2}', time=True)) != [True, False]: fail('time=True not passed on')
+if _tflags(_tm('{f1} cm and {f2} m')) != [False, False]: fail('cm / m boxes must not be a time')
+if _tflags(_tm('Add {f1} to {f2} h', ans=(3, 4))) != [False, False]: fail('only a labelled hours + minutes pair is a time')
+try: _flags(time=True); fail('time=True on a number item must fail')
+except H.Fail: pass
+_pn = dict(type='selfcheck', paper=True, open=True, answer=None)
+if 'paper_note' in _flags(**_pn) or 'paper_note' in _flags(paper_note='x', **_pn) and _flags(paper_note='x', **_pn)['paper_note'] != 'x': fail('paper_note default / pass-through')
+if _flags(paper_note='Measure it with a ruler.', **_pn).get('paper_note') != 'Measure it with a ruler.': fail('paper_note not passed on')
 print('1c. the builder sets clock automatically for o\'clock stems with a bare-hour key (not for h:mm boxes), clock=False turns it off, dollars_ok / accept_by are off by default')
 
 
@@ -198,7 +213,7 @@ with sync_playwright() as pw:
         if page.locator('#card .q').inner_text() != dedupe_title(items[i]['q']): fail(f'{items[i]["id"]}: shown question differs from data')
         if page.locator('#sol').count(): fail(f'{items[i]["id"]}: solution visible before submit')
         if items[i].get('paper'):
-            if 'Do this on paper, then check your drawing against the answer shown on screen' not in page.locator('#paper').inner_text(): fail(f'{items[i]["id"]}: no paper note')
+            if (items[i].get('paper_note') or 'Do this on paper (or with your own things), then check it against the answer shown on screen.') not in page.locator('#paper').inner_text(): fail(f'{items[i]["id"]}: no paper note')
             if page.locator('#ans textarea').count(): fail(f'{items[i]["id"]}: paper-only item has a text box')
         enter(page, items[i], alt=i)
     page.locator('#submit').click()
@@ -386,6 +401,8 @@ with sync_playwright() as pw:
         syn('S24', 'core', 'S24. Which letter?', 'text', ['E']),
         syn('S25', 'core', 'S25. Which shapes?', 'text', ['A, C, E, F']),
         syn('S26', 'core', 'S26. Angle sum rule.', 'text', ['(n-2)x180'], poly='n'),
+        syn('S27', 'core', 'S27. A plain number 1, no unit.', 'number', 1, unit=False),
+        syn('S28', 'core', 'S28. How long is the film?', 'fields', [5, 25], frame='{f1} h {f2} min', fields=[dict(id='f1', answer=5, time=True), dict(id='f2', answer=25)]),
     ]
     for it_ in synitems:
         if it_['type'] == 'selfcheck': it_.update(paper=False, paper_only=False, marking_mode='self', open=True); it_.pop('answer')
@@ -436,6 +453,15 @@ with sync_playwright() as pw:
         typed(k, txt); pg.locator('#submit').click()
         if pg.locator('#yes').count(): pg.locator('#yes').click()
         c = cls(pg, k); pg.locator('#again').click(); return c
+    CASES.append((26, ['1', '+1', '+ 1'], ['+-1', '1+', '-1', '+']))
+    def marked_f(k, vals):
+        synq(k); ins = pg.locator('#ans input[type=text]')
+        for j, v_ in enumerate(vals): ins.nth(j).fill(v_)
+        pg.locator('#submit').click()
+        if pg.locator('#yes').count(): pg.locator('#yes').click()
+        c = cls(pg, k); pg.locator('#again').click(); return c
+    for vals, want in ((['5', '25'], 'right'), (['5:25', ''], 'right'), (['5.25', ''], 'right'), (['5 25', ''], 'right'), (['5:30', ''], 'wrong'), (['5', ''], 'wrong'), (['5:25', '30'], 'wrong'), (['', '5:25'], 'wrong'), (['5:2', ''], 'wrong')):
+        if marked_f(27, vals) != want: fail(f'time boxes {vals} should be marked {want} through the page')
     for k, good, badl in CASES:
         for g in good:
             if marked(k, g) != 'right': fail(f'wording {g!r} for synthetic item {k} should be marked right')
@@ -672,7 +698,7 @@ import make_keys                                   # noqa: E402
 _k, _ver, _d, keys, _tags = make_keys.build(0, n, key)
 nmodes = {}
 for it, kr in zip(items, keys):      # every clock / accept_by / dollars_ok the lesson file sets reaches the built data and the server key (clock: True or per-box list)
-    for fl in ('clock', 'accept_by', 'dollars_ok'):
+    for fl in ('clock', 'time', 'accept_by', 'dollars_ok'):
         if src.get(it['id'], {}).get(fl) and not (it.get(fl) or kr.get(fl) or any(f.get(fl) for f in it.get('fields', []))):
             fail(f'{it["id"]}: the lesson file sets {fl} but it did not reach the built data')
         if src.get(it['id'], {}).get(fl) and not kr.get(fl): fail(f'{it["id"]}: the lesson file sets {fl} but it did not reach the server key')
@@ -722,6 +748,12 @@ for it, kr in zip(items, keys):
                 base = [str(g['answer']) for g in it['fields']]
                 ok_ = base[:]; ok_[k_] = f"{f['answer']} o'clock"; cases.append(dict(rec=kr, v=ok_, want='right'))
                 no_ = base[:]; no_[k_] = f"{f['answer']}:30"; cases.append(dict(rec=kr, v=no_, want='wrong'))
+    if t == 'fields' and kr.get('time'):      # hours box + minutes box: a whole time in the first box alone is right, a wrong minute stays wrong
+        th_ = kr['time'].index(True); hh_, mm_ = it['fields'][th_]['answer'], it['fields'][th_ + 1]['answer']
+        base = [str(g['answer']) for g in it['fields']]
+        for sep in (':', '.', ' '):
+            ok_ = base[:]; ok_[th_] = f'{hh_}{sep}{mm_:02d}'; ok_[th_ + 1] = ''; cases.append(dict(rec=kr, v=ok_, want='right'))
+        no_ = base[:]; no_[th_] = f'{hh_}:{(mm_ + 5) % 60:02d}'; no_[th_ + 1] = ''; cases.append(dict(rec=kr, v=no_, want='wrong'))
     if t in ('number', 'fields'):       # number words never count unless the item declares words
         w1 = [f['answer'] for f in it['fields']] if t == 'fields' else [it['answer']]
         if all(0 <= x <= 9 for x in w1) and not it.get('words'):

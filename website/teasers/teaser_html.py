@@ -52,7 +52,23 @@ def compact(e):
         d['x'] = e['accept']
     if e['exact']:
         d['e'] = 1
+    if e['type'] == 's' and e.get('wrong'):
+        d['o'] = [str(w).lower() for w in e['wrong']]        # the other options, so that "Farid plays cricket" is accepted and "Siti plays cricket" is not
+    if e['kind'] == 'calendar_nth':
+        d['dt'] = 1                                           # the answer is a date of an unnamed month: "the 25th", "25 December" are accepted
+    if e['kind'] == 'date_after':
+        d['dt'] = 1
+        d['mo'] = [_next_month(e['p'])]                       # the answer is a day of the next month: "11 November" is accepted, "11 January" is not
     return d
+
+
+_MONTHS = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
+_MLEN = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+
+def _next_month(p):
+    i = [m.lower() for m in _MONTHS].index(p['month'].lower())
+    return _MONTHS[(i + 1) % 12] if p['day'] + p['add'] > _MLEN[i] else _MONTHS[i]
 
 
 def load_month(mm):

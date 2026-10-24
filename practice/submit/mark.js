@@ -7,7 +7,7 @@
 // A KEY record:  { id, marking_mode: 'auto'|'self'|'none', type, key, ordered?, equivalent?, slips? }
 //   number    key: 12              (a unit after the number is ignored: '84 cm2', '84cm^2', '84 cm²', '-25 °C', '11°C'; one pair of brackets round it: '(-25)'; unit:false refuses units;
 //                                    words:true also accepts number words: 'five', 'twenty-five', 'minus five'; no default)
-//   fields    key: [3, 4]               (several boxes; all must be right)
+//   fields    key: [3, 4]               (several boxes; all must be right; time: [true,false] flags an hours box followed by a minutes box: '5:25' in the first box with the second empty is 5 and 25)
 //   set       key: [85, 508], ordered: true|false
 //   choice    key: '<'                  (exact option text)
 //   fraction  key: '3/8', equivalent: false (default: must be in lowest terms) | true (any equal fraction is right)
@@ -58,8 +58,8 @@
     return m ? m[1].replace(/^0+(?=\d)/, '') : null;
   }
   function toNum(s, opt) {
-    s = minus(s).trim();
-    var pb = /^\(\s*([^()]*?)\s*\)\s*(.*)$/.exec(s); if (pb) s = pb[2] ? pb[1] + ' ' + pb[2] : pb[1];   // '(-25)' and '(-25) °C'
+    s = minus(s).trim().replace(/^\+\s*(?=\d)/, '');   // a leading plus sign ('+1', '+ 1') is not a unit and is always accepted; '+-1' and '1+' are not numbers
+    var pb = /^\(\s*([^()]*?)\s*\)\s*(.*)$/.exec(s); if (pb) s = (pb[2] ? pb[1] + ' ' + pb[2] : pb[1]).replace(/^\+\s*(?=\d)/, '');   // '(-25)' and '(-25) °C'
     if (opt && opt.clock) { var ck = clockHour(s); if (ck !== null) s = ck; }
     if (opt && opt.dollars_ok) { var dm = /^\$\s*0?\.(\d\d)\s*\.?$/.exec(s); if (dm) return +dm[1]; }   // '$0.48' for 48 cents, only when the item says dollars_ok
     if (opt && opt.words) { var wn = wordsToNum(s); if (wn !== null) return wn; }
@@ -70,6 +70,19 @@
     if (!opt || opt.unit !== false) { var u = UNITRE.exec(s); if (u && !/\d\s*c(?![a-z])/.test(s)) s = u[1].trim().replace(/\.0+$/, ''); }
     if (/^-?\d{1,3}(?:[, ]\d{3})+$/.test(s)) s = s.replace(/[, ]/g, '');
     return /^-?\d+$/.test(s) ? +s : null;
+  }
+  // Time of day in two boxes (hours, minutes; the builder flags the hours box, item flag time:true): a whole time typed in the FIRST box with the second left empty ('5:25', '5.25', '5 25')
+  // is read as hours 5, minutes 25. Minutes need two digits. A time typed in both boxes is read as typed. flags = list with true at the hours box.
+  function timeFix(arr, flags) {
+    if (!Array.isArray(arr) || !Array.isArray(flags)) return arr;
+    var out = arr.slice(), i, m;
+    for (i = 0; i + 1 < out.length; i++) {
+      if (flags[i] && str(out[i]).trim() !== '' && str(out[i + 1]).trim() === '') {
+        m = /^(\d{1,2})\s*(?:[:.]|\s)\s*(\d{2})$/.exec(minus(str(out[i])).trim());
+        if (m) { out[i] = m[1]; out[i + 1] = m[2]; }
+      }
+    }
+    return out;
   }
   // Reading a typed list. Rule: a comma or space is a thousands separator ONLY when the item is 'grouped' (its answers are 5-digit or longer numbers, or the item
   // says grouped:true) AND the run is a leading group of 1-3 digits followed only by groups of exactly 3 digits joined by a comma or ONE space ('12,500', '12 500').
@@ -250,6 +263,7 @@
   function fopt(rec, i) { return { unit: rec.unit, words: rec.words, pre: rec.pre && rec.pre[i] || '', clock: rec.clock === true || (Array.isArray(rec.clock) && !!rec.clock[i]), dollars_ok: rec.dollars_ok }; }
   function matchSlip(rec, v) { // which listed wrong answer (if any) the child gave: its index, so a report can say why
     var slips = rec.slips || [], got, i;
+    if (rec.type === 'fields') v = timeFix(v, rec.time);
     for (i = 0; i < slips.length; i++) {
       var a = slips[i].a;
       if (rec.type === 'fields' ? (Array.isArray(v) && a.length === v.length && a.every(function (x, k) { return toNum(v[k], fopt(rec, k)) === x; })) :
@@ -268,7 +282,7 @@
       case 'number': ok = toNum(v, nopt(rec)) === key; break;
       case 'choice': ok = str(v) === str(key); break;
       case 'fields': {
-        var arr = Array.isArray(v) ? v : [], boxes = key.map(function (k, i) { return toNum(arr[i], fopt(rec, i)) === k; });
+        var arr = Array.isArray(v) ? timeFix(v, rec.time) : [], boxes = key.map(function (k, i) { return toNum(arr[i], fopt(rec, i)) === k; });
         ok = boxes.every(Boolean) && arr.length === key.length; detail = { boxes: boxes }; break; }
       case 'set': {
         var sm = setMatch(v, key, rec.ordered, rec.grouped), a = sm.a; ok = sm.ok;
