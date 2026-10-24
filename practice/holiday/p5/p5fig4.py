@@ -403,8 +403,8 @@ def para_e_fig(Babc=56, known=(), sol=False):
 # ---------- Think harder / Go further ----------
 def a1_fig(label='3 × B', sol=None):
     """Parallelogram ABCD in which angle A is some times angle B (label text '3 × B' or a template '{k} × B')."""
-    A = (24, 126)
-    B = (170, 126)
+    A = (80, 126)
+    B = (226, 126)
     D = P(A, 80, 135)
     C = (D[0] + 146, D[1])
     s = polygon([A, B, C, D]) + arc(A, B, D, 24, label if sol is None else f'{sol[0]}°', WARM if sol is None else TEAL, 76, 15)

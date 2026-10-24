@@ -233,7 +233,7 @@ ITEMS = [
       src=['Choose a square that does NOT work. Where would its partner have to be?']),
 
     # ================= Investigation: A row of four
-    D(id='Ieasy', tier='invest', no='Investigation (easy step)', label='Inv easy', type='choice', options=['Yes', 'No'], answer='Yes', skill='folding a net in your head', svg=nets_fig([('', net_with(2, 1))]),
+    D(id='Ieasy', tier='invest', no='Investigation (easy step)', label='Inv easy', type='choice', options=['Yes', 'No'], answer='Yes', skill='folding a net in your head', svg=labelled_net_fig(net_with(2, 1), {c: '\u00a0' for c in net_with(2, 1)}, 34, label='A net: a row of 4 squares with one square above and one square below.'),
       check=lambda: 'Yes' if fold(net_with(2, 1)) else 'No',
       q='Here is a net: a row of 4 squares with one square above it and one square below it. Fold it in your head. Does it make a cube?', hint='The row of 4 wraps round. What do the square above and the square below become?',
       steps=['The row of 4 folds round as four walls.', 'The square above becomes the lid and the square below becomes the base. It makes a cube.'],
@@ -300,7 +300,7 @@ ITEMS = [
       steps=['One way: the middle square and the 4 corners (A1, C1, B2, A3, C3), like an X.', 'The other way: the middle square and the 4 squares in the middle of each side (B1, A2, B2, C2, B3), like a plus.'],
       src=['Shade exactly 5 squares of a 3 by 3 grid so that the pattern has 4 lines of symmetry. There are 2 ways.']),
     D(id='G7b', tier='challenge', no='Go further 7', label='G7 both', type='selfcheck', paper=True, skill='shading for symmetry', svg=grid3(), check=lambda: [squares_name(s) for s in FIVE],
-      sol_fig=lambda f: side_by_side([grid3(FIVE[0]), grid3(FIVE[1])], 'The two patterns of 5 shaded squares with 4 lines of symmetry.'),
+      sol_fig=lambda f: side_by_side([grid_cells_fig(set(FIVE[i]), 3, 3, 40, YEL, False, False, (), 'A 3 by 3 pattern.') for i in (0, 1)], 'The two patterns of 5 shaded squares with 4 lines of symmetry.'),
       q='Now find BOTH ways. Shade each pattern on paper, then compare with the two patterns shown after you submit.', hint='Once you have one pattern, look for a different one that still has all 4 folds.',
       steps=['The two patterns are the X (the middle and the 4 corners) and the plus (the middle and the 4 side squares).', 'Both have the up-down, across and two corner-to-corner lines of symmetry.'],
       src=['There are 2 ways. Find both.']),

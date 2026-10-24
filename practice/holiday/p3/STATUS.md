@@ -142,3 +142,43 @@ No card shows another card's answer in a stem, hint or figure (checked by readin
 
 ## Week 3 L1-3 audit follow-up (item level)
 M1 answer leaks reworded, M2 explicit short nav labels, remainder-0 variants excluded (P3 L5 3(b)), long stems shortened, doubled "Make up your own"/"Take-home" lead-ins removed. Print-inherent chains kept as printed (P1 L5 Go further 1(a)/(b), 3(c); P1 L6 Q4/Q5, T3/Q6; P3 L6 5(b), T3). P1 L6 Q5/Q6 keep cents only (printed answers are in cents).
+
+
+---
+
+# Level 3 (ages 8 to 10, key p3): online practice for holiday WEEK 4 (lessons 7 and 8)
+
+Week 4 = lessons 7 and 8 (`website/data/beta_schedule.json`: group L3A, Tue 15 Dec and Fri 18 Dec 2026, lessons n=7 and n=8; `p3/content/l7.js` and `l8.js` also say `week: 4`). Built and tested, NOT deployed; no website/dist, Supabase or sending. Weeks 1 to 3 are described above. Shared files (sheet.js, submit/*, build_holiday.py, hlib.py, test_holiday.py) and earlier lessons were not edited.
+
+Build and test:
+
+    python3 practice/holiday/build_holiday.py p3 7      # -> practice/holiday/p3/07/dist   (git-ignored)
+    python3 practice/holiday/test_holiday.py p3 7       # Chromium, 390 and 900 px, light and dark; proofs in p3/07/proof
+    (same with 8)
+
+## Where the questions come from
+Same as weeks 1 to 3: `p3/workbook_html.js` builds the workbook from `p3/content/l7.js` and `l8.js` (Start here = `workbook(H)`, Think harder 1 to 4 = `qbank.stretch[0..3]`, Go further 5 to 7 = `qbank.challenge[-3:]`, Extra = `deck.takeHome`) and `p3/gifted.json` (Investigation). Items are in `p3/07/lesson.py` and `p3/08/lesson.py`; `build_holiday.py` fails unless every printed fragment occurs in those sources. Figures: `figs_p3_w4.js` prints the workbook's own figures and data (cells of figures A to D, the six angles) from the generator functions; `p3lib_w4.py` redraws them larger, one angle / shape / letter per card, and the lesson files assert that the data (L-shape, staircase, L of 4 squares, shape outlines, letter lines, grid points, fan, window, clocks) equals the printed figures. Clocks and the U shape/# sign/long rectangle are drawn on screen (the printed pages have no picture for Think harder 2, 4 and Go further 6).
+
+## Counts (every item has a hint, a worked solution, tags strand and skill)
+| Lesson | Items | Auto-marked | Self-check | Paper-only drawing | Types | Variant families (all combinations equal the oracle) |
+|---|---|---|---|---|---|---|
+| 7 Area Architects (Area and perimeter) | 42 | 38 | 4 (2 open make-up/own-square) | 0 | fields 12, number 11, choice 7, set 5, text 3, selfcheck 4 | 10 (168) |
+| 8 Angle and Line Detectives (Angles, perpendicular and parallel lines) | 48 | 43 | 2 | 3 | choice 19, number 13, fields 8, set 3, selfcheck 5 | 4 (19) |
+
+Checkers: every answer is recomputed from the figure data: squares and square edges (area, perimeter of A to D, the staircase, every fixed shape of 5 squares for Go further 6), the shoelace rule for the L-shape, every pair of sides for parallel/perpendicular (letters, # sign), corners of each outline by turn direction (right angles vs dents), right angles at every meeting point (window, row of squares), the hands of the clock (30 degrees an hour), staircase outlines for 1 to 59 steps, all six-sided shapes on a 3 by 3 lattice (most right angles is 5, 6 never occurs), directions of lines by cross and dot products.
+
+## Not mirrored one to one, and why
+- Lesson 7 Q1 table: one card per figure (A to D, area and perimeter boxes), then (a) a choice of the pair and (b) typed letters. Q2 list of gardens: lengths, widths and areas are three ordered lists (longest length first, order marked so the pairing is checked), plus a count card and the biggest-area card; the printed "Check: perimeter" column is not an item. Q4: missing sides (boxes), area, perimeter; the printed hint "across = 10 - 6, down = 7 - 4" is not shown (it is the answer). Q5(c) is three cards (perimeter, area, how much more). Q6 ("draw it"): the on-screen version marks nine places A to I where the new square could go; the child types the letter (any of eight for 12 cm, only E for 10 cm) and answers Yes/No for 8 cm plus an explain self-check. The L shape pictures show the squares as drawn; the printed two grids are one picture.
+- Lesson 7 Investigation: easy step (4 boxes), what changed (choice), the 6 cm and 10 cm squares (4 boxes each), own square (open), always true (choice, tested for sides 2 to 40) and an explain self-check with the "move the bottom row" picture. Think harder 1 is three cards (lengths, perimeters in the same order, the shortest). Go further 5 (make up) is open.
+- Lesson 8 Q1: six cards, one angle each (bigger picture); the paper checker is used on the screen as before. Q2: shapes B, C, D (A is "done for you" and quoted in the stem). Q3: counts by size (5 boxes), total, and the take-home 8 lines. Q4: one card per letter (parallel only / perpendicular only / both / neither) instead of two Yes/No rows; Z and N are marked "Extra practice". Q5: drawing with a ruler stays paper-only (the correct line is drawn after Submit); each drawing has a companion card "which numbered line" (auto-marked) so the idea is checked; the printed hint "try 1 right and 2 down" is not shown (it is the answer of the companion). Q6: points card (4 corners, 4 side points, middle) and total.
+- Lesson 8 Investigation: easy step, four rows of the table (one card per staircase with its picture), the 10-step prediction, always even (choice) and why (self-check). Think harder 3 is three set cards (smaller, right, bigger); Go further 5 (make up) is open; Go further 7 is two cards (can it, the most). The hexagon claim is checked by brute force on a 3 by 3 lattice only (plus the printed note "a proof is not expected").
+- Not items: "Look back" page, strategy card, fold-the-checker activity (explained in the About box).
+- Variants only where an arithmetic template with an oracle exists: L7 fence count, Q3, Q4 area/perimeter (with their own L-shape pictures), Q5 staircase area/perimeter (with pictures), 8(b) 6 cm square, Think harder 2, Go further 7, Extra; L8 take-home fan (with fan picture), Go further 6 (with picture), staircase rows 4 and 10 steps.
+
+## Audit rules applied from the start
+No stem, hint, example or figure shows another card's answer (Q5 hint of the printed paper task omitted; Investigation stems do not state the pattern; 6(c) explain is neutral; letter/line cards do not name the result); hints nudge; solutions are checked true for the cases they name; explicit unique labels (at most 12 characters, no "?"); screen wording; make-up and explain cards have marking_mode set.
+
+## Open questions for the owner
+1. Lesson 7 Q6 and Lesson 8 Q5 are drawing tasks on paper in print. Online they use lettered places / numbered lines (auto-marked); the real drawing stays paper-only. Fine?
+2. Same as earlier weeks: should the Investigation and Extra question be visible by default or behind "Want more?"
+3. Lesson 8 uses a paper right-angle checker against the phone screen. Acceptable, or add an on-screen checker later?

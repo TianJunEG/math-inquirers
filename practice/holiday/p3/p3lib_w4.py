@@ -444,7 +444,7 @@ def letter_fig(ch):
     body = ''
     for a, b, c, d in LETTER_SEGS[ch]:
         body += f'<line x1="{x0 + a * k:.1f}" y1="{y0 + b * k:.1f}" x2="{x0 + c * k:.1f}" y2="{y0 + d * k:.1f}" stroke="{h.NAVY}" stroke-width="10" stroke-linecap="round"/>'
-    return h.svg(250, 200, body + h.T(125, 196, 'Letter ' + ch, 22, 'middle', 800), f'The capital letter {ch} drawn with straight lines')
+    return h.svg(250, 232, body + h.T(125, 224, 'Letter ' + ch, 22, 'middle', 800), f'The capital letter {ch} drawn with straight lines')
 
 
 def hash_fig():

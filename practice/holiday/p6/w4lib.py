@@ -145,10 +145,10 @@ def star_fig(n, k, label, caption='', labels=True, dotr=8, r=62):
     """n dots round a circle, joined every k-th dot (k = how many times it goes round); k=0 draws the dots only."""
     edges = [(i, (i + k) % n) for i in range(n)] if k else []
     W = 2 * (r + 34)
-    body = ring_body(W / 2, W / 2 + (6 if caption else 0), r, n, [str(i) for i in range(n)] if labels else [''] * n, dotr, edges, (0,))
+    body = ring_body(W / 2, W / 2 + (24 if caption else 0), r, n, [str(i) for i in range(n)] if labels else [''] * n, dotr, edges, (0,))
     if caption:
         body += T(W / 2, 16, caption, 15, 'middle', 800)
-    return hlib.svg(W, W + (12 if caption else 0), body, label)
+    return hlib.svg(W, W + (28 if caption else 0), body, label)
 
 
 def two_rings(n1, k1, n2, k2, cap1, cap2, label, dotr=8, r=56, labels1=True, labels2=True, every2=None):
@@ -183,10 +183,10 @@ def letter_strip(label='Letter numbers: A is 0, B is 1, C is 2 and so on up to Z
 def clock_week(label, week_hl=6):
     """A 12-hour clock circle and a 7-day week circle side by side (as printed)."""
     r = 52
-    body = ring_body(88, 94, r, 12, ['12'] + [str(i) for i in range(1, 12)], 6, (), (0,), 16)
-    body += ring_body(268, 94, r, 7, ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'], 6, (), (week_hl,), 15, 22)
+    body = ring_body(88, 116, r, 12, ['12'] + [str(i) for i in range(1, 12)], 6, (), (0,), 16)
+    body += ring_body(268, 116, r, 7, ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'], 6, (), (week_hl,), 15, 22)
     body += T(88, 16, 'a 12-hour clock', 14, 'middle', 800) + T(268, 16, 'a week of 7 days', 14, 'middle', 800)
-    return hlib.svg(356, 186, body, label)
+    return hlib.svg(356, 208, body, label)
 
 
 def jump_rings(label, jump=None, cap=True):
@@ -205,10 +205,10 @@ def jump_rings(label, jump=None, cap=True):
                 pos = nxt
                 if pos == 0:
                     break
-        body += ring_body(cx, 98, r, 12, ['12'] + [str(i) for i in range(1, 12)], 6, edges, (0,), 15)
+        body += ring_body(cx, 116, r, 12, ['12'] + [str(i) for i in range(1, 12)], 6, edges, (0,), 15)
         if cap:
             body += T(cx, 16, ('jumps of 5 hours', 'jumps of 4 hours')[ix], 14, 'middle', 800)
-    return hlib.svg(380, 190, body, label)
+    return hlib.svg(380, 208, body, label)
 
 
 def table_svg(head, rows, label, colw=None, fs=15, rh=30, shade=None):

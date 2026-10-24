@@ -46,19 +46,32 @@ def dates(leap=True):
     return out
 
 
+# round 4 (owner ruling C3): sub-structures that a parent sees as one idea (taxonomy 'same_idea_groups') count as ONE unit for every repeat rule
+GROUP_OF = {}
+GROUP_FAM = {}
+for _g, _members in (TAX.get('same_idea_groups') or {}).items():
+    for _m in _members:
+        GROUP_OF[_m] = 'group:' + _g
+    GROUP_FAM['group:' + _g] = _members[0].split('.')[0]
+
+
+def unit(sub):
+    return GROUP_OF.get(sub, sub)
+
+
 def usable(level):
-    return sorted(s for s, d in TAX['subs'].items() if level in d['levels'])
+    return sorted({unit(s) for s, d in TAX['subs'].items() if level in d['levels']})
 
 
 def fam(sub):
-    return sub.split('.')[0]
+    return GROUP_FAM.get(sub) or sub.split('.')[0]
 
 
 def bank(level):
     out = {}
     for mm in RELEASED:
         for e in json.load(open(os.path.join(HERE, 'batches', 'm%s' % mm, 'bank.json'), encoding='utf-8'))['levels'][str(level)]:
-            out[e['date']] = e['sub']
+            out[e['date']] = unit(e['sub'])
     return out
 
 
@@ -67,7 +80,7 @@ def parse_plan(level):
     txt = open(os.path.join(HERE, 'batches', 'YEAR_PLAN.md'), encoding='utf-8').read()
     part = txt.split('## Level %d' % level)[1].split('## Level')[0]
     rows = re.findall(r'^\| (\d+) \| (\d\d-\d\d) \| ([a-z_0-9.]+) \|', part, re.M)
-    return [(int(k), d, s) for k, d, s in rows]
+    return [(int(k), d, unit(s)) for k, d, s in rows]
 
 
 def rotation_year(level, leap):

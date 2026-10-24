@@ -515,12 +515,12 @@ VARIANTS = {
                  steps=['The bag cost {p1}% of ${M}. Take it off to find the money left after the bag.', 'The book cost {p2}% of that money left.', 'Take the book off too. Siti has ${ans} left.']),
         oracle=_o_4c),
     'A1a': dict(
-        base=dict(a=4, p=25),
-        tpl=dict(vars=dict(a=[20, 40, 80, 100, 200], p=[10, 20, 25, 50]), derive=dict(b='a * (100 + p) / 100'),
-                 q='A price went up from ${a} to ${b}. Find the percentage increase. (Type just the number.)', frame='Increase: {f1}%', answers=dict(f1='p'),
+        base=dict(a=4, d=1),
+        tpl=dict(vars=dict(a=[20, 40, 50, 100], d=[2, 4, 10, 20]), derive=dict(b='a + d'),
+                 q='A price went up from ${a} to ${b}. Find the percentage increase. (Type just the number.)', frame='Increase: {f1}%', answers=dict(f1='d * 100 / a'),
                  hint='Percentage change = the change out of the amount you START with.',
-                 steps=['The price went up by ${b} − ${a}.', 'Write that change out of the start, ${a}, as a number out of 100.', 'The increase is {ans} percent.']),
-        oracle=lambda e: dict(f1=_o_a1(e))),
+                 steps=['The price went up by ${b} − ${a} = ${d}.', 'Write that change out of the start, ${a}, as a number out of 100.', 'The increase is {ans} percent.']),
+        oracle=lambda e: dict(f1=pct_of_whole(e['d'], e['a']))),
     'A2d': dict(
         base=dict(n=3),
         tpl=dict(vars=dict(n=[1, 3, 4, 9]),

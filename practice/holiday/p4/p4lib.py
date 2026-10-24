@@ -1436,10 +1436,10 @@ TETRAS = [('line', [(0, 0), (1, 0), (2, 0), (3, 0)]), ('square', [(0, 0), (1, 0)
 
 
 def tetra_fig():
-    c, pw, ph = 26, 90, 112
+    c, pw, ph = 26, 90, 150
     b = ''
     for i, (name, cells) in enumerate(TETRAS):
         px, py = (i % 3) * pw, (i // 3) * ph
         w, h = dims_c(cells)
         b += cells_g(cells, c, px + (pw - w * c) / 2, py + 12 + (4 * c - h * c) / 2, YEL) + T(px + pw / 2, py + 4 * c + 36, name, 16, 'middle', 800, TEAL)
-    return svg(3 * pw, 2 * ph - 10, b, 'The five shapes made of 4 squares joined edge to edge: line, square, L, T and zigzag.')
+    return svg(3 * pw, 2 * ph, b, 'The five shapes made of 4 squares joined edge to edge: line, square, L, T and zigzag.')
