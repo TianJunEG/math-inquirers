@@ -24,7 +24,7 @@ The existing runner (`practice/public/practice.js`, and its Term 1 copy `term/l1
 | Review and retry | "Change my answers and submit again" hides the solutions again and unlocks the answers. "Start again with empty answers" clears. After submit each question with a variant family offers "Try a similar one" (instant check, a new question each time, answer computed). |
 | Privacy | Submit is local. Nothing is sent to any server, there is no account, and the footer says so. |
 
-**New open question (D5): should submitted answers also be sent to the tutor or teacher?** Recommendation: not at launch. It would need an account or a family code, a server table of children's answers, a privacy notice and consent, and a retention rule (the portal README already says the child sign-in is a stub). Offer instead a "Show this to your tutor" view (the marked page on screen) and, later, an optional opt-in "send my result" with counts only (not answers), if the owner wants it.
+**D5 RESOLVED 24 Oct 2026 as SUBMIT-TO-TUTOR (see section 11 and `docs/online_submission_design.md`): submitted answers are sent to Math Inquirers, re-marked on the server, and used for reports. The paragraph below is the earlier analysis, kept for the reasons it lists, which the design now answers.** Earlier recommendation: not at launch. It would need an account or a family code, a server table of children's answers, a privacy notice and consent, and a retention rule (the portal README already says the child sign-in is a stub). Offer instead a "Show this to your tutor" view (the marked page on screen) and, later, an optional opt-in "send my result" with counts only (not answers), if the owner wants it.
 
 ---
 
@@ -127,7 +127,7 @@ Each page folder is self-contained (index.html, `sheet.js`, `data/<key>.json`, f
 
 Linking:
 * Website lesson and level pages: a "Practise online" button on each level page and in each syllabus entry, linking to `/practice/`. The extension and term book product pages say "Online practice included" (if the owner decides it is included, D2).
-* Portal: replace the placeholder `portal/public/practice/index.html` with the product index filtered by the child's level; no sign-in is needed for the pages themselves (the child area only needs the link). The answers are not saved by the portal (D5).
+* Portal: replace the placeholder `portal/public/practice/index.html` with the product index filtered by the child's level; no sign-in is needed for the pages themselves (the child area only needs the link). Answers are sent to the server only after the child signs in with the existing child profile and PIN and the parent has agreed (section 11, D5 resolved); without that, nothing is saved or sent.
 * Books: a short URL or QR code printed at the end of each workbook unit or lesson (`/practice/ext/l2u01/`). Needs a layout slot in the book (small, one line), and a decision on whether the QR goes in print (D1).
 
 ---
@@ -157,13 +157,13 @@ Why this order: term Level 1 is the only product whose data is already complete 
 | # | Decision | Recommendation |
 |---|---|---|
 | D1 | Hosting URL: the main site (`/practice/...` on the current domain), a subdomain (`practice.<domain>`), or the portal path | The main site `/practice/...`: no extra setup, links in books stay short. Needs the real domain to print QR codes. |
-| D2 | Free or paid-only? Free for all, free with a book code, or only for families who bought the book / enrolled | Free to start for the holiday and term pages, with the solutions part linked from the book; revisit after launch. If paid-only is wanted, a short family code checked by the existing worker (`/api/*`) is enough; no accounts needed. |
-| D3 | Accounts | **No accounts.** Everything is local in the browser. Simpler, no children's data, nothing to breach. |
+| D2 | **RESOLVED (owner).** Holiday and term online practice: only families with a confirmed enrolment at that level, plus a few open sample pages that store nothing. Extension online practice: only for the CHILD profile a parent bought it for (one purchase = one child; options workbook only, online only, workbook + online per level). | Section 11. (Earlier options, kept for the record: Free to start for the holiday and term pages, with the solutions part linked from the book; revisit after launch. If paid-only is wanted, a short family code checked by the existing worker (`/api/*`) is enough; no accounts needed.) |
+| D3 | Accounts | **Amended by D5.** No new account system: the existing portal parent account and child profile (name + PIN, no child email) are used. Nothing is sent from a page unless the child signs in and the parent has agreed. Open sample pages still need no sign-in and store nothing. |
 | D4 | Are answers and solutions in the page data? They are in the JSON (needed to mark in the browser). A technically minded child could read them before submitting. | Accept it: the solutions are a teaching aid, and the workbook answer key is also sold. If it matters, move marking behind a worker call later (needs a server and logs). |
-| D5 | Should submitted answers also be sent to the tutor or teacher? | **Not at launch** (privacy, no accounts, consent and retention rules). Later, optional "send my result" with counts only, after a privacy review. |
-| D6 | Is the online page included in the book price, or a separate product | Include; it is a reason to buy the book, and costs nothing per child to host. |
+| D5 | Should submitted answers also be sent to the tutor or teacher? | **RESOLVED: SUBMIT-TO-TUTOR** (owner, 24 Oct). Answers are sent to us, auto-marked again on the server, and used for parent, tutor and owner reports. Goes live only after the privacy wording is reviewed (design doc section 8, lawyer question 11). |
+| D6 | Is the online page included in the book price, or a separate product | **Implied by the owner's three options per extension level:** workbook only, online only, workbook + online (separate SKUs; prices on hold). Earlier thought: Include; it is a reason to buy the book, and costs nothing per child to host. |
 | D7 | Do pages show the marked count ("12 of 44 right")? Counts are not a score or a ranking, but some owners will not want any number. | Keep the plain count; it is the same as a teacher marking, and the child sees which ones to redo. Can be removed in one line. |
-| D8 | Holiday paper-only questions (kit cut-outs, ruler, drawing) | Leave them out of the online page, with a line "do this one on paper". |
+| D8 | Holiday paper-only questions (kit cut-outs, ruler, drawing) | **RESOLVED (owner amended D8):** they are NOT left out. Show the question with a short note ("Do this on paper, then check your drawing against the answer shown on screen.") and, after Submit, the answer or worked solution (with a figure of the correct drawing where one exists). They are **self-checked** items (marking_mode `self`): the child may tick "I checked / I got it / not yet"; never auto-marked; reported separately as "checked on paper"; excluded from auto-marked counts. Effort consequence: these items need a **solution figure**, not a checker. |
 | D9 | QR code or short link printed in the books (layout slot and reprint) | Add a one-line link at the end of each unit or lesson in the next print run. |
 
 ---
@@ -192,3 +192,42 @@ Ongoing: a nightly or pre-release script runs gates 1 to 5 for every page; the b
 * Not done: any publishing, linking from the live site or portal, QR codes, changes to `term/l1/` (another agent is editing it) or to the old runner.
 * Not verified: that every Term 1 check file covers the online items (their template oracles); Phase 1 starts by confirming this.
 * The holiday question bank may not be the same text as the workbook pages (section 5, point 3).
+
+---
+
+## 11. Online submission to Math Inquirers (D5 resolved as SUBMIT-TO-TUTOR), added 24 Oct 2026
+
+Design, SQL draft, prototype and tests: `docs/online_submission_design.md`. Nothing is deployed, applied or sent.
+
+**What the owner decided and how the plan changes**
+
+| Decision | Effect on this plan |
+|---|---|
+| SUBMIT-TO-TUTOR (D5) | Submitted answers go to a server table, for reports. Needs the existing portal child profile sign-in, a new parent consent (`online_practice`), PDPA notice, retention and deletion rules, and a lawyer question (question 11). Nothing goes live before the privacy wording is reviewed. |
+| Auto-marking | The browser marks instantly (as in the pilot); the server marks again from its own answer key at submission and the reports use only the server mark. `practice/submit/mark.js` is the shared marking code. |
+| D2 | Holiday and term: confirmed enrolment at that level. Extension: one purchase = one child (workbook only / online only / both, per level). Open sample pages store nothing. Extension buyers need no enrolment or group. |
+| D8 amended | Paper-only items stay online as self-checked items (see D8 row above). |
+| Funnel | Extension books lead parents (never children) to a free trial class request; separate optional marketing consent. |
+
+**Generator coverage and what cannot be auto-marked** (counts from the plan's own data, section 4 point 6 and the Term 1 type counts):
+
+| Product | Auto-marked now (pilot rules) | Auto-markable after Phase 2 rules (text, fraction, decimal, already written and tested in `mark.js`) | Never auto-marked |
+|---|---|---|---|
+| Extension (2,733 answered parts) | whole numbers 1,991 + lists 112 + circle-a-choice 356 = 2,459 (90.0%) | + other text 167 (6.1%) + decimals 97 (3.5%) = 2,723 (99.6%) | open items 10 (0.4%), plus paper-only drawing items, which are self-checked and need a solution figure |
+| Term Level 1 (509 items) | number 329, choice 108, set 9, fields 24 = 470 (92.3%) | same | self-check 39 (7.7%) |
+| Holiday (about 1,470 items, estimate) | none yet: needs structured answers first (section 5); about 75% expected auto-marked by analogy | about 75% | the remaining about 25%: self-checked (drawing, ruler, kit) or open |
+
+**Added effort (agent-hours, estimates, on top of section 7):**
+
+| Work | Hours |
+|---|---|
+| Per-item MOE strand and skill tags for the extension units (1,330 items, about 1 minute each) so reports can say strengths and needs by topic | 20 to 25 |
+| Wire the worker route, Supabase scratch project trial, real-database tests of the SQL and the child-session flow (the SQL is only tested on local PostgreSQL) | 10 to 14 |
+| Portal screens: child sign-in minting the session token, consent card split by family type, buy-a-book flow (child, format, address), parent report view, admin tabs (orders, grant or revoke, ship status, reports, trial requests, funnel counts) | 30 to 40 |
+| Stripe: extension order checkout and webhook (reuse `portal/functions`), refund handling | 10 to 12 |
+| Gating the practice data file behind the entitlement (optional, see design section 3) | 6 to 8 |
+| Solution figures for paper-only items (holiday and extension), about 5 minutes each; count to be measured when the holiday items are structured | 20 to 40 |
+| Tests, audit and owner walkthrough for the above | 15 to 20 |
+| **Added total** | **about 110 to 160** |
+
+**Phase placement:** Phase 0 gets the server prerequisites (sections 3 and 4 of the design) and the consent and privacy review in parallel, so that Phase 1 (term Level 1) can send answers when its privacy sign-off is done. Extension pages are sold only after the shop is live and the three SKUs and prices exist (prices are on hold).
