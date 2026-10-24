@@ -1216,6 +1216,8 @@ def num_unit_grams(sentence):
     for i in range(len(t) - 2):
         g = t[i:i + 3]
         if any(x[0].isdigit() for x in g) and any((not x[0].isdigit()) and x not in FUNC for x in g):
+            if any(x in ('cent', 'cents', 'c') for x in g) and all((not x[0].isdigit()) or x in ('5', '10', '20', '50') for x in g):
+                continue                 # Singapore coin denominations ("20-cent and 50-cent coins") are not a number-unit fingerprint
             out.add(' '.join(g))
     return out
 
@@ -1321,7 +1323,7 @@ def extra_hits(q, ans, sol, cw):
             # S, whole question against a window
             if not why and len(S) >= 5 and len(shared) >= 5 and len(shared) / len(S) >= 0.7 and (not mine or mine <= nums):
                 spec_n = len([w for w in shared if cw.df.get(w, 0) <= 2500])
-                if len(txt) <= 400 and spec_n >= 3 and (mine or len(shared) >= 7) and '?' in txt:
+                if len(txt) <= 400 and spec_n >= 2 and (mine or len(shared) >= 7) and '?' in txt:
                     why = 'rule S (window): %d of %d content words (%s) and all the numbers in "%s ..."' % (len(shared), len(S), ','.join(sorted(shared)), txt[:90])
                 elif review is None:
                     review = ('REVIEW', 'rule S (window): %d of %d content words (%s) in "%s ..." (%s)' % (len(shared), len(S), ','.join(sorted(shared)), txt[:70], ix.rels[ix.file[a]]))

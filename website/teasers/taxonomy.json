@@ -1225,7 +1225,8 @@
      "same_digits",
      "digit_less",
      "digit_product",
-     "increasing"
+     "increasing",
+     "digit_sum"
     ]
    },
    "merged_from": [
