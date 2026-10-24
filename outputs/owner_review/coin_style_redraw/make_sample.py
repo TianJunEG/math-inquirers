@@ -109,7 +109,7 @@ def coin(cx, cy, key):
         pts = []
         for i in range(721):
             a = math.radians(i/2)
-            rr = r*(0.985 + 0.015*math.cos(12*a))
+            rr = (r - 0.17)*(0.985 + 0.015*math.cos(12*a))
             pts.append(f"{cx+rr*math.cos(a):.3f},{cy+rr*math.sin(a):.3f}")
         add(f'<polygon points="{" ".join(pts)}" fill="url(#r{cid})" stroke="{edge}" stroke-width="0.35"/>')
     else:
