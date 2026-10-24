@@ -2451,12 +2451,12 @@
      "step": 1,
      "label_every": 1,
      "labels": {
+      "2": "",
       "3": "10:45"
      },
      "hide": [
       0,
-      1,
-      2
+      1
      ],
      "jumps": [
       [
@@ -3206,16 +3206,16 @@
     "id": "t3",
     "tier": "stretch",
     "type": "fields",
-    "q": "The clock shows 7 o'clock. What time was it half an hour before?",
+    "q": "The concert starts at 7 o'clock. Siti sits down half an hour before it starts. What time does she sit down?",
     "hint": "Go back half an hour from 7 o'clock.",
     "steps": [
      "Go back 30 minutes from 7 : 00.",
      "The hour goes back one and the long hand is on the 6.",
-     "It was 6 : 30."
+     "She sits down at 6 : 30."
     ],
     "slips": [],
     "easier": "c2",
-    "frame": "Half an hour before it was {a} : {b}.",
+    "frame": "She sits down at {a} : {b}.",
     "fields": [
      {
       "id": "a",
@@ -3256,8 +3256,8 @@
      "derive": {
       "s": "h-1"
      },
-     "q": "The clock shows {h} o'clock. What time was it half an hour before?",
-     "frame": "Half an hour before it was {a} : {b}.",
+     "q": "The concert starts at {h} o'clock. Siti sits down half an hour before it starts. What time does she sit down?",
+     "frame": "She sits down at {a} : {b}.",
      "answers": {
       "a": "s",
       "b": "30"
@@ -3266,7 +3266,7 @@
      "steps": [
       "Go back 30 minutes from {h} : 00.",
       "The hour goes back one and the long hand is on the 6.",
-      "It was {s} : 30."
+      "She sits down at {s} : 30."
      ]
     }
    },
@@ -3274,55 +3274,61 @@
     "id": "g1",
     "tier": "challenge",
     "type": "fields",
-    "q": "Mi has painting for 1 hour, then a story for half an hour, then a snack for half an hour. The snack ends at 6:30 pm. When did the painting start?",
-    "hint": "Go back half an hour, then half an hour, then 1 hour.",
+    "q": "Mei starts to jog at 4:30. She jogs for 1 hour, then she stretches for half an hour. What time does she stop stretching?",
+    "hint": "Add 1 hour to 4:30. Then add half an hour.",
     "steps": [
-     "Half an hour back from 6:30 is 6:00. The snack started then.",
-     "Half an hour back from 6:00 is 5:30. The story started then.",
-     "1 hour back from 5:30 is 4 : 30."
+     "1 hour after 4:30 is 5:30.",
+     "Half an hour after 5:30 is 6:00.",
+     "She stops stretching at 6 : 00."
     ],
     "slips": [],
-    "easier": "t3",
-    "frame": "The painting started at {a} : {b}.",
+    "easier": "t1",
+    "frame": "She stops stretching at {a} : {b}.",
     "fields": [
      {
       "id": "a",
-      "answer": 4
+      "answer": 6
      },
      {
       "id": "b",
-      "answer": 30
+      "answer": 0,
+      "pad": 2
      }
     ],
     "tpl": {
      "vars": {
       "h": [
+       1,
+       2,
+       3,
        4,
        5,
        6,
        7,
        8,
        9,
-       10,
-       11
+       10
       ]
      },
      "derive": {
-      "p": "h-1",
-      "r": "h-2"
+      "p": "h+1",
+      "e": "h+2"
      },
-     "q": "Mi has painting for 1 hour, then a story for half an hour, then a snack for half an hour. The snack ends at {h}:30 pm. When did the painting start?",
-     "frame": "The painting started at {a} : {b}.",
+     "q": "Mei starts to jog at {h}:30. She jogs for 1 hour, then she stretches for half an hour. What time does she stop stretching?",
+     "frame": "She stops stretching at {a} : {b}.",
      "answers": {
-      "a": "r",
-      "b": "30"
+      "a": "e",
+      "b": "0"
      },
-     "hint": "Go back half an hour, then half an hour, then 1 hour.",
+     "hint": "Add 1 hour to {h}:30. Then add half an hour.",
      "steps": [
-      "Half an hour back from {h}:30 is {h}:00. The snack started then.",
-      "Half an hour back from {h}:00 is {p}:30. The story started then.",
-      "1 hour back from {p}:30 is {r} : 30."
-     ]
+      "1 hour after {h}:30 is {p}:30.",
+      "Half an hour after {p}:30 is {e}:00.",
+      "She stops stretching at {e} : 00."
+     ],
+     "pad": {
+      "b": 2
+     }
     }
    },
    {

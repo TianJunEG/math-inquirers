@@ -86,7 +86,7 @@ def lines_of(fig):
 # ---------------------------------------------------------------- online practice oracles (brute force)
 def _c1(e): return len([1 for r in range(e['r']) for c in range(e['c'])])
 def _c2(e): return len([1 for b in range(e['a']) for s in range(e['b'])])
-def _c5(e): return len(ways(e['c'], e['c']))
+def _c5(e): return len(ways(e['a'], e['b']))
 def _t1(e): return len(handshakes(e['n']))
 def _t2(e): return len(all_squares(e['k'], e['k']))
 def _t3(e): return len(pairs_total(e['t']))
@@ -96,7 +96,7 @@ def _r2(e): return len([1 for _ in range(3) for _ in range(e['p'])])
 
 
 ORACLES = {'c1': _c1, 'c2': _c2, 'c5': _c5, 't1': _t1, 't2': _t2, 't3': _t3, 'g1': _g1, 'r1': _r1, 'r2': _r2}
-BASE_ENV = {'c1': dict(r=3, c=4), 'c2': dict(a=4, b=3), 'c5': dict(c=2), 't1': dict(n=5), 't2': dict(k=2), 't3': dict(t=8), 'g1': dict(a=2, b=4), 'r1': dict(a=6, b=5), 'r2': dict(p=7)}
+BASE_ENV = {'c1': dict(r=3, c=4), 'c2': dict(a=4, b=3), 'c5': dict(a=2, b=3), 't1': dict(n=5), 't2': dict(k=2), 't3': dict(t=8), 'g1': dict(a=2, b=4), 'r1': dict(a=6, b=5), 'r2': dict(p=7)}
 
 
 def run(d):

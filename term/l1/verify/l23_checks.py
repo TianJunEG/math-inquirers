@@ -104,7 +104,7 @@ ORACLES = {
     't1': lambda e: _fields(step(mins(e['h'], 30), 30)),
     't2': lambda e: _fields(step(mins(e['h'], 15), 30)),
     't3': lambda e: _fields(step(mins(e['h'], 0), -30)),
-    'g1': lambda e: _fields(step(step(step(mins(e['h'], 30), -30), -30), -60)),
+    'g1': lambda e: _fields(step(step(mins(e['h'], 30), 60), 30)),
 }
 BASE_ENV = {}
 
@@ -202,7 +202,7 @@ def run(d):
     end = mins(10, 45, 'am'); pe_start = end - 60; story_start = pe_start - 30
     eq([show(pe_start, True), show(story_start, True)], ['9:45 am', '9:15 am'], 'G1'); eq(q['val'], ['No', '9:45 am', '9:15 am'], 'G1 val')
     eq(story_start + 30 + 60, end, 'G1 forward check'); eq(parse('9:45 am') == pe_start and parse('9:45 am') != story_start, True, 'G1 Siti names the end of story time, not its start')
-    eq(nlq['hide'], [0, 1, 2], 'G1 the unknown ticks are boxes'); eq(parse(nlq['labels']['3']) % 720, end % 720, 'G1 last tick is the end time')
+    eq(nlq['hide'], [0, 1], 'G1 only the two asked ticks (PE start, story start) are boxes; the tick between has no box'); eq(nlq['labels']['2'], '', 'G1 the middle tick has no label and no box'); eq(len(nlq['hide']), len([p for p in q['parts'] if p['l'] in 'bc']), 'G1 one box for each time asked'); eq(parse(nlq['labels']['3']) % 720, end % 720, 'G1 last tick is the end time')
     eq([j[0:2] for j in nlq['jumps']], [[0, 1], [1, 3]], 'G1 jumps: story 1 tick, PE 2 ticks (a tick is half an hour)')
     q = X['E1']; eq('6:30' in q['text'] and '1 hour' in q['text'], True, 'E1 text'); eq(show(parse(q['text']) + 60), '7:30', 'E1'); eq(q['val'], ['7:30'], 'E1 val')
     q = X['E2']; opts = q['mcq']['options']; right = [i + 1 for i, o in enumerate(opts) if parse(o) == mins(2, 0) + 30]
@@ -221,7 +221,7 @@ def run(d):
         it = items[cid]; eq(hm(step(mins(h, m), add)), want, cid + ' authored'); eq([f['answer'] for f in it['fields']], list(want), cid + ' fields')
         eq((it['fig_base']['h'], it['fig_base']['m']), (h, m), cid + ' picture')
     eq(hm(step(mins(7, 0), -30)), (6, 30), 't3 authored'); eq([f['answer'] for f in items['t3']['fields']], [6, 30], 't3 fields')
-    eq(hm(step(step(step(mins(6, 30), -30), -30), -60)), (4, 30), 'g1 authored'); eq([f['answer'] for f in items['g1']['fields']], [4, 30], 'g1 fields')
+    eq(hm(step(step(mins(4, 30), 60), 30)), (6, 0), 'g1 authored'); eq([f['answer'] for f in items['g1']['fields']], [6, 0], 'g1 fields')
     eq(items['c4']['answer'], 'half an hour', 'c4 authored'); eq(items['c5']['answer'], 60 // 2, 'c5'); eq(items['g2']['answer'], 60 + 30, 'g2')
     for it in items.values():
         for s_ in it.get('slips', []):

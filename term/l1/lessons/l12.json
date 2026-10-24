@@ -167,11 +167,11 @@
  },
  "sneak_peek": {
   "q1": "Mei has 5 stickers. Ali has 3 more stickers than Mei. How many stickers does Ali have? You may draw strips.",
-  "q2": "Ali has 14 stickers. Ben has 10 stickers. Ali gives some stickers to Ben. Then they have the same number. How many stickers does Ali give? Write the number.",
+  "q2": "A red bus has 18 children. A blue bus has 10 children. Some children get off the red bus and get on the blue bus. Then both buses have the same number of children. How many children are on the red bus now? Write the number.",
   "a1": "8. Ali has Mei's 5 and 3 more: 5 + 3 = 8.",
-  "a2": "2. Together they have 24, so each has 12 at the end. Ali goes from 14 to 12, so he gives 2. (The gap of 4 is shared: half of 4 is 2.)",
+  "a2": "14. Together the buses carry 28 children, so each bus has 14 at the end. The red bus goes from 18 to 14, so 4 children move. (The gap of 8 is shared: half of 8 is 4, and 18 take away 4 is 14.)",
   "val1": 8,
-  "val2": 2
+  "val2": 14
  },
  "rec": {
   "opening": {
@@ -389,7 +389,7 @@
      },
      {
       "k": "READ",
-      "text": "Puzzle two. Ali has 14 stickers. Ben has 10 stickers. Ali gives some stickers to Ben. Then they have the same number. How many stickers does Ali give? Write the number."
+      "text": "Puzzle two. A red bus has 18 children. A blue bus has 10 children. Some children get off the red bus and get on the blue bus. Then both buses have the same number of children. How many children are on the red bus now? Write the number."
      },
      {
       "k": "WORK",
@@ -402,7 +402,7 @@
      },
      {
       "k": "NOTE",
-      "text": "Puzzle 1 answer: 8. Puzzle 2 answer: 2, because the gap of 4 is shared in two. A child who says 4 gave the whole gap; a child who says 5 or 7 guessed. Look for a drawing of two strips. Do not write scores or keep a list."
+      "text": "Puzzle 1 answer: 8. Puzzle 2 answer: 14, because the gap of 8 is shared in two: 4 children move and the red bus has 14 left. A child who says 4 found how many children move, not how many are on the red bus; a child who says 10 or 18 gave back a number from the story. Look for a drawing of two strips. Do not write scores or keep a list."
      }
     ]
    },
@@ -652,11 +652,11 @@
      },
      {
       "k": "SAY",
-      "text": "And another. Ali has 30 stickers and Mei has 18. Ali gives some to Mei so they have the same. The gap is 12."
+      "text": "And another. A red tower has 28 cubes and a blue tower has 16. A builder moves cubes from red to blue until the towers are the same height. The gap is 12."
      },
      {
       "k": "SAY",
-      "text": "Why half? If Ali gave all 12, Mei would have 12 more than Ali. So Ali gives only half of the gap: 6. Mei gains 6 and Ali loses 6."
+      "text": "Why half? If all 12 moved, the blue tower would be 12 taller. So half of the gap moves: 6. Each tower now has 22 cubes."
      },
      {
       "k": "NOTE",
@@ -810,7 +810,7 @@
      },
      {
       "k": "SAY",
-      "text": "Remember puzzle two? Ali has 14 and Ben has 10. The gap is 4. Ali gives half of the gap to Ben: 2 stickers. Then both have 12."
+      "text": "Remember puzzle two? Red bus 18, blue bus 10. The gap is 8. Half of it, 4 children, moves. Both buses have 14."
      },
      {
       "k": "ASK",
@@ -1132,16 +1132,16 @@
         "t": "card",
         "head": "PUZZLE 2: think",
         "items": [
-         "Ali has 14 stickers. Ben has 10 stickers.",
-         "Ali gives some to Ben. Then they have the same number.",
-         "How many does Ali give?"
+         "A red bus has 18 children. A blue bus has 10 children.",
+         "Some children move from the red bus to the blue bus. Then both buses have the same number.",
+         "How many children are on the red bus now?"
         ]
        }
       ]
      ]
     }
    ],
-   "note": "Puzzle 1 is an access question: any child can draw or count. Puzzle 2 is a thinking question on the idea of the lesson: the gap is shared when two amounts are made equal. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper and keep it. Nobody holds paper to the camera and there is no private chat. Answers: 8; 2. Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
+   "note": "Puzzle 1 is an access question: any child can draw or count. Puzzle 2 is a thinking question on the idea of the lesson: the gap is shared when two amounts are made equal. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper and keep it. Nobody holds paper to the camera and there is no private chat. Answers: 8; 14. Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
   },
   {
    "id": "s-explore1",
@@ -1562,14 +1562,14 @@
      "mode": "compare",
      "bars": [
       {
-       "name": "Ali",
-       "len": 30,
-       "text": "30"
+       "name": "Red",
+       "len": 28,
+       "text": "28"
       },
       {
-       "name": "Mei",
-       "len": 18,
-       "text": "18"
+       "name": "Blue",
+       "len": 16,
+       "text": "16"
       }
      ],
      "arrow": {
@@ -1580,19 +1580,19 @@
     },
     {
      "t": "card",
-     "head": "ALI HAS 30. MEI HAS 18.",
+     "head": "RED TOWER 28. BLUE TOWER 16.",
      "items": [
-      "Ali gives some to Mei so they have the same.",
+      "Cubes move from red to blue until the towers are the same height.",
       "The gap is 12."
      ]
     },
     {
      "t": "chip",
      "reveal": true,
-     "text": "Ali gives half of the gap: 6."
+     "text": "Half of the gap moves: 6. Each tower has 22."
     }
    ],
-   "note": "THINK HARDER PREVIEW: Start here never needs this idea. Ali gives some stickers to Mei so they have the same. The gap is 12. If Ali gives all 12, Mei would have 12 more than Ali. Ali gives half of the gap, 6: Ali has 24 and Mei has 24. Check: 30 take away 6 is 24 and 18 and 6 is 24. Ask: why half of the gap? Take one answer and move on."
+   "note": "THINK HARDER PREVIEW: Start here never needs this idea. A builder moves cubes from the red tower (28) to the blue tower (16) until the towers are the same height. The gap is 12. If the builder moved all 12, the blue tower would be 12 taller than the red tower. Half of the gap, 6, moves: each tower has 22 cubes. Check: 28 take away 6 is 22 and 16 and 6 is 22. Ask: why half of the gap? Take one answer and move on."
   },
   {
    "id": "s-break",
@@ -1771,12 +1771,12 @@
      "mode": "compare",
      "bars": [
       {
-       "name": "Ali",
-       "len": 14,
-       "text": "14"
+       "name": "Red",
+       "len": 18,
+       "text": "18"
       },
       {
-       "name": "Ben",
+       "name": "Blue",
        "len": 10,
        "text": "10"
       }
@@ -1786,15 +1786,15 @@
        0,
        1
       ],
-      "text": "4"
+      "text": "8"
      }
     },
     {
      "t": "answer",
-     "text": "Ali gives 2. The gap of 4 is shared: both have 12."
+     "text": "4 children move. The gap of 8 is shared: both buses have 14."
     }
    ],
-   "note": "Reveal puzzle 2 now. Ali has 14 and Ben has 10. The gap is 4. Ali gives half of the gap, 2, so Ali has 12 and Ben has 12. If Ali gave all 4, Ben would have 4 more than Ali. Say: some of you may have found a good reason. Do not read out anyone's earlier answer."
+   "note": "Reveal puzzle 2 now. The red bus has 18 and the blue bus has 10. The gap is 8. Half of the gap, 4 children, move, so the red bus has 14 and the blue bus has 14. If all 8 moved, the blue bus would have 8 more than the red bus. Say: some of you may have found a good reason. Do not read out anyone's earlier answer."
   },
   {
    "id": "s-exit",
@@ -2793,10 +2793,10 @@
   {
    "id": "H5",
    "tier": "go",
-   "text": "Mei has 24 stickers. Lily has 10 stickers. Mei gives some stickers to Lily. Then they have the same number. How many stickers does Mei give?",
-   "answer": "7 stickers",
-   "val": 7,
-   "solution": "Together they have 34, so each has 17 at the end. Mei goes from 24 to 17, so she gives 7. Half of the gap of 14 is 7."
+   "text": "Basket A has 26 apples. Basket B has 10 apples. Ben moves some apples from basket A to basket B. Then both baskets have the same number of apples. How many apples are in basket B now?",
+   "answer": "18 apples",
+   "val": 18,
+   "solution": "Together the baskets have 36 apples, so each basket has 18 at the end. Basket B goes from 10 to 18. (8 apples move: half of the gap of 16 is 8.)"
   }
  ],
  "online_practice": {

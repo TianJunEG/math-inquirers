@@ -2653,38 +2653,42 @@
     "id": "c5",
     "tier": "core",
     "type": "number",
-    "q": "Ben picks a top scoop and a bottom scoop from 2 flavours. The scoops can be the same. How many ways can he choose?",
-    "hint": "Each top scoop goes with every bottom scoop.",
+    "q": "A castle has 2 gates in its north wall and 3 gates in its south wall. A guard walks in by a north gate and out by a south gate. How many different ways can she go?",
+    "hint": "Each north gate goes with every south gate.",
     "steps": [
-     "One top scoop goes with 2 bottom scoops.",
-     "There are 2 top scoops.",
-     "2 and 2 make 4 ways."
+     "One north gate goes with 3 south gates.",
+     "There are 2 north gates.",
+     "3 and 3 make 6 ways."
     ],
-    "answer": 4,
+    "answer": 6,
     "slips": [
      {
       "a": [
-       3
+       5
       ],
-      "say": "Do not add 2 and 1. Each top scoop goes with every bottom scoop."
+      "say": "Do not add 2 and 3. Each north gate goes with every south gate."
      }
     ],
     "tpl": {
      "vars": {
-      "c": [
+      "a": [
+       2,
+       3
+      ],
+      "b": [
        2,
        3,
        4
       ]
      },
      "derive": {},
-     "q": "Ben picks a top scoop and a bottom scoop from {c} flavours. The scoops can be the same. How many ways can he choose?",
-     "answer": "c*c",
-     "hint": "Each top scoop goes with every bottom scoop.",
+     "q": "A castle has {a} gates in its north wall and {b} gates in its south wall. A guard walks in by a north gate and out by a south gate. How many different ways can she go?",
+     "answer": "a*b",
+     "hint": "Each north gate goes with every south gate.",
      "steps": [
-      "One top scoop goes with {c} bottom scoops.",
-      "There are {c} top scoops.",
-      "Add {c} once for each top scoop: {ans} ways."
+      "One north gate goes with {b} south gates.",
+      "There are {a} north gates.",
+      "Add {b} once for each north gate: {ans} ways."
      ]
     }
    },

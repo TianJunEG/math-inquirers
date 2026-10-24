@@ -90,12 +90,12 @@ def _t3(e):
 
 
 def _g1(e):
-    t = 2 * e['s'] + e['d']
-    return [y for x, y in pairs_that_make(t) if y - x == e['d']][0]
+    t = 3 * e['m']
+    return [x + 2 for x in range(0, t + 1) if x + (x + 1) + (x + 2) == t][0]
 
 
 def _g2(e):
-    return len(pairs_that_make(e['t']))
+    return len([x for x in range(11, e['b']) if len(set(str(x))) == 1])
 
 
 def _r1(e):
@@ -107,7 +107,7 @@ def _r2(e):
 
 
 ORACLES = {'c1': _c1, 'c2': _c2, 'c5': _c5, 't1': _t1, 't3': _t3, 'g1': _g1, 'g2': _g2, 'r1': _r1, 'r2': _r2}
-BASE_ENV = {'c1': dict(a=4, b=11), 'c2': dict(s=5, d=6), 'c5': dict(r=9, a=5), 't1': dict(a=5, b=11), 't3': dict(a=8, b=6), 'g1': dict(s=5, d=4), 'g2': dict(t=9), 'r1': dict(a=5), 'r2': dict(w=2)}
+BASE_ENV = {'c1': dict(a=4, b=11), 'c2': dict(s=5, d=6), 'c5': dict(r=9, a=5), 't1': dict(a=5, b=11), 't3': dict(a=8, b=6), 'g1': dict(m=5), 'g2': dict(b=40), 'r1': dict(a=5), 'r2': dict(w=2)}
 
 # ---------------------------------------------------------------- the registry of class numbers (entries with 3 or more numbers are compared)
 CLASS_ITEMS = {'rem1': [3, 6, 9, 12], 'rem2': [8, 6], 'rem3': [7, 5, 4], 'rem3-turn': [9, 3, 6], 'sneak1': [6, 4], 'sneak2': [3, 8],
@@ -234,7 +234,7 @@ def run(d):
     # ---------------------------------------------------------------- online practice, authored numbers
     items = {i['id']: i for i in d['online_practice']['items']}
     eq(items['c1']['answer'], _c1(dict(a=4, b=11)), 'c1'); eq(items['c2']['answer'], _c2(dict(s=5, d=6)), 'c2'); eq(items['c5']['answer'], _c5(dict(r=9, a=5)), 'c5'); eq(items['t1']['answer'], _t1(dict(a=5, b=11)), 't1'); eq(items['t3']['answer'], _t3(dict(a=8, b=6)) , 't3 right answer is a + b (14)')
-    eq(items['g1']['answer'], _g1(dict(s=5, d=4)), 'g1'); eq(items['g2']['answer'], _g2(dict(t=9)), 'g2')
+    eq(items['g1']['answer'], _g1(dict(m=5)), 'g1'); eq(items['g2']['answer'], _g2(dict(b=40)), 'g2'); eq(items['g1']['answer'], 6, 'g1 houses 4, 5, 6'); eq(items['g2']['answer'], 3, 'g2 numbers 11, 22, 33')
     eq(items['c3']['answer'], items['c3']['options'][1], 'c3 the second option is the good puzzle'); eq([o for o in items['c3']['options'] if clear(o)], [items['c3']['answer']], 'c3 exactly one option has a story, numbers and a question')
     eq(items['c4']['answer'], 'No', 'c4'); eq(len([x for x in range(2, 9)]) > 1, True, 'c4 many numbers fit')
     eq(items['t2']['answer'], 'The numbers go up by 3, not 4', 't2'); eq([b - a_ for a_, b in zip([4, 7, 10, 13], [7, 10, 13][0:3])], [3, 3, 3], 't2 every jump is 3'); eq(7 - 4 == 4, False, 't2 second clue does not fit')

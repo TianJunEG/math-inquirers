@@ -64,7 +64,7 @@
   "talk_ask": "Where did you use {name} today?",
   "choose_note": "Optional, no time modelled: ask which tool the group chose and why. Volunteers first; listen for a tool being named and a reason.",
   "talk_note": "Listen for the tool being named, not the answer. Volunteers first, a pass is always fine.",
-  "kit_note": "Eight tools: see your Toolbox card. Point at it when you point at the tool on page 1. If the card is not printed, send the PDF with the welcome message."
+  "kit_note": "Eight tools: see your Toolbox Card. Point at it when you point at the tool on page 1. If the card is not printed, send the PDF with the welcome message."
  },
  "lessons": {
   "1": {

@@ -81,7 +81,7 @@ def run(d):
     eq(altogether(10, 10, 10, 6), 36, 'warm-up strip of 36')
     # sneak-peek
     eq(add_cells(5, 3), 8, 'sneak 1'); eq(d['sneak_peek']['val1'], 8, 'sneak val1')
-    eq(transfer_to_equal(14, 10), [2], 'sneak 2'); eq(d['sneak_peek']['val2'], 2, 'sneak val2')
+    eq(transfer_to_equal(18, 10), [4], 'sneak 2 children who move'); eq(18 - transfer_to_equal(18, 10)[0], 14, 'sneak 2 red bus now'); eq(d['sneak_peek']['val2'], 14, 'sneak val2')
     # explore and mini-lesson
     eq(gap(10, 6), 4, 'explore gap'); eq(add_cells(6, 4), 10, 'explore Ali 10'); eq(add_cells(10, 4), 14, 'explore Ali 14'); eq(altogether(10, 14), 24, 'explore all'); eq(gap(14, 10), 4, 'explore gap 2'); eq(fewer_than(14, 4), [10], 'explore fewer than')
     # kit: 11 strips of 10, two cut after 6 cells -> nine tens, two 6s, two 4s; every length used in the explore is a sum of these pieces
@@ -91,7 +91,7 @@ def run(d):
     eq(gap(85, 0) >= 0 and kit_tens * 10 >= 90, True, 'nine whole strips make the 90 of Go further question 2')
     eq(10 * 3 + 6, 36, 'warm-up 36 = three strips and a piece of 6'); eq(10 + 4, 14, 'Ali 14 = a strip and a piece of 4'); eq(10 + 6, 10 + 6, 'strip and piece of 6')
     eq(gap(12, 7), 5, 'mini gap'); eq(add_cells(14, 6), 20, 'mini more than'); eq(altogether(14, 7), 21, 'mini altogether'); eq(gap(15, 8), 7, 'mini your turn')
-    eq(split_by_total_and_gap(40, 8), [(16, 24)], 'mini total and difference'); eq(transfer_to_equal(30, 18), [6], 'mini transfer')
+    eq(split_by_total_and_gap(40, 8), [(16, 24)], 'mini total and difference'); eq(transfer_to_equal(28, 16), [6], 'mini transfer'); eq(28 - 6, 22, 'mini towers end at 22'); eq(16 + 6, 22, 'mini blue tower ends at 22')
     # Start here
     eq(gap(12, 8), 4, 'S1'); eq(T['S1']['val'], [4], 'S1 val')
     eq(add_cells(15, 7), 22, 'S2'); eq(T['S2']['val'], [22], 'S2 val')
@@ -118,5 +118,5 @@ def run(d):
     # Exit and home
     eq(gap(13, 9), 4, 'E1'); eq(add_cells(24, 13), 37, 'E2'); eq(altogether(22, add_cells(22, 5)), 49, 'E3'); eq([X['E1']['val'], X['E2']['val'], X['E3']['val']], [[4], [37], [49]], 'exit vals')
     eq(gap(14, 9), 5, 'H1'); eq(add_cells(38, 20), 58, 'H2'); eq(altogether(25, add_cells(25, 15)), 65, 'H3')
-    eq(split_by_total_and_gap(30, 6)[0][0], 12, 'H4'); eq(transfer_to_equal(24, 10), [7], 'H5')
+    eq(split_by_total_and_gap(30, 6)[0][0], 12, 'H4'); eq(transfer_to_equal(26, 10), [8], 'H5 apples that move'); eq(10 + transfer_to_equal(26, 10)[0], 18, 'H5 basket B now'); eq(d['home_practice'][4]['val'], 18, 'H5 val')
     return n

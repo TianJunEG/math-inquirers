@@ -2814,47 +2814,50 @@
         "id": "g1",
         "tier": "challenge",
         "type": "number",
-        "q": "Two numbers add up to 14. One number is 4 more than the other. What is the bigger number?",
-        "hint": "List the pairs that make 14. Find the pair that is 4 apart.",
+        "q": "Three houses on a street have numbers in a row, like 7, 8 and 9. The three numbers add up to 15. What is the biggest house number?",
+        "hint": "Try three numbers in a row. Add them. Find the row that makes 15.",
         "steps": [
-          "The pairs are 5 and 9, 6 and 8, and so on.",
-          "5 and 9 make 14, and 9 is 4 more than 5.",
-          "The bigger number is 9."
+          "Try 3, 4, 5: that makes 12. Try 4, 5, 6: that makes 15.",
+          "The three numbers in a row are 4, 5 and 6.",
+          "The biggest house number is 6."
         ],
-        "answer": 9,
+        "answer": 6,
         "slips": [
+          {
+            "a": [
+              4
+            ],
+            "say": "That is the smallest number. Which house number is biggest?"
+          },
           {
             "a": [
               5
             ],
-            "say": "That is the smaller number. Which number is bigger?"
+            "say": "That is the middle number. Which house number is biggest?"
           }
         ],
         "easier": "c2",
         "tpl": {
           "vars": {
-            "s": [
+            "m": [
               3,
               4,
               5,
-              6
-            ],
-            "d": [
-              2,
-              4,
-              6
+              6,
+              7,
+              8
             ]
           },
           "derive": {
-            "t": "2*s+d"
+            "t": "3*m"
           },
-          "q": "Two numbers add up to {t}. One number is {d} more than the other. What is the bigger number?",
-          "answer": "s+d",
-          "hint": "List the pairs that make {t}. Find the pair that is {d} apart.",
+          "q": "Three houses on a street have numbers in a row, like 7, 8 and 9. The three numbers add up to {t}. What is the biggest house number?",
+          "answer": "m+1",
+          "hint": "Try three numbers in a row. Add them. Find the row that makes {t}.",
           "steps": [
-            "List the pairs that make {t}.",
-            "Find the pair that is {d} apart.",
-            "The bigger number is {ans}."
+            "Try rows of three numbers in a row until they add up to {t}.",
+            "Three numbers of {m} make {t}, so the middle number is {m}.",
+            "The biggest is 1 more than the middle number: {ans}."
           ]
         }
       },
@@ -2862,41 +2865,46 @@
         "id": "g2",
         "tier": "challenge",
         "type": "number",
-        "q": "How many different pairs of whole numbers add up to 9? Count 0 and 9 as a pair. Do not count the same pair twice.",
-        "hint": "List the pairs in order: 0 and 9, 1 and 8, and so on.",
+        "q": "Mei's number is bigger than 10 and smaller than 40. Both of its digits are the same. How many numbers could Mei's number be?",
+        "hint": "List the numbers with two digits the same: 11, 22, and so on. Stop before 40.",
         "steps": [
-          "0 and 9, 1 and 8, 2 and 7, 3 and 6, 4 and 5.",
-          "5 and 4 is the same pair as 4 and 5.",
-          "There are 5 pairs."
+          "The numbers with both digits the same are 11, 22, 33, 44, and so on.",
+          "44 is bigger than 40, so stop at 33.",
+          "The numbers are 11, 22 and 33: there are 3."
         ],
-        "answer": 5,
+        "answer": 3,
         "slips": [
           {
             "a": [
-              10
+              4
             ],
-            "say": "That counts 4 and 5 and 5 and 4 as two pairs. Count each pair once."
+            "say": "44 is not smaller than 40. Check each number against the rule."
+          },
+          {
+            "a": [
+              2
+            ],
+            "say": "Count 11, 22 and 33. Each one is bigger than 10 and smaller than 40."
           }
         ],
         "easier": "t1",
         "tpl": {
           "vars": {
-            "t": [
-              7,
-              8,
-              9,
-              10,
-              11
+            "b": [
+              30,
+              40,
+              50,
+              60
             ]
           },
           "derive": {},
-          "q": "How many different pairs of whole numbers add up to {t}? Count 0 and {t} as a pair. Do not count the same pair twice.",
-          "answer": "t//2+1",
-          "hint": "List the pairs in order: 0 and {t}, 1 and the next, and so on.",
+          "q": "Mei's number is bigger than 10 and smaller than {b}. Both of its digits are the same. How many numbers could Mei's number be?",
+          "answer": "b/10-1",
+          "hint": "List the numbers with two digits the same: 11, 22, and so on. Stop before {b}.",
           "steps": [
-            "List the pairs in order, starting with 0 and {t}.",
-            "Stop when the pairs start to repeat.",
-            "There are {ans} pairs."
+            "List the numbers with both digits the same: 11, 22, 33, and so on.",
+            "Stop when a number is not smaller than {b}.",
+            "Count the numbers you listed: there are {ans}."
           ]
         }
       },
