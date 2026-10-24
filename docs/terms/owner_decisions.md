@@ -358,3 +358,6 @@ Owner: "P6l10-remove-old". Remove the stray old file p6l10-warm2 from the live p
 
 ## 2026-10-24 — ONLINE-VERSIONS
 Owner: "The workbooks should have online versions for holiday program and term lessons, also for extension workbooks. Not needed for school puzzles." Scope: online practice versions for (1) holiday program (60 lessons; practice/ has only P3L3 so far), (2) term lessons (Level 1: all 40 lesson JSONs carry online_practice items; Levels 2–6 term not started), (3) extension workbooks (60 units, L1–L6; none online yet). NOT school puzzle booklets. Runner: practice/public (no timers, scores or streaks; template variants brute-force verified).
+
+## 2026-10-24 — TEASER-DAILY-GO
+Owner: "TEASER-DAILY-GO". Build daily-changing website teasers: bank of ~30 puzzles per level (6 levels), picked client-side by Singapore date, static site, no server. Every puzzle new, hand-solved, independently checked; current fixed puzzle stays as fallback. Build and check only; going live on the real site is a separate step (owner sees the result first).
