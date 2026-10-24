@@ -224,3 +224,62 @@ No card gives another card's answer in its question or hint (the explain cards a
 1. L8 Q4(b) became "type the numbers of the squares that work" (auto-marked) because the page cannot draw on a grid. Fine, or should it be a paper-only self-check?
 2. L8 Q1(c) and L7 Q1(a) (the printed take-home explanations) are self-checks: worked example shown after submit.
 3. L7 and L8 qbank items not printed in the workbook (Think harder 5 to 8 and Go further 1 to 6 of the bank) are not online, as in weeks 1 to 3.
+
+
+# Week 5 (lessons 9 and 10), built 24 Oct 2026
+
+Lesson 9 Measure Masters (Tue 22 Dec) and lesson 10 Puzzle Day (Thu 24 Dec), `website/data/beta_schedule.json` (Level 2 group L2A: lesson 9 = 2026-12-22, lesson 10 = 2026-12-24; week 5 = lessons 9 and 10 confirmed). Not deployed, nothing sent, no website/dist or Supabase change. The shared files (`sheet.js`, `practice/submit/*`, `build_holiday.py`, `hlib.py`, `test_holiday.py`) are untouched; this level's new helpers are in `p2/p2lib_w5.py` (jug simulator and search, redrawn scales, clocks, jugs, ribbon, time line, picture graph, towers and clue cards, readers that count the pictures back, typed forms of a time, the weights, staircase and logic brute force).
+
+    python3 practice/holiday/build_holiday.py p2 9      # -> practice/holiday/p2/09/dist/   (git-ignored)
+    python3 practice/holiday/build_holiday.py p2 10
+    python3 practice/holiday/test_holiday.py p2 9       # browser test + screenshots into p2/09/proof/
+    python3 practice/holiday/test_holiday.py p2 10
+
+Sources: `p2/content/l9.js`, `l10.js` (`workbook()` = Start here; `qbank.stretch` first four = Think harder 1 to 4; `qbank.challenge` last three = Go further 5 to 7, exactly as `p2/workbook_html.js` prints them), `p2/gaps.json` (Investigation), `p2/workbook_html.js` (the "Make up your own" line). Independent checkers (none uses the printed answer or the "undo" rule): the balance scales are solved by TRYING numbers of grams (the statements are read from the labels of the figure the child sees); the jug puzzles are run step by step in a simulator and every "fewest steps" comes from a breadth-first search over all states (2 and 1 litre: 2 and 4 steps; 4 litres: 3 more steps after the printed three; 3 litres with 2 and 7: 4; 5 litres with 3 and 7: 8); the clocks' hands are copied from the printed clocks and READ BACK from the angles in the redrawn picture; times are counted on in minutes; the weights puzzle tries every set of three; the ribbons are laid on a number line; the picture graph, the cake strip and the towers are COUNTED from the drawings; digit-card numbers by trying every order; coins and dishes by trying every number of coins and plates; both logic puzzles by trying every arrangement (exactly one fits); the savings, the bus and the key-less graph by trying numbers or running a table; the staircase by listing every way.
+
+## Items
+
+| | Lesson 9 | Lesson 10 |
+|---|---|---|
+| Items | 31 | 41 |
+| Start here | 17 | 19 |
+| Investigation | 3 | 7 |
+| Think harder | 6 | 8 |
+| Go further (and Make up your own) | 5 | 7 |
+| Auto-marked (number, fields, set, choice, text) | 23 | 35 |
+| Self-check, typed (never auto-marked) | 7 (1(c) show how, 2(a), 2(b), 3 jug steps, Inv 3, Think harder 4 jug, Go further 5 jug) | 4 (Inv 1 and Inv 3 lists of ways, Inv 6 pattern, Think harder 4 why) |
+| Open (make-up-your-own) | 1 | 1 |
+| Paper-only self-check (drawing, with the correct drawing shown after Submit) | 0 | 1 (1(b): Thursday's pictures on the graph) |
+| Unavailable online | 0 | 0 |
+| Variant families (every combination run against an independent oracle) | 4 (4(a), 4(b), 5(c), T3: 196 combinations) | 7 (1(a), 3(b), 6(a), T1, T2 day, T3, G5: 216 combinations) |
+
+Every item has a hint, worked steps and a skill tag. Browser test: both lessons RESULT OK (every answer typed correctly, wrong and skipped answers, reload, variants, 390/360/900 px light and dark, no horizontal scroll, figure text at least 11 px). The typed times were also run through `mark.js` by hand (7:25 am, 7:25am, 7.25 am, 7:25 a.m., "It is 7:25 am" right; 7:25 with no am/pm in 5(a), 7:35 am, 7:25 pm wrong; 5(b) and Go further 7 also accept the time with no am/pm).
+
+## Not mirrored exactly, and why
+
+- Printed multi-part questions are one card per part; a printed "show how" is a separate self-check card (example shown after Submit, never marked).
+- Figures redrawn for a phone (the printed ones are too small and their labels collide at 390 px): the balance scales (Q1, Think harder 1 and 3, Go further 6; the pans now carry short labels such as "2 apples" that say only what the question says), the jugs, the Q3 jug table (steps 1 to 3 filled, rows 4 to 7 empty), the two clocks (hands copied from the printed ones), the ribbons, the Think harder 2 time line, the picture graph and the towers (counted back from the new drawing). The printed cake strip is used as printed. The empty Go further 7 time line of the print (just "8:15 am" on an empty line) is not shown.
+- L9 jug questions (Q2(a), Q2(b), Q3, Think harder 4, Go further 5): "write the steps" cannot be auto-marked (many right ways), so each is a typed self-check with a worked way generated from the simulator (always true), PLUS an auto-marked companion card "fewest number of steps" (2, 4, 3 more, 4, 8; a step is one fill, one empty or one pour; it says "Do the steps question first"). The companion cards are not printed questions; they are added so each jug puzzle has something that can be marked.
+- L9 Q3: the printed table of steps is shown as a figure (the first three steps done); the child writes the next steps and how much is in each jug in the box.
+- L9 Q1(c) "show how you know" is a typed self-check after the number card. Q4(b) (take-home) repeats the red 64 cm and blue 18 cm shorter facts in its own stem so it does not depend on the answer of 4(a).
+- L9 Q5(a): two text cards (clock A, clock B) typed with am or pm ("7:25 am", "7:25am", "7.25 am", "7:25 a.m."); Q5(b) and Go further 7 are text cards too (the printed answer lines are free). Q5(c) is the number of minutes.
+- L9 Investigation (Weights puzzle): (a) is the list of masses from 1 g to 7 g (all seven), (b) is typed as the weights of every good set, three numbers per set, smallest first, sets in counting order (1 2 3 1 2 4), (c) is a self-check ("what do they have in common"); the printed "easy first step" is in the hint of the first card.
+- L10 Q1(b) "draw Thursday's pictures on the graph" cannot be done on the screen: paper-only self-check with the correct graph (5 pictures) shown after Submit, plus an auto-marked card "how many pictures should Thursday have". The printed words "Draw the pictures for Thursday here" are not shown on the graph.
+- L10 Q3 (table): the table card is the totals in cents for 1, 2 and 3 fifty-cent coins (150, 180, 210; the printed first row 0 coins = 120 is in the stem), then the two numbers of coins. L10 Q4 (logic grid) and Go further 6 (coins): the tick-and-cross table is not drawn (the child can draw it on paper); the clues are in a picture card and Q4 is four Choice cards (Ali, Mei, Siti, Ben; Siti's follows directly from clue 1, as printed). Go further 6 is one card of four boxes in cents ($1 is 100).
+- L10 Q5(a) and (b) are typed as a fraction in two boxes (top number, bottom number: 5/10 is not reduced); 5(c) is typed names, most first.
+- L10 Q6: the table cells 4, 5 and 6 are one card of three numbers; the printed "Tower 8" and "which tower has 36" are number cards.
+- L10 Investigation (Staircase): (a) and (b) are a typed list of all the ways (self-check, shown with the worked list) plus a count card each ("Do the list question first"); (c) is the table of ways for 1 to 5 steps (five numbers, in order), a pattern self-check and the number for 6 steps (13, worked out from the pattern).
+- L10 Think harder 2 (table of savings): the table is typed as the totals for days 1 to 7 for Mei and for Ali (so no card tells how many days are needed), then "which day does Mei FIRST have more". Think harder 4 is two Yes/No cards (49, 50) and a neutral explain card. Go further 7 is four cards (plates of chicken rice, smallest and biggest total, can they cost $30, can they cost every whole-dollar amount from the smallest to the biggest).
+- Printed "take-home" star marks are not shown; the strategy card, "Tool of the day", "Looking back", the cut-outs and the name/date line are print-only. Lesson 10 is the Puzzle Day lesson and is mirrored exactly as printed (nothing is a project lesson here; the Make up your own puzzle for next year's group is open, with an example shown after Submit).
+- No coin or note pictures; every figure is drawn.
+
+## Week 1 to 4 audit points applied from the start
+
+No card gives another card's answer in its stem, hint or example (the jug "steps" and "fewest steps" cards are separate and do not state the number of steps; the T4 explain card is neutral; the staircase table card does not give the number of ways for 6 steps; Think harder 2 asks seven days for both children so the answer day is not hinted; the Investigation (c) card does not state what the good sets share); hints nudge and none states the answer or a one-case rule; no example equals an answer ("like 9:10 pm", "like 2 3 4 before 2 3 5"); the printed pairing and position are kept (the three numbers of each weight set together, Ali/Ben/Mei/Siti in the stem's order, Swimming then Football, top and bottom numbers of the fractions); screen wording (no "circle", "cross out", "take-home"; paper-only cards say so); explicit unique labels of at most 12 characters; typed explanations are self-check, make-up is open; "count" cards come after the list cards and say so; every variant keeps the question possible and whole (picture, key, coin and bus numbers constrained) and has its own picture or a complete text; solution sentences were generated from the simulators or checked by hand (the jug steps cannot be false).
+
+## Open questions for the owner
+
+1. The "fewest number of steps" companion cards for the jug puzzles are additions (not printed): fine to keep, or should the jug puzzles be self-check only?
+2. L10 Q1(b) (draw the pictures) is a paper-only self-check plus a "how many pictures" number card; L10 Q4 and Go further 6 lose the tick-and-cross table (no way to tick on screen). Fine?
+3. L9 Investigation (b) is typed as "1 2 3 1 2 4" (sets one after another, smallest first). The grouping is unusual for a child; a different layout (two Yes/No cards per set) would give away that two sets exist.
+4. L9 and L10 qbank items not printed in the workbook (Think harder 5 to 10 and Go further 1 to 6 of the bank) are not online, as in weeks 1 to 4.
