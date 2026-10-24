@@ -100,15 +100,22 @@ def run(prog, answer=None, v=None, limit=100000):
 
 
 def fill(prog, values):
-    """Replaces the blank pills ('[      ]' or '___') of a plan, in order, by the given values."""
+    """Replaces the blanks of a plan, in order of appearance: an empty pill '[      ]' becomes '[value]', and '___' inside a pill becomes the value."""
     vals = list(values)
     out = []
+
+    def sub(m):
+        v = str(vals.pop(0)).replace('-', MINUS)
+        return v if m.group(0) == '___' else '[' + v + ']'
     for ind, kind, text in prog:
-        def sub(_):
-            return '[' + str(vals.pop(0)).replace('-', MINUS) + ']'
-        out.append([ind, kind, re.sub(r'\[ *\]', sub, re.sub(r'___', '[ ]', text))])
+        out.append([ind, kind, re.sub(r'\[ +\]|___', sub, text)])
     assert not vals, 'more values than blanks'
     return out
+
+
+def nb(frame):
+    """Single spaces inside a sentence frame become non-breaking spaces, so a label and its box stay together when the line wraps (runs of 2 or more spaces stay breakable)."""
+    return re.sub(r'(?<! ) (?! )', '\u00a0', frame)
 
 
 def show(prog):

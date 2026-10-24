@@ -300,6 +300,10 @@ ITEMS = [
          src=['In some Singapore buildings there is no level 0.']),
 ]
 
+for _it in ITEMS:
+    if _it.get('frame'):
+        _it['frame'] = W.nb(_it['frame'])
+
 # ---------------------------------------------------------------- variant families (every combination is run against an independent oracle at build time)
 VARIANTS = {
     '4a': dict(base=dict(a=6, b=9),

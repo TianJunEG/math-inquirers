@@ -385,8 +385,8 @@ def cells_row(x, y, n, w, h, shaded=0, fill=YEL, labels=None, size=14):
 
 def bar_pair(top_name, top_units, bot_name, bot_units, brace_label, unit=44, labels_top=None, labels_bot=None, caption=''):
     """Two bars one above the other (e.g. laksa 1 unit, chicken rice 3 units) and a brace on the right for the total."""
-    left = 84
-    W = left + max(top_units, bot_units) * unit + 100
+    left = 98
+    W = left + max(top_units, bot_units) * unit + 124
     b = T(left - 8, 34, top_name, 15, 'end') + cells_row(left, 12, top_units, unit, 36, top_units, '#CDE8F7', labels_top)
     b += T(left - 8, 82, bot_name, 15, 'end') + cells_row(left, 60, bot_units, unit, 36, bot_units, YEL, labels_bot)
     b += vbrace(left + max(top_units, bot_units) * unit + 8, 12, 96, brace_label)

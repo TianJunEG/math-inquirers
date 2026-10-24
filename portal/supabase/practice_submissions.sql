@@ -259,13 +259,16 @@ begin
   select amount_cents into price from public.ext_prices where product_id = 'ext-l' || p_level || '-' || p_format and active;
   if price is null then raise exception 'price_not_set'; end if;
   if not public._has_consent(uid, 'terms') or not public._has_consent(uid, 'contact') then raise exception 'consents_missing:contact,terms'; end if;
-  if p_format = 'online' and not public._has_consent(uid, 'online_practice') then raise exception 'consents_missing:online_practice'; end if;
+  if p_format <> 'workbook' and not public._has_consent(uid, 'online_practice') then raise exception 'consents_missing:online_practice'; end if;   -- online AND both send answers to us
   if p_format <> 'online' then
     if not public._has_consent(uid, 'book_delivery') then raise exception 'consents_missing:book_delivery'; end if;
     if coalesce(btrim(p_ship_name),'') = '' or coalesce(btrim(p_ship_address),'') = '' or p_ship_postal !~ '^[0-9]{6}$' then raise exception 'bad_address'; end if;   -- Singapore postal code
   end if;
   if exists (select 1 from public.child_book_access a where a.child_id = p_child and a.level = p_level and a.status = 'active' and a.format in ('online','both') and p_format in ('online','both')) then
     raise exception 'already_has_online'; end if;
+  if exists (select 1 from public.ext_orders o where o.child_id = p_child and o.level = p_level and o.status = 'pending_payment'
+              and (o.format = p_format or (o.format <> 'workbook' and p_format <> 'workbook'))) then
+    raise exception 'already_pending'; end if;                       -- one unpaid order per child, level and kind: cancel it first (cancel_my_ext_order)
   loop
     ref := 'MI-' || public.gen_code(6); tries := tries + 1;
     begin

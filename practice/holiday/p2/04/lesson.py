@@ -75,10 +75,11 @@ FLOWER_FIG = printed_fig('A flower with 5 petals')
 PETALS = FLOWER_FIG.count('<ellipse')
 TABLES_FIG = printed_fig('Square tables in a row')
 HOUSES_FIG = printed_fig('Houses made of sticks')
-TOWERS_FIG = printed_fig('Towers of cubes')
+TOWERS_FIG = towers_fig((2, 5, 8))
 BEADS = ['red'] * 2 + ['yellow'] * 3
-FROG_A = number_line(0, 30, hops=[(0, 4)], circled=(0,), caption='Frog A starts at 0. Its first jump is 4.')
-FROG_B = number_line(0, 30, hops=[(2, 5)], circled=(2,), caption='Frog B starts at 2. Its first jump is 3.')
+FROG_AB = combine([number_line(0, 30, hops=[(0, 4)], circled=(0,), caption='Frog A starts at 0. Its first jump is 4.'),
+                   number_line(0, 30, hops=[(2, 5)], circled=(2,), caption='Frog B starts at 2. Its first jump is 3.')],
+                  'Two number lines from 0 to 30. Frog A starts at 0 and its first jump is 4. Frog B starts at 2 and its first jump is 3.')
 FLOWER_TABLE = grid_table([('Petals', [5, '', '', '', '', ''])], head=('Flowers', [1, 2, 3, 4, 5, 6]),
                           caption='The flower table. Flowers 1, 2, 3, 4, 5, 6. Petals: 5 for 1 flower, then five empty boxes.')
 TABLE_TABLE = grid_table([('Children', [4, 6, '', '', '', ''])], head=('Tables', [1, 2, 3, 4, 5, 6]),
@@ -153,7 +154,7 @@ ITEMS = [
          src=['How many beads altogether?']),
 
     dict(id='4t', tier='core', no='4(a)', type='fields', skill='multiplication tables as a pattern', answer=[10, 15, 20, 25, 30],
-         q='Each flower has 5 petals. Fill in the Petals row of the table.', svg=stack(FLOWER_FIG, FLOWER_TABLE),
+         q='Each flower has 5 petals. Fill in the Petals row of the table.', svg=combine([FLOWER_FIG, FLOWER_TABLE], 'A flower with 5 petals, and the flower table. Flowers 1 to 6. Petals: 5 for 1 flower, then five empty boxes.'),
          frame='Petals: 5, {f1}, {f2}, {f3}, {f4}, {f5}', check=lambda: ap(5, 5, 6)[1:],
          hint='Each flower adds the same number of petals. What number do you add each time?',
          steps=['Each new flower adds 5 petals.', 'Counting in 5s: 5, 10, 15, 20, 25, 30.', 'The empty boxes are 10, 15, 20, 25 and 30.'],
@@ -178,7 +179,7 @@ ITEMS = [
          src=['Mei has 23 petals. How many flowers?']),
 
     dict(id='5t', tier='core', no='5(a)', type='fields', skill='growing patterns', answer=[8, 10, 12, 14],
-         q='Square tables are pushed together in a row. One child sits at each open side. Fill in the Children row of the table.', svg=stack(TABLES_FIG, TABLE_TABLE),
+         q='Square tables are pushed together in a row. One child sits at each open side. Fill in the Children row of the table.', svg=combine([TABLES_FIG, TABLE_TABLE], 'Square tables pushed together in a row, and the tables table. Tables 1 to 6. Children: 4 for 1 table, 6 for 2 tables, then four empty boxes.'),
          frame='Children: 4, 6, {f1}, {f2}, {f3}, {f4}', check=lambda: [seats(n) for n in (3, 4, 5, 6)],
          hint='Look at the pictures. How many more children can sit when one more table is added?',
          steps=['1 table seats 4, 2 tables seat 6, 3 tables seat 8. Each new table adds 2 children.', '4, 6, 8, 10, 12, 14.', 'The empty boxes are 8, 10, 12 and 14.'],
@@ -355,7 +356,7 @@ ITEMS = [
          src=['Explain how you know.']),
     dict(id='C7', tier='challenge', no='Go further 7', type='set', ordered=False, skill='numbers in two times tables', answer=[8, 20],
          q='Frog A starts at 0 and jumps 4 each time: 4, 8, 12 ... Frog B starts at 2 and jumps 3 each time: 5, 8, 11 ... Which numbers up to 30 do both frogs land on? Type them with a comma between.',
-         svg=stack(FROG_A, FROG_B),
+         svg=FROG_AB,
          check=lambda: both(4, 4, 5, 3, 30),
          hint='Write the numbers each frog lands on, up to 30. Which numbers are in both lists?',
          steps=['Frog A lands on 4, 8, 12, 16, 20, 24, 28.', 'Frog B lands on 5, 8, 11, 14, 17, 20, 23, 26, 29.', 'Both frogs land on 8 and 20.'],

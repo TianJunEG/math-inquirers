@@ -70,9 +70,9 @@ def pieces(step, limit):
 
 ARRAY = printed_fig('An array of counters')
 TRAY = printed_fig('A tray of cups')
-HENS7 = printed_fig('A pen with 7 hens')
-SHARE23 = printed_fig('Ravi has 23 stickers')
-VAN = printed_fig('A van with 5 seats')
+HENS7 = hens_fig(7)
+SHARE23 = sharing_fig(23, 4)
+VAN = van_fig(28, 5)
 CYCLES = printed_fig('A bicycle with 2 wheels')
 R_ARR, C_ARR, N_ARR = circles_of(ARRAY)
 N_TRAY, SEEN_TRAY = tray_counts(TRAY)
@@ -84,15 +84,15 @@ GOAT_LEGS = sorted({h * 2 + (12 - h) * 4 for h in range(13)})         # 12 hens 
 ITEMS = [
     # ================= Start here (workbook lesson 3, No.1 to No.6)
     dict(id='1a', tier='core', no='1(a)', type='fields', skill='arrays and multiplication', answer=[4, 5, 20, 5, 4, 20],
-         q='Mei puts counters in an array. Type two multiplication sentences for it. Type each number in its box.', svg=ARRAY,
-         frame='Start with the number of rows: {f1} × {f2} = {f3}.   Then start with the number of counters in each row: {f4} × {f5} = {f6}.',
+         q='Mei puts counters in an array. Type two multiplication sentences for it. The first starts with the number of rows. The second starts with the number of counters in each row.', svg=ARRAY,
+         frame='{f1} × {f2} = {f3}   and   {f4} × {f5} = {f6}',
          check=lambda: [R_ARR, C_ARR, N_ARR, C_ARR, R_ARR, N_ARR],
          hint='Count the rows. Then count the counters in just one row. Rows times the counters in one row gives all the counters.',
          steps=['There are 4 rows with 5 counters in each row.', '4 rows of 5 counters: 4 × 5 = 20.', 'Turn it round. 5 counters in a row, 4 rows: 5 × 4 = 20.'],
          src=['Mei puts counters in an array.', 'Two multiplication sentences']),
     dict(id='1b', tier='core', no='1(b)', type='fields', skill='arrays and division', answer=[20, 4, 5, 20, 5, 4],
-         q='Look at Mei\'s array again. Type two division sentences for it. Type each number in its box.', svg=ARRAY,
-         frame='Share all the counters equally into the rows: {f1} ÷ {f2} = {f3}.   Then make groups the size of one row: {f4} ÷ {f5} = {f6}.',
+         q='Look at Mei\'s array again. Type two division sentences for it. In the first, share all the counters equally into the rows. In the second, make groups the size of one row.', svg=ARRAY,
+         frame='{f1} ÷ {f2} = {f3}   and   {f4} ÷ {f5} = {f6}',
          check=lambda: [N_ARR, R_ARR, N_ARR // R_ARR, N_ARR, C_ARR, N_ARR // C_ARR],
          hint='Start with all the counters in the array. First share them out into the rows. Then think about groups that are the size of one row.',
          steps=['There are 20 counters altogether.', 'Share 20 equally into 4 rows: 5 in each row. 20 ÷ 4 = 5.', 'Make groups of 5 (one row each): there are 4 groups. 20 ÷ 5 = 4.'],
@@ -121,8 +121,8 @@ ITEMS = [
 
     dict(id='3t', tier='core', no='3 (table)', type='fields', skill='guess and check with a table', answer=[16, 18, 20, 22],
          q='A pen has hens and goats. A hen has 2 legs and a goat has 4 legs. There are 7 animals and 20 legs altogether. Start with all hens: 7 hens have 14 legs. '
-           'Then swap one hen for a goat each time. How many legs are there after each swap?',
-         svg=stack(HENS7, TABLE3), frame='Legs after 1 swap: {f1}.  After 2 swaps: {f2}.  After 3 swaps: {f3}.  After 4 swaps: {f4}.',
+           'Then swap one hen for a goat each time. How many legs are there after 1 swap, 2 swaps, 3 swaps and 4 swaps? Type them in order.',
+         svg=combine([HENS7, TABLE3], 'A pen with 7 hens, and the hens and goats table. The first column says 7 hens, 0 goats, 14 legs. The other five columns are empty.'), frame='Legs: 14, {f1}, {f2}, {f3}, {f4}',
          check=lambda: [(7 - s) * 2 + s * 4 for s in (1, 2, 3, 4)],
          hint='A hen has 2 legs and a goat has 4. What happens to the legs when one hen is swapped for a goat?',
          steps=['Each swap takes away a hen (2 legs) and puts in a goat (4 legs), so the legs go up by 2.', '14, then 16, 18, 20, 22.', 'After 1 swap: 16. After 2 swaps: 18. After 3 swaps: 20. After 4 swaps: 22.'],

@@ -24,4 +24,29 @@ for (const [k, v] of Object.entries({ l4_q4: '4.4', l4_q5: '4.5', l4_q6: '4.6', 
 for (const k of Object.keys(out)) {
   out[k] = out[k].replace(/^<svg([^>]*?)style="[^"]*?(?:width:(\d+)px)?[^"]*"/, (m, a, w) => `<svg${a}style="width:100%;max-width:${w || 480}px;height:auto;display:block;margin:0 auto"`);
 }
+// The lesson builder raises every font so that text is at least 12 px on a 290 px wide phone figure, which makes the row labels ("Ali before",
+// "3rd piece") and the end labels ("150 altogether", "475 cm") wider than the printed figure leaves room for. Each figure's viewBox is therefore
+// widened on the left and right until every label fits at the raised size (same rule as practice/holiday/hlib.py lift_text: PHONE_PX = 290, MIN_PX = 12).
+function widen(svg) {
+  const m = /viewBox="(-?[\d.]+) (-?[\d.]+) ([\d.]+) ([\d.]+)"/.exec(svg);
+  if (!m) return svg;
+  const h = +m[4], base = +m[3];
+  const texts = [...svg.matchAll(/<text\b([^>]*)>([^<]*)<\/text>/g)].map(t => ({
+    x: +/ x="(-?[\d.]+)"/.exec(t[1])[1], size: +(/font-size="([\d.]+)"/.exec(t[1]) || [0, 16])[1],
+    anchor: (/text-anchor="(\w+)"/.exec(t[1]) || [0, 'start'])[1], n: t[2].length }));
+  let lo = 0, hi = base;
+  for (let it = 0; it < 12; it++) {
+    const W = hi - lo, need = Math.round(12 / Math.min(1, 290 / W) * 10) / 10;
+    let nlo = 0, nhi = base;
+    for (const t of texts) {
+      const w = t.n * 0.62 * Math.max(t.size, need) + 6;
+      const l = t.anchor === 'end' ? t.x - w : t.anchor === 'middle' ? t.x - w / 2 : t.x, r = t.anchor === 'end' ? t.x : t.anchor === 'middle' ? t.x + w / 2 : t.x + w;
+      nlo = Math.min(nlo, l); nhi = Math.max(nhi, r);
+    }
+    if (nlo === lo && nhi === hi) break;
+    lo = Math.floor(nlo); hi = Math.ceil(nhi);
+  }
+  return svg.replace(/viewBox="[^"]*"/, `viewBox="${lo} 0 ${hi - lo} ${h}"`);
+}
+for (const k of Object.keys(out)) out[k] = widen(out[k]);
 console.log(JSON.stringify(out));

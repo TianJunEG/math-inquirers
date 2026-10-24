@@ -141,3 +141,79 @@ def tray_counts(fig):
         covered = min(xs) >= cx and max(xs) <= cx + cw and min(ys) >= cy and max(ys) <= cy + ch
         seen += 0 if covered else 1
     return len(cups), seen
+
+
+def combine(figs, label, gap=10, target=340):
+    """Several svg figures one above the other as ONE svg (the runner shows one svg per question). A figure wider than `target` is scaled down to it (its text
+    is lifted first, so it is still readable on a phone); the others keep their size and are centred."""
+    from hlib import lift_text
+    parts = []
+    for f in figs:
+        root = re.match(r'<svg[^>]*>', f).group(0)
+        vb = [float(v) for v in re.search(r'viewBox="([\d. -]+)"', root).group(1).split()]
+        inner = f[len(root):f.rindex('</svg>')]
+        sc = min(1.0, target / vb[2])
+        if sc < 1.0:
+            inner = lift_text(vb[2], inner)
+        parts.append((vb, inner, sc))
+    W = max(vb[2] * sc for vb, _, sc in parts)
+    y, body = 0, ''
+    for vb, inner, sc in parts:
+        w, h = vb[2] * sc, vb[3] * sc
+        body += (f'<svg x="{(W - w) / 2:g}" y="{y:g}" width="{w:g}" height="{h:g}" viewBox="{vb[0]:g} {vb[1]:g} {vb[2]:g} {vb[3]:g}" overflow="visible" '
+                 f'style="width:{w:g}px;height:{h:g}px;max-width:none">{inner}</svg>')
+        y += h + gap
+    return _svg(W, y - gap, body, label)
+
+
+def van_fig(children=28, seats=5):
+    """One van with its seats, and the children waiting in rows of 7."""
+    b = T(150, 20, f'one van: {seats} seats', 15, 'middle', 800)
+    b += Re(75, 30, 150, 44, PALE, NAVY, 2.6, 10)
+    for k in range(seats):
+        b += Re(82 + k * 28, 38, 22, 28, YEL, NAVY, 2)
+    b += Ci(110, 82, 9, NAVY, NAVY, 1) + Ci(190, 82, 9, NAVY, NAVY, 1)
+    b += T(150, 120, f'{children} children', 15, 'middle', 800, TEAL)
+    for k in range(children):
+        b += Ci(66 + (k % 7) * 28, 140 + (k // 7) * 28, 10, '#CDE8F7', NAVY, 2)
+    return _svg(300, 140 + ((children - 1) // 7) * 28 + 18, b, f'A van with {seats} seats, and {children} children waiting in rows of 7')
+
+
+def sharing_fig(total=23, friends=4):
+    """The stickers (yellow dots), one plate for each friend, and a box for the stickers left over."""
+    rows = (total + 9) // 10
+    box_h = 36 + rows * 26
+    b = Re(4, 4, 332, box_h, PALE, NAVY, 2.4, 8) + T(14, 24, f'{total} stickers', 15, 'start', 800)
+    for k in range(total):
+        b += Ci(24 + (k % 10) * 30, 48 + (k // 10) * 26, 10, YEL, NAVY, 1.8)
+    y = 4 + box_h + 44
+    for f in range(friends):
+        cx = 36 + f * 70
+        b += Ci(cx, y, 30, '#fff', NAVY, 2.4).replace('/>', ' stroke-dasharray="5 4"/>') + T(cx, y + 52, f'Friend {f + 1}', 14, 'middle', 800)
+    b += Re(284, y - 30, 52, 60, '#fff', NAVY, 2.4, 8, '5 4') + T(310, y + 52, 'left over', 14, 'middle', 800, TEAL)
+    return _svg(340, y + 64, b, f'{total} stickers, {friends} empty plates for the friends and a box for the stickers left over')
+
+
+def hens_fig(n=7):
+    """A pen with n hens (a yellow body, a beak and two legs each) and the key: a hen has 2 legs, a goat has 4 legs."""
+    b = Re(4, 28, 332, 78, PALE, NAVY, 2.4, 10, '6 4') + T(14, 20, f'the pen: {n} animals', 15, 'start', 800)
+    for k in range(n):
+        cx = 36 + k * 44
+        b += Ci(cx, 56, 14, YEL, NAVY, 2) + f'<polygon points="{cx + 13},{56} {cx + 22},{59} {cx + 13},{62}" fill="{WARM}" stroke="{NAVY}" stroke-width="1.5"/>'
+        b += Ln(cx - 4, 70, cx - 4, 90, 2.4) + Ln(cx + 4, 70, cx + 4, 90, 2.4) + Ln(cx - 8, 90, cx, 90, 2.4) + Ln(cx, 90, cx + 8, 90, 2.4)
+    b += T(14, 126, 'a hen has 2 legs, a goat has 4 legs', 15, 'start', 800, TEAL)
+    return _svg(340, 136, b, f'A pen with {n} hens. A hen has 2 legs and a goat has 4 legs.')
+
+
+def towers_fig(cubes=(2, 5, 8)):
+    """Towers of cubes, 1 cube = one square, with their numbers, and 'and so on'."""
+    u = 22
+    top = 8 + max(cubes) * u
+    b = ''
+    for i, n in enumerate(cubes):
+        x = 32 + i * 66
+        for k in range(n):
+            b += Re(x, top - (k + 1) * u, u, u, YEL, NAVY, 1.8)
+        b += T(x + u / 2, top + 20, f'Tower {i + 1}', 14, 'middle', 800) + T(x + u / 2, top + 38, f'{n} cubes', 14, 'middle', 700, TEAL)
+    b += T(32 + len(cubes) * 66 + 6, top - 40, '... and so on', 15, 'start', 800, TEAL, True)
+    return _svg(340, top + 48, b, 'Towers of cubes: tower 1 has ' + ', tower '.join(f'{i + 1} has {n}' for i, n in enumerate(cubes)) + ' cubes; the towers keep growing in the same way')
