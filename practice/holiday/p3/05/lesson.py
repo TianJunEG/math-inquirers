@@ -219,7 +219,7 @@ ITEMS = [
     I(id='I8c-two-always', tier='invest', no='8(c) two always?', label='Inv 8c2 yes?', type='choice', skill='multiples in a row',
       options=['Yes, exactly one every time', 'No, sometimes none'], answer='No, sometimes none',
       q='What if we change it? Take only TWO numbers in a row and the 3 times table. Is exactly one of the two numbers in the 3 times table every time?',
-      check=lambda: 'Yes, exactly one every time' if all(len([n for n in (s, s + 1) if rem(n, 3) == 0]) == 1 for s in range(0, 1000)) else 'No, sometimes none',
+      check=lambda: ('Yes, exactly one every time' if all(len([n for n in (s, s + 1) if rem(n, 3) == 0]) == 1 for s in range(0, 1000)) else 'No, sometimes none') if all(len([x for x in range(s, s + k) if rem(x, k) == 0]) == 1 for k in range(2, 13) for s in range(0, 300)) else None,
       hint='Try several pairs. Look for a pair with none of the numbers in the 3 times table.',
       steps=['Some pairs have one number in the 3 times table, like 3 and 4.', '4 and 5 have none. So it is not always exactly one.', 'In general, n numbers in a row always have exactly one number in the n times table. Two numbers in a row and the 3 times table is not that rule.'],
       src=['Then try only 2 numbers in a row and the 3 times table.']),

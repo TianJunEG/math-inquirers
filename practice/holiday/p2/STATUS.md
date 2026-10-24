@@ -111,3 +111,58 @@ No card gives another card's answer in its question or hint (L3 Go further 5 exp
 1. L3 Q3 asks only the Legs row of the printed table (the hens and goats rows are shown for the first column only), then hens and goats in two boxes. Should the child also type the hens and goats for each swap?
 2. L4 Investigation "pick any number": fixed to 26 so it can be auto-marked; the open "pick any number" version is lost. Fine, or should it be a self-check where the child picks and tests several numbers?
 3. L3 and L4 qbank items not printed in the workbook (Think harder 5 to 9 and Go further 1 to 6 of the bank) are not online, as in week 1.
+
+
+# Week 3 (lessons 5 and 6), built 24 Oct 2026
+
+Lesson 5 Mystery number machines (Tue 8 Dec) and lesson 6 Market Day (Fri 11 Dec), `website/data/beta_schedule.json` (Level 2 groups: lesson 5 = Tue 8 Dec, lesson 6 = Fri 11 Dec; week 3 = lessons 5 and 6 confirmed). Not deployed, nothing sent, no website/dist or Supabase change. The shared files (`sheet.js`, `practice/submit/*`, `build_holiday.py`, `hlib.py`, `test_holiday.py`) are untouched; only this level's `p2/p2lib.py` was extended (number-machine boxes, bar models, count-up number lines, price tags, money helpers and money checkers).
+
+    python3 practice/holiday/build_holiday.py p2 5      # -> practice/holiday/p2/05/dist/   (git-ignored)
+    python3 practice/holiday/build_holiday.py p2 6
+    python3 practice/holiday/test_holiday.py p2 5       # browser test + screenshots into p2/05/proof/
+    python3 practice/holiday/test_holiday.py p2 6
+
+Sources: `p2/content/l5.js`, `l6.js` (`workbook()` = Start here; `qbank.stretch` first four = Think harder 1 to 4; `qbank.challenge` last three = Go further 5 to 7, exactly as `p2/workbook_html.js` prints them), `p2/gaps.json` (Investigation), `p2/workbook_html.js` (the "Make up your own" line). Every answer has an independent checker that does not use the "undo" rule or "biggest piece first": machines are run forwards and the unknown is found by trying numbers; stories are solved by trying numbers; the fewest pieces of money come from counting up from 0 (dynamic programming) and every way to pay is listed by trying every combination (the build stops if any checker differs from the printed answer, and the Level 2 printed keys agree).
+
+## Items
+
+| | Lesson 5 | Lesson 6 |
+|---|---|---|
+| Items | 28 | 36 |
+| Start here | 12 | 20 |
+| Investigation | 6 | 5 |
+| Think harder | 6 | 4 |
+| Go further (and Make up your own) | 4 | 7 |
+| Auto-marked (number, fields, set, choice, money text) | 24 | 29 |
+| Self-check, typed explanation or list compared with a shown answer (never auto-marked) | 2 (Inv 3, Inv 5) | 6 (the four "notes and coins" lists of Q1, 4(a) why, G6d notice) |
+| Open (make-up-your-own, no objective fact) | 2 (Inv 6 your own trick, Make up your own) | 1 (Make up your own) |
+| Paper-only self-check (drawing) | 0 | 0 |
+| Unavailable online | 0 | 0 |
+| Variant families ("Try a similar one", every combination run against an independent oracle) | 5 (1a, 1b, 1c, 4, T2: 408 combinations) | 3 (3b, T1, C5: 45 combinations) |
+
+Every item has a hint, worked steps and a skill tag. Browser test: both lessons RESULT OK (every answer typed correctly, wrong and skipped answers, reload, variants, 390/360/900 px light and dark, no horizontal scroll, figure text at least 11 px).
+
+## Not mirrored exactly, and why
+
+- Printed multi-part questions are one card per part; a printed "explain / what do you notice" is a separate self-check card (example shown after submit, never marked).
+- L5 Q2 (tables): the printed table is drawn with its empty cells; the child types the missing cells in one sentence of boxes (OUT for IN 4 and IN 10, then IN for OUT 17 and OUT 29; 2(b) the four OUT numbers in order).
+- L5 Q3: the two "?" bars become two boxes in the order the bars are (after giving 24, then at first); the figure draws the three bars (the printed labels "Gave 24" are now "After giving 24"). L5 Q5(c) "always the same answer?" is a Yes/No card (the printed answer line is free); the "order of the steps matters" reason is in the worked solution only, as the printed key has it.
+- L5 Think harder and Go further: printed "Draw bars" / "Draw a bar for each child" are dropped because the bar model is drawn on screen (the same figure as the printed page); the child may still draw on paper. Think harder 1 is three cards (the machine, IN 10, OUT 26) sharing one figure card of the facts instead of repeating the riddle three times.
+- L5 Investigation: "Try 5 different starting numbers" is fixed to 3, 10 (the printed easy first step) and 7, 12, 40; "try a big and a small number" is fixed to 1 and 100; "make your own trick" is open (two tested examples shown after submit). The "what do you notice" and "is it ALWAYS true, say why" cards are self-check.
+- L6 Q1 (the table): each row (curry puff, notebook, umbrella, bicycle) is two cards: "write the notes and coins you use" (typed, self-check: it can be written in many ways, so it is compared with the answer shown) and "how many pieces" (auto-marked). The printed picture of the item is not shown (a decorative icon) and the printed picture of the coins and notes is a plain-text list (no coin or note pictures; the list also says there is no $20 note).
+- L6 Q2 (the table of ways): the printed table (way, $5, $2, $1, pieces) is not typed as 24 boxes; (a) is the number of ways, "2 pieces altogether" is the printed last column as one ordered list (most $5 notes first, then most $2 notes: the order is stated), and (b) two ways with exactly 4 pieces are typed in six boxes (way with more $5 notes first). The printed picture ($5 note, $2 note, $1 coin) is not drawn.
+- L6 Q3 and Q4: printed change number lines are redrawn (with the start and end marked; no hops drawn: the child chooses the hops). Q3(b) is two cards: the change, then the notes for it (how many $10, $5, $2 notes). Q4(b) "find ALL the pairs" is one ordered list of prices (smaller price first in each pair, pairs in order of the smaller price), so the number of pairs is not given away.
+- L6 Q5 and 3(a) are the only text items: the amount may be typed as 35, 35c, 35 cents, $0.35, 0.35, 100, 1.00, $1.00, 1 dollar ... (all listed in the data). Q6 (find all the ways) is two ordered lists: the number of stickers for each way (most stickers first), then the erasers for the same ways.
+- L6 Investigation "table of how many coins each amount needs, 5 to 95 cents" is three ordered lists (5 to 30, 35 to 60, 65 to 95), so the whole table is typed but no card has more than 7 numbers. Think harder 3 (sets of 4 coins) is typed in cents (a $1 coin is 100), biggest coin first and the set with the biggest coin first. Go further 6 is four cards (could Mei be right, could Siti be right, all the amounts typed in cents, what do you notice).
+- Printed "take-home" star marks are not shown (a printing-order cue). The strategy card, "Tool of the day", "Looking back" and the name/date line are print-only.
+
+## Week 1 and 2 audit points applied from the start
+
+No card gives another card's answer in its stem, hint or example (the Think harder 1 cards share one figure; the Investigation "why" card does not say the trick always works; 6(a) and 6(b) both state the order rule instead of saying "the same ways as before"; Go further 6 Mei and Siti are separate Yes/No cards that do not name the answer; 4(a) explain does not say the answer); hints nudge and none states the answer or a one-case rule; no example equals an answer; the printed pairing is kept (IN and OUT, rows and columns of the Q2 table, pairs of prices, stickers with erasers); labels are unique and clear (1(a) list, 1(a), Inv 1 ... Inv 6, T1a, T1b, G6a ...); lists have at most 8 numbers with a comma; every typed explanation is self-check; screen wording ("type", no "circle" or "take-home"); worked steps were checked to be true for every case they name (the variant steps too).
+
+## Open questions for the owner
+
+1. The shared matcher does not read a cent sign after a number in a NUMBER box (`35¢` would be marked wrong: `¢` is not a letter in the unit rule). In these two lessons the only answers in cents are typed as text with all the writings listed (3(a), Q5) or as numbers in a list ("in cents", digits are read wherever they are), and the boxes say "Type the number of cents". If more money lessons follow (week 4 onwards), allowing `¢` in the unit rule of `sheet.js` and `mark.js` would help every level.
+2. L6 Q1 "the notes and coins I use" is a typed self-check, not auto-marked (many writings, and a child may list them in any order). Should it become a choice among a few written-out sets, so that it counts as auto-marked, or stay self-check?
+3. L5 Q5(d) says "the same OUT as Mei", which tells a child that Ali's machine usually needs a different IN than Mei's; it is the printed wording and Q5(c) (always the same?) is a separate card. Reword in the print, or accept?
+4. L5 and L6 qbank items not printed in the workbook (Think harder 5 to 9 and Go further 1 to 6 of the bank) are not online, as in weeks 1 and 2.

@@ -281,7 +281,7 @@ ITEMS = [
       q='What if we want exactly 1 whole instead of 3/4, with pieces of 1/2, 1/4 and 1/8? Do you think there will be more ways or fewer? Test your idea, then choose.',
       check=lambda: 'More ways than for 3/4' if len(ways(8)) > len(ways(6)) else ('Fewer ways than for 3/4' if len(ways(8)) < len(ways(6)) else 'The same number of ways'),
       hint='Count the ways to make 1 whole in the same organised way: halves first, then quarters, then eighths.',
-      steps=['3/4 is 6 eighths and 1 whole is 8 eighths: there is more room to fill.', 'More room means more ways to fill it.', 'Count them to be sure: that is the next question.'],
+      steps=['3/4 is 6 eighths and 1 whole is 8 eighths, so there are 2 more eighths to fill.', 'With 1/8 pieces to use, every way to make 3/4 can be finished off with one more 1/4, so we expect more ways for 1 whole.', 'Count them to be sure: that is the next question.'],
       src=['What if we want exactly 1 whole instead? Do you think there will be more ways or fewer? Test your idea.']),
     I(id='I8c-count', tier='invest', no='8(c) count', label='Inv 8c count', type='number', skill='making a fraction from pieces', answer=9, svg=PIECES,
       q='How many different ways can you make exactly 1 whole with pieces of 1/2, 1/4 and 1/8? Use as many of each as you like; the order does not matter. Type the number.',
