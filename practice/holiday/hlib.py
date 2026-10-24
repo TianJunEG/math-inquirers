@@ -39,27 +39,38 @@ def Re(x, y, w, h, fill='none', stroke=NAVY, sw=2.4, rx=0, dash=None):
 
 # ---------------------------------------------------------------- number line with hops (frog)
 def number_line(lo=0, hi=20, hops=None, circled=(), crosses=(), caption='', first_hop_only=False):
-    """A number line lo..hi, one label per number. hops: list of (from, to). circled: numbers ringed. crosses: numbers marked with an X above the line."""
-    sp, x0 = 17, 18
-    W = (hi - lo) * sp + 2 * x0 + 4
-    y = 62
-    px = lambda n: x0 + (n - lo) * sp
-    b = ''
-    if caption:
-        b += T(x0 - 8, 16, caption, 15, 'start', 800)
-    b += Ln(px(lo) - 10, y, px(hi) + 12, y, 3)
-    for n in range(lo, hi + 1):
-        b += Ln(px(n), y - 6, px(n), y + 6, 2.2) + T(px(n), y + 26, n, 14)
-    for a, c in (hops or []):
-        mx = (px(a) + px(c)) / 2
-        b += f'<path d="M{px(a)} {y - 9} Q{mx} {y - 46} {px(c)} {y - 9}" fill="none" stroke="{TEAL}" stroke-width="2.4"/>'
-        b += f'<polygon points="{px(c)},{y - 8} {px(c) - 5},{y - 17} {px(c) + 4},{y - 16}" fill="{TEAL}"/>'
-        b += T(mx, y - 38, c - a, 14, 'middle', 800, TEAL)
-    for n in circled:
-        b += Ci(px(n), y, 10, YEL, NAVY, 2.2) + T(px(n), y + 5, n, 14)
-    for n in crosses:
-        b += T(px(n), y - 14, '×', 24, 'middle', 800, WARM)
-    return svg(W, 96, b, caption or f'Number line from {lo} to {hi}')
+    """A number line lo..hi, one label per number; a long line is drawn as two rows (the second starts where the first ends, so the number
+    in the middle appears in both). hops: list of (from, to), a hop over the break is drawn as two arcs. circled: numbers ringed. crosses: X above."""
+    span = hi - lo
+    rows = [(lo, hi)] if span <= 12 else [(lo, lo + span // 2), (lo + span // 2, hi)]
+    sp, x0 = (30 if len(rows) > 1 else 28), 22
+    W = max(r[1] - r[0] for r in rows) * sp + 2 * x0 + 4
+    rh = 92
+    top = 24 if caption else 4
+    body = T(6, 17, caption, 15, 'start', 800) if caption else ''
+    for k, (a, c) in enumerate(rows):
+        y = top + k * rh + 62
+        px = lambda n: x0 + (n - a) * sp
+        body += Ln(px(a) - 12, y, px(c) + 12, y, 3)
+        for n in range(a, c + 1):
+            body += Ln(px(n), y - 6, px(n), y + 6, 2.2) + T(px(n), y + 26, n, 16)
+        for h0, h1 in (hops or []):
+            s0, s1 = max(h0, a), min(h1, c)
+            if s0 >= s1:
+                continue
+            mx = (px(s0) + px(s1)) / 2
+            body += f'<path d="M{px(s0)} {y - 9} Q{mx} {y - 50} {px(s1)} {y - 9}" fill="none" stroke="{TEAL}" stroke-width="2.4"/>'
+            if s1 == h1:
+                body += f'<polygon points="{px(s1)},{y - 8} {px(s1) - 5},{y - 17} {px(s1) + 4},{y - 16}" fill="{TEAL}"/>'
+            if (s1 - s0) * 2 >= (h1 - h0):
+                body += T(mx, y - 36, h1 - h0, 15, 'middle', 800, TEAL)
+        for n in circled:
+            if a <= n <= c:
+                body += Ci(px(n), y, 12, YEL, NAVY, 2.2) + T(px(n), y + 5, n, 15)
+        for n in crosses:
+            if a <= n <= c:
+                body += T(px(n), y - 12, '×', 26, 'middle', 800, WARM)
+    return svg(W, top + (len(rows) - 1) * rh + 96, body, caption or f'Number line from {lo} to {hi}')
 
 
 def stack(*figs):
