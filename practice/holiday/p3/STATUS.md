@@ -82,3 +82,60 @@ Checkers: every answer is recomputed by loops over the numbers of the question (
 1. Same as week 1: should the Investigation (and the Extra pair) be shown by default, or hidden behind "Want more?" like the printed "You choose" box? Think harder is "optional" in print; online all groups are visible.
 2. Lesson 3 Investigation: "Is the total ALWAYS 9?" is answered No because of 9 × 11 = 99 (digit sum 18). The model answer also says 18 is itself in the 9 times table (the gifted.json model answer). Fine for ages 8 to 10, or too much?
 3. L3 5(a) marks the order of the two lists (smallest number of rows first, chairs in the same order). Say if the order should not be marked (then the pairing is no longer checked).
+
+
+---
+
+# Level 3 (ages 8 to 10, key p3): online practice for holiday WEEK 3 (lessons 5 and 6)
+
+Week 3 = lessons 5 and 6 (`website/data/beta_schedule.json`: group L3A, Tue 8 Dec and Fri 11 Dec 2026, lessons n=5 and n=6; `p3/content/l5.js` and `l6.js` also say `week: 3`). Built and tested, NOT deployed; no website/dist, Supabase or sending. Weeks 1 and 2 are described above. The shared files (sheet.js, submit/*, build_holiday.py, hlib.py, test_holiday.py) and the earlier lessons were not edited.
+
+Build and test (shared script and runner):
+
+    python3 practice/holiday/build_holiday.py p3 5      # -> practice/holiday/p3/05/dist   (git-ignored)
+    python3 practice/holiday/test_holiday.py p3 5       # Chromium, 390 and 900 px, light and dark; proofs in p3/05/proof
+    (same with 6)                                       # serve: python3 -m http.server -d practice/holiday/p3/05/dist 8792
+
+## Where the questions come from
+The printed workbook is built by `p3/workbook_html.js` from `p3/content/l5.js` and `l6.js` (Start here = `workbook(H)`, Think harder 1 to 4 = `qbank.stretch[0..3]`, Go further 5 to 7 = `qbank.challenge[-3:]`, Take-home = `deck.takeHome`) and `p3/gifted.json` (Investigation). It is code, not data, so the structured items in `p3/05/lesson.py` and `p3/06/lesson.py` were written from those exact sources; `build_holiday.py` fails unless every printed fragment (`src`) occurs in them. Figures: `figs_p3_w3.js` compiles `shareSvg` (l5.js: 47 counters, 6 plates) and takes the empty bars of `p3/figs_l3.js` (Q5 fence, Think harder 2 to 4, Go further 6) and the printed wall, shapes and cards of l6.js. `p3lib_w3.py` redraws the fraction wall, the five shapes (A to E) and the ten partner cards larger (the printed row is about 50 px per shape on a phone), draws the "pieces" and the "ways" bars, and holds the fraction helpers; the shape item checkers count the equal and the shaded parts of the PRINTED figure's svg and the build stops if they differ from the key (4/1, 8/2, 6/2, 12/3, 8/3).
+
+## Counts (every item has a hint, a worked solution, tags strand and skill)
+| Lesson | Items | Auto-marked | Self-check (never auto-marked) | Paper-only drawing | Types | Variant families (combinations all equal the oracle) |
+|---|---|---|---|---|---|---|
+| 5 Remainder Riddles (Division) | 38 | 35 | 3 | 0 | number 13, fields 13, choice 4, set 3, text 2, selfcheck 3 | 12 (375) |
+| 6 Fraction Walls (Fractions) | 55 | 48 | 5 | 2 | text 29, choice 10, number 5, fields 4, selfcheck 7 | 3 (124) |
+
+Items by tier: L5 core 19, Investigation 8, Think harder 4, Go further 7 (G5 to G7 and the Extra pair); L6 core 31, Investigation 8, Think harder 7, Go further 9 (G5 to G7 and the Extra pair). The shared runner lists Investigation before Think harder; the printed order is Think harder, Go further, Investigation.
+Self-checks: L5 make-up riddle (open, no objective fact), Investigation "explain why", G6 "explain how you know" (all carry a checked fact); L6 Think harder 2 "show how", Investigation "how do you know you have all", G5 make-up riddle (open) and "which numbers work", G7 "another fraction"; paper-only with a drawn correct answer: Investigation "list every way" and G6 "find all the ways" (the bars of every way are drawn after Submit).
+Unavailable online (nothing is unavailable that the printed pages ask a child to answer): the "Look back" reflection page and strategy card (paper routines, as in weeks 1 and 2). Counting with counters/cups (explore activity) is a lesson activity, not a workbook question.
+Checkers: every answer is recomputed by counting up in the divisor, trying every number or day (the 100-day questions step one day at a time), cross-multiplying for equal fractions, exact `Fraction` arithmetic for sums, differences and orders, counting the shaded and equal parts of the printed shapes figure, and trying every way to fill a bar with halves, quarters and eighths (6 ways for 3/4, 9 for 1 whole, 2 with exactly 5 pieces). Puzzles that print "only one" (Q4 "I am", T2, Q6 tables, G7 pens, Q6 partner cards) are checked to have exactly one solution. Every self-check that states a fact also carries a check of it (for example that 3 in a row always has exactly one multiple of 3, and that the fractions equal to 3/4 have top plus bottom in the 7 times table).
+
+## Not mirrored one to one, and why
+Lesson 5
+- Q1(c) "What is wrong? Write the correct answer." is two cards: a choice (the remainder 11 is bigger than 7) and boxes for 8 remainder 4.
+- Q4(a): the printed table has a candidate row and a "remainder when divided by 4" row. Online: the list of numbers for the first clue (set, any order) and the "I am" number. The remainders-by-4 row is not its own card (it would have to print the list, which is the other card's answer).
+- Q6: the printed table (children for 1 to 6 tables, both ways) is two cards of boxes (2 to 6 tables; the first column is given in the stem); (a) tables and children, (b) empty seats are self-contained stories (they do not depend on (a) on screen).
+- Q2, Q3, Q5 as printed. 5(a) remainders is typed with commas (any order). "(Draw them to help)" became "Draw a picture on paper to help if you like".
+- Investigation (three in a row): the printed "try 5 starting numbers of your own" is fixed to 7, 25, 61, 118 and 152 (one above 100); "Is it always exactly one?" and the 4-in-a-row and 2-in-a-row changes are choice and boxes cards; "Explain why" is a self-check. The printed intro says that exactly one of 14, 15, 16 is in the 3 times table (15); that sentence is not shown on screen, so that no card gives away the answer of "is it always exactly one?" (14, 15, 16 stay as the example).
+- Go further 6 asks two day cards (after and ago, typed day name or the first three letters) and an explain self-check. Go further 5 (make up) is open and marked "open" in the tutor report.
+- Variants: where an arithmetic template with an oracle exists (1a, 1b, 2a to 2d, 3a, 3b, T1, T4, Extra (a), Extra (b)); none for riddles, lists, the table puzzle, G6/G7, because their answers are lists, days or searches (no template language for them).
+
+Lesson 6
+- Typed fractions: a fraction is typed with a slash (`5/7`), any equal fraction is accepted (`10/14`, `3/6` for `1/2`) through `equiv_frac`; lists (2(g), T4) accept equal fractions in the same order, also with `<` between them. T1 (bottom number 12) and G7 are exact forms / a list of accepted fractions (see below).
+- Q1(d) "what do you notice about the top and bottom numbers" is a choice (each bottom number is double its top number); the printed "(c) take-home" is kept as Q1(c) with the on-screen note "Extra practice (not for the lesson)". The Q6 take-home partner puzzle is five cards (one per yellow card, type the blue card's fraction) with the ten cards drawn in two rows.
+- Q2 circles (a) to (f) are six choice cards (greater, less or equal), (g) is a typed order.
+- Q3: (a) "which shapes have exactly 1/4" is typed letters (any order). The printed (b) asks only the OTHER shapes, which would reveal the answer of (a), so (b) is five cards (every shape, A to E, any equal fraction accepted).
+- Q4: the printed example "1/2 + 1/4 = 2/4 + 1/4 = 3/4" is the answer of 4(c) (3/4 = 9/12), so the example in the hint is 1/5 + 1/10 = 2/10 + 1/10 = 3/10. The wall is shown on 4(b), 4(c), 4(d) only (it has no fifths or tenths).
+- Think harder 1: two cards (the list with bottom number 12, and 2/3 = ?/12). Think harder 2 "show how you know" is a choice plus a self-check.
+- Go further 5: make up (open), "does it work for ANY number" (choice) and "which numbers work, and why" (self-check). Go further 6: how many ways (number) and the list (paper-only, drawn answer). Go further 7: one fraction between 2/3 and 3/4 is auto-marked against every n/d with bottom number up to 60 that lies between them (found by cross-multiplying); "another one" is a self-check with examples. A correct fraction with a bottom number above 60 would be marked wrong.
+- Investigation (find all the ways to make 3/4): one half left (fraction), ways with one half (2), with no half (4), in all (6), the list (paper-only, the six ways drawn), "how do you know you have them all" (self-check), "more or fewer ways for 1 whole" (choice) and how many (9). The pieces figure is shown on each card so that the setup is not repeated in words.
+- Variants: only the equal-fraction box cards (1(a), 1(b), 1(c)): the variant engine makes number and box answers only, not typed fractions.
+
+## Week 1 and 2 audit rules applied from the start
+No card shows another card's answer in a stem, hint or figure (checked by reading every card: for example G5 "any number?" does not say which numbers work, I8 easy no longer says "exactly one", 3(b) asks every shape); hints nudge without giving the answer; examples never equal an answer (Q4 example, make-up hints use other numbers); solutions are true for every case they name (the "n numbers in a row" statement and "more ways for 1 whole" are checked by loops); positions/pairings kept (Q6 partner per yellow card, shape letters, row/column of the table as labelled boxes); no long riddle repeated: the Investigation pieces and the party tables are in the card boxes; screen wording ("type", "write down", no circle or cross out); unique nav labels set where two cards share a printed number; self-checks have `marking_mode` set (explain = self, make-up = open).
+
+## Open questions for the owner
+1. Typed fractions (Level 3 Lesson 6): children type `3/4`; there is no fraction keypad or stacked fraction box. Fine for ages 8 to 10, or should we add a fraction input to the shared runner?
+2. G7 (a fraction between 2/3 and 3/4) accepts any fraction with a bottom number up to 60. Enough, or should the tutor mark it by hand?
+3. 3(b) is five cards (all shapes) rather than the printed "the other shapes" to avoid giving the answer of 3(a). Keep?
+4. Same as weeks 1 and 2: should the Investigation and Extra pairs be visible by default or behind "Want more?"
