@@ -45,7 +45,7 @@ except Exception as e:                          # pragma: no cover
 NGF = TAX.RULES['run_words_fail']      # a shared run of this many words is a FAIL (7 = the extension checker's rule)
 MAXQ = {1: 48, 2: 55, 3: 65, 4: 75, 5: 85, 6: 95}      # words in a question
 MAXSENT = {1: 20, 2: 22, 3: 26, 4: 30, 5: 34, 6: 38}   # words in a sentence
-US = re.compile(r'\b(color|meter|liter|kilometer|centimeter|math)\b|\bmaths?\b', re.I)
+US = re.compile(r'\b(color|meter|liter|kilometer|centimeter|math)\b', re.I)
 BAD = re.compile(r'picture|image|photo|specimen|coin art|note art|look at the coin|[\U0001F300-\U0001FAFF]')
 BRANDS = re.compile(r'\b(milo|coke|coca[- ]cola|pepsi|nescafe|maggi|lego|nintendo|pokemon|doraemon|kitkat|oreo|mcdonald|kfc|starbucks|ikea|'
                     r'nike|adidas|google|youtube|netflix|tiktok|roblox|minecraft|barbie|disney|samsung|iphone|ipad|hello kitty|yakult|'

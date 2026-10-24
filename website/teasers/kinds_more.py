@@ -76,7 +76,7 @@ def span(a, b):
 
 
 @kind
-def match_assign(people, things, clues, ask_thing=None, ask_person=None):
+def match_assign(people, things, clues, ask_thing=None, ask_person=None, verb='has the'):
     sols = []
     for perm in itertools.permutations(things):
         has = dict(zip(people, perm))
@@ -88,7 +88,7 @@ def match_assign(people, things, clues, ask_thing=None, ask_person=None):
         ans = [p for p in people if has[p] == ask_thing][0]
     else:
         ans = has[ask_person]
-    return ans, {'sol': ', '.join('%s has the %s' % (p, has[p]) for p in people)}
+    return ans, {'sol': ', '.join('%s %s %s' % (p, verb, has[p]) for p in people)}
 
 
 DIRS = ['north', 'east', 'south', 'west']
@@ -302,6 +302,17 @@ def quarter_turns(a, b):
     steps = (b - a) % 12
     assert steps % 3 == 0
     return steps // 3, {'steps': steps}
+
+
+# ================================================================== Level 4 structures
+@kind
+def series_gap(values, ask):
+    gaps = [b - a for a, b in zip(values, values[1:])]
+    if ask == 'biggest_rise':
+        i = max(range(len(gaps)), key=lambda j: gaps[j])
+    else:
+        i = min(range(len(gaps)), key=lambda j: gaps[j])
+    return abs(gaps[i]), {'gaps': ', '.join(str(abs(g)) for g in gaps), 'from': values[i], 'to': values[i + 1], 'at': i + 1}
 
 
 SOLVE_NAMES = list(SOLVE)

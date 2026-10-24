@@ -113,7 +113,7 @@ DEFS = [
       'Chen has water. Put that drink aside and see who is left for each other drink.',
       '{sol}. So {ans} orders the juice.',
       p=dict(people=['Aisha', 'Ben', 'Chen', 'Dina'], things=['milk tea', 'juice', 'water', 'soya milk'],
-             clues=[['Aisha', 'juice', False], ['Aisha', 'water', False], ['Ben', 'milk tea', False], ['Chen', 'water', True], ['Dina', 'juice', False], ['Dina', 'soya milk', False]], ask_thing='juice'),
+             clues=[['Aisha', 'juice', False], ['Aisha', 'water', False], ['Ben', 'milk tea', False], ['Chen', 'water', True], ['Dina', 'juice', False], ['Dina', 'soya milk', False]], ask_thing='juice', verb='orders the'),
       w=['Aisha', 'Chen', 'Dina'], sub='logic_match.match_people_things'),
     P('sortthree', 'filter_count', 'Sorting',
       'Mei Ling sorts these numbers: {numbers:j}. She keeps only the numbers that are in the 3 times table and bigger than 20. How many numbers does she keep?',

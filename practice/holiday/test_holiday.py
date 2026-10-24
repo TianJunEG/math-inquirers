@@ -398,6 +398,9 @@ import subprocess
 sys.path.insert(0, os.path.join(H.ROOT, 'practice', 'submit'))
 import make_keys                                   # noqa: E402
 _k, _ver, _d, keys, _tags = make_keys.build(0, n, key)
+for it, kr in zip(items, keys):      # open-ended items are reported as open, not as 'checked on paper'
+    if it.get('open') and (kr['marking_mode'], kr['type']) != ('none', 'open'): fail(f'{it["id"]}: open item exported as {kr["marking_mode"]}/{kr["type"]}')
+    if it['type'] == 'selfcheck' and not it.get('open') and kr['marking_mode'] != 'self': fail(f'{it["id"]}: self-check exported as {kr["marking_mode"]}')
 cases = []
 for it, kr in zip(items, keys):
     if kr['marking_mode'] != 'auto':

@@ -73,7 +73,7 @@ def b_span(a, b):
 
 
 @brute
-def b_match_assign(people, things, clues, ask_thing=None, ask_person=None):
+def b_match_assign(people, things, clues, ask_thing=None, ask_person=None, verb='has the'):
     out = set()
     count = 0
     for perm in itertools.permutations(range(len(things))):
@@ -358,3 +358,16 @@ def b_quarter_turns(a, b):
         if hours % 3 == 0:
             turned += 1
     return {turned} if hours % 3 == 0 else set()
+
+
+# ================================================================== Level 4 structures
+@brute
+def b_series_gap(values, ask):
+    best = None
+    for i in range(len(values) - 1):
+        d = values[i + 1] - values[i]
+        if ask == 'biggest_rise':
+            best = d if best is None or d > best else best
+        else:
+            best = d if best is None or d < best else best
+    return {abs(best)}

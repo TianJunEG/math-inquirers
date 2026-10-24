@@ -16,7 +16,9 @@ strings that must occur in the workbook source), plus by type
     fields    frame '2, 4, {f1}, 8', answer [6]            check() -> list          boxes inside the sentence, all must be right
     number    answer 29                                      check() -> int
     choice    options [...], answer '...'                    check() -> str           options are never shuffled
-    set       answer [..], ordered False                     check() -> list          typed with commas
+    set       answer [..], ordered False                     check() -> list          typed with commas; grouped=True|False says whether '12,500' / '12 500' may be typed with
+              thousands separators (default: True when an answer has 5 or more digits). Otherwise a comma or space always separates numbers ('250,450').
+    number / fields: unit=False = no unit word is accepted after the number (default: '301 sticks', '20 min', '29.', '20.0' are all accepted)
     text      rule=('add', 3)  or  accept=[...], check()    check() -> ('add', 3) / str   (a counting rule; the accepted wordings come from hlib.rule_accepts)
     selfcheck paper=True|False, facts=<value>, check()      shown only: the child compares with the worked solution; never auto-marked.
               paper=True = drawing / ruler / kit task: shown with 'Do this on paper, then check your drawing against the answer shown on screen.'
@@ -111,7 +113,7 @@ def make_item(src):
     if it.get('unit') is False:                   # a number item whose answer must be typed with no unit word
         out['unit'] = False
     if it.get('svg'):
-        out['svg'] = it['svg']
+        out['svg'] = hlib.lift_svg(it['svg'])      # figure text at least 12 px on a 360 px phone (shared rule, also for figures a lesson draws itself)
     if t == 'selfcheck':
         out['paper'] = bool(it.get('paper'))
         out['paper_only'] = out['paper']
@@ -127,7 +129,7 @@ def make_item(src):
             raise Fail(f'{i}: a self-check item needs check() or open=True')
         out['open'] = bool(it.get('open'))
         if it.get('sol_fig'):
-            out['sol_svg'] = it['sol_fig'](facts)
+            out['sol_svg'] = hlib.lift_svg(it['sol_fig'](facts))
         return out, facts
     out['marking_mode'] = 'auto'
     if t == 'text':
@@ -175,7 +177,7 @@ def make_item(src):
     else:
         raise Fail(f'{i}: unknown type {t}')
     if it.get('sol_fig'):
-        out['sol_svg'] = it['sol_fig'](got)
+        out['sol_svg'] = hlib.lift_svg(it['sol_fig'](got))
     return out, None
 
 

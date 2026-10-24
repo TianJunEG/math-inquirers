@@ -24,6 +24,12 @@ def lift_text(w, body):
     return re.sub(r'font-size="([\d.]+)"', fix, body)
 
 
+def lift_svg(svg_text):
+    """The same lift for a finished <svg ...> string whose viewBox width is read from the string (used by the builder for every question and solution figure)."""
+    m = re.search(r'viewBox="[-\d.]+ [-\d.]+ ([\d.]+) [\d.]+"', svg_text)
+    return lift_text(float(m.group(1)), svg_text) if m else svg_text
+
+
 def svg(w, h, body, label):
     body = lift_text(w, body)
     return (f'<svg viewBox="0 0 {w} {h}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{esc(label)}" '

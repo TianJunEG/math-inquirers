@@ -17,6 +17,10 @@
   "6": "sequence.which_term"
  },
  "families": {
+  "angles": {
+   "name": "Angles",
+   "cite": "MOE P3 MG angles: right angle, greater or smaller than a right angle (p.36); P4 measure (p.39); P5 line, point, triangle, quadrilateral (p.42); L3 lesson 8; L4 lesson 6; L5 lesson 8"
+  },
   "backwards": {
    "name": "Working backwards",
    "cite": "L1 lesson 5 and L2 lesson 5 (Working Backwards); MOE P1 NA 2.4 (inverse), p.31"
@@ -36,6 +40,10 @@
   "coins": {
    "name": "Coin combinations",
    "cite": "L1 lesson 6 (Coin Combos); MOE P1 NA Money, p.31; Singapore coins 5, 10, 20, 50 cents and $1 only"
+  },
+  "consecutive": {
+   "name": "Consecutive numbers",
+   "cite": "L3 lesson 1 (Number Sleuths); L4 lesson 3; L6 lesson 4 (Algebra Machines)"
   },
   "counting_choices": {
    "name": "Counting choices and orders",
@@ -61,6 +69,18 @@
    "name": "Counting routes on a grid",
    "cite": "L3 lesson 10; L4 lesson 10 (Mixed heuristics); L6 lesson 5 (Every Possible Way)"
   },
+  "counting_ways": {
+   "name": "Counting ways (steps and tilings)",
+   "cite": "L3 lesson 10; L4 lesson 10 (Mixed heuristics); L6 lesson 5"
+  },
+  "cubes": {
+   "name": "Cubes and cuboids",
+   "cite": "MOE P4 MG nets, P5 volume (p.42); L4 lesson 8 (Symmetry and Nets)"
+  },
+  "decimals": {
+   "name": "Decimals",
+   "cite": "MOE P4 NA decimals: operations with 1-digit whole numbers (p.38); L4 lesson 5 (Decimal Detectives)"
+  },
   "digit_cards": {
    "name": "Digit cards",
    "cite": "L2 lesson 1 (Digit Detectives); L3 lesson 1; MOE P1 NA 1.5 compare and order numbers, p.31"
@@ -72,6 +92,14 @@
   "division": {
    "name": "Sharing and grouping (division)",
    "cite": "MOE P1 NA Multiplication and Division 3.1-3.4 (p.31); P2 (p.33); P3 remainders (p.35)"
+  },
+  "factors": {
+   "name": "Factors",
+   "cite": "MOE P4 NA factors and multiples (p.37); L3 lesson 3 (tables); L4 lesson 1 (Factor Hunters)"
+  },
+  "figure_rule": {
+   "name": "Rules for growing figures",
+   "cite": "L5 lesson 9 (Pattern Generalisers); L4 lesson 10 (Mixed heuristics); MOE P4 NA number-sequence patterns (p.37)"
   },
   "fractions": {
    "name": "Fractions",
@@ -92,6 +120,10 @@
   "logic_order": {
    "name": "Logic: putting in order",
    "cite": "L1 lesson 8 (Logic and Sorting); L3 lesson 10"
+  },
+  "logic_truth": {
+   "name": "Logic: who is telling the truth",
+   "cite": "L3 lesson 10 (bar graphs and logic); L5 lesson 10; L6 lesson 10"
   },
   "measurement": {
    "name": "Measuring length",
@@ -125,6 +157,10 @@
    "name": "Odd, even and multiples",
    "cite": "MOE P1 NA multiplication concepts 3.1 (p.31); P2 tables 2, 3, 4, 5, 10 (p.33); L1 lesson 1 counting patterns"
   },
+  "order_ops": {
+   "name": "Order of operations",
+   "cite": "MOE P5 NA order of operations (p.41); Ages 9-11 page list says \"order of operations\"; L4 lesson 3 (Operation Detectives)"
+  },
   "perimeter_area": {
    "name": "Perimeter and area",
    "cite": "MOE P3 MG Area and Perimeter, p.36; P4 p.39; L3 lesson 7; L4 lesson 7. At Level 1: perimeter as the distance round a shape (L1 lesson 7 Shape Safari)"
@@ -140,6 +176,10 @@
   "repeating_pattern": {
    "name": "Repeating patterns",
    "cite": "L1 lesson 4 (Repeating and Growing Patterns); MOE P1 NA 1.6 number-sequence patterns, p.31"
+  },
+  "rounding": {
+   "name": "Rounding",
+   "cite": "MOE P3 NA 1.4 rounding to the nearest 10, 100 (p.35), P4 to the nearest 1000 (p.37), P5 (p.41); L3 lesson 1; L4 lesson 2; L5 lesson 1"
   },
   "sequence": {
    "name": "Number sequences",
@@ -161,6 +201,10 @@
    "name": "Directions and turns",
    "cite": "MOE P1-P2 MG position (left, right, turns) and P4 angle turns (p.39); L4 lesson 6 Angle Turns"
   },
+  "symmetry": {
+   "name": "Line symmetry",
+   "cite": "MOE P4 MG line symmetry (p.39); L4 lesson 8 (Symmetry and Nets)"
+  },
   "time": {
    "name": "Time",
    "cite": "MOE P1 MG Time 2.1-2.4 (p.32), P2 minute (p.34), P3 start/finish/duration and 24-hour (p.36)"
@@ -171,13 +215,40 @@
   }
  },
  "subs": {
+  "angles.clock_hands": {
+   "name": "angle between the hour hand and the minute hand",
+   "levels": [
+    4,
+    5
+   ],
+   "kinds": [
+    "angle"
+   ],
+   "where": {
+    "kind": [
+     "clock"
+    ]
+   }
+  },
+  "angles.right_angle_turns": {
+   "name": "how many right angles does a clock hand turn through",
+   "levels": [
+    3,
+    4
+   ],
+   "kinds": [
+    "quarter_turns"
+   ]
+  },
   "backwards.two_step": {
    "name": "undo two steps (for example double then add)",
    "levels": [
     1,
     2,
     3,
-    4
+    4,
+    5,
+    6
    ],
    "kinds": [
     "mystery"
@@ -204,6 +275,38 @@
    "kinds": [
     "sum_diff"
    ]
+  },
+  "bar_model.times_as_many": {
+   "name": "one amount is a number of times the other, total known",
+   "levels": [
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "times_as_many"
+   ],
+   "where": {
+    "has": [
+     "total"
+    ]
+   }
+  },
+  "bar_model.times_difference": {
+   "name": "one amount is a number of times the other, difference known",
+   "levels": [
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "times_as_many"
+   ],
+   "where": {
+    "has": [
+     "diff"
+    ]
+   }
   },
   "bonds.pairs_to_total": {
    "name": "count the different pairs of whole numbers that make a total",
@@ -232,7 +335,8 @@
    "levels": [
     2,
     3,
-    4
+    4,
+    5
    ],
    "kinds": [
     "calendar_nth"
@@ -243,7 +347,10 @@
    "levels": [
     1,
     2,
-    3
+    3,
+    4,
+    5,
+    6
    ],
    "kinds": [
     "weekday"
@@ -285,6 +392,18 @@
     "fewest_coins"
    ]
   },
+  "consecutive.consecutive_total": {
+   "name": "consecutive numbers with a known total: find the smallest",
+   "levels": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "consec"
+   ]
+  },
   "counting_choices.combinations": {
    "name": "one from each set: multiply the choices",
    "levels": [
@@ -317,6 +436,39 @@
    "kinds": [
     "perm_count"
    ]
+  },
+  "counting_choices.permutations_k": {
+   "name": "ordered choices of some people from a larger group (medals)",
+   "levels": [
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "perm_count"
+   ],
+   "where": {
+    "has": [
+     "k"
+    ]
+   }
+  },
+  "counting_grid.rectangles_in_grid": {
+   "name": "all the rectangles in a grid (choose two lines each way)",
+   "levels": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "grid_count"
+   ],
+   "where": {
+    "what": [
+     "rectangles"
+    ]
+   }
   },
   "counting_grid.squares_in_grid": {
    "name": "all the squares (big and small) in a square grid",
@@ -409,7 +561,8 @@
    "levels": [
     1,
     2,
-    3
+    3,
+    4
    ],
    "kinds": [
     "count_between"
@@ -438,6 +591,127 @@
     ]
    }
   },
+  "counting_routes.routes_avoiding_point": {
+   "name": "grid routes that avoid one blocked point",
+   "levels": [
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "lattice"
+   ],
+   "where": {
+    "blocked": [
+     [
+      [
+       1,
+       1
+      ]
+     ],
+     [
+      [
+       2,
+       1
+      ]
+     ],
+     [
+      [
+       1,
+       2
+      ]
+     ]
+    ]
+   }
+  },
+  "counting_ways.stairs_steps": {
+   "name": "ways to climb steps taking 1 or 2 (or 3) at a time",
+   "levels": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "stairs"
+   ]
+  },
+  "cubes.unpainted_inside": {
+   "name": "small cubes with no paint from a painted cube",
+   "levels": [
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "painted_cube"
+   ],
+   "where": {
+    "faces": [
+     0
+    ]
+   }
+  },
+  "decimals.add": {
+   "name": "add decimals with different numbers of places",
+   "levels": [
+    4,
+    5
+   ],
+   "kinds": [
+    "decimals"
+   ],
+   "where": {
+    "op": [
+     "+"
+    ]
+   }
+  },
+  "decimals.divide_whole": {
+   "name": "divide a decimal by a whole number",
+   "levels": [
+    4,
+    5
+   ],
+   "kinds": [
+    "decimals"
+   ],
+   "where": {
+    "op": [
+     "/"
+    ]
+   }
+  },
+  "decimals.multiply_whole": {
+   "name": "multiply a decimal by a whole number",
+   "levels": [
+    4,
+    5
+   ],
+   "kinds": [
+    "decimals"
+   ],
+   "where": {
+    "op": [
+     "*"
+    ]
+   }
+  },
+  "decimals.subtract": {
+   "name": "subtract decimals",
+   "levels": [
+    4,
+    5
+   ],
+   "kinds": [
+    "decimals"
+   ],
+   "where": {
+    "op": [
+     "-"
+    ]
+   }
+  },
   "digit_cards.largest_two_digit": {
    "name": "largest 2-digit number from some of the cards",
    "levels": [
@@ -456,14 +730,29 @@
   "digit_cards.max_sum": {
    "name": "biggest sum when all cards make two numbers",
    "levels": [
-    1,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "cards_sum"
+   ]
+  },
+  "digit_cards.smallest_even": {
+   "name": "smallest even number from digit cards",
+   "levels": [
     2,
     3,
     4
    ],
    "kinds": [
-    "cards_sum"
-   ]
+    "digits_extreme"
+   ],
+   "where": {
+    "ask": [
+     "smallest_even"
+    ]
+   }
   },
   "digit_cards.smallest_number": {
    "name": "smallest number from digit cards (0 cannot lead)",
@@ -478,6 +767,21 @@
    "where": {
     "ask": [
      "smallest"
+    ]
+   }
+  },
+  "digit_cards.smallest_odd": {
+   "name": "smallest odd number from digit cards",
+   "levels": [
+    4,
+    5
+   ],
+   "kinds": [
+    "digits_extreme"
+   ],
+   "where": {
+    "ask": [
+     "smallest_odd"
     ]
    }
   },
@@ -548,6 +852,22 @@
     ]
    }
   },
+  "digit_puzzles.palindromes": {
+   "name": "how many palindromes in a range",
+   "levels": [
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "scan"
+   ],
+   "where": {
+    "pred": [
+     "palindrome"
+    ]
+   }
+  },
   "digit_puzzles.same_digit_count": {
    "name": "how many numbers have all digits the same",
    "levels": [
@@ -565,13 +885,33 @@
     ]
    }
   },
+  "digit_puzzles.smallest_with_digit_sum": {
+   "name": "smallest number whose digits add to a total",
+   "levels": [
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "scan"
+   ],
+   "where": {
+    "pred": [
+     "digit_sum"
+    ],
+    "ask": [
+     "min"
+    ]
+   }
+  },
   "division.boxes_needed": {
    "name": "how many boxes to hold everything (round up)",
    "levels": [
     1,
     2,
     3,
-    4
+    4,
+    5
    ],
    "kinds": [
     "share"
@@ -587,7 +927,9 @@
    "levels": [
     1,
     2,
-    3
+    3,
+    4,
+    5
    ],
    "kinds": [
     "share"
@@ -603,7 +945,9 @@
    "levels": [
     1,
     2,
-    3
+    3,
+    4,
+    5
    ],
    "kinds": [
     "share"
@@ -630,6 +974,54 @@
     ]
    }
   },
+  "factors.greatest_common_factor": {
+   "name": "the biggest number that divides two numbers exactly",
+   "levels": [
+    4,
+    5
+   ],
+   "kinds": [
+    "gcd_bags"
+   ]
+  },
+  "factors.rectangular_arrays": {
+   "name": "ways to arrange a number of tiles in equal rows (factor pairs)",
+   "levels": [
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "factor_count"
+   ]
+  },
+  "figure_rule.nth_figure": {
+   "name": "number of tiles in the nth figure from the first three figures",
+   "levels": [
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "nth_term"
+   ]
+  },
+  "fractions.add_related": {
+   "name": "add fractions whose denominators are related",
+   "levels": [
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "frac_arith"
+   ],
+   "where": {
+    "op": [
+     "+"
+    ]
+   }
+  },
   "fractions.compare_unit": {
    "name": "two fractions of the same amount: find the difference",
    "levels": [
@@ -641,12 +1033,52 @@
     "fraction_diff"
    ]
   },
+  "fractions.equivalent_missing": {
+   "name": "equivalent fractions: find the missing numerator",
+   "levels": [
+    3,
+    4
+   ],
+   "kinds": [
+    "equiv_fraction"
+   ]
+  },
   "fractions.fraction_of_remainder": {
    "name": "FIXED PUZZLE (Ages 10-12 page): a fraction, then a fraction of what is left",
    "levels": [],
    "kinds": [
     "fraction_seq"
    ]
+  },
+  "fractions.mixed_add": {
+   "name": "add mixed numbers with related denominators",
+   "levels": [
+    4,
+    5
+   ],
+   "kinds": [
+    "frac_arith"
+   ],
+   "where": {
+    "op": [
+     "+"
+    ]
+   }
+  },
+  "fractions.mixed_subtract": {
+   "name": "subtract mixed numbers with related denominators",
+   "levels": [
+    4,
+    5
+   ],
+   "kinds": [
+    "frac_arith"
+   ],
+   "where": {
+    "op": [
+     "-"
+    ]
+   }
   },
   "fractions.of_set": {
    "name": "a unit fraction or simple fraction of a set",
@@ -672,6 +1104,32 @@
     "fraction_whole"
    ]
   },
+  "graphs.line_graph_biggest_change": {
+   "name": "biggest rise (or fall) between neighbouring readings of a line graph",
+   "levels": [
+    4,
+    5
+   ],
+   "kinds": [
+    "series_gap"
+   ]
+  },
+  "graphs.most_least_gap": {
+   "name": "difference between the most and the least in a list",
+   "levels": [
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "stats"
+   ],
+   "where": {
+    "ask": [
+     "range"
+    ]
+   }
+  },
   "graphs.pictograph_scale": {
    "name": "picture graph where each symbol stands for more than one: find the difference",
    "levels": [
@@ -688,7 +1146,9 @@
    "levels": [
     1,
     2,
-    3
+    3,
+    4,
+    5
    ],
    "kinds": [
     "stats"
@@ -727,6 +1187,22 @@
     "growing_gaps"
    ]
   },
+  "growing_pattern.stick_grid": {
+   "name": "sticks needed for a grid of small squares",
+   "levels": [
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "matchsticks"
+   ],
+   "where": {
+    "shape": [
+     "grid"
+    ]
+   }
+  },
   "growing_pattern.stick_row": {
    "name": "sticks needed for a row of n joined squares or triangles (add the same number each time)",
    "levels": [
@@ -759,6 +1235,17 @@
     "match_assign"
    ]
   },
+  "logic_order.order_five": {
+   "name": "order five people from clues, find the middle one",
+   "levels": [
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "order_logic"
+   ]
+  },
   "logic_order.order_four": {
    "name": "order four people from clues, find the one in a given place",
    "levels": [
@@ -782,6 +1269,18 @@
     "order_logic"
    ]
   },
+  "logic_truth.truth_tellers": {
+   "name": "exactly some of the statements are true: who did or has it",
+   "levels": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "liar"
+   ]
+  },
   "measurement.ruler_offset": {
    "name": "length of an object that does not start at 0 on a ruler",
    "levels": [
@@ -803,6 +1302,39 @@
    "kinds": [
     "unit_convert"
    ]
+  },
+  "missing_number.cryptarithm_add": {
+   "name": "letters stand for digits in an addition",
+   "levels": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "cryptarithm"
+   ],
+   "where": {
+    "pattern": [
+     "AB+CB=BBC"
+    ]
+   }
+  },
+  "missing_number.cryptarithm_times": {
+   "name": "letters stand for digits in a multiplication",
+   "levels": [
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "cryptarithm"
+   ],
+   "where": {
+    "pattern": [
+     "AB*3=CCB"
+    ]
+   }
   },
   "missing_number.equal_sides": {
    "name": "both sides of an equals sign must be the same: find the missing number",
@@ -841,7 +1373,9 @@
    "levels": [
     1,
     2,
-    3
+    3,
+    4,
+    5
    ],
    "kinds": [
     "shopping"
@@ -857,7 +1391,9 @@
    "levels": [
     1,
     2,
-    3
+    3,
+    4,
+    5
    ],
    "kinds": [
     "shopping"
@@ -949,7 +1485,9 @@
    "levels": [
     1,
     2,
-    3
+    3,
+    4,
+    5
    ],
    "kinds": [
     "groups_plus"
@@ -964,6 +1502,17 @@
    ],
    "kinds": [
     "dot"
+   ]
+  },
+  "number_grid.magic_square": {
+   "name": "complete a 3 by 3 magic square",
+   "levels": [
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "magic"
    ]
   },
   "number_grid.number_pyramid": {
@@ -1010,6 +1559,52 @@
     "parity"
    ]
   },
+  "order_ops.brackets_first": {
+   "name": "brackets first, then multiply and subtract",
+   "levels": [
+    4,
+    5
+   ],
+   "kinds": [
+    "expr_form"
+   ],
+   "where": {
+    "form": [
+     "A",
+     "F"
+    ]
+   }
+  },
+  "order_ops.divide_then_multiply": {
+   "name": "brackets, then divide and multiply left to right",
+   "levels": [
+    4,
+    5
+   ],
+   "kinds": [
+    "expr_form"
+   ],
+   "where": {
+    "form": [
+     "G"
+    ]
+   }
+  },
+  "order_ops.multiply_first": {
+   "name": "multiplication before addition and subtraction",
+   "levels": [
+    4,
+    5
+   ],
+   "kinds": [
+    "expr_form"
+   ],
+   "where": {
+    "form": [
+     "B"
+    ]
+   }
+  },
   "perimeter_area.area_cutout": {
    "name": "area of a rectangle with a corner cut out",
    "levels": [
@@ -1027,12 +1622,60 @@
     ]
    }
   },
+  "perimeter_area.missing_side_from_area": {
+   "name": "missing side of a rectangle from its area",
+   "levels": [
+    3,
+    4
+   ],
+   "kinds": [
+    "rect"
+   ],
+   "where": {
+    "ask": [
+     "width_from_area"
+    ]
+   }
+  },
+  "perimeter_area.missing_side_from_perimeter": {
+   "name": "missing side of a rectangle from its perimeter",
+   "levels": [
+    3,
+    4
+   ],
+   "kinds": [
+    "rect"
+   ],
+   "where": {
+    "ask": [
+     "width_from_perimeter"
+    ]
+   }
+  },
+  "perimeter_area.perimeter_cutout": {
+   "name": "perimeter after a corner is cut from a rectangle",
+   "levels": [
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "cells"
+   ],
+   "where": {
+    "ask": [
+     "perimeter"
+    ]
+   }
+  },
   "perimeter_area.perimeter_rectangle": {
    "name": "distance round a rectangle",
    "levels": [
     1,
     2,
-    3
+    3,
+    4,
+    5
    ],
    "kinds": [
     "rect"
@@ -1049,11 +1692,52 @@
     1,
     2,
     3,
-    4
+    4,
+    5
    ],
    "kinds": [
     "perimeter_regular"
    ]
+  },
+  "perimeter_area.perimeter_with_gap": {
+   "name": "fence round a square with a gap for a gate",
+   "levels": [
+    3,
+    4
+   ],
+   "kinds": [
+    "groups_plus"
+   ]
+  },
+  "perimeter_area.square_from_area": {
+   "name": "perimeter of a square from its area",
+   "levels": [
+    3,
+    4
+   ],
+   "kinds": [
+    "rect"
+   ],
+   "where": {
+    "ask": [
+     "square_perimeter_from_area"
+    ]
+   }
+  },
+  "perimeter_area.square_from_perimeter": {
+   "name": "area of a square from its perimeter",
+   "levels": [
+    3,
+    4
+   ],
+   "kinds": [
+    "rect"
+   ],
+   "where": {
+    "ask": [
+     "square_area_from_perimeter"
+    ]
+   }
   },
   "place_value.digit_value_gap": {
    "name": "difference between the values of two digits of a number",
@@ -1072,7 +1756,9 @@
    "levels": [
     1,
     2,
-    3
+    3,
+    4,
+    5
    ],
    "kinds": [
     "regroup"
@@ -1119,6 +1805,28 @@
     ]
    }
   },
+  "rounding.count_that_round": {
+   "name": "how many numbers round to a given number",
+   "levels": [
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "rounding_count"
+   ]
+  },
+  "rounding.round_to_place": {
+   "name": "round a number to the nearest 10, 100 or 1000",
+   "levels": [
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "rounding"
+   ]
+  },
   "sequence.count_on": {
    "name": "FIXED PUZZLE (home page and Ages 6-8 page): the nth number when counting on in equal steps (frog hops)",
    "levels": [],
@@ -1162,7 +1870,8 @@
    "levels": [
     1,
     2,
-    3
+    3,
+    4
    ],
    "kinds": [
     "dot"
@@ -1173,7 +1882,8 @@
    "levels": [
     2,
     3,
-    4
+    4,
+    5
    ],
    "kinds": [
     "solid_parts"
@@ -1214,6 +1924,27 @@
     "turns"
    ]
   },
+  "symmetry.lines_total": {
+   "name": "lines of symmetry of several shapes",
+   "levels": [
+    4,
+    5
+   ],
+   "kinds": [
+    "symmetry"
+   ]
+  },
+  "time.across_midnight": {
+   "name": "minutes between a time before midnight and a time after",
+   "levels": [
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "elapsed_overnight"
+   ]
+  },
   "time.clock_hours_on": {
    "name": "count on whole hours round a clock face",
    "levels": [
@@ -1230,7 +1961,9 @@
     1,
     2,
     3,
-    4
+    4,
+    5,
+    6
    ],
    "kinds": [
     "elapsed"
@@ -1252,7 +1985,8 @@
    "levels": [
     1,
     2,
-    3
+    3,
+    4
    ],
    "kinds": [
     "chain"
@@ -1263,7 +1997,8 @@
    "levels": [
     1,
     2,
-    3
+    3,
+    4
    ],
    "kinds": [
     "neg_diff"
@@ -1275,7 +2010,8 @@
     1,
     2,
     3,
-    4
+    4,
+    5
    ],
    "kinds": [
     "equalise"

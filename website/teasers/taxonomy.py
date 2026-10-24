@@ -30,6 +30,10 @@ def matches(sub, entry):
             names = [x[0] for x in p.get('preds', [])]
             if not any(n in allowed for n in names):
                 return False, 'no predicate in %s (has %s)' % (allowed, names)
+        elif k == 'has':
+            miss = [n for n in allowed if p.get(n) is None]
+            if miss:
+                return False, 'parameters %s are missing' % miss
         else:
             if p.get(k) not in allowed:
                 return False, 'parameter %s=%r not in %s' % (k, p.get(k), allowed)
