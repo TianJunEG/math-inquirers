@@ -1,13 +1,13 @@
 # Structure report (taxonomy.json)
 
-Sources searched (whole working tree, tracked or not): 6677 files, 1357.9 MB, sha256 eb682eacbb4c2994124ed279.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 302, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
+Sources searched (whole working tree, tracked or not): 6678 files, 1357.9 MB, sha256 bc0f02eff198ac01a0fbeacd.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 303, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
 
 Rules. Levels 3 to 6 (TEASER-STRICT): per level and calendar quarter at most 1 puzzle per sub-structure and 3 per family; the same sub-structure never within 30 days of itself across a quarter boundary; an answer of 10 or more appears once per level and a single digit at most 4 times. Levels 1 and 2 (L1L2-GAP60): the same sub-structure at least 60 days apart (circular, 365- and 366-day year), a family at most 3 times in any 60 days and never on consecutive days, an answer not repeated within 60 days and a single-digit answer at most 2 times in 60 days. All levels: no repeated frame, no two puzzles with most numbers or the same story in common; the sub-structures used by the fixed puzzles on the level pages (counting_choices.digit_cards_arrangements, fractions.fraction_of_remainder, multiples.common_multiple, remainders.two_conditions, sequence.count_on, sequence.which_term) are never used by the bank.
 
 - Level 1 (gap rule, 60 days): 61 puzzles, 61 distinct sub-structures (none twice within the gap), 39 families, most in one family 3
 - Level 2 (gap rule, 60 days): 61 puzzles, 61 distinct sub-structures (none twice within the gap), 43 families, most in one family 3
 - Level 3, quarter 4: 61 puzzles, 61 distinct sub-structures, 43 families, most in one family 3
-- Level 4, quarter 4: 61 puzzles, 61 distinct sub-structures, 40 families, most in one family 4
+- Level 4, quarter 4: 61 puzzles, 61 distinct sub-structures, 40 families, most in one family 3
 - Level 5, quarter 4: 61 puzzles, 61 distinct sub-structures, 43 families, most in one family 3
 - Level 6, quarter 4: 61 puzzles, 61 distinct sub-structures, 34 families, most in one family 3
 
@@ -71,8 +71,7 @@ Usable sub-structures of round 3 that no released puzzle uses yet (each has a so
 | 5 | 61 | 3 | 5% | 18 | 36 | ok |
 | 6 | 61 | 4 | 7% | 24 | 36 | ok |
 
-Structure FAIL count (all released months): 1
-- FAIL L4 quarter 4: family sorting used 4 times (cap 3): L4-oddtable, L4-lockerkeys, L4-schoolclubs, L4-heightline
+Structure FAIL count (all released months): 0
 
 Capacity verdict for the full year (a plan for January to October, not a defect of the released months): 0 CAPACITY FAIL
 

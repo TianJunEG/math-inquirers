@@ -11,11 +11,11 @@ Method: every puzzle is re-solved by `brute.py` (independent of the author solve
 | 5 | 31 | 29 | 2 | 26 | 2 | 31 |
 | 6 | 31 | 30 | 2 | 24 | 2 | 31 |
 
-Sources searched (whole working tree, tracked or not): 6677 files, 1357.9 MB, sha256 eb682eacbb4c2994124ed279.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 302, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
+Sources searched (whole working tree, tracked or not): 6678 files, 1357.9 MB, sha256 bc0f02eff198ac01a0fbeacd.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 303, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
 
 Similarity sources checked: holiday banks, own term lessons, all extension workbook data, the school booklets, our book drafts and catalogues, external private source files, and the seven fixed website puzzles.
 
-FAIL count: 0. REVIEW items: 86.
+FAIL count: 0. REVIEW items: 85.
 
 
 - REVIEW L1-rulerbill [12-01]: rule B: 3 of the same numbers ['3', '4', '9'] as "Picture-dependent items re-solved from the picture, not the key: B1 L1 S1 (26),  ..." (term/l1/audit/AUDIT_BOOKS_1_4_ROUND2.md)
@@ -53,9 +53,8 @@ FAIL count: 0. REVIEW items: 86.
 - REVIEW L3-moneybox [12-10]: number 2 in the question is not a parameter (written in the wording; check)
 - REVIEW L3-cryptsum [12-11]: number 3 in the question is not a parameter (written in the wording; check)
 - REVIEW L3-smalldigitsum [12-15]: number 3 in the question is not a parameter (written in the wording; check)
-- REVIEW L3-watertank [12-19]: number 12 in the question is not a parameter (written in the wording; check)
-- REVIEW L3-watertank [12-19]: number 3 in the question is not a parameter (written in the wording; check)
-- REVIEW L3-watertank [12-19]: rule B: 3 of the same numbers ['12', '3', '9'] as "The 9 ℓ let out is 9000 cm³, so 18 000 cm³ is left.", "One cm of depth over the  ..." (practice/holiday/p5/05/dist/data/p5l05.json)
+- REVIEW L3-balloonrise [12-19]: number 12 in the question is not a parameter (written in the wording; check)
+- REVIEW L3-balloonrise [12-19]: number 3 in the question is not a parameter (written in the wording; check)
 - REVIEW L3-fishmass [12-20]: story words 3 of 4 like "P = code_items_page(25, 8125, "Kilograms and Grams", 1, "Mass: reading scales in kilograms ..." (school/p2/gen/pages_w4.py)
 - REVIEW L3-clubs [12-24]: story words 3 of 4 like "f"From {cats[ri[0]]} to {cats[ri[1]]}, the number went up by how many?", f"How many pupils ..." (school/p4/gen/pages_d.py)
 - REVIEW L3-raffledays [12-29]: rule C: two four-word runs shared with "Q: A total of 380 movie tickets were sold in two days. 90 fewer tickets were sol ..." (docs/books/private_p3_papers/non_routine_questions.md): many tickets were sold / tickets were sold on

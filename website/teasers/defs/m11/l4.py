@@ -137,7 +137,7 @@ DEFS = [
       '{inside} pupils play at least one game. {a} + {b} = {sum}, which is 35 more than {inside}. Those 35 were counted twice, so 35 pupils play both.',
       p=dict(total=120, a=70, b=65, neither=20), unit='pupils', sub='sorting.overlap_both'),
     P('bikelock', 'scan', 'Digit clues',
-      "Kai's bicycle lock has a 4-digit code. He remembers three things about it. The four digits add up to 22. The first digit is twice the last digit. The second digit is 1 more than the third digit. What is the code?",
+      "Kai's bicycle lock has a 4-digit code. He remembers three things about it. The four digits add up to 22. The first digit is double the last one. The second digit is 1 more than the third digit. What is the code?",
       "Call the last digit d. Then the first digit is twice d. Try some values of d, and use the other two clues.",
       "If the last digit is 3, the first digit is 6. The second digit is 1 more than the third, and the four digits add up to 22, so 6 + the second + the third + 3 = 22. The second and third digits add up to 13, so they are 7 and 6. The code is {ans}.",
       p=dict(lo=1000, hi=9999, preds=[['digit_sum', 22], ['digit_times', [0, 3, 2]], ['digit_plus', [1, 2, 1]]], ask='only'), sub='digit_puzzles.digit_clues'),

@@ -11,13 +11,12 @@ Method: every puzzle is re-solved by `brute.py` (independent of the author solve
 | 5 | 30 | 30 | 1 | 22 | 3 | 30 |
 | 6 | 30 | 25 | 3 | 21 | 3 | 30 |
 
-Sources searched (whole working tree, tracked or not): 6677 files, 1357.9 MB, sha256 eb682eacbb4c2994124ed279.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 302, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
+Sources searched (whole working tree, tracked or not): 6678 files, 1357.9 MB, sha256 bc0f02eff198ac01a0fbeacd.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 303, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
 
 Similarity sources checked: holiday banks, own term lessons, all extension workbook data, the school booklets, our book drafts and catalogues, external private source files, and the seven fixed website puzzles.
 
-FAIL count: 1. REVIEW items: 97.
+FAIL count: 0. REVIEW items: 95.
 
-- FAIL L4-bikelock [11-18]: shares a 7-word run with the extension workbooks: "digit is twice the last digit the"
 
 - REVIEW L1-racerun [11-02]: story words 3 of 5 like "| Schema valid (JSON Schema + key checks) | PASS | all top-level keys, schema 2020-12, ide ..." (term/l1/AUDIT_L11.md)
 - REVIEW L1-secret63 [11-04]: number 2 in the question is not a parameter (written in the wording; check)
@@ -27,7 +26,6 @@ FAIL count: 1. REVIEW items: 97.
 - REVIEW L1-stripmarks [11-17]: story words 3 of 5 like "**DIAG-019** | 2020 | Catholic High | SA2 | Q38 | 3 marks | LEN | difficulty 3 | picture y ..." (docs/books/private_p3_papers/non_routine_questions.md)
 - REVIEW L1-busminute [11-18]: rule B: 3 of the same numbers ['20', '35', '4'] as "| 14 | 5 Machines; 6 Market Day; 7 Fair Shares | Before-and-after bars; three ch ..." (docs/terms/l2_preflight.md)
 - REVIEW L1-marblecontest [11-19]: number 2 in the question is not a parameter (written in the wording; check)
-- REVIEW L1-counterbox [11-21]: rule C: two four-word runs shared with "Q: Mrs Raj bought 50 more pens than pencils. She bought 438 pens and pencils alt ..." (docs/books/private_p3_papers/non_routine_questions.md): # pens and pencils / more pens than pencils
 - REVIEW L1-seatrow [11-23]: number 1 in the question is not a parameter (written in the wording; check)
 - REVIEW L1-seatrow [11-23]: number 2 in the question is not a parameter (written in the wording; check)
 - REVIEW L1-seatrow [11-23]: rule B: 3 of the same numbers ['3', '4', '5'] as "- [WA_2020_TA1_StNicholas Q15, 2m, Cinema seats rows behind in front, diff 3] 5  ..." (docs/books/private_p5_papers/non_routine_questions.md)
@@ -61,7 +59,6 @@ FAIL count: 1. REVIEW items: 97.
 - REVIEW L3-journeytime [11-20]: story words 3 of 5 like "{"id": "R3", "label": "Wed & Thu afternoons", "sessions": [{"day": "Wed", "start": "13:15" ..." (website/data/interest_slots.json)
 - REVIEW L3-twentyfour [11-21]: number 0915 in the question is not a parameter (written in the wording; check)
 - REVIEW L3-twentyfour [11-21]: rule B: 3 of the same numbers ['24', '35', '8'] as "- L8: Q2 hint (a dent corner is bigger than a right angle) and shape A done for  ..." (docs/audit/fixpass_p3.md)
-- REVIEW L3-henduck [11-22]: rule C: two four-word runs shared with ""text": "A farm has 4 times as many hens as ducks. There are 385 hens and ducks  ..." (extension/data/l4_u03.json): # hens and ducks / many hens as ducks
 - REVIEW L3-houses [11-24]: number 21 in the question is not a parameter (written in the wording; check)
 - REVIEW L3-houses [11-24]: number 22 in the question is not a parameter (written in the wording; check)
 - REVIEW L3-houses [11-24]: number 23 in the question is not a parameter (written in the wording; check)

@@ -3650,9 +3650,9 @@
     "date": "12-18"
    },
    {
-    "id": "L3-watertank",
+    "id": "L3-balloonrise",
     "level": 3,
-    "frame": "watertank",
+    "frame": "balloonrise",
     "kind": "moves",
     "topic": "Up and down",
     "sub": "moves.ups_and_downs",
@@ -3668,19 +3668,19 @@
      "ask": "max"
     },
     "t": {
-     "up": "up",
-     "down": "down"
+     "up": "up by",
+     "down": "down by"
     },
     "fmt": "int",
     "type": "n",
     "ans": "25",
-    "shown": "25 cm",
+    "shown": "25 m",
     "units": [
-     "cm",
-     "centimetre",
-     "centimetres",
-     "centimeter",
-     "centimeters"
+     "m",
+     "metre",
+     "metres",
+     "meter",
+     "meters"
     ],
     "prefix": [],
     "accept": [],
@@ -3695,9 +3695,9 @@
      "15",
      "250"
     ],
-    "q": "The water in a tank is 20 cm deep. It goes up 5, then down 12, then up 9, then down 3. What is the greatest depth the water reaches, in centimetres?",
-    "hint": "Write down the depth after each change. Then find the biggest.",
-    "why": "The depths in order are 20, 25, 13, 22, 19. The greatest depth is 25 cm.",
+    "q": "A hot-air balloon is 20 m above the ground. It goes up by 5, then down by 12, then up by 9, then down by 3. What is the greatest height above the ground that the balloon reaches, in metres?",
+    "hint": "Write down the height after each change. Then find the biggest.",
+    "why": "The heights in order are 20, 25, 13, 22, 19. The greatest height is 25 m.",
     "date": "12-19"
    },
    {

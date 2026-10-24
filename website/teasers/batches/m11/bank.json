@@ -3592,7 +3592,7 @@
      "29",
      "390"
     ],
-    "q": "Jun has 3 times as many marbles as Lin. Together they have 52 marbles. How many marbles does Jun have?",
+    "q": "Lin and Jun collect marbles. Jun owns 3 times as many as Lin does, and the two friends own 52 marbles in all. How many marbles does Jun own?",
     "hint": "Draw one bar for Lin and a bar 3 times as long for Jun. Count the equal parts.",
     "why": "Lin is 1 part and Jun is 3 parts, so there are 4 equal parts. 52 ÷ 4 = 13 marbles for Lin. Jun has 3 × 13 = 39 marbles.",
     "date": "11-22"
@@ -4739,7 +4739,7 @@
      "6753",
      "67630"
     ],
-    "q": "Kai's bicycle lock has a 4-digit code. He remembers three things about it. The four digits add up to 22. The first digit is twice the last digit. The second digit is 1 more than the third digit. What is the code?",
+    "q": "Kai's bicycle lock has a 4-digit code. He remembers three things about it. The four digits add up to 22. The first digit is double the last one. The second digit is 1 more than the third digit. What is the code?",
     "hint": "Call the last digit d. Then the first digit is twice d. Try some values of d, and use the other two clues.",
     "why": "If the last digit is 3, the first digit is 6. The second digit is 1 more than the third, and the four digits add up to 22, so 6 + the second + the third + 3 = 22. The second and third digits add up to 13, so they are 7 and 6. The code is 6763.",
     "date": "11-18"

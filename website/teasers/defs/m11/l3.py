@@ -148,7 +148,7 @@ DEFS = [
       '3/4 = 18/24, 5/8 = 15/24 and 2/3 = 16/24. 15/24 is the least and 18/24 is the greatest, so the one between them is {ans}.',
       p=dict(fracs=[[3, 4], [5, 8], [2, 3]], ask='middle'), fmt='frac', sub='fractions.compare_order'),
     P('marbletimes', 'times_as_many', 'Bar models',
-      'Jun has {k} times as many marbles as Lin. Together they have {total} marbles. How many marbles does Jun have?',
+      'Lin and Jun collect marbles. Jun owns {k} times as many as Lin does, and the two friends own {total} marbles in all. How many marbles does Jun own?',
       'Draw one bar for Lin and a bar {k} times as long for Jun. Count the equal parts.',
       'Lin is 1 part and Jun is {k} parts, so there are {units} equal parts. {total} ÷ {units} = {small} marbles for Lin. Jun has {k} × {small} = {ans}.',
       p=dict(k=3, total=52, ask='large'), unit='marbles', sub='bar_model.times_as_many'),
