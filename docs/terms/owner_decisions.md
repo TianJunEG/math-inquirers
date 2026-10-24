@@ -379,3 +379,6 @@ Owner: "holiday first, then term then extension" (replaces the proposed runner -
 
 ## 2026-10-24 — HOLIDAY-WEEKLY
 Owner: "HOLIDAY-WEEKLY". Holiday online practice is released week by week in teaching order (week 1 lessons of every level first), not all 60 at once.
+
+## 2026-10-24 — D2-ENROLLED (holiday and term); extension = purchasers
+Owner: "D2-ENROLLED for holiday and term. extension is for purchased". Access: holiday and term online practice = families with a confirmed enrolment for that level (plus open sample pages that store nothing). Extension online practice = families who purchased that extension workbook (needs a purchase entitlement per child/family; shop is not live yet, so the mechanism must be designed). Online practice is therefore included with enrolment / with the purchased workbook (D6 implied: included).
