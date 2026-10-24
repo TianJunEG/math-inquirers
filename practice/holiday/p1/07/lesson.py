@@ -260,7 +260,7 @@ def pair_item(tri, name, fill2='#BFE3E0'):
     """A poly_row item for the first way that makes `name`: both triangles shaded, with a label."""
     for poly, second, nm in join_triangles(tri):
         if nm == name:
-            return ([([(float(x), float(y)) for x, y in tri], '#FDF3D0'), ([(float(x), float(y)) for x, y in second], fill2)], {'triangle': 'bigger triangle'}.get(nm, nm))
+            return ([([(float(x), float(y)) for x, y in tri], '#FDF3D0'), ([(float(x), float(y)) for x, y in second], fill2)], {'triangle': 'bigger|triangle'}.get(nm, nm))
     raise ValueError(name)
 
 

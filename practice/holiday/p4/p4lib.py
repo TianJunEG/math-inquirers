@@ -1178,14 +1178,14 @@ def tiles_fig(n=6):
 
 def tile_shapes_fig():
     """The answer picture of 3(b): a 2 by 3 block (smallest perimeter) and a row of six (a largest perimeter)."""
-    c = 26
-    b = T(8, 18, 'Smallest perimeter: 10 cm', 15, 'start', 800, TEAL)
+    c = 30
+    b = T(10, 18, 'Smallest: 10 cm', 16, 'start', 800, TEAL)
     for x in range(3):
         for y in range(2):
             b += Re(10 + x * c, 28 + y * c, c, c, YEL, NAVY, 2.4)
-    b += T(8, 118, 'One with the largest perimeter: 14 cm', 15, 'start', 800, TEAL)
+    b += T(10, 118, 'A largest: 14 cm', 16, 'start', 800, TEAL)
     for x in range(6):
-        b += Re(10 + x * c, 128 + 0, c, c, YEL, NAVY, 2.4)
+        b += Re(10 + x * c, 128, c, c, YEL, NAVY, 2.4)
     return svg(10 + 6 * c + 12, 128 + c + 10, b, 'A block of 2 by 3 tiles with perimeter 10 cm, and a row of 6 tiles with perimeter 14 cm.')
 
 

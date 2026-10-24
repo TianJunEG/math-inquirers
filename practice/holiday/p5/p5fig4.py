@@ -52,7 +52,7 @@ def rise_cut_bars(sol=None):
     if sol:
         b += Re(x0, 158, 4 * u, 34, SKY, NAVY, 2.4) + T(x0 + 2 * u, 181, '$%d' % sol[2], 15, 'middle', 800, TEAL)
         b += Re(x0 + 4 * u, 158, u, 34, '#FFFFFF', NAVY, 2.4, 0, '5 4') + T(x0 + 4.5 * u, 181, 'cut', 14, 'middle', 800, WARM)
-        b += T(x0, 214, 'The cut takes 20% of the $%d bar, not of the $%d bar.' % (sol[1], sol[0]), 14, 'start', 700, GREY)
+        b += T(x0, 214, 'The cut takes 20%% of the $%d bar, not of the $%d bar.' % (sol[1], sol[0]), 14, 'start', 700, GREY)
         return svg(300, 224, b, 'The bars with the checked prices: $%d at first, $%d after the 25%% rise, $%d after the 20%% cut of the new price.' % sol)
     b += Re(x0, 158, 5 * u, 34, '#FFFFFF', NAVY, 2.4, 0, '6 4') + T(x0 + 2.5 * u, 181, 'cut 20% of THIS price', 14, 'middle', 800)
     return svg(300, 202, b, 'A bar for the 80 dollar price. Under it a longer bar with a shaded extra part for the 25 percent rise. '
@@ -357,7 +357,7 @@ def tri_fig(sol=False, Bang=62, DAC=38):
     s = polygon([A, B, C]) + seg(A, D) + tick(B, A) + tick(A, D)
     s += arc(B, C, A, 30, f'{Bang}°', WARM, 56, 15) + arc(A, D, C, 34, f'{DAC}°', WARM, 62, 15)
     if sol:
-        s += arc(D, A, B, 22, f'{adb}°', TEAL, 40, 13) + arc(A, B, D, 28, f'{bad}°', TEAL, 56, 13) + arc(D, A, C, 18, '', TEAL) + arc(C, A, B, 22, f'{acd}°', TEAL, 40, 13)
+        s += arc(D, A, B, 22, f'{adb}°', TEAL, 40, 13) + arc(A, B, D, 28, f'{bad}°', TEAL, 56, 13) + arc(D, A, C, 36, f'{adc}°', TEAL, 58, 13) + arc(C, A, B, 22, f'{acd}°', TEAL, 40, 13)
     s += pl(A, 'A', 0, -8) + pl(B, 'B', -12, 16) + pl(D, 'D', 2, 22) + pl(C, 'C', 14, 16)
     lab = f'Triangle ABC. D is a point on BC with AB equal to AD. Angle ABC is {Bang} degrees and angle DAC is {DAC} degrees. The line AD is drawn.'
     return svg(330, 176, s, lab)
