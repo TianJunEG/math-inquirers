@@ -281,7 +281,8 @@ def price_list_fig(items, label='Prices'):
     for i, (name, price) in enumerate(items):
         y = i * rh + 4
         pic = pics.get(name, '')
-        pic = re.sub(r'<svg[^>]*>', f'<svg x="8" y="{y + 3}" viewBox="0 0 48 48" width="32" height="32">', pic, count=1)
+        inner = re.sub(r'^<svg[^>]*>|</svg>$', '', pic.strip())          # the picture's shapes, drawn in a 48 x 48 box; a <g> (not a nested <svg>, which the page's CSS would resize)
+        pic = f'<g transform="translate(8 {y + 3}) scale({32 / 48:.4f})">{inner}</g>'
         body += pic + h.T(54, y + 26, name, 16, 'start', 800) + h.T(292, y + 26, price, 17, 'end', 800)
         body += h.Ln(4, y + rh - 3, 296, y + rh - 3, 1.2, '#C9D0E2')
     return h.svg(300, len(items) * rh + 6, body, label + ': ' + '; '.join(f'{n} {p}' for n, p in items))

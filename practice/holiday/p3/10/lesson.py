@@ -234,7 +234,7 @@ ITEMS = [
       steps=['The numbers are 258, 285, 528, 582, 825 and 852.', 'Their distances from 600 are 342, 315, 72, 18, 225 and 252.', '582 is only 18 away from 600, so it is the closest.'],
       src=['Which number is closest to 600?']),
 
-    I(id='5-table', tier='core', no='5', label='5 table', type='fields', skill='patterns and tables', answer=[13, 16, 19], frame=grp('4 squares: {f1} sticks      5 squares: {f2} sticks      6 squares: {f3} sticks'), svg=sticks_fig(),
+    I(id='5-table', tier='core', no='5', label='5 table', type='fields', skill='patterns and tables', answer=[13, 16, 19], frame='4 squares: {f1} sticks      5 squares: {f2} sticks      6 squares: {f3} sticks', svg=sticks_fig(),
       sol_fig=lambda g: sticks_fig(solved=[4, 7, 10] + list(g)),
       q='Make a table! Squares are made in a row with sticks, like the picture. Fill in the table: how many sticks are needed for 4, 5 and 6 squares?', check=lambda: [sticks_row(n) for n in (4, 5, 6)],
       hint='Look at the sticks for 1, 2 and 3 squares. How many more sticks does each new square need?',
@@ -266,7 +266,7 @@ ITEMS = [
       steps=['Draw a dot for each friend and join every pair with a line: each line is a handshake.', '3 friends: 3 lines. 4 friends: 6 lines. 5 friends: 10 lines. 6 friends: 15 lines.', 'The numbers are 3, 6, 10 and 15.'],
       src=['Some friends meet. Everyone shakes hands with every other friend once. Two friends make 1 handshake.', 'Find the number of handshakes for 3, 4, 5 and 6 friends.']),
     I(id='I8a-more', tier='invest', no='8(a)', label='Inv more', type='fields', skill='patterns and tables', answer=[2, 3, 4, 5],
-      frame=grp('3 friends: {f1} more      4 friends: {f2} more      5 friends: {f3} more      6 friends: {f4} more'),
+      frame='3 friends: {f1} more      4 friends: {f2} more      5 friends: {f3} more      6 friends: {f4} more',
       q='Look at the handshakes for 2, 3, 4, 5 and 6 friends (2 friends make 1 handshake). How many MORE handshakes does each row have than the row above it? (Do the handshake question first.)',
       check=lambda: [friends_more(n) for n in (3, 4, 5, 6)],
       hint='Subtract each number of handshakes from the one below it.',
