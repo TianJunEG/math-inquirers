@@ -29,5 +29,43 @@
   "rebuild/skill_items_l1_3.py",
   "extension/data/l5_u05.json",
   "p3/qbank_skills.json"
- ]
+ ],
+ "round4_high": {
+  "L1-fanlines": {
+   "q": "A big triangle is cut by 3 straight lines from its top corner down to its bottom side. This makes 4 thin triangles side by side. Count the thin triangles and the bigger triangles made of neighbours. What is the total number of triangles?",
+   "ans": "10",
+   "sol": "Count the thin ones first. Then count the triangles made of 2 neighbours, then 3, then all 4. Thin triangles: 4. Made of 2 neighbours: 3. Made of 3 neighbours: 2. All 4 together: 1. That makes 4 + 3 + 2 + 1 = 10 triangles.",
+   "sub": "counting_grid.triangles_in_fan",
+   "level": 1
+  },
+  "L3-grid33": {
+   "q": "Jun Hao draws a grid of small squares, 3 squares across and 3 squares down. He counts every square he can find, big and small. How many squares are there altogether?",
+   "ans": "14",
+   "sol": "There are 9 small squares. Now look for bigger squares made of 4 small ones, then the biggest. 9 small squares, 4 squares made of 2 by 2 small squares, and 1 big square made of 3 by 3 small squares. 9 + 4 + 1 = 14 squares.",
+   "sub": "counting_grid.squares_in_grid",
+   "level": 3
+  },
+  "L3-fourtiles": {
+   "q": "A tile shape is made by joining 4 equal squares edge to edge. Turning a shape round or flipping it over does not make a new shape. How many different shapes can be made?",
+   "ans": "5",
+   "sol": "Start with 4 squares in a straight line. Then move one square at a time to get new shapes. The shapes are: a straight line of 4, an L shape, a T shape, a square of 2 by 2, and a zigzag shape. That is 5 shapes.",
+   "sub": "polyominoes.count_shapes",
+   "level": 3
+  },
+  "L3-flagstrip": {
+   "q": "A strip of flags repeats this pattern again and again: red, red, blue, green. The strip has 30 flags. How many flags are red?",
+   "ans": "16",
+   "sol": "How many flags are in one pattern? How many whole patterns fit in 30? What is left over? One pattern has 4 flags and 2 are red. 30 = 7 × 4 + 2, so there are 7 whole patterns and 2 flags left over. The 7 patterns have 14 red flags, and the 2 left-over flags are both red. 14 + 2 = 16 flags.",
+   "sub": "repeating_pattern.cycle",
+   "level": 3
+  },
+  "L4-fanten": {
+   "q": "A big triangle is cut by 9 straight lines from its top corner down to its bottom side. This makes 10 thin triangles side by side. Counting the thin triangles and all the bigger triangles made of neighbours, how many triangles are there in total?",
+   "ans": "55",
+   "sol": "Count the triangles that are 1 thin triangle wide, then 2 wide, then 3 wide, and so on up to 10 wide. There are 10 that are 1 wide, 9 that are 2 wide, 8 that are 3 wide, and so on, down to 1 that is 10 wide. 10 + 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 = 55 triangles.",
+   "sub": "counting_grid.triangles_in_fan",
+   "level": 4
+  }
+ },
+ "round4_note": "Round-3 wording of the four High near-copies of AUDIT_ROUND4 section 1 (and L4-fanten, the same fan frame): verify_bank.py --selftest requires the round-4 text rules (story/number rule N, listed-sequence rule L, retired-frame patterns) to FAIL each one, and the frame to be retired in the taxonomy."
 }

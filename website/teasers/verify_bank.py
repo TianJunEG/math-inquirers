@@ -144,8 +144,8 @@ def shingles(sk, n=4):
 
 
 SOURCE_ROOTS = ['hp', 'p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'extension', 'docs', 'practice', 'taster', 'review', 'tutor', 'school', 'outputs',
-                'split', 'rebuild', 'website', 'levels', 'print', 'portal', 'k2', 'deck', 'ops', 'diag', 'mascot', 'releases', 'worker']
-SOURCE_EXTS = ('.md', '.txt', '.json', '.js', '.py', '.html', '.csv')
+                'split', 'rebuild', 'website', 'levels', 'print', 'portal', 'k2', 'deck', 'ops', 'diag', 'mascot', 'releases', 'worker', 'term']
+SOURCE_EXTS = ('.md', '.txt', '.json', '.js', '.py', '.html', '.csv', '.pdf')      # round 4: PDFs are read as text (pdftotext, cached by content hash)
 SKIP_DIRS = ('node_modules', '.git', '__pycache__')
 SKIP_PREFIX = ('website/teasers/', 'website/dist/', 'outputs/owner_review/teasers_preview/')      # our own teasers and their previews are not a "source"
 LOCK_FILE = os.path.join(HERE, 'source_lock.json')
@@ -164,7 +164,6 @@ def source_files():
             for fn in fns:
                 if fn.endswith(SOURCE_EXTS):
                     files.append(os.path.join(dp, fn))
-    files += glob.glob(os.path.join(ROOT, 'term', 'l*', 'lessons', '*.json'))
     out = []
     for f in sorted(set(files)):
         rel = os.path.relpath(f, ROOT).replace(os.sep, '/')
@@ -172,6 +171,67 @@ def source_files():
             continue
         out.append(f)
     return out
+
+
+PDF_CACHE = os.path.join(os.environ.get('TMPDIR', '/tmp'), 'mi_pdf_text')
+
+
+def _pdf_text_uncached(path):
+    import subprocess
+    try:
+        r = subprocess.run(['pdftotext', '-q', '-enc', 'UTF-8', path, '-'], capture_output=True, timeout=300)
+        raw = r.stdout.decode('utf-8', 'ignore')
+    except Exception:
+        return ''
+    # one paragraph per blank-line block; line breaks inside a paragraph become spaces; hyphenated line ends are joined
+    paras = []
+    for blk in re.split(r'\n\s*\n', raw.replace('\f', '\n\n')):
+        blk = re.sub(r'(\w)-\n(\w)', r'\1\2', blk)
+        blk = ' '.join(blk.split())
+        if blk:
+            paras.append(blk)
+    return '\n'.join(paras)
+
+
+def pdf_text(path):
+    """Text of a PDF (pdftotext), cached by the sha256 of the file's content (never by file time)."""
+    try:
+        data = open(path, 'rb').read()
+    except OSError:
+        return ''
+    h = hashlib.sha256(data).hexdigest()
+    cp = os.path.join(PDF_CACHE, h + '.txt')
+    if os.path.exists(cp):
+        try:
+            return open(cp, encoding='utf-8').read()
+        except OSError:
+            pass
+    txt = _pdf_text_uncached(path)
+    try:
+        os.makedirs(PDF_CACHE, exist_ok=True)
+        tmp = cp + '.%d.tmp' % os.getpid()
+        open(tmp, 'w', encoding='utf-8').write(txt)
+        os.replace(tmp, cp)
+    except OSError:
+        pass
+    return txt
+
+
+def prefetch_pdfs(files):
+    """Extract every PDF text in parallel so that the (serial, deterministic) index build only reads the cache."""
+    from concurrent.futures import ThreadPoolExecutor
+    pdfs = [f for f in files if f.endswith('.pdf')]
+    with ThreadPoolExecutor(max_workers=8) as ex:
+        list(ex.map(pdf_text, pdfs))
+
+
+def read_source(path):
+    if path.endswith('.pdf'):
+        return pdf_text(path)
+    try:
+        return open(path, encoding='utf-8', errors='ignore').read()
+    except OSError:
+        return ''
 
 
 _DIGEST = {}
@@ -208,6 +268,9 @@ def lock_problems(per_override=None):
     for root, need in sorted(lock['min_files'].items()):
         if per.get(root, 0) < need:
             bad.append('source root %s has %d files, the lock needs at least %d (incomplete checkout?)' % (root, per.get(root, 0), need))
+    npdf = sum(1 for f in source_files() if f.endswith('.pdf'))
+    if npdf < lock.get('min_pdfs', 0):
+        bad.append('only %d PDFs among the sources, the lock needs at least %d (PDFs are read as text since round 4; incomplete checkout?)' % (npdf, lock['min_pdfs']))
     for d in lock.get('must_exist', []):
         if not glob.glob(os.path.join(ROOT, d)):
             bad.append('required source %s is missing (git-ignored private sources not present?)' % d)
@@ -217,18 +280,16 @@ def lock_problems(per_override=None):
 def update_lock():
     _, n, total, per = source_digest()
     lock = {'note': 'Minimum number of source files per root for a valid verification (written by verify_bank.py --update-lock). The verifier refuses to give a verdict on a checkout with fewer.',
-            'min_files': {r: int(c * 0.9) for r, c in sorted(per.items())},
-            'must_exist': ['docs/books/private_p1_papers', 'docs/books/private_p6_papers', 'docs/books/private_word_problems_notes.md', 'extension/data', 'outputs/skill_additions', 'practice/holiday', 'docs/audit'],
+            'min_files': {r: int(c * 0.95) for r, c in sorted(per.items())},
+            'min_pdfs': int(sum(1 for f in source_files() if f.endswith('.pdf')) * 0.95),
+            'must_exist': ['docs/books/private_p1_papers', 'docs/books/private_p6_papers', 'docs/books/private_word_problems_notes.md', 'extension/data', 'outputs/skill_additions', 'practice/holiday', 'docs/audit', 'term/l1/lessons', 'term/l1/out', 'outputs/workbook/Math_Inquirers_P1_Student_Workbook_Designed.pdf', 'school/p3/out', 'p2/Math_Inquirers_P2_Tutor_Guide.html'],
             'files_at_update': n, 'bytes_at_update': total}
     json.dump(lock, open(LOCK_FILE, 'w', encoding='utf-8'), indent=1)
     print('source lock written:', lock['min_files'])
 
 
 def chunks_of(path):
-    try:
-        raw = open(path, encoding='utf-8', errors='ignore').read()
-    except OSError:
-        return []
+    raw = read_source(path)
     if path.endswith('.html'):
         raw = re.sub(r'<script.*?</script>|<style.*?</style>', ' ', raw, flags=re.S)
         raw = re.sub(r'<[^>]+>', ' ', raw)
@@ -249,13 +310,14 @@ def chunks_of(path):
 def structure_index():
     """Inverted index of masked-skeleton 4-grams over every question in our own sources (cached in the temp folder)."""
     files = source_files()
-    key = hashlib.md5(('structure-v2|' + source_digest(files)[0]).encode()).hexdigest()
+    key = hashlib.md5(('structure-v3|' + source_digest(files)[0]).encode()).hexdigest()
     cache = os.path.join(os.environ.get('TMPDIR', '/tmp'), 'mi_teaser_structure_%s.pkl' % key)
     if os.path.exists(cache):
         try:
             return pickle.load(open(cache, 'rb'))
         except Exception:
             pass
+    prefetch_pdfs(files)
     texts, index = [], {}
     for f in files:
         for ch in chunks_of(f):
@@ -336,10 +398,11 @@ STORY_STOP_EXTRA = set('monday tuesday wednesday thursday friday saturday sunday
                        'call name write read count list add check each first second third fourth then also still even only just '
                        'yes no true false answer question puzzle number numbers way ways kind different same new old big small '
                        'long short much many one two three four five six seven eight nine ten hundred thousand'.split())
-DF_MAX = 24000         # a word found in more source windows than this says nothing about the story
-VERY_RARE_DF = 100    # a word found in fewer than this many windows (pane, lolly, mooncake ...) is almost a signature
-RARE_DF = 400          # a word found in fewer source windows than this is a specific object (snail, lolly, jacket, carton ...)
-STORY_VERSION = "story-v19"
+DF_SCALE = 1.75       # round 4: the source index grew from 478,000 to about 814,000 sentences (PDFs, the whole term tree), so the document-frequency limits grow with it
+DF_MAX = int(24000 * DF_SCALE)         # a word found in more source windows than this says nothing about the story
+VERY_RARE_DF = int(100 * DF_SCALE)    # a word found in fewer than this many windows (pane, lolly, mooncake ...) is almost a signature
+RARE_DF = int(400 * DF_SCALE)          # a word found in fewer source windows than this is a specific object (snail, lolly, jacket, carton ...)
+STORY_VERSION = "story-v20"
 
 
 _STEM_MEMO = {}
@@ -387,10 +450,7 @@ def sentences_of(path):
     """Every sentence of a source file (markup removed, html entities decoded), one entry per sentence; this is the unit of the story index.
     Round 3: ALL sentences are kept, not only those that end in a question mark, because a source can state a puzzle as a command
     ('Name the weekday of the return date.') and the round 2 index never saw those."""
-    try:
-        raw = open(path, encoding='utf-8', errors='ignore').read()
-    except OSError:
-        return []
+    raw = read_source(path)
     if path.endswith('.html'):
         raw = re.sub(r'<script.*?</script>|<style.*?</style>', ' ', raw, flags=re.S)
         raw = re.sub(r'<[^>]+>', ' ', raw)
@@ -459,6 +519,7 @@ def story_index():
             return pickle.load(open(cache, 'rb'))
         except Exception:
             pass
+    prefetch_pdfs(files)
     ix = SIdx()
     for f in files:
         ix.add_file(os.path.relpath(f, ROOT).replace(os.sep, '/'), sentences_of(f))
@@ -486,9 +547,9 @@ def mini_index(name, text, base):
 
 
 TRIVIAL_NUMS = {'0', '1', '2', '10', '100', '1000'}     # never evidence of a copy
-NUM_DF_MAX = 24000      # a number found in more source windows than this is not used to find candidates
+NUM_DF_MAX = int(24000 * DF_SCALE)      # a number found in more source windows than this is not used to find candidates
 COMMON_NUMS = {'3', '4', '5', '6', '7', '8', '9', '10', '12', '15', '20', '24', '25', '30', '50', '60', '100', '1000'}
-SPEC_DF = 3000         # a word found in fewer source windows than this names something specific (not 'day' or 'box')
+SPEC_DF = int(3000 * DF_SCALE)         # a word found in fewer source windows than this names something specific (not 'day' or 'box')
 
 
 def wtoks(text):
@@ -512,7 +573,7 @@ def mgrams(text):
     return out
 
 
-def story_hits(q, ix, own_words=None):
+def story_hits(q, ix, own_words=None, ans=None, sol=''):
     """Same story and same quantities as a window (one to three neighbouring sentences) of any source file.  Returns [(severity, detail)].
     Let S = the teaser's story words (stems, no names, no function words, no shape or money words), W = the words of one window,
     cov = |S & W| / |S|, rare = shared words found in fewer than RARE_DF windows (snail, lolly, library, pane ...), spec = shared words found in fewer than
@@ -535,6 +596,11 @@ def story_hits(q, ix, own_words=None):
         return []
     mine = {n for n in numbers_in(q) if n not in ('0', '1', '2')}
     nn_mine = {n for n in mine if n not in TRIVIAL_NUMS}
+    ans_n = None            # rule N (round 4): the answer, when it is a plain number other than 0, 1, 2
+    if ans is not None and re.fullmatch(r'\d[\d,]*\.?\d*', str(ans)) and norm_num(str(ans)) not in ('0', '1', '2'):
+        ans_n = norm_num(str(ans))
+    pool = (mine | {ans_n}) if ans_n else set(mine)
+    solnums = {n for n in numbers_in(sol) if n not in ('0', '1', '2')} if ans_n else set()
     S_SPEC = {w for w in S if df.get(w, 0) <= SPEC_DF}      # the specific words of the teaser (not 'day', 'across' ...)
     score = {}
     wt = {w: 1 + 4 * (df.get(w, 0) <= VERY_RARE_DF) + 2 * (df.get(w, 0) <= RARE_DF) + (df.get(w, 0) <= SPEC_DF) for w in S}      # rarer words rank a sentence higher
@@ -596,6 +662,11 @@ def story_hits(q, ix, own_words=None):
                 why = 'rule A (content words): same story skeleton, %d of %d story words (%d rare) with other numbers' % (len(shared), len(S), len(rare))
             if not why and len(shared) >= 3 and cov >= 0.4 and nn >= 1 and ((len(rare) >= 2 and cov >= 0.6 and nn >= 2) or (cov_spec >= 0.5 and len(spec) >= 2 and len(txt) <= 300 and any(df.get(w, 0) <= VERY_RARE_DF for w in shared))) and len(G & wgrams(txt)) >= 3:
                 why = 'rule A2 (specific objects and a quantity): %d of %d story words (%s) and the same number %s' % (len(shared), len(S), ', '.join(sorted(rare)), sorted(nn_mine & nums))
+            if not why and ans_n and ans_n in nums and len(txt) <= 400 and len(shared) >= 2 and cov >= 0.25 and spec and len(nums) <= 12:
+                core = pool                      # every number of the question and the answer
+                got = (pool | solnums) & nums
+                if (len(core) >= 3 and core <= nums) or (len(core) == 2 and core <= nums and len(got) >= 4):
+                    why = 'rule N (the question\'s numbers and the answer all in one source window): %s with the shared story words' % sorted(got, key=lambda x: float(x))
             if not why and nn >= 3 and dn >= 2 and len(shared) >= 3 and cov >= 0.4:
                 why = 'rule B (numbers): %d of the same numbers %s (%d distinctive) and %d shared story words' % (nn, sorted(nn_mine & nums), dn, len(shared))
             c4 = None
@@ -614,6 +685,54 @@ def story_hits(q, ix, own_words=None):
     return [review] if review else []
 
 
+# ------------------------------------------------------------------ round 4: listed sequences and retired frames
+def listed_sequences(q):
+    """Comma-listed runs of at least 4 short words in a question ('red, red, blue, green', 'Mon, Tue, Wed, Thu'): the same list in a source is the same figure."""
+    out = []
+    for m in re.finditer(r"[a-z]+(?: [a-z]+)?(?:, (?:and )?[a-z]+(?: [a-z]+)?){2,}(?:,? and [a-z]+(?: [a-z]+)?)?", q.lower()):
+        items = [x.strip() for x in re.split(r',\s*(?:and\s+)?|\s+and\s+', m.group(0)) if x.strip()]
+        items = [re.sub(r'^(?:a|an|the|is|are|goes|go|repeats|pattern|again)\s+', '', x) for x in items]
+        if len(items) >= 4 and all(len(x.split()) <= 2 for x in items):
+            out.append(items)
+    return out
+
+
+def list_hits(q, ix, ans=None):
+    """Rule L (round 4): a listed sequence of the question found in the same order in one source sentence that also holds a number of the question or the answer."""
+    nums = {n for n in numbers_in(q) if n not in ('0', '1', '2')}
+    if ans is not None and re.fullmatch(r'\d+', str(ans)):
+        nums.add(str(ans))
+    out = []
+    for items in listed_sequences(q):
+        norm = ', '.join(items)
+        if len(set(items)) == len(items) and len(items) < 5:
+            continue                       # a plain list of four different things is a coincidence; a repeating pattern or a long list is a figure
+        stems = sorted({stem(w) for it in items for w in it.split() if stem(w) in ix.inv}, key=lambda w: len(ix.inv[w]))[:2]
+        if not stems:
+            continue
+        cand = set(ix.inv[stems[0]])
+        for w in stems[1:]:
+            cand &= set(ix.inv[w])
+        for i in sorted(cand):
+            t = ' '.join(ix.txt[i].lower().replace(' and ', ', ').replace(',,', ',').split())
+            if norm in re.sub(r',\s+', ', ', t):
+                got = nums & set(ix.nums[i] | (ix.nums[i + 1] if i + 1 < len(ix.nums) and ix.file[i + 1] == ix.file[i] else frozenset()))
+                if got:
+                    out.append(('FAIL', 'rule L (listed sequence): "%s" with the number %s in "%s ..." (%s)' % (norm, sorted(got)[0], ix.txt[i][:90], ix.rels[ix.file[i]])))
+                    break
+    return out
+
+
+def frame_hits(q, frames):
+    """Retired frames (taxonomy.json 'retired_frames'): a question written in the words of a frame that our books already use."""
+    out = []
+    ql = q.lower()
+    for fr in frames:
+        if all(re.search(p, ql) for p in fr['all']) and not (fr.get('none') and any(re.search(p, ql) for p in fr['none'])):
+            out.append(('FAIL', 'retired frame %s: %s' % (fr['id'], fr['why'])))
+    return out
+
+
 # ------------------------------------------------------------------ date arithmetic for the gap rules
 MLEN = {365: [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31], 366: [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]}
 
@@ -630,6 +749,17 @@ def daynum(date, N):
 def cdist(a, b, N):
     d = abs(a - b)
     return min(d, N - d)
+
+
+_GROUP_OF = {}
+for _g, _subs in (TAX.T.get('same_idea_groups') or {}).items():
+    for _s in _subs:
+        _GROUP_OF[_s] = 'group:' + _g
+
+
+def gsub(e):
+    """The unit the repeat rules count: a sub-structure, or the group of sub-structures that a parent sees as one idea (taxonomy 'same_idea_groups')."""
+    return _GROUP_OF.get(e['sub'], e['sub'])
 
 
 def is_small(a):
@@ -652,7 +782,7 @@ def gap_rules(lv, items, fails):
         pos = [(p, e) for p, e in pos if p is not None]
         by_sub, by_fam, by_ans = {}, {}, {}
         for p, e in pos:
-            by_sub.setdefault(e['sub'], []).append((p, e['id']))
+            by_sub.setdefault(gsub(e), []).append((p, e['id']))
             by_fam.setdefault(e['family'], []).append((p, e['id']))
             by_ans.setdefault(e['ans'], []).append((p, e['id']))
         for s, us in by_sub.items():
@@ -692,7 +822,7 @@ def quarter_rules(lv, items, fails):
     for q, es in sorted(by_q.items()):
         subs, fams = {}, {}
         for e in es:
-            subs.setdefault(e['sub'], []).append(e['id'])
+            subs.setdefault(gsub(e), []).append(e['id'])
             fams.setdefault(e['family'], []).append(e['id'])
         for s, ids in subs.items():
             if len(ids) > R['max_per_sub_per_quarter']:
@@ -707,7 +837,7 @@ def quarter_rules(lv, items, fails):
         for mm, e in items:
             p = daynum(e['date'], N)
             if p is not None:
-                uses.setdefault(e['sub'], []).append((p, e['id'], TAX.quarter(mm)))
+                uses.setdefault(gsub(e), []).append((p, e['id'], TAX.quarter(mm)))
         for s, us in uses.items():
             for i in range(len(us)):
                 for j in range(i + 1, len(us)):
@@ -790,6 +920,28 @@ def structure_rules(all_by_level, stock):
                 sn = len(ws[i][2] & ws[j][2])
                 if (len(sh) >= 4 and cov >= 0.85) or (len(sh) >= 3 and cov >= 0.6 and sn >= 2):
                     global_fails.append('L%d: %s and %s tell the same story (shared words %s, shared numbers %d)' % (lv, ws[i][0], ws[j][0], ','.join(sorted(sh)), sn))
+    # round 4 (owner ruling C3): puzzles at DIFFERENT levels may not share numbers and answer, nor the same story skeleton
+    flat_all = [(lv, e) for lv in levels for _, e in all_by_level[lv]]
+    info = {}
+    for lv, e in flat_all:
+        info[e['id']] = ({n for n in numbers_in(e['q']) if n not in ('0', '1', '2')}, story_words(e['q']))
+    for i in range(len(flat_all)):
+        for j in range(i + 1, len(flat_all)):
+            (la, a), (lb, b) = flat_all[i], flat_all[j]
+            if la == lb:
+                continue
+            na, wa = info[a['id']]
+            nb, wb = info[b['id']]
+            sh = na & nb
+            if a['type'] == 'n' and a['ans'] == b['ans'] and a['ans'] not in ('0', '1', '2') and (len(sh) >= 2 or (len(sh) >= 1 and max(len(na), len(nb)) <= 2 and int(float(max(sh, key=float))) >= 10)):
+                global_fails.append('%s (L%d) and %s (L%d): same answer %s and shared numbers %s at two levels' % (a['id'], la, b['id'], lb, a['ans'], sorted(sh, key=float)))
+            elif len(na) >= 3 and na == nb and (len(na) >= 4 or max(float(x) for x in na) > 12):
+                global_fails.append('%s (L%d) and %s (L%d): the same numbers %s at two levels' % (a['id'], la, b['id'], lb, sorted(na, key=float)))
+            if len(wa) >= 3 and len(wb) >= 3:
+                w = wa & wb
+                cov = len(w) / min(len(wa), len(wb))
+                if (len(w) >= 4 and cov >= 0.75) or (len(w) >= 5 and cov >= 0.6):
+                    global_fails.append('%s (L%d) and %s (L%d): the same story skeleton at two levels (shared words %s)' % (a['id'], la, b['id'], lb, ','.join(sorted(w))))
     return global_fails, struct_lines
 
 
@@ -935,6 +1087,11 @@ def selftest():
     for pid, text in probes['must_fail_text'].items():
         got = [sev for sev, _ in story_hits(text, sidx)]
         cases.append(('round 3 probe %s (round-2 wording) is a FAIL of the text rules' % pid, 'FAIL' in got, got))
+    # round 4: the four High items of AUDIT_ROUND4 (round-3 wording) and the fan at Level 4, which the round-3 verifier passed
+    for pid, pr in probes.get('round4_high', {}).items():
+        got = [sev for sev, _ in (story_hits(pr['q'], sidx, ans=pr['ans'], sol=pr['sol']) + list_hits(pr['q'], sidx, ans=pr['ans']) + frame_hits(pr['q'], TAX.T.get('retired_frames', [])))]
+        cases.append(('round 4 probe %s (round-3 wording) is a FAIL of the round-4 text rules' % pid, 'FAIL' in got, got))
+        cases.append(('round 4 probe %s: its frame %s is not allowed at Level %d any more' % (pid, pr['sub'], pr['level']), pr['sub'] in TAX.SUBS and pr['level'] not in TAX.SUBS[pr['sub']]['levels'], TAX.SUBS.get(pr['sub'], {}).get('levels')))
     for pid, sub in probes['retired_sub'].items():
         cases.append(('round 3 probe %s: sub-structure %s is retired (no level allows it)' % (pid, sub), TAX.SUBS[sub]['levels'] == [], TAX.SUBS[sub]['levels']))
     rels = {os.path.relpath(f, ROOT).replace(os.sep, '/') for f in source_files()}
@@ -1186,11 +1343,13 @@ def main():
                     if a and b and len(a & b) / len(a) >= 0.45 and numbers_in(e['q']) & numbers_in(text) - {'0', '1', '2'}:
                         fails.append('%s: same skeleton and numbers as the fixed website puzzle %s' % (tag, k))
                 # 6. story similarity (content words) with our sources
-                for sev, detail in story_hits(e['q'], sidx):
+                for sev, detail in story_hits(e['q'], sidx, ans=e['ans'] if e['type'] == 'n' else None, sol=e['hint'] + ' ' + e['why']):
                     if sev == 'FAIL':
                         fails.append('%s: same story as a source: %s' % (tag, detail))
                     else:
                         reviews.append('%s: %s' % (tag, detail))
+                for sev, detail in list_hits(e['q'], sidx, ans=e['ans'] if e['type'] == 'n' else None) + frame_hits(e['q'], TAX.T.get('retired_frames', [])):
+                    fails.append('%s: %s' % (tag, detail))
                 for k, mini in fixed_mini.items():
                     for sev, detail in story_hits(e['q'], mini):
                         if sev == 'FAIL':
