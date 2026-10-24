@@ -863,10 +863,10 @@
     "fmt": "int",
     "type": "n",
     "ans": "34",
-    "shown": "34 pens",
+    "shown": "34 oranges",
     "units": [
-     "pens",
-     "pen"
+     "oranges",
+     "orange"
     ],
     "prefix": [],
     "accept": [],
@@ -882,9 +882,9 @@
      "24",
      "340"
     ],
-    "q": "A box holds 56 pens and pencils. There are 12 more pens than pencils. How many pens are in the box?",
-    "hint": "If there were the same number of pens and pencils, each would be half of the total. Take away the extra pens first.",
-    "why": "Take away the 12 extra pens: 56 − 12 = 44. The rest is shared equally between pens and pencils, so there are 44 ÷ 2 = 22 pencils. The pens are 22 + 12 = 34 pens.",
+    "q": "A basket holds 56 oranges and limes. There are 12 more oranges than limes. How many oranges are in the basket?",
+    "hint": "If there were the same number of oranges and limes, each would be half of the total. Take away the extra oranges first.",
+    "why": "Take away the 12 extra oranges: 56 − 12 = 44. The rest is shared equally between oranges and limes, so there are 44 ÷ 2 = 22 limes. The oranges are 22 + 12 = 34 oranges.",
     "date": "11-21"
    },
    {
@@ -3558,9 +3558,9 @@
     "date": "11-21"
    },
    {
-    "id": "L3-henduck",
+    "id": "L3-marbletimes",
     "level": 3,
-    "frame": "henduck",
+    "frame": "marbletimes",
     "kind": "times_as_many",
     "topic": "Bar models",
     "sub": "bar_model.times_as_many",
@@ -3574,10 +3574,10 @@
     "fmt": "int",
     "type": "n",
     "ans": "39",
-    "shown": "39 hens",
+    "shown": "39 marbles",
     "units": [
-     "hens",
-     "hen"
+     "marbles",
+     "marble"
     ],
     "prefix": [],
     "accept": [],
@@ -3592,9 +3592,9 @@
      "29",
      "390"
     ],
-    "q": "A farmer has 3 times as many hens as ducks. She has 52 hens and ducks altogether. How many hens does she have?",
-    "hint": "Draw one bar for the ducks and a bar 3 times as long for the hens. Count the equal parts.",
-    "why": "The ducks are 1 part and the hens are 3 parts, so there are 4 equal parts. 52 ÷ 4 = 13 ducks. The hens are 3 × 13 = 39 hens.",
+    "q": "Jun has 3 times as many marbles as Lin. Together they have 52 marbles. How many marbles does Jun have?",
+    "hint": "Draw one bar for Lin and a bar 3 times as long for Jun. Count the equal parts.",
+    "why": "Lin is 1 part and Jun is 3 parts, so there are 4 equal parts. 52 ÷ 4 = 13 marbles for Lin. Jun has 3 × 13 = 39 marbles.",
     "date": "11-22"
    },
    {
@@ -4686,49 +4686,62 @@
     "date": "11-17"
    },
    {
-    "id": "L4-lockerkeys",
+    "id": "L4-bikelock",
     "level": 4,
-    "frame": "lockerkeys",
-    "kind": "order_by_key",
-    "topic": "Ordering numbers",
-    "sub": "sorting.order_by_digit_rule",
-    "family": "sorting",
+    "frame": "bikelock",
+    "kind": "scan",
+    "topic": "Digit clues",
+    "sub": "digit_puzzles.digit_clues",
+    "family": "digit_puzzles",
     "p": {
-     "numbers": [
-      36,
-      59,
-      28,
-      74,
-      45
+     "lo": 1000,
+     "hi": 9999,
+     "preds": [
+      [
+       "digit_sum",
+       22
+      ],
+      [
+       "digit_times",
+       [
+        0,
+        3,
+        2
+       ]
+      ],
+      [
+       "digit_plus",
+       [
+        1,
+        2,
+        1
+       ]
+      ]
      ],
-     "rule": "digit_product",
-     "place": 4
+     "ask": "only"
     },
-    "t": {
-     "cards": "36, 59, 28, 74 and 45"
-    },
+    "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "74",
-    "shown": "74",
+    "ans": "6763",
+    "shown": "6763",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "75",
-     "73",
-     "76",
-     "72",
-     "148",
-     "37",
-     "84",
-     "64",
-     "740"
+     "6764",
+     "6762",
+     "6765",
+     "6761",
+     "13526",
+     "6773",
+     "6753",
+     "67630"
     ],
-    "q": "A school has five lockers numbered 36, 59, 28, 74 and 45. The caretaker puts the keys in a row, from the smallest digit product to the biggest digit product. The digit product of 52 is 5 × 2 = 10. Which locker's key is fourth in the row?",
-    "hint": "Multiply the two digits of each locker number. Then put the products in order.",
-    "why": "The digit products are 18 for 36, 45 for 59, 16 for 28, 28 for 74 and 20 for 45. In order they are 16, 18, 20, 28, 45, which belong to 28, 36, 45, 74, 59. The fourth key is for locker 74.",
+    "q": "Kai's bicycle lock has a 4-digit code. He remembers three things about it. The four digits add up to 22. The first digit is twice the last digit. The second digit is 1 more than the third digit. What is the code?",
+    "hint": "Call the last digit d. Then the first digit is twice d. Try some values of d, and use the other two clues.",
+    "why": "If the last digit is 3, the first digit is 6. The second digit is 1 more than the third, and the four digits add up to 22, so 6 + the second + the third + 3 = 22. The second and third digits add up to 13, so they are 7 and 6. The code is 6763.",
     "date": "11-18"
    },
    {

@@ -1,13 +1,13 @@
 # Structure report (taxonomy.json)
 
-Sources searched (whole working tree, tracked or not): 6671 files, 1357.8 MB, sha256 ea7a97449ed017f30d5bcc4b.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 296, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
+Sources searched (whole working tree, tracked or not): 6677 files, 1357.9 MB, sha256 eb682eacbb4c2994124ed279.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 302, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
 
 Rules. Levels 3 to 6 (TEASER-STRICT): per level and calendar quarter at most 1 puzzle per sub-structure and 3 per family; the same sub-structure never within 30 days of itself across a quarter boundary; an answer of 10 or more appears once per level and a single digit at most 4 times. Levels 1 and 2 (L1L2-GAP60): the same sub-structure at least 60 days apart (circular, 365- and 366-day year), a family at most 3 times in any 60 days and never on consecutive days, an answer not repeated within 60 days and a single-digit answer at most 2 times in 60 days. All levels: no repeated frame, no two puzzles with most numbers or the same story in common; the sub-structures used by the fixed puzzles on the level pages (counting_choices.digit_cards_arrangements, fractions.fraction_of_remainder, multiples.common_multiple, remainders.two_conditions, sequence.count_on, sequence.which_term) are never used by the bank.
 
 - Level 1 (gap rule, 60 days): 61 puzzles, 61 distinct sub-structures (none twice within the gap), 39 families, most in one family 3
 - Level 2 (gap rule, 60 days): 61 puzzles, 61 distinct sub-structures (none twice within the gap), 43 families, most in one family 3
 - Level 3, quarter 4: 61 puzzles, 61 distinct sub-structures, 43 families, most in one family 3
-- Level 4, quarter 4: 61 puzzles, 61 distinct sub-structures, 41 families, most in one family 3
+- Level 4, quarter 4: 61 puzzles, 61 distinct sub-structures, 40 families, most in one family 4
 - Level 5, quarter 4: 61 puzzles, 61 distinct sub-structures, 43 families, most in one family 3
 - Level 6, quarter 4: 61 puzzles, 61 distinct sub-structures, 34 families, most in one family 3
 
@@ -20,10 +20,10 @@ Levels 3 to 6 (quarter rule): one use per sub-structure and at most 3 per family
 |---|---|---|---|---|---|---|---|---|
 | 1 | 71 | 41 | gap 60 days | 6 | 61 | 10 | 414 a year | ok |
 | 2 | 89 | 47 | gap 60 days | 6 | 61 | 28 | 504 a year | ok |
-| 3 | 111 | 51 | once a quarter | 1 per quarter | 92 | 9 | 101 per quarter | ok |
-| 4 | 111 | 55 | once a quarter | 1 per quarter | 92 | 10 | 102 per quarter | ok |
-| 5 | 103 | 52 | once a quarter | 1 per quarter | 92 | 3 | 95 per quarter | ok |
-| 6 | 102 | 53 | once a quarter | 1 per quarter | 92 | 5 | 97 per quarter | ok |
+| 3 | 110 | 51 | once a quarter | 1 per quarter | 92 | 8 | 100 per quarter | ok |
+| 4 | 110 | 55 | once a quarter | 1 per quarter | 92 | 9 | 101 per quarter | ok |
+| 5 | 106 | 56 | once a quarter | 1 per quarter | 92 | 6 | 98 per quarter | ok |
+| 6 | 106 | 58 | once a quarter | 1 per quarter | 92 | 9 | 101 per quarter | ok |
 
 ## Retired sub-structures (the frame is in our own books, so no level may use it)
 
@@ -46,6 +46,7 @@ Levels 3 to 6 (quarter rule): one use per sub-structure and at most 3 per family
 - `function_machine.find_the_rule`: round 3: IN and OUT machine with a hidden rule is in the P2 tutor guide, the P6 Algebra Machines lesson and the SASMO drafts
 - `growing_pattern.growing_gaps`: round 3: same frame as holiday P1 lesson 1 (the gaps are 1, 2, 3, 4 ...)
 - `growing_pattern.stick_row`: same structure as catalogue EX-PAT-1; replaced by new structures
+- `guess_check.heads_and_legs`: round 4: heads and legs (two kinds of creature or vehicle, a count and a total of legs or wheels) is in the P2 Question Bank (cars and motorcycles), extension L5 unit 9 (stools and chairs), p5/content/l9.js (bicycles and tricycles) and docs/books word problems A4.1; the verifier found it again in every new story
 - `measurement.container_and_contents`: round 4: "a jug full of water weighs 1.45 kg, half full 0.85 kg: mass of the empty jug" is Go further 7 of the P4 holiday week 5 lesson (practice/holiday/p4/05/lesson.py); the jar and rice and the juice bottle were the same frame
 - `modular.last_digit_power`: round 3: "multiply 7 by itself 45 times: last digit" is in docs/sasmo/g6_original_problems_draft.md 2.2
 - `moves.climb_and_slip`: same structure and story as our own hp question bank G5 and extension l1_u05; replaced by new structures
@@ -70,7 +71,8 @@ Usable sub-structures of round 3 that no released puzzle uses yet (each has a so
 | 5 | 61 | 3 | 5% | 18 | 36 | ok |
 | 6 | 61 | 4 | 7% | 24 | 36 | ok |
 
-Structure FAIL count (all released months): 0
+Structure FAIL count (all released months): 1
+- FAIL L4 quarter 4: family sorting used 4 times (cap 3): L4-oddtable, L4-lockerkeys, L4-schoolclubs, L4-heightline
 
 Capacity verdict for the full year (a plan for January to October, not a defect of the released months): 0 CAPACITY FAIL
 

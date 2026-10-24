@@ -7,7 +7,7 @@ Method: every puzzle is re-solved by `brute.py` (independent of the author solve
 | 1 | 30 | 29 | 2 | 21 | 3 | 30 |
 | 2 | 30 | 30 | 1 | 23 | 3 | 30 |
 | 3 | 30 | 30 | 1 | 23 | 3 | 30 |
-| 4 | 30 | 28 | 2 | 22 | 3 | 30 |
+| 4 | 30 | 27 | 3 | 22 | 3 | 30 |
 | 5 | 30 | 30 | 1 | 22 | 3 | 30 |
 | 6 | 30 | 25 | 3 | 21 | 3 | 30 |
 
@@ -15,8 +15,9 @@ Sources searched (whole working tree, tracked or not): 6677 files, 1357.9 MB, sh
 
 Similarity sources checked: holiday banks, own term lessons, all extension workbook data, the school booklets, our book drafts and catalogues, external private source files, and the seven fixed website puzzles.
 
-FAIL count: 0. REVIEW items: 100.
+FAIL count: 1. REVIEW items: 97.
 
+- FAIL L4-bikelock [11-18]: shares a 7-word run with the extension workbooks: "digit is twice the last digit the"
 
 - REVIEW L1-racerun [11-02]: story words 3 of 5 like "| Schema valid (JSON Schema + key checks) | PASS | all top-level keys, schema 2020-12, ide ..." (term/l1/AUDIT_L11.md)
 - REVIEW L1-secret63 [11-04]: number 2 in the question is not a parameter (written in the wording; check)
@@ -75,10 +76,7 @@ FAIL count: 0. REVIEW items: 100.
 - REVIEW L4-gate [11-14]: story words 4 of 6 like "Show your puzzle to your tutor or a grown-up and check each other's lists."], "slips": [], ..." (practice/holiday/p4/07/dist/data/p4l07.json)
 - REVIEW L4-pencilshare [11-15]: rule B: 3 of the same numbers ['12', '5', '8'] as "Answer: 4, 3, 4 8 sweets among 2 friends is 4 each. 12 sweets among 4 friends is ..." (outputs/print/term/Math_Inquirers_L1_T2_Book4_Lessons06-10_AnswerKey_TUTOR_PRINT.pdf)
 - REVIEW L4-milkjugs [11-17]: story words 3 of 5 like "- **P5-08 item 5** "7 litres of juice are poured equally into 8 jugs. How much juice is in ..." (docs/audit_final/p5_semester_booklets_audit.md)
-- REVIEW L4-lockerkeys [11-18]: number 52 in the question is not a parameter (written in the wording; check)
-- REVIEW L4-lockerkeys [11-18]: number 5 in the question is not a parameter (written in the wording; check)
-- REVIEW L4-lockerkeys [11-18]: number 2 in the question is not a parameter (written in the wording; check)
-- REVIEW L4-lockerkeys [11-18]: number 10 in the question is not a parameter (written in the wording; check)
+- REVIEW L4-bikelock [11-18]: number 4 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-sunflower [11-19]: rule B: 3 of the same numbers ['15', '4', '7'] as "| L9 S2 (printed) | Scale of 20, 3 lines above 40 | Scale starts at 100, lines w ..." (docs/audit/reaudit_fixes_p4.md)
 - REVIEW L4-piechart [11-21]: story words 5 of 7 like "| Prelim | 2026 | Raffles | P2-2 | 2 | Pie chart: true, false or not possible to tell | 3  ..." (docs/books/private_p6_papers/non_routine_questions.md)
 - REVIEW L4-smallest5 [11-23]: number 5 in the question is not a parameter (written in the wording; check)
