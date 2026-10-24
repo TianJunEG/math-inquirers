@@ -136,7 +136,7 @@ input.ans{font:800 20px var(--body);color:var(--fg);background:var(--card);borde
 <header class="bar"><a class="brand" href="model_drawing_signup.html"><i>?</i><span>Math Inquirers</span></a><nav class="nav" aria-label="Page"><a class="nl" href="model_drawing_signup.html">Class</a><a class="nl" href="model_drawing_online.html" aria-current="page">Practice</a><a class="btn yel sm" href="model_drawing_signup.html#reserve" style="margin-left:6px">Reserve a place</a></nav></header>
 <main>
 <section class="hero"><div class="sec"><span class="eyebrow">Model drawing · Primary 4 to 6</span><h1>Model Drawing <mark>Online</mark></h1><p class="slogan">Notice it. Test it. Explain why.</p><p class="lead">Read the problem, say it in plain words, then build the bar model one step at a time. Every step is checked and has a hint.</p>
-<div class="chips"><span class="chip">24 questions</span><span class="chip">13 model types</span><span class="chip">Hint at every step</span><span class="chip">Type your answer</span></div></div>
+<div class="chips"><span class="chip">38 questions</span><span class="chip">13 model types</span><span class="chip">Hint at every step</span><span class="chip">Type your answer</span></div></div>
 <svg class="art" viewBox="0 0 520 330" role="img" aria-label="Bar models: a fraction bar with three of five parts shaded, and a ratio of 3 to 5">
 <rect x="8" y="10" width="504" height="310" rx="44" fill="#D6E9FB" stroke="#1B2A49" stroke-width="3"/>
 <text x="44" y="62" font-size="20" fill="#1B2A49">Stickers</text>
@@ -301,17 +301,103 @@ var NEWQ2=[
  {k:"n",p:"The whole tank is 4 units.",q:"How many litres could the tank hold?",a:120,h:"4 × 30.",w:"4 × 30 = 120 litres. (Check: 3/4 of 120 = 90.)",m:[{l:"Tank",p:4,s:3,t:"30",b:[0,4,"? = 120"]}]}
 ]}
 ];
+var NEWQ3=[
+{id:"e2",type:"Different fractions, same amount left",text:"Rita spent 1/4 of her money and Sue spent 2/5 of her money. They each had the same amount of money left. Sue had $20 more than Rita at first. How much money did Rita have at first?",unit:"dollars",steps:[
+ {k:"n",p:"Rita spent 1/4, so 3 parts out of 4 are left. Sue spent 2/5, so 3 parts out of 5 are left. The amount left is the same.",q:"Give each person's left part 3 units. How many units is Rita's whole bar? (3 left out of 4)",a:4,h:"If the 3 left parts are 3 units, each part is 1 unit.",w:"Rita: 3 units left and 1 unit spent, so 4 units in all.",m:[{l:"Rita",p:4,s:1,b:[1,4,"left 3"]}]},
+ {k:"n",p:"Sue's left part is also 3 units, out of 5 parts.",q:"How many units is Sue's whole bar? (3 left out of 5)",a:5,h:"3 units left and 2 units spent.",w:"Sue: 3 units left and 2 units spent, so 5 units in all.",m:[{l:"Rita",p:4,s:1,b:[1,4,"left 3"]},{l:"Sue",p:5,s:2,b:[2,5,"left 3"]}]},
+ {k:"n",p:"Sue had $20 more than Rita. That is the gap between the two bars.",q:"How many units is the gap between Sue's bar and Rita's bar?",a:1,h:"5 − 4.",w:"The gap is 1 unit, and 1 unit is $20.",m:[{l:"Rita",p:4,s:1,b:[1,4,"left 3"]},{l:"Sue",p:5,s:2,b:[4,5,"gap $20"]}]},
+ {k:"n",p:"The gap is 1 unit and it is worth $20.",q:"How many dollars is 1 unit?",a:20,h:"The gap is 1 unit.",w:"1 unit = $20.",m:[{l:"Rita",p:4,s:1,t:"20"},{l:"Sue",p:5,s:2,t:"20",b:[4,5,"gap $20"]}]},
+ {k:"n",p:"Rita's whole bar is 4 units.",q:"How much money did Rita have at first?",a:80,h:"4 × 20.",w:"4 × 20 = $80. (Check: Sue had $100. Rita left 3/4 of 80 = $60. Sue left 3/5 of 100 = $60.)",m:[{l:"Rita",p:4,s:1,t:"20",b:[0,4,"? = 80"]},{l:"Sue",p:5,s:2,t:"20"}]}
+]},
+{id:"e3",type:"Different fractions, same amount given",text:"Dan gave away 2/3 of his marbles and Eli gave away 1/2 of his marbles. They gave away the same number of marbles. They had 56 marbles altogether at first. How many marbles did Dan give away?",unit:"marbles",steps:[
+ {k:"n",p:"The number given away is the same. Dan gave 2 parts out of 3. Eli gave 1 part out of 2.",q:"Give each person's given part 2 units. How many units is Dan's whole bar? (2 given out of 3)",a:3,h:"2 units given and 1 unit kept.",w:"Dan: 2 units given and 1 unit kept, so 3 units in all.",m:[{l:"Dan",p:3,s:2,b:[0,2,"given 2"]}]},
+ {k:"n",p:"Eli gave 1 part out of 2, so his given part is also 2 units.",q:"How many units is Eli's whole bar? (2 given and 2 kept)",a:4,h:"Eli kept the same as he gave.",w:"Eli: 2 units given and 2 units kept, so 4 units in all.",m:[{l:"Dan",p:3,s:2,b:[0,2,"given 2"]},{l:"Eli",p:4,s:2,b:[0,2,"given 2"]}]},
+ {k:"n",p:"Both bars are drawn with the same size of unit. Add them.",q:"How many units do they have altogether?",a:7,h:"3 + 4.",w:"3 + 4 = 7 units are the 56 marbles.",m:[{l:"Dan",p:3,s:2},{l:"Eli",p:4,s:2}]},
+ {k:"n",p:"All 7 units are 56 marbles.",q:"How many marbles is 1 unit?",a:8,h:"56 ÷ 7.",w:"1 unit = 8 marbles.",m:[{l:"Dan",p:3,s:2,t:"8"},{l:"Eli",p:4,s:2,t:"8"}]},
+ {k:"n",p:"Dan gave away 2 units.",q:"How many marbles did Dan give away?",a:16,h:"2 × 8.",w:"2 × 8 = 16 marbles. (Check: Dan had 24 and gave 2/3 = 16. Eli had 32 and gave 1/2 = 16.)",m:[{l:"Dan",p:3,s:2,t:"8",b:[0,2,"? = 16"]},{l:"Eli",p:4,s:2,t:"8"}]}
+]},
+{id:"h2",type:"Repeated sets, different pack sizes",text:"Cups were sold in sets of 6 at $9 per set and plates were sold in sets of 8 at $20 per set. Mr Lim bought the same number of cups and plates and paid $192 altogether. How many cups did he buy?",unit:"cups",steps:[
+ {k:"n",p:"Draw one block that has the same number of cups and plates. Use the smallest number that fits both set sizes.",q:"What is the smallest number that is a multiple of both 6 and 8?",a:24,h:"List the multiples of 8: 8, 16, 24 … which one is also a multiple of 6?",w:"24 cups need 4 sets and 24 plates need 3 sets, so there are no half sets.",m:[{l:"One block: 24 cups",p:4,t:"6"},{l:"One block: 24 plates",p:3,t:"8"}]},
+ {k:"n",p:"Cups come in sets of 6.",q:"How much do 24 cups cost? (4 sets of $9)",a:36,h:"4 × 9.",w:"4 × $9 = $36.",m:[{l:"24 cups, $9 a set",p:4,t:"$9",b:[0,4,"$36"]},{l:"24 plates",p:3,t:"8"}]},
+ {k:"n",p:"Plates come in sets of 8.",q:"How much do 24 plates cost? (3 sets of $20)",a:60,h:"3 × 20.",w:"3 × $20 = $60.",m:[{l:"24 cups, $9 a set",p:4,t:"$9",b:[0,4,"$36"]},{l:"24 plates, $20 a set",p:3,t:"$20",b:[0,3,"$60"]}]},
+ {k:"n",p:"One block costs $36 + $60 = $96. All the blocks together cost $192.",q:"How many blocks did he buy? (192 ÷ 96)",a:2,h:"192 ÷ 96.",w:"2 blocks.",m:[{l:"One block = $96",p:1,t:"$96"},{l:"All blocks = $192",p:2,t:"$96",b:[0,2,"$192"]}]},
+ {k:"n",p:"Each block has 24 cups.",q:"How many cups did he buy?",a:48,h:"2 × 24.",w:"2 × 24 = 48 cups. (Check: 8 sets of cups = $72, 6 sets of plates = $120, $72 + $120 = $192.)",m:[{l:"Cups",p:2,t:"24",b:[0,2,"? = 48"]}]}
+]},
+{id:"h3",type:"Repeated sets, ratio",text:"Aisha sold each cupcake at $4 and each brownie at $7. The ratio of the number of cupcakes sold to the number of brownies sold was 5 : 2. She collected $238 altogether. How many brownies did she sell?",unit:"brownies",steps:[
+ {k:"n",p:"Draw one small group that has everything in the right ratio: 5 cupcakes and 2 brownies.",q:"How much money is in one group of 5 cupcakes and 2 brownies?",a:34,h:"5 × 4 + 2 × 7.",w:"5 × 4 + 2 × 7 = 20 + 14 = $34 for one group.",m:[{l:"5 cupcakes",p:5,t:"$4"},{l:"2 brownies",p:2,t:"$7"}]},
+ {k:"n",p:"All the groups together make $238. Share $238 into groups of $34.",q:"How many groups are there?",a:7,h:"238 ÷ 34.",w:"238 ÷ 34 = 7 groups.",m:[{l:"5 cupcakes",p:5,t:"$4"},{l:"2 brownies",p:2,t:"$7",b:[0,2,"7 groups"]}]},
+ {k:"n",p:"Each group has 2 brownies.",q:"How many brownies did she sell?",a:14,h:"7 × 2.",w:"7 × 2 = 14 brownies. (Check: 35 cupcakes × $4 = $140 and 14 brownies × $7 = $98, so $238.)",m:[{l:"5 cupcakes",p:5,t:"$4"},{l:"2 brownies",p:2,t:"$7",b:[0,2,"7 groups = 14"]}]}
+]},
+{id:"i2",type:"Assumption with legs",text:"A farm had 15 chickens and rabbits altogether. They had 44 legs in total. A chicken has 2 legs and a rabbit has 4 legs. How many rabbits were there?",unit:"rabbits",steps:[
+ {k:"n",p:"Pretend every animal is a chicken, with 2 legs. Then count the legs.",q:"If all 15 animals were chickens, how many legs would there be?",a:30,h:"15 × 2.",w:"15 × 2 = 30 legs.",m:[{l:"Pretend all chickens: 2 legs each",p:15,t:"2",b:[0,15,"30 legs"]}]},
+ {k:"n",p:"The real total is bigger. Find how many legs are missing.",q:"How many more legs were there really? (44 − 30)",a:14,h:"44 − 30.",w:"14 legs are missing from our pretend picture.",m:[{l:"Pretend all chickens: 2 legs each",p:15,t:"2",b:[0,15,"30 legs"]},{l:"Missing legs",p:7,t:"2",b:[0,7,"14 legs"]}]},
+ {k:"n",p:"Changing one chicken into a rabbit adds some legs.",q:"How many extra legs does one swap add? (4 − 2)",a:2,h:"A rabbit has 4 legs and a chicken has 2.",w:"Each swap adds 2 legs.",m:[{l:"One swap",p:1,t:"+2",b:[0,1,"2 legs"]}]},
+ {k:"n",p:"Each swap adds 2 legs, so share the missing legs into groups of 2.",q:"How many rabbits were there?",a:7,h:"14 ÷ 2.",w:"14 ÷ 2 = 7 rabbits. (Check: 8 chickens 16 legs + 7 rabbits 28 legs = 44.)",m:[{l:"Missing 14 legs, in groups of 2",p:7,t:"2",b:[0,7,"7 swaps = 7 rabbits"]}]}
+]},
+{id:"i3",type:"Assumption with marks",text:"A quiz had 20 questions. A correct answer scored 4 marks and a wrong answer lost 1 mark. Zane answered all the questions and scored 55 marks. How many questions did he get wrong?",unit:"wrong answers",steps:[
+ {k:"n",p:"Pretend he got every question right. Then count the marks.",q:"If all 20 answers were correct, how many marks would he score?",a:80,h:"20 × 4.",w:"20 × 4 = 80 marks.",m:[{l:"Pretend all correct: 4 marks each",p:20,t:"4",b:[0,20,"80 marks"]}]},
+ {k:"n",p:"He really scored fewer marks. Find how many marks too many.",q:"How many marks too many is that? (80 − 55)",a:25,h:"80 − 55.",w:"The pretend score is 25 marks too high.",m:[{l:"Pretend all correct: 4 marks each",p:20,t:"4",b:[0,20,"80 marks"]},{l:"Too many marks",p:5,t:"5",b:[0,5,"25 marks"]}]},
+ {k:"n",p:"Changing one correct answer to a wrong one loses the 4 marks and takes away 1 more.",q:"By how many marks does one swap lower the score? (4 + 1)",a:5,h:"The correct answer's 4 marks disappear, then 1 mark is lost.",w:"Each wrong answer lowers the score by 5 marks.",m:[{l:"One swap",p:1,t:"−5",b:[0,1,"4 + 1 = 5"]}]},
+ {k:"n",p:"Each swap lowers the score by 5, so share the 25 into groups of 5.",q:"How many questions did he get wrong?",a:5,h:"25 ÷ 5.",w:"25 ÷ 5 = 5 wrong. (Check: 15 × 4 − 5 = 55.)",m:[{l:"25 marks, in groups of 5",p:5,t:"5",b:[0,5,"5 swaps = 5 wrong"]}]}
+]},
+{id:"j2",type:"Comparing two plans",text:"Ken wanted to buy 5 pens but was short of $2.50. Instead, he bought 2 pens and had $4.40 left. How much money did Ken have at first?",unit:"dollars",steps:[
+ {k:"n",p:"Compare the two plans. Ken's money stays the same, so the difference in what he pays is the difference in money.",q:"What is the gap between “short of $2.50” and “$4.40 left”? (4.40 + 2.50)",a:6.9,h:"Short is below zero, left is above zero. Add them.",w:"$4.40 + $2.50 = $6.90.",m:[{l:"Buy 5 pens",p:5,b:[0,5,"short $2.50"]},{l:"Buy 2 pens",p:2,b:[0,2,"$4.40 left"]}]},
+ {k:"n",p:"The difference between the two plans is some pens.",q:"How many more pens are in the first plan? (5 − 2)",a:3,h:"5 − 2.",w:"The first plan buys 3 more pens.",m:[{l:"Buy 5 pens",p:5,b:[2,5,"3 more pens"]},{l:"Buy 2 pens",p:2}]},
+ {k:"n",p:"Those 3 pens are the whole gap of $6.90.",q:"How much is 1 pen? (6.90 ÷ 3)",a:2.3,h:"6.90 ÷ 3.",w:"1 pen = $2.30.",m:[{l:"Buy 5 pens",p:5,t:"2.30",b:[2,5,"$6.90"]},{l:"Buy 2 pens",p:2,t:"2.30"}]},
+ {k:"n",p:"Use the second plan: 2 pens and $4.40 left over.",q:"How much money did Ken have at first?",a:9,h:"2 × 2.30 + 4.40.",w:"$4.60 + $4.40 = $9.00. (Check the first plan: 5 pens cost $11.50, and $11.50 − $9.00 = $2.50 short.)",m:[{l:"Ken's money",p:3,t:"?",b:[0,3,"? = 9.00"]}]}
+]},
+{id:"j3",type:"Comparing purchases, same pencils",text:"A notebook and 2 pencils cost $5.10. 3 notebooks and 2 pencils cost $12.30. What was the cost of 1 notebook?",unit:"dollars",steps:[
+ {k:"n",p:"Both purchases have the same 2 pencils. Cancel them and see what is different.",q:"How many more notebooks are in the second purchase? (3 − 1)",a:2,h:"3 − 1.",w:"The second purchase has 2 more notebooks.",m:[{l:"1 notebook + 2 pencils",p:3,b:[0,3,"$5.10"]},{l:"3 notebooks + 2 pencils",p:5,b:[3,5,"2 more notebooks"]}]},
+ {k:"n",p:"The extra cost between the two purchases is the cost of those 2 notebooks.",q:"How much more does the second purchase cost? (12.30 − 5.10)",a:7.2,h:"12.30 − 5.10.",w:"$12.30 − $5.10 = $7.20.",m:[{l:"1 notebook + 2 pencils",p:3,b:[0,3,"$5.10"]},{l:"3 notebooks + 2 pencils",p:5,b:[3,5,"$7.20"]}]},
+ {k:"n",p:"2 notebooks cost $7.20.",q:"How much is 1 notebook?",a:3.6,h:"7.20 ÷ 2.",w:"$7.20 ÷ 2 = $3.60. (Check: a pencil is $0.75, and $3.60 + 2 × $0.75 = $5.10.)",m:[{l:"1 notebook + 2 pencils",p:3,b:[0,3,"$5.10"]},{l:"3 notebooks + 2 pencils",p:5,b:[3,5,"2 notebooks = $7.20"]}]}
+]},
+{id:"k2",type:"Average, one more added",text:"The average mass of 5 pupils was 32 kg. When Dev joined them, the average mass of the 6 pupils became 34 kg. What was Dev's mass?",unit:"kg",steps:[
+ {k:"n",p:"Average means every pupil is shown with the same mass. Draw 5 equal bars.",q:"What was the total mass of the 5 pupils?",a:160,h:"5 × 32.",w:"5 × 32 = 160 kg.",m:[{l:"5 pupils, 32 kg each",p:5,t:"32",b:[0,5,"160 kg"]}]},
+ {k:"n",p:"Now draw 6 equal bars for the new average.",q:"What was the total mass of the 6 pupils?",a:204,h:"6 × 34.",w:"6 × 34 = 204 kg.",m:[{l:"5 pupils, 32 kg each",p:5,t:"32",b:[0,5,"160 kg"]},{l:"6 pupils, 34 kg each",p:6,t:"34",b:[0,6,"204 kg"]}]},
+ {k:"n",p:"Dev's mass is the extra mass when the total went from 160 to 204.",q:"What was Dev's mass?",a:44,h:"204 − 160.",w:"204 − 160 = 44 kg. (Check: 204 ÷ 6 = 34.)",m:[{l:"5 pupils, 32 kg each",p:5,t:"32",b:[0,5,"160 kg"]},{l:"6 pupils, 34 kg each",p:6,t:"34",b:[0,6,"204 kg"]}]}
+]},
+{id:"k3",type:"Average, one removed",text:"The average score of 6 pupils in a quiz was 75. After a pupil who scored 50 left, what was the average score of the remaining 5 pupils?",unit:"marks",steps:[
+ {k:"n",p:"Draw 6 equal bars of 75. Find the total score first.",q:"What was the total score of the 6 pupils?",a:450,h:"6 × 75.",w:"6 × 75 = 450 marks.",m:[{l:"6 pupils, 75 each",p:6,t:"75",b:[0,6,"450"]}]},
+ {k:"n",p:"Take away the pupil who left.",q:"What was the total score of the 5 pupils who stayed? (450 − 50)",a:400,h:"450 − 50.",w:"450 − 50 = 400 marks.",m:[{l:"6 pupils, 75 each",p:6,t:"75",b:[0,6,"450"]},{l:"5 pupils who stayed",p:5,b:[0,5,"400"]}]},
+ {k:"n",p:"Share the total equally among the 5 pupils to find the average.",q:"What was the average score of the 5 pupils?",a:80,h:"400 ÷ 5.",w:"400 ÷ 5 = 80 marks. (The average went up because the pupil who left scored below the average.)",m:[{l:"5 pupils who stayed",p:5,t:"80",b:[0,5,"400"]}]}
+]},
+{id:"l2",type:"Spent and left, one person",text:"Mala spent 1/3 of her money and then $12 more on a book. She had $40 left. How much money did she have at first?",unit:"dollars",steps:[
+ {k:"n",p:"Draw her money as 3 units. She spent 1 unit, then $12, and $40 was left.",q:"How many units are not the 1/3 she spent first? (3 − 1)",a:2,h:"3 − 1.",w:"2 units are covered by the $12 and the $40.",m:[{l:"Her money",p:3,s:1,b:[1,3,"$12 + $40"]}]},
+ {k:"n",p:"The $12 and the $40 together fill the other 2 units.",q:"How many dollars are the $12 and the $40 together?",a:52,h:"12 + 40.",w:"$12 + $40 = $52. So 2 units = $52.",m:[{l:"Her money",p:3,s:1,b:[1,3,"2 units = $52"]}]},
+ {k:"n",p:"2 units are $52.",q:"How many dollars is 1 unit?",a:26,h:"52 ÷ 2.",w:"1 unit = $26.",m:[{l:"Her money",p:3,s:1,t:"26",b:[1,3,"2 units = $52"]}]},
+ {k:"n",p:"Her money at first is all 3 units.",q:"How much money did she have at first?",a:78,h:"3 × 26.",w:"3 × 26 = $78. (Check: 1/3 of 78 = 26, plus $12 = $38 spent, and 78 − 38 = $40 left.)",m:[{l:"Her money",p:3,s:1,t:"26",b:[0,3,"? = 78"]}]}
+]},
+{id:"l3",type:"Spent and left, two people",text:"Tom and Una had $230 altogether. Tom spent twice as much as Una. Una had $12 more left than the amount she spent. Tom had $18 left. How much did Una spend?",unit:"dollars",steps:[
+ {k:"n",p:"Let what Una spent be 1 unit. Draw each bar. Amounts like $12 and $18 are separate blocks.",q:"How many units are there in all? (Una spent 1, Una left 1, Tom spent 2)",a:4,h:"1 + 1 + 2.",w:"4 units, plus the two separate blocks of money.",m:[{l:"Una spent",p:1},{l:"Una left",p:1,b:[0,1,"+ $12"]},{l:"Tom spent",p:2},{l:"Tom left",p:1,t:"$18"}]},
+ {k:"n",p:"Add up the blocks that are not units.",q:"How many dollars are in the separate blocks? ($12 and $18)",a:30,h:"12 + 18.",w:"$30 is not part of the units.",m:[{l:"Una spent",p:1},{l:"Una left",p:1,b:[0,1,"+ $12"]},{l:"Tom spent",p:2},{l:"Tom left",p:1,t:"$18"}]},
+ {k:"n",p:"Take the blocks away before sharing. The units are what is left of the $230.",q:"How many dollars are the 4 units? (230 − 30)",a:200,h:"230 − 30.",w:"4 units = $200.",m:[{l:"4 units",p:4,b:[0,4,"$200"]}]},
+ {k:"n",p:"4 units are $200.",q:"How much did Una spend? (1 unit)",a:50,h:"200 ÷ 4.",w:"1 unit = $50. (Check: Una spent 50 and had 62 left, 112 in all. Tom spent 100 and had 18 left, 118 in all. 112 + 118 = 230.)",m:[{l:"Una spent",p:1,t:"50",b:[0,1,"? = 50"]},{l:"Una left",p:1,t:"50",b:[0,1,"+ $12"]},{l:"Tom spent",p:2,t:"50"},{l:"Tom left",p:1,t:"$18"}]}
+]},
+{id:"m2",type:"Speed, distance and time",text:"A car travelled at 60 km/h for 2 h 30 min and then at 80 km/h for 1 h 15 min. What was the total distance travelled?",unit:"km",steps:[
+ {k:"n",p:"Cut the time into equal pieces. At 60 km/h, the car goes 60 km in 1 hour.",q:"How many km does the car travel in each half hour at 60 km/h?",a:30,h:"Half of 60.",w:"30 km in each half hour.",m:[{l:"60 km/h, each half hour",p:1,t:"30"}]},
+ {k:"n",p:"2 h 30 min is 5 half hours.",q:"How far does the car travel in the first part?",a:150,h:"5 × 30.",w:"5 × 30 = 150 km.",m:[{l:"First part: 5 half hours",p:5,t:"30",b:[0,5,"150 km"]}]},
+ {k:"n",p:"At 80 km/h, cut each hour into 4 quarter hours.",q:"How many km does the car travel in each quarter hour at 80 km/h?",a:20,h:"80 ÷ 4.",w:"20 km in each quarter hour.",m:[{l:"First part: 5 half hours",p:5,t:"30",b:[0,5,"150 km"]},{l:"80 km/h, each quarter hour",p:1,t:"20"}]},
+ {k:"n",p:"1 h 15 min is 5 quarter hours.",q:"How far does the car travel in the second part?",a:100,h:"5 × 20.",w:"5 × 20 = 100 km.",m:[{l:"First part: 5 half hours",p:5,t:"30",b:[0,5,"150 km"]},{l:"Second part: 5 quarter hours",p:5,t:"20",b:[0,5,"100 km"]}]},
+ {k:"n",p:"Add the two parts.",q:"What was the total distance travelled?",a:250,h:"150 + 100.",w:"150 + 100 = 250 km.",m:[{l:"First part",p:5,t:"30",b:[0,5,"150 km"]},{l:"Second part",p:5,t:"20",b:[0,5,"+ 100 km = 250 km"]}]}
+]},
+{id:"m3",type:"Rate and fraction of a tank",text:"Water flowed into an empty tank at 8 litres per minute. After 15 minutes, 3/5 of the tank was full. How many more minutes were needed to fill the tank completely?",unit:"minutes",steps:[
+ {k:"n",p:"Rate times time gives the amount of water.",q:"How many litres of water flowed in during the 15 minutes?",a:120,h:"8 × 15.",w:"8 × 15 = 120 litres.",m:[{l:"Tank",p:5,s:3,b:[0,3,"120 litres"]}]},
+ {k:"n",p:"120 litres is 3/5 of the tank. Draw the tank as 5 units and shade 3.",q:"3 units = 120 litres. How many litres is 1 unit?",a:40,h:"120 ÷ 3.",w:"1 unit = 40 litres.",m:[{l:"Tank",p:5,s:3,t:"40",b:[0,3,"120 litres"]}]},
+ {k:"n",p:"The unshaded part of the tank is still empty.",q:"How many litres are still needed? (2 units)",a:80,h:"2 × 40.",w:"2 × 40 = 80 litres.",m:[{l:"Tank",p:5,s:3,t:"40",b:[3,5,"80 litres to go"]}]},
+ {k:"n",p:"Litres needed divided by litres per minute gives the time.",q:"How many more minutes are needed? (80 ÷ 8)",a:10,h:"80 ÷ 8.",w:"10 more minutes. (Check: the whole tank is 200 litres, and 200 ÷ 8 = 25 minutes, which is 15 + 10.)",m:[{l:"Tank",p:5,s:3,t:"40",b:[3,5,"80 litres = 10 min"]}]}
+]}
+];
 var BANK=[["A","Sum and difference of two quantities"],["B","Giving items from one person to another"],["C","Same amount added or removed"],["D","Fraction of a whole, then of the remainder"],["E","Different fractions, same amount left or given"],["F","Percentage on bars"],["G","Ratio and units-and-parts"],["H","Repeated sets"],["I","Assumption with coins, notes and swaps"],["J","Comparing purchases"],["K","Average"],["L","Spent and left"],["M","Rate and measurement"]];
 (function(){
   var old=Q;old.forEach(function(q,i){q.id="q"+(i+1)});
-  var all=old.concat(NEWQ,NEWQ2),by={};all.forEach(function(q){by[q.id]=q});
-  var ORDER=["sd1","q3","mul1","q4","q5","rt4","rt7","q1","q2","ba2","q7","e1","q6","rt6","rt1","rt2","rt3","rt5","h1","i1","j1","k1","l1","m1"];
-  var BT={sd1:"A",q3:"A",mul1:"A",q4:"A",q5:"B",rt4:"B",rt7:"C",q1:"D",q2:"D",ba2:"D",q7:"D",e1:"E",q6:"F",rt6:"F",rt1:"G",rt2:"G",rt3:"G",rt5:"G",h1:"H",i1:"I",j1:"J",k1:"K",l1:"L",m1:"M"},cnt={};
+  var all=old.concat(NEWQ,NEWQ2,NEWQ3),by={};all.forEach(function(q){by[q.id]=q});
+  var ORDER=["sd1","q3","mul1","q4","q5","rt4","rt7","q1","q2","ba2","q7","e1","e2","e3","q6","rt6","rt1","rt2","rt3","rt5","h1","h2","h3","i1","i2","i3","j1","j2","j3","k1","k2","k3","l1","l2","l3","m1","m2","m3"];
+  var BT={sd1:"A",q3:"A",mul1:"A",q4:"A",q5:"B",rt4:"B",rt7:"C",q1:"D",q2:"D",ba2:"D",q7:"D",e1:"E",q6:"F",rt6:"F",rt1:"G",rt2:"G",rt3:"G",rt5:"G",h1:"H",h2:"H",h3:"H",i1:"I",i2:"I",i3:"I",j1:"J",j2:"J",j3:"J",k1:"K",k2:"K",k3:"K",l1:"L",l2:"L",l3:"L",m1:"M",m2:"M",m3:"M",e2:"E",e3:"E"},cnt={};
   Q=ORDER.map(function(id){var q=by[id],t=BT[id];cnt[t]=(cnt[t]||0)+1;q.bt=t;q.lab=t+cnt[t];
     BANK.forEach(function(b){if(b[0]===t)q.g="Type "+t+": "+b[1]});return q});
 })();
 
-var KEY="mi_modeldrawing_v3", cur=0, prog={}, hints={}, wrong={};
+var KEY="mi_modeldrawing_v4", cur=0, prog={}, hints={}, wrong={};
 function load(){try{var s=localStorage.getItem(KEY);if(s)prog=JSON.parse(s)||{}}catch(e){prog={}}}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(prog))}catch(e){}}
 function stepOf(i){return prog[Q[i].id]||0}
