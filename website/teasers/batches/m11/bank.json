@@ -96,9 +96,9 @@
     "topic": "Patterns",
     "p": {
      "unit": [
-      "red",
-      "blue",
-      "blue"
+      "pink",
+      "green",
+      "green"
      ],
      "n": 10,
      "ask": "at"
@@ -106,18 +106,18 @@
     "t": {},
     "fmt": "int",
     "type": "s",
-    "ans": "red",
-    "shown": "red",
+    "ans": "pink",
+    "shown": "pink",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "blue"
+     "green"
     ],
-    "q": "Xin Yi threads beads in this pattern again and again: red, blue, blue, red, blue, blue, ... What colour is the 10th bead?",
-    "hint": "Each pattern has 3 beads. The 3rd, 6th and 9th beads are blue.",
-    "why": "The pattern starts again after every 3 beads. The 9th bead ends a pattern, so the 10th bead starts a new one. It is red.",
+    "q": "Xin Yi threads beads in this pattern again and again: pink, green, green, pink, green, green, ... What colour is the 10th bead?",
+    "hint": "Each pattern has 3 beads. The 3rd, 6th and 9th beads are green.",
+    "why": "The pattern starts again after every 3 beads. The 9th bead ends a pattern, so the 10th bead starts a new one. It is pink.",
     "date": "11-03"
    },
    {
@@ -867,7 +867,7 @@
      "19",
      "90"
     ],
-    "q": "Hui Min is 6th in the queue from the front and 4th from the back. How many children are in the queue?",
+    "q": "Hui Min is 6th from the front in a queue. She is also 4th from the back. How many children are there altogether in the queue?",
     "hint": "Hui Min is counted in both numbers. Draw dots for the children.",
     "why": "Adding 6 and 4 counts Hui Min twice. So take 1 away: 6 + 4 − 1 = 9 children.",
     "date": "11-22"
@@ -1073,7 +1073,7 @@
      "16",
      "60"
     ],
-    "q": "Ravi has 18 stickers. He shares them equally among himself and his two sisters. How many stickers does each of the 3 children get?",
+    "q": "Ravi has 18 stickers. He shares them equally with his two sisters, so 3 children get a share. How many stickers does each child get?",
     "hint": "Share the stickers one at a time, like dealing cards.",
     "why": "18 stickers shared by 3 children: 6 + 6 + 6 = 18. Each child gets 6 stickers.",
     "date": "11-27"
@@ -1257,7 +1257,7 @@
      "526",
      "5360"
     ],
-    "q": "I am a 3-digit number. My tens digit is 3. My hundreds digit is 2 more than my tens digit. My units digit is double my tens digit. What number am I?",
+    "q": "A secret 3-digit number has three clues. Its tens digit is 3. Its hundreds digit is 2 more than its tens digit. Its units digit is double its tens digit. What is the secret number?",
     "hint": "Start with the tens digit, because it is given.",
     "why": "Tens digit: 3. Hundreds digit: 3 + 2 = 5. Units digit: 3 × 2 = 6. I am 536.",
     "date": "11-01"
@@ -1544,7 +1544,7 @@
      "6",
      "160"
     ],
-    "q": "I think of a number. I halve it, then I add 9. My answer is 17. What is my number?",
+    "q": "Siti halves a number and then adds 9. Her answer is 17. What number did she start with?",
     "hint": "Work backwards. Take away 9 first. Then double.",
     "why": "Backwards: 17 − 9 = 8, and double 8 is 16. Check: half of 16 is 8, and 8 + 9 = 17.",
     "date": "11-08"
@@ -1756,7 +1756,7 @@
      "100",
      "1100"
     ],
-    "q": "In Wei Jie's sticker book, page 1 has 2 stickers, page 2 has 4, page 3 has 6, and so on, going up by 2. The 10th page has 20 stickers. How many stickers are there on all 10 pages?",
+    "q": "In Wei Jie's sticker book, page 1 has 2 stickers, page 2 has 4 and page 3 has 6. This goes up by 2 each page. Page 10 has 20 stickers. How many stickers are on all 10 pages?",
     "hint": "Pair the first page with the last, the second with the one before last.",
     "why": "Pairs: 2 + 20, 4 + 18, 6 + 16, 8 + 14, 10 + 12. Each pair is 22. 5 pairs make 110 stickers.",
     "date": "11-13"
@@ -1798,7 +1798,7 @@
      "19",
      "90"
     ],
-    "q": "I think of a number. I multiply it by 3, then I take away 4. My answer is 23. What is my number?",
+    "q": "Aisha's secret number is multiplied by 3. Then 4 is taken away, which leaves 23. What is Aisha's secret number?",
     "hint": "Work backwards. Undo the taking away first. Then undo the multiplying.",
     "why": "Backwards: 23 + 4 = 27, and 27 ÷ 3 = 9. Check: 9 × 3 = 27, and 27 − 4 = 23.",
     "date": "11-14"
@@ -3375,7 +3375,7 @@
      "1",
      "110"
     ],
-    "q": "I think of a number. I multiply it by 6, then I add 9. My answer is 75. What is my number?",
+    "q": "Kumar chooses a number, multiplies it by 6, then adds 9. The result is 75. Which number did Kumar choose?",
     "hint": "Work backwards. Take away 9 first. Then divide by 6.",
     "why": "Backwards: 75 − 9 = 66, and 66 ÷ 6 = 11. Check: 11 × 6 = 66, and 66 + 9 = 75.",
     "date": "11-22"
@@ -3470,7 +3470,7 @@
      "18",
      "80"
     ],
-    "q": "Use the digits 1 to 9 once each in the 3 by 3 grid so that every row, every column and both long diagonals add up to the same total. Some digits are already in. A ? marks an empty square. What digit goes in the bottom-right square?",
+    "q": "Put the digits 1 to 9 once each in the 3 by 3 grid. Every row, column and long diagonal must add to the same total. Some digits are in already, and ? marks an empty square. Which digit goes in the bottom-right square?",
     "hint": "Add the top row first. That gives the total for every line.",
     "why": "The top row is 2 + 9 + 4 = 15, so every line adds to 15. Left column: 2 + 7 + 6, so the bottom-left is 6. Diagonal: 4 + 5 + 6, so the middle is 5. Middle row: 7 + 5 + 3, so the right of the middle row is 3. Right column: 4 + 3 + 8, so the bottom-right is 8.",
     "code": "2   9   4\n7   ?   ?\n?   ?   ?",
@@ -3501,7 +3501,7 @@
      "Friday",
      "Saturday"
     ],
-    "q": "Today is Friday. What day of the week will it be 100 days from today?",
+    "q": "Today is Friday. A parcel will arrive 100 days from today. On which day of the week will it arrive?",
     "hint": "100 days is 14 weeks and some days. Weeks do not change the day name.",
     "why": "14 weeks is 98 days, and the day name is the same after whole weeks. 2 more days after Friday: Saturday, then Sunday.",
     "date": "11-25"
@@ -4139,7 +4139,7 @@
      "Priya",
      "Wei Jie"
     ],
-    "q": "A cake is missing. Kumar, Priya, Wei Jie and Siti each say one thing. Kumar says: \"It was not me.\" Priya says: \"It was Siti.\" Wei Jie says: \"It was Siti.\" Siti says: \"It was Wei Jie.\" Exactly one of them is not telling the truth. Who took the cake?",
+    "q": "A cake is missing. Kumar, Priya, Wei Jie and Siti each say one thing. Kumar says: \"It was not me.\" Priya says: \"It was Siti.\" Wei Jie says: \"It was Siti.\" Siti says: \"It was Wei Jie.\" Exactly one child is not telling the truth. Who took the cake?",
     "hint": "Try each child as the one who took the cake. Count how many statements are true each time. You need exactly 3 true.",
     "why": "If Siti took it: Kumar's statement is true, Priya's is true, Wei Jie's is true, and only Siti's is false. That is exactly 3 true. No other child gives exactly 3 true statements. The answer is Siti.",
     "date": "11-10"
@@ -4231,7 +4231,7 @@
      "2",
      "120"
     ],
-    "q": "A 3 by 3 by 3 cube is painted red on the outside. Then it is cut into 27 small cubes. How many small cubes have exactly 2 red faces?",
+    "q": "A 3 by 3 by 3 cube is painted red on the outside. Then it is cut into 27 small cubes. Count the small cubes with exactly 2 red faces. How many are there?",
     "hint": "Cubes on the edges, but not at the corners, touch two outside faces.",
     "why": "Each of the 12 edges of the big cube has one small cube in the middle with 2 red faces. 12 × 1 = 12 cubes.",
     "date": "11-12"
@@ -4495,7 +4495,7 @@
     ],
     "q": "A robot moves from the top-left corner to the bottom-right corner of a grid. It takes 3 steps right and 3 steps down, in any order. It must avoid one point, which has a puddle, after 1 step right and 1 step down. How many routes can it take?",
     "hint": "First count all routes with no puddle. Then take away the routes that go through the puddle.",
-    "why": "All routes: 20. Routes through the puddle point: 2 ways to get there × 2 ways to go on = 4. 20 − 4 = 8 routes.",
+    "why": "All routes: 20. Routes through the puddle point: 2 ways to get there × 6 ways to go on = 12. 20 − 12 = 8 routes.",
     "date": "11-18"
    },
    {
@@ -4767,7 +4767,7 @@
      "2",
      "120"
     ],
-    "q": "Priya has 48 chocolates and 36 sweets. She makes identical gift bags using all of them, with none left over. What is the greatest number of bags she can make?",
+    "q": "Priya has 48 chocolates and 36 sweets. She makes identical gift bags. No chocolates or sweets may be left over. What is the most bags she can make?",
     "hint": "The number of bags must divide 48 and 36 exactly. Try big numbers first.",
     "why": "The common factors of 48 and 36 are 1, 2, 3, 4, 6 and 12. The greatest is 12 bags.",
     "date": "11-25"
@@ -4849,7 +4849,7 @@
      "360"
     ],
     "q": "Two buses leave the Bishan interchange together. Bus A then leaves every 12 minutes and Bus B every 18 minutes. After how many minutes will they next leave together?",
-    "hint": "List the times Bus A leaves: 12, 24, 36 ... Then list Bus B's times.",
+    "hint": "List the multiples of 12 and the multiples of 18. Look for the first number in both lists.",
     "why": "Bus A: 12, 24, 36. Bus B: 18, 36. They next leave together after 36 minutes.",
     "date": "11-27"
    },
@@ -4932,7 +4932,7 @@
      "520"
     ],
     "q": "I am a number between 40 and 80. When you divide me by 5, the remainder is 2. When you divide me by 7, the remainder is 3. What number am I?",
-    "hint": "List the numbers between 40 and 80 that leave remainder 2 when divided by 5: 42, 47, 52 ...",
+    "hint": "List the numbers from 40 to 80 that leave remainder 2 when divided by 5, starting 42, 47.",
     "why": "Numbers with remainder 2 when divided by 5: 42, 47, 52, 57, 62, 67, 72, 77. Check each by 7: only 52 leaves remainder 3 (52 = 7 × 7 + 3).",
     "date": "11-29"
    },
@@ -5312,7 +5312,7 @@
      "1080"
     ],
     "q": "What is the size of each angle inside a regular pentagon? (All its sides and angles are equal.)",
-    "hint": "A pentagon can be cut into 3 triangles from one corner.",
+    "hint": "Split the pentagon into triangles by drawing lines from one corner.",
     "why": "3 triangles have angles adding to 3 × 180° = 540°. Share among 5 equal angles: 540° ÷ 5 = 108°.",
     "date": "11-08"
    },
@@ -5586,7 +5586,7 @@
     ],
     "q": "A model house wall is a rectangle 8 cm wide and 6 cm tall with a triangle on top as a roof. The triangle has the same base as the wall and is 3 cm tall. What is the total area of the wall and roof?",
     "hint": "Find the area of the rectangle. Then find the area of the triangle. Add them.",
-    "why": "Rectangle: 8 × 6 = 48. Triangle: half of 8 × 3 = 12. 48 + 12 = 60 cm².",
+    "why": "Rectangle: 8 × 6 = 48. Triangle: 8 × 3 ÷ 2 = 12. 48 + 12 = 60 cm².",
     "date": "11-14"
    },
    {
@@ -6694,7 +6694,7 @@
      "23/36",
      "25/18"
     ],
-    "q": "Two fair dice are rolled and the numbers are added. What is the probability that the total is 8? Give your answer as a fraction in its simplest form.",
+    "q": "Two fair dice are rolled. Their numbers are added to get a total. Find the probability of a total of 8, as a fraction in its simplest form.",
     "hint": "List all the pairs that make 8. There are 36 pairs in all.",
     "why": "The pairs are (2,6), (3,5), (4,4), (5,3) and (6,2): 5 pairs out of 36. The probability is 5/36.",
     "date": "11-12"

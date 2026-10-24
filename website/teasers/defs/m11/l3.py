@@ -4,7 +4,7 @@ from defs_common import P
 
 DEFS = [
     P('think11', 'mystery', 'Mystery number',
-      'I think of a number. I multiply it by {ops[0][1]}, then I add {ops[1][1]}. My answer is {result}. What is my number?',
+      'Kumar chooses a number, multiplies it by {ops[0][1]}, then adds {ops[1][1]}. The result is {result}. Which number did Kumar choose?',
       'Work backwards. Take away {ops[1][1]} first. Then divide by {ops[0][1]}.',
       'Backwards: {result} − 9 = 66, and 66 ÷ 6 = {ans}. Check: 11 × 6 = 66, and 66 + 9 = 75.',
       p=dict(ops=[['*', 6], ['+', 9]], result=75)),
@@ -74,7 +74,7 @@ DEFS = [
       '{total}° − {given[0]}° = {ans}.',
       p=dict(kind='sum', total=90, given=[35]), unit='°'),
     P('friday100', 'weekday', 'Days of the week',
-      'Today is {start}. What day of the week will it be {days} days from today?',
+      'Today is {start}. A parcel will arrive {days} days from today. On which day of the week will it arrive?',
       '100 days is 14 weeks and some days. Weeks do not change the day name.',
       '14 weeks is 98 days, and the day name is the same after whole weeks. 2 more days after {start}: Saturday, then {ans}.',
       p=dict(start='Friday', days=100), accept=['sun'], w=['Friday', 'Saturday']),
@@ -136,7 +136,7 @@ DEFS = [
       p=dict(people=['Mei Ling', 'Ben', 'Aisha'], claims=[['Aisha', 'is'], ['Ben', 'not'], ['Aisha', 'is']], truths=1),
       w=['Ben', 'Aisha']),
     P('magic', 'magic', 'Magic squares',
-      'Use the digits 1 to 9 once each in the 3 by 3 grid so that every row, every column and both long diagonals add up to the same total. Some digits are already in. A ? marks an empty square. What digit goes in the bottom-right square?',
+      'Put the digits 1 to 9 once each in the 3 by 3 grid. Every row, column and long diagonal must add to the same total. Some digits are in already, and ? marks an empty square. Which digit goes in the bottom-right square?',
       'Add the top row first. That gives the total for every line.',
       'The top row is {cells9[0]} + {cells9[1]} + {cells9[2]} = {S}, so every line adds to {S}. Left column: 2 + 7 + 6, so the bottom-left is 6. Diagonal: 4 + 5 + 6, so the middle is 5. Middle row: 7 + 5 + 3, so the right of the middle row is 3. Right column: 4 + 3 + 8, so the bottom-right is {ans}.',
       p=dict(cells9=[2, 9, 4, 7, None, None, None, None, None], nums=[1, 2, 3, 4, 5, 6, 7, 8, 9], ask_idx=8), code='{grid}'),

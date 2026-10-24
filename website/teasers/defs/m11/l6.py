@@ -59,7 +59,7 @@ DEFS = [
       'Last digit 0: 9 × 8 = 72 codes. Last digit 2, 4, 6 or 8: 8 choices for the first digit, 8 for the middle digit, so 4 × 8 × 8 = 256. 72 + 256 = {ans}.',
       p=dict(lo=100, hi=999, preds=[['distinct', None], ['even', None]], ask='count'), unit='codes'),
     P('dice8', 'prob', 'Probability',
-      'Two fair dice are rolled and the numbers are added. What is the probability that the total is {arg}? Give your answer as a fraction in its simplest form.',
+      'Two fair dice are rolled. Their numbers are added to get a total. Find the probability of a total of {arg}, as a fraction in its simplest form.',
       'List all the pairs that make 8. There are 36 pairs in all.',
       'The pairs are (2,6), (3,5), (4,4), (5,3) and (6,2): {good} pairs out of 36. The probability is {ans}.',
       p=dict(kind='dice', pred='sum_eq', arg=8), fmt='frac'),
