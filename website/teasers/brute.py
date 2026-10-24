@@ -452,6 +452,14 @@ def b_pct(kind, **k):
     raise ValueError(kind)
 
 
+def b_pct_rest(n, ps):
+    out = set()
+    for x in range(0, n + 1):
+        if all(True for _ in ps) and x * 100 == n * (100 - sum(ps)):
+            out.add(x)
+    return out
+
+
 def b_ratio(kind, **k):
     if kind == 'share':
         a, b, N = k['a'], k['b'], k['N']

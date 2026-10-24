@@ -1,11 +1,16 @@
 // Worksheet-style online practice (extension units, and reusable for term and holiday data in the same item format).
 // The child can open any question in any order, skip, change answers, then submit. Marking and full worked solutions appear only after
-// submitting. Everything stays in this browser (localStorage, guarded): no account, nothing is sent anywhere. No timer, score, streak or ranking.
+// submitting. By default everything stays in this browser (localStorage, guarded): no account, nothing is sent anywhere. No timer, score, streak or ranking.
+// OPTIONAL SEND TO TUTOR (feature flag, OFF): only if the page sets window.MI_SUBMIT = {endpoint: '...'} AND a child session token exists
+// (MI_SUBMIT.token, or sessionStorage 'mi-child'.token from the portal child sign-in) does Submit also POST the answers (never a mark) to the endpoint.
+// The server marks again from its own key. Without the flag, or without a token, this file makes no network request except loading its own data file.
+// See docs/online_submission_design.md.
 (function () {
   var key = window.MI_LESSON, $ = function (id) { return document.getElementById(id); };
   var TIERS = [['core', 'Start here'], ['stretch', 'Think harder'], ['challenge', 'Go further'], ['check', 'Check yourself']];
-  var L, cur = 0, S = { a: {}, sub: false }, ask = false, sim = {};
-  function load() { try { var o = JSON.parse(localStorage.getItem('mi-sheet-' + key) || '{}'); if (o && o.a) S = { a: o.a, sub: !!o.sub }; } catch (e) {} }
+  var L, cur = 0, S = { a: {}, sub: false, sid: '', rev: 0, sent: 0, self: {} }, ask = false, sim = {};
+  var CFG = (typeof window.MI_SUBMIT === 'object' && window.MI_SUBMIT) || null, SY = { msg: '', busy: false, tries: 0, timer: 0, selfTimer: 0 }, VER = '';
+  function load() { try { var o = JSON.parse(localStorage.getItem('mi-sheet-' + key) || '{}'); if (o && o.a) S = { a: o.a, sub: !!o.sub, sid: String(o.sid || ''), rev: o.rev | 0, sent: o.sent | 0, self: o.self || {} }; } catch (e) {} }
   function save() { try { localStorage.setItem('mi-sheet-' + key, JSON.stringify(S)); } catch (e) {} }
   function h(tag, at, kids) {
     var e = document.createElement(tag);
@@ -101,6 +106,7 @@
     var head = j === 'right' ? 'Right.' : j === 'wrong' ? 'Look at this one again.' : j === 'blank' ? 'You skipped this one.' : 'Compare your answer with this.';
     var d = h('div', { class: 'fb ' + cls, id: 'sol' }, [h('h2', { text: head })]);
     if (it.type !== 'selfcheck') d.appendChild(h('p', { text: 'The answer is ' + show(it) + '.' }));
+    var tk = selfTick(it); if (tk) d.appendChild(tk);
     d.appendChild(h('h2', { text: 'Solution' })); d.appendChild(h('ol', {}, it.steps.map(function (s) { return h('li', { text: s }); })));
     if (it.tpl) d.appendChild(similar(it));
     return d;
@@ -148,23 +154,82 @@
   function bar() {
     var b = $('bar'); b.textContent = '';
     var un = L.items.filter(function (it) { return !answered(it, S.a[it.id]); }).length;
-    if (S.sub) { b.appendChild(summary()); b.appendChild(h('div', { class: 'row' }, [h('button', { type: 'button', id: 'again', class: 'act', text: 'Change my answers and submit again', on: { click: function () { S.sub = false; save(); render(); } } }), h('button', { type: 'button', class: 'act quiet', text: 'Start again with empty answers', on: { click: function () { S = { a: {}, sub: false }; sim = {}; hintOpen = {}; save(); cur = 0; render(); } } })])); return; }
+    var sl = syncLine(); if (sl) b.appendChild(sl);
+    if (S.sub) { b.appendChild(summary()); b.appendChild(h('div', { class: 'row' }, [h('button', { type: 'button', id: 'again', class: 'act', text: 'Change my answers and submit again', on: { click: function () { S.sub = false; save(); render(); } } }), h('button', { type: 'button', class: 'act quiet', text: 'Start again with empty answers', on: { click: function () { S = { a: {}, sub: false, sid: '', rev: 0, sent: 0, self: {} }; sim = {}; hintOpen = {}; save(); cur = 0; render(); } } })])); return; }
     if (ask) {
       b.appendChild(h('div', { class: 'fb try', role: 'alertdialog', 'aria-label': 'Submit anyway?' }, [h('p', { text: un + (un === 1 ? ' question has' : ' questions have') + ' no answer. Submit anyway? You will see the solutions for every question.' }), h('div', { class: 'row' }, [h('button', { type: 'button', id: 'yes', class: 'act', text: 'Yes, submit', on: { click: function () { submit(); } } }), h('button', { type: 'button', id: 'keep', class: 'act quiet', text: 'Keep working', on: { click: function () { ask = false; bar(); } } })])]));
       return;
     }
     b.appendChild(h('button', { type: 'button', id: 'submit', class: 'act', text: 'Submit my answers', on: { click: function () { if (un) { ask = true; bar(); } else submit(); } } }));
   }
-  function submit() { S.sub = true; ask = false; save(); hintOpen = {}; render(); var s = $('bar'); if (s && s.scrollIntoView) s.scrollIntoView({ block: 'nearest' }); }
+  function submit() { S.sub = true; ask = false; if (syncOn()) { if (!S.sid) S.sid = newId(); S.rev = (S.rev | 0) + 1; SY.tries = 0; SY.msg = ''; } save(); hintOpen = {}; render(); var s = $('bar'); if (s && s.scrollIntoView) s.scrollIntoView({ block: 'nearest' }); send(); }
   function summary() {
     var c = { right: 0, wrong: 0, blank: 0, self: 0 }; L.items.forEach(function (it) { c[judge(it, S.a[it.id])]++; });
     var marked = L.items.length - c.self;
     return h('div', { class: 'fb plain', id: 'summary' }, [h('h2', { text: 'Your answers are marked' }), h('p', { text: c.right + ' of ' + marked + ' marked questions are right. ' + c.wrong + ' to look at again, ' + c.blank + ' with no answer' + (c.self ? ', and ' + c.self + ' to check yourself.' : '.') + ' Open any question to see its worked solution.' }), h('p', { class: 'sub', text: '✓ right   ✗ look again   – no answer   ✎ check yourself' })]);
   }
+  // ---- optional send to tutor (flag OFF by default)
+  function tok() { try { if (CFG && CFG.token) return CFG.token; var c = JSON.parse(sessionStorage.getItem('mi-child') || 'null'); return (c && c.token) || null; } catch (e) { return null; } }
+  function syncOn() { return !!(CFG && CFG.endpoint && tok()); }
+  function newId() {
+    try { if (window.crypto && crypto.randomUUID) return crypto.randomUUID(); var b = crypto.getRandomValues(new Uint8Array(16)); b[6] = b[6] & 15 | 64; b[8] = b[8] & 63 | 128;
+      var x = Array.prototype.map.call(b, function (v) { return ('0' + v.toString(16)).slice(-2); }).join(''); return x.slice(0, 8) + '-' + x.slice(8, 12) + '-' + x.slice(12, 16) + '-' + x.slice(16, 20) + '-' + x.slice(20); } catch (e) { return ''; }
+  }
+  function payload() {
+    var ans = {};
+    L.items.forEach(function (it) {
+      var v = S.a[it.id];
+      // free text of a self-check item is never sent: only that something was written
+      if (it.type === 'selfcheck') ans[it.id] = answered(it, v) ? '(written)' : null;
+      else ans[it.id] = answered(it, v) ? (Array.isArray(v) ? v.map(String) : String(v)) : null;
+    });
+    var self = {}; Object.keys(S.self || {}).forEach(function (k) { self[k] = S.self[k]; });
+    return { v: 1, unit: CFG.unit || ('ext-' + key), unit_version: CFG.version || VER, sid: S.sid, rev: S.rev, answers: ans, self: self };
+  }
+  function note(t) { SY.msg = t; var n = $('syncnote'); if (n) n.textContent = t; }
+  function retry() {
+    SY.busy = false; if (SY.tries >= 3) { note('We could not send your answers yet. They are safe on this device, and we will try again when you are back online.'); return; }
+    note('Your answers are saved on this device. Sending to your tutor again soon.'); clearTimeout(SY.timer); SY.timer = setTimeout(send, [5000, 30000, 120000][SY.tries++]);
+  }
+  function send() {
+    if (!syncOn() || !S.sub || SY.busy || !S.sid || S.sent >= S.rev || !VER && !CFG.version) return;
+    SY.busy = true; var rev = S.rev, body;
+    try { body = JSON.stringify(payload()); } catch (e) { SY.busy = false; return; }
+    fetch(CFG.endpoint, { method: 'POST', credentials: 'omit', headers: { 'content-type': 'application/json', authorization: 'Bearer ' + tok() }, body: body })
+      .then(function (r) { return r.json().then(function (j) { return { st: r.status, j: j }; }, function () { return { st: r.status, j: {} }; }); })
+      .then(function (x) {
+        SY.busy = false;
+        if (x.st === 200 && x.j && x.j.ok) { S.sent = Math.max(S.sent, rev); save(); SY.tries = 0; note('Sent to your tutor.'); if (S.rev > rev) send(); }
+        else if (x.st === 401) note('Please sign in again to send your answers to your tutor. They are saved on this device.');
+        else if (x.st === 403 || x.st === 404) note('Your answers are saved here, but this page cannot send them to your tutor. Please ask a grown-up to check the sign-in and permissions.');
+        else if (x.st === 429 || x.st >= 500) retry();
+        else note('Your answers are saved here, but we could not send them. Please tell your tutor.');
+      }, retry);
+  }
+  window.addEventListener('online', function () { SY.tries = 0; send(); });
+  document.addEventListener('visibilitychange', function () { if (!document.hidden && S.sub && S.sent < S.rev) { SY.tries = 0; send(); } });
+  function syncLine() { return syncOn() ? h('p', { class: 'sub', id: 'syncnote', role: 'status', 'aria-live': 'polite', text: SY.msg || (S.sub ? '' : 'When you press Submit, your answers are also sent to your tutor.') }) : null; }
+  function pickSelf(it, val) {
+    S.self = S.self || {}; S.self[it.id] = val; S.rev = (S.rev | 0) + 1; save(); render();
+    clearTimeout(SY.selfTimer); SY.selfTimer = setTimeout(send, 2500);   // one send after the last tick, not one per tick
+  }
+  function selfTick(it) {
+    if (!syncOn() || it.type !== 'selfcheck') return null;
+    var cur_ = (S.self || {})[it.id], opts = [['checked', 'I checked it'], ['got', 'I got it'], ['not_yet', 'Not yet']];
+    return h('div', { class: 'row', role: 'group', 'aria-label': 'How did you do? You can skip this.' }, [h('span', { class: 'sub', text: 'Optional: how did it go?' })].concat(opts.map(function (o) {
+      return h('button', { type: 'button', class: 'act quiet', 'aria-pressed': String(cur_ === o[0]), text: (cur_ === o[0] ? '✓ ' : '') + o[1], on: { click: function () { pickSelf(it, o[0]); } } });
+    })));
+  }
   load();
-  fetch('data/' + key + '.json').then(function (r) { if (!r.ok) throw new Error('missing'); return r.json(); }).then(function (d) {
+  fetch('data/' + key + '.json').then(function (r) { if (!r.ok) throw new Error('missing'); return r.text(); }).then(function (txt) {
+    var d = JSON.parse(txt), vp = Promise.resolve('');
+    // the unit version = first 8 hex of the SHA-256 of this exact data file, so a server key can never be used for a changed question
+    if (syncOn() && !CFG.version && window.crypto && crypto.subtle) vp = crypto.subtle.digest('SHA-256', new TextEncoder().encode(txt)).then(function (b) { return Array.prototype.map.call(new Uint8Array(b), function (v) { return ('0' + v.toString(16)).slice(-2); }).join('').slice(0, 8); }, function () { return ''; });
+    return vp.then(function (v) { VER = v; return d; });
+  }).then(function (d) {
     L = d; document.title = 'Practice: ' + L.title + ' | Math Inquirers';
     $('title').textContent = L.title + ' practice'; $('sub').textContent = 'Level ' + L.level + ' · ' + (L.unit_label || 'Lesson ' + L.lesson) + ' · ' + L.topic;
     render();
+    if (S.sub && S.sent < S.rev) send();   // a tab closed before the send finished: try again when the page is opened again
   }).catch(function () { $('title').textContent = 'Practice'; $('card').textContent = 'This practice link is not complete. Please ask your tutor for the right link.'; });
 })();

@@ -19,7 +19,6 @@ import kinds                                   # noqa: E402
 from defs_common import FMT, UNIT_SYN, LEVEL_AGES, dec_str, show_frac   # noqa: E402
 
 BANK = os.path.join(HERE, 'bank.json')
-PER_LEVEL = 30
 
 
 def solve(d):
@@ -43,9 +42,9 @@ def finish(d, ans):
         out.update(type='s', canon=ans.lower(), shown=ans, accept=[a.lower() for a in (d['accept'] or [])])
         return out
     ans = Fr(ans)
-    if fmt == 'int':
+    if fmt in ('int', 'plain'):
         assert ans == int(ans), (d['frame'], ans)
-        canon, shown = str(int(ans)), ('{:,}'.format(int(ans)) if abs(ans) >= 10000 else str(int(ans)))
+        canon, shown = str(int(ans)), ('{:,}'.format(int(ans)) if abs(ans) >= 10000 and fmt == 'int' else str(int(ans)))
     elif fmt == 'dec':
         canon = shown = dec_str(ans)
         if abs(ans) >= 10000:
@@ -94,6 +93,7 @@ def wrongs(d, ans, fin):
 def render(d, ans, ctx, fin):
     ns = {}
     ns.update(d['t'])
+    ns['t'] = d['t']
     ns.update(d['p'])
     ns.update(ctx)
     ns['ans'] = fin['shown']
@@ -124,10 +124,18 @@ def order(level, items):
     return best[1]
 
 
-def main():
-    bank = {}
+DAYS_IN = {'01': 31, '02': 29, '03': 31, '04': 30, '05': 31, '06': 30, '07': 31, '08': 31, '09': 30, '10': 31, '11': 30, '12': 31}
+
+
+def manifest():
+    return json.load(open(os.path.join(HERE, 'manifest.json')))
+
+
+def build_month(mm):
+    """Build batches/m<MM>/bank.json: for every level, one puzzle per calendar day of the month."""
+    out = {}
     for lv in range(1, 7):
-        mod = importlib.import_module('defs_l%d' % lv)
+        mod = importlib.import_module('defs.m%s.l%d' % (mm, lv))
         items = []
         for d in mod.DEFS:
             ans, ctx = solve(d)
@@ -138,13 +146,24 @@ def main():
                      units=fin['units'], prefix=fin['prefix'], accept=fin['accept'], exact=fin['exact'],
                      wrong=wrongs(d, ans, fin), **r)
             items.append(e)
-        if len(items) != PER_LEVEL:
-            print('level %d has %d puzzles (want %d)' % (lv, len(items), PER_LEVEL))
-        bank[str(lv)] = order(lv, items)
-        print('level %d: %d puzzles' % (lv, len(items)))
-    json.dump({'version': 1, 'ages': {str(k): v for k, v in LEVEL_AGES.items()}, 'levels': bank},
-              open(BANK, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-    print('wrote', BANK)
+        want = DAYS_IN[mm]
+        if len(items) != want:
+            print('WARNING month %s level %d has %d puzzles (want %d)' % (mm, lv, len(items), want))
+        items = order(lv * 100 + int(mm), items)
+        for i, e in enumerate(items):
+            e['date'] = '%s-%02d' % (mm, i + 1)
+        out[str(lv)] = items
+    d = os.path.join(HERE, 'batches', 'm%s' % mm)
+    os.makedirs(d, exist_ok=True)
+    json.dump({'version': 2, 'month': mm, 'levels': out}, open(os.path.join(d, 'bank.json'), 'w', encoding='utf-8'),
+              ensure_ascii=False, indent=1)
+    print('month %s: %s' % (mm, {k: len(v) for k, v in out.items()}))
+
+
+def main():
+    months = sys.argv[1:] or manifest()['released']
+    for mm in months:
+        build_month(mm)
 
 
 if __name__ == '__main__':

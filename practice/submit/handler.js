@@ -27,7 +27,7 @@ export function validate(b) {
   if (b.v !== 1) return 'version';
   if (!UNIT.test(String(b.unit || '')) || !VER.test(String(b.unit_version || ''))) return 'unit';
   if (!UUID.test(String(b.sid || ''))) return 'sid';
-  if (!Number.isInteger(b.rev) || b.rev < 1 || b.rev > 50) return 'rev';
+  if (!Number.isInteger(b.rev) || b.rev < 1 || b.rev > 200) return 'rev';
   if (!b.answers || typeof b.answers !== 'object' || Array.isArray(b.answers)) return 'answers';
   const ids = Object.keys(b.answers);
   if (ids.length > LIMITS.items) return 'too_many';

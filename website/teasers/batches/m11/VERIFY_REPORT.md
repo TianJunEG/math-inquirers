@@ -1,0 +1,213 @@
+# Teaser batch m11 verification report
+
+Method: every puzzle is re-solved by `brute.py` (independent of the author solver `kinds.py`) over its whole search space; exactly one valid answer must exist and equal the bank answer.
+
+| Level | Puzzles | Distinct kinds | Most uses of one kind | Topics |
+|---|---|---|---|---|
+| 1 | 30 | 24 | 3 | 25 |
+| 2 | 30 | 28 | 2 | 26 |
+| 3 | 30 | 29 | 2 | 26 |
+| 4 | 30 | 25 | 3 | 25 |
+| 5 | 30 | 25 | 4 | 23 |
+| 6 | 30 | 23 | 4 | 18 |
+
+Similarity sources checked: holiday banks, own term lessons, all extension workbook data, external private source files.
+
+FAIL count: 63. REVIEW items: 133.
+
+- FAIL L1-beadpat [11-03]: shares a 7-word run with holiday: "blue blue red blue blue what colour"
+- FAIL L1-marbles [11-10]: shares a 7-word run with holiday: "how many marbles do they have altogether"
+- FAIL L1-marbles [11-10]: shares a 7-word run with external: "how many marbles do they have altogether"
+- FAIL L1-cards307 [11-17]: shares a 7-word run with external: "3 digit number what is the smallest"
+- FAIL L1-queue [11-22]: shares a 7-word run with holiday: "back how many children are in the"
+- FAIL L1-queue [11-22]: shares a 7-word run with external: "back how many children are in the"
+- FAIL L1-stickers [11-27]: shares a 7-word run with external: "he shares them equally among himself and"
+- FAIL L2-digitclue [11-01]: shares a 7-word run with holiday: "2 more than my tens digit my"
+- FAIL L2-digitclue [11-01]: shares a 7-word run with external: "i am a 3 digit number my"
+- FAIL L2-busline [11-06]: shares a 7-word run with external: "how many children are in the line"
+- FAIL L2-farm [11-12]: shares a 7-word run with the extension workbooks: "a goat has 4 legs how many"
+- FAIL L2-think9 [11-14]: shares a 7-word run with holiday: "a number i multiply it by 3"
+- FAIL L2-think9 [11-14]: shares a 7-word run with the extension workbooks: "a number i multiply it by 3"
+- FAIL L2-digitsum8 [11-21]: shares a 7-word run with holiday: "digit numbers have digits that add up"
+- FAIL L2-buns29 [11-22]: shares a 7-word run with the extension workbooks: "equally among 5 children each child gets"
+- FAIL L3-uncle [11-04]: shares a 7-word run with the extension workbooks: "old in how many years will his"
+- FAIL L3-palin [11-05]: shares a 7-word run with holiday: "read the same forwards and backwards like"
+- FAIL L3-palin [11-05]: shares a 7-word run with external: "the first digit and the last digit"
+- FAIL L3-cards3096 [11-09]: shares a 7-word run with holiday: "4 digit number cannot start with 0"
+- FAIL L3-cutcorner [11-10]: shares a 7-word run with the extension workbooks: "8 cm long and 6 cm wide"
+- FAIL L3-lists68 [11-13]: shares a 7-word run with holiday: "the 6 times table 6 12 18"
+- FAIL L3-vase [11-15]: shares a 7-word run with holiday: "of them is telling the truth who"
+- FAIL L3-spentfrac [11-20]: shares a 7-word run with external: "how much money did she have at"
+- FAIL L3-spentfrac [11-20]: shares a 7-word run with the extension workbooks: "has 12 left how much money did"
+- FAIL L3-think11 [11-22]: shares a 7-word run with the extension workbooks: "i think of a number i multiply"
+- FAIL L3-magic [11-24]: shares a 7-word run with holiday: "the digits 1 to 9 once each"
+- FAIL L3-friday100 [11-25]: shares a 7-word run with holiday: "day of the week will it be"
+- FAIL L3-basket [11-28]: shares a 7-word run with external: "what is the total mass of the"
+- FAIL L4-flour [11-02]: arithmetic in why is wrong: 5/8 = 3
+- FAIL L4-flour [11-02]: shares a 7-word run with external: "give your answer as a mixed number"
+- FAIL L4-grass [11-11]: shares a 7-word run with the extension workbooks: "12 m long and 8 m wide"
+- FAIL L4-cube3 [11-12]: shares a 7-word run with external: "27 small cubes how many small cubes"
+- FAIL L4-gate [11-17]: shares a 7-word run with external: "a 2 m gap for a gate"
+- FAIL L4-puddle [11-18]: arithmetic in why is wrong: 20 - 4 = 8
+- FAIL L4-smallest5 [11-24]: shares a 7-word run with external: "digits add up to 20 what number"
+- FAIL L4-giftbags [11-25]: shares a 7-word run with holiday: "left over what is the greatest number"
+- FAIL L4-giftbags [11-25]: shares a 7-word run with external: "left over what is the greatest number"
+- FAIL L4-symmetry [11-26]: shares a 7-word run with holiday: "a rectangle that is not a square"
+- FAIL L4-symmetry [11-26]: shares a 7-word run with the extension workbooks: "a rectangle that is not a square"
+- FAIL L4-father [11-28]: shares a 7-word run with the extension workbooks: "years old in how many years will"
+- FAIL L4-riddle52 [11-29]: shares a 7-word run with the extension workbooks: "i am a number between 40 and"
+- FAIL L5-uncle30 [11-02]: shares a 7-word run with the extension workbooks: "old in how many years will his"
+- FAIL L5-leak [11-03]: shares a 7-word run with holiday: "does it take to fill the tank"
+- FAIL L5-pentagon [11-08]: shares a 7-word run with holiday: "be cut into 3 triangles from one"
+- FAIL L5-shoes [11-13]: shares a 7-word run with holiday: "of the money she has left on"
+- FAIL L5-house [11-14]: arithmetic in why is wrong: 8 * 3 = 12.
+- FAIL L5-house [11-14]: shares a 7-word run with holiday: "what is the total area of the"
+- FAIL L5-house [11-14]: shares a 7-word run with the extension workbooks: "cm tall what is the total area"
+- FAIL L5-cube4 [11-17]: shares a 7-word run with holiday: "4 by 4 by 4 cube is"
+- FAIL L5-cube4 [11-17]: shares a 7-word run with external: "cubes how many small cubes have exactly"
+- FAIL L5-walkers [11-18]: shares a 7-word run with the extension workbooks: "each minute after how many minutes do"
+- FAIL L5-frogsteps [11-24]: shares a 7-word run with holiday: "is the sum of the three before"
+- FAIL L5-digitprod [11-26]: shares a 7-word run with holiday: "many 3 digit numbers have digits that"
+- FAIL L5-boysgirls [11-28]: shares a 7-word run with the extension workbooks: "how many children are there in the"
+- FAIL L5-giveten [11-30]: shares a 7-word run with external: "how many stickers do they have altogether"
+- FAIL L6-fairgame [11-02]: shares a 7-word run with holiday: "as a fraction in its simplest form"
+- FAIL L6-hiddencubes [11-03]: shares a 7-word run with external: "small cubes how many small cubes have"
+- FAIL L6-dice8 [11-12]: shares a 7-word run with holiday: "added what is the probability that the"
+- FAIL L6-primes60 [11-19]: shares a 7-word run with holiday: "has exactly two factors 1 and itself"
+- FAIL L6-threecoins [11-25]: shares a 7-word run with holiday: "as a fraction in its simplest form"
+- FAIL L6-routes43 [11-26]: arithmetic in why is wrong: 7 * 6 * 5 / (3 * 2 * 1) = 210
+- FAIL L6-twored [11-28]: arithmetic in why is wrong: 5/10 * 4/9 = 20
+- FAIL L6-twored [11-28]: shares a 7-word run with holiday: "as a fraction in its simplest form"
+- REVIEW L1-lift [11-02]: number 4 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-change [11-05]: number 3 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-change [11-05]: number 2 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-change [11-05]: number 10 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-samedigits [11-06]: number 2 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-samedigits [11-06]: number 22 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-samedigits [11-06]: number 66 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-marbles [11-10]: shares a 7-word run with term: "how many marbles do they have altogether"
+- REVIEW L1-countback [11-11]: number 2 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-countback [11-11]: number 28 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-countback [11-11]: number 26 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-countback [11-11]: number 24 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-chairs [11-15]: number 2 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-chairs [11-15]: number 3 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-toast [11-18]: number 1 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-sticks [11-19]: number 7 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-queue [11-22]: shares a 7-word run with term: "back how many children are in the"
+- REVIEW L1-reading [11-23]: shares a 7-word run with term: "an hour how many minutes is that"
+- REVIEW L1-count5 [11-30]: number 10 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-count5 [11-30]: number 15 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-count5 [11-30]: number 20 in the question is not a parameter (written in the wording; check)
+- REVIEW L1: wording skeleton "# what is the #th number" is shared by ['L1-count5', 'L1-countback']
+- REVIEW L2-liftmax [11-04]: number 5 in the question is not a parameter (written in the wording; check)
+- REVIEW L2-liftmax [11-04]: number 9 in the question is not a parameter (written in the wording; check)
+- REVIEW L2-whichterm [11-07]: number 12 in the question is not a parameter (written in the wording; check)
+- REVIEW L2-whichterm [11-07]: number 17 in the question is not a parameter (written in the wording; check)
+- REVIEW L2-whichterm [11-07]: number 22 in the question is not a parameter (written in the wording; check)
+- REVIEW L2-whichterm [11-07]: number 1 in the question is not a parameter (written in the wording; check)
+- REVIEW L2-whichterm [11-07]: number 12 in the question is not a parameter (written in the wording; check)
+- REVIEW L2-whichterm [11-07]: number 2 in the question is not a parameter (written in the wording; check)
+- REVIEW L2-stickerbook [11-13]: longest sentence 25 words (limit 22)
+- REVIEW L2-stickerbook [11-13]: number 1 in the question is not a parameter (written in the wording; check)
+- REVIEW L2-stickerbook [11-13]: number 4 in the question is not a parameter (written in the wording; check)
+- REVIEW L2-stickerbook [11-13]: number 3 in the question is not a parameter (written in the wording; check)
+- REVIEW L2-stickerbook [11-13]: number 6 in the question is not a parameter (written in the wording; check)
+- REVIEW L2-stickerbook [11-13]: number 10 in the question is not a parameter (written in the wording; check)
+- REVIEW L2-stickerbook [11-13]: number 10 in the question is not a parameter (written in the wording; check)
+- REVIEW L2-machine [11-17]: number 11 in the question is not a parameter (written in the wording; check)
+- REVIEW L2-machine [11-17]: number 18 in the question is not a parameter (written in the wording; check)
+- REVIEW L2-machine [11-17]: number 25 in the question is not a parameter (written in the wording; check)
+- REVIEW L2-digitsum8 [11-21]: number 2 in the question is not a parameter (written in the wording; check)
+- REVIEW L2-digitsum8 [11-21]: number 53 in the question is not a parameter (written in the wording; check)
+- REVIEW L2-digitsum8 [11-21]: number 5 in the question is not a parameter (written in the wording; check)
+- REVIEW L2-digitsum8 [11-21]: number 3 in the question is not a parameter (written in the wording; check)
+- REVIEW L2-trirow [11-23]: number 3 in the question is not a parameter (written in the wording; check)
+- REVIEW L2-trirow [11-23]: number 5 in the question is not a parameter (written in the wording; check)
+- REVIEW L2-bubble [11-24]: number 20 in the question is not a parameter (written in the wording; check)
+- REVIEW L2-assembly [11-27]: number 05 in the question is not a parameter (written in the wording; check)
+- REVIEW L2: wording skeleton "i think of a number i" is shared by ['L2-half17', 'L2-think9']
+- REVIEW L2: wording skeleton "# my answer is # what" is shared by ['L2-half17', 'L2-think9']
+- REVIEW L2: wording skeleton "my answer is # what is" is shared by ['L2-half17', 'L2-think9']
+- REVIEW L2: wording skeleton "answer is # what is my" is shared by ['L2-half17', 'L2-think9']
+- REVIEW L2: wording skeleton "is # what is my number" is shared by ['L2-half17', 'L2-think9']
+- REVIEW L3-kuih [11-02]: number 10 in the question is not a parameter (written in the wording; check)
+- REVIEW L3-uncle [11-04]: hint contains the answer number 17
+- REVIEW L3-palin [11-05]: number 3 in the question is not a parameter (written in the wording; check)
+- REVIEW L3-palin [11-05]: number 232 in the question is not a parameter (written in the wording; check)
+- REVIEW L3-palin [11-05]: number 3 in the question is not a parameter (written in the wording; check)
+- REVIEW L3-houses [11-07]: number 21 in the question is not a parameter (written in the wording; check)
+- REVIEW L3-houses [11-07]: number 22 in the question is not a parameter (written in the wording; check)
+- REVIEW L3-houses [11-07]: number 23 in the question is not a parameter (written in the wording; check)
+- REVIEW L3-lists68 [11-13]: number 12 in the question is not a parameter (written in the wording; check)
+- REVIEW L3-lists68 [11-13]: number 18 in the question is not a parameter (written in the wording; check)
+- REVIEW L3-lists68 [11-13]: number 16 in the question is not a parameter (written in the wording; check)
+- REVIEW L3-lists68 [11-13]: number 24 in the question is not a parameter (written in the wording; check)
+- REVIEW L3-round350 [11-16]: hint contains the answer number 10
+- REVIEW L3-round350 [11-16]: number 1 in the question is not a parameter (written in the wording; check)
+- REVIEW L3-magic [11-24]: longest sentence 30 words (limit 26)
+- REVIEW L3: wording skeleton "what is the distance all the" is shared by ['L3-cutcorner', 'L3-tile49']
+- REVIEW L3: wording skeleton "is the distance all the way" is shared by ['L3-cutcorner', 'L3-tile49']
+- REVIEW L3: wording skeleton "the distance all the way round" is shared by ['L3-cutcorner', 'L3-tile49']
+- REVIEW L3: wording skeleton "distance all the way round the" is shared by ['L3-cutcorner', 'L3-tile49']
+- REVIEW L3: wording skeleton "# squares across and # squares" is shared by ['L3-grid33', 'L3-ladder']
+- REVIEW L3: wording skeleton "squares across and # squares down" is shared by ['L3-grid33', 'L3-ladder']
+- REVIEW L4-milkjugs [11-07]: number 0.75 in the question is not a parameter (written in the wording; check)
+- REVIEW L4-fourliars [11-10]: longest sentence 32 words (limit 30)
+- REVIEW L4-cube3 [11-12]: number 27 in the question is not a parameter (written in the wording; check)
+- REVIEW L4-towerblocks [11-13]: number 1 in the question is not a parameter (written in the wording; check)
+- REVIEW L4-towerblocks [11-13]: number 2 in the question is not a parameter (written in the wording; check)
+- REVIEW L4-towerblocks [11-13]: number 6 in the question is not a parameter (written in the wording; check)
+- REVIEW L4-towerblocks [11-13]: number 9 in the question is not a parameter (written in the wording; check)
+- REVIEW L4-chairs24 [11-20]: number 1 in the question is not a parameter (written in the wording; check)
+- REVIEW L4-ribbon435 [11-22]: number 1.75 in the question is not a parameter (written in the wording; check)
+- REVIEW L4-ribbon435 [11-22]: number 2.6 in the question is not a parameter (written in the wording; check)
+- REVIEW L4-smallest5 [11-24]: number 5 in the question is not a parameter (written in the wording; check)
+- REVIEW L4-buses [11-27]: hint contains the answer number 36
+- REVIEW L4-riddle52 [11-29]: hint contains the answer number 52
+- REVIEW L4-books [11-30]: number 50 in the question is not a parameter (written in the wording; check)
+- REVIEW L5-rise [11-04]: number 25 in the question is not a parameter (written in the wording; check)
+- REVIEW L5-ricebags [11-12]: number 7.2 in the question is not a parameter (written in the wording; check)
+- REVIEW L5-removed [11-16]: number 6 in the question is not a parameter (written in the wording; check)
+- REVIEW L5-cube4 [11-17]: number 64 in the question is not a parameter (written in the wording; check)
+- REVIEW L5-stairs60 [11-19]: number 2 in the question is not a parameter (written in the wording; check)
+- REVIEW L5-stairs60 [11-19]: number 2 in the question is not a parameter (written in the wording; check)
+- REVIEW L5-stairs60 [11-19]: number 3 in the question is not a parameter (written in the wording; check)
+- REVIEW L5-stairs60 [11-19]: number 3 in the question is not a parameter (written in the wording; check)
+- REVIEW L5-figures [11-21]: number 1 in the question is not a parameter (written in the wording; check)
+- REVIEW L5-tank [11-23]: number 1 in the question is not a parameter (written in the wording; check)
+- REVIEW L5-tank [11-23]: number 1000 in the question is not a parameter (written in the wording; check)
+- REVIEW L5-pct35 [11-25]: number 5 in the question is not a parameter (written in the wording; check)
+- REVIEW L5-digitprod [11-26]: number 3 in the question is not a parameter (written in the wording; check)
+- REVIEW L5-digitprod [11-26]: number 223 in the question is not a parameter (written in the wording; check)
+- REVIEW L5-digitprod [11-26]: number 2 in the question is not a parameter (written in the wording; check)
+- REVIEW L5-digitprod [11-26]: number 2 in the question is not a parameter (written in the wording; check)
+- REVIEW L5-digitprod [11-26]: number 3 in the question is not a parameter (written in the wording; check)
+- REVIEW L5-cubes [11-27]: number 1 in the question is not a parameter (written in the wording; check)
+- REVIEW L5: wording skeleton "# cm wide and # cm" is shared by ['L5-cubes', 'L5-house']
+- REVIEW L5: wording skeleton "cm wide and # cm tall" is shared by ['L5-cubes', 'L5-house']
+- REVIEW L6-bin37 [11-01]: number 2 in the question is not a parameter (written in the wording; check)
+- REVIEW L6-bin37 [11-01]: number 0 in the question is not a parameter (written in the wording; check)
+- REVIEW L6-bin37 [11-01]: number 1 in the question is not a parameter (written in the wording; check)
+- REVIEW L6-hiddencubes [11-03]: number 216 in the question is not a parameter (written in the wording; check)
+- REVIEW L6-sixfactors [11-04]: number 2 in the question is not a parameter (written in the wording; check)
+- REVIEW L6-sixfactors [11-04]: number 3 in the question is not a parameter (written in the wording; check)
+- REVIEW L6-sixfactors [11-04]: number 4 in the question is not a parameter (written in the wording; check)
+- REVIEW L6-bin45 [11-09]: number 6 in the question is not a parameter (written in the wording; check)
+- REVIEW L6-bin45 [11-09]: number 1 in the question is not a parameter (written in the wording; check)
+- REVIEW L6-bin45 [11-09]: number 0 in the question is not a parameter (written in the wording; check)
+- REVIEW L6-bin45 [11-09]: number 10 in the question is not a parameter (written in the wording; check)
+- REVIEW L6-balance [11-13]: number 9 in the question is not a parameter (written in the wording; check)
+- REVIEW L6-lockcode [11-17]: number 3 in the question is not a parameter (written in the wording; check)
+- REVIEW L6-lockcode [11-17]: number 0 in the question is not a parameter (written in the wording; check)
+- REVIEW L6-primes60 [11-19]: number 1 in the question is not a parameter (written in the wording; check)
+- REVIEW L6-freezer [11-20]: number 6 in the question is not a parameter (written in the wording; check)
+- REVIEW L6-freezer [11-20]: number 13 in the question is not a parameter (written in the wording; check)
+- REVIEW L6: wording skeleton "give your answer as a fraction" is shared by ['L6-dice8', 'L6-fairgame', 'L6-threecoins', 'L6-twored']
+- REVIEW L6: wording skeleton "your answer as a fraction in" is shared by ['L6-dice8', 'L6-fairgame', 'L6-threecoins', 'L6-twored']
+- REVIEW L6: wording skeleton "answer as a fraction in its" is shared by ['L6-dice8', 'L6-fairgame', 'L6-threecoins', 'L6-twored']
+- REVIEW L6: wording skeleton "as a fraction in its simplest" is shared by ['L6-dice8', 'L6-fairgame', 'L6-threecoins', 'L6-twored']
+- REVIEW L6: wording skeleton "a fraction in its simplest form" is shared by ['L6-dice8', 'L6-fairgame', 'L6-threecoins', 'L6-twored']
+- REVIEW L6: wording skeleton "study this program what is the" is shared by ['L6-nested', 'L6-program']
+- REVIEW L6: wording skeleton "this program what is the value" is shared by ['L6-nested', 'L6-program']
+- REVIEW L6: wording skeleton "program what is the value of" is shared by ['L6-nested', 'L6-program']

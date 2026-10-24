@@ -124,7 +124,7 @@ create table if not exists public.practice_submissions (
   child_id          uuid not null references public.children(id) on delete cascade,
   unit_key          text not null, unit_version text not null,
   client_sid        uuid not null,                       -- made by the browser once per attempt; makes a retry idempotent
-  rev               smallint not null default 1 check (rev between 1 and 50),
+  rev               smallint not null default 1 check (rev between 1 and 200),
   first_received_at timestamptz not null default now(),
   received_at       timestamptz not null default now(),   -- server time of the latest revision. No client clock and no per-question timers are stored.
   n_auto smallint not null default 0, n_right smallint not null default 0, n_wrong smallint not null default 0, n_skipped smallint not null default 0,
@@ -225,16 +225,19 @@ language sql stable security definer set search_path = public as $$
                                                    and (n.expires_at is null or n.expires_at > now()) and (n.units is null or u.unit_no = any (n.units)))) ));
 $$;
 
--- Parent redeems a printed code. Fixed error words; 10 wrong tries per hour per parent.
+-- Parent redeems a printed code. Fixed result words; 10 wrong tries per hour per parent.
 create or replace function public.redeem_access_code(p_code text) returns text
 language plpgsql security definer set search_path = public, extensions as $$
 declare uid uuid := public._require_parent(); ac public.access_codes; h text := encode(extensions.digest(upper(regexp_replace(coalesce(p_code,''), '[^A-Za-z0-9]', '', 'g')), 'sha256'), 'hex');
 begin
-  if (select count(*) from public.access_code_failures where parent_id = uid and at > now() - interval '1 hour') >= 10 then raise exception 'too_many_tries'; end if;
+  -- Returns the product id on success, or the words 'bad_code' / 'too_many_tries'. It does NOT raise for a wrong code: a raise would roll back
+  -- the failure row that the 10-tries-per-hour limit counts.
+  if (select count(*) from public.access_code_failures where parent_id = uid and at > now() - interval '1 hour') >= 10 then return 'too_many_tries'; end if;
   select * into ac from public.access_codes where code_hash = h for update;
-  if not found or ac.revoked_at is not null or (ac.expires_at is not null and ac.expires_at < now()) or ac.used_count >= ac.max_uses then
-    insert into public.access_code_failures (parent_id) values (uid); raise exception 'bad_code'; end if;
+  if not found or ac.revoked_at is not null or (ac.expires_at is not null and ac.expires_at < now()) then
+    insert into public.access_code_failures (parent_id) values (uid); return 'bad_code'; end if;
   if exists (select 1 from public.access_code_uses where code_id = ac.id and parent_id = uid) then return ac.product_id; end if;   -- idempotent for the same family
+  if ac.used_count >= ac.max_uses then insert into public.access_code_failures (parent_id) values (uid); return 'bad_code'; end if;
   insert into public.access_code_uses (code_id, parent_id) values (ac.id, uid);
   update public.access_codes set used_count = used_count + 1 where id = ac.id;
   insert into public.entitlements (parent_id, product_id, units, source, source_ref) values (uid, ac.product_id, ac.units, 'code', ac.id::text);
@@ -356,7 +359,7 @@ begin
   select parent_id into pid from public.children where id = cid;
   if not public._has_consent(pid, 'online_practice') then return jsonb_build_object('ok', false, 'error', 'consent'); end if;
   if not public._can_access(cid, p_unit, p_version) then return jsonb_build_object('ok', false, 'error', 'entitlement'); end if;
-  if jsonb_typeof(p_rows) <> 'array' or jsonb_array_length(p_rows) > 400 or p_rev < 1 or p_rev > 50 then return jsonb_build_object('ok', false, 'error', 'bad_rows'); end if;
+  if jsonb_typeof(p_rows) <> 'array' or jsonb_array_length(p_rows) > 400 or p_rev < 1 or p_rev > 200 then return jsonb_build_object('ok', false, 'error', 'bad_rows'); end if;
   select count(*) into n_bad from jsonb_array_elements(p_rows) x
    where not exists (select 1 from public.practice_item_tags t where t.unit_key = p_unit and t.unit_version = p_version and t.item_id = x->>'item_id'
                        and t.marking_mode = x->>'marking_mode')

@@ -266,7 +266,7 @@ def moves(start, mv, ask):
         pos += m
         path.append(pos)
     ans = {'final': pos, 'max': max(path), 'min': min(path)}[ask]
-    return ans, {'path': ', '.join(str(p) for p in path)}
+    return ans, {'path': ', '.join(str(p).replace('-', '\u2212') for p in path)}
 
 
 def route_text(mv, up, down):
@@ -385,6 +385,12 @@ def pct(kind, **k):
             v = v * (100 + s) / 100
         return v, {}
     raise ValueError(kind)
+
+
+def pct_rest(n, ps):
+    rest = 100 - sum(ps)
+    assert (n * rest) % 100 == 0
+    return n * rest // 100, {'rest': rest}
 
 
 def ratio(kind, **k):
@@ -527,7 +533,7 @@ def prob(kind, **k):
         return p, {'total': tot}
     if kind == 'dice':
         pred = k['pred']
-        arg = k.get('arg')
+        arg = k.get('arg') or 0
         good = 0
         for x in range(1, 7):
             for y in range(1, 7):
@@ -728,7 +734,7 @@ SOLVE = {k: v for k, v in dict(globals()).items()
              'weekday', 'share', 'perimeter_regular', 'rect', 'cells', 'equiv_chain', 'shopping', 'mystery',
              'order_logic', 'moves', 'coin_ways', 'repeat_pattern', 'stairs', 'grid_count', 'lattice',
              'matchsticks', 'age_times', 'fraction_of', 'fraction_seq', 'fraction_whole', 'frac_arith',
-             'decimals', 'pct', 'ratio', 'stats', 'mean_missing', 'mean_remove', 'meet', 'fill', 'avg_speed',
+             'decimals', 'pct', 'pct_rest', 'ratio', 'stats', 'mean_missing', 'mean_remove', 'meet', 'fill', 'avg_speed',
              'speed', 'volume', 'water_rise', 'tri_area', 'rect_tri_area', 'angle', 'diag', 'neg_diff',
              'equation', 'nth_term', 'term_index', 'prob', 'prog', 'nested', 'turtle', 'cipher', 'binary',
              'liar', 'magic', 'cryptarithm', 'rounding', 'rounding_count', 'calendar_nth', 'lcm_meet',

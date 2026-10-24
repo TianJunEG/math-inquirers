@@ -38,7 +38,7 @@ do $$ declare c uuid; e uuid; begin
 end $$;
 reset role;
 set role authenticated; select set_config('request.jwt.claim.sub','e5e5e5e5-0000-0000-0000-0000000000e5',false);
-select public.admin_mark_paid((select id from public.payments where enrolment_id = (select id from public.enrolments where child_label = 'Mia')));
+select public.admin_mark_paid((select id from public.payments where enrolment_id = (select id from public.enrolments where parent_id = 'a1a1a1a1-0000-0000-0000-0000000000a1')));
 reset role;
 -- ===== parent B: child Ben, no enrolment, no practice consent =====
 set role authenticated; select set_config('request.jwt.claim.sub','b2b2b2b2-0000-0000-0000-0000000000b2',false);
@@ -81,7 +81,7 @@ do $$ declare th text := pg_temp.h((select token from tok)); r jsonb; begin
 end $$;
 reset role;
 -- Ben's family is not enrolled and has no consent even with a token: build one by hand to prove the gates in the service functions themselves
-insert into public.child_sessions (child_id, token_hash, expires_at) select id, pg_temp.h('BEN-TOKEN'), now() + interval '1 hour' from public.children where display_name = 'Ben';
+insert into public.child_sessions (child_id, token_hash, expires_at) select id, pg_temp.h('BEN-TOKEN'), now() + interval '1 hour' from public.children where parent_id = 'b2b2b2b2-0000-0000-0000-0000000000b2';
 set role service_role;
 do $$ begin
   assert public.service_practice_keys(pg_temp.h('BEN-TOKEN'), 'hol-l1l01', 'v1')->>'error' = 'consent';
@@ -119,7 +119,7 @@ set role authenticated; select set_config('request.jwt.claim.sub','a1a1a1a1-0000
 do $$ declare c uuid := (select id from public.children where display_name = 'Mia'); begin
   assert (select count(*) from public.practice_submissions) = 1 and (select count(*) from public.practice_attempts) = 4, 'parent A sees own child rows';
   assert (select count(*) from public.practice_child_detail(c, 'hol-l1l01')) = 4;
-  assert (select misconception from public.practice_child_detail(c, 'hol-l1l01') where item_id = 'q1') is null, 'right after rev 3, no slip';
+  assert (select misconception from public.practice_child_detail(c, 'hol-l1l01') where item_id = 'q1') like '7 is 3 + 4%', 'misconception text comes from the tags table';
   assert pg_temp.fails($q$select * from public.practice_item_keys$q$, 'permission denied'), 'parent can not read keys';
   assert pg_temp.fails($q$insert into public.practice_attempts (child_id, lesson_key, item_key) select id, 'x', 'y' from public.children$q$, 'permission denied'), 'no direct insert';
   assert pg_temp.fails($q$update public.practice_attempts set mark = 'right'$q$, 'permission denied'), 'no direct update';
@@ -134,7 +134,7 @@ do $$ begin
   assert (select count(*) from public.practice_submissions) = 0 and (select count(*) from public.practice_attempts) = 0, 'parent B sees nothing of A';
 end $$;
 reset role;
-create temp table ids as select id as mia from public.children where display_name = 'Mia';
+create temp table ids as select id as mia from public.children where parent_id = 'a1a1a1a1-0000-0000-0000-0000000000a1';
 grant all on ids to authenticated, service_role;
 set role authenticated; select set_config('request.jwt.claim.sub','b2b2b2b2-0000-0000-0000-0000000000b2',false);
 do $$ begin assert pg_temp.fails(format('select * from public.practice_child_detail(%L, %L)', (select mia from ids), 'hol-l1l01'), 'forbidden'), 'B can not read A child detail'; end $$;
@@ -160,11 +160,11 @@ do $$ begin
 end $$;
 reset role;
 -- a cancelled or unpaid enrolment is not "in the group" for the tutor
-update public.enrolments set status = 'pending_payment' where child_label = 'Mia';
+update public.enrolments set status = 'pending_payment' where parent_id = 'a1a1a1a1-0000-0000-0000-0000000000a1';
 set role authenticated; select set_config('request.jwt.claim.sub','c3c3c3c3-0000-0000-0000-0000000000c3',false);
 do $$ begin assert (select count(*) from public.practice_submissions) = 0, 'tutor loses sight when the enrolment is not confirmed'; end $$;
 reset role;
-update public.enrolments set status = 'confirmed' where child_label = 'Mia';
+update public.enrolments set status = 'confirmed' where parent_id = 'a1a1a1a1-0000-0000-0000-0000000000a1';
 -- admin sees all
 set role authenticated; select set_config('request.jwt.claim.sub','e5e5e5e5-0000-0000-0000-0000000000e5',false);
 do $$ begin assert (select count(*) from public.practice_submissions) = 1; assert (select count(*) from public.tutor_group_practice('L1A')) = 1; end $$;
@@ -184,17 +184,18 @@ reset role;
 -- parent B redeems a code: wrong codes are counted, 10 wrong guesses in an hour lock the redeemer out
 set role authenticated; select set_config('request.jwt.claim.sub','b2b2b2b2-0000-0000-0000-0000000000b2',false);
 do $$ declare i int; c1 text := (select code from newcodes limit 1); begin
-  assert pg_temp.fails($q$select public.redeem_access_code('AAAA-BBBB-CCCC')$q$, 'bad_code');
+  assert public.redeem_access_code('AAAA-BBBB-CCCC') = 'bad_code';
   assert public.redeem_access_code(lower(c1)) = 'ext-l1', 'case and dashes do not matter';
   assert (select count(*) from public.my_entitlements()) = 1;
   assert public.redeem_access_code(c1) = 'ext-l1', 'same family again is fine';
-  for i in 1..9 loop begin perform public.redeem_access_code('ZZZZ-ZZZZ-' || i); exception when others then null; end; end loop;
-  assert pg_temp.fails($q$select public.redeem_access_code('ZZZZ-ZZZZ-ZZZZ')$q$, 'too_many_tries'), 'rate limit on guessing';
+  for i in 1..9 loop assert public.redeem_access_code('ZZZZ-ZZZZ-' || i) = 'bad_code'; end loop;
+  assert public.redeem_access_code('ZZZZ-ZZZZ-ZZZZ') = 'too_many_tries', 'rate limit on guessing';
+  assert public.redeem_access_code(c1) = 'too_many_tries', 'locked out even for a right code';
 end $$;
 reset role;
 -- a one-use code can not be used by a second family
 set role authenticated; select set_config('request.jwt.claim.sub','a1a1a1a1-0000-0000-0000-0000000000a1',false);
-do $$ begin assert pg_temp.fails(format('select public.redeem_access_code(%L)', (select code from newcodes limit 1)), 'bad_code'), 'one use only'; end $$;
+do $$ begin assert public.redeem_access_code((select code from newcodes limit 1)) = 'bad_code', 'one use only'; end $$;
 reset role;
 -- ===== consent withdrawn: no more submissions at once =====
 set role authenticated; select set_config('request.jwt.claim.sub','a1a1a1a1-0000-0000-0000-0000000000a1',false);
@@ -224,5 +225,5 @@ insert into public.practice_submissions (child_id, unit_key, unit_version, clien
 set role authenticated; select set_config('request.jwt.claim.sub','a1a1a1a1-0000-0000-0000-0000000000a1',false);
 select public.delete_my_data();
 reset role;
-do $$ begin assert (select count(*) from public.practice_submissions) = 0 and (select count(*) from public.entitlements where parent_id = 'a1a1a1a1-0000-0000-0000-0000000000a1') = 0, 'delete_my_data removes practice data and entitlements'; end $$;
+do $$ begin assert (select count(*) from public.practice_submissions) = 0 and (select count(*) from public.child_sessions where child_id = (select mia from ids)) = 0, 'delete_my_data removes the children, so their practice data and sessions go through the cascade (entitlements stay, like payment records: a purchase, no personal data)'; end $$;
 select 'practice_submissions_test: all assertions passed' as result;

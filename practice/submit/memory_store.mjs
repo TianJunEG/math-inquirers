@@ -11,10 +11,10 @@ export const KEYS = [
   { id: 'q9', marking_mode: 'auto', type: 'number', key: 2 },
   { id: 'q10', marking_mode: 'none', type: 'open' },
 ];
-export function memoryStore({ tokenHash, consent = true, keys = KEYS }) {
+export function memoryStore({ tokenHash, consent = true, keys = KEYS, unit = 'ext-l2u01', version = null }) {
   const s = { data: new Map(), consent, rateLeft: 99, calls: [] };
   const gate = (th) => th !== tokenHash ? 'session' : !s.consent ? 'consent' : s.rateLeft <= 0 ? 'rate' : null;
-  s.getKeys = async (th, unit) => { const e = gate(th); if (e) return { ok: false, error: e }; if (unit !== 'ext-l2u01') return { ok: false, error: 'unit' }; return { ok: true, keys }; };
+  s.getKeys = async (th, u, v) => { const e = gate(th); if (e) return { ok: false, error: e }; if (u !== unit || (version && v !== version)) return { ok: false, error: 'unit' }; return { ok: true, keys }; };
   s.record = async (th, p) => {
     const e = gate(th); if (e) return { ok: false, error: e };
     s.calls.push(p);
