@@ -25,7 +25,7 @@ D4 = figs4()
 PR = D4['printed']
 ANG = D4['data']['ANG']
 SK = 'Angles and lines'
-EXTRA = 'Extra practice (not for the lesson). '
+EXTRA = 'Extra practice. '
 
 
 def I(**kw):
@@ -254,21 +254,21 @@ ITEMS = [
               ['Through D, draw a line perpendicular to AB.'], 'perp'),
     draw_item('5c-draw', '5(c) draw', '5(c) draw', 'G', 'E', 'F', 'perp', BOX_EF, PTS_EF, CAP_EF, 'Look at the steps of EF. Swap the two numbers and turn one of the steps round, then check with your right-angle checker.',
               ['EF goes 2 squares right and 1 square up at each step.', 'A perpendicular line: swap the steps and turn one of them round. That gives 1 square right and 2 squares DOWN (or 1 square left and 2 squares up) at each step.', 'Draw it with a ruler through G, and check it with your right-angle checker and the answer shown.'],
-              ['Think harder (if you have time): through G, draw a line perpendicular to EF. Check it with your checker.'], 'Think harder (if you have time): through G, draw a line perpendicular to EF. Use a ruler and check it with your right-angle checker.'),
-    cand_item('5c-pick', '5(c) which line', '5(c) pick', CAND_C, BOX_EF, PTS_EF, 'E', 'F', 'G', 4, 'Think harder (if you have time). Which numbered line through G is perpendicular to EF?',
+              ['Think harder (if you have time): through G, draw a line perpendicular to EF. Check it with your checker.'], 'Through G, draw a line perpendicular to EF. Use a ruler and check it with your right-angle checker.'),
+    cand_item('5c-pick', '5(c) which line', '5(c) pick', CAND_C, BOX_EF, PTS_EF, 'E', 'F', 'G', 4, 'Which numbered line through G is perpendicular to EF?',
               'Check each numbered line with your right-angle checker where it crosses EF. Or swap the steps of EF and turn one round.',
               ['EF goes 2 squares right and 1 square up at each step.', 'Swap the steps and turn one round: 1 square right and 2 squares down. Line 4 goes 1 square right and 2 squares down.', 'Line 4 crosses EF at a right angle.'],
               ['Think harder (if you have time): through G, draw a line perpendicular to EF. Check it with your checker.'], 'perp'),
 
     I(id='6-points', tier='core', no='6 (points)', label='6 points', type='fields', skill='counting right angles in order', answer=[4, 8, 4], svg=window_fig(),
       frame=grp('Corners {f1}      Where lines meet the sides {f2}      In the middle {f3}'),
-      q='(if time) Visit every point where lines meet in this window. How many right angles are at the 4 corners altogether? At the 4 points where the lines meet the sides? At the middle point?',
+      q='Visit every point where lines meet in this window. How many right angles are at the 4 corners altogether? At the 4 points where the lines meet the sides? At the middle point?',
       check=lambda: (lambda per: [sum(v for v in per.values() if v == 1), sum(v for v in per.values() if v == 2), sum(v for v in per.values() if v == 4)])(right_angles_at_points(window_raw())[1]),
       hint='At a corner, 2 lines meet. Where a line meets a side, 3 lines meet. In the middle 4 lines meet. How many right angles does each kind of point make?',
       steps=['Each of the 4 corners has 1 right angle: 4.', 'Each of the 4 points where a line meets a side has 2 right angles: 4 × 2 = 8.', 'The middle point has 4 right angles. The numbers are 4, 8 and 4.'],
       src=['(if time) How many right angles can you find in this window?', 'Visit every point where lines meet. Write how many right angles are at each point, then add.']),
     I(id='6-total', tier='core', no='6 (total)', label='6 total', type='number', skill='counting right angles in order', answer=16, svg=window_fig(),
-      q='(if time) How many right angles can you find in this window? Visit every point where lines meet. Type the number.',
+      q='How many right angles can you find in this window? Visit every point where lines meet. Type the number.',
       check=lambda: right_angles_at_points(window_raw())[0],
       hint='Write how many right angles are at each point where lines meet, then add them all.',
       steps=['Corners: 4 × 1 = 4. Where the lines meet the sides: 4 × 2 = 8. The middle: 4.', '4 + 8 + 4 = 16.', 'There are 16 right angles.'],
@@ -296,7 +296,7 @@ ITEMS = [
       q='Look at the number of ALL corners of a staircase: 4, 6, 8, 10 ... Is the number of corners always an even number?',
       check=lambda: 'Yes, it is always even' if all(stair_counts(n)[2] % 2 == 0 for n in range(1, 60)) else 'No, sometimes it is odd',
       hint='Look at the numbers of all corners in your table. What do you add each time you add a step?',
-      steps=['The total number of corners for 1 to 4 steps is 4, 6, 8 and 10, then 22 for 10 steps.', 'Each new step adds 2 corners, so the total always stays even. (Checked by computer for staircases of 1 to 59 steps.)', 'So the number of corners is always even.'],
+      steps=['The total number of corners for 1 to 4 steps is 4, 6, 8 and 10, then 22 for 10 steps.', 'Each new step adds 2 corners, so the total always stays even.', 'So the number of corners is always even.'],
       src=['Is the number of corners always an even number? Why do you think so?']),
     I(id='I8-why', tier='invest', no='8(c) explain', label='Inv why', type='selfcheck', open=True, marking_mode='self', skill='explaining why',
       q='Explain why the number of corners of a staircase is always even. What does one more step add? Write your idea, then compare with the answer shown.',
@@ -349,7 +349,7 @@ ITEMS = [
       hint='Name the lines: 2 upright lines and 2 lines across. Which pairs of lines never meet?',
       steps=['The 2 upright lines are parallel to each other: 1 pair.', 'The 2 lines across are parallel to each other: 1 pair.', 'That is 2 pairs of parallel lines.'],
       src=['The # sign is made of 4 lines: 2 upright lines and 2 lines across. How many pairs of parallel lines does it have? How many pairs of perpendicular lines?']),
-    I(id='T4-perp', tier='stretch', no='T4 (perpendicular)', label='T4 perp.', type='number', skill='perpendicular lines', answer=4, svg=hash_fig(),
+    I(id='T4-perp', tier='stretch', no='T4 (perpendicular)', label='T4 how many', type='number', skill='perpendicular lines', answer=4, svg=hash_fig(),
       q='The # sign is made of 4 lines: 2 upright lines and 2 lines across. How many pairs of perpendicular lines does it have? Type the number.',
       check=lambda: len(pairs_perpendicular(HASH_RAW)),
       hint='Make a list: each upright line with each line across. Which pairs meet at a square corner?',
@@ -369,7 +369,7 @@ ITEMS = [
       hint='Visit every point where lines meet. How many right angles are at each kind of point? Then add.',
       steps=['The 4 corners have 1 right angle each: 4.', 'Each of the 5 lines meets the top and the bottom of the rectangle. That is 10 points with 2 right angles each: 10 × 2 = 20.', '4 + 20 = 24 right angles.'],
       src=['A long rectangle is cut into 6 squares in a row by 5 lines. How many right angles can you find?']),
-    I(id='G7-can', tier='challenge', no='G7 (can it?)', label='G7 yes/no', type='choice', skill='right angles inside a shape', options=['Yes', 'No'], answer='No',
+    I(id='G7-can', tier='challenge', no='G7 (can it?)', label='G7 can it', type='choice', skill='right angles inside a shape', options=['Yes', 'No'], answer='No',
       q='Can a 6-sided shape have 6 right angles inside it?',
       check=lambda: 'Yes' if 6 in HEXAGON else 'No',
       hint='Draw some 6-sided shapes with square corners, like an L. Count the right angles inside each one. Can you find one with 6?',

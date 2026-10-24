@@ -51,9 +51,17 @@
   // Units after the number: a word ('301 sticks', '20 minutes', 'sq cm'), a word with an attached power ('84 cm2', '84cm^2', '84 cm²'), a rate ('km/h') a degree sign ('-25 °C', '11°C', '44°') or a cent sign / cent word ('35¢', '35 cents') or a litre sign ('27 ℓ', '27 l', '27 litres'), then at most two more plain words in all (a unit and a short tail: '27 ℓ of water', '27 liters of water', '35 cents change', '35 cents left'; longer tails are refused; for cents a bare lowercase 'c' is refused as ambiguous; '$0.35' is never turned into cents).
   // A single pair of brackets round the whole answer is ignored ('(-25)'). Two numbers ('4 or 5', '1 2') are never a unit.
   var UW = '[a-z][a-z.]*(?:\\^?[23]|\\s?[²³])?', UNITRE = new RegExp('^(-?\\d[\\d, ]*?(?:\\.0+)?)\\s*(?:[°º]\\s*[a-z]?|%|[¢ℓ](?:\\s+[a-z]+){0,2}|' + UW + '(?:\\s+' + UW + '){0,2}(?:\\/[a-z]+)?)$', 'i');
+  // A clock hour (item flag clock:true, set by the builder when the stem or frame says o'clock and the answer is a bare hour): '3', '3 o'clock', '3:00', '03:00', '3.00', '3 pm' / '3 am' are all the hour 3;
+  // the minutes must be 00, so '3:30' is never 3. Without the flag only the plain number forms are read.
+  function clockHour(s) {
+    var m = /^(\d{1,2})\s*(?:o['\u2019\u2018`]?\s*clock|[:.]\s*00)(?:\s*(?:[ap]\.?m\.?))?\s*\.?$/i.exec(s) || /^(\d{1,2})\s*[ap]\.?m\.?\s*\.?$/i.exec(s);
+    return m ? m[1].replace(/^0+(?=\d)/, '') : null;
+  }
   function toNum(s, opt) {
     s = minus(s).trim();
     var pb = /^\(\s*([^()]*?)\s*\)\s*(.*)$/.exec(s); if (pb) s = pb[2] ? pb[1] + ' ' + pb[2] : pb[1];   // '(-25)' and '(-25) °C'
+    if (opt && opt.clock) { var ck = clockHour(s); if (ck !== null) s = ck; }
+    if (opt && opt.dollars_ok) { var dm = /^\$\s*0?\.(\d\d)\s*\.?$/.exec(s); if (dm) return +dm[1]; }   // '$0.48' for 48 cents, only when the item says dollars_ok
     if (opt && opt.words) { var wn = wordsToNum(s); if (wn !== null) return wn; }
     if (!opt || opt.unit !== false) s = s.replace(/^(?:∠|angle\s+)\s*[a-z]{1,3}\s*(?:=|is)\s*/i, '');   // '∠AOC = 90°', 'angle AOC is 90' (an angle name before the number; never for unit:false)
     s = s.replace(/^\$\s*/, '');
@@ -109,9 +117,27 @@
   }
   // Same meaning, other words: 'a is equal to b' / 'a equals b' = 'a = b'; a short list of single letters, numbers or fractions may be joined by commas, 'and' or '&' ('A and B and D', 'A, B and D').
   function canon(s) {
-    var n = normText(s).replace(/\s+(?:is equal to|equals)\s+/g, ' = '), parts = n.split(/\s*,\s*and\s+|\s*[,;&]\s*|\s+and\s+/);
+    var n = normText(s).replace(/\s+(?:is equal to|equals)\s+/g, ' = ').replace(/^(?:the\s+)?shapes?\s+(?=[a-z](?![a-z]))/, '').replace(/[,;\s]+$/, ''), parts = n.split(/\s*,\s*and\s+|\s*[,;&]\s*|\s+and\s+/);
     if (parts.length > 1 && parts.every(function (x) { return /^(?:[a-z]|-?\d+(?:\/\d+)?)$/.test(x); })) n = parts.join(',');
     return n;
+  }
+  // "CAT" or 'CAT' or curly quotes round the whole answer (a final full stop outside them is fine); null if the answer is not wrapped in one matching pair.
+  var QP = { '"': '"', '\u201c': '\u201d', '\u2018': '\u2019', "'": "'", '\u201e': '\u201c', '\u00ab': '\u00bb' };
+  function unquote(v) {
+    var t = str(v).normalize('NFKC').trim().replace(/[.!]+$/, '').trim(), q = QP[t.charAt(0)], inner;
+    if (!q || t.length < 3 || t.charAt(t.length - 1) !== q) return null;
+    inner = t.slice(1, -1);
+    return inner.indexOf(q) > -1 || inner.indexOf(t.charAt(0)) > -1 ? null : inner.trim();
+  }
+  // Item flag accept_by: a pair of sides may be written 'a by b', 'a x b', 'a × b' with an optional 'a' / 'the' in front and 'square' / 'rectangle' / 'cm' after;
+  // a single-number key (a square's side) stands for 'n by n'. Either order of a pair is read the same. Without the flag only the printed forms are accepted.
+  function sidesPair(s) {
+    var t = normText(s).replace(/^(?:an?|the)\s+/, '').replace(/\s*cm\b/g, '').replace(/(?:\s+(?:square|rectangle|sides?|units?))+$/, '').trim(), m = /^(\d+)\s*(?:x|by)\s*(\d+)$/.exec(t), n = /^(\d+)$/.exec(t);
+    return m ? [+m[1], +m[2]].sort() : n ? [+n[1], +n[1]] : null;
+  }
+  function byOK(keys, v) {
+    var p = sidesPair(v), t = normText(v);
+    return !!p && !/^\d+$/.test(t) && keys.some(function (k) { var q = sidesPair(k); return !!q && q[0] === p[0] && q[1] === p[1]; });
   }
   function textOK(keys, v, o) {
     var cands = [v], m = /^(.*[\d)])\s*=\s*(-?[\d.\/ ]*\d)\s*[.!]?$/.exec(minus(str(v)).trim()); // a statement with its result: '(6+4)x5-2=48'
@@ -119,6 +145,10 @@
     var m2 = /^(-?[\d.\/ ]*\d)\s*=\s*(.*[\d)])\s*[.!]?$/.exec(minus(str(v)).trim()); // the result first: '5/12=1/3+1/12'
     if (m2) { var r2 = evalExpr(m2[1].replace(/(\d) (\d+\/\d)/, '($1+$2)').replace(/ /g, '')), l2 = evalExpr(m2[2]); if (l2 != null && r2 != null && Math.abs(l2 - r2) < 1e-9) cands.push(m2[2]); }
     var ld = lead(v, o); if (ld !== str(v).trim()) cands.push(ld);
+    // natural writings of a word or a single letter: "CAT" in quotes (a word key), 'the letter E' / 'letter E' (a one-letter key)
+    var wordKey = keys.some(function (k) { return /^[a-z][a-z' -]*$/i.test(str(k).trim()); }), letKey = keys.some(function (k) { return /^[a-z]$/i.test(str(k).trim()); }), uq, lm;
+    if (wordKey) { uq = unquote(v); if (uq !== null) cands.push(uq); }
+    if (letKey) { lm = /^(?:the\s+)?letter\s+(.+)$/i.exec(minus(str(v).normalize('NFKC')).trim()); if (lm) { cands.push(lm[1]); uq = unquote(lm[1]); if (uq !== null) cands.push(uq); } }
     return keys.some(function (x) { return cands.some(function (c) { return normText(x) === normText(c) || squash(x) === squash(c) || squash(canon(x)) === squash(canon(c)); }); });
   }
   // Equal fractions in a typed list (item flag equiv_frac): '7/12, 8/12, 10/12' is right for the key '7/12, 2/3, 5/6'. Same order, same number of fractions, each equal in value
@@ -166,10 +196,14 @@
     return out.every(isFinite) ? out : null;
   }
   function polyEq(a, b) { return a.length === b.length && a.every(function (c, i) { return Math.abs(c - b[i]) < 1e-9 * (1 + Math.abs(c)); }); }
-  // A leading label ('total =', 'S =', 'rule:') is ignored only when it is one word or one letter that is not the variable and does not appear in the rest of the rule.
+  // A leading label ('total =', 'S =', 'rule:', 'Total angle =', 'Sum of angles =') is ignored only when it is 1 to 3 plain words (letters only, no digits) that are not the variable,
+  // do not use the variable letter as a word, and none of which appears in the rest of the rule.
   function ruleSides(s, vr) {
-    var a = minus(str(s)).trim().replace(/[.!]+$/, '').replace(/^rule\s*:\s*/i, '').split('=').map(function (x) { return x.trim(); });
-    if (a.length > 1 && /^[a-z]+$/i.test(a[0]) && !/^out$/i.test(a[0]) && a[0].toLowerCase() !== vr && !new RegExp('(^|[^a-z])' + a[0] + '($|[^a-z])', 'i').test(a.slice(1).join('='))) a.shift();
+    var a = minus(str(s)).trim().replace(/[.!]+$/, '').replace(/^rule\s*:\s*/i, '').split('=').map(function (x) { return x.trim(); }), lab = (a[0] || '').replace(/\s+/g, ' ').toLowerCase(), body;
+    if (a.length > 1 && /^[a-z]+(?: [a-z]+){0,2}$/.test(lab) && lab !== 'out' && lab !== vr) {
+      body = a.slice(1).join('=').toLowerCase();
+      if (lab.split(' ').every(function (w) { return w !== vr && !new RegExp('(^|[^a-z])' + w + '($|[^a-z])').test(body); })) a.shift();
+    }
     return a.filter(function (x) { return !/^out$/i.test(x); });
   }
   function polyOK(keys, v, vr) {
@@ -179,7 +213,7 @@
     return sides.length > 0 && kp.length > 0 && sides.every(function (sd) { var q = polyParse(sd, vr); return !!q && kp.some(function (k) { return polyEq(q, k); }); });
   }
   // One text answer: the printed forms (textOK), plus, only when the item says so, equal fractions (equiv_frac) or an equal polynomial (poly).
-  function textMatch(o, keys, v) { return textOK(keys, v, o) || !!(o && o.equiv_frac && (fracListOK(keys, v) || fracListOK(keys, lead(v, o)))) || !!(o && o.poly && polyOK(keys, v, o.poly)); }
+  function textMatch(o, keys, v) { return textOK(keys, v, o) || !!(o && o.equiv_frac && (fracListOK(keys, v) || fracListOK(keys, lead(v, o)))) || !!(o && o.poly && polyOK(keys, v, o.poly)) || !!(o && o.accept_by && byOK(keys, v)); }
   // END SHARED
   function answered(type, v) {
     if (v == null) return false;
@@ -212,8 +246,8 @@
   }
   function decEqual(a, b) { return a.neg === b.neg && a.i === b.i && a.f === b.f; }
 
-  function nopt(rec) { return { unit: rec.unit, words: rec.words }; }
-  function fopt(rec, i) { return { unit: rec.unit, words: rec.words, pre: rec.pre && rec.pre[i] || '' }; }
+  function nopt(rec) { return { unit: rec.unit, words: rec.words, clock: rec.clock === true, dollars_ok: rec.dollars_ok }; }
+  function fopt(rec, i) { return { unit: rec.unit, words: rec.words, pre: rec.pre && rec.pre[i] || '', clock: rec.clock === true || (Array.isArray(rec.clock) && !!rec.clock[i]), dollars_ok: rec.dollars_ok }; }
   function matchSlip(rec, v) { // which listed wrong answer (if any) the child gave: its index, so a report can say why
     var slips = rec.slips || [], got, i;
     for (i = 0; i < slips.length; i++) {

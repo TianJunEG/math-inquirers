@@ -22,7 +22,7 @@ META = dict(level=3, lesson=7, key='p3', title='Area Architects', workbook_title
 D4 = figs4()
 PR = D4['printed']
 SK = 'Area and perimeter'
-EXTRA = 'Extra practice (not for the lesson). '
+EXTRA = 'Extra practice. '
 
 
 def I(**kw):
@@ -137,7 +137,7 @@ ITEMS = [
       src=['Which figures have the same perimeter but different areas?']),
 
     I(id='2-len', tier='core', no='2 (lengths)', label='2 lengths', type='set', ordered=True, skill='making a list in order', answer=[8, 7, 6, 5],
-      q='Siti has 18 m of fence. She makes a rectangular garden with the whole fence. Each side is a whole number of metres. List the length of EVERY garden she can make, longest length first. (The length is the longer side.) Type the lengths with commas.',
+      q='Siti uses all of her 18 m of fence to make a rectangular garden with whole-metre sides. List the length (the longer side) of EVERY garden she can make, longest first.',
       check=lambda: [l for l, w in gardens(FENCE)],
       hint='Half of the fence goes along one length and one width together. Start with the shortest width, 1 m, and list in order.',
       steps=['Half of 18 m is 9 m, so length + width = 9.', 'List in order: width 1 and length 8; width 2 and length 7; width 3 and length 6; width 4 and length 5.', 'After that the rectangles just turn round (5 by 4 is the same garden as 4 by 5). The lengths are 8, 7, 6 and 5.'],
@@ -157,7 +157,7 @@ ITEMS = [
     I(id='2-count', tier='core', no='2 (how many)', label='2 how many', type='number', skill='making a list in order', answer=4,
       q='Siti has 18 m of fence and makes a rectangular garden with the whole fence. Each side is a whole number of metres. How many different gardens can she make? Type the number.',
       check=lambda: len(gardens(FENCE)),
-      hint='Count the gardens in your list. A 5 m by 4 m garden and a 4 m by 5 m garden are the same garden turned round.',
+      hint='Count the gardens in your list. A garden turned round is still the same garden, so count it only once.',
       steps=['Length + width = 9. The gardens are 8 by 1, 7 by 2, 6 by 3 and 5 by 4.', 'That is 4 different gardens.'],
       src=['List ALL the gardens she can make, in order.']),
     I(id='2a', tier='core', no='2(a)', label='2(a)', type='fields', skill='area of a rectangle', answer=[5, 4], frame=grp('Length {f1} m      Width {f2} m'),
@@ -226,7 +226,7 @@ ITEMS = [
       src=['What happens to the perimeter? What happens to the area?']),
     I(id='5c-more', tier='core', no='5(c) how much', label='5(c) more', type='number', skill='perimeter and area', answer=6,
       svg=stairs_fig(4, 'The staircase with the empty squares that fill it up to a 4 by 4 square shown as dashed boxes', gaps=True),
-      q='Ben fills in the gaps with squares to make a 4 by 4 square. How many cm² does the area go up by? Type the number.',
+      q='Ben fills in the gaps with squares to make a 4 by 4 square. What is the difference between the two areas, in cm²? Type the number.',
       check=lambda: cell_area(STAIR_FULL) - cell_area(STAIR),
       hint='Count the empty squares Ben fills in, or take the area of the staircase away from the area of the 4 by 4 square.',
       steps=['The 4 by 4 square has area 16 cm². The staircase has area 10 cm².', '16 - 10 = 6.', 'The area goes up by 6 cm².'],
@@ -234,25 +234,25 @@ ITEMS = [
 
     I(id='6a', tier='core', no='6(a)', label='6(a)', type='text', skill='perimeter and area', accept=['A', 'B', 'C', 'D', 'F', 'G', 'H', 'I'], shown='any of A, B, C, D, F, G, H, I', accept_prefix=False,
       svg=cand_fig(),
-      q='(if time) This L shape is made of 4 squares. Its perimeter is 10 cm. Add ONE square that shares a whole side with the L. The places for the new square are marked A to I. Which place makes the perimeter 12 cm? Type one letter.',
+      q='This L shape is made of 4 squares and its perimeter is 10 cm. Add ONE square that shares a whole side with the L (places A to I). Which place makes the perimeter 12 cm? Type one letter.',
       check=lambda: [k for k in CANDS if perimeter_with(k) == 12][0],
       hint='Put a new square in one place. Count the edges round the new shape, or count how many sides of the new square touch the L.',
       steps=['The L has a perimeter of 10 cm. A new square adds 4 sides and hides the sides that touch the L (one on the new square and one on the L for each touch).', 'A new square that touches the L along ONE side gives 12 cm. This works for A, B, C, D, F, G, H and I.', 'Only E touches two sides, so E leaves the perimeter at 10 cm.'],
       src=['(if time) This L shape is made of 4 squares. Its perimeter is 10 cm. Add ONE square that shares a whole side with the L. Shade it.', 'In grid (a), add a square so that the perimeter becomes 12 cm.']),
     I(id='6b', tier='core', no='6(b)', label='6(b)', type='text', skill='perimeter and area', accept=['E'], shown='E', accept_prefix=False, svg=cand_fig(),
-      q='(if time) The same L shape has a perimeter of 10 cm. Add ONE square that shares a whole side with the L. Which place, A to I, keeps the perimeter at 10 cm? Type the letter.',
+      q='The same L shape has a perimeter of 10 cm. Add ONE square that shares a whole side with the L. Which place, A to I, keeps the perimeter at 10 cm? Type the letter.',
       check=lambda: one([k for k in CANDS if perimeter_with(k) == 10]),
       hint='Look for a place where the new square touches the L along more than one side.',
       steps=['A new square hides two of its own sides (and two sides of the L) when it touches the L along two sides.', 'Place E touches the middle square and the bottom square of the L, so the perimeter stays 10 cm.', 'No other place touches two sides.'],
       src=['In grid (b), add a square so that the perimeter stays 10 cm.']),
     I(id='6c', tier='core', no='6(c)', label='6(c)', type='choice', skill='perimeter and area', options=['Yes', 'No'], answer='No', svg=cand_fig(),
-      q='(if time) Can you add one square to the L so that the perimeter becomes 8 cm? The new square must share a whole side with the L.',
+      q='Can you add one square to the L so that the perimeter becomes 8 cm? The new square must share a whole side with the L.',
       check=lambda: 'Yes' if any(perimeter_with(k) == 8 for k in CANDS) else 'No',
       hint='Try each place A to I and find the perimeter. Is any of them 8 cm?',
       steps=['Try each place. The perimeter is 12 cm in eight places and 10 cm in place E.', 'No place gives 8 cm.', 'So the answer is No.'],
       src=['Can you add one square so that the perimeter becomes 8 cm? Explain.']),
     I(id='6c-why', tier='core', no='6(c) explain', label='6(c) explain', type='selfcheck', open=True, marking_mode='self', skill='explaining why', svg=cand_fig(),
-      q='(if time) Explain how you know whether the perimeter of the L can become 8 cm by adding one square. Write your idea, then compare with the answer shown.',
+      q='Explain how you know whether the perimeter of the L can become 8 cm by adding one square. Write your idea, then compare with the answer shown.',
       check=lambda: sorted({perimeter_with(k) for k in CANDS}, reverse=True),
       hint='A new square can touch the L along 1 side, 2 sides, or more. How many sides would it have to touch to make the perimeter 8 cm?',
       steps=['Each side of the new square that touches the L hides 2 sides (one of the new square, one of the L) and the new square brings 4 sides.', 'To go from 10 cm down to 8 cm the new square would have to touch the L along 3 sides.', 'No place next to this L touches 3 sides, so the perimeter can only be 12 cm or 10 cm.'],
@@ -260,7 +260,7 @@ ITEMS = [
 
     # ================= Investigation (Investigation and look back page, No.8: What if we change it? What stays the same?)
     I(id='I8-easy', tier='invest', no='8 easy step', label='Inv easy', type='fields', skill='area and perimeter', answer=[16, 16, 15, 16],
-      q='A square has sides of 4 cm. Make it 1 cm longer one way and 1 cm shorter the other way: you get a 5 cm by 3 cm rectangle. Easy first step: work out the area and perimeter of the square and of the rectangle.',
+      q='A square has sides of 4 cm. Make it 1 cm longer one way and 1 cm shorter the other way: a 5 cm by 3 cm rectangle. Work out the area and perimeter of each.',
       frame=grp('Square: area {f1} cm²      perimeter {f2} cm      Rectangle: area {f3} cm²      perimeter {f4} cm'),
       check=lambda: (lambda r: [r[1], r[0], r[3], r[2]])(square_to_rect(4)),
       hint='Area = length × width. Perimeter = all four sides added. Do the 4 by 4 square first.',
@@ -298,7 +298,7 @@ ITEMS = [
       q='You tried a 4 cm, a 6 cm and a 10 cm square, and one of your own. Do you think what you found works for EVERY square? Test one more square if you like.',
       check=lambda: 'Yes, it works for every square' if all(square_to_rect(n)[0] == square_to_rect(n)[2] and square_to_rect(n)[1] - square_to_rect(n)[3] == 1 for n in range(2, 41)) else 'No, it only works for some squares',
       hint='Pick a square you have not used yet, like 7 or 12. Does it do the same as the others?',
-      steps=['A square with sides 7 cm: perimeter 28 cm, area 49 cm². The 8 by 6 rectangle: perimeter 28 cm, area 48 cm².', 'It does the same again. It works for every square (checked by computer for every whole side from 2 to 40).', 'The next question asks why.'],
+      steps=['A square with sides 7 cm: perimeter 28 cm, area 49 cm². The 8 by 6 rectangle: perimeter 28 cm, area 48 cm².', 'It does the same again. It works for every square.', 'The next question asks why.'],
       src=['Is it always true? Draw the 4 by 4 square and explain what happens to the area.']),
     I(id='I8c-why', tier='invest', no='8(c) explain', label='Inv explain', type='selfcheck', open=True, marking_mode='self', skill='explaining why',
       sol_fig=lambda g: move_row_fig('The bottom row of 4 squares moved to the right side makes a column of 3 squares tall with 1 square left over'),
@@ -355,9 +355,9 @@ ITEMS = [
     # ================= Go further (workbook Go further, No.5 to No.7) and the Extra question (printed as "Take-home")
     I(id='G5', tier='challenge', no='G5', label='G5', type='selfcheck', open=True, marking_mode='open', skill='making up a puzzle',
       q='Make up your own rectangle puzzle. Choose a rectangle with whole-cm sides, then give a partner only TWO clues about it (for example its area and its perimeter). Check that only ONE rectangle fits both clues. Which two clues did you choose, and why do they work?',
-      check=lambda: [(l, w) for l in range(24, 0, -1) for w in range(1, l + 1) if l * w == 24 and 2 * (l + w) == 20],
-      hint='Pick the secret rectangle first, like 6 by 4. Write its area and its perimeter. List all rectangles with that area. Does only one have that perimeter?',
-      steps=['Answers vary. Check that the clues fit the secret rectangle and that listing the rectangles for the first clue leaves exactly one for the second.', 'Example: "Area 24 cm² and perimeter 20 cm". The rectangles with area 24 cm² are 24 by 1 (perimeter 50), 12 by 2 (28), 8 by 3 (22) and 6 by 4 (20), so only 6 by 4 fits.'],
+      check=lambda: [(l, w) for l in range(36, 0, -1) for w in range(1, l + 1) if l * w == 36 and 2 * (l + w) == 26],
+      hint='Pick the secret rectangle first. Write its area and its perimeter. List all rectangles with that area. Does only one have that perimeter?',
+      steps=['Answers vary. Check that the clues fit the secret rectangle and that listing the rectangles for the first clue leaves exactly one for the second.', 'Example: "Area 36 cm² and perimeter 26 cm". The rectangles with area 36 cm² are 36 by 1 (perimeter 74), 18 by 2 (40), 12 by 3 (30), 9 by 4 (26) and 6 by 6 (24), so only 9 by 4 fits.'],
       src=['Make up your own rectangle puzzle. Choose a rectangle with whole-cm sides, then give a partner only TWO clues about it (for example its area and its perimeter).']),
     I(id='G6', tier='challenge', no='G6', label='G6', type='fields', skill='area and perimeter', answer=[24, 20], frame=grp('Biggest {f1} cm      Smallest {f2} cm'),
       q='Ali joins 5 same-size squares with sides of 2 cm, whole sides touching. What is the biggest perimeter his shape can have? What is the smallest? Fill in the boxes.',
@@ -453,9 +453,9 @@ VARIANTS = {
     'T2': dict(
         base=dict(L=12, P=30),
         tpl=dict(vars=dict(L=[10, 12, 14], P=[30, 40, 44]), derive=dict(w='P//2-L'),
-                 q='A rectangle is {L} cm long. Its perimeter is {P} cm. Find its area, in cm². Type the number.',
-                 answer='L*w', hint='Half of the perimeter is one length plus one width. What is left for the width?',
-                 steps=['Half of the perimeter ({P} cm) is one length plus one width.', 'Take the length away to find the width.', 'The area is length × width = {ans} cm².']),
+                 q='One side of a rectangle is {L} cm. Its perimeter is {P} cm. Find its area, in cm². Type the number.',
+                 answer='L*w', hint='Half of the perimeter is two sides that meet, added together. What is left for the other side?',
+                 steps=['Half of the perimeter ({P} cm) is two sides that meet added together.', 'Take {L} away to find the other side.', 'The area is {L} × the other side = {ans} cm².']),
         oracle=lambda e: e['L'] * find(lambda w: 2 * (e['L'] + w) == e['P'])),
     'G7': dict(
         base=dict(a=7, b=5),

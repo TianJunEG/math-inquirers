@@ -105,7 +105,7 @@ Build: `python3 practice/holiday/build_holiday.py p4 7` (and `p4 8`); test: `pyt
 |---|---|---|
 | Items | 46 | 32 |
 | Auto-marked | 40 | 23 |
-| Self-check with a model answer | 4 (1 open) | 6 (2 open) |
+| Self-check with a model answer | 4 (1 open) | 6 (1 open: G5; 6(b) is a self-check with a model) |
 | Paper-only (drawing, correct drawing shown after submit) | 2 (3(b) tile shapes, 5(a) square from pieces) | 3 (4(a) rocket, 4(b) fish, G7 both patterns) |
 | Variant families (all combinations run against an oracle) | 8 (118) | 4 (26) |
 | Question text as printed / reworded | 12 / 34 | 14 / 18 |

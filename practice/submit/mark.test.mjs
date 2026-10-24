@@ -180,5 +180,44 @@ for (const v of ['6 0%', '61%', '0.6', '600%', '60%%']) t('percent wrong ' + v, 
 t('percent unit:false refuses', N(60, { unit: false }), '60%', 'wrong');
 // a single-word left-hand label before '=' in a rule
 { const R = rule('(n-2)x180');
+  for (const v of ['Total angle = (n-2)x180', 'Sum of angles = (n - 2) x 180', 'Angle sum = 180n - 360', 'angle sum = (n-2)x180 = 180n-360', 'Total angle = 180(n-2)']) t('poly multi-word label ' + v, R, v, 'right');
   for (const v of ['total = (n - 2) x 180', 'S = (n-2)x180', 'T=180n-360', 'sum = (n-2)×180', 'rule: (n-2)x180', 'total = (n-2)x180 = 180n-360', 'OUT = (n-2)x180']) t('poly label ' + v, R, v, 'right');
-  for (const v of ['total = n - 2 x 180', 'x = 3', 'n = 5', 'n = (n-2)x180', 'total = total', 'two words = (n-2)x180']) t('poly label wrong ' + v, R, v, 'wrong'); }
+  for (const v of ['total = n - 2 x 180', 'x = 3', 'n = 5', 'n = (n-2)x180', 'total = total', 'one two three four = (n-2)x180', 'total angle = n', 'angle sum n = (n-2)x180', 'n total = (n-2)x180', 'total 2 = (n-2)x180', 'sum of n = (n-2)x180']) t('poly label wrong ' + v, R, v, 'wrong'); }
+
+// ---- week 4 audit fixes: clock hours, natural right answers, dollars_ok, accept_by
+const CK = h => ({ marking_mode: 'auto', type: 'number', key: h, clock: true });
+for (const v of ['3', "3 o'clock", "3 o\u2019clock", '3:00', '03:00', '3.00', '3 pm', '3 am', '3:00 pm', '3 p.m.', "3 oclock", ' 3:00. ']) t('clock right ' + v, CK(3), v, 'right');
+for (const v of ['3:30', '3:05', '3.30', '03:30', '4', "4 o'clock", '4:00', '13:00', '30', '3:000', '3:0', "3:30 o'clock", '3 30', '5 pm', "three o'clock", '3:00:00']) t('clock wrong ' + v, CK(3), v, 'wrong');
+for (const v of ["3 o'clock", '3:00', '03:00']) t('clock off by default ' + v, { marking_mode: 'auto', type: 'number', key: 3 }, v, 'wrong');
+t('clock 12', CK(12), '12:00', 'right'); t('clock 12 wrong', CK(12), '12:30', 'wrong'); t('clock 10', CK(10), "10 o'clock", 'right'); t('clock 10 vs 1', CK(1), '10:00', 'wrong');
+{ const F = { marking_mode: 'auto', type: 'fields', key: [3, 5], clock: [true, false] };
+  t('clock box 1 only', F, ["3 o'clock", '5'], 'right'); t('clock box 2 not an hour box', F, ['3', '5:00'], 'wrong'); t('clock box 1 wrong minutes', F, ['3:30', '5'], 'wrong');
+  t('clock fields all', { ...F, clock: true }, ['3:00', "5 o'clock"], 'right'); }
+// quotes round a coded word, 'the letter E'
+const CAT = { marking_mode: 'auto', type: 'text', key: ['CAT'] };
+for (const v of ['"CAT"', '\u201cCAT\u201d', "'cat'", '"cat".', ' "CAT" ', '\u2018CAT\u2019']) t('quoted word ' + v, CAT, v, 'right');
+for (const v of ['"CAT', 'CAT"', '"CAT\u201d', '""CAT""', '"DOG"', '"CA T"x', '"CAT" "CAT"']) t('quoted word wrong ' + v, CAT, v, 'wrong');
+t('quotes not stripped for a non-word key', { marking_mode: 'auto', type: 'text', key: ['12'] }, '"12"', 'wrong');
+const LE = { marking_mode: 'auto', type: 'text', key: ['E'] };
+for (const v of ['the letter E', 'letter E', 'The Letter e', 'the letter E.', 'letter "E"']) t('letter right ' + v, LE, v, 'right');
+for (const v of ['the letter F', 'letter', 'the letter EE', 'the letters E', 'letter E and F']) t('letter wrong ' + v, LE, v, 'wrong');
+t('letter phrase for a word key is wrong', CAT, 'the letter CAT', 'wrong');
+// accept_by
+const SQ = { marking_mode: 'auto', type: 'text', key: ['6'], accept_by: true };
+for (const v of ['6 by 6 square', 'a 6 by 6 square', '6 by 6', '6 x 6', '6 \u00d7 6', '6 X 6 square', '6 by 6 cm', '6cm by 6cm', 'The 6 by 6 square', '6']) t('accept_by right ' + v, SQ, v, 'right');
+for (const v of ['5 by 5 square', '6 by 5', '6 by 7', '66', '6 by', 'by 6', '6 by 6 by 6', '5 x 5']) t('accept_by wrong ' + v, SQ, v, 'wrong');
+for (const v of ['6 by 6 square', '6 by 6', '6 x 6']) t('accept_by off by default ' + v, { marking_mode: 'auto', type: 'text', key: ['6'] }, v, 'wrong');
+t('accept_by rectangle either order', { marking_mode: 'auto', type: 'text', key: ['4 by 6'], accept_by: true }, '6 x 4 rectangle', 'right');
+t('accept_by rectangle wrong', { marking_mode: 'auto', type: 'text', key: ['4 by 6'], accept_by: true }, '4 by 7', 'wrong');
+// letter lists
+const LL = { marking_mode: 'auto', type: 'text', key: ['A, C, E, F'] };
+for (const v of ['A, C, E, F', 'A, C, E and F', 'A, C, E, F,', 'A, C, E, F.', 'Shapes A, C, E and F', 'shape A, C, E, F', 'The shapes A, C, E and F.']) t('letter list right ' + v, LL, v, 'right');
+for (const v of ['Shapes A, C and E', 'A, C, E', 'A, C, E, F, G', 'Shapes A, C, E, F, G', 'shapes', 'Shapes B, C, E and F']) t('letter list wrong ' + v, LL, v, 'wrong');
+t('letter list 3 with shapes', { marking_mode: 'auto', type: 'text', key: ['A, C, E'] }, 'Shapes A, C and E', 'right');
+// dollars_ok
+const CE = { marking_mode: 'auto', type: 'number', key: 48, dollars_ok: true };
+for (const v of ['48', '48 cents', '48\u00a2', '$0.48', '$.48', '$ 0.48', '$0.48.']) t('dollars_ok right ' + v, CE, v, 'right');
+for (const v of ['$0.84', '0.48', '$0.4', '$1.48', '$0.480', '$0.49']) t('dollars_ok wrong ' + v, CE, v, 'wrong');
+for (const v of ['$0.48', '$.48']) t('dollars_ok off by default ' + v, { marking_mode: 'auto', type: 'number', key: 48 }, v, 'wrong');
+t('dollars_ok in a box', { marking_mode: 'auto', type: 'fields', key: [48], dollars_ok: true }, ['$0.48'], 'right');
+assert.deepEqual(bad, [], bad.join('\n')); console.log('mark.test.mjs: ' + n + ' checks passed (final)');

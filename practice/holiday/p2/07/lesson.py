@@ -41,7 +41,8 @@ CAKE = frac_bar(8, [], 'Cake', 'A bar of 8 equal parts for the cake')
 PIZZA = frac_bars([('Ravi', 4, []), ('Siti', 8, [])], 'Two bars the same length: Ravi’s pizza in 4 equal parts and Siti’s pizza in 8 equal parts')
 PIZZA_SOL = frac_bars([('Ravi', 4, [0]), ('Siti', 8, [0, 1, 2])], 'Ravi’s bar with 1 of 4 parts shaded and Siti’s bar of 8 parts with 3 shaded: Siti’s shaded part is longer')
 STRIPS = strips_fig()
-T2 = printed_fig('Two bars of the same length: 3 of 8 equal parts')
+T2 = frac_bars([('Eighths', 8, []), ('Fifths', 5, [])], 'Two bars of the same length, one cut into 8 equal parts and one cut into 5 equal parts, nothing shaded')
+T2_SOL = frac_bars([('Eighths', 8, [0, 1, 2]), ('Fifths', 5, [0, 1, 2])], 'The same two bars with 3 parts shaded on each: the 3 fifths reach further than the 3 eighths')
 T3 = frac_bar(8, [], caption='A bar cut into 8 equal parts')
 STRIP12 = frac_bar(12, [], 'Cake', 'A cake drawn as a strip cut into 12 equal pieces')
 STRIP10 = frac_bar(10, [], 'Cake', 'A cake drawn as a strip cut into 10 equal pieces')
@@ -247,8 +248,9 @@ ITEMS = [
     dict(id='T2b', tier='stretch', no='Think harder 2 explain', label='T2 why', type='selfcheck', open=False, skill='explaining with bars', svg=T2,
          q='Mei says: “3/8 of a pizza is more than 3/5 of the same pizza, because 8 is bigger than 5.” Explain what you think about her idea, with bars of the same length. Write your idea in the box.',
          facts=dict(three_fifths_bigger=Fr(3, 5) > Fr(3, 8)), check=lambda: dict(three_fifths_bigger=Fr(3, 5) > Fr(3, 8)),
-         hint='Look at the two bars. Which shaded part reaches further along the bar?',
+         hint='Look at the two bars. Picture 3 parts shaded on each one. Which shaded part would reach further along the bar?',
          steps=['Example: The two bars are the same length. The 3 shaded fifths reach further than the 3 shaded eighths, because fifths are bigger parts than eighths.', 'Any idea about the size of the parts is good.'],
+         sol_fig=lambda facts: T2_SOL,
          src=['Is she right? Draw two bars of the same length to show.']),
     dict(id='T3a', tier='stretch', no='Think harder 3', label='T3', type='choice', options=['Yes', 'No'], answer='No', skill='adding fractions with the same bottom number',
          q='Siti says: “3/8 + 2/8 = 5/16, because 8 + 8 = 16.” Is she right?',
@@ -288,21 +290,21 @@ ITEMS = [
                 ['Mei has 4 pieces, so Ali and Ben share 12 − 4 = 8 pieces.', 'Take away Ali’s 2 extra pieces: 6 pieces are left, shared equally, so Ben gets 3 pieces and Ali gets 3 + 2 = 5 pieces.', 'Ben gets 3/12. Check: 4 + 3 + 5 = 12 pieces.'],
                 ['A cake is cut into 12 equal pieces. Mei gets 4/12.', 'What fraction does Ben get?'], label='G5', tier='challenge', skill='fair-sharing with bars'),
     dict(id='C6a', tier='challenge', no='Go further 6 smallest', label='G6 least', type='set', ordered=True, skill='finding all the ways to share', svg=STRIP10,
-         q='Three children share a cake cut into 10 equal pieces. Each child gets a DIFFERENT number of pieces (at least 1) and the whole cake is shared out. Write each way as three numbers of pieces, smallest first, and list the ways in order of their smallest number, then their middle number. Type the SMALLEST number of each way, in order.',
+         q='Three children share a cake of 10 equal pieces. Each gets a DIFFERENT number of pieces (at least 1), and all 10 are shared. Write each way as three numbers, smallest first. List the ways in order (by the smallest number, then the middle one). Type the SMALLEST number of each way.',
          answer=[1, 1, 1, 2],
          check=lambda: [w[0] for w in sorted(w for w in itertools.product(range(1, 10), repeat=3) if w[0] < w[1] < w[2] and sum(w) == 10)],
          hint='Start with the child who gets 1 piece. How many pieces are left for the other two, and in how many ways can you split those left over between two children with different numbers?',
          steps=['The ways, smallest first and in order: 1, 2, 7; 1, 3, 6; 1, 4, 5; 2, 3, 5.', 'The smallest number of each way is 1, 1, 1, 2.'],
          src=['Three children share a cake cut into 10 equal pieces. Each child gets a DIFFERENT number of pieces (at least 1), and the whole cake is shared out.']),
     dict(id='C6b', tier='challenge', no='Go further 6 middle', label='G6 middle', type='set', ordered=True, skill='finding all the ways to share', svg=STRIP10,
-         q='Use the same rule: write each way as three numbers of pieces, smallest first, and list the ways in order of their smallest number, then their middle number. Now type the MIDDLE number of each way, in order.',
+         q='Same cake and same ways as before: three different numbers of pieces that make 10, smallest first, ways listed in order. Type the MIDDLE number of each way.',
          answer=[2, 3, 4, 3],
          check=lambda: [w[1] for w in sorted(w for w in itertools.product(range(1, 10), repeat=3) if w[0] < w[1] < w[2] and sum(w) == 10)],
          hint='Write each way out in full first, with the three numbers of pieces, then pick out the middle one of each way.',
          steps=['The ways are 1, 2, 7; 1, 3, 6; 1, 4, 5; 2, 3, 5.', 'The middle numbers are 2, 3, 4, 3.'],
          src=['Find ALL the ways to share it. Write each child’s share as a fraction.']),
     dict(id='C6c', tier='challenge', no='Go further 6 biggest', label='G6 most', type='set', ordered=True, skill='finding all the ways to share', svg=STRIP10,
-         q='Use the same rule: write each way as three numbers of pieces, smallest first, and list the ways in order of their smallest number, then their middle number. Now type the BIGGEST number of each way, in order. Each number means that many tenths of the cake.',
+         q='Same cake and same ways as before: three different numbers of pieces that make 10, smallest first, ways listed in order. Type the BIGGEST number of each way.',
          answer=[7, 6, 5, 5],
          check=lambda: [w[2] for w in sorted(w for w in itertools.product(range(1, 10), repeat=3) if w[0] < w[1] < w[2] and sum(w) == 10)],
          hint='Write each way out in full first, then pick out the biggest number of each way. Check that the three numbers of each way add up to 10.',
@@ -336,7 +338,7 @@ def _frac_parts(f):
 VARIANTS = {
     '2a': dict(
         base=dict(n=8, k=3),
-        tpl=dict(vars=dict(n=[5, 6, 8, 10, 12], k=[2, 3, 4, 5]), answers=dict(f1='k', f2='n', f3='n-k', f4='n'), frame='Shaded: {f1}/{f2}      Not shaded: {f3}/{f4}',
+        tpl=dict(vars=dict(n=[6, 8, 10, 12], k=[2, 3, 4, 5]), answers=dict(f1='k', f2='n', f3='n-k', f4='n'), frame='Shaded: {f1}/{f2}      Not shaded: {f3}/{f4}',
                  q='A bar is cut into {n} equal parts and {k} parts are shaded. What fraction is shaded? What fraction is NOT shaded? Type each fraction, top number first.',
                  hint='The bottom number is how many equal parts there are in all. The top number is how many parts you take.',
                  steps=['The bar has {n} equal parts, so the bottom number is {n}. {k} parts are shaded: {k}/{n}.', '{n} − {k} parts are not shaded: the rest of the parts.']),
@@ -344,7 +346,7 @@ VARIANTS = {
         oracle=lambda e: (lambda s, n: dict(f1=s, f2=n, f3=n - s, f4=n))(*count_parts(frac_bar(e['n'], list(range(e['k'])))))),
     '4a': dict(
         base=dict(d=5, a=2, b=1),
-        tpl=dict(vars=dict(d=[5, 6, 7, 8, 9, 10, 12], a=[1, 2, 3], b=[1, 2, 3, 4]), derive=dict(s='a+b'), answers=dict(f1='a+b', f2='d'), frame='{a}/{d} + {b}/{d} = {f1}/{f2}',
+        tpl=dict(vars=dict(d=[8, 9, 10, 12], a=[2, 3], b=[2, 3, 4]), derive=dict(s='a+b'), answers=dict(f1='a+b', f2='d'), frame='{a}/{d} + {b}/{d} = {f1}/{f2}',
                  q='Add: {a}/{d} + {b}/{d}. Type the answer in the two boxes, top number first.',
                  hint='Think of a bar cut into {d} equal parts. Colour {a} parts and then {b} more. How many are coloured?',
                  steps=['{a} parts and {b} more parts of the same size: {a} + {b} = {s} parts.', 'The parts are still the same size, so the bottom number stays {d}: the answer is {s}/{d}.']),
@@ -360,7 +362,7 @@ VARIANTS = {
         oracle=lambda e: dict(zip(('f1', 'f2'), over(Fr(e['a'], e['d']) - Fr(e['b'], e['d']), e['d'])))),
     '5a': dict(
         base=dict(n=8, a=2, b=3),
-        tpl=dict(vars=dict(n=[8, 10, 12], a=[1, 2, 3], b=[2, 3, 4]), derive=dict(s='a+b'), answers=dict(f1='a+b', f2='n'), frame='{f1}/{f2} of the cake',
+        tpl=dict(vars=dict(n=[8, 10, 12], a=[2, 3], b=[2, 3, 4]), derive=dict(s='a+b'), answers=dict(f1='a+b', f2='n'), frame='{f1}/{f2} of the cake',
                  q='Mum cuts a cake into {n} equal slices. Ali eats {a} slices. Mei eats {b} slices. What fraction of the cake do they eat altogether?',
                  hint='The slices are all the same size. How many slices do they eat in all? What is each slice called?',
                  steps=['Ali eats {a} slices and Mei eats {b} slices: {a} + {b} = {s} slices in all.', 'They eat {s}/{n} of the cake.']),

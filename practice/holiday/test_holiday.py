@@ -85,6 +85,30 @@ for _c, _o in zip(_cases, _out):
 print(f'1b. hlib (build time) and mark.js (browser and server) agree on {len(_cases)} typed rules and fraction lists')
 
 
+# ---- 1c. the builder sets clock automatically (stem or frame says o'clock and the key is a bare hour), honours clock=False, and passes dollars_ok / accept_by to the data and to the server keys
+def _mk(**kw):
+    d = dict(id='Z1', tier='core', no='1', q='q', hint='h', steps=['s'], skill='k', src=['x'], type='number', answer=3, check=lambda: 3, strand='t')
+    d.update(kw); return d
+def _flags(**kw):
+    o, _ = H.make_item(_mk(**kw)); return o
+if not _flags(q="It is 8 o'clock. What time is it 7 hours later?").get('clock'): fail("clock not set automatically for a stem with o'clock and a bare hour")
+if not _flags(q="It is 8 o\u2019clock. What time?").get('clock'): fail("clock not set for a curly apostrophe")
+if _flags(q='What is 1 + 2?').get('clock'): fail('clock set without o\'clock in the stem')
+if _flags(q="It is 8 o'clock.", answer=15, check=lambda: 15).get('clock'): fail("clock set for a key that is not a bare hour")
+if _flags(q="From 3 o'clock to 8 o'clock is how many hours?", clock=False).get('clock'): fail('clock=False did not switch the automatic setting off')
+if not _flags(q='A clock puzzle.', clock=True).get('clock'): fail('clock=True not passed on')
+_fo = _flags(type='fields', q='What time?', frame="{f1} o'clock", answer=[3], check=lambda: [3])
+if not _fo['fields'][0].get('clock'): fail("a box printed right before o'clock is not a clock box")
+_fo = _flags(type='fields', q='What time?', frame='{f1}:{f2}', answer=[3, 30], check=lambda: [3, 30])
+if any(f.get('clock') for f in _fo['fields']) or _fo.get('clock'): fail('a h:mm pair of boxes must not be a clock box')
+_fo = _flags(type='fields', q='What time?', frame="{f1}:{f2} then {f3} o'clock", answer=[3, 30, 5], check=lambda: [3, 30, 5])
+if [bool(f.get('clock')) for f in _fo['fields']] != [False, False, True]: fail('only the box before o\'clock is a clock box: ' + str(_fo['fields']))
+if not _flags(dollars_ok=True).get('dollars_ok') or _flags().get('dollars_ok'): fail('dollars_ok default / pass-through')
+_ta = dict(type='text', answer=None, accept=['6'], check=lambda: '6')
+if not _flags(accept_by=True, **_ta).get('accept_by') or _flags(**_ta).get('accept_by'): fail('accept_by default / pass-through')
+print('1c. the builder sets clock automatically for o\'clock stems with a bare-hour key (not for h:mm boxes), clock=False turns it off, dollars_ok / accept_by are off by default')
+
+
 class Q(http.server.SimpleHTTPRequestHandler):
     def log_message(self, *a): pass
 
@@ -354,6 +378,14 @@ with sync_playwright() as pw:
         syn('S14', 'invest', 'Inv 8c4 yes?', 'number', 1, label='Inv 8c4 yes?'), syn('S15', 'invest', 'Inv 8c2', 'number', 1, label='Inv 8c2 yes?'),
         syn('S16', 'challenge', 'G5', 'number', 1, label='G5 any no.?'), syn('S17', 'core', 'S17. A why.', 'selfcheck', None, label='2(b) why', open=True, steps=['x']),
         syn('S18', 'core', 'S18. A why.', 'selfcheck', None, label='2(b) Ali', open=True, steps=['x']),
+        syn('S19', 'core', "S19. It is 8 o'clock. What time 7 hours later?", 'number', 3, clock=True),
+        syn('S20', 'core', 'S20. A plain number 3, no clock flag.', 'number', 3),
+        syn('S21', 'core', 'S21. Sides of the square?', 'text', ['6'], accept_by=True),
+        syn('S22', 'core', 'S22. How many cents cheaper?', 'number', 48, dollars_ok=True),
+        syn('S23', 'core', 'S23. Type the coded word.', 'text', ['CAT']),
+        syn('S24', 'core', 'S24. Which letter?', 'text', ['E']),
+        syn('S25', 'core', 'S25. Which shapes?', 'text', ['A, C, E, F']),
+        syn('S26', 'core', 'S26. Angle sum rule.', 'text', ['(n-2)x180'], poly='n'),
     ]
     for it_ in synitems:
         if it_['type'] == 'selfcheck': it_.update(paper=False, paper_only=False, marking_mode='self', open=True); it_.pop('answer')
@@ -389,7 +421,16 @@ with sync_playwright() as pw:
              (7, ['A and B and D', 'A, B and D', 'A,B,D', 'a & b & d'], ['A and B', 'A and B and C', 'B and A and D', 'A and B and D and E']),
              (8, ['1 out of 4', '2 out of 8', '1/4', 'It is 1 out of 4'], ['1 out of 5', '4 out of 1', '3 out of 4', '1 out of 0']),
              (9, ['a is equal to b', 'a equals b', 'a = b'], ['a is not equal to b', 'a is equal to c', 'b is equal']),
-             (10, ['Wednesday'], ['It is Wednesday', 'It will be Wednesday'])]
+             (10, ['Wednesday'], ['It is Wednesday', 'It will be Wednesday']),
+             # week 4 audit fixes, through the page (the same strings are in mark.test.mjs through the server marker)
+             (18, ['3', "3 o'clock", '3:00', '03:00', '3.00', '3 pm', '3 am'], ['3:30', '3:05', '4:00', "4 o'clock", '3:00:00', '13:00']),
+             (19, ['3'], ["3 o'clock", '3:00', '03:00']),
+             (20, ['6', '6 by 6 square', '6 by 6', '6 x 6', 'a 6 by 6 square'], ['5 by 5 square', '6 by 5', '5 x 5']),
+             (21, ['48', '$0.48', '48 cents'], ['$0.84', '$1.48', '0.48']),
+             (22, ['CAT', '"CAT"', '\u201ccat\u201d'], ['"DOG"', '"CAT', 'CAT"']),
+             (23, ['E', 'the letter E', 'letter E'], ['the letter F', 'letter']),
+             (24, ['A, C, E, F', 'Shapes A, C, E and F', 'A, C, E, F,', 'A, C, E, F.'], ['Shapes A, C and E', 'A, C, E', 'A, C, E, F, G']),
+             (25, ['(n-2)x180', 'Total angle = (n-2)x180', 'Sum of angles = 180n - 360', 'Angle sum = (n - 2) x 180', 'total = (n-2)x180'], ['x = 3', 'n = 5', 'total = n - 2 x 180', 'Total angle = n', 'angle sum n = (n-2)x180'])]
     # mark each wording through the page: submit one at a time by re-typing then reading the marker
     def marked(k, txt):
         typed(k, txt); pg.locator('#submit').click()
@@ -632,8 +673,10 @@ _k, _ver, _d, keys, _tags = make_keys.build(0, n, key)
 nmodes = {}
 for it, kr in zip(items, keys):      # the report mode is the item's own marking_mode: self = compare with a model answer / paper drawing, none = truly open
     if it['type'] != 'selfcheck':
-        for fl in ('words', 'poly', 'equiv_frac', 'unit'):
+        for fl in ('words', 'poly', 'equiv_frac', 'unit', 'dollars_ok', 'accept_by'):
             if it.get(fl) != kr.get(fl): fail(f'{it["id"]}: flag {fl} is {it.get(fl)!r} in the data but {kr.get(fl)!r} in the key')
+        ck_want = True if it.get('clock') else ([bool(f.get('clock')) for f in it['fields']] if it['type'] == 'fields' and any(f.get('clock') for f in it['fields']) else None)
+        if ck_want != kr.get('clock'): fail(f'{it["id"]}: clock is {ck_want!r} in the data but {kr.get("clock")!r} in the key')
         continue
     want = ('none', 'open') if it['marking_mode'] == 'none' and not it.get('paper') else ('self', 'selfcheck')
     if (kr['marking_mode'], kr['type']) != want: fail(f'{it["id"]}: self-check with marking_mode {it["marking_mode"]} exported as {kr["marking_mode"]}/{kr["type"]}')
@@ -663,6 +706,17 @@ for it, kr in zip(items, keys):
     if t in ('number', 'fields') and not it.get('unit') is False:      # unit and bracket forms of a whole number answer
         vals = [f['answer'] for f in it['fields']] if t == 'fields' else [it['answer']]
         if t == 'number': cases.append(dict(rec=kr, v=f'{vals[0]} cm2', want='right')); cases.append(dict(rec=kr, v=f'({vals[0]})', want='right')); cases.append(dict(rec=kr, v=f'{vals[0]}°C', want='right'))
+    if t == 'number' and it.get('clock'):      # a clock hour: o'clock / :00 / pm forms are right, other minutes and other hours are wrong
+        h_ = it['answer']
+        for v in (f"{h_} o'clock", f'{h_}:00', f'{h_:02d}:00', f'{h_}.00', f'{h_} pm', f'{h_} am'): cases.append(dict(rec=kr, v=v, want='right'))
+        for v in (f'{h_}:30', f'{h_}:05', f"{h_ % 12 + 1} o'clock", f'{h_ % 12 + 1}:00', f'{h_}:000'): cases.append(dict(rec=kr, v=v, want='wrong'))
+    if t == 'fields' and kr.get('clock'):
+        cl_ = kr['clock'] if isinstance(kr['clock'], list) else [True] * len(it['fields'])
+        for k_, f in enumerate(it['fields']):
+            if cl_[k_]:
+                base = [str(g['answer']) for g in it['fields']]
+                ok_ = base[:]; ok_[k_] = f"{f['answer']} o'clock"; cases.append(dict(rec=kr, v=ok_, want='right'))
+                no_ = base[:]; no_[k_] = f"{f['answer']}:30"; cases.append(dict(rec=kr, v=no_, want='wrong'))
     if t in ('number', 'fields'):       # number words never count unless the item declares words
         w1 = [f['answer'] for f in it['fields']] if t == 'fields' else [it['answer']]
         if all(0 <= x <= 9 for x in w1) and not it.get('words'):

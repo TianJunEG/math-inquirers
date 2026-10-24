@@ -292,9 +292,8 @@ def rhombus_fig(Pang=64, sol=False):
     qpr = ang(p, q, r)
     s += arc(p, q, sp, 24)
     s += T(f1(p[0] + 3), f1(p[1] - 58), f'{Pang}°', 15, 'middle', 800, WARM)             # outside the shape, left of PS, next to the little arc
-    s += arc(p, q, r, 62, f'{qpr:.0f}°' if sol else '?', TEAL if sol else WARM, 86, 15)
-    s += arc(q, p, r, 24)
-    s += T(f1(q[0] + 38), f1(q[1] - 12), f'{180 - Pang}°' if sol else '?', 15, 'middle', 800, TEAL if sol else WARM)      # outside the shape, right of QR
+    s += arc(p, q, r, 36, f'{qpr:.0f}°' if sol else '?', TEAL if sol else WARM, 60, 15)                   # label inside its own wedge, beyond its own arc
+    s += arc(q, p, r, 22, f'{180 - Pang}°' if sol else '?', TEAL if sol else WARM, 46, 15)               # label inside the wedge at Q, beyond its own arc
     s += pl(p, 'P', -12, 16) + pl(q, 'Q', 12, 16) + pl(r, 'R', 12, 4) + pl(sp, 'S', -14, 4)
     lab = f'Rhombus PQRS with all four sides equal and angle P {Pang} degrees. The diagonal PR is drawn dashed.'
     if sol:

@@ -37,6 +37,10 @@ strings that must occur in the workbook source), plus by type
               equiv_frac=True | False  every fraction in a typed list may be written in any equal form, in the same order ('7/12, 8/12, 10/12' for '7/12, 2/3, 5/6').
                                  DEFAULT: on when the hint says "same bottom number" / "same denominator" and the accepted writings are fractions; otherwise off (only the printed forms).
     number / fields: words=True  number words ('five', 'twenty-five', 'minus five') are also accepted. DEFAULT off: words are wrong unless an item declares it.
+    number / fields: clock=True | False  an hour: '3', "3 o'clock", '3:00', '03:00', '3.00', '3 pm' are all right for the key 3 (minutes must be 00; '3:30' stays wrong). Set AUTOMATICALLY when the stem or frame contains o'clock and the key is a bare hour 1-12
+                     (fields: the boxes printed right before o'clock); clock=False switches the automatic setting off, e.g. "How many hours from 3 o'clock to 8 o'clock?".
+    number / fields: dollars_ok=True  '$0.48' is also right where the key is 48 (cents). DEFAULT off.
+    text: accept_by=True  '6 by 6 square', '6 by 6', '6 x 6' (an optional 'a'/'the' and 'square'/'rectangle'/'cm') are right for a sides answer; a one-number key stands for n by n. DEFAULT off.
     svg (question figure) and sol_fig (callable(facts) -> svg of the correct drawing, built from the CHECKED values)
 
 The build stops, and writes nothing, unless: every checker equals the printed answer; every src string occurs in the workbook source; every variant
@@ -165,6 +169,18 @@ def text_flags(i, it, out):
         out['equiv_frac'] = True
 
 
+def clock_flag(it):
+    """clock: True accepts '3', "3 o'clock", '3:00', '03:00', '3.00', '3 pm' for the hour 3 (never '3:30'). Set by the lesson file (clock=True / False) or, when it says nothing,
+    automatically when the stem or frame contains o'clock and the key is a bare hour (1 to 12; every box for 'fields')."""
+    c = it.get('clock')
+    if c is not None:
+        return bool(c)
+    ans = [it['answer']] if it['type'] == 'number' else list(it['answer'])
+    if not all(isinstance(a, int) and not isinstance(a, bool) and 1 <= a <= 12 for a in ans):
+        return False
+    return bool(re.search(r"o['\u2019]?clock", (it.get('q', '') + ' ' + it.get('frame', '')), re.I))
+
+
 def make_item(src):
     it = dict(src)
     i, t = it['id'], it['type']
@@ -185,6 +201,16 @@ def make_item(src):
         if t not in ('number', 'fields'):
             raise Fail(f'{i}: words=True is only for number and fields items')
         out['words'] = True
+    if it.get('dollars_ok'):                      # '$0.48' accepted where the key is 48 cents (default off)
+        if t not in ('number', 'fields'):
+            raise Fail(f'{i}: dollars_ok=True is only for number and fields items')
+        out['dollars_ok'] = True
+    if it.get('accept_by'):                       # '6 by 6 square' / '6 by 6' / '6 x 6' accepted for a sides answer (default off)
+        if t != 'text':
+            raise Fail(f'{i}: accept_by=True is only for text items')
+        out['accept_by'] = True
+    if t == 'number' and clock_flag(it):
+        out['clock'] = True
     if it.get('label'):
         if not isinstance(it['label'], str) or len(it['label']) > 12:
             raise Fail(f'{i}: label must be a short string (at most 12 characters)')
@@ -232,6 +258,12 @@ def make_item(src):
             pm = re.search(r'(\d{1,2}:)\{' + f['id'] + r'\}', it['frame'])
             if pm:
                 f['pre'] = pm.group(1)
+        if it.get('clock'):               # explicit clock=True: every box is an hour
+            out['clock'] = True
+        elif it.get('clock') is None:     # automatic: a box printed right before o'clock (or the only box, when the stem says o'clock) holding a bare hour
+            for n, f in enumerate(out['fields']):
+                if 1 <= f['answer'] <= 12 and (re.search(r"\{" + f['id'] + r"\}\s*o['\u2019]?clock", it['frame'], re.I) or (len(out['fields']) == 1 and clock_flag(it))):
+                    f['clock'] = True
         out['answer'] = [int(a) for a in it['answer']]
     elif t == 'number':
         if not same(it, got):

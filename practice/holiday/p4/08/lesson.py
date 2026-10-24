@@ -171,7 +171,7 @@ ITEMS = [
       steps=['B, C, D are three squares in a row. The middle one folds between the ends, so B and D are opposite.', 'The answer is D.'], src=['Which letter is opposite']),
     D(id='2c', tier='core', no='2(c)', label='2(c)', type='choice', options=['A', 'B', 'D', 'E', 'F'], answer='F', skill='opposite faces of a net', svg=labelled_net_fig(NETQ2, Q2L, 40),
       check=lambda: next(Q2L[b] if Q2L[a] == 'C' else Q2L[a] for a, b in opposite_cells(NETQ2) if 'C' in (Q2L[a], Q2L[b])),
-      q='Which letter is opposite C?', hint='Two pairs are already found. Which two faces are left?',
+      q='Which letter is opposite C?', hint='Look for pairs of faces with exactly one square between them in a row of the net. Which pair does C belong to?',
       steps=['A and E are opposite, and B and D are opposite.', 'The last two faces, C and F, are the last pair.'], src=['Which letter is opposite']),
 
     D(id='3a', tier='core', no='3(a)', label='3(a)', type='fields', frame='row: {f1}, {f2}, 4, 2   below the right end: {f3}', answer=[3, 5, 6], skill='dice nets',
@@ -224,7 +224,7 @@ ITEMS = [
       src=['Shade ONE more square so that a dashed line becomes a line of symmetry of the shaded squares. Find ALL the ways.']),
     D(id='6count', tier='core', no='6(a)', label='6(a) ways', type='number', answer=2, skill='shading for symmetry',
       svg=grid_cells_fig(Q6, 4, 4, 44, TEAL, True, True, ('v', 'h'), 'A 4 by 4 grid with five shaded squares and two dashed lines.'), check=lambda: len(q6_ways()),
-      q='How many different squares can you shade to make a dashed line a line of symmetry?', hint='Count the squares that work for the up-down line and for the across line.',
+      q='Do the "find ALL" question first. Now count the squares in your list: how many are there?', hint='Count the squares in your list, one for each square that works.',
       steps=['One square works for the up-down line (A2) and one for the across line (D3).', 'That is 2 ways.'], src=['How many ways?']),
     D(id='6b', tier='core', no='6(b)', label='6(b)', type='selfcheck', open=True, marking_mode='self', skill='shading for symmetry',
       svg=grid_cells_fig(Q6, 4, 4, 44, TEAL, True, True, ('v', 'h'), 'A 4 by 4 grid with five shaded squares and two dashed lines.'),
