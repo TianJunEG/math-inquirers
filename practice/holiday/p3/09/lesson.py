@@ -163,7 +163,7 @@ ITEMS = [
       q='Siti has $20 and buys 3 different things. Which 3 things spend as much of her $20 as she can, without going over? Type the three names.',
       check=lambda: ', '.join(n for n, _ in PRICES if n in best_sets()[0][0]) if len(best_sets()[0]) == 1 else None,
       hint='Try different sets of 3 things. Which set costs the most without going over $20?',
-      steps=['Add the prices of different sets of 3. The book, the puzzle and the water bottle cost $20.25: too much.', 'The book, the pen set and the puzzle cost $7.85 + $4.60 + $6.90 = $19.35.', 'Every other set costs less (the next best is the book, the pen set and the water bottle at $17.95). So she should buy the book, the pen set and the puzzle.'],
+      steps=['Add the prices of different sets of 3. The book, the puzzle and the water bottle cost $20.25: too much.', 'The book, the pen set and the puzzle cost $7.85 + $4.60 + $6.90 = $19.35.', 'Every other set that fits in $20 costs less (the next best is the book, the pen set and the water bottle at $17.95). So she should buy the book, the pen set and the puzzle.'],
       src=['Which 3 things should she buy to spend as much of her $20 as she can? How much change will she get?']),
     I(id='3b-change', tier='core', no='3(b)', label='3(b) change', type='number', skill='money and budgets', answer=65, dollars_ok=True, svg=price_list_fig(PRICES, 'Prices'),
       q='Siti buys the 3 things that spend as much of her $20 as she can, without going over. How many cents change does she get? Type the number.',
@@ -232,7 +232,7 @@ ITEMS = [
       svg=time_line(385, 540, [(BUSES[0], '06:40', 0), (RAVI, '08:15', 0)], [], minor=BUSES[1:], marks=[(RAVI, 'Ravi arrives')], label='A time line from 06:40 with a mark every 25 minutes for the buses and Ravi arriving at 08:15'),
       q='Buses leave the interchange every 25 minutes. The first bus leaves at 06:40. Write the times of the 2nd, 3rd, 4th, 5th and 6th bus, with commas.',
       check=lambda: ', '.join(tm(t) for t in hourly_from(mins(6, 40), 25, 6)[1:]),
-      hint='Add 25 minutes each time. 06:40 + 20 minutes is 07:00, so add the other 5 minutes after that.',
+      hint='Add 25 minutes each time. It can help to jump to the next o\u2019clock first, then add the minutes that are left.',
       steps=['06:40 + 25 minutes = 07:05 (the 2nd bus).', '07:05 + 25 = 07:30, then 07:30 + 25 = 07:55, then 07:55 + 25 = 08:20, then 08:20 + 25 = 08:45.', 'The buses are at 06:40, 07:05, 07:30, 07:55, 08:20 and 08:45.'],
       src=['Buses leave the interchange every 25 minutes. The first bus leaves at 06:40.']),
     I(id='6a-next', tier='core', no='6(a)', label='6(a) next', type='fields', skill='time lines and timetables', answer=[8, 20], frame='The next bus is at {f1}:{f2}.',
@@ -257,7 +257,7 @@ ITEMS = [
 
     # ================= Investigation (Investigation and look back page, No.8: Find all the ways to pay)
     I(id='I8-swap', tier='invest', no='8 easy step', label='Inv easy', type='fields', skill='making a list in order', answer=[2, 4], frame=grp('One 10-cent coin = {f1} five-cent coins      One 20-cent coin = {f2} five-cent coins'),
-      q='Easy first step. Ali can swap some five-cent coins for bigger coins. How many five-cent coins is one 10-cent coin worth? How many is one 20-cent coin worth?',
+      q='Ali can swap some five-cent coins for bigger coins. How many five-cent coins is one 10-cent coin worth? How many is one 20-cent coin worth?',
       check=lambda: [count_in(10, 5)[0], count_in(20, 5)[0]],
       hint='Count in 5s up to 10, then up to 20.',
       steps=['Count in 5s: 5, 10. So one 10-cent coin is worth two five-cent coins.', 'Count in 5s: 5, 10, 15, 20. So one 20-cent coin is worth four five-cent coins.', 'The numbers are 2 and 4.'],

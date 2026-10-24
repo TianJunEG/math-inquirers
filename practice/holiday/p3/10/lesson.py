@@ -202,7 +202,7 @@ ITEMS = [
       src=['Which two drinks together sold exactly 100 cups?']),
 
     cca_item('Ali', 'Use clue 1: which CCAs is Ali not in? Which are left?', 'So Ali is in football.'),
-    cca_item('Mei', 'Use clues 1 and 2: who can be in the choir? Who is left for chess?', 'So Mei is in chess.'),
+    cca_item('Mei', 'Find out who is in the choir first (clues 1 and 2). Then see which CCAs are left for Ali, Mei and Ravi.', 'So Mei is in chess.'),
     cca_item('Ravi', 'Use clue 3: which names have 4 letters? Think about who is in the choir too.', 'So Ravi is in swimming.'),
     cca_item('Siti', 'Use clues 1 and 2: which children are not in the choir? Who is left?', 'So Siti is in the choir.'),
 
@@ -315,7 +315,7 @@ ITEMS = [
     I(id='T4', tier='stretch', no='T4', label='T4', type='fields', skill='making a list in order', answer=[9630, 3069], frame=grp('Largest even: {f1}      Smallest odd: {f2}'),
       q='Use the digits 3, 0, 6 and 9 once each. Make the largest even 4-digit number and the smallest odd 4-digit number. Fill in the boxes.',
       check=lambda: [max(numbers_from_digits([3, 0, 6, 9], lambda n: n % 2 == 0)), min(numbers_from_digits([3, 0, 6, 9], lambda n: n % 2 == 1))],
-      hint='An even number ends in an even digit. For the largest, put the biggest digits at the front. A 4-digit number cannot start with 0.',
+      hint='An even number ends in 0, 2, 4, 6 or 8. An odd number ends in 1, 3, 5, 7 or 9. A 4-digit number cannot start with 0.',
       steps=['Even numbers end in 0 or 6. For the largest, put 9, 6, 3 in front and end with 0: 9630.', 'Odd numbers end in 3 or 9. For the smallest, put the smallest digits at the front: 3, then 0, then 6, then 9: 3069 (it ends in 9, so it is odd).', 'The numbers are 9630 and 3069.'],
       src=['Use the digits 3, 0, 6 and 9 once each. Make the largest even 4-digit number and the smallest odd 4-digit number.']),
 
