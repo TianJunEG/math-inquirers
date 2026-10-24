@@ -202,8 +202,8 @@ ITEMS = [
       src=['Which of them can fit inside a box 5 cm long, 5 cm wide and 5 cm high?']),
 
     D(id='3s', tier='core', no='3 Start here', label='3 start', type='fields', skill='water in a tank as layers', answer=[1500, 27000],
-      q='A glass tank is 50 cm long, 30 cm wide and 40 cm high. The water in it is 18 cm deep.\nStart here: think of the water as 18 layers of cubes.', svg=G.tank_q3(),
-      frame='One layer is 50 × 30 = {f1} cubes.     18 layers hold {f2} cm³.', check=lambda: [50 * 30, len(cubes(50, 30, 18))],
+      q='A glass tank is 50 cm long, 30 cm wide and 40 cm high. The water in it is 18 cm deep.\nStart here: think of the water as 18 layers of cubes. One layer is 50 × 30.', svg=G.tank_q3(),
+      frame='One layer (cubes): {f1}     18 layers (cm³): {f2}', check=lambda: [50 * 30, len(cubes(50, 30, 18))],
       hint='One layer covers the whole base of the tank. How many 1-cm cubes cover a base 50 cm by 30 cm? Then count the layers.',
       steps=['One layer covers the base: 50 × 30 = 1500 cubes.', '18 layers: 18 × 1500 = 27000 cubes, so the water is 27000 cm³.'],
       src=['18 layers of cubes. One layer is 50 × 30 = ______ cubes. 18 layers hold ______ cm³.']),
@@ -229,7 +229,7 @@ ITEMS = [
 
     D(id='4s', tier='core', no='4 Start here', label='4 start', type='fields', skill='base area and one layer of water', answer=[1000, 1000],
       q='A tank has a base 40 cm by 25 cm. The water is 15 cm deep. Ali drops in 5 metal cubes with edges of 10 cm. They sink and are completely under water.\nStart here: the cubes take up space, so the water rises.',
-      svg=G.tank_q4(), frame='The base is 40 × 25 = {f1} cm².     A 1 cm layer of water over the base is {f2} cm³.', check=lambda: [40 * 25, len(cubes(40, 25, 1))],
+      svg=G.tank_q4(), frame='Base area, 40 × 25 (cm²): {f1}     1 cm layer of water (cm³): {f2}', check=lambda: [40 * 25, len(cubes(40, 25, 1))],
       hint='The base is a rectangle 40 cm by 25 cm. A layer of water 1 cm deep has the same area as the base and is 1 cm thick.',
       steps=['The base is 40 × 25 = 1000 cm².', 'A layer of water 1 cm deep has 1000 cubes of 1 cm³, so it is 1000 cm³.'],
       src=['the base is 40 × 25 = ______ cm². A 1 cm layer of water over the base is ______ cm³. The cubes take up space, so the water rises.']),
@@ -254,7 +254,7 @@ ITEMS = [
 
     D(id='5s', tier='core', no='5 Start here', label='5 start', type='fields', skill='painted cube: edges and faces', answer=[2, 2, 2],
       q='A 4 by 4 by 4 cube is built from 64 small cubes. The outside of the big cube is painted yellow. Then it is taken apart.\nStart here: corner cubes have 3 painted faces.', svg=G.painted_cube_4(),
-      frame='An edge has 2 corners and {f1} cubes between.     The middle of a face is a {f2} by {f3} square.',
+      frame='Cubes between 2 corners: {f1}     Middle of a face: {f2} by {f3}',
       check=lambda: [len([x for x in range(4) if (x not in (0, 3))]), len([x for x in range(4) if (x not in (0, 3))]), len([y for y in range(4) if (y not in (0, 3))])],
       hint='Look along one edge of the big cube: 4 small cubes in a row. Two of them are corners. How many are left? On a face, the cubes that are not on its edges make a square.',
       steps=['Along one edge there are 4 small cubes. The 2 corners are at the ends, so 4 − 2 = 2 cubes are between them.', 'On one face, leave out the cubes on its four edges. What is left in the middle is a 2 by 2 square.'],

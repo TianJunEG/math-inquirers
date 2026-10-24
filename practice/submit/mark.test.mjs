@@ -142,4 +142,8 @@ const blk = f => { const x = readFileSync(new URL(f, import.meta.url), 'utf8'); 
 assert.equal(blk('./mark.js'), blk('../ext/public/sheet.js'), 'shared reading code differs between mark.js and sheet.js'); n++;
 
 assert.throws(() => mark({ marking_mode: 'auto', type: 'bogus', key: 1 }, 'x')); n++;
+// cent sign and cent words are units like cm; bare 'c' is ambiguous; two numbers are never a unit
+for (const v of ['35¢', '35 ¢', '35 cents', '35 cent']) t('cent form ' + v, N(35), v, 'right');
+for (const v of ['35 c', '35c', '3 5¢', '36¢', '$0.35']) t('cent wrong ' + v, N(35), v, 'wrong');
+t('cent unit:false', N(35, { unit: false }), '35¢', 'wrong'); t('cents unit:false', N(35, { unit: false }), '35 cents', 'wrong');
 assert.deepEqual(bad, [], bad.join('\n')); console.log('mark.test.mjs: ' + n + ' checks passed');

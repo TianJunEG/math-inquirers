@@ -48,9 +48,9 @@
     if (!seen && !total && !cur) return null;
     var v = total + cur + chunk; return neg ? -v : v;
   }
-  // Units after the number: a word ('301 sticks', '20 minutes', 'sq cm'), a word with an attached power ('84 cm2', '84cm^2', '84 cm²'), a rate ('km/h') or a degree sign ('-25 °C', '11°C', '44°').
+  // Units after the number: a word ('301 sticks', '20 minutes', 'sq cm'), a word with an attached power ('84 cm2', '84cm^2', '84 cm²'), a rate ('km/h') a degree sign ('-25 °C', '11°C', '44°') or a cent sign / cent word ('35¢', '35 cents'; a bare lowercase 'c' is refused as ambiguous; '$0.35' is never turned into cents).
   // A single pair of brackets round the whole answer is ignored ('(-25)'). Two numbers ('4 or 5', '1 2') are never a unit.
-  var UW = '[a-z][a-z.]*(?:\\^?[23]|\\s?[²³])?', UNITRE = new RegExp('^(-?\\d[\\d, ]*?(?:\\.0+)?)\\s*(?:[°º]\\s*[a-z]?|' + UW + '(?:\\s+' + UW + ')*(?:\\/[a-z]+)?)$', 'i');
+  var UW = '[a-z][a-z.]*(?:\\^?[23]|\\s?[²³])?', UNITRE = new RegExp('^(-?\\d[\\d, ]*?(?:\\.0+)?)\\s*(?:[°º]\\s*[a-z]?|¢|' + UW + '(?:\\s+' + UW + ')*(?:\\/[a-z]+)?)$', 'i');
   function toNum(s, opt) {
     s = minus(s).trim();
     var pb = /^\(\s*([^()]*?)\s*\)\s*(.*)$/.exec(s); if (pb) s = pb[2] ? pb[1] + ' ' + pb[2] : pb[1];   // '(-25)' and '(-25) °C'
@@ -58,7 +58,7 @@
     s = s.replace(/^\$\s*/, '');
     if (opt && opt.pre && s.indexOf(opt.pre) === 0) s = s.slice(opt.pre.length).trim();
     s = s.replace(/\.0*$/, '');
-    if (!opt || opt.unit !== false) { var u = UNITRE.exec(s); if (u) s = u[1].trim().replace(/\.0+$/, ''); }
+    if (!opt || opt.unit !== false) { var u = UNITRE.exec(s); if (u && !/\d\s*c$/.test(s)) s = u[1].trim().replace(/\.0+$/, ''); }
     if (/^-?\d{1,3}(?:[, ]\d{3})+$/.test(s)) s = s.replace(/[, ]/g, '');
     return /^-?\d+$/.test(s) ? +s : null;
   }
