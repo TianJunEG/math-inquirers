@@ -1,10 +1,10 @@
 # Structure report (taxonomy.json)
 
-Sources searched (whole working tree, tracked or not): 6748 files, 1361.5 MB, sha256 7788a0108b371abf8e88be7b.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 373, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
+Sources searched (whole working tree, tracked or not): 6748 files, 1361.5 MB, sha256 abfbdf45c7897d835e62395c.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 373, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
 
 Rules. Levels 3 to 6 (TEASER-STRICT): per level and calendar quarter at most 1 puzzle per sub-structure and 3 per family; the same sub-structure never within 30 days of itself across a quarter boundary; an answer of 10 or more appears once per level and a single digit at most 4 times. Levels 1 and 2 (L1L2-GAP60): the same sub-structure at least 60 days apart (circular, 365- and 366-day year), a family at most 3 times in any 60 days and never on consecutive days, an answer not repeated within 60 days and a single-digit answer at most 2 times in 60 days. All levels: no repeated frame, no two puzzles with most numbers or the same story in common; the sub-structures used by the fixed puzzles on the level pages (counting_choices.digit_cards_arrangements, fractions.fraction_of_remainder, multiples.common_multiple, remainders.two_conditions, sequence.count_on, sequence.which_term) are never used by the bank.
 
-- Level 1 (gap rule, 60 days): 61 puzzles, 61 distinct sub-structures (none twice within the gap), 37 families, most in one family 3
+- Level 1 (gap rule, 60 days): 61 puzzles, 61 distinct sub-structures (none twice within the gap), 36 families, most in one family 3
 - Level 2 (gap rule, 60 days): 61 puzzles, 61 distinct sub-structures (none twice within the gap), 44 families, most in one family 3
 - Level 3, quarter 4: 61 puzzles, 61 distinct sub-structures, 39 families, most in one family 3
 - Level 4, quarter 4: 61 puzzles, 61 distinct sub-structures, 37 families, most in one family 3
@@ -86,9 +86,28 @@ Usable sub-structures of round 3 that no released puzzle uses yet (each has a so
 | 5 | 61 | 3 | 5% | 18 | 36 | ok |
 | 6 | 61 | 4 | 7% | 24 | 36 | ok |
 
+## Text answers per level (TEXT_ANSWER_PLAN.md)
+
+Target: about 3 or 4 text-answer puzzles a month at every level, so that a year holds 40 or more (every text answer is used once per level).
+
+| Level | Puzzles so far | Text-answer puzzles | Per 30 days | Projected in 365 | Target | Verdict |
+|---|---|---|---|---|---|---|
+| 1 | 61 | 6 | 3.0 | 36 | 40 | WARNING: below the plan |
+| 2 | 61 | 5 | 2.5 | 30 | 40 | WARNING: below the plan |
+| 3 | 61 | 4 | 2.0 | 24 | 40 | WARNING: below the plan |
+| 4 | 61 | 4 | 2.0 | 24 | 40 | WARNING: below the plan |
+| 5 | 61 | 3 | 1.5 | 18 | 40 | WARNING: below the plan |
+| 6 | 61 | 3 | 1.5 | 18 | 40 | WARNING: below the plan |
+
 Structure FAIL count (all released months): 0
 
 Capacity verdict for the full year (a plan for January to October, not a defect of the released months): 0 CAPACITY FAIL
 - WARNING Level 3: 11% single-digit answers so far, a year would need about 42 (limit 36)
+- WARNING Level 1: 6 text-answer puzzles in 61 (about 36 a year; the plan wants 40 or more: see TEXT_ANSWER_PLAN.md)
+- WARNING Level 2: 5 text-answer puzzles in 61 (about 30 a year; the plan wants 40 or more: see TEXT_ANSWER_PLAN.md)
+- WARNING Level 3: 4 text-answer puzzles in 61 (about 24 a year; the plan wants 40 or more: see TEXT_ANSWER_PLAN.md)
+- WARNING Level 4: 4 text-answer puzzles in 61 (about 24 a year; the plan wants 40 or more: see TEXT_ANSWER_PLAN.md)
+- WARNING Level 5: 3 text-answer puzzles in 61 (about 18 a year; the plan wants 40 or more: see TEXT_ANSWER_PLAN.md)
+- WARNING Level 6: 3 text-answer puzzles in 61 (about 18 a year; the plan wants 40 or more: see TEXT_ANSWER_PLAN.md)
 
 Skeleton matches with our own sources that were reviewed by hand (same masked wording, but no shared numbers): 0

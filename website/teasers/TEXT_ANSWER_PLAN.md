@@ -4,11 +4,11 @@ Written 24 Oct 2026 for `website/teasers/`. Nothing here is released: it is the 
 
 ## 1. The problem in numbers
 
-AUDIT_ROUND5 section 7 and condition C6: at present only 4 to 7 puzzles per level in 61 days have a word, a name or a letter as the answer. A year of 365 days at that rate gives 24 to 42 text answers per level, and in round 5 the count fell at some levels because the cluster fixes (C3) replaced several "who", "which way" and "which shape" puzzles by other kinds. The owner wants about 40 or more text-answer puzzles per level over the year (three or four a month), so that "type a number" is not the only thing a child ever does.
+AUDIT_ROUND5 section 7 and condition C6: at present only 4 to 7 puzzles per level in 61 days have a word, a name or a letter as the answer. A year of 365 days at that rate gives 24 to 42 text answers per level, and in round 5 the count fell at some levels because the cluster fixes (C3) replaced several "who", "which way" and "which shape" puzzles by other kinds (Level 3 and Level 5 would have lost the most; three replacements, `L3-cuboidclue`, `L3-sixodds` and `L4-badgerow`, were made on purpose as text-answer puzzles to keep the counts near where they were). The owner wants about 40 or more text-answer puzzles per level over the year (three or four a month), so that "type a number" is not the only thing a child ever does.
 
 | Level | Text-answer puzzles in Nov and Dec 2026 (61 days) | Projected in 365 days | Plan |
 |---|---|---|---|
-| 1 | 7 | 42 | keep the rate |
+| 1 | 6 | 36 | use all seven text-capable sub-structures (+1) |
 | 2 | 5 | 30 | +1 a quarter |
 | 3 | 4 | 24 | +2 sub-structures |
 | 4 | 4 | 24 | +3 sub-structures |

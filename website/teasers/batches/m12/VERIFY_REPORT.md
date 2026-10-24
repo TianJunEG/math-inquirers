@@ -11,11 +11,11 @@ Method: every puzzle is re-solved by `brute.py` (independent of the author solve
 | 5 | 31 | 30 | 2 | 25 | 2 | 31 |
 | 6 | 31 | 30 | 2 | 25 | 2 | 31 |
 
-Sources searched (whole working tree, tracked or not): 6748 files, 1361.5 MB, sha256 7788a0108b371abf8e88be7b.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 373, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
+Sources searched (whole working tree, tracked or not): 6748 files, 1361.5 MB, sha256 abfbdf45c7897d835e62395c.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 373, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
 
 Similarity sources checked: holiday banks, own term lessons, all extension workbook data, the school booklets, our book drafts and catalogues, external private source files, and the seven fixed website puzzles.
 
-FAIL count: 0. REVIEW items: 108.
+FAIL count: 0. REVIEW items: 100.
 
 
 - REVIEW L1-rulerbill [12-01]: rule B: 3 of the same numbers ['3', '4', '9'] as "Picture-dependent items re-solved from the picture, not the key: B1 L1 S1 (26),  ..." (term/l1/audit/AUDIT_BOOKS_1_4_ROUND2.md)
@@ -31,7 +31,6 @@ FAIL count: 0. REVIEW items: 108.
 - REVIEW L1-purse [12-21]: rule S (window): 5 of 7 content words (box,cent,coin,money,twenty) in "Express the amount saved Jan to May as a fraction of pocket money rece ..." (docs/books/private_p4_papers/non_routine_questions.md)
 - REVIEW L1-eggtrays [12-22]: story words 3 of 5 like "| Prelim | 2023 | TaoNan | P2-11 | 4 | Hawkers A and B buy same number of trays; big 30? a ..." (docs/books/private_p6_papers/non_routine_questions.md)
 - REVIEW L1-streetwalk [12-24]: rule B: 3 of the same numbers ['3', '5', '6'] as "The turtle walks along one side, then turns 70 degrees from straight on. The ins ..." (practice/holiday/p6/07/dist/data/p6l07.json)
-- REVIEW L1-cymbalbeats [12-26]: longest sentence 23 words (limit 20)
 - REVIEW L1-oddbig [12-27]: rule B: 3 of the same numbers ['12', '24', '8'] as "Why is the odd one so much bigger?', a: '24 (1, 2, 3, 4, 6, 8, 12, 24) and 105 ( ..." (p6/content/l2.js)
 - REVIEW L1-westturns [12-28]: rule S (window): 7 of 9 content words (face,north,right,south,turn,way,west) in "(b) 3 turns: west. (c) 2 turns to the left from north: west, then sout ..." (extension/l3/src/u08.py)
 - REVIEW L1-robottrack [12-29]: number 8 in the question is not a parameter (written in the wording; check)
@@ -40,12 +39,9 @@ FAIL count: 0. REVIEW items: 108.
 - REVIEW L2-pencilboxes [12-03]: number 10 in the question is not a parameter (written in the wording; check)
 - REVIEW L2-chocbar [12-06]: rule C: two four-word runs shared with "| C1 | Fill in the box: 1/2 = ?/10 | A chocolate bar has 10 equal pieces. ..." (docs/audit/gifted_fixes_p3.md): a chocolate bar has / chocolate bar has #
 - REVIEW L2-chocbar [12-06]: rule S: sentence "A chocolate bar has 4 rows of 7 squares." shares 4 content words with "Count the squares in a bar of chocolate by rows." (outputs/print/term/Math_Inquirers_L1_T4_Book8_Lessons06-10_AnswerKey_TUTOR_PRINT.pdf)
-- REVIEW L2-recyclegrid [12-07]: question has 69 words (limit 55)
-- REVIEW L2-recyclegrid [12-07]: longest sentence 26 words (limit 22)
 - REVIEW L2-recyclegrid [12-07]: number 3 in the question is not a parameter (written in the wording; check)
 - REVIEW L2-recyclegrid [12-07]: number 3 in the question is not a parameter (written in the wording; check)
-- REVIEW L2-recyclegrid [12-07]: rule B: 3 of the same numbers ['18', '27', '3'] as "<section class="sec" id="tryit"><div class="shead"><span class="eyebrow">Try one ..." (website/lp_build.py)
-- REVIEW L2-recyclegrid [12-07]: rule G: 3 shared number-unit grams (in week 1 / in week 2 / in week 3) in "**B15.3** [G] Siti saves $5 in week 1, $10 in week 2, $15 in week 3 and so on, a ..." (docs/books/word_problems_g1_g2_original_draft.md)
+- REVIEW L2-recyclegrid [12-07]: rule B: 3 of the same numbers ['3', '50', '58'] as "sol_fig=lambda f: combine([one_graph(FOUR, ['1', '2', '3', '4'], 50, 60, 1, 5, ' ..." (practice/holiday/p4/09/lesson.py)
 - REVIEW L2-ribbonline [12-08]: story words 3 of 5 like "m of blue, red, green ribbon. (a) Difference between longest and shortest. (b) Lindsy then ..." (docs/books/private_p4_papers/non_routine_questions.md)
 - REVIEW L2-toyboxshape [12-09]: rule S (window): 8 of 11 content words (box,cone,cube,cylinder,face,flat,solid,sphere) in "Stacks of cubes (S05, S09, C03) are taught by one line ("count layer b ..." (extension/l2/AUDIT.md)
 - REVIEW L2-lessonend [12-10]: number 9 in the question is not a parameter (written in the wording; check)
@@ -67,7 +63,7 @@ FAIL count: 0. REVIEW items: 108.
 - REVIEW L3-raffledays [12-02]: story words 3 of 5 like "| SA1 | 2021 | Raffles | B2-11 | 4 | graph | 3 | 1 | Buns sold Monday to Friday 500 total; ..." (docs/books/private_p6_papers/non_routine_questions.md)
 - REVIEW L3-raffledays [12-02]: rule S: sentence "It sold 126 on Friday, 238 on Saturday, 184 on Sunday and 97 on Monday" shares 4 content words with ""text": "Friday 1, Saturday 2, Sunday 3, Monday 4." (term/l1/lessons/l27.json)
 - REVIEW L3-buttonjar [12-03]: story words 4 of 5 like "Then 10 more red cubes are put in." Holiday `l3.js` line 144: "A jar has 12 red beads and  ..." (extension/l5/AUDIT_ROUND2.md)
-- REVIEW L3-raffleseven [12-04]: story words 3 of 4 like "21:('Letters and Brackets',[('EXP','T','stamps at n cents paid with $5: change in terms of ..." (docs/books/private_p6_papers/build_plan_section.py)
+- REVIEW L3-raffledigits [12-04]: story words 3 of 4 like "21:('Letters and Brackets',[('EXP','T','stamps at n cents paid with $5: change in terms of ..." (docs/books/private_p6_papers/build_plan_section.py)
 - REVIEW L3-handshake8 [12-05]: story words 5 of 7 like "Friend 2 has already shaken hands with friend 1: how many new handshakes does friend 2 mak ..." (practice/holiday/p6/05/dist/data/p6l05.json)
 - REVIEW L3-handshake8 [12-05]: rule S: sentence "Each pair of children shakes hands exactly once." shares 4 content words with "Every pair of friends shakes hands once." (practice/holiday/p6/05/dist/data/p6l05.json)
 - REVIEW L3-lanes5 [12-07]: story words 3 of 4 like "How many seats were there in the school hall? - [EOY_2024_Raffles Q36, 2m, Seats rows/colu ..." (docs/books/private_p4_papers/non_routine_questions.md)
@@ -97,8 +93,6 @@ FAIL count: 0. REVIEW items: 108.
 - REVIEW L4-reachtotal [12-29]: number 1 in the question is not a parameter (written in the wording; check)
 - REVIEW L5-climbing [12-02]: number 358 in the question is not a parameter (written in the wording; check)
 - REVIEW L5-redeye [12-08]: story words 3 of 4 like "| 31 | Factors, Multiples and Tests | Every number is a rectangle in waiting, and its digi ..." (docs/pedagogy/term_review.md)
-- REVIEW L5-bakeryprices [12-11]: rule C: two four-word runs shared with "Then share what is left.", "steps": ["52 take away 12 is 40.", "40 shared into t ..." (term/l1/out/l25/practice/data/t3l25.json): and a pie cost / cake and a pie
-- REVIEW L5-bakeryprices [12-11]: rule S3: the sentence "A cake and a pie cost $14 together." is like "A cake and a pie cost $52 together." (term/l1/out/l25/practice/data/t3l25.json)
 - REVIEW L5-zoogates [12-12]: number 1 in the question is not a parameter (written in the wording; check)
 - REVIEW L5-zoogates [12-12]: number 2 in the question is not a parameter (written in the wording; check)
 - REVIEW L5-zoogates [12-12]: number 3 in the question is not a parameter (written in the wording; check)
@@ -107,8 +101,6 @@ FAIL count: 0. REVIEW items: 108.
 - REVIEW L5-zoogates [12-12]: number 6 in the question is not a parameter (written in the wording; check)
 - REVIEW L5-zoogates [12-12]: rule B: 4 of the same numbers ['3', '4', '5', '6'] as "P4-30 item 5 "Two 10 cm by 3 cm rectangles are joined along their long sides." ( ..." (docs/audit_final/p4_semester_booklets_audit.md)
 - REVIEW L5-roundtable [12-15]: story words 5 of 7 like "- **Go further.** Six children sit round a table; clues give next to, opposite; place ever ..." (docs/terms/l1_term2_preflight.md)
-- REVIEW L5-chessleague [12-16]: story words 5 of 6 like ""text": "In a chess club, any 2 players play exactly 1 game against each other.", ..." (extension/data/l6_u05.json)
-- REVIEW L5-chessleague [12-16]: rule S: sentence "In a chess league, 12 players each play one game against every other p" shares 5 content words with ""text": "In a chess club, any 2 players play exactly 1 game against ea" (extension/data/l6_u05.json)
 - REVIEW L5-penboxes [12-17]: rule S: sentence "A box of red pens has 4 times as many pens as a box of blue pens." shares 4 content words with "**A5.1** [T] Box A holds 15 red pens and 21 blue pens." (docs/books/word_problems_g1_g2_original_draft.md)
 - REVIEW L5-hikeheight [12-18]: number 85 in the question is not a parameter (written in the wording; check)
 - REVIEW L5-hikeheight [12-18]: number 60 in the question is not a parameter (written in the wording; check)
