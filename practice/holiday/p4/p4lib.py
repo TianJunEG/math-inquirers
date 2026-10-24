@@ -971,3 +971,475 @@ def combine(figs, label, gap=10, target=340):
                  f'style="width:{w:g}px;height:{h:g}px;max-width:none">{inner}</svg>')
         y += h + gap
     return svg(W, y - gap, body, label)
+
+
+# ================================================================ WEEK 4 (lessons 7 and 8): area and perimeter, then symmetry and nets
+GRIDC = '#C9D4EC'
+RED = WARM
+
+
+def gridlines(x0, y0, cols, rows, c, col=GRIDC, sw=1):
+    d = ''.join(f'M{x0 + i * c:g} {y0:g}V{y0 + rows * c:g}' for i in range(cols + 1)) + ''.join(f'M{x0:g} {y0 + j * c:g}H{x0 + cols * c:g}' for j in range(rows + 1))
+    return f'<path d="{d}" stroke="{col}" stroke-width="{sw}" fill="none"/>'
+
+
+def ppoly(pts, c, x0, y0, fill=SKY, sw=3, dash=None, stroke=NAVY):
+    p = ' '.join(f'{x0 + a * c:g},{y0 + b * c:g}' for a, b in pts)
+    return f'<polygon points="{p}" fill="{fill}" stroke="{stroke}" stroke-width="{sw}" stroke-linejoin="round"' + (f' stroke-dasharray="{dash}"' if dash else '') + '/>'
+
+
+def poly_area(pts):
+    """Shoelace formula (INDEPENDENT of any 'split' or 'take away' method)."""
+    s = sum(x1 * y2 - x2 * y1 for (x1, y1), (x2, y2) in zip(pts, pts[1:] + pts[:1]))
+    return abs(s) / 2
+
+
+def poly_perimeter(pts):
+    return sum(abs(x2 - x1) + abs(y2 - y1) for (x1, y1), (x2, y2) in zip(pts, pts[1:] + pts[:1]))      # all sides are horizontal or vertical
+
+
+def poly_cells(pts):
+    """The unit cells (x, y) inside a rectilinear polygon with whole-number corners (tested at the centre of each cell by ray casting)."""
+    xs, ys = [p[0] for p in pts], [p[1] for p in pts]
+    out = set()
+    for x in range(min(xs), max(xs)):
+        for y in range(min(ys), max(ys)):
+            cx, cy, inside = x + 0.5, y + 0.5, False
+            for (x1, y1), (x2, y2) in zip(pts, pts[1:] + pts[:1]):
+                if x1 == x2 and x1 > cx and min(y1, y2) < cy < max(y1, y2):
+                    inside = not inside
+            if inside:
+                out.add((x, y))
+    return out
+
+
+def is_rect(cells):
+    if not cells:
+        return False
+    xs, ys = [c[0] for c in cells], [c[1] for c in cells]
+    return len(cells) == (max(xs) - min(xs) + 1) * (max(ys) - min(ys) + 1)
+
+
+def rect_splits(cells):
+    """Every way to cut a shape of unit cells into exactly two rectangles with ONE straight cut along a grid line: [((w1, h1), (w2, h2)), ...]."""
+    xs, ys = [c[0] for c in cells], [c[1] for c in cells]
+    out = []
+    for k in range(min(xs) + 1, max(xs) + 1):
+        a, b = {c for c in cells if c[0] < k}, {c for c in cells if c[0] >= k}
+        if is_rect(a) and is_rect(b):
+            out.append((dims_of(a), dims_of(b)))
+    for k in range(min(ys) + 1, max(ys) + 1):
+        a, b = {c for c in cells if c[1] < k}, {c for c in cells if c[1] >= k}
+        if is_rect(a) and is_rect(b):
+            out.append((dims_of(a), dims_of(b)))
+    return out
+
+
+def dims_of(cells):
+    xs, ys = [c[0] for c in cells], [c[1] for c in cells]
+    return (max(xs) - min(xs) + 1, max(ys) - min(ys) + 1)
+
+
+def rectangles_with_area(area):
+    """Whole-number rectangles (shorter side first) with this area, found by trying every length."""
+    return [(a, area // a) for a in range(1, area + 1) if area % a == 0 and a <= area // a]
+
+
+def rectangles_with_perimeter(per):
+    return [(a, per // 2 - a) for a in range(1, per // 2) if a <= per // 2 - a]
+
+
+def polyominoes(n):
+    """All fixed polyominoes of n unit squares joined edge to edge (whole sides touching), as frozensets of cells."""
+    cur = {frozenset([(0, 0)])}
+    for _ in range(n - 1):
+        nxt = set()
+        for p in cur:
+            for (x, y) in p:
+                for q in ((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)):
+                    if q not in p:
+                        s = set(p) | {q}
+                        mx, my = min(a for a, _ in s), min(b for _, b in s)
+                        nxt.add(frozenset((a - mx, b - my) for a, b in s))
+        cur = nxt
+    return cur
+
+
+def cells_perimeter(cells):
+    """Count the unit edges that have a square on one side only."""
+    cells = set(cells)
+    return sum(1 for (x, y) in cells for q in ((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)) if q not in cells)
+
+
+def x_forms(a, b, flip=True):
+    """Typed writings of a rectangle 'a by b' (the shared matcher ignores case and spaces and reads x, X and the times sign alike)."""
+    out = []
+    for p, q in ([(a, b), (b, a)] if flip else [(a, b)]):
+        out += [f'{p} by {q}', f'{p}x{q}', f'{p} cm by {q} cm', f'{p}cm x {q}cm', f'{p}cm by {q}cm', f'{p} by {q} cm', f'{p}x{q} cm', f'{p} cm x {q} cm']
+    return out
+
+
+def sum_sentences(parts, sign, result):
+    """Number sentences for an area: parts = [(w, h), (w, h)], sign '+' (split) or '-' (big rectangle take away the piece).
+    The factors may be in either order, the two parts in either order for '+', with or without brackets, with the products written out, with or without '= result'."""
+    import itertools as it
+    out = []
+    orders = list(it.permutations(parts)) if sign == '+' else [tuple(parts)]
+    for o in orders:
+        for fa in ((o[0][0], o[0][1]), (o[0][1], o[0][0])):
+            for fb in ((o[1][0], o[1][1]), (o[1][1], o[1][0])):
+                a, b = f'{fa[0]}x{fa[1]}', f'{fb[0]}x{fb[1]}'
+                out += [f'{a}{sign}{b}', f'({a}){sign}({b})']
+        pa, pb = o[0][0] * o[0][1], o[1][0] * o[1][1]
+        out.append(f'{pa}{sign}{pb}')
+    return list(dict.fromkeys(out))
+
+
+def perm_accepts(tokens, seps=(', ', ' ', ' and ', '; ', ',')):
+    """Typed lists of the given tokens in any order: 'A, C, E', 'C A E', 'E and A and C' ..."""
+    out = []
+    for p in itertools.permutations(tokens):
+        for s in seps:
+            out.append(s.join(p))
+        out.append(', '.join(p[:-1]) + ' and ' + p[-1] if len(p) > 1 else p[0])
+    return list(dict.fromkeys(out))
+
+
+# ---------------------------------------------------------------- figures for lesson 7
+def l_poly(W=9, H=7, cw=5, ch=3):
+    """An L-shape: W by H with a cw by ch piece missing from the top right."""
+    return [(0, 0), (W - cw, 0), (W - cw, ch), (W, ch), (W, H), (0, H)]
+
+
+def l_shape_fig(W=9, H=7, cw=5, ch=3, label=''):
+    c = 20 if W <= 10 else 16
+    x0, y0 = 54, 24
+    pts = l_poly(W, H, cw, ch)
+    b = gridlines(x0, y0, W, H, c) + ppoly(pts, c, x0, y0)
+    b += T(x0 + (W - cw) * c / 2, y0 - 7, f'{W - cw} cm', 16) + T(x0 - 8, y0 + H * c / 2 + 5, f'{H} cm', 16, 'end')
+    b += T(x0 + W * c / 2, y0 + H * c + 20, f'{W} cm', 16) + T(x0 + W * c + 8, y0 + (ch + H) * c / 2 + 5, f'{H - ch} cm', 16, 'start')
+    b += T(x0 + (W - cw / 2) * c, y0 + ch * c - 7, 'a', 20, 'middle', 800, RED) + T(x0 + (W - cw) * c + 9, y0 + ch * c / 2 + 6, 'b', 20, 'start', 800, RED)
+    return svg(x0 + W * c + 60, y0 + H * c + 30, b, label or (f'An L-shaped figure on a 1 cm grid with only square corners: top {W - cw} cm, left side {H} cm, bottom {W} cm and right side {H - ch} cm. '
+                                                              'The two step sides are marked a (across) and b (down).'))
+
+
+def stair_poly(w=11, r=2):
+    ws = [w - 8, w - 4, w]
+    return [(0, 0), (ws[0], 0), (ws[0], r), (ws[1], r), (ws[1], 2 * r), (ws[2], 2 * r), (ws[2], 3 * r), (0, 3 * r)]
+
+
+def stair_fig(w=11, r=2, label=''):
+    c = 18 if w <= 11 else 15
+    x0, y0 = 54, 8
+    pts = stair_poly(w, r)
+    b = gridlines(x0, y0, w, 3 * r, c) + ppoly(pts, c, x0, y0) + T(x0 + w * c / 2, y0 + 3 * r * c + 20, f'{w} cm', 16) + T(x0 - 8, y0 + 3 * r * c / 2 + 5, f'{3 * r} cm', 16, 'end')
+    return svg(x0 + w * c + 12, y0 + 3 * r * c + 28, b, label or f'A staircase figure with three steps on a 1 cm grid, {w} cm along the bottom and {3 * r} cm up the left side.')
+
+
+def cut_rect_fig(a=8, b_=2):
+    c = 30
+    x0, y0 = 40, 14
+    b = gridlines(x0, y0, a, b_, c) + ppoly([(0, 0), (a, 0), (a, b_), (0, b_)], c, x0, y0)
+    b += Ln(x0 + a * c / 2, y0 - 8, x0 + a * c / 2, y0 + b_ * c + 8, 3.5, RED, '9 6') + T(x0 + a * c / 2 + 8, y0 + 18, 'cut', 16, 'start', 800, RED)
+    b += T(x0 + a * c / 2, y0 + b_ * c + 28, f'{a} cm', 16) + T(x0 - 8, y0 + b_ * c / 2 + 5, f'{b_} cm', 16, 'end')
+    return svg(x0 + a * c + 24, y0 + b_ * c + 38, b, f'A {a} cm by {b_} cm rectangle on a grid with a dashed cut line down the middle.')
+
+
+def square_from_pieces_fig(s=4):
+    c = 30
+    x0, y0 = 8, 10
+    h = s // 2
+    b = gridlines(x0, y0, s, s, c) + ppoly([(0, 0), (s, 0), (s, h), (0, h)], c, x0, y0, SKY) + ppoly([(0, h), (s, h), (s, s), (0, s)], c, x0, y0, YEL)
+    b += T(x0 + s * c / 2, y0 + h * c / 2 + 6, 'piece 1', 16) + T(x0 + s * c / 2, y0 + (s - h / 2) * c + 6, 'piece 2', 16) + T(x0 + s * c / 2, y0 + s * c + 22, f'{s} cm', 16)
+    b += T(x0 + s * c + 8, y0 + s * c / 2 + 5, f'{s} cm', 16, 'start')
+    return svg(x0 + s * c + 62, y0 + s * c + 32, b, f'The two pieces put together make a square, {s} cm by {s} cm.')
+
+
+def frame_fig(L=8, W=6, w=1, label=''):
+    c = max(10, min(20, 220 // (L + 2 * w)))
+    x0, y0 = 10, 8
+    b = gridlines(x0, y0, L + 2 * w, W + 2 * w, c) + ppoly([(0, 0), (L + 2 * w, 0), (L + 2 * w, W + 2 * w), (0, W + 2 * w)], c, x0, y0, YEL) + ppoly([(w, w), (L + w, w), (L + w, W + w), (w, W + w)], c, x0, y0, SKY)
+    b += T(x0 + (L + 2 * w) * c / 2, y0 + (W + 2 * w) * c / 2 + 5, 'photo', 16) + T(x0 + (L + 2 * w) * c / 2, y0 + (w + 0.0) * c + 18, f'{L} cm', 15, 'middle', 700, NAVY)
+    b += T(x0 + w * c + 4, y0 + (W + 2 * w) * c / 2 + 26, f'{W} cm', 15, 'start', 700, NAVY)
+    b += T(x0 + (L + 2 * w) * c + 8, y0 + w * c / 2 + 5, f'{w} cm', 15, 'start', 800, TEAL)
+    return svg(x0 + (L + 2 * w) * c + 56, y0 + (W + 2 * w) * c + 14, b, label or f'A {L} cm by {W} cm photo inside a yellow frame that is {w} cm wide all round, on a 1 cm grid.')
+
+
+def tiles_fig(n=6):
+    c, g = 30, 12
+    per = 3
+    b = ''
+    for k in range(n):
+        x, y = 10 + (k % per) * (c + g), 8 + (k // per) * (c + g)
+        b += Re(x, y, c, c, YEL, NAVY, 2.4)
+    rows = (n + per - 1) // per
+    return svg(20 + per * c + (per - 1) * g, 16 + rows * c + (rows - 1) * g, b, f'{n} separate square tiles, each 1 cm by 1 cm.')
+
+
+def tile_shapes_fig():
+    """The answer picture of 3(b): a 2 by 3 block (smallest perimeter) and a row of six (a largest perimeter)."""
+    c = 26
+    b = T(8, 18, 'Smallest perimeter: 10 cm', 15, 'start', 800, TEAL)
+    for x in range(3):
+        for y in range(2):
+            b += Re(10 + x * c, 28 + y * c, c, c, YEL, NAVY, 2.4)
+    b += T(8, 118, 'One with the largest perimeter: 14 cm', 15, 'start', 800, TEAL)
+    for x in range(6):
+        b += Re(10 + x * c, 128 + 0, c, c, YEL, NAVY, 2.4)
+    return svg(10 + 6 * c + 12, 128 + c + 10, b, 'A block of 2 by 3 tiles with perimeter 10 cm, and a row of 6 tiles with perimeter 14 cm.')
+
+
+def cut_corners_fig(a=12, b_=8, s=3, label=''):
+    c = max(10, min(22, 230 // a))
+    x0, y0 = 46, 20
+    b = ppoly([(0, 0), (a, 0), (a, b_), (0, b_)], c, x0, y0, SKY)
+    for (cx, cy) in ((0, 0), (a - s, 0), (0, b_ - s), (a - s, b_ - s)):
+        b += ppoly([(cx, cy), (cx + s, cy), (cx + s, cy + s), (cx, cy + s)], c, x0, y0, '#fff', 2.4, '6 4', RED)
+    b += T(x0 + s * c / 2, y0 + s * c / 2 + 5, f'{s} cm', 14, 'middle', 800, RED)
+    b += T(x0 + a * c / 2, y0 - 7, f'{a} cm', 16) + T(x0 - 8, y0 + b_ * c / 2 + 5, f'{b_} cm', 16, 'end')
+    return svg(x0 + a * c + 14, y0 + b_ * c + 12, b, label or f'A {a} cm by {b_} cm rectangle with a {s} cm by {s} cm square marked in each of the four corners to be cut off.')
+
+
+def squares_row_poly(sides):
+    """The outline of squares standing side by side on one line, smallest on the left (y goes down, the base line is y = top of the tallest)."""
+    top = max(sides)
+    pts = [(0, top)]
+    x = 0
+    for s in sides:
+        pts += [(x, top - s), (x + s, top - s)]
+        x += s
+    pts += [(x, top)]
+    return pts
+
+
+def squares_row_fig(sides=(2, 3, 4), label=''):
+    c = max(12, min(28, 250 // sum(sides)))
+    x0, y0 = 10, 8
+    top = max(sides)
+    b = ''
+    x = 0
+    for s in sides:
+        b += Re(x0 + x * c, y0 + (top - s) * c, s * c, s * c, YEL if s % 2 == 0 else SKY, NAVY, 3) + T(x0 + (x + s / 2) * c, y0 + (top - s / 2) * c + 6, f'{s} cm', 16)
+        x += s
+    return svg(x0 + sum(sides) * c + 12, y0 + top * c + 12, b, label or ('Squares with sides ' + ', '.join(f'{s} cm' for s in sides) + ' standing side by side on one line, smallest on the left.'))
+
+
+def garden_fig(L=10, W=8, label=''):
+    c = max(10, min(24, 250 // L))
+    x0, y0 = 46, 22
+    pr, pc = W // 2 - 1, L // 2 - 1
+    b = ''
+    for i in range(L):
+        for j in range(W):
+            path = i == pc or j == pr
+            b += f'<rect x="{x0 + i * c}" y="{y0 + j * c}" width="{c}" height="{c}" fill="{YEL if path else "#CFE8CF"}" stroke="{GRIDC}" stroke-width="1"/>'
+    b += Re(x0, y0, L * c, W * c, 'none', NAVY, 2.6) + T(x0 + L * c / 2, y0 - 7, f'{L} m', 16) + T(x0 - 8, y0 + W * c / 2 + 5, f'{W} m', 16, 'end')
+    b += T(x0 + L * c / 2, y0 + W * c + 20, 'yellow = path, 1 m wide', 15, 'middle', 700, TEAL)
+    return svg(x0 + L * c + 14, y0 + W * c + 30, b, label or f'A garden {L} m long and {W} m wide with two paths 1 m wide crossing it, one along its length and one across its width.')
+
+
+def plain_rect_fig(L=9, W=4, label=''):
+    c = max(12, min(26, 250 // L))
+    x0, y0 = 46, 22
+    b = gridlines(x0, y0, L, W, c) + ppoly([(0, 0), (L, 0), (L, W), (0, W)], c, x0, y0, SKY) + T(x0 + L * c / 2, y0 - 7, f'{L} cm', 16) + T(x0 - 8, y0 + W * c / 2 + 5, f'{W} cm', 16, 'end')
+    return svg(x0 + L * c + 14, y0 + W * c + 12, b, label or f'A rectangle {L} cm long and {W} cm wide.')
+
+
+# ---------------------------------------------------------------- the cube fold (lesson 8): INDEPENDENT of any rule about rows and steps
+def roll(o, d):
+    """The orientation (top, bottom, north, south, east, west) of a cube after rolling one square over its edge in direction d = 'N', 'S', 'E' or 'W'."""
+    t, b, n, s, e, w = o
+    return {'E': (w, e, n, s, t, b), 'W': (e, w, n, s, b, t), 'N': (s, n, t, b, e, w), 'S': (n, s, b, t, e, w)}[d]
+
+
+def fold(cells):
+    """Roll a cube over the net: each square gets the face that is on the bottom when the cube sits on it.  Returns {cell: face id} if the net folds into a cube
+    (6 different faces and every shared edge agrees), else None.  Faces 0 and 1 are opposite, 2 and 3, 4 and 5."""
+    cells = list(cells)
+    start = cells[0]
+    ori = {start: (0, 1, 2, 3, 4, 5)}
+    todo = [start]
+    while todo:
+        cur = todo.pop()
+        x, y = cur
+        for d, q in (('E', (x + 1, y)), ('W', (x - 1, y)), ('N', (x, y - 1)), ('S', (x, y + 1))):
+            if q in cells:
+                o = roll(ori[cur], d)
+                if q not in ori:
+                    ori[q] = o
+                    todo.append(q)
+                elif ori[q] != o:
+                    return None
+    face = {c: o[1] for c, o in ori.items()}
+    return face if len(set(face.values())) == 6 and len(face) == 6 else None
+
+
+def opposite_cells(cells):
+    """Pairs of squares that are opposite faces of the folded cube."""
+    f = fold(cells)
+    if f is None:
+        return None
+    inv = {v: k for k, v in f.items()}
+    return sorted(tuple(sorted((inv[a], inv[a ^ 1]))) for a in (0, 2, 4))
+
+
+def dice_fills(cells, given):
+    """Every way to write 1 to 6 on the squares of a cube net so that opposite faces add up to 7 and the given squares keep their numbers."""
+    pairs = opposite_cells(cells)
+    out = []
+    for perm in itertools.permutations(range(1, 7)):
+        lab = dict(zip(sorted(cells), perm))
+        if all(lab[c] == v for c, v in given.items()) and all(lab[a] + lab[b] == 7 for a, b in pairs):
+            out.append(lab)
+    return out
+
+
+def sym_lines(cells):
+    """The lines of symmetry of a shape made of unit squares: tries every up-down, across and corner-to-corner mirror line on the grid."""
+    cells = set(cells)
+    n = 0
+    for a in range(-2, 2 * 12):
+        n += cells == {(a - x, y) for x, y in cells}          # up-down line (a half-integer or integer position)
+        n += cells == {(x, a - y) for x, y in cells}          # across line
+    for k in range(-12, 13):
+        n += cells == {(y + k, x - k) for x, y in cells}      # corner-to-corner, one way
+        n += cells == {(k - y, k - x) for x, y in cells}      # corner-to-corner, the other way
+    return n
+
+
+# ---------------------------------------------------------------- figures for lesson 8
+def dims_c(cells):
+    return max(a for a, _ in cells) + 1, max(b for _, b in cells) + 1
+
+
+def cells_g(cells, c, ox, oy, fill=SKY, labels=None, size=18, sw=2.4):
+    b = ''
+    for (x, y) in cells:
+        b += Re(ox + x * c, oy + y * c, c, c, fill, NAVY, sw)
+        t = (labels or {}).get((x, y))
+        if t not in (None, ''):
+            b += T(ox + x * c + c / 2, oy + y * c + c / 2 + size * 0.36, t, size)
+    return b
+
+
+def nets_fig(nets, c=21, label=''):
+    """Several nets in a 2-column picture, each in a white panel with its letter."""
+    pw, ph = 144, 3 * c + 24
+    rows = (len(nets) + 1) // 2
+    b = ''
+    for i, (L, cells) in enumerate(nets):
+        px, py = (i % 2) * pw, (i // 2) * ph
+        w, h = dims_c(cells)
+        b += Re(px + 3, py + 3, pw - 6, ph - 6, '#fff', GRIDC, 1.6, 9) + T(px + 17, py + 25, L, 20, 'middle', 800, TEAL)
+        b += cells_g(cells, c, px + 30 + (112 - w * c) / 2, py + 12 + (3 * c - h * c) / 2 + 3, SKY)
+    return svg(2 * pw if len(nets) > 1 else pw, rows * ph, b, label or ('Shapes made of squares: ' + ', '.join(L for L, _ in nets) + '.'))
+
+
+def labelled_net_fig(cells, labels, c=40, size=22, fill=SKY, blank='?', label='', caption=''):
+    w, h = dims_c(cells)
+    top = 22 if caption else 4
+    b = T(4, 16, caption, 17, 'start', 800, TEAL) if caption else ''
+    for (x, y) in cells:
+        t = labels.get((x, y), '')
+        b += Re(4 + x * c, top + y * c, c, c, fill if t else '#fff', NAVY, 2.6)
+        b += T(4 + x * c + c / 2, top + y * c + c / 2 + size * 0.36, t if t else blank, size, 'middle', 800, NAVY if t else RED)
+    return svg(w * c + 8, top + h * c + 8, b, label or 'A net made of 6 squares.')
+
+
+def half_fig(kind, solved=False):
+    c = 24
+    x0, y0 = 10, 22
+    if kind == 'rocket':
+        cols, rows, half, axis = 10, 7, [(5, 0), (3, 2), (3, 5), (1, 7), (4, 7), (5, 6)], ('v', 5)
+        mir = lambda p: (10 - p[0], p[1])
+    else:
+        cols, rows, half, axis = 10, 8, [(1, 4), (0, 2), (3, 3), (6, 1), (9, 2), (10, 4)], ('h', 4)
+        mir = lambda p: (p[0], 8 - p[1])
+    full = list(half)
+    for p in [mir(q) for q in reversed(half)]:
+        if p != full[-1] and p != full[0]:
+            full.append(p)
+    b = gridlines(x0, y0, cols, rows, c)
+    if solved:
+        b += ppoly(full, c, x0, y0, '#CDE8F7', 3.4)
+    if axis[0] == 'v':
+        b += Ln(x0 + axis[1] * c, y0 - 14, x0 + axis[1] * c, y0 + rows * c + 14, 3.2, RED, '8 6')
+    else:
+        b += Ln(x0 - 14, y0 + axis[1] * c, x0 + cols * c + 14, y0 + axis[1] * c, 3.2, RED, '8 6')
+    b += f'<polyline points="{" ".join(f"{x0 + p[0] * c:g},{y0 + p[1] * c:g}" for p in half)}" fill="none" stroke="{NAVY}" stroke-width="4.4" stroke-linejoin="round" stroke-linecap="round"/>'
+    if solved:
+        mp = [mir(q) for q in half]
+        b += f'<polyline points="{" ".join(f"{x0 + p[0] * c:g},{y0 + p[1] * c:g}" for p in mp)}" fill="none" stroke="{TEAL}" stroke-width="4.4" stroke-linejoin="round" stroke-linecap="round"/>'
+    name = 'half a rocket on the left of an up-down dashed line' if kind == 'rocket' else 'the top half of a fish above an across dashed line'
+    return svg(x0 * 2 + cols * c, y0 * 2 + rows * c - 14, b, ('The finished figure, ' if solved else 'A half figure on a grid: ') + name + '.')
+
+
+def grid_cells_fig(shaped, cols, rows, c=44, fill=YEL, colnames=True, rownames=True, lines=(), label='', fill_bg='#fff'):
+    """A grid of squares with the given (col, row) cells shaded; columns A, B, C ... and rows 1, 2, 3 ... when named; lines: 'v' / 'h' dashed middle lines."""
+    x0, y0 = (26 if rownames else 8), (26 if colnames else 8)
+    b = ''
+    for x in range(cols):
+        for y in range(rows):
+            b += Re(x0 + x * c, y0 + y * c, c, c, fill if (x, y) in shaped else fill_bg, NAVY, 2.2)
+    for i in range(cols if colnames else 0):
+        b += T(x0 + i * c + c / 2, y0 - 8, 'ABCDEFGH'[i], 17)
+    for j in range(rows if rownames else 0):
+        b += T(x0 - 10, y0 + j * c + c / 2 + 6, str(j + 1), 17)
+    if 'v' in lines:
+        b += Ln(x0 + cols * c / 2, y0 - 6, x0 + cols * c / 2, y0 + rows * c + 8, 3.2, RED, '8 6')
+    if 'h' in lines:
+        b += Ln(x0 - 6, y0 + rows * c / 2, x0 + cols * c + 8, y0 + rows * c / 2, 3.2, RED, '8 6')
+    return svg(x0 + cols * c + 16, y0 + rows * c + 14, b, label or f'A grid of {cols} by {rows} squares.')
+
+
+def side_by_side(figs, label, gap=16, target=330):
+    """Several figures in one row (one svg), scaled down together if the row is wider than target."""
+    import re as _re
+    parts, W, H = [], 0, 0
+    for f in figs:
+        root = _re.match(r'<svg[^>]*>', f).group(0)
+        vb = [float(v) for v in _re.search(r'viewBox="([\d. -]+)"', root).group(1).split()]
+        parts.append((vb, f[len(root):f.rindex('</svg>')]))
+        W += vb[2] + gap
+        H = max(H, vb[3])
+    W -= gap
+    sc = min(1.0, target / W)
+    body, x = '', 0
+    for vb, inner in parts:
+        if sc < 1.0:
+            inner = lift_text(vb[2], inner)
+        body += (f'<svg x="{x * sc:g}" y="0" width="{vb[2] * sc:g}" height="{vb[3] * sc:g}" viewBox="{vb[0]:g} {vb[1]:g} {vb[2]:g} {vb[3]:g}" overflow="visible" '
+                 f'style="width:{vb[2] * sc:g}px;height:{vb[3] * sc:g}px;max-width:none">{inner}</svg>')
+        x += vb[2] + gap
+    return svg(W * sc, H * sc, body, label)
+
+
+def cuboid_fig(a=3, b_=2, h=1, label=''):
+    """A box a long, b_ deep (going back) and h high, drawn from the front and above."""
+    u = max(16, min(40, 180 // max(a, b_ + 1, 1)))
+    dx, dy = 0.55 * u, 0.42 * u
+    x0, y0 = 38, 20 + b_ * dy
+    F = [(0, 0), (a * u, 0), (a * u, h * u), (0, h * u)]
+    s = ''
+    # top face, right face, front face
+    top = [(0, 0), (a * u, 0), (a * u + b_ * dx, -b_ * dy), (b_ * dx, -b_ * dy)]
+    rgt = [(a * u, 0), (a * u + b_ * dx, -b_ * dy), (a * u + b_ * dx, h * u - b_ * dy), (a * u, h * u)]
+    for pts, fill in ((top, '#CDE8F7'), (rgt, '#B8D4EA'), (F, SKY)):
+        s += '<polygon points="' + ' '.join(f'{x0 + px:g},{y0 + py:g}' for px, py in pts) + f'" fill="{fill}" stroke="{NAVY}" stroke-width="2.6" stroke-linejoin="round"/>'
+    s += T(x0 + a * u / 2, y0 + h * u + 21, f'{a} cm', 16) + T(x0 - 8, y0 + h * u / 2 + 5, f'{h} cm', 16, 'end')
+    s += T(x0 + a * u + b_ * dx + 8, y0 - b_ * dy / 2 + 2, f'{b_} cm', 16, 'start')
+    return svg(x0 + a * u + b_ * dx + 52, y0 + h * u + 30, s, label or f'A box {a} cm long, {b_} cm wide and {h} cm high.')
+
+
+TETRAS = [('line', [(0, 0), (1, 0), (2, 0), (3, 0)]), ('square', [(0, 0), (1, 0), (0, 1), (1, 1)]), ('L', [(0, 0), (0, 1), (0, 2), (1, 2)]),
+          ('T', [(0, 0), (1, 0), (2, 0), (1, 1)]), ('zigzag', [(0, 0), (1, 0), (1, 1), (2, 1)])]
+
+
+def tetra_fig():
+    c, pw, ph = 26, 90, 112
+    b = ''
+    for i, (name, cells) in enumerate(TETRAS):
+        px, py = (i % 3) * pw, (i // 3) * ph
+        w, h = dims_c(cells)
+        b += cells_g(cells, c, px + (pw - w * c) / 2, py + 12 + (4 * c - h * c) / 2, YEL) + T(px + pw / 2, py + 4 * c + 36, name, 16, 'middle', 800, TEAL)
+    return svg(3 * pw, 2 * ph - 10, b, 'The five shapes made of 4 squares joined edge to edge: line, square, L, T and zigzag.')

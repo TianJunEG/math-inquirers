@@ -933,7 +933,7 @@ def structure_rules(all_by_level, stock):
             na, wa = info[a['id']]
             nb, wb = info[b['id']]
             sh = na & nb
-            if a['type'] == 'n' and a['ans'] == b['ans'] and a['ans'] not in ('0', '1', '2') and (len(sh) >= 2 or (len(sh) >= 1 and max(len(na), len(nb)) <= 2 and int(float(max(sh, key=float))) >= 10)):
+            if a['type'] == 'n' and a['ans'] == b['ans'] and a['ans'] not in ('0', '1', '2') and (len(sh) >= (2 if float(a['ans']) >= 10 else 3)):
                 global_fails.append('%s (L%d) and %s (L%d): same answer %s and shared numbers %s at two levels' % (a['id'], la, b['id'], lb, a['ans'], sorted(sh, key=float)))
             elif len(na) >= 3 and na == nb and (len(na) >= 4 or max(float(x) for x in na) > 12):
                 global_fails.append('%s (L%d) and %s (L%d): the same numbers %s at two levels' % (a['id'], la, b['id'], lb, sorted(na, key=float)))

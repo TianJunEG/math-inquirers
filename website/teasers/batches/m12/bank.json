@@ -181,14 +181,14 @@
     "family": "counting_pairs",
     "p": {
      "sides": 6,
-     "total": 8,
+     "total": 9,
      "ordered": true
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "5",
-    "shown": "5 ways",
+    "ans": "4",
+    "shown": "4 ways",
     "units": [
      "ways",
      "way"
@@ -197,17 +197,17 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "6",
-     "4",
-     "7",
+     "5",
      "3",
-     "10",
-     "15",
-     "50"
+     "6",
+     "2",
+     "8",
+     "14",
+     "40"
     ],
-    "q": "Mei rolls a yellow die and a green die. The two numbers add up to 8. A yellow 2 and a green 6 is different from a yellow 6 and a green 2. How many different ways can this happen?",
-    "hint": "List the yellow number first. Try yellow 2, yellow 3 and so on, and ask what the green number must be.",
-    "why": "The pairs (yellow, green) are 2 and 6, 3 and 5, 4 and 4, 5 and 3, and 6 and 2. That is 5 ways.",
+    "q": "Mei rolls a yellow die and a green die. The two numbers add up to 9. A yellow 3 and a green 6 is different from a yellow 6 and a green 3. How many different ways can this happen?",
+    "hint": "List the yellow numbers in order, starting with the smallest one that can work. For each one, ask what the green number must be.",
+    "why": "The pairs (yellow, green) are 3 and 6, 4 and 5, 5 and 4, and 6 and 3. That is 4 ways.",
     "date": "12-05"
    },
    {
@@ -443,43 +443,41 @@
     "date": "12-10"
    },
    {
-    "id": "L1-swimbike",
+    "id": "L1-libraryday",
     "level": 1,
-    "frame": "swimbike",
-    "kind": "venn_both",
-    "topic": "Sets that overlap",
-    "sub": "sorting.overlap_both",
-    "family": "sorting",
+    "frame": "libraryday",
+    "kind": "calendar_nth",
+    "topic": "Calendars",
+    "sub": "calendar.nth_weekday_date",
+    "family": "calendar",
     "p": {
-     "total": 50,
-     "a": 45,
-     "b": 40
+     "day": 2,
+     "on": "Monday",
+     "want": "Wednesday",
+     "nth": 4
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "35",
-    "shown": "35 children",
-    "units": [
-     "children",
-     "children"
-    ],
+    "ans": "25",
+    "shown": "25",
+    "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "36",
-     "34",
-     "37",
-     "33",
-     "70",
-     "45",
-     "25",
-     "350"
+     "26",
+     "24",
+     "27",
+     "23",
+     "50",
+     "35",
+     "15",
+     "250"
     ],
-    "q": "In a group of 50 children, 45 can swim and 40 can ride a bicycle. Every child can do at least one of the two. How many children can do both?",
-    "hint": "Add the swimmers and the cyclists. The total is bigger than the group, so some children were counted twice.",
-    "why": "45 + 40 = 85. The group has only 50 children, so 85 − 50 = 35 children were counted twice. They can do both.",
+    "q": "A library holds story time on every Wednesday. In one month, the 2nd is a Monday. On what date is the 4th story time of that month?",
+    "hint": "Find the first Wednesday of the month. Then add 7 for each next story time.",
+    "why": "The first Wednesday is the 4th. Adding 7 each time gives the 11th, the 18th and the 25th. The 4th story time is on the 25th.",
     "date": "12-11"
    },
    {
@@ -758,8 +756,8 @@
      "28",
      "380"
     ],
-    "q": "60 children stand in a circle. They are numbered 1 to 60 in order, going round. Which child is exactly opposite child number 8?",
-    "hint": "Opposite means halfway round the circle. How many children are in half of the circle?",
+    "q": "Lamp posts stand round a pond, 60 of them, numbered 1 to 60 in order, going round. Which lamp post is exactly opposite lamp post number 8?",
+    "hint": "Opposite means halfway round the pond. How many lamp posts are in half of the circle?",
     "why": "Half of 60 is 30. Count on 30 places from 8: 8 + 30 = 38.",
     "date": "12-18"
    },
@@ -858,7 +856,7 @@
     ],
     "q": "A sticker covers one digit in this sum: 4? + 25 = 71. Which digit is under the sticker?",
     "hint": "Look at the ones column: 5 plus what digit gives a number that ends in 1?",
-    "why": "Check 46 + 25 = 71. The digit under the sticker is 6.",
+    "why": "In the ones column, 5 plus the hidden digit must end in 1. 5 + 6 = 11 does, so the digit is 6. Check: 46 + 25 = 71.",
     "date": "12-20"
    },
    {
@@ -963,48 +961,41 @@
        {
         "star": 2
        },
-       24
+       18
       ],
       [
        {
         "star": 1,
         "moon": 1
        },
-       40
-      ],
-      [
-       {
-        "moon": 1,
-        "sun": 2
-       },
-       62
+       50
       ]
      ],
-     "ask": "sun",
-     "maxv": 40
+     "ask": "moon",
+     "maxv": 50
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "17",
-    "shown": "17",
+    "ans": "41",
+    "shown": "41",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "18",
-     "16",
-     "19",
-     "15",
-     "34",
-     "27",
-     "7",
-     "170"
+     "42",
+     "40",
+     "43",
+     "39",
+     "82",
+     "51",
+     "31",
+     "410"
     ],
-    "q": "A star, a moon and a sun each stand for a whole number. Star + star = 24. Star + moon = 40. Moon + sun + sun = 62. What number does the sun stand for?",
-    "hint": "Find the star first. Then find the moon. Then the sun.",
-    "why": "Star: 24 ÷ 2 = 12. Moon: 40 − 12 = 28. Two suns: 62 − 28 = 34, so one sun is 34 ÷ 2 = 17.",
+    "q": "A star and a moon each stand for a whole number. Star + star = 18. Star + moon = 50. What number does the moon stand for?",
+    "hint": "Find the star first. Then use it in the second line.",
+    "why": "Star: 18 ÷ 2 = 9. Moon: 50 − 9 = 41.",
     "date": "12-23"
    },
    {
@@ -1435,7 +1426,7 @@
     "level": 2,
     "frame": "sudoku4",
     "kind": "latin_square",
-    "topic": "Fill the grid",
+    "topic": "Fill the timetable",
     "sub": "logic_grid.latin_square",
     "family": "logic_grid",
     "p": {
@@ -1490,9 +1481,9 @@
      "14",
      "40"
     ],
-    "q": "Fill a 4 by 4 grid with 1, 2, 3 and 4. Every row and every column must have each number once. The top row begins 1, 2. The row below has a 1 in its third square. The third row begins with 3. The bottom-right square is 2. What number goes in the bottom-left square?",
-    "hint": "The top row can only end 3, 4 or 4, 3. Use the bottom-right square to decide.",
-    "why": "The grid is 1 2 4 3 / 2 3 1 4 / 3 4 2 1 / 4 1 3 2. The bottom-left square holds 4.",
+    "q": "Four friends, Ana, Ben, Cai and Dev, play four games, numbered 1 to 4, in four rounds. In every round the four friends play four different games, and each friend plays every game once. In round 1, Ana plays game 1 and Ben plays game 2. In round 2, Cai plays game 1. In round 3, Ana plays game 3. In round 4, Dev plays game 2. Which game does Ana play in round 4?",
+    "hint": "In round 1, Cai and Dev play games 3 and 4, in some order. Use the other clues to decide which is which.",
+    "why": "The full timetable, in the order Ana, Ben, Cai, Dev, is: round 1: 1, 2, 4, 3. Round 2: 2, 3, 1, 4. Round 3: 3, 4, 2, 1. Round 4: 4, 1, 3, 2. Ana plays game 4 in round 4.",
     "date": "12-02"
    },
    {
@@ -1820,10 +1811,10 @@
     "fmt": "int",
     "type": "n",
     "ans": "41",
-    "shown": "41 patches",
+    "shown": "41 stones",
     "units": [
-     "patches",
-     "patche"
+     "stones",
+     "stone"
     ],
     "prefix": [],
     "accept": [],
@@ -1838,9 +1829,9 @@
      "31",
      "410"
     ],
-    "q": "Mum sews a quilt from 9 rows of 9 square patches. The patches are dark and light in turns along every row and every column, and the top left patch is dark. How many dark patches are there?",
-    "hint": "Count all the patches first. Dark and light patches take turns.",
-    "why": "There are 9 × 9 = 81 patches. Dark and light take turns and the first patch is dark, so there is one more dark patch than light patches. 81 + 1 = 82, and 82 ÷ 2 = 41 patches.",
+    "q": "A courtyard floor has 9 rows of 9 square paving stones. Grey and red stones take turns in every row and in every line of stones going down the floor, so two stones that share a side never match. The first stone in the first row is grey. How many grey stones are on the floor?",
+    "hint": "Count all the stones first. Grey and red stones take turns.",
+    "why": "There are 9 × 9 = 81 stones. Grey and red take turns and the first stone is grey, so there is one more grey stone than red stones. 81 + 1 = 82, and 82 ÷ 2 = 41 stones.",
     "date": "12-10"
    },
    {
@@ -1899,33 +1890,33 @@
     "p": {
      "edges": [
       [
-       "School",
-       "Park",
+       "Pier",
+       "Hill",
        12
       ],
       [
-       "School",
-       "Market",
+       "Pier",
+       "Cove",
        8
       ],
       [
-       "Market",
-       "Park",
+       "Cove",
+       "Hill",
        3
       ],
       [
-       "Park",
-       "Library",
+       "Hill",
+       "Dock",
        9
       ],
       [
-       "Market",
-       "Library",
+       "Cove",
+       "Dock",
        16
       ]
      ],
-     "a": "School",
-     "b": "Library"
+     "a": "Pier",
+     "b": "Dock"
     },
     "t": {},
     "fmt": "int",
@@ -1952,9 +1943,9 @@
      "30",
      "200"
     ],
-    "q": "Roads join four places. The road lengths in kilometres are: School to Park 12, School to Market 8, Market to Park 3, Park to Library 9, Market to Library 16. What is the shortest way from School to Library, in kilometres?",
-    "hint": "List the different routes from School to Library. Add the road lengths for each route.",
-    "why": "The routes are School-Park-Library 21, School-Market-Library 24, and School-Market-Park-Library 8 + 3 + 9 = 20. The shortest is 20 km.",
+    "q": "Bridges join four islands. The bridge lengths in kilometres are: Pier to Hill 12, Pier to Cove 8, Cove to Hill 3, Hill to Dock 9, Cove to Dock 16. What is the shortest way from Pier to Dock, in kilometres?",
+    "hint": "List the different routes from Pier to Dock. Add the bridge lengths for each route.",
+    "why": "The routes are Pier-Hill-Dock 21, Pier-Cove-Dock 24, and Pier-Cove-Hill-Dock 8 + 3 + 9 = 20. The shortest is 20 km.",
     "date": "12-12"
    },
    {
@@ -2009,43 +2000,43 @@
     "date": "12-13"
    },
    {
-    "id": "L2-stadiumrows",
+    "id": "L2-tinstack",
     "level": 2,
-    "frame": "stadiumrows",
+    "frame": "tinstack",
     "kind": "sum_range",
     "topic": "Adding in order",
     "sub": "series_sum.add_in_pairs",
     "family": "series_sum",
     "p": {
-     "lo": 4,
-     "hi": 31,
-     "step": 3
+     "lo": 3,
+     "hi": 8,
+     "step": 1
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "175",
-    "shown": "175 seats",
+    "ans": "33",
+    "shown": "33 tins",
     "units": [
-     "seats",
-     "seat"
+     "tins",
+     "tin"
     ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "176",
-     "174",
-     "177",
-     "173",
-     "350",
-     "185",
-     "165",
-     "1750"
+     "34",
+     "32",
+     "35",
+     "31",
+     "66",
+     "43",
+     "23",
+     "330"
     ],
-    "q": "A small stadium has 10 rows of seats. Row 1 has 4 seats, row 2 has 7 seats, row 3 has 10 seats, and each next row has 3 more seats. Row 10 has 31 seats. How many seats are in all 10 rows?",
-    "hint": "Pair the first row with the last, the second row with the one before last.",
-    "why": "Pairs: 4 + 31, 7 + 28, 10 + 25, 13 + 22, 16 + 19. Each pair is 35. 5 pairs make 175 seats.",
+    "q": "A shop stacks tins in rows. The top row has 3 tins, the next row has 4 tins, and each lower row has 1 more tin than the row above it, down to a bottom row of 8 tins. How many tins are in the stack?",
+    "hint": "Pair the top row with the bottom row, the second row with the one above the bottom, and so on.",
+    "why": "The rows have 3, 4, 5, 6, 7 and 8 tins. Pairs: 3 + 8, 4 + 7, 5 + 6. Each pair is 11. 3 pairs make 33 tins.",
     "date": "12-14"
    },
    {
@@ -2401,11 +2392,11 @@
     "family": "number_properties",
     "p": {
      "lo": 1,
-     "hi": 100,
+     "hi": 90,
      "preds": [
       [
        "multiple",
-       7
+       4
       ]
      ],
      "ask": "count"
@@ -2413,8 +2404,8 @@
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "14",
-    "shown": "14 numbers",
+    "ans": "22",
+    "shown": "22 numbers",
     "units": [
      "numbers",
      "number"
@@ -2423,19 +2414,19 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "15",
-     "13",
-     "16",
-     "12",
-     "28",
-     "7",
+     "23",
+     "21",
      "24",
-     "4",
-     "140"
+     "20",
+     "44",
+     "11",
+     "32",
+     "12",
+     "220"
     ],
-    "q": "Farhan writes down the numbers from 1 to 100 that you reach by counting in 7s. How many numbers does he write down?",
-    "hint": "Count in 7s: 7, 14, 21 and so on. You can also divide 100 by 7.",
-    "why": "The 14th number in the 7 times table is 98, and the 15th is 105, which is too big. So Farhan writes 14 numbers.",
+    "q": "Farhan counts in 4s, starting at 4: 4, 8, 12 and so on. He stops before he goes past 90. How many numbers does he say?",
+    "hint": "Count in 4s: 4, 8, 12 and so on. You can also ask how many 4s fit into 90.",
+    "why": "The 22nd number in the 4 times table is 88, and the 23rd is 92, which is past 90. So Farhan says 22 numbers numbers.",
     "date": "12-23"
    },
    {
@@ -2454,51 +2445,51 @@
       "Wei"
      ],
      "things": [
-      "choir",
-      "chess",
-      "drama",
-      "football"
+      "cat",
+      "fish",
+      "rabbit",
+      "bird"
      ],
      "clues": [
       [
        "Dina",
-       "choir",
+       "cat",
        false
       ],
       [
        "Dina",
-       "chess",
+       "fish",
        false
       ],
       [
        "Dina",
-       "football",
+       "bird",
        false
       ],
       [
        "Arjun",
-       "choir",
+       "cat",
        false
       ],
       [
        "Arjun",
-       "football",
+       "bird",
        false
       ],
       [
        "Hui Min",
-       "football",
+       "bird",
        false
       ]
      ],
-     "ask_thing": "choir",
-     "verb": "joins the"
+     "ask_thing": "bird",
+     "verb": "has the"
     },
     "t": {},
     "fmt": "int",
     "type": "s",
-    "ans": "hui min",
-    "shown": "Hui Min",
+    "ans": "wei",
+    "shown": "Wei",
     "units": [],
     "prefix": [],
     "accept": [],
@@ -2506,11 +2497,11 @@
     "wrong": [
      "Dina",
      "Arjun",
-     "Wei"
+     "Hui Min"
     ],
-    "q": "Dina, Arjun, Hui Min and Wei each join one club: choir, chess, drama or football. Dina joins neither the choir, the chess club nor football. Arjun joins neither the choir nor football. Hui Min does not join football. Who joins the choir?",
-    "hint": "Dina has only one club left to choose from. Then see who else is left.",
-    "why": "Dina joins the drama, Arjun joins the chess, Hui Min joins the choir, Wei joins the football. So Hui Min joins the choir.",
+    "q": "Dina, Arjun, Hui Min and Wei each have one pet: a cat, a fish, a rabbit or a bird. Dina has neither the cat, the fish nor the bird. Arjun has neither the cat nor the bird. Hui Min does not have the bird. Who has the bird?",
+    "hint": "Dina has only one pet left to choose from. Then see who else is left.",
+    "why": "Dina has the rabbit, Arjun has the fish, Hui Min has the cat, Wei has the bird. So Wei has the bird.",
     "date": "12-24"
    },
    {
@@ -2808,41 +2799,54 @@
     "date": "12-30"
    },
    {
-    "id": "L2-cubestack",
+    "id": "L2-beetle",
     "level": 2,
-    "frame": "cubestack",
-    "kind": "square_stack",
-    "topic": "Stacks",
-    "sub": "stacks.layers_of_cubes",
-    "family": "stacks",
+    "frame": "beetle",
+    "kind": "displacement",
+    "topic": "Walking on a grid",
+    "sub": "spatial.net_displacement",
+    "family": "spatial",
     "p": {
-     "n": 6
+     "moves": [
+      [
+       "E",
+       9
+      ],
+      [
+       "N",
+       4
+      ],
+      [
+       "W",
+       3
+      ]
+     ]
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "91",
-    "shown": "91 cubes",
+    "ans": "10",
+    "shown": "10 tiles",
     "units": [
-     "cubes",
-     "cube"
+     "tiles",
+     "tile"
     ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "92",
-     "90",
-     "93",
-     "89",
-     "182",
-     "101",
-     "81",
-     "910"
+     "11",
+     "9",
+     "12",
+     "8",
+     "20",
+     "5",
+     "0",
+     "100"
     ],
-    "q": "A stack of cubes has 6 layers. The top layer is 1 cube. The next layer is a square of 2 by 2 cubes, the next is 3 by 3 cubes, and so on down to the bottom layer. How many cubes are in the whole stack?",
-    "hint": "Find the number of cubes in each layer: 1, then 2 × 2, then 3 × 3. Add them up.",
-    "why": "The layers are 1 + 4 + 9 + 16 + 25 + 36. Added together they make 91 cubes.",
+    "q": "A beetle crawls on a floor made of square tiles. It starts at a corner mark, crawls 9 tiles east, then 4 tiles north, then 3 tiles west. The tile lines are the only paths it may use. What is the fewest number of tiles it must crawl to get back to the corner mark?",
+    "hint": "Work out how far east or west of the mark the beetle is now, and how far north or south.",
+    "why": "East 9 and west 3 leave the beetle 9 − 3 = 6 tiles east of the mark. It is also 4 tiles north. To get back it must crawl 6 tiles west and 4 tiles south: 6 + 4 = 10 tiles.",
     "date": "12-31"
    }
   ],

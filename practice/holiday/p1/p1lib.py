@@ -362,3 +362,175 @@ def ways_table(ways, coins, caption=''):
         for j in range(nc):
             body += T(2 + wc + j * cw + cw / 2, y + rh / 2 + 6, w[j], 17, 'middle', 700)
     return svg(W, 2 + (len(ways) + 1) * rh + 4, body, caption or 'A table of ways to pay: ' + str(len(ways)) + ' ways, with the number of each coin')
+
+
+# ================================================================ week 4 (lessons 7 and 8): shapes, segments, grids, Venn loops, pet grid, polyominoes
+def Po(pts, fill='none', stroke=NAVY, sw=2.4):
+    return f'<polygon points="{" ".join(f"{x:.1f},{y:.1f}" for x, y in pts)}" fill="{fill}" stroke="{stroke}" stroke-width="{sw}" stroke-linejoin="round"/>'
+
+
+def regular_pts(n, cx, cy, r, rot=-90):
+    return [(cx + r * math.cos(math.radians(rot + 360 * k / n)), cy + r * math.sin(math.radians(rot + 360 * k / n))) for k in range(n)]
+
+
+def picture_parts(parts, w, h, caption):
+    """A flat picture drawn from parts: ('poly', pts, fill) | ('circle', cx, cy, r, fill) | ('line', x1, y1, x2, y2).  Coordinates are the drawing's own units."""
+    body = ''
+    for p in parts:
+        if p[0] == 'poly':
+            body += Po(p[1], p[2], NAVY, 4)
+        elif p[0] == 'circle':
+            body += Ci(p[1], p[2], p[3], p[4], NAVY, 4)
+        else:
+            body += Ln(p[1], p[2], p[3], p[4], 5)
+    return svg(w, h, body, caption)
+
+
+def shape_gallery(caption=''):
+    """The six named shapes of the printed 'shapes6' picture: circle, triangle, square, pentagon, hexagon, octagon (two rows of three)."""
+    names = ['circle', 'triangle', 'square', 'pentagon', 'hexagon', 'octagon']
+    body = ''
+    for k, nm in enumerate(names):
+        cx, cy = 50 + (k % 3) * 100, 40 + (k // 3) * 96
+        if nm == 'circle':
+            body += Ci(cx, cy, 30, '#fff', NAVY, 2.6)
+        elif nm == 'triangle':
+            body += Po([(cx, cy - 32), (cx + 34, cy + 26), (cx - 34, cy + 26)], '#fff')
+        elif nm == 'square':
+            body += Po([(cx - 28, cy - 28), (cx + 28, cy - 28), (cx + 28, cy + 28), (cx - 28, cy + 28)], '#fff')
+        else:
+            body += Po(regular_pts({'pentagon': 5, 'hexagon': 6, 'octagon': 8}[nm], cx, cy, 32, -90 if nm != 'octagon' else -67.5), '#fff')
+        body += T(cx, cy + 52, nm, 16, 'middle', 800)
+    return svg(300, 200, body, caption or 'Six shapes: circle, triangle, square, pentagon, hexagon, octagon')
+
+
+def seg_body(segs, ox, oy, scale, H, sw=3.4, c=NAVY):
+    """Segments given in a y-up drawing grid, drawn at (ox, oy) with the given scale; H = the drawing height in the same units."""
+    return ''.join(Ln(ox + a[0] * scale, oy + (H - a[1]) * scale, ox + b[0] * scale, oy + (H - b[1]) * scale, sw, c) for a, b in segs)
+
+
+def seg_svg(segs, W, H, scale, caption, fills=()):
+    """One drawing from segments (y up).  fills: polygons (list of points) shaded first."""
+    body = ''.join(Po([(x * scale + 4, (H - y) * scale + 4) for x, y in f], '#FDF3D0', 'none', 0) for f in fills)
+    body += seg_body(segs, 4, 4, scale, H)
+    return svg(W * scale + 8, H * scale + 8, body, caption)
+
+
+def tri_lines_fig(counts):
+    """Three triangles with lines from the top corner to the bottom edge, as printed: counts = [(lines, triangles), ...] with the captions '1 line' and '3 triangles'."""
+    body, x = '', 4
+    pw = 96
+    for lines, tris in counts:
+        W, Hh = 12, 8
+        apex = (W / 2, Hh)
+        segs = [((0, 0), (W, 0)), ((0, 0), apex), ((W, 0), apex)] + [(apex, (W * i / (lines + 1), 0)) for i in range(1, lines + 1)]
+        sc = (pw - 8) / W
+        body += Po([(x, 6 + Hh * sc), (x + W * sc, 6 + Hh * sc), (x + W * sc / 2, 6)], '#FDF3D0', 'none', 0) + seg_body(segs, x, 6, sc, Hh, 3)
+        body += T(x + (pw - 8) / 2, 82, f'{lines} line' + ('s' if lines > 1 else ''), 14, 'middle', 800) + T(x + (pw - 8) / 2, 100, f'{tris} triangles', 14, 'middle', 700, TEAL)
+        x += pw + 6
+    return svg(x - 2, 108, body, 'Triangles with lines drawn from the top corner to the bottom: ' + ', '.join(f'{a} line' + ('s' if a > 1 else '') + f' gives {b} triangles' for a, b in counts))
+
+
+def tri_lines_plain(n, caption=''):
+    """One big triangle with n lines from the top corner to the bottom edge (no counts written)."""
+    W, Hh = 12, 8
+    apex = (W / 2, Hh)
+    segs = [((0, 0), (W, 0)), ((0, 0), apex), ((W, 0), apex)] + [(apex, (W * i / (n + 1), 0)) for i in range(1, n + 1)]
+    return seg_svg(segs, W, Hh, 24, caption or f'A big triangle with {n} lines from the top corner to the bottom', fills=[[(0, 0), (W, 0), apex]])
+
+
+def grid_fig(a, b, cell=44, caption=''):
+    """A grid of a squares long and b squares high."""
+    segs = [((0, y), (a, y)) for y in range(b + 1)] + [((x, 0), (x, b)) for x in range(a + 1)]
+    return seg_svg(segs, a, b, cell, caption or f'A grid {a} squares long and {b} squares high')
+
+
+def edges_fig(edges, W, H, cell, fills=(), caption=''):
+    """Unit edges of a square drawing ((x1, y1), (x2, y2)), y up; fills: (x, y, w, h, colour) rectangles shaded first."""
+    body = ''.join(Re(4 + x * cell, 4 + (H - y - h) * cell, w * cell, h * cell, col, 'none', 0) for x, y, w, h, col in fills)
+    body += seg_body(sorted(edges), 4, 4, cell, H, 3.4)
+    return svg(W * cell + 8, H * cell + 8, body, caption)
+
+
+def venn(left, right, groups=None, caption=''):
+    """Two overlapping loops in a box (empty), or with the numbers placed: groups = dict(left=[..], both=[..], right=[..], out=[..])."""
+    body = Re(2, 2, 296, 198, '#fff', '#7F8AA3', 1.8)
+    body += T(86, 24, left, 15, 'middle', 800) + T(216, 24, right, 15, 'middle', 800)
+    body += f'<ellipse cx="112" cy="110" rx="90" ry="68" fill="none" stroke="{NAVY}" stroke-width="3"/><ellipse cx="188" cy="110" rx="90" ry="68" fill="none" stroke="{NAVY}" stroke-width="3"/>'
+    if groups:
+        def put(nums, cx, cy, per):
+            out = ''
+            rows = [nums[i:i + per] for i in range(0, len(nums), per)]
+            y0 = cy - (len(rows) - 1) * 10
+            for r, row in enumerate(rows):
+                out += T(cx, y0 + r * 21 + 6, ' '.join(map(str, row)), 17, 'middle', 800)
+            return out
+        body += put(groups.get('left', []), 68, 110, 2) + put(groups.get('both', []), 150, 110, 2) + put(groups.get('right', []), 232, 110, 2) + put(groups.get('out', []), 150, 188, 6)
+        body += T(150, 168, '', 12)
+    return svg(300, 204, body, caption or f'Two loops in a box: "{left}" and "{right}"')
+
+
+def pets_grid(caption=''):
+    """Clue grid: rows Ali, Mei, Ben; columns Cat, Dog, Fish; Ali's cat and dog are crossed (clue 1), as printed."""
+    cw, rw, nw = 66, 36, 80
+    W = nw + 3 * cw + 4
+    body = Re(2, 2, nw, rw, '#EDEDED', NAVY, 2) + ''.join(Re(2 + nw + j * cw, 2, cw, rw, '#EDEDED', NAVY, 2) + T(2 + nw + j * cw + cw / 2, 2 + rw / 2 + 6, nm, 16, 'middle', 800) for j, nm in enumerate(['Cat', 'Dog', 'Fish']))
+    for i, nm in enumerate(['Ali', 'Mei', 'Ben']):
+        y = 2 + (i + 1) * rw
+        body += Re(2, y, nw, rw, '#EDEDED', NAVY, 2) + T(2 + nw / 2, y + rw / 2 + 6, nm, 16, 'middle', 800)
+        for j in range(3):
+            body += Re(2 + nw + j * cw, y, cw, rw, '#fff', NAVY, 2)
+            if nm == 'Ali' and j < 2:
+                body += T(2 + nw + j * cw + cw / 2, y + rw / 2 + 9, '×', 28, 'middle', 800, WARM)
+    return svg(W, 4 * rw + 6, body, caption or 'Clue grid. Rows Ali, Mei and Ben. Columns cat, dog and fish. Ali has crosses under cat and dog.')
+
+
+def line_boxes(labels=('1st', '2nd', '3rd', '4th'), filled=None, caption=''):
+    bw = 72
+    body = ''
+    for i, lab in enumerate(labels):
+        x = 2 + i * bw
+        body += Re(x, 22, bw - 4, 46, '#fff' if not (filled and filled.get(i)) else PALE, NAVY, 2.2, 6) + T(x + (bw - 4) / 2, 15, lab, 16, 'middle', 800)
+        if filled and filled.get(i):
+            body += T(x + (bw - 4) / 2, 52, filled[i], 17, 'middle', 800)
+    return svg(len(labels) * bw, 74, body, caption or 'Four places in a line: ' + ', '.join(labels))
+
+
+def tiles(nums, caption=''):
+    body = ''.join(Re(4 + i * 62, 4, 54, 54, '#FFE08A', NAVY, 2.4, 8) + T(4 + i * 62 + 27, 40, n, 26, 'middle', 800) for i, n in enumerate(nums))
+    return svg(len(nums) * 62 + 4, 62, body, caption or 'Number tiles ' + ', '.join(map(str, nums)))
+
+
+def poly_row(items, box=92, per_row=3, caption=''):
+    """Small drawings in a row.  items: (polys, label) with polys = [(points, fill)], points in any units (each drawing is scaled to fit one box)."""
+    body, rows = '', (len(items) + per_row - 1) // per_row
+    cw = box + 22
+    for k, (polys, label) in enumerate(items):
+        xs = [x for p, _ in polys for x, _ in p]
+        ys = [y for p, _ in polys for _, y in p]
+        w, h = max(xs) - min(xs), max(ys) - min(ys)
+        s = min(box / (w or 1), box / (h or 1), 40)
+        r, c = divmod(k, per_row)
+        ox = 6 + c * cw + (box - w * s) / 2 - min(xs) * s
+        oy = 6 + r * (box + 52) + (box - h * s) / 2 - min(ys) * s
+        for p, fill in polys:
+            body += Po([(ox + x * s, oy + y * s) for x, y in p], fill, NAVY, 2.6)
+        for li, line in enumerate(label.split('|')):
+            body += T(6 + c * cw + box / 2, 6 + r * (box + 52) + box + 20 + li * 17, line, 14, 'middle', 700)
+    return svg(6 + per_row * cw if len(items) >= per_row else 6 + len(items) * cw, 6 + rows * (box + 52) - 8, body, caption or 'Shapes made from two triangles')
+
+
+def polyomino_row(shapes, cell=20, per_row=5, caption=''):
+    """Shapes made of joined squares (each shape = list of (x, y) cells), drawn in rows."""
+    body, x, y, rowh = '', 6, 6, 0
+    gap = 26
+    for sh in shapes:
+        w = (max(c[0] for c in sh) + 1) * cell
+        h = (max(c[1] for c in sh) + 1) * cell
+        if x + w > 288 and x > 6:
+            x, y, rowh = 6, y + rowh + gap, 0
+        for cx, cy in sh:
+            body += Re(x + cx * cell, y + cy * cell, cell, cell, '#BFE3E0', NAVY, 2)
+        x += w + gap
+        rowh = max(rowh, h)
+    return svg(300, y + rowh + 8, body, caption or 'Shapes made of joined squares')

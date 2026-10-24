@@ -1,6 +1,6 @@
 # Structure report (taxonomy.json)
 
-Sources searched (whole working tree, tracked or not): 6604 files, 1353.9 MB, sha256 e57711cddecc6031fa00b778.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 174, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 235, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
+Sources searched (whole working tree, tracked or not): 6604 files, 1353.9 MB, sha256 f5d485ff197171466d84f60e.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 174, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 235, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
 
 Rules. Levels 3 to 6 (TEASER-STRICT): per level and calendar quarter at most 1 puzzle per sub-structure and 3 per family; the same sub-structure never within 30 days of itself across a quarter boundary; an answer of 10 or more appears once per level and a single digit at most 4 times. Levels 1 and 2 (L1L2-GAP60): the same sub-structure at least 60 days apart (circular, 365- and 366-day year), a family at most 3 times in any 60 days and never on consecutive days, an answer not repeated within 60 days and a single-digit answer at most 2 times in 60 days. All levels: no repeated frame, no two puzzles with most numbers or the same story in common; the sub-structures used by the fixed puzzles on the level pages (counting_choices.digit_cards_arrangements, fractions.fraction_of_remainder, multiples.common_multiple, remainders.two_conditions, sequence.count_on, sequence.which_term) are never used by the bank.
 
@@ -18,7 +18,7 @@ Levels 3 to 6 (quarter rule): one use per sub-structure and at most 3 per family
 
 | Level | Sub-structures | Families | Rule | Uses per sub a year | Needed | Slack | True capacity (family-capped) | Verdict |
 |---|---|---|---|---|---|---|---|---|
-| 1 | 69 | 39 | gap 60 days | 6 | 61 | 8 | 402 a year | FAIL: slack 8 below 10 (needs 71 or more sub-structures) |
+| 1 | 70 | 40 | gap 60 days | 6 | 61 | 9 | 408 a year | FAIL: slack 9 below 10 (needs 71 or more sub-structures) |
 | 2 | 93 | 48 | gap 60 days | 6 | 61 | 32 | 528 a year | ok |
 | 3 | 116 | 51 | once a quarter | 1 per quarter | 92 | 13 | 105 per quarter | ok |
 | 4 | 117 | 56 | once a quarter | 1 per quarter | 92 | 15 | 107 per quarter | ok |
@@ -67,9 +67,12 @@ Usable sub-structures of round 3 that no released puzzle uses yet (each has a so
 | 5 | 61 | 3 | 5% | 18 | 36 | ok |
 | 6 | 61 | 4 | 7% | 24 | 36 | ok |
 
-Structure FAIL count (all released months): 68
-- FAIL L1: sub-structure group:days_in_a_range returns after 6 days (minimum 60, 365-day year): L1-cousindays and L1-swimcourse
-- FAIL L1: sub-structure group:days_in_a_range returns after 6 days (minimum 60, 366-day year): L1-cousindays and L1-swimcourse
+Structure FAIL count (all released months): 67
+- FAIL L1: answer 18 repeats within 60 days (L1-tilewall and L1-woodpecker)
+- FAIL L1: answer 18 repeats within 60 days (L1-tilewall and L1-libraryday)
+- FAIL L1: answer 18 repeats within 60 days (L1-woodpecker and L1-libraryday)
+- FAIL L1: answer 27 repeats within 60 days (L1-matchhouse and L1-traysame)
+- FAIL L1: answer 28 repeats within 60 days (L1-cardstrip and L1-whichsun)
 - FAIL L2: sub-structure group:days_in_a_range returns after 26 days (minimum 60, 365-day year): L2-clubdays and L2-ticketnumbers
 - FAIL L2: sub-structure group:division_with_remainder returns after 11 days (minimum 60, 365-day year): L2-thinknumber and L2-schoolbus
 - FAIL L2: sub-structure group:division_with_remainder returns after 19 days (minimum 60, 365-day year): L2-thinknumber and L2-mooncakes
@@ -85,16 +88,12 @@ Structure FAIL count (all released months): 68
 - FAIL L5 quarter 4: sub-structure group:division_with_remainder used 2 times: L5-divquotient, L5-eggboxes
 - FAIL L6 quarter 4: sub-structure group:trace_a_loop used 2 times: L6-nested, L6-program
 - FAIL L6 quarter 4: sub-structure group:ratio_after_a_change used 2 times: L6-redblue, L6-stickerratio
+- FAIL L1-matchhouse (L1) and L3-mapshort (L3): same answer 27 and shared numbers ['12', '13'] at two levels
+- FAIL L1-marblegame (L1) and L2-sudoku4 (L2): same answer 4 and shared numbers ['3', '4'] at two levels
+- FAIL L1-marblegame (L1) and L2-stickgame (L2): the same story skeleton at two levels (shared words pile,should,sure,win,winn)
 - FAIL L1-drinksmachine (L1) and L2-ticketnotes (L2): the same story skeleton at two levels (shared words change,machine,paid,price)
-- FAIL L1-numpattern (L1) and L4-pages25 (L4): same answer 25 and shared numbers ['5', '15'] at two levels
-- FAIL L1-rpsgames (L1) and L3-handshake8 (L3): same answer 45 and shared numbers ['10'] at two levels
-- FAIL L1-counterbox (L1) and L5-penboxes (L5): the same story skeleton at two levels (shared words blue,box,hold,red)
-- FAIL L1-counterbox (L1) and L6-redblue (L6): the same story skeleton at two levels (shared words blue,box,counter,red)
-- FAIL L1-fanlines (L1) and L4-fanten (L4): the same story skeleton at two levels (shared words bigger,bottom,cut,down,line,made,neighbour,side,straight,thin,top)
-- FAIL L1-fourcoins (L1) and L2-fivecoins (L2): the same numbers ['5', '10', '20', '50'] at two levels
 - FAIL L1-sudoku3 (L1) and L2-sudoku4 (L2): the same story skeleton at two levels (shared words bottom,column,fill,goe,grid,must,once,row,top)
 - FAIL L1-sudoku3 (L1) and L3-magic (L3): the same story skeleton at two levels (shared words bottom,column,fill,grid,must,row)
-- FAIL L1-circlekids (L1) and L5-circleout (L5): the same story skeleton at two levels (shared words child,children,going,round,stand)
 - FAIL L1-oddbig (L1) and L6-cubeedges (L6): same answer 3 and shared numbers ['8', '12'] at two levels
 - FAIL L2-lunchsets (L2) and L3-mealset (L3): same answer 24 and shared numbers ['3', '4'] at two levels
 - FAIL L2-fewestswaps (L2) and L6-sevencards (L6): the same story skeleton at two levels (shared words card,fewest,lie,may,order,row,swap)
@@ -138,6 +137,6 @@ Structure FAIL count (all released months): 68
 - FAIL L5-committee (L5) and L6-podium10 (L6): the same story skeleton at two levels (shared words club,job,member,secretary,treasurer)
 
 Capacity verdict for the full year (a plan for January to October, not a defect of the released months): 1 CAPACITY FAIL
-- CAPACITY FAIL Level 1: 69 sub-structures, 61 needed for 365 days at gap 60, slack 8; families allow 402 puzzles a year
+- CAPACITY FAIL Level 1: 70 sub-structures, 61 needed for 365 days at gap 60, slack 9; families allow 408 puzzles a year
 
 Skeleton matches with our own sources that were reviewed by hand (same masked wording, but no shared numbers): 0

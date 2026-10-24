@@ -2313,6 +2313,7 @@
   "paper_folding.fold_and_cut": {
    "name": "a strip folded in half some times and cut once: how many pieces",
    "levels": [
+    1,
     2,
     3,
     4,
@@ -2323,7 +2324,8 @@
     "fold_cut"
    ],
    "cite": "MOE Problem solving: act it out, look for a pattern, p.13; P2 multiplication tables, p.33",
-   "round": 2
+   "round": 2,
+   "note": "round 4: extended to Level 1 (one or two folds only: MOE P1-P2 shapes and Problem solving: act it out, p.13)"
   },
   "percentage.add_or_take_off": {
    "name": "add GST to a price, or take a percentage discount off",
@@ -2929,6 +2931,7 @@
   "strategy.take_away_game": {
    "name": "a two-player take-away game: which first move always wins",
    "levels": [
+    1,
     2,
     3,
     4,
@@ -2939,7 +2942,8 @@
     "take_away_game"
    ],
    "cite": "MOE Problem solving: look for a pattern, p.13; P2 tables of 2, 3, 4, 5, p.33",
-   "round": 2
+   "round": 2,
+   "note": "round 4: extended to Level 1 (take 1 to 4 from a pile of at most 30: MOE P1 NA addition and subtraction within 20/100 and counting in 5s, with Problem solving: look for a pattern, p.13)"
   },
   "strategy.worst_case": {
    "name": "the fewest you must take to be sure of a match (the unlucky case)",

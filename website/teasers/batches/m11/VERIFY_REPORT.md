@@ -11,17 +11,13 @@ Method: every puzzle is re-solved by `brute.py` (independent of the author solve
 | 5 | 30 | 30 | 1 | 21 | 3 | 30 |
 | 6 | 30 | 25 | 3 | 21 | 3 | 30 |
 
-Sources searched (whole working tree, tracked or not): 6604 files, 1353.9 MB, sha256 e57711cddecc6031fa00b778.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 174, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 235, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
+Sources searched (whole working tree, tracked or not): 6604 files, 1353.9 MB, sha256 f5d485ff197171466d84f60e.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 174, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 235, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
 
 Similarity sources checked: holiday banks, own term lessons, all extension workbook data, the school booklets, our book drafts and catalogues, external private source files, and the seven fixed website puzzles.
 
-FAIL count: 27. REVIEW items: 99.
+FAIL count: 23. REVIEW items: 105.
 
-- FAIL L1-machine1 [11-22]: sub-structure backwards.undo_steps is not allowed at level 1 (levels [3, 4, 5])
-- FAIL L1-fanlines [11-23]: sub-structure counting_grid.triangles_in_fan is not allowed at level 1 (levels [])
-- FAIL L1-fanlines [11-23]: same story as a source: rule N (the question's numbers and the answer all in one source window): ['3', '4', '10'] with the shared story words: "hint='Look at the bottom number of each answer. How is it made from the two bottom numbers of the fr ..." (practice/holiday/p5/02/lesson.py) words bottom,made,neighbour
-- FAIL L1-fanlines [11-23]: retired frame fan_triangles: triangles in a fan of lines from one corner (practice P5 and the P1 workbook Go further use it)
-- FAIL L1-fourcoins [11-28]: sub-structure coins.amounts_made is not allowed at level 1 (levels [])
+- FAIL L1-marblegame [11-26]: same story as a source: rule N (the question's numbers and the answer all in one source window): ['3', '4', '5', '24'] with the shared story words: "steps=['Each player wins on 3 differences, but the differences are not equally likely: 0 has 6 outco ..." (practice/holiday/p6/06/lesson.py) words game,win
 - FAIL L2-lunchsets [11-03]: same story as a source: rule N (the question's numbers and the answer all in one source window): ['3', '4', '24'] with the shared story words: "(Check: 4 × 3 × 5 = 60.)'], src=['A set lunch is 1 main, 1 drink and 1 dessert.']), dict(id='T2a', t ..." (practice/holiday/p6/05/lesson.py) words drink,lunch,main,set
 - FAIL L2-machine3 [11-22]: sub-structure backwards.undo_steps is not allowed at level 2 (levels [3, 4, 5])
 - FAIL L2-fivecoins [11-24]: sub-structure coins.amounts_made is not allowed at level 2 (levels [])
@@ -45,27 +41,30 @@ FAIL count: 27. REVIEW items: 99.
 - FAIL L6-hiddencubes [11-09]: sub-structure cubes.painted is not allowed at level 6 (levels [])
 - FAIL L6-juicecups [11-30]: same story as a source: same objects (3 of 4 story words) and 3 same numbers: "| 11 | H5 stretch 4, challenge 1, 8 | Medium | painting the whole outside of a 3 x 4 x 5 cuboid, 96  ..." (docs/terms/l5_preflight.md) words litre,paint,pour
 
-- REVIEW L1-noodleset [11-01]: story words 4 of 6 like "She ordered 1 side dish, 1 main dish and 1 drink for lunch. What did she eat? [menu: Frenc ..." (docs/books/private_p2_papers/non_routine_questions.md)
-- REVIEW L1-drinksmachine [11-03]: rule B: 3 of the same numbers ['15', '20', '30'] as "| Prelim | 2022 | Nanyang | B2-1 | 2 | equations | 2 | 0 | Book original price $ ..." (docs/books/private_p6_papers/non_routine_questions.md)
-- REVIEW L1-seatrow [11-04]: number 1 in the question is not a parameter (written in the wording; check)
-- REVIEW L1-seatrow [11-04]: number 2 in the question is not a parameter (written in the wording; check)
-- REVIEW L1-seatrow [11-04]: rule B: 3 of the same numbers ['3', '4', '5'] as "- [WA_2020_TA1_StNicholas Q15, 2m, Cinema seats rows behind in front, diff 3] 5  ..." (docs/books/private_p5_papers/non_routine_questions.md)
-- REVIEW L1-openingtimes [11-05]: rule B: 3 of the same numbers ['11', '4', '6'] as "| 4 | Pattern Machines | Far places in a repeating pattern come from the groups  ..." (docs/pedagogy/holiday_review.md)
-- REVIEW L1-numpattern [11-06]: rule B: 3 of the same numbers ['15', '18', '5'] as "Do not add yet s-m5 SAME TOTAL: / 47 + 18 and 45 + 20 / 47 goes down 2. 18 goes  ..." (term/l1/out/l08/L08_Tutor_Guide.html)
-- REVIEW L1-campdays [11-08]: rule B: 3 of the same numbers ['12', '4', '5'] as "| Sat 2 Jan | 9 and 10 | 9:00-10:30am, 10:45am-12:15pm (Saturday 8:30am-12:30pm  ..." (docs/product/face_to_face_pilot_dates.md)
-- REVIEW L1-cousindays [11-09]: story words 3 of 5 like "Child materials Your Term 3 book: the calendar page, torn out along the dashed line, with  ..." (term/l1/out/l27/L27_Tutor_Guide.html)
-- REVIEW L1-siblingsages [11-10]: rule B: 3 of the same numbers ['30', '5', '9'] as "In how many years will their ages add up to 30? Type the number of years.", "mar ..." (practice/holiday/p3/04/dist/data/p3l04.json)
-- REVIEW L1-swimcourse [11-15]: story words 3 of 4 like "Mei starts a swimming course on Monday. Monday is day 1. ..." (outputs/print/term/Math_Inquirers_L1_T3_Book6_Lessons06-10_AnswerKey_TUTOR_PRINT.pdf)
-- REVIEW L1-secret63 [11-16]: number 2 in the question is not a parameter (written in the wording; check)
-- REVIEW L1-counterbox [11-17]: rule C: two four-word runs shared with "How many red counters would match the 6 blue ones?", "steps": ["For P(red) = 1/2 ..." (practice/holiday/p6/06/dist/data/p6l06.json): how many red counters / red and blue counters
-- REVIEW L1-threefifty [11-19]: number 35 in the question is not a parameter (written in the wording; check)
-- REVIEW L1-racerun [11-21]: story words 3 of 5 like "| Schema valid (JSON Schema + key checks) | PASS | all top-level keys, schema 2020-12, ide ..." (term/l1/AUDIT_L11.md)
-- REVIEW L1-twobags [11-25]: number 5 in the question is not a parameter (written in the wording; check)
-- REVIEW L1-twobags [11-25]: number 19 in the question is not a parameter (written in the wording; check)
-- REVIEW L1-twobags [11-25]: number 19 in the question is not a parameter (written in the wording; check)
-- REVIEW L1-twobags [11-25]: number 5 in the question is not a parameter (written in the wording; check)
-- REVIEW L1-stripmarks [11-27]: story words 3 of 5 like "**DIAG-019** | 2020 | Catholic High | SA2 | Q38 | 3 marks | LEN | difficulty 3 | picture y ..." (docs/books/private_p3_papers/non_routine_questions.md)
-- REVIEW L1-marblecontest [11-29]: number 2 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-racerun [11-02]: story words 3 of 5 like "| Schema valid (JSON Schema + key checks) | PASS | all top-level keys, schema 2020-12, ide ..." (term/l1/AUDIT_L11.md)
+- REVIEW L1-secret63 [11-04]: number 2 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-noodleset [11-05]: story words 4 of 6 like "She ordered 1 side dish, 1 main dish and 1 drink for lunch. What did she eat? [menu: Frenc ..." (docs/books/private_p2_papers/non_routine_questions.md)
+- REVIEW L1-siblingsages [11-06]: rule B: 3 of the same numbers ['30', '5', '9'] as "In how many years will their ages add up to 30? Type the number of years.", "mar ..." (practice/holiday/p3/04/dist/data/p3l04.json)
+- REVIEW L1-numpattern [11-07]: rule B: 4 of the same numbers ['11', '4', '6', '9'] as "What time does she sit down?", "hint": "Go back half an hour from 7 o'clock.", " ..." (term/l1/out/l23/practice/data/t3l23.json)
+- REVIEW L1-tilewall [11-10]: longest sentence 23 words (limit 20)
+- REVIEW L1-threefifty [11-14]: number 35 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-stripmarks [11-17]: story words 3 of 5 like "**DIAG-019** | 2020 | Catholic High | SA2 | Q38 | 3 marks | LEN | difficulty 3 | picture y ..." (docs/books/private_p3_papers/non_routine_questions.md)
+- REVIEW L1-busminute [11-18]: rule B: 3 of the same numbers ['20', '35', '4'] as "| 14 | 5 Machines; 6 Market Day; 7 Fair Shares | Before-and-after bars; three ch ..." (docs/terms/l2_preflight.md)
+- REVIEW L1-marblecontest [11-19]: number 2 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-counterbox [11-21]: story words 3 of 4 like "- Why non-routine: 6 apples and 4 pears shared equally into 2 baskets ..." (docs/books/private_p1_papers/non_routine_questions.md)
+- REVIEW L1-seatrow [11-23]: number 1 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-seatrow [11-23]: number 2 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-seatrow [11-23]: rule B: 3 of the same numbers ['3', '4', '5'] as "- [WA_2020_TA1_StNicholas Q15, 2m, Cinema seats rows behind in front, diff 3] 5  ..." (docs/books/private_p5_papers/non_routine_questions.md)
+- REVIEW L1-woodpecker [11-24]: rule B: 3 of the same numbers ['4', '7', '9'] as "| L5 No.5 route grid | 24 | OK; 20 and 8 re-solved; puddle P hatched, text says  ..." (docs/audit_final/holiday_diagram_review_L4_6.md)
+- REVIEW L1-marblegame [11-26]: number 1 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-marblegame [11-26]: number 2 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-marblegame [11-26]: number 3 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-twobags [11-27]: number 5 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-twobags [11-27]: number 19 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-twobags [11-27]: number 19 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-twobags [11-27]: number 5 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-openingtimes [11-28]: rule B: 3 of the same numbers ['11', '4', '6'] as "| 4 | Pattern Machines | Far places in a repeating pattern come from the groups  ..." (docs/pedagogy/holiday_review.md)
+- REVIEW L1-drinksmachine [11-29]: story words 3 of 5 like "**LIST-051** | 2025 | Raffles Girls | EOY | Q8 | 2 marks | MONEY | difficulty 3 | picture  ..." (docs/books/private_p3_papers/non_routine_questions.md)
 - REVIEW L2-clubdays [11-02]: longest sentence 27 words (limit 22)
 - REVIEW L2-tilebed [11-07]: story words 3 of 4 like "Solution: the left die's far face is 1, so its touching face is 6; the next die's touching ..." (docs/sasmo/g5_original_problems_draft.md)
 - REVIEW L2-signsscale [11-08]: rule B: 3 of the same numbers ['20', '4', '9'] as "| 17 to 18 | Ruler; the graph grids are in the book | - | | | 18 to 19 | Up to 1 ..." (docs/terms/l5_preflight.md)
@@ -73,26 +72,28 @@ FAIL count: 27. REVIEW items: 99.
 - REVIEW L2-cinemarow [11-12]: number 2 in the question is not a parameter (written in the wording; check)
 - REVIEW L2-cinemarow [11-12]: number 3 in the question is not a parameter (written in the wording; check)
 - REVIEW L2-fewestswaps [11-13]: story words 3 of 5 like "| 35 Timetable Puzzles (new, from old 20) | Try both orders, timetable plus 7-day cycle (T ..." (docs/terms/level_3_year_plan.md)
-- REVIEW L2-cardtriple2 [11-14]: rule B: 3 of the same numbers ['14', '31', '38'] as "**Smallest set of moves that satisfies the decision.** Only three lesson slots c ..." (docs/pedagogy/lesson_x10_consolidation_plan.md)
-- REVIEW L2-ticketnotes [11-16]: rule B: 3 of the same numbers ['3', '30', '5'] as "| Prelim | 2023 | SCGS | P2-3 | 2 | Blender 20% discount, paid $90.72 including  ..." (docs/books/private_p6_papers/non_routine_questions.md)
+- REVIEW L2-cardtriple2 [11-14]: rule B: 3 of the same numbers ['14', '31', '38'] as "Lessons 20 to 40 are being rebuilt anyway (and the strategy card and common look ..." (docs/pedagogy/lesson_x10_consolidation_plan.md)
+- REVIEW L2-ticketnotes [11-16]: rule B: 3 of the same numbers ['3', '30', '5'] as "The maths is right everywhere: counting mixed coins and notes, swapping a coin f ..." (term/l1/audit/WORKBOOK_AUDIT_L24.md)
 - REVIEW L2-ticketnumbers [11-28]: number 400 in the question is not a parameter (written in the wording; check)
 - REVIEW L2-ticketnumbers [11-28]: story words 3 of 5 like "21:('Letters and Brackets',[('EXP','T','stamps at n cents paid with $5: change in terms of ..." (docs/books/private_p6_papers/build_plan_section.py)
 - REVIEW L3-palin [11-01]: number 3 in the question is not a parameter (written in the wording; check)
 - REVIEW L3-palin [11-01]: number 232 in the question is not a parameter (written in the wording; check)
 - REVIEW L3-palin [11-01]: number 3 in the question is not a parameter (written in the wording; check)
 - REVIEW L3-badmintonko [11-10]: number 2 in the question is not a parameter (written in the wording; check)
+- REVIEW L3-books [11-17]: rule B: 3 of the same numbers ['20', '24', '31'] as "Singapore public holidays (Google "Holidays in Singapore" calendar, 1 Nov-31 Dec ..." (docs/audit_final/schedule_and_calendar.md)
 - REVIEW L3-cardsorder [11-18]: number 52 in the question is not a parameter (written in the wording; check)
 - REVIEW L3-cardsorder [11-18]: number 5 in the question is not a parameter (written in the wording; check)
 - REVIEW L3-cardsorder [11-18]: number 2 in the question is not a parameter (written in the wording; check)
 - REVIEW L3-cardsorder [11-18]: rule B: 3 of the same numbers ['35', '5', '7'] as "Which answer is the biggest, and which is the smallest?", "try_it_answer": "7 x  ..." (docs/stories/final_p2.json)
 - REVIEW L3-twentyfour [11-21]: number 0915 in the question is not a parameter (written in the wording; check)
+- REVIEW L3-twentyfour [11-21]: rule B: 3 of the same numbers ['24', '35', '8'] as "- L8: Q2 hint (a dent corner is bigger than a right angle) and shape A done for  ..." (docs/audit/fixpass_p3.md)
 - REVIEW L3-parrotsrabbits [11-22]: story words 4 of 6 like "**A4.1** [S] A pet shop has 60 animals. 24 are fish, 17 are birds and the rest are rabbits ..." (docs/books/word_problems_g1_g2_original_draft.md)
 - REVIEW L3-houses [11-24]: number 21 in the question is not a parameter (written in the wording; check)
 - REVIEW L3-houses [11-24]: number 22 in the question is not a parameter (written in the wording; check)
 - REVIEW L3-houses [11-24]: number 23 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-theatrerows [11-01]: number 18 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-theatrerows [11-01]: number 21 in the question is not a parameter (written in the wording; check)
-- REVIEW L4-attendance [11-03]: story words 3 of 5 like "The crowd at a concert was 38 000 when rounded to the nearest thousand. ..." (outputs/designed/Math_Inquirers_P4_Question_Bank.pdf)
+- REVIEW L4-attendance [11-03]: story words 3 of 5 like "{ q: 'The crowd at a concert was 38 000 when rounded to the nearest thousand. ..." (p4/content/l2.js)
 - REVIEW L4-ferry [11-05]: rule B: 3 of the same numbers ['13', '7', '9'] as "Notes on the tag: 1.3, 1.7 (reading and writing numbers in numerals and in words ..." (school/p1/out/P1_S1_Answer_Key.pdf)
 - REVIEW L4-roundprices [11-07]: number 1 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-calc [11-09]: story words 4 of 6 like "Counting the boxes shows a line that takes a shortcut. S1-05 (P5-05) Colour the Rocket 1 s ..." (school/p5/out/P5_S1_Answer_Key.pdf)
@@ -113,7 +114,7 @@ FAIL count: 27. REVIEW items: 99.
 - REVIEW L5-palin5 [11-15]: number 48384 in the question is not a parameter (written in the wording; check)
 - REVIEW L5-palin5 [11-15]: number 5 in the question is not a parameter (written in the wording; check)
 - REVIEW L5-cubes [11-16]: number 1 in the question is not a parameter (written in the wording; check)
-- REVIEW L5-cubes [11-16]: story words 3 of 4 like "a=P(0,1,0);b=P(4,1,0);s+=f'<line x1="{a[0]:.1f}" y1="{a[1]:.1f}" x2="{b[0]:.1f}" y2="{b[1] ..." (rebuild/p5_gaps.py)
+- REVIEW L5-cubes [11-16]: story words 3 of 4 like "s+=f'<text x="{P(2,0,0)[0]:.0f}" y="{P(2,0,0)[1]+22:.0f}" font-size="22" font-weight="700" ..." (rebuild/p5_gaps.py)
 - REVIEW L5-savingsinterest [11-17]: story words 5 of 7 like "(6) A story with a bank. - **Think harder (4).** (1) $2 000 at 3% a year for 4 years earns ..." (docs/terms/l5_preflight.md)
 - REVIEW L5-fieldwidth [11-19]: story words 3 of 3 like "- [EOY_2025_NanHua Q15, 2m, Area (path), diff 2] A field was built on a rectangular plot o ..." (docs/books/private_p4_papers/non_routine_questions.md)
 - REVIEW L5-ropes [11-21]: story words 4 of 6 like "What number am I? - [WA2_2025_Nanyang Q8, 2m, Rope fractions chain, diff 3] Jim had 3 piec ..." (docs/books/private_p4_papers/non_routine_questions.md)
@@ -129,7 +130,7 @@ FAIL count: 27. REVIEW items: 99.
 - REVIEW L5-cubetower9 [11-27]: number 3 in the question is not a parameter (written in the wording; check)
 - REVIEW L5-cubetower9 [11-27]: rule C: two four-word runs shared with "The bottom layer is 3 rows of 3. The next layer is 2 rows of 2. The top layer is ..." (outputs/skill_additions/Math_Inquirers_L2_Skill_Additions_Tutor_Sheet.html): the top layer is / top layer is #
 - REVIEW L5-bottleshare [11-28]: story words 4 of 5 like "Stand tall if it holds more than 1 ℓ. Crouch if it holds less.','Five minutes. Call: a tea ..." (rebuild/gen_p5l5.py)
-- REVIEW L5-cornerscard [11-29]: rule B: 4 of the same numbers ['4', '5', '6', '8'] as "Only L6 and L8 say "the kit from Lesson 1"; L5's hand-off says "earlier pieces c ..." (term/l1/audit/CUTOUT_AUDIT.md)
+- REVIEW L5-cornerscard [11-29]: rule B: 5 of the same numbers ['15', '4', '5', '6', '8'] as "| Where | Old | New | Tier change | | Bank Core C1 to C6 | formula items (12 and ..." (docs/audit/gifted_fixes_p5.md)
 - REVIEW L5-cube4 [11-30]: number 64 in the question is not a parameter (written in the wording; check)
 - REVIEW L6-hiddencubes [11-09]: number 216 in the question is not a parameter (written in the wording; check)
 - REVIEW L6-lockcode [11-11]: number 3 in the question is not a parameter (written in the wording; check)
@@ -139,6 +140,7 @@ FAIL count: 27. REVIEW items: 99.
 - REVIEW L6-waterbarrel [11-17]: number 1 in the question is not a parameter (written in the wording; check)
 - REVIEW L6-primes100 [11-18]: number 1 in the question is not a parameter (written in the wording; check)
 - REVIEW L6-primes100 [11-18]: number 1 in the question is not a parameter (written in the wording; check)
+- REVIEW L6-reverse [11-20]: rule C: two four-word runs shared with "(if time) Letter puzzle: AB + AB + AB = CAB. Each letter stands for a digit. ..." (outputs/print/Math_Inquirers_P3_Workbook_PRINT.pdf): each letter stands for / letter stands for a
 - REVIEW L6-phoneplan [11-21]: rule C: two four-word runs shared with "Phone plan A costs $15 a month plus 10¢ a minute. ..." (outputs/designed/Math_Inquirers_P5_Question_Bank.pdf): # a month plus / a month plus #
 - REVIEW L6-redblue [11-26]: rule C: two four-word runs shared with "['A bag has red and blue counters in the ratio 3 : 5. ..." (levels/gap_items.py): and blue counters in / blue counters in the
 - REVIEW L6-bin45 [11-29]: number 6 in the question is not a parameter (written in the wording; check)
