@@ -388,3 +388,7 @@ Owner: "we should have 365 teasers, released monthly". Daily website teasers: a 
 
 ## 2026-10-24 — TEASERS-PER-LEVEL; REC-DESIGN (Google Meet)
 Owner: "TEASERS-PER-LEVEL" (365 teasers per level, 6 levels = 2,190, released monthly). "rec-design google meet": design the recorded-lesson posting and access flow with Google Meet as the live-lesson platform.
+
+## 2026-10-24 — EXTENSION PURCHASE MODEL (owner)
+Owner: "extension books are purchased by parent online and shipped to house for hardcopy or online version where they create child account. one purchase for one child only. after purchase the purchased practice will be made available online and child can submit their answers there. there should be workbook only, online only and workbook plus online."
+Consequences: (1) three options per extension level: WORKBOOK ONLY (printed, posted), ONLINE ONLY, WORKBOOK + ONLINE; (2) one purchase = one child; online access is attached to a named child profile (portal, created by the parent), set at/after purchase, not to the whole family; (3) access is granted automatically after purchase (Stripe or admin grant during manual beta); this supersedes EXT-CODE-IN-BOOK / CODE-UNIQUE (no printed code needed); (4) the child submits answers online (same submission/marking/reports design); (5) OPEN: the shop currently lists formats soft (PDF download) and physical; owner has not said whether the PDF download is dropped; prices still on hold.
