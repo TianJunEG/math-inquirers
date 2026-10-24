@@ -411,7 +411,7 @@ end $$;
 
 -- Question-level report rows for ONE child (the parent, the child's tutor or the admin). Tags and the misconception text come from the tags table.
 create or replace function public.practice_child_detail(p_child uuid, p_unit text)
-returns table (item_id text, position int, tier text, strand text, skill text, topic text, marking_mode text, paper_only boolean, mark text,
+returns table (item_id text, item_pos int, tier text, strand text, skill text, topic text, marking_mode text, paper_only boolean, mark text,
                answer_text text, partial_found smallint, partial_of smallint, misconception text, self_result text, answered boolean, received_at timestamptz)
 language plpgsql stable security definer set search_path = public as $$
 begin

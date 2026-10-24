@@ -16,7 +16,7 @@ DEFS = [
     P('farm', 'dot', 'Arrays and groups',
       'On a farm visit, Kumar sees {pairs[0][0]} hens and {pairs[1][0]} goats. A hen has {pairs[0][1]} legs. A goat has {pairs[1][1]} legs. How many legs are there altogether?',
       'Work out the hens\' legs and the goats\' legs separately. Then add.',
-      '{parts}. Altogether there are {ans}.',
+      '{parts}. {add} legs. Altogether there are {ans}.',
       p=dict(pairs=[[5, 2], [3, 4]]), unit='legs'),
     P('buns29', 'share', 'Sharing and leftovers',
       '{total} buns are shared equally among {k} children. Each child gets as many buns as possible. How many buns are left over?',

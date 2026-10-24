@@ -27,7 +27,9 @@ def seq_term(a, d, n):
 
 
 def dot(pairs):
-    return sum(c * e for c, e in pairs), {'parts': ' + '.join('%d \u00d7 %d = %d' % (c, e, c * e) for c, e in pairs)}
+    prods = [c * e for c, e in pairs]
+    return sum(prods), {'parts': ' and '.join('%d \u00d7 %d = %d' % (c, e, c * e) for c, e in pairs),
+                        'add': '%s = %d' % (' + '.join(str(x) for x in prods), sum(prods))}
 
 
 def seq_pos(a, d, v):
