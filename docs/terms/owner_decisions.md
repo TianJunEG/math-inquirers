@@ -346,3 +346,6 @@ Owner: "Ratio is a P6 topic, has to be in holiday program for L5." Decision: Lev
 
 ## 2026-10-24 (owner going to sleep: autonomous run)
 - Owner: "im going to sleep. pls run the tasks then audit the finished products and then fix". Standing plan for this run: (1) let all running builds finish (P3-P6 school booklets, Level 1 rewrite and combined fix pass, real-image money variant); (2) run the pending recommended task CARD-FIX-ALL (Toolbox Card fixes per TOOLBOX_CARD_AUDIT.md recommendations: stuck chant on the card, reusable back, 'In my head' renamed 'No tool' everywhere with lesson 20 kit wording fixed, 12 pt text, publisher/copyright line, Term 1 tools marked, one card name everywhere); (3) independently audit every finished product, then fix findings, repeating until no High or Medium remains or the rule 'stop and report' applies. NOT to be done autonomously: sending anything to anyone, real-world checks (lawyer, tutor Scratch run, photocopier, child trials, printer), replacing the booklets' original coin art with real images (the real-image variant stays held back), changing prices or claims, deleting data.
+
+## 2026-10-24 — WORDS-OK
+Owner: "Words-ok". Cross-level code-word repeats (school booklets P1–P6) are accepted; each booklet is a separate purchase. Words stay unique within each level. No reseeding needed.
