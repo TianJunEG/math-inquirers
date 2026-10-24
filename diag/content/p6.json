@@ -1,132 +1,95 @@
 {
-  "level": "P6",
-  "ageName": "Ages 11-13",
-  "minutes": 30,
-  "foundation": [
-    {
-      "q": "Write every factor of 24 (every whole number that divides 24 exactly).",
-      "a": "1, 2, 3, 4, 6, 8, 12, 24",
-      "work": "All eight needed for the mark. Common error: missing 8 or 12, or stopping at 6. Skill used in Lessons 2 and 8.",
-      "skill": "Factors and times tables"
-    },
-    {
-      "q": "Write 6/36 in its simplest form.",
-      "a": "1/6",
-      "work": "Divide top and bottom by 6. Common error: 3/18 or 2/12 (not fully simplified). Skill used in Lessons 6 and 9.",
-      "skill": "Simplifying fractions"
-    },
-    {
-      "q": "Two angles of a triangle are 52 and 63 degrees. What is the third angle, in degrees?",
-      "a": "65",
-      "work": "Angle sum is 180. Common error: using 360 or an arithmetic slip. Skill used in Lesson 7.",
-      "skill": "Angle sum of triangle"
-    },
-    {
-      "q": "Read this little program. Start with n = 5. Then repeat 4 times: change n by 3 (add 3 to n). At the end, say n. What does it say?",
-      "a": "17",
-      "work": "5, 8, 11, 14, 17. Common error: 20 (adding 3 five times) or 12 (adding 3 only once). Not a mark against the child: this also shows how ready they are for the coding side, so the tutor can plan support.",
-      "skill": "Reading a simple loop"
-    }
-  ],
-  "core": [
-    {
-      "q": "A number machine doubles the input and then adds 5. The output is 31. What was the input?",
-      "a": "13",
-      "work": "Look for working backwards (31 - 5, then halve). Common error: halving first or giving 26.",
-      "skill": "Number machines and simple algebra"
-    },
-    {
-      "q": "A prime number has exactly two factors: 1 and itself. For example, 7 is prime, but 9 is not (its factors are 1, 3 and 9). How many prime numbers are there between 30 and 50?",
-      "a": "5",
-      "work": "Primes are 31, 37, 41, 43, 47. Common errors: including 39 or 49, or counting 1.",
-      "skill": "Primes"
-    },
-    {
-      "q": "The temperature is -4 degrees C at night. It rises by 9 degrees by noon, then falls by 12 degrees by evening. What is the evening temperature in degrees C?",
-      "a": "-7",
-      "work": "Check number line use: -4 + 9 = 5, 5 - 12 = -7. Common error: answering 7.",
-      "skill": "Negative numbers"
-    },
-    {
-      "q": "A bag has 4 red, 3 blue and 5 green marbles. One marble is picked without looking. The chance (probability) of picking blue is 3 out of 12, written 3/12. What is the probability that it is NOT green? Give a fraction in simplest form.",
-      "a": "7/12",
-      "work": "Total is 12, not green is 7. Common error: 5/12, or 7/5 (comparing to green).",
-      "skill": "Simple probability"
-    },
-    {
-      "q": "The average of 5 numbers is 12. Four of the numbers are 8, 10, 15 and 11. What is the fifth number?",
-      "a": "16",
-      "work": "Total must be 60 (5 x 12); the four add to 44. Common error: finding the average of the four numbers. Some children say 'mean' for average; both are fine.",
-      "skill": "Average (mean)"
-    },
-    {
-      "q": "It is 10 o'clock now on a 12-hour clock. What time will it be 17 hours later? Give the hour only.",
-      "a": "3",
-      "work": "10 + 17 = 27, 27 - 24 = 3 (or 17 mod 12 = 5, then 10 + 5 = 15 -> 3). Common error: answering 27 or 5.",
-      "skill": "Clock arithmetic"
-    }
-  ],
-  "stretch": [
-    {
-      "q": "The pattern 4, 7, 10, 13, ... carries on in the same way. What is the 50th number? Explain how you worked it out.",
-      "a": "151",
-      "work": "Rule: 4 + 3 x 49 = 151 (the 50th number has 49 jumps of 3). Accept any clear method. Common error: 150 (3 x 50) or 154 (4 + 3 x 50). A flag for the Think harder pages, not a mark against the child.",
-      "skill": "Number patterns and rules (Lesson 1)"
-    },
-    {
-      "q": "Using the digits 1, 2, 3 and 4, with no digit used more than once, how many different 3-digit even numbers can be made?",
-      "a": "12",
-      "work": "Last digit 2 or 4 (2 ways), then 3 x 2 for the others. Common error: 24 (ignoring evenness) or listing incompletely. A flag for the Think harder pages, not a mark against the child.",
-      "skill": "Counting possibilities"
-    }
-  ],
-  "topics": [
-    "Number patterns and rules",
-    "Factors and primes",
-    "Negative numbers",
-    "Algebra machines",
-    "Counting possibilities",
-    "Probability",
-    "Turns and coding with loops",
-    "Clock arithmetic and codes",
-    "Average and data"
-  ],
-  "notes": {
-    "childReassurance": "Some of these questions use ideas you may not have met yet. That is fine: we are working out where to start, not marking you. The last questions are hard on purpose, so it is fine to say 'I do not know'.",
-    "timeNote": "There is no timer. About 30 minutes is plenty; stop when your child is tired.",
-    "childHeader": "For children aged 11 to 13. Open to a year either side.",
-    "scoring": "Warm-up (4 marks) decides the suggestion. Main questions (6 marks) set a note only. The two Brain stretchers are not scored: tick them as flags.",
-    "placement": [
-      [
-        "Warm-up 3 or 4",
-        "Join Ages 11-13 (P6). Your child has what they need to start."
-      ],
-      [
-        "Warm-up 2",
-        "Join Ages 11-13 (P6) and ask your tutor about a short catch-up chat before lesson 1."
-      ],
-      [
-        "Warm-up 0 or 1",
-        "Let us talk. We suggest the free taster and a tutor chat first. Ages 10-12 (P5) is also an option if your child is 12 or younger."
-      ]
-    ],
-    "mainNote": [
-      [
-        "Main 5 or 6",
-        "You will find some ideas familiar. The Think harder pages will suit your child."
-      ],
-      [
-        "Main 3 or 4",
-        "A good mix of familiar and new."
-      ],
-      [
-        "Main 0 to 2",
-        "Most ideas will be new, which is what the lessons are for."
-      ]
-    ],
-    "guideBox": "This is a guide, not a grade. Ask your tutor for a chat if you are unsure.",
-    "topicsTitle": "Ideas we explore in the lessons (most children meet some of these for the first time)",
-    "easyLine": "If your child finds all of this easy, ask your tutor about the Go further pages.",
-    "keyFix": "Replace the key example with: 1.75 and 1 3/4 do not both count here, because the question asks for a fraction or mixed number."
+ "level": "P6",
+ "ageName": "Ages 11-13",
+ "minutes": 30,
+ "foundation": [
+  {
+   "q": "Write every factor of 24 (every whole number that divides 24 exactly).",
+   "a": "1, 2, 3, 4, 6, 8, 12, 24",
+   "work": "All eight needed for the mark. Common error: missing 8 or 12, or stopping at 6. Skill used in Lessons 2 and 8.",
+   "skill": "Factors and times tables"
+  },
+  {
+   "q": "Write 6/36 in its simplest form.",
+   "a": "1/6",
+   "work": "Divide top and bottom by 6. Common error: 3/18 or 2/12 (not fully simplified). Skill used in Lessons 6 and 9.",
+   "skill": "Simplifying fractions"
+  },
+  {
+   "q": "Two angles of a triangle are 52 and 63 degrees. What is the third angle, in degrees?",
+   "a": "65",
+   "work": "Angle sum is 180. Common error: using 360 or an arithmetic slip. Skill used in Lesson 7.",
+   "skill": "Angle sum of triangle"
+  },
+  {
+   "q": "Read this little program. Start with n = 5. Then repeat 4 times: change n by 3 (add 3 to n). At the end, say n. What does it say?",
+   "a": "17",
+   "work": "5, 8, 11, 14, 17. Common error: 20 (adding 3 five times) or 12 (adding 3 only once). Not a mark against the child: this also shows how ready they are for the coding side, so the tutor can plan support.",
+   "skill": "Reading a simple loop"
   }
+ ],
+ "core": [
+  {
+   "q": "A number machine doubles the input and then adds 5. The output is 31. What was the input?",
+   "a": "13",
+   "work": "Look for working backwards (31 - 5, then halve). Common error: halving first or giving 26.",
+   "skill": "Number machines and simple algebra"
+  },
+  {
+   "q": "A prime number has exactly two factors: 1 and itself. For example, 7 is prime, but 9 is not (its factors are 1, 3 and 9). How many prime numbers are there between 30 and 50?",
+   "a": "5",
+   "work": "Primes are 31, 37, 41, 43, 47. Common errors: including 39 or 49, or counting 1.",
+   "skill": "Primes"
+  },
+  {
+   "q": "The temperature is -4 degrees C at night. It rises by 9 degrees by noon, then falls by 12 degrees by evening. What is the evening temperature in degrees C?",
+   "a": "-7",
+   "work": "Check number line use: -4 + 9 = 5, 5 - 12 = -7. Common error: answering 7.",
+   "skill": "Negative numbers"
+  },
+  {
+   "q": "A bag has 4 red, 3 blue and 5 green marbles. One marble is picked without looking. The chance (probability) of picking blue is 3 out of 12, written 3/12. What is the probability that it is NOT green? Give a fraction in simplest form.",
+   "a": "7/12",
+   "work": "Total is 12, not green is 7. Common error: 5/12, or 7/5 (comparing to green).",
+   "skill": "Simple probability"
+  },
+  {
+   "q": "The average of 5 numbers is 12. Four of the numbers are 8, 10, 15 and 11. What is the fifth number?",
+   "a": "16",
+   "work": "Total must be 60 (5 x 12); the four add to 44. Common error: finding the average of the four numbers. Some children say 'mean' for average; both are fine.",
+   "skill": "Average (mean)"
+  },
+  {
+   "q": "It is 10 o'clock now on a 12-hour clock. What time will it be 17 hours later? Give the hour only.",
+   "a": "3",
+   "work": "10 + 17 = 27, 27 - 24 = 3 (or 17 mod 12 = 5, then 10 + 5 = 15 -> 3). Common error: answering 27 or 5.",
+   "skill": "Clock arithmetic"
+  }
+ ],
+ "stretch": [
+  {
+   "q": "The pattern 4, 7, 10, 13, ... carries on in the same way. What is the 50th number? Explain how you worked it out.",
+   "a": "151",
+   "work": "Rule: 4 + 3 x 49 = 151 (the 50th number has 49 jumps of 3). Accept any clear method. Common error: 150 (3 x 50) or 154 (4 + 3 x 50). A flag for the Think harder pages, not a mark against the child.",
+   "skill": "Number patterns and rules (Lesson 1)"
+  },
+  {
+   "q": "Using the digits 1, 2, 3 and 4, with no digit used more than once, how many different 3-digit even numbers can be made?",
+   "a": "12",
+   "work": "Last digit 2 or 4 (2 ways), then 3 x 2 for the others. Common error: 24 (ignoring evenness) or listing incompletely. A flag for the Think harder pages, not a mark against the child.",
+   "skill": "Counting possibilities"
+  }
+ ],
+ "topics": [
+  "Number patterns and rules",
+  "Factors and primes",
+  "Negative numbers",
+  "Algebra machines",
+  "Counting possibilities",
+  "Probability",
+  "Turns and coding with loops",
+  "Clock arithmetic and codes",
+  "Average and data"
+ ],
+ "tutorKey": "Finished very fast? Ask the child to explain one answer aloud before you mark: a fast wrong answer is often a skipped step, not a missing topic. The parent makes the final choice."
 }

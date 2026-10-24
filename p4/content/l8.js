@@ -1,4 +1,5 @@
 // Math Inquirers P4 Holiday Program — Lesson 8: Symmetry and Nets
+const tip = require('../tip.js');
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WH = '#FFFFFF';
 const F = 'Fredoka, Arial, sans-serif';
 
@@ -30,12 +31,12 @@ const Q1NETS = [
   ['F', [[0, 0], [1, 0], [0, 1], [1, 1], [2, 1], [3, 1]]]
 ];
 const q1Svg = () => {
-  const c = 20, pw = 200, ph = 84;
+  const c = 30, pw = 200, ph = 108;
   let s = '';
   Q1NETS.forEach(([L, cells], i) => {
     const px = (i % 3) * pw, py = Math.floor(i / 3) * ph, [w, h] = dims(cells);
     s += `<rect x="${px + 4}" y="${py + 4}" width="${pw - 8}" height="${ph - 8}" rx="10" fill="${WH}" stroke="${N}" stroke-width="1.5" opacity="0.9"/>`;
-    s += tx(px + 22, py + 26, L, 20, TEAL) + `<rect x="${px + 12}" y="${py + 36}" width="22" height="22" rx="4" fill="${WH}" stroke="${N}" stroke-width="2"/>`;
+    s += tx(px + 22, py + 30, L, 22, TEAL) + `<rect x="${px + 11}" y="${py + 46}" width="24" height="24" rx="4" fill="${WH}" stroke="${N}" stroke-width="2"/>`;
     s += net(cells, c, px + 44 + (150 - w * c) / 2, py + (ph - h * c) / 2, {}, SKY);
   });
   return svg(600, 2 * ph, 'Six shapes made of 6 squares, labelled A to F, each with a tick box', s);
@@ -90,8 +91,8 @@ const q6Grid = (x0, y0, c) => {
   s += `<line x1="${x0 - 22}" y1="${y0 + 2 * c}" x2="${x0 + 4 * c + 12}" y2="${y0 + 2 * c}" stroke="${RED}" stroke-width="3" stroke-dasharray="7 5"/>`;
   return s;
 };
-const q6Svg = () => svg(600, 4 * 26 + 50, 'Three copies of a 4 by 4 grid with columns A to D and rows 1 to 4. Squares B2, B3, C2, C3 and D2 are shaded. An up-down dashed line and an across dashed line go through the middle.',
-  [50, 250, 450].map(x => q6Grid(x, 34, 26)).join(''));
+const q6Svg = () => svg(600, 4 * 22 + 50, 'Three copies of a 4 by 4 grid with columns A to D and rows 1 to 4. Squares B2, B3, C2, C3 and D2 are shaded. An up-down dashed line and an across dashed line go through the middle.',
+  [50, 250, 450].map(x => q6Grid(x, 34, 22)).join(''));
 
 module.exports = {
   lesson: {
@@ -133,18 +134,21 @@ module.exports = {
     ],
     circulate: ['Ask: “Which square is your base? Which ones become walls?”', 'Ask: “Which face lands on top of this one? Is anything already there?”', 'Ask: “How many squares is this corner from the line? Where is its partner?”'],
     hints: ['Hint 1: “Shade the base. Fold the walls up one at a time with your finger.”', 'Hint 2: “Look for a straight line of 3 squares. The ends are opposite.”', 'Hint 3: “Count the squares from the dashed line to each corner. Put a dot the same number of squares on the other side.”'],
-    talk: ['“Mei says every shape made of 6 squares folds into a cube. Ben says a shape with 4 squares in a row always does. Who is right?”', '“How can you tell two faces are opposite without folding?”'],
-    talkAns: 'Neither is right. A 2 by 3 rectangle has 6 squares but does not fold into a cube (Mei is wrong). A row of 4 with both extra squares on the same side does not fold either, because both close the same end (Ben is wrong). In a straight line of 3 squares, the two ends are opposite.',
+    talk: ["“Mei says every shape made of 6 squares folds into a cube. Ben says a shape with 4 squares in a row always does. Who is right?”"],
+    talkWeekly: ["“How can you tell two faces are opposite without folding?”"],
+    talkAns: "Neither is right. A 2 by 3 rectangle has 6 squares but does not fold into a cube (Mei is wrong). A row of 4 with both extra squares on the same side does not fold either, because both close the same end (Ben is wrong).",
+    talkWeeklyAns: "In a straight line of 3 squares, the two ends are opposite.",
     close: ['“You folded cubes in your head today, and you found the hidden partners in symmetric shapes.”', '“Hand me your exit ticket and I will stamp your inquiry journal.”']
   },
 
   deck: {
     today: 'Find out which shapes fold into a cube, find opposite faces on a dice net, and complete symmetric figures.',
     warmGame: 'Fold It in Your Head. A letter made of squares appears. Show with your fingers how many lines of symmetry it has, then show where the fold goes.',
-    warmQs: [['How many faces does a cube have?', '6'], ['How many edges?', '12'], ['How many corners?', '8'], ['On a dice, 1 is opposite 6 and 2 is opposite 5. What is opposite 3?', '4'], ['How many ways can you fold a rectangle (not a square) so the halves match?', '2']],
+    warmQs: [["How many faces does a cube have?", "6"], ["How many edges?", "12"], ["How many corners?", "8"]],
+    warmWeekly: [["On a dice, 1 is opposite 6 and 2 is opposite 5. What is opposite 3?", "4"], ["How many ways can you fold a rectangle (not a square) so the halves match?", "2"]],
     expSetup: ['Take 6 paper squares.', 'Join them edge to edge (whole sides touching) and tape them.', 'Try to fold your shape into a cube: no gaps, no overlaps.', 'Draw every shape that works. Did any fail? Why?'],
     expPic: 'six loose paper squares, a cross-shaped net and a folded cube.',
-    expAsk: [['How many different nets did your group find?', 'There are 11 altogether (turned or flipped copies are the same).'], ['What made a shape fail?', 'Two squares landed on the same face: for example a 2 by 2 block, 5 in a row, or two squares closing the same end.'], ['Do all nets have 4 squares in a row?', 'No. Some have rows of 3 (2 rows of 3), and the staircase has no more than 2 in a row.']],
+    expAsk: [["How many different nets did your group find?", "There are 11 altogether (turned or flipped copies are the same)."], ["What made a shape fail?", "Two squares landed on the same face: for example a 2 by 2 block, 5 in a row, or two squares closing the same end."]],
     mini1: { head: 'Fold it in your head', body: ['Shade a base. The squares touching it fold up as walls.', 'A square joined to a wall swings round with it.', 'Is there one base, one lid and four walls?'], ans: 'Yes: it is a net of a cube. If two squares land in the same place, it is not.' },
     mini2: { head: 'Opposite faces', body: ['In a straight line of 3 squares, the ends are opposite.', 'The two ends of a step are opposite.', 'The last two faces are the last pair.'], ans: 'On a dice, opposite faces add up to 7.' },
     keyHead: 'Key idea: fold it in your head', keyBig: 'A net works when it has one base, one lid and four walls with nothing overlapping. In a line of 3, the ends are opposite.', keySmall: 'A line of symmetry: fold along it and the two halves match exactly.',
@@ -177,7 +181,7 @@ module.exports = {
       { q: 'Show why a net of a cube can never have 5 squares in a row. What is the most squares in a row a net can have?', a: 'With 5 in a row, four squares wrap round to make a ring of walls and the 5th lands on top of the 1st, so two squares share a face and no face is left for the other end. The most is 4 in a row (for example the cross-shaped net).' },
       { q: 'An open box (a cube with no lid) is made from 5 squares. Of the 12 different shapes made of 5 squares joined edge to edge, how many fold into an open box? (Turned or flipped copies count as the same.)', a: '8. Only 4 shapes do not fold: the row of 5, the V (an L with arms of 3 and 3), the U (a C shape) and the P (a 2 by 2 block with one extra square).' },
       { q: 'Three dice are stacked in a tower on a table. The top face of the tower shows 5. What is the total of the numbers on all the faces you cannot see (the faces touching each other and the table)?', a: '16. The top dice: its bottom is 2 (5 + 2 = 7). The middle dice: top and bottom are opposite, 7. The bottom dice: top and bottom, 7. 2 + 7 + 7 = 16.' },
-      { q: 'Ali says: "On a dice, the numbers on the 4 side faces always add up to 14." Is he right? Explain.', a: 'Yes. The 4 side faces are two opposite pairs, and each pair adds up to 7: 7 + 7 = 14.' },
+      { q: 'Ali says: "On a dice, the numbers on the 4 side faces always add up to 14." Is he right? Explain. Then Mei looks at a dice from a corner, so she sees 3 faces. They add up to 12. Which three numbers can she see? Is there more than one answer?', a: 'Ali is right: the 4 side faces are two opposite pairs, and each pair adds up to 7: 7 + 7 = 14. Mei: the 3 faces at a corner come one from each opposite pair (1 or 6, 2 or 5, 3 or 4), so no two add up to 7. Only 6, 2 and 4 add up to 12, so there is just one answer.' },
       { q: 'A cube has faces numbered 1 to 6 (not a normal dice). Face 1 touches faces 2, 3, 4 and 5. Face 2 touches faces 1, 3, 5 and 6. Which face is opposite 1? Opposite 2? Opposite 3?', a: 'Opposite 1 is 6 (the only face it does not touch). Opposite 2 is 4. That leaves 3 and 5, so opposite 3 is 5.' },
       { q: 'Design your own dice. Draw a net of a cube that is not one of the nets in this lesson, and write the numbers 1 to 6 on it so that opposite faces add up to 7. Name each pair of opposite faces to prove it works. Then rub out two numbers and challenge a partner to put them back.', a: 'Designs will vary: check each pair of opposite faces on the net adds up to 7. Model: a row of four squares 2, 1, 5, 6 with a 3 above the 1 and a 4 below the 1. Opposite pairs: 2 and 5, 1 and 6 (first and third, second and fourth in the row), and 3 and 4 (above and below).' },
       { q: 'In how many ways can you shade exactly 2 squares of a 3 by 3 grid so that the up-down line through the middle is a line of symmetry?', a: '6. Both squares in the middle column: 3 ways. One square in each side column, in the same row: 3 ways.' },
@@ -205,9 +209,9 @@ module.exports = {
     W.push(H.sub('', '(a) ________      (b) ________      (c) ________      (d) ________'));
     W.push(H.q(6, 'Shade ONE more square so that a dashed line becomes a line of symmetry of the shaded squares. Find ALL the ways. Use a new grid for each.', { keepNext: true }));
     W.push(H.fig(q6Svg()));
-    W.push(H.sub('a', 'The squares I shaded (like A1):  ______________        How many ways?  ________'));
-    W.push(H.sub('b', 'Choose a square that does NOT work. Where would its partner have to be?'));
-    W.push(...H.lines(1));
+    W.push(tip('fold the page on the dashed line. Where does each shaded square land? Is that square shaded?'));
+    W.push(H.sub('a', 'The squares I shaded (like A1):  ______________        How many ways?  ________', { after: 40 }));
+    W.push(H.sub('b', 'Choose a square that does NOT work. Where would its partner have to be?  ____________'));
     return W;
   }
 };
@@ -244,10 +248,12 @@ module.exports.gaps = {
   "key": "Mei is right. All 16 ways to place the top square and the bottom square give a cube (checked by folding every case on a computer). The row of 4 wraps round as four walls; the square above becomes the lid and the square below becomes the base, wherever they are along the row. (c) With both extra squares above the row, none of the 6 ways folds into a cube: both squares fold over to become a lid, so they land on top of each other and the base is empty. Look for children who test the end positions too, and who use wall, lid and base in their reason.",
   "easy": "Cut 6 squares from the Square grid page. Make the net in the picture (a row of 4 squares with one square above it and one below). Fold it. Does it make a cube?"
  },
- "reflect": "Something I did well: I made the net with paper. The hardest part was folding the net in my head. What helped me: making it with paper and tape.",
+ "reflect": "Something I did well: I made the net with paper. The hardest part was folding the net in my head. What helped me: making it with paper and tape. One thing I could try next: folding paper to check my answer.",
  "go2": {
   "q": "What if the longest row has only 3 squares? Can the shape still fold into a cube? Find one.",
   "a": "Yes. 4 of the 11 cube nets have a longest row of 3 squares. One example: two rows of 3 squares, where the second row starts under the last square of the first row. (One net, the staircase, has no row longer than 2.)"
  },
- "cap": "Page 2 is on your own. Aim for Q4 and Q5 first. Q6 is a choice for the last few minutes."
+ "cap": "Page 2 is on your own. Aim for Q4 and Q5 first. Q6 is a choice for the last few minutes.",
+ "p1": "After question 3 you may choose: carry on, or try Think harder.",
+ "plan": ["Q1 (six nets) is the hardest page-1 item for a slower child; Q2 and Q3 are the carry-on questions. Aim for Q4 and Q5 on page 2; Q6 is the choice."]
 };

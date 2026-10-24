@@ -1,0 +1,2852 @@
+[
+ {
+  "no": 1,
+  "code": "S1-02 (P1-01)",
+  "title": "Colour the Rocket",
+  "tier": 1,
+  "topic": "Place value: tens and ones",
+  "strand": "Number and Algebra - Whole Numbers",
+  "syll": "1.2 (tens and ones)",
+  "outcomes": [
+   "WN1.2"
+  ],
+  "ptype": "Colour by code (pupils colour with their own crayons)",
+  "mech": "K1 colour key + K3 tally of colours (+ matching parts)",
+  "seed": 201,
+  "checks": [
+   {
+    "name": "V1 every question has exactly one answer in the bank's domain",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V1a the independent evaluator (textcheck) re-solves all 15 printed questions from their text and picture and gets the coloured answer",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V1b every answer is one of the five key values",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1c all five colours used at least twice",
+    "ok": true,
+    "detail": "{'yellow': 3, 'red': 4, 'blue': 2, 'green': 4, 'orange': 2}"
+   },
+   {
+    "name": "V2 the right answers pass every check (tally, matching parts)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2b questions are not repeated",
+    "ok": true,
+    "detail": "0"
+   },
+   {
+    "name": "V7 regions 12 to 18, every label found a box",
+    "ok": true,
+    "detail": "15"
+   },
+   {
+    "name": "V2c the printed left-right rule is true: no two parts sit in mirror-image places without being a declared pair",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3 single wrong answers rejected by the page's checks (>=95%)",
+    "ok": true,
+    "detail": "150/150"
+   },
+   {
+    "name": "V3b double slips (every pair of regions, every pair of wrong colours) rejected (>=95%)",
+    "ok": true,
+    "detail": "1678/1680"
+   },
+   {
+    "name": "V3c swaps of two parts' colours rejected (>=95%)",
+    "ok": true,
+    "detail": "86/88"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   150,
+   150
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    118,
+    118
+   ],
+   "all_other_values_rejected": [
+    150,
+    150
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 2,
+  "code": "S1-13 (P1-02)",
+  "title": "Mystery Numbers",
+  "tier": 2,
+  "topic": "Numbers to 100: tens digit, ones digit, more and less",
+  "strand": "Number and Algebra - Whole Numbers",
+  "syll": "1.2, 1.5 (tens and ones, compare and order numbers)",
+  "outcomes": [
+   "WN1.2",
+   "WN1.5"
+  ],
+  "ptype": "Number riddles",
+  "mech": "K1 code word + K7 test the clues (5 letters)",
+  "seed": 202,
+  "checks": [
+   {
+    "name": "V1 each riddle has exactly 1 solution in 1..100",
+    "ok": true,
+    "detail": "[66, 85, 36, 56, 26]"
+   },
+   {
+    "name": "V1b every clue is necessary",
+    "ok": true,
+    "detail": "checked in generator, re-run here: True"
+   },
+   {
+    "name": "V2 code word spells JUICE",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "495/495"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['juice']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['cumin', 'denim', 'dunce', 'index', 'juice', 'medic']"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   495,
+   495
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    60,
+    60
+   ],
+   "all_other_values_rejected": [
+    495,
+    495
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 3,
+  "code": "S2-01 (P1-03)",
+  "title": "Fair Shares",
+  "tier": 1,
+  "topic": "Sharing equally and making equal groups (within 20)",
+  "strand": "Number and Algebra - Multiplication and Division",
+  "syll": "3.1, 3.4 (dividing within 20: sharing and grouping, no division sign)",
+  "outcomes": [
+   "MD3.1",
+   "MD3.4"
+  ],
+  "ptype": "Code-breaker",
+  "mech": "K1 code word (6 letters) + K7 put the number back",
+  "seed": 303,
+  "checks": [
+   {
+    "name": "V1 objects and containers counted in the drawing divide exactly (loop objects counted for grouping) and the quotient equals the key",
+    "ok": true,
+    "detail": "[7, 3, 6, 2, 5, 4]"
+   },
+   {
+    "name": "V2 code word spells SHADOW",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "114/114"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['shadow']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['boards', 'howard', 'shadow']"
+   },
+   {
+    "name": "V7 every number of objects is within 20",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   114,
+   114
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    56,
+    56
+   ],
+   "all_other_values_rejected": [
+    114,
+    114
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 4,
+  "code": "S1-14 (P1-04)",
+  "title": "Sticker Grid",
+  "tier": 2,
+  "topic": "Comparing numbers to 100 (more, fewer, greatest, smallest)",
+  "strand": "Number and Algebra - Whole Numbers",
+  "syll": "1.5 (compare and order numbers)",
+  "outcomes": [
+   "WN1.5"
+  ],
+  "ptype": "Logic grid",
+  "mech": "K4 grid + K1 letter beside each number spells a word (5 letters, one decoy letter)",
+  "seed": 404,
+  "checks": [
+   {
+    "name": "V1 exactly one assignment satisfies all clues",
+    "ok": true,
+    "detail": "1 solution(s)"
+   },
+   {
+    "name": "V1b every clue needed",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1c greatest, smallest and second greatest mean the same with or without the unused number",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 letters beside the numbers, read in name order, spell FRUIT",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
+    "ok": true,
+    "detail": "['fruit']"
+   },
+   {
+    "name": "V3 none of the 719 wrong placements (5 of the 6 numbers) spells a word (large word list)",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3c the teacher note names no wrong word and says no wrong placement spells one",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V4 guess resistance: six letters shown, one is a decoy, and at least 3 shorter common words can be spelt from them",
+    "ok": true,
+    "detail": "['fir', 'fit', 'ftp', 'fur', 'fut', 'pir']"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   719,
+   719
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    25,
+    25
+   ],
+   "all_other_values_rejected": [
+    25,
+    25
+   ],
+   "wrong_arrangements_rejected": [
+    119,
+    119
+   ]
+  }
+ },
+ {
+  "no": 5,
+  "code": "S2-04 (P1-05)",
+  "title": "Times Code",
+  "tier": 2,
+  "topic": "Multiplication within 40: groups of, and the missing number",
+  "strand": "Number and Algebra - Multiplication and Division",
+  "syll": "3.1 to 3.3 (concept of multiplication, sign x, multiplying within 40)",
+  "outcomes": [
+   "MD3.1",
+   "MD3.2",
+   "MD3.3"
+  ],
+  "ptype": "Code-breaker",
+  "mech": "K1 code word (6 letters) + K7 put the number back",
+  "seed": 505,
+  "checks": [
+   {
+    "name": "V1 solver reads the printed items back and equals the key",
+    "ok": true,
+    "detail": "[12, 6, 5, 2, 9, 4]"
+   },
+   {
+    "name": "V1b answers distinct, every product within 40",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1c the array objects counted in each drawing equal the product of the two numbers in the sentence (the total printed for a missing-number item)",
+    "ok": true,
+    "detail": "[12, 6, 15, 8, 9, 4]"
+   },
+   {
+    "name": "V2 code word spells SQUARE",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "234/234"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['square']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['abuser', 'basque', 'square']"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   234,
+   234
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    60,
+    60
+   ],
+   "all_other_values_rejected": [
+    234,
+    234
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 6,
+  "code": "S2-09 (P1-06)",
+  "title": "What Time Is It?",
+  "tier": 1,
+  "topic": "Time: o'clock and half past",
+  "strand": "Measurement and Geometry - Measurement",
+  "syll": "Time 2.1 (tell time: o'clock and half past)",
+  "outcomes": [
+   "TI2.1"
+  ],
+  "ptype": "Code-breaker",
+  "mech": "K1 code word (6 letters)",
+  "seed": 606,
+  "checks": [
+   {
+    "name": "V1 clock hands read back from the drawing equal the intended times",
+    "ok": true,
+    "detail": "[(8, 0), (4, 0), (9, 0), (1, 30), (11, 30), (2, 30)]"
+   },
+   {
+    "name": "V1b only o'clock and half past, no hands closer than 25 degrees",
+    "ok": true,
+    "detail": "90"
+   },
+   {
+    "name": "V2 code word spells SECOND",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "138/138"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['second']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['censor', 'scored', 'second']"
+   },
+   {
+    "name": "V1c the table spells the word from the times read off the drawing",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   138,
+   138
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    138,
+    138
+   ],
+   "all_other_values_rejected": [
+    138,
+    138
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 7,
+  "code": "S1-06 (P1-07)",
+  "title": "The Queue",
+  "tier": 2,
+  "topic": "Ordinal numbers: 1st to 5th, next to",
+  "strand": "Number and Algebra - Whole Numbers",
+  "syll": "1.7 (ordinal numbers first to tenth)",
+  "outcomes": [
+   "WN1.7"
+  ],
+  "ptype": "Logic (queue)",
+  "mech": "K1 shirt letters read 1st to 5th spell a word + K4 each child used once (one decoy letter)",
+  "seed": 707,
+  "checks": [
+   {
+    "name": "V1 exactly one queue order satisfies the clues",
+    "ok": true,
+    "detail": "1"
+   },
+   {
+    "name": "V1b every clue needed",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 shirt letters in queue order spell ENJOY",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
+    "ok": true,
+    "detail": "['enjoy']"
+   },
+   {
+    "name": "V3 none of the 719 wrong queues (5 of the 6 children) spells a word (large word list)",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3c the teacher note says no wrong queue spells a word",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V4 guess resistance: six letters shown, one is a decoy, and at least 3 shorter common words can be spelt from them",
+    "ok": true,
+    "detail": "['eon', 'jew', 'joe', 'joey', 'jon', 'joy']"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   719,
+   719
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    25,
+    25
+   ],
+   "all_other_values_rejected": [
+    25,
+    25
+   ],
+   "wrong_arrangements_rejected": [
+    119,
+    119
+   ]
+  }
+ },
+ {
+  "no": 8,
+  "code": "S1-07 (P1-08)",
+  "title": "Make Twelve",
+  "tier": 1,
+  "topic": "Addition within 20",
+  "strand": "Number and Algebra - Addition and Subtraction",
+  "syll": "2.1 to 2.7 (add within 20, mental calculation)",
+  "outcomes": [
+   "AS2.1",
+   "AS2.2",
+   "AS2.7"
+  ],
+  "ptype": "Maze / path",
+  "mech": "K6 route closes at FINISH",
+  "seed": 808,
+  "checks": [
+   {
+    "name": "V1 exactly one route start->finish (exhaustive DFS)",
+    "ok": true,
+    "detail": "1"
+   },
+   {
+    "name": "V3 dead-end boxes that also make 12 exist",
+    "ok": true,
+    "detail": "2"
+   },
+   {
+    "name": "V3b a shortcut that ignores the rule is shorter than the route, so the box count rejects it",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V7 all sums within 20",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   2,
+   2
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    120,
+    120
+   ],
+   "all_other_values_rejected": [
+    120,
+    120
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 9,
+  "code": "S1-11 (P1-09)",
+  "title": "Magic Square",
+  "tier": 2,
+  "topic": "Adding three 1-digit numbers",
+  "strand": "Number and Algebra - Addition and Subtraction",
+  "syll": "2.4 (adding more than two 1-digit numbers)",
+  "outcomes": [
+   "AS2.4"
+  ],
+  "ptype": "Magic square",
+  "mech": "K3 every line makes 15 (8 line totals)",
+  "seed": 909,
+  "checks": [
+   {
+    "name": "V1 exactly one completion (all 362880 arrangements tested)",
+    "ok": true,
+    "detail": "1"
+   },
+   {
+    "name": "V3 every single wrong entry breaks a line total",
+    "ok": true,
+    "detail": "48/48"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   48,
+   48
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    42,
+    42
+   ],
+   "all_other_values_rejected": [
+    48,
+    48
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 10,
+  "code": "S1-09 (P1-10)",
+  "title": "Take Away Code",
+  "tier": 1,
+  "topic": "Subtraction within 20; missing numbers",
+  "strand": "Number and Algebra - Addition and Subtraction",
+  "syll": "2.1 to 2.7 (subtract within 20, inverse relationship)",
+  "outcomes": [
+   "AS2.1",
+   "AS2.3",
+   "AS2.7"
+  ],
+  "ptype": "Code-breaker",
+  "mech": "K1 code word (6 letters) + K7 put the number back",
+  "seed": 1010,
+  "checks": [
+   {
+    "name": "V1 each blank has exactly one value in 0..20",
+    "ok": true,
+    "detail": "[9, 7, 4, 8, 5, 16]"
+   },
+   {
+    "name": "V1b solver answers equal key",
+    "ok": true,
+    "detail": "[9, 7, 4, 8, 5, 16]"
+   },
+   {
+    "name": "V2 code word spells COUSIN",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "114/114"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['cousin']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['column', 'consul', 'cousin', 'moulin', 'muslin']"
+   },
+   {
+    "name": "V7 all numbers within 20",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   114,
+   114
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    63,
+    63
+   ],
+   "all_other_values_rejected": [
+    114,
+    114
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 11,
+  "code": "S2-06 (P1-11)",
+  "title": "Big Number Sums",
+  "tier": 2,
+  "topic": "Add and subtract within 100",
+  "strand": "Number and Algebra - Addition and Subtraction",
+  "syll": "2.5, 2.7 (add and subtract within 100: 2-digit and ones, 2-digit and tens, missing number)",
+  "outcomes": [
+   "AS2.5",
+   "AS2.7"
+  ],
+  "ptype": "Code-breaker",
+  "mech": "K1 code word (6 letters) + K7 put the number back",
+  "seed": 1131,
+  "checks": [
+   {
+    "name": "V1 solver reads the printed items back and equals the key",
+    "ok": true,
+    "detail": "[21, 81, 94, 30, 17, 88]"
+   },
+   {
+    "name": "V1b answers are distinct and within 10..99",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 code word spells FAMILY",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "594/594"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['family']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['family', 'infamy', 'mainly', 'malkin']"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   594,
+   594
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    71,
+    71
+   ],
+   "all_other_values_rejected": [
+    594,
+    594
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 12,
+  "code": "S1-04 (P1-12)",
+  "title": "Colour the House",
+  "tier": 1,
+  "topic": "Shapes: corners",
+  "strand": "Measurement and Geometry - Geometry",
+  "syll": "Geometry 1.1 (identify, name, describe 2D shapes: triangle, square, rectangle, circle)",
+  "outcomes": [
+   "GE1.1"
+  ],
+  "ptype": "Colour by code (pupils colour with their own crayons)",
+  "mech": "K1 colour key + K3 tally of colours (+ matching parts)",
+  "seed": 128,
+  "checks": [
+   {
+    "name": "V1 every question has exactly one answer in the bank's domain",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V1a the independent evaluator (textcheck) re-solves all 17 printed questions from their text and picture and gets the coloured answer",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V1b every answer is one of the five key values",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1c all five colours used at least twice",
+    "ok": true,
+    "detail": "{'yellow': 3, 'red': 4, 'blue': 3, 'green': 3, 'orange': 4}"
+   },
+   {
+    "name": "V2 the right answers pass every check (tally, matching parts)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2b questions are not repeated",
+    "ok": true,
+    "detail": "0"
+   },
+   {
+    "name": "V7 regions 12 to 18, every label found a box",
+    "ok": true,
+    "detail": "17"
+   },
+   {
+    "name": "V2c the printed left-right rule is true: no two parts sit in mirror-image places without being a declared pair",
+    "ok": true,
+    "detail": "[('grass_1', 'grass_3')]"
+   },
+   {
+    "name": "V3 single wrong answers rejected by the page's checks (>=95%)",
+    "ok": true,
+    "detail": "204/204"
+   },
+   {
+    "name": "V3b double slips (every pair of regions, every pair of wrong colours) rejected (>=95%)",
+    "ok": true,
+    "detail": "2173/2176"
+   },
+   {
+    "name": "V3c swaps of two parts' colours rejected (>=95%)",
+    "ok": true,
+    "detail": "112/115"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   204,
+   204
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    156,
+    156
+   ],
+   "all_other_values_rejected": [
+    204,
+    204
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 13,
+  "code": "S1-20 (P1-13)",
+  "title": "Equal Groups",
+  "tier": 1,
+  "topic": "Multiplication: equal groups and repeated addition",
+  "strand": "Number and Algebra - Multiplication and Division",
+  "syll": "3.1 to 3.3 (concept of multiplication, sign x, multiplying within 40)",
+  "outcomes": [
+   "MD3.1",
+   "MD3.2",
+   "MD3.3"
+  ],
+  "ptype": "Code-breaker",
+  "mech": "K1 code word (6 letters)",
+  "seed": 1313,
+  "checks": [
+   {
+    "name": "V1 counted bags x dots equals the key (from drawn SVG)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 code word spells NUMBER",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "234/234"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['number']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['bumper', 'jumper', 'number']"
+   },
+   {
+    "name": "V7 totals within 40",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   234,
+   234
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    69,
+    69
+   ],
+   "all_other_values_rejected": [
+    234,
+    234
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 14,
+  "code": "S2-03 (P1-14)",
+  "title": "Colour the Ice Cream",
+  "tier": 2,
+  "topic": "Counting in 2s, 5s and 10s",
+  "strand": "Number and Algebra - Whole Numbers",
+  "syll": "1.6 (number patterns); counting in 2s, 5s and 10s leads to multiplication",
+  "outcomes": [
+   "WN1.6"
+  ],
+  "ptype": "Colour by code (pupils colour with their own crayons)",
+  "mech": "K1 colour key + K3 tally of colours (+ matching parts)",
+  "seed": 105,
+  "checks": [
+   {
+    "name": "V1 every question has exactly one answer in the bank's domain",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V1a the independent evaluator (textcheck) re-solves all 13 printed questions from their text and picture and gets the coloured answer",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V1b every answer is one of the five key values",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1c all five colours used at least twice",
+    "ok": true,
+    "detail": "{'yellow': 2, 'red': 3, 'blue': 3, 'green': 3, 'orange': 2}"
+   },
+   {
+    "name": "V2 the right answers pass every check (tally, matching parts)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2b questions are not repeated",
+    "ok": true,
+    "detail": "0"
+   },
+   {
+    "name": "V7 regions 12 to 18, every label found a box",
+    "ok": true,
+    "detail": "13"
+   },
+   {
+    "name": "V2c the printed left-right rule is true: no two parts sit in mirror-image places without being a declared pair",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3 single wrong answers rejected by the page's checks (>=95%)",
+    "ok": true,
+    "detail": "1300/1300"
+   },
+   {
+    "name": "V3b double slips (every pair of regions, every pair of wrong colours) rejected (>=95%)",
+    "ok": true,
+    "detail": "1245/1248"
+   },
+   {
+    "name": "V3c swaps of two parts' colours rejected (>=95%)",
+    "ok": true,
+    "detail": "64/67"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   1300,
+   1300
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    156,
+    156
+   ],
+   "all_other_values_rejected": [
+    1300,
+    1300
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 15,
+  "code": "S2-10 (P1-15)",
+  "title": "Coin Purses",
+  "tier": 1,
+  "topic": "Money: counting coins in cents (up to $1)",
+  "strand": "Number and Algebra - Money",
+  "syll": "Money 1.1 (count money in cents up to $1)",
+  "outcomes": [
+   "MO1.1"
+  ],
+  "ptype": "Code-breaker",
+  "mech": "K1 code word (5 letters)",
+  "seed": 1515,
+  "checks": [
+   {
+    "name": "V1 coin values read from the drawing add to the key",
+    "ok": true,
+    "detail": "[80, 60, 40, 25, 95]"
+   },
+   {
+    "name": "V2 code word spells PIANO",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "475/475"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['piano']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['cowan', 'panic', 'piano']"
+   },
+   {
+    "name": "V7 totals below $1",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   475,
+   475
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    59,
+    59
+   ],
+   "all_other_values_rejected": [
+    475,
+    475
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 16,
+  "code": "S2-12 (P1-16)",
+  "title": "Shop Prices",
+  "tier": 2,
+  "topic": "Money: dollars, more and less",
+  "strand": "Number and Algebra - Money",
+  "syll": "Money 1.1 (dollars up to $100), 2.7 (add, subtract); guess and check, problem solving",
+  "outcomes": [
+   "MO1.1",
+   "AS2.7"
+  ],
+  "ptype": "Logic grid + total",
+  "mech": "K4 grid + K1 letter beside each price + code letter for the total (6 letters)",
+  "seed": 1616,
+  "checks": [
+   {
+    "name": "V1 exactly one price assignment satisfies all clues",
+    "ok": true,
+    "detail": "1"
+   },
+   {
+    "name": "V1b every clue needed",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 letters beside the prices (item order) plus total letter spell FROZEN",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 wrong placements that still spell a word <= 5% (large word list)",
+    "ok": true,
+    "detail": "0/119"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
+    "ok": true,
+    "detail": "['frozen']"
+   },
+   {
+    "name": "V3b a wrong total never spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V4 guess resistance: the sixth letter is one of at least 4 table letters (decoys included)",
+    "ok": true,
+    "detail": "['J', 'N', 'Q', 'X']"
+   },
+   {
+    "name": "V7 prices within $100, total within $40",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   119,
+   119
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    58,
+    58
+   ],
+   "all_other_values_rejected": [
+    58,
+    58
+   ],
+   "wrong_arrangements_rejected": [
+    119,
+    119
+   ]
+  }
+ },
+ {
+  "no": 17,
+  "code": "S1-19 (P1-17)",
+  "title": "How Long?",
+  "tier": 1,
+  "topic": "Length: measure in centimetres",
+  "strand": "Measurement and Geometry - Measurement",
+  "syll": "Length 1.1, 1.2 (measure in cm, abbreviation cm)",
+  "outcomes": [
+   "LE1.1",
+   "LE1.2"
+  ],
+  "ptype": "Code-breaker",
+  "mech": "K1 code word (6 letters)",
+  "seed": 1717,
+  "checks": [
+   {
+    "name": "V1 strip widths read against the 10 mm/cm scale equal the key",
+    "ok": true,
+    "detail": "[4, 5, 3, 2, 7, 8]"
+   },
+   {
+    "name": "V1c every strip starts at its arrow (read from the drawing); two start at 0, four start at 1 to 4 and every strip ends on the ruler",
+    "ok": true,
+    "detail": "[3, 0, 4, 4, 0, 3]"
+   },
+   {
+    "name": "V2 code word spells LENGTH",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "66/66"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['length']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['gluten', 'jungle', 'length']"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   66,
+   66
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    50,
+    50
+   ],
+   "all_other_values_rejected": [
+    66,
+    66
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 18,
+  "code": "S2-14 (P1-18)",
+  "title": "Clock Time",
+  "tier": 2,
+  "topic": "Time to 5 minutes: 1 hour and half an hour later",
+  "strand": "Measurement and Geometry - Measurement",
+  "syll": "Time 2.1 and 2.4 (tell time to 5 minutes; durations of 1 hour or half an hour)",
+  "outcomes": [
+   "TI2.1",
+   "TI2.4"
+  ],
+  "ptype": "Code-breaker",
+  "mech": "K1 code word (5 letters)",
+  "seed": 1818,
+  "checks": [
+   {
+    "name": "V1 clock hands read back from the drawing equal the intended times",
+    "ok": true,
+    "detail": "[(8, 10), (1, 25), (1, 30), (11, 25), (11, 0)]"
+   },
+   {
+    "name": "V1b later times computed from drawing equal the key",
+    "ok": true,
+    "detail": "['9:10', '1:55', '2:30', '11:55', '12:00']"
+   },
+   {
+    "name": "V2 code word spells CLIMB",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "715/715"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['climb']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['blimp', 'climb', 'imply', 'micky', 'milky', 'picky']"
+   },
+   {
+    "name": "V1c the table spells the word from the later times",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1d at least three of the five clocks show a time that is not o'clock or half past (what the page is for)",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   715,
+   715
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    715,
+    715
+   ],
+   "all_other_values_rejected": [
+    715,
+    715
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 19,
+  "code": "S1-05 (P1-19)",
+  "title": "Shape Count",
+  "tier": 1,
+  "topic": "2D shapes: rectangle, triangle, circle, half circle, quarter circle",
+  "strand": "Measurement and Geometry - Geometry",
+  "syll": "Geometry 1.1, 1.3 (name 2D shapes; identify the shapes in a figure)",
+  "outcomes": [
+   "GE1.1",
+   "GE1.3"
+  ],
+  "ptype": "Count + code-breaker",
+  "mech": "K3 the five counts add to 15 + K1 code word (5 letters)",
+  "seed": 1919,
+  "checks": [
+   {
+    "name": "V1 shapes counted in the drawn picture equal the key",
+    "ok": true,
+    "detail": "[2, 4, 5, 3, 1]"
+   },
+   {
+    "name": "V1b counts are all different and total 15",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 code word spells BUILD",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "40/40"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['build']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['blush', 'build', 'squid']"
+   },
+   {
+    "name": "V3d the total 15 alone does not accept a swap of two counts, and the letters then spell no word",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   40,
+   40
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    34,
+    34
+   ],
+   "all_other_values_rejected": [
+    40,
+    40
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 20,
+  "code": "S2-18 (P1-20)",
+  "title": "Fruit Graph",
+  "tier": 2,
+  "topic": "Picture graphs: read, complete and answer",
+  "strand": "Statistics - Data Representation and Interpretation",
+  "syll": "Statistics 1.1 (read and interpret picture graphs)",
+  "outcomes": [
+   "ST1.1"
+  ],
+  "ptype": "Graph detective",
+  "mech": "K3 the total of all faces, and a second sum that uses the answers to a) and b) (neither is a clue)",
+  "seed": 2020,
+  "checks": [
+   {
+    "name": "V1 exactly one set of row counts satisfies the clues (total not used; all combinations tested)",
+    "ok": true,
+    "detail": "1"
+   },
+   {
+    "name": "V1b the most/least answers are unique",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 total of all rows equals the total in the check strip",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2b the total is not one of the clues",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2c the second sum is right for the right answers",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2d question b) does not name the fruit that answers a)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V7 every row fits in 9 boxes",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 one wrong row breaks the total",
+    "ok": true,
+    "detail": "12/12"
+   },
+   {
+    "name": "V3e reading more as fewer (or fewer as more) on any set of clues never passes the total",
+    "ok": true,
+    "detail": "[True, True, True, True, True, True, True]"
+   },
+   {
+    "name": "V3f every misreading of the three clues (more/fewer exchanged, Apple and Banana exchanged, any mix: 63 readings) fails the total or the second sum",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3g the first two clues read with Apple and Banana exchanged do not pass both checks (the +4 and +2 clues differ)",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   12,
+   12
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    40,
+    40
+   ],
+   "all_other_values_rejected": [
+    40,
+    40
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 21,
+  "code": "S1-10 (P1-21)",
+  "title": "Story Sums",
+  "tier": 2,
+  "topic": "Add and take away stories within 20",
+  "strand": "Number and Algebra - Whole Numbers",
+  "syll": "2.1, 2.2, 2.7 (concepts of addition and subtraction, +, - and =, mental calculation within 20)",
+  "outcomes": [
+   "AS2.1",
+   "AS2.2",
+   "AS2.7"
+  ],
+  "ptype": "Code-breaker (stories)",
+  "mech": "K1 code word (6 letters)",
+  "seed": 2101,
+  "checks": [
+   {
+    "name": "V1 independent solver reads the printed sentences back and equals the key",
+    "ok": true,
+    "detail": "[6, 5, 12, 2, 3, 14]"
+   },
+   {
+    "name": "V1b the picture shows the first group: objects counted in the drawing equal the first number in the text",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1c answers distinct and within 20",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V7 at most one picture shows more than 12 objects",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 code word spells MONKEY",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "120/120"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['monkey']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['broken', 'embryo', 'monkey', 'romney']"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   120,
+   120
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    61,
+    61
+   ],
+   "all_other_values_rejected": [
+    120,
+    120
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 22,
+  "code": "S2-20 (P1-22)",
+  "title": "Two-Step Stories",
+  "tier": 2,
+  "topic": "Two-step stories: add, take away, work backwards",
+  "strand": "Number and Algebra - Whole Numbers",
+  "syll": "2.1, 2.2, 2.5, 2.7 (two-step stories within 100: problem solving, work backwards, a printed fact)",
+  "outcomes": [
+   "AS2.1",
+   "AS2.2",
+   "AS2.5",
+   "AS2.7"
+  ],
+  "ptype": "Code-breaker (two-step stories)",
+  "mech": "K1 code word (6 letters) + K7 put the answer back",
+  "seed": 2202,
+  "checks": [
+   {
+    "name": "V1 independent solver reads the printed sentences back: step answers and end answers equal the key",
+    "ok": true,
+    "detail": "[(43, 35), (16, 14), (4, 7), (14, 13), (85, 83), (12, 9)]"
+   },
+   {
+    "name": "V1b end answers distinct, within 100",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1c the stories within 100 use tens and ones with no renaming",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1d two stories ask 'at first' and one has a printed fact",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 code word spells GUITAR",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "594/594"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['guitar']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['guitar', 'quartz', 'rajput']"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   594,
+   594
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    70,
+    70
+   ],
+   "all_other_values_rejected": [
+    594,
+    594
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 23,
+  "code": "S2-07 (P1-23)",
+  "title": "Stack It Up",
+  "tier": 1,
+  "topic": "Adding and subtracting tens and ones, written in boxes (within 100)",
+  "strand": "Number and Algebra - Whole Numbers",
+  "syll": "2.5, 2.6 (adding and subtracting within 100 using algorithms; tens and ones, no renaming)",
+  "outcomes": [
+   "AS2.5",
+   "AS2.6"
+  ],
+  "ptype": "Code-breaker (written sums)",
+  "mech": "K1 code word (6 letters) + K7 put the number back",
+  "seed": 2303,
+  "checks": [
+   {
+    "name": "V1 independent reader of the printed boxes solves every sum and equals the key",
+    "ok": true,
+    "detail": "[32, 65, 6, 40, 9, 48]"
+   },
+   {
+    "name": "V1b no renaming: ones digits of adding sums total 9 or less; taking away never needs a borrow",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V7 every number within 100",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 code word spells DONKEY",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "594/594"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['donkey']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['banked', 'beyond', 'donkey']"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   594,
+   594
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    70,
+    70
+   ],
+   "all_other_values_rejected": [
+    594,
+    594
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 24,
+  "code": "S1-03 (P1-24)",
+  "title": "Words and Numbers",
+  "tier": 1,
+  "topic": "Number words, numerals and ordinals",
+  "strand": "Number and Algebra - Whole Numbers",
+  "syll": "1.3, 1.7 (reading and writing numbers in numerals and in words; ordinal numbers and symbols)",
+  "outcomes": [
+   "WN1.3",
+   "WN1.7"
+  ],
+  "ptype": "Maze / path",
+  "mech": "K6 route closes at FINISH through the stated number of boxes",
+  "seed": 2404,
+  "checks": [
+   {
+    "name": "V1 exactly one route start->finish when every word and numeral is read back from the printed text (exhaustive DFS)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1b the printed words and numerals mean what the generator meant (round trip for all 32 strings)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 wrong turns exist (route boxes with a legal step to an off-route box)",
+    "ok": true,
+    "detail": "2"
+   },
+   {
+    "name": "V3b at least two ordinal steps and at least four number-word steps on the route",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3c a shortcut that ignores the rule is shorter than the route, so the box count rejects it",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V7 numbers within 99 and ordinals to 10th",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   2,
+   2
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    120,
+    120
+   ],
+   "all_other_values_rejected": [
+    120,
+    120
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 25,
+  "code": "S1-01 (P1-25)",
+  "title": "Count the Crowd",
+  "tier": 1,
+  "topic": "Counting a set and comparing two sets",
+  "strand": "Number and Algebra - Whole Numbers",
+  "syll": "1.1, 1.4 (counting to tell the number of objects in a given set; comparing the number of objects in two sets)",
+  "outcomes": [
+   "WN1.1",
+   "WN1.4"
+  ],
+  "ptype": "Code-breaker (counting)",
+  "mech": "K1 code word (5 letters)",
+  "seed": 2505,
+  "checks": [
+   {
+    "name": "V1 objects counted in the drawings (and unmatched objects in the two comparing pictures) equal the key",
+    "ok": true,
+    "detail": "[7, 10, 15, 1, 3]"
+   },
+   {
+    "name": "V1b the questions name the sets the right way round (more than: the longer row first; fewer than: the shorter row first)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1c at most one set has more than 12 objects",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 code word spells CLOTH",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "100/100"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['cloth']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['cloth', 'hotly', 'lofty']"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   100,
+   100
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    50,
+    50
+   ],
+   "all_other_values_rejected": [
+    100,
+    100
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 26,
+  "code": "S1-15 (P1-26)",
+  "title": "Chart Patterns",
+  "tier": 2,
+  "topic": "Number patterns on a chart: 10 more, 10 less, and a growing table",
+  "strand": "Number and Algebra - Whole Numbers",
+  "syll": "1.6, 1.2, 1.5 (patterns in number sequences; tens and ones; comparing and ordering numbers)",
+  "outcomes": [
+   "WN1.6",
+   "WN1.2",
+   "WN1.5"
+  ],
+  "ptype": "Code-breaker (chart and pattern)",
+  "mech": "K1 code word (6 letters)",
+  "seed": 2606,
+  "checks": [
+   {
+    "name": "V1 independent reader: each box in the chart is deduced from its printed neighbours (all agree), 10 more and 10 less are read from the chart, the table continues its pattern; all equal the key",
+    "ok": true,
+    "detail": "[43, 76, 70, 44, 9, 15]"
+   },
+   {
+    "name": "V1b the 10 more and 10 less answers are printed cells (not boxes), answers distinct and within 100",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 code word spells PEANUT",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "594/594"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['peanut']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['nature', 'panzer', 'parent', 'peanut', 'punter', 'quartz']"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   594,
+   594
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    71,
+    71
+   ],
+   "all_other_values_rejected": [
+    594,
+    594
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 27,
+  "code": "S2-13 (P1-27)",
+  "title": "Which Two Items?",
+  "tier": 2,
+  "topic": "Money in dollars: which two things cost exactly the amount paid",
+  "strand": "Number and Algebra - Money",
+  "syll": "Money 1.1 (dollars up to $100), 2.5 (adding within 100); guess and check, problem solving",
+  "outcomes": [
+   "MO1.1",
+   "AS2.5"
+  ],
+  "ptype": "Logic (price board)",
+  "mech": "K1 letters of the chosen items, cheaper first, spell a word (6 letters)",
+  "seed": 2707,
+  "checks": [
+   {
+    "name": "V1 independent solver reads the printed board and amounts: exactly one pair per amount, and the letters read cheaper first spell the code word",
+    "ok": true,
+    "detail": "MAGNET"
+   },
+   {
+    "name": "V1b the three pairs are different things (all six used once)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 none of the 87 single wrong pairs spells a word",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
+    "ok": true,
+    "detail": "['magnet']"
+   },
+   {
+    "name": "V7 prices whole dollars, all within $100",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   87,
+   87
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    87,
+    87
+   ],
+   "all_other_values_rejected": [
+    87,
+    87
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 28,
+  "code": "S2-11 (P1-28)",
+  "title": "Fewest Coins",
+  "tier": 1,
+  "topic": "Money: counting coins in cents; fewest coins and ways to pay",
+  "strand": "Number and Algebra - Money",
+  "syll": "Money 1.1 (counting amount of money in cents up to $1; fewest coins and ways to pay come from school tests: problem solving)",
+  "outcomes": [
+   "MO1.1"
+  ],
+  "ptype": "Code-breaker (coins)",
+  "mech": "K1 code word (5 letters)",
+  "seed": 2808,
+  "checks": [
+   {
+    "name": "V1 independent solver (coin-change search over the printed amounts; coin values summed from each drawn purse) equals the key",
+    "ok": true,
+    "detail": "[2, 3, 9, 4, 1]"
+   },
+   {
+    "name": "V1b the coins shown beside questions 3 and 4 have the values asked",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1c answers distinct and within 12",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1d the purses show 1 to 3 exact ones and several near-miss ones",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 code word spells STAMP",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "55/55"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['stamp']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['pasty', 'patsy', 'stamp']"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   55,
+   55
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    36,
+    36
+   ],
+   "all_other_values_rejected": [
+    55,
+    55
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 29,
+  "code": "S2-16 (P1-29)",
+  "title": "How Long Does It Last?",
+  "tier": 1,
+  "topic": "Time: how long a thing lasts (1 h or 30 min) and when it ends",
+  "strand": "Measurement and Geometry - Measurement",
+  "syll": "Time 2.1, 2.3, 2.4 (telling time to 5 minutes; abbreviations h and min; duration of one hour or half hour)",
+  "outcomes": [
+   "TI2.3",
+   "TI2.4",
+   "TI2.1"
+  ],
+  "ptype": "Code-breaker (clocks and a timetable)",
+  "mech": "K1 code word (6 letters)",
+  "seed": 2909,
+  "checks": [
+   {
+    "name": "V1 independent solver: clock hands read back from the drawings give the durations, the table rows are solved from their printed times; all equal the key",
+    "ok": true,
+    "detail": "['1 h', '30 min', '12:15', '2:05', '8:15', '12:10']"
+   },
+   {
+    "name": "V1b every clock shows a 5-minute time with hands at least 25 degrees apart",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1c at least one 30 min step passes the next whole hour",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 code word spells SAILOR",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "870/870"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['sailor']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['carlos', 'jarvis', 'jovial', 'sailor', 'savior', 'slavic']"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   870,
+   870
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    870,
+    870
+   ],
+   "all_other_values_rejected": [
+    870,
+    870
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 30,
+  "code": "S2-15 (P1-30)",
+  "title": "Morning or Evening?",
+  "tier": 1,
+  "topic": "Time: am and pm with times to 5 minutes",
+  "strand": "Measurement and Geometry - Measurement",
+  "syll": "Time 2.1, 2.2 (telling time to 5 minutes; use of am and pm)",
+  "outcomes": [
+   "TI2.1",
+   "TI2.2"
+  ],
+  "ptype": "Maze / path",
+  "mech": "K6 route closes at FINISH through the stated number of boxes",
+  "seed": 3030,
+  "checks": [
+   {
+    "name": "V1 exactly one route start->finish over the boxes that make sense (times read back from the printed text, own 24-hour table, exhaustive DFS)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 dead-end boxes that make sense exist, and every off-route box does not",
+    "ok": true,
+    "detail": "2"
+   },
+   {
+    "name": "V3c a shortcut that ignores the rule is shorter than the route",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3d no time is written with full stops or o'clock/half past wording; all times are digits with am or pm",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   2,
+   2
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    120,
+    120
+   ],
+   "all_other_values_rejected": [
+    120,
+    120
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 31,
+  "code": "S1-18 (P1-31)",
+  "title": "Shortest to Longest",
+  "tier": 1,
+  "topic": "Length in cm: measure and put in order",
+  "strand": "Measurement and Geometry - Measurement",
+  "syll": "Length 1.2, 1.3 (use of abbreviation cm; comparing and ordering lengths in cm)",
+  "outcomes": [
+   "LE1.2",
+   "LE1.3"
+  ],
+  "ptype": "Logic (strips in order)",
+  "mech": "K1 letters of the strips, shortest first, spell a word (5 letters, one decoy letter)",
+  "seed": 3131,
+  "checks": [
+   {
+    "name": "V1 strip lengths read from the drawing equal the key and the five shortest, in order, spell the code word",
+    "ok": true,
+    "detail": "[11, 2, 9, 3, 10, 6]"
+   },
+   {
+    "name": "V1b every strip starts at its arrow and ends on the ruler; lengths all different",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 none of the 719 wrong ways to write five of the six letters spells a word (large word list)",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
+    "ok": true,
+    "detail": "['blank']"
+   },
+   {
+    "name": "V4 guess resistance: six letters shown, one is a decoy, and at least 3 shorter common words can be spelt from them",
+    "ok": true,
+    "detail": "['alb', 'alt', 'ant', 'bal', 'balk', 'ban']"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   719,
+   719
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    25,
+    25
+   ],
+   "all_other_values_rejected": [
+    25,
+    25
+   ],
+   "wrong_arrangements_rejected": [
+    119,
+    119
+   ]
+  }
+ },
+ {
+  "no": 32,
+  "code": "S2-08 (P1-32)",
+  "title": "Measure and Draw",
+  "tier": 1,
+  "topic": "Length in cm: measure a bar and draw a line",
+  "strand": "Measurement and Geometry - Measurement",
+  "syll": "Length 1.1, 1.2, 1.4 (measuring length in cm; abbreviation cm; measuring and drawing a line segment to the nearest cm)",
+  "outcomes": [
+   "LE1.1",
+   "LE1.2",
+   "LE1.4"
+  ],
+  "ptype": "Code-breaker (measure and draw)",
+  "mech": "K1 code word (6 letters)",
+  "seed": 3232,
+  "checks": [
+   {
+    "name": "V1 bar lengths read from the drawings and line lengths read from the text equal the key",
+    "ok": true,
+    "detail": "[3, 2, 12, 6, 4, 8]"
+   },
+   {
+    "name": "V1b the letter printed under the end of each drawn line (read from the drawing) is the code letter of that length",
+    "ok": true,
+    "detail": "['S', 'T', 'R']"
+   },
+   {
+    "name": "V1c measured bars start at 2 or 3 (not 0) and end on the ruler; lines start at 0",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V7 every length a whole number of cm within the 12 cm ruler",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 code word spells STRING",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "66/66"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['string']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['kirsty', 'stingy', 'string', 'trying', 'wintry']"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   66,
+   66
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    47,
+    47
+   ],
+   "all_other_values_rejected": [
+    66,
+    66
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 33,
+  "code": "S1-16 (P1-33)",
+  "title": "Shape Builder",
+  "tier": 2,
+  "topic": "2D shapes: count the shapes in a figure and form a figure",
+  "strand": "Measurement and Geometry - Geometry",
+  "syll": "Geometry 1.1, 1.2, 1.3 (naming and classifying 2D shapes; forming a figure from rectangle, square, triangle, half circle, quarter circle; the shapes in a figure)",
+  "outcomes": [
+   "GE1.1",
+   "GE1.2",
+   "GE1.3"
+  ],
+  "ptype": "Count + form a figure + code-breaker",
+  "mech": "K3 the five counts add to 18 + K1 code word (6 letters: five counts and the letter of the pieces that form the figure)",
+  "seed": 3333,
+  "checks": [
+   {
+    "name": "V1 shapes counted in the drawn figure equal the key",
+    "ok": true,
+    "detail": "[4, 6, 2, 1, 5]"
+   },
+   {
+    "name": "V1b counts all different, total is not 15 (the other shape page) and is within 20",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1c forming task: exactly one option's pieces have the same total area as the drawn outline, and its letter is the sixth letter of the word",
+    "ok": true,
+    "detail": "[1.5, 1.79, 3.57] vs 3.56"
+   },
+   {
+    "name": "V1d the two wrong sets differ from the right one in kinds of pieces and in area (by at least 0.2)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 the five count letters then the form letter spell BUDGIE",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip of a count spells another word (large word list)",
+    "ok": true,
+    "detail": "40/40"
+   },
+   {
+    "name": "V3c no swap of two counts spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
+    "ok": true,
+    "detail": "['budgie']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters and the three option letters",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   40,
+   40
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    42,
+    42
+   ],
+   "all_other_values_rejected": [
+    42,
+    42
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 34,
+  "code": "S1-17 (P1-34)",
+  "title": "Finish the Figure",
+  "tier": 2,
+  "topic": "Copy figures on a square grid",
+  "strand": "Measurement and Geometry - Geometry",
+  "syll": "Geometry 1.4 (copying figures on a dot grid or square grid)",
+  "outcomes": [
+   "GE1.4"
+  ],
+  "ptype": "Copy + matching pictures",
+  "mech": "K1 letter of the matching right half in each row spells a word (4 letters)",
+  "seed": 3434,
+  "checks": [
+   {
+    "name": "V1 independent reader: exactly one printed right half matches the right half of each drawn figure (edges read back from the drawings); its letters spell the code word",
+    "ok": true,
+    "detail": "FROG"
+   },
+   {
+    "name": "V1b the three options of every figure are all different",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1c the copy grid shows exactly the left half of the figure (the edges up to column 3)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 none of the 80 wrong picks (one option per figure) spells a word (large word list)",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
+    "ok": true,
+    "detail": "['frog']"
+   },
+   {
+    "name": "V4 guess resistance: twelve letters shown, 3 per figure; shorter common words can be spelt from them",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   80,
+   80
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    8,
+    8
+   ],
+   "all_other_values_rejected": [
+    8,
+    8
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 35,
+  "code": "S2-17 (P1-35)",
+  "title": "Read the Picture Graph",
+  "tier": 1,
+  "topic": "Picture graphs: read the graph and answer questions",
+  "strand": "Statistics - Data Representation and Interpretation",
+  "syll": "Statistics 1.1 (reading and interpreting data from picture graphs; one picture stands for one child)",
+  "outcomes": [
+   "ST1.1"
+  ],
+  "ptype": "Code-breaker (picture graph)",
+  "mech": "K1 code word (6 letters)",
+  "seed": 3535,
+  "checks": [
+   {
+    "name": "V1 independent reader: symbols counted in each drawn row answer all six questions and equal the key",
+    "ok": true,
+    "detail": "['Cat', 'Fish', '5', '9', '6', '26']"
+   },
+   {
+    "name": "V1b every row has a different number of symbols (0 to 9), so most and fewest are unique; 4 to 6 rows",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1c answers distinct; two are pet names and four are numbers",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 code word spells TURKEY",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "306/306"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['turkey']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['bucket', 'pucker', 'tucker', 'turkey']"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   306,
+   306
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    306,
+    306
+   ],
+   "all_other_values_rejected": [
+    306,
+    306
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 36,
+  "code": "S2-19 (P1-36)",
+  "title": "Graph Detective Two",
+  "tier": 2,
+  "topic": "Picture graphs: read, complete and answer from clues",
+  "strand": "Statistics - Data Representation and Interpretation",
+  "syll": "Statistics 1.1 (reading and interpreting data from picture graphs; completing a graph from clues)",
+  "outcomes": [
+   "ST1.1"
+  ],
+  "ptype": "Graph detective",
+  "mech": "K3 the total of all stars, and a second sum that uses the answers to a) and b) (neither is a clue)",
+  "seed": 3636,
+  "checks": [
+   {
+    "name": "V1 exactly one set of row counts satisfies the printed clues (total not used; all 1000 combinations tested)",
+    "ok": true,
+    "detail": "1"
+   },
+   {
+    "name": "V1b the most answer is unique, the total is not a clue, b) does not name the fruit that answers a)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 total and second sum are right for the right answers",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3f every misreading of the three clues (26 readings) fails the total or the second sum",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 one wrong row breaks the total",
+    "ok": true,
+    "detail": "12/12"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   12,
+   12
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    40,
+    40
+   ],
+   "all_other_values_rejected": [
+    40,
+    40
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 37,
+  "code": "S1-08 (P1-37)",
+  "title": "Bonds and Families",
+  "tier": 2,
+  "topic": "Number bonds to 20: parts, wholes and the loop that closes",
+  "strand": "Number and Algebra - Whole Numbers",
+  "syll": "2.1, 2.2, 2.3 (concepts of addition and subtraction; use of +, - and =; relationship between addition and subtraction)",
+  "outcomes": [
+   "AS2.1",
+   "AS2.2",
+   "AS2.3"
+  ],
+  "ptype": "Chain loop (bond tiles)",
+  "mech": "K8 the loop closes: every number joined by = matches",
+  "seed": 3737,
+  "checks": [
+   {
+    "name": "V1 independent reader: every empty circle is found from its tile (whole minus the other part) and the loop closes with those numbers",
+    "ok": true,
+    "detail": "[3, 5, 10, 3, 3, 7]"
+   },
+   {
+    "name": "V1b every tile has exactly one empty part and all wholes are within 20",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1c at most one link has an empty circle on both sides",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 every single wrong value in one empty circle (0 to 20) breaks the loop",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   120,
+   120
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    61,
+    61
+   ],
+   "all_other_values_rejected": [
+    120,
+    120
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 38,
+  "code": "S1-12 (P1-38)",
+  "title": "More or Fewer",
+  "tier": 2,
+  "topic": "Comparing amounts: more than, fewer than and making the same",
+  "strand": "Number and Algebra - Whole Numbers",
+  "syll": "1.5, 2.1 (comparing and ordering numbers; concepts of addition and subtraction; make equal and fewer than: problem solving)",
+  "outcomes": [
+   "WN1.5",
+   "AS2.1"
+  ],
+  "ptype": "Logic grid",
+  "mech": "K4 grid + K1 letter beside each amount spells a word (5 letters, one decoy letter)",
+  "seed": 3838,
+  "checks": [
+   {
+    "name": "V1 exactly one assignment satisfies all clues (the clue texts evaluated by brute force over 720 ways)",
+    "ok": true,
+    "detail": "1"
+   },
+   {
+    "name": "V1b every clue needed",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1c the clues include more than, fewer than (the reversed one) and a give-to-make-the-same clue",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 letters beside the amounts, in name order, spell GLORY",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
+    "ok": true,
+    "detail": "['glory']"
+   },
+   {
+    "name": "V3 none of the 719 wrong placements (5 of the 6 amounts) spells a word (large word list)",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V4 guess resistance: six letters shown, one is a decoy, and at least 3 shorter common words can be spelt from them",
+    "ok": true,
+    "detail": "['gol', 'gor', 'gory', 'gym', 'gyro', 'log']"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   719,
+   719
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    25,
+    25
+   ],
+   "all_other_values_rejected": [
+    25,
+    25
+   ],
+   "wrong_arrangements_rejected": [
+    119,
+    119
+   ]
+  }
+ },
+ {
+  "no": 39,
+  "code": "S2-02 (P1-39)",
+  "title": "Share and Group",
+  "tier": 2,
+  "topic": "Sharing and grouping stories within 20, and printed facts",
+  "strand": "Number and Algebra - Multiplication and Division",
+  "syll": "3.1, 3.4 (concepts of multiplication and division, dividing within 20; sharing stories, hidden facts: problem solving)",
+  "outcomes": [
+   "MD3.1",
+   "MD3.4"
+  ],
+  "ptype": "Code-breaker (stories)",
+  "mech": "K1 code word (6 letters)",
+  "seed": 3939,
+  "checks": [
+   {
+    "name": "V1 independent solver reads the printed sentences back and equals the key",
+    "ok": true,
+    "detail": "[6, 7, 2, 4, 3, 5]"
+   },
+   {
+    "name": "V1b the picture shows the objects in the story (counted in the drawing)",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V1c answers distinct; every share or group is exact",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V2 code word spells SPONGE",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 no single slip spells another word (large word list, 129 000 words)",
+    "ok": true,
+    "detail": "114/114"
+   },
+   {
+    "name": "V3c no swap of two answers spells a word",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word (no wrong placement of the answers can spell another word)",
+    "ok": true,
+    "detail": "['sponge']"
+   },
+   {
+    "name": "V4 guess resistance: at least 3 common words fit the table letters",
+    "ok": true,
+    "detail": "['skopje', 'spoken', 'sponge']"
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   114,
+   114
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    56,
+    56
+   ],
+   "all_other_values_rejected": [
+    114,
+    114
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ },
+ {
+  "no": 40,
+  "code": "S2-05 (P1-40)",
+  "title": "True or False",
+  "tier": 2,
+  "topic": "Multiplication and sharing: true or false statements",
+  "strand": "Number and Algebra - Multiplication and Division",
+  "syll": "3.1, 3.2, 3.3 (concepts of multiplication, use of x, multiplying within 40; true or false: reasoning)",
+  "outcomes": [
+   "MD3.1",
+   "MD3.2",
+   "MD3.3"
+  ],
+  "ptype": "True or false table + code word",
+  "mech": "K1 letter of the ticked answer in each row spells a word (6 letters)",
+  "seed": 4040,
+  "checks": [
+   {
+    "name": "V1 independent evaluator reads each printed statement: three true and three false, equal to the key",
+    "ok": true,
+    "detail": "[False, False, True, False, True, True]"
+   },
+   {
+    "name": "V2 the letters of the right ticks spell TEACUP",
+    "ok": true,
+    "detail": ""
+   },
+   {
+    "name": "V3 none of the 63 other ways of ticking spells a word (large word list)",
+    "ok": true,
+    "detail": "[]"
+   },
+   {
+    "name": "V3d the code word's letters have exactly ONE arrangement that is a word",
+    "ok": true,
+    "detail": "['teacup']"
+   },
+   {
+    "name": "V4 guess resistance: twelve different letters are shown",
+    "ok": true,
+    "detail": ""
+   }
+  ],
+  "generator_slip_test": [
+   1.0,
+   63,
+   63
+  ],
+  "enumeration": {
+   "plausible_slips_rejected": [
+    6,
+    6
+   ],
+   "all_other_values_rejected": [
+    6,
+    6
+   ],
+   "wrong_arrangements_rejected": null
+  }
+ }
+]

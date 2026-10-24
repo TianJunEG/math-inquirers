@@ -68,7 +68,7 @@ B.append('''<div class="pb"><div class="kick">Before you start</div><div class="
 </ol>
 <div class="quote">Hard question? Great. Getting stuck is where the thinking happens.</div>
 <div class="panel"><h3>One dose a week</h3><p style="margin:0">Each week has two lessons and about 18 questions. Do two or three a day, Monday to Friday, and keep the weekend for the Go further questions if your child enjoys them.</p></div>
-<div class="panel"><h3>The three levels</h3><p style="margin:0"><b>Start here</b> is for everyone. <b>Think harder</b> and <b>Go further</b> stretch the idea, and every child may choose them. The <b>Investigation</b> is an open task anyone can try. It is fine to leave any of them for another day.</p></div>
+<div class="panel"><h3>The three levels</h3><p style="margin:0"><b>Start here</b> is for everyone and can be tried before the topic is taught. <b>Think harder</b> uses the idea from the lesson in a new setting. <b>Go further</b> adds an extension once the topic is done, and every child may choose them. The <b>Investigation</b> is an open task anyone can try. It is fine to leave any of them for another day.</p></div>
 <div class="panel"><h3>What your child is doing in class</h3><p style="margin:0">Ten 90-minute lessons over five weeks. Each lesson starts with a hands-on puzzle, then a short teaching part, then the workbook. These pages practise the same ideas at home.</p></div></div>''')
 for L in info:
     n = L['n']; b = Q[str(n)]; learn, tip, ask = SIDE[n]

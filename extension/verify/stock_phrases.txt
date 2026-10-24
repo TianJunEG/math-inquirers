@@ -1,0 +1,5 @@
+# Command phrases from term/l1/WORDING_GUIDE.md rule 14 (one phrase per line, lower case). Seven-word runs inside these are ignored.
+write the missing numbers in the tiles
+fill in the missing numbers in the blanks
+circle true or false
+one number is wrong circle it then write the right number

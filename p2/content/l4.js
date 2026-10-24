@@ -55,7 +55,7 @@ const lesson = {
   objective: 'Find far places in a repeating pattern by counting in groups (the ends of the groups are in a times table); count how many of one shape there are; describe a growing pattern with a table and a rule and use it to go forwards and backwards; find the numbers that two counting patterns share.',
   skills: 'Look for a pattern, make a table, make a list, explain a rule',
   materials: 'Linking cubes in 3 colours (about 20 per pair), mini whiteboards, matchsticks or lolly sticks (about 25 per pair), counters.',
-  online: 'Children use coloured pencils and squared paper (or Lego bricks) for the cube train, and draw sticks for the growing pattern. The tutor shares the slides and the children hold up their tables.',
+  online: 'Children use coloured pencils and squared paper (or Lego bricks) for the cube train, and draw sticks for the growing pattern. The tutor shares the slides and the children check their tables against the slide.',
   warmup: 'Pattern rhythm: clap, clap, stomp, clap, clap, stomp … The group keeps the rhythm going; the tutor stops and asks what comes on beat 9, beat 10 and beat 20.',
   explore: 'Cube train: build red, red, blue, red, red, blue … with 9 cubes. Without building more, predict the colour of cube 20, then build to check. Which cubes are blue?',
   mini: 'Repeating patterns: find the group size; groups end at the times-table numbers (3, 6, 9 …); then count on from the end of a group. Count how many of one shape by counting the groups.',
@@ -66,6 +66,7 @@ const lesson = {
     'Counting the whole pattern one by one to the far place instead of jumping to the end of a group.',
     'Growing patterns: multiplying by the step (10 squares × 3 = 30) and forgetting the start (the extra stick), instead of using the table or the rule.'
   ],
+  takehome: 'Page 1: Q2(c) (30 letters, how many Ts) and Q3(b) (beads altogether). Page 2: Q4(d) (23 petals) and Q5(d) (why does it go up by 2). The two machine and growing-pattern teaching slides moved into the mini-lesson.',
   extension: 'Make your own repeating pattern of 4 shapes. Write 3 "far place" questions about it for a partner, with the answers.',
   key: [
     ['Q1', '(a) Square (20 ends a group of 5).  (b) Circle (21 triangle, 22 circle, 23 circle).  (c) Triangle: 40 ends a group (5 × 8 = 40), so 41 starts again.'],
@@ -101,8 +102,8 @@ const script = {
     'Hint 2: "Find the nearest times-table number before your place. That shape ends a group."',
     'Hint 3: "Make a table and look at how much it goes up each time."'
   ],
-  talk: ['"A pattern repeats every 5 shapes. Is the 10th shape always the same as the 20th?"', '"What if the pattern repeats every 3 shapes?"'],
-  talkAns: 'Every 5: yes, 10 and 20 are both in the 5 times table, so both are the last shape of a group. Every 3: no. 9 ends a group, so 10 is the 1st shape; 18 ends a group, so 20 is the 2nd shape.',
+  talk: ['"A pattern repeats every 5 shapes. Is the 10th shape always the same as the 20th?"'],
+  talkAns: 'Yes: 10 and 20 are both in the 5 times table, so both are the last shape of a group. (If it repeated every 3 shapes the answer would be no: 9 ends a group, so 10 is the 1st shape; 18 ends a group, so 20 is the 2nd shape.)',
   close: ['"You did not draw 41 shapes today. You found the group, used a times table and counted on. That is how pattern machines think."']
 };
 
@@ -134,7 +135,7 @@ const qbank = {
   ],
   stretch: [
     { q: 'Look at the shape pattern in the Start here page again (places 1 to 10). How many circles are there in the first 30 shapes? How do you know?', a: '12 circles (30 shapes is 6 groups of 5, with 2 circles in each group).', fig: shapeFig() },
-    { q: 'A pattern goes A, B, B, C, A, B, B, C … What is the 25th letter?', a: 'A. 24 ends a group of 4 (4 × 6 = 24), so 25 starts again with A.' },
+    { q: 'Beads go red, red, blue, green, red, red, blue, green … Mei says the 30th bead is blue. Is she right? Which places up to 30 have a green bead?', a: 'Mei is not right. The pattern repeats every 4 beads and 28 ends a group (4 × 7 = 28), so the 29th bead is red and the 30th bead is red. Green beads are the 4th bead of each group: places 4, 8, 12, 16, 20, 24 and 28.' },
     { q: 'Beads go red, yellow, yellow, red, yellow, yellow … How many yellow beads are in the first 18 beads?', a: '12 yellow beads (18 beads is 6 groups of 3, with 2 yellow in each).' },
     { q: 'Houses are made of sticks in a row. 1 house uses 5 sticks, 2 houses use 9 sticks, 3 houses use 13 sticks. How many sticks are needed for 6 houses?', a: '25 sticks. The rule is add 4: 5, 9, 13, 17, 21, 25.' },
     { q: 'Ali counts in 4s from 4. Mei counts in 10s from 10. Which numbers up to 50 do they both say?', a: '20 and 40.' },
@@ -144,7 +145,7 @@ const qbank = {
     { q: 'A pattern goes square, circle, circle, square, circle, circle … Mei draws 20 shapes. How many squares does she draw?', a: '7 squares (in places 1, 4, 7, 10, 13, 16, 19). 18 shapes is 6 groups with 6 squares, and place 19 is one more square.' }
   ],
   challenge: [
-    { q: 'Light A flashes every 3 seconds. Light B flashes every 5 seconds. They flash together at the start. In the next 30 seconds, when do they flash together?', a: 'At 15 seconds and at 30 seconds (numbers in both the 3 and 5 times tables).' },
+    { q: 'A pattern starts at 2. It goes up 5, then up 1, then up 5, then up 1, and so on: 2, 7, 8, 13, 14 … Will the pattern ever say 50? Will it ever say 51? Explain how you know.', a: 'It says 50 but never 51. Keep going: 2, 7, 8, 13, 14, 19, 20, 25, 26, 31, 32, 37, 38, 43, 44, 49, 50, 55. Every two steps the number goes up by 6, so 50 is in the list, but the list jumps from 50 to 55 and 51 is not there.' },
     { q: 'Houses are made of sticks in a row: 1 house uses 5 sticks, 2 houses use 9, 3 houses use 13. Ben has 40 sticks. What is the most houses he can make? How many sticks are left over?', a: '9 houses use 37 sticks, with 3 left over (10 houses would need 41).' },
     { q: 'A frog starts at 1 and jumps 4 each time: 1, 5, 9, 13 … Will it land on 37? Will it land on 30? Explain.', a: 'It lands on 37 but not on 30. The frog lands on numbers 1 more than the 4 times table: 36 + 1 = 37, but 30 is not 1 more than a 4 times table number (it lands on 29 and 33).' },
     { q: 'A pattern repeats every 5 shapes. In each group, only the 3rd shape is a star. Which of these places have a star: 13, 23, 30, 48?', a: '13, 23 and 48. Stars are 2 more than the 5 times table: 13 = 10 + 3, 23 = 20 + 3, 48 = 45 + 3. 30 ends a group, so it is the 5th shape.' },
@@ -158,6 +159,7 @@ const qbank = {
 
 const workbook = H => {
   const out = [];
+  const TH = () => H.t('★ take-home  ', { bold: true, color: '1B2A49' });
   const hr = (ws, lab, vals, h = 80) => H.row([H.cell(lab, ws[0], { bold: true, fill: 'D9D9D9', h }), ...vals.map((v, i) => H.cell(v || ' ', ws[i + 1], { h }))]);
   // ---- page 1 (in pairs)
   out.push(H.q(1, 'This pattern keeps going in the same way. Here are places 1 to 10. Tip: draw a line after the LAST shape of each group.', { before: 20, keepNext: true }));
@@ -168,11 +170,12 @@ const workbook = H => {
   out.push(H.q(2, 'Ali writes the letters M, A, T, H again and again.', { keepNext: true }));
   out.push(H.fig(letterFig()));
   out.push(H.sub('a', 'What is the 18th letter?   ______        (b)  Where is the 10th letter H?   place ______'));
-  out.push(H.sub('c', 'Ali writes 30 letters. How many Ts does he write?   ______   Show how you know.'));
+  out.push(H.sub('c', [TH(), H.t('Ali writes 30 letters. How many Ts does he write?   ______   Show how you know.')]));
   out.push(...H.lines(1));
   out.push(H.q(3, 'Siti’s bead string goes 2 red, 3 yellow, 2 red, 3 yellow … It has 12 red beads and ends with yellow beads. Tip: draw one group, then count the groups.', { keepNext: true }));
   out.push(H.fig(beadFig()));
-  out.push(H.sub('a', 'How many yellow beads?   ______        (b)  How many beads altogether?   ______'));
+  out.push(H.sub('a', 'How many yellow beads?   ______'));
+  out.push(H.sub('b', [TH(), H.t('How many beads altogether?   ______')]));
   // ---- page 2 (on your own)
   out.push(H.q(4, 'Each flower has 5 petals.', { pb: true, before: 0, keepNext: true }));
   out.push(H.fig(flowerFig()));
@@ -181,7 +184,7 @@ const workbook = H => {
     out.push(H.tbl(ws, [hr(ws, 'Flowers', ['1', '2', '3', '4', '5', '6']), hr(ws, 'Petals', ['5', '', '', '', '', ''])])); }
   out.push(H.gap(20));
   out.push(H.sub('b', 'Petals on 10 flowers?   ______        (c)  35 petals make how many flowers?   ______'));
-  out.push(H.sub('d', 'Mei has 23 petals. How many flowers?   ______     Petals left over?   ______'));
+  out.push(H.sub('d', [TH(), H.t('Mei has 23 petals. How many flowers?   ______     Petals left over?   ______')]));
   out.push(H.q(5, 'Square tables are pushed together in a row. One child sits at each open side.', { keepNext: true }));
   out.push(H.fig(tablesFig()));
   out.push(H.sub('a', 'Fill in the table.'));
@@ -189,7 +192,7 @@ const workbook = H => {
     out.push(H.tbl(ws, [hr(ws, 'Tables', ['1', '2', '3', '4', '5', '6']), hr(ws, 'Children', ['4', '6', '', '', '', ''])])); }
   out.push(H.gap(20));
   out.push(H.sub('b', 'Children at 10 tables?   ______        (c)  Tables for 20 children?   ______'));
-  out.push(H.sub('d', 'Why does the number of children go up by 2 each time?'));
+  out.push(H.sub('d', [TH(), H.t('Why does the number of children go up by 2 each time?')]));
   out.push(...H.lines(1));
   out.push(H.q(6, 'Ali counts in 3s: 3, 6, 9 … Mei counts in 4s: 4, 8, 12 … Which numbers from 1 to 36 do they BOTH say? Make two lists.', { keepNext: true }));
   out.push(H.sub('a', 'Ali:  3,  6,  9,  ____________________________________'));

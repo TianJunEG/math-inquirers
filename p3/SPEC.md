@@ -1,8 +1,8 @@
 # Math Inquirers P3 Holiday Program — content spec
 
-**Who:** children finishing Primary 3 (going into P4 in 2027), age 9. Online-first, live video, groups of up to 8.
+**Who:** children aged 8 to 10 who are in or have finished Primary 3. Online-first, live video, groups of up to 8.
 **Format:** 10 lessons × 90 minutes over 5 weeks (2 a week), same routine as the P1 program.
-**Approach:** enrichment, non-routine puzzles and heuristics, tagged to the P3 syllabus. Slogan: "Notice it. Test it. Explain why."
+**Approach:** enrichment, non-routine puzzles and heuristics, on topics chosen to complement the P3 school year. Slogan: "Notice it. Test it. Explain why."
 Syllabus source: Tampines North Primary 2026 P3 scheme of work (numbers to 10 000; + −; money; tables of 6, 7, 8, 9; × ÷; word problems; bar graphs; angles; perpendicular and parallel lines; fractions; length, mass and volume; area and perimeter; time).
 
 ## The 10 lessons
@@ -17,7 +17,7 @@ Syllabus source: Tampines North Primary 2026 P3 scheme of work (numbers to 10 00
 | 7 | 4A | Area Architects | Area and perimeter | same perimeter different area, figures made of squares and rectangles, square-grid puzzles |
 | 8 | 4B | Angle and Line Detectives | Angles, perpendicular and parallel lines | counting angles, right angles in shapes, finding parallel and perpendicular lines in figures |
 | 9 | 5A | Measure and Money Masters | Length, mass, volume, money, time | compound units, budgets, durations and the 24-hour clock |
-| 10 | 5B | Challenge Day | Mixed (incl. bar graphs, logic) | how to start a puzzle: draw it, list it, make a table; logic grid; reading a bar graph |
+| 10 | 5B | Puzzle Day | Mixed (incl. bar graphs, logic) | how to start a puzzle: draw it, list it, make a table; logic grid; reading a bar graph |
 
 ## P3 level rules
 - Children know: numbers to 10 000; + and − within 10 000; all multiplication tables to 10 × 10; multiplying up to 3 digits by 1 digit and dividing up to 3 digits by 1 digit (with remainders); fractions: equivalent fractions, comparing and ordering, adding and subtracting like and related fractions within one whole; money in dollars and cents; m, cm, km, kg, g, ℓ, ml (compound units like 2 m 35 cm); area and perimeter of squares, rectangles and figures made of them (cm², m²); right angles and comparing angles (no protractor yet); perpendicular and parallel lines; bar graphs; time in hours and minutes, durations, the 24-hour clock.

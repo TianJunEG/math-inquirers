@@ -90,30 +90,30 @@ pages.append(f'''<div class="page">{head('00','Before you start','Four rules for
 {foot(2)}</div>''')
 pages.append(f'''<div class="page">{head('01','Puzzle set 1  •  Patterns','Frog Jumps')}
 <p class="intro">Find the rule, then write the next two numbers. Try it with a number line, or hop a coin along the table.</p>
-{lv('Core')}
+{lv('Start here')}
 {Q(1,'4, 7, 10, 13, __, __ <span style="color:#1F7A6F">What is the rule?</span>',seq([4,7,10,13,'',''],arcs=['+?','+?','+?']),RL)}
 {Q(2,'5, 10, 15, 20, __, __',seq([5,10,15,20,'','']),RL)}
 {Q(3,'1, 5, 9, 13, __, __',seq([1,5,9,13,'','']),RL)}
 {foot(3)}</div>''')
 pages.append(f'''<div class="page">{head('01','Puzzle set 1  •  Patterns','Frog Jumps: think harder')}
-{lv('Think Harder')}
+{lv('Think harder')}
 {Q(4,'3, 8, __, 18, __, 28',seq([3,8,'',18,'',28]))}
 {Q(5,'40, __, 28, __, 16, 10',seq([40,'',28,'',16,10]))}
-{lv('Challenge  (only if it is fun)')}
+{lv('Go further  (only if it is fun)')}
 {Q(6,'<b>Frog A</b> jumps in 3s from 0. <b>Frog B</b> jumps in 4s from 0. Which numbers up to 40 do <b>both</b> frogs land on? (Do not count 0.)',frogline(),'<div class="line"></div>')}
 <div class="quote">Explain why: how do you know you found them all?</div>
 <div class="panel"><h3>Try it with objects</h3><p style="margin:0">Line up 40 pasta pieces. Put a coin on every 3rd piece, and a button on every 4th. Where do the coin and the button sit together?</p></div>
 {foot(4)}</div>''')
 pages.append(f'''<div class="page">{head('02','Puzzle set 2  •  Number bonds','Making 10')}
 <p class="intro">Put 10 buttons or counters in two groups to help you.</p>
-{lv('Core')}
+{lv('Start here')}
 <div class="two">{Q(1,'10 = 3 + __',tenframe(3,250))}{Q(2,'10 = __ + 8',tenframe(8,250))}</div>
 {Q(3,'10 = 6 + __',tenframe(6,250))}
-{lv('Think Harder: keep it balanced')}
+{lv('Think harder: keep it balanced')}
 <div class="two">{Q(4,'5 + 4 = 6 + __',balance())}{Q(5,'8 + 2 = 7 + __','<p style="font-size:15px;color:#3B4A6B;margin:6px 0 0">Both sides must be the same. Check by working out each side.</p>')}</div>
 {foot(5)}</div>''')
 pages.append(f'''<div class="page">{head('02','Puzzle set 2  •  Number bonds','The magic triangle')}
-{lv('Challenge')}
+{lv('Go further')}
 {Q(6,'Put <b>1, 2, 3, 4, 5, 6</b> in the spaces so that <b>each side adds to 9</b>. The corners are 1, 2 and 3. What goes in the middle of each side?','<div style="text-align:center">'+triangle()+'</div>')}
 <div class="quote">Explain why: how do you know each side adds to 9?</div>
 <div class="panel"><h3>Try it with objects</h3><p style="margin:0">Write 1 to 6 on six bits of paper. Move them around until every side makes 9.</p></div>

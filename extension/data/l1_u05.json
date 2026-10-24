@@ -1,0 +1,817 @@
+{
+ "schema_version": 1,
+ "level": 1,
+ "unit": 5,
+ "id": "L1U05",
+ "title": "Back to the start",
+ "topic": "Working backwards",
+ "holiday_lesson": 5,
+ "goal": "I can find the start of a story when I know the end. I go backwards and undo each step.",
+ "learn": {
+  "intro": "In a mystery number story, we know the end. We undo each step.",
+  "example": {
+   "problem": "Ravi has some stickers. He gets 5 more, then gives 3 to Mei. Now he has 12 stickers. How many stickers did Ravi begin with?",
+   "figure": {
+    "type": "chain",
+    "nodes": [
+     10,
+     15,
+     12
+    ],
+    "ops": [
+     "+5",
+     "-3"
+    ],
+    "undo": [
+     "-5",
+     "+3"
+    ],
+    "width_mm": 100
+   },
+   "steps": [
+    "Go backwards. Undo -3 with +3: 12 + 3 = 15.",
+    "Undo +5 with -5: 15 - 5 = 10.",
+    "Check going forwards: 10 + 5 = 15 and 15 - 3 = 12."
+   ],
+   "answer": "Ravi had 10 stickers at first."
+  },
+  "howto": {
+   "title": "How to work backwards",
+   "steps": [
+    "Find the end number. This is the number you know.",
+    "Undo the last step first. Add becomes take away. Take away becomes add.",
+    "Keep going back until you reach the start.",
+    "Check by going forwards."
+   ]
+  },
+  "try": {
+   "id": "L1U05-L01",
+   "text": "Mei buys 6 beads. Now she has 15 beads. How many beads did she begin with? {b} beads",
+   "answer": {
+    "value": [
+     "9"
+    ],
+    "text": "9 beads"
+   },
+   "explanation": "She added 6, so undo it by taking away 6: 15 - 6 = 9. Check: 9 + 6 = 15."
+  }
+ },
+ "items": [
+  {
+   "id": "L1U05-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "A cup hides some counters. 5 more counters go in. Now there are 13 counters. How many counters were in the cup at first? {b} counters",
+   "answer": {
+    "value": [
+     "8"
+    ],
+    "text": "8 counters"
+   },
+   "explanation": "Adding 5 made 13. Undo it by taking away 5: 13 - 5 = 8. Check: 8 + 5 = 13.",
+   "figure": {
+    "type": "chain",
+    "nodes": [
+     "?",
+     13
+    ],
+    "ops": [
+     "+5"
+    ],
+    "width_mm": 48
+   },
+   "figright": true
+  },
+  {
+   "id": "L1U05-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "Mei picks a secret number. Fill in her secret number each time.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "She adds 8 and gets 13. Her number is {b}.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "She adds 7 and gets 15. Her number is {b}.",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    },
+    {
+     "label": "c",
+     "text": "She takes away 5 and gets 9. Her number is {b}.",
+     "answer": {
+      "value": [
+       "14"
+      ],
+      "text": "14"
+     }
+    },
+    {
+     "label": "d",
+     "text": "She takes away 6 and gets 12. Her number is {b}.",
+     "answer": {
+      "value": [
+       "18"
+      ],
+      "text": "18"
+     }
+    }
+   ],
+   "explanation": "Undo the step. Undo add with take away: 13 - 8 = 5 and 15 - 7 = 8. Undo take away with add: 9 + 5 = 14 and 12 + 6 = 18."
+  },
+  {
+   "id": "L1U05-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "Aisha has some biscuits. She eats 4 biscuits. 9 biscuits are left. How many biscuits did she have at first? {b} biscuits",
+   "answer": {
+    "value": [
+     "13"
+    ],
+    "text": "13 biscuits"
+   },
+   "explanation": "She took away 4 and 9 are left. Undo it by adding 4: 9 + 4 = 13. Check: 13 - 4 = 9.",
+   "figure": {
+    "type": "chain",
+    "nodes": [
+     "?",
+     9
+    ],
+    "ops": [
+     "-4"
+    ],
+    "width_mm": 48
+   },
+   "figright": true
+  },
+  {
+   "id": "L1U05-S04",
+   "tier": "start",
+   "page": 1,
+   "text": "Write the number in the empty box. Go backwards along the arrow.",
+   "figure": {
+    "type": "chain",
+    "nodes": [
+     null,
+     17
+    ],
+    "ops": [
+     "+9"
+    ],
+    "width_mm": 50
+   },
+   "answer": {
+    "value": [
+     "8"
+    ],
+    "text": "8"
+   },
+   "explanation": "The arrow adds 9 to reach 17. Go backwards: 17 - 9 = 8. Check: 8 + 9 = 17.",
+   "figright": true
+  },
+  {
+   "id": "L1U05-S05",
+   "tier": "start",
+   "page": 1,
+   "text": "Siti has some pencils. She gives 3 to Ali, then buys 8 more. Now she has 14 pencils. How many pencils did she begin with? {b} pencils",
+   "answer": {
+    "value": [
+     "9"
+    ],
+    "text": "9 pencils"
+   },
+   "explanation": "Start at the end: 14. Undo buying 8: 14 - 8 = 6. Undo giving 3 away: 6 + 3 = 9. Check: 9 - 3 = 6 and 6 + 8 = 14.",
+   "figure": {
+    "type": "chain",
+    "nodes": [
+     "?",
+     "?",
+     14
+    ],
+    "ops": [
+     "-3",
+     "+8"
+    ],
+    "width_mm": 70
+   },
+   "figright": true
+  },
+  {
+   "id": "L1U05-S06",
+   "tier": "start",
+   "page": 2,
+   "text": "Write the 2 missing numbers in the empty boxes. Go backwards.",
+   "figure": {
+    "type": "chain",
+    "nodes": [
+     null,
+     null,
+     15
+    ],
+    "ops": [
+     "+7",
+     "-3"
+    ],
+    "width_mm": 95
+   },
+   "answer": {
+    "value": [
+     "18",
+     "11"
+    ],
+    "text": "18 in the middle, 11 at the start"
+   },
+   "explanation": "The last arrow takes away 3 to reach 15. Undo it: 15 + 3 = 18. The first arrow adds 7 to reach 18. Undo it: 18 - 7 = 11."
+  },
+  {
+   "id": "L1U05-S07",
+   "tier": "start",
+   "page": 2,
+   "text": "This machine always adds the same number. Look at the table.",
+   "figure": {
+    "type": "in_out",
+    "in": [
+     6,
+     9,
+     null,
+     15
+    ],
+    "out": [
+     10,
+     null,
+     17,
+     null
+    ],
+    "width_mm": 100
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "The machine adds {b}.",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Write the 3 missing numbers in the table.",
+     "answer": {
+      "value": [
+       "13",
+       "13",
+       "19"
+      ],
+      "text": "IN 13, OUT 13, OUT 19",
+      "list": true
+     }
+    }
+   ],
+   "explanation": "IN 6 gives OUT 10, so the machine adds 4. IN 9 gives 9 + 4 = 13. OUT 17 came from IN 17 - 4 = 13. IN 15 gives 15 + 4 = 19."
+  },
+  {
+   "id": "L1U05-S08",
+   "tier": "start",
+   "page": 2,
+   "text": "Fill in the missing number. Go backwards.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "{b} + 6 = 15",
+     "answer": {
+      "value": [
+       "9"
+      ],
+      "text": "9"
+     }
+    },
+    {
+     "label": "b",
+     "text": "{b} - 4 = 9",
+     "answer": {
+      "value": [
+       "13"
+      ],
+      "text": "13"
+     }
+    },
+    {
+     "label": "c",
+     "text": "18 - {b} = 11",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    }
+   ],
+   "explanation": "Part (a): 15 - 6 = 9. Part (b): 9 + 4 = 13. Part (c): the number taken away is 18 - 11 = 7."
+  },
+  {
+   "id": "L1U05-S09",
+   "tier": "start",
+   "page": 2,
+   "text": "A lift goes down 4 floors. Then it goes up 6 floors. It stops on floor 11. On which floor did the lift begin? Floor {b}",
+   "answer": {
+    "value": [
+     "9"
+    ],
+    "text": "floor 9"
+   },
+   "explanation": "Undo going up 6: 11 - 6 = 5. Undo going down 4: 5 + 4 = 9. Check: 9 - 4 = 5 and 5 + 6 = 11.",
+   "figure": {
+    "type": "chain",
+    "nodes": [
+     "?",
+     "?",
+     11
+    ],
+    "ops": [
+     "down 4",
+     "up 6"
+    ],
+    "width_mm": 84
+   },
+   "figright": true
+  },
+  {
+   "id": "L1U05-S10",
+   "tier": "start",
+   "page": 3,
+   "text": "Kumar is 6th in a queue. There are 2 children behind him. How many children are there in the queue altogether? {b} children",
+   "answer": {
+    "value": [
+     "8"
+    ],
+    "text": "8 children"
+   },
+   "explanation": "Kumar is the 6th child, so 6 children are at the front, counting him. 2 more are behind him: 6 + 2 = 8 children.",
+   "figure": {
+    "type": "shape_row",
+    "items": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     "K",
+     null,
+     null,
+     null,
+     null
+    ],
+    "per_row": 10,
+    "width_mm": 110
+   },
+   "figright": false
+  },
+  {
+   "id": "L1U05-S11",
+   "tier": "start",
+   "page": 3,
+   "text": "Aisha stands 5th from the front in a line of 12 children. How many children are behind her? {b} children",
+   "answer": {
+    "value": [
+     "7"
+    ],
+    "text": "7 children"
+   },
+   "explanation": "5 children are at the front, and Aisha is the 5th. The rest are behind her: 12 - 5 = 7.",
+   "figure": {
+    "type": "shape_row",
+    "items": [
+     null,
+     null,
+     null,
+     null,
+     "A",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    "per_row": 12,
+    "width_mm": 140
+   }
+  },
+  {
+   "id": "L1U05-S12",
+   "tier": "start",
+   "page": 3,
+   "text": "Think about more and fewer.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Ali has 15 stickers. He has 6 more than Siti. Siti has {b} stickers.",
+     "answer": {
+      "value": [
+       "9"
+      ],
+      "text": "9"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Ben has 9 sweets. He has 6 fewer than Jenny. Jenny has {b} sweets.",
+     "answer": {
+      "value": [
+       "15"
+      ],
+      "text": "15"
+     }
+    }
+   ],
+   "explanation": "(a) Ali has more, so Siti has fewer: 15 - 6 = 9. (b) Ben has fewer, so Jenny has more: 9 + 6 = 15."
+  },
+  {
+   "id": "L1U05-S13",
+   "tier": "start",
+   "page": 3,
+   "text": "Check going forwards. Circle True or False.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Start at 9. Add 4. Take away 6. You get 7.   {circ:True|False}",
+     "answer": {
+      "value": [
+       "True"
+      ],
+      "text": "True"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Start at 12. Take away 5. Add 3. You get 9.   {circ:True|False}",
+     "answer": {
+      "value": [
+       "False"
+      ],
+      "text": "False"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Start at 8. Add 7. Take away 4. You get 11.   {circ:True|False}",
+     "answer": {
+      "value": [
+       "True"
+      ],
+      "text": "True"
+     }
+    }
+   ],
+   "explanation": "(a) 9 + 4 = 13, 13 - 6 = 7: True. (b) 12 - 5 = 7, 7 + 3 = 10, not 9: False. (c) 8 + 7 = 15, 15 - 4 = 11: True."
+  },
+  {
+   "id": "L1U05-S14",
+   "tier": "start",
+   "page": 3,
+   "text": "Kumar picks a number and adds 6. He gets 15. Is his number 21?",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Circle Yes or No.   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    },
+    {
+     "label": "b",
+     "text": "His number is {b}.",
+     "answer": {
+      "value": [
+       "9"
+      ],
+      "text": "9"
+     }
+    }
+   ],
+   "explanation": "To undo add 6, take away 6: 15 - 6 = 9. If his number were 21, adding 6 would give 27, not 15. So 21 is not his number."
+  },
+  {
+   "id": "L1U05-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "Mei has some stickers. She gives 5 to Ali, gets 8 from Ben and gives 4 to Siti. Now she has 13 stickers.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Before she gave 4 to Siti, she had {b} stickers.",
+     "answer": {
+      "value": [
+       "17"
+      ],
+      "text": "17"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Before Ben gave her 8, she had {b} stickers.",
+     "answer": {
+      "value": [
+       "9"
+      ],
+      "text": "9"
+     }
+    },
+    {
+     "label": "c",
+     "text": "At first Mei had {b} stickers.",
+     "answer": {
+      "value": [
+       "14"
+      ],
+      "text": "14"
+     }
+    }
+   ],
+   "hint": "Go back one step at a time. Which step is the last?",
+   "explanation": "Undo the last step first: 13 + 4 = 17. Undo getting 8: 17 - 8 = 9. Undo giving 5 to Ali: 9 + 5 = 14. Check: 14 - 5 = 9, 9 + 8 = 17, 17 - 4 = 13.",
+   "figure": {
+    "type": "chain",
+    "nodes": [
+     "?",
+     "?",
+     "?",
+     13
+    ],
+    "ops": [
+     "-5",
+     "+8",
+     "-4"
+    ],
+    "width_mm": 76
+   },
+   "figright": true
+  },
+  {
+   "id": "L1U05-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "A machine adds 9 and then takes away 4. A one-step machine does the same job.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The one-step machine adds {b}.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "IN 11 gives OUT {b}.",
+     "answer": {
+      "value": [
+       "16"
+      ],
+      "text": "16"
+     }
+    },
+    {
+     "label": "c",
+     "text": "OUT 30 comes from IN {b}.",
+     "answer": {
+      "value": [
+       "25"
+      ],
+      "text": "25"
+     }
+    }
+   ],
+   "hint": "Try IN 10. What is OUT? How far is it from 10?",
+   "explanation": "Adding 9 and taking away 4 is the same as adding 5. IN 11 gives 11 + 5 = 16. For OUT 30, go backwards: 30 - 5 = 25."
+  },
+  {
+   "id": "L1U05-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "Ali gives 4 stickers to Mei. Now each child has 10 stickers.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Ali had {b} stickers at first.",
+     "answer": {
+      "value": [
+       "14"
+      ],
+      "text": "14"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Mei had {b} stickers at first.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Ali:",
+     "Mei:"
+    ]
+   },
+   "hint": "Who gets 4 back? Who gives 4 back?",
+   "explanation": "Ali gave 4 away, so he had 4 more at first: 10 + 4 = 14. Mei got 4, so she had 4 fewer at first: 10 - 4 = 6. Check: 14 - 4 = 10 and 6 + 4 = 10."
+  },
+  {
+   "id": "L1U05-G01",
+   "tier": "go",
+   "beyond": "Undoing a double",
+   "page": 5,
+   "text": "Aisha picks a number and adds it to itself. This is a double. Find each number.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "6 + 6 = {b}",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Double it, then add 4. She gets 18. Her number is {b}.",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Double it, then take away 5. She gets 11. Her number is {b}.",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    }
+   ],
+   "hint": "Undo the last step first. Then which double is that?",
+   "explanation": "(b) Undo add 4: 18 - 4 = 14. 7 + 7 = 14, so her number is 7. (c) Undo take away 5: 11 + 5 = 16. 8 + 8 = 16, so her number is 8."
+  },
+  {
+   "id": "L1U05-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "Does the order of the steps matter?",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Start at 12. Add 6, then take away 9. You get {b}.",
+     "answer": {
+      "value": [
+       "9"
+      ],
+      "text": "9"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Start at 12. Take away 9, then add 6. You get {b}.",
+     "answer": {
+      "value": [
+       "9"
+      ],
+      "text": "9"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Start at 5. Add 6, then take away 9. You get {b}.",
+     "answer": {
+      "value": [
+       "2"
+      ],
+      "text": "2"
+     }
+    },
+    {
+     "label": "d",
+     "text": "Start at 5. Can you take away 9 first? {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    }
+   ],
+   "hint": "Do each one a step at a time. Check part (d) with care.",
+   "explanation": "12 + 6 = 18, 18 - 9 = 9, and 12 - 9 = 3, 3 + 6 = 9. Both give 9. 5 + 6 = 11, 11 - 9 = 2. But you cannot take 9 from 5, so for 5 the order does matter."
+  },
+  {
+   "id": "L1U05-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "A frog is at the bottom of a well with 12 steps. Each day it climbs 4 steps. Each night it slides back 2 steps. On which day does the frog get out?",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The frog gets out on day {b}.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "day 5"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Day 1:",
+     "Day 2:",
+     "Day 3:",
+     "Day 4:",
+     "Day 5:"
+    ]
+   },
+   "hint": "Where is the frog after day 1? And after night 1?",
+   "explanation": "Start at the top and go backwards. On the last day the frog starts on step 8 and climbs 4 to reach 12. It starts each day 2 steps higher: day 1 starts on 0, day 2 on 2, day 3 on 4, day 4 on 6, day 5 on 8. So it gets out on day 5."
+  },
+  {
+   "id": "L1U05-C01",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Wei picks a number and adds 7. He gets 16. His number is {b}.",
+   "answer": {
+    "value": [
+     "9"
+    ],
+    "text": "9"
+   },
+   "explanation": "Undo add 7: 16 - 7 = 9."
+  },
+  {
+   "id": "L1U05-C02",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Lily gives away 5 stickers, then gets 9. Now she has 17. At first she had {b} stickers.",
+   "answer": {
+    "value": [
+     "13"
+    ],
+    "text": "13"
+   },
+   "explanation": "Undo getting 9: 17 - 9 = 8. Undo giving away 5: 8 + 5 = 13."
+  },
+  {
+   "id": "L1U05-C03",
+   "tier": "quiz",
+   "page": 6,
+   "text": "A machine takes away 6. OUT is 9. IN is {b}.",
+   "answer": {
+    "value": [
+     "15"
+    ],
+    "text": "15"
+   },
+   "explanation": "Undo take away 6 with add 6: 9 + 6 = 15."
+  },
+  {
+   "id": "L1U05-C04",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Ali picks a number and takes away 7. He gets 8. His number is {b}.",
+   "answer": {
+    "value": [
+     "15"
+    ],
+    "text": "15"
+   },
+   "explanation": "Undo take away 7 with add 7: 8 + 7 = 15. Check: 15 - 7 = 8."
+  }
+ ]
+}

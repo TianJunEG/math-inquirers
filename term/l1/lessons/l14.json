@@ -1,0 +1,3475 @@
+{
+ "schema_version": 1,
+ "id": "l1-t2-04",
+ "level": 1,
+ "term": 2,
+ "lesson": 14,
+ "lesson_in_term": 4,
+ "title": "Odd + Odd: Always, Sometimes, Never",
+ "big_idea": "One test is not a proof",
+ "child_idea": "An even number makes pairs with none left over. An odd number has one left over. Test many examples, then use a picture of pairs to see why.",
+ "skill": "Conjecture and test",
+ "spine": {
+  "main": "actout",
+  "also": [
+   "pattern"
+  ],
+  "role": "P",
+  "reason": "Counters in pairs show why odd and even behave as they do; then children test many sums."
+ },
+ "ages": "6-8",
+ "moe": {
+  "strand": "Whole Numbers",
+  "topics": [
+   "Odd and even numbers (syllabus Primary 2, Whole Numbers 1.6)",
+   "Reasoning and communicating: testing a claim with examples (process strand)",
+   "Addition within 100 as the testing tool"
+  ],
+  "note": "Strand label for the tutor only. BEYOND PRIMARY 1 ON PURPOSE: odd and even numbers are Primary 2 content (Whole Numbers 1.6), so this whole lesson goes past the school Primary 1 syllabus (owner decision, 22 Oct 2026: strong content with scaffolding). Say this plainly to families. It is also flagged in the plan as a standalone inquiry that is safe to skip. Every Start here item is reached by pairing counters, so it is approachable after Explore. Do not describe it as MOE-aligned or syllabus-aligned. Contest tag (tutor only): parity (number sense)."
+ },
+ "contest_moves": [
+  "odd and even by pairing; parity of a sum",
+  "always, sometimes, never: one failing test breaks a claim",
+  "can this total be made from two odd numbers?"
+ ],
+ "objectives": [
+  "Pair counters to decide whether a number up to 20 is odd (one left over) or even (none left over), and say that the last digit of an even number is 0, 2, 4, 6 or 8.",
+  "Test the claims odd + even, even + even and odd + odd with several sums, and say whether each is always, sometimes or never true.",
+  "Say that one example can show a claim is false but not that it is always true.",
+  "Go further: explain with pictures of pairs why odd + odd is always even (two left-over counters make a pair), and try odd + odd + odd."
+ ],
+ "joining_cold": {
+  "remember": [
+   "Pair up counters or fingers and see if one is left over (8 makes pairs, 5 leaves one)",
+   "Count in 2s from 2 to 20 on a number strip",
+   "Read the ones digit of a number like 47 (4 tens and 7 ones)"
+  ],
+  "assumes": "Only counting to 20. Nothing from an earlier lesson is needed: the warm-up makes pairs with a picture, counts in 2s on a strip and shows 47 as bars and squares. The words odd and even are taught in Explore with counters.",
+  "holiday_topics_revisited": [
+   "Pairing and counting in 2s (Count with the Frog)"
+  ],
+  "safe_to_miss": true,
+  "note": "Term 2 Lesson 4 is the safest lesson in Term 2 to skip or make up (plan note): it is a standalone inquiry and no later lesson needs it. A child who misses it watches the recording and does workbook pages 1 and 2. Term 2 Lessons 5 to 8 build on one another, so do not skip those."
+ },
+ "materials": {
+  "child": [
+   "The printed workbook and the kit page of number cards 1 to 20 (page 6), cut out by a grown-up beforehand",
+   "About 20 small things of one kind (buttons, pasta, coins), or the counters from the Term 2 Lesson 3 kit page",
+   "A pencil, a rubber and spare paper",
+   "Optional: two plates or bowls"
+  ],
+  "tutor": [
+   "A slide deck and a paper copy of the number cards to show on camera if you wish",
+   "A visible clock"
+  ],
+  "kit_pages": [
+   "Number cards 1 to 20 (20 cards), printed on page 6 of the workbook and cut out before the lesson. This lesson sorts them into two piles"
+  ],
+  "ruler": false,
+  "notes": "No ruler is needed. Nothing needs to be bought: everything can be found at home. No matches, toothpicks or anything sharp. Small things never go near the mouth or ears."
+ },
+ "timing": {
+  "parts": [
+   {
+    "id": "opening",
+    "title": "Opening",
+    "start": 0,
+    "end": 2
+   },
+   {
+    "id": "remember",
+    "title": "Remember warm-up",
+    "start": 2,
+    "end": 8
+   },
+   {
+    "id": "sneak",
+    "title": "Sneak-peek puzzles",
+    "start": 8,
+    "end": 12
+   },
+   {
+    "id": "explore",
+    "title": "Explore",
+    "start": 12,
+    "end": 26
+   },
+   {
+    "id": "mini",
+    "title": "Mini-lesson",
+    "start": 26,
+    "end": 39
+   },
+   {
+    "id": "break",
+    "title": "Brain break",
+    "start": 39,
+    "end": 43
+   },
+   {
+    "id": "work",
+    "title": "Workbook",
+    "start": 43,
+    "end": 71
+   },
+   {
+    "id": "talk",
+    "title": "Talk time",
+    "start": 71,
+    "end": 77
+   },
+   {
+    "id": "exit",
+    "title": "Exit ticket",
+    "start": 77,
+    "end": 83
+   },
+   {
+    "id": "look",
+    "title": "Look-back",
+    "start": 83,
+    "end": 86
+   },
+   {
+    "id": "flex",
+    "title": "Flex time and goodbye",
+    "start": 86,
+    "end": 90
+   }
+  ],
+  "optional_slide": "s-opt",
+  "include_rules": false,
+  "notes": "Opening is 2 minutes (the routine and rules were taught earlier in the term; give the recording, muting and camera notice). Explore has 14 minutes of hands-on pairing and testing; the mini-lesson has 13 because it carries the always, sometimes, never idea and the picture reason. The last 4 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time.",
+  "skip_order": [
+   "Start with: cut the Mini-lesson check slide to two sums",
+   "Then: shorten Explore round 3 to the odd + odd tests only",
+   "Then: take the extra minutes from the flex time"
+  ]
+ },
+ "sneak_peek": {
+  "q1": "Mei has 7 counters. She puts them in pairs. How many counters are left over? You may draw to help.",
+  "q2": "Ben has 5 counters. Mei has 7 counters. They put all their counters together and make pairs. Is one counter left over? Circle Yes or No. Then write or draw how you know.",
+  "a1": "1",
+  "a2": "No. 5 + 7 = 12 counters make 6 pairs. The one left over from the 5 and the one left over from the 7 make a pair.",
+  "val1": 1
+ },
+ "rec": {
+  "opening": {
+   "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook, your kit page and counters. Pause or rewind any time.",
+   "action": "Gather your workbook, pencil, paper, kit pieces and small things. Press play when ready."
+  },
+  "remember": {
+   "say": "Recording: join in! Show your answers on your fingers before I say them. Pause if you need longer.",
+   "action": "Play along. Show each answer on your fingers before the video does."
+  },
+  "sneak": {
+   "say": "Recording: pause now and try both puzzles on your paper. Guessing is fine. Press play for the next part.",
+   "action": "Pause. Try both puzzles on your own paper. A guess is fine."
+  },
+  "break": {
+   "say": "Recording: stand up and join in! Clap for an even number, tap your knees for an odd number.",
+   "action": "Stand up. Clap for an even number and tap your knees for an odd number."
+  },
+  "talk": {
+   "say": "Recording: pause. Tell a grown-up who is right, and show them with counters.",
+   "action": "Pause. Explain your answer to someone at home, with counters and a reason."
+  },
+  "exit": {
+   "say": "Recording: pause and do the exit ticket on your own. Then press play to check it.",
+   "action": "Pause. Do the exit ticket alone, then play to check it."
+  },
+  "look": {
+   "say": "Recording: pause and fill in your look-back box. You can pass.",
+   "action": "Pause. Fill in the look-back box, or pass."
+  },
+  "flex": {
+   "say": "Recording: well done for finishing! Show a grown-up one thing you found out.",
+   "action": "Show a grown-up your workbook and tell them one thing you found out."
+  },
+  "explore": {
+   "say": "Recording: pause now. Make pairs with your counters. Sort your number cards. Test the sums. Press play when you have tried.",
+   "action": "Pause. Pair your counters for each number, sort your cards, and test the sums I show."
+  },
+  "mini": {
+   "say": "Recording: keep watching and copy the examples. Rewind if you miss a step.",
+   "action": "Watch and copy the examples. Rewind any step you missed."
+  },
+  "work": {
+   "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
+   "action": "Pause. Do page 1, then play to check. Then page 2. Then choose a page to try."
+  }
+ },
+ "script": {
+  "segments": [
+   {
+    "part": "opening",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-title",
+      "s": 15
+     },
+     {
+      "k": "DO",
+      "text": "Greet the whole group warmly, before the recording starts. Check that you can see each child, or ask the grown-up.",
+      "s": 12
+     },
+     {
+      "k": "SAY",
+      "text": "Hello, inquirers! Pencil ready, and your counters, your workbook and the kit page of number cards, cut out, on the table. Cameras can be on or off, as you like."
+     },
+     {
+      "k": "SAY",
+      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+     },
+     {
+      "k": "DO",
+      "text": "Start the recording now. Do not use children's first names on the recording.",
+      "s": 5
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
+     },
+     {
+      "k": "SAY",
+      "text": "Today we are detectives. We test a claim: is a sum always odd, sometimes odd or never odd? First we meet odd and even numbers."
+     },
+     {
+      "k": "NOTE",
+      "text": "Say the recording statement and the microphone routine in the same words every lesson, for anyone who joined late. Say the notice before you start the recording, and do not use children's first names once it is running. The routine and the four inquirer rules were introduced earlier in the term: do not re-teach them."
+     },
+     {
+      "k": "NOTE",
+      "text": "New here? Say in one minute: our three rule words (notice it, test it, explain why); a guess is fine and you can always pass; after Start here you may choose Think harder, Go further or the Investigation; nobody holds paper to the camera. The first recording of the term shows the full routine."
+     }
+    ]
+   },
+   {
+    "part": "remember",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-rem1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Today's tool is Act it out. Use counters, paper or people to show it.",
+      "spine": "remember"
+     },
+     {
+      "k": "DO",
+      "text": "Point at the tool on page 1 of the workbook.",
+      "s": 4,
+      "spine": "remember"
+     },
+     {
+      "k": "SAY",
+      "text": "Pairs. I show counters in pairs. Look: is one left over? Show me with your hands: a flat hand if nothing is left over, one finger if one is left over."
+     },
+     {
+      "k": "ASK",
+      "text": "Eight counters in pairs. Is one left over?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Five counters. Is one left over?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Ten counters. Is one left over?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Seven counters. Is one left over?",
+      "resp": 12
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem2"
+     },
+     {
+      "k": "SAY",
+      "text": "Counting in twos. Colour or touch the numbers as we say them. Two, four, six, eight. Count with me up to twenty."
+     },
+     {
+      "k": "ASK",
+      "text": "What comes after ten when we count in twos?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "What comes after sixteen?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "What comes before eight?",
+      "resp": 12
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem3"
+     },
+     {
+      "k": "SAY",
+      "text": "Last one. Forty-seven is four tens and seven ones. The ones digit is the last digit. It is the seven."
+     },
+     {
+      "k": "ASK",
+      "text": "What is the last digit of thirty-eight?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "What is the last digit of sixty-three?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "And the last digit of ninety?",
+      "resp": 12
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child is unsure about left over, point to the red ring on the picture or lay out the counters in twos on the table. For counting in twos, touch each number on the strip. For the last digit, show the bars and squares: the squares on the right are the ones."
+     },
+     {
+      "k": "NOTE",
+      "text": "Answers: 0, 1, 0, 1 (none, one, none, one left over); 12, 18, 6; 8, 3, 0. Children answer with fingers, hands or a whispered number. Nobody writes. Do not say odd or even yet: those words come in Explore. Joining cold: all you need is counting to 20."
+     }
+    ]
+   },
+   {
+    "part": "sneak",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-sneak"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked."
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle one. Mei has 7 counters. She puts them in pairs. How many counters are left over? You may draw to help."
+     },
+     {
+      "k": "WORK",
+      "text": "Children draw or count and write the number on their own paper.",
+      "s": 40
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle two. Ben has 5 counters. Mei has 7 counters. They put all their counters together and make pairs. Is one counter left over? Circle Yes or No. Then write or draw how you know."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write or draw their answer.",
+      "s": 60
+     },
+     {
+      "k": "SAY",
+      "text": "Keep your paper. Nobody shows it. We will check our own thinking later, at Talk time."
+     },
+     {
+      "k": "NOTE",
+      "text": "Puzzle 1 answer: 1 counter is left over. Puzzle 2 answer: no; 5 and 7 make 12 counters, which is 6 pairs; the one left over from each group makes a pair. Look for good ideas to praise later (a child who drew the pairs). Do not write scores or keep a list."
+     }
+    ]
+   },
+   {
+    "part": "explore",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Your hands are the teachers. Take 6 counters. Put them in pairs: two, two, two. Is one left over?"
+     },
+     {
+      "k": "WORK",
+      "text": "Children make pairs with 6 counters: none left over.",
+      "s": 30
+     },
+     {
+      "k": "SAY",
+      "text": "A number that makes pairs with none left over is called even. Six is even. Now take 7 counters. Make pairs."
+     },
+     {
+      "k": "WORK",
+      "text": "Children pair 7 counters: one left over.",
+      "s": 30
+     },
+     {
+      "k": "SAY",
+      "text": "A number with one left over is called odd. Seven is odd."
+     },
+     {
+      "k": "ASK",
+      "text": "Try 8, then 9, then 10. Say odd or even for each. Show me with your hand: flat hand for even, one finger for odd.",
+      "resp": 45
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2"
+     },
+     {
+      "k": "SAY",
+      "text": "Round two. Lay out your number cards one to twenty in a row. We sort them in two piles: even cards on the left, odd cards on the right. Pair counters if you are not sure."
+     },
+     {
+      "k": "WORK",
+      "text": "Children sort cards 1 to 10 into even and odd piles, pairing counters when unsure.",
+      "s": 75
+     },
+     {
+      "k": "ASK",
+      "text": "Look at the last digit of the even cards. What do you notice? And the odd cards?",
+      "resp": 40
+     },
+     {
+      "k": "SAY",
+      "text": "Even numbers end in 0, 2, 4, 6 or 8. Odd numbers end in 1, 3, 5, 7 or 9. Check with the cards from 11 to 20."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore3"
+     },
+     {
+      "k": "SAY",
+      "text": "Round three. Be a detective. Mei says: odd plus odd makes an odd number. Let us test it. Make 3 counters and 5 counters in pairs. Put them together. Any left over?"
+     },
+     {
+      "k": "WORK",
+      "text": "Children pair 3 and 5, push them together: 8, no counter left over, even.",
+      "s": 60
+     },
+     {
+      "k": "ASK",
+      "text": "Three plus five. Is the total odd or even?",
+      "resp": 12
+     },
+     {
+      "k": "SAY",
+      "text": "Now test odd plus even. Three plus four."
+     },
+     {
+      "k": "WORK",
+      "text": "Children build 3 + 4 = 7: odd.",
+      "s": 40
+     },
+     {
+      "k": "SAY",
+      "text": "Now even plus even. Four plus six."
+     },
+     {
+      "k": "WORK",
+      "text": "Children build 4 + 6 = 10: even.",
+      "s": 40
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore4"
+     },
+     {
+      "k": "ASK",
+      "text": "What did you notice? Did odd plus odd give odd? What could we test next?",
+      "resp": 45
+     },
+     {
+      "k": "SAY",
+      "text": "Detectives test more than one example. Today we will test a claim many times."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who cannot tell if one is left over: lay the counters in two rows and see if the rows are the same length. A child with few counters: use cards or draw dots in pairs on paper."
+     },
+     {
+      "k": "NOTE",
+      "text": "Main room only; children say their answers aloud, you cannot see builds on small tiles. Answers: 6 even, 7 odd, 8 even, 9 odd, 10 even; 3 + 5 = 8 even; 3 + 4 = 7 odd; 4 + 6 = 10 even. Teach the words odd and even by pairing, not by the last digit first; the last-digit pattern is found from the cards. Do not say 'odd plus odd is always even' yet: that is the claim we test in the mini-lesson."
+     }
+    ]
+   },
+   {
+    "part": "mini",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-m1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Look at six and seven in pairs. Six makes pairs with none left over: even. Seven has one left over: odd. For a big number like fifty-seven, the tens are all in pairs, so the last digit decides."
+     },
+     {
+      "k": "ASK",
+      "text": "Is fifty-seven odd or even? How do you know?",
+      "resp": 25
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m2"
+     },
+     {
+      "k": "SAY",
+      "text": "Now be a detective. Claim: an odd number plus an even number is always odd. We test it with three sums: three plus four is seven, five plus eight is thirteen, seven plus two is nine."
+     },
+     {
+      "k": "ASK",
+      "text": "Are those totals odd or even? Does the claim work for all three?",
+      "resp": 20
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3"
+     },
+     {
+      "k": "SAY",
+      "text": "Another claim: an odd number plus an odd number is odd. Let us test three plus five."
+     },
+     {
+      "k": "ASK",
+      "text": "What is three plus five? Is the total odd or even?",
+      "resp": 20
+     },
+     {
+      "k": "ASK",
+      "text": "So is odd plus odd always odd, sometimes odd or never odd? Does one test that fails show the claim is not always true?",
+      "resp": 25
+     },
+     {
+      "k": "SAY",
+      "text": "One test that fails is enough to show a claim is not always true. Three tests that work do not prove a claim for every number. We need a picture to see why."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3b"
+     },
+     {
+      "k": "SAY",
+      "text": "One more claim: an even number plus an even number is always even. Test four plus six, eight plus two and ten plus ten."
+     },
+     {
+      "k": "ASK",
+      "text": "What are the totals? Are they odd or even? Does the claim work?",
+      "resp": 25
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4"
+     },
+     {
+      "k": "SAY",
+      "text": "Look at three plus five in pairs. Three has one left over. Five has one left over. Push them together."
+     },
+     {
+      "k": "WORK",
+      "text": "Now build seven and nine in pairs with your counters. Push them together. Is anything left over?",
+      "resp": 35,
+      "s": 35
+     },
+     {
+      "k": "ASK",
+      "text": "What happened to the two left-over counters? Would it work for other odd numbers?",
+      "resp": 20
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m5"
+     },
+     {
+      "k": "READ",
+      "text": "Your turn. Is each total odd or even? Four plus nine. Six plus eight. Seven plus five. Twelve plus three."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write the total and odd or even for four sums.",
+      "s": 75
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m5a"
+     },
+     {
+      "k": "READ",
+      "text": "Thirteen, odd. Fourteen, even. Twelve, even. Fifteen, odd. Tick your own answers with a tick."
+     },
+     {
+      "k": "NOTE",
+      "text": "Key words to use every time: pairs, left over, odd, even, test, always, sometimes, never. Do not say that tests prove a claim: say that tests can show it is false. Do not teach division or halving. This lesson goes beyond the school Primary 1 syllabus on purpose; keep the pace gentle."
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child says odd plus odd is odd because the numbers are odd, ask them to test it: build three and five. If a child says one test proves it, ask: could a different pair give a different answer? Try another pair."
+     }
+    ]
+   },
+   {
+    "part": "break",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-break"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Stand up and get a sip of water. I say a number. If it is even, clap twice. If it is odd, tap your knees once."
+     },
+     {
+      "k": "WORK",
+      "text": "Call 4, 7, 10, 13, 16, 19. Children clap for even and tap their knees for odd, and say odd or even aloud together.",
+      "s": 150
+     }
+    ]
+   },
+   {
+    "part": "work",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "Page 1, Start here. Question 1: look at the pairs and fill in the missing numbers. Question 2: pair up counters and circle Odd or Even for each number. Question 3: count in twos and colour the numbers."
+     },
+     {
+      "k": "WORK",
+      "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
+      "s": 400
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1ans"
+     },
+     {
+      "k": "READ",
+      "text": "Question 1: none left over, one left over. Question 2: 4 is even, 9 is odd, 10 is even, 13 is odd. Question 3: the last digit is zero. Tick your own answers with a tick."
+     },
+     {
+      "k": "SAY",
+      "text": "After question 3 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2"
+     },
+     {
+      "k": "READ",
+      "text": "Page 2. Question 4: which number is even? Put its number in the bracket. Question 5: 11 children stand in pairs. How many children have no partner? Then circle Odd or Even. Question 6: decide if each statement is True or False."
+     },
+     {
+      "k": "WORK",
+      "text": "Page 2, questions 4 to 6.",
+      "s": 400
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2ans"
+     },
+     {
+      "k": "READ",
+      "text": "Question 4: option 3, fourteen. Question 5: one child has no partner; eleven is odd. Question 6: true, false, true, false."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-choice"
+     },
+     {
+      "k": "SAY",
+      "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time. Anything not finished is for home too."
+     },
+     {
+      "k": "MOVE",
+      "text": "Stand and stretch for 30 seconds, then sit down and choose.",
+      "s": 30
+     },
+     {
+      "k": "WORK",
+      "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
+      "s": 290
+     },
+     {
+      "k": "STUCK",
+      "text": "Q1: count the counters in the pairs, then the ringed one. Q2: pair up the counters, or draw dots two by two. Q3: say the numbers aloud, two at a time. Q4: look at the last digit. Q5: draw the 11 children in pairs. Q6: pair the counters for each number."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who is still stuck ticks 'I am still stuck' on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp (never a personal phone). You then help in the open session in the next lesson. Never a private message to a child."
+     },
+     {
+      "k": "NOTE",
+      "text": "Think harder is for testing claims and for the last digit. Go further explains why with pictures. Do not announce who is on which page. Slow class: the workbook part needs about 31 minutes against 28, so Start here may fill most of it. Take the extra minutes from the flex time, do not skip the answer slides, and say that pages 3 to 5 are for home."
+     }
+    ]
+   },
+   {
+    "part": "talk",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-talk"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "Ravi tests 3 plus 5. He gets 8. He says: so odd plus odd is always even. Is one test enough? What could we do to be more sure?"
+     },
+     {
+      "k": "WORK",
+      "text": "Try two more odd plus odd sums with counters. What do you get?",
+      "s": 50
+     },
+     {
+      "k": "WORK",
+      "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
+      "s": 50
+     },
+     {
+      "k": "ASK",
+      "text": "Who would like to share? Volunteers first. A pass is always fine.",
+      "resp": 80
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-sneakans"
+     },
+     {
+      "k": "SAY",
+      "text": "Remember puzzle two? Five and seven together make twelve, which is six pairs. The one left over from each group makes a pair. No counter is left over."
+     },
+     {
+      "k": "ASK",
+      "text": "Did anyone change their mind about puzzle two while we worked? You can just nod.",
+      "resp": 15
+     },
+     {
+      "k": "ASK",
+      "text": "Where did you use Act it out today?",
+      "resp": 10,
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Listen for the tool being named, not the answer. Volunteers first, a pass is always fine.",
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Model answer: one test is not enough, because a different pair might give a different answer. Test more pairs, and use a picture of pairs to see why: each odd number has one left over, and two left-over counters make a pair. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
+     }
+    ]
+   },
+   {
+    "part": "exit",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-exit"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
+     },
+     {
+      "k": "READ",
+      "text": "E1. Is 17 odd or even? Circle Odd or Even. E2. Which number is even? Put its number in the bracket. E3. Can you make 14 by adding two odd numbers? Circle Yes or No.",
+      "s": 40
+     },
+     {
+      "k": "WORK",
+      "text": "Children answer E1 to E3 on their own.",
+      "s": 200
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-exitans"
+     },
+     {
+      "k": "READ",
+      "text": "E1: seventeen is odd. E2: option 3, eighteen. E3: yes, seven plus seven."
+     },
+     {
+      "k": "SAY",
+      "text": "Tick your own ticket with a tick. Well done. Put a tick by each one you got right."
+     },
+     {
+      "k": "NOTE",
+      "text": "Nothing is collected or marked live. Children tick their own ticket. If many children miss one question, spend two minutes on it at the start of the next lesson, in the open session, no names. Do not read out any child's result."
+     }
+    ]
+   },
+   {
+    "part": "look",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-look"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+      "spine": "look"
+     },
+     {
+      "k": "WORK",
+      "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+      "s": 90,
+      "spine": "look"
+     }
+    ]
+   },
+   {
+    "part": "flex",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-end"
+     },
+     {
+      "k": "SAY",
+      "text": "Well done, inquirers. Next lesson is Equal Groups. Please have your Term 2 Lesson 5 workbook, 4 plates or bowls, about 20 small things of one kind, a pencil and paper. Goodbye, and thank you to the grown-ups."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-opt",
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Optional, only if you are on time: Ali says he can make 15 by adding two odd numbers. Can he? Try some sums with your counters.",
+      "optional": true
+     },
+     {
+      "k": "WORK",
+      "text": "Short think time, then take two answers.",
+      "s": 90,
+      "optional": true
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-menu",
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
+      "optional": true
+     },
+     {
+      "k": "NOTE",
+      "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: no, 15 cannot be made from two odd numbers, because odd plus odd is always even (tests and the picture of pairs). If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+     }
+    ]
+   }
+  ]
+ },
+ "slides": [
+  {
+   "id": "s-title",
+   "part": "opening",
+   "kind": "title",
+   "title": "Odd + Odd?",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "TODAY WE WILL",
+     "items": [
+      "Test a claim like a detective."
+     ]
+    }
+   ],
+   "note": "Term 2 Lesson 4, 90 minutes. Objective: sort numbers into odd and even by pairing, test claims about adding odd and even numbers, and use a picture of pairs to see why odd + odd is always even. This whole lesson goes beyond the school Primary 1 syllabus on purpose. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 26, mini-lesson 26 to 39, brain break 39 to 43, workbook 43 to 71, talk 71 to 77, exit ticket 77 to 83, look-back 83 to 86, flex time and goodbye 86 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Say the recording notice in one line: you and the screen only; a child may keep the camera off.",
+   "subtitle": "Odd + Odd: Always, Sometimes, Never?",
+   "mascot": {
+    "size": "l",
+    "say": "Hi, I'm Mi. Let's notice, test and explain why!"
+   }
+  },
+  {
+   "id": "s-rem1",
+   "part": "remember",
+   "kind": "light",
+   "title": "Warm-up: make pairs",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Show it on your fingers"
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "array",
+        "rows": 1,
+        "cols": 8,
+        "icon": "counter_red",
+        "pairs": true,
+        "ring_left_over": false
+       },
+       {
+        "t": "p",
+        "text": "8 counters"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "array",
+        "rows": 1,
+        "cols": 5,
+        "icon": "counter_red",
+        "pairs": true,
+        "ring_left_over": true
+       },
+       {
+        "t": "p",
+        "text": "5 counters"
+       }
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Is one counter left over? Flat hand for none, 1 finger for one."
+    },
+    {
+     "t": "numrow",
+     "items": [
+      8,
+      5,
+      10,
+      7
+     ]
+    }
+   ],
+   "note": "Counters in pairs. Count the pairs and look for the red ring: one counter left over. Ask 8 (none left over), 5 (one left over), 10 (none) and 7 (one). Children show a flat hand (none) or one finger (one). Hands on camera is fine. No writing, no marks. A new child can look at the ring in the picture. Do not say odd or even yet.",
+   "mascot": {
+    "size": "s",
+    "say": "Fingers ready? Let us go!"
+   }
+  },
+  {
+   "id": "s-rem2",
+   "part": "remember",
+   "kind": "light",
+   "title": "Count in twos",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "hundred",
+     "rows": [
+      1,
+      2
+     ],
+     "cols": [
+      1,
+      10
+     ],
+     "shade": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20
+     ],
+     "cell": 70,
+     "wide": true
+    },
+    {
+     "t": "p",
+     "text": "Count in twos: 2, 4, 6, 8 ..."
+    },
+    {
+     "t": "numrow",
+     "items": [
+      "after 10",
+      "after 16",
+      "before 8"
+     ]
+    }
+   ],
+   "note": "The shaded numbers are the numbers we say when we count in twos. Count together up to 20. Then ask: what comes after 10 (12), after 16 (18), before 8 (6). A child who is unsure touches each shaded number on the strip. No writing."
+  },
+  {
+   "id": "s-rem3",
+   "part": "remember",
+   "kind": "light",
+   "title": "The last digit",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "bundles",
+     "tens": 4,
+     "ones": 7,
+     "style": "kit",
+     "label": "47 is 4 tens and 7 ones"
+    },
+    {
+     "t": "p",
+     "text": "The last digit of 47 is 7. It tells the ones."
+    },
+    {
+     "t": "numrow",
+     "items": [
+      38,
+      63,
+      90
+     ]
+    }
+   ],
+   "note": "A bar is a ten and each square is a one. 47 is 4 bars and 7 squares. The last digit is the ones digit: 7. Ask: the last digit of 38 (8), 63 (3), 90 (0). A child who has not met tens and ones only needs to find the last digit by looking at the end of the number."
+  },
+  {
+   "id": "s-sneak",
+   "part": "sneak",
+   "kind": "light",
+   "title": "Sneak-peek puzzles",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Ideas we have not learnt yet. A guess is a great start. Nobody is marked."
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 1: anyone can try",
+        "items": [
+         "Mei has 7 counters. She puts them in pairs.",
+         "How many counters are left over?",
+         "You may draw to help."
+        ]
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 2: think",
+        "items": [
+         "Ben has 5 counters. Mei has 7 counters.",
+         "They put all their counters together and make pairs.",
+         "Is one counter left over? Circle Yes or No. Then write or draw how you know."
+        ]
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Puzzle 1 (7 counters in pairs; 1 left over) is an access question: any child can try it by drawing. Puzzle 2 is a thinking question on the lesson's key idea: two left-over counters make a pair. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: 1; no (5 + 7 = 12, which is 6 pairs). Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
+  },
+  {
+   "id": "s-explore1",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: pair up",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "Take 6 counters. Put them in pairs.",
+      "Is one left over?",
+      "Take 7 counters. Put them in pairs.",
+      "Is one left over?",
+      "Try 8, 9 and 10."
+     ]
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "array",
+        "rows": 1,
+        "cols": 6,
+        "icon": "counter_red",
+        "pairs": true,
+        "ring_left_over": false
+       },
+       {
+        "t": "p",
+        "text": "6: even"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "array",
+        "rows": 1,
+        "cols": 7,
+        "icon": "counter_red",
+        "pairs": true,
+        "ring_left_over": true
+       },
+       {
+        "t": "p",
+        "text": "7: odd"
+       }
+      ]
+     ],
+     "reveal": true
+    }
+   ],
+   "note": "Round 1, about 4 minutes. Objects first, no writing. Children pair 6 counters (none left over) and 7 counters (one left over). Name the words once: none left over is even, one left over is odd. Then 8 (even), 9 (odd), 10 (even). Children answer with a flat hand for even and one finger for odd. A child with few counters can draw dots two by two. The pictures with odd and even come on the next slide, after the children have answered."
+  },
+  {
+   "id": "s-explore2",
+   "part": "explore",
+   "kind": "light",
+   "title": "Sort the number cards",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Lay out your cards 1 to 20. Make two piles: even on the left, odd on the right."
+    },
+    {
+     "t": "visual",
+     "type": "hundred",
+     "rows": [
+      1,
+      2
+     ],
+     "cols": [
+      1,
+      10
+     ],
+     "cell": 70,
+     "wide": true
+    },
+    {
+     "t": "chip",
+     "text": "Look at the last digits. What do you notice?"
+    }
+   ],
+   "note": "Round 2, about 5 minutes, main room. Children sort cards 1 to 10 first, pairing counters when unsure, then 11 to 20 if time. The strip is blank so children do not see the answer: the even numbers are 2, 4, 6, 8, 10, 12, 14, 16, 18, 20. Ask what they notice about the last digits: even numbers end in 0, 2, 4, 6, 8; odd numbers end in 1, 3, 5, 7, 9. Do not reveal the rule: let children say it."
+  },
+  {
+   "id": "s-explore3",
+   "part": "explore",
+   "kind": "light",
+   "title": "Be a detective: test the sums",
+   "blocks": [
+    {
+     "t": "numrow",
+     "items": [
+      "3 + 5",
+      "3 + 4",
+      "4 + 6"
+     ]
+    },
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Sum",
+       "Make pairs. Odd or even?"
+      ],
+      [
+       "3 + 5",
+       "8: even"
+      ],
+      [
+       "3 + 4",
+       "7: odd"
+      ],
+      [
+       "4 + 6",
+       "10: even"
+      ]
+     ],
+     "reveal": true
+    },
+    {
+     "t": "chip",
+     "text": "Build each sum with counters first."
+    }
+   ],
+   "note": "Round 3, about 5 minutes. Claim from Mei: odd plus odd makes an odd number. Children build 3 and 5 in pairs, push them together: 8, even. Then odd plus even (3 + 4 = 7, odd) and even plus even (4 + 6 = 10, even). The table with the answers comes on the next slide, after the children have built each sum. Do not say always yet."
+  },
+  {
+   "id": "s-explore4",
+   "part": "explore",
+   "kind": "light",
+   "title": "What did we notice?",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      "Did odd + odd give an odd number?",
+      "What happened with odd + even? With even + even?",
+      "What could we test next?"
+     ]
+    }
+   ],
+   "note": "Take one or two answers from volunteers. Key ideas: odd plus odd gave an even number in our test; odd plus even gave odd; even plus even gave even; one test is only one example, so test more. Repeat a child's answer in your own words so the recording picks it up."
+  },
+  {
+   "id": "s-m1",
+   "part": "mini",
+   "kind": "light",
+   "title": "Odd and even",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "array",
+        "rows": 1,
+        "cols": 6,
+        "icon": "counter_red",
+        "pairs": true,
+        "ring_left_over": false
+       },
+       {
+        "t": "p",
+        "text": "6: even"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "array",
+        "rows": 1,
+        "cols": 7,
+        "icon": "counter_red",
+        "pairs": true,
+        "ring_left_over": true
+       },
+       {
+        "t": "p",
+        "text": "7: odd"
+       }
+      ]
+     ]
+    },
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Last digit",
+       "The number is"
+      ],
+      [
+       "0, 2, 4, 6, 8",
+       "even"
+      ],
+      [
+       "1, 3, 5, 7, 9",
+       "odd"
+      ]
+     ],
+     "reveal": true
+    }
+   ],
+   "note": "Even numbers make pairs with none left over; odd numbers have one left over. The last digit tells us at once: 0, 2, 4, 6, 8 are even; 1, 3, 5, 7, 9 are odd. Ask: is 57 odd or even (odd, last digit 7)? Also ask how do you know. Take one or two volunteers. The tens are made of pairs (ten is five pairs), so only the ones digit can leave one over. The rule table comes on the next slide."
+  },
+  {
+   "id": "s-m2",
+   "part": "mini",
+   "kind": "light",
+   "title": "Test a claim: odd + even",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "CLAIM",
+     "items": [
+      "An odd number plus an even number is always odd."
+     ]
+    },
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Test",
+       "Total"
+      ],
+      [
+       "3 + 4",
+       "7"
+      ],
+      [
+       "5 + 8",
+       "13"
+      ],
+      [
+       "7 + 2",
+       "9"
+      ]
+     ]
+    }
+   ],
+   "note": "Test the claim with three sums: 3 + 4 = 7, 5 + 8 = 13, 7 + 2 = 9. All three totals are odd. Ask: does the claim work for all three? Yes. Three tests that work are good evidence but not a proof for every pair of numbers. The totals are read aloud; the children say odd or even."
+  },
+  {
+   "id": "s-m3",
+   "part": "mini",
+   "kind": "light",
+   "title": "One test can show a claim is false",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "CLAIM",
+     "items": [
+      "An odd number plus an odd number is odd."
+     ]
+    },
+    {
+     "t": "say",
+     "text": "3 + 5 = 8. 8 is even. The claim is not always true.",
+     "reveal": true
+    },
+    {
+     "t": "chip",
+     "text": "Always, sometimes or never?"
+    }
+   ],
+   "note": "A new claim: odd plus odd is odd. Children test 3 + 5 = 8, which is even, so the claim is not always true; the working line is on the answer slide. One test that fails is enough to show that. Ask: is odd + odd always odd, sometimes odd or never odd? From our tests it looks never odd, but a few tests do not prove it. Say that a picture can show why. Answer so far: never odd (it was even each time we tried)."
+  },
+  {
+   "id": "s-m3b",
+   "part": "mini",
+   "kind": "light",
+   "title": "Test a claim: even + even",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "CLAIM",
+     "items": [
+      "An even number plus an even number is always even."
+     ]
+    },
+    {
+     "t": "numrow",
+     "items": [
+      "4 + 6",
+      "8 + 2",
+      "10 + 10"
+     ]
+    }
+   ],
+   "note": "Test the third claim with three sums: 4 + 6 = 10, 8 + 2 = 10, 10 + 10 = 20. All are even. Ask: does the claim work for all three? Yes, for these three. It is good evidence, and the picture of pairs on the next slides will show why. The totals (10, 10, 20) are not shown: children work them out and say odd or even."
+  },
+  {
+   "id": "s-m4",
+   "part": "mini",
+   "kind": "light",
+   "title": "Why? Draw the pairs",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "array",
+        "rows": 1,
+        "cols": 3,
+        "icon": "counter_red",
+        "pairs": true,
+        "ring_left_over": true
+       },
+       {
+        "t": "p",
+        "text": "3: 1 left over"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "array",
+        "rows": 1,
+        "cols": 5,
+        "icon": "counter_red",
+        "pairs": true,
+        "ring_left_over": true
+       },
+       {
+        "t": "p",
+        "text": "5: 1 left over"
+       }
+      ]
+     ]
+    },
+    {
+     "t": "say",
+     "text": "The 2 left-over counters make a pair. So 3 + 5 has none left over: even.",
+     "reveal": true
+    }
+   ],
+   "note": "Each odd number has one counter left over. When we put two odd numbers together, the two left-over counters make a new pair. So there is none left over: the total is even. This is true for any two odd numbers, not just 3 and 5. Children build 7 + 9 with counters: each has one left over, the two make a pair, 16 is 8 pairs. Let them say that it works for other odd numbers, then ask them to try one of their own. The conclusion line is on the answer slide."
+  },
+  {
+   "id": "s-m5",
+   "part": "mini",
+   "kind": "light",
+   "title": "Your turn: odd or even?",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Write the total, then odd or even."
+    },
+    {
+     "t": "numrow",
+     "items": [
+      "4 + 9",
+      "6 + 8",
+      "7 + 5",
+      "12 + 3"
+     ]
+    }
+   ],
+   "note": "Each child writes four totals and odd or even on their own paper. Walk the cameras. Do not ask children to hold boards up in front of the group. Answers: 4 + 9 = 13 odd (even + odd); 6 + 8 = 14 even; 7 + 5 = 12 even (odd + odd); 12 + 3 = 15 odd."
+  },
+  {
+   "id": "s-m5a",
+   "part": "mini",
+   "kind": "light",
+   "title": "Check: odd or even?",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Sum",
+       "Total",
+       "Odd or even?"
+      ],
+      [
+       "4 + 9",
+       "13",
+       "odd"
+      ],
+      [
+       "6 + 8",
+       "14",
+       "even"
+      ],
+      [
+       "7 + 5",
+       "12",
+       "even"
+      ],
+      [
+       "12 + 3",
+       "15",
+       "odd"
+      ]
+     ]
+    }
+   ],
+   "note": "Answers: 13 odd, 14 even, 12 even, 15 odd. Read each answer aloud so a child watching the recording can mark their own work. Link back: 7 + 5 is odd + odd, which is even, and 4 + 9 is even + odd, which is odd."
+  },
+  {
+   "id": "s-break",
+   "part": "break",
+   "kind": "dark",
+   "title": "Clap or tap",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "I say a number. Even: clap twice. Odd: tap your knees once."
+    },
+    {
+     "t": "p",
+     "text": "Say odd or even out loud."
+    },
+    {
+     "t": "p",
+     "text": "Stand up. Sip some water."
+    }
+   ],
+   "note": "Four minutes. Stand up on camera. Call 4, 7, 10, 13, 16, 19 (even, odd, even, odd, even, odd). Children clap softly twice for even and tap their knees once for odd, and say odd or even aloud together. No equipment, no stomping."
+  },
+  {
+   "id": "s-ws1",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 1: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 1 to 3. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read questions 1 to 3 aloud. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 2: children pair up counters. Question 3: they colour the numbers in 2s."
+  },
+  {
+   "id": "s-ws1ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 1",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children tick their own answers with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 0 and 1; Q2 even, odd, even, odd; Q3 the last digit 0."
+  },
+  {
+   "id": "s-ws2",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 2: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 4 to 6. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S4",
+      "S5",
+      "S6"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read questions 4 to 6 aloud. Question 4 is a bracket answer; question 5 is a story with 11 children in pairs; question 6 is a True or False table. Children may use counters."
+  },
+  {
+   "id": "s-ws2ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 2",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S4",
+      "S5",
+      "S6"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud so a child watching the recording can mark their own work. Question 6: 6 is even (true), 9 is even (false), 15 is odd (true), 20 is odd (false). Never ask a child to show a wrong answer to the group."
+  },
+  {
+   "id": "s-choice",
+   "part": "work",
+   "kind": "light",
+   "title": "Choose your next page",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Page",
+       "What it is"
+      ],
+      [
+       "Think harder (page 3)",
+       "Test claims with sums"
+      ],
+      [
+       "Go further (page 4)",
+       "Draw why it works"
+      ],
+      [
+       "Investigation (page 5)",
+       "Numbers next to each other"
+      ],
+      [
+       "Check",
+       "Finish and check your own work"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Everyone may choose. Not finished? Pages 3 to 5 are for home too."
+    }
+   ],
+   "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 5 minutes."
+  },
+  {
+   "id": "s-talk",
+   "part": "talk",
+   "kind": "light",
+   "title": "Talk and explain",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "RAVI TESTS 3 + 5",
+     "items": [
+      "He gets 8.",
+      "He says: odd + odd is always even."
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Is one test enough? What could we do to be more sure?"
+    },
+    {
+     "t": "chip",
+     "text": "I think ... because ..."
+    }
+   ],
+   "note": "One minute of talk to the grown-up next to you, or to your screen. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: one test is not enough, because another pair might give a different answer. Try more pairs, and draw the pairs: each odd number has one left over, and two left-over counters make a pair. Repeat each child's answer in your own words for the recording."
+  },
+  {
+   "id": "s-sneakans",
+   "part": "talk",
+   "kind": "light",
+   "title": "Back to the sneak-peek",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "array",
+        "rows": 1,
+        "cols": 5,
+        "icon": "counter_red",
+        "pairs": true,
+        "ring_left_over": true
+       },
+       {
+        "t": "p",
+        "text": "5"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "array",
+        "rows": 1,
+        "cols": 7,
+        "icon": "counter_red",
+        "pairs": true,
+        "ring_left_over": true
+       },
+       {
+        "t": "p",
+        "text": "7"
+       }
+      ]
+     ]
+    },
+    {
+     "t": "answer",
+     "text": "No! The 2 left-over counters make a pair."
+    }
+   ],
+   "note": "Reveal puzzle 2 now. Say: many of you wrote a good reason. Do not read out anyone's earlier answer. The pictures show 5 and 7 each with one left over. Together they make 12 counters, which is 6 pairs, so no counter is left over."
+  },
+  {
+   "id": "s-exit",
+   "part": "exit",
+   "kind": "light",
+   "title": "Exit ticket",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "On your own. No looking back."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ],
+     "short": false
+    }
+   ],
+   "note": "Children answer on page 5. Read E1, E2 and E3 aloud (the questions are on the slide). Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
+  },
+  {
+   "id": "s-exitans",
+   "part": "exit",
+   "kind": "light",
+   "title": "Check the exit ticket",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: odd, option 3 (18), yes (7 + 7)."
+  },
+  {
+   "id": "s-look",
+   "part": "look",
+   "kind": "lookback",
+   "title": "Look-back",
+   "blocks": [
+    {
+     "t": "lookback"
+    }
+   ],
+   "note": "Three minutes. Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child.",
+   "mascot": {
+    "size": "s",
+    "say": "Take your time. You can pass."
+   }
+  },
+  {
+   "id": "s-end",
+   "part": "flex",
+   "kind": "dark",
+   "title": "Well done, inquirers!",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Show a grown-up one thing you found out today."
+    },
+    {
+     "t": "card",
+     "head": "NEXT LESSON",
+     "items": [
+      "Equal Groups",
+      "Have ready: your Term 2 Lesson 5 workbook, 4 plates or bowls, about 20 small things of one kind, pencil and paper."
+     ]
+    }
+   ],
+   "note": "Say goodbye and thank the grown-ups. Minutes 86 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. If the whole class is ahead, show the optional slides and use the Spare-time menu from the tutor guide.",
+   "mascot": {
+    "size": "l",
+    "say": "Great thinking today!"
+   }
+  },
+  {
+   "id": "s-opt",
+   "part": "flex",
+   "kind": "light",
+   "title": "Go further: what if?",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Ali says he can make 15 by adding two odd numbers. Can he?"
+    },
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Try",
+       "Total"
+      ],
+      [
+       "7 + 7",
+       "14"
+      ],
+      [
+       "5 + 9",
+       "14"
+      ],
+      [
+       "7 + 9",
+       "16"
+      ]
+     ]
+    }
+   ],
+   "note": "Optional, only if you are on time. Answer: no. Two odd numbers always make an even total, and 15 is odd. The sums in the table are examples (14, 14, 16); none is 15. Take two answers and move on. The reason is the picture of pairs: the two left-over counters make a pair.",
+   "optional": true
+  },
+  {
+   "id": "s-menu",
+   "part": "flex",
+   "kind": "light",
+   "title": "If we have time: pick one",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Activity",
+       "What we do"
+      ],
+      [
+       "Is it always true?",
+       "Even + even is even. Test it three times."
+      ],
+      [
+       "Make a puzzle",
+       "Write three sums. Ask your grown-up: odd or even, before adding?"
+      ],
+      [
+       "Teach it back",
+       "Show with pairs why 7 + 9 is even"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Optional. Everyone may join."
+    }
+   ],
+   "note": "Optional Spare-time menu, used only if the whole class is ahead. Pick one or two activities (3 to 5 minutes each); full tutor lines and answers are in the tutor guide. Never start new content and never name who is ahead. Slow down with how do you know rather than rushing on. These minutes come from the flex buffer and are not part of the 90-minute sum.",
+   "optional": true
+  }
+ ],
+ "tiers": {
+  "start": [
+   {
+    "id": "S1",
+    "page": 1,
+    "tier": "start",
+    "text": "Look at the pairs. Fill in the missing numbers.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "6 counters: [] left over.",
+      "ans": "0",
+      "val": 0
+     },
+     {
+      "l": "b",
+      "text": "7 counters: [] left over.",
+      "ans": "1",
+      "val": 1
+     }
+    ],
+    "answer": "6 counters: 0 left over; 7 counters: 1 left over",
+    "val": [
+     0,
+     1
+    ],
+    "hint": "Put the counters in pairs. Is one counter without a partner?",
+    "solution": "6 counters make 3 pairs with none left over. 7 counters make 3 pairs and 1 counter is left over.",
+    "mistakes": [
+     "Writing the number of pairs instead of the number left over.",
+     "Not noticing the single counter at the end."
+    ],
+    "mins": 2,
+    "visuals": [
+     {
+      "type": "array",
+      "rows": 1,
+      "cols": 6,
+      "icon": "counter_red",
+      "pairs": true,
+      "ring_left_over": false
+     },
+     {
+      "type": "array",
+      "rows": 1,
+      "cols": 7,
+      "icon": "counter_red",
+      "pairs": true,
+      "ring_left_over": false
+     }
+    ]
+   },
+   {
+    "id": "S2",
+    "page": 1,
+    "tier": "start",
+    "text": "Pair up counters or draw dots in pairs. Circle Odd or Even for each number.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "4",
+      "ans": "Even",
+      "val": "Even",
+      "choices": [
+       "Odd",
+       "Even"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "9",
+      "ans": "Odd",
+      "val": "Odd",
+      "choices": [
+       "Odd",
+       "Even"
+      ]
+     },
+     {
+      "l": "c",
+      "text": "10",
+      "ans": "Even",
+      "val": "Even",
+      "choices": [
+       "Odd",
+       "Even"
+      ]
+     },
+     {
+      "l": "d",
+      "text": "13",
+      "ans": "Odd",
+      "val": "Odd",
+      "choices": [
+       "Odd",
+       "Even"
+      ]
+     }
+    ],
+    "answer": "4 even; 9 odd; 10 even; 13 odd",
+    "val": [
+     "Even",
+     "Odd",
+     "Even",
+     "Odd"
+    ],
+    "hint": "Put the counters in pairs. If none are left over, the number is even. If one is left over, it is odd.",
+    "solution": "4 makes 2 pairs: even. 9 makes 4 pairs and 1 left over: odd. 10 makes 5 pairs: even. 13 makes 6 pairs and 1 left over: odd.",
+    "mistakes": [
+     "Calling a big number even because it is big.",
+     "Looking at the first digit instead of the last digit."
+    ],
+    "mins": 3
+   },
+   {
+    "id": "S3",
+    "page": 1,
+    "tier": "start",
+    "text": "Count in 2s. Colour each number you say. Then fill in the missing number.",
+    "parts": [
+     {
+      "l": "",
+      "text": "The last digits are 2, 4, 6, 8 and [].",
+      "ans": "0",
+      "val": 0
+     }
+    ],
+    "answer": "The last digits are 2, 4, 6, 8 and 0",
+    "val": [
+     0
+    ],
+    "hint": "Say the numbers aloud: 2, 4, 6, 8, 10. Colour each one. Look at the last digit of each coloured number.",
+    "solution": "The numbers are 2, 4, 6, 8, 10, 12, 14, 16, 18, 20. The last digits are 2, 4, 6, 8, 0, 2, 4, 6, 8, 0. The missing digit is 0.",
+    "mistakes": [
+     "Colouring every number.",
+     "Skipping 10 or 20."
+    ],
+    "mins": 2.5,
+    "visual": {
+     "type": "table",
+     "head": [],
+     "rows": [
+      [
+       "1",
+       "2",
+       "3",
+       "4",
+       "5",
+       "6",
+       "7",
+       "8",
+       "9",
+       "10"
+      ],
+      [
+       "11",
+       "12",
+       "13",
+       "14",
+       "15",
+       "16",
+       "17",
+       "18",
+       "19",
+       "20"
+      ]
+     ],
+     "cell_h": 64,
+     "font": 40
+    }
+   },
+   {
+    "id": "S4",
+    "page": 2,
+    "tier": "start",
+    "text": "Which number is even? Write its number in the bracket.",
+    "parts": [],
+    "answer": "(3) 14",
+    "val": [
+     3
+    ],
+    "hint": "Pair up counters, or look at the last digit.",
+    "solution": "7 is odd (last digit 7). 11 is odd (last digit 1). 14 is even (last digit 4). 15 is odd (last digit 5). So the even number is 14.",
+    "mistakes": [
+     "Choosing the biggest number.",
+     "Choosing 11 because it has two same digits."
+    ],
+    "mins": 1.5,
+    "mcq": {
+     "options": [
+      "7",
+      "11",
+      "14",
+      "15"
+     ],
+     "bracket": true
+    }
+   },
+   {
+    "id": "S5",
+    "page": 2,
+    "tier": "start",
+    "text": "Look at the 11 counters in pairs. Fill in the blank. Then circle Odd or Even.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "[] counter has no partner.",
+      "ans": "1",
+      "val": 1
+     },
+     {
+      "l": "b",
+      "text": "11 is",
+      "ans": "Odd",
+      "val": "Odd",
+      "choices": [
+       "Odd",
+       "Even"
+      ]
+     }
+    ],
+    "answer": "1 counter has no partner; 11 is odd",
+    "val": [
+     1,
+     "Odd"
+    ],
+    "hint": "Count the counters two by two. Is one left without a partner?",
+    "solution": "11 counters make 5 pairs. 1 counter is left without a partner, so 11 is odd.",
+    "mistakes": [
+     "Writing 5 (the number of pairs).",
+     "Writing 0."
+    ],
+    "mins": 2.5,
+    "visual": {
+     "type": "array",
+     "rows": 1,
+     "cols": 11,
+     "icon": "counter_red",
+     "pairs": true,
+     "ring_left_over": true
+    }
+   },
+   {
+    "id": "S6",
+    "page": 2,
+    "tier": "start",
+    "text": "Read each statement. Decide if it is True or False.",
+    "parts": [],
+    "answer": "True, False, True, False",
+    "val": [
+     "T",
+     "F",
+     "T",
+     "F"
+    ],
+    "hint": "Pair up counters for each number, or look at the last digit.",
+    "solution": "6 is even: True. 9 is odd, not even: False. 15 is odd: True. 20 is even, not odd: False.",
+    "mistakes": [
+     "Marking 9 is even as true.",
+     "Thinking 20 is odd because it is big."
+    ],
+    "mins": 2.5,
+    "tf": [
+     {
+      "s": "6 is even."
+     },
+     {
+      "s": "9 is even."
+     },
+     {
+      "s": "15 is odd."
+     },
+     {
+      "s": "20 is odd."
+     }
+    ]
+   }
+  ],
+  "think": [
+   {
+    "id": "T1",
+    "page": 3,
+    "tier": "think",
+    "text": "Mei says: odd + even is always odd. Test it. Fill in the blanks.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "6 + 5 = [2]. Circle Odd or Even.",
+      "ans": "11, Odd",
+      "val": [
+       11,
+       "Odd"
+      ],
+      "choices": [
+       "Odd",
+       "Even"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "10 + 3 = [2]. Circle Odd or Even.",
+      "ans": "13, Odd",
+      "val": [
+       13,
+       "Odd"
+      ],
+      "choices": [
+       "Odd",
+       "Even"
+      ]
+     },
+     {
+      "l": "c",
+      "text": "8 + 1 = []. Circle Odd or Even.",
+      "ans": "9, Odd",
+      "val": [
+       9,
+       "Odd"
+      ],
+      "choices": [
+       "Odd",
+       "Even"
+      ]
+     },
+     {
+      "l": "d",
+      "text": "Does the claim work for all three? Circle Yes or No.",
+      "ans": "Yes",
+      "val": "Yes"
+     }
+    ],
+    "answer": "Totals 11, 13, 9, all odd; Yes, the claim works for these three",
+    "val": [
+     11,
+     "Odd",
+     13,
+     "Odd",
+     9,
+     "Odd",
+     "Yes"
+    ],
+    "hint": "Add each sum. Then look at the last digit of the total.",
+    "solution": "6 + 5 = 11 (odd). 10 + 3 = 13 (odd). 8 + 1 = 9 (odd). All three totals are odd, so the claim works for these three sums. Three tests are good evidence, not a proof.",
+    "mistakes": [
+     "Saying Yes means the claim is true for every number.",
+     "Adding wrongly (6 + 5 = 12)."
+    ],
+    "mins": 4
+   },
+   {
+    "id": "T2",
+    "page": 3,
+    "tier": "think",
+    "text": "Circle Odd or Even for each number.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "57",
+      "ans": "Odd",
+      "val": "Odd",
+      "choices": [
+       "Odd",
+       "Even"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "80",
+      "ans": "Even",
+      "val": "Even",
+      "choices": [
+       "Odd",
+       "Even"
+      ]
+     },
+     {
+      "l": "c",
+      "text": "34",
+      "ans": "Even",
+      "val": "Even",
+      "choices": [
+       "Odd",
+       "Even"
+      ]
+     },
+     {
+      "l": "d",
+      "text": "91",
+      "ans": "Odd",
+      "val": "Odd",
+      "choices": [
+       "Odd",
+       "Even"
+      ]
+     }
+    ],
+    "answer": "57 odd; 80 even; 34 even; 91 odd",
+    "val": [
+     "Odd",
+     "Even",
+     "Even",
+     "Odd"
+    ],
+    "hint": "The tens are in pairs. Look at the last digit. It tells you.",
+    "solution": "57 ends in 7: odd. 80 ends in 0: even. 34 ends in 4: even. 91 ends in 1: odd.",
+    "mistakes": [
+     "Looking at the first digit (the tens).",
+     "Thinking 0 is odd."
+    ],
+    "mins": 3
+   },
+   {
+    "id": "T3",
+    "page": 3,
+    "tier": "think",
+    "text": "Ravi says: odd + odd is always odd. Test it with 9 + 3. Fill in the blanks.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "9 + 3 = [2]",
+      "ans": "12",
+      "val": 12
+     },
+     {
+      "l": "b",
+      "text": "Is Ravi correct? Circle Yes or No.",
+      "ans": "No",
+      "val": "No"
+     },
+     {
+      "l": "c",
+      "text": "Add any two odd numbers. Is the total odd? Circle one.",
+      "ans": "Never",
+      "val": "Never",
+      "choices": [
+       "Always",
+       "Sometimes",
+       "Never"
+      ]
+     }
+    ],
+    "answer": "9 + 3 = 12; No, the claim is not true; odd + odd is Never odd (pairs picture)",
+    "val": [
+     12,
+     "No",
+     "Never"
+    ],
+    "hint": "Add 9 + 3. Is the total odd or even? One example that fails is enough to show a claim is not true. For (c), think of the pairs picture.",
+    "solution": "9 + 3 = 12, and 12 is even. So Ravi is not right. Each odd number has one counter left over, and the two left-over counters make a pair, so odd plus odd is never odd.",
+    "mistakes": [
+     "Writing 11 or 13.",
+     "Saying Yes because 9 and 3 are both odd."
+    ],
+    "mins": 3
+   },
+   {
+    "id": "T4",
+    "page": 3,
+    "tier": "think",
+    "text": "Can you make each number by adding two odd numbers? Circle Yes or No.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "12",
+      "ans": "Yes",
+      "val": "Yes",
+      "choices": [
+       "Yes",
+       "No"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "15",
+      "ans": "No",
+      "val": "No",
+      "choices": [
+       "Yes",
+       "No"
+      ]
+     },
+     {
+      "l": "c",
+      "text": "20",
+      "ans": "Yes",
+      "val": "Yes",
+      "choices": [
+       "Yes",
+       "No"
+      ]
+     }
+    ],
+    "answer": "12 yes (5 + 7); 15 no; 20 yes (9 + 11)",
+    "val": [
+     "Yes",
+     "No",
+     "Yes"
+    ],
+    "hint": "Try some pairs of odd numbers first. What kind of total do you get?",
+    "solution": "12 = 5 + 7 (yes). 15 is odd, and two odd numbers always make an even total, so no. 20 = 9 + 11 (yes).",
+    "mistakes": [
+     "Trying only one pair for 15 and giving up too soon.",
+     "Choosing Yes for every number."
+    ],
+    "mins": 4
+   }
+  ],
+  "go": [
+   {
+    "id": "G1",
+    "page": 4,
+    "tier": "go",
+    "text": "Look at 3 + 5. Draw 3 counters and 5 counters in pairs. Fill in the missing numbers.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "3 counters have [] left over.",
+      "ans": "1",
+      "val": 1
+     },
+     {
+      "l": "b",
+      "text": "5 counters have [] left over.",
+      "ans": "1",
+      "val": 1
+     },
+     {
+      "l": "c",
+      "text": "The two left-over counters make [] pair.",
+      "ans": "1",
+      "val": 1
+     }
+    ],
+    "answer": "1 left over, 1 left over, 1 pair",
+    "val": [
+     1,
+     1,
+     1
+    ],
+    "hint": "Draw the pairs, two by two. Ring the counter with no partner.",
+    "solution": "3 counters make 1 pair and 1 left over. 5 counters make 2 pairs and 1 left over. The 2 left-over counters make 1 new pair, so 3 + 5 has none left over.",
+    "mistakes": [
+     "Forgetting that the two left-over counters pair up.",
+     "Drawing the wrong number of counters."
+    ],
+    "mins": 5,
+    "draw": true,
+    "draw_strokes": 8
+   },
+   {
+    "id": "G2",
+    "page": 4,
+    "tier": "go",
+    "text": "Add three odd numbers. Circle Odd or Even for each total.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "3 + 5 + 7 = [2]. Circle Odd or Even.",
+      "ans": "15, Odd",
+      "val": [
+       15,
+       "Odd"
+      ],
+      "choices": [
+       "Odd",
+       "Even"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "1 + 1 + 1 = []. Circle Odd or Even.",
+      "ans": "3, Odd",
+      "val": [
+       3,
+       "Odd"
+      ],
+      "choices": [
+       "Odd",
+       "Even"
+      ]
+     },
+     {
+      "l": "c",
+      "text": "9 + 3 + 5 = [2]. Circle Odd or Even.",
+      "ans": "17, Odd",
+      "val": [
+       17,
+       "Odd"
+      ],
+      "choices": [
+       "Odd",
+       "Even"
+      ]
+     },
+     {
+      "l": "d",
+      "text": "What kind of number is odd + odd + odd? Circle Odd or Even.",
+      "ans": "Odd",
+      "val": "Odd",
+      "choices": [
+       "Odd",
+       "Even"
+      ]
+     }
+    ],
+    "answer": "3 + 5 + 7 = 15 odd; 1 + 1 + 1 = 3 odd; 9 + 3 + 5 = 17 odd; odd + odd + odd is Odd",
+    "val": [
+     15,
+     "Odd",
+     3,
+     "Odd",
+     17,
+     "Odd",
+     "Odd"
+    ],
+    "hint": "Add the first two. That total is even. Then add the third.",
+    "solution": "3 + 5 = 8 (even), 8 + 7 = 15 (odd). 1 + 1 = 2, 2 + 1 = 3. 9 + 3 = 12, 12 + 5 = 17. Odd + odd is even, and even + odd is odd, so the total is odd.",
+    "mistakes": [
+     "Saying even because odd + odd is even.",
+     "Adding wrongly."
+    ],
+    "mins": 5
+   },
+   {
+    "id": "G3",
+    "page": 4,
+    "tier": "go",
+    "text": "Look at 4 + 8. Draw 4 counters and 8 counters in pairs. Fill in the blank, then finish the sentence.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "[] counters are left over.",
+      "ans": "0",
+      "val": 0
+     },
+     {
+      "l": "b",
+      "text": "Even + even is even because _______.",
+      "ans": "no counter is left over",
+      "val": "open"
+     }
+    ],
+    "answer": "0 counters are left over; even + even is even because no counter is left over",
+    "val": [
+     0
+    ],
+    "hint": "Draw the pairs. Does either number have a counter left over?",
+    "solution": "4 makes 2 pairs and 8 makes 4 pairs. Neither has a counter left over, so together they make 6 pairs and none is left over. The total, 12, is even.",
+    "mistakes": [
+     "Counting 4 + 8 = 12 without looking at the pairs.",
+     "Writing odd."
+    ],
+    "mins": 5,
+    "draw": true,
+    "draw_strokes": 12
+   }
+  ],
+  "investigation": {
+   "id": "I1",
+   "page": 5,
+   "tier": "investigation",
+   "title": "Numbers next to each other",
+   "first": "Add 3 + 4. Is the total odd or even?",
+   "text": "Add 5 + 6, 8 + 9 and 10 + 11 too. Write odd or even for each total. Is the total always odd, sometimes odd or never odd? Write what you notice.",
+   "lines": 4,
+   "answer": "Always odd: 7, 11, 17, 21. One of the two numbers is odd and one is even, and odd + even is odd. Another way: a number plus the next number is a double plus 1, and a double has no counter left over, so one more is odd.",
+   "val": [
+    "always odd"
+   ],
+   "look_for": "A child who tries several pairs, records odd or even, and says always. Credit any clear reason: one number is odd and one is even, or it is a double and 1 more (from last lesson, if the child was there). Do not mark a child down for stopping at a few tests.",
+   "mistakes": [
+    "Testing only one pair.",
+    "Starting with two odd numbers (they are not next to each other)."
+   ],
+   "mins": 8
+  }
+ },
+ "talk": {
+  "question": "Ravi tests 3 + 5 and gets 8. He says: so odd + odd is always even. Is one test enough? What could we do to be more sure?",
+  "starter": "I think ... because ...",
+  "answer": "One test is not enough. Another pair might give a different answer. We can test more pairs, and draw the pairs: each odd number has one counter left over, and the two left-over counters make a new pair, so odd + odd is always even.",
+  "look_for": "A child who says test more, or draws pairs. Not just \"yes\" or \"no\"."
+ },
+ "exit": [
+  {
+   "id": "E1",
+   "text": "Is 17 odd or even? Circle Odd or Even.",
+   "parts": [
+    {
+     "l": "",
+     "text": "17 is",
+     "ans": "Odd",
+     "val": "Odd",
+     "choices": [
+      "Odd",
+      "Even"
+     ]
+    }
+   ],
+   "answer": "Odd",
+   "val": [
+    "Odd"
+   ],
+   "solution": "17 makes 8 pairs and 1 counter is left over. The last digit is 7: odd.",
+   "mistakes": [
+    "Choosing Even because 17 is a big number.",
+    "Looking at the tens digit."
+   ]
+  },
+  {
+   "id": "E2",
+   "text": "Which number is even? Write its number in the bracket.",
+   "parts": [],
+   "answer": "(3) 18",
+   "val": [
+    3
+   ],
+   "solution": "9, 13 and 21 end in odd digits. 18 ends in 8: even.",
+   "mistakes": [
+    "Choosing 21.",
+    "Choosing the first option."
+   ],
+   "mcq": {
+    "options": [
+     "9",
+     "13",
+     "18",
+     "21"
+    ],
+    "bracket": true
+   }
+  },
+  {
+   "id": "E3",
+   "text": "Can you make 14 by adding two odd numbers? Circle Yes or No.",
+   "parts": [
+    {
+     "l": "",
+     "text": "14",
+     "ans": "Yes",
+     "val": "Yes",
+     "choices": [
+      "Yes",
+      "No"
+     ]
+    }
+   ],
+   "answer": "Yes",
+   "val": [
+    "Yes"
+   ],
+   "solution": "7 + 7 = 14 (also 5 + 9). 14 is even, and odd plus odd is even.",
+   "mistakes": [
+    "Saying No because 14 is even.",
+    "Not trying 7 + 7."
+   ]
+  }
+ ],
+ "look_back": {
+  "hardest": [
+   "telling odd from even",
+   "testing the sums",
+   "always, sometimes or never",
+   "drawing the pairs (Go further)",
+   "something else"
+  ],
+  "helped": [
+   "counters in pairs",
+   "drawing it",
+   "trying again",
+   "I asked for help",
+   "I was not stuck"
+  ],
+  "next": [
+   "drawing it",
+   "using objects",
+   "checking my answer",
+   "asking a question"
+  ]
+ },
+ "home_practice": [
+  {
+   "id": "H1",
+   "tier": "start",
+   "text": "Pair up counters. Write Odd or Even. (a) 8 ___ (b) 15 ___ (c) 20 ___",
+   "answer": "Even, Odd, Even",
+   "val": [
+    "Even",
+    "Odd",
+    "Even"
+   ],
+   "solution": "8 and 20 make pairs with none left over: even. 15 leaves one over: odd."
+  },
+  {
+   "id": "H2",
+   "tier": "start",
+   "text": "Ali has 13 counters. He puts them in pairs. How many counters are left over? ___ counter is left over.",
+   "answer": "1",
+   "val": 1,
+   "solution": "13 counters make 6 pairs and 1 is left over.",
+   "visual": {
+    "type": "objects",
+    "icon": "counter_red",
+    "n": 13,
+    "per_row": 5,
+    "hw": 41
+   }
+  },
+  {
+   "id": "H3",
+   "tier": "start",
+   "text": "Fill in the missing numbers. The last digits of even numbers are 0, 2, 4, [] and [].",
+   "answer": "6, 8",
+   "val": [
+    6,
+    8
+   ],
+   "solution": "Even numbers end in 0, 2, 4, 6 or 8."
+  },
+  {
+   "id": "H4",
+   "tier": "think",
+   "text": "Add. Circle Odd or Even for the total. (a) 5 + 6 = ___ Odd or Even (b) 7 + 9 = ___ Odd or Even",
+   "answer": "11 odd; 16 even",
+   "val": [
+    11,
+    "Odd",
+    16,
+    "Even"
+   ],
+   "solution": "5 + 6 is odd + even, so odd (11). 7 + 9 is odd + odd, so even (16)."
+  },
+  {
+   "id": "H5",
+   "tier": "go",
+   "text": "Write two odd numbers that add to 20. Write two odd numbers that add to 30. Many answers are right. ___ + ___ = 20  ___ + ___ = 30",
+   "answer": "Any two odd numbers: for example 9 + 11 = 20 and 15 + 15 = 30 (the same number twice is fine)",
+   "val": "open",
+   "solution": "Odd plus odd gives an even number, so 20 and 30 can be made. Check each pair adds to the total."
+  }
+ ],
+ "online_practice": {
+  "key": "t2l14",
+  "title": "Odd + Odd: Always, Sometimes, Never",
+  "topic": "Odd and even",
+  "items": [
+   {
+    "id": "c1",
+    "tier": "core",
+    "type": "choice",
+    "q": "Is 7 odd or even?",
+    "hint": "Pair up 7 counters. Is one left over?",
+    "steps": [
+     "Pair up 7 counters.",
+     "One is left over, so 7 is odd."
+    ],
+    "slips": [
+     {
+      "a": [
+       "even"
+      ],
+      "say": "Pair up 7 counters: three pairs and one is left over, so it is odd."
+     }
+    ],
+    "answer": "odd",
+    "options": [
+     "even",
+     "odd"
+    ],
+    "tpl": {
+     "vars": {
+      "n": [
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11,
+       12,
+       13,
+       14,
+       15,
+       16,
+       17,
+       18,
+       19,
+       20
+      ]
+     },
+     "q": "Is {n} odd or even?",
+     "options": [
+      "even",
+      "odd"
+     ],
+     "answer_index": "n % 2",
+     "hint": "Pair up {n} counters. Is one left over?",
+     "steps": [
+      "Pair up {n} counters.",
+      "The number is {ans}."
+     ]
+    }
+   },
+   {
+    "id": "c2",
+    "tier": "core",
+    "type": "number",
+    "q": "How many counters are left over?",
+    "hint": "Look for the red ring.",
+    "steps": [
+     "Count the pairs.",
+     "The ringed counter has no partner.",
+     "1 counter is left over."
+    ],
+    "slips": [
+     {
+      "a": [
+       3
+      ],
+      "say": "3 is the number of pairs. How many counters are left over?"
+     }
+    ],
+    "answer": 1,
+    "fig": {
+     "type": "array",
+     "rows": 1,
+     "cols": "{n}",
+     "icon": "counter_red",
+     "pairs": true,
+     "ring_left_over": true
+    },
+    "fig_base": {
+     "type": "array",
+     "rows": 1,
+     "cols": 7,
+     "icon": "counter_red",
+     "pairs": true,
+     "ring_left_over": true
+    },
+    "tpl": {
+     "vars": {
+      "n": [
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11,
+       12,
+       13
+      ]
+     },
+     "q": "How many counters are left over?",
+     "answer": "n % 2",
+     "hint": "Look for the red ring.",
+     "steps": [
+      "Count the pairs.",
+      "A ringed counter has no partner.",
+      "{ans} left over."
+     ]
+    }
+   },
+   {
+    "id": "c3",
+    "tier": "core",
+    "type": "choice",
+    "q": "Which number is even?",
+    "hint": "Pair up counters, or look at the last digit.",
+    "steps": [
+     "7, 11 and 15 end in 7, 1 and 5.",
+     "14 ends in 4.",
+     "14 is even."
+    ],
+    "slips": [
+     {
+      "a": [
+       "15"
+      ],
+      "say": "15 has one left over when you pair it up. Try again."
+     }
+    ],
+    "answer": "14",
+    "options": [
+     "7",
+     "11",
+     "14",
+     "15"
+    ]
+   },
+   {
+    "id": "c4",
+    "tier": "core",
+    "type": "choice",
+    "q": "Is 38 odd or even?",
+    "hint": "Look at the last digit.",
+    "steps": [
+     "The last digit is 8.",
+     "8 is even.",
+     "38 is even."
+    ],
+    "slips": [
+     {
+      "a": [
+       "odd"
+      ],
+      "say": "Look at the last digit. 8 is an even digit."
+     }
+    ],
+    "answer": "even",
+    "options": [
+     "even",
+     "odd"
+    ],
+    "tpl": {
+     "vars": {
+      "n": [
+       21,
+       24,
+       38,
+       45,
+       52,
+       57,
+       60,
+       73,
+       86,
+       91
+      ]
+     },
+     "q": "Is {n} odd or even?",
+     "options": [
+      "even",
+      "odd"
+     ],
+     "answer_index": "n % 2",
+     "hint": "Look at the last digit of {n}.",
+     "steps": [
+      "Look at the last digit of {n}.",
+      "The number is {ans}."
+     ]
+    }
+   },
+   {
+    "id": "c5",
+    "tier": "core",
+    "type": "number",
+    "q": "11 children stand in pairs. How many children have no partner?",
+    "hint": "Make pairs. Is anyone left over?",
+    "steps": [
+     "11 children make 5 pairs.",
+     "1 child is left.",
+     "1 child has no partner."
+    ],
+    "slips": [
+     {
+      "a": [
+       5
+      ],
+      "say": "5 is the number of pairs. How many children are left over?"
+     }
+    ],
+    "answer": 1,
+    "tpl": {
+     "vars": {
+      "n": [
+       5,
+       7,
+       9,
+       11,
+       13,
+       15,
+       17,
+       19,
+       6,
+       8,
+       10,
+       12
+      ]
+     },
+     "q": "{n} children stand in pairs. How many children have no partner?",
+     "answer": "n % 2",
+     "hint": "Make pairs. Is anyone left over?",
+     "steps": [
+      "Put the children in pairs.",
+      "Count how many are left.",
+      "{ans|pl_child} with no partner."
+     ]
+    }
+   },
+   {
+    "id": "c6",
+    "tier": "core",
+    "type": "set",
+    "q": "Count in 2s up to 10. Type the numbers with a comma between.",
+    "hint": "Add 2 each time.",
+    "steps": [
+     "2, 4, 6, 8, 10."
+    ],
+    "slips": [],
+    "answer": [
+     2,
+     4,
+     6,
+     8,
+     10
+    ],
+    "ordered": true,
+    "tpl": {
+     "vars": {
+      "lim": [
+       10,
+       12,
+       14,
+       16,
+       18,
+       20
+      ]
+     },
+     "ordered": true,
+     "q": "Count in 2s up to {lim}. Type the numbers with a comma between.",
+     "answer": "multiples(2,lim)",
+     "hint": "Add 2 each time.",
+     "steps": [
+      "The numbers are {ans}."
+     ]
+    }
+   },
+   {
+    "id": "t1",
+    "tier": "stretch",
+    "type": "choice",
+    "q": "Is 3 + 5 odd or even?",
+    "hint": "Add first. Then look at the last digit. Or pair up the left-over counters.",
+    "steps": [
+     "3 + 5 = 8.",
+     "8 is even."
+    ],
+    "slips": [
+     {
+      "a": [
+       "odd"
+      ],
+      "say": "Odd plus odd makes a pair from the two left-over counters. Try adding: 3 + 5 = 8."
+     }
+    ],
+    "answer": "even",
+    "easier": "c1",
+    "options": [
+     "even",
+     "odd"
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       3,
+       4,
+       5,
+       6,
+       7,
+       9
+      ],
+      "b": [
+       2,
+       3,
+       5,
+       8,
+       9
+      ]
+     },
+     "q": "Is {a} + {b} odd or even?",
+     "options": [
+      "even",
+      "odd"
+     ],
+     "answer_index": "(a+b) % 2",
+     "hint": "Add first. Then look at the last digit.",
+     "steps": [
+      "{a} + {b} = {s}.",
+      "The total is {ans}."
+     ],
+     "derive": {
+      "s": "a+b"
+     }
+    }
+   },
+   {
+    "id": "t2",
+    "tier": "stretch",
+    "type": "choice",
+    "q": "Ravi says odd + odd is odd. Which sum shows he is wrong?",
+    "hint": "Look for a sum of two odd numbers whose total is even.",
+    "steps": [
+     "Ravi says odd + odd is odd.",
+     "3 and 5 are odd, and 3 + 5 = 8.",
+     "8 is even, so Ravi is wrong."
+    ],
+    "slips": [
+     {
+      "a": [
+       "3 + 4 = 7"
+      ],
+      "say": "3 is odd but 4 is even. Look for two odd numbers."
+     }
+    ],
+    "answer": "3 + 5 = 8",
+    "easier": "c3",
+    "options": [
+     "3 + 4 = 7",
+     "3 + 5 = 8",
+     "2 + 4 = 6",
+     "6 + 7 = 13"
+    ]
+   },
+   {
+    "id": "t3",
+    "tier": "stretch",
+    "type": "choice",
+    "q": "Can you make 15 by adding two odd numbers?",
+    "hint": "Odd + odd gives an even total. Is 15 even?",
+    "steps": [
+     "Odd + odd is always even.",
+     "15 is odd.",
+     "So no."
+    ],
+    "slips": [
+     {
+      "a": [
+       "yes"
+      ],
+      "say": "Try some pairs: 7 + 7 = 14, 7 + 9 = 16. Can you get 15?"
+     }
+    ],
+    "answer": "no",
+    "easier": "c4",
+    "options": [
+     "yes",
+     "no"
+    ],
+    "tpl": {
+     "vars": {
+      "n": [
+       10,
+       12,
+       13,
+       15,
+       16,
+       18,
+       19,
+       20,
+       21,
+       24
+      ]
+     },
+     "q": "Can you make {n} by adding two odd numbers?",
+     "options": [
+      "yes",
+      "no"
+     ],
+     "answer_index": "n % 2",
+     "hint": "Odd + odd gives an even total. Is {n} even?",
+     "steps": [
+      "Odd + odd is always even.",
+      "Is {n} even or odd?",
+      "The answer is {ans}."
+     ]
+    }
+   },
+   {
+    "id": "t4",
+    "tier": "stretch",
+    "type": "number",
+    "q": "Mei has 9 stickers and Ali has 5 stickers. They put them in pairs together. How many stickers are left over?",
+    "hint": "Odd + odd is even. 9 + 5 = 14.",
+    "steps": [
+     "9 + 5 = 14.",
+     "14 stickers make 7 pairs.",
+     "0 are left over."
+    ],
+    "slips": [
+     {
+      "a": [
+       1
+      ],
+      "say": "The left-over sticker of each group makes a pair. Add 9 + 5."
+     }
+    ],
+    "answer": 0,
+    "easier": "c5",
+    "tpl": {
+     "vars": {
+      "a": [
+       3,
+       4,
+       5,
+       7,
+       9,
+       11
+      ],
+      "b": [
+       2,
+       5,
+       6,
+       9,
+       13
+      ]
+     },
+     "q": "Mei has {a} stickers and Ali has {b} stickers. They put them in pairs together. How many stickers are left over?",
+     "answer": "(a+b) % 2",
+     "hint": "Add {a} + {b}. Then make pairs.",
+     "steps": [
+      "{a} + {b} = {s}.",
+      "{s} stickers make pairs.",
+      "{ans} are left over."
+     ],
+     "derive": {
+      "s": "a+b"
+     }
+    }
+   },
+   {
+    "id": "g1",
+    "tier": "challenge",
+    "type": "choice",
+    "q": "Is 3 + 5 + 7 odd or even?",
+    "hint": "Add the first two numbers, then add the third.",
+    "steps": [
+     "3 + 5 = 8 (even).",
+     "8 + 7 = 15.",
+     "15 is odd."
+    ],
+    "slips": [
+     {
+      "a": [
+       "even"
+      ],
+      "say": "Odd + odd is even, but then you add another odd number."
+     }
+    ],
+    "answer": "odd",
+    "easier": "t1",
+    "options": [
+     "even",
+     "odd"
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       1,
+       3,
+       5,
+       2
+      ],
+      "b": [
+       3,
+       5,
+       7,
+       4
+      ],
+      "c": [
+       7,
+       9,
+       6
+      ]
+     },
+     "q": "Is {a} + {b} + {c} odd or even?",
+     "options": [
+      "even",
+      "odd"
+     ],
+     "answer_index": "(a+b+c) % 2",
+     "hint": "Add the first two numbers, then add the third.",
+     "steps": [
+      "{a} + {b} + {c} = {s}.",
+      "The total is {ans}."
+     ],
+     "derive": {
+      "s": "a+b+c"
+     }
+    }
+   },
+   {
+    "id": "g2",
+    "tier": "challenge",
+    "type": "number",
+    "q": "How many of the numbers 1 to 10 are odd?",
+    "hint": "List the odd numbers: 1, 3, 5 ...",
+    "steps": [
+     "The odd numbers are 1, 3, 5, 7, 9.",
+     "Count them: 5."
+    ],
+    "slips": [
+     {
+      "a": [
+       10
+      ],
+      "say": "That is all the numbers. Only some are odd."
+     }
+    ],
+    "answer": 5,
+    "easier": "c2",
+    "tpl": {
+     "vars": {
+      "lim": [
+       10,
+       12,
+       16,
+       20
+      ]
+     },
+     "q": "How many of the numbers 1 to {lim} are odd?",
+     "answer": "lim // 2",
+     "hint": "List the odd numbers: 1, 3, 5 ...",
+     "steps": [
+      "List the odd numbers up to {lim}.",
+      "Count them: {ans}."
+     ]
+    }
+   },
+   {
+    "id": "g3",
+    "tier": "challenge",
+    "type": "choice",
+    "q": "Odd + even + even. Is the total always, sometimes or never odd?",
+    "hint": "Try 3 + 4 + 6 and 5 + 2 + 8.",
+    "steps": [
+     "3 + 4 + 6 = 13 (odd).",
+     "5 + 2 + 8 = 15 (odd).",
+     "Even + even is even, then odd + even is odd, so always."
+    ],
+    "slips": [
+     {
+      "a": [
+       "sometimes"
+      ],
+      "say": "Test some more. Even + even is even, then add the odd number."
+     }
+    ],
+    "answer": "always",
+    "easier": "t2",
+    "options": [
+     "always",
+     "sometimes",
+     "never"
+    ]
+   },
+   {
+    "id": "g4",
+    "tier": "challenge",
+    "type": "selfcheck",
+    "q": "Write a claim about even + even. Test it three times. Many answers are right.",
+    "hint": "Pick three sums of two even numbers. Is each total even?",
+    "steps": [
+     "Choose three sums such as 4 + 6, 8 + 2 and 10 + 12.",
+     "Work out each total.",
+     "Is every total even? Say always, sometimes or never."
+    ],
+    "slips": [],
+    "easier": "t1"
+   }
+  ]
+ },
+ "spare_time": {
+  "note": "Optional time, never added to the 90-minute sum. It comes from the 4-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
+  "rules": [
+   "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
+   "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+   "Never teach anything the next lesson needs. If the class is ahead, slow down: ask 'How do you know?' and let children explain, rather than rushing on."
+  ],
+  "menu": [
+   {
+    "id": "M1",
+    "title": "Is it always true?",
+    "minutes": 4,
+    "tutor": "Ali says: even + even is always even. Test 4 + 6, 12 + 8 and 10 + 10. Then try to think of a pair that breaks the claim.",
+    "rec": "Recording: pause. Test 4 + 6, 12 + 8 and 10 + 10. Is each total even? Can you break the claim?",
+    "answer": "10, 20, 20: all even. No pair breaks it: each even number makes pairs with none left over, so together there are none left over."
+   },
+   {
+    "id": "M2",
+    "title": "Make a puzzle for your grown-up",
+    "minutes": 4,
+    "tutor": "Write three sums. Before your grown-up adds, ask: will the total be odd or even? Then check by adding.",
+    "rec": "Recording: pause. Write three sums. Ask a grown-up: odd or even? Then add to check.",
+    "answer": "No single answer. Check the odd or even claim with the total, for example 5 + 6 = 11 odd, 7 + 9 = 16 even, 8 + 4 = 12 even."
+   },
+   {
+    "id": "M3",
+    "title": "Teach it back",
+    "minutes": 3,
+    "tutor": "Pretend your grown-up or a toy has never met odd and even. Show them with pairs why 7 + 9 is even.",
+    "rec": "Recording: pause. Show a grown-up with pairs why 7 + 9 is an even number.",
+    "answer": "7 has one left over and 9 has one left over. The two left-over counters make a pair, so there is none left over: 16 is even."
+   }
+  ]
+ },
+ "parent": {
+  "summary": "We learned odd and even numbers: pairs with none left over are even, and one left over is odd. Then we were detectives: we tested claims like 'odd + odd is odd' with sums, and found that one test can show a claim is false, but a picture of pairs is needed to see why a claim is always true. Odd and even numbers are Primary 2 work at school, so this whole lesson goes beyond Primary 1 on purpose, always with counters.",
+  "words": [
+   "even: makes pairs with none left over (ends in 0, 2, 4, 6 or 8)",
+   "odd: one left over (ends in 1, 3, 5, 7 or 9)",
+   "claim: something we say and test",
+   "always, sometimes, never: how often it is true"
+  ],
+  "try_home": [
+   "Pairs: put 9 buttons in pairs. Is one left over? Try 10, then 13. Keep small things away from mouths.",
+   "Detective: ask your child to add two odd numbers, such as 5 + 7. Is the total odd or even? Try three more pairs.",
+   "Why? Ask: can you draw the pairs to show why? Then say a wrong reason on purpose, such as 'odd + odd is odd because both are odd', and ask your child to find the problem."
+  ],
+  "ask": [
+   "Is one left over when you make pairs?",
+   "Is one test enough?",
+   "Always, sometimes or never? How do you know?"
+  ],
+  "when_stuck": "Please do not use dividing or halving: pairs and left-over counters are enough. Let your child use counters or draw dots in pairs, and wait 10 seconds before helping. Asking 'is one left over?' works better than giving the answer. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
+  "next": "Term 2 Lesson 5: Equal Groups. Online practice: your tutor shares the link. A missing workbook page: your tutor sends a PDF to print at 100%. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. To have your child muted, tell us when you register. The link is private to your group's families: please do not share it.",
+  "quote": "One test is not a proof: test more, and draw why.",
+  "report_line": "Your child is learning to test a claim with examples and to say why a pattern works. This week: odd and even numbers, and adding odd and even numbers.",
+  "term_line": "This term: places, strips and doubles so far; now odd and even and testing a claim; next, equal groups and tables.",
+  "next_materials": [
+   "Your Term 2 Lesson 5 workbook, with its groups mat page (nothing to cut)",
+   "4 plates or bowls",
+   "About 20 small things of one kind (counters, buttons, pasta)"
+  ]
+ },
+ "safeguarding": [
+  "Counters and small things stay on the table: nothing goes in the mouth or ears. No matches, toothpicks or anything sharp. Keep small things away from younger brothers and sisters.",
+  "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
+  "Nobody holds paper or a board up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on a count of three, or show fingers or a thumb for a choice. There is no private chat.",
+  "Never read out a child's name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is not muted. Children may mute and keep their cameras off. A child's page is never shown.",
+  "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. A child may stay seated and move only their arms.",
+  "A child who is still stuck ticks 'I am still stuck' on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for 90 days after the program ends. The tutor then helps in the open session next lesson. No private messages to children, and no personal phones.",
+  "The look-back is never collected in front of the group or read out. A pass is always allowed."
+ ],
+ "tutor_prep": [
+  "Solve every workbook question yourself first. Check the claims with a few extra sums so you can answer a child who finds a surprising example.",
+  "Tell parents a week before: print the workbook pages and the kit page, cut out the kit page and find the things listed. Small things stay away from mouths and younger children.",
+  "Have the slides open and check the kit page is visible on screen share. Have a paper copy of the kit page and counters to show on camera if you wish.",
+  "Check the recording captures the tutor and the shared screen. Children's video is excluded; any voice that is not muted is recorded. Greet the whole group warmly, say the recording notice, then start the recording, and do not use children's first names while it runs.",
+  "Be plain with families: odd and even numbers are Primary 2 content, so this whole lesson goes beyond the school Primary 1 syllabus on purpose, always with counters and pairs. The plan marks it as the safest lesson in Term 2 to skip. Do not call it MOE-aligned."
+ ],
+ "workbook": {
+  "header": "Whole Numbers: odd and even",
+  "hint_p1": "A number is even if you can make pairs with none left over. It is odd if one is left over. Use counters or draw dots in pairs.",
+  "hint_p2": "Use your counters. Read each box carefully.",
+  "hint_p3": "Use counters or the number cards. Test each claim. Choose any question.",
+  "hint_p4": "Choose any question. You do not have to finish them all.",
+  "choice_after": 3,
+  "home_hint": "Use counters or draw dots in pairs. Small things stay on the table, away from mouths and little brothers and sisters.",
+  "kits": [
+   {
+    "type": "cards",
+    "labels": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9",
+     "10",
+     "11",
+     "12",
+     "13",
+     "14",
+     "15",
+     "16",
+     "17",
+     "18",
+     "19",
+     "20"
+    ],
+    "cols": 5,
+    "title": "Kit page: number cards 1 to 20",
+    "intro": "A grown-up cuts out the 20 cards before the lesson. Keep them in an envelope."
+   }
+  ]
+ },
+ "limits": {
+  "max_parent_words": 100
+ }
+}

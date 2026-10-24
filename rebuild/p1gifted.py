@@ -10,7 +10,7 @@ from slidekit import *
 
 H = os.path.dirname(os.path.abspath(__file__))
 QB = json.load(open(os.path.join(H, '..', 'hp', 'qbank.json')))
-OPT = 'Your choice'
+OPT = 'Optional, if you finish early'
 
 def _w(D, sid, s):
     open(os.path.join(D, 'slides', sid + '.html'), 'w').write(s)
@@ -43,7 +43,9 @@ def apply(D, n):
              'Many children stop at one answer: ask "Is there another way?" and "How do you know you found them all?" '
              'For Q3, ask two pairs to swap puzzles and solve each other\'s.')
     _w(D, p_ + 'chwalk', sec(p_ + 'chwalk', OPT, body, notes))
-    # drop the retired picture slide
+    # drop the retired picture slide, then draw the new 'Go further: see it' pictures for the current items
     dj = os.path.join(D, 'deck.json'); deck = json.load(open(dj))
     deck['order'] = [s for s in deck['order'] if s != p_ + 'chdiag']
     json.dump(deck, open(dj, 'w'), indent=1, ensure_ascii=False)
+    import p1chdiag
+    p1chdiag.apply(D, n)

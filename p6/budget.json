@@ -1,0 +1,699 @@
+{
+ "lessons": {
+  "1": {
+   "parts": [
+    {
+     "title": "Opening",
+     "start": 0.0,
+     "end": 2.0
+    },
+    {
+     "title": "Sneak-peek puzzles",
+     "start": 2.0,
+     "end": 6.0
+    },
+    {
+     "title": "Warm-up",
+     "start": 6.0,
+     "end": 12.5
+    },
+    {
+     "title": "Explore",
+     "start": 12.5,
+     "end": 25.0
+    },
+    {
+     "title": "Mini-lesson",
+     "start": 25.0,
+     "end": 36.0
+    },
+    {
+     "title": "Brain break",
+     "start": 36.0,
+     "end": 40.5
+    },
+    {
+     "title": "Worksheet",
+     "start": 40.5,
+     "end": 74.0
+    },
+    {
+     "title": "Flex (catch-up or Think harder; lose first)",
+     "start": 74.0,
+     "end": 76.5
+    },
+    {
+     "title": "Talk time",
+     "start": 76.5,
+     "end": 81.5
+    },
+    {
+     "title": "Exit slip",
+     "start": 81.5,
+     "end": 86.0
+    },
+    {
+     "title": "Looking back",
+     "start": 86.0,
+     "end": 88.0
+    },
+    {
+     "title": "Close and stamp",
+     "start": 88.0,
+     "end": 90.0
+    }
+   ],
+   "optional_slides": [
+    "p6l1-stretch",
+    "p6l1-challenge",
+    "p6l1-chdiag",
+    "p6l1-chwalk"
+   ]
+  },
+  "2": {
+   "parts": [
+    {
+     "title": "Opening",
+     "start": 0.0,
+     "end": 2.0
+    },
+    {
+     "title": "Sneak-peek puzzles",
+     "start": 2.0,
+     "end": 6.5
+    },
+    {
+     "title": "Warm-up",
+     "start": 6.5,
+     "end": 12.5
+    },
+    {
+     "title": "Explore",
+     "start": 12.5,
+     "end": 26.5
+    },
+    {
+     "title": "Mini-lesson",
+     "start": 26.5,
+     "end": 35.0
+    },
+    {
+     "title": "Brain break",
+     "start": 35.0,
+     "end": 40.0
+    },
+    {
+     "title": "Worksheet",
+     "start": 40.0,
+     "end": 75.5
+    },
+    {
+     "title": "Flex (catch-up or Think harder; lose first)",
+     "start": 75.5,
+     "end": 77.0
+    },
+    {
+     "title": "Talk time",
+     "start": 77.0,
+     "end": 82.0
+    },
+    {
+     "title": "Exit slip",
+     "start": 82.0,
+     "end": 86.0
+    },
+    {
+     "title": "Looking back",
+     "start": 86.0,
+     "end": 88.0
+    },
+    {
+     "title": "Close and stamp",
+     "start": 88.0,
+     "end": 90.0
+    }
+   ],
+   "optional_slides": [
+    "p6l2-stretch",
+    "p6l2-challenge",
+    "p6l2-chdiag",
+    "p6l2-chwalk"
+   ]
+  },
+  "3": {
+   "parts": [
+    {
+     "title": "Opening",
+     "start": 0.0,
+     "end": 2.0
+    },
+    {
+     "title": "Sneak-peek puzzles",
+     "start": 2.0,
+     "end": 5.5
+    },
+    {
+     "title": "Warm-up",
+     "start": 5.5,
+     "end": 11.5
+    },
+    {
+     "title": "Explore",
+     "start": 11.5,
+     "end": 26.5
+    },
+    {
+     "title": "Mini-lesson",
+     "start": 26.5,
+     "end": 36.5
+    },
+    {
+     "title": "Brain break",
+     "start": 36.5,
+     "end": 41.5
+    },
+    {
+     "title": "Worksheet",
+     "start": 41.5,
+     "end": 74.5
+    },
+    {
+     "title": "Flex (catch-up or Think harder; lose first)",
+     "start": 74.5,
+     "end": 77.5
+    },
+    {
+     "title": "Talk time",
+     "start": 77.5,
+     "end": 83.5
+    },
+    {
+     "title": "Exit slip",
+     "start": 83.5,
+     "end": 86.0
+    },
+    {
+     "title": "Looking back",
+     "start": 86.0,
+     "end": 88.0
+    },
+    {
+     "title": "Close and stamp",
+     "start": 88.0,
+     "end": 90.0
+    }
+   ],
+   "optional_slides": [
+    "p6l3-stretch",
+    "p6l3-challenge",
+    "p6l3-chdiag",
+    "p6l3-chwalk"
+   ]
+  },
+  "4": {
+   "parts": [
+    {
+     "title": "Opening",
+     "start": 0.0,
+     "end": 2.0
+    },
+    {
+     "title": "Sneak-peek puzzles",
+     "start": 2.0,
+     "end": 6.0
+    },
+    {
+     "title": "Warm-up",
+     "start": 6.0,
+     "end": 12.5
+    },
+    {
+     "title": "Explore",
+     "start": 12.5,
+     "end": 26.5
+    },
+    {
+     "title": "Mini-lesson",
+     "start": 26.5,
+     "end": 34.5
+    },
+    {
+     "title": "Brain break",
+     "start": 34.5,
+     "end": 40.0
+    },
+    {
+     "title": "Worksheet",
+     "start": 40.0,
+     "end": 74.5
+    },
+    {
+     "title": "Flex (catch-up or Think harder; lose first)",
+     "start": 74.5,
+     "end": 78.0
+    },
+    {
+     "title": "Talk time",
+     "start": 78.0,
+     "end": 83.0
+    },
+    {
+     "title": "Exit slip",
+     "start": 83.0,
+     "end": 86.0
+    },
+    {
+     "title": "Looking back",
+     "start": 86.0,
+     "end": 88.0
+    },
+    {
+     "title": "Close and stamp",
+     "start": 88.0,
+     "end": 90.0
+    }
+   ],
+   "optional_slides": [
+    "p6l4-stretch",
+    "p6l4-challenge",
+    "p6l4-chdiag",
+    "p6l4-chwalk"
+   ]
+  },
+  "5": {
+   "parts": [
+    {
+     "title": "Opening",
+     "start": 0.0,
+     "end": 2.0
+    },
+    {
+     "title": "Sneak-peek puzzles",
+     "start": 2.0,
+     "end": 6.5
+    },
+    {
+     "title": "Warm-up",
+     "start": 6.5,
+     "end": 13.0
+    },
+    {
+     "title": "Explore",
+     "start": 13.0,
+     "end": 26.0
+    },
+    {
+     "title": "Mini-lesson",
+     "start": 26.0,
+     "end": 35.5
+    },
+    {
+     "title": "Brain break",
+     "start": 35.5,
+     "end": 40.5
+    },
+    {
+     "title": "Worksheet",
+     "start": 40.5,
+     "end": 75.0
+    },
+    {
+     "title": "Flex (catch-up or Think harder; lose first)",
+     "start": 75.0,
+     "end": 78.0
+    },
+    {
+     "title": "Talk time",
+     "start": 78.0,
+     "end": 83.0
+    },
+    {
+     "title": "Exit slip",
+     "start": 83.0,
+     "end": 86.0
+    },
+    {
+     "title": "Looking back",
+     "start": 86.0,
+     "end": 88.0
+    },
+    {
+     "title": "Close and stamp",
+     "start": 88.0,
+     "end": 90.0
+    }
+   ],
+   "optional_slides": [
+    "p6l5-stretch",
+    "p6l5-challenge",
+    "p6l5-chdiag",
+    "p6l5-chwalk"
+   ]
+  },
+  "6": {
+   "parts": [
+    {
+     "title": "Opening",
+     "start": 0.0,
+     "end": 2.0
+    },
+    {
+     "title": "Sneak-peek puzzles",
+     "start": 2.0,
+     "end": 6.5
+    },
+    {
+     "title": "Warm-up",
+     "start": 6.5,
+     "end": 12.5
+    },
+    {
+     "title": "Explore",
+     "start": 12.5,
+     "end": 27.0
+    },
+    {
+     "title": "Mini-lesson",
+     "start": 27.0,
+     "end": 37.5
+    },
+    {
+     "title": "Brain break",
+     "start": 37.5,
+     "end": 42.5
+    },
+    {
+     "title": "Worksheet",
+     "start": 42.5,
+     "end": 74.0
+    },
+    {
+     "title": "Flex (catch-up or Think harder; lose first)",
+     "start": 74.0,
+     "end": 76.5
+    },
+    {
+     "title": "Talk time",
+     "start": 76.5,
+     "end": 82.5
+    },
+    {
+     "title": "Exit slip",
+     "start": 82.5,
+     "end": 86.0
+    },
+    {
+     "title": "Looking back",
+     "start": 86.0,
+     "end": 88.0
+    },
+    {
+     "title": "Close and stamp",
+     "start": 88.0,
+     "end": 90.0
+    }
+   ],
+   "optional_slides": [
+    "p6l6-stretch",
+    "p6l6-challenge",
+    "p6l6-chdiag",
+    "p6l6-chwalk"
+   ]
+  },
+  "7": {
+   "parts": [
+    {
+     "title": "Opening",
+     "start": 0.0,
+     "end": 2.0
+    },
+    {
+     "title": "Sneak-peek puzzles",
+     "start": 2.0,
+     "end": 6.5
+    },
+    {
+     "title": "Warm-up",
+     "start": 6.5,
+     "end": 13.0
+    },
+    {
+     "title": "Explore",
+     "start": 13.0,
+     "end": 27.5
+    },
+    {
+     "title": "Mini-lesson",
+     "start": 27.5,
+     "end": 40.0
+    },
+    {
+     "title": "Brain break",
+     "start": 40.0,
+     "end": 45.5
+    },
+    {
+     "title": "Worksheet",
+     "start": 45.5,
+     "end": 75.5
+    },
+    {
+     "title": "Flex (catch-up or Think harder; lose first)",
+     "start": 75.5,
+     "end": 78.0
+    },
+    {
+     "title": "Talk time",
+     "start": 78.0,
+     "end": 83.0
+    },
+    {
+     "title": "Exit slip",
+     "start": 83.0,
+     "end": 86.0
+    },
+    {
+     "title": "Looking back",
+     "start": 86.0,
+     "end": 88.0
+    },
+    {
+     "title": "Close and stamp",
+     "start": 88.0,
+     "end": 90.0
+    }
+   ],
+   "optional_slides": [
+    "p6l7-stretch",
+    "p6l7-challenge",
+    "p6l7-chdiag",
+    "p6l7-chwalk"
+   ]
+  },
+  "8": {
+   "parts": [
+    {
+     "title": "Opening",
+     "start": 0.0,
+     "end": 2.0
+    },
+    {
+     "title": "Sneak-peek puzzles",
+     "start": 2.0,
+     "end": 6.0
+    },
+    {
+     "title": "Warm-up",
+     "start": 6.0,
+     "end": 11.5
+    },
+    {
+     "title": "Explore",
+     "start": 11.5,
+     "end": 26.0
+    },
+    {
+     "title": "Mini-lesson",
+     "start": 26.0,
+     "end": 37.0
+    },
+    {
+     "title": "Brain break",
+     "start": 37.0,
+     "end": 42.0
+    },
+    {
+     "title": "Worksheet",
+     "start": 42.0,
+     "end": 73.0
+    },
+    {
+     "title": "Flex (catch-up or Think harder; lose first)",
+     "start": 73.0,
+     "end": 77.0
+    },
+    {
+     "title": "Talk time",
+     "start": 77.0,
+     "end": 83.0
+    },
+    {
+     "title": "Exit slip",
+     "start": 83.0,
+     "end": 86.0
+    },
+    {
+     "title": "Looking back",
+     "start": 86.0,
+     "end": 88.0
+    },
+    {
+     "title": "Close and stamp",
+     "start": 88.0,
+     "end": 90.0
+    }
+   ],
+   "optional_slides": [
+    "p6l8-stretch",
+    "p6l8-challenge",
+    "p6l8-chdiag",
+    "p6l8-chwalk"
+   ]
+  },
+  "9": {
+   "parts": [
+    {
+     "title": "Opening",
+     "start": 0.0,
+     "end": 2.0
+    },
+    {
+     "title": "Sneak-peek puzzles",
+     "start": 2.0,
+     "end": 6.5
+    },
+    {
+     "title": "Warm-up",
+     "start": 6.5,
+     "end": 12.0
+    },
+    {
+     "title": "Explore",
+     "start": 12.0,
+     "end": 26.0
+    },
+    {
+     "title": "Mini-lesson",
+     "start": 26.0,
+     "end": 37.5
+    },
+    {
+     "title": "Brain break",
+     "start": 37.5,
+     "end": 43.0
+    },
+    {
+     "title": "Worksheet",
+     "start": 43.0,
+     "end": 75.5
+    },
+    {
+     "title": "Flex (catch-up or Think harder; lose first)",
+     "start": 75.5,
+     "end": 77.0
+    },
+    {
+     "title": "Talk time",
+     "start": 77.0,
+     "end": 82.0
+    },
+    {
+     "title": "Exit slip",
+     "start": 82.0,
+     "end": 86.0
+    },
+    {
+     "title": "Looking back",
+     "start": 86.0,
+     "end": 88.0
+    },
+    {
+     "title": "Close and stamp",
+     "start": 88.0,
+     "end": 90.0
+    }
+   ],
+   "optional_slides": [
+    "p6l9-stretch",
+    "p6l9-challenge",
+    "p6l9-chdiag",
+    "p6l9-chwalk"
+   ]
+  },
+  "10": {
+   "parts": [
+    {
+     "title": "Opening",
+     "start": 0,
+     "end": 2
+    },
+    {
+     "title": "Sneak-peek puzzles",
+     "start": 2,
+     "end": 6
+    },
+    {
+     "title": "Challenge round (teams of 2) and check",
+     "start": 6,
+     "end": 19.5
+    },
+    {
+     "title": "Starter projects (A-D)",
+     "start": 19.5,
+     "end": 26.5
+    },
+    {
+     "title": "Brain break",
+     "start": 26.5,
+     "end": 30
+    },
+    {
+     "title": "Plan and build",
+     "start": 30,
+     "end": 58
+    },
+    {
+     "title": "Flex (catch-up or Think harder; lose first)",
+     "start": 58,
+     "end": 60.5
+    },
+    {
+     "title": "Showcase (8 children)",
+     "start": 60.5,
+     "end": 82.5
+    },
+    {
+     "title": "Exit slip and talk question",
+     "start": 82.5,
+     "end": 86
+    },
+    {
+     "title": "Looking back",
+     "start": 86,
+     "end": 88
+    },
+    {
+     "title": "Certificates and close",
+     "start": 88,
+     "end": 90
+    }
+   ],
+   "optional_slides": [
+    "p6l10-stretch",
+    "p6l10-challenge",
+    "p6l10-chdiag",
+    "p6l10-chwalk"
+   ]
+  }
+ }
+}

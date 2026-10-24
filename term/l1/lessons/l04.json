@@ -1,0 +1,3703 @@
+{
+  "schema_version": 1,
+  "id": "l1-t1-04",
+  "level": 1,
+  "term": 1,
+  "lesson": 4,
+  "lesson_in_term": 4,
+  "title": "The 100 Square Explorer",
+  "big_idea": "Patterns live in rows and columns",
+  "child_idea": "The 100 square lists 1 to 100 in rows of ten. Going right adds 1, going down adds 10, and counting in 2s, 5s and 10s makes patterns we can predict.",
+  "skill": "Pattern generalising",
+  "spine": {
+    "main": "pattern",
+    "also": [
+      "actout"
+    ],
+    "role": "I",
+    "reason": "Colouring 10s, 5s and 2s shows what repeats and what grows; a counter moves down the square."
+  },
+  "ages": "6-8",
+  "moe": {
+    "strand": "Whole Numbers",
+    "topics": [
+      "Numbers to 100: counting on and back, reading a number square",
+      "Number-sequence patterns (counting in 2s, 5s and 10s)",
+      "Tens and ones: 10 more and 10 less"
+    ],
+    "note": "Strand label for the tutor only. It is not a claim that the program covers the school syllabus, and it must not appear on child or parent pages as MOE-aligned. Term 1 goes beyond the school Primary 1 syllabus on purpose: counting in 2s, 5s and 10s and moving by rows are P1, but the growing-gap and sum-of-the-two-before sequences, interleaved patterns and counting in 3s are not. They sit at Think harder, Go further and the Investigation only; every Start here item is approachable with the 100 square and counters. Do not tell families this is the school syllabus."
+  },
+  "contest_moves": [
+    "changing-step sequence (the gap grows by 1)",
+    "sum of the two numbers before",
+    "two rules mixed in one list",
+    "numbers in two lists (2s and 5s)"
+  ],
+  "objectives": [
+    "Read the 100 square: rows of ten, 1 more across to the right, 10 more one row down.",
+    "Show counting in 10s, 5s and 2s on the square, and say what the pattern and the last digits look like.",
+    "Use the square to move on by rows and squares (for example 14, down 2 rows and right 3 squares is 37) without counting every square.",
+    "Spot the rule in a number pattern, including one where the gap grows by 1 each time, and give a reason."
+  ],
+  "joining_cold": {
+    "remember": [
+      "Count in 10s to 100 with both hands",
+      "Count in 5s (one hand at a time) and 2s (pairs)",
+      "What comes next after a 9, such as 29 then 30"
+    ],
+    "assumes": "Only counting to 20 and showing a number on fingers. If the child has done the holiday course, counting in 2s, 5s and 10s will feel familiar; if not, the warm-up teaches it with hands and pairs, and the 100 square shows every number in print.",
+    "holiday_topics_revisited": [
+      "Skip counting in 2s, 5s and 10s (Count with the Frog)"
+    ],
+    "safe_to_miss": true,
+    "note": "Lesson 4 is the safest lesson to miss in Term 1 (plan, Term 1 note): no later lesson depends on it. A child who misses it watches the recording and does workbook pages 1 and 2. Patterns come back in Lessons 16 and 28 of the year."
+  },
+  "materials": {
+    "child": [
+      "The kit page: a printed 100 square (page 6 of the workbook). No cutting is needed.",
+      "About 12 small counters of one kind: buttons, coins, dried beans, paper clips or small pieces of paper",
+      "Two or three colours (pencils or crayons). With only one colour, use dots and crosses",
+      "The printed workbook (pages 1 to 5) and the kit page",
+      "A pencil, a rubber and spare paper"
+    ],
+    "tutor": [
+      "A slide deck and the 100 square on screen",
+      "A visible clock"
+    ],
+    "kit_pages": [
+      "A numbered 100 square, printed on page 6 of the workbook. No cutting. Counters go on top; the Investigation colours it lightly."
+    ],
+    "ruler": false,
+    "notes": "No ruler is needed. Nothing needs to be bought: everything can be found at home. No matches, toothpicks or anything sharp. Counters never go near the mouth or ears."
+  },
+  "timing": {
+    "parts": [
+      {
+        "id": "opening",
+        "title": "Opening",
+        "start": 0,
+        "end": 4
+      },
+      {
+        "id": "remember",
+        "title": "Remember warm-up",
+        "start": 4,
+        "end": 10
+      },
+      {
+        "id": "sneak",
+        "title": "Sneak-peek puzzles",
+        "start": 10,
+        "end": 14
+      },
+      {
+        "id": "explore",
+        "title": "Explore",
+        "start": 14,
+        "end": 28
+      },
+      {
+        "id": "mini",
+        "title": "Mini-lesson",
+        "start": 28,
+        "end": 38
+      },
+      {
+        "id": "break",
+        "title": "Brain break",
+        "start": 38,
+        "end": 42
+      },
+      {
+        "id": "work",
+        "title": "Workbook",
+        "start": 42,
+        "end": 70
+      },
+      {
+        "id": "talk",
+        "title": "Talk time",
+        "start": 70,
+        "end": 76
+      },
+      {
+        "id": "exit",
+        "title": "Exit ticket",
+        "start": 76,
+        "end": 82
+      },
+      {
+        "id": "look",
+        "title": "Look-back",
+        "start": 82,
+        "end": 85
+      },
+      {
+        "id": "flex",
+        "title": "Flex time and goodbye",
+        "start": 85,
+        "end": 90
+      }
+    ],
+    "optional_slide": "s-opt",
+    "include_rules": false,
+    "notes": "Opening is 4 minutes as in Lesson 1, used for the materials check (the printed 100 square, counters, colours). The last 5 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time."
+  },
+  "sneak_peek": {
+    "q1": "Count in 5s. What are the next two numbers? 5, 10, 15, 20, __, __.",
+    "q2": "This is part of the 100 square. A counter is on 36. Ravi moves it down one square. Which number is it on now? Write how you know.",
+    "a1": "25 and 30",
+    "a2": "46. Down one row is 10 more, because a row has ten squares.",
+    "val1": [
+      25,
+      30
+    ]
+  },
+  "rec": {
+    "opening": {
+      "say": "If you are watching the recording: hello! Get your 100 square, counters, colours, workbook and pencil. Pause or rewind any time.",
+      "action": "Gather your 100 square, counters, colours, workbook and pencil. Press play when ready."
+    },
+    "remember": {
+      "say": "Recording: join in! Count out loud and show your fingers. Pause if you need longer.",
+      "action": "Play along. Count out loud and show your fingers. Pause if you need longer."
+    },
+    "sneak": {
+      "say": "Recording: pause now and try both puzzles on your paper. Guessing is fine. Press play for the next part.",
+      "action": "Pause. Try both puzzles on your own paper. A guess is fine."
+    },
+    "explore": {
+      "say": "Recording: pause now. Put counters on your 100 square as I say, and notice the shapes they make. Press play when you are ready.",
+      "action": "Pause. Put counters on your square for each pattern and write what you notice."
+    },
+    "mini": {
+      "say": "Recording: keep watching and copy the examples. Rewind if you miss a step.",
+      "action": "Watch and copy the examples. Rewind any step you missed."
+    },
+    "break": {
+      "say": "Recording: stand up and join in! Jump for tens, clap for fives, tap for twos.",
+      "action": "Stand up and jump, clap and tap with the counting."
+    },
+    "work": {
+      "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
+      "action": "Pause. Do page 1, then play to check. Then page 2. Then choose a page to try."
+    },
+    "talk": {
+      "say": "Recording: pause. Tell a grown-up your answer to the talk question, and say why.",
+      "action": "Pause. Explain your answer to someone at home, with a reason."
+    },
+    "exit": {
+      "say": "Recording: pause and do the exit ticket on your own. Then press play to check it.",
+      "action": "Pause. Do the exit ticket alone, then play to check it."
+    },
+    "look": {
+      "say": "Recording: pause and fill in your look-back box. You can pass.",
+      "action": "Pause. Fill in the look-back box, or pass."
+    },
+    "flex": {
+      "say": "Recording: well done for finishing! Show a grown-up one thing you found out.",
+      "action": "Show a grown-up your workbook and tell them one thing you found out."
+    }
+  },
+  "script": {
+    "segments": [
+      {
+        "part": "opening",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-title"
+          },
+          {
+            "k": "DO",
+            "text": "Greet the whole group warmly, before the recording starts. Check that you can see each child, or ask the grown-up.",
+            "s": 1
+          },
+          {
+            "k": "SAY",
+            "text": "Hello, inquirers! Cameras can be on or off, as you like."
+          },
+          {
+            "k": "SAY",
+            "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+          },
+          {
+            "k": "DO",
+            "text": "Start the recording now. Do not use children's first names on the recording.",
+            "s": 3
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-ready"
+          },
+          {
+            "k": "SAY",
+            "text": "Today we explore the 100 square. Please find your printed 100 square, about twelve counters, your colours and your workbook."
+          },
+          {
+            "k": "WORK",
+            "text": "Children find their things. They do not need to show them on camera; if it is easy, a child may tilt the screen so the 100 square can be seen.",
+            "s": 60
+          },
+          {
+            "k": "DO",
+            "text": "Greet the whole group warmly. Do not use children's first names on the recording. If a child has no counters, suggest buttons, coins, dried beans or small pieces of paper.",
+            "s": 30
+          },
+          {
+            "k": "SAY",
+            "text": "No colours? Use a pencil and make dots and crosses. Counters stay on the table, never near the mouth or ears."
+          },
+          {
+            "k": "SAY",
+            "text": "A warm-up, two puzzles, then we explore with counters, learn some tricks, move, and work in the workbook."
+          },
+          {
+            "k": "SAY",
+            "text": "Today's tool is Spot the pattern. Look for what repeats or grows.",
+            "spine": "opening"
+          },
+          {
+            "k": "DO",
+            "text": "Point at the tool on page 1 of the workbook.",
+            "s": 4,
+            "spine": "opening"
+          },
+          {
+            "k": "NOTE",
+            "text": "Later lessons of the term skip the routine and rules slides: this lesson only needs a materials check. Say the recording notice in your own words: the recording has the tutor, the shared screen and any unmuted voice. Mention that the 100 square is on the last page of the workbook and that no cutting is needed."
+          },
+          {
+            "k": "NOTE",
+            "text": "New here? Say in one minute: our three rule words (notice it, test it, explain why); a guess is fine and you can always pass; after Start here you may choose Think harder, Go further or the Investigation; nobody holds paper to the camera. The first recording of the term shows the full routine."
+          }
+        ]
+      },
+      {
+        "part": "remember",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-rem1"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Stand up if you can. Count in tens with me. Show both hands for every ten: ten, twenty, thirty, all the way to one hundred."
+          },
+          {
+            "k": "WORK",
+            "text": "Count in tens together to 100, both hands up each time. Then back from 100 to 0, whispering, with big hands on 50.",
+            "s": 50
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-rem2"
+          },
+          {
+            "k": "SAY",
+            "text": "One hand is five fingers. Count in fives, one more hand each time: five, ten, fifteen, twenty."
+          },
+          {
+            "k": "WORK",
+            "text": "Count in fives together to 50, showing one more hand each time.",
+            "s": 40
+          },
+          {
+            "k": "SAY",
+            "text": "Socks come in pairs. A pair is two. Count in twos: two, four, six, eight, ten."
+          },
+          {
+            "k": "WORK",
+            "text": "Count in twos together to 20, tapping the table once for every two.",
+            "s": 35
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-rem3"
+          },
+          {
+            "k": "SAY",
+            "text": "Now you tell me what comes next."
+          },
+          {
+            "k": "ASK",
+            "text": "Ten, twenty, thirty. What comes next?",
+            "resp": 10
+          },
+          {
+            "k": "ASK",
+            "text": "Five, ten, fifteen?",
+            "resp": 10
+          },
+          {
+            "k": "ASK",
+            "text": "Two, four, six?",
+            "resp": 10
+          },
+          {
+            "k": "ASK",
+            "text": "Twenty-eight, twenty-nine. What comes next?",
+            "resp": 12
+          },
+          {
+            "k": "ASK",
+            "text": "Thirty-eight, thirty-nine?",
+            "resp": 12
+          },
+          {
+            "k": "STUCK",
+            "text": "If a child hesitates on 30 or 40, say the tens word slowly and count up together: twenty-eight, twenty-nine, thirty. A child who is still unsure of tens words will see all the numbers printed on the 100 square in the Explore."
+          },
+          {
+            "k": "NOTE",
+            "text": "Answers: 40, 20, 8, 30, 40. Children answer with fingers, hands or a whispered number. Nobody writes. Joining cold: all you need is counting to 20 and showing a number on fingers; the rest is taught here."
+          }
+        ]
+      },
+      {
+        "part": "sneak",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-sneak"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked."
+          },
+          {
+            "k": "READ",
+            "text": "Puzzle one. Count in fives. What are the next two numbers? five, ten, fifteen, twenty, then two blanks."
+          },
+          {
+            "k": "WORK",
+            "text": "Children write the next two numbers on their own paper.",
+            "s": 45
+          },
+          {
+            "k": "READ",
+            "text": "Puzzle two. Here is part of the 100 square. A counter is on 36. Ravi moves it down one square. Which number is it on now? Write the number. Then write how you know."
+          },
+          {
+            "k": "WORK",
+            "text": "Children write or draw their answer.",
+            "s": 55
+          },
+          {
+            "k": "SAY",
+            "text": "Keep your paper. Nobody shows it. We will check our own thinking later, at Talk time."
+          },
+          {
+            "k": "SAY",
+            "text": "Thank you. We will come back to puzzle two in a few minutes."
+          },
+          {
+            "k": "NOTE",
+            "text": "Puzzle 1 answer: 25 and 30. Puzzle 2 answer: 46, because down one row is 10 more (a row has ten squares). Look for good ideas to praise later (a child who counted along the row, or who said ten more). Do not write scores or keep a list."
+          }
+        ]
+      },
+      {
+        "part": "explore",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-explore1"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Look at your 100 square. Put one finger on the number 1. Slide it along the row, saying each number, all the way to 10."
+          },
+          {
+            "k": "WORK",
+            "text": "Children slide a finger along the first row, saying the numbers.",
+            "s": 20
+          },
+          {
+            "k": "ASK",
+            "text": "Where is 11? Slide your finger down from the 1 and find it.",
+            "resp": 15
+          },
+          {
+            "k": "SAY",
+            "text": "Each row has ten numbers. The next row starts with 11 and ends with 20."
+          },
+          {
+            "k": "ASK",
+            "text": "Find 100. Which corner is it in?",
+            "resp": 15
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-explore2"
+          },
+          {
+            "k": "SAY",
+            "text": "Round one. Count in tens: ten, twenty, thirty. Put a counter on every number you say. Keep going to one hundred."
+          },
+          {
+            "k": "WORK",
+            "text": "Children count in tens and cover 10, 20, ... 100 with counters. Tutor scans the cameras.",
+            "s": 55
+          },
+          {
+            "k": "ASK",
+            "text": "What do you see? Tell me what shape the counters make.",
+            "resp": 35
+          },
+          {
+            "k": "ASK",
+            "text": "Look at the numbers under your counters. What do they all end in?",
+            "resp": 20
+          },
+          {
+            "k": "SAY",
+            "text": "Counting in tens makes a straight line down the last column. Every number ends in zero."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-explore3"
+          },
+          {
+            "k": "SAY",
+            "text": "Round two. Clear your counters. Count in fives to fifty, and put a counter on each number."
+          },
+          {
+            "k": "WORK",
+            "text": "Children cover 5, 10, ... 50.",
+            "s": 50
+          },
+          {
+            "k": "ASK",
+            "text": "What do you see this time?",
+            "resp": 30
+          },
+          {
+            "k": "SAY",
+            "text": "Two columns. Look at the last digits: five or zero."
+          },
+          {
+            "k": "SAY",
+            "text": "Round three. Clear again. Count in twos to twenty."
+          },
+          {
+            "k": "WORK",
+            "text": "Children cover 2, 4, ... 20.",
+            "s": 45
+          },
+          {
+            "k": "ASK",
+            "text": "What do you see? Which numbers have no counter?",
+            "resp": 30
+          },
+          {
+            "k": "ASK",
+            "text": "If we kept counting in twos, would 37 get a counter? Would 60? How do you know?",
+            "resp": 30
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-explore4"
+          },
+          {
+            "k": "SAY",
+            "text": "Round four. Clear the square. Put one counter on 34. I call a move, you move the counter and say the number."
+          },
+          {
+            "k": "ASK",
+            "text": "Right one square. What number?",
+            "resp": 12
+          },
+          {
+            "k": "ASK",
+            "text": "Down one square?",
+            "resp": 12
+          },
+          {
+            "k": "ASK",
+            "text": "Down one square again?",
+            "resp": 12
+          },
+          {
+            "k": "ASK",
+            "text": "Left one square?",
+            "resp": 12
+          },
+          {
+            "k": "ASK",
+            "text": "Up one square?",
+            "resp": 12
+          },
+          {
+            "k": "ASK",
+            "text": "What did you notice? Which way adds 1? Which way adds 10?",
+            "resp": 30
+          },
+          {
+            "k": "STUCK",
+            "text": "A child who counts every square to move down: ask them to count how many squares are in one row, then slide the counter and check the numbers."
+          },
+          {
+            "k": "STUCK",
+            "text": "A child with too few counters: they can cover and uncover. A child who has no printed square can read the square on the slide."
+          },
+          {
+            "k": "NOTE",
+            "text": "Main room only: no breakout rooms in this lesson, so you can see every camera. Answers for round four: 35, 45, 55, 54, 44. Right adds 1, left takes 1, down adds 10, up takes 10. Building with counters is for every child; nobody is named."
+          }
+        ]
+      },
+      {
+        "part": "mini",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-m1"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Look at row four. Moving right, the number goes up by 1. Moving left, it goes down by 1."
+          },
+          {
+            "k": "ASK",
+            "text": "What is 1 more than 40? Where does it sit?",
+            "resp": 15
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m2"
+          },
+          {
+            "k": "SAY",
+            "text": "Now look down the column of the 6s: 6, 16, 26, 36. Every step down adds 10, because a row has ten squares. Going up takes 10 away."
+          },
+          {
+            "k": "ASK",
+            "text": "Start at 52. Go down one row. Which number?",
+            "resp": 15
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m3"
+          },
+          {
+            "k": "READ",
+            "text": "Your turn. Write on your paper: 10 more than 36. 10 less than 58. 1 more than 40."
+          },
+          {
+            "k": "WORK",
+            "text": "Children write three numbers, using their square if they want.",
+            "s": 55
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m3a"
+          },
+          {
+            "k": "READ",
+            "text": "Forty-six, forty-eight, forty-one."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m4"
+          },
+          {
+            "k": "SAY",
+            "text": "Three pictures. Counting in tens makes one column. Counting in fives makes two columns. Counting in twos makes stripes. The last digit tells you which list a number is in."
+          },
+          {
+            "k": "ASK",
+            "text": "Would 45 be coloured counting in fives? Would 45 be coloured counting in twos? How do you know?",
+            "resp": 30
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m5"
+          },
+          {
+            "k": "SAY",
+            "text": "Not every pattern has the same gap. Look: 1, 2, 4, 7, 11. The gaps are 1, then 2, then 3, then 4. The gap grows by one each time. So the next gap is 5, and the next number is 16."
+          },
+          {
+            "k": "ASK",
+            "text": "What would the gap after that be?",
+            "resp": 15
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m6"
+          },
+          {
+            "k": "SAY",
+            "text": "Quick-fire. I say a number. You say ten more. Twenty-three."
+          },
+          {
+            "k": "ASK",
+            "text": "Forty-seven?",
+            "resp": 12
+          },
+          {
+            "k": "ASK",
+            "text": "Sixty-five?",
+            "resp": 12
+          },
+          {
+            "k": "ASK",
+            "text": "Ninety?",
+            "resp": 12
+          },
+          {
+            "k": "NOTE",
+            "text": "Key words to use every time: row, column, across, down, ten more, ten less, last digit. Do not teach multiples, odd and even, or times tables. Counting in 3s is for the Investigation only. The growing-gap pattern is a worked example: do not drill it."
+          },
+          {
+            "k": "STUCK",
+            "text": "If a child says 10 more than 36 is 37: ask them to put a counter on 36 and slide it down one row, then say the new number."
+          }
+        ]
+      },
+      {
+        "part": "break",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-break"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Stand up and get a sip of water. A big jump for every ten, a clap for every five, a tiny tap for every two."
+          },
+          {
+            "k": "WORK",
+            "text": "Call: tens to 50 (jump), fives to 30 (clap), twos to 12 (tap). Then mix: you call 20, 10 or 6 and children choose the move that fits. Count aloud together.",
+            "s": 170
+          }
+        ]
+      },
+      {
+        "part": "work",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-ws1"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "READ",
+            "text": "Page 1, Start here. Question 1: count in tens and colour 10, 20, 30, up to 100. Then fill in the blanks. Question 2: count in fives and colour 5, 10, 15, up to 100. Then fill in the blanks."
+          },
+          {
+            "k": "WORK",
+            "text": "Page 1, questions 1 and 2. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
+            "s": 500
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-ws1ans"
+          },
+          {
+            "k": "READ",
+            "text": "Question 1: every number ends in zero, and they make one line going down. Question 2: every number ends in 5 or 0, and they make two lines going down. Mark your own page in another colour."
+          },
+          {
+            "k": "SAY",
+            "text": "After question 2 you may choose: carry on to page 2, or try Think harder. Everyone may choose, at any time."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-ws2"
+          },
+          {
+            "k": "READ",
+            "text": "Page 2. Question 3: write the next numbers in each pattern. Question 4: count in twos and colour 2, 4, 6 and so on to 30. Look at the last digits. Write the different last digits. Question 5: fill in the empty squares a, b and c. Question 6: Siti counts in fives. Which number is wrong? Circle it. Then write what she should have said."
+          },
+          {
+            "k": "WORK",
+            "text": "Page 2, questions 3 to 6.",
+            "s": 520
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-ws2ans"
+          },
+          {
+            "k": "READ",
+            "text": "Question 3: ten, twelve. Thirty, thirty-five. Sixty, seventy. Forty-one, fifty-one. Question 4: the last digits are 2, 4, 6, 8, 0. Question 5: a is 34, b is 43, c is 55. Question 6: 26 is wrong, it should be 25."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-choice"
+          },
+          {
+            "k": "SAY",
+            "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time. Anything not finished is for home too."
+          },
+          {
+            "k": "MOVE",
+            "text": "Stand and stretch for 30 seconds, then sit down and choose.",
+            "s": 30
+          },
+          {
+            "k": "WORK",
+            "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5, colouring your kit square), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
+            "s": 300
+          },
+          {
+            "k": "STUCK",
+            "text": "Q1 and Q2 (colouring): count in tens or fives aloud and put a counter on each number first, then colour under the counters. Q3: say the numbers aloud with your fingers. Q5: which squares are next to the empty one? Q6: say the fives with a hand each time."
+          },
+          {
+            "k": "STUCK",
+            "text": "A child who is still stuck ticks 'I am still stuck' on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp. You then help in the open session in the next lesson. Never a private message to a child."
+          },
+          {
+            "k": "NOTE",
+            "text": "Think harder is for the idea taught today in a new setting. Go further is for mastery and extension. The Investigation uses the 100 square on the kit page: colour lightly. Do not announce who is on which page. Slow class: the workbook part needs about 31:20 against 28:00, so Start here may fill most of it. Take the extra minutes from the flex time, do not skip the answer slides, and say that pages 3 to 5 are for home."
+          }
+        ]
+      },
+      {
+        "part": "talk",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-talk"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "READ",
+            "text": "Counting in tens makes one column on the square. Does counting in fives make one column too? Circle Yes or No. Use your 100 square to show why."
+          },
+          {
+            "k": "WORK",
+            "text": "Children put counters on 5, 10, ... 50 again and look at the columns.",
+            "s": 50
+          },
+          {
+            "k": "WORK",
+            "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
+            "s": 60
+          },
+          {
+            "k": "ASK",
+            "text": "Who would like to share? Volunteers first. A pass is always fine.",
+            "resp": 90
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-sneakans"
+          },
+          {
+            "k": "SAY",
+            "text": "Remember puzzle two? A counter on 36 moves down one square. Yes, it lands on 46. Down one row is ten more."
+          },
+          {
+            "k": "ASK",
+            "text": "Did anyone change their mind about puzzle two while we worked? You can just nod.",
+            "resp": 20
+          },
+          {
+            "k": "ASK",
+            "text": "Where did you use Spot the pattern today?",
+            "resp": 10,
+            "spine": "talk"
+          },
+          {
+            "k": "NOTE",
+            "text": "Listen for the tool being named, not the answer. Volunteers first, a pass is always fine.",
+            "spine": "talk"
+          },
+          {
+            "k": "NOTE",
+            "text": "Model answer: No. Counting in 5s makes two columns, the 5 column and the 10 column, because a row has ten squares and two jumps of five fill one row. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
+          }
+        ]
+      },
+      {
+        "part": "exit",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-exit"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
+          },
+          {
+            "k": "READ",
+            "text": "E1. Count in fives: thirty-five, forty, forty-five, then two blanks. What are the next two numbers? E2. A counter is on twenty-six. It moves down one row, then right one square. What number is it on after each move? E3. Mei counts in twos: 2, 4, 6, 8 and so on. Will she say twenty-five? Circle Yes or No.",
+            "s": 32
+          },
+          {
+            "k": "WORK",
+            "text": "Children answer E1 to E3 on their own.",
+            "s": 150
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-exitans"
+          },
+          {
+            "k": "READ",
+            "text": "Fifty, fifty-five. Thirty-six, then thirty-seven. No: twenty-five ends in 5, and counting in twos ends in 0, 2, 4, 6 or 8."
+          },
+          {
+            "k": "SAY",
+            "text": "Check your own ticket in a different colour. Well done. Put a star by each one you got right."
+          },
+          {
+            "k": "NOTE",
+            "text": "Nothing is collected or marked live. Children tick their own ticket. If many children miss one question, spend two minutes on it at the start of the next lesson, in the open session, no names. Do not read out any child's result."
+          }
+        ]
+      },
+      {
+        "part": "look",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-look"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+            "spine": "look"
+          },
+          {
+            "k": "WORK",
+            "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+            "s": 100,
+            "spine": "look"
+          }
+        ]
+      },
+      {
+        "part": "flex",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-end"
+          },
+          {
+            "k": "SAY",
+            "text": "Well done, inquirers. Next lesson we add numbers by making tens. Please have about 20 small things of two kinds, the kit page cut out, and a pencil and paper. Goodbye, and thank you to the grown-ups."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-opt",
+            "optional": true
+          },
+          {
+            "k": "SAY",
+            "text": "Optional, only if you are on time: this square has only 5 numbers in each row. A counter is on 8 and moves down one row. Which number is it on? And what does going down add now?",
+            "optional": true
+          },
+          {
+            "k": "WORK",
+            "text": "Short think time, then take two answers.",
+            "s": 90,
+            "optional": true
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-menu",
+            "optional": true
+          },
+          {
+            "k": "SAY",
+            "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
+            "optional": true
+          },
+          {
+            "k": "NOTE",
+            "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: 13; going down adds 5, the number of squares in a row. If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+          }
+        ]
+      }
+    ]
+  },
+  "slides": [
+    {
+      "id": "s-title",
+      "part": "opening",
+      "kind": "title",
+      "title": "100 Square Explorer",
+      "blocks": [
+        {
+          "t": "card",
+          "head": "TODAY WE WILL",
+          "items": [
+            "Explore the 100 square and find the patterns hiding in its rows and columns."
+          ]
+        }
+      ],
+      "note": "Lesson 4 of Term 1, 90 minutes. Objective: read the 100 square, notice what counting in 10s, 5s and 2s looks like on it, and use moves across and down. Time plan: opening 0 to 4, warm-up 4 to 10, sneak-peek 10 to 14, explore 14 to 28, mini-lesson 28 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Nobody is told which page they should be on. Tell the group the lesson is recorded (the tutor, the shared screen and any unmuted voice) and that a child may keep the camera off.",
+      "subtitle": "Whole numbers: patterns in rows and columns",
+      "mascot": {
+        "size": "l",
+        "say": "Hi, I'm Mi. Let's notice, test and explain why!"
+      }
+    },
+    {
+      "id": "s-ready",
+      "part": "opening",
+      "kind": "light",
+      "title": "Get ready",
+      "blocks": [
+        {
+          "t": "list",
+          "ordered": false,
+          "items": [
+            "Your 100 square (the kit page)",
+            "About 12 counters, all one kind",
+            "Two or three colours",
+            "Workbook, pencil and paper"
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Counters stay on the table, never near the mouth or ears."
+        }
+      ],
+      "note": "Materials check, about one minute. Every child needs the printed 100 square (workbook page 6), about twelve counters of one kind (buttons, coins, dried beans, paper clips or small pieces of paper), something to colour with, the workbook, a pencil and paper. A child with no colours can make dots and crosses. Check each camera shows the square and the counters. Do not name a child who is missing something; say it to the whole group and offer a substitute."
+    },
+    {
+      "id": "s-rem1",
+      "part": "remember",
+      "kind": "light",
+      "title": "Warm-up: count in tens",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Show both hands for every ten"
+        },
+        {
+          "t": "numrow",
+          "items": [
+            10,
+            20,
+            30,
+            40,
+            50,
+            60,
+            70,
+            80,
+            90,
+            100
+          ]
+        },
+        {
+          "t": "p",
+          "text": "Now count back from 100. Whisper, and shout on 50!"
+        }
+      ],
+      "note": "Count in tens to 100 with both hands up on every number, then back to 0. This is a spiral review of skip counting (a holiday topic) and lets a new child join: they hear it and see it before they say it. Two hands are ten fingers, so each new number is ten more. Do not write anything.",
+      "mascot": {
+        "size": "s",
+        "say": "Count along with me!"
+      }
+    },
+    {
+      "id": "s-rem2",
+      "part": "remember",
+      "kind": "light",
+      "title": "Fives and twos",
+      "blocks": [
+        {
+          "t": "cols",
+          "cols": [
+            [
+              {
+                "t": "p",
+                "text": "One hand is five fingers. Count in fives:"
+              },
+              {
+                "t": "numrow",
+                "items": [
+                  5,
+                  10,
+                  15,
+                  20,
+                  25,
+                  30
+                ]
+              }
+            ],
+            [
+              {
+                "t": "p",
+                "text": "Socks come in pairs. A pair is two. Count in twos:"
+              },
+              {
+                "t": "numrow",
+                "items": [
+                  2,
+                  4,
+                  6,
+                  8,
+                  10,
+                  12
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "note": "Fives: show one hand, then two hands, then three hands (one hand and the next), saying five, ten, fifteen. Twos: hold up two fingers for each pair of socks. For a child who only counts to 20, this is the bridge: the numbers are the same, only the jump is bigger. Everyone says the numbers out loud; nobody writes."
+    },
+    {
+      "id": "s-rem3",
+      "part": "remember",
+      "kind": "light",
+      "title": "What comes next?",
+      "blocks": [
+        {
+          "t": "numrow",
+          "items": [
+            "10  20  30  __",
+            "5  10  15  __",
+            "2  4  6  __",
+            "28  29  __",
+            "38  39  __"
+          ]
+        },
+        {
+          "t": "p",
+          "text": "Say the next number. Show it on your fingers if you like."
+        }
+      ],
+      "note": "Answers: 40, 20, 8, 30, 40. The last two questions show that after a 9 the next ten begins (29 then 30): a new ten, in the same row of the 100 square. Say the tens word slowly. If a child hesitates, count up from 20 together. Fingers or a thumbs up are fine; no marks."
+    },
+    {
+      "id": "s-sneak",
+      "part": "sneak",
+      "kind": "light",
+      "title": "Sneak-peek puzzles",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Ideas we have not learnt yet. A guess is a great start. Nobody is marked."
+        },
+        {
+          "t": "cols",
+          "cols": [
+            [
+              {
+                "t": "card",
+                "head": "PUZZLE 1: anyone can try",
+                "items": [
+                  "Count in 5s. What are the next two numbers?"
+                ]
+              },
+              {
+                "t": "numrow",
+                "items": [
+                  "5",
+                  "10",
+                  "15",
+                  "20",
+                  "__",
+                  "__"
+                ]
+              }
+            ],
+            [
+              {
+                "t": "card",
+                "head": "PUZZLE 2: think",
+                "items": [
+                  "This is part of the 100 square. A counter is on 36.",
+                  "Ravi moves it down one square.",
+                  "Which number is it on now? Write how you know."
+                ]
+              },
+              {
+                "t": "visual",
+                "type": "hundred",
+                "rows": [
+                  3,
+                  5
+                ],
+                "mark": [
+                  36
+                ],
+                "hide": [
+                  41,
+                  42,
+                  43,
+                  44,
+                  45,
+                  46,
+                  47,
+                  48,
+                  49,
+                  50
+                ],
+                "cellpx": 70
+              }
+            ]
+          ]
+        }
+      ],
+      "note": "Puzzle 1 (5, 10, 15, 20, then 25 and 30) is an access question: any child who can count on can try it, with fingers if they like. Puzzle 2 is a thinking question on the lesson key idea: down one row is 10 more. The row under 31 to 40 is hidden on purpose. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera: children keep their papers and check their own thinking at Talk time. There is no private chat and no board in front of the group. Answers: 25 and 30; 46 (down one row is 10 more). Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
+    },
+    {
+      "id": "s-explore1",
+      "part": "explore",
+      "kind": "light",
+      "title": "Explore: read the square",
+      "blocks": [
+        {
+          "t": "cols",
+          "weights": [
+            3,
+            2
+          ],
+          "cols": [
+            [
+              {
+                "t": "visual",
+                "type": "hundred",
+                "cellpx": 74
+              }
+            ],
+            [
+              {
+                "t": "list",
+                "ordered": true,
+                "items": [
+                  "Put a finger on 1. Slide it along to 10.",
+                  "Where does 11 sit? Slide your finger down.",
+                  "Find 100. Which corner is it in?"
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "note": "Round 0, about 3 minutes, objects and fingers first. Every child has the printed 100 square. They slide a finger along the first row (1 to 10), then discover that 11 sits directly under 1 and that each row has ten numbers. 100 is in the bottom right corner. This orients a child who has never seen the square. If a child has no printed square, they can look at this slide."
+    },
+    {
+      "id": "s-explore2",
+      "part": "explore",
+      "kind": "light",
+      "title": "Explore: cover the tens",
+      "blocks": [
+        {
+          "t": "cols",
+          "weights": [
+            3,
+            2
+          ],
+          "cols": [
+            [
+              {
+                "t": "visual",
+                "type": "hundred",
+                "cellpx": 74
+              }
+            ],
+            [
+              {
+                "t": "list",
+                "ordered": true,
+                "items": [
+                  "Count in tens: 10, 20, 30, ...",
+                  "Put a counter on each number you say.",
+                  "What do you see?"
+                ]
+              },
+              {
+                "t": "card",
+                "head": "SAY IT",
+                "items": [
+                  "The counters make a line that goes ___ (across or down)."
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "note": "Round 1, about 4 minutes. Children count in tens to 100 and put a counter on every number they say. Ten counters make one straight line down the last column. Ask what the numbers under the counters end in: every one ends in 0. Repeat each child answer in your own words so the recording picks it up. Counters can be buttons, coins or beans; a child with fewer can cover and uncover."
+    },
+    {
+      "id": "s-explore3",
+      "part": "explore",
+      "kind": "light",
+      "title": "Explore: fives and twos",
+      "blocks": [
+        {
+          "t": "cols",
+          "weights": [
+            3,
+            2
+          ],
+          "cols": [
+            [
+              {
+                "t": "visual",
+                "type": "hundred",
+                "rows": [
+                  1,
+                  5
+                ],
+                "cellpx": 90
+              }
+            ],
+            [
+              {
+                "t": "list",
+                "ordered": true,
+                "items": [
+                  "Clear your counters. Count in fives to 50.",
+                  "What do you see?",
+                  "Clear again. Count in twos to 20.",
+                  "Which numbers have no counter?"
+                ]
+              },
+              {
+                "t": "chip",
+                "text": "Counting in 2s: will 37 get a counter? Will 60?"
+              }
+            ]
+          ]
+        }
+      ],
+      "note": "Rounds 2 and 3, about 4 minutes. Fives to 50 make two columns (the 5 column and the 10 column); the numbers end in 5 or 0. Twos to 20 make stripes: counters on every other square, ending in 2, 4, 6, 8, 0; the numbers with no counter are the odd ones. Then ask the prediction: if we kept counting in twos, would 37 get a counter? No, it ends in 7. Would 60? Yes. Ask how they know. Do not use the words multiple or odd and even unless a child does."
+    },
+    {
+      "id": "s-explore4",
+      "part": "explore",
+      "kind": "light",
+      "title": "Explore: move the counter",
+      "blocks": [
+        {
+          "t": "cols",
+          "weights": [
+            3,
+            2
+          ],
+          "cols": [
+            [
+              {
+                "t": "visual",
+                "type": "hundred",
+                "rows": [
+                  2,
+                  6
+                ],
+                "mark": [
+                  34
+                ],
+                "cellpx": 80
+              }
+            ],
+            [
+              {
+                "t": "list",
+                "ordered": true,
+                "items": [
+                  "Counter on 34. Move it right 1.",
+                  "Now down 1. Down 1 again.",
+                  "Left 1. Then up 1."
+                ]
+              },
+              {
+                "t": "card",
+                "head": "WHAT DO YOU NOTICE?",
+                "items": [
+                  "Which way adds 1?",
+                  "Which way adds 10?"
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "note": "Round 4, about 3 minutes. Everyone puts one counter on 34 and moves it as you call. Right 1 gives 35, down 1 gives 45, down again 55, left 1 gives 54, up 1 gives 44. After each move children say the new number. Then ask what they notice: right adds 1 and left takes 1; down adds 10 and up takes 10. This is the key idea of the lesson; the mini-lesson names it. Main room only so you can see every camera."
+    },
+    {
+      "id": "s-m1",
+      "part": "mini",
+      "kind": "light",
+      "title": "Across: 1 more, 1 less",
+      "blocks": [
+        {
+          "t": "cols",
+          "weights": [
+            3,
+            2
+          ],
+          "cols": [
+            [
+              {
+                "t": "visual",
+                "type": "hundred",
+                "rows": [
+                  3,
+                  5
+                ],
+                "arrows": [
+                  [
+                    33,
+                    34,
+                    "+1"
+                  ],
+                  [
+                    37,
+                    36,
+                    "-1"
+                  ]
+                ],
+                "cellpx": 90
+              }
+            ],
+            [
+              {
+                "t": "say",
+                "text": "Right: 1 more. Left: 1 less."
+              },
+              {
+                "t": "p",
+                "text": "40 is the last number in its row. The next number, 41, starts the next row."
+              }
+            ]
+          ]
+        }
+      ],
+      "note": "Show rows three to five of the square (21 to 50). Moving right adds 1 and moving left takes 1. 40 is the last number of its row; the count carries on at the start of the next row: 41. Ask: what is 1 more than 40? Answer: 41 (still just 1 more, even though it starts the next row). Keep it to about a minute."
+    },
+    {
+      "id": "s-m2",
+      "part": "mini",
+      "kind": "light",
+      "title": "Down: 10 more, up: 10 less",
+      "blocks": [
+        {
+          "t": "cols",
+          "weights": [
+            3,
+            2
+          ],
+          "cols": [
+            [
+              {
+                "t": "visual",
+                "type": "hundred",
+                "shade": [
+                  6,
+                  16,
+                  26,
+                  36,
+                  46,
+                  56,
+                  66,
+                  76,
+                  86,
+                  96
+                ],
+                "arrows": [
+                  [
+                    26,
+                    36,
+                    "+10"
+                  ]
+                ],
+                "cellpx": 74
+              }
+            ],
+            [
+              {
+                "t": "say",
+                "text": "Down: 10 more. Up: 10 less."
+              },
+              {
+                "t": "p",
+                "text": "A row has ten squares. So one step down is ten more."
+              }
+            ]
+          ]
+        }
+      ],
+      "note": "Look down the column of the 6s: 6, 16, 26, 36 and on. Each step down adds 10, because there are ten squares in a row. Going up takes 10 away. Ask: start at 52, go down one row, which number? Answer: 62. This is the idea behind the Think harder questions, where several rows are added at once."
+    },
+    {
+      "id": "s-m3",
+      "part": "mini",
+      "kind": "light",
+      "title": "Your turn: write the number",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Write on your paper. Timer: 1 minute"
+        },
+        {
+          "t": "cols",
+          "weights": [
+            2,
+            3
+          ],
+          "cols": [
+            [
+              {
+                "t": "card",
+                "head": "1",
+                "items": [
+                  "10 more than 36"
+                ]
+              },
+              {
+                "t": "card",
+                "head": "2",
+                "items": [
+                  "10 less than 58"
+                ]
+              },
+              {
+                "t": "card",
+                "head": "3",
+                "items": [
+                  "1 more than 40"
+                ]
+              }
+            ],
+            [
+              {
+                "t": "visual",
+                "type": "hundred",
+                "cellpx": 62
+              }
+            ]
+          ]
+        }
+      ],
+      "note": "Each child writes three numbers on their own paper, using the square if they want. Walk the cameras. Do not ask children to hold boards up in front of the group. Question 3 is the row-end case: 40 is the last number of its row and 41 starts the next."
+    },
+    {
+      "id": "s-m3a",
+      "part": "mini",
+      "kind": "light",
+      "title": "Check: write the number",
+      "blocks": [
+        {
+          "t": "cols",
+          "weights": [
+            2,
+            3
+          ],
+          "cols": [
+            [
+              {
+                "t": "card",
+                "head": "1",
+                "items": [
+                  "10 more than 36"
+                ]
+              },
+              {
+                "t": "answer",
+                "text": "46"
+              },
+              {
+                "t": "card",
+                "head": "2",
+                "items": [
+                  "10 less than 58"
+                ]
+              },
+              {
+                "t": "answer",
+                "text": "48"
+              },
+              {
+                "t": "card",
+                "head": "3",
+                "items": [
+                  "1 more than 40"
+                ]
+              },
+              {
+                "t": "answer",
+                "text": "41"
+              }
+            ],
+            [
+              {
+                "t": "visual",
+                "type": "hundred",
+                "cellpx": 62,
+                "mark": [
+                  36,
+                  58,
+                  40
+                ],
+                "shade": [
+                  46,
+                  48,
+                  41
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "note": "Answers: 46, 48, 41. Read each answer aloud so a child watching the recording can mark their own work. For question 3, say that 40 is the end of its row and 41 is the first number of the next row."
+    },
+    {
+      "id": "s-m4",
+      "part": "mini",
+      "kind": "light",
+      "title": "Stripes and last digits",
+      "blocks": [
+        {
+          "t": "cols",
+          "cols": [
+            [
+              {
+                "t": "visual",
+                "type": "hundred",
+                "shade": [
+                  10,
+                  20,
+                  30,
+                  40,
+                  50,
+                  60,
+                  70,
+                  80,
+                  90,
+                  100
+                ],
+                "label": "10s: one column",
+                "cellpx": 36
+              }
+            ],
+            [
+              {
+                "t": "visual",
+                "type": "hundred",
+                "shade": [
+                  5,
+                  10,
+                  15,
+                  20,
+                  25,
+                  30,
+                  35,
+                  40,
+                  45,
+                  50,
+                  55,
+                  60,
+                  65,
+                  70,
+                  75,
+                  80,
+                  85,
+                  90,
+                  95,
+                  100
+                ],
+                "label": "5s: two columns",
+                "cellpx": 36
+              }
+            ],
+            [
+              {
+                "t": "visual",
+                "type": "hundred",
+                "shade": [
+                  2,
+                  4,
+                  6,
+                  8,
+                  10,
+                  12,
+                  14,
+                  16,
+                  18,
+                  20,
+                  22,
+                  24,
+                  26,
+                  28,
+                  30,
+                  32,
+                  34,
+                  36,
+                  38,
+                  40,
+                  42,
+                  44,
+                  46,
+                  48,
+                  50,
+                  52,
+                  54,
+                  56,
+                  58,
+                  60,
+                  62,
+                  64,
+                  66,
+                  68,
+                  70,
+                  72,
+                  74,
+                  76,
+                  78,
+                  80,
+                  82,
+                  84,
+                  86,
+                  88,
+                  90,
+                  92,
+                  94,
+                  96,
+                  98,
+                  100
+                ],
+                "label": "2s: stripes",
+                "cellpx": 36
+              }
+            ]
+          ]
+        },
+        {
+          "t": "card",
+          "head": "THE LAST DIGIT",
+          "items": [
+            "Counting in 10s: every number ends in 0.",
+            "Counting in 5s: every number ends in 0 or 5.",
+            "Counting in 2s: every number ends in 0, 2, 4, 6 or 8."
+          ]
+        }
+      ],
+      "note": "Show the three pictures side by side. Counting in 10s is one column; counting in 5s is two columns; counting in 2s is stripes, every other square. The last digit tells you which list a number is in. Ask: would 45 be coloured counting in 5s? Yes, it ends in 5. Would 45 be coloured counting in 2s? No. Do not use the words multiple, odd or even yet; say numbers you say counting in 2s."
+    },
+    {
+      "id": "s-m5",
+      "part": "mini",
+      "kind": "light",
+      "title": "Gaps can grow",
+      "blocks": [
+        {
+          "t": "visual",
+          "type": "seq",
+          "items": [
+            1,
+            2,
+            4,
+            7,
+            11,
+            16
+          ],
+          "gaps": [
+            "+1",
+            "+2",
+            "+3",
+            "+4",
+            "+5"
+          ],
+          "hl": [
+            5
+          ]
+        },
+        {
+          "t": "p",
+          "text": "The gap grows by 1 each time. So the next gap is 5."
+        }
+      ],
+      "note": "A worked example of a pattern that does not have the same gap each time: 1, 2, 4, 7, 11. Read the gaps: 1, 2, 3, 4. The gap grows by one each time, so the next gap is 5 and the next number is 16. Ask: what would the gap after that be? Answer: 6. This is a worked example only, about a minute; Think harder uses a different pattern of the same kind."
+    },
+    {
+      "id": "s-m6",
+      "part": "mini",
+      "kind": "light",
+      "title": "Quick-fire: 10 more",
+      "blocks": [
+        {
+          "t": "cols",
+          "weights": [
+            2,
+            3
+          ],
+          "cols": [
+            [
+              {
+                "t": "numrow",
+                "items": [
+                  23,
+                  47,
+                  65,
+                  90
+                ]
+              },
+              {
+                "t": "chip",
+                "text": "Say the number that is 10 more. Think: one row down."
+              }
+            ],
+            [
+              {
+                "t": "visual",
+                "type": "hundred",
+                "cellpx": 62
+              }
+            ]
+          ]
+        }
+      ],
+      "note": "Say each number and ask for 10 more. Answers: 33, 57, 75, 100. Children answer aloud or with a whispered number; nobody writes. If a child counts on by ones, say: one row down is ten more. For 90, point out that 100 is the last square."
+    },
+    {
+      "id": "s-break",
+      "part": "break",
+      "kind": "dark",
+      "title": "Jump, clap, tap",
+      "blocks": [
+        {
+          "t": "p",
+          "text": "A big jump for every ten. A clap for every five. A tiny tap for every two."
+        },
+        {
+          "t": "numrow",
+          "items": [
+            10,
+            5,
+            2
+          ]
+        },
+        {
+          "t": "p",
+          "text": "Sip some water."
+        }
+      ],
+      "note": "Four minutes. Stand up on camera. Call the pattern and let children move together: tens with a jump to 50, fives with a clap to 30, twos with a tap to 12. Then mix: call a number and children choose the move that fits. No equipment. Keep it gentle for small spaces."
+    },
+    {
+      "id": "s-ws1",
+      "part": "work",
+      "kind": "light",
+      "title": "Workbook page 1: Start here",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Questions 1 and 2. Timer: 8 minutes"
+        },
+        {
+          "t": "qs",
+          "ids": [
+            "S1",
+            "S2"
+          ],
+          "short": true
+        }
+      ],
+      "note": "Read both questions aloud. Children colour on the printed squares on page 1, then fill in the blanks. The tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 2 any child may choose to carry on or try Think harder."
+    },
+    {
+      "id": "s-ws1ans",
+      "part": "work",
+      "kind": "light",
+      "title": "Check page 1",
+      "blocks": [
+        {
+          "t": "answers",
+          "ids": [
+            "S1",
+            "S2"
+          ]
+        }
+      ],
+      "note": "Read each answer aloud. Children mark their own page in a different colour. Question 1: every number ends in 0 and they make a line going down. Question 2: every number ends in 5 or 0 and they make two lines going down. Never ask a child to show a wrong answer to the group."
+    },
+    {
+      "id": "s-ws2",
+      "part": "work",
+      "kind": "light",
+      "title": "Workbook page 2: Start here",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Questions 3 to 6. Timer: 9 minutes"
+        },
+        {
+          "t": "qs",
+          "ids": [
+            "S3",
+            "S4",
+            "S5",
+            "S6"
+          ],
+          "short": true
+        }
+      ],
+      "note": "Read question 3 and question 6 aloud. Question 4 colours the first three rows of the square in twos. Question 5 has three empty squares labelled a, b and c in a piece of the square. Question 6 is a spot-the-mistake. Children may use their kit square and counters to decide."
+    },
+    {
+      "id": "s-ws2ans",
+      "part": "work",
+      "kind": "light",
+      "title": "Check page 2",
+      "blocks": [
+        {
+          "t": "answers",
+          "ids": [
+            "S3",
+            "S4",
+            "S5",
+            "S6"
+          ]
+        }
+      ],
+      "note": "Read each answer aloud so a child watching the recording can mark their own work. Question 6: Siti said 26, which does not end in 0 or 5; she should have said 25. Never ask a child to show a wrong answer to the group."
+    },
+    {
+      "id": "s-choice",
+      "part": "work",
+      "kind": "light",
+      "title": "Choose your next page",
+      "blocks": [
+        {
+          "t": "table",
+          "header": true,
+          "rows": [
+            [
+              "Page",
+              "What it is"
+            ],
+            [
+              "Think harder (page 3)",
+              "Our idea in a new setting"
+            ],
+            [
+              "Go further (page 4)",
+              "Harder puzzles"
+            ],
+            [
+              "Investigation (page 5)",
+              "Counting in 3s"
+            ],
+            [
+              "Check",
+              "Finish and check your own work"
+            ]
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Everyone may choose. Not finished? Pages 3 to 5 are for home too."
+        }
+      ],
+      "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 5 minutes. The Investigation uses the 100 square on the kit page (page 6), coloured lightly."
+    },
+    {
+      "id": "s-talk",
+      "part": "talk",
+      "kind": "light",
+      "title": "Talk and explain",
+      "blocks": [
+        {
+          "t": "card",
+          "head": "TALK ABOUT IT",
+          "items": [
+            "Does counting in 5s make one column, like counting in 10s?"
+          ]
+        },
+        {
+          "t": "p",
+          "text": "Use the 100 square to show why."
+        },
+        {
+          "t": "chip",
+          "text": "I think ... because ..."
+        }
+      ],
+      "note": "One minute of talk to the grown-up next to you, or to your screen. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: no. Counting in 5s makes two columns, the 5 column and the 10 column, because a row has ten squares and two jumps of five fill one row. Repeat each child answer in your own words for the recording."
+    },
+    {
+      "id": "s-sneakans",
+      "part": "talk",
+      "kind": "light",
+      "title": "Back to the sneak-peek",
+      "blocks": [
+        {
+          "t": "cols",
+          "weights": [
+            3,
+            2
+          ],
+          "cols": [
+            [
+              {
+                "t": "visual",
+                "type": "hundred",
+                "rows": [
+                  3,
+                  5
+                ],
+                "mark": [
+                  36
+                ],
+                "shade": [
+                  46
+                ],
+                "arrows": [
+                  [
+                    36,
+                    46,
+                    "+10"
+                  ]
+                ],
+                "cellpx": 80
+              }
+            ],
+            [
+              {
+                "t": "answer",
+                "text": "The counter is on 46. Down one row is 10 more."
+              }
+            ]
+          ]
+        }
+      ],
+      "note": "Reveal puzzle 2 now: 36 down one square is 46, because each row has ten squares. Say: many of you wrote a good reason. Do not read out anyone earlier answer."
+    },
+    {
+      "id": "s-exit",
+      "part": "exit",
+      "kind": "light",
+      "title": "Exit ticket",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "On your own. No looking back. Timer: 3 minutes"
+        },
+        {
+          "t": "qs",
+          "ids": [
+            "E1",
+            "E2",
+            "E3"
+          ],
+          "short": false
+        }
+      ],
+      "note": "Children answer on page 5. Read E1, E2 and E3 aloud (the questions are on the slide). Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
+    },
+    {
+      "id": "s-exitans",
+      "part": "exit",
+      "kind": "light",
+      "title": "Check the exit ticket",
+      "blocks": [
+        {
+          "t": "answers",
+          "ids": [
+            "E1",
+            "E2",
+            "E3"
+          ]
+        }
+      ],
+      "note": "Read each answer aloud. Children check their own ticket in a different colour. For question 3 the answer is No. If a child says why, accept any clear reason about the last digit."
+    },
+    {
+      "id": "s-look",
+      "part": "look",
+      "kind": "lookback",
+      "title": "Look-back",
+      "blocks": [
+        {
+          "t": "lookback"
+        }
+      ],
+      "note": "Three minutes. Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child.",
+      "mascot": {
+        "size": "s",
+        "say": "Take your time. You can pass."
+      }
+    },
+    {
+      "id": "s-end",
+      "part": "flex",
+      "kind": "dark",
+      "title": "Well done, inquirers!",
+      "blocks": [
+        {
+          "t": "p",
+          "text": "Show a grown-up one thing you found out today."
+        },
+        {
+          "t": "card",
+          "head": "NEXT LESSON",
+          "items": [
+            "Adding by making tens",
+            "Have ready: 20 small things, kit page cut out."
+          ]
+        }
+      ],
+      "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. If the whole class is ahead, show the optional menu slide and use the Spare-time menu from the tutor guide.",
+      "mascot": {
+        "size": "l",
+        "say": "Great thinking today!"
+      }
+    },
+    {
+      "id": "s-opt",
+      "part": "flex",
+      "kind": "light",
+      "title": "Go further: what if?",
+      "blocks": [
+        {
+          "t": "cols",
+          "weights": [
+            2,
+            3
+          ],
+          "cols": [
+            [
+              {
+                "t": "visual",
+                "type": "hundred",
+                "rows": [
+                  1,
+                  4
+                ],
+                "cols": [
+                  1,
+                  5
+                ],
+                "per": 5,
+                "mark": [
+                  8
+                ],
+                "cellpx": 96
+              }
+            ],
+            [
+              {
+                "t": "p",
+                "text": "Here is a square with only 5 numbers in each row."
+              },
+              {
+                "t": "p",
+                "text": "A counter is on 8. It moves down 1 row. Which number is it on?"
+              },
+              {
+                "t": "p",
+                "text": "What does going down add now?"
+              }
+            ]
+          ]
+        }
+      ],
+      "note": "Optional, only if you are on time. This is a square with 5 numbers in each row (1 to 5, 6 to 10, and so on). Answer: 8 down one row is 13, so going down adds 5: the number of squares in a row. Take two answers and move on. This is only the same idea in a new setting; it does not start new content.",
+      "optional": true
+    },
+    {
+      "id": "s-menu",
+      "part": "flex",
+      "kind": "light",
+      "title": "If we have time: pick one",
+      "blocks": [
+        {
+          "t": "table",
+          "header": true,
+          "rows": [
+            [
+              "Activity",
+              "What we do"
+            ],
+            [
+              "Is it always true?",
+              "Add 10 to a number. Does only the tens digit change?"
+            ],
+            [
+              "Make a puzzle",
+              "Hide a number on the square and write clues for your grown-up"
+            ],
+            [
+              "Teach it back",
+              "Show why counting in 10s makes a column"
+            ]
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Optional. Everyone may join."
+        }
+      ],
+      "note": "Optional Spare-time menu, used only if the whole class is ahead. Pick one or two activities (3 to 5 minutes each); full tutor lines and answers are in the tutor guide. Never start new content and never name who is ahead. Slow down with how do you know rather than rushing on. These minutes come from the flex buffer and are not part of the 90-minute sum.",
+      "optional": true
+    }
+  ],
+  "tiers": {
+    "start": [
+      {
+        "id": "S1",
+        "page": 1,
+        "tier": "start",
+        "text": "Colour 10, 20, 30 and so on to 100 as you count in 10s. Fill in the blanks.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "Every number I coloured ends in the digit ___.",
+            "ans": "0",
+            "val": 0
+          },
+          {
+            "l": "b",
+            "text": "The colours make a line that goes ___ (across or down).",
+            "ans": "down",
+            "val": "down"
+          }
+        ],
+        "visual": {
+          "type": "hundred",
+          "cell": 46
+        },
+        "answer": "They end in 0. They make a line going down.",
+        "val": [
+          0,
+          "down"
+        ],
+        "hint": "Count in tens: 10, 20, 30. Put a counter on each number first, then colour under the counters.",
+        "solution": "The numbers are 10, 20, 30, 40, 50, 60, 70, 80, 90, 100. Every one ends in 0. Each is 10 more than the one before, which is one row down, so they make a straight line down the last column.",
+        "mistakes": [
+          "Colouring every number in the last row (91 to 100).",
+          "Saying the line goes across: the colours are one under the other, so it goes down."
+        ],
+        "mins": 3,
+        "lines": 0
+      },
+      {
+        "id": "S2",
+        "page": 1,
+        "tier": "start",
+        "text": "Count in 5s. Colour 5, 10, 15 and keep going to 100. Fill in the blanks.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "Every number I coloured ends in the digit ___ or ___.",
+            "ans": "5 or 0, in any order",
+            "val": [
+              5,
+              0
+            ]
+          },
+          {
+            "l": "b",
+            "text": "The colours make ___ lines going down.",
+            "ans": "2",
+            "val": 2
+          }
+        ],
+        "visual": {
+          "type": "hundred",
+          "cell": 46
+        },
+        "answer": "They end in 5 or 0. They make 2 lines going down.",
+        "val": [
+          5,
+          0,
+          2
+        ],
+        "hint": "Count in fives with one hand each time: 5, 10, 15. Put a counter on each number first, or colour as you count.",
+        "solution": "The numbers are 5, 10, 15, 20, and on to 100. They end in 5 or 0. The 5s sit in the fifth column and the 10s in the last column, so there are two lines going down.",
+        "mistakes": [
+          "Skipping a number, such as 35 or 45.",
+          "Saying 1 line because the tens are in a line too (there are 2 lines: the 5s and the 0s)."
+        ],
+        "mins": 3.5,
+        "lines": 0
+      },
+      {
+        "id": "S3",
+        "page": 2,
+        "tier": "start",
+        "text": "What are the next two numbers in each of these patterns?",
+        "parts": [
+          {
+            "l": "a",
+            "text": "2, 4, 6, 8, ___, ___",
+            "ans": "10, 12",
+            "val": [
+              10,
+              12
+            ]
+          },
+          {
+            "l": "b",
+            "text": "15, 20, 25, ___, ___",
+            "ans": "30, 35",
+            "val": [
+              30,
+              35
+            ]
+          },
+          {
+            "l": "c",
+            "text": "30, 40, 50, ___, ___",
+            "ans": "60, 70",
+            "val": [
+              60,
+              70
+            ]
+          },
+          {
+            "l": "d",
+            "text": "11, 21, 31, ___, ___",
+            "ans": "41, 51",
+            "val": [
+              41,
+              51
+            ]
+          }
+        ],
+        "answer": "10, 12 | 30, 35 | 60, 70 | 41, 51",
+        "val": [
+          10,
+          12,
+          30,
+          35,
+          60,
+          70,
+          41,
+          51
+        ],
+        "hint": "Say the pattern out loud with your fingers. Look at the jump from one number to the next.",
+        "solution": "(a) Counting in 2s: 8, then 10, 12. (b) Counting in 5s: 25, then 30, 35. (c) Counting in 10s: 50, then 60, 70. (d) Each step is 10 more, one row down: 31, then 41, 51.",
+        "mistakes": [
+          "(d) writing 32 and 33: the jump is 10, not 1.",
+          "Changing the jump half way along."
+        ],
+        "mins": 3,
+        "lines": 0
+      },
+      {
+        "id": "S4",
+        "page": 2,
+        "tier": "start",
+        "text": "Count in 2s. Colour 2, 4, 6 and so on to 30. Look at the last digits.",
+        "parts": [
+          {
+            "l": "",
+            "text": "The different last digits are ___, ___, ___, ___, ___.",
+            "ans": "2, 4, 6, 8, 0 in any order",
+            "val": [
+              2,
+              4,
+              6,
+              8,
+              0
+            ]
+          }
+        ],
+        "visual": {
+          "type": "hundred",
+          "rows": [
+            1,
+            3
+          ],
+          "cell": 46
+        },
+        "answer": "2, 4, 6, 8, 0 (any order)",
+        "val": [
+          2,
+          4,
+          6,
+          8,
+          0
+        ],
+        "hint": "Say the numbers in twos as you colour: 2, 4, 6, 8, 10. Look at the number you land on each time.",
+        "solution": "The coloured numbers are 2, 4, 6, 8, 10, 12 and on to 30. Their last digits are 2, 4, 6, 8, 0, and then the same five again. The colours make stripes.",
+        "mistakes": [
+          "Colouring 1, 3, 5 as well.",
+          "Writing 5 or 1 as a last digit."
+        ],
+        "mins": 3,
+        "lines": 0
+      },
+      {
+        "id": "S5",
+        "page": 2,
+        "tier": "start",
+        "text": "Fill in the missing number in each empty square.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "Square a is ___.",
+            "ans": "34",
+            "val": 34
+          },
+          {
+            "l": "b",
+            "text": "Square b is ___.",
+            "ans": "43",
+            "val": 43
+          },
+          {
+            "l": "c",
+            "text": "Square c is ___.",
+            "ans": "55",
+            "val": 55
+          }
+        ],
+        "visual": {
+          "type": "hundred",
+          "rows": [
+            4,
+            6
+          ],
+          "cols": [
+            3,
+            7
+          ],
+          "hide": [
+            34,
+            43,
+            55
+          ],
+          "tags": {
+            "34": "a",
+            "43": "b",
+            "55": "c"
+          },
+          "cell": 46
+        },
+        "answer": "a 34, b 43, c 55",
+        "val": [
+          34,
+          43,
+          55
+        ],
+        "hint": "Look at the squares next to the empty one. Right is 1 more, left is 1 less, down is 10 more.",
+        "solution": "(a) 34 is between 33 and 35. (b) 43 is under 33, which is 10 more than 33, and above 53. (c) 55 is under 45 (10 more) and between 54 and 56.",
+        "mistakes": [
+          "Writing 44 for b: 44 is next to 43, not under 33.",
+          "Adding 1 when moving down instead of 10."
+        ],
+        "mins": 3,
+        "lines": 0
+      },
+      {
+        "id": "S6",
+        "page": 2,
+        "tier": "start",
+        "text": "Siti counts in 5s: 5, 10, 15, 20, 26, 30, 35. One number is wrong. Circle it.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "She should have said ___.",
+            "ans": "25",
+            "val": 25
+          }
+        ],
+        "answer": "26 is wrong. She should have said 25.",
+        "val": [
+          26,
+          25
+        ],
+        "hint": "Say the fives with a hand each time: 5, 10, 15, 20. What comes after 20?",
+        "solution": "Counting in fives, 20 is followed by 25, then 30. 26 ends in 6, but numbers counted in fives end in 5 or 0. So Siti should have said 25.",
+        "mistakes": [
+          "Circling 30 or 35.",
+          "Writing 26 again instead of 25."
+        ],
+        "mins": 2,
+        "lines": 0
+      }
+    ],
+    "think": [
+      {
+        "id": "T1",
+        "page": 3,
+        "tier": "think",
+        "text": "Put a counter on 27 on your 100 square. Move the counter down 3 rows. Which number does it land on? Write how you know on the lines.",
+        "parts": [
+          {
+            "l": "",
+            "text": "It lands on ___.",
+            "ans": "57",
+            "val": 57
+          }
+        ],
+        "answer": "57 (each row down is 10 more, so 3 rows is 30 more)",
+        "val": [
+          57
+        ],
+        "hint": "One row down is 10 more. How much do 3 rows add?",
+        "solution": "Each row down adds 10, so 3 rows add 30. 27 + 30 = 57. Check on the square: 37, 47, 57.",
+        "mistakes": [
+          "Writing 30 or 33 (adding 3 instead of 3 tens).",
+          "Counting 3 squares along the row."
+        ],
+        "mins": 4,
+        "lines": 2
+      },
+      {
+        "id": "T2",
+        "page": 3,
+        "tier": "think",
+        "text": "A counter is on 14. It moves down 2 rows. Then it moves right 3 squares. Which number does it land on? Write each step on the lines.",
+        "parts": [
+          {
+            "l": "",
+            "text": "It lands on ___.",
+            "ans": "37",
+            "val": 37
+          }
+        ],
+        "answer": "37 (14, 24, 34, then 35, 36, 37)",
+        "val": [
+          37
+        ],
+        "hint": "First do the two rows down. Then move right, one square at a time.",
+        "solution": "Down 2 rows is 20 more: 14, 24, 34. Right 3 squares is 3 more: 35, 36, 37. It stops on 37.",
+        "mistakes": [
+          "Adding 2 and 3 to 14 (19).",
+          "Going down by 2 squares instead of 2 rows (16)."
+        ],
+        "mins": 4,
+        "lines": 2
+      },
+      {
+        "id": "T3",
+        "page": 3,
+        "tier": "think",
+        "text": "Look at this pattern: 6, 7, 9, 12, 16 and so on. Find the next two numbers.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "The gaps between the numbers are ___, ___, ___, ___.",
+            "ans": "1, 2, 3, 4",
+            "val": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "l": "b",
+            "text": "The next two numbers are ___ and ___.",
+            "ans": "21 and 27",
+            "val": [
+              21,
+              27
+            ]
+          }
+        ],
+        "answer": "The gaps are 1, 2, 3, 4. The next numbers are 21 and 27.",
+        "val": [
+          1,
+          2,
+          3,
+          4,
+          21,
+          27
+        ],
+        "hint": "Find each gap: 7 take away 6, then 9 take away 7. What do the gaps do?",
+        "solution": "The gaps are 1, 2, 3, 4: each gap is 1 bigger. The next gap is 5, so 16 + 5 = 21. The gap after is 6, so 21 + 6 = 27.",
+        "mistakes": [
+          "Adding 4 each time (20, 24).",
+          "Finding the gaps but forgetting to use them to go on."
+        ],
+        "mins": 5,
+        "lines": 0
+      },
+      {
+        "id": "T4",
+        "page": 3,
+        "tier": "think",
+        "text": "Mei counts in 2s up to 30: 2, 4, 6, 8 and so on. Ali counts in 5s up to 30: 5, 10, 15, 20 and so on. Write the numbers they both say.",
+        "parts": [
+          {
+            "l": "",
+            "text": "They both say ___, ___ and ___.",
+            "ans": "10, 20 and 30",
+            "val": [
+              10,
+              20,
+              30
+            ]
+          }
+        ],
+        "answer": "10, 20 and 30",
+        "val": [
+          10,
+          20,
+          30
+        ],
+        "hint": "Write Mei numbers and Ali numbers in two lists. Circle the numbers that are in both lists.",
+        "solution": "Mei says 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30. Ali says 5, 10, 15, 20, 25, 30. Both say 10, 20 and 30.",
+        "mistakes": [
+          "Writing only 10.",
+          "Including 5, 15 or 25: Mei does not say numbers ending in 5."
+        ],
+        "mins": 5,
+        "lines": 2
+      }
+    ],
+    "go": [
+      {
+        "id": "G1",
+        "page": 4,
+        "tier": "go",
+        "text": "Here is a number chain: 2, 6, ___, 14, 22, ___, 58. One rule makes the whole chain.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "The two blanks are ___ and ___.",
+            "ans": "8 and 36",
+            "val": [
+              8,
+              36
+            ]
+          },
+          {
+            "l": "b",
+            "text": "I found the first blank by ___.",
+            "ans": "2 + 6 = 8",
+            "val": "working"
+          }
+        ],
+        "answer": "8 and 36 (2 + 6 = 8, 14 + 22 = 36, and 22 + 36 = 58)",
+        "val": [
+          8,
+          36
+        ],
+        "hint": "Look at 2, 6 and the number after them. What can you do with two numbers to get the next one? Check it on 14, 22 and 58.",
+        "solution": "Each number after the first two is the two numbers before it added together. 2 + 6 = 8, so the first blank is 8. Check: 6 + 8 = 14 and 8 + 14 = 22. The last blank is 14 + 22 = 36, and 22 + 36 = 58 matches the end of the chain.",
+        "mistakes": [
+          "Adding 6 each time (8, 14, 20).",
+          "Filling the first blank but not the last.",
+          "Not checking the rule on the numbers at the end of the chain."
+        ],
+        "mins": 5,
+        "lines": 1
+      },
+      {
+        "id": "G2",
+        "page": 4,
+        "tier": "go",
+        "text": "Look at this list: 5, 50, 10, 45, 15, 40 and so on.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "The next two numbers are ___ and ___.",
+            "ans": "20 and 35",
+            "val": [
+              20,
+              35
+            ]
+          },
+          {
+            "l": "b",
+            "text": "The 10th number in the list is ___.",
+            "ans": "30",
+            "val": 30
+          }
+        ],
+        "answer": "The next two numbers are 20 and 35. The 10th number is 30.",
+        "val": [
+          20,
+          35,
+          30
+        ],
+        "hint": "Look at every second number on its own. First: 5, 10, 15. Second: 50, 45, 40.",
+        "solution": "Numbers 1, 3, 5 go up by 5: 5, 10, 15, then 20. Numbers 2, 4, 6 go down by 5: 50, 45, 40, then 35. The list goes on 20, 35, 25, 30. The 10th number is 30.",
+        "mistakes": [
+          "Treating the list as one pattern (adding or taking away the same amount).",
+          "Getting the 8th number right and the 10th wrong."
+        ],
+        "mins": 6,
+        "lines": 1
+      },
+      {
+        "id": "G3",
+        "page": 4,
+        "tier": "go",
+        "text": "Look at this block of 4 squares.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "Yellow: 34 + 45 = ___.",
+            "ans": "79",
+            "val": 79
+          },
+          {
+            "l": "b",
+            "text": "Other two: 35 + 44 = ___.",
+            "ans": "79",
+            "val": 79
+          },
+          {
+            "l": "c",
+            "text": "Are the two totals the same? Circle Yes or No.",
+            "ans": "Yes",
+            "val": "yes"
+          },
+          {
+            "l": "d",
+            "text": "Now try 52, 53, 62, 63. 52 + 63 = ___ and 53 + 62 = ___.",
+            "ans": "115 and 115",
+            "val": [
+              115,
+              115
+            ]
+          },
+          {
+            "l": "e",
+            "text": "Does it work every time? Circle Yes or No. Then write why.",
+            "ans": "Yes: 1 and 10 are added in both pairs",
+            "val": "yes"
+          }
+        ],
+        "visual": {
+          "type": "hundred",
+          "rows": [
+            4,
+            5
+          ],
+          "cols": [
+            4,
+            5
+          ],
+          "shade": [
+            34,
+            45
+          ],
+          "shade2": [
+            35,
+            44
+          ],
+          "wide": true,
+          "cell": 46,
+          "size": 34
+        },
+        "answer": "Both add up to 79, and 52 + 63 and 53 + 62 both make 115. It always works: 1 and 10 are added in both pairs.",
+        "val": [
+          "same"
+        ],
+        "hint": "Try your own block of four on the square. Add the two numbers on one slant, then on the other slant.",
+        "solution": "If the top left number is a, the others are a + 1, a + 10 and a + 11. One slant is a + (a + 11) and the other is (a + 1) + (a + 10). Both are the same: 2 a and 11. For the first block both are 79.",
+        "mistakes": [
+          "Only trying one block and saying it always works.",
+          "Adding the numbers across the rows instead of along the slants."
+        ],
+        "mins": 7,
+        "lines": 2
+      }
+    ],
+    "investigation": {
+      "id": "I1",
+      "page": 5,
+      "tier": "investigation",
+      "title": "Counting in 3s",
+      "first": "Use the 100 square on your kit page. Colour 3, 6, 9, 12 and 15. Look at where the colours are.",
+      "text": "Keep going to 60, in 3s. Do the colours make a column like the 10s? Write what shape you see. Then look at 33, 36 and 39. What do you notice?",
+      "lines": 2,
+      "answer": "Counting in 3s makes slanting lines going down and to the left, not a straight column, because a row has 10 squares and 10 is not said when we count in 3s. The picture repeats every 3 rows: 33, 36 and 39 sit under 3, 6 and 9.",
+      "val": [
+        "slanting lines",
+        "repeats every 3 rows"
+      ],
+      "look_for": "A child who colours carefully, says what shape they see and gives a reason that uses rows of ten. Any clear noticing counts (zig-zag, slanting, it moves left each row). Colouring to 60 shows the repeat. Do not name the word multiple.",
+      "mistakes": [
+        "Colouring a number that is not counted in 3s (say the numbers out loud first).",
+        "Expecting a straight column like the 10s."
+      ],
+      "mins": 8
+    }
+  },
+  "talk": {
+    "question": "Counting in tens makes one column on the square. Does counting in fives make one column too? Circle Yes or No. Use your 100 square to show why.",
+    "starter": "I think ... because ...",
+    "answer": "No. Counting in 5s makes two columns, the 5 column and the 10 column. A row has ten squares, so two jumps of five fill one row and the next jump starts the next row in the 5 column.",
+    "look_for": "A reason that uses the row of ten (not just because I saw it on my square)."
+  },
+  "exit": [
+    {
+      "id": "E1",
+      "text": "Count in 5s. What are the next two numbers?",
+      "parts": [
+        {
+          "l": "",
+          "text": "35, 40, 45, ___, ___",
+          "ans": "50, 55",
+          "val": [
+            50,
+            55
+          ]
+        }
+      ],
+      "answer": "50, 55",
+      "val": [
+        50,
+        55
+      ],
+      "solution": "Counting in fives: 45, then 50, then 55.",
+      "mistakes": [
+        "Writing 46 and 47.",
+        "Counting in tens (55 and 65)."
+      ]
+    },
+    {
+      "id": "E2",
+      "text": "A counter is on 26 on your 100 square. First it moves down 1 row. Then it moves right 1 square.",
+      "parts": [
+        {
+          "l": "a",
+          "text": "After going down it is on ___.",
+          "ans": "36",
+          "val": 36
+        },
+        {
+          "l": "b",
+          "text": "After going right it is on ___.",
+          "ans": "37",
+          "val": 37
+        }
+      ],
+      "answer": "36, then 37",
+      "val": [
+        36,
+        37
+      ],
+      "solution": "Down one row is 10 more: 36. Right one square is 1 more: 37.",
+      "mistakes": [
+        "Writing 27 for down.",
+        "Writing 46 (adding 20)."
+      ]
+    },
+    {
+      "id": "E3",
+      "text": "Mei counts in 2s: 2, 4, 6, 8 and so on. Will she say 25?",
+      "parts": [
+        {
+          "l": "",
+          "text": "Circle Yes or No.",
+          "ans": "No",
+          "val": "no"
+        }
+      ],
+      "answer": "No. 25 ends in 5. Counting in 2s ends in 0, 2, 4, 6 or 8.",
+      "val": [
+        "no"
+      ],
+      "solution": "Counting in twos, the last digit is always 0, 2, 4, 6 or 8. 25 ends in 5, so Mei does not say 25.",
+      "mistakes": [
+        "Saying yes because 25 is next to 24 or 26."
+      ]
+    }
+  ],
+  "look_back": {
+    "hardest": [
+      "finding my place on the square",
+      "counting in 2s, 5s or 10s",
+      "moving down a row",
+      "the pattern where the gap grows (Think harder)",
+      "something else"
+    ],
+    "helped": [
+      "the 100 square or counters",
+      "drawing it",
+      "trying again",
+      "I asked for help",
+      "I was not stuck"
+    ],
+    "next": [
+      "drawing it",
+      "using counters",
+      "checking my answer",
+      "asking a question"
+    ]
+  },
+  "home_practice": [
+    {
+      "id": "H1",
+      "tier": "start",
+      "text": "Count in 5s. Write the next three numbers: 40, 45, 50, ___, ___, ___.",
+      "answer": "55, 60, 65",
+      "val": [
+        55,
+        60,
+        65
+      ],
+      "solution": "Each number is 5 more: 50, 55, 60, 65.",
+      "visual": {
+        "type": "number_line",
+        "start": 40,
+        "end": 65,
+        "step": 5,
+        "label_every": 5,
+        "hide": [
+          55,
+          60,
+          65
+        ],
+        "hw": 72,
+        "width": 440
+      }
+    },
+    {
+      "id": "H2",
+      "tier": "start",
+      "text": "On the 100 square a counter is on 58. It moves down 1 row. Which number is it on?",
+      "answer": "68",
+      "val": 68,
+      "solution": "Down one row is 10 more. 58 and 10 more is 68.",
+      "visual": {
+        "type": "hundred",
+        "rows": [
+          5,
+          7
+        ],
+        "cols": [
+          7,
+          9
+        ],
+        "mark": [
+          58
+        ],
+        "hide": [
+          67,
+          68,
+          69
+        ],
+        "qmarks": true,
+        "cell": 46
+      }
+    },
+    {
+      "id": "H3",
+      "tier": "start",
+      "text": "(a) Count in 2s: 2, 4, 6, 8, ___ (b) If you keep going, will you say 17? Circle Yes or No.",
+      "answer": "10. No: 17 ends in 7, and counting in 2s ends in 0, 2, 4, 6 or 8.",
+      "val": [
+        10,
+        "no"
+      ],
+      "solution": "After 8 comes 10. Numbers counted in twos end in 0, 2, 4, 6 or 8, so 17 is not one of them."
+    },
+    {
+      "id": "H4",
+      "tier": "think",
+      "text": "What is the next number? 6, 8, 11, 15, 20, ___.",
+      "answer": "26 (the gaps are 2, 3, 4, 5, then 6)",
+      "val": 26,
+      "solution": "The gaps are 2, 3, 4, 5. Each gap is 1 bigger, so the next gap is 6 and 20 + 6 = 26."
+    },
+    {
+      "id": "H5",
+      "tier": "go",
+      "text": "Find a calendar. Pick 3 dates that have another date straight below them. (a) How much more is the date straight below each one? (b) Is it always the same? Write why.",
+      "answer": "7 more each time. A row on a calendar is one week of 7 days, like a row of ten on the 100 square.",
+      "val": 7,
+      "solution": "A calendar row has 7 days, so the date straight below is 7 more. On the 100 square a row has 10 numbers, so the number below is 10 more."
+    }
+  ],
+  "online_practice": {
+    "key": "t1l04",
+    "title": "The 100 Square Explorer",
+    "topic": "Patterns on the 100 square",
+    "items": [
+      {
+        "id": "c1",
+        "tier": "core",
+        "type": "number",
+        "q": "Count in 5s: 20, 25, 30. What number comes next?",
+        "answer": 35,
+        "hint": "Count on 5 more from 30 with one hand.",
+        "steps": [
+          "Each step is 5 more.",
+          "5 more than 30 is 35.",
+          "The next number is 35."
+        ],
+        "slips": [
+          {
+            "a": [
+              31
+            ],
+            "say": "31 is only 1 more. Counting in 5s, the jump is 5."
+          },
+          {
+            "a": [
+              40
+            ],
+            "say": "40 is 10 more. Counting in 5s, the jump is 5."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "s": [
+              5,
+              10,
+              15,
+              20,
+              25,
+              30,
+              35,
+              40
+            ]
+          },
+          "derive": {
+            "a": "s+5",
+            "b": "s+10"
+          },
+          "q": "Count in 5s: {s}, {a}, {b}. What number comes next?",
+          "answer": "s+15",
+          "hint": "Count on 5 more from {b}.",
+          "steps": [
+            "Each step is 5 more.",
+            "5 more than {b} is {ans}.",
+            "The next number is {ans}."
+          ]
+        }
+      },
+      {
+        "id": "c2",
+        "tier": "core",
+        "type": "number",
+        "q": "Count in 10s: 13, 23, 33. What number comes next?",
+        "answer": 43,
+        "hint": "Ten more is one row down on the 100 square.",
+        "steps": [
+          "Each step is 10 more.",
+          "10 more than 33 is 43.",
+          "The next number is 43."
+        ],
+        "slips": [
+          {
+            "a": [
+              34
+            ],
+            "say": "34 is only 1 more. Counting in 10s, the jump is 10."
+          },
+          {
+            "a": [
+              53
+            ],
+            "say": "53 is 20 more. One jump is 10."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "s": [
+              3,
+              7,
+              12,
+              15,
+              24,
+              28,
+              31,
+              46
+            ]
+          },
+          "derive": {
+            "a": "s+10",
+            "b": "s+20"
+          },
+          "q": "Count in 10s: {s}, {a}, {b}. What number comes next?",
+          "answer": "s+30",
+          "hint": "Ten more is one row down on the 100 square.",
+          "steps": [
+            "Each step is 10 more.",
+            "10 more than {b} is {ans}.",
+            "The next number is {ans}."
+          ]
+        }
+      },
+      {
+        "id": "c3",
+        "tier": "core",
+        "type": "number",
+        "q": "A counter is on 34 on the 100 square. The counter moves down 1 row. Which number is it on?",
+        "answer": 44,
+        "hint": "Down one row is 10 more.",
+        "steps": [
+          "One step down is one row.",
+          "A row has ten squares, so down is 10 more.",
+          "10 more than 34 is 44."
+        ],
+        "slips": [
+          {
+            "a": [
+              35
+            ],
+            "say": "35 is one square to the right. We moved down, which is 10 more."
+          },
+          {
+            "a": [
+              24
+            ],
+            "say": "24 is one square up. We moved down, so add 10."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "n": [
+              12,
+              25,
+              34,
+              41,
+              58,
+              63,
+              76,
+              87
+            ]
+          },
+          "q": "A counter is on {n} on the 100 square. The counter moves down 1 row. Which number is it on?",
+          "answer": "n+10",
+          "hint": "Down one row is 10 more.",
+          "steps": [
+            "One step down is one row.",
+            "A row has ten squares, so down is 10 more.",
+            "10 more than {n} is {ans}."
+          ]
+        },
+        "fig": {
+          "type": "hundred",
+          "mark": [
+            "{n}"
+          ],
+          "cell": 36
+        },
+        "fig_base": {
+          "type": "hundred",
+          "mark": [
+            12
+          ],
+          "cell": 36
+        }
+      },
+      {
+        "id": "c4",
+        "tier": "core",
+        "type": "number",
+        "q": "A counter is on 52 on the 100 square. The counter moves right 1 square. Which number is it on?",
+        "answer": 53,
+        "hint": "Right is 1 more.",
+        "steps": [
+          "One step right is 1 more.",
+          "1 more than 52 is 53.",
+          "The counter is on 53."
+        ],
+        "slips": [
+          {
+            "a": [
+              62
+            ],
+            "say": "62 is one row down. We moved right, which is 1 more."
+          },
+          {
+            "a": [
+              51
+            ],
+            "say": "51 is one square to the left."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "n": [
+              12,
+              25,
+              34,
+              41,
+              58,
+              63,
+              76,
+              87
+            ]
+          },
+          "q": "A counter is on {n} on the 100 square. The counter moves right 1 square. Which number is it on?",
+          "answer": "n+1",
+          "hint": "Right is 1 more.",
+          "steps": [
+            "One step right is 1 more.",
+            "1 more than {n} is {ans}.",
+            "The counter is on {ans}."
+          ]
+        },
+        "fig": {
+          "type": "hundred",
+          "mark": [
+            "{n}"
+          ],
+          "cell": 36
+        },
+        "fig_base": {
+          "type": "hundred",
+          "mark": [
+            12
+          ],
+          "cell": 36
+        }
+      },
+      {
+        "id": "c5",
+        "tier": "core",
+        "type": "number",
+        "q": "Count in 2s: 6, 8, 10. What number comes next?",
+        "answer": 12,
+        "hint": "Each step is 2 more.",
+        "steps": [
+          "Each step is 2 more.",
+          "2 more than 10 is 12.",
+          "The next number is 12."
+        ],
+        "slips": [
+          {
+            "a": [
+              11
+            ],
+            "say": "11 is only 1 more. Counting in 2s, the jump is 2."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "s": [
+              2,
+              4,
+              6,
+              8,
+              10,
+              14,
+              20,
+              26
+            ]
+          },
+          "derive": {
+            "a": "s+2",
+            "b": "s+4"
+          },
+          "q": "Count in 2s: {s}, {a}, {b}. What number comes next?",
+          "answer": "s+6",
+          "hint": "Each step is 2 more.",
+          "steps": [
+            "Each step is 2 more.",
+            "2 more than {b} is {ans}.",
+            "The next number is {ans}."
+          ]
+        }
+      },
+      {
+        "id": "c6",
+        "tier": "core",
+        "type": "choice",
+        "q": "Which number do you say when you count in 5s from 5?",
+        "options": [
+          "22",
+          "35",
+          "48",
+          "53"
+        ],
+        "answer": "35",
+        "hint": "Numbers counted in 5s end in 5 or 0.",
+        "steps": [
+          "Counting in 5s: 5, 10, 15, 20, 25, 30, 35.",
+          "35 ends in 5.",
+          "The others end in 2, 8 and 3."
+        ],
+        "slips": [
+          {
+            "a": [
+              "32"
+            ],
+            "say": "32 ends in 2. Counting in 5s, the last digit is 5 or 0."
+          }
+        ]
+      },
+      {
+        "id": "t1",
+        "tier": "stretch",
+        "type": "number",
+        "q": "On the 100 square, a counter is on 8. The counter moves down 3 rows. What number is it on at the end?",
+        "answer": 38,
+        "easier": "c3",
+        "hint": "One row down is 10 more. Three rows are 30 more.",
+        "steps": [
+          "Each row down is 10 more.",
+          "3 rows down is 30 more.",
+          "30 more than 8 is 38."
+        ],
+        "slips": [
+          {
+            "a": [
+              11
+            ],
+            "say": "11 is only 3 more. Each row down is 10 more, so 3 rows is 30 more."
+          },
+          {
+            "a": [
+              30
+            ],
+            "say": "30 is the number of squares moved. Start from 8."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "n": [
+              3,
+              8,
+              14,
+              22,
+              27
+            ],
+            "r": [
+              2,
+              3,
+              4
+            ]
+          },
+          "derive": {
+            "m": "r*10"
+          },
+          "q": "On the 100 square, a counter is on {n}. The counter moves down {r} rows. What number is it on at the end?",
+          "answer": "n+r*10",
+          "hint": "One row down is 10 more. {r} rows are {m} more.",
+          "steps": [
+            "Each row down is 10 more.",
+            "{r} rows down is {m} more.",
+            "{m} more than {n} is {ans}."
+          ]
+        },
+        "fig": {
+          "type": "hundred",
+          "mark": [
+            "{n}"
+          ],
+          "cell": 36
+        },
+        "fig_base": {
+          "type": "hundred",
+          "mark": [
+            3
+          ],
+          "cell": 36
+        }
+      },
+      {
+        "id": "t2",
+        "tier": "stretch",
+        "type": "number",
+        "q": "Look at the pattern: 3, 4, 6, 9, __. The gaps grow by 1 each time. What number comes next?",
+        "answer": 13,
+        "easier": "c1",
+        "hint": "The gaps are 1, 2, 3. What is the next gap?",
+        "steps": [
+          "The gaps are 1, 2, 3.",
+          "The next gap is 4.",
+          "4 more than 9 is 13."
+        ],
+        "slips": [
+          {
+            "a": [
+              12
+            ],
+            "say": "12 adds 3 again. The gap must grow by 1, so the next gap is 4."
+          },
+          {
+            "a": [
+              10
+            ],
+            "say": "10 adds 1. The gaps grow: 1, 2, 3, then 4."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "s": [
+              2,
+              3,
+              5,
+              7,
+              10,
+              12,
+              15,
+              20
+            ]
+          },
+          "derive": {
+            "b": "s+1",
+            "c": "s+3",
+            "d": "s+6"
+          },
+          "q": "Look at the pattern: {s}, {b}, {c}, {d}, __. The gaps grow by 1 each time. What number comes next?",
+          "answer": "s+10",
+          "hint": "The gaps are 1, 2, 3. What is the next gap?",
+          "steps": [
+            "The gaps are 1, 2, 3.",
+            "The next gap is 4.",
+            "4 more than {d} is {ans}."
+          ]
+        }
+      },
+      {
+        "id": "t3",
+        "tier": "stretch",
+        "type": "number",
+        "q": "Mei counts in 2s from 2 up to 30. Ali counts in 5s from 5 up to 30. How many numbers do they both say?",
+        "answer": 3,
+        "easier": "c5",
+        "hint": "List both. Which numbers are in both lists?",
+        "steps": [
+          "Mei says the numbers ending in 0, 2, 4, 6, 8. Ali says the numbers ending in 5 or 0.",
+          "Both lists have 10, 20 and 30.",
+          "They both say 3 numbers."
+        ],
+        "slips": [
+          {
+            "a": [
+              1
+            ],
+            "say": "There are more than one. Keep looking for numbers in both lists: 10, then?"
+          },
+          {
+            "a": [
+              6
+            ],
+            "say": "6 is how many numbers Ali says. Count only the numbers in both lists."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "N": [
+              20,
+              30,
+              40,
+              50,
+              60
+            ]
+          },
+          "q": "Mei counts in 2s from 2 up to {N}. Ali counts in 5s from 5 up to {N}. How many numbers do they both say?",
+          "answer": "N//10",
+          "hint": "List both. Which numbers are in both lists?",
+          "steps": [
+            "Mei says the numbers ending in 0, 2, 4, 6, 8. Ali says the numbers ending in 5 or 0.",
+            "The numbers in both lists end in 0.",
+            "They both say {ans} numbers up to {N}."
+          ]
+        }
+      },
+      {
+        "id": "t4",
+        "tier": "stretch",
+        "type": "choice",
+        "q": "Which pattern has gaps that grow?",
+        "options": [
+          "3, 6, 9, 12",
+          "3, 4, 6, 9",
+          "3, 3, 3, 3",
+          "12, 9, 6, 3"
+        ],
+        "answer": "3, 4, 6, 9",
+        "easier": "c2",
+        "hint": "Find the gap between each pair of numbers.",
+        "steps": [
+          "3, 4, 6, 9 has gaps 1, 2, 3.",
+          "The other lists have gaps that stay the same or get smaller.",
+          "So 3, 4, 6, 9 is the pattern with growing gaps."
+        ],
+        "slips": [
+          {
+            "a": [
+              "3, 6, 9, 12"
+            ],
+            "say": "That one always adds 3, so the gap stays the same."
+          }
+        ]
+      },
+      {
+        "id": "g1",
+        "tier": "challenge",
+        "type": "number",
+        "q": "Look at this chain: 1, 4, 5, 9, 14, __. After 1 and 4, each number is the last two numbers added together. What comes next?",
+        "answer": 23,
+        "easier": "t2",
+        "hint": "Add the last two numbers: 9 and 14.",
+        "steps": [
+          "Add the last two numbers.",
+          "9 + 14 = 23.",
+          "The next number is 23."
+        ],
+        "slips": [
+          {
+            "a": [
+              19
+            ],
+            "say": "19 is 14 and 5 added. Add the two numbers just before: 9 and 14."
+          },
+          {
+            "a": [
+              28
+            ],
+            "say": "28 is 14 + 14. Add the last two numbers 9 and 14."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "a": [
+              1,
+              2,
+              3
+            ],
+            "b": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "derive": {
+            "c": "a+b",
+            "d": "a+2*b",
+            "e": "2*a+3*b"
+          },
+          "q": "Look at this chain: {a}, {b}, {c}, {d}, {e}, __. After {a} and {b}, each number is the last two numbers added together. What comes next?",
+          "answer": "3*a+5*b",
+          "hint": "Add the last two numbers: {d} and {e}.",
+          "steps": [
+            "Add the last two numbers.",
+            "{d} + {e} = {ans}.",
+            "The next number is {ans}."
+          ]
+        }
+      },
+      {
+        "id": "g2",
+        "tier": "challenge",
+        "type": "number",
+        "q": "Two patterns are mixed in one list: 5, 50, 10, 45, 15, 40, __. What number comes next?",
+        "answer": 20,
+        "easier": "t2",
+        "hint": "Look at every second number. Which rule comes next?",
+        "steps": [
+          "The 1st, 3rd and 5th numbers are 5, 10, 15: they go up by 5.",
+          "The next one in that rule is 20.",
+          "So 20 comes next."
+        ],
+        "slips": [
+          {
+            "a": [
+              35
+            ],
+            "say": "35 is the number after next. The next number follows the first rule: 5, 10, 15, then?"
+          },
+          {
+            "a": [
+              45
+            ],
+            "say": "45 is already in the list. Check which rule comes next."
+          }
+        ]
+      },
+      {
+        "id": "g3",
+        "tier": "challenge",
+        "type": "number",
+        "q": "Look at a block of 4 squares on the 100 square. 34 and 35 are on top. 44 and 45 are below. Add 34 and 45. What is the total?",
+        "answer": 79,
+        "easier": "t1",
+        "hint": "Add the top left number and the bottom right number.",
+        "steps": [
+          "The top left number is 34 and the bottom right is 45.",
+          "34 + 45 = 79.",
+          "The other slant, 35 + 44, also makes 79."
+        ],
+        "slips": [
+          {
+            "a": [
+              69
+            ],
+            "say": "69 is 34 + 35. Add the top left (34) and the bottom right (45)."
+          },
+          {
+            "a": [
+              78
+            ],
+            "say": "78 is 34 + 44. Add 34 and 45."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "a": [
+              21,
+              22,
+              23,
+              34,
+              35,
+              46,
+              57,
+              63
+            ]
+          },
+          "derive": {
+            "b": "a+1",
+            "c": "a+10",
+            "d": "a+11"
+          },
+          "q": "Look at a block of 4 squares on the 100 square. {a} and {b} are on top. {c} and {d} are below. Add {a} and {d}. What is the total?",
+          "answer": "a+d",
+          "hint": "Add the top left number and the bottom right number.",
+          "steps": [
+            "The top left number is {a} and the bottom right is {d}.",
+            "{a} + {d} = {ans}.",
+            "The other slant, {b} + {c}, makes the same total."
+          ]
+        }
+      },
+      {
+        "id": "g4",
+        "tier": "challenge",
+        "type": "selfcheck",
+        "q": "Hide a number on the 100 square. Write 3 clues for your grown-up. For example: you say it when you count in 5s; it is more than 40; it is less than 50. Check that only ONE number fits.",
+        "hint": "Pick a secret number first. Then write clues that are true for it.",
+        "steps": [
+          "Check your secret number fits every clue.",
+          "List the numbers that fit the first clue. Cross out any that break clue 2 or clue 3.",
+          "Exactly one number should be left. For example: counting in 5s, more than 40 and less than 50 leaves only 45."
+        ]
+      }
+    ]
+  },
+  "parent": {
+    "summary": "We explored the 100 square. Your child counted in 10s, 5s and 2s with counters and saw the patterns: counting in tens makes one column, fives make two columns, twos make stripes. We also found that going right adds 1 and going down one row adds 10. Term 1 goes beyond the school Primary 1 syllabus on purpose, so some questions are harder than school work. Your child chooses how far to go, and can use the square and counters. Each week we suggest Home Practice (about 15 minutes); pages 3 to 5 and online practice are optional.",
+    "words": [
+      "row: a line of 10 numbers going across",
+      "column: a line of numbers going down",
+      "ten more: one row down on the 100 square",
+      "last digit: the ones digit, which tells us which counting pattern a number belongs to"
+    ],
+    "try_home": [
+      "Counters on the square: say 5, 10, 15 and let your child cover each number. Swap and make a mistake on purpose for them to find. Keep small things away from mouths and little ones.",
+      "Move it: put a counter on any number. Call moves such as down 2 rows, right 3. Ask what number it is on now, and how they know.",
+      "Look for rows: a calendar has rows of 7. Ask what the date straight below adds (it adds 7), and why."
+    ],
+    "ask": [
+      "How do you know?",
+      "What pattern do you see?",
+      "What would the next number be, and why?"
+    ],
+    "when_stuck": "Please let your child use the printed square and counters, and wait 10 seconds before helping. Asking what could you try? works better than giving the answer. Please do not hurry. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days.",
+    "next": "Lesson 5: Make-a-Ten Adding. Online practice: your tutor will share the practice link. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. The recording link is private to your family: please do not share it.",
+    "report_line": "Your child is learning to notice patterns in numbers and to say why. This week: counting in 10s, 5s and 2s on the 100 square, and moving by rows and squares.",
+    "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why.",
+    "quote": "Going across a row adds 1. Going down a row adds 10.",
+    "next_materials": [
+      "About 20 small things of two kinds (buttons, pasta, clips)",
+      "The kit page cut out (tens bars and ones squares)",
+      "Pencil, rubber and paper"
+    ]
+  },
+  "workbook": {
+    "header": "Whole Numbers: patterns",
+    "hint_p1": "Use your 100 square, counters or a drawing. Say your answer out loud, then write it.",
+    "hint_p3": "Use your 100 square (the kit page), counters or a drawing. Then write how you know. Choose any question, in any order.",
+    "kits": [
+      {
+        "type": "hundred",
+        "title": "Kit page: the 100 square",
+        "width": 100,
+        "intro": "A grown-up prints this page and keeps it flat. No cutting is needed. Put counters on top of the numbers. For the Investigation, colour it lightly so you can still read the numbers."
+      }
+    ],
+    "choice_after": 2,
+    "home_hint": "Use your 100 square or draw it. Go further (question 5) is optional. Small things stay on the table, away from mouths and little brothers and sisters."
+  },
+  "safeguarding": [
+    "Counters and small things stay on the table: nothing goes in the mouth or ears. No matches, toothpicks or anything sharp. Keep small things away from younger brothers and sisters.",
+    "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
+    "Nobody holds paper or a board up to the camera. Children tick their own work against the answer slide, answer together on a count of three, or show fingers or a thumb for a choice. There is no private chat.",
+    "Never read out a child's name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is unmuted. Children may mute and keep their cameras off. A child's page is never shown.",
+    "A child who is still stuck ticks 'I am still stuck' on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for up to 90 days. The tutor then helps in the open session next lesson. No private messages to children, and no personal phones.",
+    "The look-back is never collected in front of the group or read out. A pass is always allowed."
+  ],
+  "tutor_prep": [
+    "Say plainly if a parent asks: Term 1 goes beyond the school Primary 1 syllabus on purpose. Start here is reached with the 100 square and counters; the growing-gap and sum-of-two sequences sit at Think harder or later. Do not call it MOE-aligned.",
+    "Solve every workbook question yourself first, including the colouring.",
+    "Tell parents a week before: print workbook pages 1 to 6 (page 6 is the 100 square, no cutting needed), find about 12 counters and two or three colours. Counters stay away from mouths and younger children.",
+    "Have the slides open and check the 100 square on screen share. Keep a visible clock: the deck has no timer slide.",
+    "Test the recording once with several tiles before the first live class: check that it captures the tutor, the shared screen and any voice that is not muted. Write the setting you used in your tutor notes. Say the recording statement in the same words every lesson."
+  ],
+  "spare_time": {
+    "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
+    "rules": [
+      "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
+      "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+      "Never teach anything the next lesson needs. If the class is ahead, slow down: ask How do you know? and let children explain, rather than rushing on."
+    ],
+    "menu": [
+      {
+        "id": "M1",
+        "title": "Is it always true?",
+        "minutes": 4,
+        "tutor": "Ali says: when you add 10 to a number, only the tens digit changes. Is that always true? Try 23, 47 and 89 on your square.",
+        "rec": "Recording: pause. Add 10 to 23, 47 and 89. Does only the tens digit change?",
+        "answer": "Yes for 23, 47 and 89: 33, 57 and 99. The ones digit stays and the tens digit goes up by 1. But 90 plus 10 is 100, where more than one digit changes, and 95 plus 10 would run off the square (105)."
+      },
+      {
+        "id": "M2",
+        "title": "Make a puzzle for your grown-up",
+        "minutes": 4,
+        "tutor": "Hide a number on the 100 square. Write 3 clues, like: you say it when you count in 5s; it is in the third row; it is not in the 10s. Give them to your grown-up to find the number.",
+        "rec": "Recording: pause. Hide a number on the square and write 3 clues for a grown-up to find.",
+        "answer": "Many answers are right. Check that the clues fit the hidden number and fit only one number. The example clues (counting in 5s, third row, not in the 10s) give 25 only."
+      },
+      {
+        "id": "M3",
+        "title": "Teach it back",
+        "minutes": 3,
+        "tutor": "Pretend a toy has never seen the 100 square. Teach it why counting in 10s makes a straight column.",
+        "rec": "Recording: pause. Teach a grown-up or a toy why counting in 10s makes a column.",
+        "answer": "Each row has ten squares. Ten more is one whole row further on, which is the square straight below. So the numbers 10, 20, 30 line up in the last column."
+      }
+    ]
+  }
+}

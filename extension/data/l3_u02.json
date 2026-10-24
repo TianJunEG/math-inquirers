@@ -1,0 +1,1030 @@
+{
+ "schema_version": 1,
+ "level": 3,
+ "unit": 2,
+ "id": "L3U02",
+ "title": "Find the digit",
+ "topic": "Addition and subtraction",
+ "holiday_lesson": 2,
+ "goal": "I can find missing digits in sums and take-aways. I can solve magic squares and number pyramids.",
+ "learn": {
+  "intro": "In a missing-digit sum, work one column at a time. Start with the ones. Remember to add the digit you carried.",
+  "example": {
+   "problem": "Find the 2 missing digits in this sum.",
+   "figure": {
+    "type": "l3_vsum",
+    "heads": [
+     "Th",
+     "H",
+     "T",
+     "O"
+    ],
+    "width_mm": 64,
+    "lines": [
+     {
+      "sign": "",
+      "cells": [
+       4,
+       5,
+       null,
+       7
+      ]
+     },
+     {
+      "sign": "+",
+      "cells": [
+       1,
+       null,
+       6,
+       8
+      ],
+      "rule": true
+     },
+     {
+      "sign": "",
+      "cells": [
+       5,
+       8,
+       9,
+       5
+      ]
+     }
+    ]
+   },
+   "steps": [
+    "Ones: 7 + 8 = 15. Write 5 and carry 1.",
+    "Tens: ? + 6 + 1 carried must end in 9. So ? is 2.",
+    "Hundreds: 5 + ? makes 8. So ? is 3.",
+    "Check the thousands: 4 + 1 = 5. It matches."
+   ],
+   "answer": "4527 + 1368 = 5895. The missing digits are 2 and 3."
+  },
+  "howto": {
+   "title": "How to find a missing digit",
+   "steps": [
+    "Look at the ones column first.",
+    "Write the carried 1 above the next column.",
+    "For a take-away, turn it round and add to check."
+   ]
+  },
+  "try": {
+   "text": "Find the missing digit. {b}\n3?48 + 2517 = 5965",
+   "answer": {
+    "value": [
+     "4"
+    ],
+    "text": "4"
+   },
+   "explanation": "Ones: 8 + 7 = 15, write 5 and carry 1. Tens: 4 + 1 + 1 = 6. Hundreds: ? + 5 makes 9, so ? is 4. Thousands: 3 + 2 = 5.",
+   "id": "L3U02-L01"
+  }
+ },
+ "items": [
+  {
+   "id": "L3U02-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "Find the missing digit in each sum.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "3?46 + 1251 = 4597    The missing digit is {b}.",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    },
+    {
+     "label": "b",
+     "text": "26?9 + 1435 = 4104    The missing digit is {b}.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    }
+   ],
+   "explanation": "(a) Ones 6 + 1 = 7 and tens 4 + 5 = 9 are fine. Hundreds: ? + 2 = 5, so ? is 3. (b) Ones: 9 + 5 = 14, carry 1. Tens: ? + 3 + 1 ends in 0, so ? is 6."
+  },
+  {
+   "id": "L3U02-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "Find the missing digit in each take-away.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "6405 - 2?18 = 3687    The missing digit is {b}.",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    },
+    {
+     "label": "b",
+     "text": "9?30 - 4617 = 4513    The missing digit is {b}.",
+     "answer": {
+      "value": [
+       "1"
+      ],
+      "text": "1"
+     }
+    }
+   ],
+   "explanation": "Turn each one round and add. (a) 3687 + 2718 = 6405, so the digit is 7. (b) 4513 + 4617 = 9130, so the digit is 1."
+  },
+  {
+   "id": "L3U02-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "A theatre sells 3875 tickets on Saturday and 2968 tickets on Sunday.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "It sells {b} tickets in all.",
+     "answer": {
+      "value": [
+       "6843"
+      ],
+      "text": "6843"
+     }
+    },
+    {
+     "label": "b",
+     "text": "It sells {b} more tickets on Saturday than on Sunday.",
+     "answer": {
+      "value": [
+       "907"
+      ],
+      "text": "907"
+     }
+    }
+   ],
+   "explanation": "(a) 3875 + 2968 = 6843. (b) 3875 - 2968 = 907."
+  },
+  {
+   "id": "L3U02-S04",
+   "tier": "start",
+   "page": 1,
+   "text": "A baker has 8000 g of flour. He uses 2475 g on Monday and 3150 g on Tuesday. How many grams of flour are left? {b} g",
+   "answer": {
+    "value": [
+     "2375"
+    ],
+    "text": "2375"
+   },
+   "explanation": "Add what he used: 2475 + 3150 = 5625. Then 8000 - 5625 = 2375."
+  },
+  {
+   "id": "L3U02-S05",
+   "tier": "start",
+   "page": 1,
+   "text": "Siti works out 5000 - 1768 = 3342.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Check by adding: 3342 + 1768 = {b}",
+     "answer": {
+      "value": [
+       "5110"
+      ],
+      "text": "5110"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Is Siti right?   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The correct answer is {b}.",
+     "answer": {
+      "value": [
+       "3232"
+      ],
+      "text": "3232"
+     }
+    }
+   ],
+   "explanation": "The check should give 5000, but 3342 + 1768 = 5110. So Siti is not right. 5000 - 1768 = 3232."
+  },
+  {
+   "id": "L3U02-S06",
+   "tier": "start",
+   "page": 1,
+   "text": "Look for a pattern.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "2641 + {b} = 9999",
+     "answer": {
+      "value": [
+       "7358"
+      ],
+      "text": "7358"
+     }
+    },
+    {
+     "label": "b",
+     "text": "10 000 - 2641 = {b}",
+     "answer": {
+      "value": [
+       "7359"
+      ],
+      "text": "7359"
+     }
+    }
+   ],
+   "explanation": "(a) Each digit and its partner add up to 9: 2 and 7, 6 and 3, 4 and 5, 1 and 8. That gives 7358. (b) 10 000 is 1 more than 9999, so the answer is 1 more than 7358."
+  },
+  {
+   "id": "L3U02-S07",
+   "tier": "start",
+   "page": 2,
+   "text": "Every row, column and diagonal has the same total.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The magic total is {b}.",
+     "answer": {
+      "value": [
+       "1050"
+      ],
+      "text": "1050"
+     }
+    },
+    {
+     "label": "b",
+     "text": "A = {b}   B = {b}   C = {b}",
+     "answer": {
+      "value": [
+       "400",
+       "250",
+       "500"
+      ],
+      "text": "A = 400, B = 250, C = 500",
+      "list": true
+     }
+    }
+   ],
+   "explanation": "Middle row: 550 + 350 + 150 = 1050. Top row: 200 + 450 + A = 1050, so A = 400. Middle column: 450 + 350 + B = 1050, so B = 250. Bottom row: 300 + 250 + C = 1050, so C = 500.",
+   "figure": {
+    "type": "l3_grid",
+    "rows": [
+     [
+      200,
+      450,
+      {
+       "t": "A",
+       "fill": "none",
+       "dash": true
+      }
+     ],
+     [
+      550,
+      350,
+      150
+     ],
+     [
+      300,
+      {
+       "t": "B",
+       "fill": "none",
+       "dash": true
+      },
+      {
+       "t": "C",
+       "fill": "none",
+       "dash": true
+      }
+     ]
+    ],
+    "cw": 90,
+    "ch": 64,
+    "width_mm": 56
+   },
+   "figside": true
+  },
+  {
+   "id": "L3U02-S08",
+   "tier": "start",
+   "page": 2,
+   "text": "A brick is made by adding the 2 bricks below it.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "P = {b}",
+     "answer": {
+      "value": [
+       "750"
+      ],
+      "text": "750"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Q = {b}",
+     "answer": {
+      "value": [
+       "480"
+      ],
+      "text": "480"
+     }
+    }
+   ],
+   "explanation": "830 + P = 1580, so P = 750. Q + 270 = 750, so Q = 480.",
+   "figure": {
+    "type": "l3_pyramid",
+    "rows": [
+     [
+      1580
+     ],
+     [
+      830,
+      "@P"
+     ],
+     [
+      350,
+      "@Q",
+      270
+     ]
+    ],
+    "width_mm": 60
+   },
+   "figside": true
+  },
+  {
+   "id": "L3U02-S09",
+   "tier": "start",
+   "page": 2,
+   "text": "Find the 2 missing digits.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The digit in the hundreds place of the top number is {b}.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The digit in the tens place of the number being added is {b}.",
+     "answer": {
+      "value": [
+       "9"
+      ],
+      "text": "9"
+     }
+    }
+   ],
+   "explanation": "Ones: 2 + 6 = 8. Tens: 5 + ? ends in 4, so ? is 9, carry 1. Hundreds: ? + 4 + 1 ends in 1, so ? is 6, carry 1. Thousands: 3 + 2 + 1 = 6.",
+   "figure": {
+    "type": "l3_vsum",
+    "heads": [
+     "Th",
+     "H",
+     "T",
+     "O"
+    ],
+    "width_mm": 60,
+    "lines": [
+     {
+      "sign": "",
+      "cells": [
+       3,
+       null,
+       5,
+       2
+      ]
+     },
+     {
+      "sign": "+",
+      "cells": [
+       2,
+       4,
+       null,
+       6
+      ],
+      "rule": true
+     },
+     {
+      "sign": "",
+      "cells": [
+       6,
+       1,
+       4,
+       8
+      ]
+     }
+    ]
+   },
+   "figside": true
+  },
+  {
+   "id": "L3U02-S10",
+   "tier": "start",
+   "page": 2,
+   "text": "Each letter stands for a digit. The same letter always means the same digit. Find the digit.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "A3 + 2A = 56    A = {b}",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    },
+    {
+     "label": "b",
+     "text": "C5 + C5 = 90    C = {b}",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    }
+   ],
+   "explanation": "(a) Try A = 3: 33 + 23 = 56. It works. (b) Two equal numbers add to 90, so each is 45. Then C = 4."
+  },
+  {
+   "id": "L3U02-S11",
+   "tier": "start",
+   "page": 3,
+   "text": "Find the 2 missing digits.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The digit in the hundreds place of the top number is {b}.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The digit in the tens place of the number taken away is {b}.",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    }
+   ],
+   "explanation": "Turn it round: 3657 + 2845 = 6502. Or subtract by columns: 12 - 5 = 7, 10 - 1 - 4 = 5, 15 - 1 - 8 = 6, 6 - 1 - 2 = 3. The top number is 6502.",
+   "figure": {
+    "type": "l3_vsum",
+    "heads": [
+     "Th",
+     "H",
+     "T",
+     "O"
+    ],
+    "width_mm": 60,
+    "lines": [
+     {
+      "sign": "",
+      "cells": [
+       6,
+       null,
+       0,
+       2
+      ]
+     },
+     {
+      "sign": "-",
+      "cells": [
+       2,
+       8,
+       null,
+       5
+      ],
+      "rule": true
+     },
+     {
+      "sign": "",
+      "cells": [
+       3,
+       6,
+       5,
+       7
+      ]
+     }
+    ]
+   },
+   "figside": true
+  },
+  {
+   "id": "L3U02-S12",
+   "tier": "start",
+   "page": 3,
+   "text": "The sum of 2 numbers is 9000. One number is 3475. What is the other number? {b}",
+   "answer": {
+    "value": [
+     "5525"
+    ],
+    "text": "5525"
+   },
+   "explanation": "9000 - 3475 = 5525.",
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   }
+  },
+  {
+   "id": "L3U02-S13",
+   "tier": "start",
+   "page": 3,
+   "text": "Use the cards once each to make two 3-digit numbers.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The greatest sum is {b}.",
+     "answer": {
+      "value": [
+       "1595"
+      ],
+      "text": "1595"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The smallest sum is {b}.",
+     "answer": {
+      "value": [
+       "605"
+      ],
+      "text": "605"
+     }
+    }
+   ],
+   "explanation": "Greatest sum: the 2 greatest digits go in the hundreds places, the next 2 in the tens, the last 2 in the ones: 800 + 700 + 50 + 40 + 3 + 2 = 1595. Smallest: 200 + 300 + 40 + 50 + 7 + 8 = 605.",
+   "figure": {
+    "type": "l3_cards",
+    "items": [
+     2,
+     3,
+     4,
+     5,
+     7,
+     8
+    ]
+   }
+  },
+  {
+   "id": "L3U02-S14",
+   "tier": "start",
+   "page": 3,
+   "text": "A school collects cans for 3 weeks: 1875, 2430 and 1790.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "In all, the school collects {b} cans.",
+     "answer": {
+      "value": [
+       "6095"
+      ],
+      "text": "6095"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Week 2 has {b} more cans than Week 3.",
+     "answer": {
+      "value": [
+       "640"
+      ],
+      "text": "640"
+     }
+    }
+   ],
+   "explanation": "(a) 1875 + 2430 = 4305, 4305 + 1790 = 6095. (b) 2430 - 1790 = 640.",
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   }
+  },
+  {
+   "id": "L3U02-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "Letters hide digits. The same letter is the same digit. Different letters never share a digit. Find the digits.\nAB + AC = BBD",
+   "parts": [
+    {
+     "label": "a",
+     "text": "A = {b}",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "B = {b}",
+     "answer": {
+      "value": [
+       "1"
+      ],
+      "text": "1"
+     }
+    },
+    {
+     "label": "c",
+     "text": "C = {b}",
+     "answer": {
+      "value": [
+       "9"
+      ],
+      "text": "9"
+     }
+    },
+    {
+     "label": "d",
+     "text": "D = {b}",
+     "answer": {
+      "value": [
+       "0"
+      ],
+      "text": "0"
+     }
+    }
+   ],
+   "explanation": "Two 2-digit numbers make less than 200, so B = 1 and the answer starts 11. Ones: 1 + C ends in D. Tens: A + A + carry makes 11, so A = 5 with carry 1. Then 1 + C = 10, so C = 9, D = 0.",
+   "hint": "Look at the left digit of the answer. Which digit can it be?",
+   "partsrow": true,
+   "space": {
+    "rows": [
+     "My tries:",
+     ""
+    ]
+   }
+  },
+  {
+   "id": "L3U02-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "Use the cards 1, 3, 5, 6 and 8 once each. Make a 3-digit number and a 2-digit number. What is the smallest sum you can make? {b}",
+   "answer": {
+    "value": [
+     "194"
+    ],
+    "text": "194"
+   },
+   "explanation": "The smallest digit, 1, goes in the hundreds place. The next smallest, 3 and 5, go in the tens places. 6 and 8 go in the ones places. For example 136 + 58 = 194, and every such way gives 194.",
+   "figure": {
+    "type": "l3_cards",
+    "items": [
+     1,
+     3,
+     5,
+     6,
+     8
+    ]
+   },
+   "figright": true,
+   "hint": "Which digits are worth the least? Which places are worth most?",
+   "space": {
+    "rows": [
+     "My tries:",
+     "",
+     ""
+    ]
+   }
+  },
+  {
+   "id": "L3U02-T03",
+   "tier": "think",
+   "page": 4,
+   "beyond": "Magic square total",
+   "text": "Look at this magic square. Every row, column and diagonal has the same total.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The magic total is {b}.",
+     "answer": {
+      "value": [
+       "630"
+      ],
+      "text": "630"
+     }
+    },
+    {
+     "label": "b",
+     "text": "A = {b}",
+     "answer": {
+      "value": [
+       "240"
+      ],
+      "text": "240"
+     }
+    },
+    {
+     "label": "c",
+     "text": "E = {b}",
+     "answer": {
+      "value": [
+       "300"
+      ],
+      "text": "300"
+     }
+    }
+   ],
+   "explanation": "The middle number is in 4 lines (middle row, middle column, 2 diagonals). Add these 4 lines: every number counts once and the middle counts 3 more times. All the numbers make 3 totals (3 rows). So 4 totals = 3 totals + 3 × the middle, and 1 total = 3 × 210 = 630. Then A = 630 - 120 - 270 = 240 and E = 630 - 120 - 210 = 300.",
+   "hint": "The middle number is in 4 lines. Add those 4 lines.",
+   "figure": {
+    "type": "l3_grid",
+    "rows": [
+     [
+      120,
+      270,
+      {
+       "t": "A",
+       "fill": "none",
+       "dash": true
+      }
+     ],
+     [
+      {
+       "t": "",
+       "fill": "none",
+       "dash": true
+      },
+      210,
+      {
+       "t": "",
+       "fill": "none",
+       "dash": true
+      }
+     ],
+     [
+      180,
+      {
+       "t": "",
+       "fill": "none",
+       "dash": true
+      },
+      {
+       "t": "E",
+       "fill": "none",
+       "dash": true
+      }
+     ]
+    ],
+    "cw": 90,
+    "ch": 64,
+    "width_mm": 56
+   },
+   "figside": true
+  },
+  {
+   "id": "L3U02-G01",
+   "tier": "go",
+   "page": 5,
+   "text": "Letters hide digits. The same letter is the same digit. Different letters never share a digit. Find the digits.\nABC + BC = CAB",
+   "parts": [
+    {
+     "label": "a",
+     "text": "A = {b}",
+     "answer": {
+      "value": [
+       "2"
+      ],
+      "text": "2"
+     }
+    },
+    {
+     "label": "b",
+     "text": "B = {b}",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "c",
+     "text": "C = {b}",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    }
+   ],
+   "explanation": "Ones: C + C ends in B. Tens: B + B (+ carry) ends in A. Hundreds: A (+ carry) is C. Try C = 3: B = 6, carry 0. Tens: 6 + 6 = 12, so A = 2 and carry 1. 2 + 1 = 3 = C. No other digits work.",
+   "hint": "Look at the ones: C + C ends in B. List the choices for C.",
+   "partsrow": true,
+   "space": {
+    "rows": [
+     "My tries:"
+    ]
+   }
+  },
+  {
+   "id": "L3U02-G02",
+   "tier": "go",
+   "page": 5,
+   "beyond": "Pyramids with a hidden number",
+   "text": "A brick is made by adding the 2 bricks below it. The 2 bricks marked X are equal. Find X. {b}",
+   "answer": {
+    "value": [
+     "440"
+    ],
+    "text": "440"
+   },
+   "explanation": "The end bricks count once in the top brick and the 2 middle bricks 3 times each. So 200 + 6 X + 440 = 3280, 6 X = 2640 and X = 440.",
+   "figure": {
+    "type": "l3_pyramid",
+    "rows": [
+     [
+      3280
+     ],
+     [
+      null,
+      null
+     ],
+     [
+      null,
+      null,
+      null
+     ],
+     [
+      200,
+      "@X",
+      "@X",
+      440
+     ]
+    ],
+    "width_mm": 70
+   },
+   "hint": "Guess a number for X. Fill the pyramid. Is the top too big?"
+  },
+  {
+   "id": "L3U02-G03",
+   "tier": "go",
+   "page": 5,
+   "beyond": "Reversing digits",
+   "text": "Reverse the digits of a 2-digit number and add the 2 numbers.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "36 + 63 = {b}",
+     "answer": {
+      "value": [
+       "99"
+      ],
+      "text": "99"
+     }
+    },
+    {
+     "label": "b",
+     "text": "58 + 85 = {b}",
+     "answer": {
+      "value": [
+       "143"
+      ],
+      "text": "143"
+     }
+    },
+    {
+     "label": "c",
+     "text": "47 + 74 = {b}",
+     "answer": {
+      "value": [
+       "121"
+      ],
+      "text": "121"
+     }
+    },
+    {
+     "label": "d",
+     "text": "Each answer is in the {b} times table.",
+     "answer": {
+      "value": [
+       "11"
+      ],
+      "text": "11"
+     }
+    }
+   ],
+   "explanation": "99 = 9 × 11, 143 = 13 × 11, 121 = 11 × 11. A number with digits A and B is 10 A + B and its reverse is 10 B + A. Together: 11 × (A + B), always in the 11 times table.",
+   "hint": "Add the tens digit and ones digit. Compare with the answers.",
+   "partsrow": true
+  },
+  {
+   "id": "L3U02-G04",
+   "tier": "go",
+   "page": 5,
+   "text": "Make up a number pyramid puzzle of your own. The bottom row has 3 bricks. Show exactly 3 bricks and hide the other 3, so that only ONE answer fits. Swap puzzles with a grown-up.",
+   "answer": {
+    "value": [
+     "800"
+    ],
+    "text": "Answers vary. Example: top brick 800, middle left brick 370, bottom right brick 180 shown. The hidden bricks are 430 (middle right), 250 (bottom middle) and 120 (bottom left)."
+   },
+   "explanation": "In the example: 800 - 370 = 430, 430 - 180 = 250, 370 - 250 = 120.",
+   "hint": "Make a full pyramid first. Then hide 3 bricks.",
+   "space": {
+    "rows": [
+     "Draw my pyramid:"
+    ]
+   }
+  },
+  {
+   "id": "L3U02-C01",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Find the missing digit. {b}\n4?72 + 2519 = 7091",
+   "answer": {
+    "value": [
+     "5"
+    ],
+    "text": "5"
+   },
+   "explanation": "Ones: 2 + 9 = 11, carry 1. Tens: 7 + 1 + 1 = 9. Hundreds: ? + 5 ends in 0, so ? is 5 and 1 is carried. Thousands: 4 + 2 + 1 = 7."
+  },
+  {
+   "id": "L3U02-C02",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Find the missing digit. {b}\n8?04 - 3569 = 4635",
+   "answer": {
+    "value": [
+     "2"
+    ],
+    "text": "2"
+   },
+   "explanation": "Turn it round: 4635 + 3569 = 8204, so the missing digit is 2."
+  },
+  {
+   "id": "L3U02-C03",
+   "tier": "quiz",
+   "page": 6,
+   "text": "A brick is made by adding the 2 bricks below it. The brick M is {b}.",
+   "answer": {
+    "value": [
+     "520"
+    ],
+    "text": "520"
+   },
+   "explanation": "M is the sum of 240 and 280: 240 + 280 = 520.",
+   "figure": {
+    "type": "l3_pyramid",
+    "rows": [
+     [
+      1160
+     ],
+     [
+      "@M",
+      640
+     ],
+     [
+      240,
+      280,
+      360
+     ]
+    ],
+    "width_mm": 52
+   },
+   "figright": true
+  },
+  {
+   "id": "L3U02-C04",
+   "tier": "quiz",
+   "page": 6,
+   "text": "A zoo has 9000 visitors in 3 days. On Friday 2845 visitors come. On Saturday 3260 come. How many come on Sunday? {b}",
+   "answer": {
+    "value": [
+     "2895"
+    ],
+    "text": "2895"
+   },
+   "explanation": "2845 + 3260 = 6105. Then 9000 - 6105 = 2895."
+  }
+ ]
+}

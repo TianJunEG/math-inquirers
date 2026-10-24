@@ -58,7 +58,7 @@ put('p2l1-title',title_slide('p2l1-title','LESSON 1  •  WEEK 1','Digit Detecti
  'Build 3-digit numbers, find every number from digit cards by listing in order, and spot patterns on a 1000 chart.',
  'Objective: Read and build 3-digit numbers by place value (also with more than 9 tens), make every number from a set of digit cards by listing in order, find the biggest and smallest, and use patterns on a 1000 chart to count on and back in 1s, 10s and 100s. '
  'Thinking strategies taught today: MAKE A LIST IN ORDER and LOOK FOR A PATTERN. '
- 'Materials: Digit cards 0 to 9 (one set per child), place-value mat (hundreds, tens, ones), base-ten blocks or paper strips and squares, mini whiteboards, a 1000 chart page (rows of 10). '
+ 'Materials: Digit cards 0 to 9 (one set per child), place-value mat (hundreds, tens, ones), base-ten blocks or paper strips and squares, mini whiteboards, the 1000-chart pieces on the workbook page (rows of 10). '
  'Online: children cut out paper digit cards before the lesson and move them on camera; the tutor writes on the 1000-chart pieces on the slides. '
  'Time plan: warm-up 0 to 8, explore 8 to 20 (explore2 talk is 6 minutes), teaching 20 to 32 (click to reveal each step and answer), brain break 32 to 36, worksheet page 1 36 to 50 then check together 50 to 52, short teaching 52 to 57, worksheet page 2 57 to 69 then check together 69 to 72, talk time 72 to 80, exit ticket 80 to 90. Stretch and Challenge slides are for early finishers.'))
 
@@ -70,20 +70,20 @@ body=h2('Warm-up: Place It Right')+card(p('I turn over one digit card at a time.
 body+=pin(128,420,1664,svgwrap(1600,290,'Three empty place-value boxes H, T, O and a digit card 7 waiting to be placed',g),None,WHITE,24,'16px 32px')
 body+=pin(128,770,1664,p('Where would you put a 9? A 0? What about a 5: keep it, or wait for a bigger card?',36,700)+p('Bonus, if you like: write the biggest and the smallest 3-digit number whose digits add up to 9.',32,700,TEAL),'fade',SOFT,20,'16px 30px')
 put('p2l1-warm1',sec('p2l1-warm1','0–5 MIN',body,
- 'Minutes 0 to 5. Place It Right. Children draw three boxes on a whiteboard: H, T, O. Shuffle digit cards 0 to 9 and turn over one at a time (online: hold it up to the camera). After EACH card, children write it in one empty box at once and cannot move it. After three cards, read the numbers aloud: biggest wins. '
- 'Play 3 rounds: two for the biggest, one for the smallest. Click to show the thinking question. Talk: "A 9 goes in the hundreds: it is worth 900 there. A 0 goes in the ones. A 5 is tricky: are there more big cards or small cards left?" '
+ 'Minutes 0 to 5. Place It Right. Children draw three boxes on a whiteboard: H, T, O. Shuffle digit cards 0 to 9 and turn over one at a time (online: read the digit aloud; nothing is held up to the camera). After EACH card, children write it in one empty box at once and cannot move it. After three cards, read the numbers aloud: biggest wins. '
+ 'Play 2 rounds (about 2.5 minutes): one for the biggest, one for the smallest. Click to show the thinking question. Talk: "A 9 goes in the hundreds: it is worth 900 there. A 0 goes in the ones. A 5 is tricky: are there more big cards or small cards left?" '
  'Listen for children who say "the hundreds digit matters most". That idea comes back in talk time (401 or 399). Bonus bubble (a choice for anyone who would like more): biggest 900, smallest 108 (the hundreds digit cannot be 0).'))
 
 # ---------- 3. quick questions ----------
-qs=[('1.','4 hundreds, 6 tens, 2 ones = ?','462'),('2.','What is the 8 worth in 384?','80'),('3.','10 more than 296?','306'),('4.','100 less than 405?','305'),('5.','The biggest 3-digit number?','999')]
+qs=[('1.','4 hundreds, 6 tens, 2 ones = ?','462'),('2.','10 more than 296?','306')]   # questions 1 and 3 of the guide table; 2, 4 and 5 are spare
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put('p2l1-warm2',sec('p2l1-warm2','5–8 MIN',body,'Minutes 5 to 8. Read each aloud, whiteboards up together, then click to show. Ask after 3: "Why did the hundreds digit change?" (9 tens and 1 more ten make 10 tens, which is another hundred). After 4: "Which digit changed? Why not the ones?" Answers: 462, 80, 306, 305, 999.'))
+put('p2l1-warm2',sec('p2l1-warm2','5–8 MIN',body,'Minutes 5 to 8. Read each aloud, write it, say the answer together on three, then click to show. Ask after question 2: "Why did the hundreds digit change?" (9 tens and 1 more ten make 10 tens, which is another hundred). Answers: 462 and 306. Spare questions in the guide table: 80, 305, 999.'))
 
 # ---------- 4. explore: what to do ----------
 g=dcards([3,5,8],40,40,110,140)+hto(560,50,150,130)+f'<rect x="1150" y="40" width="430" height="150" rx="18" fill="{SOFT}" stroke="{NAVY}" stroke-width="4"/>'+txt(1365,105,'Find every number.',34)+txt(1365,155,'How do you know?',32,TEAL)
 steps=''.join(f'<li>{E(s)}</li>' for s in ['Take the digit cards 3, 5 and 8.','Make a 3-digit number using each card once. Write it down.','Make as many different numbers as you can.','Circle the biggest and the smallest. Have you got them all?'])
-body=h2('Explore: what to do')+card(chip('EXPLORE')+f'<ol style="font-size:36px;font-weight:600;padding-left:52px;display:flex;flex-direction:column;gap:8px">{steps}</ol>')
-body+=card(svgwrap(1600,220,'Digit cards 3, 5 and 8 next to three empty boxes H, T, O',g),extra='padding:20px 32px')
+body=h2('Explore: what to do')+card(chip('EXPLORE')+f'<ol style="font-size:34px;font-weight:600;padding-left:52px;display:flex;flex-direction:column;gap:2px">{steps}</ol>')
+body+=card(svgwrap(1600,220,'Digit cards 3, 5 and 8 next to three empty boxes H, T, O',g),extra='padding:8px 32px')
 put('p2l1-explore1',sec('p2l1-explore1','8–14 MIN',body,'Minutes 8 to 14. Pairs work with digit cards 3, 5 and 8 (online: paper cards on camera). Ask them to predict first: how many numbers? Most children guess 3 or 9. Let them record numbers in any order at first; the teaching part shows how to list them in order. Early finishers: add a 0 card and use 0, 3, 5. Why are there fewer numbers?'))
 
 # ---------- 5. explore: talk ----------
@@ -111,7 +111,7 @@ body+=step(1,'5 hundreds = 500',top=590,size=34)
 body+=step(2,'12 tens = 10 tens + 2 tens.  10 tens make 1 hundred, so 12 tens = 120.',top=690,size=34)
 body+=step(3,'500 + 120 + 4 = 624.   Check: 6 hundreds, 2 tens, 4 ones ✓',top=790,size=34)
 put('p2l1-teach1',sec('p2l1-teach1','20–22 MIN',body,'Teach. Build it with base-ten blocks (online: paper strips and squares). Ask first: "Can we write 5, 12, 4 as 5124?" (No: that is a 4-digit number. A box can only hold one digit.) Click through the steps. Think-aloud: "12 tens is too many for the tens box. Ten of them swap for one hundred. Now I have 6 hundreds, 2 tens and 4 ones: 624." Go the other way too: "624 is 6 hundreds and 2 tens. It is ALSO 5 hundreds and 12 tens."'))
-put('p2l1-try1',try_slide('p2l1-try1','22–24 MIN','Your turn: whiteboards','Write the number. Swap 10 tens for 1 hundred when you need to.',[('a','3 hundreds, 0 tens, 9 ones','309'),('b','2 hundreds, 11 tens, 5 ones','315'),('c','What is the 6 worth in 461?','60')],'Whiteboards up together, then click. a) Watch for 39: the 0 tens still needs a 0 to hold the place. b) 11 tens = 1 hundred and 1 ten, so 3 hundreds, 1 ten, 5 ones. c) 6 tens = 60, not 6.'))
+put('p2l1-try1',try_slide('p2l1-try1','22–24 MIN','Your turn: whiteboards','Write the number. Swap 10 tens for 1 hundred when you need to.',[('a','3 hundreds, 0 tens, 9 ones','309'),('b','2 hundreds, 11 tens, 5 ones','315')],'Write it, say the answer together on three, then click. a) Watch for 39: the 0 tens still needs a 0 to hold the place. b) 11 tens = 1 hundred and 1 ten, so 3 hundreds, 1 ten, 5 ones. (The old item c, the 6 in 461, is asked in warm-up question 2 of the guide list and dropped here.)'))
 
 # ---------- 8. worked example: list in order ----------
 body=h2('Worked example: every number from 1, 6, 9')+card(p('Use each card once. Make every 3-digit number. How many are there?',40,700))
@@ -137,7 +137,7 @@ put('p2l1-teachzero',sec('p2l1-teachzero','28–31 MIN',body,'Teach before the w
 # ---------- 11. key ----------
 body=h2('Key idea: list in order')+card(p('Fix the hundreds digit, then swap the others. Each card starts the same number of numbers, so you know when you have them all.',44,700))+card(p('Zero can never be the hundreds digit. Biggest digit first makes the biggest number.',38,600,MUTED))
 put('p2l1-key',sec('p2l1-key','31–32 MIN',body,'Say the key idea together. Common mistakes to watch for during the worksheet: (1) Writing 6 hundreds, 15 tens and 2 ones as 6152 instead of regrouping 15 tens as 1 hundred and 5 tens (752). (2) Listing digit-card numbers at random, so one is missed or written twice, or counting 059 as a 3-digit number. (3) Counting back in 10s across a hundred: 512, 502, 592 instead of 492.'))
-put('p2l1-break',break_slide('p2l1-break','32–36 MIN','Swap the digits. Each child puts three digit cards in a row (hundreds, tens, ones). The tutor calls “swap the hundreds and the tens” or “swap the tens and the ones”. Show your new number on camera. Is it bigger or smaller?','Four minutes. Online: each child lays out 3 digit cards in a row on camera and reads the number; call a swap and everyone shows the new number. Ask each time: bigger or smaller? Ask: "Which swap makes the biggest jump?" (swapping the hundreds digit).'))
+put('p2l1-break',break_slide('p2l1-break','32–36 MIN','Swap the digits. Each child puts three digit cards in a row (hundreds, tens, ones). The tutor calls “swap the hundreds and the tens” or “swap the tens and the ones”. Say your new number together on three. Is it bigger or smaller?','Four minutes. Online: each child lays out 3 digit cards in a row on camera and reads the number; call a swap and everyone shows the new number. Ask each time: bigger or smaller? Ask: "Which swap makes the biggest jump?" (swapping the hundreds digit).'))
 
 # ---------- worksheet page 1 ----------
 put('p2l1-ws1',ws_preview('p2l1-ws1','36–50 MIN','Worksheet page 1: with your partner',[('Q1','Place value. Swap 10 tens for 1 hundred when you need to.'),('Q2','The cards 2, 7, 4. Make a list in order, then answer the questions.'),('Q3','The cards 0, 5, 9. Watch out for the zero!')],'Stuck? Build the number with blocks, or lay out the real cards.','Minutes 36 to 50. Walk around. Ask "How do you know you have them all?" before giving any help. Q1c is the hardest on this page: 830 is 8 hundreds and 3 tens, and ALSO 7 hundreds and 13 tens (break one hundred into 10 tens).'))
@@ -158,14 +158,6 @@ body+=step(2,'One square DOWN: 10 more.   283 → 293',top=620,size=36)
 body+=qrow(128,730,1250,'Your turn:','Which number is directly below 296? Directly above 281?',36)+answer(1420,730,372,'306 and 271')
 put('p2l1-teachchart',sec('p2l1-teachchart','52–54 MIN',body,'Teach before worksheet page 2 (Q4 has chart pieces). Look for a pattern: point along a row (+1 each time) and down a column (+10 each time; the ones digit stays the same). Ask: "What is directly below 296 (one square down)? It is not on our piece!" Go down a column: 296, 306, because 10 more than 296 crosses the hundred. Directly above 281 (one square up) is 10 less: 271.'))
 
-# ---------- teach: count across a hundred ----------
-rows=[('Count on in 10s:','475, 485, ___, ___','495, 505'),('Count back in 10s:','628, 618, 608, ___, ___','598, 588'),('Count on in 100s:','63, 163, 263, ___','363')]
-body=h2('Counting past a hundred')+p('Say each number aloud. Watch what happens to the hundreds digit.',34,600,MUTED)
-for i,(a,b,c) in enumerate(rows):
-    body+=qrow(128,330+i*150,1250,a,b,38)+answer(1420,330+i*150,372,c)
-body+=pin(128,790,1664,p('Past 9 tens, the hundreds digit goes up. Back past 0 tens, it goes down.',36,700),'fade',SOFT,20,'18px 30px')
-put('p2l1-teachcount',sec('p2l1-teachcount','54–55 MIN',body,'Teach before worksheet page 2 (Q5). Children say the next numbers on whiteboards before each click. The trap is in the second row: many children say 608, 698. Show it on the chart: going up a row from 608 is 598. Think-aloud: "608 is 6 hundreds and 0 tens. To take 10, I break a hundred: 5 hundreds and 9 tens, 598."'))
-
 # ---------- teach: digit riddle ----------
 body=h2('Digit riddles: list, then check')+card(p('I am a 3-digit number. My hundreds digit is 2. My tens digit is 3 more than my ones digit. My digits add up to 11.',38,700))
 body+=step(1,'List the tens and ones that fit:  ones 0, tens 3;  ones 1, tens 4;  ones 2, tens 5;  ones 3, tens 6 …',top=420,size=34)
@@ -175,9 +167,9 @@ body+=pin(128,750,1664,p('"Find ALL" riddles: list in order. Digits add up to 2:
 put('p2l1-teachriddle',sec('p2l1-teachriddle','55–57 MIN',body,'Teach before worksheet page 2 (Q6). Two strategies together: make a list in order, then check each one (guess and check, but tidy). Ask after step 2: "Why can we stop?" (the totals go up by 2 each time, so 11 only comes once). For the "find all" line: hundreds digit 1 leaves 1 for the tens and ones (101, 110); hundreds digit 2 leaves 0 (200). Zero cannot be the hundreds digit.'))
 
 # ---------- worksheet page 2 ----------
-put('p2l1-ws2',ws_preview('p2l1-ws2','57–69 MIN','Worksheet page 2: on your own',[('Q4','Chart pieces. Right is 1 more, down is 10 more.'),('Q5','Count on and back. Watch the hundreds digit.'),('Q6','Digit riddles. List in order, then check every clue.')],'Finished early? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up next lesson, especially children who still write 592 after 502.'))
-put('p2l1-ws2ans',checks('p2l1-ws2ans','69–72 MIN','Page 2: check together',[('Q4','A: 348, 349 / 357, 359 / 367, 368.  B: 595, 596, 597 and 606.  Down 10, right 1.  b) 405'),('Q5','a) 347, 447   b) 502, 492   c) 1000   d) 700, 699'),('Q6','a) 435   b) 102, 111, 120, 201, 210, 300: 6 numbers')],
- 'Click after a child explains. Q4 Piece B: the square under 586 is 596; left 595, right 597; under 596 is 606. Q4b: 385, 395, 405. Q6a: tens and ones pairs (0, 2), (1, 3), (2, 4), (3, 5): only 4 + 3 + 5 = 12. Q6b: hundreds 1 leaves 2 (102, 111, 120), hundreds 2 leaves 1 (201, 210), hundreds 3 leaves 0 (300).',gapy=170))
+put('p2l1-ws2',ws_preview('p2l1-ws2','57–69 MIN','Worksheet page 2: on your own',[('Q4','Chart pieces. Right is 1 more, down is 10 more. (Part b is a take-home star.)'),('Q5','★ Take-home star: count on and back. Watch the hundreds digit.'),('Q6','Digit riddles. List in order, then check every clue.')],'Finished early? Stretch and Challenge come next.','Children work alone. Q4(b) and the whole of Q5 are marked ★ take-home on the page: children do them at home, so the teaching slide for Q5 (counting past a hundred) is not shown in class; its idea is on the answer slide. Note who needs a short catch-up next lesson, especially children who still write 592 after 502.'))
+put('p2l1-ws2ans',checks('p2l1-ws2ans','69–72 MIN','Page 2: check together',[('Q4','A: 348, 349 / 357, 359 / 367, 368.  B: 595, 596, 597 and 606.  Down 10, right 1.  b) 405 ★ take-home'),('Q5','★ take-home:  a) 347, 447   b) 502, 492   c) 1000   d) 700, 699'),('Q6','a) 435   b) 102, 111, 120, 201, 210, 300: 6 numbers')],
+ 'Click after a child explains. Q4 Piece B: the square under 586 is 596; left 595, right 597; under 596 is 606. Q4b: 385, 395, 405. Q4(b) and Q5 are take-home stars: do not use class time on them, children self-mark at home with these answers. (Q5 trap: counting back across a hundred, 608 then 598, not 698.) Q6a: tens and ones pairs (0, 2), (1, 3), (2, 4), (3, 5): only 4 + 3 + 5 = 12. Q6b: hundreds 1 leaves 2 (102, 111, 120), hundreds 2 leaves 1 (201, 210), hundreds 3 leaves 0 (300).',gapy=170))
 
 # ---------- stretch / challenge ----------
 st=[('1.','How many 3-digit numbers have all three digits the same?'),('2.','Use the digit cards 3, 0 and 0. How many 3-digit numbers can you make?'),('3.','I am a 3-digit number. You say me when you count in 10s from 5. My hundreds digit is 7. My tens digit is 1 less than my hundreds digit. Who am I?')]
@@ -207,12 +199,12 @@ put('p2l1-chwalk',sec('p2l1-chwalk','Challenge',body,'Use after pairs have tried
 
 # ---------- talk / exit ----------
 body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p('Which is bigger, 401 or 399? Ali says 399, because it has two 9s. Who is right? Why?',42,600))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38,600))
-put('p2l1-talk',sec('p2l1-talk','72–80 MIN',body,'Minutes 72 to 80. Pairs talk for 2 minutes, then share. Answer: 401 is bigger. Compare the hundreds first: 4 hundreds is more than 3 hundreds, so the tens and ones do not matter. Count on from 399: 400, 401. Second question if time: "How do you know you found every number from your digit cards?" (we listed them in order; each card started the same number of numbers). Praise the reasons, not only the answers.'))
-body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('Use the digit cards 6, 0 and 2 once each. Write the biggest and the smallest 3-digit number.',46,600))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
+put('p2l1-talk',sec('p2l1-talk','72–80 MIN',body,'Minutes 72 to 80. Pairs talk for 90 seconds, then two volunteers share. Answer: 401 is bigger. Compare the hundreds first: 4 hundreds is more than 3 hundreds, so the tens and ones do not matter. Count on from 399: 400, 401. Praise the reasons, not only the answers.'))
+body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('Use the digit cards 6, 0 and 2 once each. Write the biggest and the smallest 3-digit number.',46,600))+card(p('Write your answer on a slip of paper. Tick it when your tutor shows the answer. Then collect your stamp in your inquiry journal.',34,400))
 put('p2l1-exit',sec('p2l1-exit','80–90 MIN',body,'Minutes 80 to 90. Answer: biggest 620, smallest 206 (not 026, which is not a 3-digit number). Extension: use any three of the cards 1, 3, 5 and 7. How many different 3-digit numbers can you make? (24)'))
 
 # ---------- write ----------
-order=['p2l1-title','p2l1-warm1','p2l1-warm2','p2l1-explore1','p2l1-explore2','p2l1-teach1','p2l1-try1','p2l1-we1','p2l1-try2','p2l1-teachzero','p2l1-key','p2l1-break','p2l1-ws1','p2l1-ws1ans','p2l1-teachchart','p2l1-teachcount','p2l1-teachriddle','p2l1-ws2','p2l1-ws2ans','p2l1-stretch','p2l1-challenge','p2l1-chdiag','p2l1-chwalk','p2l1-talk','p2l1-exit']
+order=['p2l1-title','p2l1-warm1','p2l1-warm2','p2l1-explore1','p2l1-explore2','p2l1-teach1','p2l1-try1','p2l1-we1','p2l1-try2','p2l1-teachzero','p2l1-key','p2l1-break','p2l1-ws1','p2l1-ws1ans','p2l1-teachchart','p2l1-teachriddle','p2l1-ws2','p2l1-ws2ans','p2l1-stretch','p2l1-challenge','p2l1-chdiag','p2l1-chwalk','p2l1-talk','p2l1-exit']
 p2gaps.add(S,1); order=p2gaps.order(order,1)
 assert set(order)==set(S), set(order)^set(S)
 sd=os.path.join(D,'slides')

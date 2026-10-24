@@ -8,7 +8,7 @@ module.exports = {
       objective: 'Skip count in 2s, 3s and 5s; find and state an add or take-away rule; notice numbers that both counting patterns share.',
       skills: 'Pattern spotting, rule finding, generalising',
       materials: 'Paper number strip 0 to 50 (printed in the Inquirer Kit at the back of the workbook; or floor tape), counters, two crayons.',
-      online: 'Slide number line the tutor can mark on; each child uses a paper strip and a pencil.',
+      online: 'Slide number line the tutor can mark on; each child uses a paper strip and a pencil. Before the lesson, parents cut out the two rows of the number strip (workbook, Inquirer Kit pages) and tape them end to end, so no cutting is needed in class.',
       warmup: 'Skip-count stomp: count in 2s, 5s and 3s as a class. Stomp on the numbers in the count, whisper the rest.',
       explore: 'Pairs hop a counter along the number strip: frog 1 in 4s, frog 2 in 5s. Mark where each lands. Which numbers do both frogs land on?',
       mini: 'Build the table on the board: jump 1, 2, 3 … and where it lands. Name the rule ("add 4"). Ask what stays the same and what changes.',
@@ -43,8 +43,8 @@ module.exports = {
         ['Q2', '(a) 2+8, 3+7, 4+6, 5+5  (b) The second number goes down by 1  (c) 6 different bonds'],
         ['Q3', '(a) 20 and 20  (b) 20 and 20  (c) 8, 11, 5'],
         ['Q4', '(a) 4  (b) 4  (c) 6  (d) 2  (e) No. 4 + 4 = 8 but 8 + 1 = 9.'],
-        ['Q5', '(a) Sides of 9: corners 1, 2, 3 (any order). Between 1 and 2: 6. Between 2 and 3: 4. Between 3 and 1: 5.  (b) Sides of 10: corners 1, 3, 5. Between 1 and 3: 6. Between 3 and 5: 2. Between 5 and 1: 4.'],
-        ['Q6', '4 and 6.  Challenge: 4 and 8.'],
+        ['Q5', '(a) The corners 1, 2, 3 are given. Between 1 and 2: 6. Between 2 and 3: 4. Between 3 and 1: 5. Each side adds to 9.  (b) If you have time, sides of 10: the corners are 1, 3, 5. Between 1 and 3: 6. Between 3 and 5: 2. Between 5 and 1: 4.'],
+        ['Q6', '4 and 6.  If you have time: 4 and 8.'],
         ['Think harder slide', '1) 10 and 16  2) 8  3) 6 pairs']
       ]
     },
@@ -85,9 +85,13 @@ module.exports = {
       extension: 'Squares in a row (4, 7, 10 …): find the rule and how many sticks for 10 squares (31).',
       key: [
         ['Q1', 'Place 8: triangle. Place 9: square.'],
-        ['Q2', '(a) circle  (b) square  (c) square  (d) The pattern repeats every 3 and every 3rd shape is a square. We say 30 when we count in 3s, so the 30th shape ends a core: a square.'],
-        ['Q3', '(a) 3, 5, 7, 9, 11, 13, 15, 17, 19, 21  (b) 2 more  (c) The new triangle shares a side with the one before.  (d) 21 sticks'],
-        ['Q4', '7 triangles. Continue the table: 3, 5, 7, 9, 11, 13, 15 sticks.'],
+        ['Q2', 'circle (the 9th ends a core, so the 10th starts a new one)'],
+        ['Q3', 'red (the 6th ends a core, so the 7th and 8th are red)'],
+        ['Q4', '(a) circle  (b) square  (c) square  (d) The pattern repeats every 3 and every 3rd shape is a square. We say 30 when we count in 3s, so the 30th shape ends a core: a square.'],
+        ['Q5', 'dog (the 12th ends a core of 3)'],
+        ['Q6', 'C (the core has 4 letters; the 8th ends a core, so the 11th is the 3rd letter, C)'],
+        ['Q7', '(a) 3, 5, 7, 9, 11, 13, 15, 17, 19, 21  (b) 2 more  (c) The new triangle shares a side with the one before.  (d) 21 sticks'],
+        ['Q8', '(if you have time) 7 triangles. Continue the table: 3, 5, 7, 9, 11, 13, 15 sticks.'],
         ['Think harder slide', '1) circle  2) 9 Bs  3) Yes: count in 5s, 25 ends a core, like the 5th']
       ]
     },
@@ -106,7 +110,7 @@ module.exports = {
       extension: 'Make a three-step mystery number story for a partner.',
       key: [
         ['Q1', '(a) 7  (b) 12  (c) 8 (undo in reverse order: 10 + 2 = 12, then 12 \u2212 4 = 8)'],
-        ['Q2', '(a) 15 and 8  (b) Add 4. IN 15 gives OUT 19. OUT 30 comes from IN 26.'],
+        ['Q2', '(a) 15 and 8  (b) Add 4. IN 15 gives OUT 19. If you have time: OUT 30 comes from IN 26.'],
         ['Q3', '(a) Mei 13  (b) Ben 7  (c) Mei has 6 more than Ben  (d) 28 altogether'],
         ['Q4', '(a) 13 children (20 − 7)  (b) 5 children (3 + 3 − 1, Ali is counted twice). Talk time: 8th from both ends is 15.'],
         ['Q5', 'Open: check that the story has a clear answer.'],
@@ -131,8 +135,9 @@ module.exports = {
         ['Q2', '4 ways to make 25¢: 20+5; 10+10+5; 10+5+5+5; five 5¢. (Worked on the slide.)'],
         ['Q3', '(a) 4 coins: 50¢ + 20¢ + 10¢ + 5¢.  (b) e.g. 50¢ + 10¢ + 10¢ + 5¢ + 5¢ + 5¢, or 20¢ + 20¢ + 20¢ + 10¢ + 10¢ + 5¢.'],
         ['Q4', 'No. Two coins can total 10, 15, 20, 25, 30, 40, 55, 60, 70 or 100. 35 is not one of them.'],
-        ['Q5', 'Dollars are now Think harder T5: (a) $10 + $5 + $2 (3 pieces).  (b) No. She has $50 + $10 + $10 = $70. The bicycle and helmet cost $65 + $8 = $73. She is $3 short.'],
-        ['Think harder T1 to T5', 'T1: two sets, 50¢ + 10¢ + 5¢ + 5¢, and 20¢ + 20¢ + 20¢ + 10¢.  T2: three 10¢ and three 20¢ (30 + 60 = 90); four coins of 20¢ make only 80¢, so 4 coins cannot make 90¢.  T3: 3 coins (20¢ + 20¢ + 5¢); no two coins make 45¢.  T4: 6 ways to make 30¢ (20+10; 20+5+5; 10+10+10; 10+10+5+5; 10+5+5+5+5; six 5¢).  T5: see Q5 above.'],
+        ['Q5', '35¢ (20 + 10 + 5: count on from the biggest coin).'],
+        ['Q6', '45¢ (20 + 20 = 40, then 5 more).'],
+        ['Think harder T1 to T5', 'T1: two sets, 50¢ + 10¢ + 5¢ + 5¢, and 20¢ + 20¢ + 20¢ + 10¢.  T2: three 10¢ and three 20¢ (30 + 60 = 90); four coins of 20¢ make only 80¢, so 4 coins cannot make 90¢.  T3: 3 coins (20¢ + 20¢ + 5¢); no two coins make 45¢.  T4: 6 ways to make 30¢ (20+10; 20+5+5; 10+10+10; 10+10+5+5; 10+5+5+5+5; six 5¢).  T5 (dollars): (a) $10 + $5 + $2 (3 pieces).  (b) No. She has $50 + $10 + $10 = $70. The bicycle and helmet cost $65 + $8 = $73. She is $3 short.'],
         ['Think harder slide', '1) 9 ways  2) $10 + $1 + $1 and $5 + $5 + $2  3) 4 coins (50¢ + 20¢ + 20¢ + 5¢)']
       ]
     },
@@ -187,17 +192,17 @@ module.exports = {
       objective: 'Compare and order lengths, measure with equal units and with a centimetre ruler (also when the object does not start at 0), and change a length from one unit to another in both directions.',
       skills: 'Comparing, measuring, unit reasoning, estimating',
       materials: 'Linking cubes or paper cube strips, paper clips, erasers, objects to measure, a cm ruler for each child, mini whiteboards.',
-      online: 'Print the cube strip at the back of the workbook; measure household objects. Each child needs a cm ruler.',
+      online: 'Before the lesson, parents print the cube strip page at the back of the workbook and cut out Strip A, so no cutting is needed in class. Children measure household objects. Each child needs a cm ruler.',
       warmup: 'Longer or shorter? Hold up two objects. Predict, then check by laying them side by side. Order three objects.',
       explore: 'Measure a pencil, a book and a shoe with cubes. Estimate first, then measure and compare with the guess. Then measure the same book with hand spans and compare with a partner.',
-      mini: 'Equal units, no gaps or overlaps. Compare lengths with bars lined up at one end. Measure in cm with a ruler, also when the object does not start at 0 (count the spaces). Change units both ways with a bar picture (1 clip = 3 erasers: 4 clips = 12 erasers; 6 erasers = 2 clips).',
+      mini: 'Equal units, no gaps or overlaps. Compare lengths with bars lined up at one end. Measure in cm with a ruler, also when the object does not start at 0 (count the spaces). Change units both ways with a bar picture (1 clip = 2 erasers: 4 clips = 8 erasers; 6 erasers = 3 clips).',
       share: 'Ali measured 6 spans and Mei measured 8 spans for the same desk. Whose hand is bigger? Why?',
       exit: { q: 'A ribbon lies from the 3 cm mark to the 9 cm mark on a ruler. How long is it?', a: '6 cm' },
       mistakes: ['Leaving gaps or overlapping the cubes.', 'Not starting at zero.', 'Thinking more units means a bigger unit.', 'Reading the end mark when the object does not start at 0.'],
       extension: 'Measure the same object with two different units and find the rule linking the two counts.',
       key: [
         ['Q1', '(a) C  (b) B  (c) 2 more  (d) 12 units  (e) Same as A (9 − 2 = 7)'],
-        ['Q2', 'Open. Check guesses are close. The Difference column is how far off the guess was. Equal units are needed so the measures can be compared fairly.'],
+        ['Q2', 'Open. Check guesses are close. The last column is how far off the guess was. Equal units are needed so the measures can be compared fairly.'],
         ['Q3', 'Ali. Fewer spans means each span was longer, so Ali’s hand is bigger.'],
         ['Q4', '(a) 10 erasers  (b) 6 clips'],
         ['Q5', 'Ali 11 cubes, Ben 6 cubes. All three together: 25 cubes.'],
@@ -206,13 +211,13 @@ module.exports = {
       ]
     },
     {
-      n: 10, week: 5, session: 'B', title: 'Challenge Day', topic: 'Mixed Puzzles',
+      n: 10, week: 5, session: 'B', title: 'Puzzle Day', topic: 'Mixed Puzzles',
       objective: 'Use patterns, bonds, graphs, money, shapes, logic, working backwards and measuring in new puzzles, and explain the thinking.',
       skills: 'Applying and connecting ideas, perseverance, explaining',
       materials: 'Four puzzle cards (coins, patterns, logic, measuring; printed in the workbook and shown on the Lesson 10 slide), play coins, cubes, certificates, stamps, mini whiteboards.',
-      online: 'The four cards are printed in the workbook and shown on the slide. Each pair chooses one card. Pairs swap at minute 20. Reporting back is optional: say one thing you tried, not the answer.',
+      online: 'The four cards are printed in the workbook and shown on the slide. Each pair chooses one card. Pairs swap at minute 17. Reporting back is optional: say one thing you tried, not the answer.',
       warmup: 'Whiteboard round: quick questions from the 9 lessons. Everybody writes the answer at the same time. No passing round, nobody on the spot.',
-      explore: 'Four puzzle cards (coins, patterns, logic, measuring). Each pair chooses ONE card for 10 minutes, then swaps with another pair for a second 4-minute round. Reporting back is optional: one thing you tried, not the answer.',
+      explore: 'Four puzzle cards (coins, patterns, logic, measuring). Each pair chooses ONE card for 6 minutes, then swaps with another pair for a second 4-minute round (then one debrief question). Reporting back is optional: one thing you tried, not the answer.',
       cards: [
         { title: 'Coins', text: 'Make 45¢ with exactly 3 coins from 5¢, 10¢, 20¢ and 50¢.', answer: '20¢ + 20¢ + 5¢ (the only way).' },
         { title: 'Patterns', text: '5, 8, 11, 14 … What is the 10th number? Show how you know.', answer: '32. Add 3 each time: 5, 8, 11, 14, 17, 20, 23, 26, 29, 32.' },
@@ -223,7 +228,7 @@ module.exports = {
       share: 'Pick one puzzle and teach it to the group in two sentences.',
       exit: { q: 'My favourite lesson was ____ because ____.', a: 'Open. Use it to plan next steps.' },
       mistakes: ['Rushing: not checking an answer.', 'Not showing how they know.'],
-      extension: 'Write a challenge puzzle for next year’s group.',
+      extension: 'Write a puzzle for next year’s group.',
       key: [
         ['Q1', '23, 28. Add 5.'],
         ['Q2', '5 and 7 (5 + 7 = 12 and 7 − 5 = 2)'],
@@ -233,7 +238,7 @@ module.exports = {
         ['Q6', 'Mei is youngest, Ali is oldest.'],
         ['Q7', '5 (5 + 9 = 14, 14 − 4 = 10)'],
         ['Q8', 'Pen 10 cubes. End to end 16 cubes.'],
-        ['Q9', 'Open. Done at talk time: swap puzzles with a partner and solve each other\u2019s.'],
+        ['Q9', 'Open. Written on page 2; at talk time swap puzzles with a partner and solve each other\u2019s.'],
         ['Puzzle cards', 'Coins: 20¢ + 20¢ + 5¢.  Patterns: 32.  Logic: Mei, Ben, Sam, Ali.  Measuring: 16 cubes.'],
         ['Think harder slide', '1) Two ways: five 2s, or 3 + 3 + 2 + 2  2) Ben, Mei, Ali, Sam  3) Three 10¢ and four 5¢']
       ]

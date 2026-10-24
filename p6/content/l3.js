@@ -1,3 +1,4 @@
+const FG = require('../../levels/figs_l4_6.js');
 // Math Inquirers P6 — Lesson 3: Below Zero (negative numbers; a sprite on a number line; variables below 0)
 // Every answer below was worked out and checked (number line jumps, and the code traced by hand and run in Python).
 
@@ -108,8 +109,8 @@ module.exports = {
     n: 3, week: 2, session: 'A', title: 'Below Zero', topic: 'Negative Numbers',
     objective: 'Order and compare negative numbers on a number line; add and subtract with negative numbers by moving along the line, in temperature, lift and sea-level contexts; use "change by" a negative number in code and trace a variable that goes below 0.',
     skills: 'Number line reasoning, splitting a jump at 0, difference as a distance, tracing code, debugging, planning a loop',
-    materials: 'Laptop or desktop with Scratch 3 (scratch.mit.edu, free, no log-in needed), mini whiteboard and marker, workbook, pencil.',
-    online: 'Children keep Scratch open in one browser tab and the video call in another. The tutor screen-shares Scratch to show the x number under the stage. Children share their screens only when asked; page 1 of the worksheet is done on paper with laptops turned away. Type the minus sign with the keyboard minus key (the hyphen); do not copy and paste a number from the slide or chat, because the slide uses a different minus character that Scratch will not accept. Block colours on our slides are simplified; in Scratch, find blocks by the category name on the left, not by colour.',
+    materials: 'Laptop or desktop with Scratch 3 (scratch.mit.edu, free, no log-in needed), mini whiteboard and marker, workbook, pencil. Starter file: L3_Below_Zero.sb3 (the stage is a number line; it holds the sprite-position script and the thermometer script with an empty loop).',
+    online: 'Children keep Scratch open in one browser tab and the video call in another. The tutor screen-shares Scratch to show the x number under the stage. The tutor shares L3_Below_Zero.sb3 beforehand (File, Load from your computer; no account needed): press the space bar to run the sprite script (go to x 0, then add the change x blocks), click the green flag for the thermometer (add change temp by -3 and say temp for 1 seconds inside the repeat). Children share their screens only when asked; page 1 of the worksheet is done on paper with laptops turned away. Type the minus sign with the keyboard minus key (the hyphen); do not copy and paste a number from the slide or chat, because the slide uses a different minus character that Scratch will not accept. Block colours on our slides are simplified; in Scratch, find blocks by the category name on the left, not by colour.',
     warmup: 'Cold city line-up: five cities on a December morning (Singapore 25 °C, Tokyo 3 °C, Seoul −7 °C, Beijing −9 °C, Harbin −22 °C). Children put them in order from coldest to warmest, then find the gap between two of them.',
     explore: 'At the computer: the Scratch stage is a number line (x from −240 to 240). Pairs predict and test where a sprite ends up after "change x by 100" and "change x by −250", then build a thermometer program (set temp to 5, repeat 6: change temp by −3, say temp) and predict the last number before clicking the flag.',
     mini: 'Right is bigger. To add, move right; to add a negative, move left (that is what "change by −3" does). Split every jump at 0. a − b is the jump from b to a: 7 − (−3) = 10 because from −3 to 7 is 10 steps right. Check by adding back.',
@@ -144,7 +145,7 @@ module.exports = {
   deck: {
     today: 'Use a number line to compare, add and subtract negative numbers, and make a variable in code go below zero.',
     warmGame: 'Cold city line-up. Five cities at 7 a.m. on a December morning: Singapore 25 °C, Tokyo 3 °C, Seoul −7 °C, Beijing −9 °C, Harbin −22 °C. Put them in order from coldest to warmest, then find how many degrees warmer Tokyo is than Seoul.',
-    warmQs: [['It is 3 °C. It falls 5 degrees. What is it now?', '−2 °C'], ['Which is colder: −7 °C or −2 °C?', '−7 °C'], ['Count back in 3s: 6, 3, 0, __, __', '−3, −6'], ['What number is 4 less than 1?', '−3'], ['A lift is at B1. It goes down 2 floors. Where is it?', 'B3']],
+    warmQs: [['It is 3 °C. It falls 5 degrees. What is it now?', '−2 °C'], ['Which is colder: −7 °C or −2 °C?', '−7 °C'], ['A lift is at B1. It goes down 2 floors. Where is it?', 'B3']],
     expSetup: ['In Scratch, set x to 0: the sprite is in the middle of the stage.', 'Predict, then test: change x by 100, then change x by −250. Where is the sprite?', 'Build the thermometer: set temp to 5, repeat 6: change temp by −3, say temp.', 'Predict the last number it says. Then click the flag and check.'],
     expPic: 'the Scratch stage drawn as a number line from −240 to 240 with a yellow dot at −150, and the thermometer program drawn as coloured blocks (when green flag clicked, set temp to 5, repeat 6, change temp by −3, say temp).',
     expAsk: [['Where did the sprite end up after +100 and then −250?', 'x = −150'], ['What was the last number the thermometer said?', '−13 (2, −1, −4, −7, −10, −13)'], ['How do we make a variable go down in Scratch?', 'Change it by a negative number: adding a negative moves left.']],
@@ -169,7 +170,7 @@ module.exports = {
     ],
     stretch: [
       { q: 'Work out −7 + 12 and 5 − 13.', a: '5 and −8' },
-      { q: 'A diver is at −14 m. A seagull is flying at 9 m. How far apart are they?', a: '23 m (14 up to sea level, then 9 more)' },
+      { q: 'A diver is at −14 m. A seagull is flying at 9 m. How far apart are they?', fig: FG.vline({ min: -15, max: 10, step: 5, h: 250, w: 300, fmt: v => String(v).replace('-', '−') + ' m', marks: [{ v: 9, t: 'seagull' }, { v: 0, t: 'sea level' }, { v: -14, t: 'diver' }], label: 'A vertical number line in metres from minus 15 to 10 with the seagull at 9, sea level at 0 and the diver at minus 14.' }), a: '23 m (14 up to sea level, then 9 more)' },
       { q: 'Work out 4 − (−6). Hint: how far is it from −6 to 4?', a: '10' },
       { q: 'Find the missing number: −3 + ____ = −10.', a: '−7 (adding −7 moves 7 to the left)' },
       { q: 'At 6 a.m. it was −4 °C. By 2 p.m. it was 7 °C. By 10 p.m. it had fallen 9 degrees. How much did it rise from 6 a.m. to 2 p.m.? What was the temperature at 10 p.m.?', a: 'It rose 11 degrees; at 10 p.m. it was −2 °C (7 − 9).' },
@@ -180,8 +181,8 @@ module.exports = {
     challenge: [
       { q: 'Put −4, −3, −2, −1, 0, 1, 2, 3, 4 in a 3 by 3 grid so that every row, every column and both diagonals add up to 0.', a: 'One answer: top row −3, 2, 1; middle row 4, 0, −4; bottom row −1, −2, 3. 0 must be in the middle and 4 and −4 cannot be in corners; the other 7 answers are turns and flips of this one.' },
       { q: 'At midnight it was −6 °C. It rose 2 degrees every hour until 7 a.m., then 3 degrees every hour. What was the temperature at 10 a.m.?', a: '17 °C (−6 + 7 × 2 = 8 at 7 a.m., then 8 + 3 × 3 = 17)' },
-      { q: 'set x to 0, then repeat 6 times: change x by 50, change x by −80. Then say x. What does it say?', a: '−180 (each repeat moves −30; 6 × −30 = −180)' },
-      { q: 'Which is bigger, −3 − 4 or −3 − (−4)? By how much?', a: '−3 − (−4) = 1 is bigger than −3 − 4 = −7, by 8.' },
+      { q: 'A sprite starts at x = 200. It runs: repeat until x < −100 [change x by 50, change x by −80]. (It keeps repeating until x is less than −100.) How many repeats does it make, and what is x at the end? Then: if the sprite must end at exactly x = −100 after 8 repeats, what must x start as?', a: '11 repeats, ending at x = −130 (each repeat moves −30: 200 − 30 × 10 = −100 is not yet less than −100, and 200 − 30 × 11 = −130). For 8 repeats the sprite moves 8 × −30 = −240, so x must start at −100 + 240 = 140.' },
+      { q: 'Ali says: “When I subtract a negative number, the answer is always bigger than the number I started with.” Test his claim on at least three examples (include −3 − (−4)). Is he always right? Explain with a number line. What happens when you subtract a positive number?', a: 'Yes. Examples: −3 − (−4) = 1 (bigger than −3), 0 − (−4) = 4, 5 − (−4) = 9, −8 − (−4) = −4. Subtracting −4 is the same as adding 4: on the number line it moves 4 to the right, so the answer is 4 more. Subtracting a positive number makes the answer smaller (−3 − 4 = −7).' },
       { q: 'A sprite starts at x = −10. It moves +5, then −3, then +5, then −3, and so on. After how many moves is it first at a number greater than 0? Where is it?', a: 'After 7 moves, at x = 1 (−5, −8, −3, −6, −1, −4, 1).' },
       { q: 'Lift A starts at the surface of a mine (0 m) and goes down 35 m every minute. Lift B starts at −300 m and goes up 25 m every minute. When are they at the same height, and at what height?', a: 'After 5 minutes, at −175 m (the gap of 300 m closes by 60 m each minute).' },
       { q: 'Make up your own temperature story with at least three changes (rises and falls) that starts below zero and ends at exactly −7 °C. Write the story, the working and a number-line sketch. Swap with a partner and check each other’s.', a: 'Open. Example: starts at −2 °C, falls 6 degrees (−8), rises 3 degrees (−5), falls 2 degrees (−7). Check that the story really ends at −7 and that each change is shown on a number line.' },
@@ -192,7 +193,7 @@ module.exports = {
 
   workbook: H0 => { const H = Object.assign({}, H0, { sub: (l, t, o) => H0.sub(l, typeof t === 'string' ? t.replace(/ {2,}/g, m => '\u00A0'.repeat(m.length)) : t, o) }); return [
     H.q(1, 'The number line. Numbers get bigger to the right.', { before: 40, keepNext: true }),
-    H.fig(numline(-10, 10, { h: 70, ly: 36, marks: [[-8, 'A', SKY], [-3, 'B', SKY], [4, 'C', YEL]], label: 'Number line from minus 10 to 10 with points A, B and C' })),
+    H.fig(FG.numberLine({ min: -10, max: 10, major: 2, minor: 1, fmt: v => String(v).replace('-', '−'), size: 18, marks: [{ v: -8, t: 'A' }, { v: -3, t: 'B' }, { v: 4, t: 'C' }], label: 'Number line from minus 10 to 10 with every second number labelled, and arrows A, B and C pointing at three points' })),
     H.sub('a', 'Write the number at each letter.      A = ______      B = ______      C = ______'),
     H.sub('b', 'Smallest first:   3,  −5,  0,  −1,  −12,  7   →  ______________________'),
     H.sub('c', 'Write < or > in each gap.       −4  ____  −9          −1  ____  0          −15  ____  2'),
@@ -211,7 +212,7 @@ module.exports = {
     H.fig(seaFig()),
 
     H.q(4, 'Work these out. Draw the jumps on the number line to help you.', { pb: true, before: 0, keepNext: true }),
-    H.fig(numline(-12, 12, { h: 42, ly: 12, labEvery: 2, label: 'Blank number line from minus 12 to 12 to draw jumps on' })),
+    H.fig(FG.numberLine({ min: -12, max: 12, major: 2, minor: 1, fmt: v => String(v).replace('-', '−'), size: 18, label: 'Blank number line from minus 12 to 12 to draw jumps on' })),
     H.sub('a', '−6 + 9 = ________       (b)  4 − 11 = ________       (c)  −3 − 5 = ________'),
     H.sub('d', '−2 + (−6) = ______     (e)  5 − (−3) = ______      (f)  −1 − (−7) = ______'),
     H.q(5, 'Trace the code. Fill in the table to show x after each repeat.', { keepNext: true }),

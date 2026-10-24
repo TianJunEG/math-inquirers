@@ -1,0 +1,314 @@
+{
+ "1": [
+  {
+   "n": 1,
+   "title": "Count with the Frog",
+   "topic": "Number Patterns"
+  },
+  {
+   "n": 2,
+   "title": "Number Bond Inquiry",
+   "topic": "Number Bonds"
+  },
+  {
+   "n": 3,
+   "title": "Let’s Plan the Fruit Party",
+   "topic": "Picture Graphs"
+  },
+  {
+   "n": 4,
+   "title": "Pattern Inquiry",
+   "topic": "Repeating and Growing Patterns"
+  },
+  {
+   "n": 5,
+   "title": "Mystery Number",
+   "topic": "Working Backwards"
+  },
+  {
+   "n": 6,
+   "title": "Coin Combos",
+   "topic": "Money"
+  },
+  {
+   "n": 7,
+   "title": "Shape Safari",
+   "topic": "2D Shapes"
+  },
+  {
+   "n": 8,
+   "title": "Logic Lab",
+   "topic": "Logic and Sorting"
+  },
+  {
+   "n": 9,
+   "title": "Measure It!",
+   "topic": "Length"
+  },
+  {
+   "n": 10,
+   "title": "Puzzle Day",
+   "topic": "Mixed Puzzles"
+  }
+ ],
+ "2": [
+  {
+   "n": 1,
+   "title": "Digit Detectives",
+   "topic": "Numbers to 1000"
+  },
+  {
+   "n": 2,
+   "title": "Missing Digit Mysteries",
+   "topic": "Addition and Subtraction within 1000"
+  },
+  {
+   "n": 3,
+   "title": "Legs, Wheels and Arrays",
+   "topic": "Multiplication and Division"
+  },
+  {
+   "n": 4,
+   "title": "Pattern Machines",
+   "topic": "Patterns with Multiplication"
+  },
+  {
+   "n": 5,
+   "title": "Mystery Number Machines",
+   "topic": "Working Backwards"
+  },
+  {
+   "n": 6,
+   "title": "Market Day",
+   "topic": "Money"
+  },
+  {
+   "n": 7,
+   "title": "Fair Shares",
+   "topic": "Fractions"
+  },
+  {
+   "n": 8,
+   "title": "Shape Builders",
+   "topic": "2D and 3D Shapes"
+  },
+  {
+   "n": 9,
+   "title": "Measure Masters",
+   "topic": "Length, Mass, Volume and Time"
+  },
+  {
+   "n": 10,
+   "title": "Puzzle Day",
+   "topic": "Mixed Puzzles"
+  }
+ ],
+ "3": [
+  {
+   "n": 1,
+   "title": "Number Sleuths",
+   "topic": "Numbers to 10 000"
+  },
+  {
+   "n": 2,
+   "title": "Cryptarithm Crackers",
+   "topic": "Addition and Subtraction"
+  },
+  {
+   "n": 3,
+   "title": "Times Table Treasure",
+   "topic": "Tables of 6, 7, 8 and 9"
+  },
+  {
+   "n": 4,
+   "title": "Model Makers",
+   "topic": "Word Problems: Bar Models"
+  },
+  {
+   "n": 5,
+   "title": "Remainder Riddles",
+   "topic": "Division"
+  },
+  {
+   "n": 6,
+   "title": "Fraction Walls",
+   "topic": "Fractions"
+  },
+  {
+   "n": 7,
+   "title": "Area Architects",
+   "topic": "Area and Perimeter"
+  },
+  {
+   "n": 8,
+   "title": "Angle and Line Detectives",
+   "topic": "Angles, Perpendicular and Parallel Lines"
+  },
+  {
+   "n": 9,
+   "title": "Measure and Money Masters",
+   "topic": "Length, mass, volume, money and time"
+  },
+  {
+   "n": 10,
+   "title": "Puzzle Day",
+   "topic": "Mixed puzzles: bar graphs and logic"
+  }
+ ],
+ "4": [
+  {
+   "n": 1,
+   "title": "Factor Hunters",
+   "topic": "Factors and multiples"
+  },
+  {
+   "n": 2,
+   "title": "Big Number Puzzles",
+   "topic": "Numbers to 100 000"
+  },
+  {
+   "n": 3,
+   "title": "Operation Detectives",
+   "topic": "Four operations"
+  },
+  {
+   "n": 4,
+   "title": "Fraction Frontier",
+   "topic": "Fractions"
+  },
+  {
+   "n": 5,
+   "title": "Decimal Detectives",
+   "topic": "Decimals"
+  },
+  {
+   "n": 6,
+   "title": "Angle Turns",
+   "topic": "Angles"
+  },
+  {
+   "n": 7,
+   "title": "Area Architects II",
+   "topic": "Area and Perimeter"
+  },
+  {
+   "n": 8,
+   "title": "Symmetry and Nets",
+   "topic": "Symmetry and Nets"
+  },
+  {
+   "n": 9,
+   "title": "Data Detectives",
+   "topic": "Tables and line graphs"
+  },
+  {
+   "n": 10,
+   "title": "Puzzle Day",
+   "topic": "Mixed heuristics"
+  }
+ ],
+ "5": [
+  {
+   "n": 1,
+   "title": "Million Puzzles",
+   "topic": "Numbers to 10 Million"
+  },
+  {
+   "n": 2,
+   "title": "Fraction Feats",
+   "topic": "Fractions: Four Operations"
+  },
+  {
+   "n": 3,
+   "title": "Before and After",
+   "topic": "Fraction Word Problems"
+  },
+  {
+   "n": 4,
+   "title": "Triangle Areas",
+   "topic": "Area of Triangle"
+  },
+  {
+   "n": 5,
+   "title": "Volume Vault",
+   "topic": "Volume"
+  },
+  {
+   "n": 6,
+   "title": "Rate Racers",
+   "topic": "Rate"
+  },
+  {
+   "n": 7,
+   "title": "Percentage Puzzles",
+   "topic": "Percentage"
+  },
+  {
+   "n": 8,
+   "title": "Angle Chasers",
+   "topic": "Angles, Triangles and Quadrilaterals"
+  },
+  {
+   "n": 9,
+   "title": "Pattern Generalisers",
+   "topic": "Patterns and Number Sense"
+  },
+  {
+   "n": 10,
+   "title": "Challenge Day",
+   "topic": "Mixed Strategies"
+  }
+ ],
+ "6": [
+  {
+   "n": 1,
+   "title": "Code the Pattern",
+   "topic": "Sequences and the nth Term"
+  },
+  {
+   "n": 2,
+   "title": "Prime Hunters",
+   "topic": "Primes, Factors and Prime Factorisation"
+  },
+  {
+   "n": 3,
+   "title": "Below Zero",
+   "topic": "Negative Numbers"
+  },
+  {
+   "n": 4,
+   "title": "Algebra Machines",
+   "topic": "Expressions and Equations"
+  },
+  {
+   "n": 5,
+   "title": "Every Possible Way",
+   "topic": "Counting"
+  },
+  {
+   "n": 6,
+   "title": "Fair or Unfair?",
+   "topic": "Probability"
+  },
+  {
+   "n": 7,
+   "title": "Turtle Geometry",
+   "topic": "Angles in Polygons"
+  },
+  {
+   "n": 8,
+   "title": "Secret Codes",
+   "topic": "Clock (Modular) Arithmetic"
+  },
+  {
+   "n": 9,
+   "title": "Data Detectives",
+   "topic": "Averages and Data"
+  },
+  {
+   "n": 10,
+   "title": "Showcase Challenge",
+   "topic": "Mixed: Maths and Code"
+  }
+ ]
+}

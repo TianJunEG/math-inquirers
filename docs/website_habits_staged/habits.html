@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The six inquiry habits | Math Inquirers (preview, not published)</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito+Sans:wght@400;600;800&display=swap">
+<style>
+:root{--navy:#1B2A49;--yellow:#FFC93C;--teal:#1F7A6F;--coral:#FF7A59;--green:#3DBE7A;--bg:#F6F9FD;--grid:#E2ECF6;--card:#FFFFFF;--fg:#1B2A49;--muted:#56637A;--ink:#1B2A49;--line:#CBD8E6;--sky:#D6E9FB;--soft:#FFF0C4;--peach:#FFE2D6;--mint:#D3F1E4;--lilac:#E6DFFB;--head:'Fredoka','Nunito Sans',system-ui,sans-serif;--body:'Nunito Sans',system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1626;--grid:#18233A;--card:#18233A;--fg:#EEF2F8;--muted:#A6B1C6;--ink:#8EA2C8;--line:#2C3A55;--sky:#1D3150;--soft:#3A3217;--peach:#41271F;--mint:#173A2F;--lilac:#2B2650;--teal:#5FC5B5;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0F1626;--grid:#18233A;--card:#18233A;--fg:#EEF2F8;--muted:#A6B1C6;--ink:#8EA2C8;--line:#2C3A55;--sky:#1D3150;--soft:#3A3217;--peach:#41271F;--mint:#173A2F;--lilac:#2B2650;--teal:#5FC5B5;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;padding-inline:max(16px,env(safe-area-inset-left));background-color:var(--bg);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:28px 28px;color:var(--fg);font:16px/1.55 var(--body)}
+.wrap{max-width:1120px;margin:0 auto;padding-bottom:40px}
+h1,h2,h3{font-family:var(--head);font-weight:600;margin:0;text-wrap:balance;line-height:1.08}
+h1{font-size:clamp(34px,6vw,60px)} h2{font-size:clamp(26px,3.6vw,38px)} h3{font-size:24px}
+p{margin:0} a{color:inherit}
+mark{background:linear-gradient(transparent 58%,var(--yellow) 58%,var(--yellow) 92%,transparent 92%);color:inherit;padding:0 .08em}
+.draft{border:2px dashed var(--coral);background:var(--peach);border-radius:14px;padding:10px 14px;font-size:14px;margin:16px 0}
+.bar{display:flex;align-items:center;gap:10px;padding:18px 0 12px}
+.brand{font-family:var(--head);font-size:23px;font-weight:600;display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand i{width:40px;height:40px;border-radius:12px;background:var(--yellow);color:#1B2A49;display:grid;place-items:center;font-style:normal;font-size:22px;border:2.5px solid #1B2A49;box-shadow:3px 3px 0 #1B2A49;transform:rotate(-6deg)}
+.sec{padding:28px 0;display:grid;gap:14px}
+.eyebrow{font:800 12px var(--body);text-transform:uppercase;letter-spacing:.08em;color:var(--teal)}
+.muted{color:var(--muted)}
+.hero{background:var(--navy);color:#FFF9EC;border:2.5px solid var(--ink);border-radius:26px;padding:30px 24px;box-shadow:6px 6px 0 var(--ink);display:grid;gap:12px}
+.hero .lead{color:#C9D3E6;max-width:60ch;font-size:18px}
+.slogan{font:600 22px var(--head);color:var(--yellow)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.habit{background:var(--card);border:2.5px solid var(--ink);border-radius:22px;padding:18px;display:grid;gap:8px;align-content:start;box-shadow:5px 5px 0 var(--ink)}
+.habit:nth-child(6n+1) .ic{background:var(--sky)}.habit:nth-child(6n+2) .ic{background:var(--soft)}.habit:nth-child(6n+3) .ic{background:var(--mint)}.habit:nth-child(6n+4) .ic{background:var(--peach)}.habit:nth-child(6n+5) .ic{background:var(--lilac)}.habit:nth-child(6n) .ic{background:var(--sky)}
+.ic{width:64px;height:64px;border-radius:50%;border:2.5px solid var(--ink);display:grid;place-items:center;color:var(--ink)}
+.ic svg{width:40px;height:40px}
+.ph{font:600 18px var(--head);color:var(--teal)}
+dl{margin:6px 0 0;display:grid;gap:2px;border-top:2px dashed var(--line);padding-top:8px}
+dt{font:800 12px var(--body);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-top:6px}
+dd{margin:0;font-size:15px}
+.tile{border:2.5px solid var(--ink);border-radius:22px;padding:18px;background:var(--mint)}
+footer{border-top:2px solid var(--line);padding-top:16px;font-size:14px;color:var(--muted)}
+@media (max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.grid{grid-template-columns:1fr}}
+</style></head>
+<body><div class="wrap">
+<div class="draft"><b>Staged preview, not published.</b> Wording is held for the lawyer's check (question 14). Do not link this page from the live site until that is done. Band lines are drafts for the owner to review.</div>
+<header class="bar"><a class="brand" href="#top"><i>?</i><span>Math Inquirers</span></a></header>
+<main id="top">
+<section class="hero"><span class="eyebrow" style="color:var(--yellow)">How children learn</span><h1>The six <mark>inquiry habits</mark></h1><p class="slogan">Notice it. Test it. Explain why.</p>
+<p class="lead">Every lesson practises six inquiry habits: noticing, wondering, trying, checking, explaining and looking back. Children practise how to think as well as what to write.</p></section>
+<section class="sec"><div><span class="eyebrow">One set, all six levels</span><h2>Six habits, practised in every lesson</h2></div>
+<p class="muted">Each lesson names one focus habit, shown as a badge on the slides and in the workbook, and children practise the other habits around it. The habits are the same at every level. What changes is how much the tutor models and how much the child leads.</p>
+<div class="grid">
+<article class="habit"><div class="ic"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Notice">
+<path d="M5 32 C15 16 49 16 59 32 C49 48 15 48 5 32 Z"/><circle cx="32" cy="32" r="8"/>
+</svg></div><h3>Notice</h3><p class="ph">&ldquo;What do I see?&rdquo;</p><p>Pause on the picture or the numbers and let the child say what they see before you name anything.</p>
+<dl><dt>Ages 6-8</dt><dd>The tutor points to the picture and asks what we see; children say it in their own words.</dd><dt>Ages 8-10</dt><dd>Children list what stays the same and what changes, and name the pattern.</dd><dt>Ages 10-13</dt><dd>Children describe the structure first, then say which parts matter.</dd></dl></article>
+<article class="habit"><div class="ic"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Wonder">
+<path d="M10 10 H54 Q58 10 58 14 V40 Q58 44 54 44 H30 L18 56 V44 H10 Q6 44 6 40 V14 Q6 10 10 10 Z"/><path d="M26 22 C26 15 38 15 38 22 C38 27 32 27 32 32"/><path d="M32 37 V37.5"/>
+</svg></div><h3>Wonder</h3><p class="ph">&ldquo;What could I ask?&rdquo;</p><p>Invite a question or a what-if before any answer is given.</p>
+<dl><dt>Ages 6-8</dt><dd>The tutor asks a "what if?" and children choose one thing to change.</dd><dt>Ages 8-10</dt><dd>Children write one question or "what if?" of their own before starting.</dd><dt>Ages 10-13</dt><dd>Children pose and refine their own question, and decide which is worth trying.</dd></dl></article>
+<article class="habit"><div class="ic"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Try">
+<path d="M24 6 H40"/><path d="M27 6 V24 L10 52 Q8 58 15 58 H49 Q56 58 54 52 L37 24 V6"/><path d="M18 42 H46"/>
+</svg></div><h3>Try</h3><p class="ph">&ldquo;Let me test it&rdquo;</p><p>Ask the child to test one example, or a smaller case, before deciding.</p>
+<dl><dt>Ages 6-8</dt><dd>Children test one example with counters, coins or strips while the tutor models.</dd><dt>Ages 8-10</dt><dd>Children pick an example or a smaller case, test it and record what happened.</dd><dt>Ages 10-13</dt><dd>Children choose their own tests, including smaller cases, and keep a record.</dd></dl></article>
+<article class="habit"><div class="ic"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Check">
+<circle cx="32" cy="32" r="26"/><path d="M19 33 L28 43 L46 22"/>
+</svg></div><h3>Check</h3><p class="ph">&ldquo;Does it always work?&rdquo;</p><p>Ask the child to test a second case before saying it works.</p>
+<dl><dt>Ages 6-8</dt><dd>Children try one more number and see whether it still works, with the tutor.</dd><dt>Ages 8-10</dt><dd>Children test a second case and check by another route, such as going backwards.</dd><dt>Ages 10-13</dt><dd>Children look for a case that might break the idea, and check by estimating or going backwards.</dd></dl></article>
+<article class="habit"><div class="ic"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Explain">
+<path d="M10 10 H54 Q58 10 58 14 V40 Q58 44 54 44 H30 L18 56 V44 H10 Q6 44 6 40 V14 Q6 10 10 10 Z"/><path d="M16 21 H48 M16 31 H38"/>
+</svg></div><h3>Explain</h3><p class="ph">&ldquo;Here is why&rdquo;</p><p>Ask for the reason in the child's own words, said or written.</p>
+<dl><dt>Ages 6-8</dt><dd>Children say or draw why, as if teaching a friend; the tutor writes it down.</dd><dt>Ages 8-10</dt><dd>Children say or write a reason that uses the numbers or the picture.</dd><dt>Ages 10-13</dt><dd>Children write a short reason that covers every case, and listen to a different one.</dd></dl></article>
+<article class="habit"><div class="ic"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Look back">
+<path d="M26 14 L12 26 L26 38"/><path d="M12 26 H40 C54 26 54 50 40 50 H24"/>
+</svg></div><h3>Look back</h3><p class="ph">&ldquo;What did I learn? What would I change?&rdquo;</p><p>Ask what was learnt and what they would change, after the work is done.</p>
+<dl><dt>Ages 6-8</dt><dd>Children answer three look-back prompts, by saying, drawing or writing one word.</dd><dt>Ages 8-10</dt><dd>Children note what was hard, what helped and one thing to do differently.</dd><dt>Ages 10-13</dt><dd>Children lead the look-back, noting a tool used and a way to check differently.</dd></dl></article>
+</div></section>
+<section class="sec"><div class="tile"><h3>How we use them</h3>
+<p style="margin-top:8px">The tutor asks the prompt, waits, and gives a hint only if a child is stuck. A note after each lesson tells parents which habits we practised and one thing your child said or did. It records what happened in class. It is not a grade.</p>
+<p class="muted" style="margin-top:8px">The six Math Inquirers habits are our own working set. They sit alongside frameworks that inspire our design, such as P&oacute;lya's problem-solving steps and mathematical habits of mind. We do not promise exam or competition results.</p></div></section>
+</main>
+<footer><b>Math Inquirers</b> by Preciouslyours Pte Ltd, Singapore. Not affiliated with MOE or the Gifted Education Programme.</footer>
+</div></body></html>

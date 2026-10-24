@@ -1,0 +1,77 @@
+{
+ "note": "Shop products. Owner edits this file, then rebuild (python3 shop_build.py && python3 build_site.py). Fields: id (lowercase letters, digits, hyphen; stored with each interest request, so never reuse an id for a different product), level (1-6), name, description, formats (soft = PDF download, physical = printed and posted in Singapore), status ('coming-soon' or 'available'), price_cents (optional; a whole number for all formats, or {\"soft\":..,\"physical\":..}). PRICES ARE ON HOLD (owner, 23 Oct 2026): the page shows a price ONLY when status is 'available' AND price_cents is set; leave price_cents out and keep every status 'coming-soon' until the owner decides. See docs/shop/README.md.",
+ "products": [
+  {
+   "id": "ext-l1",
+   "level": 1,
+   "name": "Extension Workbook, Level 1",
+   "ages": "6-8",
+   "description": "Extra-challenge puzzles with full answers and short explanations, for self-study at home. Follows the question types of the Level 1 holiday program: number patterns, number bonds, money, shapes and logic, with objects.",
+   "formats": [
+    "soft",
+    "physical"
+   ],
+   "status": "coming-soon"
+  },
+  {
+   "id": "ext-l2",
+   "level": 2,
+   "name": "Extension Workbook, Level 2",
+   "ages": "7-9",
+   "description": "Extra-challenge puzzles with full answers and short explanations, for self-study at home. Follows the question types of the Level 2 holiday program: three-digit numbers, missing digits, arrays, money, fractions and measures.",
+   "formats": [
+    "soft",
+    "physical"
+   ],
+   "status": "coming-soon"
+  },
+  {
+   "id": "ext-l3",
+   "level": 3,
+   "name": "Extension Workbook, Level 3",
+   "ages": "8-10",
+   "description": "Extra-challenge puzzles with full answers and short explanations, for self-study at home. Follows the question types of the Level 3 holiday program: four-digit numbers, times tables 6 to 9, bar models, remainders, fractions and area.",
+   "formats": [
+    "soft",
+    "physical"
+   ],
+   "status": "coming-soon"
+  },
+  {
+   "id": "ext-l4",
+   "level": 4,
+   "name": "Extension Workbook, Level 4",
+   "ages": "9-11",
+   "description": "Extra-challenge puzzles with full answers and short explanations, for self-study at home. Follows the question types of the Level 4 holiday program: factors and multiples, five-digit numbers, order of operations, decimals, angles and data.",
+   "formats": [
+    "soft",
+    "physical"
+   ],
+   "status": "coming-soon"
+  },
+  {
+   "id": "ext-l5",
+   "level": 5,
+   "name": "Extension Workbook, Level 5",
+   "ages": "10-12",
+   "description": "Extra-challenge puzzles with full answers and short explanations, for self-study at home. Follows the question types of the Level 5 holiday program: numbers to 10 million, fractions, area of a triangle, volume, rate, percentage and angles.",
+   "formats": [
+    "soft",
+    "physical"
+   ],
+   "status": "coming-soon"
+  },
+  {
+   "id": "ext-l6",
+   "level": 6,
+   "name": "Extension Workbook, Level 6",
+   "ages": "11-13",
+   "description": "Extra-challenge puzzles with full answers and short explanations, for self-study at home. Follows the question types of the Level 6 holiday program: sequences, primes, negative numbers, algebra, counting, probability, codes and data, each also explored in Scratch.",
+   "formats": [
+    "soft",
+    "physical"
+   ],
+   "status": "coming-soon"
+  }
+ ]
+}

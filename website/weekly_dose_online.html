@@ -32,7 +32,9 @@ h1,h2,h3{font-family:var(--head);font-weight:600;margin:0;text-wrap:balance}
 .wk[aria-selected="true"]{border-color:var(--teal);background:var(--teal);color:var(--bg)}
 .wk[aria-selected="true"] small{color:var(--bg)}
 .wk:focus-visible,.btn:focus-visible,.ch:focus-visible,input:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
-.how{font-size:14px;color:var(--muted);margin:0 0 6px}
+.sitebar{display:flex;flex-wrap:wrap;gap:0 4px;align-items:center;margin:-10px 0 14px}.sitebar a{min-height:44px;display:inline-flex;align-items:center;padding:0 10px;font-weight:800;color:var(--fg)}.sitebar .sb-brand{font:600 20px var(--head);padding-left:0;text-decoration:none;margin-right:auto}.sitebar .sb-reg{background:var(--yellow);color:#1B2A49;border-radius:10px;text-decoration:none}.sitebar a:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.wk,.ch,.btn,input.ans{min-height:44px}
+.how{font-size:14.5px;color:var(--muted);margin:0 0 6px}
 .lesson{margin-top:30px}
 .hd{display:flex;align-items:flex-end;gap:14px;border-bottom:3px solid var(--rule);padding-bottom:10px;margin-bottom:16px}
 .big{font:600 64px/0.8 var(--head);color:var(--teal);font-variant-numeric:tabular-nums}
@@ -62,12 +64,13 @@ input.ans{font:700 18px var(--body);width:120px;padding:8px 10px;border:2px soli
 .side h3{font-size:17px;color:var(--teal);margin-bottom:4px}
 .side p{margin:0 0 12px}
 .side p:last-child{margin:0}
-.foot{margin-top:40px;border-top:1px solid var(--line);padding-top:12px;font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
-.reset{background:none;border:none;color:var(--muted);text-decoration:underline;cursor:pointer;font:inherit;padding:0}
+.foot{margin-top:40px;border-top:1px solid var(--line);padding-top:12px;font-size:14.5px;color:var(--muted);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+.reset{min-height:44px;background:none;border:none;color:var(--muted);text-decoration:underline;cursor:pointer;font:inherit;padding:0}
 @media (prefers-reduced-motion:no-preference){.msg,.note{animation:in .18s ease-out}@keyframes in{from{opacity:.4;transform:translateY(-2px)}to{opacity:1;transform:none}}}
 </style>
 
 <div class="wrap">
+  <nav class="sitebar" aria-label="Site"><a class="sb-brand" href="/">Math Inquirers</a><a href="/#levels">Levels</a><a href="/parent-questions/">Parent questions</a><a href="/shop/">Shop</a><a class="sb-reg" href="/#register">Register</a></nav>
   <header class="top">
     <div class="kick">Weekly Dose of Thinking Math  •  Online</div>
     <h1>Weekly Dose <span>Online</span></h1>
@@ -80,7 +83,7 @@ input.ans{font:700 18px var(--body);width:120px;padding:8px 10px;border:2px soli
   <main id="lessons"></main>
 
   <footer class="foot">
-    <span>Math Inquirers Holiday Program  •  Parent edition. Answers are checked on this page; nothing is sent anywhere.</span>
+    <span>Math Inquirers Holiday Program  •  Parent edition. Answers are checked on this page; nothing is sent anywhere. <a href="/terms/">Terms</a> · <a href="/privacy/">Privacy</a></span>
     <button class="reset" type="button" id="reset">Clear my ticks on this device</button>
   </footer>
 </div>
@@ -133,7 +136,7 @@ var L=[
    {lv:"Core",t:"A crayon lies from the 4 cm mark to the 12 cm mark on a ruler. How long is it, in cm?",a:"8",h:"Count the spaces from 4 to 12, not the marks.",w:"From 4 to 12 is 8 spaces: 12 − 4 = 8 cm."},
    {lv:"Think Harder",t:"1 clip is as long as 2 cubes. A pen is 6 clips long. How many cubes long is the pen?",a:"12",h:"Each clip is 2 cubes. Count in 2s for 6 clips.",w:"2, 4, 6, 8, 10, 12. The pen is 12 cubes long."},
    {lv:"Challenge",t:"A red ribbon is 9 cubes long. A blue ribbon is 4 cubes shorter than the red one. A green ribbon is 3 cubes longer than the blue one. How long are all three together?",a:"22",h:"Find blue first, then green.",w:"Blue: 9 − 4 = 5. Green: 5 + 3 = 8. Together: 9 + 5 + 8 = 22 cubes."}]},
- {n:10,title:"Challenge Day",topic:"Mixed puzzles",ask:'"How did you start? What would you try next time?"',tip:"Before any hint, ask: can you draw it, list it or make a table?",
+ {n:10,title:"Puzzle Day",topic:"Mixed puzzles",ask:'"How did you start? What would you try next time?"',tip:"Before any hint, ask: can you draw it, list it or make a table?",
   q:[
    {lv:"Core",t:"Count in 5s: 15, 20, 25, __",a:"30",h:"Add 5 to the last number.",w:"25 + 5 = 30."},
    {lv:"Think Harder",t:"Two numbers add up to 15. The bigger one is 3 more than the smaller one. What is the bigger number?",a:"9",h:"Try pairs that make 15: 10 and 5, 9 and 6, … Which pair is 3 apart?",w:"9 + 6 = 15, and 9 is 3 more than 6. The bigger number is 9."},

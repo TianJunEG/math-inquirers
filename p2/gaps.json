@@ -1,17 +1,17 @@
 {
  "common": {
   "neutral": "After question 3 you may choose: carry on, or try Think harder.",
-  "preSay": "These are sneak-peek puzzles. They are ideas we have not learnt yet, so guessing is welcome and so is saying \"I do not know\". Nobody is marked and nothing is read out. Start with question 1: use objects, a drawing or counting. Then try question 2. Show your answer on your own paper to your tutor only, or send it in private chat.",
+  "preSay": "Two sneak-peek puzzles on ideas we have not learnt yet. Guessing is welcome, so is I do not know. Nobody is marked. Say your answer together on three.",
   "preDo": [
-   "Show the Sneak-peek puzzles slide at minute 1 (3 minutes: about 1 minute for question 1, then 2 minutes for question 2). Say out loud: these are ideas we have not learnt yet; guessing and \"I do not know\" are welcome; nobody is marked.",
-   "Answers stay private. Each child holds their own paper to the camera for you only (look, do not read out), or writes it on their own paper and shows only you on camera. Never raise whiteboards together and never show a board in front of the group. Never ask a named child \"how do you know?\" Ask for volunteers: \"Would anyone like to tell us how they started?\"",
+   "Show the Sneak-peek puzzles slide at minute 1.5 (4.5 minutes: about 45 seconds for question 1, 90 seconds for question 2, then the answers). Say the short line out loud (about 28 words): two puzzles on ideas we have not learnt yet; guessing and \"I do not know\" are welcome; nobody is marked; say your answer together on three. Read each puzzle aloud; question 1 is the one to start with (objects, a drawing or counting).",
+   "Answers stay private. Each child writes the answer on their own paper, ticks it against the answer slide, and says it together on three (nothing is held up to the camera; do not read answers out). Never raise whiteboards together and never show a board in front of the group. Never ask a named child \"how do you know?\" Ask for volunteers: \"Would anyone like to tell us how they started?\"",
    "Question 1 is an access question: every child can try it with objects, a drawing or counting, so everyone has a first win. Question 2 is the thinking question. Do not mark either one. Click to show the answers at the end as \"one way to think about it\", without saying who had what.",
    "Use what you see only to plan. Invite the WHOLE group at once, never one child: \"When you have finished Start here, you can choose Think harder, Go further or the Investigation.\" Never announce who is on which page and never name a child in front of the group. Children choose, and may move either way at any time. Pairs are not split unless both children agree. Everybody joins the explore, the mini-lesson, the check-together slides and talk time."
   ],
   "talkDo": "You choose volunteers first: \"Who would like to share?\" If nobody offers, ask the pairs to share what their partner said. Never cold-call a child by name. Any child may say \"pass\" at any time and that is always fine. Do not keep public tallies, scores or rankings (no counting who got most right, no \"first to finish\"). Invite the whole group to think about whether they would like a turn, never one child.",
-  "refSay": "Looking back takes 2 minutes. Find the small box called Looking back on your page. Finish one line, two lines or all three, and tick what helped you. You may pass on any line. If you tick \"I am still stuck\", your tutor will check in during the session.",
+  "refSay": "Looking back takes 2 minutes. Find the box called Looking back on the page “Before you go: Investigation and Looking back”. Finish one line, two lines or all three, and tick what helped you. You may pass on any line. If you tick \"I am still stuck\", your tutor will check in during the session.",
   "refDo": "Nothing is collected in front of the group and nobody has to read theirs out. The tutor may read a box while stamping journals (never by private message), and checks in on a child who ticked still stuck during the open session, for example by a quick visit to the shared breakout room or a hand signal with a parent nearby, for example \"I saw you drew it when you got stuck\". A child may volunteer one sentence, never by name unless they choose to. If a child ticks \"I am still stuck\", check in during the next open session (a quick visit to the shared breakout room or a hand signal, with a parent nearby). Praise the strategy, not the speed.",
-  "close": "Closing and stamps take the last minute (89 to 90)."
+  "close": "Closing and stamps take the last minute and a half (88.5 to 90)."
  },
  "1": {
   "pre": [
@@ -235,8 +235,8 @@
    "lines": 2
   },
   "whatif": {
-   "q": "Go further: fold a strip into 6 equal parts. How many sixths make a half? How many sixths make a third?",
-   "a": "3 sixths make a half and 2 sixths make a third."
+   "q": "Go further: fold a strip into 3 equal parts. How do you know the parts are equal? Then fold one into 6 equal parts: how many sixths make a half? A third?",
+   "a": "Thirds: fold and adjust until the 3 parts match, then check one part on top of another. 3 sixths make a half and 2 sixths make a third."
   },
   "unstuck": [
    "folded or drew strips",
@@ -253,10 +253,10 @@
     "w": "Counting one layer first, then doubling, is a good method. This is a first win for everyone."
    },
    {
-    "q": "A shape is made of 2 semicircles and 1 quarter circle. If you cut every piece into quarter circles, how many quarter circles do you get?",
-    "a": "5 (each semicircle is 2 quarters: 2 + 2 + 1).",
+    "q": "A shape is made of 2 half circles and 1 quarter circle. If you cut every piece into quarter circles, how many quarter circles do you get?",
+    "a": "5 (each half circle is 2 quarters: 2 + 2 + 1).",
     "short": "5",
-    "w": "Listen for \"a semicircle is half a circle, which is 2 quarters\". Drawing the pieces and cutting them is fine."
+    "w": "Listen for \"a half circle is half of a circle, which is 2 quarters\". Drawing the pieces and cutting them is fine."
    }
   ],
   "invest": {
@@ -268,7 +268,7 @@
    "lines": 0
   },
   "whatif": {
-   "q": "Go further: you have 2 semicircles and 3 quarter circles. How many whole circles can you make? What is left over?",
+   "q": "Go further: you have 2 half circles and 3 quarter circles. How many whole circles can you make? What is left over?",
    "a": "7 quarter circles in all: 1 whole circle (4 quarters) and 3 quarters left over."
   },
   "unstuck": [

@@ -2,7 +2,7 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-22T00:27:08Z"
+  "at": "2026-10-23T03:46:50Z"
  },
  "lists": "css",
  "title": "Math Inquirers P5: Lesson 10 – Challenge Day",
@@ -17,25 +17,29 @@
   "p5l10-we1",
   "p5l10-try1",
   "p5l10-we2",
-  "p5l10-try2",
   "p5l10-we3",
   "p5l10-key",
   "p5l10-break",
   "p5l10-ws1",
   "p5l10-ws1ans",
   "p5l10-teachsq",
-  "p5l10-teachliar",
-  "p5l10-teachage",
   "p5l10-ws2",
   "p5l10-ws2ans",
   "p5l10-stretch",
+  "p5l10-gofurther",
+  "p5l10-gofurther2",
   "p5l10-challenge",
   "p5l10-chdiag",
   "p5l10-chwalk",
+  "p5l10-gap-tri",
+  "p5l10-gap-bounds",
+  "p5l10-gap-pile",
+  "p5l10-gap-evencap",
+  "p5l10-gap-r7",
   "p5l10-talk",
   "p5l10-exit",
-  "end",
-  "p5l10-reflect"
+  "p5l10-reflect",
+  "end"
  ],
  "cover": "p5l10-title",
  "sections": {

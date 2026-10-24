@@ -1,0 +1,229 @@
+/* Extension workbook stylesheet. Palette = hp/wb_style.css (navy, teal, gold). Two themes: .colour (soft copy) and .bw (print).
+   Nothing may depend on colour: tiers differ by shape + words; the bw theme uses only black and white. */
+@page{size:210mm 297mm;margin:0}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:'Fredoka','Nunito Sans',Arial,sans-serif;font-weight:500;font-size:var(--fs,19px);line-height:1.32;color:var(--ink);background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.colour{--ink:#1B2A49;--accent:#1F7A6F;--gold:#FFC93C;--tint:#FFF6D6;--tint2:#E8F5F2;--rule:#8A94AD;--onaccent:#fff;--ongold:#1B2A49}
+.bw{--ink:#000;--accent:#000;--gold:#fff;--tint:#fff;--tint2:#fff;--rule:#000;--onaccent:#fff;--ongold:#000}
+.page{position:relative;width:210mm;height:296.6mm;overflow:hidden;break-after:page;background:#fff}
+.page:last-child{break-after:auto}
+.print .page.recto .pg{left:25mm;right:13mm}
+.print .page.verso .pg{left:13mm;right:25mm}
+.soft .page .pg{left:19mm;right:19mm}
+.pg{position:absolute;top:12mm;bottom:15mm;display:flex;flex-direction:column}
+.pf{position:absolute;bottom:6mm;font:600 9pt 'Nunito Sans',Arial,sans-serif;color:var(--ink);display:flex;gap:4mm;align-items:center}
+.print .recto .pf{right:13mm;left:25mm;justify-content:space-between}
+.print .verso .pf{left:13mm;right:25mm;flex-direction:row-reverse;justify-content:space-between}
+.soft .pf{left:19mm;right:19mm;justify-content:space-between}
+.folio{font:700 11pt Fredoka,sans-serif;border:0.4mm solid var(--ink);border-radius:50%;min-width:8mm;height:8mm;display:inline-flex;align-items:center;justify-content:center;padding:0 1.5mm}
+.gutterline{position:absolute;top:6mm;bottom:6mm;border-left:0.3mm dashed #000;width:0}
+.print .recto .gutterline{left:9mm}.print .verso .gutterline{right:9mm}
+.gutternote{position:absolute;top:40mm;writing-mode:vertical-rl;font:700 8pt 'Nunito Sans',sans-serif;white-space:nowrap}
+.print .recto .gutternote{left:2.5mm}
+.print .verso .gutternote{right:2.5mm;transform:rotate(180deg)}
+/* page head */
+.ph{display:flex;align-items:center;gap:3mm;border-bottom:0.7mm solid var(--ink);padding-bottom:1.6mm;margin-bottom:3mm;flex:none}
+.ph .lv{background:var(--accent);color:var(--onaccent);font-weight:700;padding:1mm 3.5mm;border-radius:1mm;font-size:12pt}
+.ph .un{font-weight:700;font-size:13pt}
+.ph .nm{margin-left:auto;font:600 10pt 'Nunito Sans',sans-serif}
+.ph .nm i{display:inline-block;width:38mm;border-bottom:0.3mm solid var(--ink);margin-left:1.5mm;height:4mm}
+.pbody{flex:1;display:flex;flex-direction:column;gap:3mm;min-height:0}
+.stretch .practice .item,.stretch .practice .grow{flex:1 1 auto}
+/* tiers */
+.tier{flex:none;display:flex;align-items:center;gap:3mm;padding:1.6mm 4mm;border-radius:1.5mm;font-family:Fredoka,sans-serif;font-weight:700;font-size:17pt;border:0.6mm solid var(--ink)}
+.tier svg{width:7mm;height:7mm;flex:none}
+.tier small{font:600 10.5pt 'Nunito Sans',sans-serif;margin-left:auto;text-align:right;max-width:98mm;line-height:1.15}
+.colour .t-start{background:var(--accent);color:#fff}.colour .t-start svg *{fill:#fff;stroke:#fff}
+.colour .t-think{background:var(--gold);color:var(--ongold)}.colour .t-think svg *{fill:var(--ink);stroke:var(--ink)}
+.colour .t-go{background:var(--ink);color:#fff}.colour .t-go svg *{fill:#fff;stroke:#fff}
+.colour .t-quiz{background:#fff;color:var(--ink)}.colour .t-quiz svg *{fill:var(--ink);stroke:var(--ink)}
+.bw .t-start,.bw .t-think,.bw .t-go{background:#000;color:#fff}.bw .t-start svg *,.bw .t-think svg *,.bw .t-go svg *{fill:#fff;stroke:#fff}
+.bw .t-quiz{background:#fff;color:#000}.bw .t-quiz svg *{fill:#000;stroke:#000}
+.bw .t-think{border-style:double;border-width:1.4mm}
+.bw .t-go{border-style:solid}
+/* items */
+.item{position:relative;border:0.55mm solid var(--ink);border-radius:2mm;padding:3.4mm 4mm 3mm 13.5mm;background:#fff;break-inside:avoid;display:flex;flex-direction:column;gap:1.6mm}
+.item .badge{position:absolute;left:2.6mm;top:2.6mm;width:8.6mm;height:8.6mm;display:flex;align-items:center;justify-content:center;font:700 13pt Fredoka,sans-serif}
+.item .badge svg{position:absolute;inset:0;width:100%;height:100%}
+.item .badge span{position:relative}
+.stem{font-weight:600;font-size:1em}
+.stem .ln1{display:block}
+.parts{display:flex;flex-direction:column;gap:1.2mm}
+.part{display:flex;gap:2.2mm;align-items:center}
+.plab{flex:none;font:800 12pt 'Nunito Sans',sans-serif;width:5.5mm}
+.abox{display:inline-block;width:var(--boxw,16mm);height:var(--boxh,12mm);border:0.55mm solid var(--ink);border-radius:1.5mm;vertical-align:middle;margin:0.6mm 1mm;background:#fff}
+.aline{display:inline-block;width:56mm;border-bottom:0.45mm solid var(--ink);height:8mm;vertical-align:bottom;margin:0 1mm}
+.circ{display:inline-flex;gap:3.5mm;vertical-align:middle;margin:0 1mm}
+.circ i{font-style:normal;padding:0.4mm 2.4mm;border:0.2mm solid transparent}
+.fig{display:flex;justify-content:center;margin:0.6mm 0}
+.fig svg{max-width:100%}
+.rows{display:flex;flex-direction:column;gap:0}
+.rw{display:flex;align-items:flex-end;gap:2mm;height:var(--line,9.5mm);font:600 10.5pt 'Nunito Sans',sans-serif}
+.rw .rl{flex:none}
+.rw .rln{flex:1;border-bottom:0.35mm solid var(--rule);height:100%}
+.rw.free{align-items:center}
+.wt{border-collapse:collapse;margin-top:1mm}
+.wt th,.wt td{border:0.4mm solid var(--ink);height:calc(var(--line,9.5mm) - 1.4mm);width:34mm;font:700 10pt 'Nunito Sans',sans-serif;text-align:center}
+.hint{align-self:flex-end;transform:rotate(180deg);width:100%;font:600 11pt/1.25 'Nunito Sans',sans-serif;border-bottom:0.3mm dashed var(--ink);padding-bottom:1mm;margin-top:1mm;white-space:nowrap}
+.hint b{font-weight:800}
+.note{font:600 10.5pt/1.3 'Nunito Sans',sans-serif}
+/* learn page */
+.goal{border-left:1.6mm solid var(--ink);padding:1.2mm 3mm;font-weight:600;flex:none}
+.goal b{font-weight:700}
+.wex{position:relative;border:0.7mm solid var(--ink);border-radius:2mm;padding:7mm 5mm 3.6mm;background:var(--tint);display:flex;flex-direction:column;gap:2mm}
+.bw .wex{border-style:double;border-width:1.3mm}
+.tab{position:absolute;left:5mm;top:-4.2mm;background:var(--ink);color:#fff;font:700 12pt Fredoka,sans-serif;padding:0.8mm 4mm;border-radius:1mm}
+.steps{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:1.4mm;counter-reset:s}
+.steps li{display:flex;gap:2.4mm;align-items:flex-start;font-weight:500;counter-increment:s}
+.steps li:before{content:counter(s);flex:none;width:6.6mm;height:6.6mm;border-radius:50%;border:0.5mm solid var(--ink);background:#fff;display:flex;align-items:center;justify-content:center;font:700 11pt Fredoka,sans-serif;margin-top:0.3mm}
+.ansbar{border-top:0.5mm solid var(--ink);padding-top:1.4mm;font-weight:700}
+.howto{border:0.6mm solid var(--ink);border-radius:2mm;padding:3.6mm 5mm 3.2mm;position:relative;margin-top:2mm}
+.howto .tab{background:var(--accent)}
+.bw .howto .tab{background:#000}
+.howto ol{margin:0;padding-left:5.5mm;display:flex;flex-direction:column;gap:1mm}
+.tryit{margin-top:1mm}
+.tryit .item{padding-left:15mm}
+.lead{font-weight:500}
+/* quiz */
+.qgrid{display:grid;grid-template-columns:1fr 1fr;gap:2.6mm}
+.qgrid .item{padding:2.6mm 3mm 2.6mm 12mm}
+.score{display:flex;align-items:center;gap:3mm;font-weight:700;flex:none}
+.score .abox{width:14mm}
+.abox.wide{width:26mm}
+.adv{font:600 10pt/1.3 'Nunito Sans',sans-serif}
+/* front matter */
+.cover{display:flex;flex-direction:column;height:100%;border:1.4mm solid var(--ink);border-radius:5mm;padding:12mm 10mm;gap:5mm;align-items:center;text-align:center}
+.cover .brand{font:700 20pt Fredoka,sans-serif;letter-spacing:.04em}
+.cover h1{font:700 44pt/1.02 Fredoka,sans-serif;margin:6mm 0 0}
+.cover h1 span{display:block;font-size:26pt;margin-top:3mm;font-weight:600}
+.cover .lvl{font:700 30pt Fredoka,sans-serif;border:0.8mm solid var(--ink);border-radius:3mm;padding:1.5mm 9mm;background:var(--gold);color:var(--ongold)}
+.bw .cover .lvl{background:#fff;color:#000;border-width:1.4mm;border-style:double}
+.cover .tags{display:flex;gap:4mm;font:700 13pt Fredoka,sans-serif}
+.cover .tags span{border:0.5mm solid var(--ink);border-radius:2mm;padding:1mm 4mm}
+.cover img{height:52mm;margin-top:auto;margin-bottom:2mm}
+.cover .namebox{width:100%;display:flex;align-items:flex-end;gap:3mm;font-weight:700;font-size:15pt}
+.cover .namebox i{flex:1;border-bottom:0.5mm solid var(--ink);height:11mm}
+.h1{font:700 26pt Fredoka,sans-serif;margin:0 0 1mm}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:5mm}
+.box{border:0.6mm solid var(--ink);border-radius:2mm;padding:3.4mm 4.4mm}
+.box h3{margin:0 0 1.6mm;font:700 14pt Fredoka,sans-serif}
+.box ul,.box ol{margin:0;padding-left:5.5mm;display:flex;flex-direction:column;gap:1.1mm;font-weight:500}
+.legend{display:flex;flex-direction:column;gap:2mm}
+.legend div{display:flex;gap:3mm;align-items:center;font-weight:600}
+.legend svg{width:8mm;height:8mm;flex:none}
+.toc{width:100%;border-collapse:collapse}
+.toc td{padding:1.65mm 2mm;border-bottom:0.3mm solid var(--rule);vertical-align:middle}
+.toc td.n{width:12mm;font:700 18pt Fredoka,sans-serif}
+.toc td.t b{font:700 14pt Fredoka,sans-serif;display:block}
+.toc td.t small{font:600 10pt 'Nunito Sans',sans-serif}
+.toc td.p{text-align:right;font:700 12pt Fredoka,sans-serif;white-space:nowrap}
+.toc tr.later td{color:var(--ink);opacity:1}
+.grid{width:100%;border-collapse:collapse}
+.grid th,.grid td{border:0.4mm solid var(--ink);padding:1.4mm 1.6mm;text-align:center;font:600 10.5pt 'Nunito Sans',sans-serif}
+.grid th{font-weight:800;background:var(--tint2)}
+.bw .grid th{background:#fff;border-bottom-width:0.9mm}
+.grid td.l{text-align:left}
+.grid .tick{display:inline-block;width:6.4mm;height:6.4mm;border:0.45mm solid var(--ink);border-radius:1.2mm;vertical-align:middle;margin:0 .4mm}
+.cert{height:100%;border:2.4mm double var(--ink);border-radius:5mm;padding:14mm 10mm;display:flex;flex-direction:column;align-items:center;text-align:center;gap:5mm}
+.cert h1{font:700 40pt/1.05 Fredoka,sans-serif;margin:2mm 0 0}
+.cert .big{font:700 24pt Fredoka,sans-serif}
+.cert .nameline{width:80%;border-bottom:0.6mm solid var(--ink);height:14mm}
+.cert .sigs{display:flex;gap:12mm;width:100%;margin-top:auto;font:600 11pt 'Nunito Sans',sans-serif}
+.cert .sigs div{flex:1;border-top:0.5mm solid var(--ink);padding-top:1.4mm}
+.cert img{height:70mm}
+/* answers */
+.ans-unit{border-bottom:0.7mm solid var(--ink);margin:0 0 1mm;padding-bottom:1mm;font:700 17pt Fredoka,sans-serif;display:flex;justify-content:space-between}
+.ans-grp{font:800 11pt 'Nunito Sans',sans-serif;text-transform:uppercase;letter-spacing:.08em;border-bottom:0.35mm solid var(--ink);margin:1.8mm 0 0.6mm}
+.ae{display:flex;gap:3mm;padding:1.4mm 0;border-bottom:0.25mm solid var(--rule);break-inside:avoid;font:500 11.6pt/1.28 'Nunito Sans',sans-serif}
+.ae .k{flex:none;width:24mm;font:800 12pt Fredoka,sans-serif}
+.ae .k small{display:block;font:700 9.5pt 'Nunito Sans',sans-serif}
+.ae .ans{display:block;font-weight:700;font-size:12pt}
+.ae .a b{font-weight:800}
+.ae .why{display:block;font-weight:600}
+.ae .why:before{content:'Why: ';font-weight:800}
+.divider{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center;gap:6mm;border:1.4mm solid var(--ink);border-radius:5mm;padding:14mm}
+.divider h1{font:700 52pt Fredoka,sans-serif;margin:0}
+.divider p{font:600 13pt/1.4 'Nunito Sans',sans-serif;max-width:120mm;margin:0}
+.blank{background:#fff}
+.mi-s{height:24mm}
+.welcome-mi{height:36mm;margin-left:auto}
+
+.pbody>*{flex-shrink:0}
+.pg>.cover,.pg>.cert,.pg>.divider{flex:1;min-height:0;height:auto}
+.answers{gap:0}
+.part{align-items:baseline}
+.part .abox{margin-top:0}
+.tickl{display:inline-flex;align-items:center;gap:1.5mm;margin-right:5mm}
+.tickl .tick{display:inline-block;width:6.4mm;height:6.4mm;border:0.45mm solid var(--ink);border-radius:1.2mm}
+.adv{margin:0;padding-left:5mm;font:600 10.5pt/1.35 'Nunito Sans',sans-serif}
+.box.grow{flex:1 1 auto}
+
+.legend svg{color:var(--ink)}
+.legend svg *{fill:inherit;stroke:inherit}
+
+.stem,.part>span:last-child{white-space:pre-wrap}
+
+.rw.free{height:auto;min-height:var(--line,9.5mm);margin:0}
+.rw.free .abox{width:13mm;height:10mm;margin:0.3mm 1mm}
+.grid.prog td{padding:3.4mm 1.6mm}
+
+.item{position:relative}
+.beyond{position:absolute;top:-2.4mm;right:5mm;background:#fff;padding:0 2mm;font:800 9pt/1.2 'Nunito Sans',sans-serif;letter-spacing:.02em}
+.lic p{margin:0 0 2mm;font:500 11pt/1.35 'Nunito Sans',sans-serif}.lic .box p:last-child{margin-bottom:0}.lic .box ul{font:500 11pt/1.35 'Nunito Sans',sans-serif}
+.grid.pace td{padding:1mm 1.4mm}
+
+/* review fixes (Oct 2026) */
+.aline.long{width:96mm}
+.exside{display:flex;gap:4mm;align-items:center}
+.exside .exfig{flex:none}
+.exside .exfig .fig{margin:0}
+.exside .steps{flex:1;min-width:0}
+.two.hf{align-items:stretch}
+.two.hf .howto{margin-top:2mm}
+.howto ul{margin:0;padding-left:5.5mm;display:flex;flex-direction:column;gap:1mm}
+.howto.facts .fig{margin:0 0 1mm}
+.learn.tight{gap:2.2mm}
+.learn.tight .wex{padding:6.4mm 4.4mm 2.6mm;gap:1.4mm}
+.learn.tight .steps{gap:1mm}
+.learn.tight .howto{padding:3.4mm 4mm 2.4mm;margin-top:1.6mm}
+.learn.tight .h1{font-size:23pt}
+.learn.tight .tryit .item{padding-top:2.4mm;padding-bottom:2.2mm}
+
+.wexpair{align-items:stretch;gap:3mm}
+.wexpair .wex{padding:6.4mm 3.4mm 2.6mm}
+.figside{display:flex;gap:4mm;align-items:center;justify-content:space-between}
+.figside .parts{flex:1;min-width:0}
+.figside .fig{flex:none;margin:0}
+
+.learn.tight>.wex,.learn.tight>.wexpair,.learn.tight>.two.hf,.learn.tight>.howto{margin-top:2.6mm}
+.learn.tight .exside{gap:3mm}
+.learn.tight{font-size:16.2px}
+
+.snug{gap:2.2mm}
+.snug .item{padding:2.6mm 4mm 2.2mm 13.5mm;gap:1.1mm}
+.snug .item .badge{top:2.2mm}
+.learn.tight .h1{font-size:21pt}
+.learn.tight .goal{padding:0.6mm 3mm}
+.learn.tight .tryit .tier{padding:1mm 4mm}
+.learn.tight .ansbar{padding-top:0.8mm}
+.learn.tight .howto ol,.learn.tight .howto ul{gap:0.4mm}
+.learn.tight .howto{padding:3mm 4mm 1.8mm}
+.learn.tight .wex{padding-top:6mm;padding-bottom:2.2mm}
+.learn.tight .steps li:before{width:6mm;height:6mm}
+
+/* audit 2: the intro line must not touch the tab of the worked example (tab sticks out 4.2 mm above its box) */
+.learn>.lead+.wex,.learn>.lead+.wexpair,.learn>.goal+.wex,.learn>.goal+.wexpair{margin-top:1.8mm}
+
+.rw.draw{height:calc(var(--line,9.5mm) * 1.7)}
+.rw.draw .rln{border:0.3mm dashed var(--rule);border-radius:1.2mm;height:100%}
+
+.steps{list-style:none;margin:0;padding:0;counter-reset:st;display:flex;flex-direction:column;gap:1.6mm}
+.steps li{counter-increment:st;display:flex;gap:3mm;align-items:center;font-weight:600}
+.steps li::before{content:counter(st);flex:none;width:8mm;height:8mm;border-radius:50%;border:0.6mm solid var(--ink);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12pt}
+.parts.prow{flex-direction:row;flex-wrap:wrap;gap:1.2mm 6mm}
+
+/* audit 3: figure beside the question text */
+.figright{display:flex;gap:4mm;align-items:center}
+.figright .frt{flex:1;min-width:0}
+.figright .fig{flex:none;margin:0}

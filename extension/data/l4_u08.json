@@ -1,0 +1,1197 @@
+{
+ "schema_version": 1,
+ "level": 4,
+ "unit": 8,
+ "id": "L4U08",
+ "title": "Symmetry and Nets",
+ "topic": "Symmetry and nets",
+ "holiday_lesson": 8,
+ "goal": "I can tell which nets fold into a cube and which faces are opposite. I can complete a figure so that a line is a line of symmetry.",
+ "learn": {
+  "intro": "A net is a flat shape that folds into a solid. A cube net has 6 squares. In a line of 3 squares, the 2 end squares are opposite faces. On a dice, opposite faces add up to 7.",
+  "example": {
+   "problem": "Does this net fold into a cube? Which face is opposite P?",
+   "figure": {
+    "type": "l4_tiles",
+    "shapes": [
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        3,
+        1
+       ],
+       [
+        1,
+        0
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "shade": false,
+      "labels": {
+       "0,1": "P",
+       "1,1": "Q",
+       "2,1": "R",
+       "3,1": "S",
+       "1,0": "T",
+       "2,2": "U"
+      }
+     }
+    ],
+    "cell": 34,
+    "width_mm": 62
+   },
+   "steps": [
+    "Choose a base. The row of 4 squares wraps round as walls.",
+    "One square is above the row and one is below. They make the lid and the base.",
+    "P and R have 1 square between them. They are opposite."
+   ],
+   "answer": "It folds into a cube. R is opposite P."
+  },
+  "example2": {
+   "problem": "Complete the figure. The dashed line must be a line of symmetry.",
+   "figure": {
+    "type": "l4_grid",
+    "rows": 4,
+    "cols": 6,
+    "cell": 40,
+    "width_mm": 68,
+    "shade": [
+     [
+      0,
+      2
+     ],
+     [
+      1,
+      1
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      3,
+      2
+     ]
+    ],
+    "axis": {
+     "kind": "v",
+     "at": 3
+    }
+   },
+   "steps": [
+    "Flip each shaded square across the line.",
+    "The partner is the same distance from the line."
+   ],
+   "answer": "Each shaded square gets a partner the same distance from the line."
+  },
+  "pair": true,
+  "tight": true,
+  "howto": {
+   "title": "How to do it",
+   "steps": [
+    "Net: choose a base. Fold the squares round it in your head.",
+    "A net needs 1 base, 1 lid and 4 walls.",
+    "Symmetry: count squares from the line to the partner."
+   ]
+  },
+  "facts": {
+   "title": "Good to know",
+   "lines": [
+    "Dice: opposite faces add up to 7.",
+    "A rectangle has 2 lines of symmetry. A square has 4.",
+    "No fold: 4 squares at one corner, or 5 in a row."
+   ]
+  },
+  "try": {
+   "id": "L4U08-L01",
+   "text": "Opposite faces of a dice add up to 7. What number is opposite 4? {b}",
+   "answer": {
+    "value": [
+     "3"
+    ],
+    "text": "3"
+   },
+   "explanation": "4 + 3 = 7, so 3 is opposite 4."
+  }
+ },
+ "items": [
+  {
+   "id": "L4U08-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "Which of these nets fold into a cube? Circle the letters.",
+   "figure": {
+    "type": "l4_tiles",
+    "shapes": [
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        3,
+        1
+       ],
+       [
+        0,
+        0
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "shade": false,
+      "name": "A"
+     },
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        1,
+        0
+       ],
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        3,
+        1
+       ]
+      ],
+      "shade": false,
+      "name": "B"
+     },
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ],
+       [
+        3,
+        2
+       ]
+      ],
+      "shade": false,
+      "name": "C"
+     },
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        3,
+        1
+       ],
+       [
+        4,
+        1
+       ],
+       [
+        2,
+        0
+       ]
+      ],
+      "shade": false,
+      "name": "D"
+     }
+    ],
+    "cell": 36,
+    "width_mm": 160,
+    "gap": 0.8
+   },
+   "answer": {
+    "value": [
+     "A",
+     "C"
+    ],
+    "text": "A and C",
+    "unordered": true
+   },
+   "explanation": "A folds: the row of 4 makes walls, with a lid and a base. B: a cube has only 3 faces at a corner, not 4. D: the 5th square covers the 1st. C folds."
+  },
+  {
+   "id": "L4U08-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "The net folds into a cube. Name the letter opposite each one.",
+   "figure": {
+    "type": "l4_tiles",
+    "shapes": [
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        1,
+        0
+       ],
+       [
+        2,
+        0
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        3,
+        1
+       ],
+       [
+        4,
+        1
+       ]
+      ],
+      "shade": false,
+      "labels": {
+       "0,0": "P",
+       "1,0": "Q",
+       "2,0": "R",
+       "2,1": "S",
+       "3,1": "T",
+       "4,1": "U"
+      }
+     }
+    ],
+    "cell": 36,
+    "width_mm": 92
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Opposite P: {b}",
+     "answer": {
+      "value": [
+       "R"
+      ],
+      "text": "R"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Opposite Q: {b}",
+     "answer": {
+      "value": [
+       "T"
+      ],
+      "text": "T"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Opposite S: {b}",
+     "answer": {
+      "value": [
+       "U"
+      ],
+      "text": "U"
+     }
+    }
+   ],
+   "explanation": "In the row of 3 squares P, Q, R, the 2 ends P and R are opposite. Q and T are opposite (1 square between them going round the step). The last pair is S and U.",
+   "partsrow": true
+  },
+  {
+   "id": "L4U08-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "Each pair of opposite faces on a dice has a total of 7. Fill in the blank squares. Go row by row.",
+   "figure": {
+    "type": "l4_tiles",
+    "shapes": [
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        3,
+        1
+       ],
+       [
+        0,
+        0
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "shade": false,
+      "labels": {
+       "0,0": "1",
+       "0,1": "2",
+       "1,1": "3",
+       "2,1": "",
+       "3,1": "",
+       "2,2": ""
+      }
+     }
+    ],
+    "cell": 40,
+    "width_mm": 78
+   },
+   "answer": {
+    "value": [
+     "5",
+     "4",
+     "6"
+    ],
+    "text": "5, 4, 6 (row by row)",
+    "list": true
+   },
+   "explanation": "2 is opposite the third square of the row: 7 − 2 = 5. 3 is opposite the fourth square: 7 − 3 = 4. 1 is opposite the bottom square: 7 − 1 = 6."
+  },
+  {
+   "id": "L4U08-S04",
+   "tier": "start",
+   "page": 2,
+   "text": "Fold on the dashed line. Shade squares so the 2 halves match. How many squares are shaded in all? {b}",
+   "figure": {
+    "type": "l4_grid",
+    "rows": 6,
+    "cols": 8,
+    "cell": 44,
+    "width_mm": 66,
+    "shade": [
+     [
+      5,
+      1
+     ],
+     [
+      5,
+      2
+     ],
+     [
+      5,
+      3
+     ],
+     [
+      4,
+      1
+     ],
+     [
+      4,
+      2
+     ],
+     [
+      4,
+      3
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      3,
+      3
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      1,
+      3
+     ]
+    ],
+    "axis": {
+     "kind": "v",
+     "at": 4
+    }
+   },
+   "answer": {
+    "value": [
+     "24"
+    ],
+    "text": "24"
+   },
+   "explanation": "There are 12 shaded squares on the left of the line. Each needs a partner on the right, so 12 more squares are shaded. 12 + 12 = 24."
+  },
+  {
+   "id": "L4U08-S05",
+   "tier": "start",
+   "page": 2,
+   "text": "How many lines of symmetry does each shape have?",
+   "figure": {
+    "type": "l4_tiles",
+    "shapes": [
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        1,
+        0
+       ],
+       [
+        2,
+        0
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      "shade": false,
+      "name": "A"
+     },
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        1,
+        0
+       ],
+       [
+        2,
+        0
+       ],
+       [
+        3,
+        0
+       ]
+      ],
+      "shade": false,
+      "name": "B"
+     },
+     {
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        1,
+        2
+       ]
+      ],
+      "shade": false,
+      "name": "C"
+     },
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        2,
+        1
+       ]
+      ],
+      "shade": false,
+      "name": "D"
+     }
+    ],
+    "cell": 36,
+    "width_mm": 124,
+    "gap": 0.9
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "A: {b}",
+     "answer": {
+      "value": [
+       "1"
+      ],
+      "text": "1"
+     }
+    },
+    {
+     "label": "b",
+     "text": "B: {b}",
+     "answer": {
+      "value": [
+       "2"
+      ],
+      "text": "2"
+     }
+    },
+    {
+     "label": "c",
+     "text": "C: {b}",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    },
+    {
+     "label": "d",
+     "text": "D: {b}",
+     "answer": {
+      "value": [
+       "0"
+      ],
+      "text": "0"
+     }
+    }
+   ],
+   "explanation": "A has 1 line (down the middle). B has 2 (along its length and across). C, the plus sign, has 4 (up-down, across and 2 diagonals). D has none: no fold makes its halves match.",
+   "partsrow": true
+  },
+  {
+   "id": "L4U08-S06",
+   "tier": "start",
+   "page": 2,
+   "text": "There are 2 dashed lines. Shade 1 more square. The halves must then match on one of the lines.",
+   "figure": {
+    "type": "l4_grid",
+    "rows": 5,
+    "cols": 5,
+    "cell": 46,
+    "width_mm": 60,
+    "shade": [
+     [
+      1,
+      2
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      4,
+      1
+     ]
+    ],
+    "axes": [
+     {
+      "kind": "v",
+      "at": 2.5
+     },
+     {
+      "kind": "h",
+      "at": 2.5
+     }
+    ]
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many different squares can you shade? {b}",
+     "answer": {
+      "value": [
+       "2"
+      ],
+      "text": "2"
+     }
+    }
+   ],
+   "explanation": "Only the shaded square in the bottom row has no partner. For the up-down line its partner is bottom right. For the across line it is in the top row. 2 ways.",
+   "figside": true
+  },
+  {
+   "id": "L4U08-S07",
+   "tier": "start",
+   "page": 3,
+   "text": "A dice sits on a table. The top face shows 6 and the face in front shows 4.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The bottom face shows {b}",
+     "answer": {
+      "value": [
+       "1"
+      ],
+      "text": "1"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The face at the back shows {b}",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The 4 side faces add up to {b}",
+     "answer": {
+      "value": [
+       "14"
+      ],
+      "text": "14"
+     }
+    }
+   ],
+   "explanation": "Opposite faces add up to 7. The bottom is 7 − 6 = 1. The back is 7 − 4 = 3. The 4 side faces are 2 opposite pairs, and 7 + 7 = 14."
+  },
+  {
+   "id": "L4U08-S08",
+   "tier": "start",
+   "page": 3,
+   "text": "A dice net is made of 6 squares. Each square is 3 cm by 3 cm. Find the area of the card. {b} cm²",
+   "answer": {
+    "value": [
+     "54"
+    ],
+    "text": "54"
+   },
+   "explanation": "Each square has an area of 3 × 3 = 9 cm². The net has 6 squares: 6 × 9 = 54 cm²."
+  },
+  {
+   "id": "L4U08-S09",
+   "tier": "start",
+   "page": 3,
+   "text": "Shade squares so the top and bottom halves match on the dashed line. How many are shaded in all? {b}",
+   "figure": {
+    "type": "l4_grid",
+    "rows": 8,
+    "cols": 6,
+    "cell": 40,
+    "width_mm": 60,
+    "shade": [
+     [
+      3,
+      0
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      3,
+      3
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      2,
+      2
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      0,
+      2
+     ]
+    ],
+    "axis": {
+     "kind": "h",
+     "at": 4
+    }
+   },
+   "answer": {
+    "value": [
+     "20"
+    ],
+    "text": "20"
+   },
+   "explanation": "There are 10 shaded squares above the line. Each needs a partner below the line, so 10 more squares are shaded. 10 + 10 = 20."
+  },
+  {
+   "id": "L4U08-S10",
+   "tier": "start",
+   "page": 3,
+   "text": "A cube has edges of 5 cm.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "All 12 edges are 5 cm long. The edges add up to {b} cm",
+     "answer": {
+      "value": [
+       "60"
+      ],
+      "text": "60"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The area of its net is {b} cm²",
+     "answer": {
+      "value": [
+       "150"
+      ],
+      "text": "150"
+     }
+    }
+   ],
+   "explanation": "(a) 12 × 5 = 60 cm. (b) Each face is 5 × 5 = 25 cm², and the net has 6 faces: 6 × 25 = 150 cm².",
+   "partsrow": true
+  },
+  {
+   "id": "L4U08-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "Mei paints each face of a cube red or blue.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "No 2 red faces may share an edge. The most red faces is {b}",
+     "answer": {
+      "value": [
+       "2"
+      ],
+      "text": "2"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Now red faces may share an edge, but no 2 red faces may be opposite. The most red faces is {b}",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:",
+     ""
+    ]
+   },
+   "hint": "Which faces share an edge with a given face?",
+   "explanation": "(a) A face touches 4 faces, so a third red face would touch one of 2 opposite red faces: most 2. (b) 3 faces at a corner are not opposite, but a 4th would be: most 3."
+  },
+  {
+   "id": "L4U08-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "A square of paper is folded in half again and again. The folds lie on top of each other. Then holes are punched through all the layers at once.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "2 folds, then 3 holes punched. Holes when opened: {b}",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    },
+    {
+     "label": "b",
+     "text": "3 folds, then 2 holes punched. Holes when opened: {b}",
+     "answer": {
+      "value": [
+       "16"
+      ],
+      "text": "16"
+     }
+    },
+    {
+     "label": "c",
+     "text": "After 3 folds, how many holes make 40 holes in all? {b}",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "hint": "Each fold doubles the layers. Count the layers.",
+   "explanation": "Each fold doubles the layers. 2 folds: 4 layers, and 4 × 3 = 12 holes. 3 folds: 8 layers, and 8 × 2 = 16 holes. 40 ÷ 8 = 5 holes."
+  },
+  {
+   "id": "L4U08-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "On a 3 by 3 grid, shade exactly 4 squares. A fold along the dashed diagonal must make the halves match. How many patterns can you make? {b}",
+   "figure": {
+    "type": "l4_grid",
+    "rows": 3,
+    "cols": 3,
+    "cell": 44,
+    "width_mm": 42,
+    "axis": {
+     "kind": "d",
+     "at": 0
+    }
+   },
+   "answer": {
+    "value": [
+     "12"
+    ],
+    "text": "12"
+   },
+   "space": {
+    "rows": [
+     "List:",
+     "",
+     ""
+    ]
+   },
+   "hint": "Squares on the diagonal match themselves. The others come in pairs.",
+   "explanation": "Squares on the diagonal: 3. The others make 3 pairs. 2 pairs: 3 ways. 2 diagonal squares (3 ways) and 1 pair (3 ways): 9 ways. 3 + 9 = 12.",
+   "figright": true
+  },
+  {
+   "id": "L4U08-G01",
+   "tier": "go",
+   "beyond": "Painted cubes",
+   "page": 5,
+   "text": "Paint all the outside faces of a big cube that is 3 by 3 by 3. Then cut it into 27 small cubes.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Small cubes with 3 painted faces: {b}",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Small cubes with 2 painted faces: {b}",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Small cubes with 1 painted face: {b}",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "d",
+     "text": "Small cubes with no paint: {b}",
+     "answer": {
+      "value": [
+       "1"
+      ],
+      "text": "1"
+     }
+    }
+   ],
+   "hint": "Corners, edges and faces of the big cube. Count each kind.",
+   "explanation": "3 painted faces: the 8 corner cubes. 2 faces: 12 edge cubes. 1 face: 6 face cubes. No paint: 1 cube in the middle. 8 + 12 + 6 + 1 = 27."
+  },
+  {
+   "id": "L4U08-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "Shade just 1 square of a 5 by 5 grid. Some squares give a picture with a line of symmetry. The line can go up-down, across or along a diagonal.",
+   "figure": {
+    "type": "l4_grid",
+    "rows": 5,
+    "cols": 5,
+    "cell": 40,
+    "width_mm": 52,
+    "axes": [
+     {
+      "kind": "v",
+      "at": 2.5
+     },
+     {
+      "kind": "h",
+      "at": 2.5
+     }
+    ]
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "The number of squares that give at least 1 line of symmetry: {b}",
+     "answer": {
+      "value": [
+       "17"
+      ],
+      "text": "17"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The number that give exactly 1 line: {b}",
+     "answer": {
+      "value": [
+       "16"
+      ],
+      "text": "16"
+     }
+    }
+   ],
+   "hint": "Try a corner square, then an edge square, then the middle.",
+   "explanation": "A single square has a line of symmetry on the middle row, the middle column or a diagonal. Row and column: 9 squares. The diagonals add 8: 17. The middle square has 4 lines, the other 16 have 1.",
+   "figright": true
+  },
+  {
+   "id": "L4U08-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "A dice has 1 on top, 2 facing north and 3 facing east. It rolls north, then east, then north again. A roll north puts the north face on the table. A roll east puts the east face on the table.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The top face is now {b}",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The bottom face is now {b}",
+     "answer": {
+      "value": [
+       "1"
+      ],
+      "text": "1"
+     }
+    }
+   ],
+   "hint": "Write the top, north and east faces after each roll.",
+   "explanation": "Start: top 1, north 2, east 3. Roll north: top 5, north 1. Roll east: top 4, east 5. Roll north: the old north face 1 goes down, and the top is the old south face, 6."
+  },
+  {
+   "id": "L4U08-C01",
+   "tier": "quiz",
+   "text": "Does this net fold into a cube? {circ:Yes|No}",
+   "figure": {
+    "type": "l4_tiles",
+    "shapes": [
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        3,
+        1
+       ],
+       [
+        0,
+        0
+       ],
+       [
+        3,
+        0
+       ]
+      ],
+      "shade": false
+     }
+    ],
+    "cell": 34,
+    "width_mm": 34
+   },
+   "answer": {
+    "value": [
+     "No"
+    ],
+    "text": "No"
+   },
+   "explanation": "Both extra squares are above the row of 4, on the same side. When the row wraps round, they land on the same face. So the net does not fold.",
+   "figright": true
+  },
+  {
+   "id": "L4U08-C02",
+   "tier": "quiz",
+   "text": "A rectangle has a different length and width. How many lines of symmetry does it have? {b}",
+   "answer": {
+    "value": [
+     "2"
+    ],
+    "text": "2"
+   },
+   "explanation": "It can be folded along the middle in 2 ways, and the halves match. The diagonals do not work."
+  },
+  {
+   "id": "L4U08-C03",
+   "tier": "quiz",
+   "text": "A dice has 2 on top and 3 in front. The bottom shows {b} and the back shows {b}.",
+   "answer": {
+    "value": [
+     "5",
+     "4"
+    ],
+    "text": "bottom 5, back 4"
+   },
+   "explanation": "Opposite faces add up to 7. The bottom is 7 − 2 = 5 and the back is 7 − 3 = 4."
+  },
+  {
+   "id": "L4U08-C04",
+   "tier": "quiz",
+   "text": "A cube has edges of 4 cm. Its net has an area of {b} cm².",
+   "answer": {
+    "value": [
+     "96"
+    ],
+    "text": "96"
+   },
+   "explanation": "Each face is 4 × 4 = 16 cm². The net has 6 faces: 6 × 16 = 96 cm²."
+  }
+ ]
+}

@@ -177,3 +177,26 @@ footer b{color:var(--fg);font-family:var(--head);font-size:17px;font-weight:600}
 .voucher span{font-size:13px;font-weight:700}
 .voucher b{font:600 30px var(--head);letter-spacing:.06em}
 @media (max-width:820px){.pzcard{grid-template-columns:1fr}.pzr{border-left:0;border-top:2.5px dashed var(--ink)}}
+
+/* UX pass (Oct 2026): tap targets, readable small text, visible focus, field contrast, skip link */
+.skip{position:absolute;left:8px;top:-80px;z-index:50;background:var(--yellow);color:#1B2A49;border:2.5px solid #1B2A49;border-radius:12px;padding:10px 16px;font-weight:800;text-decoration:none}
+.skip:focus{top:8px}
+a:focus-visible,button:focus-visible,summary:focus-visible,.lvl:focus-visible{outline:3px solid var(--coral);outline-offset:2px}
+.hero a:focus-visible,.hero button:focus-visible{outline-color:var(--yellow)}
+input:focus-visible,select:focus-visible,textarea:focus-visible{border-color:var(--ink)}
+.tab{display:inline-flex;align-items:center;min-height:44px;text-decoration:none}
+.btn{min-height:44px;display:inline-flex;align-items:center;justify-content:center;text-align:center}
+.btn.sm{min-height:44px;font-size:15px}
+details:not(.faq details)>summary{padding-block:12px;cursor:pointer}
+footer a,.crumbs a{display:inline-block;padding:12px 3px}
+footer{font-size:15px}
+.small{font-size:14.5px} .fact .l{font-size:14.5px} .lesson .s{font-size:14px;opacity:.85} .check{font-size:15px} .field label,.flabel{font-size:15px}
+.tile .tag,.pzl .tag,.eyebrow{font-size:13px}
+input,select,textarea{border-color:color-mix(in srgb,var(--fg) 58%,var(--bg))}
+::placeholder{color:var(--muted);opacity:1}
+.sec>p,.sec>ul,.shead>p{max-width:68ch}
+.nav{row-gap:0}
+[aria-invalid="true"]{border-color:var(--red)!important;outline:2px solid var(--red)}
+.brand{min-height:44px}
+.othertimes a{display:inline-block;padding:12px 0}
+.p-ok{color:color-mix(in srgb,var(--teal) 70%,var(--fg))}

@@ -1,0 +1,805 @@
+{
+ "schema_version": 1,
+ "level": 3,
+ "unit": 1,
+ "id": "L3U01",
+ "title": "Digits, cards and clues",
+ "topic": "Numbers to 10 000",
+ "holiday_lesson": 1,
+ "goal": "I can read, build and order 4-digit numbers. I can use clues to find a mystery number.",
+ "learn": {
+  "intro": "A 4-digit number has thousands, hundreds, tens and ones. The place decides what a digit is worth. A 0 can never be the first digit.",
+  "example": {
+   "problem": "Use the cards 7, 0, 4 and 9 once each. Make the greatest and the smallest 4-digit number.",
+   "figure": {
+    "type": "l3_cards",
+    "items": [
+     7,
+     0,
+     4,
+     9
+    ]
+   },
+   "steps": [
+    "Greatest: put the greatest digit in the thousands place. Then the next greatest. This gives 9740.",
+    "Smallest: the first digit cannot be 0. Use the smallest digit that is not 0: the 4.",
+    "Put the other digits in order after it, smallest first: 0, 7, 9. This gives 4079."
+   ],
+   "answer": "Greatest 9740. Smallest 4079."
+  },
+  "howto": {
+   "title": "How to make a number from cards",
+   "steps": [
+    "Th H T O: the place decides the worth. 1000 more changes the thousands digit.",
+    "Odd or even? Choose the ones digit first.",
+    "Making a list? Fix the first digit, then list the rest from smallest."
+   ]
+  },
+  "try": {
+   "text": "Make the greatest even number with the cards 3, 8, 1 and 4. Use each card once. {b}",
+   "figure": {
+    "type": "l3_cards",
+    "items": [
+     3,
+     8,
+     1,
+     4
+    ]
+   },
+   "answer": {
+    "value": [
+     "8314"
+    ],
+    "text": "8314"
+   },
+   "explanation": "An even number ends in 8 or 4. With 4 last, the other cards in order give 8314. With 8 last, the best is 4318. So 8314 is greater.",
+   "id": "L3U01-L01"
+  }
+ },
+ "items": [
+  {
+   "id": "L3U01-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "Look at the place value chart.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Write the number. {b}",
+     "answer": {
+      "value": [
+       "4072"
+      ],
+      "text": "4072"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The digit 7 is worth {b}.",
+     "answer": {
+      "value": [
+       "70"
+      ],
+      "text": "70"
+     }
+    }
+   ],
+   "explanation": "Read the places from the left: 4 thousands, 0 hundreds, 7 tens and 2 ones make 4072. The 7 is in the tens place, so it is worth 70.",
+   "figure": {
+    "type": "l3_grid",
+    "rows": [
+     [
+      "Th",
+      "H",
+      "T",
+      "O"
+     ],
+     [
+      4,
+      0,
+      7,
+      2
+     ]
+    ],
+    "head_row": true,
+    "cw": 96,
+    "ch": 60,
+    "width_mm": 76
+   },
+   "figright": true
+  },
+  {
+   "id": "L3U01-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "Write each number in digits.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "6 thousands, 5 hundreds and 9 ones  {b}",
+     "answer": {
+      "value": [
+       "6509"
+      ],
+      "text": "6509"
+     }
+    },
+    {
+     "label": "b",
+     "text": "2 thousands and 15 tens  {b}",
+     "answer": {
+      "value": [
+       "2150"
+      ],
+      "text": "2150"
+     }
+    },
+    {
+     "label": "c",
+     "text": "5 thousands, 12 hundreds and 3 ones  {b}",
+     "answer": {
+      "value": [
+       "6203"
+      ],
+      "text": "6203"
+     }
+    }
+   ],
+   "explanation": "(a) 6000 + 500 + 9 = 6509. (b) 15 tens is 150, so 2000 + 150 = 2150. (c) 12 hundreds is 1200, so 5000 + 1200 + 3 = 6203."
+  },
+  {
+   "id": "L3U01-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "Fill in the blanks.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "1000 more than 6457 is {b}.",
+     "answer": {
+      "value": [
+       "7457"
+      ],
+      "text": "7457"
+     }
+    },
+    {
+     "label": "b",
+     "text": "100 less than 3050 is {b}.",
+     "answer": {
+      "value": [
+       "2950"
+      ],
+      "text": "2950"
+     }
+    },
+    {
+     "label": "c",
+     "text": "10 more than 8995 is {b}.",
+     "answer": {
+      "value": [
+       "9005"
+      ],
+      "text": "9005"
+     }
+    },
+    {
+     "label": "d",
+     "text": "1 less than 7000 is {b}.",
+     "answer": {
+      "value": [
+       "6999"
+      ],
+      "text": "6999"
+     }
+    }
+   ],
+   "explanation": "(a) Only the thousands digit changes: 7457. (b) 3050 - 100 = 2950. (c) 8995 + 10 = 9005, and the 9 hundreds carry. (d) 7000 - 1 = 6999."
+  },
+  {
+   "id": "L3U01-S04",
+   "tier": "start",
+   "page": 1,
+   "text": "Arrange the numbers in order. Begin with the smallest.\n5830, 5083, 5380, 5038",
+   "answer": {
+    "value": [
+     "5038",
+     "5083",
+     "5380",
+     "5830"
+    ],
+    "text": "5038, 5083, 5380, 5830",
+    "list": true
+   },
+   "explanation": "All four start with 5 thousands. Compare the hundreds next: 0, 0, 3, 8. Then compare the tens of 5038 and 5083: 3 is less than 8.",
+   "space": {
+    "rows": [
+     "My order:"
+    ]
+   }
+  },
+  {
+   "id": "L3U01-S05",
+   "tier": "start",
+   "page": 1,
+   "text": "A shop has 3 boxes of 1000 pins, 14 packs of 100 pins and 6 loose pins. How many pins are there in all? {b}",
+   "answer": {
+    "value": [
+     "4406"
+    ],
+    "text": "4406"
+   },
+   "explanation": "3 boxes are 3000 pins. 14 packs are 1400. 3000 + 1400 + 6 = 4406."
+  },
+  {
+   "id": "L3U01-S06",
+   "tier": "start",
+   "page": 2,
+   "text": "Use the cards once each in every number.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The greatest number {b}",
+     "answer": {
+      "value": [
+       "8752"
+      ],
+      "text": "8752"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The smallest number {b}",
+     "answer": {
+      "value": [
+       "2578"
+      ],
+      "text": "2578"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The greatest odd number {b}",
+     "answer": {
+      "value": [
+       "8725"
+      ],
+      "text": "8725"
+     }
+    },
+    {
+     "label": "d",
+     "text": "The smallest odd number {b}",
+     "answer": {
+      "value": [
+       "2587"
+      ],
+      "text": "2587"
+     }
+    }
+   ],
+   "explanation": "(a) Greatest digits first: 8752. (b) Smallest first, no 0 here: 2578. (c) The ones digit is 7 or 5. 5 last: 8725 beats 8527. (d) 7 last: 2587 beats 2785.",
+   "figure": {
+    "type": "l3_cards",
+    "items": [
+     2,
+     7,
+     5,
+     8
+    ]
+   }
+  },
+  {
+   "id": "L3U01-S07",
+   "tier": "start",
+   "page": 2,
+   "text": "List every 4-digit number that can be made with the cards 3, 0, 0 and 5. Begin with the smallest.",
+   "answer": {
+    "value": [
+     "3005",
+     "3050",
+     "3500",
+     "5003",
+     "5030",
+     "5300"
+    ],
+    "text": "3005, 3050, 3500, 5003, 5030, 5300",
+    "list": true
+   },
+   "explanation": "The first digit is 3 or 5, never 0. After 3, the 5 goes in the hundreds, tens or ones place: 3005, 3050, 3500. After 5, the same: 5003, 5030, 5300. 6 numbers.",
+   "figure": {
+    "type": "l3_cards",
+    "items": [
+     3,
+     0,
+     0,
+     5
+    ]
+   },
+   "space": {
+    "rows": [
+     "My list:"
+    ]
+   }
+  },
+  {
+   "id": "L3U01-S08",
+   "tier": "start",
+   "page": 2,
+   "text": "Write the next 2 numbers in each pattern.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "2300, 2600, 2900, {b}, {b}",
+     "answer": {
+      "value": [
+       "3200",
+       "3500"
+      ],
+      "text": "3200, 3500 (add 300)",
+      "list": true
+     }
+    },
+    {
+     "label": "b",
+     "text": "9000, 8750, 8500, {b}, {b}",
+     "answer": {
+      "value": [
+       "8250",
+       "8000"
+      ],
+      "text": "8250, 8000 (subtract 250)",
+      "list": true
+     }
+    },
+    {
+     "label": "c",
+     "text": "6, 14, 22, 30, {b}, {b}",
+     "answer": {
+      "value": [
+       "38",
+       "46"
+      ],
+      "text": "38, 46 (add 8)",
+      "list": true
+     }
+    }
+   ],
+   "explanation": "(a) Add 300. (b) Subtract 250. (c) Add 8: 38, then 46."
+  },
+  {
+   "id": "L3U01-S09",
+   "tier": "start",
+   "page": 2,
+   "text": "A pattern starts at 3000 and goes down by 250 each time.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Is 1900 in the pattern?   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The first number below 1900 in the pattern is {b}.",
+     "answer": {
+      "value": [
+       "1750"
+      ],
+      "text": "1750"
+     }
+    }
+   ],
+   "explanation": "The pattern goes 3000, 2750, 2500, 2250, 2000, 1750. It jumps over 1900 and lands on 1750."
+  },
+  {
+   "id": "L3U01-S10",
+   "tier": "start",
+   "page": 3,
+   "text": "Look at the number line.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Arrow A points to {b}.",
+     "answer": {
+      "value": [
+       "6150"
+      ],
+      "text": "6150"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Arrow B points to {b}.",
+     "answer": {
+      "value": [
+       "6450"
+      ],
+      "text": "6450"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Arrow C points to {b}.",
+     "answer": {
+      "value": [
+       "6350"
+      ],
+      "text": "6350"
+     }
+    }
+   ],
+   "explanation": "Each small mark is 50. A is halfway from 6100 to 6200: 6150. B is halfway from 6400 to 6500: 6450. C is halfway from 6300 to 6400: 6350.",
+   "figure": {
+    "type": "l3_nline",
+    "lo": 6000,
+    "hi": 6500,
+    "step": 50,
+    "lab": 100,
+    "W": 760,
+    "width_mm": 152,
+    "marks": [
+     {
+      "at": 6150,
+      "text": "A"
+     },
+     {
+      "at": 6450,
+      "text": "B"
+     },
+     {
+      "at": 6350,
+      "text": "C"
+     }
+    ]
+   }
+  },
+  {
+   "id": "L3U01-S11",
+   "tier": "start",
+   "page": 3,
+   "text": "I am a 4-digit number. My thousands digit is 6, my tens digit is 0, and my hundreds digit is 3 less than 6. My ones digit is the greatest odd digit. What number am I? {b}",
+   "answer": {
+    "value": [
+     "6309"
+    ],
+    "text": "6309"
+   },
+   "explanation": "The thousands digit is 6. The hundreds digit is 6 - 3 = 3. The tens digit is 0. The greatest odd digit is 9. The number is 6309."
+  },
+  {
+   "id": "L3U01-S12",
+   "tier": "start",
+   "page": 3,
+   "text": "Ravi says the greatest odd number from the cards 9, 4, 6 and 2 is 9642.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Is he right?   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The greatest odd number from the cards is {b}.",
+     "answer": {
+      "value": [
+       "6429"
+      ],
+      "text": "6429"
+     }
+    }
+   ],
+   "explanation": "9642 ends in 2, so it is even. The only odd card is 9, so 9 must be in the ones place. The other cards in order are 6, 4, 2. The number is 6429.",
+   "figure": {
+    "type": "l3_cards",
+    "items": [
+     9,
+     4,
+     6,
+     2
+    ]
+   }
+  },
+  {
+   "id": "L3U01-S13",
+   "tier": "start",
+   "page": 3,
+   "text": "Look at the number 5737.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The first 7 is worth {b}.",
+     "answer": {
+      "value": [
+       "700"
+      ],
+      "text": "700"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The second 7 is worth {b}.",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The first 7 is worth {b} more than the second 7.",
+     "answer": {
+      "value": [
+       "693"
+      ],
+      "text": "693"
+     }
+    }
+   ],
+   "explanation": "First 7: hundreds, 700. Second 7: ones, 7. 700 - 7 = 693."
+  },
+  {
+   "id": "L3U01-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "The digits of a 4-digit number are all different and add up to 8. The number is even.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The greatest it can be is {b}.",
+     "answer": {
+      "value": [
+       "5210"
+      ],
+      "text": "5210"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The smallest it can be is {b}.",
+     "answer": {
+      "value": [
+       "1034"
+      ],
+      "text": "1034"
+     }
+    }
+   ],
+   "explanation": "Only two sets of 4 different digits add up to 8: 0, 1, 2, 5 and 0, 1, 3, 4. Even numbers need an even last digit. Greatest even: 5210. Smallest: 1034.",
+   "hint": "Find the sets of 4 different digits that add up to 8 first.",
+   "space": {
+    "rows": [
+     "Sets of digits:",
+     "Numbers I tried:",
+     ""
+    ]
+   }
+  },
+  {
+   "id": "L3U01-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "Count the 3-digit numbers whose digits multiply to make 8. No digit is 0. {b}",
+   "answer": {
+    "value": [
+     "10"
+    ],
+    "text": "10"
+   },
+   "explanation": "The digit sets are 1, 1, 8 and 1, 2, 4 and 2, 2, 2. 1, 1, 8 makes 118, 181, 811: 3 numbers. 1, 2, 4 makes 6. 2, 2, 2 makes 222. 3 + 6 + 1 = 10.",
+   "hint": "List the sets of 3 digits first. Then arrange each set.",
+   "space": {
+    "rows": [
+     "Sets of digits:",
+     "Numbers:",
+     ""
+    ]
+   }
+  },
+  {
+   "id": "L3U01-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "Mei makes 4-digit numbers with the cards 1, 2, 3 and 4. She uses each card once.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "{b} of the numbers are greater than 2500.",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The 7th smallest number is {b}.",
+     "answer": {
+      "value": [
+       "2134"
+      ],
+      "text": "2134"
+     }
+    }
+   ],
+   "explanation": "Numbers that start with 1 or 2 are below 2500, because the second digit is at most 4. Only those that start with 3 or 4 are greater: 6 + 6 = 12. The list begins 1234, 1243, 1324, 1342, 1423, 1432, so the 7th is 2134.",
+   "hint": "List them from the smallest. Fix the first digit.",
+   "space": {
+    "rows": [
+     "My list:",
+     "",
+     ""
+    ]
+   }
+  },
+  {
+   "id": "L3U01-G01",
+   "tier": "go",
+   "page": 5,
+   "beyond": "Counting digit sums",
+   "text": "Count the 3-digit numbers with a digit sum of 4. List them by first digit.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Digit sum 4: {b} numbers.",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Use the pattern. Digit sum 5: {b} numbers.",
+     "answer": {
+      "value": [
+       "15"
+      ],
+      "text": "15"
+     }
+    }
+   ],
+   "explanation": "Sum 4: first digit 4 gives 1 number (400), 3 gives 2, 2 gives 3, 1 gives 4: 1 + 2 + 3 + 4 = 10. Sum 5, first digit 1 gives 5 numbers: 1 + 2 + 3 + 4 + 5 = 15.",
+   "hint": "Fix the first digit. See how the counts grow: 1, 2, 3, ...",
+   "space": {
+    "rows": [
+     "First digit 4:",
+     "First digit 3:"
+    ]
+   }
+  },
+  {
+   "id": "L3U01-G02",
+   "tier": "go",
+   "page": 5,
+   "beyond": "Growing jumps",
+   "text": "Look at the jumps between the numbers. Write the next 2 numbers.\n5, 8, 14, 23, 35, {b}, {b}",
+   "answer": {
+    "value": [
+     "50",
+     "68"
+    ],
+    "text": "50, 68",
+    "list": true
+   },
+   "explanation": "The jumps are 3, 6, 9, 12. Each jump is 3 more than the one before. The next jumps are 15 and 18: 35 + 15 = 50 and 50 + 18 = 68.",
+   "hint": "Write the jumps between the numbers. What do you see?",
+   "space": {
+    "rows": [
+     "Jumps:"
+    ]
+   }
+  },
+  {
+   "id": "L3U01-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "Make up your own number riddle. Choose a secret number with 4 digits, then write 3 clues. Test your clues: exactly ONE number must fit. Swap riddles with a grown-up.",
+   "answer": {
+    "value": [
+     "7423"
+    ],
+    "text": "Answers vary. Example: I am between 7000 and 8000. My hundreds digit is double my tens digit. My ones digit is 1 more than my tens digit. My digits add up to 16. The only number is 7423."
+   },
+   "explanation": "List the numbers that fit clue 1, then cross out those that fail clue 2, and so on. In the example, tens digit t gives 7 + 2t + t + (t + 1) = 16, so t = 2 and the number is 7423.",
+   "hint": "Pick the number first. Then write clues about its digits.",
+   "space": {
+    "rows": [
+     "Clue 1:",
+     "Clue 2:",
+     "Clue 3:"
+    ]
+   }
+  },
+  {
+   "id": "L3U01-G04",
+   "tier": "go",
+   "page": 5,
+   "text": "Find the secret number. It is greater than 3000 and less than 4000. Its digits are all different and add up to 15. The tens digit is 0, and the hundreds digit is double the ones digit. {b}",
+   "answer": {
+    "value": [
+     "3804"
+    ],
+    "text": "3804"
+   },
+   "explanation": "The thousands digit is 3 and the tens digit is 0. If the ones digit is o, the hundreds digit is 2o, so 3 + 2o + o = 15 and o = 4. The hundreds digit is 8. The number is 3804.",
+   "hint": "Try ones digit 1, 2, 3 and 4. Check each sum."
+  },
+  {
+   "id": "L3U01-C01",
+   "tier": "quiz",
+   "page": 6,
+   "text": "In 7258, the digit 2 is worth {b}.",
+   "answer": {
+    "value": [
+     "200"
+    ],
+    "text": "200"
+   },
+   "explanation": "The 2 is in the hundreds place, so it is worth 200."
+  },
+  {
+   "id": "L3U01-C02",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Write the next 2 numbers. 6500, 6000, 5500, {b}, {b}",
+   "answer": {
+    "value": [
+     "5000",
+     "4500"
+    ],
+    "text": "5000, 4500",
+    "list": true
+   },
+   "explanation": "Subtract 500 each time: 5500 - 500 = 5000 and 5000 - 500 = 4500."
+  },
+  {
+   "id": "L3U01-C03",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Make the smallest 4-digit number from the cards 6, 1, 0 and 5. Use each card once. {b}",
+   "answer": {
+    "value": [
+     "1056"
+    ],
+    "text": "1056"
+   },
+   "explanation": "The first digit cannot be 0, so use 1, then 0, 5, 6. The number is 1056.",
+   "figure": {
+    "type": "l3_cards",
+    "items": [
+     6,
+     1,
+     0,
+     5
+    ]
+   },
+   "figright": true
+  },
+  {
+   "id": "L3U01-C04",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Ali has 5 boxes of 1000 beads, 12 bags of 100 beads and 8 loose beads. How many beads does he have? {b}",
+   "answer": {
+    "value": [
+     "6208"
+    ],
+    "text": "6208"
+   },
+   "explanation": "5 boxes are 5000. 12 bags are 1200. 5000 + 1200 + 8 = 6208."
+  }
+ ]
+}

@@ -1,0 +1,51 @@
+# Holiday workbooks, Levels 4-6: diagram fixes (branch claude/great-fermi-1hv4vc)
+
+Shared helper: `levels/figs_l4_6.js` (bar model with braces/overhangs/before-after rows, number line with marks, clock, rings for clock/week/star dots, sample-space grid, dot plot, vertical line, queue row). `FG.fit()` is applied to every `H.fig` in p4/p5/p6 `workbook_html.js`: it enlarges a figure until its smallest text prints at >= 9 pt on the A4 print (P5 is laid out 850 px wide and shrunk, the hidden 850 px spacer in `p5/wb_pdf.py` is untouched; P6 code-block figures keep their old size, floor 7.3 pt, to protect the page layout). New figures from the helper are always >= 9 pt. All shading uses hatch/dot patterns plus a label, so B&W works (`check_bw.py`: ok, non-grey 0.000).
+
+## Page counts (source workbook PDF -> print PDF with blanks)
+| Level | before | after | print pages before | after | note |
+|---|---|---|---|---|---|
+| P4 | 66 | 66 | 76 | 76 | unchanged |
+| P5 | 57 | 57 | 62 | 62 | unchanged |
+| P6 | 55 | 58 | 58 | 62 | L8, L9 and L7 each gained one page (L7 No.5 and the Python box now sit on their own page after the star dots); print_spec.json and bw_spec.json updated for P4-P6 only; all counts even |
+
+## Done, in audit priority order
+Level 4: L3 No.6, L4 No.5, L5 No.5, L10 No.6 (bar models replacing blank boxes: question text now says "use the bar model", answers unchanged); L10 No.5 queue (Mei counted from front and back); L6 No.3 three clocks (4 o'clock, 7 o'clock, blank for part c; smaller angle hatched); L6 No.1 angles enlarged (arms about 45 mm); L6 Think harder clocks (10/2 o'clock, 7:15/7:50, blank clocks); L9 No.3/5 graphs redrawn with 9 pt+ scales and taller plots; L5 No.1 number lines (ends and middle labelled, bigger arrows); L4 No.4c bars enlarged; L8 nets enlarged 1.5x; Think harder/Go further bars: L3 (2 340 beads, Ravi/Siti, Mei's money), L4 (beads, jar, book), L5 ($9.20 shared, jugs).
+Level 5: L10 No.2 and No.3 bar models; L2 No.5 skeleton bar; L3 A1, A4, B1 bars; L6 No.2 price tags and No.3 tank now full width and legible, No.4 printers bar; L7 No.3 (25% up, 20% down) bars; fit enlarges tags, time line, tables/houses, solids, quadrilaterals (capped at 150 px height on Think harder pages so pages do not spill).
+Level 6: L8 No.1 12-hour clock ring and 7-day ring (placed beside the sub-questions), L8 C7 two blank clock rings; L7 corner figure enlarged, L7 C5 blank 9-dot and 20-dot circles; L9 No.1 and No.4 dot plots (the $69 outlier shown off the scale); L6 C6/C7 6x6 and 3x4 sample-space grids; L10 C6 8x8 grid; L3 No.1 number line (arrows with letters, larger labels) and blank jump line; L3 T2 vertical line (diver, sea level, gull).
+Answer keys: no figure changes what is asked; every figure is a scaffold (no value or result printed). Re-solved: L3 Q6 (31, 93, 62), L4 Q5 (45, 18), L5 Q5 (Mei $5.30, Siti $4.10), L10 Q5 (18, 15th), Q6 (Ben 10), P5 L10 Q2 ($63), Q3 (Mei $60, Ravi $55), L2 Q5 ($120 ... unchanged). Weekly PDFs for P4-P6 rebuilt.
+
+## Second pass (freeze 2 Nov)
+- Tutor Guide PDFs for P4-P6 regenerated (guide text and keys are unchanged; they do not quote workbook page numbers) and weekly PDFs rebuilt again from the final workbooks.
+- B&W print pages viewed for every changed page of P4, P5 and P6 (contact sheets at 55 dpi). Fixed: P4 L9 graph y-axis labels every 20 (were crowded), P5 L5 Go further tank (was 5.6 pt, now >= 9 pt), P6 L4 age-bar labels clipped, P6 L5 puddle label overlapping the grid. Pre-existing B&W artefacts left as they are (orange "take-home" text and yellow table headers turn into patterned strikes or dots in the converter, not part of this job).
+- New: P6 L6 T2 6x6 grid (Think harder lines trimmed to make room); P6 L7 No.4 star figure (5-point star drawn, blank 9-dot circle) with No.5 and the Python box moved to their own page; P4 L2 No.1 47 000 to 48 000 line with ticks every 100 (child marks 47 285; closer to 47 000); P4 L1 Q2 array of the example (4 rows of 10); P5 L3 Q2 "Before" skeleton (two dashed bars, Siti gives 12, Mei gets 12) next to the After bars; P5 L10 A1 bar (2/5 spent, then 1/3 of the rest, $24 left); P6 L5 No.5 route grid enlarged, puddle P now a hatched circle with a boxed P label (no colour cue; the question says "hatched circle"); P6 L4 machine strips (Think harder T3) and age bars (Go further C6).
+- Re-solved and unchanged: P4 L1 Q2 (40 trees: 4x10, 5x8, 8x5, 10x4 ... as before), L2 Q1 (47 285 -> 47 290, 47 300, 47 000), P5 L10 A1 ($60), P6 L4 C6 (Mei 12).
+- Text wording changes (keys unchanged): P4 L1 Q3 "Most packs" for "Greatest number of packs"; P6 L5 No.5 "hatched circle".
+- Figure text still under 9 pt: P5 L8 A4 (square with equilateral triangle, about 7.4 pt, capped at 175 px so the Think harder page keeps its 5-page layout); P6 code-block figures (about 7.4 pt, unchanged on purpose).
+
+## Not done (and why)
+- P4: L7 C6/C7 garden/tank figures, L10 No.2 heads and legs picture row (Low).
+- P5: L3 A2 red/blue bead bars, L6 A1/A3/B1/B2, L10 No.6 age bars, B1 tank bar.
+- P6: L7 T3 and C6 polygon figures, L8 Caesar wheel, L3 C7 floor list, L9 mean "balance" bars.
+
+## Review fixes (independent review, docs/audit_final/holiday_diagram_review_L4_6.md)
+Page counts unchanged (P4 66/76, P5 57/62, P6 58/62 source/print; print_spec.json and bw_spec.json re-written, all even). check_bw.py ok for P4-P6.
+- H1 P5 L5 Go further B3 tank: caption no longer clipped, block labels removed (the question gives 10 x 10 x 15), water label clear, base labels separate. Also the L5 No.3 tank labels enlarged to >= 9 pt and no longer clipped.
+- H2 P5 L1 No.6: shaded band and title removed; ticks and labels kept; key (smallest 2 499 500, greatest 2 500 499) unchanged.
+- M5 red text: every red text label in figures is now navy (done in `FG.fit()` and again when the workbook body is written, so figures inside table cells are covered too); P5 L8 angle values, P4 queue, P4 "? cm", P6 turn 70 and $69 all checked in B&W.
+- M7 P4 L4 Go further No.5: jar is one undivided bar with only the three braces (Mei 1/2, Ali 1/3, 5 left).
+- M6 P6 L5 No.5: P box moved into the cell beside the hatched circle (touching only that circle); B label clear.
+- M1 P5 L2 No.1: bars unshaded (just 3 and 5 equal parts), labels 18 px; M2 No.3 bar labels enlarged to 9 pt+ (width cap removed).
+- M4 P5 L8 A4: figure labels enlarged (26 px in a 0.66 scale figure, about 9 pt); page still 5 lines per box and 57 pages.
+- M9 P5 L6 No.4 printers: P alone drawn at one sixth (150 of 900), brace over the whole bar "? minutes in all, from the start" (key 20 min).
+- Low: P6 L4 C6 says "The bars are not drawn to scale"; Tutor Guide wording for P6 L7 (Q5 on the next sheet), L8 (Q2 at the top of the next sheet, Q3-Q5 on the sheet after) and L9 (Q4 at the top of the next sheet) fixed, guides and weekly PDFs rebuilt.
+Left as they were (Low): P4 L1 bus timeline labels, P4 L2 No.2 line labels, clock hands over numerals, P5 L6 No.5 six drawn boxes, thin tab sliver, 8.7 pt axis titles in P6 L9, P5 L4 side labels 8.8 pt.
+
+## Print-readiness fixes (final check, freeze 2 Nov)
+- P6 cut-out code cards (H-A): `p6/kit.js` now draws its own cards: white block, thick dashed outline, black text, colour only as a left stripe; caption split over two lines. P6 lesson-page Scratch blocks (N5): in `p6/workbook_html.js` every figure with white-on-dark text gets navy text on very light fills (teal, red, gold blocks), so blocks read in B&W; block shapes and labels are unchanged. P6 stays 58 source / 62 print.
+- P4 kit pages (N4): digit/sign cards now fit the page (6 columns inside the figure, right cut line present), captions wrapped, graph-grid and clock/pizza pages no longer clipped; the clock page is scaled to 86 percent so its heading is no longer left alone on a page. This removes one source page: **P4 is now 65 source pages, 74 print pages, 37 sheets (was 66 / 76 / 38)**; blank backs and cut-out parity re-checked by `make_print_pdfs.py` (all even); print_spec.json and bw_spec.json updated.
+- P5 orange labels (N1): "After question n", the star "take-home" marker and "Make up your own." text now #8A3F10 (dark brown, solid in B&W); borders unchanged. P4 and P6 have no orange text. P2 take-home star left to the Levels 1-3 agent.
+- P5 L4 Think harder A4 (N3): left "7 cm" label no longer clipped (placed inside the rectangle); the triangle's "7 cm" sits on the dashed height with a light box.
+- `bw_spec.json` now lists P1 to P6 (page counts read with PyMuPDF from the files: 68, 74, 70, 74, 62, 62) followed by the existing term-book rows; never overwritten with a partial run.
+- Docs: `docs/printing/quote_request.md` table (P1..P6 now 68/34, 74/37, 70/35, 74/37, 62/31, 62/31 from print_spec), `dispatch_list.md` and `dispatch_list_template.csv` point to `outputs/print/bw/`, `docs/holiday_readiness.md` and `docs/product/face_to_face_pilot_plan.md` page counts updated.
+- Weekly PDFs for P4 to P6 rebuilt from the final workbooks; `check_bw.py` ok for P4, P5, P6.

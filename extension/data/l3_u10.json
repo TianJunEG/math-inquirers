@@ -1,0 +1,937 @@
+{
+ "schema_version": 1,
+ "level": 3,
+ "unit": 10,
+ "id": "L3U10",
+ "title": "Think it through",
+ "topic": "Mixed puzzles",
+ "holiday_lesson": 10,
+ "goal": "I can start a puzzle by drawing it, listing it or making a table. I can read a bar graph and solve logic puzzles.",
+ "learn": {
+  "intro": "To start a puzzle, try one of 3 ways. Draw it, list it, or make a table. Then check every clue.",
+  "example": {
+   "problem": "Kumar is 6th from the front and 3rd from the back of a line. Count the children in the whole line.",
+   "figure": {
+    "type": "l3_queue",
+    "n": 8,
+    "marks": {
+     "6": "Kumar"
+    },
+    "width_mm": 120
+   },
+   "steps": [
+    "Draw the line. Put Kumar in 6th place from the front.",
+    "Kumar is 3rd from the back, so 2 children are behind him.",
+    "5 children are in front of Kumar, then Kumar, then 2 behind: 5 + 1 + 2 = 8.",
+    "Check: 6 + 3 - 1 = 8."
+   ],
+   "answer": "There are 8 children in the line."
+  },
+  "howto": {
+   "title": "Three ways to start",
+   "steps": [
+    "Draw it: make a picture of the puzzle.",
+    "List it: write every case in order.",
+    "Table: write what you know in rows and columns.",
+    "Check your answer against every clue."
+   ]
+  },
+  "try": {
+   "text": "Lily is 3rd from the front and 9th from the back of a line. The line has {b} children.",
+   "answer": {
+    "value": [
+     "11"
+    ],
+    "text": "11"
+   },
+   "explanation": "2 children are in front of Lily and 8 are behind her. 2 + 1 + 8 = 11. Check: 3 + 9 - 1 = 11.",
+   "id": "L3U10-L01"
+  },
+  "tight": true
+ },
+ "items": [
+  {
+   "id": "L3U10-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "The bar graph shows the books 4 children read. Kumar read 15 more books than Siti. Draw Kumar’s bar on the graph.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Most books: {b}",
+     "answer": {
+      "value": [
+       "Mei"
+      ],
+      "text": "Mei"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Mei read {b} more than Ben.",
+     "answer": {
+      "value": [
+       "15"
+      ],
+      "text": "15"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Kumar read {b}.",
+     "answer": {
+      "value": [
+       "25"
+      ],
+      "text": "25"
+     }
+    },
+    {
+     "label": "d",
+     "text": "In all they read {b}.",
+     "answer": {
+      "value": [
+       "105"
+      ],
+      "text": "105"
+     }
+    }
+   ],
+   "explanation": "(a) The tallest bar is Mei’s. (b) 30 - 15 = 15. (c) Siti read 10 books, so Kumar read 10 + 15 = 25. (d) 25 + 15 + 30 + 10 + 25 = 105.",
+   "figure": {
+    "type": "l3_bargraph",
+    "cats": [
+     "Ali",
+     "Ben",
+     "Mei",
+     "Siti",
+     "Kumar"
+    ],
+    "values": [
+     25,
+     15,
+     30,
+     10,
+     null
+    ],
+    "max": 35,
+    "step": 5,
+    "width_mm": 100,
+    "unit_label": "books",
+    "h": 260
+   },
+   "figside": true
+  },
+  {
+   "id": "L3U10-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "The graph shows the stamps 3 clubs collected. Each thin line is 10 stamps.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Club A: {b}",
+     "answer": {
+      "value": [
+       "70"
+      ],
+      "text": "70"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Club B: {b}",
+     "answer": {
+      "value": [
+       "110"
+      ],
+      "text": "110"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Club C: {b}",
+     "answer": {
+      "value": [
+       "90"
+      ],
+      "text": "90"
+     }
+    },
+    {
+     "label": "d",
+     "text": "All 3: {b}",
+     "answer": {
+      "value": [
+       "270"
+      ],
+      "text": "270"
+     }
+    }
+   ],
+   "explanation": "The labelled lines go up in 20s and a thin line is halfway between, so each thin line is 10. A is 70, B is 110, C is 90. Together: 70 + 110 + 90 = 270.",
+   "figure": {
+    "type": "l3_bargraph",
+    "cats": [
+     "Club A",
+     "Club B",
+     "Club C"
+    ],
+    "values": [
+     70,
+     110,
+     90
+    ],
+    "max": 140,
+    "step": 20,
+    "width_mm": 86,
+    "minor": 10,
+    "unit_label": "stamps",
+    "h": 250
+   },
+   "figside": true
+  },
+  {
+   "id": "L3U10-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "The 3rd of a month is a Tuesday.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The 24th is a   {circ:Mon|Tue|Wed|Thu|Fri|Sat|Sun}",
+     "answer": {
+      "value": [
+       "Tue"
+      ],
+      "text": "Tue"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The 30th is a   {circ:Mon|Tue|Wed|Thu|Fri|Sat|Sun}",
+     "answer": {
+      "value": [
+       "Mon"
+      ],
+      "text": "Mon"
+     }
+    }
+   ],
+   "explanation": "(a) 3rd to 24th is 21 days = 3 weeks. So the 24th is a Tuesday again. (b) 3rd to 30th is 27 days = 3 weeks and 6 days. 6 days after Tuesday is Monday.",
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   }
+  },
+  {
+   "id": "L3U10-S04",
+   "tier": "start",
+   "page": 2,
+   "text": "Each child has a different fruit. Kumar has neither the apple nor the banana. The child with the orange has a name with 4 letters. Wei does not have the apple. Use ticks and crosses in the grid.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Kumar has the {circ:apple|banana|grapes|orange}",
+     "answer": {
+      "value": [
+       "grapes"
+      ],
+      "text": "grapes"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Aisha has the {circ:apple|banana|grapes|orange}",
+     "answer": {
+      "value": [
+       "apple"
+      ],
+      "text": "apple"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Wei has the {circ:apple|banana|grapes|orange}",
+     "answer": {
+      "value": [
+       "banana"
+      ],
+      "text": "banana"
+     }
+    },
+    {
+     "label": "d",
+     "text": "Lily has the {circ:apple|banana|grapes|orange}",
+     "answer": {
+      "value": [
+       "orange"
+      ],
+      "text": "orange"
+     }
+    }
+   ],
+   "explanation": "Only Lily has a 4-letter name: orange. Kumar has neither apple nor banana: grapes. Wei does not have the apple: banana. Aisha has the apple.",
+   "figure": {
+    "type": "l3_grid",
+    "head_row": true,
+    "head_col": true,
+    "corner": true,
+    "cw": 100,
+    "ch": 44,
+    "fs": 24,
+    "col_w": [
+     100,
+     100,
+     110,
+     110,
+     110
+    ],
+    "width_mm": 100,
+    "rows": [
+     [
+      "",
+      "apple",
+      "banana",
+      "grapes",
+      "orange"
+     ],
+     [
+      "Kumar",
+      null,
+      null,
+      null,
+      null
+     ],
+     [
+      "Aisha",
+      null,
+      null,
+      null,
+      null
+     ],
+     [
+      "Wei",
+      null,
+      null,
+      null,
+      null
+     ],
+     [
+      "Lily",
+      null,
+      null,
+      null,
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "id": "L3U10-S05",
+   "tier": "start",
+   "page": 2,
+   "text": "Draw it. Count the children in each line.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Ravi is 3rd from the front. Mei is last. 5 children stand between them. The line has {b} children.",
+     "answer": {
+      "value": [
+       "9"
+      ],
+      "text": "9"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Aisha is 8th from the front and 3rd from the back. The line has {b} children.",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    }
+   ],
+   "explanation": "(a) Ravi is 3rd. The 5 children between are 4th to 8th. Mei is 9th and last. (b) 7 children are in front of Aisha and 2 are behind her: 7 + 1 + 2 = 10.",
+   "space": {
+    "rows": [
+     "Draw it:"
+    ]
+   }
+  },
+  {
+   "id": "L3U10-S06",
+   "tier": "start",
+   "page": 2,
+   "text": "A café meal is 1 drink and 1 snack. The drinks are milk and tea. The snacks are a bun, a pie and fruit. List every different meal.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Write the list below.",
+     "answer": {
+      "value": [
+       "milk bun",
+       "milk pie",
+       "milk fruit",
+       "tea bun",
+       "tea pie",
+       "tea fruit"
+      ],
+      "text": "milk bun, milk pie, milk fruit, tea bun, tea pie, tea fruit",
+      "list": true
+     }
+    },
+    {
+     "label": "b",
+     "text": "There are {b} meals with milk.",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    },
+    {
+     "label": "c",
+     "text": "There are {b} meals with a bun or a pie.",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    }
+   ],
+   "explanation": "Fix the drink and list the snacks in order: milk bun, milk pie, milk fruit, then tea bun, tea pie, tea fruit. 3 meals have milk. A bun or a pie: milk bun, milk pie, tea bun, tea pie, so 4.",
+   "space": {
+    "rows": [
+     "My list:"
+    ]
+   }
+  },
+  {
+   "id": "L3U10-S07",
+   "tier": "start",
+   "page": 3,
+   "text": "Hexagons are joined in a row with sticks. 1 hexagon needs 6 sticks. 2 hexagons need 11 sticks. 3 hexagons need 16 sticks. Make a table.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "6 hexagons need {b} sticks.",
+     "answer": {
+      "value": [
+       "31"
+      ],
+      "text": "31"
+     }
+    },
+    {
+     "label": "b",
+     "text": "41 sticks make {b} hexagons.",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    }
+   ],
+   "explanation": "Each new hexagon adds 5 sticks: 1: 6, 2: 11, 3: 16, 4: 21, 5: 26, 6: 31. For 41 sticks, count on: 7 hexagons need 36 and 8 hexagons need 41.",
+   "figure": {
+    "type": "l3_segs",
+    "segs": [
+     [
+      0.0,
+      0.5,
+      0.0,
+      1.5
+     ],
+     [
+      0.0,
+      0.5,
+      0.866,
+      0
+     ],
+     [
+      0.0,
+      1.5,
+      0.866,
+      2
+     ],
+     [
+      0.866,
+      0,
+      1.732,
+      0.5
+     ],
+     [
+      0.866,
+      2,
+      1.732,
+      1.5
+     ],
+     [
+      1.732,
+      0.5,
+      1.732,
+      1.5
+     ],
+     [
+      1.732,
+      0.5,
+      2.598,
+      0
+     ],
+     [
+      1.732,
+      1.5,
+      2.598,
+      2
+     ],
+     [
+      2.598,
+      0,
+      3.464,
+      0.5
+     ],
+     [
+      2.598,
+      2,
+      3.464,
+      1.5
+     ],
+     [
+      3.464,
+      0.5,
+      3.464,
+      1.5
+     ],
+     [
+      3.464,
+      0.5,
+      4.33,
+      0
+     ],
+     [
+      3.464,
+      1.5,
+      4.33,
+      2
+     ],
+     [
+      4.33,
+      0,
+      5.196,
+      0.5
+     ],
+     [
+      4.33,
+      2,
+      5.196,
+      1.5
+     ],
+     [
+      5.196,
+      0.5,
+      5.196,
+      1.5
+     ]
+    ],
+    "k": 46,
+    "pad": 14,
+    "width_mm": 50
+   },
+   "space": {
+    "table": {
+     "cols": [
+      "hexagons",
+      "sticks"
+     ],
+     "rows": 4
+    }
+   }
+  },
+  {
+   "id": "L3U10-S08",
+   "tier": "start",
+   "page": 3,
+   "text": "Which numbers fit all the clues? The number is even and has 3 digits. It is less than 400. Its digits add up to 9, and none is 0. The tens digit is more than the ones digit.\n{ll}",
+   "answer": {
+    "value": [
+     "162",
+     "252",
+     "342"
+    ],
+    "text": "162, 252 and 342",
+    "list": true
+   },
+   "explanation": "The hundreds digit is 1, 2 or 3. The ones digit is 2, 4 or 6 and the tens digit is greater. With 1: tens + ones = 8, so 6 and 2. With 2: 7, so 5 and 2. With 3: 6, so 4 and 2. The numbers are 162, 252 and 342."
+  },
+  {
+   "id": "L3U10-S09",
+   "tier": "start",
+   "page": 3,
+   "text": "I think of a number. I multiply it by 3 and take away 4. The answer is 17. My number is {b}.",
+   "answer": {
+    "value": [
+     "7"
+    ],
+    "text": "7"
+   },
+   "explanation": "Work backwards. Add 4 to 17: 21. Divide by 3: 7.",
+   "space": {
+    "rows": [
+     "Working backwards:"
+    ]
+   }
+  },
+  {
+   "id": "L3U10-S10",
+   "tier": "start",
+   "page": 3,
+   "text": "Aisha has $10. A juice costs $1.85 and a sandwich costs $3.40. She buys 2 juices and 1 sandwich. Her change is ${bw}.",
+   "answer": {
+    "value": [
+     "2.90"
+    ],
+    "text": "2.90"
+   },
+   "explanation": "2 juices cost 2 × 1.85 = 3.70. With the sandwich: 3.70 + 3.40 = 7.10. Change: 10.00 - 7.10 = 2.90."
+  },
+  {
+   "id": "L3U10-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "A grid is made of 2 rows of 3 small squares. Count the rectangles of every size, squares included. {b}",
+   "answer": {
+    "value": [
+     "18"
+    ],
+    "text": "18"
+   },
+   "explanation": "Height 1: width 1 gives 6, width 2 gives 4 (2 in each row), width 3 gives 2. Height 2: width 1 gives 3, width 2 gives 2, width 3 gives 1. In all: 6 + 4 + 2 + 3 + 2 + 1 = 18.",
+   "figure": {
+    "type": "l3_grid",
+    "rows": [
+     [
+      null,
+      null,
+      null
+     ],
+     [
+      null,
+      null,
+      null
+     ]
+    ],
+    "cw": 70,
+    "ch": 60,
+    "width_mm": 46
+   },
+   "figside": true,
+   "hint": "Count the small squares first. Then the wider ones.",
+   "space": {
+    "rows": [
+     "Height 1, width 1, 2, 3:",
+     "Height 2, width 1, 2, 3:"
+    ]
+   }
+  },
+  {
+   "id": "L3U10-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "One of Ben, Aisha and Wei broke a cup. They each say 1 thing: Ben “Wei did it”, Aisha “Not me”, Wei “Ben is lying”. Exactly 1 of them tells the truth. Who broke the cup?   {circ:Ben|Aisha|Wei}",
+   "answer": {
+    "value": [
+     "Aisha"
+    ],
+    "text": "Aisha"
+   },
+   "explanation": "If Ben did it, Aisha and Wei both tell the truth: 2 truths. If Wei did it, Ben and Aisha both tell the truth: 2 truths. If Aisha did it, only Wei tells the truth: exactly 1. So Aisha did it.",
+   "hint": "Pick one child. Are exactly 1 of the 3 sayings true?",
+   "space": {
+    "rows": [
+     "My tests:",
+     "",
+     ""
+    ]
+   }
+  },
+  {
+   "id": "L3U10-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "A shop sold 185 pencils in 4 days. Tuesday sold 15 more than Monday. Wednesday sold twice as many as Monday. Thursday sold 10 fewer than Wednesday.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Monday: {b}",
+     "answer": {
+      "value": [
+       "30"
+      ],
+      "text": "30"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Tuesday: {b}",
+     "answer": {
+      "value": [
+       "45"
+      ],
+      "text": "45"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Wednesday: {b}",
+     "answer": {
+      "value": [
+       "60"
+      ],
+      "text": "60"
+     }
+    },
+    {
+     "label": "d",
+     "text": "Thursday: {b}",
+     "answer": {
+      "value": [
+       "50"
+      ],
+      "text": "50"
+     }
+    }
+   ],
+   "explanation": "Monday is 1 box, Tuesday 1 box and 15, Wednesday 2 boxes, Thursday 2 boxes take away 10. Total: 6 boxes + 5 = 185, so 1 box = 30. Monday 30, Tuesday 45, Wednesday 60, Thursday 50.",
+   "partsrow": true,
+   "hint": "Draw Monday as 1 bar. Then draw the other days with it.",
+   "space": {
+    "rows": [
+     "Draw your bars:",
+     ""
+    ]
+   }
+  },
+  {
+   "id": "L3U10-G01",
+   "tier": "go",
+   "page": 5,
+   "text": "Count the squares of every size in a 4 by 4 grid. Begin with the small ones.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "1 by 1 squares: {b}",
+     "answer": {
+      "value": [
+       "16"
+      ],
+      "text": "16"
+     }
+    },
+    {
+     "label": "b",
+     "text": "2 by 2 squares: {b}",
+     "answer": {
+      "value": [
+       "9"
+      ],
+      "text": "9"
+     }
+    },
+    {
+     "label": "c",
+     "text": "3 by 3 squares: {b}",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    },
+    {
+     "label": "d",
+     "text": "All the squares: {b}",
+     "answer": {
+      "value": [
+       "30"
+      ],
+      "text": "30"
+     }
+    }
+   ],
+   "explanation": "There are 16 small squares. A 2 by 2 square fits in 3 places across and 3 down: 9. A 3 by 3 square fits 2 across and 2 down: 4. There is 1 big square. 16 + 9 + 4 + 1 = 30.",
+   "partsrow": true,
+   "hint": "A 2 by 2 square can sit in 3 places across and 3 down."
+  },
+  {
+   "id": "L3U10-G02",
+   "tier": "go",
+   "page": 5,
+   "beyond": "A balance puzzle",
+   "text": "9 coins look the same. One is lighter. You have a balance scale.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "With 3 coins, you can always find the light coin in {b} weighing.",
+     "answer": {
+      "value": [
+       "1"
+      ],
+      "text": "1"
+     }
+    },
+    {
+     "label": "b",
+     "text": "With 9 coins, you can always find it in {b} weighings.",
+     "answer": {
+      "value": [
+       "2"
+      ],
+      "text": "2"
+     }
+    }
+   ],
+   "explanation": "(a) Put 1 coin on each side. If the scale tips, the light coin is on the high side. If it balances, it is the coin left out: 1 weighing. (b) Weigh 3 coins against 3 coins to find the group of 3 with the light coin. Then use (a): 2 weighings.",
+   "hint": "Put 3 coins on each side. What does the scale tell you?"
+  },
+  {
+   "id": "L3U10-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "Ali has 8 coins. They are 10¢ coins and 20¢ coins, worth $1.50 in all. Find how many coins of each kind.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "{b} ten-cent coins",
+     "answer": {
+      "value": [
+       "1"
+      ],
+      "text": "1"
+     }
+    },
+    {
+     "label": "b",
+     "text": "{b} twenty-cent coins",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    }
+   ],
+   "explanation": "If all 8 coins were 10¢, they would be worth 80¢. They are worth 150¢, 70¢ more. Changing one 10¢ coin to a 20¢ coin adds 10¢, so 7 coins are 20¢ and 1 coin is 10¢.",
+   "hint": "Try 4 of each. How much are they worth?",
+   "space": {
+    "table": {
+     "cols": [
+      "10¢ coins",
+      "20¢ coins",
+      "value"
+     ],
+     "rows": 2
+    }
+   }
+  },
+  {
+   "id": "L3U10-G04",
+   "tier": "go",
+   "page": 5,
+   "text": "Make up a logic puzzle with 3 friends and 3 sports. Write 3 clues. Only ONE answer may fit. Swap with a grown-up.",
+   "answer": {
+    "value": [
+     "Lily: chess"
+    ],
+    "text": "Answers vary. Example: Lily, Wei and Kumar each play a different game: chess, ball or cards. Lily does not play ball. Wei plays neither chess nor cards. Kumar does not play chess. Answer: Lily plays chess, Wei plays ball, Kumar plays cards."
+   },
+   "explanation": "In the example, Wei plays ball (clue 2), then Kumar cannot play chess (clue 3), so Kumar plays cards and Lily plays chess.",
+   "hint": "Pick the answer first. Then write clues that rule out the others.",
+   "space": {
+    "rows": [
+     "My clues:",
+     "",
+     ""
+    ]
+   }
+  },
+  {
+   "id": "L3U10-C01",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Each dashed line is 10. Tuesday sold {b} more than Monday.",
+   "answer": {
+    "value": [
+     "30"
+    ],
+    "text": "30"
+   },
+   "explanation": "Monday is at 20 and Tuesday is at 50. 50 - 20 = 30.",
+   "figure": {
+    "type": "l3_bargraph",
+    "cats": [
+     "Mon",
+     "Tue",
+     "Wed"
+    ],
+    "values": [
+     20,
+     50,
+     30
+    ],
+    "max": 60,
+    "step": 20,
+    "width_mm": 68,
+    "minor": 10,
+    "unit_label": "pencils",
+    "h": 95
+   },
+   "figright": true
+  },
+  {
+   "id": "L3U10-C02",
+   "tier": "quiz",
+   "page": 6,
+   "text": "In a line, 2 children stand in front of Ben and 6 children stand behind him. The line has {b} children.",
+   "answer": {
+    "value": [
+     "9"
+    ],
+    "text": "9"
+   },
+   "explanation": "2 + 1 + 6 = 9. Do not forget Ben."
+  },
+  {
+   "id": "L3U10-C03",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Lily is shorter than Mei. Mei is shorter than Ben. Ben is shorter than Aisha. Who is the 2nd tallest?   {circ:Lily|Mei|Ben|Aisha}",
+   "answer": {
+    "value": [
+     "Ben"
+    ],
+    "text": "Ben"
+   },
+   "explanation": "From the shortest: Lily, Mei, Ben, Aisha. The tallest is Aisha, so the 2nd tallest is Ben."
+  },
+  {
+   "id": "L3U10-C04",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Look for a pattern. 2, 6, 10, 14, ... The 8th number is {b}.",
+   "answer": {
+    "value": [
+     "30"
+    ],
+    "text": "30"
+   },
+   "explanation": "The numbers go up by 4. The 8th number is 2 + 7 × 4 = 30."
+  }
+ ]
+}

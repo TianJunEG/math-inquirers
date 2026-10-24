@@ -91,8 +91,8 @@
    ]
   ],
   "go": [
-   "What if a machine gives OUT 11 when IN is 3, and OUT 19 when IN is 5? Predict its rule, then try your rule on both pairs. Then find the OUT for IN 10.",
-   "4n − 1. IN goes up by 2 and OUT goes up by 8, so the × part is 4; 4 × 3 = 12 is 1 too big, so − 1. OUT for IN 10 is 39."
+   "Swap jobs: now the other partner makes a secret two-step machine and you call the IN numbers. Predict which IN numbers will crack the rule fastest, then write its rule with n and check it on a pair you did not use.",
+   "Numbers in a row (1, 2, 3) show the × part: OUT goes up by the × number each time. IN 0 shows the + part straight away. Rule = (× part) n + (add part), checked on a spare pair."
   ]
  },
  "5": {
@@ -163,8 +163,8 @@
    ]
   ],
   "go": [
-   "What if you want a regular shape with 8 sides (an octagon)? Predict the turn. Then test it in Scratch with repeat 8. What about 10 sides?",
-   "45° for 8 sides (360 ÷ 8) and 36° for 10 sides (360 ÷ 10)."
+   "What if you want a regular PENTAGON (5 sides)? Predict the turn, then test it in Scratch with repeat 5. What about 10 sides?",
+   "72° for 5 sides (360 ÷ 5) and 36° for 10 sides (360 ÷ 10)."
   ]
  },
  "8": {

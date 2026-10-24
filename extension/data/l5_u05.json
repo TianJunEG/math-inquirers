@@ -1,0 +1,1016 @@
+{
+ "schema_version": 1,
+ "level": 5,
+ "unit": 5,
+ "id": "L5U05",
+ "title": "Fill it up",
+ "topic": "Volume",
+ "holiday_lesson": 5,
+ "goal": "I can find the volume of a cuboid and the volume of water in a tank. I can find the volume of a stone from how much the water rises.",
+ "learn": {
+  "intro": "Volume is the space inside a solid. For a cuboid, volume = length × breadth × height. 1 litre is 1000 cm³. A stone that sinks pushes the water up.",
+  "example": {
+   "problem": "The floor of a tank is 30 cm × 20 cm. Water fills it to a depth of 9 cm. A stone sinks and the level rises to 12 cm. Find the volume of the stone.",
+   "steps": [
+    "The water rises 12 - 9 = 3 cm. The stone pushes the water up.",
+    "The stone's volume equals the extra water, a block 30 × 20 × 3 cm.",
+    "Volume = 30 × 20 × 3. First 30 × 20 = 600.",
+    "600 × 3 = 1800."
+   ],
+   "answer": "The volume of the stone is 1800 cm³.",
+   "figure": {
+    "type": "l5_solid",
+    "mm": 1.5,
+    "boxes": [
+     {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "l": 30,
+      "w": 20,
+      "h": 9,
+      "kind": "water"
+     },
+     {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "l": 30,
+      "w": 20,
+      "h": 18,
+      "kind": "tank"
+     },
+     {
+      "x": 46,
+      "y": 0,
+      "z": 0,
+      "l": 30,
+      "w": 20,
+      "h": 12,
+      "kind": "water"
+     },
+     {
+      "x": 46,
+      "y": 0,
+      "z": 0,
+      "l": 30,
+      "w": 20,
+      "h": 18,
+      "kind": "tank"
+     },
+     {
+      "x": 56,
+      "y": 6,
+      "z": 0,
+      "l": 8,
+      "w": 8,
+      "h": 5,
+      "kind": "solid",
+      "fill": "shade"
+     }
+    ],
+    "texts": [
+     {
+      "at": [
+       15.0,
+       0,
+       0
+      ],
+      "t": "30 cm",
+      "dy": 22
+     },
+     {
+      "at": [
+       30,
+       10.0,
+       0
+      ],
+      "t": "20 cm",
+      "dx": 40,
+      "dy": 18
+     },
+     {
+      "at": [
+       0,
+       0,
+       9
+      ],
+      "t": "9 cm",
+      "dx": -30
+     },
+     {
+      "at": [
+       46,
+       0,
+       12
+      ],
+      "t": "12 cm",
+      "dx": -32
+     },
+     {
+      "at": [
+       15.0,
+       0,
+       18
+      ],
+      "t": "Before",
+      "dy": -62,
+      "size": 22
+     },
+     {
+      "at": [
+       61.0,
+       0,
+       18
+      ],
+      "t": "After",
+      "dy": -62,
+      "size": 22
+     }
+    ],
+    "alt": "a tank before and after a stone is put in"
+   }
+  },
+  "howto": {
+   "title": "How to",
+   "steps": [
+    "Find the rise: new depth - old depth.",
+    "Volume = base length × base width × rise.",
+    "Write the unit: cm³. 1000 cm³ = 1 litre."
+   ]
+  },
+  "facts": {
+   "title": "Also remember",
+   "lines": [
+    "Poured water keeps its volume.",
+    "Depth = volume ÷ floor area.",
+    "Packing: fit whole cubes along each edge."
+   ]
+  },
+  "tight": true,
+  "try": {
+   "id": "L5U05-L01",
+   "text": "A tank floor is 25 cm × 20 cm. Water stands 10 cm deep. A stone of volume 1500 cm³ sinks in it. Find the new depth of the water. {b} cm",
+   "answer": {
+    "value": [
+     "13"
+    ],
+    "text": "13 cm"
+   },
+   "explanation": "The base area is 25 × 20 = 500 cm². The stone raises the water by 1500 ÷ 500 = 3 cm. The new depth is 10 + 3 = 13 cm."
+  }
+ },
+ "items": [
+  {
+   "id": "L5U05-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "A box is built from 1 cm cubes. It is 5 cubes long, 2 cubes wide and 3 cubes high.",
+   "figure": {
+    "type": "l5_cubes",
+    "mm": 8,
+    "heights": [
+     [
+      3,
+      3,
+      3,
+      3,
+      3
+     ],
+     [
+      3,
+      3,
+      3,
+      3,
+      3
+     ]
+    ],
+    "alt": "box of cubes"
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "The front bottom row has {b} cubes.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The bottom layer has {b} cubes.",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The box has {b} cubes. Its volume is {b} cm³.",
+     "answer": {
+      "value": [
+       "30",
+       "30"
+      ],
+      "text": "30, 30"
+     }
+    }
+   ],
+   "explanation": "(a) 5 long. (b) 5 × 2 = 10. (c) 10 × 3 = 30 cubes, so 30 cm³.",
+   "figside": true
+  },
+  {
+   "id": "L5U05-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "A cuboid measures 9 cm × 6 cm × 5 cm.",
+   "figure": {
+    "type": "l5_solid",
+    "mm": 3.6,
+    "boxes": [
+     {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "l": 9,
+      "w": 6,
+      "h": 5,
+      "kind": "solid",
+      "fill": "light"
+     }
+    ],
+    "texts": [
+     {
+      "at": [
+       4.5,
+       0,
+       0
+      ],
+      "t": "9 cm",
+      "dy": 22
+     },
+     {
+      "at": [
+       9,
+       3,
+       0
+      ],
+      "t": "6 cm",
+      "dx": 34,
+      "dy": 14
+     },
+     {
+      "at": [
+       0,
+       0,
+       2.5
+      ],
+      "t": "5 cm",
+      "dx": -28
+     }
+    ],
+    "alt": "cuboid 9 cm by 6 cm by 5 cm"
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "The volume of the cuboid is {b} cm³.",
+     "answer": {
+      "value": [
+       "270"
+      ],
+      "text": "270"
+     }
+    },
+    {
+     "label": "b",
+     "text": "A cube has edges of 7 cm. Its volume is {b} cm³.",
+     "answer": {
+      "value": [
+       "343"
+      ],
+      "text": "343"
+     }
+    }
+   ],
+   "explanation": "(a) 9 × 6 × 5 = 54 × 5 = 270 cm³. (b) 7 × 7 × 7 = 49 × 7 = 343 cm³.",
+   "figside": true
+  },
+  {
+   "id": "L5U05-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "Find the missing length of each cuboid.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The base is 8 cm by 5 cm. The volume is 200 cm³. The height is {b} cm.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The base is a square. The height is 4 cm. The volume is 144 cm³. Each side of the base is {b} cm.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    }
+   ],
+   "explanation": "(a) The base area is 8 × 5 = 40 cm². 200 ÷ 40 = 5 cm. (b) The base area is 144 ÷ 4 = 36 cm². 6 × 6 = 36, so each side is 6 cm."
+  },
+  {
+   "id": "L5U05-S04",
+   "tier": "start",
+   "page": 1,
+   "text": "Fill in the blanks. Remember 1 litre = 1000 ml = 1000 cm³.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "3.5 litres = {b} cm³",
+     "answer": {
+      "value": [
+       "3500"
+      ],
+      "text": "3500"
+     }
+    },
+    {
+     "label": "b",
+     "text": "12 000 cm³ = {b} litres",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    },
+    {
+     "label": "c",
+     "text": "A tank is 50 cm long, 40 cm wide and 30 cm high. It holds {b} litres when full.",
+     "answer": {
+      "value": [
+       "60"
+      ],
+      "text": "60"
+     }
+    }
+   ],
+   "explanation": "(a) 3.5 × 1000 = 3500. (b) 12 000 ÷ 1000 = 12. (c) 50 × 40 × 30 = 60 000 cm³, and 60 000 ÷ 1000 = 60 litres."
+  },
+  {
+   "id": "L5U05-S05",
+   "tier": "start",
+   "page": 2,
+   "text": "A tank measures 40 cm × 30 cm × 25 cm. It holds water 12 cm deep.",
+   "figure": {
+    "type": "l5_solid",
+    "mm": 1.2,
+    "boxes": [
+     {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "l": 40,
+      "w": 30,
+      "h": 12,
+      "kind": "water"
+     },
+     {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "l": 40,
+      "w": 30,
+      "h": 25,
+      "kind": "tank"
+     }
+    ],
+    "texts": [
+     {
+      "at": [
+       20,
+       0,
+       0
+      ],
+      "t": "40 cm",
+      "dy": 22
+     },
+     {
+      "at": [
+       40,
+       15,
+       0
+      ],
+      "t": "30 cm",
+      "dx": 36,
+      "dy": 14
+     },
+     {
+      "at": [
+       0,
+       0,
+       12
+      ],
+      "t": "12 cm",
+      "dx": -30
+     },
+     {
+      "at": [
+       0,
+       0,
+       25
+      ],
+      "t": "25 cm",
+      "dx": -30
+     }
+    ],
+    "alt": "tank with water"
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "The water has a volume of {bw} cm³.",
+     "answer": {
+      "value": [
+       "14400"
+      ],
+      "text": "14400"
+     }
+    },
+    {
+     "label": "b",
+     "text": "That is {b} litres.",
+     "answer": {
+      "value": [
+       "14.4"
+      ],
+      "text": "14.4"
+     }
+    },
+    {
+     "label": "c",
+     "text": "To fill the tank to the top, {b} litres more are needed.",
+     "answer": {
+      "value": [
+       "15.6"
+      ],
+      "text": "15.6"
+     }
+    }
+   ],
+   "explanation": "(a) 40 × 30 × 12 = 14 400 cm³. (b) 14.4 litres. (c) Full: 30 000 cm³ = 30 litres. 30 - 14.4 = 15.6.",
+   "figside": true
+  },
+  {
+   "id": "L5U05-S06",
+   "tier": "start",
+   "page": 2,
+   "text": "A tank floor is 40 cm × 25 cm. The water level is 7 cm. Then 5 litres are poured in.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The water rises {b} cm.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The water is now {b} cm deep.",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    }
+   ],
+   "explanation": "The base area is 40 × 25 = 1000 cm². 5 litres = 5000 cm³. The rise is 5000 ÷ 1000 = 5 cm. The new depth is 7 + 5 = 12 cm."
+  },
+  {
+   "id": "L5U05-S07",
+   "tier": "start",
+   "page": 2,
+   "text": "The floor of a tank is 24 cm × 15 cm and the water is 8 cm deep. A stone sinks and the water level reaches 11 cm. Find the stone's volume. {b} cm³",
+   "answer": {
+    "value": [
+     "1080"
+    ],
+    "text": "1080 cm³"
+   },
+   "explanation": "The rise is 11 - 8 = 3 cm. The volume of the stone is 24 × 15 × 3 = 360 × 3 = 1080 cm³."
+  },
+  {
+   "id": "L5U05-S08",
+   "tier": "start",
+   "page": 2,
+   "text": "A tank has a base 60 cm by 30 cm. The water is 20 cm deep. Then 9 litres of water are taken out.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The water level falls {b} cm.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The water is now {b} cm deep.",
+     "answer": {
+      "value": [
+       "15"
+      ],
+      "text": "15"
+     }
+    }
+   ],
+   "explanation": "The base area is 60 × 30 = 1800 cm². 9 litres = 9000 cm³. The fall is 9000 ÷ 1800 = 5 cm. The new depth is 20 - 5 = 15 cm."
+  },
+  {
+   "id": "L5U05-S09",
+   "tier": "start",
+   "page": 2,
+   "text": "Cuboids are made with 30 cubes, using all the cubes each time. The edges are whole numbers of cm. A cuboid that is turned round is not new.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "There are {b} different cuboids.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The cuboid with the smallest total of the 3 edges has a total of {b} cm.",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    }
+   ],
+   "explanation": "Edges with product 30: 1, 1, 30; 1, 2, 15; 1, 3, 10; 1, 5, 6; 2, 3, 5. That is 5. The sums are 32, 18, 14, 12, 10: smallest 10."
+  },
+  {
+   "id": "L5U05-S10",
+   "tier": "start",
+   "page": 3,
+   "text": "A big cube is made from 27 small cubes (3 by 3 by 3). All its outside is painted. Then it is taken apart.",
+   "figure": {
+    "type": "l5_cubes",
+    "mm": 7,
+    "heights": [
+     [
+      3,
+      3,
+      3
+     ],
+     [
+      3,
+      3,
+      3
+     ],
+     [
+      3,
+      3,
+      3
+     ]
+    ],
+    "mark": "none",
+    "alt": "cube of 27 small cubes"
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Cubes with 3 painted faces: {b}",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Cubes with 2 painted faces: {b}",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Cubes with 1 painted face: {b}",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "d",
+     "text": "Cubes with no paint: {b}",
+     "answer": {
+      "value": [
+       "1"
+      ],
+      "text": "1"
+     }
+    }
+   ],
+   "explanation": "(a) 8 corners. (b) 12 edges, 1 middle cube each. (c) 6 faces, 1 middle cube each. (d) 1 cube inside.",
+   "figside": true
+  },
+  {
+   "id": "L5U05-S11",
+   "tier": "start",
+   "page": 3,
+   "text": "Cubes with edges of 6 cm are packed in neat layers in a carton 32 cm long, 20 cm wide and 14 cm high. The cubes cannot be cut. How many cubes fit in the carton? {b}",
+   "answer": {
+    "value": [
+     "30"
+    ],
+    "text": "30 cubes"
+   },
+   "explanation": "32 ÷ 6 = 5, 20 ÷ 6 = 3 and 14 ÷ 6 = 2 (whole cubes only). 5 × 3 × 2 = 30 cubes."
+  },
+  {
+   "id": "L5U05-S12",
+   "tier": "start",
+   "page": 3,
+   "text": "A tub 45 cm long, 40 cm wide and 30 cm high is full of water. All of the water goes into an empty tank. The tank floor is 60 cm × 30 cm. Find the depth of the water in the tank. {b} cm",
+   "answer": {
+    "value": [
+     "30"
+    ],
+    "text": "30 cm"
+   },
+   "explanation": "The water has a volume of 45 × 40 × 30 = 54 000 cm³. The floor of the tank is 60 × 30 = 1800 cm². The depth is 54 000 ÷ 1800 = 30 cm."
+  },
+  {
+   "id": "L5U05-S13",
+   "tier": "start",
+   "page": 3,
+   "text": "Tank A and tank B hold the same amount of water. Tank A is 3/5 full. Tank B is 3/4 full and holds 40 litres when full. Find the capacity of tank A. {b} litres",
+   "answer": {
+    "value": [
+     "50"
+    ],
+    "text": "50 litres"
+   },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "Tank B holds 3/4 of 40 = 30 litres. Tank A holds 30 litres too, and that is 3/5 of its capacity. 1/5 = 10 litres, so the capacity is 5 × 10 = 50 litres."
+  },
+  {
+   "id": "L5U05-S14",
+   "tier": "start",
+   "page": 3,
+   "text": "Circle True or False.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "1 litre of water has a volume of 1000 cm³.   {circ:True|False}",
+     "answer": {
+      "value": [
+       "True"
+      ],
+      "text": "True"
+     }
+    },
+    {
+     "label": "b",
+     "text": "A cuboid 2 cm × 3 cm × 4 cm has the same volume as a cube with edges of 3 cm.   {circ:True|False}",
+     "answer": {
+      "value": [
+       "False"
+      ],
+      "text": "False"
+     }
+    },
+    {
+     "label": "c",
+     "text": "If all 3 edges of a cuboid are doubled, its volume is doubled.   {circ:True|False}",
+     "answer": {
+      "value": [
+       "False"
+      ],
+      "text": "False"
+     }
+    }
+   ],
+   "explanation": "(a) True. (b) The cuboid is 24 cm³. The cube is 27 cm³, so it is false. (c) False: 2 × 2 × 2 = 8, so the volume is 8 times as much."
+  },
+  {
+   "id": "L5U05-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "A big cube is made of small cubes. Its outside is painted. Then it is taken apart. 64 of the small cubes have no paint. How many small cubes make the big cube? {b}",
+   "answer": {
+    "value": [
+     "216"
+    ],
+    "text": "216 small cubes"
+   },
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     ""
+    ]
+   },
+   "hint": "Think about the cubes with no paint. What shape do they make?",
+   "explanation": "64 = 4 × 4 × 4 unpainted cubes inside. The painted layer adds 1 on each side: 4 + 2 = 6 across. 6 × 6 × 6 = 216."
+  },
+  {
+   "id": "L5U05-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "Tank A has a floor 50 cm × 20 cm. Its water is 24 cm deep. Tank B has a floor 25 cm × 20 cm and starts empty. Water is poured from A into B until the 2 tanks have equal depths. Find that depth. {b} cm",
+   "answer": {
+    "value": [
+     "16"
+    ],
+    "text": "16 cm"
+   },
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     ""
+    ]
+   },
+   "hint": "The same water now covers both floors. Add the floor areas.",
+   "explanation": "The water is 50 × 20 × 24 = 24 000 cm³. The floors are 1000 + 500 = 1500 cm². 24 000 ÷ 1500 = 16 cm."
+  },
+  {
+   "id": "L5U05-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "A tank floor is 60 cm × 40 cm. A thin wall splits the tank into 2 parts, 20 cm and 40 cm long. The 20 cm part holds water 18 cm deep. The other part is empty. The wall is lifted out. Find the new depth. {b} cm",
+   "figure": {
+    "type": "l5_solid",
+    "mm": 1.0,
+    "boxes": [
+     {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "l": 20,
+      "w": 40,
+      "h": 18,
+      "kind": "water"
+     },
+     {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "l": 60,
+      "w": 40,
+      "h": 30,
+      "kind": "tank"
+     },
+     {
+      "x": 20,
+      "y": 0,
+      "z": 0,
+      "l": 1,
+      "w": 40,
+      "h": 30,
+      "kind": "solid",
+      "fill": "shade"
+     }
+    ],
+    "texts": [
+     {
+      "at": [
+       30,
+       0,
+       0
+      ],
+      "t": "60 cm",
+      "dy": 22
+     },
+     {
+      "at": [
+       0,
+       0,
+       18
+      ],
+      "t": "18 cm",
+      "dx": -28
+     }
+    ],
+    "alt": "tank split by a thin wall, water in the left part"
+   },
+   "answer": {
+    "value": [
+     "6"
+    ],
+    "text": "6 cm"
+   },
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "hint": "The water spreads out. How much water is there?",
+   "explanation": "Water 20 × 40 × 18 = 14 400 cm³. It now covers 60 × 40 = 2400 cm². 14 400 ÷ 2400 = 6 cm.",
+   "figright": true
+  },
+  {
+   "id": "L5U05-G01",
+   "tier": "go",
+   "page": 5,
+   "text": "A solid cube has edges of 6 cm. A tunnel 2 cm by 2 cm goes straight through the middle from the front to the back. 2 more tunnels of the same size go through the middle from left to right and from top to bottom. What is the volume of the solid that is left? {b} cm³",
+   "answer": {
+    "value": [
+     "160"
+    ],
+    "text": "160 cm³"
+   },
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     "",
+     ""
+    ]
+   },
+   "hint": "Count the cubes in one tunnel. Then think about overlap.",
+   "explanation": "The cube is 216 small cubes. Each tunnel has 24. The 8 middle cubes are in all 3 tunnels, so the tunnels remove 72 - 16 = 56. 216 - 56 = 160 cm³.",
+   "beyond": "Cubes with tunnels"
+  },
+  {
+   "id": "L5U05-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "A tank measures 60 cm × 50 cm × 40 cm and is empty. A tap pours in 9 litres each minute. A leak loses 1 litre each minute. After how many minutes is the tank full? {b}",
+   "answer": {
+    "value": [
+     "15"
+    ],
+    "text": "15 minutes"
+   },
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     "",
+     ""
+    ]
+   },
+   "hint": "Find the capacity. Then the net litres gained each minute.",
+   "explanation": "The tank holds 60 × 50 × 40 = 120 000 cm³ = 120 litres. Each minute the tank gains 9 - 1 = 8 litres. 120 ÷ 8 = 15 minutes."
+  },
+  {
+   "id": "L5U05-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "The volume of cube B is 8 times the volume of cube A. Cube A has edges of 5 cm. How long are the edges of cube B? {b} cm",
+   "answer": {
+    "value": [
+     "10"
+    ],
+    "text": "10 cm"
+   },
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     "",
+     ""
+    ]
+   },
+   "hint": "Find the volume of cube A first.",
+   "explanation": "Cube A: 125 cm³. Cube B: 8 × 125 = 1000 cm³ = 10 × 10 × 10. Each edge is 10 cm."
+  },
+  {
+   "id": "L5U05-C01",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Find the volume of the cuboid. {b} cm³",
+   "figure": {
+    "type": "l5_solid",
+    "mm": 3.0,
+    "boxes": [
+     {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "l": 12,
+      "w": 5,
+      "h": 4,
+      "kind": "solid",
+      "fill": "light"
+     }
+    ],
+    "texts": [
+     {
+      "at": [
+       6,
+       0,
+       0
+      ],
+      "t": "12 cm",
+      "dy": 22
+     },
+     {
+      "at": [
+       12,
+       2.5,
+       0
+      ],
+      "t": "5 cm",
+      "dx": 30,
+      "dy": 14
+     },
+     {
+      "at": [
+       0,
+       0,
+       2
+      ],
+      "t": "4 cm",
+      "dx": -28
+     }
+    ],
+    "alt": "cuboid 12 cm by 5 cm by 4 cm"
+   },
+   "answer": {
+    "value": [
+     "240"
+    ],
+    "text": "240 cm³"
+   },
+   "explanation": "12 × 5 × 4 = 60 × 4 = 240 cm³.",
+   "figright": true
+  },
+  {
+   "id": "L5U05-C02",
+   "tier": "quiz",
+   "page": 6,
+   "text": "A tank floor is 50 cm × 30 cm and the tank holds 18 litres. Find the water depth. {b} cm",
+   "answer": {
+    "value": [
+     "12"
+    ],
+    "text": "12 cm"
+   },
+   "explanation": "18 litres = 18 000 cm³. The base is 50 × 30 = 1500 cm². The depth is 18 000 ÷ 1500 = 12 cm."
+  },
+  {
+   "id": "L5U05-C03",
+   "tier": "quiz",
+   "page": 6,
+   "text": "A cube is made of 125 small cubes (5 by 5 by 5). Its outside is painted. Count the small cubes with exactly 2 painted faces. {b}",
+   "answer": {
+    "value": [
+     "36"
+    ],
+    "text": "36 cubes"
+   },
+   "explanation": "The cube has 12 edges. On each edge the 3 middle cubes have 2 painted faces (the 2 end cubes are corners). 12 × 3 = 36."
+  },
+  {
+   "id": "L5U05-C04",
+   "tier": "quiz",
+   "page": 6,
+   "text": "A tank floor is 20 cm × 15 cm and the water is 10 cm deep. A stone sinks and the water rises to 14 cm. Find the volume of the stone. {b} cm³",
+   "answer": {
+    "value": [
+     "1200"
+    ],
+    "text": "1200 cm³"
+   },
+   "explanation": "The rise is 14 - 10 = 4 cm. The volume is 20 × 15 × 4 = 300 × 4 = 1200 cm³."
+  }
+ ]
+}

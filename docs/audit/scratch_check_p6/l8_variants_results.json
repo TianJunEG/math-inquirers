@@ -1,0 +1,265 @@
+{
+ "static": {},
+ "run": [
+  {
+   "file": "L8_shift_16.sb3",
+   "trigger": "flag",
+   "answers": [
+    "MYNO SC PEX"
+   ],
+   "ok": true,
+   "said": [
+    "Type a message in CAPITAL letters",
+    "",
+    "CODE IS FUN"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "shift": "16",
+    "code": "CODE IS FUN",
+    "i": 12,
+    "n": 23,
+    "m": 13,
+    "msg": "",
+    "s": 1,
+    "alphabet": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G",
+     "H",
+     "I",
+     "J",
+     "K",
+     "L",
+     "M",
+     "N",
+     "O",
+     "P",
+     "Q",
+     "R",
+     "S",
+     "T",
+     "U",
+     "V",
+     "W",
+     "X",
+     "Y",
+     "Z"
+    ]
+   }
+  },
+  {
+   "file": "L8_shift_26.sb3",
+   "trigger": "flag",
+   "answers": [
+    "MATH IS FUN"
+   ],
+   "ok": true,
+   "said": [
+    "Type a message in CAPITAL letters",
+    "",
+    "MATH IS FUN"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "shift": "26",
+    "code": "MATH IS FUN",
+    "i": 12,
+    "n": 13,
+    "m": 13,
+    "msg": "",
+    "s": 1,
+    "alphabet": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G",
+     "H",
+     "I",
+     "J",
+     "K",
+     "L",
+     "M",
+     "N",
+     "O",
+     "P",
+     "Q",
+     "R",
+     "S",
+     "T",
+     "U",
+     "V",
+     "W",
+     "X",
+     "Y",
+     "Z"
+    ]
+   }
+  },
+  {
+   "file": "L8_shift_minus4.sb3",
+   "trigger": "flag",
+   "answers": [
+    "CODE"
+   ],
+   "ok": true,
+   "said": [
+    "Type a message in CAPITAL letters",
+    "",
+    "YKZA"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "shift": "-4",
+    "code": "YKZA",
+    "i": 5,
+    "n": 4,
+    "m": 0,
+    "msg": "",
+    "s": 1,
+    "alphabet": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G",
+     "H",
+     "I",
+     "J",
+     "K",
+     "L",
+     "M",
+     "N",
+     "O",
+     "P",
+     "Q",
+     "R",
+     "S",
+     "T",
+     "U",
+     "V",
+     "W",
+     "X",
+     "Y",
+     "Z"
+    ]
+   }
+  },
+  {
+   "file": "L8_shift_16.sb3",
+   "trigger": "flag",
+   "answers": [
+    "PIZZA"
+   ],
+   "ok": true,
+   "said": [
+    "Type a message in CAPITAL letters",
+    "",
+    "FYPPQ"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "shift": "16",
+    "code": "FYPPQ",
+    "i": 6,
+    "n": 0,
+    "m": 16,
+    "msg": "",
+    "s": 1,
+    "alphabet": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G",
+     "H",
+     "I",
+     "J",
+     "K",
+     "L",
+     "M",
+     "N",
+     "O",
+     "P",
+     "Q",
+     "R",
+     "S",
+     "T",
+     "U",
+     "V",
+     "W",
+     "X",
+     "Y",
+     "Z"
+    ]
+   }
+  },
+  {
+   "file": "L8_shift_minus4.sb3",
+   "trigger": "flag",
+   "answers": [
+    "A B"
+   ],
+   "ok": true,
+   "said": [
+    "Type a message in CAPITAL letters",
+    "",
+    "W X"
+   ],
+   "x": 0,
+   "y": 0,
+   "vars": {
+    "shift": "-4",
+    "code": "W X",
+    "i": 4,
+    "n": 1,
+    "m": 23,
+    "msg": "",
+    "s": 1,
+    "alphabet": [
+     "A",
+     "B",
+     "C",
+     "D",
+     "E",
+     "F",
+     "G",
+     "H",
+     "I",
+     "J",
+     "K",
+     "L",
+     "M",
+     "N",
+     "O",
+     "P",
+     "Q",
+     "R",
+     "S",
+     "T",
+     "U",
+     "V",
+     "W",
+     "X",
+     "Y",
+     "Z"
+    ]
+   }
+  }
+ ]
+}

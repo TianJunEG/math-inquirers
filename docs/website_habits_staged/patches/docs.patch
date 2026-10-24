@@ -1,0 +1,158 @@
+--- a/docs/pedagogy/holiday_parent_outcomes_draft.md
++++ b/docs/pedagogy/holiday_parent_outcomes_draft.md
+@@ -40,7 +40,7 @@
+ 
+ ## Level 3 (ages 8 to 10, builds on Primary 3 maths)
+ 
+-Your child will explore four-digit numbers, times tables, bar models, remainders, fractions, area and angles through puzzles that have a clear way in and room to go further. Children are asked "how do you know?" often, and learn to test an idea before they trust it.
++Your child will explore four-digit numbers, times tables, bar models, remainders, fractions, area and angles through puzzles that have a clear way in and room to go further. Children are asked "how do you know?" often, and practise testing an idea before they trust it.
+ 
+ **By the end, your child will practise being able to say:**
+ 
+@@ -108,4 +108,4 @@
+ - The Level 6 "builds on Primary 6 maths" line is the page convention but only about half the lessons are primary-syllabus topics (`docs/terms/level_6_year_plan.md` line 102). Consider "ideas beyond the primary classroom" if you prefer to be exact.
+ - Level 6 Scratch has not had its real-editor check yet (`docs/audit/fixes_p6.md`); hold the coding sentences until it has.
+ - Three phrases ("practise being able to say", "first look", "short note ... one thing to try next") are deliberate: they describe intent without promising results (`docs/gifted_research.md` section 3).
+-- If the toolbox card in `docs/pedagogy/holiday_review.md` section 8 is adopted, add one line to every level: "Your child will also learn eight simple tools for starting a problem, such as draw it, make a list and try a smaller case."
++- If the toolbox card in `docs/pedagogy/holiday_review.md` section 8 is adopted, add one line to every level: "Your child will also practise using eight simple tools for starting a problem, such as draw it, make a list and try a smaller case."
+--- a/docs/pedagogy/term_parent_outcomes_draft.md
++++ b/docs/pedagogy/term_parent_outcomes_draft.md
+@@ -10,13 +10,13 @@
+ 
+ **Standard closing line (for every level page):** *These are the things we teach and practise. Every child grows at their own pace, and a child who joins part-way sees the parts they attend. Mi's Challenge Quest at the end of each ten lessons is a game: nothing is marked, added up or compared, and your child's tutor sends you one line about what they saw.*
+ 
+-**How each lesson works (one line for parents):** every lesson has time to think before help, a chat where children give reasons ("I think ... because ..."), and a look-back where children say what was hard and what helped.
++**How each lesson works (one line for parents):** every lesson has time to think before help, a chat where children give reasons ("I think ... because ..."), and a look-back where children say what was hard and what helped. Every term practises all six inquiry habits.
+ 
+ ---
+ 
+ ## Level 1 (ages 6-8)
+ 
+-### Lessons 1-10: Notice it
++### Lessons 1-10: emphasis on noticing
+ Children look closely at how numbers work. They build numbers from bundles of ten and single ones, find patterns on the 100 square, and learn several ways to add and take away within 100, then check their answers. Each lesson ends with a short chat where your child gives a reason. Some ideas go past Primary 1 on purpose, as optional challenge.
+ 
+ I can:
+@@ -27,8 +27,8 @@
+ - say what the equals sign means, and why a total stays the same when I give some and take some.
+ - measure and draw a line in centimetres, and write one number sentence for each step of a story.
+ 
+-### Lessons 11-20: Test it
+-Children learn to test an idea, not just to give an answer. They find out who is where in a line, draw picture strips (called bar models at school) for "more" and "fewer" stories, and make equal groups and share fairly. They hear a claim, try it with an example, and learn that one example is not enough to be sure.
++### Lessons 11-20: emphasis on testing
++Children practise testing an idea, not just giving an answer. They find out who is where in a line, draw picture strips (called bar models at school) for "more" and "fewer" stories, and make equal groups and share fairly. They hear a claim, try it with an example, and learn that one example is not enough to be sure.
+ 
+ I can:
+ - say a place from 1st to 10th, counting from the front or the back.
+@@ -38,7 +38,7 @@
+ - make equal groups, count in 2s, 3s, 4s, 5s and 10s, and share or group equally.
+ - find the number a shape stands for in a picture puzzle, and the price of one from the price of a group.
+ 
+-### Lessons 21-30: Explain why
++### Lessons 21-30: emphasis on explaining
+ Children use maths they will meet every day, and practise saying why. They tell the time, count money and find change, and list every way to do something so none is missed. They look for mistakes in sums and check an answer a second way.
+ 
+ I can:
+@@ -49,7 +49,7 @@
+ - make a table to work out the 20th picture in a growing pattern.
+ - find the wrong step in a sum, say why, and check an answer a second way.
+ 
+-### Lessons 31-40: Choose and create
++### Lessons 31-40: emphasis on choosing and creating
+ Children bring their tools together. They look at shapes, grids and graphs, count carefully, and then choose the way that fits a problem. The year ends with children writing a puzzle that has exactly one answer, and teaching one idea they liked.
+ 
+ I can:
+@@ -67,7 +67,7 @@
+ 
+ ## Level 2 (ages 7-9)
+ 
+-### Lessons 1-10: Notice it
++### Lessons 1-10: emphasis on noticing
+ Children take a fresh look at the numbers, shapes and measures of their school year. They learn quick ways to add in their head, share things fairly, work out shop bills in dollars and cents, and notice patterns. A few puzzles go past the school year, as optional challenge.
+ 
+ I can:
+@@ -78,8 +78,8 @@
+ - name halves, thirds and quarters in any shape, and cut a shape into smaller shapes and count them.
+ - read a scale where only some marks have numbers.
+ 
+-### Lessons 11-20: Test it
+-Children learn how to check an idea. They read graphs and ask what a graph cannot tell them, test claims about odd and even numbers, draw strips for stories, read clocks to the minute, and list every way so none is missed. They use clues to rule things out.
++### Lessons 11-20: emphasis on testing
++Children practise checking an idea. They read graphs and ask what a graph cannot tell them, test claims about odd and even numbers, draw strips for stories, read clocks to the minute, and list every way so none is missed. They use clues to rule things out.
+ 
+ I can:
+ - read a graph with a key and say what it cannot tell me.
+@@ -89,7 +89,7 @@
+ - list every way to do something so none is missed.
+ - use clues to rule things out, and write a puzzle with exactly one answer.
+ 
+-### Lessons 21-30: Explain why
++### Lessons 21-30: emphasis on explaining
+ Children practise giving reasons. They find the rule behind a pattern, place fractions on a line, work out what a shape is worth in a picture equation, and estimate before they check. They learn that one example that breaks a claim beats a hundred that fit it.
+ 
+ I can:
+@@ -100,7 +100,7 @@
+ - solve long stories one step at a time with strips.
+ - find an example that breaks a claim, and say why a true claim is always true.
+ 
+-### Lessons 31-40: Create and connect
++### Lessons 31-40: emphasis on creating and connecting
+ Children make up and mend problems. They try chance games and ask if they are fair, follow timetables and calendars, give directions on a grid, find mistakes in worked answers, and write problems for others. The year ends with a mixed set where they choose their own way in.
+ 
+ I can:
+@@ -254,7 +254,7 @@
+ - count every possibility without missing or doubling any.
+ 
+ ### Lessons 31-40: Shape, logic and strategy
+-Children explore angles in shapes and families of shapes, cycles in clocks and calendars, and logic puzzles. They learn to prove that something cannot happen, to break a long question into short ones, and to write a problem that has exactly one answer. The year ends with each child presenting a favourite problem.
++Children explore angles in shapes and families of shapes, cycles in clocks and calendars, and logic puzzles. They practise showing that something cannot happen, breaking a long question into short ones, and writing a problem that has exactly one answer. The year ends with each child presenting a favourite problem.
+ 
+ I can:
+ - find the angles in a many-sided shape and sort four-sided shapes into families.
+@@ -296,7 +296,7 @@
+ - say how scaling changes length, area and volume.
+ 
+ ### Lessons 21-30: Say it for every case
+-Children learn to write a rule with letters so that it covers every case. They solve equations, read straight-line graphs, work with powers and binary numbers, and check their rules with short programs.
++Children practise writing a rule with letters that covers every case. They solve equations, read straight-line graphs, work with powers and binary numbers, and check their rules with short programs.
+ 
+ I can:
+ - use rectangles to open out brackets and to pull out a common number.
+--- a/docs/terms/level_1_year_plan.md
++++ b/docs/terms/level_1_year_plan.md
+@@ -30,7 +30,7 @@
+ 
+ ## 1. Design principles
+ 
+-- **The year arcs Notice it, Test it, Explain why, then Choose and create.** Term 1 notices how numbers work (tens and ones, patterns in the 100 square, adding and taking away within 100, measuring and drawing). Term 2 turns stories and groups into bar strips, multiplication and sharing and starts testing claims. Term 3 asks for reasons and generalising (always, sometimes, never). Term 4 asks the child to pick a tool and to write problems for others.
++- **Each term has an emphasis (noticing, testing, explaining, then choosing and creating) and every term practises all six inquiry habits.** Term 1 notices how numbers work (tens and ones, patterns in the 100 square, adding and taking away within 100, measuring and drawing). Term 2 turns stories and groups into bar strips, multiplication and sharing and starts testing claims. Term 3 asks for reasons and generalising (always, sometimes, never). Term 4 asks the child to pick a tool and to write problems for others.
+ - **Three threads spiral through all four terms, each time in a bigger setting:** (a) rules and patterns (100 square, then times tables, then a table for a growing pattern, then grid paths); (b) balance and "=" (balance and swap, then picture equations, then spot the mistake, then the toolbox); (c) listing every case (digit cards, sharing and grouping, spending exactly an amount, counting routes). Each revisit is labelled "spiral" in the table and is a new context, not a repeat worksheet.
+ - **Any term can be a first term.** Places open every term (prorated fee). Lessons 2 to 40 open with a 6-minute "remember" warm-up that carries what the lesson needs, so a child who joins cold is not lost and no lesson assumes the previous term except through that warm-up. Term 1 assumes only the holiday course or counting to 20; holiday topics appear only in warm-ups (section 3). Terms are not lockstep with school.
+ - **Problem solving is taught as a few named moves, one new move a term:** Term 1 draw it, list it, one operation per step; Term 2 bar strips, find one first, work backwards; Term 3 make a table, use cases, spot the mistake; Term 4 choose the move and create a problem. Moves are named in children's words and recorded on a growing "Inquirer's toolbox" page. **Update, 23 Oct 2026 (TERM-YES data fix): the separate growing "Inquirer's toolbox page" is no longer promised.** The toolbox is now delivered by the spine routine adopted by the owner on 23 Oct 2026 (`docs/pedagogy/spine_routine_spec.md`): eight named strategies (spot the pattern, list every way, draw it, make a table, work backwards, guess and check, try something simpler, act it out), a strategy card ("tool of the day") in every lesson, and one common look-back at the end of every lesson; and by the printed Toolbox Card in the Inquirer Kit (`docs/pedagogy/toolbox_card_notes.md`). The spine is built for the holiday program (decks, workbooks, tutor guides) and the Toolbox Card exists; the term lessons are not yet changed, so the term authors carry the same eight names, the strategy card and the common look-back into the Level 1 term lessons instead of writing a toolbox page. Lesson 39 (The Problem-Solving Toolbox) is where the child chooses among the eight.
+@@ -43,7 +43,7 @@
+ 
+ Per term, two notes the owner asked for: **Can a new child join cold?** and **Safest lesson to skip or make up** (every lesson is recorded; a make-up can be a holiday class if there is a seat).
+ 
+-### Term 1: Notice it (numbers to 100 and how they work; all new)
++### Term 1: emphasis on noticing (numbers to 100 and how they work; all new)
+ 
+ **Can a new child join cold?** Yes. The 6-minute warm-up counts in 2s, 5s and 10s to 100 and revisits number bonds for 10 and 20 (holiday topics, spiral only); nothing else is assumed beyond counting to 20. **Safest to skip or make up:** Lesson 4 (The 100 Square Explorer), a pattern lesson that no later lesson depends on; Lessons 1 and 5 to 7 are the hardest to miss.
+ 
+@@ -60,7 +60,7 @@
+ | 9 | Draw and Measure | Be exact to the nearest centimetre | MOE Length (draw a line, measure to nearest cm, compare). Deeper than the holiday cubes-and-ruler measuring, which is warm-up only | S: draw 7 cm; compare two drawn lines. T: lines on a bent path; a line that starts at 2 on the ruler. G: three pieces of a 30 cm ribbon | Precision |
+ | 10 | Story Steps: Read It Twice (added) | One operation per step | MOE Addition and Subtraction (in context, within 100). Gap from `docs/books/word_problems_g1_g2_analysis.md`: multi-step stories (31 of 101) and reading traps (who is in the group, "fewer than"). Bar strips come in Lesson 12 | S: two-step story, write one operation per step. T: reversed wording ("3 fewer than"); a story with a trap (who is in the group). G: three-step story, write it for a partner | Reading and planning |
+ 
+-### Term 2: Test it (stories, groups and claims; all new)
++### Term 2: emphasis on testing (stories, groups and claims; all new)
+ 
+ **Can a new child join cold?** Yes. The 6-minute warm-up draws 3 tens and 4 ones, adds by making a ten, and skip-counts 2s, 5s, 10s to build a group picture. Lessons 11 to 20 use only that. **Safest to skip or make up:** Lesson 14 (Odd + Odd), a standalone inquiry; avoid skipping Lessons 15 to 18, which build on one another.
+ 
+@@ -77,7 +77,7 @@
+ | 19 | Picture Equations | A shape is a hidden number | Beyond P1 (letters/algebra is P6, p. 43); SASMO-type substitution; uses times and add facts | S: one shape and a box, 4 + shape = 10. T: two different shapes; take one equation from another. G: three symbols with a times sign | Reasoning about equality |
+ | 20 | Find One First (added) | Find one, then find many | MOE Multiplication and Division (word problems) and Money. Gap from the books analysis: price or size of one from a group (6 of 101); also vocabulary "a dozen", "each", "such" | S: 4 pens cost 20 dollars, one costs? T: price of 7 from the price of 3. G: two-step, price of one then change | Unit method |
+ 
+-### Term 3: Explain why (time, money, tables and reasons; all new)
++### Term 3: emphasis on explaining (time, money, tables and reasons; all new)
+ 
+ **Can a new child join cold?** Yes. The 6-minute warm-up skip-counts in 5s (clock face), lists the coins 5, 10, 20, 50 cents and $1 (holiday coin topic, spiral only) and draws a bar strip for "8 and 3". Lessons 21 to 30 need only that. **Safest to skip or make up:** Lesson 27 (Fill the Grid), a standalone puzzle lesson; Lessons 21 to 23 and 24 to 26 are two chained blocks.
+ 

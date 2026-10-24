@@ -1,0 +1,741 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Math Inquirers Level 1 term-time lesson (schema_version 1)",
+  "description": "One lesson = one JSON file in term/l1/lessons/lNN.json. tools/validate.py enforces the rules that JSON Schema cannot (timing sums, slide/script links, wording, answers). Line kinds in script: SAY READ ASK DO SLIDE WORK HOLD MOVE REC (timed), STUCK NOTE (untimed). Block types in slides: chip p list card visual qs answers say cols table numrow answer lookback.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "id",
+    "level",
+    "term",
+    "lesson",
+    "lesson_in_term",
+    "title",
+    "big_idea",
+    "child_idea",
+    "skill",
+    "moe",
+    "objectives",
+    "joining_cold",
+    "materials",
+    "timing",
+    "sneak_peek",
+    "rec",
+    "script",
+    "slides",
+    "tiers",
+    "talk",
+    "exit",
+    "look_back",
+    "home_practice",
+    "online_practice",
+    "parent",
+    "safeguarding",
+    "tutor_prep",
+    "spare_time"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "description": "l1-t{term}-{NN}"
+    },
+    "level": {
+      "const": 1
+    },
+    "term": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4
+    },
+    "lesson": {
+      "type": "integer",
+      "description": "1-40 over the year"
+    },
+    "lesson_in_term": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10
+    },
+    "title": {
+      "type": "string"
+    },
+    "big_idea": {
+      "type": "string"
+    },
+    "child_idea": {
+      "type": "string",
+      "description": "one or two child-sized sentences"
+    },
+    "skill": {
+      "type": "string"
+    },
+    "ages": {
+      "type": "string"
+    },
+    "moe": {
+      "type": "object",
+      "required": [
+        "strand",
+        "topics",
+        "note"
+      ],
+      "properties": {
+        "strand": {
+          "type": "string"
+        },
+        "topics": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "note": {
+          "type": "string"
+        }
+      }
+    },
+    "contest_moves": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "tutor-only; these sit at Think harder, never Start here"
+    },
+    "contest_where": {
+      "type": "string",
+      "description": "optional; where the contest-style moves sit, printed in the guide ('Used at ...'); default 'Think harder only'. Example: 'Think harder and Go further'"
+    },
+    "objectives": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "string"
+      }
+    },
+    "joining_cold": {
+      "type": "object",
+      "required": [
+        "remember",
+        "assumes",
+        "note"
+      ],
+      "properties": {
+        "remember": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "assumes": {
+          "type": "string"
+        },
+        "holiday_topics_revisited": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "safe_to_miss": {
+          "type": "boolean"
+        },
+        "note": {
+          "type": "string"
+        }
+      }
+    },
+    "materials": {
+      "type": "object",
+      "required": [
+        "child",
+        "tutor",
+        "ruler",
+        "notes"
+      ],
+      "properties": {
+        "child": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "tutor": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "kit_pages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ruler": {
+          "type": "boolean",
+          "description": "true only if the child has a printed or real ruler at home"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "kit_contract": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "piece",
+              "supplied",
+              "max_used"
+            ],
+            "properties": {
+              "piece": {
+                "type": "string"
+              },
+              "supplied": {
+                "type": "integer"
+              },
+              "max_used": {
+                "type": "integer"
+              },
+              "used_by": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "description": "kit pieces printed against the most any task uses; the validator fails when supplied < max_used"
+        }
+      }
+    },
+    "timing": {
+      "type": "object",
+      "required": [
+        "parts",
+        "optional_slide"
+      ],
+      "properties": {
+        "parts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "title",
+              "start",
+              "end"
+            ],
+            "properties": {
+              "id": {
+                "enum": [
+                  "opening",
+                  "remember",
+                  "sneak",
+                  "explore",
+                  "mini",
+                  "break",
+                  "work",
+                  "talk",
+                  "exit",
+                  "look",
+                  "flex"
+                ]
+              },
+              "title": {
+                "type": "string"
+              },
+              "start": {
+                "type": "integer"
+              },
+              "end": {
+                "type": "integer"
+              }
+            }
+          },
+          "description": "contiguous, from 0, summing to exactly 90, last part is flex (>= 4 min)"
+        },
+        "optional_slide": {
+          "type": "string"
+        },
+        "include_rules": {
+          "type": "boolean"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "skip_order": {
+          "type": "array",
+          "description": "optional: what to skip first if the tutor is more than 2 minutes behind at the start of the workbook"
+        }
+      }
+    },
+    "sneak_peek": {
+      "type": "object",
+      "required": [
+        "q1",
+        "q2",
+        "a1",
+        "a2"
+      ],
+      "description": "q1 is an access question (objects, drawing or counting); q2 a thinking question"
+    },
+    "rec": {
+      "type": "object",
+      "description": "per part id: {say (max 26 words), action}",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "say",
+          "action"
+        ]
+      }
+    },
+    "script": {
+      "type": "object",
+      "required": [
+        "segments"
+      ],
+      "properties": {
+        "segments": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "part",
+              "lines"
+            ],
+            "properties": {
+              "part": {
+                "type": "string"
+              },
+              "lines": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/line"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "slides": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "part",
+          "kind",
+          "title",
+          "blocks",
+          "note"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "part": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "title",
+              "light",
+              "dark",
+              "lookback"
+            ]
+          },
+          "title": {
+            "type": "string"
+          },
+          "subtitle": {
+            "type": "string"
+          },
+          "no_record": {
+            "type": "boolean",
+            "description": "optional; true on a slide the tutor must not record (the check sheet): the guide lists it under Recording cues and deck.json carries it in no_record. Optional lesson field rec_pause_say gives the line to say."
+          },
+          "optional": {
+            "type": "boolean"
+          },
+          "blocks": {
+            "type": "array"
+          },
+          "note": {
+            "type": "string",
+            "description": "speaker note, at least 12 words"
+          }
+        }
+      }
+    },
+    "tiers": {
+      "type": "object",
+      "required": [
+        "start",
+        "think",
+        "go",
+        "investigation"
+      ],
+      "properties": {
+        "start": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/question"
+          },
+          "description": "5 to 8 questions on workbook pages 1 and 2; core, approachable, untaught or just explored"
+        },
+        "think": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/question"
+          },
+          "description": "3 to 5; a taught idea in a new setting; contest-style moves live here"
+        },
+        "go": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/question"
+          },
+          "description": "exactly 3; mastery plus extension"
+        },
+        "investigation": {
+          "type": "object",
+          "description": "optional fields: visual / visuals (printed under the first task), draw (true or a number of drawing boxes; default: a box is added when the task says draw or sketch)",
+          "required": [
+            "id",
+            "title",
+            "first",
+            "text",
+            "answer",
+            "look_for",
+            "mistakes"
+          ]
+        }
+      }
+    },
+    "talk": {
+      "type": "object",
+      "required": [
+        "question",
+        "starter",
+        "answer",
+        "look_for"
+      ]
+    },
+    "exit": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "look_back": {
+      "type": "object",
+      "required": [
+        "hardest",
+        "helped",
+        "next"
+      ]
+    },
+    "home_practice": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5
+    },
+    "online_practice": {
+      "type": "object",
+      "required": [
+        "key",
+        "title",
+        "topic",
+        "items"
+      ],
+      "description": "items are in the practice/ runner format (type number|choice|multi|set|selfcheck; tier core|stretch|challenge; slips; tpl with vars, derive, answer using + - * // % ( ) only; a pure a//b must be the whole expression)"
+    },
+    "parent": {
+      "type": "object",
+      "required": [
+        "summary",
+        "words",
+        "try_home",
+        "ask",
+        "when_stuck",
+        "next",
+        "report_line",
+        "term_line"
+      ],
+      "description": "also optional: quote (the one-line big idea shown on the parent page; default big_idea) | next_materials: list or string of what the NEXT lesson needs (Parent Summary 'Have ready for next lesson')"
+    },
+    "spare_time": {
+      "type": "object",
+      "required": [
+        "note",
+        "rules",
+        "menu"
+      ],
+      "description": "If the class is ahead: 2-3 optional whole-class activities (3-5 min each; tutor line, rec cue, answer); never added to the 90-minute sum",
+      "properties": {
+        "rules": {
+          "type": "array",
+          "minItems": 3
+        },
+        "menu": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "title",
+              "minutes",
+              "tutor",
+              "rec",
+              "answer"
+            ]
+          }
+        }
+      }
+    },
+    "safeguarding": {
+      "type": "array",
+      "minItems": 4
+    },
+    "tutor_prep": {
+      "type": "array"
+    },
+    "workbook": {
+      "type": "object",
+      "description": "optional. header (strand line at the top of every page; default '<strand>: <big idea>'), hint_p1, hint_p3, hint_p4 (intro lines; generic defaults), kits: [] for no kit page or a list of kit pages {type: base_ten|hundred_square|number_strip|cards|shapes|number_line, title, intro, width (% of page), plus type fields: number_strip {start,end}; cards {labels:[..],cols,w,h,round}; shapes {shapes:[{kind:circle|square|rect|triangle,color,n}],size}; number_line {start,end,step,...}}. If kits is absent the legacy tens-bars page is printed. | hint_p2: intro line on page 2 | kits types added in Term 2: ten_frame, groups_mat, unit_strips, array_mat, people (see AUTHORING.md) | kits types added in Terms 3-4: clock_kit, play_money {page:1|2}, price_tags, grid_tiles, mistake_cards, fold_shapes, shape_pieces, pair_cards, grid_mat, graph_mat, tool_cards, event_cards, stick_strips, calendar_cards | Terms 3-4 tool options: workbook.exit_page true puts the exit ticket and look-back on their own page 6 (kit pages move to 7); a kit may set d_mm (fold_shapes: circle and square size in mm) and reused (true/false: whether the kit note says \"We use them again\"); figures: shapes2d and fold_punch take draw (drawing size) apart from size (page percentage), cube_stack, fold_punch, panel, shapes2d and network take tag (a letter badge), a panel tile takes shadow true (dark silhouette); pair_cards faces may be mixed ('icon:apple+3')"
+    },
+    "limits": {
+      "type": "object",
+      "description": "optional reading-load limits for the validator warning: max_child_words (default 40), max_parent_words (default 90)"
+    },
+    "stub": {
+      "type": "boolean",
+      "description": "true for a lesson file that only exercises the template (not a real lesson)"
+    },
+    "beyond": {
+      "type": "object",
+      "required": [
+        "name",
+        "where",
+        "text"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "where": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "description": "workbook question ids at Think harder or Go further"
+        },
+        "text": {
+          "type": "string",
+          "description": "tutor-only: what goes past Primary 1 and why it is original"
+        },
+        "parent": {
+          "type": "string",
+          "description": "optional sentence for the parent page"
+        }
+      },
+      "description": "Terms 3 and 4 (any lesson may carry it): the tutor-only beyond-P1 field. Never in Start here."
+    },
+    "spine": {
+      "type": "object",
+      "required": [
+        "main"
+      ],
+      "properties": {
+        "main": {
+          "type": "string"
+        },
+        "also": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 2
+        },
+        "role": {
+          "type": "string",
+          "enum": [
+            "I",
+            "P",
+            "A",
+            "C"
+          ]
+        },
+        "reason": {
+          "type": "string"
+        },
+        "chip": {
+          "type": "string",
+          "enum": [
+            "compact"
+          ]
+        }
+      }
+    }
+  },
+  "$defs": {
+    "line": {
+      "type": "object",
+      "required": [
+        "k"
+      ],
+      "properties": {
+        "k": {
+          "enum": [
+            "SAY",
+            "READ",
+            "ASK",
+            "DO",
+            "SLIDE",
+            "WORK",
+            "HOLD",
+            "MOVE",
+            "REC",
+            "STUCK",
+            "NOTE"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "description": "REC lines may be @rec = the part rec.say"
+        },
+        "slide": {
+          "type": "string"
+        },
+        "s": {
+          "type": "number",
+          "description": "seconds (required for WORK, DO)"
+        },
+        "resp": {
+          "type": "number",
+          "description": "ASK: seconds for children to answer (default 30)"
+        },
+        "optional": {
+          "type": "boolean"
+        },
+        "par": {
+          "type": "boolean"
+        }
+      }
+    },
+    "question": {
+      "type": "object",
+      "required": [
+        "id",
+        "tier",
+        "text",
+        "answer",
+        "val",
+        "hint",
+        "solution",
+        "mistakes",
+        "mins"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "S1.. T1.. G1.."
+        },
+        "page": {
+          "type": "integer"
+        },
+        "tier": {
+          "enum": [
+            "start",
+            "think",
+            "go"
+          ]
+        },
+        "text": {
+          "type": "string"
+        },
+        "parts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "l",
+              "text",
+              "ans",
+              "val"
+            ]
+          }
+        },
+        "visual": {
+          "type": "object"
+        },
+        "draw": {
+          "type": [
+            "boolean",
+            "integer"
+          ],
+          "description": "true = one drawing box; an integer = that many small boxes"
+        },
+        "answer": {
+          "type": "string"
+        },
+        "val": {
+          "description": "machine-checkable value(s), re-computed in verify/lNN_checks.py"
+        },
+        "hint": {
+          "type": "string"
+        },
+        "solution": {
+          "type": "string"
+        },
+        "mistakes": {
+          "type": "array",
+          "minItems": 1
+        },
+        "mins": {
+          "type": "number"
+        },
+        "lines": {
+          "type": "integer"
+        },
+        "choices": {
+          "type": "array",
+          "description": "words printed for the child to circle (for example Yes and No); detected automatically from 'Circle Yes or No.', 'Circle Right or Wrong.' and 'Circle/Tick True or False.'; a part may have its own choices"
+        },
+        "draw_strokes": {
+          "type": "number",
+          "description": "estimated strokes the child must draw (validator warns above 25); estimated from the text if absent"
+        },
+        "parts_note": {
+          "description": "part labels print as (a), (b); blanks: __ short, ___ standard, ____.._______ longer, [] box"
+        },
+        "visuals": {
+          "type": "array",
+          "description": "two or more figures side by side in one question"
+        },
+        "tf": {
+          "type": "array",
+          "description": "[{s: statement, ans: 'T'|'F'}] printed as a Statement / True / False tick table"
+        },
+        "mcq": {
+          "type": "object",
+          "description": "{options:[..], bracket:true}: options (1) to (4) with a bracket at the right margin; the key lists the answer"
+        },
+        "steps": {
+          "type": "array",
+          "description": "labels printed before ruled lines (for example Step 1, Step 2)"
+        }
+      }
+    },
+    "visual": {
+      "description": "figure types usable in slides and questions: bundles {tens,ones,table,label,style:sticks|kit}, scatter {n,seed}, ten_frame {filled,extra}, ten_to_bundle, hundred_square {blank}, number_line {start,end,step,label_every,marks,hide,jumps:[[from,to,'+10']],highlight} | ruler {start:0,end:15,objects:[{label,from,to,color}],mark} (cm ruler strip, TRUE 1:1 scale on paper: 10 cm = 100 mm; 0 at the start; an object whose from is not 0 is a shifted start; not a cut-out) | Term 2: objects, groups, array, line_up, round_table, bar_model, table, picture_equation, ten_frame with filled:[red,yellow], domino | Terms 3-4: clock {h,m,hide_hands,labels:all|quarters|none,digital,ampm,sector:[from_min,to_min],mirror}, money {items:[{v:'5c|10c|20c|50c|$1|$2|$5|$10|$50',n}],total,label,per_row}, price_tag {item,price,hide_price}, calendar {start,days,highlight,hide,mark,week}, stick_pattern {shape:triangle|square,n,hide_last,label_each}, shapes2d {shape:circle|half_circle|quarter_circle|square|rectangle|triangle,parts:1|2|4,shade,fold:v|h,compose:house|boat,label}, grid {rows,cols,kind:dots|squares,poly,route,start,end,squares,counts,mirror,mark}, cube_stack {heights,mode:iso|top|views}, fold_punch {stage:paper|folded|unfolded,fold:v|h|quarter,holes}, panel {tiles:[{shape,n,size,colour,pattern,turn}],cols,hide,labels}, network {n,lines|all,labels,count}, picture_graph {rows:[{label,n,hide}],icon,each,title,orient:rows|cols,tally,key}; number_line also takes labels {tick:text}, prefix, suffix; all take size s|m|l|percent; icons batch 2: sun moon bed bus house school shop bath rubber ruler glue shell spoon sock shoe button t_strip t_table t_list t_draw t_back t_find t_steps"
+    }
+  }
+}

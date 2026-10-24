@@ -1,0 +1,17 @@
+# Wording review: Lesson 31 (Half and Quarter, Term 4 Lesson 1)
+
+Every child-facing sentence (workbook, exit ticket, home sheet, slides, online practice, parent page) was read against WORDING_GUIDE rules 1 to 25 and the Primary 1 paper patterns (`docs/books/p1_school_paper_patterns.md`).
+
+- Commands: Circle Yes or No; Fill in the blanks; Fill in the blank; Colour the shapes; Use your ruler. Draw straight lines on the squares; Write the number of the shape; Tick True or False; Circle my name; Circle one (half or quarter). Same command for the same job in the workbook, the exit ticket and the home sheet (rules 2, 14).
+- Shape and part words: equal, parts, half, quarter, whole, half circle, quarter circle. 'Equal' is taught in Explore and the Mini-lesson before any Start here question uses it; 'whole' means the shape with no cut or fold. No fraction notation anywhere (1/2, 1/4 are Primary 2, D16); the parent page asks families not to teach it.
+- Numbers as numerals in every sentence ('2 equal parts', '8 small squares', '1 whole'); number words only where the question is about the word (the shapes' names). Answer frames put the box before the noun ('[] halves make 1 whole.', 'There are' style avoided where it would read oddly: 'Shape B has [] equal parts.').
+- Pictures and words match: S1 says three shapes and shows three; S5 says four shapes and shows four; G1 says three rectangles of 8 small squares and each picture has 8 squares (checked in the verify script by counting).
+- Wrong working: no child is named for a mistake. The Talk question and the online item say 'a child says' / 'True or False'; no cast name appears in a wrong statement (rule 4, D18).
+- Rule 24 (do not teach inside the question): the stems carry facts only ('A half of each is coloured', 'The strip is a quarter of a rectangle'); the hint line, not the stem, carries 'lay one part on the other'. 'Same Half, Different Shape' is the puzzle name, not an instruction.
+- Rule 25 (keep to what children are tested on): halves and quarters of a circle and a square are Primary 1 shapes work. A half and a quarter of 8, 12 or 16 small squares, cutting the same half into different shapes and the whole from a quarter are enrichment and sit at Think harder and Go further only, never in Start here, the exit ticket or the home sheet slots 1 and 2.
+- Choice questions use Yes or No and half or quarter printed on the answer line (rule 19); no 'say why' prompt in Start here.
+- Riddles (G2) are one short paragraph each ('I have 1 straight side and 1 curved side. 2 of me make a circle.'), rule 20.
+- Reading load: no child-facing string over 40 words (validator). The longest, the G1 stem, is 21 words in four short sentences.
+- Names: Mei appears only in the optional slide ('Mei folds a paper square corner to corner'); Kumar is in the rewind item copied from Term 2 Lesson 1; no name is attached to a wrong answer.
+- Changed during review: the Investigation first step lost 'so the edges meet' (one line on the page); S2 now points to shape B in question 1 instead of repeating a picture; S4 lost its pictures (the page was full); exit E1 asks 'Is each part a half or a quarter?' without a picture; the G1 sub-question 'Is half of each rectangle coloured?' was removed because the stem already says so.
+- Open: no Primary 1 paper in the sample asks an equal-parts question, so the whole lesson wording is marked unverified (D22). The tutor should check 'Is half of each shape coloured?' against a school paper when one is supplied.

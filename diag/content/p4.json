@@ -1,110 +1,95 @@
 {
-  "level": "P4",
-  "ageName": "Ages 9-11",
-  "minutes": 40,
-  "foundation": [
-    {
-      "q": "A bag has 9 sweets. How many sweets are in 7 bags?",
-      "a": "63",
-      "work": "Check recall of 9 x 7; note if the child skip-counts slowly.",
-      "skill": "Times tables 6 to 9"
-    },
-    {
-      "q": "Fill in the blank: 2/3 = ?/12",
-      "a": "8",
-      "work": "Does the child multiply top and bottom by 4? Common error: 2 + 9 = 11.",
-      "skill": "Equivalent fractions"
-    },
-    {
-      "q": "A rectangle is 7 cm long and 6 cm wide. What is its area? Write your answer with units.",
-      "a": "42 square cm",
-      "work": "Accept 42 square cm, 42 sq cm or 42 cm2. If the unit is missing, give the mark and note it. Common error: giving the perimeter, 26 cm.",
-      "skill": "Area of a rectangle"
-    },
-    {
-      "q": "5000 - 1346 = ?",
-      "a": "3654",
-      "work": "Watch for borrowing across zeros; common error 4346 or 3764.",
-      "skill": "Subtract 4-digit numbers"
-    }
-  ],
-  "core": [
-    {
-      "q": "A factor of 18 is a number that divides 18 exactly with nothing left over. Write down all the factors of 18.",
-      "a": "1, 2, 3, 6, 9, 18",
-      "work": "Look for pairs (1 x 18, 2 x 9, 3 x 6). Common errors: missing 1 or 18, or listing multiples (18, 36...).",
-      "skill": "Factors"
-    },
-    {
-      "q": "Round 48,572 to the nearest thousand.",
-      "a": "49,000",
-      "work": "Check which digit they look at (the hundreds digit, 5). Common error: 48,000 or 48,600.",
-      "skill": "Rounding 5-digit numbers"
-    },
-    {
-      "q": "12 + 6 x 3 - 4 = ?",
-      "a": "26",
-      "work": "Multiplication first: 6 x 3 = 18, then 12 + 18 - 4. Common error: 50 (left to right).",
-      "skill": "Order of operations"
-    },
-    {
-      "q": "2 and 3/5 + 1 and 4/5 = ? Write your answer as a mixed number.",
-      "a": "4 and 2/5",
-      "work": "Mixed number preferred: 4 2/5. Accept 22/5 for the mark. Look for 3/5 + 4/5 = 7/5 = 1 2/5, then add the whole numbers. Common errors: 3 7/5 left unconverted, or 4 7/10.",
-      "skill": "Adding mixed numbers"
-    },
-    {
-      "q": "A ribbon is 3.7 m long. Another ribbon is 2.85 m long. What is the total length? Write your answer in metres.",
-      "a": "6.55 m",
-      "work": "Check place-value alignment of the decimal points. Common errors: 3.22 (37 + 285 with the decimal point ignored) or 5.92 (digits lined up from the right).",
-      "skill": "Adding decimals"
-    },
-    {
-      "q": "A rectangle has a perimeter of 36 cm. It is 11 cm long. How wide is it?",
-      "a": "7 cm",
-      "work": "Look for 36 / 2 = 18, then 18 - 11 = 7. Common errors: 25 (36 - 11) or 14.",
-      "skill": "Perimeter of rectangles"
-    }
-  ],
-  "stretch": [
-    {
-      "q": "(Brain stretchers are hard on purpose. Most children do not finish both, and that is fine. Try one!)  I am a number between 30 and 50. I am a multiple of 4 and a multiple of 6. My digits add up to 9. What number am I?",
-      "a": "36",
-      "work": "Look for listing multiples of 4 and 6 (common: 36, 48) then using the digit clue. Accept guess and check with reasoning.",
-      "skill": "Common multiples and number puzzles"
-    },
-    {
-      "q": "Ben has 3 times as many marbles as Cara. Ben gives 12 marbles to Cara. Now they have the same number. How many marbles did Ben have at first?",
-      "a": "36",
-      "work": "Bar model: after the gift, Ben's 3 units minus 12 equals Cara's 1 unit plus 12, so 2 units = 24, 1 unit = 12. Cara 12, Ben 36.",
-      "skill": "Bar model: transfer problem"
-    }
-  ],
-  "topics": [
-    "Subtraction and times tables",
-    "Factors and multiples",
-    "Rounding 5-digit numbers",
-    "Order of operations",
-    "Fractions (mixed numbers)",
-    "Decimals",
-    "Area and perimeter",
-    "Bar models and number puzzles",
-    "This check samples number, fractions, decimals, area and perimeter only. Angles, symmetry, nets and graphs are not in it."
-  ],
-  "placement": {
-    "timeLine": "Allow up to 40 minutes; stop when your child is tired.",
-    "notTaughtTick": "This has not been taught yet.",
-    "notTaughtRule": "If 2 or more main questions are ticked, chat with the tutor before the score is used.",
-    "keyNote": "Please do not mark in front of your child.",
-    "skillsHeading": "Skills in this check",
-    "lowerMarkBox": "A lower mark tells us where to start, not what your child can do.",
-    "rows": {
-      "6to8": "Join {AGE} ({LV}). Your child has the foundations and will be well challenged.",
-      "4or5": "Join {AGE} ({LV}), and expect some support in the first weeks. If the warm-up score is 2 or less, {down} may be a happier start; ask us for a free 10-minute chat.",
-      "0to3": "{down} is likely to be the happier start. Ask us for a free 10-minute chat first. Starting where the ideas feel comfortable is how children get faster later. The age shown for {down} is a guide only: older children are welcome."
-    },
-    "greyZone": "For a main + stretch score of 3 to 5, or a warm-up score of 2, offer a free 10-minute chat with the tutor before the child decides.",
-    "swapRule": "Free swap between levels up to the end of Lesson 2.",
-    "tryUp": "Try-up check: 4 questions from next year. It is normal to find these new."
+ "level": "P4",
+ "ageName": "Ages 9-11",
+ "minutes": 30,
+ "foundation": [
+  {
+   "q": "A bag has 9 sweets. How many sweets are in 7 bags?",
+   "a": "63",
+   "work": "Check recall of 9 x 7; note if the child skip-counts slowly.",
+   "skill": "Times tables 6 to 9"
+  },
+  {
+   "q": "Fill in the blank: 2/3 = ?/12",
+   "a": "8",
+   "work": "Does the child multiply top and bottom by 4? Common error: 2 + 9 = 11.",
+   "skill": "Equivalent fractions"
+  },
+  {
+   "q": "A rectangle is 7 cm long and 6 cm wide. What is its area? Write your answer with units.",
+   "a": "42 square cm",
+   "work": "Accept 42 square cm, 42 sq cm or 42 cm2. If the unit is missing, give the mark and note it. Common error: giving the perimeter, 26 cm.",
+   "skill": "Area of a rectangle"
+  },
+  {
+   "q": "5000 - 1346 = ?",
+   "a": "3654",
+   "work": "Watch for borrowing across zeros; common error 4346 or 3764.",
+   "skill": "Subtract 4-digit numbers"
   }
+ ],
+ "core": [
+  {
+   "q": "A factor of 18 is a number that divides 18 exactly with nothing left over. Write down all the factors of 18.",
+   "a": "1, 2, 3, 6, 9, 18",
+   "work": "Look for pairs (1 x 18, 2 x 9, 3 x 6). Common errors: missing 1 or 18, or listing multiples (18, 36...).",
+   "skill": "Factors"
+  },
+  {
+   "q": "Round 48,572 to the nearest thousand.",
+   "a": "49,000",
+   "work": "Check which digit they look at (the hundreds digit, 5). Common error: 48,000 or 48,600.",
+   "skill": "Rounding 5-digit numbers"
+  },
+  {
+   "q": "12 + 6 x 3 - 4 = ?",
+   "a": "26",
+   "work": "Multiplication first: 6 x 3 = 18, then 12 + 18 - 4. Common error: 50 (left to right).",
+   "skill": "Order of operations"
+  },
+  {
+   "q": "2 and 3/5 + 1 and 4/5 = ? Write your answer as a mixed number.",
+   "a": "4 and 2/5",
+   "work": "Mixed number preferred: 4 2/5. Accept 22/5 for the mark. Look for 3/5 + 4/5 = 7/5 = 1 2/5, then add the whole numbers. Common errors: 3 7/5 left unconverted, or 4 7/10.",
+   "skill": "Adding mixed numbers"
+  },
+  {
+   "q": "A ribbon is 3.7 m long. Another ribbon is 2.85 m long. What is the total length? Write your answer in metres.",
+   "a": "6.55 m",
+   "work": "Check place-value alignment of the decimal points. Common errors: 3.22 (37 + 285 with the decimal point ignored) or 5.92 (digits lined up from the right).",
+   "skill": "Adding decimals"
+  },
+  {
+   "q": "A rectangle has a perimeter of 36 cm. It is 11 cm long. How wide is it?",
+   "a": "7 cm",
+   "work": "Look for 36 / 2 = 18, then 18 - 11 = 7. Common errors: 25 (36 - 11) or 14.",
+   "skill": "Perimeter of rectangles"
+  }
+ ],
+ "stretch": [
+  {
+   "q": "(Brain stretchers are hard on purpose. Most children do not finish both, and that is fine. Try one!)  I am a number between 30 and 50. I am a multiple of 4 and a multiple of 6. My digits add up to 9. What number am I?",
+   "a": "36",
+   "work": "Look for listing multiples of 4 and 6 (common: 36, 48) then using the digit clue. Accept guess and check with reasoning.",
+   "skill": "Common multiples and number puzzles"
+  },
+  {
+   "q": "Ben has 3 times as many marbles as Cara. Ben gives 12 marbles to Cara. Now they have the same number. How many marbles did Ben have at first?",
+   "a": "36",
+   "work": "Bar model: after the gift, Ben's 3 units minus 12 equals Cara's 1 unit plus 12, so 2 units = 24, 1 unit = 12. Cara 12, Ben 36.",
+   "skill": "Bar model: transfer problem"
+  }
+ ],
+ "topics": [
+  "Subtraction and times tables",
+  "Factors and multiples",
+  "Rounding 5-digit numbers",
+  "Order of operations",
+  "Fractions (mixed numbers)",
+  "Decimals",
+  "Area and perimeter",
+  "Bar models and number puzzles",
+  "This check samples number, fractions, decimals, area and perimeter only. Angles, symmetry, nets and graphs are not in it."
+ ],
+ "tutorKey": "Finished very fast? Ask the child to explain one answer aloud before you mark: a fast wrong answer is often a skipped step, not a missing topic. The parent makes the final choice."
 }

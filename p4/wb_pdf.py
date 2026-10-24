@@ -17,7 +17,7 @@ for line in body.split('\n'):
     if openb: out.append('</div></div>');openb=False
     out.append(line)
 if openb: out.append('</div></div>')
-body='\n'.join(out);css=open('../fonts/fonts.css').read()+open('../hp/wb_style.css').read()+'.q.open .qn:before{content:""!important}.q.open .qn{padding:1px 9px}'+'.qbox{margin:14px 4px 8px 4px!important;padding:18px 12px 6px!important}.qwrap{padding-top:8px!important}.ln{height:22px!important;margin-top:1px!important}.qbox{margin:12px 4px 6px 4px!important}'
+body='\n'.join(out);css=open('../fonts/fonts.css').read()+open('../hp/wb_style.css').read()+'.q.open .qn:before{content:""!important}.q.open .qn{padding:1px 9px}'+'.qbox{margin:14px 4px 8px 4px!important;padding:18px 12px 6px!important}.qwrap{padding-top:8px!important}.ln{height:22px!important;margin-top:1px!important}.qbox{margin:8px 4px 4px 4px!important;padding-top:14px!important}.qwrap{padding-top:4px!important}'
 html=f'<!doctype html><html><head><meta charset="utf-8"><style>{css}</style></head><body>{body}</body></html>'
 open('workbook_full.html','w').write(html)
 foot='<div style="width:100%;font-size:9px;color:#5B6785;padding:0 14mm;display:flex;justify-content:space-between;font-family:Arial"><span>Math Inquirers P4 Holiday Program  •  Notice it. Test it. Explain why.</span><span>Page <span class="pageNumber"></span></span></div>'

@@ -8,6 +8,7 @@
  "title": "Math Inquirers: Lesson 4 – Pattern Inquiry",
  "order": [
   "l4-title",
+  "l4-tool",
   "l4-warm1",
   "l4-warm2",
   "l4-warmcheck",
@@ -27,7 +28,9 @@
   "l4-ws2ans",
   "l4-stretch",
   "l4-challenge",
+  "l4-chdiag",
   "l4-chwalk",
+  "l4-skill1",
   "l4-talk",
   "l4-exit",
   "l4-reflect"

@@ -1,3 +1,4 @@
+const FG = require('../../levels/figs_l4_6.js');
 // Math Inquirers P6 — Lesson 7: Turtle Geometry (angles in polygons; pen drawing with turns)
 // Every answer below was worked out and checked: turn = 360 ÷ sides, inside = 180 − turn,
 // star turn = 360 × times round ÷ points, angle sum = (sides − 2) × 180. The Python program was run.
@@ -57,15 +58,15 @@ const cornerFig = () => {
   const A = [20, B[1]], C = [B[0] + 95 * Math.cos(t * r), B[1] + 95 * Math.sin(t * r)];
   const pt = (rad, a) => [(B[0] + rad * Math.cos(a * r)).toFixed(1), (B[1] + rad * Math.sin(a * r)).toFixed(1)];
   const arc = (rad, a1, a2, col) => `<path d="M${pt(rad, a1).join(' ')} A${rad} ${rad} 0 0 1 ${pt(rad, a2).join(' ')}" fill="none" stroke="${col}" stroke-width="3.5"/>`;
-  let s = `<svg aria-label="A corner of a shape. The turtle walks along one side, then turns 70 degrees from straight on. The inside angle is 110 degrees, and 70 + 110 = 180." viewBox="0 0 300 130" xmlns="http://www.w3.org/2000/svg" style="width:210px;max-width:100%">`;
+  let s = `<svg aria-label="A corner of a shape. The turtle walks along one side, then turns 70 degrees from straight on. The inside angle is 110 degrees, and 70 + 110 = 180." viewBox="0 8 300 116" xmlns="http://www.w3.org/2000/svg" style="width:244px;max-width:100%">`;
   s += `<line x1="${B[0]}" y1="${B[1]}" x2="${B[0] + 110}" y2="${B[1]}" stroke="${NAVY}" stroke-width="2.5" stroke-dasharray="7 5"/>`;
   s += `<polyline points="${A.join(',')} ${B.join(',')} ${C.map(v => v.toFixed(1)).join(',')}" fill="none" stroke="${NAVY}" stroke-width="4" stroke-linejoin="round"/>`;
   s += `<polygon points="60,${B[1] - 8} 80,${B[1]} 60,${B[1] + 8}" fill="${TEAL}"/>`;
   s += arc(40, 0, t, RED) + arc(26, t, 180, TEAL);
   const [tx, ty] = pt(62, 30), [ix, iy] = pt(48, 140);
-  s += `<text x="${tx}" y="${(+ty + 5).toFixed(1)}" font-size="15" font-weight="700" fill="${RED}" font-family="Arial">turn 70°</text>`;
-  s += `<text x="${ix}" y="${(+iy + 12).toFixed(1)}" font-size="15" font-weight="700" text-anchor="end" fill="${TEAL}" font-family="Arial">inside 110°</text>`;
-  s += `<text x="${B[0] + 30}" y="${B[1] - 8}" font-size="14" fill="${NAVY}" font-family="Arial">straight on</text>`;
+  s += `<text x="${tx}" y="${(+ty + 5).toFixed(1)}" font-size="17" font-weight="700" fill="${RED}" font-family="Arial">turn 70°</text>`;
+  s += `<text x="${ix}" y="${(+iy + 12).toFixed(1)}" font-size="17" font-weight="700" text-anchor="end" fill="${TEAL}" font-family="Arial">inside 110°</text>`;
+  s += `<text x="${B[0] + 30}" y="${B[1] - 8}" font-size="16" fill="${NAVY}" font-family="Arial">straight on</text>`;
   return s + '</svg>';
 };
 
@@ -73,7 +74,7 @@ const cornerFig = () => {
 const codeAndFrame = (prog, label, frameText, trace) => {
   const b = blocks(prog, { fs: 14, h: 25 }), W = 600, fx = b.w + 30;
   const Ht = Math.max(b.h, trace ? (trace.rows + 1) * 22 + 4 : 140);
-  let s = `<svg aria-label="${esc(label)}" viewBox="0 0 ${W} ${Ht + 4}" xmlns="http://www.w3.org/2000/svg" style="width:560px;max-width:100%">` + b.svg;
+  let s = `<svg aria-label="${esc(label)}" viewBox="0 0 ${W} ${Ht + 4}" xmlns="http://www.w3.org/2000/svg" style="width:${trace ? 560 : 400}px;max-width:100%">` + b.svg;
   if (frameText) s += `<rect x="${fx}" y="2" width="${W - fx - 4}" height="${Ht}" rx="12" fill="${WHITE}" stroke="${NAVY}" stroke-width="2" stroke-dasharray="7 5"/><text x="${fx + 12}" y="22" font-size="14" fill="${NAVY}" font-family="Arial">${esc(frameText)}</text>`;
   if (trace) {
     const c1 = 130, c2 = 130, x0 = W - c1 - c2 - 6;
@@ -110,16 +111,17 @@ module.exports = {
     n: 7, week: 4, session: 'A', title: 'Turtle Geometry', topic: 'Angles in Polygons',
     objective: 'Use the idea that a turtle going once round a closed shape turns 360° altogether to find the turn angle (360° ÷ sides) and inside angle (180° − turn) of regular polygons, work backwards from an angle to the number of sides, extend to star polygons (turn = 360° × times round ÷ points), and test every prediction with a pen program in Scratch (or Python turtle).',
     skills: 'Turn (exterior) and inside (interior) angles, angles on a straight line, angle sum of a polygon, star polygons, predicting and tracing code, repeat loops and variables',
-    materials: 'A laptop or desktop with Scratch 3 open (scratch.mit.edu) and the Pen extension added, mini whiteboards, a protractor, plain or squared paper.',
-    online: 'The tutor builds a “Turtle start” Scratch file beforehand (Pen extension added and the 4 set-up blocks already in place; no .sb3 file exists in this repository) and shares it through the approved channel, so children only open it. Pairs work in breakout rooms: one child drives Scratch and shares the screen, the other predicts, then they swap. Children hold drawings up to the camera. A tablet works for Scratch but is slower. Every drawing starts with the same 4 set-up blocks (erase all, go to x: -50 y: 100, point in direction 90, pen down) so shapes stay on the stage; turn blocks in Scratch show an arrow (turn ↻ is clockwise, our “turn right”). Block colours on our slides are simplified; in Scratch, find blocks by the category name on the left (Motion, Pen, Control), not by colour.',
+    materials: 'A laptop or desktop with Scratch 3 open (scratch.mit.edu) and the Pen extension added (starter file L7_Turtle_Start.sb3), mini whiteboards, a protractor, plain or squared paper.',
+    online: 'The tutor shares the starter file L7_Turtle_Start.sb3 (Pen extension already added and the 4 set-up blocks already in place) through the approved channel, so children only open it (File, Load from your computer; no account needed). Pairs work in breakout rooms: one child drives Scratch and shares the screen, the other predicts, then they swap. Children describe their drawings aloud. A tablet works for Scratch but is slower. Every drawing starts with the same 4 set-up blocks (erase all, go to x: -50 y: 100, point in direction 90, pen down) so shapes stay on the stage; turn blocks in Scratch show an arrow (turn ↻ is clockwise, our “turn right”). Block colours on our slides are simplified; in Scratch, find blocks by the category name on the left (Motion, Pen, Control), not by colour.',
     warmup: 'Turtle says: everyone stands (or sits and uses an arm as the turtle’s nose) and faces the screen (call it north). The tutor calls turns (right 90, right 180, left 270, right 45, right 360) and children turn their bodies, then say which way they face. Finish with: one full turn made of 3 equal turns. How big is each turn?',
-    explore: 'At the computer in pairs: build the square program (the 4 set-up blocks, then repeat 4: move 100, turn ↻ 90; the clockwise arrow block is “turn right”). The 4 set-up blocks are erase all, go to x: -50 y: 100, point in direction 90, pen down: they start every run in the same place so big shapes stay on the 480 by 360 stage. Change it to draw an equilateral triangle, then a regular pentagon and a regular hexagon, predicting each turn before running it. Record the sides, the turn and whether the shape closes. What do sides × turn always make?',
+    explore: 'At the computer in pairs: open the Turtle start file (the 4 set-up blocks are already in it) and add the square program (repeat 4: move 100, turn ↻ 90; the clockwise arrow block is “turn right”). The 4 set-up blocks are erase all, go to x: -50 y: 100, point in direction 90, pen down: they start every run in the same place so big shapes stay on the 480 by 360 stage. Change it to draw an equilateral triangle, then a regular hexagon, predicting each turn before running it (the pentagon is the Go further what-if). Record the sides, the turn and whether the shape closes. What do sides × turn always make?',
     mini: 'The turtle turns the outside angle: turn + inside angle = 180°. Going round once, the turns add up to 360°, so a regular polygon with n sides turns 360° ÷ n (octagon: turn 45°, inside 135°). Work backwards from an inside angle (174° → turn 6° → 60 sides; 115° is impossible because 360 ÷ 65 is not whole). A star goes round more than once: the 5-point star turns 720° ÷ 5 = 144°. Before page 2: trace a running total in a table, plan an 8-point star that goes round 3 times, and add up the inside angles of an octagon (1080°).',
     share: 'Ali says the turtle turns by the inside angle of the shape. Mei says it turns by the outside angle. Who is right? Use a triangle to explain.',
     exit: { q: 'A turtle draws a regular polygon and turns 5° at every corner. How many sides does the polygon have? What is each inside angle?', a: '72 sides (360 ÷ 5 = 72); each inside angle is 175° (180 − 5)' },
     mistakes: ['Using the inside angle as the turn: turn 60° for a triangle draws half a hexagon, and turn 108° for a pentagon does not close.', 'Dividing 180 by the number of sides instead of 360, or forgetting that turn + inside angle = 180°.', 'Stars: thinking the turns always add up to 360°. A star goes round more than once, so its turns add up to 720°, 1080° and so on.'],
     extension: 'Draw a rosette: repeat 12 [draw a square, then turn ↻ 30]. Start this one with go to x: 0 y: 0 instead of x: -50 y: 100, so the rosette stays on the stage. How far does the turtle turn altogether? (12 × (360 + 30) = 4680° = 13 full turns.) Design your own rosette and predict its total turning before you run it.',
     key: [
+      ['Try it first', '4 quarter turns; 4 × 90° = 360°, one full turn. The turtle ends up facing the way it started. (This is the idea behind every row of Q1: sides × turn = 360°.)'],
       ['Q1', '3 sides (example): 120°, 60°, 360°.  9 sides: turn 40°, inside 140°.  10 sides: 36°, 144°.  36 sides: 10°, 170°.  Turn 24°: 15 sides, inside 156°.  Inside 165°: turn 15°, 24 sides.  Last column 360° every time.  (a) Sides × turn = 360°: the turtle makes one full turn to come home facing the same way.  (b) No: the turn would be 50°, and 360 ÷ 50 = 7.2 is not a whole number of sides.'],
       ['Q2', '(a) An equilateral triangle, drawn 3 times over (each turn of 120° is a triangle’s turn, so after 3 moves the turtle is back where it started).  (b) 9 × 120° = 1080° = 3 full turns.  (c) Change the turn from 120 to 40 (360 ÷ 9).'],
       ['Q3', 'Totals: 80, 160, 240, 320, 400, 480, 560, 640, 720.  (a) 720  (b) 2 times (720 ÷ 360)  (c) a 9-point star  (d) 100° (180 − 80)'],
@@ -132,11 +134,12 @@ module.exports = {
     hook: ['Today you are turtle pilots. A turtle with a pen can draw any shape, but only if you tell it exactly how far to turn at every corner.', 'Our rule today: work the turn out with maths first, then test it in code. Notice it. Test it. Explain why.'],
     warmIntro: ['Stand up, or sit and use your arm as the turtle’s nose, and face your screen. Call that north. I am the programmer and you are the turtle. Turn right 90. Which way are you facing now?', 'Now: how can you make one full turn using 3 equal turns? How big is each turn?'],
     predict: ['Here is the square program: repeat 4, move 100, turn right 90. I want an equilateral triangle. What turn should I type? Write your prediction on your whiteboard before anyone runs it.'],
-    exploreHints: ['Stuck: walk the shape yourself. Walk one side, then turn at the corner. How far did your body turn?', 'Typed turn 60 for the triangle? Run it and look. Does the turtle come home? How far has it turned altogether?', 'Finished early: predict the turn for a regular shape with 10 sides, then test it.'],
+    exploreHints: ['Stuck: walk the shape yourself. Walk one side, then turn at the corner. How far did your body turn?', 'Typed turn 60 for the triangle? Run it and look. Does the turtle come home? How far has it turned altogether?', 'Finished early: the pentagon (the Go further what-if), then predict the turn for a regular shape with 10 sides and test it.'],
     think: ['“An octagon has 8 equal turns. To come home facing the same way the turtle turns 360° altogether, so each turn is 360 ÷ 8 = 45°. The turn and the inside angle sit on one straight line, so the inside angle is 180 − 45 = 135°.”', '“Working backwards: the inside angle is 174°, so the turn is 180 − 174 = 6°. The turns make 360°, so there are 360 ÷ 6 = 60 sides.”', '“For the star the turtle goes round twice: 720° altogether. 5 equal turns: 720 ÷ 5 = 144°. The angle at each point is 180 − 144 = 36°.”'],
     circulate: ['Ask: “What did you predict before you ran it? Were you right?”', 'Ask: “How far has your turtle turned altogether? How do you know?”', 'Ask: “Which angle does the turtle turn: the inside angle or the outside one? Show me on the picture.”'],
     hints: ['Hint 1: “To come home facing the same way, the turtle makes one full turn: 360°.”', 'Hint 2: “The corners are equal, so share 360° equally between them.”', 'Hint 3: “The turn and the inside angle sit on one straight line: they add up to 180°.”'],
-    talk: ['“Ali says the turtle turns by the inside angle of the shape. Mei says it turns by the outside angle. Who is right? Use a triangle to explain.”', '“Why do the turns add up to 360° for every shape the turtle draws going round once?”'],
+    talk: ['“Ali says the turtle turns by the inside angle of the shape. Mei says it turns by the outside angle. Who is right? Use a triangle to explain.”'],
+    talkNext: '“Why do the turns add up to 360° for every shape the turtle draws going round once?” (Only if flex is left; otherwise it is the opener of the next lesson.)',
     talkAns: 'Mei is right. For an equilateral triangle the inside angle is 60° but the turtle turns 120°; turning 60° three times only draws half a hexagon. The turtle starts facing one way and comes home facing the same way after going round once, so it has made exactly one full turn: 360°. A star goes round more than once, so its turns add up to 720°, 1080° and so on.',
     close: ['“Today you predicted every turn with maths and then tested it in code. That is how mathematicians and programmers work together. Well done, inquirers!”']
   },
@@ -144,18 +147,18 @@ module.exports = {
   deck: {
     today: 'Program a turtle to draw regular polygons and stars, and use the 360° turn to predict every angle before we test it in code.',
     warmGame: 'Turtle says. Stand (or sit and use your arm as the turtle’s nose) and face the screen (north). The tutor calls turns; you turn your body and say which way you face. Last one: one full turn in 3 equal turns. How big is each?',
-    warmQs: [['Angles on a straight line add up to …?', '180°'], ['How many degrees in a full turn?', '360°'], ['Two angles of a triangle are 50° and 75°. What is the third?', '55°'], ['What is 360 ÷ 8?', '45'], ['Face north. Turn right 90°, then right 180°. Which way do you face?', 'West']],
-    expSetup: ['Add the Pen extension. Build the 4 set-up blocks, then repeat 4 [move 100, turn ↻ 90].', 'Change it to draw an equilateral triangle. Predict the turn first, then run it.', 'Now a regular pentagon (5 sides) and a regular hexagon (6 sides). Predict, then test.', 'Record sides, turn and “did it close?”. What do sides × turn always make?'],
+    warmQs: [['How many degrees in a full turn?', '360°'], ['Two angles of a triangle are 50° and 75°. What is the third?', '55°'], ['What is 360 ÷ 8?', '45']],
+    expSetup: ['Open the Turtle start file (it already has the 4 set-up blocks). Add repeat 4 [move 100, turn ↻ 90].', 'Change it to draw an equilateral triangle. Predict the turn first, then run it.', 'Now a regular hexagon (6 sides). Predict, then test.', 'Record sides, turn and “did it close?”. What do sides × turn always make?'],
     expPic: 'the square program as coloured blocks (pen down; repeat 4: move 100 steps, turn ↻ 90 degrees) next to the square it draws, with a small turtle arrow at the start.',
-    expAsk: [['What turn did the triangle need? What happened if you typed 60?', '120°. Turn 60 draws only half a hexagon: 3 × 60 = 180°, so the turtle does not come home.'], ['What turns did the pentagon and hexagon need?', 'Pentagon 72°, hexagon 60°.'], ['What do sides × turn always make? Why?', '360°: the turtle comes home facing the same way, so it has made one full turn.']],
+    expAsk: [['What turn did the triangle need? What happened if you typed 60?', '120°. Turn 60 draws only half a hexagon: 3 × 60 = 180°, so the turtle does not come home.'], ['What do sides × turn always make? Why?', '360°: the turtle comes home facing the same way, so it has made one full turn.']],
     mini1: { head: 'Regular octagon: find the turn', body: ['Going round once, the turtle turns 360° altogether.', '8 equal turns: 360 ÷ 8 = ?', 'Inside angle = 180° − turn.', 'Test it: repeat 8 [move 80, turn ↻ ?]'], ans: 'Turn 45°, inside angle 135°.' },
     mini2: { head: 'A 5-point star', body: ['repeat 5 [move 150, turn ↻ 144]', '5 × 144° = 720°: the turtle goes round twice.', 'Turn = 360° × times round ÷ points = 720 ÷ 5.', 'Angle at each point = 180° − turn = ?'], ans: 'Turn 144°, 36° at each point.' },
     keyHead: 'Key idea: the 360° turn',
     keyBig: 'Going once round a closed shape, the turtle turns 360° altogether. A regular polygon with n sides turns 360° ÷ n at each corner, and its inside angle is 180° − turn.',
     keySmall: 'A star goes round more than once: turn = 360° × times round ÷ points.',
     brk: 'Turtle dance. Walk a square on the spot: step, quarter turn, four times. Then a triangle: step, turn a third of a turn, three times. Then a hexagon.',
-    ws1: 'Page 1, in pairs at the computer: Q1 the polygon table, forwards and backwards; Q2 Ben’s buggy nonagon.',
-    ws2: 'Page 2, on your own: Q3 trace the star program, Q4 plan two stars, Q5 add up the inside angles and find a rule.'
+    ws1: 'Page 1: first the “Try it first” walk-a-square box (no tools needed), then in pairs at the computer: Q1 the polygon table, forwards and backwards; Q2 Ben’s buggy nonagon.',
+    ws2: 'Page 2, on your own: Q3 trace the star program, Q4 plan two stars (with the star dots to draw on). Q5, a take-home, is on the next sheet: add up the inside angles and find a rule.'
   },
 
   moved: [
@@ -165,9 +168,9 @@ module.exports = {
   qbank: {
     core: [
       { q: 'Walk a square: walk forward, turn on the spot by 90° to the right, and repeat, until you are back at the start facing the way you began. You turn 90° at each of the 4 corners. How many degrees did you turn altogether? (A full turn on the spot is 360°.)', a: '360° (4 × 90°): one full turn' },
-      { q: 'A turtle runs: repeat 6 [move 100, turn ↻ 60]. It draws a hexagon. How many degrees does it turn altogether? What do you notice?', a: '360° (6 × 60°). The same total as the square: one full turn.' },
+      { q: 'A turtle runs: repeat 6 [move 100, turn ↻ 60]. (“move 100” walks forward 100 steps; “turn ↻ 60” turns right, clockwise, by 60 degrees.) It draws a hexagon. How many degrees does it turn altogether? What do you notice?', a: '360° (6 × 60°). The same total as the square: one full turn.' },
       { q: 'A turtle draws an equilateral triangle: repeat 3 [move 100, turn ↻ ___ ]. It turns the same amount each time and ends up facing the way it started (a full turn is 360°). Guess and check, or draw it with a ruler. What number goes in the gap?', a: '120 (3 × 120 = 360)' },
-      { q: 'A turtle repeats [move 100, turn ↻ 72] again and again. How many repeats until it first faces the way it started? Add up the turns, 72, 144, … until you reach a full turn (360). What shape does it draw?', a: '5 repeats (5 × 72 = 360). It draws a regular pentagon.' },
+      { q: 'A turtle repeats [move 100, turn ↻ 72] again and again. (“turn ↻ 72” turns right, clockwise, by 72 degrees.) How many repeats until it first faces the way it started? Add up the turns, 72, 144, … until you reach a full turn (360). What shape does it draw?', a: '5 repeats (5 × 72 = 360). It draws a regular pentagon.' },
       { q: 'Angles on a straight line add up to 180°. At one corner the turtle turns 50° to go along the next side. What is the inside angle at that corner?', a: '130° (180° − 50°)' },
       { q: 'Each turn of a regular hexagon is 60°. A turn and the inside angle at a corner make a straight line (180°). What is each inside angle of a regular hexagon?', a: '120° (180° − 60°)' }
     ],
@@ -188,7 +191,7 @@ module.exports = {
       { q: 'How many different 12-point stars can a turtle draw with equal moves and equal turns? Give the turn and how many times it goes round.', a: 'Only 1: turn 150°, going round 5 times (5 × 360 ÷ 12). Turns 60°, 90° and 120° (round 2, 3, 4 times) just redraw a hexagon, square or triangle, and 180° goes back and forth on a line.' },
       { q: 'A turtle runs: repeat 12 [repeat 4 (move 100, turn ↻ 90), turn ↻ 30]. How many full turns does it make altogether?', a: '13 (12 × (360° + 30°) = 4680° = 13 × 360°)' },
       { q: 'Zara says: “The more sides a regular polygon has, the bigger each inside angle is, but an inside angle can never reach 180°.” Is she right? Use the turn angle to explain.', a: 'Yes. The turn is 360° ÷ n. It gets smaller as n grows but is never 0, so the inside angle 180° − 360° ÷ n gets bigger and always stays below 180° (180° would be a straight line, which needs a turn of 0°). For example 5 sides give 108°, 12 sides give 150° and 60 sides give 174°.' },
-      { q: 'Design your own star. Choose the number of points p and how many times it goes round, k, so that the turn angle 360° × k ÷ p is a WHOLE number and p and k share no common factor. Give the turn angle, the point angle (180° − turn) and the code. Explain why your star closes after p repeats.', a: 'Open. Example: 8 points going round 3 times: turn = 360 × 3 ÷ 8 = 135°, point angle 45°; code repeat 8 [move 100, turn ↻ 135]. After 8 repeats it has turned 8 × 135° = 1080° = 3 full turns, so it faces the way it started and the star closes. If p and k share a factor, the star closes sooner and is a smaller shape repeated (9 points going round 3 times is just a triangle).' },
+      { q: 'Design your own star. Choose the number of points p and how many times it goes round, k, so that the turn angle 360° × k ÷ p is a WHOLE number and p and k share no common factor. Give the turn angle, the point angle (180° − turn) and the code. Explain why your star closes after p repeats.', fig: FG.rings([{ n: 9, labels: [0, 1, 2, 3, 4, 5, 6, 7, 8], cap: '9 dots', dotR: 8, size: 16 }, { n: 20, labels: [0, '', '', '', '', 5, '', '', '', '', 10, '', '', '', '', 15, '', '', '', ''], cap: '20 dots', dotR: 5, size: 16 }], { r: 60, cw: 270, label: 'Two circles of dots to draw stars on: 9 dots numbered 0 to 8, and 20 dots with every fifth one numbered.' }), a: 'Open. Example: 8 points going round 3 times: turn = 360 × 3 ÷ 8 = 135°, point angle 45°; code repeat 8 [move 100, turn ↻ 135]. After 8 repeats it has turned 8 × 135° = 1080° = 3 full turns, so it faces the way it started and the star closes. If p and k share a factor, the star closes sooner and is a smaller shape repeated (9 points going round 3 times is just a triangle).' },
       { q: 'A square, a hexagon and a 12-sided shape fit exactly around a point: 90° + 120° + 150° = 360°. Find one other set of three regular polygons whose inside angles add up to 360° (hint: the answer uses a square or a triangle).', a: 'Square + octagon + octagon (90° + 135° + 135°) or triangle + 12-gon + 12-gon (60° + 150° + 150°).' },
       { q: 'Try turn 120 and turn 60 with repeat 6 and move 100. Which one draws a hexagon? Why does the other not make a 6-point star?', a: 'Turn 60 draws the hexagon (6 × 60° = 360°, one full turn). Turn 120 draws a triangle twice round (6 × 120° = 720°, two full turns), and it only visits 3 corners, not 6.' }
     ]
@@ -197,8 +200,8 @@ module.exports = {
   workbook: H => {
     const w1 = [2475, 2475, 2475, 2475];
     const rows1 = [['3', '120°', '60°', '360°'], ['9', '', '', ''], ['10', '', '', ''], ['36', '', '', ''], ['', '24°', '', ''], ['', '', '165°', '']];
-    const t1 = H.tbl(w1, [H.row(['Sides', 'Turn angle', 'Inside angle', 'Sides × turn'].map((s, i) => H.cell(s, w1[i], { bold: true, fill: 'D9D9D9', size: 22, h: 42 }))),
-      ...rows1.map((r, j) => H.row(r.map((s, i) => H.cell(s, w1[i], { h: 36, size: 22, fill: j === 0 ? 'F2F2F2' : undefined, bold: true }))))]);
+    const t1 = H.tbl(w1, [H.row(['Sides', 'Turn angle', 'Inside angle', 'Sides × turn'].map((s, i) => H.cell(s, w1[i], { bold: true, fill: 'D9D9D9', size: 22, h: 30 }))),
+      ...rows1.map((r, j) => H.row(r.map((s, i) => H.cell(s, w1[i], { h: 16, size: 22, fill: j === 0 ? 'F2F2F2' : undefined, bold: true }))))]);
     const q2prog = [['event', 'when green flag clicked'], ['pen', 'pen down'], ['ctrl', 'repeat {9}', [['motion', 'move {80} steps'], ['motion', 'turn ↻ {120} degrees']]]];
     const q3prog = [['event', 'when green flag clicked'], ['var', 'set {total} to {0}'], ['pen', 'pen down'], ['ctrl', 'repeat {9}', [['motion', 'move {150} steps'], ['motion', 'turn ↻ {80} degrees'], ['var', 'change {total} by {80}']]], ['looks', 'say {total}']];
     const w4 = [1700, 2000, 2200, 2000, 2000];
@@ -208,11 +211,12 @@ module.exports = {
     const t5 = H.tbl(w5, [H.row(['Sides', '3', '4', '5', '6', '10'].map((s, i) => H.cell(s, w5[i], { bold: true, fill: 'D9D9D9', size: 22, h: 45 }))),
       H.row(['Each inside angle', '', '', '', '', ''].map((s, i) => H.cell(s, w5[i], { bold: i === 0, size: 21, h: 60 }))),
       H.row(['All inside angles added', '', '', '', '', ''].map((s, i) => H.cell(s, w5[i], { bold: i === 0, size: 21, h: 60 })))]);
-    const intro = H.tbl([7300, 2600], [H.row([
-      H.cell('<div style="text-align:left;line-height:1.35;font-size:14.5px"><b>turn</b> = how far the turtle swings at a corner.<br><b>inside angle</b> = the angle inside the shape at that corner (turn + inside = 180°).<br><b>total turning</b> = all the turns added up.</div>', 7300, { align: 'left', h: 30 }),
-      H.cell('<div style="text-align:center">' + cornerFig() + '</div>', 2600, { h: 10 })])]);
+    const intro = H.tbl([6200, 3700], [H.row([
+      H.cell('<div style="text-align:left;line-height:1.35;font-size:13.5px"><b>turn</b> = how far the turtle swings at a corner.<br><b>inside angle</b> = the angle inside the shape at that corner (turn + inside = 180°).<br><b>total turning</b> = all the turns added up.</div>', 6200, { align: 'left', h: 30 }),
+      H.cell('<div style="text-align:center">' + cornerFig() + '</div>', 3700, { h: 10 })])]);
     return [
       intro,
+      H.p(['<div style="border:2.5px dashed #1F7A6F;background:#F3FAF8;border-radius:8px;padding:3px 10px;margin:2px 0 0;text-align:left;font-size:13.5px;line-height:1.3"><b style="color:#1F7A6F">Try it first.</b> Stand up and walk a square (step, turn right 90°, repeat until you are home facing the way you began). Quarter turns: ____ Degrees altogether: ____ <span style="color:#3B4A6B">(Or draw it.)</span></div>'], { after: 0 }),
       H.q(1, 'Regular polygons. Fill in the table (forwards and backwards). Test two rows in Scratch: move 80, but 30 for 24 sides and 10 for 36.', { before: 40, keepNext: true }),
       t1,
       H.sub('a', 'What do you notice about the last column? Why does this happen?', { after: 20 }), ...H.lines(1),
@@ -228,7 +232,8 @@ module.exports = {
       H.sub('c', 'It draws a  __________________      (d)  Point angle  ________ °'),
       H.q(4, 'Plan a star, then test it (move 120 for the 9-point star). Fill in the 9-point row.   Turn = 360° × times round ÷ points.   Point angle = 180° − turn.', { keepNext: true }),
       t4,
-      H.q(5, 'Add up the inside angles of regular polygons (use Q1 for 10 sides).', { keepNext: true }),
+      H.fig(FG.rings([{ n: 5, labels: [0, 1, 2, 3, 4], star: { k: 2 }, cap: '5 points, 2 times round', solid: true, dotR: 8, size: 16 }, { n: 9, labels: [0, 1, 2, 3, 4, 5, 6, 7, 8], cap: '9 points: draw your star', dotR: 8, size: 16 }], { r: 46, cw: 260, label: 'Left: a 5-point star already drawn by joining every second dot of 5 dots. Right: 9 dots numbered 0 to 8 round a circle, empty, to draw the 9-point star.' })),
+      H.q(5, '★ Take-home. Add up the inside angles of regular polygons (use Q1 for 10 sides).', { pb: true, before: 0, keepNext: true }),
       t5,
       H.sub('a', 'One more side adds  ______ °      (b)  For n sides:  total = ______________'),
       pyBox(H)

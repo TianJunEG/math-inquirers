@@ -1,0 +1,3444 @@
+{
+ "schema_version": 1,
+ "id": "l1-t2-09",
+ "level": 1,
+ "term": 2,
+ "lesson": 19,
+ "lesson_in_term": 9,
+ "title": "Find One First",
+ "big_idea": "Find one, then find many",
+ "child_idea": "When we know what a group costs, we can find what one costs by sharing equally. Then we can find what any number of them cost.",
+ "skill": "Unit method",
+ "spine": {
+  "main": "draw",
+  "also": [
+   "table"
+  ],
+  "role": "P",
+  "reason": "A strip of equal parts shows the cost of one, and a table of 1, 2, 3 ... items shows the cost of many.",
+  "chip": "compact"
+ },
+ "ages": "6-8",
+ "moe": {
+  "strand": "Multiplication and Division; Money",
+  "topics": [
+   "Multiplication and division word problems: divide within 20, multiply within 40 (Primary 1, Multiplication and Division, p. 31)",
+   "Count money in dollars (Primary 1, Money, p. 31): whole dollars only, no notes, coins or cents until Term 3"
+  ],
+  "note": "Strand label for the tutor only. This is an added lesson (gap from the word-problem books analysis: the price or size of one from a group). Start here is Primary 1 content: share a total equally to find one (within 20), then multiply to find many (within 40), in whole dollars. BEYOND PRIMARY 1 ON PURPOSE: Think harder and Go further chain the two steps with different numbers (the price of 7 from the price of 3), use the words a dozen and such, ask how many can be bought, and compare the price of one in two shops. Owner decision, 22 Oct 2026: strong content with scaffolding, said plainly to families. Say this on the parent page and in the opening of the guide; do not describe the lesson as MOE-aligned or syllabus-aligned. Money is only whole dollars and $1 tokens (counters): no notes, coins or cents until Term 3. Vocabulary taught here: each, a dozen, such. Contest tag (tutor only): price of one first, then many; how many can be bought; compare the price of one."
+ },
+ "contest_moves": [
+  "find the price of one first, then the price of many",
+  "how many can be bought with a given amount",
+  "compare the price of one in two shops"
+ ],
+ "objectives": [
+  "Find the cost of one by sharing a total equally (\"4 pens cost $20, so 1 pen costs $5\") and the cost of many from the cost of one (\"1 pen costs $3, so 4 pens cost $12\").",
+  "Draw a strip of equal parts for the story and write both steps: find one first, then find many.",
+  "Use the words each, a dozen and such.",
+  "Think harder: find the price of 7 from the price of 3, use a dozen and such, and say how many can be bought.",
+  "Go further: one price from each of two groups, money left over, and which shop sells one for less."
+ ],
+ "joining_cold": {
+  "remember": [
+   "12 counters shared equally onto 3 plates (Term 2 Lesson 7, taught again with plates)",
+   "Each and in all: 3 bags with 4 counters in each bag (Term 2 Lessons 5 and 8, taught again with a picture)",
+   "A strip of 4 equal parts with the whole strip 20 (Term 2 Lesson 8, taught again with a picture)"
+  ],
+  "assumes": "Only counting to 20 and adding small numbers. Nothing from an earlier lesson is needed: the warm-up deals counters onto plates, shows bags with the same number in each bag and shows a strip cut into equal parts. The words each, a dozen and such, and the idea of a price, are taught in Explore and the Mini-lesson.",
+  "holiday_topics_revisited": [],
+  "safe_to_miss": true,
+  "note": "Fairly safe to miss: it builds on Term 2 Lessons 5 to 8 (groups, tables, sharing, stories), and a child who joins here without them can follow the warm-up and the first workbook page. A child who misses it watches the recording and does workbook pages 1 and 2 before Term 2 Lesson 10 (Choose Your Tool), which has one gate about finding the cost of one first."
+ },
+ "materials": {
+  "child": [
+   "The printed workbook with the $1 tokens kit page (page 6): a grown-up cuts out the 30 tokens beforehand (or use about 30 counters, beans or buttons as $1 tokens; the lesson needs at most 28)",
+   "3 to 6 small things to be the shop items (pencils, rubbers, cups or toys)",
+   "A pencil, a rubber and spare paper"
+  ],
+  "tutor": [
+   "The slide deck",
+   "A few shop items and some tokens to show on camera if you wish"
+  ],
+  "kit_pages": [
+   "$1 tokens (page 6): 30 round tokens to cut out (the most any question needs is 28). Money in this lesson is whole dollars only, so a token stands for $1"
+  ],
+  "ruler": false,
+  "notes": "No ruler is needed. Nothing needs to be bought: everything can be found at home, and the tokens can be counters, beans or buttons. No matches, toothpicks or anything sharp. Small things never go near the mouth or ears; keep them away from younger brothers and sisters. No real money is needed and no notes or coins are shown."
+ },
+ "timing": {
+  "parts": [
+   {
+    "id": "opening",
+    "title": "Opening",
+    "start": 0,
+    "end": 2
+   },
+   {
+    "id": "remember",
+    "title": "Remember warm-up",
+    "start": 2,
+    "end": 8
+   },
+   {
+    "id": "sneak",
+    "title": "Sneak-peek puzzles",
+    "start": 8,
+    "end": 12
+   },
+   {
+    "id": "explore",
+    "title": "Explore",
+    "start": 12,
+    "end": 24
+   },
+   {
+    "id": "mini",
+    "title": "Mini-lesson",
+    "start": 24,
+    "end": 36
+   },
+   {
+    "id": "break",
+    "title": "Brain break",
+    "start": 36,
+    "end": 40
+   },
+   {
+    "id": "work",
+    "title": "Workbook",
+    "start": 40,
+    "end": 70
+   },
+   {
+    "id": "talk",
+    "title": "Talk time",
+    "start": 70,
+    "end": 76
+   },
+   {
+    "id": "exit",
+    "title": "Exit ticket",
+    "start": 76,
+    "end": 82
+   },
+   {
+    "id": "look",
+    "title": "Look-back",
+    "start": 82,
+    "end": 85
+   },
+   {
+    "id": "flex",
+    "title": "Flex time and goodbye",
+    "start": 85,
+    "end": 90
+   }
+  ],
+  "optional_slide": "s-opt",
+  "include_rules": false,
+  "notes": "Opening is 2 minutes (the routine and rules were taught earlier in the term; give the recording, muting and camera notice). Explore has 12 minutes: find one, find many, find one then many with tokens and a strip. The mini-lesson has 12: the two steps, writing them, the words each, a dozen and such, and a turn of their own. The workbook has 30 minutes: Start here takes a middle child about 16 minutes, so pages 3 to 5 are mostly for choice and for home. The exit ticket is live (6 minutes). The last 5 minutes are the standing buffer; nothing new is started in it.",
+  "skip_order": [
+   "Start with: cut the dozen slide (s-m3b) in the Mini-lesson",
+   "Then: shorten Explore round 3 to the pens only",
+   "Then: take the extra minutes from the flex time"
+  ]
+ },
+ "sneak_peek": {
+  "q1": "4 pencils cost $8. How much does 1 pencil cost?",
+  "q2": "3 apples cost $6. How much do 5 apples cost?",
+  "a1": "$2",
+  "a2": "$10. 3 apples cost $6, so 1 apple costs $2. 5 apples cost 5 groups of $2, which is $10.",
+  "val1": 2
+ },
+ "rec": {
+  "opening": {
+   "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook and your tokens. Pause or rewind any time.",
+   "action": "Gather your workbook, tokens, pencil and paper. Press play when ready."
+  },
+  "remember": {
+   "say": "Recording: join in! Say your answers out loud before I say them. Pause if you need longer.",
+   "action": "Play along. Say each answer out loud before the video does."
+  },
+  "sneak": {
+   "say": "Recording: pause now and try both puzzles on your paper. Guessing is fine. Press play for the next part.",
+   "action": "Pause. Try both puzzles on your own paper. A guess is fine."
+  },
+  "explore": {
+   "say": "Recording: pause now. Use your tokens to find the cost of one, then of many. Press play when you have tried.",
+   "action": "Pause. Share the tokens to find 1, then count tokens to find many."
+  },
+  "mini": {
+   "say": "Recording: keep watching and copy the examples. Rewind if you miss a step.",
+   "action": "Watch and copy the examples. Rewind any step you missed."
+  },
+  "break": {
+   "say": "Recording: stand up and join in! Count in twos and fives with the moves.",
+   "action": "Stand up. Count in twos and fives with the moves, then sit down."
+  },
+  "exit": {
+   "say": "Recording: pause and do the exit ticket on your own. Then press play to check it.",
+   "action": "Pause. Do the exit ticket alone, then play to check it."
+  },
+  "work": {
+   "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
+   "action": "Pause. Do page 1, then play to check. Then page 2. Then choose a page to try."
+  },
+  "talk": {
+   "say": "Recording: pause. Tell a grown-up if Aisha is right, and test it with tokens.",
+   "action": "Pause. Explain your answer to someone at home, and test it with tokens."
+  },
+  "look": {
+   "say": "Recording: pause and fill in your look-back box. You can pass.",
+   "action": "Pause. Fill in the look-back box, or pass."
+  },
+  "flex": {
+   "say": "Recording: well done for finishing! Show a grown-up one thing you found out.",
+   "action": "Show a grown-up your workbook and tell them one thing you found out."
+  }
+ },
+ "slides": [
+  {
+   "id": "s-title",
+   "part": "opening",
+   "kind": "title",
+   "title": "Find One First",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "TODAY WE WILL",
+     "items": [
+      "Find the cost of one, then of many.",
+      "Use the words each, a dozen and such."
+     ]
+    }
+   ],
+   "note": "Term 2 Lesson 9, 90 minutes. Objective: find the cost of one by sharing a total equally, then the cost of many; use each, a dozen and such. Plain statement for families: dividing within 20 and multiplying within 40 in whole dollars is Primary 1 work; finding the price of 7 from the price of 3, a dozen, such and how-many-can-be-bought go past the school Primary 1 syllabus on purpose. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 24, mini-lesson 24 to 36, brain break 36 to 40, workbook 40 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Say the recording notice in one line: you and the screen only; a child may keep the camera off.",
+   "subtitle": "Find one, then find many",
+   "mascot": {
+    "size": "l",
+    "say": "Hi, I'm Mi. Let's notice, test and explain why!"
+   }
+  },
+  {
+   "id": "s-rem1",
+   "part": "remember",
+   "kind": "light",
+   "title": "Warm-up: share equally",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Deal the counters one at a time. Same number on each plate."
+    },
+    {
+     "t": "visual",
+     "type": "groups",
+     "container": "plate",
+     "n": 3,
+     "each": 0,
+     "icon": "counter_red",
+     "empty": true,
+     "per_row": 3
+    },
+    {
+     "t": "visual",
+     "type": "table",
+     "rows": [
+      [
+       "12",
+       "counters",
+       "3",
+       "plates"
+      ]
+     ],
+     "col_w": [
+      1,
+      2,
+      1,
+      2
+     ]
+    }
+   ],
+   "note": "Twelve counters are shared equally onto 3 plates. Children deal counters one at a time (or imagine it). Ask: how many on each plate (4); 6 counters shared between 2 plates (3); 15 counters shared among 3 plates (5). Children answer aloud or with fingers. No writing, no marks. A child who is unsure deals real counters or small things onto three plates or three pieces of paper.",
+   "mascot": {
+    "size": "s",
+    "say": "Sharing is fun!"
+   }
+  },
+  {
+   "id": "s-rem2",
+   "part": "remember",
+   "kind": "light",
+   "title": "Each and in all",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "groups",
+     "container": "bag",
+     "n": 3,
+     "each": 4,
+     "icon": "counter_red",
+     "per_row": 3
+    },
+    {
+     "t": "visual",
+     "type": "table",
+     "rows": [
+      [
+       "3",
+       "bags",
+       "4",
+       "in each bag"
+      ]
+     ],
+     "col_w": [
+      1,
+      2,
+      1,
+      3
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Each bag has the same number."
+    }
+   ],
+   "note": "Three bags with 4 counters in each bag. We say each bag has 4, and in all means every bag together. Ask: how many counters in all (12); 5 bags with 2 in each bag (10); 4 groups of 5 (20). This is Term 2 Lessons 5 and 8 taught again. A child who is unsure adds one bag at a time and says the total each time."
+  },
+  {
+   "id": "s-rem3",
+   "part": "remember",
+   "kind": "light",
+   "title": "A strip of equal parts",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "whole strip",
+       "len": 4
+      }
+     ],
+     "units": {
+      "n": 4,
+      "text": "?"
+     },
+     "brace": {
+      "text": "20",
+      "over": "all"
+     }
+    },
+    {
+     "t": "p",
+     "text": "4 equal parts. The whole strip is 20."
+    }
+   ],
+   "note": "A strip is cut into 4 equal parts, and the whole strip is 20. Ask: how big is each part (5); 3 parts of 5 (15); 6 shared into 2 equal parts (3). This is Term 2 Lesson 8 taught again: a strip shows equal groups. A child who is unsure counts 5, 10, 15, 20 on fingers and counts the fingers."
+  },
+  {
+   "id": "s-sneak",
+   "part": "sneak",
+   "kind": "light",
+   "title": "Sneak-peek puzzles",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Ideas we have not learnt yet. A guess is a great start. Nobody is judged."
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 1: anyone can try",
+        "items": [
+         "4 pencils cost $8.",
+         "How much does 1 pencil cost?",
+         "You may use counters."
+        ]
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 2: think",
+        "items": [
+         "3 apples cost $6.",
+         "How much do 5 apples cost?"
+        ]
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Puzzle 1 (4 pencils for $8; 1 pencil is $2) is an access question: any child can share 8 counters onto 4 pencils. Puzzle 2 is a thinking question on the lesson idea: find one first. 1 apple costs $2 and 5 apples cost $10. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: $2; $10. Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
+  },
+  {
+   "id": "s-explore1",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: find one",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "table",
+     "rows": [
+      [
+       {
+        "icon": "pen",
+        "n": 4
+       },
+       "20"
+      ],
+      [
+       {
+        "icon": "pen",
+        "n": 1
+       },
+       "[]"
+      ]
+     ],
+     "head": [
+      "Items",
+      "Cost in $"
+     ],
+     "col_w": [
+      2,
+      1
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "4 pens cost $20. Count out 20 tokens.",
+      "Share the tokens equally onto 4 pens.",
+      "How much does 1 pen cost?"
+     ]
+    }
+   ],
+   "note": "Round 1, about 4 minutes. Children use their $1 tokens (the kit page or counters) and 4 small things as the pens. 4 pens cost $20: they count out 20 tokens and deal them one at a time onto the 4 pens until every pen has the same. Ask: how much does 1 pen cost (5). Say: 1 pen costs $5, because $20 shared equally among 4 pens is $5 each. Money is whole dollars only, and a token stands for $1. If a family has no shop items, 4 pieces of paper are fine. Answer: $5."
+  },
+  {
+   "id": "s-explore2",
+   "part": "explore",
+   "kind": "light",
+   "title": "Find many",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "table",
+     "rows": [
+      [
+       {
+        "icon": "pen",
+        "n": 1
+       },
+       "3"
+      ],
+      [
+       {
+        "icon": "pen",
+        "n": 4
+       },
+       "[]"
+      ]
+     ],
+     "head": [
+      "Items",
+      "Cost in $"
+     ],
+     "col_w": [
+      2,
+      1
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "1 pen costs $3. Put 3 tokens by each pen.",
+      "Do this for 4 pens.",
+      "Count all the tokens."
+     ]
+    }
+   ],
+   "note": "Round 2, about 3.5 minutes. Now we know the cost of one: 1 pen costs $3. For 4 pens children put 3 tokens by each pen and count all the tokens (12). Ask: how much do 4 pens cost (12). Say: 4 groups of $3 is $12. Link to Term 2 Lesson 5: groups of. Answer: $12. A child who loses count puts the tokens in a row of 3 and counts in 3s."
+  },
+  {
+   "id": "s-explore3",
+   "part": "explore",
+   "kind": "light",
+   "title": "Find one, then many",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "4 pens",
+       "len": 4
+      }
+     ],
+     "units": {
+      "n": 4,
+      "text": "?"
+     },
+     "brace": {
+      "text": "$20",
+      "over": "all"
+     }
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      "4 pens cost $20.",
+      "How much do 3 pens cost?"
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      "Find 1 pen first: share $20 into 4 equal parts.",
+      "Then take 3 parts."
+     ],
+     "reveal": true
+    }
+   ],
+   "note": "Round 3, about 3.5 minutes. 4 pens cost $20. How much do 3 pens cost? Children share 20 tokens onto 4 pens (5 each) and then take 3 pens (15). The strip shows 4 equal parts for the 4 pens, and 3 parts are the 3 pens. Ask: how much does 1 pen cost (5); how much do 3 pens cost (15). Say: find one first, then find many. Answers: $5 and $15. The steps (find 1 pen first, then take 3 parts) appear on the next slide, after the children have tried."
+  },
+  {
+   "id": "s-explore4",
+   "part": "explore",
+   "kind": "light",
+   "title": "Find one, then many: your turn",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "2 balls",
+       "len": 2
+      }
+     ],
+     "units": {
+      "n": 2,
+      "text": "?"
+     },
+     "brace": {
+      "text": "$8",
+      "over": "all"
+     }
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      "2 balls cost $8.",
+      "How much do 5 balls cost?"
+     ]
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      "Find 1 ball first: share $8 into 2 equal parts.",
+      "Then take 5 parts."
+     ],
+     "reveal": true
+    }
+   ],
+   "note": "Round 4, about 2.5 minutes. 2 balls cost $8. How much do 5 balls cost? Children share 8 tokens onto 2 balls (4 each), then put 4 tokens by each of 5 balls and count them (20). Ask: how much does 1 ball cost (4); how much do 5 balls cost (20). Say: find one first, then find many. Answers: $4 and $20. The steps appear on the next slide, after the children have tried."
+  },
+  {
+   "id": "s-m1",
+   "part": "mini",
+   "kind": "light",
+   "title": "Find one first",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "5 cups",
+       "len": 5
+      }
+     ],
+     "units": {
+      "n": 5,
+      "text": "?"
+     },
+     "brace": {
+      "text": "$15",
+      "over": "all"
+     }
+    },
+    {
+     "t": "card",
+     "head": "STEPS",
+     "items": [
+      "Step 1: find 1. Share the cost equally.",
+      "Step 2: find many. Count that many ones."
+     ],
+     "reveal": true
+    }
+   ],
+   "note": "5 cups cost $15. How much do 2 cups cost? Step 1 finds 1 cup: $15 shared equally among 5 cups. Step 2 finds 2 cups: 2 groups of that. Ask: how much does 1 cup cost (3); how much do 2 cups cost (6). The steps card appears on the next slide, after the children have answered. Children say each number first. Always say find one first."
+  },
+  {
+   "id": "s-m2",
+   "part": "mini",
+   "kind": "light",
+   "title": "Write the two steps",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "table",
+     "rows": [
+      [
+       "Step 1",
+       "1 cup: $15 shared equally among 5 cups",
+       "[]"
+      ],
+      [
+       "Step 2",
+       "2 cups: 2 groups of the cost of 1 cup",
+       "[]"
+      ]
+     ],
+     "head": [
+      "Step",
+      "What we do",
+      "Cost in $"
+     ],
+     "col_w": [
+      1,
+      4,
+      1
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Check: 5 cups at $3 each make $15."
+    }
+   ],
+   "note": "Write the two steps: Step 1 is 15 shared equally among 5, which is 3. Step 2 is 2 groups of 3, which is 6. Check by putting the cost of one back: 5 groups of $3 is $15. Say each step as a short sentence. Either reading order of a groups line is accepted in a child answer. Answers: $3 and $6."
+  },
+  {
+   "id": "s-m3",
+   "part": "mini",
+   "kind": "light",
+   "title": "Three words",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Word",
+       "What it means",
+       "Example"
+      ],
+      [
+       "each",
+       "for one",
+       "$2 each: 1 pen costs $2"
+      ],
+      [
+       "a dozen",
+       "12",
+       "a dozen eggs: 12 eggs"
+      ],
+      [
+       "such",
+       "of the same kind",
+       "3 such cups: 3 cups the same"
+      ]
+     ]
+    }
+   ],
+   "note": "Three words for word problems. Each means for one. A dozen is 12. Such means of the same kind, so 6 such cups are 6 cups the same, with the same price. Ask: what is a dozen (12); a dozen eggs is how many eggs (12); if 3 such cups cost $6, does each cup cost the same (yes). A dozen and such are used in Think harder."
+  },
+  {
+   "id": "s-m3b",
+   "part": "mini",
+   "kind": "light",
+   "title": "A dozen",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "objects",
+     "icon": "cookie",
+     "n": 12,
+     "per_row": 6
+    },
+    {
+     "t": "p",
+     "text": "A dozen cookies is 12 cookies."
+    }
+   ],
+   "note": "Count the cookies together: 12. A dozen is 12, whatever it is 12 of. A dozen eggs, a dozen pens. Ask: how many pens are in a dozen (12). This slide is optional to shorten: cut it first if the Mini-lesson runs over."
+  },
+  {
+   "id": "s-m4",
+   "part": "mini",
+   "kind": "light",
+   "title": "Your turn",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "6 pencils",
+       "len": 6
+      }
+     ],
+     "units": {
+      "n": 6,
+      "text": "?"
+     },
+     "brace": {
+      "text": "$18",
+      "over": "all"
+     }
+    },
+    {
+     "t": "chip",
+     "text": "How much does 1 pencil cost? How much do 4 pencils cost?"
+    }
+   ],
+   "note": "Each child works on their own paper with tokens if they like. 6 pencils cost $18. Step 1: 1 pencil costs $3. Step 2: 4 pencils cost 4 groups of $3, which is $12. Walk the cameras; do not ask children to hold papers up. Wait 10 seconds before helping. Answers: $3 and $12."
+  },
+  {
+   "id": "s-m4a",
+   "part": "mini",
+   "kind": "light",
+   "title": "Check: your turn",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Step",
+       "What we do",
+       "Cost"
+      ],
+      [
+       "Step 1",
+       "1 pencil: $18 shared among 6 pencils",
+       "$3"
+      ],
+      [
+       "Step 2",
+       "4 pencils: 4 groups of $3",
+       "$12"
+      ]
+     ]
+    }
+   ],
+   "note": "Answers: 1 pencil costs $3 and 4 pencils cost $12. Read each answer aloud so a child watching the recording can mark their own work. Children tick their own work with a tick. Never ask a child to show a wrong answer to the group."
+  },
+  {
+   "id": "s-m5",
+   "part": "mini",
+   "kind": "light",
+   "title": "Check it: is it sensible?",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "RAVI SAYS",
+     "items": [
+      "4 toys cost $24.",
+      "So 1 toy costs $96."
+     ]
+    },
+    {
+     "t": "visual",
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "4 toys",
+       "len": 4
+      }
+     ],
+     "units": {
+      "n": 4,
+      "text": "?"
+     },
+     "brace": {
+      "text": "$24",
+      "over": "all"
+     }
+    },
+    {
+     "t": "p",
+     "text": "Is Ravi right? How could we check?"
+    },
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      "1 toy cannot cost more than 4 toys.",
+      "$24 shared among 4 toys is $6 each.",
+      "Check: 4 groups of $6 is $24."
+     ],
+     "reveal": true
+    }
+   ],
+   "note": "About 3 minutes. Ravi multiplied 24 by 4 instead of sharing. Children use tokens: put 96 tokens? No: ask first whether 1 toy can cost more than 4 toys (no). Then share 24 tokens onto 4 toys: 6 each. Check by putting the price back: 4 groups of 6 is 24. Answers: no; 1 toy costs $6. The ideas appear on the next slide, after the children have tried. Do not name a child."
+  },
+  {
+   "id": "s-break",
+   "part": "break",
+   "kind": "dark",
+   "title": "Move and count",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Count in twos. Stamp for each one."
+    },
+    {
+     "t": "p",
+     "text": "Count in fives. Clap for each one."
+    },
+    {
+     "t": "p",
+     "text": "Stand up. Sip some water."
+    }
+   ],
+   "note": "Four minutes. Stand up on camera. Count in twos to 20 and stamp softly on each number, then count in fives to 40 and clap on each number. No equipment, no running, a little clear space. A child may stay seated and tap the table. Do not give prizes or compare children. Then everyone sits down with a pencil, ready for the workbook."
+  },
+  {
+   "id": "s-ws1",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 1: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 1 to 3. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read questions 1 to 3 aloud. Children work on their own with tokens; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: 4 pens cost $16. Question 2: 1 pen costs $2 and we want 7 pens. Question 3: a strip of 6 buns for $12."
+  },
+  {
+   "id": "s-ws1ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 1",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 $4; Q2 $14; Q3 $2."
+  },
+  {
+   "id": "s-ws2",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 2: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 4 to 6. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S4",
+      "S5",
+      "S6"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read questions 4 to 6 aloud. Question 4: 3 books cost $15; find 1 book, then 2 books. Question 5: 5 pens cost $15 and Lily says 1 pen costs $4; is she correct? Question 6: each book costs $4 and Kumar buys 3 books."
+  },
+  {
+   "id": "s-ws2ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 2",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S4",
+      "S5",
+      "S6"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud so a child watching the recording can mark their own work. Never ask a child to show a wrong answer to the group. Answers: Q4 $5 and $10; Q5 No, 1 pen costs $3; Q6 $12."
+  },
+  {
+   "id": "s-choice",
+   "part": "work",
+   "kind": "light",
+   "title": "Choose your next page",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Page",
+       "What it is"
+      ],
+      [
+       "Think harder (page 3)",
+       "7 from 3, a dozen, such"
+      ],
+      [
+       "Go further (page 4)",
+       "Two kinds, and which shop?"
+      ],
+      [
+       "Investigation (page 5)",
+       "Which pack costs less?"
+      ],
+      [
+       "Check",
+       "Finish and check your own work"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Everyone may choose. Not finished? Pages 3 to 5 are for home too."
+    }
+   ],
+   "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 5 minutes."
+  },
+  {
+   "id": "s-talk",
+   "part": "talk",
+   "kind": "light",
+   "title": "Talk and explain",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "AISHA SAYS",
+     "items": [
+      "3 books cost $12.",
+      "So 6 books cost $24."
+     ]
+    },
+    {
+     "t": "visual",
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "3 books",
+       "len": 3
+      }
+     ],
+     "units": {
+      "n": 3,
+      "text": "?"
+     },
+     "brace": {
+      "text": "$12",
+      "over": "all"
+     }
+    },
+    {
+     "t": "p",
+     "text": "Is Aisha right? How could we check?"
+    },
+    {
+     "t": "chip",
+     "text": "I think ... because ..."
+    }
+   ],
+   "note": "One minute of talk to the grown-up next to you, or to your screen. Children test Aisha with tokens: 12 tokens on 3 books is 4 each, and 6 books at 4 each is 24; or 6 books are 2 lots of 3 books, so 2 lots of $12. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: yes. 1 book costs $4, so 6 books cost 6 groups of $4, which is $24. Repeat each child answer in your own words for the recording."
+  },
+  {
+   "id": "s-sneakans",
+   "part": "talk",
+   "kind": "light",
+   "title": "Back to the sneak-peek",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "table",
+     "rows": [
+      [
+       {
+        "icon": "pencil",
+        "n": 4
+       },
+       "8"
+      ],
+      [
+       {
+        "icon": "pencil",
+        "n": 1
+       },
+       "2"
+      ]
+     ],
+     "head": [
+      "Items",
+      "Cost in $"
+     ],
+     "col_w": [
+      2,
+      1
+     ]
+    },
+    {
+     "t": "visual",
+     "type": "table",
+     "rows": [
+      [
+       {
+        "icon": "apple",
+        "n": 3
+       },
+       "6"
+      ],
+      [
+       {
+        "icon": "apple",
+        "n": 5
+       },
+       "10"
+      ]
+     ],
+     "head": [
+      "Items",
+      "Cost in $"
+     ],
+     "col_w": [
+      2,
+      1
+     ]
+    },
+    {
+     "t": "answer",
+     "text": "1 pencil costs $2. 5 apples cost $10."
+    }
+   ],
+   "note": "Reveal both puzzles now. Say: many of you wrote a good reason. Do not read out anyone earlier answer. 4 pencils cost $8, so 1 pencil costs $2. 3 apples cost $6, so 1 apple costs $2, and 5 apples cost 5 groups of $2, which is $10. It was the same idea: find one first."
+  },
+  {
+   "id": "s-exit",
+   "part": "exit",
+   "kind": "light",
+   "title": "Exit ticket",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "On your own. No looking back."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ],
+     "short": false
+    }
+   ],
+   "note": "Children answer on page 5. Read E1, E2 and E3 aloud with their numbers, and the four options of E2 (the figures on the slide are small). Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
+  },
+  {
+   "id": "s-exitans",
+   "part": "exit",
+   "kind": "light",
+   "title": "Check the exit ticket",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: $3; option 2, $15; $2 and $8."
+  },
+  {
+   "id": "s-look",
+   "part": "look",
+   "kind": "lookback",
+   "title": "Look-back",
+   "blocks": [
+    {
+     "t": "lookback"
+    }
+   ],
+   "note": "Two minutes. Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes. A pass is always allowed. It is never graded, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide); open the next lesson with one catch-up question for the whole group; never a direct message.",
+   "mascot": {
+    "size": "s",
+    "say": "Take your time. You can pass."
+   }
+  },
+  {
+   "id": "s-end",
+   "part": "flex",
+   "kind": "dark",
+   "title": "Well done, inquirers!",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Show a grown-up one thing you found out today."
+    },
+    {
+     "t": "card",
+     "head": "NEXT LESSON",
+     "items": [
+      "Choose Your Tool, and Mi's Chal­lenge Quest",
+      "Have ready: your Term 2 Lesson 10 workbook with its tool cards page cut out, the Quest Log in its envelope (keep it closed), a quest partner, a pencil and paper."
+     ]
+    }
+   ],
+   "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. Remind families that next lesson holds Mi's Challenge Quest, a game with Mi: the Quest Log and the grown-up note were sent a week before. If the whole class is ahead, show the optional slides and use the Spare-time menu from the tutor guide.",
+   "mascot": {
+    "size": "l",
+    "say": "Great thinking today!"
+   }
+  },
+  {
+   "id": "s-opt",
+   "part": "flex",
+   "kind": "light",
+   "title": "Go further: do we always find one first?",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "2 pens",
+       "len": 2
+      }
+     ],
+     "units": {
+      "n": 2,
+      "text": "?"
+     },
+     "brace": {
+      "text": "$6",
+      "over": "all"
+     }
+    },
+    {
+     "t": "p",
+     "text": "2 pens cost $6. How much do 4 pens cost?"
+    },
+    {
+     "t": "p",
+     "text": "Do we need to find 1 pen first?"
+    }
+   ],
+   "note": "Optional, only if you are on time. 2 pens cost $6. 4 pens are 2 lots of 2 pens, so 4 pens cost 2 lots of $6, which is $12. We do not need to find 1 pen first when the new number is a whole number of lots. Finding one first always works; doubling is a quick way here. Take two answers and move on.",
+   "optional": true
+  },
+  {
+   "id": "s-menu",
+   "part": "flex",
+   "kind": "light",
+   "title": "If we have time: pick one",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Activity",
+       "What we do"
+      ],
+      [
+       "Does 1 cost more?",
+       "Mei says 1 pen costs $6 at 4 pens for $12. Is she right?"
+      ],
+      [
+       "Make a shop puzzle",
+       "Write a price puzzle for your grown-up"
+      ],
+      [
+       "Teach it back",
+       "Show a toy how to find 1 first"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Optional. Everyone may join."
+    }
+   ],
+   "note": "Optional Spare-time menu, used only if the whole class is ahead. Pick one or two activities (3 to 5 minutes each); full tutor lines and answers are in the tutor guide. Never start new content and never name who is ahead. Slow down with how do you know rather than rushing on. These minutes come from the flex buffer and are not part of the 90-minute sum.",
+   "optional": true
+  }
+ ],
+ "script": {
+  "segments": [
+   {
+    "part": "opening",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-title",
+      "s": 15
+     },
+     {
+      "k": "DO",
+      "text": "Greet the whole group warmly, before the recording starts. Check that you can see each child, or ask the grown-up.",
+      "s": 12
+     },
+     {
+      "k": "SAY",
+      "text": "Hello, inquirers! Pencil ready, and your tokens on the table. Cameras can be on or off, as you like."
+     },
+     {
+      "k": "SAY",
+      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+     },
+     {
+      "k": "DO",
+      "text": "Start the recording now. Do not use children's first names on the recording.",
+      "s": 5
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
+     },
+     {
+      "k": "SAY",
+      "text": "Today we find one first, and then we find many. We use tokens: one token is one dollar."
+     },
+     {
+      "k": "SAY",
+      "text": "Today's tool is Draw it. Draw a picture or a bar of what the story says.",
+      "spine": "opening"
+     },
+     {
+      "k": "DO",
+      "text": "Point at the tool on page 1 of the workbook.",
+      "s": 4,
+      "spine": "opening"
+     },
+     {
+      "k": "NOTE",
+      "text": "Say the recording statement and the microphone routine in the same words every lesson, for anyone who joined late. Say the notice before you start the recording, and do not use children's first names once it is running. The routine and the four inquirer rules were introduced earlier in the term: do not re-teach them."
+     },
+     {
+      "k": "NOTE",
+      "text": "Plain statement for families when it comes up: sharing within 20 and multiplying within 40 in whole dollars is Primary 1 work, but chaining the two steps with different numbers, a dozen, such and how many can be bought go beyond Primary 1 on purpose."
+     },
+     {
+      "k": "NOTE",
+      "text": "New here? Say in one minute: our three rule words (notice it, test it, explain why); a guess is fine and you can always pass; after Start here you may choose Think harder, Go further or the Investigation; nobody holds paper to the camera. The first recording of the term shows the full routine."
+     }
+    ]
+   },
+   {
+    "part": "remember",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-rem1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Twelve counters, three plates. Deal the counters one at a time, so every plate has the same."
+     },
+     {
+      "k": "ASK",
+      "text": "How many counters are on each plate?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Six counters shared between two plates. How many on each plate?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Fifteen counters shared among three plates. How many on each plate?",
+      "resp": 12
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem2"
+     },
+     {
+      "k": "SAY",
+      "text": "Three bags with four counters in each bag. Each bag has four. In all means all the bags together."
+     },
+     {
+      "k": "ASK",
+      "text": "How many counters are there in all?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Five bags with two in each bag. How many in all?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Four groups of five?",
+      "resp": 12
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem3"
+     },
+     {
+      "k": "SAY",
+      "text": "A strip cut into four equal parts. The whole strip is twenty."
+     },
+     {
+      "k": "ASK",
+      "text": "How big is each part?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Three parts of five?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Six shared into two equal parts?",
+      "resp": 12
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child is unsure about sharing, deal real counters one at a time onto plates or pieces of paper. For the bags, add one bag at a time and say the total each time. For the strip, count on in fives on fingers and count the parts."
+     },
+     {
+      "k": "NOTE",
+      "text": "Answers: 4, 3, 5; 12, 10, 20; 5, 15, 3. Children answer with a whisper, fingers or hands. Nobody writes. Do not say price or cost yet. Joining cold: all you need is counting to 20 and adding small numbers."
+     }
+    ]
+   },
+   {
+    "part": "sneak",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-sneak"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is judged."
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle one. 4 pencils cost 8 dollars. How much does 1 pencil cost? You may use counters."
+     },
+     {
+      "k": "WORK",
+      "text": "Children share counters or draw, and write the number on their own paper.",
+      "s": 40
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle two. 3 apples cost 6 dollars. How much do 5 apples cost?"
+     },
+     {
+      "k": "WORK",
+      "text": "Children write or draw their answer.",
+      "s": 60
+     },
+     {
+      "k": "SAY",
+      "text": "Keep your paper. Nobody shows it. We will check our own thinking later, at Talk time."
+     },
+     {
+      "k": "NOTE",
+      "text": "Puzzle 1 answer: $2. Puzzle 2 answer: $10 (1 apple costs $2, so 5 apples cost $10). Look for good ideas to praise later (a child who found 1 apple first). Do not write scores or keep a list."
+     }
+    ]
+   },
+   {
+    "part": "explore",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Your hands are the teachers. Today a token is one dollar. Four pens cost twenty dollars. Count out twenty tokens, and put out four small things for the pens."
+     },
+     {
+      "k": "WORK",
+      "text": "Children count out 20 tokens and deal them one at a time onto 4 pens until every pen has the same.",
+      "s": 90
+     },
+     {
+      "k": "ASK",
+      "text": "How much does 1 pen cost?",
+      "resp": 15
+     },
+     {
+      "k": "SAY",
+      "text": "One pen costs five dollars. Twenty dollars shared equally among four pens is five dollars each."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2"
+     },
+     {
+      "k": "SAY",
+      "text": "Round two. Now we know one pen costs three dollars. How much do four pens cost? Put three tokens by each pen."
+     },
+     {
+      "k": "WORK",
+      "text": "Children put 3 tokens by each of 4 pens and count all the tokens.",
+      "s": 70
+     },
+     {
+      "k": "ASK",
+      "text": "How much do 4 pens cost?",
+      "resp": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Four groups of three dollars is twelve dollars."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore3"
+     },
+     {
+      "k": "SAY",
+      "text": "Round three. Four pens cost twenty dollars. How much do three pens cost? First find one pen, then take three pens."
+     },
+     {
+      "k": "WORK",
+      "text": "Children share 20 tokens onto 4 pens, then take 3 pens and count their tokens.",
+      "s": 100
+     },
+     {
+      "k": "ASK",
+      "text": "How much does 1 pen cost?",
+      "resp": 15
+     },
+     {
+      "k": "ASK",
+      "text": "How much do 3 pens cost?",
+      "resp": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Find one first, then find many. That is our idea for today."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore4"
+     },
+     {
+      "k": "SAY",
+      "text": "Round four, your turn. Two balls cost eight dollars. How much do five balls cost? First find one ball, then find many."
+     },
+     {
+      "k": "WORK",
+      "text": "Children share 8 tokens onto 2 balls, then put that many tokens by each of 5 balls and count them.",
+      "s": 40
+     },
+     {
+      "k": "ASK",
+      "text": "How much does 1 ball cost?",
+      "resp": 15
+     },
+     {
+      "k": "ASK",
+      "text": "How much do 5 balls cost?",
+      "resp": 15
+     },
+     {
+      "k": "SAY",
+      "text": "One ball costs four dollars. Five balls cost five groups of four dollars, which is twenty dollars."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who adds 20 and 4: ask, what are we sharing? A child who stops after finding 1: ask, how many pens do we want? A child with no tokens uses counters, beans or drawn circles. Money is only whole dollars; do not use coins or notes."
+     },
+     {
+      "k": "NOTE",
+      "text": "Main room only; children say their answers aloud and show fingers; you cannot see tokens on small tiles. Answers: 1 pen $5; 4 pens at $3 is $12; 1 pen $5 and 3 pens $15. A token stands for one dollar. Do not teach cents, coins or notes. Round 4: 1 ball $4 and 5 balls $20."
+     }
+    ]
+   },
+   {
+    "part": "mini",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-m1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Five cups cost fifteen dollars. How much do two cups cost? Step one: find one cup, by sharing the cost equally. Step two: find many, by counting that many ones."
+     },
+     {
+      "k": "ASK",
+      "text": "How much does 1 cup cost?",
+      "resp": 15
+     },
+     {
+      "k": "ASK",
+      "text": "How much do 2 cups cost?",
+      "resp": 15
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m2"
+     },
+     {
+      "k": "SAY",
+      "text": "We write two steps. Step one: fifteen shared equally among five cups is three dollars. Step two: two groups of three dollars is six dollars. We check: five cups at three dollars each make fifteen dollars."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3"
+     },
+     {
+      "k": "SAY",
+      "text": "Three words. Each means for one. A dozen is twelve. Such means of the same kind: three such cups are three cups the same."
+     },
+     {
+      "k": "ASK",
+      "text": "How many eggs are in a dozen eggs?",
+      "resp": 15
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3b"
+     },
+     {
+      "k": "SAY",
+      "text": "A dozen cookies is twelve cookies. A dozen is twelve, whatever there are twelve of."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4"
+     },
+     {
+      "k": "READ",
+      "text": "Your turn. 6 pencils cost 18 dollars. How much does 1 pencil cost? How much do 4 pencils cost?"
+     },
+     {
+      "k": "WORK",
+      "text": "Children work on their own paper, with tokens if they like. Wait 10 seconds before helping.",
+      "s": 140
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4a"
+     },
+     {
+      "k": "READ",
+      "text": "One pencil costs 3 dollars. Four pencils cost 12 dollars. Tick your own work with a tick."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m5"
+     },
+     {
+      "k": "SAY",
+      "text": "Ravi says four toys cost twenty-four dollars, so one toy costs ninety-six dollars. Is Ravi right? Think about it first: can one toy cost more than four toys?"
+     },
+     {
+      "k": "WORK",
+      "text": "Children think, then test with tokens: share 24 tokens onto 4 toys.",
+      "s": 60
+     },
+     {
+      "k": "ASK",
+      "text": "How much does 1 toy cost?",
+      "resp": 15
+     },
+     {
+      "k": "SAY",
+      "text": "One toy costs six dollars. Check: four groups of six dollars is twenty-four dollars. Ravi multiplied. We share to find one."
+     },
+     {
+      "k": "NOTE",
+      "text": "Key words to use every time: find one first, find many, each, in all, cost. Step 1 shares, step 2 counts groups. The ÷ sign is not needed: say shared equally. Do not teach a rule to recite; the tokens and the strip are the method. Beyond Primary 1 on purpose: a dozen, such and the price of many from a different number are in Think harder."
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child multiplies 15 and 5, ask: what do we know, the cost of 1 or the cost of 5? If a child stops after step 1, ask: how many do we want? If a child cannot share 18 among 6, deal 18 tokens onto 6 pencils one at a time."
+     }
+    ]
+   },
+   {
+    "part": "break",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-break"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Stand up and get a sip of water. We count in twos and stamp softly on each number. Then we count in fives and clap on each number."
+     },
+     {
+      "k": "WORK",
+      "text": "Quiet movement only. After the break say: please sit down and have your workbook and a pencil ready.",
+      "s": 145
+     },
+     {
+      "k": "NOTE",
+      "text": "Quiet movement only. After the break say: please sit down, put the closed Quest Log flat on your table, and have a pencil ready."
+     }
+    ]
+   },
+   {
+    "part": "work",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "Page 1, Start here. Question 1: 4 pens cost 16 dollars. How much does 1 pen cost? Question 2: 1 pen costs 2 dollars. How much do 7 pens cost? Fill in the blanks. Question 3: 6 buns cost 12 dollars. How much does 1 bun cost? Look at the strip."
+     },
+     {
+      "k": "WORK",
+      "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
+      "s": 450
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1ans"
+     },
+     {
+      "k": "READ",
+      "text": "Question 1: 4 dollars. Question 2: 14 dollars. Question 3: 2 dollars. Tick your own page with a tick."
+     },
+     {
+      "k": "SAY",
+      "text": "After question 3 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2"
+     },
+     {
+      "k": "READ",
+      "text": "Page 2. Question 4: 3 books cost 15 dollars. Fill in the blanks. Look at the strip. Question 5: 5 pens cost 15 dollars. Lily says 1 pen costs 4 dollars. Is Lily correct? Question 6: each book costs 4 dollars. Kumar buys 3 books. How much do the 3 books cost?"
+     },
+     {
+      "k": "WORK",
+      "text": "Page 2, questions 4 to 6.",
+      "s": 510
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2ans"
+     },
+     {
+      "k": "READ",
+      "text": "Question 4: 5 dollars and 10 dollars. Question 5: no, 1 pen costs 3 dollars. Question 6: 12 dollars."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-choice"
+     },
+     {
+      "k": "SAY",
+      "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time. Anything not finished is for home too."
+     },
+     {
+      "k": "MOVE",
+      "text": "Stand and stretch for 30 seconds, then sit down and choose.",
+      "s": 30
+     },
+     {
+      "k": "WORK",
+      "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
+      "s": 230
+     },
+     {
+      "k": "STUCK",
+      "text": "Q1: share 16 between 4 pens. Q2: put 2 by each of 7 pens. Q3: count the parts of the strip, then share 12. Q4: find 1 book first, then 2 books. Q5: put Lily's number into the story: 5 groups of 4 is 20. Q6: 3 groups of 4."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who is still stuck ticks I am still stuck on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp (never a personal phone). You then help in the open session in the next lesson. Never a private message to a child."
+     },
+     {
+      "k": "NOTE",
+      "text": "Think harder chains the two steps with different numbers and uses a dozen, such and how many can be bought (beyond Primary 1 on purpose). Go further has two kinds of item, money left over and a comparison of two shops. Do not announce who is on which page. Start here takes a middle child about 16 minutes, so there is some choice time: for most children pages 4 and 5 are partly for home. Slow class: take the extra minutes from the flex time and do not skip the answer slides."
+     }
+    ]
+   },
+   {
+    "part": "talk",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-talk"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "Aisha says: 3 books cost 12 dollars, so 6 books cost 24 dollars. Is Aisha right? How could we check?"
+     },
+     {
+      "k": "WORK",
+      "text": "Test Aisha with tokens: 12 on 3 books, then 6 books.",
+      "s": 35
+     },
+     {
+      "k": "WORK",
+      "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
+      "s": 20
+     },
+     {
+      "k": "ASK",
+      "text": "Who would like to share? Volunteers first. A pass is always fine.",
+      "resp": 35
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-sneakans"
+     },
+     {
+      "k": "SAY",
+      "text": "Remember the sneak-peek? Four pencils cost eight dollars, so one pencil costs two dollars. Three apples cost six dollars, so one apple costs two dollars, and five apples cost ten dollars."
+     },
+     {
+      "k": "ASK",
+      "text": "Did anyone change their mind while we worked? You can just nod.",
+      "resp": 15
+     },
+     {
+      "k": "ASK",
+      "text": "What do we find first, the cost of one or the cost of many?",
+      "resp": 20
+     },
+     {
+      "k": "ASK",
+      "text": "How can we check our answer?",
+      "resp": 25
+     },
+     {
+      "k": "ASK",
+      "text": "Where did you use Draw it today?",
+      "resp": 10,
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Listen for the tool being named, not the answer. Volunteers first, a pass is always fine.",
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Model answer: yes. 1 book costs $4, so 6 books cost 6 groups of $4, which is $24. Or 6 books are 2 lots of 3 books, so 2 lots of $12. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
+     }
+    ]
+   },
+   {
+    "part": "exit",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-exit"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
+     },
+     {
+      "k": "READ",
+      "text": "E1. 3 pencils cost 9 dollars. How much does 1 pencil cost? E2. Each sticker costs 5 dollars. How much do 3 stickers cost? Choose the correct answer. Option 1: 8 dollars. Option 2: 15 dollars. Option 3: 2 dollars. Option 4: 53 dollars. Write its number in the bracket. E3. 5 cakes cost 10 dollars. Fill in the blanks: 1 cake costs blank dollars; 4 cakes cost blank dollars.",
+      "s": 55
+     },
+     {
+      "k": "WORK",
+      "text": "Children answer E1 to E3 on their own.",
+      "s": 170
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-exitans"
+     },
+     {
+      "k": "READ",
+      "text": "E1: 3 dollars. E2: option 2, 15 dollars. E3: 2 dollars and 8 dollars."
+     },
+     {
+      "k": "SAY",
+      "text": "Tick your own ticket with a tick. Well done."
+     },
+     {
+      "k": "NOTE",
+      "text": "Nothing is collected or marked live. Children tick their own ticket. If many children miss one question, spend two minutes on it at the start of the next lesson, in the open session, no names. Do not read out any child result."
+     }
+    ]
+   },
+   {
+    "part": "look",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-look"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+      "spine": "look"
+     },
+     {
+      "k": "WORK",
+      "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+      "s": 90,
+      "spine": "look"
+     }
+    ]
+   },
+   {
+    "part": "flex",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-end"
+     },
+     {
+      "k": "SAY",
+      "text": "Well done, inquirers. Next lesson is Choose Your Tool, and it holds Mi's Challenge Quest, a game with Mi. Please have your Term 2 Lesson 10 workbook with its tool cards page cut out, your Quest Log in its envelope (keep it closed), a quest partner, a pencil and paper. Goodbye, and thank you to the grown-ups."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-opt",
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Optional, only if you are on time: 2 pens cost 6 dollars. How much do 4 pens cost? Do we need to find 1 pen first?",
+      "optional": true
+     },
+     {
+      "k": "WORK",
+      "text": "Short think time, then take two answers.",
+      "s": 90,
+      "optional": true
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-menu",
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
+      "optional": true
+     },
+     {
+      "k": "NOTE",
+      "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: 4 pens are 2 lots of 2 pens, so $12; finding one first always works and doubling is a quick way here. If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+     }
+    ]
+   }
+  ]
+ },
+ "tiers": {
+  "start": [
+   {
+    "id": "S1",
+    "page": 1,
+    "tier": "start",
+    "text": "4 pens cost $16. How much does 1 pen cost? Use tokens or draw.",
+    "parts": [
+     {
+      "l": "",
+      "text": "1 pen costs $[].",
+      "ans": "4",
+      "val": 4
+     }
+    ],
+    "answer": "$4",
+    "val": [
+     4
+    ],
+    "hint": "Share $16 equally among 4 pens. Use tokens.",
+    "solution": "$16 shared equally among 4 pens is $4 each. Check: 4 groups of $4 make $16.",
+    "mistakes": [
+     "Writing 20 (adding 16 and 4).",
+     "Writing 64 (multiplying).",
+     "Writing 16 (the total)."
+    ],
+    "mins": 2.5,
+    "visual": {
+     "type": "objects",
+     "icon": "pen",
+     "n": 4,
+     "per_row": 4
+    },
+    "draw": true,
+    "draw_strokes": 16
+   },
+   {
+    "id": "S2",
+    "page": 1,
+    "tier": "start",
+    "text": "1 pen costs $2. How much do 7 pens cost? Fill in the blanks.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "7 × 2 = [2]",
+      "ans": "14",
+      "val": 14
+     },
+     {
+      "l": "b",
+      "text": "7 pens cost $[2].",
+      "ans": "14",
+      "val": 14
+     }
+    ],
+    "answer": "14; $14",
+    "val": [
+     14,
+     14
+    ],
+    "hint": "Put 2 tokens by each pen and count them all.",
+    "solution": "7 groups of $2 is 2 + 2 + 2 + 2 + 2 + 2 + 2 = 14, so 7 pens cost $14.",
+    "mistakes": [
+     "Writing 9 (adding 2 and 7).",
+     "Writing 2 (the cost of 1 pen)."
+    ],
+    "mins": 2.5,
+    "visual": {
+     "type": "objects",
+     "icon": "pen",
+     "n": 7,
+     "per_row": 4
+    }
+   },
+   {
+    "id": "S3",
+    "page": 1,
+    "tier": "start",
+    "text": "6 buns cost $12. How much does 1 bun cost? Look at the strip.",
+    "parts": [
+     {
+      "l": "",
+      "text": "1 bun costs $[].",
+      "ans": "2",
+      "val": 2
+     }
+    ],
+    "answer": "$2",
+    "val": [
+     2
+    ],
+    "hint": "The strip has 6 equal parts. Share $12 into 6 parts.",
+    "solution": "$12 shared equally among 6 buns is $2 each. Check: 6 groups of $2 make $12.",
+    "mistakes": [
+     "Writing 6 (the number of buns).",
+     "Writing 72 (multiplying)."
+    ],
+    "mins": 2.5,
+    "visual": {
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "6 buns",
+       "len": 6
+      }
+     ],
+     "units": {
+      "n": 6,
+      "text": "?"
+     },
+     "brace": {
+      "text": "$12",
+      "over": "all"
+     }
+    }
+   },
+   {
+    "id": "S4",
+    "page": 2,
+    "tier": "start",
+    "text": "3 books cost $15. Fill in the blanks. Look at the strip.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "1 book costs $[].",
+      "ans": "5",
+      "val": 5
+     },
+     {
+      "l": "b",
+      "text": "2 books cost $[2].",
+      "ans": "10",
+      "val": 10
+     }
+    ],
+    "answer": "$5; $10",
+    "val": [
+     5,
+     10
+    ],
+    "hint": "Find 1 book first. Then find 2 books.",
+    "solution": "$15 shared equally among 3 books is $5 each. 2 books cost 2 groups of $5, which is $10. Check: 3 groups of $5 make $15.",
+    "mistakes": [
+     "Writing 15 for 2 books.",
+     "Writing 7 (adding 5 and 2).",
+     "Stopping after the first part."
+    ],
+    "mins": 3,
+    "visual": {
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "3 books",
+       "len": 3
+      }
+     ],
+     "units": {
+      "n": 3,
+      "text": "?"
+     },
+     "brace": {
+      "text": "$15",
+      "over": "all"
+     }
+    }
+   },
+   {
+    "id": "S5",
+    "page": 2,
+    "tier": "start",
+    "text": "5 pens cost $15. Lily says 1 pen costs $4. Look at the picture.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Is Lily correct? Circle Yes or No.",
+      "ans": "No",
+      "val": "No",
+      "choices": [
+       "Yes",
+       "No"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "1 pen costs $[].",
+      "ans": "3",
+      "val": 3
+     }
+    ],
+    "answer": "No; $3",
+    "val": [
+     "No",
+     3
+    ],
+    "hint": "Put Lily's number back: 5 groups of $4.",
+    "solution": "5 groups of $4 make $20, not $15. So Lily is not correct. $15 shared equally among 5 pens is $3 each. Check: 5 groups of $3 make $15.",
+    "mistakes": [
+     "Saying Yes because 4 is close to 3.",
+     "Writing 15 for 1 pen."
+    ],
+    "mins": 3,
+    "visual": {
+     "type": "objects",
+     "icon": "pen",
+     "n": 5,
+     "per_row": 5
+    }
+   },
+   {
+    "id": "S6",
+    "page": 2,
+    "tier": "start",
+    "text": "Each book costs $4. Kumar buys 3 books. How much do the 3 books cost? Use tokens or draw.",
+    "parts": [
+     {
+      "l": "",
+      "text": "The 3 books cost $[2].",
+      "ans": "12",
+      "val": 12
+     }
+    ],
+    "answer": "$12",
+    "val": [
+     12
+    ],
+    "hint": "Each means for one. Count 3 groups of $4.",
+    "solution": "3 groups of $4: 4 + 4 + 4 = 12, so the 3 books cost $12.",
+    "mistakes": [
+     "Writing 7 (adding 4 and 3).",
+     "Writing 4."
+    ],
+    "mins": 2.5,
+    "visual": {
+     "type": "objects",
+     "icon": "book",
+     "n": 3,
+     "per_row": 3
+    },
+    "draw": true,
+    "draw_strokes": 12
+   }
+  ],
+  "think": [
+   {
+    "id": "T1",
+    "page": 3,
+    "tier": "think",
+    "text": "4 cups cost $12. Fill in the blanks. Look at the strip.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "1 cup costs $[].",
+      "ans": "3",
+      "val": 3
+     },
+     {
+      "l": "b",
+      "text": "7 cups cost $[2].",
+      "ans": "21",
+      "val": 21
+     }
+    ],
+    "answer": "$3; $21",
+    "val": [
+     3,
+     21
+    ],
+    "hint": "Find 1 cup first. Then find 7 cups.",
+    "solution": "$12 shared equally among 4 cups is $3 each. 7 cups cost 7 groups of $3, which is $21. Check: 4 groups of $3 make $12.",
+    "mistakes": [
+     "Writing 84 (12 × 7).",
+     "Writing 19 (12 + 7).",
+     "Stopping after the first part."
+    ],
+    "mins": 4,
+    "visual": {
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "4 cups",
+       "len": 4
+      }
+     ],
+     "units": {
+      "n": 4,
+      "text": "?"
+     },
+     "brace": {
+      "text": "$12",
+      "over": "all"
+     }
+    }
+   },
+   {
+    "id": "T2",
+    "page": 3,
+    "tier": "think",
+    "text": "A dozen buns cost $24. Fill in the blanks.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "1 bun costs $[].",
+      "ans": "2",
+      "val": 2
+     },
+     {
+      "l": "b",
+      "text": "3 buns cost $[].",
+      "ans": "6",
+      "val": 6
+     }
+    ],
+    "answer": "$2; $6",
+    "val": [
+     2,
+     6
+    ],
+    "hint": "A dozen is 12. Share $24 equally among 12 buns.",
+    "solution": "A dozen is 12, so 12 buns cost $24. $24 shared equally among 12 buns is $2 each. 3 buns cost 3 groups of $2, which is $6.",
+    "mistakes": [
+     "Using 24 shared among 2 buns.",
+     "Writing 24 for 3 buns."
+    ],
+    "mins": 3.5
+   },
+   {
+    "id": "T3",
+    "page": 3,
+    "tier": "think",
+    "text": "Wei pays $24 for 6 such cups. Fill in the blanks.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "1 cup costs $[].",
+      "ans": "4",
+      "val": 4
+     },
+     {
+      "l": "b",
+      "text": "4 such cups cost $[2].",
+      "ans": "16",
+      "val": 16
+     }
+    ],
+    "answer": "$4; $16",
+    "val": [
+     4,
+     16
+    ],
+    "hint": "Such means the cups are the same, so each costs the same.",
+    "solution": "$24 shared equally among 6 cups is $4 each. 4 such cups cost 4 groups of $4, which is $16.",
+    "mistakes": [
+     "Writing 24 for 4 cups.",
+     "Writing 8 (4 + 4)."
+    ],
+    "mins": 3.5
+   },
+   {
+    "id": "T4",
+    "page": 3,
+    "tier": "think",
+    "text": "4 pens cost $8. Ben has $10. Fill in the blanks.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "1 pen costs $[].",
+      "ans": "2",
+      "val": 2
+     },
+     {
+      "l": "b",
+      "text": "Ben can buy [] pens.",
+      "ans": "5",
+      "val": 5
+     }
+    ],
+    "answer": "$2; 5 pens",
+    "val": [
+     2,
+     5
+    ],
+    "hint": "Find 1 pen first. Then count how many groups of $2 fit in $10.",
+    "solution": "$8 shared equally among 4 pens is $2 each. $10 holds 5 groups of $2, so Ben can buy 5 pens.",
+    "mistakes": [
+     "Writing 4 pens (the number in the story).",
+     "Writing 20 (10 × 2)."
+    ],
+    "mins": 4
+   }
+  ],
+  "go": [
+   {
+    "id": "G1",
+    "page": 4,
+    "tier": "go",
+    "text": "2 hats cost $10. 3 scarves cost $18. Jenny buys 1 hat and 2 scarves. Fill in the blanks.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "1 hat costs $[].",
+      "ans": "5",
+      "val": 5
+     },
+     {
+      "l": "b",
+      "text": "1 scarf costs $[].",
+      "ans": "6",
+      "val": 6
+     },
+     {
+      "l": "c",
+      "text": "Jenny pays $[2].",
+      "ans": "17",
+      "val": 17
+     }
+    ],
+    "answer": "$5; $6; $17",
+    "val": [
+     5,
+     6,
+     17
+    ],
+    "hint": "Find 1 hat and 1 scarf first.",
+    "solution": "$10 shared equally among 2 hats is $5 each. $18 shared equally among 3 scarves is $6 each. 2 scarves cost $12. 1 hat and 2 scarves cost $5 + $12 = $17.",
+    "mistakes": [
+     "Adding 10 and 18.",
+     "Counting 1 scarf instead of 2."
+    ],
+    "mins": 5
+   },
+   {
+    "id": "G2",
+    "page": 4,
+    "tier": "go",
+    "text": "8 pens cost $24. Mei has $30. She buys 5 pens. Fill in the blanks.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "1 pen costs $[].",
+      "ans": "3",
+      "val": 3
+     },
+     {
+      "l": "b",
+      "text": "5 pens cost $[2].",
+      "ans": "15",
+      "val": 15
+     },
+     {
+      "l": "c",
+      "text": "Mei has $[2] left.",
+      "ans": "15",
+      "val": 15
+     }
+    ],
+    "answer": "$3; $15; $15",
+    "val": [
+     3,
+     15,
+     15
+    ],
+    "hint": "Find 1 pen first. Then find the cost of 5 pens. Then take that away from $30.",
+    "solution": "$24 shared equally among 8 pens is $3 each. 5 pens cost $15. $30 - $15 = $15 is left.",
+    "mistakes": [
+     "Taking 24 away from 30.",
+     "Forgetting to take the cost away from $30."
+    ],
+    "mins": 5
+   },
+   {
+    "id": "G3",
+    "page": 4,
+    "tier": "go",
+    "text": "Shop A sells 4 pens for $12. Shop B sells 5 pens for $20. Which shop sells 1 pen for less?",
+    "parts": [
+     {
+      "l": "a",
+      "text": "At Shop A, 1 pen costs $[].",
+      "ans": "3",
+      "val": 3
+     },
+     {
+      "l": "b",
+      "text": "At Shop B, 1 pen costs $[].",
+      "ans": "4",
+      "val": 4
+     },
+     {
+      "l": "c",
+      "text": "Circle Shop A or Shop B.",
+      "ans": "Shop A",
+      "val": "Shop A",
+      "choices": [
+       "Shop A",
+       "Shop B"
+      ]
+     }
+    ],
+    "answer": "$3; $4; Shop A",
+    "val": [
+     3,
+     4,
+     "Shop A"
+    ],
+    "hint": "Find the cost of 1 pen in each shop first.",
+    "solution": "Shop A: $12 shared among 4 pens is $3. Shop B: $20 shared among 5 pens is $4. $3 is less than $4, so Shop A sells 1 pen for less.",
+    "mistakes": [
+     "Choosing Shop B because 20 is more.",
+     "Comparing $12 and $20 without finding 1 pen."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "table",
+     "rows": [
+      [
+       "A",
+       {
+        "icon": "pen",
+        "n": 4
+       },
+       "12"
+      ],
+      [
+       "B",
+       {
+        "icon": "pen",
+        "n": 5
+       },
+       "20"
+      ]
+     ],
+     "head": [
+      "Shop",
+      "Pens",
+      "Cost in $"
+     ],
+     "col_w": [
+      1,
+      3,
+      1
+     ]
+    }
+   }
+  ],
+  "investigation": {
+   "id": "I1",
+   "page": 5,
+   "tier": "investigation",
+   "title": "Which pack costs less?",
+   "first": "A pack of 2 pens costs $8. How much does 1 pen cost?",
+   "text": "A pack of 5 pens costs $20. Does 1 pen cost less in this pack? Why?",
+   "lines": 4,
+   "answer": "No. In both packs 1 pen costs $4 ($8 shared between 2 pens, and $20 shared among 5 pens), so 1 pen does not cost less in the bigger pack. Finding the price of one lets us compare packs of different sizes.",
+   "val": [
+    "4",
+    "4"
+   ],
+   "look_for": "A child who finds $4 for both packs, or who says 1 pen costs the same in both. Credit any clear reason. A child who says the bigger pack costs more is right about the total but has not compared one pen.",
+   "mistakes": [
+    "Saying 1 pen costs less in the pack of 5 because it has more pens.",
+    "Comparing $6 and $15 without finding 1 pen."
+   ],
+   "mins": 8
+  }
+ },
+ "exit": [
+  {
+   "id": "E1",
+   "text": "3 pencils cost $9. How much does 1 pencil cost?",
+   "parts": [
+    {
+     "l": "",
+     "text": "1 pencil costs $[].",
+     "ans": "3",
+     "val": 3
+    }
+   ],
+   "answer": "$3",
+   "val": [
+    3
+   ],
+   "solution": "$9 shared equally among 3 pencils is $3 each.",
+   "mistakes": [
+    "Writing 12 (adding 9 and 3).",
+    "Writing 27 (multiplying)."
+   ]
+  },
+  {
+   "id": "E2",
+   "text": "Each sticker costs $5. How much do 3 stickers cost? Write its number in the bracket.",
+   "parts": [],
+   "answer": "(2) $15",
+   "val": [
+    2
+   ],
+   "solution": "Each sticker costs $5, so 3 stickers cost 3 groups of $5, which is $15.",
+   "mistakes": [
+    "Choosing (1) $8 by adding 5 and 3.",
+    "Choosing (3) $2 by taking 3 from 5."
+   ],
+   "mcq": {
+    "options": [
+     "$8",
+     "$15",
+     "$2",
+     "$53"
+    ],
+    "bracket": true
+   }
+  },
+  {
+   "id": "E3",
+   "text": "5 cakes cost $10. Fill in the blanks.",
+   "parts": [
+    {
+     "l": "a",
+     "text": "1 cake costs $[].",
+     "ans": "2",
+     "val": 2
+    },
+    {
+     "l": "b",
+     "text": "4 cakes cost $[].",
+     "ans": "8",
+     "val": 8
+    }
+   ],
+   "answer": "$2; $8",
+   "val": [
+    2,
+    8
+   ],
+   "solution": "$10 shared equally among 5 cakes is $2 each. 4 cakes cost 4 groups of $2, which is $8.",
+   "mistakes": [
+    "Writing 10 for 4 cakes.",
+    "Writing 9 (5 + 4)."
+   ]
+  }
+ ],
+ "talk": {
+  "question": "Aisha says: 3 books cost $12, so 6 books cost $24. Is Aisha right? How could we check?",
+  "starter": "I think ... because ...",
+  "answer": "Yes. Find 1 book first: $12 shared equally among 3 books is $4. 6 books cost 6 groups of $4, which is $24. We can also see that 6 books are 2 lots of 3 books, and 2 lots of $12 is $24. We can check with tokens.",
+  "look_for": "A child who finds the cost of 1 book first, or who sees that 6 books are 2 lots of 3 books. Not just yes or no."
+ },
+ "look_back": {
+  "hardest": [
+   "sharing to find one",
+   "finding many from one",
+   "using the strip",
+   "something else"
+  ],
+  "helped": [
+   "tokens",
+   "drawing a strip",
+   "checking my answer",
+   "I was not stuck"
+  ],
+  "next": [
+   "using tokens",
+   "drawing a strip",
+   "checking my answer",
+   "asking a question"
+  ]
+ },
+ "home_practice": [
+  {
+   "id": "H1",
+   "tier": "start",
+   "text": "5 pens cost $10. How much does 1 pen cost? $___",
+   "answer": "$2",
+   "val": 2,
+   "solution": "$10 shared equally among 5 pens is $2 each.",
+   "visual": {
+    "type": "bar_model",
+    "bars": [
+     {
+      "name": "5 pens",
+      "len": 5
+     }
+    ],
+    "units": {
+     "n": 5,
+     "text": "?"
+    },
+    "brace": {
+     "text": "$10",
+     "over": "all"
+    },
+    "hw": 110,
+    "below": true
+   }
+  },
+  {
+   "id": "H2",
+   "tier": "start",
+   "text": "Each cup costs $3. Fill in the blanks. 6 × 3 = ___ . 6 cups cost $___ (× means groups of)",
+   "answer": "18; $18",
+   "val": [
+    18,
+    18
+   ],
+   "solution": "6 groups of $3: 3 + 3 + 3 + 3 + 3 + 3 = 18."
+  },
+  {
+   "id": "H3",
+   "tier": "start",
+   "text": "4 rubbers cost $12. How much do 2 rubbers cost? $___",
+   "answer": "$6",
+   "val": 6,
+   "solution": "$12 shared equally among 4 rubbers is $3 each. 2 rubbers cost 2 groups of $3, which is $6."
+  },
+  {
+   "id": "H4",
+   "tier": "think",
+   "text": "A dozen eggs cost $36. How much do 4 eggs cost? $___",
+   "answer": "$12",
+   "val": 12,
+   "solution": "A dozen is 12 eggs. $36 shared equally among 12 eggs is $3 each. 4 eggs cost 4 groups of $3, which is $12."
+  },
+  {
+   "id": "H5",
+   "tier": "go",
+   "text": "3 mugs cost $12. 2 plates cost $10. Siti buys 1 mug and 1 plate. How much does Siti pay? $___",
+   "answer": "$9",
+   "val": 9,
+   "solution": "1 mug costs $12 shared among 3 mugs, which is $4. 1 plate costs $10 shared between 2 plates, which is $5. 1 mug and 1 plate cost $4 + $5 = $9."
+  }
+ ],
+ "online_practice": {
+  "key": "t2l19",
+  "title": "Find One First",
+  "topic": "Find one, then find many",
+  "items": [
+   {
+    "id": "c1",
+    "tier": "core",
+    "type": "number",
+    "q": "4 pens cost $20. How much does 1 pen cost?",
+    "answer": 5,
+    "hint": "Share the cost equally among the pens.",
+    "steps": [
+     "$20 is shared equally among 4 pens.",
+     "5 + 5 + 5 + 5 = 20.",
+     "1 pen costs $5."
+    ],
+    "slips": [
+     {
+      "a": [
+       24
+      ],
+      "say": "24 adds the cost and the number of pens. Share the cost equally among the pens."
+     }
+    ],
+    "fig": {
+     "type": "objects",
+     "icon": "pen",
+     "n": "{n}",
+     "per_row": 5
+    },
+    "fig_base": {
+     "type": "objects",
+     "icon": "pen",
+     "n": 4,
+     "per_row": 5
+    },
+    "tpl": {
+     "vars": {
+      "n": [
+       2,
+       3,
+       4,
+       5
+      ],
+      "u": [
+       2,
+       3,
+       4,
+       5,
+       6
+      ]
+     },
+     "derive": {
+      "t": "n*u"
+     },
+     "q": "{n} pens cost ${t}. How much does 1 pen cost?",
+     "answer": "u",
+     "hint": "Share the cost equally among the pens.",
+     "steps": [
+      "${t} is shared equally among {n} pens.",
+      "{n} groups of ${u} make ${t}.",
+      "1 pen costs ${u}."
+     ]
+    }
+   },
+   {
+    "id": "c2",
+    "tier": "core",
+    "type": "number",
+    "q": "1 cup costs $3. How much do 4 cups cost?",
+    "answer": 12,
+    "hint": "Count groups of the cost of 1 cup.",
+    "steps": [
+     "4 groups of $3.",
+     "3 + 3 + 3 + 3 = 12.",
+     "4 cups cost $12."
+    ],
+    "slips": [
+     {
+      "a": [
+       7
+      ],
+      "say": "7 adds 3 and 4. Count 4 groups of $3."
+     }
+    ],
+    "fig": {
+     "type": "objects",
+     "icon": "cup",
+     "n": "{n}",
+     "per_row": 6
+    },
+    "fig_base": {
+     "type": "objects",
+     "icon": "cup",
+     "n": 4,
+     "per_row": 6
+    },
+    "tpl": {
+     "vars": {
+      "n": [
+       3,
+       4,
+       5,
+       6
+      ],
+      "u": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     "q": "1 cup costs ${u}. How much do {n} cups cost?",
+     "answer": "n*u",
+     "hint": "Count groups of the cost of 1 cup.",
+     "steps": [
+      "{n} groups of ${u}.",
+      "{n} × {u} = {ans}.",
+      "{n} cups cost ${ans}."
+     ]
+    }
+   },
+   {
+    "id": "c3",
+    "tier": "core",
+    "type": "fields",
+    "q": "3 books cost $15. Look at the strip. Fill in the boxes.",
+    "hint": "Find 1 book first. Then find 2 books.",
+    "steps": [
+     "$15 shared equally among 3 books is $5.",
+     "2 groups of $5 make $10."
+    ],
+    "slips": [],
+    "frame": "1 book costs ${u}. 2 books cost ${v}.",
+    "fields": [
+     {
+      "id": "u",
+      "answer": 5
+     },
+     {
+      "id": "v",
+      "answer": 10
+     }
+    ],
+    "fig": {
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "{n} books",
+       "len": "{n}"
+      }
+     ],
+     "units": {
+      "n": "{n}",
+      "text": "?"
+     },
+     "brace": {
+      "text": "${t}",
+      "over": "all"
+     }
+    },
+    "fig_base": {
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "3 books",
+       "len": 3
+      }
+     ],
+     "units": {
+      "n": 3,
+      "text": "?"
+     },
+     "brace": {
+      "text": "$15",
+      "over": "all"
+     }
+    },
+    "tpl": {
+     "vars": {
+      "n": [
+       3,
+       4,
+       5
+      ],
+      "u": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     "derive": {
+      "t": "n*u",
+      "v": "u+u"
+     },
+     "q": "{n} books cost ${t}. Look at the strip. Fill in the boxes.",
+     "frame": "1 book costs ${u}. 2 books cost ${v}.",
+     "answers": {
+      "u": "u",
+      "v": "v"
+     },
+     "hint": "Find 1 book first. Then find 2 books.",
+     "steps": [
+      "${t} shared equally among {n} books is ${u}.",
+      "2 groups of ${u} make ${v}."
+     ]
+    }
+   },
+   {
+    "id": "c4",
+    "tier": "core",
+    "type": "choice",
+    "q": "4 pens cost $12. Lily says 1 pen costs $4. Is Lily correct?",
+    "options": [
+     "yes",
+     "no"
+    ],
+    "answer": "no",
+    "hint": "Put Lily's number back: 4 groups of her number.",
+    "steps": [
+     "4 groups of $4 make $16.",
+     "The pens cost $12.",
+     "So Lily is not correct."
+    ],
+    "slips": [
+     {
+      "a": [
+       "yes"
+      ],
+      "say": "Put Lily's number back: 4 groups of it. Do they make the total?"
+     }
+    ],
+    "fig": {
+     "type": "objects",
+     "icon": "pen",
+     "n": 4,
+     "per_row": 4
+    },
+    "fig_base": {
+     "type": "objects",
+     "icon": "pen",
+     "n": 4,
+     "per_row": 4
+    },
+    "tpl": {
+     "vars": {
+      "u": [
+       2,
+       3,
+       4,
+       5
+      ],
+      "k": [
+       0,
+       1
+      ]
+     },
+     "derive": {
+      "t": "4*u",
+      "c": "u+k"
+     },
+     "q": "4 pens cost ${t}. Lily says 1 pen costs ${c}. Is Lily correct?",
+     "options": [
+      "yes",
+      "no"
+     ],
+     "answer_index": "k",
+     "hint": "Put Lily's number back: 4 groups of her number.",
+     "steps": [
+      "4 groups of ${c} make 4 × {c}.",
+      "The pens cost ${t}.",
+      "The answer is {ans}."
+     ]
+    }
+   },
+   {
+    "id": "c5",
+    "tier": "core",
+    "type": "number",
+    "q": "How many eggs are in a dozen eggs?",
+    "answer": 12,
+    "hint": "A dozen is a special number.",
+    "steps": [
+     "A dozen is 12.",
+     "So a dozen eggs is 12 eggs."
+    ],
+    "slips": [
+     {
+      "a": [
+       10
+      ],
+      "say": "A dozen is 12, not 10."
+     }
+    ]
+   },
+   {
+    "id": "c6",
+    "tier": "core",
+    "type": "number",
+    "q": "Each book costs $3. Kumar buys 5 books. How much do the 5 books cost?",
+    "answer": 15,
+    "hint": "Each means for one. Count groups.",
+    "steps": [
+     "5 groups of $3.",
+     "3 + 3 + 3 + 3 + 3 = 15.",
+     "The 5 books cost $15."
+    ],
+    "slips": [
+     {
+      "a": [
+       8
+      ],
+      "say": "8 adds 3 and 5. Count 5 groups of $3."
+     }
+    ],
+    "fig": {
+     "type": "objects",
+     "icon": "book",
+     "n": "{n}",
+     "per_row": 6
+    },
+    "fig_base": {
+     "type": "objects",
+     "icon": "book",
+     "n": 5,
+     "per_row": 6
+    },
+    "tpl": {
+     "vars": {
+      "n": [
+       3,
+       4,
+       5,
+       6
+      ],
+      "u": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     "q": "Each book costs ${u}. Kumar buys {n} books. How much do the {n} books cost?",
+     "answer": "n*u",
+     "hint": "Each means for one. Count groups.",
+     "steps": [
+      "{n} groups of ${u}.",
+      "{n} × {u} = {ans}.",
+      "The {n} books cost ${ans}."
+     ]
+    }
+   },
+   {
+    "id": "t1",
+    "tier": "stretch",
+    "type": "fields",
+    "q": "3 books cost $12. Look at the strip. Fill in the boxes.",
+    "easier": "c3",
+    "hint": "Find 1 book first. Then find the cost of many.",
+    "steps": [
+     "$12 shared equally among 3 books is $4.",
+     "7 groups of $4 make $28."
+    ],
+    "slips": [],
+    "frame": "1 book costs ${u}. 7 books cost ${w}.",
+    "fields": [
+     {
+      "id": "u",
+      "answer": 4
+     },
+     {
+      "id": "w",
+      "answer": 28
+     }
+    ],
+    "fig": {
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "{n} books",
+       "len": "{n}"
+      }
+     ],
+     "units": {
+      "n": "{n}",
+      "text": "?"
+     },
+     "brace": {
+      "text": "${t}",
+      "over": "all"
+     }
+    },
+    "fig_base": {
+     "type": "bar_model",
+     "bars": [
+      {
+       "name": "3 books",
+       "len": 3
+      }
+     ],
+     "units": {
+      "n": 3,
+      "text": "?"
+     },
+     "brace": {
+      "text": "$12",
+      "over": "all"
+     }
+    },
+    "tpl": {
+     "vars": {
+      "n": [
+       3,
+       4,
+       5
+      ],
+      "u": [
+       2,
+       3,
+       4
+      ],
+      "m": [
+       6,
+       7,
+       8
+      ]
+     },
+     "derive": {
+      "t": "n*u",
+      "w": "m*u"
+     },
+     "q": "{n} books cost ${t}. Look at the strip. Fill in the boxes.",
+     "frame": "1 book costs ${u}. {m} books cost ${w}.",
+     "answers": {
+      "u": "u",
+      "w": "w"
+     },
+     "hint": "Find 1 book first. Then find the cost of many.",
+     "steps": [
+      "${t} shared equally among {n} books is ${u}.",
+      "{m} groups of ${u} make ${w}."
+     ]
+    }
+   },
+   {
+    "id": "t2",
+    "tier": "stretch",
+    "type": "number",
+    "q": "A dozen buns cost $24. How much do 3 buns cost?",
+    "answer": 6,
+    "easier": "c5",
+    "hint": "A dozen is 12. Find 1 bun first.",
+    "steps": [
+     "12 buns cost $24, so 1 bun costs $2.",
+     "3 groups of $2.",
+     "3 buns cost $6."
+    ],
+    "slips": [
+     {
+      "a": [
+       2
+      ],
+      "say": "2 is the cost of 1 bun. How much do 3 buns cost?"
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "u": [
+       2,
+       3
+      ],
+      "k": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     "derive": {
+      "t": "12*u"
+     },
+     "q": "A dozen buns cost ${t}. How much do {k} buns cost?",
+     "answer": "u*k",
+     "hint": "A dozen is 12. Find 1 bun first.",
+     "steps": [
+      "12 buns cost ${t}, so 1 bun costs ${u}.",
+      "{k} groups of ${u}.",
+      "{k} buns cost ${ans}."
+     ]
+    }
+   },
+   {
+    "id": "t3",
+    "tier": "stretch",
+    "type": "number",
+    "q": "3 pens cost $9. Ben has $12. How many pens can Ben buy?",
+    "answer": 4,
+    "easier": "c1",
+    "hint": "Find 1 pen first. How many groups fit?",
+    "steps": [
+     "$9 shared among 3 pens is $3.",
+     "How many groups of $3 fit in $12?",
+     "Ben can buy 4 pens."
+    ],
+    "slips": [
+     {
+      "a": [
+       3
+      ],
+      "say": "3 is the number of pens in the story. How many $3 pens can Ben buy with $12?"
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "n": [
+       3,
+       4,
+       5
+      ],
+      "u": [
+       2,
+       3,
+       4
+      ],
+      "j": [
+       2,
+       3,
+       4,
+       5
+      ]
+     },
+     "derive": {
+      "t": "n*u",
+      "m": "j*u"
+     },
+     "q": "{n} pens cost ${t}. Ben has ${m}. How many pens can Ben buy?",
+     "answer": "j",
+     "hint": "Find 1 pen first. How many groups fit?",
+     "steps": [
+      "${t} shared among {n} pens is ${u}.",
+      "How many groups of ${u} fit in ${m}?",
+      "Ben can buy {ans} pens."
+     ]
+    }
+   },
+   {
+    "id": "g1",
+    "tier": "challenge",
+    "type": "number",
+    "q": "2 hats cost $10. 3 scarves cost $18. Jenny buys 1 hat and 2 scarves. How much does Jenny pay?",
+    "answer": 17,
+    "easier": "t2",
+    "hint": "Find the cost of 1 hat and of 1 scarf first.",
+    "steps": [
+     "1 hat costs $5.",
+     "1 scarf costs $6, so 2 scarves cost $12.",
+     "$5 + $12 = $17."
+    ],
+    "slips": [
+     {
+      "a": [
+       28
+      ],
+      "say": "28 adds the two totals. Find 1 hat and 1 scarf first."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       3,
+       4,
+       5
+      ],
+      "b": [
+       2,
+       3,
+       4
+      ]
+     },
+     "derive": {
+      "h": "2*a",
+      "s": "3*b"
+     },
+     "q": "2 hats cost ${h}. 3 scarves cost ${s}. Jenny buys 1 hat and 2 scarves. How much does Jenny pay?",
+     "answer": "a+b+b",
+     "hint": "Find the cost of 1 hat and of 1 scarf first.",
+     "steps": [
+      "1 hat costs ${a}.",
+      "1 scarf costs ${b}, so 2 scarves cost {b}+{b}.",
+      "Jenny pays ${ans}."
+     ]
+    }
+   },
+   {
+    "id": "g2",
+    "tier": "challenge",
+    "type": "number",
+    "q": "6 pens cost $18. Mei has $20. She buys 4 pens. How much money does Mei have left?",
+    "answer": 8,
+    "easier": "t3",
+    "hint": "Find 1 pen, then 4 pens, then what is left.",
+    "steps": [
+     "1 pen costs $3.",
+     "4 pens cost $12.",
+     "$20 - $12 = $8."
+    ],
+    "slips": [
+     {
+      "a": [
+       12
+      ],
+      "say": "12 is the cost of the 4 pens. How much money is left from $20?"
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "u": [
+       2,
+       3,
+       4
+      ],
+      "n": [
+       3,
+       6
+      ],
+      "k": [
+       2,
+       4
+      ],
+      "m": [
+       20,
+       30
+      ]
+     },
+     "derive": {
+      "t": "n*u"
+     },
+     "q": "{n} pens cost ${t}. Mei has ${m}. She buys {k} pens. How much money does Mei have left?",
+     "answer": "m-k*u",
+     "hint": "Find 1 pen, then {k} pens, then what is left.",
+     "steps": [
+      "1 pen costs ${u}.",
+      "{k} pens cost {k} × {u}.",
+      "${m} take away the cost is ${ans}."
+     ]
+    }
+   },
+   {
+    "id": "g3",
+    "tier": "challenge",
+    "type": "selfcheck",
+    "q": "Make your own shop puzzle. Choose a price for 1 pen and a number of pens. Write how much the pens cost in all, and ask a grown-up to find the price of 1 pen. Many answers are right.",
+    "hint": "Start with the price of 1 pen, then multiply.",
+    "steps": [
+     "Choose the price of 1 pen.",
+     "Choose how many pens.",
+     "Write how much they cost in all.",
+     "Ask a grown-up to find 1 pen."
+    ],
+    "slips": [],
+    "easier": "c1"
+   }
+  ]
+ },
+ "spare_time": {
+  "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
+  "rules": [
+   "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
+   "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+   "Never teach anything the next lesson needs. If the class is ahead, slow down: ask ‘How do you know?’ and let children explain, rather than rushing on."
+  ],
+  "menu": [
+   {
+    "id": "M1",
+    "title": "Does 1 cost more if we buy more?",
+    "minutes": 4,
+    "tutor": "Mei says: 2 pens cost $6, so 1 pen costs $3. At 4 pens for $12, 1 pen costs $6. Is Mei right? Test it with tokens.",
+    "rec": "Recording: pause. Mei says 1 pen costs $3 for 2 pens at $6, but $6 for 4 pens at $12. Is she right?",
+    "answer": "No. $12 shared equally among 4 pens is $3 each, the same as before. 1 pen costs the same when each pen costs the same, so we say such pens or each."
+   },
+   {
+    "id": "M2",
+    "title": "Make a shop puzzle for your grown-up",
+    "minutes": 4,
+    "tutor": "Choose a price for 1 pen and a number of pens. Write how much they cost in all. Ask your grown-up to find the price of 1 pen, then check with tokens.",
+    "rec": "Recording: pause. Choose a price for 1 pen. Write the total for some pens. Ask a grown-up to find the price of 1.",
+    "answer": "No single answer. Check by sharing: with 4 pens at $5 each the total is $20, and $20 shared among 4 pens is $5."
+   },
+   {
+    "id": "M3",
+    "title": "Teach it back",
+    "minutes": 3,
+    "tutor": "Pretend your grown-up or a toy has never found the price of one. Use tokens to show how 3 books cost $12, so 1 book costs $4.",
+    "rec": "Recording: pause. Show a grown-up how to share 12 tokens among 3 books to find the cost of 1 book.",
+    "answer": "12 tokens shared equally among 3 books is 4 tokens each, so 1 book costs $4."
+   }
+  ]
+ },
+ "parent": {
+  "summary": "We found the cost of one by sharing a total equally (\"4 pens cost $20, so 1 pen costs $5\"), then the cost of many, with tokens and a strip. We met the words each, a dozen and such. Money is whole dollars only. Sharing within 20 and multiplying within 40 is Primary 1 work; chaining the steps, a dozen, such and how many can be bought go past the Primary 1 syllabus on purpose.",
+  "words": [
+   "each: for one",
+   "a dozen: 12",
+   "such: of the same kind",
+   "find one first: share the total equally to find the price of 1",
+   "×: groups of (6 × 3 is 6 groups of 3)"
+  ],
+  "try_home": [
+   "Shop: put 3 small things on the table and a price of $6 for the three. Ask your child to find the price of 1, then of 2, using tokens.",
+   "A dozen: look for a dozen of something (12 spoons, 12 buttons). Ask: if a dozen costs $24, how much does 1 cost?",
+   "Check it: ask your child to put the price of 1 back into the story. 4 pens at $3 each: do they make $12?"
+  ],
+  "ask": [
+   "What do we find first?",
+   "How do you know your answer is right?"
+  ],
+  "when_stuck": "Let your child share tokens or counters one at a time, and wait 10 seconds before helping. Asking ‘how many do we want?’ works better than giving the answer. Please do not teach a rule or the division sign: tokens and ‘share equally’ are enough. Money is whole dollars only. If the look-back page says ‘I am still stuck’, photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
+  "next": "Term 2 Lesson 10: Choose Your Tool, with Mi's Chal­lenge Quest (keep the Quest Log closed until your tutor says). Online practice: your tutor shares the link. A missing workbook page: your tutor sends a PDF to print at 100%. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. To have your child muted, tell us when you register. The link is private to your group's families: please do not share it.",
+  "quote": "Find one, then find many.",
+  "report_line": "Your child is learning to find the cost of one by sharing equally, and then the cost of many. This week: pens, buns and books in whole dollars.",
+  "term_line": "This term: strips, odd and even, groups, tables, sharing and stories so far; now prices and finding one first; next, Choose Your Tool and Mi's Challenge Quest.",
+  "next_materials": [
+   "Your Term 2 Lesson 10 workbook, with its tool cards page cut out (7 tool cards and 8 problem cards)",
+   "Keep the $1 tokens from this lesson: they are needed again in Term 3 Lesson 4, Dollars and Change",
+   "The Quest Log (4 pages, printed at 100%), kept closed in its envelope; a quest partner"
+  ]
+ },
+ "safeguarding": [
+  "Tokens, counters and small things stay on the table: nothing goes in the mouth or ears. No matches, toothpicks or anything sharp. Keep small things away from younger brothers and sisters. Money is whole dollars only: no real money, notes or coins are needed.",
+  "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
+  "Nobody holds paper or a board up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on a count of three, or show fingers or a thumb for a choice. There is no private chat.",
+  "Never read out a child’s name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is not muted. Children may mute and keep their cameras off. A child’s page is never shown.",
+  "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. Counting aloud is quiet; a child may stay seated.",
+  "A child who is still stuck ticks ‘I am still stuck’ on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for 90 days after the program ends. The tutor then helps in the open session next lesson. No private messages to children.",
+  "The look-back is never collected in front of the group or read out. A pass is always allowed."
+ ],
+ "tutor_prep": [
+  "Solve every workbook question yourself first. Money is whole dollars only; do not bring notes or coins into the lesson. Next lesson holds Mi's Challenge Quest: read the Quest tutor notes (L20_Quest_Tutor_Notes.pdf) before then.",
+  "A week before the next lesson, send the families the grown-up note (L20_Quest_Parent_Note.pdf), the Quest Log (L20_Quest_Log.pdf, 4 pages, print at 100%) and the materials for Term 2 Lesson 10: the workbook with its tool cards kit page (a grown-up cuts out the 7 tool cards and 8 problem cards) and a closed envelope for the Quest Log. A family with no printer tells you: arrange the make-up slot.",
+  "For this lesson: the workbook with the tokens kit page (a grown-up cuts out the 30 tokens), 3 to 6 small shop items, a pencil and spare paper. Remind families to keep the $1 tokens: Term 3 Lesson 4 uses them.",
+  "Have the slides open. Have a few shop items and some tokens to show on camera if you wish.",
+  "Check the recording captures the tutor and the shared screen. Children's video is excluded; any voice that is not muted is recorded. Greet the whole group warmly, say the recording notice, then start the recording, and do not use children's first names while it runs.",
+  "Be plain with families: sharing within 20 and multiplying within 40 in whole dollars is Primary 1 work, but chaining the steps with different numbers, a dozen, such and how many can be bought go beyond the school Primary 1 syllabus on purpose. Do not call the lesson MOE-aligned. Use the words shared equally, not a division sign. The tokens and the strip are the method, not a rule to recite."
+ ],
+ "workbook": {
+  "header": "Division and money: find one first",
+  "hint_p1": "A token is $1. Share the tokens to find 1. Count groups to find many.",
+  "hint_p2": "Find 1 first. Then find many. Each means for one.",
+  "hint_p3": "Use tokens or draw a strip. Find 1 first. A dozen is 12. Such means the same kind.",
+  "hint_p4": "Choose any question. You do not have to finish them all.",
+  "choice_after": 3,
+  "inv_intro": "",
+  "inv_first_label": "First:",
+  "inv_then_label": "Next:",
+  "home_hint": "Use tokens or counters. Small things stay on the table, away from mouths and little brothers and sisters.",
+  "kits": [
+   {
+    "type": "cards",
+    "labels": [
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1",
+     "$1"
+    ],
+    "cols": 6,
+    "w": 90,
+    "h": 90,
+    "round": true,
+    "width": 100,
+    "title": "Kit page: $1 tokens",
+    "intro": "A grown-up cuts out the 30 round tokens before the lesson (the lesson needs at most 28). A token stands for one dollar. Whole dollars only: there are no coins or notes in this lesson. Keep the tokens in an envelope."
+   }
+  ]
+ },
+ "limits": {
+  "max_parent_words": 110
+ }
+}

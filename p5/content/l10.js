@@ -1,4 +1,6 @@
 // Math Inquirers P5 — Lesson 10: Challenge Day (mixed strategies: working backwards, logic, models, listing, supposition)
+const { TKQ, TKP, LATER } = require('./take.js');
+const FG = require('../../levels/figs_l4_6.js');
 // Choose a start and explain it: draw a model, list it in order, make a table, work backwards, guess and check / suppose, use a logic grid.
 // Every answer below was worked out and checked with a short Python script (exhaustive search for every "find all" and every logic puzzle).
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WH = '#FFFFFF';
@@ -9,11 +11,11 @@ const txt = (x, y, s, size = 16, fill = N, anchor = 'middle', weight = 700) =>
 
 // Q4: a 3 by 4 grid of unit squares (3 rows, 4 columns), drawn to scale: 12 small squares
 const gridSvg = () => {
-  const s = 56, x0 = 150, y0 = 14; let g = '';
+  const s = 44, x0 = 150, y0 = 6; let g = '';
   for (let r = 0; r < 3; r++) for (let c = 0; c < 4; c++)
     g += `<rect x="${x0 + c * s}" y="${y0 + r * s}" width="${s}" height="${s}" fill="${SKY}" stroke="${N}" stroke-width="3"/>`;
-  g += txt(x0 + 2 * s, y0 + 3 * s + 30, '3 rows of 4 small squares', 16);
-  return `<svg aria-label="A rectangle made of 3 rows of 4 small squares" viewBox="0 0 600 220" width="380" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">${g}</svg>`;
+  g += txt(x0 + 2 * s, y0 + 3 * s + 26, '3 rows of 4 small squares', 16);
+  return `<svg aria-label="A rectangle made of 3 rows of 4 small squares" viewBox="100 0 360 170" width="360" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">${g}</svg>`;
 };
 
 module.exports = {
@@ -22,8 +24,8 @@ module.exports = {
     objective: 'Choose a way to start a puzzle (draw a model, list in order, make a table, work backwards, guess and check or suppose, use a logic grid), solve competition-style problems, check every clue, and explain why the chosen start works.',
     skills: 'Choosing a strategy, working backwards with fractions, logic grids, models with units, systematic listing, supposition, checking against every clue, explaining',
     materials: 'Four puzzle cards shown on the slide, or sent as images to each breakout room (backwards, logic, counting, guess and check), mini whiteboards, scrap paper, a 3 by 4 grid drawn on paper, certificates, stamps.',
-    online: 'Each breakout pair gets one puzzle card on screen and reports back how they started; logic grids and models are shared on screen and annotated together. Children hold their working up to the camera.',
-    warmup: 'Mix-up relay: one quick question from each of the earlier lessons (place value, fractions, area of a triangle, volume, rate, percentage, angles, patterns). Read a card and ask for a volunteer (a child may say pass once, or choose a green quick card or an orange think-about-it card); that child answers and invites the next volunteer. Then five quick questions on whiteboards.',
+    online: 'Each breakout pair gets one puzzle card on screen and reports back how they started; logic grids and models are shared on screen and annotated together. Children check their working against the slide and explain it aloud.',
+    warmup: 'Mix-up relay: six cards from the earlier lessons (place value, fractions, area of a triangle, volume, rate, percentage; angles and patterns are in the quick questions). Read a card and ask for a volunteer (a child may say pass once, or choose a green quick card or an orange think-about-it card); that child answers and invites the next volunteer. Then four quick questions on whiteboards.',
     explore: 'Puzzle menu: pairs choose 2 of 4 puzzle cards (backwards number puzzle, pets logic, squares on a grid, two numbers). They write the answer AND how they started: draw, list, table, work backwards or guess and check.',
     mini: 'How to START: draw a model (units and parts), list in order, make a table, work backwards (undo the last step first), guess and check or suppose, logic grid (a tick means crosses in the rest of its row and column). Check every answer against every clue. Before page 2: count shapes of every size systematically, find who is lying by trying each possibility, and keep the difference in ages the same.',
     share: 'Pick one puzzle and teach it in two sentences: how did you START and how do you know your answer is right? Could another start also work?',
@@ -46,9 +48,9 @@ module.exports = {
 
   script: {
     hook: ['Welcome to Challenge Day! There is no new topic today. There are puzzles from every lesson, and the only question that matters is: how do you START?', 'Clever inquirers do not always know the answer straight away. They have a toolbox of starts, and they check and explain.'],
-    warmIntro: ['Mix-up relay: I read a card from one of our earlier lessons and say a name. That child answers, then names the next child. A wrong answer gets a friendly "try again", never a groan. You may say "pass" once. The child who just answered may choose a green card (a quick one) or an orange card (a think-about-it one). The tutor keeps a private list so that every child gets a turn before anyone has a second, and asks for volunteers first; nobody is called on by name if they would rather not.'],
+    warmIntro: ['Mix-up relay: I read a card, a volunteer answers and invites the next volunteer. You may pass once.'],
     predict: ['Look at the four puzzle cards. Which one do you think will be the hardest? Write your guess in the corner of your whiteboard and we will see at the end.'],
-    exploreHints: ['Stuck: "How could you start? Draw it, list it, make a table, work backwards, or guess and check?"', 'Backwards puzzle: "Write the steps going forwards first. Then undo the LAST step first."', 'Logic puzzle: "Find a clue that tells you something for sure. Put a cross where it cannot be."', 'Finished early: make a puzzle card for the next pair.'],
+    exploreHints: ['Stuck: "How could you start? Draw it, list it, make a table, work backwards, or guess and check?"', 'Backwards puzzle: "Write the steps going forwards first. Then undo the LAST step first."', 'Logic puzzle: "Find a clue that tells you something for sure. Put a cross where it cannot be."', 'If a pair wants more: make a puzzle card for the next pair.'],
     think: [
       '“A number is doubled, then 7 is added, then divided by 3, and the answer is 5. I work backwards and undo the last step first: 5 × 3 = 15, then 15 − 7 = 8, then 8 ÷ 2 = 4. I check forwards: 4 × 2 = 8, 8 + 7 = 15, 15 ÷ 3 = 5.”',
       '“A logic grid. Ravi does not play swimming. Siti plays neither football nor badminton, so Siti swims for sure. A tick means crosses in the rest of that row AND that column. Ben does not play football, so Ben badminton and Ravi football. I check every clue.”',
@@ -63,9 +65,9 @@ module.exports = {
 
   deck: {
     today: 'Choose a start for a puzzle: draw a model, work backwards, use a logic grid, list in order or guess and check. Then check every clue.',
-    warmGame: 'Mix-up relay. One quick question from each earlier lesson. Read a card; a volunteer answers and invites the next volunteer. You may say pass once.',
-    warmQs: [['What is 3/4 of 48?', '36'], ['Area of a triangle with base 10 cm and height 6 cm', '30 cm²'], ['A tap fills 6 litres in 2 minutes. How long to fill 45 litres?', '15 minutes'], ['Two angles on a straight line are 65° and ___', '115°'], ['Next in the pattern: 5, 8, 11, 14, __', '17']],
-    expSetup: ['Pick 2 of the 4 puzzle cards. Work in pairs.', 'Write your answer, and write HOW you started (draw, list, table, work backwards, guess and check).', 'Check your answer against every clue.', 'Be ready to teach one card to the group in two sentences.'],
+    warmGame: 'Mix-up relay. Six cards from earlier lessons (a quick question each). Read a card; a volunteer answers and invites the next volunteer. You may say pass once.',
+    warmQs: [['What is 3/4 of 48?', '36'], ['A tap fills 6 litres in 2 minutes. How long to fill 45 litres?', '15 minutes'], ['Two angles on a straight line are 65° and ___', '115°'], ['Next in the pattern: 5, 8, 11, 14, __', '17']],
+    expSetup: ['Your pair gets ONE of the 4 puzzle cards. Work in pairs.', 'Write your answer, and write HOW you started (draw, list, table, work backwards, guess and check).', 'Check your answer against every clue.', 'Be ready to teach your card to the group in two sentences.'],
     expPic: 'four puzzle cards laid out on a desk: a number machine, a 3 by 3 logic grid, a grid of squares and two number boxes.',
     expAsk: [['Card A: a number is doubled, 7 is added, the answer is divided by 3, giving 5. What was the number?', '4 (work backwards: 5 × 3 = 15, 15 − 7 = 8, 8 ÷ 2 = 4).'], ['Card B: Ali, Ben and Mei have a cat, a dog and a fish. Ali has no dog. Ben has no cat and no dog. Who has what?', 'Ben has the fish, Ali the cat, Mei the dog.'], ['Card D: two numbers add to 20 and differ by 6. What are they?', '13 and 7 (guess and check, or take away the 6 and share: 14 ÷ 2 = 7, then 7 + 6 = 13).']],
     mini1: { head: 'Working backwards: spent 1/4, then $10, then half of the rest. $13 left.', body: ['Draw it: start, then each step. Work back from the end.', '$13 left is half of the rest, so the rest was $26. Before lunch: 26 + 10 = 36.', '$36 is 3/4 of the money, so 1/4 is $12 and all of it is $48.'], ans: '$48. Check: 48 − 12 = 36, 36 − 10 = 26, 26 ÷ 2 = 13 ✓' },
@@ -74,8 +76,8 @@ module.exports = {
     keyBig: 'Draw it, list it, make a table, work backwards, guess and check or suppose, use a logic grid. Then explain why your start works.',
     keySmall: 'Check your answer against EVERY clue, not just one.',
     brk: 'Puzzle stretch: stand up and show a 3 by 3 grid with your fingers. How many squares can you find on it? Count by size and tell your neighbour.',
-    ws1: 'Page 1, in pairs: Q1 a food logic grid, Q2 a money puzzle (work backwards), Q3 two amounts with a model.',
-    ws2: 'Page 2, on your own: Q4 how many squares, Q5 who broke the vase, Q6 ages. Say which start you used.'
+    ws1: 'Page 1, in pairs: Q1 a food logic grid, Q2 a money puzzle (work backwards). Q3, two amounts with a model, is printed on page 1 but done in the page 2 time.',
+    ws2: 'Page 2, on your own: Q3 two amounts with a model (from page 1), Q4 (a) how many squares (Q4 (b) (c), Q5 who broke the vase and Q6 ages are take-home). Say which start you used.'
   },
 
   qbank: {
@@ -88,7 +90,7 @@ module.exports = {
       { q: 'Pens cost $2 and pads cost $3. Ben buys 10 items and pays $24. How many pads?', a: '4 pads and 6 pens (all pens would be $20; each pad instead of a pen adds $1).' }
     ],
     stretch: [
-      { q: 'Siti spent 2/5 of her money, then 1/3 of what was left. She had $24 left at the end. How much did she start with?', a: '$60. Work backwards: $24 is 2/3 of what was left, so that was $36; $36 is 3/5 of her money, so 1/5 is $12 and she started with $60. Check: 60 − 24 = 36, 36 − 12 = 24.' },
+      { q: 'Siti spent 2/5 of her money, then 1/3 of what was left. She had $24 left at the end. How much did she start with?', fig: FG.barModel({ left: 20, rowH: 34, rows: [{ segs: [{ u: 2, f: 'shade', t: 'spent 2/5' }, { u: 3, t: 'the rest' }] }, { off: 2, segs: [{ u: 1, f: 'dots', t: '1/3' }, { u: 2, t: '$24 left' }] }], ann: [{ k: 'brace', row: 0, from: 0, to: 5, t: '? at the start' }], label: 'Not exactly to scale. Siti’s money bar: 2 fifths spent. The rest is cut in three: one third of it is spent next and the other two thirds, $24, are left.' }), a: '$60. Work backwards: $24 is 2/3 of what was left, so that was $36; $36 is 3/5 of her money, so 1/5 is $12 and she started with $60. Check: 60 − 24 = 36, 36 − 12 = 24.' },
       { q: 'How many 3-digit numbers have digits that add up to 5? List them all in order.', a: '15 numbers: 104, 113, 122, 131, 140, 203, 212, 221, 230, 302, 311, 320, 401, 410, 500.' },
       { q: 'The sum of two consecutive numbers (numbers that are next to each other, like 40 and 41) is 145. What are the two numbers?', a: '72 and 73 (145 is 1 more than twice 72).' },
       { q: 'A snail climbs 3 m up a 10 m wall each day, and slips down 2 m each night. On which day does it reach the top?', a: 'Day 8. After 7 days and nights it is at 7 m. On day 8 it climbs 3 m to reach 10 m before it can slip.' },
@@ -123,33 +125,38 @@ module.exports = {
     // Q2 backwards (was Q1)
     W.push(H.q(2, 'Working backwards. Ali spent 1/3 of his money on a book. He then spent $12 on lunch. He spent half of what was left on a gift. Ali had $15 left at the end. How much money did he start with?', { before: 20, keepNext: true }));
     W.push(H.p(['<b style="color:#1F7A6F">Start here:</b> write the steps in order. Then undo the LAST step first.'], { after: 20 }));
-    W.push(...H.lines(1));
+    W.push(H.fig(FG.barModel({ rowH: 34, left: 150, rows: [
+      { name: 'Start', segs: [{ u: 2, t: 'book 1/3' }, { u: 4, t: 'the rest' }], note: '' },
+      { name: 'After the book', off: 2, segs: [{ u: 1.2, t: '$12' }, { u: 2.8, t: 'what was left' }] },
+      { name: 'After lunch', off: 3.2, segs: [{ u: 1.4, t: 'gift' }, { u: 1.4, t: '$15 left' }] }],
+      ann: [{ k: 'brace', row: 0, from: 0, to: 6, t: '? at the start' }],
+      label: 'Not to scale. The start bar is cut into a book part (one third) and the rest. The rest is cut into $12 for lunch and what was left. What was left is cut into two halves: the gift and $15 left.' })));
     W.push(H.ans('Answer:  $'));
     // Q3 model
-    W.push(H.q(3, 'Draw a model. Mei and Ravi have $115 altogether. Ravi has $10 more than 3/4 of Mei’s money. How much money does each have? Check your answer against BOTH clues.', { keepNext: true }));
+    W.push(H.q(3, [LATER, 'Draw a model. Mei and Ravi have $115 altogether. Ravi has $10 more than 3/4 of Mei’s money. How much money does each have? Check your answer against BOTH clues.'], { pb: true, before: 0, keepNext: true }));
     W.push(H.p(['<b style="color:#1F7A6F">Start here:</b> Mei is 4 equal units. How many units is 3/4 of Mei’s? Where does the $10 go?'], { after: 20 }));
-    W.push(...H.lines(2));
+    W.push(H.fig(FG.barModel({ rowH: 34, left: 70, right: 160, rows: [{ name: 'Mei', segs: [{ u: 1 }, { u: 1 }, { u: 1 }, { u: 1 }] }, { name: 'Ravi', segs: [{ u: 1 }, { u: 1 }, { u: 1 }, { u: 1, f: 'shade', t: '$10' }] }],
+      ann: [{ k: 'rbrace', r1: 0, r2: 1, at: 4, t: '$115' }],
+      label: 'Two bars. Mei has 4 equal units. Ravi has 3 of the same units plus a shaded extra part of $10. A brace on the right marks $115 altogether.' })));
     W.push(H.ans('Mei:  $____________    Ravi:  $____________', 0));
 
     // ---- page 2 ----
-    W.push(H.q(4, 'How many squares of ALL sizes can you find in this 3 by 4 grid? Count by size so you do not miss any.', { pb: true, before: 0, keepNext: true }));
+    W.push(H.q(4, 'How many squares of ALL sizes can you find in this 3 by 4 grid? Count by size so you do not miss any.', { keepNext: true }));
     W.push(H.fig(gridSvg()));
     W.push(H.sub('a', 'Squares of size 1 by 1:   ____________'));
-    W.push(H.sub('b', 'Squares of size 2 by 2:   ____________    Squares of size 3 by 3:   ____________'));
-    W.push(H.sub('c', 'How many squares altogether? How do you know there are none bigger?', { after: 20 }));
-    W.push(...H.lines(1));
+    W.push(H.sub('b', [TKP, 'Squares of size 2 by 2:   ____________    Squares of size 3 by 3:   ____________']));
+    W.push(H.sub('c', [TKP, 'How many squares altogether? How do you know there are none bigger?  ____________'], { after: 20 }));
     // Q5 truth
-    W.push(H.q(5, 'Ali, Ben and Mei were playing. One of them broke a vase. Ali says, “Ben broke it.” Ben says, “Mei broke it.” Mei says, “I did not break it.” Exactly ONE of the three children is lying. Who broke the vase? Try each child and count the liars.', { keepNext: true }));
+    W.push(H.q(5, [TKQ, 'Ali, Ben and Mei were playing. One of them broke a vase. Ali says, “Ben broke it.” Ben says, “Mei broke it.” Mei says, “I did not break it.” Exactly ONE of the three children is lying. Who broke the vase? Try each child and count the liars.'], { keepNext: true }));
     { const ws = [2600, 2400, 2400, 2500];
-      W.push(H.tbl(ws, [H.row(['If the vase was broken by …', 'Is Ali lying?', 'Is Ben lying?', 'Is Mei lying?'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'D9D9D9', h: 40 }))),
-        ...['Ali', 'Ben', 'Mei'].map(n => H.row([H.cell(n, ws[0], { bold: true, h: 40 }), ...ws.slice(1).map(w => H.cell('', w, { h: 40 }))]))])); }
+      W.push(H.tbl(ws, [H.row(['If the vase was broken by …', 'Is Ali lying?', 'Is Ben lying?', 'Is Mei lying?'].map((s, i) => H.cell(s, ws[i], { bold: true, fill: 'D9D9D9', h: 36 }))),
+        ...['Ali', 'Ben', 'Mei'].map(n => H.row([H.cell(n, ws[0], { bold: true, h: 30 }), ...ws.slice(1).map(w => H.cell('', w, { h: 30 }))]))])); }
     W.push(H.p('Answer:  ______________________ broke the vase.', { before: 30, after: 10 }));
     // Q6 ages
-    W.push(H.q(6, 'Mum is 41 years old and Mei is 9 years old.', { keepNext: true }));
+    W.push(H.q(6, [TKQ, 'Mum is 41 years old and Mei is 9 years old.'], { keepNext: true }));
     W.push(H.sub('a', 'In how many years will Mum be exactly 3 times as old as Mei? Show your table or working.', { after: 20 }));
-    W.push(...H.lines(2));
-    W.push(H.sub('b', 'Which start did you use? Why did you choose it?', { after: 20 }));
     W.push(...H.lines(1));
+    W.push(H.sub('b', 'Which start did you use? Why did you choose it?  ______________________________', { after: 20 }));
     return W;
   }
 };

@@ -1,4 +1,6 @@
 // Math Inquirers P5 — Lesson 7: Percentage Puzzles (percentage of a quantity, discount, GST, increase and decrease, percentage of a remainder)
+const FG = require('../../levels/figs_l4_6.js');
+const { TKQ, TKP, LATER } = require('./take.js');
 // Every answer below was worked out and checked with exact fractions in Python. GST in Singapore is 9%.
 
 const N = '#1B2A49', Y = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WH = '#FFFFFF';
@@ -33,7 +35,7 @@ const barFig = () => {
 module.exports = {
   lesson: {
     n: 7, week: 4, session: 'A', title: 'Percentage Puzzles', topic: 'Percentage',
-    objective: 'Find any percentage of an amount by building it from 10%, 5% and 1%; work out a discount and then 9% GST on the sale price; find a percentage of a remainder; and spot the classic percentage traps. (A preview of P6, on the Think Harder page: find a percentage increase or decrease by comparing the change with the original amount.)',
+    objective: 'Find any percentage of an amount by building it from 10%, 5% and 1%; work out a discount and then 9% GST on the sale price; find a percentage of a remainder; and spot the classic percentage traps. (A puzzle that goes further, on the Think harder page: find a percentage increase or decrease by comparing the change with the original amount.)',
     skills: 'Asking "percentage of what?", building from 10% and 1%, bar models, making a table, comparing deals, explaining a trap',
     materials: 'Mini whiteboard and marker, workbook, pencil, a hundred-square page (or squared paper), a calculator for checking only at the end of each page.',
     online: 'Children keep the workbook and a whiteboard in front of the camera. The tutor screen-shares the slides and draws bar models with the annotation tool. Calculators stay closed until the check-together slides.',
@@ -50,8 +52,8 @@ module.exports = {
       ['Q3', '(a) $100 (25% of $80 = $20)  (b) $80 (20% of $100 = $20)  (c) No. The 20% is taken from $100, not from $80. 20% of $100 is $20, the same $20 that was added, so the price is back to $80, not $84.'],
       ['Q4', '(a) $24 (20% of $120)  (b) $24 (25% of the $96 left)  (c) $72  (d) 60%. The 25% is of the $96 left, not of $120, so she spent $48 of $120 = 40% and 60% is left ($72 out of $120).'],
       ['Q5', 'Girls 24, boys 16. Glasses: girls 6 (25% of 24), boys 8 (50% of 16), whole class 14.  (a) 35% (14 out of 40)'],
-      ['Think Harder Q1 (a P6 preview: percentage change)', '(a) 25% ($1 out of $4)  (b) 20% ($1 out of $5)  (c) A percentage change compares the change with the starting amount. $1 out of $4 is a bigger part than $1 out of $5.'],
-      ['Think Harder Q2', '(a) Shop X $45 (pays for 3 boxes); Shop Y $42 (30% of $60 = $18 off). Shop Y is the better buy, by $3.  (b) 25% (1 box free out of 4, $15 off $60)']
+      ['Think harder A1 (a puzzle that goes further: percentage change)', '(a) 25% ($1 out of $4)  (b) 20% ($1 out of $5)  (c) A percentage change compares the change with the starting amount. $1 out of $4 is a bigger part than $1 out of $5.'],
+      ['Think harder A2', '(a) Shop X $45 (pays for 3 boxes); Shop Y $42 (30% of $60 = $18 off). Shop Y is the better buy, by $3.  (b) 25% (1 box free out of 4, $15 off $60)']
     ]
   },
 
@@ -59,7 +61,7 @@ module.exports = {
     hook: ['Welcome back, inquirers! Look around any shop in Singapore and you will see percentages everywhere: 20% off, 9% GST, prices up 10%. Shops are very good at percentages. Today we make sure we are better.', 'Notice it, test it, explain why. Today the big question is always: percentage of WHAT?'],
     warmIntro: ['Here are three hundred-squares. Each one has 100 small squares. Write how much is shaded as a percentage, and how much is NOT shaded. Whiteboards up when I say go.', 'Did anyone find the "not shaded" part without counting? How?'],
     predict: ['A bicycle costs $200. The price goes up by 10%. Later the new price goes down by 10%. What is the price now? Write your prediction before you work anything out.', 'Thumbs up if you think it is back to $200. Thumbs down if you think it is less. Sideways if you think it is more.'],
-    exploreHints: ['Stuck: what is 10% of $200? Add it on. Now what is 10% of the NEW price?', 'Got $200: check which amount you took 10% of the second time. Was it $200 or $220?', 'Finished early: try up 50% then down 50%. Is the gap bigger or smaller than with 10%?'],
+    exploreHints: ['Stuck: what is 10% of $200? Add it on. Now what is 10% of the NEW price?', 'Got $200: check which amount you took 10% of the second time. Was it $200 or $220?', 'If a pair wants more: try up 50% then down 50%. Is the gap bigger or smaller than with 10%?'],
     think: ['“I want 45% of $60. 10% is one tenth, so I divide by 10: $6. Half of that is 5%: $3. 45% is four 10%s and one 5%: $24 + $3 = $27.”', '“98% is nearly all of it. So I find what is missing: 2%. 1% of $60 is 60 cents, so 2% is $1.20, and 98% is $60 − $1.20 = $58.80.”', '“For the fan I take off the discount first: 15% of $120 is $18, so the sale price is $102. The GST is 9% of $102, not of $120. 10% of $102 is $10.20, 1% is $1.02, so 9% is $9.18. I pay $111.18.”'],
     circulate: ['Ask: “Percentage of what? Point to the whole.”', 'Ask: “Can you build that percentage from 10%, 5% and 1%?”', 'Ask: “After the first change, what is the new whole?”'],
     hints: ['Hint 1: “Find 10% first by dividing by 10.”', 'Hint 2: “Draw a bar for the whole and cut it into 10 equal parts.”', 'Hint 3: “Write what the whole is BEFORE you work out each percentage.”'],
@@ -71,18 +73,18 @@ module.exports = {
   deck: {
     today: 'Build any percentage from 10%, 5% and 1%, work out discounts and GST, and catch the percentage traps.',
     warmGame: 'Hundred-square snap. Three 10 by 10 squares have part shaded (30, 45 and 64 small squares). Write the percentage shaded and the percentage not shaded before the reveal.',
-    warmQs: [['50% of $90', '$45'], ['10% of 350', '35'], ['25% of 48', '12'], ['1% of $700', '$7'], ['3 out of 20 as a percentage', '15%']],
+    warmQs: [['50% of $90', '$45'], ['10% of 350', '35'], ['25% of 48', '12'], ['1% of $700', '$7']],
     expSetup: ['A bicycle costs $200. Predict: if the price goes up 10% and then down 10%, what is it?', 'Work it out: up 10% first. Then take 10% of the NEW price off.', 'Now try it the other way: down 10% first, then up 10%.', 'Compare both answers with your prediction. What do you notice?'],
     expPic: 'a $200 price tag, an arrow marked "+10%" to a tag with a question mark, then an arrow marked "−10%" to another tag with a question mark.',
-    expAsk: [['Is the price back to $200?', 'No: $200 → $220 → $198.'], ['Does the order matter?', 'No: $200 → $180 → $198 too.'], ['Why is it $2 less?', 'The 10% taken off is 10% of $220 = $22, which is more than the $20 that was added.']],
+    expAsk: [['Is the price back to $200?', 'No: $200 → $220 → $198.'], ['Why is it $2 less?', 'The 10% taken off is 10% of $220 = $22, which is more than the $20 that was added.']],
     mini1: { head: 'Build it from 10%, 5% and 1%', body: ['Find 45% and 98% of $60.', '10% = $6, 5% = $3, so 45% = $24 + $3.', '1% = $0.60, so 98% = $60 − $1.20.'], ans: '45% of $60 = $27; 98% of $60 = $58.80.' },
     mini2: { head: 'Discount first, then GST', body: ['A fan costs $120 before GST. It is sold at 15% off. Then 9% GST is added.', '15% of $120 = $18, so the sale price is $102.', '9% of $102 = $10.20 − $1.02.'], ans: 'GST $9.18; you pay $111.18.' },
     keyHead: 'Key idea: percentage of WHAT?',
     keyBig: 'Build any percentage from 10%, 5% and 1%. Before each step, ask: percentage of what?',
     keySmall: 'Take the discount off first, then work out GST on the sale price. After a change, the new amount is the new whole.',
     brk: 'Percent stretch. The tutor calls out a percentage: 100% is standing tall with arms up, 50% is hands on your head, 25% is hands on your knees, 0% is sitting down. Then 75%? (hands on shoulders).',
-    ws1: 'Page 1, in pairs: Q1 build percentages of $240, Q2 two shops and GST, Q3 up 25% then down 20%.',
-    ws2: 'Page 2, on your own: Q4 percentage of a remainder, Q5 glasses in a class. Think Harder: Q1 percentage increase and decrease (a P6 preview), Q2 the better deal.'
+    ws1: 'Page 1, in pairs: Q1 build percentages of $240, Q3 up 25% then down 20% (Q2, two shops and GST, is printed on page 1 but done in the page 2 time).',
+    ws2: 'Page 2, on your own: Q2 two shops and GST, Q4 (a) to (c) percentage of a remainder (Q4 (d) and Q5, glasses in a class, are take-home). Think harder: A1 percentage increase and decrease (a puzzle that goes further), A2 the better deal.'
   },
 
   qbank: {
@@ -95,7 +97,7 @@ module.exports = {
       { q: 'A notebook costs $20 before GST. GST is 9%. 1% of $20 is 20¢. How much is the GST? How much do you pay altogether?', a: 'GST is 9 × 20¢ = $1.80; you pay $21.80.' }
     ],
     stretch: [
-      { q: 'At a hawker centre, a plate of chicken rice went up from $4 to $5. A month later, it went back down from $5 to $4. (a) Find the percentage increase from $4 to $5. (b) Find the percentage decrease from $5 to $4. (c) Both changes are $1. Why are the two percentages different? Hint: percentage change = the change out of the amount you START with.', a: '(a) 25% ($1 out of $4)  (b) 20% ($1 out of $5)  (c) Each change is compared with its own starting amount: $1 out of $4 is a bigger part than $1 out of $5. (Percentage change is a P6 skill: a preview.)' },
+      { q: 'At a hawker centre, a plate of chicken rice went up from $4 to $5. A month later, it went back down from $5 to $4. (a) Find the percentage increase from $4 to $5. (b) Find the percentage decrease from $5 to $4. (c) Both changes are $1. Why are the two percentages different? Hint: percentage change = the change out of the amount you START with.', a: '(a) 25% ($1 out of $4)  (b) 20% ($1 out of $5)  (c) Each change is compared with its own starting amount: $1 out of $4 is a bigger part than $1 out of $5. (This is a puzzle that goes further than the lesson.)' },
       { q: 'A box of cereal costs $15 in two shops. Shop X: "Buy 3, get 1 free!"  Shop Y: "30% off every box!"  Mei buys 4 boxes. (a) How much does she pay at each shop? Which is the better buy, and by how much? (b) Shop X\'s deal is really how many percent off?', a: '(a) Shop X $45 (she pays for 3 boxes); Shop Y $42 (30% of $60 = $18 off). Shop Y is the better buy, by $3.  (b) 25% off (1 box free out of 4, $15 off $60)' },
       { q: 'Siti says, "15% of $80 is $8 + $4 = $12." Explain her method. Use it to find 15% of $46.', a: 'She found 10% ($8) and 5% (half of 10%, $4) and added them. 15% of $46 = $4.60 + $2.30 = $6.90.' },
       { q: 'A $250 bicycle is sold at a 12% discount. How much money is saved? What is the sale price?', a: 'Saved $30 (10% = $25, 2% = $5); sale price $220.' },
@@ -125,7 +127,7 @@ module.exports = {
     ]),
     H.sub('a', 'How did you find 35% from the boxes you already had?  ____________________________', { after: 40 }),
     H.sub('b', 'A quick way to find 99% of $240:  ____________________________', { after: 40 }),
-    H.q(2, 'Mei wants a rice cooker. Two shops sell the same one. GST is 9%.', { keepNext: true }),
+    H.q(2, [LATER, 'Mei wants a rice cooker. Two shops sell the same one. GST is 9%.'], { keepNext: true }),
     H.fig(shopsFig()),
     H.p(['<b style="color:#1F7A6F">Start here:</b> find 10% of Shop A’s price by dividing by 10. Then 20% is double that.'], { after: 20 }),
     H.sub('a', 'Shop A: the price after 20% off, before GST.      ____________'),
@@ -133,6 +135,8 @@ module.exports = {
     H.sub('c', 'Shop A: the price Mei pays.      ____________'),
     H.sub('d', 'Which shop is cheaper? By how much?      ________________________'),
     H.q(3, 'A T-shirt cost $80. The shop raised its price by 25%. A month later, it cut the new price by 20%.', { keepNext: true }),
+    H.fig(FG.barModel({ left: 130, rowH: 36, rows: [{ name: 'At first', segs: [{ u: 4, t: '$80 = 100%' }] }, { name: 'After the rise', segs: [{ u: 4 }, { u: 1, f: 'shade', t: '+25%' }] }, { name: 'The 20% cut', segs: [{ u: 5, f: 'blank', t: 'cut 20% of THIS price' }] }],
+      label: 'A bar for the $80 price. Under it a longer bar with a shaded extra part for the 25% rise. Under that a dashed empty bar as long as the new price for the child to work out the 20% cut.' })),
     H.sub('a', 'The price after the 25% rise:   ____________          (b)  The price after the 20% cut:   ____________'),
     H.sub('c', 'Siti says, "Up 25% and then down 20% is the same as up 5%, so the final price is $84." Is she right? Explain.', { after: 40 }),
     ...H.lines(1),
@@ -141,9 +145,10 @@ module.exports = {
     H.p(['<b style="color:#1F7A6F">Start here:</b> 10% of $120 is $______, so 20% of $120 is $______.'], { after: 20 }),
     H.fig(barFig()),
     H.sub('a', 'The bag cost  ________        (b)  The book cost  ________        (c)  Money left  ________'),
-    H.sub('d', 'Ben says, "She spent 20% + 25% = 45%, so 55% of her money is left." What percentage of her money is really left? Explain.', { after: 40 }),
+    H.sub('d', [TKP, 'Ben says, "She spent 20% + 25% = 45%, so 55% of her money is left." What percentage of her money is really left? Explain.'], { after: 40 }),
     ...H.lines(1),
-    H.q(5, 'There are 40 pupils in a class. 60% of them are girls. 25% of the girls and 50% of the boys wear glasses. Fill in the table.', { keepNext: true }),
+    H.q(5, [TKQ, 'There are 40 pupils in a class. 60% of them are girls. 25% of the girls and 50% of the boys wear glasses. Fill in the table.'], { keepNext: true }),
+    H.p(['<b style="color:#1F7A6F">Start here:</b> 10% of 40 pupils is ______, so 60% (the girls) is ______ pupils. The rest are boys.'], { after: 20 }),
     H.tbl([3300, 2200, 2200, 2200], [
       H.row([' ', 'Girls', 'Boys', 'Whole class'].map((s, i) => H.cell(s, i ? 2200 : 3300, { bold: true, fill: 'D9D9D9', h: 40 }))),
       H.row(['Number of pupils', ' ', ' ', '40'].map((s, i) => H.cell(s, i ? 2200 : 3300, { bold: !i, h: 60 }))),

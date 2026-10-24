@@ -79,7 +79,7 @@ def check2(sid, time, title, rows, notes, lw=230, size=34, gap=24, top=250):
     for a, b, nl in rows:
         hgt = int(nl * size * 1.25 + 36)
         body += pin(128, y, lw - 20, f'<p style="font-size:34px;font-weight:800;color:{TEAL}">{E(a)}</p>', None, WHITE, 20, '18px 24px')
-        body += pin(128 + lw, y, 1664 - lw - 52, f'<p style="font-size:{size}px;font-weight:800;line-height:1.25">{E(b)}</p>', 'pop', YEL, 20, '18px 26px')
+        body += pin(128 + lw, y, 1664 - lw - 52, f'<p style="font-size:{size}px;font-weight:800;line-height:1.25">{E(b)}</p>', None, YEL, 20, '18px 26px')
         y += hgt + gap
     assert y <= 940, (sid, y)
     return sec(sid, time, body, notes)
@@ -136,24 +136,24 @@ inner = (f'<p style="font-size:32px;font-weight:700;letter-spacing:4px;color:{YE
          f'<p style="font-size:44px;color:#C9D4EC">Clock (modular) arithmetic</p>'
          f'<div style="background:#26385F;border-radius:24px;padding:40px;display:flex;flex-direction:column;gap:12px"><p style="font-size:28px;font-weight:700;letter-spacing:3px;color:{YEL}">TODAY WE WILL</p><p style="font-size:44px;font-weight:600">{E(DK["today"])}</p></div>')
 put('p6l8-title', dark('p6l8-title', NAVY, inner,
-    f'Objective: {L["objective"]} Materials: {L["materials"]} Online: {L["online"]} Scratch set-up: before the lesson, build the starter project once from the whole-machine slide: a list called alphabet holding the letters A to Z (add each letter with the add to list block), and everything in the machine except the 3 cipher blocks. Save it as an .sb3 file and share the FILE, not only a link, so children load it with File, Load from your computer. Scratch lists count from item 1, so letter number n (A = 0) is item n + 1. The mod block is in the Operators menu. List blocks in Scratch are red-orange and live in the Variables palette; our slides draw them as simple coloured shapes, so find blocks by the category name on the left, not by colour. '
+    f'Objective: {L["objective"]} Materials: {L["materials"]} Online: {L["online"]} Scratch set-up: the starter project is the file L8_Code_Machine.sb3 (sent to families with the workbook; the tutor keeps a copy and the answer key L8_Code_Machine_ANSWER.sb3): a list called alphabet holding the letters A to Z, and everything in the machine except the 3 cipher blocks. Children load it with File, Load from your computer. If a child has no file, build it from the whole-machine slide (add each letter with the add to list block). Scratch lists count from item 1, so letter number n (A = 0) is item n + 1. The mod block is in the Operators menu. List blocks in Scratch are red-orange and live in the Variables palette; our slides draw them as simple coloured shapes, so find blocks by the category name on the left, not by colour. '
     'Time plan: warm-up 0 to 10, explore 10 to 25, teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 75 with short teaching before each page and a check-together slide after it, talk time 75 to 82, exit ticket 82 to 90.'))
 
 # ================= 2. warm1: clock jumps =================
 body = h2('Warm-up: clock jumps') + stitle('Answer on your whiteboard. Which time will it be?')
 jumps = [('6 o’clock', 3, 9, '9 o’clock'), ('9 o’clock', 5, 14, '2 o’clock'), ('11 o’clock', 4, 15, '3 o’clock')]
 body += pin(128, 270, 420, SV(420, 420, clock(9), 'A clock showing 9 o’clock'))
-rows = [('1.', 'It is 7 o’clock. 3 hours later?', '10 o’clock'), ('2.', 'It is 10 o’clock. 4 hours later?', '2 o’clock'), ('3.', 'It is 3 o’clock. 5 hours ago?', '10 o’clock'), ('4.', 'It is 8 o’clock. 12 hours later?', '8 o’clock'), ('5.', 'It is Monday. 3 days later? 10 days later?', 'Thu, Thu')]
+rows = [('1.', 'It is 7 o’clock. 3 hours later?', '10 o’clock'), ('2.', 'It is 10 o’clock. 4 hours later?', '2 o’clock'), ('3.', 'It is 3 o’clock. 5 hours ago?', '10 o’clock'), ('4.', 'It is 8 o’clock. 12 hours later?', '8 o’clock')]
 for i, (a, b, c) in enumerate(rows): body += qrow(620, 290 + i * 118, 760, a, b, 34) + answer(1420, 290 + i * 118, 372, c)
 put('p6l8-warm1', sec('p6l8-warm1', '0–5 MIN', body,
-    'Minutes 0 to 5. Show each question, give thinking time, whiteboards up together, then click. 1) 10 o’clock. 2) 10 + 4 = 14, past 12, so 2 o’clock. 3) 3 − 5 = −2: go back 3 to 12, then 2 more to 10. 4) 12 hours is a full turn: back to 8. 5) Monday + 3 = Thursday. 10 days: one full week (7) and 3 more: Thursday again. Ask: "What do you do when you go past 12?" (start again at 1). This wrapping round is today\'s big idea.'))
+    'Minutes 0 to 5. Four calls only (the day-of-the-week jump was cut). Show each question, give thinking time, write it, say the answer together on three, then click. 1) 10 o’clock. 2) 10 + 4 = 14, past 12, so 2 o’clock. 3) 3 − 5 = −2: go back 3 to 12, then 2 more to 10. 4) 12 hours is a full turn: back to 8. Ask: "What do you do when you go past 12?" (start again at 1). This wrapping round is today\'s big idea.'))
 
 # ================= 3. warm2 =================
 qs = [(f'{i+1}.', q, a) for i, (q, a) in enumerate(DK['warmQs'])]
 body = h2('Quick questions: remainders')
 for i, (a, b, c) in enumerate(qs): body += qrow(128, 250 + i * 128, 1250, a, b, 34) + answer(1420, 250 + i * 128, 372, c)
 put('p6l8-warm2', sec('p6l8-warm2', '5–10 MIN', body,
-    'Minutes 5 to 10. Whiteboards, then click. 1) 17 = 3 × 5 + 2. 2) 30 = 4 × 7 + 2. 3) 26 ÷ 26 = 1 remainder 0. 4) 40 = 3 × 12 + 4. 5) 7 = 2 × 3 + 1 and 10 = 3 × 3 + 1. Today we call the remainder "mod": 17 mod 5 = 2. Ask: "What are the only possible remainders when you divide by 5?" (0, 1, 2, 3, 4).'))
+    'Minutes 5 to 10. Whiteboards, then click. Three questions only. 1) 17 = 3 × 5 + 2. 2) 26 ÷ 26 = 1 remainder 0. 3) 40 = 3 × 12 + 4. Today we call the remainder "mod": 17 mod 5 = 2. Ask: "What are the only possible remainders when you divide by 5?" (0, 1, 2, 3, 4).'))
 
 # ================= 4. explore1 =================
 lst = ''.join(f'<li>{E(x)}</li>' for x in DK['expSetup'])
@@ -161,11 +161,11 @@ body = h2('Explore: make a code strip')
 body += card(chip('EXPLORE, IN PAIRS') + f'<ol style="font-size:32px;font-weight:600;padding-left:48px;display:flex;flex-direction:column;gap:6px;line-height:1.25">{lst}</ol>', extra='padding:24px 40px')
 body += card(strip_svg(3, (23, 24, 25), 1560, 'Shift-3 code strip: the top row is A to Z, the bottom row starts at D. X, Y and Z are highlighted and sit above A, B and C.'), extra='padding:14px 28px')
 put('p6l8-explore1', sec('p6l8-explore1', '10–15 MIN', body,
-    'Minutes 10 to 15 (pairs keep going until 25). Children write A to Z on paper, then the alphabet again underneath, starting with D under A. They code their first names, swap, decode, then decode PDWK LV IXQ (MATH IS FUN). The highlighted X, Y, Z show the key moment: the bottom row runs out, so it wraps round to A, B, C. Do not explain this yet: ask "What happened at the end?" Online: children hold their coded name on paper up to the camera (or the tutor reads out the coded names) and partners decode on paper. Finished early: invent your own shift and send a coded word with one clue.'))
+    'The shifted alphabet strip is SHOWN on the slide (A above D), so nobody copies it out (this saves about 1.5 minutes). Children code their first names, swap, decode, then decode PDWK LV IXQ (MATH IS FUN). The highlighted X, Y, Z show the key moment: the bottom row runs out, so it wraps round to A, B, C. Do not explain this yet: ask "What happened at the end?" Online: the tutor reads out the coded names and partners decode on paper. Finished early: invent your own shift and send a coded word with one clue.'))
 
 # ================= 5. explore2 =================
 body = h2('Explore: talk about it') + ''.join(card(p(num(f'{i+1}.', q), 40, 600, raw=True)) for i, (q, a) in enumerate(DK['expAsk']))
-put('p6l8-explore2', sec('p6l8-explore2', '15–25 MIN', body, 'Minutes 15 to 25. Gather the pairs. Answers: ' + '  '.join(f'{i+1}) {a}' for i, (q, a) in enumerate(DK['expAsk'])) + ' Link back to the clock: letters are a 26-hour clock.'))
+put('p6l8-explore2', sec('p6l8-explore2', '15–25 MIN', body, 'Two questions (the shift-of-26 question is cut). Gather the pairs. Answers: ' + '  '.join(f'{i+1}) {a}' for i, (q, a) in enumerate(DK['expAsk'])) + ' Link back to the clock: letters are a 26-hour clock.'))
 
 # ================= 6. teach1: clock arithmetic and mod =================
 W0 = 420
@@ -194,16 +194,6 @@ put('p6l8-we1', sec('p6l8-we1', '27–29 MIN', body,
     'Click through; ask the group to predict before each reveal. Think-aloud: "45 days is 6 whole weeks and 3 days. The whole weeks do nothing, because after 7 days it is the same day again. So only the remainder matters: 3 days after Thursday is Sunday." Watch for: counting today as day 1 (that gives Saturday). Ask: "What day was it 45 days ago?" (Thursday − 3 = Monday).'))
 
 # ================= 8. try1 =================
-put('p6l8-try1', qa_slide('p6l8-try1', '29–30 MIN', 'Your turn: clocks and days', 'Whiteboards. Use mod.',
-    [('a', '10 o’clock + 27 hours. What time? (27 mod 12 = ?)', '1 o’clock'), ('b', 'Today is Wednesday. What day is it in 20 days?', 'Tuesday'), ('c', 'It is 2 o’clock. What time was it 5 hours ago?', '9 o’clock')],
-    'Whiteboards, then click. a) 27 mod 12 = 3, 10 + 3 = 13, 13 − 12 = 1 o’clock. b) 20 mod 7 = 6, Wednesday + 6 = Tuesday (Thu, Fri, Sat, Sun, Mon, Tue). c) 2 − 5 = −3, below 0 so add 12: 9. Going backwards: if you go below the start, add a full turn.'))
-
-# ================= 9. we2: Caesar =================
-body = h2('Caesar code: letters are numbers') + stitle('Letters on a 26-hour clock: A = 0, B = 1 … Z = 25. Code ZOO with shift 5.')
-body += pin(128, 300, 1664, strip_svg(5, (25, 14), 1560, 'Code strip shift 5: Z and O are highlighted on top, with their code letters E and T underneath'), None, WHITE, 20, '16px 52px')
-body += step(1, 'Z = 25.  25 + 5 = 30.  There is no letter 30, so wrap round: 30 mod 26 = 4, and 4 is E.', top=560, size=32)
-body += step(2, 'O = 14.  14 + 5 = 19, and 19 is T.   Second O: also T.', top=665, size=32)
-body += answer(128, 790, 1664, 'ZOO becomes ETT      code number = (letter number + shift) mod 26')
 put('p6l8-we2', sec('p6l8-we2', '29–31 MIN', body,
     'Click through. Think-aloud: "' + SC['think'][1].strip('“”') + '" Point out the highlighted letters on the strip: Z is above E, O above T. Ask: "Which letters wrap round with shift 5?" (V, W, X, Y, Z become A to E). Say: this is called a Caesar cipher after Julius Caesar, who used a shift of 3 to send orders. ' + PYNOTE))
 
@@ -219,23 +209,9 @@ body += step(1, 'A = 0.  0 − 4 = −4: below 0. Add 26: −4 + 26 = 22, and 22
 body += step(2, 'E = 4.  4 − 4 = 0, and 0 is A.      B = 1.  1 − 4 = −3, + 26 = 23, and 23 is X.', top=405, width=1664, size=32)
 body += answer(128, 510, 1664, 'AEB is WAX')
 body += pin(128, 610, 1100, blocks_svg(loop, 'Blocks: set n to (item number of the letter in alphabet) minus 1; set m to (n plus shift) mod 26; set code to join code and item (m plus 1) of alphabet', 24, 42), 'fade', WHITE, 24, '14px 24px')
-body += pin(1280, 640, 512, p('The Scratch code machine runs these 3 blocks for each letter. Lists start at item 1, so letter n is item n + 1.', 28, 700), 'fade', SOFT, 20, '18px 24px')
+body += pin(1280, 610, 512, p('The whole machine: the starter project has the list and the loop. You build these 3 blocks inside the if. The else copies spaces. Lists start at item 1: letter n is item n + 1.', 24, 700), 'fade', SOFT, 20, '14px 22px')
 put('p6l8-we3', sec('p6l8-we3', '32–33 MIN', body,
-    'Click through the decoding steps, then the Scratch blocks. Think-aloud: "' + SC['think'][2].strip('“”') + '" Decoding with shift 4 is the same as coding with shift 22, because 26 − 4 = 22. The blocks run once for each letter of the message: "for each letter" is a repeat loop. The next slide shows the whole machine. Build it live from the starter project and code HELLO. ' + PYNOTE))
-
-# ================= 11b. the whole code machine (loop + space check) =================
-full_prog = [('event', 'when green flag clicked'), ('var', 'set {shift} to {3}'), ('looks', 'ask {Message?} and wait'), ('var', 'set {code} to { }'), ('var', 'set {i} to {1}'),
-             ('ctrl', 'repeat {length of (answer)}', [('var', 'set {letter} to {letter (i) of (answer)}'),
-                 ('ctrl', 'if {(item # of (letter) in alphabet) > 0} then', [('var', 'set {n} to {(item # of (letter) in alphabet) − 1}'), ('var', 'set {m} to {(n + shift) mod 26}'), ('var', 'set {code} to {join (code) (item (m + 1) of alphabet)}')],
-                                                                              [('var', 'set {code} to {join (code) (letter)}')]),
-                 ('var', 'change {i} by {1}')]),
-             ('looks', 'say {code}')]
-body = h2('The whole code machine')
-body += pin(128, 250, 1180, blocks_svg(full_prog, 'The whole code machine: when green flag clicked; set shift to 3; ask Message and wait; set code to empty; set i to 1; repeat length of answer: set letter to letter i of answer; if item number of letter in alphabet is more than 0 then set n, set m, set code (the three cipher blocks) else set code to join code and letter; change i by 1; then say code', 20, 34), None, WHITE, 20, '10px 18px')
-body += pin(1360, 250, 384, p('The tutor’s starter project already has the list alphabet (A to Z) and everything except the 3 cipher blocks.', 26, 700), 'fade', SOFT, 20, '18px 24px')
-body += pin(1360, 560, 384, p('Your job: build the 3 blocks inside the if. The else copies spaces and other symbols across without coding them.', 26, 700), 'fade', WHITE, 20, '18px 24px')
-put('p6l8-teachloop', sec('p6l8-teachloop', '33–34 MIN', body,
-    'Show the whole machine once so children see where the 3 cipher blocks sit. This is more than 15 blocks, so the tutor gives the loop part pre-built in the starter project and children add only the three cipher blocks inside the if (set n, set m, set code). Walk through it in order: ask for the message; code starts empty; i counts the letters; repeat once for each letter of the answer; take letter i; if the letter is in the alphabet list (item # of is more than 0) code it, else copy it (this keeps spaces); add 1 to i; at the end say the code. Without the if, a space is not in the list, item # of gives 0, n becomes -1, and the space would turn into the letter at position shift - 1. Type messages in capital letters. In Scratch the list blocks (item # of, item of, length of list) are in the Variables palette; letter of and length of (a word) are in Operators. Build the starter once before the lesson from this slide and save it as an .sb3 file. A negative number mod 26 should also come out non-negative in Scratch (for example -4 mod 26 is 22): check this in the editor first.'))
+    'Click through the decoding steps, then the Scratch blocks. Think-aloud: "' + SC['think'][2].strip('“”') + '" Decoding with shift 4 is the same as coding with shift 22, because 26 − 4 = 22. The blocks run once for each letter of the message: "for each letter" is a repeat loop. The whole machine (folded into this slide): the starter project already has the list alphabet and the loop (ask for the message; code starts empty; i counts the letters; repeat once for each letter of the answer; take letter i; if the letter is in the list code it, else copy it so spaces survive; add 1 to i; say the code), and children add only the 3 cipher blocks inside the if. Without the if a space gives item # of 0, n = -1 and a wrong letter. Type capitals. Open the starter and code HELLO live (about 2 minutes, because the list is already there). ' + PYNOTE))
 
 # ================= 12. key =================
 body = h2(DK['keyHead']) + card(p(DK['keyBig'], 44, 700)) + card(p(DK['keySmall'], 38, 600, MUTED))
@@ -251,12 +227,12 @@ put('p6l8-break', dark('p6l8-break', TEAL,
 put('p6l8-ws1', ws_preview('p6l8-ws1', '40–50 MIN', 'Worksheet page 1: with your partner',
     [('Q1', 'Clock and calendar puzzles: hours, days, and mod.'), ('Q2', 'Caesar codes: code PIZZA, decode MYNO SC PEX. Test in Scratch.')],
     'Use the letter strip at the top of the page. A = 0.',
-    'Minutes 40 to 50, in pairs. Walk around. Ask "How do you know?" before giving any help. For Q2 check pairs write the letter numbers first and wrap round with 26.'))
+    'In pairs. Show this preview, do not read it aloud. Walk around. Ask "How do you know?" before giving any help. For Q2 check pairs write the letter numbers first and wrap round with 26.'))
 put('p6l8-ws1ans', check2('p6l8-ws1ans', '50–52 MIN', 'Page 1: check together', [
     ('Q1', 'a) 3 o’clock   b) 5 o’clock   c) 7 o’clock   d) Monday   e) Thursday', 2),
     ('Q2a, b', 'PIZZA with shift 7 is WPGGH.   MYNO SC PEX is CODE IS FUN.', 1),
     ('Q2c', 'Shift 16: decoding by 10 is the same as coding by 26 − 10 = 16.', 1)],
-    'Click each answer after a pair explains. Q1: a) 8 + 7 = 15, 15 − 12 = 3. b) 30 mod 12 = 6, 11 + 6 = 17, 17 − 12 = 5. c) 4 − 9 = −5, + 12 = 7. d) 100 mod 7 = 2 (98 = 14 weeks), Saturday + 2 = Monday. e) 30 mod 7 = 2, Saturday back 2 = Thursday. f) 29 mod 12 = 5, 50 mod 7 = 1 (49 = 7 × 7), 100 mod 26 = 22 (78 = 3 × 26). Q2a: P 15 → 22 = W, I 8 → 15 = P, Z 25 → 32 mod 26 = 6 = G, A 0 → 7 = H. Q2b: M 12 − 10 = 2 = C, Y 24 − 10 = 14 = O, N 13 − 10 = 3 = D, O 14 − 10 = 4 = E.'))
+    'All the answers are shown at once. Children mark in a different colour; ask ONE volunteer to explain only Q2 (code and decode with the shift), about 35 seconds a question. Q1: a) 8 + 7 = 15, 15 − 12 = 3. b) 30 mod 12 = 6, 11 + 6 = 17, 17 − 12 = 5. c) 4 − 9 = −5, + 12 = 7. d) 100 mod 7 = 2 (98 = 14 weeks), Saturday + 2 = Monday. e) 30 mod 7 = 2, Saturday back 2 = Thursday. f) 29 mod 12 = 5, 50 mod 7 = 1 (49 = 7 × 7), 100 mod 26 = 22 (78 = 3 × 26). Q2a: P 15 → 22 = W, I 8 → 15 = P, Z 25 → 32 mod 26 = 6 = G, A 0 → 7 = H. Q2b: M 12 − 10 = 2 = C, Y 24 − 10 = 14 = O, N 13 − 10 = 3 = D, O 14 − 10 = 4 = E.'))
 
 # ================= 16. teach trace =================
 trace_blocks = [('var', 'set {n} to {(item # of (letter) in alphabet) − 1}'), ('var', 'set {m} to {(n + shift) mod 26}'), ('var', 'set {code} to {join (code) (item (m + 1) of alphabet)}')]
@@ -281,25 +257,16 @@ body += soft(128, 800, 1664, 'Only 25 shifts are possible. A computer can try th
 put('p6l8-teachcrack', sec('p6l8-teachcrack', '54–55 MIN', body,
     'Teach before worksheet page 2 (Q4 cracks a different message by finding a repeated 3-letter word). Think-aloud: "A short word is the best clue. A two-letter word that makes sense is IS, IT, IN, AT, OF. If NX is IS, N went to I, so the shift is 5 backwards. Then I test it on the other words." Show the crack program (Python): for shift in range(1, 26) prints every shift: the one that reads as English wins. In Scratch: repeat 25, change shift by 1, decode and say. This is called brute force.'))
 
-# ================= 18. teach combine =================
-body = h2('Two shifts in a row') + card(p('Code with shift 15, then code the result with shift 15. What is the same as one shift?', 38, 700), extra='padding:24px 40px')
-body += step(1, 'Take A (0): shift 15 gives 15 (P). Shift 15 again: 30, and 30 mod 26 = 4 (E).', top=410, size=32)
-body += step(2, 'So A became E: that is one shift of 4.  Shifts add up: 15 + 15 = 30, and 30 mod 26 = 4.', top=515, size=32)
-body += step(3, 'Shifts add up like jumps on a 26-hour clock. Shift 26 is a full turn: it changes nothing.', top=620, size=32)
-body += answer(128, 740, 1664, 'Shift 15 then shift 15 is shift 4')
-put('p6l8-teachcomb', sec('p6l8-teachcomb', '55–56 MIN', body,
-    'Teach before worksheet page 2 (Q5 combines other shifts). Use a letter to show it: A → P → E, and A shift 4 → E ✓. Say: a shift is a jump on the clock, and two jumps add. Ask: "What shift undoes shift 15?" (11, since 15 + 11 = 26).'))
-
 # ================= 19–20. ws2 =================
 put('p6l8-ws2', ws_preview('p6l8-ws2', '56–72 MIN', 'Worksheet page 2: on your own',
-    [('Q3', 'Trace the code machine in a table: WAY with shift 5.'), ('Q4', 'Crack Mei’s secret message: find the word, find the shift, decode the first word.'), ('Q5', 'Two shifts in a row.')],
+    [('Q3', 'Trace the code machine in a table: WAY with shift 5.'), ('Q4', 'Crack Mei’s secret message: find the word, find the shift, decode the first word.'), ('Q5', '★ Take-home: two shifts in a row.')],
     'Finished early? Stretch and Challenge come next.',
-    'Children work alone (they may test in Scratch). Note who needs a short catch-up next lesson.'))
+    'Children work alone on Q3 and Q4 (they may test in Scratch); Q5 (two shifts in a row) is the take-home question, marked with a star in the workbook. Show this preview, do not read it aloud. Note who needs a short catch-up next lesson.'))
 put('p6l8-ws2ans', check2('p6l8-ws2ans', '72–75 MIN', 'Page 2: check together', [
     ('Q3', 'W 22, 27, 1, B   A 0, 5, 5, F   Y 24, 29, 3, D   It says BFD.', 1),
     ('Q4', 'BPM is THE.  T to B is shift 8.  Decode the first word: THE', 2),
-    ('Q5', 'a) 15   b) 5   c) The original message: 9 + 17 = 26   d) 13', 1)],
-    'Click each answer after a child explains. Q4: the repeated word BPM; "the" is the most common 3-letter word; T = 19, B = 1: 19 + 8 = 27, 27 mod 26 = 1. Decode every letter by 8 back (or forward 18): BPM SMG QA CVLMZ BPM UIB is THE KEY IS UNDER THE MAT. Q5: a) 6 + 9 = 15. b) 19 + 12 = 31, 31 mod 26 = 5. c) 9 + 17 = 26, a full turn. d) Shift 13 used twice is 26: ROT13 is a real code, and coding twice decodes it.'))
+    ('Q5 ★', 'Take-home. a) 15   b) 5   c) The original message: 9 + 17 = 26   d) 13', 1)],
+    'All the answers are shown at once. Children mark in a different colour; ask ONE volunteer to explain only Q4 (cracking the code). Q5 is the take-home question: its answer is here so children can mark it at home, and you take it up at the start of the next lesson (shifts add like jumps on a 26-hour clock: 15 then 15 is 4; the shift that undoes 15 is 11). Q4: the repeated word BPM; "the" is the most common 3-letter word; T = 19, B = 1: 19 + 8 = 27, 27 mod 26 = 1. Decode every letter by 8 back (or forward 18): BPM SMG QA CVLMZ BPM UIB is THE KEY IS UNDER THE MAT. Q5: a) 6 + 9 = 15. b) 19 + 12 = 31, 31 mod 26 = 5. c) 9 + 17 = 26, a full turn. d) Shift 13 used twice is 26: ROT13 is a real code, and coding twice decodes it.'))
 
 # ================= 21. stretch (3 new) =================
 st = QB['stretch'][4:7]
@@ -345,14 +312,14 @@ put('p6l8-chwalk', sec('p6l8-chwalk', 'Challenge', body,
 
 # ================= 25. talk =================
 body = h2('Talk time') + card(chip('TALK TIME', YEL, NAVY) + p(SC['talk'][0].strip('“”'), 40, 600)) + card(p('Sentence starters:', 34, 400, MUTED) + p('“I noticed that …”   “I tested it by …”   “I know because …”', 38, 600))
-put('p6l8-talk', sec('p6l8-talk', '75–82 MIN', body, 'Minutes 75 to 82. Pairs talk for 2 minutes, then share. Second question if time: ' + SC['talk'][1].strip('“”') + ' Answer: ' + SC['talkAns'] + ' Praise the reasons, not only the answers.'))
+put('p6l8-talk', sec('p6l8-talk', '75–82 MIN', body, 'Both questions are kept in this lesson (it has 4 minutes of flex). Pairs talk for 2 minutes, then share. Second question: ' + SC['talk'][1].strip('“”') + ' Answer: ' + SC['talkAns'] + ' Praise the reasons, not only the answers.'))
 
 # ================= 26. exit =================
-body = h2('Exit ticket') + card(chip('EXIT TICKET') + p(L['exit']['q'], 46, 600)) + card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.', 34, 400))
+body = h2('Exit ticket') + card(chip('EXIT TICKET') + p(L['exit']['q'], 46, 600)) + card(p('Write your answer on a slip of paper. When your tutor says, say your answer together on three. Then collect your stamp in your inquiry journal.', 34, 400))
 put('p6l8-exit', sec('p6l8-exit', '82–90 MIN', body, f'Minutes 82 to 90. Answer: {L["exit"]["a"]} Extension: {L["extension"]}'))
 
-order = ['p6l8-title', 'p6l8-warm1', 'p6l8-warm2', 'p6l8-explore1', 'p6l8-explore2', 'p6l8-teach1', 'p6l8-we1', 'p6l8-try1', 'p6l8-we2', 'p6l8-try2', 'p6l8-we3', 'p6l8-teachloop', 'p6l8-key', 'p6l8-break',
-         'p6l8-ws1', 'p6l8-ws1ans', 'p6l8-teachtrace', 'p6l8-teachcrack', 'p6l8-teachcomb', 'p6l8-ws2', 'p6l8-ws2ans', 'p6l8-stretch', 'p6l8-challenge', 'p6l8-chdiag', 'p6l8-chwalk', 'p6l8-talk', 'p6l8-exit']
+order = ['p6l8-title', 'p6l8-warm1', 'p6l8-warm2', 'p6l8-explore1', 'p6l8-explore2', 'p6l8-teach1', 'p6l8-we1', 'p6l8-we2', 'p6l8-try2', 'p6l8-we3', 'p6l8-key', 'p6l8-break',
+         'p6l8-ws1', 'p6l8-ws1ans', 'p6l8-teachtrace', 'p6l8-teachcrack', 'p6l8-ws2', 'p6l8-ws2ans', 'p6l8-stretch', 'p6l8-challenge', 'p6l8-chdiag', 'p6l8-chwalk', 'p6l8-talk', 'p6l8-exit']
 assert set(order) == set(S), set(order) ^ set(S)
 for f in os.listdir(os.path.join(D, 'slides')):
     if f.endswith('.html') and f[:-5] not in S: os.remove(os.path.join(D, 'slides', f))

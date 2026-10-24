@@ -1,0 +1,1642 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Math Inquirers//Beta calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Math Inquirers beta\, all groups (tutor)
+X-WR-TIMEZONE:Asia/Singapore
+BEGIN:VTIMEZONE
+TZID:Asia/Singapore
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0800
+TZOFFSETTO:+0800
+TZNAME:+08
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:mathinquirers-L1A-L01-2026-11-24@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261124T090000
+DTEND;TZID=Asia/Singapore:20261124T103000
+SUMMARY:Math Inquirers Level 1 · Group A: lesson 1 of 10
+DESCRIPTION:Math Inquirers\, Level 1 · Group A\, lesson 1 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 1 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 1 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L1A-L02-2026-11-27@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261127T090000
+DTEND;TZID=Asia/Singapore:20261127T103000
+SUMMARY:Math Inquirers Level 1 · Group A: lesson 2 of 10
+DESCRIPTION:Math Inquirers\, Level 1 · Group A\, lesson 2 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 2 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 2 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L1A-L03-2026-12-01@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261201T090000
+DTEND;TZID=Asia/Singapore:20261201T103000
+SUMMARY:Math Inquirers Level 1 · Group A: lesson 3 of 10
+DESCRIPTION:Math Inquirers\, Level 1 · Group A\, lesson 3 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 3 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 3 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L1A-L04-2026-12-04@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261204T090000
+DTEND;TZID=Asia/Singapore:20261204T103000
+SUMMARY:Math Inquirers Level 1 · Group A: lesson 4 of 10
+DESCRIPTION:Math Inquirers\, Level 1 · Group A\, lesson 4 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 4 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 4 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L1A-L05-2026-12-08@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261208T090000
+DTEND;TZID=Asia/Singapore:20261208T103000
+SUMMARY:Math Inquirers Level 1 · Group A: lesson 5 of 10
+DESCRIPTION:Math Inquirers\, Level 1 · Group A\, lesson 5 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 5 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 5 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L1A-L06-2026-12-11@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261211T090000
+DTEND;TZID=Asia/Singapore:20261211T103000
+SUMMARY:Math Inquirers Level 1 · Group A: lesson 6 of 10
+DESCRIPTION:Math Inquirers\, Level 1 · Group A\, lesson 6 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 6 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 6 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L1A-L07-2026-12-15@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261215T090000
+DTEND;TZID=Asia/Singapore:20261215T103000
+SUMMARY:Math Inquirers Level 1 · Group A: lesson 7 of 10
+DESCRIPTION:Math Inquirers\, Level 1 · Group A\, lesson 7 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 7 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 7 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L1A-L08-2026-12-18@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261218T090000
+DTEND;TZID=Asia/Singapore:20261218T103000
+SUMMARY:Math Inquirers Level 1 · Group A: lesson 8 of 10
+DESCRIPTION:Math Inquirers\, Level 1 · Group A\, lesson 8 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 8 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 8 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L1A-L09-2026-12-22@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261222T090000
+DTEND;TZID=Asia/Singapore:20261222T103000
+SUMMARY:Math Inquirers Level 1 · Group A: lesson 9 of 10
+DESCRIPTION:Math Inquirers\, Level 1 · Group A\, lesson 9 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 9 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 9 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L1A-L10-2026-12-24@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261224T090000
+DTEND;TZID=Asia/Singapore:20261224T103000
+SUMMARY:Math Inquirers Level 1 · Group A: lesson 10 of 10
+DESCRIPTION:Math Inquirers\, Level 1 · Group A\, lesson 10 of 10 (90 minut
+ es\, Singapore time).\nThis lesson is moved because Fri 25 Dec is a public
+  holiday.\nJoin on Google Meet: [Google Meet link to be added]\nHave ready
+ : the workbook\, a pencil and a rubber\, and a few sheets of blank private
+  paper.\nYour child may keep the camera off and may stay muted. Please do 
+ not hold paper up to the camera.\nIf you cannot make it: tell us on WhatsA
+ pp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 10 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 10 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L2A-L01-2026-11-24@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261124T104500
+DTEND;TZID=Asia/Singapore:20261124T121500
+SUMMARY:Math Inquirers Level 2 · Group A: lesson 1 of 10
+DESCRIPTION:Math Inquirers\, Level 2 · Group A\, lesson 1 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 1 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 1 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L2A-L02-2026-11-27@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261127T104500
+DTEND;TZID=Asia/Singapore:20261127T121500
+SUMMARY:Math Inquirers Level 2 · Group A: lesson 2 of 10
+DESCRIPTION:Math Inquirers\, Level 2 · Group A\, lesson 2 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 2 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 2 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L2A-L03-2026-12-01@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261201T104500
+DTEND;TZID=Asia/Singapore:20261201T121500
+SUMMARY:Math Inquirers Level 2 · Group A: lesson 3 of 10
+DESCRIPTION:Math Inquirers\, Level 2 · Group A\, lesson 3 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 3 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 3 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L2A-L04-2026-12-04@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261204T104500
+DTEND;TZID=Asia/Singapore:20261204T121500
+SUMMARY:Math Inquirers Level 2 · Group A: lesson 4 of 10
+DESCRIPTION:Math Inquirers\, Level 2 · Group A\, lesson 4 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 4 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 4 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L2A-L05-2026-12-08@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261208T104500
+DTEND;TZID=Asia/Singapore:20261208T121500
+SUMMARY:Math Inquirers Level 2 · Group A: lesson 5 of 10
+DESCRIPTION:Math Inquirers\, Level 2 · Group A\, lesson 5 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 5 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 5 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L2A-L06-2026-12-11@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261211T104500
+DTEND;TZID=Asia/Singapore:20261211T121500
+SUMMARY:Math Inquirers Level 2 · Group A: lesson 6 of 10
+DESCRIPTION:Math Inquirers\, Level 2 · Group A\, lesson 6 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 6 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 6 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L2A-L07-2026-12-15@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261215T104500
+DTEND;TZID=Asia/Singapore:20261215T121500
+SUMMARY:Math Inquirers Level 2 · Group A: lesson 7 of 10
+DESCRIPTION:Math Inquirers\, Level 2 · Group A\, lesson 7 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 7 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 7 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L2A-L08-2026-12-18@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261218T104500
+DTEND;TZID=Asia/Singapore:20261218T121500
+SUMMARY:Math Inquirers Level 2 · Group A: lesson 8 of 10
+DESCRIPTION:Math Inquirers\, Level 2 · Group A\, lesson 8 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 8 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 8 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L2A-L09-2026-12-22@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261222T104500
+DTEND;TZID=Asia/Singapore:20261222T121500
+SUMMARY:Math Inquirers Level 2 · Group A: lesson 9 of 10
+DESCRIPTION:Math Inquirers\, Level 2 · Group A\, lesson 9 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 9 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 9 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L2A-L10-2026-12-24@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261224T104500
+DTEND;TZID=Asia/Singapore:20261224T121500
+SUMMARY:Math Inquirers Level 2 · Group A: lesson 10 of 10
+DESCRIPTION:Math Inquirers\, Level 2 · Group A\, lesson 10 of 10 (90 minut
+ es\, Singapore time).\nThis lesson is moved because Fri 25 Dec is a public
+  holiday.\nJoin on Google Meet: [Google Meet link to be added]\nHave ready
+ : the workbook\, a pencil and a rubber\, and a few sheets of blank private
+  paper.\nYour child may keep the camera off and may stay muted. Please do 
+ not hold paper up to the camera.\nIf you cannot make it: tell us on WhatsA
+ pp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 10 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 10 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L3A-L01-2026-11-24@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261124T131500
+DTEND;TZID=Asia/Singapore:20261124T144500
+SUMMARY:Math Inquirers Level 3 · Group A: lesson 1 of 10
+DESCRIPTION:Math Inquirers\, Level 3 · Group A\, lesson 1 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 1 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 1 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L3A-L02-2026-11-27@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261127T131500
+DTEND;TZID=Asia/Singapore:20261127T144500
+SUMMARY:Math Inquirers Level 3 · Group A: lesson 2 of 10
+DESCRIPTION:Math Inquirers\, Level 3 · Group A\, lesson 2 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 2 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 2 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L3A-L03-2026-12-01@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261201T131500
+DTEND;TZID=Asia/Singapore:20261201T144500
+SUMMARY:Math Inquirers Level 3 · Group A: lesson 3 of 10
+DESCRIPTION:Math Inquirers\, Level 3 · Group A\, lesson 3 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 3 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 3 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L3A-L04-2026-12-04@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261204T131500
+DTEND;TZID=Asia/Singapore:20261204T144500
+SUMMARY:Math Inquirers Level 3 · Group A: lesson 4 of 10
+DESCRIPTION:Math Inquirers\, Level 3 · Group A\, lesson 4 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 4 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 4 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L3A-L05-2026-12-08@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261208T131500
+DTEND;TZID=Asia/Singapore:20261208T144500
+SUMMARY:Math Inquirers Level 3 · Group A: lesson 5 of 10
+DESCRIPTION:Math Inquirers\, Level 3 · Group A\, lesson 5 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 5 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 5 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L3A-L06-2026-12-11@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261211T131500
+DTEND;TZID=Asia/Singapore:20261211T144500
+SUMMARY:Math Inquirers Level 3 · Group A: lesson 6 of 10
+DESCRIPTION:Math Inquirers\, Level 3 · Group A\, lesson 6 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 6 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 6 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L3A-L07-2026-12-15@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261215T131500
+DTEND;TZID=Asia/Singapore:20261215T144500
+SUMMARY:Math Inquirers Level 3 · Group A: lesson 7 of 10
+DESCRIPTION:Math Inquirers\, Level 3 · Group A\, lesson 7 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 7 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 7 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L3A-L08-2026-12-18@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261218T131500
+DTEND;TZID=Asia/Singapore:20261218T144500
+SUMMARY:Math Inquirers Level 3 · Group A: lesson 8 of 10
+DESCRIPTION:Math Inquirers\, Level 3 · Group A\, lesson 8 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 8 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 8 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L3A-L09-2026-12-22@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261222T131500
+DTEND;TZID=Asia/Singapore:20261222T144500
+SUMMARY:Math Inquirers Level 3 · Group A: lesson 9 of 10
+DESCRIPTION:Math Inquirers\, Level 3 · Group A\, lesson 9 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 9 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 9 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L3A-L10-2026-12-24@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261224T131500
+DTEND;TZID=Asia/Singapore:20261224T144500
+SUMMARY:Math Inquirers Level 3 · Group A: lesson 10 of 10
+DESCRIPTION:Math Inquirers\, Level 3 · Group A\, lesson 10 of 10 (90 minut
+ es\, Singapore time).\nThis lesson is moved because Fri 25 Dec is a public
+  holiday.\nJoin on Google Meet: [Google Meet link to be added]\nHave ready
+ : the workbook\, a pencil and a rubber\, and a few sheets of blank private
+  paper.\nYour child may keep the camera off and may stay muted. Please do 
+ not hold paper up to the camera.\nIf you cannot make it: tell us on WhatsA
+ pp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 10 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 10 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L4A-L01-2026-11-24@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261124T150000
+DTEND;TZID=Asia/Singapore:20261124T163000
+SUMMARY:Math Inquirers Level 4 · Group A: lesson 1 of 10
+DESCRIPTION:Math Inquirers\, Level 4 · Group A\, lesson 1 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 1 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 1 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L4A-L02-2026-11-27@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261127T150000
+DTEND;TZID=Asia/Singapore:20261127T163000
+SUMMARY:Math Inquirers Level 4 · Group A: lesson 2 of 10
+DESCRIPTION:Math Inquirers\, Level 4 · Group A\, lesson 2 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 2 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 2 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L4A-L03-2026-12-01@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261201T150000
+DTEND;TZID=Asia/Singapore:20261201T163000
+SUMMARY:Math Inquirers Level 4 · Group A: lesson 3 of 10
+DESCRIPTION:Math Inquirers\, Level 4 · Group A\, lesson 3 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 3 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 3 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L4A-L04-2026-12-04@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261204T150000
+DTEND;TZID=Asia/Singapore:20261204T163000
+SUMMARY:Math Inquirers Level 4 · Group A: lesson 4 of 10
+DESCRIPTION:Math Inquirers\, Level 4 · Group A\, lesson 4 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 4 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 4 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L4A-L05-2026-12-08@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261208T150000
+DTEND;TZID=Asia/Singapore:20261208T163000
+SUMMARY:Math Inquirers Level 4 · Group A: lesson 5 of 10
+DESCRIPTION:Math Inquirers\, Level 4 · Group A\, lesson 5 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 5 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 5 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L4A-L06-2026-12-11@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261211T150000
+DTEND;TZID=Asia/Singapore:20261211T163000
+SUMMARY:Math Inquirers Level 4 · Group A: lesson 6 of 10
+DESCRIPTION:Math Inquirers\, Level 4 · Group A\, lesson 6 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 6 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 6 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L4A-L07-2026-12-15@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261215T150000
+DTEND;TZID=Asia/Singapore:20261215T163000
+SUMMARY:Math Inquirers Level 4 · Group A: lesson 7 of 10
+DESCRIPTION:Math Inquirers\, Level 4 · Group A\, lesson 7 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 7 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 7 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L4A-L08-2026-12-18@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261218T150000
+DTEND;TZID=Asia/Singapore:20261218T163000
+SUMMARY:Math Inquirers Level 4 · Group A: lesson 8 of 10
+DESCRIPTION:Math Inquirers\, Level 4 · Group A\, lesson 8 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 8 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 8 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L4A-L09-2026-12-22@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261222T150000
+DTEND;TZID=Asia/Singapore:20261222T163000
+SUMMARY:Math Inquirers Level 4 · Group A: lesson 9 of 10
+DESCRIPTION:Math Inquirers\, Level 4 · Group A\, lesson 9 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 9 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 9 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L4A-L10-2026-12-24@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261224T150000
+DTEND;TZID=Asia/Singapore:20261224T163000
+SUMMARY:Math Inquirers Level 4 · Group A: lesson 10 of 10
+DESCRIPTION:Math Inquirers\, Level 4 · Group A\, lesson 10 of 10 (90 minut
+ es\, Singapore time).\nThis lesson is moved because Fri 25 Dec is a public
+  holiday.\nJoin on Google Meet: [Google Meet link to be added]\nHave ready
+ : the workbook\, a pencil and a rubber\, and a few sheets of blank private
+  paper.\nYour child may keep the camera off and may stay muted. Please do 
+ not hold paper up to the camera.\nIf you cannot make it: tell us on WhatsA
+ pp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 10 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 10 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L5A-L01-2026-11-27@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261127T164500
+DTEND;TZID=Asia/Singapore:20261127T181500
+SUMMARY:Math Inquirers Level 5 · Group A: lesson 1 of 10
+DESCRIPTION:Math Inquirers\, Level 5 · Group A\, lesson 1 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 1 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 1 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L5A-L02-2026-11-29@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261129T161500
+DTEND;TZID=Asia/Singapore:20261129T174500
+SUMMARY:Math Inquirers Level 5 · Group A: lesson 2 of 10
+DESCRIPTION:Math Inquirers\, Level 5 · Group A\, lesson 2 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 2 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 2 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L5A-L03-2026-12-04@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261204T164500
+DTEND;TZID=Asia/Singapore:20261204T181500
+SUMMARY:Math Inquirers Level 5 · Group A: lesson 3 of 10
+DESCRIPTION:Math Inquirers\, Level 5 · Group A\, lesson 3 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 3 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 3 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L5A-L04-2026-12-06@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261206T161500
+DTEND;TZID=Asia/Singapore:20261206T174500
+SUMMARY:Math Inquirers Level 5 · Group A: lesson 4 of 10
+DESCRIPTION:Math Inquirers\, Level 5 · Group A\, lesson 4 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 4 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 4 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L5A-L05-2026-12-11@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261211T164500
+DTEND;TZID=Asia/Singapore:20261211T181500
+SUMMARY:Math Inquirers Level 5 · Group A: lesson 5 of 10
+DESCRIPTION:Math Inquirers\, Level 5 · Group A\, lesson 5 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 5 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 5 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L5A-L06-2026-12-13@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261213T161500
+DTEND;TZID=Asia/Singapore:20261213T174500
+SUMMARY:Math Inquirers Level 5 · Group A: lesson 6 of 10
+DESCRIPTION:Math Inquirers\, Level 5 · Group A\, lesson 6 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 6 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 6 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L5A-L07-2026-12-18@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261218T164500
+DTEND;TZID=Asia/Singapore:20261218T181500
+SUMMARY:Math Inquirers Level 5 · Group A: lesson 7 of 10
+DESCRIPTION:Math Inquirers\, Level 5 · Group A\, lesson 7 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 7 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 7 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L5A-L08-2026-12-20@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261220T161500
+DTEND;TZID=Asia/Singapore:20261220T174500
+SUMMARY:Math Inquirers Level 5 · Group A: lesson 8 of 10
+DESCRIPTION:Math Inquirers\, Level 5 · Group A\, lesson 8 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 8 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 8 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L5A-L09-2026-12-23@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261223T164500
+DTEND;TZID=Asia/Singapore:20261223T181500
+SUMMARY:Math Inquirers Level 5 · Group A: lesson 9 of 10
+DESCRIPTION:Math Inquirers\, Level 5 · Group A\, lesson 9 of 10 (90 minute
+ s\, Singapore time).\nThis lesson is moved because Fri 25 Dec is a public 
+ holiday.\nJoin on Google Meet: [Google Meet link to be added]\nHave ready:
+  the workbook\, a pencil and a rubber\, and a few sheets of blank private 
+ paper.\nYour child may keep the camera off and may stay muted. Please do n
+ ot hold paper up to the camera.\nIf you cannot make it: tell us on WhatsAp
+ p +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 9 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 9 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L5A-L10-2026-12-27@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261227T161500
+DTEND;TZID=Asia/Singapore:20261227T174500
+SUMMARY:Math Inquirers Level 5 · Group A: lesson 10 of 10
+DESCRIPTION:Math Inquirers\, Level 5 · Group A\, lesson 10 of 10 (90 minut
+ es\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]
+ \nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of b
+ lank private paper.\nYour child may keep the camera off and may stay muted
+ . Please do not hold paper up to the camera.\nIf you cannot make it: tell 
+ us on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 10 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 10 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L6A-L01-2026-11-26@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261126T181500
+DTEND;TZID=Asia/Singapore:20261126T194500
+SUMMARY:Math Inquirers Level 6 · Group A: lesson 1 of 10
+DESCRIPTION:Math Inquirers\, Level 6 · Group A\, lesson 1 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 1 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 1 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L6A-L02-2026-11-28@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261128T184500
+DTEND;TZID=Asia/Singapore:20261128T201500
+SUMMARY:Math Inquirers Level 6 · Group A: lesson 2 of 10
+DESCRIPTION:Math Inquirers\, Level 6 · Group A\, lesson 2 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 2 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 2 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L6A-L03-2026-12-03@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261203T181500
+DTEND;TZID=Asia/Singapore:20261203T194500
+SUMMARY:Math Inquirers Level 6 · Group A: lesson 3 of 10
+DESCRIPTION:Math Inquirers\, Level 6 · Group A\, lesson 3 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 3 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 3 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L6A-L04-2026-12-05@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261205T184500
+DTEND;TZID=Asia/Singapore:20261205T201500
+SUMMARY:Math Inquirers Level 6 · Group A: lesson 4 of 10
+DESCRIPTION:Math Inquirers\, Level 6 · Group A\, lesson 4 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 4 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 4 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L6A-L05-2026-12-10@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261210T181500
+DTEND;TZID=Asia/Singapore:20261210T194500
+SUMMARY:Math Inquirers Level 6 · Group A: lesson 5 of 10
+DESCRIPTION:Math Inquirers\, Level 6 · Group A\, lesson 5 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 5 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 5 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L6A-L06-2026-12-12@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261212T184500
+DTEND;TZID=Asia/Singapore:20261212T201500
+SUMMARY:Math Inquirers Level 6 · Group A: lesson 6 of 10
+DESCRIPTION:Math Inquirers\, Level 6 · Group A\, lesson 6 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 6 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 6 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L6A-L07-2026-12-17@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261217T181500
+DTEND;TZID=Asia/Singapore:20261217T194500
+SUMMARY:Math Inquirers Level 6 · Group A: lesson 7 of 10
+DESCRIPTION:Math Inquirers\, Level 6 · Group A\, lesson 7 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 7 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 7 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L6A-L08-2026-12-19@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261219T184500
+DTEND;TZID=Asia/Singapore:20261219T201500
+SUMMARY:Math Inquirers Level 6 · Group A: lesson 8 of 10
+DESCRIPTION:Math Inquirers\, Level 6 · Group A\, lesson 8 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 8 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 8 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L6A-L09-2026-12-24@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261224T181500
+DTEND;TZID=Asia/Singapore:20261224T194500
+SUMMARY:Math Inquirers Level 6 · Group A: lesson 9 of 10
+DESCRIPTION:Math Inquirers\, Level 6 · Group A\, lesson 9 of 10 (90 minute
+ s\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]\
+ nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of bl
+ ank private paper.\nYour child may keep the camera off and may stay muted.
+  Please do not hold paper up to the camera.\nIf you cannot make it: tell u
+ s on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 9 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 9 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:mathinquirers-L6A-L10-2026-12-26@mathinquirers
+DTSTAMP:20261023T000000Z
+SEQUENCE:0
+DTSTART;TZID=Asia/Singapore:20261226T184500
+DTEND;TZID=Asia/Singapore:20261226T201500
+SUMMARY:Math Inquirers Level 6 · Group A: lesson 10 of 10
+DESCRIPTION:Math Inquirers\, Level 6 · Group A\, lesson 10 of 10 (90 minut
+ es\, Singapore time).\nJoin on Google Meet: [Google Meet link to be added]
+ \nHave ready: the workbook\, a pencil and a rubber\, and a few sheets of b
+ lank private paper.\nYour child may keep the camera off and may stay muted
+ . Please do not hold paper up to the camera.\nIf you cannot make it: tell 
+ us on WhatsApp +65 9880 5962. The lesson is recorded.
+LOCATION:Google Meet (online)
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tomorrow: Math Inquirers lesson 10 of 10
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:In 1 hour: Math Inquirers lesson 10 of 10
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

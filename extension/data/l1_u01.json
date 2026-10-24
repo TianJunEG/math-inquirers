@@ -1,0 +1,792 @@
+{
+ "schema_version": 1,
+ "level": 1,
+ "unit": 1,
+ "id": "L1U01",
+ "title": "Hops and rules",
+ "topic": "Number patterns",
+ "holiday_lesson": 1,
+ "goal": "I can find the rule of a number pattern and use it to write the next numbers.",
+ "learn": {
+  "intro": "A number pattern follows a rule. The rule tells you how to get from one number to the next. A frog hopping along a number strip makes a pattern.",
+  "example": {
+   "problem": "Kumar's frog starts on 6. It hops 4 each time. Write the first 6 numbers.",
+   "figure": {
+    "type": "tiles",
+    "items": [
+     6,
+     10,
+     14,
+     18,
+     22,
+     26
+    ],
+    "gaps": [
+     "+4",
+     "+4",
+     "+4",
+     "+4",
+     "+4"
+    ],
+    "width_mm": 136
+   },
+   "steps": [
+    "Start on 6. Write 6.",
+    "Hop 4. 6 and 4 more is 10.",
+    "Hop 4 again. 10 and 4 more is 14.",
+    "Keep going: 18, 22, 26. Each number is 4 more than the number before."
+   ],
+   "answer": "6, 10, 14, 18, 22, 26. The rule is add 4."
+  },
+  "howto": {
+   "title": "How to find a rule",
+   "steps": [
+    "Look at the first 2 numbers. How far is it from one to the other?",
+    "Check the next 2 numbers. Is the hop the same?",
+    "Going up? The rule is add. Going down? The rule is take away.",
+    "Use the rule to write the next numbers."
+   ]
+  },
+  "try": {
+   "id": "L1U01-L01",
+   "text": "A frog starts on 3 and hops 5 each time. Write the missing numbers in the tiles.",
+   "figure": {
+    "type": "tiles",
+    "items": [
+     3,
+     null,
+     null,
+     null,
+     null
+    ],
+    "gaps": [
+     "+5",
+     "+5",
+     "+5",
+     "+5"
+    ]
+   },
+   "answer": {
+    "value": [
+     "8",
+     "13",
+     "18",
+     "23"
+    ],
+    "text": "8, 13, 18, 23"
+   },
+   "explanation": "Add 5 each time: 3 + 5 = 8, 8 + 5 = 13, 13 + 5 = 18, 18 + 5 = 23."
+  }
+ },
+ "items": [
+  {
+   "id": "L1U01-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "Count in 2s. Write the missing numbers in the tiles.",
+   "figure": {
+    "type": "tiles",
+    "items": [
+     8,
+     10,
+     null,
+     14,
+     null,
+     18
+    ],
+    "gaps": [
+     "+2",
+     "+2",
+     "+2",
+     "+2",
+     "+2"
+    ]
+   },
+   "answer": {
+    "value": [
+     "12",
+     "16"
+    ],
+    "text": "12, 16"
+   },
+   "explanation": "Each hop is 2. 10 and 2 more is 12. 14 and 2 more is 16."
+  },
+  {
+   "id": "L1U01-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "Count in 5s. Write the missing numbers in the tiles.",
+   "figure": {
+    "type": "tiles",
+    "items": [
+     15,
+     20,
+     null,
+     30,
+     null,
+     40
+    ],
+    "gaps": [
+     "+5",
+     "+5",
+     "+5",
+     "+5",
+     "+5"
+    ]
+   },
+   "answer": {
+    "value": [
+     "25",
+     "35"
+    ],
+    "text": "25, 35"
+   },
+   "explanation": "Each hop is 5. 20 and 5 more is 25. 30 and 5 more is 35."
+  },
+  {
+   "id": "L1U01-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "Count in 10s. Write the missing numbers in the tiles.",
+   "figure": {
+    "type": "tiles",
+    "items": [
+     7,
+     17,
+     27,
+     null,
+     null,
+     57
+    ],
+    "gaps": [
+     "+10",
+     "+10",
+     "+10",
+     "+10",
+     "+10"
+    ]
+   },
+   "answer": {
+    "value": [
+     "37",
+     "47"
+    ],
+    "text": "37, 47"
+   },
+   "explanation": "Each hop is 10. The tens digit goes up by 1 and the ones digit stays 7."
+  },
+  {
+   "id": "L1U01-S04",
+   "tier": "start",
+   "page": 1,
+   "text": "Fill in the blanks.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "5, 9, 13, 17, {b}, {b}",
+     "answer": {
+      "value": [
+       "21",
+       "25"
+      ],
+      "text": "21, 25"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The rule is add {b}.",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "add 4"
+     }
+    }
+   ],
+   "explanation": "From 5 to 9 is 4 more, and from 9 to 13 is 4 more. So the rule is add 4: 17 + 4 = 21, 21 + 4 = 25."
+  },
+  {
+   "id": "L1U01-S05",
+   "tier": "start",
+   "page": 1,
+   "text": "Fill in the blanks.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "21, 18, 15, 12, {b}, {b}",
+     "answer": {
+      "value": [
+       "9",
+       "6"
+      ],
+      "text": "9, 6"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The rule is take away {b}.",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "take away 3"
+     }
+    }
+   ],
+   "explanation": "The numbers go down by 3 each time: 12 - 3 = 9 and 9 - 3 = 6."
+  },
+  {
+   "id": "L1U01-S06",
+   "tier": "start",
+   "page": 2,
+   "text": "Circle the rule for this pattern: 7, 11, 15, 19.\n{circ:add 3|add 4|add 5}",
+   "answer": {
+    "value": [
+     "add 4"
+    ],
+    "text": "add 4"
+   },
+   "explanation": "7 to 11 is 4 more. 11 to 15 is 4 more. 15 to 19 is 4 more."
+  },
+  {
+   "id": "L1U01-S07",
+   "tier": "start",
+   "page": 2,
+   "text": "Look at the pattern: 30, 26, 22, 18, ...",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Do the numbers go up or down? {circ:Up|Down}",
+     "answer": {
+      "value": [
+       "Down"
+      ],
+      "text": "Down"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The rule is take away {b}.",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "take away 4"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The next number is {b}.",
+     "answer": {
+      "value": [
+       "14"
+      ],
+      "text": "14"
+     }
+    }
+   ],
+   "explanation": "30 is more than 26, so the numbers go down. 30 - 26 = 4, so take away 4. 18 - 4 = 14.",
+   "figure": {
+    "type": "chain",
+    "nodes": [
+     30,
+     26,
+     22,
+     18,
+     null
+    ],
+    "ops": [
+     "?",
+     "?",
+     "?",
+     "?"
+    ],
+    "width_mm": 88
+   },
+   "figside": false,
+   "partsrow": true
+  },
+  {
+   "id": "L1U01-S08",
+   "tier": "start",
+   "page": 2,
+   "text": "Siti puts 3 stickers in box 1, 6 stickers in box 2 and 9 stickers in box 3. She keeps going. Draw the stickers in boxes 4 to 6 to help you.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many in box 5? {b}",
+     "answer": {
+      "value": [
+       "15"
+      ],
+      "text": "15 stickers"
+     }
+    },
+    {
+     "label": "b",
+     "text": "How many in box 6? {b}",
+     "answer": {
+      "value": [
+       "18"
+      ],
+      "text": "18 stickers"
+     }
+    }
+   ],
+   "hint": "Compare box 1 and box 2. How many more stickers?",
+   "explanation": "3, 6, 9, 12, 15, 18. The 4th box has 12, the 5th has 15 and the 6th has 18.",
+   "figure": {
+    "type": "sticker_boxes",
+    "counts": [
+     3,
+     6,
+     9,
+     null,
+     null,
+     null
+    ],
+    "width_mm": 132
+   },
+   "partsrow": true
+  },
+  {
+   "id": "L1U01-S09",
+   "tier": "start",
+   "page": 2,
+   "text": "Ben builds steps with blocks.",
+   "figure": {
+    "type": "dot_boxes",
+    "counts": [
+     1,
+     3,
+     5,
+     null
+    ],
+    "layout": "ell",
+    "width_mm": 150
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many blocks are in Step 4? {b} blocks",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7 blocks"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Each step has {b} more blocks than the step before.",
+     "answer": {
+      "value": [
+       "2"
+      ],
+      "text": "2"
+     }
+    }
+   ],
+   "explanation": "Step 1 has 1 block, Step 2 has 3 and Step 3 has 5. Each step adds 2 blocks, so Step 4 has 5 + 2 = 7."
+  },
+  {
+   "id": "L1U01-S10",
+   "tier": "start",
+   "page": 3,
+   "text": "One number is wrong. Circle it. Then write the right number.\n9, 12, 15, 17, 21, 24\nThe right number is {b}.",
+   "answer": {
+    "value": [
+     "18"
+    ],
+    "text": "17 is wrong. The right number is 18."
+   },
+   "explanation": "The pattern adds 3 each time: 9, 12, 15, 18, 21, 24. So 17 should be 18."
+  },
+  {
+   "id": "L1U01-S11",
+   "tier": "start",
+   "page": 3,
+   "text": "Count back in 2s. Write the missing numbers in the tiles.",
+   "figure": {
+    "type": "tiles",
+    "items": [
+     30,
+     28,
+     null,
+     24,
+     null,
+     20
+    ],
+    "gaps": [
+     "-2",
+     "-2",
+     "-2",
+     "-2",
+     "-2"
+    ]
+   },
+   "answer": {
+    "value": [
+     "26",
+     "22"
+    ],
+    "text": "26, 22"
+   },
+   "explanation": "Counting back means taking away 2 each time: 28 - 2 = 26 and 24 - 2 = 22."
+  },
+  {
+   "id": "L1U01-S12",
+   "tier": "start",
+   "page": 3,
+   "text": "Wei puts 5¢ in his jar on Monday, 10¢ on Tuesday and 15¢ on Wednesday. He keeps going. How much does he put in on Friday? {b}¢",
+   "answer": {
+    "value": [
+     "25"
+    ],
+    "text": "25¢"
+   },
+   "space": {
+    "rows": [
+     "Write the days and amounts:"
+    ]
+   },
+   "explanation": "Each day he puts in 5¢ more: Thursday 20¢, Friday 25¢."
+  },
+  {
+   "id": "L1U01-S13",
+   "tier": "start",
+   "page": 3,
+   "text": "Mei starts on 3 and hops 4 each time. Circle every number she lands on.",
+   "figure": {
+    "type": "numstrip",
+    "start": 0,
+    "end": 31,
+    "per_row": 16
+   },
+   "answer": {
+    "value": [
+     "3",
+     "7",
+     "11",
+     "15",
+     "19",
+     "23",
+     "27",
+     "31"
+    ],
+    "text": "3, 7, 11, 15, 19, 23, 27, 31",
+    "list": true
+   },
+   "explanation": "Start on 3 and count on 4 each time: 3, 7, 11, 15, 19, 23, 27, 31."
+  },
+  {
+   "id": "L1U01-S14",
+   "tier": "start",
+   "page": 3,
+   "text": "Kumar starts on 20 and counts back in 5s. Write the missing numbers in the tiles.",
+   "figure": {
+    "type": "tiles",
+    "items": [
+     20,
+     null,
+     null,
+     null,
+     null
+    ],
+    "gaps": [
+     "-5",
+     "-5",
+     "-5",
+     "-5"
+    ]
+   },
+   "answer": {
+    "value": [
+     "15",
+     "10",
+     "5",
+     "0"
+    ],
+    "text": "15, 10, 5, 0"
+   },
+   "explanation": "Counting back in 5s means taking away 5 each time: 20 - 5 = 15, 15 - 5 = 10, 10 - 5 = 5, 5 - 5 = 0."
+  },
+  {
+   "id": "L1U01-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "Siti starts on 2 and hops 5 each time.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Will she land on 37? {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "Yes"
+      ],
+      "text": "Yes"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Will she land on 40? {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Write the numbers she lands on:",
+     ""
+    ]
+   },
+   "hint": "Hop from 2. Write each number you land on.",
+   "explanation": "2, 7, 12, 17, 22, 27, 32, 37, 42. She lands on 37. She jumps from 37 over 40 to 42."
+  },
+  {
+   "id": "L1U01-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "Ali counts in 4s from 4 up to 50. Mei counts in 10s from 10 up to 50.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Which numbers do they both say? {l}",
+     "answer": {
+      "value": [
+       "20",
+       "40"
+      ],
+      "text": "20 and 40",
+      "list": true
+     }
+    },
+    {
+     "label": "b",
+     "text": "How far apart are the numbers they both say? {b}",
+     "answer": {
+      "value": [
+       "20"
+      ],
+      "text": "20"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Ali:",
+     "Mei:"
+    ]
+   },
+   "hint": "Write Ali's numbers and Mei's numbers. Look for matches.",
+   "explanation": "Ali says 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48. Mei says 10, 20, 30, 40, 50. They both say 20 and 40, and 40 - 20 = 20."
+  },
+  {
+   "id": "L1U01-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "A pattern adds the same number each time. Its 2nd number is 10. Its 5th number is 25.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many hops from the 2nd number to the 5th number? {b}",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3 hops"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The rule is add {b}.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "add 5"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The 1st number is {b}.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    }
+   ],
+   "hint": "Do part (a) first. It helps with part (b).",
+   "explanation": "From the 2nd to the 5th number is 3 hops (2nd to 3rd, 3rd to 4th, 4th to 5th). They make 25 - 10 = 15, so each hop is 15 / 3 = 5. Go back one hop from 10: the 1st number is 5.",
+   "space": {
+    "rows": [
+     "Hops:"
+    ]
+   }
+  },
+  {
+   "id": "L1U01-G01",
+   "tier": "go",
+   "beyond": "Triangle numbers",
+   "page": 5,
+   "text": "Look at the triangles made of dots. Triangle 1 has 1 dot, Triangle 2 has 3 dots and Triangle 3 has 6 dots. The pattern keeps going.",
+   "figure": {
+    "type": "tri_dots",
+    "counts": [
+     1,
+     3,
+     6
+    ],
+    "width_mm": 100
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Triangle 4 has {b} dots.",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10 dots"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Triangle 5 has {b} dots.",
+     "answer": {
+      "value": [
+       "15"
+      ],
+      "text": "15 dots"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Triangle 7 has {b} dots.",
+     "answer": {
+      "value": [
+       "28"
+      ],
+      "text": "28 dots"
+     }
+    }
+   ],
+   "hint": "How many new dots does each triangle add? Is it the same?",
+   "explanation": "Each triangle has one more row than the one before, and the new row has one more dot. So the extra dots are 2, 3, 4, 5, 6, 7: 1, 3, 6, 10, 15, 21, 28."
+  },
+  {
+   "id": "L1U01-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "Mei starts on 1 and adds 3 each time. Ali starts on 2 and adds 5 each time. Both stop at 40. Write the numbers that Mei and Ali both say.",
+   "answer": {
+    "value": [
+     "7",
+     "22",
+     "37"
+    ],
+    "text": "7, 22 and 37",
+    "list": true
+   },
+   "space": {
+    "rows": [
+     "Mei:",
+     "Ali:",
+     "Both:"
+    ]
+   },
+   "hint": "List each pattern up to 40. Which numbers are on both lists?",
+   "explanation": "Mei says 1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 40. Ali says 2, 7, 12, 17, 22, 27, 32, 37. The same numbers are 7, 22 and 37, and each is 15 more than the one before."
+  },
+  {
+   "id": "L1U01-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "A pattern starts on 2 and adds the same whole number each time. The pattern says 20. Which numbers can it add? Find them all.",
+   "answer": {
+    "value": [
+     "1",
+     "2",
+     "3",
+     "6",
+     "9",
+     "18"
+    ],
+    "text": "1, 2, 3, 6, 9, 18",
+    "list": true
+   },
+   "space": {
+    "rows": [
+     "I tried:",
+     ""
+    ]
+   },
+   "hint": "How far is it from 2 to 20? Try different hops.",
+   "explanation": "You need equal hops that make 18 from 2 to 20. Hops of 1 (18 of them), 2 (9), 3 (6), 6 (3), 9 (2) and 18 (1) all work."
+  },
+  {
+   "id": "L1U01-C01",
+   "tier": "quiz",
+   "page": 5,
+   "text": "14, 18, 22, 26, {b}, {b}",
+   "answer": {
+    "value": [
+     "30",
+     "34"
+    ],
+    "text": "30, 34"
+   },
+   "explanation": "The rule is add 4: 26 + 4 = 30 and 30 + 4 = 34."
+  },
+  {
+   "id": "L1U01-C02",
+   "tier": "quiz",
+   "page": 5,
+   "text": "40, 35, 30, 25, {b}, {b}. The rule is take away {b}.",
+   "answer": {
+    "value": [
+     "20",
+     "15",
+     "5"
+    ],
+    "text": "20, 15; take away 5"
+   },
+   "explanation": "The numbers go down by 5 each time: 25 - 5 = 20 and 20 - 5 = 15."
+  },
+  {
+   "id": "L1U01-C03",
+   "tier": "quiz",
+   "page": 5,
+   "text": "Is 30 in this pattern: 6, 10, 14, 18, ...? {circ:Yes|No}",
+   "answer": {
+    "value": [
+     "Yes"
+    ],
+    "text": "Yes"
+   },
+   "explanation": "Add 4 each time: 6, 10, 14, 18, 22, 26, 30. It lands on 30."
+  },
+  {
+   "id": "L1U01-C04",
+   "tier": "quiz",
+   "page": 5,
+   "text": "One number is wrong: 11, 16, 21, 27, 31, 36. The right number is {b}.",
+   "answer": {
+    "value": [
+     "26"
+    ],
+    "text": "27 is wrong. The right number is 26."
+   },
+   "explanation": "The pattern adds 5: 11, 16, 21, 26, 31, 36."
+  }
+ ],
+ "snug": [
+  "start2"
+ ]
+}

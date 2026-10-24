@@ -39,7 +39,7 @@ def table(d,rows,widths=None,head=True):
 W=[
  (1,"Lessons 1 and 2","Number Patterns and Number Bonds",
   "Count with the Frog; Number Bond Inquiry",
-  "Cut-out kit pages (ten-frames, counters, number strips) are at the end of the week 1 PDF. Please cut them out and keep them in one envelope; we use them every week.",
+  "Cut-out kit pages (ten-frames, counters, number strips) are at the end of the week 1 PDF. Please cut them out and keep them in one envelope; we use them every week. Before Lesson 1, please cut out the two rows of the number strip (0 to 50) and tape them end to end, so we do not spend class time cutting.",
   "Ask your child: 'Pick a number from 1 to 10. How many ways can you split it into two parts? How do you know you found them all?'",
   ["3bJhBJ37ZoAfsuDo4LgWeH","1fsJ5Fj2abUf27LYUmuEqN"]),
  (2,"Lessons 3 and 4","Picture Graphs and Repeating and Growing Patterns",
@@ -57,9 +57,9 @@ W=[
   "The sorting tiles are in the week 1 kit pages. Please bring the envelope to class or keep it by your child for online lessons.",
   "Ask your child: 'Find three things at home. Which one is the odd one out? There can be more than one right answer. Explain why.'",
   ["RL9jDmrZwdbjVnL98L2tEp","UjMh35Wk2hZfT59b3W1TtV"]),
- (5,"Lessons 9 and 10","Length and Challenge Day (mixed puzzles)",
-  "Measure It; Challenge Day",
-  "The paper cube strips are on the cut-outs page (included again in the week 5 PDF). The Certificate of Completion is the last page.",
+ (5,"Lessons 9 and 10","Length and Puzzle Day (mixed puzzles)",
+  "Measure It; Puzzle Day",
+  "The paper cube strips are on the cut-outs page (included again in the week 5 PDF). Before Lesson 9, please print that page and cut out Strip A, so we do not spend class time cutting. The Certificate of Completion is the last page.",
   "Ask your child: 'Measure the table with your hand span, then with a pencil. Why are the two numbers different?'",
   ["V7cAm5E5H9i2N8bp3ynmsi","KCqynhP5sQ5BiYCeUzgJNs"]),
 ]
@@ -110,7 +110,7 @@ Attached are the minute-by-minute scripts with answers for both lessons, and the
   Lesson {2*w} deck: https://claude.ai/artifact/{ids[1]}
 
 Before the lesson, please:
-  1. Read both scripts once and try the Challenge questions yourself.
+  1. Read both scripts once and try the Go further questions yourself.
   2. Check you have counters, coins and cut-outs ready (see the materials list in the guide).
   3. After each lesson, tick the Readiness Tracker for each child (four quick ticks) and send me the sheet.
 
@@ -122,7 +122,7 @@ Thank you,
 d.add_page_break()
 H(d,"Week 5 closing email to parents",1)
 P(d,"Subject: Math Inquirers: thank you, and your child's certificate",b=True)
-for para in ["Dear parents,","Thank you for joining us for the Math Inquirers Holiday Program. Your child's Certificate of Completion is the last page of the Week 5 PDF. Please print it and add your child's name.","We would love your feedback in two minutes: [feedback form link]. What did your child enjoy most? What should we change?","If your child showed a love for puzzles, we may invite them to a short challenge session in the next holiday. We will contact you if so.","Warm regards,\n[Your name]"]: P(d,para)
+for para in ["Dear parents,","Thank you for joining us for the Math Inquirers Holiday Program. Your child's Certificate of Completion is the last page of the Week 5 PDF. Please print it and add your child's name.","We would love your feedback in two minutes: [feedback form link]. What did your child enjoy most? What should we change?","If your child enjoyed the puzzles, there will be a short challenge session open to all children in the next holiday. We will send the details to every family.","Warm regards,\n[Your name]"]: P(d,para)
 d.save("Math_Inquirers_Weekly_Email_Pack.docx")
 
 # ---------- TRACKER + SCREENING ----------
@@ -131,10 +131,10 @@ pick=[(1,0),(3,2),(4,0),(5,0),(6,0),(7,3),(8,2),(10,1)]
 d=Document();base(d)
 sec=d.sections[0];sec.orientation=WD_ORIENT.LANDSCAPE;sec.page_width,sec.page_height=sec.page_height,sec.page_width
 H(d,"Math Inquirers: Readiness Tracker",0)
-P(d,"Who is ready to go further? We look at how a child thinks, not only the score. Tick after each lesson (30 seconds per child).")
+P(d,"How is each child thinking? We look at how a child thinks, not only the score. These notes are for tutors only: never show them to children or share them between families. Tick after each lesson (30 seconds per child).")
 H(d,"The four signs",1)
 table(d,[["Code","Sign","What you see or hear"],
- ["A","Solved a Challenge question alone","Got the answer without hints, and showed how (counters, drawing or words)."],
+ ["A","Solved a Go further question alone","Got the answer without hints, and showed how (counters, drawing or words)."],
  ["B","Found a second way","Used a different method or found another answer, and said how it is different."],
  ["C","Noticed a pattern and said why","Said 'it always goes up by 3 because…', not just 'it goes up'."],
  ["D","Stretched it to a new case","Said what would happen with a bigger number or a changed rule, and checked it."]],[2,7,14])
@@ -151,15 +151,15 @@ rows=[["Child"]+[f"L{i}" for i in range(1,11)]+["Lessons with 3+","Decision"]]+[
 table(d,rows,[4]+[1.4]*10+[2.5,3])
 P(d,"")
 H(d,"How to decide",1)
-for x in ["3 or 4 in at least 3 lessons: invite to the Challenge Group and give the Screening Set below.",
+for x in ["3 or 4 in at least 3 lessons: remind the child that Go further and the Investigation are theirs to choose, and invite the whole group to a short challenge session open to all. The Go further puzzle set below is for any child who would like it.",
 "2 in most lessons: keep going and give more Think Harder questions in class.",
 "Mostly 0 or 1: do not worry. Check understanding of the core questions first. Many children grow later in the programme.",
 "One lesson alone means little. Look at the pattern across lessons, and at what the child actually says.",
-"Use this to guide extra challenge, not to label a child. Do not share rankings between families."]: d.add_paragraph(x,style='List Bullet')
+"Use this only to decide what to offer next, never to label or group a child. Do not share rankings between families."]: d.add_paragraph(x,style='List Bullet')
 # screening student sheet
 from docx.enum.section import WD_SECTION
 ns=d.add_section(WD_SECTION.NEW_PAGE);ns.orientation=WD_ORIENT.PORTRAIT;ns.page_width,ns.page_height=ns.page_height,ns.page_width
-H(d,"Challenge Screening Set: child sheet",0)
+H(d,"Go further puzzle set: child sheet",0)
 P(d,"Name: ________________________   Date: ____________")
 P(d,"Take your time. For each question, show how you found your answer with a drawing, counters or words. Then tell your tutor why.",i=True)
 for n,(l,i) in enumerate(pick,1):
@@ -168,13 +168,13 @@ for n,(l,i) in enumerate(pick,1):
     P(d,"_"*80)
 # key
 ns=d.add_section(WD_SECTION.NEW_PAGE);ns.orientation=WD_ORIENT.LANDSCAPE;ns.page_width,ns.page_height=ns.page_height,ns.page_width
-H(d,"Screening Set: tutor guide and answer key",0)
+H(d,"Go further puzzle set: tutor guide and answer key",0)
 for x in ["Use one to one or in a group of up to 4. Allow about 25 minutes. Read each question aloud if needed.",
 "Do not give hints in the first attempt. After 2 minutes you may give one hint, and score it as 'with a hint'.",
 "Score each question: 2 = correct and explains why (without hint); 1 = correct, or right idea with a hint; 0 = not yet.",
 "Then ask the extension question once. A good answer earns a star. Stars show how far the child can stretch.",
-"Total out of 16. As a guide, 12 or more with 3 or more stars suggests a child who would enjoy olympiad-style problems. Combine this with the lesson tracker; neither alone decides.",
-"These problems use the same kinds of thinking that later maths olympiad papers reward: patterns, listing in order, working backwards and logic. This set is not an official test and is not linked to any school or MOE programme."]: d.add_paragraph(x,style='List Bullet')
+"Total out of 16. As a guide, 12 or more with 3 or more stars suggests a child who would enjoy more open puzzles. Use it only to choose what to offer next, never to label a child. Combine it with the lesson tracker; neither alone decides.",
+"These problems practise patterns, listing in order, working backwards and logic. This set is not an official test and is not linked to any school or MOE programme."]: d.add_paragraph(x,style='List Bullet')
 ext={0:"What if the 5th number was 30? How many patterns now? How do you know you have them all?",
 1:"What if there were 15 children and the most votes was 6? Can the votes still all be different?",
 2:"What about exactly 40 sticks? How do you know before you draw?",

@@ -1,0 +1,1979 @@
+{
+ "level": 1,
+ "units": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "pages": [
+  {
+   "no": 1,
+   "kind": "cover",
+   "label": "Cover",
+   "exempt": true,
+   "fill": null,
+   "over": false,
+   "edition": "soft"
+  },
+  {
+   "no": 2,
+   "kind": "front",
+   "label": "About this book",
+   "exempt": true,
+   "fill": 0.7936566683831102,
+   "over": false,
+   "excess_mm": -53,
+   "edition": "soft"
+  },
+  {
+   "no": 3,
+   "kind": "front",
+   "label": "Welcome",
+   "exempt": true,
+   "fill": 0.9861772657054583,
+   "over": false,
+   "excess_mm": -3.6,
+   "edition": "soft"
+  },
+  {
+   "no": 4,
+   "kind": "front",
+   "label": "Contents",
+   "exempt": true,
+   "fill": 0.9524330587023687,
+   "over": false,
+   "excess_mm": -12.2,
+   "edition": "soft"
+  },
+  {
+   "no": 5,
+   "kind": "front",
+   "label": "Pace plan",
+   "exempt": true,
+   "fill": 0.7973255664263645,
+   "over": false,
+   "excess_mm": -52.1,
+   "edition": "soft"
+  },
+  {
+   "no": 6,
+   "kind": "learn",
+   "label": "Unit 1 \u00b7 Learn it",
+   "exempt": false,
+   "fill": 0.9944966529351185,
+   "over": false,
+   "excess_mm": -1.4,
+   "edition": "soft"
+  },
+  {
+   "no": 7,
+   "kind": "practice",
+   "label": "Unit 1 \u00b7 Start here 1",
+   "exempt": false,
+   "fill": 0.9001512615859938,
+   "over": false,
+   "excess_mm": -25.7,
+   "edition": "soft"
+  },
+  {
+   "no": 8,
+   "kind": "practice",
+   "label": "Unit 1 \u00b7 Start here 2",
+   "exempt": false,
+   "fill": 0.9821221678681772,
+   "over": false,
+   "excess_mm": -4.6,
+   "edition": "soft"
+  },
+  {
+   "no": 9,
+   "kind": "practice",
+   "label": "Unit 1 \u00b7 Start here 3",
+   "exempt": false,
+   "fill": 0.8895629505664263,
+   "over": false,
+   "excess_mm": -28.4,
+   "edition": "soft"
+  },
+  {
+   "no": 10,
+   "kind": "practice",
+   "label": "Unit 1 \u00b7 Think harder",
+   "exempt": false,
+   "fill": 0.893135298661174,
+   "over": false,
+   "excess_mm": -27.5,
+   "edition": "soft"
+  },
+  {
+   "no": 11,
+   "kind": "practice",
+   "label": "Unit 1 \u00b7 Go further",
+   "exempt": false,
+   "fill": 0.9132820545829042,
+   "over": false,
+   "excess_mm": -22.3,
+   "edition": "soft"
+  },
+  {
+   "no": 12,
+   "kind": "practice",
+   "label": "Unit 1 \u00b7 Check yourself",
+   "exempt": false,
+   "fill": 0.9999517250257467,
+   "over": false,
+   "excess_mm": -0.0,
+   "edition": "soft"
+  },
+  {
+   "no": 13,
+   "kind": "learn",
+   "label": "Unit 2 \u00b7 Learn it",
+   "exempt": false,
+   "fill": 0.9779061534500515,
+   "over": false,
+   "excess_mm": -5.7,
+   "edition": "soft"
+  },
+  {
+   "no": 14,
+   "kind": "practice",
+   "label": "Unit 2 \u00b7 Start here 1",
+   "exempt": false,
+   "fill": 0.8590692584963955,
+   "over": false,
+   "excess_mm": -36.2,
+   "edition": "soft"
+  },
+  {
+   "no": 15,
+   "kind": "practice",
+   "label": "Unit 2 \u00b7 Start here 2",
+   "exempt": false,
+   "fill": 0.9340724768280123,
+   "over": false,
+   "excess_mm": -16.9,
+   "edition": "soft"
+  },
+  {
+   "no": 16,
+   "kind": "practice",
+   "label": "Unit 2 \u00b7 Start here 3",
+   "exempt": false,
+   "fill": 0.9412815396498455,
+   "over": false,
+   "excess_mm": -15.1,
+   "edition": "soft"
+  },
+  {
+   "no": 17,
+   "kind": "practice",
+   "label": "Unit 2 \u00b7 Think harder",
+   "exempt": false,
+   "fill": 0.9708419155509783,
+   "over": false,
+   "excess_mm": -7.5,
+   "edition": "soft"
+  },
+  {
+   "no": 18,
+   "kind": "practice",
+   "label": "Unit 2 \u00b7 Go further",
+   "exempt": false,
+   "fill": 0.9873197734294542,
+   "over": false,
+   "excess_mm": -3.3,
+   "edition": "soft"
+  },
+  {
+   "no": 19,
+   "kind": "practice",
+   "label": "Unit 2 \u00b7 Check yourself",
+   "exempt": false,
+   "fill": 0.9999517250257467,
+   "over": false,
+   "excess_mm": -0.0,
+   "edition": "soft"
+  },
+  {
+   "no": 20,
+   "kind": "learn",
+   "label": "Unit 3 \u00b7 Learn it",
+   "exempt": false,
+   "fill": 0.9445803295571575,
+   "over": false,
+   "excess_mm": -14.2,
+   "edition": "soft"
+  },
+  {
+   "no": 21,
+   "kind": "practice",
+   "label": "Unit 3 \u00b7 Start here 1",
+   "exempt": false,
+   "fill": 0.9937081616889805,
+   "over": false,
+   "excess_mm": -1.6,
+   "edition": "soft"
+  },
+  {
+   "no": 22,
+   "kind": "practice",
+   "label": "Unit 3 \u00b7 Start here 2",
+   "exempt": false,
+   "fill": 0.9791291194644696,
+   "over": false,
+   "excess_mm": -5.4,
+   "edition": "soft"
+  },
+  {
+   "no": 23,
+   "kind": "practice",
+   "label": "Unit 3 \u00b7 Start here 3",
+   "exempt": false,
+   "fill": 0.9891864057672503,
+   "over": false,
+   "excess_mm": -2.8,
+   "edition": "soft"
+  },
+  {
+   "no": 24,
+   "kind": "practice",
+   "label": "Unit 3 \u00b7 Think harder",
+   "exempt": false,
+   "fill": 0.9121395468589083,
+   "over": false,
+   "excess_mm": -22.6,
+   "edition": "soft"
+  },
+  {
+   "no": 25,
+   "kind": "practice",
+   "label": "Unit 3 \u00b7 Go further",
+   "exempt": false,
+   "fill": 0.9971839598352215,
+   "over": false,
+   "excess_mm": -0.7,
+   "edition": "soft"
+  },
+  {
+   "no": 26,
+   "kind": "practice",
+   "label": "Unit 3 \u00b7 Check yourself",
+   "exempt": false,
+   "fill": 0.9999517250257467,
+   "over": false,
+   "excess_mm": -0.0,
+   "edition": "soft"
+  },
+  {
+   "no": 27,
+   "kind": "learn",
+   "label": "Unit 4 \u00b7 Learn it",
+   "exempt": false,
+   "fill": 0.866648429454171,
+   "over": false,
+   "excess_mm": -34.3,
+   "edition": "soft"
+  },
+  {
+   "no": 28,
+   "kind": "practice",
+   "label": "Unit 4 \u00b7 Start here 1",
+   "exempt": false,
+   "fill": 0.940364315139032,
+   "over": false,
+   "excess_mm": -15.3,
+   "edition": "soft"
+  },
+  {
+   "no": 29,
+   "kind": "practice",
+   "label": "Unit 4 \u00b7 Start here 2",
+   "exempt": false,
+   "fill": 0.9932093202883625,
+   "over": false,
+   "excess_mm": -1.7,
+   "edition": "soft"
+  },
+  {
+   "no": 30,
+   "kind": "practice",
+   "label": "Unit 4 \u00b7 Start here 3",
+   "exempt": false,
+   "fill": 0.9507756179196705,
+   "over": false,
+   "excess_mm": -12.6,
+   "edition": "soft"
+  },
+  {
+   "no": 31,
+   "kind": "practice",
+   "label": "Unit 4 \u00b7 Think harder",
+   "exempt": false,
+   "fill": 0.9699568743563337,
+   "over": false,
+   "excess_mm": -7.7,
+   "edition": "soft"
+  },
+  {
+   "no": 32,
+   "kind": "practice",
+   "label": "Unit 4 \u00b7 Go further",
+   "exempt": false,
+   "fill": 0.98451982492276,
+   "over": false,
+   "excess_mm": -4,
+   "edition": "soft"
+  },
+  {
+   "no": 33,
+   "kind": "practice",
+   "label": "Unit 4 \u00b7 Check yourself",
+   "exempt": false,
+   "fill": 0.9999517250257467,
+   "over": false,
+   "excess_mm": -0.0,
+   "edition": "soft"
+  },
+  {
+   "no": 34,
+   "kind": "learn",
+   "label": "Unit 5 \u00b7 Learn it",
+   "exempt": false,
+   "fill": 0.9748487384140062,
+   "over": false,
+   "excess_mm": -6.5,
+   "edition": "soft"
+  },
+  {
+   "no": 35,
+   "kind": "practice",
+   "label": "Unit 5 \u00b7 Start here 1",
+   "exempt": false,
+   "fill": 0.969715499485067,
+   "over": false,
+   "excess_mm": -7.8,
+   "edition": "soft"
+  },
+  {
+   "no": 36,
+   "kind": "practice",
+   "label": "Unit 5 \u00b7 Start here 2",
+   "exempt": false,
+   "fill": 0.9336862770339855,
+   "over": false,
+   "excess_mm": -17,
+   "edition": "soft"
+  },
+  {
+   "no": 37,
+   "kind": "practice",
+   "label": "Unit 5 \u00b7 Start here 3",
+   "exempt": false,
+   "fill": 0.9588053553038105,
+   "over": false,
+   "excess_mm": -10.6,
+   "edition": "soft"
+  },
+  {
+   "no": 38,
+   "kind": "practice",
+   "label": "Unit 5 \u00b7 Think harder",
+   "exempt": false,
+   "fill": 0.9377735581874357,
+   "over": false,
+   "excess_mm": -16,
+   "edition": "soft"
+  },
+  {
+   "no": 39,
+   "kind": "practice",
+   "label": "Unit 5 \u00b7 Go further",
+   "exempt": false,
+   "fill": 0.9952207775489187,
+   "over": false,
+   "excess_mm": -1.2,
+   "edition": "soft"
+  },
+  {
+   "no": 40,
+   "kind": "practice",
+   "label": "Unit 5 \u00b7 Check yourself",
+   "exempt": false,
+   "fill": 0.9999517250257467,
+   "over": false,
+   "excess_mm": -0.0,
+   "edition": "soft"
+  },
+  {
+   "no": 41,
+   "kind": "learn",
+   "label": "Unit 6 \u00b7 Learn it",
+   "exempt": false,
+   "fill": 0.9704074407826982,
+   "over": false,
+   "excess_mm": -7.6,
+   "edition": "soft"
+  },
+  {
+   "no": 42,
+   "kind": "practice",
+   "label": "Unit 6 \u00b7 Start here 1",
+   "exempt": false,
+   "fill": 0.9952851441812565,
+   "over": false,
+   "excess_mm": -1.2,
+   "edition": "soft"
+  },
+  {
+   "no": 43,
+   "kind": "practice",
+   "label": "Unit 6 \u00b7 Start here 2",
+   "exempt": false,
+   "fill": 0.9814785015447992,
+   "over": false,
+   "excess_mm": -4.8,
+   "edition": "soft"
+  },
+  {
+   "no": 44,
+   "kind": "practice",
+   "label": "Unit 6 \u00b7 Start here 3",
+   "exempt": false,
+   "fill": 0.873744850669413,
+   "over": false,
+   "excess_mm": -32.4,
+   "edition": "soft"
+  },
+  {
+   "no": 45,
+   "kind": "practice",
+   "label": "Unit 6 \u00b7 Think harder",
+   "exempt": false,
+   "fill": 0.9576950308959835,
+   "over": false,
+   "excess_mm": -10.9,
+   "edition": "soft"
+  },
+  {
+   "no": 46,
+   "kind": "practice",
+   "label": "Unit 6 \u00b7 Go further",
+   "exempt": false,
+   "fill": 0.9355368177136972,
+   "over": false,
+   "excess_mm": -16.6,
+   "edition": "soft"
+  },
+  {
+   "no": 47,
+   "kind": "practice",
+   "label": "Unit 6 \u00b7 Check yourself",
+   "exempt": false,
+   "fill": 0.9999517250257467,
+   "over": false,
+   "excess_mm": -0.0,
+   "edition": "soft"
+  },
+  {
+   "no": 48,
+   "kind": "learn",
+   "label": "Unit 7 \u00b7 Learn it",
+   "exempt": false,
+   "fill": 0.9905541967044285,
+   "over": false,
+   "excess_mm": -2.4,
+   "edition": "soft"
+  },
+  {
+   "no": 49,
+   "kind": "practice",
+   "label": "Unit 7 \u00b7 Start here 1",
+   "exempt": false,
+   "fill": 0.9875128733264675,
+   "over": false,
+   "excess_mm": -3.2,
+   "edition": "soft"
+  },
+  {
+   "no": 50,
+   "kind": "practice",
+   "label": "Unit 7 \u00b7 Start here 2",
+   "exempt": false,
+   "fill": 0.9394792739443872,
+   "over": false,
+   "excess_mm": -15.5,
+   "edition": "soft"
+  },
+  {
+   "no": 51,
+   "kind": "practice",
+   "label": "Unit 7 \u00b7 Start here 3",
+   "exempt": false,
+   "fill": 0.9642604273944387,
+   "over": false,
+   "excess_mm": -9.2,
+   "edition": "soft"
+  },
+  {
+   "no": 52,
+   "kind": "practice",
+   "label": "Unit 7 \u00b7 Think harder",
+   "exempt": false,
+   "fill": 0.9702143408856848,
+   "over": false,
+   "excess_mm": -7.7,
+   "edition": "soft"
+  },
+  {
+   "no": 53,
+   "kind": "practice",
+   "label": "Unit 7 \u00b7 Go further",
+   "exempt": false,
+   "fill": 0.9516767507723995,
+   "over": false,
+   "excess_mm": -12.4,
+   "edition": "soft"
+  },
+  {
+   "no": 54,
+   "kind": "practice",
+   "label": "Unit 7 \u00b7 Check yourself",
+   "exempt": false,
+   "fill": 0.9999517250257467,
+   "over": false,
+   "excess_mm": -0.0,
+   "edition": "soft"
+  },
+  {
+   "no": 55,
+   "kind": "learn",
+   "label": "Unit 8 \u00b7 Learn it",
+   "exempt": false,
+   "fill": 0.9875450566426365,
+   "over": false,
+   "excess_mm": -3.2,
+   "edition": "soft"
+  },
+  {
+   "no": 56,
+   "kind": "practice",
+   "label": "Unit 8 \u00b7 Start here 1",
+   "exempt": false,
+   "fill": 0.9933863285272915,
+   "over": false,
+   "excess_mm": -1.7,
+   "edition": "soft"
+  },
+  {
+   "no": 57,
+   "kind": "practice",
+   "label": "Unit 8 \u00b7 Start here 2",
+   "exempt": false,
+   "fill": 0.9522238671472708,
+   "over": false,
+   "excess_mm": -12.3,
+   "edition": "soft"
+  },
+  {
+   "no": 58,
+   "kind": "practice",
+   "label": "Unit 8 \u00b7 Start here 3",
+   "exempt": false,
+   "fill": 0.8783148815653965,
+   "over": false,
+   "excess_mm": -31.3,
+   "edition": "soft"
+  },
+  {
+   "no": 59,
+   "kind": "practice",
+   "label": "Unit 8 \u00b7 Think harder",
+   "exempt": false,
+   "fill": 0.9555870236869207,
+   "over": false,
+   "excess_mm": -11.4,
+   "edition": "soft"
+  },
+  {
+   "no": 60,
+   "kind": "practice",
+   "label": "Unit 8 \u00b7 Go further",
+   "exempt": false,
+   "fill": 0.9283921215242018,
+   "over": false,
+   "excess_mm": -18.4,
+   "edition": "soft"
+  },
+  {
+   "no": 61,
+   "kind": "practice",
+   "label": "Unit 8 \u00b7 Check yourself",
+   "exempt": false,
+   "fill": 0.9999517250257467,
+   "over": false,
+   "excess_mm": -0.0,
+   "edition": "soft"
+  },
+  {
+   "no": 62,
+   "kind": "learn",
+   "label": "Unit 9 \u00b7 Learn it",
+   "exempt": false,
+   "fill": 1.0010298661174046,
+   "over": false,
+   "excess_mm": 0.3,
+   "edition": "soft"
+  },
+  {
+   "no": 63,
+   "kind": "practice",
+   "label": "Unit 9 \u00b7 Start here 1",
+   "exempt": false,
+   "fill": 0.9855175077239959,
+   "over": false,
+   "excess_mm": -3.7,
+   "edition": "soft"
+  },
+  {
+   "no": 64,
+   "kind": "practice",
+   "label": "Unit 9 \u00b7 Start here 2",
+   "exempt": false,
+   "fill": 0.9854692327497425,
+   "over": false,
+   "excess_mm": -3.7,
+   "edition": "soft"
+  },
+  {
+   "no": 65,
+   "kind": "practice",
+   "label": "Unit 9 \u00b7 Start here 3",
+   "exempt": false,
+   "fill": 0.9892185890834192,
+   "over": false,
+   "excess_mm": -2.8,
+   "edition": "soft"
+  },
+  {
+   "no": 66,
+   "kind": "practice",
+   "label": "Unit 9 \u00b7 Think harder",
+   "exempt": false,
+   "fill": 0.9694741246138002,
+   "over": false,
+   "excess_mm": -7.8,
+   "edition": "soft"
+  },
+  {
+   "no": 67,
+   "kind": "practice",
+   "label": "Unit 9 \u00b7 Go further",
+   "exempt": false,
+   "fill": 0.887937693099897,
+   "over": false,
+   "excess_mm": -28.8,
+   "edition": "soft"
+  },
+  {
+   "no": 68,
+   "kind": "practice",
+   "label": "Unit 9 \u00b7 Check yourself",
+   "exempt": false,
+   "fill": 0.9999517250257467,
+   "over": false,
+   "excess_mm": -0.0,
+   "edition": "soft"
+  },
+  {
+   "no": 69,
+   "kind": "learn",
+   "label": "Unit 10 \u00b7 Learn it",
+   "exempt": false,
+   "fill": 0.9950437693099897,
+   "over": false,
+   "excess_mm": -1.3,
+   "edition": "soft"
+  },
+  {
+   "no": 70,
+   "kind": "practice",
+   "label": "Unit 10 \u00b7 Start here 1",
+   "exempt": false,
+   "fill": 0.9214244335736355,
+   "over": false,
+   "excess_mm": -20.2,
+   "edition": "soft"
+  },
+  {
+   "no": 71,
+   "kind": "practice",
+   "label": "Unit 10 \u00b7 Start here 2",
+   "exempt": false,
+   "fill": 0.9191716014418125,
+   "over": false,
+   "excess_mm": -20.8,
+   "edition": "soft"
+  },
+  {
+   "no": 72,
+   "kind": "practice",
+   "label": "Unit 10 \u00b7 Start here 3",
+   "exempt": false,
+   "fill": 0.8978179711637487,
+   "over": false,
+   "excess_mm": -26.3,
+   "edition": "soft"
+  },
+  {
+   "no": 73,
+   "kind": "practice",
+   "label": "Unit 10 \u00b7 Think harder",
+   "exempt": false,
+   "fill": 0.91413491246138,
+   "over": false,
+   "excess_mm": -22.1,
+   "edition": "soft"
+  },
+  {
+   "no": 74,
+   "kind": "practice",
+   "label": "Unit 10 \u00b7 Go further",
+   "exempt": false,
+   "fill": 0.9211669670442842,
+   "over": false,
+   "excess_mm": -20.3,
+   "edition": "soft"
+  },
+  {
+   "no": 75,
+   "kind": "practice",
+   "label": "Unit 10 \u00b7 Check yourself",
+   "exempt": false,
+   "fill": 0.9999517250257467,
+   "over": false,
+   "excess_mm": -0.0,
+   "edition": "soft"
+  },
+  {
+   "no": 76,
+   "kind": "front",
+   "label": "My progress",
+   "exempt": true,
+   "fill": 0.866503604531411,
+   "over": false,
+   "excess_mm": -34.3,
+   "edition": "soft"
+  },
+  {
+   "no": 77,
+   "kind": "cert",
+   "label": "Certificate",
+   "exempt": true,
+   "fill": null,
+   "over": false,
+   "edition": "soft"
+  },
+  {
+   "no": 78,
+   "kind": "blank",
+   "label": null,
+   "exempt": true,
+   "fill": null,
+   "over": false,
+   "edition": "soft"
+  },
+  {
+   "no": 79,
+   "kind": "divider",
+   "label": "Answers",
+   "exempt": true,
+   "fill": null,
+   "over": false,
+   "edition": "soft"
+  },
+  {
+   "no": 80,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.9915518795056643,
+   "over": false,
+   "excess_mm": -2.2,
+   "edition": "soft"
+  },
+  {
+   "no": 81,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.9650811019567456,
+   "over": false,
+   "excess_mm": -9,
+   "edition": "soft"
+  },
+  {
+   "no": 82,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.9743177136972193,
+   "over": false,
+   "excess_mm": -6.6,
+   "edition": "soft"
+  },
+  {
+   "no": 83,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.9341207518022657,
+   "over": false,
+   "excess_mm": -16.9,
+   "edition": "soft"
+  },
+  {
+   "no": 84,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.9800785272914521,
+   "over": false,
+   "excess_mm": -5.1,
+   "edition": "soft"
+  },
+  {
+   "no": 85,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.9565364315139032,
+   "over": false,
+   "excess_mm": -11.2,
+   "edition": "soft"
+  },
+  {
+   "no": 86,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.954878990731205,
+   "over": false,
+   "excess_mm": -11.6,
+   "edition": "soft"
+  },
+  {
+   "no": 87,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.9235485324407827,
+   "over": false,
+   "excess_mm": -19.6,
+   "edition": "soft"
+  },
+  {
+   "no": 88,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.9470906282183316,
+   "over": false,
+   "excess_mm": -13.6,
+   "edition": "soft"
+  },
+  {
+   "no": 89,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.9361483007209063,
+   "over": false,
+   "excess_mm": -16.4,
+   "edition": "soft"
+  },
+  {
+   "no": 90,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.9470906282183316,
+   "over": false,
+   "excess_mm": -13.6,
+   "edition": "soft"
+  },
+  {
+   "no": 91,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.9235485324407827,
+   "over": false,
+   "excess_mm": -19.6,
+   "edition": "soft"
+  },
+  {
+   "no": 92,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.965451210092688,
+   "over": false,
+   "excess_mm": -8.9,
+   "edition": "soft"
+  },
+  {
+   "no": 93,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.9537525746652935,
+   "over": false,
+   "excess_mm": -11.9,
+   "edition": "soft"
+  },
+  {
+   "no": 94,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.945063079299691,
+   "over": false,
+   "excess_mm": -14.1,
+   "edition": "soft"
+  },
+  {
+   "no": 95,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.966352342945417,
+   "over": false,
+   "excess_mm": -8.6,
+   "edition": "soft"
+  },
+  {
+   "no": 96,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.9780509783728115,
+   "over": false,
+   "excess_mm": -5.6,
+   "edition": "soft"
+  },
+  {
+   "no": 97,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.9459642121524202,
+   "over": false,
+   "excess_mm": -13.9,
+   "edition": "soft"
+  },
+  {
+   "no": 98,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.9702626158599382,
+   "over": false,
+   "excess_mm": -7.6,
+   "edition": "soft"
+  },
+  {
+   "no": 1,
+   "kind": "cover",
+   "label": "Cover",
+   "exempt": true,
+   "fill": null,
+   "over": false,
+   "edition": "print"
+  },
+  {
+   "no": 2,
+   "kind": "front",
+   "label": "About this book",
+   "exempt": true,
+   "fill": 0.7936566683831102,
+   "over": false,
+   "excess_mm": -53,
+   "edition": "print"
+  },
+  {
+   "no": 3,
+   "kind": "front",
+   "label": "Welcome",
+   "exempt": true,
+   "fill": 0.9861772657054583,
+   "over": false,
+   "excess_mm": -3.6,
+   "edition": "print"
+  },
+  {
+   "no": 4,
+   "kind": "front",
+   "label": "Contents",
+   "exempt": true,
+   "fill": 0.9524330587023687,
+   "over": false,
+   "excess_mm": -12.2,
+   "edition": "print"
+  },
+  {
+   "no": 5,
+   "kind": "front",
+   "label": "Pace plan",
+   "exempt": true,
+   "fill": 0.799385298661174,
+   "over": false,
+   "excess_mm": -51.5,
+   "edition": "print"
+  },
+  {
+   "no": 6,
+   "kind": "learn",
+   "label": "Unit 1 \u00b7 Learn it",
+   "exempt": false,
+   "fill": 0.9986161174047374,
+   "over": false,
+   "excess_mm": -0.4,
+   "edition": "print"
+  },
+  {
+   "no": 7,
+   "kind": "practice",
+   "label": "Unit 1 \u00b7 Start here 1",
+   "exempt": false,
+   "fill": 0.9001512615859938,
+   "over": false,
+   "excess_mm": -25.7,
+   "edition": "print"
+  },
+  {
+   "no": 8,
+   "kind": "practice",
+   "label": "Unit 1 \u00b7 Start here 2",
+   "exempt": false,
+   "fill": 0.9821221678681772,
+   "over": false,
+   "excess_mm": -4.6,
+   "edition": "print"
+  },
+  {
+   "no": 9,
+   "kind": "practice",
+   "label": "Unit 1 \u00b7 Start here 3",
+   "exempt": false,
+   "fill": 0.8895629505664263,
+   "over": false,
+   "excess_mm": -28.4,
+   "edition": "print"
+  },
+  {
+   "no": 10,
+   "kind": "practice",
+   "label": "Unit 1 \u00b7 Think harder",
+   "exempt": false,
+   "fill": 0.8993144953656025,
+   "over": false,
+   "excess_mm": -25.9,
+   "edition": "print"
+  },
+  {
+   "no": 11,
+   "kind": "practice",
+   "label": "Unit 1 \u00b7 Go further",
+   "exempt": false,
+   "fill": 0.9132820545829042,
+   "over": false,
+   "excess_mm": -22.3,
+   "edition": "print"
+  },
+  {
+   "no": 12,
+   "kind": "practice",
+   "label": "Unit 1 \u00b7 Check yourself",
+   "exempt": false,
+   "fill": 0.9999517250257467,
+   "over": false,
+   "excess_mm": -0.0,
+   "edition": "print"
+  },
+  {
+   "no": 13,
+   "kind": "learn",
+   "label": "Unit 2 \u00b7 Learn it",
+   "exempt": false,
+   "fill": 0.9820256179196705,
+   "over": false,
+   "excess_mm": -4.6,
+   "edition": "print"
+  },
+  {
+   "no": 14,
+   "kind": "practice",
+   "label": "Unit 2 \u00b7 Start here 1",
+   "exempt": false,
+   "fill": 0.8590692584963955,
+   "over": false,
+   "excess_mm": -36.2,
+   "edition": "print"
+  },
+  {
+   "no": 15,
+   "kind": "practice",
+   "label": "Unit 2 \u00b7 Start here 2",
+   "exempt": false,
+   "fill": 0.9340724768280123,
+   "over": false,
+   "excess_mm": -16.9,
+   "edition": "print"
+  },
+  {
+   "no": 16,
+   "kind": "practice",
+   "label": "Unit 2 \u00b7 Start here 3",
+   "exempt": false,
+   "fill": 0.9412815396498455,
+   "over": false,
+   "excess_mm": -15.1,
+   "edition": "print"
+  },
+  {
+   "no": 17,
+   "kind": "practice",
+   "label": "Unit 2 \u00b7 Think harder",
+   "exempt": false,
+   "fill": 0.9770211122554068,
+   "over": false,
+   "excess_mm": -5.9,
+   "edition": "print"
+  },
+  {
+   "no": 18,
+   "kind": "practice",
+   "label": "Unit 2 \u00b7 Go further",
+   "exempt": false,
+   "fill": 0.9873197734294542,
+   "over": false,
+   "excess_mm": -3.3,
+   "edition": "print"
+  },
+  {
+   "no": 19,
+   "kind": "practice",
+   "label": "Unit 2 \u00b7 Check yourself",
+   "exempt": false,
+   "fill": 0.9999517250257467,
+   "over": false,
+   "excess_mm": -0.0,
+   "edition": "print"
+  },
+  {
+   "no": 20,
+   "kind": "learn",
+   "label": "Unit 3 \u00b7 Learn it",
+   "exempt": false,
+   "fill": 0.956890447991761,
+   "over": false,
+   "excess_mm": -11.1,
+   "edition": "print"
+  },
+  {
+   "no": 21,
+   "kind": "practice",
+   "label": "Unit 3 \u00b7 Start here 1",
+   "exempt": false,
+   "fill": 0.9937081616889805,
+   "over": false,
+   "excess_mm": -1.6,
+   "edition": "print"
+  },
+  {
+   "no": 22,
+   "kind": "practice",
+   "label": "Unit 3 \u00b7 Start here 2",
+   "exempt": false,
+   "fill": 0.9791291194644696,
+   "over": false,
+   "excess_mm": -5.4,
+   "edition": "print"
+  },
+  {
+   "no": 23,
+   "kind": "practice",
+   "label": "Unit 3 \u00b7 Start here 3",
+   "exempt": false,
+   "fill": 0.9891864057672503,
+   "over": false,
+   "excess_mm": -2.8,
+   "edition": "print"
+  },
+  {
+   "no": 24,
+   "kind": "practice",
+   "label": "Unit 3 \u00b7 Think harder",
+   "exempt": false,
+   "fill": 0.9183187435633368,
+   "over": false,
+   "excess_mm": -21,
+   "edition": "print"
+  },
+  {
+   "no": 25,
+   "kind": "practice",
+   "label": "Unit 3 \u00b7 Go further",
+   "exempt": false,
+   "fill": 0.9971839598352215,
+   "over": false,
+   "excess_mm": -0.7,
+   "edition": "print"
+  },
+  {
+   "no": 26,
+   "kind": "practice",
+   "label": "Unit 3 \u00b7 Check yourself",
+   "exempt": false,
+   "fill": 0.9999517250257467,
+   "over": false,
+   "excess_mm": -0.0,
+   "edition": "print"
+  },
+  {
+   "no": 27,
+   "kind": "learn",
+   "label": "Unit 4 \u00b7 Learn it",
+   "exempt": false,
+   "fill": 0.87076789392379,
+   "over": false,
+   "excess_mm": -33.2,
+   "edition": "print"
+  },
+  {
+   "no": 28,
+   "kind": "practice",
+   "label": "Unit 4 \u00b7 Start here 1",
+   "exempt": false,
+   "fill": 0.940364315139032,
+   "over": false,
+   "excess_mm": -15.3,
+   "edition": "print"
+  },
+  {
+   "no": 29,
+   "kind": "practice",
+   "label": "Unit 4 \u00b7 Start here 2",
+   "exempt": false,
+   "fill": 0.9932093202883625,
+   "over": false,
+   "excess_mm": -1.7,
+   "edition": "print"
+  },
+  {
+   "no": 30,
+   "kind": "practice",
+   "label": "Unit 4 \u00b7 Start here 3",
+   "exempt": false,
+   "fill": 0.9507756179196705,
+   "over": false,
+   "excess_mm": -12.6,
+   "edition": "print"
+  },
+  {
+   "no": 31,
+   "kind": "practice",
+   "label": "Unit 4 \u00b7 Think harder",
+   "exempt": false,
+   "fill": 0.9761360710607621,
+   "over": false,
+   "excess_mm": -6.1,
+   "edition": "print"
+  },
+  {
+   "no": 32,
+   "kind": "practice",
+   "label": "Unit 4 \u00b7 Go further",
+   "exempt": false,
+   "fill": 0.98451982492276,
+   "over": false,
+   "excess_mm": -4,
+   "edition": "print"
+  },
+  {
+   "no": 33,
+   "kind": "practice",
+   "label": "Unit 4 \u00b7 Check yourself",
+   "exempt": false,
+   "fill": 0.9999517250257467,
+   "over": false,
+   "excess_mm": -0.0,
+   "edition": "print"
+  },
+  {
+   "no": 34,
+   "kind": "learn",
+   "label": "Unit 5 \u00b7 Learn it",
+   "exempt": false,
+   "fill": 0.9789682028836252,
+   "over": false,
+   "excess_mm": -5.4,
+   "edition": "print"
+  },
+  {
+   "no": 35,
+   "kind": "practice",
+   "label": "Unit 5 \u00b7 Start here 1",
+   "exempt": false,
+   "fill": 0.969715499485067,
+   "over": false,
+   "excess_mm": -7.8,
+   "edition": "print"
+  },
+  {
+   "no": 36,
+   "kind": "practice",
+   "label": "Unit 5 \u00b7 Start here 2",
+   "exempt": false,
+   "fill": 0.9336862770339855,
+   "over": false,
+   "excess_mm": -17,
+   "edition": "print"
+  },
+  {
+   "no": 37,
+   "kind": "practice",
+   "label": "Unit 5 \u00b7 Start here 3",
+   "exempt": false,
+   "fill": 0.9588053553038105,
+   "over": false,
+   "excess_mm": -10.6,
+   "edition": "print"
+  },
+  {
+   "no": 38,
+   "kind": "practice",
+   "label": "Unit 5 \u00b7 Think harder",
+   "exempt": false,
+   "fill": 0.943952754891864,
+   "over": false,
+   "excess_mm": -14.4,
+   "edition": "print"
+  },
+  {
+   "no": 39,
+   "kind": "practice",
+   "label": "Unit 5 \u00b7 Go further",
+   "exempt": false,
+   "fill": 0.9952207775489187,
+   "over": false,
+   "excess_mm": -1.2,
+   "edition": "print"
+  },
+  {
+   "no": 40,
+   "kind": "practice",
+   "label": "Unit 5 \u00b7 Check yourself",
+   "exempt": false,
+   "fill": 0.9999517250257467,
+   "over": false,
+   "excess_mm": -0.0,
+   "edition": "print"
+  },
+  {
+   "no": 41,
+   "kind": "learn",
+   "label": "Unit 6 \u00b7 Learn it",
+   "exempt": false,
+   "fill": 0.9745269052523172,
+   "over": false,
+   "excess_mm": -6.5,
+   "edition": "print"
+  },
+  {
+   "no": 42,
+   "kind": "practice",
+   "label": "Unit 6 \u00b7 Start here 1",
+   "exempt": false,
+   "fill": 0.9952851441812565,
+   "over": false,
+   "excess_mm": -1.2,
+   "edition": "print"
+  },
+  {
+   "no": 43,
+   "kind": "practice",
+   "label": "Unit 6 \u00b7 Start here 2",
+   "exempt": false,
+   "fill": 0.9814785015447992,
+   "over": false,
+   "excess_mm": -4.8,
+   "edition": "print"
+  },
+  {
+   "no": 44,
+   "kind": "practice",
+   "label": "Unit 6 \u00b7 Start here 3",
+   "exempt": false,
+   "fill": 0.873744850669413,
+   "over": false,
+   "excess_mm": -32.4,
+   "edition": "print"
+  },
+  {
+   "no": 45,
+   "kind": "practice",
+   "label": "Unit 6 \u00b7 Think harder",
+   "exempt": false,
+   "fill": 0.963874227600412,
+   "over": false,
+   "excess_mm": -9.3,
+   "edition": "print"
+  },
+  {
+   "no": 46,
+   "kind": "practice",
+   "label": "Unit 6 \u00b7 Go further",
+   "exempt": false,
+   "fill": 0.9355368177136972,
+   "over": false,
+   "excess_mm": -16.6,
+   "edition": "print"
+  },
+  {
+   "no": 47,
+   "kind": "practice",
+   "label": "Unit 6 \u00b7 Check yourself",
+   "exempt": false,
+   "fill": 0.9999517250257467,
+   "over": false,
+   "excess_mm": -0.0,
+   "edition": "print"
+  },
+  {
+   "no": 48,
+   "kind": "learn",
+   "label": "Unit 7 \u00b7 Learn it",
+   "exempt": false,
+   "fill": 0.9946736611740473,
+   "over": false,
+   "excess_mm": -1.4,
+   "edition": "print"
+  },
+  {
+   "no": 49,
+   "kind": "practice",
+   "label": "Unit 7 \u00b7 Start here 1",
+   "exempt": false,
+   "fill": 0.9875128733264675,
+   "over": false,
+   "excess_mm": -3.2,
+   "edition": "print"
+  },
+  {
+   "no": 50,
+   "kind": "practice",
+   "label": "Unit 7 \u00b7 Start here 2",
+   "exempt": false,
+   "fill": 0.9394792739443872,
+   "over": false,
+   "excess_mm": -15.5,
+   "edition": "print"
+  },
+  {
+   "no": 51,
+   "kind": "practice",
+   "label": "Unit 7 \u00b7 Start here 3",
+   "exempt": false,
+   "fill": 0.9642604273944387,
+   "over": false,
+   "excess_mm": -9.2,
+   "edition": "print"
+  },
+  {
+   "no": 52,
+   "kind": "practice",
+   "label": "Unit 7 \u00b7 Think harder",
+   "exempt": false,
+   "fill": 0.9763935375901133,
+   "over": false,
+   "excess_mm": -6.1,
+   "edition": "print"
+  },
+  {
+   "no": 53,
+   "kind": "practice",
+   "label": "Unit 7 \u00b7 Go further",
+   "exempt": false,
+   "fill": 0.9516767507723995,
+   "over": false,
+   "excess_mm": -12.4,
+   "edition": "print"
+  },
+  {
+   "no": 54,
+   "kind": "practice",
+   "label": "Unit 7 \u00b7 Check yourself",
+   "exempt": false,
+   "fill": 0.9999517250257467,
+   "over": false,
+   "excess_mm": -0.0,
+   "edition": "print"
+  },
+  {
+   "no": 55,
+   "kind": "learn",
+   "label": "Unit 8 \u00b7 Learn it",
+   "exempt": false,
+   "fill": 0.9916645211122554,
+   "over": false,
+   "excess_mm": -2.1,
+   "edition": "print"
+  },
+  {
+   "no": 56,
+   "kind": "practice",
+   "label": "Unit 8 \u00b7 Start here 1",
+   "exempt": false,
+   "fill": 0.9933863285272915,
+   "over": false,
+   "excess_mm": -1.7,
+   "edition": "print"
+  },
+  {
+   "no": 57,
+   "kind": "practice",
+   "label": "Unit 8 \u00b7 Start here 2",
+   "exempt": false,
+   "fill": 0.9522238671472708,
+   "over": false,
+   "excess_mm": -12.3,
+   "edition": "print"
+  },
+  {
+   "no": 58,
+   "kind": "practice",
+   "label": "Unit 8 \u00b7 Start here 3",
+   "exempt": false,
+   "fill": 0.8783148815653965,
+   "over": false,
+   "excess_mm": -31.3,
+   "edition": "print"
+  },
+  {
+   "no": 59,
+   "kind": "practice",
+   "label": "Unit 8 \u00b7 Think harder",
+   "exempt": false,
+   "fill": 0.9617662203913491,
+   "over": false,
+   "excess_mm": -9.8,
+   "edition": "print"
+  },
+  {
+   "no": 60,
+   "kind": "practice",
+   "label": "Unit 8 \u00b7 Go further",
+   "exempt": false,
+   "fill": 0.9283921215242018,
+   "over": false,
+   "excess_mm": -18.4,
+   "edition": "print"
+  },
+  {
+   "no": 61,
+   "kind": "practice",
+   "label": "Unit 8 \u00b7 Check yourself",
+   "exempt": false,
+   "fill": 0.9999517250257467,
+   "over": false,
+   "excess_mm": -0.0,
+   "edition": "print"
+  },
+  {
+   "no": 62,
+   "kind": "learn",
+   "label": "Unit 9 \u00b7 Learn it",
+   "exempt": false,
+   "fill": 0.9856784243048403,
+   "over": false,
+   "excess_mm": -3.7,
+   "edition": "print"
+  },
+  {
+   "no": 63,
+   "kind": "practice",
+   "label": "Unit 9 \u00b7 Start here 1",
+   "exempt": false,
+   "fill": 0.9855175077239959,
+   "over": false,
+   "excess_mm": -3.7,
+   "edition": "print"
+  },
+  {
+   "no": 64,
+   "kind": "practice",
+   "label": "Unit 9 \u00b7 Start here 2",
+   "exempt": false,
+   "fill": 0.9854692327497425,
+   "over": false,
+   "excess_mm": -3.7,
+   "edition": "print"
+  },
+  {
+   "no": 65,
+   "kind": "practice",
+   "label": "Unit 9 \u00b7 Start here 3",
+   "exempt": false,
+   "fill": 0.9892185890834192,
+   "over": false,
+   "excess_mm": -2.8,
+   "edition": "print"
+  },
+  {
+   "no": 66,
+   "kind": "practice",
+   "label": "Unit 9 \u00b7 Think harder",
+   "exempt": false,
+   "fill": 0.9756533213182287,
+   "over": false,
+   "excess_mm": -6.3,
+   "edition": "print"
+  },
+  {
+   "no": 67,
+   "kind": "practice",
+   "label": "Unit 9 \u00b7 Go further",
+   "exempt": false,
+   "fill": 0.887937693099897,
+   "over": false,
+   "excess_mm": -28.8,
+   "edition": "print"
+  },
+  {
+   "no": 68,
+   "kind": "practice",
+   "label": "Unit 9 \u00b7 Check yourself",
+   "exempt": false,
+   "fill": 0.9999517250257467,
+   "over": false,
+   "excess_mm": -0.0,
+   "edition": "print"
+  },
+  {
+   "no": 69,
+   "kind": "learn",
+   "label": "Unit 10 \u00b7 Learn it",
+   "exempt": false,
+   "fill": 0.9991632337796087,
+   "over": false,
+   "excess_mm": -0.2,
+   "edition": "print"
+  },
+  {
+   "no": 70,
+   "kind": "practice",
+   "label": "Unit 10 \u00b7 Start here 1",
+   "exempt": false,
+   "fill": 0.9214244335736355,
+   "over": false,
+   "excess_mm": -20.2,
+   "edition": "print"
+  },
+  {
+   "no": 71,
+   "kind": "practice",
+   "label": "Unit 10 \u00b7 Start here 2",
+   "exempt": false,
+   "fill": 0.9191716014418125,
+   "over": false,
+   "excess_mm": -20.8,
+   "edition": "print"
+  },
+  {
+   "no": 72,
+   "kind": "practice",
+   "label": "Unit 10 \u00b7 Start here 3",
+   "exempt": false,
+   "fill": 0.8978179711637487,
+   "over": false,
+   "excess_mm": -26.3,
+   "edition": "print"
+  },
+  {
+   "no": 73,
+   "kind": "practice",
+   "label": "Unit 10 \u00b7 Think harder",
+   "exempt": false,
+   "fill": 0.9203141091658085,
+   "over": false,
+   "excess_mm": -20.5,
+   "edition": "print"
+  },
+  {
+   "no": 74,
+   "kind": "practice",
+   "label": "Unit 10 \u00b7 Go further",
+   "exempt": false,
+   "fill": 0.9211669670442842,
+   "over": false,
+   "excess_mm": -20.3,
+   "edition": "print"
+  },
+  {
+   "no": 75,
+   "kind": "practice",
+   "label": "Unit 10 \u00b7 Check yourself",
+   "exempt": false,
+   "fill": 0.9999517250257467,
+   "over": false,
+   "excess_mm": -0.0,
+   "edition": "print"
+  },
+  {
+   "no": 76,
+   "kind": "front",
+   "label": "My progress",
+   "exempt": true,
+   "fill": 0.8685633367662204,
+   "over": false,
+   "excess_mm": -33.8,
+   "edition": "print"
+  },
+  {
+   "no": 77,
+   "kind": "cert",
+   "label": "Certificate",
+   "exempt": true,
+   "fill": null,
+   "over": false,
+   "edition": "print"
+  },
+  {
+   "no": 78,
+   "kind": "blank",
+   "label": null,
+   "exempt": true,
+   "fill": null,
+   "over": false,
+   "edition": "print"
+  },
+  {
+   "no": 79,
+   "kind": "divider",
+   "label": "Answers",
+   "exempt": true,
+   "fill": null,
+   "over": false,
+   "edition": "print"
+  },
+  {
+   "no": 80,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.9915518795056643,
+   "over": false,
+   "excess_mm": -2.2,
+   "edition": "print"
+  },
+  {
+   "no": 81,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.9650811019567456,
+   "over": false,
+   "excess_mm": -9,
+   "edition": "print"
+  },
+  {
+   "no": 82,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.9743177136972193,
+   "over": false,
+   "excess_mm": -6.6,
+   "edition": "print"
+  },
+  {
+   "no": 83,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.9341207518022657,
+   "over": false,
+   "excess_mm": -16.9,
+   "edition": "print"
+  },
+  {
+   "no": 84,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.9800785272914521,
+   "over": false,
+   "excess_mm": -5.1,
+   "edition": "print"
+  },
+  {
+   "no": 85,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.9565364315139032,
+   "over": false,
+   "excess_mm": -11.2,
+   "edition": "print"
+  },
+  {
+   "no": 86,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.954878990731205,
+   "over": false,
+   "excess_mm": -11.6,
+   "edition": "print"
+  },
+  {
+   "no": 87,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.9235485324407827,
+   "over": false,
+   "excess_mm": -19.6,
+   "edition": "print"
+  },
+  {
+   "no": 88,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.9470906282183316,
+   "over": false,
+   "excess_mm": -13.6,
+   "edition": "print"
+  },
+  {
+   "no": 89,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.9361483007209063,
+   "over": false,
+   "excess_mm": -16.4,
+   "edition": "print"
+  },
+  {
+   "no": 90,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.9470906282183316,
+   "over": false,
+   "excess_mm": -13.6,
+   "edition": "print"
+  },
+  {
+   "no": 91,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.9235485324407827,
+   "over": false,
+   "excess_mm": -19.6,
+   "edition": "print"
+  },
+  {
+   "no": 92,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.965451210092688,
+   "over": false,
+   "excess_mm": -8.9,
+   "edition": "print"
+  },
+  {
+   "no": 93,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.9537525746652935,
+   "over": false,
+   "excess_mm": -11.9,
+   "edition": "print"
+  },
+  {
+   "no": 94,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.945063079299691,
+   "over": false,
+   "excess_mm": -14.1,
+   "edition": "print"
+  },
+  {
+   "no": 95,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.966352342945417,
+   "over": false,
+   "excess_mm": -8.6,
+   "edition": "print"
+  },
+  {
+   "no": 96,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.9780509783728115,
+   "over": false,
+   "excess_mm": -5.6,
+   "edition": "print"
+  },
+  {
+   "no": 97,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.9459642121524202,
+   "over": false,
+   "excess_mm": -13.9,
+   "edition": "print"
+  },
+  {
+   "no": 98,
+   "kind": "answers",
+   "label": "Answers",
+   "exempt": true,
+   "fill": 0.9702626158599382,
+   "over": false,
+   "excess_mm": -7.6,
+   "edition": "print"
+  }
+ ],
+ "problems": [],
+ "soft_pages": 98,
+ "print_pages": 98,
+ "bw_pipeline": {
+  "pages": 98,
+  "dpi": 600,
+  "mb": 12.33,
+  "check_bw_failures": 0,
+  "pale_tint_dropped_max": 0.0037
+ }
+}

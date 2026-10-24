@@ -21,25 +21,24 @@
  },
  {
   "lesson": 2,
-  "name": "Eugenia Cheng",
-  "years": "born 1976",
-  "country_or_region": "England (now works in the United States)",
-  "who": "A mathematician who explains big ideas with cake and baking.",
-  "story": "Eugenia Cheng is a mathematician who was born in England in 1976 and studied maths at Cambridge University. Her research is in an area called category theory. She is well known for explaining maths with food. Her book How to Bake Pi came out in 2015, and each chapter opens with a dessert recipe. One example in the book is about three brothers and sisters trying to share a cake. Today she teaches maths to art students in Chicago. Cooking and baking use fractions all the time, such as half a cup of milk, a quarter of a cake or a third of the dough. Cheng shows that maths is not only for tests: it is also in the kitchen.",
-  "link_to_lesson": "Today you add, subtract and share with fractions, just like sharing a cake or following a recipe.",
+  "name": "Zhang Qiujian",
+  "years": "about 430-490 (dates uncertain)",
+  "country_or_region": "China",
+  "who": "A Chinese author of an old maths manual that gives lots of practice with fractions.",
+  "story": "Zhang Qiujian wrote a maths book in China about 1,500 years ago. Historians know almost nothing else about his life, and the dates are not certain. In his preface he told students not to fear multiplying and dividing as much as the tricky parts of working with fractions. Much of his book is practice with fractions, such as dividing one mixed number by another. He also gave problems to help with finding a common denominator. Later, his book became a textbook for students preparing for government exams.",
+  "link_to_lesson": "Today you add, divide and share with fractions, the same skills Zhang Qiujian wanted his students to practise.",
   "try_it": {
-   "q": "Three children share a cake. Ana eats 1/3 of it and Ben eats 1/4 of it. What fraction of the cake is left for the third child?",
-   "a": "1/3 + 1/4 = 4/12 + 3/12 = 7/12 eaten. 1 - 7/12 = 5/12 is left."
+   "q": "Zhang's students practised dividing fractions. Try one: 3/4 of a loaf is shared equally among 6 children. What fraction of the whole loaf does each child get? Hint: draw 3/4 and cut each quarter again.",
+   "a": "3/4 / 6 = 3/24 = 1/8 of the loaf."
   },
   "source_urls": [
-   "https://shop.hachettebookgroup.com/products/how-to-bake-pi",
-   "https://en.wikipedia.org/wiki/Eugenia_Cheng",
-   "https://stemettes.org/zine/articles/meet-eugenia-cheng/",
-   "https://www.ted.com/speakers/eugenia_cheng"
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Zhang_Qiujian/",
+   "https://en.wikipedia.org/wiki/Zhang_Qiujian_Suanjing",
+   "https://www.cambridge.org/core/product/7E654BC8863452F26F2E0C43892699F4/core-reader"
   ],
-  "confidence": "medium",
-  "legend_note": "",
-  "icon_idea": "A round cake cut into slices with a recipe card beside it."
+  "confidence": "high",
+  "legend_note": "Dates are uncertain: MacTutor gives about 430-490 and writing between 468 and 486, Wikipedia 466-485; some authors place him about 100 years earlier.",
+  "icon_idea": "A set of counting rods laid out beside a bamboo scroll with a fraction bar."
  },
  {
   "lesson": 3,
@@ -131,25 +130,25 @@
  },
  {
   "lesson": 7,
-  "name": "Adam Ries (also spelled Adam Riese)",
-  "years": "1492-1559",
-  "country_or_region": "Germany",
-  "who": "A calculation teacher who wrote maths books in German so ordinary people could learn.",
-  "story": "Adam Ries was born in Staffelstein, in what is now Germany, around 1492. He ran a calculation school in Erfurt and wrote arithmetic books in German, not in Latin, so apprentices in trades and crafts could read them. His second book, printed in 1522, taught sums on a counting board and with pen and paper, and it was reprinted more than 100 times. His books used everyday examples: prices, wages, profit and loss, and interest. Later, in the town of Annaberg, he made tables to help people see what a fair loaf of bread should weigh when grain prices changed. In Germany, people still say a sum is right 'nach Adam Riese', meaning 'according to Adam Ries'.",
-  "link_to_lesson": "Today you work out discounts, GST and price changes with percentages, the kind of everyday money sums that Ries taught ordinary people to do.",
+  "name": "Jakob Bernoulli (also spelled Jacob)",
+  "years": "1655-1705",
+  "country_or_region": "Switzerland (Basel)",
+  "who": "A Swiss mathematician who asked what happens when a bank adds interest again and again.",
+  "story": "Jakob Bernoulli (also spelled Jacob) was born in Basel, Switzerland, in 1655. He chose mathematics and astronomy. In 1683 he studied compound interest, where a bank adds interest on the interest it has already paid. He pictured a bank that pays 100 percent a year, so $1 would become $2. Then he asked what happens if interest is added more often, such as every month. The money grows more, but only up to a limit, and the limit is below $3. That number is now called e.",
+  "link_to_lesson": "Today you work with percentages of amounts, and an interest rate is a percentage: Bernoulli asked what happens when the same percentage is added again and again.",
   "try_it": {
-   "q": "A bag costs $200. A shop takes off 20% as a discount. What is the sale price? Then 9% GST is added to the sale price. What is the final price?",
-   "a": "20% of $200 = $40, so the sale price is $200 - $40 = $160. 9% of $160 = $14.40, so the final price is $160 + $14.40 = $174.40."
+   "q": "A bank adds 10% interest at the end of each year. Sam puts in $200. How much does he have after 1 year? After 2 years? Why is it more than $240?",
+   "a": "10% of $200 = $20, so $220 after 1 year. 10% of $220 = $22, so $242 after 2 years. It is more than $240 because the second year's interest is worked out on $220, not on $200."
   },
   "source_urls": [
-   "https://mathshistory.st-andrews.ac.uk/Biographies/Ries.html",
-   "https://bad-staffelstein.de/en/tourismus/bad-staffelstein/history/adam-riese.php",
-   "https://www.deutsche-biographie.de/sfz76562.html",
-   "https://www.spektrum.de/wissen/adam-riese-1492-1559/977292"
+   "https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Jacob/",
+   "https://en.wikipedia.org/wiki/Jacob_Bernoulli",
+   "https://en.wikipedia.org/wiki/E_(mathematical_constant)"
   ],
   "confidence": "medium",
-  "legend_note": "Sources give his birth year as 1492 or 1493. The sources I opened do not name 'percentages' specifically; they list prices, interest, and profit and loss.",
-  "icon_idea": "A counting board with coins and a loaf of bread."
+  "legend_note": "",
+  "icon_idea": "A coin with a growing stack of coins beside it and a percent sign on a tag.",
+  "story_words": 87
  },
  {
   "lesson": 8,

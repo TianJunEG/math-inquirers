@@ -1,0 +1,3398 @@
+{
+ "schema_version": 1,
+ "id": "l1-t2-07",
+ "level": 1,
+ "term": 2,
+ "lesson": 17,
+ "lesson_in_term": 7,
+ "title": "Sharing and Grouping",
+ "big_idea": "Share equally, or put into groups",
+ "child_idea": "To share equally, we deal one at a time until everything is gone. To put into groups, we make groups of the same size and count them. We can check by multiplying.",
+ "skill": "Two models of one operation",
+ "spine": {
+  "main": "actout",
+  "also": [
+   "list"
+  ],
+  "role": "P",
+  "reason": "Children deal counters onto plates; Go further lists every number of friends that share 12."
+ },
+ "ages": "6-8",
+ "moe": {
+  "strand": "Multiplication and Division",
+  "topics": [
+   "Sharing equally and grouping equally within 20 (Primary 1, Multiplication and Division 3.1 to 3.4, p. 31)",
+   "Checking a share by multiplying (Primary 1)",
+   "The division sign and \"left over\" (Primary 2 sign, p. 33; remainders, Primary 3, p. 35)"
+  ],
+  "note": "Strand label for the tutor only. Sharing equally and putting into same-size groups, with totals within 20 and no left over, are in the school Primary 1 syllabus (p. 31). BEYOND PRIMARY 1 ON PURPOSE: the division sign (Primary 2, p. 33) is shown only as a small grown-up sign and is never required; the idea of \"left over\" (a remainder is Primary 3, p. 35, so we never write it as a remainder) appears at Think harder; \"all the ways to share 12\" (the factors of 12, Primary 4, p. 37) is Go further. Owner decision of 22 Oct 2026: strong content with scaffolding, said plainly to families on the parent page. Do not describe the lesson as MOE-aligned or syllabus-aligned. Reading order (owner default): 3 groups of 4 is 3 × 4; either order is accepted. Contest tag (tutor only): list all the ways (G1), who is in the group (T2), a left-over pattern (Investigation). Named beyond-syllabus challenge item (owner decision, 22 Oct 2026, every lesson): Go further G1 part (c), finding every number of friends that can share 18 sweets with none left over (1, 2, 3, 6, 9, 18), which builds toward factors."
+ },
+ "contest_moves": [
+  "who is in the group: \"shares with his 3 cousins\" means 4 people (T2)",
+  "list every number of friends that can share 12 equally (G1)",
+  "a pattern in what is left over when 13 to 20 are shared among 4 (Investigation)",
+  "true or false about sharing equally: can 16 be shared among 3, 4 or 6 with none left over? (T4)"
+ ],
+ "objectives": [
+  "Share a set equally by dealing one at a time, and say how many each one gets.",
+  "Put a set into groups of a given size and say how many groups there are.",
+  "Tell sharing from putting into groups, and check an answer by multiplying (3 groups of 4 is 12), with totals within 20.",
+  "Think harder: say what is left over when groups do not come out equal, and count the sharer when a story says \"shares with\".",
+  "Go further: all the ways to share 12 equally, and one more step before or after sharing."
+ ],
+ "joining_cold": {
+  "remember": [
+   "Dealing out: counters one at a time onto plates, the same on every plate (Term 1)",
+   "Counting in jumps of 3 and of 4 on a line (Term 1 and Term 2)",
+   "Same-size groups: 3 plates with 4 on each is 3 groups of 4 (Term 2 lesson 5)"
+  ],
+  "assumes": "Only counting to 20 and adding small numbers. Nothing from an earlier lesson is needed: the warm-up deals counters onto plates, counts in jumps along a line and shows same-size groups as a picture. The words share equally, put into groups of, each and left over are taught in Explore and the Mini-lesson.",
+  "holiday_topics_revisited": [
+   "Skip counting (Count with the Frog)"
+  ],
+  "safe_to_miss": false,
+  "note": "Term 2 lessons 5 to 8 (groups, tables, sharing, stories) build on one another. A child who misses this lesson watches the recording, does workbook pages 1 and 2 and tells the tutor in the open session; the next lesson uses sharing and groups again in story problems. A child who joins at this lesson can follow, because the warm-up re-teaches dealing, jumps and same-size groups with pictures."
+ },
+ "materials": {
+  "child": [
+   "The printed workbook, kept flat, with the groups mat (page 6): nothing to cut",
+   "About 20 small things of one kind (counters, buttons, dry pasta, coins). Not food",
+   "5 plates, bowls or paper cups (or use the printed groups mat instead)",
+   "A pencil, a rubber and spare paper"
+  ],
+  "tutor": [
+   "The slide deck",
+   "Plates and counters to show on camera if you wish",
+   "A visible clock"
+  ],
+  "kit_pages": [
+   "Groups mat (page 6): six plates to lay counters on. Nothing to cut. Use it if you do not have plates or cups"
+  ],
+  "ruler": false,
+  "notes": "No ruler is needed. Nothing needs to be bought: everything can be found at home. No matches, toothpicks or anything sharp. Small things never go near the mouth or ears. Nothing in Explore needs more than 20 counters or 5 plates. Use buttons or counters, not real sweets, so nothing is eaten during the lesson."
+ },
+ "timing": {
+  "parts": [
+   {
+    "id": "opening",
+    "title": "Opening",
+    "start": 0,
+    "end": 2
+   },
+   {
+    "id": "remember",
+    "title": "Remember warm-up",
+    "start": 2,
+    "end": 8
+   },
+   {
+    "id": "sneak",
+    "title": "Sneak-peek puzzles",
+    "start": 8,
+    "end": 12
+   },
+   {
+    "id": "explore",
+    "title": "Explore",
+    "start": 12,
+    "end": 24
+   },
+   {
+    "id": "mini",
+    "title": "Mini-lesson",
+    "start": 24,
+    "end": 37
+   },
+   {
+    "id": "break",
+    "title": "Brain break",
+    "start": 37,
+    "end": 41
+   },
+   {
+    "id": "work",
+    "title": "Workbook",
+    "start": 41,
+    "end": 71
+   },
+   {
+    "id": "talk",
+    "title": "Talk time",
+    "start": 71,
+    "end": 77
+   },
+   {
+    "id": "exit",
+    "title": "Exit ticket",
+    "start": 77,
+    "end": 83
+   },
+   {
+    "id": "look",
+    "title": "Look-back",
+    "start": 83,
+    "end": 86
+   },
+   {
+    "id": "flex",
+    "title": "Flex time and goodbye",
+    "start": 86,
+    "end": 90
+   }
+  ],
+  "optional_slide": "s-opt",
+  "include_rules": false,
+  "notes": "Opening is 2 minutes (the routine and rules were taught earlier in the term; give the recording, muting and camera notice after the greeting). Explore has 12 minutes of plates and counters: share by dealing, put into groups, then sort stories. The mini-lesson has 13 because it carries the check by multiplying, left over and who is sharing; the slides with a question show the picture first and the answer slide comes after the children have answered. The workbook has 30 minutes: Start here is modelled at 8 and 9 minutes for pages 1 and 2 (17 minutes for a middle child), so about 3 minutes remain for choosing, and the answer slides take the rest. Think harder is normally a home page for a middle child: say so, and keep the time. The last 4 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time.",
+  "skip_order": [
+   "Start with: cut the Mini-lesson check slide to three of the four stories",
+   "Then: shorten Explore round 3 (share or group) to two stories",
+   "Then: take the extra minutes from the flex time"
+  ]
+ },
+ "sneak_peek": {
+  "q1": "Mei has 6 sweets. She gives the same number of sweets to each of her 2 friends. How many sweets does each friend get? You may draw to help.",
+  "q2": "Ali puts 12 sweets into bags. He puts 3 sweets in each bag. Mei shares 12 sweets equally among 3 bags. Whose bags have more sweets in each bag? Circle Ali, Mei or Same. Then write or draw how you know.",
+  "a1": "3",
+  "a2": "Mei. Ali puts 3 sweets in each bag (4 bags). Mei shares 12 among 3 bags, so each bag has 4.",
+  "val1": 3
+ },
+ "rec": {
+  "opening": {
+   "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook, your plates and counters. Pause or rewind any time.",
+   "action": "Gather your workbook, pencil, paper, plates and counters. Press play when ready."
+  },
+  "remember": {
+   "say": "Recording: join in! Touch the numbers and say your answers before I say them. Pause if you need longer.",
+   "action": "Play along. Say each answer out loud before the video does."
+  },
+  "sneak": {
+   "say": "Recording: pause now and try both puzzles on your paper. Guessing is fine. Press play for the next part.",
+   "action": "Pause. Try both puzzles on your own paper. A guess is fine."
+  },
+  "explore": {
+   "say": "Recording: pause now. Deal counters onto plates, then make groups. Press play when you have tried.",
+   "action": "Pause. Share counters onto plates, make groups of the same size, and test the stories I show."
+  },
+  "mini": {
+   "say": "Recording: keep watching and copy the examples. Rewind if you miss a step.",
+   "action": "Watch and copy the examples. Rewind any step you missed."
+  },
+  "break": {
+   "say": "Recording: stand up and join in! Deal the cards in the air and say how many each.",
+   "action": "Stand up. Deal pretend cards, then say how many each player gets."
+  },
+  "work": {
+   "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
+   "action": "Pause. Do page 1, then play to check. Then page 2. Then choose a page to try."
+  },
+  "talk": {
+   "say": "Recording: pause. Tell a grown-up why both answers are the same number, and show them with counters.",
+   "action": "Pause. Explain your answer to someone at home, with counters and a reason."
+  },
+  "exit": {
+   "say": "Recording: pause and do the exit ticket on your own. Then press play to check it.",
+   "action": "Pause. Do the exit ticket alone, then play to check it."
+  },
+  "look": {
+   "say": "Recording: pause and fill in your look-back box. You can pass.",
+   "action": "Pause. Fill in the look-back box, or pass."
+  },
+  "flex": {
+   "say": "Recording: well done for finishing! Show a grown-up one thing you found out.",
+   "action": "Show a grown-up your workbook and tell them one thing you found out."
+  }
+ },
+ "slides": [
+  {
+   "id": "s-title",
+   "part": "opening",
+   "kind": "title",
+   "title": "Share or Group?",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "TODAY WE WILL",
+     "items": [
+      "Share things equally and put them into groups."
+     ]
+    }
+   ],
+   "note": "Term 2 Lesson 7, 90 minutes. Objective: share a set equally and put a set into same-size groups, tell the two apart, check by multiplying, and say what is left over. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 24, mini-lesson 24 to 37, brain break 37 to 41, workbook 41 to 71, talk 71 to 77, exit ticket 77 to 83, look-back 83 to 86, flex time and goodbye 86 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Say the recording notice in one line after the greeting: you and the screen only; a child may keep the camera off. Say plainly to grown-ups that sharing within 20 is Primary 1 work and that left over and the grown-up sign go a little further.",
+   "subtitle": "Sharing and Grouping: equal shares, equal groups",
+   "mascot": {
+    "size": "l",
+    "say": "Hi, I'm Mi. Let's notice, test and explain why!"
+   }
+  },
+  {
+   "id": "s-rem1",
+   "part": "remember",
+   "kind": "light",
+   "title": "Warm-up: deal it out",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Deal one at a time: one for you, one for me"
+    },
+    {
+     "t": "visual",
+     "type": "groups",
+     "container": "plate",
+     "n": 2,
+     "each": 4,
+     "icon": "counter_red",
+     "per_row": 2
+    },
+    {
+     "t": "p",
+     "text": "8 counters on 2 plates: 4 on each plate."
+    },
+    {
+     "t": "numrow",
+     "items": [
+      "6 on 3 plates",
+      "10 on 2 plates"
+     ]
+    }
+   ],
+   "note": "Dealing means giving one to each plate, one at a time, round and round. The picture shows 8 counters dealt onto 2 plates: 4 on each plate. Then ask: 6 counters dealt onto 3 plates (2 each) and 10 counters dealt onto 2 plates (5 each). Children answer aloud or with fingers. A child who is unsure deals their own counters onto their own plates. No writing, no marks.",
+   "mascot": {
+    "size": "s",
+    "say": "Dealing is fun!"
+   }
+  },
+  {
+   "id": "s-rem2",
+   "part": "remember",
+   "kind": "light",
+   "title": "Jumps of 3 and 4",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "number_line",
+        "start": 0,
+        "end": 12,
+        "step": 3,
+        "label_every": 3,
+        "jumps": [
+         [
+          0,
+          3,
+          "+3"
+         ],
+         [
+          3,
+          6,
+          "+3"
+         ],
+         [
+          6,
+          9,
+          "+3"
+         ]
+        ]
+       },
+       {
+        "t": "p",
+        "text": "Count in 3s: 3, 6, 9, 12 ..."
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "number_line",
+        "start": 0,
+        "end": 12,
+        "step": 4,
+        "label_every": 4,
+        "jumps": [
+         [
+          0,
+          4,
+          "+4"
+         ],
+         [
+          4,
+          8,
+          "+4"
+         ]
+        ]
+       },
+       {
+        "t": "p",
+        "text": "Count in 4s: 4, 8, 12 ..."
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Count along each line together. The left line has jumps of 3: 3, 6, 9, 12. Ask: what comes after 12 in threes (15)? The right line has jumps of 4: 4, 8, 12. Ask: what comes after 12 in fours (16)? Children answer aloud or with fingers. A child who is unsure touches each number on the screen and counts slowly. These jumps are how we find how many groups later."
+  },
+  {
+   "id": "s-rem3",
+   "part": "remember",
+   "kind": "light",
+   "title": "Same-size groups",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "groups",
+     "container": "plate",
+     "n": 3,
+     "each": 4,
+     "icon": "cookie",
+     "per_row": 3
+    },
+    {
+     "t": "p",
+     "text": "3 groups of 4. Every plate has the same number."
+    },
+    {
+     "t": "numrow",
+     "items": [
+      "How many groups?",
+      "How many in each?",
+      "How many in all?"
+     ]
+    }
+   ],
+   "note": "This is the equal-groups idea from earlier in the term, taught again from scratch: 3 plates with 4 cookies on each plate is 3 groups of 4, and there are 12 cookies in all. Ask the three questions on the slide: 3 groups, 4 in each group, 12 in all. Children answer aloud or with fingers. A child who is unsure counts the cookies on one plate, then counts in fours. This picture is the one we use all lesson to check our answers."
+  },
+  {
+   "id": "s-sneak",
+   "part": "sneak",
+   "kind": "light",
+   "title": "Sneak-peek puzzles",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Ideas we have not learnt yet. A guess is a great start. Nobody is marked."
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 1: anyone can try",
+        "items": [
+         "Mei has 6 sweets.",
+         "She gives the same number of sweets to each of her 2 friends.",
+         "How many sweets does each friend get?",
+         "You may draw to help."
+        ]
+       },
+       {
+        "t": "visual",
+        "type": "objects",
+        "icon": "sweet",
+        "n": 6,
+        "per_row": 6
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 2: think",
+        "items": [
+         "Ali puts 12 sweets into bags. He puts 3 sweets in each bag.",
+         "Mei shares 12 sweets equally among 3 bags.",
+         "Whose bags have more sweets in each bag?",
+         "Circle Ali, Mei or Same. Then write or draw how you know."
+        ]
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Puzzle 1 (6 sweets, 2 friends; 3 each) is an access question: any child can draw it or count it out. Puzzle 2 is a thinking question on the lesson idea: Ali puts 3 in each bag, so he makes 4 bags; Mei shares among 3 bags, so each bag gets 4. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: 3; Mei (4 in each bag, against Ali with 3). Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
+  },
+  {
+   "id": "s-explore1",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: share equally",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "Put 3 plates on the table.",
+      "Deal 12 counters, one at a time: one for each plate, round and round.",
+      "Stop when the counters are all gone.",
+      "Is every plate the same? How many on each plate?"
+     ]
+    },
+    {
+     "t": "visual",
+     "type": "groups",
+     "container": "plate",
+     "n": 3,
+     "each": 4,
+     "icon": "counter_red",
+     "per_row": 3,
+     "empty": true
+    }
+   ],
+   "note": "Round 1, about 5 minutes. Objects first, no writing. Children deal 12 counters, one at a time, onto 3 plates (or onto the groups mat) and stop when they run out. Say the words once: we shared 12 counters equally among 3 plates; each plate has 4. Then share 10 counters equally among 2 plates (5 each) and 12 counters equally among 4 plates (3 each). A child with fewer counters uses 6 counters among 3 plates. The picture shows the plates before dealing; do not show the answer. Use the words equally, each and among."
+  },
+  {
+   "id": "s-explore2",
+   "part": "explore",
+   "kind": "light",
+   "title": "Put into groups",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "Take 12 counters.",
+      "Make groups of 4: put 4 counters in each group.",
+      "Keep going until the counters are gone.",
+      "How many groups of 4? Now try groups of 3."
+     ]
+    },
+    {
+     "t": "visual",
+     "type": "objects",
+     "icon": "counter_red",
+     "n": 12,
+     "per_row": 6
+    }
+   ],
+   "note": "Round 2, about 4 minutes. The same 12 counters, a different question. Children make groups of 4 and count the groups: 3. Then they push the groups back together and make groups of 3: 4 groups. Count in jumps to check: 4, 8, 12 (three jumps) and 3, 6, 9, 12 (four jumps). Say the words once: we put 12 counters into groups of 4; there are 3 groups. Ask: how many groups, and how many in each group. A child with fewer counters uses 8 counters in groups of 2."
+  },
+  {
+   "id": "s-explore3",
+   "part": "explore",
+   "kind": "light",
+   "title": "Share or group?",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "1 finger: share. 2 fingers: group."
+    },
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Story",
+       "What happens"
+      ],
+      [
+       "A",
+       "Mei puts 12 cookies equally on 4 plates."
+      ],
+      [
+       "B",
+       "Ali packs 12 cookies, 6 in each box."
+      ],
+      [
+       "C",
+       "Ravi gives 15 stickers equally to 3 friends."
+      ]
+     ]
+    }
+   ],
+   "note": "Round 3, about 3 minutes. Read each story aloud. Children show 1 finger for share (the cookies or stickers are dealt out equally, so the number of plates or friends is known) and 2 fingers for group (the number in each box is known). A: share, 3 on each plate. B: group, 2 boxes. C: share, 5 each. Do not name a child with a wrong answer. If time allows, children lay out story A or B with counters and find the answer."
+  },
+  {
+   "id": "s-explore4",
+   "part": "explore",
+   "kind": "light",
+   "title": "What did we notice?",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      "When we share, what do we know? What do we find?",
+      "When we put into groups, what do we know? What do we find?",
+      "How can we check an answer?"
+     ]
+    }
+   ],
+   "note": "Take one or two answers from volunteers. Key ideas: when we share, we know how many plates or friends and we find how many each one gets; when we put into groups, we know how many in each group and we find how many groups; we can check by multiplying, because the groups and the number in each group make the total again. Repeat a child’s answer in your own words so the recording picks it up. Say: next we write it down and check it."
+  },
+  {
+   "id": "s-m1",
+   "part": "mini",
+   "kind": "light",
+   "title": "Share equally",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "objects",
+     "icon": "sweet",
+     "n": 12,
+     "per_row": 6
+    },
+    {
+     "t": "p",
+     "text": "12 sweets shared equally among 3 bags."
+    },
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Say it",
+       "We find"
+      ],
+      [
+       "12 shared equally among 3 bags",
+       "4 in each bag"
+      ]
+     ],
+     "reveal": true
+    },
+    {
+     "t": "chip",
+     "text": "We know the number of bags. We find how many in each.",
+     "reveal": true
+    }
+   ],
+   "note": "Look at 12 sweets shared equally among 3 bags. The words 4 in each bag come on the answer slide, after the children have answered. Deal the sweets into 3 bags on camera or in the air. We deal one at a time and each bag gets 4. Point to each bag and count the sweets. We know how many bags (3) and we find how many in each bag (4). Ask first: what do we know, and what do we find? Do not use the words divided by yet."
+  },
+  {
+   "id": "s-m2",
+   "part": "mini",
+   "kind": "light",
+   "title": "Put into groups",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "objects",
+     "icon": "sweet",
+     "n": 12,
+     "per_row": 6
+    },
+    {
+     "t": "p",
+     "text": "12 sweets put into bags of 4."
+    },
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Say it",
+       "We find"
+      ],
+      [
+       "12 sweets put into bags of 4",
+       "3 bags"
+      ]
+     ],
+     "reveal": true
+    },
+    {
+     "t": "chip",
+     "text": "We know how many in each bag. We find how many bags.",
+     "reveal": true
+    }
+   ],
+   "note": "The same 12 sweets, a different question. We want 4 sweets in each bag. We make a group of 4, then another, until the sweets are gone: 3 bags. We know how many in each bag (4) and we find how many bags (3). Count in fours to check: 4, 8, 12. Ask: how many bags do we need? Point out that the picture looks the same, but the question is different. The answer 3 bags comes on the answer slide, after the children have answered."
+  },
+  {
+   "id": "s-m3",
+   "part": "mini",
+   "kind": "light",
+   "title": "Check by multiplying",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "card",
+        "head": "SHARED",
+        "items": [
+         "3 bags, 4 in each bag",
+         "3 × 4 = 12"
+        ]
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "GROUPS",
+        "items": [
+         "3 bags of 4",
+         "3 × 4 = 12"
+        ]
+       }
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "It matches the 12 sweets we started with."
+    },
+    {
+     "t": "p",
+     "text": "A grown-up sign for both: 12 ÷ 3 = 4 (12 shared among 3) and 12 ÷ 4 = 3 (12 put into groups of 4). You do not need it today."
+    }
+   ],
+   "note": "Both stories check the same way: 3 bags with 4 sweets in each bag is 3 × 4 = 12, and that matches the 12 sweets we began with. If it does not match, we check again. Say the grown-up sign once: grown-ups write both questions with the same sign, 12 divided by 3 is 4 and 12 divided by 4 is 3; you do not need it today and nobody has to use it. Beyond-Primary-1 remark for grown-ups: the sign is a Primary 2 idea. Ask: 4 plates with 5 counters on each plate: what is 4 times 5, and does it match 20?"
+  },
+  {
+   "id": "s-m4",
+   "part": "mini",
+   "kind": "light",
+   "title": "Left over",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "groups",
+     "container": "plate",
+     "counts": [
+      4,
+      4,
+      4,
+      2
+     ],
+     "icon": "counter_red",
+     "per_row": 4
+    },
+    {
+     "t": "p",
+     "text": "14 counters in groups of 4: 3 full groups, and 2 left over."
+    },
+    {
+     "t": "chip",
+     "text": "Left over means not enough to make another group."
+    }
+   ],
+   "note": "Not every total comes out equal. 14 counters in groups of 4 make 3 full groups, and 2 counters are left over, because 2 is not enough for another group of 4. The fourth plate shows the left over. Count: 4, 8, 12, then 2 more. Ask: if we had 15 counters in groups of 4, how many groups and how many left over (3 groups, 3 left over)? Say left over, never remainder. This idea goes a little beyond Primary 1; it is Think harder only."
+  },
+  {
+   "id": "s-m5",
+   "part": "mini",
+   "kind": "light",
+   "title": "Who is sharing?",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Ben shares 8 sweets equally with 3 friends."
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "round_table",
+        "seats": 4,
+        "names": {
+         "1": "Ben"
+        }
+       }
+      ],
+      [
+       {
+        "t": "chip",
+        "text": "Count Ben too."
+       }
+      ]
+     ],
+     "weights": [
+      2,
+      3
+     ],
+     "reveal": true
+    }
+   ],
+   "note": "A reading trap. Ben shares 8 sweets equally with 3 friends. Who gets sweets? Ben and his 3 friends: 4 children. So 8 sweets shared among 4 children is 2 each. Ask: how many children share the sweets (4)? How many sweets does each child get (2)? A child who answers 3 children: point to Ben at the table. The word with means Ben is one of the people sharing. Say it plainly and do not make it a trick: always count who is sharing. The table and the words count Ben too come on the answer slide, after the children have answered."
+  },
+  {
+   "id": "s-m6",
+   "part": "mini",
+   "kind": "light",
+   "title": "Your turn",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Write the answer. Say if it is share or group."
+    },
+    {
+     "t": "numrow",
+     "items": [
+      "12 shared equally among 4",
+      "15 put into groups of 5",
+      "16 shared equally among 2",
+      "18 put into groups of 3"
+     ]
+    }
+   ],
+   "note": "Each child writes the four answers on their own paper, for example 12 shared equally among 4 is 3 each. Walk the cameras; do not ask children to hold papers up. Wait 10 seconds before helping. Answers: 3 each; 3 groups; 8 each; 6 groups. Children may use counters or draw."
+  },
+  {
+   "id": "s-m6a",
+   "part": "mini",
+   "kind": "light",
+   "title": "Check: share or group",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Story",
+       "Answer"
+      ],
+      [
+       "12 shared equally among 4",
+       "3 each"
+      ],
+      [
+       "15 put into groups of 5",
+       "3 groups"
+      ],
+      [
+       "16 shared equally among 2",
+       "8 each"
+      ],
+      [
+       "18 put into groups of 3",
+       "6 groups"
+      ]
+     ]
+    }
+   ],
+   "note": "Answers: 3 each, 3 groups, 8 each, 6 groups. Read each answer aloud so a child watching the recording can tick their own work. Children tick their own with a tick. Never ask a child to show a wrong answer to the group."
+  },
+  {
+   "id": "s-break",
+   "part": "break",
+   "kind": "dark",
+   "title": "Deal the cards",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Stand up. Deal pretend cards with your hand."
+    },
+    {
+     "t": "p",
+     "text": "Say how many each player gets."
+    },
+    {
+     "t": "p",
+     "text": "Sip some water."
+    }
+   ],
+   "note": "Four minutes. Stand up on camera. Pretend to deal cards, one at a time, to players on each side. Call: 8 cards to 2 players (children deal and say 4 each), 6 cards to 3 players (2 each), 12 cards to 4 players (3 each), 10 cards to 5 players (2 each). Children move one arm to deal and say the number together. No equipment, no running, a little clear space. A child may stay seated and tap the table."
+  },
+  {
+   "id": "s-ws1",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 1: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 1 to 3. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ],
+     "short": true
+    }
+   ],
+   "note": "Read questions 1 to 3 aloud. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: share 8 dots equally among 4 plates and write how many on each plate. Question 2: ring groups of 3 among 12 cookies and write how many bags. Question 3: 14 sweets shared equally among 2 friends."
+  },
+  {
+   "id": "s-ws1ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 1",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children tick their own page. Never ask a child to show a wrong answer to the group. Answers: Q1 2 dots on each plate; Q2 4 bags; Q3 7 sweets each."
+  },
+  {
+   "id": "s-ws2",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 2: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 4 to 7. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S4",
+      "S5",
+      "S6",
+      "S7"
+     ],
+     "short": false
+    }
+   ],
+   "note": "Read questions 4 to 7 aloud. Question 4: share the sweets equally among the friends and fill in the table. Question 5: 20 pencils put into pots of 5; the number line shows 0 to 20 in fives. Question 6: fill in the number sentence to check a share, then circle Yes or No. Question 7: two stories (Lily gives 12 beads equally to 3 friends; Jamie puts 12 beads into boxes of 6), circle Share or Group for each."
+  },
+  {
+   "id": "s-ws2ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 2",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S4",
+      "S5",
+      "S6",
+      "S7"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud so a child watching the recording can mark their own work. Question 6: the number sentence is 4 × 3 = 12 (3 × 4 = 12 is also right). Never ask a child to show a wrong answer to the group. Answers: Q4 4, 3, 4; Q5 4 pots; Q6 4 × 3 = 12 and Yes; Q7 Share, then Group."
+  },
+  {
+   "id": "s-choice",
+   "part": "work",
+   "kind": "light",
+   "title": "Choose your next page",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Page",
+       "What it is"
+      ],
+      [
+       "Think harder (page 3)",
+       "Left over and who shares"
+      ],
+      [
+       "Go further (page 4)",
+       "All the ways to share 12"
+      ],
+      [
+       "Investigation (page 5)",
+       "Sharing among 4 plates"
+      ],
+      [
+       "Check",
+       "Finish and check your own work"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Everyone may choose. Not finished? Pages 3 to 5 are for home too."
+    }
+   ],
+   "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 5 minutes."
+  },
+  {
+   "id": "s-talk",
+   "part": "talk",
+   "kind": "light",
+   "title": "Talk and explain",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "MEI SHARES 12 AND PUTS 12 INTO GROUPS",
+     "items": [
+      "12 sweets shared equally among 3 friends: 4 each.",
+      "12 sweets put into bags of 3: 4 bags."
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Both answers are 4. Is it always the same number? How could we check?"
+    },
+    {
+     "t": "chip",
+     "text": "I think ... because ..."
+    }
+   ],
+   "note": "One minute of talk to the grown-up next to you, or to your screen. Children try 12 shared among 4 and 12 in groups of 4 with counters, then another pair such as 10 and 5, or 16 and 2. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: the number is the same each time (3 and 3, 2 and 2, 8 and 8), but it means something different (3 each, or 3 groups); turning the rows of counters shows why (3 rows of 4 and 4 rows of 3 use the same counters). Repeat each child’s answer in your own words for the recording."
+  },
+  {
+   "id": "s-sneakans",
+   "part": "talk",
+   "kind": "light",
+   "title": "Back to the sneak-peek",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "groups",
+        "container": "bag",
+        "n": 4,
+        "each": 3,
+        "icon": "sweet",
+        "per_row": 4
+       },
+       {
+        "t": "p",
+        "text": "Ali: 4 bags of 3"
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "groups",
+        "container": "bag",
+        "n": 3,
+        "each": 4,
+        "icon": "sweet",
+        "per_row": 3
+       },
+       {
+        "t": "p",
+        "text": "Mei: 3 bags of 4"
+       }
+      ]
+     ]
+    },
+    {
+     "t": "answer",
+     "text": "Mei’s bags have more in each bag: 4 against 3."
+    }
+   ],
+   "note": "Reveal puzzle 2 now. Say: many of you wrote a good reason. Do not read out anyone’s earlier answer. Ali put the sweets into bags of 3, so he made 4 bags. Mei shared the sweets among 3 bags, so each bag got 4. Mei’s bags have more in each bag. Puzzle 1: 6 sweets shared by 2 friends is 3 each."
+  },
+  {
+   "id": "s-exit",
+   "part": "exit",
+   "kind": "light",
+   "title": "Exit ticket",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      "1. Mei shares 12 sweets equally among 4 friends.",
+      "2. Mei puts 12 sweets into bags of 4.",
+      "3. Mei has 12 sweets and eats 4.",
+      "4. Mei has 12 sweets and gets 4 more."
+     ]
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ],
+     "short": false
+    }
+   ],
+   "note": "Children answer on page 5. Read E1, E2 and E3 aloud, including the four stories of E2 (the questions and the four stories are on the slide). Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
+  },
+  {
+   "id": "s-exitans",
+   "part": "exit",
+   "kind": "light",
+   "title": "Check the exit ticket",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children tick their own ticket. Answers: 5 sweets; option 2, the story that puts 12 sweets into bags of 4; 6 piles, and 6 × 3 is 18."
+  },
+  {
+   "id": "s-look",
+   "part": "look",
+   "kind": "lookback",
+   "title": "Look-back",
+   "blocks": [
+    {
+     "t": "lookback"
+    }
+   ],
+   "note": "Three minutes. Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child.",
+   "mascot": {
+    "size": "s",
+    "say": "Take your time. You can pass."
+   }
+  },
+  {
+   "id": "s-end",
+   "part": "flex",
+   "kind": "dark",
+   "title": "Well done, inquirers!",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Show a grown-up one thing you found out today."
+    },
+    {
+     "t": "card",
+     "head": "NEXT LESSON",
+     "items": [
+      "Times Stories",
+      "Have ready: your Term 2 Lesson 8 workbook with the strips page cut into strips by a grown-up (three cut after 6 cells), about 20 counters, 3 paper cups or plates, pencil and paper."
+     ]
+    }
+   ],
+   "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. If the whole class is ahead, show the optional slides and use the Spare-time menu from the tutor guide.",
+   "mascot": {
+    "size": "l",
+    "say": "Great thinking today!"
+   }
+  },
+  {
+   "id": "s-opt",
+   "part": "flex",
+   "kind": "light",
+   "title": "Go further: what if?",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Ravi has 16 sweets."
+    },
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Try",
+       "We find"
+      ],
+      [
+       "Put them into bags of 8",
+       "? bags"
+      ],
+      [
+       "Share them equally among 8 friends",
+       "? each"
+      ]
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Are the two answers the same number?"
+    }
+   ],
+   "note": "Optional, only if you are on time. Answers: 2 bags and 2 each. The number is the same (16 shared among 8, and 16 in groups of 8) but the meaning is different. Take two answers and move on. This repeats the Talk time idea with new numbers.",
+   "optional": true
+  },
+  {
+   "id": "s-menu",
+   "part": "flex",
+   "kind": "light",
+   "title": "If we have time: pick one",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Activity",
+       "What we do"
+      ],
+      [
+       "Is it always true?",
+       "Share a number, then group it. Same number?"
+      ],
+      [
+       "Make a puzzle",
+       "Write a sharing story. Ask your grown-up."
+      ],
+      [
+       "Teach it back",
+       "Show a toy: 8 shared among 4 cups"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Optional. Everyone may join."
+    }
+   ],
+   "note": "Optional Spare-time menu, used only if the whole class is ahead. Pick one or two activities (3 to 5 minutes each); full tutor lines and answers are in the tutor guide. Never start new content and never name who is ahead. Slow down with how do you know rather than rushing on. These minutes come from the flex buffer and are not part of the 90-minute sum.",
+   "optional": true
+  }
+ ],
+ "script": {
+  "segments": [
+   {
+    "part": "opening",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-title",
+      "s": 15
+     },
+     {
+      "k": "DO",
+      "text": "Greet the whole group warmly, before the recording starts. Check that you can see each child, or ask the grown-up.",
+      "s": 12
+     },
+     {
+      "k": "SAY",
+      "text": "Hello, inquirers! Pencil ready, and your plates, counters and workbook on the table. Cameras can be on or off, as you like."
+     },
+     {
+      "k": "SAY",
+      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+     },
+     {
+      "k": "DO",
+      "text": "Start the recording now. Do not use children's first names on the recording.",
+      "s": 5
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
+     },
+     {
+      "k": "SAY",
+      "text": "Today we share things equally, and we put things into groups. They sound alike, but they ask different questions."
+     },
+     {
+      "k": "NOTE",
+      "text": "Say the recording statement and the microphone routine in the same words every lesson, for anyone who joined late. Say the notice before you start the recording, and do not use children's first names once it is running. The routine and the four inquirer rules were introduced earlier in the term: do not re-teach them."
+     },
+     {
+      "k": "NOTE",
+      "text": "New here? Say in one minute: our three rule words (notice it, test it, explain why); a guess is fine and you can always pass; after Start here you may choose Think harder, Go further or the Investigation; nobody holds paper to the camera. The first recording of the term shows the full routine."
+     }
+    ]
+   },
+   {
+    "part": "remember",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-rem1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Today's tool is Act it out. Use counters, paper or people to show it.",
+      "spine": "remember"
+     },
+     {
+      "k": "DO",
+      "text": "Point at the tool on page 1 of the workbook.",
+      "s": 4,
+      "spine": "remember"
+     },
+     {
+      "k": "SAY",
+      "text": "Dealing out. We give one counter to each plate, one at a time, round and round. Look: 8 counters dealt onto 2 plates is 4 on each plate. Use your own counters if you like."
+     },
+     {
+      "k": "WORK",
+      "text": "Children deal 8 counters onto 2 plates with their own counters (or touch the picture): 4 on each.",
+      "s": 35
+     },
+     {
+      "k": "ASK",
+      "text": "Six counters dealt onto 3 plates, the same on each plate. How many on each plate?",
+      "resp": 15
+     },
+     {
+      "k": "ASK",
+      "text": "Ten counters dealt onto 2 plates. How many on each plate?",
+      "resp": 15
+     },
+     {
+      "k": "ASK",
+      "text": "Twelve counters dealt onto 4 plates. How many on each plate?",
+      "resp": 15
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem2"
+     },
+     {
+      "k": "SAY",
+      "text": "Jumps. Count in threes along the left line: three, six, nine, twelve."
+     },
+     {
+      "k": "ASK",
+      "text": "What comes after twelve when we count in threes?",
+      "resp": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Now fours along the right line: four, eight, twelve."
+     },
+     {
+      "k": "ASK",
+      "text": "What comes after twelve when we count in fours?",
+      "resp": 15
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem3"
+     },
+     {
+      "k": "SAY",
+      "text": "Same-size groups. Three plates with four cookies on each plate. That is 3 groups of 4."
+     },
+     {
+      "k": "ASK",
+      "text": "How many groups? How many in each group? How many cookies in all?",
+      "resp": 25
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child is unsure about dealing, deal their counters slowly onto their plates, one each. For jumps, touch each number on the screen and count slowly. For the groups, count the cookies on one plate, then count in fours."
+     },
+     {
+      "k": "NOTE",
+      "text": "Answers: 4 each, 2, 5, 3; 15, 16; 3, 4, 12. Children answer with a whisper, fingers or hands. Nobody writes. Do not say divide yet. Joining cold: all you need is counting to 20 and adding small numbers."
+     }
+    ]
+   },
+   {
+    "part": "sneak",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-sneak"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked."
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle one. Mei has 6 sweets. She gives the same number of sweets to each of her 2 friends. How many sweets does each friend get? You may draw to help."
+     },
+     {
+      "k": "WORK",
+      "text": "Children draw or count and write the number on their own paper.",
+      "s": 40
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle two. Ali puts 12 sweets into bags. He puts 3 sweets in each bag. Mei shares 12 sweets equally among 3 bags. Whose bags have more sweets in each bag? Circle Ali, Mei or Same. Then write or draw how you know."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write or draw their answer.",
+      "s": 60
+     },
+     {
+      "k": "SAY",
+      "text": "Keep your paper. Nobody shows it. We will check our own thinking later, at Talk time."
+     },
+     {
+      "k": "NOTE",
+      "text": "Puzzle 1 answer: 3 sweets each. Puzzle 2 answer: Mei (4 in each bag, against Ali with 3 in each bag). Look for good ideas to praise later (a child who dealt out the sweets, or who drew the bags). Do not write scores or keep a list."
+     }
+    ]
+   },
+   {
+    "part": "explore",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Your hands are the teachers. Put 3 plates on the table. Deal 12 counters, one at a time: one for each plate, round and round. Stop when the counters are all gone."
+     },
+     {
+      "k": "WORK",
+      "text": "Children deal 12 counters onto 3 plates (or the groups mat).",
+      "s": 50
+     },
+     {
+      "k": "ASK",
+      "text": "Is every plate the same? How many counters are on each plate?",
+      "resp": 15
+     },
+     {
+      "k": "SAY",
+      "text": "We shared 12 counters equally among 3 plates. Each plate has 4."
+     },
+     {
+      "k": "SAY",
+      "text": "Now share 10 counters equally among 2 plates."
+     },
+     {
+      "k": "WORK",
+      "text": "Children deal 10 counters onto 2 plates: 5 each.",
+      "s": 40
+     },
+     {
+      "k": "ASK",
+      "text": "How many counters on each plate?",
+      "resp": 12
+     },
+     {
+      "k": "SAY",
+      "text": "One more. Share 12 counters equally among 4 plates."
+     },
+     {
+      "k": "WORK",
+      "text": "Children deal 12 counters onto 4 plates: 3 each.",
+      "s": 45
+     },
+     {
+      "k": "ASK",
+      "text": "How many on each plate this time?",
+      "resp": 12
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2"
+     },
+     {
+      "k": "SAY",
+      "text": "Round two. Take 12 counters. Put them into groups of 4: four in each group. Keep going until the counters are gone."
+     },
+     {
+      "k": "WORK",
+      "text": "Children make groups of 4 with 12 counters: 3 groups.",
+      "s": 40
+     },
+     {
+      "k": "ASK",
+      "text": "How many groups of 4 can you make?",
+      "resp": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Now put the same 12 counters into groups of 3."
+     },
+     {
+      "k": "WORK",
+      "text": "Children make groups of 3: 4 groups.",
+      "s": 40
+     },
+     {
+      "k": "ASK",
+      "text": "How many groups of 3 this time?",
+      "resp": 15
+     },
+     {
+      "k": "SAY",
+      "text": "Count in jumps to check: four, eight, twelve. Three jumps, so three groups."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore3"
+     },
+     {
+      "k": "SAY",
+      "text": "Round three. Share or group? One finger for share. Two fingers for group."
+     },
+     {
+      "k": "ASK",
+      "text": "Story A. Mei puts 12 cookies equally on 4 plates. Share or group?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Story B. Ali packs 12 cookies, 6 in each box. Share or group?",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Story C. Ravi gives 15 stickers equally to 3 friends. Share or group?",
+      "resp": 12
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore4"
+     },
+     {
+      "k": "ASK",
+      "text": "When we share, what do we know and what do we find out? When we put into groups, what do we know and what do we find out?",
+      "resp": 45
+     },
+     {
+      "k": "SAY",
+      "text": "Sharing: we know how many plates, and we find how many on each. Groups: we know how many in each group, and we find how many groups."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who is unsure about sharing: deal one counter at a time, never a handful. A child with few counters: use 6 counters among 3 plates, or the printed groups mat. A child who cannot tell share from group: ask what the story tells us (how many plates, or how many in each)."
+     },
+     {
+      "k": "NOTE",
+      "text": "Main room only; children say their answers aloud and show fingers; you cannot see builds on small tiles. Answers: 4 each, 5 each, 3 each; 3 groups of 4, 4 groups of 3; A share, B group, C share. Use the words share equally, among, put into groups of, each. Do not teach left over here: it comes in the mini-lesson."
+     }
+    ]
+   },
+   {
+    "part": "mini",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-m1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Look at 12 sweets. We share them equally among 3 bags. We deal one at a time."
+     },
+     {
+      "k": "ASK",
+      "text": "What do we know, and what do we find out?",
+      "resp": 25
+     },
+     {
+      "k": "SAY",
+      "text": "We know how many bags: 3. We find how many in each bag: 4."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m2"
+     },
+     {
+      "k": "SAY",
+      "text": "The same 12 sweets, a different question. Now we want 4 sweets in each bag. We make a group of 4, then another, until the sweets are gone."
+     },
+     {
+      "k": "ASK",
+      "text": "How many bags do we need?",
+      "resp": 20
+     },
+     {
+      "k": "SAY",
+      "text": "3 bags. We know how many in each bag, and we find how many bags."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3"
+     },
+     {
+      "k": "SAY",
+      "text": "Both stories check the same way. 3 bags with 4 sweets in each bag is 3 times 4, which is 12. It matches the 12 sweets we began with. Grown-ups have one short sign for both kinds of question. You do not need it today."
+     },
+     {
+      "k": "ASK",
+      "text": "Try it. 4 plates with 5 counters on each plate. What is 4 times 5, and does it match 20?",
+      "resp": 30
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4"
+     },
+     {
+      "k": "SAY",
+      "text": "Not every total comes out equal. 14 counters in groups of 4 make 3 groups, and 2 counters are left over. Two is not enough for another group of 4."
+     },
+     {
+      "k": "ASK",
+      "text": "If we had 15 counters in groups of 4, how many groups and how many left over?",
+      "resp": 35
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m5"
+     },
+     {
+      "k": "SAY",
+      "text": "Ben shares 8 sweets equally with 3 friends."
+     },
+     {
+      "k": "ASK",
+      "text": "How many children share the sweets?",
+      "resp": 15
+     },
+     {
+      "k": "ASK",
+      "text": "How many sweets does each child get?",
+      "resp": 20
+     },
+     {
+      "k": "SAY",
+      "text": "Count Ben too. With means Ben shares as well: Ben and 3 friends are 4 children, and 2 sweets each."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m6"
+     },
+     {
+      "k": "READ",
+      "text": "Your turn. Write each answer and say if it is share or group. 12 shared equally among 4. 15 put into groups of 5. 16 shared equally among 2. 18 put into groups of 3."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write the four answers on their own paper.",
+      "s": 100
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m6a"
+     },
+     {
+      "k": "READ",
+      "text": "Three each. Three groups. Eight each. Six groups. Tick your own."
+     },
+     {
+      "k": "NOTE",
+      "text": "Key words to use every time: share equally, among, put into groups of, each, left over, check by multiplying. Say divide only as the grown-up word. This lesson is within the Primary 1 syllabus for sharing and grouping to 20; the grown-up sign and left over go a little further, so keep the pace gentle and use the pictures. Accept a share written with counters or a picture."
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child writes the number of plates when asked how many on each plate, ask them to deal again and count one plate. If a child says 3 children share when Ben is one of them, point to Ben at the table."
+     }
+    ]
+   },
+   {
+    "part": "break",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-break"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Stand up and get a sip of water. I say how many cards and how many players. Deal pretend cards with your hand, one at a time, and tell me how many each player gets."
+     },
+     {
+      "k": "WORK",
+      "text": "Call 8 cards to 2 players, 6 cards to 3 players, 12 cards to 4 players, 10 cards to 5 players. Children deal in the air with one arm and say the number each aloud together.",
+      "s": 150
+     }
+    ]
+   },
+   {
+    "part": "work",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "Page 1, Start here. Question 1: share 8 dots equally among the 4 plates. Draw the dots, then fill in the blank. Question 2: Mei packs 12 cookies into bags, 3 cookies in each bag. Draw a ring around each group of 3, then fill in the blank. Question 3: Ali has 14 sweets. He shares them equally among 2 friends. Fill in the blank."
+     },
+     {
+      "k": "WORK",
+      "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
+      "s": 480
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1ans"
+     },
+     {
+      "k": "READ",
+      "text": "Question 1: 2 dots on each plate. Question 2: 4 bags. Question 3: 7 sweets each. Tick your own page."
+     },
+     {
+      "k": "SAY",
+      "text": "After question 3 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2"
+     },
+     {
+      "k": "READ",
+      "text": "Page 2. Question 4: share the sweets equally among the friends. Fill in the table. Question 5: Ben puts 20 pencils into pots, 5 pencils in each pot. Fill in the blank. Question 6: Mei shares 12 stickers equally among 4 friends. Each friend gets 3 stickers. Fill in the number sentence, then circle Yes or No. Question 7: read each story and circle Share or Group. Lily gives 12 beads equally to 3 friends. Jamie puts 12 beads into boxes of 6."
+     },
+     {
+      "k": "WORK",
+      "text": "Page 2, questions 4 to 7.",
+      "s": 540
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2ans"
+     },
+     {
+      "k": "READ",
+      "text": "Question 4: 4, 3, 4. Question 5: 4 pots. Question 6: 4 times 3 is 12, and yes, it matches the 12 stickers. Question 7: share, then group. Tick your own page."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-choice"
+     },
+     {
+      "k": "SAY",
+      "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time. Anything not finished is for home too."
+     },
+     {
+      "k": "MOVE",
+      "text": "Stand and stretch for 30 seconds, then sit down and choose.",
+      "s": 30
+     },
+     {
+      "k": "WORK",
+      "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page. For a middle child, Think harder is usually a home page: say so, and keep the time.",
+      "s": 180
+     },
+     {
+      "k": "STUCK",
+      "text": "Q1: deal one dot at a time to each plate. Q2: ring 3 cookies, then 3 more, until none are left. Q3: deal the sweets to 2 friends, or count in jumps of 2 to 14. Q4: each row is its own story. Q5: count in jumps of 5 along the line. Q6: 4 friends with 3 each is 4 groups of 3, and either order is right. Q7: does the story say how many friends, or how many in each box? Think harder T4: deal the marbles out one at a time. If any are left over, the sentence is false."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who is still stuck ticks ‘I am still stuck’ on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp (never a personal phone). You then help in the open session in the next lesson. Never a private message to a child."
+     },
+     {
+      "k": "NOTE",
+      "text": "Think harder is for left over, who is sharing, share or group with the same numbers, and how many more are needed. Go further has the ways to share 12 and two-step stories. Do not announce who is on which page. Slow class: the workbook part needs about 32 minutes against 30, so Start here may fill most of it. Take the extra minutes from the flex time, do not skip the answer slides, and say that pages 3 to 5 are for home."
+     }
+    ]
+   },
+   {
+    "part": "talk",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-talk"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "Mei shares 12 sweets equally among 3 friends: 4 each. Then she puts 12 sweets into bags of 3: 4 bags. Both answers are 4. Is it always the same number? How could we check?"
+     },
+     {
+      "k": "WORK",
+      "text": "Try 12 shared among 4 and 12 put into groups of 4 with counters. Then try another pair, such as 10 and 5.",
+      "s": 50
+     },
+     {
+      "k": "WORK",
+      "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
+      "s": 40
+     },
+     {
+      "k": "ASK",
+      "text": "Who would like to share? Volunteers first. A pass is always fine.",
+      "resp": 80
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-sneakans"
+     },
+     {
+      "k": "SAY",
+      "text": "Remember puzzle two? Ali put 12 sweets into bags of 3, so he made 4 bags. Mei shared 12 sweets among 3 bags, so each bag got 4. Mei’s bags have more in each bag."
+     },
+     {
+      "k": "ASK",
+      "text": "Did anyone change their mind about puzzle two while we worked? You can just nod.",
+      "resp": 15
+     },
+     {
+      "k": "ASK",
+      "text": "Where did you use Act it out today?",
+      "resp": 10,
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Listen for the tool being named, not the answer. Volunteers first, a pass is always fine.",
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Model answer: yes for these pairs, the number is the same each time (12 and 4 gives 3 and 3; 10 and 5 gives 2 and 2), but the meaning is different (3 each, or 3 groups). Turn the rows of counters and the picture shows why: 3 rows of 4 and 4 rows of 3 use the same counters (equal groups, earlier this term). Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed. Do not claim it is proved for every pair of numbers: we tested a few and used a picture."
+     }
+    ]
+   },
+   {
+    "part": "exit",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-exit"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
+     },
+     {
+      "k": "READ",
+      "text": "E1. 20 sweets are shared equally among 4 children. Fill in the blank. E2. Which story puts 12 sweets into groups of 4? Write its number in the bracket. Story 1: Mei shares 12 sweets equally among 4 friends. Story 2: Mei puts 12 sweets into bags of 4. Story 3: Mei has 12 sweets and eats 4. Story 4: Mei has 12 sweets and gets 4 more. E3. Ali puts 18 cards into piles. Each pile has 3 cards. Fill in the blanks.",
+      "s": 70
+     },
+     {
+      "k": "WORK",
+      "text": "Children answer E1 to E3 on their own.",
+      "s": 170
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-exitans"
+     },
+     {
+      "k": "READ",
+      "text": "E1: 5 sweets each. E2: option 2. E3: 6 piles, and 6 times 3 is 18."
+     },
+     {
+      "k": "SAY",
+      "text": "Tick your own ticket. Well done. Put a tick by each one you got right."
+     },
+     {
+      "k": "NOTE",
+      "text": "Nothing is collected or marked live. Children tick their own ticket. If many children miss one question, spend two minutes on it at the start of the next lesson, in the open session, no names. Do not read out any child’s result."
+     }
+    ]
+   },
+   {
+    "part": "look",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-look"
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+      "spine": "look"
+     },
+     {
+      "k": "WORK",
+      "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+      "s": 90,
+      "spine": "look"
+     }
+    ]
+   },
+   {
+    "part": "flex",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-end"
+     },
+     {
+      "k": "SAY",
+      "text": "Well done, inquirers. Next lesson is Times Stories. Please have your Term 2 Lesson 8 workbook with the strips page cut into strips by a grown-up, with three of the strips cut after 6 cells, about 20 counters, 3 paper cups or plates, a pencil and paper. Goodbye, and thank you to the grown-ups."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-opt",
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Optional, only if you are on time: Ravi has 16 sweets. Put them into bags of 8. How many bags? Then share them equally among 8 friends. How many each? Are the two answers the same number?",
+      "optional": true
+     },
+     {
+      "k": "WORK",
+      "text": "Short think time, then take two answers.",
+      "s": 90,
+      "optional": true
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-menu",
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
+      "optional": true
+     },
+     {
+      "k": "NOTE",
+      "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: 2 bags and 2 each; the same number, a different meaning. If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+     }
+    ]
+   }
+  ]
+ },
+ "tiers": {
+  "start": [
+   {
+    "id": "S1",
+    "page": 1,
+    "tier": "start",
+    "text": "Share 8 dots equally among the 4 plates. Draw the dots. Then fill in the blank.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Each plate has [] dots.",
+      "ans": "2",
+      "val": 2
+     }
+    ],
+    "answer": "Each plate has 2 dots",
+    "val": [
+     2
+    ],
+    "hint": "Draw one dot on each plate, again and again, until you have drawn 8.",
+    "solution": "Deal one dot at a time to each of the 4 plates. After 2 rounds all 8 dots are drawn. Each plate has 2 dots, and 4 groups of 2 is 8.",
+    "mistakes": [
+     "Putting all the dots on one plate.",
+     "Writing 4, the number of plates."
+    ],
+    "mins": 3,
+    "visual": {
+     "type": "groups",
+     "container": "plate",
+     "n": 4,
+     "each": 2,
+     "icon": "dot",
+     "per_row": 4,
+     "empty": true
+    },
+    "draw_strokes": 8
+   },
+   {
+    "id": "S2",
+    "page": 1,
+    "tier": "start",
+    "text": "Mei packs 12 cookies into bags. She puts 3 cookies in each bag. Draw a ring around each group of 3. Then fill in the blank.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Mei needs [] bags.",
+      "ans": "4",
+      "val": 4
+     }
+    ],
+    "answer": "Mei needs 4 bags",
+    "val": [
+     4
+    ],
+    "hint": "Ring 3 cookies, then 3 more, until there are no cookies left.",
+    "solution": "12 cookies in groups of 3: ring 3, ring 3, ring 3, ring 3. That is 4 groups, so Mei needs 4 bags. Count in jumps of 3 to check: 3, 6, 9, 12.",
+    "mistakes": [
+     "Writing 3, the number in each bag.",
+     "Ringing groups of different sizes."
+    ],
+    "mins": 2.5,
+    "visual": {
+     "type": "objects",
+     "icon": "cookie",
+     "n": 12,
+     "per_row": 6
+    },
+    "draw_strokes": 4
+   },
+   {
+    "id": "S3",
+    "page": 1,
+    "tier": "start",
+    "text": "Ali has 14 sweets. He shares them equally among 2 friends. How many sweets does each friend get?",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Each friend gets [] sweets.",
+      "ans": "7",
+      "val": 7
+     }
+    ],
+    "answer": "Each friend gets 7 sweets",
+    "val": [
+     7
+    ],
+    "hint": "Deal the sweets to the 2 friends one at a time.",
+    "solution": "Dealing 14 sweets to 2 friends one at a time gives 7 each. Check: 2 groups of 7 is 14.",
+    "mistakes": [
+     "Writing 2, the number of friends.",
+     "Writing 14 or 16 by adding."
+    ],
+    "mins": 2,
+    "visual": {
+     "type": "objects",
+     "icon": "sweet",
+     "n": 14,
+     "per_row": 7
+    }
+   },
+   {
+    "id": "S4",
+    "page": 2,
+    "tier": "start",
+    "text": "Share the sweets equally among the friends. Fill in the table.",
+    "parts": [],
+    "answer": "4, 3, 4",
+    "val": [
+     4,
+     3,
+     4
+    ],
+    "hint": "Deal the sweets to the friends one at a time. How many does each friend get?",
+    "solution": "8 sweets among 2 friends is 4 each. 12 sweets among 4 friends is 3 each. 20 sweets among 5 friends is 4 each. Check: 2 groups of 4 is 8, 4 groups of 3 is 12, 5 groups of 4 is 20.",
+    "mistakes": [
+     "Writing the number of friends in the last column.",
+     "Giving 5 for the last row because it has a 5."
+    ],
+    "mins": 2.5,
+    "visual": {
+     "type": "table",
+     "head": [
+      "Sweets",
+      "Friends",
+      "Each gets"
+     ],
+     "rows": [
+      [
+       "8",
+       "2",
+       "[]"
+      ],
+      [
+       "12",
+       "4",
+       "[]"
+      ],
+      [
+       "20",
+       "5",
+       "[]"
+      ]
+     ]
+    }
+   },
+   {
+    "id": "S5",
+    "page": 2,
+    "tier": "start",
+    "text": "Ben puts 20 pencils into pots. He puts 5 pencils in each pot. How many pots does Ben use?",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Ben uses [] pots.",
+      "ans": "4",
+      "val": 4
+     }
+    ],
+    "answer": "Ben uses 4 pots",
+    "val": [
+     4
+    ],
+    "hint": "Count in jumps of 5 along the line. How many jumps reach 20?",
+    "solution": "5, 10, 15, 20 is 4 jumps, so Ben uses 4 pots. Check: 4 groups of 5 is 20.",
+    "mistakes": [
+     "Writing 5, the number in each pot.",
+     "Stopping at 15."
+    ],
+    "mins": 2.5,
+    "visual": {
+     "type": "number_line",
+     "start": 0,
+     "end": 20,
+     "step": 5,
+     "label_every": 5
+    }
+   },
+   {
+    "id": "S6",
+    "page": 2,
+    "tier": "start",
+    "text": "Mei shares 12 stickers equally among 4 friends. Each friend gets 3 stickers.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Fill in the number sentence to check. [] × [] = [2]",
+      "ans": "4 × 3 = 12 (or 3 × 4 = 12)",
+      "val": [
+       4,
+       3,
+       12
+      ]
+     },
+     {
+      "l": "b",
+      "text": "Does it match the 12 stickers? Circle Yes or No.",
+      "ans": "Yes",
+      "val": "Yes",
+      "choices": [
+       "Yes",
+       "No"
+      ]
+     }
+    ],
+    "answer": "4 × 3 = 12 (3 × 4 = 12 is also right); Yes",
+    "val": [
+     4,
+     3,
+     12,
+     "Yes"
+    ],
+    "hint": "4 friends with 3 stickers each is 4 groups of 3. Either order is right.",
+    "solution": "4 friends with 3 stickers each is 4 groups of 3: 4 × 3 = 12. (3 × 4 = 12 is also right.) That is the 12 stickers Mei began with, so the answer matches.",
+    "mistakes": [
+     "Writing 4 × 3 = 7 by adding.",
+     "Circling No because the numbers look different."
+    ],
+    "mins": 3
+   },
+   {
+    "id": "S7",
+    "page": 2,
+    "tier": "start",
+    "text": "Read each story. Circle Share or Group.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Lily gives 12 beads equally to 3 friends.",
+      "ans": "Share",
+      "val": "Share",
+      "choices": [
+       "Share",
+       "Group"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "Jamie puts 12 beads into boxes of 6.",
+      "ans": "Group",
+      "val": "Group",
+      "choices": [
+       "Share",
+       "Group"
+      ]
+     }
+    ],
+    "answer": "Share; Group",
+    "val": [
+     "Share",
+     "Group"
+    ],
+    "hint": "Ask: does the story tell me how many friends, or how many are in each box?",
+    "solution": "Lily deals the beads out equally to 3 friends, so it is Share (4 beads each). Jamie puts 6 beads in each box, so it is Group (2 boxes).",
+    "mistakes": [
+     "Choosing Share because both stories have 12 beads.",
+     "Choosing by the number 3 or 6."
+    ],
+    "mins": 1.5
+   }
+  ],
+  "think": [
+   {
+    "id": "T1",
+    "page": 3,
+    "tier": "think",
+    "text": "Ali has 19 sweets. He puts them into groups of 4.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Ali makes [] groups of 4.",
+      "ans": "4",
+      "val": 4
+     },
+     {
+      "l": "b",
+      "text": "There are [] sweets left over.",
+      "ans": "3",
+      "val": 3
+     },
+     {
+      "l": "c",
+      "text": "Ali needs [] more sweets to make one more group of 4.",
+      "ans": "1",
+      "val": 1
+     }
+    ],
+    "answer": "4 groups; 3 left over; 1 more sweet",
+    "val": [
+     4,
+     3,
+     1
+    ],
+    "hint": "Make groups of 4 until there are not enough for another group. Count what is left. For (c), how many more make 4?",
+    "solution": "4, 8, 12, 16 is 4 groups, and 16 sweets are used. 19 - 16 = 3 sweets are left. Three is not enough for another group of 4. 3 and 1 make 4, so 1 more sweet gives one more group of 4 (20 sweets make 5 groups).",
+    "mistakes": [
+     "Writing 5 groups by rounding up.",
+     "Forgetting the sweets left over.",
+     "Writing 3 for (c), the number left over."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "objects",
+     "icon": "sweet",
+     "n": 19,
+     "per_row": 10,
+     "size": "l"
+    }
+   },
+   {
+    "id": "T2",
+    "page": 3,
+    "tier": "think",
+    "text": "Ben shares 20 biscuits equally with his 3 cousins. Aisha says 3 people share the biscuits.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Is Aisha correct? Circle Yes or No.",
+      "ans": "No",
+      "val": "No",
+      "choices": [
+       "Yes",
+       "No"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "Each person gets [] biscuits.",
+      "ans": "5",
+      "val": 5
+     }
+    ],
+    "answer": "No; 5 biscuits each",
+    "val": [
+     "No",
+     5
+    ],
+    "hint": "Count Ben too. Then share the biscuits among everyone.",
+    "solution": "Ben shares with his 3 cousins, so Ben is one of the sharers: Ben and 3 cousins is 4 people, not 3. 20 biscuits among 4 people is 5 each, because 4 groups of 5 is 20. (A story that says 'shares among 3 friends' does not count the sharer: there the 3 friends are all the people.)",
+    "mistakes": [
+     "Saying Yes because the story says 3 cousins.",
+     "Sharing 20 among 3 people."
+    ],
+    "mins": 4,
+    "why": "How do you know?",
+    "lines": 2
+   },
+   {
+    "id": "T3",
+    "page": 3,
+    "tier": "think",
+    "text": "Mei has 18 sweets. Read the two stories.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Story A: Mei puts the 18 sweets into bags of 6. Circle Share or Group.",
+      "ans": "Group",
+      "val": "Group",
+      "choices": [
+       "Share",
+       "Group"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "Mei needs [] bags.",
+      "ans": "3",
+      "val": 3
+     },
+     {
+      "l": "c",
+      "text": "Story B: Mei shares the 18 sweets equally among 6 bags. Circle Share or Group.",
+      "ans": "Share",
+      "val": "Share",
+      "choices": [
+       "Share",
+       "Group"
+      ]
+     },
+     {
+      "l": "d",
+      "text": "Each bag has [] sweets.",
+      "ans": "3",
+      "val": 3
+     }
+    ],
+    "answer": "Group; 3 bags; Share; 3 sweets",
+    "val": [
+     "Group",
+     3,
+     "Share",
+     3
+    ],
+    "hint": "Ask: do I know how many bags, or how many sweets are in each bag?",
+    "solution": "Story A tells us 6 sweets in each bag, so it is Group, and 18 in groups of 6 makes 3 bags. Story B tells us 6 bags, so it is Share, and 18 shared among 6 bags is 3 in each bag. Both answers are 3, but the meanings are different.",
+    "mistakes": [
+     "Saying Share for both stories.",
+     "Answering 6 for (b) or (d)."
+    ],
+    "mins": 4
+   },
+   {
+    "id": "T4",
+    "page": 3,
+    "tier": "think",
+    "text": "Kumar has 16 marbles. He shares them equally, with none left over. True or false?",
+    "parts": [],
+    "tf": [
+     {
+      "s": "He can share them among 3 children."
+     },
+     {
+      "s": "He can share them among 4 children."
+     },
+     {
+      "s": "He can share them among 6 children."
+     }
+    ],
+    "lines": 0,
+    "answer": "False, True, False (among 3 children 1 marble is left over; among 4 each gets 4; among 6 children 4 are left over)",
+    "val": [
+     "False",
+     "True",
+     "False"
+    ],
+    "hint": "Deal the marbles out one at a time to the children, or count in jumps: 3, 6, 9 ... Does the count land on 16?",
+    "solution": "Among 3 children each gets 5, which uses 15 marbles, and 1 is left over, so false. Among 4 children each gets 4, because 4 groups of 4 is 16, so true. Among 6 children each gets 2, which uses 12 marbles, and 4 are left over, so false.",
+    "mistakes": [
+     "Saying true because the marbles can be shared \"nearly\" equally.",
+     "Forgetting that none may be left over."
+    ],
+    "mins": 4
+   }
+  ],
+  "go": [
+   {
+    "id": "G1",
+    "page": 4,
+    "tier": "go",
+    "text": "Jenny has 12 sweets. She shares them equally among some friends. Fill in the table. Then answer (a), (b) and (c).",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Can the 12 sweets be shared equally among 5 friends, with none left over? Circle Yes or No.",
+      "ans": "No",
+      "val": "No",
+      "choices": [
+       "Yes",
+       "No"
+      ]
+     },
+     {
+      "l": "b",
+      "text": "If Jenny shares them among 5 friends, there are [] sweets left over.",
+      "ans": "2",
+      "val": 2
+     },
+     {
+      "l": "c",
+      "text": "Now Jenny has 18 sweets. Write every number of friends who can share them equally, with none left over. ______ ______ ______ ______ ______ ______",
+      "ans": "1, 2, 3, 6, 9, 18",
+      "val": [
+       1,
+       2,
+       3,
+       6,
+       9,
+       18
+      ]
+     }
+    ],
+    "answer": "12, 6, 4, 3, 2, 1; No; 2 left over; 18 sweets: 1, 2, 3, 6, 9, 18 friends",
+    "val": [
+     12,
+     6,
+     4,
+     3,
+     2,
+     1,
+     "No",
+     2,
+     [
+      1,
+      2,
+      3,
+      6,
+      9,
+      18
+     ]
+    ],
+    "hint": "Try dealing the sweets to each number of friends. Which ones come out with none left over? For (c), try each number of friends from 1 up and check that none are left over.",
+    "solution": "1 friend gets all 12. 2 friends get 6 each. 3 friends get 4 each. 4 friends get 3 each. 6 friends get 2 each. 12 friends get 1 each. With 5 friends, each gets 2 and that uses 10 sweets, so 2 are left over and the answer to (a) is No. (c) With 18 sweets: 1 friend gets 18, 2 get 9, 3 get 6, 6 get 3, 9 get 2 and 18 get 1. Try 4, 5, 7 and 8: each leaves some over. So the numbers are 1, 2, 3, 6, 9 and 18, six ways in all. Finding every way to share is the start of factors, which school meets later.",
+    "mistakes": [
+     "Writing the number of friends instead of the number each.",
+     "Saying Yes for 5 friends.",
+     "Part (c): stopping at 2, 3 and 6 and missing 9 or 18, or writing how many each gets instead of the number of friends."
+    ],
+    "mins": 7,
+    "visual": {
+     "type": "table",
+     "head": [
+      "Friends",
+      "1",
+      "2",
+      "3",
+      "4",
+      "6",
+      "12"
+     ],
+     "rows": [
+      [
+       "Each gets",
+       "[2]",
+       "[]",
+       "[]",
+       "[]",
+       "[]",
+       "[]"
+      ]
+     ],
+     "col_w": [
+      2.3,
+      1.5,
+      1,
+      1,
+      1,
+      1,
+      1
+     ]
+    }
+   },
+   {
+    "id": "G2",
+    "page": 4,
+    "tier": "go",
+    "text": "Jenny shares 20 pencils equally among 4 pots. Then she puts 3 more pencils in each pot.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Each pot has [] pencils at first.",
+      "ans": "5",
+      "val": 5
+     },
+     {
+      "l": "b",
+      "text": "Each pot has [] pencils now.",
+      "ans": "8",
+      "val": 8
+     },
+     {
+      "l": "c",
+      "text": "There are [2] pencils in all now.",
+      "ans": "32",
+      "val": 32
+     }
+    ],
+    "answer": "5 pencils; 8 pencils; 32 pencils",
+    "val": [
+     5,
+     8,
+     32
+    ],
+    "hint": "First share the pencils. Then add 3 to each pot. Then count all the pots.",
+    "solution": "20 pencils among 4 pots is 5 in each pot. Then 3 more in each pot makes 5 + 3 = 8 in each pot. 4 pots with 8 pencils is 8 + 8 + 8 + 8 = 32 pencils in all.",
+    "mistakes": [
+     "Adding 3 to 20.",
+     "Stopping after 5."
+    ],
+    "mins": 5
+   },
+   {
+    "id": "G3",
+    "page": 4,
+    "tier": "go",
+    "text": "Wei has 20 stickers. He keeps 2 stickers. He shares the rest equally among 3 friends.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Wei shares [2] stickers.",
+      "ans": "18",
+      "val": 18
+     },
+     {
+      "l": "b",
+      "text": "Each friend gets [] stickers.",
+      "ans": "6",
+      "val": 6
+     }
+    ],
+    "answer": "18 stickers; 6 stickers each",
+    "val": [
+     18,
+     6
+    ],
+    "hint": "Take away the stickers Wei keeps first. Then share the rest.",
+    "solution": "20 - 2 = 18 stickers are shared. 18 shared among 3 friends is 6 each, because 3 groups of 6 is 18.",
+    "mistakes": [
+     "Sharing all 20 stickers.",
+     "Writing 7 by sharing 20 among 3."
+    ],
+    "mins": 5
+   }
+  ],
+  "investigation": {
+   "id": "I1",
+   "page": 5,
+   "tier": "investigation",
+   "title": "Sharing among 4 plates",
+   "first": "Put 8 counters on 4 plates, one at a time. How many on each plate? Now try 9 counters. How many are left over?",
+   "text": "Share 13, 14, 15, 16, 17, 18, 19 and 20 counters equally among 4 plates. Write how many are left over each time. What do you notice?",
+   "lines": 4,
+   "answer": "Left over: 1, 2, 3, 0, 1, 2, 3, 0. The left-over numbers 0, 1, 2, 3 repeat. Never more than 3 are left over, because with 4 left over we could give one more counter to every plate.",
+   "val": [
+    1,
+    2,
+    3,
+    0,
+    1,
+    2,
+    3,
+    0
+   ],
+   "look_for": "A child who deals out the counters for several numbers, writes the left-over numbers and notices that they repeat 1, 2, 3, 0. Credit a child who says the same numbers come back every 4 counters, or who says the left over is never as big as the number of plates. Do not mark down a child who finishes only some of the numbers.",
+   "mistakes": [
+    "Writing how many each plate gets, not how many are left over.",
+    "Writing 4 for 16 instead of 0 left over."
+   ],
+   "mins": 8
+  }
+ },
+ "talk": {
+  "question": "Mei shares 12 sweets equally among 3 friends: 4 each. Then she puts 12 sweets into bags of 3: 4 bags. Both answers are 4. Is it always the same number? How could we check?",
+  "starter": "I think ... because ...",
+  "answer": "Yes for the pairs we try: 12 and 4 gives 3 and 3, 10 and 5 gives 2 and 2. The number is the same but the meaning is different (3 each, or 3 groups). Turning the rows of counters shows why: 3 rows of 4 and 4 rows of 3 use the same counters. A few tests plus the picture are good evidence.",
+  "look_for": "A child who tests another pair, who says it means something different (each, or groups), or who turns the rows of counters. Not just \"yes\" or \"no\"."
+ },
+ "exit": [
+  {
+   "id": "E1",
+   "text": "20 sweets are shared equally among 4 children. Fill in the blank.",
+   "parts": [
+    {
+     "l": "a",
+     "text": "Each child gets [] sweets.",
+     "ans": "5",
+     "val": 5
+    }
+   ],
+   "answer": "5",
+   "val": [
+    5
+   ],
+   "solution": "Deal 20 sweets to 4 children one at a time: 5 each. Check: 4 groups of 5 is 20.",
+   "mistakes": [
+    "Writing 4, the number of children.",
+    "Writing 24 by adding."
+   ]
+  },
+  {
+   "id": "E2",
+   "text": "Which story puts 12 sweets into groups of 4? Write its number in the bracket.",
+   "parts": [],
+   "answer": "(2) Mei puts 12 sweets into bags of 4.",
+   "val": [
+    2
+   ],
+   "solution": "In story 2 the sweets are put into bags of 4, so they are in groups of 4 and there are 3 bags. Story 1 shares among 4 friends (3 each). Stories 3 and 4 do not make groups.",
+   "mistakes": [
+    "Choosing story 1 because it has a 4 in it.",
+    "Choosing story 3 because it takes away 4."
+   ],
+   "mcq": {
+    "options": [
+     "Mei shares 12 sweets equally among 4 friends.",
+     "Mei puts 12 sweets into bags of 4.",
+     "Mei has 12 sweets and eats 4.",
+     "Mei has 12 sweets and gets 4 more."
+    ],
+    "bracket": true
+   }
+  },
+  {
+   "id": "E3",
+   "text": "Ali puts 18 cards into piles. Each pile has 3 cards.",
+   "parts": [
+    {
+     "l": "a",
+     "text": "Ali makes [] piles.",
+     "ans": "6",
+     "val": 6
+    },
+    {
+     "l": "b",
+     "text": "Check: [] × 3 = 18",
+     "ans": "6",
+     "val": 6
+    }
+   ],
+   "answer": "6 piles; 6 × 3 = 18",
+   "val": [
+    6,
+    6
+   ],
+   "solution": "Count in jumps of 3 to 18: 3, 6, 9, 12, 15, 18 is 6 jumps, so 6 piles. Check: 6 × 3 = 18.",
+   "mistakes": [
+    "Writing 3, the number in each pile.",
+    "Writing 15 by stopping early."
+   ]
+  }
+ ],
+ "look_back": {
+  "hardest": [
+   "share or group",
+   "dealing out",
+   "how many groups",
+   "something else"
+  ],
+  "helped": [
+   "counters on plates",
+   "drawing it",
+   "counting in jumps",
+   "I was not stuck"
+  ],
+  "next": [
+   "drawing it",
+   "using objects",
+   "checking it",
+   "asking a question"
+  ]
+ },
+ "home_practice": [
+  {
+   "id": "H1",
+   "tier": "start",
+   "text": "Siti shares 10 stickers equally among 2 friends. Each friend gets [] stickers.",
+   "answer": "5",
+   "val": [
+    5
+   ],
+   "solution": "10 stickers dealt to 2 friends one at a time is 5 each. Check: 2 groups of 5 is 10.",
+   "visual": {
+    "type": "groups",
+    "container": "plate",
+    "n": 2,
+    "each": 0,
+    "empty": true,
+    "icon": "sticker",
+    "per_row": 2,
+    "hw": 74
+   }
+  },
+  {
+   "id": "H2",
+   "tier": "start",
+   "text": "Ravi puts 12 pencils into pots. He puts 3 pencils in each pot. Fill in the blanks. [] × 3 = 12. Ravi needs [] pots.",
+   "answer": "4 and 4",
+   "val": [
+    4,
+    4
+   ],
+   "solution": "12 pencils in groups of 3 is 4 pots (3, 6, 9, 12). Check: 4 groups of 3 is 12."
+  },
+  {
+   "id": "H3",
+   "tier": "start",
+   "text": "Amelia puts 15 apples into boxes of 5 apples. Circle Share or Group.",
+   "choices": [
+    "Share",
+    "Group"
+   ],
+   "answer": "Group",
+   "val": [
+    "Group"
+   ],
+   "solution": "The story says how many apples are in each box (5), so Amelia puts the apples into groups of 5. There are 3 boxes."
+  },
+  {
+   "id": "H4",
+   "tier": "think",
+   "text": "Jason has 13 counters. He puts them into groups of 4. He makes [] groups and has [] counters left over.",
+   "answer": "3 groups, 1 left over",
+   "val": [
+    3,
+    1
+   ],
+   "solution": "4, 8, 12 is 3 groups. 13 - 12 = 1 counter is left over."
+  },
+  {
+   "id": "H5",
+   "tier": "go",
+   "text": "Ben has 18 stickers. He gives 6 stickers away. He shares the rest equally among 4 friends. Each friend gets [] stickers.",
+   "answer": "3",
+   "val": [
+    3
+   ],
+   "solution": "18 - 6 = 12 stickers are left. 12 shared among 4 friends is 3 each, because 4 groups of 3 is 12."
+  }
+ ],
+ "online_practice": {
+  "key": "t2l17",
+  "title": "Sharing and Grouping",
+  "topic": "Sharing equally and putting into groups",
+  "items": [
+   {
+    "id": "c1",
+    "tier": "core",
+    "type": "fields",
+    "q": "Look at the picture. Fill in the boxes.",
+    "hint": "Count the plates. Count the counters on one plate. Then count all the counters.",
+    "steps": [
+     "Count the plates.",
+     "Count the counters on one plate.",
+     "{a} groups of {b} = {c}."
+    ],
+    "slips": [],
+    "frame": "{c} counters are shared equally among {a} plates. Each plate has {b} counters.",
+    "fields": [
+     {
+      "id": "c",
+      "answer": 12
+     },
+     {
+      "id": "a",
+      "answer": 3
+     },
+     {
+      "id": "b",
+      "answer": 4
+     }
+    ],
+    "fig": {
+     "type": "groups",
+     "container": "plate",
+     "n": "{a}",
+     "each": "{b}",
+     "icon": "counter_red",
+     "per_row": 5
+    },
+    "fig_base": {
+     "type": "groups",
+     "container": "plate",
+     "n": 3,
+     "each": 4,
+     "icon": "counter_red",
+     "per_row": 5
+    },
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3,
+       4,
+       5
+      ],
+      "b": [
+       2,
+       3,
+       4
+      ]
+     },
+     "q": "Look at the picture. Fill in the boxes.",
+     "frame": "{c} counters are shared equally among {a} plates. Each plate has {b} counters.",
+     "answers": {
+      "c": "a*b",
+      "a": "a",
+      "b": "b"
+     },
+     "derive": {
+      "c": "a*b"
+     },
+     "hint": "Count the plates. Count the counters on one plate. Then count all the counters.",
+     "steps": [
+      "Count the plates.",
+      "Count the counters on one plate.",
+      "{a} groups of {b} = {c}."
+     ]
+    }
+   },
+   {
+    "id": "c2",
+    "tier": "core",
+    "type": "number",
+    "q": "Ali shares 12 sweets equally among 3 friends. How many sweets does each friend get?",
+    "answer": 4,
+    "hint": "Deal the sweets one at a time to each friend.",
+    "steps": [
+     "Deal one sweet at a time to each of the 3 friends.",
+     "Count the sweets one friend has.",
+     "Each friend gets 4 sweets."
+    ],
+    "slips": [
+     {
+      "a": [
+       3
+      ],
+      "say": "3 is the number of friends. How many sweets does each friend get?"
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3,
+       4,
+       5
+      ],
+      "b": [
+       2,
+       3,
+       4
+      ]
+     },
+     "derive": {
+      "t": "a*b"
+     },
+     "q": "Ali shares {t} sweets equally among {a} friends. How many sweets does each friend get?",
+     "answer": "b",
+     "hint": "Deal the sweets one at a time to each friend.",
+     "steps": [
+      "Deal one sweet at a time to each of the {a} friends.",
+      "Count the sweets one friend has.",
+      "Each friend gets {ans} sweets."
+     ]
+    }
+   },
+   {
+    "id": "c3",
+    "tier": "core",
+    "type": "number",
+    "q": "Mei puts 12 cookies into bags. She puts 3 cookies in each bag. How many bags does Mei need?",
+    "answer": 4,
+    "hint": "Make groups of 3 until the cookies are gone.",
+    "steps": [
+     "Make a group of 3 cookies, again and again.",
+     "Count the groups: 3, 6, 9, 12.",
+     "Mei needs 4 bags."
+    ],
+    "slips": [
+     {
+      "a": [
+       3
+      ],
+      "say": "3 is the number of cookies in each bag. How many bags?"
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3,
+       4,
+       5
+      ],
+      "b": [
+       2,
+       3,
+       4
+      ]
+     },
+     "derive": {
+      "t": "a*b"
+     },
+     "q": "Mei puts {t} cookies into bags. She puts {b} cookies in each bag. How many bags does Mei need?",
+     "answer": "a",
+     "hint": "Make groups of {b} until the cookies are gone.",
+     "steps": [
+      "Make a group of {b} cookies, again and again.",
+      "Count the groups.",
+      "Mei needs {ans} bags."
+     ]
+    }
+   },
+   {
+    "id": "c4",
+    "tier": "core",
+    "type": "choice",
+    "q": "Ravi puts 15 stickers into bags of 5. Is this share or group?",
+    "options": [
+     "share",
+     "group"
+    ],
+    "answer": "group",
+    "hint": "The story says how many are in each bag.",
+    "steps": [
+     "The story tells us 5 stickers are in each bag.",
+     "So Ravi puts the stickers into groups of 5.",
+     "It is group."
+    ],
+    "slips": [
+     {
+      "a": [
+       "share"
+      ],
+      "say": "Does the story tell us how many bags, or how many stickers are in each bag?"
+     }
+    ]
+   },
+   {
+    "id": "c5",
+    "tier": "core",
+    "type": "choice",
+    "q": "Siti gives 16 beads equally to 4 friends. Is this share or group?",
+    "options": [
+     "share",
+     "group"
+    ],
+    "answer": "share",
+    "hint": "The story says how many friends.",
+    "steps": [
+     "The story tells us there are 4 friends.",
+     "Siti deals the beads out equally.",
+     "It is share."
+    ],
+    "slips": [
+     {
+      "a": [
+       "group"
+      ],
+      "say": "Does the story tell us how many friends, or how many beads are in each group?"
+     }
+    ]
+   },
+   {
+    "id": "c6",
+    "tier": "core",
+    "type": "number",
+    "q": "Check it. 4 friends each get 3 stickers. How many stickers were shared in all?",
+    "answer": 12,
+    "hint": "4 groups of 3. Add 3 four times.",
+    "steps": [
+     "4 friends with 3 stickers each is 4 groups of 3.",
+     "3 + 3 + 3 + 3 = 12.",
+     "12 stickers were shared."
+    ],
+    "slips": [
+     {
+      "a": [
+       7
+      ],
+      "say": "7 is 4 + 3. Make 4 groups with 3 in each group."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3,
+       4,
+       5
+      ],
+      "b": [
+       2,
+       3,
+       4
+      ]
+     },
+     "q": "Check it. {a} friends each get {b} stickers. How many stickers were shared in all?",
+     "answer": "a*b",
+     "hint": "{a} groups of {b}. Add {b} again and again.",
+     "steps": [
+      "{a} friends with {b} stickers each is {a} groups of {b}.",
+      "Add {b} again and again.",
+      "{ans} stickers were shared."
+     ]
+    }
+   },
+   {
+    "id": "t1",
+    "tier": "stretch",
+    "type": "number",
+    "q": "Ali has 14 counters. He puts them into groups of 4. How many groups can he make?",
+    "answer": 3,
+    "easier": "c3",
+    "hint": "Make groups of 4 until there are not enough for another group.",
+    "steps": [
+     "4, 8, 12 is 3 groups.",
+     "2 counters are left. That is not enough for another group.",
+     "Ali can make 3 groups."
+    ],
+    "slips": [
+     {
+      "a": [
+       4
+      ],
+      "say": "There are not enough counters for a fourth group of 4."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3,
+       4
+      ],
+      "b": [
+       3,
+       4,
+       5
+      ],
+      "c": [
+       1,
+       2
+      ]
+     },
+     "derive": {
+      "t": "a*b+c"
+     },
+     "q": "Ali has {t} counters. He puts them into groups of {b}. How many groups can he make?",
+     "answer": "a",
+     "hint": "Make groups of {b} until there are not enough for another group.",
+     "steps": [
+      "Make groups of {b}.",
+      "{c|pl_counter} left. That is not enough for another group.",
+      "Ali can make {ans} groups."
+     ]
+    }
+   },
+   {
+    "id": "t2",
+    "tier": "stretch",
+    "type": "number",
+    "q": "Mei has 17 stickers. She puts 5 stickers in each bag. How many stickers are left over?",
+    "answer": 2,
+    "easier": "c3",
+    "hint": "Fill bags of 5. Count what is left.",
+    "steps": [
+     "5, 10, 15 is 3 bags.",
+     "17 - 15 = 2.",
+     "2 stickers are left over."
+    ],
+    "slips": [
+     {
+      "a": [
+       3
+      ],
+      "say": "3 is the number of bags. How many stickers are left over?"
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3,
+       4
+      ],
+      "b": [
+       3,
+       4,
+       5
+      ],
+      "c": [
+       1,
+       2
+      ]
+     },
+     "derive": {
+      "t": "a*b+c",
+      "s": "a*b"
+     },
+     "q": "Mei has {t} stickers. She puts {b} stickers in each bag. How many stickers are left over?",
+     "answer": "c",
+     "hint": "Fill bags of {b}. Count what is left.",
+     "steps": [
+      "{a} bags use {s} stickers.",
+      "{t} - {s} = {ans}.",
+      "{ans|pl_sticker} left over."
+     ]
+    }
+   },
+   {
+    "id": "t3",
+    "tier": "stretch",
+    "type": "number",
+    "q": "Ben shares 20 biscuits equally with his 3 cousins. How many biscuits does each person get?",
+    "answer": 5,
+    "easier": "c2",
+    "hint": "Count Ben too. How many people share the biscuits?",
+    "steps": [
+     "Ben and his 3 cousins share: 4 people.",
+     "20 biscuits among 4 people.",
+     "Each person gets 5 biscuits."
+    ],
+    "slips": [
+     {
+      "a": [
+       6
+      ],
+      "say": "Count Ben too: 4 people share, not 3."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "c": [
+       2,
+       3,
+       4
+      ],
+      "k": [
+       2,
+       3,
+       4
+      ]
+     },
+     "derive": {
+      "n": "c+1",
+      "t": "(c+1)*k"
+     },
+     "q": "Ben shares {t} biscuits equally with his {c} cousins. How many biscuits does each person get?",
+     "answer": "k",
+     "hint": "Count Ben too. How many people share the biscuits?",
+     "steps": [
+      "Ben and his {c} cousins share: {n} people.",
+      "{t} biscuits among {n} people.",
+      "Each person gets {ans} biscuits."
+     ]
+    }
+   },
+   {
+    "id": "t4",
+    "tier": "stretch",
+    "type": "number",
+    "q": "Ravi has 17 stickers. He puts 5 stickers in each bag. How many more stickers does he need to fill one more bag?",
+    "answer": 3,
+    "easier": "t2",
+    "hint": "Find how many are left over. Then see how many more make a full bag.",
+    "steps": [
+     "3 bags use 15 stickers.",
+     "2 stickers are left over.",
+     "5 - 2 = 3 more stickers."
+    ],
+    "slips": [
+     {
+      "a": [
+       2
+      ],
+      "say": "2 is how many are left over. How many more make 5?"
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3,
+       4
+      ],
+      "b": [
+       3,
+       4,
+       5
+      ],
+      "c": [
+       2
+      ]
+     },
+     "derive": {
+      "t": "a*b+c",
+      "s": "a*b"
+     },
+     "q": "Ravi has {t} stickers. He puts {b} stickers in each bag. How many more stickers does he need to fill one more bag?",
+     "answer": "b-c",
+     "hint": "Find how many are left over. Then see how many more make a full bag.",
+     "steps": [
+      "{a} bags use {s} stickers.",
+      "{c} stickers are left over.",
+      "{b} - {c} = {ans} more stickers."
+     ]
+    }
+   },
+   {
+    "id": "g1",
+    "tier": "challenge",
+    "type": "set",
+    "q": "Type every number of friends from 1 to 12 who can share 12 sweets equally with none left over. Put a comma between the numbers.",
+    "answer": [
+     1,
+     2,
+     3,
+     4,
+     6,
+     12
+    ],
+    "easier": "c2",
+    "hint": "Try 1, 2, 3 and so on. Does each number leave none left over?",
+    "steps": [
+     "1 friend gets 12. 2 friends get 6. 3 friends get 4.",
+     "4 friends get 3. 6 friends get 2. 12 friends get 1.",
+     "The numbers are 1, 2, 3, 4, 6 and 12."
+    ],
+    "slips": [],
+    "tpl": {
+     "vars": {
+      "t": [
+       6,
+       8,
+       9,
+       10,
+       12,
+       14,
+       15,
+       16,
+       18,
+       20
+      ]
+     },
+     "q": "Type every number of friends from 1 to {t} who can share {t} sweets equally with none left over. Put a comma between the numbers.",
+     "answer": "divisors(t)",
+     "hint": "Try 1, 2, 3 and so on. Does each number leave none left over?",
+     "steps": [
+      "Try each number of friends from 1 up.",
+      "Keep the numbers with none left over.",
+      "The numbers are {ans}."
+     ]
+    }
+   },
+   {
+    "id": "g2",
+    "tier": "challenge",
+    "type": "number",
+    "q": "Jenny shares 20 pencils equally among 4 pots. Then she puts 3 more pencils in each pot. How many pencils are in each pot now?",
+    "answer": 8,
+    "easier": "t3",
+    "hint": "Share first. Then add to each pot.",
+    "steps": [
+     "20 pencils among 4 pots is 5 in each pot.",
+     "5 + 3 = 8.",
+     "Each pot has 8 pencils."
+    ],
+    "slips": [
+     {
+      "a": [
+       5
+      ],
+      "say": "5 is how many at first. Add the 3 more pencils."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3,
+       4
+      ],
+      "b": [
+       3,
+       4,
+       5
+      ],
+      "m": [
+       2,
+       3
+      ]
+     },
+     "derive": {
+      "t": "a*b"
+     },
+     "q": "Jenny shares {t} pencils equally among {a} pots. Then she puts {m} more pencils in each pot. How many pencils are in each pot now?",
+     "answer": "b+m",
+     "hint": "Share first. Then add to each pot.",
+     "steps": [
+      "{t} pencils among {a} pots is {b} in each pot.",
+      "{b} + {m} = {ans}.",
+      "Each pot has {ans} pencils."
+     ]
+    }
+   },
+   {
+    "id": "g3",
+    "tier": "challenge",
+    "type": "number",
+    "q": "Wei has 20 stickers. He keeps 2. He shares the rest equally among 3 friends. How many stickers does each friend get?",
+    "answer": 6,
+    "easier": "g2",
+    "hint": "Take away the stickers Wei keeps. Then share the rest.",
+    "steps": [
+     "20 - 2 = 18 stickers to share.",
+     "18 among 3 friends is 6 each.",
+     "Each friend gets 6 stickers."
+    ],
+    "slips": [
+     {
+      "a": [
+       7
+      ],
+      "say": "Take away the 2 stickers Wei keeps before you share."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       2,
+       3
+      ],
+      "b": [
+       3,
+       4,
+       5,
+       6
+      ],
+      "k": [
+       1,
+       2
+      ]
+     },
+     "derive": {
+      "t": "a*b+k",
+      "r": "a*b"
+     },
+     "q": "Wei has {t} stickers. He keeps {k}. He shares the rest equally among {a} friends. How many stickers does each friend get?",
+     "answer": "b",
+     "hint": "Take away the stickers Wei keeps. Then share the rest.",
+     "steps": [
+      "{t} - {k} = {r} stickers to share.",
+      "{r} among {a} friends is {b} each.",
+      "Each friend gets {ans} stickers."
+     ]
+    }
+   },
+   {
+    "id": "g4",
+    "tier": "challenge",
+    "type": "selfcheck",
+    "q": "Make a sharing puzzle for a grown-up. Use 12 counters. Ask: how many plates, and how many on each plate? Many answers are right.",
+    "hint": "Pick the number of plates first. Then deal the counters.",
+    "steps": [
+     "Choose 2, 3, 4 or 6 plates.",
+     "Deal the 12 counters one at a time.",
+     "Check: plates times counters on each plate makes 12."
+    ],
+    "slips": [],
+    "easier": "c1"
+   }
+  ]
+ },
+ "spare_time": {
+  "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
+  "rules": [
+   "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
+   "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+   "Never teach anything the next lesson needs. If the class is ahead, slow down: ask ‘How do you know?’ and let children explain, rather than rushing on."
+  ],
+  "menu": [
+   {
+    "id": "M1",
+    "title": "Is it always true?",
+    "minutes": 4,
+    "tutor": "Share 12 counters among 4 plates, then put 12 counters into groups of 4. Is it the same number? Try 10 with 2, and 15 with 3. Can you find a pair that is different?",
+    "rec": "Recording: pause. Share 12 among 4, then put 12 into groups of 4. Try 10 with 2, and 15 with 3.",
+    "answer": "3 and 3; 5 and 5; 5 and 5. No pair is different: sharing among n and putting into groups of n always gives the same number, but with a different meaning (each, or groups)."
+   },
+   {
+    "id": "M2",
+    "title": "Make a puzzle for your grown-up",
+    "minutes": 4,
+    "tutor": "Write or draw a sharing story with 12 counters. Ask your grown-up: how many on each plate? Then change it to a group story with the same 12 counters.",
+    "rec": "Recording: pause. Make up a sharing story with 12 counters and ask a grown-up to solve it.",
+    "answer": "No single answer. Check that the counters are shared equally (or put into same-size groups) and that plates times counters on each plate is 12."
+   },
+   {
+    "id": "M3",
+    "title": "Teach it back",
+    "minutes": 3,
+    "tutor": "Pretend your grown-up or a toy has never shared things equally. Show them how to share 8 counters among 4 cups, one at a time, and tell them how many each cup gets.",
+    "rec": "Recording: pause. Show a grown-up how to share 8 counters among 4 cups, one at a time.",
+    "answer": "2 counters in each cup, because 4 groups of 2 is 8."
+   }
+  ]
+ },
+ "parent": {
+  "summary": "We shared things equally by dealing them out one at a time (12 sweets among 3 bags is 4 in each bag) and put things into groups (12 sweets into bags of 4 is 3 bags). We told the two apart and checked by multiplying. Sharing and grouping to 20 are Primary 1 work. The grown-up sign, left over and all the ways to share 12 go a little beyond Primary 1 on purpose; we start from plates and counters.",
+  "words": [
+   "share equally: deal one at a time, the same for everyone",
+   "put into groups of: make same-size groups and count them",
+   "each: how many one friend or one group gets",
+   "left over: not enough to make another group",
+   "grown-up sign: 12 ÷ 3 = 4 (not needed yet)"
+  ],
+  "try_home": [
+   "Deal it out: put 12 small things onto 3 plates, one at a time. How many on each plate? Then make groups of 4 with the same 12. How many groups? Keep small things away from mouths.",
+   "Share or group? Make up a story for your child and ask: do we know how many plates, or how many on each?",
+   "Left over: put 14 small things into groups of 4. How many groups? How many are left over?"
+  ],
+  "ask": [
+   "Is this sharing or putting into groups? How do you know?",
+   "How can we check by multiplying?"
+  ],
+  "when_stuck": "Please say 'left over', not 'remainder', and do not drill the ÷ sign. Let your child deal counters one at a time onto plates, and wait 10 seconds before helping. Asking ‘how many plates?’ and ‘how many on each plate?’ works better than giving the answer. If the look-back page says ‘I am still stuck’, photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
+  "next": "Term 2 Lesson 8: Times Stories. Online practice: your tutor shares the link. A missing workbook page: your tutor sends a PDF to print at 100%. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. To have your child muted, tell us when you register. The link is private to your group's families: please do not share it.",
+  "quote": "Sharing finds how many each; putting into groups finds how many groups. Check by multiplying.",
+  "report_line": "Your child is learning to share things equally, to put them into groups and to tell the two apart. This week: sharing, grouping and checking by multiplying, with totals to 20.",
+  "term_line": "This term: groups and tables so far; now sharing and grouping; next, times stories and picture equations.",
+  "next_materials": [
+   "Your Term 2 Lesson 8 workbook, with its strips page cut into ten strips by a grown-up (three cut after 6 cells)",
+   "About 20 counters or buttons",
+   "3 paper cups or plates"
+  ]
+ },
+ "safeguarding": [
+  "Counters and small things stay on the table: nothing goes in the mouth or ears. No matches, toothpicks or anything sharp. Keep small things away from younger brothers and sisters. Use paper plates or cups, or the printed groups mat, rather than glass or china. Use counters or buttons, not real sweets, so nothing is eaten.",
+  "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
+  "Nobody holds paper or a board up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on a count of three, or show fingers for a choice. There is no private chat.",
+  "Never read out a child’s name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is not muted. Children may mute and keep their cameras off. A child’s page is never shown.",
+  "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. Dealing is done in the air with one arm; a child may stay seated and tap the table.",
+  "A child who is still stuck ticks ‘I am still stuck’ on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for 90 days after the program ends. The tutor then helps in the open session next lesson. No private messages to children, and no personal phones.",
+  "The look-back is never collected in front of the group or read out. A pass is always allowed."
+ ],
+ "tutor_prep": [
+  "Solve every workbook question yourself first. Check the Go further table (G1: 12, 6, 4, 3, 2, 1) and the left-over pattern in the Investigation (1, 2, 3, 0, 1, 2, 3, 0) so you can answer a child who finds another way.",
+  "Tell parents a week before: use the workbook pages from the printed term book (send a PDF only if a page is missing, to print at 100%); the groups mat needs no cutting, and find 5 plates, bowls or paper cups and about 20 small things that are not food. Small things stay away from mouths and younger children.",
+  "Have the slides open and check the groups mat is visible on screen share. Have 3 plates and counters to show on camera if you wish.",
+  "Check the recording captures the tutor and the shared screen. Children's video is excluded; any voice that is not muted is recorded. Greet the whole group warmly, say the recording notice, then start the recording, and do not use children's first names while it runs.",
+  "Say plainly to families that sharing and grouping to 20 are Primary 1 work, and that the grown-up sign, left over and all the ways to share 12 go a little beyond Primary 1 on purpose. Say left over, never remainder, and show the sign only as a grown-up label for both kinds of question. Do not call the lesson MOE-aligned. Term 2 lessons 5 to 8 build on one another. Say the convention once: 'Ben shares with his 3 cousins' counts Ben as one of the sharers; 'Ali shares among 3 friends' does not count Ali."
+ ],
+ "workbook": {
+  "header": "Division: sharing and grouping",
+  "hint_p1": "Use counters and plates, or draw it.",
+  "hint_p2": "Deal one at a time, or count in jumps.",
+  "hint_p3": "Use counters or draw it. Then write how you know. Choose any question, in any order.",
+  "hint_p4": "Choose any question. You do not have to finish them all.",
+  "choice_after": 3,
+  "inv_intro": "",
+  "home_hint": "Use counters on plates or draw it. Left over means not enough for another group. Small things stay on the table, away from mouths and little brothers and sisters.",
+  "kits": [
+   {
+    "type": "groups_mat",
+    "n": 6,
+    "container": "plate",
+    "title": "Kit page: groups mat",
+    "intro": "Nothing to cut. Lay counters on the plates. Use it if you do not have plates or cups."
+   }
+  ]
+ },
+ "contest_where": "Think harder, Go further and the Investigation",
+ "limits": {
+  "max_parent_words": 100
+ }
+}

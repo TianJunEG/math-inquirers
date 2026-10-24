@@ -1,3 +1,4 @@
+const FG = require('../../levels/figs_l4_6.js');
 // Math Inquirers P6 — Lesson 6: Fair or Unfair? (probability as a fraction; random numbers; running a game 1000 times)
 // Every probability below was computed exactly with fractions by listing all equally likely outcomes, and sanity-checked by simulation.
 
@@ -81,9 +82,9 @@ module.exports = {
     n: 6, week: 3, session: 'B', title: 'Fair or Unfair?', topic: 'Probability',
     objective: 'Write a probability as a fraction (ways it can happen out of equally likely outcomes), list all 36 outcomes for two dice, decide whether a game is fair, change a game to make it fair, and run a game 1000 times in code, explaining why the result is close to what we expect but not exact.',
     skills: 'Listing equally likely outcomes, fractions in simplest form, expected number = fraction × number of tries, judging fairness, simulating with random numbers',
-    materials: 'Laptop or desktop with Scratch 3 (scratch.mit.edu), two dice per pair (or the tutor’s dice program), a coin, coloured counters and a paper bag, mini whiteboards, tally sheet.',
-    online: 'Children roll real dice at home; anyone without dice builds the dice program live in the shared Scratch window (pick random 1 to 6, twice) and uses that. This lesson is enrichment: probability is new to most children, so keep it playful. Block colours on our slides are simplified; in Scratch, find blocks by the category name on the left, not by colour. Pairs play the Explore game in breakout rooms and type their tallies into the chat so the group total can be added up.',
-    warmup: 'Where on the line? Six events (roll a 7, flip heads, roll less than 5, pick a vowel from SINGAPORE, roll 1 to 6, pick the 1 red card from 10). Pairs place each on a 0 to 1 probability line and give the fraction. No timer.',
+    materials: 'Laptop or desktop with Scratch 3 (scratch.mit.edu), two dice per pair (or the tutor’s dice program, in the starter file L6_Chance_Lab.sb3), a coin, coloured counters and a paper bag, mini whiteboards, tally sheet.',
+    online: 'Children roll real dice at home; anyone without dice builds the dice program live in the shared Scratch window (pick random 1 to 6, twice) and uses that, or opens the starter file L6_Chance_Lab.sb3 (File, Load from your computer; no account needed): press the d key to roll two dice and see the total, and click the green flag to run the coin program of Q2. This lesson is enrichment: probability is new to most children, so keep it playful. Block colours on our slides are simplified; in Scratch, find blocks by the category name on the left, not by colour. Pairs play the Explore game in breakout rooms and type their tallies into the chat so the group total can be added up.',
+    warmup: 'Where on the line? Four events (roll a 7, flip heads, pick a vowel from SINGAPORE, roll 1 to 6). Pairs place each on a 0 to 1 probability line and give the fraction. No timer.',
     explore: 'The Dice Race: roll two dice and add. Player A wins on 2, 3, 4, 10, 11 or 12; player B wins on 5, 6, 7, 8 or 9. Pairs predict, play 20 rounds, tally the wins, then add up the whole group’s results.',
     mini: 'Probability = number of ways it can happen ÷ number of equally likely outcomes, written as a fraction. Two dice give 6 × 6 = 36 equally likely outcomes (a nested loop!). A game is fair when every player has the same probability of winning. Expected number = probability × number of tries; a simulation lands close to this, but not exactly, because each run is random.',
     share: 'Mei flipped a coin 10 times and got 7 heads. She says the coin is unfair. Do you agree? How could you test it?',
@@ -114,11 +115,11 @@ module.exports = {
 
   deck: {
     today: 'Measure chance with fractions, decide if a game is fair, and test it by running the game 1000 times in code.',
-    warmGame: 'Where on the line? Pairs place six events on a 0 to 1 probability line and give each one’s fraction: roll a 7, flip heads, roll less than 5, pick a vowel from SINGAPORE, roll 1 to 6, pick the 1 red card from 10.',
-    warmQs: [['Simplify 6/36', '1/6'], ['1/6 of 600', '100'], ['2/5 of 1000', '400'], ['Which is bigger: 5/12 or 4/9?', '4/9 (16/36 is more than 15/36)'], ['1 − 3/10', '7/10']],
+    warmGame: 'Where on the line? Pairs place four events on a 0 to 1 probability line and give each one’s fraction: roll a 7, flip heads, pick a vowel from SINGAPORE, roll 1 to 6.',
+    warmQs: [['Simplify 6/36', '1/6'], ['1/6 of 600', '100'], ['Which is bigger: 5/12 or 4/9?', '4/9 (16/36 is more than 15/36)']],
     expSetup: ['Roll two dice and add. A wins on 2, 3, 4, 10, 11 or 12. B wins on 5, 6, 7, 8 or 9.', 'Predict: who will win more often? A has 6 totals, B has only 5.', 'Play 20 rounds with your partner. Tally the wins.', 'Add up the whole group’s results. What do you notice?'],
     expPic: 'two dice showing 3 and 5, an A box with the totals 2, 3, 4, 10, 11, 12 and a B box with the totals 5, 6, 7, 8, 9, next to a tally chart.',
-    expAsk: [['Who won more often in your pair? In the whole group?', 'Usually B. The group total is closer to B winning about 2 rounds in every 3.'], ['A has more totals. Why does B win more often?', 'The totals are not equally likely: 7 can be made in 6 ways, 2 in only 1 way. B’s totals can be made in 24 of the 36 ways.'], ['How could we be sure without playing forever?', 'List all 36 equally likely outcomes, or let a computer play 1000 games.']],
+    expAsk: [['Who won more often in your pair? In the whole group?', 'Usually B. The group total is closer to B winning about 2 rounds in every 3.'], ['A has more totals. Why does B win more often?', 'The totals are not equally likely: 7 can be made in 6 ways, 2 in only 1 way. B’s totals can be made in 24 of the 36 ways.']],
     mini1: { head: 'A spinner with 6 equal parts: 3 blue, 2 yellow, 1 red', body: ['6 equal parts, so 6 equally likely outcomes.', 'Yellow: 2 parts out of 6.', 'Spin 600 times: expect 1/3 of 600.'], ans: 'P(yellow) = 2/6 = 1/3; about 200 yellows in 600 spins (not exactly).' },
     mini2: { head: 'Two dice: the 36 outcomes', body: ['6 outcomes for the red die × 6 for the blue = 36.', 'Total 7: 1+6, 2+5, 3+4, 4+3, 5+2, 6+1.', 'Explore game: A’s totals happen 12 ways, B’s 24 ways.'], ans: 'P(7) = 6/36 = 1/6. P(A wins) = 12/36 = 1/3, P(B wins) = 24/36 = 2/3: not fair.' },
     keyHead: 'Key idea: count the equally likely outcomes',
@@ -143,9 +144,9 @@ module.exports = {
       { q: 'A game: you win if the dice shows 1 or 2; your friend wins if it shows 3, 4, 5 or 6. Write the six dice results and who wins each one. Is the game fair? Why or why not?', a: 'You win on 2 of the 6 results and your friend on 4 of the 6, so it is not fair (2/6 = 1/3 against 4/6 = 2/3).' }
     ],
     stretch: [
-      { q: 'A spinner has 10 equal parts numbered 1 to 10. What is the probability of spinning a prime number?', a: '4/10 = 2/5 (2, 3, 5, 7)' },
-      { q: 'Roll two dice and add. What is the probability that the total is 9?', a: '4/36 = 1/9 (3+6, 4+5, 5+4, 6+3)' },
-      { q: 'A bag has 5 red counters and some blue counters. The probability of picking red is 1/4. How many blue counters are there?', a: '15 (5 out of 20 is 1/4)' },
+      { q: 'A spinner has 10 equal parts numbered 1 to 10. What is the probability of spinning a prime number?', nl: 1, a: '4/10 = 2/5 (2, 3, 5, 7)' },
+      { q: 'Roll two dice and add. What is the probability that the total is 9?', nl: 1, fig: FG.grid({ rows: [1, 2, 3, 4, 5, 6], cols: [1, 2, 3, 4, 5, 6], rowTitle: 'first dice', colTitle: 'second dice', cell: 26, label: 'An empty 6 by 6 grid for the two dice: first dice down the side, second dice across the top, to fill in each total.' }), a: '4/36 = 1/9 (3+6, 4+5, 5+4, 6+3)' },
+      { q: 'A bag has 5 red counters and some blue counters. The probability of picking red is 1/4. How many blue counters are there?', nl: 1, a: '15 (5 out of 20 is 1/4)' },
       { q: 'Ali flips a coin 3 times. What is the probability that he gets heads all 3 times?', a: '1/8 (8 equally likely outcomes: HHH, HHT, HTH, HTT, THH, THT, TTH, TTT)' },
       { q: 'One letter is picked at random from the word MATHEMATICS. What is the probability that it is M?', a: '2/11' },
       { q: 'A program rolls a dice 1200 times and counts the numbers bigger than 4. About how many should it count? The program says 391. Is something wrong? Explain.', a: 'About 400 (2 of the 6 results are bigger than 4, and 1/3 × 1200 = 400). 391 is close, so nothing is wrong: a random simulation is never exactly the expected number.' },
@@ -160,8 +161,8 @@ module.exports = {
       { q: 'A bag has 4 red and 6 blue counters. Ali picks a red counter and keeps it. What is the probability that the next counter picked is red?', a: '3/9 = 1/3 (3 red left out of 9)' },
       { q: 'Ben says: “When you flip two coins you get two heads, two tails, or one of each, so the chance of one of each is 1/3.” Is he right?', a: 'No: HH, HT, TH, TT are the 4 equally likely outcomes, and one of each happens 2 ways: 2/4 = 1/2.' },
       { q: 'Design a FAIR game for two players using one dice, two coins or a spinner. Write the rules and show with a list or table that each player has the same chance of winning. Then change ONE rule to make the game unfair, and say who is favoured.', a: 'Open. Example: roll one dice; Player A wins on 1, 2 or 3 and Player B wins on 4, 5 or 6 (3/6 each). Change: A also wins on 4. Now A has 4/6 and B has 2/6, so A is favoured. Check that every outcome is listed and the winning outcomes add up to the whole.' },
-      { q: 'Mei and Ali each roll one dice. Mei wins if her number is bigger. Ali wins if his number is bigger or the same. Is the game fair? What is the probability that Mei wins?', a: 'Not fair. Mei wins 15/36 = 5/12; Ali wins 21/36 = 7/12 (15 bigger + 6 the same). Fair version: the same number means roll again.' },
-      { q: 'Spinner A has 3 equal parts: 1, 2, 3. Spinner B has 4 equal parts: 1, 2, 3, 4. Spin both and multiply. Even wins if the answer is even, Odd wins if it is odd. Is the game fair?', a: 'Not fair. There are 3 × 4 = 12 outcomes; the answer is odd only when both are odd: 2 × 2 = 4 ways. P(Odd) = 4/12 = 1/3, P(Even) = 8/12 = 2/3.' }
+      { q: 'Mei and Ali each roll one dice. Mei wins if her number is bigger. Ali wins if his number is bigger or the same. Is the game fair? What is the probability that Mei wins?', fig: FG.grid({ rows: [1, 2, 3, 4, 5, 6], cols: [1, 2, 3, 4, 5, 6], rowTitle: 'Mei', colTitle: 'Ali', cell: 26, label: 'An empty 6 by 6 grid for the two dice: Mei down the side, Ali across the top, to fill in each total.' }), a: 'Not fair. Mei wins 15/36 = 5/12; Ali wins 21/36 = 7/12 (15 bigger + 6 the same). Fair version: the same number means roll again.' },
+      { q: 'Spinner A has 3 equal parts: 1, 2, 3. Spinner B has 4 equal parts: 1, 2, 3, 4. Spin both and multiply. Even wins if the answer is even, Odd wins if it is odd. Is the game fair?', fig: FG.grid({ rows: [1, 2, 3], cols: [1, 2, 3, 4], rowTitle: 'spinner A', colTitle: 'spinner B', cell: 30, label: 'An empty 3 by 4 grid: spinner A down the side, spinner B across the top, to fill in each product.' }), a: 'Not fair. There are 3 × 4 = 12 outcomes; the answer is odd only when both are odd: 2 × 2 = 4 ways. P(Odd) = 4/12 = 1/3, P(Even) = 8/12 = 2/3.' }
     ]
   },
 
@@ -186,7 +187,7 @@ module.exports = {
       H.tbl([5200, 4700], [H.row([H.cell('<div>' + diff + '</div>', 5200, { h: 20 }), H.cell('<div>' + py + '</div>', 4700, { h: 20 })])]),
       H.sub('a', 'Complete the table.     (b)  P(Ali wins) = ________      P(Ben wins) = ________'),
       H.sub('c', 'Is the game fair? Explain.   ' + '_'.repeat(40)),
-      H.q(5, 'Plan your code. Fill the 3 gaps to count doubles in 1000 rolls of two dice.', { keepNext: true }),
+      H.q(5, 'Plan your code. Fill the 3 gaps to count doubles in 1000 rolls of two dice. (A die shows 1 to 6. A double is when both dice show the same number.)', { keepNext: true }),
       H.tbl([5000, 4900], [H.row([H.cell('<div style="text-align:left">' + blocks(planCode, 'Plan with gaps: set doubles to 0, repeat 1000 times: set a to pick random 1 to a gap, set b to pick random 1 to a gap, if a gap then change doubles by 1; then say doubles', 14) + '</div>', 5000, { h: 30 }),
         H.cell(tx(L('(a)') + 'About what number will it say? Show your fraction.<br>' + blank(250) + '<br><br>' + L('(b)') + 'Why will it not say exactly 1000 × 1/6?<br>' + blank(300) + '<br>' + blank(300)), 4900, { h: 30 })])])
     ];

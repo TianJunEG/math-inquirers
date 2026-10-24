@@ -22,23 +22,23 @@
  },
  {
   "lesson": 2,
-  "name": "Kamal al-Din al-Farisi",
-  "years": "about 1260 to about 1320",
-  "country_or_region": "Persia (Tabriz, now in Iran)",
-  "who": "A scholar who studied rainbows and checked that numbers were prime",
-  "story": "Kamal al-Din al-Farisi lived about 700 years ago in Persia, near Tabriz in what is now Iran. His teacher told him to study a famous book on light by Ibn al-Haytham. He studied it so well that his teacher asked him to write a revised version, and he wrote that some of the old ideas were wrong. To study rainbows he tested light in a clear sphere filled with water, inside a dark room. He also worked with amicable numbers, two numbers where the proper factors of each add up to the other, such as 220 and 284. He gave a new proof of a rule by Thabit ibn Qurra for finding them, and he used prime factors and the sieve of Eratosthenes to check that 1151 is prime. Historians still discuss how complete his proof was.",
-  "link_to_lesson": "Al-Farisi's method relied on breaking numbers into prime factors, today's topic, and on checking whether a large number such as 1151 is prime.",
-  "try_it": "Write 284 as a product of primes. Then list its factors smaller than 284 and add them. What number do you get?",
-  "try_it_answer": "284 = 2 x 2 x 71. Its smaller factors are 1, 2, 4, 71 and 142, which add up to 220, so 220 and 284 are an amicable pair.",
+  "name": "Hannah Cairo",
+  "years": "born in the 2000s (aged 17 in 2025)",
+  "country_or_region": "Bahamas (grew up in Nassau); studies in the United States",
+  "who": "A teenager who showed a famous maths guess was false",
+  "story": "Hannah Cairo grew up in the Bahamas and was taught at home. She learned maths from Khan Academy videos and books, and she finished calculus by age 11. As a teenager she took university maths classes at Berkeley. While working on a homework problem in one graduate course, she found that the Mizohata-Takeuchi conjecture, a guess mathematicians had tried to prove for about 40 years, is false. She talked it through with her professor until both were sure. She posted her paper in February 2025, aged 17.",
+  "link_to_lesson": "This is a loose link: Hannah Cairo did not work on primes, but like today's prime hunters she tested a claim hard and showed that one counterexample can settle it, just as one extra factor shows a number is not prime.",
+  "try_it": "Someone claims that n x n + n + 41 is a prime number for every whole number n. It works for n = 0, 1, 2, 3 (giving 41, 43, 47, 53). Try n = 40. Is the claim true?",
+  "try_it_answer": "For n = 40: 40 x 40 + 40 + 41 = 1681 = 41 x 41, which is not prime. So the claim is false, and one counterexample is enough to show it.",
   "source_urls": [
-   "https://mathshistory.st-andrews.ac.uk/Biographies/Al-Farisi.html",
-   "https://mathshistory.st-andrews.ac.uk/DSB/Al-Farisi.pdf",
-   "https://en.wikipedia.org/wiki/Amicable_numbers"
+   "https://www.quantamagazine.org/at-17-hannah-cairo-solved-a-major-math-mystery-20250801/",
+   "https://arxiv.org/abs/2502.06137v2",
+   "https://www.davidsongifted.org/?p=8430"
   ],
-  "confidence": "medium",
+  "confidence": "high",
   "legend_note": "",
-  "icon_idea": "A glass ball with a small rainbow beside the pair of numbers 220 and 284 joined by a double arrow.",
-  "story_words": 137
+  "icon_idea": "A big question mark with a small tick-and-cross: a claim crossed out by one example, beside a palm tree.",
+  "story_words": 87
  },
  {
   "lesson": 3,

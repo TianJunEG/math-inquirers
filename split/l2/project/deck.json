@@ -8,6 +8,7 @@
  "title": "Math Inquirers: Lesson 2 – Number Bond Inquiry",
  "order": [
   "l2-title",
+  "l2-tool",
   "l2-warm1",
   "l2-warm2",
   "l2-warmcheck",
@@ -18,7 +19,6 @@
   "l2-teach2",
   "l2-try2",
   "l2-teach3",
-  "l2-try3",
   "l2-key",
   "l2-break",
   "l2-ws1",
@@ -28,7 +28,11 @@
   "l2-ws2ans",
   "l2-stretch",
   "l2-challenge",
+  "l2-chdiag",
   "l2-chwalk",
+  "l2-skill1",
+  "l2-skill2",
+  "l2-skill3",
   "l2-talk",
   "l2-exit",
   "l2-reflect"

@@ -31,7 +31,7 @@ def talk_slide(sid,q,notes):
     body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p(q,42,600))+card(p('Sentence starters:',34,400,MUTED)+p('“I noticed that …”   “I tested it by …”   “I know because …”',38,600))
     return sec(sid,'70–80 MIN',body,notes)
 def exit_slide(sid,q,notes):
-    body=h2('Exit ticket')+card(chip('EXIT TICKET')+p(q,46,600))+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
+    body=h2('Exit ticket')+card(chip('EXIT TICKET')+p(q,46,600))+card(p('Write your answer on a slip of paper. Tick it when your tutor shows the answer. Then collect your stamp in your inquiry journal.',34,400))
     return sec(sid,'80–90 MIN',body,notes)
 def check_rows(sid,time,title,rows,notes,lw=210,gap=128,size=38):
     body=h2(title)
@@ -66,7 +66,7 @@ put('p3l4-title',title_slide('p3l4-title',4,2,'Model Makers','Word Problems: Bar
  'Draw bar models for word problems: parts of a whole, comparing, times as many, and before and after.',
  'Objective: Draw bar models for part-whole, comparison, times-as-many and before-and-after word problems, and use them to solve two-step problems and check the answers. Heuristics taught: draw a model; before and after (look for what stays the same). '
  'Materials: Multilink cubes (about 30 per pair), strips of squared paper, scissors, mini whiteboards and markers. '
- 'Online: Tutor builds the bars on the slides. Each child uses Lego bricks, coins or paper strips at home, and a whiteboard or paper to draw bars. Print the workbook before the lesson. Pairs work in one breakout room for 10 minutes, then return for the check slide. '
+ 'Online: Tutor builds the bars on the slides. Each child uses Lego bricks, coins or paper strips at home, and a whiteboard or paper to draw bars. Print the workbook before the lesson. Pairs work in pre-assigned breakout rooms (auto-move in, auto-close with a timer) for about 9.5 minutes of page-1 work, then return for the 60-second self-check slide. '
  'Time plan: warm-up 0 to 10, explore 10 to 25, teaching 25 to 35 (click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket 80 to 90. If the class is behind, children finish the last question of each page at home; the check slides cover it.'))
 
 # ---------- 2 warm1: arm bars ----------
@@ -83,29 +83,28 @@ for i,s_ in enumerate(sent):
     body+=pin(L,T_,800,p(f'<span style="color:{TEAL};font-weight:800">{i+1}.</span>  {E(s_)}',36,700,raw=True),None,WHITE,24,'18px 28px',f'box-sizing:border-box;height:280px;border:4px solid {NAVY}')
     body+=pin(L+28,T_+96,744,mini(i+1),'pop')
 put('p3l4-warm1',sec('p3l4-warm1','0–5 MIN',body,
- 'Minutes 0 to 5. Arm bars. Read each sentence aloud. Children hold their two hands apart, one above the other, to show the two bars (online: in front of the camera), then draw the bars on whiteboards in 10 seconds. Click to show a model after each one (clicks reveal 1, 2, 3, 4 in order). '
+ 'Minutes 0 to 5. Arm bars. Play TWO rounds of two sentences (1 and 2, then 3 and 4). Read each sentence aloud. Children hold their two hands apart, one above the other, to show the two bars (online: in view of the camera), then draw the bars on whiteboards in 10 seconds. Click to show a model after each one (clicks reveal 1, 2, 3, 4 in order). '
  'Ask: "Whose bar is longer? How do you show the 5?" For 2: "How many equal parts does Mei have?" (3). For 3: "Altogether means we show the total with a bracket." For 4: "Fewer: Siti\'s bar is shorter. The dashed piece shows what she does not have." '
  'Watch for: children who draw "4 fewer" as a longer bar, and children who draw 3 times as many with 4 parts.'))
 
 # ---------- 3 warm2 ----------
-qs=[('1.','348 + 52','400'),('2.','1000 − 365','635'),('3.','3 units = 27. 1 unit = ?','9'),('4.','Ben has 40. Ali has 15 more. Ali?','55'),('5.','Mei has 60. Siti has 12 fewer. Siti?','48')]
+qs=[('1.','348 + 52','400'),('2.','1000 − 365','635'),('3.','3 units = 27. 1 unit = ?','9')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b,38) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put('p3l4-warm2',sec('p3l4-warm2','5–10 MIN',body,'Minutes 5 to 10. Whiteboards, show together, click to reveal. Ask "How did you do it in your head?" For 2, praise counting on (365 → 400 → 1000 is 35 + 600). For 3: "If 3 equal units make 27, one unit is 27 ÷ 3." Answers: 400, 635, 9, 55, 48.'))
+put('p3l4-warm2',sec('p3l4-warm2','5–10 MIN',body,'Minutes 5 to 10. Whiteboards, show together, click to reveal. Ask "How did you do it in your head?" For 2, praise counting on (365 → 400 → 1000 is 35 + 600). For 3: "If 3 equal units make 27, one unit is 27 ÷ 3." Answers: 400, 635, 9. Three quick questions only; the other two (Ben has 40, Ali has 15 more: 55; Mei has 60, Siti has 12 fewer: 48) are on the take-home box of the Go further page in the workbook.'))
 
 # ---------- 4 explore1 ----------
 g=(R(200,130,100,150,SKY,'?')+''.join(R(340,30+25*k,100,25,YEL) for k in range(4))+R(340,130,100,150,SKY,'?')+T(470,90,'4 more',30,TEAL,'start',800)
    +T(320,325,'20 cubes altogether',30,NAVY,w=800)
-   +R(900,220,100,60,SKY,'?')+''.join(R(1040,100+60*k,100,60,SKY) for k in range(3))+T(1170,200,'3 times as tall',30,TEAL,'start',800)+T(1020,325,'20 cubes altogether',30,NAVY,w=800)
+   +T(900,200,'3 times as tall?  We do this together afterwards.',30,TEAL,'start',800)
    +f'<line x1="150" y1="282" x2="1450" y2="282" stroke="{NAVY}" stroke-width="5"/>')
-pic=svgwrap('Two pairs of cube towers: one tower 4 cubes taller, and one tower 3 times as tall',1500,340,g,'height:300px;width:auto')
-put('p3l4-explore1',explore1('p3l4-explore1',['Take 20 cubes. Build two towers. One tower must have 4 more cubes than the other.','Stand the towers side by side. How many cubes are in each?','Use 20 cubes again: now one tower must be 3 times as tall as the other.','Draw each pair of towers as two bars on your whiteboard.'],pic,
- 'Minutes 10 to 15. Pairs work with Multilink cubes (about 30 per pair). Online: Lego bricks, coins in two piles, or paper strips. Let them try and adjust (move a cube from one tower to the other). Do not show the take-away-the-extra method yet: listen for pairs who find it. Early finishers: 30 cubes where one tower is 4 times as tall (6 and 24).'))
+pic=svgwrap('A pair of cube towers, one tower 4 cubes taller than the other',1500,340,g,'height:300px;width:auto')
+put('p3l4-explore1',explore1('p3l4-explore1',['Take 20 cubes. Build two towers. One tower must have 4 more cubes than the other.','Stand the towers side by side. How many cubes are in each?','Draw the two towers as two bars on your whiteboard.'],pic,
+ 'Minutes 10 to 15. Pairs work with Multilink cubes (about 30 per pair). Online: Lego bricks, coins in two piles, or paper strips. Pairs make only the "4 more" towers (about 6.5 minutes of pair work). Let them try and adjust (move a cube from one tower to the other). Do not show the take-away-the-extra method yet: listen for pairs who find it. The "3 times as tall" towers are the first debrief question, done together on the shared screen. Ready for more: the Go further card, or 30 cubes where one tower is 4 times as tall (6 and 24).'))
 
 # ---------- 5 explore2 ----------
-eq=[('1.','How did you find the two towers for "4 more"?'),('2.','How many cubes were in each tower for "3 times as tall"?'),('3.','Could you make "3 times as tall" with 22 cubes? Why or why not?')]
+eq=[('1.','Use 20 cubes again: one tower is 3 times as tall as the other. How many cubes in each? (We do it together.)'),('2.','How did you find the two towers for "4 more"?')]
 put('p3l4-explore2',sec('p3l4-explore2','15–25 MIN',h2('Explore: talk about it')+numbered(eq,40),
- 'Minutes 15 to 25. Gather the pairs. Take ideas, then show with cubes. Answers: 1) Take away the extra 4 (16 left), share 16 into two equal towers of 8, then put the 4 back: 8 and 12. Check 8 + 12 = 20 and 12 − 8 = 4. '
- '2) 5 and 15: together the towers make 4 equal parts of 5 (1 part and 3 parts). 3) No: we need 4 equal parts, and 22 cannot be shared into 4 equal parts (5 each leaves 2 over). Then say: "Cubes are great, but big numbers need too many cubes. Today we draw the towers as bars: bar models."'))
+ 'Minutes 15 to 25. Gather the pairs. Take ideas, then show with cubes. Answers: 1) (Done together on the shared screen with cubes or a drawing.) 5 and 15: together the towers make 4 equal parts of 5 (1 part and 3 parts). 2) Take away the extra 4 (16 left), share 16 into two equal towers of 8, then put the 4 back: 8 and 12. Check 8 + 12 = 20 and 12 − 8 = 4. The question "Could you make 3 times as tall with 22 cubes?" (no: we need 4 equal parts, and 22 cannot be shared into 4 equal parts) has moved to talk time. Then say: "Cubes are great, but big numbers need too many cubes. Today we draw the towers as bars: bar models."'))
 
 # ---------- 6 we1 part-whole ----------
 k=1300/1500; a_=645*k; b_=480*k
@@ -156,9 +155,6 @@ body+=step(3,'Ben = 4 units = 4 × 35 = 140. Check: 35 + 140 = 175 ✓',top=830,
 put('p3l4-teachunits',sec('p3l4-teachunits','40–42 MIN',body,'Teach before worksheet page 1 (Q3 is times as many). "4 times as many" means Ben\'s bar is 4 of Ali\'s bars. Ask before step 1: "How many units altogether?" Many children say 4. Point to the model and count: Ali\'s 1 and Ben\'s 4 make 5. Then share 175 into 5 equal units (175 ÷ 5 = 35).'))
 
 # ---------- 13 try units ----------
-put('p3l4-tryunits',try_slide('p3l4-tryunits','42–43 MIN','Your turn: units','Draw the units. Count ALL the units.',
- [('a','Mei has twice as many pens as Siti. They have 36 altogether. How many pens does Siti have?','12'),('b','A cake costs 3 times as much as a drink. Together they cost $20. How much is the cake?','$15'),('c','Ali has 5 times as many cards as Ben. Ali has 48 MORE than Ben. How many does Ben have?','12')],
- 'Whiteboards. a) 3 units = 36, 1 unit = 12. b) 4 units = $20, 1 unit = $5, cake 3 units = $15. c) Different! The difference is 5 − 1 = 4 units = 48, so 1 unit = 12. Ask: "Why did we use 4 units in c, not 6?"',size=34))
 
 # ---------- 14-15 worksheet page 1 ----------
 put('p3l4-ws1',ws_preview('p3l4-ws1','43–53 MIN','Worksheet page 1: with your partner',[('Q1','Part-whole: the bakery. Use the bar.'),('Q2','Compare three children. Who do you compare Ben with?'),('Q3','Times as many: count all the units.')],'Label the bars. Put ? on what you want to find.','Minutes 43 to 53. Pairs work together. Walk around and ask "Is it a whole cut into parts, or a comparison?" For Q2, check pairs subtract 79 from ALI\'s number. For Q3, check they use 4 units.'))
@@ -197,10 +193,10 @@ body=h2('Before and after: what stays the same?')+card(p('Mei has $30 and Siti h
 body+=pin(128,400,1664,svgwrap('Siti 12 plus 5 and Mei 30 plus 5: the gap between them is 18 both before and after',1664,296,g),'rise')
 body+=step(1,'Before: $30 − $12 = $18.   After: Mei $35, Siti $17, and $35 − $17 = $18.',top=705,size=34)
 body+=step(2,'Both get the same, so the difference stays the same: $18.',top=805,size=34)
-put('p3l4-teachsame',sec('p3l4-teachsame','58–60 MIN',body,'Teach the second heuristic: BEFORE AND AFTER, look for what stays the same. Before worksheet Q6. Ask: "When both girls get $5, what happens to the gap between them?" Show with two cube towers, add 2 cubes to each: the gap does not change. Then click the model. Check aloud: Siti $12 + $5 = $17, Mei $30 + $5 = $35, and $35 − $17 = $18, the same gap as before. Compare with Q5: when one gives to the other, the TOTAL stays the same; when both get the same, the DIFFERENCE stays the same.'))
+put('p3l4-teachsame',sec('p3l4-teachsame','71.5–73 MIN',body,'Talk time (moved here from the worksheet): this slide is the whole-class discussion "what stays the same?", the second heuristic, BEFORE AND AFTER. Workbook Q6 (Grandma gives both boys $10) is now an (if time) question that builds on it. Ask: "When both girls get $5, what happens to the gap between them?" Show with two cube towers, add 2 cubes to each: the gap does not change. Then click the model. Check aloud: Siti $12 + $5 = $17, Mei $30 + $5 = $35, and $35 − $17 = $18, the same gap as before. Compare with Q5: when one gives to the other, the TOTAL stays the same; when both get the same, the DIFFERENCE stays the same.'))
 
 # ---------- 19-20 worksheet page 2 ----------
-put('p3l4-ws2',ws_preview('p3l4-ws2','60–67 MIN','Worksheet page 2: on your own',[('Q4','Total and difference. Take away the extra first.'),('Q5','Give to make equal. Is Ravi right?'),('Q6','Grandma gives both boys $10. What stays the same?')],'Ready for more? Stretch and Challenge come next.','Children work alone and draw their own models in the dashed boxes. Note who needs a short catch-up next lesson.'))
+put('p3l4-ws2',ws_preview('p3l4-ws2','60–67 MIN','Worksheet page 2: on your own',[('Q4','Total and difference. Take away the extra first.'),('Q5','(a) Give to make equal. (b) Is Ravi right? (if time)'),('Q6','If time: Grandma gives both boys $10. What stays the same?')],'Ready for more? Stretch and Challenge come next.','Children work alone and draw their own models in the dashed boxes: Q4 and Q5(a) are the page-2 work (about 7.5 minutes). Q5(b) (Ravi\'s mistake) and Q6 are marked (if time): Ravi\'s mistake is discussed in talk time. Note who needs a short catch-up next lesson.'))
 put('p3l4-ws2ans',check_rows('p3l4-ws2ans','67–69 MIN','Page 2: check together',[
  ('Q4','Ben 63, Ali 87   (150 − 24 = 126, 126 ÷ 2 = 63)'),
  ('Q5a','19 stickers: both then have 66'),
@@ -239,11 +235,11 @@ for i,t in enumerate(['Bill 2 has 2 more pens than Bill 1.','It costs $35 − $2
 put('p3l4-chwalk',sec('p3l4-chwalk','Challenge',body,'Use after pairs have tried. Q1 is a before-and-after problem where the RATIO changes: the total stays the same (120), so find the new unit first (3 equal parts), then compare Ben before and after. Q2: when two bills differ in only one thing, the difference in price tells you the price of that one thing.'))
 
 # ---------- 25-26 talk, exit ----------
-put('p3l4-talk',talk_slide('p3l4-talk','Mei and Siti are each given $5. Why does the difference between them stay the same?','Minutes 70 to 80. Pairs talk for 2 minutes, then share. Expected: both bars grow by the same piece, so the gap between their ends does not change. Follow-up: "When Mei GIVES Siti $5, what stays the same?" (the total). "How can a model help you check your answer?" (put the answers back: the parts must make the whole and the difference must match).'))
+put('p3l4-talk',talk_slide('p3l4-talk','Mei and Siti are each given $5. Why does the difference between them stay the same?','Minutes 70 to 80. Pairs talk for 2 minutes, then share. This talk time also holds the slide before it (what stays the same?). Expected: both bars grow by the same piece, so the gap between their ends does not change. Extra questions moved here: (1) Ravi\'s mistake, workbook Q5(b): "Ravi says Mei must give Siti 38, because 85 − 47 = 38. What mistake did he make?" (38 is the whole difference: they would just swap; she gives half, 19). (2) "Could you make 3 times as tall with 22 cubes? Why not?" (4 equal parts: 22 cannot be shared into 4 equal parts). Follow-up: "When Mei GIVES Siti $5, what stays the same?" (the total). "How can a model help you check your answer?" (put the answers back: the parts must make the whole and the difference must match).'))
 put('p3l4-exit',exit_slide('p3l4-exit','Ali has 3 times as many stickers as Ben. They have 80 stickers altogether. How many stickers does Ali have? Draw the model.','Minutes 80 to 90. Answer: 60. 4 units = 80, so 1 unit = 20, and Ali has 3 units. Watch for 80 ÷ 3. Extension: write your own before-and-after story, draw its model and check it, then swap with a partner.'))
 
 # ---------- write ----------
-order=['p3l4-title','p3l4-warm1','p3l4-warm2','p3l4-explore1','p3l4-explore2','p3l4-we1','p3l4-try1','p3l4-we2','p3l4-try2','p3l4-key','p3l4-break','p3l4-teachunits','p3l4-tryunits','p3l4-ws1','p3l4-ws1ans','p3l4-teachtd','p3l4-teachgive','p3l4-teachsame','p3l4-ws2','p3l4-ws2ans','p3l4-stretch','p3l4-challenge','p3l4-chdiag','p3l4-chwalk','p3l4-talk','p3l4-exit']
+order=['p3l4-title','p3l4-warm1','p3l4-warm2','p3l4-explore1','p3l4-explore2','p3l4-we1','p3l4-try1','p3l4-we2','p3l4-try2','p3l4-key','p3l4-break','p3l4-teachunits','p3l4-ws1','p3l4-ws1ans','p3l4-teachtd','p3l4-teachgive','p3l4-ws2','p3l4-ws2ans','p3l4-stretch','p3l4-challenge','p3l4-chdiag','p3l4-chwalk','p3l4-teachsame','p3l4-talk','p3l4-exit']
 import p3_gifted; order[:]=p3_gifted.add(S,order,4)  # close-the-gaps: warm-up check + look-back slides
 assert set(order)==set(S), set(order)^set(S)
 for f in os.listdir(os.path.join(D,'slides')):

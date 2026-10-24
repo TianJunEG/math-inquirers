@@ -1,0 +1,1005 @@
+{
+ "schema_version": 1,
+ "level": 2,
+ "unit": 5,
+ "id": "L2U05",
+ "title": "Mystery number machines",
+ "topic": "Working backwards",
+ "holiday_lesson": 5,
+ "goal": "I can find a mystery number by working backwards. I undo the last step first. I can use bars for before-and-after stories.",
+ "learn": {
+  "intro": "A number machine changes a number, one step at a time. To find what went IN, work backwards. Undo the LAST step first. Use the opposite: + and - undo each other, and so do × and ÷.",
+  "example": {
+   "problem": "Ali picks a secret number. He multiplies it by 3, then adds 5. He gets 29. What is his number?",
+   "figure": {
+    "type": "l2_machine",
+    "steps": [
+     "?",
+     "× 3",
+     "+ 5",
+     "29"
+    ],
+    "width_mm": 150
+   },
+   "steps": [
+    "Undo the last step. It was + 5, so take away 5: 29 - 5 = 24.",
+    "Undo the first step. It was × 3, so divide by 3: 24 ÷ 3 = 8.",
+    "Check going forwards: 8 × 3 = 24, then 24 + 5 = 29."
+   ],
+   "answer": "The secret number is 8."
+  },
+  "howto": {
+   "title": "How to work backwards",
+   "steps": [
+    "Draw the machine.",
+    "Start at the OUT. Undo the last step first.",
+    "Use the opposite step.",
+    "Check going forwards."
+   ]
+  },
+  "facts": {
+   "title": "Opposites",
+   "lines": [
+    "+ 6 is undone by - 6.",
+    "× 4 is undone by ÷ 4.",
+    "Undo in the opposite order."
+   ]
+  },
+  "try": {
+   "id": "L2U05-L01",
+   "text": "Mei picks a secret number. She multiplies it by 5, then takes away 8. She gets 32. What is her number? {b}",
+   "answer": {
+    "value": [
+     "8"
+    ],
+    "text": "8"
+   },
+   "explanation": "Undo - 8 with + 8: 32 + 8 = 40. Undo × 5 with ÷ 5: 40 ÷ 5 = 8. Check: 8 × 5 = 40 and 40 - 8 = 32."
+  }
+ },
+ "items": [
+  {
+   "id": "L2U05-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "What is my number? Write it in the box.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "I add 27. I get 61.   {b}",
+     "answer": {
+      "value": [
+       "34"
+      ],
+      "text": "34"
+     }
+    },
+    {
+     "label": "b",
+     "text": "I multiply by 5. I get 35.   {b}",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    },
+    {
+     "label": "c",
+     "text": "I divide by 4. I get 9.   {b}",
+     "answer": {
+      "value": [
+       "36"
+      ],
+      "text": "36"
+     }
+    },
+    {
+     "label": "d",
+     "text": "I take away 18. I get 25.   {b}",
+     "answer": {
+      "value": [
+       "43"
+      ],
+      "text": "43"
+     }
+    }
+   ],
+   "explanation": "Use the opposite step. (a) 61 - 27 = 34. (b) 35 ÷ 5 = 7. (c) 9 × 4 = 36. (d) 25 + 18 = 43.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U05-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "Circle the step that undoes the first one.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "+ 7 is undone by   {circ:+ 7|- 7|× 7}",
+     "answer": {
+      "value": [
+       "- 7"
+      ],
+      "text": "- 7"
+     }
+    },
+    {
+     "label": "b",
+     "text": "× 5 is undone by   {circ:× 5|÷ 5|- 5}",
+     "answer": {
+      "value": [
+       "÷ 5"
+      ],
+      "text": "÷ 5"
+     }
+    },
+    {
+     "label": "c",
+     "text": "- 12 is undone by   {circ:- 12|+ 12|÷ 12}",
+     "answer": {
+      "value": [
+       "+ 12"
+      ],
+      "text": "+ 12"
+     }
+    },
+    {
+     "label": "d",
+     "text": "÷ 3 is undone by   {circ:÷ 3|+ 3|× 3}",
+     "answer": {
+      "value": [
+       "× 3"
+      ],
+      "text": "× 3"
+     }
+    }
+   ],
+   "explanation": "The opposite of adding is taking away, and the opposite of multiplying is dividing. (a) - 7. (b) ÷ 5. (c) + 12. (d) × 3.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U05-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "Find the number that went IN. Undo the last step first.",
+   "figure": {
+    "type": "l2_machine",
+    "rows": [
+     {
+      "label": "(a)",
+      "steps": [
+       "?",
+       "× 2",
+       "+ 9",
+       "25"
+      ]
+     },
+     {
+      "label": "(b)",
+      "steps": [
+       "?",
+       "- 6",
+       "× 4",
+       "28"
+      ]
+     },
+     {
+      "label": "(c)",
+      "steps": [
+       "?",
+       "÷ 5",
+       "+ 7",
+       "11"
+      ]
+     }
+    ],
+    "width_mm": 150
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "IN {b}",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    },
+    {
+     "label": "b",
+     "text": "IN {b}",
+     "answer": {
+      "value": [
+       "13"
+      ],
+      "text": "13"
+     }
+    },
+    {
+     "label": "c",
+     "text": "IN {b}",
+     "answer": {
+      "value": [
+       "20"
+      ],
+      "text": "20"
+     }
+    }
+   ],
+   "explanation": "(a) 25 - 9 = 16, then 16 ÷ 2 = 8. Check: 8 × 2 = 16, 16 + 9 = 25. (b) 28 ÷ 4 = 7, then 7 + 6 = 13. Check: 13 - 6 = 7, 7 × 4 = 28. (c) 11 - 7 = 4, then 4 × 5 = 20. Check: 20 ÷ 5 = 4, 4 + 7 = 11.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U05-S04",
+   "tier": "start",
+   "page": 1,
+   "text": "Fill in the missing number.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "{b} ÷ 2 + 7 = 15",
+     "answer": {
+      "value": [
+       "16"
+      ],
+      "text": "16"
+     }
+    },
+    {
+     "label": "b",
+     "text": "4 × {b} - 5 = 19",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "c",
+     "text": "{b} × 10 + 8 = 78",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    }
+   ],
+   "explanation": "Undo the last step first. (a) 15 - 7 = 8, then 8 × 2 = 16. (b) 19 + 5 = 24, then 24 ÷ 4 = 6. (c) 78 - 8 = 70, then 70 ÷ 10 = 7.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U05-S05",
+   "tier": "start",
+   "page": 2,
+   "text": "This machine does × 4, then - 1. Fill in the table.",
+   "figure": {
+    "type": "l2_table",
+    "cols": [
+     "IN",
+     "3",
+     "6",
+     null,
+     null
+    ],
+    "rows": [
+     [
+      "OUT",
+      null,
+      null,
+      "31",
+      "39"
+     ]
+    ],
+    "first_bold": true,
+    "widths": [
+     1.4,
+     1,
+     1,
+     1,
+     1
+    ],
+    "width_mm": 120
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Write the 4 missing numbers. Do the OUT of IN 3 and 6 first, then work backwards for 31 and 39.",
+     "answer": {
+      "value": [
+       "11",
+       "23",
+       "8",
+       "10"
+      ],
+      "text": "11 and 23 in the OUT row, 8 and 10 in the IN row",
+      "list": true
+     }
+    }
+   ],
+   "explanation": "IN 3: 3 × 4 = 12, 12 - 1 = 11. IN 6: 6 × 4 = 24, 24 - 1 = 23. OUT 31: 31 + 1 = 32, 32 ÷ 4 = 8. OUT 39: 39 + 1 = 40, 40 ÷ 4 = 10."
+  },
+  {
+   "id": "L2U05-S06",
+   "tier": "start",
+   "page": 2,
+   "text": "A fair machine gives stickers for tokens. Each token gives the same number of stickers, plus a bonus. 3 tokens give 11 stickers. 6 tokens give 17.",
+   "figure": {
+    "type": "l2_table",
+    "cols": [
+     "Tokens",
+     "3",
+     "6",
+     "10"
+    ],
+    "rows": [
+     [
+      "Stickers",
+      "11",
+      "17",
+      null
+     ]
+    ],
+    "first_bold": true,
+    "widths": [
+     1.4,
+     1,
+     1,
+     1
+    ],
+    "width_mm": 100
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Each token gives   {circ:2|3|4}   stickers.",
+     "answer": {
+      "value": [
+       "2"
+      ],
+      "text": "2"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The bonus is {b} stickers.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "c",
+     "text": "10 tokens give {b} stickers.",
+     "answer": {
+      "value": [
+       "25"
+      ],
+      "text": "25"
+     }
+    }
+   ],
+   "explanation": "Try 2 stickers a token: 3 tokens give 6, and 11 - 6 = 5 is the bonus. Test 6 tokens: 12 + 5 = 17. It fits. 3 and 4 a token do not fit both. 10 tokens: 20 + 5 = 25."
+  },
+  {
+   "id": "L2U05-S07",
+   "tier": "start",
+   "page": 2,
+   "text": "Ali had some marbles. He lost 18 in a game. Then he won 25 marbles. Now he has 60.",
+   "figure": {
+    "type": "l2_machine",
+    "steps": [
+     "?",
+     "- 18",
+     "+ 25",
+     "60"
+    ],
+    "width_mm": 150
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Before he won 25, Ali had {b} marbles.",
+     "answer": {
+      "value": [
+       "35"
+      ],
+      "text": "35"
+     }
+    },
+    {
+     "label": "b",
+     "text": "At first Ali had {b} marbles.",
+     "answer": {
+      "value": [
+       "53"
+      ],
+      "text": "53"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Check: 53 - 18 = {b}, then + 25 = {b}",
+     "answer": {
+      "value": [
+       "35",
+       "60"
+      ],
+      "text": "35, then 60"
+     }
+    }
+   ],
+   "explanation": "Undo the last step: 60 - 25 = 35. Undo the first step: 35 + 18 = 53. Check: 53 - 18 = 35, then 35 + 25 = 60."
+  },
+  {
+   "id": "L2U05-S08",
+   "tier": "start",
+   "page": 3,
+   "text": "Kumar puts his stickers into 4 boxes. Every box has the same number. He takes 3 stickers out of box 4. Now box 4 has 7 stickers.",
+   "figure": {
+    "type": "l2_bar",
+    "rows": [
+     {
+      "label": "Box 1",
+      "segs": [
+       {
+        "w": 7,
+        "unknown": true,
+        "t": "?"
+       }
+      ]
+     },
+     {
+      "label": "Box 2",
+      "segs": [
+       {
+        "w": 7,
+        "unknown": true,
+        "t": "?"
+       }
+      ]
+     },
+     {
+      "label": "Box 3",
+      "segs": [
+       {
+        "w": 7,
+        "unknown": true,
+        "t": "?"
+       }
+      ]
+     },
+     {
+      "label": "Box 4",
+      "segs": [
+       {
+        "w": 5,
+        "t": "7"
+       },
+       {
+        "w": 2,
+        "hatch": true,
+        "t": "3"
+       }
+      ]
+     }
+    ],
+    "width_units": 380,
+    "width_mm": 100
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Each box had {b} stickers at first.",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Kumar has {b} stickers altogether.",
+     "answer": {
+      "value": [
+       "40"
+      ],
+      "text": "40"
+     }
+    }
+   ],
+   "explanation": "Box 4 had 7 + 3 = 10 stickers before he took 3 out. Every box had the same, so each box had 10. 4 boxes: 4 × 10 = 40 stickers."
+  },
+  {
+   "id": "L2U05-S09",
+   "tier": "start",
+   "page": 3,
+   "text": "Mei had some stickers. She bought 12 more. Then she put them equally into 4 albums, 5 in each album.",
+   "figure": {
+    "type": "l2_machine",
+    "steps": [
+     "?",
+     "+ 12",
+     "÷ 4",
+     "5"
+    ],
+    "width_mm": 150
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "After buying 12 more, Mei had {b} stickers.",
+     "answer": {
+      "value": [
+       "20"
+      ],
+      "text": "20"
+     }
+    },
+    {
+     "label": "b",
+     "text": "At first Mei had {b} stickers.",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    }
+   ],
+   "explanation": "4 albums with 5 stickers each: 4 × 5 = 20 stickers. That is after buying 12 more, so at first she had 20 - 12 = 8. Check: 8 + 12 = 20 and 20 ÷ 4 = 5."
+  },
+  {
+   "id": "L2U05-S10",
+   "tier": "start",
+   "page": 3,
+   "text": "Lily had some money. She bought a pen for $3 and a book for $8. She has $12 left.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Lily spent $ {b} altogether.",
+     "answer": {
+      "value": [
+       "11"
+      ],
+      "text": "11"
+     }
+    },
+    {
+     "label": "b",
+     "text": "At first Lily had $ {b}",
+     "answer": {
+      "value": [
+       "23"
+      ],
+      "text": "23"
+     }
+    }
+   ],
+   "explanation": "(a) $3 + $8 = $11 spent. (b) Undo the spending: $12 + $11 = $23. Check: 23 - 3 = 20, 20 - 8 = 12."
+  },
+  {
+   "id": "L2U05-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "Mei, Lily and Aisha have 51 beads altogether. Lily has 6 more than Mei. Aisha has 9 more than Mei.",
+   "figure": {
+    "type": "l2_bar",
+    "rows": [
+     {
+      "label": "Mei",
+      "segs": [
+       {
+        "w": 5,
+        "unknown": true,
+        "t": "?"
+       }
+      ]
+     },
+     {
+      "label": "Lily",
+      "segs": [
+       {
+        "w": 5,
+        "unknown": true,
+        "t": "?"
+       },
+       {
+        "w": 2,
+        "t": "6"
+       }
+      ]
+     },
+     {
+      "label": "Aisha",
+      "segs": [
+       {
+        "w": 5,
+        "unknown": true,
+        "t": "?"
+       },
+       {
+        "w": 3,
+        "t": "9"
+       }
+      ]
+     }
+    ],
+    "brace": {
+     "text": "51",
+     "rows": [
+      0,
+      2
+     ]
+    },
+    "width_units": 400,
+    "width_mm": 94
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Mei has {b} beads.",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Lily has {b} beads.",
+     "answer": {
+      "value": [
+       "18"
+      ],
+      "text": "18"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Aisha has {b} beads.",
+     "answer": {
+      "value": [
+       "21"
+      ],
+      "text": "21"
+     }
+    }
+   ],
+   "explanation": "Take away the extra 6 and 9: 51 - 6 - 9 = 36. Now 3 equal bars share 36, so each is 36 ÷ 3 = 12. Mei has 12, Lily 12 + 6 = 18 and Aisha 12 + 9 = 21. Check: 12 + 18 + 21 = 51.",
+   "hint": "Take off the extra bits. Then share the rest equally.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U05-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "Aisha had some stickers. She used 8 on a card. Then she got as many stickers as she had left. Now she has 30.",
+   "figure": {
+    "type": "l2_bar",
+    "rows": [
+     {
+      "label": "Start",
+      "segs": [
+       {
+        "w": 6,
+        "unknown": true,
+        "t": "?"
+       }
+      ]
+     },
+     {
+      "label": "Then",
+      "segs": [
+       {
+        "w": 4,
+        "unknown": true,
+        "t": "?"
+       },
+       {
+        "w": 2,
+        "t": "8"
+       }
+      ]
+     },
+     {
+      "label": "Now",
+      "segs": [
+       {
+        "w": 4,
+        "unknown": true,
+        "t": "?"
+       },
+       {
+        "w": 4,
+        "unknown": true,
+        "t": "?"
+       }
+      ]
+     }
+    ],
+    "brace": {
+     "text": "30",
+     "rows": [
+      2,
+      2
+     ]
+    },
+    "width_units": 400,
+    "width_mm": 92
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "After the card, Aisha had {b} stickers.",
+     "answer": {
+      "value": [
+       "15"
+      ],
+      "text": "15"
+     }
+    },
+    {
+     "label": "b",
+     "text": "At first she had {b} stickers.",
+     "answer": {
+      "value": [
+       "23"
+      ],
+      "text": "23"
+     }
+    }
+   ],
+   "explanation": "Now she has twice the number she had after the card, so 30 is 2 equal parts: 30 ÷ 2 = 15. After the card she had 15. At first she had 15 + 8 = 23. Check: 23 - 8 = 15, then 15 + 15 = 30.",
+   "hint": "Now she has 2 equal parts. Find one part first.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U05-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "A machine does × 4, then + 1. Could it give this OUT? Try IN 1, 2, 3 ... first.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "29   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "Yes"
+      ],
+      "text": "Yes"
+     }
+    },
+    {
+     "label": "b",
+     "text": "30   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    },
+    {
+     "label": "c",
+     "text": "33   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "Yes"
+      ],
+      "text": "Yes"
+     }
+    },
+    {
+     "label": "d",
+     "text": "42   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    }
+   ],
+   "explanation": "IN 1, 2, 3, 4 give 5, 9, 13, 17: always 1 more than the 4 times table. 29 = 28 + 1: yes. 30 is skipped (29, 33): no. 33 = 32 + 1: yes. 42 is skipped (41, 45): no.",
+   "hint": "Write the first OUT numbers. What do you see?",
+   "partsrow": true
+  },
+  {
+   "id": "L2U05-G01",
+   "tier": "go",
+   "page": 5,
+   "text": "A letter can stand for a mystery number. Let n be that number. 3 × n + 4 = 25 means: 3 times the number, plus 4, makes 25.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "3 × n + 4 = 25. n = {b}",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    },
+    {
+     "label": "b",
+     "text": "5 × n - 3 = 27. n = {b}",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "c",
+     "text": "n ÷ 2 + 8 = 13. n = {b}",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    }
+   ],
+   "explanation": "(a) 25 - 4 = 21, 21 ÷ 3 = 7. (b) 27 + 3 = 30, 30 ÷ 5 = 6. (c) 13 - 8 = 5, 5 × 2 = 10.",
+   "hint": "Work backwards, just like a machine.",
+   "beyond": "Letters for numbers"
+  },
+  {
+   "id": "L2U05-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "Three jars have 36 beans altogether. 4 beans move from jar A to jar B. Then 6 move from jar B to jar C. Now every jar has the same number.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Now each jar has {b} beans.",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    },
+    {
+     "label": "b",
+     "text": "At first: jar A {b}, jar B {b}, jar C {b}",
+     "answer": {
+      "value": [
+       "16",
+       "14",
+       "6"
+      ],
+      "text": "16, 14 and 6"
+     }
+    }
+   ],
+   "explanation": "(a) 36 ÷ 3 = 12. (b) Undo B to C: jar C had 12 - 6 = 6 and jar B had 12 + 6 = 18. Undo A to B: jar B had 18 - 4 = 14 and jar A had 12 + 4 = 16. Check: 16 + 14 + 6 = 36.",
+   "hint": "Undo the last move first. Jar C gave nothing, it got 6."
+  },
+  {
+   "id": "L2U05-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "Make your own riddle. \"I think of a number. I ... then I ... I get ...\" The mystery number must be 12. Many answers work.",
+   "answer": {
+    "value": [
+     "open"
+    ],
+    "text": "Open. Example: I think of a number. I add 7, then multiply by 2. I get 38. (38 ÷ 2 = 19, 19 - 7 = 12.)"
+   },
+   "explanation": "Start at 12 and go forwards: 12 + 7 = 19, 19 × 2 = 38. The riddle ends at 38. To solve it, work backwards from 38.",
+   "hint": "Start at 12 and go forwards.",
+   "space": {
+    "rows": [
+     "My riddle:"
+    ]
+   }
+  },
+  {
+   "id": "L2U05-G04",
+   "tier": "go",
+   "page": 5,
+   "text": "Machine A does × 2, then + 3. Machine B does - 5, then × 3. The OUT of A goes into B. The final OUT is 36.",
+   "figure": {
+    "type": "l2_machine",
+    "steps": [
+     "?",
+     "× 2",
+     "+ 3",
+     "- 5",
+     "× 3",
+     "36"
+    ],
+    "width_mm": 100
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "The OUT of machine A was {b}",
+     "answer": {
+      "value": [
+       "17"
+      ],
+      "text": "17"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The number that went into A was {b}",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    }
+   ],
+   "explanation": "Undo B: 36 ÷ 3 = 12, then 12 + 5 = 17. That is the OUT of A. Undo A: 17 - 3 = 14, then 14 ÷ 2 = 7. Check: 7 → 14 → 17 → 12 → 36.",
+   "hint": "Undo machine B first. Then undo machine A.",
+   "figside": false,
+   "partsrow": true
+  },
+  {
+   "id": "L2U05-C01",
+   "tier": "quiz",
+   "text": "I multiply a number by 4, then add 6. I get 38. My number: {b}",
+   "answer": {
+    "value": [
+     "8"
+    ],
+    "text": "8"
+   },
+   "explanation": "38 - 6 = 32, then 32 ÷ 4 = 8. Check: 8 × 4 = 32, 32 + 6 = 38."
+  },
+  {
+   "id": "L2U05-C02",
+   "tier": "quiz",
+   "text": "Kumar gave away 14 stickers, then bought 9. Now 31. At first: {b}",
+   "answer": {
+    "value": [
+     "36"
+    ],
+    "text": "36"
+   },
+   "explanation": "Undo buying 9: 31 - 9 = 22. Undo giving away 14: 22 + 14 = 36. Check: 36 - 14 = 22, 22 + 9 = 31."
+  },
+  {
+   "id": "L2U05-C03",
+   "tier": "quiz",
+   "text": "Kumar doubles his number, then adds 9. He gets 25. His number: {b}",
+   "answer": {
+    "value": [
+     "8"
+    ],
+    "text": "8"
+   },
+   "explanation": "25 - 9 = 16, then 16 ÷ 2 = 8. Check: 8 × 2 = 16, 16 + 9 = 25."
+  },
+  {
+   "id": "L2U05-C04",
+   "tier": "quiz",
+   "text": "5 equal bags. Bag 5 has 4 left after losing 6. Pens in all: {b}",
+   "answer": {
+    "value": [
+     "50"
+    ],
+    "text": "50"
+   },
+   "explanation": "Bag 5 had 4 + 6 = 10 pens before. Every bag had 10, so 5 × 10 = 50 pens."
+  }
+ ],
+ "snug": [
+  "start1",
+  "start2",
+  "start3"
+ ]
+}

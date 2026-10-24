@@ -1,0 +1,137 @@
+<style>
+.sm{max-width:1240px;margin-inline:auto;font-family:var(--font-anthropic-sans);color:var(--color-fg)}
+.sm h1{font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title);margin:0 0 .35rem;text-wrap:balance}
+.sm .take{margin:0 0 var(--cds-gap-md);color:var(--color-fg-muted);font-size:var(--cds-font-size-body);max-width:68ch;line-height:1.5}
+.sm .take b{font-weight:600;color:var(--color-fg);font-variant-numeric:tabular-nums}
+.sm .ctl{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 var(--cds-gap-sm)}
+.sm .ctl button{font:inherit;font-size:var(--cds-font-size-caption);padding:.35rem .7rem;border-radius:999px;border:1px solid var(--color-border-line);background:transparent;color:var(--color-fg);cursor:pointer}
+.sm .ctl button[aria-pressed=true]{background:var(--color-fg);color:var(--color-bg);border-color:var(--color-fg)}
+.sm .legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;margin:0 0 var(--cds-gap-md);font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.sm .legend span{display:inline-flex;align-items:center;gap:.4rem}
+.sm .card{background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-lg)}
+.sm .scroll{overflow-x:auto;padding-bottom:.4rem;min-height:26rem}
+.sm .grid{display:grid;grid-template-columns:10.5rem repeat(var(--n),var(--cw));gap:2px;align-items:center;width:max-content}
+.sm .lvh{grid-column:span 10;font-size:var(--cds-font-size-caption);font-weight:500;padding:.15rem .25rem .25rem;border-bottom:2px solid var(--color-fg)}
+.sm .lvh small{display:block;font-weight:400;color:var(--color-fg-muted);font-variant-numeric:tabular-nums}
+.sm .num{font-size:.62rem;text-align:center;color:var(--color-fg-muted);font-variant-numeric:tabular-nums}
+.sm .reg{grid-column:1/-1;margin-top:.7rem;font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--color-fg-muted)}
+.sm .jur{font-size:var(--cds-font-size-caption);white-space:nowrap;padding-right:.5rem}
+.sm .cell{height:1.5rem;border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:.62rem;font-weight:700;color:var(--color-bg);position:relative;outline-offset:1px;cursor:default}
+.sm .cell:focus-visible{outline:2px solid var(--color-fg)}
+.sm .cell[data-s=SAME]{background:var(--c-same);color:var(--color-fg);font-weight:400}
+.sm .cell[data-s=EARLIER]{background:var(--c-earlier)}
+.sm .cell[data-s=LATER]{background:var(--c-later)}
+.sm .cell[data-s=NOT]{background:repeating-linear-gradient(135deg,var(--color-border-line) 0 2px,transparent 2px 5px);color:var(--color-fg-muted)}
+.sm .cell[data-s=MIXED]{background:transparent;border:1px dashed var(--color-border-line);color:var(--color-fg-muted)}
+.sm .cell.u::after{content:"";position:absolute;top:2px;right:2px;width:4px;height:4px;border-radius:50%;background:var(--color-fg);opacity:.75}
+.sm .sw{width:1rem;height:1rem;border-radius:3px;display:inline-block}
+.sm .notes{margin:var(--cds-gap-md) 0 0;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);line-height:1.5;max-width:80ch}
+.sm .notes p{margin:.3rem 0}
+.sm-tip{position:absolute;z-index:5;max-width:22rem;background:var(--cds-surface-popover);border:1px solid var(--cds-border);border-radius:var(--cds-radius);box-shadow:var(--cds-shadow-popover);padding:var(--cds-pad-xs) var(--cds-pad-sm);font-size:var(--cds-font-size-caption);pointer-events:none;line-height:1.4}
+.sm-tip .t1{font-weight:500}.sm-tip .t2{color:var(--cds-text-secondary)}
+@media (max-width:640px){.sm .jur{font-size:.7rem}}
+</style>
+<div class="sm" id="sm">
+  <h1>Syllabus map by level</h1>
+  <p class="take" id="take">Compares each of the 60 Math Inquirers lessons with the primary curriculum of 13 places, including Singapore (MOE 2021 syllabus; independent enrichment, not affiliated with or endorsed by MOE or the GEP).</p>
+  <div class="ctl" id="ctl" role="group" aria-label="Show level"></div>
+  <div class="legend" id="legend"></div>
+  <div class="card"><div class="scroll" id="scroll"><div id="grid" data-source="intl"></div></div></div>
+  <div class="notes">
+    <p>Each cell compares the lesson's topic with the grade where that place first teaches it, measured against the year the program level is named after. Level N is compared with year N.</p>
+    <p>Bands differ: China and Korea set content by two-year bands, and the Ontario, US, Australia and India mapping used three-year bands, so “same year band” is more generous there than for Hong Kong or England. A dot in a cell corner means the placement was inferred or could not be confirmed in a document the mapper opened.</p>
+    <p>This is a desk comparison, not a claim of alignment with, or endorsement by, any ministry or curriculum. Challenge Day and Showcase lessons are mixed reviews and are not mapped.</p>
+  </div>
+  <div class="take" style="margin-top:.8rem">Cells counted: <b data-source="tally" data-where="status=SAME" data-field="n">—</b> same band, <b data-source="tally" data-where="status=EARLIER" data-field="n">—</b> taught earlier locally, <b data-source="tally" data-where="status=LATER" data-field="n">—</b> taught later locally (the program is ahead), <b data-source="tally" data-where="status=NOT" data-field="n">—</b> with no matching topic.</div>
+</div>
+<div class="sm-tip" id="tip" hidden></div>
+<script>
+(function(){
+  var root=document.getElementById('sm'),tip=document.getElementById('tip');
+  var JUR=[['Singapore',['Singapore (MOE)']],['East Asia',['Hong Kong','Mainland China','Japan','South Korea']],['Europe',['England','Finland','Estonia','Netherlands']],['Americas, Oceania, India',['Ontario (Toronto)','USA (Massachusetts)','Australia (Victoria)','India (NCERT)']]];
+  var STAT={SAME:['=','Same year band'],EARLIER:['←','Taught earlier locally'],LATER:['→','Taught later locally (the program is ahead)'],NOT:['∅','No matching topic found'],MIXED:['◇','Mixed review, not mapped']};
+  root.style.setProperty('--c-earlier',dash.colors[0]);
+  root.style.setProperty('--c-later',dash.colors[1]);
+  root.style.setProperty('--c-same','color-mix(in srgb, '+dash.colors[2]+' 32%, var(--color-panel))');
+  var view='all';
+  dash.calc('tally',{title:'Cells by status',description:'Counts mapped cells by status, mixed reviews excluded.',inputs:['intl'],fn:function(intl){
+    var m={};intl.forEach(function(r){if(r.status!=='MIXED')m[r.status]=(m[r.status]||0)+1});
+    return ['SAME','EARLIER','LATER','NOT'].map(function(s){return {status:s,n:m[s]||0}});
+  }});
+  dash.calc('bylevel',{title:'Ahead of local curriculum by level',description:'Per level: mapped cells and cells taught later locally.',inputs:['intl'],fn:function(intl){
+    var o={};intl.forEach(function(r){if(r.status==='MIXED')return;var k=r.level;o[k]=o[k]||{level:k,cells:0,later:0};o[k].cells++;if(r.status==='LATER')o[k].later++});
+    return Object.keys(o).map(function(k){return o[k]});
+  }});
+  function legend(){
+    var h='';['SAME','EARLIER','LATER','NOT','MIXED'].forEach(function(s){
+      h+='<span><i class="sw cell" data-s="'+s+'" style="display:inline-flex;width:1.1rem;height:1.1rem;font-size:.6rem">'+STAT[s][0]+'</i>'+STAT[s][1]+'</span>';});
+    h+='<span><i class="sw cell u" data-s="SAME" style="width:1.1rem;height:1.1rem"></i>Placement inferred or unconfirmed</span>';
+    document.getElementById('legend').innerHTML=h;
+  }
+  function controls(){
+    var c=document.getElementById('ctl');c.innerHTML='';
+    [['all','All levels'],[1,'Level 1'],[2,'Level 2'],[3,'Level 3'],[4,'Level 4'],[5,'Level 5'],[6,'Level 6']].forEach(function(p){
+      var b=document.createElement('button');b.type='button';b.textContent=p[1];b.setAttribute('aria-pressed',String(view===p[0]));
+      b.addEventListener('click',function(){view=p[0];draw()});c.appendChild(b)});
+  }
+  function showTip(ev,r){
+    tip.hidden=false;tip.textContent='';
+    var a=document.createElement('div');a.className='t1';a.textContent=r.jurisdiction+' · Lesson '+r.lesson+' '+r.lesson_title;
+    var b=document.createElement('div');b.className='t2';b.textContent=STAT[r.status][1]+(r.unverified?' (unconfirmed)':'');
+    var c=document.createElement('div');c.className='t2';c.textContent=r.note;
+    tip.appendChild(a);tip.appendChild(b);tip.appendChild(c);
+    var host=root.getBoundingClientRect(),el=ev.currentTarget.getBoundingClientRect();
+    var x=el.left-host.left+el.width/2-tip.offsetWidth/2,y=el.bottom-host.top+6;
+    x=Math.max(0,Math.min(x,host.width-tip.offsetWidth));
+    tip.style.left=x+'px';tip.style.top=y+'px';
+  }
+  var draw=function(){};
+  dash.onData(function(){
+    var d=dash.data('intl'),g=document.getElementById('grid');
+    if(d.status!=='ok'){g.textContent='';g.className=d.status==='error'?'':'dash-skeleton';return}
+    var rows=d.data;g.className='';
+    var bl=dash.data('bylevel'),later={};
+    (bl.data||[]).forEach(function(r){later[r.level]=r});
+    var tl=dash.data('tally').data||[],T={};tl.forEach(function(r){T[r.status]=r.n});
+    document.querySelectorAll('[data-source="tally"][data-field="n"]').forEach(function(el){var w=/status=(\w+)/.exec(el.getAttribute('data-where'));if(w)el.textContent=d3.format(',')(T[w[1]]||0)});
+    var tot=(T.SAME||0)+(T.EARLIER||0)+(T.LATER||0)+(T.NOT||0);
+    var take=document.getElementById('take');
+    take.textContent='Most lessons match the year each place teaches the topic. The program runs ahead of local curricula mainly in fractions, area and perimeter, protractors, percent and speed, and most of Level 6. '+d3.format(',')(tot)+' lesson-by-place cells are mapped; hover or tab to a cell for the source note.';
+    var by={};rows.forEach(function(r){by[r.jurisdiction+'|'+r.lesson]=r});
+    var levels=view==='all'?[1,2,3,4,5,6]:[view];
+    draw=function(){
+      var cw=view==='all'?'1.05rem':'2.9rem';
+      g.className='grid';g.style.setProperty('--n',levels.length*10);g.style.setProperty('--cw',cw);
+      g.textContent='';
+      function add(cls,txt,span){var e=document.createElement('div');e.className=cls;if(txt!=null)e.textContent=txt;g.appendChild(e);return e}
+      levels=view==='all'?[1,2,3,4,5,6]:[view];
+      g.style.setProperty('--n',levels.length*10);g.style.setProperty('--cw',view==='all'?'1.05rem':'2.9rem');
+      add('jur','');
+      levels.forEach(function(L){var e=add('lvh','Level '+L);var s=document.createElement('small');s.appendChild(document.createTextNode('ahead of local: '));
+        var a=document.createElement('span');a.setAttribute('data-source','bylevel');a.setAttribute('data-where','level='+L);a.setAttribute('data-field','later');a.textContent=later[L]?later[L].later:'—';
+        var sl=document.createTextNode(' of ');var b=document.createElement('span');b.setAttribute('data-source','bylevel');b.setAttribute('data-where','level='+L);b.setAttribute('data-field','cells');b.textContent=later[L]?later[L].cells:'—';
+        s.appendChild(a);s.appendChild(sl);s.appendChild(b);e.appendChild(s)});
+      add('jur','');
+      levels.forEach(function(L){for(var n=1;n<=10;n++)add('num',String(n))});
+      JUR.forEach(function(gr){
+        add('reg',gr[0]);
+        gr[1].forEach(function(j){
+          add('jur',j);
+          levels.forEach(function(L){for(var n=1;n<=10;n++){
+            var r=by[j+'|'+L+'.'+n],e=document.createElement('div');
+            if(!r){e.className='cell';g.appendChild(e);continue}
+            e.className='cell'+(r.unverified?' u':'');e.setAttribute('data-s',r.status);e.tabIndex=0;e.setAttribute('role','img');
+            e.setAttribute('aria-label',j+', lesson '+r.lesson+', '+r.lesson_title+': '+STAT[r.status][1]+(r.unverified?', unconfirmed':''));
+            e.textContent=STAT[r.status][0];
+            e.addEventListener('mouseenter',function(ev){showTip(ev,r)});e.addEventListener('focus',function(ev){showTip(ev,r)});
+            e.addEventListener('mouseleave',function(){tip.hidden=true});e.addEventListener('blur',function(){tip.hidden=true});
+            g.appendChild(e)}});
+        });
+      });
+      controls();
+    };
+    draw();
+  });
+  legend();controls();
+})();
+</script>

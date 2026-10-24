@@ -63,7 +63,7 @@ module.exports = {
     explore: 'Pairs use the digit cards 1 to 9, each once, to make a sum: 3-digit number + 3-digit number = 3-digit number. They find as many as they can and look for what is always true.',
     mini: 'Missing digits: start at the ones column, write the carry, then move left. Subtraction: turn it into an addition to check. Digit-card puzzles: guess, check, then improve the guess.',
     share: 'Why do we always start a missing-digit puzzle at the ones column?',
-    exit: { q: 'Find the missing digit A:  5A3 + 126 = 689', a: '563 + 126 = 689. A = 6 (ones 3 + 6 = 9; tens A + 2 = 8, so A = 6).' },
+    exit: { q: 'Find the missing digit in the box:  5□3 + 126 = 689', a: '563 + 126 = 689. The digit is 6 (ones 3 + 6 = 9; tens: box + 2 = 8, so the box is 6).' },
     mistakes: [
       'Forgetting the carried 1 when working out the missing digit in the next column.',
       'In subtraction, looking for a digit that can be taken from 3 to leave 8 (there is none) instead of regrouping: 13 − 5 = 8.',
@@ -87,7 +87,7 @@ module.exports = {
     exploreHints: [
       'Stuck: “Put small digits in the hundreds of the two numbers you add. Try 1 and 2 in the hundreds.” (This is also printed on the explore slide.)',
       'Close but a digit repeats: “Swap two cards in the ones column and add again.”',
-      'Ready for more: the Go further what-if on the slide (smallest and biggest answer). Or: “Add up the digits of your answer. Does a friend’s answer give the same total?”'
+      'Ready for more: the Go further card on the slide (find more sums; what is always true? the smallest and biggest answer). Or: “Add up the digits of your answer. Does a friend’s answer give the same total?”'
     ],
     think: [
       '“4A68 + 17B5 = C043. I start at the ones: 8 + 5 = 13. I write 3 and carry 1.”',
@@ -104,9 +104,10 @@ module.exports = {
 
   deck: {
     today: 'Crack missing digits one column at a time, check subtraction by adding, and solve magic squares and letter puzzles.',
-    warmGame: 'Make 1000. The tutor shows a number; children write the number that makes 1000 with it: 350, 720, 105, 999, 460, 75.',
-    warmQs: [['3456 + 1000 = ?', '4456'], ['5000 − 1 = ?', '4999'], ['2700 + 300 = ?', '3000'], ['8000 − 2500 = ?', '5500'], ['4999 + 2 = ?', '5001']],
-    expSetup: ['Take the digit cards 1 to 9.', 'Make two 3-digit numbers that add up to a 3-digit number, using every card once.', 'Check the sum by adding.', 'Find more. What is always true?'],
+    warmGame: 'Make 1000. The tutor shows a number; children write the number that makes 1000 with it: 350, 720, 105 (round 1), then 999, 460, 75 (round 2).',
+    warmQs: [['3456 + 1000 = ?', '4456'], ['5000 − 1 = ?', '4999'], ['2700 + 300 = ?', '3000']],
+    takeHome: [['8000 − 2500 = ?', '5500'], ['4999 + 2 = ?', '5001']],
+    expSetup: ['Take the digit cards 1 to 9.', 'Make two 3-digit numbers that add up to a 3-digit number, using every card once.', 'Check the sum by adding.'],
     expPic: 'nine digit cards 1 to 9 above an empty column sum: three boxes plus three boxes equals three boxes.',
     expAsk: [
       ['How many sums did you find?', 'There are many: 168 if 173 + 286 and 286 + 173 count once. For example 173 + 286 = 459 and 218 + 349 = 567.'],
@@ -127,17 +128,17 @@ module.exports = {
     core: [
       { q: 'A library has 3999 storybooks and 2456 comic books. How many books are there altogether? Write the numbers in a Th H T O grid and add the ones first.', a: '6455 (3999 + 2456; or add 4000 to get 6456, then take away 1)' },
       { q: 'A shop has 7000 stickers and sells 2468 of them. How many are left? Hint: draw a number line from 2468 to 7000 and jump to 2500, then to 3000, then to 7000. Add up the jumps.', a: '4532 (jumps of 32 + 500 + 4000 = 4532; or 7000 − 2468)' },
-      { q: 'Find the missing digit. Add in columns, starting with the ones, or try the digits one at a time.   4A27 + 1365 = 5992', a: 'A = 6 (4627 + 1365 = 5992)' },
-      { q: 'Find the missing digit. Try 5, 6 and 7 and check each one by taking away.   8A50 − 3420 = 5230', a: 'A = 6 (8650 − 3420 = 5230)' },
+      { q: 'Find the missing digit. Add in columns, starting with the ones, or try the digits one at a time.   4□27 + 1365 = 5992', a: 'The digit is 6 (4627 + 1365 = 5992)' },
+      { q: 'Find the missing digit. Try 5, 6 and 7 and check each one by taking away.   8□50 − 3420 = 5230', a: 'The digit is 6 (8650 − 3420 = 5230)' },
       { q: 'A magic square has 3 rows. Every row adds up to the same total, 2400. One row shows 900, 600 and a gap. What number goes in the gap?', a: '900 (900 + 600 = 1500, and 2400 − 1500 = 900)' },
       { q: 'A shop had 5000 stickers. It sold 1275 on Monday and 1480 on Tuesday. Draw a bar for the 5000 stickers and cut it into the two sold parts and the part left. How many stickers are left?', a: '2245 (1275 + 1480 = 2755; 5000 − 2755 = 2245)' }
     ],
     stretch: [
-      { q: 'Find the missing digits (turn it round and add):  7A03 − B46C = 2538', a: 'A = 0, B = 4, C = 5:  7003 − 4465 = 2538 (check: 2538 + 4465 = 7003)' },
-      { q: 'Find the missing digits:  2A7B + C6D9 = 6000', a: 'A = 3, B = 1, C = 3, D = 2:  2371 + 3629 = 6000 (the only way)' },
-      { q: 'In a number pyramid, each brick is the sum of the two bricks under it. The bottom row is 1200, A, B. The middle row is 2650, C. The top brick is 6000. Find the missing bricks A, B and C.', a: 'Bottom row 1200, 1450, 1900. Middle row 2650, 3350.' },
+      { q: 'Find the missing digits (each letter is one digit; turn it round and add):  7A03 − B46C = 2538', a: 'A = 0, B = 4, C = 5:  7003 − 4465 = 2538 (check: 2538 + 4465 = 7003)' },
+      { q: 'Find the missing digits (each letter is one digit):  2A7B + C6D9 = 6000', a: 'A = 3, B = 1, C = 3, D = 2:  2371 + 3629 = 6000 (the only way)' },
+      { q: 'In a number pyramid, each brick is the sum of the two bricks under it. The bottom row is 1200 and two empty bricks. The middle row is 2650 and one empty brick. The top brick is 6000. Find the three empty bricks.', a: 'Bottom row 1200, 1450, 1900. Middle row 2650, 3350.' },
       { q: 'Ali meant to add 1099 to a number, but he added 1999 by mistake and got 6543. What is the correct answer?', a: '5643 (he added 900 too much: 6543 − 900)' },
-      { q: 'What is the smallest 4-digit number whose digits add up to 30? What is the greatest?', a: 'Smallest 3999, greatest 9993.' },
+      { q: 'A zoo had 6000 visitors in three days. On Monday there were 1874 visitors. On Tuesday there were 650 more than on Monday. How many visitors came on Wednesday? Check your answer by adding all three days.', a: '1602 (Tuesday: 1874 + 650 = 2524; Monday + Tuesday = 4398; 6000 − 4398 = 1602. Check: 4398 + 1602 = 6000)' },
       { q: 'AB + B = BA. Different letters are different digits. Find A and B.', a: 'A = 8, B = 9:  89 + 9 = 98' },
       { q: 'Siti worked out 9999 − 3746 = 6253 by taking each digit away from 9. Use her answer to work out 10 000 − 3746 and 10 003 − 3746 without a new column subtraction. How do you know?', a: '6254 and 6257. 10 000 is 1 more than 9999, so the answer is 1 more than 6253. 10 003 is 4 more than 9999, so the answer is 4 more than 6253. (Check: 6254 + 3746 = 10 000.)' },
       { q: 'AA + BB = CBC. Different letters are different digits. Find them.', a: 'A = 9, B = 2, C = 1:  99 + 22 = 121' },
@@ -166,7 +167,7 @@ module.exports = {
     H.fig(cardsSvg(['1', '2', '3', '4', '5', '6'])),
     H.sub('a', 'Make the sum as GREAT as possible.          ________  +  ________  =  ________'),
     H.sub('b', 'Make the sum as SMALL as possible.          ________  +  ________  =  ________'),
-    H.sub('c', 'Make the DIFFERENCE as small as possible. Guess, check, then improve. Write your tries.'),
+    H.sub('c', '★ Take-home (not for the lesson). Make the DIFFERENCE as small as possible. Guess, check, then improve. Write your tries.'),
     ...H.lines(2),
     H.ans('Best:'),
 
@@ -184,7 +185,7 @@ module.exports = {
     H.sub('c', 'Use your pattern:   10 000 − 4127  =  ________'),
     H.q(6, '(if time) Letter puzzle:  AB + AB + AB = CAB.  Each letter stands for a digit. Different letters are different digits.', { before: 80, keepNext: true }),
     H.sub('a', 'A = ______   B = ______   C = ______'),
-    H.sub('b', 'The ones column: B + B + B ends in B. Which digits can B be? Try 0 and 5, then check the tens column. How do you know?'),
+    H.sub('b', 'Same letter, same digit: a code puzzle. Try AB = 40: 40 + 40 + 40 = 120, which does not end in 40. Try 10, 20, 30 … until the answer ends in the number you started with.'),
     ...H.lines(1)
   ]
 };

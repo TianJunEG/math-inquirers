@@ -1,0 +1,1331 @@
+{
+ "schema_version": 1,
+ "level": 4,
+ "unit": 7,
+ "id": "L4U07",
+ "title": "Area Architects II",
+ "topic": "Area and perimeter",
+ "holiday_lesson": 7,
+ "goal": "I can find the area and the perimeter of shapes with square corners. I can compare rectangles with the same area.",
+ "learn": {
+  "intro": "Area is the space inside a shape, in cm². Perimeter is the distance round the edge, in cm. For a shape with square corners, take a piece away from a big rectangle, or split it into rectangles.",
+  "example": {
+   "problem": "The shape has square corners. Find its area and its perimeter.",
+   "figure": {
+    "type": "l4_poly",
+    "shapes": [
+     {
+      "pts": [
+       [
+        0,
+        0
+       ],
+       [
+        10,
+        0
+       ],
+       [
+        10,
+        4
+       ],
+       [
+        6,
+        4
+       ],
+       [
+        6,
+        6
+       ],
+       [
+        0,
+        6
+       ]
+      ],
+      "labels": [
+       {
+        "seg": 0,
+        "text": "10 cm"
+       },
+       {
+        "seg": 5,
+        "text": "6 cm"
+       },
+       {
+        "seg": 2,
+        "text": "4 cm"
+       },
+       {
+        "seg": 3,
+        "text": "2 cm",
+        "in": true
+       }
+      ]
+     }
+    ],
+    "cell": 22,
+    "width_mm": 70
+   },
+   "steps": [
+    "Big rectangle: 10 × 6 = 60. The missing corner is 4 × 2 = 8. Area = 60 − 8 = 52.",
+    "Push the steps out to make a rectangle. The perimeter is 10 + 6 + 10 + 6 = 32."
+   ],
+   "answer": "Area 52 cm². Perimeter 32 cm."
+  },
+  "example2": {
+   "problem": "Rectangles with whole-cm sides have an area of 18 cm². Find the perimeter of each one.",
+   "figure": {
+    "type": "l4_table",
+    "head": [
+     "Length",
+     "Width",
+     "Perimeter"
+    ],
+    "rows": [
+     [
+      "18",
+      "1",
+      "38"
+     ],
+     [
+      "9",
+      "2",
+      "22"
+     ],
+     [
+      "6",
+      "3",
+      "18"
+     ]
+    ],
+    "cell_h": 44,
+    "font": 26,
+    "width_mm": 70
+   },
+   "steps": [
+    "List the pairs that multiply to 18 in order: 1 × 18, 2 × 9, 3 × 6.",
+    "Perimeter = 2 × (length + width)."
+   ],
+   "answer": "The smallest perimeter is 18 cm, from 6 cm by 3 cm."
+  },
+  "pair": true,
+  "tight": true,
+  "howto": {
+   "title": "How to do it",
+   "steps": [
+    "Missing sides: use the opposite sides.",
+    "Area: split into rectangles, or take a piece away.",
+    "Perimeter: push the steps out to a rectangle."
+   ]
+  },
+  "facts": {
+   "title": "Good to know",
+   "lines": [
+    "Rectangle: area = length × width.",
+    "Perimeter = 2 × (length + width).",
+    "A square has 4 equal sides."
+   ]
+  },
+  "try": {
+   "id": "L4U07-L01",
+   "text": "A rectangle is 12 cm long and 5 cm wide. A 3 cm by 2 cm corner is cut off. What is the area of the shape that is left? {b} cm²",
+   "answer": {
+    "value": [
+     "54"
+    ],
+    "text": "54"
+   },
+   "explanation": "The rectangle has an area of 12 × 5 = 60 cm². The corner has an area of 3 × 2 = 6 cm². 60 − 6 = 54 cm²."
+  }
+ },
+ "items": [
+  {
+   "id": "L4U07-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "The shape has square corners. Find the missing sides a and b. Then find the area and the perimeter.",
+   "figure": {
+    "type": "l4_poly",
+    "shapes": [
+     {
+      "pts": [
+       [
+        0,
+        0
+       ],
+       [
+        11,
+        0
+       ],
+       [
+        11,
+        3
+       ],
+       [
+        7,
+        3
+       ],
+       [
+        7,
+        8
+       ],
+       [
+        0,
+        8
+       ]
+      ],
+      "labels": [
+       {
+        "seg": 0,
+        "text": "11 cm"
+       },
+       {
+        "seg": 1,
+        "text": "3 cm"
+       },
+       {
+        "seg": 2,
+        "text": "a"
+       },
+       {
+        "seg": 3,
+        "text": "b",
+        "in": true
+       },
+       {
+        "seg": 4,
+        "text": "7 cm"
+       },
+       {
+        "seg": 5,
+        "text": "8 cm"
+       }
+      ]
+     }
+    ],
+    "cell": 24,
+    "width_mm": 84
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "a = {b} cm   b = {b} cm",
+     "answer": {
+      "value": [
+       "4",
+       "5"
+      ],
+      "text": "a = 4 cm, b = 5 cm"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Area: {b} cm²",
+     "answer": {
+      "value": [
+       "68"
+      ],
+      "text": "68"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Perimeter: {b} cm",
+     "answer": {
+      "value": [
+       "38"
+      ],
+      "text": "38"
+     }
+    }
+   ],
+   "explanation": "(a) a = 11 − 7 = 4 cm and b = 8 − 3 = 5 cm. (b) Split: 11 × 3 + 7 × 5 = 68 cm². Or 11 × 8 − 4 × 5 = 68 cm². (c) Push the steps out: 2 × (11 + 8) = 38 cm.",
+   "figside": true
+  },
+  {
+   "id": "L4U07-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "A 12 cm by 9 cm rectangle has a corner cut off. The corner is shown with a dashed line.",
+   "figure": {
+    "type": "l4_poly",
+    "shapes": [
+     {
+      "pts": [
+       [
+        0,
+        0
+       ],
+       [
+        7,
+        0
+       ],
+       [
+        7,
+        4
+       ],
+       [
+        12,
+        4
+       ],
+       [
+        12,
+        9
+       ],
+       [
+        0,
+        9
+       ]
+      ],
+      "labels": [
+       {
+        "seg": 4,
+        "text": "12 cm"
+       },
+       {
+        "seg": 5,
+        "text": "9 cm"
+       },
+       {
+        "seg": 1,
+        "text": "4 cm",
+        "in": true
+       },
+       {
+        "seg": 2,
+        "text": "5 cm"
+       }
+      ],
+      "dashed": [
+       [
+        [
+         7,
+         0
+        ],
+        [
+         12,
+         0
+        ]
+       ],
+       [
+        [
+         12,
+         0
+        ],
+        [
+         12,
+         4
+        ]
+       ]
+      ]
+     }
+    ],
+    "cell": 24,
+    "width_mm": 84
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Area of the whole rectangle: {b} cm²",
+     "answer": {
+      "value": [
+       "108"
+      ],
+      "text": "108"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Area of the corner cut off: {b} cm²",
+     "answer": {
+      "value": [
+       "20"
+      ],
+      "text": "20"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Area of the shape left: {b} cm²",
+     "answer": {
+      "value": [
+       "88"
+      ],
+      "text": "88"
+     }
+    }
+   ],
+   "explanation": "(a) 12 × 9 = 108 cm². (b) The corner is 5 cm by 4 cm: 5 × 4 = 20 cm². (c) 108 − 20 = 88 cm².",
+   "figside": true
+  },
+  {
+   "id": "L4U07-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "Every rectangle here has whole-cm sides and covers 28 cm². Fill in the table. The length is the greater side.",
+   "figure": {
+    "type": "l4_table",
+    "head": [
+     "Length",
+     "Width",
+     "Perimeter"
+    ],
+    "rows": [
+     [
+      "28",
+      "",
+      ""
+     ],
+     [
+      "14",
+      "",
+      ""
+     ],
+     [
+      "7",
+      "",
+      ""
+     ]
+    ],
+    "cell_h": 54,
+    "font": 28,
+    "width_mm": 100,
+    "first_col_head": true
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Fill in the table.",
+     "answer": {
+      "value": [
+       "1",
+       "58",
+       "2",
+       "32",
+       "4",
+       "22"
+      ],
+      "text": "1 and 58, 2 and 32, 4 and 22"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The least perimeter is {b} cm",
+     "answer": {
+      "value": [
+       "22"
+      ],
+      "text": "22"
+     }
+    }
+   ],
+   "explanation": "28 ÷ 28 = 1, 28 ÷ 14 = 2 and 28 ÷ 7 = 4. The perimeters are 2 × (28 + 1) = 58, 2 × (14 + 2) = 32 and 2 × (7 + 4) = 22. The least is 22 cm, from the shape that is nearest to a square.",
+   "figside": true
+  },
+  {
+   "id": "L4U07-S04",
+   "tier": "start",
+   "page": 2,
+   "text": "Each shape is made of 5 square tiles that are each 1 cm by 1 cm. The tiles touch along whole sides.",
+   "figure": {
+    "type": "l4_tiles",
+    "shapes": [
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        1,
+        0
+       ],
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        0,
+        2
+       ]
+      ],
+      "name": "A"
+     },
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        1,
+        0
+       ],
+       [
+        2,
+        0
+       ],
+       [
+        3,
+        0
+       ],
+       [
+        4,
+        0
+       ]
+      ],
+      "name": "B"
+     },
+     {
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        1,
+        2
+       ]
+      ],
+      "name": "C"
+     }
+    ],
+    "cell": 42,
+    "width_mm": 100
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "The area of each shape: {b} cm²",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The perimeters of A, B and C: {b} cm, {b} cm, {b} cm",
+     "answer": {
+      "value": [
+       "10",
+       "12",
+       "12"
+      ],
+      "text": "10, 12, 12"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The shape with the least perimeter is {circ:A|B|C}",
+     "answer": {
+      "value": [
+       "A"
+      ],
+      "text": "A"
+     }
+    }
+   ],
+   "explanation": "Each shape has 5 tiles, so the area is 5 cm². Count the edges. A: 10 cm. B: 5 + 5 + 1 + 1 = 12 cm. C: 12 cm. A is the most compact, so it has the least perimeter."
+  },
+  {
+   "id": "L4U07-S05",
+   "tier": "start",
+   "page": 2,
+   "text": "The staircase has 4 equal steps. Each step is 3 cm across and 2 cm high.",
+   "figure": {
+    "type": "l4_poly",
+    "shapes": [
+     {
+      "pts": [
+       [
+        0,
+        8
+       ],
+       [
+        12,
+        8
+       ],
+       [
+        12,
+        6
+       ],
+       [
+        9,
+        6
+       ],
+       [
+        9,
+        4
+       ],
+       [
+        6,
+        4
+       ],
+       [
+        6,
+        2
+       ],
+       [
+        3,
+        2
+       ],
+       [
+        3,
+        0
+       ],
+       [
+        0,
+        0
+       ]
+      ],
+      "labels": [
+       {
+        "seg": 0,
+        "text": "12 cm"
+       },
+       {
+        "seg": 9,
+        "text": "8 cm"
+       },
+       {
+        "seg": 1,
+        "text": "2 cm"
+       },
+       {
+        "seg": 2,
+        "text": "3 cm"
+       }
+      ]
+     }
+    ],
+    "cell": 22,
+    "width_mm": 78
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Perimeter: {b} cm",
+     "answer": {
+      "value": [
+       "40"
+      ],
+      "text": "40"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Area: {b} cm²",
+     "answer": {
+      "value": [
+       "60"
+      ],
+      "text": "60"
+     }
+    }
+   ],
+   "explanation": "(a) Push the steps out to a 12 cm by 8 cm rectangle: 2 × (12 + 8) = 40 cm. (b) The rows are 12, 9, 6 and 3 cm long and 2 cm high: 2 × 30 = 60 cm².",
+   "figside": true
+  },
+  {
+   "id": "L4U07-S06",
+   "tier": "start",
+   "page": 2,
+   "text": "A lawn is 16 m long and 10 m wide. A square pond with sides of 4 m sits in the lawn.",
+   "figure": {
+    "type": "l4_poly",
+    "shapes": [
+     {
+      "pts": [
+       [
+        0,
+        0
+       ],
+       [
+        16,
+        0
+       ],
+       [
+        16,
+        10
+       ],
+       [
+        0,
+        10
+       ]
+      ],
+      "hole": [
+       [
+        6,
+        3
+       ],
+       [
+        10,
+        3
+       ],
+       [
+        10,
+        7
+       ],
+       [
+        6,
+        7
+       ]
+      ],
+      "fill": "hatch",
+      "hole_labels": [
+       {
+        "seg": 0,
+        "text": "4 m"
+       }
+      ]
+     }
+    ],
+    "cell": 16,
+    "width_mm": 70
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Area of lawn, not pond: {b} m²",
+     "answer": {
+      "value": [
+       "144"
+      ],
+      "text": "144"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Both edges together: {b} m",
+     "answer": {
+      "value": [
+       "68"
+      ],
+      "text": "68"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:",
+     ""
+    ]
+   },
+   "explanation": "(a) The lawn is 16 × 10 = 160 m². The pond is 4 × 4 = 16 m². 160 − 16 = 144 m². (b) The lawn edge is 2 × (16 + 10) = 52 m. The pond edge is 4 × 4 = 16 m. 52 + 16 = 68 m.",
+   "figside": true
+  },
+  {
+   "id": "L4U07-S07",
+   "tier": "start",
+   "page": 3,
+   "text": "Cut a 10 cm by 3 cm strip on the dashed line. Join the 2 pieces to make a 5 cm by 6 cm rectangle.",
+   "figure": {
+    "type": "l4_poly",
+    "shapes": [
+     {
+      "pts": [
+       [
+        0,
+        0
+       ],
+       [
+        10,
+        0
+       ],
+       [
+        10,
+        3
+       ],
+       [
+        0,
+        3
+       ]
+      ],
+      "labels": [
+       {
+        "seg": 0,
+        "text": "10 cm"
+       },
+       {
+        "seg": 1,
+        "text": "3 cm"
+       }
+      ],
+      "dashed": [
+       [
+        [
+         5,
+         0
+        ],
+        [
+         5,
+         3
+        ]
+       ]
+      ]
+     },
+     {
+      "pts": [
+       [
+        0,
+        0
+       ],
+       [
+        5,
+        0
+       ],
+       [
+        5,
+        6
+       ],
+       [
+        0,
+        6
+       ]
+      ],
+      "labels": [
+       {
+        "seg": 0,
+        "text": "5 cm"
+       },
+       {
+        "seg": 1,
+        "text": "6 cm"
+       }
+      ],
+      "dashed": [
+       [
+        [
+         0,
+         3
+        ],
+        [
+         5,
+         3
+        ]
+       ]
+      ],
+      "ox": 14.5
+     }
+    ],
+    "cell": 20,
+    "width_mm": 135
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "The area of the strip is {b} cm² and the area of the rectangle is {b} cm².",
+     "answer": {
+      "value": [
+       "30",
+       "30"
+      ],
+      "text": "30, 30"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The perimeter of the strip is {b} cm and of the rectangle is {b} cm.",
+     "answer": {
+      "value": [
+       "26",
+       "22"
+      ],
+      "text": "26, 22"
+     }
+    }
+   ],
+   "explanation": "(a) 10 × 3 = 30 cm² and 5 × 6 = 30 cm². Moving pieces does not change the area. (b) Strip: 2 × (10 + 3) = 26 cm. Rectangle: 2 × (5 + 6) = 22 cm. The perimeter changed."
+  },
+  {
+   "id": "L4U07-S08",
+   "tier": "start",
+   "page": 3,
+   "text": "A rectangle has an area of 72 cm². Its length is 9 cm.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Its width is {b} cm",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Its perimeter is {b} cm",
+     "answer": {
+      "value": [
+       "34"
+      ],
+      "text": "34"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "(a) 72 ÷ 9 = 8 cm. (b) 2 × (9 + 8) = 34 cm."
+  },
+  {
+   "id": "L4U07-S09",
+   "tier": "start",
+   "page": 3,
+   "text": "A hall floor is 12 m long and 8 m wide. It is covered with square tiles that are each 2 m by 2 m.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many tiles cover the floor? {b} tiles",
+     "answer": {
+      "value": [
+       "24"
+      ],
+      "text": "24"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The tiles along the edge are dark. How many tiles are dark? {b} tiles",
+     "answer": {
+      "value": [
+       "16"
+      ],
+      "text": "16"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:",
+     ""
+    ]
+   },
+   "explanation": "(a) 12 ÷ 2 = 6 tiles along the length and 8 ÷ 2 = 4 tiles along the width. 6 × 4 = 24 tiles. (b) The tiles not along the edge make a block of 4 by 2 = 8 tiles. 24 − 8 = 16 dark tiles."
+  },
+  {
+   "id": "L4U07-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "A rectangle has a perimeter of 42 cm. Its length is 5 cm more than its width. What is its area? {b} cm²",
+   "answer": {
+    "value": [
+     "104"
+    ],
+    "text": "104"
+   },
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     ""
+    ]
+   },
+   "hint": "Length + width is half of the perimeter.",
+   "explanation": "Half of the perimeter is length + width = 21 cm. The length is 5 more than the width, so 21 − 5 = 16 cm is 2 widths. The width is 8 cm and the length is 13 cm: 13 × 8 = 104 cm²."
+  },
+  {
+   "id": "L4U07-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "A wall is 5 m wide and 3 m high. It has a door 2 m high and 1 m wide, and a window 1 m by 1 m. Mei paints the wall, not the door or the window. She paints 2 coats. A tin of paint covers 9 m².",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Area to paint with 1 coat: {b} m²",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Tins of paint she needs: {b}",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     ""
+    ]
+   },
+   "hint": "Whole wall take away the door and the window.",
+   "explanation": "(a) The wall is 5 × 3 = 15 m². The door is 2 m² and the window is 1 m²: 15 − 2 − 1 = 12 m². (b) 2 coats cover 2 × 12 = 24 m². 24 ÷ 9 is 2 and a bit, so she needs 3 tins."
+  },
+  {
+   "id": "L4U07-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "Two identical rectangles are each 8 cm long and 3 cm wide. They are joined along a whole side to make 1 rectangle.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Joined along an 8 cm side, the perimeter is {b} cm",
+     "answer": {
+      "value": [
+       "28"
+      ],
+      "text": "28"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Joined along a 3 cm side, the perimeter is {b} cm",
+     "answer": {
+      "value": [
+       "38"
+      ],
+      "text": "38"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:",
+     ""
+    ]
+   },
+   "hint": "Draw both. Find the length and width of each big rectangle.",
+   "explanation": "(a) The big rectangle is 8 cm by 6 cm: 2 × 14 = 28 cm. (b) The big rectangle is 16 cm by 3 cm: 2 × 19 = 38 cm."
+  },
+  {
+   "id": "L4U07-G01",
+   "tier": "go",
+   "page": 5,
+   "text": "Three identical squares are joined in an L shape. The perimeter of the L shape is 40 cm. Find its area.\n{b} cm²",
+   "figure": {
+    "type": "l4_tiles",
+    "shapes": [
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        1
+       ]
+      ]
+     }
+    ],
+    "cell": 36,
+    "width_mm": 32
+   },
+   "answer": {
+    "value": [
+     "75"
+    ],
+    "text": "75"
+   },
+   "hint": "Count the sides of squares round the edge of the L shape.",
+   "explanation": "The edge of the L shape has 8 sides of squares. 40 ÷ 8 = 5 cm for 1 side. Each square has an area of 5 × 5 = 25 cm², so the L shape has 3 × 25 = 75 cm².",
+   "figright": true
+  },
+  {
+   "id": "L4U07-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "Take a square with sides of 4 cm. Its area is 16 cm² and its perimeter is 16 cm. The numbers match! Find 1 other rectangle with whole-cm sides where they match.\nLength {b} cm   Width {b} cm",
+   "answer": {
+    "value": [
+     "6",
+     "3"
+    ],
+    "text": "Length 6 cm, width 3 cm"
+   },
+   "space": {
+    "rows": [
+     "Try:"
+    ]
+   },
+   "hint": "Try a width of 1, then 2, then 3. Does the area equal the perimeter?",
+   "explanation": "Width 3, length 6: area 18 cm² and perimeter 2 × 9 = 18 cm. Width 1 or 2 never works (width 2 gives 2l and 2l + 4). Widths of 4 or more give only the 4 by 4 square. So 6 cm by 3 cm."
+  },
+  {
+   "id": "L4U07-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "Two squares with sides of 6 cm overlap at one corner. The overlap is a square with sides of 2 cm.",
+   "figure": {
+    "type": "l4_poly",
+    "shapes": [
+     {
+      "pts": [
+       [
+        0,
+        0
+       ],
+       [
+        6,
+        0
+       ],
+       [
+        6,
+        4
+       ],
+       [
+        10,
+        4
+       ],
+       [
+        10,
+        10
+       ],
+       [
+        4,
+        10
+       ],
+       [
+        4,
+        6
+       ],
+       [
+        0,
+        6
+       ]
+      ],
+      "labels": [],
+      "dashed": [
+       [
+        [
+         4,
+         4
+        ],
+        [
+         6,
+         4
+        ]
+       ],
+       [
+        [
+         6,
+         4
+        ],
+        [
+         6,
+         6
+        ]
+       ],
+       [
+        [
+         4,
+         6
+        ],
+        [
+         6,
+         6
+        ]
+       ],
+       [
+        [
+         4,
+         4
+        ],
+        [
+         4,
+         6
+        ]
+       ]
+      ]
+     }
+    ],
+    "cell": 14,
+    "width_mm": 40,
+    "padx": 14,
+    "pady": 14
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Area of the whole shape: {b} cm²",
+     "answer": {
+      "value": [
+       "68"
+      ],
+      "text": "68"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Perimeter of the whole shape: {b} cm",
+     "answer": {
+      "value": [
+       "40"
+      ],
+      "text": "40"
+     }
+    }
+   ],
+   "hint": "The overlap is part of both squares.",
+   "explanation": "(a) 36 + 36 = 72, but the 2 by 2 overlap is counted twice: 72 − 4 = 68 cm². (b) Go round the edge: 6 + 4 + 4 + 6 + 6 + 4 + 4 + 6 = 40 cm.",
+   "figright": true
+  },
+  {
+   "id": "L4U07-G04",
+   "tier": "go",
+   "page": 5,
+   "text": "A square floor is covered with square tiles. The tiles along the edge are dark and all the others are light.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The floor is 8 tiles by 8 tiles. How many dark tiles? {b}",
+     "answer": {
+      "value": [
+       "28"
+      ],
+      "text": "28"
+     }
+    },
+    {
+     "label": "b",
+     "text": "A floor has 60 dark tiles. How many tiles long is the floor? {b}",
+     "answer": {
+      "value": [
+       "16"
+      ],
+      "text": "16"
+     }
+    }
+   ],
+   "hint": "Take the light block away from the whole floor.",
+   "explanation": "(a) The light tiles make a 6 by 6 block: 36. 64 − 36 = 28 dark tiles. (b) A floor n tiles long has 4 × n − 4 dark tiles. 4 × n − 4 = 60 gives n = 16."
+  },
+  {
+   "id": "L4U07-C01",
+   "tier": "quiz",
+   "text": "Find the area of the shape. {b} cm²",
+   "figure": {
+    "type": "l4_poly",
+    "shapes": [
+     {
+      "pts": [
+       [
+        0,
+        0
+       ],
+       [
+        9,
+        0
+       ],
+       [
+        9,
+        3
+       ],
+       [
+        4,
+        3
+       ],
+       [
+        4,
+        7
+       ],
+       [
+        0,
+        7
+       ]
+      ],
+      "labels": [
+       {
+        "seg": 0,
+        "text": "9 cm"
+       },
+       {
+        "seg": 1,
+        "text": "3 cm"
+       },
+       {
+        "seg": 4,
+        "text": "4 cm"
+       },
+       {
+        "seg": 5,
+        "text": "7 cm"
+       }
+      ]
+     }
+    ],
+    "cell": 18,
+    "width_mm": 47,
+    "pady": 50
+   },
+   "answer": {
+    "value": [
+     "43"
+    ],
+    "text": "43"
+   },
+   "explanation": "Split into 9 × 3 = 27 and 4 × 4 = 16: 27 + 16 = 43 cm². Or 9 × 7 − 5 × 4 = 63 − 20 = 43 cm².",
+   "figright": true
+  },
+  {
+   "id": "L4U07-C02",
+   "tier": "quiz",
+   "text": "A rectangle has an area of 60 cm² and a length of 12 cm. Find its perimeter. {b} cm",
+   "answer": {
+    "value": [
+     "34"
+    ],
+    "text": "34"
+   },
+   "explanation": "The width is 60 ÷ 12 = 5 cm. The perimeter is 2 × (12 + 5) = 34 cm."
+  },
+  {
+   "id": "L4U07-C03",
+   "tier": "quiz",
+   "text": "A 10 cm by 7 cm photo has a frame 1 cm wide on every side. Find the area of the frame alone. {b} cm²",
+   "answer": {
+    "value": [
+     "38"
+    ],
+    "text": "38"
+   },
+   "explanation": "The whole is 12 cm by 9 cm = 108 cm². The photo is 10 × 7 = 70 cm². 108 − 70 = 38 cm²."
+  },
+  {
+   "id": "L4U07-C04",
+   "tier": "quiz",
+   "text": "Every rectangle has whole-cm sides and covers 24 cm². Find the least perimeter any of them can have. {b} cm",
+   "answer": {
+    "value": [
+     "20"
+    ],
+    "text": "20"
+   },
+   "explanation": "The pairs are 1 × 24, 2 × 12, 3 × 8 and 4 × 6, with perimeters 50, 28, 22 and 20. The least is 20 cm, from 4 cm by 6 cm."
+  }
+ ]
+}

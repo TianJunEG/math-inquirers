@@ -8,6 +8,7 @@
  "title": "Math Inquirers: Lesson 7 – Shape Safari",
  "order": [
   "l7-title",
+  "l7-tool",
   "l7-warm1",
   "l7-warm2",
   "l7-warmcheck",
@@ -31,7 +32,9 @@
   "l7-try2",
   "l7-we3",
   "l7-challenge",
+  "l7-chdiag",
   "l7-chwalk",
+  "l7-skill1",
   "l7-talk",
   "l7-exit",
   "l7-reflect"

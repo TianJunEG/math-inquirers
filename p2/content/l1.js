@@ -36,7 +36,7 @@ module.exports = {
     n: 1, week: 1, session: 'A', title: 'Digit Detectives', topic: 'Numbers to 1000',
     objective: 'Read and build 3-digit numbers by place value (also with more than 9 tens), make every number from a set of digit cards by listing in order, find the biggest and smallest, and use patterns on a 1000 chart to count on and back in 1s, 10s and 100s.',
     skills: 'Place value, making a list in order, looking for a pattern, reasoning about zero',
-    materials: 'Digit cards 0 to 9 (one set per child), place-value mat (hundreds, tens, ones), base-ten blocks or paper strips and squares, mini whiteboards, a 1000 chart page (rows of 10).',
+    materials: 'Digit cards 0 to 9 (one set per child), place-value mat (hundreds, tens, ones), base-ten blocks or paper strips and squares, mini whiteboards, the 1000-chart pieces on the workbook page (rows of 10).',
     online: 'Children cut out paper digit cards before the lesson and move them on camera; the tutor writes on the slide 1000-chart pieces.',
     warmup: 'Place It Right: the tutor draws digit cards one at a time. After each card, children must write it in the hundreds, tens or ones box straight away and cannot move it. Biggest number wins. Then play again for the smallest.',
     explore: 'Pairs take the digit cards 3, 5 and 8 and make every 3-digit number they can, using each card once. They record each number, then find the biggest and the smallest and decide how they know they have found them all.',
@@ -48,6 +48,7 @@ module.exports = {
       'Listing digit-card numbers at random, so one is missed or written twice, or counting 059 as a 3-digit number.',
       'Counting back in 10s across a hundred: 512, 502, 592 instead of 512, 502, 492.'
     ],
+    takehome: 'Page 2: Q4(b) (two squares below 385) and the whole of Q5 (count on and back, four items). The teaching slide for counting past a hundred is not shown in class.',
     extension: 'Use any three of the cards 1, 3, 5 and 7. How many different 3-digit numbers can you make? (24: 6 for each set of three cards, and there are 4 sets.)',
     key: [
       ['Q1', '(a) 407  (b) 752  (c) 3 tens; 13 tens  (d) 70'],
@@ -71,8 +72,8 @@ module.exports = {
     ],
     circulate: ['Ask: “How many of your numbers start with this card? Is that all of them?”', 'Ask: “What is this digit worth? How many tens is that?”', 'Ask: “Point to the number one square below this one on the chart. How much bigger is it?”'],
     hints: ['Hint 1: “Fix the hundreds digit first.”', 'Hint 2: “Build it with blocks: hundreds, tens and ones. Can 10 tens become a hundred?”', 'Hint 3: “Say the numbers out loud as you count on in 10s. What happens after 590?”'],
-    talk: ['“Which is bigger, 401 or 399? Ali says 399 because it has two 9s. Who agrees?”', '“How do you know you found every number from your digit cards?”'],
-    talkAns: '401 is bigger. Compare the hundreds first: 4 hundreds is more than 3 hundreds, so the tens and ones do not matter. We know we have every number because we listed them in order: each card starts the same number of numbers.',
+    talk: ['“Which is bigger, 401 or 399? Ali says 399 because it has two 9s. Who agrees?”'],
+    talkAns: '401 is bigger. Compare the hundreds first: 4 hundreds is more than 3 hundreds, so the tens and ones do not matter. Count on from 399: 400, 401.',
     close: ['“You were real detectives today: you made a list in order, so no number could hide from you.”', '“Hand me your exit ticket and I will stamp your inquiry journal.”']
   },
 
@@ -86,7 +87,7 @@ module.exports = {
     mini1: { head: 'Place value: more than 9 tens', body: ['5 hundreds, 12 tens and 4 ones.', '12 tens = 120.', '500 + 120 + 4 = ?'], ans: '624. Ten of the tens make another hundred.' },
     mini2: { head: 'Every number from 1, 6, 9', body: ['Fix the hundreds digit, then swap the other two.', '1 first: 169, 196. 6 first: 619, 691. 9 first: 916, 961.', 'How many? Which is biggest?'], ans: '6 numbers. Biggest 961, smallest 169.' },
     keyHead: 'Key idea: list in order', keyBig: 'Fix the hundreds digit, then swap the others. Each card starts the same number of numbers.', keySmall: 'Zero can never be the hundreds digit. Biggest digit first makes the biggest number.',
-    brk: 'Swap the digits. Each child puts three digit cards in a row (hundreds, tens, ones). The tutor calls “swap the hundreds and the tens” or “swap the tens and the ones”. Show your new number on camera. Is it bigger or smaller?',
+    brk: 'Swap the digits. Each child puts three digit cards in a row (hundreds, tens, ones). The tutor calls “swap the hundreds and the tens” or “swap the tens and the ones”. Say your new number together on three. Is it bigger or smaller?',
     ws1: 'Page 1, in pairs: Q1 place value, Q2 the cards 2, 7, 4, Q3 the cards with a zero.',
     ws2: 'Page 2, on your own: Q4 chart pieces, Q5 count on and back, Q6 digit riddles.'
   },
@@ -101,9 +102,9 @@ module.exports = {
       { q: 'Put these numbers in order, smallest first: 409, 490, 94, 940.', a: '94, 409, 490, 940' }
     ],
     stretch: [
-      { q: 'Use the digit cards 1, 5 and 8 once each. How many different 3-digit numbers can you make? List them in order.', a: '6 numbers: 158, 185, 518, 581, 815, 851.' },
+      { q: 'Use the digit cards 2, 6 and 9 once each. Make a list in order of every 3-digit number you can make that is bigger than 500. How do you know you have found them all?', a: '4 numbers: 629, 692, 926, 962. The hundreds digit must be 6 or 9 (a number that starts with 2 is smaller than 500). With 6 in the hundreds, the other two cards make 629 and 692; with 9 in the hundreds, they make 926 and 962.' },
       { q: 'Use the digit cards 4, 4 and 7. How many different 3-digit numbers can you make? Why is it not 6?', a: '3 numbers: 447, 474, 744. The two 4s look the same, so swapping them does not make a new number.' },
-      { q: 'What number is 3 hundreds, 14 tens and 6 ones?', a: '446 (14 tens = 1 hundred and 4 tens).' },
+      { q: 'Ali has 46 ten-blocks. Siti has 3 hundred-blocks and 15 ten-blocks. Who has the bigger number? How much bigger?', a: 'Ali: 46 tens is 460. Siti: 3 hundreds and 15 tens is 300 + 150 = 450. Ali has the bigger number, by 10.' },
       { q: 'Mei says: “If I swap the tens digit and the ones digit of a 3-digit number, the new number is always smaller.” Is she right? Show what happens with some examples. When does the number stay the same?', a: 'No. 452 becomes 425, which is smaller, but 425 becomes 452, which is bigger. It gets smaller when the tens digit is bigger than the ones digit, bigger when it is smaller, and stays the same when the two digits are the same (733).' },
       { q: 'I am a 3-digit number. My digits add up to 4. Find all the numbers I could be.', a: '10 numbers: 103, 112, 121, 130, 202, 211, 220, 301, 310, 400.' },
       { q: 'Use the digit cards 2, 5 and 9 once each. Which number you can make is closest to 600?', a: '592 (only 8 away).' },
@@ -125,6 +126,7 @@ module.exports = {
 
   workbook: H => {
     const W = [];
+    const TH = () => H.t('★ take-home  ', { bold: true, color: '1B2A49' });
     W.push(H.p('A 3-digit number has hundreds, tens and ones. Where a digit sits tells you what it is worth.', { after: 80 }));
     W.push(H.q(1, 'Place value. Fill in the blanks.', { before: 60, keepNext: true }));
     W.push(H.sub('a', '4 hundreds, 0 tens and 7 ones  =  ________'));
@@ -152,8 +154,8 @@ module.exports = {
     W.push(H.q(4, 'These are pieces cut from a 1000 chart. Each row has 10 numbers. Fill in the empty squares.', { keepNext: true }));
     W.push(H.fig(pieceSvg()));
     W.push(H.sub('a', 'On the chart, one square DOWN is ______ more.  One square RIGHT is ______ more.'));
-    W.push(H.sub('b', 'Which number is 2 squares below 385 on the chart?  ________'));
-    W.push(H.q(5, 'Look for the pattern. Fill in the next numbers.', { keepNext: true }));
+    W.push(H.sub('b', [TH(), H.t('Which number is 2 squares below 385 on the chart?  ________')]));
+    W.push(H.q(5, [TH(), H.t('Look for the pattern. Fill in the next numbers.')], { keepNext: true }));
     W.push(H.sub('a', '47,   147,   247,   ______,   ______'));
     W.push(H.sub('b', '532,   522,   512,   ______,   ______'));
     W.push(H.sub('c', '980,   985,   990,   995,   ______'));

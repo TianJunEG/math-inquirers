@@ -1,39 +1,41 @@
-// Math Inquirers P3, Lesson 10: Challenge Day (mixed, incl. bar graphs and logic)
+// Math Inquirers P3, Lesson 10: Puzzle Day (mixed, incl. bar graphs and logic)
 const NAVY = '#1B2A49', YEL = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', RED = '#D64545', WHITE = '#FFFFFF';
 const txt = (x, y, s, o = {}) => `<text x="${x}" y="${y}" font-size="${o.size || 16}" font-weight="${o.weight || 700}" text-anchor="${o.anchor || 'middle'}" fill="${o.fill || NAVY}" font-family="Arial, sans-serif"${o.extra || ''}>${s}</text>`;
 
 // Bar graph drawn to scale: 4 px per cup, gridlines every 10 cups, Lime juice bar left for the child to draw.
 const drinksGraph = () => {
-  const data = [['Milo', 45], ['Teh', 30], ['Kopi', 55], ['Bandung', 20], ['Lime juice', null]];
-  const x0 = 80, y0 = 290, k = 4, slot = 100, bw = 58;
-  let s = '';
+  // bars use hatch patterns (never colour alone) and carry value labels; the missing Lime juice slot is a dashed outline
+  const data = [['Milo', 45, 'hz'], ['Teh', 30, 'dt'], ['Kopi', 55, 'hx'], ['Bandung', 20, 'hh'], ['Lime juice', null]];
+  const x0 = 96, y0 = 290, k = 4, slot = 100, bw = 62;
+  let s = `<defs><pattern id="hz" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="${NAVY}" stroke-width="2.2"/></pattern><pattern id="dt" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fff"/><circle cx="4" cy="4" r="1.7" fill="${NAVY}"/></pattern><pattern id="hx" width="9" height="9" patternUnits="userSpaceOnUse"><rect width="9" height="9" fill="#fff"/><path d="M0 0L9 9M9 0L0 9" stroke="${NAVY}" stroke-width="1.6"/></pattern><pattern id="hh" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="4" x2="8" y2="4" stroke="${NAVY}" stroke-width="2.2"/></pattern></defs>`;
   for (let v = 0; v <= 60; v += 10) {
     const y = y0 - v * k;
-    s += `<line x1="${x0}" y1="${y}" x2="${x0 + 5 * slot + 10}" y2="${y}" stroke="${v ? '#C9D4EC' : NAVY}" stroke-width="${v ? 1.5 : 3}"/>`;
-    s += txt(x0 - 10, y + 5, String(v), { anchor: 'end', size: 15 });
+    s += `<line x1="${x0}" y1="${y}" x2="${x0 + 5 * slot + 10}" y2="${y}" stroke="${v ? '#9AA6C4' : NAVY}" stroke-width="${v ? 1.2 : 3}"/>`;
+    s += txt(x0 - 10, y + 6, String(v), { anchor: 'end', size: 20 });
   }
   s += `<line x1="${x0}" y1="${y0}" x2="${x0}" y2="${y0 - 62 * k}" stroke="${NAVY}" stroke-width="3"/>`;
-  data.forEach(([n, v], i) => {
-    const x = x0 + 21 + i * slot;
-    if (v !== null) s += `<rect x="${x}" y="${y0 - v * k}" width="${bw}" height="${v * k}" fill="${[YEL, SKY, TEAL, RED][i]}" stroke="${NAVY}" stroke-width="2.5"/>`;
-    s += txt(x + bw / 2, y0 + 22, n, { size: 15 });
+  data.forEach(([n, v, pat], i) => {
+    const x = x0 + 19 + i * slot;
+    if (v !== null) s += `<rect x="${x}" y="${y0 - v * k}" width="${bw}" height="${v * k}" fill="url(#${pat})" stroke="${NAVY}" stroke-width="2.5"/>` + `<rect x="${x + bw / 2 - 18}" y="${y0 - v * k - 26}" width="36" height="22" fill="#fff"/>` + txt(x + bw / 2, y0 - v * k - 8, String(v), { size: 18 });
+    else s += `<rect x="${x}" y="${y0 - 6}" width="${bw}" height="6" fill="none" stroke="${NAVY}" stroke-width="2.4" stroke-dasharray="7 5"/>` + txt(x + bw / 2, y0 - 16, '?', { size: 26 });
+    s += txt(x + bw / 2, y0 + 24, n, { size: 17 });
   });
-  s += txt(22, y0 - 120, 'Number of cups', { size: 15, extra: ` transform="rotate(-90 22 ${y0 - 120})"` });
-  s += txt(x0 + 255, y0 + 46, 'Drink', { size: 15 });
-  return `<svg aria-label="Bar graph of cups of drinks sold: Milo 45, Teh 30, Kopi 55, Bandung 20, Lime juice bar missing" viewBox="0 0 600 345" xmlns="http://www.w3.org/2000/svg" style="width:400px;max-width:100%">${s}</svg>`;
+  s += txt(26, y0 - 120, 'Number of cups', { size: 17, extra: ` transform="rotate(-90 26 ${y0 - 120})"` });
+  s += txt(x0 + 255, y0 + 54, 'Drink', { size: 17 });
+  return `<svg aria-label="Bar graph of cups of drinks sold: Milo 45, Teh 30, Kopi 55, Bandung 20, Lime juice bar missing" viewBox="0 0 640 352" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:480px">${s}</svg>`;
 };
 // Matchstick squares: 1, 2 and 3 squares in a row
 const sticks = () => {
   const u = 52; let s = '';
   const stick = (x1, y1, x2, y2) => `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${NAVY}" stroke-width="7" stroke-linecap="round"/><circle cx="${x2}" cy="${y2}" r="0"/>`;
-  let ox = 20;
+  let ox = 60;
   [1, 2, 3].forEach((n, j) => {
     for (let i = 0; i < n; i++) { const x = ox + i * u; s += stick(x, 20, x + u, 20) + stick(x, 20 + u, x + u, 20 + u); }
     for (let i = 0; i <= n; i++) { const x = ox + i * u; s += stick(x, 20, x, 20 + u); }
-    s += txt(ox + n * u / 2, 20 + u + 32, `${n} square${n > 1 ? 's' : ''}: ${[4, 7, 10][j]} sticks`, { size: 15 });
-    ox += n * u + 70;
+    s += txt(ox + n * u / 2, 20 + u + 36, `${n} square${n > 1 ? 's' : ''}`, { size: 22 });
+    ox += n * u + 80;
   });
-  return `<svg aria-label="Matchstick squares: 1 square uses 4 sticks, 2 squares use 7 sticks, 3 squares use 10 sticks" viewBox="0 0 600 115" xmlns="http://www.w3.org/2000/svg" style="width:340px;max-width:100%">${s}</svg>`;
+  return `<svg aria-label="Matchstick squares: 1 square, 2 squares and 3 squares in a row made with sticks" viewBox="0 0 600 125" xmlns="http://www.w3.org/2000/svg" style="width:560px;max-width:100%">${s}</svg>`;
 };
 const digitCards = () => {
   let s = '';
@@ -43,13 +45,13 @@ const digitCards = () => {
 
 module.exports = {
   lesson: {
-    n: 10, week: 5, session: 'B', title: 'Challenge Day', topic: 'Mixed puzzles: bar graphs and logic',
+    n: 10, week: 5, session: 'B', title: 'Puzzle Day', topic: 'Mixed puzzles: bar graphs and logic',
     objective: 'Choose a way to start a puzzle (draw it, list it, make a table), solve a logic grid with ticks and crosses, read and complete a bar graph with a scale, and explain the thinking.',
     skills: 'Choosing a strategy, logical reasoning, reading scales, listing systematically, perseverance, explaining',
     materials: 'Puzzle cards for 2 stations (list, measure), digit cards 0 to 9 (or paper cards), squared paper, mini whiteboards, certificates, stamps. For the sneak-peek puzzles: paper, a pencil and a few counters or small objects for each child.',
-    online: 'Two stations, 7 minutes each. Pairs stay in one breakout room, and the tutor shares the next station card when the timer ends. No physical materials beyond paper. Logic grids and graphs are shared on screen and annotated together.',
+    online: 'Two stations, about 4 minutes each. The timer on the screen is a guide, not a race: there is no rush, and a pair may pass on a station. Pairs stay in their pre-assigned breakout room (auto-move, auto-close with a timer), and the tutor visits every room at least once. The tutor shares the next station card when the 4 minutes are up. No physical materials beyond paper. Logic grids and graphs are shared on screen and annotated together.',
     warmup: 'Relay chain: one quick question from our P3 lessons, the answer is passed on to the next child as the start of the next question (6 × 9, add 46, × 7, take away 250, ÷ 5, then change 90 minutes to hours and minutes). Then 5 quick questions.',
-    explore: 'Two stations, about 7 minutes each, in pairs: List (make every 3-digit number from 3 digit cards) and Measure (a 120 cm ribbon is cut into 3 pieces, each 10 cm longer than the one before: draw it and find each piece). The tutor shares each station card on screen. Write the answer and how you started.',
+    explore: 'Two stations, about 4 minutes each, in pairs (the timer is a guide, not a race; a pair may pass on a station): List (make every 3-digit number from 3 digit cards) and Measure (a 120 cm ribbon is cut into 3 pieces, each 10 cm longer than the one before: draw it and find each piece). The tutor shares each station card on screen. Take your time. Write the answer, or how far you got, and how you started.',
     mini: 'How to start a puzzle: draw it (a queue: 4th from the front and 6th from the back means 4 + 6 − 1 = 9 people), make a table (a logic grid: a tick in a box means crosses in the rest of its row and column), read the scale of a bar graph (what does one space stand for? halfway between two lines). Then list it in order before page 2.',
     share: 'Choose one puzzle. How did you START it, and how do you know your answer is right? (Share, share with a partner, or pass.)',
     exit: { q: 'Ali is 4th from the front and 4th from the back of a queue. How many people are in the queue? Which start did you use?', a: '7 people (3 in front, Ali, 3 behind: 4 + 4 − 1 = 7). Draw it.' },
@@ -65,11 +67,11 @@ module.exports = {
       ['Q3', '(a) 7 people (3 + 5 − 1)  (b) 6 people (Ali 2nd, 3 between, Siti 6th and last)'],
       ['Q4', '(a) 258, 285, 528, 582, 825, 852  (b) 2 odd numbers: 285 and 825  (c) 582 (18 away from 600)'],
       ['Q5', 'Table: 13, 16, 19 sticks (add 3 each time)  (a) 25 sticks  (b) 10 squares'],
-      ['Q6', '411, 321, 213 (3 numbers: the ones digit is 1, 3 or 5; list each case)']
+      ['Q6', '411, 321, 213 (3 numbers: the digits are 1, 1, 4 or 1, 2, 3, and the ones digit must be odd; list each case)']
     ]
   },
   script: {
-    hook: ['Welcome to Challenge Day! Today there is no new topic: there are puzzles from every lesson. Clever inquirers do not always know the answer straight away. They know how to START: draw it, list it, or make a table.'],
+    hook: ['Welcome to Puzzle Day! Today there is no new topic: there are puzzles from every lesson. Clever inquirers do not always know the answer straight away. They know how to START: draw it, list it, or make a table.'],
     warmIntro: ['Relay chain: I ask the first question. The answer is the start of the next question, so listen carefully and pass it on. If someone is stuck, the group can help with a hint, not the answer.'],
     predict: ['Look at the two stations. Which one do you think will be harder? Write your guess, and we will see at the end.'],
     exploreHints: ['Stuck: “How could you start? Draw it, list it, or make a table?”', 'List station: “Start with the smallest digit in the hundreds place. How many numbers does each digit give?”', 'Measure station: “Draw the three pieces. What if all three were the same? What is extra?”', 'Ready for more: make a puzzle card for the next pair.'],
@@ -82,13 +84,14 @@ module.exports = {
     hints: ['Hint 1: “Draw it: put people or bars on paper.”', 'Hint 2: “Make a table and cross out what cannot be.”', 'Hint 3: “List it in order, smallest first, so you do not miss one.”'],
     talk: ['“Which start helped you most today: draw it, list it or make a table? Why?”', '“Why do we take away 1 in a queue puzzle?”'],
     talkAns: 'Open answers for the first. Queue: the person is counted from the front AND from the back, so they are counted twice; take away 1.',
-    close: ['“You are real inquirers now: you notice, test, and explain why. Here is your certificate.”', 'Give each child a certificate and tell them one specific thing they did well in the program.']
+    close: ['“You are real inquirers now: you notice, test, and explain why. Here is your certificate.”', 'Give each certificate with ONE 20-second sentence about one specific thing the child did well in the program (8 children: under 3 minutes).']
   },
   deck: {
     today: 'Choose how to start a puzzle: draw it, list it or make a table. Solve a logic grid and read a bar graph with a scale.',
     warmGame: 'Relay chain. Each answer is passed on and becomes the start of the next question.',
-    warmQs: [['What is the value of the digit 7 in 4732?', '700'], ['3/8 + 2/8 = ?', '5/8'], ['47 ÷ 5 = ?', '9 remainder 2'], ['A rectangle is 6 cm by 4 cm. What is its perimeter?', '20 cm'], ['2 kg 50 g = __ g', '2050 g']],
-    expSetup: ['Two stations, 7 minutes each: List, then Measure.', 'Work in pairs. Read the puzzle card aloud.', 'Before you solve it, decide: draw it, list it or make a table?', 'Write the answer and how you started.'],
+    warmQs: [['What is the value of the digit 7 in 4732?', '700'], ['3/8 + 2/8 = ?', '5/8'], ['47 ÷ 5 = ?', '9 remainder 2']],
+    takeHome: [['A rectangle is 6 cm by 4 cm. What is its perimeter?', '20 cm'], ['2 kg 50 g = __ g', '2050 g']],
+    expSetup: ['Two stations, about 4 minutes each: List, then Measure. The timer is a guide, not a race. You may pass on a station.', 'Work in pairs. Read the puzzle card aloud.', 'Before you solve it, decide: draw it, list it or make a table?', 'Write the answer, or how far you got, and how you started.'],
     expPic: 'two station cards: three digit cards, and a 120 cm ribbon to be cut into 3 pieces.',
     expAsk: [['How did you start each puzzle?', 'Open: draw it, list it, make a table.'], ['How many numbers did the List station make? How do you know you have them all?', '6 numbers: 2 for each hundreds digit, listed in order.'], ['Measure station: how long is each piece of ribbon?', '30 cm, 40 cm and 50 cm (take away the extra 10 + 20 = 30 cm, 90 cm ÷ 3 = 30 cm).']],
     mini1: { head: 'Draw it: a queue', body: ['Siti is 4th from the front and 6th from the back of a queue.', 'How many people are in the queue?'], ans: '9 people: 3 in front, Siti, 5 behind (4 + 6 − 1 = 9).' },
@@ -165,6 +168,7 @@ module.exports = {
     W.push(sub('a', 'How many sticks are needed for 8 squares?   ____'));
     W.push(sub('b', 'Ben uses 31 sticks. How many squares does he make?   ____'));
     W.push(q(6, '(if time) I am a 3-digit odd number. My digits add up to 6. My hundreds digit is bigger than my tens digit. None of my digits is 0. What could I be? Find ALL the answers.', { keepNext: true }));
+    W.push(p('Hint: three digits, none 0, that add up to 6, are 1, 1, 4 or 1, 2, 3 or 2, 2, 2. Try to arrange each set so that the number is odd and the hundreds digit is bigger than the tens digit.', { after: 40, keepNext: true }));
     W.push(...lines(2));
     return W;
   }

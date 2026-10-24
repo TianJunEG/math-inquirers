@@ -1,0 +1,523 @@
+{
+ "palette": [
+  {
+   "text": "next backdrop",
+   "fill": "#9966ff"
+  },
+  {
+   "text": "25 change color effect by",
+   "fill": "#9966ff"
+  },
+  {
+   "text": "0 set color effect to",
+   "fill": "#9966ff"
+  },
+  {
+   "text": "clear graphic effects",
+   "fill": "#9966ff"
+  },
+  {
+   "text": "backdrop number",
+   "fill": "#9966ff"
+  },
+  {
+   "text": "stop all sounds",
+   "fill": "#cf63cf"
+  },
+  {
+   "text": "10 change pitch effect by",
+   "fill": "#cf63cf"
+  },
+  {
+   "text": "100 set pitch effect to",
+   "fill": "#cf63cf"
+  },
+  {
+   "text": "clear sound effects",
+   "fill": "#cf63cf"
+  },
+  {
+   "text": "-10 change volume by",
+   "fill": "#cf63cf"
+  },
+  {
+   "text": "100 set volume to %",
+   "fill": "#cf63cf"
+  },
+  {
+   "text": "volume",
+   "fill": "#cf63cf"
+  },
+  {
+   "text": "when clicked",
+   "fill": "#ffbf00"
+  },
+  {
+   "text": "when space key pressed",
+   "fill": "#ffbf00"
+  },
+  {
+   "text": "10 when loudness >",
+   "fill": "#ffbf00"
+  },
+  {
+   "text": "1 wait seconds",
+   "fill": "#ffab19"
+  },
+  {
+   "text": "10 repeat",
+   "fill": "#ffab19"
+  },
+  {
+   "text": "forever",
+   "fill": "#ffab19"
+  },
+  {
+   "text": "if then",
+   "fill": "#ffab19"
+  },
+  {
+   "text": "if then else",
+   "fill": "#ffab19"
+  },
+  {
+   "text": "wait until",
+   "fill": "#ffab19"
+  },
+  {
+   "text": "repeat until",
+   "fill": "#ffab19"
+  },
+  {
+   "text": "answer",
+   "fill": "#5cb1d6"
+  },
+  {
+   "text": "space key pressed?",
+   "fill": "#5cb1d6"
+  },
+  {
+   "text": "mouse down?",
+   "fill": "#5cb1d6"
+  },
+  {
+   "text": "mouse x",
+   "fill": "#5cb1d6"
+  },
+  {
+   "text": "mouse y",
+   "fill": "#5cb1d6"
+  },
+  {
+   "text": "loudness",
+   "fill": "#5cb1d6"
+  },
+  {
+   "text": "timer",
+   "fill": "#5cb1d6"
+  },
+  {
+   "text": "reset timer",
+   "fill": "#5cb1d6"
+  },
+  {
+   "text": "current year",
+   "fill": "#5cb1d6"
+  },
+  {
+   "text": "days since 2000",
+   "fill": "#5cb1d6"
+  },
+  {
+   "text": "online?",
+   "fill": "#5cb1d6"
+  },
+  {
+   "text": "username",
+   "fill": "#5cb1d6"
+  },
+  {
+   "text": "+",
+   "fill": "#59c059"
+  },
+  {
+   "text": "-",
+   "fill": "#59c059"
+  },
+  {
+   "text": "*",
+   "fill": "#59c059"
+  },
+  {
+   "text": "/",
+   "fill": "#59c059"
+  },
+  {
+   "text": "1 10 pick random to",
+   "fill": "#59c059"
+  },
+  {
+   "text": "50 >",
+   "fill": "#59c059"
+  },
+  {
+   "text": "50 <",
+   "fill": "#59c059"
+  },
+  {
+   "text": "50 =",
+   "fill": "#59c059"
+  },
+  {
+   "text": "and",
+   "fill": "#59c059"
+  },
+  {
+   "text": "or",
+   "fill": "#59c059"
+  },
+  {
+   "text": "not",
+   "fill": "#59c059"
+  },
+  {
+   "text": "mod",
+   "fill": "#59c059"
+  },
+  {
+   "text": "round",
+   "fill": "#59c059"
+  },
+  {
+   "text": "abs of",
+   "fill": "#59c059"
+  },
+  {
+   "text": "10 move steps",
+   "fill": "#4c97ff"
+  },
+  {
+   "text": "15 turn degrees",
+   "fill": "#4c97ff"
+  },
+  {
+   "text": "15 turn degrees",
+   "fill": "#4c97ff"
+  },
+  {
+   "text": "0 0 go to x: y:",
+   "fill": "#4c97ff"
+  },
+  {
+   "text": "1 0 0 glide secs to x: y:",
+   "fill": "#4c97ff"
+  },
+  {
+   "text": "90 point in direction",
+   "fill": "#4c97ff"
+  },
+  {
+   "text": "10 change x by",
+   "fill": "#4c97ff"
+  },
+  {
+   "text": "0 set x to",
+   "fill": "#4c97ff"
+  },
+  {
+   "text": "10 change y by",
+   "fill": "#4c97ff"
+  },
+  {
+   "text": "0 set y to",
+   "fill": "#4c97ff"
+  },
+  {
+   "text": "if on edge, bounce",
+   "fill": "#4c97ff"
+  },
+  {
+   "text": "set rotation style left-right",
+   "fill": "#4c97ff"
+  },
+  {
+   "text": "x position",
+   "fill": "#4c97ff"
+  },
+  {
+   "text": "y position",
+   "fill": "#4c97ff"
+  },
+  {
+   "text": "direction",
+   "fill": "#4c97ff"
+  },
+  {
+   "text": "Hello! 2 say for seconds",
+   "fill": "#9966ff"
+  },
+  {
+   "text": "Hello! say",
+   "fill": "#9966ff"
+  },
+  {
+   "text": "Hmm... 2 think for seconds",
+   "fill": "#9966ff"
+  },
+  {
+   "text": "Hmm... think",
+   "fill": "#9966ff"
+  },
+  {
+   "text": "next costume",
+   "fill": "#9966ff"
+  },
+  {
+   "text": "10 change size by",
+   "fill": "#9966ff"
+  },
+  {
+   "text": "100 set size to %",
+   "fill": "#9966ff"
+  },
+  {
+   "text": "show",
+   "fill": "#9966ff"
+  },
+  {
+   "text": "hide",
+   "fill": "#9966ff"
+  },
+  {
+   "text": "go to front layer",
+   "fill": "#9966ff"
+  },
+  {
+   "text": "1 go forward layers",
+   "fill": "#9966ff"
+  },
+  {
+   "text": "costume number",
+   "fill": "#9966ff"
+  },
+  {
+   "text": "size",
+   "fill": "#9966ff"
+  },
+  {
+   "text": "when this sprite clicked",
+   "fill": "#ffbf00"
+  },
+  {
+   "text": "when I start as a clone",
+   "fill": "#ffab19"
+  },
+  {
+   "text": "delete this clone",
+   "fill": "#ffab19"
+  },
+  {
+   "text": "touching color ?",
+   "fill": "#5cb1d6"
+  },
+  {
+   "text": "color is touching ?",
+   "fill": "#5cb1d6"
+  },
+  {
+   "text": "What's your name? ask and wait",
+   "fill": "#5cb1d6"
+  },
+  {
+   "text": "set drag mode draggable",
+   "fill": "#5cb1d6"
+  },
+  {
+   "text": "apple banana join",
+   "fill": "#59c059"
+  },
+  {
+   "text": "1 apple letter of",
+   "fill": "#59c059"
+  },
+  {
+   "text": "apple length of",
+   "fill": "#59c059"
+  },
+  {
+   "text": "apple a contains ?",
+   "fill": "#59c059"
+  },
+  {
+   "text": "random position go to",
+   "fill": "#4c97ff"
+  },
+  {
+   "text": "1 random position glide secs to",
+   "fill": "#4c97ff"
+  },
+  {
+   "text": "mouse-pointer point towards",
+   "fill": "#4c97ff"
+  },
+  {
+   "text": "friend switch costume to",
+   "fill": "#9966ff"
+  },
+  {
+   "text": "backdrop1 switch backdrop to",
+   "fill": "#9966ff"
+  },
+  {
+   "text": "play sound until done",
+   "fill": "#cf63cf"
+  },
+  {
+   "text": "start sound",
+   "fill": "#cf63cf"
+  },
+  {
+   "text": "when backdrop switches to backdrop1",
+   "fill": "#ffbf00"
+  },
+  {
+   "text": "when I receive message1",
+   "fill": "#ffbf00"
+  },
+  {
+   "text": "message1 broadcast",
+   "fill": "#ffbf00"
+  },
+  {
+   "text": "message1 broadcast and wait",
+   "fill": "#ffbf00"
+  },
+  {
+   "text": "stop all",
+   "fill": "#ffab19"
+  },
+  {
+   "text": "myself create clone of",
+   "fill": "#ffab19"
+  },
+  {
+   "text": "mouse-pointer touching ?",
+   "fill": "#5cb1d6"
+  },
+  {
+   "text": "mouse-pointer distance to",
+   "fill": "#5cb1d6"
+  },
+  {
+   "text": "Stage backdrop # of",
+   "fill": "#5cb1d6"
+  },
+  {
+   "text": "code",
+   "fill": "#ff8c1a"
+  },
+  {
+   "text": "i",
+   "fill": "#ff8c1a"
+  },
+  {
+   "text": "m",
+   "fill": "#ff8c1a"
+  },
+  {
+   "text": "msg",
+   "fill": "#ff8c1a"
+  },
+  {
+   "text": "n",
+   "fill": "#ff8c1a"
+  },
+  {
+   "text": "s",
+   "fill": "#ff8c1a"
+  },
+  {
+   "text": "shift",
+   "fill": "#ff8c1a"
+  },
+  {
+   "text": "0 set code to",
+   "fill": "#ff8c1a"
+  },
+  {
+   "text": "1 change code by",
+   "fill": "#ff8c1a"
+  },
+  {
+   "text": "show variable code",
+   "fill": "#ff8c1a"
+  },
+  {
+   "text": "hide variable code",
+   "fill": "#ff8c1a"
+  },
+  {
+   "text": "alphabet",
+   "fill": "#ff661a"
+  },
+  {
+   "text": "thing add to alphabet",
+   "fill": "#ff661a"
+  },
+  {
+   "text": "1 delete of alphabet",
+   "fill": "#ff661a"
+  },
+  {
+   "text": "delete all of alphabet",
+   "fill": "#ff661a"
+  },
+  {
+   "text": "1 thing insert at of alphabet",
+   "fill": "#ff661a"
+  },
+  {
+   "text": "1 thing replace item of alphabet with",
+   "fill": "#ff661a"
+  },
+  {
+   "text": "1 item of alphabet",
+   "fill": "#ff661a"
+  },
+  {
+   "text": "thing item # of in alphabet",
+   "fill": "#ff661a"
+  },
+  {
+   "text": "length of alphabet",
+   "fill": "#ff661a"
+  },
+  {
+   "text": "thing alphabet contains ?",
+   "fill": "#ff661a"
+  },
+  {
+   "text": "show list alphabet",
+   "fill": "#ff661a"
+  },
+  {
+   "text": "hide list alphabet",
+   "fill": "#ff661a"
+  }
+ ],
+ "vm": {
+  "mod": {
+   "minus4 mod 26": 22,
+   "41 mod 12": 5,
+   "minus1 mod 26": 25,
+   "100 mod 26": 22
+  },
+  "itemNumUpper": 3,
+  "itemNumLower": 3,
+  "itemNumSpace": 0,
+  "itemOf27": "",
+  "hasTurnLeft": true,
+  "hasPenClear": false,
+  "version": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/141.0.7390.37 Safari/537.36"
+ }
+}

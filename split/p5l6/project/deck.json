@@ -2,7 +2,7 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-22T00:27:06Z"
+  "at": "2026-10-23T06:28:09Z"
  },
  "lists": "css",
  "title": "Math Inquirers P5: Lesson 6 – Rate Racers",
@@ -23,14 +23,20 @@
   "p5l6-break",
   "p5l6-ws1",
   "p5l6-ws1ans",
-  "p5l6-teachpark",
   "p5l6-teachplans",
   "p5l6-ws2",
   "p5l6-ws2ans",
   "p5l6-stretch",
+  "p5l6-stretch2",
+  "p5l6-gofurther",
+  "p5l6-gofurther2",
   "p5l6-challenge",
   "p5l6-chdiag",
   "p5l6-chwalk",
+  "p5l6-gap-pack",
+  "p5l6-gap-catch",
+  "p5l6-gap-work",
+  "p5l6-gap-r5",
   "p5l6-talk",
   "p5l6-exit",
   "p5l6-reflect"

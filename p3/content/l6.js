@@ -79,7 +79,7 @@ module.exports = {
     objective: 'Use a fraction wall to find equivalent fractions, compare and order fractions by making the parts the same size, and add and subtract like and related fractions within one whole.',
     skills: 'Drawing a model (fraction wall, bar), equivalent fractions (multiply top and bottom by the same number), comparing with the same bottom number or the same top number, adding related fractions, finding all fractions between two fractions',
     materials: 'The printed fraction strip page (7 strips per child, all the same length, 24 cm), coloured pencils, scissors, mini whiteboards. For the sneak-peek puzzles: paper, a pencil and a few counters or small objects for each child.',
-    online: 'Send the printed fraction strip page instead of asking children to measure and cut strips. Marks every 12, 8, 6, 4, 3 and 2 cm give halves, thirds, quarters, sixths, eighths and twelfths. Share the screen for the slides. Print the workbook before the lesson. Pairs work in one breakout room for 10 minutes, then return for the check slide.',
+    online: 'Send the printed fraction strip page instead of asking children to measure and cut strips. Marks every 12, 8, 6, 4, 3 and 2 cm give halves, thirds, quarters, sixths, eighths and twelfths. Share the screen for the slides. Print the workbook before the lesson. Pairs sit in pre-assigned breakout rooms (auto-move in, auto-close with a timer) for page 1, then return for the 60-second self-check slide.',
     warmup: 'Fraction Flash: four shapes cut into equal parts appear on screen. Children write the fraction shaded on whiteboards, then click to check. Ask: “How do you know the parts are equal?”',
     explore: 'Pairs use the printed fraction strips (or fold and mark paper strips) into halves, quarters, eighths, thirds, sixths and twelfths, label every part and stack them into a fraction wall. They look for pieces that line up exactly (1/2 = 2/4 = 4/8 …) and test whether eighths can cover 1/3 exactly (they cannot).',
     mini: 'Every row of the wall is one whole cut into equal parts; more parts means smaller parts. Equal fractions line up on the wall: multiply the top and bottom by the same number. To compare or add, make the parts the same size first, then compare or add the top numbers only.',
@@ -134,8 +134,9 @@ module.exports = {
   deck: {
     today: 'Build a fraction wall, find equal fractions, compare fractions by making the parts the same size, and add related fractions.',
     warmGame: 'Fraction Flash. Four shapes cut into equal parts appear on screen (eighths of a circle, sixths of a rectangle, sixths of a hexagon, tenths of a bar). Children write the fraction shaded, then click to check.',
-    warmQs: [['How many quarters make one whole?', '4'], ['Which is bigger: 1/3 or 1/5?', '1/3'], ['1/2 = ?/10', '5'], ['2/9 + 4/9', '6/9'], ['1 − 2/5', '3/5']],
-    expSetup: ['Take 7 paper strips, all the same length.', 'Keep one whole. Use the printed strips (or fold or mark paper strips) for 2, 4, 8, 3, 6 and 12 equal parts.', 'Label every part and stack the strips into a wall.', 'Ask: which pieces line up exactly?'],
+    warmQs: [['How many quarters make one whole?', '4'], ['Which is bigger: 1/3 or 1/5?', '1/3'], ['1/2 = ?/10', '5']],
+    takeHome: [['2/9 + 4/9', '6/9'], ['1 − 2/5', '3/5']],
+    expSetup: ['Take the 7 strips you cut out before the lesson.', 'Keep one whole. Mark halves, quarters and eighths; the thirds, sixths and twelfths are printed.', 'Label every part and stack the strips into a wall.', 'Ask: which pieces line up exactly?'],
     expPic: 'A small fraction wall: one whole, halves, quarters and eighths, all with equal parts and a dashed line at one half.',
     expAsk: [
       ['How many 1/8 pieces fit exactly on 1/2?', '4 (1/2 = 4/8).'],
@@ -191,7 +192,7 @@ module.exports = {
     W.push(H.q(1, 'Use the fraction wall.', { before: 80, keepNext: true, after: 40 }));
     W.push(H.fig(wall()));
     W.push(H.sub('a', [fr(1, 2), ' = ', fr(BOX, 4), ' = ', fr(BOX, 6), ' = ', fr(BOX, 8), ' = ', fr(BOX, 12)], { after: 60 }));
-    W.push(H.sub('b', [fr(2, 3), ' = ', fr(BOX, 6), ' = ', fr(BOX, 12), '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(c)&nbsp;&nbsp;', fr(3, 4), ' = ', fr(BOX, 8), ' = ', fr(BOX, 12)], { after: 60 }));
+    W.push(H.sub('b', [fr(2, 3), ' = ', fr(BOX, 6), ' = ', fr(BOX, 12), '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(c) ★ take-home:&nbsp;&nbsp;', fr(3, 4), ' = ', fr(BOX, 8), ' = ', fr(BOX, 12)], { after: 60 }));
     W.push(H.sub('d', 'Look at your answers to (a). What do you notice about the top and bottom numbers?', { keepNext: true, after: 0 }));
     W.push(...H.lines(1));
     W.push(H.q(2, ['Write ', '&gt;', ', ', '&lt;', ' or = in each circle.'], { keepNext: true }));
@@ -208,7 +209,7 @@ module.exports = {
     W.push(H.fig(shapes()));
     W.push(H.sub('a', ['Which shapes have exactly ', fr(1, 4), ' shaded?   ________']));
     W.push(H.sub('b', 'Write the fraction shaded in each of the other shapes.   ________________'));
-    W.push(H.q(4, 'Add or subtract. Make the parts the same size first.', { keepNext: true }));
+    W.push(H.q(4, ['Add or subtract. Make the parts the same size first. Use your fraction wall. Example: ', fr(1, 2), ' + ', fr(1, 4), ' = ', fr(2, 4), ' + ', fr(1, 4), ' = ', fr(3, 4), '.'], { keepNext: true }));
     const sum = (l, a, op, b) => H.cell([div(`(${l})&nbsp;&nbsp;${typeof a === 'number' ? a : fr(...a)}&nbsp;${op}&nbsp;${fr(...b)}&nbsp;=&nbsp;______`, 'font-size:20px;white-space:nowrap')], 3300, { h: 150 });
     W.push(H.tbl(cw, [
       H.row([sum('a', [2, 7], '+', [3, 7]), sum('b', [1, 4], '+', [3, 8]), sum('c', [1, 3], '+', [5, 12])]),
@@ -217,7 +218,7 @@ module.exports = {
     W.push(H.q(5, ['Ravi paints ', fr(1, 6), ' of a fence in the morning and ', fr(2, 3), ' of it in the afternoon. Draw a bar.'], { keepNext: true }));
     W.push(H.sub('a', 'What fraction has he painted?   ________        (b)  What fraction is not painted?   ________'));
     W.push(H.sub('c', 'How much more did he paint in the afternoon than in the morning?   ________'));
-    W.push(H.q(6, 'Partners that make ONE WHOLE.', { keepNext: true, after: 40 }));
+    W.push(H.q(6, '★ Take-home (not for the lesson). Partners that make ONE WHOLE.', { keepNext: true, after: 40 }));
     W.push(H.sub('', 'Pair each yellow card with the blue card that makes one whole with it. Write the 5 pairs.', { keepNext: true, after: 10 }));
     W.push(H.fig(cards()));
     W.push(...H.lines(1));

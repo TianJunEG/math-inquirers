@@ -1,0 +1,395 @@
+"""GENERATOR side, part 2: solvers added in fix round 1 (new maths structures so that no structure repeats inside a quarter).
+
+Same contract as kinds.py: SOLVE[kind](**params) -> (answer, ctx).  Merged into kinds.SOLVE at the bottom of kinds.py.
+The independent brute-force checkers are in brute_more.py (which never imports this file)."""
+import itertools
+import math
+from fractions import Fraction as Fr
+
+SOLVE = {}
+
+
+def kind(fn):
+    SOLVE[fn.__name__] = fn
+    return fn
+
+
+def _j(xs):
+    return ', '.join(str(x) for x in xs)
+
+
+def _and(xs):
+    xs = [str(x) for x in xs]
+    return xs[0] if len(xs) == 1 else ', '.join(xs[:-1]) + ' and ' + xs[-1]
+
+
+# ================================================================== Level 1 structures
+@kind
+def doubling(start, times):
+    vals = [start * 2 ** i for i in range(times + 1)]
+    return vals[-1], {'chain': _j(vals)}
+
+
+@kind
+def bond_pairs(total, lo=1):
+    prs = [(a, total - a) for a in range(lo, total // 2 + 1) if total - a >= lo]
+    return len(prs), {'list': ', '.join('%d + %d' % x for x in prs)}
+
+
+@kind
+def scaled_diff(scale, a, b):
+    return (a - b) * scale, {'da': a * scale, 'db': b * scale, 'gap': a - b}
+
+
+@kind
+def fewest_coins(target, coins):
+    best = {0: []}
+    for t in range(1, target + 1):
+        opts = [best[t - c] + [c] for c in coins if t - c >= 0 and (t - c) in best]
+        if opts:
+            best[t] = min(opts, key=len)
+    sol = sorted(best[target], reverse=True)
+    return len(sol), {'combo': ' + '.join(str(c) for c in sol)}
+
+
+@kind
+def count_between(lo, hi, inclusive):
+    if inclusive:
+        return hi - lo + 1, {'first': lo, 'last': hi}
+    return hi - lo - 1, {'first': lo + 1, 'last': hi - 1}
+
+
+@kind
+def growing_gaps(first, gap0, n):
+    terms, gaps, cur, g = [first], [], first, gap0
+    for _ in range(n - 1):
+        cur += g
+        gaps.append(g)
+        g += 1
+        terms.append(cur)
+    return terms[-1], {'terms': _j(terms[:5]), 'all': _j(terms), 'gaps': _j(gaps)}
+
+
+@kind
+def span(a, b):
+    return b - a, {}
+
+
+@kind
+def match_assign(people, things, clues, ask_thing=None, ask_person=None, verb='has the'):
+    sols = []
+    for perm in itertools.permutations(things):
+        has = dict(zip(people, perm))
+        if all((has[p] == t) == truth for p, t, truth in clues):
+            sols.append(has)
+    assert len(sols) == 1, sols
+    has = sols[0]
+    if ask_thing:
+        ans = [p for p in people if has[p] == ask_thing][0]
+    else:
+        ans = has[ask_person]
+    return ans, {'sol': ', '.join('%s %s %s' % (p, verb, has[p]) for p in people)}
+
+
+DIRS = ['north', 'east', 'south', 'west']
+
+
+@kind
+def turns(start, moves):
+    i = DIRS.index(start)
+    path = [start]
+    for m in moves:
+        i = (i + {'R': 1, 'L': -1, 'B': 2}[m]) % 4
+        path.append(DIRS[i])
+    return DIRS[i], {'path': ', then '.join(path)}
+
+
+def _cond(c, n):
+    t = c[0]
+    if t == 'even':
+        return n % 2 == 0
+    if t == 'odd':
+        return n % 2 == 1
+    if t == 'gt':
+        return n > c[1]
+    if t == 'lt':
+        return n < c[1]
+    if t == 'multiple':
+        return n % c[1] == 0
+    raise ValueError(t)
+
+
+@kind
+def filter_count(numbers, conds):
+    kept = [n for n in numbers if all(_cond(c, n) for c in conds)]
+    return len(kept), {'kept': _j(kept)}
+
+
+@kind
+def venn_both(total, a, b, neither=0):
+    inside = total - neither
+    return a + b - inside, {'sum': a + b, 'inside': inside}
+
+
+@kind
+def parity(op, parts):
+    odds = sum(1 for p in parts if p == 'odd')
+    if op == 'sum':
+        return ('odd' if odds % 2 else 'even'), {}
+    return ('odd' if odds == len(parts) else 'even'), {}
+
+
+@kind
+def regroup(tens, ones, hundreds=0, thousands=0):
+    return thousands * 1000 + hundreds * 100 + tens * 10 + ones, {'th': thousands * 1000, 'h': hundreds * 100, 't': tens * 10, 'o': ones}
+
+
+@kind
+def digit_value_diff(n, i, j):
+    s = str(n)
+    vi = int(s[i]) * 10 ** (len(s) - 1 - i)
+    vj = int(s[j]) * 10 ** (len(s) - 1 - j)
+    return vi - vj, {'vi': vi, 'vj': vj}
+
+
+@kind
+def pairs_with_sum(nums, target):
+    prs = [(a, b) for a, b in itertools.combinations(nums, 2) if a + b == target]
+    return len(prs), {'list': ' and '.join('%d + %d' % x for x in prs)}
+
+
+@kind
+def perm_count(n, k=None):
+    k = n if k is None else k
+    return math.perm(n, k), {}
+
+
+@kind
+def cards_sum(digits, shape, ask):
+    best = None
+    for perm in itertools.permutations(digits):
+        if perm[0] == 0 and shape[0] > 1:
+            continue
+        nums, at = [], 0
+        for w in shape:
+            nums.append(int(''.join(map(str, perm[at:at + w]))))
+            at += w
+        if any(len(str(x)) != w for x, w in zip(nums, shape)):
+            continue
+        tot = sum(nums)
+        if best is None or (ask == 'max' and tot > best[0]) or (ask == 'min' and tot < best[0]):
+            best = (tot, nums)
+    return best[0], {'nums': ' + '.join(str(x) for x in best[1])}
+
+
+@kind
+def position_from_back(total, k):
+    return total - k + 1, {}
+
+
+@kind
+def pyramid(bottom, ask, top=None, hide=None):
+    n = len(bottom)
+    coef = [math.comb(n - 1, i) for i in range(n)]
+    if ask == 'top':
+        return sum(c * b for c, b in zip(coef, bottom)), {'row2': _and([bottom[i] + bottom[i + 1] for i in range(n - 1)])}
+    known = sum(c * b for i, (c, b) in enumerate(zip(coef, bottom)) if i != hide)
+    v = Fr(top - known, coef[hide])
+    assert v == int(v)
+    return int(v), {'coef': coef[hide]}
+
+
+@kind
+def age_gap(a, gap, when):
+    return when + gap, {'now': a + gap, 'years': when - a}
+
+
+@kind
+def equal_sides(left, right):
+    return sum(left) - sum(right), {'total': sum(left)}
+
+
+@kind
+def climb_slip(height, up, down):
+    day = math.ceil((height - up) / (up - down)) + 1 if height > up else 1
+    return day, {}
+
+
+@kind
+def equalise(a, b):
+    assert (a - b) % 2 == 0
+    return (a - b) // 2, {'gap': a - b, 'each': (a + b) // 2}
+
+
+@kind
+def missing_digit(eq):
+    hits = [d for d in range(10) if _eval_eq(eq.replace('?', str(d)))]
+    assert len(hits) == 1, hits
+    return hits[0], {}
+
+
+def _eval_eq(s):
+    import re
+    s = re.sub(r'\d+', lambda m: str(int(m.group(0))), s)      # '05' is not a valid literal
+    lhs, rhs = s.split('=')
+    return eval(lhs.replace('x', '*')) == eval(rhs.replace('x', '*'))
+
+
+
+# ================================================================== Level 2 structures
+@kind
+def unit_price(buy, cost, want):
+    one = Fr(cost, buy)
+    return Fr(want * cost, buy) / 100, {'one_c': one, 'one': one / 100}
+
+
+@kind
+def time_convert(h, m):
+    return h * 60 + m, {'hm': h * 60}
+
+
+SOLIDS = {'cube': (6, 12, 8), 'cuboid': (6, 12, 8), 'square pyramid': (5, 8, 5), 'triangular prism': (5, 9, 6), 'triangular pyramid': (4, 6, 4)}
+
+
+@kind
+def solid_parts(shapes, part):
+    i = {'faces': 0, 'edges': 1, 'vertices': 2}[part]
+    vals = [SOLIDS[s][i] for s in shapes]
+    return sum(vals), {'each': ' and '.join('a %s has %d %s' % (s, v, part) for s, v in zip(shapes, vals))}
+
+
+@kind
+def unit_convert(factor, big, small):
+    return big * factor + small, {'bigpart': big * factor}
+
+
+@kind
+def fraction_diff(n, f1, f2):
+    a, b = Fr(n) * Fr(*f1), Fr(n) * Fr(*f2)
+    assert a == int(a) and b == int(b)
+    return int(abs(a - b)), {'a': int(a), 'b': int(b)}
+
+
+# ================================================================== Level 3 structures
+@kind
+def elapsed_overnight(h1, m1, h2, m2):
+    a, b = h1 * 60 + m1, h2 * 60 + m2
+    d = b - a if b > a else b - a + 24 * 60
+    return d, {'to_midnight': 24 * 60 - a, 'after': b}
+
+
+@kind
+def times_as_many(k, ask, total=None, diff=None):
+    """One amount is k times the other.  total = both together, diff = how much bigger the large one is.  ask: small / large."""
+    if total is not None:
+        assert total % (k + 1) == 0
+        small = total // (k + 1)
+    else:
+        assert diff % (k - 1) == 0
+        small = diff // (k - 1)
+    return (small if ask == 'small' else small * k), {'small': small, 'large': small * k, 'units': k + 1 if total is not None else k - 1}
+
+
+@kind
+def equiv_fraction(n1, d1, d2):
+    assert (n1 * d2) % d1 == 0
+    return n1 * d2 // d1, {'scale': Fr(d2, d1)}
+
+
+@kind
+def quarter_turns(a, b):
+    """Right angles turned by a clock hand moving clockwise from number a to number b on the clock face."""
+    steps = (b - a) % 12
+    assert steps % 3 == 0
+    return steps // 3, {'steps': steps}
+
+
+# ================================================================== Level 4 structures
+@kind
+def series_gap(values, ask):
+    gaps = [b - a for a, b in zip(values, values[1:])]
+    if ask == 'biggest_rise':
+        i = max(range(len(gaps)), key=lambda j: gaps[j])
+    else:
+        i = min(range(len(gaps)), key=lambda j: gaps[j])
+    return abs(gaps[i]), {'gaps': ', '.join(str(abs(g)) for g in gaps), 'from': values[i], 'to': values[i + 1], 'at': i + 1,
+                          'sgaps': ', '.join(('+%d' % g) if g > 0 else ('\u2212%d' % -g) if g < 0 else '0' for g in gaps)}
+
+
+# ================================================================== Level 5 structures
+@kind
+def pct_add(price, p):
+    return Fr(price) * (100 + p) / 100, {'extra': Fr(price) * p / 100}
+
+
+@kind
+def distance(v, h, m):
+    return Fr(v) * (Fr(h) + Fr(m, 60)), {'hours': Fr(h) + Fr(m, 60)}
+
+
+@kind
+def volume_litres(l, w, h):
+    assert (l * w * h) % 1000 == 0
+    return l * w * h // 1000, {'cm3': l * w * h}
+
+
+@kind
+def decimal_convert(value, factor):
+    return Fr(value) * factor, {}
+
+
+# ================================================================== Level 6 structures
+@kind
+def fib_like(a, b, n):
+    t = [a, b]
+    while len(t) < n:
+        t.append(t[-1] + t[-2])
+    return t[n - 1], {'terms': _j(t[:6]), 'all': _j(t)}
+
+
+@kind
+def int_sum(lo, hi):
+    return sum(range(lo, hi + 1)), {'count': hi - lo + 1}
+
+
+@kind
+def substitute(expr, vals):
+    return Fr(eval(expr, {}, {k: Fr(v) for k, v in vals.items()})), {}
+
+
+def _isprime(n):
+    return n > 1 and all(n % d for d in range(2, math.isqrt(n) + 1))
+
+
+@kind
+def prime_sum_pairs(n):
+    prs = [(p, n - p) for p in range(2, n // 2 + 1) if _isprime(p) and _isprime(n - p)]
+    return len(prs), {'list': ', '.join('%d + %d' % x for x in prs)}
+
+
+@kind
+def choose(n, k):
+    return math.comb(n, k), {}
+
+
+@kind
+def last_digit(base, exp):
+    return pow(base, exp, 10), {'cycle': _j(pow(base, i, 10) for i in range(1, 6))}
+
+
+@kind
+def while_count(start, mult, limit, ask):
+    x, c = start, 0
+    lines = ['x = %d' % start, 'count = 0', 'while x < %d:' % limit, '    x = x * %d' % mult, '    count = count + 1']
+    while x < limit:
+        x *= mult
+        c += 1
+    return (c if ask == 'count' else x), {'code': '\n'.join(lines), 'final': x, 'rounds': c}
+
+
+@kind
+def pct_express(part, whole):
+    return Fr(part * 100, whole), {}
+
+
+SOLVE_NAMES = list(SOLVE)

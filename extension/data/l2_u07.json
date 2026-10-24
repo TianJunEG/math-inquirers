@@ -1,0 +1,1008 @@
+{
+ "schema_version": 1,
+ "level": 2,
+ "unit": 7,
+ "id": "L2U07",
+ "title": "Fair shares",
+ "topic": "Fractions",
+ "holiday_lesson": 7,
+ "goal": "I can name fractions of a whole. I can compare fractions and add like fractions. I can solve fair-sharing stories with a bar.",
+ "learn": {
+  "intro": "A fraction names equal parts of one whole. The bottom number says how many equal parts the whole is cut into. The top number says how many parts we take.",
+  "example": {
+   "problem": "Kumar cuts a pizza into 8 equal slices. He eats 3 slices. What fraction did he eat? What fraction is left?",
+   "figure": {
+    "type": "l2_frac",
+    "items": [
+     {
+      "kind": "bar",
+      "n": 8,
+      "shaded": 3,
+      "w": 400
+     }
+    ],
+    "width_mm": 60
+   },
+   "side": false,
+   "steps": [
+    "The slices are equal. There are 8 of them: the bottom number is 8.",
+    "He eats 3 slices: the top number is 3. He ate 3/8.",
+    "Slices left: 8 - 3 = 5. So 5/8 is left.",
+    "Check: 3/8 + 5/8 = 8/8 = 1 whole pizza."
+   ],
+   "answer": "He ate 3/8. 5/8 is left."
+  },
+  "example2": {
+   "problem": "The number line goes from 0 to 1 in 4 equal steps. What fraction does the arrow show?",
+   "figure": {
+    "type": "l2_frac",
+    "items": [
+     {
+      "kind": "line",
+      "n": 4,
+      "arrows": [
+       {
+        "k": 3,
+        "label": "?"
+       }
+      ],
+      "w": 320
+     }
+    ],
+    "width_mm": 62
+   },
+   "steps": [
+    "Each step is 1/4.",
+    "The arrow is 3 steps from 0: 3/4."
+   ],
+   "answer": "The arrow shows 3/4."
+  },
+  "pair": true,
+  "tight": true,
+  "howto": {
+   "title": "How to name a fraction",
+   "steps": [
+    "Check that the parts are equal.",
+    "Count all the parts: the bottom number.",
+    "Count the parts you take: the top number.",
+    "Same bottom number? Just add or subtract the tops."
+   ]
+  },
+  "facts": {
+   "title": "Remember",
+   "lines": [
+    "More parts means smaller parts: 1/6 is less than 1/4.",
+    "Like fractions: 2/7 + 3/7 = 5/7. The bottom number stays.",
+    "All the parts make 1 whole: 7/7 = 1."
+   ]
+  },
+  "try": {
+   "id": "L2U07-L01",
+   "text": "Mei cuts a cake into 10 equal slices and eats 3. The part of the cake left is {bw}",
+   "answer": {
+    "value": [
+     "7/10"
+    ],
+    "text": "7/10"
+   },
+   "explanation": "10 - 3 = 7 slices are left. Each slice is 1/10, so 7/10 is left. Check: 3/10 + 7/10 = 10/10 = 1 whole."
+  }
+ },
+ "items": [
+  {
+   "id": "L2U07-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "Each shape is cut into 4 parts. Is each shape cut into quarters (4 EQUAL parts)?",
+   "figure": {
+    "type": "l2_frac",
+    "items": [
+     {
+      "kind": "bar",
+      "n": 4,
+      "shaded": 1,
+      "w": 230,
+      "label": "A"
+     },
+     {
+      "kind": "bar",
+      "widths": [
+       1,
+       1,
+       1,
+       3
+      ],
+      "shaded": 1,
+      "w": 230,
+      "label": "B"
+     },
+     {
+      "kind": "circle",
+      "n": 4,
+      "shaded": 1,
+      "label": "C",
+      "r": 62
+     },
+     {
+      "kind": "circle",
+      "angles": [
+       120,
+       90,
+       90,
+       60
+      ],
+      "shaded": 1,
+      "label": "D",
+      "r": 62
+     },
+     {
+      "kind": "sq",
+      "style": "diag",
+      "shaded": [
+       0
+      ],
+      "label": "E",
+      "s": 112
+     },
+     {
+      "kind": "sq",
+      "style": "unequal",
+      "widths": [
+       1,
+       1,
+       1,
+       3
+      ],
+      "shaded": [
+       0
+      ],
+      "label": "F",
+      "s": 112
+     }
+    ],
+    "max_w": 1300,
+    "width_mm": 150
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "A   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "Yes"
+      ],
+      "text": "Yes"
+     }
+    },
+    {
+     "label": "b",
+     "text": "B   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    },
+    {
+     "label": "c",
+     "text": "C   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "Yes"
+      ],
+      "text": "Yes"
+     }
+    },
+    {
+     "label": "d",
+     "text": "D   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    },
+    {
+     "label": "e",
+     "text": "E   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "Yes"
+      ],
+      "text": "Yes"
+     }
+    },
+    {
+     "label": "f",
+     "text": "F   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    }
+   ],
+   "explanation": "Quarters must be 4 parts of the SAME size. A, C and E are quarters. In B and F one part is much greater than the other three. In D the parts are not the same size. In E the four triangles are all the same size.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U07-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "Write the shaded fraction. Write the fraction not shaded.",
+   "figure": {
+    "type": "l2_frac",
+    "items": [
+     {
+      "kind": "circle",
+      "n": 5,
+      "shaded": 2,
+      "label": "A",
+      "r": 62
+     },
+     {
+      "kind": "bar",
+      "n": 8,
+      "shaded": 6,
+      "w": 250,
+      "label": "B"
+     },
+     {
+      "kind": "bar",
+      "n": 12,
+      "shaded": 5,
+      "w": 300,
+      "label": "C"
+     }
+    ],
+    "max_w": 860,
+    "width_mm": 150
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "A: shaded {bw}   not shaded {bw}",
+     "answer": {
+      "value": [
+       "2/5",
+       "3/5"
+      ],
+      "text": "2/5 and 3/5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "B: shaded {bw}   not shaded {bw}",
+     "answer": {
+      "value": [
+       "6/8",
+       "2/8"
+      ],
+      "text": "6/8 and 2/8"
+     }
+    },
+    {
+     "label": "c",
+     "text": "C: shaded {bw}   not shaded {bw}",
+     "answer": {
+      "value": [
+       "5/12",
+       "7/12"
+      ],
+      "text": "5/12 and 7/12"
+     }
+    },
+    {
+     "label": "d",
+     "text": "To make 8/12 shaded in C, shade {b} more parts.",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    }
+   ],
+   "explanation": "The bottom number is the number of equal parts. (a) 2/5 and 3/5. (b) 6/8 and 2/8. (c) 5/12 and 7/12. (d) 8/12 needs 8 shaded parts. 5 are shaded, so 3 more."
+  },
+  {
+   "id": "L2U07-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "The whole is 1. Fill in the missing number.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "6/6 = {b} whole",
+     "answer": {
+      "value": [
+       "1"
+      ],
+      "text": "1"
+     }
+    },
+    {
+     "label": "b",
+     "text": "1 whole = 9/{b}",
+     "answer": {
+      "value": [
+       "9"
+      ],
+      "text": "9"
+     }
+    },
+    {
+     "label": "c",
+     "text": "4/8 + {b}/8 = 1",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    }
+   ],
+   "explanation": "(a) 6 sixths make 1 whole. (b) 1 whole cut into 9 equal parts is 9/9. (c) 1 whole is 8/8, and 8 - 4 = 4, so 4/8 + 4/8 = 1.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U07-S04",
+   "tier": "start",
+   "page": 2,
+   "text": "The fraction wall shows bars of the same length. One part of each bar is shaded.",
+   "figure": {
+    "type": "l2_frac",
+    "items": [
+     {
+      "kind": "wall",
+      "rows": [
+       1,
+       2,
+       3,
+       4,
+       6,
+       8
+      ],
+      "shaded": {
+       "2": 0,
+       "3": 0,
+       "4": 0,
+       "6": 0,
+       "8": 0
+      },
+      "w": 480
+     }
+    ],
+    "width_mm": 120
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Which is greater?   {circ:1/3|1/4}",
+     "answer": {
+      "value": [
+       "1/3"
+      ],
+      "text": "1/3"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Which is smaller?   {circ:1/6|1/8}",
+     "answer": {
+      "value": [
+       "1/8"
+      ],
+      "text": "1/8"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Smallest first:  1/2,  1/6,  1/4,  1/8      {ll}",
+     "answer": {
+      "value": [
+       "1/8",
+       "1/6",
+       "1/4",
+       "1/2"
+      ],
+      "text": "1/8, 1/6, 1/4, 1/2",
+      "list": true
+     }
+    }
+   ],
+   "explanation": "The more parts a bar is cut into, the smaller each part. (a) Thirds are greater than quarters. (b) Eighths are smaller than sixths. (c) Order: 1/8, 1/6, 1/4, 1/2."
+  },
+  {
+   "id": "L2U07-S05",
+   "tier": "start",
+   "page": 2,
+   "text": "The same bottom number means the same size parts. Circle the greater fraction.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Circle:  {circ:3/10|6/10}",
+     "answer": {
+      "value": [
+       "6/10"
+      ],
+      "text": "6/10"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Circle:  {circ:7/12|5/12}",
+     "answer": {
+      "value": [
+       "7/12"
+      ],
+      "text": "7/12"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Smallest first:  6/7,  2/7,  4/7     {ll}",
+     "answer": {
+      "value": [
+       "2/7",
+       "4/7",
+       "6/7"
+      ],
+      "text": "2/7, 4/7, 6/7",
+      "list": true
+     }
+    }
+   ],
+   "explanation": "When the bottom numbers are the same, the parts are the same size, so more parts is greater. (a) 6/10 is greater than 3/10. (b) 7/12 is greater than 5/12. (c) 2/7, 4/7, 6/7.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U07-S06",
+   "tier": "start",
+   "page": 2,
+   "text": "Add or take away. The bottom number stays the same.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "3/12 + 6/12 = {bw}",
+     "answer": {
+      "value": [
+       "9/12"
+      ],
+      "text": "9/12"
+     }
+    },
+    {
+     "label": "b",
+     "text": "7/8 - 2/8 = {bw}",
+     "answer": {
+      "value": [
+       "5/8"
+      ],
+      "text": "5/8"
+     }
+    },
+    {
+     "label": "c",
+     "text": "1 - 3/5 = {bw}",
+     "answer": {
+      "value": [
+       "2/5"
+      ],
+      "text": "2/5"
+     }
+    },
+    {
+     "label": "d",
+     "text": "4/9 + {bw} = 1",
+     "answer": {
+      "value": [
+       "5/9"
+      ],
+      "text": "5/9"
+     }
+    }
+   ],
+   "explanation": "(a) 3 twelfths + 6 twelfths = 9 twelfths. (b) 7 eighths - 2 eighths = 5 eighths. (c) 1 whole is 5/5, and 5/5 - 3/5 = 2/5. (d) 1 whole is 9/9, and 9/9 - 4/9 = 5/9.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U07-S07",
+   "tier": "start",
+   "page": 3,
+   "text": "A pizza is cut into 10 equal slices. Siti eats the slices marked S. Ravi eats the slices marked R.",
+   "figure": {
+    "type": "l2_frac",
+    "items": [
+     {
+      "kind": "bar",
+      "n": 10,
+      "shaded": [],
+      "w": 480,
+      "marks": {
+       "0": "S",
+       "1": "S",
+       "2": "S",
+       "3": "R",
+       "4": "R",
+       "5": "R",
+       "6": "R"
+      }
+     }
+    ],
+    "width_mm": 130
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "They eat {bw} of the pizza altogether.",
+     "answer": {
+      "value": [
+       "7/10"
+      ],
+      "text": "7/10"
+     }
+    },
+    {
+     "label": "b",
+     "text": "{bw} of the pizza is left.",
+     "answer": {
+      "value": [
+       "3/10"
+      ],
+      "text": "3/10"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Who eats more?   {circ:Siti|Ravi}",
+     "answer": {
+      "value": [
+       "Ravi"
+      ],
+      "text": "Ravi"
+     }
+    },
+    {
+     "label": "d",
+     "text": "Ravi eats {bw} more than Siti.",
+     "answer": {
+      "value": [
+       "1/10"
+      ],
+      "text": "1/10"
+     }
+    }
+   ],
+   "explanation": "Siti ate 3 slices and Ravi ate 4 slices. (a) 3/10 + 4/10 = 7/10. (b) 10/10 - 7/10 = 3/10. (c) 4 is more than 3, so Ravi. (d) 4/10 - 3/10 = 1/10."
+  },
+  {
+   "id": "L2U07-S08",
+   "tier": "start",
+   "page": 3,
+   "text": "A cake is shared equally among 5 children.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Each child gets {bw} of the cake.",
+     "answer": {
+      "value": [
+       "1/5"
+      ],
+      "text": "1/5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Kumar and Mei are 2 of the children. Together they get {bw}.",
+     "answer": {
+      "value": [
+       "2/5"
+      ],
+      "text": "2/5"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The other children get {bw} together.",
+     "answer": {
+      "value": [
+       "3/5"
+      ],
+      "text": "3/5"
+     }
+    }
+   ],
+   "explanation": "(a) 5 equal shares: each is 1/5. (b) 1/5 + 1/5 = 2/5. (c) The whole is 5/5. 5/5 - 2/5 = 3/5."
+  },
+  {
+   "id": "L2U07-S09",
+   "tier": "start",
+   "page": 3,
+   "text": "The number line goes from 0 to 1. It is cut into 8 equal steps.",
+   "figure": {
+    "type": "l2_frac",
+    "items": [
+     {
+      "kind": "line",
+      "n": 8,
+      "arrows": [
+       {
+        "k": 3,
+        "label": "A"
+       },
+       {
+        "k": 7,
+        "label": "B"
+       }
+      ],
+      "w": 560
+     }
+    ],
+    "width_mm": 150
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Arrow A shows {bw}",
+     "answer": {
+      "value": [
+       "3/8"
+      ],
+      "text": "3/8"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Arrow B shows {bw}",
+     "answer": {
+      "value": [
+       "7/8"
+      ],
+      "text": "7/8"
+     }
+    }
+   ],
+   "explanation": "Each step is 1/8. (a) A is 3 steps from 0: 3/8. (b) B is 7 steps from 0: 7/8."
+  },
+  {
+   "id": "L2U07-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "Ravi and Siti each have a pizza of the same size. Ravi eats 3/4 of his pizza. Siti eats 5/8 of hers.",
+   "figure": {
+    "type": "l2_frac",
+    "items": [
+     {
+      "kind": "bar",
+      "n": 4,
+      "shaded": 3,
+      "w": 420,
+      "label": "Ravi: 3/4"
+     },
+     {
+      "kind": "bar",
+      "n": 8,
+      "shaded": 5,
+      "w": 420,
+      "label": "Siti: 5/8"
+     }
+    ],
+    "max_w": 460,
+    "width_mm": 80
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Who eats more?   {circ:Ravi|Siti}",
+     "answer": {
+      "value": [
+       "Ravi"
+      ],
+      "text": "Ravi"
+     }
+    },
+    {
+     "label": "b",
+     "text": "How much more? {bw}",
+     "answer": {
+      "value": [
+       "1/8"
+      ],
+      "text": "1/8"
+     }
+    }
+   ],
+   "explanation": "The bars are the same length. 3/4 of the first bar covers 6 of the small eighths, because each quarter is 2 eighths. Siti eats 5 eighths. Ravi eats 6 eighths, so Ravi eats 1/8 more.",
+   "hint": "Line up the bars. Cut each quarter in 2 equal parts.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U07-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "Mei eats 1/4 of a pizza. Then Ali eats half of what is left.",
+   "figure": {
+    "type": "l2_frac",
+    "items": [
+     {
+      "kind": "bar",
+      "n": 8,
+      "shaded": [],
+      "w": 420,
+      "label": "Pizza bar"
+     }
+    ],
+    "width_mm": 70
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Left: {bw}",
+     "answer": {
+      "value": [
+       "3/4"
+      ],
+      "text": "3/4"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Ali eats: {bw}",
+     "answer": {
+      "value": [
+       "3/8"
+      ],
+      "text": "3/8"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Now left: {bw}",
+     "answer": {
+      "value": [
+       "3/8"
+      ],
+      "text": "3/8"
+     }
+    }
+   ],
+   "explanation": "(a) 1/4 eaten, so 3/4 is left. On the bar of 8 parts, 1/4 is 2 parts, and 6 parts are left. (b) Half of 6 parts is 3 parts: Ali eats 3/8. (c) 6 - 3 = 3 parts are left: 3/8.",
+   "hint": "Cut each part in 2 equal parts to make eighths.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U07-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "Two fractions have the bottom number 12. Together they make 1 whole. The greater one is 6/12 more.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Smaller: {bw}",
+     "answer": {
+      "value": [
+       "3/12"
+      ],
+      "text": "3/12"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Greater: {bw}",
+     "answer": {
+      "value": [
+       "9/12"
+      ],
+      "text": "9/12"
+     }
+    }
+   ],
+   "explanation": "The whole is 12/12. Take away the extra 6/12: 6/12 is left. Share it between the two equal parts: 3/12 and 3/12. Give the extra back to one of them: 3/12 and 9/12. Check: 3/12 + 9/12 = 12/12.",
+   "hint": "Take away the extra 6/12. Share what is left.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U07-G01",
+   "tier": "go",
+   "page": 5,
+   "text": "Equal fractions. Different fractions can cover the same length. 1/2 and 2/4 and 4/8 are equal.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "1/2 = {b}/6",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    },
+    {
+     "label": "b",
+     "text": "2/3 = {b}/6",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    },
+    {
+     "label": "c",
+     "text": "3/4 = {b}/8",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    }
+   ],
+   "explanation": "(a) A half of 6 sixths is 3 sixths. (b) A third is 2 sixths, so 2 thirds are 4 sixths. (c) A quarter is 2 eighths, so 3 quarters are 6 eighths.",
+   "hint": "Line up 2 bars of the same length. Cut one into more parts.",
+   "beyond": "Equal fractions",
+   "partsrow": true
+  },
+  {
+   "id": "L2U07-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "Nine equal pieces of cake are shared by 3 children. The shares must all be different. Each share is 1 piece or more.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many different ways are there? {b}",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    },
+    {
+     "label": "b",
+     "text": "In the way where the greatest share is 6/9, the other shares are {b}/9 and {b}/9.",
+     "answer": {
+      "value": [
+       "1",
+       "2"
+      ],
+      "text": "1/9 and 2/9"
+     }
+    }
+   ],
+   "explanation": "The 3 different numbers of pieces add to 9. With 1 piece for the smallest: 1 + 2 + 6 and 1 + 3 + 5. With 2 pieces: 2 + 3 + 4. 1 + 4 + 4 repeats a number. So 3 ways. The way with 6/9 is 1/9, 2/9 and 6/9.",
+   "hint": "Start with the smallest share, 1 piece. Then try 2.",
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   }
+  },
+  {
+   "id": "L2U07-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "Make your own fair-share story. Picture a cake with 8 equal pieces. Three people eat different shares and some is left. Write each share as a fraction. Many answers are right.",
+   "answer": {
+    "value": [
+     "open"
+    ],
+    "text": "Open. Example: Ali eats 3/8, Mei eats 2/8, Ben eats 1/8 and 2/8 is left. 3 + 2 + 1 + 2 = 8 eighths = 1 whole."
+   },
+   "explanation": "A good story has shares and leftovers that add to 8/8. Example: 3/8 + 2/8 + 1/8 + 2/8 = 8/8 = 1 whole.",
+   "hint": "Add all the shares and what is left. Do you get 8/8?",
+   "space": {
+    "rows": [
+     "My story:",
+     "Check: shares and what is left make 1 whole:"
+    ]
+   }
+  },
+  {
+   "id": "L2U07-G04",
+   "tier": "go",
+   "page": 5,
+   "text": "My top number is 1. I am less than 1/3 and more than 1/9. Which fractions fit? Find ALL of them.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "I could be:  {ll}",
+     "answer": {
+      "value": [
+       "1/4",
+       "1/5",
+       "1/6",
+       "1/7",
+       "1/8"
+      ],
+      "text": "1/4, 1/5, 1/6, 1/7, 1/8",
+      "list": true
+     }
+    },
+    {
+     "label": "b",
+     "text": "How many answers are there? {b}",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    }
+   ],
+   "explanation": "With 1 on top, the greater the bottom number, the smaller the fraction. 1/3 is too big and 1/9 is too small. 1/4, 1/5, 1/6, 1/7 and 1/8 are in between: 5 answers.",
+   "hint": "Greater bottom number, smaller part. Try 1/4, 1/5 ..."
+  },
+  {
+   "id": "L2U07-C01",
+   "tier": "quiz",
+   "text": "What fraction is shaded? {bw}",
+   "figure": {
+    "type": "l2_frac",
+    "items": [
+     {
+      "kind": "bar",
+      "n": 8,
+      "shaded": 5,
+      "w": 360
+     }
+    ],
+    "width_mm": 60
+   },
+   "answer": {
+    "value": [
+     "5/8"
+    ],
+    "text": "5/8"
+   },
+   "explanation": "The bar has 8 equal parts. 5 are shaded. The fraction is 5/8.",
+   "figright": true
+  },
+  {
+   "id": "L2U07-C02",
+   "tier": "quiz",
+   "text": "Which is greater?   {circ:1/5|1/9}",
+   "answer": {
+    "value": [
+     "1/5"
+    ],
+    "text": "1/5"
+   },
+   "explanation": "The more parts a whole is cut into, the smaller each part. 5 parts are greater than 9 parts, so 1/5 is greater."
+  },
+  {
+   "id": "L2U07-C03",
+   "tier": "quiz",
+   "text": "2/7 + 4/7 = {bw}",
+   "answer": {
+    "value": [
+     "6/7"
+    ],
+    "text": "6/7"
+   },
+   "explanation": "2 sevenths + 4 sevenths = 6 sevenths. The bottom number stays 7."
+  },
+  {
+   "id": "L2U07-C04",
+   "tier": "quiz",
+   "text": "A pizza has 12 slices. Ali eats 5/12 and Mei eats 3/12. What is left, in twelfths? {bw}",
+   "answer": {
+    "value": [
+     "4/12"
+    ],
+    "text": "4/12"
+   },
+   "explanation": "5/12 + 3/12 = 8/12 eaten. 12/12 - 8/12 = 4/12 is left."
+  }
+ ],
+ "snug": [
+  "start1",
+  "start2",
+  "start3"
+ ]
+}

@@ -2,6 +2,8 @@
 // rounding and rounding backwards, digit-card decimals, money and mass puzzles with bar models)
 // Every answer below was worked out and checked (the "find all" and riddle items with a short Python script).
 
+const tip = require('../tip.js');
+const FG = require('../../levels/figs_l4_6.js');
 const NAVY = '#1B2A49', YEL = '#FFC93C', SKY = '#DDEBF7', TEAL = '#1F7A6F', WHITE = '#FFFFFF', RED = '#D64545';
 const T = (x, y, s, size = 16, fill = NAVY, anchor = 'middle', weight = 700) => `<text x="${x}" y="${y}" font-size="${size}" font-weight="${weight}" text-anchor="${anchor}" fill="${fill}" font-family="Arial">${s}</text>`;
 
@@ -21,11 +23,9 @@ const nline = (y, left, right, arrows, n = 10) => {
   return s;
 };
 const lines3 = () => {
-  let s = `<svg aria-label="Three number lines. Line a from 6 to 7 with arrows A and B. Line b from 4.5 to 4.6 with arrows C and D. Line c from 0.24 to 0.25 with arrow E." viewBox="0 0 600 296" xmlns="http://www.w3.org/2000/svg" style="width:400px;max-width:100%">`;
-  s += T(18, 82, '(a)', 16, TEAL, 'start') + nline(76, '6', '7', [[3, 'A'], [8.5, 'B']]);
-  s += T(18, 172, '(b)', 16, TEAL, 'start') + nline(166, '4.5', '4.6', [[3, 'C'], [8, 'D']]);
-  s += T(18, 262, '(c)', 16, TEAL, 'start') + nline(256, '0.24', '0.25', [[7, 'E']]);
-  return s + '</svg>';
+  const mk = (tag, min, max, mid, marks, dp) => FG.lineParts({ w: 600, x0: 80, x1: 560, min, max, major: (max - min) / 2, minor: (max - min) / 10, tag, marks: marks.map(([v, t]) => ({ v: min + v * (max - min) / 10, t })), fmt: v => v.toFixed(dp).replace(/\.?0+$/, '') || '0', size: 19 });
+  return FG.stackSvg([mk('(a)', 6, 7, 6.5, [[3, 'A'], [8.5, 'B']], 2), mk('(b)', 4.5, 4.6, 4.55, [[3, 'C'], [8, 'D']], 3), mk('(c)', 0.24, 0.25, 0.245, [[7, 'E']], 3)],
+    'Three number lines, each with 10 equal steps and the two ends and the middle labelled. Line a from 6 to 7 with arrows A and B. Line b from 4.5 to 4.6 with arrows C and D. Line c from 0.24 to 0.25 with arrow E.');
 };
 // Q6 picture: two scales, the full box and the empty box
 const scales = () => {
@@ -39,31 +39,43 @@ const scales = () => {
     }
     return g;
   };
-  return `<svg aria-label="A box with 6 cans on a scale reads 2.85 kg. The empty box on a scale reads 0.45 kg." viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg" style="width:340px;max-width:100%">` +
+  return `<svg aria-label="A box with 6 cans on a scale reads 2.85 kg. The empty box on a scale reads 0.45 kg." viewBox="0 24 600 190" xmlns="http://www.w3.org/2000/svg" style="width:340px;max-width:100%">` +
     scale(160, '2.85 kg', 6) + scale(440, '0.45 kg', 0) + T(160, 40, 'box with 6 cans', 16, TEAL) + T(440, 40, 'empty box', 16, TEAL) + '</svg>';
 };
 
 // Q3 scaffold: number line from 7.30 to 7.50 in hundredths (labels only at 7.3, 7.4, 7.5)
 const roundLine = () => {
-  const x0 = 40, W = 520, y = 60;
-  let sv = `<svg aria-label="A number line from 7.30 to 7.50 marked in hundredths, with 7.3, 7.4 and 7.5 labelled and a dot at 7.4" viewBox="0 0 600 110" width="400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">`;
+  const x0 = 40, W = 520, y = 34;
+  let sv = `<svg aria-label="A number line from 7.30 to 7.50 marked in hundredths, with 7.3, 7.4 and 7.5 labelled and a dot at 7.4" viewBox="0 0 600 84" width="400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">`;
   sv += `<line x1="${x0 - 10}" y1="${y}" x2="${x0 + W + 10}" y2="${y}" stroke="${NAVY}" stroke-width="3"/>`;
   for (let i = 0; i <= 20; i++) {
     const x = x0 + i * W / 20, big = i % 10 === 0;
     sv += `<line x1="${x}" y1="${y - (big ? 14 : 8)}" x2="${x}" y2="${y + (big ? 14 : 8)}" stroke="${NAVY}" stroke-width="${big ? 4 : 2}"/>`;
-    if (big) sv += T(x, y + 40, '7.' + (3 + i / 10), 20);
+    if (big) sv += T(x, y + 38, '7.' + (3 + i / 10), 20);
   }
   sv += `<circle cx="${x0 + W / 2}" cy="${y}" r="9" fill="${YEL}" stroke="${NAVY}" stroke-width="3"/>`;
   return sv + '</svg>';
 };
 // Q6 scaffold: a bar of 6 equal parts for the cans
 const canBar = () => {
-  let sv = `<svg aria-label="A bar cut into 6 equal parts, one part for each can. The whole bar is the mass of all 6 cans." viewBox="0 0 600 100" width="400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">`;
+  let sv = `<svg aria-label="A bar cut into 6 equal parts, one part for each can. The whole bar is the mass of all 6 cans." viewBox="0 6 600 90" width="400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%">`;
   sv += `<path d="M60 44 Q60 30 74 30 L290 30 Q300 30 300 20 Q300 30 310 30 L526 30 Q540 30 540 44" fill="none" stroke="${NAVY}" stroke-width="2.5"/>` + T(300, 16, 'all 6 cans together', 16, TEAL);
   for (let i = 0; i < 6; i++) sv += `<rect x="${60 + i * 80}" y="50" width="80" height="40" fill="${WHITE}" stroke="${NAVY}" stroke-width="3"/>` + T(100 + i * 80, 76, 'can', 15, '#8A94AD');
   return sv + '</svg>';
 };
 
+const jugFig = () => {
+  const { T, R, L, N, TEAL } = FG; let g = '';
+  [[150, 'full', 'jug full of water', '1.45 kg', 0], [450, 'half', 'jug half full', '0.85 kg', 1]].forEach(([cx, _k, cap, kg, half]) => {
+    const top = 20, h = 130, w = 90;
+    g += R(cx - w / 2, top, w, h, { w: 4 });
+    const lvl = half ? h / 2 : h - 6;
+    g += `<rect x="${cx - w / 2 + 2}" y="${top + h - lvl}" width="${w - 4}" height="${lvl - 2}" fill="url(#mi-dots)"/>`;
+    g += L(cx - w / 2 - 6, top + h / 2, cx - w / 2 + 12, top + h / 2, { w: 3 });
+    g += T(cx, top + h + 26, cap, { size: 18 }) + T(cx, top + h + 52, 'scale reads ' + kg, { size: 19, fill: TEAL });
+  });
+  return FG.svg(600, 230, g, 'Two jugs. The first is full of water and the scale reads 1.45 kilograms. The second is half full and the scale reads 0.85 kilograms.');
+};
 module.exports = {
   lesson: {
     n: 5, week: 3, session: 'A', title: 'Decimal Detectives', topic: 'Decimals',
@@ -96,18 +108,21 @@ module.exports = {
     think: ['“Where is the arrow? Between 2.3 and 2.4. I zoom in. That gap is cut into 10 equal steps, so each step is one hundredth, 0.01. The arrow is 6 steps past 2.3, so it is 2.36.”', '“Which is bigger, 4.37 or 4.307? I line up the points. Same ones, same tenths. Hundredths: 7 and 0. 7 hundredths is more, so 4.37 is bigger, even though 4.307 has more digits.”', '“A number with 2 decimal places rounds to 3.8. I look at the number line. The halfway marks are 3.75 and 3.85. 3.75 rounds up to 3.8, so it is the smallest. 3.85 would round up to 3.9, so the largest is 3.84.”'],
     circulate: ['Ask: “What is one small step worth on this number line? How do you know?”', 'Ask: “Line up the decimal points. Which place do you compare first?”', 'Ask: “Would this number round up or down? Where is the halfway mark?”'],
     hints: ['Hint 1: “Write each number in the place-value chart. Fill empty places with 0.”', 'Hint 2: “Count the steps between the two labelled marks. Divide the gap by the number of steps.”', 'Hint 3: “For bars: take away the extra part first, then share the rest equally.”'],
-    talk: ['“Ben says 3.405 is bigger than 3.45 because 405 is bigger than 45. Who agrees? How can we check?”', '“Why does adding a zero to the end of 3.45 not change it, but putting a zero after the point (3.045) does?”'],
-    talkAns: 'Ben is wrong. Line up the points: 3.405 and 3.450. The ones and tenths are the same; 0 hundredths is less than 5 hundredths, so 3.405 < 3.45. 3.45 = 3.450 because 0 thousandths adds nothing, but 3.045 moves the 4 into the hundredths place, so it is a different, smaller number.',
+    talk: ["“Ben says 3.405 is bigger than 3.45 because 405 is bigger than 45. Who agrees? How can we check?”"],
+    talkWeekly: ["“Why does adding a zero to the end of 3.45 not change it, but putting a zero after the point (3.045) does?”"],
+    talkAns: "Ben is wrong. Line up the points: 3.405 and 3.450. The ones and tenths are the same; 0 hundredths is less than 5 hundredths, so 3.405 < 3.45.",
+    talkWeeklyAns: "3.45 = 3.450 because 0 thousandths adds nothing, but 3.045 moves the 4 into the hundredths place, so it is a different, smaller number.",
     close: ['“Today you zoomed in on number lines, lined up the points, and worked rounding backwards. Detectives check every clue, and you did. Well done, inquirers!”']
   },
 
   deck: {
     today: 'Zoom in on number lines, order decimals to 3 places, round and work backwards from a rounded number, and solve money and mass puzzles.',
     warmGame: 'Target 5. Draw three empty boxes with a decimal point after the first. The tutor turns over digit cards one at a time; write each digit in a box straight away. The number closest to 5 wins.',
-    warmQs: [['What is the 7 worth in 3.475?', '7 hundredths (0.07)'], ['Write 6 tenths and 4 thousandths as a decimal.', '0.604'], ['Which is bigger: 0.8 or 0.75?', '0.8 (0.80 > 0.75)'], ['Round 4.68 to 1 decimal place.', '4.7'], ['How much more than $3.05 is $5?', '$1.95']],
+    warmQs: [["What is the 7 worth in 3.475?", "7 hundredths (0.07)"], ["Write 6 tenths and 4 thousandths as a decimal.", "0.604"], ["Which is bigger: 0.8 or 0.75?", "0.8 (0.80 > 0.75)"]],
+    warmWeekly: [["Round 4.68 to 1 decimal place.", "4.7"], ["How much more than $3.05 is $5?", "$1.95"]],
     expSetup: ['Take the digit cards 2, 5, 8 and the decimal point card.', 'Make a decimal with all four cards. The point goes between two digits.', 'Make as many different numbers as you can. Write each one down.', 'Put them in order. Which one is closest to 5?'],
     expPic: 'digit cards 2, 5 and 8 and a decimal point card, with an example 25.8 and the question “Which is closest to 5?”',
-    expAsk: [['How many different numbers did you make?', '12: six with 2 decimal places (2.58 … 8.52) and six with 1 decimal place (25.8 … 85.2).'], ['Which is the smallest? The largest?', '2.58 and 85.2.'], ['Which number is closest to 5? How do you know?', '5.28: it is only 0.28 away. 2.85 is 2.15 away.']],
+    expAsk: [["How many different numbers did you make?", "12: six with 2 decimal places (2.58 … 8.52) and six with 1 decimal place (25.8 … 85.2)."], ["Which is the smallest? The largest?", "2.58 and 85.2."]],
     mini1: { head: 'Order: 4.307, 4.37, 4.073, 4.3', body: ['Line up the decimal points in a place-value chart.', 'Fill empty places with 0: 4.300, 4.307, 4.370, 4.073.', 'Compare the tenths first, then the hundredths, then the thousandths.'], ans: '4.073, 4.3, 4.307, 4.37' },
     mini2: { head: 'Rounding backwards', body: ['A number with 2 decimal places rounds to 3.8 (to 1 decimal place).', 'The halfway marks are 3.75 and 3.85.', 'What is the smallest it can be? The largest?'], ans: 'Smallest 3.75, largest 3.84 (3.85 rounds to 3.9).' },
     keyHead: 'Key idea: line up the points',
@@ -128,7 +143,7 @@ module.exports = {
       { q: 'A number line from 3 to 4 has 10 equal steps. An arrow points to the 6th step after 3. What number is it? Now zoom in on the gap between that number and the next step, and cut it into 10 smaller steps. A new arrow points to the 5th small step. What number is that?', a: '3.6, then 3.65.' }
     ],
     stretch: [
-      { q: 'Find ALL the digits that the letter A can be: 3.A5 < 3.42 (A is one digit)', a: '0, 1, 2 and 3 (3.45 is more than 3.42)' },
+      { q: 'Find ALL the digits that can go in the box: 3.□5 < 3.42 (one digit in the box)', a: '0, 1, 2 and 3 (3.45 is more than 3.42)' },
       { q: 'A number with 2 decimal places rounds to 10 when rounded to the nearest whole number. What is the smallest it can be? The largest?', a: 'Smallest 9.50, largest 10.49' },
       { q: 'What number is halfway between 2.6 and 2.7? What number is halfway between 2.6 and 2.61?', a: '2.65 and 2.605' },
       { q: 'Mystery decimal. I have 3 decimal places and I am between 4 and 5. Rounded to 1 decimal place, I am 4.7. My hundredths digit is 2 more than my tenths digit. My digits add up to 25. Who am I?', a: '4.687 (rounds to 4.7, so tenths 6 or 7; tenths 7 would make hundredths 9, 4.79…, too big; so 4.68_ and 4 + 6 + 8 + 7 = 25).' },
@@ -148,8 +163,8 @@ module.exports = {
       { q: 'A pen costs $0.85 more than a pencil. 2 pens and 1 pencil cost $4.70 altogether. How much does a pencil cost?', a: '$1.00 (3 pencils + $1.70 = $4.70, so 3 pencils cost $3.00; a pen costs $1.85)' },
       { q: 'How many numbers with exactly 2 decimal places are between 3.9 and 4.1? (Do not count 3.9 and 4.1.)', a: '19 (3.91 to 3.99 is 9, 4.00 to 4.09 is 10)' },
       { q: 'Make up your own "closest to" puzzle. Choose four digit cards and a decimal point (the point goes between two digits). Pick a target number and find the number with 2 decimal places that is closest to it. Then ask: what if the target changes? Swap puzzles with a partner and check each other’s answers.', a: 'Puzzles will vary: check by listing every number that can be made. Model: cards 3, 5, 6, 9 and target 40: the closest is 39.65 (0.35 away); the next is 39.56 (0.44 away). What if the target is 50? Then the closest is 53.69 (3.69 away); the closest below 50 is 39.65, which is 10.35 away.' },
-      { q: 'Ali, Ben and Siti share $9.20. Ben gets $0.50 more than Ali. Siti gets $1.30 more than Ben. How much does each child get?', a: 'Ali $2.30, Ben $2.80, Siti $4.10 (take away $0.50 + $1.80 = $2.30, then $6.90 ÷ 3 = $2.30)' },
-      { q: 'A jug full of water weighs 1.45 kg. When it is half full, it weighs 0.85 kg. What is the mass of the empty jug?', a: '0.25 kg (half the water is 1.45 − 0.85 = 0.6 kg, all the water is 1.2 kg, jug = 1.45 − 1.2)' }
+      { q: 'Ali, Ben and Siti share $9.20. Ben gets $0.50 more than Ali. Siti gets $1.30 more than Ben. How much does each child get?', fig: FG.barModel({ left: 70, right: 150, rows: [{ name: 'Ali', segs: [{ u: 3 }] }, { name: 'Ben', segs: [{ u: 3 }, { u: 0.8, f: 'shade', t: '$0.50', size: 15 }] }, { name: 'Siti', segs: [{ u: 3 }, { u: 0.8, f: 'shade', t: '$0.50', size: 15 }, { u: 1.8, f: 'dots', t: '$1.30 more', size: 15 }] }], ann: [{ k: 'rbrace', r1: 0, r2: 2, at: 5.6, t: '$9.20' }], label: 'Three bars. Ali has a bar of 3 equal parts. Ben has the same bar and a shaded extra part of 50 cents. Siti has Ben’s bar and a dotted extra part of $1.30. A brace marks $9.20 altogether.' }), a: 'Ali $2.30, Ben $2.80, Siti $4.10 (take away $0.50 + $1.80 = $2.30, then $6.90 ÷ 3 = $2.30)' },
+      { q: 'A jug full of water weighs 1.45 kg. When it is half full, it weighs 0.85 kg. What is the mass of the empty jug?', fig: jugFig(), a: '0.25 kg (half the water is 1.45 − 0.85 = 0.6 kg, all the water is 1.2 kg, jug = 1.45 − 1.2)' }
     ]
   },
 
@@ -159,12 +174,14 @@ module.exports = {
     H.sub('', 'A = _______    B = _______    C = _______    D = _______    E = _______'),
     H.sub('f', 'Which arrow, A to E, shows a number that rounds to 7?  _____'),
     H.q(2, 'Order and compare.', { keepNext: true }),
-    H.sub('a', 'Write in order, smallest first:   3.405,   3.45,   3.054,   3.5,   3.045'),
-    H.sub('', '_________,  _________,  _________,  _________,  _________'),
+    tip('write each number with 3 decimal places (3.5 is 3.500). Compare tenths first.'),
+    H.sub('a', 'Write in order, smallest first:   3.405,   3.45,   3.054,   3.5,   3.045', { after: 40 }),
+    H.sub('', '_________,  _________,  _________,  _________,  _________', { after: 40 }),
     H.sub('b', 'Ben says 3.405 is bigger than 3.45 because 405 is bigger than 45. Is he right? Explain.'),
     ...H.lines(1),
     H.q(3, 'The rounding detective. A number has 2 decimal places. Rounded to 1 decimal place, it is 7.4. Use the number line: it is marked in hundredths.', { keepNext: true }),
     H.fig(roundLine()),
+    tip('7.45 is halfway between 7.4 and 7.5. Which marks on the line round to 7.4?'),
     H.sub('a', 'What is the smallest it can be?  ________     The largest?  ________'),
 
     H.q(4, 'Use the digit cards 3, 6, 9 and a decimal point card once each. The point goes after the FIRST digit, like 3.69.', { pb: true, before: 0, keepNext: true }),
@@ -173,8 +190,10 @@ module.exports = {
     H.sub('b', 'Which is the largest number?   ________'),
     H.sub('c', 'Which of your numbers is closest to 7?   ________'),
     H.sub('d', 'Two of your numbers round to 4 (to the nearest whole number). Which two?   ________   ________'),
-    H.q(5, 'Mei and Siti have $9.40 altogether. Mei has $1.20 more than Siti. How much money does each girl have? Draw a bar model.', { keepNext: true }),
-    ...H.lines(3),
+    H.q(5, 'Mei and Siti have $9.40 altogether. Mei has $1.20 more than Siti. How much money does each girl have? The bar model shows the two girls.', { keepNext: true }),
+    H.fig(FG.barModel({ left: 90, right: 160, rows: [{ name: 'Siti', segs: [{ u: 3 }] }, { name: 'Mei', segs: [{ u: 3 }, { u: 1, f: 'shade' }] }],
+      ann: [{ k: 'dim', row: 1, from: 3, to: 4, t: '$1.20 more' }, { k: 'rbrace', r1: 0, r2: 1, at: 4, t: '$9.40' }],
+      label: 'Two bars. Siti has a bar of 3 equal parts. Mei has the same bar plus a shaded extra part marked $1.20 more. A brace on the right marks $9.40 altogether.' })),
     H.sub('', 'Mei  $________          Siti  $________'),
     H.q(6, 'A box holds 6 cans that all have the same mass.', { keepNext: true }),
     H.fig(scales()),
@@ -216,10 +235,12 @@ module.exports.gaps = {
   "key": "(a) Any of 0.351 to 0.359, for example 0.355. (b) Exactly 9 numbers with 3 decimal places: 0.351, 0.352, … 0.359 (checked by brute force). (c) Siti is wrong. Between 0.35 and 0.351 there is 0.3505 (4 decimal places), and between 0.35 and 0.3505 there is 0.35025, and so on: there is no \"next\" decimal after 0.35, you can always find another. Look for place value reasoning (0.35 = 0.350, so 0.351 is a bit more) and for children who write the zeros to compare.",
   "easy": "Write 0.35 as 0.350 and 0.36 as 0.360. Now write ONE decimal that sits between them."
  },
- "reflect": "Something I did well: I wrote the extra zeros. The hardest part was comparing decimals with different numbers of digits. What helped me: adding zeros so they had the same length.",
+ "reflect": "Something I did well: I wrote the extra zeros. The hardest part was comparing decimals with different numbers of digits. What helped me: adding zeros so they had the same length. One thing I could try next: writing the zeros in a place-value chart.",
  "go2": {
   "q": "What if the target is 50 instead of 5? Which number with these cards is closest to 50?",
   "a": "52.8 (2.8 away). The next closest, 58.2, is 8.2 away."
  },
- "cap": "Page 2 is on your own. Aim for Q4 and Q5 first. Q6 is a choice for the last few minutes."
+ "cap": "Page 2 is on your own. Aim for Q4 and Q5 first. Q6 is a choice for the last few minutes.",
+ "p1": "After question 3 you may choose: carry on, or try Think harder.",
+ "plan": ["Aim for Q4 and Q5 on page 2. Q6 is the choice question for the end of the block."]
 };

@@ -1,0 +1,5 @@
+# Generic answer-format sentences that appear in many maths questions (7-word runs inside these are ignored by verify_bank.py).
+# Local to the daily teasers; the extension checker's own list is extension/verify/stock_phrases.txt.
+give your answer as a fraction in its simplest form
+give your answer as a mixed number
+as a fraction in its simplest form

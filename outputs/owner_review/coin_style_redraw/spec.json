@@ -1,0 +1,290 @@
+{
+ "coins": [
+  {
+   "key": "5c",
+   "cx_mm": 16.7,
+   "cy_mm": 218,
+   "r_mm": 6.7,
+   "real_dia": 16.75,
+   "material": "brass"
+  },
+  {
+   "key": "10c",
+   "cx_mm": 57.519999999999996,
+   "cy_mm": 218,
+   "r_mm": 7.4,
+   "real_dia": 18.5,
+   "material": "nickel"
+  },
+  {
+   "key": "20c",
+   "cx_mm": 100.03999999999999,
+   "cy_mm": 218,
+   "r_mm": 8.4,
+   "real_dia": 21.0,
+   "material": "nickel"
+  },
+  {
+   "key": "50c",
+   "cx_mm": 144.35999999999996,
+   "cy_mm": 218,
+   "r_mm": 9.200000000000001,
+   "real_dia": 23.0,
+   "material": "nickel"
+  },
+  {
+   "key": "$1",
+   "cx_mm": 190.14,
+   "cy_mm": 218,
+   "r_mm": 9.86,
+   "real_dia": 24.65,
+   "material": "bi"
+  }
+ ],
+ "notes": [
+  {
+   "key": "$2",
+   "x_mm": 10,
+   "y_mm": 36,
+   "w_mm": 75.6,
+   "h_mm": 37.8,
+   "real_w": 126,
+   "real_h": 63,
+   "colour": "purple",
+   "base": "#b9a4d8",
+   "deep": "#6b4a9e"
+  },
+  {
+   "key": "$5",
+   "x_mm": 108,
+   "y_mm": 36,
+   "w_mm": 79.8,
+   "h_mm": 39.6,
+   "real_w": 133,
+   "real_h": 66,
+   "colour": "green",
+   "base": "#a9d8b0",
+   "deep": "#2f8a4a"
+  },
+  {
+   "key": "$10",
+   "x_mm": 10,
+   "y_mm": 86,
+   "w_mm": 84.6,
+   "h_mm": 41.4,
+   "real_w": 141,
+   "real_h": 69,
+   "colour": "red",
+   "base": "#f0a6a0",
+   "deep": "#c8372f"
+  },
+  {
+   "key": "$50",
+   "x_mm": 108,
+   "y_mm": 86,
+   "w_mm": 93.6,
+   "h_mm": 44.4,
+   "real_w": 156,
+   "real_h": 74,
+   "colour": "blue",
+   "base": "#a6c8ee",
+   "deep": "#2a62a8"
+  },
+  {
+   "key": "$100",
+   "x_mm": 10,
+   "y_mm": 138,
+   "w_mm": 97.2,
+   "h_mm": 46.199999999999996,
+   "real_w": 162,
+   "real_h": 77,
+   "colour": "orange",
+   "base": "#f6c48a",
+   "deep": "#d9791c"
+  }
+ ],
+ "coin_scale": 0.8,
+ "note_scale": 0.6,
+ "texts": [
+  [
+   "furniture",
+   "Singapore money: style sample"
+  ],
+  [
+   "furniture",
+   "Original illustration for owner review. Not traced from any image."
+  ],
+  [
+   "furniture",
+   "HELD BACK: not for use in any book until the lawyer answers question 10"
+  ],
+  [
+   "note",
+   "SINGAPORE"
+  ],
+  [
+   "note",
+   "2"
+  ],
+  [
+   "note",
+   "SPECIMEN"
+  ],
+  [
+   "furniture",
+   "$2 purple: 126 x 63 mm real"
+  ],
+  [
+   "note",
+   "SINGAPORE"
+  ],
+  [
+   "note",
+   "5"
+  ],
+  [
+   "note",
+   "SPECIMEN"
+  ],
+  [
+   "furniture",
+   "$5 green: 133 x 66 mm real"
+  ],
+  [
+   "note",
+   "SINGAPORE"
+  ],
+  [
+   "note",
+   "10"
+  ],
+  [
+   "note",
+   "SPECIMEN"
+  ],
+  [
+   "furniture",
+   "$10 red: 141 x 69 mm real"
+  ],
+  [
+   "note",
+   "SINGAPORE"
+  ],
+  [
+   "note",
+   "50"
+  ],
+  [
+   "note",
+   "SPECIMEN"
+  ],
+  [
+   "furniture",
+   "$50 blue: 156 x 74 mm real"
+  ],
+  [
+   "note",
+   "SINGAPORE"
+  ],
+  [
+   "note",
+   "100"
+  ],
+  [
+   "note",
+   "SPECIMEN"
+  ],
+  [
+   "furniture",
+   "$100 orange: 162 x 77 mm real"
+  ],
+  [
+   "furniture",
+   "Pictures are not actual size."
+  ],
+  [
+   "furniture",
+   "Notes are drawn at 60% of real size."
+  ],
+  [
+   "furniture",
+   "Coins are drawn at 80% of real size."
+  ],
+  [
+   "furniture",
+   "Portrait area: neutral placeholder, no likeness."
+  ],
+  [
+   "furniture",
+   "Plain dots and lines stand in for small print."
+  ],
+  [
+   "coin",
+   "5"
+  ],
+  [
+   "coin",
+   "CENTS"
+  ],
+  [
+   "furniture",
+   "5c  16.75 mm real"
+  ],
+  [
+   "coin",
+   "10"
+  ],
+  [
+   "coin",
+   "CENTS"
+  ],
+  [
+   "furniture",
+   "10c  18.50 mm real"
+  ],
+  [
+   "coin",
+   "20"
+  ],
+  [
+   "coin",
+   "CENTS"
+  ],
+  [
+   "furniture",
+   "20c  21.00 mm real"
+  ],
+  [
+   "coin",
+   "50"
+  ],
+  [
+   "coin",
+   "CENTS"
+  ],
+  [
+   "furniture",
+   "50c  23.00 mm real"
+  ],
+  [
+   "coin",
+   "$1"
+  ],
+  [
+   "furniture",
+   "$1  24.65 mm real"
+  ],
+  [
+   "furniture",
+   "Coins: brass-plated 5c; nickel-plated 10c, 20c, 50c; bi-metallic $1 (brass ring, nickel centre)."
+  ],
+  [
+   "furniture",
+   "Edge hints on the face rim: 5c plain, 10c interrupted reeding, 20c reeded, 50c scalloped, $1 reeded."
+  ],
+  [
+   "furniture",
+   "Sizes and colours: see README.md. Sheet drawn for review only."
+  ]
+ ]
+}

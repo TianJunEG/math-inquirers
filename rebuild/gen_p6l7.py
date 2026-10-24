@@ -106,7 +106,7 @@ def check2(sid, time, title, rows, notes, lw=230, size=34, gap=24, top=250):
     for a, b, nl in rows:
         hgt = int(nl * size * 1.25 + 36)
         body += pin(128, y, lw - 20, f'<p style="font-size:34px;font-weight:800;color:{TEAL}">{E(a)}</p>', None, WHITE, 20, '18px 24px')
-        body += pin(128 + lw, y, 1664 - lw - 52, f'<p style="font-size:{size}px;font-weight:800;line-height:1.25">{E(b)}</p>', 'pop', YEL, 20, '18px 26px')
+        body += pin(128 + lw, y, 1664 - lw - 52, f'<p style="font-size:{size}px;font-weight:800;line-height:1.25">{E(b)}</p>', None, YEL, 20, '18px 26px')
         y += hgt + gap
     assert y <= 940, (sid, y)
     return sec(sid, time, body, notes)
@@ -144,7 +144,7 @@ for i, (a, b, c) in enumerate(cmds):
     body += qrow(620, 290 + i * 104, 700, a, b, 36) + answer(1360, 290 + i * 104, 432, c)
 body += qrow(620, 815, 700, '6.', 'A full turn in 3 equal turns?', 34) + answer(1360, 815, 432, '120° each')
 put('p6l7-warm1', sec('p6l7-warm1', '0–5 MIN', body,
-    'Minutes 0 to 5. Turtle says. Everyone stands (online: stand back from the camera) or sits and uses an arm as the turtle’s nose; nobody has to stand. The turns follow on from each other: each one starts where the last one ended. Call each turn, children turn their bodies, then ask "Which way are you facing?" and click to show it. '
+    'Turtle says (the game stays about 150 seconds; if you run late stop after call 4). Everyone stands (online: stand back from the camera) or sits and uses an arm as the turtle’s nose; nobody has to stand. The turns follow on from each other: each one starts where the last one ended. Call each turn, children turn their bodies, then ask "Which way are you facing?" and click to show it. '
     '1) right 90 from north: east. 2) right 180 from east: west. 3) left 270 from west: north (left 270 is the same as right 90). 4) right 45: north-east. 5) right 360: a full turn, still north-east. 6) "Make one full turn in 3 equal turns. How big is each?" 360 ÷ 3 = 120°. Ask: "Which other turn would have done the same as left 270?" (right 90). Keep this picture in mind: a full turn is 360°.'))
 
 # ================= 3. warm-up 2 =================
@@ -152,7 +152,7 @@ qs = [(f'{i+1}.', q, a) for i, (q, a) in enumerate(DK['warmQs'])]
 body = h2('Quick questions')
 for i, (a, b, c) in enumerate(qs): body += qrow(128, 250 + i * 128, 1250, a, b, 34) + answer(1420, 250 + i * 128, 372, c)
 put('p6l7-warm2', sec('p6l7-warm2', '5–10 MIN', body,
-    'Minutes 5 to 10. Read each aloud, give thinking time, take answers on whiteboards, then click. Ask "How do you know?" each time. 1) 180°: a straight line is half a turn. 2) 360°. 3) 180 − 50 − 75 = 55°. 4) 45. 5) Right 90 from north is east, right 180 from east is west. These facts (straight line 180°, full turn 360°) are the two tools for today.'))
+    'Three questions only. Read each aloud, give thinking time, take answers on whiteboards, then click. Ask "How do you know?" each time. 1) 360°. 2) 180 − 50 − 75 = 55°. 3) 45. These facts (straight line 180°, full turn 360°) are the two tools for today.'))
 
 # ================= 3b. set-up blocks (keep drawings on the stage) =================
 setup_prog = [('pen', 'erase all'), ('motion', 'go to x: {-50} y: {100}'), ('motion', 'point in direction {90}'), ('pen', 'pen down')]
@@ -161,9 +161,6 @@ body += pin(128, 260, 700, blocks_svg(setup_prog, 'The 4 set-up blocks: erase al
 body += step(1, 'Click the blue Add Extension button (bottom left) and pick Pen.', left=900, top=300, width=836, size=34)
 body += step(2, 'Build these 4 blocks and keep them at the top of EVERY drawing.', left=900, top=480, width=836, size=34)
 body += soft(128, 700, 1664, 'Or open the Turtle start file your tutor shares: the 4 blocks are already there. Turn ↻ is the clockwise turn (turn right).', 30)
-put('p6l7-setup', sec('p6l7-setup', '10–11 MIN', body,
-    'Before pairs start building. Say the stage size and the move sizes aloud rather than showing them: the stage is 480 wide and 360 tall, the turtle starts in the middle and shapes grow to the right and DOWN. Sizes that fit: up to 10 sides move 80; 12 to 15 sides move 50; 24 sides move 30; 36 sides move 10. Stars: 5 points move 150, 8 points move 200, 9 points move 120, 20 points move 100 (show the size on each slide where it is used). The tutor shares a Turtle start file with the 4 set-up blocks already in it (build it beforehand: no .sb3 exists in this repository). Children add the Pen extension, then build these 4 blocks and keep them at the top of every program. Why: the sprite starts at (0, 0) and the turtle turns right, so shapes grow down and to the right; an octagon with move 80 reaches y = -193 and falls off the bottom edge (-180) when started at the middle, and a sprite is held at the edge, so the lines kink and the drawing looks like a maths mistake. Starting at x: -50, y: 100, facing 90, every shape in this lesson stays on the stage (checked by computer: triangle to 10-gon with move 80 or 100, 12 to 15 sides with move 50, 24 sides with move 30, 36 sides with move 10, the stars on the worksheet and the 10-point star in the challenge; a 12-gon with move 80 would NOT fit). Only the rosette in the extension needs go to x: 0 y: 0. In Scratch the turn block is "turn ↻ (15) degrees" (clockwise) and "turn ↺" (anticlockwise); there are no words right or left on it, so say "the clockwise arrow". Type negative numbers with the keyboard minus key. Block colours on our slides are simplified: find blocks by the category name on the left (Motion, Pen, Control, Variables, Looks).'))
-
 # ================= 4. explore 1 =================
 sq_prog = [('event', 'when green flag clicked'), ('pen', 'pen down'), ('ctrl', 'repeat {4}', [('motion', 'move {100} steps'), ('motion', 'turn ↻ {90} degrees')])]
 bb, bw, bh = blocks(sq_prog, 24, 42)
@@ -175,13 +172,13 @@ body = h2('Explore: at the computer')
 body += card(chip('EXPLORE, IN PAIRS') + f'<ol style="font-size:32px;font-weight:600;padding-left:48px;display:flex;flex-direction:column;gap:6px;line-height:1.25">{lst}</ol>', extra='padding:24px 40px')
 body += card(f'<div style="display:flex;align-items:center;gap:40px">{pic}<p style="font-size:30px;font-weight:600;color:{MUTED};line-height:1.3">Record in a table: sides, turn, did it close? Begin with the 4 set-up blocks.</p></div>', extra='padding:12px 40px')
 put('p6l7-explore1', sec('p6l7-explore1', '11–15 MIN', body,
-    'Minutes 10 to 15 (pairs keep going until 25). One child drives Scratch, the other predicts the turn BEFORE each run; swap for each shape. Build the square program together first and run it. Then the challenge: change one number to get an equilateral triangle. Expect many pairs to type 60 (the inside angle): let them run it. It draws only half a hexagon. Ask: "How far did the turtle turn altogether? Did it come home?" '
-    'Then pentagon (5 sides) and hexagon (6 sides). Finished early: a regular shape with 10 sides. Online: breakout rooms, the driver shares their screen. Every run starts with the same 4 set-up blocks (erase all, go to x: -50 y: 100, point in direction 90, pen down) so each run starts clean and stays on the stage. Pairs add the other blocks below them. Use the clockwise arrow turn block.'))
+    'The Set-up slide is merged into this one. The Turtle start file (L7_Turtle_Start.sb3, sent to families with the workbook; the tutor also keeps a copy) already has the 4 set-up blocks (erase all, go to x: -50 y: 100, point in direction 90, pen down), so children open it in about 60 seconds instead of building them; a child without the file adds the Pen extension (blue button, bottom left) and builds the 4 blocks. Say the stage size aloud: 480 wide, 360 tall, shapes grow right and DOWN; start at x: -50, y: 100 so every shape stays on the stage (up to 10 sides move 80, 12 to 15 sides move 50, 24 sides move 30, 36 sides move 10). Turn ↻ is clockwise, our turn right. One child drives Scratch, the other predicts the turn BEFORE each run; swap for each shape. Build the square program together first and run it. Then the challenge: change one number to get an equilateral triangle. Expect many pairs to type 60 (the inside angle): let them run it. It draws only half a hexagon. Ask: "How far did the turtle turn altogether? Did it come home?" '
+    'Then the hexagon only (6 sides); the pentagon (5 sides, turn 72) is the Go further what-if. Finished early: the pentagon, then a regular shape with 10 sides. Online: breakout rooms, the driver shares their screen. Every run starts with the same 4 set-up blocks (erase all, go to x: -50 y: 100, point in direction 90, pen down) so each run starts clean and stays on the stage. Pairs add the other blocks below them. Use the clockwise arrow turn block.'))
 
 # ================= 5. explore 2 =================
 body = h2('Explore: talk about it') + ''.join(card(p(num(f'{i+1}.', q), 40, 600, raw=True)) for i, (q, a) in enumerate(DK['expAsk']))
 put('p6l7-explore2', sec('p6l7-explore2', '15–25 MIN', body,
-    'Minutes 15 to 25. Let pairs finish, then gather. Answers: ' + '  '.join(f'{i+1}) {a}' for i, (q, a) in enumerate(DK['expAsk'])) +
+    'Two questions (1 and 3). Let pairs finish, then gather. Answers: ' + '  '.join(f'{i+1}) {a}' for i, (q, a) in enumerate(DK['expAsk'])) +
     ' Collect the table on the board: 3 sides 120°, 4 sides 90°, 5 sides 72°, 6 sides 60°, and multiply each pair. Do not name the rule yet: the teaching slides do that.'))
 
 # ================= 6. teach 1: the turn is the outside angle =================
@@ -214,7 +211,7 @@ put('p6l7-we1', sec('p6l7-we1', '26–28 MIN', body,
 # ================= 8. your turn 1 =================
 put('p6l7-try1', qa_slide('p6l7-try1', '28–29 MIN', 'Your turn: regular polygons', 'Whiteboards. Turn first, then the inside angle.',
     [('a', 'A regular 20-sided polygon. What is the turn?', '18°'), ('b', 'What is its inside angle?', '162°'), ('c', '360 sides: the turn and the inside angle? What does it look like?', '1° and 179°')],
-    'Whiteboards up together, then click. a) 360 ÷ 20 = 18°. b) 180 − 18 = 162°. c) 360 ÷ 360 = 1°, inside 179°: with tiny steps (move 1) it looks just like a circle. That is how Scratch artists draw circles: repeat 360 [move 1, turn right 1]. Let a fast pair test it.'))
+    'Write it, say the answer together on three, then click. a) 360 ÷ 20 = 18°. b) 180 − 18 = 162°. c) 360 ÷ 360 = 1°, inside 179°: with tiny steps (move 1) it looks just like a circle. That is how Scratch artists draw circles: repeat 360 [move 1, turn right 1]. Let a fast pair test it.'))
 
 # ================= 9. worked example 2: backwards =================
 body = h2('Worked example: work backwards') + card(p('Each inside angle of a regular polygon is 174°. How many sides does it have?', 38, 700), extra='padding:24px 40px')
@@ -257,12 +254,12 @@ put('p6l7-break', dark('p6l7-break', TEAL,
 put('p6l7-ws1', ws_preview('p6l7-ws1', '40–50 MIN', 'Worksheet page 1: with your partner',
     [('Q1', 'The polygon table: some rows forwards, some backwards. Test two rows. New words are in the box at the top.'), ('Q2', 'Ben’s nonagon program. Predict what it draws first, then run it.')],
     'Predict on paper first, then run it. If the screen surprises you, ask why.',
-    'Minutes 40 to 50, at the computer in pairs. Walk around. Ask "How do you know?" before giving any help. For Q2 insist on a written prediction before anyone runs the program.'))
+    'At the computer in pairs. Walk around. Ask "How do you know?" before giving any help. For Q2 insist on a written prediction before anyone runs the program.'))
 put('p6l7-ws1ans', check2('p6l7-ws1ans', '50–52 MIN', 'Page 1: check together', [
     ('Q1', '9: 40°, 140°    10: 36°, 144°    36: 10°, 170°    turn 24°: 15 sides, 156°    inside 165°: turn 15°, 24 sides', 2),
     ('Q1a, b', 'Sides × turn is always 360°: one full turn.    b) No: turn 50°, 360 ÷ 50 = 7.2', 2),
     ('Q2', 'A triangle drawn 3 times over.  9 × 120° = 1080° (3 full turns).  Fix: change 120 to 40.', 2)],
-    'Click each answer after a pair explains. Q1: the backwards rows: 360 ÷ 24 = 15 sides, 180 − 24 = 156°; 180 − 165 = 15°, 360 ÷ 15 = 24 sides. Q2: 120 is the turn of a triangle, so after 3 moves the turtle is home, and the other 6 moves go round the same triangle twice more. Run it slowly in Scratch (add "wait 0.5 seconds" inside the loop) so children see it.'))
+    'All the answers are shown at once. Children mark in a different colour; ask ONE volunteer to explain only Q1 (the backwards rows), about 35 seconds a question. Q1: the backwards rows: 360 ÷ 24 = 15 sides, 180 − 24 = 156°; 180 − 165 = 15°, 360 ÷ 15 = 24 sides. Q2: 120 is the turn of a triangle, so after 3 moves the turtle is home, and the other 6 moves go round the same triangle twice more. Run it slowly in Scratch (add "wait 0.5 seconds" inside the loop) so children see it.'))
 
 # ================= 16. teach before page 2: trace a running total =================
 trace_prog = [('var', 'set {total} to {0}'), ('ctrl', 'repeat {5}', [('motion', 'move {150} steps'), ('motion', 'turn ↻ {144} degrees'), ('var', 'change {total} by {144}')]), ('looks', 'say {total}')]
@@ -291,25 +288,16 @@ op, _ = fit(turtle_pts(8, 45), 40, 40, 420, 420)
 cxo = sum(a for a, b in op[:8]) / 8; cyo = sum(b for a, b in op[:8]) / 8
 labs = ''.join(T(a + (cxo - a) * 0.24, b + (cyo - b) * 0.24 + 10, '135°', 28, TEAL, 800) for a, b in op[:8])
 octo = SV(500, 500, f'<polygon points="{" ".join(f"{a:.1f},{b:.1f}" for a, b in op)}" fill="{SKY}" stroke="{NAVY}" stroke-width="5" stroke-linejoin="round"/>' + labs, 'A regular octagon with 135 degrees marked inside each corner')
-body = h2('Add up the inside angles: an octagon')
-body += pin(128, 260, 500, octo, None)
-body += step(1, '8 inside angles of 135°:  8 × 135° = 1080°.', left=700, top=270, width=1092, size=32)
-body += step(2, 'Turtle way: at each corner, turn + inside = 180°. 8 corners: 8 × 180° = 1440°.', left=700, top=380, width=1092, size=32)
-body += step(3, 'The turns add up to 360°. So the inside angles add up to 1440° − 360° = 1080° ✓', left=700, top=530, width=1092, size=32)
-body += soft(700, 690, 1092, 'Is there a rule for any number of sides? Find it on page 2 (Q5).', 32)
-put('p6l7-teachsum', sec('p6l7-teachsum', '54–55 MIN', body,
-    'Teach before worksheet page 2 (Q5 builds the table for 3, 4, 5, 6 and 10 sides and asks for the rule; do not give the rule here). Step 2 is the clever bit: every corner gives a straight line (180°), and the turns inside those straight lines add up to exactly one full turn. Ask: "Does the turtle way work for a shape that is not regular?" (yes: the turns still add up to 360°).'))
-
 # ================= 19–20. worksheet page 2 =================
 put('p6l7-ws2', ws_preview('p6l7-ws2', '55–72 MIN', 'Worksheet page 2: on your own',
-    [('Q3', 'Trace the star program: fill in total after each repeat.'), ('Q4', 'Plan a star: total, turn, point angle. Test it.'), ('Q5', 'Add up the inside angles. Find a rule for n sides.')],
+    [('Q3', 'Trace the star program: fill in total after each repeat.'), ('Q4', 'Plan a star: total, turn, point angle. Test it.'), ('Q5', '★ Take-home: add up the inside angles. Find a rule for n sides.')],
     'Finished early? Stretch and Challenge come next.',
-    'Children work alone (they may test in Scratch). Note who needs a short catch-up next lesson.'))
+    'Children work alone on Q3 and Q4 (they may test in Scratch); Q5 (inside-angle sums) is the take-home question, marked with a star in the workbook. Show this preview, do not read it aloud. Note who needs a short catch-up next lesson.'))
 put('p6l7-ws2ans', check2('p6l7-ws2ans', '72–75 MIN', 'Page 2: check together', [
     ('Q3', '80, 160, 240 … 720.  Says 720.  Round 2 times.  A 9-point star, 100° points.', 2),
     ('Q4', '9 points, 4 round: 1440°, 160°, 20°.', 2),
-    ('Q5', '180°, 360°, 540°, 720°, 1440°.  +180° each time.  Rule: (n − 2) × 180°', 2)],
-    'Click each answer after a child explains. Q4: the 9-point star has the sharper points (20°). Q5: each inside angle 60, 90, 108, 120, 144; the rule can also be written n × 180 − 360 (the turtle way). Ask: "Why does one more side add 180°?" (one more corner adds one more straight line of 180°, and the turns still make 360°).'))
+    ('Q5 ★', 'Take-home. 180°, 360°, 540°, 720°, 1440°.  +180° each time.  Rule: (n − 2) × 180°', 2)],
+    'All the answers are shown at once. Children mark in a different colour; ask ONE volunteer to explain only Q3 (the running total). Q5 is the take-home question: its answer is here so children can mark it at home, and you take it up at the start of the next lesson (the octagon idea: every corner gives a straight line of 180°, the turns make 360°, so the inside angles add up to n × 180° − 360°). Q4: the 9-point star has the sharper points (20°). Q5: each inside angle 60, 90, 108, 120, 144; the rule can also be written n × 180 − 360 (the turtle way). Ask: "Why does one more side add 180°?" (one more corner adds one more straight line of 180°, and the turns still make 360°).'))
 
 # ================= 21. stretch (3 new) =================
 st = QB['stretch'][4:7]
@@ -347,15 +335,15 @@ put('p6l7-chwalk', sec('p6l7-chwalk', 'Challenge', body,
 
 # ================= 25. talk =================
 body = h2('Talk time') + card(chip('TALK TIME', YEL, NAVY) + p(SC['talk'][0].strip('“”'), 40, 600)) + card(p('Sentence starters:', 34, 400, MUTED) + p('“I noticed that …”   “I tested it by …”   “I know because …”', 38, 600))
-put('p6l7-talk', sec('p6l7-talk', '75–82 MIN', body, 'Minutes 75 to 82. Pairs talk for 2 minutes, then share. Second question if time: ' + SC['talk'][1].strip('“”') + ' Answer: ' + SC['talkAns'] + ' Praise the reasons, not only the answers.'))
+put('p6l7-talk', sec('p6l7-talk', '75–82 MIN', body, 'One question only. Pairs talk for 90 seconds, then volunteers share. Second question (only if flex is left; otherwise the opener of the next lesson): ' + SC['talkNext'].strip('“”') + ' Answer: ' + SC['talkAns'] + ' Praise the reasons, not only the answers.'))
 
 # ================= 26. exit =================
-body = h2('Exit ticket') + card(chip('EXIT TICKET') + p(L['exit']['q'], 46, 600)) + card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.', 34, 400))
+body = h2('Exit ticket') + card(chip('EXIT TICKET') + p(L['exit']['q'], 46, 600)) + card(p('Write your answer on a slip of paper. When your tutor says, say your answer together on three. Then collect your stamp in your inquiry journal.', 34, 400))
 put('p6l7-exit', sec('p6l7-exit', '82–90 MIN', body, f'Minutes 82 to 90. Answer: {L["exit"]["a"]}. Children who write 175 sides and 5° have swapped the two steps: ask "Which angle does the turtle turn?" Extension: {L["extension"]}'))
 
 # ---------- write ----------
-order = ['p6l7-title', 'p6l7-warm1', 'p6l7-warm2', 'p6l7-setup', 'p6l7-explore1', 'p6l7-explore2', 'p6l7-teach1', 'p6l7-we1', 'p6l7-try1', 'p6l7-we2', 'p6l7-try2', 'p6l7-we3', 'p6l7-key', 'p6l7-break',
-         'p6l7-ws1', 'p6l7-ws1ans', 'p6l7-teachtrace', 'p6l7-teachstar', 'p6l7-teachsum', 'p6l7-ws2', 'p6l7-ws2ans', 'p6l7-stretch', 'p6l7-challenge', 'p6l7-chdiag', 'p6l7-chwalk', 'p6l7-talk', 'p6l7-exit']
+order = ['p6l7-title', 'p6l7-warm1', 'p6l7-warm2', 'p6l7-explore1', 'p6l7-explore2', 'p6l7-teach1', 'p6l7-we1', 'p6l7-try1', 'p6l7-we2', 'p6l7-try2', 'p6l7-we3', 'p6l7-key', 'p6l7-break',
+         'p6l7-ws1', 'p6l7-ws1ans', 'p6l7-teachtrace', 'p6l7-teachstar', 'p6l7-ws2', 'p6l7-ws2ans', 'p6l7-stretch', 'p6l7-challenge', 'p6l7-chdiag', 'p6l7-chwalk', 'p6l7-talk', 'p6l7-exit']
 assert set(order) == set(S), set(order) ^ set(S)
 for f in os.listdir(os.path.join(D, 'slides')):
     if f.endswith('.html') and f[:-5] not in S: os.remove(os.path.join(D, 'slides', f))

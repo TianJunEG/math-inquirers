@@ -1,0 +1,603 @@
+{
+ "1": {
+  "skills": [
+   {
+    "id": "L5-DIGIT",
+    "slot": "slide",
+    "skill": "Digit sums and the greatest number",
+    "tool": "guess",
+    "tool_name": "Guess and check",
+    "q": "Wei has 6 digit cards: 2, 4, 5, 7, 8, 9. He chooses 5 different cards and makes a 5-digit number. (a) What is the digit sum of all 6 cards? (b) Find the greatest 5-digit multiple of 9 that Wei can make.",
+    "a": "(a) 35. (b) 97542.",
+    "say": "A number is a multiple of 9 when its digit sum is in the 9 times table. Wei leaves one card out. Which card must he leave out?",
+    "ask": "How does the total of 35 help you choose the card to leave out? Why is the answer not 98754?",
+    "listen": "35 − 8 = 27, so the 8 is left out. Then the digits go in order from the largest: 9, 7, 5, 4, 2. Listen for \"test both sides of the target\" and a digit sum used as a check."
+   },
+   {
+    "id": "L5-DIGIT-V",
+    "slot": "bank",
+    "skill": "Digit sums and the greatest number",
+    "tool": "guess",
+    "tool_name": "Guess and check",
+    "q": "Siti has cards 1, 3, 4, 6, 8, 9 and chooses 5 of them. Find the greatest 5-digit multiple of 3 she can make.",
+    "a": "98643.",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Digit sums and the greatest number).",
+    "ask": "How does the total of 35 help you choose the card to leave out? Why is the answer not 98754?",
+    "listen": "35 − 8 = 27, so the 8 is left out. Then the digits go in order from the largest: 9, 7, 5, 4, 2. Listen for \"test both sides of the target\" and a digit sum used as a check."
+   },
+   {
+    "id": "L5-PARITY",
+    "slot": "slide",
+    "skill": "Regroup first, then work out",
+    "tool": "simpler",
+    "tool_name": "Try something simpler",
+    "q": "(a) Find 8 × 17 × 125. Group the numbers first. (b) Do not work out the answers. Which of these are odd? (i) 3 × 7 × 11 × 5      (ii) 13 × 14 + 15      (iii) 25 + 36 + 47      (iv) 1 001 × 2 002 − 3",
+    "a": "(a) 17 000. (b) (i), (ii) and (iv) are odd. (iii) is even.",
+    "say": "Look for two numbers that make a friendly number. Then say whether each part is odd or even before you add.",
+    "ask": "Which two numbers in (a) make 1 000? What rule do you use for odd times odd, even times anything, and odd plus even?",
+    "listen": "8 × 125 = 1 000 first. For (b), listen for \"odd x odd is odd\", \"even x anything is even\", \"even + odd is odd\", \"odd + odd is even\"."
+   },
+   {
+    "id": "L5-PARITY-V",
+    "slot": "bank",
+    "skill": "Regroup first, then work out",
+    "tool": "simpler",
+    "tool_name": "Try something simpler",
+    "q": "Find 4 × 29 × 25. Which of 17 + 18 + 19 and 6 × 15 + 1 is even?",
+    "a": "2 900. Only 17 + 18 + 19 = 54 is even, and 6 × 15 + 1 = 91 is odd.",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Regroup first, then work out).",
+    "ask": "Which two numbers in (a) make 1 000? What rule do you use for odd times odd, even times anything, and odd plus even?",
+    "listen": "8 × 125 = 1 000 first. For (b), listen for \"odd x odd is odd\", \"even x anything is even\", \"even + odd is odd\", \"odd + odd is even\"."
+   },
+   {
+    "id": "L5-CR1",
+    "slot": "slide",
+    "skill": "Letter sums",
+    "tool": "guess",
+    "tool_name": "Guess and check",
+    "q": "Each letter stands for one digit. Different letters stand for different digits. A letter at the start of a number is not 0. Find A, B, C, D and E.",
+    "a": "A = 1, B = 0, C = 8, D = 9, E = 3.  Check: 888 + 131 = 1019.",
+    "say": "Three digits plus three digits make 4 digits. What does that tell you about the first letter of the answer?",
+    "ask": "Which column will you look at second, and why?",
+    "listen": "A = 1 from the size of the sum. Then the hundreds column (C + E + carry) gives B and a carry. Accept a table of tries."
+   },
+   {
+    "id": "L5-CR2",
+    "slot": "slide",
+    "skill": "A multiplication in letters",
+    "tool": "guess",
+    "tool_name": "Guess and check",
+    "q": "Each letter stands for one digit. Different letters stand for different digits. A letter at the start of a number is not 0. Find K, M, N and P.",
+    "a": "K = 8, M = 4, N = 3, P = 6.  Check: 84 × 4 = 336.",
+    "say": "The answer has 3 digits and its first two digits are the same. Make a table: choose M, then try different K. What does 10 x M tell you about the smallest M that can work?",
+    "ask": "Which values of M can you rule out quickly? How do you know when to stop trying K for one M?",
+    "listen": "M is at least 2 (a 2-digit number times 1 gives at most 2 digits), and the last digit P comes from M x M. Children list tries such as 14 × 4 = 56, 24 × 4 = 96, ... until the first two digits match. Accept an organised table."
+   }
+  ]
+ },
+ "2": {
+  "skills": [
+   {
+    "id": "L5-R4",
+    "slot": "slide",
+    "skill": "Ratio and fractions",
+    "tool": "draw",
+    "tool_name": "Draw it",
+    "q": "A bag has red and blue counters in the ratio 3 : 5. This means that for every 3 red counters there are 5 blue counters. (a) What fraction of the counters are red? (b) What fraction of the counters are blue? (c) There are 40 counters in the bag. How many are red?",
+    "a": "(a) 3/8. (b) 5/8. (c) 15 red counters.",
+    "say": "Draw a bar with 3 units for red and 5 units for blue. The whole bar is the whole bag. How many units are in the whole bar?",
+    "ask": "What fraction of the whole bar is the red part? How many counters is one unit?",
+    "listen": "3 + 5 = 8 units, red is 3 of the 8, so 3/8. 40 ÷ 8 = 5 counters per unit, 3 × 5 = 15. Listen for the bar model and for the total as 8 units.",
+    "preview": true
+   },
+   {
+    "id": "L5-R4-V",
+    "slot": "bank",
+    "skill": "Ratio and fractions",
+    "tool": "draw",
+    "tool_name": "Draw it",
+    "q": "A jug has orange juice and water in the ratio 2 : 7. What fraction of the jug is juice? There are 45 cups of liquid altogether: how many are juice?",
+    "a": "2/9; 10 cups.",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Ratio and fractions).",
+    "ask": "What fraction of the whole bar is the red part? How many counters is one unit?",
+    "listen": "3 + 5 = 8 units, red is 3 of the 8, so 3/8. 40 ÷ 8 = 5 counters per unit, 3 × 5 = 15. Listen for the bar model and for the total as 8 units.",
+    "preview": true
+   }
+  ]
+ },
+ "3": {
+  "skills": [
+   {
+    "id": "L5-R1",
+    "slot": "slide",
+    "skill": "What is a ratio?",
+    "tool": "draw",
+    "tool_name": "Draw it",
+    "q": "Ali mixes paint. For every 2 tins of blue he uses 3 tins of white. We write blue : white = 2 : 3 and say \"2 to 3\". The bar model shows 2 units of blue and 3 units of white. Every unit is the same size. (a) Ali uses 4 tins of blue. How many tins of white does he use? (b) Ali mixes 20 tins altogether in the ratio 2 : 3. How many tins of each colour?",
+    "a": "(a) 6 tins of white, because 4 : 6 is the same ratio as 2 : 3. (b) 5 units altogether. One unit is 20 ÷ 5 = 4 tins. Blue 8 tins, white 12 tins.",
+    "say": "A ratio compares two amounts with \"for every\". 2 : 3 means 2 blue for every 3 white. Draw the bars first, and call each box a unit.",
+    "ask": "If Ali doubles the mix, what happens to both numbers? How many units are there in all in (b), and how big is one unit?",
+    "listen": "2 : 3 = 4 : 6 (multiply both numbers by the same number). For (b): 2 + 3 = 5 units, 20 ÷ 5 = 4 per unit, 2 × 4 = 8 and 3 × 4 = 12. Listen for \"units\" and \"the same size\". Do not teach more than this on the first meeting.",
+    "preview": true
+   },
+   {
+    "id": "L5-R2",
+    "slot": "slide",
+    "skill": "Equal ratios and simplest form",
+    "tool": "table",
+    "tool_name": "Make a table",
+    "q": "A fruit punch uses 6 cups of juice for every 9 cups of water. (a) Write the ratio of juice to water. (b) Write the ratio in its simplest form. (c) How many cups of water go with 10 cups of juice? (d) Fill in the box: 2 : 3 = 12 : [ ]",
+    "a": "(a) 6 : 9. (b) 2 : 3 (divide both numbers by 3). (c) 15 cups of water. (d) 18.",
+    "say": "Make a table. Juice in the top row, water in the bottom row. Divide both numbers by 3 to get the smallest whole numbers, then multiply up.",
+    "ask": "What do you do to both numbers to keep the ratio the same? How do you know 2 : 3 is simplest and cannot go smaller?",
+    "listen": "The same number on both sides (multiply or divide). Simplest form means no whole number other than 1 divides both. 10 cups of juice is 5 groups of 2, so 5 × 3 = 15.",
+    "preview": true
+   },
+   {
+    "id": "L5-R2-V",
+    "slot": "bank",
+    "skill": "Equal ratios and simplest form",
+    "tool": "table",
+    "tool_name": "Make a table",
+    "q": "A paint mix is 8 tins of red for every 12 tins of yellow. Write the ratio in simplest form. How many tins of yellow go with 14 tins of red?",
+    "a": "2 : 3; 21 tins.",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Equal ratios and simplest form).",
+    "ask": "What do you do to both numbers to keep the ratio the same? How do you know 2 : 3 is simplest and cannot go smaller?",
+    "listen": "The same number on both sides (multiply or divide). Simplest form means no whole number other than 1 divides both. 10 cups of juice is 5 groups of 2, so 5 × 3 = 15.",
+    "preview": true
+   },
+   {
+    "id": "L5-R3",
+    "slot": "slide",
+    "skill": "Sharing in a ratio",
+    "tool": "draw",
+    "tool_name": "Draw it",
+    "q": "Mei and Siti share 45 stickers in the ratio 4 : 5. Mei gets the 4 and Siti gets the 5. (a) How many equal parts are there? (b) How many stickers is one part? (c) How many stickers does each girl get? (d) How many more stickers does Siti get than Mei?",
+    "a": "(a) 9 parts. (b) 5 stickers. (c) Mei 20 stickers and Siti 25 stickers. (d) 5 more stickers.",
+    "say": "Draw a bar for Mei with 4 boxes and a bar for Siti with 5 boxes, the same size. The 45 stickers fill all the boxes.",
+    "ask": "How can you check your answer? What do you notice about the difference between the two shares and one part?",
+    "listen": "4 + 5 = 9 parts, 45 ÷ 9 = 5. Mei 4 × 5 = 20, Siti 5 × 5 = 25, total 45. The difference 5 is 1 part because 5 − 4 = 1. Listen for the check: the two shares add up to 45.",
+    "preview": true
+   },
+   {
+    "id": "L5-R3-V",
+    "slot": "bank",
+    "skill": "Sharing in a ratio",
+    "tool": "draw",
+    "tool_name": "Draw it",
+    "q": "Ravi and Aisha share 56 marbles in the ratio 3 : 5. How many marbles does each get?",
+    "a": "Ravi 21 marbles, Aisha 35 marbles.",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Sharing in a ratio).",
+    "ask": "How can you check your answer? What do you notice about the difference between the two shares and one part?",
+    "listen": "4 + 5 = 9 parts, 45 ÷ 9 = 5. Mei 4 × 5 = 20, Siti 5 × 5 = 25, total 45. The difference 5 is 1 part because 5 − 4 = 1. Listen for the check: the two shares add up to 45.",
+    "preview": true
+   }
+  ]
+ },
+ "5": {
+  "skills": [
+   {
+    "id": "L5-DICE",
+    "slot": "slide",
+    "skill": "Dice and hidden faces",
+    "tool": "actout",
+    "tool_name": "Act it out",
+    "q": "A tower is made of 3 dice, one on top of another, standing on a table. Opposite faces of each die sum to 7. The upper face of the highest die shows 4. Find the total number of dots on the hidden faces: the face touching the table, plus each pair of faces that touch each other.",
+    "a": "17 dots.",
+    "say": "Take a real die if you have one. Turn it and look: which faces are on opposite sides? What do two opposite faces always add up to?",
+    "ask": "Which hidden faces form pairs that add up to 7? Which one hidden face is left over?",
+    "listen": "The top and bottom of the bottom die add to 7. The top and bottom of the middle die add to 7. The bottom of the top die is 7 − 4 = 3. Listen for \"pairs of opposite faces\"."
+   },
+   {
+    "id": "L5-DICE-V",
+    "slot": "bank",
+    "skill": "Dice and hidden faces",
+    "tool": "actout",
+    "tool_name": "Act it out",
+    "q": "The upper face of the highest die shows 2. Find the hidden total now.",
+    "a": "19 dots.",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Dice and hidden faces).",
+    "ask": "Which hidden faces form pairs that add up to 7? Which one hidden face is left over?",
+    "listen": "The top and bottom of the bottom die add to 7. The top and bottom of the middle die add to 7. The bottom of the top die is 7 − 4 = 3. Listen for \"pairs of opposite faces\"."
+   }
+  ]
+ },
+ "6": {
+  "skills": [
+   {
+    "id": "L5-PACK",
+    "slot": "slide",
+    "skill": "Totals you cannot make",
+    "tool": "table",
+    "tool_name": "Make a table",
+    "q": "Cookies are sold in packs of 5 and packs of 8. Aisha may buy several packs of each kind, or none of one kind. (a) Which totals from 1 to 20 can she buy? (b) Find the greatest total she cannot buy.",
+    "a": "(a) 5, 8, 10, 13, 15, 16, 18, 20. (b) 27.",
+    "say": "Write the numbers 1 to 40 in rows of 5. Mark the multiples of 8 and then everything you can reach by adding 5s.",
+    "ask": "When you have 5 totals in a row that you can buy, what happens after that? Why?",
+    "listen": "Five in a row can be bought (28 to 32), so adding 5 reaches every larger total. 27 is the last gap. Listen for the argument \"five in a row means all the rest\"."
+   },
+   {
+    "id": "L5-PACK-V",
+    "slot": "bank",
+    "skill": "Totals you cannot make",
+    "tool": "table",
+    "tool_name": "Make a table",
+    "q": "Stickers come in sheets of 4 and sheets of 7. Find the greatest number of stickers you cannot buy.",
+    "a": "17.",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Totals you cannot make).",
+    "ask": "When you have 5 totals in a row that you can buy, what happens after that? Why?",
+    "listen": "Five in a row can be bought (28 to 32), so adding 5 reaches every larger total. 27 is the last gap. Listen for the argument \"five in a row means all the rest\"."
+   },
+   {
+    "id": "L5-CATCH",
+    "slot": "slide",
+    "skill": "Catching up",
+    "tool": "table",
+    "tool_name": "Make a table",
+    "q": "Ali walks 60 m each minute. Ben starts from the same place 5 minutes later and walks 80 m each minute in the same direction. (a) How far ahead is Ali when Ben starts? (b) How many metres does Ben gain on Ali each minute? (c) How many minutes after Ben starts does he catch Ali?",
+    "a": "(a) 300 m. (b) 20 m. (c) 15 minutes.",
+    "say": "Make a table with the minutes since Ben started. Write how far each of them has walked, and the gap between them.",
+    "ask": "What happens to the gap each minute? How can you get from 300 m to no gap without listing every minute?",
+    "listen": "The gap shrinks by 20 m every minute. 300 ÷ 20 = 15. Listen for \"the gap closes by the difference in speeds\" (this is a preview of an idea met again in later years)."
+   },
+   {
+    "id": "L5-CATCH-V",
+    "slot": "bank",
+    "skill": "Catching up",
+    "tool": "table",
+    "tool_name": "Make a table",
+    "q": "Mei walks 50 m each minute. Kumar starts 4 minutes later and walks 70 m each minute. After how many minutes does Kumar catch Mei?",
+    "a": "10 minutes.",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Catching up).",
+    "ask": "What happens to the gap each minute? How can you get from 300 m to no gap without listing every minute?",
+    "listen": "The gap shrinks by 20 m every minute. 300 ÷ 20 = 15. Listen for \"the gap closes by the difference in speeds\" (this is a preview of an idea met again in later years)."
+   },
+   {
+    "id": "L5-WORK",
+    "slot": "slide",
+    "skill": "Three workers",
+    "tool": "table",
+    "tool_name": "Make a table",
+    "q": "Ali lays 10 bricks each minute and Ben lays 14 bricks each minute. They start together. After 5 minutes Kumar joins them and lays 6 bricks each minute. (a) How many bricks do Ali and Ben lay in the first 5 minutes? (b) They must lay 450 bricks. How many minutes do they work altogether?",
+    "a": "(a) 120 bricks. (b) 16 minutes.",
+    "say": "Make a table with two phases: before Kumar joins, and after. In each phase write how many bricks are laid each minute.",
+    "ask": "How many bricks are left after the first phase? How many bricks each minute do all three lay together?",
+    "listen": "Phase 1: 24 bricks each minute for 5 minutes. Phase 2: 30 bricks each minute for the rest. 450 − 120 = 330, 330 ÷ 30 = 11. Listen for the two-phase table."
+   },
+   {
+    "id": "L5-WORK-V",
+    "slot": "bank",
+    "skill": "Three workers",
+    "tool": "table",
+    "tool_name": "Make a table",
+    "q": "Ali lays 8 bricks each minute and Ben lays 12. After 3 minutes Kumar joins and lays 10 bricks each minute. How many minutes do they take to lay 300 bricks?",
+    "a": "11 minutes.",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Three workers).",
+    "ask": "How many bricks are left after the first phase? How many bricks each minute do all three lay together?",
+    "listen": "Phase 1: 24 bricks each minute for 5 minutes. Phase 2: 30 bricks each minute for the rest. 450 − 120 = 330, 330 ÷ 30 = 11. Listen for the two-phase table."
+   },
+   {
+    "id": "L5-R5",
+    "slot": "slide",
+    "skill": "Equal ratios and scaling",
+    "tool": "table",
+    "tool_name": "Make a table",
+    "q": "A rice recipe uses 2 cups of rice for every 5 cups of water. The ratio of rice to water is 2 : 5. (a) How many cups of water go with 6 cups of rice? (b) How many cups of rice go with 25 cups of water? (c) Wei uses 12 cups of rice. How many cups of rice and water does he use altogether?",
+    "a": "(a) 15 cups of water. (b) 10 cups of rice. (c) 12 + 30 = 42 cups altogether.",
+    "say": "Make a table: each column is the same recipe made again. Multiply both numbers by the same number.",
+    "ask": "How many times bigger is 6 cups of rice than 2? What do you do to the water? How could you start from the water in (b)?",
+    "listen": "Scale factor: 6 ÷ 2 = 3, so water 5 × 3 = 15. In (b) 25 ÷ 5 = 5 and rice 2 × 5 = 10. In (c) 12 ÷ 2 = 6, water 5 × 6 = 30. A rate is a ratio in disguise: one number is \"for every\" the other.",
+    "preview": true
+   },
+   {
+    "id": "L5-R5-V",
+    "slot": "bank",
+    "skill": "Equal ratios and scaling",
+    "tool": "table",
+    "tool_name": "Make a table",
+    "q": "A drink uses 3 cups of juice for every 4 cups of water. How many cups of water go with 18 cups of juice?",
+    "a": "24 cups.",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Equal ratios and scaling).",
+    "ask": "How many times bigger is 6 cups of rice than 2? What do you do to the water? How could you start from the water in (b)?",
+    "listen": "Scale factor: 6 ÷ 2 = 3, so water 5 × 3 = 15. In (b) 25 ÷ 5 = 5 and rice 2 × 5 = 10. In (c) 12 ÷ 2 = 6, water 5 × 6 = 30. A rate is a ratio in disguise: one number is \"for every\" the other.",
+    "preview": true
+   }
+  ]
+ },
+ "7": {
+  "skills": [
+   {
+    "id": "L5-R6",
+    "slot": "slide",
+    "skill": "Ratio and percentage",
+    "tool": "draw",
+    "tool_name": "Draw it",
+    "q": "In a class the ratio of boys to girls is 3 : 2. (a) What fraction of the class are boys? (b) What percentage of the class are girls? (c) There are 30 children in the class. How many boys are there?",
+    "a": "(a) 3/5. (b) 40%. (c) 18 boys.",
+    "say": "Draw a bar of 5 equal units: 3 for boys and 2 for girls. The whole bar is 100%.",
+    "ask": "What percentage is one unit? How does that help with the girls?",
+    "listen": "One unit is 100% / 5 = 20%, so girls are 2 × 20% = 40%. For (c) 30 ÷ 5 = 6 children per unit and 3 × 6 = 18. Listen for \"the whole is 5 units\".",
+    "preview": true
+   },
+   {
+    "id": "L5-R6-V",
+    "slot": "bank",
+    "skill": "Ratio and percentage",
+    "tool": "draw",
+    "tool_name": "Draw it",
+    "q": "The ratio of cats to dogs is 1 : 4. What percentage are cats? There are 60 animals: how many dogs?",
+    "a": "20%; 48 dogs.",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Ratio and percentage).",
+    "ask": "What percentage is one unit? How does that help with the girls?",
+    "listen": "One unit is 100% / 5 = 20%, so girls are 2 × 20% = 40%. For (c) 30 ÷ 5 = 6 children per unit and 3 × 6 = 18. Listen for \"the whole is 5 units\".",
+    "preview": true
+   }
+  ]
+ },
+ "8": {
+  "skills": [
+   {
+    "id": "L5-YEAR",
+    "slot": "slide",
+    "skill": "Weekdays in a year",
+    "tool": "pattern",
+    "tool_name": "Spot the pattern",
+    "q": "A year has 365 days. In one year, 1 January is a Tuesday. (a) How many whole weeks are in 365 days, and how many days are left over? (b) How many Tuesdays are in the year? (c) What day of the week is 31 December? (d) What day of the week is 1 January of the next year?",
+    "a": "(a) 52 weeks and 1 day. (b) 53 Tuesdays. (c) Tuesday. (d) Wednesday.",
+    "say": "Divide 365 by 7. The weeks use up every day of the week 52 times. Which day is the one extra day?",
+    "ask": "Which day of the week is day 365? Is any other day of the week in the year 53 times?",
+    "listen": "365 = 52 × 7 + 1. The extra day is the same weekday as 1 January, so only Tuesday occurs 53 times. Listen for the remainder idea."
+   },
+   {
+    "id": "L5-YEAR-V",
+    "slot": "bank",
+    "skill": "Weekdays in a year",
+    "tool": "pattern",
+    "tool_name": "Spot the pattern",
+    "q": "In a 365-day year, 1 January is a Friday. Which weekday occurs 53 times?",
+    "a": "Friday.",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Weekdays in a year).",
+    "ask": "Which day of the week is day 365? Is any other day of the week in the year 53 times?",
+    "listen": "365 = 52 × 7 + 1. The extra day is the same weekday as 1 January, so only Tuesday occurs 53 times. Listen for the remainder idea."
+   }
+  ]
+ },
+ "9": {
+  "skills": [
+   {
+    "id": "L5-LAST",
+    "slot": "slide",
+    "skill": "Last digits of products",
+    "tool": "pattern",
+    "tool_name": "Spot the pattern",
+    "q": "(a) Multiply 7 by itself 30 times: 7 × 7 × 7 x ... with 30 sevens. What is the last digit of the answer? (b) Multiply 4 by itself 25 times. What is the last digit of the answer?",
+    "a": "(a) 9. (b) 4.",
+    "say": "Only the last digit matters, so keep only the last digit each time. Write the last digit after 1 seven, 2 sevens, 3 sevens, 4 sevens, and carry on.",
+    "ask": "When does the list of last digits start to repeat? How long is the cycle, and where does 30 land in it?",
+    "listen": "Sevens: 7, 9, 3, 1, then repeats (cycle of 4). 30 = 7 × 4 + 2, so the 2nd in the cycle: 9. Fours: 4, 6, 4, 6 (cycle of 2); 25 is odd, so 4."
+   },
+   {
+    "id": "L5-LAST-V",
+    "slot": "bank",
+    "skill": "Last digits of products",
+    "tool": "pattern",
+    "tool_name": "Spot the pattern",
+    "q": "Multiply 2 by itself 22 times. What is the last digit?",
+    "a": "4 (the cycle is 2, 4, 8, 6 and 22 mod 4 = 2).",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Last digits of products).",
+    "ask": "When does the list of last digits start to repeat? How long is the cycle, and where does 30 land in it?",
+    "listen": "Sevens: 7, 9, 3, 1, then repeats (cycle of 4). 30 = 7 × 4 + 2, so the 2nd in the cycle: 9. Fours: 4, 6, 4, 6 (cycle of 2); 25 is odd, so 4."
+   },
+   {
+    "id": "L5-RANGE",
+    "slot": "slide",
+    "skill": "Multiples in a range",
+    "tool": "simpler",
+    "tool_name": "Try something simpler",
+    "q": "(a) How many multiples of 7 are between 100 and 500? (b) How many of them are also multiples of 2?",
+    "a": "(a) 57 multiples of 7. (b) 28 multiples of 14.",
+    "say": "Try something simpler first: how many multiples of 7 are there up to 100? Then up to 500? What do you do with the two answers?",
+    "ask": "Is 100 a multiple of 7? Is 500? Why does that matter? What number do you test for \"multiple of 7 and of 2\"?",
+    "listen": "500 ÷ 7 = 71 remainder 3 gives 71 multiples up to 500; 100 ÷ 7 = 14 remainder 2 gives 14 up to 100. 71 − 14 = 57. In (b) in the 2 table and the 7 table means in the 14 table: 500 ÷ 14 = 35, 100 ÷ 14 = 7, 35 − 7 = 28."
+   },
+   {
+    "id": "L5-RANGE-V",
+    "slot": "bank",
+    "skill": "Multiples in a range",
+    "tool": "simpler",
+    "tool_name": "Try something simpler",
+    "q": "How many multiples of 9 are between 200 and 700?",
+    "a": "55.",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Multiples in a range).",
+    "ask": "Is 100 a multiple of 7? Is 500? Why does that matter? What number do you test for \"multiple of 7 and of 2\"?",
+    "listen": "500 ÷ 7 = 71 remainder 3 gives 71 multiples up to 500; 100 ÷ 7 = 14 remainder 2 gives 14 up to 100. 71 − 14 = 57. In (b) in the 2 table and the 7 table means in the 14 table: 500 ÷ 14 = 35, 100 ÷ 14 = 7, 35 − 7 = 28."
+   },
+   {
+    "id": "L5-GAPS",
+    "slot": "slide",
+    "skill": "The gap of the gaps",
+    "tool": "table",
+    "tool_name": "Make a table",
+    "q": "Ravi builds block towers. Tower 1 has 2 blocks, Tower 2 has 3, Tower 3 has 6, Tower 4 has 11 and Tower 5 has 18. (a) Find the gaps between neighbouring towers. By how much do the gaps go up each time? (b) How many blocks are in Tower 8? (c) How many blocks are in Tower 10?",
+    "a": "(a) The gaps are 1, 3, 5, 7. They go up by 2 each time. (b) 51 blocks. (c) 83 blocks.",
+    "say": "Make a table with 3 columns: the tower number, the blocks, and the gap. Then add a fourth column for the gap of the gaps.",
+    "ask": "What is the gap going to be between Tower 5 and Tower 6? Between Tower 9 and Tower 10?",
+    "listen": "Gaps 1, 3, 5, 7, 9, 11, 13, 15, 17. Listen for a table that keeps the pattern going row by row. Early finishers may notice each tower is a square number plus 2."
+   },
+   {
+    "id": "L5-GAPS-V",
+    "slot": "bank",
+    "skill": "The gap of the gaps",
+    "tool": "table",
+    "tool_name": "Make a table",
+    "q": "Tower 1 has 1 block, Tower 2 has 2, Tower 3 has 5, Tower 4 has 10. The gaps go up by 2 each time. How many blocks in Tower 7?",
+    "a": "37.",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (The gap of the gaps).",
+    "ask": "What is the gap going to be between Tower 5 and Tower 6? Between Tower 9 and Tower 10?",
+    "listen": "Gaps 1, 3, 5, 7, 9, 11, 13, 15, 17. Listen for a table that keeps the pattern going row by row. Early finishers may notice each tower is a square number plus 2."
+   },
+   {
+    "id": "L5-WOVEN",
+    "slot": "slide",
+    "skill": "Two sequences woven together",
+    "tool": "pattern",
+    "tool_name": "Spot the pattern",
+    "q": "Mei writes this list: 3, 50, 7, 46, 11, 42, 15, ... (a) Write the next 2 numbers. (b) What is the 15th number in the list? (c) What is the 16th number in the list?",
+    "a": "(a) 38 and 19. (b) 31. (c) 22.",
+    "say": "Look at every other number. Underline the 1st, 3rd, 5th, 7th. Then underline the 2nd, 4th, 6th. What is each list doing?",
+    "ask": "Which list does the 15th number belong to? How many steps from the first number of that list is it?",
+    "listen": "Odd places: 3, 7, 11, 15 (add 4). Even places: 50, 46, 42 (take away 4). 15th is the 8th odd-place number: 3 + 7 × 4 = 31. 16th is the 8th even-place number: 50 − 7 × 4 = 22."
+   },
+   {
+    "id": "L5-WOVEN-V",
+    "slot": "bank",
+    "skill": "Two sequences woven together",
+    "tool": "pattern",
+    "tool_name": "Spot the pattern",
+    "q": "Siti writes: 5, 80, 9, 74, 13, 68, ... Find the 12th number.",
+    "a": "50.",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Two sequences woven together).",
+    "ask": "Which list does the 15th number belong to? How many steps from the first number of that list is it?",
+    "listen": "Odd places: 3, 7, 11, 15 (add 4). Even places: 50, 46, 42 (take away 4). 15th is the 8th odd-place number: 3 + 7 × 4 = 31. 16th is the 8th even-place number: 50 − 7 × 4 = 22."
+   },
+   {
+    "id": "L5-OP",
+    "slot": "slide",
+    "skill": "A rule from examples",
+    "tool": "table",
+    "tool_name": "Make a table",
+    "q": "A machine uses the sign ★ for a rule. 2 ★ 3 = 8, 4 ★ 1 = 8, 5 ★ 2 = 15, 3 ★ 3 = 12. (a) Find 6 ★ 4. (b) Find the number x so that x ★ 3 = 28.",
+    "a": "(a) 30. (b) 7.",
+    "say": "Make a table of the pairs. Look at what happens to the first number in each example. Try a rule, then test it on all four.",
+    "ask": "Does your rule work for all four examples? Why is one example not enough?",
+    "listen": "Rule: first number x (second number + 1). Listen for children testing a guess on every example and dropping it if it fails (Guess and check inside the table)."
+   },
+   {
+    "id": "L5-OP-V",
+    "slot": "bank",
+    "skill": "A rule from examples",
+    "tool": "table",
+    "tool_name": "Make a table",
+    "q": "A new machine: 1 ● 4 = 7, 2 ● 5 = 11, 3 ● 2 = 11, 5 ● 1 = 16. Find 4 ● 6.",
+    "a": "18 (the rule is 3 x the first number + the second number).",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (A rule from examples).",
+    "ask": "Does your rule work for all four examples? Why is one example not enough?",
+    "listen": "Rule: first number x (second number + 1). Listen for children testing a guess on every example and dropping it if it fails (Guess and check inside the table)."
+   }
+  ]
+ },
+ "10": {
+  "skills": [
+   {
+    "id": "L5-TRI",
+    "slot": "slide",
+    "skill": "Triangles by size",
+    "tool": "list",
+    "tool_name": "List every way",
+    "q": "The figure is a big triangle with a line from its top corner to each of 2 points on the base, and 1 line cutting across it, parallel to the base. Count all the triangles of every size.",
+    "a": "12 triangles.",
+    "say": "Count by size. First count the smallest triangles, then the ones made of 2 pieces, and so on. Keep a list.",
+    "ask": "Which lines do you need to make any triangle? What do all the triangles have in common?",
+    "listen": "Every triangle uses the top corner and two of the 4 lines from it (6 ways to choose), and then is cut off either by the base or by the line across (2 ways): 6 × 2 = 12. Accept a size-by-size list that totals 12, for example 6 triangles that stop at the line across and 6 that reach the base."
+   },
+   {
+    "id": "L5-BOUNDS",
+    "slot": "slide",
+    "skill": "Counting numbers in bounds",
+    "tool": "list",
+    "tool_name": "List every way",
+    "q": "How many whole numbers between 300 and 600 have digits that add up to 6? Write them from smallest to greatest.",
+    "a": "9 numbers: 303, 312, 321, 330, 402, 411, 420, 501, 510.",
+    "say": "Split into cases by the first digit: 3, 4 or 5. For each case, what must the other two digits add up to?",
+    "ask": "Why is 600 not in the list? How many pairs of digits make 3? Make 2? Make 1?",
+    "listen": "First digit 3: other digits add to 3, so 4 numbers. First digit 4: add to 2, so 3 numbers. First digit 5: add to 1, so 2 numbers. 4 + 3 + 2 = 9."
+   },
+   {
+    "id": "L5-BOUNDS-V",
+    "slot": "bank",
+    "skill": "Counting numbers in bounds",
+    "tool": "list",
+    "tool_name": "List every way",
+    "q": "How many whole numbers between 200 and 500 have a digit sum of 5?",
+    "a": "9.",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Counting numbers in bounds).",
+    "ask": "Why is 600 not in the list? How many pairs of digits make 3? Make 2? Make 1?",
+    "listen": "First digit 3: other digits add to 3, so 4 numbers. First digit 4: add to 2, so 3 numbers. First digit 5: add to 1, so 2 numbers. 4 + 3 + 2 = 9."
+   },
+   {
+    "id": "L5-PILE",
+    "slot": "slide",
+    "skill": "Least possible, the fullest bag",
+    "tool": "guess",
+    "tool_name": "Guess and check",
+    "q": "Ravi puts 23 marbles into 4 bags. No two bags hold the same number of marbles, and no bag is empty. What is the smallest number of marbles that the fullest bag can hold?",
+    "a": "8 marbles.",
+    "say": "Test a target for the fullest bag. If it holds 7, what is the most the other 3 bags can hold?",
+    "ask": "Why can the fullest bag not hold 7? Show a way that works for 8.",
+    "listen": "The test of the target: with 7 the biggest total is 7 + 6 + 5 + 4 = 22, which is less than 23. With 8, one way is 8 + 6 + 5 + 4 = 23. Listen for the argument that 7 is impossible, not only that 8 works."
+   },
+   {
+    "id": "L5-PILE-V",
+    "slot": "bank",
+    "skill": "Least possible, the fullest bag",
+    "tool": "guess",
+    "tool_name": "Guess and check",
+    "q": "Ravi puts 30 marbles into 5 different bags, all different and none empty. What is the smallest the fullest bag can hold?",
+    "a": "8.",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Least possible, the fullest bag).",
+    "ask": "Why can the fullest bag not hold 7? Show a way that works for 8.",
+    "listen": "The test of the target: with 7 the biggest total is 7 + 6 + 5 + 4 = 22, which is less than 23. With 8, one way is 8 + 6 + 5 + 4 = 23. Listen for the argument that 7 is impossible, not only that 8 works."
+   },
+   {
+    "id": "L5-EVENCAP",
+    "slot": "slide",
+    "skill": "Greatest possible with a rule",
+    "tool": "guess",
+    "tool_name": "Guess and check",
+    "q": "Ali chooses 6 different whole numbers from 1 to 12. He wants their total to be even. What is the greatest total he can get?",
+    "a": "56.",
+    "say": "Start with the 6 biggest numbers and find their total. Is it even? If not, what is the smallest change you can make?",
+    "ask": "Why does swapping one number change odd to even? How do you know that no total greater than 56 works?",
+    "listen": "12 + 11 + 10 + 9 + 8 + 7 = 57, odd. Change one number by 1 (replace 7 by 6): 56. Any greater total is 57 only, which is odd. Listen for \"the biggest possible is 57 and it is odd, so the next one down\"."
+   },
+   {
+    "id": "L5-EVENCAP-V",
+    "slot": "bank",
+    "skill": "Greatest possible with a rule",
+    "tool": "guess",
+    "tool_name": "Guess and check",
+    "q": "Mei chooses 5 different whole numbers from 1 to 10. She wants the total to be odd. What is the greatest total?",
+    "a": "39.",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Greatest possible with a rule).",
+    "ask": "Why does swapping one number change odd to even? How do you know that no total greater than 56 works?",
+    "listen": "12 + 11 + 10 + 9 + 8 + 7 = 57, odd. Change one number by 1 (replace 7 by 6): 56. Any greater total is 57 only, which is odd. Listen for \"the biggest possible is 57 and it is odd, so the next one down\"."
+   },
+   {
+    "id": "L5-R7",
+    "slot": "slide",
+    "skill": "Ratio and the difference",
+    "tool": "draw",
+    "tool_name": "Draw it",
+    "q": "Kumar and Wei collect marbles in the ratio 7 : 4. Kumar's collection is bigger than Wei's by 24 marbles. (a) How many parts is the difference between the two collections? (b) How many marbles is one part? (c) Find the number of marbles that each boy has.",
+    "a": "(a) 3 parts. (b) 8 marbles. (c) Kumar 56 marbles and Wei 32 marbles.",
+    "say": "Draw two bars: Kumar 7 units, Wei 4 units. The extra 3 units on Kumar's bar are the 24 marbles.",
+    "ask": "How many units is the 24? How many marbles is each unit? Can you check with the 7 : 4 and the difference of 24?",
+    "listen": "7 − 4 = 3 units is 24 marbles, so 1 unit is 8. Kumar 7 × 8 = 56, Wei 4 × 8 = 32. Check: 56 − 32 = 24 and 56 : 32 = 7 : 4. Listen for \"the difference in parts is the difference in marbles\".",
+    "preview": true
+   },
+   {
+    "id": "L5-R7-V",
+    "slot": "bank",
+    "skill": "Ratio and the difference",
+    "tool": "draw",
+    "tool_name": "Draw it",
+    "q": "Mei and Siti have stickers in the ratio 5 : 2. Mei has 36 more than Siti. How many does each have?",
+    "a": "Mei 60 stickers, Siti 24 stickers.",
+    "say": "Same skill, new numbers. Use the same tool and the same steps as the slide item (Ratio and the difference).",
+    "ask": "How many units is the 24? How many marbles is each unit? Can you check with the 7 : 4 and the difference of 24?",
+    "listen": "7 − 4 = 3 units is 24 marbles, so 1 unit is 8. Kumar 7 × 8 = 56, Wei 4 × 8 = 32. Check: 56 − 32 = 24 and 56 : 32 = 7 : 4. Listen for \"the difference in parts is the difference in marbles\".",
+    "preview": true
+   }
+  ]
+ }
+}

@@ -1,0 +1,33 @@
+PASS | stored XSS: hostile name, nickname, address, phone, note do not execute on parent pages
+PASS | stored XSS: the same hostile text does not execute in the OWNER admin tabs (orders address, trial note, children)
+PASS | reflected XSS: for, paid, ended, from, child, session_id query parameters are never written as HTML
+PASS | no email, name, address or phone appears in any URL the pages visited or requested
+PASS | console output carries no personal data (no console.log in the shipped scripts)
+PASS | no third-party request and no CSP violation on any portal page (CSP script-src self only)
+PASS | no inline <script> and no on* handler attributes in any portal HTML file
+PASS | no innerHTML / outerHTML / insertAdjacentHTML / document.write / eval / new Function in the portal scripts
+PASS | no console.* calls shipped in the portal scripts
+PASS | payment redirect only goes to checkout.stripe.com (a tampered /api reply must not send the parent elsewhere)
+PASS | child token lives in sessionStorage only (cleared with the tab), not in localStorage or the URL
+PASS | child session record holds name, level, token, expiry (no PIN, no family code, no parent data)
+PASS | child token: 31 minutes idle signs the child out (token removed and revoked); Sign out is visible at the top
+PASS | contrast (light mode): every text run reaches WCAG AA (4.5:1, 3:1 for large text) on all parent and child pages
+PASS | contrast (dark mode): every text run reaches WCAG AA (4.5:1, 3:1 for large text) on all parent and child pages
+PASS | keyboard focus shows a visible ring -- {'tag': 'A', 'text': '?Math Inquirers', 'outline': 'solid', 'w': '3px'}
+PASS | first Tab reaches the "Skip to content" link
+PASS | one <main> and one <h1> on the parent home -- {'main': 1, 'header': 1, 'nav': 1, 'h1': 1}
+PASS | after an action the page keeps or moves keyboard focus somewhere sensible and announces the result
+PASS | error messages use role=alert, success role=status
+PASS | touch targets are at least 24x24 CSS px (WCAG 2.2 AA) on 375px
+PASS | small buttons: 44px on touch devices via pointer:coarse -- buttons shorter than 44px on a non-touch emulation: 14 (CSS raises .btn.sm and tabs to 44px under pointer:coarse)
+PASS | no horizontal scroll at 375px with very long names
+PASS | no horizontal scroll at 320px with very long names
+PASS | child pages: no score, rank, streak, points, "wrong", "fail", "best", pressure or deadline wording
+PASS | parent pages (children, books, trial): no score/rank/streak/pressure wording
+PASS | Singapore English: no US spellings or terms on parent/child pages (checked list)
+PASS | child pages speak to the child and say "grown-up" (never "parent" or "guardian")
+PASS | parent pages never call the child "student" or "pupil"
+PASS | every agreement tick-box, for every family type, starts un-ticked (marketing_contact included)
+PASS | saving with a needed agreement left empty does not say "Agreements saved" as if all is well
+PASS | marketing_contact is not recorded unless the parent ticks it
+PASS | address fields exist only for printed options and are not sent with an online-only order

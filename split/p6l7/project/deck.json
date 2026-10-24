@@ -2,7 +2,7 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-22T00:26:51Z"
+  "at": "2026-10-23T06:28:13Z"
  },
  "lists": "css",
  "title": "Math Inquirers P6: Lesson 7 – Turtle Geometry",
@@ -11,9 +11,7 @@
   "p6l7-check",
   "p6l7-warm1",
   "p6l7-warm2",
-  "p6l7-setup",
   "p6l7-explore1",
-  "p6l7-go",
   "p6l7-explore2",
   "p6l7-teach1",
   "p6l7-we1",
@@ -27,13 +25,15 @@
   "p6l7-ws1ans",
   "p6l7-teachtrace",
   "p6l7-teachstar",
-  "p6l7-teachsum",
   "p6l7-ws2",
   "p6l7-ws2ans",
   "p6l7-stretch",
   "p6l7-challenge",
   "p6l7-chdiag",
   "p6l7-chwalk",
+  "p6l7-gap-perim",
+  "p6l7-gap-quarter",
+  "p6l7-gap-clock",
   "p6l7-talk",
   "p6l7-exit",
   "p6l7-reflect"

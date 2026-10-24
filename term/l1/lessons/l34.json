@@ -1,0 +1,3546 @@
+{
+ "schema_version": 1,
+ "id": "l1-t4-04",
+ "level": 1,
+ "term": 4,
+ "lesson": 34,
+ "lesson_in_term": 4,
+ "title": "Cubes and Views",
+ "big_idea": "The same thing looks different from the top, from the front and when it is folded",
+ "child_idea": "A picture can hide a cube, but the numbers on a top view count every cube. A folded paper has layers, so one hole can make more holes when it is opened.",
+ "skill": "Visualising",
+ "spine": {
+  "main": "actout",
+  "also": [
+   "draw"
+  ],
+  "role": "A",
+  "reason": "Children build the stack and fold and punch real paper; top views are drawn."
+ },
+ "ages": "6-8",
+ "moe": {
+  "strand": "Not a listed Primary 1 outcome. 3-D shapes are Primary 2 (p. 34); drawing cubes on an isometric grid is Primary 5 (p. 42)",
+  "topics": [
+   "Counting cubes in a picture and in a top view (early number work; solid shapes are Primary 2, p. 34)",
+   "Reading a top view as numbers and the cube you cannot see (beyond Primary 1; isometric drawing of cubes is Primary 5, p. 42)",
+   "Fold once and punch once, then fold twice (not in the syllabus; the nearest idea is symmetry, Primary 4)"
+  ],
+  "note": "Strand label for the tutor only. This is an added lesson (new topic) and it is not a listed Primary 1 content outcome. It builds the visualising skill (stacks, views, folds) that is also used in contest-style items. Start here is approachable with blocks in hand: count the cubes in a picture, count the cubes you cannot see when the total is given, match a top view, write a top view from a picture, say where the fold is and read a top view as a total. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only: finding a missing number on a top view when the total is given, fold once and punch once (the holes are the same distance from the fold), the other hole on a grid, fold twice and punch once (each fold doubles the layers: 4 holes), and a stack with a hidden cube. Named puzzle: Fold Twice, Punch Once. Owner decisions, 22 and 23 Oct 2026: strong content with scaffolding, said plainly to families; every lesson names a beyond item; fold once and punch is Think harder (decision 6). Do not describe the lesson as MOE-aligned. Wording rule (Term 1 audit, pre-flight D18): wrong working is always 'a child' or 'a child in another class', never a cast name. There is no school-paper evidence for stacks or folds, so the wording is unverified. Non-routine types (tutor only): fold once and punch once, a view from the top, fold twice and punch once."
+ },
+ "contest_moves": [
+  "fold once and punch once: how many holes, and where (the holes are the same distance from the fold)",
+  "a view from the top: the numbers on a top view count every cube, even one you cannot see",
+  "fold twice and punch once: each fold doubles the layers (1, 2, 4)",
+  "the hidden cube: the total on a top view minus the cubes you can see"
+ ],
+ "contest_where": "Think harder, Go further and the Investigation",
+ "objectives": [
+  "Count the cubes in a picture and say how many cannot be seen when the total is known.",
+  "Write a top view as a grid of numbers from a stack, and read a top view as a total.",
+  "Fold a paper square once and say where the fold line is.",
+  "Think harder: find a missing number on a top view, say how many holes a folded paper has when it is opened, and find the other hole on a grid.",
+  "Go further: fold twice and punch once, count a bigger stack with a hidden cube, and build a stack from a total."
+ ],
+ "joining_cold": {
+  "remember": [
+   "Counting by rows (Term 2 Lesson 5, taught again with a picture)",
+   "Doubles (Term 2 Lesson 3, taught again with a picture)",
+   "Counting cubes in a picture, one touch each (taught with a finger)"
+  ],
+  "assumes": "Only counting to 12 and adding two small numbers. Nothing from the lessons before is needed: the warm-up re-teaches counting by rows, doubles and counting cubes in a picture. The words stack, top view, fold and layer are taught in Explore and the Mini-lesson.",
+  "holiday_topics_revisited": [
+   "Counting in ones to 20"
+  ],
+  "safe_to_miss": true,
+  "note": "Fairly safe to miss: no other lesson needs it, but Mi's Challenge Quest in the last lesson of the year has a gate on stacks and folds. A child who misses it watches the recording and does workbook pages 1 and 2. A child who joins here cold can follow: the warm-up re-teaches rows, doubles and counting cubes, and Start here keeps to stacks of at most 5 cubes."
+ },
+ "materials": {
+  "child": [
+   "Your Term 4 book (Book 7), workbook pages 1 to 5, and the fold-squares page (page 6): the 4 paper squares are cut out by a grown-up beforehand",
+   "12 small blocks of one size: building bricks or dice. No blocks? Use buttons or coins on a 2 by 2 grid drawn on paper: the number of buttons in a square is the height of that stack",
+   "No printer or no cutting? Any square of paper works, or a sheet of paper as it is",
+   "A pencil, a rubber and spare paper"
+  ],
+  "tutor": [
+   "The slide deck",
+   "Your own 12 blocks and a paper square to show on camera, if you wish",
+   "A visible clock"
+  ],
+  "kit_pages": [
+   "Fold squares (page 6): 4 paper squares (about 9 cm). A grown-up cuts them out. Children only fold and make pencil dots: nothing is punched."
+  ],
+  "ruler": false,
+  "notes": "Nothing needs to be bought. Blocks and dice are small pieces: they stay on the table; nothing goes in the mouth or ears; keep them away from younger brothers and sisters. No matches, toothpicks or anything sharp. Nobody cuts during the lesson: a grown-up cut the squares beforehand. Nobody punches a real hole: the hole is a pencil dot made on the folded paper.",
+  "kit_contract": [
+   {
+    "piece": "paper squares (about 9 cm)",
+    "supplied": 4,
+    "max_used": 3,
+    "used_by": [
+     "explore",
+     "mini",
+     "I1"
+    ]
+   },
+   {
+    "piece": "small blocks (from home)",
+    "supplied": 12,
+    "max_used": 7,
+    "used_by": [
+     "explore",
+     "mini"
+    ]
+   }
+  ]
+ },
+ "timing": {
+  "parts": [
+   {
+    "id": "opening",
+    "title": "Opening",
+    "start": 0,
+    "end": 2
+   },
+   {
+    "id": "remember",
+    "title": "Remember warm-up",
+    "start": 2,
+    "end": 8
+   },
+   {
+    "id": "sneak",
+    "title": "Sneak-peek puzzles",
+    "start": 8,
+    "end": 12
+   },
+   {
+    "id": "explore",
+    "title": "Explore",
+    "start": 12,
+    "end": 23
+   },
+   {
+    "id": "mini",
+    "title": "Mini-lesson",
+    "start": 23,
+    "end": 34
+   },
+   {
+    "id": "break",
+    "title": "Brain break",
+    "start": 34,
+    "end": 38
+   },
+   {
+    "id": "work",
+    "title": "Workbook",
+    "start": 38,
+    "end": 70
+   },
+   {
+    "id": "talk",
+    "title": "Talk time",
+    "start": 70,
+    "end": 76
+   },
+   {
+    "id": "exit",
+    "title": "Exit ticket",
+    "start": 76,
+    "end": 82
+   },
+   {
+    "id": "look",
+    "title": "Look-back",
+    "start": 82,
+    "end": 85
+   },
+   {
+    "id": "flex",
+    "title": "Flex time and goodbye",
+    "start": 85,
+    "end": 90
+   }
+  ],
+  "optional_slide": "s-opt",
+  "include_rules": false,
+  "notes": "Opening is 2 minutes. Explore has 11 minutes: build a stack from a picture and a top view and count the block you cannot see, then fold a paper square, make one pencil dot and open it. The Mini-lesson has 11: count every cube, write a top view, build from a top view, fold once and punch once, and the other hole on a grid. The workbook has 32 minutes: Start here takes a middle child about 17 minutes (page 1 about 8, page 2 about 9), so pages 3 to 5 are for home for most children. The last 5 minutes are the standing buffer.",
+  "skip_order": [
+   "Start with: shorten Explore round 3 (what did we notice) to one question",
+   "Then: cut the other hole on a grid (s-m5)",
+   "Then: take the extra minutes from the flex time"
+  ]
+ },
+ "sneak_peek": {
+  "q1": "How many cubes are in the picture? Write the number.",
+  "q2": "The stack has 5 cubes. The picture shows only 4. Where is the 5th cube? I know because ___.",
+  "a1": "4 cubes.",
+  "a2": "The 5th cube is hidden behind the front tower."
+ },
+ "rec": {
+  "opening": {
+   "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook, your blocks and a paper square. Pause or rewind any time.",
+   "action": "Gather your workbook, blocks, paper square, pencil and paper. Press play when ready."
+  },
+  "remember": {
+   "say": "Recording: join in! Say your answers out loud before I say them. Pause if you need longer.",
+   "action": "Play along. Say each answer out loud before the video does."
+  },
+  "sneak": {
+   "say": "Recording: pause now and try both puzzles on your paper. Guessing is fine. Press play for the next part.",
+   "action": "Pause. Try both puzzles on your own paper. A guess is fine."
+  },
+  "explore": {
+   "say": "Recording: pause now. Build the stack with your blocks, then fold your square and make one dot. Press play when you have tried.",
+   "action": "Pause. Build the stack and count. Fold a square, make one dot, then open it."
+  },
+  "mini": {
+   "say": "Recording: keep watching and copy the examples with your blocks and paper. Rewind if you miss a step.",
+   "action": "Watch and copy the examples. Rewind any step you missed."
+  },
+  "break": {
+   "say": "Recording: stand up and join in! Fold your arms in half, then open them.",
+   "action": "Stand up. Fold and open your arms, then sit down."
+  },
+  "work": {
+   "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
+   "action": "Pause. Do page 1, then play to check. Then page 2. Then choose a page to try."
+  },
+  "talk": {
+   "say": "Recording: pause. Tell a grown-up why counting only the cubes you can see can give too few.",
+   "action": "Pause. Explain your answer to someone at home and show how you know."
+  },
+  "exit": {
+   "say": "Recording: pause and do the exit ticket on your own. Then press play to check it.",
+   "action": "Pause. Do the exit ticket alone, then play to check it."
+  },
+  "look": {
+   "say": "Recording: pause and fill in your look-back box. You can pass.",
+   "action": "Pause. Fill in the look-back box, or pass."
+  },
+  "flex": {
+   "say": "Recording: well done for finishing! Show a grown-up a stack of blocks and its top view.",
+   "action": "Show a grown-up a stack and say its top view numbers."
+  }
+ },
+ "slides": [
+  {
+   "id": "s-title",
+   "part": "opening",
+   "kind": "title",
+   "title": "Cubes and Views",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "TODAY WE WILL",
+     "items": [
+      "Count every cube, even one we cannot see.",
+      "Look at a stack from the top.",
+      "Fold a paper and find the holes."
+     ]
+    }
+   ],
+   "note": "Lesson 4 of Term 4, 90 minutes. Objective: count all the cubes in a stack including the one you cannot see, read a top view as a grid of numbers, and say how many holes a folded paper has when it is opened. Plain statement for families: counting cubes in a picture is early work; 3-D shapes are Primary 2 and drawing cubes is Primary 5, so reading a top view as numbers, the cube you cannot see and fold and punch go beyond the Primary 1 syllabus on purpose, always with real blocks and paper in hand. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 23, mini-lesson 23 to 34, brain break 34 to 38, workbook 38 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Say the recording notice before you start the recording, in one line: you, the shared screen and any unmuted voice; a child may keep the camera off.",
+   "subtitle": "The same thing looks different from the top",
+   "mascot": {
+    "size": "l",
+    "say": "Hi, I'm Mi. Let's notice, test and explain why!"
+   }
+  },
+  {
+   "id": "s-rem1",
+   "part": "remember",
+   "kind": "light",
+   "title": "Warm-up: rows",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "array",
+     "rows": 2,
+     "cols": 3,
+     "icon": "counter",
+     "size": "m"
+    },
+    {
+     "t": "chip",
+     "text": "Count the counters by rows. How many rows? How many in each row? How many in all?"
+    }
+   ],
+   "note": "Counting by rows (Term 2 Lesson 5, taught again). 2 rows with 3 counters in each row: 3 and 3 make 6. Ask: how many rows (2), how many in each row (3), how many in all (6). A child who is unsure points along each row. Your turn, no picture: 3 rows of 2; how many in all (6). Children answer aloud. No writing."
+  },
+  {
+   "id": "s-rem2",
+   "part": "remember",
+   "kind": "light",
+   "title": "Doubles",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "objects",
+     "icon": "counter",
+     "n": 3,
+     "per_row": 3,
+     "size": "m"
+    },
+    {
+     "t": "chip",
+     "text": "A double is the same number twice. Double 3 is 3 and 3 again. Double 5?"
+    }
+   ],
+   "note": "Doubles (Term 2 Lesson 3, taught again). Double 3 is 3 and 3 again: 6. Ask: what is double 3 (6), what is double 5 (10). A child who is unsure holds up 5 fingers on each hand. Your turn: double 4 (8). Say: each time we double, the number of layers doubles; we use that later. Children answer aloud. No writing."
+  },
+  {
+   "id": "s-rem3",
+   "part": "remember",
+   "kind": "light",
+   "title": "Count the cubes",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "cube_stack",
+     "heights": [
+      [
+       2,
+       1
+      ]
+     ],
+     "mode": "iso",
+     "size": 32
+    },
+    {
+     "t": "chip",
+     "text": "Touch each cube. How many cubes are there?"
+    }
+   ],
+   "note": "Counting cubes in a picture (new picture, taught with a finger). The picture shows a tower of 2 cubes with 1 cube next to it: 3 cubes in all. Ask: how many cubes (3). A child who is unsure touches each cube once. Your turn: the same shape with one more cube on the small tower (4). Children answer aloud. No writing.",
+   "mascot": {
+    "size": "s",
+    "say": "Take your time!"
+   }
+  },
+  {
+   "id": "s-sneak",
+   "part": "sneak",
+   "kind": "light",
+   "title": "Sneak-peek puzzles",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Ideas we have not learnt yet. A guess is a great start. Nobody is marked."
+    },
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 1: anyone can try",
+        "items": [
+         "How many cubes are in the picture?",
+         "Write the number."
+        ]
+       },
+       {
+        "t": "visual",
+        "type": "cube_stack",
+        "heights": [
+         [
+          2,
+          2
+         ]
+        ],
+        "mode": "iso",
+        "size": 30
+       }
+      ],
+      [
+       {
+        "t": "card",
+        "head": "PUZZLE 2: think",
+        "items": [
+         "The stack has 5 cubes.",
+         "The picture shows only 4.",
+         "Where is the 5th cube? I know because ___."
+        ]
+       },
+       {
+        "t": "visual",
+        "type": "cube_stack",
+        "heights": [
+         [
+          1,
+          1
+         ],
+         [
+          1,
+          2
+         ]
+        ],
+        "mode": "iso",
+        "size": 30
+       }
+      ]
+     ]
+    }
+   ],
+   "note": "Puzzle 1 is an access question: 2 cubes side by side and 2 on top, a wall of 4 cubes: the answer is 4. Puzzle 2 is a thinking question on the lesson idea: the stack has 5 cubes but the picture shows only 4, because one cube is hidden behind the front tower. A child who says 'it is behind the tall tower' has done well. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: 4; the 5th cube is hidden behind the front tower. Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
+  },
+  {
+   "id": "s-explore1",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: build the stack",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "cube_stack",
+        "heights": [
+         [
+          1,
+          1
+         ],
+         [
+          2,
+          2
+         ]
+        ],
+        "mode": "iso",
+        "size": 32
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "cube_stack",
+        "heights": [
+         [
+          1,
+          1
+         ],
+         [
+          2,
+          2
+         ]
+        ],
+        "mode": "top",
+        "size": 40
+       }
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "The numbers say how many blocks are in each stack. Build the stack. How many blocks do you use?"
+    }
+   ],
+   "note": "Round 1, about 5 minutes. Each child has up to 12 small blocks of one size (bricks or dice). The slide shows a stack on a 2 by 2 base and its top view: the numbers say how many blocks are in each stack, the back stacks in the top row. Children build it and count their blocks. Ask: how many blocks did you use; how many blocks can you see in the picture; how many can you not see. The back left bottom block is hidden behind the front right tower: the picture shows 5 blocks and the stack has 6. Answer on the next slide. A child with no blocks puts counters or buttons on a drawn 2 by 2 grid: the number of buttons in a square is the height of that stack. Nobody holds blocks or drawings up to the camera: children say how many they used and show fingers."
+  },
+  {
+   "id": "s-explore1-ans",
+   "part": "explore",
+   "kind": "light",
+   "title": "6 blocks, 1 hidden",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "cube_stack",
+     "heights": [
+      [
+       1,
+       1
+      ],
+      [
+       2,
+       2
+      ]
+     ],
+     "mode": "iso",
+     "size": 32
+    },
+    {
+     "t": "answer",
+     "text": "The stack has 6 blocks. The picture shows only 5. One block is hidden behind the front tower."
+    }
+   ],
+   "note": "Children check their own stack. The stack has 6 blocks: 1 + 1 + 2 + 2. The picture shows only 5; one block is hidden behind the front right tower. Say: a picture cannot show every block, but the top view numbers let us count them all. Ticks only. Do not name any child."
+  },
+  {
+   "id": "s-explore2",
+   "part": "explore",
+   "kind": "light",
+   "title": "Explore: fold and open",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": true,
+     "items": [
+      "Fold your paper square in half. Make the edges meet.",
+      "Make one pencil dot on the folded paper, away from the fold.",
+      "How many dots will there be when you open it?"
+     ]
+    }
+   ],
+   "note": "Round 2, about 4 minutes. Each child has a paper square from the kit page (cut out by a grown-up beforehand). Read the three steps one at a time. Children fold the square in half so two edges meet, press the fold, and make one pencil dot on the folded paper, away from the fold edge. No punching: pencil only. Ask: how many dots will you see when you open it. Take guesses, then children open the paper. Nobody holds the paper up to the camera: children say what they see. A child with no square folds any sheet of paper."
+  },
+  {
+   "id": "s-explore2-ans",
+   "part": "explore",
+   "kind": "light",
+   "title": "Open it up",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "fold_punch",
+     "stage": "unfolded",
+     "fold": "v",
+     "holes": [
+      [
+       0.55,
+       0.3
+      ]
+     ],
+     "size": 38
+    },
+    {
+     "t": "chip",
+     "text": "One dot on the folded paper. Two dots when it is open."
+    }
+   ],
+   "note": "The picture shows an opened paper: two dots, one each side of the fold. The dots are the same distance from the fold line, one on the left and one on the right. Say: the paper had two layers, so the dot went through two layers. Children check their own paper: two dots, one each side of the fold line, the same distance from it. Ticks only."
+  },
+  {
+   "id": "s-explore3",
+   "part": "explore",
+   "kind": "light",
+   "title": "What did we notice?",
+   "blocks": [
+    {
+     "t": "list",
+     "ordered": false,
+     "items": [
+      "What was hidden when you looked at the picture of the stack?",
+      "Where were the two dots after you opened the paper?"
+     ]
+    }
+   ],
+   "note": "Take one or two answers from volunteers. Key ideas: some blocks are hidden in a picture but they are still there; we can count them from the top view; the folded paper had two layers, so one dot made two dots, one on each side of the fold and the same distance from it. Repeat each child answer in your own words so the recording picks it up. Do not give the rule before the children say it; the mini-lesson makes it exact."
+  },
+  {
+   "id": "s-m1",
+   "part": "mini",
+   "kind": "light",
+   "title": "Count every cube",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "cube_stack",
+        "heights": [
+         [
+          2,
+          2
+         ],
+         [
+          1,
+          2
+         ]
+        ],
+        "mode": "iso",
+        "size": 32
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "cube_stack",
+        "heights": [
+         [
+          2,
+          2
+         ],
+         [
+          1,
+          2
+         ]
+        ],
+        "mode": "top",
+        "size": 40
+       }
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "The top view says how many cubes are in each stack. How many cubes can you see in the picture? How many are there in all?"
+    }
+   ],
+   "note": "Worked example. The slide shows a stack on a 2 by 2 base and its top view. The top view numbers add to 7 cubes; one cube is hidden behind the front right tower, so 6 can be seen in the picture. Ask: how many cubes can you see (6); how many cubes are there in all (7). The answer is on the next slide. Say: a cube we cannot see is still a cube. Children may build it with blocks to check."
+  },
+  {
+   "id": "s-m1-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "7 cubes in all",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "cube_stack",
+     "heights": [
+      [
+       2,
+       2
+      ],
+      [
+       1,
+       2
+      ]
+     ],
+     "mode": "iso",
+     "size": 32
+    },
+    {
+     "t": "answer",
+     "text": "We can see 6 cubes. There are 7 in all: 2 + 2 + 1 + 2. One cube is hidden."
+    }
+   ],
+   "note": "The answer for the example on the slide before. 6 cubes can be seen, 7 in all. The top view shows 2, 2, 1 and 2: the four stacks. Read it aloud so that children can tick their own work, and say what the picture showed. Your-turn answer: not needed here, the next slide uses the top view."
+  },
+  {
+   "id": "s-m2",
+   "part": "mini",
+   "kind": "light",
+   "title": "The top view as numbers",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "cube_stack",
+     "heights": [
+      [
+       1,
+       1
+      ],
+      [
+       3,
+       1
+      ]
+     ],
+     "mode": "iso",
+     "size": 32
+    },
+    {
+     "t": "chip",
+     "text": "Look from the top. Write a number for each stack. Draw 4 squares like a window."
+    },
+    {
+     "t": "chip",
+     "text": "Top stack: back left. Right stack: back right. Left stack: front left. Bottom stack: front right."
+    }
+   ],
+   "note": "Worked example. A stack with 6 cubes and none hidden: the back left stack has 1, the back right 1, the front left 3 and the front right 1. Children draw four squares in a 2 by 2 block on paper and write how many cubes are in each stack, the back stacks in the top row. The answer is on the next slide. Say: the top view is a plan of the stack, seen from above; the numbers say how tall each stack is. A child who writes the cubes they can see on each side has counted faces: ask, how many cubes are in this stack? Name the four stacks on the picture with the children: the top one is the back left, the right one the back right, the left one the front left, the bottom one the front right. The back row is the top row of the top view."
+  },
+  {
+   "id": "s-m2-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "The top view",
+   "blocks": [
+    {
+     "t": "cols",
+     "cols": [
+      [
+       {
+        "t": "visual",
+        "type": "cube_stack",
+        "heights": [
+         [
+          1,
+          1
+         ],
+         [
+          3,
+          1
+         ]
+        ],
+        "mode": "iso",
+        "size": 32
+       }
+      ],
+      [
+       {
+        "t": "visual",
+        "type": "cube_stack",
+        "heights": [
+         [
+          1,
+          1
+         ],
+         [
+          3,
+          1
+         ]
+        ],
+        "mode": "top",
+        "size": 45
+       }
+      ]
+     ]
+    },
+    {
+     "t": "answer",
+     "text": "Top row: 1 and 1. Bottom row: 3 and 1. There are 6 cubes in all."
+    }
+   ],
+   "note": "The answer for the example on the slide before. The top row is the back of the stack and the bottom row is the front. 1, 1, 3 and 1 make 6 cubes. Read it aloud so that children can tick their own work."
+  },
+  {
+   "id": "s-m3",
+   "part": "mini",
+   "kind": "light",
+   "title": "Build from the top view",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "cube_stack",
+     "heights": [
+      [
+       3,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "mode": "top",
+     "size": 45
+    },
+    {
+     "t": "chip",
+     "text": "Build the stack with your blocks. How many cubes are there in all?"
+    }
+   ],
+   "note": "Worked example. The top view says: the back left stack has 3 cubes, the other three stacks have 1 cube each. Children build it with blocks, or put buttons on a drawn 2 by 2 grid, and count: 3 and 1 and 1 and 1 make 6 cubes. The answer is on the next slide. Say: a top view tells us how many cubes without seeing the side. If a child builds a stack of 3 and forgets the others, ask: what does each number say?"
+  },
+  {
+   "id": "s-m3-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "6 cubes",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "cube_stack",
+     "heights": [
+      [
+       3,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "mode": "iso",
+     "size": 30
+    },
+    {
+     "t": "answer",
+     "text": "3 + 1 + 1 + 1 = 6 cubes. The tall stack is at the back on the left."
+    }
+   ],
+   "note": "The answer for the example on the slide before. 3 + 1 + 1 + 1 = 6. The picture shows the stack seen from the front: the tall stack is at the back on the left, and its bottom cube is hidden behind the front cubes. Read it aloud so that children can tick their own work."
+  },
+  {
+   "id": "s-m4",
+   "part": "mini",
+   "kind": "light",
+   "title": "Fold once, punch once",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "fold_punch",
+     "stage": "folded",
+     "fold": "v",
+     "holes": [
+      [
+       0.7,
+       0.7
+      ]
+     ],
+     "size": 38
+    },
+    {
+     "t": "chip",
+     "text": "A paper is folded in half. The fold is on the left. One hole is punched. How many holes when it is opened?"
+    }
+   ],
+   "note": "Worked example. The picture shows the folded paper with one hole punched through both layers. The folded edge is on the left. Ask: how many holes will there be when it is opened (2). Where will they be (one on each side of the middle line, the same distance from it). The answer is on the next slide. Children use their paper square: fold, make one pencil dot, open it, check. No real punching."
+  },
+  {
+   "id": "s-m4-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "Two holes",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "fold_punch",
+     "stage": "unfolded",
+     "fold": "v",
+     "holes": [
+      [
+       0.7,
+       0.7
+      ]
+     ],
+     "size": 38
+    },
+    {
+     "t": "answer",
+     "text": "2 holes. The fold is in the middle. The holes are the same distance from it."
+    }
+   ],
+   "note": "The answer for the example on the slide before. The opened paper has 2 holes, one each side of the fold line and the same distance from it. Say: the paper had two layers, so one punch made two holes. Read it aloud so that children can tick their own work."
+  },
+  {
+   "id": "s-m5",
+   "part": "mini",
+   "kind": "light",
+   "title": "Same distance from the fold",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "grid",
+     "rows": 3,
+     "cols": 4,
+     "kind": "dots",
+     "mirror": 2,
+     "mark": [
+      [
+       0,
+       1
+      ]
+     ],
+     "size": 60
+    },
+    {
+     "t": "chip",
+     "text": "The paper is folded along the dashed line. One hole is ringed. Where is the other hole?"
+    }
+   ],
+   "note": "Worked example. A dot grid stands for the opened paper, and the dashed line is the fold. The ringed hole is 2 steps to the left of the dashed line. Ask: how many steps from the dashed line is the ringed hole (2); where is the other hole (2 steps to the right of the dashed line, on the same row). The answer is on the next slide. Link to the grid lesson: count the steps, not the dots."
+  },
+  {
+   "id": "s-m5-ans",
+   "part": "mini",
+   "kind": "light",
+   "title": "2 steps each side",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "grid",
+     "rows": 3,
+     "cols": 4,
+     "kind": "dots",
+     "mirror": 2,
+     "mark": [
+      [
+       0,
+       1
+      ],
+      [
+       4,
+       1
+      ]
+     ],
+     "size": 60
+    },
+    {
+     "t": "answer",
+     "text": "The other hole is 2 steps from the dashed line, on the other side."
+    }
+   ],
+   "note": "The answer for the example on the slide before. Both holes are 2 steps from the dashed line, on the same row. Read it aloud so that children can tick their own work."
+  },
+  {
+   "id": "s-break",
+   "part": "break",
+   "kind": "dark",
+   "title": "Fold and unfold break",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Stand up. Fold your arms in half. Unfold them."
+    },
+    {
+     "t": "p",
+     "text": "Make a tall stack with your arms. Make a flat one."
+    },
+    {
+     "t": "p",
+     "text": "Sip some water."
+    }
+   ],
+   "note": "Four minutes. Stand up on camera with a little clear space. Call movements: fold your arms in half, open them, stand tall like a stack of 3, crouch like a stack of 1, make a square with your arms. Then fold in half again and again, with the body bending, and say how many layers: 2, then 4 (each fold doubles the layers). No equipment, no running. A child may stay seated. Do not give prizes or compare children."
+  },
+  {
+   "id": "s-ws1",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 1: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 1 to 3. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ],
+     "short": true,
+     "vw": 170
+    }
+   ],
+   "note": "Read questions 1 to 3 aloud. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: count the cubes in the picture. Question 2: how many cubes can you not see. Question 3: which top view matches the stack."
+  },
+  {
+   "id": "s-ws1ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 1",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S1",
+      "S2",
+      "S3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1: 5 cubes. Q2: 4 cubes in all, 1 you cannot see. Q3: B."
+  },
+  {
+   "id": "s-ws2",
+   "part": "work",
+   "kind": "light",
+   "title": "Workbook page 2: Start here",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "Questions 4 to 6. Take your time."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "S4",
+      "S5",
+      "S6"
+     ],
+     "short": true,
+     "vw": 170
+    }
+   ],
+   "note": "Read questions 4 to 6 aloud. Question 4: write the number of cubes in each stack on the top view. Question 5: a paper square is folded so the top edge meets the bottom edge; draw the fold line. Question 6: a top view with numbers; how many cubes in all. Wait 10 seconds before helping."
+  },
+  {
+   "id": "s-ws2ans",
+   "part": "work",
+   "kind": "light",
+   "title": "Check page 2",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "S4",
+      "S5",
+      "S6"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud so a child watching the recording can tick their own work. Never ask a child to show a wrong answer to the group. Answers: Q4 3, 0 in the top row and 2, 1 in the bottom row. Q5 a line across the middle, from the left edge to the right edge. Q6 7 cubes."
+  },
+  {
+   "id": "s-choice",
+   "part": "work",
+   "kind": "light",
+   "title": "Choose your next page",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Page",
+       "What it is"
+      ],
+      [
+       "Think harder (page 3)",
+       "Hidden cubes, a fold and a hole, the other hole"
+      ],
+      [
+       "Go further (page 4)",
+       "Fold twice, a bigger stack, build your own"
+      ],
+      [
+       "Investigation (page 5)",
+       "Fold, mark and open"
+      ],
+      [
+       "Check",
+       "Finish and check your own work"
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Everyone may choose. Not finished? Pages 3 to 5 are for home too."
+    }
+   ],
+   "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 5 minutes."
+  },
+  {
+   "id": "s-talk",
+   "part": "talk",
+   "kind": "light",
+   "title": "Talk and explain",
+   "blocks": [
+    {
+     "t": "card",
+     "head": "A CHILD IN ANOTHER CLASS SAYS",
+     "items": [
+      "I count the cubes I can see in the picture.",
+      "I see 6 cubes.",
+      "So there are 6 cubes in the stack."
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Do you agree? How could we check?"
+    },
+    {
+     "t": "chip",
+     "text": "I think ... because ..."
+    }
+   ],
+   "note": "One minute of talk to the grown-up next to you, or to your screen. Volunteers first; a pass is always fine; never call a child by name to answer. Model answer: no, we do not agree. A picture can hide a cube behind another cube, so counting only what we see can give too few. We can check with blocks, or with a top view: add the numbers. Link to the sneak-peek and the mini-lesson. Repeat each child answer in your own words for the recording. The child in the story is in another class: no cast name is given the wrong answer."
+  },
+  {
+   "id": "s-sneakans",
+   "part": "talk",
+   "kind": "light",
+   "title": "Back to the sneak-peek",
+   "blocks": [
+    {
+     "t": "answer",
+     "text": "Puzzle 1: 4 cubes. Puzzle 2: the 5th cube is hidden behind the front tower."
+    }
+   ],
+   "note": "Reveal both puzzles now. Say: many of you wrote a good answer. Do not read out anyone earlier answer. Puzzle 1: a wall of 4 cubes, all can be seen. Puzzle 2: the picture shows 4 cubes, but there are 5: one is hidden behind the front tower, at the back. It was the same idea as Explore and the mini-lesson: a cube we cannot see is still a cube."
+  },
+  {
+   "id": "s-exit",
+   "part": "exit",
+   "kind": "light",
+   "title": "Exit ticket",
+   "blocks": [
+    {
+     "t": "chip",
+     "text": "On your own. No looking back."
+    },
+    {
+     "t": "qs",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ],
+     "short": false,
+     "vw": 170
+    }
+   ],
+   "note": "Children answer on page 5. Read E1, E2 and E3 aloud, with the numbers (the figures on the slide are small). Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
+  },
+  {
+   "id": "s-exitans",
+   "part": "exit",
+   "kind": "light",
+   "title": "Check the exit ticket",
+   "blocks": [
+    {
+     "t": "answers",
+     "ids": [
+      "E1",
+      "E2",
+      "E3"
+     ]
+    }
+   ],
+   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: E1 4 cubes; E2 6 cubes; E3 down the middle."
+  },
+  {
+   "id": "s-look",
+   "part": "look",
+   "kind": "lookback",
+   "title": "Look-back",
+   "blocks": [
+    {
+     "t": "lookback"
+    }
+   ],
+   "note": "Three minutes. Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child.",
+   "mascot": {
+    "size": "s",
+    "say": "Take your time. You can pass."
+   }
+  },
+  {
+   "id": "s-end",
+   "part": "flex",
+   "kind": "dark",
+   "title": "Well done, inquirers!",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Show a grown-up a stack and its top view."
+    },
+    {
+     "t": "card",
+     "head": "NEXT LESSON",
+     "items": [
+      "Spot It",
+      "Have ready: the 12 pair cards from your book, cut out by a grown-up."
+     ]
+    }
+   ],
+   "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. Remind families that the next lesson needs the pair-cards page of Book 7, torn out along the dashed line, with the 12 cards cut out by a grown-up beforehand. If the whole class is ahead, show the optional slides and use the Spare-time menu from the tutor guide.",
+   "mascot": {
+    "size": "l",
+    "say": "Great thinking today!"
+   }
+  },
+  {
+   "id": "s-opt",
+   "part": "flex",
+   "kind": "light",
+   "title": "Go further: fold twice",
+   "blocks": [
+    {
+     "t": "visual",
+     "type": "fold_punch",
+     "stage": "folded",
+     "fold": "quarter",
+     "holes": [
+      [
+       0.4,
+       0.6
+      ]
+     ],
+     "size": 35
+    },
+    {
+     "t": "chip",
+     "text": "Folded in half, then in half again. One hole. How many holes when it is opened?"
+    }
+   ],
+   "note": "Optional, only if you are on time. A paper is folded in half, then in half again, so there are 4 layers; one hole is punched through all of them. Ask: how many holes when it is opened (4). Each fold doubles the layers: 1, 2, 4. Take two answers and move on. This links to doubles in the warm-up.",
+   "optional": true
+  },
+  {
+   "id": "s-menu",
+   "part": "flex",
+   "kind": "light",
+   "title": "If we have time: pick one",
+   "blocks": [
+    {
+     "t": "table",
+     "header": true,
+     "rows": [
+      [
+       "Activity",
+       "What we do"
+      ],
+      [
+       "Is it always true?",
+       "Does a bigger stack always have more cubes in the top view numbers?"
+      ],
+      [
+       "Make a puzzle",
+       "Build a stack and draw its top view for your grown-up."
+      ],
+      [
+       "Teach it back",
+       "Show a toy why a picture can hide a cube."
+      ]
+     ]
+    },
+    {
+     "t": "chip",
+     "text": "Optional. Everyone may join."
+    }
+   ],
+   "note": "Optional Spare-time menu, used only if the whole class is ahead. Pick one or two activities (3 to 5 minutes each); full tutor lines and answers are in the tutor guide. Never start new content and never name who is ahead. Slow down with how do you know rather than rushing on. These minutes come from the flex buffer and are not part of the 90-minute sum.",
+   "optional": true
+  }
+ ],
+ "script": {
+  "segments": [
+   {
+    "part": "opening",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-title",
+      "s": 10
+     },
+     {
+      "k": "DO",
+      "text": "Greet the whole group warmly, before the recording starts. Check that you can see each child, or ask the grown-up.",
+      "s": 12
+     },
+     {
+      "k": "SAY",
+      "text": "Hello, inquirers! Pencil ready, and your blocks and one paper square on the table. Cameras can be on or off, as you like."
+     },
+     {
+      "k": "SAY",
+      "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+     },
+     {
+      "k": "DO",
+      "text": "Start the recording now. Do not use children's first names on the recording.",
+      "s": 5
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
+     },
+     {
+      "k": "SAY",
+      "text": "Today the same thing looks different from different places. We count cubes we cannot see, we look from the top, and we fold paper."
+     },
+     {
+      "k": "SAY",
+      "text": "Today's tool is Act it out. Use counters, paper or people to show it.",
+      "spine": "opening"
+     },
+     {
+      "k": "DO",
+      "text": "Point at the tool on page 1 of the workbook.",
+      "s": 4,
+      "spine": "opening"
+     },
+     {
+      "k": "NOTE",
+      "text": "Say the recording statement and the microphone routine in the same words every lesson, for anyone who joined late. Say the notice before you start the recording, and do not use children's first names once it is running. The routine and the four inquirer rules were introduced earlier in the year: do not re-teach them."
+     },
+     {
+      "k": "NOTE",
+      "text": "Plain statement for families when it comes up: counting cubes in a picture is early work; 3-D shapes are Primary 2 and drawing cubes is Primary 5, so a top view read as numbers, the cube you cannot see and fold and punch go beyond Primary 1 on purpose, always with real blocks and paper. There is no school-paper evidence for these topics, so the wording is unverified."
+     },
+     {
+      "k": "NOTE",
+      "text": "New here? Say in one minute: our three rule words (notice it, test it, explain why); a guess is fine and you can always pass; after Start here you may choose Think harder, Go further or the Investigation; nobody holds paper to the camera. A child without blocks uses buttons or counters on a drawn 2 by 2 grid: the number of buttons in a square is the height of that stack."
+     }
+    ]
+   },
+   {
+    "part": "remember",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-rem1",
+      "s": 12
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Counters in rows. Count by rows."
+     },
+     {
+      "k": "ASK",
+      "text": "How many rows are there? How many counters are in each row? How many in all?",
+      "resp": 35
+     },
+     {
+      "k": "WORK",
+      "text": "Your turn. Three rows of two. How many in all? Say it with me.",
+      "s": 35
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem2",
+      "s": 12
+     },
+     {
+      "k": "SAY",
+      "text": "A double is the same number twice. Double three is three and three again."
+     },
+     {
+      "k": "ASK",
+      "text": "What is double three? What is double five?",
+      "resp": 35
+     },
+     {
+      "k": "WORK",
+      "text": "Your turn. What is double four? Show with your fingers.",
+      "s": 30
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-rem3",
+      "s": 12
+     },
+     {
+      "k": "SAY",
+      "text": "Cubes in a picture. Touch each cube once."
+     },
+     {
+      "k": "ASK",
+      "text": "How many cubes are there?",
+      "resp": 35
+     },
+     {
+      "k": "WORK",
+      "text": "Your turn. The same shape with one more cube on the small tower. How many cubes?",
+      "s": 35
+     },
+     {
+      "k": "WORK",
+      "text": "Say each answer with me: two rows, three in each row, six; six; ten; three. Now the your-turn answers: six, eight, four. Then stretch your fingers.",
+      "s": 22
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child is unsure how to count the cubes, touch each cube once and say a number. For rows, run a finger along each row. For doubles, hold up the same number of fingers on each hand."
+     },
+     {
+      "k": "NOTE",
+      "text": "Answers: 2 rows, 3 in each row, 6 in all; double 3 is 6, double 5 is 10; 3 cubes. Your turns: 6; double 4 is 8; 4 cubes. Children answer with a whisper, fingers or hands. Nobody writes. Joining cold: all you need is counting to 12 and the pictures."
+     }
+    ]
+   },
+   {
+    "part": "sneak",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-sneak",
+      "s": 12
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked."
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle one. How many cubes are in the picture? Write the number."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write on their own paper.",
+      "s": 35
+     },
+     {
+      "k": "READ",
+      "text": "Puzzle two. The stack has five cubes. The picture shows only four. Where is the fifth cube? I know because blank."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write or draw their answer.",
+      "s": 85
+     },
+     {
+      "k": "SAY",
+      "text": "Keep your paper. Nobody shows it. We will check our own thinking later, at Talk time."
+     },
+     {
+      "k": "NOTE",
+      "text": "Puzzle 1 answer: 4 cubes. Puzzle 2 answer: it is hidden behind the front tower (the cube at the back left, at the bottom). Look for good ideas to praise later (a child who said there must be one behind). Do not write scores or keep a list."
+     }
+    ]
+   },
+   {
+    "part": "explore",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1",
+      "s": 12
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Today we are builders. Look at the stack on the screen. Build it with your blocks. Count how many blocks you use."
+     },
+     {
+      "k": "WORK",
+      "text": "Children build the stack. Tutor scans the cameras.",
+      "s": 200
+     },
+     {
+      "k": "ASK",
+      "text": "How many blocks did you use? How many blocks can you see in the picture?",
+      "resp": 40
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore1-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Six blocks in all. The picture shows only five. One block is hidden behind the front tower."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2",
+      "s": 12
+     },
+     {
+      "k": "SAY",
+      "text": "Round two. Take your paper square. Fold it in half so the edges meet, and press the fold."
+     },
+     {
+      "k": "READ",
+      "text": "Make one pencil dot on the folded paper, away from the fold. How many dots will there be when you open it?"
+     },
+     {
+      "k": "WORK",
+      "text": "Children fold, make a dot and guess. Wait before anyone opens.",
+      "s": 90
+     },
+     {
+      "k": "ASK",
+      "text": "How many dots do you think you will see?",
+      "resp": 25
+     },
+     {
+      "k": "WORK",
+      "text": "Now open your paper and look. Tell your grown-up what you see.",
+      "s": 50
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore2-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Two dots, one each side of the fold, the same distance from it."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-explore3",
+      "s": 8
+     },
+     {
+      "k": "ASK",
+      "text": "What was hidden in the picture of the stack? Where were the two dots after you opened the paper?",
+      "resp": 45
+     },
+     {
+      "k": "SAY",
+      "text": "A hidden block is still there, and the top view numbers count it. One dot on a folded paper makes two dots. Next we say it exactly."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who cannot build from the picture: build the front stack first, then the back. A child who puts the dot on the fold: make a new dot, away from the fold. A child with no blocks puts buttons on a drawn 2 by 2 grid. A child with no square folds any sheet of paper."
+     },
+     {
+      "k": "NOTE",
+      "text": "Main room only; you cannot see small blocks, so ask children to say how many they used and to show fingers. Answers: 6 blocks, 1 hidden; the dot makes 2 dots, one each side of the fold. Do not say the rule before the children do."
+     }
+    ]
+   },
+   {
+    "part": "mini",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-m1",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Look at this stack. Some cubes may be hidden."
+     },
+     {
+      "k": "ASK",
+      "text": "How many cubes can you see in the picture? How many cubes are there in all?",
+      "resp": 60
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m1-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "We can see six cubes. There are seven in all. The top view numbers add up: two, two, one and two. A cube we cannot see is still a cube."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m2",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "A top view. Look from the top. Draw four squares like a window. Write how many cubes are in each stack. The back stacks go in the top row."
+     },
+     {
+      "k": "WORK",
+      "text": "Children write four numbers on their own paper. Wait 10 seconds before helping.",
+      "s": 80
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m2-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Top row one and one. Bottom row three and one. One, one, three and one make six cubes."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Now the other way round. The top view tells us how many cubes are in each stack."
+     },
+     {
+      "k": "ASK",
+      "text": "Build it with your blocks. How many cubes are there in all?",
+      "resp": 110
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m3-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Three, one, one and one make six cubes."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "A paper is folded in half. The fold is on the left. One hole is punched through both layers."
+     },
+     {
+      "k": "ASK",
+      "text": "How many holes when it is opened? Where will they be?",
+      "resp": 50
+     },
+     {
+      "k": "WORK",
+      "text": "Children try it: fold the square, make one pencil dot, open it.",
+      "s": 50
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m4-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Two holes. The fold is in the middle. The holes are the same distance from it, one each side."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m5",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "The dots stand for the opened paper. The dashed line is the fold. One hole is ringed."
+     },
+     {
+      "k": "ASK",
+      "text": "How many steps is the ringed hole from the dashed line? Where is the other hole?",
+      "resp": 50
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-m5-ans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Two steps from the line, so the other hole is two steps on the other side, in the same row."
+     },
+     {
+      "k": "STUCK",
+      "text": "If a child counts only the cubes they can see, ask: what is behind? Build it with blocks. If a child writes the top view upside down, say the back stacks are in the top row. If a child puts the second hole on the same side, fold a paper and show that the holes come in pairs, one each side of the fold."
+     },
+     {
+      "k": "NOTE",
+      "text": "Key words to use every time: cube, stack, top view, fold, hole. Fixed question forms: How many cubes in all? How many holes when it is opened? The slides keep the answers off the screen while you ask: read every question with its numbers aloud. Class numbers are not used in the workbook."
+     }
+    ]
+   },
+   {
+    "part": "break",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-break",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Stand up and get a sip of water. Fold your arms in half. Open them. Make a tall stack with your arms."
+     },
+     {
+      "k": "WORK",
+      "text": "Call movements: fold your arms in half, open them, stand tall, crouch low, make a square with your arms. Then bend in half again and again and say how many layers: two, then four. Seated children move one arm.",
+      "s": 170
+     }
+    ]
+   },
+   {
+    "part": "work",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "Page 1, Start here. Question 1: how many cubes are in the picture? Question 2: how many cubes are in the stack in all? How many cubes can you not see? Question 3: which top view matches the stack? Top stack: back left. Right stack: back right. Left stack: front left. Bottom stack: front right. Circle A, B or C."
+     },
+     {
+      "k": "WORK",
+      "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
+      "s": 540
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws1ans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Question 1: five cubes. Question 2: four cubes in all, and one you cannot see. Question 3: B. Tick your own page with a tick."
+     },
+     {
+      "k": "SAY",
+      "text": "After question 3 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Page 2. Question 4: look at the stack. Write how many cubes are in each stack on the top view. Top stack: back left. Right stack: back right. Left stack: front left. Bottom stack: front right. Question 5: a paper square is folded so the top edge meets the bottom edge. Draw the fold line. Question 6: the top view shows how many cubes are in each stack. How many cubes are there in all?"
+     },
+     {
+      "k": "WORK",
+      "text": "Page 2, questions 4 to 6.",
+      "s": 500
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-ws2ans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "Question 4: three and nought in the top row, two and one in the bottom row. Question 5: a line across the middle, from the left edge to the right edge. Question 6: seven cubes. Tick your own page."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-choice",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time. Anything not finished is for home too."
+     },
+     {
+      "k": "MOVE",
+      "text": "Stand and reach up for 30 seconds, then sit down and choose.",
+      "s": 30
+     },
+     {
+      "k": "WORK",
+      "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
+      "s": 200
+     },
+     {
+      "k": "STUCK",
+      "text": "Q1: touch each cube once. Q2: count the cubes you can see, then think what is behind. Q3: write the stack's numbers in a window and match. Q4: back stacks go in the top row. Q5: where do the top and bottom edges meet? Q6: add the four numbers."
+     },
+     {
+      "k": "STUCK",
+      "text": "A child who is still stuck ticks I am still stuck on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp (never a personal phone). You then help in the open session in the next lesson. Never a private message to a child."
+     },
+     {
+      "k": "NOTE",
+      "text": "Think harder has a stack with a hidden cube, fold once and punch once, and the other hole. Go further has fold twice and punch once (beyond Primary 1 on purpose), a bigger stack with hidden cubes and building your own stack. Do not announce who is on which page. Start here takes a middle child about 17 minutes, so the choice time may be short. Slow class: take the extra minutes from the flex time and do not skip the answer slides."
+     }
+    ]
+   },
+   {
+    "part": "talk",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-talk",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "READ",
+      "text": "A child in another class counts the cubes she can see in a picture. She sees six cubes. She says there are six cubes in the stack. Do you agree? How could we check?"
+     },
+     {
+      "k": "WORK",
+      "text": "Think about it. You may use your blocks.",
+      "s": 50
+     },
+     {
+      "k": "WORK",
+      "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
+      "s": 40
+     },
+     {
+      "k": "ASK",
+      "text": "Who would like to share? Volunteers first. A pass is always fine.",
+      "resp": 100
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-sneakans",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Remember the sneak-peek? Puzzle one: four cubes. Puzzle two: the fifth cube is hidden behind the front tower."
+     },
+     {
+      "k": "ASK",
+      "text": "Did anyone change their mind while we worked? You can just nod.",
+      "resp": 12
+     },
+     {
+      "k": "ASK",
+      "text": "Where did you use Act it out today?",
+      "resp": 10,
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Listen for the tool being named, not the answer. Volunteers first, a pass is always fine.",
+      "spine": "talk"
+     },
+     {
+      "k": "NOTE",
+      "text": "Model answer: no, we do not agree. A picture can hide a cube behind another cube, so counting only what we see can give too few. We can check with blocks, or with a top view and add the numbers. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
+     }
+    ]
+   },
+   {
+    "part": "exit",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-exit",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
+     },
+     {
+      "k": "READ",
+      "text": "E1. How many cubes are in the picture? E2. The top view shows how many cubes are in each stack. How many cubes are there in all? E3. A square is folded so the left edge meets the right edge. Where is the fold line? Circle down the middle or across the middle."
+     },
+     {
+      "k": "WORK",
+      "text": "Children answer E1 to E3 on their own.",
+      "s": 190
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-exitans",
+      "s": 8
+     },
+     {
+      "k": "READ",
+      "text": "E1: four cubes. E2: six cubes. E3: down the middle."
+     },
+     {
+      "k": "SAY",
+      "text": "Tick your own ticket with a tick. Well done."
+     },
+     {
+      "k": "NOTE",
+      "text": "Nothing is collected or marked live. Children tick their own ticket. If many children miss one question, spend two minutes on it at the start of the next lesson, in the open session, no names. Do not read out any child result."
+     }
+    ]
+   },
+   {
+    "part": "look",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-look",
+      "s": 8
+     },
+     {
+      "k": "REC",
+      "text": "@rec"
+     },
+     {
+      "k": "SAY",
+      "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+      "spine": "look"
+     },
+     {
+      "k": "WORK",
+      "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+      "s": 110,
+      "spine": "look"
+     }
+    ]
+   },
+   {
+    "part": "flex",
+    "lines": [
+     {
+      "k": "SLIDE",
+      "slide": "s-end",
+      "s": 8
+     },
+     {
+      "k": "SAY",
+      "text": "Well done, inquirers. Next lesson is Spot It. Please have the pair-cards page from your book, with the twelve cards cut out by a grown-up. Goodbye, and thank you to the grown-ups."
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-opt",
+      "s": 8,
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Optional, only if you are on time. A paper is folded in half, then in half again. One hole is punched through all the layers. How many holes when it is opened?",
+      "optional": true
+     },
+     {
+      "k": "WORK",
+      "text": "Short think time, then take two answers.",
+      "s": 90,
+      "optional": true
+     },
+     {
+      "k": "SLIDE",
+      "slide": "s-menu",
+      "s": 8,
+      "optional": true
+     },
+     {
+      "k": "SAY",
+      "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
+      "optional": true
+     },
+     {
+      "k": "NOTE",
+      "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: 4 holes, because each fold doubles the layers. If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+     }
+    ]
+   }
+  ]
+ },
+ "tiers": {
+  "start": [
+   {
+    "id": "S1",
+    "page": 1,
+    "tier": "start",
+    "text": "Look at the stack of cubes.",
+    "parts": [
+     {
+      "l": "",
+      "text": "There are [] cubes in the picture.",
+      "ans": "5",
+      "val": 5
+     }
+    ],
+    "answer": "5 cubes",
+    "val": 5,
+    "hint": "Touch each cube once and count.",
+    "solution": "Touch each cube once: 5 cubes. No cube is hidden in this picture.",
+    "mistakes": [
+     "Counting a cube twice.",
+     "Counting the faces you can see instead of the cubes."
+    ],
+    "mins": 2.5,
+    "visual": {
+     "type": "cube_stack",
+     "heights": [
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "mode": "iso",
+     "mm": 8
+    }
+   },
+   {
+    "id": "S2",
+    "page": 1,
+    "tier": "start",
+    "text": "The stack has 4 cubes in all.",
+    "parts": [
+     {
+      "l": "",
+      "text": "You can see [] cubes. You cannot see [] cube.",
+      "ans": "3; 1",
+      "val": [
+       3,
+       1
+      ]
+     }
+    ],
+    "answer": "3; 1",
+    "val": [
+     3,
+     1
+    ],
+    "hint": "Count the cubes you can see. Take that number away from 4.",
+    "solution": "You can see 3 cubes in the picture. The stack has 4 cubes, so 1 cube is hidden. 3 and 1 make 4.",
+    "mistakes": [
+     "Writing 4 for the cubes you can see.",
+     "Writing 0 because nothing looks hidden."
+    ],
+    "mins": 3,
+    "visual": {
+     "type": "cube_stack",
+     "heights": [
+      [
+       1,
+       0
+      ],
+      [
+       1,
+       2
+      ]
+     ],
+     "mode": "iso",
+     "mm": 8
+    }
+   },
+   {
+    "id": "S3",
+    "page": 1,
+    "tier": "start",
+    "text": "Which top view matches this stack?",
+    "parts": [
+     {
+      "l": "",
+      "text": "Top stack: back left. Right stack: back right. Left stack: front left. Bottom stack: front right. Circle A, B or C.",
+      "ans": "B",
+      "val": "B",
+      "choices": [
+       "A",
+       "B",
+       "C"
+      ]
+     }
+    ],
+    "answer": "B",
+    "val": [
+     "B"
+    ],
+    "hint": "The back stacks go in the top row. Which stack is the tallest: is it at the back or at the front? Is it on the left or on the right?",
+    "solution": "The tall stack of 2 is the left stack in the picture, which is the front left. The back row is the top row: 1 and 1. The front row is the bottom row: 2 and 1. That is picture B.",
+    "mistakes": [
+     "Choosing a view with the tall stack at the back (A) or on the right (C).",
+     "Putting the rows the wrong way up."
+    ],
+    "mins": 3,
+    "visuals": [
+     {
+      "type": "cube_stack",
+      "heights": [
+       [
+        1,
+        1
+       ],
+       [
+        2,
+        1
+       ]
+      ],
+      "mode": "iso",
+      "px": 270,
+      "compass": true
+     },
+     {
+      "type": "cube_stack",
+      "heights": [
+       [
+        2,
+        1
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      "mode": "top",
+      "tag": "A",
+      "mm": 8
+     },
+     {
+      "type": "cube_stack",
+      "heights": [
+       [
+        1,
+        1
+       ],
+       [
+        2,
+        1
+       ]
+      ],
+      "mode": "top",
+      "tag": "B",
+      "mm": 8
+     },
+     {
+      "type": "cube_stack",
+      "heights": [
+       [
+        1,
+        2
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      "mode": "top",
+      "tag": "C",
+      "mm": 8
+     }
+    ],
+    "vlayout": [
+     4
+    ]
+   },
+   {
+    "id": "S4",
+    "page": 2,
+    "tier": "start",
+    "text": "Look at the stack. Write how many cubes are in each stack on the top view. Write 0 if there is no stack. Top stack: back left. Right stack: back right. Left stack: front left. Bottom stack: front right.",
+    "parts": [],
+    "answer": "3 and 0 in the top row; 2 and 1 in the bottom row",
+    "val": [
+     3,
+     0,
+     2,
+     1
+    ],
+    "hint": "The back stacks go in the top row. Count the cubes in each stack.",
+    "solution": "The back row has a stack of 3 and no stack, so 3 and 0. The front row has a stack of 2 and a stack of 1. The top view is 3, 0 on the top row and 2, 1 on the bottom row. That is 6 cubes in all.",
+    "mistakes": [
+     "Leaving the empty place blank or writing 1 there.",
+     "Writing the rows the wrong way up."
+    ],
+    "mins": 3,
+    "visuals": [
+     {
+      "type": "cube_stack",
+      "heights": [
+       [
+        3,
+        0
+       ],
+       [
+        2,
+        1
+       ]
+      ],
+      "mode": "iso",
+      "px": 300,
+      "compass": true
+     },
+     {
+      "type": "grid",
+      "rows": 2,
+      "cols": 2,
+      "kind": "squares",
+      "counts": {
+       "0,0": "[]",
+       "0,1": "[]",
+       "1,0": "[]",
+       "1,1": "[]"
+      },
+      "cell": 70,
+      "mm": 12,
+      "compass": true
+     }
+    ]
+   },
+   {
+    "id": "S5",
+    "page": 2,
+    "tier": "start",
+    "text": "A paper square is folded so that the top edge meets the bottom edge.",
+    "parts": [
+     {
+      "l": "",
+      "text": "Draw the fold line on the square.",
+      "ans": "A line across the middle, from the left edge to the right edge",
+      "val": "drawn"
+     }
+    ],
+    "answer": "A line across the middle, from the left edge to the right edge",
+    "val": [
+     "drawn"
+    ],
+    "hint": "The fold is where the paper bends. Where do the top and bottom edges meet?",
+    "solution": "When the top edge meets the bottom edge, the paper bends halfway down. The fold line goes across the middle of the square, from the left edge to the right edge.",
+    "mistakes": [
+     "Drawing the line down the middle.",
+     "Drawing a line across a corner."
+    ],
+    "mins": 2.5,
+    "visual": {
+     "type": "shapes2d",
+     "shape": "square",
+     "parts": 1,
+     "size": 55
+    }
+   },
+   {
+    "id": "S6",
+    "page": 2,
+    "tier": "start",
+    "text": "The top view shows how many cubes are in each stack.",
+    "parts": [
+     {
+      "l": "",
+      "text": "There are [] cubes in all.",
+      "ans": "7",
+      "val": 7
+     }
+    ],
+    "answer": "7 cubes",
+    "val": 7,
+    "hint": "Add the four numbers. Start with the biggest.",
+    "solution": "2 + 3 + 1 + 1 = 7. There are 7 cubes in the stack.",
+    "mistakes": [
+     "Adding only two of the numbers.",
+     "Counting the squares (4) instead of the cubes."
+    ],
+    "mins": 3,
+    "visual": {
+     "type": "cube_stack",
+     "heights": [
+      [
+       2,
+       3
+      ],
+      [
+       1,
+       1
+      ]
+     ],
+     "mode": "top",
+     "mm": 11,
+     "compass": true
+    }
+   }
+  ],
+  "think": [
+   {
+    "id": "T1",
+    "page": 3,
+    "tier": "think",
+    "text": "The stack has 9 cubes in all. Top stack: back left. Right stack: back right. Left stack: front left. Bottom stack: front right.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Write the missing number on the top view: []",
+      "ans": "3",
+      "val": 3
+     },
+     {
+      "l": "b",
+      "text": "You can see 7 cubes in the picture. [] cubes are hidden.",
+      "ans": "2",
+      "val": 2
+     }
+    ],
+    "answer": "3; 2",
+    "val": [
+     3,
+     2
+    ],
+    "hint": "Add the numbers you can read. Take that total away from 9.",
+    "solution": "The top view has 2, 3 and 1. 2 + 3 + 1 = 6. The stack has 9 cubes, so the missing number is 3. The picture shows 7 cubes, so 2 cubes are hidden.",
+    "mistakes": [
+     "Writing 9 for the missing number.",
+     "Saying no cube is hidden."
+    ],
+    "mins": 5,
+    "visuals": [
+     {
+      "type": "cube_stack",
+      "heights": [
+       [
+        2,
+        3
+       ],
+       [
+        1,
+        3
+       ]
+      ],
+      "mode": "iso",
+      "px": 300,
+      "compass": true
+     },
+     {
+      "type": "grid",
+      "rows": 2,
+      "cols": 2,
+      "kind": "squares",
+      "counts": {
+       "0,0": "2",
+       "0,1": "3",
+       "1,0": "1",
+       "1,1": "[]"
+      },
+      "cell": 70,
+      "mm": 12,
+      "compass": true
+     }
+    ]
+   },
+   {
+    "id": "T2",
+    "page": 3,
+    "tier": "think",
+    "text": "A paper is folded in half. The fold is at the top. One hole is punched.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "There are [] holes when it is opened.",
+      "ans": "2",
+      "val": 2
+     },
+     {
+      "l": "b",
+      "text": "Circle the opened paper: A, B or C.",
+      "ans": "A",
+      "val": "A",
+      "choices": [
+       "A",
+       "B",
+       "C"
+      ]
+     }
+    ],
+    "answer": "2; A",
+    "val": [
+     2,
+     "A"
+    ],
+    "hint": "The paper has two layers. The holes are the same distance from the fold.",
+    "solution": "The fold is at the top of the folded paper, so when it is opened the fold line goes across the middle. One punch goes through 2 layers, so there are 2 holes, one above the fold line and one below it, the same distance from it. That is picture A. In B the 2 holes are side by side on the same side of the fold line. C has only 1 hole.",
+    "mistakes": [
+     "Writing 1 hole.",
+     "Choosing two holes on the same side of the fold (B)."
+    ],
+    "mins": 5,
+    "visuals": [
+     {
+      "type": "fold_punch",
+      "stage": "folded",
+      "fold": "h",
+      "holes": [
+       [
+        0.3,
+        0.6
+       ]
+      ],
+      "size": 80
+     },
+     {
+      "type": "fold_punch",
+      "stage": "unfolded",
+      "fold": "h",
+      "holes": [
+       [
+        0.3,
+        0.6
+       ]
+      ],
+      "size": 80,
+      "tag": "A"
+     },
+     {
+      "type": "fold_punch",
+      "stage": "unfolded",
+      "fold": "x",
+      "holes": [
+       [
+        0.3,
+        0.8
+       ],
+       [
+        0.7,
+        0.8
+       ]
+      ],
+      "size": 80,
+      "tag": "B"
+     },
+     {
+      "type": "fold_punch",
+      "stage": "unfolded",
+      "fold": "x",
+      "holes": [
+       [
+        0.3,
+        0.8
+       ]
+      ],
+      "size": 80,
+      "tag": "C"
+     }
+    ]
+   },
+   {
+    "id": "T3",
+    "page": 3,
+    "tier": "think",
+    "text": "A paper was folded along the dashed line and one hole was punched. The picture shows the opened paper. One hole is ringed.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Draw the other hole.",
+      "ans": "On the same row, 1 step on the other side of the dashed line",
+      "val": "drawn"
+     },
+     {
+      "l": "b",
+      "text": "The other hole is [] step from the dashed line.",
+      "ans": "1",
+      "val": 1
+     }
+    ],
+    "answer": "1 step on the other side of the dashed line",
+    "val": [
+     "drawn",
+     1
+    ],
+    "hint": "Count the steps from the ringed hole to the dashed line.",
+    "solution": "The ringed hole is 1 step to the left of the dashed line. The other hole is 1 step to the right of it, on the same row. Draw a hole on that dot.",
+    "mistakes": [
+     "Drawing the hole on the same side.",
+     "Counting dots instead of steps."
+    ],
+    "mins": 4,
+    "visual": {
+     "type": "grid",
+     "rows": 4,
+     "cols": 4,
+     "kind": "dots",
+     "mirror": 2,
+     "mark": [
+      [
+       1,
+       3
+      ]
+     ],
+     "mm": 10
+    }
+   }
+  ],
+  "go": [
+   {
+    "id": "G1",
+    "page": 4,
+    "tier": "go",
+    "text": "A paper square is folded in half, then in half again. One hole is punched through all the layers.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "There are [] holes when it is opened.",
+      "ans": "4",
+      "val": 4
+     },
+     {
+      "l": "b",
+      "text": "Circle the opened paper: A, B or C.",
+      "ans": "C",
+      "val": "C",
+      "choices": [
+       "A",
+       "B",
+       "C"
+      ]
+     }
+    ],
+    "answer": "4; C",
+    "val": [
+     4,
+     "C"
+    ],
+    "hint": "Each fold doubles the layers. 1 layer, then 2, then 4.",
+    "solution": "After the first fold the paper has 2 layers. After the second fold it has 4 layers. One punch goes through 4 layers, so there are 4 holes, one in each part of the opened paper. That is picture C.",
+    "mistakes": [
+     "Writing 2 holes.",
+     "Choosing 4 holes in a row."
+    ],
+    "mins": 6,
+    "visuals": [
+     {
+      "type": "fold_punch",
+      "stage": "folded",
+      "fold": "quarter",
+      "holes": [
+       [
+        0.7,
+        0.6
+       ]
+      ],
+      "size": 62
+     },
+     {
+      "type": "fold_punch",
+      "stage": "unfolded",
+      "fold": "v",
+      "holes": [
+       [
+        0.7,
+        0.6
+       ]
+      ],
+      "size": 62,
+      "tag": "A"
+     },
+     {
+      "type": "fold_punch",
+      "stage": "unfolded",
+      "fold": "x",
+      "holes": [
+       [
+        0.15,
+        0.5
+       ],
+       [
+        0.38,
+        0.5
+       ],
+       [
+        0.62,
+        0.5
+       ],
+       [
+        0.85,
+        0.5
+       ]
+      ],
+      "size": 62,
+      "tag": "B"
+     },
+     {
+      "type": "fold_punch",
+      "stage": "unfolded",
+      "fold": "quarter",
+      "holes": [
+       [
+        0.7,
+        0.6
+       ]
+      ],
+      "size": 62,
+      "tag": "C"
+     }
+    ]
+   },
+   {
+    "id": "G2",
+    "page": 4,
+    "tier": "go",
+    "text": "A stack has a 2 by 2 base. The back stacks have 3 and 1 cubes. The front left stack has 2. The stack has 8 cubes in all.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "The front right stack has [] cubes.",
+      "ans": "2",
+      "val": 2
+     },
+     {
+      "l": "b",
+      "text": "You cannot see [] cube in the picture.",
+      "ans": "1",
+      "val": 1
+     }
+    ],
+    "answer": "2; 1",
+    "val": [
+     2,
+     1
+    ],
+    "hint": "Add 3, 1 and 2. Take the total away from 8.",
+    "solution": "3 + 1 + 2 = 6. 8 take away 6 is 2, so the front right stack has 2 cubes. The picture shows 7 cubes, so 1 cube is hidden: the bottom cube of the tall stack at the back on the left, behind the cubes in front of it.",
+    "mistakes": [
+     "Writing 8 for the front right stack.",
+     "Saying no cube is hidden."
+    ],
+    "mins": 6,
+    "visual": {
+     "type": "cube_stack",
+     "heights": [
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       2
+      ]
+     ],
+     "mode": "iso",
+     "px": 300,
+     "compass": true
+    }
+   },
+   {
+    "id": "G3",
+    "page": 4,
+    "tier": "go",
+    "text": "Build a stack with 7 cubes on a 2 by 2 base. No stack is taller than 3 cubes. Many answers are right.",
+    "parts": [
+     {
+      "l": "a",
+      "text": "Write how many cubes are in each stack on the top view.",
+      "ans": "any four numbers from 0 to 3 that make 7",
+      "val": "open"
+     },
+     {
+      "l": "b",
+      "text": "The four numbers make [] cubes in all.",
+      "ans": "7",
+      "val": 7
+     }
+    ],
+    "answer": "Many answers are right: four numbers from 0 to 3 that add to 7, for example 3, 2, 1, 1 or 3, 3, 1, 0",
+    "val": [
+     "open",
+     7
+    ],
+    "hint": "Try 3 for one stack. Then find three more numbers that make 4.",
+    "solution": "For example 3, 2, 1 and 1: 3 + 2 + 1 + 1 = 7. Another answer is 2, 2, 2 and 1. A stack with 0 cubes is allowed, so 3, 3, 1 and 0 also works.",
+    "mistakes": [
+     "Four numbers that do not add to 7.",
+     "A stack taller than 3."
+    ],
+    "mins": 5,
+    "visual": {
+     "type": "grid",
+     "rows": 2,
+     "cols": 2,
+     "kind": "squares",
+     "counts": {
+      "0,0": "[]",
+      "0,1": "[]",
+      "1,0": "[]",
+      "1,1": "[]"
+     },
+     "cell": 70,
+     "mm": 12,
+     "compass": true
+    }
+   }
+  ],
+  "investigation": {
+   "id": "I1",
+   "page": 5,
+   "tier": "investigation",
+   "title": "Fold, mark and open",
+   "first": "Fold a square in half. Mark one dot away from the fold. How many dots when opened? ____",
+   "text": "Open it. Write one thing that is the same about the dots.",
+   "lines": 4,
+   "draw": 0,
+   "answer": "There will be 2 dots. The two dots are the same distance from the fold line, one on each side. The paper had two layers, so one dot made two.",
+   "val": [
+    2
+   ],
+   "look_for": "A child who says the dots are the same distance from the fold, or are opposite each other across the fold line. Credit any clear reason. A child who folds again and finds 4 dots has gone further.",
+   "mistakes": [
+    "Saying 1 dot.",
+    "Putting the dot on the fold line."
+   ],
+   "mins": 8
+  }
+ },
+ "talk": {
+  "question": "A child in another class counts the cubes she can see in a picture. She sees 6 cubes. She says there are 6 cubes in the stack. Do you agree? How could we check?",
+  "starter": "I think ... because ...",
+  "answer": "No. A picture can hide a cube behind another cube, so counting only what we see can give too few. We can check with blocks, or with a top view and add the numbers.",
+  "look_for": "A child who says a cube can be hidden, or who says to build it or to use the top view. Not just yes or no."
+ },
+ "exit": [
+  {
+   "id": "E1",
+   "text": "Look at the cubes.",
+   "parts": [
+    {
+     "l": "",
+     "text": "There are [] cubes in the picture.",
+     "ans": "4",
+     "val": 4
+    }
+   ],
+   "answer": "4 cubes",
+   "val": 4,
+   "solution": "Touch each cube once: 4 cubes. No cube is hidden in this picture.",
+   "mistakes": [
+    "Counting a cube twice.",
+    "Counting faces instead of cubes."
+   ],
+   "visual": {
+    "type": "cube_stack",
+    "heights": [
+     [
+      1,
+      1
+     ],
+     [
+      2,
+      0
+     ]
+    ],
+    "mode": "iso",
+    "mm": 10
+   }
+  },
+  {
+   "id": "E2",
+   "text": "The top view shows how many cubes are in each stack.",
+   "parts": [
+    {
+     "l": "",
+     "text": "There are [] cubes in all.",
+     "ans": "6",
+     "val": 6
+    }
+   ],
+   "answer": "6 cubes",
+   "val": 6,
+   "solution": "2 + 1 + 2 + 1 = 6 cubes.",
+   "mistakes": [
+    "Counting the squares (4).",
+    "Adding only the top row."
+   ],
+   "visual": {
+    "type": "cube_stack",
+    "heights": [
+     [
+      2,
+      1
+     ],
+     [
+      2,
+      1
+     ]
+    ],
+    "mode": "top",
+    "mm": 10
+   }
+  },
+  {
+   "id": "E3",
+   "text": "A square is folded so the left edge meets the right edge.",
+   "parts": [
+    {
+     "l": "",
+     "text": "Where is the fold line? Circle one.",
+     "ans": "down the middle",
+     "val": "down the middle",
+     "choices": [
+      "down the middle",
+      "across the middle"
+     ]
+    }
+   ],
+   "answer": "down the middle",
+   "val": [
+    "down the middle"
+   ],
+   "solution": "When the left edge meets the right edge, the paper bends halfway across. The fold line goes down the middle of the square, from the top edge to the bottom edge.",
+   "mistakes": [
+    "Choosing across the middle (that is where the top and bottom edges meet).",
+    "Thinking the fold is at one side."
+   ]
+  }
+ ],
+ "look_back": {
+  "hardest": [
+   "hidden cubes",
+   "top views",
+   "folding",
+   "something else"
+  ],
+  "helped": [
+   "my blocks",
+   "top view numbers",
+   "folding paper",
+   "I was not stuck"
+  ],
+  "next": [
+   "hidden cubes",
+   "top views",
+   "holes",
+   "asking a question"
+  ]
+ },
+ "home_practice": [
+  {
+   "id": "H1",
+   "tier": "start",
+   "text": "The top view of a stack shows 2, 1, 3 and 2 cubes. How many cubes are in the stack? There are ___ cubes.",
+   "answer": "8",
+   "val": 8,
+   "solution": "2 + 1 + 3 + 2 = 8. Add the four numbers.",
+   "visual": {
+    "type": "cube_stack",
+    "heights": [
+     [
+      2,
+      1
+     ],
+     [
+      3,
+      2
+     ]
+    ],
+    "mode": "top",
+    "compass": true,
+    "hw": 43
+   }
+  },
+  {
+   "id": "H2",
+   "tier": "start",
+   "text": "A stack is 3 cubes tall. How many cubes are under the top cube? There are ___ cubes.",
+   "answer": "2",
+   "val": 2,
+   "solution": "3 cubes in all, and the top cube is 1 of them. 3 take away 1 is 2."
+  },
+  {
+   "id": "H3",
+   "tier": "start",
+   "text": "Lily has 12 blocks. She builds a stack with 7 blocks. How many blocks are left? There are ___ blocks left.",
+   "answer": "5",
+   "val": 5,
+   "solution": "Count up from 7 to 12: 5. Check: 7 and 5 make 12."
+  },
+  {
+   "id": "H4",
+   "tier": "think",
+   "text": "A paper is folded in half and one hole is punched. When it is opened there are 2 holes. One of them is 3 steps from the fold line. How many steps from the fold line is the other hole? It is ___ steps.",
+   "answer": "3",
+   "val": 3,
+   "solution": "The two holes are the same distance from the fold line, one on each side. The other hole is 3 steps from it too."
+  },
+  {
+   "id": "H5",
+   "tier": "start",
+   "rewind_of": "Term 2 Lesson 4",
+   "text": "Ali has 13 counters. He puts them in pairs. How many counters are left over? ___ counter is left over.",
+   "answer": "1",
+   "val": 1,
+   "solution": "13 counters make 6 pairs and 1 is left over."
+  }
+ ],
+ "online_practice": {
+  "key": "t4l34",
+  "title": "Cubes and Views",
+  "topic": "Count cubes, read a top view and fold paper",
+  "items": [
+   {
+    "id": "c1",
+    "tier": "core",
+    "type": "number",
+    "q": "The top view shows 2, 1 and 3 cubes in a row of 3 stacks. How many cubes are there in all?",
+    "hint": "Add the three numbers.",
+    "steps": [
+     "The stacks have 2, 1 and 3 cubes.",
+     "2 and 1 make 3. 3 and 3 make 6.",
+     "There are 6 cubes in all."
+    ],
+    "answer": 6,
+    "slips": [
+     {
+      "a": [
+       3
+      ],
+      "say": "3 is the number of stacks. Add the cubes in the stacks."
+     }
+    ],
+    "fig": {
+     "type": "cube_stack",
+     "heights": [
+      [
+       "{a}",
+       "{b}",
+       "{c}"
+      ]
+     ],
+     "mode": "top",
+     "size": "m"
+    },
+    "fig_base": {
+     "type": "cube_stack",
+     "heights": [
+      [
+       2,
+       1,
+       3
+      ]
+     ],
+     "mode": "top",
+     "size": "m"
+    },
+    "tpl": {
+     "vars": {
+      "a": [
+       1,
+       2,
+       3
+      ],
+      "b": [
+       1,
+       2,
+       3
+      ],
+      "c": [
+       1,
+       2,
+       3
+      ]
+     },
+     "derive": {},
+     "q": "The top view shows {a}, {b} and {c} cubes in a row of 3 stacks. How many cubes are there in all?",
+     "answer": "a+b+c",
+     "hint": "Add the three numbers.",
+     "steps": [
+      "The stacks have {a}, {b} and {c} cubes.",
+      "Add the three numbers.",
+      "There are {ans} cubes in all."
+     ]
+    }
+   },
+   {
+    "id": "c2",
+    "tier": "core",
+    "type": "number",
+    "q": "A stack is 4 cubes tall. How many cubes are under the top cube?",
+    "hint": "The top cube is one of the cubes.",
+    "steps": [
+     "The stack has 4 cubes.",
+     "The top cube is 1 of them.",
+     "4 take away 1 is 3."
+    ],
+    "answer": 3,
+    "slips": [
+     {
+      "a": [
+       4
+      ],
+      "say": "4 cubes in all, but the top cube is not under itself."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "n": [
+       2,
+       3,
+       4,
+       5,
+       6
+      ]
+     },
+     "derive": {},
+     "q": "A stack is {n} cubes tall. How many cubes are under the top cube?",
+     "answer": "n-1",
+     "hint": "The top cube is one of the cubes.",
+     "steps": [
+      "The stack has {n} cubes.",
+      "The top cube is 1 of them.",
+      "{n} take away 1 is {ans}."
+     ]
+    }
+   },
+   {
+    "id": "c3",
+    "tier": "core",
+    "type": "choice",
+    "q": "A top view of 2 stacks shows 2 cubes in the back stack and 3 cubes in the front stack. Which stack has more cubes?",
+    "hint": "Which number is greater, 2 or 3?",
+    "steps": [
+     "The back stack has 2 cubes.",
+     "The front stack has 3 cubes.",
+     "3 is greater than 2, so the front stack has more."
+    ],
+    "options": [
+     "the back stack",
+     "the same",
+     "the front stack"
+    ],
+    "answer": "the front stack",
+    "slips": [
+     {
+      "a": [
+       "the back stack"
+      ],
+      "say": "The back stack has 2 cubes and the front stack has 3. Which number is greater?"
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       3,
+       4
+      ],
+      "k": [
+       0,
+       1,
+       2
+      ]
+     },
+     "derive": {
+      "b": "a+k-1"
+     },
+     "q": "A top view of 2 stacks shows {a} cubes in the back stack and {b} cubes in the front stack. Which stack has more cubes?",
+     "options": [
+      "the back stack",
+      "the same",
+      "the front stack"
+     ],
+     "answer_index": "k",
+     "hint": "Which number is greater?",
+     "steps": [
+      "The back stack has {a} cubes.",
+      "The front stack has {b} cubes.",
+      "Compare {a} and {b}."
+     ]
+    }
+   },
+   {
+    "id": "c4",
+    "tier": "core",
+    "type": "choice",
+    "q": "A paper square is folded so that the left edge meets the right edge. Where is the fold line?",
+    "hint": "The fold is where the paper bends.",
+    "steps": [
+     "The left and right edges meet.",
+     "The paper bends halfway across.",
+     "The fold line is down the middle."
+    ],
+    "options": [
+     "down the middle",
+     "across the middle"
+    ],
+    "answer": "down the middle",
+    "slips": [
+     {
+      "a": [
+       "across the middle"
+      ],
+      "say": "Across the middle is where the top and bottom edges meet. Here the left and right edges meet."
+     }
+    ]
+   },
+   {
+    "id": "c5",
+    "tier": "core",
+    "type": "number",
+    "q": "A stack has 5 cubes in all. You can see 4 cubes in the picture. How many cubes can you not see?",
+    "hint": "Take the cubes you can see away from the cubes in all.",
+    "steps": [
+     "5 cubes in all.",
+     "You can see 4 of them.",
+     "5 take away 4 is 1 cube you cannot see."
+    ],
+    "answer": 1,
+    "slips": [
+     {
+      "a": [
+       4
+      ],
+      "say": "4 is the number you can see. How many are hidden?"
+     }
+    ],
+    "fig": {
+     "type": "cube_stack",
+     "heights": [
+      [
+       2,
+       0
+      ],
+      [
+       1,
+       2
+      ]
+     ],
+     "mode": "iso",
+     "size": 45
+    }
+   },
+   {
+    "id": "t1",
+    "tier": "stretch",
+    "type": "number",
+    "q": "A stack on a 2 by 2 base has 2, 1, 3 and 1 cubes in its four stacks. How many cubes are there in all?",
+    "hint": "Add the four numbers.",
+    "steps": [
+     "The four stacks have 2, 1, 3 and 1 cubes.",
+     "2 and 1 make 3. 3 and 3 make 6. 6 and 1 make 7.",
+     "There are 7 cubes in all."
+    ],
+    "answer": 7,
+    "slips": [
+     {
+      "a": [
+       4
+      ],
+      "say": "4 is the number of stacks. Add the cubes in the stacks."
+     }
+    ],
+    "fig": {
+     "type": "cube_stack",
+     "heights": [
+      [
+       "{a}",
+       "{b}"
+      ],
+      [
+       "{c}",
+       "{d}"
+      ]
+     ],
+     "mode": "top",
+     "size": "m"
+    },
+    "fig_base": {
+     "type": "cube_stack",
+     "heights": [
+      [
+       2,
+       1
+      ],
+      [
+       3,
+       1
+      ]
+     ],
+     "mode": "top",
+     "size": "m"
+    },
+    "tpl": {
+     "vars": {
+      "a": [
+       1,
+       2,
+       3
+      ],
+      "b": [
+       1,
+       2,
+       3
+      ],
+      "c": [
+       1,
+       2,
+       3
+      ],
+      "d": [
+       1,
+       2
+      ]
+     },
+     "derive": {},
+     "q": "A stack on a 2 by 2 base has {a}, {b}, {c} and {d} cubes in its four stacks. How many cubes are there in all?",
+     "answer": "a+b+c+d",
+     "hint": "Add the four numbers.",
+     "steps": [
+      "The four stacks have {a}, {b}, {c} and {d} cubes.",
+      "Add the four numbers.",
+      "There are {ans} cubes in all."
+     ]
+    },
+    "easier": "c1"
+   },
+   {
+    "id": "t2",
+    "tier": "stretch",
+    "type": "number",
+    "q": "A paper is folded in half and one hole is punched. One hole is 2 steps from the fold line. How many steps from the fold line is the other hole?",
+    "hint": "The holes are the same distance from the fold.",
+    "steps": [
+     "One hole is 2 steps from the fold.",
+     "The other hole is on the other side.",
+     "It is 2 steps from the fold too."
+    ],
+    "answer": 2,
+    "slips": [
+     {
+      "a": [
+       4
+      ],
+      "say": "4 is the steps between the two holes. Count from the fold line."
+     }
+    ],
+    "fig": {
+     "type": "grid",
+     "rows": 3,
+     "cols": 8,
+     "kind": "dots",
+     "mirror": 4,
+     "mark": [
+      [
+       "{=4-n}",
+       1
+      ]
+     ],
+     "size": "m"
+    },
+    "fig_base": {
+     "type": "grid",
+     "rows": 3,
+     "cols": 8,
+     "kind": "dots",
+     "mirror": 4,
+     "mark": [
+      [
+       2,
+       1
+      ]
+     ],
+     "size": "m"
+    },
+    "tpl": {
+     "vars": {
+      "n": [
+       2,
+       3,
+       4
+      ]
+     },
+     "derive": {},
+     "q": "A paper is folded in half and one hole is punched. One hole is {n} steps from the fold line. How many steps from the fold line is the other hole?",
+     "answer": "n",
+     "hint": "The holes are the same distance from the fold.",
+     "steps": [
+      "One hole is {n} steps from the fold.",
+      "The other hole is on the other side.",
+      "It is {ans} steps from the fold too."
+     ]
+    },
+    "easier": "c2"
+   },
+   {
+    "id": "t3",
+    "tier": "stretch",
+    "type": "number",
+    "q": "A stack on a 2 by 2 base has 7 cubes in all. Three of the stacks have 2, 3 and 1 cubes. How many cubes are in the fourth stack?",
+    "hint": "Add the three. Take that total away from 7.",
+    "steps": [
+     "2 and 3 and 1 make 6.",
+     "7 take away 6 is 1.",
+     "The fourth stack has 1 cube."
+    ],
+    "answer": 1,
+    "slips": [
+     {
+      "a": [
+       7
+      ],
+      "say": "7 is the number in all. Take the three stacks away."
+     }
+    ],
+    "tpl": {
+     "vars": {
+      "a": [
+       1,
+       2,
+       3
+      ],
+      "b": [
+       1,
+       2,
+       3
+      ],
+      "c": [
+       1,
+       2,
+       3
+      ],
+      "d": [
+       1,
+       2,
+       3
+      ]
+     },
+     "derive": {
+      "t": "a+b+c+d"
+     },
+     "q": "A stack on a 2 by 2 base has {t} cubes in all. Three of the stacks have {a}, {b} and {c} cubes. How many cubes are in the fourth stack?",
+     "answer": "d",
+     "hint": "Add the three. Take that total away from {t}.",
+     "steps": [
+      "{a} and {b} and {c} make a total.",
+      "Take that total away from {t}.",
+      "The fourth stack has {ans} cubes."
+     ]
+    },
+    "easier": "c1"
+   },
+   {
+    "id": "g1",
+    "tier": "challenge",
+    "type": "number",
+    "q": "A paper square is folded in half, then in half again. One hole is punched through all the layers. How many holes are there when it is opened?",
+    "hint": "Each fold doubles the layers.",
+    "steps": [
+     "After the first fold there are 2 layers.",
+     "After the second fold there are 4 layers.",
+     "One punch through 4 layers makes 4 holes."
+    ],
+    "answer": 4,
+    "slips": [
+     {
+      "a": [
+       2
+      ],
+      "say": "2 holes is after one fold. This paper is folded twice."
+     }
+    ],
+    "easier": "t2"
+   },
+   {
+    "id": "g2",
+    "tier": "challenge",
+    "type": "number",
+    "q": "A stack has a 2 by 2 base. Its four stacks have 3, 1, 2 and 2 cubes. How many cubes are there in all?",
+    "hint": "Add the four numbers.",
+    "steps": [
+     "The four stacks have 3, 1, 2 and 2 cubes.",
+     "3 and 1 make 4. 4 and 2 make 6. 6 and 2 make 8.",
+     "There are 8 cubes in all."
+    ],
+    "answer": 8,
+    "slips": [
+     {
+      "a": [
+       7
+      ],
+      "say": "7 is the number of cubes you can see. One cube is hidden. Add the four numbers."
+     }
+    ],
+    "fig": {
+     "type": "cube_stack",
+     "heights": [
+      [
+       3,
+       1
+      ],
+      [
+       2,
+       2
+      ]
+     ],
+     "mode": "iso",
+     "size": 45
+    },
+    "easier": "t1"
+   },
+   {
+    "id": "g3",
+    "tier": "challenge",
+    "type": "selfcheck",
+    "q": "Build a stack with blocks. Draw its top view with a number in each square. Ask a grown-up how many cubes are in the stack.",
+    "hint": "Count the blocks in each stack.",
+    "steps": [
+     "Build a stack on a 2 by 2 base.",
+     "Write how many blocks are in each stack on a top view.",
+     "Ask a grown-up to add the numbers."
+    ],
+    "easier": "c1"
+   },
+   {
+    "id": "r1",
+    "tier": "core",
+    "type": "number",
+    "q": "A ball costs $3. You pay with a $5 note. How many dollars is your change?",
+    "hint": "Count up from the price to the money you paid.",
+    "steps": [
+     "Count up from $3 to $5: $4, $5.",
+     "That is 2 dollars.",
+     "The change is $2."
+    ],
+    "answer": 2,
+    "slips": [
+     {
+      "a": [
+       5
+      ],
+      "say": "5 is the money you paid. The change is what the shop gives back."
+     },
+     {
+      "a": [
+       8
+      ],
+      "say": "Do not add. Count up from the price to the money you paid."
+     }
+    ],
+    "fig": {
+     "type": "price_tag",
+     "item": "ball",
+     "price": "${p}",
+     "size": "m"
+    },
+    "fig_base": {
+     "type": "price_tag",
+     "item": "ball",
+     "price": "$3",
+     "size": "m"
+    },
+    "tpl": {
+     "vars": {
+      "p": [
+       1,
+       2,
+       3
+      ]
+     },
+     "derive": {
+      "t": "5-p"
+     },
+     "q": "A ball costs ${p}. You pay with a $5 note. How many dollars is your change?",
+     "answer": "t",
+     "hint": "Count up from the price to the money you paid.",
+     "steps": [
+      "Count up from ${p} to $5.",
+      "That is {t} dollars.",
+      "The change is ${t}."
+     ]
+    },
+    "rewind_of": "Term 3 Lesson 4"
+   },
+   {
+    "id": "r2",
+    "tier": "core",
+    "type": "choice",
+    "q": "Which is worth more, a $2 note or a $1 coin?",
+    "hint": "Which number is greater, 2 or 1?",
+    "steps": [
+     "A $2 note is worth 2 dollars.",
+     "A $1 coin is worth 1 dollar.",
+     "2 is greater than 1, so the $2 note is worth more."
+    ],
+    "options": [
+     "the $2 note",
+     "the $1 coin"
+    ],
+    "answer": "the $2 note",
+    "slips": [
+     {
+      "a": [
+       "the $1 coin"
+      ],
+      "say": "The value is the number on the piece, not its size."
+     }
+    ],
+    "rewind_of": "Term 3 Lesson 4"
+   }
+  ]
+ },
+ "parent": {
+  "summary": "We built stacks of blocks, counted a cube hidden behind another, read a top view as numbers, and folded paper to see how many dots one dot makes when it is opened. Some Think harder and Go further questions go past the school Primary 1 syllabus on purpose; Start here stays within it.",
+  "words": [
+   "stack: cubes piled up",
+   "top view: the stack seen from above, a number in each square",
+   "fold line: where the paper bends",
+   "layers: the pieces of paper pressed together"
+  ],
+  "try_home": [
+   "Build a stack with 6 to 8 blocks. Draw its top view with a number in each square. Does the total match?",
+   "Fold a paper in half. Make a pencil dot away from the fold. Ask: how many dots when it is open?",
+   "Fold it twice and make one dot. How many dots? (4)"
+  ],
+  "ask": [
+   "How many cubes can you not see?",
+   "What does each number on the top view say?",
+   "How far is each dot from the fold?"
+  ],
+  "when_stuck": "Let your child use the blocks and the paper, and wait 10 seconds before helping. Please do not punch real holes: pencil dots are enough. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
+  "next": "Next lesson: Spot It. Online practice: your tutor will share the link. The recording has the tutor, the shared screen and any voice that is unmuted. Please do not share the link.",
+  "quote": "A picture can hide a cube. The top view numbers count every cube.",
+  "report_line": "Your child is learning to picture things from the top and when folded. This week: counting every cube in a stack, reading a top view, and how many holes a folded paper makes.",
+  "term_line": "Your child is learning to choose a way to solve a problem, and to make and test their own puzzles.",
+  "next_materials": [
+   "Your Term 4 book (Book 7): tear out the pair-cards page along the dashed line, then a grown-up cuts out the 12 cards",
+   "The paper squares and blocks are not needed again: keep them for puzzles at home",
+   "A pencil, a rubber and paper"
+  ]
+ },
+ "safeguarding": [
+  "Blocks, dice and paper squares are small pieces. They stay on the table: nothing goes in the mouth or ears. No matches or toothpicks. Nobody cuts during the lesson; a grown-up cut the squares beforehand. Nobody punches a real hole: the hole is a pencil dot.",
+  "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
+  "Nobody holds paper, blocks or a drawing up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on a count of three, or show fingers or a thumb for a choice. There is no private chat.",
+  "Wrong working belongs to 'a child' or 'a child in another class', never to a child in the group, and never to a name. Never read out a child's name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is unmuted. Children may mute and keep their cameras off. A child's page is never shown.",
+  "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. Moves are gentle; a child may stay seated and move one arm.",
+  "A child who is still stuck ticks 'I am still stuck' on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for 90 days after the program ends. The tutor then helps in the open session next lesson. No private messages to children, and no personal phones.",
+  "The look-back is never collected in front of the group or read out. A pass is always allowed."
+ ],
+ "tutor_prep": [
+  "Solve every workbook question yourself first. Check the answers: S1 5; S2 3 and 1; S3 B; S4 3, 0 and 2, 1; S5 a line across the middle; S6 7; T1 3 and 2; T2 2 and A; T3 a hole 1 step right of the line, and 1; G1 4 and C; G2 2 and 1; G3 any four numbers from 1 to 3 that make 7; I1 2 dots, the same distance from the fold.",
+  "Tell parents a week before: the fold-squares page (page 6 of the book) needs 4 squares cut out by a grown-up, and the family finds 12 small blocks of one size (building bricks or dice); a family with no blocks uses buttons on a drawn grid, and the lesson works with pictures. The next lesson needs the pair-cards page of Book 7 torn out, with its 12 cards cut out.",
+  "Have the slides open. Have your own blocks and a paper square to show on camera if you wish. Practise the arm-fold break. When you read a stack question, say 'the back stacks are in the top row' every time.",
+  "Check the recording captures the tutor and the shared screen. Children's video is excluded; any unmuted voice is recorded. Greet the whole group first, say the notice, then start the recording; avoid first names while it runs.",
+  "Be plain with families: counting cubes in a picture is early work; reading a top view as numbers, the cube you cannot see, fold once and punch once and fold twice go beyond Primary 1 on purpose, always with real blocks and paper. 3-D shapes are Primary 2 and drawing cubes is Primary 5. Do not call the lesson MOE-aligned.",
+  "Wording rule: a picture cannot show every cube, so hidden-cube questions always give the total or the top view. Wrong working belongs to 'a child' or 'a child in another class', never to a cast name and never to a child in the group. Slides keep the answers off the screen while you ask: read every question with its numbers aloud."
+ ],
+ "spare_time": {
+  "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
+  "rules": [
+   "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
+   "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+   "Never teach anything the next lesson needs. If the class is ahead, slow down: ask 'How do you know?' and let children explain, rather than rushing on."
+  ],
+  "menu": [
+   {
+    "id": "M1",
+    "title": "Is it always true?",
+    "minutes": 4,
+    "tutor": "A child says: if every number on a top view gets 1 bigger, the stack has more cubes. Is that always true? Test it with a top view of 1, 2, 1 and 1, and then 2, 3, 2 and 2.",
+    "rec": "Recording: pause. Test whether making every number on a top view 1 bigger gives more cubes.",
+    "answer": "Yes. 1 + 2 + 1 + 1 = 5 and 2 + 3 + 2 + 2 = 9. Four numbers each 1 bigger add 4 more cubes."
+   },
+   {
+    "id": "M2",
+    "title": "Make a puzzle for your grown-up",
+    "minutes": 4,
+    "tutor": "Build a stack with blocks. Tell your grown-up the number of cubes in all and show the picture or the top view with one number missing. Ask them to find it.",
+    "rec": "Recording: pause. Build a stack and ask a grown-up to find the missing number on its top view.",
+    "answer": "No single answer. Check by adding the numbers on the top view to get the total."
+   },
+   {
+    "id": "M3",
+    "title": "Teach it back",
+    "minutes": 3,
+    "tutor": "Pretend a toy counts only the cubes it can see in a picture. Show the toy why a picture can hide a cube.",
+    "rec": "Recording: pause. Show a grown-up how a cube can hide behind another cube.",
+    "answer": "A cube behind a taller front tower cannot be seen from the front. The top view numbers or the blocks count it."
+   }
+  ]
+ },
+ "workbook": {
+  "header": "Views: stacks and folds",
+  "hint_p1": "Touch each cube once. The back stacks go in the top row of the top view.",
+  "hint_p2": "Use your blocks and your paper square. Fold and make a pencil dot: do not punch a hole.",
+  "hint_p3": "Use your blocks or fold a paper. Choose any question, in any order.",
+  "hint_p4": "Think about the layers when you fold. Choose any question. You do not have to finish them all.",
+  "choice_after": 3,
+  "inv_intro": "",
+  "inv_first_label": "First:",
+  "inv_then_label": "Next:",
+  "home_hint": "Use blocks and paper. Small pieces stay on the table, away from little brothers and sisters. Pencil dots only: do not punch holes.",
+  "kits": [
+   {
+    "type": "cards",
+    "labels": [
+     "",
+     "",
+     "",
+     ""
+    ],
+    "cols": 2,
+    "w": 330,
+    "h": 330,
+    "width": 100,
+    "title": "Kit page: fold squares",
+    "intro": "A grown-up cuts out the 4 squares before the lesson. Children only fold them and make pencil dots. Nothing is punched. No cutting? Fold any square of paper."
+   }
+  ]
+ },
+ "beyond": {
+  "name": "Fold Twice, Punch Once",
+  "where": [
+   "G1",
+   "G2"
+  ],
+  "text": "A paper square is folded in half and then in half again, and one hole is punched through all the layers: how many holes when it is opened (4, because each fold doubles the layers), and which opened paper it makes. Also a stack on a 2 by 2 base with a cube hidden behind a taller tower (3, 1, 2 and 2 make 8). Neither is in the Primary 1 syllabus: 3-D shapes are Primary 2 (p. 34), drawing cubes is Primary 5 (p. 42) and folding for symmetry is Primary 4. Fold once and punch once is the Think harder step. Named puzzle: Fold Twice, Punch Once.",
+  "parent": "Fold twice and punch once, and a stack with a hidden cube, go past the Primary 1 syllabus on purpose."
+ }
+}

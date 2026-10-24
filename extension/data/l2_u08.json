@@ -1,0 +1,1160 @@
+{
+ "schema_version": 1,
+ "level": 2,
+ "unit": 8,
+ "id": "L2U08",
+ "title": "Shape builders",
+ "topic": "2D and 3D shapes",
+ "holiday_lesson": 8,
+ "goal": "I can name half circles and quarter circles. I can count shapes and cubes in order. I can use layers to count a stack.",
+ "learn": {
+  "tight": true,
+  "intro": "Shapes can be put together and taken apart. A half circle has 1 straight side. A quarter circle has 2 straight sides. To count shapes, work in order and count one kind at a time.",
+  "example": {
+   "problem": "Count every square in this grid, big and small. It has 2 rows and 2 columns.",
+   "figure": {
+    "type": "l2_grid",
+    "values": [
+     [
+      "",
+      ""
+     ],
+     [
+      "",
+      ""
+     ]
+    ],
+    "cell": 80,
+    "width_mm": 36
+   },
+   "steps": [
+    "Count the small squares first: 4.",
+    "Look for larger squares. One square is 2 by 2: the whole grid. That is 1.",
+    "Add: 4 + 1 = 5 squares."
+   ],
+   "answer": "5 squares in all."
+  },
+  "example2": {
+   "problem": "Count the cubes in this stack. It is 2 cubes deep. The back is like the front.",
+   "figure": {
+    "type": "l2_cubes",
+    "stacks": [
+     {
+      "heights": [
+       [
+        3,
+        1
+       ],
+       [
+        3,
+        1
+       ]
+      ]
+     }
+    ],
+    "width_mm": 36
+   },
+   "steps": [
+    "Count one row: 3 + 1 = 4 cubes.",
+    "The 2 rows are the same: 4 + 4 = 8 cubes."
+   ],
+   "answer": "The stack has 8 cubes."
+  },
+  "pair": true,
+  "howto": {
+   "title": "How to count shapes",
+   "steps": [
+    "Count the smallest shapes first.",
+    "Then count the next size up.",
+    "Keep going to the largest.",
+    "Add the counts."
+   ]
+  },
+  "facts": {
+   "title": "Solids",
+   "lines": [
+    "Cube: 6 flat square faces.",
+    "Cylinder: 2 flat circles and 1 curved face.",
+    "Cone: 1 flat circle and 1 curved face.",
+    "Sphere: no flat face.",
+    "Stacks: count row by row."
+   ]
+  },
+  "try": {
+   "id": "L2U08-L01",
+   "text": "A grid has 2 rows and 3 columns. How many squares are there, big and small? {b}",
+   "answer": {
+    "value": [
+     "8"
+    ],
+    "text": "8"
+   },
+   "explanation": "Small squares: 2 rows of 3 is 6. Squares 2 by 2: 2 of them. 6 + 2 = 8 squares. There is no 3 by 3 square because the grid is only 2 high."
+  }
+ },
+ "items": [
+  {
+   "id": "L2U08-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "Look at the solids. How many flat faces does each solid have?",
+   "figure": {
+    "type": "l2_solids",
+    "items": [
+     {
+      "kind": "cube",
+      "label": "cube"
+     },
+     {
+      "kind": "cylinder",
+      "label": "cylinder"
+     },
+     {
+      "kind": "cone",
+      "label": "cone"
+     },
+     {
+      "kind": "sphere",
+      "label": "sphere"
+     }
+    ],
+    "width_mm": 120
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Cube: {b}",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Cylinder: {b}",
+     "answer": {
+      "value": [
+       "2"
+      ],
+      "text": "2"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Cone: {b}",
+     "answer": {
+      "value": [
+       "1"
+      ],
+      "text": "1"
+     }
+    },
+    {
+     "label": "d",
+     "text": "Sphere: {b}",
+     "answer": {
+      "value": [
+       "0"
+      ],
+      "text": "0"
+     }
+    }
+   ],
+   "explanation": "A cube has 6 flat square faces. A cylinder has 2 flat faces (circles) and 1 curved face. A cone has 1 flat face (a circle) and 1 curved face. A sphere has no flat face: it is all curved.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U08-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "Count each kind of piece.",
+   "figure": {
+    "type": "l2_pieces",
+    "items": [
+     "semicircle",
+     "quarter",
+     "square",
+     "triangle",
+     "quarter",
+     "semicircle",
+     "triangle",
+     "square",
+     "quarter",
+     "triangle",
+     "semicircle",
+     "quarter"
+    ],
+    "per_row": 6,
+    "width_mm": 125
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Half circles: {b}",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Quarter circles: {b}",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Squares: {b}",
+     "answer": {
+      "value": [
+       "2"
+      ],
+      "text": "2"
+     }
+    },
+    {
+     "label": "d",
+     "text": "Triangles: {b}",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    }
+   ],
+   "explanation": "Go through the pieces one kind at a time. Half circles: 3. Quarter circles: 4. Squares: 2. Triangles: 3. Check: 3 + 4 + 2 + 3 = 12 pieces.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U08-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "All the circles are the same size.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "{b} quarter circles make 1 half circle.",
+     "answer": {
+      "value": [
+       "2"
+      ],
+      "text": "2"
+     }
+    },
+    {
+     "label": "b",
+     "text": "3 half circles make {b} quarter circles.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "c",
+     "text": "12 quarter circles make {b} whole circles.",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    }
+   ],
+   "explanation": "(a) 2 quarters make a half. (b) Each half is 2 quarters, so 3 halves are 6 quarters. (c) 4 quarters make 1 circle, so 12 quarters make 3 circles.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U08-S04",
+   "tier": "start",
+   "page": 2,
+   "text": "Count every square of every size in this grid. Start with the smallest.",
+   "figure": {
+    "type": "l2_grid",
+    "values": [
+     [
+      "",
+      "",
+      ""
+     ],
+     [
+      "",
+      "",
+      ""
+     ],
+     [
+      "",
+      "",
+      ""
+     ]
+    ],
+    "cell": 70,
+    "width_mm": 44
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "1 by 1 squares: {b}",
+     "answer": {
+      "value": [
+       "9"
+      ],
+      "text": "9"
+     }
+    },
+    {
+     "label": "b",
+     "text": "2 by 2 squares: {b}",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    },
+    {
+     "label": "c",
+     "text": "3 by 3 squares: {b}",
+     "answer": {
+      "value": [
+       "1"
+      ],
+      "text": "1"
+     }
+    },
+    {
+     "label": "d",
+     "text": "All the squares: {b}",
+     "answer": {
+      "value": [
+       "14"
+      ],
+      "text": "14"
+     }
+    }
+   ],
+   "explanation": "1 by 1 squares: 3 rows of 3 is 9. 2 by 2 squares: they can start in 2 places across and 2 places down, so 4. 3 by 3 square: the whole grid, 1. Total: 9 + 4 + 1 = 14.",
+   "figside": true
+  },
+  {
+   "id": "L2U08-S05",
+   "tier": "start",
+   "page": 2,
+   "text": "Count the cubes in each stack. Every cube sits on the table or on another cube. Stack A is 1 cube deep. Stacks B and C are 2 cubes deep. At the back they are just like at the front.",
+   "figure": {
+    "type": "l2_cubes",
+    "stacks": [
+     {
+      "label": "A",
+      "heights": [
+       [
+        3,
+        2,
+        1
+       ]
+      ]
+     },
+     {
+      "label": "B",
+      "heights": [
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        1
+       ]
+      ]
+     },
+     {
+      "label": "C",
+      "heights": [
+       [
+        2,
+        2,
+        1
+       ],
+       [
+        2,
+        2,
+        1
+       ]
+      ]
+     }
+    ],
+    "width_mm": 150
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "A: {b} cubes",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "b",
+     "text": "B: {b} cubes",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "c",
+     "text": "C: {b} cubes",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    }
+   ],
+   "explanation": "A: 3 + 2 + 1 = 6. B has 2 rows, and each row has 2 + 1 = 3 cubes, so 2 × 3 = 6. C has 2 rows of 2 + 2 + 1 = 5 cubes, so 2 × 5 = 10.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U08-S06",
+   "tier": "start",
+   "page": 2,
+   "text": "Count the triangles of all sizes. Start with the smallest.",
+   "figure": {
+    "type": "l2_trilines",
+    "apex": 2,
+    "across": 0,
+    "width_mm": 62
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Small triangles: {b}",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Triangles made of 2 small ones: {b}",
+     "answer": {
+      "value": [
+       "2"
+      ],
+      "text": "2"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The whole triangle: {b}",
+     "answer": {
+      "value": [
+       "1"
+      ],
+      "text": "1"
+     }
+    },
+    {
+     "label": "d",
+     "text": "All the triangles: {b}",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    }
+   ],
+   "explanation": "The 2 lines from the top cut the triangle into 3 small triangles. 2 small ones next to each other make a larger triangle: there are 2 such pairs. The whole triangle is 1 more. 3 + 2 + 1 = 6.",
+   "figside": true
+  },
+  {
+   "id": "L2U08-S07",
+   "tier": "start",
+   "page": 3,
+   "text": "Which solid am I? Circle it.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "I have 6 square faces.   {circ:cube|cone|sphere}",
+     "answer": {
+      "value": [
+       "cube"
+      ],
+      "text": "cube"
+     }
+    },
+    {
+     "label": "b",
+     "text": "I have 1 flat circle and 1 curved face.   {circ:cone|cylinder|cube}",
+     "answer": {
+      "value": [
+       "cone"
+      ],
+      "text": "cone"
+     }
+    },
+    {
+     "label": "c",
+     "text": "I roll and have no flat face.   {circ:sphere|cube|cylinder}",
+     "answer": {
+      "value": [
+       "sphere"
+      ],
+      "text": "sphere"
+     }
+    },
+    {
+     "label": "d",
+     "text": "I have 2 flat circles.   {circ:cone|cylinder|sphere}",
+     "answer": {
+      "value": [
+       "cylinder"
+      ],
+      "text": "cylinder"
+     }
+    }
+   ],
+   "explanation": "(a) Only a cube has 6 square faces. (b) A cone has one flat circle (its base) and one curved face. (c) A sphere is curved all over. (d) A cylinder has 2 flat circles, one at each end.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U08-S08",
+   "tier": "start",
+   "page": 3,
+   "text": "Put the pieces together. Circle the shape you make.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "2 half circles make a   {circ:circle|square|triangle}",
+     "answer": {
+      "value": [
+       "circle"
+      ],
+      "text": "circle"
+     }
+    },
+    {
+     "label": "b",
+     "text": "2 same squares make a   {circ:rectangle|circle|triangle}",
+     "answer": {
+      "value": [
+       "rectangle"
+      ],
+      "text": "rectangle"
+     }
+    },
+    {
+     "label": "c",
+     "text": "4 quarter circles make a   {circ:circle|half circle|square}",
+     "answer": {
+      "value": [
+       "circle"
+      ],
+      "text": "circle"
+     }
+    }
+   ],
+   "explanation": "(a) 2 half circles make 1 whole circle. (b) 2 same squares joined side by side make a longer shape with 4 square corners: a rectangle. (c) 4 quarter circles make a whole circle.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U08-S09",
+   "tier": "start",
+   "page": 3,
+   "text": "Ali builds a stack of cubes. The bottom layer is 5 cubes long and 2 cubes wide. The stack has 3 layers that are all the same.",
+   "figure": {
+    "type": "l2_cubes",
+    "stacks": [
+     {
+      "label": null,
+      "heights": [
+       [
+        3,
+        3,
+        3,
+        3,
+        3
+       ],
+       [
+        3,
+        3,
+        3,
+        3,
+        3
+       ]
+      ]
+     }
+    ],
+    "width_mm": 72
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Each layer has {b} cubes.",
+     "answer": {
+      "value": [
+       "10"
+      ],
+      "text": "10"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The stack has {b} cubes.",
+     "answer": {
+      "value": [
+       "30"
+      ],
+      "text": "30"
+     }
+    }
+   ],
+   "explanation": "(a) A layer is 2 rows of 5: 5 + 5 = 10 cubes. (b) 3 layers of 10 cubes: 10 + 10 + 10 = 30 cubes.",
+   "figside": true
+  },
+  {
+   "id": "L2U08-S10",
+   "tier": "start",
+   "page": 3,
+   "text": "Name the flat faces.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Each face of a cube is a   {circ:square|circle|triangle}",
+     "answer": {
+      "value": [
+       "square"
+      ],
+      "text": "square"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Each flat face of a cylinder is a   {circ:circle|square|triangle}",
+     "answer": {
+      "value": [
+       "circle"
+      ],
+      "text": "circle"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The flat face of a cone is a   {circ:triangle|circle|square}",
+     "answer": {
+      "value": [
+       "circle"
+      ],
+      "text": "circle"
+     }
+    }
+   ],
+   "explanation": "(a) A cube has 6 faces and each one is a square. (b) The 2 flat faces of a cylinder are circles. (c) The flat face of a cone is its base, a circle.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U08-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "A net folds up into a solid. Which nets fold into a cube? Each square must be a new face.",
+   "figure": {
+    "type": "l2_nets",
+    "nets": [
+     {
+      "label": "A",
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        1,
+        3
+       ],
+       [
+        0,
+        1
+       ],
+       [
+        2,
+        1
+       ]
+      ]
+     },
+     {
+      "label": "B",
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        2,
+        2
+       ],
+       [
+        2,
+        3
+       ]
+      ]
+     },
+     {
+      "label": "C",
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        1
+       ],
+       [
+        0,
+        2
+       ],
+       [
+        0,
+        3
+       ],
+       [
+        0,
+        4
+       ],
+       [
+        1,
+        2
+       ]
+      ]
+     },
+     {
+      "label": "D",
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        2,
+        0
+       ],
+       [
+        2,
+        1
+       ]
+      ]
+     }
+    ],
+    "width_mm": 150
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "A   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "Yes"
+      ],
+      "text": "Yes"
+     }
+    },
+    {
+     "label": "b",
+     "text": "B   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "Yes"
+      ],
+      "text": "Yes"
+     }
+    },
+    {
+     "label": "c",
+     "text": "C   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    },
+    {
+     "label": "d",
+     "text": "D   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    }
+   ],
+   "explanation": "A is a cross and B is a staircase of 3 pairs: both fold into a cube. C has a row of 5 squares: the 5th lands on the 1st face. D has a 2 by 2 block: 4 squares cannot all be different faces. So C and D do not fold.",
+   "hint": "Fold in your head. Where does each square land?",
+   "beyond": "Cube nets",
+   "partsrow": true
+  },
+  {
+   "id": "L2U08-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "A strip has 5 stamps in a row. Mei tears off 1 or more stamps that touch.",
+   "figure": {
+    "type": "l2_grid",
+    "values": [
+     [
+      "",
+      "",
+      "",
+      "",
+      ""
+     ]
+    ],
+    "cell": 70,
+    "width_mm": 52
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Pieces of 1 stamp: {b}",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Pieces of 2 stamps: {b}",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Pieces of 3 stamps: {b}",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    },
+    {
+     "label": "d",
+     "text": "Pieces of 4 or 5 stamps: {b}   All the pieces: {b}",
+     "answer": {
+      "value": [
+       "3",
+       "15"
+      ],
+      "text": "3 and 15 in all"
+     }
+    }
+   ],
+   "explanation": "1 stamp: 5 pieces. 2 stamps: they start at stamp 1, 2, 3 or 4, so 4. 3 stamps: 3. 4 stamps: 2. 5 stamps: 1. So 4 or 5 stamps: 2 + 1 = 3. All the pieces: 5 + 4 + 3 + 2 + 1 = 15.",
+   "hint": "A piece of 2 stamps can start at stamp 1, 2, 3 or 4.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U08-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "A big triangle has 1 line across. It has 2 lines from its top corner.",
+   "figure": {
+    "type": "l2_trilines",
+    "apex": 2,
+    "across": 1,
+    "width_mm": 50
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Sitting on the base: {b}",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Sitting on the middle line: {b}",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "c",
+     "text": "All the triangles: {b}",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    }
+   ],
+   "explanation": "The 2 lines from the top and the 2 sloping sides make 4 lines. Any 2 of them make a triangle on each line across: 6. There are 2 lines across, the base and the middle: 6 + 6 = 12 triangles.",
+   "hint": "Count the triangles that sit on each line separately.",
+   "figside": true,
+   "partsrow": false
+  },
+  {
+   "id": "L2U08-G01",
+   "tier": "go",
+   "page": 5,
+   "text": "A shop stacks cans in a triangle. The top row has 1 can. Each row has 1 more can.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "6 rows: the bottom row has {b} cans.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "b",
+     "text": "6 rows: {b} cans in all.",
+     "answer": {
+      "value": [
+       "21"
+      ],
+      "text": "21"
+     }
+    },
+    {
+     "label": "c",
+     "text": "8 rows: {b} cans in all.",
+     "answer": {
+      "value": [
+       "36"
+      ],
+      "text": "36"
+     }
+    }
+   ],
+   "explanation": "(a) Row 6 has 6 cans. (b) 1 + 2 + 3 + 4 + 5 + 6 = 21. (c) 21 + 7 + 8 = 36 (the rows 7 and 8 have 7 and 8 cans).",
+   "hint": "Add the rows: 1 + 2 + 3 ...",
+   "beyond": "Triangle numbers"
+  },
+  {
+   "id": "L2U08-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "Small cubes make a big cube that is 4 long, 4 wide and 4 high. The outside is painted. Count the small cubes with each number of painted faces.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "3 faces painted: {b}",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    },
+    {
+     "label": "b",
+     "text": "2 faces painted: {b}",
+     "answer": {
+      "value": [
+       "24"
+      ],
+      "text": "24"
+     }
+    },
+    {
+     "label": "c",
+     "text": "1 face painted: {b}",
+     "answer": {
+      "value": [
+       "24"
+      ],
+      "text": "24"
+     }
+    },
+    {
+     "label": "d",
+     "text": "No paint: {b}",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    }
+   ],
+   "explanation": "3 faces: the 8 corners. 2 faces: 12 edges with 2 cubes each: 24. 1 face: 6 faces with a 2 by 2 middle: 24. No paint: the 2 by 2 by 2 middle: 8. Check: 8 + 24 + 24 + 8 = 64.",
+   "hint": "Corners, edges, faces, inside. Check they make 64.",
+   "beyond": "Painted cubes",
+   "partsrow": true
+  },
+  {
+   "id": "L2U08-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "Design a stack with exactly 24 cubes. Write the cubes in each layer. Many answers are right.",
+   "answer": {
+    "value": [
+     "open"
+    ],
+    "text": "Open. Examples: 4 long, 3 wide and 2 high is 12 + 12 = 24. Or layers of 12, 8 and 4 cubes: 12 + 8 + 4 = 24."
+   },
+   "explanation": "Example 1: 4 by 3 by 2: each layer has 12 cubes and there are 2 layers: 24. Example 2: a layer of 4 by 3 (12), a layer of 4 by 2 (8) and a layer of 2 by 2 (4): 12 + 8 + 4 = 24.",
+   "hint": "Each layer needs a layer under it.",
+   "space": {
+    "rows": [
+     "Stack 1:"
+    ]
+   }
+  },
+  {
+   "id": "L2U08-G04",
+   "tier": "go",
+   "page": 5,
+   "text": "Count the rectangles in a grid with 2 rows and 3 columns. A square counts too. {b}",
+   "figure": {
+    "type": "l2_grid",
+    "values": [
+     [
+      "",
+      "",
+      ""
+     ],
+     [
+      "",
+      "",
+      ""
+     ]
+    ],
+    "cell": 66,
+    "width_mm": 42
+   },
+   "answer": {
+    "value": [
+     "18"
+    ],
+    "text": "18"
+   },
+   "explanation": "1 by 1: 6. 1 high and 2 long: 4. 1 high and 3 long: 2. 2 high and 1 long: 3. 2 high and 2 long: 2. 2 high and 3 long: 1. Total: 6 + 4 + 2 + 3 + 2 + 1 = 18.",
+   "hint": "Sort them by size: 1 by 1, 1 by 2, 1 by 3, 2 by 1, 2 by 2, 2 by 3.",
+   "figside": true
+  },
+  {
+   "id": "L2U08-C01",
+   "tier": "quiz",
+   "text": "Which solid has 1 flat face and 1 curved face?   {circ:cube|cone|cylinder}",
+   "answer": {
+    "value": [
+     "cone"
+    ],
+    "text": "cone"
+   },
+   "explanation": "A cone has a flat circle for its base and one curved face. A cylinder has 2 flat faces."
+  },
+  {
+   "id": "L2U08-C02",
+   "tier": "quiz",
+   "text": "All the circles are the same size. 3 half circles make {b} quarter circles.",
+   "answer": {
+    "value": [
+     "6"
+    ],
+    "text": "6"
+   },
+   "explanation": "1 half circle is 2 quarter circles. 3 half circles make 3 × 2 = 6 quarter circles."
+  },
+  {
+   "id": "L2U08-C03",
+   "tier": "quiz",
+   "text": "A stack has 2 layers. Each layer is 4 cubes by 3 cubes. How many cubes? {b}",
+   "answer": {
+    "value": [
+     "24"
+    ],
+    "text": "24"
+   },
+   "explanation": "One layer is 4 × 3 = 12 cubes. There are 2 layers: 12 + 12 = 24."
+  },
+  {
+   "id": "L2U08-C04",
+   "tier": "quiz",
+   "text": "A grid has 3 rows and 2 columns. Squares, big and small: {b}",
+   "answer": {
+    "value": [
+     "8"
+    ],
+    "text": "8"
+   },
+   "explanation": "Small squares: 6. Squares 2 by 2: 2. Total: 6 + 2 = 8."
+  }
+ ],
+ "snug": [
+  "start1",
+  "start2",
+  "start3"
+ ]
+}

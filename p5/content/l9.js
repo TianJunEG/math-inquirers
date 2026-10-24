@@ -1,4 +1,5 @@
 // Math Inquirers P5 — Lesson 9: Pattern Generalisers (patterns and number sense)
+const { TKQ, TKP } = require('./take.js');
 // Heuristics: look for a pattern, make a table, say the rule in words (no letters), work backwards from a total,
 // guess and check with a table, supposition ("suppose they are all the same").
 // Every pattern term, count and answer below was worked out and checked with a short Python script.
@@ -56,9 +57,9 @@ module.exports = {
     objective: 'Continue growing patterns drawn as figures, say the rule for any figure in words (for example, number of sticks = 3 × figure number + 1) and explain it from the picture, work backwards from a total to find the figure, and solve “two kinds of things” problems with a guess-and-check table and with supposition.',
     skills: 'Looking for a pattern, making a table, describing the rule in words, working backwards, guess and check, supposition, explaining from a picture',
     materials: 'Matchsticks or toothpicks (about 20 per child, 40 if possible), square paper tiles or the square grid from the cut-out pages, mini whiteboard, workbook.',
-    online: 'Children have toothpicks and paper squares ready on the desk and build each figure on camera. The tutor shares the slides; pairs work in breakout rooms for the explore and page 1, and hold their tables up to the camera.',
+    online: 'Children have toothpicks and paper squares ready on the desk and build each figure on camera. The tutor shares the slides; pairs work in breakout rooms for the explore and page 1, and check their tables against the slide.',
     warmup: 'Guess My Rule: children call out numbers, the tutor puts each through a secret two-step machine (× 3, then + 1) and says what comes out. Nobody races: everyone tests their idea on the next number, then says the rule in words when they are ready. Then five quick pattern questions on whiteboards.',
-    explore: 'High fives: if everyone in our group of 8 high-fives everyone else exactly once, how many high fives is that? Pairs guess first, then start small (2, 3, 4 children), draw dots and lines, make a table and look for a pattern. Finished early: a class of 30.',
+    explore: 'High fives: if everyone in our group of 8 high-fives everyone else exactly once, how many high fives is that? Pairs guess first, then start small (2, 3, 4 children), draw dots and lines, make a table and look for a pattern. If a pair wants more: a class of 30.',
     mini: 'Growing patterns: count each figure, put the counts in a table, see what each new figure adds and WHY from the picture (a new square shares a side, so it adds 3 sticks, not 4). Say the rule in words: sticks = 3 × figure number + 1. Use it for a far figure (figure 25) and backwards (61 sticks: take away 1, divide by 3). See the same pattern two ways (a border of tiles, on the slides). Before page 2: guess and check with a table (each change moves the total by the same amount); supposition (suppose they are all the cheaper kind, find the gap, divide by the change per swap); marks taken away for a wrong answer (each wrong answer costs the marks you lost AND the marks taken away).',
     share: 'Mei says: “10 squares in a row need 31 sticks, so 20 squares need 62 sticks.” Is she right? Explain with a picture.',
     exit: { q: 'Figure 1 of a pattern has 6 dots. Each figure has 4 more dots than the figure before.  (a) How many dots are in figure 20?  (b) Which figure has 102 dots?', a: '(a) 82 (6 + 19 × 4, or 4 × 20 + 2)  (b) Figure 25 (102 − 2 = 100, 100 ÷ 4 = 25)' },
@@ -81,7 +82,7 @@ module.exports = {
     hook: ['Today you become pattern generalisers. That is a big word for a simple, powerful idea: if you can see HOW a pattern grows, you can jump straight to the 100th figure without drawing 100 pictures.', 'Mathematicians and coders do this all the time. By the end of today you will say the rule for any figure in words, and use it backwards too.'],
     warmIntro: ['I have a secret machine. It does two things to every number. You call out a number, I tell you what comes out.', 'When you think you know the rule, do not shout it. Test it on the next number first. Then say it in words.'],
     predict: ['If all 8 of us high-five everyone else once, how many high fives is that? Write your guess in the corner of your whiteboard. Is it more or less than 50?'],
-    exploreHints: ['Stuck: start with 2 children. Then 3. Draw each child as a dot and each high five as a line.', 'Stuck on the table: when a new child joins, how many NEW high fives does that child make?', 'Finished early: how many high fives for a class of 30? Is there a quick way without adding 29 numbers?'],
+    exploreHints: ['Stuck: start with 2 children. Then 3. Draw each child as a dot and each high five as a line.', 'Stuck on the table: when a new child joins, how many NEW high fives does that child make?', 'If a pair wants more: how many high fives for a class of 30? Is there a quick way without adding 29 numbers?'],
     think: [
       '“Squares in a row. Figure 1 has 4 sticks, figure 2 has 7, figure 3 has 10. Each new square adds 3, not 4, because it shares a side with the square before. So I start with 1 stick and add 3 for every square: sticks = 3 × figure number + 1.”',
       '“For figure 25 I do not draw 25 squares. 3 × 25 + 1 = 76. And backwards: 61 sticks. Undo the last step first: 61 − 1 = 60, then 60 ÷ 3 = 20. Figure 20. I check: 3 × 20 + 1 = 61.”',
@@ -96,19 +97,19 @@ module.exports = {
 
   deck: {
     today: 'See how a pattern grows, say the rule for any figure in words, work backwards from a total, and solve problems by supposing.',
-    warmGame: 'Guess My Rule. Call out a number; the tutor puts it through a secret two-step machine and says what comes out. Test your idea on the next number before you say the rule in words. 3 rounds.',
-    warmQs: [['7, 11, 15, 19, __, __', '23, 27'], ['1, 4, 9, 16, 25, __', '36'], ['2, 6, 18, 54, __', '162'], ['The 20th even number', '40'], ['4 × 25 + 3', '103']],
-    expSetup: ['Guess first: if all 8 of us high-five everyone else once, how many high fives is that?', 'Start small: 2 children, then 3, then 4. Draw each child as a dot and each high five as a line.', 'Make a table: number of children and number of high fives.', 'Look for a pattern. Use it to find the number for 8 children.'],
+    warmGame: 'Guess My Rule. Call out a number; the tutor puts it through a secret two-step machine and says what comes out. Test your idea on the next number before you say the rule in words. Play 1 round.',
+    warmQs: [['7, 11, 15, 19, __, __', '23, 27'], ['1, 4, 9, 16, 25, __', '36'], ['2, 6, 18, 54, __', '162'], ['The 20th even number', '40']],
+    expSetup: ['Guess first: if all 8 of us high-five everyone else once, how many high fives is that?', 'Start small: 2 children, then 3, then 4. Draw each child as a dot and each high five as a line.', 'Make a table: number of children and number of high fives. Stop at 6 children.', 'Look for a pattern in the table. What does each new child add?'],
     expPic: 'dots for 2, 3 and 4 children joined by lines, one line for each high five (1, 3 and 6 lines).',
-    expAsk: [['How many high fives for 5 children?', '10. The table goes 1, 3, 6, 10: each new child high-fives everyone already there (add 2, then 3, then 4).'], ['How many for our group of 8?', '28 (10 + 5 = 15, + 6 = 21, + 7 = 28).'], ['How many for a class of 30? Is there a quick way?', '435. Each of the 30 children high-fives 29 others: 30 × 29 = 870, but that counts every high five twice, so 870 ÷ 2 = 435.']],
+    expAsk: [['How many high fives for 5 children?', '10. The table goes 1, 3, 6, 10: each new child high-fives everyone already there (add 2, then 3, then 4).'], ['How many for 6 children?', '15 (10 + 5).']],
     mini1: { head: 'Matchstick squares in a row: 4, 7, 10 sticks. Figure 25? Which figure uses 61 sticks?', body: ['Each new square shares a side, so it adds 3 sticks.', 'Rule in words: sticks = 3 × figure number + 1. Figure 25: 3 × 25 + 1 = 76.', 'Backwards: 61 − 1 = 60, 60 ÷ 3 = 20.'], ans: 'Figure 25 has 76 sticks; 61 sticks is figure 20. Check: 3 × 20 + 1 = 61.' },
     mini2: { head: 'A row of yellow tiles with a grey border: figure 1 has 8 grey tiles, figure 2 has 10, figure 3 has 12. How many grey tiles in figure 12?', body: ['Way 1: a top row and a bottom row of (figure + 2) tiles, and 1 tile at each end: 2 × figure number + 6.', 'Way 2: the whole rectangle is 3 rows of (figure + 2) tiles; take away the yellow tiles: 3 × 14 − 12.', 'Both ways: 30.'], ans: 'Figure 12 has 30 grey tiles. Two ways of seeing, one answer.' },
     keyHead: 'Key idea: find the rule, say it in words',
     keyBig: 'See what stays the same and what grows. Say the rule in words: sticks = 3 × figure number + 1.',
     keySmall: 'Check the rule on every figure. To go backwards, undo the steps in reverse: take away, then divide.',
     brk: 'Pattern moves: clap, clap, stamp, clap, clap, stamp … Do 12 moves together. Then: what is the 20th move? The 30th?',
-    ws1: 'Page 1, in pairs: Q1 tables and chairs, Q2 matchstick houses.',
-    ws2: 'Page 2, on your own: Q3 guess and check with a table, Q4 coins by supposition, Q5 the quiz with marks taken away.'
+    ws1: 'Page 1, in pairs: Q1 (a) (b) tables and chairs, Q2 (a) (b) matchstick houses (Q1 (c) (d) and Q2 (c) are take-home).',
+    ws2: 'Page 2, on your own: Q3 guess and check with a table, Q4 (a) coins by supposition (Q4 (b) and Q5, the quiz with marks taken away, are take-home).'
   },
 
   qbank: {
@@ -151,15 +152,15 @@ module.exports = {
     W.push(H.fig(tablesSvg()));
     W.push(H.sub('a', '4 tables:  ______ chairs.   5 tables:  ______ chairs.   10 tables:  ______ chairs.'));
     W.push(H.sub('b', 'Rule in words:   chairs  =  ______ × tables  +  ______'));
-    W.push(H.sub('c', 'How many tables are needed to seat exactly 50 people?   ______________'));
-    W.push(H.sub('d', 'Ben says, “10 tables seat 22 people, so 20 tables seat 44.” Is he right? Explain.', { after: 20 }));
+    W.push(H.sub('c', [TKP, 'How many tables are needed to seat exactly 50 people?   ______________']));
+    W.push(H.sub('d', [TKP, 'Ben says, “10 tables seat 22 people, so 20 tables seat 44.” Is he right? Explain.'], { after: 20 }));
     W.push(...H.lines(1));
     // Q2 matchstick houses
     W.push(H.q(2, 'Matchstick houses are joined in a row.', { keepNext: true }));
     W.push(H.fig(housesSvg()));
     W.push(H.sub('a', 'Each new house adds ______ sticks. Why not 6?  ______________________________', { after: 40 }));
     W.push(H.sub('b', 'Rule:   sticks  =  ______ × houses  +  ______.   For 20 houses:  ______ sticks.'));
-    W.push(H.sub('c', 'Mei has 200 sticks. Greatest number of houses she can make? Sticks left over?  ______________'));
+    W.push(H.sub('c', [TKP, 'Mei has 200 sticks. Greatest number of houses she can make? Sticks left over?  ______________']));
     // ---- page 2 ----
     W.push(H.q(3, 'Guess and check with a table. Adult tickets to the Science Centre cost $12 each and child tickets cost $7 each. A group buys 15 tickets for $145 altogether. How many adult tickets do they buy?', { pb: true, before: 0, keepNext: true }));
     { const ws = [2000, 2000, 3400, 2500];
@@ -170,10 +171,10 @@ module.exports = {
     // Q5 supposition, coins
     W.push(H.q(4, 'Siti has 30 coins. They are all 20¢ and 50¢ coins, worth $10.20 altogether.', { keepNext: true }));
     W.push(H.sub('a', 'If all 30 coins were 20¢: worth ____________.  Each change of a 20¢ for a 50¢ adds ____________.'));
-    W.push(H.sub('b', 'How many 50¢ coins does Siti have? Show your working and check.', { after: 20 }));
+    W.push(H.sub('b', [TKP, 'How many 50¢ coins does Siti have? Show your working and check.'], { after: 20 }));
     W.push(...H.lines(2));
     // Q6 marks taken away
-    W.push(H.q(5, 'A quiz has 20 questions. Each correct answer scores 5 marks. For each wrong answer, 2 marks are taken away. Ali answered every question and scored 65 marks.', { keepNext: true }));
+    W.push(H.q(5, [TKQ, 'A quiz has 20 questions. Each correct answer scores 5 marks. For each wrong answer, 2 marks are taken away. Ali answered every question and scored 65 marks.'], { keepNext: true }));
     W.push(H.sub('a', 'How many questions did Ali get correct? Hint: suppose he got them all correct first.', { after: 20 }));
     W.push(...H.lines(2));
     W.push(H.sub('b', 'Mei also answered every question and says she scored 80 marks. Why must she be wrong? Start here: all correct scores 100. Each wrong answer takes off 7. Write the scores for 0, 1, 2, 3 wrong: 100, ____, ____, ____. Is 80 in your list?', { after: 20 }));
@@ -181,3 +182,17 @@ module.exports = {
     return W;
   }
 };
+
+// ---- figure for the printed Go further B1 (the diamond dot pattern): figures 1, 2 and 3 ----
+{
+  const D = '#1B2A49', T = '#1F7A6F';
+  let g = '', x0 = 10;
+  [[1], [1, 3, 1], [1, 3, 5, 3, 1]].forEach((rows, f) => {
+    const w = 5 * 18, cx = x0 + w / 2, h = rows.length;
+    rows.forEach((n, r) => { for (let i = 0; i < n; i++) g += `<circle cx="${cx + (i - (n - 1) / 2) * 18}" cy="${20 + r * 18}" r="6" fill="#FFC93C" stroke="${D}" stroke-width="2"/>`; });
+    g += `<text x="${cx}" y="${20 + 4 * 18 + 24}" font-size="16" font-weight="700" text-anchor="middle" fill="${T}" font-family="Arial">Figure ${f + 1}</text>`;
+    x0 += w + 26;
+  });
+  const fig = `<svg aria-label="Three diamond dot patterns: figure 1 has 1 dot, figure 2 has rows of 1, 3 and 1 dots, figure 3 has rows of 1, 3, 5, 3 and 1 dots" viewBox="0 0 ${x0} 124" xmlns="http://www.w3.org/2000/svg" style="width:${Math.round(x0 * 0.8)}px;max-width:100%">${g}</svg>`;
+  module.exports.qbank.challenge[module.exports.qbank.challenge.length - 3].fig = fig;
+}

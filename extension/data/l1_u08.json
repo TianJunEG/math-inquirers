@@ -1,0 +1,1064 @@
+{
+ "schema_version": 1,
+ "level": 1,
+ "unit": 8,
+ "id": "L1U08",
+ "title": "Clues and sorting",
+ "topic": "Logic and sorting",
+ "holiday_lesson": 8,
+ "goal": "I can use clues, fill in a logic grid and sort numbers into loops.",
+ "learn": {
+  "intro": "",
+  "example": {
+   "problem": "Ravi, Jenny and Wei each pick milk, juice or tea. Ravi picks tea. Jenny does not pick milk. Who picks what?",
+   "figure": {
+    "type": "logic_grid",
+    "rows": [
+     "Ravi",
+     "Jenny",
+     "Wei"
+    ],
+    "cols": [
+     "milk",
+     "juice",
+     "tea"
+    ],
+    "width_mm": 58,
+    "marks": {
+     "0,0": "no",
+     "0,1": "no",
+     "0,2": "yes",
+     "1,0": "no",
+     "1,1": "yes",
+     "1,2": "no",
+     "2,0": "yes",
+     "2,1": "no",
+     "2,2": "no"
+    }
+   },
+   "steps": [
+    "Ravi picks tea. Tick it. Cross out the rest of that row and column.",
+    "Jenny does not pick milk. Cross out that box.",
+    "Jenny's last empty box is juice. Wei gets milk."
+   ],
+   "answer": "Ravi: tea. Jenny: juice. Wei: milk."
+  },
+  "howto": {
+   "title": "How to use grids and loops",
+   "steps": [
+    "Read a clue. Tick or cross.",
+    "Tick a row's last empty box.",
+    "Test numbers against both rules."
+   ]
+  },
+  "try": {
+   "id": "L1U08-L01",
+   "text": "Mei, Ben and Kumar each have 1 toy. The toys are a ball, a kite and a drum. Ben has the drum. Mei does not have the ball.",
+   "figure": {
+    "type": "logic_grid",
+    "rows": [
+     "Mei",
+     "Ben",
+     "Kumar"
+    ],
+    "cols": [
+     "ball",
+     "kite",
+     "drum"
+    ],
+    "width_mm": 52
+   },
+   "parts": [
+    {
+     "label": "",
+     "text": "Who has the ball?   {circ:Mei|Ben|Kumar}",
+     "answer": {
+      "value": [
+       "Kumar"
+      ],
+      "text": "Kumar"
+     }
+    }
+   ],
+   "explanation": "Ben has the drum. Mei does not have the ball or the drum, so Mei has the kite. The ball is left for Kumar.",
+   "figside": true
+  },
+  "example2": {
+   "problem": "Sort 2 to 9 into the loops. One rule is even. One rule is more than 6.",
+   "figure": {
+    "type": "loops",
+    "a": "even",
+    "b": "more than 6",
+    "width_mm": 68,
+    "regions": {
+     "a": [
+      2,
+      4,
+      6
+     ],
+     "ab": [
+      8
+     ],
+     "b": [
+      7,
+      9
+     ],
+     "out": [
+      3,
+      5
+     ]
+    }
+   },
+   "steps": [
+    "Test each number against both rules.",
+    "8 is even and more than 6. It goes in the middle.",
+    "3 and 5 are neither. They go outside both loops."
+   ],
+   "answer": "In both loops: 8. Outside both loops: 3 and 5."
+  },
+  "facts": {
+   "title": "Odd and even",
+   "lines": [
+    "Even: ends in 0, 2, 4, 6 or 8.",
+    "Odd: ends in 1, 3, 5, 7 or 9.",
+    "Counting in 4s: 4, 8, 12, 16 ..."
+   ]
+  },
+  "pair": true,
+  "tight": true
+ },
+ "items": [
+  {
+   "id": "L1U08-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "Siti is older than Wei. Wei is older than Jamie.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The oldest is   {circ:Siti|Wei|Jamie}",
+     "answer": {
+      "value": [
+       "Siti"
+      ],
+      "text": "Siti"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The youngest is   {circ:Siti|Wei|Jamie}",
+     "answer": {
+      "value": [
+       "Jamie"
+      ],
+      "text": "Jamie"
+     }
+    }
+   ],
+   "explanation": "Siti is older than Wei, and Wei is older than Jamie. The order from oldest is Siti, Wei, Jamie.",
+   "figure": {
+    "type": "draw",
+    "w": 330,
+    "h": 172,
+    "scale": 0.125,
+    "label": "ladder of 3 empty places",
+    "elements": [
+     {
+      "poly": [
+       [
+        130,
+        8
+       ],
+       [
+        320,
+        8
+       ],
+       [
+        320,
+        52
+       ],
+       [
+        130,
+        52
+       ]
+      ],
+      "fill": "white",
+      "dash": true
+     },
+     {
+      "poly": [
+       [
+        130,
+        64
+       ],
+       [
+        320,
+        64
+       ],
+       [
+        320,
+        108
+       ],
+       [
+        130,
+        108
+       ]
+      ],
+      "fill": "white",
+      "dash": true
+     },
+     {
+      "poly": [
+       [
+        130,
+        120
+       ],
+       [
+        320,
+        120
+       ],
+       [
+        320,
+        164
+       ],
+       [
+        130,
+        164
+       ]
+      ],
+      "fill": "white",
+      "dash": true
+     },
+     {
+      "text": [
+       62,
+       40.0,
+       "oldest",
+       26
+      ]
+     },
+     {
+      "text": [
+       62,
+       152.0,
+       "youngest",
+       26
+      ]
+     }
+    ]
+   },
+   "figright": true
+  },
+  {
+   "id": "L1U08-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "Ben is 3rd in a queue. Kumar stands just behind Ben. Aisha stands just in front of Ben.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Kumar is in place {b}.",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Aisha is in place {b}.",
+     "answer": {
+      "value": [
+       "2"
+      ],
+      "text": "2"
+     }
+    }
+   ],
+   "explanation": "Just behind 3rd is 4th, so Kumar is 4th. Just in front of 3rd is 2nd, so Aisha is 2nd.",
+   "figure": {
+    "type": "shape_row",
+    "items": [
+     null,
+     null,
+     "B",
+     null,
+     null
+    ],
+    "per_row": 5,
+    "width_mm": 56
+   },
+   "figright": true
+  },
+  {
+   "id": "L1U08-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "Ali, Mei, Ben and Siti stand in a line. Ali is 1st. Mei is just behind Ali. Ben is last.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Siti is in place {b}.",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The line from 1st to last: {ll}",
+     "answer": {
+      "value": [
+       "Ali",
+       "Mei",
+       "Siti",
+       "Ben"
+      ],
+      "text": "Ali, Mei, Siti, Ben",
+      "list": true
+     }
+    }
+   ],
+   "explanation": "Ali is 1st and Mei is just behind, so Mei is 2nd. Ben is last, 4th. Siti has the place that is left: 3rd.",
+   "figure": {
+    "type": "shape_row",
+    "items": [
+     "A",
+     null,
+     null,
+     "B"
+    ],
+    "per_row": 4,
+    "width_mm": 48
+   },
+   "figright": true
+  },
+  {
+   "id": "L1U08-S04",
+   "tier": "start",
+   "page": 1,
+   "text": "Ali is taller than Mei. Mei is taller than Ravi. Circle True or False.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Ravi is the shortest.   {circ:True|False}",
+     "answer": {
+      "value": [
+       "True"
+      ],
+      "text": "True"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Ali is taller than Ravi.   {circ:True|False}",
+     "answer": {
+      "value": [
+       "True"
+      ],
+      "text": "True"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Mei is the tallest.   {circ:True|False}",
+     "answer": {
+      "value": [
+       "False"
+      ],
+      "text": "False"
+     }
+    }
+   ],
+   "explanation": "The order from tallest is Ali, Mei, Ravi. (a) True: Ravi is last. (b) True: Ali is first and Ravi is last. (c) False: Ali is the tallest."
+  },
+  {
+   "id": "L1U08-S05",
+   "tier": "start",
+   "page": 1,
+   "text": "Write each of these numbers in the right list: 4, 7, 10, 13, 16, 9.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Odd numbers: {ll}",
+     "answer": {
+      "value": [
+       "7",
+       "13",
+       "9"
+      ],
+      "text": "7, 13 and 9",
+      "list": true,
+      "unordered": true
+     }
+    },
+    {
+     "label": "b",
+     "text": "Even numbers: {ll}",
+     "answer": {
+      "value": [
+       "4",
+       "10",
+       "16"
+      ],
+      "text": "4, 10 and 16",
+      "list": true,
+      "unordered": true
+     }
+    }
+   ],
+   "explanation": "Look at the last digit. 7, 13 and 9 end in 7, 3 and 9: odd. 4, 10 and 16 end in 4, 0 and 6: even."
+  },
+  {
+   "id": "L1U08-S06",
+   "tier": "start",
+   "page": 2,
+   "text": "5 friends have 5, 6, 7, 8 and 9 sweets, all different. Mei has the most and Aisha has the fewest. Ravi has fewer sweets than Ben. Ben has fewer than Siti.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Ben has {b} sweets.",
+     "answer": {
+      "value": [
+       "7"
+      ],
+      "text": "7"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Siti has {b} sweets.",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    }
+   ],
+   "explanation": "The line is Aisha, Ravi, Ben, Siti, Mei (fewest to most). So Aisha has 5, Ravi 6, Ben 7, Siti 8 and Mei 9.",
+   "space": {
+    "rows": [
+     "Fewest to most:"
+    ]
+   },
+   "figure": {
+    "type": "bars",
+    "rows": [
+     {
+      "label": "5 sweets",
+      "segs": [
+       {
+        "n": 5
+       }
+      ],
+      "note": "_____"
+     },
+     {
+      "label": "6 sweets",
+      "segs": [
+       {
+        "n": 6
+       }
+      ],
+      "note": "_____"
+     },
+     {
+      "label": "7 sweets",
+      "segs": [
+       {
+        "n": 7
+       }
+      ],
+      "note": "_____"
+     },
+     {
+      "label": "8 sweets",
+      "segs": [
+       {
+        "n": 8
+       }
+      ],
+      "note": "_____"
+     },
+     {
+      "label": "9 sweets",
+      "segs": [
+       {
+        "n": 9
+       }
+      ],
+      "note": "_____"
+     }
+    ],
+    "width_mm": 72
+   },
+   "figright": true
+  },
+  {
+   "id": "L1U08-S07",
+   "tier": "start",
+   "page": 2,
+   "text": "One number is in the wrong place. Which number is it? {b}",
+   "figure": {
+    "type": "loops",
+    "a": "odd",
+    "b": "more than 10",
+    "width_mm": 100,
+    "regions": {
+     "a": [
+      3,
+      7,
+      9
+     ],
+     "ab": [
+      11,
+      13,
+      15
+     ],
+     "b": [
+      12,
+      14,
+      17
+     ],
+     "out": [
+      2,
+      4,
+      6
+     ]
+    }
+   },
+   "answer": {
+    "value": [
+     "17"
+    ],
+    "text": "17"
+   },
+   "explanation": "17 is odd and more than 10, so it belongs in both loops. It is in the \"more than 10\" loop only."
+  },
+  {
+   "id": "L1U08-S08",
+   "tier": "start",
+   "page": 2,
+   "text": "Count in 3s and count in 4s from 1 to 24.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Numbers said in both lists: {l}",
+     "answer": {
+      "value": [
+       "12",
+       "24"
+      ],
+      "text": "12 and 24",
+      "list": true,
+      "unordered": true
+     }
+    },
+    {
+     "label": "b",
+     "text": "How many numbers are said in 4s but not in 3s? {b}",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    }
+   ],
+   "explanation": "In 3s: 3, 6, 9, 12, 15, 18, 21, 24. In 4s: 4, 8, 12, 16, 20, 24. Both: 12 and 24. Only in 4s: 4, 8, 16 and 20. That is 4 numbers. Check: the 4s list has 6 numbers and 2 of them are also in the 3s list, so 6 - 2 = 4.",
+   "space": {
+    "rows": [
+     "Counting in 3s:",
+     "Counting in 4s:"
+    ]
+   }
+  },
+  {
+   "id": "L1U08-S09",
+   "tier": "start",
+   "page": 3,
+   "text": "Ravi, Jenny and Wei each pick a different snack. Wei does not pick the bun or the pear. Jenny does not pick the apple. Ravi does not pick the pear.",
+   "figure": {
+    "type": "logic_grid",
+    "rows": [
+     "Ravi",
+     "Jenny",
+     "Wei"
+    ],
+    "cols": [
+     "apple",
+     "bun",
+     "pear"
+    ],
+    "width_mm": 74
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Ravi picks the   {circ:apple|bun|pear}",
+     "answer": {
+      "value": [
+       "bun"
+      ],
+      "text": "bun"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Jenny picks the   {circ:apple|bun|pear}",
+     "answer": {
+      "value": [
+       "pear"
+      ],
+      "text": "pear"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Wei picks the   {circ:apple|bun|pear}",
+     "answer": {
+      "value": [
+       "apple"
+      ],
+      "text": "apple"
+     }
+    }
+   ],
+   "explanation": "Wei does not pick the bun or the pear, so Wei picks the apple. Ravi does not pick the pear or the apple, so Ravi picks the bun. Jenny gets the pear."
+  },
+  {
+   "id": "L1U08-S10",
+   "tier": "start",
+   "page": 3,
+   "text": "Circle the odd one out.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "4 of these numbers are said counting in 4s. Which is not?   {circ:8|12|14|16|20}",
+     "answer": {
+      "value": [
+       "14"
+      ],
+      "text": "14"
+     }
+    },
+    {
+     "label": "b",
+     "text": "3 of these shapes have corners. Which does not?   {circ:triangle|circle|square}",
+     "answer": {
+      "value": [
+       "circle"
+      ],
+      "text": "circle"
+     }
+    }
+   ],
+   "explanation": "(a) Counting in 4s we say 4, 8, 12, 16, 20. We do not say 14. (b) A circle has no corners."
+  },
+  {
+   "id": "L1U08-S11",
+   "tier": "start",
+   "page": 3,
+   "text": "Find each number.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "A number is between 10 and 20. It is odd. We say it counting in 5s. What is the number? {b}",
+     "answer": {
+      "value": [
+       "15"
+      ],
+      "text": "15"
+     }
+    },
+    {
+     "label": "b",
+     "text": "A number is even and between 20 and 30. We say it counting in 3s and in 4s. What is the number? {b}",
+     "answer": {
+      "value": [
+       "24"
+      ],
+      "text": "24"
+     }
+    }
+   ],
+   "explanation": "(a) Counting in 5s we say 15. It is odd. (b) The even numbers are 22, 24, 26 and 28. Only 24 is said in 3s and in 4s."
+  },
+  {
+   "id": "L1U08-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "4 children each play a different instrument. Lily does not play the drum, flute or piano. Jason and Aisha do not play the piano. Jason does not play the bell or the drum.",
+   "figure": {
+    "type": "logic_grid",
+    "rows": [
+     "Lily",
+     "Jason",
+     "Kumar",
+     "Aisha"
+    ],
+    "cols": [
+     "drum",
+     "flute",
+     "piano",
+     "bell"
+    ],
+    "width_mm": 74
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Kumar plays the   {circ:drum|flute|piano|bell}",
+     "answer": {
+      "value": [
+       "piano"
+      ],
+      "text": "piano"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Aisha plays the   {circ:drum|flute|piano|bell}",
+     "answer": {
+      "value": [
+       "drum"
+      ],
+      "text": "drum"
+     }
+    }
+   ],
+   "hint": "Which row can you tick first?",
+   "explanation": "Lily has the bell. Nobody except Kumar can have the piano (Lily, Jason and Aisha cannot), so Kumar has the piano. Jason does not have the bell or the drum, so Jason has the flute. Aisha has the drum.",
+   "figright": true
+  },
+  {
+   "id": "L1U08-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "Imagine 2 loops. Loop A holds the numbers said counting in 2s. Loop B holds the numbers said counting in 5s. Use the numbers 1 to 20.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "Numbers in both loops: {b}",
+     "answer": {
+      "value": [
+       "2"
+      ],
+      "text": "2"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Numbers in no loop: {b}",
+     "answer": {
+      "value": [
+       "8"
+      ],
+      "text": "8"
+     }
+    }
+   ],
+   "hint": "Write the numbers said in 2s. Then the numbers said in 5s.",
+   "explanation": "Said in 2s: 2, 4, 6 ... 20. Said in 5s: 5, 10, 15, 20. In both: 10 and 20. 5s only: 5 and 15. 2s only: 8 numbers, so outside both there are 20 - 2 - 2 - 8 = 8 numbers."
+  },
+  {
+   "id": "L1U08-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "Sort the numbers 5 to 14 into the loops. Write each number where it belongs.",
+   "figure": {
+    "type": "loops",
+    "a": "more than 8",
+    "b": "odd",
+    "width_mm": 84
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many numbers are in both loops? {b}",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Which numbers are outside both loops? {l}",
+     "answer": {
+      "value": [
+       "6",
+       "8"
+      ],
+      "text": "6 and 8",
+      "list": true,
+      "unordered": true
+     }
+    }
+   ],
+   "explanation": "More than 8: 9, 10, 11, 12, 13, 14. Odd: 5, 7, 9, 11, 13. In both: 9, 11 and 13. Outside both: 6 and 8, which are not more than 8 and not odd.",
+   "hint": "Sort the numbers one at a time. Test both rules.",
+   "figside": true
+  },
+  {
+   "id": "L1U08-G01",
+   "tier": "go",
+   "beyond": "Truth and lies",
+   "page": 5,
+   "text": "One of 3 children ate the last biscuit. Exactly 1 child is not telling the truth. Who ate the biscuit?   {circ:Ali|Ben|Mei}",
+   "figure": {
+    "type": "draw",
+    "w": 430,
+    "h": 210,
+    "scale": 0.15,
+    "label": "what 3 children say",
+    "elements": [
+     {
+      "poly": [
+       [
+        10,
+        10
+       ],
+       [
+        420,
+        10
+       ],
+       [
+        420,
+        66
+       ],
+       [
+        10,
+        66
+       ]
+      ],
+      "fill": "sky"
+     },
+     {
+      "poly": [
+       [
+        10,
+        78
+       ],
+       [
+        420,
+        78
+       ],
+       [
+        420,
+        134
+       ],
+       [
+        10,
+        134
+       ]
+      ],
+      "fill": "sky"
+     },
+     {
+      "poly": [
+       [
+        10,
+        146
+       ],
+       [
+        420,
+        146
+       ],
+       [
+        420,
+        202
+       ],
+       [
+        10,
+        202
+       ]
+      ],
+      "fill": "sky"
+     },
+     {
+      "text": [
+       215,
+       46,
+       "Ali: \"Ben ate it.\"",
+       27
+      ]
+     },
+     {
+      "text": [
+       215,
+       114,
+       "Ben: \"I did not eat it.\"",
+       27
+      ]
+     },
+     {
+      "text": [
+       215,
+       182,
+       "Mei: \"Ali ate it.\"",
+       27
+      ]
+     }
+    ]
+   },
+   "answer": {
+    "value": [
+     "Ali"
+    ],
+    "text": "Ali"
+   },
+   "hint": "Try each child as the one who ate it. Who is lying then?",
+   "explanation": "Test each child. If Ali ate it, only Ali is not telling the truth. If Ben ate it, Ben and Mei are both wrong. If Mei ate it, Ali and Mei are both wrong. Only Ali gives exactly 1 wrong child."
+  },
+  {
+   "id": "L1U08-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "Fill in the grid. Each row and each column has the numbers 1, 2, 3 and 4 once.",
+   "figure": {
+    "type": "latin",
+    "rows": [
+     [
+      2,
+      1,
+      null,
+      null
+     ],
+     [
+      4,
+      null,
+      null,
+      null
+     ],
+     [
+      null,
+      null,
+      null,
+      null
+     ],
+     [
+      3,
+      null,
+      4,
+      null
+     ]
+    ],
+    "width_mm": 52
+   },
+   "answer": {
+    "value": [
+     "2 1 3 4",
+     "4 3 1 2",
+     "1 4 2 3",
+     "3 2 4 1"
+    ],
+    "text": "Row 1: 2 1 3 4. Row 2: 4 3 1 2. Row 3: 1 4 2 3. Row 4: 3 2 4 1.",
+    "list": true
+   },
+   "hint": "A row 3, 1, _, 4 needs a 2 in the gap. Find a line like that.",
+   "explanation": "Column 1 has 2, 4 and 3, so its empty box is 1. Row 1 needs 3 and 4: column 3 already has a 4, so row 1 is 2 1 3 4. Row 4 needs 1 and 2: column 2 already has a 1, so row 4 is 3 2 4 1. Then fill each box that has only 1 number possible."
+  },
+  {
+   "id": "L1U08-G03",
+   "tier": "go",
+   "beyond": "Yes or no questions",
+   "page": 5,
+   "text": "Mei thinks of a secret number. Ali asks questions. Mei can only answer yes or no.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The number is from 1 to 4. After \"Is it more than 2?\" {b} are left.",
+     "answer": {
+      "value": [
+       "2"
+      ],
+      "text": "2"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The number is from 1 to 8. Ali always finds it with {b} questions.",
+     "answer": {
+      "value": [
+       "3"
+      ],
+      "text": "3"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The number is from 1 to 16. Ali always finds it with {b} questions.",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    }
+   ],
+   "hint": "A good question splits the numbers into 2 equal groups.",
+   "explanation": "Each good question cuts the choices in half. 8 numbers become 4, then 2, then 1: 3 questions. 16 numbers become 8, 4, 2, 1: 4 questions."
+  },
+  {
+   "id": "L1U08-C01",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Siti runs faster than Ravi. Ravi runs faster than Jamie. Who is the slowest?   {circ:Siti|Ravi|Jamie}",
+   "answer": {
+    "value": [
+     "Jamie"
+    ],
+    "text": "Jamie"
+   },
+   "explanation": "The order from fastest is Siti, Ravi, Jamie. Jamie is the slowest."
+  },
+  {
+   "id": "L1U08-C02",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Use the numbers 1 to 10. How many are even and more than 5? {b}",
+   "answer": {
+    "value": [
+     "3"
+    ],
+    "text": "3"
+   },
+   "explanation": "The even numbers more than 5 are 6, 8 and 10. That is 3 numbers."
+  },
+  {
+   "id": "L1U08-C03",
+   "tier": "quiz",
+   "page": 6,
+   "text": "A number is between 20 and 30. It is odd. We say it counting in 5s. What is the number? {b}",
+   "answer": {
+    "value": [
+     "25"
+    ],
+    "text": "25"
+   },
+   "explanation": "Counting in 5s we say 25. It is between 20 and 30 and it is odd."
+  },
+  {
+   "id": "L1U08-C04",
+   "tier": "quiz",
+   "page": 6,
+   "text": "Ali is taller than Mei. Mei is taller than Ravi. Is Ravi taller than Ali?   {circ:Yes|No}",
+   "answer": {
+    "value": [
+     "No"
+    ],
+    "text": "No"
+   },
+   "explanation": "The order from tallest is Ali, Mei, Ravi. Ravi is the shortest, so he is not taller than Ali."
+  }
+ ],
+ "snug": [
+  "think"
+ ]
+}

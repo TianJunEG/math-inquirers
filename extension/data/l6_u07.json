@@ -1,0 +1,935 @@
+{
+ "schema_version": 1,
+ "level": 6,
+ "unit": 7,
+ "id": "L6U07",
+ "title": "Turtle geometry",
+ "topic": "Angles in polygons",
+ "holiday_lesson": 7,
+ "goal": "I can find the turn angle and the inside angle of a regular polygon. I can predict what a turtle program draws.",
+ "learn": {
+  "intro": "A turtle moves forward and turns. Going once round a closed shape, it turns 360° in all and faces the way it began. In a regular polygon with n sides every turn is 360° ÷ n, and the inside angle is 180° − the turn.",
+  "example": {
+   "problem": "A turtle draws a regular polygon with 10 sides. Find the turn at each corner and the inside angle.",
+   "figure": {
+    "type": "l6_turtle",
+    "cmds": [
+     [
+      "repeat",
+      10,
+      [
+       [
+        "move",
+        60
+       ],
+       [
+        "turn",
+        36
+       ]
+      ]
+     ]
+    ],
+    "step_mm": 0.22,
+    "labels": {
+     "1": "36°"
+    }
+   },
+   "steps": [
+    "Going once round, the turtle turns 360° in all.",
+    "There are 10 equal turns: 360° ÷ 10 = 36° at each corner.",
+    "The turn and the inside angle make a straight line: 180° − 36° = 144°.",
+    "In code: repeat 10 [move 60, turn ↻ 36]."
+   ],
+   "answer": "The turn is 36° and the inside angle is 144°.",
+   "side": true
+  },
+  "howto": {
+   "title": "How to find the angles of a regular polygon",
+   "steps": [
+    "Going once round, the turtle turns 360° in all.",
+    "Turn = 360° ÷ number of sides.",
+    "Inside angle = 180° − turn.",
+    "All the inside angles of a polygon add to sides × 180 − 360.",
+    "Test it in code: repeat (sides) [move, turn]."
+   ]
+  },
+  "try": {
+   "id": "L6U07-L01",
+   "tier": "start",
+   "text": "A regular polygon has 9 sides. The turn at each corner is {b}° and the inside angle is {b}°.",
+   "answer": {
+    "value": [
+     "40",
+     "140"
+    ],
+    "text": "40°, 140°"
+   },
+   "explanation": "360° ÷ 9 = 40° for the turn. The inside angle is 180° − 40° = 140°."
+  }
+ },
+ "items": [
+  {
+   "id": "L6U07-S01",
+   "tier": "start",
+   "text": "Complete the table for regular polygons.",
+   "page": 1,
+   "answer": {
+    "value": [
+     "72",
+     "108",
+     "30",
+     "150",
+     "20",
+     "162",
+     "45",
+     "8"
+    ],
+    "text": "Row 1: 72°, 108°.  Row 2: 30°, 150°.  Row 3: 20 sides, 162°.  Row 4: 45 sides, 8°.",
+    "list": true
+   },
+   "figure": {
+    "type": "l6_grid",
+    "rows": [
+     [
+      "5",
+      "",
+      ""
+     ],
+     [
+      "12",
+      "",
+      ""
+     ],
+     [
+      "",
+      "18°",
+      ""
+     ],
+     [
+      "",
+      "",
+      "172°"
+     ]
+    ],
+    "cw": [
+     34,
+     34,
+     40
+    ],
+    "rowhead": false,
+    "ch": 9,
+    "head": [
+     "Sides",
+     "Turn",
+     "Inside angle"
+    ]
+   },
+   "explanation": "Turn = 360 ÷ sides and inside angle = 180 − turn. 5 sides: turn 72, inside 108. 12 sides: turn 30, inside 150. Turn 18: 360 ÷ 18 = 20 sides, inside 162. Inside 172: turn 8, and 360 ÷ 8 = 45 sides."
+  },
+  {
+   "id": "L6U07-S02",
+   "tier": "start",
+   "text": "Program A: repeat 10 [move 40, turn ↻ 36].  Program B: repeat 12 [move 40, turn ↻ 30].  Program C: repeat 6 [move 40, turn ↻ 30]. One of them draws a regular polygon with inside angles of 150°.",
+   "page": 1,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The program is   {circ:A|B|C}",
+     "answer": {
+      "value": [
+       "B"
+      ],
+      "text": "B"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Program C turns {b}° in all, so its path   {circ:closes|does not close}",
+     "answer": {
+      "value": [
+       "180",
+       "does not close"
+      ],
+      "text": "180°, does not close"
+     }
+    }
+   ],
+   "explanation": "Inside 150° means a turn of 180° − 150° = 30°, and 360° ÷ 30° = 12 sides: Program B. Program C also turns 30°, but only 6 × 30 = 180° in all. That is half a turn, so the path does not close."
+  },
+  {
+   "id": "L6U07-S03",
+   "tier": "start",
+   "text": "Trace the code. Write the total turned after each repeat, and the turn from the start direction (the total with every full 360° taken away).",
+   "page": 1,
+   "parts": [
+    {
+     "label": "a",
+     "text": "After repeat 5 the turn from the start is {b}°.",
+     "answer": {
+      "value": [
+       "140"
+      ],
+      "text": "140"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Is the turtle facing the way it started?   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "No"
+      ],
+      "text": "No"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_code",
+    "prog": [
+     [
+      "ctl",
+      "repeat (5)",
+      [
+       [
+        "move",
+        "move (40) steps"
+       ],
+       [
+        "turn",
+        "turn ↻ (100) degrees"
+       ]
+      ]
+     ]
+    ],
+    "trace": {
+     "cols": [
+      "Repeat",
+      "Total",
+      "From start"
+     ],
+     "rows": 5,
+     "first": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "cw": 21,
+     "ch": 8.5
+    }
+   },
+   "explanation": "The total turned grows by 100 each repeat: 100, 200, 300, 400, 500. Take away 360 when the total passes it: 500 − 360 = 140. The turtle faces 140° from its start direction, not 0°, so it is not facing the way it began.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U07-S04",
+   "tier": "start",
+   "text": "A turtle walks round a closed shape with 5 sides. Its first 4 turns are 60°, 85°, 110° and 50°. It faces the way it started when it is back.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The last turn is {b}°.",
+     "answer": {
+      "value": [
+       "55"
+      ],
+      "text": "55"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The inside angle there is {b}°.",
+     "answer": {
+      "value": [
+       "125"
+      ],
+      "text": "125"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The 5 inside angles add up to {b}°.",
+     "answer": {
+      "value": [
+       "540"
+      ],
+      "text": "540"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "All the turns add to 360°. The first 4 add to 305, so the last turn is 55° and the inside angle there is 125°. The 5 inside angles add to 5 × 180 − 360 = 540°.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U07-S05",
+   "tier": "start",
+   "text": "A regular polygon has 18 sides. Find its angles.",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The turn at each corner is {b}°.",
+     "answer": {
+      "value": [
+       "20"
+      ],
+      "text": "20"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Each inside angle is {b}°.",
+     "answer": {
+      "value": [
+       "160"
+      ],
+      "text": "160"
+     }
+    },
+    {
+     "label": "c",
+     "text": "All the inside angles add up to {b}°.",
+     "answer": {
+      "value": [
+       "2880"
+      ],
+      "text": "2880"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "Turn: 360 ÷ 18 = 20°. Inside angle: 180 − 20 = 160°. All 18 inside angles: 18 × 160 = 2880°. Check with (18 − 2) × 180 = 16 × 180 = 2880."
+  },
+  {
+   "id": "L6U07-S07",
+   "tier": "start",
+   "text": "Circle each turn angle that draws a regular polygon. The number of sides must be a whole number.",
+   "page": 2,
+   "answer": {
+    "value": [
+     "24",
+     "30",
+     "45",
+     "72",
+     "120"
+    ],
+    "text": "24°, 30°, 45°, 72°, 120°",
+    "list": true,
+    "unordered": true
+   },
+   "figure": {
+    "type": "l6_grid",
+    "rows": [
+     [
+      "24°",
+      "30°",
+      "45°",
+      "50°",
+      "64°",
+      "72°",
+      "100°",
+      "120°",
+      "150°"
+     ]
+    ],
+    "cw": [
+     15,
+     15,
+     15,
+     15,
+     15,
+     15,
+     15,
+     15,
+     15
+    ],
+    "rowhead": false,
+    "ch": 10
+   },
+   "explanation": "The turn must divide 360 exactly. 360 ÷ 24 = 15 sides, ÷ 30 = 12, ÷ 45 = 8, ÷ 72 = 5 and ÷ 120 = 3 sides. 360 ÷ 50, 64, 100 and 150 are not whole numbers."
+  },
+  {
+   "id": "L6U07-S08",
+   "tier": "start",
+   "text": "A turtle draws a star with 10 points and winds round the centre 3 times. It runs repeat 10 [move 80, turn ↻ ?].",
+   "page": 2,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The total turning is {b}°.",
+     "answer": {
+      "value": [
+       "1080"
+      ],
+      "text": "1080"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Each turn is {b}°.",
+     "answer": {
+      "value": [
+       "108"
+      ],
+      "text": "108"
+     }
+    },
+    {
+     "label": "c",
+     "text": "The angle at each point is {b}°.",
+     "answer": {
+      "value": [
+       "72"
+      ],
+      "text": "72"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "Going round 3 times, the turtle turns 3 × 360 = 1080° in all. 1080 ÷ 10 = 108° at each point. The angle at each point is 180 − 108 = 72°."
+  },
+  {
+   "id": "L6U07-S06",
+   "tier": "start",
+   "text": "A turtle draws a regular shape with 30 sides. Fill in the blanks.",
+   "page": 3,
+   "parts": [
+    {
+     "label": "a",
+     "text": "repeat {b}",
+     "answer": {
+      "value": [
+       "30"
+      ],
+      "text": "30"
+     }
+    },
+    {
+     "label": "b",
+     "text": "turn {b} degrees",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Each inside angle is {b}°.",
+     "answer": {
+      "value": [
+       "168"
+      ],
+      "text": "168"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_code",
+    "prog": [
+     [
+      "ctl",
+      "repeat ( )",
+      [
+       [
+        "move",
+        "move (30) steps"
+       ],
+       [
+        "turn",
+        "turn ↻ ( ) degrees"
+       ]
+      ]
+     ]
+    ]
+   },
+   "explanation": "30 sides need 30 repeats. The turn is 360 ÷ 30 = 12°. The inside angle is 180 − 12 = 168°.",
+   "figside": true
+  },
+  {
+   "id": "L6U07-S09",
+   "tier": "start",
+   "text": "This code draws a rectangle that is not a square. Predict it.",
+   "page": 3,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The turtle turns {b}° in all.",
+     "answer": {
+      "value": [
+       "360"
+      ],
+      "text": "360"
+     }
+    },
+    {
+     "label": "b",
+     "text": "It walks {b} steps in all.",
+     "answer": {
+      "value": [
+       "300"
+      ],
+      "text": "300"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Change 50 to 80. It walks {b} steps.",
+     "answer": {
+      "value": [
+       "360"
+      ],
+      "text": "360"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_code",
+    "prog": [
+     [
+      "ctl",
+      "repeat (2)",
+      [
+       [
+        "move",
+        "move (100) steps"
+       ],
+       [
+        "turn",
+        "turn ↻ (90) degrees"
+       ],
+       [
+        "move",
+        "move (50) steps"
+       ],
+       [
+        "turn",
+        "turn ↻ (90) degrees"
+       ]
+      ]
+     ]
+    ]
+   },
+   "explanation": "The rectangle has 4 right-angle turns: 4 × 90 = 360°. The turtle walks 100 + 50 + 100 + 50 = 300 steps. With 80 instead of 50: 100 + 80 + 100 + 80 = 360 steps.",
+   "figside": true
+  },
+  {
+   "id": "L6U07-S10",
+   "tier": "start",
+   "text": "Regular shapes fit around a point when their inside angles add to 360°. Check each group.",
+   "page": 3,
+   "parts": [
+    {
+     "label": "a",
+     "text": "6 triangles: {b}°",
+     "answer": {
+      "value": [
+       "360"
+      ],
+      "text": "360"
+     }
+    },
+    {
+     "label": "b",
+     "text": "3 squares: {b}°. Is there a gap?   {circ:Yes|No}",
+     "answer": {
+      "value": [
+       "270",
+       "Yes"
+      ],
+      "text": "270°, Yes"
+     }
+    },
+    {
+     "label": "c",
+     "text": "2 hexagons and 2 triangles: {b}°",
+     "answer": {
+      "value": [
+       "360"
+      ],
+      "text": "360"
+     }
+    }
+   ],
+   "explanation": "Triangle angle 60: 6 × 60 = 360. Square angle 90: 3 × 90 = 270, which is less than 360, so there is a gap of 90. Hexagon angle 120: 2 × 120 + 2 × 60 = 360."
+  },
+  {
+   "id": "L6U07-S11",
+   "tier": "start",
+   "text": "Each inside angle is a few times the turn angle. Find the number of sides.",
+   "page": 3,
+   "parts": [
+    {
+     "label": "a",
+     "text": "2 times as big: {b} sides.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    },
+    {
+     "label": "b",
+     "text": "5 times as big: {b} sides.",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    },
+    {
+     "label": "c",
+     "text": "8 times as big: {b} sides.",
+     "answer": {
+      "value": [
+       "18"
+      ],
+      "text": "18"
+     }
+    }
+   ],
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   },
+   "explanation": "Turn + inside = 180. If the inside angle is k times the turn, then (k + 1) × turn = 180. k = 2: turn 60, so 6 sides. k = 5: turn 30, so 12 sides. k = 8: turn 20, so 18 sides.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U07-T01",
+   "tier": "think",
+   "text": "A turtle repeats [move 40, turn ↻ 100] over and over. It stops when it first faces the start direction.",
+   "page": 4,
+   "parts": [
+    {
+     "label": "a",
+     "text": "It first faces the start direction after {b} repeats.",
+     "answer": {
+      "value": [
+       "18"
+      ],
+      "text": "18"
+     }
+    },
+    {
+     "label": "b",
+     "text": "By then it has turned {b}° in all.",
+     "answer": {
+      "value": [
+       "1800"
+      ],
+      "text": "1800"
+     }
+    },
+    {
+     "label": "c",
+     "text": "That is {b} full turns.",
+     "answer": {
+      "value": [
+       "5"
+      ],
+      "text": "5"
+     }
+    }
+   ],
+   "hint": "Try the total turned after 1, 2, 3 ... repeats.",
+   "space": {
+    "rows": [
+     "Working:",
+     ""
+    ]
+   },
+   "explanation": "After k repeats the total turned is 100k. It faces the start direction when 100k is a multiple of 360: 100k = 1800 first, at k = 18 (1800 ÷ 100). 1800 = 5 × 360, so it has turned round 5 times and draws an 18-point star.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U07-T02",
+   "tier": "think",
+   "text": "All the inside angles of a regular polygon total 2340°.",
+   "page": 4,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The polygon has {b} sides.",
+     "answer": {
+      "value": [
+       "15"
+      ],
+      "text": "15"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Each inside angle is {b}°.",
+     "answer": {
+      "value": [
+       "156"
+      ],
+      "text": "156"
+     }
+    },
+    {
+     "label": "c",
+     "text": "Each turn is {b}°.",
+     "answer": {
+      "value": [
+       "24"
+      ],
+      "text": "24"
+     }
+    }
+   ],
+   "hint": "What do the inside angles of an n-sided shape add up to?",
+   "space": {
+    "rows": [
+     "Working:",
+     ""
+    ]
+   },
+   "explanation": "The sum of the inside angles is (n − 2) × 180, so n − 2 = 2340 ÷ 180 = 13 and n = 15. Each inside angle is 2340 ÷ 15 = 156°. The turn is 180 − 156 = 24°. Check: 360 ÷ 24 = 15.",
+   "partsrow": true
+  },
+  {
+   "id": "L6U07-T03",
+   "tier": "think",
+   "text": "A triangle, 2 squares and one more regular polygon fit around a point with no gap. All the sides are the same length.",
+   "page": 4,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The inside angle of the fourth shape is {b}°.",
+     "answer": {
+      "value": [
+       "120"
+      ],
+      "text": "120"
+     }
+    },
+    {
+     "label": "b",
+     "text": "It has {b} sides.",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    }
+   ],
+   "hint": "The angles must add to 360. What is left for the fourth?",
+   "space": {
+    "rows": [
+     "Working:",
+     "",
+     ""
+    ]
+   },
+   "explanation": "The angles are 60 + 90 + 90 = 240. 360 − 240 = 120° is left. A regular polygon with inside angle 120° has turn 60°, so 360 ÷ 60 = 6 sides: a hexagon."
+  },
+  {
+   "id": "L6U07-G01",
+   "tier": "go",
+   "text": "The turtle starts at x = 0, y = 0, facing right. A turn ↻ is clockwise. Up means y increases.",
+   "page": 5,
+   "parts": [
+    {
+     "label": "a",
+     "text": "After 4 repeats: x = {b}, y = {b}",
+     "answer": {
+      "value": [
+       "-20",
+       "20"
+      ],
+      "text": "−20, 20"
+     }
+    },
+    {
+     "label": "b",
+     "text": "After 12 repeats: x = {b}, y = {b}",
+     "answer": {
+      "value": [
+       "-60",
+       "60"
+      ],
+      "text": "−60, 60"
+     }
+    }
+   ],
+   "figure": {
+    "type": "l6_code",
+    "prog": [
+     [
+      "var",
+      "set n to (10)"
+     ],
+     [
+      "ctl",
+      "repeat (4)",
+      [
+       [
+        "move",
+        "move (n) steps"
+       ],
+       [
+        "turn",
+        "turn ↻ (90) degrees"
+       ],
+       [
+        "var",
+        "change n by (10)"
+       ]
+      ]
+     ]
+    ]
+   },
+   "hint": "Make a table. Write x and y after each repeat.",
+   "explanation": "Right 10, down 20, left 30, up 40 ends at x = 10 − 30 = −20, y = −20 + 40 = 20. The next 4 moves (50, 60, 70, 80) end at x = −40, y = 40. Each 4 repeats adds −20 to x and 20 to y, so 12 repeats end at (−60, 60).",
+   "beyond": "Where does it end?"
+  },
+  {
+   "id": "L6U07-G02",
+   "tier": "go",
+   "text": "The angle at each point of a star is 180° − the turn. Add up all the point angles.",
+   "page": 5,
+   "parts": [
+    {
+     "label": "a",
+     "text": "5-point star (turn 144°): the 5 point angles add to {b}°.",
+     "answer": {
+      "value": [
+       "180"
+      ],
+      "text": "180"
+     }
+    },
+    {
+     "label": "b",
+     "text": "8-point star, 3 times round: the 8 point angles add to {b}°.",
+     "answer": {
+      "value": [
+       "360"
+      ],
+      "text": "360"
+     }
+    },
+    {
+     "label": "c",
+     "text": "10-point star, 3 times round: each point angle is {b}° and they add to {b}°.",
+     "answer": {
+      "value": [
+       "72",
+       "720"
+      ],
+      "text": "72°, 720°"
+     }
+    }
+   ],
+   "hint": "Find each turn first. Then subtract it from 180 and multiply.",
+   "explanation": "5-point star: turn 144, point angle 36, and 5 × 36 = 180. 8-point star going round 3 times: turn 135, point angle 45, and 8 × 45 = 360. 10-point star going round 3 times: turn 108, point angle 72, and 10 × 72 = 720.",
+   "beyond": "Points of a star"
+  },
+  {
+   "id": "L6U07-G03",
+   "tier": "go",
+   "text": "The turtle runs repeat 360 [move 1, turn ↻ 1].",
+   "page": 5,
+   "parts": [
+    {
+     "label": "a",
+     "text": "The path is {b} steps long.",
+     "answer": {
+      "value": [
+       "360"
+      ],
+      "text": "360"
+     }
+    },
+    {
+     "label": "b",
+     "text": "The distance across the shape is about {b} steps (use 3.14, nearest whole number).",
+     "answer": {
+      "value": [
+       "115"
+      ],
+      "text": "115"
+     }
+    }
+   ],
+   "hint": "The path round the shape is about 3.14 times the distance across.",
+   "explanation": "360 turns of 1° make one full turn, so the path closes. Inside angle 180 − 1 = 179°. The path is 360 steps long. Round ≈ 3.14 × across, so across ≈ 360 ÷ 3.14 = 114.6, about 115.",
+   "beyond": "A polygon that looks like a circle"
+  },
+  {
+   "id": "L6U07-C01",
+   "tier": "quiz",
+   "text": "A regular polygon has 40 sides. Each turn is {b}° and each inside angle is {b}°.",
+   "page": 6,
+   "answer": {
+    "value": [
+     "9",
+     "171"
+    ],
+    "text": "9°, 171°"
+   },
+   "explanation": "360 ÷ 40 = 9°. The inside angle is 180 − 9 = 171°."
+  },
+  {
+   "id": "L6U07-C02",
+   "tier": "quiz",
+   "text": "A turtle turns 10° at each corner of a regular polygon. The polygon has {b} sides.",
+   "page": 6,
+   "answer": {
+    "value": [
+     "36"
+    ],
+    "text": "36"
+   },
+   "explanation": "360 ÷ 10 = 36 sides."
+  },
+  {
+   "id": "L6U07-C03",
+   "tier": "quiz",
+   "text": "A regular polygon has inside angles of 156° each. It has {b} sides.",
+   "page": 6,
+   "answer": {
+    "value": [
+     "15"
+    ],
+    "text": "15"
+   },
+   "explanation": "The turn is 180 − 156 = 24°, and 360 ÷ 24 = 15 sides."
+  },
+  {
+   "id": "L6U07-C04",
+   "tier": "quiz",
+   "text": "A turtle goes round a closed 4-sided shape. Its first 3 turns are 95°, 80° and 105°. The last turn is {b}°.",
+   "page": 6,
+   "answer": {
+    "value": [
+     "80"
+    ],
+    "text": "80°"
+   },
+   "explanation": "The turns add to 360. 95 + 80 + 105 = 280, so the last turn is 360 − 280 = 80°."
+  }
+ ]
+}

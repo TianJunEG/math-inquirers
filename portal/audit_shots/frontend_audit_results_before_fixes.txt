@@ -1,0 +1,33 @@
+PASS | stored XSS: hostile name, nickname, address, phone, note do not execute on parent pages
+PASS | stored XSS: the same hostile text does not execute in the OWNER admin tabs (orders address, trial note, children)
+PASS | reflected XSS: for, paid, ended, from, child, session_id query parameters are never written as HTML
+PASS | no email, name, address or phone appears in any URL the pages visited or requested
+PASS | console output carries no personal data (no console.log in the shipped scripts)
+PASS | no third-party request and no CSP violation on any portal page (CSP script-src self only)
+PASS | no inline <script> and no on* handler attributes in any portal HTML file
+PASS | no innerHTML / outerHTML / insertAdjacentHTML / document.write / eval / new Function in the portal scripts
+PASS | no console.* calls shipped in the portal scripts
+FAIL[Low] | payment redirect only goes to checkout.stripe.com (a tampered /api reply must not send the parent elsewhere) -- browser navigated to https://evil.example/phish: location.href = j.url is not validated (books.js, app.js)
+PASS | child token lives in sessionStorage only (cleared with the tab), not in localStorage or the URL
+PASS | child session record holds name, level, token, expiry (no PIN, no family code, no parent data)
+NOTE | child token: no inactivity timeout in practice.js (only the 4-hour server expiry and the Sign out button); on a shared tablet the next person stays signed in as the child until the tab closes -- Low
+PASS | contrast (light mode): every text run reaches WCAG AA (4.5:1, 3:1 for large text) on all parent and child pages
+PASS | contrast (dark mode): every text run reaches WCAG AA (4.5:1, 3:1 for large text) on all parent and child pages
+PASS | keyboard focus shows a visible ring -- {'tag': 'A', 'text': '?Math Inquirers', 'outline': 'solid', 'w': '3px'}
+PASS | first Tab reaches the "Skip to content" link
+PASS | one <main> and one <h1> on the parent home -- {'main': 1, 'header': 1, 'nav': 1, 'h1': 1}
+FAIL[Medium] | after an action the page keeps or moves keyboard focus somewhere sensible and announces the result -- focus fell back to <BODY#> after the page re-rendered, so keyboard and screen-reader users lose their place after every action (add child, save, cancel, order)
+PASS | error messages use role=alert, success role=status
+FAIL[Low] | touch targets are at least 24x24 CSS px (WCAG 2.2 AA) on 375px -- [{"tag": "A", "text": "Go there", "w": 66, "h": 22, "page": "/portal/"}, {"tag": "A", "text": "Terms and refund policy", "w": 146, "h": 19, "page": "/portal/"}, {"tag": "A", "text": "Go to Agreements", "w": 111, "h": 19, "page": "/portal/"}, {"tag": "A", "text": "Go to Agreements", "w": 111, "h": 19, "page": "/portal/"}, {"tag": "A", "text": "home page", "w": 80, "h": 22, "page": "/portal/children/"}, {"tag": "A", "text": "home page", "w": 80, "h": 22, "page": "/portal/children/"}]
+PASS | small buttons: 44px on touch devices via pointer:coarse -- buttons shorter than 44px on a non-touch emulation: 14 (CSS raises .btn.sm and tabs to 44px under pointer:coarse)
+FAIL[Medium] | no horizontal scroll at 375px with very long names -- [('/portal/children/', 190)]
+FAIL[Medium] | no horizontal scroll at 320px with very long names -- [('/portal/children/', 245)]
+PASS | child pages: no score, rank, streak, points, "wrong", "fail", "best", pressure or deadline wording
+PASS | parent pages (children, books, trial): no score/rank/streak/pressure wording
+FAIL[Low] | Singapore English: no US spellings or terms on parent/child pages (checked list) -- ['program']
+PASS | child pages speak to the child and say "grown-up" (never "parent" or "guardian")
+PASS | parent pages never call the child "student" or "pupil"
+PASS | every agreement tick-box, for every family type, starts un-ticked (marketing_contact included)
+FAIL[Medium] | saving with a needed agreement left empty does not say "Agreements saved" as if all is well -- Saving with the needed boxes NOT ticked says "Agreements saved." and records {'contact': True, 'terms': False, 'online_practice': False}: the page claims success although the family still cannot use online practice. Say which needed agreement is missing.
+PASS | marketing_contact is not recorded unless the parent ticks it
+PASS | address fields exist only for printed options and are not sent with an online-only order

@@ -1,4 +1,4 @@
-"""Math Inquirers P3, Lesson 10: Challenge Day. Writes split/p3l10/project (deck.json + slides/*.html)."""
+"""Math Inquirers P3, Lesson 10: Puzzle Day. Writes split/p3l10/project (deck.json + slides/*.html)."""
 import json,os,sys,datetime
 H=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,H)
 from slidekit import *
@@ -75,12 +75,12 @@ def bar_graph(data,top,stepv,k,bw=110,slot=170,aria='Bar graph',title='',ylab=''
     return svg(W,Hh,b,aria)
 
 # ---------- 1. title ----------
-put('p3l10-title',title_slide('p3l10-title',10,5,'Challenge Day','Mixed puzzles: bar graphs and logic',
+put('p3l10-title',title_slide('p3l10-title',10,5,'Puzzle Day','Mixed puzzles: bar graphs and logic',
  'Choose how to start a puzzle, solve a logic grid, read a bar graph with a scale, and explain our thinking.',
  'Objective: Choose a way to start a puzzle (draw it, list it, make a table), solve a logic grid with ticks and crosses, read and complete a bar graph with a scale, and explain the thinking. Heuristics taught: (1) draw it, list it or make a table to start; (2) a logic grid: a tick means crosses in the rest of its row and column. '
  'Materials: Puzzle cards for 2 stations (list, measure), digit cards 0 to 9 (or paper cards), squared paper, mini whiteboards, certificates, stamps. '
- 'Online: Two stations, 7 minutes each. Pairs stay in one breakout room, and the tutor shares the next station card when the timer ends. No physical materials beyond paper. Logic grids and graphs are shared on screen and annotated together. '
- 'Time plan: warm-up 0 to 10, explore 10 to 25, teaching 25 to 35 (how to start a puzzle: draw it, make a table, read the scale; click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 with short teaching before each page and a check-together slide after it, talk time 70 to 80, exit ticket and certificates 80 to 90. If the class is behind, children finish the last question of each page at home; the check slides cover it.'))
+ 'Online: Two stations, about 4 minutes each, with a timer on the screen for the switch. The timer is a guide, not a race: there is no rush, and a pair may pass on a station. Pairs are in pre-assigned breakout rooms (auto-move in, auto-close with a timer), and the tutor visits every room at least once. The tutor shares the next station card when the 4 minutes are up. No physical materials beyond paper. Logic grids and graphs are shared on screen and annotated together. '
+ 'Time plan: warm-up 0 to 10, explore 10 to 25, teaching 25 to 35 (how to start a puzzle: draw it, make a table, read the scale; click to reveal each step and answer), brain break 35 to 40, worksheet 40 to 70 with one recap slide before page 2 and a check-together slide after each page, talk time 70 to 80, exit ticket and certificates 80 to 90. If the class is behind, children finish the last question of each page at home; the check slides cover it.'))
 
 # ---------- 2. warm-up: relay chain ----------
 chain=[('Start','6 × 9','54'),('Then','add 46','100'),('Then','multiply by 7','700'),('Then','take away 250','450'),('Then','divide by 5','90'),('Last','change to h and min','1 h 30 min')]
@@ -91,11 +91,11 @@ for i,(k_,t,a) in enumerate(chain):
     body+=pin(L,Tp,CWd,p(k_,28,800,TEAL)+p(t,38,700),None,WHITE,24,'20px 26px',f'box-sizing:border-box;height:250px;border:4px solid {NAVY};box-shadow:8px 8px 0 {NAVY}')
     body+=pin(L+26,Tp+160,280,f'<p style="font-family:{HF};font-size:44px;font-weight:600;text-align:center">{E(a)}</p>','pop',YEL,16,'4px 10px',f'box-sizing:border-box;border:3px solid {NAVY}')
 put('p3l10-warm1',sec('p3l10-warm1','0–5 MIN',body,
- 'Minutes 5 to 8. Relay chain, made safe: the TUTOR reads each card; volunteers say the answer (a pass is always fine, and the tutor or the group gives it). The chain never depends on one child: if an answer is wrong the tutor says "Let us check together" and writes the correct number on screen, and the chain carries on from the correct number. No child is named as the one who broke the chain. Click to show each answer after it is said. '
+ 'Minutes 5 to 8. Play ONE chain through once (two short rounds at most). Relay chain, made safe: the TUTOR reads each card; volunteers say the answer (a pass is always fine, and the tutor or the group gives it). The chain never depends on one child: if an answer is wrong the tutor says "Let us check together" and writes the correct number on screen, and the chain carries on from the correct number. No child is named as the one who broke the chain. Click to show each answer after it is said. '
  'Chain: 6 × 9 = 54 (tables), 54 + 46 = 100 (adding to the next hundred), 100 × 7 = 700, 700 − 250 = 450, 450 ÷ 5 = 90 (think 45 tens ÷ 5 = 9 tens), 90 minutes = 1 h 30 min (time). Second round if time: start with 8 × 7 and change the steps.'))
-qs=[('1.','Value of the digit 7 in 4732?','700'),('2.','3/8 + 2/8 = ?','5/8'),('3.','47 ÷ 5 = ?','9 r 2'),('4.','Perimeter of a 6 cm by 4 cm rectangle?','20 cm'),('5.','2 kg 50 g = __ g','2050 g')]
+qs=[('1.','Value of the digit 7 in 4732?','700'),('2.','3/8 + 2/8 = ?','5/8'),('3.','47 ÷ 5 = ?','9 r 2')]
 body=h2('Quick questions')+''.join(qrow(128,250+i*125,1250,a,b) for i,(a,b,c) in enumerate(qs))+''.join(answer(1420,250+i*125,372,c) for i,(a,b,c) in enumerate(qs))
-put('p3l10-warm2',sec('p3l10-warm2','5–10 MIN',body,'Minutes 5 to 10. One question from each part of our program. Read each aloud, give thinking time, then click. Ask "Which lesson does this remind you of?" Answers: 1) 700 (hundreds place). 2) 5/8 (add the eighths; the bottom number stays). 3) 9 remainder 2 (9 × 5 = 45, 2 left). 4) 20 cm (6 + 4 + 6 + 4). 5) 2050 g (not 250 g).'))
+put('p3l10-warm2',sec('p3l10-warm2','5–10 MIN',body,'Minutes 5 to 10. One question from each part of our program. Read each aloud, give thinking time, then click. Ask "Which lesson does this remind you of?" Answers: 1) 700 (hundreds place). 2) 5/8 (add the eighths; the bottom number stays). 3) 9 remainder 2 (9 × 5 = 45, 2 left). Three quick questions only; 4) perimeter of a 6 cm by 4 cm rectangle (20 cm) and 5) 2 kg 50 g = 2050 g (not 250 g) are on the take-home box of the Go further page in the workbook.'))
 
 # ---------- explore ----------
 g=''
@@ -106,11 +106,11 @@ for i,t in enumerate(tiles):
 g+=''.join(f'<rect x="{255+j*100}" y="50" width="76" height="110" rx="10" fill="{YEL}" stroke="{NAVY}" stroke-width="4"/>'+T(293+j*100,128,d,56) for j,d in enumerate('369'))
 g+=f'<rect x="870" y="90" width="670" height="60" fill="#FFE9A8" stroke="{NAVY}" stroke-width="4"/>'+T(1205,128,'120 cm ribbon: 3 pieces, each 10 cm longer',30)+f'<path d="M870 80 Q870 66 884 66 L1190 66 Q1205 66 1205 50 Q1205 66 1220 66 L1526 66 Q1540 66 1540 80" fill="none" stroke="{NAVY}" stroke-width="4"/>'
 pic=svg(1630,250,g,'Two puzzle stations: digit cards 3, 6 and 9, and a 120 cm ribbon to cut into 3 pieces')
-put('p3l10-explore1',explore1('p3l10-explore1','10–15 MIN',['Two stations, 7 minutes each: List, then Measure.','Work in pairs. Read the puzzle card aloud.','Before you solve it, decide: draw it, list it or make a table?','Stuck on the ribbon? Draw 3 pieces: a short one, then 10 cm longer, then 10 cm longer again.'],pic,
- 'Minutes 10 to 25. Two stations only, so that the rotation fits online. Share the List card first (7 minutes), then the Measure card (7 minutes, the timer is on the screen); the tutor shares each card when the timer ends, and the last minutes to 25 are for explore talk. If the class is slow on the first card, shorten each station to 6 minutes. Ribbon scaffold (say it if a pair is stuck, do not tell the answer): draw the ribbon as 3 boxes, the short piece, then a piece with a 10 cm extra, then a piece with a 20 cm extra; take the extras (10 + 20) away from 120 cm. Pairs stay in the same breakout room. List: make every 3-digit number from the cards 3, 6, 9 (there are 6). '
+put('p3l10-explore1',explore1('p3l10-explore1','10–15 MIN',['Two stations, about 4 minutes each: List, then Measure. The timer is a guide, not a race.','Work in pairs. Read the puzzle card aloud. You may pass on a station.','Before you solve it, decide: draw it, list it or make a table?','Stuck on the ribbon? Draw 3 pieces: a short one, then 10 cm longer, then 10 cm longer again.'],pic,
+ 'Minutes 10 to 25. Two stations only, so that the rotation fits online: each station is 4 minutes (the List station has only 6 numbers and the ribbon answers are 30, 40 and 50 cm), and 9 minutes of pair work includes the switch. Share the List card first (4 minutes), then the Measure card (4 minutes), and switch with a timer on the slide. The timer is a guide, not a race: say so out loud, do not count down aloud, and do not use words like hurry or quickly. A pair may pass on a station, or write how far they got; praise the thinking, not the speed. The debrief on the next slide is question 1 only, plus the two answers. Visit every breakout room at least once during the two stations (about 1 minute per room). Ribbon scaffold (say it if a pair is stuck, do not tell the answer): draw the ribbon as 3 boxes, the short piece, then a piece with a 10 cm extra, then a piece with a 20 cm extra; take the extras (10 + 20) away from 120 cm. Pairs stay in their pre-assigned breakout room. List: make every 3-digit number from the cards 3, 6, 9 (there are 6). '
  'Measure: a 120 cm ribbon is cut into 3 pieces, each piece 10 cm longer than the one before. Draw it and find each piece (30 cm, 40 cm, 50 cm). The graph and logic puzzles come next on worksheet page 1. Online: one station card on screen at a time, then report back.'))
-put('p3l10-explore2',talk_qs('p3l10-explore2','15–25 MIN','Explore: talk about it',['How did you start each puzzle?','List station: how many numbers? How do you know you have them all?','Measure station: how long is each piece of ribbon?'],
- 'Minutes 15 to 25. Gather the pairs. Answers: 1) Open: listen for "I drew it", "I listed them in order", "I made a table". 2) 6 numbers: 369, 396, 639, 693, 936, 963. Each hundreds digit has 2 numbers, so 3 × 2 = 6. 3) 30 cm, 40 cm and 50 cm: take away the extras (10 cm and 20 cm) from 120 cm: 90 cm, so 30 cm each; then give the extras back. Check: 30 + 40 + 50 = 120.'))
+put('p3l10-explore2',talk_qs('p3l10-explore2','15–25 MIN','Explore: talk about it',['How did you start each puzzle? (Discuss.)','List station answer: 6 numbers, 2 for each hundreds digit, listed in order.','Measure station answer: the pieces are 30 cm, 40 cm and 50 cm.'],
+ 'Minutes 15 to 25. Gather the pairs. Ask question 1 only; the two answers are on the slide (show them and let one or two pairs say how they checked). Answers: 1) Open: listen for "I drew it", "I listed them in order", "I made a table". 2) 6 numbers: 369, 396, 639, 693, 936, 963. Each hundreds digit has 2 numbers, so 3 × 2 = 6. 3) 30 cm, 40 cm and 50 cm: take away the extras (10 cm and 20 cm) from 120 cm: 90 cm, so 30 cm each; then give the extras back. Check: 30 + 40 + 50 = 120.'))
 
 # ---------- teach 1: how to start ----------
 ic_draw=svg(440,140,''.join(person(60+i*80,20,[YEL,WHITE,SKY,WHITE,WHITE][i]) for i in range(5)),'Icon: people in a queue')
@@ -124,21 +124,12 @@ body+=pin(128,790,1664,p('A puzzle is hard to hold in your head. On paper you ca
 put('p3l10-teach1',sec('p3l10-teach1','25–26 MIN',body,'Teach: the idea and why. "Today mixes everything. Clever inquirers do not know every answer straight away; they know how to START." Click each card and give an example from our P3 lessons: Draw it (bar models in Lesson 4, time lines in Lesson 9). List it (digit puzzles in Lesson 1, budgets in Lesson 9). Make a table (times-table patterns in Lesson 3). Click the last box and read it together. The next slides show each start in action.'))
 
 # ---------- we1: draw it (queue) ----------
-sp={3:(YEL,'Siti')}
-base=queue(9,sp,show={3},aria='A queue with Siti')
-front=queue(9,{0:(SKY,'1'),1:(SKY,'2'),2:(SKY,'3')},show={0,1,2},ends=False,aria='3 people in front of Siti')
-back=queue(9,{4:(GREEN,''),5:(GREEN,''),6:(GREEN,''),7:(GREEN,''),8:(GREEN,'')},show={4,5,6,7,8},ends=False,aria='5 people behind Siti')
-gap=min(150,(1664-260)/8)
-body=h2('Draw it: a queue')+card(p('Siti is 4th from the front and 6th from the back of a queue. How many people are in the queue?',38,700))
-body+=pin(128,380,1664,base)+pin(128,380,1664,front,'fade')+pin(128,380,1664,back,'fade')
-body+=step(1,'4th from the front: 3 people in front of Siti.',top=620,size=34)
-body+=step(2,'6th from the back: 5 people behind Siti.',top=720,size=34)
-body+=answer(128,820,1664,'3 + 1 + 5 = 9 people.   (4 + 6 = 10 counts Siti twice: 10 − 1 = 9)')
-put('p3l10-we1',sec('p3l10-we1','26–28 MIN',body,
- 'Worked example: draw it. Ask first: "Is it 10?" Many children add 4 + 6. Click: the 3 people in front appear, then the 5 behind, then the steps and answer. (Click order: front people, back people, step 1, step 2, answer.) '
- 'Think-aloud: "I draw Siti. 4th from the front means 3 people are in front of her. 6th from the back means 5 people behind her. Count: 3 + 1 + 5 = 9. If I add 4 + 6, I count Siti twice, so I take 1 away." Check by counting the drawing from both ends.'))
-put('p3l10-try1',try_slide('p3l10-try1','28–29 MIN','Your turn: draw it','Draw the people before you answer.',[('a','Ravi is 2nd from the front and 8th from the back. How many people?','9'),('b','10 people. Ben is 3rd from the front. Place from the back?','8th'),('c','Two numbers add up to 30. One is 6 more than the other.','12 and 18')],
- 'Whiteboards. a) 1 in front, Ravi, 7 behind: 9 (or 2 + 8 − 1). b) 2 in front, Ben, so 10 − 3 = 7 behind: Ben is 8th from the back (10 − 3 + 1). c) Draw two bars: take away the extra 6: 24; share: 12 and 12; give the 6 back: 12 and 18. Check 12 + 18 = 30.',36))
+body=h2('Draw it: a queue')+pin(128,230,1664,p('Example: Siti is 4th from the front and 6th from the back. 3 people in front + Siti + 5 behind = 9 people. (4 + 6 = 10 counts Siti twice.)',34,700),None,SOFT,20,'20px 30px')
+body+=pin(128,400,1664,p('Your turn. Draw the people before you answer.',34,600,MUTED),None)
+for i_,(a_,b_,c_) in enumerate([('a','Ravi is 2nd from the front and 8th from the back. How many people?','9'),('b','10 people. Ben is 3rd from the front. Place from the back?','8th'),('c','Two numbers add up to 30. One is 6 more than the other.','12 and 18')]):
+    body+=qrow(128,470+i_*140,1250,a_,b_,36)+answer(1420,470+i_*140,372,c_)
+put('p3l10-try1',sec('p3l10-try1','28–29 MIN',body,
+ 'Worked example and your turn in one slide (the old separate worked-example slide was merged here). Ask first: "Is it 10?" Many children add 4 + 6. Think-aloud: "I draw Siti. 4th from the front means 3 people are in front of her. 6th from the back means 5 people behind her. Count: 3 + 1 + 5 = 9. If I add 4 + 6, I count Siti twice, so I take 1 away." Then whiteboards. a) 1 in front, Ravi, 7 behind: 9 (or 2 + 8 − 1). b) 2 in front, Ben, so 10 − 3 = 7 behind: Ben is 8th from the back (10 − 3 + 1). c) Draw two bars: take away the extra 6: 24; share: 12 and 12; give the 6 back: 12 and 18. Check 12 + 18 = 30.'))
 
 # ---------- we2: logic grid ----------
 R=['Ben','Siti','Ravi']; C=['curry puff','kaya toast','popiah']
@@ -150,10 +141,8 @@ body+=pin(1150,400,642,p('Clue 1: cross out 2 boxes for Ben. Only kaya toast is 
 body+=pin(1150,530,642,p('A ✓ means crosses in the rest of its column: nobody else has kaya toast.',30,700),'rise',WHITE,20,'16px 22px')
 body+=pin(1150,680,642,p('Clue 2: Ravi is not curry puff, so popiah ✓. Siti: curry puff ✓.',30,700),'rise',WHITE,20,'16px 22px')
 put('p3l10-we2',sec('p3l10-we2','29–31 MIN',body,
- 'Worked example: make a table. Click order: Ben’s two crosses, Ben’s tick, the crosses in the kaya toast column, the last marks; the three side notes rise in between as you talk. '
+ 'Worked example: make a table. (The old logic-grid try-it slide was cut; worksheet Q2 is the practice. If there is a moment, ask orally: Ali, Mei and Ben choose red, blue, green; Mei does not choose red or blue, so green; Ali does not choose red, so blue; Ben has red.) Click order: Ben’s two crosses, Ben’s tick, the crosses in the kaya toast column, the last marks; the three side notes rise in between as you talk. '
  'Think-aloud: "A table keeps every clue in one place. Clue 1 tells me 2 things Ben does NOT like: 2 crosses. Only one box is left in his row, so a tick. A tick means nobody else can have kaya toast, so I cross out the rest of that column. Clue 2: Ravi is not curry puff, and kaya toast is gone, so Ravi likes popiah. Siti gets the last one: curry puff." Check each clue against the answer.'))
-put('p3l10-try2',try_slide('p3l10-try2','31–32 MIN','Your turn: a small logic grid','Ali, Mei and Ben each choose a different colour: red, blue, green.',[('a','Mei does not choose red or blue. Ali does not choose red.','Mei: green'),('b','So what does Ali choose?','Ali: blue'),('c','And Ben?','Ben: red')],
- 'Whiteboards: draw a 3 by 3 grid. Mei has 2 crosses, so green is the only one left: tick, then cross green for Ali and Ben. Ali is not red, and green is gone, so blue. Ben gets red. Check: Mei green (not red or blue ✓), Ali blue (not red ✓).',36))
 
 # ---------- we3: bar graph ----------
 bg=bar_graph([('Mon',12),('Tue',7),('Wed',15),('Thu',10)],16,2,24,bw=100,slot=180,aria='Bar graph of books borrowed: Monday 12, Tuesday 7, Wednesday 15, Thursday 10',ylab='Books',xlab='Day')
@@ -176,7 +165,7 @@ put('p3l10-ws1ans',check_slide('p3l10-ws1ans','52–54 MIN','Page 1: check toget
  'Q2: Clue 2 says Mei and Ravi are not in the choir; clue 1 says Ali is not; so Siti is in the choir. Clue 3: the swimmer has 4 letters: Ravi or Siti; Siti is in the choir, so Ravi swims. Ali: not choir, not chess, not swimming, so football. Mei: chess. The puzzle has exactly one answer.'))
 
 # ---------- teach before page 2 ----------
-body=h2('List it: in order, so none are missed')
+body=h2('Recap: draw it, list it, make a table')
 body+=pin(128,250,800,p('Make 3-digit numbers with 3, 6 and 9. How many are even?',32,700),None,WHITE,20,'18px 26px')
 for i,(hd,ns) in enumerate([('3 first','369,  396'),('6 first','639,  693'),('9 first','936,  963')]):
     body+=pin(128,400+i*95,800,p(f'<span style="color:{TEAL};font-weight:800">{hd}:</span>  {ns}',34,700,raw=True),'rise',WHITE,16,'12px 24px')
@@ -184,35 +173,11 @@ body+=pin(128,700,800,p('6 numbers (2 for each first digit). Even: 396 and 936.'
 body+=pin(992,250,800,p('Riddle: I am an even 2-digit number. My digits add up to 7. My tens digit is bigger than my ones digit. Find ALL.',32,700),None,WHITE,20,'18px 26px')
 for i,t in enumerate(['Even: the ones digit is 0, 2, 4 or 6.','70 ✓   52 ✓   34: 3 is not bigger than 4   16: no','Answers: 70 and 52.']):
     body+=pin(992,470+i*110,800,p(t,32,700),'rise',SOFT if i==2 else WHITE,16,'14px 24px')
+body+=pin(128,790,1664,p('Recap. Draw it: queues (count from the front AND the back, take away 1). Make a table: patterns that grow (keep the table going). List it: in order, so none are missed.',30,700),'fade',SOFT,20,'16px 28px')
 put('p3l10-teachlist',sec('p3l10-teachlist','54–56 MIN',body,
  'Teach before worksheet page 2 (Q4 and Q6). Left: "I list them in order. Start with 3 in the hundreds place: 369, 396. Then 6: 639, 693. Then 9: 936, 963. Two for each first digit, so 6. Even numbers end in an even digit: only 6 is even, so 396 and 936." '
- 'Right: "For a find-ALL riddle, I list every case for one clue, then cross out the ones that break another clue." The worksheet uses different digits and an odd-number riddle: do not do them here.'))
-def tbl_row(n,x0=20,y0=70,s=90):
-    b=''
-    for i in range(n): b+=f'<rect x="{x0+i*s}" y="{y0}" width="{s}" height="{s}" fill="#F3D9B1" stroke="{NAVY}" stroke-width="4"/>'
-    for i in range(n): b+=f'<circle cx="{x0+i*s+s/2}" cy="{y0-26}" r="16" fill="{SKY}" stroke="{NAVY}" stroke-width="3"/><circle cx="{x0+i*s+s/2}" cy="{y0+s+26}" r="16" fill="{SKY}" stroke="{NAVY}" stroke-width="3"/>'
-    b+=f'<circle cx="{x0-26}" cy="{y0+s/2}" r="16" fill="{SKY}" stroke="{NAVY}" stroke-width="3"/><circle cx="{x0+n*s+26}" cy="{y0+s/2}" r="16" fill="{SKY}" stroke="{NAVY}" stroke-width="3"/>'
-    return b
-pic=svg(1100,200,f'<g transform="translate(40,10)">{tbl_row(1)}</g><g transform="translate(260,10)">{tbl_row(2)}</g><g transform="translate(570,10)">{tbl_row(3)}</g>','Tables in a row: 1 table seats 4, 2 tables seat 6, 3 tables seat 8')
-W7=[220]+[120]*7
-body=h2('Make a table: a growing pattern')+pin(128,230,1100,pic)
-body+=pin(1260,240,532,p('1 table seats 4. Each new table adds 2 seats.',32,700),None,SOFT,20,'18px 24px')
-body+=trow(128,470,['Tables','1','2','3','4','5','6','7'],W7,header=True,size=34)
-body+=trow(128,550,['People','4','6','8','','','',''],W7,size=34)
-body+=trow(128,550,['People','4','6','8','10','12','14','16'],W7,'rise',size=34)
-body+=step(1,'7 tables seat 16 people.',top=660,width=900,size=32)
-body+=step(2,'20 people? Keep going: 8 tables 18, 9 tables 20. So 9 tables.',top=760,size=32)
-put('p3l10-teachtable',sec('p3l10-teachtable','56–57 MIN',body,
- 'Teach before worksheet page 2 (Q5). "Why only 2 more seats for each new table? Because where two tables join, those seats are lost." Click to fill the table, then the steps. Think-aloud: "The table goes 4, 6, 8 … add 2 each time. I keep the table going until I reach what I need." Going backwards (20 people) uses the same table. The worksheet pattern adds a different number: let them find it.'))
-q2=queue(6,{1:(YEL,'Mei'),5:(GREEN,'Ben'),2:(WHITE,''),3:(WHITE,''),4:(WHITE,''),0:(WHITE,'')},show={1,5},aria='Queue: Mei near the front, Ben last')
-q2b=queue(6,{0:(SKY,'1'),2:(PINK,''),3:(PINK,''),4:(PINK,'')},show={0,2,3,4},ends=False,aria='1 in front of Mei, 3 between Mei and Ben')
-body=h2('Draw it: people in between')+card(p('Mei is 2nd from the front. Ben is last. There are 3 people between them. How many in the queue?',36,700))
-body+=pin(128,370,1664,q2)+pin(128,370,1664,q2b,'fade')
-body+=step(1,'In front of Mei: 1 person. Then Mei, then 3 people, then Ben.',top=620,size=34)
-body+=answer(128,730,1664,'1 + 1 + 3 + 1 = 6 people.  Count your drawing to check.')
-put('p3l10-teachbetween',sec('p3l10-teachbetween','57–58 MIN',body,
- 'Teach before worksheet page 2 (Q3). Ask first: "Is it 2 + 3 = 5?" No: that forgets Ben. Click the drawing, the step and the answer. Think-aloud: "I draw Mei 2nd, so 1 person in front. Then the 3 between, then Ben. Count every person: 6." The worksheet Q3b has different names; let children draw it themselves.'))
-put('p3l10-ws2',ws_preview('p3l10-ws2','58–67 MIN','Worksheet page 2: on your own',[('Q3','Queues. Draw the people.'),('Q4','Digit cards 2, 5, 8. List them in order.'),('Q5','Matchstick squares. Make a table.'),('Q6','If time: a number riddle. Find ALL the answers.')],'Ready for more? Stretch and Challenge come next.','Children work alone. Note who needs a short catch-up. Q6: check that children list every case (ones digit 1, 3 or 5) and cross out, not stop at the first answer.'))
+ 'Right: "For a find-ALL riddle, I list every case for one clue, then cross out the ones that break another clue." The worksheet uses different digits and an odd-number riddle: do not do them here. This ONE recap slide replaces three teaching slides. Also say in one sentence each: Draw it (queues): count the person from the front AND from the back, so take away 1; Make a table (matchsticks, Q5): the first square needs 4 sticks and each new square adds 3, so keep the table going. Q3 is a page-1 question: it is in the worksheet, not here.'))
+put('p3l10-ws2',ws_preview('p3l10-ws2','58–67 MIN','Worksheet page 2: on your own',[('Q3','Queues. Draw the people.'),('Q4','Digit cards 2, 5, 8. List them in order.'),('Q5','Matchstick squares. Make a table.'),('Q6','If time: a number riddle. Find ALL the answers.')],'Ready for more? Stretch and Challenge come next.','Children work alone; there is one recap slide before page 2 (the page-1 queue question Q3 is not taught here). Note who needs a short catch-up. Q6: check that children list every case (digit sets 1, 1, 4 and 1, 2, 3; the ones digit must be odd) and cross out, not stop at the first answer.'))
 put('p3l10-ws2ans',check_slide('p3l10-ws2ans','67–70 MIN','Page 2: check together',[('Q3','a) 7 people   b) 6 people'),('Q4','258, 285, 528, 582, 825, 852.   Odd: 2.   Closest to 600: 582'),('Q5','13, 16, 19.   8 squares: 25 sticks.   31 sticks: 10 squares'),('Q6','411, 321, 213')],
  'Click after a child explains. Q3a: 2 in front, Ben, 4 behind: 7 (3 + 5 − 1). Q3b: 1 in front of Ali, Ali, 3 between, Siti: 6. Q4: odd ones end in 5: 285 and 825. 582 is 18 from 600; 528 is 72 away. '
  'Q5: the first square needs 4 sticks, each new square adds 3 (it shares a side). 8 squares: 4 + 7 × 3 = 25. Keep the table going: 22, 25, 28, 31 at 10 squares. Q6: digits add to 6, none 0, odd: ones digit 1 (hundreds and tens add to 5: 41 or 32, hundreds bigger: 411, 321), ones 3 (add to 3: 21: 213), ones 5 (add to 1: impossible).'))
@@ -249,17 +214,17 @@ for i,t in enumerate(['Extras compared with 3P2: +10, +10, and −5.','135 − 1
 put('p3l10-chwalk',sec('p3l10-chwalk','Challenge',body,'Use after pairs have tried, with the "see it" slide. Q1: the trap is to add 6 + 3 + 4 = 13 by luck or 6 + 4 + 3 + 2 by guessing; the drawing makes it sure: 5 + 1 + 3 + 1 + 3. Q2: 3P4 is 5 kg LESS than 3P2, so to make it equal we add 5 back (135 − 20 + 5 = 120). Check: 40 + 30 + 40 + 25 = 135.'))
 body=h2('Talk time')+card(chip('TALK TIME',YEL,NAVY)+p('Choose one puzzle from today. How did you START it, and how do you know you are right? You can share, share with a partner, or pass.',40,600))+card(p('Sentence starters:',34,400,MUTED)+p('“I started by …”   “I noticed that …”   “I know because …”',38,600))
 put('p3l10-talk',sec('p3l10-talk','70–80 MIN',body,'Minutes 70 to 80. Pairs talk for 2 minutes, then volunteers share (a pass is always fine, and nobody is called on by name). Ask: "Draw it, list it or make a table: which helped you most today? Why?" Teaching a puzzle to the group is only for volunteers. Also ask: "Why do we take away 1 in a queue puzzle?" (the person is counted from the front and from the back). Praise the reasons, not only the answers.'))
-body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('Ali is 4th from the front and 4th from the back of a queue. How many people are in the queue? How did you start?',44,600))+card(p('Write your answer on a slip of paper and show it to your tutor on camera. Then collect your last stamp.',34,400))
-put('p3l10-exit',sec('p3l10-exit','80–85 MIN',body,'Minutes 80 to 85. Answer: 7 people (3 in front, Ali, 3 behind; 4 + 4 − 1 = 7), started by drawing it. A child who writes 8 has counted Ali twice. The favourite-lesson line is open: use it to plan next steps. Next slide: look back (2 minutes). Extension: write a logic grid puzzle with 3 people and 3 things for a friend, and check it has exactly one answer.'))
-put('end',dark_slide('end','WELL DONE, INQUIRERS · 88–90 MIN','Keep asking why',f'<p style="font-family:{HF};font-size:64px;font-weight:500;color:{YEL}">Notice it. Test it. Explain why.</p>','Certificates and a last stamp for every inquirer.','Minutes 88 to 90. Hand out certificates and stamp the journal. Invite volunteers to name one puzzle they enjoyed in the program (pass is fine). Tell each child one specific thing they did well. Give parents the one-page summary from the tutor guide.'))
+body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('Ali is 4th from the front and 4th from the back of a queue. How many people are in the queue? How did you start?',44,600))+card(p('Write your answer on a slip of paper and keep it on your desk. Then collect your last stamp.',34,400))
+put('p3l10-exit',sec('p3l10-exit','80–85 MIN',body,'Minutes 80 to 85. Answer: 7 people (3 in front, Ali, 3 behind; 4 + 4 − 1 = 7), started by drawing it. A child who writes 8 has counted Ali twice. The favourite-lesson line is open: use it to plan next steps. This is the easiest item of the lesson: allow 2 minutes of work, not 3.5. Next slide: look back (3 minutes: 2 for the children plus a short share). Extension: write a logic grid puzzle with 3 people and 3 things for a friend, and check it has exactly one answer.'))
+put('end',dark_slide('end','WELL DONE, INQUIRERS · 85–90 MIN','Keep asking why',f'<p style="font-family:{HF};font-size:64px;font-weight:500;color:{YEL}">Notice it. Test it. Explain why.</p>','Certificates and a last stamp for every inquirer.','Minutes 85 to 90. Hand out certificates and stamp the journal: say each certificate in one 20-second sentence (one specific thing the child did well), about 2.7 minutes for 8 children. Ask for volunteers on "a puzzle I enjoyed" ONCE (pass is fine). Post the parent summary from the tutor guide after the lesson; do not read it out.'))
 
 # ---------- write ----------
-order=['p3l10-title','p3l10-warm1','p3l10-warm2','p3l10-explore1','p3l10-explore2','p3l10-teach1','p3l10-we1','p3l10-try1','p3l10-we2','p3l10-try2','p3l10-we3','p3l10-key','p3l10-break','p3l10-ws1','p3l10-ws1ans','p3l10-teachlist','p3l10-teachtable','p3l10-teachbetween','p3l10-ws2','p3l10-ws2ans','p3l10-stretch','p3l10-challenge','p3l10-chdiag','p3l10-chwalk','p3l10-talk','p3l10-exit','end']
+order=['p3l10-title','p3l10-warm1','p3l10-warm2','p3l10-explore1','p3l10-explore2','p3l10-teach1','p3l10-try1','p3l10-we2','p3l10-we3','p3l10-key','p3l10-break','p3l10-ws1','p3l10-ws1ans','p3l10-teachlist','p3l10-ws2','p3l10-ws2ans','p3l10-stretch','p3l10-challenge','p3l10-chdiag','p3l10-chwalk','p3l10-talk','p3l10-exit','end']
 import p3_gifted; order[:]=p3_gifted.add(S,order,10)  # close-the-gaps: warm-up check + look-back slides
 assert set(order)==set(S), set(order)^set(S)
 for i,h in S.items(): open(os.path.join(D,'slides',i+'.html'),'w').write(h)
 deck={'v':4,'createdOnFiles':{'v':1,'at':datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')},'lists':'css',
-      'title':'Math Inquirers P3: Lesson 10 – Challenge Day','order':order,'cover':'p3l10-title',
+      'title':'Math Inquirers P3: Lesson 10 – Puzzle Day','order':order,'cover':'p3l10-title',
       'sections':{'s1':{'description':'Warm-up and explore','start':'p3l10-title'},'s2':{'description':'Teach: how to start a puzzle (draw it, make a table, read the scale)','start':'p3l10-teach1'},'s3':{'description':'Worksheet with teaching before each page','start':'p3l10-break'},'s4':{'description':'Stretch, challenge, talk, exit and close','start':'p3l10-stretch'}},
       'faces':{'fredoka':{'family':'Fredoka','href':'https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap'},'nunito-sans':{'family':'Nunito Sans','href':'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap'}},
       'designSystems':[]}

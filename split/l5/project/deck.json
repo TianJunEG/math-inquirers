@@ -8,6 +8,7 @@
  "title": "Math Inquirers: Lesson 5 – Mystery Number",
  "order": [
   "l5-title",
+  "l5-tool",
   "l5-warm1",
   "l5-warm2",
   "l5-warmcheck",
@@ -30,7 +31,9 @@
   "l5-ws2ans",
   "l5-stretch",
   "l5-challenge",
+  "l5-chdiag",
   "l5-chwalk",
+  "l5-skill1",
   "l5-talk",
   "l5-exit",
   "l5-reflect"

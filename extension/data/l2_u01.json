@@ -1,0 +1,833 @@
+{
+ "schema_version": 1,
+ "level": 2,
+ "unit": 1,
+ "id": "L2U01",
+ "title": "Digit detectives",
+ "topic": "Numbers to 1000",
+ "holiday_lesson": 1,
+ "goal": "I can read and build 3-digit numbers. I can list every number from a set of digit cards and use patterns on a 1000 chart.",
+ "learn": {
+  "intro": "A 3-digit number has hundreds, tens and ones. Where a digit sits tells you what it is worth.",
+  "example": {
+   "problem": "Use the digit cards 4, 1 and 7 once each. List all the 3-digit numbers the cards can make. Which is the greatest? Which is the smallest?",
+   "figure": {
+    "type": "l2_cards",
+    "items": [
+     4,
+     1,
+     7
+    ],
+    "width_mm": 46
+   },
+   "side": true,
+   "steps": [
+    "Put 1 in the hundreds place. Swap the other cards: 147 and 174.",
+    "Put 4 in the hundreds place: 417 and 471.",
+    "Put 7 in the hundreds place: 714 and 741.",
+    "Check: 3 cards start the list, and each starts 2 numbers. 3 x 2 = 6 numbers."
+   ],
+   "answer": "147, 174, 417, 471, 714, 741. Greatest 741, smallest 147."
+  },
+  "howto": {
+   "title": "How to list in order",
+   "steps": [
+    "Fix one card in the hundreds place.",
+    "Swap the other cards.",
+    "Do the same for each card.",
+    "Count: cards x 2 = how many numbers?"
+   ]
+  },
+  "facts": {
+   "title": "Place value",
+   "lines": [
+    "624 is 6 hundreds, 2 tens and 4 ones.",
+    "10 tens make 1 hundred, so 12 tens is 120.",
+    "0 cannot be the hundreds digit. 047 is not a 3-digit number."
+   ]
+  },
+  "try": {
+   "id": "L2U01-L01",
+   "text": "Use the cards 9, 0 and 3 once each. How many 3-digit numbers can you make? {b}",
+   "answer": {
+    "value": [
+     "4"
+    ],
+    "text": "4"
+   },
+   "explanation": "List in order: 309, 390, 903, 930. A number cannot start with 0, so 039 and 093 do not count."
+  }
+ },
+ "items": [
+  {
+   "id": "L2U01-S01",
+   "tier": "start",
+   "page": 1,
+   "text": "Place value. Fill in the blanks.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "3 hundreds, 5 tens and 6 ones = {b}",
+     "answer": {
+      "value": [
+       "356"
+      ],
+      "text": "356"
+     }
+    },
+    {
+     "label": "b",
+     "text": "8 hundreds, 0 tens and 4 ones = {b}",
+     "answer": {
+      "value": [
+       "804"
+      ],
+      "text": "804"
+     }
+    },
+    {
+     "label": "c",
+     "text": "590 = 5 hundreds and {b} tens",
+     "answer": {
+      "value": [
+       "9"
+      ],
+      "text": "9"
+     }
+    },
+    {
+     "label": "d",
+     "text": "In 837, the digit 3 is worth {b}",
+     "answer": {
+      "value": [
+       "30"
+      ],
+      "text": "30"
+     }
+    }
+   ],
+   "explanation": "(a) 300 + 50 + 6 = 356. (b) 800 + 0 + 4 = 804. (c) 590 is 500 + 90, and 90 is 9 tens. (d) The 3 is in the tens place, so it is worth 30.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U01-S02",
+   "tier": "start",
+   "page": 1,
+   "text": "What number do the place-value blocks show? {b}",
+   "figure": {
+    "type": "l2_blocks",
+    "groups": [
+     {
+      "flats": 3,
+      "rods": 12,
+      "ones": 4
+     }
+    ],
+    "rods_per_row": 6,
+    "ones_per_row": 2,
+    "width_mm": 138
+   },
+   "answer": {
+    "value": [
+     "424"
+    ],
+    "text": "424"
+   },
+   "explanation": "3 flats are 300, 12 rods are 120 and 4 ones are 4. 300 + 120 + 4 = 424. 10 of the rods make another flat, so this is also 4 flats, 2 rods and 4 ones."
+  },
+  {
+   "id": "L2U01-S03",
+   "tier": "start",
+   "page": 1,
+   "text": "Circle the correct sign: <, = or >.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "745   {circ:<|=|>}   754",
+     "answer": {
+      "value": [
+       "<"
+      ],
+      "text": "<"
+     }
+    },
+    {
+     "label": "b",
+     "text": "306   {circ:<|=|>}   296",
+     "answer": {
+      "value": [
+       ">"
+      ],
+      "text": ">"
+     }
+    },
+    {
+     "label": "c",
+     "text": "5 hundreds 2 tens   {circ:<|=|>}   502",
+     "answer": {
+      "value": [
+       ">"
+      ],
+      "text": ">"
+     }
+    },
+    {
+     "label": "d",
+     "text": "88 tens   {circ:<|=|>}   880",
+     "answer": {
+      "value": [
+       "="
+      ],
+      "text": "="
+     }
+    }
+   ],
+   "explanation": "(a) The hundreds are the same; 4 tens is less than 5 tens, so 745 < 754. (b) 3 hundreds is more than 2 hundreds, so 306 > 296. (c) 5 hundreds 2 tens is 520, and 520 > 502. (d) 88 tens is 880, so they are equal.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U01-S04",
+   "tier": "start",
+   "page": 1,
+   "text": "Arrange the numbers in order. Begin with the smallest.\n508,   85,   580,   805",
+   "answer": {
+    "value": [
+     "85",
+     "508",
+     "580",
+     "805"
+    ],
+    "text": "85, 508, 580, 805",
+    "list": true
+   },
+   "explanation": "85 has only 2 digits, so it is the smallest. 508, 580 and 805 are 3-digit numbers. Compare the hundreds, then the tens: 508 < 580 < 805.",
+   "space": {
+    "rows": [
+     "{ll}"
+    ]
+   }
+  },
+  {
+   "id": "L2U01-S05",
+   "tier": "start",
+   "page": 2,
+   "text": "Use the cards 8, 1 and 5 once each. Fill the table with all the 3-digit numbers the cards can make.",
+   "figure": {
+    "type": "l2_cards",
+    "items": [
+     8,
+     1,
+     5
+    ],
+    "width_mm": 50
+   },
+   "answer": {
+    "value": [
+     "158",
+     "185",
+     "518",
+     "581",
+     "815",
+     "851"
+    ],
+    "text": "158, 185, 518, 581, 815, 851",
+    "list": true
+   },
+   "explanation": "Start with 1: 158 and 185. Start with 5: 518 and 581. Start with 8: 815 and 851. 3 cards x 2 = 6 numbers.",
+   "space": {
+    "table": {
+     "cols": [
+      "Start with 1",
+      "Start with 5",
+      "Start with 8"
+     ],
+     "rows": 2
+    }
+   }
+  },
+  {
+   "id": "L2U01-S06",
+   "tier": "start",
+   "page": 2,
+   "text": "Use your list from the question before.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "From your list: greatest {b}, smallest {b}.",
+     "answer": {
+      "value": [
+       "851",
+       "158"
+      ],
+      "text": "851 and 158"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Which number is closest to 600? {b}",
+     "answer": {
+      "value": [
+       "581"
+      ],
+      "text": "581"
+     }
+    },
+    {
+     "label": "c",
+     "text": "How many of your numbers are odd? {b}",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    }
+   ],
+   "explanation": "(a) The greatest digit first gives 851; the smallest first gives 158. (b) 581 is 19 from 600. (c) Odd numbers end in 1, 3, 5, 7 or 9: 185, 581, 815, 851."
+  },
+  {
+   "id": "L2U01-S07",
+   "tier": "start",
+   "page": 2,
+   "text": "Use the cards 6, 0 and 4 once each.",
+   "figure": {
+    "type": "l2_cards",
+    "items": [
+     6,
+     0,
+     4
+    ],
+    "width_mm": 46
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "List all the 3-digit numbers the cards can make.  {ll}",
+     "answer": {
+      "value": [
+       "406",
+       "460",
+       "604",
+       "640"
+      ],
+      "text": "406, 460, 604, 640",
+      "list": true
+     }
+    },
+    {
+     "label": "b",
+     "text": "How many numbers did you write? {b}",
+     "answer": {
+      "value": [
+       "4"
+      ],
+      "text": "4"
+     }
+    }
+   ],
+   "explanation": "0 cannot be the hundreds digit, so only 6 or 4 can start. Start with 4: 406 and 460. Start with 6: 604 and 640. That is 4 numbers."
+  },
+  {
+   "id": "L2U01-S08",
+   "tier": "start",
+   "page": 2,
+   "text": "Who am I? Write each number.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "My number has 3 digits. The hundreds digit is 6. The ones digit is 2 less than the tens digit. The digits add up to 14. {b}",
+     "answer": {
+      "value": [
+       "653"
+      ],
+      "text": "653"
+     }
+    },
+    {
+     "label": "b",
+     "text": "My number is odd and between 300 and 310. Its digits add up to 8. {b}",
+     "answer": {
+      "value": [
+       "305"
+      ],
+      "text": "305"
+     }
+    }
+   ],
+   "explanation": "(a) The tens and ones digits add up to 14 - 6 = 8. The tens digit is 2 more than the ones digit: 5 and 3. The number is 653. (b) Odd numbers between 300 and 310: 301, 303, 305, 307, 309. Only 3 + 0 + 5 = 8, so 305."
+  },
+  {
+   "id": "L2U01-S09",
+   "tier": "start",
+   "page": 3,
+   "text": "Look at the number line. It goes from 300 to 400.",
+   "figure": {
+    "type": "l2_nline",
+    "lo": 300,
+    "hi": 400,
+    "step": 10,
+    "labels": [
+     300,
+     350,
+     400
+    ],
+    "arrows": [
+     {
+      "at": 340,
+      "label": "A"
+     },
+     {
+      "at": 370,
+      "label": "B"
+     }
+    ],
+    "width_mm": 150
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Arrow A shows {b}",
+     "answer": {
+      "value": [
+       "340"
+      ],
+      "text": "340"
+     }
+    },
+    {
+     "label": "b",
+     "text": "Arrow B shows {b}",
+     "answer": {
+      "value": [
+       "370"
+      ],
+      "text": "370"
+     }
+    },
+    {
+     "label": "c",
+     "text": "B is {b} more than A.",
+     "answer": {
+      "value": [
+       "30"
+      ],
+      "text": "30"
+     }
+    }
+   ],
+   "explanation": "Each mark is 10 more. (a) A is 4 marks after 300: 340. (b) B is 7 marks after 300: 370. (c) 370 - 340 = 30.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U01-S10",
+   "tier": "start",
+   "page": 3,
+   "text": "Each piece below was cut out of a 1000 chart. A row is 10 numbers long. Write the missing numbers.",
+   "figure": {
+    "type": "l2_chart",
+    "pieces": [
+     {
+      "label": "Piece A",
+      "rows": [
+       [
+        571,
+        572,
+        null
+       ],
+       [
+        null,
+        582,
+        583
+       ],
+       [
+        591,
+        null,
+        null
+       ]
+      ]
+     },
+     {
+      "label": "Piece B",
+      "rows": [
+       [
+        "",
+        null,
+        ""
+       ],
+       [
+        null,
+        645,
+        null
+       ],
+       [
+        "",
+        null,
+        ""
+       ]
+      ]
+     }
+    ],
+    "width_mm": 132
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "Piece A: write the 4 missing numbers in the empty squares.",
+     "answer": {
+      "value": [
+       "573",
+       "581",
+       "592",
+       "593"
+      ],
+      "text": "573, 581, 592, 593 (left to right, top to bottom)",
+      "list": true
+     }
+    },
+    {
+     "label": "b",
+     "text": "Piece B: write the 4 missing numbers in the empty squares.",
+     "answer": {
+      "value": [
+       "635",
+       "644",
+       "646",
+       "655"
+      ],
+      "text": "635, 644, 646, 655 (top, left, right, bottom)",
+      "list": true
+     }
+    },
+    {
+     "label": "c",
+     "text": "On the chart, the square 3 below 612 holds {b}",
+     "answer": {
+      "value": [
+       "642"
+      ],
+      "text": "642"
+     }
+    }
+   ],
+   "explanation": "Right is 1 more, down is 10 more. (a) 573, 581, 592, 593. (b) Above 645 is 635, left is 644, right is 646, below is 655. (c) 3 squares down is 30 more: 612 + 30 = 642."
+  },
+  {
+   "id": "L2U01-S11",
+   "tier": "start",
+   "page": 3,
+   "text": "Circle True or False.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "5 tens and 12 ones is the same as 62.   {circ:True|False}",
+     "answer": {
+      "value": [
+       "True"
+      ],
+      "text": "True"
+     }
+    },
+    {
+     "label": "b",
+     "text": "7 hundreds is the same as 700 tens.   {circ:True|False}",
+     "answer": {
+      "value": [
+       "False"
+      ],
+      "text": "False"
+     }
+    },
+    {
+     "label": "c",
+     "text": "In 909, the two 9s are worth the same.   {circ:True|False}",
+     "answer": {
+      "value": [
+       "False"
+      ],
+      "text": "False"
+     }
+    },
+    {
+     "label": "d",
+     "text": "10 hundreds is the same as 1000.   {circ:True|False}",
+     "answer": {
+      "value": [
+       "True"
+      ],
+      "text": "True"
+     }
+    }
+   ],
+   "explanation": "(a) 50 + 12 = 62, true. (b) 7 hundreds is 700, which is 70 tens, so false. (c) One 9 is worth 900 and the other is worth 9, so false. (d) 10 hundreds make 1000, true.",
+   "partsrow": true
+  },
+  {
+   "id": "L2U01-T01",
+   "tier": "think",
+   "page": 4,
+   "text": "Use the cards 1, 4, 6 and 9. Pick 3 different cards each time to make 3-digit numbers.",
+   "figure": {
+    "type": "l2_cards",
+    "items": [
+     1,
+     4,
+     6,
+     9
+    ],
+    "width_mm": 66
+   },
+   "parts": [
+    {
+     "label": "a",
+     "text": "How many even numbers can you make? {b}",
+     "answer": {
+      "value": [
+       "12"
+      ],
+      "text": "12"
+     }
+    },
+    {
+     "label": "b",
+     "text": "How many of those even numbers are greater than 600? {b}",
+     "answer": {
+      "value": [
+       "6"
+      ],
+      "text": "6"
+     }
+    }
+   ],
+   "explanation": "(a) Even numbers end in 4 or 6. Ones digit 4: 2 of 1, 6, 9 fill the other places: 3 x 2 = 6 numbers. Ones digit 6: 6 numbers. 6 + 6 = 12. (b) Ending in 4: 614, 694, 914, 964. Ending in 6: 916, 946. That is 6 numbers.",
+   "hint": "Fix the ones digit first. An even number ends in 4 or 6.",
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   }
+  },
+  {
+   "id": "L2U01-T02",
+   "tier": "think",
+   "page": 4,
+   "text": "Find my number. It is odd and has 3 digits. My tens digit is 0. My digits add up to 11.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "The numbers I could be:  {ll}",
+     "answer": {
+      "value": [
+       "209",
+       "407",
+       "605",
+       "803"
+      ],
+      "text": "209, 407, 605, 803",
+      "list": true
+     }
+    },
+    {
+     "label": "b",
+     "text": "Which of them is closest to 500? {b}",
+     "answer": {
+      "value": [
+       "407"
+      ],
+      "text": "407"
+     }
+    }
+   ],
+   "explanation": "(a) The hundreds and ones digits add up to 11 and the ones digit is odd: (2, 9), (4, 7), (6, 5), (8, 3). (10, 1) is not allowed. The numbers are 209, 407, 605 and 803. (b) 407 is 93 from 500 and 605 is 105 from 500.",
+   "hint": "The hundreds and ones digits add up to 11. The ones digit is odd."
+  },
+  {
+   "id": "L2U01-T03",
+   "tier": "think",
+   "page": 4,
+   "text": "Ali writes the numbers 1 to 100 in a row. Then he writes 101 to 200 in a row.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "How often does Ali write the digit 7 from 1 to 100? {b}",
+     "answer": {
+      "value": [
+       "20"
+      ],
+      "text": "20"
+     }
+    },
+    {
+     "label": "b",
+     "text": "How often does Ali write the digit 7 from 1 to 200? {b}",
+     "answer": {
+      "value": [
+       "40"
+      ],
+      "text": "40"
+     }
+    }
+   ],
+   "explanation": "(a) 7s in the ones place: 7, 17, ... 97 is 10 numbers. 7s in the tens place: 70 to 79 is 10 numbers. 77 has two 7s. 10 + 10 = 20. (b) 101 to 200 is the same pattern, so 20 more: 20 + 20 = 40.",
+   "hint": "Count the 7s in the ones place. Then count the 7s in the tens place.",
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   }
+  },
+  {
+   "id": "L2U01-G01",
+   "tier": "go",
+   "page": 5,
+   "text": "10 hundreds make 1 thousand. We write 1 thousand as 1000.",
+   "parts": [
+    {
+     "label": "a",
+     "text": "4 thousands, 2 hundreds, 0 tens and 7 ones = {bw}",
+     "answer": {
+      "value": [
+       "4207"
+      ],
+      "text": "4207"
+     }
+    },
+    {
+     "label": "b",
+     "text": "1000 more than 2650 = {bw}",
+     "answer": {
+      "value": [
+       "3650"
+      ],
+      "text": "3650"
+     }
+    },
+    {
+     "label": "c",
+     "text": "25 hundreds = {bw}",
+     "answer": {
+      "value": [
+       "2500"
+      ],
+      "text": "2500"
+     }
+    }
+   ],
+   "explanation": "(a) 4000 + 200 + 0 + 7 = 4207. (b) Adding 1000 adds 1 to the thousands digit: 2650 becomes 3650. (c) 20 hundreds is 2000 and 5 hundreds is 500, so 2500.",
+   "hint": "A thousand is 10 hundreds. Write the thousands digit first.",
+   "beyond": "Thousands"
+  },
+  {
+   "id": "L2U01-G02",
+   "tier": "go",
+   "page": 5,
+   "text": "A mirror number reads the same forwards and backwards, such as 262 and 909. How many 3-digit mirror numbers are there? {b}",
+   "answer": {
+    "value": [
+     "90"
+    ],
+    "text": "90"
+   },
+   "explanation": "The hundreds digit can be 1 to 9: 9 choices. The tens digit can be 0 to 9: 10 choices. The ones digit must be the same as the hundreds digit. 9 x 10 = 90.",
+   "hint": "The ones digit must match the hundreds digit. Count the choices.",
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   }
+  },
+  {
+   "id": "L2U01-G03",
+   "tier": "go",
+   "page": 5,
+   "text": "My number has 3 digits and my tens digit is 5. My digits add up to 12. If my hundreds digit and ones digit swap places, the new number is 297 more than me. What is my number? {b}",
+   "answer": {
+    "value": [
+     "255"
+    ],
+    "text": "255"
+   },
+   "explanation": "The hundreds and ones digits add up to 12 - 5 = 7. Try 156: swapping gives 651, which is 495 more. Try 255: swapping gives 552, which is 297 more. So the number is 255.",
+   "hint": "The hundreds and ones digits add up to 7. Try pairs and swap them.",
+   "space": {
+    "rows": [
+     "Working:"
+    ]
+   }
+  },
+  {
+   "id": "L2U01-G04",
+   "tier": "go",
+   "page": 5,
+   "text": "Make your own riddle about the number 372. Write 3 clues so that only 372 fits. Many answers are right.",
+   "answer": {
+    "value": [
+     "open"
+    ],
+    "text": "Open. Example: \"I am a 3-digit number. I am between 300 and 400. My digits add up to 12. My ones digit is 2.\" Check that no other number fits all 3 clues."
+   },
+   "explanation": "A good riddle has exactly one answer. Example: between 300 and 400 leaves 100 numbers. Digit sum 12 leaves 309, 318, 327 ... Ones digit 2 leaves only 372. Test yours with a friend.",
+   "hint": "Say how many numbers still fit after each clue.",
+   "space": {
+    "rows": [
+     "Clue 1:",
+     "Clue 2:",
+     "Clue 3:"
+    ]
+   }
+  },
+  {
+   "id": "L2U01-C01",
+   "tier": "quiz",
+   "text": "7 hundreds and 13 tens = {b}",
+   "answer": {
+    "value": [
+     "830"
+    ],
+    "text": "830"
+   },
+   "explanation": "13 tens is 130. 700 + 130 = 830."
+  },
+  {
+   "id": "L2U01-C02",
+   "tier": "quiz",
+   "text": "Use the cards 5, 0 and 8 once each. Write the greatest even 3-digit number. {b}",
+   "answer": {
+    "value": [
+     "850"
+    ],
+    "text": "850"
+   },
+   "explanation": "An even number ends in 0 or 8. To be greatest, try 8 first: 850 ends in 0, so it is even. 850 is greater than 580 and 508."
+  },
+  {
+   "id": "L2U01-C03",
+   "tier": "quiz",
+   "text": "Count back in 10s.   312,   302,   292,   {b},   {b}",
+   "answer": {
+    "value": [
+     "282",
+     "272"
+    ],
+    "text": "282, 272"
+   },
+   "explanation": "Take away 10 each time. 292 - 10 = 282 and 282 - 10 = 272."
+  },
+  {
+   "id": "L2U01-C04",
+   "tier": "quiz",
+   "text": "Count the odd numbers between 530 and 542. {b}",
+   "answer": {
+    "value": [
+     "6"
+    ],
+    "text": "6"
+   },
+   "explanation": "The odd numbers are 531, 533, 535, 537, 539 and 541. That is 6 numbers."
+  }
+ ],
+ "snug": [
+  "start1",
+  "start2",
+  "start3"
+ ]
+}

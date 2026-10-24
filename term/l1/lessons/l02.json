@@ -1,0 +1,3557 @@
+{
+  "schema_version": 1,
+  "id": "l1-t1-02",
+  "level": 1,
+  "term": 1,
+  "lesson": 2,
+  "lesson_in_term": 2,
+  "title": "Number Words and the Number Line",
+  "big_idea": "Every number has a place and a name",
+  "child_idea": "Numbers sit in order on a number line, each with its own spot and its own name. The tens marks help us find where a number lives.",
+  "skill": "Representing on a scale",
+  "spine": {
+    "main": "draw",
+    "also": [
+      "actout"
+    ],
+    "role": "I",
+    "reason": "Every Start here item sits on a number line, and the frog hops are acted out before they are drawn."
+  },
+  "ages": "6-8",
+  "moe": {
+    "strand": "Whole Numbers",
+    "topics": [
+      "Numbers to 100: count on and back; one before, one after, between",
+      "Read and write numerals and number words",
+      "Number line as a scale (tens marks, equal jumps)",
+      "Which ten is nearer (beyond Primary 1: informal enrichment only)"
+    ],
+    "note": "Strand label for the tutor only. NEW-TOPIC lesson: the syllabus names reading and writing numbers in numerals and words in Primary 1 Whole Numbers, but number-line scales and missing marks need a check by the owner or a tutor. Which ten is nearer is the idea behind rounding, which the syllabus first names in Primary 4 (nearest 10, p. 37); here it is informal enrichment at Think harder and the Investigation, never called rounding and never a rule. It is not a claim that the program covers the school syllabus, and it must not appear on child or parent pages as MOE-aligned. Term 1 goes beyond the school Primary 1 syllabus on purpose (here: which ten is nearer, equal jumps in 3s, numbers between two marks); every Start here item is still approachable with the cards, the frog and the number line. Never describe the program as MOE-aligned."
+  },
+  "contest_moves": [
+    "numbers between two marks (counting the numbers in the middle, not the hops)",
+    "meet in the middle (two frogs hop towards each other)",
+    "clue puzzle using halfway"
+  ],
+  "objectives": [
+    "Count on and back along a number line, and say the number one before and one after (including across a ten, 59 and 60).",
+    "Read number words to 100 (teen means ten and some more, ty means tens) and write the digits; copy a few tens words.",
+    "Find any number to 100 on a line marked in tens, and say which two tens it lies between.",
+    "Use hops to say which ten a number is nearer to (informal), and fill in missing marks on a line with equal jumps."
+  ],
+  "joining_cold": {
+    "remember": [
+      "Count on and back in ones along a number line",
+      "One more and one less (to 20)",
+      "Tens and ones (34 is 3 tens and 4 ones) and counting in tens to 100"
+    ],
+    "assumes": "Only counting to 20 and showing a number with fingers. Nothing from Lesson 1 is assumed except through the warm-up, which shows 34 as 3 tens and 4 ones again.",
+    "holiday_topics_revisited": [
+      "Skip counting in 10s (Count with the Frog)"
+    ],
+    "safe_to_miss": true,
+    "note": "Fairly safe to miss (not one of the hardest in Term 1; Lesson 4 is the safest). A child who misses it watches the recording and does workbook pages 1 and 2 before Lesson 3. Lesson 6 uses the number line again and its warm-up re-teaches it."
+  },
+  "materials": {
+    "child": [
+      "Number cards from the workbook kit pages, cut out (or 11 small paper squares, 0 to 10 on one side, the tens on the back)",
+      "A small toy or a coin to be the frog",
+      "The printed workbook (pages 1 to 5) and spare paper",
+      "A pencil and a rubber"
+    ],
+    "tutor": [
+      "A slide deck and your own row of 11 cards to show on camera: 0 to 10, then the tens 0 to 100",
+      "A timer slide or a visible clock"
+    ],
+    "kit_pages": [
+      "Two cut-out pages at the back of the workbook: ones number cards 0 to 10 (square cards) and tens number cards 0 to 100 (wide cards). A grown-up cuts them out before the lesson."
+    ],
+    "ruler": false,
+    "notes": "No ruler is needed. Nothing needs to be bought: everything can be found at home. No matches, toothpicks or anything sharp; a grown-up cuts out the cards before the lesson. Small things never go near the mouth or ears."
+  },
+  "timing": {
+    "parts": [
+      {
+        "id": "opening",
+        "title": "Opening",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "id": "remember",
+        "title": "Remember warm-up",
+        "start": 3,
+        "end": 9
+      },
+      {
+        "id": "sneak",
+        "title": "Sneak-peek puzzles",
+        "start": 9,
+        "end": 13
+      },
+      {
+        "id": "explore",
+        "title": "Explore",
+        "start": 13,
+        "end": 28
+      },
+      {
+        "id": "mini",
+        "title": "Mini-lesson",
+        "start": 28,
+        "end": 38
+      },
+      {
+        "id": "break",
+        "title": "Brain break",
+        "start": 38,
+        "end": 42
+      },
+      {
+        "id": "work",
+        "title": "Workbook",
+        "start": 42,
+        "end": 70
+      },
+      {
+        "id": "talk",
+        "title": "Talk time",
+        "start": 70,
+        "end": 76
+      },
+      {
+        "id": "exit",
+        "title": "Exit ticket",
+        "start": 76,
+        "end": 82
+      },
+      {
+        "id": "look",
+        "title": "Look-back",
+        "start": 82,
+        "end": 85
+      },
+      {
+        "id": "flex",
+        "title": "Flex time and goodbye",
+        "start": 85,
+        "end": 90
+      }
+    ],
+    "optional_slide": "s-opt",
+    "include_rules": false,
+    "notes": "Opening is 3 minutes (the routine and rules were taught in Lesson 1; say the three rule words in one line, and the recording, muting and camera notice). Explore has 15 minutes, where children build and label their own number line. The last 5 minutes are the standing buffer; the optional Go further slide is used only if the lesson is on time."
+  },
+  "sneak_peek": {
+    "q1": "Fill in the missing numbers on this line: 18, 19, __, 21, 22, __.",
+    "q2": "A frog sits on 59. It hops 1 number forward. Where does it land? Write the number. I know because ___.",
+    "a1": "20 and 23",
+    "a2": "60. After 59 the ones are used up, so a new ten begins.",
+    "val1": 20
+  },
+  "workbook": {
+    "choice_after": 3,
+    "home_hint": "Use your number cards, a line you draw, or a toy frog. Go further (question 5) is optional. Small things stay on the table, away from mouths and little brothers and sisters.",
+    "header": "Whole Numbers: number line",
+    "hint_p1": "Use your number cards, your frog or a drawing. Say your answer out loud, then write it.",
+    "hint_p3": "Use your number cards, your frog or a drawing. Where there is a line, write how you know. Choose any question, in any order.",
+    "kits": [
+      {
+        "type": "cards",
+        "title": "Kit page 1: ones number cards 0 to 10",
+        "intro": "A grown-up cuts these out before the lesson. Put the cards in order in a row. Keep them in an envelope.",
+        "labels": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "cols": 3,
+        "w": 150,
+        "h": 150,
+        "width": 75
+      },
+      {
+        "type": "cards",
+        "title": "Kit page 2: tens number cards 0 to 100",
+        "intro": "A grown-up cuts these out before the lesson. Put the wide cards in order in a row. Keep them in an envelope.",
+        "labels": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80,
+          90,
+          100
+        ],
+        "cols": 3,
+        "w": 200,
+        "h": 150,
+        "width": 100
+      }
+    ]
+  },
+  "rec": {
+    "opening": {
+      "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook, your number cards and a small toy. Pause or rewind any time.",
+      "action": "Gather your workbook, pencil, number cards and a small toy. Press play when ready."
+    },
+    "remember": {
+      "say": "Recording: join in! Say the numbers out loud and show your fingers. Pause if you need longer.",
+      "action": "Play along. Say and show each answer before the video does."
+    },
+    "sneak": {
+      "say": "Recording: pause now and try both puzzles on your paper. Guessing is fine. Press play for the next part.",
+      "action": "Pause. Try both puzzles on your own paper. A guess is fine."
+    },
+    "explore": {
+      "say": "Recording: pause now. Lay out your number cards in order and hop your toy along. Press play when you have tried.",
+      "action": "Pause. Lay the cards 0 to 10 in a row, then the tens cards 0 to 100. Hop your toy along each line."
+    },
+    "mini": {
+      "say": "Recording: keep watching and copy the examples. Rewind if you miss a step.",
+      "action": "Watch and copy the examples. Rewind any step you missed."
+    },
+    "break": {
+      "say": "Recording: stand up and join in! Your arms are the number line.",
+      "action": "Stand up. Point to where each number lives on your arms."
+    },
+    "work": {
+      "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
+      "action": "Pause. Do page 1, then play to check. Then page 2. Then choose a page to try."
+    },
+    "talk": {
+      "say": "Recording: pause. Tell a grown-up your answer to the talk question, and say why.",
+      "action": "Pause. Explain your answer to someone at home, with a reason."
+    },
+    "exit": {
+      "say": "Recording: pause and do the exit ticket on your own. Then press play to check it.",
+      "action": "Pause. Do the exit ticket alone, then play to check it."
+    },
+    "look": {
+      "say": "Recording: pause and fill in your look-back box. You can pass.",
+      "action": "Pause. Fill in the look-back box, or pass."
+    },
+    "flex": {
+      "say": "Recording: well done for finishing! Show a grown-up one thing you found out.",
+      "action": "Show a grown-up your workbook and tell them one thing you found out."
+    }
+  },
+  "script": {
+    "segments": [
+      {
+        "part": "opening",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-title"
+          },
+          {
+            "k": "DO",
+            "text": "Greet the whole group warmly, before the recording starts. Check that you can see each child, or ask the grown-up.",
+            "s": 1
+          },
+          {
+            "k": "SAY",
+            "text": "Hello, inquirers! Your number cards and your small toy are beside you. Cameras can be on or off, as you like."
+          },
+          {
+            "k": "SAY",
+            "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+          },
+          {
+            "k": "DO",
+            "text": "Start the recording now. Do not use children's first names on the recording.",
+            "s": 3
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
+          },
+          {
+            "k": "SAY",
+            "text": "Our rules: notice it, test it, explain why. Mistakes help us, and you can always pass. Today we find out where every number lives, and what its name is."
+          },
+          {
+            "k": "SAY",
+            "text": "Today's tool is Draw it. Draw a picture or a bar of what the story says.",
+            "spine": "opening"
+          },
+          {
+            "k": "DO",
+            "text": "Point at the tool on page 1 of the workbook.",
+            "s": 4,
+            "spine": "opening"
+          },
+          {
+            "k": "DO",
+            "text": "Greet the whole group warmly. Do not use children's first names on the recording. Check, in the first minute, that every child has the cards and a pencil: ask the group, do not name a child.",
+            "s": 25
+          },
+          {
+            "k": "NOTE",
+            "text": "Lessons after the first skip the routine and rules slides. Say the three rule words in one line, as above. Say the recording notice in your own words: the recording has the tutor, the shared screen and any unmuted voice. Check before the lesson that every child has the cut-out number cards (or 11 small pieces of paper) and a small toy (the frog)."
+          },
+          {
+            "k": "NOTE",
+            "text": "New here? Say in one minute: our three rule words (notice it, test it, explain why); a guess is fine and you can always pass; after Start here you may choose Think harder, Go further or the Investigation; nobody holds paper to the camera. The first recording of the term shows the full routine."
+          }
+        ]
+      },
+      {
+        "part": "remember",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-rem1"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "A number line shows numbers in order, like steps along a path. Look at the numbers on this line. We count along it, and the next number is always one more. Count with me from six up to fourteen, then back down again."
+          },
+          {
+            "k": "WORK",
+            "text": "Count on together from 6 to 14, then back down to 6, slowly. Tap the air at each number.",
+            "s": 35
+          },
+          {
+            "k": "ASK",
+            "text": "Start on 9 and count on 3 more. Which number do you stop on?",
+            "resp": 12
+          },
+          {
+            "k": "ASK",
+            "text": "Start on 13 and count back 4. Where do you stop?",
+            "resp": 12
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-rem2"
+          },
+          {
+            "k": "SAY",
+            "text": "One more and one less. The number on the right of a number is one more. The number on the left is one less."
+          },
+          {
+            "k": "ASK",
+            "text": "One more than 17?",
+            "resp": 10
+          },
+          {
+            "k": "ASK",
+            "text": "One less than 20?",
+            "resp": 10
+          },
+          {
+            "k": "ASK",
+            "text": "One more than 19?",
+            "resp": 10
+          },
+          {
+            "k": "ASK",
+            "text": "One less than 10?",
+            "resp": 10
+          },
+          {
+            "k": "STUCK",
+            "text": "If a child hesitates on one more than 19, count on together (17, 18, 19, 20) and tap the line. The number after 19 is the first big idea of the lesson: a new ten begins."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-rem3"
+          },
+          {
+            "k": "SAY",
+            "text": "Tens and ones. Look at 34. It is 3 tens and 4 ones. Now count in tens along the line, all the way to the end. Ten tens is called one hundred."
+          },
+          {
+            "k": "WORK",
+            "text": "Count in tens together up to one hundred, then say one hundred again, slowly.",
+            "s": 25
+          },
+          {
+            "k": "ASK",
+            "text": "How many tens and how many ones in 52?",
+            "resp": 15
+          },
+          {
+            "k": "ASK",
+            "text": "And in 80?",
+            "resp": 12
+          },
+          {
+            "k": "ASK",
+            "text": "Which number is 6 tens and 1 one?",
+            "resp": 12
+          },
+          {
+            "k": "NOTE",
+            "text": "Answers: 12, 9; 18, 19, 20, 9; 5 tens 2 ones, 8 tens 0 ones, 61. Children answer with fingers, hands or a whispered number. Nobody writes. Joining cold: all a child needs is counting to 20; the tens and ones idea is taught again here with a picture."
+          }
+        ]
+      },
+      {
+        "part": "sneak",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-sneak"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked."
+          },
+          {
+            "k": "READ",
+            "text": "Puzzle one. Fill in the missing numbers in the boxes."
+          },
+          {
+            "k": "WORK",
+            "text": "Children write the two missing numbers on their own paper.",
+            "s": 40
+          },
+          {
+            "k": "READ",
+            "text": "Puzzle two. A frog sits on 59. It hops 1 number forward. Where does it land? Write the number. I know because ___."
+          },
+          {
+            "k": "WORK",
+            "text": "Children write or draw their answer.",
+            "s": 55
+          },
+          {
+            "k": "SAY",
+            "text": "Keep your paper. Nobody shows it. We will check our own thinking later, at Talk time."
+          },
+          {
+            "k": "SAY",
+            "text": "Thank you. We will come back to puzzle two in a little while."
+          },
+          {
+            "k": "NOTE",
+            "text": "Puzzle 1 answers: 20 and 23. Puzzle 2 answer: 60, because after 59 the ones are used up and a new ten begins. Many children will write 510 or 59 and 1 more: that is the first big idea of the lesson. Do not write scores or keep a list of who found it easy."
+          }
+        ]
+      },
+      {
+        "part": "explore",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-explore1"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Now you build a number line. Find your ones cards, the square ones: 0 to 10. They are mixed up. Put them in a row, from left to right, in order. Say each number as you place it."
+          },
+          {
+            "k": "WORK",
+            "text": "Children put the 11 ones cards in order, 0 to 10. They check their row against the slide. A child without cards writes 0 to 10 on 11 small pieces of paper.",
+            "s": 80
+          },
+          {
+            "k": "SAY",
+            "text": "Put your toy frog on the zero. Hop it to 7."
+          },
+          {
+            "k": "WORK",
+            "text": "Children hop the frog to 7.",
+            "s": 10
+          },
+          {
+            "k": "SAY",
+            "text": "Hop on 3 more. Which number are you on?"
+          },
+          {
+            "k": "ASK",
+            "text": "Say the number you are on.",
+            "resp": 8
+          },
+          {
+            "k": "SAY",
+            "text": "Now hop back 4. Where are you now?"
+          },
+          {
+            "k": "ASK",
+            "text": "Say the number.",
+            "resp": 8
+          },
+          {
+            "k": "ASK",
+            "text": "Count your cards. How many numbers are on the line? Then count the hops from the first card to the last. Is it the same?",
+            "resp": 30
+          },
+          {
+            "k": "SAY",
+            "text": "There are 11 cards but only 10 hops. The hops are the gaps between the cards."
+          },
+          {
+            "k": "STUCK",
+            "text": "A child who lands on the wrong card: say the number before each hop and count the hops on fingers. Touch each card with the frog as you count."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-explore2"
+          },
+          {
+            "k": "SAY",
+            "text": "Same line, new job. Now find your tens cards, the wide ones: 0, 10, 20, up to 100. Put them in a row in order. Each hop is now a jump of ten."
+          },
+          {
+            "k": "WORK",
+            "text": "Children put the 11 tens cards in order, 0 to 100. Keep the line on the table until the lesson ends.",
+            "s": 70
+          },
+          {
+            "k": "WORK",
+            "text": "Hop the frog along the line in tens together: 0, 10, 20 up to 100. Then put the frog on 60, then 30, then 90.",
+            "s": 50
+          },
+          {
+            "k": "SAY",
+            "text": "Hop the frog from 40 towards 50, one small hop at a time. There are no cards in the gap, but the numbers are there. Say each number you land on."
+          },
+          {
+            "k": "WORK",
+            "text": "Children hop the frog in small hops from 40 to 50 and say 41, 42, 43 up to 50.",
+            "s": 40
+          },
+          {
+            "k": "SAY",
+            "text": "Here is a puzzle. There is no card for 47. Where do you think 47 lives? Put your frog where you think it goes."
+          },
+          {
+            "k": "WORK",
+            "text": "Children place the frog in the gap between 40 and 50. The tutor cannot judge a frog from small tiles, so children say the two tens aloud and check against the next line.",
+            "s": 30
+          },
+          {
+            "k": "ASK",
+            "text": "Which two tens is your frog between? Which one is it nearer to? Say why.",
+            "resp": 40
+          },
+          {
+            "k": "SAY",
+            "text": "Forty-seven is between forty and fifty. Count the hops: 3 hops to fifty, 7 hops to forty. So it is nearer to fifty. Keep your line on the table."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-explore3"
+          },
+          {
+            "k": "SAY",
+            "text": "Now numbers have names. I say the name, you put your frog where the number lives. Careful, some names sound alike."
+          },
+          {
+            "k": "SAY",
+            "text": "Twenty-six."
+          },
+          {
+            "k": "WORK",
+            "text": "Frog in the gap between 20 and 30, a little past 20.",
+            "s": 25
+          },
+          {
+            "k": "SAY",
+            "text": "Sixteen."
+          },
+          {
+            "k": "WORK",
+            "text": "Frog between 10 and 20 on the tens line, a little past 10.",
+            "s": 25
+          },
+          {
+            "k": "SAY",
+            "text": "Sixty."
+          },
+          {
+            "k": "WORK",
+            "text": "Frog on the 60 card.",
+            "s": 20
+          },
+          {
+            "k": "SAY",
+            "text": "Eighty-one."
+          },
+          {
+            "k": "WORK",
+            "text": "Frog just past 80.",
+            "s": 25
+          },
+          {
+            "k": "ASK",
+            "text": "Sixteen and sixty sound alike. How can you tell which is which?",
+            "resp": 30
+          },
+          {
+            "k": "SAY",
+            "text": "Teen means ten and some more. Ty means tens. Sixteen is ten and 6 more. Sixty is 6 tens."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-explore4"
+          },
+          {
+            "k": "ASK",
+            "text": "What did you notice? Where do the numbers that are not on a card live?",
+            "resp": 40
+          },
+          {
+            "k": "SAY",
+            "text": "Every number has a spot on the line, and the tens help us find it."
+          },
+          {
+            "k": "STUCK",
+            "text": "A child who puts the tens cards in the wrong order: lay out 0, 50 and 100 first, then fill in. The jump must be the same between every two cards."
+          },
+          {
+            "k": "STUCK",
+            "text": "A child with no printed cards: write 0 to 10 on 11 small pieces of paper (about 4 cm wide) and the tens on the backs, then turn them over for round 2."
+          },
+          {
+            "k": "NOTE",
+            "text": "Main room only: no breakout rooms, so you can see every camera. The line stays on the table until Talk time. Nobody is named for a wrong place; say the number and count the hops together."
+          }
+        ]
+      },
+      {
+        "part": "mini",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-m1"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Every number has a name. Teen numbers say the ones first: four-teen is 4 and ten, 14. Ty numbers say the tens: for-ty is 4 tens, 40. Other names say the tens first, then the ones: twenty-four is 20 and 4."
+          },
+          {
+            "k": "ASK",
+            "text": "Which is greater, thirteen or thirty? How do you know?",
+            "resp": 20
+          },
+          {
+            "k": "SAY",
+            "text": "Watch the spelling. Forty has no u. Fifteen and fifty are different words: fifteen is ten and 5, fifty is 5 tens."
+          },
+          {
+            "k": "SAY",
+            "text": "Your turn to read. I say the name, you say the number or show it with your fingers: sixteen, sixty, nineteen, ninety."
+          },
+          {
+            "k": "WORK",
+            "text": "Children say or show 16, 60, 19, 90. Say each name slowly, then wait.",
+            "s": 35
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m2"
+          },
+          {
+            "k": "SAY",
+            "text": "One before and one after. Look at 59. One before is 58. One after is 60. After 9 the ones are used up, so a new ten begins and the ones go back to zero."
+          },
+          {
+            "k": "ASK",
+            "text": "What is one before 70?",
+            "resp": 12
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m3"
+          },
+          {
+            "k": "READ",
+            "text": "Your turn. Write the number for each on your paper."
+          },
+          {
+            "k": "WORK",
+            "text": "Children write three numbers.",
+            "s": 45
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m3a"
+          },
+          {
+            "k": "READ",
+            "text": "Forty. Forty-nine. Forty-eight."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m4"
+          },
+          {
+            "k": "SAY",
+            "text": "Now zoom in on the line between 40 and 50. Forty-seven lives here, 7 hops after forty."
+          },
+          {
+            "k": "ASK",
+            "text": "How many hops is it from 47 to 50?",
+            "resp": 12
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m5"
+          },
+          {
+            "k": "SAY",
+            "text": "Which ten is nearer? Count the hops each way, and pick the smaller number of hops. Forty-five is exactly halfway: 5 hops each way, so no ten is nearer."
+          },
+          {
+            "k": "ASK",
+            "text": "Is 43 nearer to 40 or to 50? How do you know?",
+            "resp": 20
+          },
+          {
+            "k": "ASK",
+            "text": "Which ten is 68 nearer to?",
+            "resp": 15
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m6"
+          },
+          {
+            "k": "SAY",
+            "text": "Sometimes marks are missing. Count the jumps: 4. From 20 to 60 is 40, shared between 4 jumps. That is 10 each. So the marks are 30, 40 and 50."
+          },
+          {
+            "k": "ASK",
+            "text": "A line goes 0, 5, 10, a missing mark, then 20. What is the missing mark? What is the jump?",
+            "resp": 20
+          },
+          {
+            "k": "NOTE",
+            "text": "Key words to use every time: number line, hop, one before, one after, between, nearer, halfway. Say teen means ten and some more, ty means tens. Do not teach rounding as a rule: nearer ten is a thinking idea and 45 is never asked in a test. Do not teach skip counting in 5s: the 0, 5, 10 line is only to show a jump."
+          },
+          {
+            "k": "STUCK",
+            "text": "If a child writes forty-eight as 408 or 84: ask them to say the tens first, then the ones, and to put the frog between 40 and 50."
+          }
+        ]
+      },
+      {
+        "part": "break",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-break"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Stand up and stretch your arms out wide. Your arms are a number line. Your left hand is zero. Your right hand is one hundred. Point to where each number lives."
+          },
+          {
+            "k": "WORK",
+            "text": "Call 50 (the middle, nose), 10, 90, 25, 75. Children point or lean to the spot on their arm line. Then 5 small hops forward and 3 back on the spot, counting aloud.",
+            "s": 160
+          }
+        ]
+      },
+      {
+        "part": "work",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-ws1"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "READ",
+            "text": "Page 1, Start here. Question 1: write the two missing numbers on the line. Question 2: write the missing numbers. Question 3: write the number one before and one after each."
+          },
+          {
+            "k": "WORK",
+            "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
+            "s": 520
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-ws1ans"
+          },
+          {
+            "k": "READ",
+            "text": "Question 1: 10 and 12. Question 2: 29, 39 and 41, 70. Question 3: 34 and 36, 59 and 61, 78 and 80.  Mark your own page in another colour."
+          },
+          {
+            "k": "SAY",
+            "text": "After question 3 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-ws2"
+          },
+          {
+            "k": "READ",
+            "text": "Page 2. Question 4: write each number in digits. Question 5: write the number in words. Question 6: write the missing tens. Question 7: which two tens is each number between? Question 8: Is Ben correct? Then write the number after 59."
+          },
+          {
+            "k": "WORK",
+            "text": "Page 2, questions 4 to 8.",
+            "s": 640
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-ws2ans"
+          },
+          {
+            "k": "READ",
+            "text": "Question 4: 15, 50, 24. Question 5: twenty, forty. Question 6: thirty, fifty and eighty. Question 7: twenty and thirty, sixty and seventy. Question 8: No. Sixty."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-choice"
+          },
+          {
+            "k": "SAY",
+            "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time. Anything not finished is for home too."
+          },
+          {
+            "k": "WORK",
+            "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
+            "s": 200
+          },
+          {
+            "k": "STUCK",
+            "text": "Q1 and Q7: say the numbers out loud in order and tap the papers on your own line. Q3 and Q4: say the tens first. Q5: count in tens with the frog. Q6: put the frog on the number, then look left and right for the tens."
+          },
+          {
+            "k": "STUCK",
+            "text": "A child who is still stuck ticks 'I am still stuck' on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp. You then help in the open session in the next lesson. Never a private message to a child."
+          },
+          {
+            "k": "NOTE",
+            "text": "Think harder is for ideas taught today in a new setting (nearer ten, numbers between, halfway, reaching 100). Go further is for mastery and extension (missing marks, meeting in the middle, making your own line). Do not announce who is on which page. Pairs are never split unless both children agree. Slow class: the workbook part needs about 31:30 against 28:00, so Start here may fill most of it. Take the extra minutes from the flex time, do not skip the answer slides, and say that pages 3 to 5 are for home."
+          }
+        ]
+      },
+      {
+        "part": "talk",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-talk"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "READ",
+            "text": "Are fourteen and forty the same number? Circle Yes or No. I know because ___."
+          },
+          {
+            "k": "WORK",
+            "text": "Put your frog on fourteen and then on forty on your line. Which one is further along?",
+            "s": 50
+          },
+          {
+            "k": "WORK",
+            "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
+            "s": 60
+          },
+          {
+            "k": "ASK",
+            "text": "Who would like to share? Volunteers first. A pass is always fine.",
+            "resp": 90
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-sneakans"
+          },
+          {
+            "k": "SAY",
+            "text": "Remember puzzle two? A frog on 59 hops one number forward. It lands on sixty. After nine, the ones are used up and a new ten begins."
+          },
+          {
+            "k": "ASK",
+            "text": "Did anyone change their mind about puzzle two while we worked? You can just nod.",
+            "resp": 20
+          },
+          {
+            "k": "ASK",
+            "text": "Where did you use Draw it today?",
+            "resp": 10,
+            "spine": "talk"
+          },
+          {
+            "k": "NOTE",
+            "text": "Listen for the tool being named, not the answer. Volunteers first, a pass is always fine.",
+            "spine": "talk"
+          },
+          {
+            "k": "NOTE",
+            "text": "Model answer: No. 14 is ten and 4 more, just after 10 on the line. 40 is 4 tens, much further along. 40 is greater. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
+          }
+        ]
+      },
+      {
+        "part": "exit",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-exit"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
+          },
+          {
+            "k": "READ",
+            "text": "E1. Write seventy-three in digits. E2. Seventy-six is between which two tens? E3. The frog is on ninety-nine and hops one number forward. Where does it land?",
+            "s": 24
+          },
+          {
+            "k": "WORK",
+            "text": "Children answer E1 to E3 on their own.",
+            "s": 150
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-exitans"
+          },
+          {
+            "k": "READ",
+            "text": "Seventy-three. Seventy and eighty. One hundred."
+          },
+          {
+            "k": "SAY",
+            "text": "Check your own ticket in a different colour. Well done. Put a star by each one you got right."
+          },
+          {
+            "k": "NOTE",
+            "text": "Nothing is collected or marked live. Children tick their own ticket. If many children miss one question, spend two minutes on it at the start of the next lesson, in the open session, no names. Do not read out any child's result."
+          }
+        ]
+      },
+      {
+        "part": "look",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-look"
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+            "spine": "look"
+          },
+          {
+            "k": "WORK",
+            "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+            "s": 100,
+            "spine": "look"
+          }
+        ]
+      },
+      {
+        "part": "flex",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-end"
+          },
+          {
+            "k": "SAY",
+            "text": "Well done, inquirers. Next lesson is Digit Cards. Please have your digit cards ready, the tens bars and ones squares, and a pencil and paper. Goodbye, and thank you to the grown-ups."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-opt",
+            "optional": true
+          },
+          {
+            "k": "SAY",
+            "text": "Optional, only if you are on time: the halfway number between 0 and 100 is 50. What is halfway between 0 and 50? How do you know?",
+            "optional": true
+          },
+          {
+            "k": "WORK",
+            "text": "Short think time, then take two answers.",
+            "s": 90,
+            "optional": true
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-menu",
+            "optional": true
+          },
+          {
+            "k": "SAY",
+            "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
+            "optional": true
+          },
+          {
+            "k": "NOTE",
+            "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: 25 (0 to 50 is 50 hops, half of that is 25 hops, so 25). If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+          }
+        ]
+      }
+    ]
+  },
+  "slides": [
+    {
+      "id": "s-title",
+      "part": "opening",
+      "kind": "title",
+      "title": "Number Words and the Number Line",
+      "blocks": [
+        {
+          "t": "card",
+          "head": "TODAY WE WILL",
+          "items": [
+            "Find numbers on a number line, and read their names."
+          ]
+        }
+      ],
+      "note": "Lesson 2 of Term 1, 90 minutes. Objective: find any number to 100 on a number line, say and read its name, and use the tens marks to say which two tens it is between. Time plan: opening 0 to 3, warm-up 3 to 9, sneak-peek 9 to 13, explore 13 to 28, mini-lesson 28 to 38, brain break 38 to 42, workbook 42 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Nobody is told which page they should be on. Remind the group that the lesson is recorded (the tutor, the shared screen and any unmuted voice) and that a child may keep the camera off.",
+      "subtitle": "Whole numbers: where each number lives",
+      "mascot": {
+        "size": "l",
+        "say": "Hi, I'm Mi. Let's notice, test and explain why!"
+      }
+    },
+    {
+      "id": "s-rem1",
+      "part": "remember",
+      "kind": "light",
+      "title": "Warm-up: count along the line",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Say each number as I point"
+        },
+        {
+          "t": "visual",
+          "type": "number_line",
+          "start": 6,
+          "end": 14,
+          "step": 1,
+          "label_every": 1
+        },
+        {
+          "t": "p",
+          "text": "Count on from 6 to 14. Then count back down."
+        }
+      ],
+      "note": "Count on from 6 to 14 and back, slowly. A number line is numbers in order along a path. Joining cold: a child who has only counted to 20 can do this; they hear it before they say it. Questions: start on 9, count on 3 (12); start on 13, count back 4 (9). Hands up or a whispered number is fine.",
+      "mascot": {
+        "size": "s",
+        "say": "Count along with me!"
+      }
+    },
+    {
+      "id": "s-rem2",
+      "part": "remember",
+      "kind": "light",
+      "title": "One more, one less",
+      "blocks": [
+        {
+          "t": "visual",
+          "type": "number_line",
+          "start": 15,
+          "end": 19,
+          "step": 1,
+          "label_every": 1,
+          "highlight": [
+            17
+          ],
+          "jumps": [
+            [
+              17,
+              18,
+              "one more"
+            ],
+            [
+              17,
+              16,
+              "one less"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "text": "Right of 17 is one more. Left of 17 is one less."
+        }
+      ],
+      "note": "Say each number; children show on fingers or say it. Answers: one more than 17 is 18; one less than 20 is 19; one more than 19 is 20; one less than 10 is 9. No writing, no marks. Count on aloud together if a child is unsure."
+    },
+    {
+      "id": "s-rem3",
+      "part": "remember",
+      "kind": "light",
+      "title": "Tens and ones, and counting in tens",
+      "blocks": [
+        {
+          "t": "cols",
+          "cols": [
+            [
+              {
+                "t": "visual",
+                "type": "bundles",
+                "tens": 3,
+                "ones": 4,
+                "size": "s",
+                "label": "34 is 3 tens and 4 ones"
+              }
+            ],
+            [
+              {
+                "t": "p",
+                "text": "Count in tens to one hundred:"
+              }
+            ]
+          ]
+        },
+        {
+          "t": "visual",
+          "type": "number_line",
+          "start": 0,
+          "end": 100,
+          "step": 10
+        }
+      ],
+      "note": "Show 34 as 3 tens and 4 ones, then count in tens to 100 together. Say that ten tens is called one hundred. Questions: 52 is 5 tens 2 ones; 80 is 8 tens 0 ones; 6 tens and 1 one is 61. This is a spiral review of skip counting in tens (holiday topic) and the tens and ones idea from Lesson 1, taught again with a picture for any child who was not there."
+    },
+    {
+      "id": "s-sneak",
+      "part": "sneak",
+      "kind": "light",
+      "title": "Sneak-peek puzzles",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Ideas we have not learnt yet. A guess is a great start. Nobody is marked."
+        },
+        {
+          "t": "cols",
+          "cols": [
+            [
+              {
+                "t": "card",
+                "head": "PUZZLE 1: anyone can try",
+                "items": [
+                  "Fill in the missing numbers in the boxes."
+                ]
+              },
+              {
+                "t": "visual",
+                "type": "number_line",
+                "start": 18,
+                "end": 23,
+                "step": 1,
+                "label_every": 1,
+                "hide": [
+                  20,
+                  23
+                ],
+                "width": 560
+              }
+            ],
+            [
+              {
+                "t": "card",
+                "head": "PUZZLE 2: think",
+                "items": [
+                  "A frog sits on 59.",
+                  "It hops 1 number forward. Where does it land?",
+                  "Write the number. I know because ___."
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "note": "Puzzle 1 (20 and 23) is an access question: any child who can count on can do it. Puzzle 2 is a thinking question on the key idea of the lesson (after 59 a new ten begins). Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera: children keep their papers and check their own thinking at Talk time. There is no private chat and no board in front of the group. Answers: 20 and 23; 60 (after 59 the ones are used up). Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
+    },
+    {
+      "id": "s-explore1",
+      "part": "explore",
+      "kind": "light",
+      "title": "Explore: build a number line",
+      "blocks": [
+        {
+          "t": "list",
+          "ordered": true,
+          "items": [
+            "Find your ones cards, 0 to 10.",
+            "Put them in a row, in order.",
+            "Put your frog on 0. Hop where I say."
+          ]
+        },
+        {
+          "t": "card",
+          "head": "WHAT IF?",
+          "items": [
+            "What if every card was worth ten? Try the tens cards next."
+          ]
+        }
+      ],
+      "note": "Round 1, about 5 minutes. Objects first, little writing. Children put the 11 ones cards (square, from the kit page) in order left to right and hop a small toy (the frog) where you say: hop to 7, hop on 3 more (10), hop back 4 (6). They check their row against the slide. The what-if card previews round 2 and no child is named for trying it. A child without cards writes 0 to 10 on 11 small pieces of paper. Ask: 11 cards, how many hops? 10: the hops are the gaps."
+    },
+    {
+      "id": "s-explore2",
+      "part": "explore",
+      "kind": "light",
+      "title": "Same line, new job",
+      "blocks": [
+        {
+          "t": "p",
+          "text": "Find your tens cards. Put 0, 10, 20 up to 100 in a row."
+        },
+        {
+          "t": "visual",
+          "type": "number_line",
+          "start": 0,
+          "end": 100,
+          "step": 10
+        },
+        {
+          "t": "p",
+          "text": "There is no card for 47. Where does it live?"
+        }
+      ],
+      "note": "Round 2, about 6 minutes. The same 11 places become a line in tens: this is the idea of a scale, the same line counted in ones or in tens. Children lay the 11 tens cards (wide, from the kit page) in order, hop the frog in tens, then place it on 60, 30 and 90. Then hop in small steps from 40 to 50 through the gap. Then ask for 47: it lives between 40 and 50. Count the hops: 3 to 50, 7 to 40, so it is nearer 50. Children keep their line on the table until Talk time."
+    },
+    {
+      "id": "s-explore3",
+      "part": "explore",
+      "kind": "light",
+      "title": "Show me with the names",
+      "blocks": [
+        {
+          "t": "p",
+          "text": "I say the name. Put your frog where the number lives."
+        },
+        {
+          "t": "numrow",
+          "items": [
+            "twenty-six",
+            "sixteen",
+            "sixty",
+            "eighty-one"
+          ]
+        },
+        {
+          "t": "card",
+          "head": "TEEN OR TY?",
+          "items": [
+            "Teen means ten and some more.",
+            "Ty means tens."
+          ]
+        }
+      ],
+      "note": "Round 3, about 4 minutes. Say each name, children put the frog where the number lives, then you show the word. Twenty-six is between 20 and 30; sixteen is between 10 and 20; sixty is on the 60 paper; eighty-one is just past 80. Ask how to tell sixteen from sixty. Teen means ten and some more, so sixteen is 16. Ty means tens, so sixty is 6 tens, 60. Keep spelling small: children say and read the words today; writing is only copying a few tens words in the workbook."
+    },
+    {
+      "id": "s-explore4",
+      "part": "explore",
+      "kind": "light",
+      "title": "What did we notice?",
+      "blocks": [
+        {
+          "t": "list",
+          "ordered": false,
+          "items": [
+            "Which numbers sit on a card?",
+            "Where do the other numbers live?",
+            "Teen or ty: which is further along the line?"
+          ]
+        }
+      ],
+      "note": "Take one or two answers from volunteers. Key idea: every number has a spot on the line, the tens marks help us find it, and a number between two tens is nearer to one of them (or exactly halfway). Teen numbers are close to ten; ty numbers are far along. Repeat a child's answer in your own words so the recording picks it up."
+    },
+    {
+      "id": "s-m1",
+      "part": "mini",
+      "kind": "light",
+      "title": "Say it, read it",
+      "blocks": [
+        {
+          "t": "table",
+          "header": true,
+          "rows": [
+            [
+              "Digits",
+              "The name"
+            ],
+            [
+              "13",
+              "thirteen: ten and 3 more"
+            ],
+            [
+              "30",
+              "thirty: 3 tens"
+            ],
+            [
+              "14",
+              "fourteen: ten and 4 more"
+            ],
+            [
+              "40",
+              "forty: 4 tens (no u)"
+            ],
+            [
+              "24",
+              "twenty-four: 2 tens and 4 more"
+            ],
+            [
+              "100",
+              "one hundred: ten tens"
+            ]
+          ]
+        }
+      ],
+      "note": "Teen numbers say the ones first (fourteen is four and ten). Ty numbers say the tens (forty is four tens). Two-part names say the tens first then the ones (twenty-four). Ask: which is greater, thirteen or thirty? Answer: thirty, it is 3 tens. Spelling: forty has no u; fifteen is not fifty. Children read the words; they do not need to spell them from memory."
+    },
+    {
+      "id": "s-m2",
+      "part": "mini",
+      "kind": "light",
+      "title": "One before, one after",
+      "blocks": [
+        {
+          "t": "visual",
+          "type": "number_line",
+          "start": 57,
+          "end": 61,
+          "step": 1,
+          "label_every": 1,
+          "highlight": [
+            59
+          ]
+        },
+        {
+          "t": "visual",
+          "type": "number_line",
+          "start": 68,
+          "end": 72,
+          "step": 1,
+          "label_every": 1,
+          "highlight": [
+            70
+          ]
+        },
+        {
+          "t": "p",
+          "text": "After 59 the ones are used up. A new ten begins: 60."
+        }
+      ],
+      "note": "Worked example. One before 59 is 58 and one after is 60. Ask: what is one before 70? Answer: 69. A common slip is writing 510 after 59, or 50. Say the numbers out loud in order and tap the line."
+    },
+    {
+      "id": "s-m3",
+      "part": "mini",
+      "kind": "light",
+      "title": "Your turn: write the number",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Write on your paper. Timer: 1 minute"
+        },
+        {
+          "t": "cols",
+          "cols": [
+            [
+              {
+                "t": "card",
+                "head": "ONE AFTER",
+                "items": [
+                  "39"
+                ]
+              }
+            ],
+            [
+              {
+                "t": "card",
+                "head": "ONE BEFORE",
+                "items": [
+                  "50"
+                ]
+              }
+            ],
+            [
+              {
+                "t": "card",
+                "head": "THE NAME",
+                "items": [
+                  "forty-eight"
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "note": "Each child writes on their own paper. Walk the cameras. Do not ask children to hold boards up in front of the group. Answers: 40, 49, 48."
+    },
+    {
+      "id": "s-m3a",
+      "part": "mini",
+      "kind": "light",
+      "title": "Check: write the number",
+      "blocks": [
+        {
+          "t": "cols",
+          "cols": [
+            [
+              {
+                "t": "card",
+                "head": "ONE AFTER 39",
+                "items": [
+                  "The next ten starts."
+                ]
+              },
+              {
+                "t": "answer",
+                "text": "40"
+              }
+            ],
+            [
+              {
+                "t": "card",
+                "head": "ONE BEFORE 50",
+                "items": [
+                  "Count back one."
+                ]
+              },
+              {
+                "t": "answer",
+                "text": "49"
+              }
+            ],
+            [
+              {
+                "t": "card",
+                "head": "forty-eight",
+                "items": [
+                  "Tens first."
+                ]
+              },
+              {
+                "t": "answer",
+                "text": "48"
+              }
+            ]
+          ]
+        }
+      ],
+      "note": "Answers: 40, 49, 48. Read each answer aloud so a child watching the recording can mark their own work. A child who wrote 38 or 310: after 39 the ones are used up, so a new ten begins."
+    },
+    {
+      "id": "s-m4",
+      "part": "mini",
+      "kind": "light",
+      "title": "Zoom in between two tens",
+      "blocks": [
+        {
+          "t": "visual",
+          "type": "number_line",
+          "start": 40,
+          "end": 50,
+          "step": 1,
+          "label_every": 1,
+          "highlight": [
+            47
+          ]
+        },
+        {
+          "t": "p",
+          "text": "47 lives between 40 and 50. It is 7 hops after 40."
+        }
+      ],
+      "note": "Zoom in on the line between 40 and 50. 47 is 7 hops after 40. Ask: how many hops from 47 to 50? Answer: 3. Every number lives between two tens, or sits on one. To find the two tens, look at the tens digit: 47 has 4 tens, so it is past 40 and not yet 50."
+    },
+    {
+      "id": "s-m5",
+      "part": "mini",
+      "kind": "light",
+      "title": "Which ten is nearer?",
+      "blocks": [
+        {
+          "t": "cols",
+          "cols": [
+            [
+              {
+                "t": "visual",
+                "type": "number_line",
+                "start": 40,
+                "end": 50,
+                "step": 1,
+                "label_every": 1,
+                "highlight": [
+                  47
+                ],
+                "jumps": [
+                  [
+                    47,
+                    50,
+                    "3 hops"
+                  ],
+                  [
+                    47,
+                    40,
+                    "7 hops"
+                  ]
+                ]
+              },
+              {
+                "t": "p",
+                "text": "Nearer to 50."
+              }
+            ],
+            [
+              {
+                "t": "visual",
+                "type": "number_line",
+                "start": 40,
+                "end": 50,
+                "step": 1,
+                "label_every": 1,
+                "highlight": [
+                  45
+                ],
+                "jumps": [
+                  [
+                    45,
+                    50,
+                    "5 hops"
+                  ],
+                  [
+                    45,
+                    40,
+                    "5 hops"
+                  ]
+                ]
+              },
+              {
+                "t": "p",
+                "text": "Halfway. No ten is nearer."
+              }
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "text": "Count the hops each way. The smaller number of hops wins."
+        }
+      ],
+      "note": "Count the hops each way and pick the smaller. 47 is nearer 50. 45 is exactly halfway: 5 hops each way, so no ten is nearer; do not teach a rounding rule. Ask: is 43 nearer to 40 or 50 (40, 3 hops against 7)? Which ten is 68 nearer to (70, 2 hops against 8)? The 4 in 47 does not make it nearer to 40: that is the common slip. This idea is beyond the Primary 1 syllabus and is thinking enrichment, never a rule to memorise."
+    },
+    {
+      "id": "s-m6",
+      "part": "mini",
+      "kind": "light",
+      "title": "Marks that are missing",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Equal jumps. Count the jumps first."
+        },
+        {
+          "t": "cols",
+          "cols": [
+            [
+              {
+                "t": "visual",
+                "type": "number_line",
+                "start": 20,
+                "end": 60,
+                "step": 10,
+                "hide": [
+                  30,
+                  40,
+                  50
+                ]
+              }
+            ],
+            [
+              {
+                "t": "visual",
+                "type": "number_line",
+                "start": 20,
+                "end": 60,
+                "step": 10,
+                "jumps": [
+                  [
+                    20,
+                    30,
+                    "10"
+                  ],
+                  [
+                    30,
+                    40,
+                    "10"
+                  ],
+                  [
+                    40,
+                    50,
+                    "10"
+                  ],
+                  [
+                    50,
+                    60,
+                    "10"
+                  ]
+                ]
+              }
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "text": "4 jumps. 20 to 60 is 40. 40 shared by 4 is 10 each."
+        }
+      ],
+      "note": "Worked example. The boxes are equal jumps. Count the jumps (4). The whole gap, 20 to 60, is 40, shared between 4 jumps: 10 each. So the marks are 30, 40, 50. Then ask about 0, 5, 10, a missing mark, 20: the jump is 5 and the missing mark is 15. Only the jump idea is taught; skip counting in 5s comes in Lesson 4."
+    },
+    {
+      "id": "s-break",
+      "part": "break",
+      "kind": "dark",
+      "title": "Be the number line",
+      "blocks": [
+        {
+          "t": "p",
+          "text": "Arms wide. Left hand is 0. Right hand is 100."
+        },
+        {
+          "t": "card",
+          "head": "I CALL",
+          "items": [
+            "50, 10, 90, 25, 75"
+          ]
+        },
+        {
+          "t": "p",
+          "text": "Point to where each number lives. Sip some water."
+        }
+      ],
+      "note": "Four minutes. Stand up on camera and stretch arms wide: left hand is 0, right hand is 100, and the nose is the middle. Call 50 (middle), 10 (near the left hand), 90 (near the right), 25 and 75 (halfway to each end). Children point or lean. Then 5 small hops forward and 3 back on the spot, counting aloud. No equipment. Keep it gentle for small spaces."
+    },
+    {
+      "id": "s-ws1",
+      "part": "work",
+      "kind": "light",
+      "title": "Workbook page 1: Start here",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Questions 1 to 3. Timer: 9 minutes"
+        },
+        {
+          "t": "qs",
+          "ids": [
+            "S1",
+            "S2",
+            "S3"
+          ],
+          "short": true
+        }
+      ],
+      "note": "Read questions 1 to 3 aloud. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. A frog on the line helps any child who is unsure."
+    },
+    {
+      "id": "s-ws1ans",
+      "part": "work",
+      "kind": "light",
+      "title": "Check page 1",
+      "blocks": [
+        {
+          "t": "answers",
+          "ids": [
+            "S1",
+            "S2",
+            "S3"
+          ]
+        }
+      ],
+      "note": "Read each answer aloud. Children mark their own page in a different colour. Never ask a child to show a wrong answer to the group."
+    },
+    {
+      "id": "s-ws2",
+      "part": "work",
+      "kind": "light",
+      "title": "Workbook page 2: Start here",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Questions 4 to 8. Timer: 11 minutes"
+        },
+        {
+          "t": "qs",
+          "ids": [
+            "S4",
+            "S5",
+            "S6",
+            "S7",
+            "S8"
+          ],
+          "short": true
+        }
+      ],
+      "note": "Read questions 4 to 8 aloud. Question 5 is copying from the word bank, not spelling from memory. Question 8 is a spot-the-mistake: read it aloud and let children say the answer if writing is slow."
+    },
+    {
+      "id": "s-ws2ans",
+      "part": "work",
+      "kind": "light",
+      "title": "Check page 2",
+      "blocks": [
+        {
+          "t": "answers",
+          "ids": [
+            "S4",
+            "S5",
+            "S6",
+            "S7",
+            "S8"
+          ]
+        }
+      ],
+      "note": "Read each answer aloud so a child watching the recording can mark their own work. Question 8 answer: sixty. Ben kept counting ones after 9; after 59 a new ten begins. Never ask a child to show a wrong answer to the group."
+    },
+    {
+      "id": "s-choice",
+      "part": "work",
+      "kind": "light",
+      "title": "Choose your next page",
+      "blocks": [
+        {
+          "t": "table",
+          "header": true,
+          "rows": [
+            [
+              "Page",
+              "What it is"
+            ],
+            [
+              "Think harder (page 3)",
+              "Our idea in a new setting"
+            ],
+            [
+              "Go further (page 4)",
+              "Harder puzzles"
+            ],
+            [
+              "Investigation (page 5)",
+              "A pattern to find"
+            ],
+            [
+              "Check",
+              "Finish and check your own work"
+            ]
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Everyone may choose. Not finished? Pages 3 to 5 are for home too."
+        }
+      ],
+      "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 3 minutes."
+    },
+    {
+      "id": "s-talk",
+      "part": "talk",
+      "kind": "light",
+      "title": "Talk and explain",
+      "blocks": [
+        {
+          "t": "card",
+          "head": "TALK ABOUT IT",
+          "items": [
+            "Are fourteen and forty the same number?"
+          ]
+        },
+        {
+          "t": "p",
+          "text": "Use your number line to explain."
+        },
+        {
+          "t": "chip",
+          "text": "I think ... because ..."
+        }
+      ],
+      "note": "One minute of talk to the grown-up next to you, or to your screen. Then volunteers first; a pass is always fine; never call a child by name to answer. Model answer: no. 14 is ten and 4 more, just after 10. 40 is 4 tens, far along the line. Repeat each child's answer in your own words for the recording."
+    },
+    {
+      "id": "s-sneakans",
+      "part": "talk",
+      "kind": "light",
+      "title": "Back to the sneak-peek",
+      "blocks": [
+        {
+          "t": "visual",
+          "type": "number_line",
+          "start": 55,
+          "end": 65,
+          "step": 1,
+          "label_every": 1,
+          "highlight": [
+            60
+          ],
+          "jumps": [
+            [
+              59,
+              60,
+              "1 hop"
+            ]
+          ]
+        },
+        {
+          "t": "answer",
+          "text": "The frog on 59 lands on 60: a new ten begins."
+        }
+      ],
+      "note": "Reveal puzzle 2 now. After 59 the ones are used up (9 is the last one), so a new ten begins: 60. A common slip is 510. Say: many of you wrote a good reason. Do not read out anyone's earlier answer."
+    },
+    {
+      "id": "s-exit",
+      "part": "exit",
+      "kind": "light",
+      "title": "Exit ticket",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "On your own. No looking back. Timer: 3 minutes"
+        },
+        {
+          "t": "qs",
+          "ids": [
+            "E1",
+            "E2",
+            "E3"
+          ],
+          "short": false
+        }
+      ],
+      "note": "Children answer on page 5. Read E1, E2 and E3 aloud (the questions are on the slide). Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
+    },
+    {
+      "id": "s-exitans",
+      "part": "exit",
+      "kind": "light",
+      "title": "Check the exit ticket",
+      "blocks": [
+        {
+          "t": "answers",
+          "ids": [
+            "E1",
+            "E2",
+            "E3"
+          ]
+        }
+      ],
+      "note": "Read each answer aloud. Children check their own ticket in a different colour."
+    },
+    {
+      "id": "s-look",
+      "part": "look",
+      "kind": "lookback",
+      "title": "Look-back",
+      "blocks": [
+        {
+          "t": "lookback"
+        }
+      ],
+      "note": "Three minutes. Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child.",
+      "mascot": {
+        "size": "s",
+        "say": "Take your time. You can pass."
+      }
+    },
+    {
+      "id": "s-end",
+      "part": "flex",
+      "kind": "dark",
+      "title": "Well done, inquirers!",
+      "blocks": [
+        {
+          "t": "p",
+          "text": "Show a grown-up your number line and one thing you found out."
+        },
+        {
+          "t": "card",
+          "head": "NEXT LESSON",
+          "items": [
+            "Digit Cards",
+            "Have ready: digit cards, kit pieces, pencil."
+          ]
+        }
+      ],
+      "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. If the whole class is ahead, show the optional menu slide and use the Spare-time menu from the tutor guide.",
+      "mascot": {
+        "size": "l",
+        "say": "Great thinking today!"
+      }
+    },
+    {
+      "id": "s-opt",
+      "part": "flex",
+      "kind": "light",
+      "title": "Go further: halfway",
+      "blocks": [
+        {
+          "t": "p",
+          "text": "Halfway between 0 and 100 is 50."
+        },
+        {
+          "t": "p",
+          "text": "What is halfway between 0 and 50? How do you know?"
+        },
+        {
+          "t": "visual",
+          "type": "number_line",
+          "start": 0,
+          "end": 50,
+          "step": 5
+        }
+      ],
+      "note": "Optional, only if you are on time. Answer: 25. The gap from 0 to 50 is 50 hops, and half of 50 is 25 hops. 25 sits halfway between 20 and 30, so we use two tens marks. Take two answers and move on.",
+      "optional": true
+    },
+    {
+      "id": "s-menu",
+      "part": "flex",
+      "kind": "light",
+      "title": "If we have time: pick one",
+      "blocks": [
+        {
+          "t": "table",
+          "header": true,
+          "rows": [
+            [
+              "Activity",
+              "What we do"
+            ],
+            [
+              "Is it always true?",
+              "One after a number: does only the ones digit change?"
+            ],
+            [
+              "Make a puzzle",
+              "Write a mystery number puzzle for your grown-up"
+            ],
+            [
+              "Teach it back",
+              "Show which ten 63 is nearer to, using hops"
+            ]
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Optional. Everyone may join."
+        }
+      ],
+      "note": "Optional Spare-time menu, used only if the whole class is ahead. Pick one or two activities (3 to 5 minutes each); full tutor lines and answers are in the tutor guide. Never start new content and never name who is ahead. Slow down with how do you know rather than rushing on. These minutes come from the flex buffer and are not part of the 90-minute sum.",
+      "optional": true
+    }
+  ],
+  "tiers": {
+    "start": [
+      {
+        "id": "S1",
+        "page": 1,
+        "tier": "start",
+        "text": "Fill in the missing numbers in the boxes.",
+        "parts": [],
+        "answer": "10 and 12",
+        "val": [
+          10,
+          12
+        ],
+        "hint": "Count on from the number before the empty box. Say each number out loud.",
+        "solution": "The line goes 8, 9, 10, 11, 12, 13, 14. The empty boxes are 10 and 12.",
+        "mistakes": [
+          "Writing 9 or 11 again (not counting on).",
+          "Leaving a box empty."
+        ],
+        "mins": 1.5,
+        "lines": 0,
+        "visual": {
+          "type": "number_line",
+          "start": 8,
+          "end": 14,
+          "step": 1,
+          "label_every": 1,
+          "hide": [
+            10,
+            12
+          ],
+          "width": 460
+        }
+      },
+      {
+        "id": "S2",
+        "page": 1,
+        "tier": "start",
+        "text": "Fill in the missing numbers.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "26, 27, 28, [], 30",
+            "ans": "29",
+            "val": 29
+          },
+          {
+            "l": "b",
+            "text": "37, 38, [], 40, []",
+            "ans": "39 and 41",
+            "val": [
+              39,
+              41
+            ]
+          },
+          {
+            "l": "c",
+            "text": "[], 71, 72, 73",
+            "ans": "70",
+            "val": 70
+          }
+        ],
+        "answer": "29; 39 and 41; 70",
+        "val": [
+          29,
+          39,
+          41,
+          70
+        ],
+        "hint": "Count on one at a time. Say each number out loud. Use your frog on the line.",
+        "solution": "(a) 28, then 29, then 30. (b) 38, then 39, then 40, then 41: the line goes on after 40. (c) One before 71 is 70.",
+        "mistakes": [
+          "Writing 310 for the number after 38 (the ones digit goes past 9).",
+          "Stopping at 40 and leaving the last box empty."
+        ],
+        "mins": 2.5,
+        "lines": 0
+      },
+      {
+        "id": "S3",
+        "page": 1,
+        "tier": "start",
+        "text": "Fill in the number just before and the number just after.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "[], 35, []",
+            "ans": "34 and 36",
+            "val": [
+              34,
+              36
+            ]
+          },
+          {
+            "l": "b",
+            "text": "[], 60, []",
+            "ans": "59 and 61",
+            "val": [
+              59,
+              61
+            ]
+          },
+          {
+            "l": "c",
+            "text": "[], 79, []",
+            "ans": "78 and 80",
+            "val": [
+              78,
+              80
+            ]
+          }
+        ],
+        "answer": "34 and 36; 59 and 61; 78 and 80",
+        "val": [
+          34,
+          36,
+          59,
+          61,
+          78,
+          80
+        ],
+        "hint": "One before is one step back on the line. One after is one step forward.",
+        "solution": "(a) 34 and 36. (b) Back from 60 is 59, on from 60 is 61. (c) Back from 79 is 78. After 79 the ones are used up, so a new ten begins: 80.",
+        "mistakes": [
+          "Writing 50 and 70 (a whole ten instead of one step).",
+          "Writing 710 for the number after 79."
+        ],
+        "mins": 3,
+        "lines": 0
+      },
+      {
+        "id": "S4",
+        "page": 2,
+        "tier": "start",
+        "text": "Write the numbers in digits.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "fifteen = []",
+            "ans": "15",
+            "val": 15
+          },
+          {
+            "l": "b",
+            "text": "fifty = []",
+            "ans": "50",
+            "val": 50
+          },
+          {
+            "l": "c",
+            "text": "twenty-four = []",
+            "ans": "24",
+            "val": 24
+          }
+        ],
+        "answer": "15, 50, 24",
+        "val": [
+          15,
+          50,
+          24
+        ],
+        "hint": "Teen means ten and some more. Ty means tens. Say the tens first, then the ones.",
+        "solution": "(a) fifteen is ten and 5: 15. (b) fifty is 5 tens: 50. (c) twenty is 20 and 4 more: 24.",
+        "mistakes": [
+          "Writing 50 for fifteen, or 15 for fifty (teen and ty mixed up).",
+          "Writing 42 for twenty-four (digits the wrong way round)."
+        ],
+        "mins": 2.5,
+        "lines": 0
+      },
+      {
+        "id": "S5",
+        "page": 2,
+        "tier": "start",
+        "text": "Write each number in words. Word bank: twenty, forty, sixty.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "20 = ___",
+            "ans": "twenty",
+            "val": "twenty"
+          },
+          {
+            "l": "b",
+            "text": "40 = ___",
+            "ans": "forty",
+            "val": "forty"
+          }
+        ],
+        "answer": "twenty, forty",
+        "val": [
+          "twenty",
+          "forty"
+        ],
+        "hint": "Say the number of tens, then ty: 4 tens is forty. Copy the word from the bank.",
+        "solution": "20 is 2 tens: twenty. 40 is 4 tens: forty (no u).",
+        "mistakes": [
+          "Writing fourty (forty has no u).",
+          "Copying the word for a different number, for example sixty for 40."
+        ],
+        "mins": 2.5,
+        "lines": 0
+      },
+      {
+        "id": "S6",
+        "page": 2,
+        "tier": "start",
+        "text": "Fill in the missing numbers. The numbers go up by 10 each time.",
+        "parts": [
+          {
+            "l": "",
+            "text": "0, 10, 20, [], 40, [], 60, 70, [], 90, 100",
+            "ans": "30, 50 and 80",
+            "val": [
+              30,
+              50,
+              80
+            ]
+          }
+        ],
+        "answer": "30, 50 and 80",
+        "val": [
+          30,
+          50,
+          80
+        ],
+        "hint": "Count in tens along the line: 10, 20, and then? Use your tens cards.",
+        "solution": "0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100. The missing marks are 30, 50 and 80.",
+        "mistakes": [
+          "Writing 21, 25 or 75 (counting on in ones instead of tens).",
+          "Leaving out the mark at 80."
+        ],
+        "mins": 2,
+        "lines": 0
+      },
+      {
+        "id": "S7",
+        "page": 2,
+        "tier": "start",
+        "text": "Fill in the blanks. Each number is between two tens.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "23 is between [] and []",
+            "ans": "20 and 30",
+            "val": [
+              20,
+              30
+            ]
+          },
+          {
+            "l": "b",
+            "text": "68 is between [] and []",
+            "ans": "60 and 70",
+            "val": [
+              60,
+              70
+            ]
+          }
+        ],
+        "answer": "20 and 30; 60 and 70",
+        "val": [
+          20,
+          30,
+          60,
+          70
+        ],
+        "hint": "Look at the tens digit. 23 has 2 tens, so it is past 20 and not yet 30. Put your frog on it.",
+        "solution": "(a) 23 is 2 tens and 3 more: between 20 and 30. (b) 68 is between 60 and 70.",
+        "mistakes": [
+          "Writing 22 and 24 (the numbers just before and after, not the tens).",
+          "Writing 2 and 3 (digits) instead of 20 and 30."
+        ],
+        "mins": 2.5,
+        "lines": 0
+      },
+      {
+        "id": "S8",
+        "page": 2,
+        "tier": "start",
+        "text": "Ben counts: 57, 58, 59, 510, 511.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "Is Ben's counting correct? Circle Yes or No.",
+            "ans": "No",
+            "val": "no"
+          },
+          {
+            "l": "b",
+            "text": "After 59 comes []",
+            "ans": "60",
+            "val": 60
+          }
+        ],
+        "answer": "60. After 9 the ones are used up, so a new ten begins. Ben kept counting ones.",
+        "val": [
+          60
+        ],
+        "hint": "Say the numbers out loud in order: 57, 58, 59, and then? Tap your line.",
+        "solution": "After 59 the ones are used up, so we start a new ten: 6 tens and 0 ones, 60. Ben kept adding ones after the 9, so he wrote 510.",
+        "mistakes": [
+          "Writing 510 (the ones digit goes past 9).",
+          "Circling Yes (not noticing 510 follows 59)."
+        ],
+        "mins": 2.5,
+        "lines": 0
+      }
+    ],
+    "think": [
+      {
+        "id": "T1",
+        "page": 3,
+        "tier": "think",
+        "text": "Which ten is nearer? Fill in the blanks.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "47 is nearer to []",
+            "ans": "50",
+            "val": 50
+          },
+          {
+            "l": "b",
+            "text": "89 is nearer to []",
+            "ans": "90",
+            "val": 90
+          }
+        ],
+        "answer": "50; 90",
+        "val": [
+          50,
+          90
+        ],
+        "hint": "Count the hops from the number to the ten below it and to the ten above it. The smaller number of hops wins.",
+        "solution": "(a) 47 to 50 is 3 hops, 47 to 40 is 7 hops: 50. (b) 89 to 90 is 1 hop, 89 to 80 is 9 hops: 90.",
+        "mistakes": [
+          "Choosing the ten with the same tens digit (40 for 47) without counting the hops.",
+          "Counting the hops from the wrong ten."
+        ],
+        "mins": 4,
+        "lines": 2
+      },
+      {
+        "id": "T2",
+        "page": 3,
+        "tier": "think",
+        "text": "How many numbers are there between 28 and 35? (Do not count 28 and 35.)",
+        "parts": [
+          {
+            "l": "",
+            "text": "There are [] numbers between them.",
+            "ans": "6",
+            "val": 6
+          }
+        ],
+        "answer": "6 (29, 30, 31, 32, 33, 34)",
+        "val": [
+          6
+        ],
+        "hint": "Write the numbers in order: 29, 30, and then? Stop before 35.",
+        "solution": "29, 30, 31, 32, 33, 34. That is 6 numbers. The hops from 28 to 35 are 7, but the numbers in the middle are one fewer.",
+        "mistakes": [
+          "Answering 7 (counting the hops, or counting 35).",
+          "Answering 8 (counting 28 and 35 as well)."
+        ],
+        "mins": 4,
+        "lines": 0
+      },
+      {
+        "id": "T3",
+        "page": 3,
+        "tier": "think",
+        "text": "My number is between 50 and 60. It is nearer to 60 than to 50. The number before it is halfway between 50 and 60. What number is it?",
+        "parts": [
+          {
+            "l": "",
+            "text": "The number is []",
+            "ans": "56",
+            "val": 56
+          }
+        ],
+        "answer": "56",
+        "val": [
+          56
+        ],
+        "hint": "Halfway between 50 and 60 is 55: 5 hops each way. Which number is one after 55?",
+        "solution": "Between 50 and 60 and nearer to 60: 56, 57, 58 or 59. The halfway number is 55. One after 55 is 56, so clue 3 fits only 56.",
+        "mistakes": [
+          "Answering 55 (that is halfway, not nearer to 60).",
+          "Answering 54 (one before 55: clue 3 says one before ME is halfway)."
+        ],
+        "mins": 5,
+        "lines": 2
+      },
+      {
+        "id": "T4",
+        "page": 3,
+        "tier": "think",
+        "text": "Mei's frog is on 90. It hops 2 numbers at a time.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "It lands on 92, 94, [], [], 100.",
+            "ans": "96 and 98",
+            "val": [
+              96,
+              98
+            ]
+          },
+          {
+            "l": "b",
+            "text": "Does it land on 99? Circle Yes or No.",
+            "ans": "No",
+            "val": "no"
+          }
+        ],
+        "answer": "96 and 98; No (it lands on 98, then 100)",
+        "val": [
+          96,
+          98
+        ],
+        "hint": "Hop 2 at a time from 90 and say each landing out loud: 90, 92, 94, and then? Skip the number in between.",
+        "solution": "90, 92, 94, 96, 98, 100. The frog lands on 96 and 98. It hops over 99 (from 98 to 100), so it does not land on 99.",
+        "mistakes": [
+          "Writing 95 and 96 (hopping 1 at a time).",
+          "Circling Yes for 99 (counting every number, not every second number)."
+        ],
+        "mins": 4,
+        "lines": 0,
+        "visual": {
+          "type": "number_line",
+          "start": 90,
+          "end": 100,
+          "step": 1,
+          "label_every": 10,
+          "highlight": [
+            90
+          ],
+          "width": 460
+        }
+      }
+    ],
+    "go": [
+      {
+        "id": "G1",
+        "page": 4,
+        "tier": "go",
+        "text": "Complete each line. The jumps are equal.",
+        "parts": [
+          {
+            "l": "a",
+            "text": "0, [], [], 30. Each jump is []",
+            "ans": "10 and 20; jump 10",
+            "val": [
+              10,
+              20,
+              10
+            ]
+          },
+          {
+            "l": "b",
+            "text": "10, [], [], [], 30. Each jump is []",
+            "ans": "15, 20, 25; jump 5",
+            "val": [
+              15,
+              20,
+              25,
+              5
+            ]
+          },
+          {
+            "l": "c",
+            "text": "50, [], [], [], 62. Each jump is []",
+            "ans": "53, 56, 59; jump 3",
+            "val": [
+              53,
+              56,
+              59,
+              3
+            ]
+          }
+        ],
+        "answer": "(a) 10, 20, jump 10. (b) 15, 20, 25, jump 5. (c) 53, 56, 59, jump 3.",
+        "val": [
+          10,
+          20,
+          10,
+          15,
+          20,
+          25,
+          5,
+          53,
+          56,
+          59,
+          3
+        ],
+        "hint": "Count the jumps first (the boxes plus one). How far is it from the first number to the last? Share that between the jumps.",
+        "solution": "(a) 3 jumps from 0 to 30: 10 each. (b) 4 jumps from 10 to 30, which is 20 altogether: 5 each. (c) 4 jumps from 50 to 62, which is 12 altogether: 3 each.",
+        "mistakes": [
+          "Always using a jump of 10.",
+          "Counting the boxes (3) as the jumps (4)."
+        ],
+        "mins": 6,
+        "lines": 0
+      },
+      {
+        "id": "G2",
+        "page": 4,
+        "tier": "go",
+        "text": "Mei's frog is on 28. Ali's frog is on 52. They hop towards each other, 1 number at a time, at the same time. On which number do they meet?",
+        "parts": [
+          {
+            "l": "",
+            "text": "They meet on []",
+            "ans": "40",
+            "val": 40
+          }
+        ],
+        "answer": "40",
+        "val": [
+          40
+        ],
+        "hint": "The frogs are 24 hops apart. They share the hops equally. How many hops does each frog make?",
+        "solution": "From 28 to 52 is 24 hops (28 to 30 is 2, 30 to 50 is 20, 50 to 52 is 2). Each frog makes half: 12 hops. 28 and 12 more is 40. 52 and 12 back is 40. They meet on 40.",
+        "mistakes": [
+          "Choosing 38 or 50, one frog's own number, or adding 28 and 52.",
+          "Counting the hops wrongly across the tens."
+        ],
+        "mins": 6,
+        "lines": 3
+      },
+      {
+        "id": "G3",
+        "page": 4,
+        "tier": "go",
+        "text": "Make a puzzle. The jumps are equal. Write numbers in 2 boxes that are not next to each other. Leave 3 boxes empty. Give it to a grown-up.",
+        "parts": [
+          {
+            "l": "",
+            "text": "[], [], [], [], []",
+            "ans": "Any correct line",
+            "val": "open"
+          }
+        ],
+        "answer": "Any correct line, for example 15, __, __, __, 35 (jump 5: 20, 25, 30).",
+        "val": "open",
+        "hint": "Pick a jump first, such as 5 or 10. Write the whole line on the lines below. Then copy only 2 of the numbers into the boxes above.",
+        "solution": "Example: jump 5: 15, 20, 25, 30, 35. Hide 20, 25 and 30. The grown-up counts the 4 jumps from 15 to 35, which is 20 altogether, so the jump is 5, and the boxes are 20, 25 and 30. Check: the same jump between every two boxes.",
+        "mistakes": [
+          "Making jumps that are not equal.",
+          "Giving two numbers that do not fit one equal jump."
+        ],
+        "mins": 5,
+        "lines": 3
+      }
+    ],
+    "investigation": {
+      "id": "I1",
+      "page": 5,
+      "tier": "investigation",
+      "title": "Halfway",
+      "first": "Count the hops from 43 to 40 and from 43 to 50. Which ten is nearer to 43?",
+      "text": "Look at the numbers from 41 to 49. For each one, which ten is nearer, 40 or 50? What happens at 45? Can you find a rule that uses the ones digit?",
+      "lines": 4,
+      "answer": "41, 42, 43 and 44 are nearer to 40. 46, 47, 48 and 49 are nearer to 50. 45 is exactly halfway: 5 hops each way. Rule: ones digit 1 to 4, the lower ten is nearer; ones digit 6 to 9, the higher ten is nearer; ones digit 5, halfway. It works between every two tens, for example 61 to 69.",
+      "val": [
+        "41-44 nearer 40",
+        "46-49 nearer 50",
+        "45 halfway"
+      ],
+      "look_for": "A child who tests several numbers by counting hops, notices 45 is special, and says why the ones digit decides it. A child who finds the same pattern between 60 and 70 has generalised.",
+      "mistakes": [
+        "Saying the ten with the same tens digit is always nearer (40 for every number from 41 to 49).",
+        "Saying 45 is nearer to 50 without counting the hops."
+      ],
+      "mins": 8
+    }
+  },
+  "talk": {
+    "question": "Are fourteen and forty the same number? Circle Yes or No. I know because ___.",
+    "starter": "I think ... because ...",
+    "answer": "No. Fourteen is 14: ten and 4 more, just after 10 on the line. Forty is 40: 4 tens, far along the line. 40 is much greater.",
+    "look_for": "A reason that uses the line or tens and ones (14 is one ten and 4; 40 is 4 tens), not only that the digits are different."
+  },
+  "exit": [
+    {
+      "id": "E1",
+      "text": "Write the number in digits.",
+      "parts": [
+        {
+          "l": "",
+          "text": "seventy-three = []",
+          "ans": "73",
+          "val": 73
+        }
+      ],
+      "answer": "73",
+      "val": [
+        73
+      ],
+      "solution": "Seventy is 70, and 3 more makes 73.",
+      "mistakes": [
+        "Writing 37.",
+        "Writing 703."
+      ]
+    },
+    {
+      "id": "E2",
+      "text": "Fill in the blanks. 76 is between two tens.",
+      "parts": [
+        {
+          "l": "",
+          "text": "76 is between [] and []",
+          "ans": "70 and 80",
+          "val": [
+            70,
+            80
+          ]
+        }
+      ],
+      "answer": "70 and 80",
+      "val": [
+        70,
+        80
+      ],
+      "solution": "76 is 7 tens and 6 more, so it is past 70 and not yet 80.",
+      "mistakes": [
+        "Writing 75 and 77 (just before and after, not the tens).",
+        "Writing 7 and 8.",
+        "Writing 60 and 70."
+      ]
+    },
+    {
+      "id": "E3",
+      "text": "The frog is on 99. It hops 1 number forward. Where does it land?",
+      "parts": [
+        {
+          "l": "",
+          "text": "It lands on []",
+          "ans": "100",
+          "val": 100
+        }
+      ],
+      "answer": "100",
+      "val": [
+        100
+      ],
+      "solution": "After 99 comes 100, one hundred: ten tens.",
+      "mistakes": [
+        "Writing 910 or 9100.",
+        "Writing 90."
+      ]
+    }
+  ],
+  "look_back": {
+    "hardest": [
+      "saying the number words",
+      "teen and ty (13 and 30)",
+      "after 9 comes a new ten",
+      "which ten is nearer",
+      "something else"
+    ],
+    "helped": [
+      "my number line",
+      "hopping the frog",
+      "drawing it",
+      "trying again",
+      "I asked for help"
+    ],
+    "next": [
+      "drawing it",
+      "using objects",
+      "checking my answer",
+      "asking a question"
+    ]
+  },
+  "home_practice": [
+    {
+      "id": "H1",
+      "tier": "start",
+      "text": "Fill in the missing numbers: 46 | 47 | ___ | 49 | ___",
+      "answer": "48 and 50",
+      "val": [
+        48,
+        50
+      ],
+      "solution": "Count on: 47, 48, 49, 50."
+    },
+    {
+      "id": "H2",
+      "tier": "start",
+      "text": "Write the numbers in digits: thirteen, thirty, nineteen, ninety.",
+      "answer": "13, 30, 19, 90",
+      "val": [
+        13,
+        30,
+        19,
+        90
+      ],
+      "solution": "Teen means ten and some more: 13 and 19. Ty means tens: 30 and 90."
+    },
+    {
+      "id": "H3",
+      "tier": "start",
+      "text": "Fill in the blanks. 83 is between two tens: ___ and ___.",
+      "answer": "80 and 90",
+      "val": [
+        80,
+        90
+      ],
+      "solution": "83 is 8 tens and 3 more, so it is past 80 and not yet 90."
+    },
+    {
+      "id": "H4",
+      "tier": "think",
+      "text": "Is 56 nearer to 50 or to 60? Circle one. Then show how you know.",
+      "answer": "60 (4 hops to 60, 6 hops to 50)",
+      "val": 60,
+      "solution": "56 to 60 is 4 hops. 56 to 50 is 6 hops. 4 is fewer, so 60 is nearer.",
+      "choices": [
+        "50",
+        "60"
+      ],
+      "visual": {
+        "type": "number_line",
+        "start": 50,
+        "end": 60,
+        "step": 1,
+        "label_every": 10,
+        "marks": [
+          56
+        ],
+        "hw": 120,
+        "width": 440,
+        "below": true
+      }
+    },
+    {
+      "id": "H5",
+      "tier": "go",
+      "text": "Draw 5 boxes in a row. The jumps are equal. Write numbers in 2 boxes that are not next to each other. Leave 3 boxes empty. Ask a grown-up to solve it. They write the answer on the back.",
+      "answer": "Any correct puzzle, for example 20 | ___ | ___ | ___ | 40 (jump 5: 25, 30, 35).",
+      "val": "open",
+      "solution": "A grown-up checks that the jump is the same between every two boxes, that the jump is a whole number, and that only one number fits each empty box."
+    }
+  ],
+  "online_practice": {
+    "key": "t1l02",
+    "title": "Number Words and the Number Line",
+    "topic": "Number line and number words",
+    "items": [
+      {
+        "id": "c1",
+        "tier": "core",
+        "type": "number",
+        "q": "What number comes one after 39?",
+        "answer": 40,
+        "hint": "Count on one. After 9 the ones are used up, so a new ten begins.",
+        "steps": [
+          "39 is 3 tens and 9 ones.",
+          "One more makes ten ones, which is a new ten.",
+          "So one after 39 is 40."
+        ],
+        "slips": [
+          {
+            "a": [
+              310
+            ],
+            "say": "The ones digit cannot go past 9. Ten ones make a new ten."
+          },
+          {
+            "a": [
+              30
+            ],
+            "say": "That is one before 31, not one after 39. Count on from 39."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "n": [
+              19,
+              29,
+              38,
+              49,
+              59,
+              68,
+              79,
+              86,
+              99
+            ]
+          },
+          "q": "What number comes one after {n}?",
+          "answer": "n+1",
+          "hint": "Count on one from {n}.",
+          "steps": [
+            "Start at {n}.",
+            "Count on one step on the line.",
+            "One after {n} is {ans}."
+          ]
+        },
+        "fig": {
+          "type": "number_line",
+          "start": "{=n-3}",
+          "end": "{=n+1}",
+          "step": 1,
+          "label_every": 1,
+          "hide": [
+            "{=n+1}"
+          ],
+          "width": 460
+        },
+        "fig_base": {
+          "type": "number_line",
+          "start": 36,
+          "end": 40,
+          "step": 1,
+          "label_every": 1,
+          "hide": [
+            40
+          ],
+          "width": 460
+        }
+      },
+      {
+        "id": "c2",
+        "tier": "core",
+        "type": "number",
+        "q": "What number comes one before 60?",
+        "answer": 59,
+        "hint": "Count back one. Before a new ten comes the number ending in 9.",
+        "steps": [
+          "60 is 6 tens and 0 ones.",
+          "One step back goes to the ten before, with 9 ones.",
+          "So one before 60 is 59."
+        ],
+        "slips": [
+          {
+            "a": [
+              50
+            ],
+            "say": "50 is a whole ten back. We want only one step back."
+          },
+          {
+            "a": [
+              61
+            ],
+            "say": "61 is one after 60. We want one before."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "n": [
+              20,
+              30,
+              41,
+              50,
+              61,
+              70,
+              80,
+              91,
+              100
+            ]
+          },
+          "q": "What number comes one before {n}?",
+          "answer": "n-1",
+          "hint": "Count back one from {n}.",
+          "steps": [
+            "Start at {n}.",
+            "Count back one step on the line.",
+            "One before {n} is {ans}."
+          ]
+        },
+        "fig": {
+          "type": "number_line",
+          "start": "{=n-1}",
+          "end": "{=n+3}",
+          "step": 1,
+          "label_every": 1,
+          "hide": [
+            "{=n-1}"
+          ],
+          "width": 460
+        },
+        "fig_base": {
+          "type": "number_line",
+          "start": 59,
+          "end": 63,
+          "step": 1,
+          "label_every": 1,
+          "hide": [
+            59
+          ],
+          "width": 460
+        }
+      },
+      {
+        "id": "c3",
+        "tier": "core",
+        "type": "choice",
+        "q": "Which number is forty-two?",
+        "options": [
+          "24",
+          "42",
+          "44",
+          "402"
+        ],
+        "answer": "42",
+        "hint": "Say the tens first, then the ones. Forty is 4 tens.",
+        "steps": [
+          "Forty is 4 tens, 40.",
+          "Add 2 ones: 42.",
+          "The tens digit goes first."
+        ],
+        "slips": [
+          {
+            "a": [
+              "24"
+            ],
+            "say": "24 is twenty-four. Forty-two has 4 tens."
+          }
+        ]
+      },
+      {
+        "id": "c4",
+        "tier": "core",
+        "type": "number",
+        "q": "Write the missing number: 27, 28, __, 30",
+        "answer": 29,
+        "hint": "Count on one at a time along the line.",
+        "steps": [
+          "27, 28, ...",
+          "The next number is one more.",
+          "The missing number is 29."
+        ],
+        "slips": [
+          {
+            "a": [
+              39
+            ],
+            "say": "The tens digit stays the same here. Count on one from 28."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "a": [
+              12,
+              27,
+              36,
+              38,
+              48,
+              57,
+              68,
+              76,
+              88,
+              95
+            ]
+          },
+          "q": "Write the missing number: {a}, {b}, __, {d}",
+          "answer": "a+2",
+          "hint": "Count on one at a time from {a}.",
+          "steps": [
+            "{a}, {b}, ...",
+            "The next number is one more than {b}.",
+            "The missing number is {ans}."
+          ],
+          "derive": {
+            "b": "a+1",
+            "d": "a+3"
+          }
+        }
+      },
+      {
+        "id": "c5",
+        "tier": "core",
+        "type": "number",
+        "q": "47 is between two tens. What is the greater ten?",
+        "answer": 50,
+        "hint": "The tens digit tells you the ten before. The greater ten is one ten more.",
+        "steps": [
+          "47 is 4 tens and 7 ones.",
+          "It is past 40 and not yet 50.",
+          "The greater ten is 50."
+        ],
+        "slips": [
+          {
+            "a": [
+              40
+            ],
+            "say": "40 is the smaller ten. Which ten comes after it?"
+          },
+          {
+            "a": [
+              5
+            ],
+            "say": "We need the ten, not the digit. Count in tens."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "n": [
+              23,
+              38,
+              41,
+              57,
+              62,
+              76,
+              84
+            ]
+          },
+          "q": "{n} is between two tens. What is the greater ten?",
+          "answer": "(w+1)*10",
+          "hint": "The tens digit of {n} tells you the smaller ten.",
+          "steps": [
+            "{n} is made of tens and ones.",
+            "It is past {tt} and not yet the next ten.",
+            "The greater ten is {ans}."
+          ],
+          "derive": {
+            "w": "n//10",
+            "tt": "w*10"
+          }
+        }
+      },
+      {
+        "id": "c6",
+        "tier": "core",
+        "type": "choice",
+        "q": "Which is greater, thirteen or thirty?",
+        "options": [
+          "thirteen",
+          "thirty",
+          "they are the same"
+        ],
+        "answer": "thirty",
+        "hint": "Teen means ten and some more. Ty means tens.",
+        "steps": [
+          "Thirteen is ten and 3 more: 13.",
+          "Thirty is 3 tens: 30.",
+          "Thirty is further along the line, so it is greater."
+        ],
+        "slips": [
+          {
+            "a": [
+              "thirteen"
+            ],
+            "say": "Thirteen sounds longer, but it is only ten and 3. Thirty is 3 tens."
+          }
+        ]
+      },
+      {
+        "id": "t1",
+        "tier": "stretch",
+        "type": "number",
+        "q": "The frog is on 47. Which ten is it nearer to, 40 or 50?",
+        "answer": 50,
+        "easier": "c5",
+        "hint": "Count the hops to each ten. The smaller number of hops wins.",
+        "steps": [
+          "47 to 50 is 3 hops.",
+          "47 to 40 is 7 hops.",
+          "3 is fewer, so 50 is nearer."
+        ],
+        "slips": [
+          {
+            "a": [
+              40
+            ],
+            "say": "The 4 in 47 is a tens digit; it does not make 40 nearer. Count the hops."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "t": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "o": [
+              1,
+              2,
+              3,
+              4,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          "q": "The frog is on {n}. Which ten is it nearer to, {tt} or {u}?",
+          "answer": "(t+r)*10",
+          "hint": "Count the hops to {tt} and to {u}.",
+          "steps": [
+            "Count the hops from {n} to {tt} and from {n} to {u}.",
+            "The smaller number of hops is the nearer ten.",
+            "The nearer ten is {ans}."
+          ],
+          "derive": {
+            "n": "t*10+o",
+            "tt": "t*10",
+            "u": "(t+1)*10",
+            "r": "((o+4)-(o+4)%10)/10"
+          }
+        },
+        "fig": {
+          "type": "jump_lines",
+          "start": "{=t*10}",
+          "end": "{=t*10+10}",
+          "step": 1,
+          "label_every": 10,
+          "rows": [
+            {
+              "points": [
+                "{n}"
+              ]
+            }
+          ],
+          "room": false
+        },
+        "fig_base": {
+          "type": "jump_lines",
+          "start": 40,
+          "end": 50,
+          "step": 1,
+          "label_every": 10,
+          "rows": [
+            {
+              "points": [
+                47
+              ]
+            }
+          ],
+          "room": false
+        }
+      },
+      {
+        "id": "t2",
+        "tier": "stretch",
+        "type": "number",
+        "q": "The frog is on 62. Which ten is it nearer to, 60 or 70?",
+        "answer": 60,
+        "easier": "c5",
+        "hint": "Count the hops to each ten. The smaller number of hops wins.",
+        "steps": [
+          "62 to 60 is 2 hops.",
+          "62 to 70 is 8 hops.",
+          "2 is fewer, so 60 is nearer."
+        ],
+        "slips": [
+          {
+            "a": [
+              70
+            ],
+            "say": "Count the hops: 62 is only 2 hops from 60."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "t": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "o": [
+              1,
+              2,
+              3,
+              4,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          "q": "The frog is on {n}. Which ten is it nearer to, {u} or {tt}?",
+          "answer": "(t+r)*10",
+          "hint": "Count the hops to {tt} and to {u}.",
+          "steps": [
+            "Count the hops from {n} to {tt} and from {n} to {u}.",
+            "The smaller number of hops is the nearer ten.",
+            "The nearer ten is {ans}."
+          ],
+          "derive": {
+            "n": "t*10+o",
+            "tt": "t*10",
+            "u": "(t+1)*10",
+            "r": "((o+4)-(o+4)%10)/10"
+          }
+        },
+        "fig": {
+          "type": "jump_lines",
+          "start": "{=t*10}",
+          "end": "{=t*10+10}",
+          "step": 1,
+          "label_every": 10,
+          "rows": [
+            {
+              "points": [
+                "{n}"
+              ]
+            }
+          ],
+          "room": false
+        },
+        "fig_base": {
+          "type": "jump_lines",
+          "start": 60,
+          "end": 70,
+          "step": 1,
+          "label_every": 10,
+          "rows": [
+            {
+              "points": [
+                62
+              ]
+            }
+          ],
+          "room": false
+        }
+      },
+      {
+        "id": "t3",
+        "tier": "stretch",
+        "type": "number",
+        "q": "How many numbers are there between 28 and 35? Do not count 28 or 35.",
+        "answer": 6,
+        "easier": "c4",
+        "hint": "Write the numbers in order: 29, 30, ... Stop before 35.",
+        "steps": [
+          "Write them: 29, 30, 31, 32, 33, 34.",
+          "Count them.",
+          "There are 6 numbers."
+        ],
+        "slips": [
+          {
+            "a": [
+              7
+            ],
+            "say": "7 is the number of hops. Do not count 35."
+          },
+          {
+            "a": [
+              8
+            ],
+            "say": "Do not count 28 or 35."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "a": [
+              12,
+              28,
+              36,
+              47,
+              53,
+              61
+            ],
+            "g": [
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "q": "How many numbers are there between {a} and {b}? Do not count {a} or {b}.",
+          "answer": "g-1",
+          "hint": "Write the numbers in order after {a}. Stop before {b}.",
+          "steps": [
+            "The hops from {a} to {b} are {g}.",
+            "The numbers between are one fewer than the hops.",
+            "There are {ans} numbers."
+          ],
+          "derive": {
+            "b": "a+g"
+          }
+        }
+      },
+      {
+        "id": "t4",
+        "tier": "stretch",
+        "type": "number",
+        "q": "My number is between 50 and 60. It is nearer to 60 than to 50. The number before it is halfway between 50 and 60. What number is it?",
+        "answer": 56,
+        "easier": "c5",
+        "hint": "Halfway between 50 and 60 is 55. Which number is one after 55?",
+        "steps": [
+          "Halfway between 50 and 60 is 55.",
+          "One after 55 is 56.",
+          "56 is nearer to 60 than to 50, so I am 56."
+        ],
+        "slips": [
+          {
+            "a": [
+              55
+            ],
+            "say": "55 is halfway. We want one after it."
+          },
+          {
+            "a": [
+              54
+            ],
+            "say": "One before ME is halfway, so I am one after 55."
+          }
+        ]
+      },
+      {
+        "id": "g1",
+        "tier": "challenge",
+        "type": "number",
+        "q": "A number line has equal jumps: 0, __, __, __, 20. What number goes in the middle box?",
+        "answer": 10,
+        "easier": "t3",
+        "hint": "Count the jumps first. Share the gap between the first and last number equally.",
+        "steps": [
+          "There are 4 jumps from 0 to 20.",
+          "20 shared between 4 jumps is 5 each.",
+          "0, 5, 10, 15, 20: the middle box is 10."
+        ],
+        "slips": [
+          {
+            "a": [
+              5
+            ],
+            "say": "5 is the jump, which is the first box. The middle box is two jumps along."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "a": [
+              0,
+              10,
+              20,
+              35
+            ],
+            "j": [
+              2,
+              3,
+              4,
+              5,
+              10
+            ]
+          },
+          "q": "A number line has equal jumps: {a}, __, __, __, {b}. What number goes in the middle box?",
+          "answer": "a+2*j",
+          "hint": "There are 4 jumps from {a} to {b}. How big is each jump?",
+          "steps": [
+            "4 equal jumps from {a} to {b}.",
+            "Each jump is {j}.",
+            "The middle box is two jumps after {a}: {ans}."
+          ],
+          "derive": {
+            "b": "a+4*j"
+          }
+        }
+      },
+      {
+        "id": "g2",
+        "tier": "challenge",
+        "type": "number",
+        "q": "Mei's frog is on 28. Ali's frog is on 52. They hop towards each other, 1 number at a time, at the same time. Where do they meet?",
+        "answer": 40,
+        "easier": "t3",
+        "hint": "The frogs share the hops equally. How many hops apart are they?",
+        "steps": [
+          "28 to 52 is 24 hops.",
+          "Each frog makes half: 12 hops.",
+          "28 and 12 more is 40."
+        ],
+        "slips": [
+          {
+            "a": [
+              38
+            ],
+            "say": "That is only 10 hops from 28. Each frog makes 12."
+          },
+          {
+            "a": [
+              80
+            ],
+            "say": "That is 28 + 52. The frogs meet between their numbers."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "a": [
+              10,
+              16,
+              28,
+              34
+            ],
+            "d": [
+              6,
+              10,
+              12,
+              15
+            ]
+          },
+          "q": "Mei's frog is on {a}. Ali's frog is on {b}. They hop towards each other, 1 number at a time, at the same time. Where do they meet?",
+          "answer": "a+d",
+          "hint": "The frogs share the hops equally. How many hops apart are they?",
+          "steps": [
+            "{a} to {b} is {h} hops.",
+            "Each frog makes half: {d} hops.",
+            "{a} and {d} more is {ans}."
+          ],
+          "derive": {
+            "b": "a+2*d",
+            "h": "2*d"
+          }
+        }
+      },
+      {
+        "id": "g3",
+        "tier": "challenge",
+        "type": "number",
+        "q": "A number line has a mark at 0, 10, 20, up to 100. How many marks are there altogether?",
+        "answer": 11,
+        "easier": "t3",
+        "hint": "Count the marks, not the jumps. Do not forget the mark at 0.",
+        "steps": [
+          "The marks are 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100.",
+          "Count them.",
+          "There are 11 marks (10 jumps)."
+        ],
+        "slips": [
+          {
+            "a": [
+              10
+            ],
+            "say": "10 is the number of jumps. Count the mark at 0 too."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "m": [
+              20,
+              40,
+              60,
+              100
+            ],
+            "j": [
+              5,
+              10
+            ]
+          },
+          "q": "A number line has a mark at 0, {j}, {jj} and so on, up to {m}. How many marks are there altogether?",
+          "answer": "m/j+1",
+          "hint": "Count the marks, not the jumps. Do not forget the mark at 0.",
+          "steps": [
+            "The marks go in jumps of {j} from 0 up to {m}.",
+            "There are one more marks than jumps.",
+            "There are {ans} marks."
+          ],
+          "derive": {
+            "jj": "j*2"
+          }
+        }
+      },
+      {
+        "id": "g4",
+        "tier": "challenge",
+        "type": "selfcheck",
+        "q": "Make your own number line puzzle with 5 boxes and equal jumps. Show 2 numbers. Check that only 1 number fits each empty box.",
+        "hint": "Pick a jump first. Write the whole line. Then rub out the middle boxes.",
+        "steps": [
+          "Check that the jump is the same between every two boxes.",
+          "Check that the two numbers showing are not next to each other.",
+          "For example: 15, __, __, __, 35. The jump is 5, so the boxes are 20, 25 and 30."
+        ]
+      }
+    ]
+  },
+  "parent": {
+    "summary": "Every number has a spot on a number line and a name. Your child built a number line from cut-out cards, hopped a toy along it, read number names such as fourteen and forty, and found which two tens a number sits between. Reading numbers and the number line is Primary 1 work. Deciding which ten a number is nearer to goes beyond school, and is in Think harder. Each week we suggest Home Practice (about 15 minutes); pages 3 to 5 and online practice are optional.",
+    "words": [
+      "number line: numbers in order along a path, each with its own spot",
+      "teen: ten and some more (fourteen is 14)",
+      "ty: tens (forty is 4 tens, 40)",
+      "between: after one number and before the next",
+      "nearer: fewer hops away on the line"
+    ],
+    "try_home": [
+      "Number path: put the number cards in a row, 0 to 10, then the tens 0 to 100. Say 63 and let your child place a toy between the two tens. Which ten is nearer? Keep small things away from mouths and little ones.",
+      "Number detective: look at house numbers, page numbers or lift buttons. Ask: which two tens is it between? How many hops to the next ten?",
+      "Say it, write it: say a number name such as seventy-two and ask for the digits. Swap roles and make a mistake on purpose (thirteen written as 30) for your child to find."
+    ],
+    "ask": [
+      "Which two tens is it between?",
+      "How many hops to the next ten?",
+      "How do you know?"
+    ],
+    "when_stuck": "Please let your child hop a toy along a paper line or draw one, and wait 10 seconds before helping. Teen and ty sound alike: say them slowly together. Please do not hurry. If the look-back page says 'I am still stuck', photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days.",
+    "next": "Lesson 3: Digit Cards. Online practice: your tutor will share the practice link. The recording has the tutor, the shared screen and any voice that is not muted; your child may mute and keep the camera off. The recording link is private to your family: please do not share it.",
+    "report_line": "Your child is learning to see numbers as tens and ones and to say why. This week: finding numbers on a number line and reading number words.",
+    "term_line": "Your child is learning to see numbers as tens and ones, to notice patterns and to say why.",
+    "quote": "Every number has a place and a name. The tens marks help us find it.",
+    "next_materials": [
+      "Digit cards 0 to 9, two sets (cut out, or written on scraps)",
+      "Tens bars and ones squares, cut out",
+      "Pencil, rubber and paper"
+    ]
+  },
+  "safeguarding": [
+    "Small toys stay on the table: nothing goes in the mouth or ears. A grown-up cuts out the cards before the lesson; children do not use scissors in the lesson. Children sit or stand on the spot, with no running while they work on the floor line. Keep small things away from younger brothers and sisters.",
+    "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
+    "Nobody holds paper or a board up to the camera. Children tick their own work against the answer slide, answer together on a count of three, or show fingers or a thumb for a choice. There is no private chat.",
+    "Never read out a child's name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is unmuted. Children may mute and keep their cameras off. A child's page is never shown.",
+    "A child who is still stuck ticks 'I am still stuck' on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for up to 90 days. The tutor then helps in the open session next lesson. No private messages to children, and no personal phones.",
+    "The look-back is never collected in front of the group or read out. A pass is always allowed. The brain break is gentle and can be done sitting down."
+  ],
+  "tutor_prep": [
+    "Solve every workbook question yourself first.",
+    "Tell parents a week before: print the whole workbook including the two kit pages at the back, cut out the number cards beforehand, and find a small toy to be the frog. If there is no printer, 11 small pieces of paper with 0 to 10 on one side and the tens on the back work as well. Small toys and cards stay away from mouths and younger children.",
+    "Prepare your own row of 11 cards to show on camera: 0 to 10, then the tens 0 to 100.",
+    "Have the slides open and check the timer slide is visible on screen share.",
+    "Test the recording once with several tiles before the first live class: check that it captures the tutor, the shared screen and any voice that is not muted. Write the setting you used in your tutor notes. Say the recording statement in the same words every lesson.",
+    "Tell parents plainly that Term 1 goes beyond the school Primary 1 syllabus on purpose (it is not a school-syllabus programme) and never call it MOE-aligned."
+  ],
+  "spare_time": {
+    "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
+    "rules": [
+      "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
+      "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+      "Never teach anything the next lesson needs. If the class is ahead, slow down: ask 'How do you know?' and let children explain, rather than rushing on."
+    ],
+    "menu": [
+      {
+        "id": "M1",
+        "title": "Is it always true?",
+        "minutes": 4,
+        "tutor": "Ali says: when you go one after a number, only the ones digit changes. Is that always true? Try 23, 58, 69 and 99 on your number line.",
+        "rec": "Recording: pause. Try one after 23, 58, 69 and 99. Does only the ones digit change?",
+        "answer": "Not always. 23 and 58 become 24 and 59, but 69 becomes 70 (the tens and the ones both change) and 99 becomes 100 (a new hundred begins). It changes the tens too when the ones digit is 9."
+      },
+      {
+        "id": "M2",
+        "title": "Make a puzzle for your grown-up",
+        "minutes": 4,
+        "tutor": "Pick a secret number between 40 and 50. Write two clues using between, nearer or halfway. Give them to your grown-up to solve.",
+        "rec": "Recording: pause. Write a mystery number puzzle with two clues for a grown-up to solve.",
+        "answer": "No single answer. Check that the clues fit the secret number and fit only one number. Example: nearer to 50 than 40; one more than 45: 46."
+      },
+      {
+        "id": "M3",
+        "title": "Teach it back",
+        "minutes": 3,
+        "tutor": "Pretend your grown-up or a toy has never seen a number line. Teach them which ten 63 is nearer to, using hops.",
+        "rec": "Recording: pause. Teach a grown-up which ten 63 is nearer to, using hops.",
+        "answer": "63 is 3 hops after 60 and 7 hops before 70. 3 is fewer, so 60 is nearer."
+      }
+    ]
+  }
+}

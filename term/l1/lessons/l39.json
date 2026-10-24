@@ -1,0 +1,3540 @@
+{
+  "schema_version": 1,
+  "id": "l1-t4-09",
+  "level": 1,
+  "term": 4,
+  "lesson": 39,
+  "lesson_in_term": 9,
+  "title": "The Problem-Solving Toolbox",
+  "big_idea": "Pick the tool that fits the problem, say why, then check the answer a second way",
+  "child_idea": "We have eight tools. Look at the problem, pick a tool that fits, say why, solve it, and check the answer another way.",
+  "skill": "Choosing a method",
+  "spine": {
+    "main": "choose",
+    "also": [],
+    "role": "C",
+    "reason": "Teaches how to choose a tool: all eight tool names of the Toolbox Card, with a tool card and a problem card for each."
+  },
+  "ages": "6-8",
+  "moe": {
+    "strand": "Processes and heuristics (pp. 13 to 14 of the syllabus pages we hold: problem solving, representing, reasoning and communicating; no list of named heuristics). The tools come from Terms 1 to 4 of this program; the eight names are the names on the Toolbox Card",
+    "topics": [
+      "Choosing a way to solve a one- or two-step problem and saying why (process skills, Primary 1)",
+      "Draw it (a strip), act it out, spot the pattern, list every way, make a table, work backwards, guess and check, and try something simpler (find one first), each with an example (Primary 1 content met in earlier lessons)",
+      "Guess and check with a table of tries; make equal by sharing out (Primary 1 school papers use both)",
+      "Beyond Primary 1 on purpose: solve one problem two ways and say why the two answers agree (Two Roads, One Answer), with 3 times as many and a total"
+    ],
+    "note": "Strand label for the tutor only. REBALANCED to the eight card names (owner decision L39-YES, 23 Oct 2026): the old Strip and Draw it are now Draw it, Steps is Act it out, Table is Make a table (with Spot the pattern), List is List every way, and Find one first is Try something simpler (start with 1). Guess and check is now named (problem card 7 and the table of tries in the Mini-lesson). Every tool was met earlier in the year (drawing from Term 1, strips in Lessons 12 and 18, find one first in 19, list in 26 and 36, table in 28, check another way in 29, work backwards in 10 and 23, spot the pattern in 4, 28 and 35, guess and check in 25), and the syllabus pages we hold name no list of heuristics, so the eight names are the program's own, the same as on the Toolbox Card. This lesson is the one that teaches how to choose (clues are help, not rules); it is no longer where tools are first named. Start here names the tool every time and stays within 100. At Think harder the tool is not named. BEYOND PRIMARY 1 ON PURPOSE at Think harder and Go further only: choosing the tool, a guess-and-check table, make equal two ways, and Two Roads, One Answer: Jenny has 3 times as many stickers as Jason and they have 36 in all, solved with a strip and checked with a table of tries (a bar model with times as many is used from Primary 2 and later at school; Lesson 18 met it at Go further, the new part here is checking by a second method). Named puzzle: Two Roads, One Answer. Non-routine types (tutor only): work backwards with the tool not named (T2), draw it (T3), guess and check or a table of tries (T4), make equal (G2), table or work backwards for the day of a pattern (G3). Owner decisions, 22 and 23 Oct 2026: strong content with scaffolding, said plainly to families; every lesson names a beyond item. Do not describe the lesson as MOE-aligned. Wording rule (Term 1 audit, pre-flight D18): wrong working is always a child or a child in another class, never a cast name."
+  },
+  "contest_moves": [
+    "choose the tool that fits (draw it, act it out, spot the pattern, list every way, make a table, work backwards, guess and check, try something simpler) and say why",
+    "work backwards with the tool not named: paid, the change and one price are given, find the other price",
+    "draw it: stairs below a child on a staircase, one move after another",
+    "guess and check with a table of tries: 7 coins worth 50 cents, 4 five-cent and 3 ten-cent",
+    "make equal: Ali 9, Ben 15, Mei 12, so each ends with 12 and Ben gives 3 to Ali",
+    "solve one problem two ways and check that they agree: 3 times as many with a total of 36, by drawing it (a strip) and by guess and check (a table of tries)"
+  ],
+  "contest_where": "Think harder, Go further and the Investigation",
+  "objectives": [
+    "Name the eight tools of the Toolbox Card (draw it, act it out, spot the pattern, list every way, make a table, work backwards, guess and check, try something simpler) and say when each one helps.",
+    "Start here: use the named tool to solve a one- or two-step problem within 100.",
+    "Think harder: choose the tool when it is not named, and solve work backwards, draw it and guess-and-check problems.",
+    "Go further: solve one problem two ways and say why the answers agree, make three amounts equal, and say which tool you used and why."
+  ],
+  "joining_cold": {
+    "remember": [
+      "Drawing two strips for two numbers and saying how many more (Term 2 Lesson 2, taught again with a picture): the tool Draw it",
+      "Finding the price of 1 from a group of equal things (Term 2 Lesson 9, taught again with a picture): the tool Try something simpler",
+      "Working backwards from the end to the start on a number line (Term 1 Lesson 10, taught again): the tool Work backwards"
+    ],
+    "assumes": "Only counting to 20 and adding and taking away small numbers. Nothing from the lessons before is needed: the warm-up re-teaches drawing strips, starting with one, and working backwards. The eight tool names are on the toolbox page in Explore and the Mini-lesson.",
+    "holiday_topics_revisited": [
+      "Number stories (Story Time)",
+      "Counting on and counting back"
+    ],
+    "safe_to_miss": false,
+    "note": "Not safe to miss: Mi's Challenge Quest in the last lesson of the year has a gate on choosing a tool. A child who misses it watches the recording and does workbook pages 1 and 2. A child who joins here cold can follow: the warm-up re-teaches the three tools a story needs most, and Start here always names the tool."
+  },
+  "materials": {
+    "child": [
+      "Your Term 4 book (Book 8), workbook pages 1 to 5, and the tool-and-problem cards page (page 6): the 16 cards (8 tool cards in the left column and 8 problem cards in the right column) are cut out by a grown-up beforehand",
+      "No printer or no cutting? Write the 8 tool names on 8 scraps of paper: draw it, act it out, spot the pattern, list every way, make a table, work backwards, guess and check, try something simpler. Your tutor reads the 8 problems aloud",
+      "A pencil, a rubber and spare paper"
+    ],
+    "tutor": [
+      "The slide deck",
+      "Your own set of the 16 cards, if you wish, for yourself (not for the children)",
+      "A visible clock"
+    ],
+    "kit_pages": [
+      "Tool-and-problem cards (page 6): 8 tool cards (left column) and 8 problem cards (right column). A grown-up cuts them out. Children lay the tool cards in a row and put each problem card under a tool card."
+    ],
+    "ruler": false,
+    "notes": "Nothing needs to be bought. Cards are small pieces: they stay on the table; nothing goes in the mouth or ears; keep them away from younger brothers and sisters. No matches, toothpicks or anything sharp. Nobody cuts during the lesson: a grown-up cut the cards beforehand.",
+    "kit_contract": [
+      {
+        "piece": "tool cards",
+        "supplied": 8,
+        "max_used": 8,
+        "used_by": [
+          "explore"
+        ]
+      },
+      {
+        "piece": "problem cards",
+        "supplied": 8,
+        "max_used": 8,
+        "used_by": [
+          "explore"
+        ]
+      }
+    ]
+  },
+  "timing": {
+    "parts": [
+      {
+        "id": "opening",
+        "title": "Opening",
+        "start": 0,
+        "end": 2
+      },
+      {
+        "id": "remember",
+        "title": "Remember warm-up",
+        "start": 2,
+        "end": 8
+      },
+      {
+        "id": "sneak",
+        "title": "Sneak-peek puzzles",
+        "start": 8,
+        "end": 12
+      },
+      {
+        "id": "explore",
+        "title": "Explore",
+        "start": 12,
+        "end": 23
+      },
+      {
+        "id": "mini",
+        "title": "Mini-lesson",
+        "start": 23,
+        "end": 35
+      },
+      {
+        "id": "break",
+        "title": "Brain break",
+        "start": 35,
+        "end": 39
+      },
+      {
+        "id": "work",
+        "title": "Workbook",
+        "start": 39,
+        "end": 70
+      },
+      {
+        "id": "talk",
+        "title": "Talk time",
+        "start": 70,
+        "end": 76
+      },
+      {
+        "id": "exit",
+        "title": "Exit ticket",
+        "start": 76,
+        "end": 82
+      },
+      {
+        "id": "look",
+        "title": "Look-back",
+        "start": 82,
+        "end": 85
+      },
+      {
+        "id": "flex",
+        "title": "Flex time and goodbye",
+        "start": 85,
+        "end": 90
+      }
+    ],
+    "optional_slide": "s-opt",
+    "include_rules": false,
+    "notes": "Opening is 2 minutes. Explore has 11 minutes: lay out the eight tool cards, then sort eight problem cards under them, four at a time (two problems share one tool, and more than one tool can fit a problem). The Mini-lesson has 12: one clue for each of the eight tools, then draw it, make a table, work backwards, and one problem solved two ways (draw it and guess and check). The workbook has 31 minutes: Start here takes a middle child about 17 minutes (page 1 about 8, page 2 about 9), so pages 3 to 5 are for home for most children. The last 5 minutes are the standing buffer.",
+    "skip_order": [
+      "Start with: shorten Explore round 3 (what did we notice) to one question",
+      "Then: take the table of tries in the last Mini-lesson example (s-m5-ans) to the answer only",
+      "Then: take the extra minutes from the flex time"
+    ]
+  },
+  "sneak_peek": {
+    "q1": "Mei has 4 stickers. Ali has 3 more stickers than Mei. How many stickers does Ali have? Write the number.",
+    "q2": "Mei and Ali have 10 stickers in all. Ali has 2 more stickers than Mei. How many stickers does Mei have? I know because ___.",
+    "a1": "7 stickers.",
+    "a2": "4 stickers. Mei 4 and Ali 6 make 10, and 6 is 2 more than 4."
+  },
+  "rec": {
+    "opening": {
+      "say": "If you are watching the recording: hello! Get a pencil, paper, your workbook and your tool-and-problem cards. Pause or rewind any time.",
+      "action": "Gather your workbook, pencil, paper and your 16 cards. Press play when ready."
+    },
+    "remember": {
+      "say": "Recording: join in! Say your answers out loud before I say them. Pause if you need longer.",
+      "action": "Play along. Say each answer out loud before the video does."
+    },
+    "sneak": {
+      "say": "Recording: pause now and try both puzzles on your paper. Guessing is fine. Press play for the next part.",
+      "action": "Pause. Try both puzzles on your own paper. A guess is fine."
+    },
+    "explore": {
+      "say": "Recording: pause now. Lay out your 8 tool cards. Put each problem card under a tool you would use. Press play when you have tried.",
+      "action": "Pause. Lay out the tool cards. Put each problem card under a tool that fits."
+    },
+    "mini": {
+      "say": "Recording: keep watching and copy the examples on your paper. Rewind if you miss a step.",
+      "action": "Watch and copy the examples. Rewind any step you missed."
+    },
+    "break": {
+      "say": "Recording: stand up and join in! Mime each tool with me, then sit down.",
+      "action": "Stand up. Mime the eight tools with the movements, then sit down."
+    },
+    "work": {
+      "say": "Recording: pause now and do workbook page 1. When you finish a page, press play to check it.",
+      "action": "Pause. Do page 1, then play to check. Then page 2. Then choose a page to try."
+    },
+    "talk": {
+      "say": "Recording: pause. Tell a grown-up how you could check an answer a second way.",
+      "action": "Pause. Explain your answer to someone at home and show how you know."
+    },
+    "exit": {
+      "say": "Recording: pause and do the exit ticket on your own. Then press play to check it.",
+      "action": "Pause. Do the exit ticket alone, then play to check it."
+    },
+    "look": {
+      "say": "Recording: pause and fill in your look-back box. You can pass.",
+      "action": "Pause. Fill in the look-back box, or pass."
+    },
+    "flex": {
+      "say": "Recording: well done for finishing! Show a grown-up your tool cards and say which tool you like best.",
+      "action": "Show a grown-up your tool cards and say which tool you like best."
+    }
+  },
+  "slides": [
+    {
+      "id": "s-title",
+      "part": "opening",
+      "kind": "title",
+      "title": "The Problem-Solving Toolbox",
+      "blocks": [
+        {
+          "t": "card",
+          "head": "TODAY WE WILL",
+          "items": [
+            "Meet eight tools.",
+            "Pick the tool that fits.",
+            "Check an answer a second way."
+          ]
+        }
+      ],
+      "note": "Lesson 9 of Term 4, 90 minutes. Objective: name the eight tools (draw it, act it out, spot the pattern, list every way, make a table, work backwards, guess and check, try something simpler), pick a tool that fits a problem, solve it, and check the answer a second way. Plain statement for families: choosing a tool for a problem is part of the school problem-solving process; choosing the tool when it is not named, make equal, and solving one problem two ways (Two Roads, One Answer) go beyond Primary 1 on purpose, at Think harder and Go further only. Time plan: opening 0 to 2, warm-up 2 to 8, sneak-peek 8 to 12, explore 12 to 23, mini-lesson 23 to 35, brain break 35 to 39, workbook 39 to 70, talk 70 to 76, exit ticket 76 to 82, look-back 82 to 85, flex time and goodbye 85 to 90 (the buffer: do not start anything new). Think harder, Go further and the Investigation are for every child to choose. Say the recording notice before you start the recording, in one line: you, the shared screen and any unmuted voice; a child may keep the camera off.",
+      "subtitle": "Pick the tool, then check it",
+      "mascot": {
+        "size": "l",
+        "say": "Hi, I'm Mi. Let's notice, test and explain why!"
+      }
+    },
+    {
+      "id": "s-rem1",
+      "part": "remember",
+      "kind": "light",
+      "title": "Warm-up: draw it, two strips",
+      "blocks": [
+        {
+          "t": "visual",
+          "type": "bar_model",
+          "mode": "compare",
+          "bars": [
+            {
+              "name": "Ali",
+              "len": 8,
+              "text": "8"
+            },
+            {
+              "name": "Mei",
+              "len": 3,
+              "text": "3"
+            }
+          ],
+          "gap": {
+            "between": [
+              0,
+              1
+            ],
+            "text": "?"
+          },
+          "size": 100
+        },
+        {
+          "t": "chip",
+          "text": "Ali has 8 stickers. Mei has 3 stickers. How many more stickers does Ali have than Mei?"
+        }
+      ],
+      "note": "Draw it: strips (Term 2 Lesson 2, taught again with a picture). The two strips show 8 and 3. The part that sticks out is how many more. Ask: how many more stickers does Ali have than Mei (5). A child who is unsure lays 3 counters against 8 counters and counts the extra ones. Your turn, no new picture: how many stickers do they have in all (11). Children answer aloud. No writing."
+    },
+    {
+      "id": "s-rem2",
+      "part": "remember",
+      "kind": "light",
+      "title": "Try something simpler: find one first",
+      "blocks": [
+        {
+          "t": "visual",
+          "type": "objects",
+          "icon": "pen",
+          "n": 3,
+          "per_row": 3,
+          "size": "s"
+        },
+        {
+          "t": "chip",
+          "text": "3 pens cost $12. All the pens cost the same. How much does 1 pen cost?"
+        }
+      ],
+      "note": "Try something simpler: find the price of 1 (Term 2 Lesson 9, taught again with a picture). 3 pens cost $12 and all cost the same, so share $12 into 3 equal parts: 1 pen costs $4. A child who is unsure shares 12 counters into 3 piles, one counter at a time. Your turn, no new picture: 1 pen costs $4, so how much do 5 pens cost ($20). Children answer aloud. No writing.",
+      "mascot": {
+        "size": "s",
+        "say": "Take your time!"
+      }
+    },
+    {
+      "id": "s-rem3",
+      "part": "remember",
+      "kind": "light",
+      "title": "Work backwards",
+      "blocks": [
+        {
+          "t": "visual",
+          "type": "number_line",
+          "start": 0,
+          "end": 12,
+          "step": 1,
+          "label_every": 1,
+          "hide": [
+            7
+          ],
+          "jumps": [
+            [
+              7,
+              12,
+              "+5"
+            ]
+          ],
+          "size": 100
+        },
+        {
+          "t": "chip",
+          "text": "I think of a number. I add 5. I get 12. What is my number?"
+        }
+      ],
+      "note": "Working backwards (Term 1 Lesson 10, taught again on a number line). The number line shows a jump of 5 that ends at 12, and the start is an empty box. Ask: what is my number (7). Say: start at the end and undo the jump: 12 take away 5. A child who is unsure counts back 5 steps on fingers from 12. Your turn, no new picture: I think of a number, take away 3, get 9: what is my number (12). Children answer aloud. No writing."
+    },
+    {
+      "id": "s-sneak",
+      "part": "sneak",
+      "kind": "light",
+      "title": "Sneak-peek puzzles",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Ideas we have not learnt yet. A guess is a great start. Nobody is marked."
+        },
+        {
+          "t": "cols",
+          "cols": [
+            [
+              {
+                "t": "card",
+                "head": "PUZZLE 1: anyone can try",
+                "items": [
+                  "Mei has 4 stickers.",
+                  "Ali has 3 more stickers than Mei.",
+                  "How many stickers does Ali have?"
+                ]
+              }
+            ],
+            [
+              {
+                "t": "card",
+                "head": "PUZZLE 2: think",
+                "items": [
+                  "Mei and Ali have 10 stickers in all.",
+                  "Ali has 2 more stickers than Mei.",
+                  "How many stickers does Mei have?",
+                  "I know because ___."
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      "note": "Puzzle 1 is an access question: Ali has 4 and 3 more, so 7 stickers. Puzzle 2 is a thinking question on the lesson idea: Mei and Ali have 10 in all and Ali has 2 more, so Mei has 4 and Ali has 6. Children may use any way: a strip, guess and check, a table of tries, or counters. A child who writes 6 has found Ali, not Mei: that is a good start, do not correct it now. Say: two sneak-peek puzzles, ideas we have not learnt yet; a guess is a great start and I do not know is welcome; nobody is marked. Children write on their own paper. Nobody holds paper to the camera. There is no private chat. Answers: 7 stickers; 4 stickers. Do not reveal puzzle 2 until Talk time. Do not write scores or keep a list."
+    },
+    {
+      "id": "s-explore1",
+      "part": "explore",
+      "kind": "light",
+      "title": "Explore: your eight tools",
+      "blocks": [
+        {
+          "t": "visual",
+          "type": "table",
+          "head": [],
+          "rows": [
+            [
+              "Draw it",
+              "Act it out",
+              "Spot the pattern",
+              "List every way"
+            ],
+            [
+              "Make a table",
+              "Work backwards",
+              "Guess and check",
+              "Try something simpler"
+            ]
+          ],
+          "cell_h": 120,
+          "font": 26,
+          "size": 100
+        },
+        {
+          "t": "chip",
+          "text": "Lay your 8 tool cards in a row. Which tool have you used before?"
+        }
+      ],
+      "note": "Round 1, about 2 minutes. Children lay the 8 tool cards in a row on the table (a grown-up cut them out beforehand). Read the eight names: draw it, act it out, spot the pattern, list every way, make a table, work backwards, guess and check, try something simpler. Ask: which tool have you used before, and what did you use it for? Take two or three answers from volunteers; a pass is fine. Say: a tool is a way to solve a problem. Today we practise picking one. Nobody holds a card up to the camera: children keep the cards on the table. A child with no cards writes the eight names on scraps of paper."
+    },
+    {
+      "id": "s-explore2",
+      "part": "explore",
+      "kind": "light",
+      "title": "Explore: problems 1 to 4",
+      "blocks": [
+        {
+          "t": "table",
+          "header": true,
+          "rows": [
+            [
+              "Card",
+              "Problem"
+            ],
+            [
+              "1",
+              "Ali has 9 pens. Mei has 4 fewer pens than Ali. How many pens do they have in all?"
+            ],
+            [
+              "2",
+              "Rows of blocks have 2, 4, 6 blocks, and so on. Each row has 2 more than the row before. How many blocks are in the 6th row?"
+            ],
+            [
+              "3",
+              "Mei picks 2 fruits from an apple, a pear and a plum. List every pair she can pick."
+            ],
+            [
+              "4",
+              "Ravi is 3rd in a line of 7 children. How many children are behind Ravi?"
+            ]
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Put each problem card under a tool you would use. Say why."
+        }
+      ],
+      "note": "Round 2, about 4 minutes. Read problem 1 aloud with its numbers, then give 20 seconds for children to find card 1 and lay it under a tool card. Ask one or two volunteers: which tool, and why. Then problem 2, 3 and 4 the same way. There is no need to solve the problems: we only choose a tool. Answers (a tool that fits) are on the next slide. Say: more than one tool can fit; the reason matters more than the name. A child who chooses by one word (\"more\" so add) has not yet looked at the whole story: ask, what do we know and what do we want to find? Nobody holds a card up to the camera."
+    },
+    {
+      "id": "s-explore2-ans",
+      "part": "explore",
+      "kind": "light",
+      "title": "A tool that fits: 1 to 4",
+      "blocks": [
+        {
+          "t": "table",
+          "header": true,
+          "rows": [
+            [
+              "Card",
+              "A tool that fits"
+            ],
+            [
+              "1",
+              "Draw it (two strips)"
+            ],
+            [
+              "2",
+              "Spot the pattern"
+            ],
+            [
+              "3",
+              "List every way"
+            ],
+            [
+              "4",
+              "Act it out, or Draw it"
+            ]
+          ]
+        },
+        {
+          "t": "answer",
+          "text": "More than one tool can fit. A good reason matters more than the name."
+        }
+      ],
+      "note": "The answers for round 2. Problem 1: draw it (two strips, one 4 shorter). Problem 2: spot the pattern (the rows grow by 2 each time). Problem 3: list every way (every pair, none missed). Problem 4: act it out (a line of 7 children) or draw it. Other tools can fit too: problem 4 can also be a list. Read it aloud so that children can tick their own cards with a tick. Never name a child who chose a different tool: a different tool with a good reason is a good answer."
+    },
+    {
+      "id": "s-explore3",
+      "part": "explore",
+      "kind": "light",
+      "title": "Explore: problems 5 to 8",
+      "blocks": [
+        {
+          "t": "table",
+          "header": true,
+          "rows": [
+            [
+              "Card",
+              "Problem"
+            ],
+            [
+              "5",
+              "A number take away 6 is 9. What is the number?"
+            ],
+            [
+              "6",
+              "5 buns cost $15. All the buns cost the same. How much do 8 buns cost?"
+            ],
+            [
+              "7",
+              "Ben has 6 coins. They are 5¢ coins and 10¢ coins. They make 45¢ in all. How many of each?"
+            ],
+            [
+              "8",
+              "For every 2 red beads there are 3 blue beads. How many blue beads go with 8 red beads?"
+            ]
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Put each problem card under a tool you would use. Say why."
+        }
+      ],
+      "note": "Round 3, about 3 minutes. The same routine as round 2 with problems 5 to 8: read each problem aloud with its numbers, 15 seconds to find the card and lay it down, then one volunteer says which tool and why. Problems 2 and 8 both grow by the same amount (spot the pattern or make a table). Answers (a tool that fits) are on the next slide. A child who puts every problem under draw it has found one tool they like: ask what the story gives and what it asks."
+    },
+    {
+      "id": "s-explore3-ans",
+      "part": "explore",
+      "kind": "light",
+      "title": "A tool that fits: 5 to 8",
+      "blocks": [
+        {
+          "t": "table",
+          "header": true,
+          "rows": [
+            [
+              "Card",
+              "A tool that fits"
+            ],
+            [
+              "5",
+              "Work backwards"
+            ],
+            [
+              "6",
+              "Try something simpler (find 1 first)"
+            ],
+            [
+              "7",
+              "Guess and check"
+            ],
+            [
+              "8",
+              "Make a table"
+            ]
+          ]
+        },
+        {
+          "t": "answer",
+          "text": "Problems 2 and 8 both grow by the same amount. Many tools can fit one problem."
+        }
+      ],
+      "note": "The answers for round 3. Problem 5: work backwards (start at the end and undo). Problem 6: try something simpler (5 buns cost $15, so 1 bun costs $3, then 8 buns). Problem 7: guess and check (try 3 of each: 15 and 30 make 45, so 3 five-cent and 3 ten-cent coins). Problem 8: make a table (2 red with 3 blue, 4 red with 6 blue, 6 red with 9 blue, 8 red with 12 blue). Problems 2 and 8 both grow by the same amount. Say: the tool is chosen by what the story gives us, not by one word. Children tick their own cards with a tick. Do not name any child."
+    },
+    {
+      "id": "s-explore4",
+      "part": "explore",
+      "kind": "light",
+      "title": "What did we notice?",
+      "blocks": [
+        {
+          "t": "list",
+          "ordered": false,
+          "items": [
+            "Does one word, like more, tell us the tool?",
+            "Can two tools fit the same problem?"
+          ]
+        }
+      ],
+      "note": "Take one or two answers from volunteers. Key ideas: a word like more does not choose the tool, the whole story does; more than one tool can fit the same problem; a tool is not a trick, it is a way to see the problem; after solving, we can check with another tool. Repeat each child answer in your own words so the recording picks it up. Do not give the rule before the children say it; the mini-lesson makes it exact."
+    },
+    {
+      "id": "s-m1",
+      "part": "mini",
+      "kind": "light",
+      "title": "Eight tools, eight clues",
+      "blocks": [
+        {
+          "t": "visual",
+          "type": "table",
+          "head": [
+            "Tool",
+            "Use it when"
+          ],
+          "rows": [
+            [
+              "Draw it",
+              "Compare, find a total, or show a line, a place or a shape."
+            ],
+            [
+              "Act it out",
+              "One thing happens, then the next. Use counters or people."
+            ],
+            [
+              "Spot the pattern",
+              "Numbers repeat or grow by the same amount."
+            ],
+            [
+              "List every way",
+              "You need every way, none missed."
+            ],
+            [
+              "Make a table",
+              "Put what you know in rows and columns."
+            ],
+            [
+              "Work backwards",
+              "You know the end, not the start."
+            ],
+            [
+              "Guess and check",
+              "Pick a number, test it, try a better one."
+            ],
+            [
+              "Try something simpler",
+              "Equal groups, or the price of one: start with 1."
+            ]
+          ],
+          "col_w": [
+            4,
+            8
+          ],
+          "cell_h": 58,
+          "font": 24,
+          "size": 92
+        }
+      ],
+      "note": "One clue for each tool, read aloud in the order of the table. Draw it: Compare, find a total, or show a line, a place or a shape. Act it out: One thing happens, then the next. Use counters or people. Spot the pattern: Numbers repeat or grow by the same amount. List every way: You need every way, none missed. Make a table: Put what you know in rows and columns. Work backwards: You know the end, not the start. Guess and check: Pick a number, test it, try a better one. Try something simpler: Equal groups, or the price of one: start with 1. Say: a clue is a help, not a rule: look at the whole story. Say: after the answer, check it a second way. About 2 minutes."
+    },
+    {
+      "id": "s-m2",
+      "part": "mini",
+      "kind": "light",
+      "title": "Draw it: more and fewer",
+      "blocks": [
+        {
+          "t": "visual",
+          "type": "bar_model",
+          "mode": "compare",
+          "bars": [
+            {
+              "name": "Jamie",
+              "len": 14,
+              "text": "14"
+            },
+            {
+              "name": "Lily",
+              "len": 8,
+              "text": "?"
+            }
+          ],
+          "gap": {
+            "between": [
+              0,
+              1
+            ],
+            "text": "6"
+          },
+          "size": 100
+        },
+        {
+          "t": "chip",
+          "text": "Jamie has 14 cards. Lily has 6 fewer cards than Jamie. How many cards do they have in all?"
+        }
+      ],
+      "note": "Worked example, draw it (a strip). Jamie has 14 cards. Lily has 6 fewer cards than Jamie. Children work out how many cards Lily has and then how many cards in all, on their own paper. Ask: how many cards does Lily have (8); how many in all (22). The answer is on the next slide. Say: draw the long strip first, then a shorter one, and the gap is the 6 fewer. A child who answers 20 has added 14 and 6: the 6 is how many fewer, not how many cards. Check: 14 take away 8 is 6."
+    },
+    {
+      "id": "s-m2-ans",
+      "part": "mini",
+      "kind": "light",
+      "title": "Lily has 8 cards, 22 in all",
+      "blocks": [
+        {
+          "t": "visual",
+          "type": "bar_model",
+          "mode": "compare",
+          "bars": [
+            {
+              "name": "Jamie",
+              "len": 14,
+              "text": "14"
+            },
+            {
+              "name": "Lily",
+              "len": 8,
+              "text": "8"
+            }
+          ],
+          "gap": {
+            "between": [
+              0,
+              1
+            ],
+            "text": "6"
+          },
+          "brace": {
+            "text": "22",
+            "over": "all"
+          },
+          "size": 100
+        },
+        {
+          "t": "answer",
+          "text": "14 take away 6 is 8 cards for Lily. 14 + 8 = 22 cards in all."
+        }
+      ],
+      "note": "The answer for the example on the slide before. Lily: 14 take away 6 is 8. In all: 14 and 8 make 22. Read it aloud so that children can tick their own work. Say: the strip showed us the 6 fewer, so we knew to take 6 away."
+    },
+    {
+      "id": "s-m3",
+      "part": "mini",
+      "kind": "light",
+      "title": "Make a table: a growing pattern",
+      "blocks": [
+        {
+          "t": "visual",
+          "type": "table",
+          "head": [
+            "Path",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+          ],
+          "rows": [
+            [
+              "Tiles",
+              "2",
+              "5",
+              "8",
+              "",
+              "",
+              "",
+              ""
+            ]
+          ],
+          "cell_h": 70,
+          "font": 30,
+          "size": 100
+        },
+        {
+          "t": "chip",
+          "text": "A path has 2 tiles, then 5 tiles, then 8 tiles. Each path has 3 more tiles than the path before. How many tiles are in the 7th path?"
+        }
+      ],
+      "note": "Worked example, table. The tiles grow by 3 each time: 2, 5, 8. Children fill the empty boxes on their own paper: 11, 14, 17, 20. Ask: how many tiles are in the 7th path (20). The answer is on the next slide. Say: a table shows how the numbers grow. A child who writes 21 has added 3 one time too many: the 4th path is 11. Check: 20 take away 2 is 18, and 6 steps of 3 are 18."
+    },
+    {
+      "id": "s-m3-ans",
+      "part": "mini",
+      "kind": "light",
+      "title": "20 tiles in the 7th path",
+      "blocks": [
+        {
+          "t": "visual",
+          "type": "table",
+          "head": [
+            "Path",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+          ],
+          "rows": [
+            [
+              "Tiles",
+              "2",
+              "5",
+              "8",
+              "11",
+              "14",
+              "17",
+              "20"
+            ]
+          ],
+          "cell_h": 70,
+          "font": 30,
+          "size": 100
+        },
+        {
+          "t": "answer",
+          "text": "Add 3 each time: 2, 5, 8, 11, 14, 17, 20. The 7th path has 20 tiles."
+        }
+      ],
+      "note": "The answer for the example on the slide before. 2, 5, 8, 11, 14, 17, 20. The 7th path has 20 tiles. Read it aloud so that children can tick their own work. Say: from the 1st path to the 7th path there are 6 steps of 3, and 6 threes are 18."
+    },
+    {
+      "id": "s-m4",
+      "part": "mini",
+      "kind": "light",
+      "title": "Work backwards",
+      "blocks": [
+        {
+          "t": "visual",
+          "type": "table",
+          "head": [],
+          "rows": [
+            [
+              "?",
+              "+ 9",
+              "",
+              "− 4",
+              "20"
+            ]
+          ],
+          "cell_h": 84,
+          "font": 40,
+          "size": 100
+        },
+        {
+          "t": "chip",
+          "text": "I think of a number. I add 9. Then I take away 4. I get 20. What is my number?"
+        }
+      ],
+      "note": "Worked example, work backwards. The boxes show the story: start, + 9 (add 9), a middle number, − 4 (take away 4), the end 20. Children work back from the end on their own paper: undo the take away 4 (20 and 4 make 24), then undo the add 9 (24 take away 9 is 15). Ask: what is my number (15). The answer is on the next slide. Say: undo the last step first. A child who writes 25 has added 9 again instead of taking it away."
+    },
+    {
+      "id": "s-m4-ans",
+      "part": "mini",
+      "kind": "light",
+      "title": "My number is 15",
+      "blocks": [
+        {
+          "t": "visual",
+          "type": "table",
+          "head": [],
+          "rows": [
+            [
+              "15",
+              "+ 9",
+              "24",
+              "− 4",
+              "20"
+            ]
+          ],
+          "cell_h": 84,
+          "font": 40,
+          "size": 100
+        },
+        {
+          "t": "answer",
+          "text": "Start at 20 and undo each step: 20 + 4 = 24, then 24 take away 9 is 15. Check: 15 + 9 = 24 and 24 take away 4 is 20."
+        }
+      ],
+      "note": "The answer for the example on the slide before. Undo the last step first: 20 and 4 make 24. Then undo the first step: 24 take away 9 is 15. Check forwards: 15 and 9 make 24, and 24 take away 4 is 20. Read it aloud so that children can tick their own work. Say: checking forwards is a second way."
+    },
+    {
+      "id": "s-m5",
+      "part": "mini",
+      "kind": "light",
+      "title": "Two roads, one answer",
+      "blocks": [
+        {
+          "t": "visual",
+          "type": "bar_model",
+          "mode": "compare",
+          "bars": [
+            {
+              "name": "Wei",
+              "len": 1,
+              "text": "?"
+            },
+            {
+              "name": "Amelia",
+              "len": 2,
+              "text": "?"
+            }
+          ],
+          "brace": {
+            "text": "18",
+            "over": "all"
+          },
+          "size": 100
+        },
+        {
+          "t": "chip",
+          "text": "Amelia has twice as many marbles as Wei. They have 18 marbles in all. How many marbles does Wei have?"
+        }
+      ],
+      "note": "Worked example, two roads. Amelia has twice as many marbles as Wei and they have 18 marbles in all. Road 1: draw it (the strip). Wei has 1 part and Amelia has 2 parts, so there are 3 equal parts, and 18 shared into 3 parts is 6 marbles for Wei. Children work out how many marbles Wei has on their own paper. Ask: how many marbles does Wei have (6). The answer is on the next slide, with a second road: a table of tries. Say: twice as many is a Primary 2 and later idea at school; we try it because the strip shows it. A child who writes 9 has shared 18 into 2 equal parts: ask, how many parts does Amelia have?"
+    },
+    {
+      "id": "s-m5-ans",
+      "part": "mini",
+      "kind": "light",
+      "title": "Road 2: guess and check",
+      "blocks": [
+        {
+          "t": "visual",
+          "type": "table",
+          "head": [
+            "Wei",
+            "Amelia",
+            "In all"
+          ],
+          "rows": [
+            [
+              "4",
+              "8",
+              "12"
+            ],
+            [
+              "5",
+              "10",
+              "15"
+            ],
+            [
+              "6",
+              "12",
+              "18"
+            ]
+          ],
+          "cell_h": 64,
+          "font": 32,
+          "size": 100
+        },
+        {
+          "t": "answer",
+          "text": "Road 1, drawing it (the strip): 3 equal parts, 18 shared into 3 is 6. Road 2, guess and check (a table of tries): Wei 6 and Amelia 12 make 18. Both roads say Wei has 6 marbles."
+        }
+      ],
+      "note": "The answer for the example on the slide before. Road 1, the strip: 3 equal parts, so Wei has 6 and Amelia has 12. Road 2, guess and check (a table of tries): try Wei 4 (Amelia 8, in all 12, too few), Wei 5 (Amelia 10, in all 15, still too few), Wei 6 (Amelia 12, in all 18, just right). Both roads agree. Ask: why do the two roads agree (they use the same story, so a right answer must fit every part of it). Say: when two tools agree, we can trust the answer. A child who tries numbers at random is guessing; a table of tries goes up in order and gets closer."
+    },
+    {
+      "id": "s-break",
+      "part": "break",
+      "kind": "dark",
+      "title": "Mime the tools",
+      "blocks": [
+        {
+          "t": "p",
+          "text": "Stand up. Mime each tool with me."
+        },
+        {
+          "t": "p",
+          "text": "Draw a long strip in the air. Walk on the spot. Tap a table. Step back twice."
+        },
+        {
+          "t": "p",
+          "text": "Sip some water."
+        }
+      ],
+      "note": "Four minutes. Stand up on camera with a little clear space. Mime the tools together: strip (draw a long line in the air with both hands), table (tap a table with a finger), list (write a list in the air), draw it (draw a circle), work backwards (turn your arms backwards, like a slow wheel; nobody walks backwards), find one first (hold up one finger), steps (climb three small steps with your hands). Then say a tool name and let children do its move. A child may stay seated and move one arm. No equipment, no running. Do not give prizes or compare children."
+    },
+    {
+      "id": "s-ws1",
+      "part": "work",
+      "kind": "light",
+      "title": "Workbook page 1: Start here",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Questions 1 to 3. Take your time."
+        },
+        {
+          "t": "qs",
+          "ids": [
+            "S1",
+            "S2",
+            "S3"
+          ],
+          "short": true
+        }
+      ],
+      "note": "Read questions 1 to 3 aloud. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: use a strip: Ravi has 5 fewer marbles than Kumar, and how many in all. Question 2: do one step at a time: 30 apples and two sales. Question 3: make a table for a pattern of beads. Every Start here question names its tool."
+    },
+    {
+      "id": "s-ws1ans",
+      "part": "work",
+      "kind": "light",
+      "title": "Check page 1",
+      "blocks": [
+        {
+          "t": "answers",
+          "ids": [
+            "S1",
+            "S2",
+            "S3"
+          ]
+        }
+      ],
+      "note": "Read each answer aloud. Children tick their own page with a tick. Never ask a child to show a wrong answer to the group. Answers: Q1 Ravi has 7 marbles and 19 in all. Q2 18 apples left after the first step and 9 after the second. Q3 15 beads in row 5 and 18 beads in row 6."
+    },
+    {
+      "id": "s-ws2",
+      "part": "work",
+      "kind": "light",
+      "title": "Workbook page 2: Start here",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "Questions 4 to 6. Take your time."
+        },
+        {
+          "t": "qs",
+          "ids": [
+            "S4",
+            "S5",
+            "S6"
+          ],
+          "short": true
+        }
+      ],
+      "note": "Read questions 4 to 6 aloud. Question 4: work backwards: Ravi takes away 8 and gets 17, so his number, and a check. Question 5: find one first: 4 bags hold 20 apples, so 1 bag, then 7 bags. Question 6: use a list: three coins, pick two, three pairs, how many pairs. Wait 10 seconds before helping."
+    },
+    {
+      "id": "s-ws2ans",
+      "part": "work",
+      "kind": "light",
+      "title": "Check page 2",
+      "blocks": [
+        {
+          "t": "answers",
+          "ids": [
+            "S4",
+            "S5",
+            "S6"
+          ]
+        }
+      ],
+      "note": "Read each answer aloud so a child watching the recording can tick their own work. Never ask a child to show a wrong answer to the group. Answers: Q4 Ravi's number is 25 and the check is 17. Q5 1 bag holds 5 apples and 7 bags hold 35 apples. Q6 15, 25 and 30 cents, and 3 different pairs."
+    },
+    {
+      "id": "s-choice",
+      "part": "work",
+      "kind": "light",
+      "title": "Choose your next page",
+      "blocks": [
+        {
+          "t": "table",
+          "header": true,
+          "rows": [
+            [
+              "Page",
+              "What it is"
+            ],
+            [
+              "Think harder (page 3)",
+              "The tool is not named: you choose, and say why"
+            ],
+            [
+              "Go further (page 4)",
+              "Two roads for one problem, make three amounts equal, a pattern"
+            ],
+            [
+              "Investigation (page 5)",
+              "Pick a tool, write a problem"
+            ],
+            [
+              "Check",
+              "Finish and check your own work"
+            ]
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Everyone may choose. Not finished? Pages 3 to 5 are for home too."
+        }
+      ],
+      "note": "Invite the whole group at once, for example: when you have finished Start here, you can choose Think harder, Go further or the Investigation. Never announce who is on which page and never name a child. Pairs are not split unless both children agree. Model answers are in the tutor guide. About 5 minutes."
+    },
+    {
+      "id": "s-talk",
+      "part": "talk",
+      "kind": "light",
+      "title": "Talk and explain",
+      "blocks": [
+        {
+          "t": "card",
+          "head": "A CHILD IN ANOTHER CLASS SAYS",
+          "items": [
+            "Amelia has twice as many marbles as Wei.",
+            "They have 24 marbles in all.",
+            "24 shared into 2 is 12, so Wei has 12 marbles."
+          ]
+        },
+        {
+          "t": "p",
+          "text": "Do you agree? How could we check a second way?"
+        },
+        {
+          "t": "chip",
+          "text": "I think ... because ..."
+        }
+      ],
+      "note": "One minute of talk to the grown-up next to you, or to your screen. Volunteers first; a pass is always fine; never call a child by name to answer. Model answer: no, we do not agree. Check forwards: if Wei has 12 then Amelia has twice as many, 24, and together they have 36, not 24. Check with a strip: Wei has 1 part and Amelia has 2 parts, so there are 3 equal parts, and 24 shared into 3 is 8. Wei has 8 and Amelia has 16. The child shared into 2 parts but there are 3. Link to the mini-lesson: two roads, one answer. Repeat each child answer in your own words for the recording. The child in the story is in another class: no cast name is given the wrong answer."
+    },
+    {
+      "id": "s-sneakans",
+      "part": "talk",
+      "kind": "light",
+      "title": "Back to the sneak-peek",
+      "blocks": [
+        {
+          "t": "answer",
+          "text": "Puzzle 1: 7 stickers. Puzzle 2: Mei has 4 stickers. Mei 4 and Ali 6 make 10, and 6 is 2 more than 4."
+        }
+      ],
+      "note": "Reveal both puzzles now. Say: many of you wrote a good answer, and many of you used a different tool. Do not read out anyone earlier answer. Puzzle 1: 3 more than 4 is 7. Puzzle 2: a strip, a table of tries (Mei 3 and Ali 5 make 8, too few; Mei 4 and Ali 6 make 10) or counters all give 4. It was the same idea as the mini-lesson: more than one tool can fit, and we can check a second way."
+    },
+    {
+      "id": "s-exit",
+      "part": "exit",
+      "kind": "light",
+      "title": "Exit ticket",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "On your own. No looking back."
+        },
+        {
+          "t": "qs",
+          "ids": [
+            "E1",
+            "E2",
+            "E3"
+          ],
+          "short": false
+        }
+      ],
+      "note": "Children answer on page 5. Read E1, E2 and E3 aloud, with the numbers. Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
+    },
+    {
+      "id": "s-exitans",
+      "part": "exit",
+      "kind": "light",
+      "title": "Check the exit ticket",
+      "blocks": [
+        {
+          "t": "answers",
+          "ids": [
+            "E1",
+            "E2",
+            "E3"
+          ]
+        }
+      ],
+      "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: E1 Work backwards; E2 7 stickers and 18 stickers in all; E3 False."
+    },
+    {
+      "id": "s-look",
+      "part": "look",
+      "kind": "lookback",
+      "title": "Look-back",
+      "blocks": [
+        {
+          "t": "lookback"
+        }
+      ],
+      "note": "Three minutes. Children pick one problem from today and fill in the look-back box on page 5: three questions, the Tool I used row, and the stuck and pass boxes. A pass is always allowed. It is never marked, never collected in front of the group and never read out. If a child ticks I am still stuck, a grown-up may photograph that page after class and send it to the business WhatsApp (the number is in the parent summary, never on a slide). You then help in the open session next lesson. Never a direct message to a child.",
+      "mascot": {
+        "size": "s",
+        "say": "Take your time. You can pass."
+      }
+    },
+    {
+      "id": "s-end",
+      "part": "flex",
+      "kind": "dark",
+      "title": "Well done, inquirers!",
+      "blocks": [
+        {
+          "t": "p",
+          "text": "Show a grown-up your tool cards. Say which tool you like best."
+        },
+        {
+          "t": "card",
+          "head": "NEXT LESSON",
+          "items": [
+            "Inquirers' Showcase and Mi's Challenge Quest",
+            "Have ready: your Quest Log, still closed, a quest partner, a favourite page from your book and plain paper."
+          ]
+        }
+      ],
+      "note": "Say goodbye and thank the grown-ups. Minutes 85 to 90 are flex time: the buffer. If you ran late, finish any open item (the look-back). Do not start anything new. Remind families that the next lesson is the last lesson of the year and holds Mi's Challenge Quest: the Quest Log (4 pages) is in Book 8, kept closed until the tutor says to open it; a quest partner is a grown-up or a brother or sister; a favourite page from the year book and plain paper are for the showcase; and the tutor sends one line about what we saw in the Quest, never a mark. If the whole class is ahead, show the optional slide and use the Spare-time menu from the tutor guide.",
+      "mascot": {
+        "size": "l",
+        "say": "Great thinking today!"
+      }
+    },
+    {
+      "id": "s-opt",
+      "part": "flex",
+      "kind": "light",
+      "title": "Go further: how many cuts?",
+      "blocks": [
+        {
+          "t": "chip",
+          "text": "A rope is cut into 5 pieces. How many cuts are there? Draw it."
+        }
+      ],
+      "note": "Optional, only if you are on time. Draw the rope as a line and cut it: 1 cut makes 2 pieces, 2 cuts make 3 pieces, so 5 pieces need 4 cuts (the last piece needs no cut). Take two answers and move on. This is the draw-it tool again. Say: when we draw it, the answer shows.",
+      "optional": true
+    },
+    {
+      "id": "s-menu",
+      "part": "flex",
+      "kind": "light",
+      "title": "If we have time: pick one",
+      "blocks": [
+        {
+          "t": "table",
+          "header": true,
+          "rows": [
+            [
+              "Activity",
+              "What we do"
+            ],
+            [
+              "Is it always true?",
+              "Can two different tools solve the same problem? Try one."
+            ],
+            [
+              "Make a puzzle",
+              "Pick a tool card and write a problem for your grown-up."
+            ],
+            [
+              "Teach it back",
+              "Tell a toy why we check an answer a second way."
+            ]
+          ]
+        },
+        {
+          "t": "chip",
+          "text": "Optional. Everyone may join."
+        }
+      ],
+      "note": "Optional Spare-time menu, used only if the whole class is ahead. Pick one or two activities (3 to 5 minutes each); full tutor lines and answers are in the tutor guide. Never start new content and never name who is ahead. Slow down with how do you know rather than rushing on. These minutes come from the flex buffer and are not part of the 90-minute sum.",
+      "optional": true
+    }
+  ],
+  "script": {
+    "segments": [
+      {
+        "part": "opening",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-title",
+            "s": 10
+          },
+          {
+            "k": "DO",
+            "text": "Greet the whole group warmly, before the recording starts. Check that you can see each child, or ask the grown-up.",
+            "s": 12
+          },
+          {
+            "k": "SAY",
+            "text": "Hello, inquirers! Pencil ready, and your workbook. Cameras can be on or off, as you like."
+          },
+          {
+            "k": "SAY",
+            "text": "This lesson is recorded so a friend who is away can catch up. The recording has me, the shared screen and any voice that is not muted. You may keep your microphone and camera off."
+          },
+          {
+            "k": "DO",
+            "text": "Start the recording now. Do not use children's first names on the recording.",
+            "s": 5
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Microphone off until I ask you to speak. To answer, say it with me on three, show fingers, or give a thumbs up. Nobody holds paper up to the camera."
+          },
+          {
+            "k": "SAY",
+            "text": "Today we open the problem-solving toolbox. We meet eight tools, we pick the tool that fits a problem, and we check our answer a second way."
+          },
+          {
+            "k": "SAY",
+            "text": "Today you choose the tool.",
+            "spine": "opening"
+          },
+          {
+            "k": "DO",
+            "text": "Point at the row of tools on page 1 of the workbook.",
+            "s": 4,
+            "spine": "opening"
+          },
+          {
+            "k": "NOTE",
+            "text": "Say the recording statement and the microphone routine in the same words every lesson, for anyone who joined late. Say the notice before you start the recording, and do not use children's first names once it is running. The routine and the four inquirer rules were introduced earlier in the year: do not re-teach them."
+          },
+          {
+            "k": "NOTE",
+            "text": "Plain statement for families when it comes up: choosing a tool for a problem is part of the school problem-solving process; choosing the tool when it is not named, make equal, and solving one problem two ways go beyond Primary 1 on purpose, at Think harder and Go further only."
+          },
+          {
+            "k": "NOTE",
+            "text": "New here? Say in one minute: our three rule words (notice it, test it, explain why); a guess is fine and you can always pass; after Start here you may choose Think harder, Go further or the Investigation; nobody holds paper to the camera. Nothing from earlier lessons is needed."
+          }
+        ]
+      },
+      {
+        "part": "remember",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-rem1",
+            "s": 12
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Two strips. Ali has eight stickers and Mei has three."
+          },
+          {
+            "k": "ASK",
+            "text": "How many more stickers does Ali have than Mei?",
+            "resp": 35
+          },
+          {
+            "k": "WORK",
+            "text": "Your turn. How many stickers do they have in all? Say it with me.",
+            "s": 30
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-rem2",
+            "s": 12
+          },
+          {
+            "k": "SAY",
+            "text": "Three pens cost twelve dollars. All the pens cost the same. We share twelve into three equal parts."
+          },
+          {
+            "k": "ASK",
+            "text": "How much does one pen cost?",
+            "resp": 35
+          },
+          {
+            "k": "WORK",
+            "text": "Your turn. One pen costs four dollars. How much do five pens cost? Say it with me.",
+            "s": 30
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-rem3",
+            "s": 12
+          },
+          {
+            "k": "SAY",
+            "text": "I think of a number, add five, and get twelve. We start at the end and undo the jump."
+          },
+          {
+            "k": "ASK",
+            "text": "What is my number? Count back with your fingers.",
+            "resp": 35
+          },
+          {
+            "k": "WORK",
+            "text": "Your turn. I think of a number, take away three, and get nine. What is my number?",
+            "s": 30
+          },
+          {
+            "k": "WORK",
+            "text": "Say each answer with me: five more; eleven; four dollars; twenty dollars; seven; twelve. Then stretch your fingers.",
+            "s": 22
+          },
+          {
+            "k": "STUCK",
+            "text": "If a child is unsure about drawing strips, lay 3 counters against 8 counters and count the extra ones. For one pen, share 12 counters into 3 piles one at a time. For working backwards, count back 5 steps on fingers from 12."
+          },
+          {
+            "k": "NOTE",
+            "text": "Answers: Ali has 5 more than Mei; 11 stickers in all; 1 pen costs $4; 5 pens cost $20; my number is 7. Your turns: 11; $20; 12. Children answer with a whisper, fingers or hands. Nobody writes. Joining cold: all you need is counting to 20 and the pictures."
+          }
+        ]
+      },
+      {
+        "part": "sneak",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-sneak",
+            "s": 12
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Two sneak-peek puzzles: ideas we have not learnt yet. A guess is a great start, and I do not know is welcome. Nobody is marked."
+          },
+          {
+            "k": "READ",
+            "text": "Puzzle one. Mei has four stickers. Ali has three more stickers than Mei. How many stickers does Ali have? Write the number."
+          },
+          {
+            "k": "WORK",
+            "text": "Children write on their own paper.",
+            "s": 30
+          },
+          {
+            "k": "READ",
+            "text": "Puzzle two. Mei and Ali have ten stickers in all. Ali has two more stickers than Mei. How many stickers does Mei have? I know because blank."
+          },
+          {
+            "k": "WORK",
+            "text": "Children write or draw their answer. Any way is fine: a strip, counters or a guess.",
+            "s": 80
+          },
+          {
+            "k": "SAY",
+            "text": "Keep your paper. Nobody shows it. We will check our own thinking later, at Talk time."
+          },
+          {
+            "k": "NOTE",
+            "text": "Puzzle 1 answer: 7 stickers. Puzzle 2 answer: 4 stickers (Mei 4, Ali 6). A child who writes 6 has found Ali: do not correct it now. Look for good ideas to praise later (a strip, a table of tries, counters). Do not write scores or keep a list."
+          }
+        ]
+      },
+      {
+        "part": "explore",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-explore1",
+            "s": 12
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Today we are toolbox builders. Lay your eight tool cards in a row on the table. A tool is a way to solve a problem."
+          },
+          {
+            "k": "READ",
+            "text": "Draw it. Act it out. Spot the pattern. List every way. Make a table. Work backwards. Guess and check. Try something simpler."
+          },
+          {
+            "k": "ASK",
+            "text": "Which tool have you used before? What did you use it for?",
+            "resp": 50
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-explore2",
+            "s": 12
+          },
+          {
+            "k": "SAY",
+            "text": "Now the problem cards. I read a problem. You put its card under a tool you would use. We do not solve it yet: we only choose."
+          },
+          {
+            "k": "READ",
+            "text": "Problem one. Ali has nine pens. Mei has four fewer pens than Ali. How many pens do they have in all?"
+          },
+          {
+            "k": "WORK",
+            "text": "Children find card one and lay it under a tool. A volunteer says which tool and why.",
+            "s": 24
+          },
+          {
+            "k": "READ",
+            "text": "Problem two. Rows of blocks have two, four, six blocks, and so on. Each row has two more than the row before. How many blocks are in the sixth row?"
+          },
+          {
+            "k": "WORK",
+            "text": "Children lay card two under a tool.",
+            "s": 24
+          },
+          {
+            "k": "READ",
+            "text": "Problem three. Mei picks two fruits from an apple, a pear and a plum. List every pair she can pick."
+          },
+          {
+            "k": "WORK",
+            "text": "Children lay card three under a tool.",
+            "s": 19
+          },
+          {
+            "k": "READ",
+            "text": "Problem four. Ravi is third in a line of seven children. How many children are behind Ravi?"
+          },
+          {
+            "k": "WORK",
+            "text": "Children lay card four under a tool.",
+            "s": 19
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-explore2-ans",
+            "s": 8
+          },
+          {
+            "k": "SAY",
+            "text": "A tool that fits: draw it for one, spot the pattern for two, list every way for three, act it out or draw it for four. More than one tool can fit. A good reason matters more than the name."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-explore3",
+            "s": 12
+          },
+          {
+            "k": "READ",
+            "text": "Problem five. A number take away six is nine. What is the number?"
+          },
+          {
+            "k": "WORK",
+            "text": "Children lay card five under a tool.",
+            "s": 19
+          },
+          {
+            "k": "READ",
+            "text": "Problem six. Five buns cost fifteen dollars. All the buns cost the same. How much do eight buns cost?"
+          },
+          {
+            "k": "WORK",
+            "text": "Children lay card six under a tool.",
+            "s": 19
+          },
+          {
+            "k": "READ",
+            "text": "Problem seven. Ben has six coins. They are five-cent coins and ten-cent coins. They make forty-five cents in all. How many of each?"
+          },
+          {
+            "k": "WORK",
+            "text": "Children lay card seven under a tool.",
+            "s": 19
+          },
+          {
+            "k": "READ",
+            "text": "Problem eight. For every two red beads there are three blue beads. How many blue beads go with eight red beads?"
+          },
+          {
+            "k": "WORK",
+            "text": "Children lay card eight under a tool. A volunteer says which tool and why.",
+            "s": 24
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-explore3-ans",
+            "s": 8
+          },
+          {
+            "k": "SAY",
+            "text": "Work backwards for five, try something simpler for six, guess and check for seven, and make a table for eight. Problems two and eight both grow by the same amount."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-explore4",
+            "s": 8
+          },
+          {
+            "k": "ASK",
+            "text": "Does one word, like more, tell us the tool? Can two tools fit the same problem?",
+            "resp": 45
+          },
+          {
+            "k": "SAY",
+            "text": "The whole story picks the tool, not one word. Next we practise each tool."
+          },
+          {
+            "k": "STUCK",
+            "text": "A child with no cards says the tool name aloud instead. A child who chooses by one word: ask, what does the story give us and what does it ask? A child who is sure about one tool: ask, could another tool fit too?"
+          },
+          {
+            "k": "NOTE",
+            "text": "Main room only. We only choose a tool: do not solve the problems now. Suggested tools: 1 draw it; 2 spot the pattern; 3 list every way; 4 act it out; 5 work backwards; 6 try something simpler; 7 guess and check; 8 make a table. Other tools may fit: accept a good reason. Do not say the rule before the children do."
+          }
+        ]
+      },
+      {
+        "part": "mini",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-m1",
+            "s": 8
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "One clue for each tool. Draw it: to compare, find a total, or show a shape. Act it out: when one thing happens, then the next. Spot the pattern: when numbers grow by the same amount. List every way: when we need every way."
+          },
+          {
+            "k": "SAY",
+            "text": "Make a table: to put what we know in rows. Work backwards: when we know the end, not the start. Guess and check: pick a number and test it. Try something simpler: for the price of one."
+          },
+          {
+            "k": "SAY",
+            "text": "A clue is a help, not a rule. Look at the whole story, and check the answer a second way."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m2",
+            "s": 8
+          },
+          {
+            "k": "SAY",
+            "text": "Draw it. Jamie has fourteen cards. Lily has six fewer cards than Jamie."
+          },
+          {
+            "k": "ASK",
+            "text": "How many cards does Lily have? How many cards do they have in all?",
+            "resp": 62
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m2-ans",
+            "s": 8
+          },
+          {
+            "k": "SAY",
+            "text": "Fourteen take away six is eight cards for Lily. Fourteen and eight make twenty-two cards in all. The strip showed us the six fewer."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m3",
+            "s": 8
+          },
+          {
+            "k": "SAY",
+            "text": "A table. A path has two tiles, then five, then eight. Each path has three more tiles than the path before."
+          },
+          {
+            "k": "ASK",
+            "text": "How many tiles are in the seventh path? Fill in the boxes.",
+            "resp": 72
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m3-ans",
+            "s": 8
+          },
+          {
+            "k": "SAY",
+            "text": "Two, five, eight, eleven, fourteen, seventeen, twenty. The seventh path has twenty tiles."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m4",
+            "s": 8
+          },
+          {
+            "k": "SAY",
+            "text": "Work backwards. I think of a number. I add nine. Then I take away four. I get twenty."
+          },
+          {
+            "k": "ASK",
+            "text": "What is my number? Undo the last step first.",
+            "resp": 77
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m4-ans",
+            "s": 8
+          },
+          {
+            "k": "SAY",
+            "text": "Twenty and four make twenty-four. Twenty-four take away nine is fifteen. Check forwards: fifteen and nine make twenty-four, and twenty-four take away four is twenty."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m5",
+            "s": 8
+          },
+          {
+            "k": "SAY",
+            "text": "Two roads, one answer. Amelia has twice as many marbles as Wei. They have eighteen marbles in all."
+          },
+          {
+            "k": "ASK",
+            "text": "How many marbles does Wei have? Draw it with the strip.",
+            "resp": 82
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-m5-ans",
+            "s": 8
+          },
+          {
+            "k": "SAY",
+            "text": "Road one, drawing it: three equal parts, and eighteen shared into three is six. Road two, guess and check, a table of tries: four is too few, five is too few, six is just right. Both roads say six marbles."
+          },
+          {
+            "k": "ASK",
+            "text": "Why do the two roads agree?",
+            "resp": 32
+          },
+          {
+            "k": "SAY",
+            "text": "They use the same story. When two tools agree, we can trust the answer."
+          },
+          {
+            "k": "STUCK",
+            "text": "If a child writes 20 for Lily's cards, say the 6 is how many fewer, not how many cards. If a child writes 21 for the table, check how many steps of 3: from the 1st path to the 7th path there are 6 steps. If a child writes 25 for working backwards, say: undo the add with a take away. If a child writes 9 for Wei's marbles, ask: how many parts does Pip have?"
+          },
+          {
+            "k": "NOTE",
+            "text": "Key words to use every time: tool, draw it, act it out, spot the pattern, list every way, make a table, work backwards, guess and check, try something simpler, check. Fixed question forms: How many more ___ than ___? How many in all? The slides keep the answers off the screen while you ask: read every question with its numbers aloud. Class numbers are not used in the workbook."
+          }
+        ]
+      },
+      {
+        "part": "break",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-break",
+            "s": 8
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Stand up and get a sip of water. We mime the eight tools. Do it with me."
+          },
+          {
+            "k": "WORK",
+            "text": "Mime the tools: draw a long strip in the air, tap a table, write a list in the air, draw a circle, turn your arms backwards like a slow wheel, hold up one finger, climb three small steps with your hands. Then call a tool and let children do its move. Nobody walks backwards. Seated children move one arm.",
+            "s": 170
+          }
+        ]
+      },
+      {
+        "part": "work",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-ws1",
+            "s": 8
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "READ",
+            "text": "Page 1, Start here. Every question tells you the tool. Question 1: use a strip. Kumar has twelve marbles. Ravi has five fewer marbles than Kumar. Part a: Ravi has blank marbles. Part b: they have blank marbles in all. Question 2: do one step at a time. A shop has thirty apples. It sells twelve apples in the morning and nine apples in the afternoon. Part a: after the first step, blank apples are left. Part b: after the second step, blank apples are left. Question 3: make a table. Row one has three beads, row two has six beads and row three has nine beads. Each row has three more beads than the row before. Part a: row five has blank beads. Part b: row six has blank beads."
+          },
+          {
+            "k": "WORK",
+            "text": "Page 1, questions 1 to 3. Tutor walks the cameras, asks how do you know. Wait 10 seconds before helping.",
+            "s": 540
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-ws1ans",
+            "s": 8
+          },
+          {
+            "k": "READ",
+            "text": "Question 1: seven marbles, and nineteen marbles in all. Question 2: eighteen apples, then nine apples. Question 3: fifteen beads, and eighteen beads. Tick your own page with a tick."
+          },
+          {
+            "k": "SAY",
+            "text": "After question 3 you may choose: carry on, or try Think harder. Everyone may choose, at any time."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-ws2",
+            "s": 8
+          },
+          {
+            "k": "READ",
+            "text": "Page 2. Question 4: work backwards. Ravi thinks of a number. He takes away eight and gets seventeen. Part a: Ravi's number is blank. Part b: check. Ravi's number take away eight is blank. Question 5: find one first. Four bags hold twenty apples. All the bags hold the same number. Part a: one bag holds blank apples. Part b: seven bags hold blank apples. Question 6: use a list. Ali has three coins: five cents, ten cents and twenty cents. He picks two coins. Part a: five cents and ten cents make blank cents. Part b: five cents and twenty cents make blank cents. Part c: ten cents and twenty cents make blank cents. Part d: there are blank different pairs of coins."
+          },
+          {
+            "k": "WORK",
+            "text": "Page 2, questions 4 to 6.",
+            "s": 500
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-ws2ans",
+            "s": 8
+          },
+          {
+            "k": "READ",
+            "text": "Question 4: twenty-five, and seventeen. Question 5: five apples, and thirty-five apples. Question 6: fifteen, twenty-five and thirty cents, and three pairs. Tick your own page."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-choice",
+            "s": 8
+          },
+          {
+            "k": "SAY",
+            "text": "When you have finished Start here, you can choose Think harder, Go further or the Investigation. Everyone may choose. You can swap at any time. Anything not finished is for home too."
+          },
+          {
+            "k": "MOVE",
+            "text": "Stand and reach up for 30 seconds, then sit down and choose.",
+            "s": 30
+          },
+          {
+            "k": "WORK",
+            "text": "Choice time: Think harder (page 3), Go further (page 4), the Investigation (page 5), or finish and check your own work. Tutor never says who is on which page. If Start here took the whole time, say that pages 3 to 5 are for home, and keep the time.",
+            "s": 200
+          },
+          {
+            "k": "STUCK",
+            "text": "Q1: draw the long strip first, then the shorter one. Q2: do the first sale, then the second. Q3: fill the table box by box, adding 3 each time. Q4: undo the take away with an add. Q5: share the apples into the bags first. Q6: write each pair of coins and add them."
+          },
+          {
+            "k": "STUCK",
+            "text": "A child who is still stuck ticks I am still stuck on the look-back page. The grown-up can photograph that page after class and send it to the business WhatsApp (never a personal phone). You then help in the open session in the next lesson. Never a private message to a child."
+          },
+          {
+            "k": "NOTE",
+            "text": "Think harder has a choose-the-tool question, a work-backwards money story, a line with a place from the front and from the back, and a coins puzzle with a table of tries: none of these says which tool except the first. Go further has Two Roads, One Answer (beyond Primary 1 on purpose), make three amounts equal, and a pattern with a sentence frame. Do not announce who is on which page. Start here takes a middle child about 17 minutes, so the choice time may be short. Slow class: take the extra minutes from the flex time and do not skip the answer slides."
+          }
+        ]
+      },
+      {
+        "part": "talk",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-talk",
+            "s": 8
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "READ",
+            "text": "A child in another class says: Amelia has twice as many marbles as Wei. They have twenty-four marbles in all. Twenty-four shared into two is twelve, so Wei has twelve marbles. Do you agree? How could we check a second way?"
+          },
+          {
+            "k": "WORK",
+            "text": "Think about it. You may use your paper.",
+            "s": 50
+          },
+          {
+            "k": "WORK",
+            "text": "Talk to the grown-up next to you or to your screen for one minute. Use the sentence starter: I think... because...",
+            "s": 40
+          },
+          {
+            "k": "ASK",
+            "text": "Who would like to share? Volunteers first. A pass is always fine.",
+            "resp": 100
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-sneakans",
+            "s": 8
+          },
+          {
+            "k": "SAY",
+            "text": "Remember the sneak-peek? Puzzle one: seven stickers. Puzzle two: Mei has four stickers. Many of you used a different tool, and that is good."
+          },
+          {
+            "k": "ASK",
+            "text": "Did anyone change their mind while we worked? You can just nod.",
+            "resp": 12
+          },
+          {
+            "k": "NOTE",
+            "text": "Optional, no time modelled: ask which tool the group chose and why. Volunteers first; listen for a tool being named and a reason.",
+            "spine": "talk"
+          },
+          {
+            "k": "NOTE",
+            "text": "Model answer: no, we do not agree. Check forwards: if Wei has twelve, Amelia has twenty-four, and together they have thirty-six, not twenty-four. Check with a strip: Wei has one part and Amelia has two parts, so there are three equal parts, and twenty-four shared into three is eight: Wei has eight and Amelia has sixteen. The child shared into two parts but there are three. Volunteers first; never call a child by name to answer; no tallies, no rankings. Praise the reason, not the speed."
+          }
+        ]
+      },
+      {
+        "part": "exit",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-exit",
+            "s": 8
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Exit ticket. Three questions, on your own, without looking back. Write your answers on page 5."
+          },
+          {
+            "k": "READ",
+            "text": "E1. Mei thinks of a number. She adds four and gets fifteen. Circle the tool that fits best: Table, Work backwards or List. E2. Ali has eleven stickers. Mei has four fewer stickers than Ali. Part a: Mei has blank stickers. Part b: they have blank stickers in all. E3. Five buns cost twenty dollars. A child in another class says one bun costs five dollars. Circle True or False."
+          },
+          {
+            "k": "WORK",
+            "text": "Children answer E1 to E3 on their own.",
+            "s": 215
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-exitans",
+            "s": 8
+          },
+          {
+            "k": "READ",
+            "text": "E1: work backwards. E2: seven stickers, and eighteen stickers in all. E3: false."
+          },
+          {
+            "k": "SAY",
+            "text": "Tick your own ticket with a tick. Well done."
+          },
+          {
+            "k": "NOTE",
+            "text": "Nothing is collected or marked live. Children tick their own ticket. If many children miss one question, spend two minutes on it at the start of the next lesson, in the open session, no names. Do not read out any child result. E3: 20 shared into 5 is 4, so one bun costs $4."
+          }
+        ]
+      },
+      {
+        "part": "look",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-look",
+            "s": 8
+          },
+          {
+            "k": "REC",
+            "text": "@rec"
+          },
+          {
+            "k": "SAY",
+            "text": "Pick one problem from today. Did I answer the question? Does my answer make sense? Can I check it another way? Tick, write one word, or pass. If you tick I am still stuck, ask your grown-up to photograph this page after class and send it to our business WhatsApp. Then we will help you.",
+            "spine": "look"
+          },
+          {
+            "k": "WORK",
+            "text": "Children fill in the look-back box on page 5. Nobody reads theirs out. Praise a check you saw, not speed.",
+            "s": 110,
+            "spine": "look"
+          }
+        ]
+      },
+      {
+        "part": "flex",
+        "lines": [
+          {
+            "k": "SLIDE",
+            "slide": "s-end",
+            "s": 8
+          },
+          {
+            "k": "SAY",
+            "text": "Well done, inquirers. Next lesson is the last lesson of the year: Inquirers' Showcase and Mi's Challenge Quest. Please have your Quest Log from Book 8, still closed, a quest partner beside you, a favourite page from your book, and plain paper. Goodbye, and thank you to the grown-ups."
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-opt",
+            "s": 8,
+            "optional": true
+          },
+          {
+            "k": "SAY",
+            "text": "Optional, only if you are on time. A rope is cut into five pieces. How many cuts are there? Draw it.",
+            "optional": true
+          },
+          {
+            "k": "WORK",
+            "text": "Short think time, then take two answers.",
+            "s": 90,
+            "optional": true
+          },
+          {
+            "k": "SLIDE",
+            "slide": "s-menu",
+            "s": 8,
+            "optional": true
+          },
+          {
+            "k": "SAY",
+            "text": "Spare-time menu. If the whole class is ahead, pick one or two activities from the guide (about 4 minutes each).",
+            "optional": true
+          },
+          {
+            "k": "NOTE",
+            "text": "This is the standing buffer. If you are behind, finish the look-back and say goodbye. Do not start anything new. Optional slide answer: 4 cuts (5 pieces need 4 cuts). If the whole class is ahead, use the Spare-time menu (guide section 3b) instead of rushing on."
+          }
+        ]
+      }
+    ]
+  },
+  "tiers": {
+    "start": [
+      {
+        "id": "S1",
+        "page": 1,
+        "tier": "start",
+        "text": "Draw it. Use a strip. Kumar has 12 marbles. Ravi has 5 fewer marbles than Kumar.",
+        "answer": "7 marbles; 19 marbles in all",
+        "val": [
+          7,
+          19
+        ],
+        "hint": "Draw the long strip for Kumar. Ravi's strip is 5 shorter. Then add the two strips for the total.",
+        "solution": "Ravi: 12 take away 5 is 7 marbles. In all: 12 + 7 = 19 marbles.",
+        "mistakes": [
+          "Writing 17 for Ravi (12 and 5 added).",
+          "Writing 12 + 5 for the total."
+        ],
+        "mins": 3,
+        "parts": [
+          {
+            "l": "a",
+            "text": "Ravi has [] marbles.",
+            "ans": "7",
+            "val": 7
+          },
+          {
+            "l": "b",
+            "text": "They have [] marbles in all.",
+            "ans": "19",
+            "val": 19
+          }
+        ],
+        "visual": {
+          "type": "bar_model",
+          "bars": [
+            {
+              "name": "Kumar",
+              "len": 12,
+              "text": "12"
+            },
+            {
+              "name": "Ravi",
+              "len": 7,
+              "text": "?"
+            }
+          ],
+          "gap": {
+            "between": [
+              0,
+              1
+            ],
+            "text": "5"
+          },
+          "size": 100
+        }
+      },
+      {
+        "id": "S2",
+        "page": 1,
+        "tier": "start",
+        "text": "Act it out. Do one step at a time. A shop has 30 apples. It sells 12 apples in the morning and 9 apples in the afternoon.",
+        "answer": "18 apples; 9 apples",
+        "val": [
+          18,
+          9
+        ],
+        "hint": "Do the morning first. Take 12 away from 30. Then do the afternoon.",
+        "solution": "After the morning: 30 take away 12 is 18 apples. After the afternoon: 18 take away 9 is 9 apples.",
+        "mistakes": [
+          "Taking 12 and 9 away from 30 in one go and writing 9 for both parts.",
+          "Adding 12 and 9."
+        ],
+        "mins": 2.5,
+        "parts": [
+          {
+            "l": "a",
+            "text": "After the first step, [] apples are left.",
+            "ans": "18",
+            "val": 18
+          },
+          {
+            "l": "b",
+            "text": "After the second step, [] apples are left.",
+            "ans": "9",
+            "val": 9
+          }
+        ],
+        "visual": {
+          "type": "story_steps",
+          "piles": [
+            "30",
+            "?",
+            "?"
+          ],
+          "steps": [
+            "sells|12",
+            "sells|9"
+          ],
+          "px": 480
+        }
+      },
+      {
+        "id": "S3",
+        "page": 1,
+        "tier": "start",
+        "text": "Make a table. Each row has 3 more beads than the row before. Fill in the table.",
+        "answer": "15 beads; 18 beads",
+        "val": [
+          15,
+          18
+        ],
+        "hint": "Add 3 each time: 3, 6, 9, then the next box.",
+        "solution": "3, 6, 9, 12, 15, 18. Row 5 has 15 beads and row 6 has 18 beads.",
+        "mistakes": [
+          "Writing 12 for row 5 (stopping one box early).",
+          "Writing 5 times 3 for row 6."
+        ],
+        "mins": 2.5,
+        "parts": [
+          {
+            "l": "a",
+            "text": "Row 5 has [] beads.",
+            "ans": "15",
+            "val": 15
+          },
+          {
+            "l": "b",
+            "text": "Row 6 has [] beads.",
+            "ans": "18",
+            "val": 18
+          }
+        ],
+        "visual": {
+          "type": "table",
+          "head": [
+            "Row",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "rows": [
+            [
+              "Beads",
+              "3",
+              "6",
+              "9",
+              "[]",
+              "[]",
+              "[]"
+            ]
+          ],
+          "size": 100
+        }
+      },
+      {
+        "id": "S4",
+        "page": 2,
+        "tier": "start",
+        "text": "Work backwards. Ravi thinks of a number. He takes away 8 and gets 17.",
+        "answer": "25; 17",
+        "val": [
+          25,
+          17
+        ],
+        "hint": "Start at 17 and undo the take away with an add.",
+        "solution": "17 and 8 make 25, so Ravi's number is 25. Check: 25 take away 8 is 17.",
+        "mistakes": [
+          "Writing 9 (17 take away 8).",
+          "Not checking."
+        ],
+        "mins": 3,
+        "parts": [
+          {
+            "l": "a",
+            "text": "Ravi's number is [] .",
+            "ans": "25",
+            "val": 25
+          },
+          {
+            "l": "b",
+            "text": "Check: Ravi's number take away 8 is [] .",
+            "ans": "17",
+            "val": 17
+          }
+        ],
+        "visual": {
+          "type": "story_steps",
+          "piles": [
+            "?",
+            "17"
+          ],
+          "steps": [
+            "takes|away 8"
+          ],
+          "px": 380
+        }
+      },
+      {
+        "id": "S5",
+        "page": 2,
+        "tier": "start",
+        "text": "Try something simpler. Find one first. 4 bags hold 20 apples. All the bags hold the same number of apples.",
+        "answer": "5 apples; 35 apples",
+        "val": [
+          5,
+          35
+        ],
+        "hint": "Share 20 apples into 4 equal bags. Then count 7 bags of that number.",
+        "solution": "20 shared into 4 bags is 5 apples in 1 bag. 7 bags: 7 groups of 5 is 35 apples.",
+        "mistakes": [
+          "Writing 24 (20 + 4).",
+          "Writing 7 + 5 for 7 bags."
+        ],
+        "mins": 3,
+        "parts": [
+          {
+            "l": "a",
+            "text": "1 bag holds [] apples.",
+            "ans": "5",
+            "val": 5
+          },
+          {
+            "l": "b",
+            "text": "7 bags hold [] apples.",
+            "ans": "35",
+            "val": 35
+          }
+        ],
+        "visual": {
+          "type": "groups",
+          "container": "bag",
+          "n": 4,
+          "empty": true,
+          "per_row": 4,
+          "size": 80
+        }
+      },
+      {
+        "id": "S6",
+        "page": 2,
+        "tier": "start",
+        "text": "List every way. Use a list. Ali has three coins: 5¢, 10¢ and 20¢. He picks 2 coins. Fill in the blanks.",
+        "answer": "15¢, 25¢, 30¢; 3 pairs",
+        "val": [
+          15,
+          25,
+          30,
+          3
+        ],
+        "hint": "Write each pair of coins and add them. Pick each pair only once.",
+        "solution": "5¢ and 10¢ make 15¢. 5¢ and 20¢ make 25¢. 10¢ and 20¢ make 30¢. There are 3 different pairs.",
+        "mistakes": [
+          "Adding all three coins.",
+          "Writing 6 pairs (counting 5¢ and 10¢, then 10¢ and 5¢ again)."
+        ],
+        "mins": 3,
+        "parts": [
+          {
+            "l": "a",
+            "text": "5¢ and 10¢ make []¢.",
+            "ans": "15",
+            "val": 15
+          },
+          {
+            "l": "b",
+            "text": "5¢ and 20¢ make []¢.",
+            "ans": "25",
+            "val": 25
+          },
+          {
+            "l": "c",
+            "text": "10¢ and 20¢ make []¢.",
+            "ans": "30",
+            "val": 30
+          },
+          {
+            "l": "d",
+            "text": "There are [] different pairs of coins.",
+            "ans": "3",
+            "val": 3
+          }
+        ],
+        "visual": {
+          "type": "money",
+          "items": [
+            {
+              "v": "5c"
+            },
+            {
+              "v": "10c"
+            },
+            {
+              "v": "20c"
+            }
+          ],
+          "label": "PLAY MONEY",
+          "size": 75
+        }
+      }
+    ],
+    "think": [
+      {
+        "id": "T1",
+        "page": 3,
+        "tier": "think",
+        "text": "Read the story. 3 rulers cost $15. All the rulers cost the same. Siti buys 5 rulers.",
+        "answer": "Try something simpler or Make a table; $25",
+        "val": [
+          "open",
+          25
+        ],
+        "hint": "Which tool shares $15 into 3 equal parts? Then count 5 of them.",
+        "solution": "Try something simpler: find one first. $15 shared into 3 rulers is $5 for 1 ruler. 5 rulers cost 5 groups of $5, which is $25. A table of 1 to 5 rulers ($5, $10, $15, $20, $25) also works.",
+        "mistakes": [
+          "Choosing List every way (there is only one answer to find).",
+          "Writing $20 (15 + 5)."
+        ],
+        "mins": 4,
+        "parts": [
+          {
+            "l": "a",
+            "text": "Circle the tool that fits best.",
+            "ans": "Try something simpler (Make a table also fits: $5, $10, $15, $20, $25)",
+            "val": "open",
+            "choices": [
+              "Make a table",
+              "List every way",
+              "Try something simpler"
+            ]
+          },
+          {
+            "l": "b",
+            "text": "5 rulers cost $[] .",
+            "ans": "25",
+            "val": 25
+          }
+        ]
+      },
+      {
+        "id": "T2",
+        "page": 3,
+        "tier": "think",
+        "text": "Ben pays with a $10 note for a toy and a card. The toy costs $6. His change is $1.",
+        "answer": "$9; $3",
+        "val": [
+          9,
+          3
+        ],
+        "hint": "What did Ben spend in all? Then take the toy away from that.",
+        "solution": "Ben spent $10 take away $1, which is $9. The toy cost $6, so the card costs $9 take away $6, which is $3. Check: 6 + 3 = 9 and 10 take away 9 is 1.",
+        "mistakes": [
+          "Writing $4 (10 take away 6).",
+          "Writing $5 (6 and 1 taken from 10 the wrong way)."
+        ],
+        "mins": 5,
+        "parts": [
+          {
+            "l": "a",
+            "text": "Ben spends $[] in all.",
+            "ans": "9",
+            "val": 9
+          },
+          {
+            "l": "b",
+            "text": "The card costs $[] .",
+            "ans": "3",
+            "val": 3
+          }
+        ]
+      },
+      {
+        "id": "T3",
+        "page": 3,
+        "tier": "think",
+        "text": "Ali, Ben and Mei stand on a staircase. Mei is on stair 7. Ali is 2 stairs below Mei. Ben is 1 stair below Ali. Use the box to show your thinking.",
+        "answer": "Ali on stair 5; Ben on stair 4",
+        "val": [
+          5,
+          4
+        ],
+        "hint": "Draw the stairs and put a dot on stair 7. Go down 2 stairs for Ali, then down 1 more for Ben.",
+        "solution": "Mei is on stair 7. Ali is 2 stairs below, so he is on stair 7 - 2 = 5. Ben is 1 stair below Ali, so he is on stair 5 - 1 = 4. Check by counting up from Ben: stair 4, 5 (Ali), 6, 7 (Mei).",
+        "mistakes": [
+          "Writing 9 or 8 (going up instead of down).",
+          "Taking both stairs from Mei and writing 4 for Ali."
+        ],
+        "mins": 5,
+        "draw": true,
+        "draw_strokes": 8,
+        "parts": [
+          {
+            "l": "a",
+            "text": "Ali is on stair [] .",
+            "ans": "5",
+            "val": 5
+          },
+          {
+            "l": "b",
+            "text": "Ben is on stair [] .",
+            "ans": "4",
+            "val": 4
+          }
+        ]
+      },
+      {
+        "id": "T4",
+        "page": 3,
+        "tier": "think",
+        "text": "Mei has 7 coins. Some are 5¢ coins and some are 10¢ coins. The coins make 50¢ in all. You may use the table.",
+        "answer": "4 coins of 5¢; 3 coins of 10¢",
+        "val": [
+          4,
+          3
+        ],
+        "hint": "Try a number of 10¢ coins. Then the rest are 5¢ coins. Is the total 50¢? Try again.",
+        "solution": "Try 2 coins of 10¢: 5 coins of 5¢ make 25, and 20 + 25 is 45, too little. Try 3 coins of 10¢: 4 coins of 5¢ make 20, and 30 + 20 is 50. So 4 coins of 5¢ and 3 coins of 10¢.",
+        "mistakes": [
+          "Guessing without checking the total.",
+          "Writing 3 and 4 the wrong way round."
+        ],
+        "mins": 5,
+        "parts": [
+          {
+            "l": "a",
+            "text": "Mei has [] coins of 5¢.",
+            "ans": "4",
+            "val": 4
+          },
+          {
+            "l": "b",
+            "text": "Mei has [] coins of 10¢.",
+            "ans": "3",
+            "val": 3
+          }
+        ],
+        "visual": {
+          "type": "table",
+          "head": [
+            "10¢ coins",
+            "5¢ coins",
+            "Total"
+          ],
+          "rows": [
+            [
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              ""
+            ]
+          ],
+          "cell_h": 60,
+          "font": 38,
+          "size": 90
+        }
+      }
+    ],
+    "go": [
+      {
+        "id": "G1",
+        "page": 4,
+        "tier": "go",
+        "text": "Jenny has 3 times as many stickers as Jason. They have 36 stickers in all. Solve it two ways: a strip and a table of tries.",
+        "answer": "9 stickers; 9 stickers; 27 stickers; Yes",
+        "val": [
+          9,
+          9,
+          27,
+          "Yes"
+        ],
+        "hint": "The strip has 4 equal parts. In the table, 36 is between 32 and 40. Try Jason 9.",
+        "solution": "Road 1, the strip: Jason has 1 part and Jenny has 3 parts, so there are 4 equal parts. 36 shared into 4 is 9, so Jason has 9 stickers. Road 2, the table: Jason 8 gives 32 in all, and Jason 10 gives 40 in all. Try Jason 9: Jenny has 27 and 9 + 27 = 36. Both roads say Jason has 9. Jenny has 27.",
+        "mistakes": [
+          "Writing 12 for Jason (36 shared into 3 parts).",
+          "Trying numbers in a different order and losing track."
+        ],
+        "mins": 7,
+        "parts": [
+          {
+            "l": "a",
+            "text": "Road 1, the strip: Jason has [] stickers.",
+            "ans": "9",
+            "val": 9
+          },
+          {
+            "l": "b",
+            "text": "Road 2, the table of tries. Jason 8 and Jenny 24 make 32 in all. Jason 10 and Jenny 30 make 40 in all. For 36 in all, Jason has [] stickers.",
+            "ans": "9",
+            "val": 9
+          },
+          {
+            "l": "c",
+            "text": "Jenny has [] stickers.",
+            "ans": "27",
+            "val": 27
+          },
+          {
+            "l": "d",
+            "text": "Do both roads give the same answer for Jason? Circle Yes or No.",
+            "ans": "Yes",
+            "val": "Yes",
+            "choices": [
+              "Yes",
+              "No"
+            ]
+          }
+        ],
+        "visual": {
+          "type": "bar_model",
+          "bars": [
+            {
+              "name": "In all",
+              "len": 4,
+              "segments": [
+                {
+                  "v": 1,
+                  "text": "Jason"
+                },
+                {
+                  "v": 3,
+                  "text": "Jenny",
+                  "colour": "mint"
+                }
+              ]
+            }
+          ],
+          "brace": {
+            "text": "36",
+            "over": "all"
+          },
+          "size": 100
+        }
+      },
+      {
+        "id": "G2",
+        "page": 4,
+        "tier": "go",
+        "text": "Ali has 9 stickers, Ben has 15 stickers and Mei has 12 stickers. Only Ben and Ali move stickers. Then all three children have the same number.",
+        "answer": "12 stickers; 3 stickers",
+        "val": [
+          12,
+          3
+        ],
+        "hint": "Add all the stickers. Share them into 3 equal parts. Who has too many? Who has too few?",
+        "solution": "9 + 15 + 12 = 36 stickers. 36 shared into 3 children is 12 each. Mei already has 12. Ben has 3 too many and Ali has 3 too few, so Ben gives 3 stickers to Ali.",
+        "mistakes": [
+          "Making Ali and Ben equal without looking at Mei.",
+          "Writing 6 (the difference between 9 and 15)."
+        ],
+        "mins": 6,
+        "parts": [
+          {
+            "l": "a",
+            "text": "Each child ends with [] stickers.",
+            "ans": "12",
+            "val": 12
+          },
+          {
+            "l": "b",
+            "text": "Ben gives [] stickers to Ali.",
+            "ans": "3",
+            "val": 3
+          }
+        ],
+        "visual": {
+          "type": "bar_model",
+          "bars": [
+            {
+              "name": "Ali",
+              "len": 9,
+              "text": "9"
+            },
+            {
+              "name": "Ben",
+              "len": 15,
+              "text": "15"
+            },
+            {
+              "name": "Mei",
+              "len": 12,
+              "text": "12"
+            }
+          ],
+          "size": 75
+        }
+      },
+      {
+        "id": "G3",
+        "page": 4,
+        "tier": "go",
+        "text": "Siti reads 4 pages on day 1, 7 pages on day 2 and 10 pages on day 3. Each day she reads 3 more pages than the day before. Finish the sentence about the tool you used.",
+        "answer": "Day 7; many answers are right",
+        "val": [
+          7,
+          "open"
+        ],
+        "hint": "A table of days and pages helps. Or start at 22 and work backwards.",
+        "solution": "A table: 4, 7, 10, 13, 16, 19, 22. She reads 22 pages on day 7. Or work backwards: 22 take away 4 is 18, and 18 is 6 steps of 3, so day 7. Check: 6 steps from day 1 is day 7.",
+        "mistakes": [
+          "Writing 6 (the number of steps, not the day).",
+          "Not saying why."
+        ],
+        "mins": 5,
+        "parts": [
+          {
+            "l": "a",
+            "text": "She reads 22 pages on day [] .",
+            "ans": "7",
+            "val": 7
+          },
+          {
+            "l": "b",
+            "text": "I used ___ because ___ . (Many answers are right.)",
+            "ans": "a table or work backwards, with a reason",
+            "val": "open"
+          }
+        ]
+      }
+    ],
+    "investigation": {
+      "id": "I1",
+      "page": 5,
+      "tier": "investigation",
+      "title": "Pick a tool",
+      "first": "Pick one tool card. Write its name: ____",
+      "text": "Write a short problem that fits the tool. Solve it. Then check it a second way. Write your problem and your answer.",
+      "lines": 4,
+      "draw": 0,
+      "answer": "Many answers are right. A good problem has a story, numbers, one question, and an answer that fits the tool. The check uses a second tool or works the problem forwards.",
+      "val": [
+        "open"
+      ],
+      "look_for": "A child who writes a short story with numbers and a question, solves it with the chosen tool, and checks it a second way (a different tool, or working forwards). Credit any clear problem. A child who copies a card problem has not yet made their own: ask, what would you change? A child who uses a number that gives a whole answer has thought about the check.",
+      "mistakes": [
+        "Writing a problem the tool does not fit.",
+        "Writing an answer without a check."
+      ],
+      "mins": 8
+    }
+  },
+  "talk": {
+    "question": "A child in another class says: Amelia has twice as many marbles as Wei. They have 24 marbles in all. 24 shared into 2 is 12, so Wei has 12 marbles. Do you agree? How could we check a second way?",
+    "starter": "I think ... because ...",
+    "answer": "No. If Wei has 12, then Amelia has twice as many, which is 24, and together they have 36, not 24. A strip has 3 equal parts, and 24 shared into 3 is 8, so Wei has 8 and Amelia has 16.",
+    "look_for": "A child who checks forwards (12 and 24 make 36, not 24) or who draws the strip with 3 equal parts. Not just yes or no."
+  },
+  "exit": [
+    {
+      "id": "E1",
+      "text": "Mei thinks of a number. She adds 4 and gets 15.",
+      "parts": [
+        {
+          "l": "",
+          "text": "Circle the tool that fits best.",
+          "ans": "Work backwards",
+          "val": "Work backwards",
+          "choices": [
+            "Make a table",
+            "Work backwards",
+            "List every way"
+          ]
+        }
+      ],
+      "answer": "Work backwards",
+      "val": [
+        "Work backwards"
+      ],
+      "solution": "We know the end (15) and not the start, so we work backwards: 15 take away 4 is 11.",
+      "mistakes": [
+        "Choosing Make a table (no pattern grows).",
+        "Choosing List every way (we do not list every way)."
+      ]
+    },
+    {
+      "id": "E2",
+      "text": "Ali has 11 stickers. Mei has 4 fewer stickers than Ali.",
+      "parts": [
+        {
+          "l": "a",
+          "text": "Mei has [] stickers.",
+          "ans": "7",
+          "val": 7
+        },
+        {
+          "l": "b",
+          "text": "They have [] stickers in all.",
+          "ans": "18",
+          "val": 18
+        }
+      ],
+      "answer": "7 stickers; 18 stickers",
+      "val": [
+        7,
+        18
+      ],
+      "solution": "Mei: 11 take away 4 is 7. In all: 11 + 7 = 18.",
+      "mistakes": [
+        "Writing 15 (11 and 4 added).",
+        "Leaving out one strip when finding the total."
+      ]
+    },
+    {
+      "id": "E3",
+      "text": "5 buns cost $20. A child in another class says 1 bun costs $5.",
+      "parts": [
+        {
+          "l": "",
+          "text": "Circle True or False.",
+          "ans": "False",
+          "val": "False",
+          "choices": [
+            "True",
+            "False"
+          ]
+        }
+      ],
+      "answer": "False",
+      "val": [
+        "False"
+      ],
+      "solution": "$20 shared into 5 buns is $4 for 1 bun, not $5. Check: 5 buns at $5 would cost $25.",
+      "mistakes": [
+        "Choosing True (using the 5 from 5 buns).",
+        "Dividing 20 by 4."
+      ]
+    }
+  ],
+  "look_back": {
+    "hardest": [
+      "picking a tool",
+      "drawing it",
+      "working backwards",
+      "something else"
+    ],
+    "helped": [
+      "the tool cards",
+      "drawing it",
+      "checking a second way",
+      "I was not stuck"
+    ],
+    "next": [
+      "picking a tool",
+      "checking a second way",
+      "saying why",
+      "asking a question"
+    ]
+  },
+  "home_practice": [
+    {
+      "id": "H1",
+      "tier": "start",
+      "text": "Draw it. Use a strip. Aisha has 15 shells. Kumar has 6 fewer shells than Aisha. How many shells do they have in all? They have ___ shells.",
+      "answer": "24",
+      "val": 24,
+      "solution": "Kumar has 15 take away 6, which is 9 shells. In all: 15 + 9 = 24.",
+      "visual": {
+        "type": "bar_model",
+        "bars": [
+          {
+            "name": "Aisha",
+            "len": 15,
+            "text": "15"
+          },
+          {
+            "name": "Kumar",
+            "len": 9,
+            "text": "?"
+          }
+        ],
+        "hw": 110,
+        "below": true
+      }
+    },
+    {
+      "id": "H2",
+      "tier": "start",
+      "text": "Make a table. Picture 1 uses 4 sticks, picture 2 uses 8 sticks and picture 3 uses 12 sticks. Each picture uses 4 more sticks than the picture before. How many sticks does picture 6 use? ___ sticks.",
+      "answer": "24",
+      "val": 24,
+      "solution": "4, 8, 12, 16, 20, 24. Picture 6 uses 24 sticks."
+    },
+    {
+      "id": "H3",
+      "tier": "start",
+      "text": "Work backwards. Lily thinks of a number. She adds 7 and gets 25. Her number is ___ .",
+      "answer": "18",
+      "val": 18,
+      "solution": "25 take away 7 is 18. Check: 18 + 7 = 25.",
+      "visual": {
+        "type": "story_steps",
+        "piles": [
+          "?",
+          "25"
+        ],
+        "steps": [
+          "adds|7"
+        ],
+        "hw": 110,
+        "below": true
+      }
+    },
+    {
+      "id": "H4",
+      "tier": "think",
+      "text": "Mei has 5 coins. Some are 10¢ coins and some are 20¢ coins. The coins make 70¢ in all. How many coins of 20¢ does Mei have? ___ coins of 20¢.",
+      "answer": "2",
+      "val": 2,
+      "solution": "Try 1 coin of 20¢: 4 coins of 10¢ make 40, and 40 + 20 is 60, too little. Try 2 coins of 20¢: 3 coins of 10¢ make 30, and 30 + 40 is 70. So 2 coins of 20¢."
+    },
+    {
+      "id": "H5",
+      "tier": "start",
+      "text": "The moon is 6. The star is 2 more than the moon. What is the moon + the star? ___",
+      "answer": "14",
+      "val": 14,
+      "solution": "The star is 6 and 2 more, which is 8. The moon + the star is 6 + 8 = 14.",
+      "rewind_of": "Term 2 Lesson 3"
+    }
+  ],
+  "online_practice": {
+    "key": "t4l39",
+    "title": "The Problem-Solving Toolbox",
+    "topic": "Pick a tool, solve with it, and check a second way",
+    "items": [
+      {
+        "id": "c1",
+        "tier": "core",
+        "type": "number",
+        "q": "Ali has 12 pens. Mei has 4 fewer pens than Ali. How many pens do they have in all?",
+        "hint": "Draw it. Draw a strip. Find Mei first. Then add the two strips.",
+        "steps": [
+          "Mei has 12 take away 4, which is 8 pens.",
+          "12 and 8 make 20.",
+          "They have 20 pens in all."
+        ],
+        "answer": 20,
+        "slips": [
+          {
+            "a": [
+              8
+            ],
+            "say": "That is Mei. Add the two strips for the total."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "a": [
+              10,
+              11,
+              12,
+              13,
+              14
+            ],
+            "b": [
+              3,
+              4,
+              5
+            ]
+          },
+          "derive": {},
+          "q": "Ali has {a} pens. Mei has {b} fewer pens than Ali. How many pens do they have in all?",
+          "answer": "2*a-b",
+          "hint": "Draw it. Draw a strip. Find Mei first. Then add the two strips.",
+          "steps": [
+            "Mei has {a} take away {b} pens.",
+            "{a} and Mei's pens make the total.",
+            "They have {ans} pens in all."
+          ]
+        }
+      },
+      {
+        "id": "c2",
+        "tier": "core",
+        "type": "number",
+        "q": "A row has 2 beads. Each next row has 3 more beads. How many beads are in the 5th row?",
+        "hint": "Make a table. Add 3 each time.",
+        "steps": [
+          "Row 1 has 2 beads.",
+          "Add 3 each time: 2, 5, 8, 11, 14.",
+          "The 5th row has 14 beads."
+        ],
+        "answer": 14,
+        "slips": [
+          {
+            "a": [
+              17
+            ],
+            "say": "That is the 6th row. Row 1 is 2: count the rows."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "s": [
+              2,
+              3,
+              4
+            ],
+            "e": [
+              2,
+              3
+            ],
+            "n": [
+              4,
+              5,
+              6
+            ]
+          },
+          "derive": {},
+          "q": "A row has {s} beads. Each next row has {e} more beads. How many beads are in the {n|ord} row?",
+          "answer": "s+e*(n-1)",
+          "hint": "Make a table. Add {e} each time.",
+          "steps": [
+            "Row 1 has {s} beads.",
+            "Add {e} each time.",
+            "The {n|ord} row has {ans} beads."
+          ]
+        }
+      },
+      {
+        "id": "c3",
+        "tier": "core",
+        "type": "number",
+        "q": "I think of a number. I add 6 and get 15. What is my number?",
+        "hint": "Work backwards. Take 6 away from 15.",
+        "steps": [
+          "We know the end: 15.",
+          "Undo the add: 15 take away 6.",
+          "My number is 9."
+        ],
+        "answer": 9,
+        "slips": [
+          {
+            "a": [
+              21
+            ],
+            "say": "Do not add. Work backwards: take 6 away."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "x": [
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "a": [
+              4,
+              5,
+              6,
+              7
+            ]
+          },
+          "derive": {
+            "t": "x+a"
+          },
+          "q": "I think of a number. I add {a} and get {t}. What is my number?",
+          "answer": "x",
+          "hint": "Work backwards. Take {a} away from {t}.",
+          "steps": [
+            "We know the end: {t}.",
+            "Undo the add: {t} take away {a}.",
+            "My number is {ans}."
+          ]
+        }
+      },
+      {
+        "id": "c4",
+        "tier": "core",
+        "type": "number",
+        "q": "3 pens cost $9. All the pens cost the same. How much does 1 pen cost?",
+        "hint": "Try something simpler. Find one first. Share $9 into 3 equal parts.",
+        "steps": [
+          "Share $9 into 3 equal parts.",
+          "3 and 3 and 3 make 9.",
+          "1 pen costs $3."
+        ],
+        "answer": 3,
+        "slips": [
+          {
+            "a": [
+              12
+            ],
+            "say": "Do not add. Share the money into equal parts."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "k": [
+              3,
+              4,
+              5
+            ],
+            "u": [
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "derive": {
+            "p": "k*u"
+          },
+          "q": "{k} pens cost ${p}. All the pens cost the same. How much does 1 pen cost?",
+          "answer": "u",
+          "hint": "Try something simpler. Find one first. Share ${p} into {k} equal parts.",
+          "steps": [
+            "Share ${p} into {k} equal parts.",
+            "Each part is the price of 1 pen.",
+            "1 pen costs ${ans}."
+          ]
+        }
+      },
+      {
+        "id": "c5",
+        "tier": "core",
+        "type": "choice",
+        "q": "A number take away 7 is 10. Which tool fits best?",
+        "hint": "We know the end, not the start.",
+        "steps": [
+          "We know the end: 10.",
+          "We want the start.",
+          "Work backwards fits best."
+        ],
+        "answer": "work backwards",
+        "slips": [
+          {
+            "a": [
+              "table"
+            ],
+            "say": "No pattern grows here. We know the end, not the start."
+          }
+        ],
+        "options": [
+          "make a table",
+          "work backwards",
+          "list every way"
+        ]
+      },
+      {
+        "id": "t1",
+        "tier": "stretch",
+        "type": "number",
+        "q": "4 boxes hold 24 shells. All the boxes hold the same number. How many shells do 7 boxes hold?",
+        "hint": "Try something simpler. Find one first. Then count 7 groups.",
+        "steps": [
+          "24 shared into 4 boxes is 6 shells in 1 box.",
+          "7 groups of 6.",
+          "7 boxes hold 42 shells."
+        ],
+        "answer": 42,
+        "slips": [
+          {
+            "a": [
+              6
+            ],
+            "say": "That is 1 box. Now find 7 boxes."
+          }
+        ],
+        "easier": "c4",
+        "tpl": {
+          "vars": {
+            "k": [
+              3,
+              4,
+              5
+            ],
+            "u": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "m": [
+              6,
+              7,
+              8
+            ]
+          },
+          "derive": {
+            "t": "k*u"
+          },
+          "q": "{k} boxes hold {t} shells. All the boxes hold the same number. How many shells do {m} boxes hold?",
+          "answer": "u*m",
+          "hint": "Try something simpler. Find one first. Then count {m} groups.",
+          "steps": [
+            "{t} shared into {k} boxes is the number in 1 box.",
+            "Count {m} groups of that number.",
+            "{m} boxes hold {ans} shells."
+          ]
+        }
+      },
+      {
+        "id": "t2",
+        "tier": "stretch",
+        "type": "number",
+        "q": "I think of a number. I add 9. Then I take away 4. I get 20. What is my number?",
+        "hint": "Work backwards. Undo the last step first.",
+        "steps": [
+          "Undo the take away 4: 20 and 4 make 24.",
+          "Undo the add 9: 24 take away 9.",
+          "My number is 15."
+        ],
+        "answer": 15,
+        "slips": [
+          {
+            "a": [
+              25
+            ],
+            "say": "Do not add 9 again. Undo it with a take away."
+          }
+        ],
+        "easier": "c3",
+        "tpl": {
+          "vars": {
+            "x": [
+              10,
+              12,
+              15,
+              18
+            ],
+            "a": [
+              6,
+              7,
+              9
+            ],
+            "b": [
+              3,
+              4,
+              5
+            ]
+          },
+          "derive": {
+            "r": "x+a-b"
+          },
+          "q": "I think of a number. I add {a}. Then I take away {b}. I get {r}. What is my number?",
+          "answer": "x",
+          "hint": "Work backwards. Undo the last step first.",
+          "steps": [
+            "Undo the take away {b}: {r} and {b} make a number.",
+            "Undo the add {a}: take {a} away.",
+            "My number is {ans}."
+          ]
+        }
+      },
+      {
+        "id": "t3",
+        "tier": "stretch",
+        "type": "choice",
+        "q": "Find every way to pay 30¢ with 10¢ coins and 5¢ coins. Which tool helps most?",
+        "hint": "We want every way.",
+        "steps": [
+          "We want every way.",
+          "A list finds every way, one by one.",
+          "List every way fits best."
+        ],
+        "answer": "list every way",
+        "slips": [
+          {
+            "a": [
+              "work backwards"
+            ],
+            "say": "We do not know an end. We want every way."
+          }
+        ],
+        "options": [
+          "list every way",
+          "work backwards",
+          "try something simpler"
+        ],
+        "easier": "c5"
+      },
+      {
+        "id": "g1",
+        "tier": "challenge",
+        "type": "number",
+        "q": "Amelia has 3 times as many shells as Wei. They have 24 shells in all. How many shells does Wei have?",
+        "hint": "A strip has 4 equal parts.",
+        "steps": [
+          "Wei has 1 part and Amelia has 3 parts.",
+          "That is 4 equal parts.",
+          "24 shared into 4 is 6 shells for Wei."
+        ],
+        "answer": 6,
+        "slips": [
+          {
+            "a": [
+              8
+            ],
+            "say": "That shares 24 into 3 parts. Count the parts of Wei and Amelia together."
+          }
+        ],
+        "easier": "t1",
+        "tpl": {
+          "vars": {
+            "r": [
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          },
+          "derive": {
+            "t": "4*r"
+          },
+          "q": "Amelia has 3 times as many shells as Wei. They have {t} shells in all. How many shells does Wei have?",
+          "answer": "r",
+          "hint": "A strip has 4 equal parts.",
+          "steps": [
+            "Wei has 1 part and Amelia has 3 parts.",
+            "That is 4 equal parts.",
+            "{t} shared into 4 is {ans} shells for Wei."
+          ]
+        }
+      },
+      {
+        "id": "g2",
+        "tier": "challenge",
+        "type": "number",
+        "q": "Amelia has 3 times as many shells as Wei. They have 24 shells in all. How many shells does Amelia have?",
+        "hint": "Find Wei first. Then count 3 parts.",
+        "steps": [
+          "24 shared into 4 equal parts is 6.",
+          "Wei has 6 shells.",
+          "Amelia has 3 parts of 6, which is 18 shells."
+        ],
+        "answer": 18,
+        "slips": [
+          {
+            "a": [
+              6
+            ],
+            "say": "That is Wei. Amelia has 3 times as many."
+          }
+        ],
+        "easier": "g1",
+        "tpl": {
+          "vars": {
+            "r": [
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          },
+          "derive": {
+            "t": "4*r"
+          },
+          "q": "Amelia has 3 times as many shells as Wei. They have {t} shells in all. How many shells does Amelia have?",
+          "answer": "3*r",
+          "hint": "Find Wei first. Then count 3 parts.",
+          "steps": [
+            "{t} shared into 4 equal parts is Wei's shells.",
+            "Amelia has 3 parts of that number.",
+            "Amelia has {ans} shells."
+          ]
+        }
+      },
+      {
+        "id": "g3",
+        "tier": "challenge",
+        "type": "selfcheck",
+        "q": "Pick a tool card and write a problem for it. Solve it, then check it a second way.",
+        "hint": "Pick the tool first. Then think of a story.",
+        "steps": [
+          "Pick one tool.",
+          "Write a short story with numbers and a question.",
+          "Solve it, then check it another way."
+        ]
+      },
+      {
+        "id": "r1",
+        "tier": "core",
+        "type": "number",
+        "q": "A child writes 70 − 30 = 40. Add back to check. What is 40 + 30?",
+        "hint": "Add the answer and the number you took away.",
+        "steps": [
+          "Add back: 40 and 30.",
+          "40 and 30 make 70.",
+          "We get back to 70, so the take away is right."
+        ],
+        "answer": 70,
+        "slips": [
+          {
+            "a": [
+              10
+            ],
+            "say": "10 is the gap. To check, add the answer and the number taken away."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "a": [
+              14,
+              16,
+              18,
+              24,
+              27,
+              32
+            ],
+            "b": [
+              11,
+              12,
+              13,
+              15,
+              23
+            ]
+          },
+          "derive": {
+            "s": "a+b"
+          },
+          "q": "A child writes {s} − {b} = {a}. Add back to check. What is {a} + {b}?",
+          "answer": "a+b",
+          "hint": "Add the answer and the number you took away.",
+          "steps": [
+            "Add back: {a} and {b}.",
+            "{a} and {b} make {ans}.",
+            "We get back to {s}, so the take away is right."
+          ]
+        },
+        "rewind_of": "Term 3 Lesson 9"
+      },
+      {
+        "id": "r2",
+        "tier": "core",
+        "type": "number",
+        "q": "A child forgot the ten when adding. The child wrote 39 + 24 = 53. What is the right answer?",
+        "hint": "The ones make more than 9. Do not forget the ten.",
+        "steps": [
+          "9 and 4 make 13.",
+          "13 is 1 ten and 3 ones.",
+          "39 + 24 = 63."
+        ],
+        "answer": 63,
+        "slips": [
+          {
+            "a": [
+              53
+            ],
+            "say": "53 is the answer with the ten missing. Add the ten."
+          }
+        ],
+        "tpl": {
+          "vars": {
+            "a": [
+              35,
+              46,
+              28,
+              39,
+              47
+            ],
+            "b": [
+              27,
+              38,
+              45,
+              16,
+              19
+            ]
+          },
+          "derive": {
+            "w": "a+b-10"
+          },
+          "q": "A child forgot the ten when adding. The child wrote {a} + {b} = {w}. What is the right answer?",
+          "answer": "a+b",
+          "hint": "The ones make more than 9. Do not forget the ten.",
+          "steps": [
+            "Add the ones. They make more than 9.",
+            "Write the ones and add the ten.",
+            "{a} + {b} = {ans}."
+          ]
+        },
+        "rewind_of": "Term 3 Lesson 9"
+      }
+    ]
+  },
+  "parent": {
+    "summary": "We opened the problem-solving toolbox. Your child met eight tools (draw it, act it out, spot the pattern, list every way, make a table, work backwards, guess and check, try something simpler), picked one, said why, and checked the answer. Some Think harder and Go further questions go past the school Primary 1 syllabus on purpose; Start here stays within it.",
+    "words": [
+      "tool: a way to solve a problem",
+      "draw it: a picture or a drawn bar for each amount",
+      "work backwards: start at the end and undo",
+      "check: solve it a second way"
+    ],
+    "try_home": [
+      "Give your child a short story problem. Ask: which tool fits? There is often more than one.",
+      "Ask your child to solve a problem with one tool, then check it with another.",
+      "Make up a shopping or sharing problem. Ask your child to pick a tool first."
+    ],
+    "ask": [
+      "Which tool did you pick, and why?",
+      "What does the story give us?",
+      "How could you check it a second way?"
+    ],
+    "when_stuck": "Let your child look at the tool cards and wait 10 seconds before helping. Please do not name the tool: ask \"What does the story give us?\" instead. If the look-back page says \"I am still stuck\", photograph it and send it to our business WhatsApp (+65 9880 5962). Photos are kept 90 days after the program ends.",
+    "next": "Next lesson: Inquirers' Showcase and Mi's Challenge Quest, the last lesson of the year. Your child plays the Quest as a game with a quest partner, then shares a favourite idea (a pass is always fine). Keep the Quest Log in Book 8 closed until the tutor says to open it. If your book has not arrived or is damaged, message us on WhatsApp within 7 days and we will send you the PDF straight away. Online practice: your tutor will share the link. The recording has the tutor, the shared screen and any unmuted voice.",
+    "quote": "Pick the tool that fits. Then check it a second way.",
+    "report_line": "Your child is learning to choose a way to solve a problem and to check it. This week: eight tools, picking the tool, and solving one problem two ways.",
+    "term_line": "Your child is learning to choose a way to solve a problem, and to make and test their own puzzles.",
+    "next_materials": [
+      "Your Quest Log (4 pages) from Book 8 (keep those 4 pages closed)",
+      "A quest partner: a grown-up, or a brother or sister",
+      "A favourite page from your year books, and plain paper"
+    ]
+  },
+  "safeguarding": [
+    "Tool cards and problem cards are small pieces of paper. They stay on the table: nothing goes in the mouth or ears. No matches or toothpicks. Nobody cuts during the lesson; a grown-up cut the cards beforehand.",
+    "This lesson uses the main room only: no breakout rooms, so the tutor sees every camera. A parent sits nearby but does not give answers.",
+    "Nobody holds paper, cards or a drawing up to the camera: a gallery view shows everyone. Children tick their own work against the answer slide, answer together on a count of three, or show fingers or a thumb for a choice. There is no private chat.",
+    "Wrong working belongs to 'a child' or 'a child in another class', never to a child in the group, and never to a name. Never read out a child's name with a right or wrong answer. The recording has the tutor, the shared screen and any voice that is unmuted. Children may mute and keep their cameras off. A child's page is never shown.",
+    "The stories use made-up names and numbers. There is no class poll and no count by child, so no child is named with a number or a choice.",
+    "Movement break: children need a little clear space, soft shoes or socks on a safe floor, no stairs and no running. Nobody walks backwards: the work-backwards move is a slow turn of the arms. A child may stay seated and move one arm.",
+    "A child who is still stuck ticks 'I am still stuck' on the look-back page. A grown-up may photograph that page after class and send it to the business WhatsApp only; photos are kept for 90 days after the program ends. The tutor then helps in the open session next lesson. No private messages to children, and no personal phones.",
+    "The look-back is never collected in front of the group or read out. A pass is always allowed."
+  ],
+  "tutor_prep": [
+    "Solve every workbook question yourself first. Check the answers: S1 7 and 19; S2 18 and 9; S3 15 and 18; S4 25 and 17; S5 5 and 35; S6 15, 25, 30 and 3; T1 Find one first and $25; T2 $9 and $3; T3 3 and 6; T4 4 and 3; G1 9, 27 and Yes; G2 12 and 3; G3 day 7 and an open reason; I1 open. Exit ticket: E1 Work backwards; E2 7 and 18; E3 False.",
+    "Tell parents a week before: the tool-and-problem cards page (page 6 of Book 8) needs 16 cards cut out by a grown-up (8 tool cards and 8 problem cards). The next lesson is the last lesson of the year and holds Mi's Challenge Quest: the Quest Log (4 pages) must be in the house, with those 4 pages still closed; a quest partner (a grown-up or a brother or sister) sits beside the child; and the family finds one favourite page from the year books and plain paper. Send the grown-up note (L40_Quest_Parent_Note.pdf) a week before. Check that every family has Book 8 before the next lesson (it holds the Quest Log): printing and postage are included in the program fee (owner decision, 23 Oct 2026). Parcel policy (owner decision, 23 Oct 2026): a family whose book has not arrived or is damaged messages the business WhatsApp within 7 days and gets the PDF straight away; there is one free resend; a second loss is discussed. Delivery name, address and phone are deleted 30 days after the parcel is confirmed delivered, or after any resend is finished, whichever is later.",
+    "Have the slides open. Practise the mime-the-tools break (nobody walks backwards). Say the fixed question forms every time: How many more ___ than ___? How many in all? Always say the tool names the same way: strip, table, list, draw it, work backwards, find one first, steps. Never say one word tells the tool: the whole story picks it.",
+    "Check the recording captures the tutor and the shared screen. Children's video is excluded; any unmuted voice is recorded. Greet the whole group first, say the notice, then start the recording; avoid first names while it runs.",
+    "Be plain with families: choosing a tool for a problem is part of the school problem-solving process; choosing the tool when it is not named, make equal, and solving one problem two ways (3 times as many with a total) go beyond Primary 1 on purpose, at Think harder and Go further only. Do not call the lesson MOE-aligned.",
+    "Wording rule: wrong working belongs to 'a child' or 'a child in another class', never to a cast name and never to a child in the group. The stories are made up: no class poll. Slides keep the answers off the screen while you ask: read every question with its numbers aloud. More than one tool can fit most problems: accept a good reason for a different tool."
+  ],
+  "spare_time": {
+    "note": "Optional time, never added to the 90-minute sum. It comes from the 5-minute flex buffer, from slack in the parts, or from the optional Go further slide.",
+    "rules": [
+      "Whole class ahead: use the Spare-time menu in the Flex time and the optional Go further slide. Pick one or two activities; do not start new content.",
+      "A few children ahead: they may choose Go further or the Investigation, which are open to everyone. Never label or name a child, and never announce who is ahead.",
+      "Never teach anything the next lesson needs. If the class is ahead, slow down: ask 'How do you know?' and let children explain, rather than rushing on."
+    ],
+    "menu": [
+      {
+        "id": "M1",
+        "title": "Is it always true?",
+        "minutes": 4,
+        "tutor": "Can two different tools solve the same problem? Take problem 4 (Ravi is 3rd in a line of 7): solve it by acting it out with counters in a line, then by a list of places. Do both give the same answer?",
+        "rec": "Recording: pause. Solve a problem with two different tools and see if the answers agree.",
+        "answer": "Yes. Drawing a line of 7 children with Ravi 3rd shows 4 behind him. A list of the places 1 to 7 shows places 4, 5, 6 and 7 behind him. Both give 4. A right answer fits every tool."
+      },
+      {
+        "id": "M2",
+        "title": "Make a puzzle for your grown-up",
+        "minutes": 4,
+        "tutor": "Pick one tool card. Write a short problem that fits it. Solve it, then ask your grown-up to solve it with the same tool.",
+        "rec": "Recording: pause. Pick a tool card, write a problem for it and ask a grown-up to solve it.",
+        "answer": "No single answer. Check: the problem has a story, numbers and one question, and the tool fits."
+      },
+      {
+        "id": "M3",
+        "title": "Teach it back",
+        "minutes": 3,
+        "tutor": "Tell a toy why we check an answer a second way. Use the Amelia and Wei marbles: one road is draw it (a strip) and one road is guess and check (a table of tries).",
+        "rec": "Recording: pause. Tell a toy why we check an answer a second way.",
+        "answer": "If two different tools give the same answer, we can trust it. If they give different answers, one of them has a mistake and we look again."
+      }
+    ]
+  },
+  "workbook": {
+    "header": "Toolbox: pick the tool that fits",
+    "hint_p1": "Use the tool the question names. Check your answer.",
+    "hint_p2": "Use the tool the question names. Check your answer.",
+    "hint_p3": "The tool is not named: you choose. Choose any question, in any order.",
+    "hint_p4": "Check your answer a second way. Choose any question. You do not have to finish them all.",
+    "choice_after": 3,
+    "inv_intro": "",
+    "inv_first_label": "First:",
+    "inv_then_label": "Next:",
+    "home_hint": "Draw it or use real things. Name the tool, then check your answer.",
+    "kits": [
+      {
+        "type": "cards",
+        "labels": [
+          "Draw it",
+          "1. Ali 9, Mei 4 fewer",
+          "Act it out",
+          "2. Rows of 2, 4, 6",
+          "Spot the pattern",
+          "3. Pairs from 3 fruits",
+          "List every way",
+          "4. Ravi 3rd of 7",
+          "Make a table",
+          "5. Number take 6 is 9",
+          "Work backwards",
+          "6. 5 buns cost $15",
+          "Guess and check",
+          "7. 6 coins make 45¢",
+          "Try something simpler",
+          "8. 2 red beads, 3 blue"
+        ],
+        "cols": 2,
+        "w": 330,
+        "h": 52,
+        "title": "Kit page: tool and problem cards",
+        "intro": "A grown-up cuts out the 16 cards before the lesson: 8 tool cards (left column) and 8 problem cards (right column). Each problem card has a short label; your tutor reads the whole problem aloud. No cutting? Write the 8 tool names on 8 scraps of paper."
+      }
+    ]
+  },
+  "beyond": {
+    "name": "Two Roads, One Answer",
+    "where": [
+      "G1"
+    ],
+    "text": "Jenny has 3 times as many stickers as Jason and they have 36 in all. Road 1, a strip: 4 equal parts, so Jason has 9 and Jenny has 27. Road 2, a table of tries: Jason 8 gives 32 in all, Jason 10 gives 40, Jason 9 gives 36. Both roads agree. Choosing the tool with no name (Think harder) and make equal (G2) are the steps before it. Bar models with times as many are used at school from Primary 2 and later; Lesson 18 met 3 times as many at Go further, and the new part here is checking by a second method. Named puzzle: Two Roads, One Answer.",
+    "parent": "Solving one problem two ways, with 3 times as many and a total, goes past the Primary 1 syllabus on purpose."
+  }
+}

@@ -1,0 +1,117 @@
+# Second reader, fix round 6 (condition G6)
+
+Script: `second_reader_round6.py` (imports none of the generator, checker, builder or verifier code). Every puzzle was solved from its printed question; the bank answer was opened afterwards.
+
+| Level | Puzzles | Agree | New or rewritten in round 6 among them |
+|---|---|---|---|
+| 1 | 17 | 17 | 8 |
+| 2 | 17 | 17 | 16 |
+| 3 | 17 | 17 | 9 |
+| 4 | 17 | 17 | 13 |
+| 5 | 17 | 17 | 14 |
+| 6 | 17 | 17 | 8 |
+
+| Puzzle | Second reader | Bank | |
+|---|---|---|---|
+| L1-craneboard | jun | jun | agree |
+| L1-noticeboard | 23 | 23 | agree |
+| L1-swimturn | 18 | 18 | agree |
+| L1-lockerdigits | 49 | 49 | agree |
+| L1-bakerywalk | 16 | 16 | agree |
+| L1-stonehops | 59 | 59 | agree |
+| L1-marbleswap | mei | mei | agree |
+| L1-stickersheets | 9 | 9 | agree |
+| L1-threefifty | 14 | 14 | agree |
+| L1-bikesigns | 60 | 60 | agree |
+| L1-paperchain | 62 | 62 | agree |
+| L1-matchhouse | 41 | 41 | agree |
+| L1-bibscores | 26 | 26 | agree |
+| L1-queuebus | 24 | 24 | agree |
+| L1-counterbox | 10 | 10 | agree |
+| L1-bigtwo | 86 | 86 | agree |
+| L1-sudoku3 | 3 | 3 | agree |
+| L2-blocknumber | 633 | 633 | agree |
+| L2-ferrybenches | 13 | 13 | agree |
+| L2-cousinages | hana | hana | agree |
+| L2-runlaps | 22 | 22 | agree |
+| L2-tilescore | 38 | 38 | agree |
+| L2-beadsticks | 12 | 12 | agree |
+| L2-ticketstrips | 23 | 23 | agree |
+| L2-numbershelf | 6 | 6 | agree |
+| L2-schoolwalks | park | park | agree |
+| L2-hosepieces | 9 | 9 | agree |
+| L2-quizscores | dev | dev | agree |
+| L2-windowsolids | 56 | 56 | agree |
+| L2-walletmoney | 368 | 368 | agree |
+| L2-markershops | shop c | shop c | agree |
+| L2-hairclips | 40 | 40 | agree |
+| L2-cardgame | lin | lin | agree |
+| L2-duedate | 11 | 11 | agree |
+| L3-missednumber | 12 | 12 | agree |
+| L3-petvotes | 18 | 18 | agree |
+| L3-pairproduct | 6 | 6 | agree |
+| L3-raffledigits | 7 | 7 | agree |
+| L3-posterribbon | 130 | 130 | agree |
+| L3-kitegusts | 22 | 22 | agree |
+| L3-ropepieces | 13 | 13 | agree |
+| L3-stallminutes | 390 | 390 | agree |
+| L3-barpieces | 10 | 10 | agree |
+| L3-harbourcruise | 1915 | 1915 | agree |
+| L3-mapshort | 27 | 27 | agree |
+| L3-kopitiam | 268 | 268 | agree |
+| L3-cryptsum | 9 | 9 | agree |
+| L3-eights | 19 | 19 | agree |
+| L3-mealset | 40 | 40 | agree |
+| L3-cuboidclue | cuboid | cuboid | agree |
+| L3-solidedges | 20 | 20 | agree |
+| L4-moneypurse | ravi | ravi | agree |
+| L4-bluelockers | 112 | 112 | agree |
+| L4-stageline | 210 | 210 | agree |
+| L4-parkpaths | bridge | bridge | agree |
+| L4-airportshuttle | 865 | 865 | agree |
+| L4-liftfloors | 14 | 14 | agree |
+| L4-ferrypier | 4430 | 4430 | agree |
+| L4-gluesticks | 63 | 63 | agree |
+| L4-spellingbee | 13 | 13 | agree |
+| L4-pencilpacks | 34 | 34 | agree |
+| L4-grandchildren | 230 | 230 | agree |
+| L4-cupcaketray | 102 | 102 | agree |
+| L4-reachtotal | 3 | 3 | agree |
+| L4-symmetry | 10 | 10 | agree |
+| L4-fivechildren | mei ling | mei ling | agree |
+| L4-fourclaims | siti | siti | agree |
+| L4-sunflower | 12 | 12 | agree |
+| L5-nametagpacks | 164 | 164 | agree |
+| L5-shapelines | 8 | 8 | agree |
+| L5-codelock | 15 | 15 | agree |
+| L5-postalscale | 10 | 10 | agree |
+| L5-dronepaths | 38 | 38 | agree |
+| L5-snailrace | gus | gus | agree |
+| L5-scoreboard | 100 | 100 | agree |
+| L5-bakeryprices | 11 | 11 | agree |
+| L5-shoptakings | 2110 | 2110 | agree |
+| L5-sailheight | 36/5 | 36/5 | agree |
+| L5-rhombuscut | 64 | 64 | agree |
+| L5-pondlevel | 21 | 21 | agree |
+| L5-ladybirdgrid | 56 | 56 | agree |
+| L5-sportsbibs | 105 | 105 | agree |
+| L5-divquotient | 31 | 31 | agree |
+| L5-sixpages | 40 | 40 | agree |
+| L5-town | 3500000 | 3500000 | agree |
+| L6-helmetsale | 90 | 90 | agree |
+| L6-fishtank | 180 | 180 | agree |
+| L6-parcelbelt | 13 | 13 | agree |
+| L6-parkvisitors | 1387000 | 1387000 | agree |
+| L6-coffeecups | 64 | 64 | agree |
+| L6-lettercodes | 1680 | 1680 | agree |
+| L6-islandroutes | bay | bay | agree |
+| L6-goldbach | 6 | 6 | agree |
+| L6-leftright | 72 | 72 | agree |
+| L6-bin45 | 45 | 45 | agree |
+| L6-jarcoins | 1280 | 1280 | agree |
+| L6-sweettin | 3/4 | 3/4 | agree |
+| L6-pearltray | 729 | 729 | agree |
+| L6-walkers | 15 | 15 | agree |
+| L6-balance | 18 | 18 | agree |
+| L6-testmean | 80 | 80 | agree |
+| L6-gamepay | 1860 | 1860 | agree |

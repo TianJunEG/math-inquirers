@@ -2,25 +2,20 @@
  "v": 4,
  "createdOnFiles": {
   "v": 1,
-  "at": "2026-10-22T00:27:25Z"
+  "at": "2026-10-23T03:30:43Z"
  },
  "lists": "css",
- "title": "Math Inquirers P2: Lesson 10 – Challenge Day",
+ "title": "Math Inquirers P2: Lesson 10 – Puzzle Day",
  "order": [
   "p2l10-title",
+  "p2l10-tool",
   "p2l10-precheck",
   "p2l10-warm1",
   "p2l10-warm2",
   "p2l10-explore1",
-  "p2l10-goexp",
-  "p2l10-card1",
-  "p2l10-card2",
-  "p2l10-card3",
-  "p2l10-card4",
+  "p2l10-cards",
   "p2l10-explore2",
-  "p2l10-teach1",
   "p2l10-we1",
-  "p2l10-try1",
   "p2l10-we2",
   "p2l10-try2",
   "p2l10-we3",
@@ -37,6 +32,8 @@
   "p2l10-challenge",
   "p2l10-chdiag",
   "p2l10-chwalk",
+  "p2l10-skill1",
+  "p2l10-skill2",
   "p2l10-talk",
   "p2l10-exit",
   "p2l10-reflect",
@@ -50,7 +47,7 @@
   },
   "s2": {
    "description": "Teach: how to start a puzzle (draw it, list it, make a table)",
-   "start": "p2l10-teach1"
+   "start": "p2l10-we1"
   },
   "s3": {
    "description": "Worksheet with teaching before each page",

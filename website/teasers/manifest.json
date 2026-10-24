@@ -1,0 +1,9 @@
+{
+  "note": "Months listed in 'released' are built, independently audited, and included in the site build. Keys are calendar months (MM, Asia/Singapore); the year recycles. 'site_enabled' false = the generators produce exactly the old pages (owner decision TEASER-DAILY-GO: going live is a separate step).",
+  "first_year": 2026,
+  "site_enabled": false,
+  "released": [
+    "11",
+    "12"
+  ]
+}

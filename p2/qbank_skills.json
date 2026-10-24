@@ -1,0 +1,266 @@
+{
+ "2": {
+  "skills": [
+   {
+    "id": "L2-PAIR1",
+    "slot": "slide",
+    "skill": "Pairing sums: first and last make the same total",
+    "tool": "simpler",
+    "tool_name": "Try something simpler",
+    "q": "Add these numbers. Look for pairs that make the same total. a) 4 + 9 + 14 + 19 + 24 + 29 + 34 + 39 = [ ] b) Add all the whole numbers from 11 to 20.",
+    "a": "a) 4 + 39 = 43, 9 + 34 = 43, 14 + 29 = 43, 19 + 24 = 43: four pairs of 43 = 172. b) 11 + 20 = 31, and there are 5 pairs: 155.",
+    "say": "Write the list forwards, then write it again backwards underneath. Add the two numbers that sit on top of each other.",
+    "ask": "What do you notice about the first and the last? And the second and the second last? How many pairs are there?",
+    "listen": "\"Every pair makes the same total.\" Check that they count the pairs, not the numbers."
+   },
+   {
+    "id": "L2-PAIR2",
+    "slot": "bank",
+    "skill": "Pairing sums: save every day",
+    "tool": "simpler",
+    "tool_name": "Try something simpler",
+    "q": "Add the numbers. a) 40 + 80 + 120 + 160 + 200 + 240 = [ ] b) Mei saves $5 on day 1, $10 on day 2, $15 on day 3, and so on, up to $50 on day 10. How much has she saved after 10 days?",
+    "a": "a) 40 + 240 = 280 and there are 3 pairs: 840. b) 5 + 50 = 55 and there are 5 pairs: $275.",
+    "say": "Try something simpler: do 4 numbers first.",
+    "ask": "How many pairs? Does it still work if there is an odd number of numbers?",
+    "listen": "Pairs times total."
+   },
+   {
+    "id": "L2-LETTER1",
+    "slot": "slide",
+    "skill": "Letter-digit sums",
+    "tool": "guess",
+    "tool_name": "Guess and check",
+    "q": "Each letter stands for one digit. Different letters stand for different digits. Find A, B and C. A = [ ]    B = [ ]    C = [ ]",
+    "a": "A = 1, B = 9, C = 7 (18 + 79 = 97). Ones: 8 + 9 = 17, so C = 7 and carry 1. Tens: A + 7 + 1 = B, so A + 8 = B. A digit stops at 9, so only A = 1 and B = 9 fit.",
+    "say": "Start with the ones column, just like the missing-digit sums.",
+    "ask": "What must 8 + 9 make in the ones? What is the carry? Which letter is it?",
+    "listen": "The ones column shows C = 7 and a carry. Then test the tens. Ask them to check the whole sum."
+   }
+  ]
+ },
+ "4": {
+  "skills": [
+   {
+    "id": "L2-SEQ1",
+    "slot": "slide",
+    "skill": "Sequences: the gap grows by 1 each time",
+    "tool": "table",
+    "tool_name": "Make a table",
+    "q": "Ali writes a pattern: 6, 7, 9, 12, 16, __, __ a) Write the next two numbers. b) Will 40 be in the pattern?",
+    "a": "a) 21 and 27 (the gaps are 1, 2, 3, 4, 5, 6). b) No: the pattern goes 27, 34, 42 and jumps over 40.",
+    "say": "This pattern does not add the same number. Make a table and put the gaps in a row of their own.",
+    "ask": "What are the gaps? How does the gap change? What is the next gap?",
+    "listen": "\"The gap goes up by 1.\""
+   },
+   {
+    "id": "L2-SEQ2",
+    "slot": "slide",
+    "skill": "Sequences: add the two numbers before",
+    "tool": "pattern",
+    "tool_name": "Spot the pattern",
+    "q": "Mei writes a pattern: 2, 4, 6, 10, 16, __, __ a) Write the next two numbers. b) What is the 9th number?",
+    "a": "a) 26 and 42 (6 + 10 = 16, 10 + 16 = 26, 16 + 26 = 42). b) 110: the numbers are 2, 4, 6, 10, 16, 26, 42, 68, 110.",
+    "say": "Try the gap row. Does it look like the numbers?",
+    "ask": "What is 2 + 4? What is 4 + 6? What would the next number be?",
+    "listen": "\"Add the two numbers before.\" Ask them to write the whole list to the 9th number."
+   },
+   {
+    "id": "L2-SEQ3",
+    "slot": "bank",
+    "skill": "Sequences: two rules take turns",
+    "tool": "pattern",
+    "tool_name": "Spot the pattern",
+    "q": "Start at 20. Add 10, then take away 4, then add 10, then take away 4, and keep going. a) Write the first 7 numbers. b) What is the 9th number?",
+    "a": "a) 20, 30, 26, 36, 32, 42, 38. b) 44.",
+    "say": "Treat each pair of steps as one jump of 6.",
+    "ask": "What do the numbers in odd places do? In even places?",
+    "listen": "\"Every two steps it goes up 6.\""
+   },
+   {
+    "id": "L2-SEQ4",
+    "slot": "bank",
+    "skill": "Sequences: the gap gets smaller",
+    "tool": "table",
+    "tool_name": "Make a table",
+    "q": "Siti counts down: 100, 90, 81, 73, 66, __, __ a) Write the next two numbers. b) What is the gap each time?",
+    "a": "a) 60 and 55. b) The gaps are 10, 9, 8, 7, 6, 5: each gap is 1 less than the one before.",
+    "say": "Draw a table with a row for the gap.",
+    "ask": "What is the next gap? How do you know?",
+    "listen": "\"The gaps go down 1 each time.\""
+   }
+  ]
+ },
+ "5": {
+  "skills": [
+   {
+    "id": "L2-AGE1",
+    "slot": "slide",
+    "skill": "Ages: the gap never changes",
+    "tool": "draw",
+    "tool_name": "Draw it",
+    "q": "Read each story. Draw a bar for each person. a) Ali is 4 years older than his sister. Their ages add up to 20. How old is each? b) Mum is 28 years older than Mei. Mei is 7 now. How old will each be in 5 years?",
+    "a": "a) Take away the 4 extra years: 16 left, shared equally is 8. Sister 8, Ali 12 (8 + 12 = 20). b) Mei will be 12; Mum is 35 now, so 40 in 5 years. The gap is still 28.",
+    "say": "For part a, take away the extra years first, then share what is left. The same take-away-the-extra idea as the worksheet.",
+    "ask": "Which person is older? By how many years? What do you do with the extra 4?",
+    "listen": "\"Both get older at the same speed, so the gap stays.\" For a), a Guess and check that tests both clues is also fine."
+   },
+   {
+    "id": "L2-AGE2",
+    "slot": "bank",
+    "skill": "Ages: when will it happen?",
+    "tool": "table",
+    "tool_name": "Make a table",
+    "q": "Ravi is 9 years old. Mei is 5 years old. a) Ravi will be 12 years old in ___ years. b) Mei will be ___ years old then. c) Ravi was ___ years old when Mei was born.",
+    "a": "a) 3 years. b) 8 years old. c) 4 years old.",
+    "say": "Make a small table: year, Ravi, Mei.",
+    "ask": "What number stays the same in every row?",
+    "listen": "The gap of 4."
+   }
+  ]
+ },
+ "8": {
+  "skills": [
+   {
+    "id": "L2-CORNER1",
+    "slot": "slide",
+    "skill": "Cubes in the corner of a room",
+    "tool": "actout",
+    "tool_name": "Act it out",
+    "q": "Cubes are stacked in the corner of a room, touching both walls. The bottom layer is 3 rows of 3. The next layer is 2 rows of 2. The top layer is 1 cube. a) The bottom layer has ___ cubes. b) The whole stack has ___ cubes. c) ___ cubes touch the left wall.",
+    "a": "a) 9. b) 14 (9 + 4 + 1). c) 6 (3 in the bottom layer, 2 in the next and 1 on top).",
+    "say": "Build it layer by layer with cubes, then look at one wall.",
+    "ask": "Which cubes touch the wall in the bottom layer? In the next layer?",
+    "listen": "\"3, then 2, then 1.\""
+   },
+   {
+    "id": "L2-CORNER2",
+    "slot": "bank",
+    "skill": "Cubes in a corner: bigger",
+    "tool": "table",
+    "tool_name": "Make a table",
+    "q": "A cube corner has layers of 4 by 4, 3 by 3, 2 by 2 and 1 cube. a) How many cubes are there in all? b) How many cubes touch the floor?",
+    "a": "a) 30 (16 + 9 + 4 + 1). b) 16.",
+    "say": "Make a table: layer, size, cubes.",
+    "ask": "What pattern do the layer numbers make?",
+    "listen": "Square numbers: 16, 9, 4, 1."
+   }
+  ]
+ },
+ "9": {
+  "skills": [
+   {
+    "id": "L2-PIC1",
+    "slot": "slide",
+    "skill": "Picture equations: shapes stand for numbers",
+    "tool": "guess",
+    "tool_name": "Guess and check",
+    "q": "Each shape stands for a number. The same shape is the same number. a) triangle = [ ]    b) circle = [ ]    c) square = [ ] d) triangle + circle + square = [ ]",
+    "a": "a) 9 (27 split into 3 equal parts). b) 6 (21 - 9 = 12, shared by 2). c) 7 (13 - 6). d) 22.",
+    "say": "Find the line that tells you the most. Which shape can you find first?",
+    "ask": "Which line did you use first and why? How can you check?",
+    "listen": "Three triangles = 27 is the start. Then use it in line 2."
+   },
+   {
+    "id": "L2-PIC2",
+    "slot": "bank",
+    "skill": "Picture equations: exchange chain",
+    "tool": "table",
+    "tool_name": "Make a table",
+    "q": "2 apples weigh the same as 1 melon. 3 melons weigh the same as 1 pumpkin. a) How many apples weigh the same as 1 pumpkin? b) 1 pumpkin and 2 melons weigh the same as how many apples?",
+    "a": "a) 6 apples (3 melons, each 2 apples). b) 10 apples (6 + 4).",
+    "say": "Draw it as a chain: apple, melon, pumpkin.",
+    "ask": "How many apples for one melon? For three melons?",
+    "listen": "\"Multiply along the chain.\""
+   },
+   {
+    "id": "L2-CAL1",
+    "slot": "slide",
+    "skill": "Calendar: weeks and days",
+    "tool": "pattern",
+    "tool_name": "Spot the pattern",
+    "q": "Today is Thursday. a) What day will it be in 3 weeks? b) What day will it be in 25 days? c) What day will it be in 30 days?",
+    "a": "a) Thursday (3 weeks is 21 days, 3 full cycles). b) Monday (25 = 3 weeks and 4 days; Thursday + 4 days is Monday). c) Saturday (30 = 4 weeks and 2 days).",
+    "say": "The week is a repeating pattern of 7. Take out whole weeks first.",
+    "ask": "How many whole weeks fit into 25 days? How many days are left over?",
+    "listen": "\"Remainder\" language: 25 days is 3 weeks and 4 days."
+   },
+   {
+    "id": "L2-CAL2",
+    "slot": "bank",
+    "skill": "Calendar: dates in a month",
+    "tool": "table",
+    "tool_name": "Make a table",
+    "q": "A month has 30 days. The 1st of the month is a Tuesday. a) Which dates are Tuesdays? b) What day is the 30th? c) What day is the 1st of next month?",
+    "a": "a) 1, 8, 15, 22 and 29. b) Wednesday. c) Thursday.",
+    "say": "Write the dates in rows of 7 under the days of the week.",
+    "ask": "What do you notice about the Tuesday dates?",
+    "listen": "They go up by 7."
+   }
+  ]
+ },
+ "10": {
+  "skills": [
+   {
+    "id": "L2-POST1",
+    "slot": "slide",
+    "skill": "Posts and gaps",
+    "tool": "draw",
+    "tool_name": "Draw it",
+    "q": "A straight path is 20 m long. A lamp post stands at the start, at the end, and every 5 m in between. a) How many lamp posts are there? b) A fence has 7 posts in a straight line, 3 m apart. How long is the fence?",
+    "a": "a) 5 posts (4 gaps of 5 m). b) 18 m (6 gaps of 3 m).",
+    "say": "Draw a dot for each post and a line for each gap.",
+    "ask": "Are there more posts or more gaps? Why?",
+    "listen": "\"One more post than gaps\" in a line."
+   },
+   {
+    "id": "L2-QUEUE1",
+    "slot": "slide",
+    "skill": "Places in a queue",
+    "tool": "draw",
+    "tool_name": "Draw it",
+    "q": "Counting from the front of a queue, Ravi is number 5. Counting from the back, he is number 4. Find the number of children in the queue.",
+    "a": "8 children. Ravi is counted twice (5 + 4 = 9), so take 1 away.",
+    "say": "Draw the queue and mark Ravi.",
+    "ask": "Who is in front of Ravi? Behind him? Did you count Ravi twice?",
+    "listen": "\"Ravi is counted in both numbers.\""
+   },
+   {
+    "id": "L2-POST2",
+    "slot": "bank",
+    "skill": "Posts and gaps: round a pond",
+    "tool": "draw",
+    "tool_name": "Draw it",
+    "q": "8 lamps stand round a pond, the same distance apart. It is 4 m from one lamp to the next. a) How many gaps are there? b) How long is the path all the way round?",
+    "a": "a) 8 gaps. b) 32 m.",
+    "say": "In a ring there is no end post.",
+    "ask": "Is it the same as a straight path? Why not?",
+    "listen": "Gaps equal lamps in a ring."
+   },
+   {
+    "id": "L2-WORST1",
+    "slot": "slide",
+    "skill": "Worst case: how many to be sure?",
+    "tool": "actout",
+    "tool_name": "Act it out",
+    "q": "A bag has 6 red counters and 4 blue counters. You take counters out without looking. a) How many must you take to be sure you have 2 red counters? b) How many must you take to be sure you have one counter of each colour?",
+    "a": "a) 6 (the worst case is 4 blue first, then 2 red). b) 7 (the worst case is all 6 red first, then 1 blue).",
+    "say": "Be unlucky on purpose. What is the worst that can happen?",
+    "ask": "What is the unluckiest draw? What counter must come next?",
+    "listen": "\"The unlucky draw is all of the other colour first.\""
+   },
+   {
+    "id": "L2-WORST2",
+    "slot": "bank",
+    "skill": "Worst case: socks",
+    "tool": "actout",
+    "tool_name": "Act it out",
+    "q": "A drawer has 4 black socks, 4 white socks and 4 grey socks. You take socks out without looking. a) How many socks must you take to be sure you have a matching pair? b) How many socks must you take to be sure you have 2 black socks?",
+    "a": "a) 4 (one of each colour is 3 socks; the 4th must match). b) 10 (4 white and 4 grey first, then 2 black).",
+    "say": "Act it out with coloured counters.",
+    "ask": "What is the most socks you can take with no pair?",
+    "listen": "\"One of each colour, then one more.\""
+   }
+  ]
+ }
+}

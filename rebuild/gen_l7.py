@@ -78,7 +78,7 @@ body=h2('Your turn: count the squares')+stitle('Draw it on your whiteboard. Smal
 body+=pin(128,330,300,row3,None,WHITE,20,'24px 30px')+qrow(500,330,880,'a','How many squares are in a row of 3 squares?',38)+answer(1420,330,372,'3')
 body+=pin(128,480,300,lsh,None,WHITE,20,'18px 30px')+qrow(500,480,880,'b','A 2 by 2 square with one more square stuck on. How many squares?',38)+answer(1420,480,372,'6')
 body+=qrow(128,700,1252,'c','Draw a shape made of small squares that has exactly 5 squares in it.',38)+answer(1420,700,372,'2 by 2 grid, or a row of 5')
-put('l7-try1',sec('l7-try1','29–30 MIN',body,'Whiteboards up together, then click. a) 3: there is no bigger square, because a bigger square needs 2 rows. b) 6: 5 small squares and 1 square made of 4 small ones (the 2 by 2 part). The extra square cannot make a second big square because the square above it is missing: show this with your 2 by 2 window. c) Open: a 2 by 2 grid (4 + 1) or a row of 5 small squares (5 + 0) both work. Ask a child with each answer to explain.'))
+put('l7-try1',sec('l7-try1','29–30 MIN',body,'Write it, say the answer together on three, then click. a) 3: there is no bigger square, because a bigger square needs 2 rows. b) 6: 5 small squares and 1 square made of 4 small ones (the 2 by 2 part). The extra square cannot make a second big square because the square above it is missing: show this with your 2 by 2 window. c) Open: a 2 by 2 grid (4 + 1) or a row of 5 small squares (5 + 0) both work. Ask a child with each answer to explain.'))
 
 # ---------- 9. worked example: rectangles in a strip of 4 ----------
 c=95; base=SV(400,115,gridb(10,10,4,1,c),'A strip of 4 squares')
@@ -206,7 +206,7 @@ put('l7-chwalk',sec('l7-chwalk','Challenge',body,'Use after pairs have tried. Q1
 
 # ---------- exit ticket (new: the old one repeated worksheet Q4B) ----------
 eg=SV(252,252,gridb(6,6,3,3,80),'A grid 3 squares long and 3 squares high')
-body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('How many squares are in this grid? Count every size.',46,600)+eg)+card(p('Write your answer on a slip of paper. Show it to your tutor. Then collect your stamp in your inquiry journal.',34,400))
+body=h2('Exit ticket')+card(chip('EXIT TICKET')+p('How many squares are in this grid? Count every size.',46,600)+eg)+card(p('Write your answer on a slip of paper. Tick it when your tutor shows the answer. Then collect your stamp in your inquiry journal.',34,400))
 put('l7-exit',sec('l7-exit','80–90 MIN',body,'Minutes 80 to 90. Answer: 14 (9 small squares + 4 squares made of 4 small squares + 1 whole grid). This is the grid we counted in the worked example, so it checks the core idea. Children who write 9 counted only the small squares: ask "Are there any bigger squares hiding?" Extension: how many squares are in a grid 4 squares long and 2 squares high? (11: 8 + 3). Then 4 long and 3 high? (20: 12 + 6 + 2).'))
 
 
@@ -236,3 +236,4 @@ import p1gaps; p1gaps.apply(D,7)
 import p1fix
 p1fix.finish(D,7,{'l7-teach1':'25–28 MIN','l7-we1':'28–31 MIN','l7-try1':'31–34 MIN','l7-teachtri':'55–58 MIN','l7-ws2':'58–68 MIN'},optional=('stretch','challenge','chdiag','chwalk','we2','try2','we3'))
 import p1neutral; p1neutral.apply(D,7)
+import p1budget; p1budget.apply(D,7)

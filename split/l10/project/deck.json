@@ -5,20 +5,18 @@
   "at": "2026-10-21T03:15:00Z"
  },
  "lists": "css",
- "title": "Math Inquirers: Lesson 10 – Challenge Day",
+ "title": "Math Inquirers: Lesson 10 – Puzzle Day",
  "order": [
   "l10-title",
+  "l10-tool",
   "l10-warm1",
-  "l10-warm2",
   "l10-warmcheck",
   "l10-explore1",
   "l10-cards",
   "l10-explore2",
   "l10-teach1",
   "l10-we1",
-  "l10-try1",
   "l10-we2",
-  "l10-try2",
   "l10-we3",
   "l10-key",
   "l10-break",
@@ -31,11 +29,12 @@
   "l10-ws2ans",
   "l10-stretch",
   "l10-challenge",
+  "l10-chdiag",
   "l10-chwalk",
   "l10-talk",
   "l10-exit",
-  "l10-reflect",
-  "end"
+  "end",
+  "l10-reflect"
  ],
  "cover": "l10-title",
  "sections": {
