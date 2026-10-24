@@ -87,3 +87,31 @@ ul.plain{list-style:none;padding:0;margin:0}
 .check input{width:22px;height:22px;flex:none}
 label.inline{display:inline;margin:0;font-weight:700}
 #recovery-title:focus{outline:none}
+
+/* ---- portal screens: children, books, trial class, practice list, admin tabs ---- */
+.tabs a{font:800 14.5px var(--body);border:2px solid var(--line);background:var(--card);color:var(--fg);border-radius:999px;padding:8px 14px;min-height:40px;text-decoration:none;display:inline-flex;align-items:center}
+.tabs a[aria-current="page"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+@media (pointer:coarse){.tabs a{min-height:44px}}
+fieldset{border:2px solid var(--line);border-radius:14px;margin:0 0 16px;padding:12px 14px 6px}
+legend{font:600 17px var(--head);padding:0 6px}
+fieldset.ftype{margin:0 0 12px}
+textarea{width:100%;font:16px var(--body);padding:11px 12px;border:2px solid var(--line);border-radius:12px;background:var(--bg);color:var(--fg)}
+textarea:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.opt.on{border-color:var(--fg);background:var(--sky)}
+.opt .price{font-weight:800}
+h3.blk{margin:18px 0 6px;font-size:16px}
+h4{font:600 17px var(--head);margin:18px 0 6px} h5{font:600 16px var(--head);margin:10px 0 4px}
+.child-card .row>h2{margin:0}
+ul.access{margin:0 0 10px}ul.access li{padding:6px 0;border-top:1px solid var(--line)}ul.access li:first-child{border-top:0}
+ul.units li{margin:0 0 8px}
+.unitlink{display:block;text-align:left;width:100%}
+.unitrow{padding:10px 0;border-top:1px solid var(--line)}.unitrow:first-of-type{border-top:0}
+.detail{background:var(--bg);margin:8px 0 0}
+details.card>summary{cursor:pointer;font-weight:800;min-height:32px}
+details.nextstep{margin:12px 0 0}details.nextstep>summary{cursor:pointer;font-weight:800}
+.pay .code{font-size:18px;margin:4px 0}
+.pill.shipped,.pill.delivered,.pill.attended,.pill.enrolled{background:var(--mint);border-color:var(--green)}
+.pill.declined,.pill.withdrawn{background:var(--peach)}
+table.wide{min-width:560px}
+.preview-list{margin-top:8px}
+@media (max-width:640px){table.wide{min-width:0}}

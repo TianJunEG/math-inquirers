@@ -2,15 +2,16 @@
 (function () {
   var M = window.MI, h = M.h, app = document.getElementById('app');
   document.getElementById('top').appendChild(M.header('Parent portal'));
-  var S = { session: null, parent: null, children: [], groups: [], fill: {}, enrols: [], consents: {}, tab: 'login', flash: null, recovery: false };
+  var S = { session: null, parent: null, children: [], groups: [], fill: {}, enrols: [], consents: {}, tab: 'login', flash: null, recovery: false, ftype: null, pending: {} };
 
-  var CONSENT_TEXT = [ // wording copied from privacy.html "Wording used on the registration form"
-    ['contact', true, 'I agree to Math Inquirers (Preciouslyours Pte Ltd) using my details to arrange the class and contact me about it.'],
-    ['terms', true, 'I have read the terms and refund policy and agree to them.'],
-    ['recording', true, 'I agree that live lessons are recorded as described in the privacy notice, and that recordings are shared only with the enrolled families of my child\'s group.'],
-    ['childs_work', true, 'I agree that Math Inquirers keeps photos of my child\'s work, practice answers and short progress notes, as described in the privacy notice. I am the parent or legal guardian of the child.'],
-    ['feedback_quotes', false, '(Optional) I agree that my feedback may be used, without my child\'s name, to improve and describe the program.']
-  ];
+  // Which agreements each kind of family needs (docs/legal/online_submission_consent_draft.md, section 1). Nothing is pre-ticked.
+  //   online : an extension book (online or posted), no live group      live : a live group class      both : both
+  var FAMILY = {
+    online: { label: 'Online practice or an extension book (no class)', need: ['contact', 'terms', 'online_practice'] },
+    live: { label: 'A live group class', need: ['contact', 'terms', 'recording', 'childs_work'] },
+    both: { label: 'Both a live group class and online practice', need: ['contact', 'terms', 'online_practice', 'recording', 'childs_work'] }
+  };
+  var LIVE_NEED = FAMILY.live.need;
 
   function render(nodes) { M.clear(app); [].concat(nodes).forEach(function (n) { if (n) app.appendChild(n); }); }
   function flash(kind, text) { S.flash = text ? { kind: kind, text: text } : null; }
@@ -30,9 +31,10 @@
     try {
       var res = await Promise.all([
         sb.from('parents').select('id,email,full_name,phone,family_code').single(),
-        sb.from('children').select('id,display_name,level').order('created_at'),
+        sb.from('children').select('id,display_name,level,birth_year').order('created_at'),
         sb.from('groups').select('id,level,name,ages,seats,sessions,first_label,last_label,fee_cents').order('id'),
         sb.rpc('group_fill'), sb.rpc('my_enrolments'), sb.rpc('my_consents')]);
+      if (res[1].error && /birth_year/.test(String(res[1].error.message))) res[1] = await sb.from('children').select('id,display_name,level').order('created_at');   // portal_ui.sql not applied yet
       res.forEach(function (x) { if (x.error) throw x.error; });
       S.parent = res[0].data; S.children = res[1].data || []; S.groups = res[2].data || [];
       S.fill = {}; (res[3].data || []).forEach(function (f) { S.fill[f.group_id] = f; });
@@ -90,7 +92,7 @@
     }));
     render([flashBox(), h('section', { class: 'card pop' },
       h('h1', { text: 'Parent portal' }),
-      h('p', { class: 'muted', text: 'Parents create the account and add their child. Your child gets a display name and a PIN, with no email of their own.' }),
+      h('p', { class: 'muted', text: 'Parents create the account and add their child. Your child gets a display name and a PIN, with no email of their own. You can use the portal to join a live group, to buy an extension book, or to ask about a trial class: you do not need to join a class to have an account.' }),
       tabs, form, box)]);
   }
 
@@ -130,16 +132,25 @@
     });
   }
   function hasActiveEnrol(childId) { return S.enrols.some(function (e) { return e.child_id === childId && e.enrolment_status !== 'cancelled'; }); }
-  function requiredOk() { return CONSENT_TEXT.every(function (c) { return !c[1] || (S.consents[c[0]] && S.consents[c[0]].granted); }); }
+  function isOn(t) { return !!(S.consents[t] && S.consents[t].granted); }
+  function liveOk() { return LIVE_NEED.every(isOn); }          // needed to reserve a place in a live group
+  function famType() {                                         // which block of the Agreements card to show
+    if (S.ftype) return S.ftype;
+    var q = new URLSearchParams(location.search).get('for');
+    if (FAMILY[q]) return q;
+    var live = isOn('recording') || isOn('childs_work') || S.enrols.some(function (e) { return e.enrolment_status !== 'cancelled'; });
+    if (live) return isOn('online_practice') ? 'both' : 'live';
+    return isOn('online_practice') ? 'online' : 'live';
+  }
 
   function childrenCard() {
     var c = section('My children', 'Use a first name or nickname. We do not collect photos, school or NRIC.', 'my-children');
-    if (!S.children.length) c.appendChild(h('p', { class: 'empty muted', text: 'No children added yet. Add one below to get started.' }));
+    if (!S.children.length) c.appendChild(h('p', { class: 'empty muted', text: 'No children added yet. Add one below to get started. You do not need to join a class to add a child or buy an extension book.' }));
     S.children.forEach(function (ch) {
       var row = h('div', { class: 'child', 'data-child': ch.id });
       var show = function () {
         M.clear(row);
-        row.appendChild(h('div', null, h('strong', { text: ch.display_name }), ' ', h('span', { class: 'pill', text: 'Level ' + ch.level })));
+        row.appendChild(h('div', null, h('strong', { text: ch.display_name }), ' ', h('span', { class: 'pill', text: 'Level ' + ch.level }), ch.birth_year ? h('span', { class: 'small muted', text: ' born ' + ch.birth_year }) : null));
         row.appendChild(h('div', { class: 'row' },
           h('button', { class: 'btn alt sm', type: 'button', text: 'Edit', onclick: edit }),
           h('button', { class: 'btn alt sm', type: 'button', text: 'Remove', onclick: function () {
@@ -150,28 +161,20 @@
         var n = h('input', { type: 'text', value: ch.display_name, maxlength: 30, 'aria-label': 'Display name' });
         var l = h('select', { 'aria-label': 'Level' }, levelOptions(ch.level));
         var p = h('input', { type: 'password', inputmode: 'numeric', pattern: '[0-9]*', maxlength: 6, autocomplete: 'off', placeholder: 'New PIN (optional)', 'aria-label': 'New PIN' });
-        row.appendChild(h('div', { class: 'grid2', style: 'width:100%' }, n, l, p));
+        var by = h('select', { 'aria-label': 'Birth year (optional)' }, M.P.yearOptions(ch.birth_year));
+        row.appendChild(h('div', { class: 'grid2', style: 'width:100%' }, n, l, by, p));
         row.appendChild(h('div', { class: 'row' },
           h('button', { class: 'btn sm', type: 'button', text: 'Save', onclick: function () {
-            run(function () { return rpc('update_child', { p_child: ch.id, p_name: n.value, p_level: Number(l.value), p_pin: p.value || null }); }, 'Saved.'); } }),
+            run(async function () {
+              await rpc('update_child', { p_child: ch.id, p_name: n.value, p_level: Number(l.value), p_pin: p.value || null });
+              if (String(by.value || '') !== String(ch.birth_year || '') && by.value) await rpc('update_child_birth_year', { p_child: ch.id, p_year: Number(by.value) });
+            }, 'Saved.'); } }),
           h('button', { class: 'btn alt sm', type: 'button', text: 'Cancel', onclick: show })));
       };
       show(); c.appendChild(row);
     });
-    var n = h('input', { type: 'text', id: 'cname', maxlength: 30, required: true, autocomplete: 'off' });
-    var l = h('select', { id: 'clevel' }, levelOptions(1));
-    var p = h('input', { type: 'password', id: 'cpin', inputmode: 'numeric', pattern: '[0-9]*', maxlength: 6, autocomplete: 'off', required: true });
-    c.appendChild(h('form', { novalidate: true, onsubmit: function (ev) {
-      ev.preventDefault();
-      if (!n.value.trim()) return run(async function () { throw M.say('Please enter a display name.'); });
-      if (!/^[0-9]{4,6}$/.test(p.value)) return run(async function () { throw M.say('The PIN must be 4 to 6 digits.'); });
-      run(function () { return rpc('add_child', { p_name: n.value, p_level: Number(l.value), p_pin: p.value }); }, 'Child added. Their PIN is saved securely (we cannot show it again).');
-    } }, h('h3', { text: 'Add a child' }),
-      h('div', { class: 'grid2' },
-        h('p', null, h('label', { for: 'cname', text: 'Display name' }), n),
-        h('p', null, h('label', { for: 'clevel', text: 'Level' }), l),
-        h('p', null, h('label', { for: 'cpin', text: 'PIN (4 to 6 digits)' }), p)),
-      h('button', { class: 'btn', type: 'submit', text: 'Add child' })));
+    var ages = {}; S.groups.forEach(function (g) { ages[g.level] = g.ages; });
+    c.appendChild(M.P.childForm({ run: run, ages: ages }));
     return c;
   }
   async function rpc(name, args) { var r = await M.sb().rpc(name, args); if (r.error) throw r.error; return r.data; }
@@ -184,23 +187,41 @@
   }
 
   function consentCard() {
-    var boxes = {}; var done = requiredOk();
-    var c = section('Agreements', 'Read the ' + '' + 'terms and the privacy and recording notice first. The first four are needed to join a live recorded group; the last is optional. You can change your mind at any time.', 'agreements');
+    var type = famType(), need = FAMILY[type].need, boxes = {};
+    var c = section('Agreements', 'Choose what you will use, then read the terms and the privacy notice and tick what applies. Nothing is ticked for you. You can change your mind at any time.', 'agreements');
     c.appendChild(h('p', { class: 'small' }, h('a', { href: '/terms/', target: '_blank', rel: 'noopener', text: 'Terms and refund policy' }), ' | ',
       h('a', { href: '/privacy/', target: '_blank', rel: 'noopener', text: 'Privacy and recording notice' })));
-    CONSENT_TEXT.forEach(function (t) {
-      var cur = S.consents[t[0]];
-      var cb = h('input', { type: 'checkbox', id: 'consent-' + t[0], checked: !!(cur && cur.granted) }); boxes[t[0]] = cb;
-      c.appendChild(h('label', { class: 'consent', for: 'consent-' + t[0] }, cb, h('span', null, (t[1] ? 'Needed: ' : '') + t[2])));
-    });
+    c.appendChild(h('fieldset', { class: 'ftype' }, h('legend', { text: 'What will you use Math Inquirers for?' }),
+      Object.keys(FAMILY).map(function (k) {
+        return h('label', { class: 'opt' }, h('input', { type: 'radio', name: 'ftype', id: 'ftype-' + k, value: k, checked: k === type, onchange: function () { collect(); S.ftype = k; draw(); var e = document.getElementById('ftype-' + k); if (e) e.focus(); } }),
+          h('span', null, h('strong', { text: FAMILY[k].label })));
+      })));
+    function collect() { Object.keys(boxes).forEach(function (t) { S.pending[t] = boxes[t].checked; }); }
+    function line(t) {
+      var cur = isOn(t), chk = S.pending[t] != null ? S.pending[t] : cur;
+      var cb = h('input', { type: 'checkbox', id: 'consent-' + t, checked: chk }); boxes[t] = cb;
+      c.appendChild(h('label', { class: 'consent', for: 'consent-' + t }, cb, h('span', null, (need.indexOf(t) >= 0 ? 'Needed: ' : '') + M.CONSENTS[t])));
+    }
+    function block(title, hint, types) {
+      c.appendChild(h('h3', { class: 'blk', text: title })); if (hint) c.appendChild(h('p', { class: 'small muted', text: hint }));
+      types.forEach(line);
+    }
+    block('For everyone', null, ['contact', 'terms']);
+    block('If your child uses online practice', 'Needed so your child\'s answers can be sent to us. Without it, practice pages still work on your child\'s own device but nothing is sent.', ['online_practice']);
+    if (type !== 'online') block('Only for live group classes', 'Needed to join a live, recorded group. Not asked of families who only buy a book.', ['recording', 'childs_work']);
+    if (type !== 'live') block('If you order a printed book', 'We ask again when you order, so you can leave this for now.', ['book_delivery']);
+    block('Optional', 'Say yes only if you would like it. It never changes what your child can do.', ['marketing_contact', 'feedback_quotes']);
     var last = S.consents.terms || S.consents.contact;
     if (last) c.appendChild(h('p', { class: 'small muted', text: 'Last saved ' + M.fmtDate(last.created_at) + ' (terms ' + last.terms_version + ', privacy ' + last.privacy_version + ').' }));
-    c.appendChild(h('button', { class: 'btn', type: 'button', id: 'save-consents', text: done ? 'Update agreements' : 'Save agreements', onclick: function () {
-      var items = {}; CONSENT_TEXT.forEach(function (t) {
-        var prev = S.consents[t[0]]; var now = boxes[t[0]].checked;
-        if (!prev ? (now || t[1]) : prev.granted !== now) items[t[0]] = now;   // record first answer for all needed ones, then only changes
+    c.appendChild(h('button', { class: 'btn', type: 'button', id: 'save-consents', text: need.every(isOn) ? 'Update agreements' : 'Save agreements', onclick: function () {
+      collect();
+      var items = {};
+      Object.keys(boxes).forEach(function (t) {
+        var prev = S.consents[t], now = boxes[t].checked;
+        if (!prev ? (now || need.indexOf(t) >= 0) : prev.granted !== now) items[t] = now;   // first answer for the needed ones, then only changes
       });
       if (!Object.keys(items).length) return run(async function () {}, 'Nothing changed.');
+      S.pending = {};
       run(function () { return rpc('record_consents', { p_items: items, p_terms: M.VERSIONS.terms, p_privacy: M.VERSIONS.privacy }); }, 'Agreements saved.');
     } }));
     return c;
@@ -218,7 +239,7 @@
       if (!gs.length) wrap.appendChild(h('p', { class: 'muted', text: 'No group is open for this level yet.' }));
       gs.forEach(function (g) {
         var f = S.fill[g.id] || { seats: g.seats, taken: 0 }; var left = f.seats - f.taken;
-        var r = h('input', { type: 'radio', name: 'grp-' + ch.id, value: g.id, disabled: left <= 0, onchange: function () { chosen = g.id; btn.disabled = !requiredOk(); } });
+        var r = h('input', { type: 'radio', name: 'grp-' + ch.id, value: g.id, disabled: left <= 0, onchange: function () { chosen = g.id; btn.disabled = !liveOk(); } });
         wrap.appendChild(h('label', { class: 'opt' + (left <= 0 ? ' full' : '') }, r, h('span', null,
           h('strong', { text: g.name + ' (ages ' + g.ages + ')' }), h('br'),
           M.sessionsText(g.sessions), ', first lesson ' + g.first_label + ', last ' + g.last_label, h('br'),
@@ -227,7 +248,7 @@
       btn = h('button', { class: 'btn', type: 'button', disabled: true, text: 'Reserve a place', onclick: function () {
         if (chosen) run(function () { return rpc('enrol_child', { p_child: ch.id, p_group: chosen }); }, 'Place reserved. Please pay to confirm it (see Payments below).'); } });
       wrap.appendChild(btn);
-      if (!requiredOk()) wrap.appendChild(h('p', { class: 'small', text: 'Save the four needed agreements first.' }));
+      if (!liveOk()) wrap.appendChild(h('p', { class: 'small', 'data-live-needed': '1' }, 'Joining a live group needs four agreements. In Agreements above, choose "A live group class", tick the needed ones and save them first. ', h('a', { href: '#agreements', text: 'Go to Agreements' })));
       c.appendChild(wrap);
     });
     if (!any) c.appendChild(h('p', { text: 'Every child already has a place or a reservation.' }));
@@ -273,6 +294,14 @@
     } catch (e) { if (btn) { btn.disabled = false; btn.textContent = 'Try again'; } M.notice(box.appendChild(h('div')), 'err', M.errText(e)); }
   }
 
+  function moreCard() {
+    return h('section', { class: 'card', id: 'online-card' }, h('h2', { text: 'Online practice, books and trial classes' }),
+      h('p', { class: 'small muted', text: 'For every family, with or without a live group.' }),
+      h('div', { class: 'row' },
+        h('a', { class: 'btn alt sm', href: '/portal/children/', text: 'My children and their practice' }),
+        h('a', { class: 'btn alt sm', href: '/portal/books/', text: 'Buy an extension book' }),
+        h('a', { class: 'btn alt sm', href: '/portal/trial/', text: 'Ask about a trial class' })));
+  }
   function accountCard() {
     var c = section('Your details and data', null, 'details');
     var nm = h('input', { type: 'text', id: 'pname', value: S.parent.full_name || '', maxlength: 100 });
@@ -294,14 +323,15 @@
     return c;
   }
 
+  function need() { return FAMILY[famType()].need; }
   function nextStep() {
     var live = S.enrols.filter(function (e) { return e.enrolment_status !== 'cancelled'; });
     var pend = live.filter(function (e) { return e.payment_status === 'pending'; });
     var t, href;
     if (pend.length) { t = 'Next step: pay for the reserved place to confirm it.'; href = '#payments'; }
     else if (!S.children.length) { t = 'Next step: add your child.'; href = '#my-children'; }
-    else if (!requiredOk()) { t = 'Next step: save the four needed agreements.'; href = '#agreements'; }
-    else if (S.children.some(function (c) { return !hasActiveEnrol(c.id); })) { t = 'Next step: choose a group and reserve a place.'; href = '#choose-group'; }
+    else if (!need().every(isOn)) { t = 'Next step: save the needed agreements.'; href = '#agreements'; }
+    else if (famType() !== 'online' && S.children.some(function (c) { return !hasActiveEnrol(c.id); })) { t = 'Next step: choose a group and reserve a place, or look at the extension books.'; href = '#choose-group'; }
     else { t = 'You are all set for now.'; }
     return h('p', { class: 'msg info next', id: 'next-step' }, t, href ? ' ' : null, href ? h('a', { href: href, text: 'Go there' }) : null);
   }
@@ -319,7 +349,7 @@
     render([flashBox(), back, nextStep(),
       h('div', { class: 'row' }, h('h1', { text: 'Hello' + (S.parent.full_name ? ', ' + S.parent.full_name : '') }),
         h('button', { class: 'btn alt sm', type: 'button', id: 'signout', text: 'Log out', onclick: async function () { await M.sb().auth.signOut(); flash(null); await refresh(); } })),
-      paymentCard(), childrenCard(), consentCard(), enrolCard(), familyCard(), accountCard()]);
+      M.P.nav('home'), paymentCard(), childrenCard(), moreCard(), consentCard(), enrolCard(), familyCard(), accountCard()]);
   }
 
   if (!M.configured()) return draw();

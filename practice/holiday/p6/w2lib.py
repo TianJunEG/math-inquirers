@@ -114,8 +114,10 @@ def fill(prog, values):
 
 
 def nb(frame):
-    """Single spaces inside a sentence frame become non-breaking spaces, so a label and its box stay together when the line wraps (runs of 2 or more spaces stay breakable)."""
-    return re.sub(r'(?<! ) (?! )', '\u00a0', frame)
+    """The last few words before a box get non-breaking spaces, so a label and its box stay together when the line wraps (separators of 2 or more spaces stay breakable)."""
+    for _ in range(5):
+        frame = re.sub(r'(?<=\S) (?=(?:[^\s{]+\u00a0){0,5}\{f\d+\})', '\u00a0', frame)
+    return frame
 
 
 def show(prog):
@@ -239,8 +241,8 @@ def machine_rows(rows, label):
             w = 58 if o == 'OUT' else 52
             b += rect(x, yy, w, 34, SKY if o == 'OUT' else '#fff', NAVY, 2, 8) + T(x + w / 2, yy + 23, o, 17, 'middle', 800)
             x += w
-        y += 56
-    return wrap(b, x + 8, y + 4, label)
+        y += 76
+    return wrap(b, x + 8, y - 8, label)
 
 
 def age_bars(label):

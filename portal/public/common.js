@@ -2,7 +2,8 @@
 (function () {
   var CFG = window.MI_CONFIG || {};
   // Bump these whenever the text of terms.html / privacy.html changes: they are stored with every consent record.
-  var VERSIONS = { terms: 'terms-2026-10c-draft', privacy: 'privacy-2026-10c-draft' };
+  // 10d: adds the draft wording for online_practice, book_delivery and marketing_contact (docs/legal/online_submission_consent_draft.md). Still DRAFT: owner and lawyer to approve.
+  var VERSIONS = { terms: 'terms-2026-10d-draft', privacy: 'privacy-2026-10d-draft' };
 
   function h(tag, attrs) {
     var e = document.createElement(tag);
@@ -43,7 +44,15 @@
     cancel_enrolment_first: 'Cancel this child\'s place first.',
     cannot_cancel_contact_us: 'This place is already paid, so please message us to cancel.',
     forbidden: 'This page is for the owner only.',
-    not_signed_in: 'Please log in again.'
+    not_signed_in: 'Please log in again.',
+    price_not_set: 'The price for this book is not set yet, so it cannot be ordered online. Please use the "Ask us" button and we will reply.',
+    already_has_online: 'This child already has online access to that book level.',
+    already_pending: 'There is already an unpaid order for this child and book. Please pay it or cancel it first (see "Your orders").',
+    bad_address: 'Please check the delivery details. We post to Singapore addresses only, and the postal code has 6 digits.',
+    bad_birth_year: 'Please choose a birth year from the list, or leave it blank.',
+    cannot_cancel_order: 'That order cannot be cancelled here. If it is already paid, please message us.',
+    too_many: 'You have sent a few requests today already. We will reply soon, so please wait a day before sending another.',
+    not_found: 'We could not find that. Please reload the page and try again.'
   };
   var GENERIC = 'Something went wrong on our side. Please try again in a moment. If it keeps happening, message us on WhatsApp.';
   // Only text we wrote ourselves (say()) or that maps to a known code is shown. Anything else (database, network or
@@ -52,7 +61,7 @@
   function errText(err) {
     if (err && err.friendly) return err.message;
     var m = String((err && (err.message || err.error_description)) || '');
-    if (/consents_missing/.test(m)) return 'Please tick and save the four needed agreements first.';
+    if (/consents_missing/.test(m)) return 'Please tick and save the agreements this needs first (see Agreements).';
     if (/duplicate key|children_parent_name_uq/.test(m)) return 'You already have a child with that name. Use a different display name.';
     for (var k in MESSAGES) if (m.indexOf(k) !== -1) return MESSAGES[k];
     if (/Invalid login/i.test(m)) return 'Email or password is not right. Check them and try again, or use "Magic link" to get a log-in link by email.';
@@ -92,6 +101,36 @@
       [].forEach.call(t.querySelectorAll('tbody tr'), function (tr) { [].forEach.call(tr.children, function (td, i) { td.setAttribute('data-label', heads[i] || ''); }); });
     });
   }
-  window.MI = { stack: stack, say: say, h: h, mount: mount, clear: clear, configured: configured, sb: sb, errText: errText, money: money, sessionsText: sessionsText,
+  /* ---------- agreements (consent types). Wording: docs/legal/online_submission_consent_draft.md (DRAFT) and privacy.html "Wording used on the registration form" ---------- */
+  var CONSENTS = {
+    contact: 'I agree to Math Inquirers (Preciouslyours Pte Ltd) using my details to arrange the class or order and contact me about it.',
+    terms: 'I have read the terms and refund policy and agree to them.',
+    online_practice: 'I am the parent or legal guardian of this child. I agree that when my child presses "Submit" on an online practice page, Math Inquirers (Preciouslyours Pte Ltd) receives my child\'s answers, marks them again on our server, and keeps them with my child\'s profile (first name or nickname and level) to make practice reports for me and, if my child is in one of our groups, for my child\'s tutor. We do not use my child\'s answers for advertising. We keep them for 12 months after the last submission, or until 90 days after my child\'s online access ends, whichever is sooner, and then delete them. I can ask to see, correct or delete them, or withdraw this agreement, at any time.',
+    recording: 'I agree that live lessons are recorded as described in the privacy notice, and that recordings are shared only with the enrolled families of my child\'s group.',
+    childs_work: 'I agree that Math Inquirers keeps photos of my child\'s work, practice answers and short progress notes, as described in the privacy notice. I am the parent or legal guardian of the child.',
+    book_delivery: 'I agree that Math Inquirers (Preciouslyours Pte Ltd) may give my delivery name, Singapore address, postal code and phone number to its printer and courier, only to print and deliver the book I ordered, and will delete them 30 days after the parcel is confirmed delivered.',
+    marketing_contact: '(Optional) I agree that Math Inquirers may contact me by email or WhatsApp to suggest a trial class or a next book, including a suggestion based on how my child did in the online practice. I can say stop at any time and we will stop. I do not have to agree to use the online practice or to ask for a trial class.',
+    feedback_quotes: '(Optional) I agree that my feedback may be used, without my child\'s name, to improve and describe the program.'
+  };
+  var FORMATS = { workbook: 'Workbook only (printed, posted to you)', online: 'Online only (practice pages for one child)', both: 'Workbook and online' };
+  var FORMAT_SHORT = { workbook: 'printed workbook', online: 'online only', both: 'workbook and online' };
+  var WA = 'https://wa.me/6598805962';
+  function waLink(text) { return WA + (text ? '?text=' + encodeURIComponent(text) : ''); }
+  function two(n) { return (n < 10 ? '0' : '') + n; }
+  // Practice page address for a unit row {product, level, unit_no}. Patterns: docs/online_versions_plan.md section 6.
+  function unitUrl(u) {
+    var n = two(Number(u.unit_no || 0));
+    if (u.product === 'holiday') return '/practice/holiday/p' + u.level + '/' + n + '/';
+    if (u.product === 'term') return '/practice/term/l' + u.level + '/' + n + '/';
+    return '/practice/ext/l' + u.level + 'u' + n + '/';
+  }
+  function unitLabel(u) {
+    var n = Number(u.unit_no || 0);
+    var base = u.product === 'holiday' ? 'Holiday, Level ' + u.level + ', lesson ' + n : u.product === 'term' ? 'Term, Level ' + u.level + ', lesson ' + n : 'Extension book, Level ' + u.level + ', unit ' + n;
+    return base + (u.title ? ': ' + u.title : '');
+  }
+  async function rpc(name, args) { var r = await sb().rpc(name, args || {}); if (r.error) throw r.error; return r.data; }
+  function dayText(iso) { try { return new Date(iso).toLocaleDateString('en-SG', { timeZone: 'Asia/Singapore', day: 'numeric', month: 'short', year: 'numeric' }); } catch (e) { return iso; } }
+  window.MI = { rpc: rpc, CONSENTS: CONSENTS, FORMATS: FORMATS, FORMAT_SHORT: FORMAT_SHORT, waLink: waLink, unitUrl: unitUrl, unitLabel: unitLabel, dayText: dayText, stack: stack, say: say, h: h, mount: mount, clear: clear, configured: configured, sb: sb, errText: errText, money: money, sessionsText: sessionsText,
                 fmtDate: fmtDate, notice: notice, header: header, CFG: CFG, VERSIONS: VERSIONS };
 })();

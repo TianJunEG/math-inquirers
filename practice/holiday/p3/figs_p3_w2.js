@@ -32,21 +32,22 @@ function widen(svg) {
   if (!m) return svg;
   const h = +m[4], base = +m[3];
   const texts = [...svg.matchAll(/<text\b([^>]*)>([^<]*)<\/text>/g)].map(t => ({
-    x: +/ x="(-?[\d.]+)"/.exec(t[1])[1], size: +(/font-size="([\d.]+)"/.exec(t[1]) || [0, 16])[1],
+    x: +/ x="(-?[\d.]+)"/.exec(t[1])[1], y: +/ y="(-?[\d.]+)"/.exec(t[1])[1], size: +(/font-size="([\d.]+)"/.exec(t[1]) || [0, 16])[1],
     anchor: (/text-anchor="(\w+)"/.exec(t[1]) || [0, 'start'])[1], n: t[2].length }));
-  let lo = 0, hi = base;
+  let lo = 0, hi = base, vlo = -6, vhi = h + 6;
   for (let it = 0; it < 12; it++) {
     const W = hi - lo, need = Math.round(12 / Math.min(1, 290 / W) * 10) / 10;
-    let nlo = 0, nhi = base;
+    let nlo = 0, nhi = base, nvlo = -6, nvhi = h + 6;
     for (const t of texts) {
       const w = t.n * 0.62 * Math.max(t.size, need) + 6;
       const l = t.anchor === 'end' ? t.x - w : t.anchor === 'middle' ? t.x - w / 2 : t.x, r = t.anchor === 'end' ? t.x : t.anchor === 'middle' ? t.x + w / 2 : t.x + w;
       nlo = Math.min(nlo, l); nhi = Math.max(nhi, r);
+      nvlo = Math.min(nvlo, t.y - 0.95 * Math.max(t.size, need) - 2); nvhi = Math.max(nvhi, t.y + 0.32 * Math.max(t.size, need) + 4);
     }
-    if (nlo === lo && nhi === hi) break;
-    lo = Math.floor(nlo); hi = Math.ceil(nhi);
+    if (nlo === lo && nhi === hi && nvlo === vlo && nvhi === vhi) break;
+    lo = Math.floor(nlo); hi = Math.ceil(nhi); vlo = Math.floor(nvlo); vhi = Math.ceil(nvhi);
   }
-  return svg.replace(/viewBox="[^"]*"/, `viewBox="${lo} 0 ${hi - lo} ${h}"`);
+  return svg.replace(/viewBox="[^"]*"/, `viewBox="${lo} ${vlo} ${hi - lo} ${vhi - vlo}"`);
 }
 for (const k of Object.keys(out)) out[k] = widen(out[k]);
 console.log(JSON.stringify(out));

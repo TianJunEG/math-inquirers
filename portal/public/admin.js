@@ -6,6 +6,7 @@
   function mount() { M.mount.apply(M, arguments); M.stack(app); }
   function msgBox(m) { return m ? (typeof m === 'object' ? h('p', { class: 'msg err', role: 'alert', text: m.err }) : h('p', { class: 'msg ok', role: 'status', text: m })) : null; }
   var filter = 'pending', view = 'enrol', slotLabels = null, productNames = null;
+  var EXT = window.MI_ADMIN_VIEWS || [];   // extra tabs (orders, access, trials, funnel, group report) registered by admin_ext.js, which loads first
   var WINDOWS = { 'wkday-am': 'Weekday mornings', 'wkday-pm': 'Weekday afternoons', 'wkday-eve': 'Weekday evenings', sat: 'Saturday', sun: 'Sunday' };
   var BANDS = { 'under-6': 'Under 6', '6-7': '6 to 7', '8-9': '8 to 9', '10-11': '10 to 11', '12-13': '12 to 13', '14-plus': '14 or older' };
   if (!M.configured()) { mount(app, h('section', { class: 'card' }, h('p', { text: 'Set SUPABASE_URL and ANON_KEY in portal/config.js first.' }))); return; }
@@ -24,6 +25,8 @@
     var sb = M.sb(), s = await sb.auth.getSession();
     if (!s.data.session) return login();
     if (document.getElementById('viewtabs')) mount(app, viewTabs(), h('p', { class: 'muted', role: 'status', text: 'Loading...' }));
+    var ev = EXT.filter(function (v) { return v.id === view; })[0];
+    if (ev) return ev.load({ msg: msg, M: M, h: h, app: app, mount: mount, viewTabs: viewTabs, msgBox: msgBox, reload: load, login: login });
     if (view === 'interest') return loadInterest(msg);
     if (view === 'products') return loadProducts(msg);
     var res = await Promise.all([sb.rpc('admin_list_enrolments'), sb.rpc('group_fill'), sb.from('groups').select('id,name,seats').order('id')]);
@@ -68,7 +71,7 @@
       h('section', { class: 'card' }, h('h2', { text: shown.length + ' shown' }), tabs, table));
   }
   function viewTabs() {
-    return h('div', { class: 'tabs', id: 'viewtabs' }, [['enrol', 'Enrolments'], ['interest', 'Interest'], ['products', 'Shop interest']].map(function (x) {
+    return h('div', { class: 'tabs', id: 'viewtabs' }, [['enrol', 'Enrolments'], ['interest', 'Interest'], ['products', 'Shop interest']].concat(EXT.map(function (v) { return [v.id, v.label]; })).map(function (x) {
       return h('button', { type: 'button', 'data-view': x[0], 'aria-pressed': String(view === x[0]), text: x[1], onclick: function () { view = x[0]; load(); } });
     }));
   }

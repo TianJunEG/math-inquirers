@@ -79,8 +79,8 @@ def q1c():
     return svg(380, 228, body, 'Triangle (c), drawn to scale: base 9 cm, a long side of 17 cm, and a dashed height of 8 cm that falls outside the triangle on the extended base (dashed). The height meets the extended base at a right angle.')
 
 
-def rect_tri(px, fill, tag, size=28, with_heights=False):
-    """Rectangle ABCD, 10 cm by 6 cm (A top left, B top right, C bottom right, D bottom left), with a point on AB joined to D and C."""
+def rect_tri_body(px, fill, tag, size=28, with_heights=False):
+    """Rectangle ABCD, 10 cm by 6 cm (A top left, B top right, C bottom right, D bottom left), with a point on AB joined to D and C: (svg body, height)."""
     f = P(58, 40 + 6 * size, size)
     A, B, C, D, Pt = f(0, 6), f(10, 6), f(10, 0), f(0, 0), f(px, 6)
     body = poly([A, B, C, D], 'none', 2.2) + poly([Pt, D, C], fill, 2.8)
@@ -90,15 +90,20 @@ def rect_tri(px, fill, tag, size=28, with_heights=False):
     body += T(A[0] - 8, A[1] + 5, 'A', 17, 'end') + T(B[0] + 8, B[1] + 5, 'B', 17, 'start') + T(C[0] + 8, C[1] + 5, 'C', 17, 'start') + T(D[0] - 8, D[1] + 5, 'D', 17, 'end')
     body += T(Pt[0], Pt[1] - 10, tag, 17)
     body += T((D[0] + C[0]) / 2, D[1] + 27, '10 cm', 16) + T(D[0] - 10, (A[1] + D[1]) / 2 + 5, '6 cm', 16, 'end')
-    return svg(390, 46 + 6 * size + 40, body, f'Rectangle ABCD, 10 cm by 6 cm. The point {tag} is on the top side AB. Triangle {tag}DC is shaded.')
+    return body, 46 + 6 * size + 40
 
 
 def q2(which):
-    return rect_tri({'P': 2, 'Q': 7}[which], {'P': YEL, 'Q': SKY}[which], which)
+    body, h = rect_tri_body({'P': 2, 'Q': 7}[which], {'P': YEL, 'Q': SKY}[which], which)
+    return svg(390, h, body, f'Rectangle ABCD, 10 cm by 6 cm. The point {which} is on the top side AB. Triangle {which}DC is shaded.')
 
 
 def q2_both(heights=False):
-    return (rect_tri(2, YEL, 'P', 21, heights) + rect_tri(7, SKY, 'Q', 21, heights))
+    b1, h1 = rect_tri_body(2, YEL, 'P', 21, heights)
+    b2_, h2 = rect_tri_body(7, SKY, 'Q', 21, heights)
+    body = b1 + f'<g transform="translate(0,{h1})">{b2_}</g>'
+    return svg(390, h1 + h2, body, 'Rectangle ABCD, 10 cm by 6 cm, drawn twice. In the first drawing P is a point on AB and triangle PDC is shaded. In the second drawing Q is a point on AB and triangle QDC is shaded.'
+               + (' The height of each shaded triangle is a dashed line from the top corner down to DC; both are 6 cm.' if heights else ''))
 
 
 def q3():
@@ -151,8 +156,8 @@ def a3():
     body = poly(sq, YEL) + T(*f(3, 3.4), 'square', 15, 'middle', 700) + T(*f(3, -1.5), '6 cm', 16)
     body += poly([ta, tb, tc], SKY) + dash(tc, foot) + rmark(foot, 1, -1, 10) + T((ta[0] + tb[0]) / 2, ta[1] + 26, '9 cm', 16)
     body += T(foot[0] + 8, g(0, 2.2)[1] + 5, 'height ?', 16, 'start')
-    body += T(24, 28 + 8 * s + 52, 'The square and the triangle have the same area.', 14, 'start', 600, GREY) + T(24, 28 + 8 * s + 70, 'Not to scale.', 14, 'start', 600, GREY)
-    return svg(390, 28 + 8 * s + 84, body, 'A square with sides of 6 cm and a triangle with a base of 9 cm and a dashed height that is not known. The square and the triangle have the same area. Not drawn to scale.')
+    body += T(24, 28 + 8 * s + 52, 'The square and the triangle', 14, 'start', 600, GREY) + T(24, 28 + 8 * s + 70, 'have the same area.', 14, 'start', 600, GREY) + T(24, 28 + 8 * s + 88, 'Not to scale.', 14, 'start', 600, GREY)
+    return svg(390, 28 + 8 * s + 100, body, 'A square with sides of 6 cm and a triangle with a base of 9 cm and a dashed height that is not known. The square and the triangle have the same area. Not drawn to scale.')
 
 
 def a4():

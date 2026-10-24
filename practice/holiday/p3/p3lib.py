@@ -107,3 +107,13 @@ def grid_fig(cols, rows, cells, caption):
         for j in range(3):
             body += cell(j + 1, i + 1, cells[i][j], False)
     return h.svg(W, W, body, caption)
+
+
+def grp(s, limit=30):
+    """Frame helper: groups separated by 3 or more spaces keep their words together (no-break spaces) so a box never wraps away from its label;
+    a group longer than `limit` characters (a sentence) is left to wrap normally."""
+    import re
+    out = []
+    for g in re.split(r' {3,}', s):
+        out.append(g.replace(' ', ' ') if len(re.sub(r'\{f\d+\}', '000', g)) <= limit else g)
+    return ' '.join(out)

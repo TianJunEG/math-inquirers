@@ -93,6 +93,12 @@ def a3_height():
     return found[0]
 
 
+def a2_area():
+    legs = sorted([12, 16, 20])[:2]
+    assert legs[0] ** 2 + legs[1] ** 2 == 20 ** 2
+    return whole(shoelace([(0, 0), (legs[1], 0), (0, legs[0])]))
+
+
 def b1_height():
     legs = (15, 20)
     assert legs[0] ** 2 + legs[1] ** 2 == 25 ** 2
@@ -150,7 +156,7 @@ ITEMS = [
       src=['Area of triangle QDC =']),
     D(id='2c', tier='core', no='2(c)', type='selfcheck', open=False, skill='same base, same height', facts=[(10, 6), (10, 6)],
       q='ABCD is a rectangle 10 cm by 6 cm. P and Q are points on AB.\nExplain why triangle PDC and triangle QDC have the same area. Write your idea, then compare it with the model answer.', svg=G.q2_both(False),
-      check=lambda: [(length(RECT_Q2['D'], RECT_Q2['C']), RECT_Q2['A'][1] - RECT_Q2['D'][1]) for _ in (P_PT, Q_PT)], sol_fig=lambda f: G.q2_both(True),
+      check=lambda: [(length(RECT_Q2['D'], RECT_Q2['C']), pt[1] - RECT_Q2['D'][1]) for pt in (P_PT, Q_PT)], sol_fig=lambda f: G.q2_both(True),
       hint='Look at the base DC of each triangle and at how high P and Q are above DC. What is the same?',
       steps=['Both triangles have the same base, DC = 10 cm.', 'P and Q are both on AB, which is 6 cm above DC, so both triangles have the same height, 6 cm.', 'Same base and same height means the same area: 1/2 × 10 × 6 = 30 cm² each.',
              'A good explanation says “same base” and “same height”, even though the two triangles look different.'],
@@ -188,7 +194,7 @@ ITEMS = [
       check=lambda: [whole(shoelace([R4['E'], R4['B'], R4['F']])), whole(shoelace([R4['F'], R4['C'], R4['D']]))],
       hint='Find the two sides of each white triangle that meet at the square corner. Each triangle is half of the rectangle with those two sides.',
       steps=['EBF has its square corner at B: EB = 8 cm and BF = 4 cm. It is half of 8 by 4: 32 ÷ 2 = 16 cm².', 'FCD has its square corner at C: FC = 4 cm and CD = 12 cm. It is half of 4 by 12: 48 ÷ 2 = 24 cm².'],
-      src=['Start here: the three white triangles are what is left over. Each has a square corner, so each is half of a rectangle. Example: ADE is half of 4 cm by 8 cm, so ADE = 16 cm².', 'ADE = 16 cm² EBF = ______ cm² FCD = ______ cm²']),
+      src=['the three white triangles are what is left over. Each has a square corner, so each is half of a rectangle. Example: ADE is half of 4 cm by 8 cm, so ADE = 16 cm².', 'ADE = 16 cm² EBF = ______ cm² FCD = ______ cm²']),
     D(id='4c', tier='core', no='4(c)', type='number', skill='taking away from a rectangle', answer=40,
       q='ABCD is a rectangle. Find the area of the shaded triangle DEF.', svg=G.q4(), check=lambda: whole(shoelace([R4['D'], R4['E'], R4['F']])),
       sol_fig=lambda got: G.q4(True),
@@ -209,7 +215,7 @@ ITEMS = [
       src=['Siti’s triangle has the same area but a base of 12 cm. What is its height?']),
     D(id='5c', tier='core', no='5(c)', type='selfcheck', open=False, skill='different triangles with the same area', facts=[(1, 48), (2, 24), (3, 16), (4, 12), (6, 8), (8, 6), (12, 4), (16, 3), (24, 2), (48, 1)],
       q='Mei draws a triangle with a base of 8 cm and a height of 6 cm.\nOne more triangle with the same area as Mei’s: write its base and its height in cm. Then compare with the model answer.',
-      check=lambda: [(b, h) for b in range(1, 49) for h in range(1, 49) if F(b * h, 2) == 24 and (b, h) not in ((8, 6),) or False][:0] or sorted((b, 48 // b) for b in range(1, 49) if 48 % b == 0),
+      check=lambda: sorted((b, h) for b in range(1, 49) for h in range(1, 49) if shoelace([(0, 0), (b, 0), (0, h)]) == 24),
       hint='Choose a base you like. Then think: what height gives the same area as Mei’s triangle?',
       steps=['Mei’s triangle has area 24 cm², so base × height must be 48 (because 1/2 × base × height = 24).', 'Any base and height that multiply to 48 work. For example: base 16 cm and height 3 cm, or base 6 cm and height 8 cm, or base 12 cm and height 4 cm.',
              'Check yours: multiply your base by your height. Is it 48?'],
@@ -268,7 +274,7 @@ ITEMS = [
       src=['12 cm²? How many right-angled triangles can you find each time?']),
     D(id='Ccm', tier='invest', no='C(c) which area', type='choice', skill='listing all the ways', options=['6 cm²', '10 cm²', '12 cm²'], answer='12 cm²',
       q='You found right-angled triangles with an area of 6 cm², 10 cm² and 12 cm². Which area gave the most triangles?',
-      check=lambda: max((6, 10, 12), key=lambda a: len(pairs_for_area(a))) and f'{max((6, 10, 12), key=lambda a: len(pairs_for_area(a)))} cm²',
+      check=lambda: f'{max((6, 10, 12), key=lambda a: len(pairs_for_area(a)))} cm²',
       hint='Count the triangles for each of the three areas, then compare the three numbers.',
       steps=['6 cm² gives 3 triangles, 10 cm² gives 3 and 12 cm² gives 4.', '12 cm² gave the most. It is double of 12, which is 24, and 24 has more pairs of factors than 12 or 20.'],
       src=['Which area gave the most?']),
@@ -281,7 +287,7 @@ ITEMS = [
       src=['A triangle has an area of 45 cm². Its base is 10 cm. What is its height?']),
     D(id='A2', tier='stretch', no='A2', type='number', skill='right-angled triangle', answer=96,
       q='A right-angled triangle has sides of 12 cm, 16 cm and 20 cm. What is its area?', svg=G.a2(),
-      check=lambda: (lambda legs: whole(shoelace([(0, 0), (legs[1], 0), (0, legs[0])])))(sorted([12, 16, 20])[:2]) if 12 ** 2 + 16 ** 2 == 20 ** 2 else None,
+      check=a2_area,
       hint='In a right-angled triangle, two sides meet at the right angle. Which two are they? The longest side is slanting.',
       steps=['The two sides that meet at the right angle are 12 cm and 16 cm. The 20 cm side is slanting.', 'Area = 1/2 × 12 × 16 = 96 cm².'],
       src=['A right-angled triangle has sides of 12 cm, 16 cm and 20 cm. What is its area?']),
@@ -349,7 +355,7 @@ def _a4_oracle(e):
 
 
 def _b3_oracle(e):
-    h = height_from_area(e['area'], e['BD'] + 12 - e['BD'])          # BC = BD + DC = 12 in every variant
+    h = height_from_area(e['area'], 12)          # BC = BD + DC = 12 in every variant
     return whole(F(e['BD'] * h, 2))
 
 
