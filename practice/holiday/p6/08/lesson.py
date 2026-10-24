@@ -352,6 +352,7 @@ ITEMS = [
 ]
 
 for _it in ITEMS:
+    _it['q'] = re.sub(r'\s{2,}', ' ', _it['q'])
     if _it.get('frame'):
         _it['frame'] = W.nb(_it['frame'])
 
