@@ -78,6 +78,17 @@ t('bracket with wrong result', br, '(6+4)x5-2=47', 'wrong'); t('bracket other pl
 t('word hyphen kept as space', { marking_mode: 'auto', type: 'text', key: ['north-west'] }, 'north west', 'right'); t('word hyphen squash', { marking_mode: 'auto', type: 'text', key: ['north-west'] }, 'Northwest.', 'right');
 t('trailing full stop on text', br, '(6+4)x5-2.', 'right');
 t('words only if declared', { marking_mode: 'auto', type: 'text', key: ['1/2'] }, 'half', 'wrong'); t('words declared', { marking_mode: 'auto', type: 'text', key: ['1/2', 'half'] }, 'Half', 'right');
+
+// ---- coordinator list: must reject / must accept
+const T = (k) => ({ marking_mode: 'auto', type: 'text', key: k });
+t('T4b diff rejects -0.5', T(['0.5']), '-0.5', 'wrong'); t('T4b rule rejects -0.5n', T(['0.5n']), '-0.5n', 'wrong'); t('A2 rejects -1/2', T(['1/2']), '-1/2', 'wrong');
+t('3c rejects -1/4', T(['1/4']), '-1/4', 'wrong'); t('A4 rejects -2/3', T(['2/3']), '-2/3', 'wrong');
+t('5a rejects 52', T(['(6+4)x5-2']), '(6+4)×52', 'wrong'); t('5a accepts statement', T(['(6+4)×5−2']), '(6+4)×5−2=48', 'right'); t('5a accepts x', T(['(6+4)×5−2']), '(6+4)x5-2', 'right');
+t('5b rejects (52)', T(['6+4x(5-2)']), '6+4×(52)', 'wrong'); t('5b accepts', T(['6+4x(5-2)']), '6+4×(5−2)', 'right');
+t('6a rejects 1 1/2', T(['5 1/2', '11/2']), '1 1/2', 'wrong'); t('6a keeps 5 1/2', T(['11/2']), '5 1/2', 'wrong'); t('6a 5 1/2', T(['5 1/2', '11/2']), '5 1/2', 'right');
+const b2 = T(['1/3+1/12', '1/12+1/3', '1/4+1/6', '1/6+1/4']);
+for (const a of ['1/3+1/12', '1/12+1/3', '1/4+1/6', '1/6+1/4']) { t('B2 ' + a, b2, a, 'right'); t('B2 lead ' + a, b2, '5/12=' + a, 'right'); t('B2 trail ' + a, b2, a + '=5/12', 'right'); }
+for (const a of ['1/3+1/6', '1/4+1/12', '5/12=1/3+1/6']) t('B2 reject ' + a, b2, a, 'wrong');
 // the shared reading code is the same text in sheet.js and mark.js (they must agree on every answer)
 import { readFileSync } from 'node:fs';
 const blk = f => { const x = readFileSync(new URL(f, import.meta.url), 'utf8'); const a = x.indexOf('// BEGIN SHARED'), b = x.indexOf('// END SHARED'); assert.ok(a > 0 && b > a, f + ' has the shared block'); return x.slice(a, b); };
