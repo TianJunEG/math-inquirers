@@ -373,3 +373,6 @@ Owner: paper-only holiday questions (kit, ruler, drawing) are NOT left out. The 
 
 ## 2026-10-24 — D1-MAINSITE
 Owner: "D1-MAINSITE". Online practice is hosted on the main site under /practice/ (URL patterns /practice/ext/lNuNN/, /practice/term/lN/NN/, /practice/holiday/pN/NN/). Real domain still needed before QR codes are printed (D9). Also: identification uses the existing portal parent accounts and child profiles (owner correction), not new family links.
+
+## 2026-10-24 — ONLINE PHASE ORDER (owner): holiday first, then term, then extension
+Owner: "holiday first, then term then extension" (replaces the proposed runner -> term L1 -> extension -> holiday). Shared worksheet runner (sheet.js) is built alongside the first holiday lessons. Holiday program beta starts Tue 24 Nov 2026, so holiday online practice is released lesson by lesson in teaching order (week 1 lessons first), not all 60 at once.
