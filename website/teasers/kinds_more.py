@@ -312,7 +312,8 @@ def series_gap(values, ask):
         i = max(range(len(gaps)), key=lambda j: gaps[j])
     else:
         i = min(range(len(gaps)), key=lambda j: gaps[j])
-    return abs(gaps[i]), {'gaps': ', '.join(str(abs(g)) for g in gaps), 'from': values[i], 'to': values[i + 1], 'at': i + 1}
+    return abs(gaps[i]), {'gaps': ', '.join(str(abs(g)) for g in gaps), 'from': values[i], 'to': values[i + 1], 'at': i + 1,
+                          'sgaps': ', '.join(('+%d' % g) if g > 0 else ('\u2212%d' % -g) if g < 0 else '0' for g in gaps)}
 
 
 # ================================================================== Level 5 structures

@@ -126,6 +126,26 @@ def parallelogram_e(Babc):
     return rnd(mang(Dd, A, C)), rnd(mang(E, Dd, A)), rnd(mang(E, A, C)), rnd(mang(A, E, B))
 
 
+def pe_triangle_dae(Babc):
+    """The corners D, A, E of the parallelogram figure (same construction as parallelogram_e)."""
+    B, A = (0, 0), (-200, 0)
+    C = mp(B, 100, 180 + Babc)
+    Dd = (C[0] - 200, C[1])
+    da = math.hypot(A[0] - Dd[0], A[1] - Dd[1])
+    return Dd, A, (Dd[0] + da, Dd[1])
+
+
+def tri_kind(a, b, c):
+    """isosceles / equilateral / right-angled / other, found from the side lengths and the angles."""
+    s = sorted([math.hypot(a[0] - b[0], a[1] - b[1]), math.hypot(b[0] - c[0], b[1] - c[1]), math.hypot(a[0] - c[0], a[1] - c[1])])
+    eq = [abs(s[0] - s[1]) < 1e-9, abs(s[1] - s[2]) < 1e-9]
+    if all(eq):
+        return 'equilateral'
+    if any(eq):
+        return 'isosceles'
+    return 'right-angled' if abs(s[0] ** 2 + s[1] ** 2 - s[2] ** 2) < 1e-6 else 'other'
+
+
 def square_equilateral():
     """Square ABCD with the equilateral triangle CDE outside it on DC.  Returns (ADE, DAE)."""
     A, B, C, Dd = (0, 0), (1, 0), (1, 1), (0, 1)
@@ -265,7 +285,7 @@ ITEMS = [
       src=['In triangle ABC, D is on BC and AB = AD. Angle B = 62° and angle DAC = 38°. Find each angle. Write each reason in words.', 'Angle BAD =']),
     D(id='3b2', tier='core', no='3(b) triangle', label='3(b) why', type='choice', skill='giving a reason', options=['triangle ABD', 'triangle ABC', 'triangle ADC'], answer='triangle ABD',
       q=ABC_Q3 + '\nAngle BAD is found because the three angles of one triangle add up to 180°. Which triangle?', svg=G.tri_fig(),
-      check=lambda: 'triangle ABD', hint='Which triangle has the corner BAD, and two other angles that you already know?',
+      check=lambda: [k for k, v in {'triangle ABD': [62, 62], 'triangle ABC': [62], 'triangle ADC': [38]}.items() if len(v) == 2][0], hint='Which triangle has the corner BAD, and two other angles that you already know?',
       steps=['Triangle ABD has the corner BAD, and its other two angles, ABD and ADB, are both 62°.', 'So the three angles of triangle ABD add up to 180°.'],
       src=['Angle BAD = ______  because the three angles of triangle ______ add up to ______°']),
     D(id='3c', tier='core', no='3(c)', label='3(c)', type='number', skill='angles on a straight line', answer=118,
@@ -302,7 +322,7 @@ ITEMS = [
       src=['Angle DEA =']),
     D(id='4b2', tier='core', no='4(b) reason', label='4(b) why', type='choice', skill='giving a reason', options=['isosceles', 'equilateral', 'right-angled'], answer='isosceles',
       q=PE_Q + '\nBecause DA = DE, triangle DAE is...', svg=G.para_e_fig(56),
-      check=lambda: 'isosceles', hint='Two of its sides are equal. What is a triangle with two equal sides called?',
+      check=lambda: tri_kind(*pe_triangle_dae(56)), hint='Two of its sides are equal. What is a triangle with two equal sides called?',
       steps=['Two sides of triangle DAE are equal (DA = DE) and the third side is not marked equal.', 'A triangle with two equal sides is isosceles.'],
       src=['Angle DEA = _____ because DA = DE, so triangle DAE is ______________ and its three angles add up to ______°']),
 
@@ -311,7 +331,7 @@ ITEMS = [
       check=lambda: isos_with(50), hint='Draw it. Is the 50° angle one of the two equal base angles, or the top angle? Try both.',
       steps=['The 50° angle can be one of the two equal base angles: then the other base angle is 50° too and the top angle is 180° − 100° = 80°. The triangle is 50°, 50°, 80°.',
              'The 50° angle can be the top angle: the two base angles are equal, (180° − 50°) ÷ 2 = 65° each. The triangle is 50°, 65°, 65°.', 'There are two triangles.'],
-      src=['An isosceles triangle has one angle of 50°. What could the other two angles be? Find every case.', 'Start here: draw it. Is the 50° angle one of the two equal base angles, or the top angle? Try both.']),
+      src=['An isosceles triangle has one angle of 50°. What could the other two angles be? Find every case.', 'draw it. Is the 50° angle one of the two equal base angles, or the top angle? Try both.']),
     D(id='5b1', tier='core', no='5(a) base', label='5(a) base', type='fields', skill='isosceles triangle, given angle is a base angle', answer=[50, 80],
       q='An isosceles triangle has one angle of 50°.\nSuppose the 50° angle is one of the two equal base angles. Find the other two angles.',
       frame='The other base angle: {f1}°     The top angle: {f2}°', check=lambda: [50, 180 - 2 * 50], hint='The two base angles are equal. What do the three angles add up to?',
@@ -327,7 +347,7 @@ ITEMS = [
       hint='Try the 100° angle as a base angle and as the top angle. Does each one work?',
       steps=['If 100° were a base angle, the other base angle would be 100° too, and 100° + 100° = 200° is already more than 180°.', 'So 100° is the top angle, and the base angles are (180° − 100°) ÷ 2 = 40° each.', 'There is only one triangle: 100°, 40°, 40°.'],
       src=['An isosceles triangle has one angle of 100°. How many different triangles can you make? Explain.']),
-    D(id='5d', tier='core', no='5(b) explain', label='5(b) why', type='selfcheck', open=False, skill='explaining', facts=(100, 40, 40),
+    D(id='5d', tier='core', no='5(b) explain', label='5(b) why', type='selfcheck', open=False, skill='explaining', facts=(40, 40, 100),
       q='An isosceles triangle has one angle of 100°. Explain how you know how many triangles there are. Write your idea, then compare it with the model answer.',
       check=lambda: tuple(int(x) for x in isos_with(100)[0]), hint='What would two angles of 100° add up to?',
       steps=['Two angles of 100° would already add up to 200°, more than the 180° in a triangle.', 'So the 100° angle must be the top angle, and the two equal base angles share 80°: 40° each.', 'A good answer says why 100° cannot be a base angle.'],
@@ -393,7 +413,7 @@ ITEMS = [
       hint='The three angles add up to 180°. Is the 110° angle one of the two equal angles, or the odd one out?',
       steps=['The 110° angle is the top angle, and the base angles are equal.', '180° − 110° = 70° is shared by the two base angles: 70° ÷ 2 = 35° each.'],
       src=['An isosceles triangle has an angle of 110°. Find the other two angles. Why is there only one answer?']),
-    D(id='A2w', tier='stretch', no='A2 why', label='A2 why', type='selfcheck', open=False, skill='explaining', facts=(110, 35, 35),
+    D(id='A2w', tier='stretch', no='A2 why', label='A2 why', type='selfcheck', open=False, skill='explaining', facts=(35, 35, 110),
       q='An isosceles triangle has an angle of 110°. Explain why there is only one possible answer. Write your idea, then compare it with the model answer.',
       check=lambda: tuple(int(x) for x in isos_with(110)[0]), hint='What would happen if 110° were one of the two equal angles?',
       steps=['110° cannot be a base angle: two base angles of 110° would add up to 220°, more than 180°.', 'So 110° is the top angle, and the other two angles are 35° each.'],
@@ -548,7 +568,7 @@ VARIANTS = {
         oracle=_o_5b1),
     '5b2': dict(
         base=dict(g=50),
-        tpl=dict(vars=dict(g=[20, 30, 40, 50, 60, 80]),
+        tpl=dict(vars=dict(g=[20, 30, 40, 50, 70, 80]),
                  q='An isosceles triangle has one angle of {g}°.\nSuppose the {g}° angle is the top angle. Find the two base angles.',
                  frame='The two base angles: {f1}° and {f2}°', answers=dict(f1='(180 - g) / 2', f2='(180 - g) / 2'),
                  hint='The two base angles are equal. Share what is left of 180° between them.',

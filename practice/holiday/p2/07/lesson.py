@@ -43,8 +43,8 @@ PIZZA_SOL = frac_bars([('Ravi', 4, [0]), ('Siti', 8, [0, 1, 2])], 'Ravi’s bar 
 STRIPS = strips_fig()
 T2 = printed_fig('Two bars of the same length: 3 of 8 equal parts')
 T3 = frac_bar(8, [], caption='A bar cut into 8 equal parts')
-STRIP12 = printed_fig('A strip cut into 12 equal parts')
-STRIP10 = printed_fig('A strip cut into 10 equal parts')
+STRIP12 = frac_bar(12, [], 'Cake', 'A cake drawn as a strip cut into 12 equal pieces')
+STRIP10 = frac_bar(10, [], 'Cake', 'A cake drawn as a strip cut into 10 equal pieces')
 
 
 def shaded_of(fig):

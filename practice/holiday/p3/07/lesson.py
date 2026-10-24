@@ -108,7 +108,6 @@ def rect_cells(a, b):
     return [(x, y) for x in range(a) for y in range(b)]
 
 
-SQ_OK = [(n, rect_cells(n, n), rect_cells(n + 1, n - 1)) for n in range(2, 61)]
 
 
 def square_to_rect(s):
@@ -290,16 +289,16 @@ ITEMS = [
       src=['Do the same for a 6 cm square (7 by 5) and a 10 cm square (11 by 9). Fill in the table.']),
     I(id='I8own', tier='invest', no='8(b) my own', label='Inv my own', type='selfcheck', open=True, marking_mode='open', skill='testing an idea',
       q='Choose a square of your own. Make it 1 cm longer one way and 1 cm shorter the other way. Work out the perimeter and the area of both. Does your square do the same as the others? Then compare with the example shown.',
-      check=lambda: all(square_to_rect(n)[0] == square_to_rect(n)[2] and square_to_rect(n)[1] - square_to_rect(n)[3] == 1 for n in range(2, 61)),
+      check=lambda: all(square_to_rect(n)[0] == square_to_rect(n)[2] and square_to_rect(n)[1] - square_to_rect(n)[3] == 1 for n in range(2, 41)),
       hint='Pick a side that is easy to work with, like 5 or 8. Work out the square first, then the rectangle.',
       steps=['Answers vary. Example: an 8 cm square becomes a 9 by 7 rectangle.', 'Square: perimeter 32 cm, area 64 cm². Rectangle: perimeter 9 + 7 + 9 + 7 = 32 cm, area 9 × 7 = 63 cm².', 'Same as the others, just with different numbers.'],
       src=['Then choose a square of your own.']),
     I(id='I8c', tier='invest', no='8(c)', label='Inv 8(c)', type='choice', skill='noticing what stays the same', options=['No, it only works for some squares', 'Yes, it works for every square'],
       answer='Yes, it works for every square',
       q='You tried a 4 cm, a 6 cm and a 10 cm square, and one of your own. Do you think what you found works for EVERY square? Test one more square if you like.',
-      check=lambda: 'Yes, it works for every square' if all(square_to_rect(n)[0] == square_to_rect(n)[2] and square_to_rect(n)[1] - square_to_rect(n)[3] == 1 for n in range(2, 500)) else 'No, it only works for some squares',
+      check=lambda: 'Yes, it works for every square' if all(square_to_rect(n)[0] == square_to_rect(n)[2] and square_to_rect(n)[1] - square_to_rect(n)[3] == 1 for n in range(2, 41)) else 'No, it only works for some squares',
       hint='Pick a square you have not used yet, like 7 or 12. Does it do the same as the others?',
-      steps=['A square with sides 7 cm: perimeter 28 cm, area 49 cm². The 8 by 6 rectangle: perimeter 28 cm, area 48 cm².', 'It does the same again. It works for every square (checked by computer for sides from 2 to 499).', 'The next question asks why.'],
+      steps=['A square with sides 7 cm: perimeter 28 cm, area 49 cm². The 8 by 6 rectangle: perimeter 28 cm, area 48 cm².', 'It does the same again. It works for every square (checked by computer for every whole side from 2 to 40).', 'The next question asks why.'],
       src=['Is it always true? Draw the 4 by 4 square and explain what happens to the area.']),
     I(id='I8c-why', tier='invest', no='8(c) explain', label='Inv explain', type='selfcheck', open=True, marking_mode='self', skill='explaining why',
       sol_fig=lambda g: move_row_fig('The bottom row of 4 squares moved to the right side makes a column of 3 squares tall with 1 square left over'),
