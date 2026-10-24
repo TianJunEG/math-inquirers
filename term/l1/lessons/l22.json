@@ -2146,7 +2146,7 @@
      "m": 20,
      "hide_hands": true,
      "digital": "3:20",
-     "size": 80
+     "size": 95
     }
    },
    {
@@ -2638,7 +2638,7 @@
     "h": 10,
     "m": 15,
     "digital": "[]",
-    "size": 90
+    "size": 70
    }
   },
   {
@@ -2684,7 +2684,7 @@
     "m": 25,
     "hide_hands": true,
     "digital": "9:25",
-    "size": 92
+    "size": 100
    }
   }
  ],
