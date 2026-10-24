@@ -153,3 +153,43 @@ No stem, hint or example gives another card's answer (T1 draw card does not say 
 ## Open questions
 1. L7 I3 "4 squares: 5 shapes" is auto-marked 5 although the printed key accepts 3 or 4 as an extension. Say if it should be self-check.
 2. L8 Q2 has four typed-list cards instead of one writing task; say if you prefer a single self-check.
+
+---
+
+# Week 5 (lessons 9 and 10)
+
+Not deployed. No website, Supabase, server or shared-file change (`sheet.js`, `practice/submit/*`, `build_holiday.py`, `hlib.py`, `test_holiday.py` untouched). Build and test: `python3 practice/holiday/build_holiday.py p1 N` then `python3 practice/holiday/test_holiday.py p1 N` (N = 9, 10); both give RESULT: OK. Proof screenshots (390 px and 900 px, light and dark) in `practice/holiday/p1/0N/proof/` (lesson 10: `p1/10/proof/`). New figure helpers appended to `p1/p1lib.py` (ribbons of squares, desk spans, clip/eraser bars, pencil cubes, centimetre ruler with bars, bird and the pets-in-a-street picture graph, example table). No coin or note pictures.
+
+Week 5 = lessons 9 and 10 (`website/data/beta_schedule.json`, group L1A: lesson 9 Tue 22 Dec, lesson 10 Thu 24 Dec, the moved last session). Sources: `hp/workbook_html.js` (Start here Q1 to Q6 and Q1 to Q9), `hp/qbank.json` (Think harder = stretch[0:4], Go further = challenge[-3:]), `hp/gaps.json` (Investigation) and, for lesson 10, the printed Puzzle cards page (`hp/lessons.js` cards). Items extracted by hand with independent checkers; the build refuses to write unless every `src` string is in those sources. Printed answers agree with the Tutor Guide key.
+
+| | Lesson 9 Measure It! | Lesson 10 Puzzle Day |
+|---|---|---|
+| Items (cards) | 32 | 35 |
+| Auto-marked | 25 | 27 |
+| Self-check with a model answer (explain / notice / shortcut) | 3 | 4 |
+| Paper-only (kit or list task, example or correct answer shown) | 3 (guess and measure, own pencil, two units) | 1 (every set of 5 coins) |
+| Open (make up your own / no objective fact) | 1 (G3) | 3 (Q9, "liked best", G3) |
+| Unavailable online | 0 | 0 |
+| Variant families (every combination run) | 12 (286 combos) | 10 (581 combos) |
+
+Checkers: squares are counted from the drawn cells; units are laid end to end one at a time (12 cm with 2 cm and 3 cm units; half-cube units); ruler lengths are found by hopping mark to mark; the train, the three ribbon pieces and the stickers are solved by trying numbers; shape riddles by a sides/equal sides/square corners table; triangles from every triple of drawn points (3); orders by trying every order; coin sets by trying every subset (35¢ from 20, 10, 10, 5, 5 is unique; 45¢ with exactly 3 coins is unique, with exactly 4 coins is unique; 60¢ with 5 coins has exactly 2 sets); the stick numbers by adding 2s and 3s (7, 13, 19, 25, 31); "Is Ben always right" over 40 lengths and 55 pairs of units (exact counts).
+
+## Not mirrored from the print, and why
+- Name line, Tool card, "After question 3" banner, Look-back box: paper routine. Check-yourself questions of gaps.json are not in the print and not included.
+- L9 Q2 (guess and measure a pencil, book, shoe) and 6(c) (your own pencil) need real objects: paper-only cards with an example table or ruler shown after Submit. L9 Investigation 1 (measure with cubes and a paper clip) likewise.
+- L9 Investigation "Which unit is shorter? Which one gave the bigger number?" depends on the child's own measuring, so it is shown as a worked case (12 cm pencil, 2 cm units and 3 cm units: how many units each?). "Guess ... half as long as a cube" is asked for a pencil of 12 cubes (answer 24). Ben's claim is a Yes/No card; "what do you notice" is a self-check.
+- L9 Q5 figure: Ali's extra and Ben's missing cubes are one dashed labelled box each (the print draws every dashed cube), so counting the picture does not give 11 and 6.
+- L9 Think harder T1 and T2 get a ruler picture (the print has none); T2 is split into "which ribbon" and "how many cm longer". T3 is two cards (pen in clips, ruler in cubes). Go further 1 is two cards (3 and 5 carriages); Go further 3 is open.
+- L10 Q1 is two cards (next two numbers, rule as a choice, since typed rules are self-check by the earlier decision); Q2 is "smaller number / bigger number" boxes; Q3 and Q4 are split into their parts, with 4(b) asking the coin values; Q5(a) is a choice of four shapes; Q9 (make a puzzle) and "The puzzle I liked best today" are open cards.
+- L10 Puzzle cards: Coins, Patterns (number and "show how you know") and Logic are included (cards 1 to 3). The Measuring card (pencil 6 cubes, pen 4 longer, end to end) is the same question with the same numbers as Q8, so it is not repeated (its answer would be shown by Q8).
+- L10 Think harder T1 is two cards ("8th number" 46, "is 50 in the pattern" No); T3 (every set of 5 coins) is a paper-only list with the two correct sets shown, then a "how many" card that says "Do the list question first"; T4 is "which fruit wins" and "how many more votes than second place". Go further 1 is the list of stick numbers (auto) and "what do you notice" (self-check).
+- L10 Investigation (gaps): the total for jump 3 (24), the totals for jumps 1, 2, 4, 5 (four boxes), "what stays the same, what changes" and "a shortcut" (self-check). The tutor's extra (jump of 10) is not printed and is not included.
+- Variants only where a template with an oracle exists (ribbon differences, clips and erasers, ruler reading with its own ruler picture, units, train, ribbon pieces; L10 patterns, two numbers, think-a-number, pen and pencil, totals, working backwards, stickers).
+
+## Audited mistakes avoided from the start
+No stem, hint, example or solution figure gives another card's answer (Investigation 2 asks for the two counts, not "who gets the bigger number", so Ben's claim does not answer it; L10 T3 "how many" comes after the list card; the shortcut card's hint does not name the middle number; the 4(b) hint does not name a coin); hints nudge; positions kept (which coins, which child has which number of stickers, which place); explanations are self-check; nav labels are short and unique; no paper wording ("circle", "cross out") on screen; solution claims were computed (counts of sets and triangles, "always" claims checked over ranges); variants constrained so every question is possible (ruler marks stay on the ruler, stickers and ribbon pieces stay positive).
+
+## Open questions
+1. L9 Investigation 3 "Is Ben right?" is auto-marked Yes (exact counting, parts of a unit allowed); the printed model says "Yes, always". If you want it self-check, say so.
+2. L10 Measuring puzzle card is left out as a duplicate of Q8; say if you want it shown anyway.
+3. L9 Q2 and 6(c) use the paper-only note "check your drawing against the answer shown"; for measuring tasks the wording is slightly off (a runner message, not edited here).
