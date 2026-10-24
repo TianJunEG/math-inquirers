@@ -2442,7 +2442,7 @@
     {
       "id": "H2",
       "tier": "start",
-      "text": "A puzzle says: I am a number between 20 and 30. My ones digit is 3 more than my tens digit. What number am I? ___",
+      "text": "A puzzle says: My number is between 20 and 30. My ones digit is 3 more than my tens digit. What is my number? ___",
       "answer": "25",
       "val": 25,
       "solution": "Between 20 and 30 means the tens digit is 2. The ones digit is 2 and 3 more, which is 5. I am 25. Check: 25 is between 20 and 30."
@@ -2740,25 +2740,25 @@
         "id": "t2",
         "tier": "stretch",
         "type": "choice",
-        "q": "A child writes: Two numbers add up to 10. One is 4 more than the other. The numbers are 6 and 4. What is wrong?",
+        "q": "A child writes: A pattern starts at 4 and goes up by 4. The numbers are 4, 7, 10 and 13. What is wrong?",
         "hint": "Check each clue.",
         "steps": [
-          "6 and 4 add up to 10. That clue fits.",
-          "6 is 2 more than 4, not 4 more.",
+          "The pattern starts at 4. That clue fits.",
+          "4 to 7 is 3, and 7 to 10 is 3. The numbers go up by 3, not 4.",
           "The second clue does not fit."
         ],
-        "answer": "6 is not 4 more than 4",
+        "answer": "The numbers go up by 3, not 4",
         "slips": [
           {
             "a": [
-              "6 and 4 do not add up to 10"
+              "The pattern does not start at 4"
             ],
-            "say": "6 and 4 do make 10. Check the other clue."
+            "say": "The first number is 4. Check the other clue."
           }
         ],
         "options": [
-          "6 and 4 do not add up to 10",
-          "6 is not 4 more than 4",
+          "The pattern does not start at 4",
+          "The numbers go up by 3, not 4",
           "Nothing is wrong"
         ],
         "easier": "c4"
