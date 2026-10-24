@@ -93,7 +93,7 @@ DEFS = [
       'Each of {n} teams plays 5 games, which makes 30. Each game was counted twice, so 30 ÷ 2 = {ans}.',
       p=dict(n=6), unit='games'),
     P('lunchqueue', 'queue', 'Counting a queue',
-      'Jun Hao is {front:o} from the front of the lunch queue and {back:o} from the back. How many children are in the queue?',
+      'Jun Hao is {front:o} from the front of the lunch queue. He is also {back:o} from the back. How many children are there in the queue altogether?',
       'Jun Hao is counted twice if you add the two numbers.',
       '{front} + {back} = 14, but Jun Hao was counted twice. 14 − 1 = {ans}.',
       p=dict(front=5, back=9), unit='children'),

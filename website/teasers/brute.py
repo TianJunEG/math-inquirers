@@ -809,7 +809,7 @@ def _poly(name):
     if name == 'isosceles triangle':
         return [(-1, 0), (1, 0), (0, 3)]
     if name == 'kite':
-        return [(0, 3), (1, 1), (0, -1), (-1, 1)]
+        return [(0, 4), (1.5, 1), (0, -1), (-1.5, 1)]
     raise ValueError(name)
 
 

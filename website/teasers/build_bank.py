@@ -62,6 +62,8 @@ def finish(d, ans):
         out['exact'] = True
     else:
         raise ValueError(fmt)
+    if canon.startswith('-'):
+        shown = shown.replace('-', '\u2212')
     out['canon'] = canon
     out['num'] = shown
     if unit:

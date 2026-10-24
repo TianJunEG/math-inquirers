@@ -305,6 +305,16 @@ begin
   if not found or o.amount_cents <> p_amount_cents or upper(p_currency) <> 'SGD' then raise exception 'amount_mismatch'; end if;   -- same check as service_mark_paid for enrolments
   perform public._order_paid(p_order, 'stripe', p_session_id);
 end $$;
+create or replace function public.service_ext_order_for_checkout(p_order uuid, p_parent uuid)
+returns table (order_id uuid, reference text, status text, amount_cents int, currency text, product_id text, child_label text, parent_email text)
+language sql stable security definer set search_path = public as $$
+  select o.id, o.reference, o.status, o.amount_cents, o.currency, o.product_id, o.child_label, p.email
+    from public.ext_orders o join public.parents p on p.id = o.parent_id where o.id = p_order and o.parent_id = p_parent;
+$$;
+create or replace function public.service_ext_order_attach_session(p_order uuid, p_session_id text) returns void
+language sql security definer set search_path = public as $$
+  update public.ext_orders set provider_ref = p_session_id, method = 'stripe' where id = p_order and status = 'pending_payment' and provider_ref is null;
+$$;
 -- Refund: revoke the access. The child's past answers stay until the retention rule removes them.
 create or replace function public._order_refunded(p_order uuid) returns void
 language plpgsql security definer set search_path = public as $$
@@ -638,7 +648,7 @@ revoke all on function public.child_start_session(text, text, text), public.chil
   public.admin_purge_expired_practice(), public.admin_purge_practice_for_group(text, timestamptz), public.record_consents(jsonb, text, text),
   public._can_access(uuid, text, text), public._practice_consents_ok(uuid), public.create_ext_order(uuid, int, text, text, text, text, text), public._order_paid(uuid, text, text),
   public.admin_mark_ext_order_paid(uuid), public.service_ext_order_paid(uuid, text, int, text), public._order_refunded(uuid), public.admin_refund_ext_order(uuid),
-  public.service_ext_order_refunded(uuid), public.admin_grant_book_access(uuid, int, text, text), public.admin_revoke_book_access(uuid), public.admin_list_ext_orders(),
+  public.service_ext_order_refunded(uuid), public.service_ext_order_for_checkout(uuid, uuid), public.service_ext_order_attach_session(uuid, text), public.admin_grant_book_access(uuid, int, text, text), public.admin_revoke_book_access(uuid), public.admin_list_ext_orders(),
   public.admin_set_ship_status(uuid, text), public.admin_clear_delivered_addresses(), public.request_trial(uuid, int, text[], text, text), public.withdraw_trial_request(uuid),
   public.admin_list_trial_requests(), public.admin_set_trial_status(uuid, text), public.admin_funnel_counts(), public.admin_practice_overview(text)
   from public, anon, authenticated;
@@ -646,7 +656,7 @@ grant execute on function public.create_ext_order(uuid, int, text, text, text, t
 grant execute on function public.admin_mark_ext_order_paid(uuid), public.admin_refund_ext_order(uuid), public.admin_grant_book_access(uuid, int, text, text), public.admin_revoke_book_access(uuid),
   public.admin_list_ext_orders(), public.admin_set_ship_status(uuid, text), public.admin_clear_delivered_addresses(), public.admin_list_trial_requests(), public.admin_set_trial_status(uuid, text),
   public.admin_funnel_counts(), public.admin_practice_overview(text) to authenticated;   -- is_admin() inside
-grant execute on function public.service_ext_order_paid(uuid, text, int, text), public.service_ext_order_refunded(uuid) to service_role;   -- called by the Stripe webhook
+grant execute on function public.service_ext_order_paid(uuid, text, int, text), public.service_ext_order_refunded(uuid), public.service_ext_order_for_checkout(uuid, uuid), public.service_ext_order_attach_session(uuid, text) to service_role;   -- called by the Stripe webhook
 grant execute on function public.record_consents(jsonb, text, text) to authenticated;
 grant execute on function public.child_start_session(text, text, text) to anon, authenticated;
 grant execute on function public.child_end_session(text) to anon, authenticated;

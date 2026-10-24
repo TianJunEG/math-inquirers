@@ -2,6 +2,7 @@
   "note": "Months listed here are released: built, independently audited, and included in the site build. Keys are calendar months (MM, Asia/Singapore); the year recycles. First release year in 'first_year'.",
   "first_year": 2026,
   "released": [
-    "11"
+    "11",
+    "12"
   ]
 }
