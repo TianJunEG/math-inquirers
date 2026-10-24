@@ -169,3 +169,58 @@ No card gives another card's answer in its stem, hint or example (the Think hard
 
 ## Week 3 L1-3 audit follow-up (item level)
 M1 answer leaks reworded, M2 explicit short nav labels, remainder-0 variants excluded (P3 L5 3(b)), long stems shortened, doubled "Make up your own"/"Take-home" lead-ins removed. Print-inherent chains kept as printed (P1 L5 Go further 1(a)/(b), 3(c); P1 L6 Q4/Q5, T3/Q6; P3 L6 5(b), T3). P1 L6 Q5/Q6 keep cents only (printed answers are in cents).
+
+
+# Week 4 (lessons 7 and 8), built 24 Oct 2026
+
+Lesson 7 Fair Shares (Tue 15 Dec) and lesson 8 Shape Builders (Fri 18 Dec), `website/data/beta_schedule.json` (Level 2 groups: lesson 7 = Tue 15 Dec, lesson 8 = Fri 18 Dec; week 4 = lessons 7 and 8 confirmed). Not deployed, nothing sent, no website/dist or Supabase change. The shared files are untouched; this level's new helpers are in `p2/p2lib_w4.py` (fraction bars, circle and grid, the six shapes, strips, robot, net places figure and every independent checker).
+
+    python3 practice/holiday/build_holiday.py p2 7      # -> practice/holiday/p2/07/dist/   (git-ignored)
+    python3 practice/holiday/build_holiday.py p2 8
+    python3 practice/holiday/test_holiday.py p2 7       # browser test + screenshots into p2/07/proof/
+    python3 practice/holiday/test_holiday.py p2 8
+
+Sources: `p2/content/l7.js`, `l8.js` (`workbook()` = Start here; `qbank.stretch` first four = Think harder 1 to 4; `qbank.challenge` last three = Go further 5 to 7, exactly as `p2/workbook_html.js` prints them), `p2/gaps.json` (Investigation), `p2/workbook_html.js` (the "Make up your own" line). Independent checkers: the parts of each of the six shapes are measured by sampling points (a shape is "quarters" only if its 4 parts have the same area); shaded and equal parts are counted from the drawing; fractions use exact fractions and are written over the printed bottom number (9/12 is not reduced); the robot's pieces are counted from the drawing (3 points, rectangle, chord of the arc); squares and rectangles by trying every size and corner; the triangles of the figure from its marked points and drawn lines; cubes one at a time; nets by rolling a cube over them; painted cubes by looking at every small cube; the shapes of squares by growing them one square at a time.
+
+## Items
+
+| | Lesson 7 | Lesson 8 |
+|---|---|---|
+| Items | 40 | 29 |
+| Start here | 21 | 14 |
+| Investigation | 5 | 5 |
+| Think harder | 8 | 6 |
+| Go further (and Make up your own) | 6 | 4 |
+| Auto-marked (number, fields, set, choice, text) | 32 | 22 |
+| Self-check, typed explanation (never auto-marked) | 7 | 5 |
+| Open (make-up-your-own) | 1 | 1 |
+| Paper-only self-check (drawing, with a figure of the correct drawing) | 0 | 2 (Inv 2 and Inv 4: the shapes of 3 and of 4 squares) |
+| Unavailable online | 0 | 0 |
+| Variant families (every combination run against an independent oracle) | 5 (2a, 4a, 4e, 5a, G5: 167 combinations) | 5 (1c, 2a altogether, 3b, T1, G7 4 by 4: 51 combinations) |
+
+Every item has a hint, worked steps and a skill tag. Browser test: both lessons RESULT OK (every answer typed correctly, wrong and skipped answers, reload, variants, 390/360/900 px light and dark, no horizontal scroll, figure text at least 11 px).
+
+## Not mirrored exactly, and why
+
+- Fractions are typed in two boxes (top number, bottom number) so the bottom number is checked (3/10 for 2/5 + 1/5 is wrong); equal fractions are not accepted there (equivalent fractions are a P3 topic).
+- L7 Q1 "circle the quarters" is typed letters (A, C, E, F, any order). Q1(a) "choose one shape that is not quarters, explain" is a self-check. Q2 (three pictures) is one card each with four boxes (shaded and not shaded). The bars printed as "colour the bars to help you" are drawn uncoloured; the child may draw on paper.
+- L7 Q3(c), Think harder 2, 3, 4: each "is she right / can he be right" is a Yes/No card plus a separate explain card whose stem is neutral ("Explain what you think about her idea"). Think harder 3's "what is the right answer" is its own card; its picture is a plain bar (the printed picture shows 5/8 shaded).
+- L7 Q5(c) "who eats more, how much more" is two cards; Q6 is a choice plus an explain card (the printed "colour the bars" is shown as the correct bars after submit).
+- L7 Investigation: the physical fraction strips are drawn as one picture; (a) and (b) are boxes "how many pieces of each kind, type 0 if that kind cannot do it" (so no card says which kinds work), (c) Yes/No plus explain.
+- L7 Go further 6 (find ALL the ways to share 10 pieces among 3 children with different numbers): three ordered lists of four numbers (smallest, middle and biggest number of each way, ways in a stated order), so the pairing is kept and the number of ways is not told. Go further 7 (unit fractions between 1/7 and 1/4) is the list of bottom numbers.
+- L8 Q1 robot: the printed table is four boxes in a sentence; (a) "which most" is a choice; (c) is a number (3) plus a "show how" self-check. Q2 and Q3: the printed table is one card of four boxes, then the "altogether" in its own card. Q2(b) triangles: bottom line and across line, then altogether.
+- L8 Q4(a) letters typed. Q4(b) "add ONE square, draw it on the grid": the screen cannot draw on the grid, so the 10 empty squares next to the shape are numbered and the child types the numbers of all the places that work (4 places; the printed key says "under any one of the 4 squares of the row", which agrees). 
+- L8 Investigation: counts (2 and 5) are number cards, the drawing of all the shapes is a paper-only self-check with the correct drawing shown after submit, (c) "how do you know" is a self-check. The printed nets, stacks, layers and the grid and triangle of Q2 are the workbook's own figures; Think harder 2 and Go further 6 show a plain grid (the printed page has none: the child draws one).
+- Think harder 3 and 4 (nets): "cut out nets E and F and fold" becomes "if you have the cut-out nets, fold them; if not, picture rolling a cube over the net".
+- Printed "take-home" star marks are not shown; the strategy card, "Tool of the day", "Looking back" and the name/date line are print-only.
+- No coin or note pictures; every figure is drawn.
+
+## Week 1 to 3 audit points applied from the start
+
+No card gives another card's answer in its question or hint (the explain cards are neutral; Think harder 3 uses an unshaded bar; the Investigation boxes allow 0; the Go further 6 cards do not say how many ways); hints nudge and none states the answer or a one-case rule; no example equals an answer; the printed pairing and position are kept (top and bottom number, sizes in table order, bottom line and line across, smallest/middle/biggest of the same way); explicit unique labels of at most 12 characters; typed explanations are self-check, make-up is open; every variant has its own picture or the text is complete.
+
+## Open questions for the owner
+
+1. L8 Q4(b) became "type the numbers of the squares that work" (auto-marked) because the page cannot draw on a grid. Fine, or should it be a paper-only self-check?
+2. L8 Q1(c) and L7 Q1(a) (the printed take-home explanations) are self-checks: worked example shown after submit.
+3. L7 and L8 qbank items not printed in the workbook (Think harder 5 to 8 and Go further 1 to 6 of the bank) are not online, as in weeks 1 to 3.
