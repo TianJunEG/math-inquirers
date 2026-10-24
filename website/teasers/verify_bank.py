@@ -1144,6 +1144,208 @@ def selftest():
     sys.exit(1 if bad else 0)
 
 
+# ------------------------------------------------------------------ round 5 (audit C2): one-sentence questions, numbers with units, the answer counted
+# Rules S, G and N2 use DOMAIN-AWARE content words (probability, angle, dice, fraction ... are kept; they are dropped from the story words of rules A..C),
+# so a short question such as "At 5 o'clock, what is the smaller angle between a clock's hour hand and its minute hand?" can still be matched to a
+# source sentence.  Replayed in --selftest with the round-3 and round-5 wordings of L6-dice8, L4-clockfive, L5-tank and L4-chairs24.
+GLUE = set('find write give answer numbers number many much work out calculate show tell one two three four five six seven eight nine ten eleven twelve'.split())
+CW_CAP = 6000            # a word found in more source sentences than this does not retrieve candidates (it still counts in the overlap)
+_CW_MEMO = {}
+
+
+def cwords(text):
+    """Domain-aware content words of a text: stems of the words that are not function words, glue words ('find', 'write' ...) or names."""
+    t = text.replace('’', "'").lower()
+    out = set()
+    for w in re.findall(r"[a-z]+(?:'[a-z]+)?", t):
+        r = _CW_MEMO.get(w)
+        if r is None:
+            w2 = re.sub(r"'s$", '', w)
+            sw = stem(w2)
+            r = sw if (len(sw) > 2 and w2 not in FUNC and sw not in FUNC and w2 not in NAMES and w2 not in GLUE) else ''
+            _CW_MEMO[w] = r
+        if r:
+            out.add(r)
+    return out
+
+
+class CWIdx:
+    """Sentence index with domain-aware content words: per-sentence word sets and inverted lists for the words that are not too common."""
+
+    def __init__(self, ix):
+        self.ix = ix
+        self.words = [None] * len(ix.txt)
+        df = {}
+        for i, t in enumerate(ix.txt):
+            ws = frozenset(cwords(t))
+            self.words[i] = ws
+            for w in ws:
+                df[w] = df.get(w, 0) + 1
+        self.df = df
+        inv = {}
+        for i, ws in enumerate(self.words):
+            for w in ws:
+                if df[w] <= CW_CAP:
+                    inv.setdefault(w, array('I')).append(i)
+        self.inv = inv
+
+
+_CWIDX = {}
+
+
+def cw_index(ix):
+    k = id(ix)
+    if k not in _CWIDX:
+        _CWIDX[k] = CWIdx(ix)
+    return _CWIDX[k]
+
+
+def wtoks2(text):
+    return re.findall(r"[a-z]+(?:'[a-z]+)?|#", re.sub(r'\d[\d,]*\.?\d*', '#', text.lower().replace('\u2019', "'")))
+
+
+def split_sentences(q):
+    return [s for s in re.split(r'(?<=[.?!])"?\s+', q.strip()) if s.strip()]
+
+
+def num_unit_grams(sentence):
+    """Word three-grams of one sentence that contain a number (kept as written): '30 cm by', 'cm by 25', '2 m 45', 'm 45 cm'."""
+    t = re.findall(r"\d[\d,]*\.?\d*|[a-z°²³%$]+(?:'[a-z]+)?", sentence.lower().replace('’', "'"))
+    t = [x.replace(',', '') if x[0].isdigit() else x for x in t]
+    out = set()
+    for i in range(len(t) - 2):
+        g = t[i:i + 3]
+        if any(x[0].isdigit() for x in g) and any((not x[0].isdigit()) and x not in FUNC for x in g):
+            out.add(' '.join(g))
+    return out
+
+
+def extra_hits(q, ans, sol, cw):
+    """Rules S, G and N2 of AUDIT_ROUND5 (C2).  Returns [(severity, detail)].
+      S  : a question sentence with >= 4 content words whose Jaccard similarity with ONE source sentence is >= 0.6 (>= 4 shared words) is a FAIL, unless
+           that sentence is a stock phrase; and the whole question against a window of up to three source sentences: >= 70% of its content words
+           (>= 5 shared) and every one of its numbers other than 0, 1, 2, 10, 100, 1000 in the window is a FAIL (one-sentence questions have too few
+           story words for rules A to C);
+      G  : three-word grams that contain a number ('30 cm by 25 cm', '2 m 45 cm') shared with a window: >= 3 is a REVIEW, >= 5 a FAIL;
+      N2 : the answer and at least two other numbers of the question (the conversion numbers 10, 100, 1000 are not counted) in a window of up to three
+           sentences (at most 400 characters) that shares >= 3 content words with the question is a FAIL."""
+    ix = cw.ix
+    S = cwords(q)
+    qs = [(s, cwords(s)) for s in split_sentences(q)]
+    mine = {n for n in numbers_in(q) if n not in TRIVIAL_NUMS and n not in ('0', '1', '2')}
+    ans_n = norm_num(str(ans)) if ans is not None and re.fullmatch(r'\d[\d,]*\.?\d*', str(ans)) and norm_num(str(ans)) not in TRIVIAL_NUMS and norm_num(str(ans)) not in ('0', '1', '2') else None
+    pool = mine | ({ans_n} if ans_n else set())
+    grams = {}
+    for s, _ in qs:
+        for g in num_unit_grams(s):
+            grams[g] = 1
+    score = {}
+    for w in S:
+        lst = cw.inv.get(w)
+        if lst is None:
+            continue
+        wt = 1.0 + 8.0 / (1.0 + cw.df.get(w, 1) / 40.0)
+        for i in lst:
+            score[i] = score.get(i, 0) + wt
+    # candidate windows start at the best scoring sentences (and the two before them)
+    wscore = {}
+    for i, c in score.items():
+        for st in (i - 2, i - 1, i):
+            wscore[st] = wscore.get(st, 0) + c
+    starts = [i for i, c in sorted(wscore.items(), key=lambda kv: (-kv[1], kv[0]))[:400] if c >= 1.2]
+    # windows that hold the numbers of the question and the answer
+    ncount = {}
+    for n in sorted(pool):
+        for i in ix.ninv.get(n, ()):
+            for st in (i - 2, i - 1, i):
+                ncount.setdefault(st, set()).add(n)
+    have = set(starts)
+    starts += [i for i, c in sorted(ncount.items()) if len(c) >= 3 and i not in have][:400]
+    # windows that hold number-unit grams of the question (G): sentences that contain one of its numbers
+    if grams:
+        gnums = {n for n in numbers_in(q) if n not in TRIVIAL_NUMS and n not in ('0', '1', '2')}
+        hits = set()
+        for n in sorted(gnums):
+            for i in ix.ninv.get(n, ()):
+                if i not in hits and any(g in grams for g in num_unit_grams(ix.txt[i])):
+                    hits.add(i)
+        have = set(starts)
+        for i in sorted(hits):
+            for st in (i - 1, i):
+                if st not in have:
+                    starts.append(st)
+                    have.add(st)
+    review = None
+    seen = set()
+    for st in starts:
+        for ln in (1, 2, 3):
+            a, b = st, st + ln - 1
+            if (a, b) in seen or a < 0 or not ix.span_ok(a, b):
+                continue
+            seen.add((a, b))
+            ws = set()
+            nums = set()
+            for i in range(a, b + 1):
+                ws |= cw.words[i]
+                nums |= ix.nums[i]
+            txt = ' '.join(ix.txt[a:b + 1])
+            shared = S & ws
+            why = None
+            # S, one sentence against one sentence
+            if ln == 1:
+                for s, sw in qs:
+                    if len(sw) >= 4:
+                        sh = sw & cw.words[a]
+                        union = len(sw | cw.words[a])
+                        if len(sh) >= 4 and len(sh) / union >= 0.6 and len(cw.words[a]) >= 4:
+                            why = 'rule S (one sentence, Jaccard %.2f, %d shared content words): "%s" is like "%s"' % (len(sh) / union, len(sh), s[:80], ix.txt[a][:90])
+                            break
+            # S3, the same long sentence with other numbers: every word of the shorter sentence is in the longer one
+            if not why and ln == 1:
+                tb = set(wtoks2(ix.txt[a]))
+                for s, sw in qs:
+                    ta = set(wtoks2(s))
+                    short, long_ = (ta, tb) if len(ta) <= len(tb) else (tb, ta)
+                    if len(short) >= 7 and len(short & long_) >= 7 and len(short & long_) / len(short) >= 0.85 and len(sw & cw.words[a]) >= 3:
+                        why = 'rule S3 (the same sentence with other numbers, %d words): "%s" is like "%s"' % (len(short), s[:80], ix.txt[a][:90])
+                        break
+            # S, whole question against a window
+            if not why and len(S) >= 5 and len(shared) >= 5 and len(shared) / len(S) >= 0.7 and (not mine or mine <= nums):
+                why = 'rule S (window): %d of %d content words (%s) and all the numbers in "%s ..."' % (len(shared), len(S), ','.join(sorted(shared)), txt[:90])
+            # N2: the answer and two more numbers
+            if not why and ans_n and ans_n in nums and len(mine & nums) >= 2 and len(txt) <= 400 and len(shared) >= 3 and len(nums) <= 14:
+                why = 'rule N2 (the answer %s and the numbers %s in one source window with %d shared content words): "%s ..."' % (ans_n, sorted(mine & nums, key=float), len(shared), txt[:90])
+            # G
+            if not why and grams:
+                got = set()
+                for i in range(a, b + 1):
+                    got |= {g for g in num_unit_grams(ix.txt[i]) if g in grams}
+                if len(got) >= 5:
+                    why = 'rule G (numbers with units): %d shared grams, e.g. "%s" in "%s ..."' % (len(got), sorted(got)[0], txt[:90])
+                elif len(got) >= 3 and review is None and len(shared) >= 1:
+                    review = ('REVIEW', 'rule G: %d shared number-unit grams (%s) in "%s ..." (%s)' % (len(got), ' / '.join(sorted(got)[:3]), txt[:80], ix.rels[ix.file[a]]))
+            if why:
+                if STOCK_SENT and (why.startswith('rule S (one sentence') or why.startswith('rule S3')):
+                    qsent = [s for s, _ in qs if s[:80] in why][0] if any(s[:80] in why for s, _ in qs) else ''
+                    if qsent and re.sub(r'\d+', '#', qsent.lower().rstrip('.?!')) in STOCK_SENT:
+                        continue
+                return [('FAIL', '%s (%s)' % (why, ix.rels[ix.file[a]]))]
+    return [review] if review else []
+
+
+STOCK_SENT = set()      # whole sentences of stock_phrases.txt (numbers masked) that may repeat
+
+
+def load_stock_sentences():
+    p = os.path.join(HERE, 'stock_phrases.txt')
+    STOCK_SENT.clear()
+    if os.path.exists(p):
+        for line in open(p, encoding='utf-8'):
+            line = line.strip().lower()
+            if line and not line.startswith('#'):
+                STOCK_SENT.add(re.sub(r'\d+', '#', line.rstrip('.?!')))
+
+
 def main():
     if '--update-lock' in sys.argv:
         update_lock()
@@ -1219,6 +1421,8 @@ def main():
     ans_lines, ans_warn = answer_feasibility(all_by_level)
     struct_lines += ans_lines
     sidx = story_index()
+    cwidx = cw_index(sidx)
+    load_stock_sentences()
     fixed_mini = {k: mini_index('fixed puzzle ' + k, text, sidx) for k, text in fixed.items()}
     print('story index: %d source sentences in %d files' % (len(sidx.txt), len(sidx.rels)))
 
@@ -1353,6 +1557,11 @@ def main():
                         reviews.append('%s: %s' % (tag, detail))
                 for sev, detail in list_hits(e['q'], sidx, ans=e['ans'] if e['type'] == 'n' else None) + frame_hits(e['q'], TAX.T.get('retired_frames', [])):
                     fails.append('%s: %s' % (tag, detail))
+                for sev, detail in extra_hits(e['q'], e['ans'] if e['type'] == 'n' else None, e['hint'] + ' ' + e['why'], cwidx):
+                    if sev == 'FAIL':
+                        fails.append('%s: %s' % (tag, detail))
+                    else:
+                        reviews.append('%s: %s' % (tag, detail))
                 for k, mini in fixed_mini.items():
                     for sev, detail in story_hits(e['q'], mini):
                         if sev == 'FAIL':

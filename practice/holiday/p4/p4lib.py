@@ -1450,7 +1450,7 @@ def line_graph(xl, series, y0, y1, step, lab, title='', ytitle='', legend=False,
     """An accurate line graph. xl: the labels along the bottom (one point per label, on the vertical grid lines). series: list of dict(v=[...], c=colour, mark='circle'|'sq', dash=bool, name=str).
     The side runs from y0 to y1, a grid line every `step`, a number every `lab`. Nothing is written beside the points (the child reads the scale)."""
     L, R = 58, w - 14
-    top = (30 if title else 10) + (26 if legend else 0)
+    top = (30 if title else 10) + (26 if legend else 0) + (20 if ytitle else 0)
     B = h - 34
     n = len(xl)
     xs = lambda i: L + 24 + i * (R - L - 48) / (n - 1)
@@ -1469,7 +1469,7 @@ def line_graph(xl, series, y0, y1, step, lab, title='', ytitle='', legend=False,
         b += Ln(xs(i), top, xs(i), B, 1, '#D2D9E8') + T(xs(i), B + 20, x, 14)
     b += Ln(L, top - 3, L, B, 2.6) + Ln(L, B, R, B, 2.6)
     if ytitle:
-        b += f'<text x="14" y="{(top + B) / 2:g}" font-size="14" font-weight="700" text-anchor="middle" fill="{NAVY}" transform="rotate(-90 14 {(top + B) / 2:g})">{esc(ytitle)}</text>'
+        b += T(4, top - 9, ytitle, 14, 'start')
     for k, se in enumerate(series):
         c = se.get('c', NAVY)
         pts = ' '.join(f'{xs(i):.1f},{ys(vv):.1f}' for i, vv in enumerate(se['v']))

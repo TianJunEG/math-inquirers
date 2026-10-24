@@ -68,19 +68,16 @@ def drawn_chairs(counts_fig):
     return len(re.findall(r'<circle', counts_fig))
 
 
-def rows_fig(rows, per_row):
-    """A2 solution picture: `rows` rows of `per_row` tables (one chair on each free side), drawn small, with the number of people each row seats."""
-    body, x, y = '', 4, 6
-    gw = per_row * TB + 4 * CR + 6
-    per_line = max(1, int(290 // (gw + 10)))
-    for r in range(rows):
-        g, w = tables_group(per_row, x, y + CR + 3)
+def rows_fig(rows, per_row, show=3):
+    """A2 solution picture: separate rows of `per_row` tables (a chair on every free side); the first `show` rows are drawn, the rest are written as a note."""
+    body, y = '', 6
+    for r in range(min(rows, show)):
+        g, w = tables_group(per_row, 8, y + CR + 3)
         body += g
-        x += w + 10
-        if (r + 1) % per_line == 0:
-            x, y = 4, y + TB + 2 * CR + 12
-    lines = math.ceil(rows / per_line)
-    return svg(300, 6 + lines * (TB + 2 * CR + 12), body, f'{rows} separate rows of {per_row} square tables, each row with a chair on every free side.')
+        y += TB + 2 * CR + 12
+    note = f'{rows} rows of {per_row} tables' + (f' (3 drawn)' if rows > show else '')
+    body += T(150, y + 12, note, 17, 'middle', 700, GREY)
+    return svg(300, y + 26, body, f'{rows} separate rows of {per_row} square tables, each row with a chair on every free side.')
 
 
 # ================================================================= lesson 9: matchstick houses
@@ -122,12 +119,12 @@ def houses_fig(counts=(1, 2, 3), hl=None):
                 elif min(x1, x2) >= (n - 1) * HU - 0.01:
                     col = TEAL
             body += stick_svg(s[0], s[1], x, oy, col, dash)
-        body += T(x + n * HU / 2, oy + 26, f'{n} house{"s" if n > 1 else ""}', 15)
+        body += T(x + n * HU / 2, oy + 26, f'{n} house{"s" if n > 1 else ""}', 17)
         x += n * HU + 26
     w = x - 12
     if hl:
-        body += T(w / 2, oy + 48, 'teal = the sticks the new house adds, dashed = the wall it shares', 12.5, 'middle', 700, GREY)
-    return svg(w, oy + (56 if hl else 34), body, 'Matchstick houses joined in a row: ' + ', '.join(f'{n} house{"s" if n > 1 else ""}' for n in counts) + '. Each house is a square with a triangle roof.')
+        body += T(w / 2, oy + 50, 'teal = the sticks the new house adds', 16, 'middle', 700, GREY) + T(w / 2, oy + 72, 'dashed = the wall it shares', 16, 'middle', 700, GREY)
+    return svg(w, oy + (80 if hl else 34), body, 'Matchstick houses joined in a row: ' + ', '.join(f'{n} house{"s" if n > 1 else ""}' for n in counts) + '. Each house is a square with a triangle roof.')
 
 
 def drawn_sticks(fig):

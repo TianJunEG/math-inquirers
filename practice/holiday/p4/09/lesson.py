@@ -88,7 +88,7 @@ def pages_seq(d2, d5):
 
 
 def shop_graph(vals, y0, y1, step, title):
-    return line_graph(['Jan', 'Feb', 'Mar', 'Apr'], [dict(v=vals)], y0, y1, step, step if (y1 - y0) / step <= 6 else step, title, 'Number sold', h=214,
+    return line_graph(['Jan', 'Feb', 'Mar', 'Apr'], [dict(v=vals)], y0, y1, step, step, title, 'Number sold', h=214,
                       label=f'{title}. The side goes from {y0} to {y1} with a line every {step}.')
 
 
@@ -102,35 +102,29 @@ SHOP_B = ([44, 48, 52, 56], 40, 4)
 
 
 # ---------------------------------------------------------------- honest and misleading scales
-def share_of(first, last, scale):
-    return rise_share(first, last, scale[1], scale[2])
-
-
-MAY_JUNE = [('A', 'starts at 45, each line is worth 5', 45, 105, 5), ('B', 'starts at 0, each line is worth 10', 0, 100, 10), ('C', 'starts at 0, each line is worth 100', 0, 1000, 100)]
-MJ_OPTS = {k: f'{k}: it {d}' for k, d, *_ in MAY_JUNE}
+MAY_JUNE = [('A', 'starts at 40, each line is worth 10', 40, 110, 10, 20), ('B', 'starts at 0, each line is worth 10', 0, 100, 10, 20), ('C', 'starts at 0, each line is worth 100', 0, 1000, 100, 200)]
+MJ_OPTS = {x[0]: f'{x[0]}: it {x[1]}' for x in MAY_JUNE}
 FOUR = [52, 54, 56, 58]
-FOUR_SC = [('A', 'starts at 50, each line is worth 1', 50, 60, 1), ('B', 'starts at 0, each line is worth 10', 0, 60, 10), ('C', 'starts at 0, each line is worth 100', 0, 600, 100)]
-F_OPTS = {k: f'{k}: it {d}' for k, d, *_ in FOUR_SC}
+FOUR_SC = [('A', 'starts at 50, each line is worth 1', 50, 60, 1, 5), ('B', 'starts at 0, each line is worth 10', 0, 60, 10, 20), ('C', 'starts at 0, each line is worth 100', 0, 600, 100, 200)]
+F_OPTS = {x[0]: f'{x[0]}: it {x[1]}' for x in FOUR_SC}
 
 
 def pick(scales, vals, biggest):
-    sh = {k: share_of(vals[0], vals[-1], s) for k, *_, s in [(x[0], x[1:]) for x in scales]} if False else {x[0]: rise_share(vals[0], vals[-1], x[2], x[3]) for x in scales}
+    """The scale on which the rise takes up the biggest (or smallest) share of the height of the graph."""
+    sh = {x[0]: rise_share(vals[0], vals[-1], x[2], x[3]) for x in scales}
     best = (max if biggest else min)(sh.values())
     ks = [k for k, v in sh.items() if v == best]
     assert len(ks) == 1
     return ks[0]
 
 
-def scales_fig(vals, scales, xl, big=False):
-    figs = []
-    for k, d, y0, y1, st in scales:
-        lab = st if (y1 - y0) / st <= 6 else (st * 2 if (y1 - y0) / (st * 2) <= 6 else st * 5)
-        figs.append(line_graph(xl, [dict(v=vals)], y0, y1, st, lab, f'Graph {k}: {d}', '', h=150 if len(scales) > 1 else 200, label=f'Graph {k}: the scale {d}.'))
+def scales_fig(vals, scales, xl):
+    figs = [line_graph(xl, [dict(v=vals)], y0, y1, st, lab, f'Graph {k}', '', w=260, h=172, label=f'Graph {k}: the scale {d}.') for k, d, y0, y1, st, lab in scales]
     return combine(figs, 'The same numbers drawn on three different scales: ' + '; '.join(f'graph {k} {d}' for k, d, *_ in scales) + '.')
 
 
-def one_graph(vals, xl, y0, y1, st, lab, title=''):
-    return line_graph(xl, [dict(v=vals)], y0, y1, st, lab, title, h=220, label=title or 'A line graph.')
+def one_graph(vals, xl, y0, y1, st, lab, title='', w=270):
+    return line_graph(xl, [dict(v=vals)], y0, y1, st, lab, title, w=w, h=210, label=title or 'A line graph.')
 
 
 ITEMS = [
@@ -266,7 +260,7 @@ ITEMS = [
     D(id='5b', tier='core', no='5(b)', label='5(b)', type='choice', options=['Yes', 'No'], answer='No', skill='misleading graphs', svg=shops_fig(),
       check=lambda: 'Yes' if SHOP_A[0][-1] - SHOP_A[0][0] == SHOP_B[0][-1] - SHOP_B[0][0] else 'No',
       q='Ravi says, "Both shops\' sales went up by the same amount, because the lines look the same." Is Ravi right?',
-      hint='Do the two graphs use the same scale?',
+      hint='Read both graphs carefully: how much did each shop\'s sales go up?',
       steps=['Shop A went up by 60 and Shop B went up by 12, so the sales did not go up by the same amount.', 'Ravi is not right.'],
       src=['Is Ravi right? Explain why the two graphs look the same.']),
     D(id='5b-why', tier='core', no='5(b)', label='5(b) why', type='selfcheck', skill='misleading graphs', svg=shops_fig(), check=lambda: (SHOP_A[2], SHOP_B[2]),
@@ -280,32 +274,32 @@ ITEMS = [
     D(id='Ieasy', tier='invest', no='Investigation (easy step)', label='Inv easy', type='selfcheck', paper=True, skill='drawing a line graph', svg=None,
       check=lambda: (50, 100), sol_fig=lambda f: one_graph([50, 100], ['May', 'June'], 0, 100, 10, 10, 'Phone cases sold: scale 0 to 100 in 10s'),
       q='A shop sold 50 phone cases in May and 100 in June. A newspaper says: "Sales have doubled!" On squared paper, write 0, 10, 20 and so on up the side. Plot May and June and join the points.',
-      hint='Each line on the side is worth 10. May is on the 5th line up.',
+      hint='Each line on the side is worth 10.',
       steps=['Go up in 10s from 0 to 100. May is at 50, the 5th line, and June is at 100, the 10th line.', 'Join the two points with a straight line.'],
       src=['A shop sold 50 phone cases in May and 100 in June. A newspaper says: "Sales have doubled!"', 'On the Graph grid, write 0, 10, 20 ... up the side. Plot the points (May, 50) and (June, 100) and join them.']),
-    D(id='Ilines', tier='invest', no='Investigation (a)', label='Inv (a)', type='fields', frame='May is line {f1}.    June is line {f2}.', answer=[5, 10], skill='reading a scale', svg=None,
+    D(id='Ilines', tier='invest', no='Investigation (a)', label='Inv (a)', type='fields', frame='May is {f1} lines up.    June is {f2} lines up.', answer=[5, 10], skill='reading a scale', svg=None,
       check=lambda: [50 // 10, 100 // 10],
-      q='A graph goes up the side in 10s from 0 to 100. Counting the lines from the bottom (0 is line 0), which line is May\'s 50 on, and which line is June\'s 100 on?',
-      hint='Count up in 10s: 10 is line 1.',
-      steps=['50 is the 5th line up, and 100 is the 10th line up.', 'The line goes up through 5 lines, a fair picture of doubling.'],
+      q='Draw the line graph with the side going up in 10s from 0 to 100. How many lines up from 0 is the point for May (50), and how many for June (100)?',
+      hint='Count up in 10s: 10 is 1 line up.',
+      steps=['50 is 5 lines up, and 100 is 10 lines up.', 'The line goes up through 5 lines, a fair picture of doubling.'],
       src=['On the first Graph grid, draw a line graph of May and June. Go up in 10s from 0 to 100. Is the line steep or gentle?']),
     D(id='Ib-huge', tier='invest', no='Investigation (b)', label='Inv (b) huge', type='choice', options=list(MJ_OPTS.values()), answer=MJ_OPTS['A'], skill='scales can mislead',
       check=lambda: MJ_OPTS[pick(MAY_JUNE, [50, 100], True)], sol_fig=lambda f: scales_fig([50, 100], MAY_JUNE, ['May', 'June']),
       q='The same two numbers, 50 in May and 100 in June, can be drawn on different scales. Which scale makes the rise look HUGE?',
-      hint='Think about how much of the graph\'s height the rise fills. Which scale has the shortest side to fill?',
-      steps=['A scale from 45 to 105 is a short side, so the rise from 50 to 100 fills most of the graph: it looks huge.', 'On the scale from 0 to 100 it fills half the graph, and on the scale from 0 to 1000 only a small part.', 'The numbers are the same on all three. Only the picture changes.'],
+      hint='Think about how much of the graph\'s height the rise fills.',
+      steps=['A scale from 40 to 110 has a short side, so the rise from 50 to 100 fills most of the graph: it looks huge.', 'On the scale from 0 to 100 it fills half the graph, and on the scale from 0 to 1000 only a small part.', 'The numbers are the same on all three. Only the picture changes.'],
       src=['Now draw the same two numbers on the second grid so the rise looks HUGE. Choose a different scale and write it.']),
     D(id='Ib-flat', tier='invest', no='Investigation (b)', label='Inv (b) flat', type='choice', options=list(MJ_OPTS.values()), answer=MJ_OPTS['C'], skill='scales can mislead',
       check=lambda: MJ_OPTS[pick(MAY_JUNE, [50, 100], False)], sol_fig=lambda f: scales_fig([50, 100], MAY_JUNE, ['May', 'June']),
       q='Which of these scales makes the rise from 50 to 100 look almost flat?',
-      hint='Which scale has the tallest side?',
+      hint='Think about how much of the graph\'s height the rise fills.',
       steps=['A scale from 0 to 1000 has a tall side, so the rise from 50 to 100 fills only a small part of the graph: it looks almost flat.'],
       src=['Then say how you would make the rise look almost flat.']),
     D(id='Ib-own', tier='invest', no='Investigation (b)', label='Inv (b) draw', type='selfcheck', paper=True, skill='drawing a graph with a chosen scale', svg=None,
-      check=lambda: MAY_JUNE[0], sol_fig=lambda f: one_graph([50, 100], ['May', 'June'], 45, 105, 5, 10, 'Model: starts at 45, each line is worth 5'),
+      check=lambda: MAY_JUNE[0], sol_fig=lambda f: one_graph([50, 100], ['May', 'June'], 40, 110, 10, 20, 'Model: starts at 40, each line is worth 10'),
       q='On a second grid, draw May and June again. Choose a scale that makes the rise look HUGE, and write your scale next to your graph.',
       hint='Start the side near 50 and make each line worth only a little.',
-      steps=['Model: start at 45 and make each line worth 5. May (50) is 1 line up and June (100) is 11 lines up.', 'Other scales that start near 50 and use small steps also work.'],
+      steps=['Model: start at 40 and make each line worth 10. May (50) is 1 line up and June (100) is 6 lines up.', 'Other scales that start near 50 and use small steps also work.'],
       src=['Choose a different scale and write it.']),
     D(id='Ic', tier='invest', no='Investigation (c)', label='Inv (c)', type='selfcheck', skill='honest graphs', check=lambda: MAY_JUNE[1],
       q='Which of your graphs is the most honest? What would you ask the newspaper to add to its graph?',
@@ -340,10 +334,10 @@ ITEMS = [
       steps=['Ali has 175 and Mei has 275. Double Ali\'s is 350, and 275 is less than 350.', 'Mei is not right.'],
       src=['Mei says hers is more than double Ali\'s. Is she right?']),
     D(id='T2-why', tier='stretch', no='Think harder 2', label='T2 why', type='selfcheck', skill='reading a scale that does not start at 0', check=lambda: (175, 275),
-      q='Mei\'s point is 7 lines up and Ali\'s is 3 lines up. Explain why counting the lines can give a wrong picture of how the two numbers compare.',
+      q='Explain how you know whether Mei is right.',
       hint='Where does the scale start? Do the lines count from 0?',
       steps=['Her point is more than twice as many lines up (7 against 3), but the scale starts at 100, not 0.', 'The real numbers are 175 and 275. Double 175 is 350, so 275 is not more than double.'],
-      src=['(Her point is more than twice as many lines up, 7 against 3, but the scale starts at 100, so counting lines gives the wrong picture.)'] if False else ['Mei says hers is more than double Ali\'s.']),
+      src=['Mei says hers is more than double Ali\'s.']),
     D(id='T3-fri', tier='stretch', no='Think harder 3', label='T3 Fri', type='number', answer=40, skill='reading a pattern on a line graph',
       check=lambda: (lambda d: d[4])((lambda s, st: [s, s + st, s + 2 * st, s + st, s])(40, 15)),
       q='A stall\'s line graph starts on Monday with 40 cups sold. The line goes up by 15 cups each day until Wednesday, then down by 15 cups each day. How many cups were sold on Friday?',
@@ -391,18 +385,18 @@ ITEMS = [
     D(id='G7-huge', tier='challenge', no='Go further 7', label='G7 huge', type='choice', options=list(F_OPTS.values()), answer=F_OPTS['A'], skill='scales can mislead',
       check=lambda: F_OPTS[pick(FOUR_SC, FOUR, True)], sol_fig=lambda f: scales_fig(FOUR, FOUR_SC, ['Wk 1', 'Wk 2', 'Wk 3', 'Wk 4']),
       q='Four numbers: 52, 54, 56, 58. They go up by 2 each time. Which scale makes a line graph of these numbers look like a huge increase?',
-      hint='Which scale has the shortest side, so the small rise fills the most of the graph?',
+      hint='Think about how much of the graph\'s height the rise fills.',
       steps=['A scale from 50 to 60 has a short side, so the rise from 52 to 58 fills most of it: a huge increase.', 'On the other two scales the same rise is small.'],
       src=['Four numbers: 52, 54, 56, 58. Choose where the scale starts and how much each line is worth, so that a line graph of these numbers looks (a) like a huge increase']),
     D(id='G7-flat', tier='challenge', no='Go further 7', label='G7 flat', type='choice', options=list(F_OPTS.values()), answer=F_OPTS['C'], skill='scales can mislead',
       check=lambda: F_OPTS[pick(FOUR_SC, FOUR, False)], sol_fig=lambda f: scales_fig(FOUR, FOUR_SC, ['Wk 1', 'Wk 2', 'Wk 3', 'Wk 4']),
       q='Which of these scales makes a line graph of 52, 54, 56, 58 look like hardly any increase?',
-      hint='Which scale has the tallest side?',
+      hint='Think about how much of the graph\'s height the rise fills.',
       steps=['A scale from 0 to 600 has a very tall side, so the rise from 52 to 58 fills almost none of it: the line looks nearly flat.'],
       src=['(b) like hardly any increase']),
     D(id='G7-own', tier='challenge', no='Go further 7', label='G7 draw', type='selfcheck', paper=True, skill='drawing graphs on different scales', check=lambda: (FOUR_SC[0], FOUR_SC[2]),
-      sol_fig=lambda f: combine([one_graph(FOUR, ['Wk 1', 'Wk 2', 'Wk 3', 'Wk 4'], 50, 60, 1, 5, 'Huge: starts at 50, each line is worth 1'),
-                                 one_graph(FOUR, ['Wk 1', 'Wk 2', 'Wk 3', 'Wk 4'], 0, 600, 100, 200, 'Flat: starts at 0, each line is worth 100')], 'Two graphs of 52, 54, 56 and 58, one that looks like a huge increase and one that looks almost flat.'),
+      sol_fig=lambda f: combine([one_graph(FOUR, ['Wk 1', 'Wk 2', 'Wk 3', 'Wk 4'], 50, 60, 1, 5, 'Huge: 50 to 60, lines of 1', w=250),
+                                 one_graph(FOUR, ['Wk 1', 'Wk 2', 'Wk 3', 'Wk 4'], 0, 600, 100, 200, 'Flat: 0 to 600, lines of 100', w=250)], 'Two graphs of 52, 54, 56 and 58, one that looks like a huge increase and one that looks almost flat.'),
       q='On paper, draw a line graph of 52, 54, 56 and 58 twice: once so it looks like a huge increase and once so it looks like hardly any increase. Write both scales and a sentence a shop owner might say with each graph.',
       hint='A short side makes the rise look big, and a tall side makes it look small.',
       steps=['Huge: start at 50, with each line worth 1. A sentence: "Look how fast our sales are growing!"', 'Flat: start at 0, with each line worth 100. A sentence: "Our sales are steady."', 'Both graphs show the same numbers.'],
@@ -493,12 +487,12 @@ VARIANTS = {
                  steps=['Take away the {d} extra girls, then share the rest equally between boys and girls.', 'The girls are the boys and {d} more. There are {ans} girls.']),
         oracle=lambda e: next(g for g in range(1, e['P']) if g + (g - e['d']) == e['P'])),
     'T2-more': dict(
-        base=dict(s=100, st=25, p=3, q=7),
-        tpl=dict(vars=dict(s=[100, 200, 300], st=[20, 25, 50], p=[2, 3, 4], q=[6, 7, 8]),
-                 q='A graph\'s scale starts at {s} and each line is worth {st}. Ali\'s point is {p} lines above the start and Mei\'s point is {q} lines above the start. How much more is Mei\'s number than Ali\'s?',
-                 answer='(q-p)*st', hint='Work out each number. The start is {s}, not 0.',
-                 steps=['Ali: {s} + {p} × {st}. Mei: {s} + {q} × {st}.', 'Mei has {ans} more than Ali.']),
-        oracle=lambda e: (e['s'] + e['q'] * e['st']) - (e['s'] + e['p'] * e['st'])),
+        base=dict(s=100, st=25, la=3, lm=7),
+        tpl=dict(vars=dict(s=[100, 200, 300], st=[20, 25, 50], la=[2, 3, 4], lm=[6, 7, 8]),
+                 q='A graph\'s scale starts at {s} and each line is worth {st}. Ali\'s point is {la} lines above the start and Mei\'s point is {lm} lines above the start. How much more is Mei\'s number than Ali\'s?',
+                 answer='(lm-la)*st', hint='Work out each number. The start is {s}, not 0.',
+                 steps=['Ali: {s} + {la} × {st}. Mei: {s} + {lm} × {st}.', 'Mei has {ans} more than Ali.']),
+        oracle=lambda e: (e['s'] + e['lm'] * e['st']) - (e['s'] + e['la'] * e['st'])),
     'T3-fri': dict(
         base=dict(s=40, st=15),
         tpl=dict(vars=dict(s=[30, 40, 50, 60], st=[10, 15, 20, 25]), derive=dict(t='s+st', w='s+2*st'),

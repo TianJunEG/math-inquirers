@@ -124,3 +124,36 @@ Not mirrored, or mirrored differently:
 Open questions:
 - Typed number sentences need "x" or the times sign; very unusual bracketing is not accepted. Rectangle answers ("5 by 6", "5x6", "5 cm by 6 cm", either order) are accepted; lists of rectangles in a single text box were avoided.
 - Squares are typed as A2 (column letter, then row number).
+
+# Week 5 (lessons 9 and 10): Data Detectives and Puzzle Day
+
+Week 5 = lessons 9 and 10 (Tue 22 Dec and Thu 24 Dec, the lesson 10 date moved off Fri 25 Dec: `website/data/beta_schedule.json`, Level 4 group L4A, confirmed).
+Build: `python3 practice/holiday/build_holiday.py p4 9` (and `p4 10`); test: `python3 practice/holiday/test_holiday.py p4 9` (and `10`). Sources: `p4/content/l9.js`, `l10.js` (`workbook()`, `gaps.invest`, `qbank.stretch[0:4]`, `qbank.challenge[-3:]`). Only `p4lib.py` (own level) gained helpers (line graph, table, queue and clue-card figures, scale and ring-toss helpers); no shared file edited.
+
+| | Lesson 9 Data Detectives | Lesson 10 Puzzle Day |
+|---|---|---|
+| Items | 47 | 34 |
+| Auto-marked | 39 | 29 |
+| Self-check with a model answer | 5 | 4 |
+| Open (make up your own) | 0 | 1 (G7 make) |
+| Paper-only (drawing, correct graph shown after submit) | 3 (Inv easy plot, Inv (b) draw, G7 draw) | 0 |
+| Variant families (all combinations run against an oracle) | 11 (475) | 11 (312) |
+| Question text as printed / reworded to fit one screen | 14 / 33 | 11 / 23 |
+
+Independent checkers: changes between days, row and column totals solved from the printed totals, first week one line is above the other, equal-step tables found by searching the step, the share of the graph's height a rise fills for each scale (L9); next-door products, every pen/notebook split, every heads-and-legs split, all 24 food orders, all age orders, stories run forwards from every start, queue places, ring-toss totals built by a table (L10). The printed keys agree.
+
+Audit rules applied from the start: no stem, hint or example gives another card's answer (e.g. the Investigation easy-step hint does not say "5th line"; the 'Why' cards are neutral: "Explain how you know whether ..."); hints nudge only; typed explanations are self-checks; the logic puzzle uses one shared clue-card figure instead of repeating the riddle; explicit unique labels of at most 12 characters; take-home question shown as "Take-home" (nav TH).
+
+Not mirrored, or mirrored differently:
+- "Looking back" box (generic reflection), as in earlier weeks.
+- L9 Q1(b)/(c) "from ___ to ___, up by ___" is two cards each (a choice of the two days, and the number of cups). Q3 the tip "read each dot" is two ordered-list cards (Ali, Mei). Q5 tip (scale of each graph) is a four-box card.
+- L9 Investigation: drawing the two graphs is paper-only (correct graph shown). "Steep or gentle" is not asked (no objective answer); instead, how many lines up each point is. "Choose a scale that looks huge / almost flat" became two choice cards (A/B/C scales, checked by the share of the height the rise fills; the three graphs are shown after submit) plus a paper drawing. "Most honest graph" is a self-check with a model.
+- L9 G7 (same idea for 52, 54, 56, 58) mirrored the same way; G5 asks Teams A, B and C only (Team D is given).
+- L9 T2 and T3 repeat their short setup in two cards; T1 is a number card (girls in 4B) and the comparison choice.
+- L10 Q1(b) take-home (find ALL the ways) is three cards: the money-left table, the numbers of notebooks that work, the pens in each way (fewest notebooks first); the count of ways is never given. Q4 the food puzzle is four choice cards (one per child) sharing the clue card; the printed tick grid is not drawn (nothing to tick on screen). Q2(c) adds "a car has 4 wheels and a motorcycle 2" (the print assumes it).
+- L10 Investigation (a) asks for the scores you can NOT get (the complement of the printed "list those you can"); (b) is the score after which every score works, plus a self-check; (c) set of impossible scores for 4 and 6 plus a self-check.
+- L10 G5 (c) "Explain" is a choice plus a self-check; G7 is a choice (could the farmer be right), a self-check, and the open make-up-your-own puzzle (model given).
+
+Open questions:
+- Graph points are read from minor grid lines (every 5), as printed; check readability on a real phone.
+- Set cards of 11 numbers (L10 Inv (c)) are long to type.

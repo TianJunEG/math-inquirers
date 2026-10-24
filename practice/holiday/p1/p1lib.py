@@ -577,7 +577,7 @@ def desk_fig(ali=6, mei=8, width=300, caption=''):
 
 def clip_eraser_fig(clips=5, erasers=12, per=2, caption=''):
     """Bars: 1 clip is as long as `per` erasers; a desk of `clips` clips; a pencil of `erasers` erasers."""
-    u, lw = 20, 66
+    u, lw = 20, 84
     rows = [('1 clip', [('c', per)], ''), (f'{per} erasers', [('e', 1)] * per, ''), ('desk', [('c', per)] * clips, '? erasers'), ('pencil', [('e', 1)] * erasers, '? clips')]
     W = lw + max(sum(w for _, w in segs) for _, segs, _ in rows) * u + 76
     body = ''
@@ -605,8 +605,8 @@ def pencil_cubes_fig(mei=8, ali_more=3, ben_less=2, caption=''):
             body += Re(lw + i * u, y, u, 26, '#FFE08A', NAVY, 2)
         if extra:
             k_extra = ali_more if nm == 'Ali' else ben_less
-            body += Re(lw + n * u, y, k_extra * u, 26, '#fff', TEAL, 2.4, 0, '5 3') + T(lw + n * u + k_extra * u / 2, y + 19, extra, 14, 'middle', 800, TEAL)
-    W = lw + (mei + ali_more) * u + 6
+            body += Re(lw + n * u, y, k_extra * u, 26, '#fff', TEAL, 2.4, 0, '5 3') + T(lw + n * u + k_extra * u + 8, y + 19, extra, 14, 'start', 800, TEAL)
+    W = lw + (mei + ali_more) * u + 70
     return svg(W, 4 + 3 * 46 - 14, body, caption or f'Mei: {mei} cubes. Ali: the same and {ali_more} more. Ben: {ben_less} fewer than Mei.')
 
 
@@ -615,7 +615,7 @@ BAR_COL = ['#FFE08A', '#8EDDA0', '#F4A6A0', '#8CC8F0']
 
 def ruler_fig(bars, lo=0, hi=12, cm=26, caption=''):
     """A centimetre ruler lo..hi with bars (from, to, label) lying above it, lined up with the marks (one bar per line)."""
-    lw = 14
+    lw = 20
     W = lw * 2 + (hi - lo) * cm
     nb = len(bars)
     top = 6 + nb * 34
@@ -623,11 +623,11 @@ def ruler_fig(bars, lo=0, hi=12, cm=26, caption=''):
     for k, (a, b, lab) in enumerate(bars):
         y = 6 + k * 34
         body += Re(lw + (a - lo) * cm, y, (b - a) * cm, 26, BAR_COL[k % 4], NAVY, 2.2) + T(lw + (a - lo) * cm + (b - a) * cm / 2, y + 19, lab, 15, 'middle', 800)
-    body += Re(lw, top, (hi - lo) * cm, 40, '#FFF9E8', NAVY, 2.4)
+    body += Re(lw, top, (hi - lo) * cm, 26, '#FFF9E8', NAVY, 2.4)
     for v in range(lo, hi + 1):
         x = lw + (v - lo) * cm
-        body += Ln(x, top, x, top + (22 if v % 5 == 0 else 15), 2) + T(x, top + 36, v, 14, 'middle', 700)
-    return svg(W, top + 46, body, caption or ('A centimetre ruler from %d to %d with ' % (lo, hi) + ', '.join(f'{lab} from {a} to {b}' for a, b, lab in bars)))
+        body += Ln(x, top, x, top + (22 if v % 5 == 0 else 15), 2) + T(x, top + 44, v, 14, 'middle', 700)
+    return svg(W, top + 52, body, caption or ('A centimetre ruler from %d to %d with ' % (lo, hi) + ', '.join(f'{lab} from {a} to {b}' for a, b, lab in bars)))
 
 
 def bird(cx, cy, s):
@@ -643,13 +643,13 @@ PET_ICON = dict(Dog=dog_face, Cat=cat_face, Fish=fish, Bird=bird)
 
 def pets_street_fig(pets, caption=''):
     """Picture graph of pets in a street: one picture for each pet; pets = list of (name, number)."""
-    return picture_graph(pets, '1 pet', lambda nm: PET_ICON[nm], max(n for _, n in pets), caption=caption or 'Picture graph of pets in a street, one picture for each pet')
+    return picture_graph(pets, '1 pet (each picture)', lambda nm: PET_ICON[nm], max(n for _, n in pets), caption=caption or 'Picture graph of pets in a street, one picture for each pet')
 
 
 def example_table(rows, caption=''):
     """A small table: first row = column titles, then rows of cells (text)."""
     nc = len(rows[0])
-    cw = [96] + [58] * (nc - 2) + [90]
+    cw = [96] + [80] * (nc - 2) + [100]
     W = sum(cw) + 4
     body = ''
     for r, row in enumerate(rows):
