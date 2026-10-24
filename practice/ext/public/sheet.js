@@ -254,8 +254,9 @@
   // A derived or authored label that is long or cryptic ('Inv 8c4 yes?', 'G5 any no.?') is shown as its number only ('Inv 8c', 'G5'); the descriptive part stays in the accessible name.
   var NUMLBL = /^((?:Inv|Exit|Extra|Make|TH|T|G)\s?)?([A-Za-z]?\d+[a-z]?(?:\s?\([a-z]\d?\))?|\([a-z]\d?\))/;
   function visLabel(b) {
+    if (/^(?:take-home|home)(?:\s|$)/i.test(b)) return 'TH' + b.replace(/^\S+/, '').replace(/\s+/g, ' ').replace(/^ $/, '');   // 'Take-home' and 'Home' read as a home button: 'TH'
     if (!(/\?/.test(b) || /\d[a-z]\d/.test(b) || b.length > 12)) return b;
-    var m = NUMLBL.exec(b); if (!m) return b;
+    var m = NUMLBL.exec(b); if (!m) return b.replace(/\s*\?+/g, '').trim() || b;
     var core = (m[1] || '') + m[2]; return core.length >= 2 && core.length < b.length ? core : b;
   }
   function labelsAll() {
