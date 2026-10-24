@@ -119,7 +119,7 @@ def solve_all():
     S['L2-marathon'] = 35 + 8 - 9 - 5
     S['L2-netballleague'] = 13 * 12 // 2
     S['L2-roomstickers'] = min(100 * a + 10 * b + c for a, b, c in itertools.permutations([8, 3, 6, 1, 4], 3) if c % 2 == 1)
-    ok = reachable([4, 7], 40)
+    ok = reachable([4, 7], 50)
     S['L2-topupvouchers'] = sum(ok[1:])
     S['L2-kitedrum'] = [k for k in range(1, 70) for d in range(1, 70) if 2 * k + d == 65 and k + 2 * d == 46][0]
     az = sorted(range(1, 19), key=lambda k: WORDS[k])

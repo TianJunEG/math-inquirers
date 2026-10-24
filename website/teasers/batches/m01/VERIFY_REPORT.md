@@ -7,15 +7,16 @@ Method: every puzzle is re-solved by `brute.py` (independent of the author solve
 | 1 | 31 | 30 | 2 | 21 | 3 | 31 |
 | 2 | 31 | 31 | 1 | 26 | 2 | 31 |
 
-Sources searched (whole working tree, tracked or not): 6759 files, 1363.2 MB, sha256 f4b95a8afe23b53915a07bdb.  Files per root: deck 158, diag 12, docs 422, extension 257, hp 41, k2 5, levels 23, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 373, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2532, tutor 130, website 42, worker 1.
+Sources searched (whole working tree, tracked or not): 6760 files, 1363.2 MB, sha256 f23be12b38f2ffc78ecacad9.  Files per root: deck 158, diag 12, docs 423, extension 257, hp 41, k2 5, levels 23, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 373, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2532, tutor 130, website 42, worker 1.
 
 Similarity sources checked: holiday banks, own term lessons, all extension workbook data, the school booklets, our book drafts and catalogues, external private source files, and the seven fixed website puzzles.
 
-FAIL count: 0. REVIEW items: 29.
+FAIL count: 0. REVIEW items: 31.
 
 
 - REVIEW L1-tagtiles [01-01]: rule B: 3 of the same numbers ['6', '7', '9'] as "| Challenge (bank X1-X9) | 9 | **X3** "Ravi: 24 m of fence, largest area": list  ..." (docs/audit/gifted_p4.md)
 - REVIEW L1-noodlepot [01-03]: rule B: 3 of the same numbers ['35', '5', '6'] as "First clock: the long hand is on the 1: 5 minutes past 1, written 1:05. Second c ..." (term/l1/lessons/l22.json)
+- REVIEW L1-prizecorner [01-04]: story words 3 of 5 like "The slide plants the misconception "the hour changes at half past" (the hour hand is half  ..." (term/l1/audit/GUIDE_DECK_AUDIT_L23.md)
 - REVIEW L1-starchart [01-08]: story words 3 of 5 like "Teacher-note edits: the figures are sketches except P5-28; excluded topics "are not used i ..." (docs/audit_final/p5_semester_booklets_audit_round2.md)
 - REVIEW L1-bikelock [01-10]: number 2 in the question is not a parameter (written in the wording; check)
 - REVIEW L1-bikelock [01-10]: story words 3 of 5 like "body = h2('Worked example: a bike lock') + card(p('A lock has 3 dials. Each dial shows 1,  ..." (rebuild/gen_p6l5.py)
@@ -42,4 +43,5 @@ FAIL count: 0. REVIEW items: 29.
 - REVIEW L2-bookswaps [01-18]: rule B: 3 of the same numbers ['12', '3', '6'] as "Type a fraction.", "label": "T3 (left)", "svg": "<svg overflow="visible" aria-la ..." (practice/holiday/p3/06/dist/data/p3l06.json)
 - REVIEW L2-netballleague [01-20]: rule C: two four-word runs shared with "(Each pair of teams plays twice: 15 pairs × 2 = 30.)"], "slips": [], "tags": {"s ..." (practice/holiday/p6/05/dist/data/p6l05.json): plays every other team / team plays every other
 - REVIEW L2-roomstickers [01-21]: rule B: 3 of the same numbers ['3', '6', '8'] as "| 1 | Shifting Places | LIST (T, N): digit cards: smallest or greatest even numb ..." (docs/terms/level_5_year_plan.md)
+- REVIEW L2-topupvouchers [01-22]: rule B: 3 of the same numbers ['3', '4', '7'] as "The answer is 5, 10." (the answer is also shown as "5, 10", not "5/10"). Either  ..." (practice/holiday/AUDIT_WEEK5_L1_3.md)
 - REVIEW L2-bunboxes6 [01-27]: rule B: 3 of the same numbers ['14', '5', '6'] as "?" (no neighbours of the answer), figure beside the text; intro clear of the "No ..." (term/l1/audit/AUDIT_FINAL_ROUND4.md)

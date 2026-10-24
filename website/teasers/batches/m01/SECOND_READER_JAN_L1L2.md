@@ -61,7 +61,7 @@ Script: `second_reader_jan_l1l2.py`. It imports none of the generator, checker, 
 | L2-marathon | 01-19 | 29 | 29 | agree |
 | L2-netballleague | 01-20 | 78 | 78 | agree |
 | L2-roomstickers | 01-21 | 143 | 143 | agree |
-| L2-topupvouchers | 01-22 | 31 | 31 | agree |
+| L2-topupvouchers | 01-22 | 41 | 41 | agree |
 | L2-kitedrum | 01-23 | 28 | 28 | agree |
 | L2-cardstack | 01-24 | 14 | 14 | agree |
 | L2-gatetohall | 01-25 | field | field | agree |

@@ -200,7 +200,7 @@
      "28",
      "380"
     ],
-    "q": "A prize corner has 40 toys priced 1 token, 2 tokens, 3 tokens and so on up to 40 tokens. Zack has only 2-token and 5-token coins, and the corner gives no change. For how many toys can he pay the exact price?",
+    "q": "A prize corner sells toy 1 for 1 token, toy 2 for 2 tokens, and so on to toy 40. Zack has only 2-token and 5-token coins and gets no change. How many toys can he buy with exact coins?",
     "hint": "Find the prices he cannot pay. Start with the small prices.",
     "why": "He cannot pay 1 token or 3 tokens. All the others can, for example 2 = 2, 4 = 2 + 2, 5 = 5, 6 = 2 + 2 + 2 and 7 = 2 + 5. That is 40 − 2 = 38 toys.",
     "date": "01-04"
@@ -604,7 +604,7 @@
      "60",
      "700"
     ],
-    "q": "A bakery shows the buns it baked on two days in a graph. One bun symbol means 10 buns. Monday has 9 symbols and Tuesday has 2. How many more buns were baked on Monday than on Tuesday?",
+    "q": "A bakery graph shows the buns baked each day. Monday has 9 bun symbols and Tuesday has 2. Each symbol stands for 10 buns. How many more buns were baked on Monday?",
     "hint": "First find how many more symbols Monday has. Then think about what each symbol is worth.",
     "why": "Monday has 7 more symbols. Each symbol is worth 10 buns, so 7 × 10 = 70 buns.",
     "date": "01-13"
@@ -787,7 +787,7 @@
      "1",
      "110"
     ],
-    "q": "Rina hangs 20 flags on a string. Each flag shows the name of one number from one to twenty. The flags hang in dictionary order, so eight comes before five. Which number is on the 3rd flag from the left?",
+    "q": "Rina has 20 flags, one for each number from one to twenty. Each flag shows the name of its number. She hangs them in dictionary order, so eight comes before five. What number is on the flag in 3rd place?",
     "hint": "Look at the first letter of each name. If two names start with the same letter, look at the second letter.",
     "why": "In dictionary order the names are eight, eighteen, eleven, fifteen, five, four, fourteen, nine, nineteen, one, seven, seventeen, six, sixteen, ten, thirteen, three, twelve, twenty, two. The 3rd flag shows eleven, which is the number 11.",
     "date": "01-17"
@@ -918,7 +918,7 @@
      "27",
      "370"
     ],
-    "q": "In a sack race with 40 children, Aisha is 33rd at the halfway mark. Then 6 children go past her, and she goes past 2 children. In which place does Aisha finish?",
+    "q": "Aisha's sack race has 40 children. She is 33rd at halfway. After that, 6 children overtake her and she overtakes 2 children. What is her finishing place?",
     "hint": "Each child who goes past Aisha moves her back one place. Each child she goes past moves her forward one place. Work one step at a time.",
     "why": "6 children go past her, so she moves back: 33 + 6 = 39. Then she goes past 2 children: 39 − 2 = 37. She finishes in 37th place.",
     "date": "01-20"
@@ -1128,7 +1128,7 @@
      "7",
      "170"
     ],
-    "q": "Zack throws three beanbags onto a board. The board has six numbered squares: 6, 16, 17, 24, 32 and 44. The beanbags land on three different squares, and the numbers add up to exactly 73. What is the smallest number he hits?",
+    "q": "Six squares on a board are numbered 6, 16, 17, 24, 32 and 44. Zack's three beanbags land on three different squares, and the numbers on them add up to exactly 73. What is the smallest of the three numbers?",
     "hint": "Pick one square, then ask which two other squares would make the total.",
     "why": "17 + 24 + 32 = 73. The three squares are 17, 24 and 32, so the smallest is 17.",
     "date": "01-25"
@@ -1219,7 +1219,7 @@
      "36",
      "460"
     ],
-    "q": "Builders make a new playground in 6 weeks and 4 days. For how many days do they work on it?",
+    "q": "A playground takes builders 6 weeks and 4 days to finish. That is the same as how many days?",
     "hint": "There are 7 days in a week. Change the weeks into days first.",
     "why": "A week has 7 days, so 6 weeks are 7 × 6 = 42 days. With 4 more days, that is 42 + 4 = 46 days.",
     "date": "01-27"
@@ -1347,7 +1347,7 @@
      "44",
      "540"
     ],
-    "q": "A school shop has 6 colours of bag and 9 kinds of key charm. Aisha buys one bag and one charm. How many bag and charm pairs can she choose from?",
+    "q": "Aisha will pick a bag from 6 colours and a key charm from 9 kinds. How many bag-and-charm choices does she have?",
     "hint": "Pick one colour of bag. How many pairs does it make with the charms?",
     "why": "Each of the 6 colours goes with 9 charms: 9 + 9 + 9 + 9 + 9 + 9 = 54 pairs.",
     "date": "01-30"
@@ -1485,7 +1485,7 @@
      "85",
      "950"
     ],
-    "q": "A school football match starts at 4:35 and the final whistle blows at 6:10. How long is the match, in minutes?",
+    "q": "Kick-off for the school football match is at 4:35, and the last whistle blows at 6:10. How many minutes does the match last?",
     "hint": "Split the time at 5:00 and at 6:00. Add up the three parts.",
     "why": "4:35 to 5:00 is 25 minutes. 5:00 to 6:00 is 60 minutes. 6:00 to 6:10 is 10 minutes. 25 + 60 + 10 = 95 minutes.",
     "date": "01-02"
@@ -1527,7 +1527,7 @@
      "245",
      "2550"
     ],
-    "q": "A hawker stall prepares 800 satay sticks. It sells 235 sticks at lunch and 310 sticks at dinner. How many sticks are left?",
+    "q": "A hawker has 800 satay sticks ready for the day. 235 sticks are sold at lunch, then 310 more at dinner. How many sticks does the hawker still have?",
     "hint": "Add the sticks sold at the two meals first. Then take the total from 800.",
     "why": "Sold: 235 + 310 = 545. Left: 800 − 545 = 255 sticks.",
     "date": "01-03"
@@ -1696,7 +1696,7 @@
      "65",
      "750"
     ],
-    "q": "Aina, Ben and Chen fold paper stars. Ben folds 15 more stars than Aina. Chen folds 24 more stars than Aina. Together the three children fold 192 stars. How many stars does Chen fold?",
+    "q": "Aina, Ben and Chen fold 192 paper stars in all. Ben folds 15 more than Aina, and Chen folds 24 more than Aina. How many stars does Chen fold?",
     "hint": "Add the extra stars first, to see how far the total is from three equal shares.",
     "why": "Compared with Aina, Ben has 15 more and Chen has 24 more, which is 15 + 24 = 39 more in all. Without them the total would be 192 − 39 = 153, shared by 3 equal children: 153 ÷ 3 = 51 is Aina's number. Chen folds 51 + 24 = 75 stars.",
     "date": "01-07"
@@ -2359,15 +2359,27 @@
       37,
       38,
       39,
-      40
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50
      ]
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "31",
-    "shown": "31 amounts",
+    "ans": "41",
+    "shown": "41 top-ups",
     "units": [
+     "top-ups",
+     "top-up",
      "amounts",
      "amount"
     ],
@@ -2375,18 +2387,18 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "32",
-     "30",
-     "33",
-     "29",
-     "62",
-     "41",
-     "21",
-     "310"
+     "42",
+     "40",
+     "43",
+     "39",
+     "82",
+     "51",
+     "31",
+     "410"
     ],
-    "q": "Every bus card top-up amount from $1 to $40 is tried at a machine, one after another. The machine accepts $4 vouchers and $7 vouchers only, and it never gives change. For how many of the 40 amounts can the exact amount be paid?",
+    "q": "Zack wants to top up his bus card by $1, then by $2, then by $3 and so on, up to $50. The machine will not give change, and it accepts only $4 vouchers or $7 vouchers. Of these 50 top-ups, how many can Zack pay exactly?",
     "hint": "Find the amounts that cannot be paid exactly. Try the small amounts first.",
-    "why": "$1, $2, $3, $5, $6, $9, $10, $13 and $17 cannot be paid. Every amount from $18 upwards can be made, for example 18 = 4 + 7 + 7 and 19 = 4 + 4 + 4 + 7. That is 40 − 9 = 31 amounts.",
+    "why": "$1, $2, $3, $5, $6, $9, $10, $13 and $17 cannot be paid. Every amount from $18 upwards can be made, for example 18 = 4 + 7 + 7 and 19 = 4 + 4 + 4 + 7. That is 50 − 9 = 41 top-ups.",
     "date": "01-22"
    },
    {
@@ -2583,7 +2595,7 @@
      "165",
      "1750"
     ],
-    "q": "Shop A and Shop B sell shoes. On their graph, each shoe symbol means 25 pairs. Shop A's row shows 11 symbols and Shop B's row shows 4 symbols. How many more pairs did Shop A sell?",
+    "q": "Shop A's shoe sales are drawn with 11 symbols and Shop B's with 4 symbols. If one symbol stands for 25 pairs of shoes, how many more pairs did Shop A sell than Shop B?",
     "hint": "First find how many more symbols Shop A has. Then think about what each symbol is worth.",
     "why": "Shop A has 7 more symbols. Each symbol is worth 25 pairs, so 7 × 25 = 175 pairs.",
     "date": "01-26"
@@ -2711,7 +2723,7 @@
      "22",
      "320"
     ],
-    "q": "At an arts festival, the magic show runs on days 18 to 72. The puppet show runs on days 41 to 76. Each show runs on its first and last day too. On how many days do both shows run?",
+    "q": "At an arts festival, the magic show runs from day 18 to day 72. The puppet show runs from day 41 to day 76. Both shows run on their first and last days. On how many days are both shows running?",
     "hint": "Find the first day when both shows run, and the last day when both run.",
     "why": "Both shows run from day 41 to day 72. That is 72 − 41 + 1 = 32 days.",
     "date": "01-29"

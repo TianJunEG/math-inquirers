@@ -1,6 +1,6 @@
 # Structure report (taxonomy.json)
 
-Sources searched (whole working tree, tracked or not): 6759 files, 1363.2 MB, sha256 f4b95a8afe23b53915a07bdb.  Files per root: deck 158, diag 12, docs 422, extension 257, hp 41, k2 5, levels 23, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 373, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2532, tutor 130, website 42, worker 1.
+Sources searched (whole working tree, tracked or not): 6760 files, 1363.2 MB, sha256 f23be12b38f2ffc78ecacad9.  Files per root: deck 158, diag 12, docs 423, extension 257, hp 41, k2 5, levels 23, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 373, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2532, tutor 130, website 42, worker 1.
 
 Rules. Levels 3 to 6 (TEASER-STRICT): per level and calendar quarter at most 1 puzzle per sub-structure and 3 per family; the same sub-structure never within 30 days of itself across a quarter boundary; and (ANSWER-WINDOW, round 6) the same answer value never twice within 60 days and never with the same sub-structure within 92 days. Levels 1 and 2 (L1L2-GAP60): the same sub-structure at least 60 days apart (circular, 365- and 366-day year), a family at most 3 times in any 60 days and never on consecutive days, an answer not repeated within 60 days and a single-digit answer at most 2 times in 60 days. All levels: no repeated frame, no two puzzles with most numbers or the same story in common; the sub-structures used by the fixed puzzles on the level pages (counting_choices.digit_cards_arrangements, fractions.fraction_of_remainder, multiples.common_multiple, remainders.two_conditions, sequence.count_on, sequence.which_term) are never used by the bank.
 
@@ -13,17 +13,13 @@ Rules. Levels 3 to 6 (TEASER-STRICT): per level and calendar quarter at most 1 p
 - REVIEW L1-shortestkid (L1) and L2-tallestfour (L2): 5 shared four-word runs (e.g. "@ @ is taller"), same sub-structure
 - REVIEW L1-shortestkid (L1) and L4-fivechildren (L4): 5 shared four-word runs (e.g. "@ @ is taller"), same sub-structure
 - REVIEW L1-shortestkid (L1) and L6-secondtallest (L6): 5 shared four-word runs (e.g. "@ @ is taller"), same sub-structure
-- REVIEW L1-prizecorner (L1) and L2-ticketstrips (L2): 5 shared four-word runs (e.g. "can he pay the"), same sub-structure
 - REVIEW L2-tallestfour (L2) and L4-fivechildren (L4): 5 shared four-word runs (e.g. "@ @ is taller"), same sub-structure
 - REVIEW L2-tallestfour (L2) and L6-secondtallest (L6): 5 shared four-word runs (e.g. "@ @ is taller"), same sub-structure
 - REVIEW L4-fivechildren (L4) and L6-secondtallest (L6): 5 shared four-word runs (e.g. "@ @ is taller"), same sub-structure
-- Frame rule (function-word skeleton, same sub-structure at two levels): 61 pairs at 0.80 or more reviewed, 15 of them accepted in the ledger
+- Frame rule (function-word skeleton, same sub-structure at two levels): 49 pairs at 0.80 or more reviewed, 15 of them accepted in the ledger
 - REVIEW frame L1-rpsgames (L1) and L2-ttgames (L2): sentence frame 0.80 alike, counting_pairs.handshakes
-- REVIEW frame L1-drinksmachine (L1) and L2-topupvouchers (L2): sentence frame 0.82 alike, coins.cannot_pay
-- REVIEW frame L1-bikesigns (L1) and L2-shoegraph (L2): sentence frame 0.84 alike, graphs.pictograph_scale
 - REVIEW frame L1-threefifty (L1) and L4-page5 (L4): sentence frame 0.90 alike, digit_puzzles.count_by_digit_rule [ledger: Tier B: how many of the numbers 1 to N contain a digit; other digit and other range]
 - REVIEW frame L1-matchhouse (L1) and L3-sticksdisplay (L3): sentence frame 0.96 alike, digit_display.segments [ledger: Tier B: counting the sticks or bars of a run of numbers from a digit table, the genre sentence "as the table shows"; other story, other numbers, other digit range]
-- REVIEW frame L1-cousindays (L1) and L2-festivalshows (L2): sentence frame 0.80 alike, group:days_in_a_range
 - REVIEW frame L1-noodleset (L1) and L5-cafemenu (L5): sentence frame 0.88 alike, counting_choices.combinations
 - REVIEW frame L1-hiddensum (L1) and L2-inkblot (L2): sentence frame 0.85 alike, missing_number.missing_digit
 - REVIEW frame L1-circlekids (L1) and L3-carousel (L3): sentence frame 0.80 alike, spatial.circle_opposite
@@ -34,13 +30,6 @@ Rules. Levels 3 to 6 (TEASER-STRICT): per level and calendar quarter at most 1 p
 - REVIEW frame L1-oddbig (L1) and L3-cardkeep (L3): sentence frame 0.80 alike, sorting.rule_count
 - REVIEW frame L1-stickersheets (L1) and L4-gluesticks (L4): sentence frame 0.89 alike, money.offers
 - REVIEW frame L1-stickersheets (L1) and L5-nametagpacks (L5): sentence frame 0.80 alike, money.offers
-- REVIEW frame L1-prizecorner (L1) and L2-ticketstrips (L2): sentence frame 0.90 alike, coins.cannot_pay
-- REVIEW frame L1-puffsleft (L1) and L2-satayleft (L2): sentence frame 0.81 alike, bonds.part_whole
-- REVIEW frame L1-flagcards (L1) and L2-numbershelf (L2): sentence frame 0.83 alike, number_names.alphabetical
-- REVIEW frame L1-sackrace (L1) and L2-cyclerace (L2): sentence frame 0.84 alike, counting_line.race_places
-- REVIEW frame L1-beanbags (L1) and L2-tilescore (L2): sentence frame 0.88 alike, bonds.three_cards_total
-- REVIEW frame L1-buildweeks (L1) and L3-funrun (L3): sentence frame 0.87 alike, calendar.weeks_and_days
-- REVIEW frame L1-bagcharm (L1) and L5-cafemenu (L5): sentence frame 0.80 alike, counting_choices.combinations
 - REVIEW frame L2-runlaps (L2) and L3-shells3 (L3): sentence frame 0.86 alike, bar_model.three_amounts
 - REVIEW frame L2-beadsticks (L2) and L6-parcelbelt (L6): sentence frame 0.83 alike, sorting.fewest_swaps
 - REVIEW frame L2-schoolwalks (L2) and L4-parkpaths (L4): sentence frame 0.81 alike, networks.first_stop
@@ -55,8 +44,6 @@ Rules. Levels 3 to 6 (TEASER-STRICT): per level and calendar quarter at most 1 p
 - REVIEW frame L2-hairclips (L2) and L5-nametagpacks (L5): sentence frame 0.94 alike, money.offers [ledger: Tier B: a unit price against an offer and a saving; other offer type]
 - REVIEW frame L2-gardenfence (L2) and L3-posterribbon (L3): sentence frame 0.82 alike, perimeter_area.perimeter_basic
 - REVIEW frame L2-beadchain (L2) and L5-stampgive (L5): sentence frame 0.80 alike, word_problems.compare_amounts
-- REVIEW frame L2-footballmatch (L2) and L5-redeye (L5): sentence frame 0.83 alike, durations.elapsed
-- REVIEW frame L2-paperstars (L2) and L3-shells3 (L3): sentence frame 0.89 alike, bar_model.three_amounts
 - REVIEW frame L3-missednumber (L3) and L5-lostnumber (L5): sentence frame 0.81 alike, series_sum.missing_term
 - REVIEW frame L3-houses (L3) and L5-sixpages (L5): sentence frame 0.80 alike, consecutive.consecutive_total
 - REVIEW frame L3-raffledays (L3) and L4-visitortable (L4): sentence frame 0.90 alike, graphs.table_total [ledger: Tier B: a total of four or five counts from a list; other story, other numbers]
