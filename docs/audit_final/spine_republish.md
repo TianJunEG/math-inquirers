@@ -123,3 +123,17 @@ Totals: 42 published OK, 0 failed, 0 skipped. No 429 daily-limit refusal occurre
 Notes: p6l10 live still holds an older slide file p6l10-warm2 that is no longer in the source order (it shows last); not removed because deletes are not allowed. split/l1/project/slides/l1-tool.html had an uncommitted edit by another agent (Toolbox Card wording) during the run; the republish sent whatever was on disk then. It is not part of this commit.
 
 2026-10-24 (later): owner approved (P6L10-REMOVE-OLD); removed the stray project/slides/p6l10-warm2.html from p6l10 (PNoQzJNbyP4EBZpVHYAgSc) via a files-null republish from split/p6l10/, no force, deck.json unchanged (never referenced warm2). File list re-checked: warm2 gone, order still ends p6l10-reflect, p6l10-end. Nothing else touched; l6s untouched.
+
+## Republish 2026-10-24 (Toolbox Card wording, commit 8fb847b)
+
+Republished only l1, p2l1 and p3l1 to their existing private URLs, one at a time (read + files list first, no force). l6s not touched. No sharing, no delete, no pin. Only the tool slide of each deck was sent (the one file changed by 8fb847b); other files were kept as live.
+
+Pre-publish checks on all three: part minutes total 90 (tutor/build_data.py all, public.json parts summed: p1l1 90, p2l1 90, p3l1 90; tutor/data regenerate reverted with git checkout), second run of levels/restyle.py on split/l1, split/p2l1, split/p3l1 changed 0 files, Mi (img[data-mi]) only on title, break and last (reflect) slide, and split/<key>/project/slides/*tool.html says 'Toolbox Card'.
+
+| key | id | result | reason |
+|---|---|---|---|
+| l1 | 3bJhBJ37ZoAfsuDo4LgWeH | published OK (v13) | live l1-tool.html was already identical (the earlier run had already sent the Toolbox Card wording) |
+| p2l1 | EhKp7RucbNLwmrMPvTA3wu | published OK (v7) | speaker note 'Inquirer Kit card' changed to 'Toolbox Card'; first attempt was refused only because the whole artifact had not been read (path-only read), nothing was published; re-read and published |
+| p3l1 | 75kf81PgcwbhH8w4VDzyMm | published OK (v7) | visible line and speaker note changed from 'Inquirer Kit card' to 'Toolbox Card' |
+
+Totals: 3 published OK, 0 failed. No 429 daily-limit refusal occurred.
