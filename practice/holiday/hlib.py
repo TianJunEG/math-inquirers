@@ -6,17 +6,20 @@ Figures are drawn here as inline SVG (viewBox only, width 100%), sized so that t
 No coin or note pictures.
 """
 import itertools, re
+from fractions import Fraction
 
 NAVY, YEL, TEAL, WARM, PALE = '#1B2A49', '#FFE08A', '#1F7A6F', '#B5481F', '#FFF9E8'
 
 
 # ---------------------------------------------------------------- svg basics
 MIN_PX, PHONE_PX = 12.0, 290     # figure text is at least MIN_PX on a 360 px phone, where a figure is about PHONE_PX wide (card padding and page margins taken off)
+SOL_PX = 250                     # a SOLUTION figure sits inside the grey/green answer box (more padding): about SOL_PX wide on a 360 px phone
+PAD = 4                          # viewBox padding on every side, so strokes and rounded text at the edge are not cut off (the svg also has overflow visible)
 
 
-def lift_text(w, body):
-    """Raise any font-size so the text is at least MIN_PX on screen when the figure is shown PHONE_PX wide (the figure is scaled by PHONE_PX / w)."""
-    scale = min(1.0, PHONE_PX / w)
+def lift_text(w, body, phone=PHONE_PX):
+    """Raise any font-size so the text is at least MIN_PX on screen when the figure is shown `phone` px wide (the figure is scaled by phone / w)."""
+    scale = min(1.0, phone / w)
     need = round(MIN_PX / scale, 1)
     def fix(m):
         v = float(m.group(1))
@@ -24,16 +27,21 @@ def lift_text(w, body):
     return re.sub(r'font-size="([\d.]+)"', fix, body)
 
 
-def lift_svg(svg_text):
-    """The same lift for a finished <svg ...> string whose viewBox width is read from the string (used by the builder for every question and solution figure)."""
+def lift_svg(svg_text, solution=False):
+    """The same lift for a finished <svg ...> string whose viewBox width is read from the string (used by the builder for every question and solution figure).
+    solution=True lifts for the narrower solution box (SOL_PX), so the text is at least MIN_PX there too. The root svg gets overflow="visible"."""
     m = re.search(r'viewBox="[-\d.]+ [-\d.]+ ([\d.]+) [\d.]+"', svg_text)
-    return lift_text(float(m.group(1)), svg_text) if m else svg_text
+    out = lift_text(float(m.group(1)), svg_text, SOL_PX if solution else PHONE_PX) if m else svg_text
+    if re.match(r'\s*<svg\b', out) and 'overflow=' not in out[:out.index('>')]:
+        out = re.sub(r'<svg\b', '<svg overflow="visible"', out, count=1)
+    return out
 
 
 def svg(w, h, body, label):
-    body = lift_text(w, body)
-    return (f'<svg viewBox="0 0 {w} {h}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{esc(label)}" '
-            f'style="width:100%;max-width:{w}px;height:auto;display:block;margin:0 auto" font-family="Nunito Sans, Arial, sans-serif">{body}</svg>')
+    W, H = w + 2 * PAD, h + 2 * PAD
+    body = lift_text(W, body)
+    return (f'<svg viewBox="{-PAD} {-PAD} {W} {H}" overflow="visible" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{esc(label)}" '
+            f'style="width:100%;max-width:{W}px;height:auto;display:block;margin:0 auto" font-family="Nunito Sans, Arial, sans-serif">{body}</svg>')
 
 
 def esc(s):
@@ -239,3 +247,167 @@ def magic_solutions(numbers, side_total):
 
 def unique_text(s):
     return re.sub(r'\s+', ' ', s).strip()
+
+
+# ---------------------------------------------------------------- algebra rules and equal fractions: the BUILD-TIME twins of the checks in practice/submit/mark.js (same grammar, exact arithmetic)
+# poly_parse(s, var): a tiny recursive-descent parser for digits, one letter, + - x * / ( ) ^ and writing side by side (4n, 4(n+3)); division only by a number; NOTHING is evaluated as code.
+# It returns the polynomial as a tuple of Fractions (constant term first) or None. rule_equal / poly_ok say whether a typed rule equals the key as a polynomial ('=' chains allowed).
+_MINUS = re.compile('[\u2212\u2013\u2014\u2010\u2011]')
+
+
+def poly_parse(s, var='n'):
+    import unicodedata
+    s = _MINUS.sub('-', unicodedata.normalize('NFKC', str(s).replace('\u00b2', '^2').replace('\u00b3', '^3'))).lower()
+    for ch in '\u00d7\u00b7\u22c5*':
+        s = s.replace(ch, '*')
+    s = s.replace('\u00f7', '/')
+    if var != 'x':
+        s = s.replace('x', '*')
+    if re.search(r'\d\s+\d', s):
+        return None
+    t = re.findall(r'\d+\.?\d*|\.\d+|[-+*/()^]|.', re.sub(r'\s+', '', s))
+    st = {'p': 0, 'bad': False}
+    isnum = lambda x: x is not None and re.fullmatch(r'\d+\.?\d*|\.\d+', x) is not None
+    at = lambda i: t[i] if 0 <= i < len(t) else None
+
+    def mul(a, b):
+        if len(a) + len(b) > 10:
+            st['bad'] = True
+            return [Fraction(0)]
+        r = [Fraction(0)] * (len(a) + len(b) - 1)
+        for i, x in enumerate(a):
+            for j, y in enumerate(b):
+                r[i + j] += x * y
+        return r
+
+    def nxt():
+        x = at(st['p']); st['p'] += 1
+        return x
+
+    def atom():
+        x = nxt()
+        if x == '(':
+            v = total()
+            if nxt() != ')':
+                st['bad'] = True
+            return v
+        if x == var:
+            return [Fraction(0), Fraction(1)]
+        if isnum(x):
+            return [Fraction(x.rstrip('.') or '0')]
+        st['bad'] = True
+        return [Fraction(0)]
+
+    def power():
+        b = atom()
+        if at(st['p']) == '^':
+            st['p'] += 1
+            e = nxt()
+            if e is None or not re.fullmatch(r'[0-4]', e):
+                st['bad'] = True
+                return b
+            r = [Fraction(1)]
+            for _ in range(int(e)):
+                r = mul(r, b)
+            return r
+        return b
+
+    def unary():
+        if at(st['p']) == '-':
+            st['p'] += 1
+            return mul([Fraction(-1)], unary())
+        if at(st['p']) == '+':
+            st['p'] += 1
+            return unary()
+        return power()
+
+    def prod():
+        v = unary()
+        while True:
+            o = at(st['p'])
+            if o == '*':
+                st['p'] += 1; v = mul(v, unary())
+            elif o == '/':
+                st['p'] += 1
+                d = unary()
+                if len(d) != 1 or d[0] == 0:
+                    st['bad'] = True
+                    return v
+                v = [c / d[0] for c in v]
+            elif o == '(' or o == var or (isnum(o) and not isnum(at(st['p'] - 1))):
+                v = mul(v, power())
+            else:
+                return v
+
+    def total():
+        v = prod()
+        while at(st['p']) in ('+', '-'):
+            o = nxt(); r = prod()
+            n = max(len(v), len(r))
+            v = [(v[i] if i < len(v) else 0) + (1 if o == '+' else -1) * (r[i] if i < len(r) else 0) for i in range(n)]
+        return v
+
+    out = total()
+    if st['bad'] or st['p'] < len(t):
+        return None
+    out = list(out)
+    while len(out) > 1 and out[-1] == 0:
+        out.pop()
+    return tuple(out)
+
+
+def rule_sides(s):
+    """The sides of a typed chain 'a = b = c' that are not the word OUT (a final full stop is ignored)."""
+    return [x.strip() for x in _MINUS.sub('-', str(s)).strip().rstrip('.!').split('=') if not re.fullmatch(r'(?i)out', x.strip())]
+
+
+def poly_ok(keys, v, var='n'):
+    """True if every side of the typed rule equals (as a polynomial in `var`) one of the sides of the keys."""
+    kp = [q for k in keys for sd in rule_sides(k) for q in [poly_parse(sd, var)] if q is not None]
+    sides = rule_sides(v)
+    return bool(sides) and bool(kp) and all((q := poly_parse(sd, var)) is not None and q in kp for sd in sides)
+
+
+def auto_poly(accept, var='n'):
+    """The letter if EVERY accepted writing of a text item is an expression in that letter and they are all the same polynomial (and it really uses the letter), else None.
+    The builder turns such an item into 'compare as a polynomial' without the lesson file saying so."""
+    polys = set()
+    for a in accept:
+        sides = rule_sides(a)
+        if not sides:
+            return None
+        for sd in sides:
+            q = poly_parse(sd, var)
+            if q is None:
+                return None
+            polys.add(q)
+    return var if len(polys) == 1 and len(next(iter(polys))) > 1 else None
+
+
+def frac_tokens(s):
+    """('7/12, 8/12 10/12') -> ([(7,12), (8,12), (10,12)], '') : the fractions in a typed list, and any other symbols left (such as '<'), spaces, commas and semicolons removed."""
+    import unicodedata
+    toks = []
+    txt = re.sub(r'\s*/\s*', '/', _MINUS.sub('-', unicodedata.normalize('NFKC', str(s))))
+
+    def one(m):
+        if m.group(2) is not None:
+            toks.append(((int(m.group(2)) * int(m.group(4)) + int(m.group(3))) * (-1 if m.group(1) else 1), int(m.group(4))))
+        elif m.group(5) is not None:
+            toks.append((int(m.group(5)), int(m.group(6))))
+        else:
+            toks.append((int(m.group(0)), 1))
+        return ' '
+    rest = re.sub(r'(-?)(\d+)\s+(\d+)/(\d+)|(-?\d+)/(\d+)|-?\d+', one, txt)
+    return toks, re.sub(r'[\s,;]+', '', rest).rstrip('.!')
+
+
+def frac_list_ok(keys, v):
+    V, vr = frac_tokens(v)
+    if not V or any(d <= 0 for _, d in V):
+        return False
+    for k in keys:
+        K, kr = frac_tokens(k)
+        if len(K) == len(V) and kr == vr and all(d > 0 and n * V[i][1] == V[i][0] * d for i, (n, d) in enumerate(K)):
+            return True
+    return False

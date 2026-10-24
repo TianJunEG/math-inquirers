@@ -2,12 +2,7 @@
 
 Rules. Levels 3 to 6 (TEASER-STRICT): per level and calendar quarter at most 1 puzzle per sub-structure and 3 per family; the same sub-structure never within 30 days of itself across a quarter boundary; an answer of 10 or more appears once per level and a single digit at most 4 times. Levels 1 and 2 (L1L2-GAP60): the same sub-structure at least 60 days apart (circular, 365- and 366-day year), a family at most 3 times in any 60 days and never on consecutive days, an answer not repeated within 60 days and a single-digit answer at most 2 times in 60 days. All levels: no repeated frame, no two puzzles with most numbers or the same story in common; the sub-structures used by the fixed puzzles on the level pages (counting_choices.digit_cards_arrangements, fractions.fraction_of_remainder, multiples.common_multiple, remainders.two_conditions, sequence.count_on, sequence.which_term) are never used by the bank.
 
-- Level 1 (gap rule, 60 days): 61 puzzles, 61 distinct sub-structures (none twice within the gap), 33 families, most in one family 3
-- Level 2 (gap rule, 60 days): 61 puzzles, 61 distinct sub-structures (none twice within the gap), 34 families, most in one family 3
-- Level 3, quarter 4: 61 puzzles, 61 distinct sub-structures, 38 families, most in one family 3
-- Level 4, quarter 4: 61 puzzles, 61 distinct sub-structures, 41 families, most in one family 3
-- Level 5, quarter 4: 61 puzzles, 61 distinct sub-structures, 41 families, most in one family 3
-- Level 6, quarter 4: 61 puzzles, 61 distinct sub-structures, 33 families, most in one family 3
+- Level 1 (gap rule, 60 days): 61 puzzles, 61 distinct sub-structures (none twice within the gap), 39 families, most in one family 3
 
 ## Capacity of the taxonomy (true numbers, after merging look-alike sub-structures)
 
@@ -27,32 +22,10 @@ Levels 3 to 6 (quarter rule): one use per sub-structure and at most 3 per family
 
 | Level | Puzzles so far | Single-digit answers so far | Share | Projected single-digit answers in 365 | Allowed (9 values x 4) | Verdict |
 |---|---|---|---|---|---|---|
-| 3 | 61 | 14 | 23% | 84 | 36 | WARNING: aim for fewer single-digit answers |
-| 4 | 61 | 6 | 10% | 36 | 36 | ok |
-| 5 | 61 | 3 | 5% | 18 | 36 | ok |
-| 6 | 61 | 14 | 23% | 84 | 36 | WARNING: aim for fewer single-digit answers |
 
-Structure FAIL count (all released months): 14
-- FAIL L1: single-digit answer 8 used 3 times in 60 days (cap 2): L1-ends37, L1-giftstickers, L1-bluebeads
-- FAIL L1: single-digit answer 7 used 4 times in 60 days (cap 2): L1-lift, L1-backplace, L1-camp, L1-fives
-- FAIL L1: single-digit answer 7 used 3 times in 60 days (cap 2): L1-backplace, L1-camp, L1-fives
-- FAIL L1: single-digit answer 2 used 3 times in 60 days (cap 2): L1-trip, L1-fruitclass, L1-cardpairs
-- FAIL L1: single-digit answer 6 used 4 times in 60 days (cap 2): L1-outfits, L1-lineup, L1-bondten, L1-traycounters
-- FAIL L1: single-digit answer 6 used 3 times in 60 days (cap 2): L1-lineup, L1-bondten, L1-traycounters
-- FAIL L1: single-digit answer 5 used 4 times in 60 days (cap 2): L1-cupcakes, L1-pots, L1-hiddendigit, L1-squares22
-- FAIL L1: single-digit answer 5 used 3 times in 60 days (cap 2): L1-pots, L1-hiddendigit, L1-squares22
-- FAIL L1: single-digit answer 9 used 3 times in 60 days (cap 2): L1-samedigits, L1-doublemarbles, L1-ruler
-- FAIL L1: single-digit answer 4 used 3 times in 60 days (cap 2): L1-tencoins, L1-sortrule, L1-orangebags
-- FAIL L2: single-digit answer 6 used 3 times in 60 days (cap 2): L2-snailwall, L2-coins30, L2-vans
-- FAIL L2: single-digit answer 9 used 4 times in 60 days (cap 2): L2-tarts, L2-bunboxes, L2-stickershare, L2-stickerpages
-- FAIL L2: single-digit answer 9 used 3 times in 60 days (cap 2): L2-bunboxes, L2-stickershare, L2-stickerpages
-- FAIL L2: single-digit answer 4 used 3 times in 60 days (cap 2): L2-buns29, L2-sortthree, L2-fewestcoins
+Structure FAIL count (all released months): 0
 
 Capacity verdict for the full year (a plan for January to October, not a defect of the released months): 1 CAPACITY FAIL
 - CAPACITY FAIL Level 1: 62 sub-structures, 61 needed for 365 days at gap 60, slack 1; families allow 372 puzzles a year
-- WARNING Level 3: 23% single-digit answers so far, a year would need about 84 (limit 36)
-- WARNING Level 6: 23% single-digit answers so far, a year would need about 84 (limit 36)
 
-Skeleton matches with our own sources that were reviewed by hand (same masked wording, but no shared numbers): 2
-- REVIEW L3-petshop [12-13]: skeleton 0.60 like "Ben does not choose juice or milk. Aisha does not choose tea. Kumar does not choose milk. Who chooses juice? ..." (extension/data/l5_u10.json), shared numbers 0
-- REVIEW L4-yearlater [12-16]: skeleton 0.79 like "Example: "Between 20 and 50; ÷ 5 leaves 2; ÷ 6 leaves 4." Only 22 fits (22 = 4 × 5 + 2 = 3 × 6 + 4). With the  ..." (p3/content/l5.js), shared numbers 0
+Skeleton matches with our own sources that were reviewed by hand (same masked wording, but no shared numbers): 0

@@ -10,6 +10,9 @@
 3. a second child answers wrongly, skips some, reloads (answers survive), submits: wrong / no answer markers, solutions for skipped questions; solutions are
    hidden before submit and again after 'Change my answers'; wrong text wordings are marked wrong;
 4. every variant family: forces each combination of the variables, checks the question shown equals the template and the ORACLE's answer is accepted;
+   Shared-matcher fixes (week 2 audit) are covered here too: unit and notation forms, equal fractions (equiv_frac), algebra rules as polynomials (poly), number words only when
+   declared, short distinct question buttons, label+box groups that never split at 390 and 360 px, solution figures at least 11 px and not clipped at 360 px, the typed explanation
+   in the submission payload (trimmed, at most 500 characters) when sending is on, and the tutor-report marking_mode of every self-check item.
 5. screenshots at 390 px and 900 px, light and dark, into practice/holiday/<key>/<NN>/proof/; checks there is no horizontal scroll, that every figure
    text is at least 11 px on screen at 390 px, and that no figure text is clipped.
 """
@@ -65,6 +68,22 @@ for it in items:
         fail(f'{it["id"]}: built data differs from the independent check {got}')
 print(f'1. {len(items)} built items; {nchk} re-checked against the independent checkers')
 
+# ---- 1b. the build-time twins in hlib (poly_parse, frac_list_ok) agree with the shared matcher in practice/submit/mark.js on a battery of strings
+import subprocess
+_RULES = [('4n+12', ['(n+3)\u00d74', '4n+12', '4(n+3)', '4*(n+3)', '4x(n+3)', '(n+3)4', '12+4n', '(8n+24)\u00f72', '4n+16\u22124', '(n+3)\u00d74 = 4n+12', 'OUT = 4(n+3)', 'out=4n+12', '4n+12=OUT', '4n+12.', '  4 n + 12 ', '2(2n+6)',
+                      '4n-12', 'n+3\u00d74', '(n+3)+4', '4n+3', '4(n+4)', '(n+3)\u00d75', '3n+12', '7n', '4n', '12', 'n+3 = 4n+12', '4n+12=', 'OUT', '4n+12 n', '4n 12', '4n\u00b2+12', 'fourn+12', '4n+12/0', '(4n+12', 'n^9', '(n+1)'*12]),
+           ('n+3', ['(2n+6)\u00f72', '(2n+6)/2', '2n+6\u00f72', 'n+6', '3+n', 'n+3', '(n+3)']), ('0.5n', ['n/2', 'n\u00f72', '0.5n', '.5n', '-0.5n', '2n/4', 'n/3']), ('n^2+2n+1', ['(n+1)\u00b2', '(n+1)^2', 'n\u00d7n+2n+1', 'n\u00b2+1', 'n^2+2n+1', '(n+1)(n+1)'])]
+_FRACS = [('7/12, 2/3, 5/6', ['7/12, 8/12, 10/12', '7/12 8/12 10/12', '14/24,2/3,5/6', '8/12, 7/12, 10/12', '7/12, 8/12', '7/12, 8/12, 10/12, 1', '7/0, 8/12, 10/12', '0.5, 2/3, 5/6', '7/12, 2/3, 5/6.']),
+          ('1/4 < 1/2 < 3/4', ['2/8 < 4/8 < 6/8', '2/8 > 4/8 > 6/8', '2/8, 4/8, 6/8']), ('1 1/2', ['3/2', '6/4', '11/2', '1 1/2', '1 2/4'])]
+_cases = [dict(rec=dict(marking_mode='auto', type='text', key=[k], poly='n'), v=v, py=H.hlib.poly_ok([k], v, 'n')) for k, vs in _RULES for v in vs]
+_cases += [dict(rec=dict(marking_mode='auto', type='text', key=[k], equiv_frac=True), v=v, py=H.hlib.frac_list_ok([k], v)) for k, vs in _FRACS for v in vs]
+_js = "const M=require(process.argv[1]);const c=JSON.parse(require('fs').readFileSync(0,'utf8'));console.log(JSON.stringify(c.map(x=>M.mark(x.rec,x.v).mark==='right')))"
+_out = json.loads(subprocess.run(['node', '-e', _js, os.path.join(H.ROOT, 'practice', 'submit', 'mark.js')], input=json.dumps(_cases), capture_output=True, text=True, check=True).stdout)
+for _c, _o in zip(_cases, _out):
+    # mark.js also accepts the printed forms exactly; the python twin only the polynomial / fraction reading, so compare only where the python one says no and the string is not the key itself
+    if _c['py'] != _o and not (not _c['py'] and _o and _c['v'].strip() in _c['rec']['key']): fail(f'hlib and mark.js disagree on {_c["rec"].get("poly") and "rule" or "fractions"} {_c["rec"]["key"]} typed {_c["v"]!r}: python {_c["py"]}, mark.js {_o}')
+print(f'1b. hlib (build time) and mark.js (browser and server) agree on {len(_cases)} typed rules and fraction lists')
+
 
 class Q(http.server.SimpleHTTPRequestHandler):
     def log_message(self, *a): pass
@@ -106,17 +125,21 @@ def goto(page, i):
     page.locator(f'#nav button[data-i="{i}"]').click()
 
 
+def idx_of(item_id):
+    return [k for k, x in enumerate(items) if x['id'] == item_id][0]
+
+
 def fresh(br, w=800, h=900, dark=False):
     c = br.new_context(viewport={'width': w, 'height': h}, color_scheme='dark' if dark else 'light')
     p = c.new_page(); p.goto(URL); p.wait_for_selector('#card .q')
     return c, p
 
 
-def figure_text_check(page, w, mn=11):
+def figure_text_check(page, w, mn=11, sel='#card svg text'):
     """Every figure text on screen at least mn px, and none outside its svg."""
-    return page.evaluate("""MIN => {
+    return page.evaluate("""([MIN, SEL]) => {
       const bad = [];
-      document.querySelectorAll('#card svg text').forEach(t => {
+      document.querySelectorAll(SEL).forEach(t => {
         const svg = t.ownerSVGElement, ctm = t.getScreenCTM(); if (!ctm) return;
         const fs = parseFloat(getComputedStyle(t).fontSize) * ctm.a;
         const r = t.getBoundingClientRect(), s = svg.getBoundingClientRect();
@@ -124,7 +147,7 @@ def figure_text_check(page, w, mn=11):
         if (r.left < s.left - 1 || r.right > s.right + 1 || r.top < s.top - 1 || r.bottom > s.bottom + 1) bad.push('clipped ' + t.textContent);
       });
       return bad;
-    }""", mn)
+    }""", [mn, sel])
 
 
 with sync_playwright() as pw:
@@ -205,11 +228,19 @@ with sync_playwright() as pw:
     if page.evaluate("document.activeElement.className") != 'skip': fail('the skip link is not the first Tab stop')
     page.keyboard.press('Enter')
     if 'q|' not in act(): fail('the skip link does not move focus to the question')
+    labs = []
     for i, it in enumerate(items):
         goto(page, i)
         no = it.get('no')
         lab = page.locator(f'#nav button[data-i="{i}"] b').inner_text()
-        if no and lab != no.split(' ')[0]: fail(f'{it["id"]}: nav button shows {lab!r}, printed number is {no!r}')
+        labs.append(lab)
+        aria = page.locator(f'#nav button[data-i="{i}"]').get_attribute('aria-label')
+        if not lab or len(lab) > 14: fail(f'{it["id"]}: nav label {lab!r} is empty or long')
+        if lab in ('Investigation', 'Think', 'Go', 'Think harder', 'Go further', 'Start', 'Extra'): fail(f'{it["id"]}: nav label {lab!r} is only a group word (printed {no!r})')
+        mm = re.match(r'(\d+\([a-z]\)|[A-Z]\d+)', no or '')
+        if mm and mm.group(1) not in lab and not it.get('label'): fail(f'{it["id"]}: nav label {lab!r} lost the printed number {mm.group(1)!r} of {no!r}')
+        if re.match(r'Investigation\b', no or '') and not lab.startswith('Inv'): fail(f'{it["id"]}: investigation label {lab!r}')
+        if no and no not in aria: fail(f'{it["id"]}: accessible name {aria!r} lacks the full label {no!r}')
         if it['type'] in ('set', 'number', 'fields'):
             mode = page.locator('#ans input').first.get_attribute('inputmode')
             neg = any((x if isinstance(x, int) else 0) < 0 for x in ([f['answer'] for f in it['fields']] if it['type'] == 'fields' else (it['answer'] if it['type'] == 'set' else [it['answer']])))
@@ -220,6 +251,8 @@ with sync_playwright() as pw:
                 if no and no.split(' ')[0] not in (inp.get_attribute('aria-label') or ''): fail(f'{it["id"]}: input label {inp.get_attribute("aria-label")!r} lacks the question number'); break
         if it['type'] == 'choice':
             if page.locator('#ans').evaluate("e => e.tagName") != 'FIELDSET' or not page.locator('#ans legend').inner_text().strip(): fail(f'{it["id"]}: radio group has no fieldset/legend')
+    dup = sorted({l for l in labs if labs.count(l) > 1})
+    if dup: fail(f'nav labels shared by two questions (the runner must add a/b): {dup}')
     foot = page.locator('.foot').inner_text()
     if 'nothing is sent anywhere' in foot or 'Your answers stay on this device' not in foot: fail('footer wording (sending off): ' + foot)
     if page.locator('meta[name=robots][content*=noindex]').count() != 1: fail('no noindex meta')
@@ -238,14 +271,34 @@ with sync_playwright() as pw:
     # sending switched on (token present): the footer says so and the 'I checked / I got it / not yet' ticks are visible after submit
     ctx = br.new_context(viewport={'width': 800, 'height': 900})
     page = ctx.new_page()
-    page.route('**/hol-send/**', lambda r: r.abort())
+    posted = []
+    def _send(r):
+        posted.append(json.loads(r.request.post_data or '{}'))
+        r.fulfill(status=200, content_type='application/json', body='{"ok":true,"marks":{}}')
+    page.route('**/hol-send/**', _send)
     page.add_init_script("window.MI_SUBMIT={endpoint:'http://127.0.0.1:9/hol-send/x',token:'t'.repeat(40),unit:'hol-test',version:'v1'}")
     page.goto(URL); page.wait_for_selector('#card .q')
+    typed_ids = [x['id'] for x in items if x['type'] == 'selfcheck' and not x.get('paper')]
+    if typed_ids:       # the typed explanation goes in the payload (trimmed, at most 500 characters); 'answers' still says only '(written)'
+        goto(page, idx_of(typed_ids[0])); page.locator('#ans textarea').fill('   ' + 'Because it is so. ' * 40 + '   ')
+        if len(typed_ids) > 1: goto(page, idx_of(typed_ids[1])); page.locator('#ans textarea').fill('short note')
     foot = page.locator('.foot').inner_text()
-    if 'Your answers are sent to your tutor so they can help you' not in foot or 'nothing is sent' in foot: fail('footer wording (sending on): ' + foot)
+    if 'are sent to your tutor so they can help you' not in foot or 'explanation boxes' not in foot or 'nothing is sent' in foot: fail('footer wording (sending on): ' + foot)
     si = [k for k, x in enumerate(items) if x['type'] == 'selfcheck']
     page.locator('#submit').click()
     if page.locator('#yes').count(): page.locator('#yes').click()
+    page.wait_for_timeout(600)
+    if not posted: fail('sending on: nothing was posted')
+    elif typed_ids:
+        pl = posted[-1]; ex = pl.get('explain') or {}
+        if set(ex) != set(typed_ids[:2]): fail(f'explain keys {sorted(ex)} != typed {typed_ids[:2]}')
+        t0 = ex.get(typed_ids[0], '')
+        if not (0 < len(t0) <= 500) or t0 != t0.strip() or not t0.startswith('Because it is so.'): fail(f'explanation not trimmed and capped at 500: {len(t0)} {t0[:30]!r}')
+        if len(typed_ids) > 1 and ex.get(typed_ids[1]) != 'short note': fail('short explanation not sent as typed')
+        if pl['answers'][typed_ids[0]] != '(written)': fail('answers[...] must stay "(written)"')
+        if any(k in pl for k in ('correct', 'marks', 'client_marks')): fail('payload carries a mark')
+        if set(pl) - {'v', 'unit', 'unit_version', 'sid', 'rev', 'answers', 'self', 'explain'}: fail('unexpected payload fields ' + str(set(pl)))
+        if page.locator('#card').inner_text().count('Because it is so') > 0 and not page.locator('#ans textarea').count(): pass
     if si:
         goto(page, si[0])
         for lbl in ('I checked it', 'I got it', 'Not yet'):
@@ -353,6 +406,44 @@ with sync_playwright() as pw:
         if page.evaluate('document.documentElement.scrollWidth > window.innerWidth + 1'): fail(f'{it["id"]}: horizontal scroll at 360 px')
         for b in figure_text_check(page, 360, 11.5): fail(f'{it["id"]}: figure text {b} at 360 px (minimum 11.5 px)')
     ctx.close()
+    # a label and its box never split at phone width: every box sits in one non-breaking group with the words just before it, and the label's last line is on the box's line
+    GROUPS = """() => [...document.querySelectorAll('#ans .fg')].map(g => {
+        const inp = g.querySelector('input'), lab = g.querySelector('.fl'), ib = inp.getBoundingClientRect(), card = document.querySelector('#card').getBoundingClientRect();
+        const lb = lab ? lab.getBoundingClientRect() : null, gb = g.getBoundingClientRect();
+        return { label: lab ? lab.textContent : '', ok_line: !lb || (ib.top + ib.height / 2 >= lb.top - 1 && ib.top + ib.height / 2 <= lb.bottom + 1), inside: gb.left >= card.left - 1 && gb.right <= card.right + 1, nowrap: getComputedStyle(g).flexWrap === 'nowrap' && ['flex', 'inline-flex'].includes(getComputedStyle(g).display) };
+      }); """
+    for w in (390, 360):
+        ctx, page = fresh(br, w, 900)
+        ng = 0
+        for i, it in enumerate(items):
+            if it['type'] != 'fields': continue
+            goto(page, i)
+            for g in page.evaluate(GROUPS):
+                ng += 1
+                if not g['ok_line']: fail(f'{it["id"]}: label {g["label"]!r} is not on the same line as its box at {w} px')
+                if not g['inside']: fail(f'{it["id"]}: label group {g["label"]!r} leaves the card at {w} px')
+                if not g['nowrap']: fail(f'{it["id"]}: box group is not a non-breaking flex group')
+            want = {('p5', 4, '4b'): ['EBF', 'FCD'], ('p5', 4, '3a'): ['Height of triangle ABC', 'Area of ABC'], ('p5', 4, '3b'): ['Height of triangle ACD', 'Area of ACD'], ('p6', 4, '1c'): ['OUT =', 'IN for OUT 48'], ('p6', 4, 'C3'): ['IN 20 gives OUT', 'OUT 99 comes from IN']}.get((key, n, it['id']))
+            if want:
+                labs_ = [g['label'] for g in page.evaluate(GROUPS)]
+                for wtxt in want:
+                    if not any(wtxt in l for l in labs_): fail(f'{it["id"]}: no group labelled {wtxt!r} at {w} px (labels {labs_})')
+        ctx.close()
+    # solution figures (shown after Submit, inside the answer box): text at least 11 px at 360 px and 390 px, and not cut off by the figure's edge
+    nsol = 0
+    for w in (360, 390):
+        ctx, page = fresh(br, w, 900)
+        page.locator('#submit').click()
+        if page.locator('#yes').count(): page.locator('#yes').click()
+        for i, it in enumerate(items):
+            if not it.get('sol_svg'): continue
+            goto(page, i); nsol += 1
+            if page.evaluate('document.documentElement.scrollWidth > window.innerWidth + 1'): fail(f'{it["id"]}: horizontal scroll with the solution figure at {w} px')
+            for b in figure_text_check(page, w, 11, '#solfig svg text'): fail(f'{it["id"]}: solution figure text {b} at {w} px')
+            if page.evaluate("[...document.querySelectorAll('#solfig svg')].some(s => getComputedStyle(s).overflow !== 'visible')"): fail(f'{it["id"]}: solution svg clips its overflow')
+        ctx.close()
+    print(f'5b. {nsol} solution figures at 360 and 390 px: text at least 11 px and inside the figure, no horizontal scroll')
+    print(f'5c. {ng} label+box groups at 390 and 360 px: each in one nowrap flex group, label on the box line, inside the card')
     print(f'5. all {N} questions fit at 390 and 360 px with no horizontal scroll; figure text is at least 11 px (11.5 px at 360 px) and inside its figure')
 
     def shot(name, w, h, dark=False, steps=None, full=False):
@@ -398,9 +489,18 @@ import subprocess
 sys.path.insert(0, os.path.join(H.ROOT, 'practice', 'submit'))
 import make_keys                                   # noqa: E402
 _k, _ver, _d, keys, _tags = make_keys.build(0, n, key)
-for it, kr in zip(items, keys):      # open-ended items are reported as open, not as 'checked on paper'
-    if it.get('open') and (kr['marking_mode'], kr['type']) != ('none', 'open'): fail(f'{it["id"]}: open item exported as {kr["marking_mode"]}/{kr["type"]}')
-    if it['type'] == 'selfcheck' and not it.get('open') and not it['steps'][0].lower().startswith('open') and kr['marking_mode'] != 'self': fail(f'{it["id"]}: self-check exported as {kr["marking_mode"]}')
+nmodes = {}
+for it, kr in zip(items, keys):      # the report mode is the item's own marking_mode: self = compare with a model answer / paper drawing, none = truly open
+    if it['type'] != 'selfcheck':
+        for fl in ('words', 'poly', 'equiv_frac', 'unit'):
+            if it.get(fl) != kr.get(fl): fail(f'{it["id"]}: flag {fl} is {it.get(fl)!r} in the data but {kr.get(fl)!r} in the key')
+        continue
+    want = ('none', 'open') if it['marking_mode'] == 'none' and not it.get('paper') else ('self', 'selfcheck')
+    if (kr['marking_mode'], kr['type']) != want: fail(f'{it["id"]}: self-check with marking_mode {it["marking_mode"]} exported as {kr["marking_mode"]}/{kr["type"]}')
+    if it.get('paper') and kr['marking_mode'] != 'self': fail(f'{it["id"]}: paper-only item exported as {kr["marking_mode"]}')
+    if re.search(r'\b(explain|why|how do you know)\b', (it['no'] + ' ' + it['q'][:60]).lower()) and kr['marking_mode'] != 'self' and not src[it['id']].get('marking_mode'):
+        fail(f'{it["id"]}: an Explain item with no marking_mode of its own is exported as {kr["marking_mode"]}')
+    nmodes[kr['marking_mode']] = nmodes.get(kr['marking_mode'], 0) + 1
 cases = []
 for it, kr in zip(items, keys):
     if kr['marking_mode'] != 'auto':
@@ -411,11 +511,28 @@ for it, kr in zip(items, keys):
     if t == 'choice':
         wrong = [o for o in it['options'] if o != it['answer']][0]
     cases.append(dict(rec=kr, v=right, want='right')); cases.append(dict(rec=kr, v=wrong, want='wrong')); cases.append(dict(rec=kr, v='', want='skipped'))
+    if t == 'text' and it.get('poly'):      # the same rule written in other ways is right; changed rules are wrong
+        a0 = it['answer'][0].replace('OUT = ', '').replace('out=', '')
+        for v in (f'({a0})*1', f'0+{a0}', f'{a0}+0', f'OUT = {a0}', f'{a0} = {a0}'): cases.append(dict(rec=kr, v=v, want='right'))
+        for v in (f'{a0}+1', f'{a0}-1', f'2*({a0})', f'({a0})+n'): cases.append(dict(rec=kr, v=v, want='wrong'))
+    if t == 'text' and it.get('equiv_frac'):
+        tk, rest = H.hlib.frac_tokens(it['answer'][0])
+        if not rest and len(tk) > 1:
+            cases.append(dict(rec=kr, v=', '.join(f'{2 * a}/{2 * b}' for a, b in tk), want='right')); cases.append(dict(rec=kr, v=', '.join(f'{a}/{b}' for a, b in reversed(tk)), want='wrong'))
+            cases.append(dict(rec=kr, v=', '.join(f'{a + 1}/{b}' for a, b in tk), want='wrong'))
+    if t in ('number', 'fields') and not it.get('unit') is False:      # unit and bracket forms of a whole number answer
+        vals = [f['answer'] for f in it['fields']] if t == 'fields' else [it['answer']]
+        if t == 'number': cases.append(dict(rec=kr, v=f'{vals[0]} cm2', want='right')); cases.append(dict(rec=kr, v=f'({vals[0]})', want='right')); cases.append(dict(rec=kr, v=f'{vals[0]}°C', want='right'))
+    if t in ('number', 'fields'):       # number words never count unless the item declares words
+        w1 = [f['answer'] for f in it['fields']] if t == 'fields' else [it['answer']]
+        if all(0 <= x <= 9 for x in w1) and not it.get('words'):
+            W = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
+            cases.append(dict(rec=kr, v=[W[x] for x in w1] if t == 'fields' else W[w1[0]], want='wrong'))
 js = "const M=require(process.argv[1]);const c=JSON.parse(require('fs').readFileSync(0,'utf8'));console.log(JSON.stringify(c.map(x=>M.mark(x.rec,x.v).mark)))"
 out = json.loads(subprocess.run(['node', '-e', js, os.path.join(H.ROOT, 'practice', 'submit', 'mark.js')], input=json.dumps(cases), capture_output=True, text=True, check=True).stdout)
 bad = [(c['rec']['id'], c['want'], o) for c, o in zip(cases, out) if c['want'] != o]
 if bad: fail(f'server marking differs: {bad[:5]}')
-print(f'6. {len(keys)} server keys made; mark.js marks {len(cases)} right / wrong / blank / self answers as expected')
+print(f'6. self-check items exported as {nmodes}; {len(keys)} server keys made; mark.js marks {len(cases)} right / wrong / blank / self answers as expected')
 
 print('RESULT:', 'OK' if not fails else f'{len(fails)} FAILURES')
 sys.exit(1 if fails else 0)

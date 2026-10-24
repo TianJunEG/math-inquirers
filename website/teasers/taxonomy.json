@@ -431,12 +431,12 @@
     "angle"
    ],
    "where": {
+    "kind": [
+     "sum"
+    ],
     "total": [
      180,
      360
-    ],
-    "kind": [
-     "sum"
     ]
    },
    "merged_from": [
@@ -1209,7 +1209,13 @@
    ],
    "where": {
     "pred": [
-     "digit_eq"
+     "digit_eq",
+     "digit_plus",
+     "digit_times",
+     "digit_sum"
+    ],
+    "ask": [
+     "only"
     ]
    },
    "cite": "MOE P1 NA Whole Numbers 1.2 tens and ones, p.31 (Level 1); P2 numbers to 1000, p.33"

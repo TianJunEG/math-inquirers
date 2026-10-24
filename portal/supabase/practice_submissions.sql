@@ -3,6 +3,8 @@
 -- Supabase project, never first on the live one. Run AFTER schema.sql and policies.sql. Safe to re-run (idempotent).
 -- If you ever re-run policies.sql (it revokes every function grant), re-run this file after it.
 --
+-- Round-1 audit fixes (24 Oct 2026) are marked "R1-". See docs/audit_final/portal_ui_fixes_round1.md.
+--
 -- Design in one paragraph
 --   * Identity: the EXISTING child profile (public.children: display name + PIN, no child email) under the EXISTING parent account. The child signs in
 --     with family code + name + PIN exactly as now (child_sign_in); child_start_session() wraps that check and mints a short-lived random token (stored
@@ -50,8 +52,10 @@ create table if not exists public.child_sessions (
   token_hash text not null unique,
   created_at timestamptz not null default now(),
   expires_at timestamptz not null,
-  revoked_at timestamptz
+  revoked_at timestamptz,
+  last_seen_at timestamptz not null default now()      -- R1-L6: idle timeout. A session unused for 60 minutes stops working (shared tablets); every use refreshes it
 );
+alter table public.child_sessions add column if not exists last_seen_at timestamptz not null default now();
 create index if not exists child_sessions_child_idx on public.child_sessions (child_id, expires_at desc);
 
 -- Same check as child_sign_in (lockout after 5 wrong PINs, same silent failure), plus: the parent must have granted 'online_practice'.
@@ -207,10 +211,19 @@ create table if not exists public.ext_orders (
   ship_postal text check (ship_postal ~ '^[0-9]{6}$'), ship_phone text check (char_length(ship_phone) <= 30),
   shipped_at timestamptz, delivered_at timestamptz, ship_cleared_at timestamptz,   -- address cleared 30 days after delivery (privacy page, to confirm)
   created_at    timestamptz not null default now(),
+  -- R1-M3/H1: money received that the owner must look at. refund_due is set when a Stripe payment arrives for an order the parent had cancelled
+  -- (paid_after_cancel_at), or when a parent deletes their account while holding a paid order. The owner refunds in Stripe/PayNow (or reinstates
+  -- an online-only order) and then clears it with admin_resolve_ext_refund().
+  refund_due           boolean not null default false,
+  paid_after_cancel_at timestamptz,
+  admin_note           text check (admin_note is null or char_length(admin_note) <= 500),
   check (format = 'online' or ship_name is not null or status in ('cancelled','refunded') or ship_cleared_at is not null),
   check (ship_status = 'not_needed' or format <> 'online')
 );
 create index if not exists ext_orders_parent_idx on public.ext_orders (parent_id);
+alter table public.ext_orders add column if not exists refund_due boolean not null default false;
+alter table public.ext_orders add column if not exists paid_after_cancel_at timestamptz;
+alter table public.ext_orders add column if not exists admin_note text check (admin_note is null or char_length(admin_note) <= 500);
 
 create table if not exists public.child_book_access (
   id          uuid primary key default gen_random_uuid(),
@@ -498,7 +511,12 @@ create policy tutor_groups_own on public.tutor_groups for select to authenticate
 create or replace function public._child_for_token(p_hash text) returns uuid
 language sql stable security definer set search_path = public as $$
   select s.child_id from public.child_sessions s join public.children c on c.id = s.child_id join public.parents p on p.id = c.parent_id
-   where s.token_hash = p_hash and s.revoked_at is null and s.expires_at > now() and p.deleted_at is null;
+   where s.token_hash = p_hash and s.revoked_at is null and s.expires_at > now() and s.last_seen_at > now() - interval '60 minutes' and p.deleted_at is null;
+$$;
+-- R1-L6: every successful use of the token refreshes the idle clock (called by the volatile service functions and child_session_overview).
+create or replace function public._touch_child_session(p_hash text) returns void
+language sql security definer set search_path = public as $$
+  update public.child_sessions set last_seen_at = now() where token_hash = p_hash and revoked_at is null and expires_at > now();
 $$;
 
 -- Step 1 for the Worker: who is this, may they submit, and the keys to mark with. Rate limits: 20 submissions per child per hour, 3000 per hour in all.

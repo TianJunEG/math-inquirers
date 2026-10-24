@@ -322,15 +322,36 @@ def b_grid_totals(rows, cols, known, ask):
     R, C = len(rows), len(cols)
     fixed = {(r, c): v for r, c, v in known}
     free = [(r, c) for r in range(R) for c in range(C) if (r, c) not in fixed]
-    top = max(rows + cols)
     out = set()
-    for vals in itertools.product(range(top + 1), repeat=len(free)):
-        g = dict(fixed)
-        g.update(zip(free, vals))
-        if all(sum(g[(r, c)] for c in range(C)) == rows[r] for r in range(R)) and \
-           all(sum(g[(r, c)] for r in range(R)) == cols[c] for c in range(C)):
-            out.add(g[tuple(ask)])
-    return out if out else {BAD}
+    count = [0]
+
+    def fill(i, grid, rrem, crem):
+        if i == len(free):
+            if all(x == 0 for x in rrem) and all(x == 0 for x in crem):
+                count[0] += 1
+                out.add(grid[tuple(ask)])
+            return
+        r, c = free[i]
+        # every whole number that does not push a row or column total over its limit
+        for v in range(0, min(rrem[r], crem[c]) + 1):
+            grid[(r, c)] = v
+            rrem[r] -= v
+            crem[c] -= v
+            fill(i + 1, grid, rrem, crem)
+            rrem[r] += v
+            crem[c] += v
+        del grid[(r, c)]
+    rrem, crem = list(rows), list(cols)
+    grid = dict(fixed)
+    for (r, c), v in fixed.items():
+        rrem[r] -= v
+        crem[c] -= v
+    if min(rrem + crem) < 0:
+        return {BAD}
+    fill(0, grid, rrem, crem)
+    if count[0] != 1:
+        out.add(BAD)
+    return out
 
 
 @brute

@@ -23,6 +23,18 @@ strings that must occur in the workbook source), plus by type
     selfcheck paper=True|False, facts=<value>, check()      shown only: the child compares with the worked solution; never auto-marked.
               paper=True = drawing / ruler / kit task: shown with 'Do this on paper, then check your drawing against the answer shown on screen.'
               open=True  = no objective fact to check (an explanation); the model answer is a worked example
+              marking_mode='self' | 'open'  how the TUTOR REPORT counts it (make_keys.py reads it): 'self' = the child compares with a model answer (every paper-only drawing, every
+              'Explain / why / how do you know' item); 'open' = truly open, no objective fact (make up your own, many answers are right). Paper-only is always 'self'.
+              Default when the lesson file does not say: 'self', except an open=True item that is plainly make-up-your-own ('make up', 'your own', 'invent', 'design', or a model
+              answer that starts 'Open' / 'Answers vary'), which is 'open'.
+    label     optional (any item): the short label on the question button (up to about 8 characters, such as '2(b) P'). Default: derived from `no` by sheet.js
+              ('Investigation 2' -> 'Inv 2', 'Think harder 3 (why)' -> 'T3', 'Go further 6' -> 'G6', '3(d)' twice -> '3(d)-a', '3(d)-b'). Set it only for an unusual `no`.
+    text answers: three optional flags, all off unless stated
+              poly='n' | False   the typed rule is compared with the accepted writings as a POLYNOMIAL in n ('=' chains allowed: '(n+3)x4 = 4n+12', 'OUT = 4(n+3)'; (2n+6)/2 equals n+3).
+                                 DEFAULT: on automatically when EVERY accepted writing is an expression in n and they are all the same polynomial (so every algebra-rule item is on); poly=False turns it off.
+              equiv_frac=True | False  every fraction in a typed list may be written in any equal form, in the same order ('7/12, 8/12, 10/12' for '7/12, 2/3, 5/6').
+                                 DEFAULT: on when the hint says "same bottom number" / "same denominator" and the accepted writings are fractions; otherwise off (only the printed forms).
+    number / fields: words=True  number words ('five', 'twenty-five', 'minus five') are also accepted. DEFAULT off: words are wrong unless an item declares it.
     svg (question figure) and sol_fig (callable(facts) -> svg of the correct drawing, built from the CHECKED values)
 
 The build stops, and writes nothing, unless: every checker equals the printed answer; every src string occurs in the workbook source; every variant
@@ -96,6 +108,46 @@ def same(it, got):
     raise Fail(f'{it["id"]}: unknown type {t}')
 
 
+MAKEUP = re.compile(r'make up|your own|invent|design your|create your', re.I)
+
+
+def self_mode(it):
+    """How a self-check item is counted in the tutor report: 'self' (compare with a model answer) or 'none' (truly open). See the module docstring."""
+    mm = it.get('marking_mode')
+    if mm is not None:
+        if mm not in ('self', 'open', 'none'):
+            raise Fail(f'{it["id"]}: marking_mode must be "self" or "open"')
+        mm = 'none' if mm in ('open', 'none') else 'self'
+    elif it.get('open'):
+        first = (it.get('steps') or [''])[0].lstrip().lower()
+        mm = 'none' if MAKEUP.search(it.get('q', '')) or first.startswith(('open', 'answers vary')) else 'self'
+    else:
+        mm = 'self'
+    return 'self' if it.get('paper') else mm      # a paper-only drawing is always compared with the shown answer
+
+
+def text_flags(i, it, out):
+    """poly / equiv_frac for a text item (defaults in the module docstring); every accepted writing is checked with the build-time parsers in hlib."""
+    acc = out['answer']
+    poly = it.get('poly')
+    if poly is None:
+        poly = hlib.auto_poly(acc)
+    elif poly:
+        poly = poly if isinstance(poly, str) and len(poly) == 1 else 'n'
+        if hlib.auto_poly(acc, poly) != poly:
+            raise Fail(f'{i}: poly={poly!r} but the accepted writings are not all the same polynomial in {poly}: {acc}')
+    if poly:
+        out['poly'] = poly
+    eq = it.get('equiv_frac')
+    parsable = all(hlib.frac_tokens(a)[0] and all(d > 0 for _, d in hlib.frac_tokens(a)[0]) for a in acc)
+    if eq is None:
+        eq = bool(re.search(r'same (bottom number|denominator)', it.get('hint', ''), re.I)) and parsable and not poly
+    if eq:
+        if not parsable:
+            raise Fail(f'{i}: equiv_frac=True but not every accepted writing is a list of fractions: {acc}')
+        out['equiv_frac'] = True
+
+
 def make_item(src):
     it = dict(src)
     i, t = it['id'], it['type']
@@ -112,12 +164,20 @@ def make_item(src):
     out['q'] = f'{it["no"]}. {it["q"]}'
     if it.get('unit') is False:                   # a number item whose answer must be typed with no unit word
         out['unit'] = False
+    if it.get('words'):                           # number words ('five') accepted only when the item declares it (no default)
+        if t not in ('number', 'fields'):
+            raise Fail(f'{i}: words=True is only for number and fields items')
+        out['words'] = True
+    if it.get('label'):
+        if not isinstance(it['label'], str) or len(it['label']) > 12:
+            raise Fail(f'{i}: label must be a short string (at most 12 characters)')
+        out['label'] = it['label']
     if it.get('svg'):
         out['svg'] = hlib.lift_svg(it['svg'])      # figure text at least 12 px on a 360 px phone (shared rule, also for figures a lesson draws itself)
     if t == 'selfcheck':
         out['paper'] = bool(it.get('paper'))
         out['paper_only'] = out['paper']
-        out['marking_mode'] = 'self'
+        out['marking_mode'] = self_mode(it)
         facts = it.get('facts')
         chk = it.get('check')
         if chk is not None:
@@ -129,7 +189,7 @@ def make_item(src):
             raise Fail(f'{i}: a self-check item needs check() or open=True')
         out['open'] = bool(it.get('open'))
         if it.get('sol_fig'):
-            out['sol_svg'] = hlib.lift_svg(it['sol_fig'](facts))
+            out['sol_svg'] = hlib.lift_svg(it['sol_fig'](facts), solution=True)
         return out, facts
     out['marking_mode'] = 'auto'
     if t == 'text':
@@ -139,6 +199,7 @@ def make_item(src):
         else:
             out['answer'] = list(it['accept']); out['shown'] = it.get('shown') or it['accept'][0]
         it = dict(it, answer=out['answer'])
+        text_flags(i, it, out)
     if 'check' not in it or it['check'] is None:
         raise Fail(f'{i}: no independent checker')
     got = it['check']()
@@ -177,7 +238,7 @@ def make_item(src):
     else:
         raise Fail(f'{i}: unknown type {t}')
     if it.get('sol_fig'):
-        out['sol_svg'] = hlib.lift_svg(it['sol_fig'](got))
+        out['sol_svg'] = hlib.lift_svg(it['sol_fig'](got), solution=True)
     return out, None
 
 
@@ -224,7 +285,7 @@ def build(key, n):
     page = open(os.path.join(ROOT, 'term', 'l1', 'runner', 'index.html'), encoding='utf-8').read()
     css = B.SHEET_CSS + ('details.learn{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:.6rem 1rem;margin:0 0 1rem}'
                          'details.learn summary{font-weight:800;cursor:pointer;min-height:44px;display:flex;align-items:center}details.learn p{margin:.3rem 0}'
-                         '.card .q{white-space:pre-line}.card svg,.fb svg{max-width:100%;height:auto}.fig{background:#fff;border-radius:12px;padding:4px}@media(max-width:480px){.card{padding:1rem .75rem 1.2rem}}')
+                         '.card .q{white-space:pre-line}.card svg,.fb svg{max-width:100%;height:auto;overflow:visible}.fig{background:#fff;border-radius:12px;padding:4px}@media(max-width:480px){.card{padding:1rem .75rem 1.2rem}}')
     head = page[:page.index('</style>')] + css + '</style></head>'
     head = head.replace('<meta charset="utf-8">', '<meta charset="utf-8"><meta name="robots" content="noindex,nofollow">', 1)
     head = head.replace('<title>Practice | Math Inquirers</title>', f'<title>Practice: {B.html.escape(meta["title"])} | Math Inquirers</title>')

@@ -36,9 +36,21 @@ create table public.children (
   pin_hash         text not null,
   pin_failed       smallint not null default 0,
   pin_locked_until timestamptz,
+  pin_lock_level   smallint not null default 0,      -- escalating lockout: 0 none, 1 = 15 min, 2 = 1 hour, 3 = 6 hours, 4 = 24 hours (see child_sign_in)
   created_at       timestamptz not null default now(),
   updated_at       timestamptz not null default now()
 );
+
+-- One row each time a child's PIN is locked by wrong guesses, so the PARENT is told on the dashboard (my_pin_alerts). No PIN, no guess, no IP is stored.
+create table public.pin_lock_events (
+  id           uuid primary key default gen_random_uuid(),
+  child_id     uuid not null references public.children(id) on delete cascade,
+  locked_at    timestamptz not null default now(),
+  locked_until timestamptz not null,
+  lock_level   smallint not null,
+  seen_at      timestamptz                              -- the parent pressed "Got it"
+);
+create index pin_lock_events_child_idx on public.pin_lock_events (child_id, locked_at desc);
 create unique index children_parent_name_uq on public.children (parent_id, lower(btrim(display_name)));
 
 -- ---------- groups (seeded from website/data/beta_schedule.json by portal/tools/gen_groups_seed.py) ----------
@@ -175,11 +187,27 @@ begin
   return uid;
 end $$;
 
+-- PIN rules, checked when a PIN is SET (never on sign-in): 4 to 6 digits, and not one of the easy guesses an attacker (or a sibling) tries first:
+-- all the same digit (0000, 1111), a run up or down (1234, 4321, 7890, 123456), a repeated pair or triple (1212, 123123), a few very common PINs (2580, 1004 ...)
+-- and birth-year patterns (a 4-digit year 1940-2039, or year+month / month+year in 6 digits). The lockout in child_sign_in is the second line of defence.
+create or replace function public._pin_check(p_pin text) returns void
+language plpgsql immutable set search_path = public as $$
+begin
+  if p_pin is null or p_pin !~ '^[0-9]{4,6}$' then raise exception 'pin_format'; end if;
+  if p_pin ~ '^(.)\1+$'
+     or position(p_pin in '01234567890') > 0 or position(p_pin in '09876543210') > 0
+     or p_pin ~ '^(..)\1+$' or p_pin ~ '^(...)\1$'
+     or p_pin in ('2580','0852','1004','1010','1122','1313','2000','2001','6969','7410','8520','1230','3210','123321','112233','121314','654321')
+     or p_pin ~ '^(19[4-9][0-9]|20[0-3][0-9])$'
+     or p_pin ~ '^(19[4-9][0-9]|20[0-3][0-9])(0[1-9]|1[0-2])$' or p_pin ~ '^(0[1-9]|1[0-2])(19[4-9][0-9]|20[0-3][0-9])$'
+  then raise exception 'pin_weak'; end if;
+end $$;
+
 create or replace function public.add_child(p_name text, p_level int, p_pin text) returns uuid
 language plpgsql security definer set search_path = public, extensions as $$
 declare uid uuid := public._require_parent(); cid uuid;
 begin
-  if p_pin is null or p_pin !~ '^[0-9]{4,6}$' then raise exception 'pin_format'; end if;
+  perform public._pin_check(p_pin);
   if (select count(*) from public.children where parent_id = uid) >= 6 then raise exception 'too_many_children'; end if;
   insert into public.children (parent_id, display_name, level, pin_hash)
   values (uid, btrim(p_name), p_level, crypt(p_pin, gen_salt('bf', 10)))
@@ -197,8 +225,9 @@ begin
     raise exception 'level_locked_by_enrolment';
   end if;
   if p_pin is not null and p_pin <> '' then
-    if p_pin !~ '^[0-9]{4,6}$' then raise exception 'pin_format'; end if;
-    update public.children set pin_hash = crypt(p_pin, gen_salt('bf', 10)), pin_failed = 0, pin_locked_until = null where id = p_child;
+    perform public._pin_check(p_pin);
+    update public.children set pin_hash = crypt(p_pin, gen_salt('bf', 10)), pin_failed = 0, pin_locked_until = null, pin_lock_level = 0 where id = p_child;
+    update public.pin_lock_events set seen_at = coalesce(seen_at, now()) where child_id = p_child;   -- a new PIN answers the alert
   end if;
   update public.children set display_name = btrim(p_name), level = p_level, updated_at = now() where id = p_child;
 end $$;
@@ -215,11 +244,15 @@ begin
 end $$;
 
 -- Child sign-in check (callable without a parent login). Returns a row on success, nothing on any failure
--- (unknown family/name, wrong PIN, locked): the caller cannot tell which. 5 wrong PINs lock the child for 15 minutes.
+-- (unknown family/name, wrong PIN, locked): the caller cannot tell which. ESCALATING lockout: 5 wrong PINs lock the child for 15 minutes; each further
+-- lock without a correct sign-in in between is longer (1 hour, 6 hours, then 24 hours), so guessing a PIN is limited to 20 tries a day at worst and a
+-- guesser cannot keep a child out for ever without the parent being told: every lock writes a pin_lock_events row that the parent sees on the dashboard
+-- (my_pin_alerts) and the parent can reset the PIN (update_child), which clears the lock. A correct sign-in clears the level; a level not
+-- raised for 7 days falls back to the first step.
 create or replace function public.child_sign_in(p_family_code text, p_name text, p_pin text)
 returns table (child_id uuid, display_name text, level smallint)
 language plpgsql security definer set search_path = public, extensions as $$
-declare c public.children;
+declare c public.children; lvl int; dur interval;
 begin
   select ch.* into c from public.children ch join public.parents p on p.id = ch.parent_id
    where p.family_code = upper(btrim(p_family_code)) and p.deleted_at is null
@@ -230,15 +263,34 @@ begin
   end if;
   if c.pin_locked_until is not null and c.pin_locked_until > now() then return; end if;
   if p_pin is not null and c.pin_hash = crypt(p_pin, c.pin_hash) then
-    update public.children set pin_failed = 0, pin_locked_until = null where id = c.id;
+    update public.children set pin_failed = 0, pin_locked_until = null, pin_lock_level = 0 where id = c.id;
     return query select c.id, c.display_name, c.level;
+  elsif c.pin_failed + 1 < 5 then
+    update public.children set pin_failed = pin_failed + 1 where id = c.id;
+    return;
   else
-    update public.children set
-      pin_failed = case when pin_failed + 1 >= 5 then 0 else pin_failed + 1 end,
-      pin_locked_until = case when pin_failed + 1 >= 5 then now() + interval '15 minutes' else pin_locked_until end
-     where id = c.id;
+    lvl := case when c.pin_lock_level > 0 and c.pin_locked_until is not null and c.pin_locked_until < now() - interval '7 days' then 1
+                else least(c.pin_lock_level + 1, 4) end;
+    dur := case lvl when 1 then interval '15 minutes' when 2 then interval '1 hour' when 3 then interval '6 hours' else interval '24 hours' end;
+    update public.children set pin_failed = 0, pin_lock_level = lvl, pin_locked_until = now() + dur where id = c.id;
+    insert into public.pin_lock_events (child_id, locked_until, lock_level) values (c.id, now() + dur, lvl);
     return;
   end if;
+end $$;
+
+-- What the parent sees on the dashboard: locks of their children in the last 14 days that they have not yet dismissed.
+create or replace function public.my_pin_alerts() returns table (child_id uuid, child_name text, locked_at timestamptz, locked_until timestamptz, lock_level smallint, still_locked boolean)
+language sql stable security definer set search_path = public as $$
+  select e.child_id, c.display_name, e.locked_at, e.locked_until, e.lock_level, e.locked_until > now()
+    from public.pin_lock_events e join public.children c on c.id = e.child_id
+   where c.parent_id = public._require_parent() and e.seen_at is null and e.locked_at > now() - interval '14 days'
+   order by e.locked_at desc limit 20;
+$$;
+create or replace function public.dismiss_pin_alerts() returns void
+language plpgsql security definer set search_path = public as $$
+declare uid uuid := public._require_parent();
+begin
+  update public.pin_lock_events e set seen_at = now() from public.children c where c.id = e.child_id and c.parent_id = uid and e.seen_at is null;
 end $$;
 
 create or replace function public.group_fill() returns table (group_id text, seats int, taken int)
@@ -448,6 +500,8 @@ begin
 end $$;
 
 -- ---------- PDPA: delete my data ----------
+-- NOTE: practice_submissions.sql REPLACES this function (create or replace) with the full version that also covers extension-book orders (delivery details,
+-- child nickname), trial requests, recording views and free preview registrations. Always run it after this file.
 -- Removes the children (and their practice data), cancels open enrolments, strips parent PII, deletes the login.
 -- Payment and consent rows are kept (anonymised: they only point at the now-empty parents row) for the retention
 -- period in privacy.html, then purged by the owner. Paid enrolments are cancelled but NOT refunded here: the owner refunds per the terms.

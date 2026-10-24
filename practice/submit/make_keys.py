@@ -8,7 +8,12 @@ Output:
   .sql       INSERTs for practice_units, practice_item_tags and practice_item_keys. The owner (or an agent with the service role) runs it after
              reviewing; unit_version = first 8 chars of the data file's SHA-256, so a changed question can never be marked with an old key.
 marking_mode:  auto  = a number, boxes, list, choice (Phase 2: fraction, decimal, text)   self = selfcheck items (compare with the shown solution; includes
-               paper-only drawing/ruler/kit tasks)   none = open items (item open=True, or 'Open.' in the book's explanation: many answers are right; reports show them as open, not as checked on paper)
+               every paper-only drawing/ruler/kit task and every 'Explain' item that has a model answer)   none = truly open items (no objective fact: many answers are right;
+               reports show them as open, not as checked on paper).
+               A holiday data file says which in each selfcheck item's own `marking_mode` ('self' or 'none'; build_holiday.py sets it from the lesson file's marking_mode 'self' | 'open',
+               with a documented default), and this file honours it. Older data without that field (the extension units): open=True or a model answer starting 'Open' is none, else self.
+               Paper-only is always self.
+Other item flags are passed on: unit:false, words:true (number words), poly:'n' (algebra rule compared as a polynomial), equiv_frac:true (equal fractions in a list).
 Tags: practice/submit/tags/<unit>.json may give {"strand": "...", "skill_by_item": {"S01": "..."}}; otherwise strand/skill fall back to the unit topic.
 """
 import hashlib, json, os, sys
@@ -35,6 +40,8 @@ def build(level, unit, holiday=None):
         t = it['type']
         if t == 'selfcheck':
             openq = bool(it.get('open')) or (bool(it['steps']) and it['steps'][0].lstrip().lower().startswith('open'))   # open = many answers are right: reported as 'open', never as 'checked on paper'
+            if it.get('marking_mode') in ('self', 'none', 'open'):      # the built data says which: honour it (a paper-only item is always self)
+                openq = it['marking_mode'] != 'self' and not it.get('paper_only')
             rec = dict(marking_mode='none' if openq else 'self', type='open' if openq else 'selfcheck', key=None)
         elif t == 'fields':
             rec = dict(marking_mode='auto', type='fields', key=[f['answer'] for f in it['fields']])
@@ -54,6 +61,13 @@ def build(level, unit, holiday=None):
             raise SystemExit(f'{it["id"]}: item type {t} has no marking rule yet')
         if it.get('unit') is False and t in ('number', 'fields'):
             rec['unit'] = False
+        if it.get('words') and t in ('number', 'fields'):
+            rec['words'] = True
+        if t == 'text':
+            if it.get('poly'):
+                rec['poly'] = it['poly']
+            if it.get('equiv_frac'):
+                rec['equiv_frac'] = True
         rec.update(id=it['id'], paper_only=bool(it.get('paper_only')), slips=it.get('slips') or [])
         keys.append(rec)
         by = tags.get('skill_by_item', {})

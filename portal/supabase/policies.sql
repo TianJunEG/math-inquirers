@@ -12,6 +12,7 @@ alter table public.consents          enable row level security;
 alter table public.practice_attempts enable row level security;
 alter table public.admins            enable row level security;   -- no policy, no grant: only is_admin() (definer) reads it
 alter table public.deletion_requests enable row level security;   -- no policy, no grant
+alter table public.pin_lock_events   enable row level security;   -- no policy, no grant: the parent reads it through my_pin_alerts() only
 
 revoke all on all tables    in schema public from anon, authenticated;
 revoke all on all sequences in schema public from anon, authenticated;
@@ -60,10 +61,12 @@ grant execute on function public.admin_list_enrolments()                      to
 grant execute on function public.admin_mark_paid(uuid, text)                  to authenticated;
 grant execute on function public.admin_cancel_enrolment(uuid, text)           to authenticated;
 grant execute on function public.child_sign_in(text, text, text)              to anon, authenticated;
+grant execute on function public.my_pin_alerts()                              to authenticated;   -- _require_parent() inside
+grant execute on function public.dismiss_pin_alerts()                         to authenticated;
 grant execute on function public.service_begin_payment(uuid, uuid)                      to service_role;
 grant execute on function public.service_attach_session(uuid, text)                     to service_role;
 grant execute on function public.service_mark_paid(uuid, text, text, int, text)         to service_role;
 grant execute on function public.service_mark_session_failed(uuid, text)                to service_role;
 grant execute on function public.expire_unpaid_reservations(int)                        to service_role;
--- _require_parent(), gen_code(), forbid_mutation(), handle_new_user() are internal: not granted to any API role.
+-- _require_parent(), _pin_check(), gen_code(), forbid_mutation(), handle_new_user() are internal: not granted to any API role.
 -- service_role bypasses RLS but its table privileges are untouched by the revokes above.
