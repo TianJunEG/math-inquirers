@@ -404,3 +404,6 @@ Owner: free preview class, about 1 hour, open to everyone; lecture style, no wor
 
 ## 2026-10-24 — TEASER-STRICT
 Owner: "TEASER-STRICT". Daily teasers: a maths structure/sub-structure may repeat in a level at most once a quarter and only with a different structure (new story AND new frame); enforced by verify_bank.py.
+
+## 2026-10-24 — L1L2-GAP60
+Owner: "L1L2-GAP60". For daily teasers at Levels 1 and 2 only, a sub-structure may return after a gap of at least 60 days with a new story and new numbers (instead of once per quarter). Levels 3–6 keep TEASER-STRICT (once a quarter, different structure). verify_bank.py to be updated accordingly.
