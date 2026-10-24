@@ -51,3 +51,15 @@ These were yes/no choices, so they are recorded. I have **not** treated them as 
 ## E. How to answer from now on
 
 Reply codes are fine for **decisions** (yes/no). For a **check**, reply with one sentence of what you did, for example "photocopied S2-01 at normal toner, cents readable", or "not done yet". I will not mark a check as done on a bare code.
+
+
+## Added 2026-10-24: items only the owner can do or decide
+1. Send the lawyer email (docs/owner_kit/lawyer_email_draft.md, questions 1-13) and tell the assistant what the lawyer says.
+2. Google Workspace Business Standard (one seat) and the business domain: buy/choose, then the 14-day trial dry run (docs/recordings_design.md section 8) before 4 Nov.
+3. Photocopier test (docs/owner_kit/photocopier_test_pages.pdf) and the Primary 3-6 pack when compiled.
+4. Printer proof of Level 1 Book 7 (reply PROOF-L1 to have the request prepared).
+5. Safeguarding: name the designated person; approve the half-page policy; supply real child-protection numbers.
+6. Trial class / preview offer: what it is (free or paid, length, who runs it) and prices (prices are on hold).
+7. Tutors and co-hosts: names; who sees which reports.
+8. Supabase project region (should be Singapore) and the real data protection contact.
+9. Level 6 Scratch tutor run, pupil trials, MOE decision, lesson 10 timing, shop sign-up test.

@@ -407,3 +407,19 @@ Owner: "TEASER-STRICT". Daily teasers: a maths structure/sub-structure may repea
 
 ## 2026-10-24 — L1L2-GAP60
 Owner: "L1L2-GAP60". For daily teasers at Levels 1 and 2 only, a sub-structure may return after a gap of at least 60 days with a new story and new numbers (instead of once per quarter). Levels 3–6 keep TEASER-STRICT (once a quarter, different structure). verify_bank.py to be updated accordingly.
+
+## 2026-10-24 — BLANKET: "Proceed with recommendations for easy to decide items, only send me the ones u cannot resolve"
+Owner instruction. The following assistant recommendations are ADOPTED as working defaults (revocable by the owner at any time; each is logged so it can be reversed):
+- PREVIEW-HOLD: free preview class build waits for the lawyer's answer to question 13 (design and prototype stay).
+- EXPLAIN-TO-TUTOR: typed explanations go to the tutor on submit (consistent with SUBMIT-TO-TUTOR), subject to privacy review before go-live.
+- RETENTION-OK: practice answers 12 months after the last submission or 90 days after access ends; delivery address 30 days after delivery; trial requests 12 months (drafts, lawyer to confirm).
+- PDF-DROP: extension books are sold as workbook only / online only / workbook + online; no PDF download option.
+- CARD-ALL-LEVELS: the Toolbox Card is on page 1 of every level's workbook (guides already say so).
+- EXTRAS-VISIBLE: Investigation / Think harder / Go further questions are visible online by default, as in print.
+- GATE-BEFORE-SALE: online page data for extension books is gated behind the purchase check before the books go on sale (6-8 h of work, scheduled before sale).
+- Recording defaults: CAMERAS-OFF (children's cameras off), STORAGE-STREAM (Drive owner-only master, reviewed copy on Cloudflare Stream behind portal sign-in), REVIEW-FULL (full listen before publishing), KEEP-30 (30 days after the group's last lesson), WEEK1-DRIVE-SHARE (week 1 fallback: Drive folder shared to parents' named Google accounts, if the portal is not live).
+- PREVIEW-BANDS-OK: three bands (Primary 1-2, 3-4, 5-6), one fixed lesson per band, rotating Saturday slot, no recording.
+- COINS-B-ASK-LAWYER: keep our redrawn coin/note art in the books; ask the lawyer about the real-image variant (held back).
+- D6-INCLUDED: online practice is included in the lesson fee / workbook price.
+- ORDER (owner set): holiday, term, extension.
+NOT decided by the assistant (need the owner or a real-world action): sending the lawyer email, buying Google Workspace and choosing the domain, photocopier test, printer proof of Level 1 Book 7, naming the safeguarding person and approving the policy, what the preview/trial class offer is and prices, tutors and co-hosts, Supabase region and DPO contact, Level 6 Scratch tutor run, pupil trials, MOE decision, lesson 10 timing, shop sign-up test.
