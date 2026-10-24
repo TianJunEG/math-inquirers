@@ -149,7 +149,7 @@ with sync_playwright() as pw:
     check('child sign-in needs the online practice agreement', child_needs_online_consent)
     def child_ok():
         cp.fill('#code', fam.lower()); cp.fill('#name', ' mia '); cp.fill('#pin', '1234'); cp.get_by_role('button', name='Sign in').click()
-        cp.wait_for_timeout(800); print('URL', cp.url, cp.inner_text('body')[:300], [m for m in errors][-3:]); expect(cp.locator('#hello')).to_have_text('Hello, Mia!'); assert cp.url.endswith('/portal/practice/')
+        cp.goto(BASE + '/portal/child/'); cp.fill('#code', fam.lower()); cp.fill('#name', ' mia '); cp.fill('#pin', '1234'); cp.get_by_role('button', name='Sign in').click(); expect(cp.locator('#hello')).to_have_text('Hello, Mia!'); assert cp.url.endswith('/portal/practice/')
     check('child name+PIN leads to the practice list', child_ok)
     def child_out():
         cp.click('#bye'); expect(cp.get_by_role('heading', name='Hi! Sign in to practise')).to_be_visible()
