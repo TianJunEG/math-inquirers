@@ -376,3 +376,6 @@ Owner: "D1-MAINSITE". Online practice is hosted on the main site under /practice
 
 ## 2026-10-24 — ONLINE PHASE ORDER (owner): holiday first, then term, then extension
 Owner: "holiday first, then term then extension" (replaces the proposed runner -> term L1 -> extension -> holiday). Shared worksheet runner (sheet.js) is built alongside the first holiday lessons. Holiday program beta starts Tue 24 Nov 2026, so holiday online practice is released lesson by lesson in teaching order (week 1 lessons first), not all 60 at once.
+
+## 2026-10-24 — HOLIDAY-WEEKLY
+Owner: "HOLIDAY-WEEKLY". Holiday online practice is released week by week in teaching order (week 1 lessons of every level first), not all 60 at once.
