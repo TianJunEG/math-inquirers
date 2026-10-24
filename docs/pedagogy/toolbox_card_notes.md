@@ -11,7 +11,7 @@ Decision D7 (owner): build the card for the Inquirer Kit. Spec source: `docs/ped
 
 ## Kit and print documentation
 - `docs/printing/quote_request.md`: new section "Inquirer Kit: A5 strategy toolbox card": three files, A5, double-sided, quantity 1 per child per workbook plus about 10 percent spare, stock suggestions (250 gsm card preferred, 170 gsm alternative, optional matt lamination), no prices.
-- `levels/spine.json` `kit_line` = "Eight tools: see your Inquirer Kit card" already names the card and the Inquirer Kit: valid, unchanged.
+- `levels/spine.json` `kit_line` = "Eight tools: see your Toolbox Card" (one card name for all levels; the Toolbox Card ships printed with Book 1, CARD-BOOK1). Valid.
 - Not changed (other agents / out of scope): the cut-out pages in the workbooks (`hp/kit.js`), `levels/mkextras.py` kit list line and the website "takes home" lists still describe the kit as workbook cut-out pages only. Suggest adding "a toolbox card" to those wording lines once the owner confirms the card ships in the parcel (D7 print route); parents' wording should say "your child will practise", no outcomes.
 
 ## Checks done
