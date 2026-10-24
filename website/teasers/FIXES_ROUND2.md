@@ -56,7 +56,7 @@ Level 1 can fill a year with a rigid 61-day rotation (`batches/YEAR_PLAN.md`, 0 
 
 ## Results
 
-`build_bank.py`: 30 puzzles per level for November, 31 for December. `verify_bank.py`: November 0 FAIL (100 REVIEW), December 0 FAIL (84 REVIEW), structure rules 0 FAIL, one intentional L1 CAPACITY FAIL line. `--selftest`: 0 problems over 50 kinds. Exactly one valid answer per puzzle by the independent checkers. `test_site.py`: see AUDIT_SELF.md section 7.
+`build_bank.py`: 30 puzzles per level for November, 31 for December. `verify_bank.py`: November 0 FAIL (100 REVIEW), December 0 FAIL (84 REVIEW), structure rules 0 FAIL, one intentional L1 CAPACITY FAIL line. `--selftest`: 0 problems over 50 kinds. Exactly one valid answer per puzzle by the independent checkers. `test_site.py` on a rebuilt scratch site: 431 checks, 0 failed.
 
 ## What remains open
 

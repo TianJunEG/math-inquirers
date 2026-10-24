@@ -92,7 +92,7 @@ Fixes are listed in `FIXES_ROUND2.md`. Round 2 is the author's own check, not an
 | `verify_bank.py` | November 0 FAIL (100 REVIEW), December 0 FAIL (84 REVIEW), structure rules 0 FAIL; one intentional capacity line: Level 1 slack 1 (needs 71 subs) |
 | `verify_bank.py --selftest` | 0 problems; 50 kinds sampled, gap, family, answer window, cross-quarter and story probes fire |
 | `brute*.py` | every puzzle has exactly one valid answer, equal to the bank answer |
-| `test_site.py` on a rebuilt scratch site | see the line added below |
+| `test_site.py` on a rebuilt scratch site | 431 checks, 0 failed |
 | Flag off | `site_enabled` false; `website/dist` untouched |
 
 Retired: climb_and_slip, stick_row, sum_of_all_digits. Merged: 100 old sub ids into 39. New: 50 sub-structures with independent checkers.
