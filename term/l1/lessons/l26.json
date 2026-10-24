@@ -3186,9 +3186,9 @@
      "answer": "b",
      "hint": "Try a number of pads. The rest are stickers. Does it make {t|usd}?",
      "steps": [
-      "Try {b} pads.",
+      "Try {b|pl_pad}.",
       "The other {a} things are stickers.",
-      "He buys {b} pads."
+      "He buys {b|pl_pad}."
      ]
     }
    },

@@ -212,7 +212,7 @@ def run(d):
     eq(show(parse(H['H1']['text']) + 60), '10:30', 'H1'); eq(H['H1']['val'], '10:30', 'H1 val')
     eq(show(mins(5, 0) + 30), '5:30', 'H2'); eq(H['H2']['val'], '5:30', 'H2 val')
     eq(show(parse(H['H3']['text']) + 30), '4:15', 'H3'); eq(H['H3']['val'], '4:15', 'H3 val')
-    eq(show(parse('10:30 am') - 30, True), '10:00 am', 'H4 half an hour before 10:30'); eq(parse('11:00 am') == parse('10:30 am') + 30, True, 'H4 Ali went forward'); eq(H['H4']['val'], ['No', '10:00 am'], 'H4 val')
+    eq(parse('4:30 pm') - parse('4:00 pm'), 30, 'H4 Kumar reads half an hour'); eq(show(parse('6:00 pm') + 30, True), '6:30 pm', 'H4 Aisha stops half an hour after 6:00 pm'); eq(H['H4']['val'], '6:30', 'H4 val')
     nums = [72, 27, 70, 17]; eq(sorted(nums), [17, 27, 70, 72], 'H5 rewind'); eq(H['H5']['val'], [17, 27, 70, 72], 'H5 val'); eq(H['H5'].get('rewind_of'), 'Term 1 Lesson 3', 'H5 is the rewind item')
     eq(len([h for h in d['home_practice'] if h['tier'] == 'start']) >= 3, True, 'home has 3 Start here items')
     # ---------------------------------------------------------------- online practice, authored numbers

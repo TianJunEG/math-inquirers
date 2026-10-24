@@ -2205,7 +2205,7 @@
     ],
     "mins": 4,
     "why": "How do you know?",
-    "lines": 1
+    "lines": 2
    },
    {
     "id": "T3",
@@ -2972,7 +2972,7 @@
      "hint": "Make groups of {b} until there are not enough for another group.",
      "steps": [
       "Make groups of {b}.",
-      "{c} counters are left. That is not enough for another group.",
+      "{c|pl_counter} left. That is not enough for another group.",
       "Ali can make {ans} groups."
      ]
     }
@@ -3025,7 +3025,7 @@
      "steps": [
       "{a} bags use {s} stickers.",
       "{t} - {s} = {ans}.",
-      "{ans} stickers are left over."
+      "{ans|pl_sticker} left over."
      ]
     }
    },

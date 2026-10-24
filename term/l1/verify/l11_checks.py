@@ -102,9 +102,10 @@ def _line_from_clues(front, back, mid):
 
 
 def _o_t1(e):
-    n = _line_from_clues(e['a'], e['b'], e['c'])
-    assert len(n) == 1
-    return n[0]
+    line = make_line(e['n']); ravi = list(reversed(line))[e['b'] - 1]
+    lilys = [c for c in line if line.index(c) < line.index(ravi) and between(line, c, ravi) == e['c']]
+    assert len(lilys) == 1
+    return place_front(line, lilys[0])
 
 
 def _o_t2(e):
@@ -127,7 +128,7 @@ def _o_g2(e):
 
 
 ORACLES = {'c1': _o_c1, 'c2': _o_c2, 'c4': _o_c4, 't1': _o_t1, 't2': _o_t2, 'g1': _o_g1, 'g2': _o_g2}
-BASE_ENV = {'c1': dict(n=6, k=3), 'c2': dict(k=5), 'c4': dict(n=8, f=3), 't1': dict(a=4, b=3, c=3), 't2': dict(a=3, b=9), 'g1': dict(n=13), 'g2': dict(n=13)}
+BASE_ENV = {'c1': dict(n=6, k=3), 'c2': dict(k=5), 'c4': dict(n=8, f=3), 't1': dict(n=11, b=2, c=4), 't2': dict(a=3, b=9), 'g1': dict(n=13), 'g2': dict(n=13)}
 
 
 def run(d):
@@ -178,7 +179,7 @@ def run(d):
     eq([ordinal(p) for p in pos6], ['2nd'], 'S6 only one place is between 1st and 3rd'); eq(T['S6']['val'], ['2nd'], 'S6 val')
     eq(in_front(seven, seven[4]), 4, 'S7'); eq(T['S7']['val'], [4], 'S7 val')
     # Think harder
-    eq(_line_from_clues(4, 3, 3), [10], 'T1'); eq(4 + 3 == 7 and 7 != 10, True, 'T1 Kumar is not correct'); eq(T['T1']['val'], ['No', 10], 'T1 val')
+    ln11 = make_line(11); rv = list(reversed(ln11))[1]; ly = [c for c in ln11 if ln11.index(c) < ln11.index(rv) and between(ln11, c, rv) == 4]; eq(len(ly), 1, 'T1 exactly one child is in front of Ravi with 4 between'); eq(place_front(ln11, rv), 10, 'T1 Ravi is 10th from the front'); eq(place_front(ln11, ly[0]), 5, 'T1 Lily is 5th from the front'); eq(10 - 4 == 6 and 6 != 5, True, 'T1 Kumar is not correct'); eq(T['T1']['val'], ['No', '5th'], 'T1 val')
     ln10 = make_line(10); eq(between(ln10, ln10[2], ln10[8]), 5, 'T2'); eq(T['T2']['val'], [5], 'T2 val')
     # T3: the door is on the right; the picture puts place 6 second from the left end
     seven_left_to_right = list(reversed(make_line(7)))               # place 7 at the far left, place 1 at the door on the right

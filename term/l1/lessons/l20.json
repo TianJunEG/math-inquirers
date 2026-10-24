@@ -2285,7 +2285,7 @@
     "draw": true,
     "draw_strokes": 6,
     "why": "I chose it because",
-    "lines": 1
+    "lines": 2
    },
    {
     "id": "T2",
@@ -2324,7 +2324,7 @@
     ],
     "mins": 4,
     "why": "I chose it because",
-    "lines": 1
+    "lines": 2
    },
    {
     "id": "T3",
@@ -3124,7 +3124,7 @@
      "steps": [
       "Shop A: 1 pen costs ${a}.",
       "Shop B: 1 pen costs ${b}.",
-      "{a} - {b} = {ans} dollars less."
+      "{a} - {b} = {ans|pl_dollar} less."
      ]
     }
    },
@@ -3337,7 +3337,7 @@
   "title": "Mi's Challenge Quest",
   "minutes": 20,
   "where": "Term 2 Lesson 10 (the last lesson of the term), minutes 35 to 55, the part Mi's Challenge Quest, straight after the brain break; or at the make-up slot",
-  "plan_note": "Owner decisions of 22 and 23 Oct 2026: the end-of-term slot is a game with Mi, not a test, and it sits in a choose-the-tool lesson. The group plays it in pairs (a child and a quest partner) or as a group quest with Mi, on private paper. No score or mark is shown to the child, there is no ranking and no visible timer. The tutor keeps private notes only, in words, for one line to each grown-up and for advice for next term's group. It keeps the 20-minute slot after the break: 8 short gates and one optional secret cave item, all at Start here level. Six gates are tagged to lessons, and each covers one or two lessons (11 and 12, 13, 14 and 16, 15 and 17, 18, 19), so every lesson of the term is still visited; two gates (7 and 8) are mixed and carry no lesson tag. No gate names a tool: the child circles the tool they used. A middle child needs about 17 minutes of reading aloud and quiet work; a slower child may use a few minutes of the workbook time to finish. The quest sits straight after the brain break so children are fresh. The Quest Log has no pictures because the page generator draws only a few figure types.",
+  "plan_note": "Owner decisions of 22 and 23 Oct 2026: the end-of-term slot is a game with Mi, not a test, and it sits in a choose-the-tool lesson. The group plays it in pairs (a child and a quest partner) or as a group quest with Mi, on private paper. No score or mark is shown to the child, there is no ranking and no visible timer. The tutor keeps private notes only, in words, for one line to each grown-up and for advice for next term's group. It keeps the 20-minute slot after the break: 8 short gates and one optional secret cave item, all at Start here level. Six gates are tagged to lessons, and each covers one or two lessons (11 and 12, 13, 14 and 16, 15 and 17, 18, 19), so every lesson of the term is still visited; two gates (7 and 8) are mixed and carry no lesson tag. No gate names a tool: the child circles the tool they used. A middle child needs about 17 minutes of reading aloud and quiet work; a slower child may use a few minutes of the workbook time to finish. The quest sits straight after the brain break so children are fresh. The Quest Log of this term uses words and numbers only, with no pictures.",
   "sheet_pages": 4,
   "story": "Mi the dolphin is swimming to the Pearl Cave. Eight gates are in the way, and each gate has one puzzle. At the end there is an optional secret cave.",
   "child_rules": [

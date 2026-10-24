@@ -3773,7 +3773,7 @@
      "steps": [
       "{a} right.",
       "{c} left takes back {c} of them.",
-      "{a} take away {c} is {ans} steps right of S."
+      "{a} take away {c} is {ans|pl_step} right of S."
      ]
     },
     "easier": "c3"

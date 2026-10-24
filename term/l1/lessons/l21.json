@@ -2928,7 +2928,7 @@
      "hint": "Count in 5s from the 12: one 5 for each number.",
      "steps": [
       "Count in 5s up to the {n}.",
-      "Count {n} steps of 5. You reach {ans}.",
+      "Count {n|pl_step} of 5. You reach {ans}.",
       "It is {ans} minutes past the hour."
      ],
      "derive": {

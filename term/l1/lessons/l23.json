@@ -2744,13 +2744,10 @@
   {
    "id": "H4",
    "tier": "go",
-   "text": "The bus to the zoo arrived at 10:30 am. The trip took half an hour. Ali says the bus left at 11:00 am. Is Ali right? Circle Yes or No. The bus left at ____ am.",
-   "answer": "No; 10:00 am",
-   "val": [
-    "No",
-    "10:00 am"
-   ],
-   "solution": "Half an hour before 10:30 is 10:00, so the bus left at 10:00 am. 11:00 am is half an hour after 10:30, so Ali went forward instead of back."
+   "text": "Kumar reads from 4:00 pm to 4:30 pm. Aisha reads for the same time. She starts at 6:00 pm. She stops at ____ pm.",
+   "answer": "6:30",
+   "val": "6:30",
+   "solution": "Kumar reads from 4:00 to 4:30, which is half an hour. Aisha reads for half an hour too. Half an hour after 6:00 pm is 6:30 pm."
   },
   {
    "id": "H5",

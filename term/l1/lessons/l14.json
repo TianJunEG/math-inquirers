@@ -2975,7 +2975,7 @@
      "steps": [
       "Put the children in pairs.",
       "Count how many are left.",
-      "{ans} children have no partner."
+      "{ans|pl_child} with no partner."
      ]
     }
    },

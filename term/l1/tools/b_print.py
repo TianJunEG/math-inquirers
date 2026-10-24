@@ -32,12 +32,12 @@ body{font-size:18.5px!important}.qbox{padding:26px 16px 12px!important;margin:26
 .tight .qbox{margin:14px 4px 5px 4px!important;padding:18px 14px 4px!important}.tight .ln{height:25px!important}.tight .draw{height:78px!important}.tight .vis{width:240px!important}.tight .sub{margin-top:4px}
 .tight2 .qbox{margin:10px 4px 3px 4px!important;padding:16px 12px 2px!important}.tight2 .ln{height:22px!important}.tight2 .draw{height:64px!important}.tight2 .vis{width:200px!important}.tight2 .lbk .r{font-size:12px!important}.tight7.p5 .qt{font-size:17.7px}
 .tight3 .qbox{margin:8px 4px 2px 4px!important;padding:17px 10px 2px!important}.tight3 .qbox .qn,.tight4 .qbox .qn{top:-9px!important}.tight3 .ln{height:19px!important}.tight3 .lbk .r{font-size:13px!important}.tight4 .qbox{margin:6px 4px 1px 4px!important;padding:16px 10px 1px!important}.tight4 .ln{height:18px!important;margin-top:1px!important}.tight4 .lastln{display:none!important}.tight4 .draw{height:54px!important}.tight4 .q,.tight4 .sub{line-height:1.22}.tight4 .banner{margin:3px 0 2px!important}.tight3 .tf td{padding:4px 10px!important}.tight4 .tf td{padding:2px 10px!important}.tight3 .tf{margin:3px 4px}.tight4 .namer{padding:3px 10px!important;margin-bottom:4px!important}.tight4 .lh{margin-bottom:2px!important}.tight4>p[style*=italic]{font-size:17.7px!important;margin:0 0 1px!important;line-height:1.2}.tight4>p[style*=italic]+.qbox,.tight4>.choice+p+.qbox{margin-top:14px!important}.tight4>.choice{margin:0 0 3px!important;padding:2px 10px!important}.tight4 .sub{margin-top:2px}.tight5 .vis,.tight5 .hvis{zoom:.9}.tight6 .vis{zoom:.8}.tight7 .qt,.tight7 .sub{font-size:17.7px!important}.tight7 .banner{font-size:17.7px!important}
-.hm.t1 .qbox{margin:14px 4px 5px 4px!important;padding:16px 12px 4px!important}.hm.t1 .ln{height:24px!important}.hm.t2 .qbox{margin:10px 4px 3px 4px!important;padding:14px 12px 2px!important}.hm.t2 .ln{height:20px!important}.hm.t2 .q{font-size:17px}
+.hm.t1 .qbox{margin:14px 4px 5px 4px!important;padding:16px 12px 4px!important}.hm.t1 .ln{height:24px!important}.hm.t2 .qbox{margin:10px 4px 3px 4px!important;padding:14px 12px 2px!important}.hm.t2 .ln{height:20px!important}.hm.t2 .q{font-size:17.7px}
 .qbox .ln.rsn{height:24px!important;margin-top:1px!important;display:block!important}.stp.why{margin:4px 4px 0 6px;font-size:17.7px}.stp.why b{width:auto;white-space:nowrap}.stp.why .ln{margin-top:0!important}
 .sd{display:flex;gap:16px;align-items:flex-start}.sd .sdv{flex:none}.sd .sdv .vis{margin:4px 0 2px 4px!important}.sd .sdr{flex:1;min-width:0;padding-top:4px}.sd .sdr .sub:first-child{margin-top:2px}
 .page.hm.hm>p.hint.hint{margin-bottom:24px!important}
 .hm .qbox:has(svg.h100){display:block!important}
-.yn{display:inline-flex;gap:30px;margin-left:12px;font-family:Fredoka;font-weight:600;font-size:20px}.yn span{padding:1px 14px}
+.yn{display:inline-flex;gap:30px;margin-left:12px;font-family:Fredoka;font-weight:600;font-size:20px}.yn span{padding:1px 14px}.sub:has(.yn.long){flex-wrap:wrap}.yn.long{flex-basis:100%;margin:2px 0 0 38px;flex-wrap:wrap;gap:2px 8px}.yn.long span{white-space:nowrap;padding:1px 12px}
 .banner{break-after:avoid;display:block;width:fit-content}
 .vis.wide{width:100%!important;max-width:520px}.vis.wide.bm{max-width:430px}.vis.sm{width:175px!important}.visrow .vis.sm{width:175px!important;max-width:175px}.visrow .vis.md{width:235px!important;max-width:235px}.vis.md{width:250px!important}.vis.gw{width:370px!important}.p1 .vis.gw{width:330px!important}.visrow .vis.gw{width:calc(100%/var(--n) - 10px)!important;max-width:330px}.vis.nar{width:150px!important}.vis.nar.rt{width:235px!important}.vis.arr{width:250px!important}.vis.xw{width:100%!important;max-width:540px}.p1 .vis.xw{max-width:400px}.tight .vis.xw{max-width:420px}.tight2 .vis.xw{max-width:340px}
 .visrow{display:flex;gap:10px;align-items:flex-end;margin:4px 0}.visrow .vis{width:calc(100%/var(--n) - 10px)!important;max-width:330px;margin:2px 0!important}
@@ -45,7 +45,7 @@ body{font-size:18.5px!important}.qbox{padding:26px 16px 12px!important;margin:26
 .mcq{display:flex;align-items:flex-start;justify-content:space-between;margin:4px 6px}.mo{display:flex;gap:8px;margin:5px 0}.mn{font-weight:800;color:#1F7A6F}.mbr{border:2px solid #1B2A49;border-radius:6px;padding:4px 18px;background:#fff;font-size:20px;align-self:center}
 .stp{display:flex;align-items:flex-end;gap:10px;margin:6px 4px 0 6px;font-size:16px}.stp b{color:#1F7A6F;width:60px}.pins2{font-size:17.7px;color:#3B4A6B;margin:0 6px 4px}
 .keybox{border:2px solid #1B2A49;border-radius:6px;padding:6px 10px;margin:6px 0;background:#fff;break-inside:avoid;font-size:14px}
-.keybox .a{font-weight:800;color:#1F7A6F}\n.hbelow{display:flex;gap:10px;margin:4px 0 2px 6px;clear:both}.hvis{float:right;display:flex;gap:6px;margin:-2px 0 3px 8px}.hvis .hv{flex:none}.qbox:has(.hvis)::after{content:'';display:block;clear:both}.qbox:has(.hvis) .ln{margin-right:calc(var(--hw, 0mm) + 4mm)}.qbox:has(.hvis) .sub{margin-right:calc(var(--hw, 0mm) + 4mm)}.hm.t2 .hvis,.hm.t2 .hbelow{zoom:.9}.hm.t3 .hvis,.hm.t3 .hbelow{zoom:.8}.hm.t3 .qbox{margin:7px 4px 2px 4px!important;padding:12px 12px 1px!important}.hm.t3 .ln{height:17px!important}.hm.t3 .q{font-size:16px}.hm.t3 p{font-size:12.5px!important;margin:1px 0 3px!important}
+.keybox .a{font-weight:800;color:#1F7A6F}\n.hbelow{display:flex;gap:10px;margin:4px 0 2px 6px;clear:both}.hvis{float:right;display:flex;gap:6px;margin:-2px 0 3px 8px}.hvis .hv{flex:none}.qbox:has(.hvis)::after{content:'';display:block;clear:both}.qbox:has(.hvis) .ln{margin-right:calc(var(--hw, 0mm) + 4mm)}.qbox:has(.hvis) .sub{margin-right:calc(var(--hw, 0mm) + 4mm)}.hm.t2 .hvis,.hm.t2 .hbelow{zoom:.9}.hm.t3 .hvis,.hm.t3 .hbelow{zoom:.8}.hm.t3 .qbox{margin:7px 4px 2px 4px!important;padding:12px 12px 1px!important}.hm.t3 .ln{height:17px!important}.hm.t3 .q{font-size:17.7px}.hm.t3 p{font-size:12.5px!important;margin:1px 0 3px!important}.hm.t4 .hvis,.hm.t4 .hbelow{zoom:.72}.hm.t4 .qbox{margin:5px 4px 1px 4px!important;padding:11px 12px 0!important}.hm.t4 .ln{height:14px!important}.hm.t4 .q{font-size:17.7px}.hm.t4 p{font-size:11.5px!important;margin:1px 0 2px!important;line-height:1.2}.hm.t4 .qbox .qn{top:-8px!important}
 """
 
 
@@ -74,7 +74,8 @@ def choice_words(text, explicit=None):
 
 
 def choice_html(words):
-    return '<span class="yn">' + ''.join(f'<span>{E(w)}</span>' for w in words) + '</span>'
+    lng = ' long' if any(len(w.split()) >= 5 for w in words) else ''     # long options sit on their own line, never in narrow columns
+    return f'<span class="yn{lng}">' + ''.join(f'<span>{E(w)}</span>' for w in words) + '</span>'
 
 
 def _vis_html(v):
@@ -337,7 +338,7 @@ def build_print(d, pw):
         head = kp[:kp.index('<body>') + 6]
         render('kit', head + ''.join(kit_pages(d)) + '</body></html>', f + f' \u2022 Lesson {d["lesson_in_term"]} \u2022 Kit (print one side only)', f'L{n}_Kit_Pages.pdf')
     render('workbook_key', key_html(d), f + ' \u2022 Answer key (tutor and grown-ups)', f'L{n}_Workbook_Answer_Key.pdf')
-    for lvl in (0, 1, 2, 3):
+    for lvl in (0, 1, 2, 3, 4):
         d['_home_tight'] = lvl
         path = render('home', home_html(d), f + ' \u2022 Home practice', f'L{n}_Home_Practice.pdf')
         if pdfcheck.pdf_pages(path) == 1: break

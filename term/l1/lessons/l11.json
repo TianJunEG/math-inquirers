@@ -2182,31 +2182,31 @@
     "id": "T1",
     "page": 3,
     "tier": "think",
-    "text": "Lily is 4th from the front. Ravi is 3rd from the back. There are 3 children between Lily and Ravi.",
-    "answer": "No; 10 children",
+    "text": "There are 11 children in a line. Ravi is 2nd from the back. There are 4 children between Lily and Ravi, and Lily is in front of Ravi.",
+    "answer": "No; 5th from the front",
     "val": [
      "No",
-     10
+     "5th"
     ],
-    "hint": "Draw the line. Put Lily and Ravi in it with 3 children between them. Count the places from the front to Lily and from the back to Ravi.",
-    "solution": "In front of Lily are 3 children, then Lily. Then 3 children between, then Ravi, then 2 children behind Ravi. Count: 3 + 1 + 3 + 1 + 2 = 10. Or add the two places and the children between: 4 + 3 + 3 = 10. Kumar's 7 is 4 + 3 and leaves out the 3 children between.",
+    "hint": "Draw the line of 11. Put Ravi 2nd from the back. Count 4 children between, then Lily.",
+    "solution": "Ravi is 2nd from the back, so he is 10th from the front (11 take away 2, add 1). The 4 children between are the 6th, 7th, 8th and 9th. Lily is in front of them, so she is 5th from the front. Kumar's 6th is the first child between Lily and Ravi.",
     "mistakes": [
-     "Adding only the two places: 4 + 3 = 7, and leaving out the children between.",
-     "Counting Lily or Ravi twice, or not at all (9 or 11)."
+     "Writing 6th (10 take away 4) and leaving Lily out of the count.",
+     "Counting Ravi's place from the front as 9th or 11th."
     ],
     "mins": 5,
     "parts": [
      {
       "l": "a",
-      "text": "Kumar says there are 7 children in the line. Is Kumar correct? Circle Yes or No.",
+      "text": "Kumar says Lily is 6th from the front. Is Kumar correct? Circle Yes or No.",
       "ans": "No",
       "val": "No"
      },
      {
       "l": "b",
-      "text": "There are ___ children in the line.",
-      "ans": "10",
-      "val": 10
+      "text": "Lily is ___ from the front.",
+      "ans": "5th",
+      "val": "5th"
      }
     ],
     "lines": 0,
@@ -2839,50 +2839,52 @@
     "id": "t1",
     "tier": "stretch",
     "type": "number",
-    "q": "Lily is 4th from the front. Ravi is 3rd from the back. There are 3 children between Lily and Ravi. How many children are in the line?",
-    "answer": 10,
-    "hint": "Draw the line. Put Lily and Ravi in it with the children between them.",
+    "q": "There are 11 children in a line. Ravi is 2nd from the back. There are 4 children between Lily and Ravi, and Lily is in front of Ravi. What place is Lily from the front? Type the place, like 3rd.",
+    "answer": 5,
+    "hint": "Find Ravi's place from the front first. Then count back past the children between.",
     "steps": [
-     "4 places to Lily, 3 children between, 3 places to Ravi.",
-     "4 + 3 + 3 = 10.",
-     "There are 10 children in the line."
+     "Ravi is 10th from the front, because 11 take away 2, add 1, is 10.",
+     "The 4 children between are the 6th to the 9th.",
+     "Lily is 5th from the front."
     ],
     "slips": [
      {
       "a": [
-       7
+       6
       ],
-      "say": "7 leaves out the children between Lily and Ravi. Count them too."
+      "say": "6th is the first child between Lily and Ravi. Lily is one place in front of that."
      }
     ],
     "tpl": {
      "vars": {
-      "a": [
-       3,
-       4,
-       5,
-       6
+      "n": [
+       10,
+       11,
+       12,
+       13
       ],
       "b": [
        2,
        3,
-       4,
-       5
+       4
       ],
       "c": [
        2,
        3,
-       4,
-       5
+       4
       ]
      },
-     "q": "Lily is {a|ord} from the front. Ravi is {b|ord} from the back. There are {c} children between Lily and Ravi. How many children are in the line?",
-     "answer": "a+b+c",
-     "hint": "Draw the line. Put Lily and Ravi in it with the children between them.",
+     "derive": {
+      "r": "n-b+1",
+      "k": "c+1"
+     },
+     "q": "There are {n} children in a line. Ravi is {b|ord} from the back. There are {c} children between Lily and Ravi, and Lily is in front of Ravi. What place is Lily from the front? Type the place, like 3rd.",
+     "answer": "n-b-c",
+     "hint": "Find Ravi's place from the front first. Then count back past the children between.",
      "steps": [
-      "{a} places to Lily, {c} children between, {b} places to Ravi.",
-      "{a} + {c} + {b} = {ans}.",
-      "There are {ans} children in the line."
+      "Ravi is {r|ord} from the front, because {n} take away {b}, add 1, is {r}.",
+      "Lily is {k} places in front of Ravi: the {c} children between, and one more for Lily. {r} take away {k} is {ans}.",
+      "Lily is {ans|ord} from the front."
      ]
     },
     "easier": "c2"
