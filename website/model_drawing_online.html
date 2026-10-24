@@ -84,7 +84,7 @@ input.ans{font:700 18px var(--body);width:130px;padding:8px 10px;border:2px soli
   </header>
 
   <nav class="tabs" role="tablist" aria-label="Questions" id="tabs"></nav>
-  <p class="how">Try each step first. Wrong answer? Tap <b>Hint</b>. Then draw the same model on paper in your own words.</p>
+  <p class="how"><b>Have paper or a whiteboard ready.</b> Draw each bar yourself first, then use the steps to check your model. Wrong answer? Tap <b>Hint</b>.</p>
 
   <section id="stage" aria-live="polite"></section>
 
@@ -148,7 +148,7 @@ function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;
 function num(s){var t=String(s).replace(/[^0-9.\-\/]/g,"");if(t.indexOf("/")>0){var p=t.split("/");return +p[0]/+p[1]}return parseFloat(t)}
 
 function modelSVG(bars){
-  if(!bars||!bars.length)return '<p class="empty">Your bar model builds here as you solve each step.</p>';
+  if(!bars||!bars.length)return '<p class="empty">Draw it on paper first. The model to check against appears here as you solve each step.</p>';
   var maxP=Math.max.apply(null,bars.map(function(b){return b.p})),uw=Math.min(64,Math.floor(440/maxP)),pad=6,y=4,out="",W=maxP*uw+pad*2;
   bars.forEach(function(b){
     out+='<text class="ml" x="'+pad+'" y="'+(y+12)+'">'+esc(b.l)+'</text>';y+=18;
@@ -185,7 +185,7 @@ function render(){
     h+='<div class="fin"><b>Done!</b> Answer: '+esc(String(last.a))+' '+esc(q.unit)+'.<div class="row" style="margin-top:10px">'+
        (cur<Q.length-1?'<button class="btn" id="next" type="button">Next question</button>':'')+
        '<button class="btn ghost" id="redo" type="button">Try this one again</button></div></div>'}
-  h+='</div><aside class="board"><h3>Your model</h3>'+modelSVG(model)+'</aside></div>';
+  h+='</div><aside class="board"><h3>Check your drawing</h3>'+modelSVG(model)+'</aside></div>';
   document.getElementById("stage").innerHTML=h}
 
 function advance(){prog[cur]=stepOf(cur)+1;save();render();var f=document.querySelector(".step.cur input");if(f)f.focus()}
