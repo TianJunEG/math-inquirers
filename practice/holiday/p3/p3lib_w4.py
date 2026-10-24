@@ -162,6 +162,11 @@ def _meet(s, t):
     return P if _on(P, s) and _on(P, t) else None
 
 
+def segments_meet(s, t):
+    """True if the two (non-parallel) segments touch."""
+    return _meet(_seg(s), _seg(t)) is not None
+
+
 def segs_from(raw):
     return [_seg(s) for s in raw]
 

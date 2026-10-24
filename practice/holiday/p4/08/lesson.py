@@ -124,6 +124,21 @@ def sym_pairs_n(n):
     return sum(1 for s in _it.combinations(cells, 2) if set(s) == {(n - 1 - x, y) for x, y in s})
 
 
+def shape_svg(cells, c=40, fill=YEL, label=''):
+    w, h = dims_c(cells)
+    return svg(w * c + 8, h * c + 8, cells_g(cells, c, 4, 4, fill, sw=2.6), label or 'A shape made of squares.')
+
+
+def lines_item(k, no, name, cells, hint, steps):
+    return D(id='5' + k, tier='core', no=no, label=no, type='number', answer=sym_lines(cells), skill='lines of symmetry', svg=shape_svg(cells, 40, YEL, 'Shape ' + k + ': ' + name),
+             check=lambda: sym_lines(cells), q='How many lines of symmetry does shape (' + k + ') have?', hint=hint, steps=steps,
+             src=['Draw ALL the lines of symmetry on each shape. Then write how many.'])
+
+
+def grid3(shaded=(), lines=(), c=48):
+    return grid_cells_fig(set(shaded), 3, 3, c, YEL, True, True, lines, 'A 3 by 3 grid with columns A to C and rows 1 to 3.')
+
+
 ITEMS = [
     # ================= Start here (workbook lesson 8, Q1 to Q6)
     D(id='1fold', tier='core', no='1', label='1 fold', type='text', accept=perm_accepts(FOLDS), shown=', '.join(FOLDS), skill='which nets fold into a cube', svg=nets_fig(list(NETS.items())),
@@ -191,8 +206,136 @@ ITEMS = [
       steps=['Each corner is flipped across the dashed line: the tail tip 2 squares below, then 1 below, the back 3 below, then 2 below, and the nose is on the line.', 'Join the dots.'],
       src=['Complete each figure so that the dashed line is a line of symmetry.', 'Count the squares from the line to each corner.']),
 
-    D(id='5a', tier='core', no='5(a)', label='5(a)', type='number', answer=1, skill='lines of symmetry', svg=cells_g_fig(SHAPES['a']) if False else None, check=lambda: sym_lines(SHAPES['a']),
-      q='How many lines of symmetry does shape (a) have?', hint='Fold it in your head along an up-down line, an across line, and a corner-to-corner line. Do the halves match?',
-      steps=['The T shape has one line of symmetry: an up-down line through the middle.', 'An across line or a corner-to-corner line does not make the halves match.'],
-      src=['Draw ALL the lines of symmetry on each shape. Then write how many.']),
+    lines_item('a', '5(a)', 'T shape', SHAPES['a'], 'Fold it in your head along an up-down line, an across line and a corner-to-corner line. Do the two halves match?',
+               ['The T shape has one line of symmetry: an up-down line through the middle.', 'An across line or a corner-to-corner line does not make the halves match.']),
+    lines_item('b', '5(b)', 'H shape', SHAPES['b'], 'Try an up-down line, an across line and the two corner-to-corner lines. Which make the halves match?',
+               ['The H shape has two lines of symmetry: an up-down line and an across line through the middle.', 'The corner-to-corner lines do not work.']),
+    lines_item('c', '5(c)', 'plus shape', SHAPES['c'], 'Try an up-down line, an across line and the two corner-to-corner lines. Which make the halves match?',
+               ['The plus shape has four lines of symmetry: up-down, across and both corner-to-corner lines.']),
+    lines_item('d', '5(d)', 'zigzag of 4 squares', SHAPES['d'], 'Try every line: up-down, across and corner-to-corner. Do the halves ever match?',
+               ['The zigzag has no line of symmetry. It looks the same when you turn it half a turn, but a half turn is not a fold.']),
+
+    D(id='6a', tier='core', no='6(a)', label='6(a)', type='text', accept=perm_accepts([sq(c) for c in q6_ways()]), shown=', '.join(sq(c) for c in q6_ways()), skill='shading for symmetry',
+      svg=grid_cells_fig(Q6, 4, 4, 44, TEAL, True, True, ('v', 'h'), 'A 4 by 4 grid, columns A to D and rows 1 to 4. Squares B2, B3, C2, C3 and D2 are shaded. An up-down dashed line and an across dashed line go through the middle.'),
+      accept_prefix=False, check=lambda: ', '.join(sq(c) for c in q6_ways()),
+      q='Shade ONE more square so that a dashed line becomes a line of symmetry of the shaded squares. Find ALL the squares that work. Type them like A1, with commas.',
+      hint='Fold on each dashed line in your head. Where does each shaded square land? Is that square shaded?',
+      steps=['Fold on the up-down line: B2 meets C2, B3 meets C3, but D2 meets A2. Shade A2.', 'Fold on the across line: B2 meets B3, C2 meets C3, but D2 meets D3. Shade D3.', 'No other square works. The squares are A2 and D3.'],
+      src=['Shade ONE more square so that a dashed line becomes a line of symmetry of the shaded squares. Find ALL the ways.']),
+    D(id='6count', tier='core', no='6(a)', label='6(a) ways', type='number', answer=2, skill='shading for symmetry',
+      svg=grid_cells_fig(Q6, 4, 4, 44, TEAL, True, True, ('v', 'h'), 'A 4 by 4 grid with five shaded squares and two dashed lines.'), check=lambda: len(q6_ways()),
+      q='How many different squares can you shade to make a dashed line a line of symmetry?', hint='Count the squares that work for the up-down line and for the across line.',
+      steps=['One square works for the up-down line (A2) and one for the across line (D3).', 'That is 2 ways.'], src=['How many ways?']),
+    D(id='6b', tier='core', no='6(b)', label='6(b)', type='selfcheck', open=True, marking_mode='self', skill='shading for symmetry',
+      svg=grid_cells_fig(Q6, 4, 4, 44, TEAL, True, True, ('v', 'h'), 'A 4 by 4 grid with five shaded squares and two dashed lines.'),
+      q='Choose a square that does NOT work. Where would its partner have to be?', hint='Pick a square, then fold on a dashed line in your head. Where would it land?',
+      steps=['Answers vary. Example: A1. For the up-down line its partner would have to be D1. For the across line its partner would have to be A4.', 'Neither D1 nor A4 is shaded, so A1 does not work.'],
+      src=['Choose a square that does NOT work. Where would its partner have to be?']),
+
+    # ================= Investigation: A row of four
+    D(id='Ieasy', tier='invest', no='Investigation (easy step)', label='Inv easy', type='choice', options=['Yes', 'No'], answer='Yes', skill='folding a net in your head', svg=nets_fig([('', net_with(2, 1))]),
+      check=lambda: 'Yes' if fold(net_with(2, 1)) else 'No',
+      q='Here is a net: a row of 4 squares with one square above it and one square below it. Fold it in your head. Does it make a cube?', hint='The row of 4 wraps round. What do the square above and the square below become?',
+      steps=['The row of 4 folds round as four walls.', 'The square above becomes the lid and the square below becomes the base. It makes a cube.'],
+      src=['Make the net in the picture (a row of 4 squares with one square above it and one below). Fold it. Does it make a cube?']),
+    D(id='Ia', tier='invest', no='Investigation (a)', label='Inv (a)', type='choice', options=['Yes, all four fold', 'No, some do not fold'], answer='Yes, all four fold', skill='testing a claim', svg=nets_fig(FOUR_NETS),
+      check=lambda: 'Yes, all four fold' if all(fold(c) for _, c in FOUR_NETS) else 'No, some do not fold',
+      q='Mei says: "A row of 4 squares with ONE square above it and ONE square below it always folds into a cube, wherever the two squares are." Here are four such nets. Fold each in your head. Do they all fold into a cube?',
+      hint='Pick the row as the walls. Where does the square above go, and where does the square below go?',
+      steps=['In all four nets the row of 4 folds round as four walls.', 'The square above folds over as the lid and the square below as the base, wherever they are along the row.',
+             f'We checked all {len(ALL16)} ways to place the two squares, and every one folds into a cube.'],
+      src=['Test Mei\'s idea.', 'Do they all fold into a cube?']),
+    D(id='Ib', tier='invest', no='Investigation (b)', label='Inv (b)', type='selfcheck', check=lambda: sum(1 for t, b in ALL16 if fold(net_with(t, b))), skill='explaining why a net folds',
+      q='Explain why a row of 4 squares with one square above and one below makes a cube. Use the words wall, lid and base.', hint='What do the 4 squares in the row become? What does the square above become? And the square below?',
+      steps=['The row of 4 squares wraps round to make four walls.', 'The square above becomes the lid, and the square below becomes the base. Nothing overlaps.', 'This works wherever the two squares are along the row: all 16 ways fold into a cube.'],
+      src=['Explain why it works. Use the words wall, lid and base.']),
+    D(id='Ic', tier='invest', no='Investigation (c)', label='Inv (c)', type='choice', options=['Yes, sometimes', 'No, never'], answer='No, never', skill='testing a claim', svg=nets_fig(TWO_ABOVE),
+      check=lambda: 'Yes, sometimes' if any(fold(net_above(i, j)) for i, j in BOTH6) else 'No, never',
+      q='What if BOTH extra squares are above the row? Here are two such nets, and there are others. Do shapes like these ever fold into a cube?',
+      hint='Fold the row into walls. Where do the two extra squares go?',
+      steps=['The row folds round as four walls. Both squares above fold over to become a lid, so they land on top of each other.', 'The base is left empty. We checked all 6 ways to put two squares above the row, and none folds into a cube.'],
+      src=['What if BOTH extra squares are above the row? Try two. Do they ever fold into a cube? Why or why not?']),
+    D(id='Ic-why', tier='invest', no='Investigation (c)', label='Inv (c) why', type='selfcheck', open=True, marking_mode='self', skill='explaining why a net fails',
+      q='Explain what happens when the two extra squares are folded.', hint='Which face of the cube does each extra square become?',
+      steps=['Both squares become the lid, so two squares land in the same place.', 'The base has no square. Any answer like this is good.'],
+      src=['Do they ever fold into a cube? Why or why not?']),
+
+    # ================= Think harder (qbank.stretch[0:4])
+    D(id='T1', tier='stretch', no='Think harder 1', label='T1', type='number', answer=22, skill='nets of a cuboid', svg=cuboid_fig(3, 2, 1), check=lambda: cuboid_faces(3, 2, 1),
+      q='A cuboid is 3 cm long, 2 cm wide and 1 cm high. Its net is drawn on 1 cm squared paper. How many squares does the net cover?', hint='A cuboid has 6 faces, in 3 pairs. Find the number of squares on each pair of faces.',
+      steps=['2 faces of 3 by 2 have 6 squares each: 12.', '2 faces of 3 by 1 have 3 squares each: 6.', '2 faces of 2 by 1 have 2 squares each: 4.', '12 + 6 + 4 = 22 squares.'],
+      src=['A cuboid is 3 cm long, 2 cm wide and 1 cm high.']),
+    D(id='T2a', tier='stretch', no='Think harder 2', label='T2 bottom', type='number', answer=4, skill='opposite faces of a dice', check=lambda: next(v for v in range(1, 7) if v + 3 == 7),
+      q='Ben puts a dice on the table. The top face shows 3 and the front face shows 5. What number is on the bottom face?', hint='Which face is opposite the top? Opposite faces add up to 7.',
+      steps=['The bottom face is opposite the top face.', '3 + 4 = 7, so the bottom is 4.'], src=['Ben puts a dice on the table. The top face shows 3 and the front face shows 5.']),
+    D(id='T2b', tier='stretch', no='Think harder 2', label='T2 back', type='number', answer=2, skill='opposite faces of a dice', check=lambda: next(v for v in range(1, 7) if v + 5 == 7),
+      q='A dice shows 5 on its front face. What number is on its back face?', hint='Which face is opposite the front? Opposite faces add up to 7.',
+      steps=['The back face is opposite the front face.', '5 + 2 = 7, so the back is 2.'], src=['What numbers are on the bottom face and on the back face?']),
+    D(id='T3', tier='stretch', no='Think harder 3', label='T3', type='number', answer=2, skill='opposite faces of a dice', check=lambda: sum(range(1, 7)) - 19,
+      q='A dice is on a table. Mei walks round it and can see the top and the four side faces. The numbers she can see add up to 19. What number is on the bottom face?', hint='How much do all six faces add up to? Which face is Mei not counting?',
+      steps=['All six faces add up to 1 + 2 + 3 + 4 + 5 + 6 = 21.', 'Mei cannot see the bottom, so the bottom is 21 − 19 = 2.'], src=['A dice is on a table. Mei walks round it and can see the top and the four side faces.']),
+    D(id='T4', tier='stretch', no='Think harder 4', label='T4', type='choice', options=[n for n, _ in TETRAS], answer='T', skill='lines of symmetry', svg=tetra_fig(),
+      check=lambda: [n for n, c in TETRAS if sym_lines(c) == 1][0],
+      q='There are 5 different shapes made of 4 squares joined edge to edge. Which one has exactly 1 line of symmetry?', hint='Count the lines of symmetry of each shape. Which one has just one?',
+      steps=['The line has 2 lines of symmetry, the square has 4, the L has 0, the T has 1 and the zigzag has 0.', 'Only the T has exactly 1.'],
+      src=['There are 5 different shapes made of 4 squares joined edge to edge']),
+
+    # ================= Go further (qbank.challenge[-3:], printed Q5 to Q7)
+    D(id='G5', tier='challenge', no='Go further 5', label='G5', type='selfcheck', open=True, marking_mode='open', skill='designing a dice net',
+      check=lambda: (lambda f: f)(dice_fills(net_with(1, 1), {(0, 1): 2, (1, 1): 1, (1, 0): 3}) and MODEL_DICE),
+      sol_fig=lambda f: labelled_net_fig(sorted(MODEL_DICE), {k: str(v) for k, v in MODEL_DICE.items()}, 36, label='A model dice net: a row 2, 1, 5, 6 with 3 above the 1 and 4 below it.'),
+      q='Design your own dice. Draw a net of a cube and write the numbers 1 to 6 on it so that opposite faces add up to 7. Name each pair of opposite faces to prove it works.',
+      hint='Pick a net that folds into a cube. Find the pairs of opposite faces first, then write numbers that add up to 7 on each pair.',
+      steps=['Designs will vary: check that each pair of opposite faces on your net adds up to 7.', 'Model: a row of four squares 2, 1, 5, 6 with a 3 above the 1 and a 4 below the 1.', 'Opposite pairs: 2 and 5, 1 and 6 (first and third, second and fourth in the row), and 3 and 4 (above and below).'],
+      src=['Design your own dice.']),
+    D(id='G6', tier='challenge', no='Go further 6', label='G6', type='number', answer=6, skill='shading for symmetry', svg=grid_cells_fig(set(), 3, 3, 48, YEL, False, False, ('v',), 'A 3 by 3 grid with an up-down dashed line through the middle.'),
+      check=lambda: sym_pairs_n(3),
+      q='In how many ways can you shade exactly 2 squares of a 3 by 3 grid so that the up-down line through the middle is a line of symmetry?', hint='Each shaded square needs a partner the same distance from the line on the other side. List the possibilities in order.',
+      steps=['Both squares in the middle column: 3 ways (top and middle, top and bottom, middle and bottom).', 'One square in each side column, in the same row: 3 ways.', '3 + 3 = 6 ways.'],
+      src=['In how many ways can you shade exactly 2 squares of a 3 by 3 grid so that the up-down line through the middle is a line of symmetry?']),
+    D(id='G7a', tier='challenge', no='Go further 7', label='G7', type='text', accept=fiveacc(), shown=', '.join(squares_name(FIVE[0])), skill='shading for symmetry', svg=grid3(),
+      accept_prefix=False, check=lambda: ', '.join(squares_name(FIVE[0])),
+      q='Shade exactly 5 squares of a 3 by 3 grid so that the pattern has 4 lines of symmetry. There are 2 ways. Type the 5 squares of one way, like A1, with commas.',
+      hint='A pattern with 4 lines of symmetry looks the same after every fold: up-down, across and both corners. Which squares share a fold-partner?',
+      steps=['One way: the middle square and the 4 corners (A1, C1, B2, A3, C3), like an X.', 'The other way: the middle square and the 4 squares in the middle of each side (B1, A2, B2, C2, B3), like a plus.'],
+      src=['Shade exactly 5 squares of a 3 by 3 grid so that the pattern has 4 lines of symmetry. There are 2 ways.']),
+    D(id='G7b', tier='challenge', no='Go further 7', label='G7 both', type='selfcheck', paper=True, skill='shading for symmetry', svg=grid3(), check=lambda: [squares_name(s) for s in FIVE],
+      sol_fig=lambda f: side_by_side([grid3(FIVE[0]), grid3(FIVE[1])], 'The two patterns of 5 shaded squares with 4 lines of symmetry.'),
+      q='Now find BOTH ways. Shade each pattern on paper, then compare with the two patterns shown after you submit.', hint='Once you have one pattern, look for a different one that still has all 4 folds.',
+      steps=['The two patterns are the X (the middle and the 4 corners) and the plus (the middle and the 4 side squares).', 'Both have the up-down, across and two corner-to-corner lines of symmetry.'],
+      src=['There are 2 ways. Find both.']),
 ]
+
+finish(ITEMS)
+
+VARIANTS = {
+    'T1': dict(
+        base=dict(a=3, b=2, c=1),
+        tpl=dict(vars=dict(a=[3, 4, 5], b=[2, 3], c=[1, 2]),
+                 q='A cuboid is {a} cm long, {b} cm wide and {c} cm high. Its net is drawn on 1 cm squared paper. How many squares does the net cover?', answer='2*(a*b+a*c+b*c)',
+                 hint='A cuboid has 6 faces, in 3 pairs. Find the number of squares on each pair of faces.',
+                 steps=['The three pairs of faces have {a} × {b}, {a} × {c} and {b} × {c} squares each.', 'Double each and add: the net covers {ans} squares.']),
+        fig=lambda e: cuboid_fig(e['a'], e['b'], e['c']),
+        oracle=lambda e: cuboid_faces(e['a'], e['b'], e['c'])),
+    'T2a': dict(
+        base=dict(t=3),
+        tpl=dict(vars=dict(t=[1, 2, 3, 4, 5, 6]),
+                 q='Ben puts a dice on the table. The top face shows {t}. What number is on the bottom face?', answer='7-t', hint='Which face is opposite the top? Opposite faces add up to 7.',
+                 steps=['The bottom face is opposite the top face.', '{t} + {ans} = 7, so the bottom is {ans}.']),
+        oracle=lambda e: next(v for v in range(1, 7) if v + e['t'] == 7)),
+    'T3': dict(
+        base=dict(S=19),
+        tpl=dict(vars=dict(S=[15, 16, 17, 18, 19, 20]),
+                 q='A dice is on a table. Mei walks round it and can see the top and the four side faces. The numbers she can see add up to {S}. What number is on the bottom face?',
+                 answer='21-S', hint='How much do all six faces add up to? Which face is Mei not counting?',
+                 steps=['All six faces add up to 1 + 2 + 3 + 4 + 5 + 6 = 21.', 'Mei cannot see the bottom, so the bottom is 21 − {S} = {ans}.']),
+        oracle=lambda e: sum(range(1, 7)) - e['S']),
+    'G6': dict(
+        base=dict(n=3),
+        tpl=dict(vars=dict(n=[3, 5]),
+                 q='In how many ways can you shade exactly 2 squares of a {n} by {n} grid so that the up-down line through the middle is a line of symmetry?', answer='n*(n-1)',
+                 hint='Each shaded square needs a partner the same distance from the line on the other side. Count the possibilities in order.',
+                 steps=['Both squares in the middle column: {n} × ({n} − 1) ÷ 2 ways. One square in each of a pair of side columns, in the same row: the same number of ways.', 'Together that is {ans} ways.']),
+        fig=lambda e: grid_cells_fig(set(), e['n'], e['n'], 40 if e['n'] == 3 else 34, YEL, False, False, ('v',), f'A {e["n"]} by {e["n"]} grid with an up-down dashed line through the middle.'),
+        oracle=lambda e: sym_pairs_n(e['n'])),
+}
