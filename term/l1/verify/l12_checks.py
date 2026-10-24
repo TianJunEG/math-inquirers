@@ -56,12 +56,12 @@ ORACLES = {
     'c2': lambda e: add_cells(e['a'], e['d']),
     'c4': lambda e: altogether(e['a'], add_cells(e['a'], e['d'])),
     't1': lambda e: split_by_total_and_gap(e['T'], e['d'])[0][0],
-    't2': lambda e: transfer_to_equal(e['a'], e['b'])[0],
+    't2': lambda e: [b for b in range(0, e['a'] + 1) if e['a'] - e['m'] == b + e['m']][0],
     't3': lambda e: fewer_than(e['r'], e['d'])[0],
     'g1': lambda e: top_shelf_first(e['T'], e['m'])[0],
     'g2': lambda e: three_with_steps(e['T'], e['d'])[0],
 }
-BASE_ENV = {'c1': dict(a=12, b=8), 'c2': dict(a=15, d=7), 'c4': dict(a=10, d=4), 't1': dict(T=40, d=8), 't2': dict(a=30, b=18),
+BASE_ENV = {'c1': dict(a=12, b=8), 'c2': dict(a=15, d=7), 'c4': dict(a=10, d=4), 't1': dict(T=40, d=8), 't2': dict(a=31, m=5),
             't3': dict(d=18, r=52), 'g1': dict(T=52, m=7), 'g2': dict(T=90, d=10)}
 
 
@@ -105,7 +105,7 @@ def run(d):
     eq([o for o in T['S7']['mcq']['options']], ['24 + 40', '40 - 24', '40 + 40', '24 + 24'], 'S7 options match the model')
     # Think harder
     eq(split_by_total_and_gap(40, 8), [(16, 24)], 'T1'); eq(T['T1']['val'], [16, 24], 'T1 val')
-    eq(transfer_to_equal(30, 18), [6], 'T2'); eq(T['T2']['val'], [6], 'T2 val')
+    kum = [b for b in range(0, 32) if 31 - 5 == b + 5]; eq(kum, [21], 'T2 Aisha at first'); eq(T['T2']['val'], [21], 'T2 val'); eq(T['T2']['visuals'][0]['bars'][1]['len'], 21, 'T2 picture')
     w = fewer_than(52, 18); eq(w, [34], 'T3a'); eq(altogether(52, w[0]), 86, 'T3b'); eq(T['T3']['val'], [34, 86], 'T3 val')
     # Go further
     eq(top_shelf_first(52, 7), [33], 'G1 top'); eq(52 - 33, 19, 'G1 bottom'); eq(33 - 7, 19 + 7, 'G1 equal after the move'); eq(T['G1']['val'], [33, 19], 'G1 val')

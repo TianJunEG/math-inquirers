@@ -2203,7 +2203,9 @@
      "Saying Yes because the story says 3 cousins.",
      "Sharing 20 among 3 people."
     ],
-    "mins": 4
+    "mins": 4,
+    "why": "How do you know?",
+    "lines": 1
    },
    {
     "id": "T3",
@@ -3374,7 +3376,7 @@
   "header": "Division: sharing and grouping",
   "hint_p1": "Use counters and plates, or draw it.",
   "hint_p2": "Deal one at a time, or count in jumps.",
-  "hint_p3": "Use counters or draw it. Choose any question, in any order.",
+  "hint_p3": "Use counters or draw it. Then write how you know. Choose any question, in any order.",
   "hint_p4": "Choose any question. You do not have to finish them all.",
   "choice_after": 3,
   "inv_intro": "",

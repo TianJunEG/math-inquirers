@@ -197,7 +197,7 @@ def run(d):
     eq(O['t4']['answer'], 'Count up from 79 to 82', 't4'); eq(count_up(79, 82), 3, 't4 gap'); eq(hops(79, 82), (1, 0, 2), 't4 hops 1 then 2')
     eq(count_up(47, 71), 24, 'g4 example gap'); eq(47 + 24, 71, 'g4 example check')
     # Retrofit T5 (work backwards): 45 left after giving away 23; the start is found by putting the pieces back
-    eq(T['T5']['val'], [count_up(45, 45 + 23) + 45], 'T5')
-    eq(take_away(68, 23), 45, 'T5 check: 68 take away 23 leaves 45')
-    eq(take_away(45, 23) == 68, False, 'T5 slip: 45 - 23 is not the start')
+    eq(T['T5']['val'], [count_up(57, 82)], 'T5 buns sold'); eq(hops(57, 82), (3, 20, 2), 'T5 hops')
+    eq(take_away(82, 25), 57, 'T5 check: 82 take away 25 leaves 57')
+    eq(82 + 57 == 25, False, 'T5 slip: adding gives 139')
     return n

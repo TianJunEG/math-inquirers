@@ -77,23 +77,23 @@ def wb_chip(d, compact=False):
         return ''
     if x['choose']:
         cells = ''.join(f'<span style="display:inline-flex;flex-direction:column;align-items:center;gap:0.3mm;flex:1 1 0;min-width:0"><span style="display:inline-flex;align-items:center;gap:0.6mm">{icon(t["id"], 7)}{_tick(3.2)}</span>'
-                        f'<span style="font-size:10pt;font-weight:700;line-height:1.05;text-align:center">{E(t["name"])}</span></span>' for t in met(d))
+                        f'<span style="font-size:13.4pt;font-weight:700;line-height:1.05;text-align:center;overflow-wrap:normal">{E(t["name"])}</span></span>' for t in met(d))
         return (f'<div class="spchip" data-spine="chip" style="{BOX}margin:1.5mm 0 0;padding:1mm 2mm 1.2mm;display:flex;flex-direction:column;gap:0.8mm">'
                 f'<span style="font-size:9pt;font-weight:800;letter-spacing:.05em">{LABELS["tool_of_day"]}: {LABELS["choose_one"]}. Tick the one you chose.</span>'
                 f'<span style="display:flex;justify-content:space-between;gap:1mm">{cells}</span></div>')
     t = x['tool']
-    also = ('<span style="font-size:9pt"><b>' + LABELS['also'].strip() + '</b> ' + ', '.join(E(a['name']) for a in x['also']) + '</span>') if x['also'] else ''
-    used = f'<span style="display:inline-flex;align-items:center;gap:1mm;font-size:9pt;font-weight:700;white-space:nowrap">{_tick(3.6)}{LABELS["used"]}</span>'
+    also = ('<span style="font-size:10.5pt"><b>' + LABELS['also'].strip() + '</b> ' + ', '.join(E(a['name']) for a in x['also']) + '</span>') if x['also'] else ''
+    used = f'<span style="display:inline-flex;align-items:center;gap:1mm;font-size:10.5pt;font-weight:700;white-space:nowrap">{_tick(3.6)}{LABELS["used"]}</span>'
     if compact:
         return (f'<div class="spchip" data-spine="chip" style="{BOX}margin:1.5mm 0 0;padding:0.6mm 2mm;display:flex;align-items:center;gap:2mm">'
-                f'<span style="font-size:9pt;font-weight:800;letter-spacing:.05em;white-space:nowrap">{LABELS["tool_of_day"]}</span>{icon(t["id"], 7)}'
+                f'<span style="font-size:10.5pt;font-weight:800;letter-spacing:.05em;white-space:nowrap">{LABELS["tool_of_day"]}</span>{icon(t["id"], 7)}'
                 f'<span style="font-family:Fredoka,Arial,sans-serif;font-size:12pt;font-weight:700;white-space:nowrap">{E(t["name"])}</span>{used}'
                 f'<span style="margin-left:auto">{also}</span></div>')
     # two rows: label + name + tick, then the definition and the 'also' tools (about 11 mm high: it fits beside Mi, so the page grows by about nothing)
     return (f'<div class="spchip" data-spine="chip" style="{BOX}margin:1.5mm 0 0;padding:0.7mm 2.5mm;display:flex;gap:2.5mm;align-items:center">{icon(t["id"], 10)}'
-            f'<div style="flex:1;min-width:0"><div style="display:flex;align-items:center;gap:2.5mm"><span style="font-size:8.5pt;font-weight:800;letter-spacing:.05em;white-space:nowrap">{LABELS["tool_of_day"]}</span>'
+            f'<div style="flex:1;min-width:0"><div style="display:flex;align-items:center;gap:2.5mm"><span style="font-size:10pt;font-weight:800;letter-spacing:.05em;white-space:nowrap">{LABELS["tool_of_day"]}</span>'
             f'<span style="font-family:Fredoka,Arial,sans-serif;font-size:13pt;font-weight:700;line-height:1.15;white-space:nowrap">{E(t["name"])}</span><span style="margin-left:auto">{used}</span></div>'
-            f'<div style="font-size:9pt;line-height:1.2">{E(x["def"])}{(" &nbsp; " + also) if also else ""}</div></div></div>')
+            f'<div style="font-size:10.5pt;line-height:1.2">{E(x["def"])}{(" &nbsp; " + also) if also else ""}</div></div></div>')
 
 
 # Look-back box styles that follow the builder's tightening classes (tight, tight2, tight3 on the page): the box gets shorter exactly where the old one did.

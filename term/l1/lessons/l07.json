@@ -762,7 +762,7 @@
           },
           {
             "k": "STUCK",
-            "text": "Think harder T1 to T4: ask, what is the next ten after the smaller number? How far is that? Then how many tens? Then the last hop. T3: draw two towers, one taller than the other, and add 10 to both. T5: draw the plums he gave away and the plums he kept, then put them together."
+            "text": "Think harder T1 to T4: ask, what is the next ten after the smaller number? How far is that? Then how many tens? Then the last hop. T3: draw two towers, one taller than the other, and add 10 to both. T5: count up from the buns that are left to the buns the baker started with: to the next ten, then the tens, then the ones."
           },
           {
             "k": "STUCK",
@@ -2138,25 +2138,25 @@
         "id": "T5",
         "page": 3,
         "tier": "think",
-        "text": "Kumar had some plums. He gave away 23 plums. Now Kumar has 45 plums. How many plums did Kumar have at first?",
+        "text": "A baker bakes 82 buns. At closing time 57 buns are left. How many buns were sold?",
         "parts": [
           {
             "l": "",
-            "text": "Kumar had ___ plums at first.",
-            "ans": "68",
-            "val": 68
+            "text": "___ buns were sold.",
+            "ans": "25",
+            "val": 25
           }
         ],
-        "answer": "68 plums (45 + 23 = 68)",
+        "answer": "25 buns (57 to 60 is 3, 60 to 80 is 20, 80 to 82 is 2: 3 + 20 + 2 = 25)",
         "val": [
-          68
+          25
         ],
-        "hint": "Kumar gave 23 plums away and still has 45. Draw the plums he gave away next to the plums he kept. Put them together.",
-        "solution": "Kumar gave away 23 plums and has 45 left. The plums he gave away and the plums he kept were all his plums at first. 45 + 23 = 68. Check: 68 take away 23 is 45.",
+        "hint": "Count up from the buns that are left to the buns the baker started with. Hop to the next ten first.",
+        "solution": "The buns sold are the gap between 57 and 82. Count up: 57 to 60 is 3, 60 to 80 is 20, 80 to 82 is 2. 3 + 20 + 2 = 25. Check: 57 + 25 = 82.",
         "mistakes": [
-          "Taking away: writing 45 - 23 = 22.",
-          "Writing 45 (the plums he has now).",
-          "Adding the tens and ones wrongly (45 + 23 = 58 or 78)."
+          "Adding: 82 + 57 = 139.",
+          "Taking the smaller digit from the bigger one in each place (8 - 5 = 3 tens, 7 - 2 = 5 ones) and writing 35.",
+          "Stopping after the first hop (3) or the tens jump (20)."
         ],
         "mins": 4,
         "lines": 2

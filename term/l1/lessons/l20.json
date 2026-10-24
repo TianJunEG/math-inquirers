@@ -2283,7 +2283,9 @@
      "size": 80
     },
     "draw": true,
-    "draw_strokes": 6
+    "draw_strokes": 6,
+    "why": "I chose it because",
+    "lines": 1
    },
    {
     "id": "T2",
@@ -2320,7 +2322,9 @@
      "(a) 14 (stopping after taking 3 away).",
      "(a) 10 (taking 7 from 17)."
     ],
-    "mins": 4
+    "mins": 4,
+    "why": "I chose it because",
+    "lines": 1
    },
    {
     "id": "T3",

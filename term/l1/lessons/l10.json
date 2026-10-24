@@ -1253,7 +1253,7 @@
           ]
         }
       ],
-      "note": "Round 1, about 3 minutes, objects first and no writing. Read story A twice: Mei has 8 buttons. She gets 5 more buttons. Then she gives away 6 buttons. How many buttons does Mei have now? Children act it out with counters or the kit squares: 8 and 5 more is 13, then 6 away leaves 7. Ask for a thumbs up when each child has finished. Answer for the tutor: 7."
+      "note": "Round 1: children work for about 45 to 50 seconds (about 2 minutes with the two reads, the thumbs up and the answer), objects first and no writing. Read story A twice: Mei has 8 buttons. She gets 5 more buttons. Then she gives away 6 buttons. How many buttons does Mei have now? Children act it out with counters or the kit squares: 8 and 5 more is 13, then 6 away leaves 7. Ask for a thumbs up when each child has finished. Answer for the tutor: 7."
     },
     {
       "id": "s-explore2",
@@ -1296,7 +1296,7 @@
           ]
         }
       ],
-      "note": "Round 2, about 3 minutes. Read story B twice, with a first read for who and what, then a second read for the numbers and the question: Ravi has 12 stickers. He gives 5 stickers to Siti. Then he finds 3 more stickers. How many stickers does Ravi have now? Children act it out: 12 - 5 = 7, then 7 + 3 = 10. Answer for the tutor: 10. Praise the two reads, not the speed."
+      "note": "Round 2: about 45 seconds of working time (about 2 minutes with the reading and the answer). Read story B twice, with a first read for who and what, then a second read for the numbers and the question: Ravi has 12 stickers. He gives 5 stickers to Siti. Then he finds 3 more stickers. How many stickers does Ravi have now? Children act it out: 12 - 5 = 7, then 7 + 3 = 10. Answer for the tutor: 10. Praise the two reads, not the speed."
     },
     {
       "id": "s-explore2b",
@@ -1317,7 +1317,7 @@
           "text": "Find Mei first. Then put them together."
         }
       ],
-      "note": "Round 3, about 3 minutes. Read story C twice: Ben has 9 balls. Mei has 4 more balls than Ben. How many balls do they have altogether? Children act it out with counters: a pile of 9 for Ben, then a pile for Mei that is 4 more (13), then put both piles together (22). Answer for the tutor: Mei 13, together 22. Say that Mei has more, so her pile is the greater one. This sets up question 5 in the workbook."
+      "note": "Round 3: about 45 to 50 seconds of working time (about 2 minutes with the reading and the answer). Read story C twice: Ben has 9 balls. Mei has 4 more balls than Ben. How many balls do they have altogether? Children act it out with counters: a pile of 9 for Ben, then a pile for Mei that is 4 more (13), then put both piles together (22). Answer for the tutor: Mei 13, together 22. Say that Mei has more, so her pile is the greater one. This sets up question 5 in the workbook."
     },
     {
       "id": "s-explore3",
@@ -2335,24 +2335,26 @@
         "id": "T2",
         "page": 3,
         "tier": "think",
-        "text": "Mei has a red book on a shelf. There are 5 books on the left of the red book and 3 books on the right of it. How many books are on the shelf?",
+        "text": "A tin has 36 crayons. Siti takes out 10 crayons. Then Jamie takes out the same number of crayons as Siti. How many crayons are left in the tin?",
         "parts": [
           {
             "l": "",
-            "text": "There are ___ books on the shelf.",
-            "ans": "11",
-            "val": 11
+            "text": "There are ___ crayons left in the tin.",
+            "ans": "16",
+            "val": 16
           }
         ],
         "draw": true,
-        "answer": "9 books (5 + 3 + 1, counting the red book).",
+        "answer": "16 crayons (Siti 10, Jamie 10 too: 36 - 10 = 26, then 26 - 10 = 16)",
         "val": [
-          9
+          16
         ],
-        "hint": "Draw the books on the shelf. Did you draw the red book too?",
-        "solution": "The books on the left are 5 and on the right are 3: 5 + 3 = 8. The red book is on the shelf as well, so 8 + 1 = 9 books.",
+        "hint": "Jamie takes out the same number as Siti. How many is that? Draw the crayons and cross out each group.",
+        "solution": "Siti takes out 10, so Jamie takes out 10 as well. 36 - 10 = 26, then 26 - 10 = 16. Check: 16 + 10 + 10 = 36.",
         "mistakes": [
-          "Answering 8 and leaving the red book out."
+          "Taking out only Siti's 10 and writing 26.",
+          "Adding instead of taking away: 36 + 10 = 46.",
+          "Writing 10 for Jamie without noticing it is a second take away."
         ],
         "mins": 4,
         "lines": 0
@@ -2475,32 +2477,32 @@
         "id": "T5",
         "page": 3,
         "tier": "think",
-        "text": "Lily had some badges. She gave 8 badges to Ravi. Then her aunt gave her 5 badges. Now Lily has 20 badges. Go backwards from 20 to find how many badges Lily had at first.",
+        "text": "Ravi has 40 stamps. He gives some stamps to Mei. Then he buys 6 more stamps. Now Ravi has 31 stamps. Go backwards from 31 to find how many stamps Ravi gave to Mei.",
         "parts": [
           {
             "l": "a",
-            "text": "Before her aunt gave her 5 badges, Lily had ___ badges.",
-            "ans": "15",
-            "val": 15
+            "text": "Before Ravi bought 6 more stamps, he had ___ stamps.",
+            "ans": "25",
+            "val": 25
           },
           {
             "l": "b",
-            "text": "At first Lily had ___ badges.",
-            "ans": "23",
-            "val": 23
+            "text": "Ravi gave ___ stamps to Mei.",
+            "ans": "15",
+            "val": 15
           }
         ],
-        "answer": "15 badges, then 23 badges at first (20 - 5 = 15, 15 + 8 = 23)",
+        "answer": "25 stamps, then 15 stamps given (31 - 6 = 25, 40 - 25 = 15)",
         "val": [
-          15,
-          23
+          25,
+          15
         ],
-        "hint": "Start at 20, the end of the story. Undo the last step first: her aunt gave her 5, so take 5 away. Then undo the step before it.",
-        "solution": "The last step was gaining 5, so before it Lily had 20 - 5 = 15. The first step was giving away 8, so before it Lily had 15 + 8 = 23. Check by going forwards: 23 - 8 = 15, then 15 + 5 = 20.",
+        "hint": "Start at 31, the end of the story. Undo the last step first: he bought 6, so take 6 away. Then find how many he gave away from 40.",
+        "solution": "The last step was buying 6, so before it Ravi had 31 - 6 = 25. He started with 40 and had 25 after giving, so he gave 40 - 25 = 15. Check going forwards: 40 - 15 = 25, then 25 + 6 = 31.",
         "mistakes": [
-          "Adding 8 and 5 to 20 (33).",
-          "Doing both steps the same way, for example 20 - 5 - 8 = 7.",
-          "Undoing the steps in the story order instead of backwards."
+          "Adding 6 to 31 (37).",
+          "Writing 25, the number he had after giving, as the answer to part (b).",
+          "Taking 6 from 40 (34) and ignoring what he has now."
         ],
         "mins": 4,
         "lines": 0
@@ -2816,10 +2818,10 @@
     {
       "id": "H4",
       "tier": "think",
-      "text": "Ben has 9 sweets. He has 4 fewer than Kumar. How many sweets altogether?",
-      "answer": "22",
-      "val": 22,
-      "solution": "Ben has fewer, so Kumar has more: 9 + 4 = 13. Together: 9 + 13 = 22."
+      "text": "Ravi has 12 points in a game. He has 5 fewer points than Aisha. Aisha has 3 more points than Kumar. How many points does Kumar have?",
+      "answer": "14 points",
+      "val": 14,
+      "solution": "Ravi has fewer than Aisha, so Aisha has more: 12 + 5 = 17. Aisha has more than Kumar, so Kumar has fewer: 17 - 3 = 14."
     },
     {
       "id": "H5",
@@ -3299,47 +3301,47 @@
         "id": "t2",
         "tier": "stretch",
         "type": "number",
-        "q": "A red book is on a shelf. There are 5 books on the left of it and 3 books on the right of it. How many books are on the shelf?",
-        "answer": 9,
-        "hint": "Draw the shelf. Did you draw the red book too?",
+        "q": "A tin has 36 crayons. Siti takes out 10 crayons. Then Jamie takes out the same number of crayons as Siti. How many crayons are left in the tin?",
+        "answer": 16,
+        "hint": "Jamie takes out the same number as Siti. Draw the tin.",
         "steps": [
-          "5 on the left and 3 on the right: 5 + 3 = 8.",
-          "The red book is on the shelf too: 8 + 1 = 9.",
-          "There are 9 books."
+          "Siti takes out 10. Jamie takes out 10 too.",
+          "36 - 10 = 26, then 26 - 10 = 16.",
+          "There are 16 crayons left."
         ],
         "slips": [
           {
             "a": [
-              8
+              26
             ],
-            "say": "8 leaves out the red book. Count the red book too."
+            "say": "26 is after only one take away. Jamie takes out crayons too."
           }
         ],
         "tpl": {
           "vars": {
-            "f": [
-              4,
-              5,
-              6,
-              8
+            "n": [
+              36,
+              40,
+              45,
+              50
             ],
-            "k": [
-              2,
-              3,
-              4,
-              5
+            "t": [
+              5,
+              8,
+              10,
+              12
             ]
           },
           "derive": {
-            "s": "f+k"
+            "s": "t+t"
           },
-          "q": "A red book is on a shelf. There are {f} books on the left of it and {k} books on the right of it. How many books are on the shelf?",
-          "answer": "f+k+1",
-          "hint": "Draw the shelf. Did you draw the red book too?",
+          "q": "A tin has {n} crayons. Siti takes out {t} crayons. Then Jamie takes out the same number of crayons as Siti. How many crayons are left in the tin?",
+          "answer": "n-t-t",
+          "hint": "Jamie takes out the same number as Siti. Draw the tin.",
           "steps": [
-            "{f} on the left and {k} on the right: {f} + {k} = {s}.",
-            "The red book is on the shelf too: {s} + 1 = {ans}.",
-            "There are {ans} books."
+            "Siti takes out {t}. Jamie takes out {t} too.",
+            "{n} take away {t}, then take away {t} again.",
+            "There are {ans} crayons left."
           ]
         },
         "easier": "c2"
@@ -3760,7 +3762,7 @@
     ],
     "try_home": [
       "Act it out: tell a story with two steps (I have 12, I win 5, then I give 3 away). Your child does each step with buttons.",
-      "Read it twice: first ask 'what happens?' Then ask 'which numbers, and what is the question?' Try: 5 books on the left of a red book and 3 on the right. How many books on the shelf?",
+      "Read it twice: first ask 'what happens?' Then ask 'which numbers, and what is the question?' Try: a tin has 20 crayons. One child takes out 5, then another child takes out the same number. How many crayons are left?",
       "Make it up: your child makes up a two-step story for you. Solve it together, one step at a time."
     ],
     "ask": [
@@ -3834,7 +3836,7 @@
   },
   "workbook": {
     "header": "Story steps",
-    "hint_p1": "Use counters or a drawing. Read the story twice. Say your answer out loud, then write it.",
+    "hint_p1": "Use counters or a drawing. Read the story twice, then write.",
     "hint_p3": "Use counters or draw a picture to help. Choose any question, in any order. Pages 3 to 5 can be finished at home.",
     "hint_p4": "Choose any question. Write one number sentence for each step. You do not have to finish them all.",
     "kits": [

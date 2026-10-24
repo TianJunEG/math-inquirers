@@ -74,7 +74,7 @@ ORACLES = {
     'c5': lambda e: len(take(pile(e['a']), e['b'])),
     'c6': lambda e: len(pile(e['a']) + add(pile(e['a']), e['b'])),
     't1': lambda e: [m for m in range(0, 101) if m + e['b'] == e['r']][0],
-    't2': lambda e: len(queue(e['f'], e['k'])),
+    't2': lambda e: len(take(take(pile(e['n']), e['t']), e['t'])),
     't3': lambda e: e['a'] + [ben for ben in range(0, 201) if ben - e['b'] == e['a']][0],
     't4': lambda e: len(take(add(pile(e['a']), e['b']), e['c'])),
     'g1': lambda e: story(e['s'], [('-', e['a']), ('-', e['b']), ('+', e['c'])])[-1],
@@ -82,7 +82,7 @@ ORACLES = {
     'g3': lambda e: [beh for beh in range(0, 101) if len(queue(e['f'], beh)) == e['n']][0],
 }
 BASE_ENV = {'c1': dict(a=24, b=10), 'c2': dict(a=30, b=10, c=4), 'c3': dict(a=15, b=10), 'c5': dict(a=24, b=5), 'c6': dict(a=10, b=5),
-            't1': dict(r=15, b=3), 't2': dict(f=5, k=3), 't3': dict(a=24, b=6), 't4': dict(a=12, b=5, c=3),
+            't1': dict(r=15, b=3), 't2': dict(n=36, t=10), 't3': dict(a=24, b=6), 't4': dict(a=12, b=5, c=3),
             'g1': dict(s=60, a=24, b=15, c=30), 'g2': dict(T=80, m=25, k=10), 'g3': dict(n=15, f=6)}
 
 EQ_RE = re.compile(r'(?<![\d.])(\d+(?: [+\-] \d+)+) = (\d+)(?![\d.]| [+\-] )')
@@ -183,7 +183,8 @@ def run(d):
     # ---- Think harder
     mei = [m for m in range(0, 100) if m + 3 == 15][0]
     eq(T['T1']['val'], [mei, 15 + mei], 'T1'); eq(mei, 12, 'T1 Mei'); eq(15 + mei, 27, 'T1 together')
-    eq(T['T2']['val'], [len(queue(5, 3))], 'T2 (books on a shelf)'); eq(len(queue(5, 3)), 9, 'T2 value'); eq(len(queue(5, 3)) == 5 + 3, False, 'T2 trap: leaving the red book out gives 8')
+    t2 = len(take(take(pile(36), 10), 10))
+    eq(T['T2']['val'], [t2], 'T2 (crayons)'); eq(t2, 16, 'T2 value'); eq(len(take(pile(36), 10)) == t2, False, 'T2 trap: one take away gives 26'); eq(36 - 10 - 10, 16, 'T2 sentences')
     mei3 = len(add(pile(12), 5)); siti3 = len(take(pile(mei3), 3))
     eq(T['T3']['val'], [mei3, siti3], 'T3'); eq(siti3, 14, 'T3 value'); eq(12 - 3, 9, 'T3 trap value 9 is wrong'); eq(9 == siti3, False, 'T3 trap')
 
@@ -233,8 +234,8 @@ def run(d):
     eq(H['H2']['val'], len(add(pile(14), 6)), 'H2'); eq(len(add(pile(14), 6)), 20, 'H2 value')
     h3 = story(40, [('-', 10), ('-', 20)])
     eq(H['H3']['val'], h3[-1], 'H3'); eq(h3[-1], 10, 'H3 value')
-    dev = len(add(pile(9), 4))
-    eq(H['H4']['val'], 9 + dev, 'H4'); eq(9 + dev, 22, 'H4 value')
+    aisha = len(add(pile(12), 5)); kumar = len(take(pile(aisha), 3))
+    eq(H['H4']['val'], kumar, 'H4'); eq(kumar, 14, 'H4 value'); eq(aisha, 17, 'H4 Aisha')
     eq(H['H5']['val'], 'open', 'H5 open')
 
     # ---- optional slide, spare-time menu
@@ -288,11 +289,10 @@ def run(d):
         stmts += sweep_equations(s)
     eq(stmts > 60, True, 'arithmetic sweep found many statements')
 
-    # Retrofit T5 (work backwards, two steps): ends with 20 after giving away 8 then gaining 5
-    start = 23
-    eq(T['T5']['val'], [20 - 5, 20 - 5 + 8], 'T5 backwards')
-    eq(start - 8 + 5, 20, 'T5 forwards check'); eq(T['T5']['val'][1], start, 'T5 start')
-    eq(20 + 8 + 5 == start, False, 'T5 slip 33')
+    # Retrofit T5 (work backwards, two steps): 40 stamps, give some, buy 6, end with 31
+    gave = [g for g in range(0, 41) if len(add(take(pile(40), g), 6)) == 31]
+    eq(gave, [15], 'T5 brute force: only 15 given fits'); eq(T['T5']['val'], [31 - 6, gave[0]], 'T5 backwards')
+    eq(len(add(take(pile(40), 15), 6)), 31, 'T5 forwards check'); eq(31 + 6 == 25, False, 'T5 slip 37')
     n += check_block(d, eq)
     return n
 

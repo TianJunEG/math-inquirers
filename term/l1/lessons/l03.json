@@ -2309,7 +2309,8 @@
             "8"
           ],
           "mm": 13
-        }
+        },
+        "side": true
       },
       {
         "id": "T2",
@@ -2351,7 +2352,8 @@
             "7"
           ],
           "mm": 13
-        }
+        },
+        "side": true
       },
       {
         "id": "T3",
@@ -2374,7 +2376,7 @@
           "Writing 57 (5 is less than 7)."
         ],
         "mins": 5,
-        "lines": 1,
+        "lines": 2,
         "visual": {
           "type": "digit_cards",
           "cards": [
@@ -2384,7 +2386,8 @@
             "7"
           ],
           "mm": 11
-        }
+        },
+        "side": true
       },
       {
         "id": "T4",
@@ -2416,7 +2419,7 @@
           "Writing 22, 44 or 66 (each card can be used only once)."
         ],
         "mins": 5,
-        "lines": 1,
+        "lines": 2,
         "visual": {
           "type": "digit_cards",
           "cards": [
@@ -2425,7 +2428,8 @@
             "6"
           ],
           "mm": 13
-        }
+        },
+        "side": true
       }
     ],
     "go": [

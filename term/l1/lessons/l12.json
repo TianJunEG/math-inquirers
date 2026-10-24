@@ -2324,24 +2324,25 @@
     "id": "T2",
     "page": 3,
     "tier": "think",
-    "text": "Ali has 30 stickers. Mei has 18 stickers. Ali gives some stickers to Mei. Then they have the same number.",
-    "answer": "6 stickers",
+    "text": "Kumar has 31 coins. He gives 5 coins to Aisha. Then Kumar and Aisha have the same number of coins.",
+    "answer": "21 coins",
     "val": [
-     6
+     21
     ],
-    "hint": "Find the gap first. Ali gives Mei half of the gap.",
-    "solution": "The gap is 30 - 18 = 12. Ali gives half of the gap: 6. Then Ali has 24 and Mei has 24.",
+    "hint": "After giving 5, Kumar has 26. Aisha has 26 as well. Take away the 5 she got.",
+    "solution": "After giving 5 coins, Kumar has 31 - 5 = 26. Aisha now has the same, 26. She got 5 from Kumar, so at first she had 26 - 5 = 21. Check: 21 + 5 = 26 and 31 - 5 = 26.",
     "mistakes": [
-     "Writing 12, the whole gap.",
-     "Writing 24, the number each ends with."
+     "Writing 26, the number each child has at the end.",
+     "Writing 5, the number that moved.",
+     "Adding: 31 + 5 = 36."
     ],
     "mins": 4,
     "parts": [
      {
       "l": "",
-      "text": "Ali gives Mei [] stickers.",
-      "ans": "6",
-      "val": 6
+      "text": "Aisha had [] coins at first.",
+      "ans": "21",
+      "val": 21
      }
     ],
     "lines": 0,
@@ -2350,20 +2351,20 @@
       "type": "bar_model",
       "bars": [
        {
-        "name": "Ali",
-        "len": 30,
-        "text": "30"
+        "name": "Kumar",
+        "len": 31,
+        "text": "31"
        },
        {
-        "name": "Mei",
-        "len": 18,
-        "text": "18"
+        "name": "Aisha",
+        "len": 21,
+        "text": "?"
        }
       ],
       "arrow": {
        "from": 0,
        "to": 1,
-       "v": "?"
+       "v": "5"
       }
      }
     ]
@@ -3146,44 +3147,45 @@
     "id": "t2",
     "tier": "stretch",
     "type": "number",
-    "q": "Ali has 30 stickers. Mei has 18 stickers. Ali gives some stickers to Mei so they have the same number. How many stickers does Ali give?",
-    "answer": 6,
-    "hint": "Find the gap. Ali gives half of the gap.",
+    "q": "Kumar has 31 coins. He gives 5 coins to Aisha. Then they have the same number of coins. How many coins did Aisha have at first?",
+    "answer": 21,
+    "hint": "After giving, Kumar and Aisha have the same. Undo the 5 Aisha got.",
     "steps": [
-     "The gap is 30 take away 18, which is 12.",
-     "Ali gives half of the gap: 6.",
-     "Then both have 24."
+     "Kumar has 31 - 5 = 26 after giving.",
+     "Aisha has 26 too. She got 5, so 26 - 5 = 21.",
+     "Aisha had 21 coins at first."
     ],
     "slips": [
      {
       "a": [
-       12
+       26
       ],
-      "say": "12 is the whole gap. If Ali gave 12, Mei would have more than Ali."
+      "say": "26 is how many Aisha has at the end. Take away the 5 she got."
      }
     ],
     "tpl": {
      "vars": {
       "a": [
-       24,
-       30,
-       36,
-       40
+       31,
+       35,
+       40,
+       45,
+       50
       ],
-      "b": [
-       10,
-       12,
-       16,
-       18
+      "m": [
+       3,
+       4,
+       5,
+       6
       ]
      },
-     "q": "Ali has {a} stickers. Mei has {b} stickers. Ali gives some stickers to Mei so they have the same number. How many stickers does Ali give?",
-     "answer": "(a-b)/2",
-     "hint": "Find the gap. Ali gives half of the gap.",
+     "q": "Kumar has {a} coins. He gives {m} coins to Aisha. Then they have the same number of coins. How many coins did Aisha have at first?",
+     "answer": "a-m-m",
+     "hint": "After giving, Kumar and Aisha have the same. Undo the coins Aisha got.",
      "steps": [
-      "The gap is {a} take away {b}.",
-      "Ali gives half of the gap.",
-      "Ali gives {ans} stickers."
+      "Kumar has {a} take away {m} after giving.",
+      "Aisha has the same at the end. Take away the {m} she got.",
+      "Aisha had {ans} coins at first."
      ]
     },
     "easier": "c1"

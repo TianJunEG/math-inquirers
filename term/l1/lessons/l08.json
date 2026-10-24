@@ -2075,7 +2075,7 @@
      },
      {
       "l": "b",
-      "text": "I know because ___.",
+      "text": "I know because:",
       "ans": "",
       "val": "open"
      }
@@ -2092,7 +2092,8 @@
      "Adding both sums and not saying how the numbers moved (correct, but check the reason)."
     ],
     "mins": 5,
-    "lines": 2
+    "lines": 2,
+    "reason": true
    },
    {
     "id": "T2",

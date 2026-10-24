@@ -90,8 +90,19 @@ def _o_c4(e):
     return place_back(line, c)
 
 
+def _line_from_clues(front, back, mid):
+    """Line lengths n where the child who is `front`th from the front and the child who is `back`th from the back have `mid` children between them."""
+    out = []
+    for n in range(1, 60):
+        ln = make_line(n)
+        if front <= n and back <= n:
+            a, b = ln[front - 1], list(reversed(ln))[back - 1]
+            if ln.index(b) > ln.index(a) and between(ln, a, b) == mid: out.append(n)
+    return out
+
+
 def _o_t1(e):
-    n = line_lengths_with_both_places(e['k'], e['k'])
+    n = _line_from_clues(e['a'], e['b'], e['c'])
     assert len(n) == 1
     return n[0]
 
@@ -116,7 +127,7 @@ def _o_g2(e):
 
 
 ORACLES = {'c1': _o_c1, 'c2': _o_c2, 'c4': _o_c4, 't1': _o_t1, 't2': _o_t2, 'g1': _o_g1, 'g2': _o_g2}
-BASE_ENV = {'c1': dict(n=6, k=3), 'c2': dict(k=5), 'c4': dict(n=8, f=3), 't1': dict(k=5), 't2': dict(a=3, b=9), 'g1': dict(n=13), 'g2': dict(n=13)}
+BASE_ENV = {'c1': dict(n=6, k=3), 'c2': dict(k=5), 'c4': dict(n=8, f=3), 't1': dict(a=4, b=3, c=3), 't2': dict(a=3, b=9), 'g1': dict(n=13), 'g2': dict(n=13)}
 
 
 def run(d):
@@ -167,7 +178,7 @@ def run(d):
     eq([ordinal(p) for p in pos6], ['2nd'], 'S6 only one place is between 1st and 3rd'); eq(T['S6']['val'], ['2nd'], 'S6 val')
     eq(in_front(seven, seven[4]), 4, 'S7'); eq(T['S7']['val'], [4], 'S7 val')
     # Think harder
-    eq(line_lengths_with_both_places(5, 5), [9], 'T1'); eq(5 + 5 == 10 and 10 != 9, True, 'T1 Kumar is not correct'); eq(T['T1']['val'], ['No', 9], 'T1 val')
+    eq(_line_from_clues(4, 3, 3), [10], 'T1'); eq(4 + 3 == 7 and 7 != 10, True, 'T1 Kumar is not correct'); eq(T['T1']['val'], ['No', 10], 'T1 val')
     ln10 = make_line(10); eq(between(ln10, ln10[2], ln10[8]), 5, 'T2'); eq(T['T2']['val'], [5], 'T2 val')
     # T3: the door is on the right; the picture puts place 6 second from the left end
     seven_left_to_right = list(reversed(make_line(7)))               # place 7 at the far left, place 1 at the door on the right
@@ -197,7 +208,7 @@ def run(d):
     eq(line_lengths_with_both_places(2, 6), [7], 'talk: a line of 7')
     # Home practice
     l6 = make_line(6); eq(ordinal(place_back(l6, l6[3])), '3rd', 'H1'); eq(in_front(make_line(9), 7), 6, 'H2')
-    l = make_line(6); eq(ordinal(place_front(l, l[1 + 1 + 1])), '4th', 'H3'); eq(line_lengths_with_both_places(4, 4), [7], 'H4')
+    l = make_line(6); eq(ordinal(place_front(l, l[1 + 1 + 1])), '4th', 'H3'); l10h = make_line(9); rav = l10h[6]; l10h = [c for c in l10h if c not in l10h[:3]]; eq(ordinal(place_front(l10h, rav)), '4th', 'H4'); eq(d['home_practice'][3]['val'], '4th', 'H4 val')
     l9 = make_line(9); mid9 = [c for c in l9 if in_front(l9, c) == behind(l9, c)][0]; ben9 = l9[l9.index(mid9) + 2]
     eq(ordinal(place_front(l9, ben9)), '7th', 'H5')
     # Optional slide and spare-time menu

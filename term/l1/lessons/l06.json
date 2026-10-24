@@ -80,7 +80,7 @@
    }
   ],
   "hint_p1": "Use your kit or a drawing. A bundle of 10 is a bar in your kit. Say your answer out loud, then write it.",
-  "hint_p3": "Use your kit or draw the jumps and hops. Then write how you know. Choose any question, in any order."
+  "hint_p3": "Use your kit or draw it. Then write how you know. Choose any question."
  },
  "timing": {
   "parts": [
@@ -2296,7 +2296,8 @@
      "Adding 4 + 5 as 9 tens (93)."
     ],
     "mins": 4,
-    "lines": 0
+    "lines": 1,
+    "why": "How do you know?"
    },
    {
     "id": "T2",
@@ -2341,7 +2342,8 @@
      "Hopping forward instead of back."
     ],
     "mins": 3,
-    "lines": 0
+    "lines": 1,
+    "why": "How do you know?"
    },
    {
     "id": "T3",
@@ -2426,7 +2428,8 @@
       }
      ],
      "px": 470
-    }
+    },
+    "why": "How do you know?"
    },
    {
     "id": "T4",
@@ -2452,7 +2455,8 @@
      "Taking away only 3 (75)."
     ],
     "mins": 3,
-    "lines": 1
+    "lines": 1,
+    "why": "How do you know?"
    }
   ],
   "go": [
