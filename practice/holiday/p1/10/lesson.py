@@ -189,7 +189,7 @@ ITEMS = [
       steps=['Count the rows: dog 4, cat 7, fish 3, bird 5.', 'Try pairs: cat and fish is 7 + 3 = 10. The other pairs make 11, 9, 8 or 12.', 'Cat and fish together make exactly 10 pets.'],
       src=['Which two kinds of pet together make exactly 10?']),
 
-    D(id='4a', tier='core', no='4(a)', label='4(a)', type='number', skill='adding coins', answer=50,
+    D(id='4a', tier='core', no='4(a)', label='4(a)', type='number', dollars_ok=True, skill='adding coins', answer=50,
       q='You have one 20¢ coin, two 10¢ coins and two 5¢ coins. How much money do you have altogether?', check=lambda: sum(COINS_HELD),
       hint='Add the coins one at a time. Start with the biggest coin.',
       steps=['The coins are 20¢, 10¢, 10¢, 5¢ and 5¢.', '20 + 10 = 30, 30 + 10 = 40, 40 + 5 = 45 and 45 + 5 = 50.', 'You have 50¢.'],

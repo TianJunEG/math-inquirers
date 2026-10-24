@@ -262,7 +262,7 @@ ITEMS = [
          src=['Mei’s family leaves home at 10:45 am. They reach Grandma’s flat at 11:30 am. How long is the trip?']),
 
     # ================= Investigation: Weights puzzle
-    dict(id='I1', tier='invest', no='Investigation (a)', label='Inv 1', type='set', ordered=False, skill='making masses from weights', answer=[1, 2, 3, 4, 5, 6, 7],
+    dict(id='I1', tier='invest', no='Investigation (a)', label='Inv 1', type='set', range=True, ordered=False, skill='making masses from weights', answer=[1, 2, 3, 4, 5, 6, 7],
          q='Weights puzzle. You have three weights: 1 g, 2 g and 4 g. You can put some of them on one pan to make a mass. Type every mass from 1 g to 8 g that you can make.',
          check=lambda: sorted(m for m in masses((1, 2, 4)) if 1 <= m <= 8),
          hint='Easy first step: can you make 3 g? Can you make 5 g? Try putting two weights on the pan together, then all three.',
