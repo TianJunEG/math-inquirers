@@ -1,0 +1,110 @@
+--- a/website/lp_build.py
++++ b/website/lp_build.py
+@@ -41,25 +41,27 @@
+ 
+ <section class="facts" id="program"><div class="fact"><div class="v">10 lessons</div><div class="l">90 minutes each, over 5 weeks</div></div><div class="fact"><div class="v">Up to 8</div><div class="l">children in each group</div></div><div class="fact"><div class="v">Live online</div><div class="l">from home, workbook posted to you</div></div><div class="fact"><div class="v">All included</div><div class="l">workbook, kit, certificate</div></div></section>
+ 
+-<section class="sec"><div class="shead"><span class="eyebrow">How children learn</span><h2>Four habits of a young mathematician</h2><p class="muted">Every lesson follows the same four steps, so children learn how to think, not just what to write.</p></div><div class="rules4">
+-<div class="rule"><b>1</b><h3>Notice the pattern</h3><p class="muted small">Look closely before rushing to an answer.</p></div>
+-<div class="rule"><b>2</b><h3>Test it with objects</h3><p class="muted small">Counters, coins and strips to check an idea.</p></div>
+-<div class="rule"><b>3</b><h3>Check your answer</h3><p class="muted small">Does it make sense? Try another way.</p></div>
+-<div class="rule"><b>4</b><h3>Explain why</h3><p class="muted small">Say or draw why it works. This is where learning sticks.</p></div></div></section>
++<section class="sec"><div class="shead"><span class="eyebrow">How children learn</span><h2>Habits of a young mathematician</h2><p class="muted">Every lesson practises six inquiry habits: noticing, wondering, trying, checking, explaining and looking back. Children practise how to think as well as what to write. <a href="/habits/">See the six habits</a>.</p></div><div class="rules4">
++<div class="rule"><b>1</b><h3>Notice</h3><p class="muted small"><i>&ldquo;What do I see?&rdquo;</i> Look closely before rushing to an answer.</p></div>
++<div class="rule"><b>2</b><h3>Wonder</h3><p class="muted small"><i>&ldquo;What could I ask?&rdquo;</i> Ask a question, or a "what if?", before looking for an answer.</p></div>
++<div class="rule"><b>3</b><h3>Try</h3><p class="muted small"><i>&ldquo;Let me test it&rdquo;</i> Counters, coins and strips to test an idea.</p></div>
++<div class="rule"><b>4</b><h3>Check</h3><p class="muted small"><i>&ldquo;Does it always work?&rdquo;</i> Try a second case. Does it still work?</p></div>
++<div class="rule"><b>5</b><h3>Explain</h3><p class="muted small"><i>&ldquo;Here is why&rdquo;</i> Say or draw why it works. Children practise explaining in every lesson.</p></div>
++<div class="rule"><b>6</b><h3>Look back</h3><p class="muted small"><i>&ldquo;What did I learn?&rdquo;</i> Say what was learnt, what was hard and what to change next time.</p></div></div></section>
+ 
+ <section class="sec" id="design"><div class="shead"><span class="eyebrow">How it is designed</span><h2>A maths enrichment program, inspired by research-based approaches used in gifted education</h2><p class="muted">For curious, capable children who enjoy thinking hard about maths, whatever their starting point.</p></div><div class="rules4">
+ <div class="rule"><b>&#8593;</b><h3>Low floor, high ceiling</h3><p class="muted small">Every task has an easy way in and room to go further, so no child waits and no child is stuck.</p></div>
+-<div class="rule"><b>?</b><h3>Open investigations</h3><p class="muted small">Find every way, spot the pattern, make up your own puzzle, and ask "what if?".</p></div>
+-<div class="rule"><b>&#9998;</b><h3>Explain and look back</h3><p class="muted small">Children say why it works, try a second method, and note what was hard.</p></div>
++<div class="rule"><b>?</b><h3>Open investigations</h3><p class="muted small">Many lessons include finding every way, spotting a pattern, making up a puzzle or asking "what if?".</p></div>
++<div class="rule"><b>&#9998;</b><h3>Explain and look back</h3><p class="muted small">Each lesson ends with a look-back where children note what was hard and what helped.</p></div>
+ <div class="rule"><b>&#9733;</b><h3>Beyond the syllabus</h3><p class="muted small">We extend thinking beyond the school syllabus with depth and reasoning, not by racing ahead.</p></div></div>
+-<p class="muted small" style="margin-top:14px">Frameworks that inspire the design include low-floor, high-ceiling tasks, P&oacute;lya's problem-solving steps and mathematical habits of mind. We do not identify or test for giftedness, we are not a GEP preparation course, and we do not promise exam or competition results.</p></section>
++<p class="muted small" style="margin-top:14px">Frameworks that inspire the design include low-floor, high-ceiling tasks, P&oacute;lya's problem-solving steps and mathematical habits of mind. The six Math Inquirers habits are our own working set. We do not identify or test for giftedness, we are not a GEP preparation course, and we do not promise exam or competition results.</p></section>
+ 
+ <section class="sec"><div class="shead"><span class="eyebrow">The 10 lessons</span><h2>What Level 1 (ages 6-8) covers</h2><p class="muted">Every level has its own ten lessons. See them on each level page below.</p></div><div class="lessons" id="lessons"></div></section>
+ 
+ <section class="two"><div class="tile yel"><span class="tag">Your child takes home</span><ul style="padding-left:18px;display:grid;gap:6px"><li>A printed Math Inquirers workbook, posted to your home</li><li>The Inquirer Kit: cut-out pages at the back of the workbook (for Ages 6-8: play coins, ten-frames, counters, number strips and tiles)</li><li>An Inquiry Journal page in the workbook, stamped after every lesson</li><li>A certificate page, signed on Puzzle Day</li></ul></div>
+-<div class="tile mint"><span class="tag">You get</span><ul style="padding-left:18px;display:grid;gap:6px"><li>A short note each week: what we did and one thing to try at home</li><li>Notes on where your child is ready to be stretched further</li><li>Free weekly puzzles by email</li></ul><p class="small muted">Nothing to buy. We post the printed workbook (with the Inquirer Kit cut-out pages) to your home before the first lesson. Singapore addresses only.</p></div></section>
++<div class="tile mint"><span class="tag">You get</span><ul style="padding-left:18px;display:grid;gap:6px"><li>A short note each week: what we did and one thing to try at home</li><li>A note after each lesson: the inquiry habits we practised and one thing your child said or did</li><li>Free weekly puzzles by email</li></ul><p class="small muted">Nothing to buy. We post the printed workbook (with the Inquirer Kit cut-out pages) to your home before the first lesson. Singapore addresses only.</p></div></section>
+ 
+-<section class="sec" id="tryit"><div class="shead"><span class="eyebrow">Try one now</span><h2>'''+('A puzzle to try' if TEASER_ON else 'A taste of Lesson 1')+'''</h2></div><div class="pzcard"><div class="pzl"'''+(' id="pzBox"' if TEASER_ON else '')+'''><span class="tag">Ages 6-8 · Frog hops</span><div class="big">3, 6, 9, ?</div><p style="font-size:18px">A frog starts at 0 and hops 3 steps each time: 3, 6, 9 … Where does it land on its 7th hop?</p><div class="row"><input id="pzA" aria-label="Your answer" placeholder="Your answer" inputmode="numeric" style="max-width:170px"><button class="btn yel" id="pzCheck" type="button">Check</button></div><div id="pzMsg"></div></div><div class="pzr"><h3>In class, the answer is only half the job</h3><p class="muted">Children then explain how they know: counting on a number line, adding 3 seven times, or spotting that every landing spot is in the 3 times table. Hearing three different ways is how thinking grows.</p><a class="btn sm alt" href="#register" style="justify-self:start">Register for the program</a></div></div></section>
++<section class="sec" id="tryit"><div class="shead"><span class="eyebrow">Try one now</span><h2>'''+('A puzzle to try' if TEASER_ON else 'A taste of Lesson 1')+'''</h2></div><div class="pzcard"><div class="pzl"'''+(' id="pzBox"' if TEASER_ON else '')+'''><span class="tag">Ages 6-8 · Frog hops</span><div class="big">3, 6, 9, ?</div><p style="font-size:18px">A frog starts at 0 and hops 3 steps each time: 3, 6, 9 … Where does it land on its 7th hop?</p><div class="row"><input id="pzA" aria-label="Your answer" placeholder="Your answer" inputmode="numeric" style="max-width:170px"><button class="btn yel" id="pzCheck" type="button">Check</button></div><div id="pzMsg"></div></div><div class="pzr"><h3>In class, the answer is only half the job</h3><p class="muted">Children then explain how they know: counting on a number line, adding 3 seven times, or spotting that every landing spot is in the 3 times table. Explaining is one of the habits we practise in every lesson.</p><a class="btn sm alt" href="#register" style="justify-self:start">Register for the program</a></div></div></section>
+ 
+ <section class="sec" id="classes"><div class="shead"><span class="eyebrow">November beta · Singapore time</span><h2>Choose a group</h2><p class="muted">Lessons start in the week of <b>Mon 23 Nov</b> (first lessons Tue 24 to Fri 27 Nov, see each group). Each group meets twice a week for 5 weeks, 90 minutes a lesson, live online, up to 8 children. If a group fills, we open another.</p><div class="draft">Beta fee: S$<span id="betaPer"></span> a lesson, S$<span id="betaTot"></span> for all 10 lessons. The fee includes the printed workbook posted to your home. We confirm payment details on WhatsApp after you register.</div></div><div class="sessions" id="sess"></div><p class="small muted" style="margin-top:12px">No lessons on Fri 25 Dec (Christmas Day). Otherwise each group keeps the same two weekly times for all 5 weeks; where the final week differs it is shown on the card.</p><p style="margin-top:8px"><b>None of these times suit you?</b> <a href="#request-time">Request another time</a>. Each card also lists other times we may open if enough families are interested.</p></section>
+ 
+@@ -175,6 +177,6 @@
+ _int=dict(consent=interest_ui.CONSENT_VERSION,bands=dict(interest_ui.AGE_BANDS),levels={n:'Level %d (ages %s)'%(n,a) for n,a in interest_ui.LEVEL_AGES.items()})
+ html=html.replace('__REGBYFAQ__',_faq_regby(sch)).replace('__REGBYLABEL__',register_by(sch)[0]).replace('__REGBY__',register_by_line(sch)).replace('__INTEREST_FORM__',interest_ui.form_section(WA_NUM,WA_SHOW)).replace('__WASHOW__',WA_SHOW).replace('__WA__',WA_NUM).replace('__INTEREST__',json.dumps(_int)).replace('__CLASSES__',json.dumps(cls)).replace('__BETA__',json.dumps(dict(per=sch['price']['per_lesson'],total=sch['price']['total'])))
+ if TEASER_ON:   # the right-hand note must not talk about frog hops when the daily puzzle is showing
+-    html=html.replace("Children then explain how they know: counting on a number line, adding 3 seven times, or spotting that every landing spot is in the 3 times table. Hearing three different ways is how thinking grows.","Children then explain how they know, and hear other ways of seeing the same puzzle. That is where the thinking grows.")
++    html=html.replace("Children then explain how they know: counting on a number line, adding 3 seven times, or spotting that every landing spot is in the 3 times table. Explaining is one of the habits we practise in every lesson.","Children explain how they know and hear other ways of seeing the same puzzle. Explaining is one of the habits we practise in every lesson.")
+ open('mi_signup.html','w').write(html)
+ print(len(html))
+--- a/website/level_pages.py
++++ b/website/level_pages.py
+@@ -261,7 +261,7 @@
+ <div class="row" style="margin-top:6px"><a class="btn yel" href="/?level=%(n)d#register">Register for Level %(n)d</a><a class="btn ghost" href="#times">See class times</a></div></div>
+ <ul class="glance" aria-label="Level at a glance"><li><b>Ages</b><span>%(ages)s</span></li><li><b>Builds on</b><span>%(builds)s</span></li><li><b>Lessons</b><span>10 × %(mins)d minutes, over %(weeks)d weeks</span></li><li><b>Group size</b><span>Up to %(seats)d children, live online</span></li><li><b>Beta fee</b><span>S$%(per)s a lesson, S$%(tot)s for all 10</span></li></ul></section>
+ 
+-<section class="sec" id="learn"><div class="shead"><span class="eyebrow">The 10 lessons</span><h2>What your child learns</h2><p class="muted">%(blurb)s Each lesson follows the same four steps: notice the pattern, test it, check the answer, explain why.</p>%(note)s</div><div class="lessons">%(cards)s</div></section>
++<section class="sec" id="learn"><div class="shead"><span class="eyebrow">The 10 lessons</span><h2>What your child works on</h2><p class="muted">%(blurb)s Each lesson practises the inquiry habits: noticing, wondering, trying, checking, explaining and looking back.</p>%(note)s</div><div class="lessons">%(cards)s</div></section>
+ 
+ <section class="sec" id="tiers"><div class="shead"><span class="eyebrow">Three tiers</span><h2>Start here, Think harder, Go further</h2><p class="muted">Every child's workbook has all three, plus an Investigation on the Finish page. After the first few questions, any child may choose to carry on or try the next tier. Nobody is told which page they are on, and a child who finds Think harder too hard simply goes back to Start here.</p></div>
+ <div class="tiers"><div class="tile yel"><span class="tag">Start here</span><h3>Start here</h3><p class="small">The core questions for the lesson, worked with objects, drawings and a partner. Everyone begins here.</p></div>
+@@ -271,7 +271,7 @@
+ <section class="two"><div class="tile yel"><span class="tag">In the kit</span><h3>Cut-outs in the workbook</h3><ul class="klist">%(kit)s</ul><p class="small muted">Nothing needs to be bought for the kit. The kit is the cut-out pages at the back of your child's workbook. We post the printed workbook to your home before the first lesson (Singapore addresses), and your child cuts out the pieces and keeps them in one envelope.</p></div>
+ <div class="tile mint"><span class="tag">At home</span><h3>What your child needs</h3><ul class="klist">%(home)s</ul><p class="small muted">These come from the lesson plans for this level.</p></div></section>
+ 
+-<section class="sec" id="puzzle"><div class="shead"><span class="eyebrow">Try one now</span><h2>%(ph2)s</h2></div><div class="pzcard"><div class="pzl"%(pzid)s><span class="tag">%(ptag)s</span><div class="big">%(pbig)s</div><p style="font-size:18px">%(pq)s</p><details class="ans"><summary>Show the answer</summary><p>%(pa)s</p></details></div><div class="pzr"><h3>In class, the answer is only half the job</h3><p class="muted">Children then explain how they know, and hear other ways of seeing the same puzzle. That is where the thinking grows.</p><a class="btn sm alt" href="/?level=%(n)d#register" style="justify-self:start">Register for Level %(n)d</a></div></div></section>
++<section class="sec" id="puzzle"><div class="shead"><span class="eyebrow">Try one now</span><h2>%(ph2)s</h2></div><div class="pzcard"><div class="pzl"%(pzid)s><span class="tag">%(ptag)s</span><div class="big">%(pbig)s</div><p style="font-size:18px">%(pq)s</p><details class="ans"><summary>Show the answer</summary><p>%(pa)s</p></details></div><div class="pzr"><h3>In class, the answer is only half the job</h3><p class="muted">Children explain how they know and hear other ways of seeing the same puzzle. Explaining is one of the habits we practise in every lesson.</p><a class="btn sm alt" href="/?level=%(n)d#register" style="justify-self:start">Register for Level %(n)d</a></div></div></section>
+ 
+ <section class="sec" id="placement"><div class="shead"><span class="eyebrow">Placement</span><h2>Is Ages %(ages)s right for my child?</h2></div>%(placement)s</section>
+ 
+--- a/website/hub/qa.py
++++ b/website/hub/qa.py
+@@ -36,7 +36,7 @@
+  'For a Primary 1 child, 10 to 15 focused minutes most days works better than one long session a week.',
+  ['Short sessions keep confidence high. Mix one quick skill (like number bonds) with one puzzle that needs thinking. If your child is tired or upset, stop and try again tomorrow.']),
+ ('home','guessing','My child guesses answers instead of working them out. What can I do?',
+- 'Ask "How do you know?" every time, including when the answer is right. Children quickly learn that the reason matters.',
++ 'Ask "How do you know?" every time, including when the answer is right. This gives your child regular practice at giving a reason.',
+  ['Give objects or a drawing to check with, and praise the checking: "I like how you counted to make sure." If guessing continues, the question may be too hard, so step back to a smaller number.']),
+ ('home','school-method','Should I teach the school method or my own way?',
+  'Use the school method as the main way, and show your own way as a second method to compare.',
+@@ -45,18 +45,18 @@
+  'Talk maths during ordinary moments: shopping, cooking, travelling and playing.',
+  ['<ul><li>At the shop: "Which is cheaper? By how much?"</li><li>In the kitchen: "We need 3 eggs for each cake. How many for 2 cakes?"</li><li>On the MRT: "How many stops to go? How many have we passed?"</li><li>With toys: sort them, count them, and make patterns.</li></ul>']),
+ ('home','frustrated','My child gets upset when maths feels hard. How can I help?',
+- 'Make it safe to be stuck: struggling a little is how thinking grows.',
++ 'Make it safe to be stuck: being stuck for a little while is a normal part of working on a puzzle.',
+  ['Give a smaller step rather than the answer: "Can you try it with objects?" or "What would happen with a smaller number?" Share that you also get stuck sometimes. End on a question your child can do so they finish feeling capable.']),
+ ('strong','too-easy','My child finds school maths too easy. What should we do next?',
+  'Go deeper rather than faster: give puzzles that need reasoning, not just next year\'s topics.',
+- ['Good stretch tasks ask a child to find every possible answer, explain why something works, or work backwards. For example: "Find all the ways to make 30 cents with 5, 10 and 20 cent coins." This uses ideas from approaches common in gifted education (depth, reasoning and explaining why) and extends thinking beyond the school syllabus without racing ahead of it.']),
++ ['Good stretch tasks ask a child to find every possible answer, explain why something works, or work backwards. For example: "Find all the ways to make 30 cents with 5, 10 and 20 cent coins." This uses depth, reasoning and explaining why, which are common in enrichment approaches, and goes beyond the school syllabus without racing ahead of it.']),
+ ('strong','gep-changes','What is happening to the GEP?',
+  'MOE is discontinuing the Gifted Education Programme in its current form and starting a refreshed approach from 2027.',
+  ['From what MOE has announced:','<ul><li>Higher-ability pupils will be identified through a single, standardised identification exercise in Primary 3. The first cohort went through it in August 2026, and pupils can also be identified at the end of each semester in P4 and P5.</li><li>Every primary school will offer school-based provisions, expected to benefit about 10% of each cohort.</li><li>Pupils who need more challenge can attend weekly after-school advanced modules at a designated centre near their school (15 primary schools), instead of transferring to a GEP school.</li></ul>','Check MOE\'s website for the latest details, as arrangements may be updated.'],
+  ['MOE press release, 3 March 2026','https://www.moe.gov.sg/news/press-releases/20260303-learning-together-with-different-strengths-and-needs']),
+ ('strong','olympiad-p1','Are maths olympiad problems suitable for Primary 1?',
+  'Some are, if they are chosen for thinking rather than speed and your child enjoys them.',
+- ['Good olympiad-style tasks for P1 involve patterns, logic clues, listing all possibilities and simple working backwards. Avoid timed competitions at this age; the goal is curiosity and persistence. Watch for signs your child is ready: enjoys puzzles, explains reasons, and keeps trying when stuck.']),
++ ['Good olympiad-style tasks for P1 involve patterns, logic clues, listing all possibilities and simple working backwards. Avoid timed competitions at this age; the aim is to give children practice at wondering and at keeping going. Signs your child may enjoy these: enjoys puzzles, explains reasons, and keeps trying when stuck.']),
+ ('strong','enrichment-vs-tuition','What is the difference between enrichment and tuition?',
+  'Tuition usually supports school work and exams; enrichment extends thinking and interest beyond the school syllabus.',
+  ['For a P1 child who is coping well, enrichment can keep maths interesting without extra drilling. For a child who is struggling with school topics, targeted support or tuition on those topics comes first.']),
+@@ -64,7 +64,7 @@
+  'Children aged 7-8 (builds on Primary 1 maths) who enjoy puzzles or find school maths easy, and want to think more deeply.',
+  ['K2 children starting Primary 1 next year can join after a free 15-minute readiness check. Every lesson has three steps (Start here, Think harder and Go further), so each child is stretched at the right level.']),
+ ('mi','lesson','What happens in a Math Inquirers lesson?',
+- 'Each 90-minute lesson follows the four Inquirer steps: notice the pattern, test it with objects, check the answer, explain why.',
++ 'Each 90-minute lesson practises six inquiry habits: noticing, wondering, trying, checking, explaining and looking back.',
+  ['A lesson starts with a warm-up game, then a hands-on exploration in pairs, a short teaching segment, workbook practice in three steps (Start here, Think harder, Go further) and a talk time where children explain their thinking. The tutor stamps each child\'s Inquiry Journal at the end.']),
+ ('mi','between-levels','What if my child is between levels?',
+  'Take the free 30-minute diagnostic for the level that matches your child\'s school year, then use the result to decide. Each level spans three ages and overlaps the next, so there is room to move up or down. You have the final say.',
