@@ -200,14 +200,14 @@ def repeat(core, n):
 def tally_table(names, filled=None):
     """Empty table: Fruit | Tally | Total.  filled: dict name -> count draws tally marks and the total."""
     W, rh = 300, 34
-    body = Re(2, 2, W - 4, rh, '#D9D9D9', NAVY, 1.6) + T(10, 2 + rh / 2 + 5, 'Fruit', 15, 'start', 800) + T(150, 2 + rh / 2 + 5, 'Tally', 15, 'middle', 800) + T(262, 2 + rh / 2 + 5, 'Total', 15, 'middle', 800)
+    body = Re(2, 2, W - 4, rh, '#D9D9D9', NAVY, 1.6) + T(10, 2 + rh / 2 + 5, 'Fruit', 15, 'start', 800) + T(171, 2 + rh / 2 + 5, 'Tally', 15, 'middle', 800) + T(264, 2 + rh / 2 + 5, 'Total', 15, 'middle', 800)
     for k, nm in enumerate(names):
         y = 2 + rh * (k + 1)
         body += Re(2, y, W - 4, rh, '#fff', NAVY, 1.6) + T(10, y + rh / 2 + 5, nm, 15, 'start', 700)
-        body += Ln(100, y, 100, y + rh, 1.6) + Ln(222, y, 222, y + rh, 1.6)
+        body += Ln(114, y, 114, y + rh, 1.6) + Ln(228, y, 228, y + rh, 1.6)
         if filled and nm in filled:
             c = filled[nm]
-            x = 108
+            x = 122
             for g in range(c // 5):
                 for i in range(4):
                     body += Ln(x + i * 6, y + 7, x + i * 6, y + rh - 7, 2, NAVY)
@@ -215,7 +215,7 @@ def tally_table(names, filled=None):
                 x += 32
             for i in range(c % 5):
                 body += Ln(x + i * 6, y + 7, x + i * 6, y + rh - 7, 2, NAVY)
-            body += T(262, y + rh / 2 + 6, c, 17, 'middle', 800)
+            body += T(264, y + rh / 2 + 6, c, 17, 'middle', 800)
     return svg(W, 4 + rh * (len(names) + 1), body, 'A table with a row for each fruit and a tally column')
 
 

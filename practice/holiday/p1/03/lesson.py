@@ -18,7 +18,7 @@ META = dict(level=1, lesson=3, key='p1', title='Let’s plan the fruit party!', 
 S = 'Data: picture graphs'
 FRUIT = dict(Apple=6, Banana=5, Orange=8, Grape=3, Watermelon=5)          # the printed graph: one picture for each child
 NAMES = list(FRUIT)
-GRAPH = picture_graph(list(FRUIT.items()), '1 child', lambda nm: ICONS[nm], 8, caption='Picture graph of fruit votes: one picture for each child')
+GRAPH = picture_graph(list(FRUIT.items()), '1 child', lambda nm: ICONS[nm], 8, size=24, label_w=116, caption='Picture graph of fruit votes: one picture for each child')
 STAR2 = dict(Red=3, Blue=5, Green=4)
 STAR_GRAPH = picture_graph(list(STAR2.items()), '2 children', lambda nm: star, 6, half_key='1 child', caption='Picture graph: one star is 2 children, half a star is 1 child')
 PIZZA_ROW = picture_graph([('Pizza', 0)], '2 children', lambda nm: star, 6, caption='An empty row for pizza. One star is 2 children')
@@ -153,7 +153,7 @@ ITEMS = [
 
     # ================= Investigation
     D(id='I1', tier='invest', no='Investigation 1', type='selfcheck', paper=True, skill='choosing the key',
-      q='Investigation: What if we change the key? Draw a picture graph with 1 picture = 1 child: Cats 4, Dogs 6, Fish 2.',
+      q='What if we change the key? Draw a picture graph with 1 picture = 1 child: Cats 4, Dogs 6, Fish 2.',
       facts=PETS, check=lambda: {nm: votes(PETS, nm) for nm in PETS}, sol_fig=lambda f: cats_graph(1),
       hint='Draw a row for each pet. Draw one picture for each child. Write the key.',
       steps=['Cats get 4 pictures, dogs get 6 and fish get 2.', 'Write the key: 1 picture = 1 child.', 'That is 4 + 6 + 2 = 12 pictures.'],

@@ -238,15 +238,15 @@ def one_pair_solutions(nums, ops, target):
     return sols
 
 
-def trees(nums):
-    """Every way of putting + − × ÷ and brackets in a row of numbers: (value, tree) pairs. A tree is a number or (op, left, right)."""
+def trees(nums, ops='+-*/'):
+    """Every way of putting the operations and brackets in a row of numbers: (value, tree) pairs. A tree is a number or (op, left, right)."""
     if len(nums) == 1:
         return [(Fr(nums[0]), nums[0])]
     out = []
     for cut in range(1, len(nums)):
-        for lv, lt in trees(nums[:cut]):
-            for rv, rt in trees(nums[cut:]):
-                for op in '+-*/':
+        for lv, lt in trees(nums[:cut], ops):
+            for rv, rt in trees(nums[cut:], ops):
+                for op in ops:
                     if op == '+':
                         v = lv + rv
                     elif op == '-':
@@ -281,12 +281,12 @@ def inner_nodes(t, root=True):
     return out + inner_nodes(t[1], False) + inner_nodes(t[2], False)
 
 
-def sentences_for(numbers, target):
+def sentences_for(numbers, target, ops='+-*/'):
     """Every number sentence that uses each of `numbers` once (any order), with + − × ÷ and optional brackets, and works out (by normal order of operations) to the target.
     Written the usual way, with or without extra brackets that do not change the answer."""
     found = set()
     for perm in set(itertools.permutations(numbers)):
-        for v, t in trees(list(perm)):
+        for v, t in trees(list(perm), ops):
             if v != target:
                 continue
             inner = inner_nodes(t)
@@ -490,3 +490,67 @@ def book_bar():
     b = hbrace(10, 10 + 5 * w, 50, '? pages in the book', True, 15) + cells_row(10, 56, 5, w, 38, 2, YEL, {0: 'Mon', 1: 'Mon'})
     b += hbrace(10 + 2 * w, 10 + 5 * w, 94, 'Tuesday: half of these.|45 pages still to read', False, 15)
     return svg(5 * w + 20, 160, b, 'A bar for the book cut into 5 equal parts. 2 parts are shaded for Monday. The other 3 parts are what was left. Tuesday takes half of those and 45 pages are still to read.')
+
+
+# ---------------------------------------------------------------- typed fractions and lists of fractions
+def _terminating(d):
+    while d % 2 == 0:
+        d //= 2
+    while d % 5 == 0:
+        d //= 5
+    return d == 1
+
+
+def frac_text(f):
+    f = Fr(f)
+    return str(f.numerator) if f.denominator == 1 else f'{f.numerator}/{f.denominator}'
+
+
+def mixed_text(f):
+    f = Fr(f)
+    w, r = divmod(f.numerator, f.denominator)
+    if f.denominator == 1 or w == 0:
+        return frac_text(f)
+    return f'{w} {r}/{f.denominator}' if r else str(w)
+
+
+def frac_accepts(f, simplest=False, maxk=12):
+    """Accepted ways to type the number f: the fraction (and equal fractions n*k / d*k unless simplest), the mixed number, the decimal when it ends."""
+    f = Fr(f)
+    n, d = f.numerator, f.denominator
+    forms = set()
+    ks = [1] if simplest else range(1, maxk + 1)
+    if d == 1:
+        forms.add(str(n))
+    else:
+        for k in ks:
+            forms.add(f'{n * k}/{d * k}')
+            if n > d:
+                w, r = divmod(n, d)
+                if r:
+                    forms.add(f'{w} {r * k}/{d * k}')
+        if n > d and n % d == 0:
+            forms.add(str(n // d))
+        if _terminating(d):
+            sdec = ('%.10f' % float(f)).rstrip('0').rstrip('.')
+            forms.add(sdec)
+            if sdec.startswith('0.'):
+                forms.add(sdec[1:])
+    return sorted(forms)
+
+
+def joined_forms(parts, ordered=True):
+    """A list typed as 'a, b, c' (comma, semicolon, space, 'and' before the last; with '<' too when ordered). All orders if not ordered.
+    The first form in the returned list is the plain 'a, b, c' used as the printed answer."""
+    orders = [list(parts)] if ordered else [list(p) for p in itertools.permutations(parts)]
+    out = []
+    for o in orders:
+        seps = [', ', ';', ' ']
+        if ordered:
+            seps.append(' < ')
+        for sp in seps:
+            out.append(sp.join(o))
+        if len(o) > 1:
+            out.append(', '.join(o[:-1]) + ' and ' + o[-1])
+    first = ', '.join(parts)
+    return [first] + sorted(set(out) - {first})
