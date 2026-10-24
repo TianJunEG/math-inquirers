@@ -398,3 +398,6 @@ Owner: "parents who purchase extension book need not be enrolled in any program"
 
 ## 2026-10-24 — EXTENSION BOOKS AS A FUNNEL TO TRIAL CLASSES
 Owner: "extension book serve as a funnel for parents to sign up their kids for trial class". The extension book and its online practice are a funnel: parents (never children) are invited to book a trial class. Needs: an in-book page and a post-purchase/online-practice call to action (link/QR to trial sign-up, domain needed: D9), a trial-class sign-up path in the portal for non-enrolled families, a parent-facing report-based "next step" suggestion, and a separate, optional marketing/contact consent (PDPA, Do Not Call). Not pushy: no countdowns, no scores, no pressure on children.
+
+## 2026-10-24 — FREE PREVIEW CLASS (owner idea, design requested)
+Owner: free preview class, about 1 hour, open to everyone; lecture style, no workbooks, interaction via chat and slides; may use the teasers to create the lesson; the preview funnels students into the paid class; weekly preview classes with SIMILAR content each time (so people do not attend every week); open to NEW registrations only: anyone who attended in the past 6 months cannot attend again. Asked: "Can we do something like that?" Answer: yes; design requested (eligibility rule, registration, content, safeguarding, consent, funnel to enrolment).
