@@ -855,3 +855,6 @@ BRUTE = {k[2:]: v for k, v in dict(globals()).items() if k.startswith('b_')}
 
 import brute_more as _more   # noqa: E402  (fix round 1: further independent checkers)
 BRUTE.update(_more.BRUTE)
+
+import brute_r2 as _r2   # noqa: E402  (fix round 2: independent checkers for the new sub-structures)
+BRUTE.update(_r2.BRUTE)

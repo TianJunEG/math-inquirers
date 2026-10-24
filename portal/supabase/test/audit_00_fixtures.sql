@@ -46,4 +46,4 @@ create table public.audit_ctx as select
   (select family_code from public.parents where email='pa@audit.test') as code_a, (select family_code from public.parents where email='pb@audit.test') as code_b,
   (select id from public.children where display_name='Mia') as mia, (select id from public.children where display_name='Kai') as kai,
   (select id from public.children where display_name='Ben') as ben, (select id from public.children where display_name='Zoe') as zoe;
-revoke all on public.audit_ctx from anon, authenticated;
+grant select on public.audit_ctx to anon, authenticated, service_role;   -- fake ids, lets the attack scripts name children while running as an API role

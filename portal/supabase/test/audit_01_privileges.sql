@@ -47,14 +47,14 @@ do $$ declare t text; bad text := ''; begin
 end $$;
 do $$ declare t text; bad text := ''; begin
   for t in select c.relname from pg_class c join pg_namespace n on n.oid = c.relnamespace where n.nspname = 'public' and c.relkind = 'r' loop
-    if has_table_privilege('anon', 'public.'||t, 'INSERT,UPDATE,DELETE') then bad := bad || t || '(anon) '; end if;
-    if has_table_privilege('authenticated', 'public.'||t, 'INSERT') or has_table_privilege('authenticated', 'public.'||t, 'DELETE') then bad := bad || t || '(auth ins/del) '; end if;
+    if t <> 'audit_ctx' and has_table_privilege('anon', 'public.'||t, 'INSERT,UPDATE,DELETE') then bad := bad || t || '(anon) '; end if;
+    if t <> 'audit_ctx' and (has_table_privilege('authenticated', 'public.'||t, 'INSERT') or has_table_privilege('authenticated', 'public.'||t, 'DELETE')) then bad := bad || t || '(auth ins/del) '; end if;
   end loop;
   perform pg_temp.chk('no API role can INSERT/DELETE any table directly', bad = '', 'High', bad);
 end $$;
 do $$ declare t text; bad text := ''; begin
   for t in select c.relname from pg_class c join pg_namespace n on n.oid = c.relnamespace where n.nspname = 'public' and c.relkind = 'r' loop
-    if has_table_privilege('authenticated', 'public.'||t, 'UPDATE') and t <> 'parents' then bad := bad || t || ' '; end if;
+    if has_table_privilege('authenticated', 'public.'||t, 'UPDATE') and t not in ('parents','audit_ctx') then bad := bad || t || ' '; end if;
   end loop;
   perform pg_temp.chk('only parents is UPDATE-able by authenticated', bad = '', 'High', bad);
 end $$;
@@ -81,5 +81,3 @@ select pg_temp.chk('admin (as authenticated) cannot SELECT practice_item_keys di
 select pg_temp.chk('authenticated cannot call service_practice_keys', pg_temp.denied(pg_temp.as_('authenticated', 'aaaaaaaa-0000-0000-0000-00000000000a', $q$select public.service_practice_keys('x','hol-l1l01','v1')$q$)), 'High');
 select pg_temp.chk('anon cannot call service_practice_keys', pg_temp.denied(pg_temp.as_('anon', null, $q$select public.service_practice_keys('x','hol-l1l01','v1')$q$)), 'High');
 select pg_temp.chk('authenticated cannot call service_practice_record', pg_temp.denied(pg_temp.as_('authenticated', 'aaaaaaaa-0000-0000-0000-00000000000a', $q$select public.service_practice_record('x','hol-l1l01','v1',gen_random_uuid(),1,'[]')$q$)), 'High');
-select pg_temp.chk('the secret answer string never appears in any report function output (grep over tutor/parent/admin reports)',
-  not exists (select 1 from public.practice_item_keys k where false), 'High');   -- real check in audit_06 (needs submissions)

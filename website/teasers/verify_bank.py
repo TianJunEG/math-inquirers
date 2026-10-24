@@ -3,22 +3,32 @@
 
     python3 website/teasers/verify_bank.py            # all months in manifest.json
     python3 website/teasers/verify_bank.py 11 12      # chosen months (the structure rules always look at every released month)
+    python3 website/teasers/verify_bank.py --selftest # prove that every rule fires (synthetic and real-bank probes)
+    python3 website/teasers/verify_bank.py --strict-capacity   # also exit 1 when the taxonomy cannot supply a full year (see below)
 
-For every puzzle: re-solve with brute.py (never imports kinds.py), require exactly ONE valid answer equal to the bank's answer;
+For every puzzle: re-solve with brute.py (never imports kinds*.py), require exactly ONE valid answer equal to the bank's answer;
 check the arithmetic written in the question/hint/explanation; wording rules (spelling, brand names, Singapore coins, doubled words,
 hint must not name the answer); age fit (sub-structure allowed at that level, see taxonomy.json).
 
 Originality and structure (owner policy "new story AND new frame", frame = maths structure):
   * taxonomy.json lists kinds (families) and sub-structures.  Every puzzle names its sub-structure; the sub-structure must be
     one the solver kind really implements (kind and parameter match) and allowed at that level.
-  * within one level and one calendar quarter: at most 1 puzzle per sub-structure and 3 per family (kind).
+  * Levels 3 to 6 (TEASER-STRICT): at most 1 puzzle per sub-structure and 3 per family in a calendar quarter, and the same sub-structure
+    never within 30 days of itself across a quarter boundary (circular over the year).
+  * Levels 1 and 2 (L1L2-GAP60): the same sub-structure at least 60 days apart (circular, checked for a 365-day and a 366-day year),
+    a family at most 3 times in any 60 consecutive days and never on two consecutive days, an answer not repeated within 60 days
+    and a single-digit answer at most twice in any 60 days.
   * no sub-structure used by the fixed puzzle on the level pages (taxonomy "fixed_fallback") appears anywhere in the bank.
-  * no answer repeats within a level (across all released months); no two puzzles of a level share most of their numbers.
+  * Levels 3 to 6 keep the full-year answer rule (answers of 10 or more once per level; a single digit at most 4 times).
+  * no two puzzles of a level share most of their numbers or the same story.
   * shared run of 7 words (the extension checker's threshold) with holiday, term, extension, external sources, the seven fixed
     website puzzles, or another puzzle of the same level = FAIL (generic stock phrases are listed in stock_phrases.txt).
   * structure similarity: the question with names, nouns and numbers masked is compared with every question in our holiday, term,
     extension, school, book-draft and catalogue sources; the same skeleton AND shared numbers = FAIL, the same skeleton alone = REVIEW.
-Writes batches/m<MM>/VERIFY_REPORT.md and batches/STRUCTURE_REPORT.md.  Exit code 1 on any FAIL.
+  * story similarity (round 2): the content words of the question (names and common words removed) compared with every sentence or
+    pair of sentences in the ~20,000 source chunks; the same objects (almost all story words, or the same specific objects, or the
+    same words plus two shared numbers) = FAIL, so a near-copy with new numbers can no longer pass.
+Writes batches/m<MM>/VERIFY_REPORT.md and batches/STRUCTURE_REPORT.md (with the true capacity table).  Exit code 1 on any FAIL.
 """
 import glob
 import hashlib
@@ -246,39 +256,300 @@ def stock_local():
     return ph
 
 
+# ------------------------------------------------------------------ story check (content words, round 2)
+# The masked skeleton above cannot see a story: "a snail climbs a wall, up 5 down 2" has another skeleton from "a snail climbs 3 cm and
+# slides back 1 cm" once the numbers change.  The story check compares the CONTENT WORDS of a teaser (names, number words and
+# very common words removed) with every question-sized window (one sentence or two neighbours) of the ~20,000 source chunks.
+NAMES = set('''mei ling ben siti kumar priya farhan wei jie aisha hui min xin yi jun hao ali sam amy raj dina arjun mira lena wen jia hakim
+nurul ravi sue ann li lee tan lim ong ng zack zara noah nina omar ahmad aminah rina rahim sara sarah john mary david peter anna
+ken kai lin lian meng yan yuan bao ying hong huiling jiayi kevin shan tom tim emma jack jill chen emily daniel farid mr mrs uncle aunty mum dad
+xavier yusof zhi hui jing ming kiat siew mei-ling'''.split())
+STORY_STOP_EXTRA = set('north south east west face turn left right clockwise cent coin pay buy sell money dollar doe ha wa get got use make find work take give show tell try need want let put keep say ask think know see look '
+                       'call name write read count list add check each first second third fourth then also still even only just '
+                       'yes no true false answer question puzzle number numbers way ways kind different same new old big small '
+                       'long short much many one two three four five six seven eight nine ten hundred thousand'.split())
+DF_MAX = 6000          # a word found in more source windows than this says nothing about the story
+RARE_DF = 400          # a word found in fewer source windows than this is a specific object (snail, lolly, jacket, carton ...)
+STORY_VERSION = "story-v6"
+
+
+def stem(w):
+    if w.endswith('ies') and len(w) > 4:
+        return w[:-3] + 'y'
+    if (w.endswith('es') and len(w) > 4 and w[-3] in 'sxz') or w.endswith('ches') or w.endswith('shes'):
+        return w[:-2]
+    if w.endswith('s') and not w.endswith('ss') and len(w) > 3:
+        return w[:-1]
+    if w.endswith('ing') and len(w) > 5:
+        return w[:-3]
+    if w.endswith('ed') and len(w) > 4:
+        return w[:-2]
+    return w
+
+
+STORY_STOP = {stem(w) for w in FUNC} | {stem(w) for w in STORY_STOP_EXTRA} | {stem(w) for w in NAMES} | FUNC
+
+
+def story_words(text, names_too=True):
+    """Stemmed content words of a text: no function words, no numbers, no names."""
+    t = re.sub(r"'s\b", '', text.replace('’', "'").lower())
+    out = set()
+    for w in re.findall(r'[a-z]+', t):
+        sw = stem(w)
+        if len(sw) > 2 and sw not in STORY_STOP:
+            out.add(sw)
+    return out
+
+
+def story_index():
+    """Windows (one sentence, or two neighbouring sentences) of every source chunk: stem sets, numbers, and the document frequency of every stem."""
+    files = source_files()
+    key = hashlib.md5((STORY_VERSION + '|' + '|'.join('%s:%d:%d' % (f, os.path.getmtime(f), os.path.getsize(f)) for f in files)).encode()).hexdigest()
+    cache = os.path.join(os.environ.get('TMPDIR', '/tmp'), 'mi_teaser_story_%s.pkl' % key)
+    if os.path.exists(cache):
+        try:
+            return pickle.load(open(cache, 'rb'))
+        except Exception:
+            pass
+    wins, df = [], {}
+    for f in files:
+        rel = os.path.relpath(f, ROOT)
+        for ch in chunks_of(f):
+            sents = [s for s in re.split(r'(?<=[.?!])\s+', ch) if s.strip()]
+            seen = set()
+            for i in range(len(sents)):
+                for j in (i + 1, i + 2, i + 3):
+                    txt = ' '.join(sents[i:j])
+                    if len(txt) > 600 or txt in seen:
+                        continue
+                    seen.add(txt)
+                    ws = frozenset(story_words(txt))
+                    wins.append((rel, txt[:600], ws, frozenset(n for n in numbers_in(txt) if n not in ('0', '1', '2'))))
+                    for w in ws:
+                        df[w] = df.get(w, 0) + 1
+    inv = {}
+    for i, (_, _, ws, _) in enumerate(wins):
+        for w in ws:
+            if df[w] <= DF_MAX:
+                inv.setdefault(w, []).append(i)
+    data = (wins, df, inv)
+    try:
+        pickle.dump(data, open(cache, 'wb'))
+    except Exception:
+        pass
+    return data
+
+
+COMMON_NUMS = {'3', '4', '5', '6', '7', '8', '9', '10', '12', '15', '20', '24', '25', '30', '50', '60', '100', '1000'}
+SPEC_DF = 3000         # a word found in fewer source windows than this names something specific (not 'day' or 'box')
+
+
+def wtoks(text):
+    return re.findall(r"[a-z']+|#", re.sub(r'\d[\d,]*\.?\d*', '#', text.lower().replace('’', "'")))
+
+
+def wgrams(text):
+    t = wtoks(text)
+    return {' '.join(t[i:i + 3]) for i in range(len(t) - 2)}
+
+
+def story_hits(q, sidx, own_words=None):
+    """Same story and same quantities as a source window.  Returns [(severity, detail)] with severity 'FAIL' or 'REVIEW'.
+    Let S = the teaser's story words, W = the words of one source window, cov = |S & W| / |S|, spec = shared words of document frequency
+    below SPEC_DF, sn = shared numbers other than 0, 1, 2 and dn = shared distinctive numbers (not in COMMON_NUMS).  FAIL when
+      (F1) cov >= 0.8, >= 4 shared words, spec >= 2 and sn >= 1: same objects and a same quantity;
+      (F2) cov >= 0.6, >= 3 shared words, spec >= 2 and sn >= 2;
+      (F3) cov >= 0.4, >= 3 shared words, spec >= 1 and sn >= 3;
+      (F4) >= 4 shared specific objects (document frequency <= RARE_DF) and cov >= 0.6: the same specific story (snail ... wall, frog ... well);
+      (F5) cov >= 0.4, >= 2 shared words and >= 2 shared distinctive numbers ($120 and 15%);
+      (W)  at least 45% of the question's word triples (numbers masked) and 6 or more are found in the window: the same wording with other numbers.
+    REVIEW when cov >= 0.6 with >= 3 shared words and spec >= 2 and none of the above."""
+    wins, df, inv = sidx
+    S = {w for w in (own_words if own_words is not None else story_words(q)) if df.get(w, 0) <= DF_MAX}
+    if len(S) < 2:
+        return []
+    mine = {n for n in numbers_in(q) if n not in ('0', '1', '2')}
+    score = {}
+    for w in S:
+        for i in inv.get(w, ()):
+            score[i] = score.get(i, 0) + 1
+    cand = [i for i, c in sorted(score.items(), key=lambda kv: -kv[1])[:60] if c >= 2]
+    if len(S) <= 4:       # short questions: every window that has all the story words
+        full = [i for i, c in score.items() if c == len(S)]
+        cand = list(dict.fromkeys(cand + full[:3000]))
+    G = wgrams(q)
+    review = None
+    for i in cand:
+        rel, txt, ws, nums = wins[i]
+        shared = S & ws
+        cov = len(shared) / len(S)
+        rare = [w for w in shared if df.get(w, 0) <= RARE_DF]
+        spec = [w for w in shared if df.get(w, 0) <= SPEC_DF]
+        sn = len(mine & nums)
+        dn = len({n for n in mine & nums if n not in COMMON_NUMS})
+        why = None
+        if len(S) >= 3:
+            if cov >= 0.8 and len(shared) >= 4 and len(spec) >= 2 and sn >= 1:
+                why = 'same objects (%d of %d story words) and a same number' % (len(shared), len(S))
+            elif cov >= 0.6 and len(shared) >= 3 and len(spec) >= 2 and sn >= 2:
+                why = 'same objects (%d of %d story words) and %d same numbers' % (len(shared), len(S), sn)
+            elif cov >= 0.4 and len(shared) >= 3 and len(spec) >= 1 and sn >= 3:
+                why = 'same objects (%d of %d story words) and %d same numbers' % (len(shared), len(S), sn)
+            elif len(rare) >= 4 and cov >= 0.6:
+                why = 'same specific objects (%s)' % ', '.join(sorted(rare))
+        if not why and cov >= 0.4 and len(shared) >= 2 and dn >= 2:
+            why = 'same story (%d of %d words) and the same numbers %s' % (len(shared), len(S), sorted(n for n in mine & nums if n not in COMMON_NUMS))
+        if not why and len(G) >= 6 and cov >= 0.5:
+            common = G & wgrams(txt)
+            if len(common) >= 6 and len(common) / len(G) >= 0.45:
+                why = 'same wording with other numbers (%d of %d word triples)' % (len(common), len(G))
+        if why:
+            return [('FAIL', '%s: "%s ..." (%s) words %s' % (why, txt[:100].replace('\n', ' '), rel, ','.join(sorted(shared))))]
+        if review is None and len(S) >= 3 and cov >= 0.6 and len(shared) >= 3 and len(spec) >= 2:
+            review = ('REVIEW', 'story words %d of %d like "%s ..." (%s)' % (len(shared), len(S), txt[:90].replace('\n', ' '), rel))
+    return [review] if review else []
+
+
+# ------------------------------------------------------------------ date arithmetic for the gap rules
+MLEN = {365: [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31], 366: [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]}
+
+
+def daynum(date, N):
+    """0-based day of the year of 'MM-DD' in a year of N days (365 = no 29 Feb, 366 = leap); None when the date does not exist that year."""
+    mm, dd = int(date[:2]), int(date[3:5])
+    lens = MLEN[N]
+    if dd > lens[mm - 1]:
+        return None
+    return sum(lens[:mm - 1]) + dd - 1
+
+
+def cdist(a, b, N):
+    d = abs(a - b)
+    return min(d, N - d)
+
+
+def is_small(a):
+    return a.lstrip('-').isdigit() and abs(int(a)) < 10
+
+
+def gap_rules(lv, items, fails):
+    """Levels 1 and 2 (owner L1L2-GAP60): circular gap per sub-structure, family window, family never on consecutive days, answer window."""
+    R = TAX.RULES
+    gap, win = R['min_gap_days'][str(lv)], R['answer_window_days']
+    fwin, fmax, smax = R['family_window_days'], R['family_max_in_window'], R['answer_small_max_in_window']
+    seen = set()
+
+    def add(msg):
+        if msg not in seen:
+            seen.add(msg)
+            fails.append(msg)
+    for N in (365, 366):
+        pos = [(daynum(e['date'], N), e) for _, e in items]
+        pos = [(p, e) for p, e in pos if p is not None]
+        by_sub, by_fam, by_ans = {}, {}, {}
+        for p, e in pos:
+            by_sub.setdefault(e['sub'], []).append((p, e['id']))
+            by_fam.setdefault(e['family'], []).append((p, e['id']))
+            by_ans.setdefault(e['ans'], []).append((p, e['id']))
+        for s, us in by_sub.items():
+            for i in range(len(us)):
+                for j in range(i + 1, len(us)):
+                    d = cdist(us[i][0], us[j][0], N)
+                    if d < gap:
+                        add('L%d: sub-structure %s returns after %d days (minimum %d, %d-day year): %s and %s' % (lv, s, d, gap, N, us[i][1], us[j][1]))
+        for f, us in by_fam.items():
+            for i in range(len(us)):
+                for j in range(i + 1, len(us)):
+                    if cdist(us[i][0], us[j][0], N) == 1:
+                        add('L%d: family %s on two consecutive days (%s and %s)' % (lv, f, us[i][1], us[j][1]))
+            for p0, id0 in us:
+                inside = [x for x in us if (x[0] - p0) % N < fwin]
+                if len(inside) > fmax:
+                    add('L%d: family %s used %d times in %d days (cap %d, %d-day year): %s' % (lv, f, len(inside), fwin, fmax, N, ', '.join(x[1] for x in inside)))
+        for a, us in by_ans.items():
+            if is_small(a):
+                for p0, id0 in us:
+                    inside = [x for x in us if (x[0] - p0) % N < win]
+                    if len(inside) > smax:
+                        add('L%d: single-digit answer %s used %d times in %d days (cap %d): %s' % (lv, a, len(inside), win, smax, ', '.join(x[1] for x in inside)))
+            else:
+                for i in range(len(us)):
+                    for j in range(i + 1, len(us)):
+                        if cdist(us[i][0], us[j][0], N) < win:
+                            add('L%d: answer %s repeats within %d days (%s and %s)' % (lv, a, win, us[i][1], us[j][1]))
+
+
+def quarter_rules(lv, items, fails):
+    """Levels 3 to 6 (owner TEASER-STRICT): per quarter caps, a minimum gap across quarter boundaries, full-year answers."""
+    R = TAX.RULES
+    by_q = {}
+    for mm, e in items:
+        by_q.setdefault(TAX.quarter(mm), []).append(e)
+    for q, es in sorted(by_q.items()):
+        subs, fams = {}, {}
+        for e in es:
+            subs.setdefault(e['sub'], []).append(e['id'])
+            fams.setdefault(e['family'], []).append(e['id'])
+        for s, ids in subs.items():
+            if len(ids) > R['max_per_sub_per_quarter']:
+                fails.append('L%d quarter %d: sub-structure %s used %d times: %s' % (lv, q, s, len(ids), ', '.join(ids)))
+        for f, ids in fams.items():
+            if len(ids) > R['max_per_family_per_quarter']:
+                fails.append('L%d quarter %d: family %s used %d times (cap %d): %s' % (lv, q, f, len(ids), R['max_per_family_per_quarter'], ', '.join(ids)))
+    gapq = R['min_gap_days_across_quarters']
+    seen = set()
+    for N in (365, 366):
+        uses = {}
+        for mm, e in items:
+            p = daynum(e['date'], N)
+            if p is not None:
+                uses.setdefault(e['sub'], []).append((p, e['id'], TAX.quarter(mm)))
+        for s, us in uses.items():
+            for i in range(len(us)):
+                for j in range(i + 1, len(us)):
+                    if us[i][2] != us[j][2] and cdist(us[i][0], us[j][0], N) < gapq:
+                        msg = 'L%d: sub-structure %s returns after %d days across a quarter boundary (minimum %d): %s and %s' % (
+                            lv, s, cdist(us[i][0], us[j][0], N), gapq, us[i][1], us[j][1])
+                        if msg not in seen:
+                            seen.add(msg)
+                            fails.append(msg)
+    seen_ans = {}
+    for mm, e in items:
+        seen_ans.setdefault(e['ans'], []).append(e['id'])
+    for a, ids in seen_ans.items():
+        if (not is_small(a) and len(ids) > 1) or (is_small(a) and len(ids) > MAX_SMALL):
+            fails.append('L%d: answer %s repeats (%s)' % (lv, a, ', '.join(ids)))
+
+
 def structure_rules(all_by_level, stock):
     """The per-level structure rules over every released month.  all_by_level = {level: [(month, entry), ...]}.
-    Returns (failures, report lines)."""
+    Levels 1 and 2 follow the gap rules (L1L2-GAP60), Levels 3 to 6 the quarter rules (TEASER-STRICT).  Returns (failures, report lines)."""
     global_fails, struct_lines = [], []
     levels = sorted(all_by_level)
+    R = TAX.RULES
     for lv in levels:
-        by_q = {}
-        for mm, e in all_by_level[lv]:
-            by_q.setdefault(TAX.quarter(mm), []).append(e)
-        for q, items in sorted(by_q.items()):
-            subs, fams = {}, {}
-            for e in items:
-                subs.setdefault(e['sub'], []).append(e['id'])
+        items = all_by_level[lv]
+        if str(lv) in R['min_gap_days']:
+            gap_rules(lv, items, global_fails)
+            fams, subs = {}, {}
+            for mm, e in items:
                 fams.setdefault(e['family'], []).append(e['id'])
-            for s, ids in subs.items():
-                if len(ids) > TAX.RULES['max_per_sub_per_quarter']:
-                    global_fails.append('L%d quarter %d: sub-structure %s used %d times: %s' % (lv, q, s, len(ids), ', '.join(ids)))
-            for f, ids in fams.items():
-                if len(ids) > TAX.RULES['max_per_family_per_quarter']:
-                    global_fails.append('L%d quarter %d: family %s used %d times (cap %d): %s' % (
-                        lv, q, f, len(ids), TAX.RULES['max_per_family_per_quarter'], ', '.join(ids)))
-            struct_lines.append('- Level %d, quarter %d: %d puzzles, %d distinct sub-structures, %d families, most in one family %d' % (
-                lv, q, len(items), len(subs), len(fams), max(len(v) for v in fams.values())))
-        # answers: 10 and above (and every text answer) may appear once per level; a single digit at most MAX_SMALL times
-        seen_ans = {}
-        for mm, e in all_by_level[lv]:
-            seen_ans.setdefault(e['ans'], []).append(e['id'])
-        for a, ids in seen_ans.items():
-            small = a.lstrip('-').isdigit() and abs(int(a)) < 10
-            if (not small and len(ids) > 1) or (small and len(ids) > MAX_SMALL):
-                global_fails.append('L%d: answer %s repeats (%s)' % (lv, a, ', '.join(ids)))
+                subs.setdefault(e['sub'], []).append(e['id'])
+            struct_lines.append('- Level %d (gap rule, %d days): %d puzzles, %d distinct sub-structures (none twice within the gap), %d families, most in one family %d' % (
+                lv, R['min_gap_days'][str(lv)], len(items), len(subs), len(fams), max(len(v) for v in fams.values())))
+        else:
+            quarter_rules(lv, items, global_fails)
+            by_q = {}
+            for mm, e in items:
+                by_q.setdefault(TAX.quarter(mm), []).append(e)
+            for q, es in sorted(by_q.items()):
+                fams = {}
+                for e in es:
+                    fams.setdefault(e['family'], []).append(e['id'])
+                struct_lines.append('- Level %d, quarter %d: %d puzzles, %d distinct sub-structures, %d families, most in one family %d' % (
+                    lv, q, len(es), len({e['sub'] for e in es}), len(fams), max(len(v) for v in fams.values())))
         # numbers shared between two puzzles of the same level
-        nums = [(e['id'], {n for n in numbers_in(e['q']) if n not in ('0', '1', '2') and not (n in ('5', '10', '20', '50') and 'cent' in e['q'])}) for _, e in all_by_level[lv]]
+        nums = [(e['id'], {n for n in numbers_in(e['q']) if n not in ('0', '1', '2') and not (n in ('5', '10', '20', '50') and 'cent' in e['q'])}) for _, e in items]
         for i in range(len(nums)):
             for j in range(i + 1, len(nums)):
                 a, b = nums[i][1], nums[j][1]
@@ -288,7 +559,7 @@ def structure_rules(all_by_level, stock):
                     global_fails.append('L%d: %s and %s share the numbers %s' % (lv, nums[i][0], nums[j][0], sorted(sh)))
         # frames unique
         fr = {}
-        for mm, e in all_by_level[lv]:
+        for mm, e in items:
             if e['frame'] in fr:
                 global_fails.append('L%d: frame %s repeated (%s and %s)' % (lv, e['frame'], fr[e['frame']], mm))
             fr[e['frame']] = mm
@@ -302,24 +573,87 @@ def structure_rules(all_by_level, stock):
                     if x in seen and seen[x] != e['id']:
                         global_fails.append('L%d: %s and %s share the %d-word run "%s"' % (lv, seen[x], e['id'], NGF, x))
                     seen[x] = e['id']
-
+    # the same story twice in one level (content words, as against the sources)
+    for lv in levels:
+        ws = [(e['id'], story_words(e['q']), {n for n in numbers_in(e['q']) if n not in ('0', '1', '2')}) for _, e in all_by_level[lv]]
+        for i in range(len(ws)):
+            for j in range(i + 1, len(ws)):
+                a, b = ws[i][1], ws[j][1]
+                if len(a) < 3 or len(b) < 3:
+                    continue
+                sh = a & b
+                cov = len(sh) / min(len(a), len(b))
+                sn = len(ws[i][2] & ws[j][2])
+                if (len(sh) >= 4 and cov >= 0.85) or (len(sh) >= 3 and cov >= 0.6 and sn >= 2):
+                    global_fails.append('L%d: %s and %s tell the same story (shared words %s, shared numbers %d)' % (lv, ws[i][0], ws[j][0], ','.join(sorted(sh)), sn))
     return global_fails, struct_lines
 
 
-def capacity_lines(levels):
-    """How many distinct sub-structures and families the taxonomy offers per level, against what a full quarter and year need."""
-    out = ['', '## Capacity of the taxonomy (full year)', '',
-           'A quarter has 90 to 92 days, and each sub-structure may be used once per level and quarter, so a level needs at least 92 sub-structures (and 31 families at 3 each) to fill a quarter, and the same sub-structures can be used again in the next quarter with a new story and new numbers.', '',
-           '| Level | Sub-structures offered | Families | Largest quarter it can fill | Needed (92) |', '|---|---|---|---|---|']
+def capacity_lines(levels, bank_counts=None):
+    """What the taxonomy can supply per level against what a year (Levels 1, 2: gap rule) or a quarter (Levels 3 to 6) needs.
+    Returns (lines, capacity_fails)."""
+    R = TAX.RULES
+    out = ['', '## Capacity of the taxonomy (true numbers, after merging look-alike sub-structures)', '',
+           'Levels 1 and 2 (gap rule): a sub-structure may be used floor(365 / gap) times a year, so 365 puzzles need ceil(365 / uses) sub-structures; the owner-chosen minimum '
+           'slack is %d (a removed or retired sub-structure must not break a year). A family may supply at most %d puzzles in any %d days, so the families must also be wide enough: '
+           'sum over families of min(subs, cap) per %d days must reach the number of days.' % (
+               R['capacity_min_slack'], R['family_max_in_window'], R['family_window_days'], R['family_window_days']),
+           'Levels 3 to 6 (quarter rule): one use per sub-structure and at most %d per family per quarter, so a quarter of up to 92 days needs sum over families of min(%d, subs in the family) >= 92.' % (
+               R['max_per_family_per_quarter'], R['max_per_family_per_quarter']), '',
+           '| Level | Sub-structures | Families | Rule | Uses per sub a year | Needed | Slack | True capacity (family-capped) | Verdict |', '|---|---|---|---|---|---|---|---|---|']
+    fails = []
     for lv in range(1, 7):
         subs = [s for s, d in TAX.SUBS.items() if lv in d['levels']]
-        fams = {s.split('.')[0] for s in subs}
-        out.append('| %d | %d | %d | %d | %s |' % (lv, len(subs), len(fams), min(len(subs), 3 * len(fams)), 'enough' if min(len(subs), 3 * len(fams)) >= 92 else 'short by %d' % (92 - min(len(subs), 3 * len(fams)))))
-    return out
+        fam = {}
+        for s in subs:
+            fam.setdefault(s.split('.')[0], []).append(s)
+        if str(lv) in R['min_gap_days']:
+            gap = R['min_gap_days'][str(lv)]
+            uses = 365 // gap
+            need = -(-365 // uses)
+            slack = len(subs) - need
+            cap = sum(min(R['family_max_in_window'], len(v)) for v in fam.values())      # distinct puzzles one family-window of 60 days can show
+            famyear = sum(min(uses * len(v), 365 * R['family_max_in_window'] // R['family_window_days']) for v in fam.values())
+            verdict = 'ok' if slack >= R['capacity_min_slack'] and famyear >= 365 else 'FAIL: slack %d below %d (needs %d or more sub-structures)%s' % (
+                slack, R['capacity_min_slack'], need + R['capacity_min_slack'], '' if famyear >= 365 else '; families too narrow (%d a year)' % famyear)
+            if verdict != 'ok':
+                fails.append('Level %d: %d sub-structures, %d needed for 365 days at gap %d, slack %d; families allow %d puzzles a year' % (lv, len(subs), need, gap, slack, famyear))
+            out.append('| %d | %d | %d | gap %d days | %d | %d | %d | %d a year | %s |' % (lv, len(subs), len(fam), gap, uses, need, slack, famyear, verdict))
+        else:
+            cap = sum(min(R['max_per_family_per_quarter'], len(v)) for v in fam.values())
+            verdict = 'ok' if cap >= 92 else 'FAIL: short by %d' % (92 - cap)
+            if cap < 92:
+                fails.append('Level %d: quarter capacity %d, a quarter needs 92' % (lv, cap))
+            out.append('| %d | %d | %d | once a quarter | 1 per quarter | 92 | %d | %d per quarter | %s |' % (lv, len(subs), len(fam), cap - 92, cap, verdict))
+    return out, fails
+
+
+def answer_feasibility(all_by_level):
+    """Levels 3 to 6 keep the full-year answer rule (an answer of 10 or more once per level, a single digit at most MAX_SMALL times): report whether a year can fit."""
+    out = ['', '## Full-year answer rule at Levels 3 to 6 (feasibility)', '',
+           '| Level | Puzzles so far | Single-digit answers so far | Share | Projected single-digit answers in 365 | Allowed (9 values x %d) | Verdict |' % MAX_SMALL, '|---|---|---|---|---|---|---|']
+    warn = []
+    for lv in sorted(all_by_level):
+        if lv < 3:
+            continue
+        items = all_by_level[lv]
+        small = sum(1 for _, e in items if is_small(e['ans']))
+        share = small / len(items)
+        proj = round(share * 365)
+        ok = proj <= 9 * MAX_SMALL
+        if not ok:
+            warn.append('Level %d: %d%% single-digit answers so far, a year would need about %d (limit %d)' % (lv, round(share * 100), proj, 9 * MAX_SMALL))
+        out.append('| %d | %d | %d | %d%% | %d | %d | %s |' % (lv, len(items), small, round(share * 100), proj, 9 * MAX_SMALL, 'ok' if ok else 'WARNING: aim for fewer single-digit answers'))
+    return out, warn
+
+
+def mk(lv, date, sub, fam, ans, n):
+    """A synthetic bank entry for the self-test (nothing else about it matters to the structure rules)."""
+    return (date[:2], dict(id='L%d-t%d' % (lv, n), date=date, level=lv, frame='t%d_%d' % (lv, n), sub=sub, family=fam, ans=ans, q='Item %d for test %d zebra%d.' % (n * 7 + 11, n, n)))
 
 
 def selftest():
-    """Break the real bank in known ways and check that the rules notice (python3 verify_bank.py --selftest)."""
+    """Break the rules in known ways and check that they notice (python3 verify_bank.py --selftest)."""
     import copy
     man = json.load(open(os.path.join(HERE, 'manifest.json')))
     base = {}
@@ -329,52 +663,95 @@ def selftest():
                 base.setdefault(int(lv), []).append((mm, e))
     stock = (dup_check.stock(NGF) | stock_local()) if dup_check else set()
     clean, _ = structure_rules(base, stock)
-    cases = []
+    cases, bad = [], []
 
-    def case(name, mutate, want):
+    def synth(lv, rows):
+        """rows = [(date, sub, family, ans)] -> structure failures for a synthetic level."""
+        d = {lv: [mk(lv, dt, sub, fam, ans, i) for i, (dt, sub, fam, ans) in enumerate(rows)]}
+        f, _ = structure_rules(d, stock)
+        return f
+
+    def expect(name, fails, want):
+        good = (any(want in x for x in fails)) if want else (not fails)
+        cases.append((name, good, fails[:2]))
+    # --- Levels 1 and 2: gap 60, circular, both year lengths
+    S, F = 'a.s1', 'a'
+    expect('L1 sub 59 days apart fails', synth(1, [('03-01', S, F, '11'), ('04-29', S, F, '12')]), 'returns after 59 days')
+    expect('L1 sub 60 days apart passes', synth(1, [('03-01', S, F, '11'), ('04-30', S, F, '12')]), None)
+    expect('L1 sub 31 Oct / next year 59 days apart (circular) fails', synth(1, [('11-04', S, F, '11'), ('01-02', S, F, '12')]), 'returns after 59 days')
+    expect('L1 sub 60 days apart across the new year (circular) passes', synth(1, [('11-03', S, F, '11'), ('01-02', S, F, '12')]), None)
+    expect('L1 sub 1 Jan and 1 Mar fails only because a non-leap year has no 29 Feb', synth(1, [('01-01', S, F, '11'), ('03-01', S, F, '12')]), 'returns after 59 days')
+    expect('L1 sub 28 Feb and 1 Mar are counted', synth(1, [('02-28', S, F, '11'), ('03-01', S, F, '12')]), 'returns after')
+    expect('L2 sub 59 days apart fails', synth(2, [('05-01', S, F, '11'), ('06-29', S, F, '12')]), 'returns after 59 days')
+    expect('L1 family on two consecutive days fails', synth(1, [('03-01', 'a.s1', F, '11'), ('03-02', 'a.s2', F, '12')]), 'consecutive days')
+    expect('L1 family twice with a day between passes', synth(1, [('03-01', 'a.s1', F, '11'), ('03-03', 'a.s2', F, '12')]), None)
+    expect('L1 family 4 times in 60 days fails', synth(1, [('03-01', 'a.s1', F, '11'), ('03-10', 'a.s2', F, '12'), ('03-20', 'a.s3', F, '13'), ('03-30', 'a.s4', F, '14')]), 'times in 60 days')
+    expect('L1 family 3 times in 60 days passes', synth(1, [('03-01', 'a.s1', F, '11'), ('03-10', 'a.s2', F, '12'), ('03-20', 'a.s3', F, '13')]), None)
+    expect('L1 the same answer (10 or more) 59 days apart fails', synth(1, [('03-01', 'a.s1', 'a', '41'), ('04-29', 'b.s2', 'b', '41')]), 'repeats within 60 days')
+    expect('L1 the same answer 60 days apart passes', synth(1, [('03-01', 'a.s1', 'a', '41'), ('04-30', 'b.s2', 'b', '41')]), None)
+    expect('L1 a single-digit answer 3 times in 60 days fails', synth(1, [('03-01', 'a.s1', 'a', '7'), ('03-12', 'b.s2', 'b', '7'), ('03-23', 'c.s3', 'c', '7')]), 'single-digit answer')
+    expect('L1 a single-digit answer twice in 60 days passes', synth(1, [('03-01', 'a.s1', 'a', '7'), ('03-12', 'b.s2', 'b', '7')]), None)
+    expect('L1 the same sub twice in one quarter is NOT a quarter-rule failure when 60 days apart', synth(1, [('01-01', S, F, '11'), ('03-02', S, F, '12')]), None)
+    # --- Levels 3 to 6: once per quarter, 30 days across quarter boundaries
+    expect('L3 sub 30 days apart across a quarter boundary passes', synth(3, [('12-31', S, F, '11'), ('01-30', S, F, '12')]), None)
+    expect('L3 sub 29 days apart across a quarter boundary (31 Dec / 29 Jan) fails', synth(3, [('12-31', S, F, '11'), ('01-29', S, F, '12')]), 'across a quarter boundary')
+    expect('L4 sub 29 days apart across 31 Mar / 29 Apr fails', synth(4, [('03-31', S, F, '11'), ('04-29', S, F, '12')]), 'across a quarter boundary')
+    expect('L4 sub 30 days apart across 31 Mar / 30 Apr passes', synth(4, [('03-31', S, F, '11'), ('04-30', S, F, '12')]), None)
+    expect('L5 the same sub twice in a quarter fails', synth(5, [('05-01', S, F, '11'), ('06-30', S, F, '12')]), 'sub-structure')
+    expect('L6 four puzzles of one family in a quarter fails', synth(6, [('05-01', 'a.s1', F, '11'), ('05-09', 'a.s2', F, '12'), ('05-17', 'a.s3', F, '13'), ('05-25', 'a.s4', F, '14')]), 'family')
+    expect('L3 the same answer (10 or more) twice in a level fails', synth(3, [('05-01', 'a.s1', 'a', '55'), ('09-01', 'b.s2', 'b', '55')]), 'answer')
+
+    # --- the real bank: break it in known ways (the old probes)
+    def mutate(name, fn, want):
         d = copy.deepcopy(base)
-        mutate(d)
+        fn(d)
         f, _ = structure_rules(d, stock)
         new = [x for x in f if x not in clean]
-        good = any(want in x for x in new)
-        cases.append((name, good, new[:2]))
-    case('same sub-structure twice in a quarter', lambda d: d[3][1][1].__setitem__('sub', d[3][0][1]['sub']), 'sub-structure')
-    def fam4(d):
-        fam = d[2][0][1]['family']
-        k = 0
-        for mm, e in d[2][1:]:
-            if e['family'] != fam and k < 3:
-                e['family'] = fam
-                k += 1
-    case('four puzzles of one family in a quarter', fam4, 'family')
-    def dup_ans(d):
-        a = [e for mm, e in d[5] if e['ans'].isdigit() and int(e['ans']) >= 10][:2]
-        a[1]['ans'] = a[0]['ans']
-    case('the same answer (10 or more) twice in a level', dup_ans, 'answer')
-    def same_run(d):
-        d[4][1][1]['q'] = d[4][0][1]['q'] + ' ' + d[4][1][1]['q']
-    case('a 7-word run shared by two puzzles of a level', same_run, 'word run')
-    def same_nums(d):
-        d[6][1][1]['q'] = d[6][0][1]['q'].replace('?', '') + ' ' + d[6][1][1]['q']
-    case('two puzzles of a level with the same numbers', same_nums, 'share the numbers')
-    def other_quarter(d):
-        e = d[1][1][1]
-        d[1][1] = ('02', dict(e, sub=d[1][0][1]['sub'], id='L1-x'))   # a different quarter: allowed
-    f_ok = copy.deepcopy(base)
-    other_quarter(f_ok)
-    ff, _ = structure_rules(f_ok, stock)
-    cases.append(('the same sub-structure in a different quarter is allowed', not [x for x in ff if x not in clean and 'sub-structure' in x], ff[:1]))
-    bad = [c for c in cases if not c[1]]
+        cases.append((name, any(want in x for x in new), new[:2]))
+    mutate('a 7-word run shared by two puzzles of a level', lambda d: d[4][1][1].__setitem__('q', d[4][0][1]['q'] + ' ' + d[4][1][1]['q']), 'word run')
+    mutate('two puzzles of a level with the same numbers', lambda d: d[6][1][1].__setitem__('q', d[6][0][1]['q'].replace('?', '') + ' ' + d[6][1][1]['q']), 'share the numbers')
+    # --- the story check
+    sidx = story_index()
+    for name, q, want in (
+        ('story: the snail-and-wall puzzle with new numbers is caught', 'A snail climbs a 20 cm wall. Each day it climbs 5 cm. Each night it slides back 2 cm. On which day does it first reach the top?', 'FAIL'),
+        ('story: lolly sticks and a row of triangles with new numbers is caught', 'Sam makes a row of triangles with lolly sticks. One triangle uses 3 sticks. Two triangles joined side by side use 5 sticks. How many sticks do 8 triangles use?', 'FAIL'),
+        ('story: "Today is Wednesday ... what day of the week" is caught', 'Today is Wednesday. What day of the week will it be 365 days from today?', 'FAIL'),
+        ('story: a fan at 15% off with 9% GST on $120 is caught', 'A fan costs $120 before GST. It is sold at 15% off. What is the sale price before GST?', 'FAIL'),
+        ('story: a new story (a bakery sells tarts in trays) is not flagged', 'A bakery bakes tarts on trays. Every tray holds 12 tarts. The baker fills 7 trays and sells 30 tarts. How many tarts are left?', None)):
+        got = [sev for sev, _ in story_hits(q, sidx)]
+        cases.append((name, (want in got) if want else ('FAIL' not in got), got))
     for c in cases:
         print(('PASS ' if c[1] else 'FAIL ') + c[0], '' if c[1] else c[2])
-    # taxonomy matching
+        if not c[1]:
+            bad.append(c[0])
+    # --- taxonomy matching
     ent = dict(kind='scan', p=dict(preds=[['palindrome', None]]))
-    cases2 = [('digit_puzzles.palindromes' , ent, True), ('digit_puzzles.same_digit_count', ent, False), ('money.change', ent, False)]
-    for sid, e, want in cases2:
+    for sid, e, want in (('digit_puzzles.palindromes', ent, True), ('digit_puzzles.count_by_digit_rule', ent, False), ('money.shopping', ent, False)):
         got = TAX.matches(sid, e)[0]
         print(('PASS ' if got == want else 'FAIL ') + 'taxonomy match %s -> %s' % (sid, got))
         if got != want:
             bad.append(sid)
+    # --- every round-2 kind: solver and independent checker agree on a worked instance, with exactly one answer
+    import kinds
+    import samples_r2
+    for k, plist in samples_r2.SAMPLES.items():
+        for p in plist:
+            try:
+                a, _ = kinds.SOLVE[k](**p)
+                b = brute.BRUTE[k](**p)
+                good = len(b) == 1 and ({str(x).lower() for x in b} == {str(a).lower()} if isinstance(a, str) else {Fr(x) for x in b} == {Fr(a)})
+            except Exception as ex:
+                good = False
+                a = b = repr(ex)
+            if not good:
+                print('FAIL kind %s %s: solver %s checker %s' % (k, p, a, b))
+                bad.append('kind ' + k)
+    print('kinds checked: %d, every round-2 sub-structure kind in taxonomy has a sample: %s' % (
+        len(samples_r2.SAMPLES), all(any(k in samples_r2.SAMPLES for k in d['kinds']) for d in TAX.SUBS.values() if d.get('round') == 2)))
+    for d in TAX.SUBS.values():
+        if d.get('round') == 2 and not any(k in samples_r2.SAMPLES for k in d['kinds']) and d['kinds'] != ['rect']:
+            print('FAIL no sample for', d['name'])
+            bad.append(d['name'])
     print('selftest: %d problems' % len(bad))
     sys.exit(1 if bad else 0)
 
@@ -383,7 +760,7 @@ def main():
     if '--selftest' in sys.argv:
         selftest()
     man = json.load(open(os.path.join(HERE, 'manifest.json')))
-    months = sys.argv[1:] or man['released']
+    months = [a for a in sys.argv[1:] if not a.startswith('--')] or man['released']
     banks = {}
     for mm in man['released']:
         banks[mm] = json.load(open(os.path.join(HERE, 'batches', 'm%s' % mm, 'bank.json'), encoding='utf-8'))
@@ -414,10 +791,17 @@ def main():
         reserved_kinds[sid] = TAX.SUBS[sid]['kinds'] if sid in TAX.SUBS else []
 
     # ---------------------------------------------------------------- structure rules over all released months (per level and quarter)
+    R = TAX.RULES
     struct_lines = ['# Structure report (taxonomy.json)', '',
-                    'Rules: per level and calendar quarter at most %d puzzle per sub-structure and %d per family (kind); no answer repeats inside a level; '
+                    'Rules. Levels 3 to 6 (TEASER-STRICT): per level and calendar quarter at most %d puzzle per sub-structure and %d per family; the same sub-structure never within %d days of itself across a quarter boundary; '
+                    'an answer of 10 or more appears once per level and a single digit at most %d times. '
+                    'Levels 1 and 2 (L1L2-GAP60): the same sub-structure at least %d days apart (circular, 365- and 366-day year), a family at most %d times in any %d days and never on consecutive days, '
+                    'an answer not repeated within %d days and a single-digit answer at most %d times in %d days. '
+                    'All levels: no repeated frame, no two puzzles with most numbers or the same story in common; '
                     'the sub-structures used by the fixed puzzles on the level pages (%s) are never used by the bank.' % (
-                        TAX.RULES['max_per_sub_per_quarter'], TAX.RULES['max_per_family_per_quarter'], ', '.join(sorted(TAX.FIXED.values()))), '']
+                        R['max_per_sub_per_quarter'], R['max_per_family_per_quarter'], R['min_gap_days_across_quarters'], MAX_SMALL,
+                        R['min_gap_days']['1'], R['family_max_in_window'], R['family_window_days'], R['answer_window_days'], R['answer_small_max_in_window'], R['answer_window_days'],
+                        ', '.join(sorted(TAX.FIXED.values()))), '']
     all_by_level = {lv: [] for lv in levels}
     for mm in man['released']:
         for lv, items in banks[mm]['levels'].items():
@@ -425,7 +809,12 @@ def main():
                 all_by_level[int(lv)].append((mm, e))
     global_fails, more_lines = structure_rules(all_by_level, stock)
     struct_lines += more_lines
-    struct_lines += capacity_lines(levels)
+    cap_lines, cap_fails = capacity_lines(levels)
+    struct_lines += cap_lines
+    ans_lines, ans_warn = answer_feasibility(all_by_level)
+    struct_lines += ans_lines
+    sidx = story_index()
+    print('story index: %d source windows' % len(sidx[0]))
 
     review_struct = []
     for mm in months:
@@ -550,6 +939,16 @@ def main():
                     a, b = shingles(skeleton(e['q'])), shingles(skeleton(text))
                     if a and b and len(a & b) / len(a) >= 0.45 and numbers_in(e['q']) & numbers_in(text) - {'0', '1', '2'}:
                         fails.append('%s: same skeleton and numbers as the fixed website puzzle %s' % (tag, k))
+                # 6. story similarity (content words) with our sources
+                for sev, detail in story_hits(e['q'], sidx):
+                    if sev == 'FAIL':
+                        fails.append('%s: same story as a source: %s' % (tag, detail))
+                    else:
+                        reviews.append('%s: %s' % (tag, detail))
+                for k, text in fixed.items():
+                    for sev, detail in story_hits(e['q'], ([(k, text, frozenset(story_words(text)), frozenset(n for n in numbers_in(text) if n not in ('0', '1', '2')))], sidx[1], {w: [0] for w in story_words(text)})):
+                        if sev == 'FAIL':
+                            fails.append('%s: same story as the fixed website puzzle %s: %s' % (tag, k, detail))
             stats[lv] = (len(items), len(kinds_ct), max(kinds_ct.values()), len(fam_ct), max(fam_ct.values()), len({e['sub'] for e in items}))
         lines.append('# Teaser batch m%s verification report' % mm)
         lines.append('')
@@ -582,6 +981,12 @@ def main():
     for f in global_fails:
         struct_lines.append('- FAIL ' + f)
     struct_lines.append('')
+    struct_lines.append('Capacity verdict for the full year (a plan for January to October, not a defect of the released months): %d CAPACITY FAIL' % len(cap_fails))
+    for f in cap_fails:
+        struct_lines.append('- CAPACITY FAIL ' + f)
+    for w in ans_warn:
+        struct_lines.append('- WARNING ' + w)
+    struct_lines.append('')
     struct_lines.append('Skeleton matches with our own sources that were reviewed by hand (same masked wording, but no shared numbers): %d' % len(review_struct))
     for r in review_struct:
         struct_lines.append('- REVIEW ' + r)
@@ -590,6 +995,13 @@ def main():
     for f in global_fails[:80]:
         print('  FAIL', f)
     fails_all += len(global_fails)
+    print('capacity (full-year plan): %d CAPACITY FAIL' % len(cap_fails))
+    for f in cap_fails:
+        print('  CAPACITY FAIL', f)
+    for w in ans_warn:
+        print('  WARNING', w)
+    if '--strict-capacity' in sys.argv and cap_fails:
+        fails_all += len(cap_fails)
     sys.exit(1 if fails_all else 0)
 
 

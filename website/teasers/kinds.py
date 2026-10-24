@@ -747,3 +747,7 @@ SOLVE = {k: v for k, v in dict(globals()).items()
 
 import kinds_more as _more   # noqa: E402  (fix round 1: further solvers)
 SOLVE.update(_more.SOLVE)
+
+
+import kinds_r2 as _r2   # noqa: E402  (fix round 2: solvers for the new sub-structures)
+SOLVE.update(_r2.SOLVE)

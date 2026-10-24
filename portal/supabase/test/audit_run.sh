@@ -18,6 +18,7 @@ for f in test/stub_supabase.sql schema.sql policies.sql seed_groups.sql practice
   run "$P -f $HERE/$f >/dev/null 2>&1" || { echo "SETUP FAILED in $f"; exit 1; }
 done
 OUT="$(mktemp)"
+if [ -n "${AUDIT_ADHOC:-}" ]; then for f in $(ls $HERE/test/audit_0[0-9]*.sql | sort | head -${AUDIT_UPTO:-1}); do run "$P -f $f" >/dev/null 2>&1; done; run "$P -f $AUDIT_ADHOC" 2>&1; exit 0; fi   # debugging: load first N audit files, then run one ad-hoc file
 for f in $(ls $HERE/test/audit_[0-9]*.sql | sort); do
   echo "== $(basename $f)"
   run "$P -f $f" >> "$OUT" 2>&1 || { echo "SCRIPT ERROR in $f"; tail -5 "$OUT"; }

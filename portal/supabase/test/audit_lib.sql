@@ -25,3 +25,6 @@ begin
 end $$;
 create or replace function pg_temp.denied(res text) returns boolean language sql immutable as $$ select res like 'err:%' $$;
 create or replace function pg_temp.zero(res text) returns boolean language sql immutable as $$ select res = 'ok:0' or res like 'err:%' $$;
+
+create or replace function pg_temp.note(name text, sev text default 'Low', detail text default '') returns void language plpgsql as $$
+begin raise notice 'AUDIT|NOTE|%|%', sev, name || case when detail = '' then '' else ' -- ' || detail end; end $$;

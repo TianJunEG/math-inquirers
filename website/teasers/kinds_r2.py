@@ -287,6 +287,7 @@ def grid_totals(rows, cols, known, ask):
                 cell[(miss[0], c)] = cols[c] - sum(cell[(r, c)] for r in range(R) if r != miss[0])
                 changed = True
     assert len(cell) == R * C, cell
+    assert all(sum(cell[(r, c)] for c in range(C)) == rows[r] for r in range(R)) and all(sum(cell[(r, c)] for r in range(R)) == cols[c] for c in range(C))
     return cell[tuple(ask)], {'row_total': rows[ask[0]], 'col_total': cols[ask[1]]}
 
 
