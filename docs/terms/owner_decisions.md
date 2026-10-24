@@ -355,3 +355,6 @@ Owner: "L1-sizes-ok". Level 1 term books: Quest tool rows (Book 2 9.1 pt, Book 6
 
 ## 2026-10-24 — P6L10-REMOVE-OLD
 Owner: "P6l10-remove-old". Remove the stray old file p6l10-warm2 from the live private P6 Lesson 10 deck (the artifact itself is kept).
+
+## 2026-10-24 — ONLINE-VERSIONS
+Owner: "The workbooks should have online versions for holiday program and term lessons, also for extension workbooks. Not needed for school puzzles." Scope: online practice versions for (1) holiday program (60 lessons; practice/ has only P3L3 so far), (2) term lessons (Level 1: all 40 lesson JSONs carry online_practice items; Levels 2–6 term not started), (3) extension workbooks (60 units, L1–L6; none online yet). NOT school puzzle booklets. Runner: practice/public (no timers, scores or streaks; template variants brute-force verified).
