@@ -78,3 +78,39 @@ Every checker is independent of the printed answer: lesson 3 counts the pictures
 2. Lesson 3 Q6(a) "Is Mei right?" is auto-marked No (printed key: "Only our class voted"); its checker encodes that fact (the graph is one class), so it is a judgement item. Say if you would rather make it self-check.
 3. The nav shows "Investigation" on every Investigation button (the shared runner shows the first word of the card number); each button has an aria-label with the full number. A shorter number scheme ("Inv 1") would need a runner change.
 4. 7(a) in lesson 4 asks for the seven numbers 9 to 21; the answer for 10 triangles (21) is also the answer of 7(d), as printed.
+
+---
+
+# Week 3 (lessons 5 and 6)
+
+Not deployed. No website, Supabase, server or shared-file change (`sheet.js`, `practice/submit/*`, `build_holiday.py`, `hlib.py`, `test_holiday.py` untouched). Build and test: `python3 practice/holiday/build_holiday.py p1 N` then `python3 practice/holiday/test_holiday.py p1 N` (N = 5, 6); both give RESULT: OK. Proof screenshots in `practice/holiday/p1/0N/proof/`. New figure helpers appended to `p1/p1lib.py` (number machine strip, IN/OUT table, queue, marble bars, snail wall, ways table). No coin or note pictures: coins are words and numbers.
+
+Week 3 = lessons 5 and 6 (`website/data/beta_schedule.json`, group L1A: lesson 5 Tue 8 Dec, lesson 6 Fri 11 Dec). Sources: `hp/workbook_html.js` (Start here), `hp/qbank.json` (Think harder = stretch[0:4], Go further = challenge[-3:]), `hp/gaps.json` (Investigation; lesson 6 also the extra Think harder T5 "Dollars"). Hand-written code, so items were extracted by hand with independent checkers (try every number / every combination of coins / simulate the snail); the build refuses to write unless every `src` string is in those sources. Printed answers agree with the Tutor Guide key.
+
+| | Lesson 5 Mystery number | Lesson 6 Coin combos |
+|---|---|---|
+| Items (cards) | 27 | 27 |
+| Auto-marked | 24 | 17 |
+| Self-check with a model answer | 1 (I4 why) | 9 |
+| Open (make up your own) | 2 (take-home, G3) | 1 (G3) |
+| Paper-only | 0 | 0 |
+| Unavailable online | 0 | 0 |
+| Variant families (every combination run) | 9 (480 combos) | 3 (25 combos) |
+
+## Not mirrored / changed from the print, and why
+- Look-back box, Tool card, Name line, "After question 3" banner: paper routine, not questions.
+- L5 2(b) is three cards: the rule (choice), the missing OUT, "OUT 30 means IN". L5 T3 is rule (choice) plus the two numbers. L5 G1 is IN (number) plus "what does a one-step machine add" (number). Rules are choices, not typed words (typed rule wordings are self-check by earlier decision).
+- L5 Investigation: "Mei says OUT is always the same as IN. Is Mei always right?" became a choice ("What does she find?") so its stem does not give away the answers of Investigation 1 (3, 10, 25); the "why" is a self-check.
+- L5 Q3 bars: Ali's bar is drawn; the child colours Mei's and Ben's on paper if they like (hint says so). L5 4(b) "draw circles" says "on paper". G2 asks "Type the day number".
+- L6 Q1 and Q2 (write the ways / the table) and T4 are self-check lists with the correct table shown after Submit. Fewest and most coins in Q1 are asked as the coin values (set, "20" and "5, 5, 5, 5"), which keeps "which way" rather than just a count. Q3(a) is split into the number of coins and which coins. T1 and T4 each also get a "how many" number card (not printed; the Tutor Guide gives 2 and 6). Q2 prints the example "20¢ + 5¢" which is one of the answers, so the screen example is "10¢ + 5¢".
+- L6 coin pictures (tray, purse, Ben's two coins, coin rows, notes) are not drawn (no coin or note images); the stems say the coins in words. Q5 and Q6 are `text` with the accepted forms 35, 35¢, 35 cents (the shared number matcher does not accept the ¢ sign).
+- L6 T5 Dollars (printed extra Think harder) is included: (a) values of the fewest notes/coins (set), (b) Yes/No and why.
+- The Check yourself questions of gaps.json are not in the print and are not included. L6 Investigation extension (put the 10¢ away) is tutor-only and not included.
+- Variants only where a template with an oracle exists and the question text carries everything (L5 1(a), 1(b), 1(c), T4, 3(b), 4(a), 4(b), T3 find, G2; L6 3(a), T3, T2).
+
+## Print-inherent answer coincidences (kept, not fixable without changing the printed numbers)
+L5 3(c) "6 more" is the 6 of "6 fewer"; L5 1(a) prints 12 which is the answer of 1(b); L6 Q4 prints 35¢ which is the answer of Q5, and T3 prints 45¢ which is the answer of Q6; L6 Q2 prints "4 ways" while 20¢ also has 4 ways (no count card is asked for 20¢ or 25¢).
+
+## Open questions
+1. Typed ways of paying (L6 Q1, Q2, T4, 3(b)) are self-check; an auto-marked version would need a "list of sets" answer type.
+2. L5 3(c) and the L6 Q4/Q5 chains above: say if you want the stems changed from the print.
