@@ -94,7 +94,7 @@ ITEMS = [
          src=['In 572, the digit 7 is worth']),
 
     dict(id='2a', tier='core', no='2(a)', type='set', ordered=False, skill='digit cards', answer=P1,
-         q='Use the digit cards 2, 7 and 4. Use each card once to make a 3-digit number. Make a list in order. Write every number you can make. Type them with a comma between.',
+         q='Use the digit cards 2, 7 and 4. Use each card once to make a 3-digit number. Make a list in order. Type every number you can make, with a comma between.',
          svg=CARDS[0]['figure'], check=lambda: numbers_from_cards([2, 7, 4]),
          hint='Start with 2 in the hundreds place and make two numbers. Then start with 4, then 7.',
          steps=['Start with 2: 247 and 274.', 'Start with 4: 427 and 472.', 'Start with 7: 724 and 742.', 'In order: 247, 274, 427, 472, 724, 742. There are 6 numbers.'],
@@ -219,7 +219,7 @@ ITEMS = [
          src=['How do you know you have found them all?']),
     dict(id='I4', tier='invest', no='Investigation (c)', type='choice', skill='mirror numbers', options=['Yes', 'No'], answer='No',
          q='Mirror numbers. Ali says every mirror number is odd. Is he right?', check=lambda: 'Yes' if all(n % 2 == 1 for n in mirror_numbers(100, 999)) else 'No',
-         hint='Can you find one mirror number that is even? Its last digit would be even.',
+         hint='Write some mirror numbers of your own. Look at the last digit of each one. Is it always odd?',
          steps=['Ali is not right. 202 is a mirror number and it is even.', 'A mirror number is even when its first (and last) digit is even.'],
          src=['Ali says every mirror number is odd. Is he right?']),
 
@@ -263,7 +263,7 @@ ITEMS = [
     dict(id='T4a', tier='stretch', no='Think harder 4', type='choice', skill='swapping digits', options=['Yes', 'No'], answer='No',
          q='Mei says: "If I swap the tens digit and the ones digit of a 3-digit number, the new number is always smaller." Is she right?',
          check=lambda: 'Yes' if all(swap_tens_ones(n) < n for n in range(100, 1000)) else 'No',
-         hint='Try 452 and 425. Then try going the other way: swap the digits of 425.',
+         hint='Try a few numbers, such as 452. Swap the tens digit and the ones digit. Is the new number always smaller? Try some different numbers.',
          steps=['452 becomes 425, which is smaller.', 'But 425 becomes 452, which is bigger. So Mei is not always right.'],
          src=['Mei says:', 'Is she right?']),
     dict(id='T4b', tier='stretch', no='Think harder 4 (examples)', type='selfcheck', open=False, skill='swapping digits',

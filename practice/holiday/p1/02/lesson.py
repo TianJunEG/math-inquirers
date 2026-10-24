@@ -120,10 +120,11 @@ ITEMS = [
          steps=['4 + 4 makes 8, but 8 + 1 makes 9.', 'The two sides are not the same, so the = sign is wrong. It would be true if the right side were 8 + 0, or if the left side were 4 + 5.', 'Any answer that compares 8 and 9 is good.'],
          src=['Mei says “4 + 4 = 8 + 1 is true.” Is she right? Explain.']),
 
-    dict(id='5a', tier='core', no='5(a)', type='set', ordered=False, skill='magic triangle', answer=[4, 5, 6],
-         q='Magic triangle. Put 1, 2, 3, 4, 5 and 6 in the circles so that each side adds up to 9. Start with 1, 2 and 3 in the corners. Which numbers go between the corners? Type them with a comma between.',
+    dict(id='5a', tier='core', no='5(a)', type='fields', skill='magic triangle', answer=[6, 4, 5],
+         q='Magic triangle. Use 1, 2, 3, 4, 5 and 6 so that each side adds up to 9. The corners are 1, 2 and 3. Which number goes between each pair of corners?',
+         frame='Between 1 and 2: {f1}     Between 2 and 3: {f2}     Between 3 and 1: {f3}',
          svg=magic_triangle(corners=(1, 2, 3), caption='Magic triangle with 1, 2 and 3 in the corners and three empty circles'),
-         check=lambda: sorted(next(a for a in magic_solutions(ONE_TO_SIX, 9) if a[:3] == (1, 2, 3))[3:]),
+         check=lambda: (lambda m: list(m[0][3:]) if len(m) == 1 else None)([a for a in magic_solutions(ONE_TO_SIX, 9) if a[:3] == (1, 2, 3)]),
          sol_fig=lambda g: (lambda a: magic_triangle(corners=a[:3], sides=a[3:], caption='Every side adds up to 9'))(next(a for a in magic_solutions(ONE_TO_SIX, 9) if a[:3] == (1, 2, 3))),
          hint='Hint: use counters. Between 1 and 2 you need a number that makes 9 with them: 1 + 2 + ? = 9.',
          steps=['Between 1 and 2: 1 + 2 = 3, and 3 + 6 = 9, so put 6 there.', 'Between 2 and 3: 2 + 3 = 5, and 5 + 4 = 9, so put 4 there.', 'Between 3 and 1: 3 + 1 = 4, and 4 + 5 = 9, so put 5 there.', 'The numbers between the corners are 6, 4 and 5.'],
@@ -133,7 +134,7 @@ ITEMS = [
          svg=magic_triangle(caption='An empty magic triangle'),
          check=lambda: (lambda c: list(c.pop()) if len(c) == 1 else None)({tuple(sorted(a[:3])) for a in magic_solutions(ONE_TO_SIX, 10)}),
          sol_fig=lambda g: (lambda a: magic_triangle(corners=a[:3], sides=a[3:], caption='Every side adds up to 10'))(magic_solutions(ONE_TO_SIX, 10)[0]),
-         hint='The three sides use each corner twice. The six numbers add up to 21. Try corners that are 1, 3 and 5.',
+         hint='Use counters. Try three numbers for the corners, then find the number between each pair that makes the side 10. If a side does not work, change a corner and try again.',
          steps=['The corners are 1, 3 and 5.', 'Between 1 and 3 put 6 (1 + 6 + 3 = 10). Between 3 and 5 put 2 (3 + 2 + 5 = 10). Between 5 and 1 put 4 (5 + 4 + 1 = 10).', 'Every side adds up to 10. The corners are 1, 3 and 5.'],
          src=['If you have time: now make each side add up to 10. Which numbers are in the corners this time?']),
 
@@ -153,7 +154,7 @@ ITEMS = [
 
     # ================= Investigation
     dict(id='I1', tier='invest', no='Investigation 1', type='selfcheck', open=False, skill='odd and even bonds',
-         q='Investigation: Is it always true? Easy first step: write all the pairs that make 10, from 0 + 10 and 1 + 9 down to 10 + 0. Look at each pair. Are both numbers odd, both even, or one of each?',
+         q='Investigation: Is it always true? On paper, write all the pairs that make 10, from 0 + 10 down to 10 + 0. Is each pair both odd, both even, or one of each?',
          facts=dict(pairs=11, same_kind=11),
          check=lambda: (lambda p: dict(pairs=len(p), same_kind=sum(1 for a, b in p if a % 2 == b % 2)))(pairs_sum(10, ordered=True)),
          hint='Write the pairs in a column. Write O for odd and E for even under each number.',

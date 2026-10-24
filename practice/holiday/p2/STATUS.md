@@ -51,3 +51,8 @@ a separate self-check card (the example reasoning is shown after submit, never m
 1. L1 1(b) (6 hundreds, 15 tens and 2 ones) is 752. The printed workbook has no answer line for Start here, so the independent checker is the only source; worth a glance when the printed answer key is cross-checked.
 2. Free typing of explanations: should a tutor see the typed self-check text in the submission (the shared runner stores it), or only the marks? (Decision SUBMIT-TO-TUTOR says answers go to the tutor; this is just a reminder that explanations are included.)
 3. Second Think harder / Go further items in `qbank` that are not printed in the workbook (Think harder 5 to 8, Go further 1 to 6 of the bank) are not online: the brief mirrors the printed pages only. They could be added as optional extras if wanted.
+
+## Week 1 audit fixes (items, 24 Oct 2026; see AUDIT_WEEK1_L1_3.md)
+- M2 L2 5(a) circles no longer says "160 is between them" (uses "your answer to 5(a) between"); L2 4(b) and 4(d) hints no longer state the total 150.
+- M3 L2 5(a) circles hint (false rule "the corner is the smallest") replaced by a test-it hint; L2 5(b) and Think harder 1 hints no longer say "the biggest numbers go in the corners"; L2 4(a) hint no longer names the diagonal; L1 Investigation 4 and Think harder 4 hints no longer give the counter-example.
+- Wording: "Write them in the boxes" is now "Type each one in its box"; L1 2(a) says "Type every number".

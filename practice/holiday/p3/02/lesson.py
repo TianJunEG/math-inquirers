@@ -38,6 +38,15 @@ def six_split():
     return out
 
 
+def _hundreds(pick, kind):
+    """The pair of cards in the hundreds places over EVERY best way (sum: max or min; difference: min). It must be the same pair for every best way."""
+    val = (lambda a, b: a + b) if kind == 'sum' else (lambda a, b: abs(a - b))
+    pairs = [(a, b) for a, b in six_split() if kind == 'sum' or a != b]
+    best = pick(val(a, b) for a, b in pairs)
+    sets = {tuple(sorted((a // 100, b // 100))) for a, b in pairs if val(a, b) == best}
+    return list(sets.pop()) if len(sets) == 1 else None
+
+
 def eight_split():
     out = []
     for p in itertools.permutations(range(1, 9)):
@@ -108,12 +117,12 @@ SOL_MAGIC = magic_solve([1200, 1700, 1600], 1500)
 
 ITEMS = [
     # ================= Start here (workbook lesson 2, No.1 to No.6)
-    I(id='1a', tier='core', no='1(a)', type='fields', skill='missing digits in an addition', answer=[4, 7, 6], svg=FIG['l2_q1'], frame='The missing digits in (a), from left to right in the picture: {f1}, {f2}, {f3}',
-      q='Find the missing digits. Write them in the boxes. Example: 3_2 + 115 = 467. Ones: 2 + 5 = 7. Tens: _ + 1 = 6, so the missing digit is 5. Now (a): find the three missing digits.',
+    I(id='1a', tier='core', no='1(a)', type='fields', skill='missing digits in an addition', answer=[4, 7, 6], svg=FIG['l2_q1'], frame='Missing digit in the top number (3_47): {f1}.   In the second number (25_8): {f2}.   In the answer (_025): {f3}.',
+      q='Find the missing digits. Example: 3_2 + 115 = 467. Ones: 2 + 5 = 7. Tens: _ + 1 = 6, so the missing digit is 5. Now (a): type the missing digit of each number in the picture.',
       check=lambda: one([[a, b, c] for a in range(10) for b in range(10) for c in range(10) if 3000 + a * 100 + 47 + 2500 + b * 10 + 8 == c * 1000 + 25]),
       sol_fig=lambda got: FIG['l2_q1_sol'],
       hint='Start with the ones: 7 + 8 = 15, write 5 and carry 1. Then the tens, the hundreds and the thousands. Remember the carried 1!',
-      steps=['Ones: 7 + 8 = 15. Write 5 and carry 1.', 'Tens: 4 + the missing digit + the carried 1 must end in 2. 4 + 7 + 1 = 12, so the second box is 7. Write 2 and carry 1.', 'Hundreds: the missing digit + 5 + the carried 1 must end in 0. 4 + 5 + 1 = 10, so the first box is 4. Write 0 and carry 1.', 'Thousands: 3 + 2 + 1 = 6, so the third box is 6.', '3447 + 2578 = 6025. The missing digits, in the order of the boxes, are 4, 7 and 6.'],
+      steps=['Ones: 7 + 8 = 15. Write 5 and carry 1.', 'Tens: 4 + the missing digit + the carried 1 must end in 2. 4 + 7 + 1 = 12, so the missing digit in 25_8 is 7. Write 2 and carry 1.', 'Hundreds: the missing digit + 5 + the carried 1 must end in 0. 4 + 5 + 1 = 10, so the missing digit in 3_47 is 4. Write 0 and carry 1.', 'Thousands: 3 + 2 + 1 = 6, so the missing digit in the answer _025 is 6.', '3447 + 2578 = 6025. The missing digits are 4 (top number), 7 (second number) and 6 (answer).'],
       src=['Find the missing digits. Write them in the boxes. Example:  3 __ 2 + 115 = 467.  Ones: 2 + 5 = 7.  Tens: __ + 1 = 6, so the missing digit is 5.']),
     I(id='1b', tier='core', no='1(b)', type='number', skill='missing digits in a subtraction', answer=3, svg=FIG['l2_q1'],
       q='Find the missing digit in (b): 5_2 - 216 = 316. Type the missing digit.',
@@ -131,21 +140,42 @@ ITEMS = [
     I(id='2a', tier='core', no='2(a)', type='number', skill='guess, check and improve', answer=1173, svg=FIG['l2_cards'],
       q='Use the digit cards 1 to 6, each once, to make two 3-digit numbers. Make the sum as GREAT as possible. Work it out on paper, then type the sum.',
       check=lambda: max(a + b for a, b in six_split()),
-      hint='Put the biggest cards in the hundreds places. Then the next biggest in the tens places.',
+      hint='Think about which places are worth the most. Try a few ways on paper and compare the sums.',
       steps=['For a great sum, the biggest digits go in the biggest places: 6 and 5 in the hundreds, 4 and 3 in the tens, 2 and 1 in the ones.', 'For example 642 + 531 = 1173 (or 641 + 532, 632 + 541 ...). The sum is always 1173.', 'The greatest sum is 1173.'],
+      src=['Use the digit cards 1 to 6, each once, to make two 3-digit numbers.', 'Make the sum as GREAT as possible.']),
+
+    I(id='2a-hund', tier='core', no='2(a) places', type='set', ordered=False, skill='guess, check and improve', answer=[5, 6], svg=FIG['l2_cards'],
+      q='Look at your greatest sum in 2(a). Which two cards are in the hundreds places? Type them with a comma between.',
+      check=lambda: _hundreds(max, 'sum'),
+      hint='Try a few different ways on paper. Which two cards in the hundreds places give the greatest sum?',
+      steps=['The hundreds places are worth the most, so the two biggest cards, 6 and 5, go there.', 'For example 642 + 531 = 1173.'],
       src=['Use the digit cards 1 to 6, each once, to make two 3-digit numbers.', 'Make the sum as GREAT as possible.']),
     I(id='2b', tier='core', no='2(b)', type='number', skill='guess, check and improve', answer=381, svg=FIG['l2_cards'],
       q='Use the digit cards 1 to 6, each once, to make two 3-digit numbers. Make the sum as SMALL as possible. Work it out on paper, then type the sum.',
       check=lambda: min(a + b for a, b in six_split()),
-      hint='Put the smallest cards in the hundreds places. Then the next smallest in the tens places.',
+      hint='Think about which places are worth the most. Try a few ways on paper and compare the sums.',
       steps=['For a small sum, the smallest digits go in the biggest places: 1 and 2 in the hundreds, 3 and 4 in the tens, 5 and 6 in the ones.', 'For example 135 + 246 = 381 (or 136 + 245 ...). The sum is always 381.', 'The smallest sum is 381.'],
       src=['Make the sum as SMALL as possible.']),
+
+    I(id='2b-hund', tier='core', no='2(b) places', type='set', ordered=False, skill='guess, check and improve', answer=[1, 2], svg=FIG['l2_cards'],
+      q='Look at your smallest sum in 2(b). Which two cards are in the hundreds places? Type them with a comma between.',
+      check=lambda: _hundreds(min, 'sum'),
+      hint='Try a few different ways on paper. Which two cards in the hundreds places give the smallest sum?',
+      steps=['The hundreds places are worth the most, so the two smallest cards, 1 and 2, go there.', 'For example 135 + 246 = 381.'],
+      src=['Use the digit cards 1 to 6, each once, to make two 3-digit numbers.', 'Make the sum as SMALL as possible.']),
     I(id='2c', tier='core', no='2(c)', type='number', skill='guess, check and improve', answer=47, svg=FIG['l2_cards'],
       q='Take-home (not for the lesson). Use the digit cards 1 to 6, each once, to make two 3-digit numbers. Make the DIFFERENCE as small as possible. Guess, check, then improve. Type the smallest difference you find.',
       check=lambda: min(abs(a - b) for a, b in six_split() if a != b),
-      hint='The hundreds digits should be next to each other, like 4 and 3. Then make the bigger number as small as you can and the smaller number as big as you can.',
+      hint='Try hundreds digits that are close together in size. Then make the bigger number as small as you can and the smaller number as big as you can.',
       steps=['Hundreds digits next to each other: 4 and 3. Make the number that starts with 4 as small as possible (412) and the number that starts with 3 as big as possible (365).', '412 - 365 = 47.', 'The smallest difference is 47. Other tries, such as 413 - 265 = 148, are bigger.'],
       src=['Make the DIFFERENCE as small as possible. Guess, check, then improve. Write your tries.']),
+
+    I(id='2c-hund', tier='core', no='2(c) places', type='set', ordered=False, skill='guess, check and improve', answer=[3, 4], svg=FIG['l2_cards'],
+      q='Look at your smallest difference in 2(c). Which two cards are in the hundreds places? Type them with a comma between.',
+      check=lambda: _hundreds(min, 'diff'),
+      hint='Try a few different ways on paper. Which two cards in the hundreds places give the smallest difference?',
+      steps=['The hundreds digits should be next to each other: 4 and 3.', 'For example 412 - 365 = 47.'],
+      src=['Use the digit cards 1 to 6, each once, to make two 3-digit numbers.', 'Make the DIFFERENCE as small as possible.']),
 
     I(id='3a-total', tier='core', no='3(a)', type='number', skill='magic squares', answer=4500, svg=FIG['l2_magic'],
       q='Magic square: every row, column and diagonal adds up to the same total. What is the magic total?',
@@ -155,15 +185,15 @@ ITEMS = [
       src=['Magic square: every row, column and diagonal adds up to the same total.', 'What is the magic total?']),
     I(id='3a-fill', tier='core', no='3(a)', type='fields', skill='magic squares', answer=[1900, 1100, 1400, 1300, 1800], svg=FIG['l2_magic'],
       frame='Middle row: {f1}, 1500, {f2}.   Bottom row: {f3}, {f4}, {f5}.',
-      q='Fill in the missing numbers in the magic square. The magic total is 4500.',
+      q='Fill in the missing numbers in the magic square. Use the magic total you found in 3(a).',
       check=lambda: one(SOL_MAGIC), sol_fig=lambda got: FIG['l2_magic_sol'],
-      hint='Use a line with only one missing number. Total 4500 minus the two numbers you know.',
+      hint='Use a line with only one missing number. The magic total minus the two numbers you know.',
       steps=['The diagonal 1200, 1500, ? gives the bottom right: 4500 - 1200 - 1500 = 1800.', 'The other diagonal 1600, 1500, ? gives the bottom left: 4500 - 1600 - 1500 = 1400. The middle column 1700, 1500, ? gives the bottom middle: 4500 - 1700 - 1500 = 1300.', 'Left column: 1200 + ? + 1400 = 4500, so the middle left is 1900. Right column: 1600 + ? + 1800 = 4500, so the middle right is 1100.', 'Middle row: 1900, 1500, 1100. Bottom row: 1400, 1300, 1800.'],
       src=['Fill in the missing numbers.', 'Magic square: every row, column and diagonal adds up to the same total.']),
-    I(id='3b', tier='core', no='3(b)', type='selfcheck', open=True, skill='magic squares', svg=FIG['l2_magic_sol'],
-      q='Look at two numbers opposite each other across the centre. What do you notice? Write your idea, then compare with the answer shown.',
+    I(id='3b', tier='core', no='3(b)', type='selfcheck', open=True, skill='magic squares', svg=FIG['l2_magic'], sol_fig=lambda f: FIG['l2_magic_sol'],
+      q='Use your finished magic square from 3(a). Look at two numbers opposite each other across the centre. What do you notice? Write your idea, then compare with the answer shown.',
       check=lambda: sorted({a + b for a, b in [(1200, 1800), (1700, 1300), (1600, 1400), (1900, 1100)]}),
-      hint='Add 1200 and 1800. Add 1700 and 1300. Add 1600 and 1400. What do you see?',
+      hint='Take 1200 and the number opposite it, and add them. Do the same for other pairs that are opposite each other. What do you see?',
       steps=['1200 + 1800 = 3000, 1700 + 1300 = 3000, 1600 + 1400 = 3000, and 1900 + 1100 = 3000.', 'Two numbers opposite each other across the centre always add up to 3000.', 'That is double the centre number: 1500 + 1500 = 3000.'],
       src=['Look at two numbers opposite each other across the centre. What do you notice?']),
 
@@ -186,14 +216,14 @@ ITEMS = [
       steps=['Make 9 in each place. 4 + 5 = 9, 1 + 8 = 9, 2 + 7 = 9, 7 + 2 = 9, so 4127 + 5872 = 9999.', 'For 2593: 2 + 7 = 9, 5 + 4 = 9, 9 + 0 = 9, 3 + 6 = 9, so 2593 + 7406 = 9999.'],
       src=['Look for a pattern.', '4127 + ________ = 9999    and    2593 + ________ = 9999']),
     I(id='5b', tier='core', no='5(b)', type='selfcheck', open=True, skill='patterns in sums',
-      q='4127 + 5872 = 9999 and 2593 + 7406 = 9999. What do you notice about the digits? Why is there no carrying? Write your idea, then compare with the answer shown.',
+      q='Look at your answers to 5(a): 4127 + ___ = 9999 and 2593 + ___ = 9999. What do you notice about the digits? Why is there no carrying? Write your idea, then compare with the answer shown.',
       check=lambda: [[int(a) + int(b) for a, b in zip(str(x), str(y))] for x, y in [(4127, 5872), (2593, 7406)]],
       hint='Add the two digits in each place. What is the total in every place?',
       steps=['The two digits in each place add up to 9: 4 + 5, 1 + 8, 2 + 7, 7 + 2.', 'The biggest single digit is 9. Two digits that add up to 9 never make 10, so nothing is carried.'],
       src=['What do you notice about the digits? Why is there no carrying?']),
     I(id='5c', tier='core', no='5(c)', type='number', skill='patterns in sums', answer=5873,
       q='Use your pattern: 10 000 - 4127 = ____', check=lambda: 10000 - 4127,
-      hint='You know 4127 + 5872 = 9999. 10 000 is one more than 9999.',
+      hint='You know 4127 + your answer to 5(a) = 9999. 10 000 is one more than 9999.',
       steps=['4127 + 5872 = 9999.', '10 000 is 1 more than 9999, so the answer is 1 more than 5872.', '5872 + 1 = 5873. Check: 4127 + 5873 = 10 000.'],
       src=['Use your pattern:   10 000 − 4127  =  ________']),
 
@@ -244,7 +274,7 @@ ITEMS = [
       steps=['Turn it round: 2538 + B46C = 7A03.', 'Ones: 8 + C ends in 3, so C = 5 (8 + 5 = 13). Write 3, carry 1.', 'Tens: 3 + 6 + 1 = 10. Write 0, carry 1. Hundreds: 5 + 4 + 1 = 10, so A = 0, carry 1. Thousands: 2 + B + 1 = 7, so B = 4.', 'A = 0, B = 4, C = 5: 7003 - 4465 = 2538. Check: 2538 + 4465 = 7003.'],
       src=['Find the missing digits (each letter is one digit; turn it round and add):  7A03 − B46C = 2538']),
     I(id='T2', tier='stretch', no='Think harder 2', type='fields', skill='missing digits in an addition', answer=[3, 1, 3, 2], frame='A = {f1}   B = {f2}   C = {f3}   D = {f4}',
-      q='Find the missing digits (each letter is one digit): 2A7B + C6D9 = 6000',
+      q='Find the missing digits (each letter is one digit; two letters may be the same digit here): 2A7B + C6D9 = 6000',
       check=lambda: one([[a, b, c, d] for a in range(10) for b in range(10) for c in range(10) for d in range(10) if 2000 + a * 100 + 70 + b + c * 1000 + 600 + d * 10 + 9 == 6000]),
       hint='Ones: B + 9 must end in 0. Start there and carry.',
       steps=['Ones: B + 9 ends in 0, so B = 1 (1 + 9 = 10). Write 0, carry 1.', 'Tens: 7 + D + 1 must end in 0, so D = 2 (7 + 2 + 1 = 10). Write 0, carry 1.', 'Hundreds: A + 6 + 1 must end in 0, so A = 3 (3 + 6 + 1 = 10). Write 0, carry 1.', 'Thousands: 2 + C + 1 = 6, so C = 3.', 'A = 3, B = 1, C = 3, D = 2: 2371 + 3629 = 6000.'],
