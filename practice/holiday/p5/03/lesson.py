@@ -336,8 +336,8 @@ ITEMS = [
       steps=['Ali keeps 2 out of 3 parts of his stamps. Ben keeps 1 out of 2 parts of his.', 'Make the kept amounts equal: each keeps 2 units. Then Ali had 3 units (2 kept, 1 given away) and Ben had 4 units (2 kept, 2 given away).',
              'Together 3 + 4 = 7 units = 140 stamps, so 1 unit = 20.', 'Ben gave away 2 units = 40 stamps. Check: Ali had 60 and keeps 40; Ben had 80 and keeps 40.'],
       src=['Ali and Ben had 140 stamps altogether. Ali gave away 1/3 of his stamps and Ben gave away 1/2 of his. Then they had the same number of stamps left. How many stamps did Ben give away?']),
-    D(id='pose', tier='challenge', no='Make up your own', type='selfcheck', open=True, skill='making up a problem',
-      q='Make up your own. Make up a before-and-after story in which the total stays the same. Draw its model, then swap with a partner. (Think for 30 seconds before anyone speaks.)',
+    D(id='pose', tier='challenge', no='Make up your own', type='selfcheck', open=True, marking_mode='open', skill='making up a problem',
+      q='Make up a before-and-after story in which the total stays the same. Draw its model, then swap with a partner. (Think for 30 seconds before anyone speaks.)',
       hint='Pick the total and the amount that moves first. Then say what fraction one person has afterwards, like “Ali has 1/2 as many as Ben”.',
       steps=['This question is open: many stories are right.', 'Check your story: after the giving, the two parts must add up to the total. Draw the After bars with equal units, then work back to the Before.',
              'Sample: Ali and Ben have 108 stickers altogether. Ali gives Ben 24 stickers. Then Ali has 1/2 as many as Ben. After: 3 units = 108, so Ali has 36 and Ben has 72. At first Ali had 36 + 24 = 60 and Ben had 48.'],
@@ -363,6 +363,8 @@ def _mei_oracle(e):
     return mei_siti(e['S'] + e['dd'], e['S'])
 
 
+finish(ITEMS)
+
 VARIANTS = {
     '1bn': dict(
         base=dict(L=36),
@@ -387,7 +389,7 @@ VARIANTS = {
         oracle=_gift_oracle),
     'B1': dict(
         base=dict(S=80, dd=120),
-        tpl=dict(vars=dict(S=[80, 100, 120], dd=[100, 120, 140, 160]), derive=dict(M='S + dd'),
+        tpl=dict(vars=dict(S=[80, 100, 120], dd=[100, 120, 140, 150]), derive=dict(M='S + dd'),
                  q='Mei had ${M} and Siti had ${S}. Mei spent 3 times as much money as Siti. Then they had the same amount left.\nHow much money did Siti spend?', answer='dd / 2',
                  hint='Mei spent 3 parts and Siti spent 1 part. How many parts MORE did Mei spend, and how much money is that?',
                  steps=['Mei had ${M} − ${S} = ${dd} more than Siti at the start.', 'They ended with the same amount, so Mei spent ${dd} more than Siti: that is 2 parts.', '1 part = ${dd} ÷ 2 = ${ans}. Siti spent ${ans}.']),

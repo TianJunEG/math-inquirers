@@ -263,3 +263,26 @@ def factor_tree_svg(n, label):
     W, H = w + 2 * pad, maxy + 2 * pad
     return (f'<svg viewBox="0 0 {W:.0f} {H:.0f}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{esc(label)}" '
             f'style="width:100%;max-width:{W:.0f}px;height:auto;display:block;margin:0 auto">{b}</svg>')
+
+
+# ---------------------------------------------------------------- end-of-lesson housekeeping (lesson-owned items only)
+def finish(items, sol_px=250, minus=True):
+    """Every self-check item gets an explicit marking_mode ('open' only for a truly open prompt, 'self' for explanations and paper-only items),
+    and solution figures get their text sized for the narrower solution box (a 360 px phone shows them about sol_px wide)."""
+    import re as _re
+    for it in items:
+        if minus and it.get('steps'):          # one real minus sign (U+2212) in every worked step: ' - ' and a sign in front of a digit
+            it['steps'] = [_re.sub(r'(?<![\w\u2212])-(?=\d)', '\u2212', _re.sub(r'(?<=\s)-(?=\s)', '\u2212', t)) for t in it['steps']]
+        if it.get('type') == 'selfcheck' and not it.get('marking_mode'):
+            it['marking_mode'] = 'self'
+        g = it.get('sol_fig')
+        if g:
+            def wrap(x, g=g):
+                s = g(x)
+                m = _re.search(r'viewBox="[-\d.]+ [-\d.]+ ([\d.]+) [\d.]+"', s)
+                if not m:
+                    return s
+                need = round(12.0 / min(1.0, sol_px / float(m.group(1))), 1)
+                return _re.sub(r'font-size="([\d.]+)"', lambda k: 'font-size="%g"' % max(float(k.group(1)), need), s)
+            it['sol_fig'] = wrap
+    return items

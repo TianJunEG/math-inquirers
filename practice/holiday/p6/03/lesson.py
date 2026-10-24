@@ -236,7 +236,7 @@ ITEMS = [
 
     # ---- exit slip (printed on the Finish page)
     dict(id='X', tier='core', no='Exit slip', type='number', strand=NU, skill='rises and falls across zero', answer=-5,
-         q='Exit slip. It is -3 °C. The temperature falls 6 degrees, then rises 4 degrees. What is the temperature now? (in degrees Celsius)'.replace('-3', M + '3'),
+         q='It is -3 °C. The temperature falls 6 degrees, then rises 4 degrees. What is the temperature now? (in degrees Celsius)'.replace('-3', M + '3'),
          check=lambda: -3 - 6 + 4,
          hint='Move one change at a time on a number line: a fall moves left, a rise moves right.',
          steps=[f'Start at {M}3 °C. A fall of 6 degrees: {M}3 {M} 6 = {M}9.', f'A rise of 4 degrees: {M}9 + 4 = {M}5.', f'The temperature now is {M}5 °C.'],
@@ -278,7 +278,7 @@ ITEMS = [
          src=['Find the missing number']),
 
     # ================= Go further (last three Go further questions of the workbook)
-    dict(id='C1', tier='challenge', no='C1', type='selfcheck', strand=NU, skill='making up a temperature story',
+    dict(id='C1', tier='challenge', no='C1', type='selfcheck', marking_mode='open', strand=NU, skill='making up a temperature story',
          q=f'Make up your own temperature story with at least three changes (rises and falls) that starts below zero and ends at exactly {M}7 °C. Write the story and the working, and sketch a number line. Swap with a partner and check each other\'s.',
          facts=dict(start=-2, changes=[-6, 3, -2], end=-7), check=lambda: dict(start=-2, changes=[-6, 3, -2], end=-2 + sum([-6, 3, -2])),
          hint='Choose a start below zero. Pick your last change so the answer comes out exactly. Or work backwards from the end.',
@@ -304,6 +304,14 @@ for _it in ITEMS:
         _it['frame'] = W.nb(_it['frame'])
 
 # ---------------------------------------------------------------- variant families (every combination is run against an independent oracle at build time)
+_UNIT = {'2b': ' (Type the number of degrees.)', '2c': ' (Type the number of degrees.)', '2e': ' (Type the number of degrees.)'}
+for _it in ITEMS:
+    if _it['id'] in _UNIT:
+        _it['q'] += _UNIT[_it['id']]
+    elif _it['id'] in ('2d', 'X'):
+        _it['q'] = _it['q'].replace(' (in degrees Celsius)', '') + ' (Type the temperature in degrees Celsius, as a number only. Use a minus sign if it is below zero.)'
+P.finish(ITEMS)
+
 VARIANTS = {
     '4a': dict(base=dict(a=6, b=9),
                tpl=dict(vars=dict(a=[2, 3, 4, 5, 6, 7, 8, 9], b=[10, 11, 12, 13, 14, 15, 16]),

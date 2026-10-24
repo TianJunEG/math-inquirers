@@ -479,11 +479,11 @@ def beads_eighths():
     return svg(8 * w + 20, 124, b, 'A bar of 8 equal parts for 40 beads. 3 parts are shaded blue.')
 
 
-def jar_halves_thirds():
+def jar_halves_thirds(left=5):
     w = 270
-    b = hbrace(10, 10 + w / 2, 40, 'Mei takes 1/2', True, 15) + hbrace(10 + 5 * w / 6, 10 + w, 40, '5 left', True, 15)
+    b = hbrace(10, 10 + w / 2, 40, 'Mei takes 1/2', True, 15) + hbrace(10 + 5 * w / 6, 10 + w, 40, f'{left} left', True, 15)
     b += Re(10, 46, w, 38, '#fff', NAVY, 2.4) + hbrace(10 + w / 2, 10 + 5 * w / 6, 84, 'Ali takes 1/3', False, 15)
-    return svg(w + 20, 134, b, 'One undivided bar for the jar. A brace over the first half is Mei\'s one half, a brace under the next part is Ali\'s one third, and a brace at the end marks the 5 sweets left.')
+    return svg(w + 20, 134, b, f'One undivided bar for the jar. A brace over the first half is Mei\'s one half, a brace under the next part is Ali\'s one third, and a brace at the end marks the {left} sweets left.')
 
 
 def book_bar():
@@ -555,3 +555,24 @@ def joined_forms(parts, ordered=True):
             out.append(', '.join(o[:-1]) + ' and ' + o[-1])
     first = ', '.join(parts)
     return [first] + sorted(set(out) - {first})
+
+
+# ---------------------------------------------------------------- end-of-lesson housekeeping (lesson-owned items only)
+def finish(items, sol_px=250):
+    """Every self-check item gets an explicit marking_mode ('open' only for a truly open prompt, 'self' for explanations and paper-only items),
+    and solution figures get their text sized for the narrower solution box (a 360 px phone shows them about sol_px wide)."""
+    import re as _re
+    for it in items:
+        if it.get('type') == 'selfcheck' and not it.get('marking_mode'):
+            it['marking_mode'] = 'self'
+        g = it.get('sol_fig')
+        if g:
+            def wrap(x, g=g):
+                s = g(x)
+                m = _re.search(r'viewBox="[-\d.]+ [-\d.]+ ([\d.]+) [\d.]+"', s)
+                if not m:
+                    return s
+                need = round(12.0 / min(1.0, sol_px / float(m.group(1))), 1)
+                return _re.sub(r'font-size="([\d.]+)"', lambda k: 'font-size="%g"' % max(float(k.group(1)), need), s)
+            it['sol_fig'] = wrap
+    return items

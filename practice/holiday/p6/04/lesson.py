@@ -134,13 +134,13 @@ ITEMS = [
          hint='Do the steps in the order of the boxes. Machine P: start with 5 and do its first step, then its second step.',
          steps=['Machine P: 5 + 3 = 8, then 8 × 4 = 32.', 'Machine Q: 5 × 4 = 20, then 20 + 3 = 23.', 'The same steps in a different order give different answers.'],
          src=['Put in 5.']),
-    dict(id='2b-P', tier='core', no='2(b) P', type='text', strand=AL, skill='writing a rule with a letter', svg=W.machine_rows(MACHINES_PQ, 'Machine P: n, add 3, times 4, OUT. Machine Q: n, times 4, add 3, OUT.'),
+    dict(id='2b-P', algebra=True, var='n', tier='core', no='2(b) P', type='text', strand=AL, skill='writing a rule with a letter', svg=W.machine_rows(MACHINES_PQ, 'Machine P: n, add 3, times 4, OUT. Machine Q: n, times 4, add 3, OUT.'),
          q='Write the rule for Machine P with n. Type it like this: OUT = 3n + 2 (that is a different machine).',
          accept=W.verified_forms(FORMS_P, P_RULE), shown='(n + 3) × 4', check=lambda: FORMS_P[0] if all(W._eval_form(f, k) == P_RULE(k) for f in FORMS_P for k in range(-5, 20)) else None,
          hint='Write the steps in order, starting with n. Does the second step work on n, or on the answer of the first step?',
          steps=['Machine P adds 3 to n first: n + 3.', 'Then it multiplies that whole answer by 4, so the first step needs brackets: (n + 3) × 4.', 'The rule is OUT = (n + 3) × 4, which is the same as 4n + 12.'],
          src=['Write each rule with n.']),
-    dict(id='2b-Q', tier='core', no='2(b) Q', type='text', strand=AL, skill='writing a rule with a letter', svg=W.machine_rows(MACHINES_PQ, 'Machine P: n, add 3, times 4, OUT. Machine Q: n, times 4, add 3, OUT.'),
+    dict(id='2b-Q', algebra=True, var='n', tier='core', no='2(b) Q', type='text', strand=AL, skill='writing a rule with a letter', svg=W.machine_rows(MACHINES_PQ, 'Machine P: n, add 3, times 4, OUT. Machine Q: n, times 4, add 3, OUT.'),
          q='Write the rule for Machine Q with n. Type it like this: OUT = 3n + 2 (that is a different machine).',
          accept=W.verified_forms(FORMS_Q, Q_RULE), shown='4n + 3', check=lambda: FORMS_Q[0] if all(W._eval_form(f, k) == Q_RULE(k) for f in FORMS_Q for k in range(-5, 20)) else None,
          hint='Write the steps in order, starting with n. Which step comes first in Machine Q?',
@@ -153,7 +153,7 @@ ITEMS = [
          steps=['Put in 5: P gives 32, Q gives 23. Put in 0: P gives 12, Q gives 3. Put in 10: P gives 52, Q gives 43.', 'The two OUT numbers are never the same: P is always bigger than Q by the same amount.'],
          src=['Can P and Q ever give the same OUT for the same IN?']),
     dict(id='2c-why', tier='core', no='2(c) explain', type='selfcheck', strand=AL, skill='explaining with the rule', svg=W.machine_rows(MACHINES_PQ, 'Machine P: n, add 3, times 4, OUT. Machine Q: n, times 4, add 3, OUT.'),
-         q='Explain why Machine P and Machine Q never give the same OUT for the same IN. Write your reason, then check it against the worked solution.',
+         q='Explain what you find when you compare the rules of Machine P and Machine Q, and say how that answers 2(c). Write your reason, then check it against the worked solution.',
          facts=dict(gap=9), check=lambda: dict(gap=(lambda g: g.pop() if len(g) == 1 else None)({P_RULE(k) - Q_RULE(k) for k in range(-50, 100)})),
          hint='Write each machine as a rule with n, as in 2(b). Then multiply out any brackets and compare the two rules. What is different?',
          steps=['Machine P is (n + 3) × 4 = 4n + 12 (4 lots of n and 4 lots of 3).', 'Machine Q is 4n + 3.', 'Both have 4n, but P adds 12 and Q adds only 3. So P is always 12 - 3 = 9 more than Q, and they can never be equal.'],
@@ -245,13 +245,13 @@ ITEMS = [
          check=lambda: [trick(7), trick(10)], hint='Do the steps one at a time, in order. Write the number you have after each step.',
          steps=['Start with 7: add 5 = 12, double it = 24, take away 4 = 20, halve it = 10, take away 7 = 3.', 'Start with 10: add 5 = 15, double it = 30, take away 4 = 26, halve it = 13, take away 10 = 3.', 'Both give 3.'],
          src=['The number trick.']),
-    dict(id='7b1', tier='core', no='7(b) step 4', type='text', strand=AL, skill='explaining a trick with a letter', svg=trick_fig(),
+    dict(id='7b1', algebra=True, var='n', tier='core', no='7(b) step 4', type='text', strand=AL, skill='explaining a trick with a letter', svg=trick_fig(),
          q='Now use n for the number you think of. After "add 5" you have n + 5, and after "double it" you have 2n + 10. What do you have after "take away 4"?',
          accept=W.verified_forms(FORMS_2N6, lambda n: 2 * n + 6), shown='2n + 6', check=lambda: FORMS_2N6[0] if all(W._eval_form(f, k) == 2 * k + 10 - 4 for f in FORMS_2N6 for k in range(-5, 20)) else None,
          hint='Start from 2n + 10 and take 4 away. Which part of it changes?',
          steps=['Start from 2n + 10.', 'Take away 4: 2n + 10 − 4 = 2n + 6.'],
          src=['Use n:']),
-    dict(id='7b2', tier='core', no='7(b) step 5', type='text', strand=AL, skill='explaining a trick with a letter', svg=trick_fig(),
+    dict(id='7b2', algebra=True, var='n', tier='core', no='7(b) step 5', type='text', strand=AL, skill='explaining a trick with a letter', svg=trick_fig(),
          q='Use n for the number you think of. After "add 5" you have n + 5, and after "double it" you have 2n + 10. What do you have after "halve it"? (Do "take away 4" first.)',
          accept=W.verified_forms(FORMS_N3, lambda n: n + 3), shown='n + 3', check=lambda: FORMS_N3[0] if all(W._eval_form(f, k) == (2 * k + 6) // 2 for f in FORMS_N3 for k in range(-5, 20)) else None,
          hint='Halving a sum means halving each part of it.',
@@ -272,11 +272,11 @@ ITEMS = [
 
     # ---- exit slip (printed on the Finish page)
     dict(id='X-a', tier='core', no='Exit slip (a)', type='number', strand=AL, skill='running a machine', answer=29,
-         q='Exit slip. A machine does × 4, then + 5. IN 6: what is OUT?', check=lambda: apply_ops(['× 4', '+ 5'], 6),
+         q='A machine does × 4, then + 5. IN 6: what is OUT?', check=lambda: apply_ops(['× 4', '+ 5'], 6),
          hint='Do the steps in order on 6: first the times, then the add.', steps=['6 × 4 = 24.', '24 + 5 = 29.', 'OUT is 29.'],
          src=['A machine does × 4, then + 5.']),
     dict(id='X-b', tier='core', no='Exit slip (b)', type='number', strand=AL, skill='running a machine backwards', answer=10,
-         q='Exit slip. A machine does × 4, then + 5. OUT 45: what was IN?', check=lambda: next(n for n in range(0, 1000) if apply_ops(['× 4', '+ 5'], n) == 45),
+         q='A machine does × 4, then + 5. OUT 45: what was IN?', check=lambda: next(n for n in range(0, 1000) if apply_ops(['× 4', '+ 5'], n) == 45),
          hint='Run the machine backwards. Undo the last step first.', steps=[f'Undo + 5: 45 {M} 5 = 40.', 'Undo × 4: 40 ÷ 4 = 10.', 'IN was 10. Check: 10 × 4 + 5 = 45.'],
          src=['OUT 45: what was IN?']),
 
@@ -360,6 +360,8 @@ for _it in ITEMS:
         _it['frame'] = W.nb(_it['frame'])
 
 # ---------------------------------------------------------------- variant families (every combination is run against an independent oracle at build time)
+P.finish(ITEMS)
+
 VARIANTS = {
     '1b': dict(base=dict(a=6, d=3),
                tpl=dict(vars=dict(a=[6, 7, 8, 9, 10, 11, 12], d=[2, 3, 4, 5]), derive=dict(b='a+d', c='a+2*d', e='a+3*d'),

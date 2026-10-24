@@ -117,6 +117,8 @@ def b3_area():
 
 SQ = 'cm²'
 
+assert pairs_for_area(4) == [(1, 8), (2, 4)]
+
 ITEMS = [
     # ================= Start here (workbook lesson 4: Q1 to Q5)
     D(id='1a', tier='core', no='1(a)', type='fields', skill='area of a triangle', answer=[48, 24],
@@ -187,13 +189,13 @@ ITEMS = [
       hint='Read the length and the width of the rectangle from the picture.',
       steps=['The rectangle is 12 cm long and 8 cm wide.', 'Area = 12 × 8 = 96 cm².'],
       src=['ABCD is a rectangle. Find the area of the shaded triangle DEF.', 'Area of the rectangle ABCD =']),
-    D(id='4b', tier='core', no='4(b)', type='fields', skill='taking away from a rectangle', answer=[16, 24],
+    D(id='4b', tier='core', no='4(b)', type='fields', skill='taking away from a rectangle', answer=[16, 16, 24],
       q='ABCD is a rectangle. The three white triangles are what is left over when the shaded triangle DEF is taken away. Each has a square corner, so each is half of a rectangle.\n'
-        'Example: ADE is half of 4 cm by 8 cm, so ADE = 16 cm².\nFind the areas of the other two white triangles.',
-      frame='EBF (cm²): {f1}     FCD (cm²): {f2}', svg=G.q4(),
-      check=lambda: [whole(shoelace([R4['E'], R4['B'], R4['F']])), whole(shoelace([R4['F'], R4['C'], R4['D']]))],
+        'Example: a white triangle that is half of a 3 cm by 10 cm rectangle has area 15 cm².\nFind the areas of the three white triangles. Type the number of cm² in each box.',
+      frame='ADE (cm²): {f1}     EBF (cm²): {f2}     FCD (cm²): {f3}', svg=G.q4(),
+      check=lambda: [whole(shoelace([R4['A'], R4['D'], R4['E']])), whole(shoelace([R4['E'], R4['B'], R4['F']])), whole(shoelace([R4['F'], R4['C'], R4['D']]))],
       hint='Find the two sides of each white triangle that meet at the square corner. Each triangle is half of the rectangle with those two sides.',
-      steps=['EBF has its square corner at B: EB = 8 cm and BF = 4 cm. It is half of 8 by 4: 32 ÷ 2 = 16 cm².', 'FCD has its square corner at C: FC = 4 cm and CD = 12 cm. It is half of 4 by 12: 48 ÷ 2 = 24 cm².'],
+      steps=['ADE has its square corner at A: AE = 4 cm and AD = 8 cm. It is half of 4 by 8: 32 ÷ 2 = 16 cm².', 'EBF has its square corner at B: EB = 8 cm and BF = 4 cm. It is half of 8 by 4: 32 ÷ 2 = 16 cm².', 'FCD has its square corner at C: FC = 4 cm and CD = 12 cm. It is half of 4 by 12: 48 ÷ 2 = 24 cm².'],
       src=['the three white triangles are what is left over. Each has a square corner, so each is half of a rectangle. Example: ADE is half of 4 cm by 8 cm, so ADE = 16 cm².', 'ADE = 16 cm² EBF = ______ cm² FCD = ______ cm²']),
     D(id='4c', tier='core', no='4(c)', type='number', skill='taking away from a rectangle', answer=40,
       q='ABCD is a rectangle. Find the area of the shaded triangle DEF.', svg=G.q4(), check=lambda: whole(shoelace([R4['D'], R4['E'], R4['F']])),
@@ -229,7 +231,7 @@ ITEMS = [
       src=['Easy first step: draw a right-angled triangle on squared paper with short sides 3 cm and 4 cm. What is its area?']),
     D(id='Ca', tier='invest', no='C(a)', type='set', ordered=True, grouped=False, skill='listing all the ways', answer=flat(pairs_for_area(6)),
       q='On square grid paper (1 square = 1 cm), a right-angled triangle has its two short sides along the grid lines, and they are whole numbers of cm. The area is exactly 6 cm². '
-        'Find ALL such triangles (a triangle turned round is the same triangle).\nType each triangle as its two short sides, the smaller number first, one triangle after another. Start with the triangle whose smaller short side is smallest.',
+        'Find ALL such triangles (a triangle turned round is the same triangle).\nType each triangle as its two short sides, the smaller number first, one triangle after another. Start with the triangle whose smaller short side is smallest, and keep the triangles in that order.\nExample (for an area of 4 cm², not 6): the triangles are 1 and 8, then 2 and 4, so you would type 1, 8, 2, 4.',
       check=lambda: flat(pairs_for_area(6)),
       hint='The triangle is half of a rectangle. What area must that rectangle have? Which whole numbers multiply to that?',
       steps=['Each triangle is half of a rectangle, so the rectangle has area 2 × 6 = 12 cm².', 'The two short sides are whole numbers that multiply to 12: 1 and 12, 2 and 6, 3 and 4.',
@@ -332,8 +334,8 @@ ITEMS = [
       hint='Find the height of triangle ABC from A down to BC. Triangle ABD has the same height.',
       steps=['BC = 4 + 8 = 12 cm. Area of ABC = 1/2 × 12 × height = 54, so 6 × height = 54 and the height from A is 9 cm.', 'Triangle ABD has base BD = 4 cm and the same height, 9 cm.', 'Area of ABD = 1/2 × 4 × 9 = 18 cm².'],
       src=['Triangle ABC has an area of 54 cm². D is a point on BC with BD = 4 cm and DC = 8 cm. What is the area of triangle ABD?']),
-    D(id='pose', tier='challenge', no='Make up your own', type='selfcheck', open=True, skill='making up a problem',
-      q='Make up your own. Draw a rectangle, label its sides, and join points to make a shaded triangle. Work out its area, then swap with a partner. (Think for 30 seconds before anyone speaks.)',
+    D(id='pose', tier='challenge', no='Make up your own', type='selfcheck', open=True, marking_mode='open', skill='making up a problem',
+      q='Draw a rectangle, label its sides, and join points to make a shaded triangle. Work out its area, then swap with a partner. (Think for 30 seconds before anyone speaks.)',
       hint='Pick the sides of the rectangle first. Put points on the sides at lengths you can work with, like the middle or a quarter of the way along.',
       steps=['This question is open: many puzzles are right.', 'Check your puzzle by finding the shaded area in TWO ways: split it into triangles, or take the white triangles away from the rectangle. The answers must agree.',
              'Sample: ABCD is a rectangle 10 cm by 6 cm, E is the middle of AB and F is the middle of BC. The shaded triangle is DEF (D is the bottom-left corner). Taking away: 60 − 15 − 7.5 − 15 = 22.5 cm².'],
@@ -358,6 +360,13 @@ def _b3_oracle(e):
     h = height_from_area(e['area'], 12)          # BC = BD + DC = 12 in every variant
     return whole(F(e['BD'] * h, 2))
 
+
+for _it in ITEMS:      # say what the box wants, so cm2, cm^2 or 'cm' are never needed
+    if _it['id'] in ('1b', '1c', '2a', '2b', '3c', '4a', '4c', '5a', 'C0', 'A2', 'A4', 'B2a', 'B2b', 'B3'):
+        _it['q'] += ' (Type the number of cm².)'
+    elif _it['id'] in ('A1', 'A3', 'B1'):
+        _it['q'] += ' (Type the number of cm.)'
+finish(ITEMS)
 
 VARIANTS = {
     '1b': dict(

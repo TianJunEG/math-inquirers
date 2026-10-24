@@ -336,3 +336,24 @@ def polish(items, variants=None):
             if k in tp:
                 tp[k] = nb(tp[k])
         tp['steps'] = [nb(x) for x in tp['steps']]
+
+
+# ---------------------------------------------------------------- end-of-lesson housekeeping (lesson-owned items only)
+def finish(items, sol_px=250):
+    """Every self-check item gets an explicit marking_mode ('open' only for a truly open prompt, 'self' for explanations and paper-only items),
+    and solution figures get their text sized for the narrower solution box (a 360 px phone shows them about sol_px wide)."""
+    import re as _re
+    for it in items:
+        if it.get('type') == 'selfcheck' and not it.get('marking_mode'):
+            it['marking_mode'] = 'self'
+        g = it.get('sol_fig')
+        if g:
+            def wrap(x, g=g):
+                s = g(x)
+                m = _re.search(r'viewBox="[-\d.]+ [-\d.]+ ([\d.]+) [\d.]+"', s)
+                if not m:
+                    return s
+                need = round(12.0 / min(1.0, sol_px / float(m.group(1))), 1)
+                return _re.sub(r'font-size="([\d.]+)"', lambda k: 'font-size="%g"' % max(float(k.group(1)), need), s)
+            it['sol_fig'] = wrap
+    return items

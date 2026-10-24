@@ -13,7 +13,7 @@ from p4lib import *      # noqa: E402,F401
 META = dict(level=4, lesson=4, key='p4', title='Fraction Frontier', workbook_title='FRACTION FRONTIER', topic='Fractions',
             strand='Fractions',
             sources=['p4/content/l4.js'],
-            intro=['Type a fraction with a slash, like 3/4, and a mixed number with a space, like 2 3/4. When a question only asks for a number, you may write it as an equal fraction or a mixed number if it is the same size.',
+            intro=['Type a fraction with a slash, like 3/4, and a mixed number with a space, like 2 3/4. On the number line question (2(a)), you may write the answer as an equal fraction or a mixed number if it is the same size. When a question asks for a whole number, type just that number. When it asks you to put fractions in order, type each fraction as a fraction.',
                    'Some questions ask you to explain, to make up your own puzzle, or to mark a number line. Do those in your head or on paper, then compare with the answer after you submit.'])
 S4 = 'Fractions'
 
@@ -72,12 +72,12 @@ ITEMS = [
       steps=['Each bar has 5 equal parts. The first two bars are shaded all the way: 5 + 5 = 10 fifths.', 'The third bar has 3 parts shaded.', '10 + 3 = 13 fifths are shaded.'],
       src=['Each bar is one whole. Draw more bars if you need them.', 'Fifths shaded:']),
     text_frac('1a-impr', 'core', '1(a) improper', 'improper fractions and mixed numbers', Fr(13, 5),
-              'Each bar is one whole. Write the shaded part as an improper fraction. (An improper fraction is 1 or more, like 7/4.)',
+              'Each bar is one whole. Write the shaded part as an improper fraction. (An improper fraction is 1 or more, like 5/3.)',
               'An improper fraction has the number of shaded parts on the top and the number of parts in one whole on the bottom.',
               ['The shaded part is 13 fifths, so the top number is 13.', 'The bottom number is 5, because each whole is cut into fifths.', 'The improper fraction is 13/5.'],
               ['1 or more, like', 'Improper fraction'], mode='improper', svg=whole_bars(15, 5, 13)),
     text_frac('1a-mixed', 'core', '1(a) mixed', 'improper fractions and mixed numbers', Fr(13, 5),
-              'Each bar is one whole. Write the shaded part as a mixed number. (A mixed number is a whole number and a fraction, like 1 3/4.)',
+              'Each bar is one whole. Write the shaded part as a mixed number. (A mixed number is a whole number and a fraction, like 1 2/3.)',
               'How many whole bars are shaded? How many fifths are shaded in the bar that is left?',
               ['Two bars are shaded all the way: 2 wholes.', 'The third bar has 3 of its 5 parts shaded: 3/5.', 'The mixed number is 2 3/5.'],
               ['a whole number and a fraction, like', 'Mixed number'], mode='mixed', svg=whole_bars(15, 5, 13)),
@@ -138,7 +138,7 @@ ITEMS = [
              'Is each fraction more or less than one half? Look at the bars.',
              ['Half of 9 is 4 1/2. 4 is less than 4 1/2, so 4/9 is less than a half.', 'Half of 8 is 4. 5 is more than 4, so 5/8 is more than a half.', 'So 4/9 < 5/8.'],
              ['In (c), write how you know.'], svg=compare_bars()),
-    D(id='4c-why', tier='core', no='4(c) how you know', type='selfcheck', open=True, skill='comparing fractions', svg=compare_bars(),
+    D(id='4c-why', tier='core', no='4(c) how you know', type='selfcheck', open=True, marking_mode='self', skill='comparing fractions', svg=compare_bars(),
       q='How do you know which of 4/9 and 5/8 is bigger? The bars are the same length. Write why.',
       hint='Try comparing each fraction with one half, or look at how much of each bar is shaded.',
       steps=['One reason: compare each fraction with one half. 4/9 is less than a half, because 4 is less than half of 9. 5/8 is more than a half, because 5 is more than half of 8.', 'So 5/8 is bigger. Any clear reason is good, for example by looking at the shaded bars, or by making the bottom numbers the same (72).'],
@@ -147,7 +147,7 @@ ITEMS = [
              'Both fractions have 3 pieces. Think about the size of one piece in each.',
              ['Both fractions have 3 pieces, so compare the size of the pieces.', 'A whole cut into 5 equal parts has bigger pieces than a whole cut into 7 equal parts. Fifths are bigger than sevenths.', 'So 3/5 > 3/7.'],
              ['Compare.']),
-    D(id='4e', tier='core', no='4(e)', type='text', skill='ordering fractions', accept=joined_forms(['7/12', '2/3', '5/6'], True), shown='7/12, 2/3, 5/6',
+    D(id='4e', tier='core', no='4(e)', type='text', skill='ordering fractions', accept=joined_forms(['7/12', '2/3', '5/6'], True) + joined_forms(['7/12', '8/12', '10/12'], True), shown='7/12, 2/3, 5/6', equiv_frac=True,
       check=lambda: fractions_in_order([(2, 3), (5, 6), (7, 12)]),
       q='Put in order, smallest first: 2/3, 5/6, 7/12. Type the three fractions with commas between them.',
       hint='Change them all into fractions with the same bottom number, then put the top numbers in order.',
@@ -208,7 +208,7 @@ ITEMS = [
       hint='Try dealing 24 stickers out into 5 equal groups. Are there any left over?',
       steps=['Share 24 into 5 groups: each group gets 4, and 4 stickers are left over.', 'So 24 does not share equally into 5 groups, and 1/5 of 24 is not a whole number of stickers.'],
       src=['What do you notice about']),
-    D(id='I3b', tier='invest', no='Investigation (a) notice', type='selfcheck', open=True, skill='fractions of a set',
+    D(id='I3b', tier='invest', no='Investigation (a) notice', type='selfcheck', open=True, marking_mode='self', skill='fractions of a set',
       q='What do you notice about 1/5, compared with 1/2, 1/3, 1/6 and 1/8?',
       hint='Think about what is left over when 24 is shared into the groups.',
       steps=['24 shares equally into 2, 3, 6 and 8 groups, but not into 5 groups (4 each, with 4 left over). So 1/5 of 24 is not a whole number: it is 4 4/5.', 'Any answer that says "24 cannot be shared equally into 5" is good.'],
@@ -239,7 +239,7 @@ ITEMS = [
       hint='The bar has 8 equal parts that share the 40 beads. How many parts are not blue?',
       steps=['8 parts = 40 beads, so 1 part = 40 ÷ 8 = 5 beads.', 'Blue is 3 parts, so the parts that are not blue are 8 − 3 = 5 parts.', '5 parts = 5 × 5 = 25 beads.'],
       src=['Siti has 40 beads.', 'of them are blue. How many beads are NOT blue?']),
-    D(id='T3', tier='stretch', no='Think harder 3', type='text', skill='ordering fractions', accept=joined_forms(['1/2', '7/12', '2/3', '5/6'], True), shown='1/2, 7/12, 2/3, 5/6',
+    D(id='T3', tier='stretch', no='Think harder 3', type='text', skill='ordering fractions', accept=joined_forms(['1/2', '7/12', '2/3', '5/6'], True) + joined_forms(['6/12', '7/12', '8/12', '10/12'], True), shown='1/2, 7/12, 2/3, 5/6', equiv_frac=True,
       check=lambda: fractions_in_order([(2, 3), (1, 2), (5, 6), (7, 12)]),
       q='Put these fractions in order, smallest first: 2/3, 1/2, 5/6, 7/12. Type the four fractions with commas between them.',
       hint='Change them all into fractions with the same bottom number, then compare the tops.',
@@ -254,19 +254,19 @@ ITEMS = [
       src=['Who am I? I am an improper fraction. My denominator is 6. I am between 2 and 3.']),
 
     # ================= Go further (qbank.challenge[-3:], printed Q5 to Q7)
-    D(id='G5a', tier='challenge', no='Go further 5(a)', type='number', skill='fractions of a whole taken away', answer=30, svg=jar_halves_thirds(),
+    D(id='G5a', tier='challenge', no='Go further 5(a)', type='number', skill='fractions of a whole taken away', answer=30, svg=jar_halves_thirds(5),
       check=lambda: [n for n in range(1, 500) if n % 6 == 0 and n - n // 2 - n // 3 == 5][0],
       q='Mei takes 1/2 of the sweets in a jar. Ali takes 1/3 of the sweets. There are 5 sweets left. How many sweets were in the jar at first?',
       hint='What fraction of the jar did Mei and Ali take altogether? What fraction is left?',
       steps=['Mei and Ali took 1/2 + 1/3 = 3/6 + 2/6 = 5/6 of the sweets.', 'So 1/6 of the sweets are left, and 1/6 = 5 sweets.', 'The whole jar is 6/6: 6 × 5 = 30 sweets.'],
       src=['Mei takes', 'of the sweets in a jar. Ali takes', 'of the sweets. There are 5 sweets left.']),
-    D(id='G5b', tier='challenge', no='Go further 5(b)', type='number', skill='fractions of a whole taken away', answer=42, svg=jar_halves_thirds(),
+    D(id='G5b', tier='challenge', no='Go further 5(b)', type='number', skill='fractions of a whole taken away', answer=42, svg=jar_halves_thirds(7),
       check=lambda: [n for n in range(1, 500) if n % 6 == 0 and n - n // 2 - n // 3 == 7][0],
       q='What if 7 sweets were left? Mei still takes 1/2 of the sweets in the jar and Ali still takes 1/3. How many sweets were in the jar at first?',
       hint='Which fraction of the jar is left? How many sweets is that fraction now?',
       steps=['As before, 1/6 of the jar is left, but now 1/6 = 7 sweets.', 'The whole jar is 6 × 7 = 42 sweets.', 'The jar always holds 6 times the number of sweets left.'],
       src=['(b) What if 7 sweets were left?']),
-    D(id='G5c', tier='challenge', no='Go further 5(c)', type='selfcheck', open=True, skill='making up a fraction puzzle',
+    D(id='G5c', tier='challenge', no='Go further 5(c)', type='selfcheck', open=True, marking_mode='open', skill='making up a fraction puzzle',
       q='Make up your own puzzle with two other fractions taken from a jar and a number of sweets left, and solve it.',
       hint='Pick two fractions that add to less than 1, then pick the number left.',
       steps=['Puzzles will vary. Check that the two fractions you take add to less than 1, and find the fraction that is left first.', 'Then use a bar model: the number left is that fraction of the jar.',
@@ -285,6 +285,8 @@ ITEMS = [
       steps=['Cut each fifth in half to make tenths. Monday is 2/5 = 4/10, so 6/10 of the book is left.', 'Tuesday reads half of that, 3/10. So 3/10 of the book is still to read.', '3/10 = 45 pages, so 1/10 = 15 pages.', 'The whole book is 10/10: 10 × 15 = 150 pages.'],
       src=['Siti read', 'of her book on Monday. On Tuesday she read half of the pages that were left. She still has 45 pages to read. How many pages are in the book?']),
 ]
+
+finish(ITEMS)
 
 VARIANTS = {
     '3a': dict(

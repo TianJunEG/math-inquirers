@@ -225,7 +225,7 @@ ITEMS = [
     D(id='7a', tier='core', no='7(a)', type='fields', skill='number chains', frame='{f1},  {f2},  13,  21,  {f3}', answer=[5, 8, 34],
       check=lambda: [(lambda s: [s[0], s[1], s[4]])(chain_terms(a, b, 5)) for a in range(0, 40) for b in range(0, 40) if chain_terms(a, b, 5)[2:4] == [13, 21]][0],
       q='★ Choice question. Number chains. After the first two numbers, each number is the sum of the two numbers before it. Example: 2, 5, 7, 12, 19. Chain (a): work backwards from 13 and 21 to fill in the missing numbers.',
-      hint='Work backwards. The 4th number is the 2nd and 3rd numbers added. What added to 13 makes 21?',
+      hint='Work backwards. The 4th number is the 2nd and 3rd numbers added. Which step takes you from 13 to 21?',
       steps=['The 4th number, 21, is the 2nd + the 3rd, so the 2nd number is 21 − 13 = 8.', 'The 3rd number, 13, is the 1st + the 2nd, so the 1st number is 13 − 8 = 5.', 'The 5th number is 13 + 21 = 34.', 'The chain is 5, 8, 13, 21, 34.'],
       src=['Number chains. After the first two numbers, each number is the sum of the two numbers before it. Example: 2, 5, 7, 12, 19. Fill in the missing numbers.', 'Chain (a): work backwards from 13 and 21.']),
     D(id='7b', tier='core', no='7(b)', type='fields', skill='number chains', frame='4,  {f1},  {f2},  18,  {f3}', answer=[7, 11, 29],
@@ -249,7 +249,7 @@ ITEMS = [
                 ['With 2, 3, 4 and 5 (each once) can you make 6? 8? 10?'], ops='+-', model='5 + 4 + 2 − 3'),
     target_item('I3', 'invest', 'Investigation (easy step) 10', 10,
                 'Using 2, 3, 4 and 5 once each, with only + and −, make 10. Type your number sentence.',
-                'All four numbers add to 14. How much do you need to take off, and which number is that?',
+                'Add all four numbers first. Is the total too big or too small for 10? What happens when you take a number away instead of adding it?',
                 ['The four numbers add up to 14. Taking away a number instead of adding it takes off twice that number, so we need to take off 4 in all: the number 2 is taken away.', '3 + 4 + 5 − 2 = 10 (3 + 4 = 7, 7 + 5 = 12, 12 − 2 = 10).', 'Any sentence that uses 2, 3, 4 and 5 once each, with only + and −, and works out to 10 is right.'],
                 ['With 2, 3, 4 and 5 (each once) can you make 6? 8? 10?'], ops='+-', model='3 + 4 + 5 − 2'),
     target_item('I4', 'invest', 'Investigation (a) 1', 1,
@@ -279,13 +279,13 @@ ITEMS = [
       steps=['Every target from 1 to 12 can be made, so the answer is No. (A computer search tried every sentence, and it found a way for every target from 1 to 20.)',
              'Checked examples: ' + '; '.join(f'{t} = {min(sentences_for(NUMS, t), key=lambda s: (len(s), s))}' for t in (2, 3, 5, 11)) + '.'],
       src=['Is there a target from 1 to 12 that you think cannot be made? Say why.']),
-    D(id='I9', tier='invest', no='Investigation (b) hardest', type='selfcheck', open=True, skill='testing a claim about targets',
+    D(id='I9', tier='invest', no='Investigation (b) hardest', type='selfcheck', open=True, marking_mode='open', skill='testing a claim about targets',
       q='Which target from 1 to 12 was the hardest for you to make? Why do you think it was hard?',
       hint='Think about which target took you the most tries.',
       steps=[f'Answers will vary. A computer counted the number sentences for each target: the targets {HARDEST[0]}, {HARDEST[1]} and {HARDEST[2]} have the fewest sentences, so they are usually the hardest to find. '
              f'The target {EASIEST} has the most.', 'A good answer says what you tried first and what you changed.'],
       src=['Which target was hardest?']),
-    D(id='I10', tier='invest', no='Investigation (c)', type='selfcheck', open=True, skill='checking a classmate\'s number sentence',
+    D(id='I10', tier='invest', no='Investigation (c)', type='selfcheck', open=True, marking_mode='open', skill='checking a classmate\'s number sentence',
       q='Swap: choose a target from 1 to 20 for a partner or a grown-up. Ask them for a number sentence that uses 2, 3, 4 and 5 once each. Check it by working it out in the right order. Write the target and the sentence here.',
       hint='Work the sentence out step by step: brackets first, then × and ÷, then + and −.',
       steps=['Work out the sentence step by step: brackets first, then × and ÷ from left to right, then + and − from left to right.', 'Every target from 1 to 20 can be made with 2, 3, 4 and 5 once each (a computer search found one for each). For example ' +
@@ -309,8 +309,8 @@ ITEMS = [
               'Guess and check. Work each guess out in the right order (× and ÷ before + and −), and change one sign at a time.',
               ['Try ÷ in the first gap: 12 ÷ 4 = 3.', 'Then 3 × 5 = 15. It works: 12 ÷ 4 × 5 = 15.', 'No other pair of signs works (every pair was tested).'],
               ['Write +, −, × or ÷ in each gap to make this true:', '12 __ 4 __ 5 = 15'], '+ +') | dict(tier='stretch'),
-    D(id='T4', tier='stretch', no='Think harder 4', type='selfcheck', open=True, skill='explaining a number trick',
-      q='Think of a number. Multiply it by 5. Add 35. Divide by 5. Take away the number you started with. The answer is always the same. Explain why it always works. A bar model can help.',
+    D(id='T4', tier='stretch', no='Think harder 4', type='selfcheck', open=True, marking_mode='self', skill='explaining a number trick',
+      q='Think of a number. Multiply it by 5. Add 35. Divide by 5. Take away the number you started with. Try it with two or three different numbers. What do you notice about the last number? Explain why it happens. A bar model can help.',
       hint='Show your number as a bar and follow each step of the trick on the bar. What is left at the end?',
       steps=['Multiplying by 5 and then dividing by 5 gets back your number.', 'The 35 is divided by 5 as well, so it adds 35 ÷ 5 = 7.', 'Taking away your number then leaves the 7. So the answer is always 7, whatever number you start with.', 'A bar model: draw your number as a bar. × 5 makes 5 bars, + 35 adds a piece, ÷ 5 shares it into 5 equal parts: one bar and a piece of 7.'],
       src=['Think of a number. Multiply it by 5. Add 35. Divide by 5. Take away the number you started with.']),
@@ -333,18 +333,20 @@ ITEMS = [
       src=['Mei spent half of her money on a book. Then she spent $6 on lunch. Then she spent half of what was left on a gift. She had $9 left. How much money did she have at first?']),
     D(id='G7a', tier='challenge', no='Go further 7(a)', type='number', skill='explaining a number trick', answer=50,
       check=lambda: [x for x in range(0, 300) if all(Fr(5 * n + x, 5) - n == 10 for n in range(1, 60))][0],
-      q='The number trick: think of a number, multiply by 5, add 35, divide by 5, take away your number. It always ends with the same number. '
+      q='The number trick: think of a number, multiply by 5, add 35, divide by 5, take away your number. '
         'What must you change so that it always ends with 10? Change the "add 35" step to "add ____". Type the number.',
       hint='Try the trick with a number of your own. What does the added number turn into at the end?',
       steps=['× 5 and then ÷ 5 get back your own number, so only the added number matters at the end.', 'The added number is divided by 5. With 35 you are left with 35 ÷ 5 = 7.', 'To be left with 10 you need a number that divides by 5 to make 10: 5 × 10 = 50. Change the + 35 to + 50.', 'Check with 4: 4 × 5 = 20, 20 + 50 = 70, 70 ÷ 5 = 14, 14 − 4 = 10.'],
       src=['The number trick: think of a number, multiply by 5, add 35, divide by 5, take away your number.', '(a) What must you change so that it always ends with 10?']),
-    D(id='G7b', tier='challenge', no='Go further 7(b)', type='selfcheck', open=True, skill='making up a number trick',
+    D(id='G7b', tier='challenge', no='Go further 7(b)', type='selfcheck', open=True, marking_mode='open', skill='making up a number trick',
       q='Make up your own number trick with four steps that always ends with 3. Test it with two numbers and explain why it works.',
       hint='Use the same plan as the trick above: a × and a ÷ that cancel, an added number, and taking away your number at the end.',
       steps=['Tricks will vary. Test yours with two numbers, then explain why the end number is always the same.', 'Model trick: × 4, + 12, ÷ 4, − your number. Start with 5: 20, 32, 8, 3. Start with 9: 36, 48, 12, 3.',
              'Why it works: × 4 and then ÷ 4 get your number back. The 12 is divided by 4 too, so it adds 3. Taking away your number leaves the 3.'],
       src=['(b) Make up your own number trick with four steps that always ends with 3. Test it with two numbers and explain why it works.']),
 ]
+
+finish(ITEMS)
 
 VARIANTS = {
     '1a': dict(
