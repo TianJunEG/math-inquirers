@@ -401,3 +401,6 @@ Owner: "extension book serve as a funnel for parents to sign up their kids for t
 
 ## 2026-10-24 — FREE PREVIEW CLASS (owner idea, design requested)
 Owner: free preview class, about 1 hour, open to everyone; lecture style, no workbooks, interaction via chat and slides; may use the teasers to create the lesson; the preview funnels students into the paid class; weekly preview classes with SIMILAR content each time (so people do not attend every week); open to NEW registrations only: anyone who attended in the past 6 months cannot attend again. Asked: "Can we do something like that?" Answer: yes; design requested (eligibility rule, registration, content, safeguarding, consent, funnel to enrolment).
+
+## 2026-10-24 — TEASER-STRICT
+Owner: "TEASER-STRICT". Daily teasers: a maths structure/sub-structure may repeat in a level at most once a quarter and only with a different structure (new story AND new frame); enforced by verify_bank.py.
