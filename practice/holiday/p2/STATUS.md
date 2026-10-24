@@ -166,3 +166,6 @@ No card gives another card's answer in its stem, hint or example (the Think hard
 2. L6 Q1 "the notes and coins I use" is a typed self-check, not auto-marked (many writings, and a child may list them in any order). Should it become a choice among a few written-out sets, so that it counts as auto-marked, or stay self-check?
 3. L5 Q5(d) says "the same OUT as Mei", which tells a child that Ali's machine usually needs a different IN than Mei's; it is the printed wording and Q5(c) (always the same?) is a separate card. Reword in the print, or accept?
 4. L5 and L6 qbank items not printed in the workbook (Think harder 5 to 9 and Go further 1 to 6 of the bank) are not online, as in weeks 1 and 2.
+
+## Week 3 L1-3 audit follow-up (item level)
+M1 answer leaks reworded, M2 explicit short nav labels, remainder-0 variants excluded (P3 L5 3(b)), long stems shortened, doubled "Make up your own"/"Take-home" lead-ins removed. Print-inherent chains kept as printed (P1 L5 Go further 1(a)/(b), 3(c); P1 L6 Q4/Q5, T3/Q6; P3 L6 5(b), T3). P1 L6 Q5/Q6 keep cents only (printed answers are in cents).

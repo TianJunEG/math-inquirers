@@ -139,3 +139,6 @@ No card shows another card's answer in a stem, hint or figure (checked by readin
 2. G7 (a fraction between 2/3 and 3/4) accepts any fraction with a bottom number up to 60. Enough, or should the tutor mark it by hand?
 3. 3(b) is five cards (all shapes) rather than the printed "the other shapes" to avoid giving the answer of 3(a). Keep?
 4. Same as weeks 1 and 2: should the Investigation and Extra pairs be visible by default or behind "Want more?"
+
+## Week 3 L1-3 audit follow-up (item level)
+M1 answer leaks reworded, M2 explicit short nav labels, remainder-0 variants excluded (P3 L5 3(b)), long stems shortened, doubled "Make up your own"/"Take-home" lead-ins removed. Print-inherent chains kept as printed (P1 L5 Go further 1(a)/(b), 3(c); P1 L6 Q4/Q5, T3/Q6; P3 L6 5(b), T3). P1 L6 Q5/Q6 keep cents only (printed answers are in cents).

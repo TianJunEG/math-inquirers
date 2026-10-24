@@ -114,3 +114,6 @@ L5 3(c) "6 more" is the 6 of "6 fewer"; L5 1(a) prints 12 which is the answer of
 ## Open questions
 1. Typed ways of paying (L6 Q1, Q2, T4, 3(b)) are self-check; an auto-marked version would need a "list of sets" answer type.
 2. L5 3(c) and the L6 Q4/Q5 chains above: say if you want the stems changed from the print.
+
+## Week 3 L1-3 audit follow-up (item level)
+M1 answer leaks reworded, M2 explicit short nav labels, remainder-0 variants excluded (P3 L5 3(b)), long stems shortened, doubled "Make up your own"/"Take-home" lead-ins removed. Print-inherent chains kept as printed (P1 L5 Go further 1(a)/(b), 3(c); P1 L6 Q4/Q5, T3/Q6; P3 L6 5(b), T3). P1 L6 Q5/Q6 keep cents only (printed answers are in cents).
