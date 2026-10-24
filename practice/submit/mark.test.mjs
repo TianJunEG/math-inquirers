@@ -174,3 +174,11 @@ for (const v of ['1 out of 5', '4 out of 1', '1 out of 4 of', '1 out of 0', '3 o
 t('out of needs equiv_frac', { marking_mode: 'auto', type: 'text', key: ['1/4'] }, '1 out of 4', 'wrong');
 t('out of fraction type', { marking_mode: 'auto', type: 'fraction', key: '1/4' }, '1 out of 4', 'right'); t('out of fraction type wrong', { marking_mode: 'auto', type: 'fraction', key: '1/4' }, '2 out of 8', 'wrong');
 assert.deepEqual(bad, [], bad.join('\n')); console.log('mark.test.mjs: ' + n + ' checks passed');
+// percent sign as an optional unit
+for (const v of ['60%', '60 %', '60 percent', '60 per cent', '60.0%']) t('percent form ' + v, N(60), v, 'right');
+for (const v of ['6 0%', '61%', '0.6', '600%', '60%%']) t('percent wrong ' + v, N(60), v, 'wrong');
+t('percent unit:false refuses', N(60, { unit: false }), '60%', 'wrong');
+// a single-word left-hand label before '=' in a rule
+{ const R = rule('(n-2)x180');
+  for (const v of ['total = (n - 2) x 180', 'S = (n-2)x180', 'T=180n-360', 'sum = (n-2)×180', 'rule: (n-2)x180', 'total = (n-2)x180 = 180n-360', 'OUT = (n-2)x180']) t('poly label ' + v, R, v, 'right');
+  for (const v of ['total = n - 2 x 180', 'x = 3', 'n = 5', 'n = (n-2)x180', 'total = total', 'two words = (n-2)x180']) t('poly label wrong ' + v, R, v, 'wrong'); }

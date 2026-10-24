@@ -62,7 +62,7 @@
   }
   // Units after the number: a word ('301 sticks', '20 minutes', 'sq cm'), a word with an attached power ('84 cm2', '84cm^2', '84 cm²'), a rate ('km/h') a degree sign ('-25 °C', '11°C', '44°') or a cent sign / cent word ('35¢', '35 cents') or a litre sign ('27 ℓ', '27 l', '27 litres'), then at most two more plain words in all (a unit and a short tail: '27 ℓ of water', '27 liters of water', '35 cents change', '35 cents left'; longer tails are refused; for cents a bare lowercase 'c' is refused as ambiguous; '$0.35' is never turned into cents).
   // A single pair of brackets round the whole answer is ignored ('(-25)'). Two numbers ('4 or 5', '1 2') are never a unit.
-  var UW = '[a-z][a-z.]*(?:\\^?[23]|\\s?[²³])?', UNITRE = new RegExp('^(-?\\d[\\d, ]*?(?:\\.0+)?)\\s*(?:[°º]\\s*[a-z]?|[¢ℓ](?:\\s+[a-z]+){0,2}|' + UW + '(?:\\s+' + UW + '){0,2}(?:\\/[a-z]+)?)$', 'i');
+  var UW = '[a-z][a-z.]*(?:\\^?[23]|\\s?[²³])?', UNITRE = new RegExp('^(-?\\d[\\d, ]*?(?:\\.0+)?)\\s*(?:[°º]\\s*[a-z]?|%|[¢ℓ](?:\\s+[a-z]+){0,2}|' + UW + '(?:\\s+' + UW + '){0,2}(?:\\/[a-z]+)?)$', 'i');
   function toNum(s, opt) {
     s = minus(s).trim();
     var pb = /^\(\s*([^()]*?)\s*\)\s*(.*)$/.exec(s); if (pb) s = pb[2] ? pb[1] + ' ' + pb[2] : pb[1];   // '(-25)' and '(-25) °C'
@@ -178,11 +178,16 @@
     return out.every(isFinite) ? out : null;
   }
   function polyEq(a, b) { return a.length === b.length && a.every(function (c, i) { return Math.abs(c - b[i]) < 1e-9 * (1 + Math.abs(c)); }); }
-  function ruleSides(s) { return minus(str(s)).trim().replace(/[.!]+$/, '').split('=').map(function (x) { return x.trim(); }).filter(function (x) { return !/^out$/i.test(x); }); }
+  // A leading label ('total =', 'S =', 'rule:') is ignored only when it is one word or one letter that is not the variable and does not appear in the rest of the rule.
+  function ruleSides(s, vr) {
+    var a = minus(str(s)).trim().replace(/[.!]+$/, '').replace(/^rule\s*:\s*/i, '').split('=').map(function (x) { return x.trim(); });
+    if (a.length > 1 && /^[a-z]+$/i.test(a[0]) && !/^out$/i.test(a[0]) && a[0].toLowerCase() !== vr && !new RegExp('(^|[^a-z])' + a[0] + '($|[^a-z])', 'i').test(a.slice(1).join('='))) a.shift();
+    return a.filter(function (x) { return !/^out$/i.test(x); });
+  }
   function polyOK(keys, v, vr) {
     vr = typeof vr === 'string' && vr.length === 1 && vr !== 'x' ? vr.toLowerCase() : 'n';
-    var kp = [], sides = ruleSides(v);
-    keys.forEach(function (k) { ruleSides(k).forEach(function (sd) { var q = polyParse(sd, vr); if (q) kp.push(q); }); });
+    var kp = [], sides = ruleSides(v, vr);
+    keys.forEach(function (k) { ruleSides(k, vr).forEach(function (sd) { var q = polyParse(sd, vr); if (q) kp.push(q); }); });
     return sides.length > 0 && kp.length > 0 && sides.every(function (sd) { var q = polyParse(sd, vr); return !!q && kp.some(function (k) { return polyEq(q, k); }); });
   }
   // One text answer: the printed forms (textOK), plus, only when the item says so, equal fractions (equiv_frac) or an equal polynomial (poly).
