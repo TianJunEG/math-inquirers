@@ -214,7 +214,7 @@ def build(key, n):
     page = open(os.path.join(ROOT, 'term', 'l1', 'runner', 'index.html'), encoding='utf-8').read()
     css = B.SHEET_CSS + ('details.learn{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:.6rem 1rem;margin:0 0 1rem}'
                          'details.learn summary{font-weight:800;cursor:pointer;min-height:44px;display:flex;align-items:center}details.learn p{margin:.3rem 0}'
-                         '.card svg,.fb svg{max-width:100%;height:auto}.fig{background:#fff;border-radius:12px;padding:4px}@media(max-width:480px){.card{padding:1rem .75rem 1.2rem}}')
+                         '.card .q{white-space:pre-line}.card svg,.fb svg{max-width:100%;height:auto}.fig{background:#fff;border-radius:12px;padding:4px}@media(max-width:480px){.card{padding:1rem .75rem 1.2rem}}')
     head = page[:page.index('</style>')] + css + '</style></head>'
     head = head.replace('<title>Practice | Math Inquirers</title>', f'<title>Practice: {B.html.escape(meta["title"])} | Math Inquirers</title>')
     e = B.html.escape

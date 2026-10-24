@@ -2,9 +2,9 @@
 
 Everything in l40.json that can be computed is recomputed here from first principles, without the lesson's own sums:
   * every puzzle is solved by SEARCH (every whole number or every pair tried, the number of answers counted): the Explore puzzles (A has no question, B has many answers, C has exactly one),
-    Mi's puzzle in the Mini-lesson (listing every pair that makes 9: exactly one pair is 3 apart), the friend's puzzle (the first clue fits, the second does not, exactly one pair fits both),
+    Mi's puzzle in the Mini-lesson (listing every pair that makes 12: exactly one pair has the big page twice the small page), the friend's puzzle (the first clue fits, the second does not, exactly one pair fits both),
     G1, G2, G3's model, the home items and the exit ticket;
-  * the table of pairs in G1 is rebuilt pair by pair, with the difference of each pair;
+  * the table of pairs in G1 is rebuilt pair by pair, with twice the red number for each pair;
   * the Quest gates are recomputed from their pictures: parts of a circle, squares in a rectangle by rows, steps and routes on a dot grid (every order of the moves tried), cubes in a stack, layers of a
     folded paper, the odd tile out (the tile whose features differ from the others), lines in a network (each pair once), equal groups, the picture graph in the key of 2, the growing tower
     and the cave (cents saved day by day);
@@ -71,8 +71,8 @@ def _c1(e):
 
 
 def _c2(e):
-    t = 2 * e['s'] + e['d']
-    return [x for x, y in pairs_that_make(t) if y - x == e['d']][0]
+    t = 3 * e['s']
+    return [x for x, y in pairs_that_make(t) if y == x + x][0]
 
 
 def _c5(e):
@@ -107,11 +107,11 @@ def _r2(e):
 
 
 ORACLES = {'c1': _c1, 'c2': _c2, 'c5': _c5, 't1': _t1, 't3': _t3, 'g1': _g1, 'g2': _g2, 'r1': _r1, 'r2': _r2}
-BASE_ENV = {'c1': dict(a=4, b=11), 'c2': dict(s=5, d=6), 'c5': dict(r=9, a=5), 't1': dict(a=5, b=11), 't3': dict(a=8, b=6), 'g1': dict(m=5), 'g2': dict(b=40), 'r1': dict(a=5), 'r2': dict(w=2)}
+BASE_ENV = {'c1': dict(a=4, b=11), 'c2': dict(s=7), 'c5': dict(r=9, a=5), 't1': dict(a=5, b=11), 't3': dict(a=8, b=6), 'g1': dict(m=5), 'g2': dict(b=40), 'r1': dict(a=5), 'r2': dict(w=2)}
 
 # ---------------------------------------------------------------- the registry of class numbers (entries with 3 or more numbers are compared)
 CLASS_ITEMS = {'rem1': [3, 6, 9, 12], 'rem2': [8, 6], 'rem3': [7, 5, 4], 'rem3-turn': [9, 3, 6], 'sneak1': [6, 4], 'sneak2': [3, 8],
-               'explore-A': [8, 5], 'explore-B': [1, 20], 'explore-C': [7, 2], 'mini-m1': [3, 4, 12], 'mini-m2': [9, 3], 'mini-m3': [8, 2, 6, 2], 'opt': [12, 5, 7]}
+               'explore-A': [8, 5], 'explore-B': [1, 20], 'explore-C': [7, 2], 'mini-m1': [3, 4, 12], 'mini-m2': [12, 4, 8], 'mini-m3': [18, 8, 10, 6, 12], 'opt': [12, 5, 7]}
 
 
 def run(d):
@@ -151,11 +151,11 @@ def run(d):
     f = F('s-m1', 0); eq((f['rows'], f['cols'], f['kind']), (3, 4, 'squares'), 'm1 rows of squares'); total = 0
     for _ in range(f['rows']): total += f['cols']
     eq(total, 12, 'm1 3 rows of 4 squares'); eq(seq(4, 4, 3), [4, 8, 12], 'm1 count on by rows'); eq(4 + 4 + 4, 12, 'm1 check')
-    ps = pairs_that_make(9); eq(ps, [(0, 9), (1, 8), (2, 7), (3, 6), (4, 5)], 'm2 every pair that makes 9'); eq([(a, b) for a, b in ps if b - a == 3], [(3, 6)], 'm2 exactly one pair is 3 apart')
-    tb = F('s-m2-ans')['rows']; eq([(int(r[0]), int(r[1])) for r in tb], ps, 'm2 table pairs'); eq([int(r[2]) for r in tb], [b - a for a, b in ps], 'm2 table differences'); eq([r for r in tb if int(r[2]) == 3], [['3', '6', '3']], 'm2 only 3 and 6')
-    eq(nums(' '.join(sl['s-m2']['blocks'][0]['items'])), [9, 3], 'm2 text')
-    puz = nums(' '.join(sl['s-m3']['blocks'][0]['items'])); eq(puz, [8, 2, 6, 2], 'm3 text'); eq(6 + 2 == 8, True, 'm3 the first clue fits'); eq(6 - 2 == 2, False, 'm3 the second clue does not fit'); eq(6 - 2, 4, 'm3 6 is 4 more than 2')
-    eq([(a, b) for a, b in pairs_that_make(8) if b - a == 2], [(3, 5)], 'm3 exactly one pair fits both clues: 3 and 5'); eq('5 and 3' in sl['s-m3-ans']['blocks'][0]['text'], True, 'm3-ans names 5 and 3')
+    ps = pairs_that_make(12); eq(ps, [(0, 12), (1, 11), (2, 10), (3, 9), (4, 8), (5, 7), (6, 6)], 'm2 every pair that makes 12'); eq([(a, b) for a, b in ps if b == a + a], [(4, 8)], 'm2 exactly one pair has the big page twice the small page')
+    tb = F('s-m2-ans')['rows']; eq([(int(r[0]), int(r[1])) for r in tb], ps, 'm2 table pairs'); eq([int(r[2]) for r in tb], [a + a for a, b in ps], 'm2 table twice the small page'); eq([r for r in tb if r[1] == r[2]], [['4', '8', '8']], 'm2 only 4 and 8')
+    eq(nums(' '.join(sl['s-m2']['blocks'][0]['items'])), [12], 'm2 text')
+    puz = nums(' '.join(sl['s-m3']['blocks'][0]['items'])); eq(puz, [18, 8, 10], 'm3 text'); eq(8 + 10 == 18, True, 'm3 the first clue fits'); eq(8 + 8 == 10, False, 'm3 the second clue does not fit'); eq(8 + 8, 16, 'm3 twice 8 is 16')
+    eq([(a, b) for a, b in pairs_that_make(18) if b == a + a], [(6, 12)], 'm3 exactly one pair fits both clues: 6 and 12'); eq('6 and 12' in sl['s-m3-ans']['blocks'][0]['text'], True, 'm3-ans names 6 and 12')
     eq(len(sl['s-m4']['blocks'][0]['items']), 4, 'm4 four checks')
     eq([x for x in range(0, 30) if x == 5 + 7], [12], 'opt puzzle: 5 more than 7 has exactly one answer 12')
     # ---------------------------------------------------------------- Start here
@@ -176,11 +176,11 @@ def run(d):
     q = T['T3']; A = [x for x in range(0, 40) if 10 < x < 15]; B = [x for x in range(0, 40) if x - 9 == 4]; eq(A, [11, 12, 13, 14], 'T3 puzzle A has 4 answers'); eq(B, [13], 'T3 puzzle B has exactly one answer'); eq('?' in q['text'], False, 'T3 puzzle C has no question')
     eq(q['val'], ['B', len(A)], 'T3 val'); eq(nums(q['text']), [10, 15, 4, 9, 3, 4], 'T3 text')
     # ---------------------------------------------------------------- Go further
-    q = T['G1']; f = vis(q); ps = pairs_that_make(12); rows = f['rows']; eq([(int(r[0]), int(r[1])) for r in rows], ps, 'G1 table pairs'); eq(rows[0][2], '12', 'G1 first difference given'); eq(f['head'], ['Red', 'Blue', 'Difference'], 'G1 head'); eq(f['head'], ['Red', 'Blue', 'Difference'], 'G1 head'); eq(all(r[2] == '[]' for r in rows[1:]), True, 'G1 the other differences are blanks')
-    eq([b - a for a, b in ps], [12, 10, 8, 6, 4, 2, 0], 'G1 differences'); sol = [(a, b) for a, b in ps if b - a == 4]; eq(sol, [(4, 8)], 'G1 exactly one pair is 4 apart'); eq(q['val'], [4, 8, 1], 'G1 val'); eq(len(sol), 1, 'G1 one pair'); eq(nums(q['text']), [12, 4, 12], 'G1 text')
+    q = T['G1']; f = vis(q); ps = pairs_that_make(15); rows = f['rows']; eq([(int(r[0]), int(r[1])) for r in rows], ps, 'G1 table pairs'); eq(rows[0][2], '0', 'G1 first twice-the-red given'); eq(f['head'], ['Red', 'Blue', 'Twice the red'], 'G1 head'); eq(all(r[2] == '[]' for r in rows[1:]), True, 'G1 the other cells are blanks')
+    eq([a + a for a, b in ps], [0, 2, 4, 6, 8, 10, 12, 14], 'G1 twice the red'); sol = [(a, b) for a, b in ps if b == a + a]; eq(sol, [(5, 10)], 'G1 exactly one pair has blue twice red'); eq(q['val'], [5, 10, 1], 'G1 val'); eq(len(sol), 1, 'G1 one pair'); eq(nums(q['text']), [15, 15], 'G1 text')
     eq(d['beyond']['name'], 'Puzzle With a Proof', 'G1 named puzzle'); eq(set(d['beyond']['where']) == {'G1', 'G3'}, True, 'beyond items')
     q = T['G2']; claimed = [4, 7, 10, 13]; jumps = {b - a for a, b in zip(claimed, claimed[1:])}; eq(jumps, {3}, 'G2 every jump is 3'); eq(4 in jumps, False, 'G2 the second clue does not fit'); right = [4 + 4 * k for k in range(4)]; eq(right, [4, 8, 12, 16], 'G2 the pattern that goes up by 4'); eq(q['val'], ['No', 3, 8, 12], 'G2 val'); eq(nums(q['text']), [4, 4, 4, 7, 10, 13], 'G2 text')
-    q = T['G3']; eq(q['val'], ['open'], 'G3 open'); eq([(a, b) for a, b in pairs_that_make(8) if b - a == 2], [(3, 5)], 'G3 model puzzle: 8 and 2 apart is 3 and 5'); eq(len(pairs_that_make(8)), 5, 'G3 model lists 5 pairs'); eq(q['lines'] >= 3, True, 'G3 has lines')
+    q = T['G3']; eq(q['val'], ['open'], 'G3 open'); eq([(a, b) for a, b in pairs_that_make(6) if b == a + a], [(2, 4)], 'G3 model puzzle: 6 cakes, big plate twice the small is 2 and 4'); eq(len(pairs_that_make(6)), 4, 'G3 model lists 4 pairs'); eq(q['lines'] >= 3, True, 'G3 has lines')
     eq(inv['val'], ['open'], 'I1 open'); eq(inv['lines'] >= 4, True, 'I1 has 4 lines')
     # ---------------------------------------------------------------- Exit ticket
     q = X['E1']; eq(find(lambda x: x - 5 == 9), [14], 'E1 her number is 14'); eq(q['val'], 14, 'E1 val'); eq(nums(q['text']), [5, 9], 'E1 text')
@@ -233,7 +233,7 @@ def run(d):
     eq([i for i, v in wb.items() if v in cls and len(v) >= 3], [], 'no workbook, exit, home or Quest item repeats the numbers of a class item')
     # ---------------------------------------------------------------- online practice, authored numbers
     items = {i['id']: i for i in d['online_practice']['items']}
-    eq(items['c1']['answer'], _c1(dict(a=4, b=11)), 'c1'); eq(items['c2']['answer'], _c2(dict(s=5, d=6)), 'c2'); eq(items['c5']['answer'], _c5(dict(r=9, a=5)), 'c5'); eq(items['t1']['answer'], _t1(dict(a=5, b=11)), 't1'); eq(items['t3']['answer'], _t3(dict(a=8, b=6)) , 't3 right answer is a + b (14)')
+    eq(items['c1']['answer'], _c1(dict(a=4, b=11)), 'c1'); eq(items['c2']['answer'], _c2(dict(s=7)), 'c2'); eq(items['c5']['answer'], _c5(dict(r=9, a=5)), 'c5'); eq(items['t1']['answer'], _t1(dict(a=5, b=11)), 't1'); eq(items['t3']['answer'], _t3(dict(a=8, b=6)) , 't3 right answer is a + b (14)')
     eq(items['g1']['answer'], _g1(dict(m=5)), 'g1'); eq(items['g2']['answer'], _g2(dict(b=40)), 'g2'); eq(items['g1']['answer'], 6, 'g1 houses 4, 5, 6'); eq(items['g2']['answer'], 3, 'g2 numbers 11, 22, 33')
     eq(items['c3']['answer'], items['c3']['options'][1], 'c3 the second option is the good puzzle'); eq([o for o in items['c3']['options'] if clear(o)], [items['c3']['answer']], 'c3 exactly one option has a story, numbers and a question')
     eq(items['c4']['answer'], 'No', 'c4'); eq(len([x for x in range(2, 9)]) > 1, True, 'c4 many numbers fit')

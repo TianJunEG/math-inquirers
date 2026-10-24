@@ -185,7 +185,7 @@ def digits_written(top):
 ITEMS = [
     # ================= Start here (workbook lesson 1: Q1 to Q6)
     D(id='1a', tier='core', no='1(a)', type='number', skill='place value to 10 million', answer=5308040,
-      q='Place value. Read big numbers in groups of three from the right:  4 | 053 | 200.\nNumerals for five million, three hundred and eight thousand and forty:',
+      q='Place value. Read big numbers in groups of three from the right: 4 | 053 | 200.\nNumerals for five million, three hundred and eight thousand and forty:',
       check=lambda: words_to_number('five million, three hundred and eight thousand and forty'),
       hint='Write the groups from the left: millions, then thousands, then ones. A group with no hundreds still needs its zero.',
       steps=['Five million is 5 000 000. Three hundred and eight thousand is 308 000. Forty is 40.', 'Put the groups together: 5 | 308 | 040.', 'The numeral is 5 308 040.'],
@@ -256,7 +256,7 @@ ITEMS = [
 
     D(id='6a', tier='core', no='6(a)', type='text', skill='rounding to the nearest thousand', shown='2 499 500, 2 500 000, 2 500 499',
       accept=numlist_accepts([2499500, 2500000, 2500499]),
-      q='A 7-digit number is rounded to the nearest thousand. Which of these numbers become 2 500 000?\nNumbers: 2 499 499,  2 499 500,  2 500 000,  2 500 499,  2 500 500\nType each one that rounds to 2 500 000, with a comma between (for example 2499500, 2500000).',
+      q='A 7-digit number is rounded to the nearest thousand. Which of these numbers become 2 500 000?\nNumbers: 2 499 499, 2 499 500, 2 500 000, 2 500 499, 2 500 500\nType each one that rounds to 2 500 000, with a comma between (for example 2499500, 2500000).',
       svg=round_line(),
       check=lambda: ','.join(str(x) for x in [2499499, 2499500, 2500000, 2500499, 2500500] if round_nearest(x, 1000) == 2500000),
       hint='Look at the hundreds digit. 5 or more rounds the thousands UP, 4 or less leaves them.',

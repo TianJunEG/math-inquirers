@@ -54,7 +54,7 @@ ITEMS = [
     D(id='1c-mark', tier='core', no='1 (number line)', type='selfcheck', paper=True, skill='rounding on a number line',
       q='Mark 47 285 on the line with an X.', svg=number_line_k(47000, 48000, 500, 100, caption='47 000 to 48 000'),
       facts=47285, check=lambda: 47000 + 285,
-      sol_fig=lambda f: number_line_k(47000, 48000, 500, 100, cross=f, caption='47 285 marked with an X'),
+      sol_fig=lambda f: number_line_k(47000, 48000, 500, 100, cross=f),
       hint='Each small tick is 100. 47 285 is between 47 200 and 47 300, nearer to 47 300 but still before the middle mark 47 500.',
       steps=['47 285 is 285 after 47 000. Count 2 small ticks (200) from 47 000, then a little more than three quarters of the way to the next tick.', 'Put your X just before the tick for 47 300.', 'It is before the middle mark (47 500), so it is closer to 47 000.'],
       src=['Mark 47 285 on the line with an X.']),

@@ -26,12 +26,13 @@ def bridge(reqs):
 
 
 def blocks(prog, label='Code', fs=14):
-    return bridge([dict(kind='blocks', prog=prog, label=label, fs=fs)])[0]
+    svg = bridge([dict(kind='blocks', prog=prog, label=label, fs=fs)])[0]
+    return re.sub(r'<text[^>]*>\s*</text>', '', svg)       # an empty value slot is drawn with a blank text node: not needed
 
 
 def sticks_fig():
     """Matchstick squares, patterns 1 to 3 (same drawing as the workbook, redrawn at a width that is readable on a phone)."""
-    s, gap, x, g = 34, 30, 8, ''
+    s, gap, x, g = 34, 30, 22, ''
 
     def stick(x1, y1, x2, y2):
         import math
@@ -50,7 +51,7 @@ def sticks_fig():
             g += stick(x0, bot, x0, top)
         g += T(x + k * s / 2, bot + 26, f'Pattern {k}', 15, 'middle', 700, TEAL)
         x += k * s + gap
-    W = x - gap + 8
+    W = x - gap + 22
     return (f'<svg viewBox="0 0 {W} 92" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Matchstick squares in a row: patterns 1, 2 and 3" '
             f'style="width:100%;max-width:{W}px;height:auto;display:block;margin:0 auto">{g}</svg>')
 

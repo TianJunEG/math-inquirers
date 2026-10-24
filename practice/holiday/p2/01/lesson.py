@@ -66,7 +66,7 @@ CARDS = [
     dict(figure=printed_fig('Digit cards 2, 7 and 4')),
     dict(figure=printed_fig('Digit cards 0, 5 and 9')),
 ]
-CHART_FIG = printed_fig('Two pieces of a 1000 chart')
+CHART_FIG = printed_fig('Two pieces of a 1000 chart').replace('font-size="20"', 'font-size="26"')   # bigger Piece A / Piece B labels for a phone
 P1 = numbers_from_cards([2, 7, 4])
 
 ITEMS = [

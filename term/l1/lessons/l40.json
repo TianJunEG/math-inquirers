@@ -533,17 +533,17 @@
           "t": "card",
           "head": "MI'S PUZZLE",
           "items": [
-            "Two numbers add up to 9.",
-            "One number is 3 more than the other.",
-            "What are the two numbers?"
+            "Mi has 12 stickers on two pages.",
+            "The big page has twice as many stickers as the small page.",
+            "How many stickers are on each page?"
           ]
         },
         {
           "t": "chip",
-          "text": "List every pair that makes 9. Then find the pair that fits."
+          "text": "List every pair that makes 12. Then find the pair that fits."
         }
       ],
-      "note": "Worked example, a puzzle with a rule. Children list every pair of whole numbers that make 9 on their own paper, starting with 0 and 9, and find the pair whose difference is 3. Ask: what are the two numbers (3 and 6). The answer is on the next slide. Say: listing every pair shows that no other pair works. That is a proof. A child who writes 6 and 3 and stops has the answer: ask, how do you know there is not another pair?"
+      "note": "Worked example, a puzzle with a rule. Children list every pair of whole numbers that make 12 on their own paper, starting with 0 and 12, and find the pair where the big page has twice as many as the small page. Ask: how many stickers are on each page (4 and 8). The answer is on the next slide. Say: listing every pair shows that no other pair works. That is a proof. A child who writes 4 and 8 and stops has the answer: ask, how do you know there is not another pair?"
     },
     {
       "id": "s-m2-ans",
@@ -555,47 +555,57 @@
           "t": "visual",
           "type": "table",
           "head": [
-            "First",
-            "Second",
-            "Difference"
+            "Small page",
+            "Big page",
+            "Twice the small page"
           ],
           "rows": [
             [
               "0",
-              "9",
-              "9"
+              "12",
+              "0"
             ],
             [
               "1",
-              "8",
-              "7"
+              "11",
+              "2"
             ],
             [
               "2",
-              "7",
-              "5"
+              "10",
+              "4"
             ],
             [
               "3",
-              "6",
-              "3"
+              "9",
+              "6"
             ],
             [
               "4",
+              "8",
+              "8"
+            ],
+            [
               "5",
-              "1"
+              "7",
+              "10"
+            ],
+            [
+              "6",
+              "6",
+              "12"
             ]
           ],
-          "cell_h": 64,
+          "cell_h": 56,
           "font": 32,
           "size": 100
         },
         {
           "t": "answer",
-          "text": "Only 3 and 6 differ by 3. The answer is 3 and 6, and no other pair works."
+          "text": "Only 4 and 8 fit: 8 is twice 4. The small page has 4 stickers and the big page has 8, and no other pair works."
         }
       ],
-      "note": "The answer for the example on the slide before. The five pairs are 0 and 9, 1 and 8, 2 and 7, 3 and 6, 4 and 5; the differences are 9, 7, 5, 3 and 1. Only 3 and 6 differ by 3. Read it aloud so that children can tick their own work. Say: we listed every case, so the answer must be right and it is the only answer."
+      "note": "The answer for the example on the slide before. The seven pairs are 0 and 12, 1 and 11, 2 and 10, 3 and 9, 4 and 8, 5 and 7, 6 and 6; twice the small page is 0, 2, 4, 6, 8, 10 and 12. Only in the pair 4 and 8 does the big page equal twice the small page. Read it aloud so that children can tick their own work. Say: we listed every case, so the answer must be right and it is the only answer."
     },
     {
       "id": "s-m3",
@@ -607,9 +617,9 @@
           "t": "card",
           "head": "A CHILD IN ANOTHER CLASS WROTE",
           "items": [
-            "Two numbers add up to 8.",
-            "One number is 2 more than the other.",
-            "The numbers are 6 and 2."
+            "Two bowls hold 18 shells.",
+            "The big bowl holds twice as many shells as the small bowl.",
+            "The bowls hold 8 and 10."
           ]
         },
         {
@@ -617,7 +627,7 @@
           "text": "Is the puzzle right? How do you know?"
         }
       ],
-      "note": "Worked example, checking. Children check both clues on their own paper: 6 and 2 add up to 8 (the first clue fits), but 6 is 4 more than 2, not 2 more (the second clue does not). Ask: is the puzzle right (no); how do you know. The answer is on the next slide. Say: check every clue, not just one. The child in the story is in another class: no cast name is given the wrong answer."
+      "note": "Worked example, checking. Children check both clues on their own paper: 8 and 10 make 18 (the first clue fits), but twice 8 is 16, not 10 (the second clue does not). Ask: is the puzzle right (no); how do you know. The answer is on the next slide. Say: check every clue, not just one. The child in the story is in another class: no cast name is given the wrong answer."
     },
     {
       "id": "s-m3-ans",
@@ -627,10 +637,10 @@
       "blocks": [
         {
           "t": "answer",
-          "text": "No. 6 + 2 = 8, but 6 is 4 more than 2, not 2 more. The numbers that fit are 5 and 3."
+          "text": "No. 8 + 10 = 18, but twice 8 is 16, not 10. The numbers that fit are 6 and 12."
         }
       ],
-      "note": "The answer for the example on the slide before. The first clue fits: 6 and 2 make 8. The second clue does not: 6 take away 2 is 4, not 2. The right numbers are 5 and 3: 5 + 3 = 8 and 5 take away 3 is 2. Read it aloud so that children can tick their own work. Say: a friend's puzzle is checked clue by clue."
+      "note": "The answer for the example on the slide before. The first clue fits: 8 and 10 make 18. The second clue does not: twice 8 is 16, and the big bowl holds 10. The right numbers are 6 and 12: 6 + 12 = 18 and twice 6 is 12. Read it aloud so that children can tick their own work. Say: a friend's puzzle is checked clue by clue."
     },
     {
       "id": "s-m4",
@@ -1321,11 +1331,11 @@
           },
           {
             "k": "SAY",
-            "text": "A puzzle with a rule. Mi's puzzle. Two numbers add up to nine. One number is three more than the other."
+            "text": "A puzzle with a rule. Mi's puzzle. Mi has twelve stickers on two pages. The big page has twice as many stickers as the small page."
           },
           {
             "k": "ASK",
-            "text": "What are the two numbers? List every pair that makes nine on your paper.",
+            "text": "How many stickers are on each page? List every pair that makes twelve on your paper.",
             "resp": 85
           },
           {
@@ -1335,7 +1345,7 @@
           },
           {
             "k": "SAY",
-            "text": "Nought and nine. One and eight. Two and seven. Three and six. Four and five. Only three and six are three apart. The answer is three and six, and no other pair works. Listing every case is a proof."
+            "text": "Nought and twelve. One and eleven. Two and ten. Three and nine. Four and eight. Five and seven. Six and six. Only four and eight fit, because eight is twice four. The small page has four and the big page has eight, and no other pair works. Listing every case is a proof."
           },
           {
             "k": "SLIDE",
@@ -1344,7 +1354,7 @@
           },
           {
             "k": "SAY",
-            "text": "Check a friend's puzzle. A child in another class wrote this. Two numbers add up to eight. One number is two more than the other. The numbers are six and two."
+            "text": "Check a friend's puzzle. A child in another class wrote this. Two bowls hold eighteen shells. The big bowl holds twice as many shells as the small bowl. The bowls hold eight and ten."
           },
           {
             "k": "ASK",
@@ -1358,7 +1368,7 @@
           },
           {
             "k": "SAY",
-            "text": "No. Six and two make eight, but six is four more than two, not two more. The numbers that fit are five and three. Check every clue."
+            "text": "No. Eight and ten make eighteen, but twice eight is sixteen, not ten. The numbers that fit are six and twelve. Check every clue."
           },
           {
             "k": "SLIDE",
@@ -2154,33 +2164,33 @@
         "id": "G1",
         "page": 4,
         "tier": "go",
-        "text": "Mi's puzzle: Two jars hold 12 shells in all. The blue jar holds 4 more shells than the red jar. Fill in the table of every pair that makes 12. Then answer (a) and (b).",
-        "answer": "4 and 8; 1 pair",
+        "text": "Mi's puzzle: Mi has 15 shells in two jars. The blue jar holds twice as many shells as the red jar. Fill in the table of every pair that makes 15. Then answer (a) and (b).",
+        "answer": "5 and 10; 1 pair",
         "val": [
-          4,
-          8,
+          5,
+          10,
           1
         ],
-        "hint": "Start at 0 and 12. Take 1 from the blue jar and give it to the red jar. Find the difference each time.",
-        "solution": "The pairs are 0 and 12, 1 and 11, 2 and 10, 3 and 9, 4 and 8, 5 and 7, 6 and 6. The differences are 12, 10, 8, 6, 4, 2 and 0. Only 4 and 8 differ by 4. So the red jar holds 4 and the blue jar holds 8, and no other pair works.",
+        "hint": "Start at 0 and 15. Take 1 from the blue jar and give it to the red jar. Write twice the red number each time. Does it match the blue number?",
+        "solution": "The pairs are 0 and 15, 1 and 14, 2 and 13, 3 and 12, 4 and 11, 5 and 10, 6 and 9, 7 and 8. Twice the red number is 0, 2, 4, 6, 8, 10, 12 and 14. Only the pair 5 and 10 matches: 10 is twice 5. So the red jar holds 5 and the blue jar holds 10, and no other pair works.",
         "mistakes": [
-          "Stopping at 4 and 8 without listing every pair.",
-          "Writing 6 and 6 (the difference is 0)."
+          "Stopping at 5 and 10 without listing every pair.",
+          "Writing 10 and 5 the wrong way round (the red jar holds fewer shells)."
         ],
         "mins": 7,
         "parts": [
           {
             "l": "a",
             "text": "The red jar holds [] shells and the blue jar holds [] shells.",
-            "ans": "4 and 8",
+            "ans": "5 and 10",
             "val": [
-              4,
-              8
+              5,
+              10
             ]
           },
           {
             "l": "b",
-            "text": "[] pair has a difference of 4.",
+            "text": "[] pair has a blue jar that holds twice as many as the red jar.",
             "ans": "1",
             "val": 1
           }
@@ -2190,46 +2200,51 @@
           "head": [
             "Red",
             "Blue",
-            "Difference"
+            "Twice the red"
           ],
           "rows": [
             [
               "0",
-              "12",
-              "12"
+              "15",
+              "0"
             ],
             [
               "1",
-              "11",
+              "14",
               "[]"
             ],
             [
               "2",
-              "10",
+              "13",
               "[]"
             ],
             [
               "3",
-              "9",
+              "12",
               "[]"
             ],
             [
               "4",
-              "8",
+              "11",
               "[]"
             ],
             [
               "5",
-              "7",
+              "10",
               "[]"
             ],
             [
               "6",
-              "6",
+              "9",
+              "[]"
+            ],
+            [
+              "7",
+              "8",
               "[]"
             ]
           ],
-          "cell_h": 40,
+          "cell_h": 36,
           "font": 30,
           "size": 85
         }
@@ -2291,7 +2306,7 @@
           "open"
         ],
         "hint": "Use two numbers. Make a rule. Try every case, like the table in G1.",
-        "solution": "Many answers are right. A good puzzle has a rule, one answer, and a proof: every case is listed, or the answer is checked a second way. For example: Two numbers add up to 8. One is 2 more than the other. 0 and 8, 1 and 7, 2 and 6, 3 and 5, 4 and 4. Only 3 and 5 are 2 apart.",
+        "solution": "Many answers are right. A good puzzle has a rule, one answer, and a proof: every case is listed, or the answer is checked a second way. For example: Two plates hold 6 cakes. The big plate holds twice as many as the small plate. 0 and 6, 1 and 5, 2 and 4, 3 and 3. Only 2 and 4 fit: 4 is twice 2.",
         "mistakes": [
           "Writing a puzzle with two answers.",
           "Copying a puzzle from a book or from class."
@@ -2550,18 +2565,18 @@
         "id": "c2",
         "tier": "core",
         "type": "number",
-        "q": "Two jars hold 16 shells in all. The blue jar holds 6 more shells than the red jar. How many shells does the red jar hold?",
-        "hint": "List the pairs that make 16. Find the pair that is 6 apart.",
+        "q": "Two jars hold 21 shells in all. The blue jar holds twice as many shells as the red jar. How many shells does the red jar hold?",
+        "hint": "List the pairs that make 21. Find the pair where the blue jar holds twice as many as the red jar.",
         "steps": [
-          "The pairs are 5 and 11, 4 and 12, and so on.",
-          "5 and 11 make 16, and 11 is 6 more than 5.",
-          "The red jar holds 5."
+          "The pairs are 0 and 21, 1 and 20, and so on.",
+          "7 and 14 make 21, and 14 is twice 7.",
+          "The red jar holds 7."
         ],
-        "answer": 5,
+        "answer": 7,
         "slips": [
           {
             "a": [
-              11
+              14
             ],
             "say": "That is the blue jar. Which jar is the red jar?"
           }
@@ -2574,22 +2589,18 @@
               5,
               6,
               7
-            ],
-            "d": [
-              4,
-              6
             ]
           },
           "derive": {
-            "t": "2*s+d"
+            "t": "3*s"
           },
-          "q": "Two jars hold {t} shells in all. The blue jar holds {d} more shells than the red jar. How many shells does the red jar hold?",
+          "q": "Two jars hold {t} shells in all. The blue jar holds twice as many shells as the red jar. How many shells does the red jar hold?",
           "answer": "s",
-          "hint": "List the pairs that make {t}. Find the pair that is {d} apart.",
+          "hint": "List the pairs that make {t}. Find the pair where the blue jar holds twice as many as the red jar.",
           "steps": [
             "List the pairs that make {t}.",
-            "Find the pair that is {d} apart.",
-            "The smaller number is {ans}."
+            "Find the pair where the blue jar holds twice as many as the red jar.",
+            "The red jar holds {ans}."
           ]
         }
       },
@@ -3049,7 +3060,7 @@
     "The look-back is never collected in front of the group or read out. A pass is always allowed."
   ],
   "tutor_prep": [
-    "Solve every workbook question and every Quest gate (and the secret cave item) yourself first, with the Quest tutor notes (L40_Quest_Tutor_Notes.pdf): the answers, the private notes sheet for each child and the group advice sheet. Secret cave: Friday 25¢ and 75¢ in all. Workbook answers: S1 and S2 many answers are right; S3 (2); S4 Wrong and 13; S5 1, 6 and 16; S6 4 and 20; T1 and T2 many answers are right; T3 B and 4; G1 5 and 7, and 1 pair; G2 No, 2, and 3 and 7; G3 many answers are right; I1 open. Exit ticket: E1 14; E2 (2); E3 Wrong.",
+    "Solve every workbook question and every Quest gate (and the secret cave item) yourself first, with the Quest tutor notes (L40_Quest_Tutor_Notes.pdf): the answers, the private notes sheet for each child and the group advice sheet. Secret cave: Friday 25¢ and 75¢ in all. Workbook answers: S1 and S2 many answers are right; S3 (2); S4 Wrong and 13; S5 1, 6 and 16; S6 4 and 20; T1 and T2 many answers are right; T3 B and 4; G1 5 and 10, and 1 pair; G2 No, 3, and 8 and 12; G3 many answers are right; I1 open. Exit ticket: E1 14; E2 (2); E3 Wrong.",
     "A week before, tell the families to have ready: the Quest Log (4 pages, in Book 8), kept closed; a quest partner (a grown-up or a brother or sister); one favourite page from the year books (or a drawing of a favourite puzzle) and plain paper. Send them the grown-up note (L40_Quest_Parent_Note.pdf). A family whose Quest Log is missing or damaged tells you: arrange the make-up slot, and send the PDF straight away (printing and postage are included in the program fee, owner decision of 23 Oct 2026; parcel policy, owner decision of 23 Oct 2026: a family whose book has not arrived or is damaged messages the business WhatsApp within 7 days and gets the PDF straight away, one free resend, a second loss is discussed; delivery name, address and phone are deleted 30 days after the parcel is confirmed delivered, or after any resend is finished, whichever is later).",
     "Have the slides open. The Quest is straight after the brain break, minutes 35 to 55, then the workbook, then the Showcase. Have the Quest tutor notes ready and your own watch where only you can see it. Never show a clock, countdown or timer on the shared screen during the Quest. Delete each child's notes sheet when the line is sent.",
     "Check the recording captures the tutor and the shared screen. Children video is excluded; any unmuted voice is recorded, so say before the Showcase that a child may teach a grown-up with the microphone muted. Greet the whole group first, say the notice, then start the recording; avoid first names while it runs. PAUSE the recording for the whole Quest (minutes 35 to 55) and restart it for the workbook. The business WhatsApp number is never said or shown on a slide; it is in the grown-up note.",
@@ -3109,7 +3120,7 @@
       "G1",
       "G3"
     ],
-    "text": "Two jars hold 12 shells and the blue jar holds 4 more than the red jar: list every pair that makes 12 (0 and 12 up to 6 and 6), find the differences, and see that only 4 and 8 differ by 4. The proof is the list: every case was tried, so the answer is the only one. Writing a puzzle with a rule and a proof (G3), and checking a friend's puzzle clue by clue (G2), are the steps around it. This is beyond Primary 1 on purpose: the syllabus pages we hold name no list of heuristics, and no Primary 1 paper asks a child to write a puzzle. Named puzzle: Puzzle With a Proof.",
+    "text": "Two jars hold 15 shells and the blue jar holds twice as many as the red jar: list every pair that makes 15 (0 and 15 up to 7 and 8), write twice the red number each time, and see that only the pair 5 and 10 fits. The proof is the list: every case was tried, so the answer is the only one. Writing a puzzle with a rule and a proof (G3), and checking a friend's puzzle clue by clue (G2), are the steps around it. This is beyond Primary 1 on purpose: the syllabus pages we hold name no list of heuristics, and no Primary 1 paper asks a child to write a puzzle. Named puzzle: Puzzle With a Proof.",
     "parent": "Writing a puzzle with a rule and showing why its answer is the only one goes past the Primary 1 syllabus on purpose."
   },
   "challenge_quest": {
