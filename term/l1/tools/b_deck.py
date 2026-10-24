@@ -8,6 +8,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import *  # noqa
 import svg
 import spine_term as SPT
+import habit_term as HT
 
 BF = "'Nunito Sans', Arial, sans-serif"
 HF = "'Fredoka', Arial, sans-serif"
@@ -216,7 +217,7 @@ def slide_html(d, s):
         body = (f'<p style="font-size:32px;font-weight:700;letter-spacing:4px;color:{YEL}">LESSON {d["lesson_in_term"]}  •  TERM {d["term"]}  •  LEVEL {d["level"]}</p>'
                 f'<h1 style="font-family:{HF};font-size:{title_px(s["title"])}px;font-weight:600;line-height:1.08;max-width:1300px;text-wrap:balance">{E(s["title"])}</h1>'
                 f'<p style="font-size:44px;color:#C9D4EC">{E(s.get("subtitle", ""))}</p>'
-                + ''.join(f'<div style="background:#26385F;border-radius:24px;padding:40px;max-width:880px;display:flex;flex-direction:column;gap:12px"><p style="font-size:30px;font-weight:700;letter-spacing:3px;color:{YEL}">{E(b["head"])}</p>' + ''.join(f'<p style="font-size:44px;font-weight:600">{E(i)}</p>' for i in b['items']) + '</div>' for b in s['blocks'] if b['t'] == 'card') + SPT.deck_chip(d))      # spine: TODAY'S TOOL chip (absolute, bottom left)
+                + ''.join(f'<div style="background:#26385F;border-radius:24px;padding:40px;max-width:880px;display:flex;flex-direction:column;gap:12px"><p style="font-size:30px;font-weight:700;letter-spacing:3px;color:{YEL}">{E(b["head"])}</p>' + ''.join(f'<p style="font-size:44px;font-weight:600">{E(i)}</p>' for i in b['items']) + '</div>' for b in s['blocks'] if b['t'] == 'card') + SPT.deck_chip(d) + HT.badge(d, 'title'))      # spine: TODAY'S TOOL chip (absolute, bottom left)
         style = f'{bg};font-family:{BF};padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:center;gap:36px;position:relative;overflow:hidden'
     else:
         if dark:
@@ -249,7 +250,12 @@ def slide_html(d, s):
                 tail = (f'<svg width="40" height="44" viewBox="0 0 40 44" style="position:absolute;bottom:24px;{"left" if left else "right"}:-34px" xmlns="http://www.w3.org/2000/svg"><path d="{"M40 0 L40 44 L0 30 Z" if left else "M0 0 L0 44 L40 30 Z"}" fill="#FFFFFF"/></svg>')
             bub = (f'<div data-mi-bubble="1" style="position:absolute;{bx};{by};width:{bw}px;background:#FFFFFF;color:{NAVY};border-radius:36px;padding:20px 30px;font-size:{fs}px;font-weight:700;line-height:1.25;text-align:center">{E(mi["say"])}{tail}</div>')
         body += f'{bub}<img data-mi="1" alt="Mi the dolphin" src="{mi_uri()}" style="position:absolute;{pos};bottom:{mbot}px;width:{w}px;height:auto">'
-    return (f'<section id="{s["id"]}" data-transition="fade" data-theme="modern2" style="{style}">\n{deco}\n{pill}\n{body}\n{foot}\n<aside>{E(s["note"])}</aside>\n</section>\n')
+    hab = ''
+    note_txt = s['note']
+    if kind in ('title', 'lookback'):      # inquiry habit: badge + speaker-note line on the title and look-back slides
+        hab = HT.badge(d, 'reflect') if kind == 'lookback' else ''      # (the title badge is added with the title card above)
+        note_txt = s['note'] + ' ' + HT.note(d)
+    return (f'<section id="{s["id"]}" data-transition="fade" data-theme="modern2" style="{style}">\n{deco}\n{pill}\n{body}{hab}\n{foot}\n<aside>{E(note_txt)}</aside>\n</section>\n')
 
 
 def build_deck(d, pw=None):

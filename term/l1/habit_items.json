@@ -1,0 +1,645 @@
+{
+ "_doc": "Online 'explain your thinking' self-check items for the 40 Level 1 term lessons (inquiry habits). Merged into out/lNN/practice/data by term/l1/tools/b_practice.py after the last core item. Not part of the lesson JSON, so the printed term books are unaffected. No existing id, answer or number changes.",
+ "items": {
+  "01": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Check",
+   "skill": "Inquiry habit: Check",
+   "label": "Check it",
+   "q": "Check it: Mei says 4 bundles of ten and 7 singles make 47. Check it with a second case: how many sticks are 5 bundles of ten and 2 singles? Write the number, then write how you checked.",
+   "hint": "Say the tens first, then count on the singles. Then try one more case.",
+   "steps": [
+    "5 bundles of ten is 50. Count on 2 singles: 51, 52. So 52.",
+    "A second case: 6 bundles and 0 singles is 60. The rule worked again.",
+    "Checking means testing another case, not just the same one again."
+   ],
+   "button": "Show me an example"
+  },
+  "02": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Notice",
+   "skill": "Inquiry habit: Notice",
+   "label": "Notice it",
+   "q": "Notice it: Look at these jumps on a number line: 10, 20, 30, 40. Write what stays the same and what changes.",
+   "hint": "Say the numbers out loud and look at the digits.",
+   "steps": [
+    "Each jump is the same size: 10.",
+    "The tens digit goes up by 1 each time.",
+    "The ones digit stays 0 every time. Number words: ten, twenty, thirty, forty."
+   ],
+   "button": "Show me an example"
+  },
+  "03": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Wonder",
+   "skill": "Inquiry habit: Wonder",
+   "label": "Wonder",
+   "q": "Wonder: You have two digit cards, 4 and 7. They can make 47 or 74. Write one what-if question of your own, such as: what if one card was 0? Then try to answer it.",
+   "hint": "Change just one card and see what happens to the number.",
+   "steps": [
+    "A what-if question: What if one card was 0? The cards 4 and 0 make 40.",
+    "Another: What if I swap the cards? 47 becomes 74, and 74 is greater.",
+    "Any question that changes one thing is a good one."
+   ],
+   "button": "Show me an example"
+  },
+  "04": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Look back",
+   "skill": "Inquiry habit: Look back",
+   "label": "Look back",
+   "q": "Look back: Think about counting in 5s on the 100 square. What did you learn? What would you change next time? Write one sentence for each.",
+   "hint": "Think about a pattern you saw, or a moment that was tricky.",
+   "steps": [
+    "I learned: counting in 5s lands in two columns, ending in 5 or 0.",
+    "I would change: I would colour the numbers as I count so I can see the pattern sooner.",
+    "Your answers can be different. There is no right answer here."
+   ],
+   "button": "Show me an example"
+  },
+  "05": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Explain",
+   "skill": "Inquiry habit: Explain",
+   "label": "Explain",
+   "q": "Explain: Ali adds 8 + 6 by moving 2 from the 6 to the 8. Write how you know the answer is 14.",
+   "hint": "Start with what 8 plus 2 makes. Then say how many are left over.",
+   "steps": [
+    "8 and 2 more make 10.",
+    "6 take away the 2 you moved leaves 4.",
+    "10 and 4 make 14. I know because I made a ten first."
+   ],
+   "button": "Show me an example"
+  },
+  "06": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Notice",
+   "skill": "Inquiry habit: Notice",
+   "label": "Notice it",
+   "q": "Notice it: Look at this: 23 + 10 = 33, 33 + 10 = 43, 43 + 10 = 53. What stays the same? What changes? Write what you notice.",
+   "hint": "Look at the ones digit, then the tens digit.",
+   "steps": [
+    "The ones digit stays 3 every time.",
+    "The tens digit goes up by 1 each time: 2, 3, 4, 5.",
+    "Adding one ten changes only the tens."
+   ],
+   "button": "Show me an example"
+  },
+  "07": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Check",
+   "skill": "Inquiry habit: Check",
+   "label": "Check it",
+   "q": "Check it: Siti says 52 - 20 = 32. Check it a second way by adding back. Then try a second case: 47 - 30. Write both answers.",
+   "hint": "Adding back means: start at the answer and add what was taken away.",
+   "steps": [
+    "Add back: 32 + 20 = 52. It works.",
+    "Second case: 47 - 30 = 17. Add back: 17 + 30 = 47. It works again.",
+    "A check tests another case or works the other way."
+   ],
+   "button": "Show me an example"
+  },
+  "08": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Explain",
+   "skill": "Inquiry habit: Explain",
+   "label": "Explain",
+   "q": "Explain: Do 6 + 5 and 7 + 4 give the same total? Write how you know.",
+   "hint": "Think about one plate giving 1 to the other plate.",
+   "steps": [
+    "6 + 5 = 11 and 7 + 4 = 11. They give the same total.",
+    "I know because 1 moved from the 5 to the 6.",
+    "One side got 1 more and the other side got 1 less, so they stay balanced."
+   ],
+   "button": "Show me an example"
+  },
+  "09": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Try",
+   "skill": "Inquiry habit: Try",
+   "label": "Try it",
+   "q": "Try it: Try it: draw a line you think is 8 cm long without a ruler. Then measure it, starting at the 0 mark. Write your guess, the real length and how close you were.",
+   "hint": "Line up the 0 mark with the start of your line.",
+   "steps": [
+    "Draw first, then measure. Say the measure aloud.",
+    "For example: I drew 7 cm. I was 1 cm short.",
+    "A guess first makes your next guess better."
+   ],
+   "button": "Show me an example"
+  },
+  "10": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Look back",
+   "skill": "Inquiry habit: Look back",
+   "label": "Look back",
+   "q": "Look back: Look back at a story you solved today. What did you learn about reading it twice? What would you change next time? Write one sentence for each.",
+   "hint": "Think about the first read and the second read.",
+   "steps": [
+    "I learned: the second read helps me find the question.",
+    "I would change: I would underline the numbers on the first read.",
+    "Your answers can be different. There is no right answer here."
+   ],
+   "button": "Show me an example"
+  },
+  "11": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Wonder",
+   "skill": "Inquiry habit: Wonder",
+   "label": "Wonder",
+   "q": "Wonder: There are 8 children in a line. Aisha is 3rd from the front. Write one what-if question of your own, such as: what if Aisha was 4th? Then answer it.",
+   "hint": "Change one thing and see what happens to the place.",
+   "steps": [
+    "What if Aisha was 4th from the front? From the back she is 5th (8 - 4 + 1 = 5).",
+    "What if there were 9 children? Aisha would be 7th from the back.",
+    "A what-if question changes one thing."
+   ],
+   "button": "Show me an example"
+  },
+  "12": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Explain",
+   "skill": "Inquiry habit: Explain",
+   "label": "Explain",
+   "q": "Explain: Ali has 12 stickers. Mei has 8 stickers. Write how you know Ali has 4 more. You can say how a strip helps.",
+   "hint": "Draw one strip for each child. Where do the strips match?",
+   "steps": [
+    "Draw two strips: one of 12 and one of 8.",
+    "The strips match up to 8. The part left over on the long strip is 4.",
+    "So Ali has 4 more. I know because 12 - 8 = 4."
+   ],
+   "button": "Show me an example"
+  },
+  "13": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Check",
+   "skill": "Inquiry habit: Check",
+   "label": "Check it",
+   "q": "Check it: Each bag has the same number of sweets. 2 bags and 3 loose sweets make 11. Ali says each bag has 4. Check it by putting 4 in each bag. Then try 5. Which one works?",
+   "hint": "Put the number in each bag, then add the loose ones.",
+   "steps": [
+    "4 in each bag: 4 + 4 = 8. Add 3 loose: 11. It works.",
+    "Try 5: 5 + 5 = 10, plus 3 is 13. That is too many.",
+    "Only 4 works. Putting the number back is a good check."
+   ],
+   "button": "Show me an example"
+  },
+  "14": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Try",
+   "skill": "Inquiry habit: Try",
+   "label": "Try it",
+   "q": "Try it: Test it: is 3 + 5 odd or even? Is 7 + 9 odd or even? What do you think happens when you add two odd numbers?",
+   "hint": "Add each pair. Then say whether the answer can be shared in 2s with none left.",
+   "steps": [
+    "3 + 5 = 8 and 7 + 9 = 16. Both are even.",
+    "Try a third pair: 1 + 3 = 4, even again.",
+    "So odd + odd looks always even. More tests make us more sure."
+   ],
+   "button": "Show me an example"
+  },
+  "15": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Notice",
+   "skill": "Inquiry habit: Notice",
+   "label": "Notice it",
+   "q": "Notice it: Look at 3 groups of 2, 4 groups of 2 and 5 groups of 2. The totals are 6, 8 and 10. What do you notice about the totals?",
+   "hint": "Count in 2s. Look at how the totals change.",
+   "steps": [
+    "The totals go up by 2 each time.",
+    "The totals are all even.",
+    "Each new group adds 2 more."
+   ],
+   "button": "Show me an example"
+  },
+  "16": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Try",
+   "skill": "Inquiry habit: Try",
+   "label": "Try it",
+   "q": "Try it: A frog jumps 5 each time. Try it: where does the frog land after 4 jumps? Test it by counting, then write the number.",
+   "hint": "Count on 5 at a time: 5, 10, ...",
+   "steps": [
+    "5, 10, 15, 20.",
+    "After 4 jumps the frog is on 20.",
+    "You can test a smaller case first, such as 2 jumps lands on 10."
+   ],
+   "button": "Show me an example"
+  },
+  "17": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Explain",
+   "skill": "Inquiry habit: Explain",
+   "label": "Explain",
+   "q": "Explain: 12 sweets are shared equally into 4 bags. Each bag has 3. Write how you know each bag has 3.",
+   "hint": "Put your answer back: 4 bags with 3 in each.",
+   "steps": [
+    "4 groups of 3: 3, 6, 9, 12.",
+    "That uses all 12 sweets and every bag has the same.",
+    "I know because 4 groups of 3 make 12."
+   ],
+   "button": "Show me an example"
+  },
+  "18": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Wonder",
+   "skill": "Inquiry habit: Wonder",
+   "label": "Wonder",
+   "q": "Wonder: Ali has 4 bags with 5 sweets in each bag. Write one what-if question of your own, such as: what if he had 6 bags? Then answer it.",
+   "hint": "Change one thing: the number of bags or the number in each bag.",
+   "steps": [
+    "What if he had 6 bags? Count in 5s: 5, 10, 15, 20, 25, 30. That is 30 sweets.",
+    "What if each bag had 4? 4 bags of 4 make 16.",
+    "A what-if question changes one thing and asks what happens."
+   ],
+   "button": "Show me an example"
+  },
+  "19": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Check",
+   "skill": "Inquiry habit: Check",
+   "label": "Check it",
+   "q": "Check it: 5 pens cost $15, so 1 pen costs $3. Check it by putting the cost of one back: what is 5 groups of $3? Then check 4 pens cost $12.",
+   "hint": "Count in 3s five times.",
+   "steps": [
+    "3, 6, 9, 12, 15. Five $3 pens cost $15. It works.",
+    "Second case: 4 pens at $3 each is 3, 6, 9, 12. That is $12.",
+    "Both cases work, so $3 for one pen fits."
+   ],
+   "button": "Show me an example"
+  },
+  "20": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Look back",
+   "skill": "Inquiry habit: Look back",
+   "label": "Look back",
+   "q": "Look back: Look back at the last problem you solved. Which tool did you use? What would you change next time? Write one sentence for each.",
+   "hint": "Think about your first step and whether it helped.",
+   "steps": [
+    "I used: draw a strip.",
+    "I would change: I would check my answer a second way.",
+    "Your answers can be different. There is no right answer here."
+   ],
+   "button": "Show me an example"
+  },
+  "21": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Try",
+   "skill": "Inquiry habit: Try",
+   "label": "Try it",
+   "q": "Try it: Try it: set a clock (or draw one) to 7 o'clock. Then set it to half past 7. Write which hand moved and where it points.",
+   "hint": "Start with 7 o'clock, then move only the long hand halfway round.",
+   "steps": [
+    "At 7 o'clock the long hand points to 12.",
+    "At half past 7 the long hand points to 6.",
+    "The short hand is halfway between 7 and 8."
+   ],
+   "button": "Show me an example"
+  },
+  "22": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Wonder",
+   "skill": "Inquiry habit: Wonder",
+   "label": "Wonder",
+   "q": "Wonder: The long hand points to 4. Write a what-if question of your own, such as: what if it pointed to 5? Then answer it.",
+   "hint": "Count in 5s round the clock face from 12.",
+   "steps": [
+    "The long hand on 4 means 20 minutes. On 5 it means 25 minutes.",
+    "Another: what if it pointed to 6? That is 30 minutes, half past.",
+    "Count in 5s: 5, 10, 15, 20, 25."
+   ],
+   "button": "Show me an example"
+  },
+  "23": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Notice",
+   "skill": "Inquiry habit: Notice",
+   "label": "Notice it",
+   "q": "Notice it: A film starts at 2 o'clock. One hour later it is 3 o'clock. Two hours later it is 4 o'clock. What stays the same? What changes? Write what you notice.",
+   "hint": "Look at the long hand and then at the short hand.",
+   "steps": [
+    "The long hand stays on 12 each time.",
+    "The short hand moves to the next number each hour.",
+    "The time goes up by 1 hour each step."
+   ],
+   "button": "Show me an example"
+  },
+  "24": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Check",
+   "skill": "Inquiry habit: Check",
+   "label": "Check it",
+   "q": "Check it: Mei pays with a $5 note for a $3 toy and gets $2 change. Check it: what is 3 + 2? Then check another case: pay $10 for a $7 toy, how much change?",
+   "hint": "Add the change to the price. You should get the money paid.",
+   "steps": [
+    "3 + 2 = 5. It matches the $5 note.",
+    "Second case: $10 for $7 gives $3 change, because 7 + 3 = 10.",
+    "Price plus change makes the money paid."
+   ],
+   "button": "Show me an example"
+  },
+  "25": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Notice",
+   "skill": "Inquiry habit: Notice",
+   "label": "Notice it",
+   "q": "Notice it: A bag costs $17 and a cup costs $8. Write two things you notice about the price tags.",
+   "hint": "Look at the tens, then at which is more and by how much.",
+   "steps": [
+    "The bag has 1 ten and the cup has no tens, so the bag costs more.",
+    "The bag costs $9 more because 17 - 8 = 9.",
+    "Both tags show whole dollars."
+   ],
+   "button": "Show me an example"
+  },
+  "26": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Wonder",
+   "skill": "Inquiry habit: Wonder",
+   "label": "Wonder",
+   "q": "Wonder: You have $10 in the shop. A pencil costs $4. Write one what-if question of your own, such as: what if I buy two pencils? Then answer it.",
+   "hint": "Change one thing: how many you buy or what it costs.",
+   "steps": [
+    "Two pencils cost $8, so I would have $2 left.",
+    "What if a pencil cost $5? Two would cost $10 and nothing is left.",
+    "A what-if question changes one thing."
+   ],
+   "button": "Show me an example"
+  },
+  "27": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Look back",
+   "skill": "Inquiry habit: Look back",
+   "label": "Look back",
+   "q": "Look back: Look back at a date puzzle you solved. What clue helped you most? What would you change next time? Write one sentence for each.",
+   "hint": "Think about counting days, weeks or the number of the date.",
+   "steps": [
+    "The clue that helped me: a week later is 7 more days.",
+    "I would change: I would tick off each day on the calendar.",
+    "Your answers can be different. There is no right answer here."
+   ],
+   "button": "Show me an example"
+  },
+  "28": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Explain",
+   "skill": "Inquiry habit: Explain",
+   "label": "Explain",
+   "q": "Explain: A table shows 1 triangle needs 3 sticks, 2 triangles need 5 sticks and 3 triangles need 7 sticks. Explain how you know 4 triangles need 9 sticks.",
+   "hint": "Look at how the number of sticks changes each time.",
+   "steps": [
+    "The sticks go 3, 5, 7. Each step adds 2.",
+    "7 + 2 = 9.",
+    "I know because each new triangle needs 2 more sticks."
+   ],
+   "button": "Show me an example"
+  },
+  "29": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Check",
+   "skill": "Inquiry habit: Check",
+   "label": "Check it",
+   "q": "Check it: A child writes 56 - 20 = 46. Check it by adding back: what is 46 + 20? Is the answer right? If not, find the right one.",
+   "hint": "Adding back should take you to the number you started with.",
+   "steps": [
+    "46 + 20 = 66. That is not 56, so the answer is wrong.",
+    "56 - 20: take away 2 tens, 5 tens become 3 tens. The answer is 36.",
+    "Check: 36 + 20 = 56. It works."
+   ],
+   "button": "Show me an example"
+  },
+  "30": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Look back",
+   "skill": "Inquiry habit: Look back",
+   "label": "Look back",
+   "q": "Look back: Pick one problem you solved today. Which tool helped? What would you change next time? Write one sentence for each.",
+   "hint": "Think about your first step and the tool you picked.",
+   "steps": [
+    "The tool that helped: make a table.",
+    "I would change: I would try a second tool to check.",
+    "Your answers can be different. There is no right answer here."
+   ],
+   "button": "Show me an example"
+  },
+  "31": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Try",
+   "skill": "Inquiry habit: Try",
+   "label": "Try it",
+   "q": "Try it: Try it: fold a paper circle in half. Open it. How many equal parts? Fold it in half and half again. How many equal parts now? Write what you found and what each part is called.",
+   "hint": "Fold so the edges meet exactly.",
+   "steps": [
+    "One fold makes 2 equal parts: halves.",
+    "Folding again makes 4 equal parts: quarters.",
+    "Test by laying one part on another. They should match."
+   ],
+   "button": "Show me an example"
+  },
+  "32": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Notice",
+   "skill": "Inquiry habit: Notice",
+   "label": "Notice it",
+   "q": "Notice it: A house picture is a square with a triangle on top. What 2 shapes do you see? What is the same and what is different about them?",
+   "hint": "Count the sides and the corners of each shape.",
+   "steps": [
+    "A square has 4 sides and a triangle has 3 sides.",
+    "Both have straight sides and corners.",
+    "The triangle sits on one side of the square."
+   ],
+   "button": "Show me an example"
+  },
+  "33": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Look back",
+   "skill": "Inquiry habit: Look back",
+   "label": "Look back",
+   "q": "Look back: Think about copying a figure on the grid. What did you learn about counting steps? What would you change next time? Write one sentence for each.",
+   "hint": "Think about where you started and how you counted.",
+   "steps": [
+    "I learned: I count the steps along the line, not the dots.",
+    "I would change: I would tick each step as I count.",
+    "Your answers can be different. There is no right answer here."
+   ],
+   "button": "Show me an example"
+  },
+  "34": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Explain",
+   "skill": "Inquiry habit: Explain",
+   "label": "Explain",
+   "q": "Explain: A top view shows stacks of 2, 1 and 3 cubes. Explain how you know there are 6 cubes in all.",
+   "hint": "Count the cubes in each stack, then put them together.",
+   "steps": [
+    "The stacks have 2, 1 and 3 cubes.",
+    "2 + 1 = 3, and 3 + 3 = 6.",
+    "I know because I counted every stack and added them."
+   ],
+   "button": "Show me an example"
+  },
+  "35": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Notice",
+   "skill": "Inquiry habit: Notice",
+   "label": "Notice it",
+   "q": "Notice it: Tile A has 3 stars and a circle. Tile B has 3 stars and a square. What is the same and what is different?",
+   "hint": "Look at one part of the tile at a time.",
+   "steps": [
+    "The same: both tiles have 3 stars.",
+    "Different: Tile A has a circle and Tile B has a square.",
+    "Look one part at a time so nothing is missed."
+   ],
+   "button": "Show me an example"
+  },
+  "36": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Try",
+   "skill": "Inquiry habit: Try",
+   "label": "Try it",
+   "q": "Try it: Try it: Mei has 2 hats (red, blue) and 3 scarves (green, yellow, pink). List every outfit with one hat and one scarf. How many outfits are there?",
+   "hint": "Keep the red hat and pair it with each scarf. Then do the blue hat.",
+   "steps": [
+    "Red hat: with green, yellow or pink. That is 3 outfits.",
+    "Blue hat: with green, yellow or pink. That is 3 more.",
+    "3 + 3 = 6 outfits. Listing in order means none are missed."
+   ],
+   "button": "Show me an example"
+  },
+  "37": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Wonder",
+   "skill": "Inquiry habit: Wonder",
+   "label": "Wonder",
+   "q": "Wonder: You want to find out which fruit your class likes best. Write one question you could ask to make a graph of your own. Then write one what-if question about the graph.",
+   "hint": "Think of a question with a few choices to sort and count.",
+   "steps": [
+    "Question: Which fruit do you like best: apple, banana or orange?",
+    "What if we asked a different class? The answers might change.",
+    "A good graph question has a few clear choices."
+   ],
+   "button": "Show me an example"
+  },
+  "38": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Explain",
+   "skill": "Inquiry habit: Explain",
+   "label": "Explain",
+   "q": "Explain: A graph shows 8 red kites and 3 blue kites. Write how you know how many more red kites there are. Then write one thing the graph cannot tell us.",
+   "hint": "Match each blue kite to a red kite. How many red are left?",
+   "steps": [
+    "8 - 3 = 5, so there are 5 more red kites.",
+    "The graph cannot tell us which kite flew highest.",
+    "A graph shows counts, not the reasons."
+   ],
+   "button": "Show me an example"
+  },
+  "39": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Check",
+   "skill": "Inquiry habit: Check",
+   "label": "Check it",
+   "q": "Check it: Ali has 12 pens. Mei has 4 fewer, so Mei has 8. Together they have 20. Check it a second way.",
+   "hint": "Work backwards: take Mei's pens away from the total.",
+   "steps": [
+    "20 - 8 = 12, which is Ali's pens. It works.",
+    "Another way: Mei has 4 fewer, so 12 - 8 = 4. It matches.",
+    "Two different checks agree, so I can trust the answer."
+   ],
+   "button": "Show me an example"
+  },
+  "40": {
+   "id": "hab",
+   "tier": "core",
+   "type": "selfcheck",
+   "habit": "Look back",
+   "skill": "Inquiry habit: Look back",
+   "label": "Look back",
+   "q": "Look back: Think about this year in Math Inquirers. What is one thing you learned? What would you change or try next? Write one sentence for each.",
+   "hint": "Think about a lesson you liked and a moment that was tricky.",
+   "steps": [
+    "I learned: I can check my answer a second way.",
+    "I would try: asking a what-if question more often.",
+    "Your answers can be different. There is no right answer here."
+   ],
+   "button": "Show me an example"
+  }
+ }
+}

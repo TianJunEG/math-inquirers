@@ -2,6 +2,7 @@
 import json, os, re, shutil, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import *  # noqa
+import habit_term as HT
 
 
 def _expr(s, env):
@@ -68,7 +69,7 @@ def build_practice(d):
     op = d['online_practice']
     od = outdir(d, 'practice')
     os.makedirs(os.path.join(od, 'data'), exist_ok=True)
-    items, pw = _prepare_items(op['items'])
+    items, pw = _prepare_items(HT.add_item(d, op['items']))      # inquiry habit: one 'explain your thinking' self-check item added; nothing else changes
     for w in pw: print('WARN  practice picture:', w)
     data = {'runner': 2, 'title': op['title'], 'level': d['level'], 'lesson': d['lesson_in_term'], 'term': d['term'], 'topic': op['topic'], 'items': items}
     json.dump(data, open(os.path.join(od, 'data', op['key'] + '.json'), 'w'), ensure_ascii=False)
