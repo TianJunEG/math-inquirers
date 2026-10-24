@@ -235,7 +235,7 @@
   window.__recover = auth.__recover;
   window.supabase = { createClient: function () { return {
     auth: auth, from: table,
-    rpc: function (name, args) { try { var r = rpcs[name](args || {}); save(); return Promise.resolve({ data: r, error: null }); } catch (e) { return Promise.resolve({ data: null, error: e.message ? e : err(String(e)) }); } }
+    rpc: function (name, args) { if (window.__NO_UI_SQL__ && /^(my_children_|list_ext_prices|child_session_overview|add_child_profile|update_child_birth_year|cancel_my_ext_order|admin_list_book|admin_list_children)/.test(name)) return Promise.resolve({ data: null, error: { message: 'Could not find the function public.' + name + ' in the schema cache', code: 'PGRST202' } }); try { var r = rpcs[name](args || {}); save(); return Promise.resolve({ data: r, error: null }); } catch (e) { return Promise.resolve({ data: null, error: e.message ? e : err(String(e)) }); } }
   }; } };
   db.users.push; // admin account for tests
   if (!db.users.some(function (u) { return u.email === 'owner@example.com'; })) { var o = { id: 'u-owner', email: 'owner@example.com', password: 'ownerpass1' }; db.users.push(o); db.parents.push({ id: o.id, email: o.email, full_name: 'Owner', family_code: 'OWNER1' }); save(); }

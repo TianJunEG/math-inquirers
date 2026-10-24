@@ -63,10 +63,11 @@
     var by = h('select', { id: 'cbirth' }, P.yearOptions(''));
     var l = h('select', { id: 'clevel' }, P.levelOptions(opts.defaultLevel || 1, opts.ages));
     var p = h('input', { type: 'password', id: 'cpin', inputmode: 'numeric', pattern: '[0-9]*', maxlength: 6, autocomplete: 'off', required: true });
+    var note = h('div');
     return h('form', { novalidate: true, id: 'add-child-form', onsubmit: function (ev) {
       ev.preventDefault();
-      if (!n.value.trim()) return opts.run(async function () { throw M.say('Please enter a first name or nickname.'); });
-      if (!/^[0-9]{4,6}$/.test(p.value)) return opts.run(async function () { throw M.say('The PIN must be 4 to 6 digits.'); });
+      if (!n.value.trim()) { M.notice(note, 'err', 'Please enter a first name or nickname.'); return n.focus(); }
+      if (!/^[0-9]{4,6}$/.test(p.value)) { M.notice(note, 'err', 'The PIN must be 4 to 6 digits.'); return p.focus(); }   // checked here so what was typed is not lost
       var year = by.value ? Number(by.value) : null;
       opts.run(function () {
         return year ? M.rpc('add_child_profile', { p_name: n.value, p_level: Number(l.value), p_pin: p.value, p_birth_year: year })
@@ -80,7 +81,7 @@
         h('p', null, h('label', { for: 'cbirth', text: 'Birth year (optional)' }), by),
         h('p', null, h('label', { for: 'clevel', text: 'Level' }), l),
         h('p', null, h('label', { for: 'cpin', text: 'PIN (4 to 6 digits)' }), p)),
-      h('button', { class: 'btn', type: 'submit', text: opts.submitText || 'Add child' }));
+      note, h('button', { class: 'btn', type: 'submit', text: opts.submitText || 'Add child' }));
   };
 
   /* Agreement tick-boxes for the types not yet granted. Returns { node, missing, collect() }.

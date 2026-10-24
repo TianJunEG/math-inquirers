@@ -38,7 +38,7 @@
       box.appendChild(h('p', { class: 'muted small', 'data-no-progress': '1', text: 'No answers have been sent yet. When ' + ch.display_name + ' presses Submit on a practice page, a short summary will show here.' }));
       return box;
     }
-    box.appendChild(h('p', { class: 'small muted', text: 'This shows what ' + ch.display_name + ' has done, not a score. Every child learns at their own pace, and a skipped question is a fine choice.' }));
+    box.appendChild(h('p', { class: 'small muted', text: 'This shows what ' + ch.display_name + ' has done. Every child learns at their own pace, and a skipped question is a fine choice.' }));
     rows.forEach(function (r) {
       var answered = Math.max(0, (r.n_auto || 0) - (r.n_skipped || 0));
       var bits = ['answered ' + answered + ' of ' + (r.n_auto || 0) + ' questions'];

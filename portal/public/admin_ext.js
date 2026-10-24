@@ -93,7 +93,7 @@
     var child = h('select', { id: 'grant-child' }, [h('option', { value: '' }, 'Choose a child')].concat(kids.map(function (k) { return h('option', { value: k.child_id }, k.display_name + ' (Level ' + k.level + ') | ' + k.parent_email); })));
     var level = h('select', { id: 'grant-level' }, LEVELS.map(function (l) { return h('option', { value: l }, 'Level ' + l); }));
     var fmt = h('select', { id: 'grant-format' }, FORMATS.map(function (f) { return h('option', { value: f }, M.FORMAT_SHORT[f]); }));
-    var note = h('input', { type: 'text', id: 'grant-note', maxlength: 200, placeholder: 'Why (for example: replacement, gift, trial)' });
+    var gbox = h('div'), note = h('input', { type: 'text', id: 'grant-note', maxlength: 200, placeholder: 'Why (for example: replacement, gift, trial)' });
     var table = !rows.length ? h('p', { class: 'empty muted', id: 'noAccess', text: 'No access rows yet.' }) : h('div', { class: 'scroll' }, h('table', { id: 'access' },
       th(['Child', 'Parent', 'Book', 'How', 'Status', 'Since', '']),
       h('tbody', null, rows.map(function (r) {
@@ -108,13 +108,13 @@
         h('p', { class: 'small muted', text: 'For a gift or a fix. For a paid order use Book orders, then "Mark paid and give access". One grant is for one child.' }),
         h('form', { novalidate: true, id: 'grant-form', onsubmit: async function (ev) {
           ev.preventDefault();
-          if (!child.value) return ctx.reload({ err: 'Please choose a child.' });
-          if (!note.value.trim()) return ctx.reload({ err: 'Please give a short reason.' });
+          if (!child.value) return M.notice(gbox, 'err', 'Please choose a child.');
+          if (!note.value.trim()) return M.notice(gbox, 'err', 'Please give a short reason.');
           var x = await sb().rpc('admin_grant_book_access', { p_child: child.value, p_level: Number(level.value), p_format: fmt.value, p_note: note.value.trim() });
           ctx.reload(x.error ? { err: M.errText(x.error) } : 'Access given.'); } },
           h('div', { class: 'grid2' }, h('p', null, h('label', { for: 'grant-child', text: 'Child' }), child), h('p', null, h('label', { for: 'grant-level', text: 'Book level' }), level),
             h('p', null, h('label', { for: 'grant-format', text: 'What' }), fmt), h('p', null, h('label', { for: 'grant-note', text: 'Reason' }), note)),
-          h('button', { class: 'btn', type: 'submit', text: 'Give access' }))),
+          gbox, h('button', { class: 'btn', type: 'submit', text: 'Give access' }))),
       h('section', { class: 'card' }, h('h2', { text: rows.length + ' access rows' }), table));
     M.stack(ctx.app);
   } });

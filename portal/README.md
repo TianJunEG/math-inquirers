@@ -103,3 +103,23 @@ python3 portal/tools/gen_groups_seed.py --check  # seed file matches beta_schedu
 
 ## Posted workbook delivery (November beta)
 The beta workbook is printed and posted to each family. The delivery name, address, postal code and phone, and the delivery consent, are collected on the WhatsApp registration form of the site (`website/lp_build.py`), not in this portal. The portal sign-up does not collect them yet: adding them needs new columns on `parents` (address, postal code), a delivery consent type and an admin view, so it is not a simple change. Until then, portal families send the delivery details on WhatsApp. Staff use `docs/printing/dispatch_list.md`. Terms and privacy versions in `public/common.js` were bumped for the new delivery wording.
+
+## Portal screens (online practice, extension books, trial classes) - DRAFT, not deployed
+
+Added 24 Oct 2026 on top of the draft schema `supabase/practice_submissions.sql`. Nothing is deployed or applied; tested only against the mocked Supabase and a throwaway local Postgres. Full status: `docs/portal_ui_status.md`.
+
+| Screen | Page | File |
+|---|---|---|
+| Sign up / log in (email + password, magic link) and the **Agreements** card split by family type (online / live / both) | `/portal/` | `public/app.js`, `public/common.js` (`MI.CONSENTS`) |
+| Add child profile (first name or nickname, optional birth year, level, PIN), works without any enrolment | `/portal/children/` (first child), `/portal/` | `public/parent.js` (`childForm`) |
+| My children: what each child can open, links to practice pages, parent progress summary (counts only) | `/portal/children/` | `public/children.js` |
+| Child sign-in (family code + name + PIN via `child_start_session`) and the child's practice list | `/portal/child/`, `/portal/practice/` | `public/child.js`, `public/practice.js` |
+| Buy an extension book (level, option, child, Singapore address for printed options) | `/portal/books/` | `public/books.js` |
+| Trial class request for any parent | `/portal/trial/` | `public/trial.js` |
+| Admin tabs: Book orders (mark paid, shipping, prices), Access, Trials and previews, Funnel, Group report | `/portal/admin/` | `public/admin_ext.js` (hooked into `public/admin.js`) |
+
+**SQL order** (Supabase SQL editor, scratch project first): `schema.sql`, `policies.sql`, `seed_groups.sql`, `practice_submissions.sql`, **`portal_ui.sql`** (new: optional birth year, price list, entitlement and overview functions, cancel order, owner helpers, tutor group report helpers). Optional: `preview_class.sql` (the preview rows in the Trials tab).
+
+**Tests**: `python3 portal/tests/portal_ui_test.py` (Playwright, mocked Supabase, flow: sign up, add child, buy online-only, admin marks paid, child signs in and sees units; no entitlement, sibling, expired session, Stripe button hidden, 375px, dark mode, labels, CSP) and `bash portal/supabase/test/run_sql_test.sh` (now also `test/portal_ui_test.sql`). `python3 portal/tests/frontend_test.py` still passes (updated for the new card text and for child sign-in needing the online practice agreement).
+
+**Rules kept**: prices only from `ext_prices` (empty = "Price coming soon" + "Ask us" WhatsApp link); a new order is `pending_payment` with an `MI-XXXXXX` PayNow reference; the card button appears only when `PAYMENT_MODE` is `stripe` (it posts to `/api/stripe-create-ext-checkout`, which is **not written yet**); no scores, ranks, streaks or times anywhere; the practice list shows only units the database says the child may open; connect-src stays self + Supabase.
