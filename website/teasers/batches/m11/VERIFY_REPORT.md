@@ -6,27 +6,20 @@ Method: every puzzle is re-solved by `brute.py` (independent of the author solve
 |---|---|---|---|---|---|---|
 | 1 | 30 | 29 | 2 | 21 | 3 | 30 |
 | 2 | 30 | 30 | 1 | 23 | 3 | 30 |
-| 3 | 30 | 30 | 1 | 22 | 3 | 30 |
+| 3 | 30 | 30 | 1 | 23 | 2 | 30 |
 | 4 | 30 | 28 | 2 | 23 | 2 | 30 |
 | 5 | 30 | 30 | 1 | 21 | 3 | 30 |
 | 6 | 30 | 25 | 3 | 21 | 3 | 30 |
 
-Sources searched (whole working tree, tracked or not): 6655 files, 1357.2 MB, sha256 b1b4de7d8f2e476ff5e96915.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 178, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 282, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
+Sources searched (whole working tree, tracked or not): 6664 files, 1357.7 MB, sha256 c17c2fa611467bda52942393.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 289, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
 
 Similarity sources checked: holiday banks, own term lessons, all extension workbook data, the school booklets, our book drafts and catalogues, external private source files, and the seven fixed website puzzles.
 
-FAIL count: 10. REVIEW items: 105.
+FAIL count: 3. REVIEW items: 105.
 
-- FAIL L1-marblegame [11-26]: doubled word "sweets sweets" in why
-- FAIL L2-cyclerace [11-24]: doubled word "riders riders" in why
-- FAIL L3-magic [11-25]: same story as a source: rule N (the question's numbers and the answer all in one source window): ['3', '4', '5', '6', '7', '8', '9'] with the shared story words: "* Drawn diagrams on the sneak-peek (check) slides, which the re-audit says were missing in L1, L3, L ..." (docs/audit/reaudit_fixes_p5.md) words already,diagonal,empty
-- FAIL L3-albumpages [11-26]: forbidden word in q: photo
-- FAIL L4-signcard [11-08]: shares a 7-word run with holiday: "gap so that the answer is 7"
-- FAIL L4-wheelcount [11-18]: doubled word "tricycles tricycles" in why
-- FAIL L5-juicebottle [11-22]: shares a 7-word run with external: "g what is the mass of the"
-- FAIL L6-clockafter [11-06]: arithmetic in why is wrong: 250 / 12 = 20
-- FAIL L6-flagcloth [11-10]: shares a 7-word run with external: "cm what is the area of the"
-- FAIL L6-juicecups [11-30]: same story as a source: same objects (3 of 4 story words) and 3 same numbers: "| 11 | H5 stretch 4, challenge 1, 8 | Medium | painting the whole outside of a 3 x 4 x 5 cuboid, 96  ..." (docs/terms/l5_preflight.md) words litre,paint,pour
+- FAIL L2-canoetrips [11-21]: same story as a source: rule N (the question's numbers and the answer all in one source window): ['3', '6', '7', '9'] with the shared story words: "- L7: exit rebuilt (hexagon, 6 sides and 6 corners); house image and row heights fixed so Q2 stays o ..." (docs/audit/fixpass_p1.md) words cross,far,fewest,side
+- FAIL L5-digitsum36 [11-13]: shares a 7-word run with holiday: "are all different and add up to"
+- FAIL L5-digitsum36 [11-13]: shares a 7-word run with the extension workbooks: "are all different and add up to"
 
 - REVIEW L1-racerun [11-02]: story words 3 of 5 like "| Schema valid (JSON Schema + key checks) | PASS | all top-level keys, schema 2020-12, ide ..." (term/l1/AUDIT_L11.md)
 - REVIEW L1-secret63 [11-04]: number 2 in the question is not a parameter (written in the wording; check)
@@ -62,8 +55,9 @@ FAIL count: 10. REVIEW items: 105.
 - REVIEW L2-ticketnotes [11-16]: rule B: 3 of the same numbers ['3', '30', '5'] as "| Prelim | 2023 | ACSJ | P1-27 | 2 | Rice prices at four stalls: lowest and high ..." (docs/books/private_p6_papers/non_routine_questions.md)
 - REVIEW L2-plankcuts [11-17]: rule B: 3 of the same numbers ['20', '5', '7'] as "The two step sides are marked a (across) and b (down)." style="width:100%;max-wi ..." (practice/holiday/p4/07/dist/data/p4l07.json)
 - REVIEW L2-digitcards3 [11-22]: rule B: 3 of the same numbers ['3', '5', '8'] as "- **Think harder (4).** (1) Put 37%, 3/8, 0.38 and 2/5 in order from the smalles ..." (docs/terms/l5_preflight.md)
-- REVIEW L2-cyclerace [11-24]: story words 4 of 6 like "- Tier principle: PASS. Start here (S1 to S7) is P1 content: read a place from a picture,  ..." (term/l1/AUDIT_L11.md)
+- REVIEW L2-cyclerace [11-24]: rule B: 3 of the same numbers ['3', '30', '4'] as "| Prelim | 2022 | MGS | B1-22 | 2 | tariff | 2 | 0 | Bicycle rental first hour t ..." (docs/books/private_p6_papers/non_routine_questions.md)
 - REVIEW L2-lanternring [11-29]: question has 56 words (limit 55)
+- REVIEW L3-cardkeep [11-08]: rule B: 4 of the same numbers ['16', '24', '36', '4'] as "Cut every part of 2/3 and 3/4 into smaller equal parts, so that there is room be ..." (practice/holiday/p3/06/dist/data/p3l06.json)
 - REVIEW L3-badmintonko [11-10]: number 2 in the question is not a parameter (written in the wording; check)
 - REVIEW L3-books [11-17]: rule B: 3 of the same numbers ['20', '24', '31'] as "Singapore public holidays (Google "Holidays in Singapore" calendar, 1 Nov-31 Dec ..." (docs/audit_final/schedule_and_calendar.md)
 - REVIEW L3-cardsorder [11-18]: number 52 in the question is not a parameter (written in the wording; check)
@@ -99,11 +93,11 @@ FAIL count: 10. REVIEW items: 105.
 - REVIEW L5-pumpjob [11-08]: story words 3 of 5 like "- [SA2_2020_StNicholas P1-13, 2m, Postage table by steps, diff 2] Postage rates by mass st ..." (docs/books/private_p5_papers/non_routine_questions.md)
 - REVIEW L5-queue5 [11-10]: story words 3 of 5 like "| Level 2 (ages 7-9) is the next most complete. Older levels read and write more on paper  ..." (docs/product/face_to_face_pilot_plan.md)
 - REVIEW L5-savingsinterest [11-11]: story words 5 of 7 like "(6) A story with a bank. - **Think harder (4).** (1) $2 000 at 3% a year for 4 years earns ..." (docs/terms/l5_preflight.md)
-- REVIEW L5-crossnet [11-12]: story words 5 of 8 like "today: 'Find out which shapes fold into a cube, find opposite faces on a dice net, and com ..." (p4/content/l8.js)
+- REVIEW L5-crossnet [11-12]: story words 5 of 8 like "The middle one folds between the ends, so B and D are opposite.", "The answer is D."], "sl ..." (practice/holiday/p4/08/dist/data/p4l08.json)
 - REVIEW L5-cubes [11-14]: number 1 in the question is not a parameter (written in the wording; check)
 - REVIEW L5-cubes [11-14]: story words 3 of 4 like "s+=f'<text x="{P(2,0,0)[0]:.0f}" y="{P(2,0,0)[1]+22:.0f}" font-size="22" font-weight="700" ..." (rebuild/p5_gaps.py)
 - REVIEW L5-spinners8 [11-15]: number 1 in the question is not a parameter (written in the wording; check)
-- REVIEW L5-cutcard [11-17]: rule B: 3 of the same numbers ['12', '4', '5'] as "P4-26 item 4 ribbon cut into equal pieces is `l5.js` "A ribbon 4.8 m long is cut ..." (docs/audit_final/p4_semester_booklets_audit.md)
+- REVIEW L5-cutcard [11-17]: rule B: 3 of the same numbers ['3', '4', '5'] as "| Prelim | 2025 | SCGS | P2-12 | 4 | String of rectangular lights along a 12 m w ..." (docs/books/private_p6_papers/non_routine_questions.md)
 - REVIEW L5-moneyleft [11-18]: rule B: 3 of the same numbers ['3', '50', '8'] as "**Same type, new numbers (round 1 accepted; listed so the owner can decide):** U ..." (extension/l2/AUDIT_ROUND2.md)
 - REVIEW L5-bracketmult [11-19]: story words 4 of 6 like "Counting the boxes shows a line that takes a shortcut. S1-05 (P5-05) Colour the Rocket 1 s ..." (school/p5/out/P5_S1_Answer_Key.pdf)
 - REVIEW L5-cornerscard [11-21]: rule B: 5 of the same numbers ['15', '4', '5', '6', '8'] as "| Where | Old | New | Tier change | | Bank Core C1 to C6 | formula items (12 and ..." (docs/audit/gifted_fixes_p5.md)
@@ -111,7 +105,6 @@ FAIL count: 10. REVIEW items: 105.
 - REVIEW L5-stairs60 [11-23]: number 3 in the question is not a parameter (written in the wording; check)
 - REVIEW L5-stairs60 [11-23]: number 3 in the question is not a parameter (written in the wording; check)
 - REVIEW L5-cavetour [11-25]: number 1445 in the question is not a parameter (written in the wording; check)
-- REVIEW L5-cavetour [11-25]: rule C: two four-word runs shared with "There is a 5-minute walk between stops. The tour starts at 9:15 am.', parts=[ P( ..." (extension/l2/author/u09.py): the tour starts at / tour starts at #
 - REVIEW L5-ropes [11-26]: story words 4 of 6 like "(a) Difference between longest and shortest. (b) Lindsy then used an equal length of all t ..." (docs/books/private_p4_papers/non_routine_questions.md)
 - REVIEW L5-bottleshare [11-27]: story words 4 of 5 like "Stand tall if it holds more than 1 ℓ. Crouch if it holds less.','Five minutes. Call: a tea ..." (rebuild/gen_p5l5.py)
 - REVIEW L5-town [11-28]: story words 3 of 4 like "- [EOY_2021_AiTong P1-10, 1m, Road map facing south-east, diff 3, pic] Car along Road S he ..." (docs/books/private_p5_papers/non_routine_questions.md)
@@ -129,7 +122,7 @@ FAIL count: 10. REVIEW items: 105.
 - REVIEW L6-primes100 [11-18]: number 1 in the question is not a parameter (written in the wording; check)
 - REVIEW L6-reverse [11-20]: rule C: two four-word runs shared with "(if time) Letter puzzle: AB + AB + AB = CAB. Each letter stands for a digit. ..." (outputs/print/Math_Inquirers_P3_Workbook_PRINT.pdf): each letter stands for / letter stands for a
 - REVIEW L6-phoneplan [11-21]: rule C: two four-word runs shared with "Phone plan A costs $15 a month plus 10¢ a minute. ..." (outputs/designed/Math_Inquirers_P5_Question_Bank.pdf): # a month plus / a month plus #
-- REVIEW L6-printers [11-26]: story words 4 of 6 like "| Prelim | 2021 | MGS | A-12 | 2 | tariff | 3 | 0 | Bicycle first 2 hours $3.50 every addi ..." (docs/books/private_p6_papers/non_routine_questions.md)
 - REVIEW L6-bin45 [11-29]: number 6 in the question is not a parameter (written in the wording; check)
 - REVIEW L6-bin45 [11-29]: number 0 in the question is not a parameter (written in the wording; check)
 - REVIEW L6-bin45 [11-29]: number 10 in the question is not a parameter (written in the wording; check)
+- REVIEW L6-juicecups [11-30]: rule B: 3 of the same numbers ['3', '4', '6'] as "After 15 litres more are poured in, it is 3/4 full. How many litres does the ful ..." (p4/content/l4.js)

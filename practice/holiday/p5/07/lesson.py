@@ -263,9 +263,10 @@ ITEMS = [
       steps=['Girls wearing glasses: 25% of 24 = 6.', 'Boys wearing glasses: 50% of 16 = 8.', 'Whole class: 6 + 8 = 14.'],
       src=['There are 40 pupils in a class. 60% of them are girls. 25% of the girls and 50% of the boys wear glasses. Fill in the table.']),
     D(id='5a', tier='core', no='5(a)', label='5(a)', type='fields', skill='percentage of a whole', answer=[35],
-      q='There are 40 pupils in a class. 14 of them wear glasses.\nWhat percentage of the whole class wear glasses? (Type just the number.)',
-      frame='{f1}% of the class', check=lambda: [pct_of_whole(14, 40)], hint='Write 14 out of 40 as a number out of 100. How many pupils are 10%?',
-      steps=['10% of 40 pupils is 4 pupils. 14 pupils is 3 tens of percent and a bit: 12 + 2.', '2 pupils is half of 4, which is 5%.', '30% + 5% = 35%. (Check: 35% of 40 = 14.)'],
+      q='There are 40 pupils in a class. 60% of them are girls. 25% of the girls and 50% of the boys wear glasses.\nWhat percentage of the whole class wear glasses? (Type just the number.)',
+      frame='{f1}% of the class', check=lambda: [pct_of_whole(pct(pct(40, 60), 25) + pct(40 - pct(40, 60), 50), 40)],
+      hint='First work out how many pupils wear glasses. Then write that number out of 40 as a number out of 100.',
+      steps=['Girls wearing glasses: 25% of 24 = 6. Boys wearing glasses: 50% of 16 = 8. In all 6 + 8 = 14 pupils wear glasses.', '10% of 40 pupils is 4 pupils. 14 pupils is 3 tens of percent and a bit: 12 + 2.', '2 pupils is half of 4, which is 5%.', '30% + 5% = 35%. (Check: 35% of 40 = 14.)'],
       src=['What percentage of the whole class wear glasses?']),
 
     # ================= Investigation: Is it always true? Test and explain
