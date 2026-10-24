@@ -127,12 +127,12 @@ Sources: `p6/content/l9.js`, `l10.js` (hand-written JS, so each question was ext
 Figures: code blocks, hexagon chains and both dot plots are drawn by the workbook's own `blocks()`, `hexChains()` and `FG.dotPlot()` (through the bridge); the same program list is drawn and run by `w5lib.run`. Spinner table, empty tables and the worked-example programs are svg. No coin or note images.
 Checkers (all independent): exact means with Fractions, median by sorting, mode by counting, missing values by searching, the block-program interpreter, brute force for primes/factors/sequences, clock by counting on, regular polygon by (n - 2) x 180 / n, probabilities by listing every equally likely outcome, and a search over all lists of five numbers that proves the Go further 'mean mystery' example is unique.
 
-| Lesson | Items | Auto-marked | Self-check (shown solution) | Paper-only | Open (no objective fact) | Variant families |
+| Lesson | Items | Auto-marked | Self-check (shown solution, paper-only included) | of which paper-only | Open (no objective fact) | Variant families |
 |---|---|---|---|---|---|---|
-| 9 Data Detectives | 59 | 52 | 6 | 1 (C2b plan a program, correct blocks shown) | 1 (C1 mean mystery) | 7 (672 combinations vs oracle) |
-| 10 Showcase Challenge | 37 | 29 | 4 | 2 (6a blocks plan, C2b spinner program) | 4 (Q5 plan, 6b tests, Exit slip, C1) | 10 (223 combinations vs oracle) |
+| 9 Data Detectives | 59 | 52 | 6 (5 compare + C2b) | 1 (C2b plan a program, correct blocks shown; counted inside the 6) | 1 (C1 mean mystery) | 7 (672 combinations vs oracle) |
+| 10 Showcase Challenge | 37 | 29 | 4 (2 compare + 6a + C2b) | 2 (6a blocks plan, C2b spinner program; counted inside the 4) | 4 (Q5 plan, 6b tests, Exit slip, C1) | 10 (223 combinations vs oracle) |
 
-Unavailable (no item at all): none. Scratch is never run in the page.
+Auto + self-check + open = items (59 and 37); the paper-only items are already inside self-check, so they are not added again. Unavailable (no item at all): none. Scratch is never run in the page.
 
 Not mirrored one-to-one, and why
 - L9 Q1(c) is a five-box card; the plus sign is not accepted by the shared matcher ('+1' is wrong), so the stem says to type just the number for above and a minus sign for below. L9 Q3 is a predict (choice) plus a new-mean (number) card for each of (a) to (d). Q4(e) is a fairness choice, a mean-or-median choice and an explain card; the print's "$22" is not repeated in the stem so no card shows 4(a)'s answer. Q5 trace table = four row cards (i at the start, item i, total at the end), then (a), the two-blocks choice and the new answer. Q6 (print: Take-home star, shown as "Bonus question"): mean, days hotter, the two blanks (choices) and what it says.
@@ -147,3 +147,5 @@ Open questions
 - Should L9 Investigation (a)/(b), T3, C2(a) and the L10 open planning items be marked by a tutor once submit-to-tutor is live (self-check or open now)?
 - The L10 'about 139' item is a five-way choice because a typed estimate (139, 140, 138.9) cannot be marked fairly; confirm.
 - The sb3 starter files for the L10 starters are not linked from the page.
+
+Week 5 audit fixes: L9 intro and hint no longer state 'total = mean x how many'; L10 2(a) hint softened; L10 C2(a) says the table shows the layout only (work on paper).

@@ -149,13 +149,39 @@ t('plus words off', pn(5, { words: true }), '+five', 'wrong');
 const tm = { marking_mode: 'auto', type: 'fields', key: [5, 25], time: [true, false] };
 for (const v of ['5:25', '5.25', '5 25', ' 5 : 25 ', '05:25', '5:25 ']) t('time first box ' + v, tm, [v, ''], 'right');
 t('time both boxes as before', tm, ['5', '25'], 'right'); t('time both boxes wrong minutes', tm, ['5', '30'], 'wrong'); t('time key 5:30 with 5:25 wrong', { ...tm, key: [5, 30] }, ['5:25', ''], 'wrong');
-t('time key 5:30 right', { ...tm, key: [5, 30] }, ['5:30', ''], 'right'); t('time 5:00 key', { ...tm, key: [5, 0] }, ['5:00', ''], 'right'); t('time 5:00 key hour only', { ...tm, key: [5, 0] }, ['5', ''], 'wrong');
+t('time key 5:30 right', { ...tm, key: [5, 30] }, ['5:30', ''], 'right'); t('time 5:00 key', { ...tm, key: [5, 0] }, ['5:00', ''], 'right'); t('time empty minutes box is 0 when the key minutes are 0', { ...tm, key: [5, 0] }, ['5', ''], 'right'); t('time empty minutes box is not 25', tm, ['5', ''], 'wrong'); t('time empty minutes box 0 key, other hour', { ...tm, key: [5, 0] }, ['6', ''], 'wrong');
 t('time wrong hour', tm, ['6:25', ''], 'wrong'); t('time one-digit minutes refused', tm, ['5:2', ''], 'wrong'); t('time in the second box only', tm, ['', '5:25'], 'wrong');
 t('time both boxes filled keeps a typed time as typed', tm, ['5:25', '25'], 'wrong'); t('time 3 digit refused', tm, ['5:255', ''], 'wrong');
 t('time without the flag is not split', { marking_mode: 'auto', type: 'fields', key: [5, 25] }, ['5:25', ''], 'wrong');
 t('time flag false in list', { ...tm, time: [false, false] }, ['5:25', ''], 'wrong');
 t('time in a later pair', { marking_mode: 'auto', type: 'fields', key: [9, 7, 25], time: [false, true, false] }, ['9', '7:25', ''], 'right');
 t('time both blank skipped', tm, ['', ''], 'skipped'); t('time slip still found', { ...tm, slips: [{ a: [5, 52], say: 'x' }] }, ['5:52', ''], 'wrong', { detail: { boxes: [true, false] }, slip: 0 });
+// colon pair boxes ({f1}:{f2}) are the same flag; unflagged pairs are not touched
+t('colon pair 7:05', { ...tm, key: [7, 5] }, ['7:05', ''], 'right'); t('colon pair 7:05 typed 7.05', { ...tm, key: [7, 5] }, ['7.05', ''], 'right'); t('colon pair unflagged', { marking_mode: 'auto', type: 'fields', key: [7, 0] }, ['7', ''], 'wrong');
+// money in cents: '65c' / '65 c' ok, '$65' is 65 dollars; without the cents flag a bare c stays refused and $ is ignored as before
+const cn = pn(65, { cents: true });
+for (const v of ['65', '65c', '65 c', '65¢', '65 cents', '65C']) t('cents ' + v, cn, v, 'right');
+for (const v of ['$65', '$ 65', '0.65', '$0.65', '0.65 dollars', '6.5c', '650c', 'c65']) t('cents wrong ' + v, cn, v, 'wrong');
+t('cents dollars_ok $0.65', pn(65, { cents: true, dollars_ok: true }), '$0.65', 'right'); t('cents dollars_ok 0.65 dollars', pn(65, { cents: true, dollars_ok: true }), '0.65 dollars', 'right'); t('cents dollars_ok still refuses $65', pn(65, { cents: true, dollars_ok: true }), '$65', 'wrong');
+t('cents dollars_ok 0.65 dollar', pn(65, { dollars_ok: true }), '0.65 dollar', 'right'); t('0.65 dollars needs dollars_ok', pn(65), '0.65 dollars', 'wrong');
+t('dollar item keeps $20', pn(20), '$20', 'right'); t('no cents flag: bare c refused', pn(65), '65c', 'wrong');
+t('cents per box', { marking_mode: 'auto', type: 'fields', key: [3, 65], cents: [false, true] }, ['$3', '65c'], 'right'); t('cents per box $65', { marking_mode: 'auto', type: 'fields', key: [3, 65], cents: [false, true] }, ['3', '$65'], 'wrong');
+// natural forms: one leading label word, ordinals, hyphenated unit, .0
+for (const [k, v] of [[5, 'Week 5'], [8, 'Day 8'], [9, 'Tower 9'], [15, '15th from the back'], [5, 'the digit 5'], [6, '6.0'], [30, '30 ice-creams'], [6, 'the 6th day'], [6, '6th'], [5, 'week 5']]) t('natural ' + v, pn(k), v, 'right');
+for (const [k, v] of [[5, 'Week 6'], [5, 'minus 5'], [5, 'not 5'], [5, 'Week 5 6'], [5, 'x y 5'], [5, '5 a b c d'], [15, '15th from the very back of it'], [6, '6.5'], [5, 'Week five']]) t('natural wrong ' + v, pn(k), v, 'wrong');
+t('natural unit:false refuses Week 5', pn(5, { unit: false }), 'Week 5', 'wrong'); t('natural not for text', { marking_mode: 'auto', type: 'text', key: ['5'] }, 'Week 5', 'wrong');
+t('natural in a box', { marking_mode: 'auto', type: 'fields', key: [5, 9] }, ['Week 5', 'Tower 9'], 'right');
+t('fraction 3/8 full', { marking_mode: 'auto', type: 'fraction', key: '3/8' }, '3/8 full', 'right'); t('fraction label', { marking_mode: 'auto', type: 'fraction', key: '3/8' }, 'The fraction 3/8', 'right'); t('fraction 3/9 full', { marking_mode: 'auto', type: 'fraction', key: '3/8' }, '3/9 full', 'wrong');
+// ranges only where declared
+const rg = { marking_mode: 'auto', type: 'set', key: [1, 2, 3, 4, 5, 6, 7], ordered: false };
+for (const v of ['1-7', '1 to 7', '1 \u2013 7', '1,2,3,4,5,6,7']) t('range ' + v, { ...rg, range: true }, v, 'right');
+t('range off by default', rg, '1-7', 'wrong'); t('range wrong end', { ...rg, range: true }, '1-6', 'wrong'); t('range ends key', { marking_mode: 'auto', type: 'set', key: [1, 7], range: true }, '1-7', 'right'); t('range ends key off', { marking_mode: 'auto', type: 'set', key: [1, 7] }, '1-7', 'wrong');
+t('list 123, 124', { marking_mode: 'auto', type: 'set', key: [123, 124] }, '123, 124', 'right'); t('list 123 124', { marking_mode: 'auto', type: 'set', key: [123, 124] }, '123 124', 'right');
+t('text range', { marking_mode: 'auto', type: 'text', key: ['1-7'], range: true }, '1 to 7', 'right'); t('text range off', { marking_mode: 'auto', type: 'text', key: ['1-7'] }, '1 to 7', 'wrong');
+// superscripts equal ^ in expressions; cm² still equals cm2
+const sp = { marking_mode: 'auto', type: 'text', key: ['2^2 x 3 x 7'] };
+t('super 2', sp, '2² x 3 x 7', 'right'); t('super 3', { ...sp, key: ['2³ x 3'] }, '2^3 x 3', 'right'); t('super wrong', sp, '2³ x 3 x 7', 'wrong'); t('super vs 22', sp, '22 x 3 x 7', 'wrong'); t('key super typed plain 22 wrong', { ...sp, key: ['2² x 3'] }, '22 x 3', 'wrong');
+t('cm² key typed cm2', { marking_mode: 'auto', type: 'text', key: ['84 cm²'] }, '84 cm2', 'right'); t('n² key typed n^2', { marking_mode: 'auto', type: 'text', key: ['n²'] }, 'n^2', 'right');
 // the shared reading code is the same text in sheet.js and mark.js (they must agree on every answer)
 import { readFileSync } from 'node:fs';
 const blk = f => { const x = readFileSync(new URL(f, import.meta.url), 'utf8'); const a = x.indexOf('// BEGIN SHARED'), b = x.indexOf('// END SHARED'); assert.ok(a > 0 && b > a, f + ' has the shared block'); return x.slice(a, b); };

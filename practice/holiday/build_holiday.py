@@ -42,6 +42,8 @@ strings that must occur in the workbook source), plus by type
     number / fields: dollars_ok=True  '$0.48' is also right where the key is 48 (cents). DEFAULT off.
     fields: time=True | False  two adjacent boxes for hours and minutes: a whole time ('5:25', '5.25', '5 25') typed in the FIRST box with the second left empty is read as hours 5, minutes 25 (page and server). Set AUTOMATICALLY when the
                      boxes are labelled hours/minutes (h/min, hr/min); time=True without such labels uses the first two boxes; time=False switches the automatic setting off. A time typed in both boxes is read as typed ('5:25' for 5:30 stays wrong).
+    number / fields: cents=True an amount in cents: '65c' and '65 c' are right and '$65' (65 dollars) is not. Set AUTOMATICALLY for a number item whose stem or frame says cents / a cent sign, and for a box printed right before cents or a cent sign; cents=False switches it off.
+    set / text: range=True  '1-7', '1 to 7' stand for 1 to 7 (the run 1,2,...,7 or its two ends). DEFAULT off.
     text: accept_by=True  '6 by 6 square', '6 by 6', '6 x 6' (an optional 'a'/'the' and 'square'/'rectangle'/'cm') are right for a sides answer; a one-number key stands for n by n. DEFAULT off.
     svg (question figure) and sol_fig (callable(facts) -> svg of the correct drawing, built from the CHECKED values)
 
@@ -206,9 +208,18 @@ def time_boxes(it, nbox):
     for n in range(nbox - 1):
         if pos[n + 1] == pos[n] + 2 and lab(n, _HR) and lab(n + 1, _MN) and not lab(n, _MN) and not lab(n + 1, _HR):
             return n
+    TW = r"\b(?:time|clock|o['\u2019]?clock|hours?|minutes?|am|pm|a\.m\.|p\.m\.|morning|afternoon|evening|night|noon|midday|midnight|start|starts|finish|finishes|begin|begins|end|ends|arrive|arrives|leave|leaves|lasts?|bus|train|film|show|lesson|school)\b"
+    if t is None and not re.search(r'\bratio|\bscore|\bdecimal', it.get('q', ''), re.I) and re.search(TW, it.get('q', '') + ' ' + re.sub(r'\{f\d+\}', ' ', it['frame']), re.I):
+        for n in range(nbox - 1):          # '{f1}:{f2}' in a question about time
+            if pos[n + 1] == pos[n] + 2 and parts[pos[n] + 1].strip() == ':':
+                return n
     if t:
         return 0
     return None
+
+
+def cents_text(txt):
+    return bool(re.search(r"\u00a2|(?<![-\w])cents?\b", txt, re.I))
 
 
 def make_item(src):
@@ -241,6 +252,14 @@ def make_item(src):
         out['accept_by'] = True
     if t == 'number' and clock_flag(it):
         out['clock'] = True
+    if t == 'number' and (it['cents'] if it.get('cents') is not None else cents_text(it.get('q', '') + ' ' + it.get('frame', ''))):
+        out['cents'] = True                       # an amount in cents: '65c' / '65 c' are right, '$65' (65 dollars) is not
+    if it.get('cents') and t not in ('number', 'fields'):
+        raise Fail(f'{i}: cents=True is only for number and fields items')
+    if it.get('range'):                           # '1-7' / '1 to 7' read as a range (default off)
+        if t not in ('set', 'text'):
+            raise Fail(f'{i}: range=True is only for set and text items')
+        out['range'] = True
     if it.get('time') and t != 'fields':
         raise Fail(f'{i}: time=True is only for fields items')
     if it.get('label'):
@@ -300,6 +319,9 @@ def make_item(src):
             for n, f in enumerate(out['fields']):
                 if 1 <= f['answer'] <= 12 and (re.search(r"\{" + f['id'] + r"\}\s*o['\u2019]?clock", it['frame'], re.I) or (len(out['fields']) == 1 and clock_flag(it))):
                     f['clock'] = True
+        for f in out['fields']:           # a box followed by cents / a cent sign holds an amount in cents
+            if it.get('cents') is True or (it.get('cents') is None and re.search(r'\{' + f['id'] + r'\}\s*(?:\u00a2|cents?\b)', it['frame'], re.I)):
+                f['cents'] = True
         th = time_boxes(it, nbox)
         if th is not None:                # hours box followed by a minutes box: '5:25' typed in the hours box alone is 5 h 25 min
             if not (0 <= out['fields'][th]['answer'] <= 24 and 0 <= out['fields'][th + 1]['answer'] <= 59):
@@ -393,6 +415,12 @@ def build(key, n, dist=None, endpoint=None):
     exact, reword = mirror_report(srcitems, items, cp)
     report = B.attach_variants(items, getattr(m, 'VARIANTS', {}))
     attach_variant_figs(items, getattr(m, 'VARIANTS', {}))
+    for o in items:                   # a variant of a time item brings the same hours-box flags ('5:25' in the first box)
+        tp = o.get('tpl')
+        if o['type'] == 'fields' and tp and tp.get('answers'):
+            fl = {f['id']: bool(f.get('time')) for f in o['fields']}
+            if any(fl.values()):
+                tp['time'] = [fl.get(k, False) for k in tp['answers']]
     lk = f'{key}l{n:02d}'
     data = dict(runner=2, title=meta['title'], level=meta['level'], lesson=n, unit_label=f'Holiday lesson {n}', topic=meta['topic'],
                 source=meta['sources'], items=items)

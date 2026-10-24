@@ -132,12 +132,12 @@ Build: `python3 practice/holiday/build_holiday.py p4 9` (and `p4 10`); test: `py
 
 | | Lesson 9 Data Detectives | Lesson 10 Puzzle Day |
 |---|---|---|
-| Items | 47 | 34 |
+| Items | 47 | 35 |
 | Auto-marked | 39 | 29 |
-| Self-check with a model answer | 5 | 4 |
+| Self-check with a model answer | 5 | 5 (incl. the paper-only Inv (c) list) |
 | Open (make up your own) | 0 | 1 (G7 make) |
-| Paper-only (drawing, correct graph shown after submit) | 3 (Inv easy plot, Inv (b) draw, G7 draw) | 0 |
-| Variant families (all combinations run against an oracle) | 11 (475) | 11 (312) |
+| Paper-only (drawing or list on paper; counted inside self-check) | 3 (Inv easy plot, Inv (b) draw, G7 draw) | 1 (Inv (c) list) |
+| Variant families (all combinations run against an oracle) | 11 (475) | 11 (282) |
 | Question text as printed / reworded to fit one screen | 14 / 33 | 11 / 23 |
 
 Independent checkers: changes between days, row and column totals solved from the printed totals, first week one line is above the other, equal-step tables found by searching the step, the share of the graph's height a rise fills for each scale (L9); next-door products, every pen/notebook split, every heads-and-legs split, all 24 food orders, all age orders, stories run forwards from every start, queue places, ring-toss totals built by a table (L10). The printed keys agree.
@@ -151,9 +151,9 @@ Not mirrored, or mirrored differently:
 - L9 G7 (same idea for 52, 54, 56, 58) mirrored the same way; G5 asks Teams A, B and C only (Team D is given).
 - L9 T2 and T3 repeat their short setup in two cards; T1 is a number card (girls in 4B) and the comparison choice.
 - L10 Q1(b) take-home (find ALL the ways) is three cards: the money-left table, the numbers of notebooks that work, the pens in each way (fewest notebooks first); the count of ways is never given. Q4 the food puzzle is four choice cards (one per child) sharing the clue card; the printed tick grid is not drawn (nothing to tick on screen). Q2(c) adds "a car has 4 wheels and a motorcycle 2" (the print assumes it).
-- L10 Investigation (a) asks for the scores you can NOT get (the complement of the printed "list those you can"); (b) is the score after which every score works, plus a self-check; (c) set of impossible scores for 4 and 6 plus a self-check.
+- L10 Investigation (a) asks for the scores you can NOT get (the complement of the printed "list those you can"); (b) is the score after which every score works, plus a self-check; (c) a paper list of the impossible scores for 4 and 6 (self-check), a number card (how many of them: 11) and a self-check explanation.
 - L10 G5 (c) "Explain" is a choice plus a self-check; G7 is a choice (could the farmer be right), a self-check, and the open make-up-your-own puzzle (model given).
 
 Open questions:
 - Graph points are read from minor grid lines (every 5), as printed; check readability on a real phone.
-- Set cards of 11 numbers (L10 Inv (c)) are long to type.
+- Week 5 audit fixes: L9 Inv (b)/G7 choices now say the number of lines and that the graphs are the same height; the L10 11-number list is now a paper list plus a marked count; L10 Q6 ages capped.

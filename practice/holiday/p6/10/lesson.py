@@ -121,7 +121,7 @@ A(dict(id='1d2', tier='core', no='1(d) chain', type='number', strand=PC, skill='
 A(dict(id='2a', tier='core', no='2(a)', type='number', strand=PR, skill='factors and primes', answer=49, label='Bonus 2(a)',
        q='Bonus question. Prime hunters. I have 2 digits and exactly 3 factors. My digits add up to 13. What number am I?',
        check=lambda: (lambda c: c[0] if len(c) == 1 else None)([n for n in range(10, 100) if len(W.factors(n)) == 3 and sum(int(d) for d in str(n)) == 13]),
-       hint='A number with exactly 3 factors is a prime multiplied by itself. Which two-digit numbers like that are there?',
+       hint='Try a few small numbers and count their factors. What do the numbers with exactly 3 factors have in common?',
        steps=['The 2-digit numbers with exactly 3 factors are 25 (1, 5, 25) and 49 (1, 7, 49).', 'The digits of 25 add up to 7. The digits of 49 add up to 4 + 9 = 13.', 'I am 49.'],
        src=['I have 2 digits and exactly 3 factors. My digits add up to 13. What am I?']))
 A(dict(id='2b', tier='core', no='2(b)', type='set', strand=PR, skill='prime factorisation', answer=[2, 2, 3, 7], label='Bonus 2(b)',
@@ -330,9 +330,9 @@ A(dict(id='C1', tier='challenge', no='C1', type='selfcheck', open=True, marking_
               f'Example (sequences and multiples): "The nth term of a sequence is 7n {M} 3. Which is the first term that is a multiple of 5?" The terms are 4, 11, 18, 25, so it is the 4th term, 25.'],
        src=['Make up a challenge question that mixes TWO topics from the programme']))
 A(dict(id='C2a', tier='challenge', no='C2(a)', type='text', strand=DC, skill='probability from a table of outcomes', accept=['1/8', '8/64'], shown='1/8', equiv_frac=True, svg=FIG_GRID, label='C2(a)',
-       q='A spinner has the numbers 1 to 8, all equally likely. Ravi spins it twice and adds the numbers. What is the probability that the total is 9? Type a fraction.',
+       q='A spinner has the numbers 1 to 8, all equally likely. Ravi spins it twice and adds the numbers. What is the probability that the total is 9? Type a fraction. (The table shows the layout only: you cannot type into it, so work on paper if you want to fill it in.)',
        check=lambda: str(Fraction(sum(1 for a, b in SPIN_PAIRS if a + b == 9), len(SPIN_PAIRS))),
-       hint='Fill in the table of totals, or list the pairs that make 9. How many pairs are there altogether?',
+       hint='Work out the totals on paper, or list the pairs that make 9. How many pairs are there altogether?',
        steps=['There are 8 x 8 = 64 equally likely pairs.', 'The pairs that make 9 are 1 + 8, 2 + 7, 3 + 6, 4 + 5, 5 + 4, 6 + 3, 7 + 2 and 8 + 1: 8 pairs.', 'The probability is 8/64 = 1/8.'],
        src=['A spinner has the numbers 1 to 8, all equally likely. Ravi spins it twice and adds the numbers. What is the probability that the total is 9?']))
 NINES = [

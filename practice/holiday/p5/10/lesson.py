@@ -177,9 +177,18 @@ def names_accepts(order):
 LOGIC = logic_solutions()
 assert LOGIC == {'Ali': 'chicken rice', 'Ben': 'laksa', 'Mei': 'satay', 'Siti': 'roti prata'}
 
+def list_fig(nums, per=5):
+    rows = [nums[i:i + per] for i in range(0, len(nums), per)]
+    w, lh = 330, 26
+    b = Re(2, 2, w - 4, len(rows) * lh + 40, '#FFF9E8', '#1B2A55', 2, 8) + T(14, 24, 'The 3-digit numbers (digit sum 5), in order:', 14, 'start', 800)
+    for k, r in enumerate(rows):
+        b += T(14, 52 + k * lh, ',  '.join(map(str, r)) + (',' if k < len(rows) - 1 else ''), 15, 'start', 600)
+    return svg(w, len(rows) * lh + 44, b, 'The 3-digit numbers whose digits add up to 5, in order: ' + ', '.join(map(str, nums)) + '.')
+
+
 CLUE_Q = 'Logic puzzle. Ali, Ben, Mei and Siti each ordered a different dish at a hawker centre. Use the clues in the card.'
 BACK_Q = 'Working backwards. Ali spent 1/3 of his money on a book. He then spent $12 on lunch. He spent half of what was left on a gift. Ali had $15 left at the end.'
-MODEL_Q = 'Draw a model. Mei and Ravi have $115 altogether. Ravi has $10 more than 3/4 of Mei’s money.'
+MODEL_Q = 'Use a bar model. Mei and Ravi have $115 altogether. Ravi has $10 more than 3/4 of Mei’s money.'
 VASE_Q = 'Ali, Ben and Mei were playing. One of them broke a vase. Ali says, “Ben broke it.” Ben says, “Mei broke it.” Mei says, “I did not break it.”'
 AGE_Q = 'Mum is 41 years old and Mei is 9 years old.'
 STAIR_Q = 'Ali climbs a staircase and takes either 1 step or 2 steps at a time.'
@@ -193,7 +202,7 @@ def person_item(iid, name, no, label):
               'Mei': 'Roti prata is for a girl, and clue 4 says it is not Mei, so Siti has it. Ali and Ben have chicken rice and laksa, so Mei has the satay.',
               'Siti': 'Clue 2 says a girl ordered the roti prata, so it is Mei or Siti. Clue 4 rules out Mei, so Siti ordered the roti prata.'}[name]
     return D(id=iid, tier='core', no=no, label=label, type='choice', skill='logic grid', options=list(DISHES), answer=ans, q=CLUE_Q + f'\nWhat did {name} order?', svg=G.clue_card(),
-             check=lambda: LOGIC[name], hint='Find a clue that tells you something for sure. Cross out what each child cannot have.',
+             check=lambda: LOGIC[name], hint='Find a clue that tells you something for sure. Rule out what each child cannot have.',
              steps=[others, 'Check every clue: ' + '; '.join(f'{n} {LOGIC[n]}' for n in PEOPLE) + '. All four clues are true.'],
              src=['Logic grid. Ali, Ben, Mei and Siti each ordered a different dish at a hawker centre.', 'Clue 1:  Ali did not order laksa or satay.'])
 
@@ -213,7 +222,7 @@ ITEMS = [
       src=['Working backwards. Ali spent 1/3 of his money on a book. He then spent $12 on lunch. He spent half of what was left on a gift. Ali had $15 left at the end. How much money did he start with?']),
     D(id='2s', tier='core', no='2 (steps)', label='2 steps', type='fields', skill='working backwards', answer=[30, 42],
       q=BACK_Q + '\nUndo the steps in reverse order, starting from the end. How much did Ali have just before the gift, and just before lunch? (Type the number of dollars.)', svg=G.backwards_fig(),
-      frame='Before the gift: $ {f1}     Before lunch: $ {f2}', check=lambda: [2 * 15, 2 * 15 + 12], hint='He spent half of what was left on the gift, so the $15 he had at the end is the other half.',
+      frame='Before the gift: $ {f1}     Before lunch: $ {f2}', check=lambda: [2 * 15, 2 * 15 + 12], hint='He spent half of what was left on the gift, so think about what he had before the gift and what he had at the end.',
       steps=['The gift was half of what he had before it, so the other half, $15, is what he had left. Before the gift he had 15 × 2 = $30.', 'Before the gift he had spent $12 on lunch, so before lunch he had 30 + 12 = $42.'],
       src=['write the steps in order. Then undo the LAST step first.']),
 
@@ -326,18 +335,25 @@ ITEMS = [
       check=lambda: siti_start(24), hint='Work backwards. $24 is what fraction of the money she had after the first spending?',
       steps=['After spending 2/5 she had 3/5 of her money. Then she spent 1/3 of that, so 2/3 of it was left: $24.', '2/3 of what she had is $24, so that was $24 ÷ 2 × 3 = $36.', '$36 is 3/5 of her money, so 1/5 is $12 and she started with $60.', 'Check: 60 − 24 = 36, and 36 − 12 = 24.'],
       src=['Siti spent 2/5 of her money, then 1/3 of what was left. She had $24 left at the end. How much did she start with?']),
-    D(id='A2l', tier='stretch', no='A2 list', label='A2 list', type='set', ordered=True, grouped=False, skill='listing in order', answer=three_digit_sum(5),
-      q='List all the 3-digit numbers whose digits add up to 5, in order from the smallest. (Type them with commas.)', check=lambda: three_digit_sum(5),
+    D(id='A2l', tier='stretch', no='A2 list', label='A2 list', type='selfcheck', paper=True, skill='listing in order', check=lambda: three_digit_sum(5), sol_fig=lambda f: list_fig(three_digit_sum(5)),
+      paper_note='Write your list on paper, in order from the smallest, then check it against the list shown on screen. (There is nothing to type here: the next two cards are marked.)',
+      q='List all the 3-digit numbers whose digits add up to 5, in order from the smallest. Write them on paper.',
       hint='Start with the smallest hundreds digit and list the numbers for it in order. Then move on to the next hundreds digit.',
       steps=['The numbers are ' + ', '.join(map(str, three_digit_sum(5))) + '.', 'Work through the hundreds digit 1, 2, 3, 4 and 5 in turn.'],
       src=['How many 3-digit numbers have digits that add up to 5? List them all in order.']),
     D(id='A2n', tier='stretch', no='A2 how many', label='A2 count', type='number', skill='counting every case', answer=15,
-      q='Do the list question first. How many 3-digit numbers have digits that add up to 5? (Type the number.)', check=lambda: len(three_digit_sum(5)),
+      q='How many 3-digit numbers have digits that add up to 5? (Type the number. Your list on the card before helps.)', check=lambda: len(three_digit_sum(5)),
       hint='Count the numbers in your list.', steps=['Hundreds digit 1 gives 5 numbers, 2 gives 4, 3 gives 3, 4 gives 2 and 5 gives 1.', '5 + 4 + 3 + 2 + 1 = 15 numbers.'],
       src=['How many 3-digit numbers have digits that add up to 5?']),
+    D(id='A2e', tier='stretch', no='A2 ends', label='A2 ends', type='fields', skill='listing in order', answer=[three_digit_sum(5)[0], three_digit_sum(5)[-1]],
+      frame='The smallest is {f1} and the biggest is {f2}', check=lambda: [three_digit_sum(5)[0], three_digit_sum(5)[-1]],
+      q='Look at your list of 3-digit numbers whose digits add up to 5. What are the smallest and the biggest number in the list?',
+      hint='The smallest has the smallest hundreds digit. The biggest has the biggest hundreds digit.',
+      steps=['The smallest has hundreds digit 1 and the other digits as big as possible at the end: 104.', 'The biggest has hundreds digit 5: 500.'],
+      src=['How many 3-digit numbers have digits that add up to 5? List them all in order.']),
     D(id='A3', tier='stretch', no='A3', label='A3', type='fields', skill='consecutive numbers', answer=[72, 73],
       q='The sum of two consecutive numbers (numbers that are next to each other, like 40 and 41) is 145.\nWhat are the two numbers? (Type the smaller number first.)', frame='The numbers are {f1} and {f2}', check=lambda: list(consecutive(145)),
-      hint='Two numbers next to each other: one is 1 more than the other. Take the 1 away first and share what is left.',
+      hint='Two numbers next to each other: one is 1 more than the other. Think about how the two numbers are related.',
       steps=['The bigger number is 1 more than the smaller one.', '145 − 1 = 144, and 144 ÷ 2 = 72, so the smaller number is 72.', 'The numbers are 72 and 73. Check: 72 + 73 = 145.'],
       src=['The sum of two consecutive numbers (numbers that are next to each other, like 40 and 41) is 145. What are the two numbers?']),
     D(id='A4', tier='stretch', no='A4', label='A4', type='number', skill='a repeating climb', answer=8,
@@ -427,7 +443,7 @@ VARIANTS = {
     '3': dict(
         base=dict(u=15, e=10),
         tpl=dict(vars=dict(u=[10, 15, 20, 25], e=[5, 10, 15, 20]), derive=dict(T='7 * u + e'),
-                 q='Draw a model. Mei and Ravi have ${T} altogether. Ravi has ${e} more than 3/4 of Mei’s money.\nHow much money does each have? (Type the number of dollars.)',
+                 q='Use a bar model. Mei and Ravi have ${T} altogether. Ravi has ${e} more than 3/4 of Mei’s money.\nHow much money does each have? (Type the number of dollars.)',
                  frame='Mei: $ {f1}     Ravi: $ {f2}', answers=dict(f1='4 * u', f2='3 * u + e'),
                  hint='Mei is 4 equal units. How many units is 3/4 of Mei’s? Where does the ${e} go?',
                  steps=['Mei is 4 units. Ravi is 3 of the same units and ${e} more.', '7 units + ${e} = ${T}, so find 1 unit.', 'Mei and Ravi have {ans} dollars (Mei first).']),
@@ -470,7 +486,7 @@ VARIANTS.update({
         base=dict(a=72),
         tpl=dict(vars=dict(a=[48, 60, 72, 85, 99]), derive=dict(S='2 * a + 1'),
                  q='The sum of two consecutive numbers (numbers that are next to each other) is {S}.\nWhat are the two numbers? (Type the smaller number first.)', frame='The numbers are {f1} and {f2}',
-                 answers=dict(f1='a', f2='a + 1'), hint='Two numbers next to each other: one is 1 more than the other. Take the 1 away first and share what is left.',
+                 answers=dict(f1='a', f2='a + 1'), hint='Two numbers next to each other: one is 1 more than the other. Think about how the two numbers are related.',
                  steps=['The bigger number is 1 more than the smaller one.', 'Take 1 away from {S} and share it between two equal numbers. The numbers are {ans}.']),
         oracle=_o_a3),
     'A4': dict(

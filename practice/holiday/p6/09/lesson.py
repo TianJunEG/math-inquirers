@@ -18,7 +18,7 @@ import w5lib as W       # noqa: E402
 M = W.MINUS
 META = dict(level=6, lesson=9, key='p6', title='Data Detectives', workbook_title='DATA DETECTIVES', topic='Averages and Data', strand='Data and averages',
             sources=['p6/content/l9.js', 'p6/content/gaps.json'],
-            intro=['You do not need Scratch on this page. The mean (the average) is the total divided by how many values there are. Turn it round: total = mean x how many values.',
+            intro=['You do not need Scratch on this page. The mean (the average) is the total divided by how many values there are.',
                    'The median is the middle value when the numbers are in order. The mode is the value that appears most often.',
                    'Code is drawn as blocks so you can follow it; you never need to run it here.'])
 ME, CO = 'Mean and total', 'Data and code'
@@ -126,7 +126,7 @@ A(dict(id='1d', tier='core', no='1(d)', type='number', strand=ME, skill='values 
 A(dict(id='2a', tier='core', no='2(a)', type='number', strand=ME, skill='total from a mean', answer=68, label='2(a)',
        q='Siti played 4 games. Her mean score was 17. Her first three scores were 15, 20 and 14. What was her total for the 4 games?',
        check=lambda: SIT_MEAN * 4,
-       hint='Mean x how many values gives the total.',
+       hint='How are the mean, the total and how many values linked?',
        steps=['The total is the mean x the number of games.', '17 x 4 = 68.', 'Her total for the 4 games was 68.'],
        src=['Siti played 4 games. Her mean score was 17. Her first three scores were 15, 20 and 14.']))
 A(dict(id='2b', tier='core', no='2(b)', type='number', strand=ME, skill='missing value from a mean', answer=19, label='2(b)',

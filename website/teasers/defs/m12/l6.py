@@ -118,7 +118,7 @@ DEFS = [
       p=dict(op='*', a=[0, 2, 5], b=[0, 5, 6]), fmt='frac', sub='fractions.arithmetic'),
     P('gamepay', 'sum_range', 'Adding in order',
       "Jun's coach pays him $4 for the first game he plays this season, $8 for the second game, $12 for the third game, and every game after that pays $4 more than the game before. The last game pays ${hi}. How many dollars does Jun earn altogether?",
-      "Pair the first day with the last day, the second day with the day before the last, and so on.",
+      "Pair the first game with the last game, the second game with the one before the last, and so on.",
       "There are {n} games. Each pair adds to $4 + ${hi} = ${pair}. {half} pairs make {half} × ${pair} = {ans}.",
       p=dict(lo=4, hi=120, step=4), fmt='money', sub='series_sum.add_in_pairs'),
     P('bunboxes', 'reverse_division', 'Division with a remainder',

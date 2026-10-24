@@ -345,6 +345,7 @@ def structure_index():
     return data
 
 
+TEXT_TARGET = 40    # text-answer puzzles a year per level (TEXT_ANSWER_PLAN.md)
 MAX_SMALL = 4       # single-digit answers: the same digit may be the answer of at most this many puzzles of a level (only 10 values exist for 61 puzzles)
 GENERIC = 120       # a skeleton 4-gram found in more than this many source questions says nothing about structure
 
@@ -1063,6 +1064,19 @@ def answer_feasibility(all_by_level):
         if not ok:
             warn.append('Level %d: %d%% single-digit answers so far, a year would need about %d (limit %d)' % (lv, round(share * 100), proj, 9 * MAX_SMALL))
         out.append('| %d | %d | %d | %d%% | %d | %d | %s |' % (lv, len(items), small, round(share * 100), proj, 9 * MAX_SMALL, 'ok' if ok else 'WARNING: aim for fewer single-digit answers'))
+    # round 5 (C6, TEXT_ANSWER_PLAN.md): text answers (a name, a word, a letter) are a different kind of answer; the plan wants about 40 a year at every level
+    out += ['', '## Text answers per level (TEXT_ANSWER_PLAN.md)', '',
+            'Target: about 3 or 4 text-answer puzzles a month at every level, so that a year holds 40 or more (every text answer is used once per level).', '',
+            '| Level | Puzzles so far | Text-answer puzzles | Per 30 days | Projected in 365 | Target | Verdict |', '|---|---|---|---|---|---|---|']
+    for lv in sorted(all_by_level):
+        items = all_by_level[lv]
+        txt = sum(1 for _, e in items if e['type'] == 's')
+        per30 = txt * 30.0 / len(items)
+        proj = round(txt / len(items) * 365)
+        okk = proj >= TEXT_TARGET
+        if not okk:
+            warn.append('Level %d: %d text-answer puzzles in %d (about %d a year; the plan wants %d or more: see TEXT_ANSWER_PLAN.md)' % (lv, txt, len(items), proj, TEXT_TARGET))
+        out.append('| %d | %d | %d | %.1f | %d | %d | %s |' % (lv, len(items), txt, per30, proj, TEXT_TARGET, 'ok' if okk else 'WARNING: below the plan'))
     return out, warn
 
 

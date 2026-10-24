@@ -87,7 +87,7 @@ DEFS = [
       'one 3, two 3, three 5, four 4, five 4, six 3, seven 5, eight 5, nine 4, ten 3. Adding: 3 + 3 + 5 + 4 + 4 + 3 + 5 + 5 + 4 + 3 = {ans}.',
       p=dict(lo=1, hi=10), unit='letters', sub='number_names.letters_in_words'),
     P('cymbalbeats', 'scan', 'Times tables',
-      "A drummer plays a song with 35 beats. She hits the cymbal on every beat that is in the 5 times table: beat 5, beat 10, beat 15 and so on. How many times does she hit the cymbal?",
+      "A drummer plays a song with 35 beats. She hits the cymbal on every beat in the 5 times table. That is beat 5, beat 10, beat 15 and so on. How many times does she hit the cymbal?",
       "Count on in fives: 5, 10, 15 and so on, until you pass 35.",
       "The cymbal beats are 5, 10, 15, 20, 25, 30 and 35. That is {ansn} hits.",
       p=dict(lo=1, hi=35, preds=[['multiple', 5]], ask='count'), unit='times', units=['times', 'time', 'hits', 'hit'], sub='number_properties.multiples_count'),

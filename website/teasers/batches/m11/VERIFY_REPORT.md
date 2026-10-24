@@ -6,16 +6,16 @@ Method: every puzzle is re-solved by `brute.py` (independent of the author solve
 |---|---|---|---|---|---|---|
 | 1 | 30 | 28 | 2 | 20 | 3 | 30 |
 | 2 | 30 | 30 | 1 | 25 | 2 | 30 |
-| 3 | 30 | 30 | 1 | 23 | 3 | 30 |
+| 3 | 30 | 30 | 1 | 22 | 3 | 30 |
 | 4 | 30 | 28 | 2 | 24 | 2 | 30 |
 | 5 | 30 | 30 | 1 | 22 | 3 | 30 |
 | 6 | 30 | 24 | 3 | 20 | 3 | 30 |
 
-Sources searched (whole working tree, tracked or not): 6747 files, 1361.5 MB, sha256 d98d2db5236865f051c03189.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 372, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
+Sources searched (whole working tree, tracked or not): 6748 files, 1361.5 MB, sha256 7788a0108b371abf8e88be7b.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 373, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
 
 Similarity sources checked: holiday banks, own term lessons, all extension workbook data, the school booklets, our book drafts and catalogues, external private source files, and the seven fixed website puzzles.
 
-FAIL count: 0. REVIEW items: 119.
+FAIL count: 0. REVIEW items: 120.
 
 
 - REVIEW L1-racerun [11-02]: story words 3 of 5 like "| Schema valid (JSON Schema + key checks) | PASS | all top-level keys, schema 2020-12, ide ..." (term/l1/AUDIT_L11.md)
@@ -59,21 +59,22 @@ FAIL count: 0. REVIEW items: 119.
 - REVIEW L2-lockcode [11-22]: rule B: 3 of the same numbers ['4', '5', '9'] as "Answer: smallest 9, biggest 12. Solution: the three sides add to 21 plus the cor ..." (docs/sasmo/g3_original_problems_draft.md)
 - REVIEW L2-cyclerace [11-24]: rule B: 3 of the same numbers ['3', '30', '4'] as "| Prelim | 2022 | MGS | B1-22 | 2 | tariff | 2 | 0 | Bicycle rental first hour t ..." (docs/books/private_p6_papers/non_routine_questions.md)
 - REVIEW L2-oddboxes [11-25]: rule S (window): 5 of 6 content words (count,even,hold,marble,odd) in "| Finding | Action | | WB 1 / GD 3 S3(b) is the Explore example | S3(b ..." (term/l1/audit/FIXES_T3_L30.md)
-- REVIEW L3-cardkeep [11-08]: rule B: 4 of the same numbers ['16', '24', '36', '4'] as "Cut every part of 2/3 and 3/4 into smaller equal parts, so that there is room be ..." (practice/holiday/p3/06/dist/data/p3l06.json)
-- REVIEW L3-badmintonko [11-10]: number 2 in the question is not a parameter (written in the wording; check)
-- REVIEW L3-clockturn [11-12]: rule S3: the sentence "How many right angles has it turned through?" is like "How many right angles has it turned through?" (docs/audit/gifted_fixes_p3.md)
-- REVIEW L3-solidedges [11-14]: rule S (window): 6 of 7 content words (base,cube,edge,face,pyramid,square) in "solids = {'cube': (6, 12, 8), 'cuboid': (6, 12, 8), 'triangular prism' ..." (docs/terms/l4_preflight.md)
-- REVIEW L3-books [11-17]: rule B: 3 of the same numbers ['20', '24', '31'] as "Singapore public holidays (Google "Holidays in Singapore" calendar, 1 Nov-31 Dec ..." (docs/audit_final/schedule_and_calendar.md)
-- REVIEW L3-cardsorder [11-18]: number 52 in the question is not a parameter (written in the wording; check)
-- REVIEW L3-cardsorder [11-18]: number 5 in the question is not a parameter (written in the wording; check)
-- REVIEW L3-cardsorder [11-18]: number 2 in the question is not a parameter (written in the wording; check)
-- REVIEW L3-cardsorder [11-18]: rule B: 3 of the same numbers ['35', '5', '7'] as "Which answer is the biggest, and which is the smallest?", "try_it_answer": "7 x  ..." (docs/stories/final_p2.json)
-- REVIEW L3-journeytime [11-20]: story words 3 of 5 like "{"id": "R3", "label": "Wed & Thu afternoons", "sessions": [{"day": "Wed", "start": "13:15" ..." (website/data/interest_slots.json)
-- REVIEW L3-harbourcruise [11-21]: number 0915 in the question is not a parameter (written in the wording; check)
-- REVIEW L3-houses [11-24]: number 21 in the question is not a parameter (written in the wording; check)
-- REVIEW L3-houses [11-24]: number 22 in the question is not a parameter (written in the wording; check)
-- REVIEW L3-houses [11-24]: number 23 in the question is not a parameter (written in the wording; check)
-- REVIEW L3-magic [11-25]: rule S: sentence "Every line across, every line down and both corner-to-corner lines mus" shares 4 content words with "A square has 4 lines: up-down, across and both corner-to-corner lines." (split/p4l8/project/slides/p4l8-teachlines.html)
+- REVIEW L3-books [11-03]: rule B: 3 of the same numbers ['20', '24', '31'] as "Singapore public holidays (Google "Holidays in Singapore" calendar, 1 Nov-31 Dec ..." (docs/audit_final/schedule_and_calendar.md)
+- REVIEW L3-harbourcruise [11-06]: number 0915 in the question is not a parameter (written in the wording; check)
+- REVIEW L3-cuboidclue [11-09]: rule S: sentence "Is the solid a cube, a cuboid, a cone or a cylinder?" shares 5 content words with "SOLID_FLAT = {"cube": 6, "cuboid": 6, "cylinder": 2, "cone": 1, "spher" (school/colour_by_code/art.py)
+- REVIEW L3-houses [11-11]: number 21 in the question is not a parameter (written in the wording; check)
+- REVIEW L3-houses [11-11]: number 22 in the question is not a parameter (written in the wording; check)
+- REVIEW L3-houses [11-11]: number 23 in the question is not a parameter (written in the wording; check)
+- REVIEW L3-cardsorder [11-13]: number 52 in the question is not a parameter (written in the wording; check)
+- REVIEW L3-cardsorder [11-13]: number 5 in the question is not a parameter (written in the wording; check)
+- REVIEW L3-cardsorder [11-13]: number 2 in the question is not a parameter (written in the wording; check)
+- REVIEW L3-cardsorder [11-13]: rule B: 3 of the same numbers ['35', '5', '7'] as "Which answer is the biggest, and which is the smallest?", "try_it_answer": "7 x  ..." (docs/stories/final_p2.json)
+- REVIEW L3-magic [11-14]: rule S: sentence "Every line across, every line down and both corner-to-corner lines mus" shares 4 content words with "A square has 4 lines: up-down, across and both corner-to-corner lines." (split/p4l8/project/slides/p4l8-teachlines.html)
+- REVIEW L3-solidedges [11-18]: rule S (window): 6 of 7 content words (base,cube,edge,face,pyramid,square) in "solids = {'cube': (6, 12, 8), 'cuboid': (6, 12, 8), 'triangular prism' ..." (docs/terms/l4_preflight.md)
+- REVIEW L3-clockturn [11-23]: rule S3: the sentence "How many right angles has it turned through?" is like "How many right angles has it turned through?" (docs/audit/gifted_fixes_p3.md)
+- REVIEW L3-journeytime [11-25]: story words 3 of 5 like "{"id": "R3", "label": "Wed & Thu afternoons", "sessions": [{"day": "Wed", "start": "13:15" ..." (website/data/interest_slots.json)
+- REVIEW L3-cardkeep [11-28]: rule B: 4 of the same numbers ['16', '24', '36', '4'] as "Cut every part of 2/3 and 3/4 into smaller equal parts, so that there is room be ..." (practice/holiday/p3/06/dist/data/p3l06.json)
+- REVIEW L3-badmintonko [11-29]: number 2 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-ferry [11-05]: rule B: 3 of the same numbers ['13', '7', '9'] as "Notes on the tag: 1.3, 1.7 (reading and writing numbers in numerals and in words ..." (school/p1/out/P1_S1_Answer_Key.pdf)
 - REVIEW L4-seedshop [11-06]: number 1000 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-seedshop [11-06]: number 100 in the question is not a parameter (written in the wording; check)

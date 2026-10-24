@@ -8,7 +8,7 @@
 Checks: right puzzle for the Singapore date in several browser time zones, midnight rollover (23:59 / 00:00 / 00:01 SGT),
 month, year and leap-day edges; a date with no released puzzle keeps the page's own fixed puzzle (no date label, no request);
 the slow, failed and late fetch paths for a released month that is not built into the page; no-JS fallback; every released
-puzzle's answer formats (including 21st, 0.96 for 96%, on Sunday, 1 h 30 min); wrong answers rejected; focus after "Show me how";
+puzzle's answer formats (including 21st, 0.96 for 96%, on Sunday, 1 h 30 min, the answer in number words, the date answers 'the 25th' and '11 November'); the Node unit tests of the matcher (test_check.js); wrong answers rejected; focus after "Show me how";
 hint and answer-box text contrast of at least 4.5:1 in light and dark; phone and desktop layout (no sideways scroll);
 no cookies / storage / third-party requests.
 """
@@ -65,6 +65,23 @@ def banks():
 
 
 BANK = banks()
+
+_ONES = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen']
+_TENS = {2: 'twenty', 3: 'thirty', 4: 'forty', 5: 'fifty', 6: 'sixty', 7: 'seventy', 8: 'eighty', 9: 'ninety'}
+
+
+def words(n):
+    """A whole number 0..999,999 in English words ('one hundred and five', 'twenty-one')."""
+    if n < 20:
+        return _ONES[n]
+    if n < 100:
+        return _TENS[n // 10] + ('-' + _ONES[n % 10] if n % 10 else '')
+    if n < 1000:
+        return _ONES[n // 100] + ' hundred' + (' and ' + words(n % 100) if n % 100 else '')
+    return words(n // 1000) + ' thousand' + ((' and ' if n % 1000 < 100 else ' ') + words(n % 1000) if n % 1000 else '')
+
+
+MONTH_NAMES = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
 
 def expected(level, sgt_dt):
@@ -134,6 +151,13 @@ def main():
     import test_flag_off
     for name, good, extra in test_flag_off.check():
         ok(name, good, extra)
+    # 0b. the answer matcher in Node (test_check.js): natural wordings, number words, dates, sentences round a name, lettered options, and the wrong ones
+    import subprocess
+    try:
+        r = subprocess.run(['node', os.path.join(HERE, 'test_check.js')], capture_output=True, text=True, timeout=120)
+        ok('test_check.js (Node): %s' % (r.stdout.strip().splitlines()[0] if r.stdout.strip() else 'no output'), r.returncode == 0, r.stdout[-400:] + r.stderr[-200:])
+    except FileNotFoundError:
+        ok('test_check.js (Node) skipped: node is not installed', True)
     srv = serve()
     base = 'http://127.0.0.1:%d' % srv.server_address[1]
     with sync_playwright() as pw:
@@ -275,8 +299,17 @@ def main():
                 if e['ans'].isdigit():
                     pos.append('+' + e['ans'])
                     n = int(e['ans'])
-                    if e['kind'] == 'calendar_nth' or e['frame'] in ('saturday', 'secondthursday', 'fourthwednesday'):
-                        pos.append('%d%s' % (n, 'th' if 10 <= n % 100 <= 20 else {1: 'st', 2: 'nd', 3: 'rd'}.get(n % 10, 'th')))
+                    suf = 'th' if 10 <= n % 100 <= 20 else {1: 'st', 2: 'nd', 3: 'rd'}.get(n % 10, 'th')
+                    if e['kind'] in ('calendar_nth', 'date_after'):
+                        pos += ['%d%s' % (n, suf), 'the %d%s' % (n, suf), 'on the %d%s' % (n, suf)]
+                    if e['kind'] == 'date_after':
+                        i = [m.lower() for m in MONTH_NAMES].index(c['mo'][0])
+                        pos += ['%d %s' % (n, MONTH_NAMES[i]), '%d%s of %s' % (n, suf, MONTH_NAMES[i]), '%s %d' % (MONTH_NAMES[i][:3], n), 'the %d%s of %s' % (n, suf, MONTH_NAMES[i].lower())]
+                        wrongs_extra = ['%d %s' % (n, MONTH_NAMES[(i + 5) % 12]), '%d %s' % (n + 1, MONTH_NAMES[i])]
+                    if e['kind'] == 'calendar_nth':
+                        pos += ['%d December' % n, 'the %d%s of March' % (n, suf)]
+                    if e['fmt'] in ('int', 'plain') and n < 1000000:
+                        pos += [words(n), 'It is ' + words(n), 'The answer is ' + words(n).capitalize()]
                 if '%' in (e['units'] or []):
                     pos.append('%s' % (float(e['ans']) / 100))
                 if 'minutes' in (e['units'] or []) and int(e['ans']) >= 60:
@@ -285,8 +318,12 @@ def main():
                 pos += [e['ans'].upper(), 'The ' + e['ans'], e['ans'] + '.', 'on ' + e['ans'], e['ans'].replace(' ', '')] + list(e['accept'])
                 pos += ['It is ' + e['ans'], 'The answer is ' + e['ans'], 'the answer is ' + e['shown'].upper()]
             wrongs = list(e['wrong'])
+            if e['type'] == 'n' and e['kind'] == 'date_after' and e['ans'].isdigit():
+                wrongs += wrongs_extra
             if e['type'] == 'n' and e['fmt'] in ('int', 'plain'):
                 a = int(e['ans'])
+                if a < 999990:
+                    wrongs += [words(a + 1), words(a + 10), words(a - 1) if a else 'ninety nine']
                 if a < 5000:
                     wrongs += [str(x) for x in range(0, max(300, 3 * a + 5)) if x != a]
             if e['type'] == 'n' and e['units']:
@@ -303,6 +340,11 @@ def main():
         ok('answer matcher: %d accept/reject checks over %d puzzles' % (n_checked, len(BANK)), not bad, bad[:10])
         # unit and format edge cases
         edge = [
+            ({'a': '19', 't': 'n'}, 'nineteen', 'ok'), ({'a': '19', 't': 'n'}, 'Nineteen.', 'ok'), ({'a': '19', 't': 'n'}, 'eighteen', 'no'),
+            ({'a': '25', 't': 'n', 'dt': 1}, 'the 25th', 'ok'), ({'a': '25', 't': 'n', 'dt': 1}, 'the 26th', 'no'),
+            ({'a': '13', 't': 'n', 'dt': 1, 'mo': ['december']}, '13 December', 'ok'), ({'a': '13', 't': 'n', 'dt': 1, 'mo': ['december']}, '13 January', 'no'),
+            ({'a': '11/2', 't': 'n', 'e': 1}, '5½', 'ok'), ({'a': '11/2', 't': 'n', 'e': 1}, '6½', 'no'),
+            ({'a': 'farid', 't': 's', 'o': ['siti', 'ravi']}, 'Farid plays cricket', 'ok'), ({'a': 'farid', 't': 's', 'o': ['siti', 'ravi']}, 'Siti plays cricket', 'no'),
             ({'a': '12', 't': 'n', 'u': ['cm', 'centimetres']}, '12 cm', 'ok'), ({'a': '12', 't': 'n', 'u': ['cm']}, '12 m', 'no'),
             ({'a': '12', 't': 'n', 'u': ['cm']}, '12', 'ok'), ({'a': '12', 't': 'n', 'u': ['cm']}, ' 12 ', 'ok'),
             ({'a': '12', 't': 'n'}, '12.0', 'ok'), ({'a': '12', 't': 'n'}, '12a', 'no'), ({'a': '12', 't': 'n'}, '', 'empty'),

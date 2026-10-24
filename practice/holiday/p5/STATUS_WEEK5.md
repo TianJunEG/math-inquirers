@@ -6,13 +6,13 @@ Week 5 = L5 lessons 9 and 10 (website/data/beta_schedule.json, group L5A: sessio
 
 | | Lesson 9 | Lesson 10 |
 |---|---|---|
-| items | 42 | 34 |
+| items | 42 | 35 |
 | auto-marked | 34 | 28 |
-| self-check (compare with model answer) | 7 (all with a checked fact) | 4 (all with a checked fact) |
+| self-check (compare with model answer) | 7 (all with a checked fact) | 5 (all with a checked fact; incl. the paper-only A2 list) |
 | open (make up your own / which start did you use, no objective fact) | 1 | 2 |
-| paper-only (drawing) | 0 | 0 |
+| paper-only (inside self-check) | 0 | 1 (A2 list) |
 | unavailable (not mirrored) | 0 whole questions | 0 whole questions |
-| variant families (all combinations equal an oracle) | 16 (549 combinations) | 9 (124 combinations) |
+| variant families (all combinations equal an oracle) | 16 (513 combinations) | 9 (124 combinations) |
 | question text as printed / reworded | 13 / 29 | 13 / 21 |
 
 Item types, L9: number 18, fields 9, choice 6, text 1 (money), self-check 8. L10: number 11, fields 8, choice 6, text 2 (a fraction, four names), set 1 (15 numbers in order), self-check 6.
@@ -32,7 +32,7 @@ Lesson 9
 Lesson 10 (mirrors the printed Challenge Day page; the take-home stars are not shown)
 - Q1: the printed tick-and-cross grid cannot be filled on screen, so the four clues are drawn once as a card and there is one choice card per child (Ali, Ben, Mei, Siti). Q2 is the money left puzzle plus a card for the two middle amounts (before the gift, before lunch). Q3 is two boxes plus a self-check "check against both clues". Q4 is (a) 1 by 1, (b) 2 by 2 and 3 by 3, (c) the total and a self-check "how do you know none are bigger". Q5 is a table card (liars for each child) and the choice of who broke the vase. Q6(a) is a number; 6(b) "which start did you use" is open.
 - Investigation: easy step (3 ways), a self-check list of the ways for 4 steps and a count card after it ("do the list first"), the table up to 6 steps (5 and 6 steps), a choice for the pattern (the stem does not list the numbers), a self-check for the last-jump reason, 8 steps, and the 3-step what-if.
-- Think harder A2 is a typed ordered list of the 15 numbers (set) plus a count card after it; the other cards are one each. Go further B1 is two cards (litres, fraction); B3 is the four names typed (names accepted with commas, spaces, "and" or "then").
+- Think harder A2 is a list written on paper (self-check, list shown after submit), a marked count card (15) and a marked card for the smallest and biggest number (104, 500); the other cards are one each. Go further B1 is two cards (litres, fraction); B3 is the four names typed (names accepted with commas, spaces, "and" or "then").
 - A calculator is not needed. Paper-only items: none.
 
 ## Audited mistakes avoided from the start (week 1 to 4 audits)
@@ -40,7 +40,7 @@ No stem, hint, example or solution figure shows another card's answer (a search 
 
 ## Open questions
 - Lesson 10 Q1 has no tick-and-cross grid (the print's working space). Is a choice card per child enough, or should a drag-style grid item be built later?
-- Think harder A2 (15 numbers typed in order) is long for a phone keyboard; it is auto-marked as an ordered set. Switch to a self-check list plus the count if children find it too fiddly.
+- Week 5 audit: Think harder A2 is now a self-check list plus marked count and ends (no 15-number typing). L9 A2 says '8 separate rows'; L9 B2 variants no longer give a negative score.
 - Three Investigation cards ask for the pattern in several small steps (lesson 9 (a) to (c); lesson 10 (a) to (c)); this is more auto-marking than the print has. Is that wanted for the last lessons?
 - Nothing here has been seen by a child. Difficulty and timing are untested.
 

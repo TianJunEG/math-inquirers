@@ -129,7 +129,7 @@ def food_item(who, no):
     return D(id='4-' + who.lower(), tier='core', no=no, label='4 ' + who, type='choice', options=DISHES, answer=FOOD[who], skill='a logic puzzle', svg=clue_fig(),
              check=lambda: food_solutions()[0][who],
              q=f'Use the clues. Which dish did {who} order?',
-             hint='Use the clues one at a time. Which dishes can you cross out for each friend?',
+             hint='Use the clues one at a time. Which dishes can you rule out for each friend?',
              steps=['Clue 1: Ali and Siti ordered the two rice dishes, chicken rice and nasi lemak. Clue 2: Ali did not order chicken rice, so Ali ordered nasi lemak and Siti ordered chicken rice.',
                     'Ben and Mei are left with laksa and prata. Clue 3: Ben did not order prata, so Ben ordered laksa and Mei ordered prata.',
                     f'{who} ordered {FOOD[who].lower()}.' if FOOD[who] != 'Chicken rice' else f'{who} ordered chicken rice.'],
@@ -137,7 +137,7 @@ def food_item(who, no):
 
 
 def ages_bars(m=3):
-    return bar_pair('Ben', 1, 'Father', m, '? years', caption=f'Bars for their ages in some years from now. Ben has 1 equal part and his father has {m} equal parts of the same size. A brace on the right marks their total age, with a question mark.')
+    return bar_pair('Ben', 1, 'Father', m, '? total', caption=f'Bars for their ages in some years from now. Ben has 1 equal part and his father has {m} equal parts of the same size. A brace on the right marks their total age, with a question mark.')
 
 
 ITEMS = [
@@ -241,11 +241,18 @@ ITEMS = [
       hint='Find three scores in a row that can be made. What happens if you add a 3-point ring to each?',
       steps=['The scores you cannot get are all small: 1, 2, 4 and 7.', '8 (3 + 5), 9 (3 + 3 + 3) and 10 (5 + 5) can all be made.', 'Adding one 3-point ring to 8, 9 and 10 gives 11, 12 and 13, and adding another gives the next three. So every score from 8 up can be made.'],
       src=['What do you notice about the scores you cannot get? After which score can you get every number?']),
-    D(id='Ic', tier='invest', no='Investigation (c)', label='Inv (c)', type='set', ordered=False, answer=RING46_NO, skill='listing all the ways', grouped=False,
-      check=lambda: [s for s in range(1, 21) if s not in possible_scores([4, 6], 20)],
-      q='What if the rings score 4 and 6? Which scores from 1 to 20 are impossible? Type them, with commas.',
+    D(id='Ic-list', tier='invest', no='Investigation (c)', label='Inv (c) list', type='selfcheck', paper=True, skill='listing all the ways', check=lambda: RING46_NO, sol_fig=lambda f: text_lines_fig(['*Impossible scores (4 and 6 rings):', '1, 2, 3, 5, 7, 9, 11, 13, 15, 17, 19'], 15, 24, 330,
+                                                                                label='The impossible scores from 1 to 20 with rings of 4 and 6 points: 1, 2, 3, 5, 7, 9, 11, 13, 15, 17, 19.'),
+      paper_note='Write your list on paper, then check it against the list shown on screen. (There is nothing to type here: the next card is marked.)',
+      q='What if the rings score 4 and 6? Write down which scores from 1 to 20 are impossible.',
       hint='List the scores you can make with 4s and 6s, then see which numbers from 1 to 20 are left.',
       steps=['You can make 4, 6, 8 (4 + 4), 10 (4 + 6), 12 and every even score after that, up to 20.', 'The impossible scores are 1, 2 and all the odd numbers: 1, 2, 3, 5, 7, 9, 11, 13, 15, 17, 19.'],
+      src=['What if the rings score 4 and 6? Which scores from 1 to 20 are impossible? Explain why.']),
+    D(id='Ic', tier='invest', no='Investigation (c)', label='Inv (c)', type='number', answer=len(RING46_NO), skill='listing all the ways',
+      check=lambda: len([s for s in range(1, 21) if s not in possible_scores([4, 6], 20)]),
+      q='With rings that score 4 and 6, how many of the scores from 1 to 20 are impossible? (Type the number. Your list on the card before helps.)',
+      hint='Count the scores in your list.',
+      steps=['The impossible scores are 1, 2, 3, 5, 7, 9, 11, 13, 15, 17, 19.', 'That is 11 scores.'],
       src=['What if the rings score 4 and 6? Which scores from 1 to 20 are impossible? Explain why.']),
     D(id='Ic-why', tier='invest', no='Investigation (c)', label='Inv (c) why', type='selfcheck', skill='explaining a pattern', check=lambda: all(s % 2 == 0 for s in RING46),
       q='What if the rings score 4 and 6? Explain why those scores are impossible.',
@@ -377,7 +384,7 @@ VARIANTS = {
         oracle=lambda e: next(b for b in range(1, e['n'] + 1) if queue_size(e['f'], b) == e['n'])),
     '6': dict(
         base=dict(b=10, m=3, y=5),
-        tpl=dict(vars=dict(b=[6, 8, 9, 10, 12], m=[3, 4, 5], y=[3, 4, 5, 6]), derive=dict(T='b+m*(b+y)-y'),
+        tpl=dict(vars=dict(b=[6, 7, 8, 9, 10], m=[3, 4], y=[3, 4, 5]), derive=dict(T='b+m*(b+y)-y'),
                  q='Ben and his father are {T} years old altogether. In {y} years, his father will be {m} times as old as Ben. How old is Ben now? The bars show their ages in {y} years, and the brace shows their total then.',
                  answer='b', hint='In {y} years each of them is {y} years older. What is their total age then?',
                  steps=['In {y} years each of them is {y} years older, so the total is {T} + 2 × {y}.', 'The bars have {m} + 1 equal parts. Find one part (Ben\'s age then), and take away {y}. Ben is {ans} now.']),

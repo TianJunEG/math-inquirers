@@ -63,6 +63,12 @@ def build(level, unit, holiday=None):
             rec['unit'] = False
         if it.get('words') and t in ('number', 'fields'):
             rec['words'] = True
+        if t == 'number' and it.get('cents'):
+            rec['cents'] = True                                   # amount in cents: '65c' ok, '$65' refused
+        if t == 'fields' and any(f.get('cents') for f in it['fields']):
+            rec['cents'] = [bool(f.get('cents')) for f in it['fields']]
+        if it.get('range') and t in ('set', 'text'):
+            rec['range'] = True                                   # '1-7' = 1 to 7
         if t == 'number' and it.get('clock'):
             rec['clock'] = True                                   # hour: '3', "3 o'clock", '3:00', '3 pm' (never '3:30')
         if t == 'fields':
@@ -110,7 +116,7 @@ def main():
     for t in tag_rows:
         sql.append(f"insert into public.practice_item_tags (unit_key, unit_version, item_id, position, tier, marking_mode, paper_only, strand, skill, topic, slips) values ({q(uk)}, {q(ver)}, {q(t['id'])}, {t['pos']}, {q(t['tier'])}, {q(t['marking_mode'])}, {str(t['paper_only']).lower()}, {q(t['strand'])}, {q(t['skill'])}, {q(t['topic'])}, {q(json.dumps(t['slips']))}::jsonb) on conflict do nothing;")
     for k in keys:
-        sql.append(f"insert into public.practice_item_keys (unit_key, unit_version, item_id, answer_type, answer_key, ordered, equivalent, rules) values ({q(uk)}, {q(ver)}, {q(k['id'])}, {q(k['type'])}, {q(json.dumps(k['key']))}::jsonb, {str(k.get('ordered', False)).lower()}, {str(k.get('equivalent', False)).lower()}, {q(json.dumps({r: k[r] for r in ('unit', 'pre', 'grouped', 'words', 'poly', 'equiv_frac', 'accept_prefix', 'clock', 'time', 'dollars_ok', 'accept_by') if r in k}))}::jsonb) on conflict do nothing;")
+        sql.append(f"insert into public.practice_item_keys (unit_key, unit_version, item_id, answer_type, answer_key, ordered, equivalent, rules) values ({q(uk)}, {q(ver)}, {q(k['id'])}, {q(k['type'])}, {q(json.dumps(k['key']))}::jsonb, {str(k.get('ordered', False)).lower()}, {str(k.get('equivalent', False)).lower()}, {q(json.dumps({r: k[r] for r in ('unit', 'pre', 'grouped', 'words', 'poly', 'equiv_frac', 'accept_prefix', 'clock', 'time', 'cents', 'range', 'dollars_ok', 'accept_by') if r in k}))}::jsonb) on conflict do nothing;")
     sql += ["-- publish only after the owner has approved the privacy wording:", f"-- update public.practice_units set published = true where unit_key = {q(uk)} and unit_version = {q(ver)};", 'commit;']
     open(os.path.join(out, uk + '.sql'), 'w').write('\n'.join(sql) + '\n')
     modes = {}

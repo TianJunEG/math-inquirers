@@ -475,6 +475,7 @@
   "arrays.border_tiles": {
    "name": "tiles round the edge of a rectangle of tiles",
    "levels": [
+    1,
     2,
     3,
     4,
@@ -486,7 +487,14 @@
    ],
    "cite": "MOE P2 NA multiplication tables, p.33; P3 MG Area and Perimeter concepts, p.36",
    "round": 2,
-   "note": "round 4: extended to Level 6 with larger numbers and a new story (restores the Level 6 quarter capacity after the round-4 retirements; a puzzle that uses it is checked when it is written)."
+   "note": "round 4: extended to Level 6 with larger numbers and a new story (restores the Level 6 quarter capacity after the round-4 retirements; a puzzle that uses it is checked when it is written). Round 5: extended to Level 1 (a rectangle of at most 5 by 6 tiles, counting the tiles along the edge) so that the Level 1 slack stays at the owner minimum of 10 after odd and even moved to Level 2; a puzzle that uses it is checked when it is written.",
+   "levels_before": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ]
   },
   "arrays.seat_number": {
    "name": "seats numbered row by row: the seat number from the row and place, or the row from the seat number",

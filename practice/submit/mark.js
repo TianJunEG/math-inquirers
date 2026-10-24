@@ -7,6 +7,7 @@
 // A KEY record:  { id, marking_mode: 'auto'|'self'|'none', type, key, ordered?, equivalent?, slips? }
 //   number    key: 12              (a unit after the number is ignored: '84 cm2', '84cm^2', '84 cm²', '-25 °C', '11°C'; one pair of brackets round it: '(-25)'; unit:false refuses units;
 //                                    words:true also accepts number words: 'five', 'twenty-five', 'minus five'; no default)
+//   (number/fields also: cents:true | per-box list = an amount in cents: '65c', '65 c' ok, '$65' refused; range:true on set/text: '1-7' = 1..7 or its two ends)
 //   fields    key: [3, 4]               (several boxes; all must be right; time: [true,false] flags an hours box followed by a minutes box: '5:25' in the first box with the second empty is 5 and 25)
 //   set       key: [85, 508], ordered: true|false
 //   choice    key: '<'                  (exact option text)
@@ -50,7 +51,7 @@
   }
   // Units after the number: a word ('301 sticks', '20 minutes', 'sq cm'), a word with an attached power ('84 cm2', '84cm^2', '84 cm²'), a rate ('km/h') a degree sign ('-25 °C', '11°C', '44°') or a cent sign / cent word ('35¢', '35 cents') or a litre sign ('27 ℓ', '27 l', '27 litres'), then at most two more plain words in all (a unit and a short tail: '27 ℓ of water', '27 liters of water', '35 cents change', '35 cents left'; longer tails are refused; for cents a bare lowercase 'c' is refused as ambiguous; '$0.35' is never turned into cents).
   // A single pair of brackets round the whole answer is ignored ('(-25)'). Two numbers ('4 or 5', '1 2') are never a unit.
-  var UW = '[a-z][a-z.]*(?:\\^?[23]|\\s?[²³])?', UNITRE = new RegExp('^(-?\\d[\\d, ]*?(?:\\.0+)?)\\s*(?:[°º]\\s*[a-z]?|%|[¢ℓ](?:\\s+[a-z]+){0,2}|' + UW + '(?:\\s+' + UW + '){0,2}(?:\\/[a-z]+)?)$', 'i');
+  var UW = '[a-z][a-z.]*(?:-[a-z]+)?(?:\\^?[23]|\\s?[²³])?', UNITRE = new RegExp('^(-?\\d[\\d, ]*?(?:\\.0+)?)\\s*(?:[°º]\\s*[a-z]?|%|[¢ℓ](?:\\s+[a-z]+){0,2}|' + UW + '(?:\\s+' + UW + '){0,2}(?:\\/[a-z]+)?)$', 'i');
   // A clock hour (item flag clock:true, set by the builder when the stem or frame says o'clock and the answer is a bare hour): '3', '3 o'clock', '3:00', '03:00', '3.00', '3 pm' / '3 am' are all the hour 3;
   // the minutes must be 00, so '3:30' is never 3. Without the flag only the plain number forms are read.
   function clockHour(s) {
@@ -61,25 +62,29 @@
     s = minus(s).trim().replace(/^\+\s*(?=\d)/, '');   // a leading plus sign ('+1', '+ 1') is not a unit and is always accepted; '+-1' and '1+' are not numbers
     var pb = /^\(\s*([^()]*?)\s*\)\s*(.*)$/.exec(s); if (pb) s = (pb[2] ? pb[1] + ' ' + pb[2] : pb[1]).replace(/^\+\s*(?=\d)/, '');   // '(-25)' and '(-25) °C'
     if (opt && opt.clock) { var ck = clockHour(s); if (ck !== null) s = ck; }
-    if (opt && opt.dollars_ok) { var dm = /^\$\s*0?\.(\d\d)\s*\.?$/.exec(s); if (dm) return +dm[1]; }   // '$0.48' for 48 cents, only when the item says dollars_ok
+    if (opt && opt.dollars_ok) { var dm = /^\$\s*0?\.(\d\d)\s*\.?$/.exec(s) || /^0?\.(\d\d)\s*dollars?\s*\.?$/i.exec(s); if (dm) return +dm[1]; }   // '$0.48' / '0.48 dollars' for 48 cents, only when the item says dollars_ok
     if (opt && opt.words) { var wn = wordsToNum(s); if (wn !== null) return wn; }
     if (!opt || opt.unit !== false) s = s.replace(/^(?:∠|angle\s+)\s*[a-z]{1,3}\s*(?:=|is)\s*/i, '');   // '∠AOC = 90°', 'angle AOC is 90' (an angle name before the number; never for unit:false)
-    s = s.replace(/^\$\s*/, '');
+    if (!(opt && opt.cents)) s = s.replace(/^\$\s*/, '');   // an item in cents (opt.cents): '$65' is 65 dollars, never 65 cents
     if (opt && opt.pre && s.indexOf(opt.pre) === 0) s = s.slice(opt.pre.length).trim();
     s = s.replace(/\.0*$/, '');
-    if (!opt || opt.unit !== false) { var u = UNITRE.exec(s); if (u && !/\d\s*c(?![a-z])/.test(s)) s = u[1].trim().replace(/\.0+$/, ''); }
+    if (!opt || opt.unit !== false) {   // one leading label word ('Week 5', 'Tower 9', 'the digit 5'), an ordinal ('15th from the back'), then the unit rules
+      s = s.replace(/^(?:(?:the|a|an)\s+)?(?!(?:minus|negative|neg|not|no|without|except|less|under|below|above|over|than|and|or|to|by|of|times|plus|add|take|from|is|are|equals|about|it)\b)[a-z]+\s+(?=-?\d)/i, '').replace(/^(-?\d+)(?:st|nd|rd|th)\b/i, '$1');
+      var u = UNITRE.exec(s); if (u && ((opt && opt.cents) || !/\d\s*c(?![a-z])/.test(s))) s = u[1].trim().replace(/\.0+$/, '');   // a bare 'c' is ambiguous, except on an item in cents ('65c', '65 c')
+    }
     if (/^-?\d{1,3}(?:[, ]\d{3})+$/.test(s)) s = s.replace(/[, ]/g, '');
     return /^-?\d+$/.test(s) ? +s : null;
   }
   // Time of day in two boxes (hours, minutes; the builder flags the hours box, item flag time:true): a whole time typed in the FIRST box with the second left empty ('5:25', '5.25', '5 25')
-  // is read as hours 5, minutes 25. Minutes need two digits. A time typed in both boxes is read as typed. flags = list with true at the hours box.
-  function timeFix(arr, flags) {
+  // is read as hours 5, minutes 25 (minutes need two digits); an EMPTY minutes box is 0 minutes when the key's minutes are 0. A time typed in both boxes is read as typed. flags = list with true at the hours box.
+  function timeFix(arr, flags, key) {
     if (!Array.isArray(arr) || !Array.isArray(flags)) return arr;
     var out = arr.slice(), i, m;
     for (i = 0; i + 1 < out.length; i++) {
       if (flags[i] && str(out[i]).trim() !== '' && str(out[i + 1]).trim() === '') {
         m = /^(\d{1,2})\s*(?:[:.]|\s)\s*(\d{2})$/.exec(minus(str(out[i])).trim());
         if (m) { out[i] = m[1]; out[i + 1] = m[2]; }
+        else if (Array.isArray(key) && key[i + 1] === 0) out[i + 1] = '0';
       }
     }
     return out;
@@ -88,9 +93,15 @@
   // says grouped:true) AND the run is a leading group of 1-3 digits followed only by groups of exactly 3 digits joined by a comma or ONE space ('12,500', '12 500').
   // Everything else separates numbers ('250,450', '250, 450', '250 450', '18; 12'). For a grouped item both readings are offered, and the answer is right if either matches.
   function listOf(s) { return (s.match(/-?\d+/g) || []).map(Number); }
-  function numsAll(s, grouped) {
+  // Item flag range:true (default off): '1-7' / '1 to 7' / '1 – 7' may stand for the whole run 1,2,...,7 or for its two ends; the reading that matches the key is used.
+  function rangeReadings(s) {
+    var re = /(\d+)\s*(?:-|to)\s*(\d+)/g, ends = s.replace(re, '$1 $2'), full = s.replace(re, function (_, a, b) { var x = +a, y = +b, o = [], k; if (y < x || y - x > 100) return a + ' ' + b; for (k = x; k <= y; k++) o.push(k); return o.join(' '); });
+    return [listOf(ends), listOf(full)];
+  }
+  function numsAll(s, grouped, range) {
     s = minus(s);
     var a = listOf(s);
+    if (range && /\d\s*(?:-|to)\s*\d/.test(s)) return rangeReadings(s);
     if (!grouped) return [a];
     var m = listOf(s.replace(/(^|\D)(\d{1,3}(?:[, ]\d{3})+)(?!\d)/g, function (_, p, g) { return p + g.replace(/[, ]/g, ''); }));
     return a.length === m.length && a.every(function (v, i) { return v === m[i]; }) ? [a] : [a, m];
@@ -98,15 +109,15 @@
   function nums(s, grouped) { return numsAll(s, grouped)[0]; }
   function isGrouped(flag, key) { return flag != null ? !!flag : (Array.isArray(key) ? key : [key]).some(function (k) { return typeof k === 'number' && Math.abs(k) >= 10000; }); }
   function sameSet(a, b) { var x = a.slice().sort(function (p, r) { return p - r; }), y = b.slice().sort(function (p, r) { return p - r; }); return x.length === y.length && x.every(function (v, i) { return v === y[i]; }); }
-  function setMatch(v, key, ordered, grouped) { // -> {ok, a: the reading that matched (or the first reading)}
-    var ps = numsAll(v, isGrouped(grouped, key)), best = ps[0], ok = false;
+  function setMatch(v, key, ordered, grouped, range) { // -> {ok, a: the reading that matched (or the first reading)}
+    var ps = numsAll(v, isGrouped(grouped, key), range), best = ps[0], ok = false;
     ps.forEach(function (a) { var o = ordered ? (a.length === key.length && a.every(function (x, i) { return x === key[i]; })) : sameSet(a, key); if (o && !ok) { ok = true; best = a; } });
     return { ok: ok, a: best };
   }
   // Reading words and expressions: only case, spacing, x * times, unicode minus and a final full stop are normalised. A minus sign is never dropped and the space in a
   // mixed number ('5 1/2') is kept, so '-1/2' is not '1/2', '(6+4)x5-2' is not '(6+4)x52' and '1 1/2' is not '11/2'. A hyphen between two letters is a space ('north-west').
   function normText(s) {
-    return minus(str(s).normalize('NFKC')).toLowerCase().replace(/[×*·⋅]/g, 'x').replace(/÷/g, '/').replace(/\s+/g, ' ').trim().replace(/[.!]+$/, '').trim()
+    return minus(str(s).replace(/²/g, '^2').replace(/³/g, '^3').normalize('NFKC')).toLowerCase().replace(/([a-z])\^([23])/g, '$1$2').replace(/[×*·⋅]/g, 'x').replace(/÷/g, '/').replace(/\s+/g, ' ').trim().replace(/[.!]+$/, '').trim()
       .replace(/([a-z])-(?=[a-z])/g, '$1 ');
   }
   function squash(s) { return normText(s).replace(/(\d) (?=\d)/g, '$1\u0001').replace(/ /g, '').replace(/\u0001/g, ' '); }
@@ -158,6 +169,7 @@
     var m2 = /^(-?[\d.\/ ]*\d)\s*=\s*(.*[\d)])\s*[.!]?$/.exec(minus(str(v)).trim()); // the result first: '5/12=1/3+1/12'
     if (m2) { var r2 = evalExpr(m2[1].replace(/(\d) (\d+\/\d)/, '($1+$2)').replace(/ /g, '')), l2 = evalExpr(m2[2]); if (l2 != null && r2 != null && Math.abs(l2 - r2) < 1e-9) cands.push(m2[2]); }
     var ld = lead(v, o); if (ld !== str(v).trim()) cands.push(ld);
+    if (o && o.range) { var rg = function (x) { return normText(x).replace(/(\d+)\s*(?:-|to)\s*(\d+)/g, '$1-$2'); }; keys = keys.concat(keys.map(rg)); cands.push(rg(v)); }
     // natural writings of a word or a single letter: "CAT" in quotes (a word key), 'the letter E' / 'letter E' (a one-letter key)
     var wordKey = keys.some(function (k) { return /^[a-z][a-z' -]*$/i.test(str(k).trim()); }), letKey = keys.some(function (k) { return /^[a-z]$/i.test(str(k).trim()); }), uq, lm;
     if (wordKey) { uq = unquote(v); if (uq !== null) cands.push(uq); }
@@ -259,15 +271,15 @@
   }
   function decEqual(a, b) { return a.neg === b.neg && a.i === b.i && a.f === b.f; }
 
-  function nopt(rec) { return { unit: rec.unit, words: rec.words, clock: rec.clock === true, dollars_ok: rec.dollars_ok }; }
-  function fopt(rec, i) { return { unit: rec.unit, words: rec.words, pre: rec.pre && rec.pre[i] || '', clock: rec.clock === true || (Array.isArray(rec.clock) && !!rec.clock[i]), dollars_ok: rec.dollars_ok }; }
+  function nopt(rec) { return { unit: rec.unit, words: rec.words, clock: rec.clock === true, cents: rec.cents === true, dollars_ok: rec.dollars_ok }; }
+  function fopt(rec, i) { return { unit: rec.unit, words: rec.words, pre: rec.pre && rec.pre[i] || '', clock: rec.clock === true || (Array.isArray(rec.clock) && !!rec.clock[i]), cents: rec.cents === true || (Array.isArray(rec.cents) && !!rec.cents[i]), dollars_ok: rec.dollars_ok }; }
   function matchSlip(rec, v) { // which listed wrong answer (if any) the child gave: its index, so a report can say why
     var slips = rec.slips || [], got, i;
-    if (rec.type === 'fields') v = timeFix(v, rec.time);
+    if (rec.type === 'fields') v = timeFix(v, rec.time, rec.key);
     for (i = 0; i < slips.length; i++) {
       var a = slips[i].a;
       if (rec.type === 'fields' ? (Array.isArray(v) && a.length === v.length && a.every(function (x, k) { return toNum(v[k], fopt(rec, k)) === x; })) :
-          rec.type === 'set' ? setMatch(v, a, rec.ordered, rec.grouped).ok :
+          rec.type === 'set' ? setMatch(v, a, rec.ordered, rec.grouped, rec.range).ok :
           rec.type === 'choice' ? str(v) === str(a[0]) : toNum(v, nopt(rec)) === a[0]) return i;
     }
     return undefined;
@@ -282,13 +294,13 @@
       case 'number': ok = toNum(v, nopt(rec)) === key; break;
       case 'choice': ok = str(v) === str(key); break;
       case 'fields': {
-        var arr = Array.isArray(v) ? timeFix(v, rec.time) : [], boxes = key.map(function (k, i) { return toNum(arr[i], fopt(rec, i)) === k; });
+        var arr = Array.isArray(v) ? timeFix(v, rec.time, rec.key) : [], boxes = key.map(function (k, i) { return toNum(arr[i], fopt(rec, i)) === k; });
         ok = boxes.every(Boolean) && arr.length === key.length; detail = { boxes: boxes }; break; }
       case 'set': {
-        var sm = setMatch(v, key, rec.ordered, rec.grouped), a = sm.a; ok = sm.ok;
+        var sm = setMatch(v, key, rec.ordered, rec.grouped, rec.range), a = sm.a; ok = sm.ok;
         detail = { found: rec.ordered ? a.filter(function (x, i) { return x === key[i]; }).length : common(a, key), of: key.length, given: a.length }; break; }
       case 'fraction': {
-        var f = parseFraction(v), k = parseFraction(key);
+        var f = parseFraction(str(v).trim().replace(/^(?:(?:the|a|an)\s+)?(?!(?:minus|negative|not|no|and|or|to|by|of|is|it)\b)[a-z]+\s+(?=-?\d)/i, '').replace(/^(.*\d)(?:\s+[a-z]+){1,2}\s*$/i, '$1')), k = parseFraction(key);
         if (!f || !k) ok = false;
         else if (!fracEqual(f, k)) ok = false;
         else if (!rec.equivalent && !lowest(f)) { ok = false; detail = { reason: 'not_simplest' }; }

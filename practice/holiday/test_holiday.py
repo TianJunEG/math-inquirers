@@ -107,15 +107,27 @@ if not _flags(dollars_ok=True).get('dollars_ok') or _flags().get('dollars_ok'): 
 _ta = dict(type='text', answer=None, accept=['6'], check=lambda: '6')
 if not _flags(accept_by=True, **_ta).get('accept_by') or _flags(**_ta).get('accept_by'): fail('accept_by default / pass-through')
 # time flag: automatic for hours / minutes labels, time=True for any two boxes, time=False off, paper_note
-def _tm(frame, ans=(5, 25), **kw): return _flags(type='fields', q='What time?', frame=frame, answer=list(ans), check=lambda: list(ans), **kw)
+def _tm(frame, ans=(5, 25), q='What time?', **kw): return _flags(type='fields', q=q, frame=frame, answer=list(ans), check=lambda: list(ans), **kw)
 def _tflags(o): return [bool(f.get('time')) for f in o['fields']]
 for _fr in ('{f1} h {f2} min', '{f1} hours {f2} minutes', '{f1} hr {f2} mins', 'Hours: {f1} Minutes: {f2}', 'The film ends at {f1} h {f2} min.', '{f1} hour {f2} minute'):
     if _tflags(_tm(_fr)) != [True, False]: fail(f'time not set automatically for {_fr!r}')
-if _tflags(_tm('{f1}:{f2}')) != [False, False]: fail('h:mm boxes must not get time automatically')
+if _tflags(_tm('{f1}:{f2}')) != [True, False]: fail('{f1}:{f2} boxes in a question about time must get time automatically')
+if _tflags(_tm('{f1}:{f2}', q='The ratio of boys to girls is', ans=(3, 4))) != [False, False]: fail('a ratio must not be a time')
+if _tflags(_tm('{f1}:{f2}', ans=(3, 4), q='Fill in the boxes.')) != [False, False]: fail('{f1}:{f2} without any time word must not be a time')
 if _tflags(_tm('{f1} h {f2} min', time=False)) != [False, False]: fail('time=False did not switch off')
-if _tflags(_tm('{f1}:{f2}', time=True)) != [True, False]: fail('time=True not passed on')
+if _tflags(_tm('{f1}:{f2}', time=True, q='Fill.')) != [True, False]: fail('time=True not passed on')
 if _tflags(_tm('{f1} cm and {f2} m')) != [False, False]: fail('cm / m boxes must not be a time')
 if _tflags(_tm('Add {f1} to {f2} h', ans=(3, 4))) != [False, False]: fail('only a labelled hours + minutes pair is a time')
+# cents and range flags
+if not _flags(q='How many cents change?').get('cents') or not _flags(q='Is it 65\u00a2?').get('cents'): fail('cents not set automatically for a stem with cents / a cent sign')
+if _flags(q='How many 5-cent coins?').get('cents') or _flags(q='How many coins?').get('cents'): fail('cents set for a coin count / a stem without cents')
+if _flags(q='How many cents change?', cents=False).get('cents') or not _flags(q='x', cents=True).get('cents'): fail('cents=False / cents=True not honoured')
+_cf = _flags(type='fields', q='Money.', frame='{f1} dollars and {f2} cents', answer=[3, 65], check=lambda: [3, 65])
+if [bool(f.get('cents')) for f in _cf['fields']] != [False, True]: fail('only the box before cents is a cents box: ' + str(_cf['fields']))
+_st = dict(type='set', answer=[1, 7], check=lambda: [1, 7])
+if not _flags(range=True, **_st).get('range') or _flags(**_st).get('range'): fail('range default / pass-through')
+try: _flags(range=True); fail('range=True on a number item must fail')
+except H.Fail: pass
 try: _flags(time=True); fail('time=True on a number item must fail')
 except H.Fail: pass
 _pn = dict(type='selfcheck', paper=True, open=True, answer=None)
@@ -403,6 +415,7 @@ with sync_playwright() as pw:
         syn('S26', 'core', 'S26. Angle sum rule.', 'text', ['(n-2)x180'], poly='n'),
         syn('S27', 'core', 'S27. A plain number 1, no unit.', 'number', 1, unit=False),
         syn('S28', 'core', 'S28. How long is the film?', 'fields', [5, 25], frame='{f1} h {f2} min', fields=[dict(id='f1', answer=5, time=True), dict(id='f2', answer=25)]),
+        syn('S29', 'core', 'S29. How many cents change?', 'number', 65, cents=True),
     ]
     for it_ in synitems:
         if it_['type'] == 'selfcheck': it_.update(paper=False, paper_only=False, marking_mode='self', open=True); it_.pop('answer')
@@ -454,6 +467,7 @@ with sync_playwright() as pw:
         if pg.locator('#yes').count(): pg.locator('#yes').click()
         c = cls(pg, k); pg.locator('#again').click(); return c
     CASES.append((26, ['1', '+1', '+ 1'], ['+-1', '1+', '-1', '+']))
+    CASES.append((28, ['65', '65c', '65 c', '65 cents', '65\u00a2'], ['$65', '$0.65', '0.65', '650c']))
     def marked_f(k, vals):
         synq(k); ins = pg.locator('#ans input[type=text]')
         for j, v_ in enumerate(vals): ins.nth(j).fill(v_)
@@ -698,15 +712,18 @@ import make_keys                                   # noqa: E402
 _k, _ver, _d, keys, _tags = make_keys.build(0, n, key)
 nmodes = {}
 for it, kr in zip(items, keys):      # every clock / accept_by / dollars_ok the lesson file sets reaches the built data and the server key (clock: True or per-box list)
-    for fl in ('clock', 'time', 'accept_by', 'dollars_ok'):
+    for fl in ('clock', 'time', 'cents', 'range', 'accept_by', 'dollars_ok'):
         if src.get(it['id'], {}).get(fl) and not (it.get(fl) or kr.get(fl) or any(f.get(fl) for f in it.get('fields', []))):
             fail(f'{it["id"]}: the lesson file sets {fl} but it did not reach the built data')
         if src.get(it['id'], {}).get(fl) and not kr.get(fl): fail(f'{it["id"]}: the lesson file sets {fl} but it did not reach the server key')
 for it, kr in zip(items, keys):      # the report mode is the item's own marking_mode: self = compare with a model answer / paper drawing, none = truly open
     if it['type'] != 'selfcheck':
-        for fl in ('words', 'poly', 'equiv_frac', 'unit', 'dollars_ok', 'accept_by'):
+        for fl in ('words', 'poly', 'equiv_frac', 'unit', 'dollars_ok', 'accept_by', 'range'):
             if it.get(fl) != kr.get(fl): fail(f'{it["id"]}: flag {fl} is {it.get(fl)!r} in the data but {kr.get(fl)!r} in the key')
         ck_want = True if it.get('clock') else ([bool(f.get('clock')) for f in it['fields']] if it['type'] == 'fields' and any(f.get('clock') for f in it['fields']) else None)
+        for fl_ in ('time', 'cents'):
+            w_ = True if it.get(fl_) is True else ([bool(f.get(fl_)) for f in it['fields']] if it['type'] == 'fields' and any(f.get(fl_) for f in it['fields']) else None)
+            if w_ != kr.get(fl_): fail(f'{it["id"]}: {fl_} is {w_!r} in the data but {kr.get(fl_)!r} in the key')
         if ck_want != kr.get('clock'): fail(f'{it["id"]}: clock is {ck_want!r} in the data but {kr.get("clock")!r} in the key')
         continue
     want = ('none', 'open') if it['marking_mode'] == 'none' and not it.get('paper') else ('self', 'selfcheck')
@@ -754,6 +771,12 @@ for it, kr in zip(items, keys):
         for sep in (':', '.', ' '):
             ok_ = base[:]; ok_[th_] = f'{hh_}{sep}{mm_:02d}'; ok_[th_ + 1] = ''; cases.append(dict(rec=kr, v=ok_, want='right'))
         no_ = base[:]; no_[th_] = f'{hh_}:{(mm_ + 5) % 60:02d}'; no_[th_ + 1] = ''; cases.append(dict(rec=kr, v=no_, want='wrong'))
+    if t == 'number' and kr.get('cents'):       # an amount in cents: '65c' / '65 c' are right, '$65' is 65 dollars
+        a_ = it['answer']
+        for v in (f'{a_}c', f'{a_} c', f'{a_}\u00a2', f'{a_} cents'): cases.append(dict(rec=kr, v=v, want='right'))
+        for v in (f'${a_}', f'$ {a_}', f'{a_}0c'): cases.append(dict(rec=kr, v=v, want='wrong'))
+    if t == 'fields' and kr.get('time') and kr['key'][kr['time'].index(True) + 1] == 0:
+        th_ = kr['time'].index(True); ok_ = [str(g['answer']) for g in it['fields']]; ok_[th_ + 1] = ''; cases.append(dict(rec=kr, v=ok_, want='right'))
     if t in ('number', 'fields'):       # number words never count unless the item declares words
         w1 = [f['answer'] for f in it['fields']] if t == 'fields' else [it['answer']]
         if all(0 <= x <= 9 for x in w1) and not it.get('words'):

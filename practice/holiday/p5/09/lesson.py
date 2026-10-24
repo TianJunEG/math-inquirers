@@ -361,7 +361,7 @@ ITEMS = [
       steps=['16 full groups of 6 beads use 96 beads. Each group has 3 yellow beads: 16 × 3 = 48 yellow beads.', 'The last 4 beads (97 to 100) are red, red, blue, yellow: 1 more yellow bead.', '48 + 1 = 49 yellow beads.'],
       src=['How many yellow beads are in the first 100?']),
     D(id='A2', tier='stretch', no='A2', label='A2', type='number', skill='counting a growing pattern', answer=96,
-      q='40 square tables in one long row seat 82 people (one chair on each free side).\nHow many people can sit if the 40 tables are put in 8 rows of 5 tables instead? (Type the number.)',
+      q='40 square tables in one long row seat 82 people (one chair on each free side).\nHow many people can sit if the 40 tables are put in 8 separate rows, each with 5 tables? (Type the number.)',
       sol_fig=lambda f: G.rows_fig(8, 5), check=lambda: 8 * chairs_row(5),
       hint='How many people does a single row of 5 tables seat? Count the chairs on its free sides.',
       steps=['One row of 5 tables has 5 chairs along the top, 5 along the bottom and 2 at the ends: 12 chairs.', '8 rows seat 8 × 12 = 96 people.',
@@ -567,7 +567,7 @@ VARIANTS = {
     'A2': dict(
         base=dict(r=8, m=5),
         tpl=dict(vars=dict(r=[4, 6, 8, 10], m=[3, 4, 5, 6]), derive=dict(T='r * m', S='2 * r * m + 2'),
-                 q='{T} square tables in one long row seat {S} people (one chair on each free side).\nHow many people can sit if the {T} tables are put in {r} rows of {m} tables instead? (Type the number.)',
+                 q='{T} square tables in one long row seat {S} people (one chair on each free side).\nHow many people can sit if the {T} tables are put in {r} separate rows, each with {m} tables? (Type the number.)',
                  answer='r * (2 * m + 2)', hint='How many people does a single row of {m} tables seat? Count the chairs on its free sides.',
                  steps=['One row of {m} tables has {m} chairs along the top, {m} along the bottom and 2 at the ends.', '{r} rows seat {r} times that: {ans} people.'], paper=True),
         oracle=_o_a2),
@@ -594,7 +594,7 @@ VARIANTS = {
         oracle=_o_b1),
     'B2': dict(
         base=dict(n=25, b=3, r=4, w=1, c=18),
-        tpl=dict(vars=dict(n=[20, 25, 30], b=[2, 3, 4], r=[4, 5], w=[2, 3], c=[11, 12, 13, 14]), derive=dict(s='r * c - w * (n - b - c)', ans_q='n - b', full='(n - b) * r', cost='r + w', gap='(n - b) * r - (r * c - w * (n - b - c))', wrong='n - b - c'),
+        tpl=dict(vars=dict(n=[20, 25, 30], b=[2, 3, 4], r=[4, 5], w=[2, 3], c=[13, 14, 15]), derive=dict(s='r * c - w * (n - b - c)', ans_q='n - b', full='(n - b) * r', cost='r + w', gap='(n - b) * r - (r * c - w * (n - b - c))', wrong='n - b - c'),
                  q='A quiz has {n} questions. A correct answer scores {r} marks, {w} marks are taken away for each wrong answer, and a blank scores 0. Mei left {b} questions blank and scored {s}.\nHow many did she get correct? (Type the number.)',
                  answer='c', hint='How many questions did Mei answer? Suppose she got all of those correct. What would she score?',
                  steps=['She answered {ans_q} questions. If all of them were correct she would score {full} marks.', '{s} is {gap} marks less. Each wrong answer costs {r} + {w} = {cost} marks.', '{gap} ÷ {cost} = {wrong} wrong answers, so {ans_q} − {wrong} = {ans} correct.']),

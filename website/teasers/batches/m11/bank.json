@@ -811,7 +811,7 @@
      "16",
      "260"
     ],
-    "q": "Five runners wear bibs numbered 12, 41, 26, 63 and 38. Each runner's score is the two digits of the bib added together (bib 52 scores 5 + 2 = 7). The runner with the lowest score starts first, then the next lowest, and so on. Which bib starts 3rd?",
+    "q": "Five runners wear bibs numbered 12, 41, 26, 63 and 38. A runner's score is the two digits of the bib added together (bib 52 scores 5 + 2 = 7). The lowest score starts first, then the next lowest, and so on. Which bib starts 3rd?",
     "hint": "Work out the score of each bib. Then put the scores in order, from the lowest.",
     "why": "The scores are 3 for bib 12, 5 for bib 41, 8 for bib 26, 9 for bib 63 and 11 for bib 38. In order they start 12, 41, 26, 63, 38. The 3rd bib is 26.",
     "date": "11-19"
@@ -1075,39 +1075,43 @@
     "date": "11-25"
    },
    {
-    "id": "L1-twopizzas",
+    "id": "L1-chairblock",
     "level": 1,
-    "frame": "twopizzas",
-    "kind": "unit_compare",
-    "topic": "Fractions",
-    "sub": "fractions.unit_compare",
-    "family": "fractions",
+    "frame": "chairblock",
+    "kind": "border_tiles",
+    "topic": "Rows and columns",
+    "sub": "arrays.border_tiles",
+    "family": "arrays",
     "p": {
-     "dens": [
-      4,
-      2
-     ],
-     "names": [
-      "Hui Min",
-      "Raj"
-     ],
-     "ask": "most"
+     "n": 3,
+     "m": 16
     },
     "t": {},
     "fmt": "int",
-    "type": "s",
-    "ans": "raj",
-    "shown": "Raj",
-    "units": [],
+    "type": "n",
+    "ans": "34",
+    "shown": "34 chairs",
+    "units": [
+     "chairs",
+     "chair"
+    ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "Hui Min"
+     "35",
+     "33",
+     "36",
+     "32",
+     "68",
+     "17",
+     "44",
+     "24",
+     "340"
     ],
-    "q": "Two pizzas are the same size. Hui Min's pizza is cut into 4 equal slices and she eats 1 slice. Raj's pizza is cut into 2 equal slices and he eats 1 slice. Who eats more pizza?",
-    "hint": "The more equal slices a pizza is cut into, the smaller each slice is.",
-    "why": "Raj's pizza has only 2 slices, so each slice is bigger than a slice of Hui Min's pizza, which has 4 slices. Raj eats more.",
+    "q": "At a school concert, 3 rows of 16 chairs are set out in one block. On the first night only the chairs on the outside edge of the block are used. How many chairs are used?",
+    "hint": "Count the chairs along the front and back rows first. Then count the chairs at the two ends of every row in between.",
+    "why": "The front and back rows have 16 chairs each: 2 × 16 = 32. The other 3 − 2 = 1 row has 2 chairs on the edge. In all, 32 + 2 = 34 chairs.",
     "date": "11-26"
    },
    {
@@ -1653,8 +1657,8 @@
      "1000"
     ],
     "q": "A pictograph uses one book symbol for every 20 books. The row for Class A has 9 symbols and the row for Class B has 4 symbols. How many more books were counted for Class A than for Class B?",
-    "hint": "First find how many more signs Class A has. Then think about what each sign is worth.",
-    "why": "Class A has 5 more signs. Each sign is worth 20 books, so 5 × 20 = 100 books.",
+    "hint": "First find how many more symbols Class A has. Then think about what each symbol is worth.",
+    "why": "Class A has 5 more symbols. Each symbol is worth 20 books, so 5 × 20 = 100 books.",
     "date": "11-08"
    },
    {
@@ -2002,10 +2006,10 @@
     "fmt": "int",
     "type": "n",
     "ans": "28",
-    "shown": "28 prices",
+    "shown": "28 items",
     "units": [
-     "prices",
-     "price"
+     "items",
+     "item"
     ],
     "prefix": [],
     "accept": [],
@@ -2022,8 +2026,8 @@
      "280"
     ],
     "q": "A fair stall accepts $2 notes and $5 notes only, and it cannot give any change. It sells items for $1, $2, $3 and so on, right up to $30. How many of the 30 items can be bought by paying exactly?",
-    "hint": "Find the prices that cannot be paid. Try the smallest prices first.",
-    "why": "Only $1 and $3 cannot be paid. Every other price can be, for example $4 = $2 + $2, $6 = $2 + $2 + $2 and $7 = $5 + $2. That is 30 − 2 = 28 prices.",
+    "hint": "Find the items that cannot be bought exactly. Try the smallest prices first.",
+    "why": "Only $1 and $3 cannot be paid. Every other price can be, for example $4 = $2 + $2, $6 = $2 + $2 + $2 and $7 = $5 + $2. That is 30 − 2 = 28 items.",
     "date": "11-16"
    },
    {
@@ -2201,9 +2205,9 @@
     "date": "11-20"
    },
    {
-    "id": "L2-bookstall",
+    "id": "L2-fruitbags",
     "level": 2,
-    "frame": "bookstall",
+    "frame": "fruitbags",
     "kind": "dot",
     "topic": "Groups",
     "sub": "multiplication.two_kinds_total",
@@ -2244,7 +2248,7 @@
      "27",
      "370"
     ],
-    "q": "Aunty Lee buys 5 bags of oranges with 5 oranges in each bag, and 3 bags of limes with 4 limes in each bag. How many oranges and limes does she buy altogether?",
+    "q": "Aunty Lee buys 5 bags of oranges with 5 oranges in each bag. She also buys 3 bags of limes with 4 limes in each bag. How many oranges and limes does she buy altogether?",
     "hint": "Work out the oranges and the limes separately. Then add.",
     "why": "5 × 5 = 25 and 3 × 4 = 12. Together: 25 + 12 = 37.",
     "date": "11-21"
@@ -2630,47 +2634,173 @@
   ],
   "3": [
    {
-    "id": "L3-shells3",
+    "id": "L3-missednumber",
     "level": 3,
-    "frame": "shells3",
-    "kind": "bar_three",
-    "topic": "Bar models",
-    "sub": "bar_model.three_amounts",
-    "family": "bar_model",
+    "frame": "missednumber",
+    "kind": "missing_term",
+    "topic": "Adding in order",
+    "sub": "series_sum.missing_term",
+    "family": "series_sum",
     "p": {
-     "extras": [
-      9,
-      16
-     ],
-     "total": 106,
-     "ask": "largest"
+     "n": 14,
+     "got": 96
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "43",
-    "shown": "43 shells",
+    "ans": "9",
+    "shown": "9",
+    "units": [],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "10",
+     "8",
+     "11",
+     "7",
+     "18",
+     "19",
+     "90"
+    ],
+    "q": "Hana adds all the whole numbers from 1 to 14. She gets 96, but she left out one number by mistake. Which number did she leave out?",
+    "hint": "Work out what the total of 1 to 14 should be. You can add them in a row, or look for a quicker way.",
+    "why": "The numbers 1 to 14 make 7 pairs that each add to 1 + 14 = 15, so the total should be 7 × 15 = 105. 105 − 96 = 9.",
+    "date": "11-01"
+   },
+   {
+    "id": "L3-marbletimes",
+    "level": 3,
+    "frame": "marbletimes",
+    "kind": "times_as_many",
+    "topic": "Bar models",
+    "sub": "bar_model.times_as_many",
+    "family": "bar_model",
+    "p": {
+     "k": 3,
+     "total": 52,
+     "ask": "large"
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "39",
+    "shown": "39 marbles",
     "units": [
-     "shells",
-     "shell"
+     "marbles",
+     "marble"
     ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "44",
-     "42",
-     "45",
+     "40",
+     "38",
      "41",
-     "86",
-     "53",
-     "33",
-     "430"
+     "37",
+     "78",
+     "49",
+     "29",
+     "390"
     ],
-    "q": "Nina, Omar and Pei collect shells at the beach. Omar finds 9 more shells than Nina. Pei finds 16 more shells than Nina. Together they find 106 shells. How many shells does Pei find?",
-    "hint": "Take away the extra shells first. What is left is three equal shares.",
-    "why": "The extras are 9 + 16 = 25 shells. Without them the total is 106 − 25 = 81, shared by 3 equal collectors: 81 ÷ 3 = 27 is Nina's number. Pei finds 27 + 16 = 43 shells.",
-    "date": "11-01"
+    "q": "Lin and Jun collect marbles. Jun owns 3 times as many as Lin does, and the two friends own 52 marbles in all. How many marbles does Jun own?",
+    "hint": "Draw one bar for Lin and a bar 3 times as long for Jun. Count the equal parts.",
+    "why": "Lin is 1 part and Jun is 3 parts, so there are 4 equal parts. 52 ÷ 4 = 13 marbles for Lin. Jun has 3 × 13 = 39 marbles.",
+    "date": "11-02"
+   },
+   {
+    "id": "L3-books",
+    "level": 3,
+    "frame": "books",
+    "kind": "stats",
+    "topic": "Reading a chart",
+    "sub": "graphs.most_least_gap",
+    "family": "graphs",
+    "p": {
+     "data": [
+      24,
+      13,
+      49,
+      31,
+      20
+     ],
+     "ask": "range"
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "36",
+    "shown": "36 books",
+    "units": [
+     "books",
+     "book"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "37",
+     "35",
+     "38",
+     "34",
+     "72",
+     "18",
+     "46",
+     "26",
+     "360"
+    ],
+    "q": "Five children read books during the school year. Mei Ling read 24, Ben read 13, Aisha read 49, Ravi read 31 and Siti read 20. How many more books did the child who read the most read than the child who read the least?",
+    "hint": "Find the biggest number and the smallest number first.",
+    "why": "The most is 49 and the least is 13. 49 − 13 = 36 books.",
+    "date": "11-03"
+   },
+   {
+    "id": "L3-fracmiddle",
+    "level": 3,
+    "frame": "fracmiddle",
+    "kind": "fraction_order",
+    "topic": "Fractions",
+    "sub": "fractions.compare_order",
+    "family": "fractions",
+    "p": {
+     "fracs": [
+      [
+       3,
+       4
+      ],
+      [
+       5,
+       8
+      ],
+      [
+       2,
+       3
+      ]
+     ],
+     "ask": "middle"
+    },
+    "t": {},
+    "fmt": "frac",
+    "type": "n",
+    "ans": "2/3",
+    "shown": "2/3",
+    "units": [],
+    "prefix": [],
+    "accept": [],
+    "exact": true,
+    "wrong": [
+     "5/3",
+     "8/3",
+     "4/3",
+     "1/3",
+     "32/3",
+     "7/6",
+     "20/3"
+    ],
+    "q": "Three cards show the fractions 3/4, 5/8 and 2/3. Which fraction lies between the other two?",
+    "hint": "Write each fraction with the same bottom number. The number 24 works for all three.",
+    "why": "3/4 = 18/24, 5/8 = 15/24 and 2/3 = 16/24. 15/24 is the least and 18/24 is the greatest, so the one between them is 2/3.",
+    "date": "11-04"
    },
    {
     "id": "L3-playlist",
@@ -2725,7 +2855,913 @@
     "q": "A playlist has three songs. The first lasts 3 minutes 25 seconds, the second lasts 4 minutes 10 seconds and the third lasts 2 minutes 45 seconds. How many seconds long is the whole playlist?",
     "hint": "Change each song to seconds first. One minute is 60 seconds.",
     "why": "3 min 25 s is 205 s. 4 min 10 s is 250 s. 2 min 45 s is 165 s. 205 + 250 + 165 = 620 seconds.",
-    "date": "11-02"
+    "date": "11-05"
+   },
+   {
+    "id": "L3-harbourcruise",
+    "level": 3,
+    "frame": "harbourcruise",
+    "kind": "twenty_four",
+    "topic": "The 24-hour clock",
+    "sub": "clock_reading.twenty_four_hour",
+    "family": "clock_reading",
+    "p": {
+     "h": 4,
+     "ap": "pm",
+     "m": 25,
+     "add_h": 2,
+     "add_m": 50
+    },
+    "t": {},
+    "fmt": "plain",
+    "type": "n",
+    "ans": "1915",
+    "shown": "1915",
+    "units": [],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "1916",
+     "1914",
+     "1917",
+     "1913",
+     "3830",
+     "957.5",
+     "1925",
+     "1905",
+     "1915.5",
+     "19150"
+    ],
+    "q": "A harbour cruise leaves the pier at 4:25 pm. The cruise lasts 2 hours 50 minutes. Write the time the cruise ends in 24-hour time, as four digits, like 0915.",
+    "hint": "Change the start time to 24-hour time first: add 12 to the hour for a pm time.",
+    "why": "4:25 pm is 1625 in 24-hour time. Two hours later is 1825. Then 50 more minutes make 1915. The cruise ends at 1915.",
+    "date": "11-06"
+   },
+   {
+    "id": "L3-kopitiam",
+    "level": 3,
+    "frame": "kopitiam",
+    "kind": "sum_diff",
+    "topic": "Bar models",
+    "sub": "bar_model.sum_difference",
+    "family": "bar_model",
+    "p": {
+     "S": 450,
+     "D": 86,
+     "ask": "larger"
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "268",
+    "shown": "268 cups",
+    "units": [
+     "cups",
+     "cup"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "269",
+     "267",
+     "270",
+     "266",
+     "536",
+     "134",
+     "278",
+     "258",
+     "2680"
+    ],
+    "q": "A kopitiam sold 450 cups of coffee and tea one morning. It sold 86 more cups of coffee than tea. How many cups of coffee did it sell?",
+    "hint": "Draw two bars. The coffee bar is longer by 86.",
+    "why": "Take away the extra 86: 450 − 86 = 364. Share equally: 364 ÷ 2 = 182 cups of tea. Coffee is 182 + 86 = 268 cups.",
+    "date": "11-07"
+   },
+   {
+    "id": "L3-sticksdisplay",
+    "level": 3,
+    "frame": "sticksdisplay",
+    "kind": "digit_segments",
+    "topic": "Counting sticks",
+    "sub": "digit_display.segments",
+    "family": "digit_display",
+    "p": {
+     "lo": 31,
+     "hi": 39,
+     "table": {
+      "0": 6,
+      "1": 2,
+      "2": 5,
+      "3": 5,
+      "4": 4,
+      "5": 5,
+      "6": 6,
+      "7": 3,
+      "8": 7,
+      "9": 6
+     }
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "88",
+    "shown": "88 sticks",
+    "units": [
+     "sticks",
+     "stick"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "89",
+     "87",
+     "90",
+     "86",
+     "176",
+     "44",
+     "98",
+     "78",
+     "880"
+    ],
+    "q": "On a toy display, every digit is made with sticks, as the table shows. Mia shows every number from 31 to 39, one after another. How many sticks does she use altogether?",
+    "hint": "Count the sticks in the tens digit of every number. Then count the sticks in all the ones digits.",
+    "why": "The tens digit is 3 in all 9 numbers: 9 × 5 = 45 sticks. The ones digits are 1 to 9, which use 2 + 5 + 5 + 4 + 5 + 6 + 3 + 7 + 6 = 43 sticks. 45 + 43 = 88 sticks.",
+    "code": "digit : 1 2 3 4 5 6 7 8 9\nsticks: 2 5 5 4 5 6 3 7 6",
+    "date": "11-08"
+   },
+   {
+    "id": "L3-cuboidclue",
+    "level": 3,
+    "frame": "cuboidclue",
+    "kind": "shape_riddle",
+    "topic": "Solid shapes",
+    "sub": "shapes.name_the_shape",
+    "family": "shapes",
+    "p": {
+     "pool": "3d",
+     "clue": {
+      "flat": 6,
+      "vertices": 8,
+      "same": false
+     }
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "s",
+    "ans": "cuboid",
+    "shown": "cuboid",
+    "units": [],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "cube",
+     "cone",
+     "cylinder"
+    ],
+    "q": "A solid shape has 6 flat faces and 8 corners. Its faces are not all the same shape: some of them are rectangles that are not squares. Is the solid a cube, a cuboid, a cone or a cylinder?",
+    "hint": "Think about the faces of a cube. Are they all squares?",
+    "why": "A cone and a cylinder have curved faces, and a cone has only 1 corner. A cube has 6 flat faces and 8 corners, but all its faces are squares. A solid with 6 flat faces, 8 corners and faces that are not all squares is a cuboid.",
+    "date": "11-09"
+   },
+   {
+    "id": "L3-bakery",
+    "level": 3,
+    "frame": "bakery",
+    "kind": "groups_plus",
+    "topic": "Times tables",
+    "sub": "multiplication.groups",
+    "family": "multiplication",
+    "p": {
+     "g": 7,
+     "s": 36,
+     "r": -15
+    },
+    "t": {
+     "neg": 15
+    },
+    "fmt": "int",
+    "type": "n",
+    "ans": "237",
+    "shown": "237 tea bags",
+    "units": [
+     "tea bags",
+     "tea bag"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "238",
+     "236",
+     "239",
+     "235",
+     "474",
+     "247",
+     "227",
+     "2370"
+    ],
+    "q": "A tea shop has 7 boxes with 36 tea bags in each box. 15 tea bags are damaged and thrown away. How many tea bags are left?",
+    "hint": "Work out how many tea bags there were at first. Then take away the damaged ones.",
+    "why": "7 × 36 = 252. 252 − 15 = 237 tea bags.",
+    "date": "11-10"
+   },
+   {
+    "id": "L3-houses",
+    "level": 3,
+    "frame": "houses",
+    "kind": "consec",
+    "topic": "Number puzzles",
+    "sub": "consecutive.consecutive_total",
+    "family": "consecutive",
+    "p": {
+     "count": 3,
+     "step": 1,
+     "total": 114,
+     "ask": "smallest"
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "37",
+    "shown": "37",
+    "units": [],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "38",
+     "36",
+     "39",
+     "35",
+     "74",
+     "47",
+     "27",
+     "370"
+    ],
+    "q": "Three houses next to each other on one side of a road have consecutive numbers, like 21, 22, 23. The three numbers add up to 114. What is the smallest house number?",
+    "hint": "The middle number is the average of the three numbers.",
+    "why": "114 ÷ 3 = 38 is the middle number. The numbers are 37, 38 and 39. The smallest is 37.",
+    "date": "11-11"
+   },
+   {
+    "id": "L3-eggtrays",
+    "level": 3,
+    "frame": "eggtrays",
+    "kind": "mystery",
+    "topic": "Working backwards",
+    "sub": "backwards.undo_steps",
+    "family": "backwards",
+    "p": {
+     "ops": [
+      [
+       "*",
+       6
+      ],
+      [
+       "+",
+       9
+      ]
+     ],
+     "result": 75
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "11",
+    "shown": "11 eggs",
+    "units": [
+     "eggs",
+     "egg"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "12",
+     "10",
+     "13",
+     "9",
+     "22",
+     "21",
+     "1",
+     "110"
+    ],
+    "q": "Mrs Lim puts the same number of eggs on each of 6 trays. She also has 9 loose eggs. She has 75 eggs altogether. How many eggs are on each tray?",
+    "hint": "Work backwards. Take away the loose eggs first. Then share what is left among the trays.",
+    "why": "Take away the loose eggs: 75 − 9 = 66. Share 66 eggs among 6 trays: 66 ÷ 6 = 11 eggs on each tray.",
+    "date": "11-12"
+   },
+   {
+    "id": "L3-cardsorder",
+    "level": 3,
+    "frame": "cardsorder",
+    "kind": "order_by_key",
+    "topic": "Ordering numbers",
+    "sub": "sorting.order_by_digit_rule",
+    "family": "sorting",
+    "p": {
+     "numbers": [
+      48,
+      61,
+      35,
+      29,
+      72
+     ],
+     "rule": "digit_sum",
+     "place": 3
+    },
+    "t": {
+     "cards": "48, 61, 35, 29 and 72"
+    },
+    "fmt": "int",
+    "type": "n",
+    "ans": "72",
+    "shown": "72",
+    "units": [],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "73",
+     "71",
+     "74",
+     "70",
+     "144",
+     "36",
+     "82",
+     "62",
+     "720"
+    ],
+    "q": "Five number cards are 48, 61, 35, 29 and 72. Hana puts them in a row, from the smallest digit sum to the biggest digit sum. The digit sum of 52 is 5 + 2 = 7. Which card is third in her row?",
+    "hint": "Work out the digit sum of each card. Then put the sums in order.",
+    "why": "The digit sums are 12 for 48, 7 for 61, 8 for 35, 11 for 29 and 9 for 72. In order they are 7, 8, 9, 11, 12, which belong to 61, 35, 72, 29, 48. The third card is 72.",
+    "date": "11-13"
+   },
+   {
+    "id": "L3-magic",
+    "level": 3,
+    "frame": "magic",
+    "kind": "magic",
+    "topic": "Magic squares",
+    "sub": "number_grid.magic_square",
+    "family": "number_grid",
+    "p": {
+     "cells9": [
+      2,
+      9,
+      4,
+      7,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "nums": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "ask_idx": 8
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "8",
+    "shown": "8",
+    "units": [],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "9",
+     "7",
+     "10",
+     "6",
+     "16",
+     "4",
+     "18",
+     "80"
+    ],
+    "q": "Place the digits 1 to 9 in a 3 by 3 square, each digit once. Every line across, every line down and both corner-to-corner lines must add up to the same total. Some digits are placed for you, and ? marks a gap. Which digit goes in the bottom right corner?",
+    "hint": "Add the top line first. That gives the total for every line.",
+    "why": "The top line is 2 + 9 + 4 = 15, so every line adds to 15. Left line down: 2 + 7 + 6, so the bottom-left is 6. Corner-to-corner line: 4 + 5 + 6, so the middle is 5. Middle line across: 7 + 5 + 3, so the right of the middle line is 3. Right line down: 4 + 3 + 8, so the corner at the bottom right is 8.",
+    "code": "2   9   4\n7   ?   ?\n?   ?   ?",
+    "date": "11-14"
+   },
+   {
+    "id": "L3-race",
+    "level": 3,
+    "frame": "race",
+    "kind": "order_logic",
+    "topic": "Who is it?",
+    "sub": "logic_order.rank",
+    "family": "logic_order",
+    "p": {
+     "order": [
+      "Ravi",
+      "Priya",
+      "Ben",
+      "Siti"
+     ],
+     "facts": [
+      [
+       "Priya",
+       "Ben"
+      ],
+      [
+       "Ben",
+       "Siti"
+      ],
+      [
+       "Ravi",
+       "Priya"
+      ]
+     ],
+     "idx": 2,
+     "rel": "faster than"
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "s",
+    "ans": "ben",
+    "shown": "Ben",
+    "units": [],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "Ravi",
+     "Priya",
+     "Siti"
+    ],
+    "q": "Priya is faster than Ben. Ben is faster than Siti. Ravi is faster than Priya. Who finished third?",
+    "hint": "Write the four names in a row from the fastest to the slowest.",
+    "why": "From fastest to slowest: Ravi, Priya, Ben, Siti. The third is Ben.",
+    "date": "11-15"
+   },
+   {
+    "id": "L3-shells3",
+    "level": 3,
+    "frame": "shells3",
+    "kind": "bar_three",
+    "topic": "Bar models",
+    "sub": "bar_model.three_amounts",
+    "family": "bar_model",
+    "p": {
+     "extras": [
+      9,
+      16
+     ],
+     "total": 106,
+     "ask": "largest"
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "43",
+    "shown": "43 shells",
+    "units": [
+     "shells",
+     "shell"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "44",
+     "42",
+     "45",
+     "41",
+     "86",
+     "53",
+     "33",
+     "430"
+    ],
+    "q": "Nina, Omar and Pei collect shells at the beach. Omar finds 9 more shells than Nina. Pei finds 16 more shells than Nina. Together they find 106 shells. How many shells does Pei find?",
+    "hint": "Take away the extra shells first. What is left is three equal shares.",
+    "why": "The extras are 9 + 16 = 25 shells. Without them the total is 106 − 25 = 81, shared by 3 equal collectors: 81 ÷ 3 = 27 is Nina's number. Pei finds 27 + 16 = 43 shells.",
+    "date": "11-16"
+   },
+   {
+    "id": "L3-albumpages",
+    "level": 3,
+    "frame": "albumpages",
+    "kind": "page_digits",
+    "topic": "Digits",
+    "sub": "place_value.digits_written",
+    "family": "place_value",
+    "p": {
+     "lo": 1,
+     "hi": 150
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "342",
+    "shown": "342 digits",
+    "units": [
+     "digits",
+     "digit"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "343",
+     "341",
+     "344",
+     "340",
+     "684",
+     "171",
+     "352",
+     "332",
+     "3420"
+    ],
+    "q": "Zack makes a scrapbook with 150 pages. He writes the page numbers 1, 2, 3 and so on up to 150, one on each page. How many digits does he write altogether?",
+    "hint": "Group the pages by how many digits their numbers have: one digit, two digits, three digits.",
+    "why": "Pages 1 to 9 use 9 digits. Pages 10 to 99 are 90 pages with 2 digits each, which is 180 digits. Pages 100 to 150 are 51 pages with 3 digits each, which is 153 digits. 9 + 180 + 153 = 342 digits.",
+    "date": "11-17"
+   },
+   {
+    "id": "L3-solidedges",
+    "level": 3,
+    "frame": "solidedges",
+    "kind": "solid_parts",
+    "topic": "Solid shapes",
+    "sub": "shapes.solid_parts",
+    "family": "shapes",
+    "p": {
+     "shapes": [
+      "cube",
+      "square pyramid"
+     ],
+     "part": "edges"
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "20",
+    "shown": "20 edges",
+    "units": [
+     "edges",
+     "edge"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "21",
+     "19",
+     "22",
+     "18",
+     "40",
+     "10",
+     "30",
+     "200"
+    ],
+    "q": "How many edges do a cube and a square pyramid have altogether? A square pyramid has a square base and four triangle faces.",
+    "hint": "Count the edges of each solid separately. Then add.",
+    "why": "Counting separately, a cube has 12 edges and a square pyramid has 8 edges. Altogether that is 20 edges.",
+    "date": "11-18"
+   },
+   {
+    "id": "L3-doorwords",
+    "level": 3,
+    "frame": "doorwords",
+    "kind": "number_words",
+    "topic": "Number words",
+    "sub": "number_names.letters_in_words",
+    "family": "number_names",
+    "p": {
+     "lo": 1,
+     "hi": 15
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "74",
+    "shown": "74 letters",
+    "units": [
+     "letters",
+     "letter"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "75",
+     "73",
+     "76",
+     "72",
+     "148",
+     "37",
+     "84",
+     "64",
+     "740"
+    ],
+    "q": "A sign painter writes the door numbers 1 to 15 in words on 15 doors: one, two, three and so on. He paints one letter at a time. How many letters does he paint altogether?",
+    "hint": "Count the letters in each number word, one at a time. Keep a running total.",
+    "why": "The letters in the words are: one 3, two 3, three 5, four 4, five 4, six 3, seven 5, eight 5, nine 4, ten 3, eleven 6, twelve 6, thirteen 8, fourteen 8, fifteen 7. Adding all of them gives 74 letters.",
+    "date": "11-19"
+   },
+   {
+    "id": "L3-chessboard",
+    "level": 3,
+    "frame": "chessboard",
+    "kind": "checkerboard",
+    "topic": "Patterns",
+    "sub": "arrays.checkerboard",
+    "family": "arrays",
+    "p": {
+     "rows": 14,
+     "cols": 21,
+     "ask": "edge_dark"
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "33",
+    "shown": "33 squares",
+    "units": [
+     "squares",
+     "square"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "34",
+     "32",
+     "35",
+     "31",
+     "66",
+     "43",
+     "23",
+     "330"
+    ],
+    "q": "A giant chessboard is painted on a playground. It has 14 rows and 21 columns of squares. Dark and light squares take turns along every row and column, and the top left square is dark. How many dark squares touch the edge of the board?",
+    "hint": "The squares on the edge form a ring round the board. Count how many squares are in the ring, then think about how dark and light take turns.",
+    "why": "The ring has 2 × (14 + 21) − 4 = 66 squares. Dark and light take turns all the way round the ring, and 66 is an even number, so half of them are dark: 66 ÷ 2 = 33 squares.",
+    "date": "11-20"
+   },
+   {
+    "id": "L3-bookread",
+    "level": 3,
+    "frame": "bookread",
+    "kind": "frac_arith",
+    "topic": "Fractions",
+    "sub": "fractions.arithmetic",
+    "family": "fractions",
+    "p": {
+     "op": "+",
+     "a": [
+      0,
+      3,
+      10
+     ],
+     "b": [
+      0,
+      2,
+      5
+     ]
+    },
+    "t": {},
+    "fmt": "frac",
+    "type": "n",
+    "ans": "7/10",
+    "shown": "7/10",
+    "units": [],
+    "prefix": [],
+    "accept": [],
+    "exact": true,
+    "wrong": [
+     "17/10",
+     "27/10",
+     "7/5",
+     "7/20",
+     "107/10",
+     "6/5",
+     "7"
+    ],
+    "q": "On Sunday, Dina reads 3/10 of her story book. On Monday she reads 2/5 of the same book. Give the total as a fraction of the book.",
+    "hint": "Write both fractions with the same bottom number first. Tenths and fifths go together.",
+    "why": "2/5 is 4/10. Now 3/10 + 4/10 = 7/10.",
+    "date": "11-21"
+   },
+   {
+    "id": "L3-pairproduct",
+    "level": 3,
+    "frame": "pairproduct",
+    "kind": "sum_product",
+    "topic": "Guess and check",
+    "sub": "guess_check.sum_product",
+    "family": "guess_check",
+    "p": {
+     "s": 43,
+     "p": 462,
+     "ask": "smaller"
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "21",
+    "shown": "21",
+    "units": [],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "22",
+     "20",
+     "23",
+     "19",
+     "42",
+     "31",
+     "11",
+     "210"
+    ],
+    "q": "Ana thinks of two whole numbers. Their sum is 43 and their product is 462. What is the smaller of her two numbers?",
+    "hint": "List pairs that add to 43, such as 20 and 23. Multiply each pair. Is the product too big or too small?",
+    "why": "21 and 22 add up to 43 and multiply to 462. The smaller number is 21.",
+    "date": "11-22"
+   },
+   {
+    "id": "L3-clockturn",
+    "level": 3,
+    "frame": "clockturn",
+    "kind": "quarter_turns",
+    "topic": "Right angles",
+    "sub": "angles.right_angle_turns",
+    "family": "angles",
+    "p": {
+     "a": 2,
+     "b": 11
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "3",
+    "shown": "3 right angles",
+    "units": [
+     "right angles",
+     "right angle"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "4",
+     "2",
+     "5",
+     "1",
+     "6",
+     "13",
+     "30"
+    ],
+    "q": "A minute hand on a classroom clock starts at the 2 and turns clockwise until it points at the 11. How many right angles has it turned through?",
+    "hint": "A right angle is a quarter turn. The numbers 12, 3, 6 and 9 are a quarter turn apart.",
+    "why": "From 2 to 11 the hand passes 9 numbers. A quarter turn is 3 numbers, so 9 ÷ 3 = 3 right angles.",
+    "date": "11-23"
+   },
+   {
+    "id": "L3-carousel",
+    "level": 3,
+    "frame": "carousel",
+    "kind": "circle_opposite",
+    "topic": "Round a circle",
+    "sub": "spatial.circle_opposite",
+    "family": "spatial",
+    "p": {
+     "n": 34,
+     "a": 4,
+     "ask": "between"
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "16",
+    "shown": "16 horses",
+    "units": [
+     "horses",
+     "horse"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "17",
+     "15",
+     "18",
+     "14",
+     "32",
+     "8",
+     "26",
+     "6",
+     "160"
+    ],
+    "q": "A carousel has 34 horses in a ring, numbered 1 to 34 in order. Horse 4 and the horse opposite it are exactly halfway round the ring from each other. How many horses stand between them on one side?",
+    "hint": "Half of the ring is 17 horses. Do not count the two horses at the ends.",
+    "why": "Half of 34 is 17, so the opposite horse is 17 places on from horse 4. The horses between them on one side are the ones in the 17 − 1 = 16 places in between.",
+    "date": "11-24"
+   },
+   {
+    "id": "L3-journeytime",
+    "level": 3,
+    "frame": "journeytime",
+    "kind": "elapsed",
+    "topic": "Time",
+    "sub": "durations.elapsed",
+    "family": "durations",
+    "p": {
+     "h1": 9,
+     "m1": 48,
+     "h2": 12,
+     "m2": 15
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "147",
+    "shown": "147 minutes",
+    "units": [
+     "min",
+     "mins",
+     "minute",
+     "minutes"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "148",
+     "146",
+     "149",
+     "145",
+     "294",
+     "157",
+     "137",
+     "1470"
+    ],
+    "q": "Mr Tan's train journey starts at 9:48 in the morning and ends at 12:15 in the afternoon. How many minutes does the journey last?",
+    "hint": "Split the time at 10:00 and at 12:00. Add up the three parts.",
+    "why": "9:48 to 10:00 is 12 minutes. 10:00 to 12:00 is 120 minutes. 12:00 to 12:15 is 15 minutes. 12 + 120 + 15 = 147 minutes.",
+    "date": "11-25"
+   },
+   {
+    "id": "L3-mangoprice",
+    "level": 3,
+    "frame": "mangoprice",
+    "kind": "unit_price",
+    "topic": "Money",
+    "sub": "money.unitary_price",
+    "family": "money",
+    "p": {
+     "buy": 6,
+     "cost": 960,
+     "want": 9
+    },
+    "t": {},
+    "fmt": "money",
+    "type": "n",
+    "ans": "14.4",
+    "shown": "$14.40",
+    "units": [
+     "dollars",
+     "dollar"
+    ],
+    "prefix": [
+     "$",
+     "s$"
+    ],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "15.4",
+     "13.4",
+     "16.4",
+     "12.4",
+     "28.8",
+     "7.2",
+     "24.4",
+     "4.4",
+     "14.9",
+     "144"
+    ],
+    "q": "Aisha buys 6 mangoes for $9.60. How much would 9 mangoes cost at the same price for each?",
+    "hint": "Find the cost of 1 mango first.",
+    "why": "1 mango costs $1.60. 9 mangoes cost 9 × $1.60 = $14.40.",
+    "date": "11-26"
    },
    {
     "id": "L3-basket",
@@ -2774,173 +3810,7 @@
     "q": "A fruit basket holds 4 mangoes weighing 250 g each and 3 papayas weighing 400 g each. Find the combined mass of all the fruit in grams.",
     "hint": "Work out the mango mass and the papaya mass separately. Then add.",
     "why": "4 × 250 = 1000 and 3 × 400 = 1200. 1000 + 1200 = 2200 g. The total mass is 2200 g.",
-    "date": "11-03"
-   },
-   {
-    "id": "L3-mangoprice",
-    "level": 3,
-    "frame": "mangoprice",
-    "kind": "unit_price",
-    "topic": "Money",
-    "sub": "money.unitary_price",
-    "family": "money",
-    "p": {
-     "buy": 6,
-     "cost": 960,
-     "want": 9
-    },
-    "t": {},
-    "fmt": "money",
-    "type": "n",
-    "ans": "14.4",
-    "shown": "$14.40",
-    "units": [
-     "dollars",
-     "dollar"
-    ],
-    "prefix": [
-     "$",
-     "s$"
-    ],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "15.4",
-     "13.4",
-     "16.4",
-     "12.4",
-     "28.8",
-     "7.2",
-     "24.4",
-     "4.4",
-     "14.9",
-     "144"
-    ],
-    "q": "Aisha buys 6 mangoes for $9.60. How much would 9 mangoes cost at the same price for each?",
-    "hint": "Find the cost of 1 mango first.",
-    "why": "1 mango costs $1.60. 9 mangoes cost 9 × $1.60 = $14.40.",
-    "date": "11-04"
-   },
-   {
-    "id": "L3-kopitiam",
-    "level": 3,
-    "frame": "kopitiam",
-    "kind": "sum_diff",
-    "topic": "Bar models",
-    "sub": "bar_model.sum_difference",
-    "family": "bar_model",
-    "p": {
-     "S": 450,
-     "D": 86,
-     "ask": "larger"
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "268",
-    "shown": "268 cups",
-    "units": [
-     "cups",
-     "cup"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "269",
-     "267",
-     "270",
-     "266",
-     "536",
-     "134",
-     "278",
-     "258",
-     "2680"
-    ],
-    "q": "A kopitiam sold 450 cups of coffee and tea one morning. It sold 86 more cups of coffee than tea. How many cups of coffee did it sell?",
-    "hint": "Draw two bars. The coffee bar is longer by 86.",
-    "why": "Take away the extra 86: 450 − 86 = 364. Share equally: 364 ÷ 2 = 182 cups of tea. Coffee is 182 + 86 = 268 cups.",
-    "date": "11-05"
-   },
-   {
-    "id": "L3-chessboard",
-    "level": 3,
-    "frame": "chessboard",
-    "kind": "checkerboard",
-    "topic": "Patterns",
-    "sub": "arrays.checkerboard",
-    "family": "arrays",
-    "p": {
-     "rows": 14,
-     "cols": 21,
-     "ask": "edge_dark"
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "33",
-    "shown": "33 squares",
-    "units": [
-     "squares",
-     "square"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "34",
-     "32",
-     "35",
-     "31",
-     "66",
-     "43",
-     "23",
-     "330"
-    ],
-    "q": "A giant chessboard is painted on a playground. It has 14 rows and 21 columns of squares. Dark and light squares take turns along every row and column, and the top left square is dark. How many dark squares touch the edge of the board?",
-    "hint": "The squares on the edge form a ring round the board. Count how many squares are in the ring, then think about how dark and light take turns.",
-    "why": "The ring has 2 × (14 + 21) − 4 = 66 squares. Dark and light take turns all the way round the ring, and 66 is an even number, so half of them are dark: 66 ÷ 2 = 33 squares.",
-    "date": "11-06"
-   },
-   {
-    "id": "L3-doorwords",
-    "level": 3,
-    "frame": "doorwords",
-    "kind": "number_words",
-    "topic": "Number words",
-    "sub": "number_names.letters_in_words",
-    "family": "number_names",
-    "p": {
-     "lo": 1,
-     "hi": 15
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "74",
-    "shown": "74 letters",
-    "units": [
-     "letters",
-     "letter"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "75",
-     "73",
-     "76",
-     "72",
-     "148",
-     "37",
-     "84",
-     "64",
-     "740"
-    ],
-    "q": "A sign painter writes the door numbers 1 to 15 in words on 15 doors: one, two, three and so on. He paints one letter at a time. How many letters does he paint altogether?",
-    "hint": "Count the letters in each number word, one at a time. Keep a running total.",
-    "why": "The letters in the words are: one 3, two 3, three 5, four 4, five 4, six 3, seven 5, eight 5, nine 4, ten 3, eleven 6, twelve 6, thirteen 8, fourteen 8, fifteen 7. Adding all of them gives 74 letters.",
-    "date": "11-07"
+    "date": "11-27"
    },
    {
     "id": "L3-cardkeep",
@@ -3008,55 +3878,7 @@
     "q": "Rina writes these numbers on cards: 16, 24, 30, 36, 40, 42, 48, 54, 60, 64, 66, 72, 78, 84, 90 and 96. She keeps only the cards with a number that is in the 4 times table, is bigger than 40, and is smaller than 90. How many cards does she keep?",
     "hint": "Check every card three times: is it in the 4 times table, is it bigger than 40, and is it smaller than 90?",
     "why": "The cards that pass all three checks are 48, 60, 64, 72, 84. That is 5 cards.",
-    "date": "11-08"
-   },
-   {
-    "id": "L3-eggtrays",
-    "level": 3,
-    "frame": "eggtrays",
-    "kind": "mystery",
-    "topic": "Working backwards",
-    "sub": "backwards.undo_steps",
-    "family": "backwards",
-    "p": {
-     "ops": [
-      [
-       "*",
-       6
-      ],
-      [
-       "+",
-       9
-      ]
-     ],
-     "result": 75
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "11",
-    "shown": "11 eggs",
-    "units": [
-     "eggs",
-     "egg"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "12",
-     "10",
-     "13",
-     "9",
-     "22",
-     "21",
-     "1",
-     "110"
-    ],
-    "q": "Mrs Lim puts the same number of eggs on each of 6 trays. She also has 9 loose eggs. She has 75 eggs altogether. How many eggs are on each tray?",
-    "hint": "Work backwards. Take away the loose eggs first. Then share what is left among the trays.",
-    "why": "Take away the loose eggs: 75 − 9 = 66. Share 66 eggs among 6 trays: 66 ÷ 6 = 11 eggs on each tray.",
-    "date": "11-09"
+    "date": "11-28"
    },
    {
     "id": "L3-badmintonko",
@@ -3094,521 +3916,7 @@
     "q": "36 players enter a badminton knockout. Every match is between 2 players and the loser is out. If a round starts with an odd number of players, one player waits for the next round. How many matches are played in all?",
     "hint": "Every match sends exactly one player out. How many players must go out for one winner to be left?",
     "why": "One winner is left, so 35 players must go out. Each match sends 1 player out, so there are 35 matches in all.",
-    "date": "11-10"
-   },
-   {
-    "id": "L3-missednumber",
-    "level": 3,
-    "frame": "missednumber",
-    "kind": "missing_term",
-    "topic": "Adding in order",
-    "sub": "series_sum.missing_term",
-    "family": "series_sum",
-    "p": {
-     "n": 14,
-     "got": 96
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "9",
-    "shown": "9",
-    "units": [],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "10",
-     "8",
-     "11",
-     "7",
-     "18",
-     "19",
-     "90"
-    ],
-    "q": "Hana adds all the whole numbers from 1 to 14. She gets 96, but she left out one number by mistake. Which number did she leave out?",
-    "hint": "Work out what the total of 1 to 14 should be. You can add them in a row, or look for a quicker way.",
-    "why": "The numbers 1 to 14 make 7 pairs that each add to 1 + 14 = 15, so the total should be 7 × 15 = 105. 105 − 96 = 9.",
-    "date": "11-11"
-   },
-   {
-    "id": "L3-clockturn",
-    "level": 3,
-    "frame": "clockturn",
-    "kind": "quarter_turns",
-    "topic": "Right angles",
-    "sub": "angles.right_angle_turns",
-    "family": "angles",
-    "p": {
-     "a": 2,
-     "b": 11
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "3",
-    "shown": "3 right angles",
-    "units": [
-     "right angles",
-     "right angle"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "4",
-     "2",
-     "5",
-     "1",
-     "6",
-     "13",
-     "30"
-    ],
-    "q": "A minute hand on a classroom clock starts at the 2 and turns clockwise until it points at the 11. How many right angles has it turned through?",
-    "hint": "A right angle is a quarter turn. The numbers 12, 3, 6 and 9 are a quarter turn apart.",
-    "why": "From 2 to 11 the hand passes 9 numbers. A quarter turn is 3 numbers, so 9 ÷ 3 = 3 right angles.",
-    "date": "11-12"
-   },
-   {
-    "id": "L3-fracmiddle",
-    "level": 3,
-    "frame": "fracmiddle",
-    "kind": "fraction_order",
-    "topic": "Fractions",
-    "sub": "fractions.compare_order",
-    "family": "fractions",
-    "p": {
-     "fracs": [
-      [
-       3,
-       4
-      ],
-      [
-       5,
-       8
-      ],
-      [
-       2,
-       3
-      ]
-     ],
-     "ask": "middle"
-    },
-    "t": {},
-    "fmt": "frac",
-    "type": "n",
-    "ans": "2/3",
-    "shown": "2/3",
-    "units": [],
-    "prefix": [],
-    "accept": [],
-    "exact": true,
-    "wrong": [
-     "5/3",
-     "8/3",
-     "4/3",
-     "1/3",
-     "32/3",
-     "7/6",
-     "20/3"
-    ],
-    "q": "Three cards show the fractions 3/4, 5/8 and 2/3. Which fraction lies between the other two?",
-    "hint": "Write each fraction with the same bottom number. The number 24 works for all three.",
-    "why": "3/4 = 18/24, 5/8 = 15/24 and 2/3 = 16/24. 15/24 is the least and 18/24 is the greatest, so the one between them is 2/3.",
-    "date": "11-13"
-   },
-   {
-    "id": "L3-solidedges",
-    "level": 3,
-    "frame": "solidedges",
-    "kind": "solid_parts",
-    "topic": "Solid shapes",
-    "sub": "shapes.solid_parts",
-    "family": "shapes",
-    "p": {
-     "shapes": [
-      "cube",
-      "square pyramid"
-     ],
-     "part": "edges"
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "20",
-    "shown": "20 edges",
-    "units": [
-     "edges",
-     "edge"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "21",
-     "19",
-     "22",
-     "18",
-     "40",
-     "10",
-     "30",
-     "200"
-    ],
-    "q": "How many edges do a cube and a square pyramid have altogether? A square pyramid has a square base and four triangle faces.",
-    "hint": "Count the edges of each solid separately. Then add.",
-    "why": "Counting separately, a cube has 12 edges and a square pyramid has 8 edges. Altogether that is 20 edges.",
-    "date": "11-14"
-   },
-   {
-    "id": "L3-unclesage",
-    "level": 3,
-    "frame": "unclesage",
-    "kind": "age_gap",
-    "topic": "Ages",
-    "sub": "ages.age_gap",
-    "family": "ages",
-    "p": {
-     "a": 10,
-     "gap": 31,
-     "when": 16
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "47",
-    "shown": "47 years",
-    "units": [
-     "year",
-     "years"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "48",
-     "46",
-     "49",
-     "45",
-     "94",
-     "57",
-     "37",
-     "470"
-    ],
-    "q": "Zara is 10 years old, and her uncle is 31 years older than she is. How old will her uncle be when Zara is 16 years old?",
-    "hint": "The difference between their ages never changes.",
-    "why": "Her uncle is always 31 years older. When Zara is 16, her uncle is 16 + 31 = 47 years.",
-    "date": "11-15"
-   },
-   {
-    "id": "L3-race",
-    "level": 3,
-    "frame": "race",
-    "kind": "order_logic",
-    "topic": "Who is it?",
-    "sub": "logic_order.rank",
-    "family": "logic_order",
-    "p": {
-     "order": [
-      "Ravi",
-      "Priya",
-      "Ben",
-      "Siti"
-     ],
-     "facts": [
-      [
-       "Priya",
-       "Ben"
-      ],
-      [
-       "Ben",
-       "Siti"
-      ],
-      [
-       "Ravi",
-       "Priya"
-      ]
-     ],
-     "idx": 2,
-     "rel": "faster than"
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "s",
-    "ans": "ben",
-    "shown": "Ben",
-    "units": [],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "Ravi",
-     "Priya",
-     "Siti"
-    ],
-    "q": "Priya is faster than Ben. Ben is faster than Siti. Ravi is faster than Priya. Who finished third?",
-    "hint": "Write the four names in a row from the fastest to the slowest.",
-    "why": "From fastest to slowest: Ravi, Priya, Ben, Siti. The third is Ben.",
-    "date": "11-16"
-   },
-   {
-    "id": "L3-books",
-    "level": 3,
-    "frame": "books",
-    "kind": "stats",
-    "topic": "Reading a chart",
-    "sub": "graphs.most_least_gap",
-    "family": "graphs",
-    "p": {
-     "data": [
-      24,
-      13,
-      49,
-      31,
-      20
-     ],
-     "ask": "range"
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "36",
-    "shown": "36 books",
-    "units": [
-     "books",
-     "book"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "37",
-     "35",
-     "38",
-     "34",
-     "72",
-     "18",
-     "46",
-     "26",
-     "360"
-    ],
-    "q": "Five children read books during the school year. Mei Ling read 24, Ben read 13, Aisha read 49, Ravi read 31 and Siti read 20. How many more books did the child who read the most read than the child who read the least?",
-    "hint": "Find the biggest number and the smallest number first.",
-    "why": "The most is 49 and the least is 13. 49 − 13 = 36 books.",
-    "date": "11-17"
-   },
-   {
-    "id": "L3-cardsorder",
-    "level": 3,
-    "frame": "cardsorder",
-    "kind": "order_by_key",
-    "topic": "Ordering numbers",
-    "sub": "sorting.order_by_digit_rule",
-    "family": "sorting",
-    "p": {
-     "numbers": [
-      48,
-      61,
-      35,
-      29,
-      72
-     ],
-     "rule": "digit_sum",
-     "place": 3
-    },
-    "t": {
-     "cards": "48, 61, 35, 29 and 72"
-    },
-    "fmt": "int",
-    "type": "n",
-    "ans": "72",
-    "shown": "72",
-    "units": [],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "73",
-     "71",
-     "74",
-     "70",
-     "144",
-     "36",
-     "82",
-     "62",
-     "720"
-    ],
-    "q": "Five number cards are 48, 61, 35, 29 and 72. Hana puts them in a row, from the smallest digit sum to the biggest digit sum. The digit sum of 52 is 5 + 2 = 7. Which card is third in her row?",
-    "hint": "Work out the digit sum of each card. Then put the sums in order.",
-    "why": "The digit sums are 12 for 48, 7 for 61, 8 for 35, 11 for 29 and 9 for 72. In order they are 7, 8, 9, 11, 12, which belong to 61, 35, 72, 29, 48. The third card is 72.",
-    "date": "11-18"
-   },
-   {
-    "id": "L3-bookread",
-    "level": 3,
-    "frame": "bookread",
-    "kind": "frac_arith",
-    "topic": "Fractions",
-    "sub": "fractions.arithmetic",
-    "family": "fractions",
-    "p": {
-     "op": "+",
-     "a": [
-      0,
-      3,
-      10
-     ],
-     "b": [
-      0,
-      2,
-      5
-     ]
-    },
-    "t": {},
-    "fmt": "frac",
-    "type": "n",
-    "ans": "7/10",
-    "shown": "7/10",
-    "units": [],
-    "prefix": [],
-    "accept": [],
-    "exact": true,
-    "wrong": [
-     "17/10",
-     "27/10",
-     "7/5",
-     "7/20",
-     "107/10",
-     "6/5",
-     "7"
-    ],
-    "q": "On Sunday, Dina reads 3/10 of her story book. On Monday she reads 2/5 of the same book. Give the total as a fraction of the book.",
-    "hint": "Write both fractions with the same bottom number first. Tenths and fifths go together.",
-    "why": "2/5 is 4/10. Now 3/10 + 4/10 = 7/10.",
-    "date": "11-19"
-   },
-   {
-    "id": "L3-journeytime",
-    "level": 3,
-    "frame": "journeytime",
-    "kind": "elapsed",
-    "topic": "Time",
-    "sub": "durations.elapsed",
-    "family": "durations",
-    "p": {
-     "h1": 9,
-     "m1": 48,
-     "h2": 12,
-     "m2": 15
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "147",
-    "shown": "147 minutes",
-    "units": [
-     "min",
-     "mins",
-     "minute",
-     "minutes"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "148",
-     "146",
-     "149",
-     "145",
-     "294",
-     "157",
-     "137",
-     "1470"
-    ],
-    "q": "Mr Tan's train journey starts at 9:48 in the morning and ends at 12:15 in the afternoon. How many minutes does the journey last?",
-    "hint": "Split the time at 10:00 and at 12:00. Add up the three parts.",
-    "why": "9:48 to 10:00 is 12 minutes. 10:00 to 12:00 is 120 minutes. 12:00 to 12:15 is 15 minutes. 12 + 120 + 15 = 147 minutes.",
-    "date": "11-20"
-   },
-   {
-    "id": "L3-harbourcruise",
-    "level": 3,
-    "frame": "harbourcruise",
-    "kind": "twenty_four",
-    "topic": "The 24-hour clock",
-    "sub": "clock_reading.twenty_four_hour",
-    "family": "clock_reading",
-    "p": {
-     "h": 4,
-     "ap": "pm",
-     "m": 25,
-     "add_h": 2,
-     "add_m": 50
-    },
-    "t": {},
-    "fmt": "plain",
-    "type": "n",
-    "ans": "1915",
-    "shown": "1915",
-    "units": [],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "1916",
-     "1914",
-     "1917",
-     "1913",
-     "3830",
-     "957.5",
-     "1925",
-     "1905",
-     "1915.5",
-     "19150"
-    ],
-    "q": "A harbour cruise leaves the pier at 4:25 pm. The cruise lasts 2 hours 50 minutes. Write the time the cruise ends in 24-hour time, as four digits, like 0915.",
-    "hint": "Change the start time to 24-hour time first: add 12 to the hour for a pm time.",
-    "why": "4:25 pm is 1625 in 24-hour time. Two hours later is 1825. Then 50 more minutes make 1915. The cruise ends at 1915.",
-    "date": "11-21"
-   },
-   {
-    "id": "L3-marbletimes",
-    "level": 3,
-    "frame": "marbletimes",
-    "kind": "times_as_many",
-    "topic": "Bar models",
-    "sub": "bar_model.times_as_many",
-    "family": "bar_model",
-    "p": {
-     "k": 3,
-     "total": 52,
-     "ask": "large"
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "39",
-    "shown": "39 marbles",
-    "units": [
-     "marbles",
-     "marble"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "40",
-     "38",
-     "41",
-     "37",
-     "78",
-     "49",
-     "29",
-     "390"
-    ],
-    "q": "Lin and Jun collect marbles. Jun owns 3 times as many as Lin does, and the two friends own 52 marbles in all. How many marbles does Jun own?",
-    "hint": "Draw one bar for Lin and a bar 3 times as long for Jun. Count the equal parts.",
-    "why": "Lin is 1 part and Jun is 3 parts, so there are 4 equal parts. 52 ÷ 4 = 13 marbles for Lin. Jun has 3 × 13 = 39 marbles.",
-    "date": "11-22"
+    "date": "11-29"
    },
    {
     "id": "L3-kuih",
@@ -3660,315 +3968,6 @@
     "q": "Kuih costs $1.20 each. A cup of teh costs $1.80. Aisha buys 4 kuih and 2 cups of teh. She pays $10. How much change does she get?",
     "hint": "Find the cost of the kuih, then the cost of the teh. Add them. Then find the change.",
     "why": "4 kuih cost $4.80 and 2 cups of teh cost $3.60. Together that is $8.40. $10 − $8.40 = $1.60.",
-    "date": "11-23"
-   },
-   {
-    "id": "L3-houses",
-    "level": 3,
-    "frame": "houses",
-    "kind": "consec",
-    "topic": "Number puzzles",
-    "sub": "consecutive.consecutive_total",
-    "family": "consecutive",
-    "p": {
-     "count": 3,
-     "step": 1,
-     "total": 114,
-     "ask": "smallest"
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "37",
-    "shown": "37",
-    "units": [],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "38",
-     "36",
-     "39",
-     "35",
-     "74",
-     "47",
-     "27",
-     "370"
-    ],
-    "q": "Three houses next to each other on one side of a road have consecutive numbers, like 21, 22, 23. The three numbers add up to 114. What is the smallest house number?",
-    "hint": "The middle number is the average of the three numbers.",
-    "why": "114 ÷ 3 = 38 is the middle number. The numbers are 37, 38 and 39. The smallest is 37.",
-    "date": "11-24"
-   },
-   {
-    "id": "L3-magic",
-    "level": 3,
-    "frame": "magic",
-    "kind": "magic",
-    "topic": "Magic squares",
-    "sub": "number_grid.magic_square",
-    "family": "number_grid",
-    "p": {
-     "cells9": [
-      2,
-      9,
-      4,
-      7,
-      null,
-      null,
-      null,
-      null,
-      null
-     ],
-     "nums": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9
-     ],
-     "ask_idx": 8
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "8",
-    "shown": "8",
-    "units": [],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "9",
-     "7",
-     "10",
-     "6",
-     "16",
-     "4",
-     "18",
-     "80"
-    ],
-    "q": "Place the digits 1 to 9 in a 3 by 3 square, each digit once. Every line across, every line down and both corner-to-corner lines must add up to the same total. Some digits are placed for you, and ? marks a gap. Which digit goes in the bottom right corner?",
-    "hint": "Add the top line first. That gives the total for every line.",
-    "why": "The top line is 2 + 9 + 4 = 15, so every line adds to 15. Left line down: 2 + 7 + 6, so the bottom-left is 6. Corner-to-corner line: 4 + 5 + 6, so the middle is 5. Middle line across: 7 + 5 + 3, so the right of the middle line is 3. Right line down: 4 + 3 + 8, so the corner at the bottom right is 8.",
-    "code": "2   9   4\n7   ?   ?\n?   ?   ?",
-    "date": "11-25"
-   },
-   {
-    "id": "L3-albumpages",
-    "level": 3,
-    "frame": "albumpages",
-    "kind": "page_digits",
-    "topic": "Digits",
-    "sub": "place_value.digits_written",
-    "family": "place_value",
-    "p": {
-     "lo": 1,
-     "hi": 150
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "342",
-    "shown": "342 digits",
-    "units": [
-     "digits",
-     "digit"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "343",
-     "341",
-     "344",
-     "340",
-     "684",
-     "171",
-     "352",
-     "332",
-     "3420"
-    ],
-    "q": "Zack makes a scrapbook with 150 pages. He writes the page numbers 1, 2, 3 and so on up to 150, one on each page. How many digits does he write altogether?",
-    "hint": "Group the pages by how many digits their numbers have: one digit, two digits, three digits.",
-    "why": "Pages 1 to 9 use 9 digits. Pages 10 to 99 are 90 pages with 2 digits each, which is 180 digits. Pages 100 to 150 are 51 pages with 3 digits each, which is 153 digits. 9 + 180 + 153 = 342 digits.",
-    "date": "11-26"
-   },
-   {
-    "id": "L3-pairproduct",
-    "level": 3,
-    "frame": "pairproduct",
-    "kind": "sum_product",
-    "topic": "Guess and check",
-    "sub": "guess_check.sum_product",
-    "family": "guess_check",
-    "p": {
-     "s": 43,
-     "p": 462,
-     "ask": "smaller"
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "21",
-    "shown": "21",
-    "units": [],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "22",
-     "20",
-     "23",
-     "19",
-     "42",
-     "31",
-     "11",
-     "210"
-    ],
-    "q": "Ana thinks of two whole numbers. Their sum is 43 and their product is 462. What is the smaller of her two numbers?",
-    "hint": "List pairs that add to 43, such as 20 and 23. Multiply each pair. Is the product too big or too small?",
-    "why": "21 and 22 add up to 43 and multiply to 462. The smaller number is 21.",
-    "date": "11-27"
-   },
-   {
-    "id": "L3-bakery",
-    "level": 3,
-    "frame": "bakery",
-    "kind": "groups_plus",
-    "topic": "Times tables",
-    "sub": "multiplication.groups",
-    "family": "multiplication",
-    "p": {
-     "g": 7,
-     "s": 36,
-     "r": -15
-    },
-    "t": {
-     "neg": 15
-    },
-    "fmt": "int",
-    "type": "n",
-    "ans": "237",
-    "shown": "237 tea bags",
-    "units": [
-     "tea bags",
-     "tea bag"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "238",
-     "236",
-     "239",
-     "235",
-     "474",
-     "247",
-     "227",
-     "2370"
-    ],
-    "q": "A tea shop has 7 boxes with 36 tea bags in each box. 15 tea bags are damaged and thrown away. How many tea bags are left?",
-    "hint": "Work out how many tea bags there were at first. Then take away the damaged ones.",
-    "why": "7 × 36 = 252. 252 − 15 = 237 tea bags.",
-    "date": "11-28"
-   },
-   {
-    "id": "L3-carousel",
-    "level": 3,
-    "frame": "carousel",
-    "kind": "circle_opposite",
-    "topic": "Round a circle",
-    "sub": "spatial.circle_opposite",
-    "family": "spatial",
-    "p": {
-     "n": 34,
-     "a": 4,
-     "ask": "between"
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "16",
-    "shown": "16 horses",
-    "units": [
-     "horses",
-     "horse"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "17",
-     "15",
-     "18",
-     "14",
-     "32",
-     "8",
-     "26",
-     "6",
-     "160"
-    ],
-    "q": "A carousel has 34 horses in a ring, numbered 1 to 34 in order. Horse 4 and the horse opposite it are exactly halfway round the ring from each other. How many horses stand between them on one side?",
-    "hint": "Half of the ring is 17 horses. Do not count the two horses at the ends.",
-    "why": "Half of 34 is 17, so the opposite horse is 17 places on from horse 4. The horses between them on one side are the ones in the 17 − 1 = 16 places in between.",
-    "date": "11-29"
-   },
-   {
-    "id": "L3-sticksdisplay",
-    "level": 3,
-    "frame": "sticksdisplay",
-    "kind": "digit_segments",
-    "topic": "Counting sticks",
-    "sub": "digit_display.segments",
-    "family": "digit_display",
-    "p": {
-     "lo": 31,
-     "hi": 39,
-     "table": {
-      "0": 6,
-      "1": 2,
-      "2": 5,
-      "3": 5,
-      "4": 4,
-      "5": 5,
-      "6": 6,
-      "7": 3,
-      "8": 7,
-      "9": 6
-     }
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "88",
-    "shown": "88 sticks",
-    "units": [
-     "sticks",
-     "stick"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "89",
-     "87",
-     "90",
-     "86",
-     "176",
-     "44",
-     "98",
-     "78",
-     "880"
-    ],
-    "q": "On a toy display, every digit is made with sticks, as the table shows. Mia shows every number from 31 to 39, one after another. How many sticks does she use altogether?",
-    "hint": "Count the sticks in the tens digit of every number. Then count the sticks in all the ones digits.",
-    "why": "The tens digit is 3 in all 9 numbers: 9 × 5 = 45 sticks. The ones digits are 1 to 9, which use 2 + 5 + 5 + 4 + 5 + 6 + 3 + 7 + 6 = 43 sticks. 45 + 43 = 88 sticks.",
-    "code": "digit : 1 2 3 4 5 6 7 8 9\nsticks: 2 5 5 4 5 6 3 7 6",
     "date": "11-30"
    }
   ],
