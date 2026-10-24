@@ -361,3 +361,6 @@ Owner: "The workbooks should have online versions for holiday program and term l
 
 ## 2026-10-24 — TEASER-DAILY-GO
 Owner: "TEASER-DAILY-GO". Build daily-changing website teasers: bank of ~30 puzzles per level (6 levels), picked client-side by Singapore date, static site, no server. Every puzzle new, hand-solved, independently checked; current fixed puzzle stays as fallback. Build and check only; going live on the real site is a separate step (owner sees the result first).
+
+## 2026-10-24 — ONLINE-SKIP-SELECT-SUBMIT
+Owner: "The online version should allow skipping and selection for students to submit their answers then have the online solutions for it." All online versions: free selection and skipping of questions, submit answers, then online worked solutions. Working assumption: submission is local in the browser (no account, no server storage of children's answers) unless owner says otherwise.
