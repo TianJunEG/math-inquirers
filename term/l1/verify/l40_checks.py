@@ -237,7 +237,7 @@ def run(d):
     eq(items['g1']['answer'], _g1(dict(s=5, d=4)), 'g1'); eq(items['g2']['answer'], _g2(dict(t=9)), 'g2')
     eq(items['c3']['answer'], items['c3']['options'][1], 'c3 the second option is the good puzzle'); eq([o for o in items['c3']['options'] if clear(o)], [items['c3']['answer']], 'c3 exactly one option has a story, numbers and a question')
     eq(items['c4']['answer'], 'No', 'c4'); eq(len([x for x in range(2, 9)]) > 1, True, 'c4 many numbers fit')
-    eq(items['t2']['answer'], '6 is not 4 more than 4', 't2'); eq(6 + 4 == 10, True, 't2 first clue fits'); eq(6 - 4 == 4, False, 't2 second clue does not')
+    eq(items['t2']['answer'], 'The numbers go up by 3, not 4', 't2'); eq([b - a_ for a_, b in zip([4, 7, 10, 13], [7, 10, 13][0:3])], [3, 3, 3], 't2 every jump is 3'); eq(7 - 4 == 4, False, 't2 second clue does not fit')
     l30 = {i['id']: i for i in json.load(open(os.path.join(L1, 'lessons', 'l27.json')))['online_practice']['items']}
     eq((items['r1']['q'], items['r1']['answer']), (l30['c1']['q'], l30['c1']['answer']), 'r1 is Term 3 Lesson 7 (Calendar Detective, Lesson 27) c1'); eq((items['r2']['q'], items['r2']['answer']), (l30['c2']['q'], l30['c2']['answer']), 'r2 is Term 3 Lesson 7 (Calendar Detective, Lesson 27) c2')
     eq((items['r1']['rewind_of'], items['r2']['rewind_of']), ('Term 3 Lesson 7', 'Term 3 Lesson 7'), 'rewind tags'); eq(_r1(dict(a=5)), 12, 'r1'); eq(_r2(dict(w=2)), 14, 'r2')
