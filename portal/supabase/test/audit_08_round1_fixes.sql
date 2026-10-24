@@ -185,3 +185,26 @@ select pg_temp.chk('request_trial refuses a preferred-time label longer than 40 
 -- ===== (8) preview: no readable birth year in the long-term store =====
 select pg_temp.chk('preview_attended has no readable birth year column; it holds keyed hashes of year-1, year, year+1',
   (select count(*) from information_schema.columns where table_name = 'preview_attended' and column_name = 'birth_year') = 0 and (select count(*) from information_schema.columns where table_name = 'preview_attended' and column_name = 'year_hs') = 1, 'Medium');
+
+-- ===== explanation text (EXPLAIN-TO-TUTOR) and extra marking rules =====
+\set A 'aaaaaaaa-0000-0000-0000-00000000000a'
+update public.practice_item_keys set rules = '{"unit": false, "words": true, "poly": "n"}' where unit_key = 'hol-l1l01' and item_id = 'q2';
+insert into public.child_sessions (child_id, token_hash, expires_at) select mia, encode(extensions.digest('EXPLAINTOKEN_eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee','sha256'),'hex'), now() + interval '2 hours' from public.audit_ctx;
+select encode(extensions.digest('EXPLAINTOKEN_eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee','sha256'),'hex') as xh \gset
+delete from public.practice_submissions;
+select pg_temp.chk('keys carry the extra marking rules flattened next to the core fields, and the core fields win',
+  (select (k->>'unit')::boolean = false and (k->>'words')::boolean and k->>'poly' = 'n' and k->>'id' = 'q2' and k->>'type' = 'number' from jsonb_array_elements(public.service_practice_keys(:'xh','hol-l1l01','v1')->'keys') k where k->>'id' = 'q2'), 'Medium');
+select public.service_practice_record(:'xh','hol-l1l01','v1','00000000-0000-0000-0000-0000000000e1',1,
+  '[{"item_id":"q1","marking_mode":"auto","mark":"wrong","answered":true,"answer_text":"3"},{"item_id":"q3","marking_mode":"self","mark":"self","answered":true,"self_result":"got","explain_text":"  I drew a line and measured it.  "}]') as r \gset
+select pg_temp.chk('explanation of a self item is stored trimmed; auto rows have none', (:'r'::jsonb)->>'ok' = 'true' and (select explain_text from public.practice_attempts where item_key = 'q3' and submission_id is not null) = 'I drew a line and measured it.'
+  and (select count(*) from public.practice_attempts where item_key = 'q1' and explain_text is not null) = 0, 'High');
+select pg_temp.chk('an explanation on an auto-marked item is refused (bad_rows), 501 characters cannot be stored',
+  public.service_practice_record(:'xh','hol-l1l01','v1','00000000-0000-0000-0000-0000000000e2',1,'[{"item_id":"q1","marking_mode":"auto","mark":"wrong","explain_text":"sneaky"}]')->>'error' = 'bad_rows'
+  and pg_temp.denied(pg_temp.as_('postgres', null, $q$update public.practice_attempts set explain_text = repeat('x', 501) where item_key = 'q3'$q$)), 'High');
+select pg_temp.chk('the parent summary (practice_child_detail) shows the explanation; another parent and anon cannot',
+  pg_temp.val('authenticated', :'A', format($q$select explain_text from public.practice_child_detail(%L, 'hol-l1l01') where item_id = 'q3'$q$, (select mia from public.audit_ctx))) = 'I drew a line and measured it.'
+  and pg_temp.denied(pg_temp.as_('authenticated', 'bbbbbbbb-0000-0000-0000-00000000000b', format($q$select * from public.practice_child_detail(%L, 'hol-l1l01')$q$, (select mia from public.audit_ctx)))), 'High');
+select pg_temp.chk('the child token overview never contains an explanation', pg_temp.val('anon', null, 'select (public.child_session_overview(''EXPLAINTOKEN_eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee''))::text like ''%explain%''') in ('false','<null>'), 'High');
+select pg_temp.as_('authenticated', :'A', format($q$select public.delete_child_practice(%L)$q$, (select mia from public.audit_ctx))) as r \gset
+select pg_temp.chk('delete_child_practice removes the stored explanations with the submissions', :'r' like 'ok%' and (select count(*) from public.practice_attempts where explain_text is not null) = 0, 'Medium');
+update public.practice_item_keys set rules = '{}' where unit_key = 'hol-l1l01';

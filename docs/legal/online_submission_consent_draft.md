@@ -25,6 +25,12 @@ UI change needed in `portal/public/app.js` (not done): the "Agreements" card cur
 
 > I am the parent or legal guardian of this child. I agree that when my child presses "Submit" on an online practice page, Math Inquirers (Preciouslyours Pte Ltd) receives my child's answers, marks them again on our server, and keeps them with my child's profile (first name or nickname and level) to make practice reports for me and, if my child is in one of our groups, for my child's tutor. We do not use my child's answers for advertising. We keep them for 12 months after the last submission, or until 90 days after my child's online access ends, whichever is sooner, and then delete them. I can ask to see, correct or delete them, or withdraw this agreement, at any time. [Retention: owner decision, lawyer to confirm]
 
+**Explanation boxes (part of the `online_practice` line; DRAFT, owner and lawyer to approve, NOT yet in `portal/public/common.js` or the practice-page footer):**
+
+> Some practice questions have a box where my child may type a few words to explain their thinking. If my child types something there and presses "Submit", Math Inquirers keeps those words (at most 500 characters per question) with the answers, and only my child's tutor, the owner and I can read them. They are not shown to other families and are deleted with the answers. My child does not have to write anything.
+
+The database keeps the text only for self-checked and open questions (never for a marked answer or a paper-only task), never shows it back to the child, and deletes it with the submission (12 months / 90 days, "delete practice answers", "delete my data"). Because a child can type anything, the footer wording on the practice pages ("Your answers are sent to your tutor...") must be reviewed together with this line before the pages go live: **flagged for owner sign-off.** The client footer wording has not been changed.
+
 **Book delivery (`book_delivery`, needed to post a printed book):**
 
 > I agree that Math Inquirers (Preciouslyours Pte Ltd) may give my delivery name, Singapore address, postal code and phone number to its printer and courier, only to print and deliver the book I ordered, and will delete them 30 days after the parcel is confirmed delivered. [Same wording as the existing workbook delivery line in the registration form; printer and courier names to be added]

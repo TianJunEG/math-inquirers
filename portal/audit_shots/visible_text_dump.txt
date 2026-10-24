@@ -103,7 +103,7 @@ Say yes only if you would like it. It never changes what your child can do.
 (Optional) I agree that Math Inquirers may contact me by email or WhatsApp to suggest a trial class or a next book, including a suggestion based on how my child did in the online practice. I can say stop at any time and we will stop. I do not have to agree to use the online practice or to ask for a trial class.
 (Optional) I agree that my feedback may be used, without my child's name, to improve and describe the program.
 
-Last saved 24 Oct 2026, 1:05 pm (terms terms-2026-10d-draft, privacy privacy-2026-10d-draft).
+Last saved 24 Oct 2026, 1:17 pm (terms terms-2026-10d-draft, privacy privacy-2026-10d-draft).
 
 Update agreements
 Choose a group
@@ -119,7 +119,7 @@ Child sign-in
 
 Your child signs in with this family code, their display name and their PIN.
 
-Q9Y7FQ
+C29UNV
 
 Open the child sign-in page
 Your details and data
@@ -173,7 +173,7 @@ Delete practice answers
 For grown-ups: a possible next step
 Add another child
 
-To change a name, level or PIN, go to the home page. Child sign-in family code: Q9Y7FQ
+To change a name, level or PIN, go to the home page. Child sign-in family code: C29UNV
 
 === /portal/books/?child=c-2 ===
 Skip to content

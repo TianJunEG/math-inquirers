@@ -13,7 +13,12 @@ Branch `claude/great-fermi-1hv4vc`. Static front end under `portal/public`, buil
 8. **Trial class request** for any parent (`request_trial`), withdrawable.
 9. SQL: `portal/supabase/portal_ui.sql` (new) and two fixes in `practice_submissions.sql` `create_ext_order` ("both" now needs online_practice; one unpaid order per child, level and kind).
 
+## Round-1 audit fixes (24 Oct 2026)
+All High and Medium findings of `docs/audit_final/portal_ui_audit_round1.md` and the cheap Lows are fixed in the draft SQL and front end; what is still open is in the closed / not-closed table `docs/audit_final/portal_ui_fixes_round1.md`. In short: `delete_my_data()` now covers book orders, trial notes, recording views and preview registrations; scheduled-job-ready retention (`run_retention_jobs()`, pg_cron lines in `portal/README.md`, nothing enabled); late Stripe payments recorded and flagged "refund due"; escalating PIN lockout with a parent alert and a weak-PIN list; strict `/practice/*` headers in `build_site.py`; focus management, agreements warning, long-name layout, Stripe URL check, 30-minute child idle sign-out. Also carried: per-item `rules` (unit, pre, grouped, words, poly, equiv_frac) on `practice_item_keys` and `explain_text` (500 characters, self/open items only) on `practice_attempts`.
+
 ## Tests (all pass locally)
+Also: `bash portal/supabase/test/audit_run.sh` (audit_00..audit_08, 281 checks, 0 FAIL), `python3 portal/audit_shots/audit_frontend.py` (33 PASS), `python3 website/tests/headers_test.py`.
+
 `python3 portal/tests/portal_ui_test.py` (about 50 checks), `python3 portal/tests/frontend_test.py` (existing, updated), `bash portal/supabase/test/run_sql_test.sh` (includes the new `portal_ui_test.sql`).
 
 ## Mocked / not real
