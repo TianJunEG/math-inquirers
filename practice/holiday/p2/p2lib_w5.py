@@ -379,11 +379,11 @@ def _scoop(x, y):
 
 def picture_graph_fig(rows, key, caption=''):
     """rows = [(label, pictures or None)]; None = an empty row; key = number each picture stands for.  Drawn for a phone."""
-    W, lw = 340, 104
+    W, lw = 340, 126
     b = ''
     for i, (lab, k) in enumerate(rows):
         y = 4 + i * GRAPH_RH
-        b += f'<rect x="4" y="{y}" width="{W - 8}" height="{GRAPH_RH}" fill="{"#fff" if i % 2 else SKY}"/>' + T(12, y + 24, lab, 15, 'start', 800)
+        b += f'<rect x="4" y="{y}" width="{W - 8}" height="{GRAPH_RH}" fill="{"#fff" if i % 2 else SKY}"/>' + T(12, y + 24, lab, 14, "start", 800)
         for j in range(k or 0):
             b += _scoop(lw + 8 + j * 25, y + 2)
     n = len(rows)

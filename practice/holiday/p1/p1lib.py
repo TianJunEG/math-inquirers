@@ -71,10 +71,11 @@ def cat_face(cx, cy, s):
 
 def dog_face(cx, cy, s):
     r = s * 0.34
-    return (f'<ellipse cx="{cx - r * 1.05}" cy="{cy + 1}" rx="{r * 0.42}" ry="{r * 0.85}" fill="#A9795A" stroke="{NAVY}" stroke-width="1.6"/>'
-            f'<ellipse cx="{cx + r * 1.05}" cy="{cy + 1}" rx="{r * 0.42}" ry="{r * 0.85}" fill="#A9795A" stroke="{NAVY}" stroke-width="1.6"/>'
+    return (f'<ellipse cx="{cx - r * 1.0}" cy="{cy + 1}" rx="{r * 0.36}" ry="{r * 0.85}" fill="#A9795A" stroke="{NAVY}" stroke-width="1.6"/>'
+            f'<ellipse cx="{cx + r * 1.0}" cy="{cy + 1}" rx="{r * 0.36}" ry="{r * 0.85}" fill="#A9795A" stroke="{NAVY}" stroke-width="1.6"/>'
             + Ci(cx, cy + 1, r, '#E8CBA7', NAVY, 1.8) + Ci(cx - r * 0.36, cy - 2, 1.8, NAVY, NAVY, 1) + Ci(cx + r * 0.36, cy - 2, 1.8, NAVY, NAVY, 1)
-            + Ci(cx, cy + 4, 2.6, NAVY, NAVY, 1))
+            + Ci(cx, cy + 2, 2, NAVY, NAVY, 1)
+            + f'<path d="M {cx - 3.2} {cy + 4.6} Q {cx} {cy + 8} {cx + 3.2} {cy + 4.6}" fill="none" stroke="{NAVY}" stroke-width="1.5" stroke-linecap="round"/>')
 
 
 def fish(cx, cy, s):
@@ -631,11 +632,17 @@ def ruler_fig(bars, lo=0, hi=12, cm=26, caption=''):
 
 
 def bird(cx, cy, s):
-    r = s * 0.3
-    return (f'<ellipse cx="{cx}" cy="{cy + 2}" rx="{r * 1.25}" ry="{r}" fill="#F4D35E" stroke="{NAVY}" stroke-width="1.8"/>'
-            f'<polygon points="{cx - r * 1.2},{cy + 2} {cx - r * 1.9},{cy - r * 0.6} {cx - r * 1.9},{cy + r * 0.8}" fill="#F4D35E" stroke="{NAVY}" stroke-width="1.6" stroke-linejoin="round"/>'
-            f'<polygon points="{cx + r * 1.2},{cy} {cx + r * 1.9},{cy + 2} {cx + r * 1.2},{cy + 5}" fill="{WARM}" stroke="{NAVY}" stroke-width="1.2" stroke-linejoin="round"/>'
-            + Ci(cx + r * 0.55, cy - 1, 1.8, NAVY, NAVY, 1))
+    """A small bird in profile (a round body, a head with a beak, a short tail, two legs); about 0.86 s wide so neighbours in a row never touch."""
+    u = s * 0.9
+    bx, by = cx - 0.04 * u, cy + 0.08 * u
+    return (f'<line x1="{bx - 0.06 * u}" y1="{by + 0.2 * u}" x2="{bx - 0.06 * u}" y2="{by + 0.36 * u}" stroke="{NAVY}" stroke-width="1.8" stroke-linecap="round"/>'
+            f'<line x1="{bx + 0.1 * u}" y1="{by + 0.2 * u}" x2="{bx + 0.1 * u}" y2="{by + 0.36 * u}" stroke="{NAVY}" stroke-width="1.8" stroke-linecap="round"/>'
+            f'<polygon points="{bx - 0.26 * u},{by - 0.02 * u} {bx - 0.48 * u},{by - 0.18 * u} {bx - 0.48 * u},{by + 0.12 * u}" fill="#F4D35E" stroke="{NAVY}" stroke-width="1.6" stroke-linejoin="round"/>'
+            f'<ellipse cx="{bx}" cy="{by}" rx="{0.3 * u}" ry="{0.24 * u}" fill="#F4D35E" stroke="{NAVY}" stroke-width="1.8"/>'
+            f'<path d="M {bx - 0.2 * u} {by - 0.02 * u} Q {bx - 0.02 * u} {by + 0.2 * u} {bx + 0.16 * u} {by - 0.02 * u}" fill="#E8B930" stroke="{NAVY}" stroke-width="1.3"/>'
+            f'<circle cx="{bx + 0.2 * u}" cy="{by - 0.24 * u}" r="{0.15 * u}" fill="#F4D35E" stroke="{NAVY}" stroke-width="1.8"/>'
+            f'<polygon points="{bx + 0.33 * u},{by - 0.3 * u} {bx + 0.48 * u},{by - 0.24 * u} {bx + 0.33 * u},{by - 0.18 * u}" fill="{WARM}" stroke="{NAVY}" stroke-width="1.2" stroke-linejoin="round"/>'
+            + Ci(bx + 0.22 * u, by - 0.27 * u, 1.5, NAVY, NAVY, 1))
 
 
 PET_ICON = dict(Dog=dog_face, Cat=cat_face, Fish=fish, Bird=bird)
@@ -646,10 +653,12 @@ def pets_street_fig(pets, caption=''):
     return picture_graph(pets, '1 pet (each picture)', lambda nm: PET_ICON[nm], max(n for _, n in pets), caption=caption or 'Picture graph of pets in a street, one picture for each pet')
 
 
-def example_table(rows, caption=''):
-    """A small table: first row = column titles, then rows of cells (text)."""
+def example_table(rows, caption='', fit=False):
+    """A small table: first row = column titles, then rows of cells (text).  fit=True sizes each column to its longest text (so titles never touch)."""
     nc = len(rows[0])
     cw = [96] + [80] * (nc - 2) + [100]
+    if fit:
+        cw = [max(58, int(max(len(str(r[c])) for r in rows) * 9.8 + 24)) for c in range(nc)]
     W = sum(cw) + 4
     body = ''
     for r, row in enumerate(rows):

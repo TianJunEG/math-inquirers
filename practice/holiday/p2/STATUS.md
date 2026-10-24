@@ -283,3 +283,8 @@ No card gives another card's answer in its stem, hint or example (the jug "steps
 2. L10 Q1(b) (draw the pictures) is a paper-only self-check plus a "how many pictures" number card; L10 Q4 and Go further 6 lose the tick-and-cross table (no way to tick on screen). Fine?
 3. L9 Investigation (b) is typed as "1 2 3 1 2 4" (sets one after another, smallest first). The grouping is unusual for a child; a different layout (two Yes/No cards per set) would give away that two sets exist.
 4. L9 and L10 qbank items not printed in the workbook (Think harder 5 to 10 and Go further 1 to 6 of the bank) are not online, as in weeks 1 to 4.
+
+## Week 5 audit fixes (24 Oct 2026, lessons 9 and 10)
+- L10 5(c) accepts Mei > Ali > Ben (and the Oxford comma), never the false "<" chain (list_forms has a `sym` argument). 5(a) and 5(b) are text items with equiv_frac: 5/10, 1/2, 2/10, 1/5 all right, answer line 5/10.
+- L10 answer chains reordered: 3(b) before 3(a), 2(b) before 2(a), T2 which-day before the two tables, G7 $30 before smallest/biggest. T1 variants no longer say "1 pictures". Picture graph label column widened (Wednesday clear of the pictures). Shorter T2 and T3 stems; "draw on paper" reworded.
+- L9 Inv 1 now asks for masses from 1 g to 8 g (answer still 1 to 7, so the range is not in the stem); 2(a), 3 and Inv 2 stems shortened.

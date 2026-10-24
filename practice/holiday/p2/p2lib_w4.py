@@ -9,15 +9,17 @@ SKY = '#DDEBF7'
 
 
 # ---------------------------------------------------------------- typed lists
-def list_forms(parts, ordered=True):
+def list_forms(parts, ordered=True, sym=' < '):
     """A typed list 'a, b, c' written with ', ' / ',' / ';' / space / 'and' (and ' < ' when ordered); all orders when not ordered.  The first form is 'a, b, c'."""
     orders = [list(parts)] if ordered else [list(p) for p in itertools.permutations(parts)]
     out = []
     for o in orders:
-        for sp in [', ', ',', ';', ' '] + ([' < '] if ordered else []):
+        for sp in [', ', ',', ';', ' '] + ([sym] if ordered and sym else []):
             out.append(sp.join(o))
         if len(o) > 1:
             out.append(', '.join(o[:-1]) + ' and ' + o[-1])
+        if len(o) > 2:
+            out.append(', '.join(o[:-1]) + ', and ' + o[-1])
     first = ', '.join(parts)
     return [first] + sorted(set(out) - {first})
 

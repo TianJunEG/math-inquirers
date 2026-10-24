@@ -186,7 +186,7 @@ ITEMS = [
          src=['How many lemons balance the melon?']),
 
     dict(id='2a', tier='core', no='2(a)', label='2(a)', type='selfcheck', open=False, skill='jug puzzles: step by step', svg=JUGS,
-         q='You have a 3 ℓ jug and a 5 ℓ jug with no marks. A step is one fill, one empty or one pour (a pour stops when one jug is full or the other is empty). How can you get exactly 2 ℓ? Write the steps in the box.',
+         q='You have a 3 ℓ jug and a 5 ℓ jug with no marks. A step is one fill, one empty or one pour (until one jug is full or the other is empty). How can you get exactly 2 ℓ? Write the steps.',
          facts=dict(end=(3, 2)), check=lambda: dict(end=ways_model((3, 5), MODEL_2A, 2)),
          hint='Act it out with two cups of different sizes and some rice, or draw the jugs. Write how much is in each jug after every step.',
          steps=['Example (any correct way is good):'] + jug_text((3, 5), MODEL_2A) + ['2 ℓ is left in the 5 ℓ jug.'],
@@ -211,7 +211,7 @@ ITEMS = [
          src=['How can you get exactly 1 ℓ? Write the steps.']),
 
     dict(id='3', tier='core', no='3', label='3 steps', type='selfcheck', open=False, skill='jug puzzles: keeping a table', svg=JUGTABLE,
-         q='Get exactly 4 ℓ in the 5 ℓ jug. Both jugs start empty and the first three steps are done in the table. Now the 5 ℓ jug has 2 ℓ. Where can that 2 ℓ go? Write each new step and how much is in each jug after it.',
+         q='Get exactly 4 ℓ in the 5 ℓ jug. Both jugs start empty. The table shows the first three steps: now the 5 ℓ jug has 2 ℓ. Where can that 2 ℓ go? Write each new step and how much is in each jug after it.',
          facts=dict(end=(3, 4)), check=lambda: dict(end=ways_model((3, 5), MODEL_Q3, 4)),
          hint='Write how much is in each jug after every step. The 3 ℓ jug is empty now: could the 2 ℓ go into it?',
          steps=['Example (any correct way is good). Steps 1 to 3 are done for you:'] + jug_text((3, 5), MODEL_Q3) + ['4 ℓ is in the 5 ℓ jug after step 6. You may not need every row of the table.'],
@@ -263,13 +263,13 @@ ITEMS = [
 
     # ================= Investigation: Weights puzzle
     dict(id='I1', tier='invest', no='Investigation (a)', label='Inv 1', type='set', ordered=False, skill='making masses from weights', answer=[1, 2, 3, 4, 5, 6, 7],
-         q='Weights puzzle. You have three weights: 1 g, 2 g and 4 g. You can put some of them on one pan to make a mass. Type every mass from 1 g to 7 g that you can make.',
-         check=lambda: sorted(m for m in masses((1, 2, 4)) if 1 <= m <= 7),
+         q='Weights puzzle. You have three weights: 1 g, 2 g and 4 g. You can put some of them on one pan to make a mass. Type every mass from 1 g to 8 g that you can make.',
+         check=lambda: sorted(m for m in masses((1, 2, 4)) if 1 <= m <= 8),
          hint='Easy first step: can you make 3 g? Can you make 5 g? Try putting two weights on the pan together, then all three.',
-         steps=['One weight: 1 g, 2 g or 4 g. Two weights: 1 + 2 = 3, 1 + 4 = 5, 2 + 4 = 6.', 'All three: 1 + 2 + 4 = 7.', 'So you can make every mass from 1 g to 7 g.'],
+         steps=['One weight: 1 g, 2 g or 4 g. Two weights: 1 + 2 = 3, 1 + 4 = 5, 2 + 4 = 6.', 'All three: 1 + 2 + 4 = 7.', 'So you can make every mass from 1 g to 7 g. You cannot make 8 g: all three weights together are only 7 g.'],
          src=['You have three different weights. Each weight is 1 g, 2 g, 3 g, 4 g or 5 g. You put some of them on one pan to make a mass.', '(a) With weights of 1 g, 2 g and 4 g, which masses from 1 g to 7 g can you make?']),
     dict(id='I2', tier='invest', no='Investigation (b)', label='Inv 2', type='set', ordered=True, grouped=False, skill='finding all the sets of weights', answer=[1, 2, 3, 1, 2, 4],
-         q='Three different weights, each 1 g to 5 g. Which sets can make EVERY mass from 1 g to 6 g? Type each set as three numbers (smallest first), one set after another, the set with smaller numbers first (like 2 3 4 before 2 3 5).',
+         q='Pick three different weights from 1 g to 5 g. Which sets make EVERY mass from 1 g to 6 g? Type each set as three numbers, smallest first, and list the sets in order (2 3 4 comes before 2 3 5).',
          check=lambda: [w for s in good_weight_sets(1, 5, 3, 6) for w in s],
          hint='Try the sets one at a time. For each set check the masses 1 g, 2 g, 3 g, 4 g, 5 g and 6 g: does the set make every one of them?',
          steps=['There are 10 sets of three different weights from 1 g to 5 g. Check each set for every mass from 1 g to 6 g.', 'The sets 1, 2, 3 (makes 1 g to 6 g) and 1, 2, 4 (makes 1 g to 7 g) work.', 'Every other set misses at least one mass from 1 g to 6 g.'],

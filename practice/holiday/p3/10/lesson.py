@@ -207,13 +207,13 @@ ITEMS = [
     cca_item('Siti', 'Use clues 1 and 2: which children are not in the choir? Who is left?', 'So Siti is in the choir.'),
 
     I(id='3a', tier='core', no='3(a)', label='3(a)', type='number', skill='queues (draw it)', answer=7, svg=queue_fig(3, 5),
-      q='Draw it! Queues. Ben is number 3 from the front and number 5 from the back. How many children are in the queue? Type the number.', check=lambda: queue_total(3, 5),
-      hint='Ben is counted both from the front and from the back. Draw circles for the children in front of Ben, Ben, and the children behind him.',
+      q='Think it through! Queues. Ben is number 3 from the front and number 5 from the back. How many children are in the queue? Type the number.', check=lambda: queue_total(3, 5),
+      hint='Ben is counted both from the front and from the back. Picture a row of circles: the children in front of Ben, Ben, and the children behind him.',
       steps=['There are 2 children in front of Ben (he is 3rd) and 4 children behind him (he is 5th from the back).', '2 + 1 (Ben) + 4 = 7.', 'There are 7 children in the queue. (3 + 5 = 8 counts Ben twice, so take 1 away.)'],
       src=['Draw it! Queues.', 'Ben is 3rd from the front and 5th from the back. How many in the queue?']),
     I(id='3b', tier='core', no='3(b)', label='3(b)', type='number', skill='queues (draw it)', answer=6, svg=queue_between_fig(),
       q='Ali is number 2 from the front, Siti is last, and 3 people are between them. How many children are in the queue? Type the number.', check=lambda: len(['someone in front of Ali', 'Ali'] + ['between'] * 3 + ['Siti']),
-      hint='Draw circles in order: the child in front of Ali, Ali, the 3 people between, then Siti.',
+      hint='Picture circles in order: the child in front of Ali, Ali, the 3 people between, then Siti.',
       steps=['In front of Ali there is 1 child (Ali is 2nd).', '1 + Ali + 3 between + Siti = 1 + 1 + 3 + 1.', 'There are 6 children in the queue.'],
       src=['Ali is 2nd from the front, Siti is last, 3 people are between them. How many in all?']),
 
@@ -253,7 +253,7 @@ ITEMS = [
 
     I(id='6', tier='core', no='6', label='6', type='set', skill='logic and listing', answer=[213, 321, 411],
       q='I am a 3-digit odd number. My digits add up to 6. My hundreds digit is bigger than my tens digit. None of my digits is 0. What could I be? Find ALL the answers. Type them with commas.', check=riddle_numbers,
-      hint='Hint: three digits, none 0, that add up to 6, are 1, 1, 4 or 1, 2, 3 or 2, 2, 2. Try to arrange each set so that the number is odd and the hundreds digit is bigger than the tens digit.',
+      hint='Three digits, none 0, that add up to 6, are 1, 1, 4 or 1, 2, 3 or 2, 2, 2. Try to arrange each set so that the number is odd and the hundreds digit is bigger than the tens digit.',
       steps=['The digits (none 0) add to 6 only as 1, 1, 4 or 1, 2, 3 or 2, 2, 2.', 'The number is odd, so the last digit is odd. 1, 1, 4 gives 411 (141 has the hundreds digit smaller than the tens digit). 1, 2, 3 gives 321 and 213 (231 and 123 have the hundreds digit smaller than the tens digit). 2, 2, 2 gives 222, which is even.', 'The numbers are 213, 321 and 411.'],
       src=['I am a 3-digit odd number. My digits add up to 6. My hundreds digit is bigger than my tens digit. None of my digits is 0. What could I be? Find ALL the answers.']),
 
@@ -262,7 +262,7 @@ ITEMS = [
       frame=grp('3 friends: {f1}      4 friends: {f2}      5 friends: {f3}      6 friends: {f4}'),
       q='Some friends meet. Everyone shakes hands with every other friend once. Two friends make 1 handshake. How many handshakes are there for 3, 4, 5 and 6 friends? Draw dots and lines on paper if it helps.',
       check=lambda: [handshakes(n) for n in (3, 4, 5, 6)],
-      hint='Easy first step: draw 3 dots and join every pair. Count the lines. Then try 4 dots.',
+      hint='Easy first step: picture 3 dots and join every pair. Count the lines. Then try 4 dots.',
       steps=['Draw a dot for each friend and join every pair with a line: each line is a handshake.', '3 friends: 3 lines. 4 friends: 6 lines. 5 friends: 10 lines. 6 friends: 15 lines.', 'The numbers are 3, 6, 10 and 15.'],
       src=['Some friends meet. Everyone shakes hands with every other friend once. Two friends make 1 handshake.', 'Find the number of handshakes for 3, 4, 5 and 6 friends.']),
     I(id='I8a-more', tier='invest', no='8(a)', label='Inv more', type='fields', skill='patterns and tables', answer=[2, 3, 4, 5],
@@ -321,20 +321,20 @@ ITEMS = [
 
     # ================= Go further (workbook Go further, No.5 to No.7) and the Extra questions (printed as "Take-home")
     I(id='G5', tier='challenge', no='G5', label='G5', type='selfcheck', open=True, marking_mode='open', skill='making up a puzzle',
-      q='Make up your own logic puzzle with 3 people and 3 things (colours, pets or sports). Write 3 or 4 clues. Test it on a partner: does it have exactly ONE answer? Is there a clue you could take away and still have only one answer?',
+      q='Make up your own logic puzzle with 3 people and 3 things (colours, pets or sports). Write 3 or 4 clues. Does it have exactly ONE answer? Could you take away a clue and still have only one answer?',
       hint='Pick the answer first: who has which thing. Then write clues that rule out the other ways, one at a time.',
       steps=['Answers vary. Check that the clues fit one arrangement only (try every arrangement of the 3 things).', 'Example: Sam, Lee and Mei wear red, blue and green. Clues: Sam is not wearing red. Lee is not wearing blue. Mei is not wearing green. Sam is not wearing blue. The only answer is Sam green, Lee red, Mei blue.', 'The clue "Mei is not wearing green" could be taken away and there is still only one answer.'],
       src=['Make up your own logic puzzle with 3 people and 3 things (colours, pets or sports).']),
     I(id='G6', tier='challenge', no='G6', label='G6', type='number', skill='queues (draw it)', answer=13,
       q='In a queue, Siti is 6th from the front and Ravi is 4th from the back. There are 3 children between them, and Siti is in front of Ravi. How many children are in the queue? Type the number.',
       check=lambda: (lambda ravi_front: ravi_front + 4 - 1)(6 + 3 + 1),
-      hint='Draw circles. Siti is the 6th. Count the 3 children between, then Ravi. Then add the children behind Ravi.',
+      hint='Picture a row of circles. Siti is the 6th. Count the 3 children between, then Ravi. Then add the children behind Ravi.',
       steps=['Siti is 6th. The 3 children between are 7th, 8th and 9th, so Ravi is 10th from the front.', 'Ravi is 4th from the back, so there are 3 children behind him.', '10 + 3 = 13 children in the queue.'],
       src=['In a queue, Siti is 6th from the front and Ravi is 4th from the back. There are 3 children between them, and Siti is in front of Ravi. How many children are in the queue?']),
     I(id='G7', tier='challenge', no='G7', label='G7', type='fields', skill='logic with bar graphs', answer=[40, 30, 40, 25], frame=grp('3P1: {f1} kg      3P2: {f2} kg      3P3: {f3} kg      3P4: {f4} kg'),
-      q='A bar graph shows the paper collected by 4 classes. 3P1 collected 10 kg more than 3P2. 3P3 collected the same as 3P1. 3P4 collected 5 kg less than 3P2. Altogether they collected 135 kg. How much did each class collect? Fill in the boxes.',
+      q='Four classes collected paper. 3P1 collected 10 kg more than 3P2. 3P3 collected the same as 3P1. 3P4 collected 5 kg less than 3P2. Altogether they collected 135 kg. How much did each class collect? Fill in the boxes.',
       check=lambda: one(classes_solution()),
-      hint='Call the amount of 3P2 one unit. Draw four bars and take away the extras.',
+      hint='Call the amount of 3P2 one unit. Picture four bars and take away the extras.',
       steps=['Take away the extras: 3P1 has 10 more and 3P3 has 10 more, and 3P4 has 5 less (add 5 back to match). The extras are 10 + 10 - 5 = 15 kg.', '135 - 15 = 120 kg is four equal bars, so 3P2 is 120 ÷ 4 = 30 kg.', '3P1 is 40 kg, 3P3 is 40 kg and 3P4 is 25 kg. Check: 40 + 30 + 40 + 25 = 135.'],
       src=['A bar graph shows the paper collected by 4 classes. 3P1 collected 10 kg more than 3P2. 3P3 collected the same as 3P1. 3P4 collected 5 kg less than 3P2. Altogether they collected 135 kg. How much did each class collect?']),
     I(id='TH-a', tier='challenge', no='Extra (a)', label='Extra (a)', type='number', skill='perimeter', answer=20,
@@ -361,14 +361,14 @@ assert [handshakes(n) for n in range(2, 11)] == [1, 3, 6, 10, 15, 21, 28, 36, 45
 VARIANTS = {
     '3a': dict(
         base=dict(f=3, b=5),
-        tpl=dict(vars=dict(f=[2, 3, 4, 5, 6, 7], b=[3, 4, 5, 6, 8]), q='Draw it! Queues. A child is number {f} from the front and number {b} from the back of a queue. How many children are in the queue? Type the number.', answer='f+b-1',
-                 hint='The child is counted both from the front and from the back. Draw circles for the children in front, the child, and the children behind.',
+        tpl=dict(vars=dict(f=[2, 3, 4, 5, 6, 7], b=[3, 4, 5, 6, 8]), q='Think it through! Queues. A child is number {f} from the front and number {b} from the back of a queue. How many children are in the queue? Type the number.', answer='f+b-1',
+                 hint='The child is counted both from the front and from the back. Picture circles for the children in front, the child, and the children behind.',
                  steps=['There are {f} - 1 children in front of the child.', 'There are {b} - 1 children behind the child.', 'Add them and the child: {ans} children altogether.'], paper=True),
         oracle=lambda e: queue_total(e['f'], e['b'])),
     '3b': dict(
         base=dict(p=2, k=3),
         tpl=dict(vars=dict(p=[2, 3, 4], k=[2, 3, 4, 5]), q='Ali is number {p} from the front, Siti is last, and {k} people are between them. How many children are in the queue? Type the number.', answer='p+k+1',
-                 hint='Draw circles in order: the children in front of Ali, Ali, the {k} people between, then Siti.', steps=['In front of Ali there are {p} - 1 children.', 'Add Ali, the {k} people between, and Siti.', 'There are {ans} children in the queue.'], paper=True),
+                 hint='Picture circles in order: the children in front of Ali, Ali, the {k} people between, then Siti.', steps=['In front of Ali there are {p} - 1 children.', 'Add Ali, the {k} people between, and Siti.', 'There are {ans} children in the queue.'], paper=True),
         oracle=lambda e: len(['x'] * (e['p'] - 1) + ['Ali'] + ['between'] * e['k'] + ['Siti'])),
     '4b': dict(
         base=dict(a=2, b=5, c=8),

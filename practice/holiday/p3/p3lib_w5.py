@@ -105,9 +105,11 @@ def money_forms(c):
 
 
 def order_forms(items):
-    """Typed letters in this ORDER: 'C, D, B, A', 'C,D,B,A', 'C D B A', 'CDBA', 'C; D; B; A', 'C then D then B then A', 'C > D...' is not accepted."""
+    """Typed letters in this ORDER: 'C, D, B, A', 'C,D,B,A', 'C D B A', 'CDBA', 'C; D; B; A', 'C then D then B then A', ' < ' is accepted only because the order is lightest first (C < D < B < A is true); ' > ' is never accepted."""
     seq = list(items)
-    return list(dict.fromkeys([', '.join(seq), ','.join(seq), ' '.join(seq), ''.join(seq), '; '.join(seq), ' then '.join(seq), ', '.join(seq[:-1]) + ' and ' + seq[-1], ', '.join(seq[:-1]) + ', and ' + seq[-1]]))
+    bag = ['Bag ' + x for x in seq]
+    return list(dict.fromkeys([', '.join(seq), ','.join(seq), ' '.join(seq), ''.join(seq), '; '.join(seq), ' then '.join(seq), ', '.join(seq[:-1]) + ' and ' + seq[-1], ', '.join(seq[:-1]) + ', and ' + seq[-1],
+                               '. '.join(seq), ' < '.join(seq), ', '.join(bag), ' '.join(bag), ' < '.join(bag), ', '.join(bag[:-1]) + ' and ' + bag[-1]]))
 
 
 def name_list_forms(alts, ordered=False):
@@ -117,7 +119,7 @@ def name_list_forms(alts, ordered=False):
     for o in orders:
         for combo in itertools.product(*[alts[i] for i in o]):
             c = list(combo)
-            out += [', '.join(c), ','.join(c), ' '.join(c), ' and '.join(c), ' + '.join(c), '; '.join(c), ', '.join(c[:-1]) + ' and ' + c[-1], ', '.join(c[:-1]) + ', and ' + c[-1]]
+            out += [', '.join(c), ','.join(c), ' '.join(c), ' and '.join(c), ' + '.join(c), ' & '.join(c), '; '.join(c), ', '.join(c[:-1]) + ' and ' + c[-1], ', '.join(c[:-1]) + ', and ' + c[-1]]
     return list(dict.fromkeys(out))
 
 

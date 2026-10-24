@@ -193,3 +193,7 @@ No stem, hint, example or solution figure gives another card's answer (Investiga
 1. L9 Investigation 3 "Is Ben right?" is auto-marked Yes (exact counting, parts of a unit allowed); the printed model says "Yes, always". If you want it self-check, say so.
 2. L10 Measuring puzzle card is left out as a duplicate of Q8; say if you want it shown anyway.
 3. L9 Q2 and 6(c) use the paper-only note "check your drawing against the answer shown"; for measuring tasks the wording is slightly off (a runner message, not edited here).
+
+## Week 5 audit fixes (24 Oct 2026, lessons 9 and 10)
+- L9 Inv 1 no longer says to keep the numbers for later; L9 Q2 example table sized to its text (no touching headers); "1 cubes shorter" removed from the 5(c) variants; "Draw it on paper" and "Draw the carriages" reworded for the screen.
+- L10 5(a) asks "Which name fits me best?" and the solution says a rectangle may have unequal sides; the picture graph birds are redrawn (separate, with legs and a beak) and the dog has a mouth.

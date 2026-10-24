@@ -220,3 +220,7 @@ Weeks 1 to 4 audits read. No stem, hint, example or figure shows another card's 
 2. Times of day are typed in two boxes ("hours : minutes"); a child who types "5:25" into the first box is marked wrong. Fine for ages 8 to 10, or should the runner learn to read "5:25" in one box?
 3. Lesson 9 Q4 conversion cards say "Write ... in 24-hour time" and the printed hint "after 12 noon add 12" is only said for pm times after 1 pm (12:30 pm stays 12:30). Fine?
 4. Same as earlier weeks: should the Investigation and Extra questions be visible by default, and do the Lesson 10 certificate and the "Look back" page need an online counterpart?
+
+## Week 5 audit fixes (24 Oct 2026, lessons 9 and 10)
+- L9 clock-time boxes are labelled "Hours:" and "Minutes:" so the runner sets time=True automatically (a whole time typed in the first box, empty minutes = 0). order_forms also accepts "C < D < B < A" (true, lightest first), "Bag C ..." and "C. D. B. A."; L10 1(d) accepts "Milo & Kopi". Variants no longer add "Draw it on paper if it helps".
+- "Draw circles" hints reworded ("Picture circles"), "Hint: Hint:" doubled prefix removed, G5 and G7 stems shortened (G7 no longer says "A bar graph shows" when no graph is drawn).

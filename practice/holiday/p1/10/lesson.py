@@ -202,9 +202,9 @@ ITEMS = [
       src=['Which coins make exactly 35¢?']),
 
     D(id='5a', tier='core', no='5(a)', label='5(a)', type='choice', skill='naming shapes', options=['Square', 'Rectangle', 'Triangle', 'Circle'], answer='Square',
-      q='I have 4 sides, all the same length, and 4 square corners. What shape am I?', check=lambda: who(lambda v: v == (4, True, 4)),
+      q='I have 4 sides, all the same length, and 4 square corners. Which name fits me best?', check=lambda: who(lambda v: v == (4, True, 4)),
       hint='Count the sides. Then think: are all the sides the same length? Do the corners look like the corner of a piece of paper?',
-      steps=['4 sides and 4 square corners: a square or a rectangle.', 'All the sides are the same length, and a rectangle does not have that.', 'I am a square.'],
+      steps=['4 sides and 4 square corners: a square or a rectangle.', 'All the sides are the same length. A rectangle may have sides of different lengths, so the best name for me is a square.', 'I am a square.'],
       src=['I have 4 sides, all the same length, and 4 square corners. What am I?']),
     D(id='5b', tier='core', no='5(b)', label='5(b)', type='number', skill='counting triangles', answer=3, svg=TRI_FIG(),
       q='How many triangles are in this picture?', check=lambda: count_triangles(TRI),
