@@ -163,7 +163,7 @@ def chunks_of(path):
             continue
         window.append(s)
         window = window[-4:]
-        if s.endswith('?'):
+        if re.search(r"\?['\"\)\]]*[,;]?$", s):
             out.append(' '.join(window))
     return out
 
@@ -193,6 +193,7 @@ def structure_index():
     return data
 
 
+MAX_SMALL = 4       # single-digit answers: the same digit may be the answer of at most this many puzzles of a level (only 10 values exist for 61 puzzles)
 GENERIC = 120       # a skeleton 4-gram found in more than this many source questions says nothing about structure
 
 
@@ -305,11 +306,14 @@ def main():
                         lv, q, f, len(ids), TAX.RULES['max_per_family_per_quarter'], ', '.join(ids)))
             struct_lines.append('- Level %d, quarter %d: %d puzzles, %d distinct sub-structures, %d families, most in one family %d' % (
                 lv, q, len(items), len(subs), len(fams), max(len(v) for v in fams.values())))
+        # answers: 10 and above (and every text answer) may appear once per level; a single digit at most MAX_SMALL times
         seen_ans = {}
         for mm, e in all_by_level[lv]:
-            if e['ans'] in seen_ans:
-                global_fails.append('L%d: answer %s repeats (%s and %s)' % (lv, e['ans'], seen_ans[e['ans']], e['id']))
-            seen_ans[e['ans']] = e['id']
+            seen_ans.setdefault(e['ans'], []).append(e['id'])
+        for a, ids in seen_ans.items():
+            small = a.lstrip('-').isdigit() and abs(int(a)) < 10
+            if (not small and len(ids) > 1) or (small and len(ids) > MAX_SMALL):
+                global_fails.append('L%d: answer %s repeats (%s)' % (lv, a, ', '.join(ids)))
         # numbers shared between two puzzles of the same level
         nums = [(e['id'], {n for n in numbers_in(e['q']) if n not in ('0', '1', '2')}) for _, e in all_by_level[lv]]
         for i in range(len(nums)):

@@ -98,35 +98,35 @@
     "family": "number_grid",
     "p": {
      "bottom": [
-      2,
       3,
-      4
+      8,
+      9
      ],
      "ask": "top"
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "12",
-    "shown": "12",
+    "ans": "28",
+    "shown": "28",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "13",
-     "11",
+     "29",
+     "27",
+     "30",
+     "26",
+     "56",
      "14",
-     "10",
-     "24",
-     "6",
-     "22",
-     "2",
-     "120"
+     "38",
+     "18",
+     "280"
     ],
-    "q": "In a number pyramid, each brick is the sum of the two bricks under it. The bottom row is 2, 3, 4. What number is on the top brick?",
+    "q": "In a number pyramid, each brick is the sum of the two bricks under it. The bottom row is 3, 8, 9. What number is on the top brick?",
     "hint": "Find the middle row first. Then add the two bricks in the middle row.",
-    "why": "The middle row is 5, 7. The top brick is the sum of the middle row: 12.",
+    "why": "The middle row is 11, 17. The top brick is the sum of the middle row: 28.",
     "date": "12-03"
    },
    {
@@ -242,7 +242,7 @@
     ],
     "q": "In a class of 20 children, 12 like apples and 10 like bananas. Every child likes at least one of the two fruits. How many children like both fruits?",
     "hint": "Add the apple lovers and the banana lovers. Is the answer more than the class?",
-    "why": "12 + 10 = 22, but there are only 20 children. The extra 2 children were counted twice, so 2 children children like both.",
+    "why": "12 + 10 = 22, but the class has only 20 children. The extra 2 were counted twice, so 2 children like both.",
     "date": "12-06"
    },
    {
@@ -304,14 +304,14 @@
     "family": "perimeter_area",
     "p": {
      "ask": "perimeter",
-     "l": 4,
-     "w": 2
+     "l": 9,
+     "w": 4
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "12",
-    "shown": "12 cm",
+    "ans": "26",
+    "shown": "26 cm",
     "units": [
      "cm",
      "centimetre",
@@ -323,19 +323,19 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "13",
-     "11",
-     "14",
-     "10",
+     "27",
+     "25",
+     "28",
      "24",
-     "6",
-     "22",
-     "2",
-     "120"
+     "52",
+     "13",
+     "36",
+     "16",
+     "260"
     ],
-    "q": "A card is 4 cm long and 2 cm wide. An ant walks once all the way round the edge. How far does the ant walk?",
+    "q": "A card is 9 cm long and 4 cm wide. A beetle crawls along all four edges of the card. How far does the beetle crawl?",
     "hint": "A card has two long sides and two short sides.",
-    "why": "4 + 2 + 4 + 2 = 12 cm.",
+    "why": "9 + 4 + 9 + 4 = 26 cm.",
     "date": "12-08"
    },
    {
@@ -392,14 +392,14 @@
     "sub": "bonds.pairs_to_total",
     "family": "bonds",
     "p": {
-     "total": 10,
+     "total": 12,
      "lo": 1
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "5",
-    "shown": "5 pairs",
+    "ans": "6",
+    "shown": "6 pairs",
     "units": [
      "pairs",
      "pair"
@@ -408,17 +408,18 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "6",
-     "4",
      "7",
+     "5",
+     "8",
+     "4",
+     "12",
      "3",
-     "10",
-     "15",
-     "50"
+     "16",
+     "60"
     ],
-    "q": "How many different pairs of whole numbers (not 0) add up to 10? For example, 3 + 7 and 7 + 3 count as the same pair.",
-    "hint": "Start with 1 + 9. Then try 2 plus what? Stop when the pair repeats.",
-    "why": "The pairs are 1 + 9, 2 + 8, 3 + 7, 4 + 6, 5 + 5. After 5 + 5 the pairs repeat in the other order, so there are 5 pairs.",
+    "q": "How many different pairs of whole numbers (not 0) add up to 12? Count 1 + 9 and 9 + 1 as one pair.",
+    "hint": "Start with 1 and its partner. Then try 2 and its partner. Stop when the pairs start to repeat.",
+    "why": "The pairs are 1 + 11, 2 + 10, 3 + 9, 4 + 8, 5 + 7, 6 + 6. After 6 + 6 the pairs only repeat in the other order, so there are 6 pairs.",
     "date": "12-10"
    },
    {
@@ -434,13 +435,13 @@
       3,
       4
      ],
-     "n": 2
+     "n": 3
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "24",
-    "shown": "24 sweets",
+    "ans": "36",
+    "shown": "36 sweets",
     "units": [
      "sweets",
      "sweet"
@@ -449,19 +450,19 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "25",
-     "23",
-     "26",
-     "22",
-     "48",
-     "12",
+     "37",
+     "35",
+     "38",
      "34",
-     "14",
-     "240"
+     "72",
+     "18",
+     "46",
+     "26",
+     "360"
     ],
-    "q": "One box holds 3 bags. Each bag holds 4 sweets. Aisha buys 2 boxes. How many sweets does she have?",
+    "q": "One box holds 3 bags. Each bag holds 4 sweets. Aisha buys 3 boxes. How many sweets does she have?",
     "hint": "Find how many sweets are in one box first.",
-    "why": "One box has 3 bags of 4 sweets, which is 12 sweets. 2 boxes have 12 + 12 = 24 sweets.",
+    "why": "One box has 3 bags of 4 sweets, which is 12 sweets. 3 boxes have 12 + 12 + 12 = 36 sweets.",
     "date": "12-11"
    },
    {
@@ -473,15 +474,15 @@
     "sub": "counting_range.exclusive",
     "family": "counting_range",
     "p": {
-     "lo": 14,
-     "hi": 25,
+     "lo": 30,
+     "hi": 54,
      "inclusive": false
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "10",
-    "shown": "10 numbers",
+    "ans": "23",
+    "shown": "23 numbers",
     "units": [
      "numbers",
      "number"
@@ -490,18 +491,18 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "11",
-     "9",
-     "12",
-     "8",
-     "20",
-     "5",
-     "0",
-     "100"
+     "24",
+     "22",
+     "25",
+     "21",
+     "46",
+     "33",
+     "13",
+     "230"
     ],
-    "q": "How many whole numbers are there between 14 and 25? Do not count 14 or 25.",
-    "hint": "Write the first whole number after 14 and the last one before 25. Then count them.",
-    "why": "The numbers are from 15 to 24. Counting them gives 10 numbers.",
+    "q": "How many whole numbers are there between 30 and 54? Do not count 30 or 54.",
+    "hint": "Write the first whole number after 30 and the last one before 54. Then count them.",
+    "why": "The numbers are from 31 to 53. Counting them gives 23 numbers.",
     "date": "12-12"
    },
    {
@@ -623,8 +624,8 @@
      "34",
      "440"
     ],
-    "q": "Kumar has 3 bundles of 10 sticks and 14 loose sticks. How many sticks does he have altogether?",
-    "hint": "14 loose sticks can make a new bundle of 10. Start by counting the bundles in tens.",
+    "q": "Kumar ties sticks into bundles of 10. He has 3 bundles and 14 single sticks. What is the total number of sticks?",
+    "hint": "Count the bundles in tens first. Then add the single sticks.",
     "why": "3 bundles is 30 sticks. 30 + 14 = 44 sticks.",
     "date": "12-15"
    },
@@ -782,8 +783,8 @@
     "wrong": [
      "even"
     ],
-    "q": "Is the answer odd or even when you add three odd numbers, such as 3 + 5 + 7? Answer odd or even.",
-    "hint": "Try a few more sets of three odd numbers and look at the answers.",
+    "q": "Pick any three odd numbers, like 3, 5 and 7, and add them up. Is the sum odd or even?",
+    "hint": "Try adding some triples from 1, 3, 5, 7 and 9. Look at the totals.",
     "why": "Two odd numbers make an even number. An even number plus one more odd number is odd. So the answer is odd.",
     "date": "12-19"
    },
@@ -797,11 +798,11 @@
     "family": "counting_pairs",
     "p": {
      "nums": [
-      3,
-      4,
+      2,
+      5,
       6,
-      7,
-      8
+      8,
+      9
      ],
      "target": 11
     },
@@ -825,9 +826,9 @@
      "12",
      "20"
     ],
-    "q": "Farhan has number cards 3, 4, 6, 7 and 8. How many different pairs of cards add up to 11?",
-    "hint": "Take the 3 card first. Which card goes with it? Then try the next card.",
-    "why": "The pairs are 3 + 8 and 4 + 7. Each pair adds up to 11, so there are 2 pairs.",
+    "q": "Farhan has number cards 2, 5, 6, 8 and 9. How many different pairs of cards add up to 11?",
+    "hint": "Take the 2 card first. Which card goes with it? Then try the next card.",
+    "why": "The pairs are 2 + 9 and 5 + 6. Each pair adds up to 11, so there are 2 pairs.",
     "date": "12-20"
    },
    {
@@ -899,8 +900,8 @@
      "15",
      "50"
     ],
-    "q": "A big square is made of 4 small squares in 2 rows of 2. How many squares of any size can you find? Count the small ones and the big one.",
-    "hint": "Count the small squares first. Then look for a bigger square made of small ones.",
+    "q": "A big square is split into 4 small squares, 2 rows of 2. Counting squares of every size, how many are there in the drawing?",
+    "hint": "Start with the smallest squares. Then look for a larger square made from several of them.",
     "why": "There are 4 small squares and 1 big square made of all four. 4 + 1 = 5 squares.",
     "date": "12-22"
    },
@@ -913,14 +914,14 @@
     "sub": "word_problems.compare",
     "family": "word_problems",
     "p": {
-     "a": 18,
-     "b": 11
+     "a": 43,
+     "b": 16
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "7",
-    "shown": "7 stickers",
+    "ans": "27",
+    "shown": "27 stickers",
     "units": [
      "stickers",
      "sticker"
@@ -929,17 +930,18 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "8",
-     "6",
-     "9",
-     "5",
-     "14",
+     "28",
+     "26",
+     "29",
+     "25",
+     "54",
+     "37",
      "17",
-     "70"
+     "270"
     ],
-    "q": "Priya has 18 stickers and Ben has 11 stickers. How many more stickers does Priya have than Ben?",
+    "q": "Priya has 43 stickers and Ben has 16 stickers. How many more stickers does Priya have than Ben?",
     "hint": "Line the stickers up in two rows. Count the ones that have no partner.",
-    "why": "Take away the smaller number from the bigger number: 18 − 11 = 7 stickers.",
+    "why": "Take away the smaller number from the bigger number: 43 − 16 = 27 stickers.",
     "date": "12-23"
    },
    {
@@ -1119,9 +1121,9 @@
      "13",
      "30"
     ],
-    "q": "Priya wants to pay exactly 35 cents. She has plenty of 5-cent, 10-cent, 20-cent and 50-cent coins. What is the smallest number of coins she can use?",
+    "q": "Priya wants to pay exactly 35 cents. She has many coins of each kind: 5 cents, 10 cents, 20 cents and 50 cents. What is the fewest coins she needs?",
     "hint": "Use the biggest coin that fits first. Then see what is left to pay.",
-    "why": "Use a 20-cent coin, then a 10-cent coin, then a 5-cent coin: 20 + 10 + 5. That is 3 coins coins.",
+    "why": "Use a 20-cent coin, then a 10-cent coin, then a 5-cent coin: 20 + 10 + 5. Together that is 3 coins.",
     "date": "12-27"
    },
    {
@@ -1164,8 +1166,8 @@
      "18",
      "80"
     ],
-    "q": "A string of 12 beads follows this pattern again and again: pink, blue, blue. How many blue beads are on the string?",
-    "hint": "Write the pattern out in groups of 3 until you have 12 beads.",
+    "q": "Beads are strung in this order again and again: pink, blue, blue. The string has 12 beads. How many of them are blue?",
+    "hint": "Write the order out in groups of 3 until you have all the beads.",
     "why": "The pattern is 3 beads long and the string has 4 whole patterns. Each pattern has 2 blue beads. 2 × 4 = 8 beads.",
     "date": "12-28"
    },
@@ -1206,7 +1208,7 @@
      "90"
     ],
     "q": "Kumar puts a pencil next to a ruler. The left end of the pencil is at the 4 cm mark and the right end is at the 13 cm mark. How long is the pencil?",
-    "hint": "The pencil does not start at 0. Count the steps from one end to the other.",
+    "hint": "Do not read the number at the right end only. Count the cm steps between the two ends.",
     "why": "Count the cm from 4 to 13. The pencil is 9 cm long.",
     "date": "12-29"
    },
@@ -1244,7 +1246,7 @@
      "14",
      "40"
     ],
-    "q": "Uncle has 20 oranges. He puts 5 oranges in each bag. How many bags does he fill?",
+    "q": "Uncle has 20 oranges. Each bag holds 5 oranges. How many bags will he fill?",
     "hint": "Count in 5s until you reach 20.",
     "why": "5, 10, 15, 20. That is 4 counts of 5, so Uncle fills 4 bags.",
     "date": "12-30"
@@ -1300,7 +1302,7 @@
      "Ali",
      "Ravi"
     ],
-    "q": "Ali, Siti and Ravi each have one pet. The pets are a cat, a fish and a bird. Ali has neither the cat nor the fish. Siti does not have the cat. Who has the fish?",
+    "q": "Ali, Siti and Ravi each own one pet: a cat, a fish or a bird. Ali owns neither the cat nor the fish. Siti does not own the cat. Which friend owns the fish?",
     "hint": "Start with the friend who has only one pet left to choose from.",
     "why": "Ali does not have the cat or the fish, so Ali has the bird. Siti does not have the cat and the bird is taken, so Siti has the fish. Ravi has the cat. So Siti has the fish.",
     "date": "12-31"

@@ -102,15 +102,15 @@
     "sub": "division.equal_share",
     "family": "division",
     "p": {
-     "total": 24,
-     "k": 4,
+     "total": 96,
+     "k": 3,
      "ask": "each"
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "6",
-    "shown": "6 cm",
+    "ans": "32",
+    "shown": "32 cm",
     "units": [
      "cm",
      "centimetre",
@@ -122,18 +122,19 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "7",
-     "5",
-     "8",
-     "4",
-     "12",
-     "3",
+     "33",
+     "31",
+     "34",
+     "30",
+     "64",
      "16",
-     "60"
+     "42",
+     "22",
+     "320"
     ],
-    "q": "A ribbon is 24 cm long. Mum cuts it into 4 pieces of the same length. How long is each piece?",
-    "hint": "Share the length into equal groups. Which number times 4 makes 24?",
-    "why": "6 + 6 + 6 + 6 = 24, so each piece is 6 cm long.",
+    "q": "A ribbon is 96 cm long. Mum cuts it into 3 pieces of the same length. How long is each piece?",
+    "hint": "Share the length into equal pieces. Which number times 3 makes 96?",
+    "why": "3 pieces of 32 cm each: 32 + 32 + 32 = 96, so each piece is 32 cm long.",
     "date": "11-03"
    },
    {
@@ -392,30 +393,30 @@
        3
       ]
      ],
-     "result": 19
+     "result": 25
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "8",
-    "shown": "8",
+    "ans": "11",
+    "shown": "11",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "9",
-     "7",
+     "12",
      "10",
-     "6",
-     "16",
-     "4",
-     "18",
-     "80"
+     "13",
+     "9",
+     "22",
+     "21",
+     "1",
+     "110"
     ],
-    "q": "I think of a number. I double it, then I add 3. My answer is 19. What is my number?",
+    "q": "I think of a number. I double it, then I add 3. My answer is 25. What is my number?",
     "hint": "Work backwards. Undo the adding first, then undo the doubling.",
-    "why": "Backwards: 19 − 3 = 16, and half of 16 is 8. Check: double 8 is 16, and 16 + 3 = 19.",
+    "why": "Backwards: 25 − 3 = 22, and half of 22 is 11. Check: double 11 is 22, and 22 + 3 = 25.",
     "date": "11-10"
    },
    {
@@ -532,7 +533,7 @@
      "13",
      "30"
     ],
-    "q": "Siti has 14 stickers and Ben has 8 stickers. Siti gives some stickers to Ben. Then they both have the same number of stickers. How many stickers does Siti give to Ben?",
+    "q": "Siti has 14 stickers and Ben has 8 stickers. Siti passes some of her stickers to Ben, and then the two children have equal amounts. How many does Siti pass over?",
     "hint": "Find how many more stickers Siti has than Ben. Each sticker that Siti gives moves across the gap.",
     "why": "Siti has 6 more than Ben. Each sticker she gives makes the gap 2 smaller, so she gives half of 6, which is 3 stickers. Check: they both have 11.",
     "date": "11-13"
@@ -548,12 +549,12 @@
     "p": {
      "items": [
       [
-       200,
-       3
+       500,
+       2
       ],
       [
-       100,
-       2
+       300,
+       3
       ]
      ],
      "pay": 0,
@@ -562,8 +563,8 @@
     "t": {},
     "fmt": "money",
     "type": "n",
-    "ans": "8",
-    "shown": "$8",
+    "ans": "19",
+    "shown": "$19",
     "units": [
      "dollars",
      "dollar"
@@ -575,19 +576,20 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "9",
-     "7",
-     "10",
-     "6",
-     "16",
-     "4",
+     "20",
      "18",
-     "8.5",
-     "80"
+     "21",
+     "17",
+     "38",
+     "9.5",
+     "29",
+     "9",
+     "19.5",
+     "190"
     ],
-    "q": "Kaya toast costs $2 each. A cup of hot chocolate costs $1. Mum buys 3 toasts and 2 cups of hot chocolate. How much does she pay?",
+    "q": "Kaya toast costs $5 each. A cup of hot chocolate costs $3. Mum buys 2 toasts and 3 cups of hot chocolate. How much does she pay?",
     "hint": "Add the toasts first. Then add the cups of hot chocolate.",
-    "why": "3 toasts cost $6. 2 cups of hot chocolate cost $2. Together that is $8.",
+    "why": "Kaya toast: 2 × $5 = $10. Hot chocolate: 3 × $3 = $9. Together that is $19.",
     "date": "11-14"
    },
    {
@@ -600,13 +602,13 @@
     "family": "growing_pattern",
     "p": {
      "shape": "sq",
-     "n": 4
+     "n": 5
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "13",
-    "shown": "13 sticks",
+    "ans": "16",
+    "shown": "16 sticks",
     "units": [
      "sticks",
      "stick"
@@ -615,18 +617,19 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "14",
-     "12",
+     "17",
      "15",
-     "11",
+     "18",
+     "14",
+     "32",
+     "8",
      "26",
-     "23",
-     "3",
-     "130"
+     "6",
+     "160"
     ],
-    "q": "Jun Hao uses lolly sticks to make a row of squares. One square uses 4 sticks. Two squares joined side by side use 7 sticks. How many sticks do 4 squares joined in a row use?",
+    "q": "Jun Hao uses lolly sticks to make a row of squares. One square uses 4 sticks. Two squares joined side by side use 7 sticks. How many sticks do 5 squares joined in a row use?",
     "hint": "A new square shares one side with the last square. How many new sticks does it need?",
-    "why": "Each new square adds 3 sticks: 4, 7, 10, 13. So 4 squares use 13 sticks.",
+    "why": "Each new square adds 3 sticks: 4, 7, 10, 13, 16. So 5 squares use 16 sticks.",
     "date": "11-15"
    },
    {
@@ -669,7 +672,7 @@
      "900"
     ],
     "q": "Mei Ling starts reading at half past 3 and stops at 5 o'clock. For how many minutes does she read?",
-    "hint": "Half past 3 to 4 o'clock is half an hour. How many minutes is that?",
+    "hint": "Split the time at 4 o'clock. Count the minutes in each part.",
     "why": "Half past 3 to 4 o'clock is 30 minutes. 4 o'clock to 5 o'clock is 60 minutes. 30 + 60 = 90 minutes.",
     "date": "11-16"
    },
@@ -786,7 +789,7 @@
      "17",
      "70"
     ],
-    "q": "There are 9 children in a line for the water cooler. Hui Min is 3rd from the front. What place is she from the back?",
+    "q": "A line of 9 children waits for the water cooler. Hui Min is 3rd from the front. Counting from the other end, which place is she in?",
     "hint": "Draw the line with dots. Mark Hui Min, then count the children behind her.",
     "why": "There are 9 children. The 3 children at the front, including Hui Min, are not behind her. So 9 − 3 + 1 = 7 place.",
     "date": "11-19"
@@ -872,7 +875,7 @@
      "297",
      "3070"
     ],
-    "q": "Priya has three number cards: 7, 0 and 3. She uses all three cards to make a 3-digit number. What is the smallest number she can make?",
+    "q": "Priya has three number cards: 7, 0 and 3. She puts every card side by side to make a 3-digit number. Which is the smallest number she could make?",
     "hint": "A 3-digit number cannot start with 0.",
     "why": "The first digit cannot be 0, so start with the smallest other card, 3. Then use 0, then 7. The number is 307.",
     "date": "11-21"
@@ -1015,14 +1018,14 @@
        1
       ]
      ],
-     "pay": 1000,
+     "pay": 2000,
      "ask": "change"
     },
     "t": {},
     "fmt": "money",
     "type": "n",
-    "ans": "5",
-    "shown": "$5",
+    "ans": "15",
+    "shown": "$15",
     "units": [
      "dollars",
      "dollar"
@@ -1034,19 +1037,20 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "6",
-     "4",
-     "7",
-     "3",
-     "10",
-     "2.5",
-     "15",
-     "5.5",
-     "50"
+     "16",
+     "14",
+     "17",
+     "13",
+     "30",
+     "7.5",
+     "25",
+     "5",
+     "15.5",
+     "150"
     ],
-    "q": "A bun costs $3 and a drink costs $2. Ben pays $10. How much change does he get?",
+    "q": "A bun costs $3 and a drink costs $2. Ben hands over $20. What change does the shopkeeper give back?",
     "hint": "Find the cost of the bun and the drink together first.",
-    "why": "The bun and the drink cost $5 together. $10 take away $5 leaves $5.",
+    "why": "The bun and the drink cost $5 together. $20 take away $5 leaves $15.",
     "date": "11-25"
    },
    {
@@ -1128,7 +1132,7 @@
     ],
     "q": "Hui Min pays exactly 30 cents using 10-cent coins and 5-cent coins. She may use only one kind of coin if she likes. How many different sets of coins can she use?",
     "hint": "Start with no 10-cent coins. How many 5-cent coins make 30 cents? Then try one 10-cent coin.",
-    "why": "With no 10-cent coin: six 5-cent coins. With one 10-cent coin: four 5-cent coins. With two: two 5-cent coins. With three: none. That is 4 sets sets.",
+    "why": "With no 10-cent coin: six 5-cent coins. With one 10-cent coin: four 5-cent coins. With two: two 5-cent coins. With three: none. That is 4 sets.",
     "date": "11-27"
    },
    {
@@ -1140,17 +1144,17 @@
     "sub": "bonds.part_whole",
     "family": "bonds",
     "p": {
-     "total": 17,
+     "total": 50,
      "parts": [
-      6,
-      4
+      12,
+      7
      ]
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "7",
-    "shown": "7 beads",
+    "ans": "31",
+    "shown": "31 beads",
     "units": [
      "beads",
      "bead"
@@ -1159,17 +1163,18 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "8",
-     "6",
-     "9",
-     "5",
-     "14",
-     "17",
-     "70"
+     "32",
+     "30",
+     "33",
+     "29",
+     "62",
+     "41",
+     "21",
+     "310"
     ],
-    "q": "A string has 17 beads. 6 are red and 4 are blue. The rest are yellow. How many beads are yellow?",
-    "hint": "Add the red and blue beads first. Then see how many more make 17.",
-    "why": "Red and blue beads: 10. 17 take away 10 leaves 7 beads.",
+    "q": "A string has 50 beads. 12 are red and 7 are blue. The rest are yellow. How many beads are yellow?",
+    "hint": "Add the red and blue beads first. Then see how many more make 50.",
+    "why": "Red and blue beads: 19. 50 take away 19 leaves 31 beads.",
     "date": "11-28"
    },
    {
@@ -1177,19 +1182,19 @@
     "level": 1,
     "frame": "stargraph",
     "kind": "scaled_diff",
-    "topic": "Picture graphs",
+    "topic": "Star graphs",
     "sub": "graphs.pictograph_scale",
     "family": "graphs",
     "p": {
-     "scale": 2,
-     "a": 7,
-     "b": 4
+     "scale": 10,
+     "a": 5,
+     "b": 2
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "6",
-    "shown": "6 children",
+    "ans": "30",
+    "shown": "30 children",
     "units": [
      "children",
      "children"
@@ -1198,18 +1203,19 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "7",
-     "5",
-     "8",
-     "4",
-     "12",
-     "3",
-     "16",
-     "60"
+     "31",
+     "29",
+     "32",
+     "28",
+     "60",
+     "15",
+     "40",
+     "20",
+     "300"
     ],
-    "q": "In a picture graph, each star stands for 2 children. The swimming row has 7 stars and the badminton row has 4 stars. How many more children chose swimming?",
+    "q": "In a star graph, each star stands for 10 children. The swimming row has 5 stars and the badminton row has 2 stars. How many more children chose swimming than badminton?",
     "hint": "First find how many more stars the swimming row has. Then think about what each star is worth.",
-    "why": "Swimming has 3 more stars. Each star is worth 2 children, so 3 stars are 3 × 2, which is 6 children.",
+    "why": "Swimming has 3 more stars. Each star is worth 10 children, so 3 stars are 3 × 10, which is 30 children.",
     "date": "11-29"
    },
    {

@@ -907,7 +907,8 @@
       "S2",
       "S3"
      ],
-     "short": true
+     "short": true,
+     "vw": 170
     }
    ],
    "note": "Read questions 1 to 3 aloud. Children work on their own; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: count the cubes in the picture. Question 2: how many cubes can you not see. Question 3: which top view matches the stack."
@@ -946,7 +947,8 @@
       "S5",
       "S6"
      ],
-     "short": true
+     "short": true,
+     "vw": 170
     }
    ],
    "note": "Read questions 4 to 6 aloud. Question 4: write the number of cubes in each stack on the top view. Question 5: a paper square is folded so the top edge meets the bottom edge; draw the fold line. Question 6: a top view with numbers; how many cubes in all. Wait 10 seconds before helping."
@@ -1063,7 +1065,8 @@
       "E2",
       "E3"
      ],
-     "short": false
+     "short": false,
+     "vw": 170
     }
    ],
    "note": "Children answer on page 5. Read E1, E2 and E3 aloud, with the numbers (the figures on the slide are small). Children tick their own ticket against the next slide. Nobody holds paper to the camera and there is no private chat."
