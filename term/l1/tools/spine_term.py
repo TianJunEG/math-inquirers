@@ -77,35 +77,38 @@ def wb_chip(d, compact=False):
         return ''
     if x['choose']:
         cells = ''.join(f'<span style="display:inline-flex;flex-direction:column;align-items:center;gap:0.3mm;flex:1 1 0;min-width:0"><span style="display:inline-flex;align-items:center;gap:0.6mm">{icon(t["id"], 7)}{_tick(3.2)}</span>'
-                        f'<span style="font-size:{"13.4" if len(met(d)) <= 6 else "10.2"}pt;font-weight:700;line-height:1.05;text-align:center;overflow-wrap:normal">{E(t["name"])}</span></span>' for t in met(d))
+                        f'<span class="{"c-cn6" if len(met(d)) <= 6 else "c-cn"}" style="font-weight:700;line-height:1.05;text-align:center;overflow-wrap:normal">{E(t["name"])}</span></span>' for t in met(d))
         return (f'<div class="spchip" data-spine="chip" style="{BOX}margin:1.5mm 0 0;padding:1mm 2mm 1.2mm;display:flex;flex-direction:column;gap:0.8mm">'
-                f'<span style="font-size:9pt;font-weight:800;letter-spacing:.05em">{LABELS["tool_of_day"]}: {LABELS["choose_one"]}. Tick the one you chose.</span>'
+                f'<span class="c-cl" style="font-weight:800;letter-spacing:.05em">{LABELS["tool_of_day"]}: {LABELS["choose_one"]}. Tick the one you chose.</span>'
                 f'<span style="display:flex;justify-content:space-between;gap:1mm">{cells}</span></div>')
     t = x['tool']
-    also = ('<span style="font-size:10.5pt"><b>' + LABELS['also'].strip() + '</b> ' + ', '.join(E(a['name']) for a in x['also']) + '</span>') if x['also'] else ''
-    used = f'<span style="display:inline-flex;align-items:center;gap:1mm;font-size:10.5pt;font-weight:700;white-space:nowrap">{_tick(3.6)}{LABELS["used"]}</span>'
+    also = ('<span class="c-t"><b>' + LABELS['also'].strip() + '</b> ' + ', '.join(E(a['name']) for a in x['also']) + '</span>') if x['also'] else ''
+    used = f'<span style="display:inline-flex;align-items:center;gap:1mm;font-weight:700;white-space:nowrap" class="c-t">{_tick(3.6)}{LABELS["used"]}</span>'
     if compact:
         return (f'<div class="spchip" data-spine="chip" style="{BOX}margin:1.5mm 0 0;padding:0.6mm 2mm;display:flex;align-items:center;gap:2mm">'
-                f'<span style="font-size:10.5pt;font-weight:800;letter-spacing:.05em;white-space:nowrap">{LABELS["tool_of_day"]}</span>{icon(t["id"], 7)}'
-                f'<span style="font-family:Fredoka,Arial,sans-serif;font-size:12pt;font-weight:700;white-space:nowrap">{E(t["name"])}</span>{used}'
+                f'<span class="c-l" style="font-weight:800;letter-spacing:.05em;white-space:nowrap">{LABELS["tool_of_day"]}</span>{icon(t["id"], 7)}'
+                f'<span class="c-nc" style="font-family:Fredoka,Arial,sans-serif;font-weight:700;white-space:nowrap">{E(t["name"])}</span>{used}'
                 f'<span style="margin-left:auto">{also}</span></div>')
     # two rows: label + name + tick, then the definition and the 'also' tools (about 11 mm high: it fits beside Mi, so the page grows by about nothing)
     return (f'<div class="spchip" data-spine="chip" style="{BOX}margin:1.5mm 0 0;padding:0.7mm 2.5mm;display:flex;gap:2.5mm;align-items:center">{icon(t["id"], 10)}'
-            f'<div style="flex:1;min-width:0"><div style="display:flex;align-items:center;gap:2.5mm"><span style="font-size:10pt;font-weight:800;letter-spacing:.05em;white-space:nowrap">{LABELS["tool_of_day"]}</span>'
-            f'<span style="font-family:Fredoka,Arial,sans-serif;font-size:13pt;font-weight:700;line-height:1.15;white-space:nowrap">{E(t["name"])}</span><span style="margin-left:auto">{used}</span></div>'
-            f'<div style="font-size:10.5pt;line-height:1.2">{E(x["def"])}{(" &nbsp; " + also) if also else ""}</div></div></div>')
+            f'<div style="flex:1;min-width:0"><div style="display:flex;align-items:center;gap:2.5mm"><span class="c-l" style="font-weight:800;letter-spacing:.05em;white-space:nowrap">{LABELS["tool_of_day"]}</span>'
+            f'<span class="c-n" style="font-family:Fredoka,Arial,sans-serif;font-weight:700;line-height:1.15;white-space:nowrap">{E(t["name"])}</span><span style="margin-left:auto">{used}</span></div>'
+            f'<div class="c-t" style="line-height:1.2">{E(x["def"])}{(" &nbsp; " + also) if also else ""}</div></div></div>')
 
 
 # Look-back box styles that follow the builder's tightening classes (tight, tight2, tight3 on the page): the box gets shorter exactly where the old one did.
 CSS = """
 .spl{border:0.5mm solid #1B2A49;border-radius:2mm;background:#fff;color:#1B2A49;font-family:'Nunito Sans',Arial,sans-serif;padding:2mm 4mm 2.2mm;margin-top:4mm;break-inside:avoid}
-.spl .sph{display:flex;align-items:baseline;gap:3mm}.spl .sph b{font-family:Fredoka,Arial,sans-serif;font-weight:700;font-size:15pt}.spl .sph span{font-size:9pt}
-.spl .spr{display:flex;align-items:center;gap:3mm;margin-top:1.5mm}.spl .spn{flex:none;width:6mm;height:6mm;border:0.5mm solid #1B2A49;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:10pt}
-.spl .spq{flex:1;font-size:11pt;font-weight:700;line-height:1.15}.spl .spa{display:flex;align-items:center;gap:3mm;flex:none}.spl .spa3{width:70mm}
+.spl .sph{display:flex;align-items:baseline;gap:3mm}.spl .sph b{font-family:Fredoka,Arial,sans-serif;font-weight:700;font-size:15pt}.spl .sph span{font-size:11pt}
+.spl .spr{display:flex;align-items:center;gap:3mm;margin-top:1.5mm}.spl .spn{flex:none;width:6mm;height:6mm;border:0.5mm solid #1B2A49;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:11pt}
+.spl .spq{flex:1;font-size:12.5pt;font-weight:700;line-height:1.15}.spl .spa{display:flex;align-items:center;gap:3mm;flex:none}.spl .spa3{width:70mm}
 .spl .spt{display:flex;align-items:center;justify-content:space-between;gap:2mm;margin-top:2mm;border-top:0.4mm solid #1B2A49;padding-top:1.5mm}
-.spl .sps{display:flex;gap:6mm;margin-top:1.2mm;font-size:9pt}
+.spl .sps{display:flex;gap:6mm;margin-top:1.2mm;font-size:11pt}
+.spl .spy{font-size:11.5pt}.spl .sp3{font-size:11pt;white-space:nowrap}.spl .spfb{font-size:11pt;white-space:nowrap}
+.spchip .c-cn6{font-size:13.4pt}.spchip .c-cn{font-size:11.5pt}.spchip .c-cl{font-size:11pt}.spchip .c-t{font-size:12pt}.spchip .c-l{font-size:11.5pt}.spchip .c-n{font-size:14pt}.spchip .c-nc{font-size:13pt}
+.tight .spl .spq{font-size:12pt}.tight .spchip .c-t{font-size:11.5pt}.tight .spchip .c-n{font-size:13.5pt}
 .tight .spl{margin-top:2.5mm;padding:1.4mm 3.5mm 1.5mm}.tight .spl .spr{margin-top:1mm}.tight .spl .spn{width:5.4mm;height:5.4mm}.tight .spl .spt{margin-top:1.4mm;padding-top:1mm}.tight .spl .spt svg{width:6.2mm;height:6.2mm}.tight .spl .sps{margin-top:0.8mm}
-.tight2 .spl{margin-top:1.5mm;padding:1mm 3mm 1.1mm}.tight2 .spl .sph b{font-size:12.5pt}.tight2 .spl .spr{margin-top:0.5mm}.tight2 .spl .spq{font-size:10pt}.tight2 .spl .spn{width:5mm;height:5mm;font-size:9pt}.tight2 .spl .spt{margin-top:0.8mm;padding-top:0.6mm}.tight2 .spl .spt svg{width:5.4mm;height:5.4mm}.tight2 .spl .sps{margin-top:0.5mm;font-size:8.5pt}
+.tight2 .spl{margin-top:1.5mm;padding:1mm 3mm 1.1mm}.tight2 .spl .sph b{font-size:12.5pt}.tight2 .spl .spr{margin-top:0.5mm}.tight2 .spl .spq{font-size:10pt}.tight2 .spl .sph span,.tight2 .spl .sp3,.tight2 .spl .spfb{font-size:9pt}.tight2 .spl .spy{font-size:10pt}.tight2 .spchip .c-cn{font-size:10.2pt}.tight2 .spchip .c-cl{font-size:9pt}.tight2 .spchip .c-t,.tight2 .spchip .c-l{font-size:10.5pt}.tight2 .spchip .c-n{font-size:13pt}.tight2 .spchip .c-nc{font-size:12pt}.tight2 .spl .spn{width:5mm;height:5mm;font-size:9pt}.tight2 .spl .spt{margin-top:0.8mm;padding-top:0.6mm}.tight2 .spl .spt svg{width:5.4mm;height:5.4mm}.tight2 .spl .sps{margin-top:0.5mm;font-size:8.5pt}
 .tight3 .spl{margin-top:1mm;padding:0.8mm 3mm 0.8mm}.tight3 .spl .sph b{font-size:11.5pt}.tight3 .spl .spr{margin-top:0.2mm}.tight3 .spl .spq{font-size:9.5pt}.tight3 .spl .spn{width:4.6mm;height:4.6mm}.tight3 .spl .spt{margin-top:0.5mm;padding-top:0.4mm}.tight3 .spl .spt svg{width:4.8mm;height:4.8mm}.tight3 .spl .sps{margin-top:0.3mm;font-size:8.5pt}
 """
 
@@ -115,15 +118,15 @@ def wb_lookback(d):
     if not row(d):
         return ''
     dot = f'<span style="flex:1;border-bottom:0.4mm dotted {INK};height:5mm;min-width:18mm"></span>'
-    yn = ''.join(f'<span style="display:inline-flex;align-items:center;gap:1mm;white-space:nowrap">{_tick(4)}<b style="font-size:10pt">{w}</b></span>' for w in ('yes', 'not yet'))
+    yn = ''.join(f'<span style="display:inline-flex;align-items:center;gap:1mm;white-space:nowrap">{_tick(4)}<b class="spy">{w}</b></span>' for w in ('yes', 'not yet'))
     def r(n, q, right):
         return f'<div class="spr"><span class="spn">{n}</span><span class="spq">{E(q)}</span><span class="spa{" spa3" if n == 3 else ""}">{right}</span></div>'
-    a3 = f'<span style="font-size:9pt;white-space:nowrap">{E(LB["answer3"][BAND])}:</span>{dot}'
+    a3 = f'<span class="sp3">{E(LB["answer3"][BAND])}:</span>{dot}'
     mm = 7 if len(met(d)) > 6 else 8
     tools = ''.join(f'<span style="display:inline-flex;align-items:center;gap:1.2mm">{icon(t["id"], mm)}{_tick(3.6)}</span>' for t in met(d))
     return (f'<div class="spl" data-spine="lookback"><div class="sph"><b>Look back</b><span>{E(LB["intro"])}</span></div>'
             f'{r(1, PROMPTS[0], yn)}{r(2, PROMPTS[1], yn)}{r(3, PROMPTS[2], a3)}'
-            f'<div class="spt"><b style="font-size:9pt;white-space:nowrap">{E(LB["footer_tools"])}:</b>{tools}</div>'
+            f'<div class="spt"><b class="spfb">{E(LB["footer_tools"])}:</b>{tools}</div>'
             f'<div class="sps"><span style="display:inline-flex;align-items:center;gap:1.2mm">{_tick(3.6)}{E(STUCK)}</span><span style="display:inline-flex;align-items:center;gap:1.2mm">{_tick(3.6)}{E(LB["pass"])}</span></div></div>')
 
 

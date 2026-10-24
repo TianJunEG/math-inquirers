@@ -16,6 +16,7 @@ from fractions import Fraction as Fr
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import kinds                                   # noqa: E402
+import taxonomy as TAX                          # noqa: E402
 from defs_common import FMT, UNIT_SYN, LEVEL_AGES, dec_str, show_frac   # noqa: E402
 
 
@@ -117,7 +118,7 @@ def order(level, items):
     for _ in range(20000):
         rnd.shuffle(items)
         n = len(items)
-        bad = sum(1 for i in range(n) if items[i]['topic'] == items[(i + 1) % n]['topic'] or items[i]['kind'] == items[(i + 1) % n]['kind'])
+        bad = sum(1 for i in range(n) if items[i]['family'] == items[(i + 1) % n]['family'] or items[i]['kind'] == items[(i + 1) % n]['kind'])
         if best is None or bad < best[0]:
             best = (bad, list(items))
         if bad == 0:
@@ -142,7 +143,9 @@ def build_month(mm):
             ans, ctx = solve(d)
             fin = finish(d, ans)
             r = render(d, ans, ctx, fin)
+            assert d['sub'] in TAX.SUBS, 'unknown sub-structure %r in L%d %s' % (d['sub'], lv, d['frame'])
             e = dict(id='L%d-%s' % (lv, d['frame']), level=lv, frame=d['frame'], kind=d['kind'], topic=d['topic'],
+                     sub=d['sub'], family=TAX.SUBS[d['sub']]['family'],
                      p=d['p'], t=d['t'], fmt=d['fmt'], type=fin['type'], ans=fin['canon'], shown=fin['shown'],
                      units=fin['units'], prefix=fin['prefix'], accept=fin['accept'], exact=fin['exact'],
                      wrong=wrongs(d, ans, fin), **r)

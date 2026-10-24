@@ -847,3 +847,7 @@ def b_expr_form(form, a, b, c, d):
 
 
 BRUTE = {k[2:]: v for k, v in dict(globals()).items() if k.startswith('b_')}
+
+
+import brute_more as _more   # noqa: E402  (fix round 1: further independent checkers)
+BRUTE.update(_more.BRUTE)

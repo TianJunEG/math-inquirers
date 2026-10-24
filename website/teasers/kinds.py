@@ -740,3 +740,7 @@ SOLVE = {k: v for k, v in dict(globals()).items()
              'liar', 'magic', 'cryptarithm', 'rounding', 'rounding_count', 'calendar_nth', 'lcm_meet',
              'gcd_bags', 'factor_count', 'prime_factor_sum', 'remainder_pair', 'consec', 'anagram',
              'painted_cube', 'symmetry', 'expr_form')}
+
+
+import kinds_more as _more   # noqa: E402  (fix round 1: further solvers)
+SOLVE.update(_more.SOLVE)

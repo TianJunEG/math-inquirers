@@ -156,7 +156,7 @@ def tool_strip_html(ids, cave=False, px=12.0, pxm=10.5):
     return f'<div class="tstrip{" tmany" if many else ""}"><span class="tl">{"My tool" if cave else "Tool I used"}</span>{pills}{tick}</div>'
 
 
-def quest_log_html(d):
+def quest_log_html(d, p1px=None):
     set_term(d)
     q = d['challenge_quest']
     t = d['term']
@@ -200,7 +200,7 @@ def quest_log_html(d):
         assert cave_end in h, 'quest log: secret cave block not found'
         because = ('<div class="sub2"><span class="sl">because</span><span>I chose it because <span class="wl2" style="width:62%"></span></span></div>' if q['optional'].get('because') else '')
         h = h.replace(cave_end, tool_strip_html(tools, cave=True, px=tpx, pxm=tpxm) + because + cave_end, 1)
-    h = h.replace('</head>', '<style>.csheet .qbox .qn:before,.csheet .qn:before{content:"Gate "}.csheet .p2 .pins,.csheet .p3 .pins,.csheet .p4 .pins{font-size:17.7px}' + (tool_css(tpx, tpxm) if tools else '') + '</style></head>', 1)
+    h = h.replace('</head>', '<style>.csheet .qbox .qn:before,.csheet .qn:before{content:"Gate "}.csheet .p2 .pins,.csheet .p3 .pins,.csheet .p4 .pins{font-size:17.7px}' + (('.csheet .pins{font-size:%spx}.csheet .crl{font-size:%spx}' % p1px) if p1px else '') + '' + (tool_css(tpx, tpxm) if tools else '') + '</style></head>', 1)
     marker = '</ul></div>'
     assert marker in h
     if q.get('quest_map', True):                      # a lesson whose page 1 is full sets quest_map to false
@@ -332,7 +332,10 @@ def build_quest(d, pw, out_root=None):
     od = os.path.join(out_root or os.path.join(L1, 'out'), f'l{n}')
     os.makedirs(od, exist_ok=True)
     term = f'Math Inquirers Term {d["term"]}'
-    log = bc.render(pw, quest_log_html(d), 'quest_log', od, f'L{n}_Quest_Log.pdf', f"{term} {NAME}.", {'top': '12mm', 'bottom': '15mm', 'left': '14mm', 'right': '14mm'})
+    for p1px in ((17.7, 17.7), (16.8, 17.0), (16.0, 16.8), None):      # page 1: the instruction line and the Mi-says box as large as the 4-page layout allows
+        log = bc.render(pw, quest_log_html(d, p1px), 'quest_log', od, f'L{n}_Quest_Log.pdf', f"{term} {NAME}.", {'top': '12mm', 'bottom': '15mm', 'left': '14mm', 'right': '14mm'})
+        if pdfcheck.pdf_pages(log) == c['sheet_pages'] and min(pdfcheck.pdf_fill(log, 12.0, 15.0)) >= 0.40: break
+    print('quest log page 1 sizes (px, instruction / box):', p1px or 'unchanged (15.5 / 16.5)')
     notes = bc.render(pw, tutor_notes_html(d), 'quest_tutor_notes', od, f'L{n}_Quest_Tutor_Notes.pdf', f'{term} {NAME}. Tutor notes and private return plan. Tutor only.', {'top': '14mm', 'bottom': '16mm', 'left': '13mm', 'right': '13mm'})
     note = bc.render(pw, parent_note_html(d), 'quest_parent_note', od, f'L{n}_Quest_Parent_Note.pdf', '', {'top': '12mm', 'bottom': '12mm', 'left': '15mm', 'right': '15mm'})
     fails = []

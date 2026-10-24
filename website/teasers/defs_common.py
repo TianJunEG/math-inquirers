@@ -89,9 +89,10 @@ def show_frac(v, mixed):
 
 
 def P(frame, kind, topic, q, hint, why, p, t=None, unit=None, fmt='int', big=None, code=None,
-      units=None, prefix=None, accept=None, exact=False, w=None, xq=None):
+      units=None, prefix=None, accept=None, exact=False, w=None, xq=None, sub=None):
     """One puzzle definition.  p = parameters handed to the solver and to the independent checker;
-    t = text-only values (names, nouns) that appear in the wording; w = extra typical wrong answers."""
+    t = text-only values (names, nouns) that appear in the wording; w = extra typical wrong answers;
+    sub = the maths sub-structure id in taxonomy.json ('family.sub'); verify_bank.py enforces the per-quarter caps on it."""
     return dict(frame=frame, kind=kind, topic=topic, q=q, hint=hint, why=why, p=p, t=t or {}, unit=unit,
                 fmt=fmt, big=big, code=code, units=units, prefix=prefix, accept=accept, exact=exact,
-                w=w or [])
+                w=w or [], sub=sub)
