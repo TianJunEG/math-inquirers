@@ -20,7 +20,7 @@
   }
   // ---- reading and judging
   function toNum(s) { s = String(s == null ? '' : s).replace(/\s/g, '').replace(/(\d),(?=\d{3}(\D|$))/g, '$1'); return /^-?\d+$/.test(s) ? +s : null; }
-  function nums(s) { return (String(s || '').replace(/(\d),(?=\d{3}(\D|$))/g, '$1').replace(/,/g, ' ').match(/-?\d+/g) || []).map(Number); }
+  function nums(s) { s = String(s || '').replace(/(\d),(?=\d{3}(\D|$))/g, '$1'); if (/[,;]/.test(s)) return s.split(/[,;]/).reduce(function (acc, tok) { tok = tok.trim(); if (/^\d{1,3}(\s\d{3})+$/.test(tok)) tok = tok.replace(/\s/g, ''); return acc.concat(tok.match(/-?\d+/g) || []); }, []).map(Number); return (s.match(/-?\d+/g) || []).map(Number); }
   function sameSet(a, b) { var x = a.slice().sort(function (p, r) { return p - r; }), y = b.slice().sort(function (p, r) { return p - r; }); return x.length === y.length && x.every(function (v, i) { return v === y[i]; }); }
   // text answers: same rule as practice/submit/mark.js (case, spacing, hyphens and a final full stop do not matter)
   function normText(s) { return String(s == null ? '' : s).normalize('NFKC').toLowerCase().replace(/[.!]+$/, '').replace(/[\s\-]+/g, ' ').trim(); }

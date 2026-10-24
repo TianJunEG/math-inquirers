@@ -149,11 +149,13 @@ with sync_playwright() as pw:
             if page.locator('#ans textarea').count(): fail(f'{items[i]["id"]}: paper-only item has a text box')
         enter(page, items[i], alt=i)
     page.locator('#submit').click()
-    if 'no answer' not in page.locator('#bar').inner_text() and nself: fail('no confirm for the unanswered self-checks')
-    if nself:
+    if 'no answer' not in page.locator('#bar').inner_text() and npaper: fail('no confirm for the unanswered paper-only self-checks')
+    if npaper:      # a paper-only item has no text box, so it stays unanswered and the child is asked to confirm; a writing self-check is answered above
         page.locator('#keep').click()
         if page.locator('#summary').count(): fail('submitted although the child kept working')
         page.locator('#submit').click(); page.locator('#yes').click()
+    elif page.locator('#yes').count():
+        page.locator('#yes').click()
     summ = page.locator('#summary').inner_text()
     if f'{N - nself} of {N - nself} marked questions are right' not in summ: fail('summary: ' + summ)
     for i, it in enumerate(items):
