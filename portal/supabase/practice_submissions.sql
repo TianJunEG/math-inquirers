@@ -119,9 +119,12 @@ create table if not exists public.practice_item_keys (       -- SECRET: no polic
   answer_key   jsonb,
   ordered      boolean not null default false,
   equivalent   boolean not null default false,
+  rules        jsonb not null default '{}',   -- extra marking rules from make_keys.py, passed to the Worker as they are: unit (false = a unit is not required), pre (text before each box),
+                                              -- grouped, words (number words accepted), poly (algebra rule compared as a polynomial, the variable), equiv_frac (equal fractions in a list)
   primary key (unit_key, unit_version, item_id),
   foreign key (unit_key, unit_version, item_id) references public.practice_item_tags on delete cascade
 );
+alter table public.practice_item_keys add column if not exists rules jsonb not null default '{}';
 
 -- ---------- 4. submissions (one per child, unit and attempt; the latest revision wins) and the per-question rows ----------
 create table if not exists public.practice_submissions (
@@ -152,7 +155,10 @@ alter table public.practice_attempts
   add column if not exists partial_of     smallint,
   add column if not exists slip_idx       smallint,
   add column if not exists self_result    text check (self_result in ('got','not_yet','checked')),
-  add column if not exists note           text;
+  add column if not exists note           text,
+  -- the typed explanation of a self-checked or open item (EXPLAIN-TO-TUTOR), at most 500 characters. NEVER for an auto-marked or paper-only item and NEVER returned to the child
+  -- or the browser; read only by the child's tutor, the owner and the parent (practice_child_detail). Deleted with the submission (retention, delete_child_practice, delete_my_data).
+  add column if not exists explain_text   text check (explain_text is null or (char_length(explain_text) <= 500 and marking_mode is distinct from 'auto'));
 create unique index if not exists practice_attempts_sub_item_uq on public.practice_attempts (submission_id, item_key) where submission_id is not null;
 
 -- ---------- 5. tutors (assigned to groups; same Supabase Auth login as the admin page) ----------
@@ -617,7 +623,7 @@ begin
   if (select count(*) from public.practice_submissions where child_id = cid and received_at > now() - interval '1 hour') >= 20
      or (select count(*) from public.practice_submissions where received_at > now() - interval '1 hour') >= 3000 then
     return jsonb_build_object('ok', false, 'error', 'rate'); end if;
-  select jsonb_agg(jsonb_build_object('id', t.item_id, 'marking_mode', t.marking_mode, 'paper_only', t.paper_only, 'type', k.answer_type,
+  select jsonb_agg(k.rules || jsonb_build_object('id', t.item_id, 'marking_mode', t.marking_mode, 'paper_only', t.paper_only, 'type', k.answer_type,
            'key', k.answer_key, 'ordered', k.ordered, 'equivalent', k.equivalent, 'slips', t.slips) order by t.position)
     into keys from public.practice_item_tags t join public.practice_item_keys k using (unit_key, unit_version, item_id)
    where t.unit_key = p_unit and t.unit_version = p_version;
@@ -643,6 +649,9 @@ begin
       or ((x->>'marking_mode') = 'auto' and (x->>'mark') in ('self','open'))
       or ((x->>'marking_mode') <> 'auto' and (x->>'mark') in ('right','wrong','skipped'));
   if n_bad > 0 then return jsonb_build_object('ok', false, 'error', 'bad_rows'); end if;
+  -- an explanation belongs only to a self-checked or open item that is not paper-only; anything else is refused, not silently dropped
+  if exists (select 1 from jsonb_array_elements(p_rows) x join public.practice_item_tags t on t.unit_key = p_unit and t.unit_version = p_version and t.item_id = x->>'item_id'
+              where nullif(btrim(coalesce(x->>'explain_text', '')), '') is not null and (t.marking_mode = 'auto' or t.paper_only)) then return jsonb_build_object('ok', false, 'error', 'bad_rows'); end if;
   -- R1-M6: the same item twice in one request is a clean error, not a unique-violation
   if (select count(distinct x->>'item_id') from jsonb_array_elements(p_rows) x) <> jsonb_array_length(p_rows) then return jsonb_build_object('ok', false, 'error', 'bad_rows'); end if;
   select * into sub from public.practice_submissions where child_id = cid and client_sid = p_sid for update;
@@ -657,12 +666,12 @@ begin
   end if;
   for r in select * from jsonb_array_elements(p_rows) loop
     insert into public.practice_attempts (child_id, lesson_key, item_key, submission_id, unit_version, marking_mode, mark, correct, answered, answer_text,
-                                          partial_found, partial_of, slip_idx, self_result, note)
+                                          partial_found, partial_of, slip_idx, self_result, note, explain_text)
     values (cid, p_unit, r->>'item_id', sub.id, p_version, r->>'marking_mode', r->>'mark',
             case r->>'mark' when 'right' then true when 'wrong' then false else null end,
             (r->>'answered')::boolean, left(r->>'answer_text', 200),
             nullif(r->>'partial_found','')::smallint, nullif(r->>'partial_of','')::smallint, nullif(r->>'slip_idx','')::smallint,
-            nullif(r->>'self_result',''), left(r->>'note', 60));
+            nullif(r->>'self_result',''), left(r->>'note', 60), nullif(left(btrim(coalesce(r->>'explain_text', '')), 500), ''));
   end loop;
   update public.practice_submissions s set rev = p_rev, received_at = now(),
     n_auto = (select count(*) from public.practice_attempts a where a.submission_id = s.id and a.marking_mode = 'auto'),
@@ -693,9 +702,10 @@ begin
 end $$;
 
 -- Question-level report rows for ONE child (the parent, the child's tutor or the admin). Tags and the misconception text come from the tags table.
+drop function if exists public.practice_child_detail(uuid, text);      -- R1: the result gained explain_text
 create or replace function public.practice_child_detail(p_child uuid, p_unit text)
 returns table (item_id text, item_pos int, tier text, strand text, skill text, topic text, marking_mode text, paper_only boolean, mark text,
-               answer_text text, partial_found smallint, partial_of smallint, misconception text, self_result text, answered boolean, received_at timestamptz)
+               answer_text text, partial_found smallint, partial_of smallint, misconception text, self_result text, answered boolean, received_at timestamptz, explain_text text)
 language plpgsql stable security definer set search_path = public, pg_temp as $$
 begin
   if not (public.is_admin() or public.is_tutor_of_child(p_child)
@@ -703,7 +713,7 @@ begin
     raise exception 'forbidden' using errcode = '42501'; end if;
   return query
     select a.item_key, t.position, t.tier, t.strand, t.skill, t.topic, a.marking_mode, t.paper_only, a.mark, a.answer_text, a.partial_found, a.partial_of,
-           case when a.slip_idx is not null then t.slips -> a.slip_idx ->> 'say' end, a.self_result, a.answered, s.received_at
+           case when a.slip_idx is not null then t.slips -> a.slip_idx ->> 'say' end, a.self_result, a.answered, s.received_at, a.explain_text
       from public.practice_submissions s join public.practice_attempts a on a.submission_id = s.id
       join public.practice_item_tags t on t.unit_key = s.unit_key and t.unit_version = s.unit_version and t.item_id = a.item_key
      where s.child_id = p_child and s.unit_key = p_unit

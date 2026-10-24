@@ -4,7 +4,7 @@
     python3 practice/submit/make_keys.py 2 1         # -> practice/submit/out/ext-l2u01.keys.json and .sql   (git-ignored; nothing is loaded anywhere)
 
 Output:
-  keys.json  [{id, marking_mode, type, key, ordered, equivalent, paper_only, slips}]  what handler.js marks with (the stub server reads it)
+  keys.json  [{id, marking_mode, type, key, ordered, equivalent, paper_only, slips, + unit, pre, grouped, words, poly, equiv_frac when set}]  what handler.js marks with (the stub server reads it)
   .sql       INSERTs for practice_units, practice_item_tags and practice_item_keys. The owner (or an agent with the service role) runs it after
              reviewing; unit_version = first 8 chars of the data file's SHA-256, so a changed question can never be marked with an old key.
 marking_mode:  auto  = a number, boxes, list, choice (Phase 2: fraction, decimal, text)   self = selfcheck items (compare with the shown solution; includes
@@ -95,7 +95,7 @@ def main():
     for t in tag_rows:
         sql.append(f"insert into public.practice_item_tags (unit_key, unit_version, item_id, position, tier, marking_mode, paper_only, strand, skill, topic, slips) values ({q(uk)}, {q(ver)}, {q(t['id'])}, {t['pos']}, {q(t['tier'])}, {q(t['marking_mode'])}, {str(t['paper_only']).lower()}, {q(t['strand'])}, {q(t['skill'])}, {q(t['topic'])}, {q(json.dumps(t['slips']))}::jsonb) on conflict do nothing;")
     for k in keys:
-        sql.append(f"insert into public.practice_item_keys (unit_key, unit_version, item_id, answer_type, answer_key, ordered) values ({q(uk)}, {q(ver)}, {q(k['id'])}, {q(k['type'])}, {q(json.dumps(k['key']))}::jsonb, {str(k.get('ordered', False)).lower()}) on conflict do nothing;")
+        sql.append(f"insert into public.practice_item_keys (unit_key, unit_version, item_id, answer_type, answer_key, ordered, equivalent, rules) values ({q(uk)}, {q(ver)}, {q(k['id'])}, {q(k['type'])}, {q(json.dumps(k['key']))}::jsonb, {str(k.get('ordered', False)).lower()}, {str(k.get('equivalent', False)).lower()}, {q(json.dumps({r: k[r] for r in ('unit', 'pre', 'grouped', 'words', 'poly', 'equiv_frac') if r in k}))}::jsonb) on conflict do nothing;")
     sql += ["-- publish only after the owner has approved the privacy wording:", f"-- update public.practice_units set published = true where unit_key = {q(uk)} and unit_version = {q(ver)};", 'commit;']
     open(os.path.join(out, uk + '.sql'), 'w').write('\n'.join(sql) + '\n')
     modes = {}
