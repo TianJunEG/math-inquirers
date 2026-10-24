@@ -367,3 +367,6 @@ Owner: "The online version should allow skipping and selection for students to s
 
 ## 2026-10-24 — SUBMIT-TO-TUTOR (supersedes the SUBMIT-LOCAL assumption)
 Owner: "SUBMIT-TO-TUTOR - it should be submitted to us so we can generate reports". Submitted answers from the online versions are sent to Math Inquirers so tutors/owner can generate reports. Consequences to design and clear BEFORE going live: identifying the child (unique family link/code, no password accounts if possible), storage (Supabase, row-level security), minimal data, parent consent line, PDPA (Singapore) notice, retention/deletion, privacy page update, lawyer question added. Build can proceed; nothing goes live until privacy wording is reviewed.
+
+## 2026-10-24 — D8 (amended): PAPER-ONLY QUESTIONS STAY, SELF-CHECKED
+Owner: paper-only holiday questions (kit, ruler, drawing) are NOT left out. The question is still shown online; for drawing questions a note tells the student to check their drawing against the answer shown on screen. Such items are "self-checked" (child compares with the on-screen answer/solution), recorded as self-marked, not auto-marked, and excluded from auto-marked percentages in reports. Also in force: ONLINE-SKIP-SELECT-SUBMIT, SUBMIT-TO-TUTOR, answers auto-marked (server re-marks).
