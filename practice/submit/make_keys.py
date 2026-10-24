@@ -8,7 +8,7 @@ Output:
   .sql       INSERTs for practice_units, practice_item_tags and practice_item_keys. The owner (or an agent with the service role) runs it after
              reviewing; unit_version = first 8 chars of the data file's SHA-256, so a changed question can never be marked with an old key.
 marking_mode:  auto  = a number, boxes, list, choice (Phase 2: fraction, decimal, text)   self = selfcheck items (compare with the shown solution; includes
-               paper-only drawing/ruler/kit tasks)   none = open items ('Open.' in the book's explanation: many answers are right)
+               paper-only drawing/ruler/kit tasks)   none = open items (item open=True, or 'Open.' in the book's explanation: many answers are right; reports show them as open, not as checked on paper)
 Tags: practice/submit/tags/<unit>.json may give {"strand": "...", "skill_by_item": {"S01": "..."}}; otherwise strand/skill fall back to the unit topic.
 """
 import hashlib, json, os, sys
@@ -34,12 +34,16 @@ def build(level, unit, holiday=None):
     for pos, it in enumerate(d['items'], 1):
         t = it['type']
         if t == 'selfcheck':
-            openq = bool(it['steps']) and it['steps'][0].lstrip().lower().startswith('open')
+            openq = bool(it.get('open')) or (bool(it['steps']) and it['steps'][0].lstrip().lower().startswith('open'))   # open = many answers are right: reported as 'open', never as 'checked on paper'
             rec = dict(marking_mode='none' if openq else 'self', type='open' if openq else 'selfcheck', key=None)
         elif t == 'fields':
             rec = dict(marking_mode='auto', type='fields', key=[f['answer'] for f in it['fields']])
+            if any(f.get('pre') for f in it['fields']):
+                rec['pre'] = [f.get('pre', '') for f in it['fields']]
         elif t == 'set':
             rec = dict(marking_mode='auto', type='set', key=it['answer'], ordered=bool(it['ordered']))
+            if it.get('grouped') is not None:
+                rec['grouped'] = bool(it['grouped'])
         elif t == 'choice':
             rec = dict(marking_mode='auto', type='choice', key=it['answer'], options=it['options'])
         elif t == 'number':
@@ -48,6 +52,8 @@ def build(level, unit, holiday=None):
             rec = dict(marking_mode='auto', type='text', key=it['answer'])
         else:
             raise SystemExit(f'{it["id"]}: item type {t} has no marking rule yet')
+        if it.get('unit') is False and t in ('number', 'fields'):
+            rec['unit'] = False
         rec.update(id=it['id'], paper_only=bool(it.get('paper_only')), slips=it.get('slips') or [])
         keys.append(rec)
         by = tags.get('skill_by_item', {})

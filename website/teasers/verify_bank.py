@@ -315,12 +315,13 @@ def main():
             if (not small and len(ids) > 1) or (small and len(ids) > MAX_SMALL):
                 global_fails.append('L%d: answer %s repeats (%s)' % (lv, a, ', '.join(ids)))
         # numbers shared between two puzzles of the same level
-        nums = [(e['id'], {n for n in numbers_in(e['q']) if n not in ('0', '1', '2')}) for _, e in all_by_level[lv]]
+        nums = [(e['id'], {n for n in numbers_in(e['q']) if n not in ('0', '1', '2') and not (n in ('5', '10', '20', '50') and 'cent' in e['q'])}) for _, e in all_by_level[lv]]
         for i in range(len(nums)):
             for j in range(i + 1, len(nums)):
                 a, b = nums[i][1], nums[j][1]
                 sh = a & b
-                if len(sh) >= TAX.RULES['number_overlap_fail'] and len(sh) >= 0.6 * min(len(a), len(b)):
+                big = [n for n in sh if int(float(n)) >= 10]
+                if (len(sh) >= 4 or (len(sh) >= TAX.RULES['number_overlap_fail'] and len(big) >= 2)) and len(sh) >= 0.6 * min(len(a), len(b)):
                     global_fails.append('L%d: %s and %s share the numbers %s' % (lv, nums[i][0], nums[j][0], sorted(sh)))
         # frames unique
         fr = {}

@@ -29,7 +29,7 @@ def lighthouse_oracle(d):
 ITEMS = [
     # ================= Start here (workbook lesson 1, Q1 to Q6)
     D(id='1a', tier='core', no='1(a)', type='set', ordered=True, skill='factor pairs in order',
-      q='Hunt down every factor of 48. (A factor goes into 48 exactly.) Write the factor pairs of 48 in order. You may not need every box. '
+      q='Hunt down every factor of 48. (A factor goes into 48 exactly.) Write the factor pairs of 48 in order. '
         '1 × 48 is done for you. Type the smaller number of each of the other pairs, in order, with commas between them.',
       answer=[2, 3, 4, 6], check=lambda: [a for a, b in factor_pairs(48) if a > 1],
       hint='Try 1, 2, 3, 4 ... in order. Does each number go into 48 exactly? Stop when the pairs meet.',
@@ -74,18 +74,18 @@ ITEMS = [
     D(id='3a-red', tier='core', no='3(a)', type='set', ordered=True, skill='listing factors', answer=[1, 2, 3, 6, 9, 18], check=lambda: factors(18),
       q='Mei has 18 red beads and 24 blue beads. She puts them into identical packs. Every pack has the same number of red beads and the same number of blue beads. No beads are left over. '
         'Type the factors of 18 in order, with commas between them.',
-      hint='Find the factor pairs of 18: 1 × 18, 2 × 9, 3 × 6.',
+      hint='Try 1, 2, 3 ... in order. Does each number go into 18 exactly? Stop when the pairs meet.',
       steps=['Factor pairs of 18: 1 × 18, 2 × 9, 3 × 6. After 3 comes 4 (no), 5 (no), and then 6 is already in a pair.', 'Factors of 18: 1, 2, 3, 6, 9, 18.'],
       src=['Mei has 18 red beads and 24 blue beads. She puts them into identical packs. Every pack has the same number of red beads and the same number of blue beads. No beads are left over.',
            'Factors of 18:']),
     D(id='3a-blue', tier='core', no='3(a)', type='set', ordered=True, skill='listing factors', answer=[1, 2, 3, 4, 6, 8, 12, 24], check=lambda: factors(24),
       q='Mei has 18 red beads and 24 blue beads. Type the factors of 24 in order, with commas between them.',
-      hint='Find the factor pairs of 24: 1 × 24, 2 × 12, 3 × 8, 4 × 6.',
+      hint='Try 1, 2, 3 ... in order. Does each number go into 24 exactly? Stop when the pairs meet.',
       steps=['Factor pairs of 24: 1 × 24, 2 × 12, 3 × 8, 4 × 6. After 4 comes 5 (no), and then 6 is already in a pair.', 'Factors of 24: 1, 2, 3, 4, 6, 8, 12, 24.'],
       src=['Factors of 24:']),
     D(id='3b', tier='core', no='3(b)', type='set', ordered=True, skill='common factors', answer=[1, 2, 3, 6], check=lambda: common_factors(18, 24),
       q='Mei has 18 red beads and 24 blue beads. Type the common factors of 18 and 24 in order, with commas between them.',
-      hint='Circle the numbers that are in both lists of factors.',
+      hint='Look for the numbers that are in both lists of factors.',
       steps=['Factors of 18: 1, 2, 3, 6, 9, 18. Factors of 24: 1, 2, 3, 4, 6, 8, 12, 24.', 'The numbers in both lists are 1, 2, 3 and 6.'],
       src=['Common factors of 18 and 24:']),
     D(id='3c', tier='core', no='3(c)', type='fields', skill='greatest common factor in packs', frame='Most packs: {f1}.  Each pack has {f2} red and {f3} blue.', answer=[6, 3, 4],
@@ -167,16 +167,16 @@ ITEMS = [
       steps=['Multiples of 3 and 4 are multiples of 12: 12, 24, 36, 48, 60, 72.', 'Between 30 and 70: 36, 48 and 60.'],
       src=['I am a number between 30 and 70. I am a multiple of 3 and a multiple of 4, but I am NOT a multiple of 8. My ones digit is bigger than my tens digit. Who am I?',
            'Step 1: the numbers between 30 and 70 that are multiples of 3 AND 4 (count in 12s):']),
-    D(id='6a-2', tier='core', no='6(a) step 2', type='fields', skill='multiples in a riddle', frame='Left after crossing out the multiples of 8:  {f1} and {f2}', answer=[36, 60],
+    D(id='6a-2', tier='core', no='6(a) step 2', type='fields', skill='multiples in a riddle', frame='Left after taking away the multiples of 8:  {f1} and {f2}', answer=[36, 60],
       check=lambda: [n for n in (36, 48, 60) if n % 8 != 0],
-      q='Step 2: cross out any multiple of 8. The numbers from Step 1 are 36, 48 and 60. Which two are left?',
-      hint='Is 48 in the 8 times table? 8 × 6 = 48.',
+      q='Step 2: take away any multiple of 8 from your Step 1 numbers. Which two numbers are left?',
+      hint='Count in 8s: 8, 16, 24 ... Which of your numbers do you reach?',
       steps=['8 × 6 = 48, so 48 is a multiple of 8. Cross it out.', '36 and 60 are not multiples of 8 (8 × 4 = 32 and 8 × 5 = 40; 8 × 7 = 56 and 8 × 8 = 64).', 'Left: 36 and 60.'],
       src=['Step 2: cross out any multiple of 8. Left: ______ and ______.']),
     D(id='6a-3', tier='core', no='6(a)', type='number', skill='multiples in a riddle', answer=36,
       check=lambda: [n for n in range(31, 70) if n % 3 == 0 and n % 4 == 0 and n % 8 != 0 and n % 10 > n // 10][0],
-      q='Step 3: use the last clue. My ones digit is bigger than my tens digit. Of 36 and 60, who am I?',
-      hint='Look at the digits of 36 and of 60. Which has a ones digit bigger than its tens digit?',
+      q='Step 3: use the last clue. My ones digit is bigger than my tens digit. Of the two numbers left in Step 2, who am I?',
+      hint='Look at the tens digit and the ones digit of each number left. Which one has a ones digit bigger than its tens digit?',
       steps=['36: tens digit 3, ones digit 6. 6 is bigger than 3, so it fits.', '60: tens digit 6, ones digit 0. 0 is not bigger than 6.', 'I am 36.'],
       src=['Step 3: use the last clue.', 'I am:']),
     D(id='6b', tier='core', no='6(b)', type='choice', options=['Ravi', 'Mei'], answer='Ravi', skill='multiples of 3 and 6',
@@ -200,7 +200,7 @@ ITEMS = [
     D(id='I1', tier='invest', no='Investigation (a)', type='fields', skill='common multiples: what if we change the gap', frame='Every 9: {f1}   Every 12: {f2}   Every 5: {f3}   Every 7: {f4}  (minutes)',
       answer=[18, 12, 30, 42], check=lambda: [first_common_multiple(6, d) for d in (9, 12, 5, 7)],
       q='Bus meeting times. Bus A leaves a stop every 6 minutes. Bus B leaves every 8 minutes. Both leave at 7:00 am and next leave together after 24 minutes. Now keep Bus A at 6 minutes and change the gap for Bus B. '
-        'Easy first step: write the first five times Bus A leaves (7:00, 7:06, 7:12, ...) and the first five for Bus B (7:00, 7:08, ...). Circle a time that is in both lists. '
+        'Easy first step: write the first five times Bus A leaves (7:00, 7:06, 7:12, ...) and the first five for Bus B (7:00, 7:08, ...). Find a time that is in both lists. '
         'Bus B every 9 minutes: they next leave together after how many minutes? Do the same for every 12, every 5 and every 7.',
       hint='List the multiples of 6 and the multiples of the new gap. Find the first number in both lists.',
       steps=['Every 9: 6, 12, 18 and 9, 18. The first number in both is 18.', 'Every 12: 6, 12 and 12. The first number in both is 12.', 'Every 5: 6, 12, 18, 24, 30 and 5, 10, 15, 20, 25, 30. The first in both is 30.',

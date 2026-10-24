@@ -27,6 +27,7 @@ def bridge(reqs):
 
 def blocks(prog, label='Code', fs=14):
     svg = bridge([dict(kind='blocks', prog=prog, label=label, fs=fs)])[0]
+    svg = svg.replace('#D64545', '#C03B3B')               # the workbook's red block is 4.38:1 with its white text; this red is 5.3:1 (the printed colour is unchanged)
     return re.sub(r'<text[^>]*>\s*</text>', '', svg)       # an empty value slot is drawn with a blank text node: not needed
 
 

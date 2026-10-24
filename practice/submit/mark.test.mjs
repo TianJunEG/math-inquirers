@@ -7,7 +7,7 @@ const num = { id: 'a', marking_mode: 'auto', type: 'number', key: 1000, slips: [
 // whole number: wrong, right, forms, whitespace, skipped
 t('right', num, '1000', 'right'); t('wrong', num, '999', 'wrong'); t('slip', num, '100', 'wrong', { slip: 0 });
 t('thousands comma', num, '1,000', 'right'); t('spaces', num, '  1 000 ', 'right'); t('leading zero', num, '01000', 'right');
-t('decimal in whole number item is wrong', num, '1000.0', 'wrong'); t('words are wrong', num, 'one thousand', 'wrong');
+t('1000.0 and a final full stop are the whole number 1000', num, '1000.0', 'right'); t('1000.5 is not 1000', num, '1000.5', 'wrong'); t('words are wrong', num, 'one thousand', 'wrong');
 t('skipped empty', num, '', 'skipped'); t('skipped spaces', num, '   ', 'skipped'); t('skipped null', num, null, 'skipped');
 t('negative', { marking_mode: 'auto', type: 'number', key: -5 }, '-5', 'right');
 // choice
@@ -39,5 +39,49 @@ t('text case', tx, 'nw', 'right'); t('text alt spacing', tx, 'North West', 'righ
 t('selfcheck', { marking_mode: 'self', type: 'selfcheck' }, 'my drawing', 'self'); t('selfcheck blank still self', { marking_mode: 'self', type: 'selfcheck' }, '', 'self');
 t('paper only item', { marking_mode: 'self', type: 'selfcheck', paper_only: true }, null, 'self'); t('open', { marking_mode: 'none', type: 'open' }, 'anything', 'open');
 t('a marking_mode of self wins over a number type', { marking_mode: 'self', type: 'number', key: 4 }, '4', 'self');
+
+// ---- audit fixes (H1, normText, units, brackets, minus)
+const list3 = { marking_mode: 'auto', type: 'set', key: [250, 450], ordered: false };
+t('H1 no space', list3, '250,450', 'right'); t('H1 comma space', list3, '250, 450', 'right'); t('H1 spaces', list3, '250 450', 'right'); t('H1 semicolon', list3, '250;450', 'right');
+t('grouped item also accepts 250,450 as 250450', { ...list3, key: [250450] }, '250,450', 'right'); t('H1 not merged when not grouped', { ...list3, key: [250450], grouped: false }, '250,450', 'wrong'); t('H1 not merged: space', { ...list3, key: [250450], grouped: false }, '250 450', 'wrong');
+t('H1 three numbers no space', { ...list3, key: [247, 274, 427] }, '247,274,427', 'right');
+t('H1 a 3-digit group list is not a thousands number', { ...list3, key: [1, 250] }, '1,250', 'right');
+const big = { marking_mode: 'auto', type: 'set', key: [12500, 40000], ordered: false };
+t('grouped default: 12,500 40,000', big, '12,500, 40,000', 'right'); t('grouped default: spaces', big, '12 500, 40 000', 'right'); t('grouped default: plain', big, '12500 40000', 'right');
+t('grouped default: wrong', big, '12,500, 40,001', 'wrong');
+t('grouped: both readings', { marking_mode: 'auto', type: 'set', key: [12, 500, 20000], ordered: true }, '12, 500, 20 000', 'right');
+t('grouped false declared', { marking_mode: 'auto', type: 'set', key: [12500, 250], grouped: false }, '12,500, 250', 'wrong');
+t('grouped true declared on small numbers', { marking_mode: 'auto', type: 'set', key: [1250, 3], grouped: true }, '1,250, 3', 'right');
+t('bad group 12,50 is not 1250', { marking_mode: 'auto', type: 'set', key: [12500], }, '12,50', 'wrong');
+// numbers: units, full stops, minus
+t('unit word', { marking_mode: 'auto', type: 'number', key: 301 }, '301 sticks', 'right'); t('unit min', { marking_mode: 'auto', type: 'number', key: 20 }, '20 min', 'right');
+t('unit glued', { marking_mode: 'auto', type: 'number', key: 20 }, '20cm', 'right'); t('final stop', { marking_mode: 'auto', type: 'number', key: 29 }, '29.', 'right');
+t('20.0', { marking_mode: 'auto', type: 'number', key: 20 }, '20.0', 'right'); t('20.5 wrong', { marking_mode: 'auto', type: 'number', key: 20 }, '20.5', 'wrong');
+t('unit and stop', { marking_mode: 'auto', type: 'number', key: 20 }, '20 minutes.', 'right'); t('unit:false', { marking_mode: 'auto', type: 'number', key: 20, unit: false }, '20 min', 'wrong');
+t('two numbers are not a unit', { marking_mode: 'auto', type: 'number', key: 4 }, '4 or 5', 'wrong'); t('1 2 is not 12', { marking_mode: 'auto', type: 'number', key: 12 }, '1 2', 'wrong');
+t('12,50 is not 1250', { marking_mode: 'auto', type: 'number', key: 1250 }, '12,50', 'wrong'); t('1,250 is 1250', { marking_mode: 'auto', type: 'number', key: 1250 }, '1,250 kg', 'right');
+t('unicode minus', { marking_mode: 'auto', type: 'number', key: -4 }, '−4', 'right'); t('en dash minus', { marking_mode: 'auto', type: 'number', key: -4 }, '–4', 'right'); t('minus matters', { marking_mode: 'auto', type: 'number', key: 4 }, '-4', 'wrong');
+t('box with printed prefix 6:20', { marking_mode: 'auto', type: 'fields', key: [20], pre: ['6:'] }, ['6:20'], 'right'); t('box 20 min', { marking_mode: 'auto', type: 'fields', key: [20, 30], pre: ['6:', '6:'] }, ['20 min', '6:30'], 'right');
+t('box prefix wrong', { marking_mode: 'auto', type: 'fields', key: [20], pre: ['6:'] }, ['7:20'], 'wrong');
+t('fields negative unicode', { marking_mode: 'auto', type: 'fields', key: [-4, 2] }, ['−4', '2'], 'right');
+// text: minus signs, mixed numbers, brackets
+const frac = { marking_mode: 'auto', type: 'text', key: ['5 1/2', '11/2'] };
+t('mixed number right', frac, '5 1/2', 'right'); t('1 1/2 is not 5 1/2', frac, '1 1/2', 'wrong'); t('11/2 key', frac, '11/2', 'right'); t('space kept: 51/2 is wrong', frac, '51/2', 'wrong');
+const half = { marking_mode: 'auto', type: 'text', key: ['1/2', '0.5'] };
+t('1/2 right', half, '1/2', 'right'); t('-1/2 wrong', half, '-1/2', 'wrong'); t('unicode -1/2 wrong', half, '−1/2', 'wrong'); t('-0.5 wrong', half, '-0.5', 'wrong');
+const neg = { marking_mode: 'auto', type: 'text', key: ['-0.5', '−0.5'] };
+t('negative key', neg, '-0.5', 'right'); t('negative key with unicode minus', neg, '−0.5', 'right'); t('negative key typed without minus', neg, '0.5', 'wrong'); t('negative key spaced', neg, '- 0.5', 'right');
+const br = { marking_mode: 'auto', type: 'text', key: ['(6+4)x5-2'] };
+t('bracket right', br, '(6+4)x5-2', 'right'); t('bracket times sign', br, '(6+4)×5−2', 'right'); t('bracket spaced star', br, '(6 + 4) * 5 - 2', 'right');
+t('bracket dropped minus (6+4)x52', br, '(6+4)x52', 'wrong'); t('bracket with result', br, '(6+4)x5-2=48', 'right'); t('bracket with spaced result', br, '(6+4)×5−2 = 48.', 'right');
+t('bracket with wrong result', br, '(6+4)x5-2=47', 'wrong'); t('bracket other placement', br, '6+4x(5-2)', 'wrong'); t('52 placement', { ...br, key: ['(6+4)x52'] }, '(6+4)x5-2', 'wrong');
+t('word hyphen kept as space', { marking_mode: 'auto', type: 'text', key: ['north-west'] }, 'north west', 'right'); t('word hyphen squash', { marking_mode: 'auto', type: 'text', key: ['north-west'] }, 'Northwest.', 'right');
+t('trailing full stop on text', br, '(6+4)x5-2.', 'right');
+t('words only if declared', { marking_mode: 'auto', type: 'text', key: ['1/2'] }, 'half', 'wrong'); t('words declared', { marking_mode: 'auto', type: 'text', key: ['1/2', 'half'] }, 'Half', 'right');
+// the shared reading code is the same text in sheet.js and mark.js (they must agree on every answer)
+import { readFileSync } from 'node:fs';
+const blk = f => { const x = readFileSync(new URL(f, import.meta.url), 'utf8'); const a = x.indexOf('// BEGIN SHARED'), b = x.indexOf('// END SHARED'); assert.ok(a > 0 && b > a, f + ' has the shared block'); return x.slice(a, b); };
+assert.equal(blk('./mark.js'), blk('../ext/public/sheet.js'), 'shared reading code differs between mark.js and sheet.js'); n++;
+
 assert.throws(() => mark({ marking_mode: 'auto', type: 'bogus', key: 1 }, 'x')); n++;
 console.log('mark.test.mjs: ' + n + ' checks passed');

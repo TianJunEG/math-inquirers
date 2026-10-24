@@ -11,7 +11,21 @@ NAVY, YEL, TEAL, WARM, PALE = '#1B2A49', '#FFE08A', '#1F7A6F', '#B5481F', '#FFF9
 
 
 # ---------------------------------------------------------------- svg basics
+MIN_PX, PHONE_PX = 12.0, 290     # figure text is at least MIN_PX on a 360 px phone, where a figure is about PHONE_PX wide (card padding and page margins taken off)
+
+
+def lift_text(w, body):
+    """Raise any font-size so the text is at least MIN_PX on screen when the figure is shown PHONE_PX wide (the figure is scaled by PHONE_PX / w)."""
+    scale = min(1.0, PHONE_PX / w)
+    need = round(MIN_PX / scale, 1)
+    def fix(m):
+        v = float(m.group(1))
+        return f'font-size="{max(v, need):g}"'
+    return re.sub(r'font-size="([\d.]+)"', fix, body)
+
+
 def svg(w, h, body, label):
+    body = lift_text(w, body)
     return (f'<svg viewBox="0 0 {w} {h}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{esc(label)}" '
             f'style="width:100%;max-width:{w}px;height:auto;display:block;margin:0 auto" font-family="Nunito Sans, Arial, sans-serif">{body}</svg>')
 

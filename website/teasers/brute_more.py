@@ -144,8 +144,10 @@ def b_parity(op, parts):
 
 
 @brute
-def b_regroup(tens, ones, hundreds=0):
+def b_regroup(tens, ones, hundreds=0, thousands=0):
     total = 0
+    for _ in range(thousands):
+        total += 1000
     for _ in range(hundreds):
         total += 100
     for _ in range(tens):
@@ -254,3 +256,105 @@ def b_missing_digit(eq):
         if Fr(eval(left.replace('x', '*'))) == Fr(eval(right.replace('x', '*'))):
             out.add(int(d))
     return out
+
+
+# ================================================================== Level 2 structures
+@brute
+def b_unit_price(buy, cost, want):
+    prices = [Fr(x, 100) for x in range(0, 20000) if Fr(x, 100) * buy == Fr(cost, 100)]
+    prices_c = [p for p in prices]
+    return {p * want for p in prices_c} if prices_c else set()
+
+
+@brute
+def b_time_convert(h, m):
+    t = 0
+    for _ in range(h):
+        for _ in range(60):
+            t += 1
+    return {t + m}
+
+
+@brute
+def b_solid_parts(shapes, part):
+    def build(name):
+        if name in ('cube', 'cuboid'):
+            v = list(itertools.product((0, 1), repeat=3))
+            e = [(a, b) for a, b in itertools.combinations(v, 2) if sum(x != y for x, y in zip(a, b)) == 1]
+            f = len([1 for axis in range(3) for val in (0, 1)])
+            return f, len(e), len(v)
+        if name == 'square pyramid':
+            base = [(0, 0), (1, 0), (1, 1), (0, 1)]
+            v = base + ['apex']
+            e = [(base[i], base[(i + 1) % 4]) for i in range(4)] + [(b, 'apex') for b in base]
+            return 1 + 4, len(e), len(v)
+        if name == 'triangular prism':
+            tri = [0, 1, 2]
+            v = [(t, z) for t in tri for z in (0, 1)]
+            e = [e_ for e_ in itertools.combinations(v, 2) if (e_[0][0] != e_[1][0] and e_[0][1] == e_[1][1]) or (e_[0][0] == e_[1][0] and e_[0][1] != e_[1][1])]
+            return 2 + 3, len(e), len(v)
+        if name == 'triangular pyramid':
+            v = range(4)
+            e = list(itertools.combinations(v, 2))
+            f = list(itertools.combinations(v, 3))
+            return len(f), len(e), len(list(v))
+        raise ValueError(name)
+    idx = {'faces': 0, 'edges': 1, 'vertices': 2}[part]
+    return {sum(build(s)[idx] for s in shapes)}
+
+
+@brute
+def b_unit_convert(factor, big, small):
+    return {sum(1 for _ in range(big * factor)) + small}
+
+
+@brute
+def b_fraction_diff(n, f1, f2):
+    def part(f):
+        num, den = f
+        items = list(range(n))
+        groups = [items[i::den] for i in range(den)]
+        assert all(len(g) == n // den for g in groups)
+        return sum(len(g) for g in groups[:num])
+    return {abs(part(f1) - part(f2))}
+
+
+# ================================================================== Level 3 structures
+@brute
+def b_elapsed_overnight(h1, m1, h2, m2):
+    t, n = h1 * 60 + m1, 0
+    while True:
+        t = (t + 1) % (24 * 60)
+        n += 1
+        if t == h2 * 60 + m2:
+            return {n}
+
+
+@brute
+def b_times_as_many(k, ask, total=None, diff=None):
+    out = set()
+    for small in range(1, 3000):
+        large = small + small + small * 0
+        large = 0
+        for _ in range(k):
+            large += small
+        ok = (small + large == total) if total is not None else (large - small == diff)
+        if ok:
+            out.add(small if ask == 'small' else large)
+    return out
+
+
+@brute
+def b_equiv_fraction(n1, d1, d2):
+    return {n2 for n2 in range(0, 1000) if n2 * d1 == n1 * d2}
+
+
+@brute
+def b_quarter_turns(a, b):
+    pos, turned, hours = a, 0, 0
+    while pos != b:
+        pos = pos % 12 + 1
+        hours += 1
+        if hours % 3 == 0:
+            turned += 1
+    return {turned} if hours % 3 == 0 else set()

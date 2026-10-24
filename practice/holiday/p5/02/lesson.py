@@ -15,7 +15,7 @@ from p5lib import *         # noqa: E402,F401
 META = dict(level=5, lesson=2, key='p5', title='Fraction Feats', workbook_title='FRACTION FEATS', topic='Fractions: Four Operations', strand='Fractions',
             sources=['p5/content/l2.js', 'p5/content/inv.js', 'p5/content/gaps.js'],
             intro=['a ÷ b = a/b: 3 pizzas shared by 4 friends is 3/4 each. A unit fraction has 1 on top. Draw a bar model when you are stuck, and find the remainder first, then take the fraction of the remainder.',
-                   'Type a fraction like 3/4 (you may use a mixed number like 5 1/2 too). Some questions ask you to explain: write your idea, then compare it with the model answer after you submit.'])
+                   'Type a fraction like 3/4 (you may use a mixed number like 3 1/4 too). Some questions ask you to explain: write your idea, then compare it with the model answer after you submit.'])
 ST = 'Fractions'
 F = Fraction
 
@@ -99,6 +99,17 @@ def flat(pairs):
 # ---------------------------------------------------------------- items
 Q4_BOTTOMS = [2, 6, 12, 20]
 BARS = F(1, 2) + F(1, 6)
+
+def _b2_accept():
+    out = set()
+    for a, b in unit_pairs_search(F(5, 12)):
+        for x, y in ((a, b), (b, a)):
+            for lead in ('', '5/12='):
+                out.add(f'{lead}1/{x}+1/{y}')
+    return sorted(out)
+
+
+B2_ACCEPT = _b2_accept()
 
 ITEMS = [
     # ================= Start here (workbook lesson 2: Q1 to Q6)
@@ -190,15 +201,15 @@ ITEMS = [
     D(id='5b', tier='core', no='5(b)', type='number', skill='working backwards with a model', answer=36,
       q='Ravi spent 2/5 of his money on a game and 1/2 of the remainder on a book. He had $36 left. Use the model.\nHow much did the book cost? (Type the number of dollars.)',
       svg=ravi_bar(), check=lambda: int(ravi_story(36)[1]),
-      hint='The book is half of the remainder, and the other half is the $36 he had left.',
+      hint='Look at the model. The remainder is cut into two equal halves. What does each half stand for?',
       steps=['After the game, the remainder is split into two equal halves: the book and the money left.', 'The money left is $36, so the book also cost $36.', '(Check: the remainder is 3/5 of $120 = $72, and half of $72 is $36.)'],
       src=['How much did the book cost?']),
 
     D(id='6a', tier='core', no='6(a)', type='text', skill='testing every way', shown='5 1/2',
       accept=frac_accepts(F(11, 2), also=['4/1+3/2', '3/2+4/1', '4+3/2', '3/2+4']),
-      q='Use the digit cards 1, 2, 3, 4 once each in the boxes (fractions need not be proper).\nThe largest sum you can make. Type the sum as a fraction or a mixed number, like 5 1/2.',
+      q='Use the digit cards 1, 2, 3, 4 once each in the boxes (fractions need not be proper).\nThe largest sum you can make. Type the sum as a fraction or a mixed number, like 3 1/4.',
       svg=box_fractions([1, 2, 3, 4]), check=lambda: frac_text(max(digit_fraction_sums())[0]),
-      hint='A big sum needs a big fraction. Put the 4 on top and the 1 on the bottom. Then try the other two cards both ways.',
+      hint='A big sum needs a big fraction. Which card makes a fraction biggest on top, and which on the bottom? Then try the other two cards both ways.',
       steps=['Try them all: there are 24 ways to put the four cards in the boxes.', 'The biggest is 4/1 + 3/2 = 4 + 1 1/2 = 5 1/2.', '5 1/2 is the same as 11/2.'],
       src=['Use the digit cards', 'once each in the boxes (fractions need not be proper).', 'The largest sum:']),
     D(id='6b', tier='core', no='6(b)', type='text', skill='testing every way', shown='5/6',
@@ -275,12 +286,12 @@ ITEMS = [
             'Write every fraction as a difference of two neighbouring unit fractions. What cancels?',
             ['1/6 = 1/2 − 1/3, 1/12 = 1/3 − 1/4, 1/20 = 1/4 − 1/5, 1/30 = 1/5 − 1/6 and 1/42 = 1/6 − 1/7.', 'Add them: the middle parts cancel, leaving 1/2 − 1/7.', '1/2 − 1/7 = 7/14 − 2/14 = 5/14.'],
             ['Work out 1/6 + 1/12 + 1/20 + 1/30 + 1/42 without finding a common denominator for all five. (Hint: 1/6 = 1/2 − 1/3.)']),
-    D(id='B2', tier='challenge', no='B2', type='fields', skill='unit fractions', answer=[3, 12, 4, 6],
-      q='5 pizzas are shared equally among 12 children. Each child must get exactly 2 pieces, and each piece must be a unit fraction of a pizza (like 1/3 or 1/4). Each child gets 5/12. Find the two ways.\nIn each way write the smaller bottom number first, and write the way with the smaller first bottom number first.',
-      frame='Way 1:  5/12 = 1/{f1} + 1/{f2}.     Way 2:  5/12 = 1/{f3} + 1/{f4}.',
-      check=lambda: flat(sorted(unit_pairs_search(F(5, 12)))),
-      hint='Each child gets 5 ÷ 12 = 5/12 of a pizza. Write 5/12 as the sum of two different unit fractions: test 1/3, 1/4, ...',
-      steps=['Each child gets 5/12 of a pizza.', 'Try 1/3: 5/12 − 4/12 = 1/12. So 5/12 = 1/3 + 1/12: cut 4 pizzas into thirds (12 thirds) and 1 pizza into twelfths (12 twelfths).', 'Try 1/4: 5/12 − 3/12 = 2/12 = 1/6. So 5/12 = 1/4 + 1/6: cut 3 pizzas into quarters (12 quarters) and 2 pizzas into sixths (12 sixths).', 'Two ways: 1/3 + 1/12 and 1/4 + 1/6.'],
+    D(id='B2', tier='challenge', no='B2', type='text', skill='unit fractions', shown='1/3 + 1/12',
+      accept=B2_ACCEPT,
+      q='5 pizzas are shared equally among 12 children. Each child must get exactly 2 pieces, and each piece must be a unit fraction of a pizza (like 1/3 or 1/4). Each child gets 5/12 of a pizza. How can the pizzas be cut?\nShow one way by writing 5/12 as the sum of two unit fractions, like 1/a + 1/b with numbers in place of a and b.',
+      check=lambda: '1/%d+1/%d' % tuple(flat(sorted(unit_pairs_search(F(5, 12))))[:2]),
+      hint='Each child gets 5 ÷ 12 = 5/12 of a pizza. Try a unit fraction a little smaller than 5/12, such as 1/3 or 1/4. What is left over? Is it a unit fraction?',
+      steps=['Each child gets 5/12 of a pizza.', 'Try 1/3: 5/12 − 4/12 = 1/12. So 5/12 = 1/3 + 1/12: cut 4 pizzas into thirds (12 thirds) and 1 pizza into twelfths (12 twelfths).', 'Try 1/4: 5/12 − 3/12 = 2/12 = 1/6. So 5/12 = 1/4 + 1/6: cut 3 pizzas into quarters (12 quarters) and 2 pizzas into sixths (12 sixths).', 'There are two ways: 1/3 + 1/12 and 1/4 + 1/6. Either one is a good answer.'],
       src=['5 pizzas are shared equally among 12 children. Each child must get exactly 2 pieces, and each piece must be a unit fraction of a pizza (like 1/3 or 1/4). How can the pizzas be cut?']),
     D(id='B3a', tier='challenge', no='B3(a)', type='number', skill='fraction of a remainder', answer=54,
       q='A tank is full of water. Every hour, 1/3 of the water that is in the tank is let out. After 3 hours there are 16 litres left.\nHow much water was in the full tank? (Type the number of litres.)', check=lambda: tank()[0],

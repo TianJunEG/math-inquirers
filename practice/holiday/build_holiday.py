@@ -108,6 +108,8 @@ def make_item(src):
     out = dict(id=i, tier=it['tier'], type=t, no=it['no'], hint=it['hint'], steps=list(it['steps']), slips=[],
                tags=dict(strand=it.get('strand'), skill=it['skill']), src=it['src'])
     out['q'] = f'{it["no"]}. {it["q"]}'
+    if it.get('unit') is False:                   # a number item whose answer must be typed with no unit word
+        out['unit'] = False
     if it.get('svg'):
         out['svg'] = it['svg']
     if t == 'selfcheck':
@@ -146,6 +148,10 @@ def make_item(src):
             raise Fail(f'{i}: independent check {got} differs from the printed answer {it["answer"]}')
         out['frame'] = it['frame']
         out['fields'] = [dict(id=f'f{n + 1}', answer=int(a)) for n, a in enumerate(it['answer'])]
+        for f in out['fields']:           # a box printed after a clock hour ('6:{f1}'): the child may also type '6:20'
+            pm = re.search(r'(\d{1,2}:)\{' + f['id'] + r'\}', it['frame'])
+            if pm:
+                f['pre'] = pm.group(1)
         out['answer'] = [int(a) for a in it['answer']]
     elif t == 'number':
         if not same(it, got):
@@ -161,6 +167,8 @@ def make_item(src):
         if not same(it, got):
             raise Fail(f'{i}: independent check {got} differs from the printed answer {it["answer"]}')
         out.update(answer=[int(a) for a in it['answer']], ordered=bool(it.get('ordered')))
+        if it.get('grouped') is not None:         # default (sheet.js and mark.js): numbers of 5 or more digits expected => '12,500' / '12 500' may be typed with separators
+            out['grouped'] = bool(it['grouped'])
     elif t == 'text':
         if not same(it, got):
             raise Fail(f'{i}: independent check {got} differs from the printed answer')
@@ -216,17 +224,21 @@ def build(key, n):
                          'details.learn summary{font-weight:800;cursor:pointer;min-height:44px;display:flex;align-items:center}details.learn p{margin:.3rem 0}'
                          '.card .q{white-space:pre-line}.card svg,.fb svg{max-width:100%;height:auto}.fig{background:#fff;border-radius:12px;padding:4px}@media(max-width:480px){.card{padding:1rem .75rem 1.2rem}}')
     head = page[:page.index('</style>')] + css + '</style></head>'
+    head = head.replace('<meta charset="utf-8">', '<meta charset="utf-8"><meta name="robots" content="noindex,nofollow">', 1)
     head = head.replace('<title>Practice | Math Inquirers</title>', f'<title>Practice: {B.html.escape(meta["title"])} | Math Inquirers</title>')
     e = B.html.escape
     learn = (f'<details class="learn"><summary>About this page</summary><p>These are the questions of Lesson {n} in your printed holiday workbook '
              f'({e(meta["workbook_title"])}). You can do them here instead of writing on the page.</p>' +
              ''.join(f'<p>{e(x)}</p>' for x in meta.get('intro', [])) + '</details>')
+    # sending to the tutor is OFF unless the builder is run with MI_SUBMIT_ENDPOINT=<url>; then sheet.js shows the 'I checked / I got it / not yet' ticks and the footer says the answers are sent
+    ep = os.environ.get('MI_SUBMIT_ENDPOINT', '').strip()
+    submit_cfg = f'window.MI_SUBMIT={json.dumps({"endpoint": ep, "unit": "hol-" + lk})};' if ep else ''
     body = ('<body><main><h1 id="title">Practice</h1><p class="sub" id="sub"></p>' + learn +
             '<p class="sub" id="count" aria-live="polite"></p><nav class="nav" id="nav" aria-label="Choose a question"></nav>'
             '<section class="card" id="card"></section><div id="bar" class="barwrap"></div>'
             '<p class="foot">There is no score and no timer. Open any question in any order, skip what you like, then submit. '
-            'Your answers stay in this browser only: nothing is sent anywhere. A grown-up can read along.</p></main>'
-            f'<script>window.MI_LESSON={json.dumps(lk)};</script><script src="sheet.js"></script></body></html>')
+            '<span id="footpriv">Your answers stay on this device.</span> A grown-up can read along.</p></main>'
+            f'<script>window.MI_LESSON={json.dumps(lk)};{submit_cfg}</script><script src="sheet.js"></script></body></html>')
     open(os.path.join(dist, 'index.html'), 'w', encoding='utf-8').write(head + body)
     fonts = os.path.join(ROOT, 'website', 'dist')
     if os.path.isdir(os.path.join(fonts, 'fonts')):

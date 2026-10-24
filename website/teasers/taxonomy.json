@@ -17,10 +17,6 @@
   "6": "sequence.which_term"
  },
  "families": {
-  "ages": {
-   "name": "Ages",
-   "cite": "L1-L3 lesson 10 (Puzzle Day); MOE P1-P3 NA addition and subtraction word problems"
-  },
   "backwards": {
    "name": "Working backwards",
    "cite": "L1 lesson 5 and L2 lesson 5 (Working Backwards); MOE P1 NA 2.4 (inverse), p.31"
@@ -60,6 +56,10 @@
   "counting_range": {
    "name": "Counting a range",
    "cite": "MOE P1 NA 1.1-1.7 counting and ordering numbers to 100, p.31"
+  },
+  "counting_routes": {
+   "name": "Counting routes on a grid",
+   "cite": "L3 lesson 10; L4 lesson 10 (Mixed heuristics); L6 lesson 5 (Every Possible Way)"
   },
   "digit_cards": {
    "name": "Digit cards",
@@ -171,18 +171,6 @@
   }
  },
  "subs": {
-  "ages.constant_gap": {
-   "name": "the age gap stays the same",
-   "levels": [
-    1,
-    2,
-    3,
-    4
-   ],
-   "kinds": [
-    "age_gap"
-   ]
-  },
   "backwards.two_step": {
    "name": "undo two steps (for example double then add)",
    "levels": [
@@ -239,6 +227,17 @@
     "part_whole"
    ]
   },
+  "calendar.nth_weekday_date": {
+   "name": "date of the nth given weekday of a month",
+   "levels": [
+    2,
+    3,
+    4
+   ],
+   "kinds": [
+    "calendar_nth"
+   ]
+  },
   "calendar.weekday_after": {
    "name": "which day of the week after some days",
    "levels": [
@@ -248,6 +247,17 @@
    ],
    "kinds": [
     "weekday"
+   ]
+  },
+  "coins.coin_total": {
+   "name": "total value of a few coins of two kinds",
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "kinds": [
+    "dot"
    ]
   },
   "coins.coin_ways": {
@@ -410,6 +420,24 @@
     ]
    }
   },
+  "counting_routes.grid_routes": {
+   "name": "routes across a grid moving only right and down",
+   "levels": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "lattice"
+   ],
+   "where": {
+    "blocked": [
+     []
+    ]
+   }
+  },
   "digit_cards.largest_two_digit": {
    "name": "largest 2-digit number from some of the cards",
    "levels": [
@@ -468,6 +496,39 @@
    "where": {
     "pred": [
      "contains"
+    ]
+   }
+  },
+  "digit_puzzles.digit_clues": {
+   "name": "a secret number from clues about its digits",
+   "levels": [
+    2,
+    3,
+    4
+   ],
+   "kinds": [
+    "scan"
+   ],
+   "where": {
+    "pred": [
+     "digit_eq"
+    ]
+   }
+  },
+  "digit_puzzles.digit_compare_count": {
+   "name": "how many numbers have one digit smaller than another",
+   "levels": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "scan"
+   ],
+   "where": {
+    "pred": [
+     "digit_less"
     ]
    }
   },
@@ -553,11 +614,62 @@
     ]
    }
   },
+  "division.leftover": {
+   "name": "what is left over after sharing equally",
+   "levels": [
+    2,
+    3,
+    4
+   ],
+   "kinds": [
+    "share"
+   ],
+   "where": {
+    "ask": [
+     "left"
+    ]
+   }
+  },
+  "fractions.compare_unit": {
+   "name": "two fractions of the same amount: find the difference",
+   "levels": [
+    2,
+    3,
+    4
+   ],
+   "kinds": [
+    "fraction_diff"
+   ]
+  },
   "fractions.fraction_of_remainder": {
    "name": "FIXED PUZZLE (Ages 10-12 page): a fraction, then a fraction of what is left",
    "levels": [],
    "kinds": [
     "fraction_seq"
+   ]
+  },
+  "fractions.of_set": {
+   "name": "a unit fraction or simple fraction of a set",
+   "levels": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "fraction_of"
+   ]
+  },
+  "fractions.whole_from_part": {
+   "name": "the amount left is given: find the whole",
+   "levels": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "fraction_whole"
    ]
   },
   "graphs.pictograph_scale": {
@@ -647,6 +759,18 @@
     "match_assign"
    ]
   },
+  "logic_order.order_four": {
+   "name": "order four people from clues, find the one in a given place",
+   "levels": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "order_logic"
+   ]
+  },
   "logic_order.order_three": {
    "name": "order three people from clues, find the extreme",
    "levels": [
@@ -667,6 +791,17 @@
    ],
    "kinds": [
     "span"
+   ]
+  },
+  "measurement.unit_convert": {
+   "name": "change metres and centimetres (or kilograms and grams) to the smaller unit",
+   "levels": [
+    2,
+    3,
+    4
+   ],
+   "kinds": [
+    "unit_convert"
    ]
   },
   "missing_number.equal_sides": {
@@ -733,6 +868,30 @@
     ]
    }
   },
+  "money.unitary_price": {
+   "name": "price of one, then price of many (unitary method)",
+   "levels": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "unit_price"
+   ]
+  },
+  "moves.climb_and_slip": {
+   "name": "climbs up by day and slips back by night: on which day does it reach the top",
+   "levels": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "climb_slip"
+   ]
+  },
   "moves.lift_final": {
    "name": "where do you end after ups and downs",
    "levels": [
@@ -746,6 +905,24 @@
    "where": {
     "ask": [
      "final"
+    ]
+   }
+  },
+  "moves.max_reach": {
+   "name": "highest (or lowest) point reached on a series of ups and downs",
+   "levels": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "moves"
+   ],
+   "where": {
+    "ask": [
+     "max",
+     "min"
     ]
    }
   },
@@ -776,6 +953,17 @@
    ],
    "kinds": [
     "groups_plus"
+   ]
+  },
+  "multiplication.two_groups_total": {
+   "name": "two kinds of groups each with a different number of legs, wheels or corners",
+   "levels": [
+    2,
+    3,
+    4
+   ],
+   "kinds": [
+    "dot"
    ]
   },
   "number_grid.number_pyramid": {
@@ -822,6 +1010,23 @@
     "parity"
    ]
   },
+  "perimeter_area.area_cutout": {
+   "name": "area of a rectangle with a corner cut out",
+   "levels": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "cells"
+   ],
+   "where": {
+    "ask": [
+     "area"
+    ]
+   }
+  },
   "perimeter_area.perimeter_rectangle": {
    "name": "distance round a rectangle",
    "levels": [
@@ -866,7 +1071,8 @@
    "name": "bundles of ten and loose ones make a number",
    "levels": [
     1,
-    2
+    2,
+    3
    ],
    "kinds": [
     "regroup"
@@ -928,6 +1134,18 @@
     "term_index"
    ]
   },
+  "series_sum.arithmetic_series": {
+   "name": "sum of an arithmetic list by pairing first and last",
+   "levels": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "sum_range"
+   ]
+  },
   "series_sum.one_to_n": {
    "name": "add the numbers from 1 up to n (pair up the ends)",
    "levels": [
@@ -948,6 +1166,17 @@
    ],
    "kinds": [
     "dot"
+   ]
+  },
+  "shapes.solid_parts": {
+   "name": "faces, edges or vertices of solid shapes",
+   "levels": [
+    2,
+    3,
+    4
+   ],
+   "kinds": [
+    "solid_parts"
    ]
   },
   "sorting.overlap_both": {
@@ -1005,6 +1234,17 @@
    ],
    "kinds": [
     "elapsed"
+   ]
+  },
+  "time.hours_to_minutes": {
+   "name": "change hours and minutes to minutes",
+   "levels": [
+    2,
+    3,
+    4
+   ],
+   "kinds": [
+    "time_convert"
    ]
   },
   "word_problems.chain_more_than": {

@@ -18,6 +18,11 @@ def _j(xs):
     return ', '.join(str(x) for x in xs)
 
 
+def _and(xs):
+    xs = [str(x) for x in xs]
+    return xs[0] if len(xs) == 1 else ', '.join(xs[:-1]) + ' and ' + xs[-1]
+
+
 # ================================================================== Level 1 structures
 @kind
 def doubling(start, times):
@@ -135,8 +140,8 @@ def parity(op, parts):
 
 
 @kind
-def regroup(tens, ones, hundreds=0):
-    return hundreds * 100 + tens * 10 + ones, {'t': tens * 10, 'o': ones}
+def regroup(tens, ones, hundreds=0, thousands=0):
+    return thousands * 1000 + hundreds * 100 + tens * 10 + ones, {'th': thousands * 1000, 'h': hundreds * 100, 't': tens * 10, 'o': ones}
 
 
 @kind
@@ -187,7 +192,7 @@ def pyramid(bottom, ask, top=None, hide=None):
     n = len(bottom)
     coef = [math.comb(n - 1, i) for i in range(n)]
     if ask == 'top':
-        return sum(c * b for c, b in zip(coef, bottom)), {'row2': _j(bottom[i] + bottom[i + 1] for i in range(n - 1))}
+        return sum(c * b for c, b in zip(coef, bottom)), {'row2': _and([bottom[i] + bottom[i + 1] for i in range(n - 1)])}
     known = sum(c * b for i, (c, b) in enumerate(zip(coef, bottom)) if i != hide)
     v = Fr(top - known, coef[hide])
     assert v == int(v)
@@ -228,6 +233,75 @@ def _eval_eq(s):
     s = re.sub(r'\d+', lambda m: str(int(m.group(0))), s)      # '05' is not a valid literal
     lhs, rhs = s.split('=')
     return eval(lhs.replace('x', '*')) == eval(rhs.replace('x', '*'))
+
+
+
+# ================================================================== Level 2 structures
+@kind
+def unit_price(buy, cost, want):
+    one = Fr(cost, buy)
+    return Fr(want * cost, buy) / 100, {'one_c': one, 'one': one / 100}
+
+
+@kind
+def time_convert(h, m):
+    return h * 60 + m, {'hm': h * 60}
+
+
+SOLIDS = {'cube': (6, 12, 8), 'cuboid': (6, 12, 8), 'square pyramid': (5, 8, 5), 'triangular prism': (5, 9, 6), 'triangular pyramid': (4, 6, 4)}
+
+
+@kind
+def solid_parts(shapes, part):
+    i = {'faces': 0, 'edges': 1, 'vertices': 2}[part]
+    vals = [SOLIDS[s][i] for s in shapes]
+    return sum(vals), {'each': ' and '.join('a %s has %d %s' % (s, v, part) for s, v in zip(shapes, vals))}
+
+
+@kind
+def unit_convert(factor, big, small):
+    return big * factor + small, {'bigpart': big * factor}
+
+
+@kind
+def fraction_diff(n, f1, f2):
+    a, b = Fr(n) * Fr(*f1), Fr(n) * Fr(*f2)
+    assert a == int(a) and b == int(b)
+    return int(abs(a - b)), {'a': int(a), 'b': int(b)}
+
+
+# ================================================================== Level 3 structures
+@kind
+def elapsed_overnight(h1, m1, h2, m2):
+    a, b = h1 * 60 + m1, h2 * 60 + m2
+    d = b - a if b > a else b - a + 24 * 60
+    return d, {'to_midnight': 24 * 60 - a, 'after': b}
+
+
+@kind
+def times_as_many(k, ask, total=None, diff=None):
+    """One amount is k times the other.  total = both together, diff = how much bigger the large one is.  ask: small / large."""
+    if total is not None:
+        assert total % (k + 1) == 0
+        small = total // (k + 1)
+    else:
+        assert diff % (k - 1) == 0
+        small = diff // (k - 1)
+    return (small if ask == 'small' else small * k), {'small': small, 'large': small * k, 'units': k + 1 if total is not None else k - 1}
+
+
+@kind
+def equiv_fraction(n1, d1, d2):
+    assert (n1 * d2) % d1 == 0
+    return n1 * d2 // d1, {'scale': Fr(d2, d1)}
+
+
+@kind
+def quarter_turns(a, b):
+    """Right angles turned by a clock hand moving clockwise from number a to number b on the clock face."""
+    steps = (b - a) % 12
+    assert steps % 3 == 0
+    return steps // 3, {'steps': steps}
 
 
 SOLVE_NAMES = list(SOLVE)

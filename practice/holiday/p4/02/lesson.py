@@ -42,7 +42,7 @@ Q1_TIP = 'Round each number. Draw a number line if it helps.'
 ITEMS = [
     # ================= Start here
     D(id='1a', tier='core', no='1(a)', type='fields', skill='rounding to 10, 100 and 1000', frame='47 285:  nearest 10 {f1}   nearest 100 {f2}   nearest 1000 {f3}', answer=[47290, 47300, 47000],
-      check=lambda: r3(47285), q='Round each number. Draw a number line if it helps. Round 47 285 to the nearest 10, the nearest 100 and the nearest 1000.',
+      check=lambda: r3(47285), q='Round each number. Picture a number line if it helps. Round 47 285 to the nearest 10, the nearest 100 and the nearest 1000.',
       hint='Look at the digit just to the right of the place you are rounding to. 5 or more rounds up.',
       steps=['Nearest 10: the ones digit is 5, so round up: 47 290.', 'Nearest 100: the tens digit is 8, so round up: 47 300.', 'Nearest 1000: the hundreds digit is 2, so round down: 47 000.'],
       src=['Round each number. Draw a number line if it helps.', '47 285']),
@@ -119,7 +119,7 @@ ITEMS = [
       check=lambda: [n for n in five_digit_numbers() if digit_sum(n) == 2],
       q='I am a 5-digit number. My digits add up to 2. Find ALL the numbers I could be. List them in order, smallest first, with commas between them. '
         'Start here: the digits are two 1s (and zeros) or one 2 (and zeros). The first digit cannot be 0. Write 20 000 and 10 001, then move the digits around.',
-      hint='Keep the first digit 1 and move the other 1 along: 10 001, 10 010, 10 100, 11 000. Then 20 000.',
+      hint='Two 1s, or one 2? With two 1s the first digit has to be 1. Where can the other 1 go? Do not forget the 2 case.',
       steps=['Two 1s: the first digit must be 1, and the other 1 can be in the thousands, hundreds, tens or ones place: 11 000, 10 100, 10 010, 10 001.', 'One 2: 20 000.', 'In order: 10 001, 10 010, 10 100, 11 000, 20 000.'],
       src=['I am a 5-digit number. My digits add up to 2. Find ALL the numbers I could be. List them in order.', 'the digits are two 1s (and zeros) or one 2 (and zeros). The first digit cannot be 0. Write 20 000 and 10 001, then move the digits around.']),
     D(id='4b-count', tier='core', no='4(b) how many', type='number', skill='number riddles', answer=5, check=lambda: len([n for n in five_digit_numbers() if digit_sum(n) == 2]),
@@ -215,7 +215,7 @@ ITEMS = [
       steps=['First digit 1: the other digits add up to 2: one 2 in one of 4 places (4 ways) or two 1s in 2 of 4 places (6 ways): 10.', 'First digit 2: one 1 in one of 4 places: 4 ways.', 'First digit 3: 30 000, 1 way.', '10 + 4 + 1 = 15.'],
       src=['How many 5-digit numbers have digits that add up to 3?']),
     D(id='G6', tier='challenge', no='Go further 6', type='selfcheck', open=True, skill='making up a riddle',
-      q='Make up your own number riddle about a 5-digit number. Use a rounding clue, a clue about the digits and an odd-or-even clue, so that exactly ONE number fits. Check your riddle: list every number that fits the rounding clue, then cross out the ones that break the other clues. Swap riddles with a partner.',
+      q='Make up your own number riddle about a 5-digit number. Use a rounding clue, a clue about the digits and an odd-or-even clue, so that exactly ONE number fits. Check your riddle: list every number that fits the rounding clue, then take away the ones that break the other clues. Swap riddles with a partner.',
       hint='Start with the number, then write clues that only it fits.', steps=['Riddles will vary. Check that the rounding clue gives the right range and that only one number is left.', 'Model riddle: "Rounded to the nearest thousand I am 30 000. All my digits are different. My digits add up to 12. I am odd." The only number is 30 261.'],
       src=['Make up your own number riddle about a 5-digit number.']),
     D(id='G7', tier='challenge', no='Go further 7', type='fields', skill='palindromes', frame='The next palindrome: {f1}.  That is {f2} km more.', answer=[40004, 11],

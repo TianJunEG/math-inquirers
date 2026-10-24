@@ -56,6 +56,27 @@ CLUES = ('Clue 1. I am a 7-digit number. My digits are all different.\n'
          'Clue 6. My digits add up to 32.')
 
 
+def riddle_card():
+    """The six clues once, as a card (shown above each of 3(a), 3(b) and 3(c))."""
+    lines = [('Clue 1.', ['I am a 7-digit number.', 'My digits are all different.']),
+             ('Clue 2.', ['Rounded to the nearest hundred thousand,', 'I am 7 300 000.']),
+             ('Clue 3.', ['My ten thousands digit is 3 more than', 'my hundred thousands digit.']),
+             ('Clue 4.', ['My thousands digit = my ten thousands', 'digit - my hundred thousands digit.']),
+             ('Clue 5.', ['My hundreds digit is twice my thousands', 'digit. My tens digit is 0.']),
+             ('Clue 6.', ['My digits add up to 32.'])]
+    y = 30
+    body = ''
+    for h, ls in lines:
+        body += T(14, y, h, 15, 'start', 800, TEAL)
+        for l in ls:
+            body += T(78, y, l.replace('digit - my', 'digit \u2212 my'), 15, 'start', 700)
+            y += 21
+        y += 7
+    H = y
+    body = Re(3, 3, 394, H - 8, PALE, NAVY, 2.2, 10) + body
+    return svg(400, H, body, 'The digit riddle. ' + ' '.join(h + ' ' + ' '.join(ls) for h, ls in lines))
+
+
 def start_with_clue2():
     """For each start allowed by clue 2 (7 2 or 7 3): the ten thousands digit from clue 3, the thousands digit from clue 4, and whether all digits are different."""
     res = {}
@@ -191,7 +212,7 @@ ITEMS = [
       steps=['Five million is 5 000 000. Three hundred and eight thousand is 308 000. Forty is 40.', 'Put the groups together: 5 | 308 | 040.', 'The numeral is 5 308 040.'],
       src=['Place value. Read big numbers in groups of three from the right', 'Numerals for five million, three hundred and eight thousand and forty']),
     D(id='1b', tier='core', no='1(b)', type='fields', skill='place value to 10 million', answer=[400000, 8],
-      q='Place value. In 6 482 315, say what the digit 4 stands for, and which digit is in the ten thousands place.',
+      q='Place value. In 6 482 315, say what the digit 4 stands for (type its value as a number), and which digit is in the ten thousands place.',
       frame='In 6 482 315, the digit 4 stands for {f1}.  The ten thousands digit is {f2}.',
       check=lambda: [int('4') * 10 ** (len('6482315') - 1 - '6482315'.index('4')), int('6482315'[-5])],
       hint='From the right the places are ones, tens, hundreds, thousands, ten thousands, hundred thousands, millions. Which place is the 4 in?',
@@ -217,20 +238,20 @@ ITEMS = [
       src=['Use ALL seven digit cards, each once, to make a 7-digit number (it cannot start with 0).', 'Smallest EVEN:']),
 
     D(id='3a', tier='core', no='3(a)', type='fields', skill='digit riddles', answer=[5, 6],
-      q='Digit riddle. Use the clues one at a time. Then check every clue.\n' + CLUES + '\nClue 2 says I start 7 2 … or 7 3 … Clue 3 gives the next digit. Try both.',
+      q='Digit riddle. Use the clues in the card, one at a time. Then check every clue.\nClue 2 says I start 7 2 … or 7 3 … Clue 3 gives the next digit. Try both.', svg=riddle_card(),
       frame='Try both:  7 2 {f1} …   and   7 3 {f2} …',
       check=lambda: [start_with_clue2()[2][0], start_with_clue2()[3][0]],
       hint='Clue 3: the ten thousands digit is 3 more than the hundred thousands digit. If the hundred thousands digit is 2, what is 2 + 3?',
       steps=['A number that rounds to 7 300 000 is between 7 250 000 and 7 349 999, so it starts 7 2 (with a big digit next) or 7 3 (with a small digit next).', 'Clue 3: 3 more than the hundred thousands digit. After 7 2 comes 2 + 3 = 5, so 7 2 5 …', 'After 7 3 comes 3 + 3 = 6, so 7 3 6 …'],
       src=['Digit riddle. Use the clues one at a time. Then check every clue.', 'Clue 2: I start 7 2 … or 7 3 … Clue 3 gives the next digit.  Try both']),
     D(id='3b', tier='core', no='3(b)', type='number', skill='digit riddles', answer=3,
-      q='Digit riddle. Use the clues one at a time. Then check every clue.\n' + CLUES + '\nClue 4 gives the next digit. Check Clue 1 (all different): which start breaks it? 7 __ is wrong. Type the digit that goes in the blank.',
+      q='Digit riddle. Use the clues in the card, one at a time. Then check every clue.\nClue 4 gives the next digit. Check Clue 1 (all different): which start breaks it? 7 __ is wrong. Type the digit that goes in the blank.', svg=riddle_card(),
       check=lambda: [h for h, (t, th, ok) in start_with_clue2().items() if not ok][0],
       hint='Work out the thousands digit for 7 2 5 … and for 7 3 6 … Does any digit appear twice?',
       steps=['Clue 4: thousands digit = ten thousands digit − hundred thousands digit.', '7 2 5 …: 5 − 2 = 3, so 7 2 5 3 …, and all the digits so far are different.', '7 3 6 …: 6 − 3 = 3, so 7 3 6 3 … The digit 3 is used twice, which breaks Clue 1.', 'So 7 3 is wrong. The answer is 3.'],
       src=['Digit riddle. Use the clues one at a time. Then check every clue.', 'Clue 4 gives the next digit. Check Clue 1 (all different): which start breaks it?']),
     D(id='3c', tier='core', no='3(c)', type='number', skill='digit riddles', answer=7253609,
-      q='Digit riddle. Use the clues one at a time. Then check every clue.\n' + CLUES + '\nUse Clues 5 and 6 to finish. I am:',
+      q='Digit riddle. Use the clues in the card, one at a time. Then check every clue.\nUse Clues 5 and 6 to finish. I am:', svg=riddle_card(),
       check=lambda: (lambda r: r[0] if len(r) == 1 else None)(riddle_answers()),
       hint='So far you have 7 2 5 3. Clue 5 gives the hundreds and tens digits. Clue 6: add the digits you have and see what is missing from 32.',
       steps=['So far: 7 2 5 3 …', 'Clue 5: the hundreds digit is twice the thousands digit, 2 × 3 = 6, and the tens digit is 0. Now 7 2 5 3 6 0 …', 'Clue 6: the digits add up to 32. 7 + 2 + 5 + 3 + 6 + 0 = 23, so the ones digit is 32 − 23 = 9.', 'Check every clue: 7 253 609 has seven different digits, rounds to 7 300 000, 5 = 2 + 3, 3 = 5 − 2, 6 = 2 × 3, tens 0, digits add to 32.'],
@@ -256,7 +277,7 @@ ITEMS = [
 
     D(id='6a', tier='core', no='6(a)', type='text', skill='rounding to the nearest thousand', shown='2 499 500, 2 500 000, 2 500 499',
       accept=numlist_accepts([2499500, 2500000, 2500499]),
-      q='A 7-digit number is rounded to the nearest thousand. Which of these numbers become 2 500 000?\nNumbers: 2 499 499, 2 499 500, 2 500 000, 2 500 499, 2 500 500\nType each one that rounds to 2 500 000, with a comma between (for example 2499500, 2500000).',
+      q='A 7-digit number is rounded to the nearest thousand. Which of these numbers become 2 500 000?\nNumbers: 2 499 499, 2 499 500, 2 500 000, 2 500 499, 2 500 500\nType each one that rounds to 2 500 000, with a comma between (like 1111, 2222).',
       svg=round_line(),
       check=lambda: ','.join(str(x) for x in [2499499, 2499500, 2500000, 2500499, 2500500] if round_nearest(x, 1000) == 2500000),
       hint='Look at the hundreds digit. 5 or more rounds the thousands UP, 4 or less leaves them.',
