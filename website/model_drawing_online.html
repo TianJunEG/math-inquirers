@@ -1,100 +1,159 @@
 <title>Model Drawing Online</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito+Sans:wght@400;600;800&display=swap">
 <style>
-/* Layout: one question at a time. Tabs on top, then the question, a model that builds as steps are solved, and a column of steps. */
+/* Layout: matches the Math Inquirers site. Squared-paper page, pill nav, navy hero with a yellow offset shadow, chunky bordered cards with offset shadows, 1120px column. */
 :root{
-  --bg:#FFFFFF; --fg:#1B2A49; --muted:#56637F; --rule:#1B2A49; --line:#C9D3E3;
-  --panel:#F2F6FA; --teal:#1F7A6F; --red:#C93D3D; --yellow:#FFC93C; --ok:#1F7A6F; --okbg:#E3F3EF; --nobg:#FBEAEA;
-  --field:#FFFFFF;
-  --head:'Fredoka',ui-rounded,'Arial Rounded MT Bold',Arial,sans-serif;
-  --body:'Nunito Sans',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  --navy:#1B2A49; --cream:#FFF9EC; --yellow:#FFC93C; --teal:#1F7A6F; --red:#D64545; --coral:#FF7A59; --green:#3DBE7A;
+  --bg:#F6F9FD; --grid:#E2ECF6; --card:#FFFFFF; --fg:#1B2A49; --muted:#56637A; --ink:#1B2A49; --line:#CBD8E6;
+  --sky:#D6E9FB; --soft:#FFF0C4; --peach:#FFE2D6; --mint:#D3F1E4; --lilac:#E6DFFB;
+  --tealsoft:#DCEFEA; --redsoft:#F8DEDE; --greysoft:#E3EAF2; --btn:#1B2A49; --btnfg:#FFFFFF; --hero:#1B2A49; --herofg:#FFF9EC; --herosub:#C9D3E6;
+  --head:'Fredoka','Nunito Sans',system-ui,sans-serif; --body:'Nunito Sans',system-ui,sans-serif;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#121A2B; --fg:#E9EEF7; --muted:#A9B4C9; --rule:#E9EEF7; --line:#34425E;
-  --panel:#1B2740; --teal:#5CC4B4; --red:#F08A8A; --yellow:#FFC93C; --ok:#5CC4B4; --okbg:#173A36; --nobg:#3D2228; --field:#18233A; color-scheme:dark}}
+  --bg:#0F1626; --grid:#18233A; --card:#18233A; --fg:#EEF2F8; --muted:#A6B1C6; --ink:#8EA2C8; --line:#2C3A55;
+  --sky:#1D3150; --soft:#3A3217; --peach:#41271F; --mint:#173A2F; --lilac:#2B2650;
+  --tealsoft:#173A3A; --redsoft:#47242A; --greysoft:#253149; --btn:#FFC93C; --btnfg:#1B2A49; --teal:#5FC5B5; --red:#F07B7B; --hero:#0A1120; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#121A2B; --fg:#E9EEF7; --muted:#A9B4C9; --rule:#E9EEF7; --line:#34425E;
-  --panel:#1B2740; --teal:#5CC4B4; --red:#F08A8A; --yellow:#FFC93C; --ok:#5CC4B4; --okbg:#173A36; --nobg:#3D2228; --field:#18233A; color-scheme:dark}
+  --bg:#0F1626; --grid:#18233A; --card:#18233A; --fg:#EEF2F8; --muted:#A6B1C6; --ink:#8EA2C8; --line:#2C3A55;
+  --sky:#1D3150; --soft:#3A3217; --peach:#41271F; --mint:#173A2F; --lilac:#2B2650;
+  --tealsoft:#173A3A; --redsoft:#47242A; --greysoft:#253149; --btn:#FFC93C; --btnfg:#1B2A49; --teal:#5FC5B5; --red:#F07B7B; --hero:#0A1120; color-scheme:dark}
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.5;margin:0}
-.wrap{max-width:980px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 48px}
-h1,h2,h3{font-family:var(--head);font-weight:600;margin:0;text-wrap:balance}
-.kick{font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
-.top{display:grid;gap:10px;border-bottom:3px solid var(--rule);padding-bottom:18px}
-.top h1{font-size:clamp(34px,6vw,52px);line-height:1}
-.top h1 span{color:var(--teal)}
-.lede{color:var(--muted);max-width:62ch;margin:0}
-.tabs{display:grid;gap:12px;margin:18px 0 6px}
-.grp{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.gl{font:800 12px var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);width:100%}
-.tab{font:600 16px var(--head);background:transparent;color:var(--fg);border:2px solid var(--line);border-radius:10px;padding:8px 14px;cursor:pointer;display:flex;gap:8px;align-items:baseline}
-.tab small{font:700 12px var(--body);color:var(--muted)}
-.tab[aria-selected="true"]{border-color:var(--teal);background:var(--teal);color:var(--bg)}
-.tab[aria-selected="true"] small{color:var(--bg)}
+body{background-color:var(--bg);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:28px 28px;color:var(--fg);font:16px/1.55 var(--body);margin:0;padding-block:0;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1120px;margin:0 auto}
+h1,h2,h3{font-family:var(--head);font-weight:600;margin:0;text-wrap:balance;line-height:1.08}
+h1{font-size:clamp(36px,6vw,64px);letter-spacing:-.01em} h2{font-size:clamp(26px,3.4vw,38px)} h3{font-size:21px}
+p{margin:0}
+a{color:inherit}
+mark{background:linear-gradient(transparent 58%,var(--yellow) 58%,var(--yellow) 92%,transparent 92%);color:inherit;padding:0 .08em}
+.hero mark{background:linear-gradient(transparent 60%,var(--coral) 60%,var(--coral) 92%,transparent 92%)}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding:18px 0 12px}
+.brand{font-family:var(--head);font-size:23px;font-weight:600;display:flex;align-items:center;gap:10px;color:var(--fg);text-decoration:none}
+.brand i{width:40px;height:40px;border-radius:12px;background:var(--yellow);color:#1B2A49;display:grid;place-items:center;font-style:normal;font-size:22px;border:2.5px solid #1B2A49;box-shadow:3px 3px 0 #1B2A49;transform:rotate(-6deg)}
+.nav{display:flex;flex-wrap:wrap;gap:2px;margin-left:auto;align-items:center;background:var(--card);border:2px solid var(--ink);border-radius:999px;padding:4px}
+.nl{font:800 14.5px var(--body);color:var(--fg);border-radius:999px;padding:8px 13px;text-decoration:none}
+.nl:hover{background:var(--sky)}
+.nl[aria-current="page"]{background:var(--fg);color:var(--bg)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--coral);outline-offset:2px}
+.btn{font:800 15.5px var(--body);background:var(--btn);color:var(--btnfg);border:2.5px solid var(--btn);border-radius:14px;padding:11px 20px;cursor:pointer;display:inline-block;text-decoration:none;box-shadow:0 4px 0 rgba(0,0,0,.28);transition:transform .08s,box-shadow .08s}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 rgba(0,0,0,.28)}
+.btn.alt{background:var(--card);color:var(--fg);border-color:var(--ink);box-shadow:0 4px 0 var(--ink)}
+.btn.sm{padding:6px 13px;font-size:13.5px;border-radius:11px;box-shadow:0 3px 0 rgba(0,0,0,.25)}
+.btn.alt.sm{box-shadow:0 3px 0 var(--ink)}
+.btn.yel{background:var(--yellow);color:#1B2A49;border-color:#1B2A49;box-shadow:0 4px 0 #1B2A49}
+.btn.teal{background:var(--teal);border-color:var(--teal);color:#fff}
+.btn.ghost{background:transparent;color:var(--herofg);border-color:var(--herofg);box-shadow:0 4px 0 rgba(255,255,255,.35)}
+main{padding:22px 0 50px;display:grid;gap:48px}
+.sec{display:grid;gap:14px;align-content:start;min-width:0}
+.shead{display:grid;gap:10px;max-width:720px}
+.lead{font-size:18.5px;color:var(--muted);max-width:54ch}
+.eyebrow{justify-self:start;font:800 12.5px var(--body);letter-spacing:.08em;text-transform:uppercase;background:var(--card);color:var(--fg);border:2px solid var(--ink);border-radius:999px;padding:4px 12px}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.muted{color:var(--muted)} .small{font-size:13.5px}
+.hero{background:var(--hero);color:var(--herofg);border-radius:32px;padding:clamp(26px,4vw,52px);display:grid;grid-template-columns:1.1fr 1fr;gap:26px;align-items:center;position:relative;overflow:hidden;border:2.5px solid #1B2A49;box-shadow:8px 8px 0 var(--yellow)}
+.hero .lead{color:var(--herosub)}
+.hero .eyebrow{background:var(--yellow);color:#1B2A49;border-color:#1B2A49}
+.slogan{font-family:var(--head);font-size:24px;color:var(--yellow)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.chip{font:800 13px var(--body);border-radius:999px;padding:5px 12px;background:rgba(255,255,255,.1);color:var(--herofg);border:1.5px solid rgba(255,255,255,.35)}
+.art{width:100%;height:auto;max-width:480px;justify-self:center}
+.art text{font-family:var(--head)}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.fact{border:2.5px solid var(--ink);border-radius:20px;padding:16px 18px;box-shadow:5px 5px 0 var(--ink);color:#1B2A49}
+.fact:nth-child(1){background:#FFF0C4;transform:rotate(-1.5deg)} .fact:nth-child(2){background:#D6E9FB;transform:rotate(1deg)} .fact:nth-child(3){background:#D3F1E4;transform:rotate(-.8deg)} .fact:nth-child(4){background:#FFE2D6;transform:rotate(1.4deg)}
+.fact .v{font:600 30px var(--head)}
+.fact .l{font-size:13.5px;font-weight:700;opacity:.8}
+.rules4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.rule{background:var(--card);border:2.5px solid var(--ink);border-radius:22px;padding:18px;display:grid;gap:8px;align-content:start;box-shadow:5px 5px 0 var(--ink)}
+.rule b{width:44px;height:44px;border-radius:50%;background:var(--yellow);color:#1B2A49;display:grid;place-items:center;font:600 22px var(--head);border:2.5px solid #1B2A49}
+.rule:nth-child(2) b{background:#7CC8F5} .rule:nth-child(3) b{background:var(--green)} .rule:nth-child(4) b{background:var(--coral)}
+.tile{border:2.5px solid var(--ink);border-radius:24px;padding:22px;display:grid;gap:10px;align-content:start;box-shadow:6px 6px 0 var(--ink);background:var(--card);color:var(--fg)}
+.tile.yel{background:var(--soft)} .tile.sky{background:var(--sky)} .tile.mint{background:var(--mint)} .tile.peach{background:var(--peach)}
+.tile .tag{justify-self:start;font:800 12px var(--body);text-transform:uppercase;letter-spacing:.08em;background:var(--card);border:2px solid var(--ink);border-radius:999px;padding:3px 10px}
+.tile .price{font:600 30px var(--head)}
+.tile .price s{font-size:18px;color:var(--muted);margin-left:8px}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.msg{padding:10px 14px;border-radius:14px;font-weight:700;font-size:14.5px}
+.msg.ok{background:var(--tealsoft);color:var(--teal)} .msg.no{background:var(--redsoft);color:var(--red)}
+footer{border-top:2.5px solid var(--ink);padding:26px 0 44px;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:22px;font-size:14px;color:var(--muted)}
+footer b{color:var(--fg);font-family:var(--head);font-size:17px;font-weight:600}
+@media (max-width:900px){.facts,.rules4{grid-template-columns:1fr 1fr}}
+@media (max-width:820px){.hero,footer{grid-template-columns:1fr}.three{grid-template-columns:1fr}.nav{margin-left:0;border-radius:18px}.hero{box-shadow:5px 5px 0 var(--yellow)}}
+@media (max-width:520px){.facts,.rules4{grid-template-columns:1fr}.fact{transform:none!important}}
+
+/* practice page */
+.tabs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:16px 22px;align-items:start}
+.grp{display:grid;gap:8px}
+.gl{justify-self:start;font:800 12.5px var(--body);letter-spacing:.06em;text-transform:uppercase;background:var(--card);color:var(--fg);border:2px solid var(--ink);border-radius:999px;padding:4px 12px}
+.gt{display:flex;flex-wrap:wrap;gap:10px}
+.tab{font:800 14px var(--body);color:var(--fg);background:var(--card);border:2.5px solid var(--ink);border-radius:12px;padding:8px 12px;min-height:44px;box-shadow:0 3px 0 var(--ink);cursor:pointer;display:flex;gap:8px;align-items:center;touch-action:manipulation}
+.tab small{font:700 12.5px var(--body);color:var(--muted)}
+.tab.done{background:var(--mint)}
 .tab.done small:after{content:" \2713"}
-.tab:focus-visible,.btn:focus-visible,.ch:focus-visible,input:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
-.how{font-size:14px;color:var(--muted);margin:0 0 6px}
-.hd{display:flex;align-items:flex-end;gap:14px;border-bottom:3px solid var(--rule);padding-bottom:10px;margin:26px 0 16px}
-.big{font:600 64px/0.8 var(--head);color:var(--teal);font-variant-numeric:tabular-nums}
-.tp{color:var(--muted);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
-.hd h2{font-size:28px;line-height:1.1}
-.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}
-@media (max-width:760px){.cols{grid-template-columns:1fr}.big{font-size:52px}}
-.problem{font-size:18px;font-weight:600;margin:0 0 14px}
-.board{background:var(--panel);border-top:5px solid var(--teal);padding:14px 15px;position:sticky;top:8px}
-.board h3{font-size:17px;color:var(--teal);margin-bottom:6px}
-.board svg{width:100%;height:auto;display:block}
-.empty{color:var(--muted);font-size:14.5px;margin:0}
-.step{border-left:4px solid var(--line);padding:2px 0 2px 14px;margin-bottom:18px}
-.step.cur{border-color:var(--red)}
-.step.ok{border-color:var(--teal)}
-.sn{font:800 12px var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.step.ok .sn{color:var(--ok)}
-.qt{font-weight:700;margin:2px 0 8px}
-.parse{font-size:14.5px;margin:0 0 10px;padding:8px 12px;border-left:4px solid var(--teal);background:var(--panel)}
-.parse b{color:var(--teal)}
-.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-input.ans{font:700 18px var(--body);width:160px;padding:8px 10px;border:2px solid var(--line);border-radius:10px;background:var(--field);color:var(--fg);font-variant-numeric:tabular-nums}
-.ch{font:600 15px var(--body);padding:9px 14px;border:2px solid var(--line);border-radius:10px;background:var(--field);color:var(--fg);cursor:pointer;text-align:left}
-.opts{display:grid;gap:8px}
-.btn{font:700 14px var(--body);padding:9px 14px;border-radius:10px;border:2px solid var(--fg);background:var(--fg);color:var(--bg);cursor:pointer}
-.btn.ghost{background:transparent;color:var(--fg);border-color:var(--line)}
-.msg{font-size:14.5px;font-weight:700;margin-top:8px;padding:8px 12px;border-radius:10px}
-.msg.ok{background:var(--okbg);color:var(--ok)}
-.msg.no{background:var(--nobg);color:var(--red)}
-.note{font-size:14.5px;margin-top:8px;padding:10px 12px;border-left:4px solid var(--yellow);background:var(--panel)}
+.tab[aria-selected="true"]{background:var(--yellow);color:#1B2A49}
+.tab[aria-selected="true"] small{color:#1B2A49}
+.how{background:var(--soft);border:2px dashed var(--ink);border-radius:14px;padding:10px 14px;font-size:14.5px}
+#stage{background:var(--card);border:2.5px solid var(--ink);border-radius:22px;box-shadow:6px 6px 0 var(--ink);padding:clamp(16px,3vw,26px);min-width:0}
+.hd{display:flex;align-items:flex-end;gap:14px;border-bottom:2.5px dashed var(--line);padding-bottom:12px;margin:0 0 16px}
+.big{font:600 52px/0.85 var(--head);color:var(--teal);min-width:1.2em}
+.tp{font:800 12.5px var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.hd h2{font-size:26px}
+.problem{font-size:19px;font-weight:700;margin:0 0 16px}
+.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;align-items:start}
+@media (max-width:760px){.cols{grid-template-columns:1fr}.big{font-size:44px}}
+.step{border:2px solid var(--line);border-radius:16px;padding:14px;margin-bottom:14px;background:var(--bg)}
+.step.cur{border-color:var(--ink);background:var(--soft);box-shadow:4px 4px 0 var(--ink)}
+.step.ok{border-color:var(--teal);background:var(--tealsoft)}
+.sn{font:800 12px var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.step.ok .sn{color:var(--teal)}
+.qt{font-weight:800;margin:2px 0 8px}
+.parse{font-size:14.5px;margin:0 0 10px;padding:8px 12px;border:2px dashed var(--coral);border-radius:12px;background:var(--peach);color:#1B2A49}
+.parse b{font-weight:800}
+input.ans{font:800 20px var(--body);color:var(--fg);background:var(--card);border:2px solid var(--ink);border-radius:12px;padding:8px 12px;width:170px;min-height:46px;font-variant-numeric:tabular-nums}
+.note{font-size:14.5px;margin-top:8px;padding:10px 12px;border-radius:12px;background:var(--card);border:2px solid var(--line)}
 .note b{color:var(--teal)}
-.fin{margin-top:6px;padding:14px;border:2px solid var(--teal);background:var(--okbg);border-radius:12px}
-.fin b{font-family:var(--head);font-size:20px}
-.cell{fill:var(--field);stroke:var(--fg);stroke-width:2}
-.cell.sh{fill:var(--teal);fill-opacity:.85}
+.fin{margin-top:6px;padding:16px;border:2.5px solid var(--ink);background:var(--mint);border-radius:18px;box-shadow:4px 4px 0 var(--ink);color:var(--fg)}
+.fin b{font-family:var(--head);font-size:22px}
+.btn{min-height:44px;touch-action:manipulation}
+.board{border:2.5px solid var(--ink);border-radius:22px;box-shadow:5px 5px 0 var(--ink);background:var(--sky);padding:16px}
+@media (min-width:761px){.board{position:sticky;top:12px}}
+.board h3{font-size:19px;margin-bottom:8px}
+.board svg{width:100%;height:auto;display:block}
+.empty{color:var(--fg);opacity:.75;font-size:14.5px}
+.cell{fill:var(--card);stroke:var(--ink);stroke-width:2.5}
+.cell.sh{fill:#FFC93C}
 .mt{fill:var(--fg);font:700 14px var(--body);text-anchor:middle}
-.mt.sh{fill:var(--bg)}
-.ml{fill:var(--muted);font:800 11px var(--body);letter-spacing:.06em;text-transform:uppercase}
+.mt.sh{fill:#1B2A49}
+.ml{fill:var(--fg);font:800 11px var(--body);letter-spacing:.06em;text-transform:uppercase;opacity:.8}
 .br{stroke:var(--red);stroke-width:2.5;fill:none}
-.bt{fill:var(--red);font:700 13px var(--body);text-anchor:middle}
-.foot{margin-top:40px;border-top:1px solid var(--line);padding-top:12px;font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
-.reset{background:none;border:none;color:var(--muted);text-decoration:underline;cursor:pointer;font:inherit;padding:0}
+.bt{fill:var(--red);font:800 13px var(--body);text-anchor:middle}
+.reset{background:none;border:none;color:var(--muted);text-decoration:underline;cursor:pointer;font:inherit;padding:8px 0;min-height:44px;touch-action:manipulation}
 @media (prefers-reduced-motion:no-preference){.msg,.note,.step.cur{animation:in .18s ease-out}@keyframes in{from{opacity:.4;transform:translateY(-2px)}to{opacity:1;transform:none}}}
 </style>
-
 <div class="wrap">
-  <header class="top">
-    <div class="kick">Math Inquirers  •  Model Drawing</div>
-    <h1>Model Drawing <span>Online</span></h1>
-    <p class="lede">Read the problem, say it in plain words, then build the bar model one step at a time. The page checks every step, and a hint and the "why" are there when you need them. Primary 4 to 6.</p>
-  </header>
+<header class="bar"><a class="brand" href="model_drawing_signup.html"><i>?</i><span>Math Inquirers</span></a><nav class="nav" aria-label="Page"><a class="nl" href="model_drawing_signup.html">Class</a><a class="nl" href="model_drawing_online.html" aria-current="page">Practice</a><a class="btn yel sm" href="model_drawing_signup.html#reserve" style="margin-left:6px">Reserve a place</a></nav></header>
+<main>
+<section class="hero"><div class="sec"><span class="eyebrow">Model drawing · Primary 4 to 6</span><h1>Model Drawing <mark>Online</mark></h1><p class="slogan">Notice it. Test it. Explain why.</p><p class="lead">Read the problem, say it in plain words, then build the bar model one step at a time. Every step is checked and has a hint.</p>
+<div class="chips"><span class="chip">24 questions</span><span class="chip">13 model types</span><span class="chip">Hint at every step</span><span class="chip">Type your answer</span></div></div>
+<svg class="art" viewBox="0 0 520 330" role="img" aria-label="Bar models: a fraction bar with three of five parts shaded, and a ratio of 3 to 5">
+<rect x="8" y="10" width="504" height="310" rx="44" fill="#D6E9FB" stroke="#1B2A49" stroke-width="3"/>
+<text x="44" y="62" font-size="20" fill="#1B2A49">Stickers</text>
+<g stroke="#1B2A49" stroke-width="3"><rect x="44" y="76" width="84" height="56" fill="#FFC93C"/><rect x="128" y="76" width="84" height="56" fill="#FFC93C"/><rect x="212" y="76" width="84" height="56" fill="#FFC93C"/><rect x="296" y="76" width="84" height="56" fill="#fff"/><rect x="380" y="76" width="84" height="56" fill="#fff"/></g>
+<path d="M48 146 v10 H292 v-10" fill="none" stroke="#D64545" stroke-width="4"/><text x="170" y="184" font-size="22" text-anchor="middle" fill="#D64545">24</text>
+<text x="44" y="222" font-size="20" fill="#1B2A49">Boys : Girls = 3 : 5</text>
+<g stroke="#1B2A49" stroke-width="3"><rect x="44" y="236" width="84" height="32" fill="#FF7A59"/><rect x="128" y="236" width="84" height="32" fill="#FF7A59"/><rect x="212" y="236" width="84" height="32" fill="#FF7A59"/>
+<rect x="44" y="274" width="84" height="32" fill="#3DBE7A"/><rect x="128" y="274" width="84" height="32" fill="#3DBE7A"/><rect x="212" y="274" width="84" height="32" fill="#3DBE7A"/><rect x="296" y="274" width="84" height="32" fill="#3DBE7A"/><rect x="380" y="274" width="84" height="32" fill="#3DBE7A"/></g>
+</svg></section>
 
-  <nav class="tabs" role="tablist" aria-label="Questions" id="tabs"></nav>
-  <p class="how">Every step starts with <b>Say it plain</b>, the parsing, and every step has a <b>Hint</b>. <b>Have paper or a whiteboard ready.</b> Draw each bar yourself first, then use the steps to check your model. Wrong answer? Tap <b>Hint</b>.</p>
-
-  <section id="stage" aria-live="polite"></section>
-
-  <div class="foot"><span>Progress is saved on this device only.</span><button class="reset" id="reset" type="button">Start again</button></div>
+<section class="sec"><div class="shead"><span class="eyebrow">Pick a question</span><h2>13 model types, A to M</h2><p class="muted">Draw each bar on paper or a whiteboard first, then use the steps to check your model.</p></div>
+<nav class="tabs" role="tablist" aria-label="Questions" id="tabs"></nav>
+<p class="how">Every step starts with <b>Say it plain</b> (the parsing) and every step has a <b>Hint</b>. Wrong answer? Tap <b>Hint</b>, then try again.</p>
+<section id="stage" aria-live="polite"></section></section>
+</main>
+<footer><div><b>Math Inquirers</b><p style="margin-top:6px">Model drawing practice by Preciouslyours Pte Ltd, Singapore.</p></div><div><b>Practice</b><p style="margin-top:6px">Progress is saved on this device only.<br><button class="reset" id="reset" type="button">Start again</button></p></div><div><b>Class</b><p style="margin-top:6px"><a href="model_drawing_signup.html">See the class and reserve a place</a></p></div></footer>
 </div>
-
 <script>
 /* Each question: type label, text, and steps. A step has a prompt, a kind (choice or num), the right answer,
    a hint, a "why", and the model (bars) shown once the step is solved. bars: {l:label, p:parts, s:shaded, t:text in each part, b:[from,to,text] brace}. */
@@ -201,14 +260,58 @@ var NEWQ=[{id:"sd1",g:"Bar model",type:"Sum and difference",text:"Ali and Mei ha
  {k:"n",p:"The question asks for red in the end. That is 2 units.",q:"How many red beads were there in the end?",a:56,h:"2 \u00D7 28.",w:"2 \u00D7 28 = 56 red beads. (Check: 20 of each were added: 56 : 140 = 2 : 5.)",m:[{l:"Red in the end",p:2,t:"28",b:[0,2,"? = 56"]},{l:"Blue in the end",p:5,t:"28"}]}
 ]}
 ];
+var NEWQ2=[
+{id:"e1",type:"Different fractions, same amount left",text:"Ken spent 2/3 of his money and Lia spent 3/5 of her money. In the end, they had the same amount of money left. Ken had $40 more than Lia at first. How much money did Lia have at first?",unit:"dollars",steps:[
+ {k:"n",p:"The amount left is the same for both, so make the “left” parts equal. Ken has 1 part left out of 3. Lia has 2 parts left out of 5.",q:"Give each person's left part 2 units. How many units is Ken's whole bar? (Ken: 1 left out of 3)",a:6,h:"If 1 part is cut into 2 units, then 3 parts become 3 × 2 units.",w:"Ken: left = 2 units, so the whole is 3 × 2 = 6 units.",m:[{l:"Ken",p:6,s:4,b:[4,6,"left 2"]}]},
+ {k:"n",p:"Lia's left part is already 2 units out of 5.",q:"How many units is Lia's whole bar?",a:5,h:"Lia spent 3/5, so her whole bar is cut into 5 equal units.",w:"Lia: 3 units spent, 2 units left, 5 units in all.",m:[{l:"Ken",p:6,s:4,b:[4,6,"left 2"]},{l:"Lia",p:5,s:3,b:[3,5,"left 2"]}]},
+ {k:"n",p:"Ken had $40 more than Lia. That is the gap between the two bars.",q:"How many units is the gap between Ken's bar and Lia's bar?",a:1,h:"6 − 5.",w:"The gap is 1 unit, and 1 unit is $40.",m:[{l:"Ken",p:6,s:4,t:"40",b:[5,6,"gap $40"]},{l:"Lia",p:5,s:3,t:"40"}]},
+ {k:"n",p:"Lia's whole bar is 5 units, and 1 unit is $40.",q:"How much money did Lia have at first?",a:200,h:"5 × 40.",w:"5 × 40 = $200. (Check: Ken had $240. Ken left 1/3 of 240 = $80. Lia left 2/5 of 200 = $80.)",m:[{l:"Ken",p:6,s:4,t:"40"},{l:"Lia",p:5,s:3,t:"40",b:[0,5,"? = 200"]}]}
+]},
+{id:"h1",type:"Repeated sets",text:"Mr Goh sold each bun at $2 and each cake at $5. He sold 3 times as many buns as cakes and collected $176 altogether. How many buns did he sell?",unit:"buns",steps:[
+ {k:"n",p:"Draw one small group that has everything in the right ratio: 3 buns and 1 cake.",q:"How much money is in one group of 3 buns and 1 cake?",a:11,h:"3 buns = 3 × $2. Then add 1 cake.",w:"3 × 2 + 5 = $11 for one group.",m:[{l:"3 buns",p:3,t:"$2"},{l:"1 cake",p:1,t:"$5"}]},
+ {k:"n",p:"All the groups together make $176. Share $176 into groups of $11.",q:"How many groups are there?",a:16,h:"176 ÷ 11.",w:"176 ÷ 11 = 16 groups.",m:[{l:"3 buns",p:3,t:"$2"},{l:"1 cake",p:1,t:"$5",b:[0,1,"one group = $11"]}]},
+ {k:"n",p:"Each group has 3 buns.",q:"How many buns did he sell?",a:48,h:"16 × 3.",w:"16 × 3 = 48 buns. (Check: 48 × 2 + 16 × 5 = 96 + 80 = 176.)",m:[{l:"3 buns",p:3,t:"$2"},{l:"1 cake",p:1,t:"$5",b:[0,1,"16 groups"]}]}
+]},
+{id:"i1",type:"Assumption with notes",text:"Mrs Lee had 20 notes altogether. Some were $2 notes and the rest were $5 notes. The total value of the notes was $67. How many $5 notes did she have?",unit:"notes",steps:[
+ {k:"n",p:"Pretend every note is a $2 note. Then find the total value.",q:"If all 20 notes were $2 notes, what would the total value be?",a:40,h:"20 × 2.",w:"20 × 2 = $40.",m:[{l:"Pretend all $2 notes",p:20,t:"2",b:[0,20,"$40"]}]},
+ {k:"n",p:"The real total is more. Find the missing money.",q:"How much more money is there really? (67 − 40)",a:27,h:"67 − 40.",w:"$27 is missing.",m:[{l:"Pretend all $2 notes",p:20,t:"2",b:[0,20,"$40"]},{l:"Missing money",p:9,t:"3",b:[0,9,"$27"]}]},
+ {k:"n",p:"Changing one $2 note into a $5 note adds some money.",q:"How much does one swap add? (5 − 2)",a:3,h:"The $5 note minus the $2 note.",w:"Each swap adds $3.",m:[{l:"One swap",p:3,t:"+1",b:[0,3,"$3"]}]},
+ {k:"n",p:"Each swap adds $3, so share the missing $27 into groups of $3.",q:"How many $5 notes did she have?",a:9,h:"27 ÷ 3.",w:"27 ÷ 3 = 9 notes of $5. (Check: 9 × 5 + 11 × 2 = 45 + 22 = 67.)",m:[{l:"Missing $27, in groups of $3",p:9,t:"3",b:[0,9,"9 swaps = 9 notes of $5"]}]}
+]},
+{id:"j1",type:"Comparing purchases",text:"A file and 3 identical pens cost $8.60. 2 such files and 8 such pens cost $20.80. What was the cost of 1 pen?",unit:"dollars",steps:[
+ {k:"n",p:"Make the number of files the same in both purchases. Halve the second purchase: 1 file and 4 pens.",q:"How much do 1 file and 4 pens cost? (20.80 ÷ 2)",a:10.4,h:"Half of $20.80.",w:"1 file and 4 pens cost $10.40.",m:[{l:"1 file + 3 pens",p:4,b:[0,4,"$8.60"]},{l:"1 file + 4 pens",p:5,b:[0,5,"$10.40"]}]},
+ {k:"n",p:"Line up the two purchases. What is different between them?",q:"How many more pens are in the second purchase?",a:1,h:"4 pens − 3 pens.",w:"The second purchase has exactly 1 more pen.",m:[{l:"1 file + 3 pens",p:4,b:[0,4,"$8.60"]},{l:"1 file + 4 pens",p:5,b:[4,5,"1 pen"]}]},
+ {k:"n",p:"The extra cost between the two purchases is the cost of that 1 pen.",q:"How much does 1 pen cost? (10.40 − 8.60)",a:1.8,h:"10.40 − 8.60.",w:"$10.40 − $8.60 = $1.80. (Check: a file is $3.20, so $3.20 + 3 × $1.80 = $8.60.)",m:[{l:"1 file + 3 pens",p:4,b:[0,4,"$8.60"]},{l:"1 file + 4 pens",p:5,b:[4,5,"? = $1.80"]}]}
+]},
+{id:"k1",type:"Average",text:"The average mass of 4 boxes was 12 kg. After a fifth box was added, the average mass of the 5 boxes became 14 kg. What was the mass of the fifth box?",unit:"kg",steps:[
+ {k:"n",p:"Average means every box is the same size when the total is shared out equally. Draw 4 equal bars.",q:"What was the total mass of the 4 boxes?",a:48,h:"4 × 12.",w:"4 × 12 = 48 kg.",m:[{l:"4 boxes, 12 kg each",p:4,t:"12",b:[0,4,"48 kg"]}]},
+ {k:"n",p:"Now draw 5 equal bars for the new average.",q:"What was the total mass of the 5 boxes?",a:70,h:"5 × 14.",w:"5 × 14 = 70 kg.",m:[{l:"4 boxes, 12 kg each",p:4,t:"12",b:[0,4,"48 kg"]},{l:"5 boxes, 14 kg each",p:5,t:"14",b:[0,5,"70 kg"]}]},
+ {k:"n",p:"The fifth box is the extra mass when the total went from 48 to 70.",q:"What was the mass of the fifth box?",a:22,h:"70 − 48.",w:"70 − 48 = 22 kg. (Check: 70 ÷ 5 = 14.)",m:[{l:"4 boxes, 12 kg each",p:4,t:"12",b:[0,4,"48 kg"]},{l:"5 boxes, 14 kg each",p:5,t:"14",b:[0,5,"70 kg"]}]}
+]},
+{id:"l1",type:"Spent and left",text:"Amy and Ben had $330 altogether. Amy spent 3 times as much as Ben. Ben had $20 more left than the amount he spent. Amy had $10 left. How much did Ben spend?",unit:"dollars",steps:[
+ {k:"n",p:"Let what Ben spent be 1 unit. Draw each bar. Amounts like $20 and $10 are separate blocks.",q:"How many units are there in all? (Ben spent 1, Ben left 1, Amy spent 3)",a:5,h:"1 + 1 + 3.",w:"5 units, plus the two separate blocks of money.",m:[{l:"Ben spent",p:1},{l:"Ben left",p:1,b:[0,1,"+ $20"]},{l:"Amy spent",p:3},{l:"Amy left",p:1,t:"$10"}]},
+ {k:"n",p:"Add up the blocks that are not units.",q:"How many dollars are in the separate blocks? ($20 and $10)",a:30,h:"20 + 10.",w:"$30 is not part of the units.",m:[{l:"Ben spent",p:1},{l:"Ben left",p:1,b:[0,1,"+ $20"]},{l:"Amy spent",p:3},{l:"Amy left",p:1,t:"$10"}]},
+ {k:"n",p:"Take the blocks away before sharing. The units are what is left of the $330.",q:"How many dollars are the 5 units? (330 − 30)",a:300,h:"330 − 30.",w:"5 units = $300.",m:[{l:"5 units",p:5,b:[0,5,"$300"]}]},
+ {k:"n",p:"5 units are $300.",q:"How much did Ben spend? (1 unit)",a:60,h:"300 ÷ 5.",w:"1 unit = $60. (Check: Ben spent 60 and had 80 left, 140 in all. Amy spent 180, had 10 left, 190 in all. 140 + 190 = 330.)",m:[{l:"Ben spent",p:1,t:"60",b:[0,1,"? = 60"]},{l:"Ben left",p:1,t:"60",b:[0,1,"+ $20"]},{l:"Amy spent",p:3,t:"60"},{l:"Amy left",p:1,t:"$10"}]}
+]},
+{id:"m1",type:"Rate and measurement",text:"Tap A filled a tank at 6 litres per minute and Tap B filled it at 4 litres per minute. Both taps were turned on for 9 minutes and filled 3/4 of the tank. How many litres of water could the tank hold?",unit:"litres",steps:[
+ {k:"n",p:"Two taps work at the same time, so add their rates.",q:"How many litres per minute do both taps fill together?",a:10,h:"6 + 4.",w:"10 litres every minute.",m:[]},
+ {k:"n",p:"Rate times time gives the amount of water.",q:"How many litres did the taps fill in 9 minutes?",a:90,h:"10 × 9.",w:"10 × 9 = 90 litres.",m:[{l:"Tank",p:4,s:3,b:[0,3,"90 litres"]}]},
+ {k:"n",p:"90 litres is 3/4 of the tank. Draw the tank as 4 units and shade 3.",q:"3 units = 90 litres. How many litres is 1 unit?",a:30,h:"90 ÷ 3.",w:"1 unit = 30 litres.",m:[{l:"Tank",p:4,s:3,t:"30",b:[0,3,"90 litres"]}]},
+ {k:"n",p:"The whole tank is 4 units.",q:"How many litres could the tank hold?",a:120,h:"4 × 30.",w:"4 × 30 = 120 litres. (Check: 3/4 of 120 = 90.)",m:[{l:"Tank",p:4,s:3,t:"30",b:[0,4,"? = 120"]}]}
+]}
+];
+var BANK=[["A","Sum and difference of two quantities"],["B","Giving items from one person to another"],["C","Same amount added or removed"],["D","Fraction of a whole, then of the remainder"],["E","Different fractions, same amount left or given"],["F","Percentage on bars"],["G","Ratio and units-and-parts"],["H","Repeated sets"],["I","Assumption with coins, notes and swaps"],["J","Comparing purchases"],["K","Average"],["L","Spent and left"],["M","Rate and measurement"]];
 (function(){
-  var old=Q,G={q1:"Bar model",q2:"Bar model",q3:"Bar model",q4:"Bar model",q5:"Before and after",q6:"Percentage and decimals",q7:"Percentage and decimals"};
-  old.forEach(function(q,i){q.id="q"+(i+1);q.g=G[q.id]});
-  var all=old.concat(NEWQ),ORDER=["Bar model","Before and after","Percentage and decimals","Ratio"];
-  Q=[];ORDER.forEach(function(g){all.forEach(function(q){if(q.g===g)Q.push(q)})});
+  var old=Q;old.forEach(function(q,i){q.id="q"+(i+1)});
+  var all=old.concat(NEWQ,NEWQ2),by={};all.forEach(function(q){by[q.id]=q});
+  var ORDER=["sd1","q3","mul1","q4","q5","rt4","rt7","q1","q2","ba2","q7","e1","q6","rt6","rt1","rt2","rt3","rt5","h1","i1","j1","k1","l1","m1"];
+  var BT={sd1:"A",q3:"A",mul1:"A",q4:"A",q5:"B",rt4:"B",rt7:"C",q1:"D",q2:"D",ba2:"D",q7:"D",e1:"E",q6:"F",rt6:"F",rt1:"G",rt2:"G",rt3:"G",rt5:"G",h1:"H",i1:"I",j1:"J",k1:"K",l1:"L",m1:"M"},cnt={};
+  Q=ORDER.map(function(id){var q=by[id],t=BT[id];cnt[t]=(cnt[t]||0)+1;q.bt=t;q.lab=t+cnt[t];
+    BANK.forEach(function(b){if(b[0]===t)q.g="Type "+t+": "+b[1]});return q});
 })();
 
-var KEY="mi_modeldrawing_v2", cur=0, prog={}, hints={}, wrong={};
+var KEY="mi_modeldrawing_v3", cur=0, prog={}, hints={}, wrong={};
 function load(){try{var s=localStorage.getItem(KEY);if(s)prog=JSON.parse(s)||{}}catch(e){prog={}}}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(prog))}catch(e){}}
 function stepOf(i){return prog[Q[i].id]||0}
@@ -234,11 +337,11 @@ function render(){
   var q=Q[cur],st=stepOf(cur),n=q.steps.length,h="";
   var tg="",lastG="";
   Q.forEach(function(x,i){
-    if(x.g!==lastG){if(lastG)tg+='</div>';tg+='<div class="grp"><div class="gl">'+esc(x.g)+'</div>';lastG=x.g}
-    tg+='<button class="tab'+(stepOf(i)>=x.steps.length?' done':'')+'" role="tab" aria-selected="'+(i===cur)+'" data-i="'+i+'">Q'+(i+1)+' <small>'+esc(x.type)+'</small></button>'});
-  document.getElementById("tabs").innerHTML=tg+'</div>';
+    if(x.g!==lastG){if(lastG)tg+='</div></div>';tg+='<div class="grp"><div class="gl">'+esc(x.g)+'</div><div class="gt">';lastG=x.g}
+    tg+='<button class="tab'+(stepOf(i)>=x.steps.length?' done':'')+'" role="tab" aria-selected="'+(i===cur)+'" data-i="'+i+'">'+x.lab+' <small>'+esc(x.type)+'</small></button>'});
+  document.getElementById("tabs").innerHTML=tg+'</div></div>';
   var model=st>0?q.steps[Math.min(st,n)-1].m:[];
-  h+='<div class="hd"><div class="big">'+(cur+1)+'</div><div><div class="tp">'+esc(q.type)+'</div><h2>Step by step</h2></div></div>';
+  h+='<div class="hd"><div class="big">'+q.lab+'</div><div><div class="tp">'+esc(q.type)+'</div><h2>Step by step</h2></div></div>';
   h+='<p class="problem">'+esc(q.text)+'</p><div class="cols"><div>';
   for(var i=0;i<=Math.min(st,n-1);i++){
     var s=q.steps[i],done=i<st;
@@ -277,7 +380,7 @@ document.addEventListener("click",function(e){
   if(t.id==="hint"){hints[cur+"-"+stepOf(cur)]=1;render();return}
   if(t.id==="next"){cur++;render();window.scrollTo(0,0);return}
   if(t.id==="redo"){prog[Q[cur].id]=0;save();render();return}
-  if(t.id==="reset"){if(confirm("Start all questions again?")){prog={};save();cur=0;render()}}});
+  if(t.id==="reset"){prog={};save();cur=0;render();}});
 document.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.id==="ans")checkNum()});
 load();render();
 </script>
