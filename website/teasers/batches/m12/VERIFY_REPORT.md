@@ -11,15 +11,8 @@ Method: every puzzle is re-solved by `brute.py` (independent of the author solve
 
 Similarity sources checked: holiday banks, own term lessons, all extension workbook data, the school booklets, our book drafts and catalogues, external private source files, and the seven fixed website puzzles.
 
-FAIL count: 7. REVIEW items: 20.
+FAIL count: 0. REVIEW items: 22.
 
-- FAIL L4-chesssquares [12-01]: shares a 7-word run with external: "how many squares of any size can"
-- FAIL L4-visitortable [12-02]: sub-structure graphs.table_total is not allowed at level 4 (levels [1, 2, 3])
-- FAIL L4-outfitsthree [12-15]: shares a 7-word run with external: "how many different outfits can she make"
-- FAIL L4-yearlater [12-16]: sub-structure calendar.weekday_after is not allowed at level 4 (levels [1, 2, 3])
-- FAIL L4-stationery [12-20]: sub-structure place_value.regroup is not allowed at level 4 (levels [1, 2, 3])
-- FAIL L4-palyears [12-29]: shares a 7-word run with holiday: "reads the same forwards and backwards like"
-- FAIL L4-palyears [12-29]: shares a 7-word run with the extension workbooks: "number reads the same forwards and backwards"
 
 - REVIEW L1-bondten [12-10]: number 0 in the question is not a parameter (written in the wording; check)
 - REVIEW L1-bundles [12-15]: number 10 in the question is not a parameter (written in the wording; check)
@@ -34,10 +27,12 @@ FAIL count: 7. REVIEW items: 20.
 - REVIEW L3-strawbridge [12-21]: number 5 in the question is not a parameter (written in the wording; check)
 - REVIEW L3-cryptsum [12-22]: number 3 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-unpainted [12-08]: number 64 in the question is not a parameter (written in the wording; check)
-- REVIEW L4-liftmin [12-09]: number 4 in the question is not a parameter (written in the wording; check)
+- REVIEW L4-liftmin [12-09]: number 3 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-shellpiles [12-14]: number 1 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-tilefigures [12-18]: number 2 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-tilefigures [12-18]: number 3 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-stationery [12-20]: number 1000 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-stationery [12-20]: number 100 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-stationery [12-20]: number 10 in the question is not a parameter (written in the wording; check)
+- REVIEW L4-palyears [12-29]: number 1331 in the question is not a parameter (written in the wording; check)
+- REVIEW L4-palyears [12-29]: number 4 in the question is not a parameter (written in the wording; check)

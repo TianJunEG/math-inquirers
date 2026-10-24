@@ -7,13 +7,11 @@ Rules: per level and calendar quarter at most 1 puzzle per sub-structure and 3 p
 - Level 3, quarter 4: 61 puzzles, 61 distinct sub-structures, 38 families, most in one family 3
 - Level 4, quarter 4: 61 puzzles, 61 distinct sub-structures, 41 families, most in one family 3
 
-Structure FAIL count (all released months): 6
-- FAIL L4: answer 14 repeats (L4-motherage, L4-sevens, L4-vertices)
-- FAIL L4: answer 12 repeats (L4-sunflower, L4-giftbags)
-- FAIL L4: answer 10 repeats (L4-symmetry, L4-noticeboard, L4-palyears)
-- FAIL L4: answer 18 repeats (L4-liftmin, L4-coins60)
-- FAIL L4: answer 20 repeats (L4-divcalc, L4-notebooks)
-- FAIL L4: L4-calc and L4-liftmin share the numbers ['4', '6', '7', '9']
+Structure FAIL count (all released months): 4
+- FAIL L4: answer 24 repeats (L4-giftbags, L4-evens4)
+- FAIL L4: answer 13 repeats (L4-floorstrip, L4-noticeboard)
+- FAIL L4: answer 17 repeats (L4-brickpyramid, L4-liftmin)
+- FAIL L4: L4-liftmin and L4-shellpiles share the numbers ['3', '5', '8', '9']
 
 Skeleton matches with our own sources that were reviewed by hand (same masked wording, but no shared numbers): 3
 - REVIEW L1-equalbox [12-16]: skeleton 0.60 like ""q": "Fill in the missing number: 30 + 30 = 40 + ___", "answer": 20, "hint": "30 went up by 10 to 40. What hap ..." (term/l1/lessons/l08.json), shared numbers 0
