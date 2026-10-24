@@ -141,19 +141,84 @@ def shingles(sk, n=4):
     return {' '.join(sk[i:i + n]) for i in range(len(sk) - n + 1)}
 
 
+SOURCE_ROOTS = ['hp', 'p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'extension', 'docs', 'practice', 'taster', 'review', 'tutor', 'school', 'outputs',
+                'split', 'rebuild', 'website', 'levels', 'print', 'portal', 'k2', 'deck', 'ops', 'diag', 'mascot', 'releases', 'worker']
+SOURCE_EXTS = ('.md', '.txt', '.json', '.js', '.py', '.html', '.csv')
+SKIP_DIRS = ('node_modules', '.git', '__pycache__')
+SKIP_PREFIX = ('website/teasers/', 'website/dist/', 'outputs/owner_review/teasers_preview/')      # our own teasers and their previews are not a "source"
+LOCK_FILE = os.path.join(HERE, 'source_lock.json')
+
+
 def source_files():
-    pats = [('hp', ['json', 'js', 'py', 'html']), ('p1', ['json', 'js', 'py']), ('p2', ['js', 'json']), ('p3', ['js', 'json']),
-            ('p4', ['js', 'json']), ('p5', ['js', 'json']), ('p6', ['js', 'json']), ('extension/data', ['json']),
-            ('docs/books', ['md', 'txt', 'json', 'py', 'html']), ('docs/sasmo', ['md', 'txt', 'json', 'py', 'html']),
-            ('practice', ['json', 'js']), ('taster', ['json', 'html', 'js']), ('review', ['json', 'html', 'md']),
-            ('tutor', ['md', 'json', 'txt']), ('school', ['md', 'json', 'txt', 'html'])]
+    """Every text file of the WHOLE working tree that could hold a question of ours (tracked or not, git-ignored private sources included).
+    Round 3: the list is `SOURCE_ROOTS` x `SOURCE_EXTS`, so it now also covers outputs/ (the Skill Additions sheets), docs/audit/*.py,
+    practice/**/*.py (all lesson.py and items), school booklets, the holiday week 1 to 5 sources, split/, rebuild/ and website/;
+    plus the term lessons.  Sorted, so the digest below does not depend on the file system order."""
     files = []
-    for d, exts in pats:
-        for e in exts:
-            files += glob.glob(os.path.join(ROOT, d, '**', '*.' + e), recursive=True)
+    for root in SOURCE_ROOTS:
+        base = os.path.join(ROOT, root)
+        for dp, dns, fns in os.walk(base):
+            dns[:] = sorted(d for d in dns if d not in SKIP_DIRS)
+            for fn in fns:
+                if fn.endswith(SOURCE_EXTS):
+                    files.append(os.path.join(dp, fn))
     files += glob.glob(os.path.join(ROOT, 'term', 'l*', 'lessons', '*.json'))
-    files += glob.glob(os.path.join(ROOT, 'docs', 'books', 'private_*', '**', '*'), recursive=True)
-    return sorted({f for f in files if os.path.isfile(f) and os.path.getsize(f) < 30_000_000})
+    out = []
+    for f in sorted(set(files)):
+        rel = os.path.relpath(f, ROOT).replace(os.sep, '/')
+        if rel.startswith(SKIP_PREFIX) or not os.path.isfile(f) or os.path.getsize(f) >= 30_000_000:
+            continue
+        out.append(f)
+    return out
+
+
+_DIGEST = {}
+
+
+def source_digest(files=None):
+    """(sha256 over every source file's path and content, number of files, bytes, files per root).  The verdict of this verifier is a function of
+    the bank, the rules and this digest, never of the checkout: two machines with the same digest give the same report."""
+    files = files if files is not None else source_files()
+    key = tuple(files)
+    if key in _DIGEST:
+        return _DIGEST[key]
+    h = hashlib.sha256()
+    total, per = 0, {}
+    for f in files:
+        rel = os.path.relpath(f, ROOT).replace(os.sep, '/')
+        data = open(f, 'rb').read()
+        h.update(rel.encode() + b'\0' + hashlib.sha256(data).digest())
+        total += len(data)
+        per[rel.split('/')[0]] = per.get(rel.split('/')[0], 0) + 1
+    _DIGEST[key] = (h.hexdigest(), len(files), total, per)
+    return _DIGEST[key]
+
+
+def lock_problems():
+    """The source lock (source_lock.json) holds the minimum number of files per source root.  A checkout that lacks them (for example a tracked-only
+    export without the git-ignored private sources) cannot give a valid verdict, so the verifier refuses instead of printing '0 FAIL'."""
+    if not os.path.exists(LOCK_FILE):
+        return ['source_lock.json is missing: run verify_bank.py --update-lock on the full working tree']
+    lock = json.load(open(LOCK_FILE, encoding='utf-8'))
+    _, n, _, per = source_digest()
+    bad = []
+    for root, need in sorted(lock['min_files'].items()):
+        if per.get(root, 0) < need:
+            bad.append('source root %s has %d files, the lock needs at least %d (incomplete checkout?)' % (root, per.get(root, 0), need))
+    for d in lock.get('must_exist', []):
+        if not glob.glob(os.path.join(ROOT, d)):
+            bad.append('required source %s is missing (git-ignored private sources not present?)' % d)
+    return bad
+
+
+def update_lock():
+    _, n, total, per = source_digest()
+    lock = {'note': 'Minimum number of source files per root for a valid verification (written by verify_bank.py --update-lock). The verifier refuses to give a verdict on a checkout with fewer.',
+            'min_files': {r: int(c * 0.9) for r, c in sorted(per.items())},
+            'must_exist': ['docs/books/private_p1_papers', 'docs/books/private_p6_papers', 'docs/books/private_word_problems_notes.md', 'extension/data', 'outputs/skill_additions', 'practice/holiday', 'docs/audit'],
+            'files_at_update': n, 'bytes_at_update': total}
+    json.dump(lock, open(LOCK_FILE, 'w', encoding='utf-8'), indent=1)
+    print('source lock written:', lock['min_files'])
 
 
 def chunks_of(path):
@@ -181,7 +246,7 @@ def chunks_of(path):
 def structure_index():
     """Inverted index of masked-skeleton 4-grams over every question in our own sources (cached in the temp folder)."""
     files = source_files()
-    key = hashlib.md5('|'.join('%s:%d:%d' % (f, os.path.getmtime(f), os.path.getsize(f)) for f in files).encode()).hexdigest()
+    key = hashlib.md5(('structure-v2|' + source_digest(files)[0]).encode()).hexdigest()
     cache = os.path.join(os.environ.get('TMPDIR', '/tmp'), 'mi_teaser_structure_%s.pkl' % key)
     if os.path.exists(cache):
         try:
@@ -270,7 +335,7 @@ STORY_STOP_EXTRA = set('north south east west face turn left right clockwise cen
                        'long short much many one two three four five six seven eight nine ten hundred thousand'.split())
 DF_MAX = 6000          # a word found in more source windows than this says nothing about the story
 RARE_DF = 400          # a word found in fewer source windows than this is a specific object (snail, lolly, jacket, carton ...)
-STORY_VERSION = "story-v8"
+STORY_VERSION = "story-v9"
 
 
 def stem(w):
@@ -304,7 +369,7 @@ def story_words(text, names_too=True):
 def story_index():
     """Windows (one sentence, or two neighbouring sentences) of every source chunk: stem sets, numbers, and the document frequency of every stem."""
     files = source_files()
-    key = hashlib.md5((STORY_VERSION + '|' + '|'.join('%s:%d:%d' % (f, os.path.getmtime(f), os.path.getsize(f)) for f in files)).encode()).hexdigest()
+    key = hashlib.md5((STORY_VERSION + '|' + source_digest(files)[0]).encode()).hexdigest()
     cache = os.path.join(os.environ.get('TMPDIR', '/tmp'), 'mi_teaser_story_%s.pkl' % key)
     if os.path.exists(cache):
         try:
@@ -327,12 +392,16 @@ def story_index():
                     wins.append((rel, txt[:600], ws, frozenset(n for n in numbers_in(txt) if n not in ('0', '1', '2'))))
                     for w in ws:
                         df[w] = df.get(w, 0) + 1
-    inv = {}
-    for i, (_, _, ws, _) in enumerate(wins):
+    inv, ninv = {}, {}
+    for i, (_, _, ws, nums) in enumerate(wins):
         for w in ws:
             if df[w] <= DF_MAX:
                 inv.setdefault(w, []).append(i)
-    data = (wins, df, inv)
+        for n in nums:
+            if n not in TRIVIAL_NUMS:
+                ninv.setdefault(n, []).append(i)
+    ninv = {n: ids for n, ids in ninv.items() if len(ids) <= NUM_DF_MAX}
+    data = (wins, df, inv, ninv)
     try:
         pickle.dump(data, open(cache, 'wb'))
     except Exception:
@@ -340,6 +409,8 @@ def story_index():
     return data
 
 
+TRIVIAL_NUMS = {'0', '1', '2', '10', '100', '1000'}     # never evidence of a copy
+NUM_DF_MAX = 6000       # a number found in more source windows than this is not used to find candidates
 COMMON_NUMS = {'3', '4', '5', '6', '7', '8', '9', '10', '12', '15', '20', '24', '25', '30', '50', '60', '100', '1000'}
 SPEC_DF = 3000         # a word found in fewer source windows than this names something specific (not 'day' or 'box')
 
@@ -353,6 +424,18 @@ def wgrams(text):
     return {' '.join(t[i:i + 3]) for i in range(len(t) - 2)}
 
 
+def mgrams(text):
+    """Word four-grams with numbers masked ('#') that carry at least two story words (names, function words and stock words do not count),
+    so that 'how many more are' or 'give your answer as' cannot make a match."""
+    t = wtoks(text)
+    out = set()
+    for i in range(len(t) - 3):
+        g = t[i:i + 4]
+        if len(story_words(' '.join(w for w in g if w != '#'))) >= 2:
+            out.add(' '.join(g))
+    return out
+
+
 def story_hits(q, sidx, own_words=None):
     """Same story and same quantities as a source window.  Returns [(severity, detail)] with severity 'FAIL' or 'REVIEW'.
     Let S = the teaser's story words, W = the words of one source window, cov = |S & W| / |S|, spec = shared words of document frequency
@@ -363,20 +446,29 @@ def story_hits(q, sidx, own_words=None):
       (F5) cov >= 0.4, >= 2 shared words and >= 2 shared distinctive numbers ($120 and 15%) in a short window;
       (W)  at least 45% of the question's word triples (numbers masked) and 6 or more are found in the window: the same wording with other numbers.
     REVIEW when cov >= 0.6 with >= 3 shared words and spec >= 2 and none of the above."""
-    wins, df, inv = sidx
+    wins, df, inv = sidx[0], sidx[1], sidx[2]
+    ninv = sidx[3] if len(sidx) > 3 else {}
     S = {w for w in (own_words if own_words is not None else story_words(q)) if df.get(w, 0) <= DF_MAX}
     if len(S) < 2:
         return []
     mine = {n for n in numbers_in(q) if n not in ('0', '1', '2')}
+    nn_mine = {n for n in mine if n not in TRIVIAL_NUMS}
     score = {}
     for w in S:
         for i in inv.get(w, ()):
             score[i] = score.get(i, 0) + 1
-    cand = [i for i, c in sorted(score.items(), key=lambda kv: -kv[1])[:60] if c >= 2]
+    cand = [i for i, c in sorted(score.items(), key=lambda kv: -kv[1])[:150] if c >= 2]
+    ncount = {}
+    for n in nn_mine:
+        for i in ninv.get(n, ()):
+            ncount[i] = ncount.get(i, 0) + 1
+    have = set(cand)
+    cand += [i for i, c in ncount.items() if c >= 3 and i not in have]
     if len(S) <= 4:       # short questions: every window that has all the story words
         full = sorted((i for i, c in score.items() if c == len(S)), key=lambda i: len(wins[i][2]))
         cand = list(dict.fromkeys(cand + full[:4000]))
     G = wgrams(q)
+    G4 = mgrams(q)
     review = None
     for i in cand:
         rel, txt, ws, nums = wins[i]
@@ -400,6 +492,20 @@ def story_hits(q, sidx, own_words=None):
             common = G & wgrams(txt)
             if len(common) >= 6 and len(common) / len(G) >= 0.45:
                 why = 'same wording with other numbers (%d of %d word triples)' % (len(common), len(G))
+        # ---- the independent auditor's rules (AUDIT_ROUND3 section 1), reproduced here so that a release cannot pass without them
+        nn = len(nn_mine & nums)
+        if not why and len(S) >= 4 and cov >= 0.7 and len(shared) >= 4 and len(rare) >= 2:
+            why = 'rule A (content words): same story skeleton, %d of %d story words (%d rare) with other numbers' % (len(shared), len(S), len(rare))
+        if not why and nn >= 3 and dn >= 2 and len(shared) >= 2 and cov >= 0.4:
+            why = 'rule B (numbers): %d of the same numbers %s (%d distinctive) and %d shared story words' % (nn, sorted(nn_mine & nums), dn, len(shared))
+        if not why and len(G4) >= 4:
+            c4 = G4 & mgrams(txt)
+            if len(c4) >= 3 and len(c4) >= 0.3 * len(G4):
+                why = 'rule C (four-word runs, numbers masked): %d of %d shared, e.g. "%s"' % (len(c4), len(G4), sorted(c4)[0])
+            elif len(c4) >= 2 and review is None:
+                review = ('REVIEW', 'rule C: two four-word runs shared with "%s ..." (%s): %s' % (txt[:80].replace('\n', ' '), rel, ' / '.join(sorted(c4)[:2])))
+        if not why and nn >= 3 and len(shared) >= 2 and cov >= 0.4 and review is None:
+            review = ('REVIEW', 'rule B: %d of the same numbers %s as "%s ..." (%s)' % (nn, sorted(nn_mine & nums), txt[:80].replace('\n', ' '), rel))
         if why:
             return [('FAIL', '%s: "%s ..." (%s) words %s' % (why, txt[:100].replace('\n', ' '), rel, ','.join(sorted(shared))))]
         if review is None and len(S) >= 3 and cov >= 0.6 and len(shared) >= 3 and len(spec) >= 2:
@@ -759,9 +865,22 @@ def selftest():
 
 
 def main():
+    if '--update-lock' in sys.argv:
+        update_lock()
+        return
     if '--selftest' in sys.argv:
         selftest()
     man = json.load(open(os.path.join(HERE, 'manifest.json')))
+    digest, nfiles, nbytes, per_root = source_digest()
+    print('sources: %d files, %.1f MB, digest %s' % (nfiles, nbytes / 1e6, digest[:16]))
+    problems = lock_problems()
+    if problems:
+        print('INVALID VERIFICATION: the source tree is incomplete, so a "0 FAIL" would mean nothing.')
+        for p in problems:
+            print('  ', p)
+        sys.exit(2)
+    SRC_LINE = ('Sources searched (whole working tree, tracked or not): %d files, %.1f MB, sha256 %s.  Files per root: %s.' % (
+        nfiles, nbytes / 1e6, digest[:24], ', '.join('%s %d' % kv for kv in sorted(per_root.items()))))
     months = [a for a in sys.argv[1:] if not a.startswith('--')] or man['released']
     banks = {}
     for mm in man['released']:
@@ -794,7 +913,7 @@ def main():
 
     # ---------------------------------------------------------------- structure rules over all released months (per level and quarter)
     R = TAX.RULES
-    struct_lines = ['# Structure report (taxonomy.json)', '',
+    struct_lines = ['# Structure report (taxonomy.json)', '', SRC_LINE, '',
                     'Rules. Levels 3 to 6 (TEASER-STRICT): per level and calendar quarter at most %d puzzle per sub-structure and %d per family; the same sub-structure never within %d days of itself across a quarter boundary; '
                     'an answer of 10 or more appears once per level and a single digit at most %d times. '
                     'Levels 1 and 2 (L1L2-GAP60): the same sub-structure at least %d days apart (circular, 365- and 366-day year), a family at most %d times in any %d days and never on consecutive days, '
@@ -963,6 +1082,8 @@ def main():
             lines.append('| %d | %d | %d | %d | %d | %d | %d |' % ((lv,) + s))
         lines.append('')
         miss = [lv for lv in corp if corp[lv].get('_ext_missing')] if dup_check else []
+        lines.append(SRC_LINE)
+        lines.append('')
         lines.append('Similarity sources checked: holiday banks, own term lessons, all extension workbook data, the school booklets, our book drafts and catalogues, %s, and the seven fixed website puzzles.' % (
             'external private source files NOT present in this checkout (not checked)' if miss else 'external private source files'))
         lines.append('')

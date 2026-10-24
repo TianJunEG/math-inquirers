@@ -112,7 +112,7 @@ DEFS = [
       '{value} × 100 = {ans}.',
       p=dict(value='3.45', factor=100), fmt='dec', unit='cm', sub='measurement.unit_convert'),
     P('cornerscard', 'cut_corners_area', 'Area',
-      "A rectangular card is {w} cm long and {h} cm wide. A right-angled triangle with short sides {cuts[0][0]} cm and {cuts[0][1]} cm is cut off one corner. Another right-angled triangle with short sides {cuts[1][0]} cm and {cuts[1][1]} cm is cut off a different corner. What is the area of the card that is left?",
+      "A rectangular card is {w} cm long and {h} cm wide. Mia cuts off two corners. The first cut takes away a right-angled triangle with short sides {cuts[0][0]} cm and {cuts[0][1]} cm. The second cut takes away a right-angled triangle with short sides {cuts[1][0]} cm and {cuts[1][1]} cm. How much card is left? Give its area.",
       "Find the area of the whole rectangle. Then find the area of each triangle that was cut off.",
       "The rectangle has an area of {w} × {h} = {full} cm². The triangles have areas of 6 × 4 ÷ 2 = 12 cm² and 5 × 8 ÷ 2 = 20 cm². {full} − 12 − 20 = {ans}.",
       p=dict(w=20, h=14, cuts=[[6, 4], [5, 8]], unit=1), unit='cm²', sub='triangle_area.cut_corners'),

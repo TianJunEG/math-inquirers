@@ -241,7 +241,7 @@
     "sub": "sequence.alternating_steps",
     "family": "sequence",
     "p": {
-     "start": 3,
+     "start": 10,
      "deltas": [
       5,
       -2
@@ -253,30 +253,29 @@
      "a": 5,
      "b": 2,
      "nth": 11,
-     "first": "3, 8, 6, 11"
+     "first": "10, 15, 13, 18"
     },
     "fmt": "int",
     "type": "n",
-    "ans": "18",
-    "shown": "18",
+    "ans": "25",
+    "shown": "25",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "19",
-     "17",
-     "20",
-     "16",
-     "36",
-     "9",
-     "28",
-     "8",
-     "180"
+     "26",
+     "24",
+     "27",
+     "23",
+     "50",
+     "35",
+     "15",
+     "250"
     ],
-    "q": "Dina writes a number pattern. She starts with 3. Then she adds 5, takes away 2, adds 5, takes away 2, and so on. Her first numbers are 3, 8, 6, 11. What is the 11th number she writes?",
+    "q": "Dina plays a counting game with her cousin. She says 10. Next she says the number that is 5 more, then the number that is 2 less, then 5 more, then 2 less, and so on. The numbers she says are 10, 15, 13, 18 and on. What is the 11th number she says?",
     "hint": "Look at the adding and the taking away together. They change the number by the same amount every time.",
-    "why": "Adding 5 and taking away 2 makes the number 3 bigger each time. The 11th number comes after 10 steps, which is 5 pairs of steps: 3 + 5 × 3 = 18.",
+    "why": "Adding 5 and taking away 2 makes the number 3 bigger each time. The 11th number comes after 10 steps, which is 5 pairs of steps: 10 + 5 × 3 = 25.",
     "date": "11-06"
    },
    {
@@ -288,15 +287,15 @@
     "sub": "division.share",
     "family": "division",
     "p": {
-     "total": 48,
+     "total": 36,
      "k": 4,
      "ask": "each"
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "12",
-    "shown": "12 cm",
+    "ans": "9",
+    "shown": "9 cm",
     "units": [
      "cm",
      "centimetre",
@@ -308,19 +307,17 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "13",
-     "11",
-     "14",
      "10",
-     "24",
-     "6",
-     "22",
-     "2",
-     "120"
+     "8",
+     "11",
+     "7",
+     "18",
+     "19",
+     "90"
     ],
-    "q": "Uncle cuts a bamboo pole that is 48 cm long into 4 pieces of the same length. How long is each piece?",
-    "hint": "Share the length into equal parts. Which number times 4 makes 48?",
-    "why": "4 pieces of 12 cm each: 12 + 12 + 12 + 12 = 48, so each piece is 12 cm long.",
+    "q": "Uncle cuts a bamboo pole that is 36 cm long into 4 pieces of the same length. How long is each piece?",
+    "hint": "Share the length into equal parts. Which number times 4 makes 36?",
+    "why": "4 pieces of 9 cm each: 9 + 9 + 9 + 9 = 36, so each piece is 9 cm long.",
     "date": "11-07"
    },
    {
@@ -334,14 +331,14 @@
     "p": {
      "mode": "longer",
      "w": 4,
-     "d": 3,
-     "n": 21
+     "d": 5,
+     "n": 12
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "10",
-    "shown": "10 days",
+    "ans": "21",
+    "shown": "21 days",
     "units": [
      "day",
      "days"
@@ -350,18 +347,18 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "11",
-     "9",
-     "12",
-     "8",
+     "22",
      "20",
-     "5",
-     "0",
-     "100"
+     "23",
+     "19",
+     "42",
+     "31",
+     "11",
+     "210"
     ],
-    "q": "Tara's holiday lasts 4 weeks and 3 days. Raj's holiday lasts 21 days. How many days longer is Tara's holiday?",
+    "q": "Tara's holiday lasts 4 weeks and 5 days. Raj's holiday lasts 12 days. How many days longer is Tara's holiday?",
     "hint": "There are 7 days in a week. Change Tara's weeks into days first.",
-    "why": "4 weeks are 4 × 7 = 28 days. With 3 more days, Tara's holiday is 28 + 3 = 31 days long. 31 − 21 = 10 days.",
+    "why": "4 weeks are 4 × 7 = 28 days. With 5 more days, Tara's holiday is 28 + 5 = 33 days long. 33 − 12 = 21 days.",
     "date": "11-08"
    },
    {
@@ -419,34 +416,35 @@
     "sub": "ages.sum_later",
     "family": "ages",
     "p": {
-     "a": 7,
-     "b": 4,
-     "target": 25
+     "a": 9,
+     "b": 5,
+     "target": 30
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "7",
-    "shown": "7 years",
+    "ans": "8",
+    "shown": "8 birthdays",
     "units": [
-     "year",
-     "years"
+     "birthdays",
+     "birthday"
     ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "8",
-     "6",
      "9",
-     "5",
-     "14",
-     "17",
-     "70"
+     "7",
+     "10",
+     "6",
+     "16",
+     "4",
+     "18",
+     "80"
     ],
-    "q": "Ravi is 7 years old and his sister is 4 years old. In how many years will their ages add up to 25?",
-    "hint": "Add their ages now. Every year each of them gets one year older, so the total grows by the same amount each year.",
-    "why": "Now their ages add up to 7 + 4 = 11. Each year the total grows by 2, because both are a year older. They need 25 − 11 = 14 more, and 14 ÷ 2 = 7 years.",
+    "q": "Siti is 9 and her brother is 5. They both have a birthday once a year. After how many birthdays will the sum of their ages be 30?",
+    "hint": "Add their ages now. At every birthday each of them gets one year older, so the sum grows by the same amount each time.",
+    "why": "Now their ages add up to 9 + 5 = 14. At each birthday the sum grows by 2, because both get a year older. They need 30 − 14 = 16 more, and 16 ÷ 2 = 8 birthdays.",
     "date": "11-10"
    },
    {
@@ -876,15 +874,15 @@
     "sub": "counting_line.posts_loop",
     "family": "counting_line",
     "p": {
-     "length": 60,
+     "length": 80,
      "gap": 5,
      "closed": true
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "12",
-    "shown": "12 flags",
+    "ans": "16",
+    "shown": "16 flags",
     "units": [
      "flags",
      "flag"
@@ -893,19 +891,19 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "13",
-     "11",
+     "17",
+     "15",
+     "18",
      "14",
-     "10",
-     "24",
+     "32",
+     "8",
+     "26",
      "6",
-     "22",
-     "2",
-     "120"
+     "160"
     ],
-    "q": "A running track round the school field is 60 m long. A flag stands every 5 m, all the way round the track. How many flags are there?",
+    "q": "A running track round the school field is 80 m long. A flag stands every 5 m, all the way round the track. How many flags are there?",
     "hint": "The track is a loop, so the last flag is right next to the first flag.",
-    "why": "60 ÷ 5 = 12 flags. On a loop there are as many flags as gaps between them.",
+    "why": "80 ÷ 5 = 16 flags. On a loop there are as many flags as gaps between them.",
     "date": "11-21"
    },
    {
@@ -1125,35 +1123,34 @@
     "sub": "number_line.equal_marks",
     "family": "number_line",
     "p": {
-     "start": 20,
-     "end": 70,
-     "marks": 6,
-     "k": 4,
+     "start": 15,
+     "end": 75,
+     "marks": 7,
+     "k": 5,
      "ask": "value"
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "50",
-    "shown": "50",
+    "ans": "55",
+    "shown": "55",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "51",
-     "49",
-     "52",
-     "48",
-     "100",
-     "25",
-     "60",
-     "40",
-     "500"
+     "56",
+     "54",
+     "57",
+     "53",
+     "110",
+     "65",
+     "45",
+     "550"
     ],
-    "q": "Ben draws 6 marks on a long paper strip. The marks are the same distance apart. The first mark says 20 and the last mark says 70. What does mark number 4 say?",
+    "q": "Ben draws 7 marks on a long paper strip. The marks are the same distance apart. The first mark says 15 and the last mark says 75. What does mark number 5 say?",
     "hint": "Count the gaps between the marks, not the marks. Then find how much one gap is worth.",
-    "why": "6 marks make 5 gaps. From 20 to 70 is 70 − 20 = 50, so one gap is 50 ÷ 5 = 10. Mark number 4 is 3 gaps from the first mark: 20 + 3 × 10 = 50.",
+    "why": "7 marks make 6 gaps. From 15 to 75 is 75 − 15 = 60, so one gap is 60 ÷ 6 = 10. Mark number 5 is 4 gaps from the first mark: 15 + 4 × 10 = 55.",
     "date": "11-27"
    },
    {
@@ -1833,7 +1830,7 @@
     ],
     "q": "Five number cards lie in a row: 4  2  5  1  3. You may only swap two cards that are next to each other. What is the fewest number of swaps that puts the cards in order, from 1 to 5?",
     "hint": "Look for pairs where a bigger card is to the left of a smaller card. A swap of two neighbours can fix only one such pair.",
-    "why": "The pairs the wrong way round are 4 and 2, 4 and 1, 4 and 3, 2 and 1, 5 and 1, and 5 and 3. One swap of neighbours fixes exactly one pair, so 6 swaps swaps are needed.",
+    "why": "The pairs the wrong way round are 4 and 2, 4 and 1, 4 and 3, 2 and 1, 5 and 1, and 5 and 3. One swap of neighbours fixes exactly one pair, so 6 swaps are needed.",
     "date": "11-13"
    },
    {
@@ -2013,14 +2010,14 @@
     "family": "counting_line",
     "p": {
      "n1": 5,
-     "t1": 12,
-     "n2": 9
+     "t1": 20,
+     "n2": 7
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "24",
-    "shown": "24 minutes",
+    "ans": "30",
+    "shown": "30 minutes",
     "units": [
      "min",
      "mins",
@@ -2031,19 +2028,19 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "25",
-     "23",
-     "26",
-     "22",
-     "48",
-     "12",
-     "34",
-     "14",
-     "240"
+     "31",
+     "29",
+     "32",
+     "28",
+     "60",
+     "15",
+     "40",
+     "20",
+     "300"
     ],
-    "q": "Mr Tan saws a long plank into 5 equal pieces. Every cut takes the same time, and the sawing takes 12 minutes in all. How many minutes would it take to saw another plank like it into 9 equal pieces?",
+    "q": "Mr Tan saws a long plank into 5 equal pieces. Every cut takes the same time, and the sawing takes 20 minutes in all. How many minutes would it take to saw another plank like it into 7 equal pieces?",
     "hint": "Count the cuts, not the pieces. How many cuts make 5 pieces?",
-    "why": "5 pieces need 4 cuts. 12 ÷ 4 = 3 minutes for one cut. 9 pieces need 8 cuts: 8 × 3 = 24 minutes minutes.",
+    "why": "5 pieces need 4 cuts. 20 ÷ 4 = 5 minutes for one cut. 7 pieces need 6 cuts: 6 × 5 = 30 minutes.",
     "date": "11-17"
    },
    {
@@ -2186,15 +2183,15 @@
     "sub": "division.share",
     "family": "division",
     "p": {
-     "total": 74,
+     "total": 62,
      "k": 5,
      "ask": "boxes"
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "15",
-    "shown": "15 buses",
+    "ans": "13",
+    "shown": "13 buses",
     "units": [
      "buses",
      "buse"
@@ -2203,18 +2200,18 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "16",
      "14",
-     "17",
-     "13",
-     "30",
-     "25",
-     "5",
-     "150"
+     "12",
+     "15",
+     "11",
+     "26",
+     "23",
+     "3",
+     "130"
     ],
-    "q": "A school trip has 74 children. Each bus seats 5 children. How many buses must the school book so that every child has a seat?",
+    "q": "A school trip has 62 children. Each bus seats 5 children. How many buses must the school book so that every child has a seat?",
     "hint": "Divide the children by the seats on a bus. What do you do with the remainder?",
-    "why": "14 buses carry 14 × 5 = 70 children. 4 children are left, and they need another bus. So the school needs 15 buses.",
+    "why": "12 buses carry 12 × 5 = 60 children. 2 children are left, and they need another bus. So the school needs 13 buses.",
     "date": "11-21"
    },
    {
@@ -2849,32 +2846,33 @@
     "sub": "clock_reading.mirror_time",
     "family": "clock_reading",
     "p": {
-     "h": 3,
-     "m": 40,
-     "ask": "hour"
+     "h": 2,
+     "m": 20,
+     "ask": "minutes"
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "8",
-    "shown": "8",
+    "ans": "40",
+    "shown": "40",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "9",
-     "7",
-     "10",
-     "6",
-     "16",
-     "4",
-     "18",
-     "80"
+     "41",
+     "39",
+     "42",
+     "38",
+     "80",
+     "20",
+     "50",
+     "30",
+     "400"
     ],
-    "q": "Aisha sees a wall clock in a mirror. In the mirror, the clock shows 3:40. What is the real time? Give the hour only, for example 7 for 7:20.",
+    "q": "Aisha sees a wall clock in a mirror. In the mirror, the clock shows 2:20. What is the real time? Give only the minutes after the hour, for example 20 for 7:20.",
     "hint": "A mirror turns left into right. The real time and the time in the mirror add up to 12 hours.",
-    "why": "The mirror time and the real time add up to 12 hours. Taking 3:40 from 12:00 leaves 8:20, so the real time is 8:20 and the hour is 8.",
+    "why": "The mirror time and the real time add up to 12 hours. Taking 2:20 from 12:00 leaves 9:40, so the real time is 9:40, which is 40 minutes after 9 o'clock.",
     "date": "11-06"
    },
    {
@@ -3055,30 +3053,31 @@
     "family": "series_sum",
     "p": {
      "n": 24,
-     "got": 287
+     "got": 282
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "13",
-    "shown": "13",
+    "ans": "18",
+    "shown": "18",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "14",
-     "12",
-     "15",
-     "11",
-     "26",
-     "23",
-     "3",
-     "130"
+     "19",
+     "17",
+     "20",
+     "16",
+     "36",
+     "9",
+     "28",
+     "8",
+     "180"
     ],
-    "q": "Hana adds all the whole numbers from 1 to 24. She gets 287, but she left out one number by mistake. Which number did she leave out?",
+    "q": "Hana adds all the whole numbers from 1 to 24. She gets 282, but she left out one number by mistake. Which number did she leave out?",
     "hint": "Work out what the total should be. Pair the numbers: 1 with the biggest, 2 with the next biggest, and so on.",
-    "why": "There are 24 ÷ 2 = 12 pairs, and each pair adds up to 1 + 24 = 25. The total should be 12 × 25 = 300. 300 − 287 = 13.",
+    "why": "There are 24 ÷ 2 = 12 pairs, and each pair adds up to 1 + 24 = 25. The total should be 12 × 25 = 300. 300 − 282 = 18.",
     "date": "11-11"
    },
    {
@@ -3368,36 +3367,36 @@
       61,
       35,
       29,
-      90
+      72
      ],
      "rule": "digit_sum",
      "place": 3
     },
     "t": {
-     "cards": "48, 61, 35, 29 and 90"
+     "cards": "48, 61, 35, 29 and 72"
     },
     "fmt": "int",
     "type": "n",
-    "ans": "90",
-    "shown": "90",
+    "ans": "72",
+    "shown": "72",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "91",
-     "89",
-     "92",
-     "88",
-     "180",
-     "45",
-     "100",
-     "80",
-     "900"
+     "73",
+     "71",
+     "74",
+     "70",
+     "144",
+     "36",
+     "82",
+     "62",
+     "720"
     ],
-    "q": "Five number cards are 48, 61, 35, 29 and 90. Hana puts them in a row, from the smallest digit sum to the biggest digit sum. The digit sum of 52 is 5 + 2 = 7. Which card is third in her row?",
+    "q": "Five number cards are 48, 61, 35, 29 and 72. Hana puts them in a row, from the smallest digit sum to the biggest digit sum. The digit sum of 52 is 5 + 2 = 7. Which card is third in her row?",
     "hint": "Work out the digit sum of each card. Then put the sums in order.",
-    "why": "The digit sums are 12 for 48, 7 for 61, 8 for 35, 11 for 29 and 9 for 90. In order they are 7, 8, 9, 11, 12, which belong to 61, 35, 90, 29, 48. The third card is 90.",
+    "why": "The digit sums are 12 for 48, 7 for 61, 8 for 35, 11 for 29 and 9 for 72. In order they are 7, 8, 9, 11, 12, which belong to 61, 35, 72, 29, 48. The third card is 72.",
     "date": "11-18"
    },
    {
@@ -3914,7 +3913,7 @@
     ],
     "q": "Ali has a 5 litre jug and a 3 litre jug, with no marks on either. One step is: fill a jug at the tap, empty a jug, or pour from one jug into the other until the first is empty or the second is full. What is the fewest number of steps to measure exactly 4 litres?",
     "hint": "Try filling the big jug first and pouring into the small jug. What is left in the big jug?",
-    "why": "Fill the 5 litre jug (1 step). Pour into the 3 litre jug (2). Empty the 3 litre jug (3). Pour the 2 litres that are left into it (4). Fill the 5 litre jug (5). Pour until the 3 litre jug is full (6): it takes 1 litre, so 4 litres are left. That is 6 steps steps.",
+    "why": "Fill the 5 litre jug (1 step). Pour into the 3 litre jug (2). Empty the 3 litre jug (3). Pour the 2 litres that are left into it (4). Fill the 5 litre jug (5). Pour until the 3 litre jug is full (6): it takes 1 litre, so 4 litres are left. That is 6 steps.",
     "date": "11-30"
    }
   ],
@@ -6479,7 +6478,7 @@
      "238",
      "2480"
     ],
-    "q": "A rectangular card is 20 cm long and 14 cm wide. A right-angled triangle with short sides 6 cm and 4 cm is cut off one corner. Another right-angled triangle with short sides 5 cm and 8 cm is cut off a different corner. What is the area of the card that is left?",
+    "q": "A rectangular card is 20 cm long and 14 cm wide. Mia cuts off two corners. The first cut takes away a right-angled triangle with short sides 6 cm and 4 cm. The second cut takes away a right-angled triangle with short sides 5 cm and 8 cm. How much card is left? Give its area.",
     "hint": "Find the area of the whole rectangle. Then find the area of each triangle that was cut off.",
     "why": "The rectangle has an area of 20 × 14 = 280 cm². The triangles have areas of 6 × 4 ÷ 2 = 12 cm² and 5 × 8 ÷ 2 = 20 cm². 280 − 12 − 20 = 248 cm².",
     "date": "11-29"
@@ -7771,39 +7770,45 @@
     "date": "11-29"
    },
    {
-    "id": "L6-cakesplit",
+    "id": "L6-juicecups",
     "level": 6,
-    "frame": "cakesplit",
+    "frame": "juicecups",
     "kind": "share_fraction",
     "topic": "Fractions",
     "sub": "fractions.share_fraction",
     "family": "fractions",
     "p": {
-     "num": 5,
-     "den": 6,
-     "people": 4
+     "num": 7,
+     "den": 8,
+     "people": 3
     },
     "t": {},
     "fmt": "frac",
     "type": "n",
-    "ans": "5/24",
-    "shown": "5/24",
-    "units": [],
+    "ans": "7/24",
+    "shown": "7/24 L",
+    "units": [
+     "l",
+     "litre",
+     "litres",
+     "liter",
+     "liters"
+    ],
     "prefix": [],
     "accept": [],
     "exact": true,
     "wrong": [
-     "29/24",
-     "53/24",
-     "5/12",
-     "5/48",
-     "245/24",
-     "17/24",
-     "25/12"
+     "31/24",
+     "55/24",
+     "7/12",
+     "7/48",
+     "247/24",
+     "19/24",
+     "35/12"
     ],
-    "q": "Mum has 5/6 of a cake left. She shares it equally among her 4 children. What fraction of the whole cake does each child get?",
-    "hint": "Sharing equally among 4 children means dividing the amount by 4. Think of cutting each part of the leftover cake into 4 smaller pieces.",
-    "why": "5/6 ÷ 4 = 5/6 × 1/4 = 5/24. Each child gets 5/24 of the whole cake.",
+    "q": "A jug has 7/8 of a litre of juice left. Aisha pours it equally into 3 cups. How much juice, in litres, is in each cup?",
+    "hint": "Dividing by 3 means cutting each part of the juice into 3 smaller parts.",
+    "why": "7/8 ÷ 3 = 7/8 × 1/3 = 7/24 L. Each cup has 7/24 L of a litre.",
     "date": "11-30"
    }
   ]

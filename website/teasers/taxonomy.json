@@ -3494,7 +3494,8 @@
     "share_fraction"
    ],
    "cite": "MOE P6 NA Fractions 1.1 divide a proper fraction by a whole number, p.43",
-   "round": 3
+   "round": 3,
+   "note": "round 3: the story must not repeat extension l5_u02 (5/6 of a cake shared among children)"
   },
   "programs.branching": {
    "name": "trace a program with a loop and an if that does one thing for even and another for odd",
@@ -3523,18 +3524,20 @@
   },
   "number_arrangement.triangle_sides": {
    "name": "six numbers on the corners and sides of a triangle with equal side sums: which numbers are in the corners",
-   "levels": [
+   "levels": [],
+   "kinds": [
+    "triangle_sides"
+   ],
+   "cite": "MOE P1 NA Addition and Subtraction 2.4 adding more than two 1-digit numbers and 2.5 within 100, p.31; Problem solving: guess and check, make a list, p.13",
+   "round": 3,
+   "levels_before": [
     1,
     2,
     3,
     4,
     5
    ],
-   "kinds": [
-    "triangle_sides"
-   ],
-   "cite": "MOE P1 NA Addition and Subtraction 2.4 adding more than two 1-digit numbers and 2.5 within 100, p.31; Problem solving: guess and check, make a list, p.13",
-   "round": 3
+   "retired": "round 3: the verifier found the same story as docs/sasmo/g3_original_problems_draft.md (numbers on the sides of a triangle with equal side sums); kept as a tested kind but not used"
   },
   "digit_display.segments": {
    "name": "sticks or segments needed to show a run of numbers on a display (table given)",
