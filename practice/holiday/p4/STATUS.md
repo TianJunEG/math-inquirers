@@ -69,3 +69,29 @@ Open questions:
 - Typed fractions need a slash and mixed numbers a space ("2 3/5"); words ("two and three fifths") are not matched. Typed-fraction and sentence items use the normal text keyboard (no `inputmode`), plain-number items the number pad; worth a real-phone check.
 - L3 target sentences accept every writing found by search; very unusual extra brackets (more than are needed for a sentence of four numbers) are not accepted. Any other correct sentence is accepted.
 - The L4 workbook text writes fractions stacked (HTML); online they are written 3/8, as in the print for the Think harder and Go further pages.
+
+# Week 3 (lessons 5 and 6): Decimal Detectives and Angle Turns
+
+Week 3 = lessons 5 and 6 (Tue 8 Dec and Fri 11 Dec, `website/data/beta_schedule.json`, Level 4 group L4A, confirmed).
+Build: `python3 practice/holiday/build_holiday.py p4 5` (and `p4 6`); test: `python3 practice/holiday/test_holiday.py p4 5` (and `6`). Both pass (RESULT: OK). Sources: `p4/content/l5.js`, `l6.js` (`workbook()`, `gaps.invest`, `qbank.stretch[0:4]`, `qbank.challenge[-3:]`). Level helpers added to `p4/p4lib.py` (Decimal helpers, figures); shared files untouched.
+
+| | Lesson 5 Decimal Detectives | Lesson 6 Angle Turns |
+|---|---|---|
+| Items | 37 | 33 |
+| Auto-marked | 34 | 27 |
+| Self-check with a model answer | 3 (1 open) | 5 (1 open) |
+| Paper-only (protractor) | 0 | 1 (Q1 measure, correct angles shown after submit) |
+| Variant families (all combinations run against an oracle) | 1 (18) | 5 (40) |
+| Question text as printed / reworded to fit one screen | 14 / 23 | 9 / 24 |
+
+Audit rules applied from the start: no stem, hint or example shows another card's answer (e.g. the Investigation hints do not print 0.350/0.360; the 4(a) example uses other cards); hints nudge only; typed explanations are self-checks; every accepted writing listed (6.3, 6.30, 6.300, $4.10, 0.4 kg, 120°); lists accept commas, spaces or "and"; solutions only state facts that were computed.
+
+Not mirrored, or mirrored differently:
+- "Looking back" box (generic reflection), as in weeks 1 and 2.
+- L5: decimal answers are typed text (the number box is whole numbers only), so L5 has only one variant family (whole-number answers only). Q1 is one card per arrow (A to E) plus 1(f). Q5 and G6 are one card per child. Investigation (a) "find a decimal" accepts every decimal between 0.35 and 0.36 up to 5 places (999 writings). Investigation (b) "as many as you can" asks for ALL nine (the printed key says nine). Printed "Is Siti right?" sits after part (a), which already asks to find a decimal between, so the choice is easy (inherent in the print).
+- L6: Q1 estimate is an auto-marked choice of letters (which angles are bigger than a right angle, from the printed key); the measure is paper-only (needs a protractor on the printed page). Q2(b) "name every angle" is a self-check, with two auto cards for the two non-obvious sizes (BOD, AOD) so the stem does not reveal the count in 2(a). Q4(c) answer "135° clockwise" is two cards. Investigation (a) "as many sets as you can" is: find another set (auto), count the sets (auto), explain how you checked (self); 90° sets and 180° sets are counted, not typed in full. Think harder 4 cards are numbered 1 to 4 so the pairs can be typed (1+3, 2+4). The Q1 table "my estimate / I measured" boxes are not typed.
+- No hand-drawn extras: all figures redrawn as SVG (number lines, bar models, scales, jugs, fan, clocks, compass, rectangle/square corners, overlapping squares), checked at 390 px.
+
+Open questions:
+- Decimals need the text keyboard; check on a real phone.
+- Investigation (a) accepts at most 5 decimal places.
