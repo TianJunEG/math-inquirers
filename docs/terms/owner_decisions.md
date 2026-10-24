@@ -352,3 +352,6 @@ Owner: "Words-ok". Cross-level code-word repeats (school booklets P1–P6) are a
 
 ## 2026-10-24 — L1-SIZES-OK
 Owner: "L1-sizes-ok". Level 1 term books: Quest tool rows (Book 2 9.1 pt, Book 6 7.9 pt), figure/table text 10.7–11.4 pt, and draw clocks ~31 mm are accepted for now; judge on a printed proof. No layout redo.
+
+## 2026-10-24 — P6L10-REMOVE-OLD
+Owner: "P6l10-remove-old". Remove the stray old file p6l10-warm2 from the live private P6 Lesson 10 deck (the artifact itself is kept).
