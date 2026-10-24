@@ -759,7 +759,8 @@
       "S5",
       "S6"
      ],
-     "short": true
+     "short": true,
+    "vw": 270
     }
    ],
    "note": "Read questions 4 to 6 aloud. Question 4: fill in the missing numbers in the list; every pair makes 9. Question 5: count the dots by rows. Question 6: how many squares are not yellow. Wait 10 seconds before helping."
@@ -1604,7 +1605,7 @@
      },
      {
       "k": "READ",
-      "text": "E1. How many squares are in the grid? Write the number. E2. Each box is one way to wear a hat and a scarf. How many ways are there? E3. Four friends make pairs. One pair is missing from the list. Write the missing pair."
+      "text": "E1. How many squares are in the grid? Write the number. E2. Ali crosses the river by one of 3 bridges. Then he takes one of 3 buses home. Each box is one way to go home. How many ways are there? E3. Four friends make pairs. One pair is missing from the list. Write the missing pair."
      },
      {
       "k": "WORK",

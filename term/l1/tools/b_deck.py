@@ -109,7 +109,7 @@ def say(text):
     return f'<div style="background:{NAVY};color:{CREAM};border-radius:24px;padding:22px 40px;align-self:flex-start"><p style="font-family:{HF};font-size:56px;font-weight:600;line-height:1.2">{E(text)}</p></div>'
 
 
-def qs_block(d, ids, short):
+def qs_block(d, ids, short, vw=None):
     qm = qmap(d)
     compact = len(ids) >= 4
     rows = []
@@ -122,12 +122,12 @@ def qs_block(d, ids, short):
             parts += f'<p style="font-size:{30 if compact else 34}px;font-weight:600;color:{MUTED}">{E("(" + p["l"] + ")  " if p["l"] else "")}{blanks_dash(p["text"])}</p>'
         vis = ''
         if q.get('visual') and q['visual'].get('type') != 'hundred':   # a 100 square does not fit in a question row
-            vis = f'<div style="width:{240 if compact else 340}px;flex:none">{svg.render_visual(q["visual"])}</div>'
+            vis = f'<div style="width:{vw or (240 if compact else 340)}px;flex:none">{svg.render_visual(q["visual"])}</div>'
         wide_vis = ''
         for vv in q.get('visuals') or []:
             if vv.get('type') == 'hundred': continue
             wide = vv.get('type') in ('table', 'bar_model', 'line_up', 'seq', 'number_line', 'picture_equation')
-            w = (440 if compact else 560) if wide else (200 if compact else 280)
+            w = (440 if compact else 560) if wide else (vw or (200 if compact else 280))
             vis += f'<div style="width:{w}px;flex:none">{svg.render_visual(vv)}</div>'
         if wide_vis: parts += wide_vis
         rows.append(f'<div style="{CARD}padding:{5 if compact else 16}px 30px;display:flex;gap:26px;align-items:center"><span style="flex:none;background:{YEL};border:3px solid {NAVY};border-radius:6px;padding:2px 16px;font-family:{HF};font-size:36px;font-weight:700">{E(i)}</span>'
@@ -176,7 +176,7 @@ def render_blocks(d, blocks, cols=1):
         elif t == 'list': out.append(listing(b['items'], b.get('ordered', False)))
         elif t == 'card': out.append(card(b.get('head'), b['items']))
         elif t == 'visual': out.append(visual(b, cols))
-        elif t == 'qs': out.append(qs_block(d, b['ids'], b.get('short', False)))
+        elif t == 'qs': out.append(qs_block(d, b['ids'], b.get('short', False), b.get('vw')))
         elif t == 'answers': out.append(answers_block(d, b['ids']))
         elif t == 'say': out.append(say(b['text']))
         elif t == 'numrow': out.append(numrow(b['items']))

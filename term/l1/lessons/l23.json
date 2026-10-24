@@ -904,7 +904,8 @@
       "S2",
       "S3"
      ],
-     "short": true
+     "short": true,
+    "vw": 190
     }
    ],
    "note": "Read questions 1 to 3 aloud. Children work on their own with their clock; the tutor walks the cameras and asks how do you know. Wait 10 seconds before helping. After question 3 any child may choose to carry on or try Think harder. Question 1: a class starts at 8 o'clock and lasts 1 hour; draw the hands on the empty clock and write the end. Question 2: read the start clock; the film lasts 1 hour. Question 3: Ali swims from 8:30 am for 1 hour."
@@ -1146,7 +1147,7 @@
      ]
     }
    ],
-   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: 8:30; option 3, 2:30; 6:30 pm."
+   "note": "Read each answer aloud. Children tick their own ticket with a tick. Answers: 7:30; option 3, 2:30; clock A (4:30)."
   },
   {
    "id": "s-look",
@@ -1850,7 +1851,7 @@
      },
      {
       "k": "READ",
-      "text": "E1. The game starts at 6:30. It lasts 1 hour. What time does the game end? E2. It is 2 o'clock. What time is it half an hour later? Choose the correct answer. Option 1: 2:05. Option 2: 2:15. Option 3: 2:30. Option 4: 3:00. Write its number in the bracket. E3. The clock shows 12 o'clock. The lesson ended then and lasted half an hour. What time did it start?",
+      "text": "E1. The game starts at 6:30. It lasts 1 hour. What time does the game end? E2. It is 2 o'clock. What time is it half an hour later? Choose the correct answer. Option 1: 2:05. Option 2: 2:15. Option 3: 2:30. Option 4: 3:00. Write its number in the bracket. E3. The class ends at 5 o'clock. It lasted half an hour. Which clock shows when it started? Circle A, B or C.",
       "s": 60
      },
      {
@@ -1864,7 +1865,7 @@
      },
      {
       "k": "READ",
-      "text": "E1: 7:30. E2: option 3, 2:30. E3: 11:30."
+      "text": "E1: 7:30. E2: option 3, 2:30. E3: clock A."
      },
      {
       "k": "SAY",
