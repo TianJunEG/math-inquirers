@@ -39,4 +39,4 @@ Capacity verdict for the full year (a plan for January to October, not a defect 
 
 Skeleton matches with our own sources that were reviewed by hand (same masked wording, but no shared numbers): 2
 - REVIEW L2-grandpaage [11-24]: skeleton 0.65 like "Suggested home: T3.7. **B10.1** [T] Ali is 9 years old. His aunt is 34 years old. How old will his aunt be whe ..." (docs/books/word_problems_g1_g2_original_draft.md), shared numbers 0
-- REVIEW L2-edgecount [12-21]: skeleton 0.86 like "Ben has 3 more marbles than Ali. How many marbles does Ben have? You may draw them.", "q2": "How many marbles  ..." (term/l1/lessons/l10.json), shared numbers 0
+- REVIEW L2-edgecount [12-21]: skeleton 0.86 like "{ "k": "READ", "text": "Puzzle two. How many marbles do Ali and Ben have altogether? ..." (term/l1/lessons/l10.json), shared numbers 0

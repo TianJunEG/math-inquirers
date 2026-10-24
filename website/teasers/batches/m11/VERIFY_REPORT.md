@@ -13,14 +13,14 @@ Method: every puzzle is re-solved by `brute.py` (independent of the author solve
 
 Similarity sources checked: holiday banks, own term lessons, all extension workbook data, the school booklets, our book drafts and catalogues, external private source files, and the seven fixed website puzzles.
 
-FAIL count: 0. REVIEW items: 100.
+FAIL count: 0. REVIEW items: 101.
 
 
 - REVIEW L1-drinksmachine [11-03]: story words 3 of 5 like "| | EX-BACK-2 | Think harder | 5 | Aisha bought 4 notebooks the same price. She paid with  ..." (docs/books/p2_non_routine_catalogue.md)
 - REVIEW L1-seatrow [11-04]: number 1 in the question is not a parameter (written in the wording; check)
 - REVIEW L1-seatrow [11-04]: number 2 in the question is not a parameter (written in the wording; check)
 - REVIEW L1-bamboo [11-07]: story words 3 of 5 like "- **NY18T2 Q8** | 1 mk | length | LOG | d3 | pic Y - Q: Ali has a ribbon shorter than 30 c ..." (docs/books/private_p2_papers/non_routine_questions.md)
-- REVIEW L1-swimcourse [11-15]: story words 3 of 5 like "W.push(...lines(1)); W.push(q(5, 'Trick 2: draw a time line and jump to the next o’clock.' ..." (p3/content/l9.js)
+- REVIEW L1-swimcourse [11-15]: story words 3 of 5 like "(a) How many days will Jean take to finish reading the book? (b) Jean starts reading the b ..." (docs/books/private_p2_papers/non_routine_questions.md)
 - REVIEW L1-secret63 [11-16]: number 2 in the question is not a parameter (written in the wording; check)
 - REVIEW L1-counterbox [11-17]: story words 4 of 5 like "Suggested home: Lesson 17 Think harder. **A5.1** [T] Box A holds 15 red pens and 21 blue p ..." (docs/books/word_problems_g1_g2_original_draft.md)
 - REVIEW L1-busminute [11-18]: story words 5 of 7 like "{ q: 'What is the angle between the hands of a clock at 3:30?', a: '75° (the minute hand p ..." (p4/content/l6.js)
@@ -64,7 +64,7 @@ FAIL count: 0. REVIEW items: 100.
 - REVIEW L4-theatrerows [11-01]: story words 3 of 3 like "- [CA1_2021_ACSJ Q10, 2m, Rows and seats, diff 3] Harry sat in the eleventh row from the s ..." (docs/books/private_p4_papers/non_routine_questions.md)
 - REVIEW L4-roundprices [11-07]: number 1 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-rects33 [11-08]: story words 3 of 5 like "Then fill column by column. A computer check found that this is the only grid that fits th ..." (docs/sasmo/g2_original_problems_draft.md)
-- REVIEW L4-pencilshare [11-15]: story words 3 of 5 like "Muffins at first. ANSWER: - [EOY_2024_NanHua P2-8, 3m, Fractions then ratio, diff 3] Samue ..." (docs/books/private_p5_papers/non_routine_questions.md)
+- REVIEW L4-pencilshare [11-15]: story words 3 of 5 like "- [EOY_2025_NanHua Q14, 2m, Factors and multiples, diff 2] Mr Tan has some pencils. The nu ..." (docs/books/private_p4_papers/non_routine_questions.md)
 - REVIEW L4-motherage [11-16]: story words 3 of 3 like "In how many years' time will their total age add up to 18? ANSWER: 4 - [SA1_2021_ACSJ Q44, ..." (docs/books/private_p4_papers/non_routine_questions.md)
 - REVIEW L4-milkjugs [11-17]: story words 4 of 5 like "| EX-DIAG-3 | Go further | 8, 24 | A tank is filled with 4 jugs of water. A jug holds 3 bo ..." (docs/books/p2_non_routine_catalogue.md)
 - REVIEW L4-books [11-20]: story words 3 of 4 like "| EX-BACK-2 | Think harder | 24, 39 | Lily bought a book and a pen. She paid with a $50 no ..." (docs/books/p1_non_routine_catalogue.md)
@@ -81,7 +81,7 @@ FAIL count: 0. REVIEW items: 100.
 - REVIEW L5-leak [11-13]: story words 7 of 9 like "- [EOY_2021_MGS P2-10, 3m, Tank leak empty time, diff 3] Tank 20 by 42 by 16 fraction fill ..." (docs/books/private_p5_papers/non_routine_questions.md)
 - REVIEW L5-cubes [11-14]: number 1 in the question is not a parameter (written in the wording; check)
 - REVIEW L5-cubes [11-14]: story words 3 of 5 like "10 cm deep? How many litres is the water when it is 10 cm deep? (1 ℓ = 1000 cm³.)', a: '30 ..." (p5/content/l5.js)
-- REVIEW L5-frogsteps [11-15]: story words 3 of 5 like ""text": "A frog is at the bottom of a well with 12 steps. Each day it climbs 4 steps. ..." (extension/data/l1_u05.json)
+- REVIEW L5-frogsteps [11-15]: story words 3 of 5 like "Solution: the steps are 1, 2, 3, 4, 5, then 6 and 7, so it goes 26, 33, 41 and jumps over  ..." (docs/sasmo/g2_original_problems_draft.md)
 - REVIEW L5-fieldwidth [11-17]: story words 3 of 3 like "- [EOY_2025_NanHua Q15, 2m, Area (path), diff 2] A field was built on a rectangular plot o ..." (docs/books/private_p4_papers/non_routine_questions.md)
 - REVIEW L5-palin5 [11-20]: number 48384 in the question is not a parameter (written in the wording; check)
 - REVIEW L5-palin5 [11-20]: number 5 in the question is not a parameter (written in the wording; check)
@@ -99,7 +99,7 @@ FAIL count: 0. REVIEW items: 100.
 - REVIEW L5-town [11-28]: story words 3 of 4 like ""1": ["Reading, comparing and rounding numbers up to 10 million, and riddles about large n ..." (p5/parent_side.json)
 - REVIEW L5-tank [11-29]: number 1 in the question is not a parameter (written in the wording; check)
 - REVIEW L5-tank [11-29]: number 1000 in the question is not a parameter (written in the wording; check)
-- REVIEW L6-redblue [11-01]: story words 3 of 4 like "ANSWER: $214 - [WA2_2025_ACSP_Quiz2 Q11, 4m, Fractions, diff 3] 3/8 of counters in a conta ..." (docs/books/private_p4_papers/non_routine_questions.md)
+- REVIEW L6-redblue [11-01]: story words 3 of 4 like "| How many red and green beads does Ali have altogether? (45 + 17 = 62; no other pair of c ..." (docs/books/p3_non_routine_catalogue.md)
 - REVIEW L6-hiddencubes [11-03]: number 216 in the question is not a parameter (written in the wording; check)
 - REVIEW L6-lockcode [11-05]: number 3 in the question is not a parameter (written in the wording; check)
 - REVIEW L6-freezer [11-07]: number 14 in the question is not a parameter (written in the wording; check)
@@ -107,6 +107,7 @@ FAIL count: 0. REVIEW items: 100.
 - REVIEW L6-primes100 [11-09]: number 1 in the question is not a parameter (written in the wording; check)
 - REVIEW L6-primes100 [11-09]: number 1 in the question is not a parameter (written in the wording; check)
 - REVIEW L6-turtle [11-13]: story words 7 of 10 like "core: [ { q: 'Walk a square: walk forward, turn on the spot by 90° to the right, and repea ..." (p6/content/l7.js)
+- REVIEW L6-phoneplan [11-15]: story words 5 of 7 like "For how many minutes in a month do the two plans cost the same?"], "q": "A4. Phone plan A  ..." (practice/holiday/p5/06/dist/data/p5l06.json)
 - REVIEW L6-bin45 [11-16]: number 6 in the question is not a parameter (written in the wording; check)
 - REVIEW L6-bin45 [11-16]: number 0 in the question is not a parameter (written in the wording; check)
 - REVIEW L6-bin45 [11-16]: number 10 in the question is not a parameter (written in the wording; check)

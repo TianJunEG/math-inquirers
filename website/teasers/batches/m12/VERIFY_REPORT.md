@@ -13,15 +13,16 @@ Method: every puzzle is re-solved by `brute.py` (independent of the author solve
 
 Similarity sources checked: holiday banks, own term lessons, all extension workbook data, the school booklets, our book drafts and catalogues, external private source files, and the seven fixed website puzzles.
 
-FAIL count: 0. REVIEW items: 84.
+FAIL count: 1. REVIEW items: 84.
 
+- FAIL L5-teams16 [12-09]: same story as a source: same wording with other numbers (8 of 17 word triples): "In a league of 6 teams, every team plays every other team twice (once at home, once away). How many  ..." (practice/holiday/p6/05/dist/data/p6l05.json) words league,match,once,play,team
 
 - REVIEW L1-rulerbill [12-01]: story words 3 of 4 like "skills: 'Reading scales, comparing changes, working from totals, reasoning about how a gra ..." (p4/content/l9.js)
 - REVIEW L1-storypages [12-02]: story words 3 of 5 like "- **PC19ShTime Q8** | - mk | time | CTX | d1 | pic Y - Q: Su Ping started reading her stor ..." (docs/books/private_p2_papers/non_routine_questions.md)
 - REVIEW L1-traysame [12-08]: story words 5 of 7 like "## 5. Worst case, pigeonhole and unattainable totals [draft, not yet in the program] (sugg ..." (docs/sasmo/g6_original_problems_draft.md)
 - REVIEW L1-chartwalk [12-09]: number 100 in the question is not a parameter (written in the wording; check)
 - REVIEW L1-chartwalk [12-09]: story words 4 of 6 like "E2. A counter is on twenty-six. It moves down one row, then right one square. ..." (term/l1/lessons/l04.json)
-- REVIEW L1-toycars [12-10]: story words 3 of 5 like "(This is a puzzle that goes further than the lesson.)' }, { q: 'A box of cereal costs $15  ..." (p5/content/l7.js)
+- REVIEW L1-toycars [12-10]: story words 3 of 5 like "- **RS19WS Q12-10** | - mk | money | BACK | d2 | pic N - Q: David bought 3 toy cars. He ga ..." (docs/books/private_p2_papers/non_routine_questions.md)
 - REVIEW L1-fourodds [12-12]: number 3 in the question is not a parameter (written in the wording; check)
 - REVIEW L1-fourodds [12-12]: number 5 in the question is not a parameter (written in the wording; check)
 - REVIEW L1-fourodds [12-12]: number 7 in the question is not a parameter (written in the wording; check)
@@ -29,6 +30,7 @@ FAIL count: 0. REVIEW items: 84.
 - REVIEW L1-shapeclue [12-13]: story words 3 of 3 like "Draw one and count. C3. &emsp;Draw a pentagon (a shape with 5 straight sides). ..." (hp/Math_Inquirers_P1_Question_Bank.html)
 - REVIEW L1-circlekids [12-18]: number 1 in the question is not a parameter (written in the wording; check)
 - REVIEW L1-stickertable [12-19]: story words 3 of 5 like "A: 378 **CMP-174** | 2024 | Nanyang | EOY | Q27 | 4 marks | DIV | difficulty 3 | picture n ..." (docs/books/private_p3_papers/non_routine_questions.md)
+- REVIEW L1-purse [12-21]: story words 3 of 4 like "A box holds 6 cans that all have the same mass. Look at the picture. What is the mass of o ..." (practice/holiday/p4/05/dist/data/p4l05.json)
 - REVIEW L1-whichsun [12-23]: story words 3 of 5 like "| EX-CTX-1 | Go further | 19 | A star plus a star plus a star makes 15. A star plus a moon ..." (docs/books/p1_non_routine_catalogue.md)
 - REVIEW L1-robottrack [12-29]: number 8 in the question is not a parameter (written in the wording; check)
 - REVIEW L1-bookshelf [12-31]: story words 4 of 6 like "W.push(H.q(2, 'The table shows how many books three classes borrowed from the library. Fil ..." (p4/content/l9.js)
@@ -66,9 +68,9 @@ FAIL count: 0. REVIEW items: 84.
 - REVIEW L3-beadbag [12-20]: story words 5 of 5 like "Solution: Ben has 5 units and Siti 3 units; after the gift they are equal, so the 2-unit g ..." (docs/sasmo/g5_original_problems_draft.md)
 - REVIEW L3-flagstrip [12-21]: story words 6 of 8 like "When do we first see a red star again? G3. &emsp;Beads repeat in a pattern of 5: red, red, ..." (hp/Math_Inquirers_P1_Question_Bank.html)
 - REVIEW L3-fourtiles [12-24]: story words 4 of 6 like "What is the most squares in a row a net can have?', a: 'With 5 in a row, four squares wrap ..." (p4/content/l8.js)
-- REVIEW L3-secondthursday [12-26]: story words 3 of 4 like ""tool_name": "Make a table", "q": "A month has 30 days. The 1st of the month is a Tuesday. ..." (p2/qbank_skills.json)
+- REVIEW L3-secondthursday [12-26]: story words 3 of 4 like "b) Wednesday. c) Thursday.", "say": "Write the dates in rows of 7 under the days of the we ..." (p2/qbank_skills.json)
 - REVIEW L3-floortiles2 [12-30]: number 1 in the question is not a parameter (written in the wording; check)
-- REVIEW L4-addpattern [12-01]: story words 3 of 4 like "Compare with a partner. Write your idea, then compare with the answer shown.", "paper": fa ..." (practice/holiday/p3/02/dist/data/p3l02.json)
+- REVIEW L4-addpattern [12-01]: story words 3 of 4 like "Write the number after each step.", "steps": ["Start 1: 1 + 5 = 6, 6 × 2 = 12, 12 − 10 = 2 ..." (practice/holiday/p2/05/dist/data/p2l05.json)
 - REVIEW L4-jellycube [12-03]: number 125 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-tilefigures [12-07]: number 2 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-tilefigures [12-07]: number 3 in the question is not a parameter (written in the wording; check)
@@ -79,10 +81,9 @@ FAIL count: 0. REVIEW items: 84.
 - REVIEW L4-notebooks [12-17]: story words 3 of 4 like "- Recurring structure: the pictured price list comes first ("items for sale in a toy shop" ..." (docs/books/p1_school_paper_patterns.md)
 - REVIEW L4-liftmin [12-18]: number 9 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-liftmin [12-18]: number 4 in the question is not a parameter (written in the wording; check)
-- REVIEW L4-readchallenge [12-31]: story words 3 of 5 like "ANSWER: 2500 cups - [EOY_2025_Raffles P2-10, 4m, Money (saving per day), diff 3] Amy was g ..." (docs/books/private_p5_papers/non_routine_questions.md)
+- REVIEW L4-readchallenge [12-31]: story words 4 of 5 like "Today is Monday. Explain how you know the day of the week 100 days from today and 100 days ..." (practice/holiday/p3/05/dist/data/p3l05.json)
 - REVIEW L5-climbing [12-02]: number 358 in the question is not a parameter (written in the wording; check)
 - REVIEW L5-redeye [12-08]: story words 3 of 5 like "Solution: the day before yesterday plus 2 days is today, so today is Monday. **5.2** A fil ..." (docs/sasmo/g1_original_problems_draft.md)
-- REVIEW L5-teams16 [12-09]: story words 3 of 5 like "ANSWER: 40 - [SA2_2021_SCGS P1-25, 2m, Tennis round robin matches, diff 3] 5 players each  ..." (docs/books/private_p5_papers/non_routine_questions.md)
 - REVIEW L5-rects43 [12-10]: story words 3 of 5 like "Then fill column by column. A computer check found that this is the only grid that fits th ..." (docs/sasmo/g2_original_problems_draft.md)
 - REVIEW L5-fivebricks [12-13]: story words 4 of 5 like "| 6 | Which round piece fills the hole in a brick wall | option 2 | moderate | Matching al ..." (docs/sasmo/private_solution_notes_k.md)
 - REVIEW L5-penboxes [12-17]: story words 5 of 5 like "Suggested home: Lesson 17 Think harder. **A5.1** [T] Box A holds 15 red pens and 21 blue p ..." (docs/books/word_problems_g1_g2_original_draft.md)
@@ -94,7 +95,7 @@ FAIL count: 0. REVIEW items: 84.
 - REVIEW L6-tankdiff [12-12]: story words 4 of 4 like "| EX-DIAG-3 | Go further | 8, 24 | A tank is filled with 4 jugs of water. A jug holds 3 bo ..." (docs/books/p2_non_routine_catalogue.md)
 - REVIEW L6-jarcoins [12-13]: number 1 in the question is not a parameter (written in the wording; check)
 - REVIEW L6-jarcoins [12-13]: story words 3 of 5 like "A few days later Bernard started, saving an equal amount each day. ..." (docs/books/private_p5_papers/non_routine_questions.md)
-- REVIEW L6-testpercent [12-15]: story words 3 of 5 like "- Why non-routine: Mark scored 28 points fewer than Sean (93) - Answer: 65 - Question text ..." (docs/books/private_p1_papers/non_routine_questions.md)
+- REVIEW L6-testpercent [12-15]: story words 3 of 5 like "Page table (independent solution, check test, score out of 10) "Slip test" = my own enumer ..." (school/p1/AUDIT.md)
 - REVIEW L6-cakeshare [12-18]: story words 3 of 4 like "Draw the cake. What fraction of the WHOLE cake did Ali eat?', a: '1/4 of the whole cake.'  ..." (p5/content/l2.js)
 - REVIEW L6-decagon [12-21]: story words 3 of 4 like "Turns 60°, 90° and 120° (round 2, 3, 4 times) just redraw a hexagon, square or triangle, a ..." (p6/content/l7.js)
 - REVIEW L6-tilepattern6 [12-24]: number 3 in the question is not a parameter (written in the wording; check)

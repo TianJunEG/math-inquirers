@@ -73,7 +73,7 @@
     var s = norm(input || '');
     if (!s) return 'empty';
     if (p.t === 's') {
-      var t = squash(s).replace(/^((it is|it was|it's|on|in|the|a|an) )+/, '').trim();
+      var t = squash(s).replace(/^((the answer is|the answer was|answer is|it is|it was|it's|is|on|in|the|a|an) )+/, '').trim();
       var ok = [p.a].concat(p.x || []);
       for (var i = 0; i < ok.length; i++) {
         var want = squash(ok[i].toLowerCase());
@@ -81,6 +81,8 @@
       }
       return 'no';
     }
+    /* "It is 12", "It's 12", "The answer is 12", "Answer: 12" (a spoken-style sentence round a number) */
+    s = s.replace(/^(?:the answer is|the answer was|the answer's|answer is|answer:|it is|it was|it's|its|is)\s+/, '').trim();
     var wantN = parseNum(p.a);
     var pre = (p.p || []).slice().sort(byLen), uni = (p.u || []).map(function (x) { return x.toLowerCase(); }).sort(byLen);
     var asMinutes = uni.indexOf('minutes') >= 0 || uni.indexOf('min') >= 0;
