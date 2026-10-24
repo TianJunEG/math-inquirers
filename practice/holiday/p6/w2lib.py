@@ -113,11 +113,24 @@ def fill(prog, values):
     return out
 
 
-def nb(frame):
-    """The last few words before a box get non-breaking spaces, so a label and its box stay together when the line wraps (separators of 2 or more spaces stay breakable)."""
-    for _ in range(5):
-        frame = re.sub(r'(?<=\S) (?=(?:[^\s{]+\u00a0){0,5}\{f\d+\})', '\u00a0', frame)
-    return frame
+def nb(frame, budget=14):
+    """The last few words before a box (about `budget` characters) get non-breaking spaces, so a label and its box stay together when the line wraps.
+    Separators of 2 or more spaces stay breakable, and a unit never grows wider than a short label plus its box (that fits a 360 px phone)."""
+    parts = re.split(r'(\{f\d+\})', frame)
+    for i in range(len(parts) - 1):
+        p = parts[i]
+        if re.fullmatch(r'\{f\d+\}', p) or not p.endswith(' ') or p.endswith('  '):
+            continue
+        cut = p.rfind('  ') + 2 if '  ' in p else 0
+        head, tail = p[:cut], p[cut:]
+        toks = tail[:-1].split(' ')
+        k, used = 0, 0
+        while k < len(toks) and (k == 0 or used + len(toks[-1 - k]) <= budget):
+            used += len(toks[-1 - k]) + 1
+            k += 1
+        keep, bound = toks[:len(toks) - k], toks[len(toks) - k:]
+        parts[i] = head + (' '.join(keep) + ' ' if keep else '') + '\u00a0'.join(bound) + '\u00a0'
+    return ''.join(parts)
 
 
 def show(prog):

@@ -88,7 +88,7 @@ with sync_playwright() as pw:
 
     # --- consents + enrol ---
     def enrol_blocked():
-        expect(page.locator('[data-enrol-for]').first.get_by_text('Save the four needed agreements first.')).to_be_visible()
+        expect(page.locator('[data-enrol-for]').first.get_by_text('Joining a live group needs four agreements', exact=False)).to_be_visible()
         page.locator('input[name^="grp-"]').first.check()
         expect(page.get_by_role('button', name='Reserve a place').first).to_be_disabled()
     check('cannot reserve before consents', enrol_blocked)
@@ -141,10 +141,16 @@ with sync_playwright() as pw:
         cp.fill('#code', fam); cp.fill('#name', 'Mia'); cp.fill('#pin', '0000'); cp.get_by_role('button', name='Sign in').click()
         expect(cp.locator('.msg.err')).to_contain_text('did not work')
     check('child wrong PIN gives generic error', child_wrong)
+    def child_needs_online_consent():
+        # a live-group family that has not ticked the online practice agreement: sign-in is refused quietly (child_start_session needs it)
+        cp.fill('#code', fam); cp.fill('#name', 'Mia'); cp.fill('#pin', '1234'); cp.get_by_role('button', name='Sign in').click()
+        expect(cp.locator('.msg.err')).to_contain_text('did not work'); assert cp.url.endswith('/portal/child/')
+        page.check('#consent-online_practice'); page.click('#save-consents'); expect(page.locator('.msg.ok')).to_contain_text('Agreements saved')
+    check('child sign-in needs the online practice agreement', child_needs_online_consent)
     def child_ok():
         cp.fill('#code', fam.lower()); cp.fill('#name', ' mia '); cp.fill('#pin', '1234'); cp.get_by_role('button', name='Sign in').click()
-        expect(cp.locator('#hello')).to_have_text('Hello, Mia!'); assert cp.url.endswith('/portal/practice/')
-    check('child name+PIN leads to placeholder practice page', child_ok)
+        cp.wait_for_timeout(800); print('URL', cp.url, cp.inner_text('body')[:300], [m for m in errors][-3:]); expect(cp.locator('#hello')).to_have_text('Hello, Mia!'); assert cp.url.endswith('/portal/practice/')
+    check('child name+PIN leads to the practice list', child_ok)
     def child_out():
         cp.click('#bye'); expect(cp.get_by_role('heading', name='Hi! Sign in to practise')).to_be_visible()
         cp.goto(BASE + '/portal/practice/'); cp.wait_for_url('**/portal/child/')
