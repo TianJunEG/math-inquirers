@@ -17,7 +17,7 @@ CSS = '''
 #pzMsg,#pzdMsg{margin-top:6px}
 #pzdMsg:focus{outline:3px solid var(--ink);outline-offset:3px;border-radius:14px}
 .pzdaily{display:contents}
-.pzlab{font:800 13px var(--body);color:var(--muted)}
+.pzlab{font:800 15px var(--body);color:var(--muted)}
 [hidden]{display:none!important}
 /* light mode: the hint (red) and the worked answer (green) text need 4.5:1 on their tinted boxes; dark mode keeps the page colours */
 .pzl{--pzno:#A82D2D;--pzok:#17655B}

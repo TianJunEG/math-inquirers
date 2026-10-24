@@ -189,16 +189,17 @@ def clock_week(label, week_hl=6):
     return hlib.svg(356, 208, body, label)
 
 
-def jump_rings(label, jump=None, cap=True):
-    """Two 12-hour clock circles with 12 at the top marked as the start; with `jump` (a pair of hour jumps) the visited numbers are joined."""
+def jump_rings(label, jump=None, cap=True, which=None):
+    """12-hour clock circles with 12 at the top marked as the start (both side by side, or only ring `which`); with `jump` (a pair of hour jumps) the visited numbers are joined."""
     r = 54
     body = ''
-    for ix in range(2):
-        cx = 92 + ix * 190
+    rings = (0, 1) if which is None else (which,)
+    for k, ix in enumerate(rings):
+        cx = 92 + k * 190
         edges = []
         if jump:
             j = jump[ix]
-            seen, pos = [], 0
+            pos = 0
             while True:
                 nxt = (pos + j) % 12
                 edges.append((pos, nxt))
@@ -208,7 +209,7 @@ def jump_rings(label, jump=None, cap=True):
         body += ring_body(cx, 116, r, 12, ['12'] + [str(i) for i in range(1, 12)], 6, edges, (0,), 15)
         if cap:
             body += T(cx, 16, ('jumps of 5 hours', 'jumps of 4 hours')[ix], 14, 'middle', 800)
-    return hlib.svg(380, 208, body, label)
+    return hlib.svg(380 if which is None else 190, 208, body, label)
 
 
 def table_svg(head, rows, label, colw=None, fs=15, rh=30, shade=None):

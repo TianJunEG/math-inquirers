@@ -2419,8 +2419,7 @@
    "name": "a missing side from the area or perimeter, or the area or perimeter of a rectangle with a corner cut out",
    "levels": [
     3,
-    4,
-    5
+    4
    ],
    "kinds": [
     "rect",
@@ -2443,7 +2442,8 @@
     "perimeter_area.square_from_perimeter",
     "perimeter_area.area_cutout",
     "perimeter_area.perimeter_cutout"
-   ]
+   ],
+   "note": "round 4: removed from Level 5 (a Primary 3 and 4 skill, AUDIT_ROUND4 section 3)"
   },
   "perimeter_area.perimeter_basic": {
    "name": "distance round a rectangle, a shape with equal sides, or a square fence with a gap",
@@ -2678,7 +2678,6 @@
   "rate.speed_distance": {
    "name": "speed, distance or time from the other two",
    "levels": [
-    5,
     6
    ],
    "kinds": [
@@ -2688,7 +2687,8 @@
    "merged_from": [
     "rate.speed",
     "rate.distance_from_speed"
-   ]
+   ],
+   "note": "round 4: Level 6 only (docs/moe says speed is not in the syllabus; AUDIT_ROUND4 Low)"
   },
   "rate.work_and_time": {
    "name": "the same job with more or fewer workers: how many days",
@@ -3455,7 +3455,6 @@
   "shapes.cube_net_opposite": {
    "name": "a net of a cube is folded: which face is opposite",
    "levels": [
-    4,
     5,
     6
    ],
@@ -3463,7 +3462,8 @@
     "net_opposite"
    ],
    "cite": "MOE P4 MG Geometry: nets of cube, cuboid, prism and pyramid, p.39",
-   "round": 3
+   "round": 3,
+   "note": "round 4: removed from Level 4 (a text net is hard for ages 9 to 11, AUDIT_ROUND4 Low)"
   },
   "symmetry.complete_figure": {
    "name": "squares to shade so that a figure is symmetric about a line",

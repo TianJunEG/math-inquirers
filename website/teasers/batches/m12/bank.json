@@ -180,15 +180,15 @@
     "sub": "counting_pairs.dice_sum_ways",
     "family": "counting_pairs",
     "p": {
-     "sides": 6,
+     "sides": 7,
      "total": 9,
      "ordered": true
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "4",
-    "shown": "4 ways",
+    "ans": "6",
+    "shown": "6 ways",
     "units": [
      "ways",
      "way"
@@ -197,17 +197,18 @@
     "accept": [],
     "exact": false,
     "wrong": [
+     "7",
      "5",
-     "3",
-     "6",
-     "2",
      "8",
-     "14",
-     "40"
+     "4",
+     "12",
+     "3",
+     "16",
+     "60"
     ],
-    "q": "Mei rolls a yellow die and a green die. The two numbers add up to 9. A yellow 3 and a green 6 is different from a yellow 6 and a green 3. How many different ways can this happen?",
+    "q": "Mei picks one token from a yellow bag and one token from a green bag. Each bag has tokens numbered 1 to 7. The two numbers add up to 9. A yellow 3 and a green 6 is different from a yellow 6 and a green 3. How many different ways can this happen?",
     "hint": "List the yellow numbers in order, starting with the smallest one that can work. For each one, ask what the green number must be.",
-    "why": "The pairs (yellow, green) are 3 and 6, 4 and 5, 5 and 4, and 6 and 3. That is 4 ways.",
+    "why": "The pairs (yellow, green) are 2 and 7, 3 and 6, 4 and 5, 5 and 4, 6 and 3, and 7 and 2. That is 6 ways.",
     "date": "12-05"
    },
    {
@@ -961,41 +962,42 @@
        {
         "star": 2
        },
-       18
+       24
       ],
       [
        {
         "star": 1,
         "moon": 1
        },
-       50
+       58
       ]
      ],
      "ask": "moon",
-     "maxv": 50
+     "maxv": 60
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "41",
-    "shown": "41",
+    "ans": "46",
+    "shown": "46",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "42",
-     "40",
-     "43",
-     "39",
-     "82",
-     "51",
-     "31",
-     "410"
+     "47",
+     "45",
+     "48",
+     "44",
+     "92",
+     "23",
+     "56",
+     "36",
+     "460"
     ],
-    "q": "A star and a moon each stand for a whole number. Star + star = 18. Star + moon = 50. What number does the moon stand for?",
+    "q": "A star and a moon each stand for a whole number. Star + star = 24. Star + moon = 58. What number does the moon stand for?",
     "hint": "Find the star first. Then use it in the second line.",
-    "why": "Star: 18 ÷ 2 = 9. Moon: 50 − 9 = 41.",
+    "why": "Star: 24 ÷ 2 = 12. Moon: 58 − 12 = 46.",
     "date": "12-23"
    },
    {
@@ -2009,14 +2011,14 @@
     "family": "series_sum",
     "p": {
      "lo": 3,
-     "hi": 8,
+     "hi": 10,
      "step": 1
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "33",
-    "shown": "33 tins",
+    "ans": "52",
+    "shown": "52 tins",
     "units": [
      "tins",
      "tin"
@@ -2025,18 +2027,19 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "34",
-     "32",
-     "35",
-     "31",
-     "66",
-     "43",
-     "23",
-     "330"
+     "53",
+     "51",
+     "54",
+     "50",
+     "104",
+     "26",
+     "62",
+     "42",
+     "520"
     ],
-    "q": "A shop stacks tins in rows. The top row has 3 tins, the next row has 4 tins, and each lower row has 1 more tin than the row above it, down to a bottom row of 8 tins. How many tins are in the stack?",
+    "q": "A shop stacks tins in rows. The top row has 3 tins, the next row has 4 tins, and each lower row has 1 more tin than the row above it, down to a bottom row of 10 tins. How many tins are in the stack?",
     "hint": "Pair the top row with the bottom row, the second row with the one above the bottom, and so on.",
-    "why": "The rows have 3, 4, 5, 6, 7 and 8 tins. Pairs: 3 + 8, 4 + 7, 5 + 6. Each pair is 11. 3 pairs make 33 tins.",
+    "why": "The rows have 3, 4, 5, 6, 7, 8, 9 and 10 tins. Pairs: 3 + 10, 4 + 9, 5 + 8, 6 + 7. Each pair is 13. 4 pairs make 52 tins.",
     "date": "12-14"
    },
    {
@@ -2392,7 +2395,7 @@
     "family": "number_properties",
     "p": {
      "lo": 1,
-     "hi": 90,
+     "hi": 98,
      "preds": [
       [
        "multiple",
@@ -2404,8 +2407,8 @@
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "22",
-    "shown": "22 numbers",
+    "ans": "24",
+    "shown": "24 numbers",
     "units": [
      "numbers",
      "number"
@@ -2414,19 +2417,19 @@
     "accept": [],
     "exact": false,
     "wrong": [
+     "25",
      "23",
-     "21",
-     "24",
-     "20",
-     "44",
-     "11",
-     "32",
+     "26",
+     "22",
+     "48",
      "12",
-     "220"
+     "34",
+     "14",
+     "240"
     ],
-    "q": "Farhan counts in 4s, starting at 4: 4, 8, 12 and so on. He stops before he goes past 90. How many numbers does he say?",
-    "hint": "Count in 4s: 4, 8, 12 and so on. You can also ask how many 4s fit into 90.",
-    "why": "The 22nd number in the 4 times table is 88, and the 23rd is 92, which is past 90. So Farhan says 22 numbers numbers.",
+    "q": "Farhan counts in 4s, starting at 4: 4, 8, 12 and so on. He stops before he goes past 98. How many numbers does he say?",
+    "hint": "Count in 4s: 4, 8, 12 and so on. You can also ask how many 4s fit into 98.",
+    "why": "The 24th number in the 4 times table is 96, and the 25th is 100, which is past 98. So Farhan says 24 numbers.",
     "date": "12-23"
    },
    {
@@ -2445,45 +2448,45 @@
       "Wei"
      ],
      "things": [
-      "cat",
-      "fish",
-      "rabbit",
-      "bird"
+      "barley",
+      "soya",
+      "juice",
+      "water"
      ],
      "clues": [
       [
        "Dina",
-       "cat",
+       "barley",
        false
       ],
       [
        "Dina",
-       "fish",
+       "soya",
        false
       ],
       [
        "Dina",
-       "bird",
+       "water",
        false
       ],
       [
        "Arjun",
-       "cat",
+       "barley",
        false
       ],
       [
        "Arjun",
-       "bird",
+       "water",
        false
       ],
       [
        "Hui Min",
-       "bird",
+       "water",
        false
       ]
      ],
-     "ask_thing": "bird",
-     "verb": "has the"
+     "ask_thing": "water",
+     "verb": "orders the"
     },
     "t": {},
     "fmt": "int",
@@ -2499,9 +2502,9 @@
      "Arjun",
      "Hui Min"
     ],
-    "q": "Dina, Arjun, Hui Min and Wei each have one pet: a cat, a fish, a rabbit or a bird. Dina has neither the cat, the fish nor the bird. Arjun has neither the cat nor the bird. Hui Min does not have the bird. Who has the bird?",
-    "hint": "Dina has only one pet left to choose from. Then see who else is left.",
-    "why": "Dina has the rabbit, Arjun has the fish, Hui Min has the cat, Wei has the bird. So Wei has the bird.",
+    "q": "Dina, Arjun, Hui Min and Wei each order a different drink: barley, soya, juice or water. Dina orders neither the barley, the soya nor the water. Arjun orders neither the barley nor the water. Hui Min does not order the water. Who orders the water?",
+    "hint": "Dina has only one drink left to choose from. Then see who else is left.",
+    "why": "Dina orders the juice, Arjun orders the soya, Hui Min orders the barley, Wei orders the water. So Wei orders the water.",
     "date": "12-24"
    },
    {
@@ -3273,22 +3276,22 @@
     "sub": "sequence.alternating_steps",
     "family": "sequence",
     "p": {
-     "start": 10,
+     "start": 12,
      "deltas": [
-      7,
+      8,
       -3
      ],
      "ask": "after",
-     "n": 25
+     "n": 23
     },
     "t": {
-     "a": 7,
+     "a": 8,
      "b": 3
     },
     "fmt": "money",
     "type": "n",
-    "ans": "65",
-    "shown": "$65",
+    "ans": "75",
+    "shown": "$75",
     "units": [
      "dollars",
      "dollar"
@@ -3300,20 +3303,20 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "66",
-     "64",
-     "67",
-     "63",
-     "130",
-     "32.5",
-     "75",
-     "55",
-     "65.5",
-     "650"
+     "76",
+     "74",
+     "77",
+     "73",
+     "150",
+     "37.5",
+     "85",
+     "65",
+     "75.5",
+     "750"
     ],
-    "q": "Mia's moneybox holds $10. On day 1 she puts in $7. On day 2 she takes out $3. On day 3 she puts in $7, on day 4 she takes out $3, and so on, one change each day, putting in and taking out in turns. How many dollars are in the moneybox at the end of day 25?",
+    "q": "Mia's moneybox holds $12. On day 1 she puts in $8. On day 2 she takes out $3. On day 3 she puts in $8, on day 4 she takes out $3, and so on, one change each day, putting in and taking out in turns. How many dollars are in the moneybox at the end of day 23?",
     "hint": "Look at two days together. What is the change in the moneybox after one putting in and one taking out?",
-    "why": "Two days (putting in $7, taking out $3) change the moneybox by 7 − 3 = $4. 25 days are 12 pairs of days and 1 more day. The 12 pairs add 12 × 4 = $48, and the extra day adds $7. So the moneybox holds $10 + $48 + $7 = $65.",
+    "why": "Two days (putting in $8, taking out $3) change the moneybox by 8 − 3 = $5. 23 days are 11 pairs of days and 1 more day. The 11 pairs add 11 × 5 = $55, and the extra day adds $8. So the moneybox holds $12 + $55 + $8 = $75.",
     "date": "12-10"
    },
    {
@@ -3849,13 +3852,13 @@
     "p": {
      "n1": 5,
      "d1": 6,
-     "d2": 18
+     "d2": 24
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "15",
-    "shown": "15 pieces",
+    "ans": "20",
+    "shown": "20 pieces",
     "units": [
      "pieces",
      "piece"
@@ -3864,18 +3867,18 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "16",
-     "14",
-     "17",
-     "13",
+     "21",
+     "19",
+     "22",
+     "18",
+     "40",
+     "10",
      "30",
-     "25",
-     "5",
-     "150"
+     "200"
     ],
-    "q": "A chocolate bar is divided into 6 equal pieces and Ravi eats 5 of them. If the same bar had been divided into 18 equal pieces, how many of those pieces would Ravi have eaten to eat the same amount?",
+    "q": "A chocolate bar is divided into 6 equal pieces and Ravi eats 5 of them. If the same bar had been divided into 24 equal pieces, how many of those pieces would Ravi have eaten to eat the same amount?",
     "hint": "Cut each of the 6 big pieces into smaller equal pieces. How many small pieces does each big piece make?",
-    "why": "Each big piece makes 18 ÷ 6 = 3 small pieces. 5 big pieces are 5 × 3 = 15 pieces.",
+    "why": "Each big piece makes 24 ÷ 6 = 4 small pieces. 5 big pieces are 5 × 4 = 20 pieces.",
     "date": "12-23"
    },
    {
@@ -4329,56 +4332,50 @@
     "date": "12-01"
    },
    {
-    "id": "L4-cubenet",
+    "id": "L4-threedigitsum",
     "level": 4,
-    "frame": "cubenet",
-    "kind": "net_opposite",
-    "topic": "Nets",
-    "sub": "shapes.cube_net_opposite",
-    "family": "shapes",
+    "frame": "threedigitsum",
+    "kind": "cards_sum",
+    "topic": "Digit cards",
+    "sub": "digit_cards.max_sum",
+    "family": "digit_cards",
     "p": {
-     "cells": {
-      "A": [
-       0,
-       0
-      ],
-      "B": [
-       1,
-       0
-      ],
-      "C": [
-       1,
-       1
-      ],
-      "D": [
-       2,
-       1
-      ],
-      "E": [
-       2,
-       2
-      ],
-      "F": [
-       3,
-       2
-      ]
-     },
-     "ask": "A"
+     "digits": [
+      3,
+      5,
+      7,
+      8,
+      9
+     ],
+     "shape": [
+      3,
+      2
+     ],
+     "ask": "max"
     },
     "t": {},
     "fmt": "int",
-    "type": "s",
-    "ans": "d",
-    "shown": "D",
+    "type": "n",
+    "ans": "1058",
+    "shown": "1058",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
-    "wrong": [],
-    "q": "The diagram shows a net made of six squares. The net is folded up to make a cube, with the letters on the outside. Which letter is on the face opposite the face marked A?",
-    "hint": "Pick one square to be the bottom of the cube. Fold its neighbours up around it, one at a time.",
-    "why": "Fold C flat as the bottom. B folds up as the back wall, and A, which is joined to B, becomes the left wall. D folds up as the right wall. E becomes the front wall, and F, joined to E, becomes the top. The left wall A faces the right wall D, so the answer is D.",
-    "code": "[A][B]\n    [C][D]\n        [E][F]",
+    "wrong": [
+     "1059",
+     "1057",
+     "1060",
+     "1056",
+     "2116",
+     "529",
+     "1068",
+     "1048",
+     "10580"
+    ],
+    "q": "Dan has five digit cards: 3, 5, 7, 8 and 9. He uses all five cards to make one 3-digit number and one 2-digit number. Then he adds the two numbers. What is the greatest total he can make?",
+    "hint": "The hundreds place is worth the most. Which cards should go in the hundreds, tens and ones places?",
+    "why": "The hundreds place counts most, so it gets the biggest card, 9. The two tens places come next, so they get 8 and 7. The two ones places get 5 and 3. For example 975 + 83 = 1058.",
     "date": "12-02"
    },
    {
@@ -4490,15 +4487,15 @@
     "family": "measurement",
     "p": {
      "ask": "count",
-     "length": 12,
-     "overlap": 2,
-     "total": 102
+     "length": 15,
+     "overlap": 3,
+     "total": 111
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "10",
-    "shown": "10 strips",
+    "ans": "9",
+    "shown": "9 strips",
     "units": [
      "strips",
      "strip"
@@ -4507,18 +4504,17 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "11",
-     "9",
-     "12",
+     "10",
      "8",
-     "20",
-     "5",
-     "0",
-     "100"
+     "11",
+     "7",
+     "18",
+     "19",
+     "90"
     ],
-    "q": "Dina glues strips of card end to end to make a long banner. Every strip is 12 cm long, and each strip overlaps the next one by 2 cm. The finished banner is 102 cm long. How many strips does Dina use?",
+    "q": "Dina glues strips of card end to end to make a long banner. Every strip is 15 cm long, and each strip overlaps the next one by 3 cm. The finished banner is 111 cm long. How many strips does Dina use?",
     "hint": "The first strip gives its whole length. Every other strip adds the length that is not covered by the overlap.",
-    "why": "Each new strip adds 12 − 2 = 10 cm. The first strip is 12 cm, so the other strips make 102 − 12 = 90 cm. 90 ÷ 10 = 9 more strips. 1 + 9 = 10 strips.",
+    "why": "Each new strip adds 15 − 3 = 12 cm. The first strip is 15 cm, so the other strips make 111 − 15 = 96 cm. 96 ÷ 12 = 8 more strips. 1 + 8 = 9 strips.",
     "date": "12-05"
    },
    {
@@ -4535,30 +4531,35 @@
      "parts": 3,
      "part_min": 35,
      "break_min": 10,
-     "ask": "end24"
+     "ask": "total"
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "1935",
-    "shown": "1935",
-    "units": [],
+    "ans": "125",
+    "shown": "125 minutes",
+    "units": [
+     "min",
+     "mins",
+     "minute",
+     "minutes"
+    ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "1936",
-     "1934",
-     "1937",
-     "1933",
-     "3870",
-     "1945",
-     "1925",
-     "19350"
+     "126",
+     "124",
+     "127",
+     "123",
+     "250",
+     "135",
+     "115",
+     "1250"
     ],
-    "q": "A school concert has 3 acts. Each act lasts 35 minutes. A break of 10 minutes comes between one act and the next, but not after the last act. The concert starts at 5:30 pm. When does it end? Give the time in 24-hour form, like 2105.",
+    "q": "A school concert has 3 acts. Each act lasts 35 minutes. A break of 10 minutes comes between one act and the next, but not after the last act. How many minutes does the whole concert last, from the start of the first act to the end of the last act?",
     "hint": "Count the breaks carefully. There is one fewer break than there are acts.",
-    "why": "3 acts last 3 × 35 = 105 minutes. There are 2 breaks: 2 × 10 = 20 minutes. 105 + 20 = 125 minutes, which is 2 h 5 min. 5:30 pm plus 2 h 5 min is 7:35 pm, which is 1935.",
+    "why": "3 acts last 3 × 35 = 105 minutes. There are 2 breaks: 2 × 10 = 20 minutes. 105 + 20 = 125 minutes.",
     "date": "12-06"
    },
    {
@@ -4982,31 +4983,30 @@
     "p": {
      "lo": 1,
      "hi": 20,
-     "place": 7
+     "place": 9
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "14",
-    "shown": "14",
+    "ans": "19",
+    "shown": "19",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "15",
-     "13",
-     "16",
-     "12",
-     "28",
-     "7",
-     "24",
-     "4",
-     "140"
+     "20",
+     "18",
+     "21",
+     "17",
+     "38",
+     "29",
+     "9",
+     "190"
     ],
-    "q": "Mia writes the number words from one to twenty on cards. Then she puts the cards in dictionary order, like the words in a dictionary. Which number is on card number 7 in her row?",
-    "hint": "Write all twenty words. Sort them by their first letter, and look at the second letter when two words start the same.",
-    "why": "In dictionary order the words are eight, eighteen, eleven, fifteen, five, four, fourteen, nine, nineteen, one, seven, seventeen, six, sixteen, ten, thirteen, three, twelve, twenty, two. The 7th word is fourteen, which is the number 14.",
+    "q": "Mia writes the names of the numbers from one to twenty on cards. She puts the cards in alphabetical order, from A to Z. Which number is on card number 9 in her row?",
+    "hint": "Write all twenty names. Sort them by their first letter, and look at the second letter when two names start the same.",
+    "why": "In alphabetical order the names are eight, eighteen, eleven, fifteen, five, four, fourteen, nine, nineteen, one, seven, seventeen, six, sixteen, ten, thirteen, three, twelve, twenty, two. The 9th name is nineteen, which is the number 19.",
     "date": "12-17"
    },
    {
@@ -5019,22 +5019,22 @@
     "family": "sorting",
     "p": {
      "order": [
-      132,
-      120,
+      140,
+      128,
       145,
-      118,
-      138,
+      120,
+      135,
       125,
       130
      ]
     },
     "t": {
-     "row": "132, 120, 145, 118, 138, 125 and 130"
+     "row": "140, 128, 145, 120, 135, 125 and 130"
     },
     "fmt": "int",
     "type": "n",
-    "ans": "11",
-    "shown": "11 swaps",
+    "ans": "13",
+    "shown": "13 swaps",
     "units": [
      "swaps",
      "swap"
@@ -5043,18 +5043,18 @@
     "accept": [],
     "exact": false,
     "wrong": [
+     "14",
      "12",
-     "10",
-     "13",
-     "9",
-     "22",
-     "21",
-     "1",
-     "110"
+     "15",
+     "11",
+     "26",
+     "23",
+     "3",
+     "130"
     ],
-    "q": "Seven children stand in a line. Their heights in centimetres, from the front of the line to the back, are 132, 120, 145, 118, 138, 125 and 130. The teacher wants the children in order of height, from the shortest at the front to the tallest at the back. Only two children standing next to each other may swap places at one time. What is the fewest number of swaps that puts the line in order?",
+    "q": "Seven children stand in a line. Their heights in centimetres, from the front of the line to the back, are 140, 128, 145, 120, 135, 125 and 130. The teacher wants the children in order of height, from the shortest at the front to the tallest at the back. Only two children standing next to each other may swap places at one time. What is the fewest number of swaps that puts the line in order?",
     "hint": "Look for pairs of children where a taller child stands in front of a shorter child. One swap of neighbours can fix only one such pair.",
-    "why": "Count, for each child, the shorter children behind: 132 has 4 (120, 118, 125, 130), 120 has 1 (118), 145 has 4 (118, 138, 125, 130), 118 has 0, 138 has 2 (125, 130), 125 has 0, 130 has 0. 4 + 1 + 4 + 0 + 2 + 0 + 0 = 11 swaps. Each swap fixes one pair, so 11 swaps are needed.",
+    "why": "Count, for each child, the shorter children behind: 140 has 5, 128 has 2, 145 has 4, 120 has 0, 135 has 2, 125 has 0, 130 has 0. 5 + 2 + 4 + 0 + 2 + 0 + 0 = 13 swaps. Each swap fixes one pair, so 13 swaps are needed.",
     "date": "12-18"
    },
    {
@@ -5092,7 +5092,7 @@
      "5",
      "150"
     ],
-    "q": "Mei is 8 years old and her grandmother is 62 years old. Both of them have a birthday once a year. After how many years will the sum of their ages be 100?",
+    "q": "Mei is 8 years old and her grandmother is 62 years old. In how many years' time will the sum of their two ages be 100?",
     "hint": "Add their ages now. Each year both of them get one year older, so the sum grows by the same amount every year.",
     "why": "Now their ages add up to 8 + 62 = 70. Each year the sum grows by 2, because both get a year older. They need 100 − 70 = 30 more, and 30 ÷ 2 = 15 years.",
     "date": "12-19"
@@ -6169,43 +6169,49 @@
     "date": "12-11"
    },
    {
-    "id": "L5-pupilpie",
+    "id": "L5-zoogates",
     "level": 5,
-    "frame": "pupilpie",
-    "kind": "pie_sector",
-    "topic": "Pie charts",
-    "sub": "graphs.pie_sector",
+    "frame": "zoogates",
+    "kind": "stats",
+    "topic": "Reading a table",
+    "sub": "graphs.most_least_gap",
     "family": "graphs",
     "p": {
-     "total": 300,
-     "angle": 84
+     "data": [
+      412,
+      358,
+      507,
+      296,
+      444,
+      381
+     ],
+     "ask": "range"
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "70",
-    "shown": "70 pupils",
+    "ans": "211",
+    "shown": "211 visitors",
     "units": [
-     "pupils",
-     "pupil"
+     "visitors",
+     "visitor"
     ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "71",
-     "69",
-     "72",
-     "68",
-     "140",
-     "35",
-     "80",
-     "60",
-     "700"
+     "212",
+     "210",
+     "213",
+     "209",
+     "422",
+     "221",
+     "201",
+     "2110"
     ],
-    "q": "A pie chart shows how 300 pupils travel to school. The sector for walking has an angle of 84°. How many pupils walk to school?",
-    "hint": "The whole circle is 360°. What fraction of the circle is the walking sector?",
-    "why": "84° out of 360° is 7/30 of the circle. 300 ÷ 30 = 10, and 7 × 10 = 70 pupils.",
+    "q": "A table shows how many visitors came through six gates of a zoo on one Sunday: Gate 1 412, Gate 2 358, Gate 3 507, Gate 4 296, Gate 5 444 and Gate 6 381. How many more visitors came through the busiest gate than through the quietest gate?",
+    "hint": "Find the biggest number and the smallest number first.",
+    "why": "The busiest gate had 507 visitors and the quietest gate had 296 visitors. 507 − 296 = 211 visitors.",
     "date": "12-12"
    },
    {
@@ -6997,7 +7003,7 @@
      "7",
      "170"
     ],
-    "q": "A frog sits on the top-left lily pad of a pond with a square pattern of pads. It hops only to the pad on its right or the pad below it. To reach the bottom-right pad it makes 4 hops right and 3 hops down in all, in any order. A boat covers the pad that is 2 pads right and 1 pad down from the start, so the frog cannot land there. How many different ways can the frog get to the bottom-right pad?",
+    "q": "A frog sits on the top-left lily pad of a pond. It hops only to the pad on its right or the pad below it, and it makes 4 hops right and 3 hops down in all, in any order, to reach the bottom-right pad. A boat covers the pad that is 2 pads right and 1 pad down from the start, so the frog cannot land there. How many different ways can the frog reach the bottom-right pad?",
     "hint": "First count all the ways when no pad is covered. Then take away the ways that land on the covered pad.",
     "why": "All ways: 35. Ways through the covered pad: 3 ways to reach it × 6 ways to go on from it = 18. 35 − 18 = 17 ways.",
     "date": "12-30"
@@ -7432,10 +7438,10 @@
     "fmt": "int",
     "type": "n",
     "ans": "9",
-    "shown": "9 swaps",
+    "shown": "9 exchanges",
     "units": [
-     "swaps",
-     "swap"
+     "exchanges",
+     "exchange"
     ],
     "prefix": [],
     "accept": [],
@@ -7449,9 +7455,9 @@
      "19",
      "90"
     ],
-    "q": "Seven library books stand in a row on a shelf. The numbers of pages in the books, from left to right, are 220, 80, 140, 170, 100, 120 and 240. The librarian wants them in order from the fewest pages to the most pages. She may swap only two books that are next to each other at one time. What is the fewest number of swaps?",
-    "hint": "Count the pairs of books where the book on the left has more pages than the book on the right. One swap of neighbours can fix only one such pair.",
-    "why": "Count, for each book, the books to its right with fewer pages: 220 has 5, 80 has 0, 140 has 2, 170 has 2, 100 has 0, 120 has 0, 240 has 0. 5 + 0 + 2 + 2 + 0 + 0 + 0 = 9 swaps. Each swap fixes one pair, so 9 swaps are needed.",
+    "q": "Seven library books stand side by side on a shelf. The numbers of pages in the books, from left to right, are 220, 80, 140, 170, 100, 120 and 240. The librarian wants the books from the fewest pages to the most pages. She can exchange only two books that stand next to each other at one time. What is the smallest number of exchanges?",
+    "hint": "Count the pairs of books where the book on the left has more pages than the book on the right. One exchange of neighbours can fix only one such pair.",
+    "why": "Count, for each book, the books to its right with fewer pages: 220 has 5, 80 has 0, 140 has 2, 170 has 2, 100 has 0, 120 has 0, 240 has 0. 5 + 0 + 2 + 2 + 0 + 0 + 0 = 9 exchanges. Each exchange fixes one pair, so 9 exchanges are needed.",
     "date": "12-08"
    },
    {
@@ -7722,13 +7728,13 @@
      "quotient": 24,
      "remainder": 7,
      "ask": "new",
-     "add": 200
+     "add": 150
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "34",
-    "shown": "34 boxes",
+    "ans": "32",
+    "shown": "32 boxes",
     "units": [
      "boxes",
      "boxe"
@@ -7737,19 +7743,19 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "35",
      "33",
-     "36",
-     "32",
-     "68",
-     "17",
-     "44",
-     "24",
-     "340"
+     "31",
+     "34",
+     "30",
+     "64",
+     "16",
+     "42",
+     "22",
+     "320"
     ],
-    "q": "A baker packs buns into boxes of 19. She fills 24 full boxes and has 7 buns left over. Then 200 more buns arrive. She puts all the buns together and packs them again in boxes of 19. How many full boxes does she have now?",
+    "q": "A baker packs buns into boxes of 19. She fills 24 full boxes and has 7 buns left over. Then 150 more buns arrive. She puts all the buns together and packs them again in boxes of 19. How many full boxes does she have now?",
     "hint": "First find how many buns the baker had at the start. Then add the new buns.",
-    "why": "24 × 19 = 456, and 456 + 7 = 463 buns at the start. With 200 more, she has 663 buns. 663 ÷ 19 is 34 boxes with a remainder, so she has 34 boxes full boxes.",
+    "why": "24 × 19 = 456, and 456 + 7 = 463 buns at the start. With 150 more, she has 613 buns. 613 ÷ 19 is 32 boxes with a remainder, so she has 32 boxes full boxes.",
     "date": "12-15"
    },
    {
@@ -8058,18 +8064,18 @@
     "family": "ratio",
     "p": {
      "mode": "add",
-     "a": 3,
-     "b": 5,
-     "c": 5,
-     "d": 6,
-     "k": 14,
+     "a": 2,
+     "b": 3,
+     "c": 3,
+     "d": 4,
+     "k": 10,
      "ask": "second"
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "60",
-    "shown": "60 stickers",
+    "ans": "120",
+    "shown": "120 stickers",
     "units": [
      "stickers",
      "sticker"
@@ -8078,19 +8084,19 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "61",
-     "59",
-     "62",
-     "58",
-     "120",
-     "30",
-     "70",
-     "50",
-     "600"
+     "121",
+     "119",
+     "122",
+     "118",
+     "240",
+     "60",
+     "130",
+     "110",
+     "1200"
     ],
-    "q": "The ratio of Ali's stickers to Ben's stickers is 3 : 5. Ali buys 14 more stickers. Then the ratio of Ali's stickers to Ben's stickers is 5 : 6. How many stickers does Ben have?",
+    "q": "The ratio of Ali's stickers to Ben's stickers is 2 : 3. Ali buys 10 more stickers. Then the ratio of Ali's stickers to Ben's stickers is 3 : 4. How many stickers does Ben have?",
     "hint": "Ben's stickers do not change. Let one unit of the first ratio be u stickers, and write Ali's new number in terms of u.",
-    "why": "Let one unit be u stickers. Ali has 3u and Ben has 5u. After Ali buys 14 more, Ali has 3u + 14. The new ratio is 5 : 6, so 6 × (3u + 14) = 5 × 5u, which is 18u + 84 = 25u. So 7u = 84 and u = 12. Ben has 5 × 12 = 60 stickers.",
+    "why": "Let one unit be u stickers. Ali has 2u and Ben has 3u. After Ali buys 10 more, Ali has 2u + 10. The new ratio is 3 : 4, so 4 × (2u + 10) = 3 × 3u, which is 8u + 40 = 9u. So u = 40. Ben has 3 × 40 = 120 stickers.",
     "date": "12-22"
    },
    {
@@ -8314,15 +8320,15 @@
     "sub": "volume.water_depth",
     "family": "volume",
     "p": {
-     "l": 60,
-     "w": 45,
-     "litres": 27
+     "l": 48,
+     "w": 25,
+     "litres": 33
     },
     "t": {},
     "fmt": "dec",
     "type": "n",
-    "ans": "10",
-    "shown": "10 cm",
+    "ans": "27.5",
+    "shown": "27.5 cm",
     "units": [
      "cm",
      "centimetre",
@@ -8334,19 +8340,20 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "11",
-     "9",
-     "12",
-     "8",
-     "20",
-     "5",
-     "0",
-     "10.5",
-     "100"
+     "28.5",
+     "26.5",
+     "29.5",
+     "25.5",
+     "55",
+     "13.75",
+     "37.5",
+     "17.5",
+     "28",
+     "275"
     ],
-    "q": "A fish tank is a cuboid. Its base measures 60 cm by 45 cm. Aisha pours 27 litres of water into the empty tank. How deep is the water, in centimetres? (1 litre = 1000 cm³.)",
-    "hint": "Change the litres into cm³. The volume of the water is the area of the base times the depth.",
-    "why": "27 litres = 27000 cm³. The area of the base is 60 × 45 = 2700 cm². 27000 ÷ 2700 = 10 cm.",
+    "q": "A builder pours 33 litres of liquid concrete into an empty cuboid mould. The base of the mould measures 48 cm by 25 cm. How deep is the concrete, in centimetres? (1 litre = 1000 cm³.)",
+    "hint": "Change the litres into cm³. The volume of the concrete is the area of the base times the depth.",
+    "why": "33 litres = 33000 cm³. The area of the base is 48 × 25 = 1200 cm². 33000 ÷ 1200 = 27.5 cm.",
     "date": "12-28"
    },
    {

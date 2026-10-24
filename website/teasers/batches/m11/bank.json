@@ -1102,7 +1102,7 @@
     ],
     "q": "A jar holds 29 sweets. Kai and Lin take turns to eat 1, 2, 3 or 4 sweets. Whoever eats the last sweet wins a toy. Kai goes first. How many sweets should Kai eat first so that he can always win?",
     "hint": "Try to leave a number in the 5 times table for Lin. Then keep making 5 in every round.",
-    "why": "Kai eats 4 sweets sweets and leaves 25, which is in the 5 times table. Whatever Lin eats, Kai eats enough to make 5 sweets in that round. So Kai eats the last sweet.",
+    "why": "Kai eats 4 sweets and leaves 25, which is in the 5 times table. Whatever Lin eats, Kai eats enough to make 5 sweets in that round. So Kai eats the last sweet.",
     "date": "11-26"
    },
    {
@@ -1388,15 +1388,15 @@
     "p": {
      "counts": [
       5,
-      2,
-      4
+      3,
+      3
      ]
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "40",
-    "shown": "40 packs",
+    "ans": "45",
+    "shown": "45 packs",
     "units": [
      "packs",
      "pack"
@@ -1405,19 +1405,18 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "41",
-     "39",
-     "42",
-     "38",
-     "80",
-     "20",
-     "50",
-     "30",
-     "400"
+     "46",
+     "44",
+     "47",
+     "43",
+     "90",
+     "55",
+     "35",
+     "450"
     ],
-    "q": "At a school fair, a sticker pack has one animal sticker, one flower sticker and one star sticker. There are 5 animal stickers, 2 flower stickers and 4 star stickers to choose from. How many different sticker packs can you make?",
+    "q": "At a school fair, a sticker pack has one animal sticker, one flower sticker and one star sticker. There are 5 animal stickers, 3 flower stickers and 3 star stickers to choose from. How many different sticker packs can you make?",
     "hint": "Choose the animal sticker and the flower sticker first. How many pairs is that? Then add the star sticker.",
-    "why": "5 animal stickers × 2 flower stickers = 10 pairs. Each pair can go with 4 star stickers, so 10 × 4 = 40 packs.",
+    "why": "5 animal stickers × 3 flower stickers = 15 pairs. Each pair can go with 3 star stickers, so 15 × 3 = 45 packs.",
     "date": "11-03"
    },
    {
@@ -2220,7 +2219,7 @@
      "17",
      "70"
     ],
-    "q": "9 children must cross a lake in a canoe that holds at most 3 people. The canoe cannot move by itself, so at least one child must paddle it every time. How many crossings does the canoe make in all, counting the trips back as well as the trips across?",
+    "q": "9 children want to get across a lake. A canoe carries 3 people at most, and it only moves when a child paddles it. Every trip, to the far side or back, is one crossing. What is the fewest number of crossings that gets all 9 children to the far side?",
     "hint": "One child must paddle the canoe back after every crossing except the last one. How many children can one trip across and one trip back move for good?",
     "why": "Each trip across and back moves 3 − 1 = 2 children across for good, because one child paddles back. The last crossing carries 3 children and needs no trip back. So 9 − 3 = 6 children must be moved by round trips: 6 ÷ 2 = 3 round trips, which is 6 crossings. The last crossing makes it 7 crossings.",
     "date": "11-21"
@@ -2320,7 +2319,7 @@
     "sub": "counting_line.race_places",
     "family": "counting_line",
     "p": {
-     "start": 14,
+     "start": 15,
      "moves": [
       [
        "pass",
@@ -2335,14 +2334,14 @@
        4
       ]
      ],
-     "total": 28,
+     "total": 30,
      "ask": "behind"
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "20",
-    "shown": "20 riders",
+    "ans": "21",
+    "shown": "21 riders",
     "units": [
      "riders",
      "rider"
@@ -2351,18 +2350,18 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "21",
-     "19",
      "22",
-     "18",
-     "40",
-     "10",
-     "30",
-     "200"
+     "20",
+     "23",
+     "19",
+     "42",
+     "31",
+     "11",
+     "210"
     ],
-    "q": "Dina is in 14th place in a cycling race with 28 riders. She passes 5 riders. Then 3 riders pass her. Then she passes 4 more riders. How many riders are behind her now?",
+    "q": "Dina is in 15th place in a cycling race with 30 riders. She passes 5 riders. Then 3 riders pass her. Then she passes 4 more riders. How many riders are behind her now?",
     "hint": "Do the three moves one at a time. Passing a rider makes Dina's place number smaller. Being passed makes it bigger.",
-    "why": "Passing 5 riders: 14 − 5 = 9. Being passed by 3 riders: 9 + 3 = 12. Passing 4 more riders: 12 − 4 = 8. Dina is in 8th place, so 28 − 8 = 20 riders riders are behind her.",
+    "why": "Passing 5 riders: 15 − 5 = 10. Being passed by 3 riders: 10 + 3 = 13. Passing 4 more riders: 13 − 4 = 9. Dina is in 9th place, so 30 − 9 = 21 riders are behind her.",
     "date": "11-24"
    },
    {
@@ -2885,46 +2884,43 @@
     "date": "11-06"
    },
    {
-    "id": "L3-trainwait",
+    "id": "L3-doorwords",
     "level": 3,
-    "frame": "trainwait",
-    "kind": "timetable_wait",
-    "topic": "Timetables",
-    "sub": "durations.timetable_wait",
-    "family": "durations",
+    "frame": "doorwords",
+    "kind": "number_words",
+    "topic": "Number words",
+    "sub": "number_names.letters_in_words",
+    "family": "number_names",
     "p": {
-     "first": 330,
-     "every": 18,
-     "now": 462
+     "lo": 1,
+     "hi": 15
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "12",
-    "shown": "12 minutes",
+    "ans": "74",
+    "shown": "74 letters",
     "units": [
-     "min",
-     "mins",
-     "minute",
-     "minutes"
+     "letters",
+     "letter"
     ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "13",
-     "11",
-     "14",
-     "10",
-     "24",
-     "6",
-     "22",
-     "2",
-     "120"
+     "75",
+     "73",
+     "76",
+     "72",
+     "148",
+     "37",
+     "84",
+     "64",
+     "740"
     ],
-    "q": "Trains leave a station every 18 minutes. The first train leaves at 5:30 in the morning. Mr Lee gets to the station at 7:42. How many minutes must he wait for the next train?",
-    "hint": "List the train times: 5:30, 5:48, 6:06 and so on. Which is the first one after 7:42?",
-    "why": "The trains leave at 5:30, 5:48, 6:06, 6:24, 6:42, 7:00, 7:18, 7:36 and 7:54. The 7:36 train has gone, so Mr Lee takes the 7:54 train. From 7:42 to 7:54 is 12 minutes.",
+    "q": "A sign painter writes the door numbers 1 to 15 in words on 15 doors: one, two, three and so on. He paints one letter at a time. How many letters does he paint altogether?",
+    "hint": "Count the letters in each number word, one at a time. Keep a running total.",
+    "why": "The letters in the words are: one 3, two 3, three 5, four 4, five 4, six 3, seven 5, eight 5, nine 4, ten 3, eleven 6, twelve 6, thirteen 8, fourteen 8, fifteen 7. Adding all of them gives 74 letters.",
     "date": "11-07"
    },
    {
@@ -2937,42 +2933,43 @@
     "family": "sorting",
     "p": {
      "numbers": [
-      12,
-      27,
+      16,
+      24,
+      30,
       36,
-      45,
-      50,
+      40,
+      42,
+      48,
       54,
-      63,
+      60,
+      64,
       66,
       72,
-      75,
-      81,
+      78,
       84,
       90,
-      93,
-      96,
-      99
+      96
      ],
      "conds": [
       [
        "multiple",
-       3
-      ],
-      [
-       "even"
+       4
       ],
       [
        "gt",
-       50
+       40
+      ],
+      [
+       "lt",
+       90
       ]
      ]
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "6",
-    "shown": "6 cards",
+    "ans": "5",
+    "shown": "5 cards",
     "units": [
      "cards",
      "card"
@@ -2981,18 +2978,17 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "7",
-     "5",
-     "8",
+     "6",
      "4",
-     "12",
+     "7",
      "3",
-     "16",
-     "60"
+     "10",
+     "15",
+     "50"
     ],
-    "q": "Rina writes these numbers on cards: 12, 27, 36, 45, 50, 54, 63, 66, 72, 75, 81, 84, 90, 93, 96 and 99. She keeps only the cards with a number that is in the 3 times table, is even, and is bigger than 50. How many cards does she keep?",
-    "hint": "Check every card three times: is it in the 3 times table, is it even, and is it bigger than 50?",
-    "why": "The cards that pass all three checks are 54, 66, 72, 84, 90, 96. That is 6 cards.",
+    "q": "Rina writes these numbers on cards: 16, 24, 30, 36, 40, 42, 48, 54, 60, 64, 66, 72, 78, 84, 90 and 96. She keeps only the cards with a number that is in the 4 times table, is bigger than 40, and is smaller than 90. How many cards does she keep?",
+    "hint": "Check every card three times: is it in the 4 times table, is it bigger than 40, and is it smaller than 90?",
+    "why": "The cards that pass all three checks are 48, 60, 64, 72, 84. That is 5 cards.",
     "date": "11-08"
    },
    {
@@ -3746,9 +3742,9 @@
      "18",
      "80"
     ],
-    "q": "Place the digits 1 to 9 in a 3 by 3 square, each digit once, so that every line across, every line down and both long diagonals add up to the same total. Some digits are already in place, and ? shows an empty square. Which digit goes in the corner at the bottom right?",
+    "q": "Place the digits 1 to 9 in a 3 by 3 square, each digit once, so that every line across, every line down and both corner-to-corner lines add up to the same total. Some digits are placed for you, and ? marks a gap. Which digit goes in the bottom right corner?",
     "hint": "Add the top line first. That gives the total for every line.",
-    "why": "The top line is 2 + 9 + 4 = 15, so every line adds to 15. Left line down: 2 + 7 + 6, so the bottom-left is 6. Diagonal: 4 + 5 + 6, so the middle is 5. Middle line across: 7 + 5 + 3, so the right of the middle line is 3. Right line down: 4 + 3 + 8, so the corner at the bottom right is 8.",
+    "why": "The top line is 2 + 9 + 4 = 15, so every line adds to 15. Left line down: 2 + 7 + 6, so the bottom-left is 6. Corner-to-corner line: 4 + 5 + 6, so the middle is 5. Middle line across: 7 + 5 + 3, so the right of the middle line is 3. Right line down: 4 + 3 + 8, so the corner at the bottom right is 8.",
     "code": "2   9   4\n7   ?   ?\n?   ?   ?",
     "date": "11-25"
    },
@@ -3787,7 +3783,7 @@
      "332",
      "3420"
     ],
-    "q": "Zack makes a photo album with 150 pages. He writes the page numbers 1, 2, 3 and so on up to 150, one on each page. How many digits does he write altogether?",
+    "q": "Zack makes a scrapbook with 150 pages. He writes the page numbers 1, 2, 3 and so on up to 150, one on each page. How many digits does he write altogether?",
     "hint": "Group the pages by how many digits their numbers have: one digit, two digits, three digits.",
     "why": "Pages 1 to 9 use 9 digits. Pages 10 to 99 are 90 pages with 2 digits each, which is 180 digits. Pages 100 to 150 are 51 pages with 3 digits each, which is 153 digits. 9 + 180 + 153 = 342 digits.",
     "date": "11-26"
@@ -4293,7 +4289,7 @@
      "12",
      "20"
     ],
-    "q": "Ravi writes 15, 8, 6, 4 and 2 on a card with a gap between each pair of numbers. He wants to put a + or a − in every gap so that the answer is 7. How many different ways can he fill the four gaps so that the answer is 7?",
+    "q": "Ravi writes 15, 8, 6, 4 and 2 on a card with a gap between each pair of numbers. He puts either a + or a − in every gap, and he wants the total to be 7. In how many different ways can he fill the four gaps to get 7?",
     "hint": "There are 2 choices for each of the 4 gaps. Start with 15 and think about what the other four numbers must add up to or take away.",
     "why": "Two ways work: 15 − 8 + 6 − 4 − 2 = 7 and 15 − 8 − 6 + 4 + 2 = 7. So the answer is 2 ways.",
     "date": "11-08"
@@ -4702,15 +4698,15 @@
     "family": "guess_check",
     "p": {
      "heads": 45,
-     "legs": 118,
+     "legs": 119,
      "a": 2,
      "b": 3
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "28",
-    "shown": "28 tricycles",
+    "ans": "29",
+    "shown": "29 tricycles",
     "units": [
      "tricycles",
      "tricycle"
@@ -4719,19 +4715,18 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "29",
-     "27",
      "30",
-     "26",
-     "56",
-     "14",
-     "38",
-     "18",
-     "280"
+     "28",
+     "31",
+     "27",
+     "58",
+     "39",
+     "19",
+     "290"
     ],
-    "q": "A shed holds only bicycles and tricycles. There are 45 cycles and 118 wheels in all. Bicycles have 2 wheels each and tricycles have 3 wheels each. How many tricycles are in the shed?",
+    "q": "A shed holds only bicycles and tricycles. There are 45 cycles and 119 wheels in all. Bicycles have 2 wheels each and tricycles have 3 wheels each. How many tricycles are in the shed?",
     "hint": "Guess a number of tricycles and count the wheels. Then adjust your guess.",
-    "why": "If all 45 cycles were bicycles, there would be 90 wheels. There are 118 − 90 = 28 more wheels. Each tricycle has 1 more wheel than a bicycle, so there are 28 ÷ 1 = 28 tricycles tricycles.",
+    "why": "If all 45 cycles were bicycles, there would be 90 wheels. There are 119 − 90 = 29 more wheels. Each tricycle has 1 more wheel than a bicycle, so there are 29 ÷ 1 = 29 tricycles.",
     "date": "11-18"
    },
    {
@@ -5565,15 +5560,15 @@
     "sub": "rate.work_and_time",
     "family": "rate",
     "p": {
-     "people": 8,
-     "days": 15,
+     "people": 9,
+     "days": 12,
      "new_people": 6
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "20",
-    "shown": "20 hours",
+    "ans": "18",
+    "shown": "18 hours",
     "units": [
      "h",
      "hr",
@@ -5585,18 +5580,19 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "21",
      "19",
-     "22",
-     "18",
-     "40",
-     "10",
-     "30",
-     "200"
+     "17",
+     "20",
+     "16",
+     "36",
+     "9",
+     "28",
+     "8",
+     "180"
     ],
-    "q": "8 pumps working together empty a pond in 15 hours. All the pumps pump at the same rate. How many hours would 6 of these pumps take to empty the same pond?",
+    "q": "9 pumps working together empty a pond in 12 hours. All the pumps pump at the same rate. How many hours would 6 of these pumps take to empty the same pond?",
     "hint": "Find how much work one pump does in one hour, or how many pump-hours the job needs.",
-    "why": "The job needs 8 × 15 = 120 pump-hours. 6 pumps share it, so they need 120 ÷ 6 = 20 hours.",
+    "why": "The job needs 9 × 12 = 108 pump-hours. 6 pumps share it, so they need 108 ÷ 6 = 18 hours.",
     "date": "11-08"
    },
    {
@@ -5799,47 +5795,50 @@
     "date": "11-12"
    },
    {
-    "id": "L5-mirrorrows",
+    "id": "L5-digitsum36",
     "level": 5,
-    "frame": "mirrorrows",
-    "kind": "symmetry_add",
-    "topic": "Symmetry",
-    "sub": "symmetry.complete_figure",
-    "family": "symmetry",
+    "frame": "digitsum36",
+    "kind": "scan",
+    "topic": "Number puzzles",
+    "sub": "digit_puzzles.smallest_with_digit_sum",
+    "family": "digit_puzzles",
     "p": {
-     "grid": [
-      "#..#..",
-      ".#...#",
-      "..#...",
-      "#....#"
+     "lo": 100000,
+     "hi": 999999,
+     "preds": [
+      [
+       "digit_sum",
+       36
+      ],
+      [
+       "distinct",
+       null
+      ]
      ],
-     "axis": "horizontal"
+     "ask": "min"
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "5",
-    "shown": "5 squares",
-    "units": [
-     "squares",
-     "square"
-    ],
+    "ans": "156789",
+    "shown": "156,789",
+    "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "6",
-     "4",
-     "7",
-     "3",
-     "10",
-     "15",
-     "50"
+     "156790",
+     "156788",
+     "156791",
+     "156787",
+     "313578",
+     "156799",
+     "156779",
+     "1567890"
     ],
-    "q": "In the diagram, some squares are shaded. The thick line is a line of symmetry, so the top half and the bottom half must match like twins in a mirror. How many extra squares have to be shaded to make the diagram symmetrical?",
-    "hint": "Take each shaded square in turn. Where is its mirror partner on the other side of the thick line?",
-    "why": "Row 1 and row 4 are partners, and row 2 and row 3 are partners. Row 1 is shaded in columns 1 and 4, so row 4 needs those: column 1 is shaded already and column 4 is not, 1 more. Row 2 is shaded in columns 2 and 6, so row 3 needs both, 2 more. Row 3 is shaded in column 3, so row 2 needs it, 1 more. Row 4 is shaded in columns 1 and 6, so row 1 needs those: column 1 is shaded already and column 6 is not, 1 more. 1 + 2 + 1 + 1 = 5 squares.",
-    "code": "■□□■□□\n□■□□□■\n─────────\n□□■□□□\n■□□□□■",
+    "q": "Lin writes the smallest whole number whose digits are all different and add up to 36. What number does she write?",
+    "hint": "How many digits are needed at least? The five biggest different digits add up to only 35. Then think about which digit can go first.",
+    "why": "The five biggest different digits are 9, 8, 7, 6 and 5, which add up to 35, so five digits are not enough and we need six digits. Start with the smallest first digit, 1. The other five digits must add up to 35 and be different, so they are 5, 6, 7, 8 and 9. Writing them from smallest to biggest gives 156,789.",
     "date": "11-13"
    },
    {
@@ -5974,8 +5973,8 @@
     "sub": "perimeter_area.notched_perimeter",
     "family": "perimeter_area",
     "p": {
-     "w": 20,
-     "h": 12,
+     "w": 18,
+     "h": 15,
      "notches": [
       [
        "tr",
@@ -5993,8 +5992,8 @@
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "64",
-    "shown": "64 cm",
+    "ans": "66",
+    "shown": "66 cm",
     "units": [
      "cm",
      "centimetre",
@@ -6006,19 +6005,19 @@
     "accept": [],
     "exact": false,
     "wrong": [
+     "67",
      "65",
-     "63",
-     "66",
-     "62",
-     "128",
-     "32",
-     "74",
-     "54",
-     "640"
+     "68",
+     "64",
+     "132",
+     "33",
+     "76",
+     "56",
+     "660"
     ],
-    "q": "A piece of card is 20 cm long and 12 cm wide. A rectangle 4 cm by 3 cm is cut out of the top right corner. A rectangle 5 cm by 2 cm is cut out of the bottom left corner. What is the length of the whole edge of the card that is left, all the way round?",
-    "hint": "Think about the edge near a corner that has been cut away: it goes in and then comes out again.",
-    "why": "Cutting a corner makes the edge go in and then out again by the same distances, so the whole edge is as long as before. 2 × (20 + 12) = 64 cm.",
+    "q": "A rectangular tile is 18 cm long and 15 cm wide. A rectangle 4 cm by 3 cm is chipped off one corner. A rectangle 5 cm by 2 cm is chipped off the opposite corner. What is the perimeter of the tile now?",
+    "hint": "Think about the edge near a corner that has been chipped away: it goes in and then comes out again.",
+    "why": "Chipping a corner makes the edge go in and then out again by the same distances, so the perimeter is as long as before. 2 × (18 + 15) = 66 cm.",
     "date": "11-17"
    },
    {
@@ -6114,33 +6113,30 @@
     "sub": "paper_folding.fold_and_cut",
     "family": "paper_folding",
     "p": {
-     "folds": 5
+     "folds": 6
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "33",
-    "shown": "33 pieces",
-    "units": [
-     "pieces",
-     "piece"
-    ],
+    "ans": "65",
+    "shown": "65",
+    "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "34",
-     "32",
-     "35",
-     "31",
      "66",
-     "43",
-     "23",
-     "330"
+     "64",
+     "67",
+     "63",
+     "130",
+     "75",
+     "55",
+     "650"
     ],
-    "q": "Ravi folds a long paper scroll in half 5 times, one fold after another. He then makes one straight cut across the folded scroll, through its middle. When he opens the scroll out, how many separate pieces does he have?",
-    "hint": "After each fold the number of layers doubles. How many cut marks does the opened scroll show?",
-    "why": "5 folds make 2 × 2 × 2 × 2 × 2 = 32 layers, so the cut crosses the opened scroll in 32 places. 32 cuts make 32 + 1 = 33 pieces.",
+    "q": "Ravi folds a long ribbon in half again and again, 6 times in all. Then he snips through the folded bundle once, straight across. How many separate lengths of ribbon does he have when he unfolds it?",
+    "hint": "After each fold the number of layers doubles. How many snip marks does the unfolded ribbon show?",
+    "why": "6 folds make 2 × 2 × 2 × 2 × 2 × 2 = 64 layers, so the snip goes through the ribbon in 64 places. 64 snips make 64 + 1 = 65 lengths.",
     "date": "11-20"
    },
    {
@@ -6237,7 +6233,7 @@
      "190",
      "2000"
     ],
-    "q": "A bottle full of juice has a mass of 1100 g. After one third of the juice is drunk, the bottle with the juice that is left has a mass of 800 g. What is the mass of the empty bottle?",
+    "q": "A bottle full of juice has a mass of 1100 g. After one third of the juice is drunk, the bottle with the juice that is left has a mass of 800 g. Find the mass of the empty bottle.",
     "hint": "The juice that was drunk is the difference between the two masses. It was one third of all the juice.",
     "why": "The juice drunk has a mass of 1100 − 800 = 300 g. That was one third of the juice, so all the juice has a mass of 300 × 3 = 900 g. The empty bottle has a mass of 1100 − 900 = 200 g.",
     "date": "11-22"
@@ -6362,7 +6358,7 @@
      "1615",
      "16250"
     ],
-    "q": "A guide takes a group to see 5 caves. The visit to each cave lasts 25 minutes. After each cave, except the last, the group walks for 10 minutes to the next cave. The tour starts at 1:40 pm. When does it end? Give the time in 24-hour form, like 1445.",
+    "q": "A guide takes a group to see 5 caves. The visit to each cave lasts 25 minutes. After each cave, except the last, the group walks for 10 minutes to the next cave. The tour starts at 1:40 pm. On a 24-hour clock, as four digits, when does it finish? (For example, 2:45 pm is 1445.)",
     "hint": "Count the walks carefully. There is one fewer walk than there are caves.",
     "why": "5 cave visits last 5 × 25 = 125 minutes. There are 4 walks: 4 × 10 = 40 minutes. 125 + 40 = 165 minutes, which is 2 h 45 min. 1:40 pm plus 2 h 45 min is 4:25 pm, which is 1625.",
     "date": "11-25"
@@ -6376,14 +6372,14 @@
     "sub": "factors.greatest_common_factor",
     "family": "factors",
     "p": {
-     "x": 72,
-     "y": 108
+     "x": 90,
+     "y": 135
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "36",
-    "shown": "36 cm",
+    "ans": "45",
+    "shown": "45 cm",
     "units": [
      "cm",
      "centimetre",
@@ -6395,19 +6391,18 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "37",
-     "35",
-     "38",
-     "34",
-     "72",
-     "18",
      "46",
-     "26",
-     "360"
+     "44",
+     "47",
+     "43",
+     "90",
+     "55",
+     "35",
+     "450"
     ],
-    "q": "Two ribbons are 72 cm and 108 cm long. Siti cuts both ribbons into pieces of the same length, with no ribbon left over. What is the longest possible length of each piece?",
-    "hint": "The piece length must divide both 72 and 108.",
-    "why": "The common factors of 72 and 108 include 1, 2, 3, 4, 6, 9, 12, 18 and 36. The longest is 36 cm.",
+    "q": "Two ribbons are 90 cm and 135 cm long. Siti cuts both ribbons into pieces of the same length, with no ribbon left over. What is the longest possible length of each piece?",
+    "hint": "The piece length must divide both 90 and 135.",
+    "why": "The common factors of 90 and 135 include 1, 3, 5, 9, 15 and 45. The longest is 45 cm.",
     "date": "11-26"
    },
    {
@@ -6825,7 +6820,7 @@
     ],
     "q": "A wall clock shows 7 o'clock. Dan wonders what hour the clock will show after exactly 250 more hours have passed. Write the hour only.",
     "hint": "The clock shows the same hour again every 12 hours. How many whole turns of 12 hours fit into 250, and how many hours are left over?",
-    "why": "250 ÷ 12 = 20 remainder 10, so after 240 hours the clock shows 7 o'clock again. 10 more hours: 7 + 10 = 17, and 17 − 12 = 5 o'clock.",
+    "why": "12 × 20 = 240, so after 240 hours the clock shows 7 o'clock again. 250 − 240 = 10 more hours: 7 + 10 = 17, and 17 − 12 = 5 o'clock.",
     "date": "11-06"
    },
    {
@@ -6999,7 +6994,7 @@
      "306",
      "3160"
     ],
-    "q": "A flag is cut from a rectangle of cloth with sides of 24 cm and 15 cm. Two corners are cut off as right-angled triangles. The first triangle has short sides 8 cm and 6 cm. The second triangle has short sides 10 cm and 4 cm. What is the area of the flag?",
+    "q": "A flag is cut from a rectangle of cloth with sides of 24 cm and 15 cm. Two corners are cut off as right-angled triangles. The first triangle has short sides 8 cm and 6 cm. The second triangle has short sides 10 cm and 4 cm. Find the area of the flag.",
     "hint": "Find the area of the whole rectangle of cloth. Then take away the area of each triangle.",
     "why": "The rectangle has an area of 24 × 15 = 360 cm². The triangles have areas of 8 × 6 ÷ 2 = 24 cm² and 10 × 4 ÷ 2 = 20 cm². 360 − 24 − 20 = 316 cm².",
     "date": "11-10"
@@ -7670,46 +7665,43 @@
     "date": "11-25"
    },
    {
-    "id": "L6-printers",
+    "id": "L6-tvprofit",
     "level": 6,
-    "frame": "printers",
-    "kind": "work_time",
-    "topic": "Work and time",
-    "sub": "rate.work_and_time",
-    "family": "rate",
+    "frame": "tvprofit",
+    "kind": "profit_pct",
+    "topic": "Percentage",
+    "sub": "money.profit",
+    "family": "money",
     "p": {
-     "people": 18,
-     "days": 14,
-     "new_people": 12
+     "cost": 480,
+     "sell": 600
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "21",
-    "shown": "21 hours",
+    "ans": "25",
+    "shown": "25%",
     "units": [
-     "h",
-     "hr",
-     "hrs",
-     "hour",
-     "hours"
+     "%",
+     "percent",
+     "per cent"
     ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "22",
-     "20",
+     "26",
+     "24",
+     "27",
      "23",
-     "19",
-     "42",
-     "31",
-     "11",
-     "210"
+     "50",
+     "35",
+     "15",
+     "250"
     ],
-    "q": "18 printers, all working at the same rate, print a school magazine in 14 hours. How many hours would 12 of these printers take to print the same magazine?",
-    "hint": "Find how many printer-hours the whole job needs.",
-    "why": "The job needs 18 × 14 = 252 printer-hours. 12 printers share it, so they need 252 ÷ 12 = 21 hours.",
+    "q": "A shop buys a television for $480 and sells it for $600. What is the shop's profit as a percentage of the buying price?",
+    "hint": "Find the profit in dollars first. Then write it as a fraction of the buying price.",
+    "why": "Profit: $600 − $480 = $120. 120/480 = 1/4, which is 25%.",
     "date": "11-26"
    },
    {
@@ -7852,15 +7844,15 @@
     "sub": "fractions.share_fraction",
     "family": "fractions",
     "p": {
-     "num": 5,
-     "den": 8,
-     "people": 4
+     "num": 3,
+     "den": 4,
+     "people": 6
     },
     "t": {},
     "fmt": "frac",
     "type": "n",
-    "ans": "5/32",
-    "shown": "5/32 L",
+    "ans": "1/8",
+    "shown": "1/8 L",
     "units": [
      "l",
      "litre",
@@ -7872,17 +7864,17 @@
     "accept": [],
     "exact": true,
     "wrong": [
-     "37/32",
-     "69/32",
-     "5/16",
-     "5/64",
-     "325/32",
-     "21/32",
-     "25/16"
+     "9/8",
+     "17/8",
+     "1/4",
+     "1/16",
+     "81/8",
+     "5/8",
+     "5/4"
     ],
-    "q": "Mei has 5/8 of a litre of paint. She pours it equally into 4 small tubs. How many litres of paint are in each tub?",
-    "hint": "Dividing by 4 means cutting each part of the paint into 4 smaller parts.",
-    "why": "5/8 ÷ 4 = 5/8 × 1/4 = 5/32. Each tub has 5/32 of a litre.",
+    "q": "Mei has 3/4 of a litre of milk. She pours it equally into 6 cups. How many litres of milk are in each cup?",
+    "hint": "Dividing by 6 means cutting each part of the milk into 6 smaller parts.",
+    "why": "3/4 ÷ 6 = 3/4 × 1/6 = 3/24, which is 1/8 in its simplest form. Each cup has 1/8 of a litre.",
     "date": "11-30"
    }
   ]

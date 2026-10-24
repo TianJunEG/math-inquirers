@@ -97,7 +97,7 @@ DEFS = [
     P('marblegame', 'take_away_game', 'A taking game',
       "A jar holds {total} sweets. Kai and Lin take turns to eat 1, 2, 3 or 4 sweets. Whoever eats the last sweet wins a toy. Kai goes first. How many sweets should Kai eat first so that he can always win?",
       "Try to leave a number in the 5 times table for Lin. Then keep making 5 in every round.",
-      "Kai eats {ans} sweets and leaves {leave}, which is in the {cycle} times table. Whatever Lin eats, Kai eats enough to make {cycle} sweets in that round. So Kai eats the last sweet.",
+      "Kai eats {ans} and leaves {leave}, which is in the {cycle} times table. Whatever Lin eats, Kai eats enough to make {cycle} sweets in that round. So Kai eats the last sweet.",
       p=dict(total=29, m=4), unit='sweets', sub='strategy.take_away_game'),
     P('cousindays', 'days_in_common', 'Overlapping days',
       'Two scouts camp at the same campsite. Ravi camps from the {r1[0]:o} to the {r1[1]:o} of the month. Dan camps from the {r2[0]:o} to the {r2[1]:o}. Each scout is there on his first and last day too. On how many days are both scouts at the campsite?',
