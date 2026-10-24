@@ -10,7 +10,7 @@ What it does, in this order (any failure stops the build and nothing is written)
  2. turns each item / part into a runner item (type fields, set, choice or selfcheck) with its figure drawn by extension/tools/figs.py;
  3. attaches the variant families of the sidecar practice/ext/variants/lN_uXX.py, and runs each family's independent oracle over EVERY
     combination of its variables (and at the authored numbers) before anything is written;
- 4. copies the Term 1 runner (term/l1/runner) with five small, asserted patches (see patch_runner) and writes data + page.
+ 4. writes data + page + public/sheet.js (the worksheet runner: free choice of question, submit, marking, solutions after submit).
 No timers, scores or streaks: that is the runner's rule and this build adds nothing to it.
 """
 import html, importlib.util, itertools, json, os, re, shutil, sys
@@ -26,6 +26,15 @@ TIER_LABEL = {'core': 'Start here', 'stretch': 'Think harder', 'challenge': 'Go 
 BLANK = re.compile(r'\{(?:b|bw|l|ll)\}')
 CIRC = re.compile(r'\{circ:([^}]*)\}')
 FALLBACK_HINT = 'Read the question again slowly. The "Before you start" box at the top may help. Try a small example first.'
+
+
+SHEET_CSS = (".nav{display:flex;flex-direction:column;gap:.5rem;margin:0 0 1rem}.ng{display:flex;flex-wrap:wrap;gap:6px;align-items:center}"
+  ".nt{font-weight:800;min-width:7.5rem;font-size:.9em;color:var(--mut)}"
+  ".nb{min-width:2.75rem;min-height:2.75rem;border-radius:12px;border:2px solid var(--ink);background:transparent;color:var(--ink);font:700 14px 'Nunito Sans',Arial;cursor:pointer;padding:0 .3rem;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1}"
+  ".nb i{font-style:normal;font-size:.8em}.nb.done{background:var(--yellow);color:#1B2A49}.nb.right{background:var(--teal);border-color:var(--teal);color:#fff}"
+  ".nb.wrong{background:var(--warmbg);border-color:var(--warm);color:var(--warm)}.nb.blank{border-style:dashed}.nb.self{background:var(--card)}"
+  ".nb[aria-current=true]{outline:3px solid var(--focus);outline-offset:2px}.barwrap{margin-top:1rem}.fig{max-width:34rem;margin:0 0 1rem}"
+  ".fr{font-size:1.15em;font-weight:700}.sim{margin-top:.8rem}.simbox{margin-top:.8rem;border-top:2px dashed var(--line);padding-top:.6rem}")
 
 
 class Fail(Exception):
@@ -209,26 +218,9 @@ def attach_variants(items, variants):
 
 
 # ---------------------------------------------------------------- step 4: runner copy and page
-def patch_runner(js):
-    """Five asserted patches to the copy of term/l1/runner/practice.js; the original file is not touched."""
-    def sub(old, new):
-        nonlocal js
-        if js.count(old) != 1:
-            raise Fail('runner changed, patch no longer applies: ' + old[:50])
-        js = js.replace(old, new)
-    sub("var TIER = { core: 'Start here', stretch: 'Think harder', challenge: 'Go further' };",
-        "var TIER = { core: 'Start here', stretch: 'Think harder', challenge: 'Go further', check: 'Check yourself' };")
-    sub("['core', 'stretch', 'challenge'].forEach(function (k) { t.appendChild(", "Object.keys(TIER).forEach(function (k) { t.appendChild(")
-    sub("' · Lesson ' + L.lesson + ' · ' + L.topic;", "' · ' + (L.unit_label || 'Lesson ' + L.lesson) + ' · ' + L.topic;")
-    sub("function shuffled(item) {\n", "function shuffled(item) {\n    if (item.fixed) return item.options;\n")
-    # a True/False (or any two-choice) item has only one wrong answer, so "that is the same answer as before" would trap the child
-    sub("if (s.tries === 1 && s.last === sig) {", "if (s.tries === 1 && s.last === sig && !(item.type === 'choice' && item.options.length < 3)) {")
-    return js
-
-
 def learn_block(unit):
     ln = unit['learn']; ex = ln['example']; e = html.escape
-    parts = [f'<details class="learn" open><summary>Before you start: {e(unit["title"])}</summary>', f'<p>{e(ln["intro"])}</p>']
+    parts = [f'<details class="learn"><summary>Before you start: {e(unit["title"])}</summary>', f'<p>{e(ln["intro"])}</p>']
     parts.append(f'<h2>Worked example</h2><p>{e(ex["problem"])}</p>')
     if ex.get('figure'):
         parts.append(f'<div class="lf">{svg_of(ex["figure"])}</div>')
@@ -265,15 +257,17 @@ def build(level, u):
     shutil.rmtree(dist, ignore_errors=True)
     os.makedirs(os.path.join(dist, 'data'))
     json.dump(data, open(os.path.join(dist, 'data', key + '.json'), 'w', encoding='utf-8'), ensure_ascii=False)
-    js = patch_runner(open(os.path.join(ROOT, 'term', 'l1', 'runner', 'practice.js'), encoding='utf-8').read())
-    open(os.path.join(dist, 'practice.js'), 'w', encoding='utf-8').write(js)
+    shutil.copy(os.path.join(HERE, 'public', 'sheet.js'), os.path.join(dist, 'sheet.js'))
     page = open(os.path.join(ROOT, 'term', 'l1', 'runner', 'index.html'), encoding='utf-8').read()
-    page = page.replace('<script src="practice.js">', f'<script>window.MI_LESSON={json.dumps(key)};</script><script src="practice.js">')
-    page = page.replace('<div class="tiers"', learn_block(unit) + '<div class="tiers"', 1)
-    page = page.replace('<title>Practice | Math Inquirers</title>', f'<title>Practice: {html.escape(unit["title"])} | Math Inquirers</title>')
-    if 'Before you start' not in page:
-        raise Fail('page template changed')
-    open(os.path.join(dist, 'index.html'), 'w', encoding='utf-8').write(page)
+    head = page[:page.index('</style>')] + SHEET_CSS + '</style></head>'
+    head = head.replace('<title>Practice | Math Inquirers</title>', f'<title>Practice: {html.escape(unit["title"])} | Math Inquirers</title>')
+    body = ('<body><main><h1 id="title">Practice</h1><p class="sub" id="sub"></p>' + learn_block(unit) +
+            '<p class="sub" id="count" aria-live="polite"></p><nav class="nav" id="nav" aria-label="Choose a question"></nav>'
+            '<section class="card" id="card"></section><div id="bar" class="barwrap"></div>'
+            '<p class="foot">There is no score and no timer. Open any question in any order, skip what you like, then submit. '
+            'Your answers stay in this browser only: nothing is sent anywhere. A grown-up can read along.</p></main>'
+            f'<script>window.MI_LESSON={json.dumps(key)};</script><script src="sheet.js"></script></body></html>')
+    open(os.path.join(dist, 'index.html'), 'w', encoding='utf-8').write(head + body)
     fonts = os.path.join(ROOT, 'website', 'dist')
     if os.path.isdir(os.path.join(fonts, 'fonts')):
         shutil.copytree(os.path.join(fonts, 'fonts'), os.path.join(dist, 'fonts'))
