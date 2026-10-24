@@ -56,3 +56,58 @@ a separate self-check card (the example reasoning is shown after submit, never m
 - M2 L2 5(a) circles no longer says "160 is between them" (uses "your answer to 5(a) between"); L2 4(b) and 4(d) hints no longer state the total 150.
 - M3 L2 5(a) circles hint (false rule "the corner is the smallest") replaced by a test-it hint; L2 5(b) and Think harder 1 hints no longer say "the biggest numbers go in the corners"; L2 4(a) hint no longer names the diagonal; L1 Investigation 4 and Think harder 4 hints no longer give the counter-example.
 - Wording: "Write them in the boxes" is now "Type each one in its box"; L1 2(a) says "Type every number".
+
+
+# Week 2 (lessons 3 and 4), built 24 Oct 2026
+
+Lesson 3 Legs, wheels and arrays (Tue 1 Dec) and lesson 4 Pattern machines (Fri 4 Dec), `website/data/beta_schedule.json`, Level 2 groups. Not deployed, nothing sent, no website/dist or Supabase change; the shared files (`sheet.js`, `practice/submit/*`, `build_holiday.py`, `hlib.py`, `test_holiday.py`) are untouched. Only `p2/p2lib.py` (this level's own helpers) was extended.
+
+    python3 practice/holiday/build_holiday.py p2 3      # -> practice/holiday/p2/03/dist/   (git-ignored)
+    python3 practice/holiday/build_holiday.py p2 4
+    python3 practice/holiday/test_holiday.py p2 3       # browser test + screenshots into p2/03/proof/
+    python3 practice/holiday/test_holiday.py p2 4
+
+Sources: `p2/content/l3.js`, `l4.js` (`workbook()` = Start here; `qbank.stretch` first four = Think harder 1 to 4; `qbank.challenge` last three = Go further 5 to 7, exactly as `p2/workbook_html.js` prints them), `p2/gaps.json` (Investigation), `p2/workbook_html.js` (the "Make up your own" line). Printed figures come from `p2/workbook_body.html` (array, cups tray, cycles, shape pattern, letter tiles, bead string, flower, square tables, stick houses); the stickers-and-plates, van, hens pen, towers, the two number lines for the frogs and every table are redrawn for a phone (the printed ones are too small or crowded at 390 px). Checkers read the pictures where they can (counters and cups of the array and tray, the shapes and letters of the patterns from the figure's own description).
+
+## Items
+
+| | Lesson 3 | Lesson 4 |
+|---|---|---|
+| Items | 33 | 44 |
+| Start here | 14 | 22 |
+| Investigation | 5 | 7 |
+| Think harder | 8 | 6 |
+| Go further (and Make up your own) | 6 | 9 |
+| Auto-marked (number, fields, set, choice) | 26 | 35 |
+| Self-check, typed or spoken explanation (never auto-marked) | 7 | 9 |
+| Paper-only self-check (drawing) | 0 | 0 |
+| Unavailable online | 0 | 0 |
+| Variant families ("Try a similar one", every combination run against an independent oracle) | 5 (3a, 4a, 4b, 5a, 5b: 70 combinations) | 7 (2c, 3a, 4b, 4c, 5b, T3, C6a: 97 combinations) |
+
+Every item has a hint, worked steps and a skill tag. Browser test: both lessons RESULT OK (every answer typed correctly, wrong and skipped answers, reload, 70 and 97 variants, 390/360/900 px light and dark, no horizontal scroll, figure text at least 11 px).
+
+## Not mirrored exactly, and why
+
+- Printed multi-part questions are one card per part; a printed "explain / how do you know / what do you notice" line is a separate self-check card (example shown after submit, never marked).
+- L3 Q1 "two multiplication / two division sentences": one card each with the six boxes, and the stem says what each sentence starts with (rows first, then counters in a row; share into the rows, then groups the size of a row), so the order is fixed and can be marked.
+- L3 Q3 and L4 Q4(a), Q5(a): the printed table is drawn as a figure with the printed cells filled; the child types the next cells of ONE row in order (the legs after 1 to 4 swaps; the petals; the children). The hens/goats rows of the printed table are not asked: the question that follows asks hens and goats in two boxes. 
+- L3 Q6 (20 chairs): the printed table (rows 2 to 10, chairs in each row, works?) becomes two cards: the numbers of rows that work (a list), then the chairs in each row for those, fewest rows first (ordered list).
+- L3 Think harder 1 (find ALL the ways): the number of tricycles for every way (a list), then the bicycles for the same ways in order; the full pairs are in the worked solution.
+- L3 Go further 5 is three cards (Mei right? could he count 37? why legs never 25), the third a self-check that does not state that 25 wheels is possible, so it does not give away the first card.
+- L4 Q1 and Think harder: "What shape is in place 20?" is typed in print; online it is a choice of triangle, circle or square (the three shapes are in the picture), and Q2(a) a choice of M, A, T, H, so a spelling slip is not marked wrong. Q2(b) is a number.
+- L4 Q6 (two lists): Ali's and Mei's lists are typed from where the printed line stops ("3, 6, 9, ...", "4, 8, 12, ..."), in order; "Both say" is a list; "what do you notice" is a self-check.
+- L4 Investigation: "write each pattern up to 30" is three typed lists (after the numbers printed in the question); "pick any number from 1 to 30, which pattern?" is fixed to 26 (so it can be marked); "can a number be in two / in none?" are two Yes/No cards.
+- L4 Go further 6 (towers) "Is there a tower with exactly 50 cubes? With exactly 100?" are two Yes/No cards, and the explanation a self-check. L4 Go further 7: the two frog number lines are redrawn as two lines of 0 to 15 and 15 to 30 each.
+- Printed "take-home" stars are not shown on screen; the print-only strategy card, "Tool of the day", "Looking back" and the name/date line are not online items.
+- No coin or note pictures; every figure is drawn.
+- The Investigation and Think harder buttons in the question list all read "Investigation", "Think", "Go" (the runner shows the first word of the label); the full label is in each button's accessible name and at the top of the card. Shared runner behaviour, not changed.
+
+## Week 1 audit points applied from the start
+
+No card gives another card's answer in its question or hint (L3 Go further 5 explain, L3 Think harder 2 "who", L4 Investigation cards state only what the patterns are); hints nudge and give no answer or one-case rule; no example equals an answer; the printed position/pairing is kept (hens then goats, rows then chairs, each and left over, ordered table cells); screen wording ("type", "picture a line", "on paper if you like", no "circle the", no "take-home"); lists of at most 9 numbers with a comma; typed explanations are self-check.
+
+## Open questions for the owner
+
+1. L3 Q3 asks only the Legs row of the printed table (the hens and goats rows are shown for the first column only), then hens and goats in two boxes. Should the child also type the hens and goats for each swap?
+2. L4 Investigation "pick any number": fixed to 26 so it can be auto-marked; the open "pick any number" version is lost. Fine, or should it be a self-check where the child picks and tests several numbers?
+3. L3 and L4 qbank items not printed in the workbook (Think harder 5 to 9 and Go further 1 to 6 of the bank) are not online, as in week 1.
