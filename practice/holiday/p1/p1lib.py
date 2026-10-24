@@ -268,3 +268,97 @@ def dot_triangles(k_max=5, d=17, caption=''):
         body += T(x + w / 2, 10 + k_max * d + 22, n, 16, 'middle', 700)
         x += w + 18
     return svg(x - 8, 10 + k_max * d + 32, body, caption or 'Dots in triangles: 1, 3, 6, 10 and 15')
+
+
+# ================================================================ weeks 3 on (lessons 5 and 6): number machines, bars, queue, snail wall, ways tables
+# No coin or note pictures anywhere: coins appear only as words and numbers.
+def _arrow(x1, x2, y):
+    return Ln(x1, y, x2 - 6, y, 2.4) + f'<polygon points="{x2},{y} {x2 - 9},{y - 5.5} {x2 - 9},{y + 5.5}" fill="{NAVY}"/>'
+
+
+def machine(cells, caption=''):
+    """A number machine strip, left to right. cells: list of (text, kind) with kind 'q' (the number to find, yellow), 'op' (a step, grey) or 'out' (the result, blue)."""
+    w, h, gap = 58, 44, 24
+    fill = dict(q=YEL, op='#EDEDED', out='#DDEBF7')
+    body, x = '', 4
+    for i, (t, k) in enumerate(cells):
+        body += Re(x, 6, w, h, fill[k], NAVY, 2.4, 7) + T(x + w / 2, 6 + h / 2 + 8, t, 22, 'middle', 800)
+        if i < len(cells) - 1:
+            body += _arrow(x + w + 3, x + w + gap - 2, 6 + h / 2)
+        x += w + gap
+    return svg(x - gap + 4, h + 12, body, caption or 'A number machine: ' + ', '.join(t for t, _ in cells))
+
+
+def in_out_table(ins, outs, caption=''):
+    """IN and OUT rows; None is drawn as a yellow '?' box."""
+    n = len(ins)
+    lw, cw, rh = 66, 52, 40
+    W = lw + n * cw + 4
+    body = ''
+    for r, (lab, vals) in enumerate((('IN', ins), ('OUT', outs))):
+        y = 4 + r * rh
+        body += Re(2, y, lw, rh, '#EDEDED', NAVY, 2, 0) + T(2 + lw / 2, y + rh / 2 + 7, lab, 20, 'middle', 800)
+        for i, v in enumerate(vals):
+            x = 2 + lw + i * cw
+            body += Re(x, y, cw, rh, YEL if v is None else '#fff', NAVY, 2, 0) + T(x + cw / 2, y + rh / 2 + 7, '?' if v is None else v, 21, 'middle', 800)
+    return svg(W, 2 * rh + 8, body, caption or 'A number machine table. IN: ' + ', '.join('?' if v is None else str(v) for v in ins) + '. OUT: ' + ', '.join('?' if v is None else str(v) for v in outs))
+
+
+def queue_fig(n=20, mei=7, caption=''):
+    """A queue of n children in two rows of n/2 circles, numbered from the front; one child is marked."""
+    per = (n + 1) // 2
+    pitch = 28
+    W = per * pitch + 14
+    body = T(6, 16, 'front of the queue', 14, 'start', 700, TEAL, True)
+    for k in range(n):
+        r, i = divmod(k, per)
+        cx, cy = 7 + i * pitch + pitch / 2, 44 + r * 58
+        is_mei = (k + 1 == mei)
+        body += Ci(cx, cy, 11.5, YEL if is_mei else '#fff', NAVY, 2.2) + T(cx, cy + 27, k + 1, 13, 'middle', 700, '#44506F')
+        if is_mei:
+            body += T(cx, cy - 18, 'Mei', 14, 'middle', 800)
+    return svg(W, 44 + 58 + 34, body, caption or f'A queue of {n} children numbered from the front. Mei is number {mei}')
+
+
+def marble_bars(shaded=(('Ali', 8), ('Mei', 0), ('Ben', 0)), boxes=14, caption=''):
+    """Bars of empty boxes, one per child; the shaded boxes are the marbles already shown."""
+    bw = 16
+    lw = 40
+    W = lw + boxes * bw + 6
+    body = ''
+    for r, (nm, k) in enumerate(shaded):
+        y = 4 + r * 30
+        body += T(2, y + 18, nm, 15, 'start', 800)
+        for i in range(boxes):
+            body += Re(lw + i * bw, y + 2, bw, 22, '#D9D9D9' if i < k else '#fff', NAVY, 1.6)
+    return svg(W, 4 + len(shaded) * 30 + 2, body, caption or 'Bars of boxes for Ali, Mei and Ben. Ali has 8 boxes shaded, one for each marble')
+
+
+def snail_wall(height=9, up=3, back=1, caption=''):
+    """A wall with a 0 to height cm scale and a snail at the bottom."""
+    k = 22
+    y0 = 20 + height * k
+    body = Re(60, y0 - height * k, 52, height * k, '#F4F1E8', NAVY, 2.4)
+    for v in range(height + 1):
+        body += Ln(52, y0 - v * k, 112, y0 - v * k, 2 if v % 3 == 0 else 1.2) + T(44, y0 - v * k + 5, v, 14, 'end', 700)
+    body += T(86, y0 - height * k - 8, 'top', 14, 'middle', 800, TEAL) + T(86, y0 + 20, 'bottom', 14, 'middle', 800, TEAL)
+    body += f'<ellipse cx="152" cy="{y0 - 11}" rx="24" ry="13" fill="#9BD39B" stroke="{NAVY}" stroke-width="2.2"/>' + Ci(152, y0 - 13, 7, '#fff', NAVY, 2.2)
+    body += Ln(172, y0 - 20, 182, y0 - 34, 2.2) + Ci(182, y0 - 36, 3, NAVY, NAVY, 1)
+    body += T(130, y0 - 110, 'The snail starts at the bottom.', 14, 'start', 700) + T(130, y0 - 88, f'Each day: up {up} cm.', 14, 'start', 700) + T(130, y0 - 66, f'Each night: back {back} cm.', 14, 'start', 700)
+    return svg(330, y0 + 30, body, caption or f'A wall {height} cm high with a scale from 0 to {height} and a snail at the bottom')
+
+
+def ways_table(ways, coins, caption=''):
+    """A table of ways to pay: one row per way, a column for each coin, the number of that coin (counts are written in the cells)."""
+    nc = len(coins)
+    wc, cw, rh = 44, (280 - 44) // nc, 30
+    W = wc + nc * cw + 4
+    body = Re(2, 2, W - 4, rh, '#D9D9D9', NAVY, 1.8) + T(2 + wc / 2, 2 + rh / 2 + 6, 'Way', 15, 'middle', 800)
+    for j, c in enumerate(coins):
+        body += T(2 + wc + j * cw + cw / 2, 2 + rh / 2 + 6, f'{c}¢', 16, 'middle', 800)
+    for r, w in enumerate(ways):
+        y = 2 + (r + 1) * rh
+        body += Re(2, y, W - 4, rh, '#fff' if r % 2 else '#FAF6EA', NAVY, 1.4) + T(2 + wc / 2, y + rh / 2 + 6, chr(65 + r), 16, 'middle', 800)
+        for j in range(nc):
+            body += T(2 + wc + j * cw + cw / 2, y + rh / 2 + 6, w[j], 17, 'middle', 700)
+    return svg(W, 2 + (len(ways) + 1) * rh + 4, body, caption or 'A table of ways to pay: ' + str(len(ways)) + ' ways, with the number of each coin')
