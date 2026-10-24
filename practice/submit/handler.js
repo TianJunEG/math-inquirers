@@ -86,11 +86,11 @@ export async function handle(request, env, store) {
   const err = validate(body); if (err) return bad(err);
   const th = await sha256Hex(token);
   const g = await store.getKeys(th, body.unit, body.unit_version);          // checks session, consent and rate in the database too
-  if (!g.ok) return bad(g.error, { session: 401, consent: 403, unit: 404, rate: 429 }[g.error] || 400);
+  if (!g.ok) return bad(g.error, { session: 401, consent: 403, entitlement: 403, unit: 404, rate: 429 }[g.error] || 400);
   const m = markAll(g.keys, body.answers, body.self);
   if (m.error) return bad(m.error);
   const rec = await store.record(th, { unit: body.unit, unit_version: body.unit_version, sid: body.sid, rev: body.rev, rows: m.rows, counts: m.counts });
-  if (!rec.ok) return bad(rec.error, { session: 401, consent: 403, rate: 429 }[rec.error] || 400);
+  if (!rec.ok) return bad(rec.error, { session: 401, consent: 403, entitlement: 403, rate: 429 }[rec.error] || 400);
   return reply({ ok: true, rev: rec.rev, duplicate: !!rec.duplicate, stale: !!rec.stale, counts: m.counts, marks: Object.fromEntries(m.rows.map((r) => [r.item_id, r.mark])) });
 }
 

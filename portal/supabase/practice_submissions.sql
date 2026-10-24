@@ -85,6 +85,9 @@ create table if not exists public.practice_units (
   product      text not null check (product in ('holiday','term','extension')),
   level        smallint not null check (level between 1 and 6),
   title        text not null,
+  unit_no      smallint,             -- extension unit 1..10 (or term lesson / holiday lesson number)
+  access       text not null default 'enrolled' check (access in ('enrolled','purchased','open')),
+                                     -- enrolled: holiday and term (confirmed enrolment at that level) | purchased: extension (entitlement) | open: sample page, stores nothing
   content_hash text,                 -- hash of the built data file the keys were made from
   published    boolean not null default false,
   created_at   timestamptz not null default now(),
@@ -167,6 +170,126 @@ language sql stable security definer set search_path = public as $$
   select exists (select 1 from public.tutor_groups tg where tg.user_id = auth.uid() and tg.group_id = p_group);
 $$;
 
+
+-- ---------- 5b. who may practise what (owner decision D2) ----------
+-- holiday + term units  : the family has a CONFIRMED enrolment (any child of the parent) in a group of the same level.
+-- extension units       : the family owns an entitlement for that workbook (shop product id from website/data/products.json, e.g. 'ext-l2').
+-- open sample units     : no sign-in, nothing stored; this server refuses submissions for them.
+create table if not exists public.entitlements (
+  id          uuid primary key default gen_random_uuid(),
+  parent_id   uuid not null references public.parents(id) on delete cascade,
+  product_id  text not null check (product_id ~ '^ext-l[1-6]$'),         -- matches products.json ids; extend the check when other products get online parts
+  units       smallint[],                                               -- null = the whole workbook; or the unit numbers sold separately
+  source      text not null check (source in ('stripe','admin','code')),
+  source_ref  text,                                                     -- Stripe Checkout Session id (cs_...), the admin's note, or the code's id
+  granted_by  uuid,                                                     -- admin user for source 'admin'
+  created_at  timestamptz not null default now(),
+  expires_at  timestamptz,                                              -- null = no end (a book is bought once); set it if online access is ever time-limited
+  revoked_at  timestamptz
+);
+create index if not exists entitlements_parent_idx on public.entitlements (parent_id, product_id);
+create unique index if not exists entitlements_stripe_once on public.entitlements (source_ref) where source = 'stripe';   -- webhook retries cannot double-grant
+
+-- Codes printed in the book (or sent with a PDF). Only a hash is stored. One use by default.
+create table if not exists public.access_codes (
+  id          uuid primary key default gen_random_uuid(),
+  code_hash   text not null unique,
+  product_id  text not null check (product_id ~ '^ext-l[1-6]$'),
+  units       smallint[],
+  max_uses    smallint not null default 1 check (max_uses between 1 and 50),
+  used_count  smallint not null default 0,
+  created_at  timestamptz not null default now(),
+  expires_at  timestamptz,
+  revoked_at  timestamptz,
+  batch_note  text
+);
+create table if not exists public.access_code_uses (
+  code_id uuid not null references public.access_codes(id) on delete cascade,
+  parent_id uuid not null references public.parents(id) on delete cascade,
+  used_at timestamptz not null default now(),
+  primary key (code_id, parent_id)
+);
+create table if not exists public.access_code_failures (   -- for the 10-wrong-guesses-per-hour limit; purged with the sessions
+  parent_id uuid not null, at timestamptz not null default now()
+);
+
+create or replace function public._can_access(p_child uuid, p_unit text, p_version text) returns boolean
+language sql stable security definer set search_path = public as $$
+  select exists (
+    select 1 from public.practice_units u join public.children c on c.id = p_child
+     where u.unit_key = p_unit and u.unit_version = p_version and u.published and u.access <> 'open'
+       and ( (u.access = 'enrolled' and exists (select 1 from public.enrolments e join public.groups g on g.id = e.group_id join public.children c2 on c2.id = e.child_id
+                                                 where c2.parent_id = c.parent_id and e.status = 'confirmed' and g.level = u.level))
+          or (u.access = 'purchased' and exists (select 1 from public.entitlements n
+                                                 where n.parent_id = c.parent_id and n.product_id = 'ext-l' || u.level and n.revoked_at is null
+                                                   and (n.expires_at is null or n.expires_at > now()) and (n.units is null or u.unit_no = any (n.units)))) ));
+$$;
+
+-- Parent redeems a printed code. Fixed error words; 10 wrong tries per hour per parent.
+create or replace function public.redeem_access_code(p_code text) returns text
+language plpgsql security definer set search_path = public, extensions as $$
+declare uid uuid := public._require_parent(); ac public.access_codes; h text := encode(extensions.digest(upper(regexp_replace(coalesce(p_code,''), '[^A-Za-z0-9]', '', 'g')), 'sha256'), 'hex');
+begin
+  if (select count(*) from public.access_code_failures where parent_id = uid and at > now() - interval '1 hour') >= 10 then raise exception 'too_many_tries'; end if;
+  select * into ac from public.access_codes where code_hash = h for update;
+  if not found or ac.revoked_at is not null or (ac.expires_at is not null and ac.expires_at < now()) or ac.used_count >= ac.max_uses then
+    insert into public.access_code_failures (parent_id) values (uid); raise exception 'bad_code'; end if;
+  if exists (select 1 from public.access_code_uses where code_id = ac.id and parent_id = uid) then return ac.product_id; end if;   -- idempotent for the same family
+  insert into public.access_code_uses (code_id, parent_id) values (ac.id, uid);
+  update public.access_codes set used_count = used_count + 1 where id = ac.id;
+  insert into public.entitlements (parent_id, product_id, units, source, source_ref) values (uid, ac.product_id, ac.units, 'code', ac.id::text);
+  return ac.product_id;
+end $$;
+
+create or replace function public.my_entitlements() returns table (product_id text, units smallint[], source text, created_at timestamptz)
+language sql stable security definer set search_path = public as $$
+  select n.product_id, n.units, n.source, n.created_at from public.entitlements n
+   where n.parent_id = auth.uid() and n.revoked_at is null and (n.expires_at is null or n.expires_at > now());
+$$;
+
+-- Admin actions (the 'grant access' button on the admin page; works before the shop is live)
+create or replace function public.admin_grant_access(p_parent uuid, p_product text, p_units smallint[], p_note text) returns uuid
+language plpgsql security definer set search_path = public as $$
+declare id uuid;
+begin
+  if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
+  insert into public.entitlements (parent_id, product_id, units, source, source_ref, granted_by) values (p_parent, p_product, p_units, 'admin', left(p_note, 200), auth.uid()) returning entitlements.id into id;
+  return id;
+end $$;
+create or replace function public.admin_revoke_access(p_entitlement uuid) returns void
+language plpgsql security definer set search_path = public as $$
+begin
+  if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
+  update public.entitlements set revoked_at = now() where id = p_entitlement and revoked_at is null;
+end $$;
+-- Creates N codes and returns them ONCE (plain text, for the printer); only hashes are kept. Format XXXX-XXXX-XXXX from gen_code().
+create or replace function public.admin_create_access_codes(p_n int, p_product text, p_units smallint[], p_note text) returns setof text
+language plpgsql security definer set search_path = public, extensions as $$
+declare i int; c text;
+begin
+  if not public.is_admin() then raise exception 'forbidden' using errcode = '42501'; end if;
+  if p_n < 1 or p_n > 500 then raise exception 'bad_count'; end if;
+  for i in 1..p_n loop
+    c := public.gen_code(4) || '-' || public.gen_code(4) || '-' || public.gen_code(4);
+    insert into public.access_codes (code_hash, product_id, units, batch_note) values (encode(extensions.digest(replace(c, '-', ''), 'sha256'), 'hex'), p_product, p_units, left(p_note, 100));
+    return next c;
+  end loop;
+end $$;
+-- Later, from the Stripe webhook (service role), once the shop sells these books: select public.service_grant_from_order(parent, 'ext-l2', null, 'cs_...');
+create or replace function public.service_grant_from_order(p_parent uuid, p_product text, p_units smallint[], p_session text) returns void
+language sql security definer set search_path = public as $$
+  insert into public.entitlements (parent_id, product_id, units, source, source_ref) values (p_parent, p_product, p_units, 'stripe', p_session) on conflict do nothing;
+$$;
+
+alter table public.entitlements        enable row level security;
+alter table public.access_codes        enable row level security;
+alter table public.access_code_uses    enable row level security;
+alter table public.access_code_failures enable row level security;
+revoke all on public.entitlements, public.access_codes, public.access_code_uses, public.access_code_failures from anon, authenticated;
+grant select on public.entitlements to authenticated;
+drop policy if exists entitlements_own_select on public.entitlements;
+create policy entitlements_own_select on public.entitlements for select to authenticated using (parent_id = auth.uid() or public.is_admin());
+
 -- ---------- 6. grants and row level security ----------
 alter table public.child_sessions       enable row level security;
 alter table public.practice_units       enable row level security;
@@ -210,8 +333,9 @@ begin
   if cid is null then return jsonb_build_object('ok', false, 'error', 'session'); end if;
   select parent_id into pid from public.children where id = cid;
   if not public._has_consent(pid, 'online_practice') then return jsonb_build_object('ok', false, 'error', 'consent'); end if;
-  if not exists (select 1 from public.practice_units where unit_key = p_unit and unit_version = p_version and published) then
-    return jsonb_build_object('ok', false, 'error', 'unit'); end if;
+  if not exists (select 1 from public.practice_units where unit_key = p_unit and unit_version = p_version and published and access <> 'open') then
+    return jsonb_build_object('ok', false, 'error', 'unit'); end if;           -- unknown, unpublished or open sample unit (samples store nothing)
+  if not public._can_access(cid, p_unit, p_version) then return jsonb_build_object('ok', false, 'error', 'entitlement'); end if;
   if (select count(*) from public.practice_submissions where child_id = cid and received_at > now() - interval '1 hour') >= 20
      or (select count(*) from public.practice_submissions where received_at > now() - interval '1 hour') >= 3000 then
     return jsonb_build_object('ok', false, 'error', 'rate'); end if;
@@ -231,6 +355,7 @@ begin
   if cid is null then return jsonb_build_object('ok', false, 'error', 'session'); end if;
   select parent_id into pid from public.children where id = cid;
   if not public._has_consent(pid, 'online_practice') then return jsonb_build_object('ok', false, 'error', 'consent'); end if;
+  if not public._can_access(cid, p_unit, p_version) then return jsonb_build_object('ok', false, 'error', 'entitlement'); end if;
   if jsonb_typeof(p_rows) <> 'array' or jsonb_array_length(p_rows) > 400 or p_rev < 1 or p_rev > 50 then return jsonb_build_object('ok', false, 'error', 'bad_rows'); end if;
   select count(*) into n_bad from jsonb_array_elements(p_rows) x
    where not exists (select 1 from public.practice_item_tags t where t.unit_key = p_unit and t.unit_version = p_version and t.item_id = x->>'item_id'
@@ -343,8 +468,13 @@ revoke all on function public.child_start_session(text, text, text), public.chil
   public.is_tutor_of_child(uuid), public.is_tutor_of_group(text), public._child_for_token(text),
   public.service_practice_keys(text, text, text), public.service_practice_record(text, text, text, uuid, int, jsonb),
   public.tutor_group_practice(text, text), public.practice_child_detail(uuid, text), public.delete_child_practice(uuid),
-  public.admin_purge_expired_practice(), public.admin_purge_practice_for_group(text, timestamptz), public.record_consents(jsonb, text, text)
+  public.admin_purge_expired_practice(), public.admin_purge_practice_for_group(text, timestamptz), public.record_consents(jsonb, text, text),
+  public._can_access(uuid, text, text), public.redeem_access_code(text), public.my_entitlements(), public.admin_grant_access(uuid, text, smallint[], text),
+  public.admin_revoke_access(uuid), public.admin_create_access_codes(int, text, smallint[], text), public.service_grant_from_order(uuid, text, smallint[], text)
   from public, anon, authenticated;
+grant execute on function public.redeem_access_code(text), public.my_entitlements(), public.admin_grant_access(uuid, text, smallint[], text),
+  public.admin_revoke_access(uuid), public.admin_create_access_codes(int, text, smallint[], text) to authenticated;   -- parent / admin checks inside
+grant execute on function public.service_grant_from_order(uuid, text, smallint[], text) to service_role;
 grant execute on function public.record_consents(jsonb, text, text) to authenticated;
 grant execute on function public.child_start_session(text, text, text) to anon, authenticated;
 grant execute on function public.child_end_session(text) to anon, authenticated;
@@ -352,7 +482,7 @@ grant execute on function public.is_tutor_of_child(uuid), public.is_tutor_of_gro
 grant execute on function public.tutor_group_practice(text, text), public.practice_child_detail(uuid, text), public.delete_child_practice(uuid),
   public.admin_purge_expired_practice(), public.admin_purge_practice_for_group(text, timestamptz) to authenticated;   -- each checks who the caller is inside
 grant execute on function public.service_practice_keys(text, text, text), public.service_practice_record(text, text, text, uuid, int, jsonb) to service_role;
--- _has_consent(), _child_for_token() are internal: not granted to any API role.
+-- _has_consent(), _child_for_token(), _can_access() are internal: not granted to any API role.
 
 -- Owner set-up by hand in the SQL editor (not a function: it is rare):
 --   insert into public.tutors (user_id, note) select id, 'Tutor name' from auth.users where email = 'tutor@example.com';

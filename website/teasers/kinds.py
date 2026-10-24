@@ -625,7 +625,8 @@ def magic(cells9, nums, ask_idx):
             unk = [i for i in ln if known[i] is None]
             if len(unk) == 1:
                 known[unk[0]] = int(S - sum(known[i] for i in ln if known[i] is not None))
-    return known[ask_idx], {'S': int(S)}
+    rows = '\n'.join('   '.join(str(c) if c is not None else '?' for c in cells9[i:i + 3]) for i in (0, 3, 6))
+    return known[ask_idx], {'S': int(S), 'grid': rows}
 
 
 def cryptarithm(pattern, sol, ask):
