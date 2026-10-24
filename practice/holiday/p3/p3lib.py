@@ -109,7 +109,7 @@ def grid_fig(cols, rows, cells, caption):
     return h.svg(W, W, body, caption)
 
 
-def grp(s, limit=30):
+def grp(s, limit=18):
     """Frame helper: groups separated by 3 or more spaces keep their words together (no-break spaces) so a box never wraps away from its label;
     a group longer than `limit` characters (a sentence) is left to wrap normally."""
     import re
