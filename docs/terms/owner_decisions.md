@@ -364,3 +364,6 @@ Owner: "TEASER-DAILY-GO". Build daily-changing website teasers: bank of ~30 puzz
 
 ## 2026-10-24 — ONLINE-SKIP-SELECT-SUBMIT
 Owner: "The online version should allow skipping and selection for students to submit their answers then have the online solutions for it." All online versions: free selection and skipping of questions, submit answers, then online worked solutions. Working assumption: submission is local in the browser (no account, no server storage of children's answers) unless owner says otherwise.
+
+## 2026-10-24 — SUBMIT-TO-TUTOR (supersedes the SUBMIT-LOCAL assumption)
+Owner: "SUBMIT-TO-TUTOR - it should be submitted to us so we can generate reports". Submitted answers from the online versions are sent to Math Inquirers so tutors/owner can generate reports. Consequences to design and clear BEFORE going live: identifying the child (unique family link/code, no password accounts if possible), storage (Supabase, row-level security), minimal data, parent consent line, PDPA (Singapore) notice, retention/deletion, privacy page update, lawyer question added. Build can proceed; nothing goes live until privacy wording is reviewed.
