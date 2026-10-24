@@ -382,3 +382,6 @@ Owner: "HOLIDAY-WEEKLY". Holiday online practice is released week by week in tea
 
 ## 2026-10-24 — D2-ENROLLED (holiday and term); extension = purchasers
 Owner: "D2-ENROLLED for holiday and term. extension is for purchased". Access: holiday and term online practice = families with a confirmed enrolment for that level (plus open sample pages that store nothing). Extension online practice = families who purchased that extension workbook (needs a purchase entitlement per child/family; shop is not live yet, so the mechanism must be designed). Online practice is therefore included with enrolment / with the purchased workbook (D6 implied: included).
+
+## 2026-10-24 — TEASERS-365-MONTHLY
+Owner: "we should have 365 teasers, released monthly". Daily website teasers: a full year (365) per level, one for each day (keyed by MM-DD, Asia/Singapore), built/audited/released in monthly batches starting Nov 2026. Working assumption: 365 PER LEVEL (6 levels = 2,190); owner to confirm vs 365 in total.
