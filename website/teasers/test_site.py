@@ -383,6 +383,8 @@ def main():
                     ok('%s L%d %s: no sideways scroll' % (name, lv, when.strftime('%d %b')), over <= 0, over)
                     boxw = pg.evaluate("() => { const b=document.getElementById('pzBox'); const r=b.getBoundingClientRect(); return [r.left, r.right, window.innerWidth] }")
                     ok('%s L%d %s: puzzle box inside the viewport' % (name, lv, when.strftime('%d %b')), boxw[0] >= 0 and boxw[1] <= boxw[2] + 1, boxw)
+                    small = pg.evaluate("""() => { let m = 99; document.querySelectorAll('#pzBox, #pzBox *').forEach(e => { if ([...e.childNodes].some(n => n.nodeType === 3 && n.textContent.trim())) { const f = parseFloat(getComputedStyle(e).fontSize); if (f < m) m = f; } }); return m }""")
+                    ok('%s L%d %s: the smallest text in the puzzle box is at least 14px (was 13px)' % (name, lv, when.strftime('%d %b')), small >= 14, small)
                     if SHOTS:
                         pg.locator(sel).scroll_into_view_if_needed()
                         pg.locator(sel).screenshot(path=os.path.join(SHOTS, '%s_L%d_%s.png' % (name, lv, when.strftime('%m%d'))))

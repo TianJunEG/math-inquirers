@@ -227,43 +227,40 @@
     "date": "11-05"
    },
    {
-    "id": "L1-siblingsages",
+    "id": "L1-tapefold",
     "level": 1,
-    "frame": "siblingsages",
-    "kind": "sum_later",
-    "topic": "Ages",
-    "sub": "ages.sum_later",
-    "family": "ages",
+    "frame": "tapefold",
+    "kind": "fold_cut",
+    "topic": "Folding and cutting",
+    "sub": "paper_folding.fold_and_cut",
+    "family": "paper_folding",
     "p": {
-     "a": 9,
-     "b": 5,
-     "target": 30
+     "folds": 3
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "8",
-    "shown": "8 birthdays",
+    "ans": "9",
+    "shown": "9 bits",
     "units": [
-     "birthdays",
-     "birthday"
+     "bits",
+     "bit"
     ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "9",
-     "7",
      "10",
-     "6",
-     "16",
-     "4",
+     "8",
+     "11",
+     "7",
      "18",
-     "80"
+     "19",
+     "90"
     ],
-    "q": "Siti is 9 and her brother is 5. They both have a birthday once a year. After how many birthdays will the sum of their ages be 30?",
-    "hint": "Add their ages now. At every birthday each of them gets one year older, so the sum grows by the same amount each time.",
-    "why": "Now their ages add up to 9 + 5 = 14. At each birthday the sum grows by 2, because both get a year older. They need 30 − 14 = 16 more, and 16 ÷ 2 = 8 birthdays.",
+    "q": "Hana folds a long roll of tape in half 3 times, one fold after another. Then she snips it once with scissors. How many little bits of tape lie on the table after she unfolds it?",
+    "hint": "After each fold the number of layers doubles. How many snip marks does the unfolded tape show?",
+    "why": "3 folds make 2 × 2 × 2 = 8 layers, so the snip goes through the tape in 8 places. 8 snips make 8 + 1 = 9 bits.",
     "date": "11-06"
    },
    {
@@ -3561,44 +3558,43 @@
     "date": "11-21"
    },
    {
-    "id": "L3-parrotsrabbits",
+    "id": "L3-henduck",
     "level": 3,
-    "frame": "parrotsrabbits",
-    "kind": "heads_legs",
-    "topic": "Guess and check",
-    "sub": "guess_check.heads_and_legs",
-    "family": "guess_check",
+    "frame": "henduck",
+    "kind": "times_as_many",
+    "topic": "Bar models",
+    "sub": "bar_model.times_as_many",
+    "family": "bar_model",
     "p": {
-     "heads": 36,
-     "legs": 130,
-     "a": 2,
-     "b": 4
+     "k": 3,
+     "total": 52,
+     "ask": "large"
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "29",
-    "shown": "29 rabbits",
+    "ans": "39",
+    "shown": "39 hens",
     "units": [
-     "rabbits",
-     "rabbit"
+     "hens",
+     "hen"
     ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "30",
-     "28",
-     "31",
-     "27",
-     "58",
-     "39",
-     "19",
-     "290"
+     "40",
+     "38",
+     "41",
+     "37",
+     "78",
+     "49",
+     "29",
+     "390"
     ],
-    "q": "A pet shop sells only parrots and rabbits. There are 36 animals and 130 legs in all. Parrots have 2 legs each and rabbits have 4 legs each. Find the number of rabbits.",
-    "hint": "Guess a number of rabbits and count the legs. Then adjust your guess.",
-    "why": "If all 36 animals were parrots, there would be 72 legs. There are 130 − 72 = 58 more legs. Each rabbit adds 2 more legs than a parrot, so there are 58 ÷ 2 = 29 rabbits.",
+    "q": "A farmer has 3 times as many hens as ducks. She has 52 hens and ducks altogether. How many hens does she have?",
+    "hint": "Draw one bar for the ducks and a bar 3 times as long for the hens. Count the equal parts.",
+    "why": "The ducks are 1 part and the hens are 3 parts, so there are 4 equal parts. 52 ÷ 4 = 13 ducks. The hens are 3 × 13 = 39 hens.",
     "date": "11-22"
    },
    {
@@ -4079,7 +4075,7 @@
      "47990",
      "480000"
     ],
-    "q": "The crowd at a football match was 47,562. What is this number rounded to the nearest thousand?",
+    "q": "A ferry company carried 47,562 passengers in one year. What is this number rounded to the nearest thousand?",
     "hint": "Look at the hundreds digit. Is it 5 or more?",
     "why": "The hundreds digit is 5, so the thousands go up by one: 47,562 rounds to 48,000.",
     "date": "11-03"
@@ -4690,44 +4686,49 @@
     "date": "11-17"
    },
    {
-    "id": "L4-wheelcount",
+    "id": "L4-lockerkeys",
     "level": 4,
-    "frame": "wheelcount",
-    "kind": "heads_legs",
-    "topic": "Guess and check",
-    "sub": "guess_check.heads_and_legs",
-    "family": "guess_check",
+    "frame": "lockerkeys",
+    "kind": "order_by_key",
+    "topic": "Ordering numbers",
+    "sub": "sorting.order_by_digit_rule",
+    "family": "sorting",
     "p": {
-     "heads": 38,
-     "legs": 143,
-     "a": 3,
-     "b": 4
+     "numbers": [
+      36,
+      59,
+      28,
+      74,
+      45
+     ],
+     "rule": "digit_product",
+     "place": 4
     },
-    "t": {},
+    "t": {
+     "cards": "36, 59, 28, 74 and 45"
+    },
     "fmt": "int",
     "type": "n",
-    "ans": "29",
-    "shown": "29 chairs",
-    "units": [
-     "chairs",
-     "chair"
-    ],
+    "ans": "74",
+    "shown": "74",
+    "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "30",
-     "28",
-     "31",
-     "27",
-     "58",
-     "39",
-     "19",
-     "290"
+     "75",
+     "73",
+     "76",
+     "72",
+     "148",
+     "37",
+     "84",
+     "64",
+     "740"
     ],
-    "q": "A workshop makes only stools and chairs. There are 38 pieces of furniture and 143 legs in all. A stool has 3 legs and a chair has 4 legs. How many chairs are in the workshop?",
-    "hint": "Guess a number of chairs and count the legs. Then adjust your guess.",
-    "why": "If all 38 pieces were stools, there would be 114 legs. There are 143 − 114 = 29 more legs. Each chair has 1 more leg than a stool, so there are 29 ÷ 1 = 29 chairs.",
+    "q": "A school has five lockers numbered 36, 59, 28, 74 and 45. The caretaker puts the keys in a row, from the smallest digit product to the biggest digit product. The digit product of 52 is 5 × 2 = 10. Which locker's key is fourth in the row?",
+    "hint": "Multiply the two digits of each locker number. Then put the products in order.",
+    "why": "The digit products are 18 for 36, 45 for 59, 16 for 28, 28 for 74 and 20 for 45. In order they are 16, 18, 20, 28, 45, which belong to 28, 36, 45, 74, 59. The fourth key is for locker 74.",
     "date": "11-18"
    },
    {
@@ -5758,10 +5759,10 @@
     "fmt": "int",
     "type": "n",
     "ans": "102",
-    "shown": "102 tiles",
+    "shown": "102 mats",
     "units": [
-     "tiles",
-     "tile"
+     "mats",
+     "mat"
     ],
     "prefix": [],
     "accept": [],
@@ -5777,9 +5778,9 @@
      "92",
      "1020"
     ],
-    "q": "The floor of a hall is a rectangle of square tiles, 22 rows with 31 tiles in each row. The tiles that touch the edge of the floor are painted red. How many tiles are painted red?",
-    "hint": "Count the tiles along the top and bottom rows first. Then count the tiles at the two ends of every row in between.",
-    "why": "The top and bottom rows have 31 tiles each: 2 × 31 = 62. The other 22 − 2 = 20 rows each have 2 red tiles at the ends: 20 × 2 = 40. In all, 62 + 40 = 102 tiles.",
+    "q": "A school hall floor is made of square mats laid in 22 lines, with 31 mats in each line. Every mat that lies along a wall is blue. How many mats are blue?",
+    "hint": "Count the mats along the two long walls first. Then count the mats at the two ends of every line in between.",
+    "why": "The first and last lines have 31 mats each: 2 × 31 = 62. The other 22 − 2 = 20 lines each have 2 blue mats at the ends: 20 × 2 = 40. In all, 62 + 40 = 102 mats.",
     "date": "11-12"
    },
    {
@@ -6183,46 +6184,50 @@
     "date": "11-21"
    },
    {
-    "id": "L5-clockangle",
+    "id": "L5-rectsides",
     "level": 5,
-    "frame": "clockangle",
-    "kind": "angle",
-    "topic": "Angles",
-    "sub": "angles.clock_hands",
-    "family": "angles",
+    "frame": "rectsides",
+    "kind": "sum_product",
+    "topic": "Guess and check",
+    "sub": "guess_check.sum_product",
+    "family": "guess_check",
     "p": {
-     "kind": "clock",
-     "h": 7,
-     "m": 20
+     "s": 25,
+     "p": 144,
+     "ask": "larger"
     },
-    "t": {},
+    "t": {
+     "P": 50,
+     "A": 144
+    },
     "fmt": "int",
     "type": "n",
-    "ans": "100",
-    "shown": "100°",
+    "ans": "16",
+    "shown": "16 cm",
     "units": [
-     "°",
-     "deg",
-     "degree",
-     "degrees"
+     "cm",
+     "centimetre",
+     "centimetres",
+     "centimeter",
+     "centimeters"
     ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "101",
-     "99",
-     "102",
-     "98",
-     "200",
-     "50",
-     "110",
-     "90",
-     "1000"
+     "17",
+     "15",
+     "18",
+     "14",
+     "32",
+     "8",
+     "26",
+     "6",
+     "160"
     ],
-    "q": "A clock shows 7:20. What is the smaller angle between the hour hand and the minute hand?",
-    "hint": "The minute hand points at 4, which is 4 × 30° = 120° from 12. The hour hand moves a little as the minutes pass. How far has it moved in 20 minutes?",
-    "why": "At 7:00 the hour hand is at 7 × 30° = 210°. In 20 minutes it moves 20 × 0.5° = 10° more, so it is at 220°. The minute hand is at 4 × 30° = 120°. The angle between them is 220° − 120° = 100°.",
+    "q": "A rectangle has a perimeter of 50 cm and an area of 144 cm². Its sides are whole numbers of centimetres. How long is its longer side?",
+    "hint": "Half of the perimeter is the length plus the width. List pairs of whole numbers that make that total, and find the pair with the right area.",
+    "why": "Half of 50 is 25, so the length and the width add up to 25. The pair 9 and 16 also multiply to 144, which is the area. The longer side is 16 cm.",
     "date": "11-22"
    },
    {

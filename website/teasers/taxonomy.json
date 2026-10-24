@@ -476,13 +476,15 @@
     2,
     3,
     4,
-    5
+    5,
+    6
    ],
    "kinds": [
     "border_tiles"
    ],
    "cite": "MOE P2 NA multiplication tables, p.33; P3 MG Area and Perimeter concepts, p.36",
-   "round": 2
+   "round": 2,
+   "note": "round 4: extended to Level 6 with larger numbers and a new story (restores the Level 6 quarter capacity after the round-4 retirements; a puzzle that uses it is checked when it is written)."
   },
   "arrays.seat_number": {
    "name": "seats numbered row by row: the seat number from the row and place, or the row from the seat number",
@@ -562,13 +564,15 @@
     2,
     3,
     4,
-    5
+    5,
+    6
    ],
    "kinds": [
     "bar_three"
    ],
    "cite": "L3 lesson 4 (Model Makers: bar models); MOE P1-P3 NA Addition and Subtraction, pp.31-35; Problem solving: draw a model, p.13",
-   "round": 2
+   "round": 2,
+   "note": "round 4: extended to Level 6 with larger numbers and a new story (restores the Level 6 quarter capacity after the round-4 retirements; a puzzle that uses it is checked when it is written)."
   },
   "bar_model.times_as_many": {
    "name": "one amount is a number of times the other: total or difference known",
@@ -647,12 +651,14 @@
     2,
     3,
     4,
-    5
+    5,
+    6
    ],
    "kinds": [
     "calendar_nth"
    ],
-   "cite": "MOE P1 MG Time (days, weeks), p.32 (Level 1); P2 Time, p.34"
+   "cite": "MOE P1 MG Time (days, weeks), p.32 (Level 1); P2 Time, p.34",
+   "note": "round 4: extended to Level 6 with larger numbers and a new story (restores the Level 6 quarter capacity after the round-4 retirements; a puzzle that uses it is checked when it is written)."
   },
   "calendar.weekday_after": {
    "name": "which day of the week after some days",
@@ -715,13 +721,15 @@
    "levels": [
     3,
     4,
-    5
+    5,
+    6
    ],
    "kinds": [
     "twenty_four"
    ],
    "cite": "MOE P3 MG Time 2.3 24-hour clock, p.36",
-   "round": 2
+   "round": 2,
+   "note": "round 4: extended to Level 6 with larger numbers and a new story (restores the Level 6 quarter capacity after the round-4 retirements; a puzzle that uses it is checked when it is written)."
   },
   "codes.binary": {
    "name": "change between binary and ordinary numbers",
@@ -773,13 +781,15 @@
     1,
     2,
     3,
-    4
+    4,
+    5
    ],
    "kinds": [
     "cannot_pay"
    ],
    "cite": "MOE P1 NA Money 1.1, p.31; P2 Money: compare and convert amounts, p.33; L1 lesson 6 (Coin Combos)",
-   "round": 2
+   "round": 2,
+   "note": "round 4: extended to Level 5 with larger numbers and a new story (restores the Level 5 quarter capacity after the round-4 retirements; a puzzle that uses it is checked when it is written)."
   },
   "coins.make_amount": {
    "name": "make an amount from coins: how many different sets, or the fewest coins",
@@ -1013,13 +1023,15 @@
     1,
     2,
     3,
-    4
+    4,
+    5
    ],
    "kinds": [
     "days_in_common"
    ],
    "cite": "MOE P1 NA Whole Numbers 1.4 comparing sets, p.31; P1 Time (days, weeks), p.32",
-   "round": 2
+   "round": 2,
+   "note": "round 4: extended to Level 5 with larger numbers and a new story (restores the Level 5 quarter capacity after the round-4 retirements; a puzzle that uses it is checked when it is written)."
   },
   "counting_routes.grid_routes": {
    "name": "routes across a grid moving only right and down (also with one point blocked)",
@@ -1117,7 +1129,8 @@
    "name": "add or subtract decimals",
    "levels": [
     4,
-    5
+    5,
+    6
    ],
    "kinds": [
     "decimals"
@@ -1131,7 +1144,8 @@
    "merged_from": [
     "decimals.add",
     "decimals.subtract"
-   ]
+   ],
+   "note": "round 4: extended to Level 6 with larger numbers and a new story (restores the Level 6 quarter capacity after the round-4 retirements; a puzzle that uses it is checked when it is written)."
   },
   "decimals.multiply_divide": {
    "name": "multiply or divide a decimal by a whole number",
@@ -1358,6 +1372,7 @@
   "durations.hours_to_minutes": {
    "name": "change hours and minutes to minutes",
    "levels": [
+    1,
     2,
     3,
     4
@@ -1367,7 +1382,8 @@
    ],
    "merged_from": [
     "time.hours_to_minutes"
-   ]
+   ],
+   "note": "round 4: extended to Level 1 (1 hour and a few minutes, or half hours; MOE P1 MG Time 2.4 duration of one hour and half hour, p.31; P2 hours and minutes, p.34)"
   },
   "durations.minutes_seconds": {
    "name": "songs or races written in minutes and seconds: the total in seconds",
@@ -1620,6 +1636,7 @@
   "graphs.most_least_gap": {
    "name": "difference between the most and the least in a list",
    "levels": [
+    1,
     2,
     3,
     4,
@@ -1633,7 +1650,8 @@
      "range"
     ]
    },
-   "cite": "MOE P2 NA Money: compare two or three amounts, p.33 (Level 2); P3 ST bar graphs, p.36"
+   "cite": "MOE P2 NA Money: compare two or three amounts, p.33 (Level 2); P3 ST bar graphs, p.36",
+   "note": "round 4: extended to Level 1 (how many more: MOE P1 NA addition and subtraction within 100, p.31, with a list of three or four numbers below 100)"
   },
   "graphs.pictograph_scale": {
    "name": "picture graph where each symbol stands for more than one: find the difference",
@@ -1750,17 +1768,19 @@
   },
   "guess_check.heads_and_legs": {
    "name": "animals with two kinds of legs: how many of each from the heads and legs",
-   "levels": [
+   "levels": [],
+   "kinds": [
+    "heads_legs"
+   ],
+   "cite": "MOE Problem solving: guess and check, p.13; P3 NA multiplication, p.35",
+   "round": 2,
+   "levels_before": [
     3,
     4,
     5,
     6
    ],
-   "kinds": [
-    "heads_legs"
-   ],
-   "cite": "MOE Problem solving: guess and check, p.13; P3 NA multiplication, p.35",
-   "round": 2
+   "retired": "round 4: heads and legs (two kinds of creature or vehicle, a count and a total of legs or wheels) is in the P2 Question Bank (cars and motorcycles), extension L5 unit 9 (stools and chairs), p5/content/l9.js (bicycles and tricycles) and docs/books word problems A4.1; the verifier found it again in every new story"
   },
   "guess_check.sum_product": {
    "name": "two numbers with a known sum and a known product",
@@ -1768,13 +1788,15 @@
     2,
     3,
     4,
-    5
+    5,
+    6
    ],
    "kinds": [
     "sum_product"
    ],
    "cite": "MOE P2 tables of 2, 3, 4, 5 and 10, p.33; P3 tables of 6 to 9, p.35; Problem solving: guess and check, p.13",
-   "round": 2
+   "round": 2,
+   "note": "round 4: extended to Level 6 with larger numbers and a new story (restores the Level 6 quarter capacity after the round-4 retirements; a puzzle that uses it is checked when it is written)."
   },
   "invariant.one_less": {
    "name": "knock-out matches or snaps of a chocolate bar: always one fewer than the number of players or pieces",
@@ -1782,14 +1804,16 @@
     1,
     2,
     3,
-    4
+    4,
+    5
    ],
    "kinds": [
     "knockout",
     "snaps"
    ],
    "cite": "MOE Problem solving: look for a pattern, p.13; P1 NA Addition and Subtraction 2.5, p.31; P2 multiplication, p.33",
-   "round": 2
+   "round": 2,
+   "note": "round 4: extended to Level 5 with larger numbers and a new story (restores the Level 5 quarter capacity after the round-4 retirements; a puzzle that uses it is checked when it is written)."
   },
   "logic_grid.latin_square": {
    "name": "fill a small grid so that each row and column has each number once",
@@ -2228,13 +2252,15 @@
     1,
     2,
     3,
-    4
+    4,
+    5
    ],
    "kinds": [
     "halfway"
    ],
    "cite": "MOE P1 NA Whole Numbers 1.5 comparing and ordering numbers and 1.6 patterns, p.31; P2 numbers to 1000, p.33",
-   "round": 2
+   "round": 2,
+   "note": "round 4: extended to Level 5 with larger numbers and a new story (restores the Level 5 quarter capacity after the round-4 retirements; a puzzle that uses it is checked when it is written)."
   },
   "number_names.letters_in_words": {
    "name": "how many letters are needed to write the numbers from one to another in words",
@@ -3054,7 +3080,8 @@
     2,
     3,
     4,
-    5
+    5,
+    6
    ],
    "kinds": [
     "neg_diff",
@@ -3065,7 +3092,8 @@
     "word_problems.compare",
     "word_problems.chain_more_than",
     "word_problems.equalise"
-   ]
+   ],
+   "note": "round 4: extended to Level 6 with larger numbers and a new story (restores the Level 6 quarter capacity after the round-4 retirements; a puzzle that uses it is checked when it is written)."
   },
   "counting_line.cuts_and_pieces": {
    "name": "equal gaps between repeated actions: n cuts, strikes or knocks take a time, so find the time for another number",
@@ -3146,13 +3174,15 @@
     2,
     3,
     4,
-    5
+    5,
+    6
    ],
    "kinds": [
     "ferry_trips"
    ],
    "cite": "MOE Problem solving: act it out, draw a diagram, look for a pattern, p.13; P2 NA multiplication and division, p.33",
-   "round": 3
+   "round": 3,
+   "note": "round 4: extended to Level 6 with larger numbers and a new story (restores the Level 6 quarter capacity after the round-4 retirements; a puzzle that uses it is checked when it is written)."
   },
   "counting_pairs.dice_sum_ways": {
    "name": "ways two dice can add up to a total (ordered, or without counting the swapped pair twice)",
@@ -3161,13 +3191,15 @@
     2,
     3,
     4,
-    5
+    5,
+    6
    ],
    "kinds": [
     "dice_ways"
    ],
    "cite": "MOE P1 NA Addition and Subtraction 2.4 adding more than two 1-digit numbers, p.31; Problem solving: make a list or table, p.13",
-   "round": 3
+   "round": 3,
+   "note": "round 4: extended to Level 6 with larger numbers and a new story (restores the Level 6 quarter capacity after the round-4 retirements; a puzzle that uses it is checked when it is written)."
   },
   "arrays.checkerboard": {
    "name": "dark and light squares alternate on a board: count the dark squares, or only those on the edge",
@@ -3200,18 +3232,20 @@
   },
   "ages.sum_later": {
    "name": "two ages grow together: when will they add up to a total",
-   "levels": [
+   "levels": [],
+   "kinds": [
+    "sum_later"
+   ],
+   "cite": "MOE P1 NA Addition and Subtraction 2.1-2.5, p.31; P3 add and subtract word problems, p.35; Problem solving: guess and check, p.13",
+   "round": 3,
+   "levels_before": [
     1,
     2,
     3,
     4,
     5
    ],
-   "kinds": [
-    "sum_later"
-   ],
-   "cite": "MOE P1 NA Addition and Subtraction 2.1-2.5, p.31; P3 add and subtract word problems, p.35; Problem solving: guess and check, p.13",
-   "round": 3
+   "retired": "round 4: \"Ravi is 7 and his sister is 3: in how many years will their ages add up to 30\" is G6 of the P3 holiday week 4 lesson (practice/holiday/p3/04, with variants 9 and 5, 30); L1-siblingsages was that template"
   },
   "sorting.order_by_digit_rule": {
    "name": "put numbers in order by a rule about their digits (digit sum or digit product) and name the one in a place",
@@ -3248,13 +3282,15 @@
     2,
     3,
     4,
-    5
+    5,
+    6
    ],
    "kinds": [
     "alt_steps"
    ],
    "cite": "MOE P1 NA Whole Numbers 1.6 patterns in number sequences, p.31; P3 mental calculation, p.35; Problem solving: look for a pattern, p.13",
-   "round": 3
+   "round": 3,
+   "note": "round 4: extended to Level 6 with larger numbers and a new story (restores the Level 6 quarter capacity after the round-4 retirements; a puzzle that uses it is checked when it is written)."
   },
   "counting_line.race_places": {
    "name": "a place in a race or queue after some people are passed and some pass you",
@@ -3591,13 +3627,15 @@
     2,
     3,
     4,
-    5
+    5,
+    6
    ],
    "kinds": [
     "digit_segments"
    ],
    "cite": "MOE P1 NA Whole Numbers 1.2-1.3 tens and ones, numerals, p.31; P2 numbers to 1000, p.33",
-   "round": 3
+   "round": 3,
+   "note": "round 4: extended to Level 6 with larger numbers and a new story (restores the Level 6 quarter capacity after the round-4 retirements; a puzzle that uses it is checked when it is written)."
   },
   "spatial.circle_elimination": {
    "name": "children in a circle sit down every k-th: who is last standing",

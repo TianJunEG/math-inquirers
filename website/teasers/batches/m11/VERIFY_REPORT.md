@@ -6,25 +6,21 @@ Method: every puzzle is re-solved by `brute.py` (independent of the author solve
 |---|---|---|---|---|---|---|
 | 1 | 30 | 29 | 2 | 21 | 3 | 30 |
 | 2 | 30 | 30 | 1 | 23 | 3 | 30 |
-| 3 | 30 | 30 | 1 | 23 | 2 | 30 |
-| 4 | 30 | 28 | 2 | 23 | 2 | 30 |
-| 5 | 30 | 29 | 2 | 21 | 3 | 30 |
+| 3 | 30 | 30 | 1 | 23 | 3 | 30 |
+| 4 | 30 | 28 | 2 | 22 | 3 | 30 |
+| 5 | 30 | 30 | 1 | 22 | 3 | 30 |
 | 6 | 30 | 25 | 3 | 21 | 3 | 30 |
 
-Sources searched (whole working tree, tracked or not): 6667 files, 1357.8 MB, sha256 59eff2d11509a27b04095132.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 292, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
+Sources searched (whole working tree, tracked or not): 6677 files, 1357.9 MB, sha256 eb682eacbb4c2994124ed279.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 302, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
 
 Similarity sources checked: holiday banks, own term lessons, all extension workbook data, the school booklets, our book drafts and catalogues, external private source files, and the seven fixed website puzzles.
 
-FAIL count: 3. REVIEW items: 99.
+FAIL count: 0. REVIEW items: 100.
 
-- FAIL L4-wheelcount [11-18]: shares a 7-word run with the extension workbooks: "3 legs and a chair has 4"
-- FAIL L4-wheelcount [11-18]: same story as a source: rule C (four-word runs, numbers masked): 3 of 10 shared, e.g. "chair has # legs": ""text": "A shop has 17 stools and chairs. A stool has 3 legs and a chair has 4 legs. ..." (extension/data/l5_u09.json) words chair,leg,stool
-- FAIL L5-clockangle [11-22]: same story as a source: same wording with other numbers (9 of 16 word triples): "Solution: the minute hand gains 6° − 0.5° = 5.5° a minute on the hour hand and must gain a full 360° ..." (docs/sasmo/g5_original_problems_draft.md) words hand,hour,smaller
 
 - REVIEW L1-racerun [11-02]: story words 3 of 5 like "| Schema valid (JSON Schema + key checks) | PASS | all top-level keys, schema 2020-12, ide ..." (term/l1/AUDIT_L11.md)
 - REVIEW L1-secret63 [11-04]: number 2 in the question is not a parameter (written in the wording; check)
 - REVIEW L1-noodleset [11-05]: story words 4 of 6 like "She ordered 1 side dish, 1 main dish and 1 drink for lunch. What did she eat? [menu: Frenc ..." (docs/books/private_p2_papers/non_routine_questions.md)
-- REVIEW L1-siblingsages [11-06]: rule B: 3 of the same numbers ['30', '5', '9'] as "In how many years will their ages add up to 30? Type the number of years.", "mar ..." (practice/holiday/p3/04/dist/data/p3l04.json)
 - REVIEW L1-numpattern [11-07]: rule B: 4 of the same numbers ['11', '4', '6', '9'] as "What time does she sit down?", "hint": "Go back half an hour from 7 o'clock.", " ..." (term/l1/out/l23/practice/data/t3l23.json)
 - REVIEW L1-threefifty [11-14]: number 35 in the question is not a parameter (written in the wording; check)
 - REVIEW L1-stripmarks [11-17]: story words 3 of 5 like "**DIAG-019** | 2020 | Catholic High | SA2 | Q38 | 3 marks | LEN | difficulty 3 | picture y ..." (docs/books/private_p3_papers/non_routine_questions.md)
@@ -64,13 +60,12 @@ FAIL count: 3. REVIEW items: 99.
 - REVIEW L3-journeytime [11-20]: story words 3 of 5 like "{"id": "R3", "label": "Wed & Thu afternoons", "sessions": [{"day": "Wed", "start": "13:15" ..." (website/data/interest_slots.json)
 - REVIEW L3-twentyfour [11-21]: number 0915 in the question is not a parameter (written in the wording; check)
 - REVIEW L3-twentyfour [11-21]: rule B: 3 of the same numbers ['24', '35', '8'] as "- L8: Q2 hint (a dent corner is bigger than a right angle) and shape A done for  ..." (docs/audit/fixpass_p3.md)
-- REVIEW L3-parrotsrabbits [11-22]: story words 4 of 6 like "**A4.1** [S] A pet shop has 60 animals. 24 are fish, 17 are birds and the rest are rabbits ..." (docs/books/word_problems_g1_g2_original_draft.md)
+- REVIEW L3-henduck [11-22]: rule C: two four-word runs shared with ""text": "A farm has 4 times as many hens as ducks. There are 385 hens and ducks  ..." (extension/data/l4_u03.json): # hens and ducks / many hens as ducks
 - REVIEW L3-houses [11-24]: number 21 in the question is not a parameter (written in the wording; check)
 - REVIEW L3-houses [11-24]: number 22 in the question is not a parameter (written in the wording; check)
 - REVIEW L3-houses [11-24]: number 23 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-theatrerows [11-01]: number 18 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-theatrerows [11-01]: number 21 in the question is not a parameter (written in the wording; check)
-- REVIEW L4-attendance [11-03]: story words 3 of 5 like "{ q: 'The crowd at a concert was 38 000 when rounded to the nearest thousand. ..." (p4/content/l2.js)
 - REVIEW L4-ferry [11-05]: rule B: 3 of the same numbers ['13', '7', '9'] as "Notes on the tag: 1.3, 1.7 (reading and writing numbers in numerals and in words ..." (school/p1/out/P1_S1_Answer_Key.pdf)
 - REVIEW L4-roundprices [11-07]: story words 4 of 6 like "mini2: { head: 'Work backwards: what rounds to 25 000?', body: ['Rounded to the nearest th ..." (p4/content/l2.js)
 - REVIEW L4-signcard [11-08]: rule B: 3 of the same numbers ['4', '7', '8'] as "**Biggest gaps by level (from the SASMO counts).** Level 1: place value and tens ..." (docs/sasmo/holiday_skill_coverage.md)
@@ -80,6 +75,10 @@ FAIL count: 3. REVIEW items: 99.
 - REVIEW L4-gate [11-14]: story words 4 of 6 like "Show your puzzle to your tutor or a grown-up and check each other's lists."], "slips": [], ..." (practice/holiday/p4/07/dist/data/p4l07.json)
 - REVIEW L4-pencilshare [11-15]: rule B: 3 of the same numbers ['12', '5', '8'] as "Answer: 4, 3, 4 8 sweets among 2 friends is 4 each. 12 sweets among 4 friends is ..." (outputs/print/term/Math_Inquirers_L1_T2_Book4_Lessons06-10_AnswerKey_TUTOR_PRINT.pdf)
 - REVIEW L4-milkjugs [11-17]: story words 3 of 5 like "- **P5-08 item 5** "7 litres of juice are poured equally into 8 jugs. How much juice is in ..." (docs/audit_final/p5_semester_booklets_audit.md)
+- REVIEW L4-lockerkeys [11-18]: number 52 in the question is not a parameter (written in the wording; check)
+- REVIEW L4-lockerkeys [11-18]: number 5 in the question is not a parameter (written in the wording; check)
+- REVIEW L4-lockerkeys [11-18]: number 2 in the question is not a parameter (written in the wording; check)
+- REVIEW L4-lockerkeys [11-18]: number 10 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-sunflower [11-19]: rule B: 3 of the same numbers ['15', '4', '7'] as "| L9 S2 (printed) | Scale of 20, 3 lines above 40 | Scale starts at 100, lines w ..." (docs/audit/reaudit_fixes_p4.md)
 - REVIEW L4-piechart [11-21]: story words 5 of 7 like "| Prelim | 2026 | Raffles | P2-2 | 2 | Pie chart: true, false or not possible to tell | 3  ..." (docs/books/private_p6_papers/non_routine_questions.md)
 - REVIEW L4-smallest5 [11-23]: number 5 in the question is not a parameter (written in the wording; check)
@@ -88,7 +87,6 @@ FAIL count: 3. REVIEW items: 99.
 - REVIEW L5-pumpjob [11-08]: story words 3 of 5 like "- [SA2_2020_StNicholas P1-13, 2m, Postage table by steps, diff 2] Postage rates by mass st ..." (docs/books/private_p5_papers/non_routine_questions.md)
 - REVIEW L5-queue5 [11-10]: story words 3 of 5 like "| Level 2 (ages 7-9) is the next most complete. Older levels read and write more on paper  ..." (docs/product/face_to_face_pilot_plan.md)
 - REVIEW L5-savingsinterest [11-11]: story words 5 of 8 like "ANSWER: 750 ml;0.25 l - [EOY_2025_NanHua P2-6, 3m, Interest (annual), diff 2] Beatrice dep ..." (docs/books/private_p5_papers/non_routine_questions.md)
-- REVIEW L5-floortiles5 [11-12]: story words 4 of 6 like "jobs=[('A fence round a school field','P','goes round the edge'),('Carpet for a bedroom fl ..." (rebuild/gen_p4l7.py)
 - REVIEW L5-cubes [11-14]: number 1 in the question is not a parameter (written in the wording; check)
 - REVIEW L5-cubes [11-14]: story words 3 of 4 like "s+=f'<text x="{P(2,0,0)[0]:.0f}" y="{P(2,0,0)[1]+22:.0f}" font-size="22" font-weight="700" ..." (rebuild/p5_gaps.py)
 - REVIEW L5-spinners8 [11-15]: number 1 in the question is not a parameter (written in the wording; check)

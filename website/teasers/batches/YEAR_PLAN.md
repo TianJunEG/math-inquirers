@@ -13,7 +13,7 @@ Checked with the gap rules for a 365-day and a 366-day year: no violation.
 | 3 | 11-03 | counting_range.days_in_common | 01-03, 03-04, 05-04, 07-04, 09-03 |
 | 4 | 11-04 | digit_puzzles.digit_clues | 01-04, 03-05, 05-05, 07-05, 09-04 |
 | 5 | 11-05 | counting_choices.combinations | 01-05, 03-06, 05-06, 07-06, 09-05 |
-| 6 | 11-06 | ages.sum_later | 01-06, 03-07, 05-07, 07-07, 09-06 |
+| 6 | 11-06 | paper_folding.fold_and_cut | 01-06, 03-07, 05-07, 07-07, 09-06 |
 | 7 | 11-07 | sequence.alternating_steps | 01-07, 03-08, 05-08, 07-08, 09-07 |
 | 8 | 11-08 | division.share | 01-08, 03-09, 05-09, 07-09, 09-08 |
 | 9 | 11-09 | bonds.three_cards_total | 01-09, 03-10, 05-10, 07-10, 09-09 |

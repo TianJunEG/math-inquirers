@@ -205,7 +205,7 @@
      "15",
      "50"
     ],
-    "q": "Mei takes one token from bag A and one token from bag B. Each bag has tokens numbered 1 to 7. The two numbers add up to 10. A 3 from bag A and a 7 from bag B is different from a 7 from bag A and a 3 from bag B. How many different ways can this happen?",
+    "q": "Mei takes one token from bag A and one from bag B. Each bag has tokens numbered 1 to 7. The two numbers add up to 10. Count A3 with B7 and A7 with B3 as different. How many different ways can this happen?",
     "hint": "List the numbers from bag A in order, starting with the smallest one that can work. For each one, ask what the number from bag B must be.",
     "why": "The pairs (bag A, bag B) are 3 and 7, 4 and 6, 5 and 5, 6 and 4, and 7 and 3. That is 5 ways.",
     "date": "12-05"
@@ -1712,7 +1712,7 @@
      "23",
      "330"
     ],
-    "q": "Classes 2A and 2B recycle paper for three weeks. In week 1, 2A recycled 18 kg. In week 3, 2B recycled 27 kg. The totals are 58 kg for 2A and 72 kg for 2B, and 30 kg, 50 kg and 50 kg for the three weeks. How many kilograms did 2B recycle in week 2?",
+    "q": "Classes 2A and 2B recycle paper for three weeks. In week 1, 2A recycled 18 kg. In week 3, 2B recycled 27 kg. The totals are 58 kg for 2A and 72 kg for 2B. The three weeks had 30 kg, 50 kg and 50 kg in all. How many kilograms did 2B recycle in week 2?",
     "hint": "Draw a table with two rows and three columns. Fill in what you know. Then find the missing numbers one at a time.",
     "why": "Week 1: 2B recycled 30 − 18 = 12 kg. Then in week 2, 2B recycled 72 − 12 − 27 = 33 kg.",
     "date": "12-07"
@@ -3986,27 +3986,27 @@
      "eqs": [
       [
        {
-        "drum": 2,
-        "flute": 1
+        "cup": 2,
+        "bowl": 1
        },
        29
       ],
       [
        {
-        "flute": 1,
-        "bell": 1
+        "bowl": 1,
+        "plate": 1
        },
        19
       ],
       [
        {
-        "drum": 1,
-        "bell": 2
+        "cup": 1,
+        "plate": 2
        },
        20
       ]
      ],
-     "ask": "bell",
+     "ask": "plate",
      "maxv": 30
     },
     "t": {},
@@ -4028,9 +4028,9 @@
      "16",
      "60"
     ],
-    "q": "A drum, a flute and a bell each stand for a whole number. Drum + drum + flute = 29. Flute + bell = 19. Drum + bell + bell = 20. What number does the bell stand for?",
-    "hint": "The second line links the flute and the bell. Try to find one of the three from the first line and the second line together.",
-    "why": "From the second line, flute = 19 − bell. Put this in the first line and in the third line and the three can be found: drum = 8, flute = 13, bell = 6. Check: 8 + 8 + 13 = 29, 13 + 6 = 19, 8 + 6 + 6 = 20.",
+    "q": "A cup, a bowl and a plate each stand for a whole number. Cup + cup + bowl = 29. Bowl + plate = 19. Cup + plate + plate = 20. What number does the plate stand for?",
+    "hint": "The second line links the bowl and the plate. Try to find one of the three from the first line and the second line together.",
+    "why": "From the second line, bowl = 19 − plate. Put this in the first line and in the third line and the three can be found: cup = 8, bowl = 13, plate = 6. Check: 8 + 8 + 13 = 29, 13 + 6 = 19, 8 + 6 + 6 = 20.",
     "date": "12-26"
    },
    {
@@ -5059,43 +5059,87 @@
     "date": "12-18"
    },
    {
-    "id": "L4-grandmaages",
+    "id": "L4-tokenstall",
     "level": 4,
-    "frame": "grandmaages",
-    "kind": "sum_later",
-    "topic": "Ages",
-    "sub": "ages.sum_later",
-    "family": "ages",
+    "frame": "tokenstall",
+    "kind": "cannot_pay",
+    "topic": "Money",
+    "sub": "coins.cannot_pay",
+    "family": "coins",
     "p": {
-     "a": 8,
-     "b": 62,
-     "target": 100
+     "coins": [
+      3,
+      7
+     ],
+     "amounts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+     ]
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "15",
-    "shown": "15 years",
+    "ans": "34",
+    "shown": "34 prizes",
     "units": [
-     "year",
-     "years"
+     "prizes",
+     "prize"
     ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "16",
-     "14",
+     "35",
+     "33",
+     "36",
+     "32",
+     "68",
      "17",
-     "13",
-     "30",
-     "25",
-     "5",
-     "150"
+     "44",
+     "24",
+     "340"
     ],
-    "q": "Mei is 8 years old. Her grandmother is 62 years old. How many years must pass before the two ages add up to 100?",
-    "hint": "Add their ages now. Each year both of them get one year older, so the sum grows by the same amount every year.",
-    "why": "Now their ages add up to 8 + 62 = 70. Each year the sum grows by 2, because both get a year older. They need 100 − 70 = 30 more, and 30 ÷ 2 = 15 years.",
+    "q": "A game stall has prizes that cost 1 point, 2 points, 3 points and so on, up to 40 points. Kai has only 3-point tokens and 7-point tokens, and the stall gives no change. How many of the 40 prizes can he pay for exactly?",
+    "hint": "Find the prizes he cannot pay for. Try the small prices first, and then look for the price from which every price can be paid.",
+    "why": "The prices he cannot pay are 1, 2, 4, 5, 8 and 11. From 12 upwards every price can be paid, for example 12 = 3 + 3 + 3 + 3, 13 = 3 + 3 + 7 and 14 = 7 + 7. That is 40 − 6 = 34 prizes.",
     "date": "12-19"
    },
    {
@@ -7110,72 +7154,72 @@
       "Farid"
      ],
      "things": [
-      "piano",
-      "drums",
-      "flute",
-      "violin",
-      "guitar",
-      "cello"
+      "hockey",
+      "netball",
+      "tennis",
+      "cricket",
+      "rugby",
+      "golf"
      ],
      "clues": [
       [
        "Ali",
-       "drums",
+       "rugby",
        true
       ],
       [
        "Ben",
-       "piano",
+       "hockey",
        false
       ],
       [
        "Ben",
-       "flute",
+       "netball",
        false
       ],
       [
        "Chen",
-       "violin",
+       "golf",
        true
       ],
       [
        "Dina",
-       "piano",
+       "hockey",
        false
       ],
       [
        "Dina",
-       "guitar",
+       "tennis",
        false
       ],
       [
        "Emily",
-       "flute",
+       "netball",
        false
       ],
       [
        "Emily",
-       "cello",
+       "cricket",
        false
       ],
       [
        "Farid",
-       "piano",
+       "hockey",
        false
       ],
       [
        "Farid",
-       "flute",
+       "netball",
        false
       ],
       [
        "Ben",
-       "cello",
+       "cricket",
        false
       ]
      ],
-     "ask_thing": "cello",
-     "verb": "plays the"
+     "ask_thing": "cricket",
+     "verb": "plays"
     },
     "t": {},
     "fmt": "int",
@@ -7193,9 +7237,9 @@
      "Dina",
      "Emily"
     ],
-    "q": "Ali, Ben, Chen, Dina, Emily and Farid each play a different instrument: piano, drums, flute, violin, guitar or cello. Ali plays the drums. Ben plays neither the piano nor the flute. Chen plays the violin. Dina does not play the piano or the guitar. Emily plays neither the flute nor the cello. Farid plays neither the piano nor the flute. Ben does not play the cello. Who plays the cello?",
-    "hint": "Start with the people whose instruments are known. Then cross out those instruments for everyone else.",
-    "why": "Ali plays the drums, Ben plays the guitar, Chen plays the violin, Dina plays the flute, Emily plays the piano, Farid plays the cello. So Farid plays the cello.",
+    "q": "Ali, Ben, Chen, Dina, Emily and Farid each play a different sport: hockey, netball, tennis, cricket, rugby or golf. Ali plays rugby. Ben plays neither hockey nor netball. Chen plays golf. Dina does not play hockey or tennis. Emily plays neither netball nor cricket. Farid plays neither hockey nor netball. Ben does not play cricket. Who plays cricket?",
+    "hint": "Start with the people whose sports are known. Then cross out those sports for everyone else.",
+    "why": "Ali plays rugby, Ben plays tennis, Chen plays golf, Dina plays netball, Emily plays hockey, Farid plays cricket. So Farid plays cricket.",
     "date": "12-02"
    },
    {
@@ -7804,9 +7848,9 @@
     "date": "12-16"
    },
    {
-    "id": "L6-cakeshare",
+    "id": "L6-tankfraction",
     "level": 6,
-    "frame": "cakeshare",
+    "frame": "tankfraction",
     "kind": "frac_arith",
     "topic": "Fractions",
     "sub": "fractions.arithmetic",
@@ -7842,9 +7886,9 @@
      "5/6",
      "10/3"
     ],
-    "q": "Mei Ling eats 2/5 of what is left of a cake after lunch. What is left after lunch is 5/6 of the whole cake. How much of the whole cake does she eat?",
+    "q": "Dan fills a water tank 5/6 full. He uses 2/5 of the water in the tank to wash the car. What fraction of a full tank does he use?",
     "hint": "Multiply the tops and multiply the bottoms, then simplify.",
-    "why": "2/5 × 5/6 = 10/30, and 10/30 is the same as 1/3. She eats 1/3 of the whole cake.",
+    "why": "2/5 × 5/6 = 10/30, and 10/30 is the same as 1/3. He uses 1/3 of a full tank.",
     "date": "12-17"
    },
    {

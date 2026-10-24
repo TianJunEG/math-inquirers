@@ -1,6 +1,6 @@
 # Structure report (taxonomy.json)
 
-Sources searched (whole working tree, tracked or not): 6667 files, 1357.8 MB, sha256 59eff2d11509a27b04095132.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 292, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
+Sources searched (whole working tree, tracked or not): 6671 files, 1357.8 MB, sha256 ea7a97449ed017f30d5bcc4b.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 296, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
 
 Rules. Levels 3 to 6 (TEASER-STRICT): per level and calendar quarter at most 1 puzzle per sub-structure and 3 per family; the same sub-structure never within 30 days of itself across a quarter boundary; an answer of 10 or more appears once per level and a single digit at most 4 times. Levels 1 and 2 (L1L2-GAP60): the same sub-structure at least 60 days apart (circular, 365- and 366-day year), a family at most 3 times in any 60 days and never on consecutive days, an answer not repeated within 60 days and a single-digit answer at most 2 times in 60 days. All levels: no repeated frame, no two puzzles with most numbers or the same story in common; the sub-structures used by the fixed puzzles on the level pages (counting_choices.digit_cards_arrangements, fractions.fraction_of_remainder, multiples.common_multiple, remainders.two_conditions, sequence.count_on, sequence.which_term) are never used by the bank.
 
@@ -8,7 +8,7 @@ Rules. Levels 3 to 6 (TEASER-STRICT): per level and calendar quarter at most 1 p
 - Level 2 (gap rule, 60 days): 61 puzzles, 61 distinct sub-structures (none twice within the gap), 43 families, most in one family 3
 - Level 3, quarter 4: 61 puzzles, 61 distinct sub-structures, 43 families, most in one family 3
 - Level 4, quarter 4: 61 puzzles, 61 distinct sub-structures, 41 families, most in one family 3
-- Level 5, quarter 4: 61 puzzles, 61 distinct sub-structures, 42 families, most in one family 3
+- Level 5, quarter 4: 61 puzzles, 61 distinct sub-structures, 43 families, most in one family 3
 - Level 6, quarter 4: 61 puzzles, 61 distinct sub-structures, 34 families, most in one family 3
 
 ## Capacity of the taxonomy (true numbers, after merging look-alike sub-structures)
@@ -19,14 +19,15 @@ Levels 3 to 6 (quarter rule): one use per sub-structure and at most 3 per family
 | Level | Sub-structures | Families | Rule | Uses per sub a year | Needed | Slack | True capacity (family-capped) | Verdict |
 |---|---|---|---|---|---|---|---|---|
 | 1 | 71 | 41 | gap 60 days | 6 | 61 | 10 | 414 a year | ok |
-| 2 | 93 | 48 | gap 60 days | 6 | 61 | 32 | 528 a year | ok |
-| 3 | 115 | 51 | once a quarter | 1 per quarter | 92 | 13 | 105 per quarter | ok |
-| 4 | 115 | 56 | once a quarter | 1 per quarter | 92 | 14 | 106 per quarter | ok |
-| 5 | 107 | 53 | once a quarter | 1 per quarter | 92 | 7 | 99 per quarter | ok |
-| 6 | 100 | 52 | once a quarter | 1 per quarter | 92 | 3 | 95 per quarter | ok |
+| 2 | 89 | 47 | gap 60 days | 6 | 61 | 28 | 504 a year | ok |
+| 3 | 111 | 51 | once a quarter | 1 per quarter | 92 | 9 | 101 per quarter | ok |
+| 4 | 111 | 55 | once a quarter | 1 per quarter | 92 | 10 | 102 per quarter | ok |
+| 5 | 103 | 52 | once a quarter | 1 per quarter | 92 | 3 | 95 per quarter | ok |
+| 6 | 102 | 53 | once a quarter | 1 per quarter | 92 | 5 | 97 per quarter | ok |
 
 ## Retired sub-structures (the frame is in our own books, so no level may use it)
 
+- `ages.sum_later`: round 4: "Ravi is 7 and his sister is 3: in how many years will their ages add up to 30" is G6 of the P3 holiday week 4 lesson (practice/holiday/p3/04, with variants 9 and 5, 30); L1-siblingsages was that template
 - `calendar.weekday_after`: round 3: "which day of the week N days later" is in our books at Levels 1, 3, 4, 5 and 6 (Skill Additions sheets, term l1, holiday P3 week 5, extension l6_u08)
 - `clock_reading.mirror_time`: round 3: "looks at a wall clock in a mirror" is in docs/sasmo/g1_original_problems_draft.md 4.3
 - `coins.amounts_made`: round 4: "he picks some coins: how many different totals" is extension l4 u10 S02 and docs/audit/gifted_p1.md
@@ -69,11 +70,7 @@ Usable sub-structures of round 3 that no released puzzle uses yet (each has a so
 | 5 | 61 | 3 | 5% | 18 | 36 | ok |
 | 6 | 61 | 4 | 7% | 24 | 36 | ok |
 
-Structure FAIL count (all released months): 4
-- FAIL L1-rulerbill (L1) and L4-wheelcount (L4): same answer 29 and shared numbers ['3', '4'] at two levels
-- FAIL L2-tilebed (L2) and L5-floortiles5 (L5): the same story skeleton at two levels (shared words paint,row,tile,touch)
-- FAIL L3-bandmatch (L3) and L6-sixclubs (L6): the same story skeleton at two levels (shared words drum,guitar,instrument,piano,play,violin)
-- FAIL L4-clockfive (L4) and L5-clockangle (L5): the same story skeleton at two levels (shared words clock,hand,hour,minute,smaller)
+Structure FAIL count (all released months): 0
 
 Capacity verdict for the full year (a plan for January to October, not a defect of the released months): 0 CAPACITY FAIL
 

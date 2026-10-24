@@ -157,7 +157,7 @@ DEFS = [
       'Star: 24 ÷ 2 = 12. Moon: 58 − 12 = {ans}.',
       p=dict(eqs=[[{'star': 2}, 24], [{'star': 1, 'moon': 1}, 58]], ask='moon', maxv=60), sub='symbols.symbol_equations'),
     P('twodice', 'dice_ways', 'Counting ways',
-      "Mei takes one token from bag A and one token from bag B. Each bag has tokens numbered 1 to {sides}. The two numbers add up to {total}. A 3 from bag A and a 7 from bag B is different from a 7 from bag A and a 3 from bag B. How many different ways can this happen?",
+      "Mei takes one token from bag A and one from bag B. Each bag has tokens numbered 1 to {sides}. The two numbers add up to {total}. Count A3 with B7 and A7 with B3 as different. How many different ways can this happen?",
       "List the numbers from bag A in order, starting with the smallest one that can work. For each one, ask what the number from bag B must be.",
       "The pairs (bag A, bag B) are 3 and 7, 4 and 6, 5 and 5, 6 and 4, and 7 and 3. That is {ansn} ways.",
       p=dict(sides=7, total=10, ordered=True), unit='ways', units=['ways', 'way'], sub='counting_pairs.dice_sum_ways'),

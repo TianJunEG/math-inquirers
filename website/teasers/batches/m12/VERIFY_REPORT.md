@@ -11,16 +11,14 @@ Method: every puzzle is re-solved by `brute.py` (independent of the author solve
 | 5 | 31 | 29 | 2 | 26 | 2 | 31 |
 | 6 | 31 | 30 | 2 | 24 | 2 | 31 |
 
-Sources searched (whole working tree, tracked or not): 6667 files, 1357.8 MB, sha256 59eff2d11509a27b04095132.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 292, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
+Sources searched (whole working tree, tracked or not): 6671 files, 1357.8 MB, sha256 ea7a97449ed017f30d5bcc4b.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 296, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
 
 Similarity sources checked: holiday banks, own term lessons, all extension workbook data, the school booklets, our book drafts and catalogues, external private source files, and the seven fixed website puzzles.
 
-FAIL count: 0. REVIEW items: 91.
+FAIL count: 0. REVIEW items: 86.
 
 
 - REVIEW L1-rulerbill [12-01]: rule B: 3 of the same numbers ['3', '4', '9'] as "Picture-dependent items re-solved from the picture, not the key: B1 L1 S1 (26),  ..." (term/l1/audit/AUDIT_BOOKS_1_4_ROUND2.md)
-- REVIEW L1-twodice [12-05]: question has 60 words (limit 48)
-- REVIEW L1-twodice [12-05]: longest sentence 25 words (limit 20)
 - REVIEW L1-twodice [12-05]: number 1 in the question is not a parameter (written in the wording; check)
 - REVIEW L1-traysame [12-08]: story words 5 of 7 like "Pupils colour their own copy. Colour key: 1260 = yellow, 1680 = red, 2520 = blue, 3360 = g ..." (school/p4/out/S1_key.html)
 - REVIEW L1-chartwalk [12-09]: number 100 in the question is not a parameter (written in the wording; check)
@@ -37,8 +35,7 @@ FAIL count: 0. REVIEW items: 91.
 - REVIEW L1-robottrack [12-29]: number 8 in the question is not a parameter (written in the wording; check)
 - REVIEW L1-bookshelf [12-31]: story words 3 of 4 like "Q: The books in the library were placed on 30 shelves with an equal number of books on eac ..." (docs/books/private_p3_papers/non_routine_questions.md)
 - REVIEW L2-chocbar [12-06]: rule C: two four-word runs shared with "| C1 | Fill in the box: 1/2 = ?/10 | A chocolate bar has 10 equal pieces. ..." (docs/audit/gifted_fixes_p3.md): a chocolate bar has / chocolate bar has #
-- REVIEW L2-recyclegrid [12-07]: question has 56 words (limit 55)
-- REVIEW L2-recyclegrid [12-07]: longest sentence 24 words (limit 22)
+- REVIEW L2-recyclegrid [12-07]: question has 57 words (limit 55)
 - REVIEW L2-recyclegrid [12-07]: number 3 in the question is not a parameter (written in the wording; check)
 - REVIEW L2-stripchain [12-08]: story words 5 of 8 like "- [SA2_2020_Nanyang P2-17, 5m, Black white squares pattern, diff 3, pic] Black 1,5,13...;  ..." (docs/books/private_p5_papers/non_routine_questions.md)
 - REVIEW L2-seesaw [12-11]: story words 5 of 8 like "l2_scale level balance scales: scales [{left: [obj, ...], right: [obj, ...], label?}], obj ..." (extension/tools/figs_l2_u09.py)
@@ -61,7 +58,6 @@ FAIL count: 0. REVIEW items: 91.
 - REVIEW L3-watertank [12-19]: rule B: 3 of the same numbers ['12', '3', '9'] as "The 9 ℓ let out is 9000 cm³, so 18 000 cm³ is left.", "One cm of depth over the  ..." (practice/holiday/p5/05/dist/data/p5l05.json)
 - REVIEW L3-fishmass [12-20]: story words 3 of 4 like "P = code_items_page(25, 8125, "Kilograms and Grams", 1, "Mass: reading scales in kilograms ..." (school/p2/gen/pages_w4.py)
 - REVIEW L3-clubs [12-24]: story words 3 of 4 like "f"From {cats[ri[0]]} to {cats[ri[1]]}, the number went up by how many?", f"How many pupils ..." (school/p4/gen/pages_d.py)
-- REVIEW L3-fruitsums [12-26]: story words 3 of 5 like "Jason does not play the bell or the drum.", "text": "Kumar plays the {circ:drum|flute|pian ..." (extension/data/l1_u08.json)
 - REVIEW L3-raffledays [12-29]: rule C: two four-word runs shared with "Q: A total of 380 movie tickets were sold in two days. 90 fewer tickets were sol ..." (docs/books/private_p3_papers/non_routine_questions.md): many tickets were sold / tickets were sold on
 - REVIEW L3-lanes5 [12-30]: story words 3 of 4 like "How many seats were there in the school hall? - [EOY_2024_Raffles Q36, 2m, Seats rows/colu ..." (docs/books/private_p4_papers/non_routine_questions.md)
 - REVIEW L3-cardcorners [12-31]: rule B: 3 of the same numbers ['3', '4', '9'] as "How wide and how high is that rectangle?", "label": "4(a) box", "svg": "<svg vie ..." (practice/holiday/p4/07/dist/data/p4l07.json)
@@ -74,6 +70,7 @@ FAIL count: 0. REVIEW items: 91.
 - REVIEW L4-liftmin [12-04]: number 4 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-digitfive [12-09]: rule B: 3 of the same numbers ['3', '4', '5'] as "Fill in the blanks.", "Counting in 2s: 2, 4, 6, ____, ____, 12, ____, 16"], "q": ..." (practice/holiday/p1/01/dist/data/p1l01.json)
 - REVIEW L4-nametags [12-12]: rule C: two four-word runs shared with "G2 **CTX.** Cans are sold in packs of 6 for $5.40 and 8 for $6.80. ..." (docs/terms/l4_preflight.md): are sold in packs / sold in packs of
+- REVIEW L4-tokenstall [12-19]: rule B: 3 of the same numbers ['3', '40', '7'] as "- [EOY_2021_CatholicHigh P2-12, 4m, Prizes ratio 8:3:1 costs, diff 3] Ratio smal ..." (docs/books/private_p5_papers/non_routine_questions.md)
 - REVIEW L4-addpattern [12-20]: rule B: 3 of the same numbers ['3', '4', '9'] as "Is she always right?"], "q": "Investigation 2. Mei says: "In a pattern that repe ..." (practice/holiday/p1/04/dist/data/p1l04.json)
 - REVIEW L4-visitortable [12-21]: story words 3 of 4 like "ANSWER: 120 l - [EOY_2025_MahaBodhi P2-8, 3m, Line graph and money, diff 2, pic] Visitors  ..." (docs/books/private_p5_papers/non_routine_questions.md)
 - REVIEW L4-sundaes [12-24]: rule B: 3 of the same numbers ['3', '4', '5'] as "**Gaps and posts on a line are set in every term.** "10 trees at equal distances ..." (docs/books/p3_school_paper_patterns.md)
@@ -94,7 +91,6 @@ FAIL count: 0. REVIEW items: 91.
 - REVIEW L5-lostnumber [12-23]: number 3 in the question is not a parameter (written in the wording; check)
 - REVIEW L5-fourside [12-25]: rule B: 3 of the same numbers ['110', '360', '70'] as "The turtle walks along one side, then turns 70 degrees from straight on. The ins ..." (practice/holiday/p6/07/dist/data/p6l07.json)
 - REVIEW L5-flourbags [12-28]: story words 4 of 5 like "(Give your answer in kilograms) ANSWER: 0.4 kg - [WA2_2025_HenryPark Q9, 3m, Mass decimals ..." (docs/books/private_p4_papers/non_routine_questions.md)
-- REVIEW L6-sixclubs [12-02]: rule C: two four-word runs shared with ""text": "4 children each play a different instrument. Lily does not play the dru ..." (extension/data/l1_u08.json): not play the piano / play a different instrument
 - REVIEW L6-cyclistrun [12-06]: story words 3 of 3 like "Ravi leaves the same house at 9:30 a.m. and cycles along the same road, the same way, at 1 ..." (docs/sasmo/g5_original_problems_draft.md)
 - REVIEW L6-jarcoins [12-07]: number 1 in the question is not a parameter (written in the wording; check)
 - REVIEW L6-jarcoins [12-07]: rule C: two four-word runs shared with "Day 1: 3 coins in the jar. Day 5: 17.', 'The number he adds goes up by 1 each da ..." (levels/gap_items.py): jar on day # / the jar on day
@@ -103,7 +99,6 @@ FAIL count: 0. REVIEW items: 91.
 - REVIEW L6-codingclub [12-14]: rule B: 3 of the same numbers ['28', '4', '40'] as "| T4 | Mean and outlier (31); fair or unfair, random trials (33); counting basic ..." (docs/terms/level_6_year_plan.md)
 - REVIEW L6-bunboxes [12-15]: rule B: 3 of the same numbers ['19', '24', '7'] as "| N5 | Books: `print/make_term_books.py --level 4 --first 1 --last 40 --size 5 - ..." (docs/terms/l4_preflight.md)
 - REVIEW L6-quizmean [12-16]: story words 3 of 5 like "| Prelim | 2024 | Nanyang | P1-8 | 1 | Table of pastries over 3 days; total of two days gi ..." (docs/books/private_p6_papers/non_routine_questions.md)
-- REVIEW L6-cakeshare [12-17]: story words 3 of 4 like "Ali eats half of what is left. Draw the cake. What fraction of the WHOLE cake did Ali eat? ..." (outputs/designed/Math_Inquirers_P5_Question_Bank.pdf)
 - REVIEW L6-twoclasses [12-23]: rule B: 3 of the same numbers ['30', '50', '70'] as "The whole class has 40 pupils. The other cells are empty." style="width:100%;max ..." (practice/holiday/p5/07/dist/data/p5l07.json)
 - REVIEW L6-gaussjar [12-27]: number 10 in the question is not a parameter (written in the wording; check)
 - REVIEW L6-gaussjar [12-27]: number 15 in the question is not a parameter (written in the wording; check)

@@ -3,11 +3,11 @@ new frames; every number in a question comes from p (or the solver); names are p
 from defs_common import P
 
 DEFS = [
-    P('siblingsages', 'sum_later', 'Ages',
-      "Siti is {a} and her brother is {b}. They both have a birthday once a year. After how many birthdays will the sum of their ages be {target}?",
-      "Add their ages now. At every birthday each of them gets one year older, so the sum grows by the same amount each time.",
-      "Now their ages add up to {a} + {b} = {now}. At each birthday the sum grows by 2, because both get a year older. They need {target} − {now} = {gain} more, and {gain} ÷ 2 = {ans}.",
-      p=dict(a=9, b=5, target=30), unit='birthdays', units=['birthdays', 'birthday'], sub='ages.sum_later'),
+    P('tapefold', 'fold_cut', 'Folding and cutting',
+      'Hana folds a long roll of tape in half {folds} times, one fold after another. Then she snips it once with scissors. How many little bits of tape lie on the table after she unfolds it?',
+      'After each fold the number of layers doubles. How many snip marks does the unfolded tape show?',
+      '{folds} folds make 2 × 2 × 2 = {layers} layers, so the snip goes through the tape in {layers} places. {layers} snips make {layers} + 1 = {ans}.',
+      p=dict(folds=3), unit='bits', sub='paper_folding.fold_and_cut'),
     P('seatrow', 'seat_number', 'Rows and places',
       'A cinema has {per_row} seats in every row. Tickets give each seat a number, counting 1, 2, 3 and on, one row after another, starting at the screen. Kai sits in the {row:o} row, in the {col:o} seat from the left. What is his seat number?',
       'Count the seats in the full rows before Kai\'s row first.',

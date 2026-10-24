@@ -757,6 +757,9 @@ for _g, _subs in (TAX.T.get('same_idea_groups') or {}).items():
         _GROUP_OF[_s] = 'group:' + _g
 
 
+_GROUP_FAM = {'group:' + _g: _subs[0].split('.')[0] for _g, _subs in (TAX.T.get('same_idea_groups') or {}).items()}
+
+
 def gsub(e):
     """The unit the repeat rules count: a sub-structure, or the group of sub-structures that a parent sees as one idea (taxonomy 'same_idea_groups')."""
     return _GROUP_OF.get(e['sub'], e['sub'])
@@ -959,10 +962,10 @@ def capacity_lines(levels, bank_counts=None):
            '| Level | Sub-structures | Families | Rule | Uses per sub a year | Needed | Slack | True capacity (family-capped) | Verdict |', '|---|---|---|---|---|---|---|---|---|']
     fails = []
     for lv in range(1, 7):
-        subs = [s for s, d in TAX.SUBS.items() if lv in d['levels']]
+        subs = sorted({_GROUP_OF.get(s, s) for s, d in TAX.SUBS.items() if lv in d['levels']})      # round 4: sub-structures a parent sees as one idea count once
         fam = {}
         for s in subs:
-            fam.setdefault(s.split('.')[0], []).append(s)
+            fam.setdefault(_GROUP_FAM.get(s) or s.split('.')[0], []).append(s)
         if str(lv) in R['min_gap_days']:
             gap = R['min_gap_days'][str(lv)]
             uses = 365 // gap
