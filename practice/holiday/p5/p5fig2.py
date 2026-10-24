@@ -155,7 +155,7 @@ def a3():
     ta, tb, tc, foot = g(0, 0), g(9, 0), g(3, 7), g(3, 0)
     body = poly(sq, YEL) + T(*f(3, 3.4), 'square', 15, 'middle', 700) + T(*f(3, -1.5), '6 cm', 16)
     body += poly([ta, tb, tc], SKY) + dash(tc, foot) + rmark(foot, 1, -1, 10) + T((ta[0] + tb[0]) / 2, ta[1] + 26, '9 cm', 16)
-    body += T(foot[0] + 8, g(0, 2.2)[1] + 5, 'height ?', 16, 'start')
+    body += T(foot[0] + 8, g(0, 1.2)[1] + 5, 'height ?', 15, 'start')
     body += T(24, 28 + 8 * s + 52, 'The square and the triangle', 14, 'start', 600, GREY) + T(24, 28 + 8 * s + 70, 'have the same area.', 14, 'start', 600, GREY) + T(24, 28 + 8 * s + 88, 'Not to scale.', 14, 'start', 600, GREY)
     return svg(390, 28 + 8 * s + 100, body, 'A square with sides of 6 cm and a triangle with a base of 9 cm and a dashed height that is not known. The square and the triangle have the same area. Not drawn to scale.')
 

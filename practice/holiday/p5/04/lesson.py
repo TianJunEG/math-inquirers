@@ -164,14 +164,14 @@ ITEMS = [
 
     D(id='3a', tier='core', no='3(a)', type='fields', skill='splitting a figure into triangles', answer=[5, 35],
       q='Find the area of the figure ABCD. Split it into two triangles along AC.\nStart here: AC = 14 cm is the base of BOTH triangles. Read the two heights from the picture. Triangle ABC first.',
-      frame='Height of triangle ABC = {f1} cm.  Area of ABC = {f2} cm²', svg=G.q3(),
+      frame='Height of triangle ABC (cm): {f1}     Area of ABC (cm²): {f2}', svg=G.q3(),
       check=lambda: [QUAD['B'][1], whole(shoelace([QUAD['A'], QUAD['B'], QUAD['C']]))],
       hint='The height of ABC is the dashed line from B down to AC. Then use 1/2 × 14 × height.',
       steps=['The height from B to AC is 5 cm (read it from the picture).', 'Area of ABC = 1/2 × 14 × 5 = 35 cm².'],
       src=['Find the area of the figure ABCD. Split it into two triangles along AC.', 'Height of triangle ABC = ______ cm. Area of ABC = ______ cm²']),
     D(id='3b', tier='core', no='3(b)', type='fields', skill='splitting a figure into triangles', answer=[3, 21],
       q='Find the area of the figure ABCD. Split it into two triangles along AC.\nAC = 14 cm is the base of BOTH triangles. Now triangle ACD.',
-      frame='Height of triangle ACD = {f1} cm.  Area of ACD = {f2} cm²', svg=G.q3(),
+      frame='Height of triangle ACD (cm): {f1}     Area of ACD (cm²): {f2}', svg=G.q3(),
       check=lambda: [-QUAD['D'][1], whole(shoelace([QUAD['A'], QUAD['C'], QUAD['D']]))],
       hint='The height of ACD is the dashed line from D up to AC. Then use 1/2 × 14 × height.',
       steps=['The height from D to AC is 3 cm (read it from the picture).', 'Area of ACD = 1/2 × 14 × 3 = 21 cm².'],
@@ -190,7 +190,7 @@ ITEMS = [
     D(id='4b', tier='core', no='4(b)', type='fields', skill='taking away from a rectangle', answer=[16, 24],
       q='ABCD is a rectangle. The three white triangles are what is left over when the shaded triangle DEF is taken away. Each has a square corner, so each is half of a rectangle.\n'
         'Example: ADE is half of 4 cm by 8 cm, so ADE = 16 cm².\nFind the areas of the other two white triangles.',
-      frame='EBF = {f1} cm²    FCD = {f2} cm²', svg=G.q4(),
+      frame='EBF (cm²): {f1}     FCD (cm²): {f2}', svg=G.q4(),
       check=lambda: [whole(shoelace([R4['E'], R4['B'], R4['F']])), whole(shoelace([R4['F'], R4['C'], R4['D']]))],
       hint='Find the two sides of each white triangle that meet at the square corner. Each triangle is half of the rectangle with those two sides.',
       steps=['EBF has its square corner at B: EB = 8 cm and BF = 4 cm. It is half of 8 by 4: 32 ÷ 2 = 16 cm².', 'FCD has its square corner at C: FC = 4 cm and CD = 12 cm. It is half of 4 by 12: 48 ÷ 2 = 24 cm².'],
@@ -223,7 +223,7 @@ ITEMS = [
 
     # ================= Investigation: Find all the ways
     D(id='C0', tier='invest', no='C (easy first step)', type='number', skill='area of a right-angled triangle', answer=6,
-      q='Find all the ways.\nEasy first step: draw a right-angled triangle on squared paper with short sides 3 cm and 4 cm. What is its area?', check=lambda: whole(shoelace([(0, 0), (3, 0), (0, 4)])),
+      q='Find all the ways.\nEasy first step: imagine a right-angled triangle on squared paper with short sides 3 cm and 4 cm (draw it if you like). What is its area?', check=lambda: whole(shoelace([(0, 0), (3, 0), (0, 4)])),
       hint='A right-angled triangle is half of a rectangle. Which rectangle?',
       steps=['The triangle is half of a 3 cm by 4 cm rectangle: 3 × 4 = 12 cm².', 'Half of 12 = 6 cm².'],
       src=['Easy first step: draw a right-angled triangle on squared paper with short sides 3 cm and 4 cm. What is its area?']),
