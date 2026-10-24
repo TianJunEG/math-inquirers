@@ -1214,6 +1214,7 @@
      "type": "ruler",
      "start": 0,
      "end": 12,
+     "slide_w": 1400,
      "objects": [
       {
        "label": "pencil tip between 8 and 9",
