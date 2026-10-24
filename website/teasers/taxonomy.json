@@ -356,15 +356,19 @@
   "ages.age_gap": {
    "name": "the gap between two ages stays the same: an age later on",
    "levels": [
-    1,
-    2,
     3
    ],
    "kinds": [
     "age_gap"
    ],
    "cite": "MOE P1 NA Addition and Subtraction 2.1-2.5, p.31; P2-P3 add and subtract word problems, pp.33, 35",
-   "round": 2
+   "round": 2,
+   "levels_before": [
+    1,
+    2,
+    3
+   ],
+   "note": "round 3: \"Ali is 9, his aunt is 34, how old will she be when ...\" is in docs/books word_problems_g1_g2_original_draft B10.1; kept only at Level 3"
   },
   "algebra.equation_both_sides": {
    "name": "an unknown on both sides of an equation",
@@ -1938,11 +1942,13 @@
   },
   "modular.last_digit_power": {
    "name": "the last digit of a power (a repeating cycle)",
-   "levels": [
-    6
-   ],
+   "levels": [],
    "kinds": [
     "last_digit"
+   ],
+   "retired": "round 3: \"multiply 7 by itself 45 times: last digit\" is in docs/sasmo/g6_original_problems_draft.md 2.2",
+   "levels_before": [
+    6
    ]
   },
   "money.offers": {
@@ -2494,11 +2500,13 @@
   },
   "polygons.turtle_repeat": {
    "name": "a turtle that repeats a move and a turn until it is home",
-   "levels": [
-    6
-   ],
+   "levels": [],
    "kinds": [
     "turtle"
+   ],
+   "retired": "round 3: \"walk a square: forward, turn on the spot, until back at the start\" is in p6/content/l7.js",
+   "levels_before": [
+    6
    ]
   },
   "polyominoes.count_shapes": {

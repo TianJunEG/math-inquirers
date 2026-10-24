@@ -48,17 +48,18 @@
     if (!seen && !total && !cur) return null;
     var v = total + cur + chunk; return neg ? -v : v;
   }
-  // Units after the number: a word ('301 sticks', '20 minutes', 'sq cm'), a word with an attached power ('84 cm2', '84cm^2', '84 cm²'), a rate ('km/h') a degree sign ('-25 °C', '11°C', '44°') or a cent sign / cent word ('35¢', '35 cents') or a litre sign ('27 ℓ', '27 l', '27 litres'; for cents a bare lowercase 'c' is refused as ambiguous; '$0.35' is never turned into cents).
+  // Units after the number: a word ('301 sticks', '20 minutes', 'sq cm'), a word with an attached power ('84 cm2', '84cm^2', '84 cm²'), a rate ('km/h') a degree sign ('-25 °C', '11°C', '44°') or a cent sign / cent word ('35¢', '35 cents') or a litre sign ('27 ℓ', '27 l', '27 litres'), then at most two more plain words in all (a unit and a short tail: '27 ℓ of water', '27 liters of water', '35 cents change', '35 cents left'; longer tails are refused; for cents a bare lowercase 'c' is refused as ambiguous; '$0.35' is never turned into cents).
   // A single pair of brackets round the whole answer is ignored ('(-25)'). Two numbers ('4 or 5', '1 2') are never a unit.
-  var UW = '[a-z][a-z.]*(?:\\^?[23]|\\s?[²³])?', UNITRE = new RegExp('^(-?\\d[\\d, ]*?(?:\\.0+)?)\\s*(?:[°º]\\s*[a-z]?|[¢ℓ]|' + UW + '(?:\\s+' + UW + ')*(?:\\/[a-z]+)?)$', 'i');
+  var UW = '[a-z][a-z.]*(?:\\^?[23]|\\s?[²³])?', UNITRE = new RegExp('^(-?\\d[\\d, ]*?(?:\\.0+)?)\\s*(?:[°º]\\s*[a-z]?|[¢ℓ](?:\\s+[a-z]+){0,2}|' + UW + '(?:\\s+' + UW + '){0,2}(?:\\/[a-z]+)?)$', 'i');
   function toNum(s, opt) {
     s = minus(s).trim();
     var pb = /^\(\s*([^()]*?)\s*\)\s*(.*)$/.exec(s); if (pb) s = pb[2] ? pb[1] + ' ' + pb[2] : pb[1];   // '(-25)' and '(-25) °C'
     if (opt && opt.words) { var wn = wordsToNum(s); if (wn !== null) return wn; }
+    if (!opt || opt.unit !== false) s = s.replace(/^(?:∠|angle\s+)\s*[a-z]{1,3}\s*(?:=|is)\s*/i, '');   // '∠AOC = 90°', 'angle AOC is 90' (an angle name before the number; never for unit:false)
     s = s.replace(/^\$\s*/, '');
     if (opt && opt.pre && s.indexOf(opt.pre) === 0) s = s.slice(opt.pre.length).trim();
     s = s.replace(/\.0*$/, '');
-    if (!opt || opt.unit !== false) { var u = UNITRE.exec(s); if (u && !/\d\s*c$/.test(s)) s = u[1].trim().replace(/\.0+$/, ''); }
+    if (!opt || opt.unit !== false) { var u = UNITRE.exec(s); if (u && !/\d\s*c(?![a-z])/.test(s)) s = u[1].trim().replace(/\.0+$/, ''); }
     if (/^-?\d{1,3}(?:[, ]\d{3})+$/.test(s)) s = s.replace(/[, ]/g, '');
     return /^-?\d+$/.test(s) ? +s : null;
   }
@@ -97,17 +98,33 @@
     function sum() { var v = prod(); while (t[p] === '+' || t[p] === '-') { var o = t[p++], r = prod(); v = o === '+' ? v + r : v - r; } return v; }
     var out = sum(); return bad || p < t.length || !isFinite(out) ? null : out;
   }
-  function textOK(keys, v) {
+  // A short lead-in before a text answer ('It is Wednesday', 'It will be Wednesday.', 'The answer is 12'): ignored for text items unless the item says accept_prefix:false;
+  // accept_prefix may also be a list of extra lead-ins. It is removed only from what the child typed, never from the key, and 'It is not Wednesday' stays wrong.
+  var LEAD = ['it is', 'it will be', 'it\'s', 'the answer is', 'my answer is', 'answer is', 'answer:'];
+  function lead(v, o) {
+    if (o && o.accept_prefix === false) return str(v);
+    var t = minus(str(v).normalize('NFKC')).trim(), ls = LEAD.concat(o && Array.isArray(o.accept_prefix) ? o.accept_prefix.map(function (x) { return str(x).toLowerCase(); }) : []), low = t.toLowerCase(), i;
+    for (i = 0; i < ls.length; i++) if (low.indexOf(ls[i]) === 0 && /^(?::\s*|\s+)\S/.test(t.slice(ls[i].length))) return t.slice(ls[i].length).replace(/^[\s:]+/, '');
+    return t;
+  }
+  // Same meaning, other words: 'a is equal to b' / 'a equals b' = 'a = b'; a short list of single letters, numbers or fractions may be joined by commas, 'and' or '&' ('A and B and D', 'A, B and D').
+  function canon(s) {
+    var n = normText(s).replace(/\s+(?:is equal to|equals)\s+/g, ' = '), parts = n.split(/\s*,\s*and\s+|\s*[,;&]\s*|\s+and\s+/);
+    if (parts.length > 1 && parts.every(function (x) { return /^(?:[a-z]|-?\d+(?:\/\d+)?)$/.test(x); })) n = parts.join(',');
+    return n;
+  }
+  function textOK(keys, v, o) {
     var cands = [v], m = /^(.*[\d)])\s*=\s*(-?[\d.\/ ]*\d)\s*[.!]?$/.exec(minus(str(v)).trim()); // a statement with its result: '(6+4)x5-2=48'
     if (m) { var l = evalExpr(m[1]), r = evalExpr(m[2].replace(/(\d) (\d+\/\d)/, '($1+$2)').replace(/ /g, '')); if (l != null && r != null && Math.abs(l - r) < 1e-9) cands.push(m[1]); }
     var m2 = /^(-?[\d.\/ ]*\d)\s*=\s*(.*[\d)])\s*[.!]?$/.exec(minus(str(v)).trim()); // the result first: '5/12=1/3+1/12'
     if (m2) { var r2 = evalExpr(m2[1].replace(/(\d) (\d+\/\d)/, '($1+$2)').replace(/ /g, '')), l2 = evalExpr(m2[2]); if (l2 != null && r2 != null && Math.abs(l2 - r2) < 1e-9) cands.push(m2[2]); }
-    return keys.some(function (x) { return cands.some(function (c) { return normText(x) === normText(c) || squash(x) === squash(c); }); });
+    var ld = lead(v, o); if (ld !== str(v).trim()) cands.push(ld);
+    return keys.some(function (x) { return cands.some(function (c) { return normText(x) === normText(c) || squash(x) === squash(c) || squash(canon(x)) === squash(canon(c)); }); });
   }
   // Equal fractions in a typed list (item flag equiv_frac): '7/12, 8/12, 10/12' is right for the key '7/12, 2/3, 5/6'. Same order, same number of fractions, each equal in value
   // (cross-multiplied); any other symbol (such as < or >) must match the key. Without the flag only the printed forms are accepted.
   function fracTok(s) {
-    var t = [], rest = minus(str(s).normalize('NFKC')).replace(/\s*\/\s*/g, '/').replace(/(-?)(\d+)\s+(\d+)\/(\d+)|(-?\d+)\/(\d+)|-?\d+/g, function (m, sg, w, a, b, n2, d2) {
+    var t = [], rest = minus(str(s).normalize('NFKC')).replace(/(\d+)\s+out\s+of\s+(\d+)/gi, '$1/$2').replace(/\s*\/\s*/g, '/').replace(/(-?)(\d+)\s+(\d+)\/(\d+)|(-?\d+)\/(\d+)|-?\d+/g, function (m, sg, w, a, b, n2, d2) {
       var f = w !== undefined ? { n: (+w * +b + +a) * (sg ? -1 : 1), d: +b } : n2 !== undefined ? { n: +n2, d: +d2 } : { n: +m, d: 1 };
       t.push(f); return ' ';
     });
@@ -157,7 +174,7 @@
     return sides.length > 0 && kp.length > 0 && sides.every(function (sd) { var q = polyParse(sd, vr); return !!q && kp.some(function (k) { return polyEq(q, k); }); });
   }
   // One text answer: the printed forms (textOK), plus, only when the item says so, equal fractions (equiv_frac) or an equal polynomial (poly).
-  function textMatch(o, keys, v) { return textOK(keys, v) || !!(o && o.equiv_frac && fracListOK(keys, v)) || !!(o && o.poly && polyOK(keys, v, o.poly)); }
+  function textMatch(o, keys, v) { return textOK(keys, v, o) || !!(o && o.equiv_frac && (fracListOK(keys, v) || fracListOK(keys, lead(v, o)))) || !!(o && o.poly && polyOK(keys, v, o.poly)); }
   // END SHARED
   function answered(type, v) {
     if (v == null) return false;
@@ -172,7 +189,7 @@
   // ---- new types
   function gcd(a, b) { a = a < 0n ? -a : a; b = b < 0n ? -b : b; while (b) { var t = a % b; a = b; b = t; } return a; }
   function parseFraction(s) { // '3/8', '1 1/2', '2' -> {n, d} as BigInt, or null
-    s = str(s).normalize('NFKC').replace(/−/g, '-').trim().replace(/\s*\/\s*/g, '/');
+    s = str(s).normalize('NFKC').replace(/−/g, '-').trim().replace(/(\d+)\s+out\s+of\s+(\d+)/i, '$1/$2').replace(/\s*\/\s*/g, '/');   // '1 out of 4' is 1/4
     var m = /^(-?)(?:(\d+)\s+)?(\d+)\/(\d+)$/.exec(s), w, n, d, neg;
     if (m) { neg = m[1] === '-'; w = BigInt(m[2] || 0); n = BigInt(m[3]); d = BigInt(m[4]); if (d === 0n) return null; n = w * d + n; if (neg) n = -n; return { n: n, d: d }; }
     m = /^-?\d+$/.exec(s); if (m) return { n: BigInt(s), d: 1n };

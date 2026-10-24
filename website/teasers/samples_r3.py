@@ -42,7 +42,7 @@ SAMPLES = {
     'share_fraction': [dict(num=3, den=4, people=6)],
     'branch_prog': [dict(start=7, n=5, even_op=['half', 0], odd_op=['times3plus1', 0]), dict(start=20, n=4, even_op=['sub', 3], odd_op=['add', 5])],
     'faulty_clock': [dict(g=5, clock_min=130)],
-    'triangle_sides': [dict(first=1, ask='largest_corner', side=9), dict(first=1, ask='smallest_middle', side=12), dict(first=3, ask='largest_corner', side=15)],
+    'triangle_sides': [dict(first=1, ask='largest_corner', side=9), dict(first=1, ask='smallest_middle', side=12), dict(first=3, ask='largest_corner', side=15), dict(first=5, ask='corner_sum', side=24), dict(first=1, ask='corner_sum', side=10)],
     'digit_segments': [dict(lo=11, hi=15, table={str(i): v for i, v in enumerate([6, 2, 5, 5, 4, 5, 6, 3, 7, 6])})],
     'circle_out': [dict(n=7, k=2), dict(n=10, k=3), dict(n=12, k=2)],
 }

@@ -29,7 +29,7 @@
       'fieldset.row{border:0;padding:0;margin:0;min-width:0}textarea::placeholder,input::placeholder{color:var(--mut);opacity:1}.nb{padding:0 .45rem}.nb b{white-space:nowrap}' +
       '.helper{margin:0 0 .5rem;font-weight:700}' +
       '.fg{display:inline-flex;flex-wrap:nowrap;align-items:center;gap:.25rem;max-width:100%;vertical-align:middle}.fg .fl{flex:0 1 auto;min-width:2.5rem}.fg .ft,.fg input{flex:0 0 auto}.fg .ft{white-space:nowrap}' +
-      '.card svg,.fb svg{overflow:visible}';
+      '.card svg,.fb svg{overflow:visible}.nb i{font-size:13px}';
     document.head.appendChild(st);
   })();
   // ---- reading and judging
@@ -60,17 +60,18 @@
     if (!seen && !total && !cur) return null;
     var v = total + cur + chunk; return neg ? -v : v;
   }
-  // Units after the number: a word ('301 sticks', '20 minutes', 'sq cm'), a word with an attached power ('84 cm2', '84cm^2', '84 cm²'), a rate ('km/h') a degree sign ('-25 °C', '11°C', '44°') or a cent sign / cent word ('35¢', '35 cents') or a litre sign ('27 ℓ', '27 l', '27 litres'; for cents a bare lowercase 'c' is refused as ambiguous; '$0.35' is never turned into cents).
+  // Units after the number: a word ('301 sticks', '20 minutes', 'sq cm'), a word with an attached power ('84 cm2', '84cm^2', '84 cm²'), a rate ('km/h') a degree sign ('-25 °C', '11°C', '44°') or a cent sign / cent word ('35¢', '35 cents') or a litre sign ('27 ℓ', '27 l', '27 litres'), then at most two more plain words in all (a unit and a short tail: '27 ℓ of water', '27 liters of water', '35 cents change', '35 cents left'; longer tails are refused; for cents a bare lowercase 'c' is refused as ambiguous; '$0.35' is never turned into cents).
   // A single pair of brackets round the whole answer is ignored ('(-25)'). Two numbers ('4 or 5', '1 2') are never a unit.
-  var UW = '[a-z][a-z.]*(?:\\^?[23]|\\s?[²³])?', UNITRE = new RegExp('^(-?\\d[\\d, ]*?(?:\\.0+)?)\\s*(?:[°º]\\s*[a-z]?|[¢ℓ]|' + UW + '(?:\\s+' + UW + ')*(?:\\/[a-z]+)?)$', 'i');
+  var UW = '[a-z][a-z.]*(?:\\^?[23]|\\s?[²³])?', UNITRE = new RegExp('^(-?\\d[\\d, ]*?(?:\\.0+)?)\\s*(?:[°º]\\s*[a-z]?|[¢ℓ](?:\\s+[a-z]+){0,2}|' + UW + '(?:\\s+' + UW + '){0,2}(?:\\/[a-z]+)?)$', 'i');
   function toNum(s, opt) {
     s = minus(s).trim();
     var pb = /^\(\s*([^()]*?)\s*\)\s*(.*)$/.exec(s); if (pb) s = pb[2] ? pb[1] + ' ' + pb[2] : pb[1];   // '(-25)' and '(-25) °C'
     if (opt && opt.words) { var wn = wordsToNum(s); if (wn !== null) return wn; }
+    if (!opt || opt.unit !== false) s = s.replace(/^(?:∠|angle\s+)\s*[a-z]{1,3}\s*(?:=|is)\s*/i, '');   // '∠AOC = 90°', 'angle AOC is 90' (an angle name before the number; never for unit:false)
     s = s.replace(/^\$\s*/, '');
     if (opt && opt.pre && s.indexOf(opt.pre) === 0) s = s.slice(opt.pre.length).trim();
     s = s.replace(/\.0*$/, '');
-    if (!opt || opt.unit !== false) { var u = UNITRE.exec(s); if (u && !/\d\s*c$/.test(s)) s = u[1].trim().replace(/\.0+$/, ''); }
+    if (!opt || opt.unit !== false) { var u = UNITRE.exec(s); if (u && !/\d\s*c(?![a-z])/.test(s)) s = u[1].trim().replace(/\.0+$/, ''); }
     if (/^-?\d{1,3}(?:[, ]\d{3})+$/.test(s)) s = s.replace(/[, ]/g, '');
     return /^-?\d+$/.test(s) ? +s : null;
   }
@@ -109,17 +110,33 @@
     function sum() { var v = prod(); while (t[p] === '+' || t[p] === '-') { var o = t[p++], r = prod(); v = o === '+' ? v + r : v - r; } return v; }
     var out = sum(); return bad || p < t.length || !isFinite(out) ? null : out;
   }
-  function textOK(keys, v) {
+  // A short lead-in before a text answer ('It is Wednesday', 'It will be Wednesday.', 'The answer is 12'): ignored for text items unless the item says accept_prefix:false;
+  // accept_prefix may also be a list of extra lead-ins. It is removed only from what the child typed, never from the key, and 'It is not Wednesday' stays wrong.
+  var LEAD = ['it is', 'it will be', 'it\'s', 'the answer is', 'my answer is', 'answer is', 'answer:'];
+  function lead(v, o) {
+    if (o && o.accept_prefix === false) return str(v);
+    var t = minus(str(v).normalize('NFKC')).trim(), ls = LEAD.concat(o && Array.isArray(o.accept_prefix) ? o.accept_prefix.map(function (x) { return str(x).toLowerCase(); }) : []), low = t.toLowerCase(), i;
+    for (i = 0; i < ls.length; i++) if (low.indexOf(ls[i]) === 0 && /^(?::\s*|\s+)\S/.test(t.slice(ls[i].length))) return t.slice(ls[i].length).replace(/^[\s:]+/, '');
+    return t;
+  }
+  // Same meaning, other words: 'a is equal to b' / 'a equals b' = 'a = b'; a short list of single letters, numbers or fractions may be joined by commas, 'and' or '&' ('A and B and D', 'A, B and D').
+  function canon(s) {
+    var n = normText(s).replace(/\s+(?:is equal to|equals)\s+/g, ' = '), parts = n.split(/\s*,\s*and\s+|\s*[,;&]\s*|\s+and\s+/);
+    if (parts.length > 1 && parts.every(function (x) { return /^(?:[a-z]|-?\d+(?:\/\d+)?)$/.test(x); })) n = parts.join(',');
+    return n;
+  }
+  function textOK(keys, v, o) {
     var cands = [v], m = /^(.*[\d)])\s*=\s*(-?[\d.\/ ]*\d)\s*[.!]?$/.exec(minus(str(v)).trim()); // a statement with its result: '(6+4)x5-2=48'
     if (m) { var l = evalExpr(m[1]), r = evalExpr(m[2].replace(/(\d) (\d+\/\d)/, '($1+$2)').replace(/ /g, '')); if (l != null && r != null && Math.abs(l - r) < 1e-9) cands.push(m[1]); }
     var m2 = /^(-?[\d.\/ ]*\d)\s*=\s*(.*[\d)])\s*[.!]?$/.exec(minus(str(v)).trim()); // the result first: '5/12=1/3+1/12'
     if (m2) { var r2 = evalExpr(m2[1].replace(/(\d) (\d+\/\d)/, '($1+$2)').replace(/ /g, '')), l2 = evalExpr(m2[2]); if (l2 != null && r2 != null && Math.abs(l2 - r2) < 1e-9) cands.push(m2[2]); }
-    return keys.some(function (x) { return cands.some(function (c) { return normText(x) === normText(c) || squash(x) === squash(c); }); });
+    var ld = lead(v, o); if (ld !== str(v).trim()) cands.push(ld);
+    return keys.some(function (x) { return cands.some(function (c) { return normText(x) === normText(c) || squash(x) === squash(c) || squash(canon(x)) === squash(canon(c)); }); });
   }
   // Equal fractions in a typed list (item flag equiv_frac): '7/12, 8/12, 10/12' is right for the key '7/12, 2/3, 5/6'. Same order, same number of fractions, each equal in value
   // (cross-multiplied); any other symbol (such as < or >) must match the key. Without the flag only the printed forms are accepted.
   function fracTok(s) {
-    var t = [], rest = minus(str(s).normalize('NFKC')).replace(/\s*\/\s*/g, '/').replace(/(-?)(\d+)\s+(\d+)\/(\d+)|(-?\d+)\/(\d+)|-?\d+/g, function (m, sg, w, a, b, n2, d2) {
+    var t = [], rest = minus(str(s).normalize('NFKC')).replace(/(\d+)\s+out\s+of\s+(\d+)/gi, '$1/$2').replace(/\s*\/\s*/g, '/').replace(/(-?)(\d+)\s+(\d+)\/(\d+)|(-?\d+)\/(\d+)|-?\d+/g, function (m, sg, w, a, b, n2, d2) {
       var f = w !== undefined ? { n: (+w * +b + +a) * (sg ? -1 : 1), d: +b } : n2 !== undefined ? { n: +n2, d: +d2 } : { n: +m, d: 1 };
       t.push(f); return ' ';
     });
@@ -169,7 +186,7 @@
     return sides.length > 0 && kp.length > 0 && sides.every(function (sd) { var q = polyParse(sd, vr); return !!q && kp.some(function (k) { return polyEq(q, k); }); });
   }
   // One text answer: the printed forms (textOK), plus, only when the item says so, equal fractions (equiv_frac) or an equal polynomial (poly).
-  function textMatch(o, keys, v) { return textOK(keys, v) || !!(o && o.equiv_frac && fracListOK(keys, v)) || !!(o && o.poly && polyOK(keys, v, o.poly)); }
+  function textMatch(o, keys, v) { return textOK(keys, v, o) || !!(o && o.equiv_frac && (fracListOK(keys, v) || fracListOK(keys, lead(v, o)))) || !!(o && o.poly && polyOK(keys, v, o.poly)); }
   // END SHARED
   function answered(it, v) {
     if (v == null) return false;
@@ -207,6 +224,11 @@
     Object.keys(t.vars).forEach(function (n) { var a = t.vars[n]; env[n] = a[Math.floor(Math.random() * a.length)]; });
     all = Object.assign({}, env); Object.keys(t.derive || {}).forEach(function (k) { all[k] = calc(t.derive[k], all); });
     var v = { q: fill(t.q, all), hint: fill(t.hint, all) };
+    // a variant may bring its own figure: tpl.fig = SVG text with the same {name} places as the question, or tpl.figs = {'v1|v2': svg} (one picture per combination, the variables in order).
+    // Without one the original picture is hidden while the variant is shown (it still shows the old numbers); tpl.paper:true adds 'Draw it on paper if it helps.'
+    if (t.fig) v.svg = fill(t.fig, all);
+    else if (t.figs) v.svg = t.figs[Object.keys(t.vars).map(function (n) { return env[n]; }).join('|')] || '';
+    v.paper = !!t.paper;
     if (t.answers) { v.type = 'fields'; v.frame = fill(t.frame, all, Object.keys(t.answers)); v.fields = Object.keys(t.answers).map(function (k) { return { id: k, answer: calc(t.answers[k], all) }; }); all.ans = v.fields.map(function (f) { return f.answer; }).join(', '); }
     else { v.type = 'number'; v.answer = calc(t.answer, all); all.ans = v.answer; }
     v.steps = t.steps.map(function (s) { return fill(s, all); });
@@ -218,8 +240,8 @@
   var SYM = { done: '●', open: '○', right: '✓', wrong: '✗', blank: '–', self: '✎' };
   // Short, distinct labels for the question buttons, derived from the printed number (it.no); a lesson may set item.label to override. 'Investigation 2' -> 'Inv 2',
   // 'Think harder 3 (why)' -> 'T3', 'Go further 6' -> 'G6', '1(c) explain' -> '1(c)'. Two questions with the same label get a suffix: '3(d)-a', '3(d)-b'.
-  var PREF = [[/^(?:investigation|inv)\b\.?\s*/i, 'Inv', ' '], [/^think harder\b\s*/i, 'T', ''], [/^go further\b\s*/i, 'G', ''], [/^exit slip\b\s*/i, 'Exit', ' '], [/^take-home\b\s*/i, 'Home', ' '], [/^make up your own\b\s*/i, 'Make', ' '], [/^extra\b\s*/i, 'Extra', ' ']];
-  var CORE = /^((?:[A-Za-z]?\d+|[A-Z](?![A-Za-z]))\s?(?:\([a-z]\d?\)|\(\d{1,3}\))?|\([a-z]\d?\))/, LBL = { lab: [], dup: [] };
+  var PREF = [[/^(?:investigation|inv)\b\.?\s*/i, 'Inv', ' '], [/^think harder\b\s*/i, 'T', ''], [/^go further\b\s*/i, 'G', ''], [/^exit slip\b\s*/i, 'Exit', ' '], [/^take-home\b\s*/i, 'TH', ' '], [/^make up your own\b\s*/i, 'Make', ' '], [/^extra\b\s*/i, 'Extra', ' ']];
+  var CORE = /^((?:[A-Za-z]?\d+|[A-Z](?![A-Za-z]))\s?(?:\([a-z]\d?\)|\(\d{1,3}\))?|\([a-z]\d?\))/, LBL = { lab: [], dup: [], name: [] };
   function shortLabel(it, i) {
     if (it.label) return String(it.label);
     var no = String(it.no == null || String(it.no).trim() === '' ? i + 1 : it.no).trim(), pre = '', sep = '', rest = no, m, k, core = '';
@@ -229,11 +251,24 @@
     if (pre) return pre + (core ? sep + core : '');
     return core || no.split(/\s+/)[0].slice(0, 8);
   }
-  function labelsAll() {
-    var base = L.items.map(shortLabel), cnt = {}, seen = {};
-    base.forEach(function (b) { cnt[b] = (cnt[b] || 0) + 1; });
-    return { lab: base.map(function (b) { if (cnt[b] < 2) return b; seen[b] = (seen[b] || 0) + 1; return b + '-' + (seen[b] <= 26 ? String.fromCharCode(96 + seen[b]) : seen[b]); }), dup: base.map(function (b) { return cnt[b] > 1; }) };
+  // A derived or authored label that is long or cryptic ('Inv 8c4 yes?', 'G5 any no.?') is shown as its number only ('Inv 8c', 'G5'); the descriptive part stays in the accessible name.
+  var NUMLBL = /^((?:Inv|Exit|Extra|Make|TH|T|G)\s?)?([A-Za-z]?\d+[a-z]?(?:\s?\([a-z]\d?\))?|\([a-z]\d?\))/;
+  function visLabel(b) {
+    if (!(/\?/.test(b) || /\d[a-z]\d/.test(b) || b.length > 12)) return b;
+    var m = NUMLBL.exec(b); if (!m) return b;
+    var core = (m[1] || '') + m[2]; return core.length >= 2 && core.length < b.length ? core : b;
   }
+  function labelsAll() {
+    var full = L.items.map(shortLabel), base = full.map(visLabel), cnt = {}, seen = {};
+    base.forEach(function (b) { cnt[b] = (cnt[b] || 0) + 1; });
+    var lab = base.map(function (b) { if (cnt[b] < 2) return b; seen[b] = (seen[b] || 0) + 1; return b + '-' + (seen[b] <= 26 ? String.fromCharCode(96 + seen[b]) : seen[b]); });
+    // accessible name = the visible text first (label in name), then the printed question number and the descriptive part, so no two buttons share a name
+    var names = lab.map(function (l, i) { var it = L.items[i], no = String(it.no == null || String(it.no).trim() === '' ? i + 1 : it.no).trim(); return l + ', question ' + no + (full[i] !== base[i] ? ' (' + full[i] + ')' : ''); });
+    var nc = {}; names.forEach(function (x) { nc[x] = (nc[x] || 0) + 1; });
+    return { lab: lab, dup: base.map(function (b) { return cnt[b] > 1; }), name: names.map(function (x, i) { return nc[x] > 1 ? x + ' (number ' + (i + 1) + ')' : x; }) };
+  }
+  // 'Take-home. Take-home (if you have time): ...' -> 'Take-home (if you have time): ...'; 'Make up your own. Make up your own: ...' -> 'Make up your own: ...' (the card title repeated by the question text)
+  function dedupeTitle(q) { var m = /^(.{3,40}?)\.\s+(\1)(?![A-Za-z0-9])/i.exec(str(q)); return m ? q.slice(m[1].length + 1).replace(/^\s+/, '') : q; }
   function say(t) { var a = $('announce'); if (a) a.textContent = t; }
   function focusTo(sel) { var e = sel && document.querySelector(sel); if (e) { try { e.focus(); } catch (x) {} } }
   function nav() {
@@ -244,7 +279,7 @@
       var g = h('div', { class: 'ng', role: 'group', 'aria-label': t[1] }, [h('span', { class: 'nt', text: t[1] })]);
       its.forEach(function (p) {
         var st = status(p[0], p[1]);
-        g.appendChild(h('button', { type: 'button', class: 'nb ' + st, 'data-i': String(p[1]), 'aria-current': String(p[1] === cur), 'aria-label': 'Question ' + (p[0].no || (p[1] + 1)) + (LBL.dup[p[1]] ? ' (button ' + LBL.lab[p[1]] + ')' : '') + ', ' + MARK[st], title: MARK[st], on: { click: function () { cur = p[1]; ask = false; render('.q'); say('Question ' + (p[0].no || (p[1] + 1)) + ' of ' + L.items.length); } } }, [h('b', { text: LBL.lab[p[1]] }), h('i', { text: SYM[st], 'aria-hidden': 'true' })]));
+        g.appendChild(h('button', { type: 'button', class: 'nb ' + st, 'data-i': String(p[1]), 'aria-current': String(p[1] === cur), 'aria-label': LBL.name[p[1]] + ', ' + MARK[st], title: MARK[st], on: { click: function () { cur = p[1]; ask = false; render('.q'); say('Question ' + (p[0].no || (p[1] + 1)) + ' of ' + L.items.length); } } }, [h('b', { text: LBL.lab[p[1]] }), h('i', { text: SYM[st], 'aria-hidden': 'true' })]));
       });
       n.appendChild(g);
     });
@@ -315,7 +350,7 @@
     var w = h('div', { class: 'sim' }), st = sim[it.id];
     w.appendChild(h('button', { type: 'button', class: 'act quiet', text: st ? 'Try another similar one' : 'Try a similar one', on: { click: function () { sim[it.id] = { v: variantOf(it), done: false }; render(); document.getElementById('simq') && document.getElementById('simq').scrollIntoView({ block: 'nearest' }); } } }));
     if (st) {
-      var v = st.v, p = h('div', { class: 'simbox', id: 'simq' }, [h('p', { class: 'q', text: v.q })]), row = h('div', { class: 'row' }), inputs = [];
+      var v = st.v, vf = v.svg ? fig({ svg: v.svg }) : null, p = h('div', { class: 'simbox', id: 'simq' }, [h('p', { class: 'q', text: v.q }), vf, v.paper && !vf ? h('p', { class: 'sub', id: 'simpaper', text: 'Draw it on paper if it helps.' }) : null]), row = h('div', { class: 'row' }), inputs = [];
       if (v.type === 'fields') v.frame.split(/(\{\w+\})/).forEach(function (part) { var m = /^\{(\w+)\}$/.exec(part); if (m && v.fields.some(function (f) { return f.id === m[1]; })) { var i2 = h('input', { type: 'text', inputmode: negAns(v) ? 'text' : 'numeric', autocomplete: 'off', 'data-sf': m[1], 'aria-label': 'Box in the similar question', style: 'width:5rem;text-align:center' }); inputs.push(i2); row.appendChild(i2); } else if (part) row.appendChild(h('span', { class: 'fr', text: part })); });
       else { var i3 = h('input', { type: 'text', inputmode: negAns(v) ? 'text' : 'numeric', autocomplete: 'off', 'data-sf': 'n', 'aria-label': 'Your answer to the similar question' }); inputs.push(i3); row.appendChild(i3); }
       p.appendChild(row);
@@ -351,7 +386,7 @@
     var it = L.items[cur], card = $('card'); card.textContent = '';
     var locked = S.sub;
     card.appendChild(h('p', { class: 'q', tabindex: '-1', text: it.q }));
-    var f = fig(it); if (f) card.appendChild(f);
+    var f = fig(it); if (f && !(S.sub && sim[it.id] && it.tpl)) card.appendChild(f);   // while a similar question is shown, the first question's picture (old numbers) is hidden
     if (it.type === 'selfcheck' && it.paper) card.appendChild(h('p', { class: 'fb plain', id: 'paper', text: 'Do this on paper, then check your drawing against the answer shown on screen.' }));
     if (it.type === 'set') card.appendChild(h('p', { class: 'sub', style: 'margin:0 0 .5rem', text: 'Type every answer, with a comma between. Use commas between numbers.' }));
     card.appendChild(control(it, locked));
@@ -450,8 +485,11 @@
     if (!document.querySelector('.skip')) document.body.insertBefore(h('a', { class: 'skip', href: '#card', text: 'Skip to the question', on: { click: function (e) { e.preventDefault(); focusTo('#card .q'); } } }), document.body.firstChild);
   }
   // the privacy line in the page footer must be true for the mode the page is in: sending off = on this device only; sending on = sent to the tutor
+  // The wording lives in ONE place: window.MI_FOOT = {off: '...', on: '...'} (the holiday builder, build_holiday.py, writes it); the defaults below are for pages that set nothing.
+  // Any change to this wording needs the owner's (and a lawyer's) sign-off before go-live: see practice/holiday/README.md.
+  var FOOT = { off: 'Your answers stay on this device.', on: 'Your answers, and what you write in the explanation boxes, are sent to your tutor so they can help you.' };
   function footer() {
-    var f = document.querySelector('.foot'), t = syncOn() ? 'Your answers, and what you write in the explanation boxes, are sent to your tutor so they can help you.' : 'Your answers stay on this device.';
+    var cf = (typeof window.MI_FOOT === 'object' && window.MI_FOOT) || {}, f = document.querySelector('.foot'), t = syncOn() ? (cf.on || FOOT.on) : (cf.off || FOOT.off);
     if (!f) return;
     var sp = $('footpriv');
     if (sp) sp.textContent = t;
@@ -465,7 +503,7 @@
     if (syncOn() && !CFG.version && window.crypto && crypto.subtle) vp = crypto.subtle.digest('SHA-256', new TextEncoder().encode(txt)).then(function (b) { return Array.prototype.map.call(new Uint8Array(b), function (v) { return ('0' + v.toString(16)).slice(-2); }).join('').slice(0, 8); }, function () { return ''; });
     return vp.then(function (v) { VER = v; return d; });
   }).then(function (d) {
-    L = d; LBL = labelsAll(); document.title = 'Practice: ' + L.title + ' | Math Inquirers';
+    L = d; L.items.forEach(function (it) { it.q = dedupeTitle(it.q); }); LBL = labelsAll(); document.title = 'Practice: ' + L.title + ' | Math Inquirers';
     $('title').textContent = L.title + ' practice'; $('sub').textContent = 'Level ' + L.level + ' · ' + (L.unit_label || 'Lesson ' + L.lesson) + ' · ' + L.topic;
     footer(); render();
     if (S.sub && S.sent < S.rev) send();   // a tab closed before the send finished: try again when the page is opened again

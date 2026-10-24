@@ -32,6 +32,8 @@ strings that must occur in the workbook source), plus by type
     text answers: three optional flags, all off unless stated
               poly='n' | False   the typed rule is compared with the accepted writings as a POLYNOMIAL in n ('=' chains allowed: '(n+3)x4 = 4n+12', 'OUT = 4(n+3)'; (2n+6)/2 equals n+3).
                                  DEFAULT: on automatically when EVERY accepted writing is an expression in n and they are all the same polynomial (so every algebra-rule item is on); poly=False turns it off.
+              accept_prefix=False | ['so it is']  (default: on) 'It is 12' / 'It will be Wednesday.' / 'The answer is 12' are read as the answer after the lead-in; False turns it off, a list adds lead-ins.
+                                 The shared matcher also reads 'a is equal to b' as 'a = b', 'A and B and D' as 'A, B, D' (single letters, numbers or fractions only) and, with equiv_frac, '1 out of 4' as 1/4.
               equiv_frac=True | False  every fraction in a typed list may be written in any equal form, in the same order ('7/12, 8/12, 10/12' for '7/12, 2/3, 5/6').
                                  DEFAULT: on when the hint says "same bottom number" / "same denominator" and the accepted writings are fractions; otherwise off (only the printed forms).
     number / fields: words=True  number words ('five', 'twenty-five', 'minus five') are also accepted. DEFAULT off: words are wrong unless an item declares it.
@@ -41,7 +43,7 @@ The build stops, and writes nothing, unless: every checker equals the printed an
 combination equals its oracle.  The runner is the one shared worksheet runner practice/ext/public/sheet.js (free choice of question, skip, submit,
 marking, worked solutions after submit, autosave in the browser; submission to the server only when window.MI_SUBMIT is set).  No timers, scores or streaks.
 """
-import importlib.util, json, os, re, shutil, sys
+import importlib.util, itertools, json, os, re, shutil, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
@@ -108,6 +110,14 @@ def same(it, got):
     raise Fail(f'{it["id"]}: unknown type {t}')
 
 
+# ---------------------------------------------------------------- footer wording: THE ONE PLACE (go-live switch)
+# Sending answers to the tutor is OFF unless the builder is run with MI_SUBMIT_ENDPOINT=<url> (SUBMIT-TO-TUTOR go-live).  The two privacy sentences below are written into every page
+# (window.MI_FOOT) and sheet.js shows the one that is true: FOOT_OFF while nothing is sent, FOOT_ON when the child is signed in and the endpoint is set (then the 'I checked / I got it /
+# Not yet' ticks show too).  THE WORDING NEEDS THE OWNER'S (AND A LAWYER'S) SIGN-OFF BEFORE GO-LIVE: see practice/holiday/README.md.
+FOOT_OFF = 'Your answers stay on this device.'
+FOOT_ON = 'Your answers, and what you write in the explanation boxes, are sent to your tutor so they can help you.'
+
+
 MAKEUP = re.compile(r'make up|make your own|invent|design your|create your|your own (riddle|pattern|number|puzzle|question|problem|rule|example|sentence|story)', re.I)
 
 
@@ -140,6 +150,11 @@ def text_flags(i, it, out):
             raise Fail(f'{i}: poly={poly!r} but the accepted writings are not all the same polynomial in {poly}: {acc}')
     if poly:
         out['poly'] = poly
+    ap = it.get('accept_prefix')      # lead-ins such as 'It is' / 'It will be' / 'The answer is' are ignored in a text answer; accept_prefix=False turns that off, a list adds more lead-ins
+    if ap is False or (isinstance(ap, (list, tuple)) and ap and all(isinstance(x, str) and x.strip() for x in ap)):
+        out['accept_prefix'] = ap if ap is False else [str(x) for x in ap]
+    elif ap not in (None, True):
+        raise Fail(f'{i}: accept_prefix must be False or a list of lead-in strings')
     eq = it.get('equiv_frac')
     parsable = all(hlib.frac_tokens(a)[0] and all(d > 0 for _, d in hlib.frac_tokens(a)[0]) for a in acc)
     if eq is None:
@@ -259,7 +274,31 @@ def mirror_report(srcitems, items, cp):
     return exact, reword
 
 
-def build(key, n):
+def attach_variant_figs(items, variants):
+    """A variant family may bring its own figure so the picture under 'Try a similar one' matches the new numbers.  In the lesson file either
+         VARIANTS[id]['tpl']['fig'] = '<svg ...>{n} ...</svg>'   an SVG template with the same {name} places as the question (variables and derived values), or
+         VARIANTS[id]['fig'] = function(env) -> svg text          drawn for every combination here at build time (at most 600 combinations; stored as tpl['figs']).
+       Without either, sheet.js hides the first question's picture while the variant is shown; VARIANTS[id]['tpl']['paper'] = True adds 'Draw it on paper if it helps.'"""
+    by = {i['id']: i for i in items}
+    for k, v in variants.items():
+        it, tp = by[k], dict(by[k]['tpl'])
+        if v.get('fig') is not None:
+            f = v['fig']
+            if isinstance(f, str):
+                tp['fig'] = f
+            else:
+                names = list(tp['vars'])
+                combos = list(itertools.product(*[tp['vars'][x] for x in names]))
+                if len(combos) > 600:
+                    raise Fail(f'{k}: fig() would be stored for {len(combos)} combinations (at most 600): give tpl["fig"] as an SVG template instead')
+                tp['figs'] = {'|'.join(str(c) for c in combo): hlib.lift_svg(f(dict(zip(names, combo)))) for combo in combos}
+        if tp.get('fig'):
+            tp['fig'] = hlib.lift_svg(tp['fig'])
+        it['tpl'] = tp
+
+
+def build(key, n, dist=None, endpoint=None):
+    """dist / endpoint are for tests; normally dist = <lesson>/dist and the endpoint is the MI_SUBMIT_ENDPOINT environment variable."""
     m = load_lesson(key, n)
     meta = m.META
     srcitems = m.ITEMS
@@ -276,10 +315,11 @@ def build(key, n):
     cp = corpus(meta['sources'])
     exact, reword = mirror_report(srcitems, items, cp)
     report = B.attach_variants(items, getattr(m, 'VARIANTS', {}))
+    attach_variant_figs(items, getattr(m, 'VARIANTS', {}))
     lk = f'{key}l{n:02d}'
     data = dict(runner=2, title=meta['title'], level=meta['level'], lesson=n, unit_label=f'Holiday lesson {n}', topic=meta['topic'],
                 source=meta['sources'], items=items)
-    dist = os.path.join(HERE, key, f'{n:02d}', 'dist')
+    dist = dist or os.path.join(HERE, key, f'{n:02d}', 'dist')
     shutil.rmtree(dist, ignore_errors=True)
     os.makedirs(os.path.join(dist, 'data'))
     json.dump(data, open(os.path.join(dist, 'data', lk + '.json'), 'w', encoding='utf-8'), ensure_ascii=False)
@@ -296,14 +336,14 @@ def build(key, n):
              f'({e(meta["workbook_title"])}). You can do them here instead of writing on the page.</p>' +
              ''.join(f'<p>{e(x)}</p>' for x in meta.get('intro', [])) + '</details>')
     # sending to the tutor is OFF unless the builder is run with MI_SUBMIT_ENDPOINT=<url>; then sheet.js shows the 'I checked / I got it / not yet' ticks and the footer says the answers are sent
-    ep = os.environ.get('MI_SUBMIT_ENDPOINT', '').strip()
+    ep = (os.environ.get('MI_SUBMIT_ENDPOINT', '') if endpoint is None else endpoint).strip()
     submit_cfg = f'window.MI_SUBMIT={json.dumps({"endpoint": ep, "unit": "hol-" + lk})};' if ep else ''
     body = ('<body><main><h1 id="title">Practice</h1><p class="sub" id="sub"></p>' + learn +
             '<p class="sub" id="count" aria-live="polite"></p><nav class="nav" id="nav" aria-label="Choose a question"></nav>'
             '<section class="card" id="card"></section><div id="bar" class="barwrap"></div>'
             '<p class="foot">There is no score and no timer. Open any question in any order, skip what you like, then submit. '
-            '<span id="footpriv">Your answers stay on this device.</span> A grown-up can read along.</p></main>'
-            f'<script>window.MI_LESSON={json.dumps(lk)};{submit_cfg}</script><script src="sheet.js"></script></body></html>')
+            f'<span id="footpriv">{B.html.escape(FOOT_OFF)}</span> A grown-up can read along.</p></main>'
+            f'<script>window.MI_LESSON={json.dumps(lk)};window.MI_FOOT={json.dumps({"off": FOOT_OFF, "on": FOOT_ON})};{submit_cfg}</script><script src="sheet.js"></script></body></html>')
     open(os.path.join(dist, 'index.html'), 'w', encoding='utf-8').write(head + body)
     fonts = os.path.join(ROOT, 'website', 'dist')
     if os.path.isdir(os.path.join(fonts, 'fonts')):

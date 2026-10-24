@@ -460,6 +460,7 @@ def _turn90(v, axis_dir, sign):
 
 @brute
 def b_net_opposite(cells, ask):
+    cells = {n: tuple(c) for n, c in cells.items()}
     names = list(cells)
     pos = {c: n for n, c in cells.items()}
     # every cell is a unit square; keep its four corners in 3D and its centre
@@ -646,7 +647,7 @@ def b_triangle_sides(first, ask, side):
     for p in itertools.permutations(nums):
         c1, c2, c3, m12, m23, m13 = p
         if c1 + m12 + c2 == side and c2 + m23 + c3 == side and c3 + m13 + c1 == side:
-            seen.add(max(c1, c2, c3) if ask == 'largest_corner' else min(m12, m23, m13))
+            seen.add(c1 + c2 + c3 if ask == 'corner_sum' else (max(c1, c2, c3) if ask == 'largest_corner' else min(m12, m23, m13)))
     return seen or {BAD}
 
 

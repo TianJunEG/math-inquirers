@@ -73,7 +73,7 @@ import subprocess
 _RULES = [('4n+12', ['(n+3)\u00d74', '4n+12', '4(n+3)', '4*(n+3)', '4x(n+3)', '(n+3)4', '12+4n', '(8n+24)\u00f72', '4n+16\u22124', '(n+3)\u00d74 = 4n+12', 'OUT = 4(n+3)', 'out=4n+12', '4n+12=OUT', '4n+12.', '  4 n + 12 ', '2(2n+6)',
                       '4n-12', 'n+3\u00d74', '(n+3)+4', '4n+3', '4(n+4)', '(n+3)\u00d75', '3n+12', '7n', '4n', '12', 'n+3 = 4n+12', '4n+12=', 'OUT', '4n+12 n', '4n 12', '4n\u00b2+12', 'fourn+12', '4n+12/0', '(4n+12', 'n^9', '(n+1)'*12]),
            ('n+3', ['(2n+6)\u00f72', '(2n+6)/2', '2n+6\u00f72', 'n+6', '3+n', 'n+3', '(n+3)']), ('0.5n', ['n/2', 'n\u00f72', '0.5n', '.5n', '-0.5n', '2n/4', 'n/3']), ('n^2+2n+1', ['(n+1)\u00b2', '(n+1)^2', 'n\u00d7n+2n+1', 'n\u00b2+1', 'n^2+2n+1', '(n+1)(n+1)'])]
-_FRACS = [('7/12, 2/3, 5/6', ['7/12, 8/12, 10/12', '7/12 8/12 10/12', '14/24,2/3,5/6', '8/12, 7/12, 10/12', '7/12, 8/12', '7/12, 8/12, 10/12, 1', '7/0, 8/12, 10/12', '0.5, 2/3, 5/6', '7/12, 2/3, 5/6.']),
+_FRACS = [('7/12, 2/3, 5/6', ['7/12, 8/12, 10/12', '7/12 8/12 10/12', '14/24,2/3,5/6', '8/12, 7/12, 10/12', '7/12, 8/12', '7/12, 8/12, 10/12, 1', '7/0, 8/12, 10/12', '0.5, 2/3, 5/6', '7/12, 2/3, 5/6.', '7 out of 12, 2 out of 3, 5 out of 6', '7 out of 12, 8/12, 10/12', '1 out of 4']),
           ('1/4 < 1/2 < 3/4', ['2/8 < 4/8 < 6/8', '2/8 > 4/8 > 6/8', '2/8, 4/8, 6/8']), ('1 1/2', ['3/2', '6/4', '11/2', '1 1/2', '1 2/4'])]
 _cases = [dict(rec=dict(marking_mode='auto', type='text', key=[k], poly='n'), v=v, py=H.hlib.poly_ok([k], v, 'n')) for k, vs in _RULES for v in vs]
 _cases += [dict(rec=dict(marking_mode='auto', type='text', key=[k], equiv_frac=True), v=v, py=H.hlib.frac_list_ok([k], v)) for k, vs in _FRACS for v in vs]
@@ -121,6 +121,12 @@ def enter(page, it, wrong=False, alt=0):
             page.locator('#ans textarea').fill('my own words')
 
 
+def dedupe_title(q):
+    """The renderer's rule: 'Take-home. Take-home (if ...' shows as 'Take-home (if ...'."""
+    m = re.match(r'(.{3,40}?)\.\s+(?=\1(?![A-Za-z0-9]))', q, re.I)
+    return q[m.end():] if m else q
+
+
 def goto(page, i):
     page.locator(f'#nav button[data-i="{i}"]').click()
 
@@ -165,7 +171,7 @@ with sync_playwright() as pw:
     page.reload(); page.wait_for_selector('#card .q')
     for i in reversed(range(N)):
         goto(page, i)
-        if page.locator('#card .q').inner_text() != items[i]['q']: fail(f'{items[i]["id"]}: shown question differs from data')
+        if page.locator('#card .q').inner_text() != dedupe_title(items[i]['q']): fail(f'{items[i]["id"]}: shown question differs from data')
         if page.locator('#sol').count(): fail(f'{items[i]["id"]}: solution visible before submit')
         if items[i].get('paper'):
             if 'Do this on paper, then check your drawing against the answer shown on screen' not in page.locator('#paper').inner_text(): fail(f'{items[i]["id"]}: no paper note')
@@ -253,6 +259,20 @@ with sync_playwright() as pw:
             if page.locator('#ans').evaluate("e => e.tagName") != 'FIELDSET' or not page.locator('#ans legend').inner_text().strip(): fail(f'{it["id"]}: radio group has no fieldset/legend')
     dup = sorted({l for l in labs if labs.count(l) > 1})
     if dup: fail(f'nav labels shared by two questions (the runner must add a/b): {dup}')
+    # accessible names: unique, begin with the visible label (label in name, so 'why' / 'Ali' suffixes are in it), visible text readable, glyph at least 12 px, no 'Home' for take-home
+    names = [page.locator(f'#nav button[data-i="{i}"]').get_attribute('aria-label') for i in range(N)]
+    dn = sorted({x for x in names if names.count(x) > 1})
+    if dn: fail(f'accessible names shared by two nav buttons: {dn}')
+    for i, (lab, nm) in enumerate(zip(labs, names)):
+        if not nm.startswith(lab): fail(f'{items[i]["id"]}: accessible name {nm!r} does not start with the visible label {lab!r}')
+        if '?' in lab or lab == 'Home' or re.search(r'\d[a-z]\d', lab): fail(f'{items[i]["id"]}: nav label {lab!r} is cryptic (a number only, with the description in the accessible name)')
+    small = page.evaluate("[...document.querySelectorAll('#nav .nb i')].filter(e => parseFloat(getComputedStyle(e).fontSize) < 12).length")
+    if small: fail(f'{small} nav status glyphs are under 12 px')
+    for i, it in enumerate(items):
+        if re.search(r'(?i)^take-home\b', it.get('no') or '') and labs[i][:2] != 'TH': fail(f'{it["id"]}: take-home label {labs[i]!r} should start with TH')
+        shown = dedupe_title(it['q'])
+        mt = re.match(r'(.{3,40}?)\.\s+\1', shown, re.I)
+        if mt: fail(f'{it["id"]}: card title repeats itself: {shown[:60]!r}')
     foot = page.locator('.foot').inner_text()
     if 'nothing is sent anywhere' in foot or 'Your answers stay on this device' not in foot: fail('footer wording (sending off): ' + foot)
     if page.locator('meta[name=robots][content*=noindex]').count() != 1: fail('no noindex meta')
@@ -305,6 +325,126 @@ with sync_playwright() as pw:
             if not page.get_by_role('button', name=lbl).count(): fail(f'sending on: no "{lbl}" tick')
     ctx.close()
     print('2c. focus moves to the question / hint / confirm / summary; skip link; question numbers on the buttons; fieldset legends; input modes; helper line; footer for both modes; noindex; placeholder contrast')
+
+    # ---- 2d: shared-runner fixes of the week 3 audits, on a small synthetic lesson (so every level gets the same checks): doubled titles, the picture of a variant, unit tails,
+    #          natural wordings (with negatives), nav names; then the go-live switch (footer + ticks with an endpoint set), all in a scratch copy of this lesson's dist
+    import shutil, tempfile
+    scratch = tempfile.mkdtemp(prefix='hol-syn-', dir='/dev/shm' if os.path.isdir('/dev/shm') else None)
+    sd = os.path.join(scratch, 'dist'); shutil.copytree(DIST, sd)
+    FIG = '<svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="x"><text x="5" y="25" font-size="14">PIC {n}</text></svg>'
+    def syn(i, tier, q, typ, ans, **kw):
+        d = dict(id=i, tier=tier, type=typ, no=i, q=q, hint='Think.', steps=['Because.'], slips=[], tags={}, src=[], marking_mode='auto', answer=ans)
+        d.update(kw); return d
+    synitems = [
+        syn('S1', 'core', 'S1. Take-home. Take-home (if you have time): do it.', 'number', 27),
+        syn('S2', 'core', 'S2. Make up your own. Make up your own: a riddle.', 'number', 35),
+        syn('S3', 'core', 'S3. How many litres?', 'number', 27),
+        syn('S4', 'core', 'S4. How many cents change?', 'number', 35),
+        syn('S5', 'core', 'S5. No unit please.', 'number', 35, unit=False),
+        syn('S6', 'core', 'S6. Angle AOC?', 'number', 90),
+        syn('S7', 'core', 'S7. Which day?', 'text', ['Wednesday', 'Wed']),
+        syn('S8', 'core', 'S8. Which shapes?', 'text', ['A, B, D']),
+        syn('S9', 'core', 'S9. What fraction?', 'text', ['1/4'], equiv_frac=True),
+        syn('S10', 'core', 'S10. Compare.', 'text', ['a = b']),
+        syn('S11', 'core', 'S11. Day, no lead-in.', 'text', ['Wednesday'], accept_prefix=False),
+        syn('S12', 'core', 'S12. Variant with picture.', 'number', 7, svg='<svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="x"><text x="5" y="25" font-size="14">OLD 7</text></svg>',
+            tpl=dict(vars=dict(n=[4, 5]), q='There are {n} sheep.', hint='Count.', answer='n', steps=['{n}.'], fig=FIG)),
+        syn('S13', 'core', 'S13. Variant without a picture.', 'number', 7, svg='<svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="x"><text x="5" y="25" font-size="14">OLD 7</text></svg>',
+            tpl=dict(vars=dict(n=[4, 5]), q='There are {n} cows.', hint='Count.', answer='n', steps=['{n}.'], paper=True)),
+        syn('S14', 'invest', 'Inv 8c4 yes?', 'number', 1, label='Inv 8c4 yes?'), syn('S15', 'invest', 'Inv 8c2', 'number', 1, label='Inv 8c2 yes?'),
+        syn('S16', 'challenge', 'G5', 'number', 1, label='G5 any no.?'), syn('S17', 'core', 'S17. A why.', 'selfcheck', None, label='2(b) why', open=True, steps=['x']),
+        syn('S18', 'core', 'S18. A why.', 'selfcheck', None, label='2(b) Ali', open=True, steps=['x']),
+    ]
+    for it_ in synitems:
+        if it_['type'] == 'selfcheck': it_.update(paper=False, paper_only=False, marking_mode='self', open=True); it_.pop('answer')
+    synitems[0]['no'] = 'Take-home'; synitems[1]['no'] = 'Make up your own'
+    synitems[0]['q'] = 'Take-home. Take-home (if you have time): do it.'; synitems[1]['q'] = 'Make up your own. Make up your own: a riddle.'
+    synitems[13]['no'] = 'Investigation 8(c)4'; synitems[14]['no'] = 'Investigation 8(c)2'; synitems[15]['no'] = 'Go further 5'
+    synitems[16]['no'] = '2(b)'; synitems[17]['no'] = '2(b)'
+    d2 = json.loads(json.dumps(data)); d2['items'] = synitems
+    json.dump(d2, open(os.path.join(sd, 'data', lk + '.json'), 'w', encoding='utf-8'), ensure_ascii=False)
+    srv2 = http.server.ThreadingHTTPServer(('127.0.0.1', 0), functools.partial(Q, directory=sd))
+    threading.Thread(target=srv2.serve_forever, daemon=True).start()
+    URL2 = f'http://127.0.0.1:{srv2.server_address[1]}/index.html'
+    ctx = br.new_context(viewport={'width': 390, 'height': 900}); pg = ctx.new_page(); pg.goto(URL2); pg.wait_for_selector('#card .q')
+    def synq(k): pg.locator(f'#nav button[data-i="{k}"]').click(); return pg.locator('#card .q').inner_text()
+    if synq(0).startswith('Take-home. Take-home') or not synq(0).startswith('Take-home (if you have time)'): fail('doubled title Take-home not removed: ' + synq(0))
+    if synq(1) != 'Make up your own: a riddle.': fail('doubled title Make up your own not removed: ' + synq(1))
+    labs2 = [pg.locator(f'#nav button[data-i="{k}"] b').inner_text() for k in range(len(synitems))]
+    names2 = [pg.locator(f'#nav button[data-i="{k}"]').get_attribute('aria-label') for k in range(len(synitems))]
+    if labs2[0] != 'TH' and not labs2[0].startswith('TH'): fail(f'take-home label {labs2[0]!r}')
+    if labs2[13:16] != ['Inv 8c-a', 'Inv 8c-b', 'G5']: fail(f'cryptic labels not shortened to the number: {labs2[13:16]}')
+    if len(set(names2)) != len(names2): fail(f'synthetic accessible names are not unique: {names2}')
+    if not all(nm.startswith(lb) for lb, nm in zip(labs2, names2)): fail('an accessible name does not start with its visible label')
+    if 'yes?' not in names2[13] or 'any no.?' not in names2[15]: fail('descriptive part missing from the accessible name: ' + str(names2[13:16]))
+    if labs2[16] == labs2[17] or 'why' not in names2[16] or 'Ali' not in names2[17]: fail(f'2(b) why / 2(b) Ali: {labs2[16:18]} {names2[16:18]}')
+    # unit tails and natural wordings through the page, right and wrong
+    def typed(k, txt):
+        synq(k); pg.locator('#ans input[type=text]').fill(txt)
+    CASES = [(2, ['27 \u2113 of water', '27 liters of water', '27 litres', '27 l of water'], ['27 liters of water in the tank', '27 liters of water 3', '72 liters of water']),
+             (3, ['35 cents change', '35 cents left', '35\u00a2 change'], ['35 cents change from the shop today', '35c change', '$0.35', '0.35', '35 5 cents']),
+             (4, ['35'], ['35 cents change', '35 cents left', '35 coins', '35\u00a2']),
+             (5, ['\u2220AOC = 90\u00b0', 'angle AOC is 90', '90'], ['\u2220AOC = 91\u00b0', 'AOC = 90\u00b0', '\u2220 = 90']),
+             (6, ['It will be Wednesday', 'It will be Wednesday.', 'it is wed', 'The answer is Wednesday'], ['It is not Wednesday', 'It will be Thursday', 'It will beWednesday']),
+             (7, ['A and B and D', 'A, B and D', 'A,B,D', 'a & b & d'], ['A and B', 'A and B and C', 'B and A and D', 'A and B and D and E']),
+             (8, ['1 out of 4', '2 out of 8', '1/4', 'It is 1 out of 4'], ['1 out of 5', '4 out of 1', '3 out of 4', '1 out of 0']),
+             (9, ['a is equal to b', 'a equals b', 'a = b'], ['a is not equal to b', 'a is equal to c', 'b is equal']),
+             (10, ['Wednesday'], ['It is Wednesday', 'It will be Wednesday'])]
+    # mark each wording through the page: submit one at a time by re-typing then reading the marker
+    def marked(k, txt):
+        typed(k, txt); pg.locator('#submit').click()
+        if pg.locator('#yes').count(): pg.locator('#yes').click()
+        c = cls(pg, k); pg.locator('#again').click(); return c
+    for k, good, badl in CASES:
+        for g in good:
+            if marked(k, g) != 'right': fail(f'wording {g!r} for synthetic item {k} should be marked right')
+        for b in badl:
+            if marked(k, b) != 'wrong': fail(f'wording {b!r} for synthetic item {k} should be marked wrong')
+    # a variant under the first picture: the old picture is hidden; the variant brings its own picture or says to draw it
+    pg.reload(); pg.wait_for_selector('#card .q')
+    pg.locator('#submit').click(); pg.locator('#yes').click()
+    for k, withfig in ((11, True), (12, False)):
+        synq(k)
+        if not pg.locator('#card .fig').count(): fail('the original picture is missing before the variant is asked for')
+        pg.get_by_role('button', name=re.compile('similar one')).click()
+        if pg.locator('#card > .fig').count(): fail(f'S{k + 1}: the original picture (old numbers) is still shown above the variant')
+        if withfig:
+            ft = pg.locator('#simq .fig svg text').text_content() if pg.locator('#simq .fig svg').count() else ''
+            m_ = re.search(r'There are (\d+) sheep', pg.locator('#simq .q').inner_text())
+            if not m_ or ft != f'PIC {m_.group(1)}': fail(f'variant picture {ft!r} does not match the variant question {pg.locator("#simq .q").inner_text()!r}')
+        else:
+            if pg.locator('#simq svg').count(): fail('a variant without a picture shows a picture')
+            if 'Draw it on paper' not in pg.locator('#simq').inner_text(): fail('tpl.paper: no "Draw it on paper" note')
+    pg.locator('#again').click(); synq(11)
+    if not pg.locator('#card > .fig').count(): fail('the original picture did not come back after Change my answers')
+    ctx.close()
+    # go-live: build with an endpoint -> the footer says answers are sent to the tutor and the I checked / I got it / Not yet ticks show (token present); without a token or endpoint they do not
+    ep_dist = os.path.join(scratch, 'ep'); H.build(key, n, dist=ep_dist, endpoint='http://127.0.0.1:9/hol-send/x')
+    html_ = open(os.path.join(ep_dist, 'index.html'), encoding='utf-8').read()
+    if 'MI_SUBMIT=' not in html_ or H.FOOT_ON not in html_ or H.FOOT_OFF not in html_: fail('the endpoint build does not carry MI_SUBMIT and both footer sentences')
+    off_html = open(os.path.join(DIST, 'index.html'), encoding='utf-8').read()
+    if 'MI_SUBMIT=' in off_html and not os.environ.get('MI_SUBMIT_ENDPOINT'): fail('the default build has sending switched on')
+    srv3 = http.server.ThreadingHTTPServer(('127.0.0.1', 0), functools.partial(Q, directory=ep_dist))
+    threading.Thread(target=srv3.serve_forever, daemon=True).start()
+    URL3 = f'http://127.0.0.1:{srv3.server_address[1]}/index.html'
+    sj = [k for k, x in enumerate(items) if x['type'] == 'selfcheck']
+    for tokenised in (False, True):
+        c3 = br.new_context(viewport={'width': 800, 'height': 900}); p3 = c3.new_page()
+        p3.route('**/hol-send/**', lambda r: r.fulfill(status=200, content_type='application/json', body='{"ok":true,"marks":{}}'))
+        if tokenised: p3.add_init_script("sessionStorage.setItem('mi-child', JSON.stringify({token: 't'.repeat(40)}))")
+        p3.goto(URL3); p3.wait_for_selector('#card .q')
+        ft = p3.locator('.foot').inner_text()
+        if tokenised and (H.FOOT_ON not in ft or 'stay on this device' in ft): fail('endpoint build, signed in: footer is ' + ft)
+        if not tokenised and (H.FOOT_OFF not in ft or 'sent to your tutor' in ft): fail('endpoint build, not signed in: footer is ' + ft)
+        p3.locator('#submit').click()
+        if p3.locator('#yes').count(): p3.locator('#yes').click()
+        if sj:
+            p3.locator(f'#nav button[data-i="{sj[0]}"]').click()
+            for lbl in ('I checked it', 'I got it', 'Not yet'):
+                if bool(p3.get_by_role('button', name=lbl).count()) != tokenised: fail(f'endpoint build (signed in={tokenised}): tick "{lbl}" shown={bool(p3.get_by_role("button", name=lbl).count())}')
+        c3.close()
+    srv2.shutdown(); srv3.shutdown(); shutil.rmtree(scratch, ignore_errors=True)
+    print('2d. doubled titles removed; cryptic nav labels shortened with the description in the accessible name (unique, label in name, TH, glyph >= 12 px); variant picture replaced or hidden; unit tails, angle names, lead-ins, "and" lists, "out of", "is equal to" right and wrong; the endpoint build switches the footer and the ticks')
 
     # ---- 3: wrong answers, skips, reload
     ctx, page = fresh(br)

@@ -394,7 +394,7 @@ def frac_tokens(s):
     """('7/12, 8/12 10/12') -> ([(7,12), (8,12), (10,12)], '') : the fractions in a typed list, and any other symbols left (such as '<'), spaces, commas and semicolons removed."""
     import unicodedata
     toks = []
-    txt = re.sub(r'\s*/\s*', '/', _MINUS.sub('-', unicodedata.normalize('NFKC', str(s))))
+    txt = re.sub(r'\s*/\s*', '/', re.sub(r'(\d+)\s+out\s+of\s+(\d+)', r'\1/\2', _MINUS.sub('-', unicodedata.normalize('NFKC', str(s))), flags=re.I))   # '1 out of 4' reads as 1/4
 
     def one(m):
         if m.group(2) is not None:

@@ -53,7 +53,7 @@ def weeks_days(mode, w=0, d=0, n=0):
         return n // 7, {'rest': n % 7}
     if mode == 'longer':         # w weeks d days against n days: how many days longer is the first
         tot = 7 * w + d
-        return tot - n, {'tot': tot}
+        return tot - n, {'tot': tot, 'wk': 7 * w}
     raise ValueError(mode)
 
 
@@ -68,7 +68,7 @@ def swaps(order):
 @kind
 def overlap_chain(ask, n=None, length=None, overlap=None, total=None):
     if ask == 'total':
-        return n * length - (n - 1) * overlap, {'step': length - overlap}
+        return n * length - (n - 1) * overlap, {'step': length - overlap, 'all': n * length, 'joins': n - 1, 'lost': (n - 1) * overlap}
     step = length - overlap
     assert (total - length) % step == 0
     return (total - length) // step + 1, {'step': step}
@@ -96,7 +96,7 @@ def checkerboard(rows, cols, ask):
     """Dark and light squares alternate and the top-left square is dark."""
     cells = rows * cols
     if ask == 'dark':
-        return (cells + 1) // 2, {'cells': cells}
+        return (cells + 1) // 2, {'cells': cells, 'next': cells + 1}
     if ask == 'light':
         return cells // 2, {'cells': cells}
     if ask == 'edge_dark':
@@ -110,15 +110,15 @@ def equal_marks(start, end, marks, k, ask):
     assert (end - start) % gaps == 0
     step = (end - start) // gaps
     if ask == 'step':
-        return step, {'gaps': gaps}
-    return start + (k - 1) * step, {'step': step, 'gaps': gaps}
+        return step, {'gaps': gaps, 'span': end - start}
+    return start + (k - 1) * step, {'step': step, 'gaps': gaps, 'span': end - start, 'km1': k - 1}
 
 
 @kind
 def sum_later(a, b, target):
     assert (target - a - b) % 2 == 0 and target > a + b
     yrs = (target - a - b) // 2
-    return yrs, {'now': a + b}
+    return yrs, {'now': a + b, 'gain': target - a - b}
 
 
 @kind
@@ -185,16 +185,17 @@ def schedule_breaks(start_h, start_m, parts, part_min, break_min, ask):
         return total, {'breaks': parts - 1, 'work': parts * part_min, 'rest': (parts - 1) * break_min}
     if ask == 'end24':
         t = start_h * 60 + start_m + total
-        return (t // 60 % 24) * 100 + t % 60, {'total': total, 'hm': '%d h %d min' % (total // 60, total % 60)}
+        return (t // 60 % 24) * 100 + t % 60, {'total': total, 'work': parts * part_min, 'rest': (parts - 1) * break_min, 'hm': '%d h %d min' % (total // 60, total % 60)}
     raise ValueError(ask)
 
 
 @kind
 def reverse_division(divisor, quotient, remainder, ask, add=0):
     num = divisor * quotient + remainder
+    ctx = {'prod': divisor * quotient, 'num': num, 'new': num + add}
     if ask == 'number':
-        return num, {'prod': divisor * quotient}
-    return (num + add) // divisor, {'num': num, 'new': num + add}
+        return num, ctx
+    return (num + add) // divisor, ctx
 
 
 @kind
@@ -292,6 +293,7 @@ def diagonal_squares(w, h):
 @kind
 def net_opposite(cells, ask):
     """cells = {'A': (col, row), ...}: a cube net.  Roll a cube over the net starting on the first cell; the face that lands on each cell is that cell's face."""
+    cells = {n: tuple(c) for n, c in cells.items()}
     names = list(cells)
     pos = {c: n for n, c in cells.items()}
     # orientation: (top, bottom, north, south, east, west) as face labels of a numbered cube 0..5
@@ -434,6 +436,8 @@ def triangle_sides(first, ask, side):
     corners = 3 * side - total
     low = sum(nums[:3])
     high = sum(nums[3:])
+    if ask == 'corner_sum':
+        return corners, {'total': total, 'csum': corners, 'sides': 3 * side}
     assert corners in (low, high), (corners, low, high)
     cs = nums[:3] if corners == low else nums[3:]
     mids = [x for x in nums if x not in cs]
@@ -453,7 +457,8 @@ def circle_out(n, k):
     """n children stand in a circle numbered 1..n; counting from child 1, every k-th child sits down; who is the last standing?"""
     kids = list(range(1, n + 1))
     i = 0
+    out = []
     while len(kids) > 1:
         i = (i + k - 1) % len(kids)
-        kids.pop(i)
-    return kids[0], {'n': n}
+        out.append(kids.pop(i))
+    return kids[0], {'n': n, 'out': _j(out)}

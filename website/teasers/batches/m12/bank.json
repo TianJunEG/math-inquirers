@@ -172,29 +172,24 @@
     "date": "12-04"
    },
    {
-    "id": "L1-coinsets",
+    "id": "L1-twodice",
     "level": 1,
-    "frame": "coinsets",
-    "kind": "coin_ways",
-    "topic": "Coins",
-    "sub": "coins.make_amount",
-    "family": "coins",
+    "frame": "twodice",
+    "kind": "dice_ways",
+    "topic": "Counting ways",
+    "sub": "counting_pairs.dice_sum_ways",
+    "family": "counting_pairs",
     "p": {
-     "target": 45,
-     "coins": [
-      5,
-      10,
-      20
-     ]
+     "sides": 6,
+     "total": 8,
+     "ordered": true
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "9",
-    "shown": "9 sets",
+    "ans": "5",
+    "shown": "5 ways",
     "units": [
-     "sets",
-     "set",
      "ways",
      "way"
     ],
@@ -202,17 +197,17 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "10",
-     "8",
-     "11",
+     "6",
+     "4",
      "7",
-     "18",
-     "19",
-     "90"
+     "3",
+     "10",
+     "15",
+     "50"
     ],
-    "q": "Zack pays exactly 45 cents using 5-cent, 10-cent and 20-cent coins. He may leave out a kind of coin if he likes. How many different sets of coins can he use?",
-    "hint": "Start with no 20-cent coins and see how many ways there are with 5-cent and 10-cent coins. Then try one 20-cent coin.",
-    "why": "With no 20-cent coin there are 5 ways, with one 20-cent coin there are 3 ways, and with two 20-cent coins there is 1 way. 5 + 3 + 1 = 9 sets.",
+    "q": "Mei rolls a red die and a blue die. The two numbers add up to 8. A red 2 and a blue 6 is different from a red 6 and a blue 2. How many different ways can this happen?",
+    "hint": "List the red number first. Try red 2, red 3 and so on, and ask what the blue number must be.",
+    "why": "The pairs (red, blue) are 2 and 6, 3 and 5, 4 and 4, 5 and 3, and 6 and 2. That is 5 ways ways.",
     "date": "12-05"
    },
    {
@@ -224,14 +219,14 @@
     "sub": "number_line.halfway",
     "family": "number_line",
     "p": {
-     "a": 18,
-     "b": 64
+     "a": 12,
+     "b": 36
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "41",
-    "shown": "41 m",
+    "ans": "24",
+    "shown": "24 m",
     "units": [
      "m",
      "metre",
@@ -243,18 +238,19 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "42",
-     "40",
-     "43",
-     "39",
-     "82",
-     "51",
-     "31",
-     "410"
+     "25",
+     "23",
+     "26",
+     "22",
+     "48",
+     "12",
+     "34",
+     "14",
+     "240"
     ],
-    "q": "Lamp posts along a path are marked with how many metres they are from the gate. One lamp post is at 18 m and another is at 64 m. A bench is exactly halfway between them. How many metres from the gate is the bench?",
+    "q": "Lamp posts along a path are marked with how many metres they are from the gate. One lamp post is at 12 m and another is at 36 m. A bench is exactly halfway between them. How many metres from the gate is the bench?",
     "hint": "Find how far apart the two lamp posts are. Half of that is how far the bench is from each post.",
-    "why": "The posts are 64 − 18 = 46 m apart. Half of 46 is 23. The bench is 23 m from the first post, so it is 18 + 23 = 41 m from the gate.",
+    "why": "The posts are 36 − 12 = 24 m apart. Half of 24 is 12. The bench is 12 m from the first post, so it is 12 + 12 = 24 m from the gate.",
     "date": "12-06"
    },
    {
@@ -1013,43 +1009,42 @@
     "date": "12-23"
    },
    {
-    "id": "L1-boxpyramid",
+    "id": "L1-trianglecards",
     "level": 1,
-    "frame": "boxpyramid",
-    "kind": "pyramid",
-    "topic": "Number pyramid",
-    "sub": "number_grid.number_pyramid",
-    "family": "number_grid",
+    "frame": "trianglecards",
+    "kind": "triangle_sides",
+    "topic": "Cards on a triangle",
+    "sub": "number_arrangement.triangle_sides",
+    "family": "number_arrangement",
     "p": {
-     "bottom": [
-      4,
-      7,
-      5
-     ],
-     "ask": "top"
+     "first": 5,
+     "ask": "corner_sum",
+     "side": 24
     },
-    "t": {},
+    "t": {
+     "cards": "5, 6, 7, 8, 9 and 10"
+    },
     "fmt": "int",
     "type": "n",
-    "ans": "23",
-    "shown": "23",
+    "ans": "27",
+    "shown": "27",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "24",
-     "22",
+     "28",
+     "26",
+     "29",
      "25",
-     "21",
-     "46",
-     "33",
-     "13",
-     "230"
+     "54",
+     "37",
+     "17",
+     "270"
     ],
-    "q": "In a number triangle, each circle shows the sum of the two circles just below it. The lowest line of circles shows 4, 7 and 5. What number is in the circle at the peak?",
-    "hint": "Work out the middle line first. It has two circles.",
-    "why": "The middle line is 11 and 12. The circle at the peak is the sum of those two numbers: 23.",
+    "q": "The cards 5, 6, 7, 8, 9 and 10 are put on a triangle: one on each corner and one in the middle of each side. The three cards along every side add up to 24. What do the three corner cards add up to?",
+    "hint": "Add up all three sides. Every corner card is in two sides, and every middle card is in only one side.",
+    "why": "The three sides add up to 3 × 24 = 72. That counts each middle card once and each corner card twice. All six cards add up to 45, so the corner cards add up to 72 − 45 = 27.",
     "date": "12-24"
    },
    {
@@ -1714,48 +1709,48 @@
     "date": "12-07"
    },
    {
-    "id": "L2-mangoes",
+    "id": "L2-stripchain",
     "level": 2,
-    "frame": "mangoes",
-    "kind": "unit_price",
-    "topic": "Money",
-    "sub": "money.unitary_price",
-    "family": "money",
+    "frame": "stripchain",
+    "kind": "overlap_chain",
+    "topic": "Lengths",
+    "sub": "measurement.overlapping_chain",
+    "family": "measurement",
     "p": {
-     "buy": 6,
-     "cost": 780,
-     "want": 11
+     "ask": "total",
+     "n": 6,
+     "length": 8,
+     "overlap": 2
     },
     "t": {},
-    "fmt": "money",
+    "fmt": "int",
     "type": "n",
-    "ans": "14.3",
-    "shown": "$14.30",
+    "ans": "38",
+    "shown": "38 cm",
     "units": [
-     "dollars",
-     "dollar"
+     "cm",
+     "centimetre",
+     "centimetres",
+     "centimeter",
+     "centimeters"
     ],
-    "prefix": [
-     "$",
-     "s$"
-    ],
+    "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "15.3",
-     "13.3",
-     "16.3",
-     "12.3",
-     "28.6",
-     "7.15",
-     "24.3",
-     "4.3",
-     "14.8",
-     "143"
+     "39",
+     "37",
+     "40",
+     "36",
+     "76",
+     "19",
+     "48",
+     "28",
+     "380"
     ],
-    "q": "6 mangoes cost $7.80. Aunty buys 11 mangoes at the same price each. How much does she pay?",
-    "hint": "Find the price of 1 mango first.",
-    "why": "1 mango costs $1.30. 11 mangoes cost 11 × $1.30 = $14.30.",
+    "q": "Ali sticks 6 paper strips end to end to make a chain. Each strip is 8 cm long. At each join, two strips overlap by 2 cm. How long is the whole chain?",
+    "hint": "Add the lengths of all the strips first. Then think about how many joins there are.",
+    "why": "6 strips are 6 × 8 = 48 cm long altogether. There are 5 joins, and each hides 2 cm: 5 × 2 = 10 cm. So the chain is 48 − 10 = 38 cm cm long.",
     "date": "12-08"
    },
    {
@@ -1793,44 +1788,43 @@
     "date": "12-09"
    },
    {
-    "id": "L2-shellrows",
+    "id": "L2-hallfloor",
     "level": 2,
-    "frame": "shellrows",
-    "kind": "growing_gaps",
-    "topic": "Number patterns",
-    "sub": "growing_pattern.growing_gaps",
-    "family": "growing_pattern",
+    "frame": "hallfloor",
+    "kind": "checkerboard",
+    "topic": "Patterns",
+    "sub": "arrays.checkerboard",
+    "family": "arrays",
     "p": {
-     "first": 2,
-     "gap0": 3,
-     "n": 9
+     "rows": 5,
+     "cols": 9,
+     "ask": "dark"
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "54",
-    "shown": "54 shells",
+    "ans": "23",
+    "shown": "23 tiles",
     "units": [
-     "shells",
-     "shell"
+     "tiles",
+     "tile"
     ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "55",
-     "53",
-     "56",
-     "52",
-     "108",
-     "27",
-     "64",
-     "44",
-     "540"
+     "24",
+     "22",
+     "25",
+     "21",
+     "46",
+     "33",
+     "13",
+     "230"
     ],
-    "q": "Ravi lays out shells in rows. Row 1 has 2 shells, row 2 has 5, row 3 has 9, row 4 has 14. Each row has more shells than the one before, and the extra shells grow by 1 each time. How many shells are in row 9?",
-    "hint": "Write down the extra shells each time: 3, then 4, then 5.",
-    "why": "The extras are 3, 4, 5, 6, 7, 8, 9, 10. The rows have 2, 5, 9, 14, 20, 27, 35, 44, 54 shells. Row 9 has 54 shells.",
+    "q": "A hall floor has 5 rows of 9 square tiles. The tiles are dark and light in turns along every row and every column, like a chessboard. The top left tile is dark. How many dark tiles are there?",
+    "hint": "Count all the tiles first. Dark and light tiles take turns.",
+    "why": "There are 5 × 9 = 45 tiles. Dark and light take turns and the first tile is dark, so there is one more dark tile than light tiles. 45 + 1 = 46, and 46 ÷ 2 = 23 tiles.",
     "date": "12-10"
    },
    {
@@ -2255,11 +2249,11 @@
     "p": {
      "items": [
       [
-       360,
+       300,
        3
       ],
       [
-       450,
+       400,
        1
       ]
      ],
@@ -2269,8 +2263,8 @@
     "t": {},
     "fmt": "money",
     "type": "n",
-    "ans": "4.7",
-    "shown": "$4.70",
+    "ans": "7",
+    "shown": "$7",
     "units": [
      "dollars",
      "dollar"
@@ -2282,19 +2276,19 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "5.7",
-     "3.7",
-     "6.7",
-     "2.7",
-     "9.4",
-     "2.35",
-     "14.7",
-     "5.2",
-     "47"
+     "8",
+     "6",
+     "9",
+     "5",
+     "14",
+     "3.5",
+     "17",
+     "7.5",
+     "70"
     ],
-    "q": "At a cafe, Priya buys 3 cups of barley water at $3.60 each and a slice of cake for $4.50. She pays with $20. How much change does she get?",
+    "q": "At a cafe, Priya buys 3 cups of barley water at $3 each and a slice of cake for $4. She pays with $20. How much change does she get?",
     "hint": "Find the cost of the 3 cups first.",
-    "why": "3 cups cost 3 × $3.60 = $10.80. With the cake: $10.80 + $4.50 = $15.30. Change: $20 − $15.30 = $4.70.",
+    "why": "3 cups cost 3 × $3 = $9. With the cake: $9 + $4 = $13. Change: $20 − $13 = $7.",
     "date": "12-20"
    },
    {
@@ -2647,47 +2641,42 @@
     "date": "12-27"
    },
    {
-    "id": "L2-pencilcase",
+    "id": "L2-cakeshare",
     "level": 2,
-    "frame": "pencilcase",
-    "kind": "worst_case",
-    "topic": "Worst case",
-    "sub": "strategy.worst_case",
-    "family": "strategy",
+    "frame": "cakeshare",
+    "kind": "unit_compare",
+    "topic": "Fractions",
+    "sub": "fractions.unit_compare",
+    "family": "fractions",
     "p": {
-     "counts": [
-      9,
-      7,
-      6
+     "dens": [
+      4,
+      8,
+      3
      ],
-     "need": 5,
-     "ask": "k_alike"
+     "names": [
+      "Aina",
+      "Ben",
+      "Chen"
+     ],
+     "ask": "least"
     },
     "t": {},
     "fmt": "int",
-    "type": "n",
-    "ans": "13",
-    "shown": "13 pens",
-    "units": [
-     "pens",
-     "pen"
-    ],
+    "type": "s",
+    "ans": "ben",
+    "shown": "Ben",
+    "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "14",
-     "12",
-     "15",
-     "11",
-     "26",
-     "23",
-     "3",
-     "130"
+     "Aina",
+     "Chen"
     ],
-    "q": "A pencil case holds 9 blue, 7 black and 6 red pens. Mei takes pens out without looking. How many pens must she take to be sure of having 5 pens of the same colour?",
-    "hint": "Think of the unluckiest case: she takes as many marbles as possible without having 5 pens of any colour.",
-    "why": "The unluckiest case is 4 blue, 4 black and 4 red pens, which is 12 pens with no colour having 5. The next pen must make 5 of one colour, so she must take 12 + 1 = 13 pens.",
+    "q": "Aina, Ben and Chen each have a cake of the same size. Aina eats 1/4 of a cake, Ben eats 1/8 of a cake and Chen eats 1/3 of a cake. Who eats the smallest piece?",
+    "hint": "The more equal pieces a cake is cut into, the smaller each piece is.",
+    "why": "A cake cut into 8 equal pieces has smaller pieces than a cake cut into 4 or into 3. So 1/8 is the smallest piece, and Ben eats it.",
     "date": "12-28"
    },
    {
@@ -2845,6 +2834,351 @@
   ],
   "3": [
    {
+    "id": "L3-tilearrays",
+    "level": 3,
+    "frame": "tilearrays",
+    "kind": "factor_count",
+    "topic": "Factors",
+    "sub": "factors.rectangular_arrays",
+    "family": "factors",
+    "p": {
+     "n": 48
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "10",
+    "shown": "10 ways",
+    "units": [
+     "ways",
+     "way"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "11",
+     "9",
+     "12",
+     "8",
+     "20",
+     "5",
+     "0",
+     "100"
+    ],
+    "q": "Mei Ling has 48 square tiles. She puts all of them in equal rows, with the same number of tiles in every row. How many different ways can she do this? (1 row of 48 is one way. 2 rows of 24 and 24 rows of 2 are different ways.)",
+    "hint": "Try 1 row, 2 rows, 3 rows ... and see which numbers of rows work.",
+    "why": "The numbers of rows that work are 1, 2, 3, 4, 6, 8, 12, 16, 24 and 48. That is 10 ways.",
+    "date": "12-01"
+   },
+   {
+    "id": "L3-cardcorners",
+    "level": 3,
+    "frame": "cardcorners",
+    "kind": "notch_perimeter",
+    "topic": "Perimeter",
+    "sub": "perimeter_area.notched_perimeter",
+    "family": "perimeter_area",
+    "p": {
+     "w": 14,
+     "h": 9,
+     "notches": [
+      [
+       "tr",
+       3,
+       3
+      ],
+      [
+       "bl",
+       2,
+       4
+      ]
+     ],
+     "unit": 1
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "46",
+    "shown": "46 cm",
+    "units": [
+     "cm",
+     "centimetre",
+     "centimetres",
+     "centimeter",
+     "centimeters"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "47",
+     "45",
+     "48",
+     "44",
+     "92",
+     "23",
+     "56",
+     "36",
+     "460"
+    ],
+    "q": "A rectangle of card is 14 cm long and 9 cm wide. A square of side 3 cm is cut out of the top right corner. A rectangle 2 cm by 4 cm is cut out of the bottom left corner. How long is the whole edge of the card that is left, all the way round?",
+    "hint": "Look at what happens to the edge where a corner is cut away: it goes in and then comes out again.",
+    "why": "A corner cut makes the edge go in and then out again by the same distances, so the edge is as long as before. 2 × (14 + 9) = 46 cm.",
+    "date": "12-02"
+   },
+   {
+    "id": "L3-handshake8",
+    "level": 3,
+    "frame": "handshake8",
+    "kind": "pairs",
+    "topic": "Pairs",
+    "sub": "counting_pairs.handshakes",
+    "family": "counting_pairs",
+    "p": {
+     "n": 10
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "45",
+    "shown": "45 handshakes",
+    "units": [
+     "handshakes",
+     "handshake"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "46",
+     "44",
+     "47",
+     "43",
+     "90",
+     "55",
+     "35",
+     "450"
+    ],
+    "q": "10 children are at a puzzle club. Each pair of children shakes hands exactly once. How many handshakes happen?",
+    "hint": "Each child shakes hands with 10 − 1 others, but each handshake has two children in it.",
+    "why": "Each of the 10 children shakes 9 hands, which makes 90. Each handshake was counted twice, so 90 ÷ 2 = 45 handshakes.",
+    "date": "12-03"
+   },
+   {
+    "id": "L3-clubs",
+    "level": 3,
+    "frame": "clubs",
+    "kind": "venn_both",
+    "topic": "Sets that overlap",
+    "sub": "sorting.overlap_both",
+    "family": "sorting",
+    "p": {
+     "total": 53,
+     "a": 40,
+     "b": 38,
+     "neither": 3
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "28",
+    "shown": "28 children",
+    "units": [
+     "children",
+     "children"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "29",
+     "27",
+     "30",
+     "26",
+     "56",
+     "14",
+     "38",
+     "18",
+     "280"
+    ],
+    "q": "In a class of 53 children, 40 are in the swimming club and 38 are in the cycling club. 3 children are in neither club. How many children are in both clubs?",
+    "hint": "Find how many children are in at least one club. Add the two clubs and compare.",
+    "why": "50 children are in at least one club. 40 + 38 = 78, and 78 is 28 more than 50. Those 28 were counted twice, so 28 children are in both.",
+    "date": "12-04"
+   },
+   {
+    "id": "L3-turnsfour",
+    "level": 3,
+    "frame": "turnsfour",
+    "kind": "turns",
+    "topic": "Left and right",
+    "sub": "spatial.turns_facing",
+    "family": "spatial",
+    "p": {
+     "start": "south",
+     "moves": [
+      "R",
+      "L",
+      "L",
+      "R"
+     ]
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "s",
+    "ans": "south",
+    "shown": "south",
+    "units": [],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "north",
+     "east",
+     "west"
+    ],
+    "q": "Kumar faces south. He turns right, then left, then left again, then right. Which way does he face now: north, east, south or west?",
+    "hint": "Draw a small compass. Turn one step at a time and write the direction after each turn.",
+    "why": "Facing south, then west, then south, then east, then south. After the turns Kumar faces south.",
+    "date": "12-05"
+   },
+   {
+    "id": "L3-longride",
+    "level": 3,
+    "frame": "longride",
+    "kind": "compound_units",
+    "topic": "Distances",
+    "sub": "measurement.compound_units",
+    "family": "measurement",
+    "p": {
+     "unit": "km",
+     "a": [
+      2,
+      450
+     ],
+     "b": [
+      1,
+      800
+     ],
+     "op": "sum"
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "4250",
+    "shown": "4250 m",
+    "units": [
+     "m",
+     "metre",
+     "metres",
+     "meter",
+     "meters"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "4251",
+     "4249",
+     "4252",
+     "4248",
+     "8500",
+     "2125",
+     "4260",
+     "4240",
+     "42500"
+    ],
+    "q": "Zack cycles 2 km 450 m in the morning and 1 km 800 m in the afternoon. How many metres does he cycle in the whole day?",
+    "hint": "Change each distance to metres first. One kilometre is 1000 metres.",
+    "why": "2 km 450 m is 2450 m and 1 km 800 m is 1800 m. 2450 + 1800 = 4250 m.",
+    "date": "12-06"
+   },
+   {
+    "id": "L3-lanes5",
+    "level": 3,
+    "frame": "lanes5",
+    "kind": "perm_count",
+    "topic": "Lining up",
+    "sub": "counting_choices.orders",
+    "family": "counting_choices",
+    "p": {
+     "n": 5
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "120",
+    "shown": "120 ways",
+    "units": [
+     "ways",
+     "way"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "121",
+     "119",
+     "122",
+     "118",
+     "240",
+     "60",
+     "130",
+     "110",
+     "1200"
+    ],
+    "q": "5 runners are given lanes 1 to 5 for a race, one runner to each lane. In how many different ways can the lanes be given out?",
+    "hint": "Choose who gets lane 1. Then see how many runners are left for lane 2.",
+    "why": "5 choices for lane 1, then 4, then 3, then 2, then 1. 5 × 4 × 3 × 2 × 1 = 120 ways.",
+    "date": "12-07"
+   },
+   {
+    "id": "L3-bigsumcards",
+    "level": 3,
+    "frame": "bigsumcards",
+    "kind": "cards_sum",
+    "topic": "Digit cards",
+    "sub": "digit_cards.max_sum",
+    "family": "digit_cards",
+    "p": {
+     "digits": [
+      2,
+      5,
+      7,
+      9
+     ],
+     "shape": [
+      2,
+      2
+     ],
+     "ask": "max"
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "167",
+    "shown": "167",
+    "units": [],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "168",
+     "166",
+     "169",
+     "165",
+     "334",
+     "177",
+     "157",
+     "1670"
+    ],
+    "q": "Hui Min has four digit cards: 2, 5, 7 and 9. She arranges all four into two 2-digit numbers and adds them. What greatest total can she make?",
+    "hint": "The biggest digits should go in the tens places.",
+    "why": "Put 9 and 7 in the tens places and 5 and 2 in the ones places: 72 + 95 = 167.",
+    "date": "12-08"
+   },
+   {
     "id": "L3-mapshort",
     "level": 3,
     "frame": "mapshort",
@@ -2921,297 +3255,7 @@
     "q": "Roads in kilometres: Home to Library 8, Home to Park 12, Library to Park 3, Library to Pool 13, Park to Pool 9, Park to School 17, Pool to School 7. Find the shortest way from Home to School, in kilometres.",
     "hint": "List the routes from Home to School and add up the road lengths on each one.",
     "why": "The best route is Home-Library-Park-Pool-School: 8 + 3 + 9 + 7 = 27 km. Home-Park-Pool-School is 12 + 9 + 7 = 28, which is longer.",
-    "date": "12-01"
-   },
-   {
-    "id": "L3-barpieces",
-    "level": 3,
-    "frame": "barpieces",
-    "kind": "equiv_fraction",
-    "topic": "Fractions",
-    "sub": "fractions.equivalent_missing",
-    "family": "fractions",
-    "p": {
-     "n1": 3,
-     "d1": 4,
-     "d2": 16
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "12",
-    "shown": "12 pieces",
-    "units": [
-     "pieces",
-     "piece"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "13",
-     "11",
-     "14",
-     "10",
-     "24",
-     "6",
-     "22",
-     "2",
-     "120"
-    ],
-    "q": "A chocolate bar is divided into 4 equal pieces and Ravi eats 3 of them. If the same bar had been divided into 16 equal pieces, how many of those pieces would Ravi have eaten to eat the same amount?",
-    "hint": "Cut each of the 4 big pieces into smaller equal pieces. How many small pieces does each big piece make?",
-    "why": "Each big piece makes 16 ÷ 4 = 4 small pieces. 3 big pieces are 3 × 4 = 12 pieces.",
-    "date": "12-02"
-   },
-   {
-    "id": "L3-lanes5",
-    "level": 3,
-    "frame": "lanes5",
-    "kind": "perm_count",
-    "topic": "Lining up",
-    "sub": "counting_choices.orders",
-    "family": "counting_choices",
-    "p": {
-     "n": 5
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "120",
-    "shown": "120 ways",
-    "units": [
-     "ways",
-     "way"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "121",
-     "119",
-     "122",
-     "118",
-     "240",
-     "60",
-     "130",
-     "110",
-     "1200"
-    ],
-    "q": "5 runners are given lanes 1 to 5 for a race, one runner to each lane. In how many different ways can the lanes be given out?",
-    "hint": "Choose who gets lane 1. Then see how many runners are left for lane 2.",
-    "why": "5 choices for lane 1, then 4, then 3, then 2, then 1. 5 × 4 × 3 × 2 × 1 = 120 ways.",
-    "date": "12-03"
-   },
-   {
-    "id": "L3-cubetower",
-    "level": 3,
-    "frame": "cubetower",
-    "kind": "square_stack",
-    "topic": "Stacks",
-    "sub": "stacks.layers_of_cubes",
-    "family": "stacks",
-    "p": {
-     "n": 7
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "140",
-    "shown": "140 cubes",
-    "units": [
-     "cubes",
-     "cube"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "141",
-     "139",
-     "142",
-     "138",
-     "280",
-     "70",
-     "150",
-     "130",
-     "1400"
-    ],
-    "q": "A cube tower has 7 layers. The top layer is 1 cube. Each layer below is a square that is one cube wider each way: 2 by 2, then 3 by 3, and so on. How many cubes are in the whole tower?",
-    "hint": "Find how many cubes are in each layer: 1, 4, 9 ... Then add the layers.",
-    "why": "The layers are 1 + 4 + 9 + 16 + 25 + 36 + 49. Added together they make 140 cubes.",
-    "date": "12-04"
-   },
-   {
-    "id": "L3-mat168",
-    "level": 3,
-    "frame": "mat168",
-    "kind": "rect",
-    "topic": "Missing sides",
-    "sub": "perimeter_area.find_unknown",
-    "family": "perimeter_area",
-    "p": {
-     "ask": "width_from_area",
-     "l": 14,
-     "A": 364
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "26",
-    "shown": "26 cm",
-    "units": [
-     "cm",
-     "centimetre",
-     "centimetres",
-     "centimeter",
-     "centimeters"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "27",
-     "25",
-     "28",
-     "24",
-     "52",
-     "13",
-     "36",
-     "16",
-     "260"
-    ],
-    "q": "A rectangular mat has an area of 364 square centimetres. It is 14 cm long. How wide is the mat?",
-    "hint": "Area is length times width. Which number times 14 makes 364?",
-    "why": "14 × 26 cm = 364. The mat is 26 cm wide.",
-    "date": "12-05"
-   },
-   {
-    "id": "L3-smalldigitsum",
-    "level": 3,
-    "frame": "smalldigitsum",
-    "kind": "scan",
-    "topic": "Digits",
-    "sub": "digit_puzzles.smallest_with_digit_sum",
-    "family": "digit_puzzles",
-    "p": {
-     "lo": 100,
-     "hi": 999,
-     "preds": [
-      [
-       "digit_sum",
-       15
-      ]
-     ],
-     "ask": "min"
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "159",
-    "shown": "159",
-    "units": [],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "160",
-     "158",
-     "161",
-     "157",
-     "318",
-     "169",
-     "149",
-     "1590"
-    ],
-    "q": "Find the least 3-digit number in which the three digits add to 15.",
-    "hint": "The hundreds digit should be as small as possible. Then make the tens digit small too.",
-    "why": "Start with the hundreds digit 1. The other two digits must add to 14, so the tens digit should be as small as possible: 5 and 9. The number is 159.",
-    "date": "12-06"
-   },
-   {
-    "id": "L3-fairtables",
-    "level": 3,
-    "frame": "fairtables",
-    "kind": "share",
-    "topic": "Equal groups",
-    "sub": "division.share",
-    "family": "division",
-    "p": {
-     "total": 301,
-     "k": 8,
-     "ask": "boxes"
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "38",
-    "shown": "38 tables",
-    "units": [
-     "tables",
-     "table"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "39",
-     "37",
-     "40",
-     "36",
-     "76",
-     "19",
-     "48",
-     "28",
-     "380"
-    ],
-    "q": "There are 301 people at a school fair. Each table seats 8 people. How many tables must be set up so that everyone has a seat?",
-    "hint": "Divide the people by the seats at a table. What do you do with the remainder?",
-    "why": "37 tables seat 37 × 8 = 296 people. 5 people are left, and they need another table. So 38 tables must be set up.",
-    "date": "12-07"
-   },
-   {
-    "id": "L3-mealset",
-    "level": 3,
-    "frame": "mealset",
-    "kind": "combos",
-    "topic": "Ways to choose",
-    "sub": "counting_choices.combinations",
-    "family": "counting_choices",
-    "p": {
-     "counts": [
-      4,
-      3,
-      2
-     ]
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "24",
-    "shown": "24 meal sets",
-    "units": [
-     "meal sets",
-     "meal set"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "25",
-     "23",
-     "26",
-     "22",
-     "48",
-     "12",
-     "34",
-     "14",
-     "240"
-    ],
-    "q": "A meal set has one main, one side and one drink. The stall offers 4 mains, 3 sides and 2 drinks. How many different meal sets can you choose?",
-    "hint": "Pick one main. How many side and drink choices go with it?",
-    "why": "4 × 3 × 2 = 24 meal sets.",
-    "date": "12-08"
+    "date": "12-09"
    },
    {
     "id": "L3-cupoffer",
@@ -3267,241 +3311,417 @@
     "q": "A cup of bubble tea costs $8 at Shop A. At Shop B, a cup costs $8 too, but you get 1 cup free for every 4 cups you buy. A club needs 20 cups. How many dollars does it save by using Shop B?",
     "hint": "Work out the cost at Shop A. At Shop B, find how many cups of every 5 you pay for.",
     "why": "Shop A: 20 × $8 = $160. At Shop B, 20 cups are 4 sets of 5 cups, and each set costs 4 × $8 = $32. So Shop B costs 4 × $32 = $128. The club saves $160 − $128 = $32.",
-    "date": "12-09"
+    "date": "12-10"
    },
    {
-    "id": "L3-turnsfour",
+    "id": "L3-floortiles2",
     "level": 3,
-    "frame": "turnsfour",
-    "kind": "turns",
-    "topic": "Left and right",
-    "sub": "spatial.turns_facing",
-    "family": "spatial",
+    "frame": "floortiles2",
+    "kind": "rect",
+    "topic": "Area",
+    "sub": "perimeter_area.area_rectangle",
+    "family": "perimeter_area",
     "p": {
-     "start": "south",
-     "moves": [
-      "R",
-      "L",
-      "L",
-      "R"
+     "ask": "area",
+     "l": 13,
+     "w": 7
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "91",
+    "shown": "91 tiles",
+    "units": [
+     "tiles",
+     "tile"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "92",
+     "90",
+     "93",
+     "89",
+     "182",
+     "101",
+     "81",
+     "910"
+    ],
+    "q": "A classroom floor is a rectangle 13 m long and 7 m wide. Each floor tile covers exactly 1 square metre. How many tiles are needed to cover the whole floor?",
+    "hint": "Think of rows of tiles. How many rows? How many tiles in each row?",
+    "why": "7 rows with 13 tiles in each row: 7 × 13 = 91 tiles.",
+    "date": "12-11"
+   },
+   {
+    "id": "L3-fourtiles",
+    "level": 3,
+    "frame": "fourtiles",
+    "kind": "polyomino",
+    "topic": "Shapes from squares",
+    "sub": "polyominoes.count_shapes",
+    "family": "polyominoes",
+    "p": {
+     "n": 4
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "5",
+    "shown": "5 shapes",
+    "units": [
+     "shapes",
+     "shape"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "6",
+     "4",
+     "7",
+     "3",
+     "10",
+     "15",
+     "50"
+    ],
+    "q": "A tile shape is made by joining 4 equal squares edge to edge. Turning a shape round or flipping it over does not make a new shape. How many different shapes can be made?",
+    "hint": "Start with 4 squares in a straight line. Then move one square at a time to get new shapes.",
+    "why": "The shapes are: a straight line of 4, an L shape, a T shape, a square of 2 by 2, and a zigzag shape. That is 5 shapes.",
+    "date": "12-12"
+   },
+   {
+    "id": "L3-eights",
+    "level": 3,
+    "frame": "eights",
+    "kind": "scan",
+    "topic": "Times tables",
+    "sub": "number_properties.multiples_count",
+    "family": "number_properties",
+    "p": {
+     "lo": 50,
+     "hi": 200,
+     "preds": [
+      [
+       "multiple",
+       8
+      ]
+     ],
+     "ask": "count"
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "19",
+    "shown": "19 numbers",
+    "units": [
+     "numbers",
+     "number"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "20",
+     "18",
+     "21",
+     "17",
+     "38",
+     "29",
+     "9",
+     "190"
+    ],
+    "q": "How many numbers from 50 to 200 are in the 8 times table?",
+    "hint": "Find the first multiple of 8 that is more than 50. Then keep adding 8.",
+    "why": "The multiples of 8 in this range are 56, 64, 72, ... 200. The first is 7 × 8 and the last is 25 × 8, so there are 25 − 7 + 1 = 19 numbers.",
+    "date": "12-13"
+   },
+   {
+    "id": "L3-flagstrip",
+    "level": 3,
+    "frame": "flagstrip",
+    "kind": "repeat_pattern",
+    "topic": "Patterns",
+    "sub": "repeating_pattern.cycle",
+    "family": "repeating_pattern",
+    "p": {
+     "unit": [
+      "red",
+      "red",
+      "blue",
+      "green"
+     ],
+     "n": 30,
+     "ask": "count",
+     "item": "red"
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "16",
+    "shown": "16 flags",
+    "units": [
+     "flags",
+     "flag"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "17",
+     "15",
+     "18",
+     "14",
+     "32",
+     "8",
+     "26",
+     "6",
+     "160"
+    ],
+    "q": "A strip of flags repeats this pattern again and again: red, red, blue, green. The strip has 30 flags. How many flags are red?",
+    "hint": "How many flags are in one pattern? How many whole patterns fit in 30? What is left over?",
+    "why": "One pattern has 4 flags and 2 are red. 30 = 7 × 4 + 2, so there are 7 whole patterns and 2 flags left over. The 7 patterns have 14 red flags, and the 2 left-over flags are both red. 14 + 2 = 16 flags.",
+    "date": "12-14"
+   },
+   {
+    "id": "L3-beadbag",
+    "level": 3,
+    "frame": "beadbag",
+    "kind": "part_whole",
+    "topic": "Bar models",
+    "sub": "bonds.part_whole",
+    "family": "bonds",
+    "p": {
+     "total": 1000,
+     "parts": [
+      350,
+      275
      ]
     },
     "t": {},
     "fmt": "int",
-    "type": "s",
-    "ans": "south",
-    "shown": "south",
-    "units": [],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "north",
-     "east",
-     "west"
-    ],
-    "q": "Kumar faces south. He turns right, then left, then left again, then right. Which way does he face now: north, east, south or west?",
-    "hint": "Draw a small compass. Turn one step at a time and write the direction after each turn.",
-    "why": "Facing south, then west, then south, then east, then south. After the turns Kumar faces south.",
-    "date": "12-10"
-   },
-   {
-    "id": "L3-cryptsum",
-    "level": 3,
-    "frame": "cryptsum",
-    "kind": "cryptarithm",
-    "topic": "Digit puzzles",
-    "sub": "missing_number.cryptarithm_add_times",
-    "family": "missing_number",
-    "p": {
-     "pattern": "AB+CB=BBC",
-     "sol": {
-      "A": 9,
-      "B": 1,
-      "C": 2
-     },
-     "ask": "A"
-    },
-    "t": {},
-    "fmt": "int",
     "type": "n",
-    "ans": "9",
-    "shown": "9",
-    "units": [],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "10",
-     "8",
-     "11",
-     "7",
-     "18",
-     "19",
-     "90"
-    ],
-    "q": "Each letter stands for a different digit. AB + CB = BBC. AB and CB are 2-digit numbers and BBC is a 3-digit number. What digit is A?",
-    "hint": "Two numbers with two digits each can never make 200 or more. What does that tell you about B?",
-    "why": "B must be 1. In the ones place 1 + 1 = 2, so C = 2. In the tens place A + 2 must make 11, so A = 9. Check: 91 + 21 = 112.",
-    "date": "12-11"
-   },
-   {
-    "id": "L3-handshake8",
-    "level": 3,
-    "frame": "handshake8",
-    "kind": "pairs",
-    "topic": "Pairs",
-    "sub": "counting_pairs.handshakes",
-    "family": "counting_pairs",
-    "p": {
-     "n": 10
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "45",
-    "shown": "45 handshakes",
+    "ans": "375",
+    "shown": "375 beads",
     "units": [
-     "handshakes",
-     "handshake"
+     "beads",
+     "bead"
     ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "46",
-     "44",
-     "47",
-     "43",
-     "90",
-     "55",
-     "35",
-     "450"
+     "376",
+     "374",
+     "377",
+     "373",
+     "750",
+     "385",
+     "365",
+     "3750"
     ],
-    "q": "10 children are at a puzzle club. Each pair of children shakes hands exactly once. How many handshakes happen?",
-    "hint": "Each child shakes hands with 10 − 1 others, but each handshake has two children in it.",
-    "why": "Each of the 10 children shakes 9 hands, which makes 90. Each handshake was counted twice, so 90 ÷ 2 = 45 handshakes.",
-    "date": "12-12"
-   },
-   {
-    "id": "L3-dotgaps",
-    "level": 3,
-    "frame": "dotgaps",
-    "kind": "growing_gaps",
-    "topic": "Number patterns",
-    "sub": "growing_pattern.growing_gaps",
-    "family": "growing_pattern",
-    "p": {
-     "first": 2,
-     "gap0": 3,
-     "n": 8
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "44",
-    "shown": "44 shells",
-    "units": [
-     "shells",
-     "shell"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "45",
-     "43",
-     "46",
-     "42",
-     "88",
-     "22",
-     "54",
-     "34",
-     "440"
-    ],
-    "q": "Mei Ling sorts shells into piles. The first pile has 2 shells, the second has 5, the third has 9, the fourth has 14. Each pile has more shells than the one before, and the extra shells grow by 1 each time. How many shells are in the 8th pile?",
-    "hint": "Look at how many more shells each pile has than the one before: 3, then 4, then 5.",
-    "why": "The extra shells are 3, 4, 5, 6, 7, 8, 9. The piles hold 2, 5, 9, 14, 20, 27, 35, 44. The 8th pile has 44 shells.",
-    "date": "12-13"
-   },
-   {
-    "id": "L3-tilearrays",
-    "level": 3,
-    "frame": "tilearrays",
-    "kind": "factor_count",
-    "topic": "Factors",
-    "sub": "factors.rectangular_arrays",
-    "family": "factors",
-    "p": {
-     "n": 48
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "10",
-    "shown": "10 ways",
-    "units": [
-     "ways",
-     "way"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "11",
-     "9",
-     "12",
-     "8",
-     "20",
-     "5",
-     "0",
-     "100"
-    ],
-    "q": "Mei Ling has 48 square tiles. She puts all of them in equal rows, with the same number of tiles in every row. How many different ways can she do this? (1 row of 48 is one way. 2 rows of 24 and 24 rows of 2 are different ways.)",
-    "hint": "Try 1 row, 2 rows, 3 rows ... and see which numbers of rows work.",
-    "why": "The numbers of rows that work are 1, 2, 3, 4, 6, 8, 12, 16, 24 and 48. That is 10 ways.",
-    "date": "12-14"
-   },
-   {
-    "id": "L3-windowpanes",
-    "level": 3,
-    "frame": "windowpanes",
-    "kind": "grid_count",
-    "topic": "Counting shapes",
-    "sub": "counting_grid.rectangles_in_grid",
-    "family": "counting_grid",
-    "p": {
-     "m": 2,
-     "n": 3,
-     "what": "rectangles"
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "18",
-    "shown": "18 rectangles",
-    "units": [
-     "rectangles",
-     "rectangle"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "19",
-     "17",
-     "20",
-     "16",
-     "36",
-     "9",
-     "28",
-     "8",
-     "180"
-    ],
-    "q": "A window has panes in a grid 3 panes across and 2 panes down. Count every rectangle you can see, including single panes and bigger rectangles made of panes. How many rectangles are there?",
-    "hint": "Count the rectangles by size: 1 by 1, 2 by 1, 1 by 2, and so on. Or choose two vertical lines and two horizontal lines.",
-    "why": "Choose 2 of the 4 vertical lines in 6 ways and 2 of the 3 horizontal lines in 3 ways. 6 × 3 = 18 rectangles.",
+    "q": "A bag has 1000 beads. 350 beads are red and 275 beads are blue. The rest are green. How many green beads are in the bag?",
+    "hint": "Add the red and blue beads first. Then find how many more make 1000.",
+    "why": "350 + 275 = 625. 1000 − 625 = 375 beads.",
     "date": "12-15"
+   },
+   {
+    "id": "L3-pencildrawing",
+    "level": 3,
+    "frame": "pencildrawing",
+    "kind": "euler_lifts",
+    "topic": "Drawing without lifting",
+    "sub": "networks.draw_without_lifting",
+    "family": "networks",
+    "p": {
+     "edges": [
+      [
+       "A",
+       "B"
+      ],
+      [
+       "B",
+       "C"
+      ],
+      [
+       "C",
+       "D"
+      ],
+      [
+       "D",
+       "E"
+      ],
+      [
+       "E",
+       "F"
+      ],
+      [
+       "F",
+       "A"
+      ],
+      [
+       "A",
+       "D"
+      ],
+      [
+       "B",
+       "E"
+      ],
+      [
+       "C",
+       "F"
+      ]
+     ]
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "2",
+    "shown": "2 times",
+    "units": [
+     "times",
+     "time"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "3",
+     "1",
+     "4",
+     "0",
+     "12",
+     "20"
+    ],
+    "q": "Six dots A, B, C, D, E and F are joined by nine straight lines: AB, BC, CD, DE, EF, FA, AD, BE and CF. Mei draws every line exactly once. She lifts her pencil as few times as she can. How many times must she lift her pencil?",
+    "hint": "Count how many lines meet at each dot. A dot where an odd number of lines meet must be where a stroke starts or ends.",
+    "why": "Three lines meet at each of the 6 dots, and 3 is an odd number. Every stroke has only two ends, so 6 dots need 6 ÷ 2 = 3 strokes. Three strokes mean lifting the pencil 2 times times.",
+    "date": "12-16"
+   },
+   {
+    "id": "L3-smalldigitsum",
+    "level": 3,
+    "frame": "smalldigitsum",
+    "kind": "scan",
+    "topic": "Digits",
+    "sub": "digit_puzzles.smallest_with_digit_sum",
+    "family": "digit_puzzles",
+    "p": {
+     "lo": 100,
+     "hi": 999,
+     "preds": [
+      [
+       "digit_sum",
+       15
+      ]
+     ],
+     "ask": "min"
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "159",
+    "shown": "159",
+    "units": [],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "160",
+     "158",
+     "161",
+     "157",
+     "318",
+     "169",
+     "149",
+     "1590"
+    ],
+    "q": "Find the least 3-digit number in which the three digits add to 15.",
+    "hint": "The hundreds digit should be as small as possible. Then make the tens digit small too.",
+    "why": "Start with the hundreds digit 1. The other two digits must add to 14, so the tens digit should be as small as possible: 5 and 9. The number is 159.",
+    "date": "12-17"
+   },
+   {
+    "id": "L3-fishmass",
+    "level": 3,
+    "frame": "fishmass",
+    "kind": "unit_convert",
+    "topic": "Measures",
+    "sub": "measurement.unit_convert",
+    "family": "measurement",
+    "p": {
+     "factor": 1000,
+     "big": 2,
+     "small": 85
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "2085",
+    "shown": "2085 g",
+    "units": [
+     "g",
+     "gram",
+     "grams"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "2086",
+     "2084",
+     "2087",
+     "2083",
+     "4170",
+     "2095",
+     "2075",
+     "20850"
+    ],
+    "q": "A big fish weighs 2 kg 85 g. Write the mass of the fish in grams.",
+    "hint": "One kilogram is 1000 grams. Change the kilograms to grams first.",
+    "why": "2 kg is 2000 g. 2000 + 85 = 2085 g.",
+    "date": "12-18"
+   },
+   {
+    "id": "L3-barpieces",
+    "level": 3,
+    "frame": "barpieces",
+    "kind": "equiv_fraction",
+    "topic": "Fractions",
+    "sub": "fractions.equivalent_missing",
+    "family": "fractions",
+    "p": {
+     "n1": 3,
+     "d1": 4,
+     "d2": 16
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "12",
+    "shown": "12 pieces",
+    "units": [
+     "pieces",
+     "piece"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "13",
+     "11",
+     "14",
+     "10",
+     "24",
+     "6",
+     "22",
+     "2",
+     "120"
+    ],
+    "q": "A chocolate bar is divided into 4 equal pieces and Ravi eats 3 of them. If the same bar had been divided into 16 equal pieces, how many of those pieces would Ravi have eaten to eat the same amount?",
+    "hint": "Cut each of the 4 big pieces into smaller equal pieces. How many small pieces does each big piece make?",
+    "why": "Each big piece makes 16 ÷ 4 = 4 small pieces. 3 big pieces are 3 × 4 = 12 pieces.",
+    "date": "12-19"
    },
    {
     "id": "L3-watertank",
@@ -3552,7 +3772,260 @@
     "q": "The water in a tank is 20 cm deep. It goes up 5, then down 12, then up 9, then down 3. What is the greatest depth the water reaches, in centimetres?",
     "hint": "Write down the depth after each change. Then find the biggest.",
     "why": "The depths in order are 20, 25, 13, 22, 19. The greatest depth is 25 cm.",
-    "date": "12-16"
+    "date": "12-20"
+   },
+   {
+    "id": "L3-cryptsum",
+    "level": 3,
+    "frame": "cryptsum",
+    "kind": "cryptarithm",
+    "topic": "Digit puzzles",
+    "sub": "missing_number.cryptarithm_add_times",
+    "family": "missing_number",
+    "p": {
+     "pattern": "AB+CB=BBC",
+     "sol": {
+      "A": 9,
+      "B": 1,
+      "C": 2
+     },
+     "ask": "A"
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "9",
+    "shown": "9",
+    "units": [],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "10",
+     "8",
+     "11",
+     "7",
+     "18",
+     "19",
+     "90"
+    ],
+    "q": "Each letter stands for a different digit. AB + CB = BBC. AB and CB are 2-digit numbers and BBC is a 3-digit number. What digit is A?",
+    "hint": "Two numbers with two digits each can never make 200 or more. What does that tell you about B?",
+    "why": "B must be 1. In the ones place 1 + 1 = 2, so C = 2. In the tens place A + 2 must make 11, so A = 9. Check: 91 + 21 = 112.",
+    "date": "12-21"
+   },
+   {
+    "id": "L3-canscollect",
+    "level": 3,
+    "frame": "canscollect",
+    "kind": "chain",
+    "topic": "Bar models",
+    "sub": "word_problems.compare_amounts",
+    "family": "word_problems",
+    "p": {
+     "base": 250,
+     "steps": [
+      [
+       "+",
+       130
+      ],
+      [
+       "-",
+       45
+      ]
+     ],
+     "ask": "sum"
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "965",
+    "shown": "965 cans",
+    "units": [
+     "cans",
+     "can"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "966",
+     "964",
+     "967",
+     "963",
+     "1930",
+     "975",
+     "955",
+     "9650"
+    ],
+    "q": "Class 3A collected 250 cans. Class 3B collected 130 more cans than Class 3A. Class 3C collected 45 fewer cans than Class 3B. How many cans did the three classes collect altogether?",
+    "hint": "Find the cans for Class 3B first. Then Class 3C. Then add all three.",
+    "why": "3B: 250 + 130 = 380. 3C: 380 − 45 = 335. Altogether: 250 + 380 + 335 = 965 cans.",
+    "date": "12-22"
+   },
+   {
+    "id": "L3-mealset",
+    "level": 3,
+    "frame": "mealset",
+    "kind": "combos",
+    "topic": "Ways to choose",
+    "sub": "counting_choices.combinations",
+    "family": "counting_choices",
+    "p": {
+     "counts": [
+      4,
+      3,
+      2
+     ]
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "24",
+    "shown": "24 meal sets",
+    "units": [
+     "meal sets",
+     "meal set"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "25",
+     "23",
+     "26",
+     "22",
+     "48",
+     "12",
+     "34",
+     "14",
+     "240"
+    ],
+    "q": "A meal set has one main, one side and one drink. The stall offers 4 mains, 3 sides and 2 drinks. How many different meal sets can you choose?",
+    "hint": "Pick one main. How many side and drink choices go with it?",
+    "why": "4 × 3 × 2 = 24 meal sets.",
+    "date": "12-23"
+   },
+   {
+    "id": "L3-secondthursday",
+    "level": 3,
+    "frame": "secondthursday",
+    "kind": "calendar_nth",
+    "topic": "Calendars",
+    "sub": "calendar.nth_weekday_date",
+    "family": "calendar",
+    "p": {
+     "day": 5,
+     "on": "Thursday",
+     "want": "Tuesday",
+     "nth": 3
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "17",
+    "shown": "17",
+    "units": [],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "18",
+     "16",
+     "19",
+     "15",
+     "34",
+     "27",
+     "7",
+     "170"
+    ],
+    "q": "In one month, the 5th is a Thursday. What is the date of the 3rd Tuesday in that month?",
+    "hint": "Find the first Tuesday of the month. Then add 7 for each next one.",
+    "why": "The first Tuesday is the 3rd. Adding 7 each time gives the 3rd, 10th and 17th. The 3rd Tuesday is the 17th.",
+    "date": "12-24"
+   },
+   {
+    "id": "L3-ricejar",
+    "level": 3,
+    "frame": "ricejar",
+    "kind": "container_mass",
+    "topic": "Mass",
+    "sub": "measurement.container_and_contents",
+    "family": "measurement",
+    "p": {
+     "full": 900,
+     "part": 520,
+     "num": 1,
+     "den": 2,
+     "ask": "jar"
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "140",
+    "shown": "140 g",
+    "units": [
+     "g",
+     "gram",
+     "grams"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "141",
+     "139",
+     "142",
+     "138",
+     "280",
+     "70",
+     "150",
+     "130",
+     "1400"
+    ],
+    "q": "A jar full of rice has a mass of 900 g. After half of the rice is poured out, the jar and the rice left have a mass of 520 g. What is the mass of the empty jar?",
+    "hint": "The rice poured out is the difference between the two masses. It was half of all the rice.",
+    "why": "The rice poured out has a mass of 900 − 520 = 380 g. That was half of the rice, so all the rice has a mass of 380 × 2 = 760 g. The empty jar has a mass of 900 − 760 = 140 g g.",
+    "date": "12-25"
+   },
+   {
+    "id": "L3-cubetower",
+    "level": 3,
+    "frame": "cubetower",
+    "kind": "square_stack",
+    "topic": "Stacks",
+    "sub": "stacks.layers_of_cubes",
+    "family": "stacks",
+    "p": {
+     "n": 7
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "140",
+    "shown": "140 cubes",
+    "units": [
+     "cubes",
+     "cube"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "141",
+     "139",
+     "142",
+     "138",
+     "280",
+     "70",
+     "150",
+     "130",
+     "1400"
+    ],
+    "q": "A cube tower has 7 layers. The top layer is 1 cube. Each layer below is a square that is one cube wider each way: 2 by 2, then 3 by 3, and so on. How many cubes are in the whole tower?",
+    "hint": "Find how many cubes are in each layer: 1, 4, 9 ... Then add the layers.",
+    "why": "The layers are 1 + 4 + 9 + 16 + 25 + 36 + 49. Added together they make 140 cubes.",
+    "date": "12-26"
    },
    {
     "id": "L3-digitvalue6482",
@@ -3590,52 +4063,92 @@
     "q": "In the number 6,482, how much more is the value of the digit 6 than the value of the digit 4?",
     "hint": "The 6 is in the thousands place and the 4 is in the hundreds place. Write the value of each.",
     "why": "The 6 means 6000. The 4 means 400. 6000 − 400 = 5600.",
-    "date": "12-17"
+    "date": "12-27"
    },
    {
-    "id": "L3-bigsumcards",
+    "id": "L3-fairtables",
     "level": 3,
-    "frame": "bigsumcards",
-    "kind": "cards_sum",
-    "topic": "Digit cards",
-    "sub": "digit_cards.max_sum",
-    "family": "digit_cards",
+    "frame": "fairtables",
+    "kind": "share",
+    "topic": "Equal groups",
+    "sub": "division.share",
+    "family": "division",
     "p": {
-     "digits": [
-      2,
-      5,
-      7,
-      9
-     ],
-     "shape": [
-      2,
-      2
-     ],
-     "ask": "max"
+     "total": 301,
+     "k": 8,
+     "ask": "boxes"
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "167",
-    "shown": "167",
-    "units": [],
+    "ans": "38",
+    "shown": "38 tables",
+    "units": [
+     "tables",
+     "table"
+    ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "168",
-     "166",
-     "169",
-     "165",
-     "334",
-     "177",
-     "157",
-     "1670"
+     "39",
+     "37",
+     "40",
+     "36",
+     "76",
+     "19",
+     "48",
+     "28",
+     "380"
     ],
-    "q": "Hui Min has four digit cards: 2, 5, 7 and 9. She arranges all four into two 2-digit numbers and adds them. What greatest total can she make?",
-    "hint": "The biggest digits should go in the tens places.",
-    "why": "Put 9 and 7 in the tens places and 5 and 2 in the ones places: 72 + 95 = 167.",
-    "date": "12-18"
+    "q": "There are 301 people at a school fair. Each table seats 8 people. How many tables must be set up so that everyone has a seat?",
+    "hint": "Divide the people by the seats at a table. What do you do with the remainder?",
+    "why": "37 tables seat 37 × 8 = 296 people. 5 people are left, and they need another table. So 38 tables must be set up.",
+    "date": "12-28"
+   },
+   {
+    "id": "L3-keyringtray",
+    "level": 3,
+    "frame": "keyringtray",
+    "kind": "worst_case",
+    "topic": "Worst case",
+    "sub": "strategy.worst_case",
+    "family": "strategy",
+    "p": {
+     "counts": [
+      12,
+      10,
+      8
+     ],
+     "need": 0,
+     "ask": "all_colours"
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "23",
+    "shown": "23 keyrings",
+    "units": [
+     "keyrings",
+     "keyring"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "24",
+     "22",
+     "25",
+     "21",
+     "46",
+     "33",
+     "13",
+     "230"
+    ],
+    "q": "A tray holds 12 pink, 10 orange and 8 purple keyrings. Priya picks keyrings without looking. How many must she pick to be sure of getting at least one of every colour?",
+    "hint": "Think of the unluckiest case: she keeps picking the two colours with the most keyrings.",
+    "why": "In the unluckiest case she picks all the pink and orange keyrings first: 12 + 10 = 22. The next keyring must be purple. So she must pick 22 + 1 = 23 keyrings.",
+    "date": "12-29"
    },
    {
     "id": "L3-bandmatch",
@@ -3705,526 +4218,50 @@
     "q": "Ali, Ben, Chen and Dina each play one instrument in the school band: piano, violin, guitar or drums. Ali does not play piano or drums. Ben plays violin. Chen does not play piano. Dina does not play guitar. Who plays piano?",
     "hint": "Ben plays violin, so nobody else does. Then work out who can play each remaining instrument.",
     "why": "Ali plays guitar, Ben plays violin, Chen plays drums, Dina plays piano. So Dina plays piano.",
-    "date": "12-19"
-   },
-   {
-    "id": "L3-beadbag",
-    "level": 3,
-    "frame": "beadbag",
-    "kind": "part_whole",
-    "topic": "Bar models",
-    "sub": "bonds.part_whole",
-    "family": "bonds",
-    "p": {
-     "total": 1000,
-     "parts": [
-      350,
-      275
-     ]
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "375",
-    "shown": "375 beads",
-    "units": [
-     "beads",
-     "bead"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "376",
-     "374",
-     "377",
-     "373",
-     "750",
-     "385",
-     "365",
-     "3750"
-    ],
-    "q": "A bag has 1000 beads. 350 beads are red and 275 beads are blue. The rest are green. How many green beads are in the bag?",
-    "hint": "Add the red and blue beads first. Then find how many more make 1000.",
-    "why": "350 + 275 = 625. 1000 − 625 = 375 beads.",
-    "date": "12-20"
-   },
-   {
-    "id": "L3-flagstrip",
-    "level": 3,
-    "frame": "flagstrip",
-    "kind": "repeat_pattern",
-    "topic": "Patterns",
-    "sub": "repeating_pattern.cycle",
-    "family": "repeating_pattern",
-    "p": {
-     "unit": [
-      "red",
-      "red",
-      "blue",
-      "green"
-     ],
-     "n": 30,
-     "ask": "count",
-     "item": "red"
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "16",
-    "shown": "16 flags",
-    "units": [
-     "flags",
-     "flag"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "17",
-     "15",
-     "18",
-     "14",
-     "32",
-     "8",
-     "26",
-     "6",
-     "160"
-    ],
-    "q": "A strip of flags repeats this pattern again and again: red, red, blue, green. The strip has 30 flags. How many flags are red?",
-    "hint": "How many flags are in one pattern? How many whole patterns fit in 30? What is left over?",
-    "why": "One pattern has 4 flags and 2 are red. 30 = 7 × 4 + 2, so there are 7 whole patterns and 2 flags left over. The 7 patterns have 14 red flags, and the 2 left-over flags are both red. 14 + 2 = 16 flags.",
-    "date": "12-21"
-   },
-   {
-    "id": "L3-eights",
-    "level": 3,
-    "frame": "eights",
-    "kind": "scan",
-    "topic": "Times tables",
-    "sub": "number_properties.multiples_count",
-    "family": "number_properties",
-    "p": {
-     "lo": 50,
-     "hi": 200,
-     "preds": [
-      [
-       "multiple",
-       8
-      ]
-     ],
-     "ask": "count"
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "19",
-    "shown": "19 numbers",
-    "units": [
-     "numbers",
-     "number"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "20",
-     "18",
-     "21",
-     "17",
-     "38",
-     "29",
-     "9",
-     "190"
-    ],
-    "q": "How many numbers from 50 to 200 are in the 8 times table?",
-    "hint": "Find the first multiple of 8 that is more than 50. Then keep adding 8.",
-    "why": "The multiples of 8 in this range are 56, 64, 72, ... 200. The first is 7 × 8 and the last is 25 × 8, so there are 25 − 7 + 1 = 19 numbers.",
-    "date": "12-22"
-   },
-   {
-    "id": "L3-fishmass",
-    "level": 3,
-    "frame": "fishmass",
-    "kind": "unit_convert",
-    "topic": "Measures",
-    "sub": "measurement.unit_convert",
-    "family": "measurement",
-    "p": {
-     "factor": 1000,
-     "big": 2,
-     "small": 85
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "2085",
-    "shown": "2085 g",
-    "units": [
-     "g",
-     "gram",
-     "grams"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "2086",
-     "2084",
-     "2087",
-     "2083",
-     "4170",
-     "2095",
-     "2075",
-     "20850"
-    ],
-    "q": "A big fish weighs 2 kg 85 g. Write the mass of the fish in grams.",
-    "hint": "One kilogram is 1000 grams. Change the kilograms to grams first.",
-    "why": "2 kg is 2000 g. 2000 + 85 = 2085 g.",
-    "date": "12-23"
-   },
-   {
-    "id": "L3-fourtiles",
-    "level": 3,
-    "frame": "fourtiles",
-    "kind": "polyomino",
-    "topic": "Shapes from squares",
-    "sub": "polyominoes.count_shapes",
-    "family": "polyominoes",
-    "p": {
-     "n": 4
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "5",
-    "shown": "5 shapes",
-    "units": [
-     "shapes",
-     "shape"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "6",
-     "4",
-     "7",
-     "3",
-     "10",
-     "15",
-     "50"
-    ],
-    "q": "A tile shape is made by joining 4 equal squares edge to edge. Turning a shape round or flipping it over does not make a new shape. How many different shapes can be made?",
-    "hint": "Start with 4 squares in a straight line. Then move one square at a time to get new shapes.",
-    "why": "The shapes are: a straight line of 4, an L shape, a T shape, a square of 2 by 2, and a zigzag shape. That is 5 shapes.",
-    "date": "12-24"
-   },
-   {
-    "id": "L3-canscollect",
-    "level": 3,
-    "frame": "canscollect",
-    "kind": "chain",
-    "topic": "Bar models",
-    "sub": "word_problems.compare_amounts",
-    "family": "word_problems",
-    "p": {
-     "base": 250,
-     "steps": [
-      [
-       "+",
-       130
-      ],
-      [
-       "-",
-       45
-      ]
-     ],
-     "ask": "sum"
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "965",
-    "shown": "965 cans",
-    "units": [
-     "cans",
-     "can"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "966",
-     "964",
-     "967",
-     "963",
-     "1930",
-     "975",
-     "955",
-     "9650"
-    ],
-    "q": "Class 3A collected 250 cans. Class 3B collected 130 more cans than Class 3A. Class 3C collected 45 fewer cans than Class 3B. How many cans did the three classes collect altogether?",
-    "hint": "Find the cans for Class 3B first. Then Class 3C. Then add all three.",
-    "why": "3B: 250 + 130 = 380. 3C: 380 − 45 = 335. Altogether: 250 + 380 + 335 = 965 cans.",
-    "date": "12-25"
-   },
-   {
-    "id": "L3-secondthursday",
-    "level": 3,
-    "frame": "secondthursday",
-    "kind": "calendar_nth",
-    "topic": "Calendars",
-    "sub": "calendar.nth_weekday_date",
-    "family": "calendar",
-    "p": {
-     "day": 5,
-     "on": "Thursday",
-     "want": "Tuesday",
-     "nth": 3
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "17",
-    "shown": "17",
-    "units": [],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "18",
-     "16",
-     "19",
-     "15",
-     "34",
-     "27",
-     "7",
-     "170"
-    ],
-    "q": "In one month, the 5th is a Thursday. What is the date of the 3rd Tuesday in that month?",
-    "hint": "Find the first Tuesday of the month. Then add 7 for each next one.",
-    "why": "The first Tuesday is the 3rd. Adding 7 each time gives the 3rd, 10th and 17th. The 3rd Tuesday is the 17th.",
-    "date": "12-26"
-   },
-   {
-    "id": "L3-keyringtray",
-    "level": 3,
-    "frame": "keyringtray",
-    "kind": "worst_case",
-    "topic": "Worst case",
-    "sub": "strategy.worst_case",
-    "family": "strategy",
-    "p": {
-     "counts": [
-      12,
-      10,
-      8
-     ],
-     "need": 0,
-     "ask": "all_colours"
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "23",
-    "shown": "23 keyrings",
-    "units": [
-     "keyrings",
-     "keyring"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "24",
-     "22",
-     "25",
-     "21",
-     "46",
-     "33",
-     "13",
-     "230"
-    ],
-    "q": "A tray holds 12 pink, 10 orange and 8 purple keyrings. Priya picks keyrings without looking. How many must she pick to be sure of getting at least one of every colour?",
-    "hint": "Think of the unluckiest case: she keeps picking the two colours with the most keyrings.",
-    "why": "In the unluckiest case she picks all the pink and orange keyrings first: 12 + 10 = 22. The next keyring must be purple. So she must pick 22 + 1 = 23 keyrings.",
-    "date": "12-27"
-   },
-   {
-    "id": "L3-longride",
-    "level": 3,
-    "frame": "longride",
-    "kind": "compound_units",
-    "topic": "Distances",
-    "sub": "measurement.compound_units",
-    "family": "measurement",
-    "p": {
-     "unit": "km",
-     "a": [
-      2,
-      450
-     ],
-     "b": [
-      1,
-      800
-     ],
-     "op": "sum"
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "4250",
-    "shown": "4250 m",
-    "units": [
-     "m",
-     "metre",
-     "metres",
-     "meter",
-     "meters"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "4251",
-     "4249",
-     "4252",
-     "4248",
-     "8500",
-     "2125",
-     "4260",
-     "4240",
-     "42500"
-    ],
-    "q": "Zack cycles 2 km 450 m in the morning and 1 km 800 m in the afternoon. How many metres does he cycle in the whole day?",
-    "hint": "Change each distance to metres first. One kilometre is 1000 metres.",
-    "why": "2 km 450 m is 2450 m and 1 km 800 m is 1800 m. 2450 + 1800 = 4250 m.",
-    "date": "12-28"
-   },
-   {
-    "id": "L3-clubs",
-    "level": 3,
-    "frame": "clubs",
-    "kind": "venn_both",
-    "topic": "Sets that overlap",
-    "sub": "sorting.overlap_both",
-    "family": "sorting",
-    "p": {
-     "total": 53,
-     "a": 40,
-     "b": 38,
-     "neither": 3
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "28",
-    "shown": "28 children",
-    "units": [
-     "children",
-     "children"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "29",
-     "27",
-     "30",
-     "26",
-     "56",
-     "14",
-     "38",
-     "18",
-     "280"
-    ],
-    "q": "In a class of 53 children, 40 are in the swimming club and 38 are in the cycling club. 3 children are in neither club. How many children are in both clubs?",
-    "hint": "Find how many children are in at least one club. Add the two clubs and compare.",
-    "why": "50 children are in at least one club. 40 + 38 = 78, and 78 is 28 more than 50. Those 28 were counted twice, so 28 children are in both.",
-    "date": "12-29"
-   },
-   {
-    "id": "L3-floortiles2",
-    "level": 3,
-    "frame": "floortiles2",
-    "kind": "rect",
-    "topic": "Area",
-    "sub": "perimeter_area.area_rectangle",
-    "family": "perimeter_area",
-    "p": {
-     "ask": "area",
-     "l": 13,
-     "w": 7
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "91",
-    "shown": "91 tiles",
-    "units": [
-     "tiles",
-     "tile"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "92",
-     "90",
-     "93",
-     "89",
-     "182",
-     "101",
-     "81",
-     "910"
-    ],
-    "q": "A classroom floor is a rectangle 13 m long and 7 m wide. Each floor tile covers exactly 1 square metre. How many tiles are needed to cover the whole floor?",
-    "hint": "Think of rows of tiles. How many rows? How many tiles in each row?",
-    "why": "7 rows with 13 tiles in each row: 7 × 13 = 91 tiles.",
     "date": "12-30"
    },
    {
-    "id": "L3-stonepyramid",
+    "id": "L3-mat168",
     "level": 3,
-    "frame": "stonepyramid",
-    "kind": "pyramid",
-    "topic": "Number pyramid",
-    "sub": "number_grid.number_pyramid",
-    "family": "number_grid",
+    "frame": "mat168",
+    "kind": "rect",
+    "topic": "Missing sides",
+    "sub": "perimeter_area.find_unknown",
+    "family": "perimeter_area",
     "p": {
-     "bottom": [
-      12,
-      0,
-      14,
-      9
-     ],
-     "ask": "missing",
-     "top": 162,
-     "hide": 1
+     "ask": "width_from_area",
+     "l": 14,
+     "A": 364
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "33",
-    "shown": "33",
-    "units": [],
+    "ans": "26",
+    "shown": "26 cm",
+    "units": [
+     "cm",
+     "centimetre",
+     "centimetres",
+     "centimeter",
+     "centimeters"
+    ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "34",
-     "32",
-     "35",
-     "31",
-     "66",
-     "43",
-     "23",
-     "330"
+     "27",
+     "25",
+     "28",
+     "24",
+     "52",
+     "13",
+     "36",
+     "16",
+     "260"
     ],
-    "q": "A number pyramid is built with stones. Every stone shows the sum of the two stones just below it. The lowest row shows 12, ?, 14, 9, and the stone at the peak shows 162. Which number is hidden in the lowest row?",
-    "hint": "Try a number for the hidden stone and work up to the peak. Then change it until the peak is right.",
-    "why": "Working up, the peak is 63 + 3 × the hidden number. 162 − 63 = 99, and 99 ÷ 3 = 33. Check: the peak is 63 + 99 = 162.",
+    "q": "A rectangular mat has an area of 364 square centimetres. It is 14 cm long. How wide is the mat?",
+    "hint": "Area is length times width. Which number times 14 makes 364?",
+    "why": "14 × 26 cm = 364. The mat is 26 cm wide.",
     "date": "12-31"
    }
   ],
@@ -4556,132 +4593,126 @@
     "date": "12-07"
    },
    {
-    "id": "L4-coins60",
+    "id": "L4-swaphundreds",
     "level": 4,
-    "frame": "coins60",
-    "kind": "coin_ways",
-    "topic": "Making amounts",
-    "sub": "coins.make_amount",
-    "family": "coins",
+    "frame": "swaphundreds",
+    "kind": "swap_digits",
+    "topic": "Place value",
+    "sub": "place_value.swap_digits",
+    "family": "place_value",
     "p": {
-     "target": 80,
-     "coins": [
-      50,
-      20,
-      10,
-      5
-     ]
+     "ask": "number",
+     "diff": 396,
+     "t": 5,
+     "h": 2
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "31",
-    "shown": "31 sets",
-    "units": [
-     "sets",
-     "set",
-     "ways",
-     "way"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "32",
-     "30",
-     "33",
-     "29",
-     "62",
-     "41",
-     "21",
-     "310"
-    ],
-    "q": "Hui Min pays exactly 80 cents using 50-cent, 20-cent, 10-cent and 5-cent coins. She may leave out a kind of coin if she likes. How many different sets of coins can she use?",
-    "hint": "Count by the 50-cent coins: she uses none or one. Then count the ways to make the rest.",
-    "why": "With no 50-cent coin, 80 cents is made from 20-, 10- and 5-cent coins in 25 ways. With one 50-cent coin, 30 cents are left: 6 ways. Altogether 25 + 6 = 31 sets.",
-    "date": "12-08"
-   },
-   {
-    "id": "L4-loaves",
-    "level": 4,
-    "frame": "loaves",
-    "kind": "growing_gaps",
-    "topic": "Number patterns",
-    "sub": "growing_pattern.growing_gaps",
-    "family": "growing_pattern",
-    "p": {
-     "first": 4,
-     "gap0": 2,
-     "n": 8
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "39",
-    "shown": "39 loaves",
-    "units": [
-     "loaves",
-     "loave"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "40",
-     "38",
-     "41",
-     "37",
-     "78",
-     "49",
-     "29",
-     "390"
-    ],
-    "q": "A baker bakes 4 loaves on Monday, 6 on Tuesday, 9 on Wednesday and 13 on Thursday. Each day she bakes more than the day before, and the extra loaves grow by 1 each day. How many loaves does she bake on the 8th day?",
-    "hint": "Write down the extra loaves each day: 2, then 3, then 4.",
-    "why": "The extras are 2, 3, 4, 5, 6, 7, 8. The loaves are 4, 6, 9, 13, 18, 24, 31, 39. On the 8th day she bakes 39 loaves.",
-    "date": "12-09"
-   },
-   {
-    "id": "L4-canpyramid",
-    "level": 4,
-    "frame": "canpyramid",
-    "kind": "pyramid",
-    "topic": "Number pyramid",
-    "sub": "number_grid.number_pyramid",
-    "family": "number_grid",
-    "p": {
-     "bottom": [
-      0,
-      5,
-      7,
-      4
-     ],
-     "ask": "missing",
-     "top": 73,
-     "hide": 0
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "33",
-    "shown": "33",
+    "ans": "256",
+    "shown": "256",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "34",
-     "32",
-     "35",
-     "31",
-     "66",
-     "43",
-     "23",
-     "330"
+     "257",
+     "255",
+     "258",
+     "254",
+     "512",
+     "128",
+     "266",
+     "246",
+     "2560"
     ],
-    "q": "In a number pyramid made of stones, each stone is the sum of the two stones under it. The lowest row is ?, 5, 7, 4 and the stone at the peak is 73. What is the hidden number?",
-    "hint": "Try a number for the hidden stone and work up to the peak. Then adjust it.",
-    "why": "Working up, the peak is the hidden number + 40. 73 − 40 = 33. Check: the peak is 33 + 40 = 73.",
+    "q": "Dina has a three-digit number. Its hundreds digit is 2 and its tens digit is 5. When she swaps the hundreds digit and the ones digit, the number becomes 396 bigger. What was her number?",
+    "hint": "Swapping the hundreds digit and the ones digit changes the number by the same amount as the difference of the two digits times 99.",
+    "why": "396 ÷ 99 = 4, so the ones digit is 4 more than the hundreds digit: 2 + 4 = 6. The number is 256. Check: 652 − 256 = 396.",
+    "date": "12-08"
+   },
+   {
+    "id": "L4-concert",
+    "level": 4,
+    "frame": "concert",
+    "kind": "schedule_breaks",
+    "topic": "Time",
+    "sub": "durations.schedule_with_breaks",
+    "family": "durations",
+    "p": {
+     "start_h": 18,
+     "start_m": 45,
+     "parts": 4,
+     "part_min": 35,
+     "break_min": 10,
+     "ask": "end24"
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "2135",
+    "shown": "2135",
+    "units": [],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "2136",
+     "2134",
+     "2137",
+     "2133",
+     "4270",
+     "2145",
+     "2125",
+     "21350"
+    ],
+    "q": "A school concert has 4 acts. Each act lasts 35 minutes. There is a 10-minute break between one act and the next, but none after the last act. The concert starts at 6:45 pm. At what time does it end? Write the time in 24-hour form, like 2105.",
+    "hint": "Count the breaks carefully. There is one fewer break than there are acts.",
+    "why": "4 acts last 4 × 35 = 140 minutes. There are 3 breaks: 3 × 10 = 30 minutes. 140 + 30 = 170 minutes, which is 2 h 50 min. 6:45 pm plus 2 h 50 min is 9:35 pm, which is 2135.",
+    "date": "12-09"
+   },
+   {
+    "id": "L4-mirrorgrid",
+    "level": 4,
+    "frame": "mirrorgrid",
+    "kind": "symmetry_add",
+    "topic": "Symmetry",
+    "sub": "symmetry.complete_figure",
+    "family": "symmetry",
+    "p": {
+     "grid": [
+      "##..#.",
+      ".#...#",
+      "..##..",
+      "#...#."
+     ],
+     "axis": "vertical"
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "5",
+    "shown": "5 squares",
+    "units": [
+     "squares",
+     "square"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "6",
+     "4",
+     "7",
+     "3",
+     "10",
+     "15",
+     "50"
+    ],
+    "q": "In the picture, some squares are shaded. The thick line is a line of symmetry, so the left side and the right side must be mirror images. How many more squares must be shaded to make the picture symmetrical?",
+    "hint": "Take each shaded square in turn. Where is its mirror image on the other side of the thick line?",
+    "why": "Each shaded square needs a shaded partner on the other side of the line. The first row needs 1 more, the second row 2, the third row 0 and the fourth row 2. That is 5 squares squares.",
+    "code": "■■□│□■□\n□■□│□□■\n□□■│■□□\n■□□│□■□",
     "date": "12-10"
    },
    {
@@ -4766,24 +4797,22 @@
     "date": "12-12"
    },
    {
-    "id": "L4-nighttrain",
+    "id": "L4-gainingclock",
     "level": 4,
-    "frame": "nighttrain",
-    "kind": "elapsed_overnight",
+    "frame": "gainingclock",
+    "kind": "faulty_clock",
     "topic": "Time",
-    "sub": "durations.elapsed",
-    "family": "durations",
+    "sub": "clock_reading.faulty_clock",
+    "family": "clock_reading",
     "p": {
-     "h1": 21,
-     "m1": 50,
-     "h2": 2,
-     "m2": 15
+     "g": 5,
+     "clock_min": 130
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "265",
-    "shown": "265 minutes",
+    "ans": "120",
+    "shown": "120 minutes",
     "units": [
      "min",
      "mins",
@@ -4794,18 +4823,19 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "266",
-     "264",
-     "267",
-     "263",
-     "530",
-     "275",
-     "255",
-     "2650"
+     "121",
+     "119",
+     "122",
+     "118",
+     "240",
+     "60",
+     "130",
+     "110",
+     "1200"
     ],
-    "q": "A night train leaves at 21:50 and arrives at 02:15 the next day. How many minutes does the journey take?",
-    "hint": "Count the time from 21:50 to midnight. Then add the time from midnight to 02:15.",
-    "why": "From 21:50 to midnight is 130 minutes. From midnight to 02:15 is 135 minutes. 130 + 135 = 265 minutes.",
+    "q": "A hall clock gains 5 minutes in every real hour. At 9:00 am it is set exactly right. Later the clock shows that 130 minutes have passed since 9:00 am. How many minutes have really passed?",
+    "hint": "In one real hour, the clock does not show 60 minutes. How many minutes does it show?",
+    "why": "In 60 real minutes the clock shows 60 + 5 = 65 minutes. 130 ÷ 65 = 2, so 2 real hours have passed: 2 × 60 = 120 minutes minutes.",
     "date": "12-13"
    },
    {
@@ -5335,51 +5365,56 @@
     "date": "12-25"
    },
    {
-    "id": "L4-machinefive",
+    "id": "L4-cubenet",
     "level": 4,
-    "frame": "machinefive",
-    "kind": "function_machine",
-    "topic": "Number machines",
-    "sub": "function_machine.find_the_rule",
-    "family": "function_machine",
+    "frame": "cubenet",
+    "kind": "net_opposite",
+    "topic": "Nets",
+    "sub": "shapes.cube_net_opposite",
+    "family": "shapes",
     "p": {
-     "pairs": [
-      [
-       4,
-       19
+     "cells": {
+      "A": [
+       0,
+       0
       ],
-      [
-       9,
-       44
+      "B": [
+       1,
+       0
+      ],
+      "C": [
+       1,
+       1
+      ],
+      "D": [
+       2,
+       1
+      ],
+      "E": [
+       2,
+       2
+      ],
+      "F": [
+       3,
+       2
       ]
-     ],
-     "x": 12,
-     "forms": [
-      "both"
-     ]
+     },
+     "ask": "A"
     },
     "t": {},
     "fmt": "int",
-    "type": "n",
-    "ans": "59",
-    "shown": "59",
+    "type": "s",
+    "ans": "d",
+    "shown": "D",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
-    "wrong": [
-     "60",
-     "58",
-     "61",
-     "57",
-     "118",
-     "69",
-     "49",
-     "590"
-    ],
-    "q": "A number machine multiplies every number by the same amount and then takes away the same amount. It turns 4 into 19 and 9 into 44. What does it turn 12 into?",
-    "hint": "Going from 4 to 9 adds 5 to the input. How much does the output grow?",
-    "why": "The input grew by 5 and the output grew by 25, so the machine multiplies by 5. 4 × 5 = 20, and 20 − 19 = 1, so it then takes away 1. For 12: 12 × 5 − 1 = 59.",
+    "wrong": [],
+    "q": "The picture shows a net made of six squares. The net is folded up to make a cube, with the letters on the outside. Which letter is on the face opposite the face marked A?",
+    "hint": "Pick one square to be the bottom of the cube. Fold its neighbours up around it, one at a time.",
+    "why": "Fold C flat as the bottom. B folds up as the back wall, and A, which is joined to B, becomes the left wall. D folds up as the right wall. E becomes the front wall, and F, joined to E, becomes the top. The left wall A faces the right wall D, so the answer is D.",
+    "code": "[A][B]\n    [C][D]\n        [E][F]",
     "date": "12-26"
    },
    {
@@ -5548,249 +5583,402 @@
     "date": "12-30"
    },
    {
-    "id": "L4-readchallenge",
+    "id": "L4-fakecoin",
     "level": 4,
-    "frame": "readchallenge",
-    "kind": "weekday",
-    "topic": "Days of the week",
-    "sub": "calendar.weekday_after",
-    "family": "calendar",
+    "frame": "fakecoin",
+    "kind": "fake_coin",
+    "topic": "Balance scale",
+    "sub": "strategy.fake_coin",
+    "family": "strategy",
     "p": {
-     "start": "Monday",
-     "days": 199
+     "ask": "min",
+     "n": 30
     },
-    "t": {
-     "n": 200
-    },
+    "t": {},
     "fmt": "int",
-    "type": "s",
-    "ans": "thursday",
-    "shown": "Thursday",
-    "units": [],
-    "prefix": [],
-    "accept": [
-     "thu"
+    "type": "n",
+    "ans": "4",
+    "shown": "4 weighings",
+    "units": [
+     "weighings",
+     "weighing"
     ],
+    "prefix": [],
+    "accept": [],
     "exact": false,
     "wrong": [
-     "Wednesday",
-     "Friday"
+     "5",
+     "3",
+     "6",
+     "2",
+     "8",
+     "14",
+     "40"
     ],
-    "q": "Dina begins a reading challenge on a Monday. The challenge lasts 200 days, and the first day counts as day 1. What day of the week is day 200?",
-    "hint": "Days repeat every 7. Day 200 is 199 days after day 1.",
-    "why": "199 days is 28 weeks and 3 days. 28 weeks after a Monday is a Monday, and 3 more days make it Thursday.",
+    "q": "There are 30 coins that look the same. One of them is a fake and is a little heavier than the others. You have a balance scale that shows which side is heavier, or that both sides are equal. What is the fewest number of weighings that is certain to find the fake coin?",
+    "hint": "Put the same number of coins on each side. What does the scale tell you if it balances, and what if it tips?",
+    "why": "Each weighing splits the coins into three groups: the left pan, the right pan and the coins left out. The scale shows which group has the fake coin. Three weighings can handle 3 × 3 × 3 = 27 coins, which is not enough for 30. Four weighings can handle 81 coins, so 4 weighings weighings are certain to work.",
     "date": "12-31"
    }
   ],
   "5": [
    {
-    "id": "L5-cycling",
+    "id": "L5-schooltwo",
     "level": 5,
-    "frame": "cycling",
-    "kind": "decimals",
-    "topic": "Decimals",
-    "sub": "decimals.add_subtract",
-    "family": "decimals",
+    "frame": "schooltwo",
+    "kind": "venn_both",
+    "topic": "Sets that overlap",
+    "sub": "sorting.overlap_both",
+    "family": "sorting",
     "p": {
-     "op": "+",
-     "a": "12.75",
-     "b": "8.9"
+     "total": 400,
+     "a": 240,
+     "b": 180,
+     "neither": 70
     },
     "t": {},
-    "fmt": "dec",
+    "fmt": "int",
     "type": "n",
-    "ans": "21.65",
-    "shown": "21.65 km",
+    "ans": "90",
+    "shown": "90 pupils",
     "units": [
-     "km",
-     "kilometre",
-     "kilometres",
-     "kilometer",
-     "kilometers"
+     "pupils",
+     "pupil"
     ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "22.65",
-     "20.65",
-     "23.65",
-     "19.65",
-     "43.3",
-     "10.825",
-     "31.65",
-     "11.65",
-     "22.15",
-     "216.5"
+     "91",
+     "89",
+     "92",
+     "88",
+     "180",
+     "45",
+     "100",
+     "80",
+     "900"
     ],
-    "q": "On Saturday, Daniel cycles 12.75 km. On Sunday he cycles 8.9 km. How far does he cycle altogether?",
-    "hint": "Write 8.9 as 8.90, and line up the decimal points.",
-    "why": "12.75 + 8.9 = 21.65 km.",
+    "q": "In a school of 400 pupils, 240 have a library card and 180 have a swimming badge. 70 pupils have neither. How many pupils have both a library card and a swimming badge?",
+    "hint": "Find how many pupils have at least one of the two. Then add the two groups and compare.",
+    "why": "330 pupils have at least one. 240 + 180 = 420, which is 90 more than 330. Those 90 were counted twice, so 90 pupils have both.",
     "date": "12-01"
    },
    {
-    "id": "L5-climbing",
+    "id": "L5-divquotient",
     "level": 5,
-    "frame": "climbing",
-    "kind": "scan",
-    "topic": "Number puzzles",
-    "sub": "digit_puzzles.count_by_digit_rule",
-    "family": "digit_puzzles",
+    "frame": "divquotient",
+    "kind": "reverse_division",
+    "topic": "Division with a remainder",
+    "sub": "division.reverse_division",
+    "family": "division",
     "p": {
-     "lo": 100,
-     "hi": 999,
-     "preds": [
-      [
-       "increasing",
-       null
-      ]
-     ],
-     "ask": "count"
+     "divisor": 13,
+     "quotient": 27,
+     "remainder": 9,
+     "ask": "new",
+     "add": 50
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "84",
-    "shown": "84 numbers",
-    "units": [
-     "numbers",
-     "number"
-    ],
+    "ans": "31",
+    "shown": "31",
+    "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "85",
-     "83",
-     "86",
-     "82",
-     "168",
-     "42",
-     "94",
-     "74",
-     "840"
+     "32",
+     "30",
+     "33",
+     "29",
+     "62",
+     "41",
+     "21",
+     "310"
     ],
-    "q": "A 3-digit number is a climbing number if each digit is bigger than the digit before it, like 358. How many 3-digit climbing numbers are there?",
-    "hint": "No climbing number can have a 0, because a 0 in the tens or ones place would be smaller than the digit before. Choose 3 different digits from 1 to 9 and write them in order.",
-    "why": "Each set of 3 different digits from 1 to 9 gives exactly one climbing number. There are 9 × 8 × 7 ÷ (3 × 2 × 1) = 504 ÷ 6 = 84 numbers.",
+    "q": "A number is divided by 13. The quotient is 27 and the remainder is 9. Add 50 to the number and divide the new number by 13. What is the new quotient?",
+    "hint": "First find the number. It is made of full groups of 13 and the remainder.",
+    "why": "27 × 13 = 351, and 351 + 9 = 360. Adding 50 gives 410. 410 ÷ 13 is 31 with a remainder, so the new quotient is 31.",
     "date": "12-02"
    },
    {
-    "id": "L5-sevendigit",
+    "id": "L5-lostnumber",
     "level": 5,
-    "frame": "sevendigit",
-    "kind": "digit_value_diff",
-    "topic": "Place value",
-    "sub": "place_value.build_number",
-    "family": "place_value",
+    "frame": "lostnumber",
+    "kind": "missing_term",
+    "topic": "Adding in order",
+    "sub": "series_sum.missing_term",
+    "family": "series_sum",
     "p": {
-     "n": 4652801,
-     "i": 0,
-     "j": 1
+     "n": 100,
+     "got": 5036
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "3400000",
-    "shown": "3,400,000",
+    "ans": "14",
+    "shown": "14",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "3400001",
-     "3399999",
-     "3400002",
-     "3399998",
-     "6800000",
-     "1700000",
-     "3400010",
-     "3399990",
-     "34000000"
+     "15",
+     "13",
+     "16",
+     "12",
+     "28",
+     "7",
+     "24",
+     "4",
+     "140"
     ],
-    "q": "The digits 4 and 6 in 4,652,801 are worth different amounts. Work out the gap between what the 4 is worth and what the 6 is worth.",
-    "hint": "The 4 is in the millions place and the 6 is in the hundred thousands place. Write the value of each.",
-    "why": "The 4 means 4,000,000. The 6 means 600,000. 4,000,000 − 600,000 = 3,400,000.",
+    "q": "Zara adds all the whole numbers from 1 to 100. Her answer is 5036, but she left out one number by mistake. Which number did she leave out?",
+    "hint": "Find the correct total first. Pair 1 with the biggest number, 2 with the next biggest, and so on.",
+    "why": "There are 100 ÷ 2 = 50 pairs, and each pair adds up to 1 + 100 = 101. The correct total is 50 × 101 = 5050. 5050 − 5036 = 14.",
     "date": "12-03"
    },
    {
-    "id": "L5-cardsmax5",
+    "id": "L5-culture",
     "level": 5,
-    "frame": "cardsmax5",
-    "kind": "cards_sum",
-    "topic": "Digit cards",
-    "sub": "digit_cards.max_sum",
-    "family": "digit_cards",
+    "frame": "culture",
+    "kind": "doubling",
+    "topic": "Growing patterns",
+    "sub": "growing_pattern.doubling",
+    "family": "growing_pattern",
     "p": {
-     "digits": [
-      3,
-      8,
-      1,
-      6,
-      4
-     ],
-     "shape": [
-      3,
-      2
-     ],
-     "ask": "max"
+     "start": 250,
+     "times": 6
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "904",
-    "shown": "904",
+    "ans": "16000",
+    "shown": "16,000 cells",
+    "units": [
+     "cells",
+     "cell"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "16001",
+     "15999",
+     "16002",
+     "15998",
+     "32000",
+     "8000",
+     "16010",
+     "15990",
+     "160000"
+    ],
+    "q": "A culture of bacteria has 250 cells. The number of cells doubles every hour. How many cells are there after 6 hours?",
+    "hint": "Double the number for each hour. Or multiply by 2 as many times as there are hours.",
+    "why": "The number doubles 6 times: 250, 500, 1000, 2000, 4000, 8000, 16000. After 6 hours there are 16,000 cells.",
+    "date": "12-04"
+   },
+   {
+    "id": "L5-eggboxes",
+    "level": 5,
+    "frame": "eggboxes",
+    "kind": "share",
+    "topic": "Remainders",
+    "sub": "division.leftover",
+    "family": "division",
+    "p": {
+     "total": 4583,
+     "k": 36,
+     "ask": "left"
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "11",
+    "shown": "11 chairs",
+    "units": [
+     "chairs",
+     "chair"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "12",
+     "10",
+     "13",
+     "9",
+     "22",
+     "21",
+     "1",
+     "110"
+    ],
+    "q": "A school has 4583 chairs to store. Each stack holds 36 chairs, and a stack is made only when it is full. How many chairs are left over after the full stacks are made?",
+    "hint": "Divide 4583 by 36. What is the remainder?",
+    "why": "127 × 36 = 4572, and 4583 − 4572 = 11. 11 chairs are left over.",
+    "date": "12-05"
+   },
+   {
+    "id": "L5-blockedroute",
+    "level": 5,
+    "frame": "blockedroute",
+    "kind": "lattice",
+    "topic": "Counting routes",
+    "sub": "counting_routes.grid_routes",
+    "family": "counting_routes",
+    "p": {
+     "right": 4,
+     "down": 3,
+     "blocked": [
+      [
+       2,
+       1
+      ]
+     ]
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "17",
+    "shown": "17 routes",
+    "units": [
+     "routes",
+     "route"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "18",
+     "16",
+     "19",
+     "15",
+     "34",
+     "27",
+     "7",
+     "170"
+    ],
+    "q": "A delivery robot moves along a grid from the top-left corner to the bottom-right corner. It goes only 4 blocks right and 3 blocks down, in any order. It must not pass the corner after 2 blocks right and 1 block down. How many routes can it take?",
+    "hint": "First count all the routes. Then take away the routes that pass through the blocked corner.",
+    "why": "All routes: 35. Routes through the blocked corner: 3 ways to reach it × 6 ways to go on from it = 18. 35 − 18 = 17 routes.",
+    "date": "12-06"
+   },
+   {
+    "id": "L5-circleout",
+    "level": 5,
+    "frame": "circleout",
+    "kind": "circle_out",
+    "topic": "Circle game",
+    "sub": "spatial.circle_elimination",
+    "family": "spatial",
+    "p": {
+     "n": 12,
+     "k": 3
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "10",
+    "shown": "10",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "905",
-     "903",
-     "906",
-     "902",
-     "1808",
-     "452",
-     "914",
-     "894",
-     "9040"
+     "11",
+     "9",
+     "12",
+     "8",
+     "20",
+     "5",
+     "0",
+     "100"
     ],
-    "q": "Wei Jie has five digit cards: 3, 8, 1, 6 and 4. He uses every card to make one 3-digit number and one 2-digit number. What is the biggest total he can make by adding the two numbers?",
-    "hint": "The biggest digits belong in the places with the most value.",
-    "why": "Put 8 at the front of the 3-digit number. The next biggest digits, 6 and 4, lead the tens columns. The rest fill the ones columns, so the numbers are 863 + 41. Their total is 904.",
-    "date": "12-04"
+    "q": "12 children stand in a circle and are numbered 1 to 12 going clockwise. Counting starts at child 1. Every 3rd child sits down, and the counting carries on round the circle, skipping the children who are already sitting. Which numbered child is the last one standing?",
+    "hint": "Write down the children in a row. Cross off every third child, carry on from where you stopped, and keep going round.",
+    "why": "The children sit down in this order: 3, 6, 9, 12, 4, 8, 1, 7, 2, 11, 5. The last child standing is number 10.",
+    "date": "12-07"
    },
    {
-    "id": "L5-christmas",
+    "id": "L5-diagline",
     "level": 5,
-    "frame": "christmas",
-    "kind": "weekday",
-    "topic": "Days of the week",
-    "sub": "calendar.weekday_after",
-    "family": "calendar",
+    "frame": "diagline",
+    "kind": "diagonal_squares",
+    "topic": "Squared paper",
+    "sub": "counting_grid.diagonal_squares",
+    "family": "counting_grid",
     "p": {
-     "start": "Saturday",
-     "days": 41
+     "w": 12,
+     "h": 18
     },
     "t": {},
     "fmt": "int",
-    "type": "s",
-    "ans": "friday",
-    "shown": "Friday",
-    "units": [],
-    "prefix": [],
-    "accept": [
-     "fri"
+    "type": "n",
+    "ans": "24",
+    "shown": "24 squares",
+    "units": [
+     "squares",
+     "square"
     ],
+    "prefix": [],
+    "accept": [],
     "exact": false,
     "wrong": [
-     "Saturday",
-     "Sunday"
+     "25",
+     "23",
+     "26",
+     "22",
+     "48",
+     "12",
+     "34",
+     "14",
+     "240"
     ],
-    "q": "On Saturday 14 November, Mei Ling counts the days to Christmas Day on 25 December. What day of the week is 25 December?",
-    "hint": "How many days are there from 14 November to 25 December? Then count the days left over after whole weeks.",
-    "why": "From 14 November to 14 December is 30 days. 14 December to 25 December is 11 more days. 30 + 11 = 41 days = 5 weeks and 6 days. Six days after Saturday is Friday.",
-    "date": "12-05"
+    "q": "A rectangle is drawn on squared paper. It is 12 squares wide and 18 squares tall. A straight line is drawn from one corner to the opposite corner. How many squares does the line pass through?",
+    "hint": "Try small rectangles first, such as 2 wide and 3 tall, and count the squares the line passes through.",
+    "why": "The line enters a new square each time it crosses a grid line. Inside the rectangle it crosses 11 lines going up and 17 lines going across. It passes through 5 grid points, where it crosses two lines at once. Counting the first square, that makes 1 + 11 + 17 − 5 = 24 squares squares.",
+    "date": "12-08"
+   },
+   {
+    "id": "L5-fourthwednesday",
+    "level": 5,
+    "frame": "fourthwednesday",
+    "kind": "calendar_nth",
+    "topic": "Calendars",
+    "sub": "calendar.nth_weekday_date",
+    "family": "calendar",
+    "p": {
+     "day": 3,
+     "on": "Saturday",
+     "want": "Wednesday",
+     "nth": 4
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "28",
+    "shown": "28",
+    "units": [],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "29",
+     "27",
+     "30",
+     "26",
+     "56",
+     "14",
+     "38",
+     "18",
+     "280"
+    ],
+    "q": "In one month, the 3rd is a Saturday. What is the date of the 4th Wednesday in that month?",
+    "hint": "Find the first Wednesday of the month. Then add 7 for each next one.",
+    "why": "The first Wednesday is the 7th. Adding 7 each time gives the 7th, 14th, 21st and 28th. The 4th Wednesday is the 28th.",
+    "date": "12-09"
    },
    {
     "id": "L5-subjects",
@@ -5888,295 +6076,214 @@
     "q": "Ali, Ben, Chen, Dina and Emily each choose a different club: robotics, art, choir, chess or drama. Ali chooses neither art nor drama. Ben chooses chess. Chen chooses neither robotics nor drama. Dina chooses none of art, choir or robotics. Emily chooses neither art nor choir. Who chooses robotics?",
     "hint": "Ben has chess, so nobody else does. Then work through what each remaining person can choose.",
     "why": "Ali chooses choir, Ben chooses chess, Chen chooses art, Dina chooses drama, Emily chooses robotics. So Emily chooses robotics.",
-    "date": "12-06"
-   },
-   {
-    "id": "L5-twelves",
-    "level": 5,
-    "frame": "twelves",
-    "kind": "scan",
-    "topic": "Multiples",
-    "sub": "number_properties.multiples_count",
-    "family": "number_properties",
-    "p": {
-     "lo": 100,
-     "hi": 500,
-     "preds": [
-      [
-       "multiple",
-       12
-      ]
-     ],
-     "ask": "count"
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "33",
-    "shown": "33 multiples",
-    "units": [
-     "multiples",
-     "multiple"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "34",
-     "32",
-     "35",
-     "31",
-     "66",
-     "43",
-     "23",
-     "330"
-    ],
-    "q": "How many multiples of 12 are there between 100 and 500?",
-    "hint": "Find the first multiple of 12 above 100. Then find the last one below 500.",
-    "why": "The first is 108 = 9 × 12 and the last is 492 = 41 × 12. From the 9th to the 41st multiple is 41 − 9 + 1 = 33 multiples.",
-    "date": "12-07"
-   },
-   {
-    "id": "L5-redeye",
-    "level": 5,
-    "frame": "redeye",
-    "kind": "elapsed_overnight",
-    "topic": "Time",
-    "sub": "durations.elapsed",
-    "family": "durations",
-    "p": {
-     "h1": 23,
-     "m1": 35,
-     "h2": 3,
-     "m2": 10
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "215",
-    "shown": "215 minutes",
-    "units": [
-     "min",
-     "mins",
-     "minute",
-     "minutes"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "216",
-     "214",
-     "217",
-     "213",
-     "430",
-     "225",
-     "205",
-     "2150"
-    ],
-    "q": "A flight leaves at 23:35 and lands at 03:10 the next day. How many minutes is the flight?",
-    "hint": "Count the time from 23:35 to midnight. Then add the time from midnight to 03:10.",
-    "why": "From 23:35 to midnight is 25 minutes. From midnight to 03:10 is 190 minutes. 25 + 190 = 215 minutes.",
-    "date": "12-08"
-   },
-   {
-    "id": "L5-teams16",
-    "level": 5,
-    "frame": "teams16",
-    "kind": "pairs",
-    "topic": "Pairs",
-    "sub": "counting_pairs.handshakes",
-    "family": "counting_pairs",
-    "p": {
-     "n": 15
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "105",
-    "shown": "105 matches",
-    "units": [
-     "matches",
-     "matche"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "106",
-     "104",
-     "107",
-     "103",
-     "210",
-     "115",
-     "95",
-     "1050"
-    ],
-    "q": "15 teams are in a league. Every team plays every other team exactly once. How many matches are played?",
-    "hint": "Each team plays 15 − 1 matches, but each match has two teams.",
-    "why": "Each of the 15 teams plays 14 matches, which makes 210. Each match was counted twice, so 210 ÷ 2 = 105 matches.",
-    "date": "12-09"
-   },
-   {
-    "id": "L5-rects43",
-    "level": 5,
-    "frame": "rects43",
-    "kind": "grid_count",
-    "topic": "Counting shapes",
-    "sub": "counting_grid.rectangles_in_grid",
-    "family": "counting_grid",
-    "p": {
-     "m": 3,
-     "n": 4,
-     "what": "rectangles"
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "60",
-    "shown": "60 rectangles",
-    "units": [
-     "rectangles",
-     "rectangle"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "61",
-     "59",
-     "62",
-     "58",
-     "120",
-     "30",
-     "70",
-     "50",
-     "600"
-    ],
-    "q": "A grid of small squares is 4 squares across and 3 squares down. How many rectangles of every size can you find in the grid, including squares?",
-    "hint": "Count the ways to choose a width along the top and the ways to choose a height down the side. Then multiply.",
-    "why": "Along 4 squares there are 4 + 3 + 2 + 1 = 10 widths. Down 3 squares there are 3 + 2 + 1 = 6 heights. 10 × 6 = 60 rectangles.",
     "date": "12-10"
    },
    {
-    "id": "L5-robotfive",
+    "id": "L5-sixpages",
     "level": 5,
-    "frame": "robotfive",
-    "kind": "turns",
-    "topic": "Left and right",
-    "sub": "spatial.turns_facing",
-    "family": "spatial",
+    "frame": "sixpages",
+    "kind": "consec",
+    "topic": "Number puzzles",
+    "sub": "consecutive.consecutive_total",
+    "family": "consecutive",
     "p": {
-     "start": "east",
-     "moves": [
-      "L",
-      "L",
-      "B",
-      "R",
-      "R"
-     ]
+     "count": 6,
+     "step": 1,
+     "total": 255,
+     "ask": "smallest"
     },
     "t": {},
     "fmt": "int",
-    "type": "s",
-    "ans": "west",
-    "shown": "west",
+    "type": "n",
+    "ans": "40",
+    "shown": "40",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "north",
-     "east",
-     "south"
+     "41",
+     "39",
+     "42",
+     "38",
+     "80",
+     "20",
+     "50",
+     "30",
+     "400"
     ],
-    "q": "A drone faces east. It turns left, then turns left again, then turns to face the opposite way, then turns right, then turns right. Which way does it face now: north, east, south or west?",
-    "hint": "Draw a small compass. Turn one step at a time and write the direction after each turn.",
-    "why": "Facing east, then north, then west, then east, then south, then west. After the turns the drone faces west.",
+    "q": "The page numbers of six pages that follow each other add up to 255. What is the smallest page number?",
+    "hint": "Call the smallest page number n. The others are n + 1, n + 2, up to n + 5.",
+    "why": "The six numbers add to 6n + 15 = 255. So 6n = 240 and n = 40.",
     "date": "12-11"
    },
    {
-    "id": "L5-eggboxes",
+    "id": "L5-cycling",
     "level": 5,
-    "frame": "eggboxes",
-    "kind": "share",
-    "topic": "Remainders",
-    "sub": "division.leftover",
-    "family": "division",
+    "frame": "cycling",
+    "kind": "decimals",
+    "topic": "Decimals",
+    "sub": "decimals.add_subtract",
+    "family": "decimals",
     "p": {
-     "total": 4583,
-     "k": 36,
-     "ask": "left"
+     "op": "+",
+     "a": "12.75",
+     "b": "8.9"
     },
     "t": {},
-    "fmt": "int",
+    "fmt": "dec",
     "type": "n",
-    "ans": "11",
-    "shown": "11 chairs",
+    "ans": "21.65",
+    "shown": "21.65 km",
     "units": [
-     "chairs",
-     "chair"
+     "km",
+     "kilometre",
+     "kilometres",
+     "kilometer",
+     "kilometers"
     ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "12",
-     "10",
-     "13",
-     "9",
-     "22",
-     "21",
-     "1",
-     "110"
+     "22.65",
+     "20.65",
+     "23.65",
+     "19.65",
+     "43.3",
+     "10.825",
+     "31.65",
+     "11.65",
+     "22.15",
+     "216.5"
     ],
-    "q": "A school has 4583 chairs to store. Each stack holds 36 chairs, and a stack is made only when it is full. How many chairs are left over after the full stacks are made?",
-    "hint": "Divide 4583 by 36. What is the remainder?",
-    "why": "127 × 36 = 4572, and 4583 − 4572 = 11. 11 chairs are left over.",
+    "q": "On Saturday, Daniel cycles 12.75 km. On Sunday he cycles 8.9 km. How far does he cycle altogether?",
+    "hint": "Write 8.9 as 8.90, and line up the decimal points.",
+    "why": "12.75 + 8.9 = 21.65 km.",
     "date": "12-12"
    },
    {
-    "id": "L5-fivebricks",
+    "id": "L5-stampgive",
     "level": 5,
-    "frame": "fivebricks",
-    "kind": "pyramid",
-    "topic": "Number pyramid",
-    "sub": "number_grid.number_pyramid",
-    "family": "number_grid",
+    "frame": "stampgive",
+    "kind": "equalise",
+    "topic": "Sharing fairly",
+    "sub": "word_problems.compare_amounts",
+    "family": "word_problems",
     "p": {
-     "bottom": [
-      2,
-      5,
-      0,
-      4,
-      1
-     ],
-     "ask": "missing",
-     "top": 81,
-     "hide": 2
+     "a": 215,
+     "b": 143
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "7",
-    "shown": "7",
-    "units": [],
+    "ans": "36",
+    "shown": "36 stamps",
+    "units": [
+     "stamps",
+     "stamp"
+    ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "8",
-     "6",
-     "9",
-     "5",
-     "14",
-     "17",
-     "70"
+     "37",
+     "35",
+     "38",
+     "34",
+     "72",
+     "18",
+     "46",
+     "26",
+     "360"
     ],
-    "q": "In a number pyramid every brick is the sum of the two bricks under it. The bottom row has five bricks: 2, 5, ?, 4, 1. The top brick is 81. What number is the hidden brick?",
-    "hint": "The hidden brick is counted several times in the top brick. Try a value and work up, then adjust.",
-    "why": "In the top brick the bricks of the bottom row are counted 1, 4, 6, 4 and 1 times. The known ones give 2 + 20 + 16 + 1 = 39, and 81 − 39 = 42 = 6 × 7.",
+    "q": "Mei Ling has 215 stamps and Ben has 143 stamps. Mei Ling hands some stamps to Ben so that each child ends up with the same number. How many stamps does she hand over?",
+    "hint": "Find how many more stamps Mei Ling has. Each stamp she gives moves across the gap.",
+    "why": "Mei Ling has 72 more. Each stamp given makes the gap 2 smaller, so she gives half of 72, which is 36 stamps. Check: they both have 179.",
     "date": "12-13"
+   },
+   {
+    "id": "L5-prismpyramid",
+    "level": 5,
+    "frame": "prismpyramid",
+    "kind": "solid_parts",
+    "topic": "Solid shapes",
+    "sub": "shapes.solid_parts",
+    "family": "shapes",
+    "p": {
+     "shapes": [
+      "triangular prism",
+      "square pyramid"
+     ],
+     "part": "faces"
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "10",
+    "shown": "10 faces",
+    "units": [
+     "faces",
+     "face"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "11",
+     "9",
+     "12",
+     "8",
+     "20",
+     "5",
+     "0",
+     "100"
+    ],
+    "q": "How many faces do a triangular prism and a square pyramid have altogether? A triangular prism has two triangle ends and three rectangle sides.",
+    "hint": "Count the faces of each solid separately. Then add.",
+    "why": "Counting separately, a triangular prism has 5 faces and a square pyramid has 5 faces. Altogether that is 10 faces.",
+    "date": "12-14"
+   },
+   {
+    "id": "L5-penboxes",
+    "level": 5,
+    "frame": "penboxes",
+    "kind": "times_as_many",
+    "topic": "Bar models",
+    "sub": "bar_model.times_as_many",
+    "family": "bar_model",
+    "p": {
+     "k": 4,
+     "total": 85,
+     "ask": "large"
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "68",
+    "shown": "68 pens",
+    "units": [
+     "pens",
+     "pen"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "69",
+     "67",
+     "70",
+     "66",
+     "136",
+     "34",
+     "78",
+     "58",
+     "680"
+    ],
+    "q": "A box of red pens has 4 times as many pens as a box of blue pens. Together the two boxes hold 85 pens. How many pens are in the box of red pens?",
+    "hint": "Draw one bar for the blue pens and a bar 4 times as long for the red pens.",
+    "why": "Blue is 1 part and red is 4 parts, so there are 5 parts. 85 ÷ 5 = 17 blue pens. Red: 4 × 17 = 68 pens.",
+    "date": "12-15"
    },
    {
     "id": "L5-ballholder",
@@ -6224,171 +6331,316 @@
     "q": "Kumar, Aisha and Ravi each say one thing about who is holding the school football. Kumar says: \"Aisha has the ball.\" Aisha says: \"Ravi has the ball.\" Ravi says: \"Aisha does not have the ball.\" Exactly two of them are telling the truth. Who is holding the football?",
     "hint": "Try each child as the one holding the ball. Count the true statements each time.",
     "why": "If Ravi has the ball: Kumar is false, Aisha is true, Ravi is true. That is exactly 2 true. No other child gives exactly 2 true. The answer is Ravi.",
-    "date": "12-14"
-   },
-   {
-    "id": "L5-roundtable",
-    "level": 5,
-    "frame": "roundtable",
-    "kind": "round_table",
-    "topic": "Counting orders",
-    "sub": "counting_choices.round_table",
-    "family": "counting_choices",
-    "p": {
-     "n": 7
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "720",
-    "shown": "720 plans",
-    "units": [
-     "plans",
-     "plan"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "721",
-     "719",
-     "722",
-     "718",
-     "1440",
-     "360",
-     "730",
-     "710",
-     "7200"
-    ],
-    "q": "7 friends sit round a circular table. Turning everyone round the table by the same number of seats does not make a new seating plan. How many different seating plans are there?",
-    "hint": "Fix one friend in one seat. Then the other friends can be arranged in the seats that remain.",
-    "why": "Fix one friend. The other 6 friends can fill the other seats in 6 × 5 × 4 × 3 × 2 × 1 ways, which is 720 plans.",
-    "date": "12-15"
-   },
-   {
-    "id": "L5-schooltwo",
-    "level": 5,
-    "frame": "schooltwo",
-    "kind": "venn_both",
-    "topic": "Sets that overlap",
-    "sub": "sorting.overlap_both",
-    "family": "sorting",
-    "p": {
-     "total": 400,
-     "a": 240,
-     "b": 180,
-     "neither": 70
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "90",
-    "shown": "90 pupils",
-    "units": [
-     "pupils",
-     "pupil"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "91",
-     "89",
-     "92",
-     "88",
-     "180",
-     "45",
-     "100",
-     "80",
-     "900"
-    ],
-    "q": "In a school of 400 pupils, 240 have a library card and 180 have a swimming badge. 70 pupils have neither. How many pupils have both a library card and a swimming badge?",
-    "hint": "Find how many pupils have at least one of the two. Then add the two groups and compare.",
-    "why": "330 pupils have at least one. 240 + 180 = 420, which is 90 more than 330. Those 90 were counted twice, so 90 pupils have both.",
     "date": "12-16"
    },
    {
-    "id": "L5-penboxes",
+    "id": "L5-twelves",
     "level": 5,
-    "frame": "penboxes",
-    "kind": "times_as_many",
-    "topic": "Bar models",
-    "sub": "bar_model.times_as_many",
-    "family": "bar_model",
+    "frame": "twelves",
+    "kind": "scan",
+    "topic": "Multiples",
+    "sub": "number_properties.multiples_count",
+    "family": "number_properties",
     "p": {
-     "k": 4,
-     "total": 85,
-     "ask": "large"
+     "lo": 100,
+     "hi": 500,
+     "preds": [
+      [
+       "multiple",
+       12
+      ]
+     ],
+     "ask": "count"
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "68",
-    "shown": "68 pens",
+    "ans": "33",
+    "shown": "33 multiples",
     "units": [
-     "pens",
-     "pen"
+     "multiples",
+     "multiple"
     ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "69",
-     "67",
-     "70",
-     "66",
-     "136",
      "34",
-     "78",
-     "58",
-     "680"
+     "32",
+     "35",
+     "31",
+     "66",
+     "43",
+     "23",
+     "330"
     ],
-    "q": "A box of red pens has 4 times as many pens as a box of blue pens. Together the two boxes hold 85 pens. How many pens are in the box of red pens?",
-    "hint": "Draw one bar for the blue pens and a bar 4 times as long for the red pens.",
-    "why": "Blue is 1 part and red is 4 parts, so there are 5 parts. 85 ÷ 5 = 17 blue pens. Red: 4 × 17 = 68 pens.",
+    "q": "How many multiples of 12 are there between 100 and 500?",
+    "hint": "Find the first multiple of 12 above 100. Then find the last one below 500.",
+    "why": "The first is 108 = 9 × 12 and the last is 492 = 41 × 12. From the 9th to the 41st multiple is 41 − 9 + 1 = 33 multiples.",
     "date": "12-17"
    },
    {
-    "id": "L5-prismpyramid",
+    "id": "L5-fourside",
     "level": 5,
-    "frame": "prismpyramid",
-    "kind": "solid_parts",
-    "topic": "Solid shapes",
-    "sub": "shapes.solid_parts",
-    "family": "shapes",
+    "frame": "fourside",
+    "kind": "angle",
+    "topic": "Angles",
+    "sub": "angles.missing_angle",
+    "family": "angles",
     "p": {
-     "shapes": [
-      "triangular prism",
-      "square pyramid"
-     ],
-     "part": "faces"
+     "kind": "sum",
+     "total": 360,
+     "given": [
+      95,
+      110,
+      70
+     ]
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "10",
-    "shown": "10 faces",
+    "ans": "85",
+    "shown": "85°",
     "units": [
-     "faces",
-     "face"
+     "°",
+     "deg",
+     "degree",
+     "degrees"
     ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "11",
-     "9",
-     "12",
-     "8",
-     "20",
-     "5",
-     "0",
-     "100"
+     "86",
+     "84",
+     "87",
+     "83",
+     "170",
+     "95",
+     "75",
+     "850"
     ],
-    "q": "How many faces do a triangular prism and a square pyramid have altogether? A triangular prism has two triangle ends and three rectangle sides.",
-    "hint": "Count the faces of each solid separately. Then add.",
-    "why": "Counting separately, a triangular prism has 5 faces and a square pyramid has 5 faces. Altogether that is 10 faces.",
+    "q": "Three angles of a four-sided shape are 95°, 110° and 70°. The four angles of any four-sided shape add up to 360°. How big is the fourth angle?",
+    "hint": "Add the three angles you know. Then take the total away from 360°.",
+    "why": "95 + 110 + 70 = 275. 360 − 275 = 85°.",
     "date": "12-18"
+   },
+   {
+    "id": "L5-sunflowerfall",
+    "level": 5,
+    "frame": "sunflowerfall",
+    "kind": "series_gap",
+    "topic": "Line graphs",
+    "sub": "graphs.line_graph_biggest_change",
+    "family": "graphs",
+    "p": {
+     "values": [
+      120,
+      135,
+      158,
+      170,
+      205
+     ],
+     "ask": "biggest_rise"
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "35",
+    "shown": "35 cm",
+    "units": [
+     "cm",
+     "centimetre",
+     "centimetres",
+     "centimeter",
+     "centimeters"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "36",
+     "34",
+     "37",
+     "33",
+     "70",
+     "45",
+     "25",
+     "350"
+    ],
+    "q": "A line graph shows the height of a tree in cm at the end of each year: 120, 135, 158, 170 and 205. In which year did the tree grow the most? Give the growth in that year in centimetres.",
+    "hint": "Find the growth in each year by taking each reading from the next one.",
+    "why": "The growths are 15, 23, 12, 35. The biggest is 35 cm.",
+    "date": "12-19"
+   },
+   {
+    "id": "L5-redeye",
+    "level": 5,
+    "frame": "redeye",
+    "kind": "elapsed_overnight",
+    "topic": "Time",
+    "sub": "durations.elapsed",
+    "family": "durations",
+    "p": {
+     "h1": 23,
+     "m1": 35,
+     "h2": 3,
+     "m2": 10
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "215",
+    "shown": "215 minutes",
+    "units": [
+     "min",
+     "mins",
+     "minute",
+     "minutes"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "216",
+     "214",
+     "217",
+     "213",
+     "430",
+     "225",
+     "205",
+     "2150"
+    ],
+    "q": "A flight leaves at 23:35 and lands at 03:10 the next day. How many minutes is the flight?",
+    "hint": "Count the time from 23:35 to midnight. Then add the time from midnight to 03:10.",
+    "why": "From 23:35 to midnight is 25 minutes. From midnight to 03:10 is 190 minutes. 25 + 190 = 215 minutes.",
+    "date": "12-20"
+   },
+   {
+    "id": "L5-riverboat",
+    "level": 5,
+    "frame": "riverboat",
+    "kind": "ferry_trips",
+    "topic": "Crossings",
+    "sub": "moves.ferry_trips",
+    "family": "moves",
+    "p": {
+     "people": 23,
+     "cap": 5
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "11",
+    "shown": "11 crossings",
+    "units": [
+     "crossings",
+     "crossing"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "12",
+     "10",
+     "13",
+     "9",
+     "22",
+     "21",
+     "1",
+     "110"
+    ],
+    "q": "23 scouts must cross a river in a boat that holds at most 5 people. The boat cannot cross by itself, so at least one scout must row it each time. How many crossings does the boat make in all, counting the trips back as well as the trips across?",
+    "hint": "The boat can carry 5 scouts, but one scout must row back after every crossing except the last. How many scouts can one trip across and one trip back move for good?",
+    "why": "Each trip across and back moves 5 − 1 = 4 scouts across for good, because one scout rows back. The last crossing carries 5 scouts and needs no trip back. So 23 − 5 = 18 scouts must be moved by round trips, and 18 ÷ 4 is 4 and a half, so 5 round trips are needed. 5 round trips are 5 × 2 = 10 crossings, and the last crossing makes it 11 crossings.",
+    "date": "12-21"
+   },
+   {
+    "id": "L5-cardsmax5",
+    "level": 5,
+    "frame": "cardsmax5",
+    "kind": "cards_sum",
+    "topic": "Digit cards",
+    "sub": "digit_cards.max_sum",
+    "family": "digit_cards",
+    "p": {
+     "digits": [
+      3,
+      8,
+      1,
+      6,
+      4
+     ],
+     "shape": [
+      3,
+      2
+     ],
+     "ask": "max"
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "904",
+    "shown": "904",
+    "units": [],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "905",
+     "903",
+     "906",
+     "902",
+     "1808",
+     "452",
+     "914",
+     "894",
+     "9040"
+    ],
+    "q": "Wei Jie has five digit cards: 3, 8, 1, 6 and 4. He uses every card to make one 3-digit number and one 2-digit number. What is the biggest total he can make by adding the two numbers?",
+    "hint": "The biggest digits belong in the places with the most value.",
+    "why": "Put 8 at the front of the 3-digit number. The next biggest digits, 6 and 4, lead the tens columns. The rest fill the ones columns, so the numbers are 863 + 41. Their total is 904.",
+    "date": "12-22"
+   },
+   {
+    "id": "L5-committee",
+    "level": 5,
+    "frame": "committee",
+    "kind": "perm_count",
+    "topic": "Choosing officers",
+    "sub": "counting_choices.orders",
+    "family": "counting_choices",
+    "p": {
+     "n": 9,
+     "k": 3
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "504",
+    "shown": "504 ways",
+    "units": [
+     "ways",
+     "way"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "505",
+     "503",
+     "506",
+     "502",
+     "1008",
+     "252",
+     "514",
+     "494",
+     "5040"
+    ],
+    "q": "A club of 9 members chooses a president, a secretary and a treasurer. No member can have two jobs. In how many different ways can the three jobs be filled?",
+    "hint": "Choose the president first. Then see how many members are left for secretary.",
+    "why": "9 choices for president, 8 for secretary and 7 for treasurer. 9 × 8 × 7 = 504 ways.",
+    "date": "12-23"
    },
    {
     "id": "L5-mangoes",
@@ -6437,7 +6689,7 @@
     "q": "A fruit seller sold half of her mangoes in the morning. In the afternoon she sold 12 more. She has 19 mangoes left. How many mangoes did she have at the start of the day?",
     "hint": "Work backwards. Put back the mangoes sold in the afternoon. Then double.",
     "why": "Put back the 12: 19 + 12 = 31. These are half of the mangoes, so double: 31 × 2 = 62 mangoes.",
-    "date": "12-19"
+    "date": "12-24"
    },
    {
     "id": "L5-routeplan",
@@ -6517,315 +6769,7 @@
     "q": "Roads in kilometres: Home to Mall 12, Home to Park 10, Mall to Park 4, Mall to Pool 16, Park to Pool 20, Park to Zoo 26, Pool to Zoo 6. What is the shortest way from Home to the Zoo, in kilometres?",
     "hint": "List the routes from Home to the Zoo, and add up the road lengths on each route.",
     "why": "The best route is Home-Mall-Pool-Zoo: 12 + 16 + 6 = 34 km. Home-Park-Zoo is 10 + 26 = 36, and Home-Park-Pool-Zoo is 10 + 20 + 6 = 36.",
-    "date": "12-20"
-   },
-   {
-    "id": "L5-machinesix",
-    "level": 5,
-    "frame": "machinesix",
-    "kind": "function_machine",
-    "topic": "Number machines",
-    "sub": "function_machine.find_the_rule",
-    "family": "function_machine",
-    "p": {
-     "pairs": [
-      [
-       6,
-       26
-      ],
-      [
-       11,
-       51
-      ]
-     ],
-     "x": 15,
-     "forms": [
-      "both"
-     ]
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "71",
-    "shown": "71",
-    "units": [],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "72",
-     "70",
-     "73",
-     "69",
-     "142",
-     "81",
-     "61",
-     "710"
-    ],
-    "q": "A number machine multiplies every number by the same amount and then takes away the same amount. It turns 6 into 26 and 11 into 51. What does it turn 15 into?",
-    "hint": "Going from 6 to 11 adds 5 to the input. How much does the output grow?",
-    "why": "The input grew by 5 and the output grew by 25, so the machine multiplies by 5. 6 × 5 = 30, and 30 − 26 = 4, so it then takes away 4. For 15: 15 × 5 − 4 = 71.",
-    "date": "12-21"
-   },
-   {
-    "id": "L5-culture",
-    "level": 5,
-    "frame": "culture",
-    "kind": "doubling",
-    "topic": "Growing patterns",
-    "sub": "growing_pattern.doubling",
-    "family": "growing_pattern",
-    "p": {
-     "start": 250,
-     "times": 6
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "16000",
-    "shown": "16,000 cells",
-    "units": [
-     "cells",
-     "cell"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "16001",
-     "15999",
-     "16002",
-     "15998",
-     "32000",
-     "8000",
-     "16010",
-     "15990",
-     "160000"
-    ],
-    "q": "A culture of bacteria has 250 cells. The number of cells doubles every hour. How many cells are there after 6 hours?",
-    "hint": "Double the number for each hour. Or multiply by 2 as many times as there are hours.",
-    "why": "The number doubles 6 times: 250, 500, 1000, 2000, 4000, 8000, 16000. After 6 hours there are 16,000 cells.",
-    "date": "12-22"
-   },
-   {
-    "id": "L5-fiftycents",
-    "level": 5,
-    "frame": "fiftycents",
-    "kind": "coin_ways",
-    "topic": "Counting ways",
-    "sub": "coins.make_amount",
-    "family": "coins",
-    "p": {
-     "target": 120,
-     "coins": [
-      50,
-      20,
-      10,
-      5
-     ]
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "73",
-    "shown": "73 sets",
-    "units": [
-     "sets",
-     "set",
-     "ways",
-     "way"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "74",
-     "72",
-     "75",
-     "71",
-     "146",
-     "83",
-     "63",
-     "730"
-    ],
-    "q": "Priya pays exactly 120 cents using 50-cent, 20-cent, 10-cent and 5-cent coins. She may leave out a kind of coin if she likes. How many different sets of coins can she use?",
-    "hint": "Count by the number of 50-cent coins: none, one or two. Then count the ways to make the rest with the smaller coins.",
-    "why": "With no 50-cent coin: 49 ways. With one 50-cent coin, 70 cents are left: 20 ways. With two 50-cent coins, 20 cents are left: 4 ways. 49 + 20 + 4 = 73 sets.",
-    "date": "12-23"
-   },
-   {
-    "id": "L5-stampgive",
-    "level": 5,
-    "frame": "stampgive",
-    "kind": "equalise",
-    "topic": "Sharing fairly",
-    "sub": "word_problems.compare_amounts",
-    "family": "word_problems",
-    "p": {
-     "a": 215,
-     "b": 143
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "36",
-    "shown": "36 stamps",
-    "units": [
-     "stamps",
-     "stamp"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "37",
-     "35",
-     "38",
-     "34",
-     "72",
-     "18",
-     "46",
-     "26",
-     "360"
-    ],
-    "q": "Mei Ling has 215 stamps and Ben has 143 stamps. Mei Ling hands some stamps to Ben so that each child ends up with the same number. How many stamps does she hand over?",
-    "hint": "Find how many more stamps Mei Ling has. Each stamp she gives moves across the gap.",
-    "why": "Mei Ling has 72 more. Each stamp given makes the gap 2 smaller, so she gives half of 72, which is 36 stamps. Check: they both have 179.",
-    "date": "12-24"
-   },
-   {
-    "id": "L5-fourside",
-    "level": 5,
-    "frame": "fourside",
-    "kind": "angle",
-    "topic": "Angles",
-    "sub": "angles.missing_angle",
-    "family": "angles",
-    "p": {
-     "kind": "sum",
-     "total": 360,
-     "given": [
-      95,
-      110,
-      70
-     ]
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "85",
-    "shown": "85°",
-    "units": [
-     "°",
-     "deg",
-     "degree",
-     "degrees"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "86",
-     "84",
-     "87",
-     "83",
-     "170",
-     "95",
-     "75",
-     "850"
-    ],
-    "q": "Three angles of a four-sided shape are 95°, 110° and 70°. The four angles of any four-sided shape add up to 360°. How big is the fourth angle?",
-    "hint": "Add the three angles you know. Then take the total away from 360°.",
-    "why": "95 + 110 + 70 = 275. 360 − 275 = 85°.",
     "date": "12-25"
-   },
-   {
-    "id": "L5-sunflowerfall",
-    "level": 5,
-    "frame": "sunflowerfall",
-    "kind": "series_gap",
-    "topic": "Line graphs",
-    "sub": "graphs.line_graph_biggest_change",
-    "family": "graphs",
-    "p": {
-     "values": [
-      120,
-      135,
-      158,
-      170,
-      205
-     ],
-     "ask": "biggest_rise"
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "35",
-    "shown": "35 cm",
-    "units": [
-     "cm",
-     "centimetre",
-     "centimetres",
-     "centimeter",
-     "centimeters"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "36",
-     "34",
-     "37",
-     "33",
-     "70",
-     "45",
-     "25",
-     "350"
-    ],
-    "q": "A line graph shows the height of a tree in cm at the end of each year: 120, 135, 158, 170 and 205. In which year did the tree grow the most? Give the growth in that year in centimetres.",
-    "hint": "Find the growth in each year by taking each reading from the next one.",
-    "why": "The growths are 15, 23, 12, 35. The biggest is 35 cm.",
-    "date": "12-26"
-   },
-   {
-    "id": "L5-committee",
-    "level": 5,
-    "frame": "committee",
-    "kind": "perm_count",
-    "topic": "Choosing officers",
-    "sub": "counting_choices.orders",
-    "family": "counting_choices",
-    "p": {
-     "n": 9,
-     "k": 3
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "504",
-    "shown": "504 ways",
-    "units": [
-     "ways",
-     "way"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "505",
-     "503",
-     "506",
-     "502",
-     "1008",
-     "252",
-     "514",
-     "494",
-     "5040"
-    ],
-    "q": "A club of 9 members chooses a president, a secretary and a treasurer. No member can have two jobs. In how many different ways can the three jobs be filled?",
-    "hint": "Choose the president first. Then see how many members are left for secretary.",
-    "why": "9 choices for president, 8 for secretary and 7 for treasurer. 9 × 8 × 7 = 504 ways.",
-    "date": "12-27"
    },
    {
     "id": "L5-flourbags",
@@ -6869,129 +6813,208 @@
     "q": "Each bag of flour weighs 0.35 kg. Aunty buys 12 bags. Find the total weight of the flour in kilograms.",
     "hint": "Multiply 35 × 12 first. Then think about where the decimal point goes.",
     "why": "0.35 × 12 = 4.2 kg.",
-    "date": "12-28"
+    "date": "12-26"
    },
    {
-    "id": "L5-sixpages",
+    "id": "L5-rects43",
     "level": 5,
-    "frame": "sixpages",
-    "kind": "consec",
-    "topic": "Number puzzles",
-    "sub": "consecutive.consecutive_total",
-    "family": "consecutive",
+    "frame": "rects43",
+    "kind": "grid_count",
+    "topic": "Counting shapes",
+    "sub": "counting_grid.rectangles_in_grid",
+    "family": "counting_grid",
     "p": {
-     "count": 6,
-     "step": 1,
-     "total": 255,
-     "ask": "smallest"
+     "m": 3,
+     "n": 4,
+     "what": "rectangles"
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "40",
-    "shown": "40",
-    "units": [],
+    "ans": "60",
+    "shown": "60 rectangles",
+    "units": [
+     "rectangles",
+     "rectangle"
+    ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "41",
-     "39",
-     "42",
-     "38",
-     "80",
-     "20",
-     "50",
+     "61",
+     "59",
+     "62",
+     "58",
+     "120",
      "30",
-     "400"
+     "70",
+     "50",
+     "600"
     ],
-    "q": "The page numbers of six pages that follow each other add up to 255. What is the smallest page number?",
-    "hint": "Call the smallest page number n. The others are n + 1, n + 2, up to n + 5.",
-    "why": "The six numbers add to 6n + 15 = 255. So 6n = 240 and n = 40.",
-    "date": "12-29"
+    "q": "A grid of small squares is 4 squares across and 3 squares down. How many rectangles of every size can you find in the grid, including squares?",
+    "hint": "Count the ways to choose a width along the top and the ways to choose a height down the side. Then multiply.",
+    "why": "Along 4 squares there are 4 + 3 + 2 + 1 = 10 widths. Down 3 squares there are 3 + 2 + 1 = 6 heights. 10 × 6 = 60 rectangles.",
+    "date": "12-27"
    },
    {
-    "id": "L5-blockedroute",
+    "id": "L5-climbing",
     "level": 5,
-    "frame": "blockedroute",
-    "kind": "lattice",
-    "topic": "Counting routes",
-    "sub": "counting_routes.grid_routes",
-    "family": "counting_routes",
+    "frame": "climbing",
+    "kind": "scan",
+    "topic": "Number puzzles",
+    "sub": "digit_puzzles.count_by_digit_rule",
+    "family": "digit_puzzles",
     "p": {
-     "right": 4,
-     "down": 3,
-     "blocked": [
+     "lo": 100,
+     "hi": 999,
+     "preds": [
       [
-       2,
-       1
+       "increasing",
+       null
       ]
+     ],
+     "ask": "count"
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "84",
+    "shown": "84 numbers",
+    "units": [
+     "numbers",
+     "number"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "85",
+     "83",
+     "86",
+     "82",
+     "168",
+     "42",
+     "94",
+     "74",
+     "840"
+    ],
+    "q": "A 3-digit number is a climbing number if each digit is bigger than the digit before it, like 358. How many 3-digit climbing numbers are there?",
+    "hint": "No climbing number can have a 0, because a 0 in the tens or ones place would be smaller than the digit before. Choose 3 different digits from 1 to 9 and write them in order.",
+    "why": "Each set of 3 different digits from 1 to 9 gives exactly one climbing number. There are 9 × 8 × 7 ÷ (3 × 2 × 1) = 504 ÷ 6 = 84 numbers.",
+    "date": "12-28"
+   },
+   {
+    "id": "L5-robotfive",
+    "level": 5,
+    "frame": "robotfive",
+    "kind": "turns",
+    "topic": "Left and right",
+    "sub": "spatial.turns_facing",
+    "family": "spatial",
+    "p": {
+     "start": "east",
+     "moves": [
+      "L",
+      "L",
+      "B",
+      "R",
+      "R"
      ]
     },
     "t": {},
     "fmt": "int",
-    "type": "n",
-    "ans": "17",
-    "shown": "17 routes",
-    "units": [
-     "routes",
-     "route"
-    ],
-    "prefix": [],
-    "accept": [],
-    "exact": false,
-    "wrong": [
-     "18",
-     "16",
-     "19",
-     "15",
-     "34",
-     "27",
-     "7",
-     "170"
-    ],
-    "q": "A delivery robot moves along a grid from the top-left corner to the bottom-right corner. It goes only 4 blocks right and 3 blocks down, in any order. It must not pass the corner after 2 blocks right and 1 block down. How many routes can it take?",
-    "hint": "First count all the routes. Then take away the routes that pass through the blocked corner.",
-    "why": "All routes: 35. Routes through the blocked corner: 3 ways to reach it × 6 ways to go on from it = 18. 35 − 18 = 17 routes.",
-    "date": "12-30"
-   },
-   {
-    "id": "L5-fourthwednesday",
-    "level": 5,
-    "frame": "fourthwednesday",
-    "kind": "calendar_nth",
-    "topic": "Calendars",
-    "sub": "calendar.nth_weekday_date",
-    "family": "calendar",
-    "p": {
-     "day": 3,
-     "on": "Saturday",
-     "want": "Wednesday",
-     "nth": 4
-    },
-    "t": {},
-    "fmt": "int",
-    "type": "n",
-    "ans": "28",
-    "shown": "28",
+    "type": "s",
+    "ans": "west",
+    "shown": "west",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "29",
-     "27",
-     "30",
-     "26",
-     "56",
-     "14",
-     "38",
-     "18",
-     "280"
+     "north",
+     "east",
+     "south"
     ],
-    "q": "In one month, the 3rd is a Saturday. What is the date of the 4th Wednesday in that month?",
-    "hint": "Find the first Wednesday of the month. Then add 7 for each next one.",
-    "why": "The first Wednesday is the 7th. Adding 7 each time gives the 7th, 14th, 21st and 28th. The 4th Wednesday is the 28th.",
+    "q": "A drone faces east. It turns left, then turns left again, then turns to face the opposite way, then turns right, then turns right. Which way does it face now: north, east, south or west?",
+    "hint": "Draw a small compass. Turn one step at a time and write the direction after each turn.",
+    "why": "Facing east, then north, then west, then east, then south, then west. After the turns the drone faces west.",
+    "date": "12-29"
+   },
+   {
+    "id": "L5-sevendigit",
+    "level": 5,
+    "frame": "sevendigit",
+    "kind": "digit_value_diff",
+    "topic": "Place value",
+    "sub": "place_value.build_number",
+    "family": "place_value",
+    "p": {
+     "n": 4652801,
+     "i": 0,
+     "j": 1
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "3400000",
+    "shown": "3,400,000",
+    "units": [],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "3400001",
+     "3399999",
+     "3400002",
+     "3399998",
+     "6800000",
+     "1700000",
+     "3400010",
+     "3399990",
+     "34000000"
+    ],
+    "q": "The digits 4 and 6 in 4,652,801 are worth different amounts. Work out the gap between what the 4 is worth and what the 6 is worth.",
+    "hint": "The 4 is in the millions place and the 6 is in the hundred thousands place. Write the value of each.",
+    "why": "The 4 means 4,000,000. The 6 means 600,000. 4,000,000 − 600,000 = 3,400,000.",
+    "date": "12-30"
+   },
+   {
+    "id": "L5-roundtable",
+    "level": 5,
+    "frame": "roundtable",
+    "kind": "round_table",
+    "topic": "Counting orders",
+    "sub": "counting_choices.round_table",
+    "family": "counting_choices",
+    "p": {
+     "n": 7
+    },
+    "t": {},
+    "fmt": "int",
+    "type": "n",
+    "ans": "720",
+    "shown": "720 plans",
+    "units": [
+     "plans",
+     "plan"
+    ],
+    "prefix": [],
+    "accept": [],
+    "exact": false,
+    "wrong": [
+     "721",
+     "719",
+     "722",
+     "718",
+     "1440",
+     "360",
+     "730",
+     "710",
+     "7200"
+    ],
+    "q": "7 friends sit round a circular table. Turning everyone round the table by the same number of seats does not make a new seating plan. How many different seating plans are there?",
+    "hint": "Fix one friend in one seat. Then the other friends can be arranged in the seats that remain.",
+    "why": "Fix one friend. The other 6 friends can fill the other seats in 6 × 5 × 4 × 3 × 2 × 1 ways, which is 720 plans.",
     "date": "12-31"
    }
   ],
@@ -7304,35 +7327,51 @@
     "date": "12-07"
    },
    {
-    "id": "L6-projectdays",
+    "id": "L6-sevencards",
     "level": 6,
-    "frame": "projectdays",
-    "kind": "weekday",
-    "topic": "Days of the week",
-    "sub": "calendar.weekday_after",
-    "family": "calendar",
+    "frame": "sevencards",
+    "kind": "swaps",
+    "topic": "Putting in order",
+    "sub": "sorting.fewest_swaps",
+    "family": "sorting",
     "p": {
-     "start": "Tuesday",
-     "days": 500
+     "order": [
+      5,
+      7,
+      3,
+      6,
+      1,
+      4,
+      2
+     ]
     },
-    "t": {},
+    "t": {
+     "row": "5  7  3  6  1  4  2"
+    },
     "fmt": "int",
-    "type": "s",
-    "ans": "friday",
-    "shown": "Friday",
-    "units": [],
-    "prefix": [],
-    "accept": [
-     "fri"
+    "type": "n",
+    "ans": "15",
+    "shown": "15 swaps",
+    "units": [
+     "swaps",
+     "swap"
     ],
+    "prefix": [],
+    "accept": [],
     "exact": false,
     "wrong": [
-     "Tuesday",
-     "Wednesday"
+     "16",
+     "14",
+     "17",
+     "13",
+     "30",
+     "25",
+     "5",
+     "150"
     ],
-    "q": "Hui Min starts a project on a Tuesday. She plans to finish exactly 500 days later. On which day of the week does she finish?",
-    "hint": "How many days are left over after whole weeks?",
-    "why": "500 = 71 × 7 + 3, so after 71 whole weeks it is a Tuesday again. Three more days: Wednesday, Thursday, Friday.",
+    "q": "Seven number cards lie in a row: 5  7  3  6  1  4  2. You may only swap two cards that are next to each other. What is the fewest number of swaps that puts the cards in order, from 1 to 7?",
+    "hint": "Count the pairs where a bigger card is somewhere to the left of a smaller card. A swap of neighbours fixes only one such pair.",
+    "why": "Count, for each card, the smaller cards to its right: 5 has 4 (3, 1, 4, 2), 7 has 5 (3, 6, 1, 4, 2), 3 has 2 (1, 2), 6 has 3 (1, 4, 2), 1 has 0, 4 has 1 (2), 2 has 0. 4 + 5 + 2 + 3 + 0 + 1 + 0 = 15 swaps. Each swap fixes one pair, so 15 swaps swaps are needed.",
     "date": "12-08"
    },
    {
@@ -7376,83 +7415,97 @@
     "date": "12-09"
    },
    {
-    "id": "L6-tokenbox",
+    "id": "L6-twoclasses",
     "level": 6,
-    "frame": "tokenbox",
-    "kind": "worst_case",
-    "topic": "Worst case",
-    "sub": "strategy.worst_case",
-    "family": "strategy",
+    "frame": "twoclasses",
+    "kind": "combined_mean",
+    "topic": "Averages",
+    "sub": "averages.combined_groups",
+    "family": "averages",
     "p": {
-     "counts": [
-      30,
-      25,
-      20,
-      15
+     "groups": [
+      [
+       20,
+       70
+      ],
+      [
+       30,
+       80
+      ]
      ],
-     "need": 11,
-     "ask": "k_alike"
+     "ask": "mean"
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "41",
-    "shown": "41 tokens",
+    "ans": "76",
+    "shown": "76 marks",
     "units": [
-     "tokens",
-     "token"
+     "marks",
+     "mark"
     ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "42",
-     "40",
-     "43",
-     "39",
-     "82",
-     "51",
-     "31",
-     "410"
+     "77",
+     "75",
+     "78",
+     "74",
+     "152",
+     "38",
+     "86",
+     "66",
+     "760"
     ],
-    "q": "A box holds 30 red, 25 blue, 20 green and 15 white tokens. Zack takes tokens from the box without looking. How many must he take to be sure of having 11 tokens of the same colour?",
-    "hint": "Think of the unluckiest case: he takes as many tokens as possible without having 11 of any colour.",
-    "why": "The unluckiest case is 10 of each of the 4 colours, which is 40 tokens. The next token must make 11 of one colour, so he must take 40 + 1 = 41 tokens.",
+    "q": "The mean mark of 20 pupils in Class A is 70. The mean mark of 30 pupils in Class B is 80. What is the mean mark of all 50 pupils together?",
+    "hint": "Do not just average the two means, because Class B has more pupils. Find the total marks of each class first.",
+    "why": "Class A: 20 × 70 = 1400 marks. Class B: 30 × 80 = 2400 marks. Together: 1400 + 2400 = 3800 marks for 50 pupils. 3800 ÷ 50 = 76 marks.",
     "date": "12-10"
    },
    {
-    "id": "L6-lastdigit",
+    "id": "L6-stickerratio",
     "level": 6,
-    "frame": "lastdigit",
-    "kind": "last_digit",
-    "topic": "Clock arithmetic",
-    "sub": "modular.last_digit_power",
-    "family": "modular",
+    "frame": "stickerratio",
+    "kind": "ratio_change",
+    "topic": "Ratio",
+    "sub": "ratio.ratio_changes",
+    "family": "ratio",
     "p": {
-     "base": 7,
-     "exp": 2026
+     "mode": "add",
+     "a": 3,
+     "b": 5,
+     "c": 5,
+     "d": 6,
+     "k": 7,
+     "ask": "second"
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "9",
-    "shown": "9",
-    "units": [],
+    "ans": "30",
+    "shown": "30 stickers",
+    "units": [
+     "stickers",
+     "sticker"
+    ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "10",
-     "8",
-     "11",
-     "7",
-     "18",
-     "19",
-     "90"
+     "31",
+     "29",
+     "32",
+     "28",
+     "60",
+     "15",
+     "40",
+     "20",
+     "300"
     ],
-    "q": "What is the last digit of the number you get when you multiply 7 by itself 2026 times? That is 7 × 7 × 7 × ... with 2026 sevens.",
-    "hint": "Write the last digit after 1, 2, 3, 4 and 5 sevens. Look for a cycle.",
-    "why": "The last digits go 7, 9, 3, 1, then repeat every 4. 2026 = 506 × 4 + 2, so the last digit is the same as after 2 sevens: 9.",
+    "q": "The ratio of Ali's stickers to Ben's stickers is 3 : 5. Ali buys 7 more stickers. Then the ratio of Ali's stickers to Ben's stickers is 5 : 6. How many stickers does Ben have?",
+    "hint": "Ben's stickers do not change. Let one unit of the first ratio be u stickers, and write Ali's new number in terms of u.",
+    "why": "Let one unit be u stickers. Ali has 3u and Ben has 5u. After Ali buys 7 more, Ali has 3u + 7. The new ratio is 5 : 6, so 6 × (3u + 7) = 5 × 5u, which is 18u + 42 = 25u. So 7u = 42 and u = 6. Ben has 5 × 6 = 30 stickers stickers.",
     "date": "12-11"
    },
    {
@@ -8147,47 +8200,89 @@
     "date": "12-25"
    },
    {
-    "id": "L6-stonepyramid5",
+    "id": "L6-cubeedges",
     "level": 6,
-    "frame": "stonepyramid5",
-    "kind": "pyramid",
-    "topic": "Number pyramid",
-    "sub": "number_grid.number_pyramid",
-    "family": "number_grid",
+    "frame": "cubeedges",
+    "kind": "euler_lifts",
+    "topic": "Drawing without lifting",
+    "sub": "networks.draw_without_lifting",
+    "family": "networks",
     "p": {
-     "bottom": [
-      4,
-      0,
-      7,
-      3,
-      6
-     ],
-     "ask": "missing",
-     "top": 172,
-     "hide": 1
+     "edges": [
+      [
+       "A",
+       "B"
+      ],
+      [
+       "B",
+       "C"
+      ],
+      [
+       "C",
+       "D"
+      ],
+      [
+       "D",
+       "A"
+      ],
+      [
+       "E",
+       "F"
+      ],
+      [
+       "F",
+       "G"
+      ],
+      [
+       "G",
+       "H"
+      ],
+      [
+       "H",
+       "E"
+      ],
+      [
+       "A",
+       "E"
+      ],
+      [
+       "B",
+       "F"
+      ],
+      [
+       "C",
+       "G"
+      ],
+      [
+       "D",
+       "H"
+      ]
+     ]
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "27",
-    "shown": "27",
-    "units": [],
+    "ans": "3",
+    "shown": "3 times",
+    "units": [
+     "times",
+     "time"
+    ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "28",
-     "26",
-     "29",
-     "25",
-     "54",
-     "37",
-     "17",
-     "270"
+     "4",
+     "2",
+     "5",
+     "1",
+     "6",
+     "13",
+     "30"
     ],
-    "q": "In a number pyramid made of stones, each stone is the sum of the two stones under it. The lowest row has five stones: 4, ?, 7, 3, 6. The stone at the peak is 172. What number is the hidden stone?",
-    "hint": "The hidden stone is counted several times in the peak stone. Try a value and work up, then adjust.",
-    "why": "The lowest stones are counted 1, 4, 6, 4 and 1 times in the peak. The known ones give 4 + 42 + 12 + 6 = 64, and 172 − 64 = 108 = 4 × 27.",
+    "q": "The 12 edges of a cube join its 8 corners. Mei draws them as 12 straight lines joining 8 dots, A to H. She draws every line exactly once and lifts her pencil as few times as she can. How many times must she lift her pencil?",
+    "hint": "Count how many lines meet at each dot. Every stroke has two ends. How many strokes do the dots with an odd number of lines force?",
+    "why": "Three lines meet at each of the 8 corners, and 3 is odd. Each stroke has only two ends, so 8 dots need 8 ÷ 2 = 4 strokes. Four strokes mean lifting the pencil 3 times times.",
     "date": "12-26"
    },
    {
