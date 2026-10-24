@@ -221,7 +221,7 @@ ITEMS = [
       hint='Write both numbers with 3 decimal places, then count up in thousandths from the first to the second. Do not include the two ends.',
       steps=['Count in thousandths from 0.350 to 0.360, without the two ends: 0.351, 0.352, 0.353, 0.354, 0.355, 0.356, 0.357, 0.358, 0.359.', 'There are 9 of them. Did your list have some of these?'],
       src=['Find as many decimals with 3 decimal places as you can between 0.35 and 0.36. Write them in order.']),
-    D(id='Ib-count', tier='invest', no='Investigation (b)', label='Inv (b) count', type='number', skill='counting decimals', answer=9, check=lambda: len(betweens('0.35', '0.36', 3)),
+    D(id='Ib-count', tier='invest', no='Investigation (b)', label='Inv (b) n', type='number', skill='counting decimals', answer=9, check=lambda: len(betweens('0.35', '0.36', 3)),
       q='How many decimals with 3 decimal places are between 0.35 and 0.36? (Do not count 0.35 and 0.36.)',
       hint='Write both numbers with 3 decimal places. How many thousandths are there from the first to the second? Do not count the two ends.',
       steps=['0.350 to 0.360 is 10 thousandths, so there are 10 steps of 0.001.', 'The numbers strictly between are 0.351 to 0.359. That is 9 numbers.'],
