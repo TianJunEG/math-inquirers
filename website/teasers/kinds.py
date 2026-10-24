@@ -59,7 +59,7 @@ def sum_diff(S, D, ask):
 def sum_range(lo, hi, step=1):
     n = (hi - lo) // step + 1
     assert lo + (n - 1) * step == hi
-    return n * (lo + hi) // 2, {'n': n, 'pair': lo + hi}
+    return n * (lo + hi) // 2, {'n': n, 'pair': lo + hi, 'half': n // 2}
 
 
 def queue(front, back):
