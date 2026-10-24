@@ -16,12 +16,12 @@ Script: `second_reader_jan_l1l2.py`. It imports none of the generator, checker, 
 | L1-puffsleft | 01-05 | 43 | 43 | agree |
 | L1-skipropes | 01-06 | hakim | hakim | agree |
 | L1-grapeplates | 01-07 | 13 | 13 | agree |
-| L1-tartrows | 01-08 | 12 | 12 | agree |
+| L1-starchart | 01-08 | 12 | 12 | agree |
 | L1-dumplingboxes | 01-09 | 44 | 44 | agree |
 | L1-bikelock | 01-10 | 83 | 83 | agree |
 | L1-pegline | 01-11 | 65 | 65 | agree |
 | L1-busdepart | 01-12 | 8 am | 8 am | agree |
-| L1-applegraph | 01-13 | 70 | 70 | agree |
+| L1-buntally | 01-13 | 70 | 70 | agree |
 | L1-pagefives | 01-14 | 15 | 15 | agree |
 | L1-busplates | 01-15 | 51 | 51 | agree |
 | L1-fireflies | 01-16 | 64 | 64 | agree |
@@ -31,14 +31,14 @@ Script: `second_reader_jan_l1l2.py`. It imports none of the generator, checker, 
 | L1-sackrace | 01-20 | 37 | 37 | agree |
 | L1-lightestbag | 01-21 | rina | rina | agree |
 | L1-busseats | 01-22 | 34 | 34 | agree |
-| L1-cousinstay | 01-23 | 23 | 23 | agree |
-| L1-photoline | 01-24 | 77 | 77 | agree |
+| L1-cousinstay | 01-23 | 18 | 18 | agree |
+| L1-queuecount | 01-24 | 77 | 77 | agree |
 | L1-beanbags | 01-25 | 17 | 17 | agree |
 | L1-rafflepicks | 01-26 | 82 | 82 | agree |
 | L1-buildweeks | 01-27 | 46 | 46 | agree |
-| L1-borrowedbooks | 01-28 | 71 | 71 | agree |
+| L1-capcollect | 01-28 | 71 | 71 | agree |
 | L1-robotturns | 01-29 | west | west | agree |
-| L1-hatscarf | 01-30 | 54 | 54 | agree |
+| L1-bagcharm | 01-30 | 54 | 54 | agree |
 | L1-coveredbit | 01-31 | 4 | 4 | agree |
 | L2-padlockcode | 01-01 | 644 | 644 | agree |
 | L2-footballmatch | 01-02 | 95 | 95 | agree |

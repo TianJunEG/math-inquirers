@@ -78,7 +78,7 @@
      "11",
      "210"
     ],
-    "q": "7 children at a party each clink their cups once with every other child. How many clinks are there?",
+    "q": "At a party, every one of the 7 children clinks cups once with each of the others. How many clinks are heard in all?",
     "hint": "Call the children A, B, C and so on. List the clinks that A makes, then the new clinks that B makes.",
     "why": "A makes 6 clinks. B has 5 new clinks, C has 4, D has 3, E has 2 and F has 1. So 6 + 5 + 4 + 3 + 2 + 1 = 21 clinks.",
     "date": "01-02"
@@ -116,9 +116,9 @@
      "18",
      "80"
     ],
-    "q": "Dad starts to cook a pot of noodles at 5 minutes past 6. The noodles need 35 minutes. When they are ready, the minute hand points to which number on the clock?",
+    "q": "Dad puts noodles in a pot at 5 minutes past 6, and they need 35 minutes to cook. Which number on the clock face does the long hand show when they are ready?",
     "hint": "Each number on the clock face is 5 minutes. Add the minutes first.",
-    "why": "5 + 35 = 40 minutes past 6. The minute hand points to the number 40 ÷ 5 = 8.",
+    "why": "5 + 35 = 40 minutes past 6. The long hand shows the number 40 ÷ 5 = 8.",
     "date": "01-03"
    },
    {
@@ -306,7 +306,10 @@
     "p": {
      "total": 26
     },
-    "t": {},
+    "t": {
+     "ex1": 4,
+     "ex2": 22
+    },
     "fmt": "int",
     "type": "n",
     "ans": "13",
@@ -336,9 +339,9 @@
     "date": "01-07"
    },
    {
-    "id": "L1-tartrows",
+    "id": "L1-starchart",
     "level": 1,
-    "frame": "tartrows",
+    "frame": "starchart",
     "kind": "border_tiles",
     "topic": "Rows and columns",
     "sub": "arrays.border_tiles",
@@ -351,10 +354,12 @@
     "fmt": "int",
     "type": "n",
     "ans": "12",
-    "shown": "12 tarts",
+    "shown": "12 stars",
     "units": [
-     "tarts",
-     "tart"
+     "stars",
+     "star",
+     "gold stars",
+     "gold star"
     ],
     "prefix": [],
     "accept": [],
@@ -370,9 +375,9 @@
      "2",
      "120"
     ],
-    "q": "A baker puts 3 rows of 5 egg tarts on a tray. Only the tarts on the outside edge of the tray get a cherry on top. How many tarts get a cherry?",
-    "hint": "Count the tarts in the top and bottom rows first. Then count the tarts at the ends of the row in the middle.",
-    "why": "The top and bottom rows have 5 tarts each: 2 × 5 = 10. The other 3 − 2 = 1 row has 2 tarts on the edge. In all, 10 + 2 = 12 tarts.",
+    "q": "A teacher draws a chart with 3 rows of 5 squares. She puts a gold star in every square on the outside edge of the chart. How many gold stars does she use?",
+    "hint": "Count the squares in the top and bottom rows first. Then count the squares at the two ends of the row in the middle.",
+    "why": "The top and bottom rows have 5 squares each: 2 × 5 = 10. The other 3 − 2 = 1 row has 2 squares on the edge. In all, 10 + 2 = 12 stars.",
     "date": "01-08"
    },
    {
@@ -462,7 +467,7 @@
      "73",
      "830"
     ],
-    "q": "A bike lock has a secret 2-digit code. Its two digits add up to 11. Its tens digit is 5 more than its ones digit. What is the code?",
+    "q": "A bike lock has a secret 2-digit code. The two digits make 11 when they are added, and the ones digit is 5 less than the tens digit. Which code opens the lock?",
     "hint": "Try different ones digits. Which tens digit goes with each one?",
     "why": "The tens digit is 5 more than the ones digit. A ones digit of 3 gives a tens digit of 8, and 8 + 3 = 11. The code is 83.",
     "date": "01-10"
@@ -564,11 +569,11 @@
     "date": "01-12"
    },
    {
-    "id": "L1-applegraph",
+    "id": "L1-buntally",
     "level": 1,
-    "frame": "applegraph",
+    "frame": "buntally",
     "kind": "scaled_diff",
-    "topic": "Picture graphs",
+    "topic": "Graphs with symbols",
     "sub": "graphs.pictograph_scale",
     "family": "graphs",
     "p": {
@@ -580,10 +585,10 @@
     "fmt": "int",
     "type": "n",
     "ans": "70",
-    "shown": "70 apples",
+    "shown": "70 buns",
     "units": [
-     "apples",
-     "apple"
+     "buns",
+     "bun"
     ],
     "prefix": [],
     "accept": [],
@@ -599,9 +604,9 @@
      "60",
      "700"
     ],
-    "q": "In a picture graph, each apple picture stands for 10 apples. Stall A has 9 pictures and Stall B has 2 pictures. How many more apples does Stall A have than Stall B?",
-    "hint": "First find how many more pictures Stall A has. Then think about what each picture is worth.",
-    "why": "Stall A has 7 more pictures. Each picture is worth 10 apples, so 7 × 10 = 70 apples.",
+    "q": "A bakery shows the buns it baked on two days in a graph. One bun symbol means 10 buns. Monday has 9 symbols and Tuesday has 2. How many more buns were baked on Monday than on Tuesday?",
+    "hint": "First find how many more symbols Monday has. Then think about what each symbol is worth.",
+    "why": "Monday has 7 more symbols. Each symbol is worth 10 buns, so 7 × 10 = 70 buns.",
     "date": "01-13"
    },
    {
@@ -678,7 +683,9 @@
       "9": 6
      }
     },
-    "t": {},
+    "t": {
+     "lo1": 62
+    },
     "fmt": "int",
     "type": "n",
     "ans": "51",
@@ -702,7 +709,7 @@
      "41",
      "510"
     ],
-    "q": "Dan makes number plates for toy buses out of lolly sticks. The table shows how many sticks each digit needs. Dan makes every plate from 61 to 65, one after another. How many sticks does he use altogether?",
+    "q": "Dan decorates toy buses with number plates made of lolly sticks. The table lists the sticks that each digit needs. He makes the plates numbered 61, 62, and so on up to 65. Count the sticks he uses in all.",
     "hint": "Count the sticks in the first digit of every plate. Then count the sticks in all the second digits.",
     "why": "The first digit is 6 in all 5 plates: 5 × 6 = 30 sticks. The second digits are 1, 2, 3, 4 and 5, which use 2 + 5 + 5 + 4 + 5 = 21 sticks. 30 + 21 = 51 sticks.",
     "code": "digit  : 1 2 3 4 5 6\nsticks : 2 5 5 4 5 6",
@@ -780,9 +787,9 @@
      "1",
      "110"
     ],
-    "q": "Rina writes the names of the numbers from 1 up to 20 on 20 paper flags, one name on each flag. She hangs the flags on a string in alphabetical order, like words in a dictionary. Which number is on the flag in place 3 from the left?",
+    "q": "Rina hangs 20 flags on a string. Each flag shows the name of one number from one to twenty. The flags hang in dictionary order, so eight comes before five. Which number is on the 3rd flag from the left?",
     "hint": "Look at the first letter of each name. If two names start with the same letter, look at the second letter.",
-    "why": "In alphabetical order the names are eight, eighteen, eleven, fifteen, five, four, fourteen, nine, nineteen, one, seven, seventeen, six, sixteen, ten, thirteen, three, twelve, twenty, two. The name in place 3 is eleven, which is the number 11.",
+    "why": "In dictionary order the names are eight, eighteen, eleven, fifteen, five, four, fourteen, nine, nineteen, one, seven, seventeen, six, sixteen, ten, thirteen, three, twelve, twenty, two. The 3rd flag shows eleven, which is the number 11.",
     "date": "01-17"
    },
    {
@@ -911,9 +918,9 @@
      "27",
      "370"
     ],
-    "q": "40 children run a sack race. At the halfway mark, Aisha is in 33rd place. In the second half, 6 children pass her, and then she passes 2 children. What place is Aisha in at the finish?",
-    "hint": "Each child who passes Aisha moves her back one place. Each child she passes moves her forward one place. Work one step at a time.",
-    "why": "6 children pass her, so she moves back: 33 + 6 = 39. Then she passes 2 children: 39 − 2 = 37.",
+    "q": "In a sack race with 40 children, Aisha is 33rd at the halfway mark. Then 6 children go past her, and she goes past 2 children. In which place does Aisha finish?",
+    "hint": "Each child who goes past Aisha moves her back one place. Each child she goes past moves her forward one place. Work one step at a time.",
+    "why": "6 children go past her, so she moves back: 33 + 6 = 39. Then she goes past 2 children: 39 − 2 = 37. She finishes in 37th place.",
     "date": "01-20"
    },
    {
@@ -995,7 +1002,7 @@
      "24",
      "340"
     ],
-    "q": "A school bus has 4 seats in every row. The seats are numbered 1, 2, 3 and on, one row after another, starting at the front. Mei sits in the 9th row, in the 2nd seat from the window. What is her seat number?",
+    "q": "School bus seats are numbered 1, 2, 3 and upwards, one whole row after another, from the front. Each row has 4 seats. Mei sits in the 9th row, in the 2nd seat from the window. What is her seat number?",
     "hint": "Count the seats in the full rows before Mei's row first.",
     "why": "There are 8 full rows before Mei's row: 8 × 4 = 32 seats. Mei is the 2nd seat in her row: 32 + 2 = 34.",
     "date": "01-22"
@@ -1011,18 +1018,18 @@
     "p": {
      "r1": [
       2,
-      27
+      26
      ],
      "r2": [
-      5,
+      9,
       30
      ]
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "23",
-    "shown": "23 days",
+    "ans": "18",
+    "shown": "18 days",
     "units": [
      "day",
      "days"
@@ -1031,24 +1038,25 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "24",
-     "22",
-     "25",
-     "21",
-     "46",
-     "33",
-     "13",
-     "230"
+     "19",
+     "17",
+     "20",
+     "16",
+     "36",
+     "9",
+     "28",
+     "8",
+     "180"
     ],
-    "q": "Two cousins stay at Grandma's house. Wei Jie stays from the 2nd to the 27th of the month. Rina stays from the 5th to the 30th. The first and last days of each stay count too. On how many days are both cousins at Grandma's house?",
+    "q": "Wei Jie stays at Grandma's house from the 2nd to the 26th of the month. Rina stays there from the 9th to the 30th. The first and last days of each stay count. On how many days are both cousins there?",
     "hint": "Find the first day when both cousins are there, and the last day when both are there.",
-    "why": "Both cousins are there from the 5th to the 27th. That is 27 − 5 + 1 = 23 days.",
+    "why": "Both cousins are there from the 9th to the 26th. That is 26 − 9 + 1 = 18 days.",
     "date": "01-23"
    },
    {
-    "id": "L1-photoline",
+    "id": "L1-queuecount",
     "level": 1,
-    "frame": "photoline",
+    "frame": "queuecount",
     "kind": "position_from_back",
     "topic": "Places in a line",
     "sub": "counting_line.position_from_back",
@@ -1076,9 +1084,9 @@
      "67",
      "770"
     ],
-    "q": "90 children stand in one long line for a school photo. Dan is 14th from the front. Counting from the back, which place is he in?",
-    "hint": "Draw a dot for each child. Mark Dan's dot and count the dots behind him.",
-    "why": "13 children stand in front of Dan, so 90 − 13 = 77 children are from Dan to the back. He is 77th from the back.",
+    "q": "A queue of 90 people waits to see the lion dance. Dan is number 14 when the people are counted from the front. What number is Dan when they are counted from the back?",
+    "hint": "Draw a dot for each person. Mark Dan's dot and count the dots from him to the end of the queue.",
+    "why": "13 people are in front of Dan, so 90 − 13 = 77 people are from Dan to the back. Dan is number 77 from the back.",
     "date": "01-24"
    },
    {
@@ -1145,7 +1153,11 @@
      "place": 3
     },
     "t": {
-     "cards": "63, 42, 82, 68 and 29"
+     "cards": "63, 42, 82, 68 and 29",
+     "ex": 34,
+     "ex1": 3,
+     "ex2": 4,
+     "exs": 7
     },
     "fmt": "int",
     "type": "n",
@@ -1166,9 +1178,9 @@
      "72",
      "820"
     ],
-    "q": "Five children draw raffle tickets numbered 63, 42, 82, 68 and 29. A ticket's score is its two digits added together (ticket 52 scores 5 + 2 = 7). The lowest score picks a prize first, then the next lowest, and so on. Which ticket picks 3rd?",
+    "q": "Five children pick raffle tickets numbered 63, 42, 82, 68 and 29. A ticket's score is its two digits added together (ticket 34 has the score 3 + 4 = 7). Prizes go in order of score, the lowest score first. Which ticket gets the 3rd prize?",
     "hint": "Work out the score of each ticket. Then put the scores in order, from the lowest.",
-    "why": "The scores are 9 for ticket 63, 6 for ticket 42, 10 for ticket 82, 14 for ticket 68 and 11 for ticket 29. In order they pick 42, 63, 82, 29, 68. The 3rd ticket is 82.",
+    "why": "The scores are 9 for ticket 63, 6 for ticket 42, 10 for ticket 82, 14 for ticket 68 and 11 for ticket 29. In order the prizes go to 42, 63, 82, 29, 68. The 3rd prize goes to ticket 82.",
     "date": "01-26"
    },
    {
@@ -1213,9 +1225,9 @@
     "date": "01-27"
    },
    {
-    "id": "L1-borrowedbooks",
+    "id": "L1-capcollect",
     "level": 1,
-    "frame": "borrowedbooks",
+    "frame": "capcollect",
     "kind": "stats",
     "topic": "Tables",
     "sub": "graphs.table_total",
@@ -1233,10 +1245,10 @@
     "fmt": "int",
     "type": "n",
     "ans": "71",
-    "shown": "71 books",
+    "shown": "71 caps",
     "units": [
-     "books",
-     "book"
+     "caps",
+     "cap"
     ],
     "prefix": [],
     "accept": [],
@@ -1251,9 +1263,9 @@
      "61",
      "710"
     ],
-    "q": "A table shows how many library books four classes borrowed this week: Class 1A 20, Class 1B 14, Class 1C 13 and Class 1D 24. How many books did the four classes borrow altogether?",
+    "q": "Four classes collect bottle caps for a craft project. Class 1A has 20, Class 1B has 14, Class 1C has 13 and Class 1D has 24. How many caps do the four classes have in all?",
     "hint": "Add two numbers first, then add the next number.",
-    "why": "20 + 14 = 34. Then 34 + 13 = 47. Then 47 + 24 = 71 books.",
+    "why": "20 + 14 = 34. Then 34 + 13 = 47. Then 47 + 24 = 71 caps.",
     "date": "01-28"
    },
    {
@@ -1287,7 +1299,7 @@
      "east",
      "south"
     ],
-    "q": "A toy robot faces east. It turns left, then left again, then left again, and then right. Which way does it face now: north, east, south or west?",
+    "q": "A toy robot faces east. It turns left three times in a row, and then it turns right once. In which direction does the robot face at the end: north, east, south or west?",
     "hint": "Draw a small compass. Turn one step at a time and write the direction after each turn.",
     "why": "Facing east, then north, then west, then south, then west. After the four turns the robot faces west.",
     "choices": [
@@ -1299,9 +1311,9 @@
     "date": "01-29"
    },
    {
-    "id": "L1-hatscarf",
+    "id": "L1-bagcharm",
     "level": 1,
-    "frame": "hatscarf",
+    "frame": "bagcharm",
     "kind": "combos",
     "topic": "Ways to choose",
     "sub": "counting_choices.combinations",
@@ -1316,10 +1328,10 @@
     "fmt": "int",
     "type": "n",
     "ans": "54",
-    "shown": "54 outfits",
+    "shown": "54 pairs",
     "units": [
-     "outfits",
-     "outfit"
+     "pairs",
+     "pair"
     ],
     "prefix": [],
     "accept": [],
@@ -1335,9 +1347,9 @@
      "44",
      "540"
     ],
-    "q": "Zara has 6 hats and 9 scarves for her doll. An outfit is one hat and one scarf. How many different outfits can she make?",
-    "hint": "Pick one hat. How many outfits does it make with the scarves?",
-    "why": "Each of the 6 hats goes with 9 scarves: 9 + 9 + 9 + 9 + 9 + 9 = 54 outfits.",
+    "q": "A school shop has 6 colours of bag and 9 kinds of key charm. Aisha buys one bag and one charm. How many bag and charm pairs can she choose from?",
+    "hint": "Pick one colour of bag. How many pairs does it make with the charms?",
+    "why": "Each of the 6 colours goes with 9 charms: 9 + 9 + 9 + 9 + 9 + 9 = 54 pairs.",
     "date": "01-30"
    },
    {
@@ -1369,7 +1381,7 @@
      "14",
      "40"
     ],
-    "q": "A sticker covers one digit in this subtraction: 5? − 18 = 36. Which digit is under the sticker?",
+    "q": "Ravi writes 5? − 18 = 36, but a sticker hides the ones digit of the first number. Which digit is hidden?",
     "hint": "Look at the ones column: what number take away 8 gives a number that ends in 6?",
     "why": "36 + 18 = 54, so the number under the sticker is 54 and the hidden digit is 4. Check: 54 − 18 = 36.",
     "date": "01-31"
@@ -1551,7 +1563,7 @@
      "13",
      "30"
     ],
-    "q": "A school hall has 12 chairs in every row. The chairs are numbered 1, 2, 3 and so on, one row after another, starting at the front. Wei's chair is number 123. Which chair from the left of its row is Wei's chair?",
+    "q": "Chairs in a school hall are put out in rows of 12. They are numbered row by row from the front, so the first row holds chairs 1 to 12. Wei sits on chair 123. Counting from the left end of his row, which chair is Wei's?",
     "hint": "Find how many full rows come before chair 123. Each row has 12 chairs.",
     "why": "10 full rows hold 10 × 12 = 120 chairs. Chair 123 comes after them, so it is chair 123 − 120 = 3 from the left of its row.",
     "date": "01-04"
@@ -1612,16 +1624,16 @@
      ],
      "facts": [
       [
+       "Aminah",
+       "Farid"
+      ],
+      [
        "Farid",
        "Xin Yi"
       ],
       [
        "Kumar",
        "Aminah"
-      ],
-      [
-       "Aminah",
-       "Farid"
       ]
      ],
      "idx": 1,
@@ -1641,7 +1653,7 @@
      "Farid",
      "Xin Yi"
     ],
-    "q": "Farid is taller than Xin Yi. Kumar is taller than Aminah. Aminah is taller than Farid. Who is the second tallest?",
+    "q": "Aminah is taller than Farid. Farid is taller than Xin Yi. Kumar is taller than Aminah. Who is second tallest?",
     "hint": "Write the four names in a row from the tallest to the shortest.",
     "why": "From the tallest to the shortest: Kumar, Aminah, Farid, Xin Yi. Aminah is the second tallest.",
     "date": "01-06"
@@ -1718,7 +1730,7 @@
     "accept": [],
     "exact": false,
     "wrong": [],
-    "q": "Mrs Rao has six tubes of colour pencils. Four of the tubes hold an odd number of pencils and two of the tubes hold an even number. When she counts all the pencils, will the total be odd or even?",
+    "q": "Mrs Rao has six tubes of colour pencils. Four of the tubes hold an odd number of pencils and two of the tubes hold an even number. Is the total number of pencils in all six tubes odd or even?",
     "hint": "Try some small numbers, for example 3, 5, 7, 9, 4 and 6 pencils. Add them in pairs and see what happens.",
     "why": "Two odd numbers add to an even number, so the four odd tubes make two even numbers. An even number added to even numbers stays even, and the even tubes do not change that. The total is even.",
     "date": "01-08"
@@ -1759,7 +1771,7 @@
      "60",
      "700"
     ],
-    "q": "A counter sits in the top-left square of a game board. It moves only 4 squares right and 4 squares down, in any order, to reach the bottom-right square. How many different routes can it take?",
+    "q": "On a game board, a counter starts in the top-left square. It can move one square right or one square down at a time. To reach the bottom-right square it makes exactly 4 moves right and 4 moves down. How many routes are there for the counter?",
     "hint": "Count the routes to each square of the board, starting next to the start.",
     "why": "Add the routes from the left and from above at every square. The bottom-right square gets 70 routes.",
     "date": "01-09"
@@ -1810,7 +1822,7 @@
      "5",
      "150"
     ],
-    "q": "A ferry leaves the pier at 4 pm and reaches the island at 7 am the next day. For how many hours is the ferry at sea?",
+    "q": "The overnight ferry leaves at 4 pm and reaches the island at 7 am the next morning. How many hours does the voyage last?",
     "hint": "Count the hours from 4 pm to midnight. Then count the hours from midnight to 7 am.",
     "why": "From 4 pm to midnight is 8 hours. From midnight to 7 am is 7 hours. In all, 8 + 7 = 15 hours.",
     "date": "01-10"
@@ -1943,8 +1955,8 @@
      "14",
      "240"
     ],
-    "q": "Kai throws three darts at a board with six rings worth 14, 20, 24, 48, 54 and 59 points. Each dart lands in a different ring, and the scores add up to exactly 103 points. Only one choice of three rings gives that score. How many points is the middle score worth?",
-    "hint": "Think about the biggest ring first. Which two other rings would make the score?",
+    "q": "Kai throws three darts at a board with six rings worth 14, 20, 24, 48, 54 and 59 points. The darts land in three different rings and score exactly 103 points in all. There is only one way to pick such rings. What is the middle one of his three scores?",
+    "hint": "Think about the biggest ring first. Which two other rings would make the total?",
     "why": "20 + 24 + 59 = 103. The three rings are worth 20, 24 and 59 points, so the middle score is 24 points.",
     "date": "01-13"
    },
@@ -2069,9 +2081,9 @@
      "11",
      "10"
     ],
-    "q": "A smudge hides one digit in this addition: 3?6 + 428 = 744. Which digit is under the smudge?",
+    "q": "Aisha's smudge covers one digit in the sum 428 + 3?6 = 744. Find the hidden digit.",
     "hint": "Look at the tens column first. Remember what is carried over from the ones column.",
-    "why": "Take 428 away from 744: 744 − 428 = 316. So the hidden digit is 1. Check: 316 + 428 = 744.",
+    "why": "Take 428 away from 744: 744 − 428 = 316. So the hidden digit is 1. Check: 428 + 316 = 744.",
     "date": "01-16"
    },
    {
@@ -2123,17 +2135,17 @@
     "family": "sorting",
     "p": {
      "order": [
-      60,
-      70,
-      40,
-      30,
-      90,
-      20,
-      50
+      28,
+      29,
+      6,
+      3,
+      23,
+      25,
+      12
      ]
     },
     "t": {
-     "row": "60, 70, 40, 30, 90, 20 and 50"
+     "row": "28, 29, 6, 3, 23, 25 and 12"
     },
     "fmt": "int",
     "type": "n",
@@ -2156,9 +2168,9 @@
      "3",
      "130"
     ],
-    "q": "Seven books stand on a shelf with tags 60, 70, 40, 30, 90, 20 and 50 from left to right. A helper may swap two books only if they touch. What is the fewest number of swaps that puts the tags in increasing order?",
-    "hint": "Count the pairs of books that are the wrong way round. A swap of two touching books can put only one pair right.",
-    "why": "60 is bigger than the 4 tags after it that are smaller (40, 30, 20 and 50). 70 also has 4, 40 has 2, 30 has 1 and 90 has 2. 4 + 4 + 2 + 1 + 2 = 13. One swap puts one pair right, so 13 swaps are needed.",
+    "q": "The tags on seven books on a shelf read 28, 29, 6, 3, 23, 25 and 12, from left to right. A helper may swap two books only when they are side by side. How few swaps does the helper need to put the tags in order, smallest first?",
+    "hint": "Count the pairs of books that are the wrong way round. A swap of two books side by side can put only one pair right.",
+    "why": "28 is bigger than the 5 tags after it that are smaller (6, 3, 23, 25 and 12). 29 also has 5, 6 has 1, 3 has 0, 23 has 1 and 25 has 1. 5 + 5 + 1 + 0 + 1 + 1 = 13. One swap puts one pair right, so 13 swaps are needed.",
     "date": "01-18"
    },
    {
@@ -2170,22 +2182,22 @@
     "sub": "counting_line.race_places",
     "family": "counting_line",
     "p": {
-     "start": 34,
+     "start": 35,
      "moves": [
       [
        "passed",
-       7
-      ],
-      [
-       "pass",
-       4
-      ],
-      [
-       "pass",
        8
+      ],
+      [
+       "pass",
+       9
+      ],
+      [
+       "pass",
+       5
       ]
      ],
-     "total": 50,
+     "total": 52,
      "ask": "place"
     },
     "t": {},
@@ -2207,9 +2219,9 @@
      "19",
      "290"
     ],
-    "q": "50 runners start a mini-marathon. At the first water stop, Priya is in 34th place. Then 7 runners pass her. Then she passes 4 runners. Then she passes 8 more runners. What place is Priya in now?",
-    "hint": "Do the three moves one at a time. Being passed makes Priya's place number bigger. Passing a runner makes it smaller.",
-    "why": "Being passed by 7 runners: 34 + 7 = 41. Passing 4 runners: 41 − 4 = 37. Passing 8 more runners: 37 − 8 = 29. Priya is in 29th place.",
+    "q": "Priya runs a mini-marathon with 52 runners. She is in 35th place at the first water stop. After the stop, 8 runners pass her, then she overtakes 9 runners, and then she overtakes 5 more. What is her place now?",
+    "hint": "Do the three moves one at a time. Being passed makes Priya's place number bigger. Overtaking a runner makes it smaller.",
+    "why": "Being passed by 8 runners: 35 + 8 = 43. Overtaking 9 runners: 43 − 9 = 34. Overtaking 5 more: 34 − 5 = 29. Priya is in 29th place.",
     "date": "01-19"
    },
    {
@@ -2246,7 +2258,7 @@
      "68",
      "780"
     ],
-    "q": "13 teams play in a netball league. Every team plays one match against each of the other teams. How many matches are played in all?",
+    "q": "A netball league has 13 teams. Each team plays every other team once, and no match is played twice. How many matches does the league have?",
     "hint": "Call the teams A, B, C and so on. A plays 12 matches. How many new matches does B play?",
     "why": "A plays 12 matches. B has 11 new matches, C has 10, D has 9 and so on. 12 + 11 + 10 + 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 = 78 matches.",
     "date": "01-20"
@@ -2372,9 +2384,9 @@
      "21",
      "310"
     ],
-    "q": "A bus card machine takes only $4 vouchers and $7 vouchers, and gives no change. Zack tries every top-up amount from $1 up to $40, one by one. For how many of the 40 amounts can he pay exactly?",
-    "hint": "Find the amounts that he cannot pay exactly. Try the small amounts first.",
-    "why": "He cannot pay $1, $2, $3, $5, $6, $9, $10, $13 or $17. Every amount from $18 upwards can be made, for example 18 = 4 + 7 + 7 and 19 = 4 + 4 + 4 + 7. That is 40 − 9 = 31 amounts.",
+    "q": "Every bus card top-up amount from $1 to $40 is tried at a machine, one after another. The machine accepts $4 vouchers and $7 vouchers only, and it never gives change. For how many of the 40 amounts can the exact amount be paid?",
+    "hint": "Find the amounts that cannot be paid exactly. Try the small amounts first.",
+    "why": "$1, $2, $3, $5, $6, $9, $10, $13 and $17 cannot be paid. Every amount from $18 upwards can be made, for example 18 = 4 + 7 + 7 and 19 = 4 + 4 + 4 + 7. That is 40 − 9 = 31 amounts.",
     "date": "01-22"
    },
    {
@@ -2428,7 +2440,7 @@
      "18",
      "280"
     ],
-    "q": "In a game, each card shows a kite or a drum. The same picture is always worth the same whole number of points. Two kites and one drum are worth 65 points together. One kite and two drums are worth 46 points together. How many points is one kite worth?",
+    "q": "In a game, each prize card shows a kite or a drum. A kite always has the same whole-number value, and so does a drum. Two kites and one drum are worth 65 points together. One kite and two drums are worth 46 points together. How many points is one kite worth?",
     "hint": "Add the two lines together. How many kites and drums is that?",
     "why": "Adding the two lines gives 3 kites and 3 drums, worth 65 + 46 = 111. So one kite and one drum are worth 111 ÷ 3 = 37. Two kites and one drum are 65, so one kite is 65 − 37 = 28 points.",
     "date": "01-23"
@@ -2466,7 +2478,7 @@
      "4",
      "140"
     ],
-    "q": "Sam writes the names of the numbers from 1 to 18 on 18 cards, one name on each card. He puts the cards in a pile in A to Z order of the names. Which number is on the 7th card from the top of the pile?",
+    "q": "Sam sticks the number names from one to eighteen on a wall chart. The names go down the chart in A to Z order. Which number is written in the 7th place from the top?",
     "hint": "Write the name of every number. Sort them by first letter, and by the second letter when two names start the same.",
     "why": "In A to Z order the names are eight, eighteen, eleven, fifteen, five, four, fourteen, nine, one, seven, seventeen, six, sixteen, ten, thirteen, three, twelve, two. Place 7 holds fourteen, which is the number 14.",
     "date": "01-24"
@@ -2571,9 +2583,9 @@
      "165",
      "1750"
     ],
-    "q": "A picture graph uses one shoe picture for every 25 pairs of shoes sold. The row for Shop A has 11 pictures and the row for Shop B has 4 pictures. How many more pairs of shoes did Shop A sell than Shop B?",
-    "hint": "First find how many more pictures Shop A has. Then think about what each picture is worth.",
-    "why": "Shop A has 7 more pictures. Each picture is worth 25 pairs, so 7 × 25 = 175 pairs.",
+    "q": "Shop A and Shop B sell shoes. On their graph, each shoe symbol means 25 pairs. Shop A's row shows 11 symbols and Shop B's row shows 4 symbols. How many more pairs did Shop A sell?",
+    "hint": "First find how many more symbols Shop A has. Then think about what each symbol is worth.",
+    "why": "Shop A has 7 more symbols. Each symbol is worth 25 pairs, so 7 × 25 = 175 pairs.",
     "date": "01-26"
    },
    {
@@ -2612,7 +2624,7 @@
      "79",
      "890"
     ],
-    "q": "A baker packs buns into boxes of 6. He fills 14 boxes and has 5 buns left over. How many buns did he have?",
+    "q": "A baker fills 14 boxes with 6 buns in each box, and 5 buns are left over. How many buns did the baker have at the start?",
     "hint": "The number of buns is made of full boxes of 6, and then the buns that are left over.",
     "why": "14 boxes of 6 is 14 × 6 = 84 buns. Add the 5 left over: 84 + 5 = 89 buns.",
     "date": "01-27"
@@ -2653,9 +2665,9 @@
      "170",
      "1800"
     ],
-    "q": "Zara's calculator shows the number 573. She swaps the hundreds digit and the tens digit to make a new number. What is the difference between the two numbers?",
-    "hint": "Make the new number first. Then subtract the smaller number from the bigger one.",
-    "why": "Swapping the hundreds digit 5 and the tens digit 7 makes 753. The difference is 753 − 573 = 180.",
+    "q": "Zara types 573 on a calculator. She swaps the hundreds digit with the tens digit. By how much does the new number differ from 573?",
+    "hint": "Make the new number. Then subtract to find the gap between the two numbers.",
+    "why": "Swapping the hundreds digit 5 with the tens digit 7 makes 753. The difference is 753 − 573 = 180.",
     "date": "01-28"
    },
    {
@@ -2699,7 +2711,7 @@
      "22",
      "320"
     ],
-    "q": "At an arts festival, the magic show runs on days 18 to 72 and the puppet show runs on days 41 to 76. Each show runs on its first and last day too. On how many days do both shows run?",
+    "q": "At an arts festival, the magic show runs on days 18 to 72. The puppet show runs on days 41 to 76. Each show runs on its first and last day too. On how many days do both shows run?",
     "hint": "Find the first day when both shows run, and the last day when both run.",
     "why": "Both shows run from day 41 to day 72. That is 72 − 41 + 1 = 32 days.",
     "date": "01-29"
@@ -2736,9 +2748,9 @@
      "15",
      "250"
     ],
-    "q": "Hakim plants a bean seed on 28 March. The first flower opens 28 days later, in the next month. On which day of the next month does the flower open?",
+    "q": "Hakim plants a bean seed on 28 March, and the first flower opens 28 days after that, in April. Which day of April is that?",
     "hint": "Count how many days are left in the month he plants it. Then count the rest into the next month.",
-    "why": "March has 31 days. From 28 March, 31 − 28 = 3 days take it to the end of the month. The other 28 − 3 = 25 days are in the next month, so the flower opens on day 25.",
+    "why": "March has 31 days. From 28 March, 31 − 28 = 3 days take it to the end of the month. The other 28 − 3 = 25 days are in April, so the flower opens on day 25.",
     "date": "01-30"
    },
    {
@@ -2779,7 +2791,7 @@
      "40",
      "500"
     ],
-    "q": "A cook cuts a long roll of kueh into 3 equal pieces. Every cut takes the same time, and the cutting takes 10 minutes in all. How many minutes would it take to cut another roll like it into 11 equal pieces?",
+    "q": "A cook has a long roll of kueh. Making 3 equal pieces takes 10 minutes, because every cut takes the same time. A roll like it is to be cut into 11 equal pieces. How long will that take, in minutes?",
     "hint": "Count the cuts, not the pieces. How many cuts make 3 pieces?",
     "why": "3 pieces need 2 cuts. 10 ÷ 2 = 5 minutes for one cut. 11 pieces need 10 cuts: 10 × 5 = 50 minutes.",
     "date": "01-31"

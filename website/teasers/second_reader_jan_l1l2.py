@@ -40,13 +40,13 @@ def solve_all():
     fri = {'farid': 41, 'lena': 36, 'hakim': 29, 'aminah': 44}
     S['L1-skipropes'] = min(fri, key=fri.get)
     S['L1-grapeplates'] = len({tuple(sorted((a, 26 - a))) for a in range(1, 26)})
-    S['L1-tartrows'] = sum(1 for r in range(3) for c in range(5) if r in (0, 2) or c in (0, 4))
+    S['L1-starchart'] = sum(1 for r in range(3) for c in range(5) if r in (0, 2) or c in (0, 4))
     S['L1-dumplingboxes'] = 88 // 2
     S['L1-bikelock'] = [10 * t + o for t in range(1, 10) for o in range(10) if t + o == 11 and t == o + 5][0]
     S['L1-pegline'] = 25 + (3 - 1) * (85 - 25) // (4 - 1)
     times = {'9 pm': 21, '3 pm': 15, '8 am': 8, '11 am': 11}
     S['L1-busdepart'] = min(times, key=times.get)
-    S['L1-applegraph'] = (9 - 2) * 10
+    S['L1-buntally'] = (9 - 2) * 10
     S['L1-pagefives'] = sum('5' in str(n) for n in range(1, 60))
     sticks = {'1': 2, '2': 5, '3': 5, '4': 4, '5': 5, '6': 6}               # the table printed with the question
     S['L1-busplates'] = sum(sticks[c] for n in range(61, 66) for c in str(n))
@@ -65,19 +65,19 @@ def solve_all():
     rank = ['yusof', 'xavier', 'rina']                                     # heavier to lighter
     S['L1-lightestbag'] = rank[-1]
     S['L1-busseats'] = (9 - 1) * 4 + 2
-    S['L1-cousinstay'] = len(set(range(2, 28)) & set(range(5, 31)))
-    S['L1-photoline'] = 90 - 14 + 1
+    S['L1-cousinstay'] = len(set(range(2, 27)) & set(range(9, 31)))
+    S['L1-queuecount'] = 90 - 14 + 1
     S['L1-beanbags'] = [min(t) for t in itertools.combinations([6, 16, 17, 24, 32, 44], 3) if sum(t) == 73][0]
     tickets = sorted([63, 42, 82, 68, 29], key=lambda t: sum(int(c) for c in str(t)))
     S['L1-rafflepicks'] = tickets[2]
     S['L1-buildweeks'] = 6 * 7 + 4
-    S['L1-borrowedbooks'] = 20 + 14 + 13 + 24
+    S['L1-capcollect'] = 20 + 14 + 13 + 24
     dirs = ['north', 'east', 'south', 'west']
     i = dirs.index('east')
     for turn in 'LLLR':
         i = (i + (1 if turn == 'R' else -1)) % 4
     S['L1-robotturns'] = dirs[i]
-    S['L1-hatscarf'] = sum(1 for h in range(6) for s in range(9))
+    S['L1-bagcharm'] = sum(1 for bag in range(6) for charm in range(9))
     S['L1-coveredbit'] = [d for d in range(10) if int('5%d' % d) - 18 == 36][0]
     # ------------------------------------------------------------------ LEVEL 2
     S['L2-padlockcode'] = [100 * a + 10 * b + c for a in range(1, 10) for b in range(10) for c in range(10) if a + b + c == 14 and b == 4 and a == c + 2][0]
@@ -104,7 +104,7 @@ def solve_all():
     S['L2-smudgesum'] = [d for d in range(10) if int('3%d6' % d) + 428 == 744][0]
     bits = {'emily': F(1, 6), 'jiayi': F(1, 3), 'hakim': F(1, 8)}
     S['L2-breadshare'] = max(bits, key=bits.get)
-    tags = [60, 70, 40, 30, 90, 20, 50]                                    # bubble sort counts the neighbour swaps
+    tags = [28, 29, 6, 3, 23, 25, 12]                                    # bubble sort counts the neighbour swaps
     swaps = 0
     arr = tags[:]
     done = False
@@ -116,7 +116,7 @@ def solve_all():
                 swaps += 1
                 done = False
     S['L2-bookswaps'] = swaps
-    S['L2-marathon'] = 34 + 7 - 4 - 8
+    S['L2-marathon'] = 35 + 8 - 9 - 5
     S['L2-netballleague'] = 13 * 12 // 2
     S['L2-roomstickers'] = min(100 * a + 10 * b + c for a, b, c in itertools.permutations([8, 3, 6, 1, 4], 3) if c % 2 == 1)
     ok = reachable([4, 7], 40)
