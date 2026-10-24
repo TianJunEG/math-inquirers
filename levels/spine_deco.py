@@ -12,6 +12,7 @@ Only the levels in LEVELS_ON are touched (Level 1 pilot; add '2'..'6' to roll ou
 import sys, os, re, json
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 import spine_icons as si
+import habit_icons as hi
 LEVELS_ON = {'1', '2', '3', '4', '5', '6'} if os.environ.get('SPINE_ALL') else {'1', '2', '3', '4', '5', '6'}   # Level 1 pilot (stage A); SPINE_ALL=1 or edit this set to roll out
 ACC = {'1': '#1F7A6F', '2': '#2A7DC9', '3': '#3E8E41', '4': '#7B4FB5', '5': '#D9662B', '6': '#C2386B'}   # same as restyle.ACC
 NAVY, CREAM, YEL = '#1B2A49', '#FFF9EC', '#FFC93C'
@@ -30,6 +31,21 @@ def info(lv, ln):
     if row['main'] == 'choose': return row, band, None
     return row, band, si.tool(row['main'])
 
+# ---------- focus-habit badge (title and reflect slides, all levels; wording and icon from levels/habits.json) ----------
+def habit_badge(lv, ln, where):
+    name, h = hi.habit(lv, ln); lab = hi.DATA['badge_label']
+    # title: a pill at the right end of the chip row inside the 'Today we will' card (part of the chip element, no marker of its own);
+    # reflect: top-left, clear of the time pill and the heading (own data-spine element)
+    inline = where == 'title'
+    pos = 'margin-left:auto;flex:none' if inline else 'position:absolute;left:128px;top:30px'
+    tag = 'data-habit="badge"' if inline else 'data-spine="habit"'
+    return (f'<div {tag} style="{pos};height:64px;display:flex;align-items:center;gap:14px;background:#FFFFFF;border:2px solid {ACC[lv]};border-radius:999px;padding:6px 26px 6px 14px;font-size:28px;font-weight:700;color:{NAVY}">'
+            f'{hi.icon(h["icon"], NAVY, 44)}<span style="white-space:nowrap">{esc(lab)}: {esc(name)}</span></div>' + ('' if inline else '<!--/spine-->\n'))
+
+def habit_note(lv, ln):
+    name, h = hi.habit(lv, ln)
+    return f'HABIT: {hi.DATA["badge_label"]}: {name}. {h["move"]} Say: "{h["prompt"]}" {hi.DATA["rule"]}'
+
 # ---------- title slide ----------
 def chip(lv, ln):
     row, band, t = info(lv, ln)
@@ -40,7 +56,7 @@ def chip(lv, ln):
     else:
         inner = (f'<div style="flex:none;width:90px;height:90px">{si.icon(t["id"], CREAM, 90)}</div><div><p style="font-size:24px;font-weight:700;letter-spacing:3px;color:{YEL}">TODAY&#39;S TOOL</p>'
                  f'<p style="font-family:\'Fredoka\', Arial, sans-serif;font-size:50px;font-weight:600;line-height:1.05">{esc(t["name"])}</p></div>')
-    return f'<div data-spine="chip" style="display:flex;align-items:center;gap:26px;min-height:90px;margin-top:14px">{inner}</div><!--/spine-->'
+    return f'<div data-spine="chip" style="display:flex;flex-wrap:wrap;align-items:center;gap:26px;min-height:90px;margin-top:14px">{inner}{habit_badge(lv, ln, "title")}</div><!--/spine-->'
 def note_title(lv, ln):
     row, band, t = info(lv, ln); S = si.SPINE['script']
     if t is None: return f'SPINE: {S["choose_say"]} {S["choose_do"]}'
@@ -50,7 +66,7 @@ def do_title(html, lv, ln):
     m = re.search(r'(<div style="background:#26385F;[^"]*">.*?</p>)(</div>)', html, re.S)
     if not m: return html
     html = html[:m.end(1)] + chip(lv, ln) + html[m.end(1):]
-    html = re.sub(r'</aside>', lambda _: ' ' + aside_text(note_title(lv, ln)) + '</aside>', html, count=1)
+    html = re.sub(r'</aside>', lambda _: ' ' + aside_text(note_title(lv, ln) + ' ' + habit_note(lv, ln)) + '</aside>', html, count=1)
     return html
 
 # ---------- tool slide (Levels 1-3) ----------
@@ -124,7 +140,7 @@ def reflect_slide(old, lv, ln, sid):
             'Children tick the Look back box on the Choose and look-back page of their workbook, or just tick on paper. A pass is always allowed. It is never marked, never collected in front of the group and never read out; the tutor may look at it afterwards. '
             'If a child ticks "I am still stuck", check in during the open session next lesson (a quick visit to the shared breakout room or a hand signal, with a parent nearby; never a direct message). Do not ask children to share. '
             'Praise a check you saw, not speed. Then stamp the journals.' + flex)
-    return (head + f'<h2 style="{h2style}">Look back</h2>{sub}{card}\n' + foot + '\n' + img + '<aside>' + aside_text(note) + '</aside>\n</section>\n')
+    return (head + f'<h2 style="{h2style}">Look back</h2>{sub}{card}\n' + foot + '\n' + img + habit_badge(lv, ln, 'reflect') + '<aside>' + aside_text(note + ' ' + habit_note(lv, ln)) + '</aside>\n</section>\n')
 
 # ---------- deck ----------
 def apply(d):
