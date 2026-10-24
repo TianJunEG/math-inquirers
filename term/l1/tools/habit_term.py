@@ -39,9 +39,9 @@ def note(d):
 
 # ------------------------------------------------------------------ deck
 def badge(d, where):
-    """Focus-habit pill (same icon and words as the holiday decks). title: bottom right (the tool chip is bottom left); reflect: bottom right of the look-back slide."""
+    """Focus-habit pill (same icon and words as the holiday decks). title: top left, above the 'LESSON n' line (Mi and the tool chip are lower down); reflect: top right, left of the minute pill (clear of the heading, the chip row and Mi)."""
     n, h = habit(d)
-    pos = 'position:absolute;right:128px;bottom:62px' if where == 'title' else 'position:absolute;right:128px;bottom:34px'
+    pos = 'position:absolute;left:128px;top:64px' if where == 'title' else 'position:absolute;right:380px;top:52px'
     return (f'<div data-habit="badge" style="{pos};height:64px;display:flex;align-items:center;gap:14px;background:#FFFFFF;border:2px solid {TEAL};border-radius:999px;padding:6px 26px 6px 14px;font-size:28px;font-weight:700;color:{NAVY}">'
             f'{icon(h["icon"], NAVY, 44)}<span style="white-space:nowrap">{E(DATA["badge_label"])}: {E(n)}</span></div>')
 
