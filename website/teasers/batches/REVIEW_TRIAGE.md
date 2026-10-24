@@ -1,10 +1,10 @@
-# Review triage (fix rounds 4 and 5)
+# Review triage (fix rounds 4, 5 and 6)
 
 Every REVIEW line of the round-3 verifier report (200 lines: 106 for November and 94 for December, commit afdd785) and every REVIEW line that the round-4 verifier prints and the round-3 report did not have.
 REVIEW means: the verifier found a coincidence it cannot judge (a shared number, a shared word run, a long sentence). Each line has a disposition: **accepted** (read; the coincidence is generic, with the reason) or **fixed** (the puzzle was replaced or reworded in round 4 and the line no longer appears).
 The REVIEW lines of the final run are the "accepted" rows marked "still in the final report".
 
-Totals: 385 lines, 308 accepted, 77 fixed (274 from rounds 3 and 4, plus 102 new report lines and 9 structure pairs of round 5, all accepted).
+Totals: 385 lines, 308 accepted, 77 fixed (274 from rounds 3 and 4, plus 102 new report lines and 9 structure pairs of round 5, all accepted). Round 6 (section D): the final reports have 111 REVIEW lines for November and 84 for December; of them the lines for the 68 changed puzzles and the 49 frame pairs are triaged in section D, all accepted.
 
 ## A. The 200 lines of the round-3 report
 
@@ -412,3 +412,98 @@ Round 5 replaced or rewrote 82 puzzles and added the rules S, S3, window, G, N2 
 | L4-sunflower (L4) and L6-savingsbox (L6) | **accepted** | Five runs is under the FAIL limit of six. The shared run ("a line graph shows") is stock question wording of the same maths ask (ordering, counting ways, graph reading, digits to a number); the stories and numbers differ. Watch: a sixth shared run would fail. |
 | L4-brushoffer (L4) and L5-badgeshops (L5) | **accepted** | Five runs is under the FAIL limit of six. The shared run ("# a pack shop") is stock question wording of the same maths ask (ordering, counting ways, graph reading, digits to a number); the stories and numbers differ. Watch: a sixth shared run would fail. |
 | L4-fivechildren (L4) and L6-secondtallest (L6) | **accepted** | Five runs is under the FAIL limit of six. The shared run ("@ @ is taller") is stock question wording of the same maths ask (ordering, counting ways, graph reading, digits to a number); the stories and numbers differ. Watch: a sixth shared run would fail. |
+
+## D. Lines that are new in round 6 (new and reworded puzzles, the new frame rule)
+
+Round 6 replaced 58 puzzles and reworded 10 (`FIXES_ROUND6.md`). The final run prints 30 REVIEW lines for the changed puzzles that were not in the round-5 report, and 49 frame REVIEW lines (pairs of one sub-structure at two levels with a sentence-frame score of 0.80 to 0.89, or 0.90 and more and accepted in `frame_ledger.json`). Every line was read.
+
+### D1. Per-puzzle lines
+
+| Puzzle | Date | REVIEW line | Disposition | Reason |
+|---|---|---|---|---|
+| L1-craneboard | 11-06 | rule B: 3 of the same numbers ['19', '23', '28'] as "TITLES={1:'Number Lines to 10 000',2:'Write It Down, Check It',3:'Multiply by Sp ..." (docs/books/private_p3_papers/assign_p3.py) | **accepted** | The match is a planning, audit, catalogue or program note, or a generic phrase (units, "are sold in packs of", "cm by"); the story, the question and the answer differ. Read. |
+| L2-ferrybenches | 11-04 | number 2 in the question is not a parameter (written in the wording; check) | **accepted** | The number is written in the wording only (a count named in the story, a place, a step). The independent checker re-solves the puzzle from its parameters and the second reader solved it from the text. |
+| L2-ferrybenches | 11-04 | number 3 in the question is not a parameter (written in the wording; check) | **accepted** | The number is written in the wording only (a count named in the story, a place, a step). The independent checker re-solves the puzzle from its parameters and the second reader solved it from the text. |
+| L4-moneypurse | 11-06 | story words 3 of 3 like "def forward_money(start, lunch): """Spend 1/3 on a book, then `lunch` dollars, then half o ..." (practice/holiday/p5/10/lesson.py) | **accepted** | The match is a planning, audit, catalogue or program note, or a generic phrase (units, "are sold in packs of", "cm by"); the story, the question and the answer differ. Read. |
+| L5-shapelines | 11-12 | story words 5 of 7 like "- **Kit (KT11 `shape_cards`, one page, 12 pieces to cut).** 12 cards: square, rectangle, r ..." (docs/terms/l5_preflight.md) | **accepted** | The match is a planning, audit, catalogue or program note, or a generic phrase (units, "are sold in packs of", "cm by"); the story, the question and the answer differ. Read. |
+| L5-shapelines | 11-12 | rule S (window): 10 of 13 content words (angle,line,mark,parallelogram,rectangle,rhombu,right,shape,square,symmetry) in "- **Kit (KT11 `shape_cards`, one page, 12 pieces to cut).** 12 cards:  ..." (do | **accepted** | The match is a planning, audit, catalogue or program note, or a generic phrase (units, "are sold in packs of", "cm by"); the story, the question and the answer differ. Read. |
+| L5-codelock | 11-15 | number 9 in the question is not a parameter (written in the wording; check) | **accepted** | The number is written in the wording only (a count named in the story, a place, a step). The independent checker re-solves the puzzle from its parameters and the second reader solved it from the text. |
+| L5-codelock | 11-15 | number 21 in the question is not a parameter (written in the wording; check) | **accepted** | The number is written in the wording only (a count named in the story, a place, a step). The independent checker re-solves the puzzle from its parameters and the second reader solved it from the text. |
+| L5-codelock | 11-15 | number 21 in the question is not a parameter (written in the wording; check) | **accepted** | The number is written in the wording only (a count named in the story, a place, a step). The independent checker re-solves the puzzle from its parameters and the second reader solved it from the text. |
+| L5-codelock | 11-15 | number 9 in the question is not a parameter (written in the wording; check) | **accepted** | The number is written in the wording only (a count named in the story, a place, a step). The independent checker re-solves the puzzle from its parameters and the second reader solved it from the text. |
+| L5-codelock | 11-15 | story words 3 of 5 like "/ / P D F C M S / Evidence / / LOW / 2 1 3 2 3 2 / Lost early: `setup` (10-11 min, 125 wor ..." (docs/audit/journey_p6.md) | **accepted** | The match is a planning, audit, catalogue or program note, or a generic phrase (units, "are sold in packs of", "cm by"); the story, the question and the answer differ. Read. |
+| L6-helmetsale | 11-17 | story words 5 of 6 like "How much money is saved? What is the sale price? (Type the number of dollars.)", "marking_ ..." (practice/holiday/p5/07/dist/data/p5l07.json) | **accepted** | The match is a planning, audit, catalogue or program note, or a generic phrase (units, "are sold in packs of", "cm by"); the story, the question and the answer differ. Read. |
+| L6-helmetsale | 11-17 | rule S3: the sentence "A bicycle helmet is sold at a discount of 30%." is like "A $250 bicycle is sold at a 12% discount." (outputs/designed/Math_Inquirers_P5_Question_Bank.pdf) | **accepted** | One sentence frame of the source ("A rope is cut into 2 pieces", "A grid is 3 squares wide") with other numbers and another question; a generic opening sentence, not the source puzzle. |
+| L6-fishtank | 11-23 | number 1 in the question is not a parameter (written in the wording; check) | **accepted** | The number is written in the wording only (a count named in the story, a place, a step). The independent checker re-solves the puzzle from its parameters and the second reader solved it from the text. |
+| L6-fishtank | 11-23 | rule G: 3 shared number-unit grams (40 cm by / by 40 cm / cm by 40) in "How many ℓ of water does it hold when full? A jug holds 45 ℓ. A sink measures 80 ..." (school/p5/out/P5_S2_Complete_Pack.pdf) | **accepted** | The match is a planning, audit, catalogue or program note, or a generic phrase (units, "are sold in packs of", "cm by"); the story, the question and the answer differ. Read. |
+| L1-lockerdigits | 12-02 | number 3 in the question is not a parameter (written in the wording; check) | **accepted** | The number is written in the wording only (a count named in the story, a place, a step). The independent checker re-solves the puzzle from its parameters and the second reader solved it from the text. |
+| L1-lockerdigits | 12-02 | number 12 in the question is not a parameter (written in the wording; check) | **accepted** | The number is written in the wording only (a count named in the story, a place, a step). The independent checker re-solves the puzzle from its parameters and the second reader solved it from the text. |
+| L1-stonehops | 12-15 | number 1 in the question is not a parameter (written in the wording; check) | **accepted** | The number is written in the wording only (a count named in the story, a place, a step). The independent checker re-solves the puzzle from its parameters and the second reader solved it from the text. |
+| L1-marbleswap | 12-26 | rule B: 3 of the same numbers ['11', '3', '4'] as "/ 13 / 2 Missing Digit Mysteries / 3[ ]5 + 214 = 579; 6[ ]8 - 205 = 433; [ ] - 1 ..." (docs/terms/l2_preflight.md) | **accepted** | The match is a planning, audit, catalogue or program note, or a generic phrase (units, "are sold in packs of", "cm by"); the story, the question and the answer differ. Read. |
+| L2-windowsolids | 12-09 | number 4 in the question is not a parameter (written in the wording; check) | **accepted** | The number is written in the wording only (a count named in the story, a place, a step). The independent checker re-solves the puzzle from its parameters and the second reader solved it from the text. |
+| L2-windowsolids | 12-09 | number 3 in the question is not a parameter (written in the wording; check) | **accepted** | The number is written in the wording only (a count named in the story, a place, a step). The independent checker re-solves the puzzle from its parameters and the second reader solved it from the text. |
+| L2-walletmoney | 12-17 | number 1 in the question is not a parameter (written in the wording; check) | **accepted** | The number is written in the wording only (a count named in the story, a place, a step). The independent checker re-solves the puzzle from its parameters and the second reader solved it from the text. |
+| L3-raffledigits | 12-04 | story words 3 of 4 like "21:('Letters and Brackets',[('EXP','T','stamps at n cents paid with $5: change in terms of ..." (docs/books/private_p6_papers/build_plan_section.py) | **accepted** | The match is a planning, audit, catalogue or program note, or a generic phrase (units, "are sold in packs of", "cm by"); the story, the question and the answer differ. Read. |
+| L3-ropepieces | 12-14 | rule S3: the sentence "A rope 33 metres long is cut into two pieces." is like "**15.3** A rope is cut into 2 pieces." (docs/sasmo/g2_original_problems_draft.md) | **accepted** | One sentence frame of the source ("A rope is cut into 2 pieces", "A grid is 3 squares wide") with other numbers and another question; a generic opening sentence, not the source puzzle. |
+| L3-stallminutes | 12-15 | story words 3 of 5 like "### Lesson 6: Market Day **Total 103.3 (fast 93, slow 115).** Warm-up **OVER +4.0**: six i ..." (docs/audit/timing_p2.md) | **accepted** | The match is a planning, audit, catalogue or program note, or a generic phrase (units, "are sold in packs of", "cm by"); the story, the question and the answer differ. Read. |
+| L4-liftfloors | 12-04 | story words 5 of 8 like "Which number should go in the block "change floor by ( )"?", "svg": "<svg overflow="visibl ..." (practice/holiday/p6/03/dist/data/p6l03.json) | **accepted** | The match is a planning, audit, catalogue or program note, or a generic phrase (units, "are sold in packs of", "cm by"); the story, the question and the answer differ. Read. |
+| L4-pencilpacks | 12-19 | rule C: two four-word runs shared with "I('pack', 5, 6, GF, 'Totals you cannot make', 'Make a table', ['Cookies are sold ..." (levels/gap_items.py): are sold in packs / sold in packs of | **accepted** | The match is a planning, audit, catalogue or program note, or a generic phrase (units, "are sold in packs of", "cm by"); the story, the question and the answer differ. Read. |
+| L4-reachtotal | 12-29 | number 1 in the question is not a parameter (written in the wording; check) | **accepted** | The number is written in the wording only (a count named in the story, a place, a step). The independent checker re-solves the puzzle from its parameters and the second reader solved it from the text. |
+| L5-dronepaths | 12-03 | rule S: sentence "It makes five moves: 22 m north, 25 m east, 11 m south, 7 m west and 9" shares 4 content words with "(1) south-east (2) south-west (3) north-east (4) north-west ANSWER:" (docs/books/ | **accepted** | Read; generic coincidence. |
+| L5-ladybirdgrid | 12-30 | rule S3: the sentence "The grid is 5 squares wide and 4 squares tall." is like "Old: A grid is 3 squares wide and 1 square tall." (docs/audit/gifted_fixes_p6.md) | **accepted** | One sentence frame of the source ("A rope is cut into 2 pieces", "A grid is 3 squares wide") with other numbers and another question; a generic opening sentence, not the source puzzle. |
+
+### D2. Frame REVIEW lines (sentence-frame rule)
+
+Each is a pair of puzzles of one sub-structure (or same-idea group) at two levels. **Ledger** = at 0.90 or more and accepted in `frame_ledger.json` (Tier B of AUDIT_ROUND6). The others (0.80 to 0.89) are **accepted**: the question sentences share the genre wording of the sub-structure, the stories, numbers and asks differ.
+
+| Pair | Score | Sub-structure | Disposition |
+|---|---|---|---|
+| L1-rpsgames / L2-ttgames | 0.80 | counting_pairs.handshakes | **accepted** |
+| L1-threefifty / L4-page5 | 0.90 | digit_puzzles.count_by_digit_rule | **ledger** |
+| L1-matchhouse / L3-sticksdisplay | 0.96 | digit_display.segments | **ledger** |
+| L1-noodleset / L5-cafemenu | 0.88 | counting_choices.combinations | **accepted** |
+| L1-hiddensum / L2-inkblot | 0.85 | missing_number.missing_digit | **accepted** |
+| L1-circlekids / L3-carousel | 0.80 | spatial.circle_opposite | **accepted** |
+| L1-fruitmatch / L2-clubmatch | 1.00 | logic_match.match_people_things | **ledger** |
+| L1-fruitmatch / L6-sixclubs | 0.88 | logic_match.match_people_things | **accepted** |
+| L1-rulerbill / L2-barleycafe | 0.80 | money.shopping | **accepted** |
+| L1-flagline / L2-scarf | 0.81 | repeating_pattern.cycle | **accepted** |
+| L1-oddbig / L3-cardkeep | 0.80 | sorting.rule_count | **accepted** |
+| L1-stickersheets / L4-gluesticks | 0.89 | money.offers | **accepted** |
+| L1-stickersheets / L5-nametagpacks | 0.80 | money.offers | **accepted** |
+| L2-runlaps / L3-shells3 | 0.86 | bar_model.three_amounts | **accepted** |
+| L2-beadsticks / L6-parcelbelt | 0.83 | sorting.fewest_swaps | **accepted** |
+| L2-schoolwalks / L4-parkpaths | 0.81 | networks.first_stop | **accepted** |
+| L2-libraryhalves / L4-mooncakes | 0.81 | bar_model.sum_difference | **accepted** |
+| L2-busroutes / L3-mapshort | 0.90 | networks.shortest_route | **accepted** |
+| L2-busroutes / L5-routeplan | 1.00 | networks.shortest_route | **ledger** |
+| L2-clubmatch / L4-hobbies | 0.90 | logic_match.match_people_things | **ledger** |
+| L2-clubmatch / L5-subjects | 1.00 | logic_match.match_people_things | **ledger** |
+| L2-clubmatch / L6-sixclubs | 1.00 | logic_match.match_people_things | **ledger** |
+| L2-toyboxshape / L3-cuboidclue | 0.87 | shapes.name_the_shape | **accepted** |
+| L2-hairclips / L4-gluesticks | 0.80 | money.offers | **accepted** |
+| L2-hairclips / L5-nametagpacks | 0.94 | money.offers | **ledger** |
+| L2-gardenfence / L3-posterribbon | 0.82 | perimeter_area.perimeter_basic | **accepted** |
+| L2-beadchain / L5-stampgive | 0.80 | word_problems.compare_amounts | **accepted** |
+| L3-missednumber / L5-lostnumber | 0.81 | series_sum.missing_term | **accepted** |
+| L3-houses / L5-sixpages | 0.80 | consecutive.consecutive_total | **accepted** |
+| L3-raffledays / L4-visitortable | 0.90 | graphs.table_total | **ledger** |
+| L3-bandmatch / L4-hobbies | 0.91 | logic_match.match_people_things | **ledger** |
+| L3-bandmatch / L5-subjects | 0.80 | logic_match.match_people_things | **accepted** |
+| L3-bandmatch / L6-sixclubs | 0.89 | logic_match.match_people_things | **accepted** |
+| L3-floortiles2 / L4-muralwall | 0.83 | perimeter_area.area_rectangle | **accepted** |
+| L3-fishmass / L4-trailmetres | 0.88 | measurement.unit_convert | **accepted** |
+| L3-longride / L4-vanroute | 0.80 | measurement.compound_units | **accepted** |
+| L3-mat168 / L4-noticeboard | 0.86 | perimeter_area.find_unknown | **accepted** |
+| L3-mapshort / L5-routeplan | 0.90 | networks.shortest_route | **accepted** |
+| L3-mealset / L4-sundaes | 0.86 | counting_choices.combinations | **accepted** |
+| L3-mealset / L5-cafemenu | 0.82 | counting_choices.combinations | **accepted** |
+| L4-evens4 / L6-step3 | 0.80 | consecutive.consecutive_total | **accepted** |
+| L4-gainingclock / L5-fastwatch | 0.80 | clock_reading.faulty_clock | **accepted** |
+| L4-gluesticks / L5-nametagpacks | 0.83 | money.offers | **accepted** |
+| L4-hobbies / L5-subjects | 0.90 | logic_match.match_people_things | **ledger** |
+| L4-hobbies / L6-sixclubs | 0.90 | logic_match.match_people_things | **ledger** |
+| L4-fivechildren / L5-queue5 | 0.86 | logic_order.rank | **accepted** |
+| L4-stamps4 / L5-henstock | 0.93 | fractions.of_set | **ledger** |
+| L5-orangeprofit / L6-tvprofit | 0.90 | money.profit | **ledger** |
+| L5-subjects / L6-sixclubs | 1.00 | logic_match.match_people_things | **ledger** |

@@ -11,7 +11,7 @@ Owner frame ruling (a story or frame appears at ONE level only) and the answer w
 | H1, the 22 Tier A groups (G2) | Closed | Every group has one keeper level; every other puzzle has a new story, new sentence frames, other numbers and, where the kind allowed, another ask (section 3). 43 puzzles of the 22 groups are rewritten or replaced, 7 more for the audit's clusters and 5-run pairs, and 18 others for level fit, the answer window and the text gate (68 in all). | 15 Tier B pairs at 0.90 or more stay, in `frame_ledger.json` (section 2). |
 | H2, answer budget (G3) | Closed | Full-year answer rule dropped at Levels 3 to 6, ANSWER-WINDOW in force (section 4); budget table in `batches/YEAR_PLAN.md`; README; `docs/terms/owner_decisions.md`. Five answer collisions of the Nov and Dec bank under the new rule were fixed. | None. |
 | M2, source lock (G5) | Closed | Bytes per root and per folder plus a manifest of 6,748 paths (section 5). | The digest line still changes with any file of the tree. |
-| M1, Level 5 (4 new sub-structures) | Closed | Five new Level 5 sub-structures with solver, independent checker, worked examples and cite (section 6). Level 5 slack 2 to 10; the year model survives 8 lost sub-structures in 3 of 3 draws (was 2). | `arrays.border_tiles` at Level 5 needs no decision any more (slack 10 without it is still 9). |
+| M1, Level 5 (4 new sub-structures) | Closed | Five new Level 5 sub-structures with solver, independent checker, worked examples and cite (section 6). Level 5 slack 2 to 10; the year model survives 8 lost sub-structures in 3 of 3 draws (was 2). | Level 5 family-capped quarter capacity 102 against 92 (slack 10); the decision on `arrays.border_tiles` at Level 5 is no longer urgent. |
 | M3, text answers (G4) | Closed as a gate | Six text-answer asks coded; gate in the verifier from January; January allocation in `TEXT_ANSWER_PLAN.md` section 6; the Level 1 and 2 rotation holds at least 4 text answers in every month (section 7). | The January to October puzzles. |
 | M4, nine pairs at 5 shared runs | Closed | Seven of the nine pairs rewritten, two (the stock "taller" frames) left, section 3.2. | None. |
 | M5, `L2-riceleft` | Closed | Replaced by a Level 2 shop-choice puzzle. | |
@@ -124,7 +124,7 @@ Coded in `kinds_r4.py` (solver), `brute_r4.py` (independent checker, never impor
 | `shapes.classify_triangle` (text) | 3 to 6 | P3, P4, P5 | by sides, by two angles |
 | `measurement.heavier_after_units` (text) | 3 to 6 | P3, P5 NA decimals 1.2 | 2 kg 300 g, 2,350 g, 2.4 kg |
 
-The five Level 5 sub-structures at least 4 required by the audit: 5 added. Level 5 units 102 to 113.
+The audit asked for at least 4 new Level 5 sub-structures: 5 are added (and six text-answer asks, all usable at Level 5). Level 5 usable units 102 to 113.
 
 ## 7. Text-answer gate and the Level 1 and 2 rotation (G4)
 
@@ -146,20 +146,20 @@ The five Level 5 sub-structures at least 4 required by the audit: 5 added. Level
 | 5 | 17 | 17 |
 | 6 | 17 | 17 |
 
-Each has exactly one answer. Along the way the reader found, and the author fixed, nothing the checkers had missed; the reading-load lines (13 questions over the sentence or word limit of their level) were shortened.
+Each has exactly one answer. Along the way the reader found, and the author fixed, nothing the checkers had missed; the reading-load lines (11 questions over the sentence or word limit of their level, found by the verifier) were shortened.
 
 ## 9. Results of the full run
 
 | Check | Result |
 |---|---|
 | `build_bank.py` | bank rebuilt; `--plan` wrote `YEAR_PLAN.md`, 0 violations |
-| `verify_bank.py` full tree | RESULT_VERIFY |
-| `--selftest` | RESULT_SELFTEST |
+| `verify_bank.py` full tree | month 11: 0 FAIL, 111 REVIEW; month 12: 0 FAIL, 84 REVIEW; structure 0 FAIL; capacity 0 FAIL (6,748 source files, 1,361.7 MB, digest b73b29ef75c4dead; source lock with bytes and manifest satisfied) |
+| `--selftest` | 148 PASS, 0 problems (the 39 audit pairs, answer windows, the lock attacks, 13 new kinds, 30 example puzzles) |
 | `second_reader_round6.py` | 102 puzzles, 0 disagreements |
 | `year_model.py` | 0 problems; cap 3 feasible at Levels 3 to 6; Level 5 survives the loss of 8 sub-structures in 3 of 3 draws |
 | `test_flag_off.py` | 15 checks, 0 failed |
 | `test_check.js` | 143 checks, 0 failed |
-| `test_site.py` (scratch build in `/dev/shm`, flag on) | RESULT_SITE |
+| `test_site.py` (scratch build in `/dev/shm`, flag on) | 483 checks, 0 failed |
 
 ## 10. Open items and owner decisions
 

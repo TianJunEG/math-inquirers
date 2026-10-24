@@ -11,11 +11,11 @@ Method: every puzzle is re-solved by `brute.py` (independent of the author solve
 | 5 | 31 | 30 | 2 | 26 | 2 | 31 |
 | 6 | 31 | 30 | 2 | 25 | 2 | 31 |
 
-Sources searched (whole working tree, tracked or not): 6748 files, 1361.7 MB, sha256 7e7f8fef1f3051217646c887.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 373, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
+Sources searched (whole working tree, tracked or not): 6748 files, 1361.7 MB, sha256 b73b29ef75c4dead4404c685.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 373, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
 
 Similarity sources checked: holiday banks, own term lessons, all extension workbook data, the school booklets, our book drafts and catalogues, external private source files, and the seven fixed website puzzles.
 
-FAIL count: 0. REVIEW items: 85.
+FAIL count: 0. REVIEW items: 84.
 
 
 - REVIEW L1-lockerdigits [12-02]: number 3 in the question is not a parameter (written in the wording; check)
@@ -102,4 +102,3 @@ FAIL count: 0. REVIEW items: 85.
 - REVIEW L6-decagon [12-25]: rule S (window): 5 of 6 content words (angle,big,inside,regular,side) in "New: The inside angles of a regular polygon add up to 1800°. A second  ..." (docs/audit/gifted_fixes_p6.md)
 - REVIEW L6-gamepay [12-27]: number 8 in the question is not a parameter (written in the wording; check)
 - REVIEW L6-gamepay [12-27]: number 12 in the question is not a parameter (written in the wording; check)
-- REVIEW L6-islandroutes [12-28]: question has 97 words (limit 95)
