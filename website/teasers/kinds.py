@@ -202,6 +202,9 @@ def share(total, k, ask):
         return total % k, {'q': total // k}
     if ask == 'boxes':
         return -(-total // k), {'q': total // k, 'r': total % k}
+    if ask == 'groups':
+        assert total % k == 0
+        return total // k, {}
     raise ValueError(ask)
 
 

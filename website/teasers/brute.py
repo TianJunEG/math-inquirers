@@ -222,6 +222,8 @@ def b_share(total, k, ask):
     while left > 0:
         left -= k
         boxes += 1
+    if ask == 'groups' and left != 0:
+        return set()
     return {boxes}
 
 

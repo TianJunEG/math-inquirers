@@ -126,6 +126,7 @@ def order(level, items):
     return best[1]
 
 
+LEVELS = [int(x) for x in os.environ.get('MI_LEVELS', '1 2 3 4 5 6').split()]   # development: build chosen levels only
 DAYS_IN = {'01': 31, '02': 29, '03': 31, '04': 30, '05': 31, '06': 30, '07': 31, '08': 31, '09': 30, '10': 31, '11': 30, '12': 31}
 
 
@@ -136,7 +137,7 @@ def manifest():
 def build_month(mm):
     """Build batches/m<MM>/bank.json: for every level, one puzzle per calendar day of the month."""
     out = {}
-    for lv in range(1, 7):
+    for lv in LEVELS:
         mod = importlib.import_module('defs.m%s.l%d' % (mm, lv))
         items = []
         for d in mod.DEFS:
