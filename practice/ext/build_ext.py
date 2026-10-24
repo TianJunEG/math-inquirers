@@ -10,7 +10,7 @@ What it does, in this order (any failure stops the build and nothing is written)
  2. turns each item / part into a runner item (type fields, set, choice or selfcheck) with its figure drawn by extension/tools/figs.py;
  3. attaches the variant families of the sidecar practice/ext/variants/lN_uXX.py, and runs each family's independent oracle over EVERY
     combination of its variables (and at the authored numbers) before anything is written;
- 4. copies the Term 1 runner (term/l1/runner) with four small, asserted patches (see patch_runner) and writes data + page.
+ 4. copies the Term 1 runner (term/l1/runner) with five small, asserted patches (see patch_runner) and writes data + page.
 No timers, scores or streaks: that is the runner's rule and this build adds nothing to it.
 """
 import html, importlib.util, itertools, json, os, re, shutil, sys
@@ -210,7 +210,7 @@ def attach_variants(items, variants):
 
 # ---------------------------------------------------------------- step 4: runner copy and page
 def patch_runner(js):
-    """Four asserted patches to the copy of term/l1/runner/practice.js; the original file is not touched."""
+    """Five asserted patches to the copy of term/l1/runner/practice.js; the original file is not touched."""
     def sub(old, new):
         nonlocal js
         if js.count(old) != 1:
@@ -221,6 +221,8 @@ def patch_runner(js):
     sub("['core', 'stretch', 'challenge'].forEach(function (k) { t.appendChild(", "Object.keys(TIER).forEach(function (k) { t.appendChild(")
     sub("' · Lesson ' + L.lesson + ' · ' + L.topic;", "' · ' + (L.unit_label || 'Lesson ' + L.lesson) + ' · ' + L.topic;")
     sub("function shuffled(item) {\n", "function shuffled(item) {\n    if (item.fixed) return item.options;\n")
+    # a True/False (or any two-choice) item has only one wrong answer, so "that is the same answer as before" would trap the child
+    sub("if (s.tries === 1 && s.last === sig) {", "if (s.tries === 1 && s.last === sig && !(item.type === 'choice' && item.options.length < 3)) {")
     return js
 
 
