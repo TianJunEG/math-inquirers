@@ -67,7 +67,7 @@ DEFS = [
       'Pages 1 to 9 use {ones} digits. Pages 10 to 99 are {two} pages with 2 digits each, which is {twos} digits. Pages 100 to {hi} are {three} pages with 3 digits each, which is {threes} digits. {ones} + {twos} + {threes} = {ans}.',
       p=dict(lo=1, hi=150), unit='digits', sub='place_value.digits_written'),
     P('magic', 'magic', 'Magic squares',
-      'Place the digits 1 to 9 in a 3 by 3 square, each digit once, so that every line across, every line down and both corner-to-corner lines add up to the same total. Some digits are placed for you, and ? marks a gap. Which digit goes in the bottom right corner?',
+      'Place the digits 1 to 9 in a 3 by 3 square, each digit once. Every line across, every line down and both corner-to-corner lines must add up to the same total. Some digits are placed for you, and ? marks a gap. Which digit goes in the bottom right corner?',
       'Add the top line first. That gives the total for every line.',
       'The top line is {cells9[0]} + {cells9[1]} + {cells9[2]} = {S}, so every line adds to {S}. Left line down: 2 + 7 + 6, so the bottom-left is 6. Corner-to-corner line: 4 + 5 + 6, so the middle is 5. Middle line across: 7 + 5 + 3, so the right of the middle line is 3. Right line down: 4 + 3 + 8, so the corner at the bottom right is {ans}.',
       p=dict(cells9=[2, 9, 4, 7, None, None, None, None, None], nums=[1, 2, 3, 4, 5, 6, 7, 8, 9], ask_idx=8), code='{grid}', sub='number_grid.magic_square'),

@@ -1,6 +1,6 @@
 # Structure report (taxonomy.json)
 
-Sources searched (whole working tree, tracked or not): 6664 files, 1357.7 MB, sha256 4133d40de45df2e44201d848.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 289, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
+Sources searched (whole working tree, tracked or not): 6667 files, 1357.8 MB, sha256 59eff2d11509a27b04095132.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 292, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
 
 Rules. Levels 3 to 6 (TEASER-STRICT): per level and calendar quarter at most 1 puzzle per sub-structure and 3 per family; the same sub-structure never within 30 days of itself across a quarter boundary; an answer of 10 or more appears once per level and a single digit at most 4 times. Levels 1 and 2 (L1L2-GAP60): the same sub-structure at least 60 days apart (circular, 365- and 366-day year), a family at most 3 times in any 60 days and never on consecutive days, an answer not repeated within 60 days and a single-digit answer at most 2 times in 60 days. All levels: no repeated frame, no two puzzles with most numbers or the same story in common; the sub-structures used by the fixed puzzles on the level pages (counting_choices.digit_cards_arrangements, fractions.fraction_of_remainder, multiples.common_multiple, remainders.two_conditions, sequence.count_on, sequence.which_term) are never used by the bank.
 
@@ -8,7 +8,7 @@ Rules. Levels 3 to 6 (TEASER-STRICT): per level and calendar quarter at most 1 p
 - Level 2 (gap rule, 60 days): 61 puzzles, 61 distinct sub-structures (none twice within the gap), 43 families, most in one family 3
 - Level 3, quarter 4: 61 puzzles, 61 distinct sub-structures, 43 families, most in one family 3
 - Level 4, quarter 4: 61 puzzles, 61 distinct sub-structures, 41 families, most in one family 3
-- Level 5, quarter 4: 61 puzzles, 61 distinct sub-structures, 41 families, most in one family 3
+- Level 5, quarter 4: 61 puzzles, 61 distinct sub-structures, 42 families, most in one family 3
 - Level 6, quarter 4: 61 puzzles, 61 distinct sub-structures, 34 families, most in one family 3
 
 ## Capacity of the taxonomy (true numbers, after merging look-alike sub-structures)
@@ -20,10 +20,10 @@ Levels 3 to 6 (quarter rule): one use per sub-structure and at most 3 per family
 |---|---|---|---|---|---|---|---|---|
 | 1 | 71 | 41 | gap 60 days | 6 | 61 | 10 | 414 a year | ok |
 | 2 | 93 | 48 | gap 60 days | 6 | 61 | 32 | 528 a year | ok |
-| 3 | 116 | 51 | once a quarter | 1 per quarter | 92 | 13 | 105 per quarter | ok |
-| 4 | 116 | 56 | once a quarter | 1 per quarter | 92 | 14 | 106 per quarter | ok |
-| 5 | 109 | 53 | once a quarter | 1 per quarter | 92 | 9 | 101 per quarter | ok |
-| 6 | 102 | 52 | once a quarter | 1 per quarter | 92 | 5 | 97 per quarter | ok |
+| 3 | 115 | 51 | once a quarter | 1 per quarter | 92 | 13 | 105 per quarter | ok |
+| 4 | 115 | 56 | once a quarter | 1 per quarter | 92 | 14 | 106 per quarter | ok |
+| 5 | 107 | 53 | once a quarter | 1 per quarter | 92 | 7 | 99 per quarter | ok |
+| 6 | 100 | 52 | once a quarter | 1 per quarter | 92 | 3 | 95 per quarter | ok |
 
 ## Retired sub-structures (the frame is in our own books, so no level may use it)
 
@@ -45,6 +45,7 @@ Levels 3 to 6 (quarter rule): one use per sub-structure and at most 3 per family
 - `function_machine.find_the_rule`: round 3: IN and OUT machine with a hidden rule is in the P2 tutor guide, the P6 Algebra Machines lesson and the SASMO drafts
 - `growing_pattern.growing_gaps`: round 3: same frame as holiday P1 lesson 1 (the gaps are 1, 2, 3, 4 ...)
 - `growing_pattern.stick_row`: same structure as catalogue EX-PAT-1; replaced by new structures
+- `measurement.container_and_contents`: round 4: "a jug full of water weighs 1.45 kg, half full 0.85 kg: mass of the empty jug" is Go further 7 of the P4 holiday week 5 lesson (practice/holiday/p4/05/lesson.py); the jar and rice and the juice bottle were the same frame
 - `modular.last_digit_power`: round 3: "multiply 7 by itself 45 times: last digit" is in docs/sasmo/g6_original_problems_draft.md 2.2
 - `moves.climb_and_slip`: same structure and story as our own hp question bank G5 and extension l1_u05; replaced by new structures
 - `networks.draw_without_lifting`: round 4: odd-vertex parity at ages 8 to 12 is not in the MOE syllabus (the P2 Geometry cite did not support it)
@@ -53,6 +54,7 @@ Levels 3 to 6 (quarter rule): one use per sub-structure and at most 3 per family
 - `polygons.turtle_repeat`: round 3: "walk a square: forward, turn on the spot, until back at the start" is in p6/content/l7.js
 - `polyominoes.count_shapes`: round 4: "4 squares joined edge to edge: 5 different shapes" is stated in the P4 Question Bank, P4 workbook and split/l7 key; AUDIT_ROUND4 High
 - `rate.fill_with_leak`: round 3: tap and leak is in extension l5_u05
+- `shapes.cube_net_opposite`: round 4: "a net of six squares marked A to F: which letter is opposite" is item 2 of the P4 holiday week 4 lesson 8 (practice/holiday/p4/08), and split/p5l4; a text net is also hard for ages 9 to 12
 - `sorting.three_sets`: round 4: three-set inclusion-exclusion is not in the MOE syllabus (only "Problem solving" was cited)
 - `stacks.layers_of_cubes`: round 4: layers of 1, 4, 9 ... cubes is in rebuild/skill_items_l1_3.py and the L2 Skill Additions sheet, and one story ran at three levels
 
@@ -67,10 +69,11 @@ Usable sub-structures of round 3 that no released puzzle uses yet (each has a so
 | 5 | 61 | 3 | 5% | 18 | 36 | ok |
 | 6 | 61 | 4 | 7% | 24 | 36 | ok |
 
-Structure FAIL count (all released months): 3
-- FAIL L2: single-digit answer 9 used 3 times in 60 days (cap 2): L2-canoetrips, L2-wordorder, L2-sleephours
-- FAIL L3: answer 13 repeats (L3-tripbooking, L3-booksales)
-- FAIL L4: answer 13 repeats (L4-bannerstrips, L4-heightline)
+Structure FAIL count (all released months): 4
+- FAIL L1-rulerbill (L1) and L4-wheelcount (L4): same answer 29 and shared numbers ['3', '4'] at two levels
+- FAIL L2-tilebed (L2) and L5-floortiles5 (L5): the same story skeleton at two levels (shared words paint,row,tile,touch)
+- FAIL L3-bandmatch (L3) and L6-sixclubs (L6): the same story skeleton at two levels (shared words drum,guitar,instrument,piano,play,violin)
+- FAIL L4-clockfive (L4) and L5-clockangle (L5): the same story skeleton at two levels (shared words clock,hand,hour,minute,smaller)
 
 Capacity verdict for the full year (a plan for January to October, not a defect of the released months): 0 CAPACITY FAIL
 

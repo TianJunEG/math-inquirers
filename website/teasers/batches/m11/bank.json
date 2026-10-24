@@ -434,7 +434,7 @@
      "13",
      "230"
     ],
-    "q": "A bathroom wall is covered with 5 rows of 9 square tiles. Blue tiles and white tiles take turns along every row and every column, and the tile in the top left corner is blue. How many blue tiles are on the wall?",
+    "q": "A bathroom wall is covered with 5 rows of 9 square tiles. Blue tiles and white tiles take turns along every row and every column. The tile in the top left corner is blue. How many blue tiles are on the wall?",
     "hint": "Count all the tiles first. Blue and white tiles take turns.",
     "why": "There are 5 × 9 = 45 tiles. Blue and white take turns and the first tile is blue, so there is one more blue tile than white tiles. 45 + 1 = 46, and 46 ÷ 2 = 23 tiles.",
     "date": "11-10"
@@ -866,10 +866,10 @@
     "fmt": "int",
     "type": "n",
     "ans": "34",
-    "shown": "34 apples",
+    "shown": "34 pens",
     "units": [
-     "apples",
-     "apple"
+     "pens",
+     "pen"
     ],
     "prefix": [],
     "accept": [],
@@ -885,9 +885,9 @@
      "24",
      "340"
     ],
-    "q": "A basket holds 56 apples and pears. There are 12 more apples than pears. How many apples are in the basket?",
-    "hint": "If there were the same number of apples and pears, each would be half of the total. Take away the extra apples first.",
-    "why": "Take away the 12 extra apples: 56 − 12 = 44. The rest is shared equally between apples and pears, so there are 44 ÷ 2 = 22 pears. The apples are 22 + 12 = 34 apples.",
+    "q": "A box holds 56 pens and pencils. There are 12 more pens than pencils. How many pens are in the box?",
+    "hint": "If there were the same number of pens and pencils, each would be half of the total. Take away the extra pens first.",
+    "why": "Take away the 12 extra pens: 56 − 12 = 44. The rest is shared equally between pens and pencils, so there are 44 ÷ 2 = 22 pencils. The pens are 22 + 12 = 34 pens.",
     "date": "11-21"
    },
    {
@@ -1372,7 +1372,7 @@
      "6",
      "160"
     ],
-    "q": "The school hall is booked on days 8 to 45 of the term for the chess club and on days 30 to 62 for the drama club. Both clubs have the first and last day of their booking. On how many days is the hall booked by both clubs?",
+    "q": "The school hall is booked on days 8 to 45 of the term for the chess club. The drama club books it on days 30 to 62. Both clubs have the first and last day of their booking. On how many days is the hall booked by both clubs?",
     "hint": "Find the first day when both clubs have the hall, and the last day when both have it.",
     "why": "Both clubs have the hall from day 30 to day 45. That is 45 − 30 + 1 = 16 days.",
     "date": "11-02"
@@ -2195,14 +2195,14 @@
     "sub": "moves.ferry_trips",
     "family": "moves",
     "p": {
-     "people": 10,
+     "people": 15,
      "cap": 3
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "9",
-    "shown": "9 crossings",
+    "ans": "13",
+    "shown": "13 crossings",
     "units": [
      "crossings",
      "crossing"
@@ -2211,17 +2211,18 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "10",
-     "8",
+     "14",
+     "12",
+     "15",
      "11",
-     "7",
-     "18",
-     "19",
-     "90"
+     "26",
+     "23",
+     "3",
+     "130"
     ],
-    "q": "10 children want to get across a lake. A canoe carries 3 people at most, and it only moves when a child paddles it. Every trip, to the far side or back, is one crossing. What is the fewest number of crossings that gets all 10 children to the far side?",
+    "q": "15 children want to get across a lake. A canoe carries 3 people at most, and it only moves when a child paddles it. Every trip, to the far side or back, is one crossing. What is the fewest number of crossings that gets all 15 children to the far side?",
     "hint": "One child must paddle the canoe back after every crossing except the last one. How many children can one trip across and one trip back move for good?",
-    "why": "Each trip across and back moves 3 − 1 = 2 children across for good, because one child paddles back. The last crossing carries 3 children and needs no trip back. So 10 − 3 = 7 children must be moved by round trips: 7 ÷ 2 is more than 3, so 4 round trips are needed, which is 8 crossings. The last crossing makes it 9 crossings.",
+    "why": "Each trip across and back moves 3 − 1 = 2 children across for good, because one child paddles back. The last crossing carries 3 children and needs no trip back. So 15 − 3 = 12 children must be moved by round trips: 12 ÷ 2 = 6 round trips, which is 12 crossings. The last crossing makes it 13 crossings.",
     "date": "11-21"
    },
    {
@@ -2553,7 +2554,7 @@
      "15",
      "50"
     ],
-    "q": "10 lanterns hang in a ring, numbered 1 to 10 going round. Mei counts round the ring starting at lantern 1, and she switches off every 2nd lantern that she counts. She carries on round and round and does not count the lanterns that are already off. Which numbered lantern is the last one still on?",
+    "q": "10 lanterns hang in a ring, numbered 1 to 10 going round. Mei starts counting at lantern 1 and switches off every 2nd lantern she counts. She keeps going round and skips the lanterns that are already off. Which lantern is the last one still on?",
     "hint": "Write the numbers 1 to 10 in a row. Cross out every second one, carry on from where you stopped, and keep going round.",
     "why": "The lanterns go off in this order: 2, 4, 6, 8, 10, 3, 7, 1, 9. The last lantern still on is number 5.",
     "date": "11-29"
@@ -3742,7 +3743,7 @@
      "18",
      "80"
     ],
-    "q": "Place the digits 1 to 9 in a 3 by 3 square, each digit once, so that every line across, every line down and both corner-to-corner lines add up to the same total. Some digits are placed for you, and ? marks a gap. Which digit goes in the bottom right corner?",
+    "q": "Place the digits 1 to 9 in a 3 by 3 square, each digit once. Every line across, every line down and both corner-to-corner lines must add up to the same total. Some digits are placed for you, and ? marks a gap. Which digit goes in the bottom right corner?",
     "hint": "Add the top line first. That gives the total for every line.",
     "why": "The top line is 2 + 9 + 4 = 15, so every line adds to 15. Left line down: 2 + 7 + 6, so the bottom-left is 6. Corner-to-corner line: 4 + 5 + 6, so the middle is 5. Middle line across: 7 + 5 + 3, so the right of the middle line is 3. Right line down: 4 + 3 + 8, so the corner at the bottom right is 8.",
     "code": "2   9   4\n7   ?   ?\n?   ?   ?",
@@ -4697,19 +4698,19 @@
     "sub": "guess_check.heads_and_legs",
     "family": "guess_check",
     "p": {
-     "heads": 45,
-     "legs": 119,
-     "a": 2,
-     "b": 3
+     "heads": 38,
+     "legs": 143,
+     "a": 3,
+     "b": 4
     },
     "t": {},
     "fmt": "int",
     "type": "n",
     "ans": "29",
-    "shown": "29 tricycles",
+    "shown": "29 chairs",
     "units": [
-     "tricycles",
-     "tricycle"
+     "chairs",
+     "chair"
     ],
     "prefix": [],
     "accept": [],
@@ -4724,9 +4725,9 @@
      "19",
      "290"
     ],
-    "q": "A shed holds only bicycles and tricycles. There are 45 cycles and 119 wheels in all. Bicycles have 2 wheels each and tricycles have 3 wheels each. How many tricycles are in the shed?",
-    "hint": "Guess a number of tricycles and count the wheels. Then adjust your guess.",
-    "why": "If all 45 cycles were bicycles, there would be 90 wheels. There are 119 − 90 = 29 more wheels. Each tricycle has 1 more wheel than a bicycle, so there are 29 ÷ 1 = 29 tricycles.",
+    "q": "A workshop makes only stools and chairs. There are 38 pieces of furniture and 143 legs in all. A stool has 3 legs and a chair has 4 legs. How many chairs are in the workshop?",
+    "hint": "Guess a number of chairs and count the legs. Then adjust your guess.",
+    "why": "If all 38 pieces were stools, there would be 114 legs. There are 143 − 114 = 29 more legs. Each chair has 1 more leg than a stool, so there are 29 ÷ 1 = 29 chairs.",
     "date": "11-18"
    },
    {
@@ -5705,15 +5706,15 @@
     "sub": "percentage.simple_interest",
     "family": "percentage",
     "p": {
-     "principal": 2000,
-     "rate_pct": 3,
-     "years": 4
+     "principal": 3500,
+     "rate_pct": 4,
+     "years": 3
     },
     "t": {},
     "fmt": "money",
     "type": "n",
-    "ans": "240",
-    "shown": "$240",
+    "ans": "420",
+    "shown": "$420",
     "units": [
      "dollars",
      "dollar"
@@ -5725,73 +5726,60 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "241",
-     "239",
-     "242",
-     "238",
-     "480",
-     "120",
-     "250",
-     "230",
-     "240.5",
-     "2400"
+     "421",
+     "419",
+     "422",
+     "418",
+     "840",
+     "210",
+     "430",
+     "410",
+     "420.5",
+     "4200"
     ],
-    "q": "Aisha puts $2,000 in a savings account. The bank pays 3% simple interest each year on the $2,000. How much interest does she earn in 4 years?",
+    "q": "Mr Tan puts $3,500 in a fixed-deposit account. The bank pays 4% simple interest each year on the $3,500. How much interest does he earn in 3 years?",
     "hint": "Find the interest for one year first. Simple interest is the same amount every year.",
-    "why": "3% of $2,000 is $60 for one year. For 4 years: 4 × $60 = $240.",
+    "why": "4% of $3,500 is $140 for one year. For 3 years: 3 × $140 = $420.",
     "date": "11-11"
    },
    {
-    "id": "L5-crossnet",
+    "id": "L5-floortiles5",
     "level": 5,
-    "frame": "crossnet",
-    "kind": "net_opposite",
-    "topic": "Nets",
-    "sub": "shapes.cube_net_opposite",
-    "family": "shapes",
+    "frame": "floortiles5",
+    "kind": "border_tiles",
+    "topic": "Rows and columns",
+    "sub": "arrays.border_tiles",
+    "family": "arrays",
     "p": {
-     "cells": {
-      "A": [
-       1,
-       0
-      ],
-      "B": [
-       0,
-       1
-      ],
-      "C": [
-       1,
-       1
-      ],
-      "D": [
-       2,
-       1
-      ],
-      "E": [
-       3,
-       1
-      ],
-      "F": [
-       1,
-       2
-      ]
-     },
-     "ask": "B"
+     "n": 22,
+     "m": 31
     },
     "t": {},
     "fmt": "int",
-    "type": "s",
-    "ans": "d",
-    "shown": "D",
-    "units": [],
+    "type": "n",
+    "ans": "102",
+    "shown": "102 tiles",
+    "units": [
+     "tiles",
+     "tile"
+    ],
     "prefix": [],
     "accept": [],
     "exact": false,
-    "wrong": [],
-    "q": "The diagram shows a net made of six squares. The net is folded up to make a cube, with the letters on the outside. Which letter is on the face opposite the face marked B?",
-    "hint": "Imagine the long row of four squares wrapping round the cube like a belt. Which squares are left for the top and the bottom?",
-    "why": "The row B, C, D, E wraps round the cube like a belt. B and D are on opposite sides of the belt, and C and E are on opposite sides. A folds down to be one end and F folds to be the other end, so A and F are opposite. The face opposite B is D.",
-    "code": "    [A]\n[B][C][D][E]\n    [F]",
+    "wrong": [
+     "103",
+     "101",
+     "104",
+     "100",
+     "204",
+     "51",
+     "112",
+     "92",
+     "1020"
+    ],
+    "q": "The floor of a hall is a rectangle of square tiles, 22 rows with 31 tiles in each row. The tiles that touch the edge of the floor are painted red. How many tiles are painted red?",
+    "hint": "Count the tiles along the top and bottom rows first. Then count the tiles at the two ends of every row in between.",
+    "why": "The top and bottom rows have 31 tiles each: 2 × 31 = 62. The other 22 − 2 = 20 rows each have 2 red tiles at the ends: 20 × 2 = 40. In all, 62 + 40 = 102 tiles.",
     "date": "11-12"
    },
    {
@@ -6195,47 +6183,46 @@
     "date": "11-21"
    },
    {
-    "id": "L5-juicebottle",
+    "id": "L5-clockangle",
     "level": 5,
-    "frame": "juicebottle",
-    "kind": "container_mass",
-    "topic": "Mass",
-    "sub": "measurement.container_and_contents",
-    "family": "measurement",
+    "frame": "clockangle",
+    "kind": "angle",
+    "topic": "Angles",
+    "sub": "angles.clock_hands",
+    "family": "angles",
     "p": {
-     "full": 1100,
-     "part": 800,
-     "num": 2,
-     "den": 3,
-     "ask": "jar"
+     "kind": "clock",
+     "h": 7,
+     "m": 20
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "200",
-    "shown": "200 g",
+    "ans": "100",
+    "shown": "100°",
     "units": [
-     "g",
-     "gram",
-     "grams"
+     "°",
+     "deg",
+     "degree",
+     "degrees"
     ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "201",
-     "199",
-     "202",
-     "198",
-     "400",
-     "100",
-     "210",
-     "190",
-     "2000"
+     "101",
+     "99",
+     "102",
+     "98",
+     "200",
+     "50",
+     "110",
+     "90",
+     "1000"
     ],
-    "q": "A bottle full of juice has a mass of 1100 g. After one third of the juice is drunk, the bottle with the juice that is left has a mass of 800 g. Find the mass of the empty bottle.",
-    "hint": "The juice that was drunk is the difference between the two masses. It was one third of all the juice.",
-    "why": "The juice drunk has a mass of 1100 − 800 = 300 g. That was one third of the juice, so all the juice has a mass of 300 × 3 = 900 g. The empty bottle has a mass of 1100 − 900 = 200 g.",
+    "q": "A clock shows 7:20. What is the smaller angle between the hour hand and the minute hand?",
+    "hint": "The minute hand points at 4, which is 4 × 30° = 120° from 12. The hour hand moves a little as the minutes pass. How far has it moved in 20 minutes?",
+    "why": "At 7:00 the hour hand is at 7 × 30° = 210°. In 20 minutes it moves 20 × 0.5° = 10° more, so it is at 220°. The minute hand is at 4 × 30° = 120°. The angle between them is 220° − 120° = 100°.",
     "date": "11-22"
    },
    {
@@ -7457,10 +7444,10 @@
     "fmt": "int",
     "type": "n",
     "ans": "14",
-    "shown": "14 GB",
+    "shown": "14 classes",
     "units": [
-     "GB",
-     "GB"
+     "classes",
+     "classe"
     ],
     "prefix": [],
     "accept": [],
@@ -7476,9 +7463,9 @@
      "4",
      "140"
     ],
-    "q": "Jun Hao's phone plan costs $7 a month plus $4 for each GB of data. One month his bill is $63. How many GB of data did he use?",
-    "hint": "Take away the fixed charge first. What is left is the cost of the data.",
-    "why": "63 − 7 = 56. Each GB costs $4, so 56 ÷ 4 = 14 GB.",
+    "q": "A gym charges $7 to join and $4 for each class Jun Hao attends. One month his bill is $63. How many classes did he attend?",
+    "hint": "Take away the joining fee first. What is left is the cost of the classes.",
+    "why": "63 − 7 = 56. Each class costs $4, so 56 ÷ 4 = 14 classes.",
     "date": "11-21"
    },
    {

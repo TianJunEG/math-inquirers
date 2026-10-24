@@ -205,9 +205,9 @@
      "15",
      "50"
     ],
-    "q": "Mei picks one token from a red bag and one token from a blue bag. Each bag has tokens numbered 1 to 7. The two numbers add up to 10. A red 3 and a blue 7 is different from a red 7 and a blue 3. How many different ways can this happen?",
-    "hint": "List the red numbers in order, starting with the smallest one that can work. For each one, ask what the blue number must be.",
-    "why": "The pairs (red, blue) are 3 and 7, 4 and 6, 5 and 5, 6 and 4, and 7 and 3. That is 5 ways.",
+    "q": "Mei takes one token from bag A and one token from bag B. Each bag has tokens numbered 1 to 7. The two numbers add up to 10. A 3 from bag A and a 7 from bag B is different from a 7 from bag A and a 3 from bag B. How many different ways can this happen?",
+    "hint": "List the numbers from bag A in order, starting with the smallest one that can work. For each one, ask what the number from bag B must be.",
+    "why": "The pairs (bag A, bag B) are 3 and 7, 4 and 6, 5 and 5, 6 and 4, and 7 and 3. That is 5 ways.",
     "date": "12-05"
    },
    {
@@ -507,8 +507,8 @@
     "accept": [],
     "exact": false,
     "wrong": [],
-    "q": "Add four odd numbers together, such as 3 + 5 + 7 + 9. Will the answer be odd or even?",
-    "hint": "Try it with some other four odd numbers, like 1 + 1 + 1 + 1. Add them in pairs.",
+    "q": "Add four odd numbers together, such as 1 + 3 + 5 + 11. Will the answer be odd or even?",
+    "hint": "Try it with some other four odd numbers, like 7 + 7 + 7 + 9. Add them in pairs.",
     "why": "Two odd numbers add to an even number. Four odd numbers make two pairs, and even + even is even. The answer is always even.",
     "date": "12-12"
    },
@@ -756,8 +756,8 @@
      "28",
      "380"
     ],
-    "q": "Lamp posts stand round a pond, 60 of them, numbered 1 to 60 in order, going round. Which lamp post is exactly opposite lamp post number 8?",
-    "hint": "Opposite means halfway round the pond. How many lamp posts are in half of the circle?",
+    "q": "A running track has 60 cones, numbered 1 to 60 in order, going round the track. Which cone is exactly opposite cone number 8?",
+    "hint": "Opposite means halfway round the track. How many cones are in half of the circle?",
     "why": "Half of 60 is 30. Count on 30 places from 8: 8 + 30 = 38.",
     "date": "12-18"
    },
@@ -1482,9 +1482,10 @@
      "14",
      "40"
     ],
-    "q": "Four friends, Ana, Ben, Cai and Dev, play four games, numbered 1 to 4, in four rounds. In every round the four friends play four different games, and each friend plays every game once. In round 1, Ana plays game 1 and Ben plays game 2. In round 2, Cai plays game 1. In round 3, Ana plays game 3. In round 4, Dev plays game 2. Which game does Ana play in round 4?",
+    "q": "Ana, Ben, Cai and Dev play games 1 to 4 in four rounds. In every round the four friends play four different games, and each friend plays every game once. The timetable shows what we know, and ? means we do not know yet. Which game does Ana play in round 4?",
     "hint": "In round 1, Cai and Dev play games 3 and 4, in some order. Use the other clues to decide which is which.",
     "why": "The full timetable, in the order Ana, Ben, Cai, Dev, is: round 1: 1, 2, 4, 3. Round 2: 2, 3, 1, 4. Round 3: 3, 4, 2, 1. Round 4: 4, 1, 3, 2. Ana plays game 4 in round 4.",
+    "code": "         Ana Ben Cai Dev\nRound 1:   1   2   ?   ?\nRound 2:   ?   ?   1   ?\nRound 3:   3   ?   ?   ?\nRound 4:   ?   ?   ?   2",
     "date": "12-02"
    },
    {
@@ -1711,7 +1712,7 @@
      "23",
      "330"
     ],
-    "q": "Class 2A and Class 2B recycle paper for three weeks. In week 1, 2A recycled 18 kg. In week 3, 2B recycled 27 kg. The class totals are 58 kg for 2A and 72 kg for 2B. The week totals are 30 kg, 50 kg and 50 kg. How many kilograms did 2B recycle in week 2?",
+    "q": "Classes 2A and 2B recycle paper for three weeks. In week 1, 2A recycled 18 kg. In week 3, 2B recycled 27 kg. The totals are 58 kg for 2A and 72 kg for 2B, and 30 kg, 50 kg and 50 kg for the three weeks. How many kilograms did 2B recycle in week 2?",
     "hint": "Draw a table with two rows and three columns. Fill in what you know. Then find the missing numbers one at a time.",
     "why": "Week 1: 2B recycled 30 − 18 = 12 kg. Then in week 2, 2B recycled 72 − 12 − 27 = 33 kg.",
     "date": "12-07"
@@ -1830,7 +1831,7 @@
      "31",
      "410"
     ],
-    "q": "A courtyard floor has 9 rows of 9 square paving stones. Grey and red stones take turns in every row and in every line of stones going down the floor, so two stones that share a side never match. The first stone in the first row is grey. How many grey stones are on the floor?",
+    "q": "A courtyard floor has 9 rows of 9 square paving stones. Grey and red stones take turns along every row and down every line, so neighbours never match. The first stone in the first row is grey. How many grey stones are on the floor?",
     "hint": "Count all the stones first. Grey and red stones take turns.",
     "why": "There are 9 × 9 = 81 stones. Grey and red take turns and the first stone is grey, so there is one more grey stone than red stones. 81 + 1 = 82, and 82 ÷ 2 = 41 stones.",
     "date": "12-10"
@@ -1944,7 +1945,7 @@
      "30",
      "200"
     ],
-    "q": "Bridges join four islands. The bridge lengths in kilometres are: Pier to Hill 12, Pier to Cove 8, Cove to Hill 3, Hill to Dock 9, Cove to Dock 16. What is the shortest way from Pier to Dock, in kilometres?",
+    "q": "Bridges join four islands. The bridge lengths in kilometres are: Pier to Hill 12. Pier to Cove 8. Cove to Hill 3. Hill to Dock 9. Cove to Dock 16. What is the shortest way from Pier to Dock, in kilometres?",
     "hint": "List the different routes from Pier to Dock. Add the bridge lengths for each route.",
     "why": "The routes are Pier-Hill-Dock 21, Pier-Cove-Dock 24, and Pier-Cove-Hill-Dock 8 + 3 + 9 = 20. The shortest is 20 km.",
     "date": "12-12"
@@ -2036,7 +2037,7 @@
      "42",
      "520"
     ],
-    "q": "A shop stacks tins in rows. The top row has 3 tins, the next row has 4 tins, and each lower row has 1 more tin than the row above it, down to a bottom row of 10 tins. How many tins are in the stack?",
+    "q": "A shop stacks tins in rows. The top row has 3 tins, and each lower row has 1 more tin than the row above it. The bottom row has 10 tins. How many tins are in the stack?",
     "hint": "Pair the top row with the bottom row, the second row with the one above the bottom, and so on.",
     "why": "The rows have 3, 4, 5, 6, 7, 8, 9 and 10 tins. Pairs: 3 + 10, 4 + 9, 5 + 8, 6 + 7. Each pair is 13. 4 pairs make 52 tins.",
     "date": "12-14"
@@ -3113,15 +3114,15 @@
       23
      ],
      "r2": [
-      11,
+      10,
       30
      ]
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "13",
-    "shown": "13 days",
+    "ans": "14",
+    "shown": "14 days",
     "units": [
      "day",
      "days"
@@ -3130,18 +3131,19 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "14",
-     "12",
      "15",
-     "11",
-     "26",
-     "23",
-     "3",
-     "130"
+     "13",
+     "16",
+     "12",
+     "28",
+     "7",
+     "24",
+     "4",
+     "140"
     ],
-    "q": "The Hill Library holds a book sale from the 6th to the 23rd of March, and the Park Library holds a book sale from the 11th to the 30th of March. Both sales are open on their first and last day. On how many days are both book sales open at the same time?",
+    "q": "The Hill Library holds a book sale from the 6th to the 23rd of March. The Park Library holds a book sale from the 10th to the 30th of March. Both sales are open on their first and last day. On how many days are both sales open at the same time?",
     "hint": "Find the first day when both sales are open, and the last day when both are open.",
-    "why": "Both sales are open from the 11th to the 23rd. That is 23 − 11 + 1 = 13 days.",
+    "why": "Both sales are open from the 10th to the 23rd. That is 23 − 10 + 1 = 14 days.",
     "date": "12-07"
    },
    {
@@ -3218,7 +3220,7 @@
      "17",
      "270"
     ],
-    "q": "Roads in kilometres: Home to Library 8, Home to Park 12, Library to Park 3, Library to Pool 13, Park to Pool 9, Park to School 17, Pool to School 7. Find the shortest way from Home to School, in kilometres.",
+    "q": "Roads in kilometres: Home to Library 8. Home to Park 12. Library to Park 3. Library to Pool 13. Park to Pool 9. Park to School 17. Pool to School 7. Find the shortest way from Home to School, in kilometres.",
     "hint": "List the routes from Home to School and add up the road lengths on each one.",
     "why": "The best route is Home-Library-Park-Pool-School: 8 + 3 + 9 + 7 = 27 km. Home-Park-Pool-School is 12 + 9 + 7 = 28, which is longer.",
     "date": "12-08"
@@ -3314,7 +3316,7 @@
      "75.5",
      "750"
     ],
-    "q": "Mia's moneybox holds $12. On day 1 she puts in $8. On day 2 she takes out $3. On day 3 she puts in $8, on day 4 she takes out $3, and so on, one change each day, putting in and taking out in turns. How many dollars are in the moneybox at the end of day 23?",
+    "q": "Mia's moneybox holds $12. On day 1 she puts in $8. On day 2 she takes out $3. She goes on putting in and taking out in turns, one change each day. How many dollars are in the moneybox at the end of day 23?",
     "hint": "Look at two days together. What is the change in the moneybox after one putting in and one taking out?",
     "why": "Two days (putting in $8, taking out $3) change the moneybox by 8 − 3 = $5. 23 days are 11 pairs of days and 1 more day. The 11 pairs add 11 × 5 = $55, and the extra day adds $8. So the moneybox holds $12 + $55 + $8 = $75.",
     "date": "12-10"
@@ -3444,47 +3446,44 @@
     "date": "12-13"
    },
    {
-    "id": "L3-ricejar",
+    "id": "L3-funrun",
     "level": 3,
-    "frame": "ricejar",
-    "kind": "container_mass",
-    "topic": "Mass",
-    "sub": "measurement.container_and_contents",
-    "family": "measurement",
+    "frame": "funrun",
+    "kind": "weeks_days",
+    "topic": "Weeks and days",
+    "sub": "calendar.weeks_and_days",
+    "family": "calendar",
     "p": {
-     "full": 1000,
-     "part": 640,
-     "num": 1,
-     "den": 2,
-     "ask": "jar"
+     "mode": "total",
+     "w": 9,
+     "d": 5
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "280",
-    "shown": "280 g",
+    "ans": "68",
+    "shown": "68 days",
     "units": [
-     "g",
-     "gram",
-     "grams"
+     "day",
+     "days"
     ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "281",
-     "279",
-     "282",
-     "278",
-     "560",
-     "140",
-     "290",
-     "270",
-     "2800"
+     "69",
+     "67",
+     "70",
+     "66",
+     "136",
+     "34",
+     "78",
+     "58",
+     "680"
     ],
-    "q": "A jar full of rice has a mass of 1000 g. After half of the rice is poured out, the jar and the rice left have a mass of 640 g. Find the mass of the empty jar.",
-    "hint": "The rice poured out is the difference between the two masses. It was half of all the rice.",
-    "why": "The rice poured out has a mass of 1000 − 640 = 360 g. That was half of the rice, so all the rice has a mass of 360 × 2 = 720 g. The empty jar has a mass of 1000 − 720 = 280 g.",
+    "q": "Hana trains for a fun run for 9 weeks and 5 days. For how many days does she train in all?",
+    "hint": "There are 7 days in a week. Change the weeks into days first.",
+    "why": "A week has 7 days, so 9 weeks are 9 × 7 = 63 days. With 5 more days, Hana trains 63 + 5 = 68 days.",
     "date": "12-14"
    },
    {
@@ -3858,10 +3857,10 @@
     "fmt": "int",
     "type": "n",
     "ans": "12",
-    "shown": "12 pieces",
+    "shown": "12 strips",
     "units": [
-     "pieces",
-     "piece"
+     "strips",
+     "strip"
     ],
     "prefix": [],
     "accept": [],
@@ -3877,9 +3876,9 @@
      "2",
      "120"
     ],
-    "q": "A chocolate bar is divided into 8 equal pieces and Ravi eats 3 of them. If the same bar had been divided into 32 equal pieces, how many of those pieces would Ravi have eaten to eat the same amount?",
-    "hint": "Cut each of the 8 big pieces into smaller equal pieces. How many small pieces does each big piece make?",
-    "why": "Each big piece makes 32 ÷ 8 = 4 small pieces. 3 big pieces are 3 × 4 = 12 pieces.",
+    "q": "A garden bed is divided into 8 equal strips and Ravi plants 3 of them with chillies. If the same bed had been divided into 32 equal strips, how many of those strips would hold the chillies?",
+    "hint": "Cut each of the 8 big strips into smaller equal strips. How many small strips does each big strip make?",
+    "why": "Each big strip makes 32 ÷ 8 = 4 small strips. 3 big strips are 3 × 4 = 12 strips.",
     "date": "12-23"
    },
    {
@@ -3987,27 +3986,27 @@
      "eqs": [
       [
        {
-        "apple": 2,
-        "pear": 1
+        "drum": 2,
+        "flute": 1
        },
        29
       ],
       [
        {
-        "pear": 1,
-        "banana": 1
+        "flute": 1,
+        "bell": 1
        },
        19
       ],
       [
        {
-        "apple": 1,
-        "banana": 2
+        "drum": 1,
+        "bell": 2
        },
        20
       ]
      ],
-     "ask": "banana",
+     "ask": "bell",
      "maxv": 30
     },
     "t": {},
@@ -4029,9 +4028,9 @@
      "16",
      "60"
     ],
-    "q": "An apple, a pear and a banana each stand for a whole number. Apple + apple + pear = 29. Pear + banana = 19. Apple + banana + banana = 20. What number does the banana stand for?",
-    "hint": "The second line links the pear and the banana. Try to find one of the three from the first line and the second line together.",
-    "why": "From the second line, pear = 19 − banana. Put this in the first line and in the third line and the three can be found: apple = 8, pear = 13, banana = 6. Check: 8 + 8 + 13 = 29, 13 + 6 = 19, 8 + 6 + 6 = 20.",
+    "q": "A drum, a flute and a bell each stand for a whole number. Drum + drum + flute = 29. Flute + bell = 19. Drum + bell + bell = 20. What number does the bell stand for?",
+    "hint": "The second line links the flute and the bell. Try to find one of the three from the first line and the second line together.",
+    "why": "From the second line, flute = 19 − bell. Put this in the first line and in the third line and the three can be found: drum = 8, flute = 13, bell = 6. Check: 8 + 8 + 13 = 29, 13 + 6 = 19, 8 + 6 + 6 = 20.",
     "date": "12-26"
    },
    {
@@ -4490,13 +4489,13 @@
      "ask": "count",
      "length": 15,
      "overlap": 3,
-     "total": 159
+     "total": 243
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "13",
-    "shown": "13 strips",
+    "ans": "20",
+    "shown": "20 strips",
     "units": [
      "strips",
      "strip"
@@ -4505,18 +4504,18 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "14",
-     "12",
-     "15",
-     "11",
-     "26",
-     "23",
-     "3",
-     "130"
+     "21",
+     "19",
+     "22",
+     "18",
+     "40",
+     "10",
+     "30",
+     "200"
     ],
-    "q": "Dina glues strips of card end to end to make a long banner. Every strip is 15 cm long, and each strip overlaps the next one by 3 cm. The finished banner is 159 cm long. How many strips does Dina use?",
+    "q": "Dina glues strips of card end to end to make a long banner. Every strip is 15 cm long, and each strip overlaps the next one by 3 cm. The finished banner is 243 cm long. How many strips does Dina use?",
     "hint": "The first strip gives its whole length. Every other strip adds the length that is not covered by the overlap.",
-    "why": "Each new strip adds 15 − 3 = 12 cm. The first strip is 15 cm, so the other strips make 159 − 15 = 144 cm. 144 ÷ 12 = 12 more strips. 1 + 12 = 13 strips.",
+    "why": "Each new strip adds 15 − 3 = 12 cm. The first strip is 15 cm, so the other strips make 243 − 15 = 228 cm. 228 ÷ 12 = 19 more strips. 1 + 19 = 20 strips.",
     "date": "12-05"
    },
    {
@@ -4640,9 +4639,9 @@
      "12",
      "115"
     ],
-    "q": "8 pens cost $18.40. A shop sells every pen at the same price. How much do 5 pens cost?",
-    "hint": "Find the cost of 1 pen first.",
-    "why": "1 pen costs $2.30. 5 pens cost 5 × $2.30 = $11.50.",
+    "q": "8 rulers cost $18.40. A shop sells every ruler at the same price. How much do 5 rulers cost?",
+    "hint": "Find the cost of 1 ruler first.",
+    "why": "1 ruler costs $2.30. 5 rulers cost 5 × $2.30 = $11.50.",
     "date": "12-08"
    },
    {
@@ -5054,7 +5053,7 @@
      "3",
      "130"
     ],
-    "q": "Seven children stand in a line. Their heights in centimetres, from the front of the line to the back, are 140, 128, 145, 120, 135, 125 and 130. The teacher wants the children in order of height, from the shortest at the front to the tallest at the back. Only two children standing next to each other may swap places at one time. What is the fewest number of swaps that puts the line in order?",
+    "q": "Seven children stand in a line. Their heights in centimetres, from the front to the back, are 140, 128, 145, 120, 135, 125 and 130. The teacher wants them in order of height, from the shortest at the front to the tallest at the back. Only two children standing next to each other may swap places at one time. What is the fewest number of swaps?",
     "hint": "Look for pairs of children where a taller child stands in front of a shorter child. One swap of neighbours can fix only one such pair.",
     "why": "Count, for each child, the shorter children behind: 140 has 5, 128 has 2, 145 has 4, 120 has 0, 135 has 2, 125 has 0, 130 has 0. 5 + 2 + 4 + 0 + 2 + 0 + 0 = 13 swaps. Each swap fixes one pair, so 13 swaps are needed.",
     "date": "12-18"
@@ -6211,7 +6210,7 @@
      "201",
      "2110"
     ],
-    "q": "A table shows how many visitors came through six gates of a zoo on one Sunday: Gate 1 412, Gate 2 358, Gate 3 507, Gate 4 296, Gate 5 444 and Gate 6 381. How many more visitors came through the busiest gate than through the quietest gate?",
+    "q": "A table shows how many visitors came through six zoo gates one Sunday: Gate 1 412, Gate 2 358, Gate 3 507, Gate 4 296, Gate 5 444 and Gate 6 381. How many more visitors came through the busiest gate than through the quietest gate?",
     "hint": "Find the biggest number and the smallest number first.",
     "why": "The busiest gate had 507 visitors and the quietest gate had 296 visitors. 507 − 296 = 211 visitors.",
     "date": "12-12"
@@ -6587,7 +6586,7 @@
      "24",
      "340"
     ],
-    "q": "Trails in kilometres join six places in a park: Camp to Lake 12, Camp to Ridge 10, Lake to Ridge 4, Lake to Cave 16, Ridge to Cave 20, Ridge to Peak 26, Cave to Peak 6. What is the shortest way from Camp to Peak, in kilometres?",
+    "q": "Trails in kilometres join six places in a park: Camp to Lake 12. Camp to Ridge 10. Lake to Ridge 4. Lake to Cave 16. Ridge to Cave 20. Ridge to Peak 26. Cave to Peak 6. What is the shortest way from Camp to Peak, in kilometres?",
     "hint": "List the routes from Camp to Peak, and add up the trail lengths on each route.",
     "why": "The best route is Camp-Lake-Cave-Peak: 12 + 16 + 6 = 34 km. Camp-Ridge-Peak is 10 + 26 = 36, and Camp-Ridge-Cave-Peak is 10 + 20 + 6 = 36.",
     "date": "12-20"
@@ -7111,72 +7110,72 @@
       "Farid"
      ],
      "things": [
-      "cat",
-      "dog",
-      "fish",
-      "bird",
-      "rabbit",
-      "hamster"
+      "piano",
+      "drums",
+      "flute",
+      "violin",
+      "guitar",
+      "cello"
      ],
      "clues": [
       [
        "Ali",
-       "dog",
+       "drums",
        true
       ],
       [
        "Ben",
-       "cat",
+       "piano",
        false
       ],
       [
        "Ben",
-       "fish",
+       "flute",
        false
       ],
       [
        "Chen",
-       "bird",
+       "violin",
        true
       ],
       [
        "Dina",
-       "cat",
+       "piano",
        false
       ],
       [
        "Dina",
-       "rabbit",
+       "guitar",
        false
       ],
       [
        "Emily",
-       "fish",
+       "flute",
        false
       ],
       [
        "Emily",
-       "hamster",
+       "cello",
        false
       ],
       [
        "Farid",
-       "cat",
+       "piano",
        false
       ],
       [
        "Farid",
-       "fish",
+       "flute",
        false
       ],
       [
        "Ben",
-       "hamster",
+       "cello",
        false
       ]
      ],
-     "ask_thing": "hamster",
-     "verb": "owns the"
+     "ask_thing": "cello",
+     "verb": "plays the"
     },
     "t": {},
     "fmt": "int",
@@ -7194,9 +7193,9 @@
      "Dina",
      "Emily"
     ],
-    "q": "Ali, Ben, Chen, Dina, Emily and Farid each own a different pet: cat, dog, fish, bird, rabbit or hamster. Ali owns the dog. Ben owns neither the cat nor the fish. Chen owns the bird. Dina does not own the cat or the rabbit. Emily owns neither the fish nor the hamster. Farid owns neither the cat nor the fish. Ben does not own the hamster. Who owns the hamster?",
-    "hint": "Start with the people whose pets are known. Then cross out those pets for everyone else.",
-    "why": "Ali owns the dog, Ben owns the rabbit, Chen owns the bird, Dina owns the fish, Emily owns the cat, Farid owns the hamster. So Farid owns the hamster.",
+    "q": "Ali, Ben, Chen, Dina, Emily and Farid each play a different instrument: piano, drums, flute, violin, guitar or cello. Ali plays the drums. Ben plays neither the piano nor the flute. Chen plays the violin. Dina does not play the piano or the guitar. Emily plays neither the flute nor the cello. Farid plays neither the piano nor the flute. Ben does not play the cello. Who plays the cello?",
+    "hint": "Start with the people whose instruments are known. Then cross out those instruments for everyone else.",
+    "why": "Ali plays the drums, Ben plays the guitar, Chen plays the violin, Dina plays the flute, Emily plays the piano, Farid plays the cello. So Farid plays the cello.",
     "date": "12-02"
    },
    {
@@ -7736,10 +7735,10 @@
     "fmt": "int",
     "type": "n",
     "ans": "32",
-    "shown": "32 boxes",
+    "shown": "32 crates",
     "units": [
-     "boxes",
-     "boxe"
+     "crates",
+     "crate"
     ],
     "prefix": [],
     "accept": [],
@@ -7755,9 +7754,9 @@
      "22",
      "320"
     ],
-    "q": "A baker packs buns into boxes of 19. She fills 24 full boxes and has 7 buns left over. Then 150 more buns arrive. She puts all the buns together and packs them again in boxes of 19. How many full boxes does she have now?",
-    "hint": "First find how many buns the baker had at the start. Then add the new buns.",
-    "why": "24 × 19 = 456, and 456 + 7 = 463 buns at the start. With 150 more, she has 613 buns. 613 ÷ 19 is 32 with a remainder, so she can fill 32 boxes.",
+    "q": "A librarian packs books into crates of 19. She fills 24 full crates and has 7 books left over. Then 150 more books arrive. She puts all the books together and packs them again in crates of 19. How many full crates does she have now?",
+    "hint": "First find how many books the librarian had at the start. Then add the new books.",
+    "why": "24 × 19 = 456, and 456 + 7 = 463 books at the start. With 150 more, she has 613 books. 613 ÷ 19 is 32 with a remainder, so she can fill 32 crates.",
     "date": "12-15"
    },
    {
