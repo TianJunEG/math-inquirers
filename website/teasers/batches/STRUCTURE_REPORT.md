@@ -1,22 +1,31 @@
 # Structure report (taxonomy.json)
 
-Sources searched (whole working tree, tracked or not): 6748 files, 1361.7 MB, sha256 b73b29ef75c4dead4404c685.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 373, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
+Sources searched (whole working tree, tracked or not): 6759 files, 1363.2 MB, sha256 f4b95a8afe23b53915a07bdb.  Files per root: deck 158, diag 12, docs 422, extension 257, hp 41, k2 5, levels 23, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 373, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2532, tutor 130, website 42, worker 1.
 
 Rules. Levels 3 to 6 (TEASER-STRICT): per level and calendar quarter at most 1 puzzle per sub-structure and 3 per family; the same sub-structure never within 30 days of itself across a quarter boundary; and (ANSWER-WINDOW, round 6) the same answer value never twice within 60 days and never with the same sub-structure within 92 days. Levels 1 and 2 (L1L2-GAP60): the same sub-structure at least 60 days apart (circular, 365- and 366-day year), a family at most 3 times in any 60 days and never on consecutive days, an answer not repeated within 60 days and a single-digit answer at most 2 times in 60 days. All levels: no repeated frame, no two puzzles with most numbers or the same story in common; the sub-structures used by the fixed puzzles on the level pages (counting_choices.digit_cards_arrangements, fractions.fraction_of_remainder, multiples.common_multiple, remainders.two_conditions, sequence.count_on, sequence.which_term) are never used by the bank.
 
-- Level 1 (gap rule, 60 days): 61 puzzles, 61 distinct sub-structures (none twice within the gap), 35 families, most in one family 3
-- Level 2 (gap rule, 60 days): 61 puzzles, 61 distinct sub-structures (none twice within the gap), 43 families, most in one family 3
+- Level 1 (gap rule, 60 days): 92 puzzles, 61 distinct sub-structures (none twice within the gap), 35 families, most in one family 6
+- Level 2 (gap rule, 60 days): 92 puzzles, 61 distinct sub-structures (none twice within the gap), 43 families, most in one family 5
 - Level 3, quarter 4: 61 puzzles, 61 distinct sub-structures, 39 families, most in one family 3
 - Level 4, quarter 4: 61 puzzles, 61 distinct sub-structures, 38 families, most in one family 3
 - Level 5, quarter 4: 61 puzzles, 61 distinct sub-structures, 38 families, most in one family 3
 - Level 6, quarter 4: 61 puzzles, 61 distinct sub-structures, 35 families, most in one family 3
+- REVIEW L1-shortestkid (L1) and L2-tallestfour (L2): 5 shared four-word runs (e.g. "@ @ is taller"), same sub-structure
 - REVIEW L1-shortestkid (L1) and L4-fivechildren (L4): 5 shared four-word runs (e.g. "@ @ is taller"), same sub-structure
 - REVIEW L1-shortestkid (L1) and L6-secondtallest (L6): 5 shared four-word runs (e.g. "@ @ is taller"), same sub-structure
+- REVIEW L1-seatrow (L1) and L2-hallchairs (L2): 5 shared four-word runs (e.g. "after another starting at"), same sub-structure
+- REVIEW L1-prizecorner (L1) and L2-ticketstrips (L2): 5 shared four-word runs (e.g. "can he pay the"), same sub-structure
+- REVIEW L1-flagcards (L1) and L2-cardstack (L2): 5 shared four-word runs (e.g. "@ writes the names"), same sub-structure
+- REVIEW L2-tallestfour (L2) and L4-fivechildren (L4): 5 shared four-word runs (e.g. "@ @ is taller"), same sub-structure
+- REVIEW L2-tallestfour (L2) and L6-secondtallest (L6): 5 shared four-word runs (e.g. "@ @ is taller"), same sub-structure
 - REVIEW L4-fivechildren (L4) and L6-secondtallest (L6): 5 shared four-word runs (e.g. "@ @ is taller"), same sub-structure
-- Frame rule (function-word skeleton, same sub-structure at two levels): 49 pairs at 0.80 or more reviewed, 15 of them accepted in the ledger
+- Frame rule (function-word skeleton, same sub-structure at two levels): 64 pairs at 0.80 or more reviewed, 15 of them accepted in the ledger
 - REVIEW frame L1-rpsgames (L1) and L2-ttgames (L2): sentence frame 0.80 alike, counting_pairs.handshakes
 - REVIEW frame L1-threefifty (L1) and L4-page5 (L4): sentence frame 0.90 alike, digit_puzzles.count_by_digit_rule [ledger: Tier B: how many of the numbers 1 to N contain a digit; other digit and other range]
 - REVIEW frame L1-matchhouse (L1) and L3-sticksdisplay (L3): sentence frame 0.96 alike, digit_display.segments [ledger: Tier B: counting the sticks or bars of a run of numbers from a digit table, the genre sentence "as the table shows"; other story, other numbers, other digit range]
+- REVIEW frame L1-swimturn (L1) and L2-marathon (L2): sentence frame 0.88 alike, counting_line.race_places
+- REVIEW frame L1-seatrow (L1) and L2-hallchairs (L2): sentence frame 0.85 alike, arrays.seat_number
+- REVIEW frame L1-cousindays (L1) and L2-festivalshows (L2): sentence frame 0.80 alike, group:days_in_a_range
 - REVIEW frame L1-noodleset (L1) and L5-cafemenu (L5): sentence frame 0.88 alike, counting_choices.combinations
 - REVIEW frame L1-hiddensum (L1) and L2-inkblot (L2): sentence frame 0.85 alike, missing_number.missing_digit
 - REVIEW frame L1-circlekids (L1) and L3-carousel (L3): sentence frame 0.80 alike, spatial.circle_opposite
@@ -27,6 +36,13 @@ Rules. Levels 3 to 6 (TEASER-STRICT): per level and calendar quarter at most 1 p
 - REVIEW frame L1-oddbig (L1) and L3-cardkeep (L3): sentence frame 0.80 alike, sorting.rule_count
 - REVIEW frame L1-stickersheets (L1) and L4-gluesticks (L4): sentence frame 0.89 alike, money.offers
 - REVIEW frame L1-stickersheets (L1) and L5-nametagpacks (L5): sentence frame 0.80 alike, money.offers
+- REVIEW frame L1-prizecorner (L1) and L2-ticketstrips (L2): sentence frame 0.90 alike, coins.cannot_pay
+- REVIEW frame L1-puffsleft (L1) and L2-satayleft (L2): sentence frame 0.81 alike, bonds.part_whole
+- REVIEW frame L1-tartrows (L1) and L2-carparkbays (L2): sentence frame 0.82 alike, arrays.border_tiles
+- REVIEW frame L1-bikelock (L1) and L2-padlockcode (L2): sentence frame 0.90 alike, digit_puzzles.digit_clues
+- REVIEW frame L1-beanbags (L1) and L2-tilescore (L2): sentence frame 0.88 alike, bonds.three_cards_total
+- REVIEW frame L1-buildweeks (L1) and L3-funrun (L3): sentence frame 0.87 alike, calendar.weeks_and_days
+- REVIEW frame L1-hatscarf (L1) and L5-cafemenu (L5): sentence frame 0.81 alike, counting_choices.combinations
 - REVIEW frame L2-runlaps (L2) and L3-shells3 (L3): sentence frame 0.86 alike, bar_model.three_amounts
 - REVIEW frame L2-beadsticks (L2) and L6-parcelbelt (L6): sentence frame 0.83 alike, sorting.fewest_swaps
 - REVIEW frame L2-schoolwalks (L2) and L4-parkpaths (L4): sentence frame 0.81 alike, networks.first_stop
@@ -41,6 +57,11 @@ Rules. Levels 3 to 6 (TEASER-STRICT): per level and calendar quarter at most 1 p
 - REVIEW frame L2-hairclips (L2) and L5-nametagpacks (L5): sentence frame 0.94 alike, money.offers [ledger: Tier B: a unit price against an offer and a saving; other offer type]
 - REVIEW frame L2-gardenfence (L2) and L3-posterribbon (L3): sentence frame 0.82 alike, perimeter_area.perimeter_basic
 - REVIEW frame L2-beadchain (L2) and L5-stampgive (L5): sentence frame 0.80 alike, word_problems.compare_amounts
+- REVIEW frame L2-footballmatch (L2) and L5-redeye (L5): sentence frame 0.83 alike, durations.elapsed
+- REVIEW frame L2-tallestfour (L2) and L5-queue5 (L5): sentence frame 0.86 alike, logic_order.rank
+- REVIEW frame L2-paperstars (L2) and L3-shells3 (L3): sentence frame 0.89 alike, bar_model.three_amounts
+- REVIEW frame L2-bookswaps (L2) and L6-parcelbelt (L6): sentence frame 0.83 alike, sorting.fewest_swaps
+- REVIEW frame L2-topupvouchers (L2) and L4-pencilpacks (L4): sentence frame 0.80 alike, coins.cannot_pay
 - REVIEW frame L3-missednumber (L3) and L5-lostnumber (L5): sentence frame 0.81 alike, series_sum.missing_term
 - REVIEW frame L3-houses (L3) and L5-sixpages (L5): sentence frame 0.80 alike, consecutive.consecutive_total
 - REVIEW frame L3-raffledays (L3) and L4-visitortable (L4): sentence frame 0.90 alike, graphs.table_total [ledger: Tier B: a total of four or five counts from a list; other story, other numbers]
@@ -127,8 +148,8 @@ Levels 3 to 6: the same answer value never twice within 60 days (and never with 
 
 | Level | Puzzles | Single digit | 10 to 99 | 100 or more | Fraction, decimal | Text | Peak single digits in 60 days (limit) | Peak 10 to 99 in 60 days (limit 90) |
 |---|---|---|---|---|---|---|---|---|
-| 1 | 61 | 10 | 43 | 0 | 0 | 8 | 10 (18) | 43 |
-| 2 | 61 | 9 | 33 | 9 | 1 | 9 | 9 (18) | 33 |
+| 1 | 92 | 12 | 68 | 0 | 0 | 12 | 11 (18) | 45 |
+| 2 | 92 | 11 | 50 | 16 | 2 | 13 | 10 (18) | 33 |
 | 3 | 61 | 6 | 29 | 18 | 4 | 4 | 6 (9) | 28 |
 | 4 | 61 | 6 | 25 | 19 | 5 | 6 | 6 (9) | 25 |
 | 5 | 61 | 2 | 30 | 20 | 5 | 4 | 2 (9) | 30 |
@@ -140,14 +161,108 @@ Target: about 3 or 4 text-answer puzzles a month at every level, so that a year 
 
 | Level | Puzzles so far | Text-answer puzzles | Per 30 days | Projected in 365 | Target | Verdict |
 |---|---|---|---|---|---|---|
-| 1 | 61 | 8 | 3.9 | 48 | 40 | ok |
-| 2 | 61 | 9 | 4.4 | 54 | 40 | ok |
+| 1 | 92 | 12 | 3.9 | 48 | 40 | ok |
+| 2 | 92 | 13 | 4.2 | 52 | 40 | ok |
 | 3 | 61 | 4 | 2.0 | 24 | 40 | WARNING: below the plan |
 | 4 | 61 | 6 | 3.0 | 36 | 40 | WARNING: below the plan |
 | 5 | 61 | 4 | 2.0 | 24 | 40 | WARNING: below the plan |
 | 6 | 61 | 4 | 2.0 | 24 | 40 | WARNING: below the plan |
 
-Structure FAIL count (all released months): 0
+Structure FAIL count (all released months): 94
+- FAIL L2: L2-beadsticks and L2-bookswaps share the numbers ['20', '30', '40', '50', '60']
+- FAIL L1: L1-busminute and L1-noodlepot share the 7-word run "hand points to which number on the"
+- FAIL L1: L1-busminute and L1-noodlepot share the 7-word run "points to which number on the clock"
+- FAIL L1: L1-busminute and L1-noodlepot share the 7-word run "the minute hand points to which number"
+- FAIL L1: L1-busminute and L1-noodlepot share the 7-word run "minute hand points to which number on"
+- FAIL L1: L1-secret63 and L1-bikelock share the 7-word run "more than its ones digit what is"
+- FAIL L1: L1-secret63 and L1-bikelock share the 7-word run "than its ones digit what is the"
+- FAIL L1: L1-wordcards and L1-flagcards share the 7-word run "of the numbers from 1 up to"
+- FAIL L1: L1-wordcards and L1-flagcards share the 7-word run "names of the numbers from 1 up"
+- FAIL L1: L1-wordcards and L1-flagcards share the 7-word run "the names of the numbers from 1"
+- FAIL L1: L1-seatrow and L1-busseats share the 7-word run "one row after another starting at the"
+- FAIL L1: L1-seatrow and L1-busseats share the 7-word run "and on one row after another starting"
+- FAIL L1: L1-seatrow and L1-busseats share the 7-word run "1 2 3 and on one row"
+- FAIL L1: L1-seatrow and L1-busseats share the 7-word run "3 and on one row after another"
+- FAIL L1: L1-seatrow and L1-busseats share the 7-word run "2 3 and on one row after"
+- FAIL L1: L1-seatrow and L1-busseats share the 7-word run "on one row after another starting at"
+- FAIL L1: L1-cousindays and L1-cousinstay share the 7-word run "too on how many days are both"
+- FAIL L1: L1-queuebus and L1-photoline share the 7-word run "from the front counting from the back"
+- FAIL L1: L1-queuebus and L1-photoline share the 7-word run "front counting from the back which place"
+- FAIL L1: L1-queuebus and L1-photoline share the 7-word run "counting from the back which place is"
+- FAIL L1: L1-queuebus and L1-photoline share the 7-word run "the front counting from the back which"
+- FAIL L1: L1-bibscores and L1-rafflepicks share the 7-word run "the next lowest and so on which"
+- FAIL L1: L1-bibscores and L1-rafflepicks share the 7-word run "then the next lowest and so on"
+- FAIL L1: L1-bibscores and L1-rafflepicks share the 7-word run "scores 5 2 7 the lowest score"
+- FAIL L1: L1-bibscores and L1-rafflepicks share the 7-word run "first then the next lowest and so"
+- FAIL L1: L1-bibscores and L1-rafflepicks share the 7-word run "52 scores 5 2 7 the lowest"
+- FAIL L1: L1-westturns and L1-robotturns share the 7-word run "face now north east south or west"
+- FAIL L1: L1-hiddensum and L1-coveredbit share the 7-word run "a sticker covers one digit in this"
+- FAIL L2: L2-ferrybenches and L2-hallchairs share the 7-word run "numbered 1 2 3 and so on"
+- FAIL L2: L2-oddboxes and L2-pencilsodd share the 7-word run "will the total be odd or even"
+- FAIL L2: L2-deliveryrobot and L2-boardroutes share the 7-word run "how many different routes can it take"
+- FAIL L2: L2-deliveryrobot and L2-boardroutes share the 7-word run "down in any order to reach the"
+- FAIL L2: L2-deliveryrobot and L2-boardroutes share the 7-word run "any order to reach the bottom right"
+- FAIL L2: L2-deliveryrobot and L2-boardroutes share the 7-word run "in any order to reach the bottom"
+- FAIL L2: L2-sleephours and L2-ferryhours share the 7-word run "am the next day for how many"
+- FAIL L2: L2-sleephours and L2-ferryhours share the 7-word run "at 7 am the next day for"
+- FAIL L2: L2-sleephours and L2-ferryhours share the 7-word run "the next day for how many hours"
+- FAIL L2: L2-sleephours and L2-ferryhours share the 7-word run "next day for how many hours is"
+- FAIL L2: L2-sleephours and L2-ferryhours share the 7-word run "7 am the next day for how"
+- FAIL L2: L2-tilescore and L2-dartring share the 7-word run "that score how many points is the"
+- FAIL L2: L2-tilescore and L2-dartring share the 7-word run "gives that score how many points is"
+- FAIL L2: L2-beadsticks and L2-bookswaps share the 7-word run "they touch what is the fewest number"
+- FAIL L2: L2-beadsticks and L2-bookswaps share the 7-word run "the fewest number of swaps that puts"
+- FAIL L2: L2-beadsticks and L2-bookswaps share the 7-word run "fewest number of swaps that puts the"
+- FAIL L2: L2-beadsticks and L2-bookswaps share the 7-word run "is the fewest number of swaps that"
+- FAIL L2: L2-beadsticks and L2-bookswaps share the 7-word run "what is the fewest number of swaps"
+- FAIL L2: L2-beadsticks and L2-bookswaps share the 7-word run "only if they touch what is the"
+- FAIL L2: L2-beadsticks and L2-bookswaps share the 7-word run "touch what is the fewest number of"
+- FAIL L2: L2-beadsticks and L2-bookswaps share the 7-word run "if they touch what is the fewest"
+- FAIL L2: L2-swaphana and L2-phoneswap share the 7-word run "new number what is the difference between"
+- FAIL L2: L2-swaphana and L2-phoneswap share the 7-word run "number what is the difference between the"
+- FAIL L2: L2-swaphana and L2-phoneswap share the 7-word run "she swaps the hundreds digit and the"
+- FAIL L2: L2-swaphana and L2-phoneswap share the 7-word run "a new number what is the difference"
+- FAIL L2: L2-swaphana and L2-phoneswap share the 7-word run "is the difference between the two numbers"
+- FAIL L2: L2-swaphana and L2-phoneswap share the 7-word run "digit to make a new number what"
+- FAIL L2: L2-swaphana and L2-phoneswap share the 7-word run "make a new number what is the"
+- FAIL L2: L2-swaphana and L2-phoneswap share the 7-word run "what is the difference between the two"
+- FAIL L2: L2-swaphana and L2-phoneswap share the 7-word run "to make a new number what is"
+- FAIL L2: L2-duedate and L2-beanflower share the 7-word run "next month on which day of the"
+- FAIL L2: L2-duedate and L2-beanflower share the 7-word run "month on which day of the next"
+- FAIL L2: L2-duedate and L2-beanflower share the 7-word run "on which day of the next month"
+- FAIL L2: L2-duedate and L2-beanflower share the 7-word run "later in the next month on which"
+- FAIL L2: L2-duedate and L2-beanflower share the 7-word run "the next month on which day of"
+- FAIL L2: L2-duedate and L2-beanflower share the 7-word run "days later in the next month on"
+- FAIL L2: L2-duedate and L2-beanflower share the 7-word run "in the next month on which day"
+- FAIL L2: L2-plankcuts and L2-kuehroll share the 7-word run "how many minutes would it take to"
+- FAIL L2: L2-plankcuts and L2-kuehroll share the 7-word run "equal pieces every cut takes the same"
+- FAIL L2: L2-plankcuts and L2-kuehroll share the 7-word run "minutes in all how many minutes would"
+- FAIL L2: L2-plankcuts and L2-kuehroll share the 7-word run "in all how many minutes would it"
+- FAIL L2: L2-plankcuts and L2-kuehroll share the 7-word run "every cut takes the same time and"
+- FAIL L2: L2-plankcuts and L2-kuehroll share the 7-word run "cut takes the same time and the"
+- FAIL L2: L2-plankcuts and L2-kuehroll share the 7-word run "pieces every cut takes the same time"
+- FAIL L2: L2-plankcuts and L2-kuehroll share the 7-word run "all how many minutes would it take"
+- FAIL L2: L2-beadsticks and L2-bookswaps tell the same story (shared words fewest,increas,may,order,swap,touch, shared numbers 5)
+- FAIL L1-drinksmachine (L1) and L2-bookswaps (L2): same answer 13 and shared numbers ['20', '30', '50'] at two levels
+- FAIL L1-rulerbill (L1) and L2-marathon (L2): same answer 29 and shared numbers ['4', '50'] at two levels
+- FAIL L1-noodlepot (L1) and L3-clockturn (L3): the same story skeleton at two levels (shared words clock,hand,minute,point,start)
+- FAIL L1-cousinstay (L1) and L2-ticketstrips (L2): same answer 23 and shared numbers ['5', '27'] at two levels
+- FAIL L1-photoline (L1) and L4-heightline (L4): the same story skeleton at two levels (shared words back,children,front,line,place,stand)
+- FAIL L1-wordcards (L1) and L2-cardstack (L2): the same sentence frame at two levels (8 shared four-word runs, e.g. "cards one name on", same sub-structure)
+- FAIL L1-applegraph (L1) and L2-shoegraph (L2): the same sentence frame at two levels (6 shared four-word runs, e.g. "# pictures how many", same sub-structure)
+- FAIL L1-busseats (L1) and L2-hallchairs (L2): the same sentence frame at two levels (10 shared four-word runs, e.g. "after another starting at", same sub-structure)
+- FAIL L1-rpsgames (L1) and L2-netballleague (L2): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L1-drinksmachine (L1) and L2-topupvouchers (L2): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L1-wordcards (L1) and L2-cardstack (L2): the same sentence frame at two levels (function-word skeleton 0.95; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L1-hiddensum (L1) and L2-smudgesum (L2): the same sentence frame at two levels (function-word skeleton 0.91; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L1-busplates (L1) and L3-sticksdisplay (L3): the same sentence frame at two levels (function-word skeleton 0.91; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L1-flagcards (L1) and L2-cardstack (L2): the same sentence frame at two levels (function-word skeleton 0.97; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L1-sackrace (L1) and L2-marathon (L2): the same sentence frame at two levels (function-word skeleton 0.97; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L1-busseats (L1) and L2-hallchairs (L2): the same sentence frame at two levels (function-word skeleton 0.98; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L1-coveredbit (L1) and L2-inkblot (L2): the same sentence frame at two levels (function-word skeleton 0.91; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L1-coveredbit (L1) and L2-smudgesum (L2): the same sentence frame at two levels (function-word skeleton 0.97; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L2-tallestfour (L2) and L4-fivechildren (L4): the same sentence frame at two levels (function-word skeleton 0.90; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L2-bunboxes6 (L2) and L6-bunboxes (L6): the same sentence frame at two levels (function-word skeleton 0.94; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
 
 Capacity verdict for the full year (a plan for January to October, not a defect of the released months): 0 CAPACITY FAIL
 - WARNING Level 3: 4 text-answer puzzles in 61 (about 24 a year; the plan wants 40 or more: see TEXT_ANSWER_PLAN.md)

@@ -177,6 +177,27 @@ def edge(mm, lv, which):
     return {'family': e['family'], 'kind': e['kind']}
 
 
+def rotation_order(mm, lv, items):
+    """Levels 1 and 2, months after the released Nov and Dec (batches/YEAR_PLAN.md): day k of the year, counted from 1 Nov, uses the sub-structure of released
+    day k mod 61, so the order of the month is fixed by the rotation (the order() interleave is not used).  Every sub-structure of the released 61 days that
+    falls into this month must be present exactly once."""
+    rel = []
+    for r in ('11', '12'):
+        rel += json.load(open(os.path.join(HERE, 'batches', 'm%s' % r, 'bank.json'), encoding='utf-8'))['levels'][str(lv)]
+    rel = sorted(rel, key=lambda e: (0 if e['date'][:2] == '11' else 1, e['date']))
+    assert len(rel) == 61
+    months = [('11', 30), ('12', 31)] + [(m, DAYS_IN[m]) for m in ('01', '02', '03', '04', '05', '06', '07', '08', '09', '10')]
+    dates = ['%s-%02d' % (m, d) for m, n in months for d in range(1, n + 1)]
+    want = [rel[dates.index('%s-%02d' % (mm, d)) % 61]['sub'] for d in range(1, DAYS_IN[mm] + 1)]
+    by_sub = {}
+    for e in items:
+        assert e['sub'] not in by_sub, 'L%d: sub-structure %s twice in month %s' % (lv, e['sub'], mm)
+        by_sub[e['sub']] = e
+    assert sorted(by_sub) == sorted(want), 'L%d month %s: the sub-structures differ from the rotation: missing %s, extra %s' % (
+        lv, mm, sorted(set(want) - set(by_sub)), sorted(set(by_sub) - set(want)))
+    return [by_sub[s] for s in want]
+
+
 def build_month(mm):
     """Build batches/m<MM>/bank.json: for every level, one puzzle per calendar day of the month."""
     out = {}
@@ -202,7 +223,10 @@ def build_month(mm):
         want = DAYS_IN[mm]
         if len(items) != want:
             print('WARNING month %s level %d has %d puzzles (want %d)' % (mm, lv, len(items), want))
-        items = order(lv * 100 + int(mm), items, edge(mm, lv, -1), edge(mm, lv, 0))
+        if lv in (1, 2) and mm not in ('11', '12'):
+            items = rotation_order(mm, lv, items)
+        else:
+            items = order(lv * 100 + int(mm), items, edge(mm, lv, -1), edge(mm, lv, 0))
         for i, e in enumerate(items):
             e['date'] = '%s-%02d' % (mm, i + 1)
         out[str(lv)] = items
