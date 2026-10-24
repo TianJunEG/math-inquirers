@@ -121,3 +121,5 @@ Pre-publish checks on all 42: part minutes total 90 (tutor/build_data.py 1 to 6,
 Totals: 42 published OK, 0 failed, 0 skipped. No 429 daily-limit refusal occurred. This clears the 7 pending p6l4 to p6l10 from the 2026-10-23 section (p6l6 included).
 
 Notes: p6l10 live still holds an older slide file p6l10-warm2 that is no longer in the source order (it shows last); not removed because deletes are not allowed. split/l1/project/slides/l1-tool.html had an uncommitted edit by another agent (Toolbox Card wording) during the run; the republish sent whatever was on disk then. It is not part of this commit.
+
+2026-10-24 (later): owner approved (P6L10-REMOVE-OLD); removed the stray project/slides/p6l10-warm2.html from p6l10 (PNoQzJNbyP4EBZpVHYAgSc) via a files-null republish from split/p6l10/, no force, deck.json unchanged (never referenced warm2). File list re-checked: warm2 gone, order still ends p6l10-reflect, p6l10-end. Nothing else touched; l6s untouched.
