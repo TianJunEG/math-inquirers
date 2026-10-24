@@ -230,7 +230,7 @@ def _stick(x1, y1, x2, y2):
 def triangle_rows(counts=(1, 2, 3), s=44, caption=''):
     """Rows of n triangles in a line made of sticks (n triangles use 2n + 1 sticks): zigzag sticks along the top and bottom."""
     h = s * 0.87
-    body, x = '', 8
+    body, x = '', 16
     for n in counts:
         pts = [(x + i * s / 2, (8 + h) if i % 2 == 0 else 8) for i in range(n + 2)]
         for i in range(n + 1):
@@ -244,7 +244,7 @@ def triangle_rows(counts=(1, 2, 3), s=44, caption=''):
 
 def square_rows(counts=(1, 2, 3), s=34, caption=''):
     """Rows of n squares in a line made of sticks (n squares use 3n + 1 sticks)."""
-    body, x, y0 = '', 8, 10
+    body, x, y0 = '', 20, 10
     for n in counts:
         for i in range(n + 1):
             body += _stick(x + i * s, y0, x + i * s, y0 + s)
