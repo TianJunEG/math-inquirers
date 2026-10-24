@@ -61,8 +61,10 @@ def lesson_lab(x):
 def lesson_range(ls):
     """Term-local wording for the tutor tables, as printed in the books: 'Term 3 Lesson 8', 'Term 3 Lessons 1 to 7'. A range that crosses a term says both ends."""
     t, off = _TERM['n'], _TERM['off']
-    a, b = int(ls[0]) - off, int(ls[-1]) - off
-    return f'Term {t} Lesson {a}' if a == b else f'Term {t} Lessons {a} to {b}'
+    xs = [int(i) - off for i in ls]
+    if len(xs) == 1: return f'Term {t} Lesson {xs[0]}'
+    if xs == list(range(xs[0], xs[-1] + 1)): return f'Term {t} Lessons {xs[0]} to {xs[-1]}'
+    return f'Term {t} Lessons ' + ', '.join(map(str, xs[:-1])) + f' and {xs[-1]}'
 
 
 # words that must never appear in the text of the child or parent PDFs (the tutor notes may say "no scores" etc.)
