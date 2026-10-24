@@ -26,7 +26,9 @@ h1,h2,h3{font-family:var(--head);font-weight:600;margin:0;text-wrap:balance}
 .top h1{font-size:clamp(34px,6vw,52px);line-height:1}
 .top h1 span{color:var(--teal)}
 .lede{color:var(--muted);max-width:62ch;margin:0}
-.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 6px}
+.tabs{display:grid;gap:12px;margin:18px 0 6px}
+.grp{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.gl{font:800 12px var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);width:100%}
 .tab{font:600 16px var(--head);background:transparent;color:var(--fg);border:2px solid var(--line);border-radius:10px;padding:8px 14px;cursor:pointer;display:flex;gap:8px;align-items:baseline}
 .tab small{font:700 12px var(--body);color:var(--muted)}
 .tab[aria-selected="true"]{border-color:var(--teal);background:var(--teal);color:var(--bg)}
@@ -54,7 +56,7 @@ h1,h2,h3{font-family:var(--head);font-weight:600;margin:0;text-wrap:balance}
 .parse{font-size:14.5px;margin:0 0 10px;padding:8px 12px;border-left:4px solid var(--teal);background:var(--panel)}
 .parse b{color:var(--teal)}
 .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-input.ans{font:700 18px var(--body);width:130px;padding:8px 10px;border:2px solid var(--line);border-radius:10px;background:var(--field);color:var(--fg);font-variant-numeric:tabular-nums}
+input.ans{font:700 18px var(--body);width:160px;padding:8px 10px;border:2px solid var(--line);border-radius:10px;background:var(--field);color:var(--fg);font-variant-numeric:tabular-nums}
 .ch{font:600 15px var(--body);padding:9px 14px;border:2px solid var(--line);border-radius:10px;background:var(--field);color:var(--fg);cursor:pointer;text-align:left}
 .opts{display:grid;gap:8px}
 .btn{font:700 14px var(--body);padding:9px 14px;border-radius:10px;border:2px solid var(--fg);background:var(--fg);color:var(--bg);cursor:pointer}
@@ -97,7 +99,7 @@ input.ans{font:700 18px var(--body);width:130px;padding:8px 10px;border:2px soli
 /* Each question: type label, text, and steps. A step has a prompt, a kind (choice or num), the right answer,
    a hint, a "why", and the model (bars) shown once the step is solved. bars: {l:label, p:parts, s:shaded, t:text in each part, b:[from,to,text] brace}. */
 var Q=[
-{type:"Find the whole",text:"Mei has some stickers. 3/5 of them are stars. She has 24 stars. How many stickers does she have?",unit:"stickers",steps:[
+{type:"Find the whole",text:"Mei had some stickers. 3/5 of them were stars. If she had 24 stars, how many stickers did she have altogether?",unit:"stickers",steps:[
  {k:"n",p:"Turn the problem into one short sentence about parts of a whole. What is the whole?",q:"What fraction of all the stickers are stars? Type it like 2/3.",a:0.6,h:"Look for the fraction in the problem. The stars are that part of all the stickers.",w:"The stars are 3/5 of all the stickers. So all the stickers are the whole, cut into 5 equal parts, and the stars are 3 of them.",m:[]},
  {k:"n",p:"The bottom number says how many equal units make the whole.",q:"How many equal units does the whole bar have?",a:5,h:"Look at the bottom number of 3/5.",w:"The bottom number tells how many equal units make the whole.",m:[{l:"All stickers",p:5}]},
  {k:"n",p:"The top number says how many units are the stars. Those units equal the number we know.",q:"Shade the stars. How many units are shaded?",a:3,h:"Look at the top number of 3/5.",w:"The top number is how many units are shaded. These 3 units are 24 stars.",m:[{l:"All stickers",p:5,s:3,b:[0,3,"24 stars"]}]},
@@ -111,30 +113,30 @@ var Q=[
  {k:"n",p:"The new whole is $40, cut into 4 equal units. The pen is 1 of them.",q:"Cut the $40 into 4 units. The pen is 1 unit. How much is the pen?",a:10,h:"40 ÷ 4.",w:"Each unit of the remainder is $10, so the pen costs $10.",m:[{l:"$60",p:3,s:1,t:"20"},{l:"Remainder $40",p:4,s:1,t:"10",b:[0,1,"pen"]}]},
  {k:"n",p:"Money left = the remainder minus the pen.",q:"How much money did Ravi have left in the end?",a:30,h:"Remainder minus the pen.",w:"40 − 10 = $30. (Check: 3 units of $10.)",m:[{l:"$60",p:3,s:1,t:"20"},{l:"Remainder $40",p:4,s:1,t:"10",b:[1,4,"? = 30"]}]}
 ]},
-{type:"Times as many",text:"Amir has 3 times as many marbles as Ben. Together they have 48 marbles. How many marbles does Amir have?",unit:"marbles",steps:[
+{type:"Times as many",text:"Amir had 3 times as many marbles as Ben. They had 48 marbles altogether. How many marbles did Amir have?",unit:"marbles",steps:[
  {k:"n",p:"Ben is 1 unit. \u201C3 times as many\u201D tells us how many of Ben's units Amir has.",q:"Ben has 1 unit. How many units does Amir have?",a:3,h:"\u201C3 times as many\u201D means 3 copies of Ben's unit.",w:"Amir has 3 units and Ben has 1 unit.",m:[{l:"Ben",p:1},{l:"Amir",p:3}]},
  {k:"n",p:"\u201CTogether\u201D means add Ben's units and Amir's units.",q:"How many units are there altogether?",a:4,h:"Add Ben's units and Amir's units.",w:"1 + 3 = 4 units. These 4 units are 48 marbles.",m:[{l:"Ben",p:1},{l:"Amir",p:3,b:[0,3,"together 48"]}]},
  {k:"n",p:"All the units together equal 48. Share 48 equally.",q:"4 units = 48. How many marbles is 1 unit?",a:12,h:"48 ÷ 4.",w:"Each unit is 12 marbles, so Ben has 12.",m:[{l:"Ben",p:1,t:"12"},{l:"Amir",p:3,t:"12"}]},
  {k:"n",p:"Amir has 3 units, and every unit is worth the same amount.",q:"Amir has 3 units. How many marbles does Amir have?",a:36,h:"3 × 12.",w:"3 × 12 = 36. (Check: 12 + 36 = 48.)",m:[{l:"Ben",p:1,t:"12"},{l:"Amir",p:3,t:"12",b:[0,3,"? = 36"]}]}
 ]},
-{type:"Fraction and gap",text:"Lina has 2/5 as many beads as Joy. Joy has 15 more beads than Lina. How many beads does Joy have?",unit:"beads",steps:[
+{type:"Fraction and gap",text:"Lina had 2/5 as many beads as Joy. Joy had 15 more beads than Lina. How many beads did Joy have?",unit:"beads",steps:[
  {k:"n",p:"Joy is the whole. Lina is a fraction of Joy. \u201CMore than\u201D is the gap.",q:"Lina has 2/5 as many as Joy. How many units does Joy have?",a:5,h:"Joy is the whole. Look at the bottom number of 2/5.",w:"Joy has 5 units. Lina has 2 of those units. The extra units Joy has are the gap.",m:[{l:"Joy",p:5},{l:"Lina",p:2}]},
  {k:"n",p:"The gap is how many more units Joy has than Lina.",q:"How many units are in the gap?",a:3,h:"Joy's units minus Lina's units.",w:"5 − 2 = 3 units, and these 3 units are 15 beads.",m:[{l:"Joy",p:5,b:[2,5,"gap 15"]},{l:"Lina",p:2}]},
  {k:"n",p:"The gap units equal 15. Share 15 equally.",q:"3 units = 15. How many beads is 1 unit?",a:5,h:"15 ÷ 3.",w:"Each unit is 5 beads.",m:[{l:"Joy",p:5,t:"5",b:[2,5,"gap 15"]},{l:"Lina",p:2,t:"5"}]},
  {k:"n",p:"The question asks about Joy, so count Joy's units.",q:"Joy has 5 units. How many beads does Joy have?",a:25,h:"5 × 5.",w:"5 × 5 = 25. (Check: Lina has 10, and 25 − 10 = 15.)",m:[{l:"Joy",p:5,t:"5",b:[0,5,"? = 25"]},{l:"Lina",p:2,t:"5"}]}
 ]},
-{type:"Make them equal",text:"Sam has 50 cards and Tom has 30 cards. How many cards must Sam give to Tom so that they have the same number?",unit:"cards",steps:[
+{type:"Make them equal",text:"Sam had 50 cards and Tom had 30 cards. How many cards must Sam give to Tom so that they will have the same number of cards?",unit:"cards",steps:[
  {k:"n",p:"Moving one card changes the gap by 2: one less for Sam, one more for Tom.",q:"If Sam gives Tom 1 card, how much does the gap between them shrink?",a:2,h:"Sam loses 1 and Tom gains 1. Count both changes.",w:"The gap shrinks by 2 for every card moved, so Sam needs to give half of the gap.",m:[]},
  {k:"n",p:"Gap = Sam's parts minus Tom's parts, and each part is worth 10.",q:"Each part is 10 cards. How many cards is the gap?",a:20,h:"Sam has 5 parts, Tom has 3 parts. 2 parts = ?",w:"The gap is 2 parts of 10, which is 20 cards.",m:[{l:"Sam",p:5,t:"10"},{l:"Tom",p:3,t:"10",b:[3,5,"gap 20"]}]},
  {k:"n",p:"To be equal, Sam gives away half of the gap.",q:"Split the gap into two equal halves. How many cards does Sam give?",a:10,h:"Half of 20.",w:"Sam gives 10. Then Sam has 40 and Tom has 40.",m:[{l:"Sam after",p:4,t:"10",b:[0,4,"40"]},{l:"Tom after",p:4,t:"10",b:[0,4,"40"]}]}
 ]},
-{type:"Percentage as a fraction",text:"A shirt costs $80. It is on sale at 25% off. What is the sale price?",unit:"dollars",steps:[
+{type:"Percentage as a fraction",text:"A shirt cost $80. During a sale, its price was reduced by 25%. What was the sale price of the shirt?",unit:"dollars",steps:[
  {k:"n",p:"Percent means \u201Cout of 100\u201D. Change it into a fraction first.",q:"25% means 25 out of 100. Type it as a fraction in simplest form, like 1/2.",a:0.25,h:"Divide the top and bottom of 25/100 by 25.",w:"25/100 = 1/4. Now this is just a fraction problem.",m:[]},
  {k:"n",p:"The fraction's bottom number is the number of units. The discount is its top number of units.",q:"Draw $80 as a bar. How many equal units, so that the discount is 1 unit?",a:4,h:"The discount is 1/4. What is the bottom number?",w:"4 units. One unit is the discount.",m:[{l:"Original $80",p:4}]},
  {k:"n",p:"The whole price is 4 units. One unit is the price shared equally.",q:"4 units = $80. How many dollars is 1 unit?",a:20,h:"80 ÷ 4.",w:"Each unit is $20, so the discount is $20.",m:[{l:"Original $80",p:4,s:1,t:"20",b:[0,1,"off"]}]},
  {k:"n",p:"The sale price is the units that are not the discount.",q:"The sale price is the other 3 units. How much?",a:60,h:"3 × 20, or 80 − 20.",w:"3 × 20 = $60.",m:[{l:"Original $80",p:4,s:1,t:"20",b:[1,4,"sale price ? = 60"]}]}
 ]},
-{type:"Decimals",text:"A rope is 3.6 m long. 3/4 of it is used. How long is the part that is used?",unit:"m",steps:[
+{type:"Decimals",text:"A rope was 3.6 m long. 3/4 of it was used. What was the length of rope used?",unit:"m",steps:[
  {k:"n",p:"\u201COf it\u201D tells us the whole is the rope we started with.",q:"What is the whole in this problem? Type its length in metres.",a:3.6,h:"\u201C3/4 of it\u201D: what is \u201Cit\u201D? Use its length.",w:"The whole is the rope, 3.6 m, cut into 4 units.",m:[]},
  {k:"n",p:"The bottom number of 3/4 is the number of equal units.",q:"How many equal units does the rope bar have?",a:4,h:"The bottom number of 3/4.",w:"4 units make 3.6 m.",m:[{l:"Rope 3.6 m",p:4}]},
  {k:"n",p:"The whole length is shared into 4 equal units.",q:"4 units = 3.6 m. How many metres is 1 unit?",a:0.9,h:"3.6 ÷ 4. Try 36 ÷ 4 first, then place the decimal point.",w:"36 ÷ 4 = 9, so 3.6 ÷ 4 = 0.9 m.",m:[{l:"Rope 3.6 m",p:4,t:"0.9"}]},
@@ -142,10 +144,74 @@ var Q=[
 ]}
 ];
 
-var KEY="mi_modeldrawing_v1", cur=0, prog={}, hints={}, wrong={};
+/* More model-drawing types (Tian OS problem types that need a bar model). Question order and groups are set below. */
+var NEWQ=[{id:"sd1",g:"Bar model",type:"Sum and difference",text:"Ali and Mei had $50 altogether. Ali had $12 more than Mei. How much money did Ali have?",unit:"dollars",steps:[
+ {k:"n",p:"Mei's bar is the shorter one. Ali's bar is the same length, plus a gap of $12.",q:"Take away the $12 gap. How much is left for two equal bars?",a:38,h:"$50 minus $12.",w:"Without the gap both have the same amount, so $38 is two equal units.",m:[{l:"Mei",p:1,t:"?"},{l:"Ali",p:1,t:"?",b:[0,1,"+ $12 more"]}]},
+ {k:"n",p:"The two equal units share the $38.",q:"How much is 1 unit? (This is Mei's money.)",a:19,h:"38 ÷ 2.",w:"Mei has $19.",m:[{l:"Mei",p:1,t:"19"},{l:"Ali",p:1,t:"19",b:[0,1,"+ $12 more"]}]},
+ {k:"n",p:"Ali = Mei + the gap.",q:"How much does Ali have?",a:31,h:"19 + 12.",w:"19 + 12 = $31. (Check: 31 + 19 = 50.)",m:[{l:"Mei",p:1,t:"19"},{l:"Ali",p:1,t:"19",b:[0,1,"+ 12 = 31"]}]}
+]},
+{id:"mul1",g:"Bar model",type:"Times as much, then total",text:"A pen cost 3 times as much as an eraser. Mrs Chia paid $20 for 2 pens and 4 erasers. How much did a pen cost?",unit:"dollars",steps:[
+ {k:"n",p:"An eraser is 1 unit. A pen is 3 times as much.",q:"How many units is one pen?",a:3,h:"“3 times as much” means 3 of the eraser's unit.",w:"One pen = 3 units, one eraser = 1 unit.",m:[{l:"1 eraser",p:1},{l:"1 pen",p:3}]},
+ {k:"n",p:"Count every unit in the whole purchase: 2 pens first, then 4 erasers.",q:"How many units do 2 pens and 4 erasers make altogether?",a:10,h:"2 pens = 2 × 3 units. Then add 4 erasers.",w:"2 × 3 + 4 = 10 units.",m:[{l:"2 pens and 4 erasers",p:10,b:[0,10,"$20"]}]},
+ {k:"n",p:"All 10 units cost $20. Share equally.",q:"How much is 1 unit (one eraser)?",a:2,h:"20 ÷ 10.",w:"One eraser costs $2.",m:[{l:"2 pens and 4 erasers",p:10,t:"2",b:[0,10,"$20"]}]},
+ {k:"n",p:"A pen is 3 units.",q:"How much is one pen?",a:6,h:"3 × $2.",w:"3 × 2 = $6. (Check: 2 pens = $12, 4 erasers = $8, total $20.)",m:[{l:"1 pen",p:3,t:"2",b:[0,3,"? = 6"]}]}
+]},
+{id:"ba2",g:"Before and after",type:"Fraction of one pack",text:"Mala baked 4 trays of 12 cookies. She ate 1/4 of one tray. How many cookies did she have left?",unit:"cookies",steps:[
+ {k:"n",p:"Before anything changes, find the whole amount she started with.",q:"How many cookies did Mala bake altogether?",a:48,h:"4 trays of 12.",w:"4 × 12 = 48 cookies at the start.",m:[]},
+ {k:"n",p:"The 1/4 is of ONE tray, not of all the cookies.",q:"1/4 of one tray: how many cookies did she eat?",a:3,h:"Share 12 into 4 equal units. She ate 1 unit.",w:"12 ÷ 4 = 3 cookies.",m:[{l:"One tray of 12",p:4,s:1,t:"3",b:[0,1,"ate 3"]}]},
+ {k:"n",p:"Cookies now = cookies before − the change.",q:"How many cookies does she have now?",a:45,h:"48 − 3.",w:"48 − 3 = 45 cookies.",m:[{l:"One tray of 12",p:4,s:1,t:"3",b:[0,1,"ate 3"]}]}
+]},
+{id:"rt1",g:"Ratio",type:"Share in a ratio",text:"The ratio of the number of boys to the number of girls in a class was 3 : 5. There were 40 pupils altogether. How many girls were there?",unit:"girls",steps:[
+ {k:"n",p:"Each part of the ratio is one equal unit. Boys 3 units, girls 5 units.",q:"How many units are there altogether?",a:8,h:"3 + 5.",w:"3 + 5 = 8 units make the whole class.",m:[{l:"Boys",p:3},{l:"Girls",p:5}]},
+ {k:"n",p:"All 8 units are the 40 pupils.",q:"How many pupils is 1 unit?",a:5,h:"40 ÷ 8.",w:"1 unit = 5 pupils.",m:[{l:"Boys",p:3,t:"5"},{l:"Girls",p:5,t:"5"}]},
+ {k:"n",p:"Girls are 5 units.",q:"How many girls are there?",a:25,h:"5 × 5.",w:"5 × 5 = 25 girls. (Check: 15 boys + 25 girls = 40.)",m:[{l:"Boys",p:3,t:"5"},{l:"Girls",p:5,t:"5",b:[0,5,"? = 25"]}]}
+]},
+{id:"rt2",g:"Ratio",type:"Difference in a ratio",text:"Dev and Eli shared 54 stickers in the ratio 4 : 5. How many more stickers did Eli receive than Dev?",unit:"stickers",steps:[
+ {k:"n",p:"Dev gets 4 units and Eli gets 5 units.",q:"How many units are there altogether?",a:9,h:"4 + 5.",w:"9 units are the 54 stickers.",m:[{l:"Dev",p:4},{l:"Eli",p:5}]},
+ {k:"n",p:"All 9 units are 54 stickers.",q:"How many stickers is 1 unit?",a:6,h:"54 ÷ 9.",w:"1 unit = 6 stickers.",m:[{l:"Dev",p:4,t:"6"},{l:"Eli",p:5,t:"6"}]},
+ {k:"n",p:"“How many more” is the gap between the two bars.",q:"How many units is the gap between Eli and Dev?",a:1,h:"5 − 4.",w:"The gap is 1 unit.",m:[{l:"Dev",p:4,t:"6"},{l:"Eli",p:5,t:"6",b:[4,5,"gap"]}]},
+ {k:"n",p:"The gap is 1 unit, and 1 unit is a number we know.",q:"How many more stickers did Eli get than Dev?",a:6,h:"The gap is 1 unit.",w:"1 unit = 6 stickers. (Check: Dev 24, Eli 30, 30 − 24 = 6.)",m:[{l:"Dev",p:4,t:"6"},{l:"Eli",p:5,t:"6",b:[4,5,"? = 6"]}]}
+]},
+{id:"rt3",g:"Ratio",type:"Three-part ratio",text:"Ann, Bob and Cai paid $90 for a meal in the ratio 2 : 3 : 4. How much did Bob pay?",unit:"dollars",steps:[
+ {k:"n",p:"Ann is 2 units, Bob is 3 units, Cai is 4 units.",q:"How many units are there altogether?",a:9,h:"2 + 3 + 4.",w:"9 units make the $90 bill.",m:[{l:"Ann",p:2},{l:"Bob",p:3},{l:"Cai",p:4}]},
+ {k:"n",p:"All 9 units are $90.",q:"How many dollars is 1 unit?",a:10,h:"90 ÷ 9.",w:"1 unit = $10.",m:[{l:"Ann",p:2,t:"10"},{l:"Bob",p:3,t:"10"},{l:"Cai",p:4,t:"10"}]},
+ {k:"n",p:"The question asks about Bob, who has 3 units.",q:"How much did Bob pay?",a:30,h:"3 × 10.",w:"3 × 10 = $30. (Check: 20 + 30 + 40 = 90.)",m:[{l:"Ann",p:2,t:"10"},{l:"Bob",p:3,t:"10",b:[0,3,"? = 30"]},{l:"Cai",p:4,t:"10"}]}
+]},
+{id:"rt4",g:"Ratio",type:"Ratio and a transfer",text:"The ratio of Sara's stickers to Tim's stickers was 3 : 5. They had 64 stickers altogether. After Sara gave 8 stickers to Tim, how many stickers did Sara have left?",unit:"stickers",steps:[
+ {k:"n",p:"Work out the ratio BEFORE the stickers move. Sara 3 units, Tim 5 units.",q:"How many units are there altogether?",a:8,h:"3 + 5.",w:"8 units are the 64 stickers.",m:[{l:"Sara",p:3},{l:"Tim",p:5}]},
+ {k:"n",p:"All 8 units are 64 stickers.",q:"How many stickers is 1 unit?",a:8,h:"64 ÷ 8.",w:"1 unit = 8 stickers.",m:[{l:"Sara",p:3,t:"8"},{l:"Tim",p:5,t:"8"}]},
+ {k:"n",p:"Sara's amount before she gives any away.",q:"How many stickers did Sara have at first?",a:24,h:"3 × 8.",w:"3 × 8 = 24 stickers.",m:[{l:"Sara",p:3,t:"8",b:[0,3,"24 at first"]},{l:"Tim",p:5,t:"8"}]},
+ {k:"n",p:"Sara now = what she had − what she gave away.",q:"How many stickers does Sara have now?",a:16,h:"24 − 8.",w:"24 − 8 = 16 stickers. (Check: Tim has 40 + 8 = 48 and 16 + 48 = 64.)",m:[{l:"Sara",p:3,t:"8",b:[0,3,"24 − 8 = 16"]},{l:"Tim",p:5,t:"8"}]}
+]},
+{id:"rt5",g:"Ratio",type:"Ratio, one part unchanged",text:"The ratio of the number of red beads to the number of blue beads was 2 : 3. After some red beads were added, the ratio became 7 : 3. There were 18 blue beads throughout. How many red beads were added?",unit:"red beads",steps:[
+ {k:"n",p:"Blue does not change, so blue is the same number of units in both ratios.",q:"How many units are the blue beads in each ratio?",a:3,h:"Look at the blue part of 2 : 3 and of 7 : 3.",w:"Blue is 3 units both times, so the units stay the same size.",m:[{l:"Red before",p:2},{l:"Blue",p:3},{l:"Red after",p:7},{l:"Blue",p:3}]},
+ {k:"n",p:"Blue is 3 units = 18 beads.",q:"How many beads is 1 unit?",a:6,h:"18 ÷ 3.",w:"1 unit = 6 beads.",m:[{l:"Red before",p:2,t:"6"},{l:"Blue",p:3,t:"6"},{l:"Red after",p:7,t:"6"},{l:"Blue",p:3,t:"6"}]},
+ {k:"n",p:"Red grew from 2 units to 7 units.",q:"How many units of red beads were added?",a:5,h:"7 − 2.",w:"5 units were added.",m:[{l:"Red before",p:2,t:"6"},{l:"Blue",p:3,t:"6"},{l:"Red after",p:7,t:"6",b:[2,7,"added"]},{l:"Blue",p:3,t:"6"}]},
+ {k:"n",p:"5 units, and each unit is 6 beads.",q:"How many red beads were added?",a:30,h:"5 × 6.",w:"5 × 6 = 30 red beads. (Check: red 12 → 42, blue 18; 42 : 18 = 7 : 3.)",m:[{l:"Red before",p:2,t:"6"},{l:"Blue",p:3,t:"6"},{l:"Red after",p:7,t:"6",b:[2,7,"? = 30"]},{l:"Blue",p:3,t:"6"}]}
+]},
+{id:"rt6",g:"Ratio",type:"Ratio as a percentage",text:"The ratio of the number of girls to the number of boys in a club was 3 : 2. There were 40 members altogether. What percentage of the members were girls?",unit:"percent",steps:[
+ {k:"n",p:"Girls are 3 units and boys are 2 units.",q:"How many units are there altogether?",a:5,h:"3 + 2.",w:"5 units are all the members.",m:[{l:"Girls",p:3},{l:"Boys",p:2}]},
+ {k:"n",p:"Girls are some units out of all the units. Write it as a fraction.",q:"What fraction of the members are girls? Type it like 1/2.",a:0.6,h:"Girls' units over all the units.",w:"Girls are 3/5 of the club.",m:[{l:"Girls",p:3,s:3},{l:"Boys",p:2}]},
+ {k:"n",p:"Percent means out of 100. Change 3/5 to a percentage.",q:"What percentage are girls? Type just the number.",a:60,h:"100 ÷ 5 = 20 for one unit. Then 3 units.",w:"3/5 = 60/100 = 60%. (The 40 members was not needed for a percentage.)",m:[{l:"Girls",p:3,s:3,t:"20",b:[0,3,"60%"]},{l:"Boys",p:2,t:"20"}]}
+]},
+{id:"rt7",g:"Ratio",type:"Ratio, equal amount added",text:"Kai had 36 red beads and 120 blue beads. After an equal number of red beads and blue beads were added, the ratio of the number of red beads to the number of blue beads became 2 : 5. How many red beads were there in the end?",unit:"red beads",steps:[
+ {k:"n",p:"The same number is added to both, so the gap between red and blue does not change.",q:"How many more blue beads than red beads were there at first? (120 \u2212 36)",a:84,h:"120 \u2212 36.",w:"The gap was 84 beads at first, and it is still 84 in the end.",m:[{l:"Red at first",p:1,t:"36"},{l:"Blue at first",p:1,t:"120"}]},
+ {k:"n",p:"In the end the ratio is 2 : 5. Draw red as 2 units and blue as 5 units.",q:"How many units is the gap between the bars in the end? (5 \u2212 2)",a:3,h:"5 \u2212 2.",w:"The gap is 3 units, and it is the same 84 beads.",m:[{l:"Red in the end",p:2},{l:"Blue in the end",p:5,b:[2,5,"gap 84"]}]},
+ {k:"n",p:"3 units are 84 beads.",q:"How many beads is 1 unit?",a:28,h:"84 \u00F7 3.",w:"1 unit = 28 beads.",m:[{l:"Red in the end",p:2,t:"28"},{l:"Blue in the end",p:5,t:"28",b:[2,5,"gap 84"]}]},
+ {k:"n",p:"The question asks for red in the end. That is 2 units.",q:"How many red beads were there in the end?",a:56,h:"2 \u00D7 28.",w:"2 \u00D7 28 = 56 red beads. (Check: 20 of each were added: 56 : 140 = 2 : 5.)",m:[{l:"Red in the end",p:2,t:"28",b:[0,2,"? = 56"]},{l:"Blue in the end",p:5,t:"28"}]}
+]}
+];
+(function(){
+  var old=Q,G={q1:"Bar model",q2:"Bar model",q3:"Bar model",q4:"Bar model",q5:"Before and after",q6:"Percentage and decimals",q7:"Percentage and decimals"};
+  old.forEach(function(q,i){q.id="q"+(i+1);q.g=G[q.id]});
+  var all=old.concat(NEWQ),ORDER=["Bar model","Before and after","Percentage and decimals","Ratio"];
+  Q=[];ORDER.forEach(function(g){all.forEach(function(q){if(q.g===g)Q.push(q)})});
+})();
+
+var KEY="mi_modeldrawing_v2", cur=0, prog={}, hints={}, wrong={};
 function load(){try{var s=localStorage.getItem(KEY);if(s)prog=JSON.parse(s)||{}}catch(e){prog={}}}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(prog))}catch(e){}}
-function stepOf(i){return prog[i]||0}
+function stepOf(i){return prog[Q[i].id]||0}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 function num(s){var t=String(s).replace(/[^0-9.\-\/]/g,"");if(t.indexOf("/")>0){var p=t.split("/");return +p[0]/+p[1]}return parseFloat(t)}
 
@@ -166,8 +232,11 @@ function modelSVG(bars){
 
 function render(){
   var q=Q[cur],st=stepOf(cur),n=q.steps.length,h="";
-  document.getElementById("tabs").innerHTML=Q.map(function(x,i){
-    return '<button class="tab'+(stepOf(i)>=x.steps.length?' done':'')+'" role="tab" aria-selected="'+(i===cur)+'" data-i="'+i+'">Q'+(i+1)+' <small>'+esc(x.type)+'</small></button>'}).join("");
+  var tg="",lastG="";
+  Q.forEach(function(x,i){
+    if(x.g!==lastG){if(lastG)tg+='</div>';tg+='<div class="grp"><div class="gl">'+esc(x.g)+'</div>';lastG=x.g}
+    tg+='<button class="tab'+(stepOf(i)>=x.steps.length?' done':'')+'" role="tab" aria-selected="'+(i===cur)+'" data-i="'+i+'">Q'+(i+1)+' <small>'+esc(x.type)+'</small></button>'});
+  document.getElementById("tabs").innerHTML=tg+'</div>';
   var model=st>0?q.steps[Math.min(st,n)-1].m:[];
   h+='<div class="hd"><div class="big">'+(cur+1)+'</div><div><div class="tp">'+esc(q.type)+'</div><h2>Step by step</h2></div></div>';
   h+='<p class="problem">'+esc(q.text)+'</p><div class="cols"><div>';
@@ -190,7 +259,7 @@ function render(){
   h+='</div><aside class="board"><h3>Check your drawing</h3>'+modelSVG(model)+'</aside></div>';
   document.getElementById("stage").innerHTML=h}
 
-function advance(){prog[cur]=stepOf(cur)+1;save();render();var f=document.querySelector(".step.cur input");if(f)f.focus()}
+function advance(){prog[Q[cur].id]=stepOf(cur)+1;save();render();var f=document.querySelector(".step.cur input");if(f)f.focus()}
 function attempt(ok){
   var key=cur+"-"+stepOf(cur);
   if(ok){delete wrong[key];advance()}
@@ -207,7 +276,7 @@ document.addEventListener("click",function(e){
   if(t.id==="chk"){checkNum();return}
   if(t.id==="hint"){hints[cur+"-"+stepOf(cur)]=1;render();return}
   if(t.id==="next"){cur++;render();window.scrollTo(0,0);return}
-  if(t.id==="redo"){prog[cur]=0;save();render();return}
+  if(t.id==="redo"){prog[Q[cur].id]=0;save();render();return}
   if(t.id==="reset"){if(confirm("Start all questions again?")){prog={};save();cur=0;render()}}});
 document.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.id==="ans")checkNum()});
 load();render();
