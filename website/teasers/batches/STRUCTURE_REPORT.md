@@ -1,6 +1,6 @@
 # Structure report (taxonomy.json)
 
-Sources searched (whole working tree, tracked or not): 6664 files, 1357.7 MB, sha256 c17c2fa611467bda52942393.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 289, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
+Sources searched (whole working tree, tracked or not): 6664 files, 1357.7 MB, sha256 4133d40de45df2e44201d848.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 289, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
 
 Rules. Levels 3 to 6 (TEASER-STRICT): per level and calendar quarter at most 1 puzzle per sub-structure and 3 per family; the same sub-structure never within 30 days of itself across a quarter boundary; an answer of 10 or more appears once per level and a single digit at most 4 times. Levels 1 and 2 (L1L2-GAP60): the same sub-structure at least 60 days apart (circular, 365- and 366-day year), a family at most 3 times in any 60 days and never on consecutive days, an answer not repeated within 60 days and a single-digit answer at most 2 times in 60 days. All levels: no repeated frame, no two puzzles with most numbers or the same story in common; the sub-structures used by the fixed puzzles on the level pages (counting_choices.digit_cards_arrangements, fractions.fraction_of_remainder, multiples.common_multiple, remainders.two_conditions, sequence.count_on, sequence.which_term) are never used by the bank.
 
@@ -62,18 +62,16 @@ Usable sub-structures of round 3 that no released puzzle uses yet (each has a so
 
 | Level | Puzzles so far | Single-digit answers so far | Share | Projected single-digit answers in 365 | Allowed (9 values x 4) | Verdict |
 |---|---|---|---|---|---|---|
-| 3 | 61 | 7 | 11% | 42 | 36 | WARNING: aim for fewer single-digit answers |
-| 4 | 61 | 7 | 11% | 42 | 36 | WARNING: aim for fewer single-digit answers |
+| 3 | 61 | 6 | 10% | 36 | 36 | ok |
+| 4 | 61 | 6 | 10% | 36 | 36 | ok |
 | 5 | 61 | 3 | 5% | 18 | 36 | ok |
 | 6 | 61 | 4 | 7% | 24 | 36 | ok |
 
 Structure FAIL count (all released months): 3
-- FAIL L3: answer 20 repeats (L3-solidedges, L3-barpieces)
-- FAIL L3: answer 36 repeats (L3-books, L3-mealset)
-- FAIL L5: L5-cutcard and L5-cornerscard share the numbers ['15', '18', '4', '5']
+- FAIL L2: single-digit answer 9 used 3 times in 60 days (cap 2): L2-canoetrips, L2-wordorder, L2-sleephours
+- FAIL L3: answer 13 repeats (L3-tripbooking, L3-booksales)
+- FAIL L4: answer 13 repeats (L4-bannerstrips, L4-heightline)
 
 Capacity verdict for the full year (a plan for January to October, not a defect of the released months): 0 CAPACITY FAIL
-- WARNING Level 3: 11% single-digit answers so far, a year would need about 42 (limit 36)
-- WARNING Level 4: 11% single-digit answers so far, a year would need about 42 (limit 36)
 
 Skeleton matches with our own sources that were reviewed by hand (same masked wording, but no shared numbers): 0

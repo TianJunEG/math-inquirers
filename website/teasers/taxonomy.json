@@ -3379,17 +3379,19 @@
   },
   "measurement.container_and_contents": {
    "name": "a jar weighed full and part full: the jar alone or its contents",
-   "levels": [
+   "levels": [],
+   "kinds": [
+    "container_mass"
+   ],
+   "cite": "MOE P3 MG Measurement (kg and g, compound units), p.36; P4 NA Fractions (fraction of a set), p.37; Problem solving: draw a model, p.13",
+   "round": 3,
+   "levels_before": [
     3,
     4,
     5,
     6
    ],
-   "kinds": [
-    "container_mass"
-   ],
-   "cite": "MOE P3 MG Measurement (kg and g, compound units), p.36; P4 NA Fractions (fraction of a set), p.37; Problem solving: draw a model, p.13",
-   "round": 3
+   "retired": "round 4: \"a jug full of water weighs 1.45 kg, half full 0.85 kg: mass of the empty jug\" is Go further 7 of the P4 holiday week 5 lesson (practice/holiday/p4/05/lesson.py); the jar and rice and the juice bottle were the same frame"
   },
   "series_sum.missing_term": {
    "name": "one number is left out when adding 1 to n: which one",
@@ -3454,16 +3456,18 @@
   },
   "shapes.cube_net_opposite": {
    "name": "a net of a cube is folded: which face is opposite",
-   "levels": [
-    5,
-    6
-   ],
+   "levels": [],
    "kinds": [
     "net_opposite"
    ],
    "cite": "MOE P4 MG Geometry: nets of cube, cuboid, prism and pyramid, p.39",
    "round": 3,
-   "note": "round 4: removed from Level 4 (a text net is hard for ages 9 to 11, AUDIT_ROUND4 Low)"
+   "note": "round 4: removed from Level 4 (a text net is hard for ages 9 to 11, AUDIT_ROUND4 Low)",
+   "levels_before": [
+    5,
+    6
+   ],
+   "retired": "round 4: \"a net of six squares marked A to F: which letter is opposite\" is item 2 of the P4 holiday week 4 lesson 8 (practice/holiday/p4/08), and split/p5l4; a text net is also hard for ages 9 to 12"
   },
   "symmetry.complete_figure": {
    "name": "squares to shade so that a figure is symmetric about a line",

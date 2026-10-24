@@ -11,15 +11,12 @@ Method: every puzzle is re-solved by `brute.py` (independent of the author solve
 | 5 | 30 | 30 | 1 | 21 | 3 | 30 |
 | 6 | 30 | 25 | 3 | 21 | 3 | 30 |
 
-Sources searched (whole working tree, tracked or not): 6664 files, 1357.7 MB, sha256 c17c2fa611467bda52942393.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 289, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
+Sources searched (whole working tree, tracked or not): 6664 files, 1357.7 MB, sha256 4133d40de45df2e44201d848.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 289, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
 
 Similarity sources checked: holiday banks, own term lessons, all extension workbook data, the school booklets, our book drafts and catalogues, external private source files, and the seven fixed website puzzles.
 
-FAIL count: 3. REVIEW items: 105.
+FAIL count: 0. REVIEW items: 105.
 
-- FAIL L2-canoetrips [11-21]: same story as a source: rule N (the question's numbers and the answer all in one source window): ['3', '6', '7', '9'] with the shared story words: "- L7: exit rebuilt (hexagon, 6 sides and 6 corners); house image and row heights fixed so Q2 stays o ..." (docs/audit/fixpass_p1.md) words cross,far,fewest,side
-- FAIL L5-digitsum36 [11-13]: shares a 7-word run with holiday: "are all different and add up to"
-- FAIL L5-digitsum36 [11-13]: shares a 7-word run with the extension workbooks: "are all different and add up to"
 
 - REVIEW L1-racerun [11-02]: story words 3 of 5 like "| Schema valid (JSON Schema + key checks) | PASS | all top-level keys, schema 2020-12, ide ..." (term/l1/AUDIT_L11.md)
 - REVIEW L1-secret63 [11-04]: number 2 in the question is not a parameter (written in the wording; check)

@@ -181,14 +181,14 @@
     "family": "counting_pairs",
     "p": {
      "sides": 7,
-     "total": 9,
+     "total": 10,
      "ordered": true
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "6",
-    "shown": "6 ways",
+    "ans": "5",
+    "shown": "5 ways",
     "units": [
      "ways",
      "way"
@@ -197,18 +197,17 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "7",
-     "5",
-     "8",
+     "6",
      "4",
-     "12",
+     "7",
      "3",
-     "16",
-     "60"
+     "10",
+     "15",
+     "50"
     ],
-    "q": "Mei picks one token from a yellow bag and one token from a green bag. Each bag has tokens numbered 1 to 7. The two numbers add up to 9. A yellow 3 and a green 6 is different from a yellow 6 and a green 3. How many different ways can this happen?",
-    "hint": "List the yellow numbers in order, starting with the smallest one that can work. For each one, ask what the green number must be.",
-    "why": "The pairs (yellow, green) are 2 and 7, 3 and 6, 4 and 5, 5 and 4, 6 and 3, and 7 and 2. That is 6 ways.",
+    "q": "Mei picks one token from a red bag and one token from a blue bag. Each bag has tokens numbered 1 to 7. The two numbers add up to 10. A red 3 and a blue 7 is different from a red 7 and a blue 3. How many different ways can this happen?",
+    "hint": "List the red numbers in order, starting with the smallest one that can work. For each one, ask what the blue number must be.",
+    "why": "The pairs (red, blue) are 3 and 7, 4 and 6, 5 and 5, 6 and 4, and 7 and 3. That is 5 ways.",
     "date": "12-05"
    },
    {
@@ -3114,15 +3113,15 @@
       23
      ],
      "r2": [
-      15,
+      11,
       30
      ]
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "9",
-    "shown": "9 days",
+    "ans": "13",
+    "shown": "13 days",
     "units": [
      "day",
      "days"
@@ -3131,17 +3130,18 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "10",
-     "8",
+     "14",
+     "12",
+     "15",
      "11",
-     "7",
-     "18",
-     "19",
-     "90"
+     "26",
+     "23",
+     "3",
+     "130"
     ],
-    "q": "The Hill Library holds a book sale from the 6th to the 23rd of March, and the Park Library holds a book sale from the 15th to the 30th of March. Both sales are open on their first and last day. On how many days are both book sales open at the same time?",
+    "q": "The Hill Library holds a book sale from the 6th to the 23rd of March, and the Park Library holds a book sale from the 11th to the 30th of March. Both sales are open on their first and last day. On how many days are both book sales open at the same time?",
     "hint": "Find the first day when both sales are open, and the last day when both are open.",
-    "why": "Both sales are open from the 15th to the 23rd. That is 23 − 15 + 1 = 9 days.",
+    "why": "Both sales are open from the 11th to the 23rd. That is 23 − 11 + 1 = 13 days.",
     "date": "12-07"
    },
    {
@@ -3808,16 +3808,16 @@
     "family": "counting_choices",
     "p": {
      "counts": [
-      3,
-      3,
+      2,
+      5,
       4
      ]
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "36",
-    "shown": "36 kits",
+    "ans": "40",
+    "shown": "40 kits",
     "units": [
      "kits",
      "kit"
@@ -3826,19 +3826,19 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "37",
-     "35",
+     "41",
+     "39",
+     "42",
      "38",
-     "34",
-     "72",
-     "18",
-     "46",
-     "26",
-     "360"
+     "80",
+     "20",
+     "50",
+     "30",
+     "400"
     ],
-    "q": "A craft table sells bookmark kits. Each kit has one ribbon, one tassel and one charm. The table has 3 ribbons, 3 tassels and 4 charms. How many different bookmark kits can you make?",
+    "q": "A craft table sells bookmark kits. Each kit has one ribbon, one tassel and one charm. The table has 2 ribbons, 5 tassels and 4 charms. How many different bookmark kits can you make?",
     "hint": "Pick one ribbon. How many tassel and charm choices go with it?",
-    "why": "3 × 3 × 4 = 36 kits.",
+    "why": "2 × 5 × 4 = 40 kits.",
     "date": "12-22"
    },
    {
@@ -3850,15 +3850,15 @@
     "sub": "fractions.equivalent_missing",
     "family": "fractions",
     "p": {
-     "n1": 5,
-     "d1": 6,
-     "d2": 24
+     "n1": 3,
+     "d1": 8,
+     "d2": 32
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "20",
-    "shown": "20 pieces",
+    "ans": "12",
+    "shown": "12 pieces",
     "units": [
      "pieces",
      "piece"
@@ -3867,18 +3867,19 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "21",
-     "19",
-     "22",
-     "18",
-     "40",
+     "13",
+     "11",
+     "14",
      "10",
-     "30",
-     "200"
+     "24",
+     "6",
+     "22",
+     "2",
+     "120"
     ],
-    "q": "A chocolate bar is divided into 6 equal pieces and Ravi eats 5 of them. If the same bar had been divided into 24 equal pieces, how many of those pieces would Ravi have eaten to eat the same amount?",
-    "hint": "Cut each of the 6 big pieces into smaller equal pieces. How many small pieces does each big piece make?",
-    "why": "Each big piece makes 24 ÷ 6 = 4 small pieces. 5 big pieces are 5 × 4 = 20 pieces.",
+    "q": "A chocolate bar is divided into 8 equal pieces and Ravi eats 3 of them. If the same bar had been divided into 32 equal pieces, how many of those pieces would Ravi have eaten to eat the same amount?",
+    "hint": "Cut each of the 8 big pieces into smaller equal pieces. How many small pieces does each big piece make?",
+    "why": "Each big piece makes 32 ÷ 8 = 4 small pieces. 3 big pieces are 3 × 4 = 12 pieces.",
     "date": "12-23"
    },
    {
@@ -4489,13 +4490,13 @@
      "ask": "count",
      "length": 15,
      "overlap": 3,
-     "total": 111
+     "total": 159
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "9",
-    "shown": "9 strips",
+    "ans": "13",
+    "shown": "13 strips",
     "units": [
      "strips",
      "strip"
@@ -4504,17 +4505,18 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "10",
-     "8",
+     "14",
+     "12",
+     "15",
      "11",
-     "7",
-     "18",
-     "19",
-     "90"
+     "26",
+     "23",
+     "3",
+     "130"
     ],
-    "q": "Dina glues strips of card end to end to make a long banner. Every strip is 15 cm long, and each strip overlaps the next one by 3 cm. The finished banner is 111 cm long. How many strips does Dina use?",
+    "q": "Dina glues strips of card end to end to make a long banner. Every strip is 15 cm long, and each strip overlaps the next one by 3 cm. The finished banner is 159 cm long. How many strips does Dina use?",
     "hint": "The first strip gives its whole length. Every other strip adds the length that is not covered by the overlap.",
-    "why": "Each new strip adds 15 − 3 = 12 cm. The first strip is 15 cm, so the other strips make 111 − 15 = 96 cm. 96 ÷ 12 = 8 more strips. 1 + 8 = 9 strips.",
+    "why": "Each new strip adds 15 − 3 = 12 cm. The first strip is 15 cm, so the other strips make 159 − 15 = 144 cm. 144 ÷ 12 = 12 more strips. 1 + 12 = 13 strips.",
     "date": "12-05"
    },
    {
@@ -5092,7 +5094,7 @@
      "5",
      "150"
     ],
-    "q": "Mei is 8 years old and her grandmother is 62 years old. In how many years' time will the sum of their two ages be 100?",
+    "q": "Mei is 8 years old. Her grandmother is 62 years old. How many years must pass before the two ages add up to 100?",
     "hint": "Add their ages now. Each year both of them get one year older, so the sum grows by the same amount every year.",
     "why": "Now their ages add up to 8 + 62 = 70. Each year the sum grows by 2, because both get a year older. They need 100 − 70 = 30 more, and 30 ÷ 2 = 15 years.",
     "date": "12-19"
@@ -7755,7 +7757,7 @@
     ],
     "q": "A baker packs buns into boxes of 19. She fills 24 full boxes and has 7 buns left over. Then 150 more buns arrive. She puts all the buns together and packs them again in boxes of 19. How many full boxes does she have now?",
     "hint": "First find how many buns the baker had at the start. Then add the new buns.",
-    "why": "24 × 19 = 456, and 456 + 7 = 463 buns at the start. With 150 more, she has 613 buns. 613 ÷ 19 is 32 boxes with a remainder, so she has 32 boxes full boxes.",
+    "why": "24 × 19 = 456, and 456 + 7 = 463 buns at the start. With 150 more, she has 613 buns. 613 ÷ 19 is 32 with a remainder, so she can fill 32 boxes.",
     "date": "12-15"
    },
    {

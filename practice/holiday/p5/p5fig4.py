@@ -41,7 +41,7 @@ def _cap(x1, x2, y, text, size=15, fill=NAVY, up=True):
 def rise_cut_bars(sol=None):
     """Q3: the $80 T-shirt.  Question: a bar for $80 (100%), a longer bar with a shaded extra part for the 25% rise, and a dashed empty bar for the cut.
     sol = (start, after_rise, after_cut) writes the checked dollars on the bars."""
-    u, x0 = 40, 12
+    u, x0 = 44, 10
     b = T(x0, 16, 'At first', 15, 'start', 800)
     b += Re(x0, 22, 4 * u, 34, SKY, NAVY, 2.4) + T(x0 + 2 * u, 45, ('$%d = 100%%' % sol[0]) if sol else '$80 = 100%', 15, 'middle', 800)
     b += T(x0, 84, 'After the 25% rise', 15, 'start', 800)
@@ -71,9 +71,9 @@ def bag_bar(sol=None):
         b += Re(round(x0 + k * cw, 1), y, round(cw, 1), h, colours[k], NAVY, 2.4)
     b += T(x0 + w / 2, y + h + 22, 'Each part is 10% of $120.', 15, 'middle', 700, GREY)
     if sol:
-        b += T(x0 + cw, y + h + 46, 'bag $%d' % sol[0], 14, 'middle', 800) + T(x0 + 3 * cw, y + h + 64, 'book $%d' % sol[1], 14, 'middle', 800) \
-            + T(x0 + 7 * cw, y + h + 46, 'left $%d' % sol[2], 14, 'middle', 800, TEAL)
-        return svg(300, 124, b, 'The bar of 120 dollars with the checked parts: the bag is 2 parts, $%d; the book is 25 percent of the 8 parts left, 2 parts, $%d; 6 parts are left, $%d.' % sol)
+        b += T(x0 + cw, y + h + 46, 'bag $%d' % sol[0], 14, 'middle', 800) + T(x0 + 4.2 * cw, y + h + 46, 'book $%d' % sol[1], 14, 'middle', 800) \
+            + T(x0 + 8.0 * cw, y + h + 46, 'left $%d' % sol[2], 14, 'middle', 800, TEAL)
+        return svg(300, 108, b, 'The bar of 120 dollars with the checked parts: the bag is 2 parts, $%d; the book is 25 percent of the 8 parts left, 2 parts, $%d; 6 parts are left, $%d.' % sol)
     return svg(300, 100, b, 'A bar for 120 dollars cut into 10 equal parts. Each part is 10 percent of 120 dollars.')
 
 
@@ -264,54 +264,47 @@ def point_fig(a=95, b=130, c=70, sol=False):
 
 # ---------- Q2 ----------
 def parallelogram_fig(A_ang=72, sol=False):
-    A = (16, 150)
-    B = (A[0] + 120, A[1])
-    Dd = P(A, 80, A_ang)
-    C = (Dd[0] + 120, Dd[1])
+    A = (30, 150)
+    B = (A[0] + 150, A[1])
+    Dd = P(A, 100, A_ang)
+    C = (Dd[0] + 150, Dd[1])
     chk(A, B, Dd, A_ang, 'A'); chk(B, A, C, 180 - A_ang, 'B'); chk_par(A, B, Dd, C, 'AB DC'); chk_eq(A, Dd, B, C, 'AD BC')
     s = polygon([A, B, C, Dd]) + tick(A, B) + tick(Dd, C) + tick(A, Dd, 2) + tick(B, C, 2)
-    s += arc(A, B, Dd, 26, f'{A_ang}°', WARM, 46, 15)
+    s += arc(A, B, Dd, 22, f'{A_ang}°', WARM, 42, 15)
     if sol:
-        s += arc(B, A, C, 26, f'{180 - A_ang}°', TEAL, 50, 15) + arc(C, B, Dd, 26, f'{A_ang}°', TEAL, 50, 15) + arc(Dd, A, C, 26, f'{180 - A_ang}°', TEAL, 50, 15)
-    s += pl(A, 'A', -10, 16) + pl(B, 'B', 10, 16) + pl(C, 'C', 12, 4) + pl(Dd, 'D', -12, 4)
+        s += arc(B, A, C, 22, f'{180 - A_ang}°', TEAL, 42, 15) + arc(C, B, Dd, 22, f'{A_ang}°', TEAL, 42, 15) + arc(Dd, A, C, 22, f'{180 - A_ang}°', TEAL, 42, 15)
+    s += pl(A, 'A', -12, 16) + pl(B, 'B', 12, 16) + pl(C, 'C', 14, 4) + pl(Dd, 'D', -14, 4)
     lab = f'Parallelogram ABCD with angle A {A_ang} degrees. Opposite sides are equal and parallel.'
     if sol:
         lab = f'Parallelogram ABCD: A {A_ang}, B {180 - A_ang}, C {A_ang} and D {180 - A_ang} degrees.'
-    return svg(280, 176, shift_body(s, 6, 0), lab)
-
-
-def shift_body(s, dx, dy):
-    return f'<g transform="translate({dx},{dy})">{s}</g>'
+    return svg(270, 176, s, lab)
 
 
 def rhombus_fig(Pang=64, sol=False):
-    p = (20, 150)
-    q = (p[0] + 100, p[1])
-    sp = P(p, 100, Pang)
-    r = (sp[0] + 100, sp[1])
+    p = (34, 150)
+    q = (p[0] + 110, p[1])
+    sp = P(p, 110, Pang)
+    r = (sp[0] + 110, sp[1])
     chk(p, q, sp, Pang, 'QPS'); chk(q, p, r, 180 - Pang, 'PQR'); chk(p, q, r, (180 - (180 - Pang)) / 2, 'QPR')
     chk_eq(p, q, q, r, 'PQ QR'); chk_eq(p, q, p, sp, 'PQ PS')
     s = polygon([p, q, r, sp]) + seg(p, r, TEAL, 3, '7 5')
     s += tick(p, q) + tick(q, r) + tick(r, sp) + tick(sp, p)
     qpr = ang(p, q, r)
     s += arc(p, q, sp, 24)
-    lp = P(p, 62, 50)
-    s += T(f1(lp[0]), f1(lp[1] + 6), f'{Pang}°', 15, 'middle', 800, WARM)
+    s += T(f1(p[0] + 3), f1(p[1] - 58), f'{Pang}°', 15, 'middle', 800, WARM)             # outside the shape, left of PS, next to the little arc
     s += arc(p, q, r, 62, f'{qpr:.0f}°' if sol else '?', TEAL if sol else WARM, 86, 15)
-    if sol:
-        s += arc(q, p, r, 26, f'{180 - Pang}°', TEAL, 52, 14)
-    else:
-        s += arc(q, p, r, 26, '?', WARM, 50, 14)
-    s += pl(p, 'P', -12, 16) + pl(q, 'Q', 12, 16) + pl(r, 'R', 12, 4) + pl(sp, 'S', -12, 4)
+    s += arc(q, p, r, 24)
+    s += T(f1(q[0] + 38), f1(q[1] - 12), f'{180 - Pang}°' if sol else '?', 15, 'middle', 800, TEAL if sol else WARM)      # outside the shape, right of QR
+    s += pl(p, 'P', -12, 16) + pl(q, 'Q', 12, 16) + pl(r, 'R', 12, 4) + pl(sp, 'S', -14, 4)
     lab = f'Rhombus PQRS with all four sides equal and angle P {Pang} degrees. The diagonal PR is drawn dashed.'
     if sol:
         lab = f'Rhombus PQRS: angle P {Pang}, angle PQR {180 - Pang}, angle QPR {qpr:.0f} degrees.'
-    return svg(280, 176, s, lab)
+    return svg(270, 176, s, lab)
 
 
 def trapezium_pts(Aang=110, Bang=80):
-    tA = (40, 30)
-    tB = (tA[0] + 100, tA[1])
+    tA = (50, 30)
+    tB = (tA[0] + 130, tA[1])
     tD = P(tA, 100, 360 - Aang)
     L = (tD[1] - tB[1]) / math.sin(rad(Bang))
     BC = P(tB, L, 180 + Bang)
@@ -323,19 +316,19 @@ def trapezium_fig(Aang=110, Bang=80, sol=False):
     tA, tB, C2, tD = trapezium_pts(Aang, Bang)
     chk(tA, tB, tD, Aang, 'A'); chk(tB, tA, C2, Bang, 'B'); chk_par(tA, tB, tD, C2, 'AB DC'); chk(tD, tA, C2, 180 - Aang, 'D'); chk(C2, tB, tD, 180 - Bang, 'C')
     s = polygon([tA, tB, C2, tD]) + parr(tA, tB) + parr(tD, C2)
-    s += arc(tA, tB, tD, 24, f'{Aang}°', WARM, 54, 15) + arc(tB, tA, C2, 24, f'{Bang}°', WARM, 50, 15)
-    s += arc(tD, tA, C2, 24, f'{180 - Aang}°' if sol else '?', TEAL if sol else WARM, 50, 15) + arc(C2, tB, tD, 24, f'{180 - Bang}°' if sol else '?', TEAL if sol else WARM, 50, 15)
-    s += pl(tA, 'A', -14, 4) + pl(tB, 'B', 14, 4) + pl(C2, 'C', 14, 20) + pl(tD, 'D', -14, 20)
+    s += arc(tA, tB, tD, 24, f'{Aang}°', WARM, 42, 15) + arc(tB, tA, C2, 24, f'{Bang}°', WARM, 40, 15)
+    s += arc(tD, tA, C2, 24, f'{180 - Aang}°' if sol else '?', TEAL if sol else WARM, 44, 15) + arc(C2, tB, tD, 24, f'{180 - Bang}°' if sol else '?', TEAL if sol else WARM, 42, 15)
+    s += pl(tA, 'A', -12, 2) + pl(tB, 'B', 14, 2) + pl(C2, 'C', 14, 20) + pl(tD, 'D', -14, 20)
     lab = f'Trapezium ABCD with AB parallel to DC, angle A {Aang} degrees and angle B {Bang} degrees.'
     if sol:
         lab += f' Angle D is {180 - Aang} and angle C is {180 - Bang} degrees.'
-    return svg(280, 176, s, lab)
+    return svg(270, 164, s, lab)
 
 
 # ---------- Q3 ----------
 def tri_pts(Bang=62, DAC=38):
-    L = 100
-    B = (24, 150)
+    L = 118
+    B = (24, 160)
     A = P(B, L, Bang)
     D = (B[0] + 2 * L * math.cos(rad(Bang)), B[1])
     # C is where the ray from A, turned DAC degrees past AD, meets the line BD (found by intersection, not from the answer)
@@ -348,29 +341,35 @@ def tri_pts(Bang=62, DAC=38):
 
 
 def tri_fig(sol=False, Bang=62, DAC=38):
+    """sol: False (question), True (the three angles BAD, ADC and ACD) or a tuple of 'ADB', 'BAD', 'ADC', 'ACD' (only those angles are written on the solution picture)."""
     A, B, C, D = tri_pts(Bang, DAC)
     adb = Bang
     bad = 180 - 2 * Bang
     adc = 180 - Bang
     acd = 180 - adc - DAC
     chk_eq(B, A, A, D, 'AB AD'); chk(B, A, C, Bang, 'B'); chk(A, D, C, DAC, 'DAC'); chk(D, A, B, adb, 'ADB'); chk(D, A, C, adc, 'ADC'); chk(C, A, B, acd, 'C'); chk(A, B, D, bad, 'BAD')
+    show = ('BAD', 'ADC', 'ACD') if sol is True else (tuple(sol) if sol else ())
     s = polygon([A, B, C]) + seg(A, D) + tick(B, A) + tick(A, D)
-    s += arc(B, C, A, 30, f'{Bang}°', WARM, 56, 15) + arc(A, D, C, 34, f'{DAC}°', WARM, 62, 15)
-    if sol:
-        s += arc(D, A, B, 22, f'{adb}°', TEAL, 40, 13) + arc(A, B, D, 28, f'{bad}°', TEAL, 56, 13) + arc(D, A, C, 36, f'{adc}°', TEAL, 58, 13) + arc(C, A, B, 22, f'{acd}°', TEAL, 40, 13)
+    s += arc(B, C, A, 30, f'{Bang}°', WARM, 54, 15) + arc(A, D, C, 34, f'{DAC}°', WARM, 66, 15)
+    if 'ADB' in show:
+        s += arc(D, A, B, 24, f'{adb}°', TEAL, 42, 14)
+    if 'BAD' in show:
+        s += arc(A, B, D, 30, f'{bad}°', TEAL, 52, 14)
+    if 'ADC' in show:
+        s += arc(D, A, C, 36, f'{adc}°', TEAL, 58, 14)
+    if 'ACD' in show:
+        s += arc(C, A, B, 40, f'{acd}°', TEAL, 72, 14)
     s += pl(A, 'A', 0, -8) + pl(B, 'B', -12, 16) + pl(D, 'D', 2, 22) + pl(C, 'C', 14, 16)
     lab = f'Triangle ABC. D is a point on BC with AB equal to AD. Angle ABC is {Bang} degrees and angle DAC is {DAC} degrees. The line AD is drawn.'
-    return svg(330, 176, s, lab)
-
-
-def tri_sol_fig(sol=False):
-    return tri_fig(True)
+    if show:
+        lab += ' Checked angles: ' + ', '.join({'ADB': f'ADB {adb}', 'BAD': f'BAD {bad}', 'ADC': f'ADC {adc}', 'ACD': f'ACD {acd}'}[k] + ' degrees' for k in show) + '.'
+    return svg(340, 184, s, lab)
 
 
 # ---------- Q4 / A3 ----------
 def para_e_pts(Babc=56):
-    D = (30, 160)
-    a, c = 100, 200
+    D = (30, 150)
+    a, c = 130, 190
     A = P(D, a, Babc)
     B = (A[0] + c, A[1])
     C = (D[0] + c, D[1])
@@ -389,59 +388,77 @@ def para_e_fig(Babc=56, known=(), sol=False):
     chk(B, A, C, Babc, 'ABC'); chk(D, A, C, adc, 'ADC'); chk(E, D, A, dea, 'DEA'); chk(E, A, C, aec, 'AEC'); chk(A, E, B, eab, 'EAB')
     s = polygon([A, B, C, D]) + seg(A, E) + tick(D, A) + tick(D, E)
     s += arc(B, A, C, 28, f'{Babc}°', WARM, 54, 15)
-    spec = {'ADC': (D, A, C, adc, 26, 52), 'DEA': (E, D, A, dea, 24, 46), 'AEC': (E, A, C, aec, 28, 54), 'EAB': (A, E, B, eab, 28, 52)}
+    spec = {'ADC': (D, A, C, adc, 26, 42), 'DEA': (E, D, A, dea, 24, 46), 'AEC': (E, A, C, aec, 34, 66), 'EAB': (A, E, B, eab, 30, 58)}
     for nme in known:
         v, p1, p2, val, r, lr = spec[nme]
         s += arc(v, p1, p2, r, f'{val:g}°', TEAL, lr, 14)
-    s += pl(A, 'A', -2, -10) + pl(B, 'B', 4, -10) + pl(C, 'C', 14, 18) + pl(D, 'D', -12, 18) + pl(E, 'E', 2, 22)
+    s += pl(A, 'A', -2, -10) + pl(B, 'B', 4, -10) + pl(C, 'C', 14, 18) + pl(D, 'D', -14, 18) + pl(E, 'E', 2, 22)
     lab = f'Parallelogram ABCD with E a point on the side DC and DA equal to DE. Angle ABC is {Babc} degrees. The line AE is drawn.'
     if known:
         lab += ' Checked angles: ' + ', '.join(f'{k} {spec[k][3]:g} degrees' for k in known) + '.'
-    return svg(320, 190, s, lab)
+    return svg(330, 184, s, lab)
 
 
 # ---------- Think harder / Go further ----------
 def a1_fig(label='3 × B', sol=None):
     """Parallelogram ABCD in which angle A is some times angle B (label text '3 × B' or a template '{k} × B')."""
-    A = (80, 126)
-    B = (226, 126)
-    D = P(A, 80, 135)
-    C = (D[0] + 146, D[1])
-    s = polygon([A, B, C, D]) + arc(A, B, D, 24, label if sol is None else f'{sol[0]}°', WARM if sol is None else TEAL, 76, 15)
-    s += arc(B, A, C, 24, 'B' if sol is None else f'{sol[1]}°', WARM if sol is None else TEAL, 52, 15)
-    s += pl(A, 'A', -14, 16) + pl(B, 'B', 14, 16) + pl(C, 'C', 14, 6) + pl(D, 'D', -14, 6)
+    A = (80, 130)
+    B = (236, 130)
+    D = P(A, 84, 135)
+    C = (D[0] + 156, D[1])
+    s = polygon([A, B, C, D]) + arc(A, B, D, 24, label if sol is None else f'{sol[0]}°', WARM if sol is None else TEAL, 52, 15)
+    s += arc(B, A, C, 24, 'B' if sol is None else f'{sol[1]}°', WARM if sol is None else TEAL, 46, 15)
+    s += pl(A, 'A', -4, 22) + pl(B, 'B', 14, 18) + pl(C, 'C', 14, 6) + pl(D, 'D', -14, 6)
     lab = 'A parallelogram ABCD in which angle A is a number of times angle B.' if sol is None else f'Parallelogram ABCD with angle A {sol[0]} degrees and angle B {sol[1]} degrees.'
-    return svg(300, 150, s, lab)
+    return svg(300, 156, s, lab)
 
 
 def a4_fig(sol=None):
     """Square ABCD with the equilateral triangle CDE standing outside it on DC; the line AE is drawn."""
-    s_ = 100
-    A = (60, 190)
+    s_ = 110
+    A = (70, 200)
     B = (A[0] + s_, A[1])
     C = (B[0], A[1] - s_)
     D = (A[0], C[1])
     E = (A[0] + s_ / 2, D[1] - s_ * math.sin(rad(60)))
     chk(D, A, E, 150, 'ADE'); chk(A, D, E, 15, 'DAE'); chk_eq(D, C, D, E, 'DC DE')
     s = polygon([A, B, C, D]) + polygon([D, C, E], YEL) + seg(A, E, TEAL, 3, '7 5')
-    s += arc(D, A, E, 26, '150°' if sol else '?', TEAL if sol else WARM, 52, 15) + arc(A, D, E, 40, '15°' if sol else '?', TEAL if sol else WARM, 62, 15)
+    s += arc(D, A, E, 26, '', WARM)
+    s += T(f1(D[0] + 54), f1(D[1] + 22), '150°' if sol else '?', 15, 'middle', 800, TEAL if sol else WARM)
+    s += arc(A, D, E, 50, '', WARM)
+    s += T(f1(A[0] + 36), f1(A[1] - 52), '15°' if sol else '?', 15, 'middle', 800, TEAL if sol else WARM)
     s += pl(A, 'A', -14, 16) + pl(B, 'B', 14, 16) + pl(C, 'C', 14, 6) + pl(D, 'D', -14, 6) + pl(E, 'E', 0, -10)
-    return svg(240, 228, s, 'A square ABCD with an equilateral triangle CDE standing outside it on the side DC. The line AE is drawn.' + (' Angle ADE is 150 degrees and angle DAE is 15 degrees.' if sol else ''))
+    return svg(250, 240, s, 'A square ABCD with an equilateral triangle CDE standing outside it on the side DC. The line AE is drawn.' + (' Angle ADE is 150 degrees and angle DAE is 15 degrees.' if sol else ''))
 
 
 def b1_pts(Aang=40):
-    A = (150, 20)
-    L = 140
-    B = P(A, L, 270 - (180 - Aang) / 2 * 0 - Aang / 2)
+    A = (150, 14)
+    L = 190
+    B = P(A, L, 270 - Aang / 2)
     C = P(A, L, 270 + Aang / 2)
-    bc = dist(B, C)
     # D on AC with BD = BC: the point of line AC (other than C) at distance BC from B
     u = ((A[0] - C[0]) / L, (A[1] - C[1]) / L)
     w = (C[0] - B[0], C[1] - B[1])
-    b_ = 2 * (u[0] * w[0] + u[1] * w[1])
-    t = -b_                                          # |w + t u|^2 = |w|^2 gives t = 0 or t = -2 u.w
+    t = -2 * (u[0] * w[0] + u[1] * w[1])             # |w + t u|^2 = |w|^2 gives t = 0 or t = -2 u.w
     D = (C[0] + u[0] * t, C[1] + u[1] * t)
     return A, B, C, D
+
+
+def tick_at(a, b, f, n=1):
+    """Equal-side tick marks at the fraction f of the way from a to b."""
+    return _tick_pt(a, b, (a[0] + (b[0] - a[0]) * f, a[1] + (b[1] - a[1]) * f), n)
+
+
+def _tick_pt(a, b, m, n):
+    l = dist(a, b)
+    u = ((b[0] - a[0]) / l, (b[1] - a[1]) / l)
+    nn = (-u[1], u[0])
+    s = ''
+    for i in range(n):
+        o = (i - (n - 1) / 2) * 7
+        c = (m[0] + u[0] * o, m[1] + u[1] * o)
+        s += Ln(f1(c[0] - nn[0] * 8), f1(c[1] - nn[1] * 8), f1(c[0] + nn[0] * 8), f1(c[1] + nn[1] * 8), 3, WARM)
+    return s
 
 
 def b1_fig(Aang=40, sol=False):
@@ -449,12 +466,12 @@ def b1_fig(Aang=40, sol=False):
     base = (180 - Aang) / 2
     abd = base - Aang
     chk_eq(B, C, B, D, 'BC BD'); chk(A, B, C, Aang, 'A'); chk(B, A, C, base, 'B'); chk(B, C, D, Aang, 'DBC'); chk(B, A, D, abd, 'ABD')
-    s = polygon([A, B, C]) + seg(B, D) + tick(A, B) + tick(A, C) + tick(B, C, 2) + tick(B, D, 2)
-    s += arc(A, B, C, 36, f'{Aang}°', WARM, 66, 15)
+    s = polygon([A, B, C]) + seg(B, D) + tick_at(A, B, 0.3) + tick_at(A, C, 0.3) + tick(B, C, 2) + tick(B, D, 2)
+    s += arc(A, B, C, 40, f'{Aang}°', WARM, 74, 15)
     if sol:
-        s += arc(B, A, D, 40, f'{abd:g}°', TEAL, 70, 14)
+        s += arc(B, A, D, 56, f'{abd:g}°', TEAL, 92, 14)
     s += pl(A, 'A', 0, -8) + pl(B, 'B', -14, 14) + pl(C, 'C', 14, 14) + pl(D, 'D', 16, 0)
-    return svg(300, 178, s, f'Isosceles triangle ABC with AB equal to AC and angle A {Aang} degrees. D is on AC and BD equals BC.' + (f' Angle ABD is {abd:g} degrees.' if sol else ''))
+    return svg(300, 212, s, f'Isosceles triangle ABC with AB equal to AC and angle A {Aang} degrees. D is on AC and BD equals BC.' + (f' Angle ABD is {abd:g} degrees.' if sol else ''))
 
 
 def b2_fig(sol=False):
@@ -468,7 +485,7 @@ def b2_fig(sol=False):
     s = polygon([A, B, C, D]) + polygon([A, B, E], YEL) + seg(D, E, TEAL, 3, '7 5') + seg(C, E, TEAL, 3, '7 5')
     if sol:
         s += arc(E, D, C, 24, '150°', TEAL, 46, 14)
-    s += pl(A, 'A', -14, 16) + pl(B, 'B', 14, 16) + pl(C, 'C', 14, 6) + pl(D, 'D', -14, 6) + pl(E, 'E', 0, 22)
+    s += pl(A, 'A', -14, 16) + pl(B, 'B', 14, 16) + pl(C, 'C', 14, 6) + pl(D, 'D', -14, 6) + pl(E, 'E', 0, 28)
     return svg(200, 178, s, 'A square ABCD with a point E inside it so that triangle ABE is equilateral. The lines ED and EC are drawn.' + (' Angle DEC is 150 degrees.' if sol else ''))
 
 

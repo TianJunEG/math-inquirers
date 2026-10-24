@@ -157,8 +157,8 @@ DEFS = [
       'Star: 24 ÷ 2 = 12. Moon: 58 − 12 = {ans}.',
       p=dict(eqs=[[{'star': 2}, 24], [{'star': 1, 'moon': 1}, 58]], ask='moon', maxv=60), sub='symbols.symbol_equations'),
     P('twodice', 'dice_ways', 'Counting ways',
-      "Mei picks one token from a yellow bag and one token from a green bag. Each bag has tokens numbered 1 to {sides}. The two numbers add up to {total}. A yellow 3 and a green 6 is different from a yellow 6 and a green 3. How many different ways can this happen?",
-      "List the yellow numbers in order, starting with the smallest one that can work. For each one, ask what the green number must be.",
-      "The pairs (yellow, green) are 2 and 7, 3 and 6, 4 and 5, 5 and 4, 6 and 3, and 7 and 2. That is {ansn} ways.",
-      p=dict(sides=7, total=9, ordered=True), unit='ways', units=['ways', 'way'], sub='counting_pairs.dice_sum_ways'),
+      "Mei picks one token from a red bag and one token from a blue bag. Each bag has tokens numbered 1 to {sides}. The two numbers add up to {total}. A red 3 and a blue 7 is different from a red 7 and a blue 3. How many different ways can this happen?",
+      "List the red numbers in order, starting with the smallest one that can work. For each one, ask what the blue number must be.",
+      "The pairs (red, blue) are 3 and 7, 4 and 6, 5 and 5, 6 and 4, and 7 and 3. That is {ansn} ways.",
+      p=dict(sides=7, total=10, ordered=True), unit='ways', units=['ways', 'way'], sub='counting_pairs.dice_sum_ways'),
 ]

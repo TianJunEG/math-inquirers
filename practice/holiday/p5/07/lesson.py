@@ -468,15 +468,6 @@ def _o_a4(e):
     return dict(f1=whole(pct(e['P'], e['d'])), f2=whole(after(e['P'], e['d'])))
 
 
-def _o_b1(e):
-    return whole(pct(price_before_gst(e['X'] * 109 // 100), 9))
-
-
-def _o_b3(e):
-    left = after(after(e['M'], e['p1']), e['p2'])
-    return money_at_first(left, e['p1'], e['p2'])
-
-
 finish(ITEMS)
 
 VARIANTS = {

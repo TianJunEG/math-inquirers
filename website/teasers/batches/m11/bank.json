@@ -2195,14 +2195,14 @@
     "sub": "moves.ferry_trips",
     "family": "moves",
     "p": {
-     "people": 9,
+     "people": 10,
      "cap": 3
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "7",
-    "shown": "7 crossings",
+    "ans": "9",
+    "shown": "9 crossings",
     "units": [
      "crossings",
      "crossing"
@@ -2211,17 +2211,17 @@
     "accept": [],
     "exact": false,
     "wrong": [
+     "10",
      "8",
-     "6",
-     "9",
-     "5",
-     "14",
-     "17",
-     "70"
+     "11",
+     "7",
+     "18",
+     "19",
+     "90"
     ],
-    "q": "9 children want to get across a lake. A canoe carries 3 people at most, and it only moves when a child paddles it. Every trip, to the far side or back, is one crossing. What is the fewest number of crossings that gets all 9 children to the far side?",
+    "q": "10 children want to get across a lake. A canoe carries 3 people at most, and it only moves when a child paddles it. Every trip, to the far side or back, is one crossing. What is the fewest number of crossings that gets all 10 children to the far side?",
     "hint": "One child must paddle the canoe back after every crossing except the last one. How many children can one trip across and one trip back move for good?",
-    "why": "Each trip across and back moves 3 − 1 = 2 children across for good, because one child paddles back. The last crossing carries 3 children and needs no trip back. So 9 − 3 = 6 children must be moved by round trips: 6 ÷ 2 = 3 round trips, which is 6 crossings. The last crossing makes it 7 crossings.",
+    "why": "Each trip across and back moves 3 − 1 = 2 children across for good, because one child paddles back. The last crossing carries 3 children and needs no trip back. So 10 − 3 = 7 children must be moved by round trips: 7 ÷ 2 is more than 3, so 4 round trips are needed, which is 8 crossings. The last crossing makes it 9 crossings.",
     "date": "11-21"
    },
    {
@@ -5836,7 +5836,7 @@
      "156779",
      "1567890"
     ],
-    "q": "Lin writes the smallest whole number whose digits are all different and add up to 36. What number does she write?",
+    "q": "Lin wants the smallest whole number in which no digit is used twice and the digits have a sum of 36. What number does she write?",
     "hint": "How many digits are needed at least? The five biggest different digits add up to only 35. Then think about which digit can go first.",
     "why": "The five biggest different digits are 9, 8, 7, 6 and 5, which add up to 35, so five digits are not enough and we need six digits. Start with the smallest first digit, 1. The other five digits must add up to 35 and be different, so they are 5, 6, 7, 8 and 9. Writing them from smallest to biggest gives 156,789.",
     "date": "11-13"
@@ -5973,8 +5973,8 @@
     "sub": "perimeter_area.notched_perimeter",
     "family": "perimeter_area",
     "p": {
-     "w": 18,
-     "h": 15,
+     "w": 21,
+     "h": 16,
      "notches": [
       [
        "tr",
@@ -5992,8 +5992,8 @@
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "66",
-    "shown": "66 cm",
+    "ans": "74",
+    "shown": "74 cm",
     "units": [
      "cm",
      "centimetre",
@@ -6005,19 +6005,19 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "67",
-     "65",
-     "68",
-     "64",
-     "132",
-     "33",
+     "75",
+     "73",
      "76",
-     "56",
-     "660"
+     "72",
+     "148",
+     "37",
+     "84",
+     "64",
+     "740"
     ],
-    "q": "A rectangular tile is 18 cm long and 15 cm wide. A rectangle 4 cm by 3 cm is chipped off one corner. A rectangle 5 cm by 2 cm is chipped off the opposite corner. What is the perimeter of the tile now?",
+    "q": "A rectangular tile is 21 cm long and 16 cm wide. A rectangle 4 cm by 3 cm is chipped off one corner. A rectangle 5 cm by 2 cm is chipped off the opposite corner. What is the perimeter of the tile now?",
     "hint": "Think about the edge near a corner that has been chipped away: it goes in and then comes out again.",
-    "why": "Chipping a corner makes the edge go in and then out again by the same distances, so the perimeter is as long as before. 2 × (18 + 15) = 66 cm.",
+    "why": "Chipping a corner makes the edge go in and then out again by the same distances, so the perimeter is as long as before. 2 × (21 + 16) = 74 cm.",
     "date": "11-17"
    },
    {

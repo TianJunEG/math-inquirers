@@ -11,15 +11,13 @@ Method: every puzzle is re-solved by `brute.py` (independent of the author solve
 | 5 | 31 | 29 | 2 | 26 | 2 | 31 |
 | 6 | 31 | 30 | 2 | 24 | 2 | 31 |
 
-Sources searched (whole working tree, tracked or not): 6664 files, 1357.7 MB, sha256 c17c2fa611467bda52942393.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 289, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
+Sources searched (whole working tree, tracked or not): 6664 files, 1357.7 MB, sha256 4133d40de45df2e44201d848.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 289, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
 
 Similarity sources checked: holiday banks, own term lessons, all extension workbook data, the school booklets, our book drafts and catalogues, external private source files, and the seven fixed website puzzles.
 
-FAIL count: 3. REVIEW items: 105.
+FAIL count: 1. REVIEW items: 105.
 
-- FAIL L1-twodice [12-05]: same story as a source: rule N (the question's numbers and the answer all in one source window): ['3', '5', '6', '7', '9'] with the shared story words: "24 yellow 28 red 35 blue 40 green 45 orange 5 × 7 = 35 (blue) 8 bags, 3 in each. Altogether 24 (yell ..." (school/colour_by_code/out/p2/html/CBC-P2-14_dinosaur_mult_teacher.html) words bag,green,yellow
-- FAIL L4-grandmaages [12-19]: shares a 7-word run with external: "old in how many years' time will"
-- FAIL L4-grandmaages [12-19]: same story as a source: same wording with other numbers (10 of 22 word triples): "- [EOY_2024_CatholicHigh Q36, 2m, Ages, diff 2] Isaac is 7 years old and his sister is 3 years old.  ..." (docs/books/private_p4_papers/non_routine_questions.md) words age,year
+- FAIL L1-twodice [12-05]: same story as a source: rule N (the question's numbers and the answer all in one source window): ['3', '4', '5', '6', '7', '10'] with the shared story words: "Two dice: 36 equally likely outcomes blue die red die 1 1 2 2 3 3 4 4 5 5 6 6 2 3 4 5 6 7 3 4 5 6 7  ..." (split/p6l6/project/slides/p6l6-teachtwo.html) words blue,happen,red
 
 - REVIEW L1-rulerbill [12-01]: rule B: 3 of the same numbers ['3', '4', '9'] as "Picture-dependent items re-solved from the picture, not the key: B1 L1 S1 (26),  ..." (term/l1/audit/AUDIT_BOOKS_1_4_ROUND2.md)
 - REVIEW L1-twodice [12-05]: question has 54 words (limit 48)
