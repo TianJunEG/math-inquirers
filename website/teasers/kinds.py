@@ -26,11 +26,16 @@ def seq_term(a, d, n):
                  'all': ', '.join(str(a + i * d) for i in range(n))}
 
 
+def dot(pairs):
+    return sum(c * e for c, e in pairs), {'parts': ' + '.join('%d \u00d7 %d = %d' % (c, e, c * e) for c, e in pairs)}
+
+
 def seq_pos(a, d, v):
     assert (v - a) % d == 0
     n = (v - a) // d + 1
     assert n >= 1
-    return n, {'steps': n - 1, 'step': abs(d)}
+    return n, {'steps': n - 1, 'step': abs(d), 'second': a + d, 'gap': v - a,
+               'terms': ', '.join(str(a + i * d) for i in range(4))}
 
 
 def groups_plus(g, s, r=0):
@@ -124,11 +129,22 @@ def _pred(name, arg, n):
         return r * r == n
     if name == 'palindrome':
         return d == d[::-1]
+    if name == 'digit_eq':
+        return d[arg[0]] == arg[1]
+    if name == 'digit_plus':
+        return d[arg[0]] == d[arg[1]] + arg[2]
+    if name == 'digit_times':
+        return d[arg[0]] == arg[2] * d[arg[1]]
+    if name == 'digit_less':
+        return d[arg[0]] < d[arg[1]]
     raise ValueError(name)
 
 
 def scan(lo, hi, preds, ask):
     hits = [n for n in range(lo, hi + 1) if all(_pred(p, a, n) for p, a in preds)]
+    if ask == 'only':
+        assert len(hits) == 1, hits
+        return hits[0], {}
     ans = {'count': len(hits), 'min': hits[0] if hits else None, 'max': hits[-1] if hits else None}[ask]
     return ans, {'first': ', '.join(str(h) for h in hits[:6])}
 
@@ -217,7 +233,7 @@ def cells(outer, cuts, ask):
     area = W * H - sum(cw * ch for (_, _, cw, ch) in cuts)
     for (x, y, cw, ch) in cuts:   # corner cut-outs only: the perimeter stays that of the outer rectangle
         assert (x == 0 or x + cw == W) and (y == 0 or y + ch == H)
-    return (area if ask == 'area' else 2 * (W + H)), {'outer': W * H, 'cut': W * H - area}
+    return (area if ask == 'area' else 2 * (W + H)), {'whole': W * H, 'removed': W * H - area}
 
 
 def equiv_chain(rates, n):
@@ -704,7 +720,7 @@ EXPR_TEXT = {'A': '({a} + {b}) × {c} − {d}', 'B': '{a} + {b} × {c} − {d}',
 
 SOLVE = {k: v for k, v in dict(globals()).items()
          if callable(v) and not k.startswith('_') and k in (
-             'seq_term', 'seq_pos', 'groups_plus', 'part_whole', 'chain', 'sum_diff', 'sum_range', 'queue', 'fence',
+             'seq_term', 'seq_pos', 'dot', 'groups_plus', 'part_whole', 'chain', 'sum_diff', 'sum_range', 'queue', 'fence',
              'combos', 'pairs', 'scan', 'digits_extreme', 'count_arrangements', 'clock_end_hour', 'elapsed',
              'weekday', 'share', 'perimeter_regular', 'rect', 'cells', 'equiv_chain', 'shopping', 'mystery',
              'order_logic', 'moves', 'coin_ways', 'repeat_pattern', 'stairs', 'grid_count', 'lattice',

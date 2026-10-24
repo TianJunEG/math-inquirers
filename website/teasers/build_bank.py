@@ -64,6 +64,7 @@ def finish(d, ans):
     else:
         raise ValueError(fmt)
     out['canon'] = canon
+    out['num'] = shown
     if unit:
         glue = '' if unit in ('%', '°') else ' '
         shown = shown + glue + unit
@@ -96,6 +97,8 @@ def render(d, ans, ctx, fin):
     ns.update(d['p'])
     ns.update(ctx)
     ns['ans'] = fin['shown']
+    ns['ansn'] = fin.get('num', fin['shown'])
+    ns['ansv'] = int(fin['canon']) if fin['type'] == 'n' and fin['canon'].lstrip('-').isdigit() else fin['canon']
     r = {}
     for k in ('q', 'hint', 'why', 'big'):
         if d[k] is not None:

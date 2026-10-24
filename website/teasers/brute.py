@@ -19,6 +19,14 @@ def b_seq_term(a, d, n):
     return {x}
 
 
+def b_dot(pairs):
+    t = 0
+    for c, e in pairs:
+        for _ in range(c):
+            t += e
+    return {t}
+
+
 def b_seq_pos(a, d, v):
     out, x, n = set(), a, 1
     while n < 10000:
@@ -131,6 +139,14 @@ def _spred(name, arg, n):
         return any(k * k == n for k in range(0, n + 1))
     if name == 'palindrome':
         return s == s[::-1]
+    if name == 'digit_eq':
+        return int(s[arg[0]]) == arg[1]
+    if name == 'digit_plus':
+        return int(s[arg[0]]) == int(s[arg[1]]) + arg[2]
+    if name == 'digit_times':
+        return int(s[arg[0]]) == arg[2] * int(s[arg[1]])
+    if name == 'digit_less':
+        return s[arg[0]] < s[arg[1]]
     raise ValueError(name)
 
 
@@ -138,6 +154,8 @@ def b_scan(lo, hi, preds, ask):
     hits = [n for n in range(lo, hi + 1) if all(_spred(p, a, n) for p, a in preds)]
     if ask == 'count':
         return {len(hits)}
+    if ask == 'only':
+        return set(hits)
     return {min(hits) if ask == 'min' else max(hits)}
 
 

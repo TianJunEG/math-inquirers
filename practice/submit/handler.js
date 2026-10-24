@@ -105,6 +105,6 @@ export function supabaseStore(env, fetchImpl = fetch) {
   };
   return {
     getKeys: (th, unit, ver) => call('service_practice_keys', { p_token_hash: th, p_unit: unit, p_version: ver }),
-    record: (th, p) => call('service_practice_record', { p_token_hash: th, p_unit: p.unit, p_version: p.unit_version, p_sid: p.sid, p_rev: p.rev, p_rows: p.rows, p_counts: p.counts }),
+    record: (th, p) => call('service_practice_record', { p_token_hash: th, p_unit: p.unit, p_version: p.unit_version, p_sid: p.sid, p_rev: p.rev, p_rows: p.rows }),
   };
 }
