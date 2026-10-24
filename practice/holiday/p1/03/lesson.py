@@ -262,3 +262,9 @@ VARIANTS = {
 for _d in ITEMS:
     if _d['type'] == 'selfcheck' and not _d.get('open'):
         _d['marking_mode'] = 'self'
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Look back',
+    'What did you learn today about picture graphs? What would you change next time? Write one sentence for each.',
+    ['There is no single right answer. A good look back names one thing you learned and one thing you would change.', 'For example: I learned that each picture stands for one thing, so I count the pictures to find how many. Next time I would check the key and count each row slowly.'],
+    'Think of one question you got right and one that was hard. What helped? What would you do differently?'))

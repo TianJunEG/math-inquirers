@@ -1,6 +1,7 @@
 const C = require('../hp/common.js');
 const { fs, D, CW, t, p, cell, tbl, row, gap, footer, page, AlignmentType, BorderStyle, WidthType } = C;
 const L = require('./data.js');
+const HG = require('../levels/habit_guide.js');   // focus habit line (levels/habits.json)
 const SG = require('../levels/spine_guide.js');   // strategy card + common look-back lines (levels/spine.json)
 const bx = t => String(t).replace(/\{box\}/g, '[ ]');
 /* Minutes come from p2/budget.json (written by rebuild/p2budget.py, the single source for slide pills, notes and this guide). */
@@ -67,6 +68,10 @@ G.push(tx('Every lesson has one TOOL OF THE DAY, shown on the workbook card on p
 G.push(tbl([2500, 7400], [row([hd('Tool', 2500), hd('What we say (ages 6 to 8)', 7400)]), ...SG.DATA.tools.map(t => row([c2(t.name, 2500, { bold: true }), c2(t.def.A, 7400)]))]));
 G.push(gap(40));
 G.push(tx('The look-back is the same every lesson: pick ONE problem from today and ask three things. ' + SG.DATA.lookback.prompts.A.map((q, i) => (i + 1) + ') ' + q).join(' ') + ' Children tick yes or not yet, ' + 'write one word or draw for question 3' + ', and tick the tools they used. The timer is ' + SG.info(2, 1).timer + ' seconds, then stamp the journals. Nothing is collected, read aloud or marked.'));
+G.push(h2('Focus habit (every lesson)'));
+G.push(tx('Every lesson names ONE focus habit on its front page, on the opening slide and on the look-back slide, and has one “explain your thinking” item in the online practice. The habit is something the children practise; you are not testing it. The same six habits are used at every level. Do not give the answer first: ask the prompt, wait, and give a hint only if the child is stuck.'));
+G.push(tbl([1500, 2700, 5700], [row([hd('Habit', 1500), hd('Child says', 2700), hd('Your move and prompt', 5700)]), ...Object.keys(HG.DATA.habits).map(k => row([c2(k, 1500, { bold: true }), c2('“' + HG.DATA.habits[k].phrase + '”', 2700), c2(HG.DATA.habits[k].move + ' Say: “' + HG.DATA.habits[k].prompt + '”', 5700)]))]));
+G.push(gap(40));
 G.push(h2('Preparing the materials'));
 ['Send the workbook PDF to parents one week before. Ask them to print it single-sided and the cut-out pages on card if they can.', 'Cut-outs used: place-value cards (Lessons 1, 2, 10), digit cards (Lessons 1 and 10), play coins and notes (Lesson 6), fraction strips (Lesson 7), cube nets and paper cube strips (Lesson 8), paper clock (Lesson 9).', 'Keep the answer key with the tutor only. Check answers together on screen.', 'Use the shared screen or a digital whiteboard for the mini-lesson table.'].forEach(s => G.push(bu(s)));
 G.push(h2('Setting up online'));
@@ -122,6 +127,7 @@ L.lessons.forEach(l => {
   const d = DD[String(l.n)], s = SC[l.n], q = QB[String(l.n)];
   G.push(h1('Lesson ' + l.n + ': ' + l.title, true));
   G.push(p(t('Week ' + l.week + (l.session === 'A' ? ' (first lesson)' : ' (second lesson)') + '   •   ' + l.topic + '   •   Workbook: Lesson ' + l.n, { size: 20, color: '666666' }), { after: 80 }));
+  G.push(tx(HG.line(2, l.n), { bold: true, size: 20, after: 100 }));
   G.push(tbl([1900, 8000], [
     ['Objective', l.objective], ['Thinking skills', l.skills], ['Materials', l.materials], ['Online set-up', l.online],
     ['Prepare', 'Solve the worksheet yourself first. Set out one materials box per pair. Open the slides for this lesson and check the answers in the speaker notes.'],

@@ -332,3 +332,9 @@ VARIANTS = {
                         steps=['The diver is {a} m below sea level and the seagull is {b} m above it.', '{a} + {b} = {ans}.']),
                oracle=lambda e: abs(e['b'] - (-e['a']))),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Try',
+    'Predict first: is 3 - 5 above zero or below zero? Then test it on a number line. What happens?',
+    ['Start at 3 and move 5 steps down the number line: 3, 2, 1, 0, -1, -2.', '3 - 5 = -2, which is below zero. If my prediction was different, that is useful: testing shows what really happens.'],
+    'Draw a number line. Start at 3 and move down 5 steps.'))

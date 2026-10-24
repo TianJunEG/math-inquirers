@@ -393,3 +393,9 @@ VARIANTS = {
                  steps=['Swap the pomelo for {k} apples: {k} apples and {j} apples balance {w} g, so {t} apples balance {w} g.', '1 apple is {w} ÷ {t} = {ap} g. The pomelo balances {k} apples: {k} × {ap} = {po} g.']),
         oracle=lambda e: (lambda w: (lambda x: dict(f1=x, f2=e['k'] * x))(next(x for x in range(1, 2001) if e['k'] * x + e['j'] * x == w)))((e['k'] + e['j']) * e['a'])),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Check',
+    'Ali pours 2 L and then 3 L of water into a tank. Now test a second case: he pours 3 L and then 2 L. Does the total change when the order changes? Write how you know.',
+    ['First case: 2 L + 3 L = 5 L.', 'Second case: 3 L + 2 L = 5 L.', 'The total is 5 L both times. For adding amounts, the order does not change the total. Writing each pour in a table helps me check.'],
+    'Work out the first total. Then work out the second one. Are they the same?'))

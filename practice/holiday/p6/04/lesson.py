@@ -382,3 +382,6 @@ VARIANTS = {
                          steps=['{x} × {m}, then add {k}.', 'OUT is {ans}.']),
                 oracle=lambda e: apply_ops([f"× {e['m']}", f"+ {e['k']}"], e['x'])),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+habit_tag(ITEMS, 'Check', ['2c-why'])

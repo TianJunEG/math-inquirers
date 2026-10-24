@@ -419,3 +419,9 @@ VARIANTS = {
 for _d in ITEMS:
     if _d['type'] == 'selfcheck' and 'marking_mode' not in _d:
         _d['marking_mode'] = 'self'
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Check',
+    'Is 1/2 equal to 2/4? Use a fraction wall or draw it. Then test a second case: is 1/2 equal to 3/6? Does it always work to multiply the top and bottom by the same number? Write what you found.',
+    ['1/2 = 2/4 and 1/2 = 3/6.', 'Multiplying the top and the bottom by the same number (2, then 3) gave a fraction of the same size.', 'I could test a third case: 4/8 is also 1/2. So far it always works.'],
+    'Draw one bar for 1/2. Cut it into 4 parts, then 6 parts. How many parts are shaded?'))

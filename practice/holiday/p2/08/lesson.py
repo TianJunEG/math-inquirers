@@ -292,3 +292,9 @@ VARIANTS = {
                  steps=['Take off the outside layer of cubes on every side. What is left inside is a block {m} cubes long, {m} wide and {m} high.', '{m} × {m} × {m} = {ans} small cubes have no paint.']),
         oracle=lambda e: painted_counts(e['n'])[0]),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Wonder',
+    'Two half circles can be put together to make one whole circle. Write a question of your own that starts with "What if ...?" about building shapes.',
+    ['Many questions are good. A good "What if" changes one thing.', 'For example: What if I had 1 half circle and 2 quarter circles? What if I use four quarters? What shape would two squares make?'],
+    'Change one thing: the pieces or how many you have. Then ask what you can build.'))

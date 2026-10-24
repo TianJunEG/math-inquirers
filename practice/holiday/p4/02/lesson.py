@@ -239,3 +239,9 @@ VARIANTS = {
                  hint='How much does the number grow from {a} to {b}?', steps=['From {a} to {b} the number grows by {d}. The rule is add {d}.', 'Add {d} to {c} for the next number, then add {d} again.', 'The next numbers are {ans}.']),
         oracle=lambda e: dict(zip(('f1', 'f2'), next_terms(e['a'], e['d'])))),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Try',
+    'Use each of the digits 2, 5 and 9 once. Try some 3-digit numbers and find the smallest odd number you can make. Write what you tried.',
+    ['The odd numbers need 5 or 9 in the ones place.', 'Try: 259, 295, 529, 925. The numbers 592 and 952 are even.', 'The smallest odd number is 259.'],
+    'Which digits can go in the ones place to make an odd number? List the numbers, then compare.'))

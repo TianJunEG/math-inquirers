@@ -398,3 +398,9 @@ VARIANTS = {
 
 
 polish(ITEMS, VARIANTS)
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Notice',
+    'Before: Ali has 20 cards and Mei has 12. After Ali gives Mei 4 cards, they have the same number. What stays the same? What changes? Write one or two sentences.',
+    ['The total stays the same: 20 + 12 = 32 and 16 + 16 = 32.', "What changes: each child's cards (Ali 20 to 16, Mei 12 to 16) and the difference (8 before, 0 after)."],
+    'Add the cards before and after. Which number is the same both times?'))

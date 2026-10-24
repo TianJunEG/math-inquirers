@@ -30,6 +30,11 @@ def script_key(title):
     if t.startswith('exit'): return 'close'
     return None
 
+def habit_line(level, n):
+    """'Focus habit: Notice - <teaching move> Say: "<prompt>" <rule>' from levels/habits.json (same wording as the guide front page and the slide badge)."""
+    H = json.load(open(ROOT + '/levels/habits.json', encoding='utf-8')); name = H['lessons']['%d.%d' % (level, n)]; h = H['habits'][name]
+    return name, '%s: %s - %s Say: \u201c%s\u201d %s' % (H['badge_label'], name, h['move'], h['prompt'], H['rule'])
+
 def strip(t): return html.unescape(re.sub(r'<[^>]+>', ' ', t)).replace(' ', ' ').strip()
 
 def node(js):
@@ -78,11 +83,12 @@ def build(level):
             if key == 'think': say = list(s.get('think', []))
             ask = []
             if key == 'talk' and s.get('talkAns'): ask = [[q, s['talkAns']] for q in s.get('talk', [])[:1]]
+            if i == 0: do = do + [habit_line(level, n)[1]]          # focus habit line, shown with the Opening part on the phone
             np[str(i)] = {'say': say, 'do': do, 'stuck': stuck, 'ask': ask}
         pub = {'id': cid, 'deck': deck, 'title': 'Level %d lesson %d: %s' % (level, n, L['title']), 'level': level, 'lesson': n,
                'parts': [{'title': p[2], 'min': round(p[1] - p[0], 2)} for p in parts], 'slides': slides}
         json.dump(pub, open('%s/%s.public.json' % (OUT, cid), 'w'), ensure_ascii=False)
-        json.dump({'parts': np, 'slides': notes_slides}, open('%s/%s.notes.json' % (OUT, cid), 'w'), ensure_ascii=False)
+        json.dump({'habit': habit_line(level, n)[0], 'habit_line': habit_line(level, n)[1], 'parts': np, 'slides': notes_slides}, open('%s/%s.notes.json' % (OUT, cid), 'w'), ensure_ascii=False)
         index.append({'id': cid, 'label': 'L%d.%d %s' % (level, n, L['title'])})
     prev = json.load(open(OUT + '/index.json'))['lessons'] if os.path.exists(OUT + '/index.json') else []
     keep = [x for x in prev if not x['id'].startswith('p%dl' % level)]

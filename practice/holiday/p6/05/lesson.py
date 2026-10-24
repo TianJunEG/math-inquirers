@@ -412,3 +412,6 @@ VARIANTS = {
                         steps=['There are {k} + 1 doubles. The dominoes with two different numbers are counted by adding {k} + ({k} - 1) + ... + 1.', 'Add the doubles and the other dominoes.', 'The answer is {ans}.']),
                oracle=lambda e: len(list(itertools.combinations_with_replacement(range(e['k'] + 1), 2)))),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+habit_tag(ITEMS, 'Try', ['6b-why'])

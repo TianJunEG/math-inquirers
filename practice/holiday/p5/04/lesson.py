@@ -401,3 +401,6 @@ VARIANTS = {
 
 
 polish(ITEMS, VARIANTS)
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+habit_tag(ITEMS, 'Explain', ['2c'])

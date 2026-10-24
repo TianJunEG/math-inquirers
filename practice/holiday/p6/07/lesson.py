@@ -440,3 +440,9 @@ VARIANTS = {
                         steps=['Turn = 180° − {a}° = {t}°.', 'The turns add up to 360°, so there are 360 ÷ {t} = {n} sides.', '{n} × {a}° = {ans}°.']),
                oracle=lambda e: W.whole(W.sides_with_inside(e['a']) * W.inside_of_regular(W.sides_with_inside(e['a'])))),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Wonder',
+    'A turtle turns 90 degrees four times and draws a square. Write a question of your own that starts with "What if ...?" about the turn.',
+    ['Many questions are good. A good "What if" changes one thing.', 'For example: What if the turn was 60 degrees? How many turns does the turtle need to get back to the start? What if the turn was 45 degrees?'],
+    'Change the turn. What shape might it draw?'))

@@ -310,3 +310,6 @@ VARIANTS = {
                  steps=['1 whole = {d} pieces of size 1/{d}.', '{w} wholes = {w} × {d} = {ans} pieces.']),
         oracle=lambda e: sum(e['d'] for _ in range(e['w']))),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+habit_tag(ITEMS, 'Explain', ['4c-why'])

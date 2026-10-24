@@ -304,3 +304,9 @@ VARIANTS = {
 for _d in ITEMS:
     if _d['type'] == 'selfcheck' and not _d.get('open') and 'marking_mode' not in _d:
         _d['marking_mode'] = 'self'
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Check',
+    'I think of a number, add 3 and get 8. Work backwards to find my number. Then test a second case: I add 3 and get 10. Does working backwards work again? Write what you did.',
+    ['First case: 8 - 3 = 5. Check: 5 + 3 = 8.', 'Second case: 10 - 3 = 7. Check: 7 + 3 = 10.', 'It works both times: to undo adding 3, take away 3.'],
+    'To undo adding, do the opposite. What is the opposite of adding 3?'))

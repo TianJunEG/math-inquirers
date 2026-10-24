@@ -473,3 +473,9 @@ VARIANTS = {
                  answer='s', hint='Which number multiplied by itself makes {A}?', steps=['The area of a square is side × side.', 'Find the number that multiplied by itself makes {A}.', 'Each side is {ans} cm.']),
         oracle=lambda e: find(lambda s: s * s == e['s'] * e['s'])),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Wonder',
+    'A rectangle is 4 cm by 3 cm. Its area is 12 square cm. Write a question of your own that starts with "What if ...?" about changing the rectangle.',
+    ['Many questions are good. A good "What if" changes one thing.', 'For example: What if I make it 1 cm longer? What if the perimeter stays the same but the sides change? What is the biggest area I can make?'],
+    'Change one side. What happens to the area and the perimeter?'))

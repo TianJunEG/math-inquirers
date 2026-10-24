@@ -395,3 +395,9 @@ VARIANTS = {
 for _d in ITEMS:
     if _d['type'] == 'selfcheck':
         _d['marking_mode'] = 'self'
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Notice',
+    'Ali has 15 stickers and Mei has 9. Ali gives 3 to Mei. Now Ali has 12 and Mei has 12. What stays the same in this story: the total or the difference? What changes? Write one or two sentences.',
+    ['The total stays the same: 15 + 9 = 24 and 12 + 12 = 24.', 'What changes: how many each child has. The difference changes too: it was 6 and now it is 0.'],
+    'Add the two numbers before, then add them after. Do the same with the difference.'))

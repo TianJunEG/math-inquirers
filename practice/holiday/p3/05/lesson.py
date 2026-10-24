@@ -392,3 +392,9 @@ VARIANTS = {
 for _d in ITEMS:
     if _d['type'] == 'selfcheck' and 'marking_mode' not in _d:
         _d['marking_mode'] = 'self'
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Try',
+    'Find a number between 10 and 20 that leaves a remainder of 2 when you divide it by 5. Make a list, then test each number. Write what you tried.',
+    ['Test each number: 11 leaves 1, 12 leaves 2, 13 leaves 3, 14 leaves 4, 15 leaves 0, 16 leaves 1, 17 leaves 2.', 'So 12 and 17 both leave a remainder of 2.'],
+    'Count in 5s: 10, 15, 20. Then count on 2 from each.'))

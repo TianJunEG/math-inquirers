@@ -299,3 +299,9 @@ VARIANTS = {
                         hint='Multiply step by step: 2 × 3 first.', steps=['2 × 3 = 6, then 6 × {a}, then × {b}.', 'The number is {ans}.']),
                oracle=lambda e: functools.reduce(lambda x, y: x * y, [2, 3, e['a'], e['b']])),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Explain',
+    'Is 51 a prime number? Write one or two sentences. Start: I know because ...',
+    ['51 is not a prime number.', 'For example: I know because 51 = 3 x 17, so it has a factor other than 1 and 51. A quick test: 5 + 1 = 6, and 6 is in the 3 times table, so 3 divides 51.'],
+    'Try dividing 51 by small numbers such as 2, 3, 5 and 7.'))

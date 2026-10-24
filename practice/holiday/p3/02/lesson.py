@@ -364,3 +364,9 @@ VARIANTS = {
                  hint='Take away the thousands first, then the hundreds.', steps=['Take away {b} from {a} in two steps.', 'The answer is {ans}.']),
         oracle=lambda e: _since(e['a'], e['b'])),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Try',
+    'Find the digit A so that A + A + A = 15. Guess, check, then improve your guess. Write your guesses and what happened.',
+    ['Guess A = 4: 4 + 4 + 4 = 12. That is too small.', 'Guess A = 6: 6 + 6 + 6 = 18. That is too big.', 'Improve: A = 5. 5 + 5 + 5 = 15. That is right.'],
+    'Try one digit. Is the total too small or too big? Then change your guess.'))

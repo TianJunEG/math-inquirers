@@ -401,3 +401,9 @@ VARIANTS = {
                  hint='1 kg is 1000 g. Write {kg} kg as grams first.', steps=['{kg} kg = {kg} thousands of g.', 'Add the {g} g.', '{kg} kg {g} g = {ans} g.']),
         oracle=lambda e: g_of(e['kg'], e['g'])),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Look back',
+    'What did you learn today about mixed puzzles? What would you change next time? Write one sentence for each.',
+    ['There is no single right answer. A good look back names one thing you learned and one thing you would change.', 'For example: I learned that a table helps me keep track of a logic puzzle. Next time I would read each clue twice and check my answer against every clue.'],
+    'Think of one question you got right and one that was hard. What helped? What would you do differently?'))

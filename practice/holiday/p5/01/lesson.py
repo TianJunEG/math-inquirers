@@ -446,3 +446,9 @@ VARIANTS = {
 
 
 polish(ITEMS, VARIANTS)
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Check',
+    'My number is 3 482 000. Check every clue. Clue 1: it has 3 in the millions place. Clue 2: it has 8 in the ten thousands place. Clue 3: it is between 3 000 000 and 4 000 000. Write whether each clue is true.',
+    ['Clue 1: the millions digit is 3. True.', 'Clue 2: 3 482 000 has 4 hundred thousands and 8 ten thousands. True.', 'Clue 3: 3 482 000 is more than 3 000 000 and less than 4 000 000. True.', 'Checking every clue one by one means no clue is missed.'],
+    'Write the number in a place value chart. Then read each clue against the chart.'))

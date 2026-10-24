@@ -461,3 +461,6 @@ VARIANTS = {
         fig=lambda e: garden_fig(e['L'], e['W']),
         oracle=lambda e: garden_grass(e['L'], e['W'])),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+habit_tag(ITEMS, 'Notice', ['5c-why'])

@@ -319,3 +319,9 @@ VARIANTS = {
                  steps=['0.{x} = 0.{x}0 and 0.{y} = 0.{y}0. From one to the other is {d} hundredths = {d}0 thousandths.', 'That is 10 × {d} = {d}0 steps of 0.001, so there are 10 × {d} − 1 = {ans} numbers strictly between them.']),
         oracle=lambda e: len([v for v in grid(Dec(e['x']) / 100, Dec(e['x'] + e['d']) / 100, 3) if Dec(e['x']) / 100 < v < Dec(e['x'] + e['d']) / 100])),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Look back',
+    'What did you learn today about decimals? What would you change next time? Write one sentence for each.',
+    ['There is no single right answer. A good look back names one thing you learned and one thing you would change.', 'For example: I learned that I can line up the decimal points to compare or add decimals. Next time I would write each number with the same number of decimal places and check the size of my answer.'],
+    'Think of one question you got right and one that was hard. What helped? What would you do differently?'))

@@ -417,3 +417,24 @@ def frac_list_ok(keys, v):
         if len(K) == len(V) and kr == vr and all(d > 0 and n * V[i][1] == V[i][0] * d for i, (n, d) in enumerate(K)):
             return True
     return False
+
+
+# ---------------------------------------------------------------- inquiry-habit items (docs/pedagogy/inquiry_skills_explicit.md; wording and assignment: levels/habits.json)
+HABIT_LABEL = {'Notice': 'Notice it', 'Wonder': 'Wonder', 'Try': 'Try it', 'Check': 'Check it', 'Explain': 'Explain', 'Look back': 'Look back'}
+
+
+def habit_item(habit, q, steps, hint):
+    """One online-only 'explain your thinking' self-check item for the lesson's focus habit (marking_mode 'self', open: compare with the model answer).
+    Insert it at the end of the Start-here items:  ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item(...))"""
+    lab = HABIT_LABEL[habit]
+    return dict(id='hab', tier='core', no=lab, label=lab, type='selfcheck', open=True, marking_mode='self', added=True,
+                skill='Inquiry habit: ' + habit, q=q, hint=hint, steps=list(steps), src=[])
+
+
+def habit_tag(items, habit, ids):
+    """Tag existing items (by id) with the focus habit in their skill text; answers, ids, numbers and order are not touched."""
+    seen = 0
+    for x in items:
+        if x['id'] in ids:
+            x['skill'] = x['skill'] + ' (habit: ' + habit + ')'; seen += 1
+    assert seen == len(ids), ('habit_tag: item id not found', ids)

@@ -400,3 +400,9 @@ VARIANTS = {
                         steps=['{s} + {h} = {tot}.', 'The clock wraps round after 12, so take away 12 as many times as you can, keeping a number from 1 to 12.', 'It will be {ans} o\'clock.']),
                oracle=lambda e: dict(f1=W.clock_after(e['s'], e['h']))),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Check',
+    'On a 12-hour clock, 9 + 5 is 2 (because 14 - 12 = 2). Test a second case: what is 8 + 7 on a 12-hour clock? Does the same method work? Write what you did.',
+    ['First case: 9 + 5 = 14, and 14 - 12 = 2.', 'Second case: 8 + 7 = 15, and 15 - 12 = 3.', 'The method works both times: add, then take away 12 if the total is over 12.'],
+    'Add as usual. If the answer is bigger than 12, take away 12.'))

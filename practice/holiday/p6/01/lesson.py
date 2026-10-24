@@ -342,3 +342,9 @@ VARIANTS = {
                         steps=['Each term is {d} more than the one before, so the rule starts with {d} × n.', 'For n = 1: {d} × 1 is {d}, but the 1st term is {a}, so add {a} - {d}.', 'The answers are {ans}.']),
                oracle=lambda e: dict(zip(('f1', 'f2'), P.linear_rule(P.ap(e['a'], e['d'], 4))))),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Wonder',
+    'The sequence 3, 5, 7, 9, ... goes up by 2 each time. Write a question of your own that starts with "What if ...?" about it.',
+    ['Many questions are good. A good "What if" changes one thing.', 'For example: What if it started at 4? What would the 10th term be? What if it went up by 3 each time? How could I find the 100th term without listing?'],
+    'Change the first number or the step. Then ask what happens to the terms.'))

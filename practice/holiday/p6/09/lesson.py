@@ -538,3 +538,9 @@ VARIANTS = {
                         steps=['The total of the 3 numbers is 3 x {m} = {tot}.', '{x} + {y} = {known}.', '{tot} − {known} = {ans}.']),
                oracle=lambda e: next(s for s in range(1, 300) if W.mean([e['x'], e['y'], s]) == e['m'])),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Notice',
+    'The scores 4, 6 and 8 have a mean of 6. Before you calculate: if a fourth score of 6 is added, will the mean go up, go down or stay the same? What if the fourth score is 10? Write your prediction and then test it.',
+    ['Add 6: the total is 24 and the mean is 24 divided by 4 = 6. It stays the same.', 'Add 10: the total is 28 and the mean is 28 divided by 4 = 7. It goes up.', 'A score equal to the mean does not change it. A score above the mean pulls it up.'],
+    'Make a prediction first. Then find the new total and divide.'))

@@ -298,3 +298,9 @@ VARIANTS = {
 for _d in ITEMS:
     if _d['type'] == 'selfcheck' and not _d.get('open'):
         _d['marking_mode'] = 'self'
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Wonder',
+    'A pattern goes circle, square, circle, square, ... Write a question of your own that starts with "What if ...?" about this pattern. You do not need to answer it.',
+    ['Many questions are good. A good "What if" changes one thing about the pattern.', 'For example: What if I put a triangle after every square? What if the pattern had three shapes that repeat? What would the 10th shape be?'],
+    'Change one thing: the shapes, the order, or how long the pattern is. Then ask what happens.'))

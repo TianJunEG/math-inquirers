@@ -618,3 +618,9 @@ VARIANTS = {
 
 
 polish(ITEMS, VARIANTS)
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Explain',
+    'Two angles are on a straight line. One angle is 70 degrees. Find the other angle and explain how you know. Start: I know because ...',
+    ['The other angle is 110 degrees.', 'For example: I know because angles on a straight line add up to 180 degrees, and 180 - 70 = 110.'],
+    'What do angles on a straight line add up to?'))

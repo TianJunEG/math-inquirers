@@ -292,3 +292,6 @@ VARIANTS = {
                  steps=['From {a} to {b} the number grows by {d}, and it keeps growing by {d}.', '{e} + {d} is the next number, and then add {d} again.', 'The next two numbers are {ans}.']),
         oracle=lambda e: (lambda l: dict(f1=l[4], f2=l[5]))(_count(e['a'], e['d'], 6))),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+habit_tag(ITEMS, 'Notice', ['4b'])

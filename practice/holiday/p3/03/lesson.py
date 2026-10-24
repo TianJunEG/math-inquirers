@@ -381,3 +381,9 @@ VARIANTS = {
 for _d in ITEMS:
     if _d['type'] == 'selfcheck':
         _d['marking_mode'] = 'self'
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Wonder',
+    '6 x 7 = 42. Write a question of your own that starts with "What if ...?" about the tables of 6, 7, 8 or 9.',
+    ['Many questions are good. A good "What if" changes one thing.', 'For example: What if I change 7 to 8? Is 6 x 8 just 6 more than 42, which is 48? What if I swap the 6 and the 7?'],
+    'Change one number. What happens to the answer?'))

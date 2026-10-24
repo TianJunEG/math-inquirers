@@ -530,3 +530,9 @@ VARIANTS = {
                  steps=['Find the hour when the tanks are equal: the gap {A0} − {B0} closes by {ra} + {rb} litres each hour.', 'Then Tank B has {B0} + {rb} × {t} litres, and so does Tank A: {ans} litres.']),
         oracle=lambda e: _tanks(e['B0'] + e['t'] * (e['ra'] + e['rb']), e['ra'], e['B0'], e['rb'])[1]),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Check',
+    'A table says the total of books borrowed is 85 and Week 1 is 38. Find Week 2. Then check your answer a second way. Write what you did.',
+    ['Week 2 = 85 - 38 = 47.', 'Check a second way: 38 + 47 = 85. It matches the total.'],
+    'Take away to find the missing number. Then add to check.'))

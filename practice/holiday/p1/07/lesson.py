@@ -511,3 +511,6 @@ VARIANTS = {
 for _d in ITEMS:
     if _d['type'] == 'selfcheck' and not _d.get('open') and 'marking_mode' not in _d:
         _d['marking_mode'] = 'self'
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+habit_tag(ITEMS, 'Notice', ['2a'])

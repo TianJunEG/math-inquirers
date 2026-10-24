@@ -27,6 +27,7 @@ strings that must occur in the workbook source), plus by type
               'Explain / why / how do you know' item); 'open' = truly open, no objective fact (make up your own, many answers are right). Paper-only is always 'self'.
               Default when the lesson file does not say: 'self', except an open=True item that is plainly make-up-your-own ('make up', 'your own', 'invent', 'design', or a model
               answer that starts 'Open' / 'Answers vary'), which is 'open'.
+    added=True  an item that exists only on the online page (the inquiry-habit 'explain your thinking' item, made by hlib.habit_item): src may be empty and is not checked against the workbook source.
     label     optional (any item): the short label on the question button (up to about 8 characters, such as '2(b) P'). Default: derived from `no` by sheet.js
               ('Investigation 2' -> 'Inv 2', 'Think harder 3 (why)' -> 'T3', 'Go further 6' -> 'G6', '3(d)' twice -> '3(d)-a', '3(d)-b'). Set it only for an unusual `no`.
     text answers: three optional flags, all off unless stated
@@ -227,6 +228,8 @@ def make_item(src):
     i, t = it['id'], it['type']
     for k in ('tier', 'no', 'q', 'hint', 'steps', 'skill', 'src'):
         if k not in it or it[k] in (None, '', []):
+            if k == 'src' and it.get('added'):
+                continue                           # an item added for the online page only (inquiry-habit item): no printed source line
             if k == 'hint':
                 it['hint'] = FALLBACK_HINT
             else:
@@ -234,7 +237,7 @@ def make_item(src):
     if it['tier'] not in TIER_ORDER:
         raise Fail(f'{i}: bad tier {it["tier"]}')
     out = dict(id=i, tier=it['tier'], type=t, no=it['no'], hint=it['hint'], steps=list(it['steps']), slips=[],
-               tags=dict(strand=it.get('strand'), skill=it['skill']), src=it['src'])
+               tags=dict(strand=it.get('strand'), skill=it['skill']), src=it.get('src') or [])
     out['q'] = f'{it["no"]}. {it["q"]}'
     if it.get('unit') is False:                   # a number item whose answer must be typed with no unit word
         out['unit'] = False
@@ -362,6 +365,9 @@ def mirror_report(srcitems, items, cp):
     """Every src string must occur in the workbook source; also reports whether the question text on screen is the printed text (exact) or reworded."""
     exact = reword = 0
     for s, o in zip(srcitems, items):
+        if s.get('added'):                      # online-only item (see hlib.habit_item): not a printed question, so nothing to mirror
+            o['mirror'] = 'added'
+            continue
         for frag in s['src']:
             if squash(frag) not in cp:
                 raise Fail(f'{s["id"]}: printed text not found in the workbook source: {frag!r}')

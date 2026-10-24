@@ -359,3 +359,9 @@ VARIANTS = {
 for _d in ITEMS:
     if _d['type'] == 'selfcheck':
         _d['marking_mode'] = 'self'
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Try',
+    'Try it: a tray has 4 cakes in each row. How many cakes in 2 rows? How many in 3 rows? What do you see as you add a row? Write what you tried.',
+    ['2 rows of 4: 4 + 4 = 8 cakes.', '3 rows of 4: 4 + 4 + 4 = 12 cakes.', 'Every new row adds 4 more cakes. Trying small cases first helps me see the rule.'],
+    'Draw one row of 4. Then draw a second row. Count. Then a third.'))

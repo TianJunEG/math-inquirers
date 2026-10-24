@@ -417,3 +417,9 @@ VARIANTS = {
                         steps=['A total of {s} can be made in {w} ways out of 36.', '{t} ÷ 36 × {w} = {ans}.', 'About {ans}.']),
                oracle=lambda e: int(Fraction(len([1 for a, b in DICE if a + b == e['s']]), 36) * e['t'])),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Look back',
+    'What did you learn today about probability? What would you change next time? Write one sentence for each.',
+    ['There is no single right answer. A good look back names one thing you learned and one thing you would change.', 'For example: I learned that a fair game gives every player an equal chance, and I can test with a table of outcomes. Next time I would list every outcome before I decide if a game is fair.'],
+    'Think of one question you got right and one that was hard. What helped? What would you do differently?'))

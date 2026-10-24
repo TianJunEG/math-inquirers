@@ -432,3 +432,9 @@ VARIANTS = {
                          steps=['The terms are 5, 11, 17, … , going up by 6 each time.', 'Term {k} is the last term that is not bigger than {x}, so the next term is term {k1}.', '6 x {k1} − 1 = {ans}.']),
                 oracle=lambda e: next(6 * n - 1 for n in range(1, 2000) if 6 * n - 1 > e['x'])),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Look back',
+    'What did you learn today about mixed maths and code? What would you change next time? Write one sentence for each.',
+    ['There is no single right answer. A good look back names one thing you learned and one thing you would change.', 'For example: I learned that testing my code with a small case finds mistakes early. Next time I would plan the steps before I start and test one more case.'],
+    'Think of one question you got right and one that was hard. What helped? What would you do differently?'))

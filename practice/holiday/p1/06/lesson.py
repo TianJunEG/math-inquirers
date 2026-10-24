@@ -286,3 +286,9 @@ VARIANTS = {
 for _d in ITEMS:
     if _d['type'] == 'selfcheck' and not _d.get('open') and 'marking_mode' not in _d:
         _d['marking_mode'] = 'self'
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Wonder',
+    'You can pay 10 cents with one 10c coin, or with two 5c coins. Write a question of your own that starts with "What if ...?" about paying with coins.',
+    ['Many questions are good. A good "What if" changes one thing.', 'For example: What if I only had 5c coins? How many would I need for 20c? What if I take one coin away?'],
+    'Change one thing: the coins you have, or the amount you pay. Then ask what happens.'))

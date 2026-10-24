@@ -430,3 +430,9 @@ VARIANTS = {
                  steps=['Use the pattern of each column of the table.', 'Right-angle corners: the number of steps + 3. Bigger corners: the number of steps - 1.', 'The numbers are {ans}.']),
         oracle=lambda e: dict(zip(('f1', 'f2', 'f3'), stair_counts(e['n'])))),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Notice',
+    'Look at the capital letter E drawn with straight lines. Which lines are parallel? Which lines meet at a right angle? What do you see? Write one or two sentences.',
+    ['The three short lines of the E are parallel: they stay the same distance apart and never meet.', 'Each short line meets the long upright line at a right angle, so they are perpendicular.'],
+    'Run your finger along each line. Which ones never meet? Which ones make a square corner?'))

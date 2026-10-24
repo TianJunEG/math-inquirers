@@ -377,3 +377,6 @@ VARIANTS = {
         fig=lambda e: frac_bar(e['t'], []),
         oracle=lambda e: dict(f1=next(b for b in range(0, e['t'] + 1) if e['m'] + b + (b + e['e']) == e['t']), f2=e['t'])),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+habit_tag(ITEMS, 'Explain', ['1x'])

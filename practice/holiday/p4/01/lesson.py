@@ -302,3 +302,9 @@ VARIANTS = {
                  steps=['Every {x} seconds: {x}, then {x} more each time. Every {y} seconds: {y}, then {y} more each time.', 'The first number in both lists is the smallest common multiple of {x} and {y}.', 'They next flash together after {ans} seconds.']),
         oracle=lambda e: first_common_multiple(2 * e['d'], 3 * e['d'])),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Wonder',
+    '12 has the factors 1, 2, 3, 4, 6 and 12. Write a question of your own that starts with "What if ...?" about factors.',
+    ['Many questions are good. A good "What if" changes one thing.', 'For example: What if I look at 13? Does it have fewer factors? What if I pick a number twice as big as 12? What if I look for the numbers that have only two factors?'],
+    'Change the number. What happens to its factors?'))

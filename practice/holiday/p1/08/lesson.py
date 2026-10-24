@@ -340,3 +340,6 @@ VARIANTS = {
                          steps=['A 2-digit number less than 20 has 1 tens.', 'The other digit makes the digits add to {s}.', 'I am {ans}.']),
                 oracle=lambda e: unique([n for n in range(10, 20) if digit_sum(n) == e['s']])),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+habit_tag(ITEMS, 'Explain', ['2b'])

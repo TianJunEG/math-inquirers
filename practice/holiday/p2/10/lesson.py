@@ -434,3 +434,9 @@ VARIANTS = {
                  steps=['Football has {g} more pictures than swimming, and these {g} pictures are {d} children, so 1 picture is {k} children.', 'Swimming: {s} × {k} children. Football: {f} × {k} children.']),
         oracle=lambda e: (lambda k: dict(f1=e['s'] * k, f2=e['f'] * k))(key_value(e['f'], e['s'], (e['f'] - e['s']) * e['k']))),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Look back',
+    'What did you learn today about mixed puzzles? What would you change next time? Write one sentence for each.',
+    ['There is no single right answer. A good look back names one thing you learned and one thing you would change.', 'For example: I learned that drawing the puzzle helps me see it. Next time I would try an easy puzzle first and check my answer a second way.'],
+    'Think of one question you got right and one that was hard. What helped? What would you do differently?'))

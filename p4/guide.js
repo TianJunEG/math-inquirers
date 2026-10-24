@@ -2,6 +2,7 @@ const C = require('../hp/common.js');
 const { fs, D, CW, t, p, cell, tbl, row, gap, footer, page, AlignmentType, BorderStyle, WidthType } = C;
 const L = require('./data.js');
 const PROG = L.program, SLOGAN = L.slogan;
+const HG = require('../levels/habit_guide.js');   // focus habit line (levels/habits.json)
 const SG = require('../levels/spine_guide.js');   // strategy card + common look-back lines (levels/spine.json)
 const BUD = require('./budget.json').lessons;          // the clock of every lesson (rebuild/p4_budget.py writes it)
 const fm = x => String(Math.round(x * 10) / 10);
@@ -75,6 +76,10 @@ G.push(tx('Every lesson has one TOOL OF THE DAY, shown on the workbook card on p
 G.push(tbl([2500, 7400], [row([hd('Tool', 2500), hd('What we say (ages 8 to 10)', 7400)]), ...SG.DATA.tools.map(t => row([c2(t.name, 2500, { bold: true }), c2(t.def.B, 7400)]))]));
 G.push(gap(40));
 G.push(tx('The look-back is the same every lesson: pick ONE problem from today and ask three things. ' + SG.DATA.lookback.prompts.B.map((q, i) => (i + 1) + ') ' + q).join(' ') + ' Children tick yes or not yet, write one short line “I checked by …” for question 3, and tick the tools they used. The timer is ' + SG.DATA.lookback.timer_seconds.B + ' seconds, then stamp the journals. Nothing is collected, read aloud or marked. At this level Talk time is one minute longer than before and the look-back one minute shorter: the extra minute is for the tool question.'));
+G.push(h2('Focus habit (every lesson)'));
+G.push(tx('Every lesson names ONE focus habit on its front page, on the opening slide and on the look-back slide, and has one “explain your thinking” item in the online practice. The habit is something the children practise; you are not testing it. The same six habits are used at every level. Do not give the answer first: ask the prompt, wait, and give a hint only if the child is stuck.'));
+G.push(tbl([1500, 2700, 5700], [row([hd('Habit', 1500), hd('Child says', 2700), hd('Your move and prompt', 5700)]), ...Object.keys(HG.DATA.habits).map(k => row([c2(k, 1500, { bold: true }), c2('“' + HG.DATA.habits[k].phrase + '”', 2700), c2(HG.DATA.habits[k].move + ' Say: “' + HG.DATA.habits[k].prompt + '”', 5700)]))]));
+G.push(gap(40));
 G.push(h2('Setting up online'));
 ['Send parents the workbook and materials list one week before. Needed: the printed workbook and cut-outs, scissors, a ruler, paper and a pencil.', 'Use one approved platform with breakout rooms and screen share. Admit only registered children and never share the link publicly.', 'Ask the parent to sit nearby but not give answers. The camera should show the child’s page and hands.', 'Nothing is held up to the camera. At the end of each lesson children tick their own work against the answer slide. If a child is still stuck, they mark their own look-back page and the parent photographs it for the tutor after class (business WhatsApp), never during the recorded class.', 'Lessons are recorded on the approved platform so that children who miss one can catch up; follow “Recording the lesson” in this guide. Do not make your own recordings or photos. Add a second tutor or helper above 8 children.'].forEach(s => G.push(bu(s)));
 
@@ -136,6 +141,7 @@ L.lessons.forEach(l => {
   const d = DD[String(l.n)], s = SC[l.n], q = QB[String(l.n)];
   G.push(h1('Lesson ' + l.n + ': ' + l.title, true));
   G.push(p(t('Week ' + l.week + (l.session === 'A' ? ' (first lesson)' : ' (second lesson)') + '   •   ' + l.topic + '   •   Workbook: Lesson ' + l.n, { size: 20, color: '666666' }), { after: 80 }));
+  G.push(tx(HG.line(4, l.n), { bold: true, size: 20, after: 100 }));
   G.push(tbl([1900, 8000], [
     ['Objective', l.objective], ...(SYLL[l.n] ? [['Syllabus note', SYLL[l.n]]] : []), ['Thinking skills', l.skills], ['Materials', l.materials], ['Online set-up', l.online],
     ['Prepare', 'Solve the worksheet yourself first. Set out one materials box per pair. Open the slides for this lesson and check the answers in the speaker notes.'],

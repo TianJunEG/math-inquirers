@@ -298,3 +298,9 @@ VARIANTS = {
                  steps=['{a} + {b} = 10. {s} is {a} and 10 more, so {s} + {b} = 20.', '{t} is {b} and 10 more, so {a} + {t} = 20.']),
         oracle=lambda e: dict(f1=_count_on(e['a'] + 10, 10 - e['a']), f2=_count_on(e['a'], 10 - e['a'] + 10))),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Explain',
+    '4 + 6 = 10. How do you know that 6 + 4 is also 10? Write one sentence. Start: I know because ...',
+    ['Adding in a different order gives the same total.', 'For example: I know because 4 and 6 are a pair that make 10. If I swap them, I still have 4 and 6 together.'],
+    'Draw 4 dots and 6 dots. What happens if you swap the two groups?'))

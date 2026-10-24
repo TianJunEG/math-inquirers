@@ -505,3 +505,9 @@ VARIANTS = {
 
 
 polish(ITEMS, VARIANTS)
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Try',
+    'A tap fills 6 litres in 2 minutes. Test a smaller case first: how many litres in 1 minute? Then use it to find how many litres in 5 minutes. Write what you did.',
+    ['In 1 minute: 6 litres divided by 2 = 3 litres.', 'In 5 minutes: 5 x 3 = 15 litres.'],
+    'Find the amount for 1 minute first. Then multiply.'))

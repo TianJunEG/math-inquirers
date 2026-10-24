@@ -545,3 +545,9 @@ VARIANTS = {
 
 
 polish(ITEMS, VARIANTS)
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Wonder',
+    'A $20 book goes up in price by 10%. Write a question of your own that starts with "What if ...?" about percentages.',
+    ['Many questions are good. A good "What if" changes one thing.', 'For example: What if it went up by 20% instead? What if the book cost $40? What if the price went down by 10%?'],
+    'Change one thing: the percentage, the price, or up and down. Then ask what happens.'))

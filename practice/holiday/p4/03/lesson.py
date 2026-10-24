@@ -364,3 +364,6 @@ VARIANTS = {
                  steps=['The model has 1 + {k} equal units, and they stand for {total} plates.', '1 unit is the laksa: {total} divided into 1 + {k} equal units gives {u} plates.', 'Chicken rice is {k} units: {k} × {u} = {ans} plates.']),
         oracle=lambda e: laksa_chicken((e['k'] + 1) * e['u'], e['k'])[1]),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+habit_tag(ITEMS, 'Check', ['4b'])

@@ -313,3 +313,9 @@ VARIANTS = {
 for _d in ITEMS:
     if _d['type'] == 'selfcheck':
         _d.setdefault('marking_mode', 'self')
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Check',
+    'A machine doubles a number and then adds 3. IN 4 gives OUT 11. Work backwards from OUT 11. Then test a second case: IN 6 gives OUT 15. Does the same backwards method find the IN? Write what you did.',
+    ['First case: 11 - 3 = 8, then 8 divided by 2 = 4. The IN is 4.', 'Second case: 15 - 3 = 12, then 12 divided by 2 = 6. The IN is 6.', 'It works both times: undo the steps in the opposite order, taking away 3 first and then halving.'],
+    'Undo the last step first. The machine added 3 last, so what do you do first?'))

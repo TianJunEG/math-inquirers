@@ -339,3 +339,6 @@ VARIANTS = {
         fig=lambda e: grid_cells_fig(set(), e['n'], e['n'], 40 if e['n'] == 3 else 34, YEL, False, False, ('v',), f'A {e["n"]} by {e["n"]} grid with an up-down dashed line through the middle.'),
         oracle=lambda e: sym_pairs_n(e['n'])),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+habit_tag(ITEMS, 'Explain', ['3c'])

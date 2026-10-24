@@ -353,3 +353,9 @@ VARIANTS = {
                  steps=['The two square corners add up to 90° + 90° = 180°.', 'The overlap is counted twice, but the angle across both squares is {S}°, so the overlap is 180° − {S}° = {ans}°.']),
         oracle=lambda e: min(90, e['S']) - max(0, e['S'] - 90)),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Try',
+    'Write your guess first. Is an angle of 120 degrees bigger or smaller than a right angle? Then test it with the corner of a page. What happens?',
+    ['A right angle is 90 degrees, like the corner of a page.', '120 degrees is bigger than 90 degrees, so it opens wider than the corner of the page.'],
+    'A right angle is the corner of a page. Is 120 more or less than 90?'))

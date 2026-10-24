@@ -352,3 +352,9 @@ VARIANTS = {
                  steps=['The pattern takes away 1 each time: {a}, {b}, {c}.', 'The next numbers are {ans}.']),
         oracle=lambda e: (lambda l: dict(f1=l[3], f2=l[4]))([e['a'] - k for k in range(5)])),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Wonder',
+    'The digits 3, 5 and 8 make the number 358. Write a question of your own that starts with "What if ...?" about changing the digits.',
+    ['Many questions are good. A good "What if" changes one thing.', 'For example: What if I swap the 3 and the 5? Is the number bigger or smaller? What if I use 0 instead of 8? What is the biggest number I can make with 3, 5 and 8?'],
+    'Change one thing: swap two digits, or use a different digit. Then ask what happens to the number.'))

@@ -359,3 +359,9 @@ VARIANTS = {
 
 
 polish(ITEMS, VARIANTS)
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Try',
+    'Try 1/2 + 1/3 before you decide: is the answer bigger or smaller than 1? Write what you tried and what happened.',
+    ['Change both to sixths: 1/2 = 3/6 and 1/3 = 2/6.', '3/6 + 2/6 = 5/6.', '5/6 is smaller than 1, so the answer is smaller than 1.'],
+    'Make the bottom numbers the same. What is a number that 2 and 3 both go into?'))

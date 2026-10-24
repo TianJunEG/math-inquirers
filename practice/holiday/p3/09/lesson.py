@@ -483,3 +483,9 @@ VARIANTS = {
                  hint='How many minutes are in 1 hour? Count that {h} times.', steps=['1 hour = 60 minutes.', '{h} hours is {h} lots of 60 minutes, then add the {m} minutes.', '{h} h {m} min = {ans} minutes.']),
         oracle=lambda e: mins(e['h'], e['m'])),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Explain',
+    'Ben says, "1 kg 30 g is the same as 130 g." Is he right? Write one sentence. Start: I know because ...',
+    ['Ben is not right.', 'For example: I know because 1 kg is 1000 g, so 1 kg 30 g is 1000 g + 30 g = 1030 g, not 130 g.'],
+    'How many grams are in 1 kg? Add the 30 g.'))

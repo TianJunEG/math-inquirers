@@ -397,3 +397,9 @@ VARIANTS = {
                  steps=['Take the extra {d} off the long bar. The two bars are the same length and add up to {s} - {d}.', 'Half of that is the smaller number. The bigger number is {d} more.', 'The numbers are {ans}.']),
         oracle=lambda e: (lambda p: dict(f1=p[0], f2=p[1]))(one([(x, x + e['d']) for x in range(0, e['s'] + 1) if x + (x + e['d']) == e['s']], 'pair'))),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Notice',
+    '34 + 28 = 62 and 134 + 28 = 162. What do you see? What stays the same? What changes? Write one or two sentences.',
+    ['Check: 34 + 28 = 62 and 134 + 28 = 162.', 'What stays the same: the last two digits of the answer are 62 both times.', 'What changes: the answer has one more hundred, because 134 is 100 more than 34. The answer is 100 more: 162 is 62 + 100.'],
+    'Put the two sums side by side. Which numbers are the same? Which are different?'))

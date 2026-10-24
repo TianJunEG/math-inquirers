@@ -336,3 +336,9 @@ VARIANTS = {
                  steps=['Take away 1 hundred from {n}.', 'If there are no hundreds, rename 1 thousand as 10 hundreds first.', 'The answer is {ans}.']),
         oracle=lambda e: _minus100(e['n'])),
 }
+
+# ---- inquiry habit (docs/pedagogy/inquiry_skills_explicit.md; levels/habits.json)
+ITEMS.insert(max(i for i, x in enumerate(ITEMS) if x['tier'] == 'core') + 1, habit_item('Explain',
+    'Which is bigger, 4 302 or 4 032? Write one sentence. Start: I know because ...',
+    ['4 302 is bigger.', 'For example: I know because both numbers have 4 thousands, so I look at the hundreds. 4 302 has 3 hundreds and 4 032 has 0 hundreds, so 4 302 is bigger.'],
+    'Start at the left. Compare the thousands first, then the hundreds.'))
