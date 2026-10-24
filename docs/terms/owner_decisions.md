@@ -385,3 +385,6 @@ Owner: "D2-ENROLLED for holiday and term. extension is for purchased". Access: h
 
 ## 2026-10-24 — TEASERS-365-MONTHLY
 Owner: "we should have 365 teasers, released monthly". Daily website teasers: a full year (365) per level, one for each day (keyed by MM-DD, Asia/Singapore), built/audited/released in monthly batches starting Nov 2026. Working assumption: 365 PER LEVEL (6 levels = 2,190); owner to confirm vs 365 in total.
+
+## 2026-10-24 — TEASERS-PER-LEVEL; REC-DESIGN (Google Meet)
+Owner: "TEASERS-PER-LEVEL" (365 teasers per level, 6 levels = 2,190, released monthly). "rec-design google meet": design the recorded-lesson posting and access flow with Google Meet as the live-lesson platform.
