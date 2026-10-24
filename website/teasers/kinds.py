@@ -22,7 +22,8 @@ def _join(xs):
 # ---------------------------------------------------------------- sequences and arithmetic
 def seq_term(a, d, n):
     ans = a + (n - 1) * d
-    return ans, {'terms': ', '.join(str(a + i * d) for i in range(4)), 'step': abs(d)}
+    return ans, {'terms': ', '.join(str(a + i * d) for i in range(4)), 'step': abs(d),
+                 'all': ', '.join(str(a + i * d) for i in range(n))}
 
 
 def seq_pos(a, d, v):
