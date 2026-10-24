@@ -133,3 +133,28 @@ Compared the printed numbers with the syllabus PDF pages 43 and 44 (and the Foun
 - No photocopier, pupil trial or teacher read-through; no lawyer review of the licence.
 - I did not re-run `validate.py` or `similarity_check.py`; the three pages replaced in round 2 were already compared with private sources in round 2 and no page text changed except the nine pages above (layout, not wording). I did not re-run the dictionary slip tests: no code word changed since round 2.
 - The cross-level word check reads the Answer Key PDFs as they stand today; other levels may still change.
+
+## 8. Fixes applied (24 Oct 2026)
+
+Text and layout only. No puzzle, answer, code word or colour-page content changed; the three colour pages keep their pictures, parts, keys and tallies.
+
+| Finding | Fix |
+|---|---|
+| M1 S1-09 | Ratio 1.3 removed from the page's tags (now Ratio 1.2, 1.6, Percentage 1.1, 1.2), from the key's tag note and from the teacher note ("a share of a quantity shared in a ratio" deleted). Front-matter table: Ratio 1.3 now lists S1-06 only. |
+| M1 S2-20 | Ratio 1.3 removed from the tags and the teacher note ("a share in a ratio"). Front-matter table: Ratio 1.3 now S2-15, S2-19. |
+| M1 S2-19 | The word "volume" removed from the printed topic line (now "...roots and letters"), from the key's tag note and from the teacher note; Primary 6 Foundation Area and Volume 2.1 to 2.3 removed from its outcome ids (it stays on S2-06). Ratio 1.3, Volume 2.5 and the rest are unchanged (the page has a ratio half and a root half). |
+| M1 S2-12 | Only Volume 2.3 and Statistics 1.1, 1.2 are tagged. The key note says the volume-from-the-edges parts are earlier-year content. Front-matter table: Volume 2.1 now S2-03 only, Volume 2.2 now S2-05 only. |
+| L3 | Colour-letter thumbnails on the teacher key (S1 key p.4, S2 key pp.5 and 8) enlarged from 7.2 pt to 8.9 pt. |
+| L6 | S1-19: the gap between the figure and the "Perimeter" or "Area" word is 1 mm on this page's cards, so item 4's box now has about 2.3 mm clear of the card border (was touching). Answers untouched. |
+
+Every outcome line is still practised by at least one page (the validator's coverage check passes; Ratio 1.3, Volume 2.1, 2.2 and Foundation Volume are carried by other pages).
+
+Rebuild and checks: rebuilt per `docs/school_books/BUILD_REPRODUCIBILITY.md` into the default `school/p6/out` (fonts load). Pixel diff (70 dpi, per page) against the committed PDFs: changed pages only S1 key p.4 (S1-09 entry), S2 key pp.5 and 8 (S2-12 and S2-20 entries), S2 Front Matter p.5 (coverage table), S1 Front Matter p.5 (coverage table), S1-19, S2-19 and the same pages inside the Complete Packs. All other pages are pixel-identical. Text diff of the changed files shows only the lines above. `validate.py`: see the result line at the end of this section.
+
+### Cross-level code words (L1) and the missing check
+
+P6's `validate.py` has no check against other levels' code words (P5's has, using `p5/gen/other_levels_words.json`). I did not add one: 30 of the 33 P6 words are already codes in P1 to P4, so a hard check would fail on the owner-accepted repetition, and an always-passing line would only mislead. If the owner decides one word set per level, P6 needs 30 new words and then a check like P5's (`refresh_other_words.py` writes the list from the other levels' Answer Key PDFs).
+
+### Still open
+
+L1 (cross-level words, owner decision), L2 (hatch on a real copier), L4 (S2-08 crowding), L5 (overbars), L7 and L8 (owner decisions), and everything in section 7 (copier, pupil trial, lawyer).

@@ -73,6 +73,7 @@ html,body{font-family:'Nunito Sans','DejaVu Sans','Liberation Sans',Arial,sans-s
 .cap{font-weight:700;font-size:12.5pt;line-height:1.2;max-width:26mm}
 .qc.inl .qt{min-width:0}
 .figrow svg{flex:none}
+.figrow.hq{gap:1mm}
 .chgrid{display:grid !important;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:3mm 5mm}
 .chgrid .chrow{border:0.4mm solid #000;border-radius:2mm;padding:2mm 2.5mm}
 .chgrid .chb{display:block}

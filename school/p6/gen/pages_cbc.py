@@ -55,7 +55,7 @@ def thumb(sh):
     for svgf, _ in pic.decor: parts.append(svgf)
     for r in pic.regions:
         p = r.geom.representative_point()
-        parts.append(f'<text x="{p.x:.1f}" y="{p.y:.1f}" text-anchor="middle" dominant-baseline="central" font-family="Fredoka" font-weight="700" font-size="11" fill="#000">{COLOURS[sh["idx"][r.id]][0].upper()}</text>')
+        parts.append(f'<text x="{p.x:.1f}" y="{p.y:.1f}" text-anchor="middle" dominant-baseline="central" font-family="Fredoka" font-weight="700" font-size="13.5" fill="#000">{COLOURS[sh["idx"][r.id]][0].upper()}</text>')
     return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="-0.5 -0.5 181 201" style="width:42mm;height:auto">{"".join(parts)}</svg>'
 
 def teacher_svg(sh):
@@ -142,20 +142,20 @@ CINSTR = ["Work out the answer in each part.", "Find it in the key.", "Colour th
 
 def page09():
     return cbc_page(9, dict(id="CBC-P6-01", picture="car", bank="ratio", tier=2, seed=1, level=6), "Colour the Car", CINSTR,
-        "Number and Algebra - Ratio and Percentage", "Ratio 1.2, 1.3, 1.6 and Percentage 1.1, 1.2 (equivalent ratios, sharing in a ratio, the missing term, finding the whole, percentage change)",
-        "Every part asks a ratio or percentage question with a whole-number answer: a missing term in equal ratios, a share of a quantity shared in a ratio, a percentage of a number, the whole when a percentage of it is given, or the number before a percentage increase.",
-        oc=["RA1.2", "RA1.3", "RA1.6", "PC1.1", "PC1.2"])
+        "Number and Algebra - Ratio and Percentage", "Ratio 1.2, 1.6 and Percentage 1.1, 1.2 (equivalent ratios, the missing term, finding the whole, percentage change)",
+        "Every part asks a ratio or percentage question with a whole-number answer: a missing term in equal ratios, a percentage of a number, the whole when a percentage of it is given, or the number before a percentage increase.",
+        oc=["RA1.2", "RA1.6", "PC1.1", "PC1.2"])
 
 def page32():
     return cbc_page(32, dict(id="CBC-P6-02", picture="butterfly", bank="volavg", tier=2, seed=1, level=6), "Colour the Butterfly", CINSTR,
-        "Measurement and Geometry - Area and Volume; Statistics", "Volume 2.1, 2.2, 2.3 and Statistics (volume of a cuboid or cube, the missing height or edge, average, total and number)",
-        "Every part asks about the volume of a cuboid or cube (the volume from the edges, the height from the volume and the base area, a cube's edge or volume) or about an average (from a list, from a total, or the total from an average). Volumes are in cm³.",
-        oc=["VO2.1", "VO2.2", "VO2.3", "ST1.1", "ST1.2"])
+        "Measurement and Geometry - Area and Volume; Statistics", "Volume 2.3 and Statistics (the missing height of a cuboid from its volume and base area; average, total and number)",
+        "Every part asks about the volume of a cuboid or cube (the volume from the edges, which is earlier-year content, or the height from the volume and the base area) or about an average (from a list, from a total, or the total from an average). Volumes are in cm³.",
+        oc=["VO2.3", "ST1.1", "ST1.2"])
 
 def page40():
     return cbc_page(40, dict(id="CBC-P6-03", picture="elephant", bank="mixed", tier=2, seed=2, level=6), "Colour the Elephant", CINSTR,
-        "Number and Algebra - mixed Primary 6", "Mixed: percentage of a number (Primary 6 Foundation Percentage 1.3), Fractions 1.2, Algebra 1.4 and 1.5, Ratio 1.3, Statistics 1.1",
-        "Every part asks a mixed Primary 6 question with a whole-number answer: a percentage of a number, a whole number divided by a fraction, the value of an expression with a letter, an equation with a letter, a share in a ratio, or an average.",
-        oc=["PF.PC", "FR1.2", "AL1.4", "AL1.5", "RA1.3", "ST1.1"])
+        "Number and Algebra - mixed Primary 6", "Mixed: percentage of a number (Primary 6 Foundation Percentage 1.3), Fractions 1.2, Algebra 1.4 and 1.5, Statistics 1.1",
+        "Every part asks a mixed Primary 6 question with a whole-number answer: a percentage of a number, a whole number divided by a fraction, the value of an expression with a letter, an equation with a letter, or an average.",
+        oc=["PF.PC", "FR1.2", "AL1.4", "AL1.5", "ST1.1"])
 
 PAGES = [page09, page32, page40]

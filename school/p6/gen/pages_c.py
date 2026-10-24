@@ -147,7 +147,7 @@ def hq_card_html(v, sq):
     return f'<span class="rt">{dec(v)} cm{"²" if sq else ""}</span>'
 
 def hq_item_html(fig, ask):
-    return f'<div class="figrow">{fig}<div class="cap">{ask.capitalize()}</div></div>'
+    return f'<div class="figrow hq">{fig}<div class="cap">{ask.capitalize()}</div></div>'
 
 def hq_solve_item(item_html, chs):
     r = F.read_fig(item_html); ask = re.search(r'class="cap">(Area|Perimeter)<', item_html).group(1).lower()

@@ -227,11 +227,11 @@ def page39():
             if b is None: ok = False; break
             used.add(b[0]); seen_kinds.append(b[1]); halves.append((a[0], b[0]))
         if ok and len(set(seen_kinds)) >= 6 and "fdiv" in seen_kinds: break
-    P = loop_page(39, 9939, "Mixed Bag", 2, "Mixed practice: percentages, fractions, ratio, average, roots, letters and volume", STRAND_PF,
-        "Mixed practice: Fractions 1.2, Ratio 1.3, Algebra 1.4, Statistics 1.1, Volume 2.5 and Primary 6 Foundation percentage and volume", ["FR1.2", "RA1.3", "AL1.4", "ST1.1", "VO2.5", "PF.PC", "PF.VO"], "Domino loop (mixed)",
+    P = loop_page(39, 9939, "Mixed Bag", 2, "Mixed practice: percentages, fractions, ratio, average, roots and letters", STRAND_PF,
+        "Mixed practice: Fractions 1.2, Ratio 1.3, Algebra 1.4, Statistics 1.1, Volume 2.5 and Primary 6 Foundation percentage", ["FR1.2", "RA1.3", "AL1.4", "ST1.1", "VO2.5", "PF.PC"], "Domino loop (mixed)",
         ["Work out the value of each half domino.", "The right half of a domino has the same value as the left half of the next domino.", "Write the letters in order, from START."],
         rng, halves, ev_mix,
-        "Six dominoes with twelve halves. Each half is a short question with a whole-number answer: a percentage of a number, a fraction divided by a fraction, an average of three numbers, a larger share in a ratio, a root with a number added, an expression with a letter, or the volume of a cuboid. The right half of one domino has the same value as the left half of exactly one other domino, so the dominoes make one loop that comes back to START. The pupil finds the value of each half, follows the loop from START and writes the letters in loop order; they spell the word. Every wrong order was tested against a very large word list: none spells a word.", ps=True)
+        "Six dominoes with twelve halves. Each half is a short question with a whole-number answer: a percentage of a number, a fraction divided by a fraction, an average of three numbers, a larger share in a ratio, a root with a number added, or an expression with a letter. The right half of one domino has the same value as the left half of exactly one other domino, so the dominoes make one loop that comes back to START. The pupil finds the value of each half, follows the loop from START and writes the letters in loop order; they spell the word. Every wrong order was tested against a very large word list: none spells a word.", ps=True)
     return P
 
 PAGES = [page33, page37, page38, page39]

@@ -516,10 +516,9 @@
   "tier": 2,
   "topic": "Ratio and percentage",
   "strand": "Number and Algebra - Ratio and Percentage",
-  "syll": "Ratio 1.2, 1.3, 1.6 and Percentage 1.1, 1.2 (equivalent ratios, sharing in a ratio, the missing term, finding the whole, percentage change)",
+  "syll": "Ratio 1.2, 1.6 and Percentage 1.1, 1.2 (equivalent ratios, the missing term, finding the whole, percentage change)",
   "outcomes": [
    "RA1.2",
-   "RA1.3",
    "RA1.6",
    "PC1.1",
    "PC1.2"
@@ -2036,10 +2035,8 @@
   "tier": 2,
   "topic": "Volume and average",
   "strand": "Measurement and Geometry - Area and Volume; Statistics",
-  "syll": "Volume 2.1, 2.2, 2.3 and Statistics (volume of a cuboid or cube, the missing height or edge, average, total and number)",
+  "syll": "Volume 2.3 and Statistics (the missing height of a cuboid from its volume and base area; average, total and number)",
   "outcomes": [
-   "VO2.1",
-   "VO2.2",
    "VO2.3",
    "ST1.1",
    "ST1.2"
@@ -2508,17 +2505,16 @@
   "code": "S2-19 (P6-39)",
   "title": "Mixed Bag",
   "tier": 2,
-  "topic": "Mixed practice: percentages, fractions, ratio, average, roots, letters and volume",
+  "topic": "Mixed practice: percentages, fractions, ratio, average, roots and letters",
   "strand": "Primary 6 Foundation track (also used with the Standard pages)",
-  "syll": "Mixed practice: Fractions 1.2, Ratio 1.3, Algebra 1.4, Statistics 1.1, Volume 2.5 and Primary 6 Foundation percentage and volume",
+  "syll": "Mixed practice: Fractions 1.2, Ratio 1.3, Algebra 1.4, Statistics 1.1, Volume 2.5 and Primary 6 Foundation percentage",
   "outcomes": [
    "FR1.2",
    "RA1.3",
    "AL1.4",
    "ST1.1",
    "VO2.5",
-   "PF.PC",
-   "PF.VO"
+   "PF.PC"
   ],
   "ptype": "Domino loop (mixed)",
   "mech": "K8 the loop closes (the right half of each domino equals the left half of the next) + K1 letters in order spell a word (6 letters)",
@@ -2572,13 +2568,12 @@
   "tier": 2,
   "topic": "Mixed Primary 6 practice",
   "strand": "Number and Algebra - mixed Primary 6",
-  "syll": "Mixed: percentage of a number (Primary 6 Foundation Percentage 1.3), Fractions 1.2, Algebra 1.4 and 1.5, Ratio 1.3, Statistics 1.1",
+  "syll": "Mixed: percentage of a number (Primary 6 Foundation Percentage 1.3), Fractions 1.2, Algebra 1.4 and 1.5, Statistics 1.1",
   "outcomes": [
    "PF.PC",
    "FR1.2",
    "AL1.4",
    "AL1.5",
-   "RA1.3",
    "ST1.1"
   ],
   "ptype": "Colour by code (pupils colour with their own crayons)",

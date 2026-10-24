@@ -726,21 +726,30 @@ PASS  S2 key page 10 layout (no overflow/clipping/margin breach)
 PASS  S2 key page 10 min text size >= 8 pt  8.0 pt
 PASS  S1: every question printed on a colour page is printed in the key too  []
 PASS  S2: every question printed on a colour page is printed in the key too  []
+PASS  S1-09 (P6-09): all 17 question lines of the colour page's sheet are printed in P6_S1_Puzzles.pdf (pupil page)  []
+PASS  S1-09 (P6-09): all 17 question lines of the colour page's sheet are printed in P6_S1_Complete_Pack.pdf (pupil page)  []
+PASS  S1-09 (P6-09): all 17 question lines of the colour page's sheet are printed in P6_S1_Answer_Key.pdf (key page)  []
+PASS  S2-12 (P6-32): all 38 question lines of the colour page's sheet are printed in P6_S2_Puzzles.pdf (pupil page)  []
+PASS  S2-12 (P6-32): all 38 question lines of the colour page's sheet are printed in P6_S2_Complete_Pack.pdf (pupil page)  []
+PASS  S2-12 (P6-32): all 38 question lines of the colour page's sheet are printed in P6_S2_Answer_Key.pdf (key page)  []
+PASS  S2-20 (P6-40): all 20 question lines of the colour page's sheet are printed in P6_S2_Puzzles.pdf (pupil page)  []
+PASS  S2-20 (P6-40): all 20 question lines of the colour page's sheet are printed in P6_S2_Complete_Pack.pdf (pupil page)  []
+PASS  S2-20 (P6-40): all 20 question lines of the colour page's sheet are printed in P6_S2_Answer_Key.pdf (key page)  []
 PASS  S1_pupil.html: colour-by-code pictures: 1 found (expected 1); every label of every part lies inside its region and clear of outlines and decorations  [(9, 0, 13)]
 PASS  S1_key.html: colour-by-code pictures: 1 found (expected 1); every label of every part lies inside its region and clear of outlines and decorations  [(9, 0, 13)]
 PASS  S2_pupil.html: colour-by-code pictures: 2 found (expected 2); every label of every part lies inside its region and clear of outlines and decorations  [(12, 0, 14), (20, 0, 14)]
 PASS  S2_key.html: colour-by-code pictures: 2 found (expected 2); every label of every part lies inside its region and clear of outlines and decorations  [(9, 0, 14), (10, 0, 14)]
 PASS  P6_S1_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 13.24% vs greyscale)  20 pages
-PASS  P6_S1_Puzzles.pdf: no flat grey tint areas (blocks of edge pixels counted 223, budget 40 on average per page)  
+PASS  P6_S1_Puzzles.pdf: no flat grey tint areas (blocks of edge pixels counted 224, budget 40 on average per page)  
 PASS  P6_S1_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 31.23% vs greyscale)  5 pages
 PASS  P6_S1_FrontMatter.pdf: no flat grey tint areas (blocks of edge pixels counted 141, budget 40 on average per page)  
 PASS  P6_S1_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 34.24% vs greyscale)  9 pages
-PASS  P6_S1_Answer_Key.pdf: no flat grey tint areas (blocks of edge pixels counted 724, budget 130 on average per page)  
+PASS  P6_S1_Answer_Key.pdf: no flat grey tint areas (blocks of edge pixels counted 715, budget 130 on average per page)  
 PASS  P6_S2_Puzzles.pdf: 1-bit render at 150 dpi keeps content (max ink loss 13.34% vs greyscale)  20 pages
 PASS  P6_S2_Puzzles.pdf: no flat grey tint areas (blocks of edge pixels counted 203, budget 40 on average per page)  
 PASS  P6_S2_FrontMatter.pdf: 1-bit render at 150 dpi keeps content (max ink loss 31.80% vs greyscale)  5 pages
-PASS  P6_S2_FrontMatter.pdf: no flat grey tint areas (blocks of edge pixels counted 137, budget 40 on average per page)  
+PASS  P6_S2_FrontMatter.pdf: no flat grey tint areas (blocks of edge pixels counted 136, budget 40 on average per page)  
 PASS  P6_S2_Answer_Key.pdf: 1-bit render at 150 dpi keeps content (max ink loss 34.54% vs greyscale)  10 pages
-PASS  P6_S2_Answer_Key.pdf: no flat grey tint areas (blocks of edge pixels counted 861, budget 130 on average per page)  
+PASS  P6_S2_Answer_Key.pdf: no flat grey tint areas (blocks of edge pixels counted 882, budget 130 on average per page)  
 
-TOTAL 744 checks, 0 failed
+TOTAL 753 checks, 0 failed
