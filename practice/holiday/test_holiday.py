@@ -58,7 +58,7 @@ for it in items:
     elif t == 'set':
         ok = (list(map(int, got)) == it['answer']) if it['ordered'] else sorted(map(int, got)) == sorted(it['answer'])
     elif t == 'text':
-        ok = tuple(got) == tuple(s['rule']) and it['answer'] == H.hlib.rule_accepts(*got)
+        ok = (tuple(got) == tuple(s['rule']) and it['answer'] == H.hlib.rule_accepts(*got)) if s.get('rule') else str(got).strip().lower() in [str(x).strip().lower() for x in it['answer']]
     else:
         ok = s.get('facts') is None or got == s['facts']
     if not ok:
@@ -95,7 +95,7 @@ def enter(page, it, wrong=False, alt=0):
         page.locator('#ans label.opt', has_text=re.compile('^' + re.escape(pick) + '$')).click()
     elif t == 'text':
         s = src[it['id']]
-        txt = WRONG_TEXT[s['rule'][0]] if wrong else it['answer'][alt % len(it['answer'])]
+        txt = (WRONG_TEXT[s['rule'][0]] if s.get('rule') else 'zzz not it') if wrong else it['answer'][alt % len(it['answer'])]
         page.locator('#ans input[type=text]').fill(txt)
     elif t == 'selfcheck':
         if page.locator('#ans textarea').count():
@@ -281,6 +281,27 @@ with sync_playwright() as pw:
         shot(name, 390, 1000, steps=lambda p, ix=ix: goto(p, idx(ix)), full=True)
     if errors: fail('browser errors: ' + '; '.join(sorted(set(errors))[:5]))
     br.close()
+
+# ---- 6. server-side marking: the keys made by practice/submit/make_keys.py, marked by the shared practice/submit/mark.js, agree with the page
+import subprocess
+sys.path.insert(0, os.path.join(H.ROOT, 'practice', 'submit'))
+import make_keys                                   # noqa: E402
+_k, _ver, _d, keys, _tags = make_keys.build(0, n, key)
+cases = []
+for it, kr in zip(items, keys):
+    if kr['marking_mode'] != 'auto':
+        cases.append(dict(rec=kr, v=None, want='self' if kr['marking_mode'] == 'self' else 'open')); continue
+    t = it['type']
+    right = [str(f['answer']) for f in it['fields']] if t == 'fields' else (', '.join(map(str, it['answer'])) if t == 'set' else (it['answer'][0] if t == 'text' else str(it['answer'])))
+    wrong = [str(f['answer'] + 1) for f in it['fields']] if t == 'fields' else (str(it['answer'][0] + 100) if t == 'set' else ('zzz' if t == 'text' else ('No' if it['answer'] == 'Yes' else 'Yes') if t == 'choice' else str(it['answer'] + 1)))
+    if t == 'choice':
+        wrong = [o for o in it['options'] if o != it['answer']][0]
+    cases.append(dict(rec=kr, v=right, want='right')); cases.append(dict(rec=kr, v=wrong, want='wrong')); cases.append(dict(rec=kr, v='', want='skipped'))
+js = "const M=require(process.argv[1]);const c=JSON.parse(require('fs').readFileSync(0,'utf8'));console.log(JSON.stringify(c.map(x=>M.mark(x.rec,x.v).mark)))"
+out = json.loads(subprocess.run(['node', '-e', js, os.path.join(H.ROOT, 'practice', 'submit', 'mark.js')], input=json.dumps(cases), capture_output=True, text=True, check=True).stdout)
+bad = [(c['rec']['id'], c['want'], o) for c, o in zip(cases, out) if c['want'] != o]
+if bad: fail(f'server marking differs: {bad[:5]}')
+print(f'6. {len(keys)} server keys made; mark.js marks {len(cases)} right / wrong / blank / self answers as expected')
 
 print('RESULT:', 'OK' if not fails else f'{len(fails)} FAILURES')
 sys.exit(1 if fails else 0)

@@ -90,11 +90,12 @@ def is_palindrome(n):
 def array_figure(rows, cols, highlight_rows=None, caption=''):
     """A rows x cols array of dots (trees), drawn small enough for a phone."""
     r, gap, x0, y0 = 7, 20, 14, 14
-    W = x0 * 2 + (cols - 1) * gap + 2 * r
+    W = max(x0 * 2 + (cols - 1) * gap + 2 * r, 290)
+    xs = (W - ((cols - 1) * gap + 2 * r)) / 2
     b = ''
     for i in range(rows):
         for j in range(cols):
-            b += Ci(x0 + r + j * gap, y0 + r + i * gap, r, '#CDE8C8', NAVY, 1.8)
+            b += Ci(xs + r + j * gap, y0 + r + i * gap, r, '#CDE8C8', NAVY, 1.8)
     H = y0 * 2 + (rows - 1) * gap + 2 * r + 24
     b += T(W / 2, H - 6, caption or f'{rows} rows of {cols} trees', 15, 'middle', 800, TEAL)
     return svg(W, H, b, f'An array of {rows * cols} trees: {rows} rows with {cols} trees in each row.')
