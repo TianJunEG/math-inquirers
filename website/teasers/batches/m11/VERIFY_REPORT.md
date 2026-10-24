@@ -4,18 +4,18 @@ Method: every puzzle is re-solved by `brute.py` (independent of the author solve
 
 | Level | Puzzles | Solver kinds | Most uses of one solver kind | Families | Most in one family | Sub-structures |
 |---|---|---|---|---|---|---|
-| 1 | 30 | 28 | 2 | 20 | 3 | 30 |
+| 1 | 30 | 28 | 2 | 19 | 3 | 30 |
 | 2 | 30 | 30 | 1 | 25 | 2 | 30 |
 | 3 | 30 | 30 | 1 | 22 | 3 | 30 |
 | 4 | 30 | 28 | 2 | 24 | 2 | 30 |
 | 5 | 30 | 30 | 1 | 22 | 3 | 30 |
 | 6 | 30 | 24 | 3 | 20 | 3 | 30 |
 
-Sources searched (whole working tree, tracked or not): 6748 files, 1361.5 MB, sha256 7788a0108b371abf8e88be7b.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 373, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
+Sources searched (whole working tree, tracked or not): 6748 files, 1361.5 MB, sha256 2c1024c90ea68acca1508db4.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 373, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
 
 Similarity sources checked: holiday banks, own term lessons, all extension workbook data, the school booklets, our book drafts and catalogues, external private source files, and the seven fixed website puzzles.
 
-FAIL count: 0. REVIEW items: 120.
+FAIL count: 0. REVIEW items: 114.
 
 
 - REVIEW L1-racerun [11-02]: story words 3 of 5 like "| Schema valid (JSON Schema + key checks) | PASS | all top-level keys, schema 2020-12, ide ..." (term/l1/AUDIT_L11.md)
@@ -25,7 +25,6 @@ FAIL count: 0. REVIEW items: 120.
 - REVIEW L1-threefifty [11-14]: number 35 in the question is not a parameter (written in the wording; check)
 - REVIEW L1-stripmarks [11-17]: story words 3 of 5 like "**DIAG-019** | 2020 | Catholic High | SA2 | Q38 | 3 marks | LEN | difficulty 3 | picture y ..." (docs/books/private_p3_papers/non_routine_questions.md)
 - REVIEW L1-busminute [11-18]: rule B: 3 of the same numbers ['20', '35', '4'] as "| 14 | 5 Machines; 6 Market Day; 7 Fair Shares | Before-and-after bars; three ch ..." (docs/terms/l2_preflight.md)
-- REVIEW L1-bibscores [11-19]: question has 50 words (limit 48)
 - REVIEW L1-bibscores [11-19]: number 52 in the question is not a parameter (written in the wording; check)
 - REVIEW L1-bibscores [11-19]: number 2 in the question is not a parameter (written in the wording; check)
 - REVIEW L1-bibscores [11-19]: number 7 in the question is not a parameter (written in the wording; check)
@@ -34,10 +33,6 @@ FAIL count: 0. REVIEW items: 120.
 - REVIEW L1-seatrow [11-23]: number 2 in the question is not a parameter (written in the wording; check)
 - REVIEW L1-seatrow [11-23]: rule B: 3 of the same numbers ['3', '4', '5'] as "- [WA_2020_TA1_StNicholas Q15, 2m, Cinema seats rows behind in front, diff 3] 5  ..." (docs/books/private_p5_papers/non_routine_questions.md)
 - REVIEW L1-woodpecker [11-24]: rule B: 3 of the same numbers ['12', '4', '6'] as "| L6 Think harder No.2, Go further No.6, No.7 grids | 31, 32 | OK; 6 x 6, 6 x 6, ..." (docs/audit_final/holiday_diagram_review_L4_6.md)
-- REVIEW L1-twopizzas [11-26]: number 1 in the question is not a parameter (written in the wording; check)
-- REVIEW L1-twopizzas [11-26]: number 1 in the question is not a parameter (written in the wording; check)
-- REVIEW L1-twopizzas [11-26]: story words 3 of 5 like "Take 11 quarter-slices.', 'Put the slices together to build whole pizzas.', 'Write how man ..." (p4/content/l4.js)
-- REVIEW L1-twopizzas [11-26]: rule S (window): 5 of 5 content words (cut,eat,pizza,size,slice) in "Ravi cuts his into 4 equal slices and eats 1 slice. Siti cuts hers int ..." (practice/holiday/p2/07/dist/data/p2l07.json)
 - REVIEW L1-twobags [11-27]: number 5 in the question is not a parameter (written in the wording; check)
 - REVIEW L1-twobags [11-27]: number 19 in the question is not a parameter (written in the wording; check)
 - REVIEW L1-twobags [11-27]: number 19 in the question is not a parameter (written in the wording; check)
@@ -54,8 +49,7 @@ FAIL count: 0. REVIEW items: 120.
 - REVIEW L2-cardtriple2 [11-14]: rule B: 3 of the same numbers ['14', '31', '38'] as "Lessons 20 to 40 are being rebuilt anyway (and the strategy card and common look ..." (docs/pedagogy/lesson_x10_consolidation_plan.md)
 - REVIEW L2-ticketnotes [11-16]: rule B: 3 of the same numbers ['3', '30', '5'] as "| 5 | 6 Market Day; 5 Machines | 275¢ = $2.75; 65¢ fewest coins; $17 fewest note ..." (docs/terms/l2_preflight.md)
 - REVIEW L2-ticketnotes [11-16]: rule G: 3 shared number-unit grams ($ 2 notes / $ 5 notes / 2 notes and) in "Investigation: Amounts you cannot pay First: Can you pay exactly $7 with $2 note ..." (outputs/print/term/Math_Inquirers_L1_T3_Book6_Lessons06-10_Workbook_PRINT.pdf)
-- REVIEW L2-bookstall [11-21]: longest sentence 24 words (limit 22)
-- REVIEW L2-bookstall [11-21]: rule B: 3 of the same numbers ['3', '4', '5'] as "24 yellow 28 red 35 blue 40 green 45 orange 5 × 7 = 35 (blue) 8 bags, 3 in each. ..." (school/colour_by_code/out/p2/html/CBC-P2-14_dinosaur_mult_teacher.html)
+- REVIEW L2-fruitbags [11-21]: rule B: 3 of the same numbers ['3', '4', '5'] as "24 yellow 28 red 35 blue 40 green 45 orange 5 × 7 = 35 (blue) 8 bags, 3 in each. ..." (school/colour_by_code/out/p2/html/CBC-P2-14_dinosaur_mult_teacher.html)
 - REVIEW L2-lockcode [11-22]: rule B: 3 of the same numbers ['4', '5', '9'] as "Answer: smallest 9, biggest 12. Solution: the three sides add to 21 plus the cor ..." (docs/sasmo/g3_original_problems_draft.md)
 - REVIEW L2-cyclerace [11-24]: rule B: 3 of the same numbers ['3', '30', '4'] as "| Prelim | 2022 | MGS | B1-22 | 2 | tariff | 2 | 0 | Bicycle rental first hour t ..." (docs/books/private_p6_papers/non_routine_questions.md)
 - REVIEW L2-oddboxes [11-25]: rule S (window): 5 of 6 content words (count,even,hold,marble,odd) in "| Finding | Action | | WB 1 / GD 3 S3(b) is the Explore example | S3(b ..." (term/l1/audit/FIXES_T3_L30.md)
