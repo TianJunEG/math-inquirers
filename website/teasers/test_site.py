@@ -130,6 +130,10 @@ def strip_inline(route):
 
 
 def main():
+    # 0. the committed generated pages are the flag-off pages (fix round 3): fails when mi_signup.html or a level page carries the teaser build
+    import test_flag_off
+    for name, good, extra in test_flag_off.check():
+        ok(name, good, extra)
     srv = serve()
     base = 'http://127.0.0.1:%d' % srv.server_address[1]
     with sync_playwright() as pw:
@@ -267,6 +271,7 @@ def main():
                 if e['units']:
                     pos.append('%s %s' % (e['ans'], e['units'][0]))
                     pos.append('%s%s' % (e['ans'], e['units'][0]))
+                pos += ['It is ' + e['ans'], 'The answer is ' + e['ans'], "it's " + e['ans'], 'the answer is ' + e['shown'], 'It is ' + e['shown']]   # a sentence round the number (fix round 3)
                 if e['ans'].isdigit():
                     pos.append('+' + e['ans'])
                     n = int(e['ans'])
@@ -278,6 +283,7 @@ def main():
                     pos.append('%d h %d min' % (int(e['ans']) // 60, int(e['ans']) % 60))
             else:
                 pos += [e['ans'].upper(), 'The ' + e['ans'], e['ans'] + '.', 'on ' + e['ans'], e['ans'].replace(' ', '')] + list(e['accept'])
+                pos += ['It is ' + e['ans'], 'The answer is ' + e['ans'], 'the answer is ' + e['shown'].upper()]
             wrongs = list(e['wrong'])
             if e['type'] == 'n' and e['fmt'] in ('int', 'plain'):
                 a = int(e['ans'])
@@ -310,6 +316,11 @@ def main():
             ({'a': '96', 't': 'n', 'u': ['%', 'percent']}, '0.69', 'no'), ({'a': '96', 't': 'n'}, '0.96', 'no'),
             ({'a': '7', 't': 'n'}, '+7', 'ok'), ({'a': '3/4', 't': 'n', 'e': 1}, '3⁄4', 'ok'),
             ({'a': '90', 't': 'n', 'u': ['minutes', 'min']}, '1 h 30 min', 'ok'), ({'a': '90', 't': 'n', 'u': ['minutes', 'min']}, '1 h 20 min', 'no'),
+            ({'a': '12', 't': 'n'}, 'It is 12', 'ok'), ({'a': '12', 't': 'n'}, 'The answer is 12', 'ok'), ({'a': '12', 't': 'n'}, 'the answer is 12.', 'ok'),
+            ({'a': '12', 't': 'n'}, "It's 12", 'ok'), ({'a': '12', 't': 'n'}, 'The answer is 13', 'no'), ({'a': '12', 't': 'n'}, 'It is', 'format'),
+            ({'a': '12', 't': 'n', 'u': ['cm']}, 'It is 12 cm', 'ok'), ({'a': '12', 't': 'n', 'u': ['cm']}, 'The answer is 12 m', 'no'),
+            ({'a': '10.4', 't': 'n', 'p': ['$'], 'u': ['dollars']}, 'The answer is $10.40', 'ok'), ({'a': '1/2', 't': 'n', 'e': 1}, 'It is 2/4', 'simplify'),
+            ({'a': 'sunday', 't': 's'}, 'The answer is Sunday', 'ok'), ({'a': 'sunday', 't': 's'}, 'It is on Sunday', 'ok'), ({'a': 'sunday', 't': 's'}, 'The answer is Monday', 'no'),
         ]
         bad = []
         for p, s, want in edge:

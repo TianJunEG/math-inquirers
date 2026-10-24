@@ -1,0 +1,33 @@
+{
+ "note": "Round-2 wording of the near-copies found by AUDIT_ROUND3 section 1. verify_bank.py --selftest requires the text rules to FAIL the ones in must_fail_text (with the widened sources), and the taxonomy to refuse the retired sub-structures in retired_sub.",
+ "must_fail_text": {
+  "L3-windowpanes": "A window has panes in a grid 3 panes across and 2 panes down. Count every rectangle you can see, including single panes and bigger rectangles made of panes. How many rectangles are there?",
+  "L3-nightbus": "A night bus leaves at 22:45 and arrives at 01:20 the next morning. How many minutes is the journey?",
+  "L4-nighttrain": "A night train leaves at 21:50 and arrives at 02:15 the next day. How many minutes does the journey take?",
+  "L1-borrowdays": "Siti borrows a library book on a Monday and must return it 12 days later. Which weekday is the return day?",
+  "L5-leak": "A tap pours 25 L into an empty 600 L tank every minute, but a small leak lets 5 L out every minute. How long, in minutes, until the tank is full?",
+  "L5-teams16": "15 teams are in a league. Every team plays every other team exactly once. How many matches are played?",
+  "L2-pencilcase": "A pencil case holds 9 blue, 7 black and 6 red pens. Mei takes pens out without looking. How many pens must she take to be sure of having 5 pens of the same colour?"
+ },
+ "retired_sub": {
+  "L1-coinsets": "coins.make_amount",
+  "L1-rungrow": "growing_pattern.growing_gaps",
+  "L1-boxpyramid": "number_grid.number_pyramid",
+  "L2-machine4": "function_machine.find_the_rule",
+  "L1-borrowdays": "calendar.weekday_after",
+  "L6-lastdigit": "modular.last_digit_power",
+  "L6-turtle": "polygons.turtle_repeat",
+  "L5-leak": "rate.fill_with_leak"
+ },
+ "sources_must_include": [
+  "outputs/skill_additions/Math_Inquirers_L3_Skill_Additions_Tutor_Sheet.html",
+  "docs/audit/mkgifted_p3.py",
+  "practice/holiday/p6/05/lesson.py",
+  "practice/holiday/p3/05/lesson.py",
+  "school/p3/out/S2_pupil.html",
+  "levels/gap_items.py",
+  "rebuild/skill_items_l1_3.py",
+  "extension/data/l5_u05.json",
+  "p3/qbank_skills.json"
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "1": {
+  "spares": 12,
+  "replaceable_single": 61,
+  "lose1": "500/500",
+  "lose2": "500/500",
+  "lose3": "500/500",
+  "lose5": "500/500",
+  "lose8": "500/500",
+  "lose12": "16/500"
+ },
+ "2": {
+  "spares": 36,
+  "replaceable_single": 61,
+  "lose1": "500/500",
+  "lose2": "500/500",
+  "lose3": "500/500",
+  "lose5": "500/500",
+  "lose8": "500/500",
+  "lose12": "500/500"
+ },
+ "3": {
+  "cap3": "feasible",
+  "cap2": "INFEASIBLE",
+  "lose1": "5/5",
+  "lose3": "5/5",
+  "lose5": "5/5",
+  "lose8": "5/5",
+  "lose12": "5/5"
+ },
+ "4": {
+  "cap3": "feasible",
+  "cap2": "INFEASIBLE",
+  "lose1": "5/5",
+  "lose3": "5/5",
+  "lose5": "5/5",
+  "lose8": "5/5",
+  "lose12": "5/5"
+ },
+ "5": {
+  "cap3": "feasible",
+  "cap2": "INFEASIBLE",
+  "lose1": "5/5",
+  "lose3": "5/5",
+  "lose5": "5/5",
+  "lose8": "5/5",
+  "lose12": "5/5"
+ },
+ "6": {
+  "cap3": "feasible",
+  "cap2": "INFEASIBLE",
+  "lose1": "5/5",
+  "lose3": "5/5",
+  "lose5": "5/5",
+  "lose8": "5/5",
+  "lose12": "5/5"
+ }
+}

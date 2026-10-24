@@ -273,9 +273,9 @@
      "15",
      "250"
     ],
-    "q": "Dina plays a counting game with her cousin. She says 10. Next she says the number that is 5 more, then the number that is 2 less, then 5 more, then 2 less, and so on. The numbers she says are 10, 15, 13, 18 and on. What is the 11th number she says?",
-    "hint": "Look at the adding and the taking away together. They change the number by the same amount every time.",
-    "why": "Adding 5 and taking away 2 makes the number 3 bigger each time. The 11th number comes after 10 steps, which is 5 pairs of steps: 10 + 5 × 3 = 25.",
+    "q": "Dina plays a counting game. She starts at 10. She goes up 5, then down 2, then up 5, then down 2, and so on. Her first four numbers are 10, 15, 13, 18. What is her 11th number?",
+    "hint": "Look at the going up and the going down together. They change the number by the same amount every time.",
+    "why": "Going up 5 and down 2 makes the number 3 bigger each time. The 11th number comes after 10 steps, which is 5 pairs of steps: 10 + 5 × 3 = 25.",
     "date": "11-06"
    },
    {
@@ -842,10 +842,10 @@
     "fmt": "int",
     "type": "n",
     "ans": "37",
-    "shown": "37 sweets",
+    "shown": "37 stickers",
     "units": [
-     "sweets",
-     "sweet"
+     "stickers",
+     "sticker"
     ],
     "prefix": [],
     "accept": [],
@@ -860,33 +860,40 @@
      "27",
      "370"
     ],
-    "q": "A jar holds 100 sweets. Ali eats 35 of them and Dina eats 28. How many sweets are left in the jar?",
-    "hint": "Find how many sweets were eaten in all. Then take that from the jar.",
-    "why": "Eaten: 35 + 28 = 63. Left: 100 − 63 = 37 sweets.",
+    "q": "Zara has 100 stickers. 35 of them go to Ravi and 28 of them go to Mei. How many are left for Zara?",
+    "hint": "Find how many stickers she gave away in all. Then take that from what she had.",
+    "why": "Given away: 35 + 28 = 63. Left: 100 − 63 = 37 stickers.",
     "date": "11-20"
    },
    {
-    "id": "L1-trackflags",
+    "id": "L1-racerun",
     "level": 1,
-    "frame": "trackflags",
-    "kind": "fence",
-    "topic": "Around a loop",
-    "sub": "counting_line.posts_loop",
+    "frame": "racerun",
+    "kind": "pass_places",
+    "topic": "Race places",
+    "sub": "counting_line.race_places",
     "family": "counting_line",
     "p": {
-     "length": 80,
-     "gap": 5,
-     "closed": true
+     "start": 19,
+     "moves": [
+      [
+       "pass",
+       5
+      ],
+      [
+       "passed",
+       2
+      ]
+     ],
+     "total": 30,
+     "ask": "place"
     },
     "t": {},
     "fmt": "int",
     "type": "n",
     "ans": "16",
-    "shown": "16 flags",
-    "units": [
-     "flags",
-     "flag"
-    ],
+    "shown": "16",
+    "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
@@ -901,9 +908,9 @@
      "6",
      "160"
     ],
-    "q": "A running track round the school field is 80 m long. A flag stands every 5 m, all the way round the track. How many flags are there?",
-    "hint": "The track is a loop, so the last flag is right next to the first flag.",
-    "why": "80 ÷ 5 = 16 flags. On a loop there are as many flags as gaps between them.",
+    "q": "Mei starts a school race in 19th place. There are 30 runners. She passes 5 runners. Then 2 runners pass her. What place is Mei in now? Write the number only.",
+    "hint": "Passing runners moves Mei forward in the order. Being passed moves her back. Do the two steps one at a time.",
+    "why": "Passing 5 runners moves Mei forward: 19 − 5 = 14. Then 2 runners pass her, so she moves back: 14 + 2 = 16.",
     "date": "11-21"
    },
    {
@@ -1366,9 +1373,9 @@
     "date": "11-02"
    },
    {
-    "id": "L2-pizzachoice",
+    "id": "L2-lunchsets",
     "level": 2,
-    "frame": "pizzachoice",
+    "frame": "lunchsets",
     "kind": "combos",
     "topic": "Ways to choose",
     "sub": "counting_choices.combinations",
@@ -1384,10 +1391,10 @@
     "fmt": "int",
     "type": "n",
     "ans": "24",
-    "shown": "24 pizzas",
+    "shown": "24 sets",
     "units": [
-     "pizzas",
-     "pizza"
+     "sets",
+     "set"
     ],
     "prefix": [],
     "accept": [],
@@ -1403,9 +1410,9 @@
      "14",
      "240"
     ],
-    "q": "A pizza shop offers 3 sizes, 4 toppings and 2 kinds of crust. A pizza has one size, one topping and one crust. How many different pizzas can you order?",
-    "hint": "Choose the size and topping first. How many pairs is that? Then add the crust.",
-    "why": "3 sizes × 4 toppings = 12 pairs. Each pair has 2 crusts, so 12 × 2 = 24 pizzas.",
+    "q": "A canteen sells lunch sets. Each set has one main dish, one drink and one fruit. There are 3 main dishes, 4 drinks and 2 fruits to choose from. How many different lunch sets can you make?",
+    "hint": "Choose the main dish and the drink first. How many pairs is that? Then add the fruit.",
+    "why": "3 main dishes × 4 drinks = 12 pairs. Each pair can go with 2 fruits, so 12 × 2 = 24 sets.",
     "date": "11-03"
    },
    {
@@ -1451,43 +1458,44 @@
     "date": "11-04"
    },
    {
-    "id": "L2-lampring",
+    "id": "L2-swaphana",
     "level": 2,
-    "frame": "lampring",
-    "kind": "fence",
-    "topic": "Around a loop",
-    "sub": "counting_line.posts_loop",
-    "family": "counting_line",
+    "frame": "swaphana",
+    "kind": "swap_digits",
+    "topic": "Place value",
+    "sub": "place_value.swap_digits",
+    "family": "place_value",
     "p": {
-     "length": 40,
-     "gap": 5,
-     "closed": true
+     "ask": "difference",
+     "number": 482,
+     "pos": [
+      0,
+      2
+     ]
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "8",
-    "shown": "8 lamp posts",
-    "units": [
-     "lamp posts",
-     "lamp post"
-    ],
+    "ans": "198",
+    "shown": "198",
+    "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "9",
-     "7",
-     "10",
-     "6",
-     "16",
-     "4",
-     "18",
-     "80"
+     "199",
+     "197",
+     "200",
+     "196",
+     "396",
+     "99",
+     "208",
+     "188",
+     "1980"
     ],
-    "q": "A jogging path goes round a pond and is 40 m long. A lamp post stands every 5 m, all the way round. How many lamp posts are on the path?",
-    "hint": "The path is a loop, so the last lamp post is right next to the first one.",
-    "why": "40 ÷ 5 = 8 lamp posts. Round a loop, there are as many posts as gaps.",
+    "q": "Hana writes the number 482. She swaps the hundreds digit and the ones digit to make a new number. What is the difference between the two numbers?",
+    "hint": "Make the new number first. Then subtract the smaller number from the bigger one.",
+    "why": "Swapping the hundreds digit 4 and the ones digit 2 makes 284. The difference is 482 − 284 = 198.",
     "date": "11-05"
    },
    {
@@ -1649,10 +1657,10 @@
     "fmt": "int",
     "type": "n",
     "ans": "145",
-    "shown": "145 buns",
+    "shown": "145 books",
     "units": [
-     "buns",
-     "bun"
+     "books",
+     "book"
     ],
     "prefix": [],
     "accept": [],
@@ -1667,9 +1675,9 @@
      "135",
      "1450"
     ],
-    "q": "A bakery bakes 500 buns. It sells 215 buns before lunch and 140 buns after lunch. How many buns are not sold?",
-    "hint": "Add the buns sold at the two times first. Then take the total from 500.",
-    "why": "Sold: 215 + 140 = 355. Not sold: 500 − 355 = 145 buns.",
+    "q": "A school library has 500 books on its shelves. 215 books are borrowed in the morning and 140 books are borrowed in the afternoon. How many books are not borrowed?",
+    "hint": "Add the books borrowed at the two times first. Then take the total from 500.",
+    "why": "Borrowed: 215 + 140 = 355. Not borrowed: 500 − 355 = 145 books.",
     "date": "11-09"
    },
    {
@@ -1721,32 +1729,32 @@
     "p": {
      "total": 12,
      "eaten": [
-      3,
-      2
+      4,
+      3
      ],
      "ask": "fraction_left"
     },
     "t": {},
     "fmt": "frac",
     "type": "n",
-    "ans": "7/12",
-    "shown": "7/12",
+    "ans": "5/12",
+    "shown": "5/12",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": true,
     "wrong": [
-     "19/12",
-     "31/12",
-     "7/6",
-     "7/24",
-     "127/12",
-     "13/12",
-     "35/6"
+     "17/12",
+     "29/12",
+     "5/6",
+     "5/24",
+     "125/12",
+     "11/12",
+     "25/6"
     ],
-    "q": "A round cake is divided into 12 slices of the same size. Dad eats 3 slices and Mum eats 2 slices. What fraction of the whole cake is left?",
-    "hint": "Add the slices eaten. Take that from the total. Then write the slices left over the total number of slices.",
-    "why": "Eaten: 3 + 2 = 5 slices. Left: 12 − 5 = 7 slices out of 12, which is 7/12 of the cake.",
+    "q": "A garden is divided into 12 equal beds. Dad plants flowers in 4 beds and vegetables in 3 beds. What fraction of the whole garden is not planted?",
+    "hint": "Add the beds that are planted. Take that from the total. Then write the beds left over the total number of beds.",
+    "why": "Planted: 4 + 3 = 7 beds. Not planted: 12 − 7 = 5 beds out of 12, which is 5/12 of the garden.",
     "date": "11-11"
    },
    {
@@ -2191,10 +2199,10 @@
     "fmt": "int",
     "type": "n",
     "ans": "13",
-    "shown": "13 buses",
+    "shown": "13 teams",
     "units": [
-     "buses",
-     "buse"
+     "teams",
+     "team"
     ],
     "prefix": [],
     "accept": [],
@@ -2209,9 +2217,9 @@
      "3",
      "130"
     ],
-    "q": "A school trip has 62 children. Each bus seats 5 children. How many buses must the school book so that every child has a seat?",
-    "hint": "Divide the children by the seats on a bus. What do you do with the remainder?",
-    "why": "12 buses carry 12 × 5 = 60 children. 2 children are left, and they need another bus. So the school needs 13 buses.",
+    "q": "Coach Lim has 62 players. He puts them into teams of 5, and the last team may have fewer players. How many teams does he make?",
+    "hint": "Divide the players by the team size. What do you do with the remainder?",
+    "why": "12 full teams use 12 × 5 = 60 players. 2 players are left, and they make one more team. So he makes 13 teams.",
     "date": "11-21"
    },
    {
@@ -2391,43 +2399,39 @@
     "date": "11-25"
    },
    {
-    "id": "L2-dicetops",
+    "id": "L2-wordorder",
     "level": 2,
-    "frame": "dicetops",
-    "kind": "dice_opposite",
-    "topic": "Dice",
-    "sub": "cubes.dice_faces",
-    "family": "cubes",
+    "frame": "wordorder",
+    "kind": "alpha_numbers",
+    "topic": "Number words",
+    "sub": "number_names.alphabetical",
+    "family": "number_names",
     "p": {
-     "vals": [
-      6,
-      6,
-      5,
-      4
-     ],
-     "ask": "bottoms"
+     "lo": 1,
+     "hi": 12,
+     "place": 5
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "7",
-    "shown": "7",
+    "ans": "9",
+    "shown": "9",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
+     "10",
      "8",
-     "6",
-     "9",
-     "5",
-     "14",
-     "17",
-     "70"
+     "11",
+     "7",
+     "18",
+     "19",
+     "90"
     ],
-    "q": "On a die, the numbers on opposite faces add up to 7. Four dice sit on a table. Their top faces show 6, 6, 5 and 4. Add up the four faces on the bottom.",
-    "hint": "The face underneath is opposite the top face. What number goes with a 2 to make 7?",
-    "why": "Faces underneath: 1, 1, 2, 3. Their total is 7.",
+    "q": "Mei writes the numbers from 1 to 12 in words: one, two, three and so on. Then she puts the words in dictionary order, like the words in a dictionary. Which number is in 5th place?",
+    "hint": "Write all the number words. Look at the first letter of each word, then at the second letter if two words start the same.",
+    "why": "In dictionary order the words are eight, eleven, five, four, nine, one, seven, six, ten, three, twelve, two. The 5th word is nine, which is the number 9.",
     "date": "11-26"
    },
    {
@@ -2558,11 +2562,11 @@
     "p": {
      "times": [
       [
-       8,
+       10,
        "pm"
       ],
       [
-       6,
+       7,
        "am"
       ]
      ],
@@ -2571,8 +2575,8 @@
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "10",
-    "shown": "10 hours",
+    "ans": "9",
+    "shown": "9 hours",
     "units": [
      "h",
      "hr",
@@ -2584,18 +2588,17 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "11",
-     "9",
-     "12",
+     "10",
      "8",
-     "20",
-     "5",
-     "0",
-     "100"
+     "11",
+     "7",
+     "18",
+     "19",
+     "90"
     ],
-    "q": "Mei goes to bed at 8 pm and wakes up at 6 am the next morning. For how many hours does she sleep?",
-    "hint": "Count the hours from 8 pm to midnight. Then count the hours from midnight to 6 am.",
-    "why": "From 8 pm to midnight is 4 hours. From midnight to 6 am is 6 hours. In all, 4 + 6 = 10 hours.",
+    "q": "Kai falls asleep at 10 pm and gets up at 7 am the next day. For how many hours is he asleep?",
+    "hint": "Count the hours from 10 pm to midnight. Then count the hours from midnight to 7 am.",
+    "why": "From 10 pm to midnight is 2 hours. From midnight to 7 am is 7 hours. In all, 2 + 7 = 9 hours.",
     "date": "11-30"
    }
   ],
@@ -2838,41 +2841,43 @@
     "date": "11-05"
    },
    {
-    "id": "L3-mirrorclock",
+    "id": "L3-chessboard",
     "level": 3,
-    "frame": "mirrorclock",
-    "kind": "mirror_time",
-    "topic": "Mirror clock",
-    "sub": "clock_reading.mirror_time",
-    "family": "clock_reading",
+    "frame": "chessboard",
+    "kind": "checkerboard",
+    "topic": "Patterns",
+    "sub": "arrays.checkerboard",
+    "family": "arrays",
     "p": {
-     "h": 2,
-     "m": 20,
-     "ask": "minutes"
+     "rows": 14,
+     "cols": 21,
+     "ask": "edge_dark"
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "40",
-    "shown": "40",
-    "units": [],
+    "ans": "33",
+    "shown": "33 squares",
+    "units": [
+     "squares",
+     "square"
+    ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "41",
-     "39",
-     "42",
-     "38",
-     "80",
-     "20",
-     "50",
-     "30",
-     "400"
+     "34",
+     "32",
+     "35",
+     "31",
+     "66",
+     "43",
+     "23",
+     "330"
     ],
-    "q": "Aisha sees a wall clock in a mirror. In the mirror, the clock shows 2:20. What is the real time? Give only the minutes after the hour, for example 20 for 7:20.",
-    "hint": "A mirror turns left into right. The real time and the time in the mirror add up to 12 hours.",
-    "why": "The mirror time and the real time add up to 12 hours. Taking 2:20 from 12:00 leaves 9:40, so the real time is 9:40, which is 40 minutes after 9 o'clock.",
+    "q": "A giant chessboard is painted on a playground. It has 14 rows and 21 columns of squares. Dark and light squares take turns along every row and column, and the top left square is dark. How many dark squares touch the edge of the board?",
+    "hint": "The squares on the edge form a ring round the board. Count how many squares are in the ring, then think about how dark and light take turns.",
+    "why": "The ring has 2 × (14 + 21) − 4 = 66 squares. Dark and light take turns all the way round the ring, and 66 is an even number, so half of them are dark: 66 ÷ 2 = 33 squares.",
     "date": "11-06"
    },
    {
@@ -3113,7 +3118,7 @@
      "13",
      "30"
     ],
-    "q": "The minute hand of a clock starts at the 2 and turns clockwise until it points at the 11. How many right angles has it turned through?",
+    "q": "A minute hand on a classroom clock starts at the 2 and turns clockwise until it points at the 11. How many right angles has it turned through?",
     "hint": "A right angle is a quarter turn. The numbers 12, 3, 6 and 9 are a quarter turn apart.",
     "why": "From 2 to 11 the hand passes 9 numbers. A quarter turn is 3 numbers, so 9 ÷ 3 = 3 right angles.",
     "date": "11-12"
@@ -3317,19 +3322,19 @@
     "family": "graphs",
     "p": {
      "data": [
-      19,
-      8,
-      38,
       24,
-      15
+      13,
+      49,
+      31,
+      20
      ],
      "ask": "range"
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "30",
-    "shown": "30 books",
+    "ans": "36",
+    "shown": "36 books",
     "units": [
      "books",
      "book"
@@ -3338,19 +3343,19 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "31",
-     "29",
-     "32",
-     "28",
-     "60",
-     "15",
-     "40",
-     "20",
-     "300"
+     "37",
+     "35",
+     "38",
+     "34",
+     "72",
+     "18",
+     "46",
+     "26",
+     "360"
     ],
-    "q": "Five children read books during the school year. Mei Ling read 19, Ben read 8, Aisha read 38, Ravi read 24 and Siti read 15. How many more books did the child who read the most read than the child who read the least?",
+    "q": "Five children read books during the school year. Mei Ling read 24, Ben read 13, Aisha read 49, Ravi read 31 and Siti read 20. How many more books did the child who read the most read than the child who read the least?",
     "hint": "Find the biggest number and the smallest number first.",
-    "why": "The most is 38 and the least is 8. 38 − 8 = 30 books.",
+    "why": "The most is 49 and the least is 13. 49 − 13 = 36 books.",
     "date": "11-17"
    },
    {
@@ -3810,10 +3815,10 @@
     "fmt": "int",
     "type": "n",
     "ans": "58",
-    "shown": "58 buns",
+    "shown": "58 tea bags",
     "units": [
-     "buns",
-     "bun"
+     "tea bags",
+     "tea bag"
     ],
     "prefix": [],
     "accept": [],
@@ -3829,9 +3834,9 @@
      "48",
      "580"
     ],
-    "q": "A baker bakes 7 trays with 9 buns on each tray. 5 buns burn and are thrown away. How many buns are left?",
-    "hint": "Use the 9 times table to find how many buns there were at first.",
-    "why": "7 × 9 = 63. 63 − 5 = 58 buns.",
+    "q": "A tea shop has 7 boxes with 9 tea bags in each box. 5 tea bags are damaged and thrown away. How many tea bags are left?",
+    "hint": "Use the 9 times table to find how many tea bags there were at first.",
+    "why": "7 × 9 = 63. 63 − 5 = 58 tea bags.",
     "date": "11-28"
    },
    {
@@ -3877,43 +3882,56 @@
     "date": "11-29"
    },
    {
-    "id": "L3-jugs",
+    "id": "L3-sticksdisplay",
     "level": 3,
-    "frame": "jugs",
-    "kind": "jug_steps",
-    "topic": "Pouring",
-    "sub": "containers.jug_pouring",
-    "family": "containers",
+    "frame": "sticksdisplay",
+    "kind": "digit_segments",
+    "topic": "Counting sticks",
+    "sub": "digit_display.segments",
+    "family": "digit_display",
     "p": {
-     "a": 5,
-     "b": 3,
-     "target": 4
+     "lo": 31,
+     "hi": 39,
+     "table": {
+      "0": 6,
+      "1": 2,
+      "2": 5,
+      "3": 5,
+      "4": 4,
+      "5": 5,
+      "6": 6,
+      "7": 3,
+      "8": 7,
+      "9": 6
+     }
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "6",
-    "shown": "6 steps",
+    "ans": "88",
+    "shown": "88 sticks",
     "units": [
-     "steps",
-     "step"
+     "sticks",
+     "stick"
     ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "7",
-     "5",
-     "8",
-     "4",
-     "12",
-     "3",
-     "16",
-     "60"
+     "89",
+     "87",
+     "90",
+     "86",
+     "176",
+     "44",
+     "98",
+     "78",
+     "880"
     ],
-    "q": "Ali has a 5 litre jug and a 3 litre jug, with no marks on either. One step is: fill a jug at the tap, empty a jug, or pour from one jug into the other until the first is empty or the second is full. What is the fewest number of steps to measure exactly 4 litres?",
-    "hint": "Try filling the big jug first and pouring into the small jug. What is left in the big jug?",
-    "why": "Fill the 5 litre jug (1 step). Pour into the 3 litre jug (2). Empty the 3 litre jug (3). Pour the 2 litres that are left into it (4). Fill the 5 litre jug (5). Pour until the 3 litre jug is full (6): it takes 1 litre, so 4 litres are left. That is 6 steps.",
+    "q": "On a toy display, every digit is made with sticks, as the table shows. Mia shows every number from 31 to 39, one after another. How many sticks does she use altogether?",
+    "hint": "Count the sticks in the tens digit of every number. Then count the sticks in all the ones digits.",
+    "why": "The tens digit is 3 in all 9 numbers: 9 × 5 = 45 sticks. The ones digits are 1 to 9, which use 2 + 5 + 5 + 4 + 5 + 6 + 3 + 7 + 6 = 43 sticks. 45 + 43 = 88 sticks.",
+    "code": "digit : 1 2 3 4 5 6 7 8 9\nsticks: 2 5 5 4 5 6 3 7 6",
     "date": "11-30"
    }
   ],
@@ -3972,7 +3990,7 @@
      "down": 3,
      "blocked": [
       [
-       1,
+       2,
        1
       ]
      ]
@@ -3980,8 +3998,8 @@
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "8",
-    "shown": "8 routes",
+    "ans": "11",
+    "shown": "11 routes",
     "units": [
      "routes",
      "route"
@@ -3990,18 +4008,18 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "9",
-     "7",
+     "12",
      "10",
-     "6",
-     "16",
-     "4",
-     "18",
-     "80"
+     "13",
+     "9",
+     "22",
+     "21",
+     "1",
+     "110"
     ],
-    "q": "A robot moves from the top-left corner to the bottom-right corner of a grid. It takes 3 steps right and 3 steps down, in any order. It must avoid one point, which has a puddle, after 1 step right and 1 step down. How many routes can it take?",
-    "hint": "First count all routes with no puddle. Then take away the routes that go through the puddle.",
-    "why": "All routes: 20. Routes through the puddle point: 2 ways to get there × 6 ways to go on = 12. 20 − 12 = 8 routes.",
+    "q": "A cleaning robot moves from the top-left corner to the bottom-right corner of a grid. It takes 3 steps right and 3 steps down, in any order. The corner after 2 steps right and 1 step down has a locked gate, so the robot cannot use it. How many routes can the robot take?",
+    "hint": "First count all routes with no locked gate. Then take away the routes that go through the locked corner.",
+    "why": "All routes: 20. Routes through the locked corner: 3 ways to get there × 3 ways to go on = 9. 20 − 9 = 11 routes.",
     "date": "11-02"
    },
    {
@@ -4335,7 +4353,7 @@
     "level": 4,
     "frame": "podium",
     "kind": "perm_count",
-    "topic": "Medals",
+    "topic": "Choosing in order",
     "sub": "counting_choices.orders",
     "family": "counting_choices",
     "p": {
@@ -4365,9 +4383,9 @@
      "200",
      "2100"
     ],
-    "q": "7 runners take part in a race. The first runner wins gold, the second wins silver and the third wins bronze. In how many different ways can the three medals be given out?",
-    "hint": "Choose the gold winner first. Then see how many runners are left for silver.",
-    "why": "7 choices for gold, then 6 for silver, then 5 for bronze. 7 × 6 × 5 = 210 ways.",
+    "q": "A team has 7 pupils. The coach picks one pupil to be captain, another pupil to be vice-captain and a third pupil to be reporter. In how many different ways can the three jobs be given?",
+    "hint": "Choose the captain first. Then see how many pupils are left for vice-captain.",
+    "why": "7 choices for captain, then 6 for vice-captain, then 5 for reporter. 7 × 6 × 5 = 210 ways.",
     "date": "11-11"
    },
    {
@@ -4796,10 +4814,10 @@
     "fmt": "int",
     "type": "n",
     "ans": "50",
-    "shown": "50 pupils",
+    "shown": "50 children",
     "units": [
-     "pupils",
-     "pupil"
+     "children",
+     "children"
     ],
     "prefix": [],
     "accept": [],
@@ -4815,9 +4833,9 @@
      "40",
      "500"
     ],
-    "q": "A pie chart shows the favourite subject of 240 pupils. The sector for science has an angle of 75°. How many pupils chose science?",
-    "hint": "The whole circle is 360°. What fraction of the circle is the science sector?",
-    "why": "75° out of 360° is 5/24 of the circle. 240 ÷ 24 = 10, and 5 × 10 = 50 pupils.",
+    "q": "A pie chart shows the favourite fruit of 240 children. The sector for mango has an angle of 75°. How many children chose mango?",
+    "hint": "The whole circle is 360°. What fraction of the circle is the mango sector?",
+    "why": "75° out of 360° is 5/24 of the circle. 240 ÷ 24 = 10, and 5 × 10 = 50 children.",
     "date": "11-21"
    },
    {
@@ -5153,7 +5171,7 @@
      "140",
      "1500"
     ],
-    "q": "What is the angle between the hour hand and the minute hand of a clock at 5 o'clock? Use the smaller angle.",
+    "q": "At 5 o'clock, what is the smaller angle between a clock's hour hand and its minute hand?",
     "hint": "The 12 numbers are equally spaced round the clock, and a full turn is 360°. How many degrees is one number?",
     "why": "A full turn of 360° is shared by 12 numbers, so one number is 30°. At 5 o'clock the minute hand points at 12 and the hour hand at 5. 5 × 30 = 150°.",
     "date": "11-29"
@@ -5205,47 +5223,41 @@
   ],
   "5": [
    {
-    "id": "L5-figures",
+    "id": "L5-fakecoin5",
     "level": 5,
-    "frame": "figures",
-    "kind": "nth_term",
-    "topic": "Pattern rules",
-    "sub": "figure_rule.nth_figure",
-    "family": "figure_rule",
+    "frame": "fakecoin5",
+    "kind": "fake_coin",
+    "topic": "Balance scale",
+    "sub": "strategy.fake_coin",
+    "family": "strategy",
     "p": {
-     "a": 3,
-     "b": 2,
-     "n": 25
+     "ask": "min",
+     "n": 100
     },
-    "t": {
-     "f1": 5,
-     "f2": 8,
-     "f3": 11
-    },
+    "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "77",
-    "shown": "77 tiles",
+    "ans": "5",
+    "shown": "5 weighings",
     "units": [
-     "tiles",
-     "tile"
+     "weighings",
+     "weighing"
     ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "78",
-     "76",
-     "79",
-     "75",
-     "154",
-     "87",
-     "67",
-     "770"
+     "6",
+     "4",
+     "7",
+     "3",
+     "10",
+     "15",
+     "50"
     ],
-    "q": "Figure 1 uses 5 tiles, Figure 2 uses 8 tiles and Figure 3 uses 11 tiles. Each figure has the same number more tiles than the one before. How many tiles does Figure 25 use?",
-    "hint": "How many more tiles does each figure have? Write the rule using Figure number × that jump.",
-    "why": "Each figure adds 3 tiles, and Figure 1 has 5. So the rule is 3 × figure number + 2. For Figure 25: 3 × 25 + 2 = 77 tiles.",
+    "q": "A bag holds 100 coins that look the same. One of them is a fake and is a little lighter than the others. A balance scale shows which side is lighter, or that both sides are equal. What is the fewest number of weighings that is certain to find the fake coin?",
+    "hint": "Put the same number of coins on each side. What does the scale tell you if it balances, and what if it tips?",
+    "why": "Each weighing splits the coins into three groups: the left pan, the right pan and the coins left out. Four weighings can handle 3 × 3 × 3 × 3 = 81 coins, which is not enough for 100. Five weighings can handle 243 coins, so 5 weighings are certain to work.",
     "date": "11-01"
    },
    {
@@ -5537,7 +5549,7 @@
      "190"
     ],
     "q": "A bowl holds 20 pink, 15 green and 12 orange raffle tickets. Hui Min takes tickets from the bowl without looking. How many must she take to be sure of having 7 tickets of the same colour?",
-    "hint": "Think of the unluckiest case: she takes as many cards as possible without having 7 tickets of any colour.",
+    "hint": "Think of the unluckiest case: she takes as many tickets as possible without having 7 tickets of any colour.",
     "why": "The unluckiest case is 6 pink, 6 green and 6 orange tickets, which is 18 tickets. The next ticket must make 7 of one colour, so she must take 18 + 1 = 19 tickets.",
     "date": "11-08"
    },
@@ -6250,9 +6262,9 @@
     "date": "11-24"
    },
    {
-    "id": "L5-threesports",
+    "id": "L5-threeclubs",
     "level": 5,
-    "frame": "threesports",
+    "frame": "threeclubs",
     "kind": "venn3",
     "topic": "Overlapping groups",
     "sub": "sorting.three_sets",
@@ -6291,9 +6303,9 @@
      "6",
      "160"
     ],
-    "q": "In a group of 60 pupils, 25 play football, 22 play badminton and 18 play basketball. 9 play football and badminton, 8 play football and basketball, and 7 play badminton and basketball. 3 pupils play all three sports. How many pupils play none of the three sports?",
-    "hint": "Add the three sports. Pupils who play two sports are counted twice, so take them off once. What happens to the pupils who play all three?",
-    "why": "25 + 22 + 18 = 65. The pupils who play two sports were counted twice, so take off 9 + 8 + 7 = 24. The pupils who play all three were counted 3 times, then taken off 3 times, so add them back: 65 − 24 + 3 = 44. So 44 pupils play at least one sport. 60 − 44 = 16 pupils.",
+    "q": "In a group of 60 pupils, 25 join the choir, 22 join the drama club and 18 join the art club. 9 join the choir and drama, 8 join the choir and art, and 7 join drama and art. 3 pupils join all three. How many pupils join none of the three?",
+    "hint": "Add the three clubs. Pupils who are in two clubs are counted twice, so take them off once. What happens to the pupils who are in all three?",
+    "why": "25 + 22 + 18 = 65. The pupils in two clubs were counted twice, so take off 9 + 8 + 7 = 24. The pupils in all three were counted 3 times, then taken off 3 times, so add them back: 65 − 24 + 3 = 44. So 44 pupils join at least one club. 60 − 44 = 16 pupils.",
     "date": "11-25"
    },
    {
@@ -6422,7 +6434,7 @@
      "21/2",
      "5"
     ],
-    "q": "A bottle holds 3/4 L of juice. Priya drinks 2/3 of the juice in the bottle. How many litres of juice does she drink?",
+    "q": "A flask holds 3/4 L of soup. Priya drinks 2/3 of the soup in the flask. How many litres of soup does she drink?",
     "hint": "\"2/3 of 3/4\" means 2/3 × 3/4. Multiply the tops and multiply the bottoms, then simplify.",
     "why": "2/3 × 3/4 = 6/12, and 6/12 is the same as 1/2. She drinks 1/2 L.",
     "date": "11-28"
@@ -6436,15 +6448,15 @@
     "sub": "triangle_area.cut_corners",
     "family": "triangle_area",
     "p": {
-     "w": 20,
-     "h": 14,
+     "w": 18,
+     "h": 15,
      "cuts": [
       [
        6,
-       4
+       5
       ],
       [
-       5,
+       4,
        8
       ]
      ],
@@ -6453,8 +6465,8 @@
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "248",
-    "shown": "248 cm²",
+    "ans": "239",
+    "shown": "239 cm²",
     "units": [
      "cm²",
      "cm2",
@@ -6468,19 +6480,18 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "249",
-     "247",
-     "250",
-     "246",
-     "496",
-     "124",
-     "258",
+     "240",
      "238",
-     "2480"
+     "241",
+     "237",
+     "478",
+     "249",
+     "229",
+     "2390"
     ],
-    "q": "A rectangular card is 20 cm long and 14 cm wide. Mia cuts off two corners. The first cut takes away a right-angled triangle with short sides 6 cm and 4 cm. The second cut takes away a right-angled triangle with short sides 5 cm and 8 cm. How much card is left? Give its area.",
+    "q": "A piece of card is a rectangle with sides of 18 cm and 15 cm. Mia cuts off two corners. The first cut takes away a right-angled triangle with short sides 6 cm and 5 cm. The second cut takes away a right-angled triangle with short sides 4 cm and 8 cm. How much card is left? Give its area.",
     "hint": "Find the area of the whole rectangle. Then find the area of each triangle that was cut off.",
-    "why": "The rectangle has an area of 20 × 14 = 280 cm². The triangles have areas of 6 × 4 ÷ 2 = 12 cm² and 5 × 8 ÷ 2 = 20 cm². 280 − 12 − 20 = 248 cm².",
+    "why": "The rectangle has an area of 18 × 15 = 270 cm². The triangles have areas of 6 × 5 ÷ 2 = 15 cm² and 4 × 8 ÷ 2 = 16 cm². 270 − 15 − 16 = 239 cm².",
     "date": "11-29"
    },
    {
@@ -7558,41 +7569,42 @@
      "kind": "marbles",
      "counts": [
       [
-       "red",
-       5
+       "egg",
+       6
       ],
       [
-       "blue",
-       3
+       "pineapple",
+       4
       ],
       [
-       "green",
+       "coconut",
        2
       ]
      ],
-     "color": "red",
+     "color": "egg",
      "draws": 2
     },
     "t": {},
     "fmt": "frac",
     "type": "n",
-    "ans": "2/9",
-    "shown": "2/9",
+    "ans": "5/22",
+    "shown": "5/22",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": true,
     "wrong": [
-     "11/9",
-     "20/9",
-     "4/9",
-     "1/9",
-     "92/9",
-     "13/18"
+     "27/22",
+     "49/22",
+     "5/11",
+     "5/44",
+     "225/22",
+     "8/11",
+     "25/11"
     ],
-    "q": "A bag has 5 red, 3 blue and 2 green marbles. Two marbles are taken out one after the other, without putting any back. What is the probability that both are red? Give your answer as a fraction in its simplest form.",
-    "hint": "For the first marble, there are 5 red out of 10. How many red and how many marbles are left for the second?",
-    "why": "First marble red: 5/10. Then 4 red out of 9 are left: 4/9. 5/10 × 4/9 = 20/90 = 2/9.",
+    "q": "A box has 6 egg tarts, 4 pineapple tarts and 2 coconut tarts. Mei takes two tarts one after the other without looking, and she does not put any back. What is the probability that both tarts are egg tarts? Give your answer as a fraction in its simplest form.",
+    "hint": "For the first tart, there are 6 egg tarts out of 12. How many egg tarts and how many tarts are left for the second?",
+    "why": "First tart egg: 6/12. Then 5 egg tarts out of 11 are left: 5/11. 6/12 × 5/11 = 30/132 = 5/22.",
     "date": "11-25"
    },
    {
@@ -7639,9 +7651,9 @@
     "date": "11-26"
    },
    {
-    "id": "L6-seabird",
+    "id": "L6-pondfish",
     "level": 6,
-    "frame": "seabird",
+    "frame": "pondfish",
     "kind": "neg_diff",
     "topic": "Negative numbers",
     "sub": "negative_numbers.distance_between",
@@ -7656,13 +7668,13 @@
     "fmt": "int",
     "type": "n",
     "ans": "37",
-    "shown": "37 m",
+    "shown": "37 cm",
     "units": [
-     "m",
-     "metre",
-     "metres",
-     "meter",
-     "meters"
+     "cm",
+     "centimetre",
+     "centimetres",
+     "centimeter",
+     "centimeters"
     ],
     "prefix": [],
     "accept": [],
@@ -7677,9 +7689,9 @@
      "27",
      "370"
     ],
-    "q": "A bird flies 22 m above sea level. A submarine is 15 m below sea level, directly under the bird. How many metres apart are they?",
-    "hint": "Sea level is 0. Count the distance above 0 and the distance below 0.",
-    "why": "The bird is 22 m above 0 and the submarine is 15 m below 0. 22 + 15 = 37 m.",
+    "q": "A dragonfly hovers 22 cm above the water of a pond. A fish swims directly below it, 15 cm under the surface of the water. How many centimetres apart are they?",
+    "hint": "The surface of the water is 0. Count the distance above 0 and the distance below 0.",
+    "why": "The dragonfly is 22 cm above 0 and the fish is 15 cm below 0. 22 + 15 = 37 cm.",
     "date": "11-27"
    },
    {
@@ -7778,15 +7790,15 @@
     "sub": "fractions.share_fraction",
     "family": "fractions",
     "p": {
-     "num": 7,
+     "num": 5,
      "den": 8,
-     "people": 3
+     "people": 4
     },
     "t": {},
     "fmt": "frac",
     "type": "n",
-    "ans": "7/24",
-    "shown": "7/24 L",
+    "ans": "5/32",
+    "shown": "5/32 L",
     "units": [
      "l",
      "litre",
@@ -7798,17 +7810,17 @@
     "accept": [],
     "exact": true,
     "wrong": [
-     "31/24",
-     "55/24",
-     "7/12",
-     "7/48",
-     "247/24",
-     "19/24",
-     "35/12"
+     "37/32",
+     "69/32",
+     "5/16",
+     "5/64",
+     "325/32",
+     "21/32",
+     "25/16"
     ],
-    "q": "A jug has 7/8 of a litre of juice left. Aisha pours it equally into 3 cups. How much juice, in litres, is in each cup?",
-    "hint": "Dividing by 3 means cutting each part of the juice into 3 smaller parts.",
-    "why": "7/8 ÷ 3 = 7/8 × 1/3 = 7/24 L. Each cup has 7/24 L of a litre.",
+    "q": "Mei has 5/8 of a litre of paint. She pours it equally into 4 small tubs. How many litres of paint are in each tub?",
+    "hint": "Dividing by 4 means cutting each part of the paint into 4 smaller parts.",
+    "why": "5/8 ÷ 4 = 5/8 × 1/4 = 5/32. Each tub has 5/32 of a litre.",
     "date": "11-30"
    }
   ]

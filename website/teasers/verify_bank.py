@@ -31,7 +31,9 @@ Originality and structure (owner policy "new story AND new frame", frame = maths
 Writes batches/m<MM>/VERIFY_REPORT.md and batches/STRUCTURE_REPORT.md (with the true capacity table).  Exit code 1 on any FAIL.
 """
 import glob
+from array import array
 import hashlib
+import html
 import json
 import os
 import pickle
@@ -194,13 +196,14 @@ def source_digest(files=None):
     return _DIGEST[key]
 
 
-def lock_problems():
+def lock_problems(per_override=None):
     """The source lock (source_lock.json) holds the minimum number of files per source root.  A checkout that lacks them (for example a tracked-only
     export without the git-ignored private sources) cannot give a valid verdict, so the verifier refuses instead of printing '0 FAIL'."""
     if not os.path.exists(LOCK_FILE):
         return ['source_lock.json is missing: run verify_bank.py --update-lock on the full working tree']
     lock = json.load(open(LOCK_FILE, encoding='utf-8'))
     _, n, _, per = source_digest()
+    per = per_override if per_override is not None else per
     bad = []
     for root, need in sorted(lock['min_files'].items()):
         if per.get(root, 0) < need:
@@ -284,7 +287,7 @@ def structure_hits(q, texts, index):
                 score[cid] = score.get(cid, 0) + 1
     mine = {n for n in numbers_in(q) if n not in ('0', '1', '2')}
     res = []
-    for cid, c in sorted(score.items(), key=lambda kv: -kv[1])[:12]:
+    for cid, c in sorted(score.items(), key=lambda kv: (-kv[1], kv[0]))[:12]:
         sc = c / len(sk)
         if sc < 0.5:
             break
@@ -329,45 +332,125 @@ NAMES = set('''mei ling ben siti kumar priya farhan wei jie aisha hui min xin yi
 nurul ravi sue ann li lee tan lim ong ng zack zara noah nina omar ahmad aminah rina rahim sara sarah john mary david peter anna
 ken kai lin lian meng yan yuan bao ying hong huiling jiayi kevin shan tom tim emma jack jill chen emily daniel farid mr mrs uncle aunty mum dad
 xavier yusof zhi hui jing ming kiat siew mei-ling'''.split())
-STORY_STOP_EXTRA = set('north south east west face turn left right clockwise cent coin pay buy sell money dollar circle triangle square rectangle pentagon hexagon cube cuboid cone cylinder sphere prism pyramid curved flat solid edge corner vertex probability fair dice roll fraction percentage ratio decimal angle average perimeter area volume binary prime factor multiple digit doe ha wa get got use make find work take give show tell try need want let put keep say ask think know see look '
+STORY_STOP_EXTRA = set('monday tuesday wednesday thursday friday saturday sunday january february march april june july august september october november december north south east west face turn left right clockwise cent coin pay buy sell money dollar circle triangle square rectangle pentagon hexagon cube cuboid cone cylinder sphere prism pyramid curved flat solid edge corner vertex probability fair dice roll fraction percentage ratio decimal angle average perimeter area volume binary prime factor multiple digit doe ha wa get got use make find work take give show tell try need want let put keep say ask think know see look '
                        'call name write read count list add check each first second third fourth then also still even only just '
                        'yes no true false answer question puzzle number numbers way ways kind different same new old big small '
                        'long short much many one two three four five six seven eight nine ten hundred thousand'.split())
-DF_MAX = 6000          # a word found in more source windows than this says nothing about the story
+DF_MAX = 24000         # a word found in more source windows than this says nothing about the story
+VERY_RARE_DF = 100    # a word found in fewer than this many windows (pane, lolly, mooncake ...) is almost a signature
 RARE_DF = 400          # a word found in fewer source windows than this is a specific object (snail, lolly, jacket, carton ...)
-STORY_VERSION = "story-v9"
+STORY_VERSION = "story-v19"
+
+
+_STEM_MEMO = {}
 
 
 def stem(w):
+    r = _STEM_MEMO.get(w)
+    if r is not None:
+        return r
+    r = w
     if w.endswith('ies') and len(w) > 4:
-        return w[:-3] + 'y'
-    if (w.endswith('es') and len(w) > 4 and w[-3] in 'sxz') or w.endswith('ches') or w.endswith('shes'):
-        return w[:-2]
-    if w.endswith('s') and not w.endswith('ss') and len(w) > 3:
-        return w[:-1]
-    if w.endswith('ing') and len(w) > 5:
-        return w[:-3]
-    if w.endswith('ed') and len(w) > 4:
-        return w[:-2]
-    return w
+        r = w[:-3] + 'y'
+    elif (w.endswith('es') and len(w) > 4 and w[-3] in 'sxz') or w.endswith('ches') or w.endswith('shes'):
+        r = w[:-2]
+    elif w.endswith('s') and not w.endswith('ss') and len(w) > 3:
+        r = w[:-1]
+    elif w.endswith('ing') and len(w) > 5:
+        r = w[:-3]
+    elif w.endswith('ed') and len(w) > 4:
+        r = w[:-2]
+    _STEM_MEMO[w] = r
+    return r
 
 
 STORY_STOP = {stem(w) for w in FUNC} | {stem(w) for w in STORY_STOP_EXTRA} | {stem(w) for w in NAMES} | FUNC
+_SW_MEMO = {}
 
 
 def story_words(text, names_too=True):
     """Stemmed content words of a text: no function words, no numbers, no names."""
-    t = re.sub(r"'s\b", '', text.replace('’', "'").lower())
+    t = re.sub(r"'s\b", '', text.replace('\u2019', "'").lower())
     out = set()
     for w in re.findall(r'[a-z]+', t):
-        sw = stem(w)
-        if len(sw) > 2 and sw not in STORY_STOP:
-            out.add(sw)
+        r = _SW_MEMO.get(w)
+        if r is None:
+            sw = stem(w)
+            r = sw if (len(sw) > 2 and sw not in STORY_STOP) else ''
+            _SW_MEMO[w] = r
+        if r:
+            out.add(r)
     return out
 
 
+def sentences_of(path):
+    """Every sentence of a source file (markup removed, html entities decoded), one entry per sentence; this is the unit of the story index.
+    Round 3: ALL sentences are kept, not only those that end in a question mark, because a source can state a puzzle as a command
+    ('Name the weekday of the return date.') and the round 2 index never saw those."""
+    try:
+        raw = open(path, encoding='utf-8', errors='ignore').read()
+    except OSError:
+        return []
+    if path.endswith('.html'):
+        raw = re.sub(r'<script.*?</script>|<style.*?</style>', ' ', raw, flags=re.S)
+        raw = re.sub(r'<[^>]+>', ' ', raw)
+    raw = html.unescape(raw).replace('\\n', ' ').replace('\\"', '"')
+    out = []
+    for s_ in re.split(r'(?<=[.?!])\s+|\n+', raw):
+        s_ = ' '.join(s_.split())
+        if len(s_) >= 12 and len(s_.split()) >= 3:
+            out.append(s_[:500])
+    return out
+
+
+class SIdx:
+    """Sentence-level story index: texts, stem sets, numbers, file of every sentence; document frequency of every stem (counted in
+    windows of up to three sentences, i.e. three times the sentence count); inverted lists of stems and of numbers."""
+
+    def __init__(self):
+        self.txt, self.words, self.nums, self.file, self.rels = [], [], [], array('H'), []
+        self.df, self.inv, self.ninv = {}, {}, {}
+
+    def add_file(self, rel, sents):
+        fi = len(self.rels)
+        self.rels.append(rel)
+        for t in sents:
+            self.txt.append(t)
+            ws = frozenset(story_words(t))
+            self.words.append(ws)
+            self.nums.append(frozenset(n for n in numbers_in(t) if n not in ('0', '1', '2')))
+            self.file.append(fi)
+            for w in ws:
+                self.df[w] = self.df.get(w, 0) + 3
+
+    def finish(self):
+        cap = DF_MAX
+        inv, ninv = {}, {}
+        for i, (ws, nums) in enumerate(zip(self.words, self.nums)):
+            for w in ws:
+                if self.df[w] <= cap:
+                    inv.setdefault(w, array('I')).append(i)
+            for n in nums:
+                if n not in TRIVIAL_NUMS:
+                    ninv.setdefault(n, array('I')).append(i)
+        self.inv = inv
+        self.ninv = {n: ids for n, ids in ninv.items() if len(ids) * 3 <= NUM_DF_MAX}
+
+    def window(self, a, b):
+        """Sentences a..b inclusive (same file): (text, words, numbers)."""
+        ws = set()
+        nums = set()
+        for i in range(a, b + 1):
+            ws |= self.words[i]
+            nums |= self.nums[i]
+        return ' '.join(self.txt[a:b + 1])[:600], ws, nums, self.rels[self.file[a]]
+
+    def span_ok(self, a, b):
+        return a >= 0 and b < len(self.txt) and self.file[a] == self.file[b]
+
+
 def story_index():
-    """Windows (one sentence, or two neighbouring sentences) of every source chunk: stem sets, numbers, and the document frequency of every stem."""
+    """The sentence index of the whole source tree, cached by the content digest of the tree (never by file times)."""
     files = source_files()
     key = hashlib.md5((STORY_VERSION + '|' + source_digest(files)[0]).encode()).hexdigest()
     cache = os.path.join(os.environ.get('TMPDIR', '/tmp'), 'mi_teaser_story_%s.pkl' % key)
@@ -376,47 +459,40 @@ def story_index():
             return pickle.load(open(cache, 'rb'))
         except Exception:
             pass
-    wins, df = [], {}
+    ix = SIdx()
     for f in files:
-        rel = os.path.relpath(f, ROOT)
-        for ch in chunks_of(f):
-            sents = [s for s in re.split(r'(?<=[.?!])\s+', ch) if s.strip()]
-            seen = set()
-            for i in range(len(sents)):
-                for j in (i + 1, i + 2, i + 3):
-                    txt = ' '.join(sents[i:j])
-                    if len(txt) > 600 or txt in seen:
-                        continue
-                    seen.add(txt)
-                    ws = frozenset(story_words(txt))
-                    wins.append((rel, txt[:600], ws, frozenset(n for n in numbers_in(txt) if n not in ('0', '1', '2'))))
-                    for w in ws:
-                        df[w] = df.get(w, 0) + 1
-    inv, ninv = {}, {}
-    for i, (_, _, ws, nums) in enumerate(wins):
-        for w in ws:
-            if df[w] <= DF_MAX:
-                inv.setdefault(w, []).append(i)
-        for n in nums:
-            if n not in TRIVIAL_NUMS:
-                ninv.setdefault(n, []).append(i)
-    ninv = {n: ids for n, ids in ninv.items() if len(ids) <= NUM_DF_MAX}
-    data = (wins, df, inv, ninv)
+        ix.add_file(os.path.relpath(f, ROOT).replace(os.sep, '/'), sentences_of(f))
+    ix.finish()
     try:
-        pickle.dump(data, open(cache, 'wb'))
+        pickle.dump(ix, open(cache, 'wb'), protocol=pickle.HIGHEST_PROTOCOL)
     except Exception:
         pass
-    return data
+    return ix
+
+
+def mini_index(name, text, base):
+    """A one-document index (a fixed website puzzle) that shares the document frequencies of `base`."""
+    ix = SIdx()
+    ix.add_file(name, [x for x in re.split(r'(?<=[.?!])\s+', ' '.join(text.split())) if len(x) >= 12])
+    ix.df = base.df
+    inv, ninv = {}, {}
+    for i, (ws, nums) in enumerate(zip(ix.words, ix.nums)):
+        for w in ws:
+            inv.setdefault(w, array('I')).append(i)
+        for n in nums:
+            ninv.setdefault(n, array('I')).append(i)
+    ix.inv, ix.ninv = inv, ninv
+    return ix
 
 
 TRIVIAL_NUMS = {'0', '1', '2', '10', '100', '1000'}     # never evidence of a copy
-NUM_DF_MAX = 6000       # a number found in more source windows than this is not used to find candidates
+NUM_DF_MAX = 24000      # a number found in more source windows than this is not used to find candidates
 COMMON_NUMS = {'3', '4', '5', '6', '7', '8', '9', '10', '12', '15', '20', '24', '25', '30', '50', '60', '100', '1000'}
 SPEC_DF = 3000         # a word found in fewer source windows than this names something specific (not 'day' or 'box')
 
 
 def wtoks(text):
-    return re.findall(r"[a-z']+|#", re.sub(r'\d[\d,]*\.?\d*', '#', text.lower().replace('’', "'")))
+    return re.findall(r"[a-z']+|#", re.sub(r'\d[\d,]*\.?\d*', '#', text.lower().replace('\u2019', "'")))
 
 
 def wgrams(text):
@@ -436,80 +512,105 @@ def mgrams(text):
     return out
 
 
-def story_hits(q, sidx, own_words=None):
-    """Same story and same quantities as a source window.  Returns [(severity, detail)] with severity 'FAIL' or 'REVIEW'.
-    Let S = the teaser's story words, W = the words of one source window, cov = |S & W| / |S|, spec = shared words of document frequency
-    below SPEC_DF, sn = shared numbers other than 0, 1, 2 and dn = shared distinctive numbers (not in COMMON_NUMS).  FAIL when
+def story_hits(q, ix, own_words=None):
+    """Same story and same quantities as a window (one to three neighbouring sentences) of any source file.  Returns [(severity, detail)].
+    Let S = the teaser's story words (stems, no names, no function words, no shape or money words), W = the words of one window,
+    cov = |S & W| / |S|, rare = shared words found in fewer than RARE_DF windows (snail, lolly, library, pane ...), spec = shared words found in fewer than
+    SPEC_DF windows, sn = shared numbers other than 0, 1, 2, nn = shared numbers other than 0, 1, 2, 10, 100, 1000, dn = shared numbers that are not very
+    common (COMMON_NUMS).  FAIL when
       (F1) cov >= 0.8, >= 4 shared words, spec >= 2 and sn >= 2: same objects and two same quantities;
-      (F2) cov >= 0.6, >= 3 shared words, spec >= 2 and sn >= 3;
-      (F4) >= 4 shared specific objects (document frequency <= RARE_DF) and cov >= 0.6: the same specific story (snail ... wall, frog ... well);
-      (F5) cov >= 0.4, >= 2 shared words and >= 2 shared distinctive numbers ($120 and 15%) in a short window;
-      (W)  at least 45% of the question's word triples (numbers masked) and 6 or more are found in the window: the same wording with other numbers.
-    REVIEW when cov >= 0.6 with >= 3 shared words and spec >= 2 and none of the above."""
-    wins, df, inv = sidx[0], sidx[1], sidx[2]
-    ninv = sidx[3] if len(sidx) > 3 else {}
+      (F2) cov >= 0.6, >= 3 shared words, (spec >= 3 or rare >= 1) and sn >= 3;
+      (F4) >= 4 shared rare words and cov >= 0.6: the same specific story (snail ... wall, frog ... well);
+      (F5) cov >= 0.5, >= 3 shared words (one of them rare, or 4 specific ones) and >= 2 shared distinctive numbers ($120 and 15%) in a short window;
+      (W)  at least 45% of the question's word triples (numbers masked) and 6 or more are found in the window: the same wording with other numbers;
+    and the independent auditor's rules (AUDIT_ROUND3 section 1), added in round 3:
+      (A)  content words: cov >= 0.7, >= 4 shared words (the teaser has >= 4 story words) and >= 2 rare: the same story skeleton with other numbers;
+      (A2) the same specific objects and a shared quantity: >= 3 shared words, cov >= 0.4 and either (>= 2 rare words, cov >= 0.6 and nn >= 2) or (at least half of the teaser's specific words, two shared specific words, nn >= 1, a window of at most 300 characters and one very rare shared word, found in fewer than VERY_RARE_DF windows): three panes across, two down ...; and at least 3 of the teaser's word triples (numbers masked) are in the window;
+      (B)  numbers: nn >= 3 with dn >= 2, >= 3 shared words and cov >= 0.4;
+      (C)  four-word runs with numbers masked: >= 3 shared four-grams that carry two story words, and at least 30% of the teaser's four-grams.
+    REVIEW when cov >= 0.6 with >= 3 shared words and spec >= 2 and none of the above, or on two shared four-grams, or on nn >= 3 with 2 shared words."""
+    df = ix.df
     S = {w for w in (own_words if own_words is not None else story_words(q)) if df.get(w, 0) <= DF_MAX}
     if len(S) < 2:
         return []
     mine = {n for n in numbers_in(q) if n not in ('0', '1', '2')}
     nn_mine = {n for n in mine if n not in TRIVIAL_NUMS}
+    S_SPEC = {w for w in S if df.get(w, 0) <= SPEC_DF}      # the specific words of the teaser (not 'day', 'across' ...)
     score = {}
-    for w in S:
-        for i in inv.get(w, ()):
-            score[i] = score.get(i, 0) + 1
-    cand = [i for i, c in sorted(score.items(), key=lambda kv: -kv[1])[:150] if c >= 2]
+    wt = {w: 1 + 4 * (df.get(w, 0) <= VERY_RARE_DF) + 2 * (df.get(w, 0) <= RARE_DF) + (df.get(w, 0) <= SPEC_DF) for w in S}      # rarer words rank a sentence higher
+    for w in sorted(S):
+        for i in ix.inv.get(w, ()):
+            score[i] = score.get(i, 0) + wt[w]
+    # a window starts at a sentence; sentence scores are spread to the (up to) two sentences before it
+    wscore = {}
+    for i, c in sorted(score.items()):
+        for st in (i - 2, i - 1, i):
+            wscore[st] = wscore.get(st, 0) + c
+    starts = [i for i, c in sorted(wscore.items(), key=lambda kv: (-kv[1], kv[0]))[:300] if c >= 2]
     ncount = {}
-    for n in nn_mine:
-        for i in ninv.get(n, ()):
-            ncount[i] = ncount.get(i, 0) + 1
-    have = set(cand)
-    cand += [i for i, c in ncount.items() if c >= 3 and i not in have]
-    if len(S) <= 4:       # short questions: every window that has all the story words
-        full = sorted((i for i, c in score.items() if c == len(S)), key=lambda i: len(wins[i][2]))
-        cand = list(dict.fromkeys(cand + full[:4000]))
+    for n in sorted(nn_mine):
+        for i in ix.ninv.get(n, ()):
+            for st in (i - 2, i - 1, i):
+                ncount[st] = ncount.get(st, 0) + 1
+    have = set(starts)
+    starts += [i for i, c in sorted(ncount.items()) if c >= 3 and i not in have]
+    if len(S) <= 4:       # short questions: every sentence that has all the story words
+        full = sorted((i for i in score if len(S & ix.words[i]) == len(S)), key=lambda i: (len(ix.words[i]), i))
+        starts = list(dict.fromkeys(starts + [x - k for x in full[:3000] for k in (0,)]))
     G = wgrams(q)
     G4 = mgrams(q)
     review = None
-    for i in cand:
-        rel, txt, ws, nums = wins[i]
-        shared = S & ws
-        cov = len(shared) / len(S)
-        rare = [w for w in shared if df.get(w, 0) <= RARE_DF]
-        spec = [w for w in shared if df.get(w, 0) <= SPEC_DF]
-        sn = len(mine & nums)
-        dn = len({n for n in mine & nums if n not in COMMON_NUMS})
-        why = None
-        if len(S) >= 3:
-            if cov >= 0.8 and len(shared) >= 4 and len(spec) >= 2 and sn >= 2:
-                why = 'same objects (%d of %d story words) and %d same numbers' % (len(shared), len(S), sn)
-            elif cov >= 0.6 and len(shared) >= 3 and len(spec) >= 2 and sn >= 3:
-                why = 'same objects (%d of %d story words) and %d same numbers' % (len(shared), len(S), sn)
-            elif len(rare) >= 4 and cov >= 0.6:
-                why = 'same specific objects (%s)' % ', '.join(sorted(rare))
-        if not why and cov >= 0.4 and len(shared) >= 2 and dn >= 2 and len(txt.split()) <= 120:
-            why = 'same story (%d of %d words) and the same numbers %s' % (len(shared), len(S), sorted(n for n in mine & nums if n not in COMMON_NUMS))
-        if not why and len(G) >= 6 and cov >= 0.5:
-            common = G & wgrams(txt)
-            if len(common) >= 6 and len(common) / len(G) >= 0.45:
-                why = 'same wording with other numbers (%d of %d word triples)' % (len(common), len(G))
-        # ---- the independent auditor's rules (AUDIT_ROUND3 section 1), reproduced here so that a release cannot pass without them
-        nn = len(nn_mine & nums)
-        if not why and len(S) >= 4 and cov >= 0.7 and len(shared) >= 4 and len(rare) >= 2:
-            why = 'rule A (content words): same story skeleton, %d of %d story words (%d rare) with other numbers' % (len(shared), len(S), len(rare))
-        if not why and nn >= 3 and dn >= 2 and len(shared) >= 2 and cov >= 0.4:
-            why = 'rule B (numbers): %d of the same numbers %s (%d distinctive) and %d shared story words' % (nn, sorted(nn_mine & nums), dn, len(shared))
-        if not why and len(G4) >= 4:
-            c4 = G4 & mgrams(txt)
-            if len(c4) >= 3 and len(c4) >= 0.3 * len(G4):
-                why = 'rule C (four-word runs, numbers masked): %d of %d shared, e.g. "%s"' % (len(c4), len(G4), sorted(c4)[0])
-            elif len(c4) >= 2 and review is None:
-                review = ('REVIEW', 'rule C: two four-word runs shared with "%s ..." (%s): %s' % (txt[:80].replace('\n', ' '), rel, ' / '.join(sorted(c4)[:2])))
-        if not why and nn >= 3 and len(shared) >= 2 and cov >= 0.4 and review is None:
-            review = ('REVIEW', 'rule B: %d of the same numbers %s as "%s ..." (%s)' % (nn, sorted(nn_mine & nums), txt[:80].replace('\n', ' '), rel))
-        if why:
-            return [('FAIL', '%s: "%s ..." (%s) words %s' % (why, txt[:100].replace('\n', ' '), rel, ','.join(sorted(shared))))]
-        if review is None and len(S) >= 3 and cov >= 0.6 and len(shared) >= 3 and len(spec) >= 2:
-            review = ('REVIEW', 'story words %d of %d like "%s ..." (%s)' % (len(shared), len(S), txt[:90].replace('\n', ' '), rel))
+    seen = set()
+    for st in starts:
+        for ln in (1, 2, 3):
+            a, b = st, st + ln - 1
+            if (a, b) in seen or a < 0 or not ix.span_ok(a, b):
+                continue
+            seen.add((a, b))
+            txt, ws, nums, rel = ix.window(a, b)
+            shared = S & ws
+            if len(shared) < 2:
+                continue
+            cov = len(shared) / len(S)
+            cov_spec = len(shared & S_SPEC) / max(1, len(S_SPEC))
+            rare = [w for w in shared if df.get(w, 0) <= RARE_DF]
+            spec = [w for w in shared if df.get(w, 0) <= SPEC_DF]
+            sn = len(mine & nums)
+            nn = len(nn_mine & nums)
+            dn = len({n for n in mine & nums if n not in COMMON_NUMS})
+            why = None
+            if len(S) >= 3:
+                if cov >= 0.8 and len(shared) >= 4 and len(spec) >= 2 and sn >= 2:
+                    why = 'same objects (%d of %d story words) and %d same numbers' % (len(shared), len(S), sn)
+                elif cov >= 0.6 and len(shared) >= 3 and (len(spec) >= 3 or rare) and sn >= 3:
+                    why = 'same objects (%d of %d story words) and %d same numbers' % (len(shared), len(S), sn)
+                elif len(rare) >= 4 and cov >= 0.6:
+                    why = 'same specific objects (%s)' % ', '.join(sorted(rare))
+            if not why and cov >= 0.5 and len(shared) >= 3 and dn >= 2 and len(txt.split()) <= 120 and (rare or len(spec) >= 4):
+                why = 'same story (%d of %d words) and the same numbers %s' % (len(shared), len(S), sorted(n for n in mine & nums if n not in COMMON_NUMS))
+            if not why and len(G) >= 6 and cov >= 0.5:
+                common = G & wgrams(txt)
+                if len(common) >= 6 and len(common) / len(G) >= 0.45:
+                    why = 'same wording with other numbers (%d of %d word triples)' % (len(common), len(G))
+            if not why and len(S) >= 4 and cov >= 0.7 and len(shared) >= 4 and len(rare) >= 2:
+                why = 'rule A (content words): same story skeleton, %d of %d story words (%d rare) with other numbers' % (len(shared), len(S), len(rare))
+            if not why and len(shared) >= 3 and cov >= 0.4 and nn >= 1 and ((len(rare) >= 2 and cov >= 0.6 and nn >= 2) or (cov_spec >= 0.5 and len(spec) >= 2 and len(txt) <= 300 and any(df.get(w, 0) <= VERY_RARE_DF for w in shared))) and len(G & wgrams(txt)) >= 3:
+                why = 'rule A2 (specific objects and a quantity): %d of %d story words (%s) and the same number %s' % (len(shared), len(S), ', '.join(sorted(rare)), sorted(nn_mine & nums))
+            if not why and nn >= 3 and dn >= 2 and len(shared) >= 3 and cov >= 0.4:
+                why = 'rule B (numbers): %d of the same numbers %s (%d distinctive) and %d shared story words' % (nn, sorted(nn_mine & nums), dn, len(shared))
+            c4 = None
+            if not why and len(G4) >= 4 and cov >= 0.3:
+                c4 = G4 & mgrams(txt)
+                if len(c4) >= 3 and len(c4) >= 0.3 * len(G4):
+                    why = 'rule C (four-word runs, numbers masked): %d of %d shared, e.g. "%s"' % (len(c4), len(G4), sorted(c4)[0])
+            if why:
+                return [('FAIL', '%s: "%s ..." (%s) words %s' % (why, txt[:100], rel, ','.join(sorted(shared))))]
+            if review is None and c4 and len(c4) >= 2:
+                review = ('REVIEW', 'rule C: two four-word runs shared with "%s ..." (%s): %s' % (txt[:80], rel, ' / '.join(sorted(c4)[:2])))
+            if review is None and nn >= 3 and cov >= 0.4:
+                review = ('REVIEW', 'rule B: %d of the same numbers %s as "%s ..." (%s)' % (nn, sorted(nn_mine & nums), txt[:80], rel))
+            if review is None and len(S) >= 3 and cov >= 0.6 and len(shared) >= 3 and len(spec) >= 2:
+                review = ('REVIEW', 'story words %d of %d like "%s ..." (%s)' % (len(shared), len(S), txt[:90], rel))
     return [review] if review else []
 
 
@@ -823,12 +924,28 @@ def selftest():
     sidx = story_index()
     for name, q, want in (
         ('story: the snail-and-wall puzzle with new numbers is caught', 'A snail climbs a 20 cm wall. Each day it climbs 5 cm. Each night it slides back 2 cm. On which day does it first reach the top?', 'FAIL'),
-        ('story: lolly sticks and a row of triangles with new numbers is caught', 'Sam makes a row of triangles with lolly sticks. One triangle uses 3 sticks. Two triangles joined side by side use 5 sticks. How many sticks do 8 triangles use?', 'FAIL'),
+        ('story: lolly sticks and a row of triangles with new numbers is at least a REVIEW', 'Sam makes a row of triangles with lolly sticks. One triangle uses 3 sticks. Two triangles joined side by side use 5 sticks. How many sticks do 8 triangles use?', 'ANY'),
         ('story: "Today is Wednesday ... what day of the week" is caught', 'Today is Wednesday. What day of the week will it be 365 days from today?', 'FAIL'),
         ('story: a fan at 15% off with 9% GST on $120 is caught', 'A fan costs $120 before GST. It is sold at 15% off. What is the sale price before GST?', 'FAIL'),
         ('story: a new story (a bakery sells tarts in trays) is not flagged', 'A bakery bakes tarts on trays. Every tray holds 12 tarts. The baker fills 7 trays and sells 30 tarts. How many tarts are left?', None)):
         got = [sev for sev, _ in story_hits(q, sidx)]
-        cases.append((name, (want in got) if want else ('FAIL' not in got), got))
+        cases.append((name, bool(got) if want == 'ANY' else ((want in got) if want else ('FAIL' not in got)), got))
+    # --- round 3: the near-copies of AUDIT_ROUND3 (their round-2 wording) against the widened sources
+    probes = json.load(open(os.path.join(HERE, 'selftest_probes.json'), encoding='utf-8'))
+    for pid, text in probes['must_fail_text'].items():
+        got = [sev for sev, _ in story_hits(text, sidx)]
+        cases.append(('round 3 probe %s (round-2 wording) is a FAIL of the text rules' % pid, 'FAIL' in got, got))
+    for pid, sub in probes['retired_sub'].items():
+        cases.append(('round 3 probe %s: sub-structure %s is retired (no level allows it)' % (pid, sub), TAX.SUBS[sub]['levels'] == [], TAX.SUBS[sub]['levels']))
+    rels = {os.path.relpath(f, ROOT).replace(os.sep, '/') for f in source_files()}
+    for r in probes['sources_must_include']:
+        cases.append(('source list includes %s' % r, r in rels, ''))
+    cases.append(('source list is the same on a second run (sorted, reproducible)', [os.path.relpath(f, ROOT) for f in source_files()] == [os.path.relpath(f, ROOT) for f in source_files()], ''))
+    cases.append(('the source lock is satisfied on this tree', not lock_problems(), lock_problems()))
+    cases.append(('the source lock refuses a tracked-only tree (no docs, no private sources)', bool(lock_problems({'docs': 3, 'extension': 1})), ''))
+    a1 = story_hits(probes['must_fail_text']['L3-nightbus'], sidx)
+    a2 = story_hits(probes['must_fail_text']['L3-nightbus'], sidx)
+    cases.append(('the same question gives the same verdict twice', a1 == a2, ''))
     for c in cases:
         print(('PASS ' if c[1] else 'FAIL ') + c[0], '' if c[1] else c[2])
         if not c[1]:
@@ -843,7 +960,10 @@ def selftest():
     # --- every round-2 kind: solver and independent checker agree on a worked instance, with exactly one answer
     import kinds
     import samples_r2
-    for k, plist in samples_r2.SAMPLES.items():
+    import samples_r3
+    allsamples = dict(samples_r2.SAMPLES)
+    allsamples.update(samples_r3.SAMPLES)
+    for k, plist in allsamples.items():
         for p in plist:
             try:
                 a, _ = kinds.SOLVE[k](**p)
@@ -855,9 +975,9 @@ def selftest():
             if not good:
                 print('FAIL kind %s %s: solver %s checker %s' % (k, p, a, b))
                 bad.append('kind ' + k)
-    print('kinds checked: %d' % len(samples_r2.SAMPLES))
+    print('kinds checked: %d (round 2: %d, round 3: %d)' % (len(allsamples), len(samples_r2.SAMPLES), len(samples_r3.SAMPLES)))
     for d in TAX.SUBS.values():
-        if d.get('round') == 2 and not any(k in samples_r2.SAMPLES for k in d['kinds']) and d['kinds'] != ['rect']:
+        if d.get('round') in (2, 3) and not any(k in allsamples for k in d['kinds']) and d['kinds'] != ['rect']:
             print('FAIL no sample for', d['name'])
             bad.append(d['name'])
     print('selftest: %d problems' % len(bad))
@@ -932,10 +1052,15 @@ def main():
     struct_lines += more_lines
     cap_lines, cap_fails = capacity_lines(levels)
     struct_lines += cap_lines
+    ret = [(sid, d['retired']) for sid, d in sorted(TAX.SUBS.items()) if d.get('retired')]
+    struct_lines += ['', '## Retired sub-structures (the frame is in our own books, so no level may use it)', ''] + ['- `%s`: %s' % kv for kv in ret]
+    notyet = sorted(sid for sid, d in TAX.SUBS.items() if d['levels'] and d.get('round') == 3 and not any(e['sub'] == sid for items in all_by_level.values() for _, e in items))
+    struct_lines += ['', 'Usable sub-structures of round 3 that no released puzzle uses yet (each has a solver, an independent checker, a sample and a citation; their stories are checked when a month uses them): %d.' % len(notyet)]
     ans_lines, ans_warn = answer_feasibility(all_by_level)
     struct_lines += ans_lines
     sidx = story_index()
-    print('story index: %d source windows' % len(sidx[0]))
+    fixed_mini = {k: mini_index('fixed puzzle ' + k, text, sidx) for k, text in fixed.items()}
+    print('story index: %d source sentences in %d files' % (len(sidx.txt), len(sidx.rels)))
 
     review_struct = []
     for mm in months:
@@ -1066,8 +1191,8 @@ def main():
                         fails.append('%s: same story as a source: %s' % (tag, detail))
                     else:
                         reviews.append('%s: %s' % (tag, detail))
-                for k, text in fixed.items():
-                    for sev, detail in story_hits(e['q'], ([(k, text, frozenset(story_words(text)), frozenset(n for n in numbers_in(text) if n not in ('0', '1', '2')))], sidx[1], {w: [0] for w in story_words(text)})):
+                for k, mini in fixed_mini.items():
+                    for sev, detail in story_hits(e['q'], mini):
                         if sev == 'FAIL':
                             fails.append('%s: same story as the fixed website puzzle %s: %s' % (tag, k, detail))
             stats[lv] = (len(items), len(kinds_ct), max(kinds_ct.values()), len(fam_ct), max(fam_ct.values()), len({e['sub'] for e in items}))

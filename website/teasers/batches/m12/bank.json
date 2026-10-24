@@ -205,9 +205,9 @@
      "15",
      "50"
     ],
-    "q": "Mei rolls a red die and a blue die. The two numbers add up to 8. A red 2 and a blue 6 is different from a red 6 and a blue 2. How many different ways can this happen?",
-    "hint": "List the red number first. Try red 2, red 3 and so on, and ask what the blue number must be.",
-    "why": "The pairs (red, blue) are 2 and 6, 3 and 5, 4 and 4, 5 and 3, and 6 and 2. That is 5 ways.",
+    "q": "Mei rolls a yellow die and a green die. The two numbers add up to 8. A yellow 2 and a green 6 is different from a yellow 6 and a green 2. How many different ways can this happen?",
+    "hint": "List the yellow number first. Try yellow 2, yellow 3 and so on, and ask what the green number must be.",
+    "why": "The pairs (yellow, green) are 2 and 6, 3 and 5, 4 and 4, 5 and 3, and 6 and 2. That is 5 ways.",
     "date": "12-05"
    },
    {
@@ -302,18 +302,18 @@
     "family": "missing_number",
     "p": {
      "left": [
-      24,
-      19
+      28,
+      15
      ],
      "right": [
-      17
+      16
      ]
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "26",
-    "shown": "26 counters",
+    "ans": "27",
+    "shown": "27 counters",
     "units": [
      "counters",
      "counter"
@@ -322,19 +322,18 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "27",
-     "25",
      "28",
-     "24",
-     "52",
-     "13",
-     "36",
-     "16",
-     "260"
+     "26",
+     "29",
+     "25",
+     "54",
+     "37",
+     "17",
+     "270"
     ],
-    "q": "Two trays hold the same number of counters. The first tray has 24 red counters and 19 blue counters. The second tray has 17 yellow counters and some green counters. How many green counters are there?",
+    "q": "Two trays hold the same number of counters. The first tray has 28 red counters and 15 blue counters. The second tray has 16 yellow counters and some green counters. How many green counters are there?",
     "hint": "Find how many counters are in the first tray. The second tray must have the same.",
-    "why": "24 + 19 = 43. The second tray must also have 43, so 17 + 26 = 43. There are 26 counters green ones.",
+    "why": "28 + 15 = 43. The second tray must also have 43, so 16 + 27 = 43. So 27 counters are green.",
     "date": "12-08"
    },
    {
@@ -438,9 +437,9 @@
      "54.5",
      "540"
     ],
-    "q": "A toy car costs $9 at both Shop A and Shop B. Shop B gives 1 car free for every 3 cars you buy. Dina needs 8 cars and shops where she pays less. How much does she pay?",
+    "q": "A model boat costs $9 at both Shop A and Shop B. Shop B gives 1 boat free for every 3 boats you buy. Dina needs 8 boats and shops where she pays less. How much does she pay?",
     "hint": "Work out what Dina pays at Shop A. Then work out what she pays at Shop B.",
-    "why": "Shop A: 8 × $9 = $72. At Shop B every 4 cars cost only 3 cars' money, so 8 cars cost 2 × 3 × $9 = $54. Shop B is cheaper, so Dina pays $54.",
+    "why": "Shop A: 8 × $9 = $72. At Shop B every 4 boats cost only 3 boats' money, so 8 boats cost 2 × 3 × $9 = $54. Shop B is cheaper, so Dina pays $54.",
     "date": "12-10"
    },
    {
@@ -836,7 +835,7 @@
     "sub": "missing_number.missing_digit",
     "family": "missing_number",
     "p": {
-     "eq": "3?+28=64"
+     "eq": "4?+25=71"
     },
     "t": {},
     "fmt": "int",
@@ -857,9 +856,9 @@
      "16",
      "60"
     ],
-    "q": "One digit in this sum is hidden: 3_ + 28 = 64. Which digit goes in the blank?",
-    "hint": "Look at the ones column: 8 plus what digit gives a number that ends in 4?",
-    "why": "Check 36 + 28 = 64. The hidden digit is 6.",
+    "q": "A sticker covers one digit in this sum: 4? + 25 = 71. Which digit is under the sticker?",
+    "hint": "Look at the ones column: 5 plus what digit gives a number that ends in 1?",
+    "why": "Check 46 + 25 = 71. The digit under the sticker is 6.",
     "date": "12-20"
    },
    {
@@ -1577,9 +1576,9 @@
     "date": "12-04"
    },
    {
-    "id": "L2-beanleaves",
+    "id": "L2-lilypatch",
     "level": 2,
-    "frame": "beanleaves",
+    "frame": "lilypatch",
     "kind": "doubling",
     "topic": "Growing patterns",
     "sub": "growing_pattern.doubling",
@@ -1592,10 +1591,15 @@
     "fmt": "int",
     "type": "n",
     "ans": "48",
-    "shown": "48 leaves",
+    "shown": "48 m²",
     "units": [
-     "leaves",
-     "leave"
+     "m²",
+     "m2",
+     "m^2",
+     "sq m",
+     "square m",
+     "square metres",
+     "square meters"
     ],
     "prefix": [],
     "accept": [],
@@ -1611,9 +1615,9 @@
      "38",
      "480"
     ],
-    "q": "A bean plant has 3 leaves in week 1. The number of leaves doubles every week. How many leaves does the plant have in week 5?",
-    "hint": "Doubling means two times as many. Write down the leaves for each week.",
-    "why": "Week 1 has 3, then doubling each week: 3, 6, 12, 24, 48. Week 5 has 48 leaves.",
+    "q": "A lily patch covers 3 square metres of a pond in week 1. The patch doubles in size every week. How many square metres does it cover in week 5?",
+    "hint": "Doubling means two times as big. Write down the size for each week.",
+    "why": "Week 1 is 3, then doubling each week: 3, 6, 12, 24, 48. Week 5 is 48 m².",
     "date": "12-05"
    },
    {
@@ -1816,10 +1820,10 @@
     "fmt": "int",
     "type": "n",
     "ans": "41",
-    "shown": "41 tiles",
+    "shown": "41 patches",
     "units": [
-     "tiles",
-     "tile"
+     "patches",
+     "patche"
     ],
     "prefix": [],
     "accept": [],
@@ -1834,9 +1838,9 @@
      "31",
      "410"
     ],
-    "q": "A hall floor has 9 rows of 9 square tiles. The tiles are dark and light in turns along every row and every column, like a chessboard. The top left tile is dark. How many dark tiles are there?",
-    "hint": "Count all the tiles first. Dark and light tiles take turns.",
-    "why": "There are 9 × 9 = 81 tiles. Dark and light take turns and the first tile is dark, so there is one more dark tile than light tiles. 81 + 1 = 82, and 82 ÷ 2 = 41 tiles.",
+    "q": "Mum sews a quilt from 9 rows of 9 square patches. The patches are dark and light in turns along every row and every column, and the top left patch is dark. How many dark patches are there?",
+    "hint": "Count all the patches first. Dark and light patches take turns.",
+    "why": "There are 9 × 9 = 81 patches. Dark and light take turns and the first patch is dark, so there is one more dark patch than light patches. 81 + 1 = 82, and 82 ÷ 2 = 41 patches.",
     "date": "12-10"
    },
    {
@@ -2143,33 +2147,32 @@
     "sub": "guess_check.sum_product",
     "family": "guess_check",
     "p": {
-     "s": 33,
-     "p": 270,
+     "s": 13,
+     "p": 40,
      "ask": "larger"
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "18",
-    "shown": "18",
+    "ans": "8",
+    "shown": "8",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "19",
-     "17",
-     "20",
-     "16",
-     "36",
      "9",
-     "28",
-     "8",
-     "180"
+     "7",
+     "10",
+     "6",
+     "16",
+     "4",
+     "18",
+     "80"
     ],
-    "q": "Two whole numbers add up to 33. When you multiply them, the answer is 270. What is the bigger of the two numbers?",
-    "hint": "List pairs that add up to 33, such as 16 and 17, then 15 and 18. Multiply each pair until you reach 270.",
-    "why": "15 and 18 add up to 33 and multiply to 270. The bigger number is 18.",
+    "q": "Two whole numbers add up to 13. When you multiply them, the answer is 40. What is the bigger of the two numbers?",
+    "hint": "List pairs that add up to 13, such as 6 and 7, then 4 and 9. Multiply each pair until you reach 40.",
+    "why": "5 and 8 add up to 13 and multiply to 40. The bigger number is 8.",
     "date": "12-17"
    },
    {
@@ -2218,36 +2221,36 @@
     "sub": "multiplication.groups",
     "family": "multiplication",
     "p": {
-     "g": 8,
+     "g": 7,
      "s": 9,
-     "r": -6
+     "r": -5
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "66",
-    "shown": "66 books",
+    "ans": "58",
+    "shown": "58 pencils",
     "units": [
-     "books",
-     "book"
+     "pencils",
+     "pencil"
     ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "67",
-     "65",
-     "68",
-     "64",
-     "132",
-     "33",
-     "76",
+     "59",
+     "57",
+     "60",
      "56",
-     "660"
+     "116",
+     "29",
+     "68",
+     "48",
+     "580"
     ],
-    "q": "A bookcase has 8 shelves with 9 books on each shelf. Then 6 books are borrowed. How many books are left in the bookcase?",
-    "hint": "Find the number of books on all the shelves first. Then take away the books borrowed.",
-    "why": "8 shelves of 9 books make 72 books. Take away 6: 72 − 6 = 66 books.",
+    "q": "A cupboard has 7 drawers with 9 pencils in each drawer. Then 5 pencils are taken out. How many pencils are left in the cupboard?",
+    "hint": "Find the number of pencils in all the drawers first. Then take away the pencils taken out.",
+    "why": "7 drawers of 9 pencils make 63 pencils. Take away 5: 63 − 5 = 58 pencils.",
     "date": "12-19"
    },
    {
@@ -2519,12 +2522,12 @@
     "sub": "moves.ups_and_downs",
     "family": "moves",
     "p": {
-     "start": 40,
+     "start": 42,
      "mv": [
-      15,
-      -28,
-      33,
-      -41
+      13,
+      -35,
+      27,
+      -39
      ],
      "ask": "max"
     },
@@ -2534,8 +2537,8 @@
     },
     "fmt": "int",
     "type": "n",
-    "ans": "60",
-    "shown": "60 litres",
+    "ans": "55",
+    "shown": "55 litres",
     "units": [
      "litres",
      "litre"
@@ -2544,19 +2547,18 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "61",
-     "59",
-     "62",
-     "58",
-     "120",
-     "30",
-     "70",
-     "50",
-     "600"
+     "56",
+     "54",
+     "57",
+     "53",
+     "110",
+     "65",
+     "45",
+     "550"
     ],
-    "q": "A water tank holds 40 litres at the start of Monday. On the next four days, it gets 15, then loses 28, then gets 33, then loses 41. What is the most water the tank holds at any time?",
+    "q": "A water tank holds 42 litres at the start of Monday. On the next four days, it gets 13, then loses 35, then gets 27, then loses 39. What is the most water the tank holds at any time?",
     "hint": "Write down the amount in the tank after each day. Then pick the biggest.",
-    "why": "The amounts in order are 40, 55, 27, 60, 19. The most is 60 litres.",
+    "why": "The amounts in order are 42, 55, 20, 47, 8. The most is 55 litres.",
     "date": "12-25"
    },
    {
@@ -3140,9 +3142,9 @@
      "110",
      "1200"
     ],
-    "q": "5 runners are given lanes 1 to 5 for a race, one runner to each lane. In how many different ways can the lanes be given out?",
-    "hint": "Choose who gets lane 1. Then see how many runners are left for lane 2.",
-    "why": "5 choices for lane 1, then 4, then 3, then 2, then 1. 5 × 4 × 3 × 2 × 1 = 120 ways.",
+    "q": "5 friends sit in a row of 5 chairs, one friend on each chair. In how many different ways can they be seated?",
+    "hint": "Choose who sits on the first chair. Then see how many friends are left for the second chair.",
+    "why": "5 choices for the first chair, then 4, then 3, then 2, then 1. 5 × 4 × 3 × 2 × 1 = 120 ways.",
     "date": "12-07"
    },
    {
@@ -3342,10 +3344,10 @@
     "fmt": "int",
     "type": "n",
     "ans": "91",
-    "shown": "91 tiles",
+    "shown": "91 slabs",
     "units": [
-     "tiles",
-     "tile"
+     "slabs",
+     "slab"
     ],
     "prefix": [],
     "accept": [],
@@ -3360,9 +3362,9 @@
      "81",
      "910"
     ],
-    "q": "A classroom floor is a rectangle 13 m long and 7 m wide. Each floor tile covers exactly 1 square metre. How many tiles are needed to cover the whole floor?",
-    "hint": "Think of rows of tiles. How many rows? How many tiles in each row?",
-    "why": "7 rows with 13 tiles in each row: 7 × 13 = 91 tiles.",
+    "q": "A vegetable plot is a rectangle 13 m long and 7 m wide. Each paving slab covers exactly 1 square metre. How many slabs are needed to cover the whole plot?",
+    "hint": "Think of rows of slabs. How many rows? How many slabs in each row?",
+    "why": "7 rows with 13 slabs in each row: 7 × 13 = 91 slabs.",
     "date": "12-11"
    },
    {
@@ -3496,9 +3498,9 @@
     "date": "12-14"
    },
    {
-    "id": "L3-beadbag",
+    "id": "L3-buttonjar",
     "level": 3,
-    "frame": "beadbag",
+    "frame": "buttonjar",
     "kind": "part_whole",
     "topic": "Bar models",
     "sub": "bonds.part_whole",
@@ -3514,10 +3516,10 @@
     "fmt": "int",
     "type": "n",
     "ans": "375",
-    "shown": "375 beads",
+    "shown": "375 buttons",
     "units": [
-     "beads",
-     "bead"
+     "buttons",
+     "button"
     ],
     "prefix": [],
     "accept": [],
@@ -3532,9 +3534,9 @@
      "365",
      "3750"
     ],
-    "q": "A bag has 1000 beads. 350 beads are red and 275 beads are blue. The rest are green. How many green beads are in the bag?",
-    "hint": "Add the red and blue beads first. Then find how many more make 1000.",
-    "why": "350 + 275 = 625. 1000 − 625 = 375 beads.",
+    "q": "A jar has 1000 buttons. 350 of them are red and 275 of them are blue. The rest are yellow. How many yellow buttons are in the jar?",
+    "hint": "Add the red and blue buttons first. Then find how many more make 1000.",
+    "why": "350 + 275 = 625. 1000 − 625 = 375 buttons.",
     "date": "12-15"
    },
    {
@@ -3997,7 +3999,7 @@
     ],
     "q": "A jar full of rice has a mass of 1000 g. After half of the rice is poured out, the jar and the rice left have a mass of 640 g. Find the mass of the empty jar.",
     "hint": "The rice poured out is the difference between the two masses. It was half of all the rice.",
-    "why": "The rice poured out has a mass of 1000 − 640 = 360 g. That was half of the rice, so all the rice has a mass of 360 × 2 = 720 g. The empty jar has a mass of 1000 − 720 = 280 g g.",
+    "why": "The rice poured out has a mass of 1000 − 640 = 360 g. That was half of the rice, so all the rice has a mass of 360 × 2 = 720 g. The empty jar has a mass of 1000 − 720 = 280 g.",
     "date": "12-25"
    },
    {
@@ -4655,32 +4657,33 @@
      "start_h": 18,
      "start_m": 45,
      "parts": 4,
-     "part_min": 35,
-     "break_min": 10,
+     "part_min": 40,
+     "break_min": 15,
      "ask": "end24"
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "2135",
-    "shown": "2135",
+    "ans": "2210",
+    "shown": "2210",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "2136",
-     "2134",
-     "2137",
-     "2133",
-     "4270",
-     "2145",
-     "2125",
-     "21350"
+     "2211",
+     "2209",
+     "2212",
+     "2208",
+     "4420",
+     "1105",
+     "2220",
+     "2200",
+     "22100"
     ],
-    "q": "A school concert has 4 acts. Each act lasts 35 minutes. A break of 10 minutes comes between one act and the next, but not after the last act. The concert starts at 6:45 pm. When does it end? Give the time in 24-hour form, like 2105.",
+    "q": "A school concert has 4 acts. Each act lasts 40 minutes. A break of 15 minutes comes between one act and the next, but not after the last act. The concert starts at 6:45 pm. When does it end? Give the time in 24-hour form, like 2105.",
     "hint": "Count the breaks carefully. There is one fewer break than there are acts.",
-    "why": "4 acts last 4 × 35 = 140 minutes. There are 3 breaks: 3 × 10 = 30 minutes. 140 + 30 = 170 minutes, which is 2 h 50 min. 6:45 pm plus 2 h 50 min is 9:35 pm, which is 2135.",
+    "why": "4 acts last 4 × 40 = 160 minutes. There are 3 breaks: 3 × 15 = 45 minutes. 160 + 45 = 205 minutes, which is 3 h 25 min. 6:45 pm plus 3 h 25 min is 10:10 pm, which is 2210.",
     "date": "12-09"
    },
    {
@@ -6431,7 +6434,7 @@
      "75",
      "850"
     ],
-    "q": "Three angles of a four-sided shape are 95°, 110° and 70°. The four angles of any four-sided shape add up to 360°. How big is the fourth angle?",
+    "q": "A garden bed has four straight sides. Three of its corner angles are 95°, 110° and 70°. The four corner angles of a bed like this add up to 360°. How big is the fourth corner angle?",
     "hint": "Add the three angles you know. Then take the total away from 360°.",
     "why": "95 + 110 + 70 = 275. 360 − 275 = 85°.",
     "date": "12-18"
@@ -6479,7 +6482,7 @@
      "25",
      "350"
     ],
-    "q": "A line graph shows the height of a tree in cm at the end of each year: 120, 135, 158, 170 and 205. In which year did the tree grow the most? Give the growth in that year in centimetres.",
+    "q": "A line graph shows the height of a tree in cm at the end of each year: 120, 135, 158, 170 and 205. What was the biggest growth of the tree in one year, in centimetres?",
     "hint": "Find the growth in each year by taking each reading from the next one.",
     "why": "The growths are 15, 23, 12, 35. The biggest is 35 cm.",
     "date": "12-19"
@@ -7109,7 +7112,7 @@
      "15",
      "250"
     ],
-    "q": "A triangular banner has an area of 150 cm² and a base of 12 cm. What is the height of the banner?",
+    "q": "A banner is a triangle with an area of 150 square centimetres. One side, the base, is 12 cm long. How tall is the banner, measured straight up from that base?",
     "hint": "Area of a triangle is half of base times height. So base times height is twice the area.",
     "why": "Twice the area is 2 × 150 = 300. Base times height = 300, so the height is 300 ÷ 12 = 25 cm.",
     "date": "12-02"
@@ -7389,7 +7392,7 @@
     "level": 6,
     "frame": "podium10",
     "kind": "perm_count",
-    "topic": "Medals",
+    "topic": "Choosing in order",
     "sub": "counting_choices.orders",
     "family": "counting_choices",
     "p": {
@@ -7419,9 +7422,9 @@
      "710",
      "7200"
     ],
-    "q": "10 runners take part in a race. The first three runners win gold, silver and bronze medals. In how many different ways can the three medals be given out?",
-    "hint": "Choose the gold winner first. Then see how many runners are left for silver.",
-    "why": "10 choices for gold, then 9 for silver, then 8 for bronze. 10 × 9 × 8 = 720 ways.",
+    "q": "A club has 10 members. A chairperson, a secretary and a treasurer are chosen from the members, and nobody can do two jobs. In how many different ways can the three jobs be given?",
+    "hint": "Choose the chairperson first. Then see how many members are left for secretary.",
+    "why": "10 choices for chairperson, then 9 for secretary, then 8 for treasurer. 10 × 9 × 8 = 720 ways.",
     "date": "12-09"
    },
    {
@@ -8118,48 +8121,42 @@
     "date": "12-23"
    },
    {
-    "id": "L6-tilepattern6",
+    "id": "L6-coinbound",
     "level": 6,
-    "frame": "tilepattern6",
-    "kind": "nth_term",
-    "topic": "Sequences",
-    "sub": "figure_rule.nth_figure",
-    "family": "figure_rule",
+    "frame": "coinbound",
+    "kind": "fake_coin",
+    "topic": "Balance scale",
+    "sub": "strategy.fake_coin",
+    "family": "strategy",
     "p": {
-     "a": 6,
-     "b": -4,
-     "n": 30
+     "ask": "max_coins",
+     "w": 6
     },
-    "t": {
-     "f1": 2,
-     "f2": 8,
-     "f3": 14
-    },
+    "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "176",
-    "shown": "176 tiles",
+    "ans": "729",
+    "shown": "729 coins",
     "units": [
-     "tiles",
-     "tile"
+     "coins",
+     "coin"
     ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "177",
-     "175",
-     "178",
-     "174",
-     "352",
-     "88",
-     "186",
-     "166",
-     "1760"
+     "730",
+     "728",
+     "731",
+     "727",
+     "1458",
+     "739",
+     "719",
+     "7290"
     ],
-    "q": "Figure 1 uses 2 tiles, Figure 2 uses 8 tiles and Figure 3 uses 14 tiles, and the figures keep growing by the same number of tiles. How many tiles does Figure 30 use?",
-    "hint": "Find the number of tiles added each time. The rule is jump × n, then adjust to match Figure 1.",
-    "why": "Each figure adds 6 tiles, so the rule starts with 6n. 6 × 1 = 6, but Figure 1 has 2 tiles, so subtract 4. The rule is 6n − 4. For Figure 30: 6 × 30 − 4 = 176 tiles.",
+    "q": "A bag holds many coins that look the same. One is a fake that is a little heavier than the others. Using a balance scale, what is the greatest number of coins in the bag for which the fake coin is certain to be found in 6 weighings?",
+    "hint": "Each weighing can sort the coins into three equal groups. How many groups can you tell apart after one weighing, two weighings, and so on?",
+    "why": "One weighing tells you which of 3 groups has the fake. Each extra weighing multiplies the number of coins by 3. After 6 weighings the greatest number is 3 × 3 × 3 × 3 × 3 × 3 = 729 coins.",
     "date": "12-24"
    },
    {
@@ -8387,12 +8384,12 @@
     "family": "graphs",
     "p": {
      "values": [
-      10,
-      13,
+      11,
+      16,
+      45,
       42,
-      40,
-      47,
-      46
+      50,
+      48
      ],
      "ask": "biggest_rise"
     },
@@ -8423,9 +8420,9 @@
      "29.5",
      "290"
     ],
-    "q": "A line graph shows the money in Ravi's savings box at the end of each month: $10, $13, $42, $40, $47 and $46. What was the biggest rise from one month to the next?",
+    "q": "A line graph shows the money in Ravi's savings box at the end of each month: $11, $16, $45, $42, $50 and $48. What was the biggest rise from one month to the next?",
     "hint": "Find the change between each pair of neighbouring months. Look only at the rises.",
-    "why": "The changes from month to month are 3, 29, 2, 7, 1 (the signs are ignored). The biggest rise is $29.",
+    "why": "The changes from month to month are 5, 29, 3, 8, 2 (the signs are ignored). The biggest rise is $29.",
     "date": "12-29"
    },
    {

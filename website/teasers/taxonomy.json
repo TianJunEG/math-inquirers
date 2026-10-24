@@ -940,11 +940,7 @@
   },
   "counting_line.posts_loop": {
    "name": "items spaced round a closed loop",
-   "levels": [
-    1,
-    2,
-    3
-   ],
+   "levels": [],
    "kinds": [
     "fence"
    ],
@@ -952,7 +948,13 @@
     "closed": [
      true
     ]
-   }
+   },
+   "retired": "round 3: posts and gaps on a path or round a pond is in the Skill Additions sheets (L2-POST1, L2-POST2, rebuild/skill_items_l1_3.py)",
+   "levels_before": [
+    1,
+    2,
+    3
+   ]
   },
   "counting_pairs.choose_k": {
    "name": "choose a team: order does not matter",
@@ -1067,16 +1069,18 @@
   },
   "cubes.dice_faces": {
    "name": "a die has opposite faces adding to 7: find the faces you cannot see",
-   "levels": [
-    2,
-    3,
-    4
-   ],
+   "levels": [],
    "kinds": [
     "dice_opposite"
    ],
    "cite": "MOE P2 MG 3D shapes: cube, p.34; P2 NA addition, p.33",
-   "round": 2
+   "round": 2,
+   "levels_before": [
+    2,
+    3,
+    4
+   ],
+   "retired": "round 3: three dice in a tower with opposite faces adding to 7 is in levels/gap_items.py (the Level 2 gap items)"
   },
   "cubes.painted": {
    "name": "painted cube cut into small cubes: count those with a given number of painted faces",
@@ -1443,13 +1447,17 @@
   "figure_rule.nth_figure": {
    "name": "number of tiles in the nth figure from the first three figures",
    "levels": [
+    4
+   ],
+   "kinds": [
+    "nth_term"
+   ],
+   "levels_before": [
     4,
     5,
     6
    ],
-   "kinds": [
-    "nth_term"
-   ]
+   "note": "round 3: Levels 5 and 6 removed: \"Figure 1 has 5 tiles and figure 2 has 9 tiles ...\" is the plus-sign tile pattern of extension l5_u09; kept at Level 4"
   },
   "fractions.arithmetic": {
    "name": "add, subtract or multiply fractions and mixed numbers",
@@ -3302,17 +3310,19 @@
   },
   "clock_reading.mirror_time": {
    "name": "a clock seen in a mirror: the real hour or minutes",
-   "levels": [
-    3,
-    4,
-    5,
-    6
-   ],
+   "levels": [],
    "kinds": [
     "mirror_time"
    ],
    "cite": "MOE P2 MG Time (to the minute), p.34; P3 MG Time 2.1-2.3, p.36; Problem solving: draw a diagram, p.13",
-   "round": 3
+   "round": 3,
+   "retired": "round 3: \"looks at a wall clock in a mirror\" is in docs/sasmo/g1_original_problems_draft.md 4.3",
+   "levels_before": [
+    3,
+    4,
+    5,
+    6
+   ]
   },
   "place_value.swap_digits": {
    "name": "swap two digits of a number: by how much it changes, or the number from the change",
@@ -3374,17 +3384,19 @@
   },
   "containers.jug_pouring": {
    "name": "two jugs and a tap: the fewest pours to measure an amount",
-   "levels": [
-    3,
-    4,
-    5,
-    6
-   ],
+   "levels": [],
    "kinds": [
     "jug_steps"
    ],
    "cite": "MOE Problem solving: act it out, make a list, guess and check, p.13; P3 MG Measurement (volume in l and ml), p.36",
-   "round": 3
+   "round": 3,
+   "retired": "round 3: the jug puzzle (a 4 L jug and a 9 L jug with no marks) is in our P2 lesson 9 (split/p2l9)",
+   "levels_before": [
+    3,
+    4,
+    5,
+    6
+   ]
   },
   "networks.draw_without_lifting": {
    "name": "a figure of points and lines drawn without lifting the pencil: the fewest lifts",
@@ -3505,7 +3517,7 @@
    "kinds": [
     "branch_prog"
    ],
-   "cite": "Ages 11-13 page list \"coding\"; L6 lesson 7 (programs and loops); MOE Problem solving: work backwards, make a list, p.13",
+   "cite": "Ages 11-13 page list (explored in Scratch); L6 lessons 1, 7, 10; MOE Problem solving: work backwards, make a list, p.13",
    "round": 3
   },
   "clock_reading.faulty_clock": {
@@ -3557,6 +3569,7 @@
   "spatial.circle_elimination": {
    "name": "children in a circle sit down every k-th: who is last standing",
    "levels": [
+    1,
     2,
     3,
     4,
