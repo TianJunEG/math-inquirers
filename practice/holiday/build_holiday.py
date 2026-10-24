@@ -108,7 +108,7 @@ def same(it, got):
     raise Fail(f'{it["id"]}: unknown type {t}')
 
 
-MAKEUP = re.compile(r'make up|your own|invent|design your|create your', re.I)
+MAKEUP = re.compile(r'make up|make your own|invent|design your|create your|your own (riddle|pattern|number|puzzle|question|problem|rule|example|sentence|story)', re.I)
 
 
 def self_mode(it):
@@ -118,6 +118,8 @@ def self_mode(it):
         if mm not in ('self', 'open', 'none'):
             raise Fail(f'{it["id"]}: marking_mode must be "self" or "open"')
         mm = 'none' if mm in ('open', 'none') else 'self'
+    elif it.get('check') is not None or it.get('facts') is not None:
+        mm = 'self'                                 # there is an objective fact (a checked model answer): the child compares with it
     elif it.get('open'):
         first = (it.get('steps') or [''])[0].lstrip().lower()
         mm = 'none' if MAKEUP.search(it.get('q', '')) or first.startswith(('open', 'answers vary')) else 'self'

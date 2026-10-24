@@ -94,12 +94,17 @@ with sync_playwright() as pw:
     p.wait_for_function("document.querySelector('#syncnote') && /Sent to your tutor/.test(document.querySelector('#syncnote').textContent)", timeout=8000)
     sub = submits(); ok(len(sub) == 1, f'expected 1 submit, got {len(sub)}')
     body = json.loads(sub[0]['body'])
-    ok(set(body) <= {'v', 'unit', 'unit_version', 'sid', 'rev', 'answers', 'self'}, f'unexpected fields sent: {set(body)}')
+    ok(set(body) <= {'v', 'unit', 'unit_version', 'sid', 'rev', 'answers', 'self', 'explain'}, f'unexpected fields sent: {set(body)}')
     ok('mark' not in sub[0]['body'].lower() and 'correct' not in sub[0]['body'].lower(), 'a mark or correct flag was sent')
     ok(body['unit_version'] == ver, f'unit version {body["unit_version"]} != {ver}')
-    ok('my private thoughts' not in sub[0]['body'], 'free text of a self-check item was sent')
+    sc = [it['id'] for it in items if it['type'] == 'selfcheck']
+    ok(all(body['answers'][i] in (None, '(written)') for i in sc), 'a self-check answer must be only (written) in answers')
+    ok(sc and body.get('explain', {}).get(sc[0]) == 'my private thoughts 12345', f'EXPLAIN-TO-TUTOR: the typed explanation is in the explain map: {body.get("explain")}')
+    ok('my private thoughts' not in json.dumps(body['answers']), 'the explanation must not be in answers')
     stored = list(state()['stored'].values()); ok(len(stored) == 1, 'one stored submission')
     srv_marks = {r['item_id']: r['mark'] for r in stored[0]['rows']}
+    ok(any(r['item_id'] == sc[0] and r.get('explain_text') == 'my private thoughts 12345' for r in stored[0]['rows']), 'the server kept the explanation for the tutor report')
+    ok('my private thoughts' not in p.locator('#summary').inner_text() and 'my private thoughts' not in p.locator('#nav').inner_text(), 'the explanation is not shown in the marking')
     cmap = {'right': 'right', 'wrong': 'wrong', 'blank': 'skipped', 'self': 'self'}
     bad = 0
     for i, it in enumerate(items):

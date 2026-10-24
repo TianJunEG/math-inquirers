@@ -10,9 +10,12 @@ let n = 0; const ok = (c, m) => { assert.ok(c, m); n++; };
 // every client mark is ignored: sending client_marks claiming everything is right changes nothing
 let r = await call({ ...base, answers: { q1: '7', q2: '1,000', q3: ['3', '9'], q4: '18, 12', q5: '>', q6: 'my text', q7: null }, self: { q8: 'got' }, client_marks: { q1: 'right', q2: 'right', q3: 'right' } });
 let j = await r.json(); ok(r.status === 200 && j.ok, 'accepted');
-assert.deepEqual(j.marks, { q1: 'wrong', q2: 'right', q3: 'wrong', q4: 'wrong', q5: 'right', q6: 'self', q7: 'skipped', q8: 'self', q9: 'skipped', q10: 'open' }); n++;
-assert.deepEqual(j.counts, { auto: 7, right: 2, wrong: 3, skipped: 2, self: 2, self_got: 1, open: 1 }); n++;
 const saved = store.data.get(SID);
+const storedMarks = (e) => Object.fromEntries(e.rows.map((x) => [x.item_id, x.mark]));
+assert.deepEqual(storedMarks(saved), { q1: 'wrong', q2: 'right', q3: 'wrong', q4: 'wrong', q5: 'right', q6: 'self', q7: 'skipped', q8: 'self', q9: 'skipped', q10: 'open' }); n++;
+assert.deepEqual(saved.counts, { auto: 7, right: 2, wrong: 3, skipped: 2, self: 2, self_got: 1, open: 1 }); n++;
+// R1-L4: the reply says only that it was stored; it carries no mark and no count, so resubmitting cannot be used to read the answer key
+assert.deepEqual(Object.keys(j).sort(), ['duplicate', 'ok', 'rev', 'stale']); ok(!('marks' in j) && !('counts' in j) && !/right|wrong|skipped/.test(JSON.stringify(j)), 'reply holds no marks'); n++;
 ok(saved.rows.find((x) => x.item_id === 'q1').slip_idx === 0, 'misconception slip matched on the server');
 ok(saved.rows.find((x) => x.item_id === 'q3').partial_found === 1, 'one box of two right');
 ok(saved.rows.find((x) => x.item_id === 'q4').partial_found === 2 && saved.rows.find((x) => x.item_id === 'q4').partial_of === 3, 'partial set');
@@ -23,7 +26,7 @@ ok(saved.rows.find((x) => x.item_id === 'q8').self_result === 'got', 'self resul
 r = await call({ ...base, answers: { q1: '7' } }); j = await r.json(); ok(j.duplicate === true && store.data.size === 1, 'same rev is a duplicate (the first stays)');
 assert.equal(saved.rev, 1); n++;
 // later revision replaces; an older retry arriving late is ignored
-r = await call({ ...base, rev: 3, answers: { q1: '9' } }); j = await r.json(); ok(j.rev === 3 && j.marks.q1 === 'right', 'rev 3 stored');
+r = await call({ ...base, rev: 3, answers: { q1: '9' } }); j = await r.json(); ok(j.rev === 3 && store.data.get(SID).rows.find((x) => x.item_id === 'q1').mark === 'right', 'rev 3 stored');
 r = await call({ ...base, rev: 2, answers: { q1: '7' } }); j = await r.json(); ok(j.stale === true && store.data.get(SID).rev === 3, 'stale rev 2 ignored');
 // rejected requests
 const rej = async (body, o, status, word) => { const x = await call(body, o); const y = await x.json(); ok(x.status === status && y.error === word, `${word}: ${x.status} ${y.error}`); };
@@ -44,7 +47,7 @@ ok(exrow('q6').explain_text === 'Because 9 is one less than 10.', 'explanation t
 ok(exrow('q10').explain_text === 'x'.repeat(500), 'a 500 character explanation is kept whole for an open item');
 ok(exrow('q1').explain_text === null && exrow('q8').explain_text === null && exrow('q2').explain_text === null, 'no explanation text for auto-marked, paper-only or absent items');
 ok(exrow('q6').answer_text === null && exrow('q6').mark === 'self', 'the explanation is not an answer and never changes a mark');
-ok(!JSON.stringify(j).includes('Because') && !('explain' in j) && Object.values(j.marks).every((m) => typeof m === 'string'), 'the explanation is never in the reply');
+ok(!JSON.stringify(j).includes('Because') && !('explain' in j) && !('marks' in j), 'the explanation is never in the reply');
 ok(markAll(KEYS, {}, {}, { q6: '\u0000\u0007hi\u001f there' }).rows.find((x) => x.item_id === 'q6').explain_text === 'hi there', 'control characters removed');
 ok(markAll(KEYS, {}, {}, { q6: '   ' }).rows.find((x) => x.item_id === 'q6').explain_text === null, 'blank explanation is null');
 ok(validate({ ...base, explain: { q6: 'ok' } }) === null && validate({ ...base }) === null, 'validate: explain optional');

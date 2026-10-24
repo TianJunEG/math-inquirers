@@ -105,8 +105,10 @@ export async function handle(request, env, store) {
   const m = markAll(g.keys, body.answers, body.self, body.explain);
   if (m.error) return bad(m.error);
   const rec = await store.record(th, { unit: body.unit, unit_version: body.unit_version, sid: body.sid, rev: body.rev, rows: m.rows, counts: m.counts });
-  if (!rec.ok) return bad(rec.error, { session: 401, consent: 403, entitlement: 403, rate: 429 }[rec.error] || 400);
-  return reply({ ok: true, rev: rec.rev, duplicate: !!rec.duplicate, stale: !!rec.stale, counts: m.counts, marks: Object.fromEntries(m.rows.map((r) => [r.item_id, r.mark])) });
+  if (!rec.ok) return bad(rec.error, { session: 401, consent: 403, entitlement: 403, rate: 429, sid_unit: 409 }[rec.error] || 400);   // sid_unit: a client_sid already belongs to another unit
+  // Round-1 audit L4: the reply does NOT carry the marks or counts. The page marks nothing from this reply (sheet.js reads only ok), the stored marks go to the reports,
+  // and a child (or a script) that resubmits revision after revision learns nothing about the answer key from the reply.
+  return reply({ ok: true, rev: rec.rev, duplicate: !!rec.duplicate, stale: !!rec.stale });
 }
 
 export const onRequest = (ctx) => handle(ctx.request, ctx.env, supabaseStore(ctx.env));

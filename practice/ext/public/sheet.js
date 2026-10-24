@@ -3,6 +3,7 @@
 // submitting. By default everything stays on this device (localStorage, guarded): no account, nothing is sent anywhere. No timer, score, streak or ranking.
 // OPTIONAL SEND TO TUTOR (feature flag, OFF): only if the page sets window.MI_SUBMIT = {endpoint: '...'} AND a child session token exists
 // (MI_SUBMIT.token, or sessionStorage 'mi-child'.token from the portal child sign-in) does Submit also POST the answers (never a mark) to the endpoint.
+// A typed explanation of a self-check item travels in a separate 'explain' map (trimmed, at most 500 characters, EXPLAIN-TO-TUTOR); answers[id] stays '(written)'. It is never shown back as a mark.
 // The server marks again from its own key. Without the flag, or without a token, this file makes no network request except loading its own data file.
 // See docs/online_submission_design.md.
 (function () {

@@ -12,7 +12,7 @@ NAVY, YEL, TEAL, WARM, PALE = '#1B2A49', '#FFE08A', '#1F7A6F', '#B5481F', '#FFF9
 
 
 # ---------------------------------------------------------------- svg basics
-MIN_PX, PHONE_PX = 12.0, 290     # figure text is at least MIN_PX on a 360 px phone, where a figure is about PHONE_PX wide (card padding and page margins taken off)
+MIN_PX, PHONE_PX = 12.5, 290     # figure text is at least MIN_PX (12.5: the 4 px viewBox padding takes about 3%) on a 360 px phone, where a figure is about PHONE_PX wide (card padding and page margins taken off)
 SOL_PX = 250                     # a SOLUTION figure sits inside the grey/green answer box (more padding): about SOL_PX wide on a 360 px phone
 PAD = 4                          # viewBox padding on every side, so strokes and rounded text at the edge are not cut off (the svg also has overflow visible)
 
@@ -28,20 +28,26 @@ def lift_text(w, body, phone=PHONE_PX):
 
 
 def lift_svg(svg_text, solution=False):
-    """The same lift for a finished <svg ...> string whose viewBox width is read from the string (used by the builder for every question and solution figure).
-    solution=True lifts for the narrower solution box (SOL_PX), so the text is at least MIN_PX there too. The root svg gets overflow="visible"."""
-    m = re.search(r'viewBox="[-\d.]+ [-\d.]+ ([\d.]+) [\d.]+"', svg_text)
-    out = lift_text(float(m.group(1)), svg_text, SOL_PX if solution else PHONE_PX) if m else svg_text
+    """The final pass over a finished <svg ...> string (the builder runs it once on every question and solution figure, after the lesson has composed it):
+    the viewBox gets PAD of padding on every side (strokes and text at the edge are not cut off), the font sizes are lifted so the text is at least MIN_PX on a 360 px phone
+    (solution=True: for the narrower solution box, SOL_PX), and the root svg gets overflow="visible". The lesson's own viewBox still reads "0 0 w h" while it composes figures."""
+    out = svg_text
+    m = re.search(r'viewBox="([-\d.]+) ([-\d.]+) ([\d.]+) ([\d.]+)"', out)
+    if m:
+        x, y, w, h = (float(v) for v in m.groups())
+        W, H = w + 2 * PAD, h + 2 * PAD
+        out = out.replace(m.group(0), f'viewBox="{x - PAD:g} {y - PAD:g} {W:g} {H:g}"', 1)
+        out = re.sub(r'max-width:' + re.escape(f'{w:g}') + 'px', f'max-width:{W:g}px', out, count=1)
+        out = lift_text(W, out, SOL_PX if solution else PHONE_PX)
     if re.match(r'\s*<svg\b', out) and 'overflow=' not in out[:out.index('>')]:
         out = re.sub(r'<svg\b', '<svg overflow="visible"', out, count=1)
     return out
 
 
 def svg(w, h, body, label):
-    W, H = w + 2 * PAD, h + 2 * PAD
-    body = lift_text(W, body)
-    return (f'<svg viewBox="{-PAD} {-PAD} {W} {H}" overflow="visible" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{esc(label)}" '
-            f'style="width:100%;max-width:{W}px;height:auto;display:block;margin:0 auto" font-family="Nunito Sans, Arial, sans-serif">{body}</svg>')
+    body = lift_text(w, body)
+    return (f'<svg viewBox="0 0 {w} {h}" overflow="visible" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{esc(label)}" '
+            f'style="width:100%;max-width:{w}px;height:auto;display:block;margin:0 auto" font-family="Nunito Sans, Arial, sans-serif">{body}</svg>')
 
 
 def esc(s):

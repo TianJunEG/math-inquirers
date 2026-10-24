@@ -425,7 +425,7 @@ with sync_playwright() as pw:
                 if not g['nowrap']: fail(f'{it["id"]}: box group is not a non-breaking flex group')
             want = {('p5', 4, '4b'): ['EBF', 'FCD'], ('p5', 4, '3a'): ['Height of triangle ABC', 'Area of ABC'], ('p5', 4, '3b'): ['Height of triangle ACD', 'Area of ACD'], ('p6', 4, '1c'): ['OUT =', 'IN for OUT 48'], ('p6', 4, 'C3'): ['IN 20 gives OUT', 'OUT 99 comes from IN']}.get((key, n, it['id']))
             if want:
-                labs_ = [g['label'] for g in page.evaluate(GROUPS)]
+                labs_ = [g['label'].replace('\xa0', ' ') for g in page.evaluate(GROUPS)]
                 for wtxt in want:
                     if not any(wtxt in l for l in labs_): fail(f'{it["id"]}: no group labelled {wtxt!r} at {w} px (labels {labs_})')
         ctx.close()

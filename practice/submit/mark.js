@@ -5,13 +5,16 @@
 // New types (fraction, decimal, text) are used by Phase 2 and are not in the pilot data yet.
 //
 // A KEY record:  { id, marking_mode: 'auto'|'self'|'none', type, key, ordered?, equivalent?, slips? }
-//   number    key: 12
+//   number    key: 12              (a unit after the number is ignored: '84 cm2', '84cm^2', '84 cm²', '-25 °C', '11°C'; one pair of brackets round it: '(-25)'; unit:false refuses units;
+//                                    words:true also accepts number words: 'five', 'twenty-five', 'minus five'; no default)
 //   fields    key: [3, 4]               (several boxes; all must be right)
 //   set       key: [85, 508], ordered: true|false
 //   choice    key: '<'                  (exact option text)
 //   fraction  key: '3/8', equivalent: false (default: must be in lowest terms) | true (any equal fraction is right)
 //   decimal   key: '0.5'                (0.50 and .5 are the same number)
 //   text      key: ['NW', 'north west'] (case, spacing, hyphen and a final full stop do not matter)
+//             equiv_frac:true  every fraction of a typed list may be written in any equal form, same order ('7/12, 8/12, 10/12' for '7/12, 2/3, 5/6')
+//             poly:'n'         an algebra rule is compared as a polynomial in n; '=' chains allowed ('(n+3)x4 = 4n+12', 'OUT = 4(n+3)'); (2n+6)/2 equals n+3; keys list the accepted writings
 //   selfcheck marking_mode 'self'  (child compares with the shown solution; never auto-marked; paper-only items are this)
 //   open      marking_mode 'none'  (many answers are right; never marked)
 // Result: { mark: 'right'|'wrong'|'skipped'|'self'|'open', detail?: {...}, slip?: index }
