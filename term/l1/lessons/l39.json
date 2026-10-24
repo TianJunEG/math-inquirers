@@ -2841,10 +2841,10 @@
     {
       "id": "H5",
       "tier": "start",
-      "text": "A cup hides some counters. The cup and 5 loose counters make 14 counters in all. How many counters are in the cup? ___",
-      "answer": "9",
-      "val": 9,
-      "solution": "14 - 5 = 9, so the cup holds 9 counters.",
+      "text": "The heart is 4. What is the heart + the heart + the heart? ___",
+      "answer": "12",
+      "val": 12,
+      "solution": "4 + 4 + 4 = 12.",
       "rewind_of": "Term 2 Lesson 3"
     }
   ],

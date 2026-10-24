@@ -2487,21 +2487,21 @@
      },
      {
       "l": "b",
-      "text": "It is 20 minutes past [] .",
-      "ans": "6",
-      "val": 6
+      "text": "The time is ___ .",
+      "ans": "6:20",
+      "val": "6:20"
      }
     ],
-    "answer": "No; 6",
+    "answer": "No; 6:20",
     "val": [
      "No",
-     6
+     "6:20"
     ],
     "hint": "Which hand names the hour? Look at the short hand.",
     "solution": "The short hand names the hour, and it is just after the 6. The long hand on the 4 counts 4 fives, which is 20 minutes. So it is 20 minutes past 6, not 4 o'clock.",
     "mistakes": [
      "Saying Yes because the long hand is on the 4.",
-     "Writing 4 for (b)."
+     "Writing 4:00 or 4:20 for (b)."
     ],
     "mins": 5,
     "visual": {
@@ -2528,21 +2528,26 @@
      },
      {
       "l": "b",
-      "text": "At half past 5 the short hand is half way between the 5 and the [] .",
-      "ans": "6",
-      "val": 6
+      "text": "At half past 5, where is the short hand? Circle one.",
+      "ans": "between the 5 and the 6",
+      "val": "between",
+      "choices": [
+       "on the 5",
+       "between the 5 and the 6",
+       "on the 6"
+      ]
      }
     ],
-    "answer": "No; 6",
+    "answer": "No; between the 5 and the 6",
     "val": [
      "No",
-     6
+     "between"
     ],
     "hint": "Look at the short hand at 5 o'clock and at half past 5. Has it moved?",
     "solution": "From 5 o'clock to half past 5 the long hand goes half way round the clock. The short hand moves too: it goes half way from the 5 to the 6. So both hands move, and Lily is not right.",
     "mistakes": [
      "Saying Yes because the short hand looks almost the same.",
-     "Writing 5 for (b)."
+     "Circling on the 5, because the short hand looks almost the same."
     ],
     "mins": 5
    }

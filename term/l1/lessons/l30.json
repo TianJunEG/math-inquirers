@@ -2523,7 +2523,7 @@
     "page": 2,
     "tier": "start",
     "skill": "Compare two prices, and two items that cost exactly $10 (Term 3 Lessons 5 and 6)",
-    "text": "A pen costs $6 and a ruler costs $9. The tags say $4, $5 and $6 in part c.",
+    "text": "A pen costs $6 and a ruler costs $9.",
     "parts": [
      {
       "l": "a",
@@ -2539,7 +2539,7 @@
      },
      {
       "l": "c",
-      "text": "Two tags cost exactly $10. They are $___ and $___ .",
+      "text": "Three tags say $4, $5 and $6. Two of them cost exactly $10. They are $___ and $___ .",
       "ans": "4 and 6",
       "val": [
        4,

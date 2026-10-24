@@ -250,7 +250,7 @@ def run(d):
     q = H['H3']; eq(find(lambda x: x + 7 == 25), [18], 'H3'); eq(q['val'], 18, 'H3 val')
     q = H['H4']; sols = [(a, b) for a in range(0, 6) for b in range(0, 6) if a + b == 5 and 10 * a + 20 * b == 70]; eq(sols, [(3, 2)], 'H4 exactly one answer'); eq(q['val'], 2, 'H4 val'); eq(nums(q['text']), [5, 10, 20, 70, 20, 20], 'H4 text')
     l19 = json.load(open(os.path.join(L1, 'lessons', 'l19.json')))['home_practice']; src = [h for h in l19 if h['id'] == 'H2'][0]; q = H['H5']
-    src13 = [h for h in json.load(open(os.path.join(L1, 'lessons', 'l13.json')))['home_practice'] if h['id'] == 'H2'][0]; eq((q['text'], q['answer'], q['val']), (src13['text'], src13['answer'], src13['val']), 'H5 is the Term 2 Lesson 3 (Picture Equations, Lesson 13) item H2, copied'); eq(q['rewind_of'], 'Term 2 Lesson 3', 'H5 tag'); eq(find(lambda x: x + 5 == 14), [9], 'H5 the cup holds 9')
+    src13 = [h for h in json.load(open(os.path.join(L1, 'lessons', 'l13.json')))['home_practice'] if h['id'] == 'H3'][0]; eq((q['text'], q['answer'], q['val']), (src13['text'], src13['answer'], src13['val']), 'H5 is the Term 2 Lesson 3 (Picture Equations, Lesson 13) item H3, copied'); eq(q['rewind_of'], 'Term 2 Lesson 3', 'H5 tag'); eq(find(lambda x: x + x + x == 12), [4], 'H5 the heart is 4')
     eq([h['tier'] for h in d['home_practice']], ['start', 'start', 'start', 'think', 'start'], 'home tiers')
     # ---------------------------------------------------------------- class numbers differ from workbook, exit and home numbers
     wb = {}

@@ -165,9 +165,9 @@ def run(d):
     land = (round(ma / 30) + 3) % 12; eq(land, 5, 'G1 three numbers on from the 2 is the 5'); eq(land * 5, 25, 'G1 the 5 is 25 minutes'); eq(T['G1']['val'], [5, 25], 'G1 val')
     eq(read(*hands(7, 25)), (7, 25), 'G1 the new clock reads 7:25')
     f2 = T['G2']['visual']; ha, ma = hands(f2['h'], f2['m']); r2 = read(ha, ma)
-    eq(r2, (6, 20), 'G2 the clock shows 6:20'); eq(round(ma / 30), 4, 'G2 the long hand is on the 4'); eq(r2[0] == 4, False, 'G2 it is not 4 o clock'); eq(T['G2']['val'], ['No', 6], 'G2 val')
+    eq(r2, (6, 20), 'G2 the clock shows 6:20'); eq(round(ma / 30), 4, 'G2 the long hand is on the 4'); eq(r2[0] == 4, False, 'G2 it is not 4 o clock'); eq(T['G2']['val'], ['No', '6:20'], 'G2 val')
     ha5, ha55 = hands(5, 0)[0], hands(5, 30)[0]; eq((hands(5, 0)[1], hands(5, 30)[1]), (0.0, 180.0), 'G3 the long hand moves half way round'); eq(ha55 - ha5, 15.0, 'G3 the short hand moves half way from the 5 to the 6 (15 of 30 degrees)')
-    eq(ha55 == ha5, False, 'G3 the short hand moves too, so Lily is wrong'); eq(read(*hands(5, 30)), (5, 30), 'G3 half past 5'); eq(T['G3']['val'], ['No', 6], 'G3 val')
+    eq(ha55 == ha5, False, 'G3 the short hand moves too, so Lily is wrong'); eq(read(*hands(5, 30)), (5, 30), 'G3 half past 5'); eq(T['G3']['val'], ['No', 'between'], 'G3 val')
     eq(len(d['tiers']['go']), 3, 'three Go further questions')
 
     # ---------------- Investigation

@@ -2546,7 +2546,7 @@
      1
     ],
     "hint": "Add 3, 1 and 2. Take the total away from 8.",
-    "solution": "3 + 1 + 2 = 6. 8 take away 6 is 2, so the front right stack has 2 cubes. The picture shows 7 cubes, so 1 cube is hidden behind the front right tower.",
+    "solution": "3 + 1 + 2 = 6. 8 take away 6 is 2, so the front right stack has 2 cubes. The picture shows 7 cubes, so 1 cube is hidden: the bottom cube of the tall stack at the back on the left, behind the cubes in front of it.",
     "mistakes": [
      "Writing 8 for the front right stack.",
      "Saying no cube is hidden."

@@ -3238,7 +3238,7 @@
         "page": 2,
         "tier": "start",
         "skill": "Cubes in a stack, and a paper folded once and punched once (Term 4 Lesson 4)",
-        "text": "Look at the stack of cubes. Then look at the paper with its dashed fold line, and the folded paper with one hole.",
+        "text": "Look at the stack of cubes. Some cubes may be hidden. Then look at the paper with its dashed fold line, and the folded paper with one hole.",
         "parts": [
           {
             "l": "a",
@@ -3253,7 +3253,7 @@
             "val": 2
           }
         ],
-        "say": "Gate 3. Look at the stack of cubes. Part a: there are blank cubes in all. Now look at the paper with its dashed fold line, and the paper folded once on that line with one hole punched in it. Part b: when the folded paper is opened there are blank holes.",
+        "say": "Gate 3. Look at the stack of cubes. Some cubes may be hidden. Part a: there are blank cubes in all. Now look at the paper with its dashed fold line, and the paper folded once on that line with one hole punched in it. Part b: when the folded paper is opened there are blank holes.",
         "answer": "6; 2",
         "val": [
           6,

@@ -1869,7 +1869,7 @@
     "id": "S2",
     "page": 1,
     "tier": "start",
-    "text": "Pens cost $2 each. Rulers cost $3 each. Fill in the table. The last column is spare.",
+    "text": "Pens cost $2 each. Rulers cost $3 each. Fill in the table. You may use the last column.",
     "parts": [
      {
       "l": "",
@@ -1933,7 +1933,7 @@
     "id": "S3",
     "page": 2,
     "tier": "start",
-    "text": "Siti keeps adding squares to the row. Fill in the table. The last column is spare.",
+    "text": "Siti keeps adding squares to the row. Fill in the table. You may use the last column.",
     "parts": [
      {
       "l": "a",
@@ -2233,7 +2233,7 @@
     "hint": "Look at how much the numbers go up each time. Which step is different?",
     "solution": "The numbers go up by 3 each time: 5, 8, 11, then 14, 17, 20. The number for 4 squares is 13, but it should be 14.",
     "mistakes": [
-     "Choosing 5 because 16 comes after the wrong number.",
+     "Choosing 5 because 17 is the number that comes after the wrong one.",
      "Writing 11 or 14."
     ],
     "mins": 4,
