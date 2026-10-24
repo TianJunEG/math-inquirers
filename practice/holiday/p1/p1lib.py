@@ -141,15 +141,16 @@ def picture_graph(rows, key_text, icon_for, maxn, size=26, label_w=92, half_key=
         if n - whole >= 0.5:
             body += star(label_w + whole * pitch + pitch / 2, y + row_h / 2, size, half=True)
     ky = 4 + len(rows) * row_h + 8
-    body += Re(2, ky, W - 4, size + 12, PALE, NAVY, 1.6, 6)
+    kh = size + 12 + ((size + 4) if half_key else 0)
+    body += Re(2, ky, W - 4, kh, PALE, NAVY, 1.6, 6)
     body += T(12, ky + (size + 12) / 2 + 5, 'Key:', 15, 'start', 800)
     fn0 = icon_for(rows[0][0])
-    kx = 62
-    body += fn0(kx + size / 2, ky + (size + 12) / 2, size) + T(kx + size + 8, ky + (size + 12) / 2 + 5, '= ' + key_text, 15, 'start', 700)
+    kx, cy0 = 62, ky + (size + 12) / 2
+    body += fn0(kx + size / 2, cy0, size) + T(kx + size + 8, cy0 + 5, '= ' + key_text, 15, 'start', 700)
     if half_key:
-        kx2 = kx + size + 8 + 8 * len('= ' + key_text) * 0.95 + 40
-        body += star(kx2 + size / 2, ky + (size + 12) / 2, size, half=True) + T(kx2 + size + 8, ky + (size + 12) / 2 + 5, '= ' + half_key, 15, 'start', 700)
-    H = ky + size + 12 + 6
+        cy1 = cy0 + size + 4
+        body += star(kx + size / 2, cy1, size, half=True) + T(kx + size + 8, cy1 + 5, '= ' + half_key, 15, 'start', 700)
+    H = ky + kh + 6
     return svg(W, H, body, caption or 'Picture graph')
 
 

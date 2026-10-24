@@ -99,3 +99,45 @@ def two_bars_model(total, diff):
     b += Re(x0 + sw, 56, ew, 30, 'url(#hz2)', NAVY, 2.4) + Re(x0 + sw + 8, 62, ew - 16, 18, '#fff', 'none', 0) + T(x0 + sw + ew / 2, 77, diff, 15, 'middle', 800, NAVY)
     b += Ln(x0, 100, x0 + sw + ew, 100, 2.4) + T(x0 + (sw + ew) / 2, 122, f'{total} altogether', 15, 'middle', 800, TEAL)
     return _svg(340, 130, b, f'Two bars: the long bar is {diff} longer than the short bar; together they make {total}')
+
+
+# ---------------------------------------------------------------- week 2 additions: small tables drawn for a phone, and figure readers for the checkers
+def grid_table(rows, col_w=46, label_w=92, caption='', head=None):
+    """A table as a figure: rows = [(label, [cell, ...])]; a cell '' is an empty white box to fill in; given cells are on a pale tile.
+    head = optional header row (label, [cells]) drawn on a navy-tinted band (e.g. 'Flowers', [1, 2, 3, 4, 5, 6])."""
+    allrows = ([head] if head else []) + list(rows)
+    n = max(len(c) for _, c in allrows)
+    rh = 40
+    w = label_w + n * col_w + 8
+    b = ''
+    for r, (lab, cells) in enumerate(allrows):
+        y = 4 + r * rh
+        hd = bool(head) and r == 0
+        b += Re(4, y, label_w, rh, '#D9D9D9', NAVY, 2.2) + T(4 + label_w / 2, y + 26, lab, 16, 'middle', 800)
+        for k, v in enumerate(cells):
+            x = 4 + label_w + k * col_w
+            fill = '#D9D9D9' if hd else ('#fff' if v == '' else '#DDEBF7')
+            b += Re(x, y, col_w, rh, fill, NAVY, 2.2)
+            if v != '':
+                b += T(x + col_w / 2, y + 27, v, 18, 'middle', 800 if hd else 700)
+    return _svg(w, 8 + len(allrows) * rh, b, caption or 'A table: ' + '; '.join(f'{lab}: ' + ', '.join(str(c) if c != '' else 'empty' for c in cells) for lab, cells in allrows))
+
+
+def circles_of(fig):
+    """(distinct rows, distinct columns, count) of the <circle> counters in a drawn array (read from the picture, not from the question)."""
+    cs = re.findall(r'<circle cx="([\d.]+)" cy="([\d.]+)"', fig)
+    return len({y for _, y in cs}), len({x for x, _ in cs}), len(cs)
+
+
+def tray_counts(fig):
+    """(cups altogether, cups still visible) read from the tray picture: cups are the white <path> shapes, the cloth is the red <rect>."""
+    cups = re.findall(r'<path d="M([\d.]+) ([\d.]+) L([\d.]+) ([\d.]+) L([\d.]+) ([\d.]+) L([\d.]+) ([\d.]+) Z"', fig)
+    cloth = re.search(r'<rect x="([\d.]+)" y="([\d.]+)" width="([\d.]+)" height="([\d.]+)" rx="12" fill="#D64545"', fig)
+    cx, cy, cw, ch = (float(v) for v in cloth.groups())
+    seen = 0
+    for c in cups:
+        xs = [float(c[i]) for i in (0, 2, 4, 6)]
+        ys = [float(c[i]) for i in (1, 3, 5, 7)]
+        covered = min(xs) >= cx and max(xs) <= cx + cw and min(ys) >= cy and max(ys) <= cy + ch
+        seen += 0 if covered else 1
+    return len(cups), seen
