@@ -671,6 +671,11 @@ sys.path.insert(0, os.path.join(H.ROOT, 'practice', 'submit'))
 import make_keys                                   # noqa: E402
 _k, _ver, _d, keys, _tags = make_keys.build(0, n, key)
 nmodes = {}
+for it, kr in zip(items, keys):      # every clock / accept_by / dollars_ok the lesson file sets reaches the built data and the server key (clock: True or per-box list)
+    for fl in ('clock', 'accept_by', 'dollars_ok'):
+        if src.get(it['id'], {}).get(fl) and not (it.get(fl) or kr.get(fl) or any(f.get(fl) for f in it.get('fields', []))):
+            fail(f'{it["id"]}: the lesson file sets {fl} but it did not reach the built data')
+        if src.get(it['id'], {}).get(fl) and not kr.get(fl): fail(f'{it["id"]}: the lesson file sets {fl} but it did not reach the server key')
 for it, kr in zip(items, keys):      # the report mode is the item's own marking_mode: self = compare with a model answer / paper drawing, none = truly open
     if it['type'] != 'selfcheck':
         for fl in ('words', 'poly', 'equiv_frac', 'unit', 'dollars_ok', 'accept_by'):
