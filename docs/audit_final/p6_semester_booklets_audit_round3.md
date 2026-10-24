@@ -149,7 +149,7 @@ Text and layout only. No puzzle, answer, code word or colour-page content change
 
 Every outcome line is still practised by at least one page (the validator's coverage check passes; Ratio 1.3, Volume 2.1, 2.2 and Foundation Volume are carried by other pages).
 
-Rebuild and checks: rebuilt per `docs/school_books/BUILD_REPRODUCIBILITY.md` into the default `school/p6/out` (fonts load). Pixel diff (70 dpi, per page) against the committed PDFs: changed pages only S1 key p.4 (S1-09 entry), S2 key pp.5 and 8 (S2-12 and S2-20 entries), S2 Front Matter p.5 (coverage table), S1 Front Matter p.5 (coverage table), S1-19, S2-19 and the same pages inside the Complete Packs. All other pages are pixel-identical. Text diff of the changed files shows only the lines above. `validate.py`: see the result line at the end of this section.
+Rebuild and checks: rebuilt per `docs/school_books/BUILD_REPRODUCIBILITY.md` into the default `school/p6/out` (fonts load). Pixel diff (70 dpi, per page) against the committed PDFs: changed pages only S1 key p.4 (S1-09 entry), S2 key pp.5 and 8 (S2-12 and S2-20 entries), S2 Front Matter p.5 (coverage table), S1 Front Matter p.5 (coverage table), S1-19, S2-19 and the same pages inside the Complete Packs. All other pages are pixel-identical. Text diff of the changed files shows only the lines above. `validate.py` (default outdir): 753 checks, 0 failed, no failures (keys match the solved pages; the validator re-solves every page from its printed content).
 
 ### Cross-level code words (L1) and the missing check
 
