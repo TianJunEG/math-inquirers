@@ -553,7 +553,7 @@
      "9",
      "190"
     ],
-    "q": "Ravi draws rows of dots. Row 1 has 1 dot, row 2 has 4 dots, row 3 has 7 dots, and the rows keep growing the same way. How many dots are in row 7?",
+    "q": "Ravi draws rows of dots. Row 1 has 1 dot, row 2 has 4 dots and row 3 has 7 dots. The rows keep growing the same way. How many dots are in row 7?",
     "hint": "How many more dots does each row have than the row before?",
     "why": "Each row has 3 more dots: 1, 4, 7, 10, 13, 16, 19. Row 7 has 19 dots.",
     "date": "12-14"
@@ -666,7 +666,7 @@
      "20",
      "300"
     ],
-    "q": "Mei Ling puts 2 stickers on her chart on Monday, 4 on Tuesday, 6 on Wednesday, 8 on Thursday and 10 on Friday. How many stickers does she put on the chart in the week?",
+    "q": "Mei Ling puts 2 stickers on her chart on Monday, then 4, 6, 8 and 10 on the next four days. How many stickers does she put on her chart in all?",
     "hint": "Add in pairs. 2 + 10 and 4 + 8 both make the same number.",
     "why": "2 + 10 = 12 and 4 + 8 = 12, and 6 is left. 12 + 12 + 6 = 30 stickers.",
     "date": "12-17"
@@ -1657,7 +1657,7 @@
      "65",
      "750"
     ],
-    "q": "Mei Ling saves 5 sweets on day 1, 10 sweets on day 2, 15 on day 3, 20 on day 4 and 25 on day 5. How many sweets does she save altogether?",
+    "q": "Mei Ling saves 5 sweets on day 1 and 10 sweets on day 2. Then she saves 15, 20 and 25 on the next three days. How many sweets does she save altogether?",
     "hint": "Pair the first with the last, and the second with the one before last.",
     "why": "5 + 25 = 30 and 10 + 20 = 30, and 15 is left. 30 + 30 + 15 = 75 sweets.",
     "date": "12-10"
@@ -2291,7 +2291,7 @@
      "3",
      "130"
     ],
-    "q": "Jun Hao is 5th from the front of the lunch queue. He is also 9th from the back. How many children are there in the queue altogether?",
+    "q": "Jun Hao is 5th in the lunch queue from the front. Counting from the back, he is 9th. How many children are in the lunch queue?",
     "hint": "Jun Hao is counted twice if you add the two numbers.",
     "why": "5 + 9 = 14, but Jun Hao was counted twice. 14 − 1 = 13 children.",
     "date": "12-26"

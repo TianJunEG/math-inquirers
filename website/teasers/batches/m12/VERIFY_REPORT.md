@@ -13,15 +13,8 @@ Method: every puzzle is re-solved by `brute.py` (independent of the author solve
 
 Similarity sources checked: holiday banks, own term lessons, all extension workbook data, external private source files.
 
-FAIL count: 7. REVIEW items: 48.
+FAIL count: 0. REVIEW items: 44.
 
-- FAIL L2-lunchqueue [12-26]: shares a 9-word run with external: "from the back how many children are in the"
-- FAIL L3-straightline [12-03]: shares a 9-word run with the extension workbooks: "angles on a straight line add up to 180"
-- FAIL L3-riddle56 [12-09]: shares a 9-word run with holiday: "digits add up to 11 what number am i"
-- FAIL L3-flagstrip [12-22]: arithmetic in why is wrong: 30 / 4 = 7
-- FAIL L4-symmetry2 [12-11]: brute force says {Fraction(10, 1)} but bank says {Fraction(9, 1)}
-- FAIL L6-cube5edges [12-19]: shares a 9-word run with external: "small cubes how many small cubes have exactly 2"
-- FAIL L6-dice10 [12-25]: shares a 9-word run with holiday: "added what is the probability that the total is"
 
 Generic 7-8 word stems shared with other sources (ordinary maths question stems, reviewed, not copied sentences): 32
 - stem L1-blocktower [12-04] vs term: "4 then 3 then 2 then 1"
@@ -31,7 +24,6 @@ Generic 7-8 word stems shared with other sources (ordinary maths question stems,
 - stem L3-riddle21 [12-01] vs external: "when you divide me by 6 the"
 - stem L3-riddle21 [12-01] vs extension: "that leave remainder 1 when divided by"
 - stem L3-waterfull [12-07] vs external: "how many litres of water are in"
-- stem L3-riddle56 [12-09] vs extension: "times table my digits add up to"
 - stem L3-pagenumbers [12-11] vs external: "a book have page numbers that add"
 - stem L3-aunt [12-13] vs extension: "years old in how many years will"
 - stem L3-groceries [12-24] vs external: "what is the total mass of the"
@@ -55,18 +47,15 @@ Generic 7-8 word stems shared with other sources (ordinary maths question stems,
 - stem L5-cyclists [12-27] vs extension: "each minute after how many minutes do"
 - stem L6-notblue [12-17] vs holiday: "as a fraction in its simplest form"
 - stem L6-fourcoins [12-20] vs holiday: "as a fraction in its simplest form"
+- stem L6-dice10 [12-25] vs holiday: "as a fraction in its simplest form"
 - stem L6-dicediff [12-30] vs holiday: "as a fraction in its simplest form"
 
-- REVIEW L1-dotrows [12-14]: longest sentence 23 words (limit 20)
 - REVIEW L1-dotrows [12-14]: number 2 in the question is not a parameter (written in the wording; check)
-- REVIEW L1-weekstickers [12-17]: longest sentence 23 words (limit 20)
+- REVIEW L1-weekstickers [12-17]: longest sentence 21 words (limit 20)
 - REVIEW L1-stairsupdown [12-23]: number 5 in the question is not a parameter (written in the wording; check)
 - REVIEW L1-toyshop [12-30]: number 5 in the question is not a parameter (written in the wording; check)
-- REVIEW L2-savedays [12-10]: longest sentence 26 words (limit 22)
 - REVIEW L2-savedays [12-10]: number 1 in the question is not a parameter (written in the wording; check)
 - REVIEW L2-savedays [12-10]: number 2 in the question is not a parameter (written in the wording; check)
-- REVIEW L2-savedays [12-10]: number 3 in the question is not a parameter (written in the wording; check)
-- REVIEW L2-savedays [12-10]: number 4 in the question is not a parameter (written in the wording; check)
 - REVIEW L2-savings [12-18]: number 1 in the question is not a parameter (written in the wording; check)
 - REVIEW L2-cupstack [12-28]: number 1 in the question is not a parameter (written in the wording; check)
 - REVIEW L2-cupstack [12-28]: number 2 in the question is not a parameter (written in the wording; check)
