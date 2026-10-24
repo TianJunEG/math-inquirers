@@ -39,8 +39,8 @@ Found, not changed (judgement calls):
 ## 3. Late owner decisions
 - SPINE-CHOICES-OK: spine rows for 13 (Work backwards, Act it out), 19 (Draw it, Make a table), 27 (Spot the pattern, Act it out) kept, no change.
 - L10-TRIM: lesson 10 slow-class total 90:00 -> 86:52 (3:08 saved): modelled child work and response seconds cut in Remember (response times), Explore (rounds 1-3: 70/60/70 -> 50/45/50 s), Mini-lesson (55/60/40 -> 40/45/30 s) and the choice-time block (170 -> 120 s). No slides or content removed. These are modelled seconds only: the first trial lesson should still time it. Normal-class script need 73:46 (was 76:22).
-- CHIP-NAMES: the page-1 chip of choose lessons 10, 20, 30, 40 now prints each tool name (6.5 pt) under its icon (`tools/spine_term.py`, `wb_chip`). Pages still fit (6, 6, 6, 5 pages). Lesson 39 is also a choose lesson and got the same chip when rebuilt; it was not rebuilt here, so its PDF still shows icons only: rebuild 39 if wanted (open choice).
-- Names at 6.5 pt are small; icon plus name is readable in the colour render, B&W readability should be glanced at on a printed copy.
+- CHIP-NAMES: the page-1 chip of choose lessons 10, 20, 30, 40 now prints each tool name under its icon (CORRECTED 24 Oct 2026: the old claim of 6.5 pt was wrong, the printed size was 6.1 pt; after FIXES_BOOKS_1_4_ROUND2 the measured size in the books is 12.6 pt for lessons 10 and 20 (4 and 6 names) and 9.6 pt for lessons 30, 39 and 40 (7 and 8 names, wrapped onto two or three lines)) (`tools/spine_term.py`, `wb_chip`). Pages still fit (6, 6, 6, 5 pages). Lesson 39 is also a choose lesson and got the same chip when rebuilt; it was not rebuilt here, so its PDF still shows icons only: rebuild 39 if wanted (open choice).
+- Names at 6.5 pt (old figure, see above) were small; icon plus name is readable in the colour render, B&W readability should be glanced at on a printed copy.
 
 ## 4. Open owner choices
 1. Lesson 39 chip names (same code; needs a rebuild of 39 and books 7-8 if wanted; Book 8 is not affected by lesson 39 rebuild unless run).

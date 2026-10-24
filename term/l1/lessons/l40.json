@@ -3785,7 +3785,8 @@
       "slow_child_factor": 1.4
     },
     "quest_map": false,
-    "tool_row": "term"
+    "tool_row": "term",
+    "tool_px_many": 11.8
   },
   "rec_pause_say": "Say once to the camera: the recording pauses now for Mi's Challenge Quest, and starts again for the workbook. Pause the recording before you read the first gate."
 }

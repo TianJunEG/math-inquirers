@@ -35,7 +35,7 @@ body{font-size:18.5px!important}.qbox{padding:26px 16px 12px!important;margin:26
 .hm.t1 .qbox{margin:14px 4px 5px 4px!important;padding:16px 12px 4px!important}.hm.t1 .ln{height:24px!important}.hm.t2 .qbox{margin:10px 4px 3px 4px!important;padding:14px 12px 2px!important}.hm.t2 .ln{height:20px!important}.hm.t2 .q{font-size:17px}
 .qbox .ln.rsn{height:24px!important;margin-top:1px!important;display:block!important}.stp.why{margin:4px 4px 0 6px;font-size:17.7px}.stp.why b{width:auto;white-space:nowrap}.stp.why .ln{margin-top:0!important}
 .sd{display:flex;gap:16px;align-items:flex-start}.sd .sdv{flex:none}.sd .sdv .vis{margin:4px 0 2px 4px!important}.sd .sdr{flex:1;min-width:0;padding-top:4px}.sd .sdr .sub:first-child{margin-top:2px}
-.page.hm.hm>p.hint.hint{margin-bottom:30px!important}
+.page.hm.hm>p.hint.hint{margin-bottom:24px!important}
 .hm .qbox:has(svg.h100){display:block!important}
 .yn{display:inline-flex;gap:30px;margin-left:12px;font-family:Fredoka;font-weight:600;font-size:20px}.yn span{padding:1px 14px}
 .banner{break-after:avoid;display:block;width:fit-content}

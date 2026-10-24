@@ -2658,21 +2658,21 @@
      "h": 4,
      "m": 30,
      "digital": "A",
-     "size": 75
+     "size": 60
     },
     {
      "type": "clock",
      "h": 5,
      "m": 30,
      "digital": "B",
-     "size": 75
+     "size": 60
     },
     {
      "type": "clock",
      "h": 4,
      "m": 0,
      "digital": "C",
-     "size": 75
+     "size": 60
     }
    ]
   }
