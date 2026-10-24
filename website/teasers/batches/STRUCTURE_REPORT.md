@@ -4,17 +4,14 @@ Sources searched (whole working tree, tracked or not): 6760 files, 1363.2 MB, sh
 
 Rules. Levels 3 to 6 (TEASER-STRICT): per level and calendar quarter at most 1 puzzle per sub-structure and 3 per family; the same sub-structure never within 30 days of itself across a quarter boundary; and (ANSWER-WINDOW, round 6) the same answer value never twice within 60 days and never with the same sub-structure within 92 days. Levels 1 and 2 (L1L2-GAP60): the same sub-structure at least 60 days apart (circular, 365- and 366-day year), a family at most 3 times in any 60 days and never on consecutive days, an answer not repeated within 60 days and a single-digit answer at most 2 times in 60 days. All levels: no repeated frame, no two puzzles with most numbers or the same story in common; the sub-structures used by the fixed puzzles on the level pages (counting_choices.digit_cards_arrangements, fractions.fraction_of_remainder, multiples.common_multiple, remainders.two_conditions, sequence.count_on, sequence.which_term) are never used by the bank.
 
-- Level 1 (gap rule, 60 days): 92 puzzles, 61 distinct sub-structures (none twice within the gap), 35 families, most in one family 6
-- Level 2 (gap rule, 60 days): 92 puzzles, 61 distinct sub-structures (none twice within the gap), 43 families, most in one family 5
+- Level 1 (gap rule, 60 days): 61 puzzles, 61 distinct sub-structures (none twice within the gap), 35 families, most in one family 3
+- Level 2 (gap rule, 60 days): 61 puzzles, 61 distinct sub-structures (none twice within the gap), 43 families, most in one family 3
 - Level 3, quarter 4: 61 puzzles, 61 distinct sub-structures, 39 families, most in one family 3
 - Level 4, quarter 4: 61 puzzles, 61 distinct sub-structures, 38 families, most in one family 3
 - Level 5, quarter 4: 61 puzzles, 61 distinct sub-structures, 38 families, most in one family 3
 - Level 6, quarter 4: 61 puzzles, 61 distinct sub-structures, 35 families, most in one family 3
-- REVIEW L1-shortestkid (L1) and L2-tallestfour (L2): 5 shared four-word runs (e.g. "@ @ is taller"), same sub-structure
 - REVIEW L1-shortestkid (L1) and L4-fivechildren (L4): 5 shared four-word runs (e.g. "@ @ is taller"), same sub-structure
 - REVIEW L1-shortestkid (L1) and L6-secondtallest (L6): 5 shared four-word runs (e.g. "@ @ is taller"), same sub-structure
-- REVIEW L2-tallestfour (L2) and L4-fivechildren (L4): 5 shared four-word runs (e.g. "@ @ is taller"), same sub-structure
-- REVIEW L2-tallestfour (L2) and L6-secondtallest (L6): 5 shared four-word runs (e.g. "@ @ is taller"), same sub-structure
 - REVIEW L4-fivechildren (L4) and L6-secondtallest (L6): 5 shared four-word runs (e.g. "@ @ is taller"), same sub-structure
 - Frame rule (function-word skeleton, same sub-structure at two levels): 49 pairs at 0.80 or more reviewed, 15 of them accepted in the ledger
 - REVIEW frame L1-rpsgames (L1) and L2-ttgames (L2): sentence frame 0.80 alike, counting_pairs.handshakes
@@ -130,8 +127,8 @@ Levels 3 to 6: the same answer value never twice within 60 days (and never with 
 
 | Level | Puzzles | Single digit | 10 to 99 | 100 or more | Fraction, decimal | Text | Peak single digits in 60 days (limit) | Peak 10 to 99 in 60 days (limit 90) |
 |---|---|---|---|---|---|---|---|---|
-| 1 | 92 | 12 | 68 | 0 | 0 | 12 | 11 (18) | 45 |
-| 2 | 92 | 11 | 50 | 16 | 2 | 13 | 10 (18) | 33 |
+| 1 | 61 | 10 | 43 | 0 | 0 | 8 | 10 (18) | 43 |
+| 2 | 61 | 9 | 33 | 9 | 1 | 9 | 9 (18) | 33 |
 | 3 | 61 | 6 | 29 | 18 | 4 | 4 | 6 (9) | 28 |
 | 4 | 61 | 6 | 25 | 19 | 5 | 6 | 6 (9) | 25 |
 | 5 | 61 | 2 | 30 | 20 | 5 | 4 | 2 (9) | 30 |
@@ -143,8 +140,8 @@ Target: about 3 or 4 text-answer puzzles a month at every level, so that a year 
 
 | Level | Puzzles so far | Text-answer puzzles | Per 30 days | Projected in 365 | Target | Verdict |
 |---|---|---|---|---|---|---|
-| 1 | 92 | 12 | 3.9 | 48 | 40 | ok |
-| 2 | 92 | 13 | 4.2 | 52 | 40 | ok |
+| 1 | 61 | 8 | 3.9 | 48 | 40 | ok |
+| 2 | 61 | 9 | 4.4 | 54 | 40 | ok |
 | 3 | 61 | 4 | 2.0 | 24 | 40 | WARNING: below the plan |
 | 4 | 61 | 6 | 3.0 | 36 | 40 | WARNING: below the plan |
 | 5 | 61 | 4 | 2.0 | 24 | 40 | WARNING: below the plan |

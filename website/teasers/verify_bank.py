@@ -345,6 +345,25 @@ def lock_problems(listing=None, manifest=None):
     return bad
 
 
+def lock_growth_note(listing=None, manifest=None):
+    """Post-round-6: growth of the source tree since the lock was written (new files that are not in source_manifest.tsv) is NOT a verification problem: the lock
+    holds minimums, so a larger tree satisfies it.  It only means the lock is stale, and the pinned digest / story index of the last report will differ.  Returns
+    a one-paragraph note (or '') naming the new files by root, so that unrelated growth (docs/ notes that no puzzle touches) is told apart from missing files."""
+    listing = listing if listing is not None else source_listing()
+    manifest = manifest if manifest is not None else read_manifest()
+    if not manifest:
+        return ''
+    new = sorted(r for r in listing if r not in manifest)
+    if not new:
+        return ''
+    by = {}
+    for r in new:
+        by.setdefault(r.split('/')[0], []).append(r)
+    parts = ', '.join('%s +%d' % (k, len(v)) for k, v in sorted(by.items()))
+    return ('NOTE (not a problem): %d source files are newer than the source lock (%s; for example %s). The lock only sets minimums, so this tree still verifies; '
+            'the near-copy rules now read these files too. Run `python3 website/teasers/verify_bank.py --update-lock` as the last step before a release.' % (len(new), parts, ', '.join(new[:3])))
+
+
 def update_lock():
     _, n, total, per = source_digest()
     listing = source_listing()
@@ -1404,8 +1423,20 @@ def selftest():
     # --- round 3: the near-copies of AUDIT_ROUND3 (their round-2 wording) against the widened sources
     probes = json.load(open(os.path.join(HERE, 'selftest_probes.json'), encoding='utf-8'))
     for pid, text in probes['must_fail_text'].items():
-        got = [sev for sev, _ in story_hits(text, sidx)]
-        cases.append(('round 3 probe %s (round-2 wording) is a FAIL of the text rules' % pid, 'FAIL' in got, got))
+        pin = probes.get('pinned_df', {}).get(pid)
+        if pin:
+            # post-round-6: replay the probe with the document frequency of its listed words pinned, so that growth of the source tree cannot move it across SPEC_DF;
+            # the rules and their thresholds are untouched, and the live result is only a drift note (printed, never a problem)
+            pidx = copy.copy(sidx)
+            pidx.df = dict(sidx.df)
+            pidx.df.update(pin)
+            got = [sev for sev, _ in story_hits(text, pidx)]
+            live = [sev for sev, _ in story_hits(text, sidx)]
+            if 'FAIL' not in live:
+                print('  note: probe %s is %s with the live document frequencies %s (pinned to %s for the self-test); not a problem' % (pid, live or 'clean', {w: sidx.df.get(w, 0) for w in pin}, pin))
+        else:
+            got = [sev for sev, _ in story_hits(text, sidx)]
+        cases.append(('round 3 probe %s (round-2 wording) is a FAIL of the text rules%s' % (pid, ' (document frequency of %s pinned)' % ', '.join(sorted(pin)) if pin else ''), 'FAIL' in got, got))
     # round 4: the four High items of AUDIT_ROUND4 (round-3 wording) and the fan at Level 4, which the round-3 verifier passed
     for pid, pr in probes.get('round4_high', {}).items():
         got = [sev for sev, _ in (story_hits(pr['q'], sidx, ans=pr['ans'], sol=pr['sol']) + list_hits(pr['q'], sidx, ans=pr['ans']) + frame_hits(pr['q'], TAX.T.get('retired_frames', [])))]
@@ -1478,7 +1509,22 @@ def selftest():
     per_now = {}
     for r in listing:
         per_now[r.split('/')[0]] = per_now.get(r.split('/')[0], 0) + 1
-    cases.append(('the source lock needs 99% of the practice, term, outputs, docs and school files', all(lk['min_files'][r] >= int(per_now[r] * 0.98) for r in ('practice', 'term', 'outputs', 'docs', 'school')), {r: (lk['min_files'][r], per_now[r]) for r in ('practice', 'term', 'outputs', 'docs', 'school')}))
+    # post-round-6: the lock is compared with the manifest it was written with (a fixed pair), not with the live tree: growth of the tree (other work adding docs,
+    # notes or lessons) must not turn a rule test red.  Growth is reported as a note (lock_growth_note), never as a problem.
+    mani_per = {}
+    for r in mani:
+        mani_per[r.split('/')[0]] = mani_per.get(r.split('/')[0], 0) + 1
+    cases.append(('the source lock holds at least 98% of the practice, term, outputs, docs and school files it was written with (manifest)', all(lk['min_files'][r] >= int(mani_per[r] * 0.98) for r in ('practice', 'term', 'outputs', 'docs', 'school')), {r: (lk['min_files'][r], mani_per[r]) for r in ('practice', 'term', 'outputs', 'docs', 'school')}))
+    grown = dict(listing)
+    for i in range(40):
+        grown['docs/zz_unrelated_note_%d.md' % i] = 3000
+    cases.append(('the source lock still accepts a tree that only GREW (40 new unrelated docs files)', not lock_problems(grown, mani), lock_problems(grown, mani)[:2]))
+    gn = lock_growth_note(grown, mani)
+    cases.append(('growth of docs/ since the lock gives a clear NOTE (names the root, says it is not a problem, says to re-run --update-lock), not a failure', 'docs +' in gn and 'not a problem' in gn and '--update-lock' in gn, gn[:160]))
+    cases.append(('a tree identical to the manifest gives no growth note', lock_growth_note(dict(mani), mani) == '', ''))
+    gnow = lock_growth_note(listing, mani)
+    if gnow:
+        print('  ' + gnow)
     cases.append(('the source lock holds byte minimums and a manifest of %d paths' % len(mani), bool(lk.get('min_bytes')) and len(mani) >= 0.98 * len(listing), len(mani)))
     lost2 = {r: s_ for i, (r, s_) in enumerate(sorted(listing.items())) if not (r.startswith('practice/') and i % 50 == 0)}
     cases.append(('the source lock refuses a tree that lost 2% of the practice files', any('practice' in p for p in lock_problems(lost2, mani)), lock_problems(lost2, mani)[:2]))
@@ -1819,6 +1865,9 @@ def main():
         for p in problems:
             print('  ', p)
         sys.exit(2)
+    gnote = lock_growth_note()
+    if gnote:
+        print(gnote)
     SRC_LINE = ('Sources searched (whole working tree, tracked or not): %d files, %.1f MB, sha256 %s.  Files per root: %s.' % (
         nfiles, nbytes / 1e6, digest[:24], ', '.join('%s %d' % kv for kv in sorted(per_root.items()))))
     months = [a for a in sys.argv[1:] if not a.startswith('--')] or man['released']

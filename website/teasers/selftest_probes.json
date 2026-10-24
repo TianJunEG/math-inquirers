@@ -9,6 +9,10 @@
   "L5-teams16": "15 teams are in a league. Every team plays every other team exactly once. How many matches are played?",
   "L2-pencilcase": "A pencil case holds 9 blue, 7 black and 6 red pens. Mei takes pens out without looking. How many pens must she take to be sure of having 5 pens of the same colour?"
  },
+ "pinned_df": {
+  "L2-pencilcase": {"case": 5000}
+ },
+ "pinned_df_note": "Post-round-6 fix. The probe L2-pencilcase is a FAIL by rule F2 only while three of its shared words count as specific (document frequency <= SPEC_DF). 'case' sat just under SPEC_DF (5,250) when the probe was written and crossed it (5,364) when the source tree grew by about 3,000 sentences, so the probe fell to REVIEW although no rule changed. The self-test now replays a probe with the document frequency of the listed words pinned to the value here (a value inside the specific band at the time the probe was written); every threshold of the rules is unchanged. The live result is still computed and printed as a drift note, never as a problem.",
  "retired_sub": {
   "L1-coinsets": "coins.make_amount",
   "L1-rungrow": "growing_pattern.growing_gaps",

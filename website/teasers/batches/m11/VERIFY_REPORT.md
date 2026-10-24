@@ -11,7 +11,7 @@ Method: every puzzle is re-solved by `brute.py` (independent of the author solve
 | 5 | 30 | 30 | 1 | 22 | 3 | 30 |
 | 6 | 30 | 24 | 3 | 20 | 3 | 30 |
 
-Sources searched (whole working tree, tracked or not): 6756 files, 1362.3 MB, sha256 2d29be006a5e78787fabbfbe.  Files per root: deck 158, diag 12, docs 421, extension 257, hp 41, k2 5, levels 23, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 373, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
+Sources searched (whole working tree, tracked or not): 6760 files, 1363.2 MB, sha256 f23be12b38f2ffc78ecacad9.  Files per root: deck 158, diag 12, docs 423, extension 257, hp 41, k2 5, levels 23, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 373, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2532, tutor 130, website 42, worker 1.
 
 Similarity sources checked: holiday banks, own term lessons, all extension workbook data, the school booklets, our book drafts and catalogues, external private source files, and the seven fixed website puzzles.
 

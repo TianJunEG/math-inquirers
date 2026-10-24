@@ -111,3 +111,7 @@ Stock-frame lines left (like November): `L2-tallestfour` against `L1-shortestkid
 * The second reader was written by the same agent that wrote the puzzles (no other agent was available), after the questions were final, from the printed text only, with enumeration or simulation instead of the generator's formulas. Every one of the 62 is covered (the owner asked for 15 a level), but a human second reader on at least 15 a level, new items first, is still the safer step before `released` gets "01".
 * A release also needs Levels 3 to 6 of January (not written; the gate for them is 3 text answers a month, 4 at Levels 5 and 6), a re-run of `verify_bank.py 01` on the full tree just before, `"01"` in `manifest.json` `released`, and a rebuild plus `test_site.py` (a scratch build that carried January with Levels 3 to 6 borrowed from December passed all browser checks for the 62 puzzles; only the flag-off checks of that scratch copy failed, as expected because the pages there were rebuilt with the flag on).
 * Commands used: `MI_LEVELS="1 2" python3 website/teasers/build_bank.py 01`, `python3 website/teasers/verify_bank.py 01`, `python3 website/teasers/second_reader_jan_l1l2.py`.
+
+## 8. Update after the post-round-6 fix
+
+Items 1 to 3 of section 6 are resolved: see `FIXES_ROUND6.md` section 11 (`L1-paperchain` rewritten, selftest probe pinned, lock growth note). `verify_bank.py --selftest` now has 0 problems. Re-run `verify_bank.py --update-lock` just before a release.

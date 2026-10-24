@@ -23,7 +23,7 @@ Script: `second_reader_round6.py` (imports none of the generator, checker, build
 | L1-stickersheets | 9 | 9 | agree |
 | L1-threefifty | 14 | 14 | agree |
 | L1-bikesigns | 60 | 60 | agree |
-| L1-paperchain | 25 | 25 | agree |
+| L1-paperchain | 62 | 62 | agree |
 | L1-matchhouse | 41 | 41 | agree |
 | L1-bibscores | 26 | 26 | agree |
 | L1-queuebus | 24 | 24 | agree |

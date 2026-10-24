@@ -1268,14 +1268,14 @@
     "p": {
      "ask": "total",
      "n": 6,
-     "length": 5,
-     "overlap": 1
+     "length": 12,
+     "overlap": 2
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "25",
-    "shown": "25 cm",
+    "ans": "62",
+    "shown": "62 cm",
     "units": [
      "cm",
      "centimetre",
@@ -1287,18 +1287,19 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "26",
-     "24",
-     "27",
-     "23",
-     "50",
-     "35",
-     "15",
-     "250"
+     "63",
+     "61",
+     "64",
+     "60",
+     "124",
+     "31",
+     "72",
+     "52",
+     "620"
     ],
-    "q": "Mei makes a paper chain by sticking 6 strips in a line. Each strip is 5 cm long. Where two strips meet, 1 cm of one strip lies on top of the other. How long is the finished chain?",
-    "hint": "Add up the lengths of all the strips. Then take away the part that is hidden at each join.",
-    "why": "6 strips are 6 × 5 = 30 cm. There are 5 joins and each hides 1 cm, so 5 cm is hidden. 30 − 5 = 25 cm.",
+    "q": "Lina ties 6 ribbons end to end to make one long ribbon for a gift. Every ribbon is 12 cm long. At each knot, 2 cm of two ribbons is tied together and cannot be seen. How long is the long ribbon?",
+    "hint": "Add up the lengths of all the ribbons. Then take away the part that is lost in each knot.",
+    "why": "6 ribbons are 6 × 12 = 72 cm. There are 5 knots and each uses 2 cm, so 10 cm is lost. 72 − 10 = 62 cm.",
     "date": "12-29"
    },
    {

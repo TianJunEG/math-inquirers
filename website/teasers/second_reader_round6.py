@@ -32,7 +32,7 @@ def solve_all():
     S['L1-stickersheets'] = 9 * 7 - (9 // 3) * 18
     S['L1-threefifty'] = sum('3' in str(n) for n in range(1, 51))
     S['L1-bikesigns'] = (8 - 2) * 10
-    S['L1-paperchain'] = 6 * 5 - 5 * 1
+    S['L1-paperchain'] = 6 * 12 - 5 * 2
     sticks = {'1': 2, '2': 5, '3': 5, '4': 4, '5': 5}                       # the table printed in the question
     S['L1-matchhouse'] = sum(sticks[c] for n in range(41, 46) for c in str(n))
     bibs = sorted([12, 41, 26, 63, 38], key=lambda b: sum(int(c) for c in str(b)))
