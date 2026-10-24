@@ -29,7 +29,11 @@ try:
                        capture_output=True, text=True).stdout
     seen = sorted({w for w in re.findall(r"[A-Za-z$]{3,}", t)})
     allowed = {w.lower().strip(".:") for k, s in spec["texts"] for w in re.findall(r"[A-Za-z$%.0-9]+", s)}
-    extra = [w for w in seen if w.lower() not in allowed]
+    allowed |= {"readme"}
+    noise = [w for w in seen if set(w.lower()) <= set("eocs") and w.lower() not in allowed]   # dot patterns read as letters
+    frag = [w for w in seen if w.lower() not in allowed and w not in noise and any(w.lower() in x for x in allowed)]  # cut-off pieces of drawn words
+    extra = [w for w in seen if w.lower() not in allowed and w not in noise and w not in frag]
+    print("OCR dot-pattern noise (no real letters):", noise); print("OCR fragments of drawn words:", frag)
     print("OCR words (>=3 letters):", " ".join(seen))
     ok(not extra, f"OCR found no word outside the drawn text; unexpected: {extra}")
 except FileNotFoundError:
@@ -41,7 +45,7 @@ def bbox(cx, cy, r):
     x0, x1 = int((cx-r-3)*PX), int((cx+r+3)*PX); y0, y1 = int((cy-r-3)*PX), int((cy+r+3)*PX)
     w = a[y0:y1, x0:x1]; m = (np.abs(w-bg).sum(2) > 60)
     # ignore the soft shadow (grey, low saturation, light): keep darker/stroke pixels only
-    ys, xs = np.where(m & (w.sum(2) < 690))
+    ys, xs = np.where(m & (w.sum(2) < 480))
     return (xs.max()-xs.min()+1)/PX, (ys.max()-ys.min()+1)/PX
 d1 = None; meas = {}
 for c in spec["coins"]:

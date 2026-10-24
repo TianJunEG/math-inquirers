@@ -379,14 +379,14 @@ def move_row_fig(caption):
     return h.svg(x0 * 2 + 5 * c + 100, y0 + 4 * c + 12, body, caption)
 
 
-def shape_fig(pts, label, caption, u=34):
-    """One shape (vertices with y UP inside the shape) drawn at unit u, with its letter below."""
+def shape_fig(pts, title, caption, u=34):
+    """One shape (vertices with y UP inside the shape) drawn at unit u, with its title (such as 'Shape B') below."""
     h = _h()
     W = max(x for x, _ in pts)
     H = max(y for _, y in pts)
     x0, y0 = 20, 12
     P = ' '.join(f'{x0 + a * u},{y0 + (H - b) * u}' for a, b in pts)
-    body = f'<polygon points="{P}" fill="{SKY}" stroke="{h.NAVY}" stroke-width="3.5" stroke-linejoin="miter"/>' + h.T(x0 + W * u / 2, y0 + H * u + 32, 'Shape ' + label, 22, 'middle', 800)
+    body = f'<polygon points="{P}" fill="{SKY}" stroke="{h.NAVY}" stroke-width="3.5" stroke-linejoin="miter"/>' + h.T(x0 + W * u / 2, y0 + H * u + 32, title, 22, 'middle', 800)
     return h.svg(W * u + 2 * x0, y0 + H * u + 44, body, caption)
 
 
@@ -476,10 +476,6 @@ def row_fig(k):
     for i in range(1, k):
         body += f'<line x1="{x0 + i * w}" y1="{y0}" x2="{x0 + i * w}" y2="{y0 + w}" stroke="{h.NAVY}" stroke-width="4"/>'
     return h.svg(k * w + 2 * x0, w + 2 * y0, body, f'A long rectangle cut into {k} squares in a row by {k - 1} lines')
-
-
-def poly_draw_fig(pts, caption, u=36, label=None):
-    return shape_fig(pts, label or '', caption, u)
 
 
 def clocks_fig():

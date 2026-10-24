@@ -536,19 +536,19 @@ VARIANTS = {
                  steps=['Find {d}% of ${P}: build it from 10% and 1%.', 'Take the saving off ${P} for the sale price.', 'The two amounts are {ans}.']),
         oracle=_o_a4),
     'B1b': dict(
-        base=dict(X=100),
-        tpl=dict(vars=dict(X=[100, 200, 300, 400, 500]), derive=dict(T='X * 109 / 100'),
-                 q='A price tag says ${T}, GST included. GST is 9%. How much GST is in the price? (Type the number of dollars.)', frame='GST: $ {f1}', answers=dict(f1='X * 9 / 100'),
+        base=dict(T=109),
+        tpl=dict(vars=dict(T=[109, 218, 327, 436, 545]),
+                 q='A price tag says ${T}, GST included. GST is 9%. How much GST is in the price? (Type the number of dollars.)', frame='GST: $ {f1}', answers=dict(f1='T / 109 * 9'),
                  hint='The GST is 9% of the price before GST. ${T} is that price plus the GST: what percentage of the price before GST is ${T}?',
-                 steps=['${T} is 109% of the price before GST.', 'Find 1% of ${T} ÷ 109, then the price before GST, then 9% of it.', 'The GST is ${ans}.']),
-        oracle=lambda e: dict(f1=_o_b1(e))),
+                 steps=['${T} is 109% of the price before GST.', 'Find 1% of the price before GST, then the price before GST, then 9% of it.', 'The GST is ${ans}.']),
+        oracle=lambda e: dict(f1=whole(pct(price_before_gst(e['T']), 9)))),
     'B3': dict(
-        base=dict(M=120, p1=40, p2=25),
-        tpl=dict(vars=dict(M=[100, 120, 200, 300], p1=[20, 40], p2=[25, 50]), derive=dict(R='M * (100 - p1) * (100 - p2) / 10000'),
+        base=dict(R=54, p1=40, p2=25),
+        tpl=dict(vars=dict(R=[54, 72, 90, 126], p1=[20, 40], p2=[25, 50]),
                  q='Mrs Tan spent {p1}% of her money on groceries and {p2}% of the remaining money on a gift. She had ${R} left. How much money did she have at first? (Type the number of dollars.)',
-                 answer='M', hint='Work backwards. ${R} is what percentage of the money she had before buying the gift?',
+                 answer='R * 10000 / ((100 - p1) * (100 - p2))', hint='Work backwards. ${R} is what percentage of the money she had before buying the gift?',
                  steps=['The gift took {p2}% of the money before it, so ${R} is the rest of that money.', 'Find the money before the gift, then the money at first, working backwards one step at a time.', 'Mrs Tan had ${ans} at first.']),
-        oracle=_o_b3),
+        oracle=lambda e: money_at_first(e['R'], e['p1'], e['p2'])),
 }
 
 
