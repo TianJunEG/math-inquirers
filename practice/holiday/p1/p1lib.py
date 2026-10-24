@@ -534,3 +534,128 @@ def polyomino_row(shapes, cell=20, per_row=5, caption=''):
         x += w + gap
         rowh = max(rowh, h)
     return svg(300, y + rowh + 8, body, caption or 'Shapes made of joined squares')
+
+
+# ================================================================ Week 5 (lessons 9 and 10): length and puzzle-day figures
+RIB_COL = {'A': '#8CC8F0', 'B': '#F6C27A', 'C': '#8EDDA0'}
+
+
+def ribbon_cells(lens):
+    """The squares of each ribbon, one (x, y) place per square, row by row: the figure is drawn from these and the checkers count them."""
+    return {nm: [(i, k) for i in range(n)] for k, (nm, n) in enumerate(lens.items())}
+
+
+def ribbons_fig(lens, sq=26, caption=''):
+    """Ribbons made of equal squares, lined up at the left end, one under the other (no numbers written)."""
+    cells = ribbon_cells(lens)
+    mx = max(len(v) for v in cells.values())
+    body = ''
+    for k, (nm, cs) in enumerate(cells.items()):
+        y = 4 + k * (sq + 12)
+        body += T(10, y + sq / 2 + 6, nm, 18, 'middle', 800)
+        for i, _ in cs:
+            body += Re(26 + i * sq, y, sq, sq, RIB_COL.get(nm, '#CFE8D5'), NAVY, 2)
+    return svg(26 + mx * sq + 6, 4 + len(cells) * (sq + 12), body, caption or 'Ribbons made of equal squares: ' + ', '.join(lens))
+
+
+def span_cells(parts, width):
+    """Cut a length `width` into `parts` equal spans: the left end of every span."""
+    return [width * i / parts for i in range(parts)]
+
+
+def desk_fig(ali=6, mei=8, width=300, caption=''):
+    """The same desk measured with Ali's spans and with Mei's spans (equal spans, no gaps)."""
+    body = Re(2, 2, width, 26, '#FFF3C4', NAVY, 2.4) + T(10, 21, 'the desk', 15, 'start', 800)
+    for k, (nm, parts, col) in enumerate((('Ali', ali, '#FFC93C'), ('Mei', mei, '#BFE0F5'))):
+        y = 40 + k * 56
+        w = width / parts
+        for x in span_cells(parts, width):
+            body += Re(2 + x, y, w, 24, col, NAVY, 2.2)
+        body += T(2, y + 42, f'{nm}: {parts} spans', 15, 'start', 800)
+    return svg(width + 4, 40 + 56 + 50, body, caption or f'The same desk measured by Ali with {ali} spans and by Mei with {mei} spans')
+
+
+def clip_eraser_fig(clips=5, erasers=12, per=2, caption=''):
+    """Bars: 1 clip is as long as `per` erasers; a desk of `clips` clips; a pencil of `erasers` erasers."""
+    u, lw = 20, 66
+    rows = [('1 clip', [('c', per)], ''), (f'{per} erasers', [('e', 1)] * per, ''), ('desk', [('c', per)] * clips, '? erasers'), ('pencil', [('e', 1)] * erasers, '? clips')]
+    W = lw + max(sum(w for _, w in segs) for _, segs, _ in rows) * u + 76
+    body = ''
+    for k, (lab, segs, tail) in enumerate(rows):
+        y = 4 + k * 34
+        body += T(2, y + 20, lab, 14, 'start', 800)
+        x = lw
+        for kind, w in segs:
+            body += Re(x, y + 2, w * u, 24, '#8CC8F0' if kind == 'c' else '#F6B8A4', NAVY, 2)
+            x += w * u
+        if tail:
+            body += T(x + 8, y + 20, tail, 14, 'start', 800, TEAL)
+    return svg(W, 4 + len(rows) * 34, body, caption or f'1 clip is as long as {per} erasers. A desk of {clips} clips. A pencil of {erasers} erasers.')
+
+
+def pencil_cubes_fig(mei=8, ali_more=3, ben_less=2, caption=''):
+    """Mei's pencil in cubes; Ali's is the same length and then `ali_more` more (one dashed box); Ben's is `ben_less` cubes shorter than Mei's."""
+    u, lw = 30, 44
+    body = ''
+    rows = [('Mei', mei, None), ('Ali', mei, f'{ali_more} more'), ('Ben', mei - ben_less, f'{ben_less} fewer')]
+    for k, (nm, n, extra) in enumerate(rows):
+        y = 4 + k * 46
+        body += T(lw - 6, y + 20, nm, 16, 'end', 800)
+        for i in range(n):
+            body += Re(lw + i * u, y, u, 26, '#FFE08A', NAVY, 2)
+        if extra:
+            k_extra = ali_more if nm == 'Ali' else ben_less
+            body += Re(lw + n * u, y, k_extra * u, 26, '#fff', TEAL, 2.4, 0, '5 3') + T(lw + n * u + k_extra * u / 2, y + 19, extra, 14, 'middle', 800, TEAL)
+    W = lw + (mei + ali_more) * u + 6
+    return svg(W, 4 + 3 * 46 - 14, body, caption or f'Mei: {mei} cubes. Ali: the same and {ali_more} more. Ben: {ben_less} fewer than Mei.')
+
+
+BAR_COL = ['#FFE08A', '#8EDDA0', '#F4A6A0', '#8CC8F0']
+
+
+def ruler_fig(bars, lo=0, hi=12, cm=26, caption=''):
+    """A centimetre ruler lo..hi with bars (from, to, label) lying above it, lined up with the marks (one bar per line)."""
+    lw = 14
+    W = lw * 2 + (hi - lo) * cm
+    nb = len(bars)
+    top = 6 + nb * 34
+    body = ''
+    for k, (a, b, lab) in enumerate(bars):
+        y = 6 + k * 34
+        body += Re(lw + (a - lo) * cm, y, (b - a) * cm, 26, BAR_COL[k % 4], NAVY, 2.2) + T(lw + (a - lo) * cm + (b - a) * cm / 2, y + 19, lab, 15, 'middle', 800)
+    body += Re(lw, top, (hi - lo) * cm, 40, '#FFF9E8', NAVY, 2.4)
+    for v in range(lo, hi + 1):
+        x = lw + (v - lo) * cm
+        body += Ln(x, top, x, top + (22 if v % 5 == 0 else 15), 2) + T(x, top + 36, v, 14, 'middle', 700)
+    return svg(W, top + 46, body, caption or ('A centimetre ruler from %d to %d with ' % (lo, hi) + ', '.join(f'{lab} from {a} to {b}' for a, b, lab in bars)))
+
+
+def bird(cx, cy, s):
+    r = s * 0.3
+    return (f'<ellipse cx="{cx}" cy="{cy + 2}" rx="{r * 1.25}" ry="{r}" fill="#F4D35E" stroke="{NAVY}" stroke-width="1.8"/>'
+            f'<polygon points="{cx - r * 1.2},{cy + 2} {cx - r * 1.9},{cy - r * 0.6} {cx - r * 1.9},{cy + r * 0.8}" fill="#F4D35E" stroke="{NAVY}" stroke-width="1.6" stroke-linejoin="round"/>'
+            f'<polygon points="{cx + r * 1.2},{cy} {cx + r * 1.9},{cy + 2} {cx + r * 1.2},{cy + 5}" fill="{WARM}" stroke="{NAVY}" stroke-width="1.2" stroke-linejoin="round"/>'
+            + Ci(cx + r * 0.55, cy - 1, 1.8, NAVY, NAVY, 1))
+
+
+PET_ICON = dict(Dog=dog_face, Cat=cat_face, Fish=fish, Bird=bird)
+
+
+def pets_street_fig(pets, caption=''):
+    """Picture graph of pets in a street: one picture for each pet; pets = list of (name, number)."""
+    return picture_graph(pets, '1 pet', lambda nm: PET_ICON[nm], max(n for _, n in pets), caption=caption or 'Picture graph of pets in a street, one picture for each pet')
+
+
+def example_table(rows, caption=''):
+    """A small table: first row = column titles, then rows of cells (text)."""
+    nc = len(rows[0])
+    cw = [96] + [58] * (nc - 2) + [90]
+    W = sum(cw) + 4
+    body = ''
+    for r, row in enumerate(rows):
+        y = 2 + r * 30
+        x = 2
+        for c, cell in enumerate(row):
+            body += Re(x, y, cw[c], 30, '#D9D9D9' if r == 0 else ('#fff' if r % 2 else '#FAF6EA'), NAVY, 1.6) + T(x + cw[c] / 2, y + 20, cell, 14 if r == 0 else 15, 'middle', 800 if r == 0 else 700)
+            x += cw[c]
+    return svg(W, 2 + len(rows) * 30 + 4, body, caption or 'An example table')

@@ -1443,3 +1443,107 @@ def tetra_fig():
         w, h = dims_c(cells)
         b += cells_g(cells, c, px + (pw - w * c) / 2, py + 12 + (4 * c - h * c) / 2, YEL) + T(px + pw / 2, py + 4 * c + 36, name, 16, 'middle', 800, TEAL)
     return svg(3 * pw, 2 * ph, b, 'The five shapes made of 4 squares joined edge to edge: line, square, L, T and zigzag.')
+
+
+# ================================================================ WEEK 5 (lessons 9 and 10): line graphs and tables, then puzzle day
+def line_graph(xl, series, y0, y1, step, lab, title='', ytitle='', legend=False, w=340, h=236, label=''):
+    """An accurate line graph. xl: the labels along the bottom (one point per label, on the vertical grid lines). series: list of dict(v=[...], c=colour, mark='circle'|'sq', dash=bool, name=str).
+    The side runs from y0 to y1, a grid line every `step`, a number every `lab`. Nothing is written beside the points (the child reads the scale)."""
+    L, R = 58, w - 14
+    top = (30 if title else 10) + (26 if legend else 0)
+    B = h - 34
+    n = len(xl)
+    xs = lambda i: L + 24 + i * (R - L - 48) / (n - 1)
+    ys = lambda v: B - (v - y0) * (B - top) / (y1 - y0)
+    b = Re(L, top, R - L, B - top, '#fff', 'none', 0)
+    if title:
+        b += T((L + R) / 2, 18, title, 15, 'middle', 800)
+    v = y0
+    while v <= y1 + 1e-9:
+        major = abs((v - y0) % lab) < 1e-9
+        b += Ln(L, ys(v), R, ys(v), 1.2 if major else 1, '#7F8CA8' if major else '#D2D9E8')
+        if major:
+            b += T(L - 7, ys(v) + 5, g(int(v)) if v == int(v) else v, 14, 'end')
+        v += step
+    for i, x in enumerate(xl):
+        b += Ln(xs(i), top, xs(i), B, 1, '#D2D9E8') + T(xs(i), B + 20, x, 14)
+    b += Ln(L, top - 3, L, B, 2.6) + Ln(L, B, R, B, 2.6)
+    if ytitle:
+        b += f'<text x="14" y="{(top + B) / 2:g}" font-size="14" font-weight="700" text-anchor="middle" fill="{NAVY}" transform="rotate(-90 14 {(top + B) / 2:g})">{esc(ytitle)}</text>'
+    for k, se in enumerate(series):
+        c = se.get('c', NAVY)
+        pts = ' '.join(f'{xs(i):.1f},{ys(vv):.1f}' for i, vv in enumerate(se['v']))
+        b += f'<polyline points="{pts}" fill="none" stroke="{c}" stroke-width="3" stroke-linejoin="round"' + (' stroke-dasharray="8 5"' if se.get('dash') else '') + '/>'
+        for i, vv in enumerate(se['v']):
+            if se.get('mark') == 'sq':
+                b += Re(xs(i) - 5.5, ys(vv) - 5.5, 11, 11, '#fff', c, 2.6)
+            else:
+                b += Ci(xs(i), ys(vv), 5.5, YEL, c, 2.6)
+        if legend:
+            lx = L + 6 + k * 120
+            b += Ln(lx, 39 if title else 19, lx + 30, 39 if title else 19, 3, c, '8 5' if se.get('dash') else None)
+            b += (Re(lx + 9.5, (39 if title else 19) - 5.5, 11, 11, '#fff', c, 2.6) if se.get('mark') == 'sq' else Ci(lx + 15, 39 if title else 19, 5.5, YEL, c, 2.6))
+            b += T(lx + 36, (39 if title else 19) + 5, se.get('name', ''), 14, 'start')
+    return svg(w, h, b, label or title or 'A line graph.')
+
+
+def table_fig(rows, widths=None, blank='?', head_rows=1, head_cols=1, rh=34, size=15, label='', fs_head=15):
+    """A table drawn as a figure. rows: list of lists of strings; an empty string '' is a missing number and is shown as `blank` on a yellow cell."""
+    n = len(rows[0])
+    widths = widths or [78] + [60] * (n - 1)
+    W = sum(widths)
+    b = ''
+    for r, row in enumerate(rows):
+        x = 0
+        for c, cell in enumerate(row):
+            head = r < head_rows or c < head_cols
+            fill = '#E9EEF8' if head else (YEL if cell == '' else '#fff')
+            b += Re(x, r * rh, widths[c], rh, fill, NAVY, 2)
+            b += T(x + widths[c] / 2, r * rh + rh / 2 + 5, cell if cell != '' else blank, size, 'middle', 800 if head else 700)
+            x += widths[c]
+    return svg(W, len(rows) * rh, b, label or 'A table.')
+
+
+def queue_fig(f=7, b=12, name='Mei'):
+    """A queue of circles from the front. `name` is the f-th from the front; a bracket marks the f-th from the front and a dashed bracket from the person to the back."""
+    sp, x0 = 40, 28
+    W = x0 + (f - 1) * sp + 15 + 100
+    body = T(x0 - 14, 20, 'FRONT', 13, 'start', 800, '#5B6785') + T(W - 4, 20, 'BACK', 13, 'end', 800, '#5B6785')
+    for i in range(f):
+        x = x0 + i * sp
+        mine = i == f - 1
+        body += Ci(x, 52, 15, YEL if mine else '#fff', NAVY, 3.4 if mine else 2.4) + T(x, 58, i + 1, 15)
+    xm = x0 + (f - 1) * sp
+    body += T(xm + 52, 58, '. . . . .', 24, 'start') + T(xm, 84, name, 15, 'middle', 800, TEAL)
+    body += f'<path d="M{x0 - 15} 92 q0 9 9 9 L{xm + 6} 101 q9 0 9 -9" fill="none" stroke="{NAVY}" stroke-width="2.6"/>'
+    body += T((x0 + xm) / 2, 124, f'{name} is {ordinal(f)} from the front', 15, 'middle', 800, TEAL)
+    body += f'<path d="M{xm - 15} 138 q0 9 9 9 L{W - 18} 147 q9 0 9 -9" fill="none" stroke="{WARM}" stroke-width="2.6" stroke-dasharray="7 4"/>'
+    body += T(W - 6, 170, f'{name} is {ordinal(b)} from the back', 15, 'end', 800, WARM)
+    return svg(W, 182, body, f'A queue of circles. {name} is circle number {f} from the front. A bracket marks {name} as {ordinal(f)} from the front, and a dashed bracket from {name} to the back of the queue marks {ordinal(b)} from the back.')
+
+
+def ordinal(n):
+    return f'{n}{"th" if 10 <= n % 100 <= 20 else {1: "st", 2: "nd", 3: "rd"}.get(n % 10, "th")}'
+
+
+def text_lines_fig(lines, size=14, lh=22, w=330, label=''):
+    """A small card of text lines (a clue card). A line starting with '*' is bold."""
+    b = Re(2, 2, w - 4, len(lines) * lh + 14, '#FFF9E8', NAVY, 2, 8)
+    for k, ln in enumerate(lines):
+        bold = ln.startswith('*')
+        b += T(14, 24 + k * lh, ln.lstrip('*'), size, 'start', 800 if bold else 600)
+    return svg(w, len(lines) * lh + 18, b, label or ' '.join(x.lstrip('*') for x in lines))
+
+
+def rise_share(first, last, y0, y1):
+    """How much of the height of the graph the rise takes up (1 = the whole height). A big share looks like a huge rise, a tiny share looks almost flat."""
+    return (last - first) / (y1 - y0)
+
+
+def possible_scores(rings, upto):
+    """Every total from 1 to `upto` that can be made from any number of rings worth the given points."""
+    ok = {0}
+    for t in range(1, upto + 1):
+        if any(t - r in ok for r in rings if t - r >= 0):
+            ok.add(t)
+    return sorted(ok - {0})
