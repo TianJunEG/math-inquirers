@@ -4,7 +4,7 @@ import sys,os,re,glob
 ACC={'1':('#1F7A6F','#14574F'),'2':('#2A7DC9','#1B5A94'),'3':('#3E8E41','#2B6A2E'),'4':('#7B4FB5','#5A3787'),'5':('#D9662B','#A84A1B'),'6':('#C2386B','#8F2551')}
 def level_of(path):
     k=os.path.basename(path.rstrip('/'))
-    m=re.match(r'p(\d)l',k); return m.group(1) if m else '1'
+    m=re.match(r'p(\d)l',k) or re.match(r'preview_l(\d)',k); return m.group(1) if m else '1'   # preview_lN = DRAFT free-preview-class decks
 def bar(a):
     return ('<div data-deco="bar" style="position:absolute;left:0;top:0;width:1920px;height:18px;display:flex">'
             f'<div style="flex:5;background:#1B2A49"></div><div style="flex:3;background:{a}"></div><div style="flex:1;background:#FFC93C"></div></div>')

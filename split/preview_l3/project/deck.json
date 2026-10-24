@@ -1,0 +1,57 @@
+{
+ "v": 4,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-24T12:00:00Z"
+ },
+ "lists": "css",
+ "title": "DRAFT, NOT PUBLISHED: Math Inquirers free preview class, Level 3 (60 minutes)",
+ "order": [
+  "pv3-title",
+  "pv3-rules",
+  "pv3-warm",
+  "pv3-notice",
+  "pv3-test",
+  "pv3-key",
+  "pv3-try1",
+  "pv3-break",
+  "pv3-spot",
+  "pv3-try2",
+  "pv3-challenge",
+  "pv3-recap",
+  "pv3-class",
+  "pv3-offer",
+  "pv3-takehome",
+  "pv3-end"
+ ],
+ "cover": "pv3-title",
+ "sections": {
+  "s1": {
+   "description": "Welcome and warm-up of the week",
+   "start": "pv3-title"
+  },
+  "s2": {
+   "description": "Notice, test, key idea, try",
+   "start": "pv3-notice"
+  },
+  "s3": {
+   "description": "Break, spot the mistake, try, challenge, recap",
+   "start": "pv3-break"
+  },
+  "s4": {
+   "description": "Offer, take-home, goodbye",
+   "start": "pv3-class"
+  }
+ },
+ "faces": {
+  "fredoka": {
+   "family": "Fredoka",
+   "href": "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap"
+  },
+  "nunito-sans": {
+   "family": "Nunito Sans",
+   "href": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+  }
+ },
+ "designSystems": []
+}
