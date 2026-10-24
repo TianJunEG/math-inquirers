@@ -126,7 +126,7 @@ do $$ declare c uuid := (select id from public.children where display_name = 'Mi
   assert pg_temp.fails($q$delete from public.practice_submissions$q$, 'permission denied');
   assert pg_temp.fails($q$select public.service_practice_keys('a','b','c')$q$, 'permission denied'), 'parent can not call service functions';
   assert pg_temp.fails($q$select * from public.tutor_group_practice('L1A')$q$, 'forbidden'), 'parent is not a tutor';
-  assert pg_temp.fails($q$select public.admin_grant_access(gen_random_uuid(), 'ext-l1', null, 'x')$q$, 'forbidden');
+  assert pg_temp.fails($q$select public.admin_grant_book_access(gen_random_uuid(), 1, 'online', 'x')$q$, 'forbidden');
 end $$;
 reset role;
 set role authenticated; select set_config('request.jwt.claim.sub','b2b2b2b2-0000-0000-0000-0000000000b2',false);
@@ -168,35 +168,142 @@ update public.enrolments set status = 'confirmed' where parent_id = 'a1a1a1a1-00
 -- admin sees all
 set role authenticated; select set_config('request.jwt.claim.sub','e5e5e5e5-0000-0000-0000-0000000000e5',false);
 do $$ begin assert (select count(*) from public.practice_submissions) = 1; assert (select count(*) from public.tutor_group_practice('L1A')) = 1; end $$;
--- ===== extension entitlement: admin grant, access code, limits =====
-select public.admin_grant_access((select id from public.parents where email = 'psa@example.com'), 'ext-l1', array[1]::smallint[], 'bought at fair');
-do $$ begin assert pg_temp.fails($q$select public.admin_grant_access(gen_random_uuid(), 'bogus', null, 'x')$q$), 'product id must match the shop list'; end $$;
-create temp table newcodes as select * from public.admin_create_access_codes(2, 'ext-l1', null, 'batch 1') as code;
-grant all on newcodes to authenticated;
-reset role;
-do $$ begin assert (select count(*) from public.access_codes) = 2 and (select count(*) from public.access_codes where code_hash like '____-%') = 0, 'only hashes are stored'; end $$;
-set role service_role;
-do $$ declare th text := pg_temp.h((select token from tok)); begin
-  assert (public.service_practice_keys(th, 'ext-l1u01', 'v1')->>'ok')::boolean, 'unit 1 granted by admin';
-  assert public.service_practice_keys(th, 'ext-l1u02', 'v1')->>'error' = 'entitlement', 'only unit 1 was granted';
-end $$;
-reset role;
--- parent B redeems a code: wrong codes are counted, 10 wrong guesses in an hour lock the redeemer out
+-- ===== extension-only family (no enrolment, no group): parent B, children Ben and Bo. One purchase = one child. =====
 set role authenticated; select set_config('request.jwt.claim.sub','b2b2b2b2-0000-0000-0000-0000000000b2',false);
-do $$ declare i int; c1 text := (select code from newcodes limit 1); begin
-  assert public.redeem_access_code('AAAA-BBBB-CCCC') = 'bad_code';
-  assert public.redeem_access_code(lower(c1)) = 'ext-l1', 'case and dashes do not matter';
-  assert (select count(*) from public.my_entitlements()) = 1;
-  assert public.redeem_access_code(c1) = 'ext-l1', 'same family again is fine';
-  for i in 1..9 loop assert public.redeem_access_code('ZZZZ-ZZZZ-' || i) = 'bad_code'; end loop;
-  assert public.redeem_access_code('ZZZZ-ZZZZ-ZZZZ') = 'too_many_tries', 'rate limit on guessing';
-  assert public.redeem_access_code(c1) = 'too_many_tries', 'locked out even for a right code';
+do $$ begin
+  perform public.add_child('Bo', 1, '5555');
+  assert pg_temp.fails($q$select public.create_ext_order((select id from public.children where display_name = 'Ben' and parent_id = auth.uid()), 1, 'online')$q$, 'price_not_set'), 'no price, no order';
 end $$;
 reset role;
--- a one-use code can not be used by a second family
-set role authenticated; select set_config('request.jwt.claim.sub','a1a1a1a1-0000-0000-0000-0000000000a1',false);
-do $$ begin assert public.redeem_access_code((select code from newcodes limit 1)) = 'bad_code', 'one use only'; end $$;
+insert into public.ext_prices (product_id, amount_cents) values ('ext-l1-online', 100), ('ext-l1-both', 200), ('ext-l1-workbook', 100);   -- TEST VALUES ONLY, not real prices
+set role authenticated; select set_config('request.jwt.claim.sub','b2b2b2b2-0000-0000-0000-0000000000b2',false);
+do $$ declare ben uuid := (select id from public.children where display_name = 'Ben' and parent_id = auth.uid()); o uuid; begin
+  assert pg_temp.fails(format('select public.create_ext_order(%L, 1, %L)', ben, 'online'), 'consents_missing'), 'online_practice consent needed to buy online';
+  perform public.record_consents('{"contact":true,"terms":true,"online_practice":true}', 't2', 'p2');
+  assert pg_temp.fails(format('select public.create_ext_order(%L, 1, %L)', gen_random_uuid(), 'online'), 'not_found'), 'only own child';
+  assert pg_temp.fails(format('select public.create_ext_order(%L, 1, %L)', ben, 'both'), 'consents_missing'), 'delivery consent needed for a posted book';
+  perform public.record_consents('{"book_delivery":true}', 't2', 'p2');
+  assert pg_temp.fails(format('select public.create_ext_order(%L, 1, %L)', ben, 'both'), 'bad_address'), 'address needed';
+  assert pg_temp.fails(format('select public.create_ext_order(%L, 1, %L, %L, %L, %L)', ben, 'both', 'B Parent', '1 Test Road', 'AB1234'), 'bad_address'), 'Singapore 6-digit postal code';
+  o := public.create_ext_order(ben, 1, 'online');
+  assert (select status from public.ext_orders where id = o) = 'pending_payment' and (select ship_status from public.ext_orders where id = o) = 'not_needed';
+  assert (select product_id from public.ext_orders where id = o) = 'ext-l1-online';
+  assert pg_temp.fails($q$update public.ext_orders set status = 'paid'$q$, 'permission denied'), 'parent can not mark paid';
+  assert pg_temp.fails($q$insert into public.child_book_access (child_id, level, format, source) select id, 1, 'online', 'admin' from public.children$q$, 'permission denied'), 'parent can not grant access';
+end $$;
 reset role;
+create temp table bids as select (select id from public.children where display_name = 'Ben' and parent_id = 'b2b2b2b2-0000-0000-0000-0000000000b2') as ben,
+                                 (select id from public.children where display_name = 'Bo' and parent_id = 'b2b2b2b2-0000-0000-0000-0000000000b2') as bo,
+                                 (select id from public.ext_orders where child_label = 'Ben') as ord;
+grant all on bids to authenticated, service_role;
+-- real session for Ben (needs contact + terms + online_practice: now granted); Bo has a session too
+set role anon;
+create temp table bentok as select * from public.child_start_session((select cb from codes), 'Ben', '4321');
+create temp table botok as select * from public.child_start_session((select cb from codes), 'Bo', '5555');
+reset role;
+grant all on bentok, botok to service_role;
+do $$ begin assert (select count(*) from bentok) = 1 and (select count(*) from botok) = 1, 'extension-only family: sessions without any enrolment or group'; end $$;
+set role service_role;
+do $$ declare hb text := pg_temp.h((select token from bentok)); ho text := pg_temp.h((select token from botok)); begin
+  assert public.service_practice_keys(hb, 'ext-l1u01', 'v1')->>'error' = 'entitlement', 'not paid yet';
+end $$;
+reset role;
+-- admin ticks the PayNow payment -> access for Ben only
+set role authenticated; select set_config('request.jwt.claim.sub','e5e5e5e5-0000-0000-0000-0000000000e5',false);
+select public.admin_mark_ext_order_paid((select ord from bids));
+select public.admin_mark_ext_order_paid((select ord from bids));   -- idempotent
+do $$ begin assert (select count(*) from public.child_book_access) = 1 and (select child_id from public.child_book_access) = (select ben from bids), 'one purchase = one access row for one child'; end $$;
+reset role;
+set role service_role;
+do $$ declare hb text := pg_temp.h((select token from bentok)); ho text := pg_temp.h((select token from botok)); r jsonb; begin
+  assert (public.service_practice_keys(hb, 'ext-l1u01', 'v1')->>'ok')::boolean, 'Ben: unit 1 of the book he has';
+  assert (public.service_practice_keys(hb, 'ext-l1u02', 'v1')->>'ok')::boolean, 'Ben: the whole book (all 10 units), not one unit';
+  assert public.service_practice_keys(ho, 'ext-l1u01', 'v1')->>'error' = 'entitlement', 'the purchase for Ben does NOT unlock his sibling Bo';
+  assert public.service_practice_keys(hb, 'hol-l1l01', 'v1')->>'error' = 'entitlement', 'a book does not unlock the holiday/term lessons';
+  r := public.service_practice_record(hb, 'ext-l1u01', 'v1', gen_random_uuid(), 1, '[{"item_id":"q1","marking_mode":"auto","mark":"right","answered":true,"answer_text":"1"}]');
+  assert (r->>'ok')::boolean, r::text;
+  assert public.service_practice_record(ho, 'ext-l1u01', 'v1', gen_random_uuid(), 1, '[]')->>'error' = 'entitlement', 'record is gated too';
+  assert public.service_practice_record(hb, 'smp-l1u01', 'v1', gen_random_uuid(), 1, '[]')->>'error' = 'entitlement', 'open sample units are never stored';
+end $$;
+reset role;
+-- reports without a group: parent B sees own child; tutor of L1A does not; admin overview shows has_group = false
+set role authenticated; select set_config('request.jwt.claim.sub','b2b2b2b2-0000-0000-0000-0000000000b2',false);
+do $$ begin
+  assert (select count(*) from public.practice_submissions) = 1, 'parent sees own child submission';
+  assert (select count(*) from public.practice_child_detail((select ben from bids), 'ext-l1u01')) = 1;
+  assert (select count(*) from public.my_consents() where granted) >= 3;
+  assert pg_temp.fails($q$select * from public.admin_practice_overview()$q$, 'forbidden');
+  assert (select count(*) from public.ext_orders) = 1 and (select count(*) from public.child_book_access) = 1, 'parent sees own order and access';
+end $$;
+reset role;
+set role authenticated; select set_config('request.jwt.claim.sub','c3c3c3c3-0000-0000-0000-0000000000c3',false);
+do $$ begin assert (select count(*) from public.practice_submissions where child_id = (select ben from bids)) = 0, 'a tutor never sees a child with no group'; assert (select count(*) from public.ext_orders) = 0; end $$;
+reset role;
+set role authenticated; select set_config('request.jwt.claim.sub','e5e5e5e5-0000-0000-0000-0000000000e5',false);
+do $$ begin
+  assert (select count(*) from public.admin_practice_overview() where display_name = 'Ben' and has_group = false) = 1, 'admin overview covers children without a group';
+  assert (select count(*) from public.admin_list_ext_orders()) = 1;
+end $$;
+-- the funnel: trial request from the parent, counted by source, no tracking
+reset role;
+set role authenticated; select set_config('request.jwt.claim.sub','b2b2b2b2-0000-0000-0000-0000000000b2',false);
+do $$ declare t uuid; begin
+  t := public.request_trial((select ben from bids), 1, array['weekend-morning'], 'hello', 'after_submit');
+  assert pg_temp.fails($q$select public.request_trial(gen_random_uuid(), 1, '{}', null, 'book')$q$, 'not_found');
+  assert pg_temp.fails($q$select public.request_trial(null, 1, '{}', null, 'bogus')$q$), 'unknown source refused';
+  perform public.request_trial(null, 1, '{}', null, 'book'); perform public.request_trial(null, 1, '{}', null, 'book');
+  assert pg_temp.fails($q$select public.request_trial(null, 1, '{}', null, 'book')$q$, 'too_many'), '3 requests a day at most';
+  assert pg_temp.fails($q$select * from public.admin_list_trial_requests()$q$, 'forbidden');
+  assert pg_temp.fails($q$select public.admin_funnel_counts()$q$, 'forbidden');
+  assert (select count(*) from public.trial_requests) = 3, 'parent sees own requests';
+end $$;
+reset role;
+set role authenticated; select set_config('request.jwt.claim.sub','e5e5e5e5-0000-0000-0000-0000000000e5',false);
+do $$ declare f jsonb; begin
+  perform public.admin_set_trial_status((select id from public.trial_requests where source = 'after_submit'), 'attended');
+  f := public.admin_funnel_counts();
+  assert (f->>'books_paid')::int = 1 and (f->>'children_started')::int = 1 and (f->>'trial_requests')::int = 3 and (f->>'trial_attended')::int = 1, f::text;
+  assert (f->'trial_by_source'->>'book')::int = 2, f::text;
+end $$;
+reset role;
+-- shipping: a workbook order needs the address; the address is cleared 30 days after delivery
+set role authenticated; select set_config('request.jwt.claim.sub','b2b2b2b2-0000-0000-0000-0000000000b2',false);
+create temp table wo as select public.create_ext_order((select bo from bids), 1, 'workbook', 'B Parent', '1 Test Road #01-01', '123456', '81234567') as id;
+reset role;
+grant all on wo to authenticated;
+do $$ begin assert (select ship_status from public.ext_orders where id = (select id from wo)) = 'to_ship'; end $$;
+set role authenticated; select set_config('request.jwt.claim.sub','e5e5e5e5-0000-0000-0000-0000000000e5',false);
+select public.admin_mark_ext_order_paid((select id from wo));
+select public.admin_set_ship_status((select id from wo), 'delivered');
+do $$ begin assert public.admin_clear_delivered_addresses() = 0, 'not before 30 days'; end $$;
+reset role;
+update public.ext_orders set delivered_at = now() - interval '31 days' where id = (select id from wo);
+set role authenticated; select set_config('request.jwt.claim.sub','e5e5e5e5-0000-0000-0000-0000000000e5',false);
+do $$ begin assert public.admin_clear_delivered_addresses() = 1; assert (select ship_address from public.ext_orders where id = (select id from wo)) is null, 'address cleared'; end $$;
+-- a workbook-only purchase gives NO online access
+do $$ begin assert (select count(*) from public.child_book_access where format = 'workbook') = 1; end $$;
+reset role;
+set role service_role;
+do $$ begin assert public.service_practice_keys(pg_temp.h((select token from botok)), 'ext-l1u01', 'v1')->>'error' = 'entitlement', 'workbook-only format does not open the online practice'; end $$;
+reset role;
+-- refund: access revoked at once, past answers stay until retention removes them
+set role authenticated; select set_config('request.jwt.claim.sub','e5e5e5e5-0000-0000-0000-0000000000e5',false);
+select public.admin_refund_ext_order((select ord from bids));
+reset role;
+set role service_role;
+do $$ begin assert public.service_practice_keys(pg_temp.h((select token from bentok)), 'ext-l1u01', 'v1')->>'error' = 'entitlement', 'refund revokes online access'; end $$;
+reset role;
+do $$ begin assert (select status from public.child_book_access where order_id = (select ord from bids)) = 'refunded'; assert (select count(*) from public.practice_submissions where child_id = (select ben from bids)) = 1, 'answers stay after refund'; end $$;
+update public.practice_submissions set received_at = now() - interval '100 days' where child_id = (select ben from bids);
+set role authenticated; select set_config('request.jwt.claim.sub','e5e5e5e5-0000-0000-0000-0000000000e5',false);
+do $$ declare pn int := public.admin_purge_expired_practice(); begin raise notice 'purged %', pn; assert pn = 1 and (select count(*) from public.practice_submissions where child_id = (select ben from bids)) = 0, '90 days after access ended: answers deleted'; end $$;
+-- manual admin grant (free) for a child
+select public.admin_grant_book_access((select bo from bids), 1, 'online', 'prize');
+reset role;
+set role service_role;
+do $$ begin assert (public.service_practice_keys(pg_temp.h((select token from botok)), 'ext-l1u01', 'v1')->>'ok')::boolean, 'admin grant opens it'; end $$;
+reset role;
+
 -- ===== consent withdrawn: no more submissions at once =====
 set role authenticated; select set_config('request.jwt.claim.sub','a1a1a1a1-0000-0000-0000-0000000000a1',false);
 select public.record_consents('{"online_practice":false}', 't2', 'p2');
