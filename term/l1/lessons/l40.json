@@ -29,7 +29,7 @@
   },
   "contest_moves": [
     "write a puzzle with a rule, solve it, and show why the answer must be right by listing every case (Puzzle With a Proof)",
-    "check a friend's puzzle and say what is wrong: the numbers do not fit the rule (two numbers that make 10 and differ by 4 are 3 and 7, not 6 and 4)",
+    "check a friend's puzzle and say what is wrong: the numbers do not fit the rule (a pattern that starts at 4 and goes up by 4 is 4, 8, 12, not 4, 7, 10)",
     "a puzzle with many answers is not yet a good puzzle: add a clue until it has exactly one answer",
     "teach an idea in a minute: the idea, an example and a check"
   ],

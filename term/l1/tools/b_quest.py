@@ -58,6 +58,13 @@ def lesson_lab(x):
     return f'Term {t} Lesson {int(x) - off}'
 
 
+def lesson_range(ls):
+    """Term-local wording for the tutor tables, as printed in the books: 'Term 3 Lesson 8', 'Term 3 Lessons 1 to 7'. A range that crosses a term says both ends."""
+    t, off = _TERM['n'], _TERM['off']
+    a, b = int(ls[0]) - off, int(ls[-1]) - off
+    return f'Term {t} Lesson {a}' if a == b else f'Term {t} Lessons {a} to {b}'
+
+
 # words that must never appear in the text of the child or parent PDFs (the tutor notes may say "no scores" etc.)
 BAN_FAMILY = [r'\btests?\b', r'\bexams?\b', r'check[- ]?sheet', r'\bend-of-term check\b', r'\btimer\b', r'\bpass(ed)? or fail', r'\branked?\b|\branking\b',
               r'\bscored?\b|\bscores\b', r'\bmarked\b|\bmarks\b|\bmarking\b', r'\bout of\b', r'\bgrades?\b']
@@ -271,7 +278,7 @@ def tutor_notes_html(d):
     H.append('<h2 class="pb">6. Group advice for next term (tutor only; one sheet per class; no names)</h2>')
     H.append('<p class="small">' + E(ns['group_how']) + '</p>')
     H.append('<table><tr><th style="width:26%">Area</th><th>What several children were still working on (no names)</th><th>What I will do in the first two lessons of next term</th></tr>' + ''.join(
-        f'<tr><td><b>{E(s["parent_name"])}</b><div class="small">{"Lesson " + str(s["lessons"][0]) if s["lessons"][0] == s["lessons"][-1] else "Lessons " + str(s["lessons"][0]) + " to " + str(s["lessons"][-1])}: {E(s["looked_at"])}</div></td><td style="height:78px"></td><td></td></tr>' for s in c['strands']) + '</table>')
+        f'<tr><td><b>{E(s["parent_name"])}</b><div class="small">{lesson_range(s["lessons"])}: {E(s["looked_at"])}</div></td><td style="height:78px"></td><td></td></tr>' for s in c['strands']) + '</table>')
     H.append('<table><tr><th>Prompt</th><th>My notes</th></tr>' + ''.join(f'<tr><td style="width:36%">{E(p)}</td><td style="height:44px"></td></tr>' for p in ns['group_prompts']) + '</table>')
     # --- the one-line templates
     sl = c['saw_line']
@@ -279,7 +286,7 @@ def tutor_notes_html(d):
     H.append(f'<div class="box t"><b>{E(sl["heading"])}</b><br>{E(sl["pattern"])}</div>')
     H.append('<p class="small">' + E(sl['how']) + '</p>')
     H.append('<table><tr><th>Area (parent wording)</th><th>Things you might have seen (pick the one your notes show; add the detail)</th><th>A next step that helps at home</th></tr>' + ''.join(
-        f'<tr><td><b>{E(s["parent_name"])}</b><div class="small">{"Lessons" if len(s["lessons"]) > 1 else "Lesson"} {s["lessons"][0]}' + (f' to {s["lessons"][-1]}' if len(s["lessons"]) > 1 else '') + f'. We looked at {E(s["looked_at"])}.</div></td>'
+        f'<tr><td><b>{E(s["parent_name"])}</b><div class="small">{lesson_range(s["lessons"])}. We looked at {E(s["looked_at"])}.</div></td>'
         f'<td><ul>{"".join("<li>" + E(x) + "</li>" for x in s["saw_examples"])}</ul></td><td><ul>{"".join("<li>" + E(x) + "</li>" for x in s["next_examples"])}</ul></td></tr>' for s in c['strands']) + '</table>')
     if tools:
         H.append('<h3>Tool words for the line (use when your notes show it)</h3><ul>' + ''.join(f'<li>{E(TOOL_SAW[i])}</li>' for i in tools) + '</ul>'

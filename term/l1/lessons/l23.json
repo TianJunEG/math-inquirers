@@ -2405,63 +2405,69 @@
     "id": "G1",
     "page": 4,
     "tier": "go",
-    "text": "Mi has a quiet afternoon. First painting for 1 hour. Then a story for half an hour. Then a snack for half an hour. The snack ends at 4:15 pm.",
+    "text": "Mi's class has a morning plan. Story time lasts half an hour. Then PE lasts 1 hour. PE ends at 10:45 am. Siti says story time started at 9:45 am.",
     "parts": [
      {
       "l": "a",
-      "text": "The snack started at ____ pm.",
-      "ans": "3:45 pm",
-      "val": "3:45 pm"
+      "text": "Is Siti right? Circle Yes or No.",
+      "ans": "No",
+      "val": "No",
+      "choices": [
+       "Yes",
+       "No"
+      ]
      },
      {
       "l": "b",
-      "text": "The painting started at ____ pm.",
-      "ans": "2:15 pm",
-      "val": "2:15 pm"
+      "text": "PE started at ____ am.",
+      "ans": "9:45 am",
+      "val": "9:45 am"
+     },
+     {
+      "l": "c",
+      "text": "Story time started at ____ am.",
+      "ans": "9:15 am",
+      "val": "9:15 am"
      }
     ],
-    "answer": "3:45 pm; 2:15 pm",
+    "answer": "No; 9:45 am; 9:15 am",
     "val": [
-     "3:45 pm",
-     "2:15 pm"
+     "No",
+     "9:45 am",
+     "9:15 am"
     ],
-    "hint": "Start at the end of the time line and jump back. Go back by the snack first, then the story, then the painting. Count 15 minutes to the next half hour or hour.",
-    "solution": "The snack lasted half an hour and ended at 4:15 pm, so it started at 3:45 pm. The story lasted half an hour and ended at 3:45 pm, so it started at 3:15 pm. Painting lasted 1 hour and ended at 3:15 pm, so it started at 2:15 pm. Check: 2:15, 1 hour, 3:15, half an hour, 3:45, half an hour, 4:15.",
+    "hint": "Start at the end of the morning and jump back. Go back 1 hour for PE. Then go back half an hour for story time.",
+    "solution": "PE ends at 10:45 am and lasts 1 hour, so it started at 9:45 am. Story time ends when PE starts, at 9:45 am. It lasts half an hour, so it started at 9:15 am. Siti said 9:45 am, which is when story time ended, so she is not right. Check: 9:15, half an hour, 9:45, 1 hour, 10:45.",
     "mistakes": [
-     "Going back 1 hour for the snack (3:15 pm).",
-     "Stopping at 3:15 pm (when the story started)."
+     "Saying Yes because 9:45 am is the time PE started.",
+     "Going back half an hour for PE (10:15 am).",
+     "Stopping at 9:45 am (when story time ended)."
     ],
     "mins": 5,
     "visual": {
      "type": "number_line",
      "start": 0,
-     "end": 4,
+     "end": 3,
      "step": 1,
      "label_every": 1,
      "labels": {
-      "4": "4:15"
+      "3": "10:45"
      },
      "hide": [
       0,
       1,
-      2,
-      3
+      2
      ],
      "jumps": [
       [
        0,
-       2,
-       "painting|1 hour"
-      ],
-      [
-       2,
-       3,
+       1,
        "story|30 min"
       ],
       [
+       1,
        3,
-       4,
-       "snack|30 min"
+       "PE|1 hour"
       ]
      ],
      "width": 640
@@ -2623,30 +2629,52 @@
   },
   {
    "id": "E3",
-   "text": "The lesson ended at the time shown. It lasted half an hour. What time did it start?",
+   "text": "The class ends at 5 o'clock. It lasted half an hour. Which clock shows when it started?",
    "parts": [
     {
      "l": "",
-     "text": "It started at ____ .",
-     "ans": "11:30",
-     "val": "11:30"
+     "text": "Circle A, B or C.",
+     "ans": "A",
+     "val": "A",
+     "choices": [
+      "A",
+      "B",
+      "C"
+     ]
     }
    ],
-   "answer": "11:30",
+   "answer": "A",
    "val": [
-    "11:30"
+    "A"
    ],
-   "solution": "Go back half an hour from 12 o'clock. The long hand goes back to the 6 and the hour goes back one: 11:30.",
+   "solution": "Half an hour before 5 o'clock is 4:30. Clock A shows 4:30. Clock B shows 5:30 (half an hour after) and clock C shows 4:00 (1 hour before).",
    "mistakes": [
-    "Writing 12:30 (going forward).",
-    "Writing 11:00 (1 hour)."
+    "Choosing B (going forward).",
+    "Choosing C (going back 1 hour)."
    ],
-   "visual": {
-    "type": "clock",
-    "h": 12,
-    "m": 0,
-    "size": 85
-   }
+   "visuals": [
+    {
+     "type": "clock",
+     "h": 4,
+     "m": 30,
+     "digital": "A",
+     "size": 75
+    },
+    {
+     "type": "clock",
+     "h": 5,
+     "m": 30,
+     "digital": "B",
+     "size": 75
+    },
+    {
+     "type": "clock",
+     "h": 4,
+     "m": 0,
+     "digital": "C",
+     "size": 75
+    }
+   ]
   }
  ],
  "look_back": {
@@ -2715,16 +2743,13 @@
   {
    "id": "H4",
    "tier": "go",
-   "text": "Look at the clock. What time was it half an hour before? ____",
-   "answer": "4:30",
-   "val": "4:30",
-   "solution": "Half an hour before 5 o'clock is 4:30. The long hand goes back to the 6 and the short hand goes back to between the 4 and the 5.",
-   "visual": {
-    "type": "clock",
-    "h": 5,
-    "m": 0,
-    "hw": 34
-   }
+   "text": "The bus to the zoo arrived at 10:30 am. The trip took half an hour. Ali says the bus left at 11:00 am. Is Ali right? Circle Yes or No. The bus left at ____ am.",
+   "answer": "No; 10:00 am",
+   "val": [
+    "No",
+    "10:00 am"
+   ],
+   "solution": "Half an hour before 10:30 is 10:00, so the bus left at 10:00 am. 11:00 am is half an hour after 10:30, so Ali went forward instead of back."
   },
   {
    "id": "H5",
