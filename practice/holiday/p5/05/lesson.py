@@ -285,7 +285,7 @@ ITEMS = [
       steps=['8 + 24 + 24 + 8 = 64, and the big cube has 4 × 4 × 4 = 64 small cubes.', 'The picture shows all 64 cubes sorted by the number of painted faces. If your total is not 64, look for the number that is wrong.'],
       src=['Check: do your four numbers add up to 64?']),
 
-    D(id='6a', tier='core', no='6(a)', type='text', skill='litres in a container', accept=G.dec_accepts(F(30 * 20 * 24, 1000), units=['l', 'ℓ', 'litres', 'liters', 'litre', 'L']), shown='14.4',
+    D(id='6a', tier='core', no='6(a)', type='text', skill='litres in a container', accept=G.dec_accepts(F(30 * 20 * 24, 1000), units=['l', 'ℓ', 'litres', 'liters', 'litre', 'L'], places=(2,)), shown='14.4',
       q='Container A is full of water. Tank B is empty.\nHow many litres of water are in container A? (Type the number of litres, like 2.5.)', svg=G.two_containers(),
       check=lambda: G.dec_text(water_litres(30, 20, 24)),
       hint='Find the volume of container A in cm³. Then change cm³ into litres.',
@@ -313,7 +313,7 @@ ITEMS = [
              'A shortest edge of 4 or more would need at least 4 × 4 × 4 = 64 cubes, which is more than 48, so the list ends here.', 'A good list is in order and has no box twice.'],
       src=['A shop wants a box that holds exactly 48 small cubes of sugar, packed with no gaps. The box is a cuboid with whole-number edges in cubes. Find ALL the different boxes (a 2 by 4 by 6 box is the same as a 6 by 4 by 2 box). Make a list in order.']),
     D(id='Ca2', tier='invest', no='C(a) how many', label='C(a) count', type='number', skill='counting all the boxes', answer=9,
-      q='A shop wants a box that holds exactly 48 small cubes of sugar, packed with no gaps. The box is a cuboid with whole-number edges in cubes. A 2 by 4 by 6 box is the same as a 6 by 4 by 2 box.\nHow many different boxes can the shop use?',
+      q='A shop packs exactly 48 small cubes of sugar, with no gaps, in a cuboid box with whole-number edges. A 2 by 4 by 6 box is the same as a 6 by 4 by 2 box.\nHow many different boxes can the shop use?',
       check=lambda: len(triples(48)),
       hint='Make a list in order of the shortest edge, then count the list.',
       steps=['Listed in order: ' + ', '.join(fmt3(t) for t in T48) + '.', 'That is 9 boxes.'],

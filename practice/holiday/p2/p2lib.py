@@ -365,7 +365,7 @@ NOTES = [200, 500, 1000, 5000, 10000]        # cents: $2 $5 $10 $50 $100
 
 
 def money_name(c):
-    return f'{c // 100}' if False else (f'${c // 100}' if c >= 100 else f'{c}¢')
+    return f'${c // 100}' if c >= 100 else f'{c}¢'
 
 
 def all_multisets(total, dens, max_pieces=None):

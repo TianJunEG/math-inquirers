@@ -222,16 +222,14 @@ def printer_bar(solution=None):
     return svg(360, 148, body, 'A bar for the whole 900-page job in 6 equal parts. The first part is P printing alone for 5 minutes. The other five parts are P and Q printing together. A brace under the bar asks for the minutes in all.')
 
 
-def car_park_sign():
+def _sign_body():
     body = Re(4, 4, 352, 118, '#FFFFFF', NAVY, 3, 14) + Ci(48, 63, 30, TEAL, TEAL, 1) + T(48, 77, 'P', 38, 'middle', 800, '#FFFFFF')
     body += T(94, 36, 'CITY CAR PARK', 18, 'start', 800, TEAL) + T(94, 66, 'First hour:  $1.20', 18, 'start', 800)
     body += T(94, 92, 'After that:  60¢ for every half hour', 15, 'start', 700) + T(94, 112, 'or part of a half hour', 15, 'start', 700)
-    return svg(360, 126, body, 'Car park sign. First hour: $1.20. After that: 60 cents for every half hour or part of a half hour.')
+    return body
 
 
-def timeline(count=None):
-    """Ali's stay as a time line going down: the first hour (9.40 to 10.40) and then six half hours up to 1.40, with 1.15 p.m. marked as the time he leaves.
-    count=True numbers the six half hours (solution picture)."""
+def _timeline_body(count=False):
     marks = ['9.40', '10.40', '11.10', '11.40', '12.10', '12.40', '1.10', '1.40']
     ys = [28, 88, 118, 148, 178, 208, 238, 268]
     x0, w = 84, 130
@@ -246,7 +244,15 @@ def timeline(count=None):
         body += Ln(x0 - 8, y, x0, y, 2.5) + T(x0 - 14, y + 5, m, 15, 'end', 700)
     ye = ys[6] + (5 / 30) * (ys[7] - ys[6])                 # 1.15 is 5 minutes after 1.10
     body += Ln(x0 + w, ye, x0 + w + 36, ye, 3, TEAL) + T(x0 + w + 42, ye + 5, 'Ali leaves', 15, 'start', 800, TEAL) + T(x0 + w + 42, ye + 22, '1.15 p.m.', 15, 'start', 800, TEAL)
-    return svg(340, 286, body, 'A time line going down from 9.40 a.m.: the first hour, then six half hours up to 1.40 p.m.' + (' The six half hours are numbered 1 to 6.' if count else '') + ' Ali leaves at 1.15 p.m.')
+    return body
+
+
+def car_park(count=False):
+    """One figure: the car park sign, and under it Ali's stay as a time line going down: the first hour (9.40 to 10.40) and then six half hours up to 1.40,
+    with 1.15 p.m. marked as the time he leaves.  count=True numbers the six half hours (solution picture)."""
+    body = _sign_body() + f'<g transform="translate(10,138)">{_timeline_body(count)}</g>'
+    return svg(360, 138 + 290, body, 'Car park sign: first hour $1.20, then 60 cents for every half hour or part of a half hour. Below it a time line going down from 9.40 a.m.: the first hour, '
+               'then six half hours up to 1.40 p.m.' + (' The six half hours are numbered 1 to 6.' if count else '') + ' Ali leaves at 1.15 p.m.')
 
 
 # ---------------------------------------------------------------- typed answers with decimals

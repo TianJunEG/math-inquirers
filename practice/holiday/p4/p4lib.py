@@ -623,7 +623,8 @@ def dec_accepts(x, pad=3, money=False, unit=None):
         canon = '$' + dtext(x, 2)
         forms = [canon] + ['$' + n for n in nums] + nums + [n + ' dollars' for n in nums]
     elif unit:
-        forms = nums + [f'{n} {unit}' for n in nums] + [f'{n}{unit}' for n in nums]
+        us = [unit] if isinstance(unit, str) else list(unit)
+        forms = nums + [f'{n} {u}' for u in us for n in nums] + [f'{n}{u}' for u in us for n in nums]
     else:
         forms = nums
     return list(dict.fromkeys(forms))
@@ -927,20 +928,20 @@ def square_corner(x1=15, x2=48):
 
 
 def overlap_figure(outer=160):
-    O, S = (116, 140), 86
+    O, S = (130, 150), 96
     def poly(d0):
         pts = [O, _pt(O[0], O[1], S, d0), _pt(O[0], O[1], S * math.sqrt(2), d0 + 45), _pt(O[0], O[1], S, d0 + 90)]
         return ' '.join(f'{x:.1f},{y:.1f}' for x, y in pts)
     s2 = outer - 90
     b = f'<polygon points="{poly(0)}" fill="{SKY}" stroke="{NAVY}" stroke-width="3"/><polygon points="{poly(s2)}" fill="{YEL}" fill-opacity="0.5" stroke="{NAVY}" stroke-width="3"/>'
-    b += _arc(O[0], O[1], 34, s2, 90, WARM, 3) + _arc(O[0], O[1], 70, 0, outer, TEAL, 3)
-    a, c = _pt(O[0], O[1], 34, (s2 + 90) / 2), _pt(O[0], O[1], 104, (s2 + 90) / 2)
+    b += _arc(O[0], O[1], 34, s2, 90, WARM, 3) + _arc(O[0], O[1], 72, 0, outer, TEAL, 3)
+    a, c = _pt(O[0], O[1], 34, (s2 + 90) / 2), _pt(O[0], O[1], 112, (s2 + 90) / 2)
     b += Ln(round(a[0], 1), round(a[1], 1), round(c[0], 1), round(c[1], 1), 2, WARM)
-    q = _pt(O[0], O[1], 120, (s2 + 90) / 2)
-    b += T(round(q[0], 1), round(q[1] + 8, 1), '?', 24, 'middle', 800, WARM)
-    q = _pt(O[0], O[1], 54, outer * 0.78)
-    b += T(round(q[0] - 14, 1), round(q[1] + 14, 1), f'{outer}°', 16, 'middle', 800, TEAL) + Ci(O[0], O[1], 3.5, NAVY, NAVY, 1) + T(O[0] + 12, O[1] + 20, 'O', 17)
-    return svg(250, 168, b, f'Two squares share the corner O and overlap. The angle between their outside sides is {outer} degrees. The angle where they overlap is marked with a question mark.')
+    q = _pt(O[0], O[1], 128, (s2 + 90) / 2)
+    b += T(round(q[0], 1), round(q[1] + 8, 1), '?', 26, 'middle', 800, WARM)
+    q = _pt(O[0], O[1], 48, outer * 0.88)
+    b += T(round(q[0], 1), round(q[1] + 5, 1), f'{outer}°', 16, 'middle', 800, TEAL) + Ci(O[0], O[1], 3.5, NAVY, NAVY, 1) + T(O[0] + 12, O[1] + 20, 'O', 17)
+    return svg(270, 176, b, f'Two squares share the corner O and overlap. The angle between their outside sides is {outer} degrees. The angle where they overlap is marked with a question mark.')
 
 
 def right_corner():
