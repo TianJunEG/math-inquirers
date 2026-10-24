@@ -131,7 +131,7 @@ ITEMS = [
       src=['Mei cuts 4 pieces, each 65 cm long, from a ribbon 3 m long. How much ribbon is left?']),
 
     I(id='2-order', tier='core', no='2(a)', label='2(a)', type='text', skill='comparing masses', accept=order_forms(['C', 'D', 'B', 'A']), shown='C, D, B, A',
-      q='Four bags of rice are weighed.\nBag A: 1 kg 300 g.   Bag B: 1030 g.\nBag C: 1 kg.   Bag D: 1 kg 3 g.\nPut the bags in order, lightest first. Type the four letters.',
+      q='Four bags of rice are weighed.\nBag A: 1 kg 300 g. Bag B: 1030 g.\nBag C: 1 kg. Bag D: 1 kg 3 g.\nPut the bags in order, lightest first. Type the four letters.',
       check=lambda: ', '.join(sorted(BAGS, key=BAGS.get)),
       hint='Change every mass to grams first. 1 kg is 1000 g.',
       steps=['Change every mass to grams: A is 1300 g, B is 1030 g, C is 1000 g and D is 1003 g.', 'Put the numbers in order, smallest first: 1000, 1003, 1030, 1300.', 'Lightest first: C, D, B, A (1 kg, 1 kg 3 g, 1030 g, 1 kg 300 g).'],

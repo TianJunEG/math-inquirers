@@ -1252,7 +1252,7 @@ def extra_hits(q, ans, sol, cw):
     for i, c in score.items():
         for st in (i - 2, i - 1, i):
             wscore[st] = wscore.get(st, 0) + c
-    starts = [i for i, c in sorted(wscore.items(), key=lambda kv: (-kv[1], kv[0]))[:400] if c >= 1.2]
+    starts = [i for i, c in sorted(wscore.items(), key=lambda kv: (-kv[1], kv[0]))[:1500] if c >= 1.2]
     # windows that hold the numbers of the question and the answer
     ncount = {}
     for n in sorted(pool):

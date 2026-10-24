@@ -123,8 +123,8 @@ def scales_fig(vals, scales, xl):
     return combine(figs, 'The same numbers drawn on three different scales: ' + '; '.join(f'graph {k} {d}' for k, d, *_ in scales) + '.')
 
 
-def one_graph(vals, xl, y0, y1, st, lab, title='', w=270):
-    return line_graph(xl, [dict(v=vals)], y0, y1, st, lab, title, w=w, h=210, label=title or 'A line graph.')
+def one_graph(vals, xl, y0, y1, st, lab, title='', w=270, h=210):
+    return line_graph(xl, [dict(v=vals)], y0, y1, st, lab, title, w=w, h=h, label=title or 'A line graph.')
 
 
 ITEMS = [
@@ -395,8 +395,8 @@ ITEMS = [
       steps=['A scale from 0 to 600 has a very tall side, so the rise from 52 to 58 fills almost none of it: the line looks nearly flat.'],
       src=['(b) like hardly any increase']),
     D(id='G7-own', tier='challenge', no='Go further 7', label='G7 draw', type='selfcheck', paper=True, skill='drawing graphs on different scales', check=lambda: (FOUR_SC[0], FOUR_SC[2]),
-      sol_fig=lambda f: combine([one_graph(FOUR, ['Wk 1', 'Wk 2', 'Wk 3', 'Wk 4'], 50, 60, 1, 5, 'Huge: 50 to 60, lines of 1', w=250),
-                                 one_graph(FOUR, ['Wk 1', 'Wk 2', 'Wk 3', 'Wk 4'], 0, 600, 100, 200, 'Flat: 0 to 600, lines of 100', w=250)], 'Two graphs of 52, 54, 56 and 58, one that looks like a huge increase and one that looks almost flat.'),
+      sol_fig=lambda f: combine([one_graph(FOUR, ['Wk 1', 'Wk 2', 'Wk 3', 'Wk 4'], 50, 60, 1, 5, 'Huge', w=260, h=172),
+                                 one_graph(FOUR, ['Wk 1', 'Wk 2', 'Wk 3', 'Wk 4'], 0, 600, 100, 200, 'Flat', w=260, h=172)], 'Two graphs of 52, 54, 56 and 58, one that looks like a huge increase and one that looks almost flat.'),
       q='On paper, draw a line graph of 52, 54, 56 and 58 twice: once so it looks like a huge increase and once so it looks like hardly any increase. Write both scales and a sentence a shop owner might say with each graph.',
       hint='A short side makes the rise look big, and a tall side makes it look small.',
       steps=['Huge: start at 50, with each line worth 1. A sentence: "Look how fast our sales are growing!"', 'Flat: start at 0, with each line worth 100. A sentence: "Our sales are steady."', 'Both graphs show the same numbers.'],

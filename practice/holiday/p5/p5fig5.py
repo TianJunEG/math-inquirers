@@ -147,7 +147,7 @@ def dot_squares_fig(upto=4, hl=True):
 
 def diamond_fig(figs=(1, 2, 3), sol=None):
     """B1: diamond dot patterns.  Figure f has rows of 1, 3, ..., 2f - 1, ..., 3, 1 dots."""
-    d, body, x = 12.5, '', 6
+    d, body, x = 17, '', 6
     maxf = max(figs)
     wmax = (2 * maxf - 1) * d
     for f in figs:
@@ -156,8 +156,8 @@ def diamond_fig(figs=(1, 2, 3), sol=None):
         top = 12 + (maxf - f) * d
         for r, n in enumerate(rows):
             for i in range(n):
-                body += Ci(round(cx + (i - (n - 1) / 2) * d, 1), top + r * d, 4.2, YEL, NAVY, 1.6)
-        body += T(cx, 12 + (2 * maxf - 1) * d + 18, f'Figure {f}', 14)
+                body += Ci(round(cx + (i - (n - 1) / 2) * d, 1), top + r * d, 5.6, YEL, NAVY, 1.8)
+        body += T(cx, 12 + (2 * maxf - 1) * d + 20, f'Figure {f}', 15)
         x += wmax + 22
     return svg(x - 14, 12 + (2 * maxf - 1) * d + 28, body, 'Diamond dot patterns: ' + ', '.join(f'figure {f}' for f in figs) + '. Each figure is a diamond of dots with rows that grow and then shrink.')
 
@@ -192,7 +192,7 @@ def seg_row(x0, y, u, h, segs, off=0.0):
     for units, text, fill, dashed in segs:
         b += Re(round(x, 1), y, round(units * u, 1), h, fill, NAVY, 2.4, 0, '5 4' if dashed else None)
         if text:
-            b += T(round(x + units * u / 2, 1), y + h / 2 + 5, text, 13.5, 'middle', 800)
+            b += T(round(x + units * u / 2, 1), y + h / 2 + 5, text, 14.5, 'middle', 800)
         x += units * u
     return b
 
@@ -241,19 +241,19 @@ def siti_fig(left, sol=None):
 # ================================================================= lesson 10: logic clue card, grid of squares, staircase
 def clue_card():
     """Q1: the four clues once, as a card (shown above each of the four questions)."""
-    lines = [('Dishes:', ['chicken rice, laksa, satay, roti prata.']),
-             ('Clue 1.', ['Ali did not order laksa or satay.']),
-             ('Clue 2.', ['The roti prata was ordered by a girl.', 'Mei and Siti are girls.', 'Ali and Ben are boys.']),
+    lines = [('Dishes:', ['chicken rice, laksa,', 'satay, roti prata.']),
+             ('Clue 1.', ['Ali did not order', 'laksa or satay.']),
+             ('Clue 2.', ['The roti prata was ordered', 'by a girl. Mei and Siti are', 'girls. Ali and Ben are boys.']),
              ('Clue 3.', ['Ben did not order satay.']),
-             ('Clue 4.', ['Mei did not order roti prata.'])]
+             ('Clue 4.', ['Mei did not order', 'roti prata.'])]
     y, body = 28, ''
     for h, ls in lines:
-        body += T(14, y, h, 14, 'start', 800, TEAL)
+        body += T(14, y, h, 15, 'start', 800, TEAL)
         for l in ls:
-            body += T(76, y, l, 14, 'start', 700)
-            y += 21
+            body += T(78, y, l, 15, 'start', 700)
+            y += 22
         y += 6
-    return svg(340, y, Re(3, 3, 334, y - 10, PALE, NAVY, 2.2, 10) + body, 'The hawker centre puzzle. Ali, Ben, Mei and Siti each ordered a different dish: chicken rice, laksa, satay or roti prata. '
+    return svg(300, y, Re(3, 3, 294, y - 10, PALE, NAVY, 2.2, 10) + body, 'The hawker centre puzzle. Ali, Ben, Mei and Siti each ordered a different dish: chicken rice, laksa, satay or roti prata. '
                'Clue 1: Ali did not order laksa or satay. Clue 2: the roti prata was ordered by a girl; Mei and Siti are girls, Ali and Ben are boys. '
                'Clue 3: Ben did not order satay. Clue 4: Mei did not order roti prata.')
 

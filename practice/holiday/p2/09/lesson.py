@@ -40,7 +40,7 @@ T2_FIG = time_line_fig([(34, '10:45 am'), (104, '11:00'), (236, '12:00'), (304, 
                        'A time line from 10:45 am to 12:10 pm with 11:00 and 12:00 marked and three jumps: ? minutes, ? hours, ? minutes')
 J27 = jugs_fig(2, 7)
 J37 = jugs_fig(3, 7)
-JUGTABLE = jug_table_fig([('Start', 'both jugs empty', '0 ℓ', '0 ℓ'), ('1', 'Fill the 5 ℓ jug', '0 ℓ', '5 ℓ'), ('2', 'Pour 5 ℓ into 3 ℓ until full', '3 ℓ', '2 ℓ'),
+JUGTABLE = jug_table_fig([('Start', 'both jugs empty', '0 ℓ', '0 ℓ'), ('1', 'Fill the 5 ℓ jug', '0 ℓ', '5 ℓ'), ('2', 'Pour into 3 ℓ until full', '3 ℓ', '2 ℓ'),
                           ('3', 'Empty the 3 ℓ jug', '0 ℓ', '2 ℓ'), ('4', '', '', ''), ('5', '', '', ''), ('6', '', '', ''), ('7', '', '', '')])
 
 
@@ -246,7 +246,7 @@ ITEMS = [
          q='Read clock B, where Ali is at swimming after school. Hint: its hour hand is almost on the 5. Is it 4 o’clock or 5 o’clock? Write the time with am or pm, like 9:10 pm.',
          check=lambda: time_str(*CB),
          hint='Count the minutes in 5s from the 12 to the long thin hand. Is the hour hand still on its way to the 5, or has it passed it?',
-         steps=['The long hand points at 10, so it is 50 minutes past. 50 minutes past means the hour is not yet 5: the short hand is almost on the 5, so the hour is 4.', 'After school is in the afternoon, so it is 4:50 pm.'],
+         steps=['The long hand points at 10, so it is 50 minutes past. At 50 minutes past the hour hand is almost at the next number: it is almost on the 5, so the hour is 4.', 'After school is in the afternoon, so it is 4:50 pm.'],
          src=['Read the clocks. Hint: on clock B the hour hand is almost on the 5. Is it 4 o', 'Write each time with am or pm.']),
     dict(id='5b', tier='core', no='5(b)', label='5(b)', type='text', skill='time: finding the end time', svg=CLOCKS, accept=time_forms(*END_B, bare_ok=True), shown=time_str(*END_B), equiv_frac=False,
          q='Swimming starts at the time on clock B and lasts 35 minutes. What time does it end? Write it like 9:10 pm.',
