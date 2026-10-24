@@ -119,3 +119,31 @@ Open questions
 - Should the algebra-rule item L7 5(b) accept "total = (n - 2) x 180"? The shared runner ignores only the word OUT before "=", so "total =" is marked wrong (the stem asks for the rule alone).
 - Should the explain items (L7 1(a), 1(b), 2(a), Inv notice, C3(b); L8 5(c), Exit (b), Inv (a), C3(c)) be marked by a tutor once submit-to-tutor is live? They are self-check now.
 - L7 C2 accepts every computed set of three polygons (typed as sides). If the owner wants only the printed two sets (4, 8, 8 and 3, 12, 12) it is a one-line change.
+
+# Level 6 online practice, holiday week 5 (lessons 9 and 10)
+
+Build: `python3 practice/holiday/build_holiday.py p6 9` (and `10`); test: `python3 practice/holiday/test_holiday.py p6 9` (and `10`). dist is git-ignored; nothing is deployed, no Supabase change, nothing sent. Week 5 = lessons 9 and 10 (Thu 24 Dec and Sat 26 Dec, group L6A, confirmed in website/data/beta_schedule.json).
+Sources: `p6/content/l9.js`, `l10.js` (hand-written JS, so each question was extracted into `p6/09/lesson.py`, `p6/10/lesson.py`) and `p6/content/gaps.json` (Investigation). New Level 6 helpers only: `p6/w5lib.py`, `p6/blocks_bridge5.js`. No shared file was edited.
+Figures: code blocks, hexagon chains and both dot plots are drawn by the workbook's own `blocks()`, `hexChains()` and `FG.dotPlot()` (through the bridge); the same program list is drawn and run by `w5lib.run`. Spinner table, empty tables and the worked-example programs are svg. No coin or note images.
+Checkers (all independent): exact means with Fractions, median by sorting, mode by counting, missing values by searching, the block-program interpreter, brute force for primes/factors/sequences, clock by counting on, regular polygon by (n - 2) x 180 / n, probabilities by listing every equally likely outcome, and a search over all lists of five numbers that proves the Go further 'mean mystery' example is unique.
+
+| Lesson | Items | Auto-marked | Self-check (shown solution) | Paper-only | Open (no objective fact) | Variant families |
+|---|---|---|---|---|---|---|
+| 9 Data Detectives | 59 | 52 | 6 | 1 (C2b plan a program, correct blocks shown) | 1 (C1 mean mystery) | 7 (672 combinations vs oracle) |
+| 10 Showcase Challenge | 37 | 29 | 4 | 2 (6a blocks plan, C2b spinner program) | 4 (Q5 plan, 6b tests, Exit slip, C1) | 10 (223 combinations vs oracle) |
+
+Unavailable (no item at all): none. Scratch is never run in the page.
+
+Not mirrored one-to-one, and why
+- L9 Q1(c) is a five-box card; the plus sign is not accepted by the shared matcher ('+1' is wrong), so the stem says to type just the number for above and a minus sign for below. L9 Q3 is a predict (choice) plus a new-mean (number) card for each of (a) to (d). Q4(e) is a fairness choice, a mean-or-median choice and an explain card; the print's "$22" is not repeated in the stem so no card shows 4(a)'s answer. Q5 trace table = four row cards (i at the start, item i, total at the end), then (a), the two-blocks choice and the new answer. Q6 (print: Take-home star, shown as "Bonus question"): mean, days hotter, the two blanks (choices) and what it says.
+- L9 Investigation: first step (mean), then mean / median / mode cards for the original and for the 14 changed to 24, to 4 and to 7 (the mean of the last, 6.6, is a text answer, type a decimal), a self-check "what changes, what stays the same" and "change TWO numbers and keep the mean" (self-check, total must stay 40). Think harder = the first four stretch questions (T3 write five numbers with mean 6 and mode 4 is self-check with a worked example); Go further = the last three (C1 open, C2 explain plus a paper-only program plan, C3 two number cards).
+- L10 Q1: sticks for 10 hexagons, the rule (text, any equal algebra writing, "sticks =" label accepted), 101 sticks, then what the code says and which chain it checks. Q2 (Take-home, "Bonus question"): 49, the primes of 84 (comma list), and the smaller prime of each way to make 40 (list; the stem does not say how many). Q3 four number cards. Q4: n = 9 and OUT 58 (two cards), factors of 91 and prime? (two cards), and about how many 8s (choice among five, plus an explain card). The print says "do the part for your starter"; all three are online.
+- L10 Q5 (plan table), Q6 (blocks plan, test table) and the exit slip are the showcase project and have no single answer: Q5, Q6 tests and the exit slip are open; Q6 blocks is paper-only. Each shows a worked example (Starter A with the rule changed to x 5 then - 2, 8 blocks, three tests with hand-worked results), all computed. The "ready to show?" tick-box and the optional Python corner are not questions and are not included.
+- L10 Think harder: T1 to T3 and the moved digit-cards question (how many numbers, how many even, probability 1/3 as three cards). Go further: C1 (open), the spinner (probability 1/8 plus a paper-only program plan) and 6n - 1 (is 2027 in it: Yes; first term bigger: 2033). The model's "338th term" is in the solution of C3(a).
+- Hints and examples follow the audits: no card reveals another card's answer; hints nudge; explain cards are neutral; every claim in a solution was recomputed.
+
+Open questions
+- The shared matcher does not read '+1' (a leading plus sign) as 1; L9 1(c) works around it in the stem. Should '+N' be accepted for number boxes?
+- Should L9 Investigation (a)/(b), T3, C2(a) and the L10 open planning items be marked by a tutor once submit-to-tutor is live (self-check or open now)?
+- The L10 'about 139' item is a five-way choice because a typed estimate (139, 140, 138.9) cannot be marked fairly; confirm.
+- The sb3 starter files for the L10 starters are not linked from the page.
