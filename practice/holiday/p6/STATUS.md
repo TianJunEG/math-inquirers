@@ -58,3 +58,33 @@ Open questions
 - Should the algebra-rule items (L4 Q2(b) P and Q, Q7(b) steps 4 and 5) stay auto-marked from the verified list of writings, or be self-check like other written rules?
 - L4 Investigation and L3 Investigation could later be marked by a tutor once submit-to-tutor is live (they are self-check only now).
 - The sb3 starter files are not linked from the page.
+
+# Level 6 online practice, holiday week 3 (lessons 5 and 6)
+
+Build: `python3 practice/holiday/build_holiday.py p6 5` (and `6`); test: `python3 practice/holiday/test_holiday.py p6 5` (and `6`). dist is git-ignored; nothing is deployed, no Supabase change, nothing sent. Week 3 = lessons 5 and 6 (Thu 10 Dec and Sat 12 Dec, group L6A, confirmed in website/data/beta_schedule.json).
+Sources: `p6/content/l5.js`, `l6.js` (hand-written JS, so each question was extracted into `p6/05/lesson.py`, `p6/06/lesson.py`) and `p6/content/gaps.json` (Investigation). New Level 6 helpers only: `p6/w3lib.py`, `p6/blocks_bridge3.js`. No shared file was edited.
+Figures: the code blocks, digit cards, street grid and spinner are drawn by the workbook's own `blocks()`, `cards()`, `grid()`, `spinner()` (through the bridge), and the SAME program list is run by the checkers. The difference table, empty sample-space tables, route counts, ways-to-pay table and winners grids are inline svg. No coin or note images.
+Checkers (all independent): itertools/loops over the cases, a walk over every route on the grid, an interpreter for the nested block programs (with a per-say trace), and for the random programs the exact expected count found by listing every equally likely outcome (no simulation). The build fails if one differs from the printed answer.
+
+| Lesson | Items | Auto-marked | Self-check (shown solution) | Paper-only | Variant families |
+|---|---|---|---|---|---|
+| 5 Every Possible Way | 38 | 34 | 4 (1 open: make up a puzzle) | 0 | 5 (76 combinations vs oracle) |
+| 6 Fair or Unfair? | 41 | 34 | 7 (1 open: design a fair game) | 0 | 5 (164 combinations vs oracle) |
+
+Unavailable (no item at all): none. Scratch is never run in the page.
+
+Not mirrored one-to-one, and why
+- Written-answer boxes become typed answers. L5 Q3 trace table = three cards (rows 1-2, 3-4, 5-6: a, b and what it says). L5 Q5 grid circles = three row cards plus (a) and (b); the print's star "Take-home" is called "Bonus question". L5 Q2(b) "write the multiplication" is a positional box item (choices per digit, then the total). L6 Q4 table = four row cards (rows 3 to 6; the filled cells are shown as printed).
+- Fractions: two boxes "numerator / denominator" where the print says simplest form (L6 Q1, Q5, exit slip); a typed fraction (equal forms accepted, e.g. 4/10 for 2/5) where it does not. "Is it fair / is the code broken / do you agree" is a choice card plus a separate explain card (self-check).
+- L5 Q6 gaps: the two repeats are boxes and the "if" test is a text item whose accepted writings (a<b, b>a, a>b ...) are all verified by running the program. The printed hint "when a is smaller than b" is moved to the hint line. The L6 plan has the same split (6, 6, a = b).
+- L5 Investigation (find ALL the ways to pay 50 cents): first step, total (12) and with a 50-cent coin (13) are number items; the organised list and "how I made sure" is a self-check with the 12 ways drawn as a table. L6 Investigation: three game cards, "Is Ali right?", and a self-check for the fix; the physical coin tally of the first step is optional text (not checked).
+- L6 empty 6 by 6 tables of Think harder 2 and Go further 6/7 are shown as empty tables (as printed) with a note to fill them on paper. The optional Python corners are not questions and are not included. L5 Q3 "In Scratch" run is traced, not run.
+- Think harder = first three stretch questions plus the moved one (as printed, T4 (a) and (b)); Go further = last three challenge questions.
+- Printed hints that gave an answer (L5 Q6 "a smaller than b", L6 Q1(d) "close to the expected number, not exactly") are not in the stem; the hints nudge instead.
+
+Audit rules applied from the start: no stem, hint, frame or figure shows another card's answer (later parts show gaps, never earlier filled plans or tables); examples never equal an answer (the "join" example is 75, the rule examples are different tests); explanations and make-up-your-own are self-check / open; every list answer is a set (the 9 two-digit numbers are ordered); minus signs not needed here; frames use label + box groups; explanations marked `self`.
+
+Open questions
+- Should "is it fair / is the code broken" choice cards stay auto-marked (they are checked by exact fractions or a standard-deviation test) or be self-check with their explanation?
+- L6 Go further 7 and L5/L6 Investigations could later be tutor-marked once submit-to-tutor is live.
+- The sb3 starter files (L5_Every_Order, L6_Chance_Lab) are not linked from the page.

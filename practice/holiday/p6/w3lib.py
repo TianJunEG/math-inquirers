@@ -32,8 +32,10 @@ def program(lesson, named):
 
 def _full_width(svg, grow=1.25):
     w = float(re.search(r'viewBox="0 0 ([\d.]+) ', svg).group(1))
-    svg = re.sub(r'\swidth="[\d.]+"', '', svg, count=1)
-    return re.sub(r'style="[^"]*"', f'style="width:100%;max-width:{w * grow:.0f}px;height:auto;display:block;margin:0 auto"', svg, count=1)
+    i = svg.index('>')
+    head = re.sub(r'\swidth="[\d.]+"', '', svg[:i])
+    head = re.sub(r'style="[^"]*"', f'style="width:100%;max-width:{w * grow:.0f}px;height:auto;display:block;margin:0 auto"', head)
+    return head + svg[i:]
 
 
 def blocks(lesson, prog, label, fs=17):
@@ -56,8 +58,10 @@ def spinner():
 
 
 def fg_grid(rows, cols, row_title, col_title, cell, label):
-    svg = bridge(dict(lesson='l6', kind='fggrid', spec=dict(rows=rows, cols=cols, rowTitle=row_title, colTitle=col_title, cell=cell, label=label)))
-    return _full_width(svg, 1.2)
+    """An empty sample-space table like the workbook's FG.grid (row labels down the side, column labels across the top), drawn flat so every label is horizontal text."""
+    head = [f'{row_title} ↓  {col_title} →'] + [str(c) for c in cols]
+    body = [[str(r)] + [''] * len(cols) for r in rows]
+    return table_svg(head, body, label, [200] + [34] * len(cols), 15, 28)
 
 
 # ---------------------------------------------------------------- the interpreter for the nested programs
