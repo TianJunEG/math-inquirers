@@ -861,3 +861,7 @@ BRUTE.update(_r2.BRUTE)
 
 import brute_r3 as _r3   # noqa: E402  (fix round 3: independent checkers for the new sub-structures)
 BRUTE.update(_r3.BRUTE)
+
+
+import brute_r4 as _r4   # noqa: E402  (fix round 6: independent checkers for the new sub-structures)
+BRUTE.update(_r4.BRUTE)

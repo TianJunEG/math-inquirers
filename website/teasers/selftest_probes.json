@@ -207,5 +207,283 @@
   "L3-keyringtray": "strategy.worst_case",
   "L5-colourdraw": "strategy.worst_case",
   "L6-tankdepth": "volume.water_depth"
+ },
+ "round6_frames": {
+  "note": "AUDIT_ROUND6 sections 3 and 4: the same-frame pairs (Tier A groups and the 5-run pairs) in their round-5 wording. The audit kept its own list of 28 pairs outside the repository, so these 39 are rebuilt from its tables. The frame rule of verify_bank.py is replayed on them in --selftest.",
+  "pairs": [
+   {
+    "a": "L3-marketstall",
+    "b": "L4-shuttlehours",
+    "qa": "A market stall opens at 5 am and closes at 8 pm. For how many hours is the stall open each day?",
+    "qb": "The airport shuttle bus runs from 7 am until 10 pm every day. For how many hours does the shuttle run each day?",
+    "expect": "caught"
+   },
+   {
+    "a": "L3-harbourcruise",
+    "b": "L6-ferrytrip24",
+    "qa": "A harbour cruise leaves the pier at 4:25 pm. The cruise lasts 2 hours 50 minutes. Write the time the cruise ends in 24-hour time, as four digits, like 0915.",
+    "qb": "At 5:40 pm a ferry sails from the terminal to an island, and the crossing takes 5 hours 35 minutes. Timetables show times in 24-hour time. Write the arrival time as four digits, like 0915.",
+    "expect": "near-miss"
+   },
+   {
+    "a": "L1-paperchain",
+    "b": "L2-ribbonline",
+    "qa": "Mei makes a paper chain by sticking 6 strips in a line. Each strip is 5 cm long. Where two strips meet, 1 cm of one strip lies on top of the other. How long is the finished chain?",
+    "qb": "A florist ties 5 ribbons together in one long line. Each ribbon is 10 cm long. At every knot, 2 cm of ribbon is used up in the knot. How long is the line of ribbons?",
+    "expect": "caught"
+   },
+   {
+    "a": "L1-toycars",
+    "b": "L3-cupoffer",
+    "qa": "A model boat costs $9 at both Shop A and Shop B. Shop B gives 1 boat free for every 3 boats you buy. Dina needs 8 boats and shops where she pays less. How much does she pay?",
+    "qb": "A cup of bubble tea costs $8 at Shop A. At Shop B, a cup costs $8 too, but you get 1 cup free for every 4 cups you buy. A club needs 20 cups. How many dollars does it save by using Shop B?",
+    "expect": "near-miss"
+   },
+   {
+    "a": "L3-cupoffer",
+    "b": "L4-brushoffer",
+    "qa": "A cup of bubble tea costs $8 at Shop A. At Shop B, a cup costs $8 too, but you get 1 cup free for every 4 cups you buy. A club needs 20 cups. How many dollars does it save by using Shop B?",
+    "qb": "Aunty needs 12 paintbrushes for her art class. Shop A sells packs of 3 paintbrushes for $10 a pack. Shop B sells paintbrushes at $6 each, but gives 1 paintbrush free for every 2 paintbrushes that you buy. Aunty chooses the cheaper shop. How much does she pay?",
+    "expect": "near-miss"
+   },
+   {
+    "a": "L4-brushoffer",
+    "b": "L5-badgeshops",
+    "qa": "Aunty needs 12 paintbrushes for her art class. Shop A sells packs of 3 paintbrushes for $10 a pack. Shop B sells paintbrushes at $6 each, but gives 1 paintbrush free for every 2 paintbrushes that you buy. Aunty chooses the cheaper shop. How much does she pay?",
+    "qb": "A school needs 24 badges for a prize-giving. Shop A sells badges at $8 each. Shop B sells packs of 4 badges for $26 a pack. Shop C sells badges at $8 each, but gives 1 badge free for every 3 badges that you buy. The school chooses the cheapest shop. How much does it pay?",
+    "expect": "caught"
+   },
+   {
+    "a": "L3-playlist",
+    "b": "L4-sciencevideos",
+    "qa": "A playlist has three songs. The first lasts 3 minutes 25 seconds, the second lasts 4 minutes 10 seconds and the third lasts 2 minutes 45 seconds. How many seconds long is the whole playlist?",
+    "qb": "A science channel has four videos. They last 8 minutes 40 seconds, 4 minutes 25 seconds, 10 minutes 15 seconds and 3 minutes 50 seconds. How many seconds do the four videos last altogether?",
+    "expect": "caught"
+   },
+   {
+    "a": "L4-sciencevideos",
+    "b": "L5-relaylegs",
+    "qa": "A science channel has four videos. They last 8 minutes 40 seconds, 4 minutes 25 seconds, 10 minutes 15 seconds and 3 minutes 50 seconds. How many seconds do the four videos last altogether?",
+    "qb": "Four runners take turns in a relay race. Their legs take 1 minute 52 seconds, 2 minutes 8 seconds, 1 minute 47 seconds and 2 minutes 3 seconds. How many seconds does the whole relay take?",
+    "expect": "caught"
+   },
+   {
+    "a": "L1-wordcards",
+    "b": "L2-wordorder",
+    "qa": "Zack prints the names of the numbers from 1 up to 10 on ten cards, one name on each card. He stacks the cards in alphabetical order, like names in a phone book. Which number is in place 5 from the top of the stack?",
+    "qb": "Mei writes the numbers from 1 to 12 in words: one, two, three and so on. Then she puts the words in dictionary order, like the words in a dictionary. Which number is in 5th place?",
+    "expect": "caught"
+   },
+   {
+    "a": "L2-wordorder",
+    "b": "L4-numbercards20",
+    "qa": "Mei writes the numbers from 1 to 12 in words: one, two, three and so on. Then she puts the words in dictionary order, like the words in a dictionary. Which number is in 5th place?",
+    "qb": "Mia writes the names of the numbers from one to twenty on cards. She puts the cards in alphabetical order, from A to Z. Which number is on card number 9 in her row?",
+    "expect": "near-miss"
+   },
+   {
+    "a": "L1-kitchenfloor",
+    "b": "L3-chessboard",
+    "qa": "A kitchen floor has 5 rows of 7 square tiles. The tiles are orange and cream, and no two tiles that share a side have the same colour. The tile in the top left corner is orange. How many orange tiles are on the floor?",
+    "qb": "A giant chessboard is painted on a playground. It has 14 rows and 21 columns of squares. Dark and light squares take turns along every row and column, and the top left square is dark. How many dark squares touch the edge of the board?",
+    "expect": "near-miss"
+   },
+   {
+    "a": "L3-chessboard",
+    "b": "L4-quiltpatches",
+    "qa": "A giant chessboard is painted on a playground. It has 14 rows and 21 columns of squares. Dark and light squares take turns along every row and column, and the top left square is dark. How many dark squares touch the edge of the board?",
+    "qb": "A quilt is sewn from patches in 14 rows of 15 patches. Red and white patches alternate along every row and every column, and the patch in the top left corner is red. How many white patches are in the quilt?",
+    "expect": "caught"
+   },
+   {
+    "a": "L2-fewestswaps",
+    "b": "L4-heightline",
+    "qa": "Five number cards lie in a row: 4  2  5  1  3. You may only swap two cards that are next to each other. What is the fewest number of swaps that puts the cards in order, from 1 to 5?",
+    "qb": "Six children stand in a line. Their heights in centimetres, from the front to the back, are 140, 128, 145, 120, 125 and 135. The teacher wants them in order of height, from the shortest at the front to the tallest at the back. Only two children standing next to each other may swap places at one time. What is the fewest number of swaps?",
+    "expect": "near-miss"
+   },
+   {
+    "a": "L4-heightline",
+    "b": "L6-shelfbooks",
+    "qa": "Six children stand in a line. Their heights in centimetres, from the front to the back, are 140, 128, 145, 120, 125 and 135. The teacher wants them in order of height, from the shortest at the front to the tallest at the back. Only two children standing next to each other may swap places at one time. What is the fewest number of swaps?",
+    "qb": "Six library books stand side by side on a shelf. The numbers of pages in the books, from left to right, are 220, 80, 140, 170, 100 and 240. The librarian wants the books from the fewest pages to the most pages. She can exchange only two books that stand next to each other at one time. What is the smallest number of exchanges?",
+    "expect": "caught"
+   },
+   {
+    "a": "L1-cardtriple",
+    "b": "L2-cardtriple2",
+    "qa": "Mei Ling has six number cards: 7, 12, 18, 25, 30 and 41. Exactly three of the cards add up to 62. What is the biggest of those three cards?",
+    "qb": "Six number cards lie on Priya's desk: 14, 23, 31, 38, 45 and 52. Priya finds that only one set of three cards adds up to 135. What is the smallest card in that set?",
+    "expect": "near-miss"
+   },
+   {
+    "a": "L1-twobags",
+    "b": "L3-beadnecklaces",
+    "qa": "A baker puts 24 buns into two bags, with at least 1 bun in each bag. The bags look the same, so 5 and 19 is the same split as 19 and 5. How many different splits are there?",
+    "qb": "Dina has 25 beads to share between two necklaces. Each necklace needs at least 3 beads. The necklaces are not labelled, so 3 and 22 is the same as 22 and 3. In how many different ways can she share the beads?",
+    "expect": "caught"
+   },
+   {
+    "a": "L4-roundprices",
+    "b": "L5-scaleround",
+    "qa": "A shop rounds every price to the nearest 100 cents. A price that is exactly halfway rounds up. How many different whole-cent prices round to 7300 cents?",
+    "qb": "A kitchen scale rounds every mass to the nearest 50 g. A mass exactly halfway between two rounded masses is rounded up. How many different whole-gram masses does the scale show as 750 g?",
+    "expect": "caught"
+   },
+   {
+    "a": "L1-lampbench",
+    "b": "L4-halfway4",
+    "qa": "Lamp posts along a path are marked with how many metres they are from the gate. One lamp post is at 16 m and another is at 56 m. A bench is exactly halfway between them. How many metres from the gate is the bench?",
+    "qb": "Two flags stand along a trail at 250 m and 874 m from the start. A water stop is exactly halfway between them. How far from the start is the water stop?",
+    "expect": "caught"
+   },
+   {
+    "a": "L4-halfway4",
+    "b": "L5-buoyhalf",
+    "qa": "Two flags stand along a trail at 250 m and 874 m from the start. A water stop is exactly halfway between them. How far from the start is the water stop?",
+    "qb": "Two buoys float in a channel, 1,240 m and 2,036 m from the pier. A rescue boat is anchored at the exact middle point between the two buoys. How many metres is the boat from the pier?",
+    "expect": "caught"
+   },
+   {
+    "a": "L1-streetwalk",
+    "b": "L2-beetle",
+    "qa": "Zack leaves school and walks 6 blocks north, then 5 blocks east, then 3 blocks south. The roads run in straight lines along the blocks. What is the fewest number of blocks he must walk along the roads to get back to school?",
+    "qb": "A beetle crawls on a floor made of square tiles. It starts at a corner mark, crawls 9 tiles east, then 4 tiles north, then 3 tiles west. The tile lines are the only paths it may use. What is the fewest number of tiles it must crawl to get back to the corner mark?",
+    "expect": "caught"
+   },
+   {
+    "a": "L2-beetle",
+    "b": "L5-shiptrip",
+    "qa": "A beetle crawls on a floor made of square tiles. It starts at a corner mark, crawls 9 tiles east, then 4 tiles north, then 3 tiles west. The tile lines are the only paths it may use. What is the fewest number of tiles it must crawl to get back to the corner mark?",
+    "qb": "A ship sails 14 km north, then 13 km west, then 6 km south. The sea lanes run only north-south or east-west. What is the fewest number of kilometres the ship must sail along the lanes to get back to its port?",
+    "expect": "caught"
+   },
+   {
+    "a": "L3-balloonrise",
+    "b": "L5-hikeheight",
+    "qa": "A hot-air balloon is 20 m above the ground. It goes up by 5, then down by 12, then up by 9, then down by 3. What is the greatest height above the ground that the balloon reaches, in metres?",
+    "qb": "A hiker starts at a camp that is 450 m above sea level. All her changes in height are in metres. She climbs up by 120, then goes down by 85, then climbs up by 240, then goes down by 60. How high above sea level is she at the end, in metres?",
+    "expect": "caught"
+   },
+   {
+    "a": "L1-storypages",
+    "b": "L3-albumpages",
+    "qa": "A story book has 30 pages. The page numbers start at 1 and go up to 30. How many digits are printed in the page numbers altogether?",
+    "qb": "Zack makes a scrapbook with 150 pages. He writes the page numbers 1, 2, 3 and so on up to 150, one on each page. How many digits does he write altogether?",
+    "expect": "near-miss"
+   },
+   {
+    "a": "L3-albumpages",
+    "b": "L5-typeset",
+    "qa": "Zack makes a scrapbook with 150 pages. He writes the page numbers 1, 2, 3 and so on up to 150, one on each page. How many digits does he write altogether?",
+    "qb": "A printer sets the numbers 1 to 480 in type, one number for each page of a catalogue. One digit is one piece of type. How many pieces of type does the printer need?",
+    "expect": "near-miss"
+   },
+   {
+    "a": "L2-threesavers",
+    "b": "L3-shells3",
+    "qa": "Ali, Ben and Chen save money. Ben saves $12 more than Ali. Chen saves $18 more than Ali. Together they save $96. How much does Ali save?",
+    "qb": "Nina, Omar and Pei collect shells at the beach. Omar finds 9 more shells than Nina. Pei finds 16 more shells than Nina. Together they find 106 shells. How many shells does Pei find?",
+    "expect": "caught"
+   },
+   {
+    "a": "L1-eggtrays",
+    "b": "L2-pencilboxes",
+    "qa": "Aunty sells eggs in trays of 10. She has 4 full trays and 17 extra eggs in a bag. How many eggs is that altogether?",
+    "qb": "A school store keeps pencils in boxes of 100, packs of 10 and single pencils. It has 4 boxes, 3 packs and 7 single pencils. How many pencils is that altogether?",
+    "expect": "caught"
+   },
+   {
+    "a": "L2-pencilboxes",
+    "b": "L4-seedshop",
+    "qa": "A school store keeps pencils in boxes of 100, packs of 10 and single pencils. It has 4 boxes, 3 packs and 7 single pencils. How many pencils is that altogether?",
+    "qb": "A seed shop has 5 sacks of 1000 seeds, 2 bags of 100 seeds, 6 cups of 10 seeds and 8 loose seeds. How many seeds is that in all?",
+    "expect": "near-miss"
+   },
+   {
+    "a": "L1-oddnumber",
+    "b": "L4-oddtable",
+    "qa": "Four of these numbers are in one times table. One number is not: 15, 25, 35, 45 and 52. Which one is it?",
+    "qb": "Four of these five numbers belong to the same times table, from the 2 times table to the 10 times table. One does not: 48, 84, 132, 156 and 170. Which number is the odd one out?",
+    "expect": "caught"
+   },
+   {
+    "a": "L1-drinksmachine",
+    "b": "L4-tokenstall",
+    "qa": "A drinks machine takes only 20-cent and 50-cent coins and gives no change. Its prices go 10 cents, 20 cents, 30 cents and so on, up to 150 cents. That is 15 prices. How many of the 15 prices can be paid exactly?",
+    "qb": "A game stall has prizes that cost 1 point, 2 points, 3 points and so on, up to 40 points. Kai has only 3-point tokens and 7-point tokens, and the stall gives no change. How many of the 40 prizes can he pay for exactly?",
+    "expect": "caught"
+   },
+   {
+    "a": "L4-podium",
+    "b": "L5-committee",
+    "qa": "A team has 7 pupils. The coach picks one pupil to be captain, another pupil to be vice-captain and a third pupil to be reporter. In how many different ways can the three jobs be given?",
+    "qb": "A club of 9 members chooses a president, a secretary and a treasurer. No member can have two jobs. In how many different ways can the three jobs be filled?",
+    "expect": "caught"
+   },
+   {
+    "a": "L1-racerun",
+    "b": "L2-cyclerace",
+    "qa": "Mei starts a school race in 19th place. There are 30 runners. She passes 5 runners. Then 2 runners pass her. What place is Mei in now? Write the number only.",
+    "qb": "Dina is in 15th place in a cycling race with 30 riders. She passes 5 riders. Then 3 riders pass her. Then she passes 4 more riders. How many riders are behind her now?",
+    "expect": "caught"
+   },
+   {
+    "a": "L1-secret63",
+    "b": "L2-lockernumber",
+    "qa": "A secret 2-digit number has two clues. Its two digits add up to 9. Its tens digit is 3 more than its ones digit. What is the secret number?",
+    "qb": "A locker has a 3-digit number. The three digits make a total of 13. The middle digit is 5. The first digit is 2 bigger than the last digit. What is the locker number?",
+    "expect": "caught"
+   },
+   {
+    "a": "L1-seatrow",
+    "b": "L2-hallseats",
+    "qa": "A cinema has 9 seats in every row. Tickets give each seat a number, counting 1, 2, 3 and on, one row after another, starting at the screen. Kai sits in the 4th row, in the 5th seat from the left. What is his seat number?",
+    "qb": "Mrs Goh labels the seats of a school hall. Every row has 5 seats, and the seats are numbered 1, 2, 3 and so on, starting in the front row. In which row is seat number 62?",
+    "expect": "near-miss"
+   },
+   {
+    "a": "L1-twodice",
+    "b": "L5-spinners8",
+    "qa": "Mei takes one token from bag A and one from bag B. Each bag has tokens numbered 1 to 7. The two numbers add up to 10. Count A3 with B7 and A7 with B3 as different. How many different ways can this happen?",
+    "qb": "Two fair spinners each show a number from 1 to 8. They are spun together, and the two numbers add up to 10. A 3 on the first spinner and a 7 on the second spinner is different from a 7 on the first spinner and a 3 on the second spinner. In how many different ways can this happen?",
+    "expect": "caught"
+   },
+   {
+    "a": "L2-deliveryrobot",
+    "b": "L5-lilypads",
+    "qa": "A delivery robot is at the top-left corner of a block grid. It moves only 4 blocks right and 3 blocks down, in any order, to reach the bottom-right corner. How many different routes can it take?",
+    "qb": "A frog sits on the top-left lily pad of a pond. It hops only to the pad on its right or the pad below it, and it makes 4 hops right and 3 hops down in all, in any order, to reach the bottom-right pad. A boat covers the pad that is 2 pads right and 1 pad down from the start, so the frog cannot land there. How many different ways can the frog reach the bottom-right pad?",
+    "expect": "caught"
+   },
+   {
+    "a": "L2-racesecond",
+    "b": "L3-race",
+    "qa": "Kai is faster than Zack. Mira is faster than Kai. Zack is faster than Lena. Who came second in the race?",
+    "qb": "Priya is faster than Ben. Ben is faster than Siti. Ravi is faster than Priya. Who finished third?",
+    "expect": "near-miss"
+   },
+   {
+    "a": "L4-sunflower",
+    "b": "L6-savingsbox",
+    "qa": "A line graph shows the height of a sunflower at the end of each week: 4 cm, 7 cm, 15 cm, 18 cm and 30 cm. What was the biggest growth in one week?",
+    "qb": "A line graph shows the money in Ravi's savings box at the end of each month: $11, $16, $45, $42, $50 and $48. What was the biggest rise from one month to the next?",
+    "expect": "near-miss"
+   },
+   {
+    "a": "L2-edgecount",
+    "b": "L3-solidedges",
+    "qa": "How many edges do two cubes and four cuboids have altogether?",
+    "qb": "How many edges do a cube and a square pyramid have altogether? A square pyramid has a square base and four triangle faces.",
+    "expect": "caught"
+   },
+   {
+    "a": "L1-kiteheights",
+    "b": "L3-books",
+    "qa": "Five kites fly over a field. Their heights are 16 m, 42 m, 25 m, 33 m and 11 m. How much higher is the highest kite than the lowest kite?",
+    "qb": "Five children read books during the school year. Mei Ling read 24, Ben read 13, Aisha read 49, Ravi read 31 and Siti read 20. How many more books did the child who read the most read than the child who read the least?",
+    "expect": "near-miss"
+   }
+  ]
  }
 }

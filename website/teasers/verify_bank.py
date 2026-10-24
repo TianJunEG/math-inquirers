@@ -256,48 +256,118 @@ def source_digest(files=None):
     return _DIGEST[key]
 
 
-def lock_problems(per_override=None):
-    """The source lock (source_lock.json) holds the minimum number of files per source root.  A checkout that lacks them (for example a tracked-only
-    export without the git-ignored private sources) cannot give a valid verdict, so the verifier refuses instead of printing '0 FAIL'."""
+MANIFEST_FILE = os.path.join(HERE, 'source_manifest.tsv')
+MANIFEST_MISS_TOL = 0.005      # up to 0.5% of the manifest paths may be gone (files move); a key file never
+SHRINK = 0.5                   # a file smaller than this share of its recorded size counts as emptied or cut (a key file never)
+
+
+def source_listing():
+    """{relative path: size in bytes} of every source file of this tree."""
+    return {os.path.relpath(f, ROOT).replace(os.sep, '/'): os.path.getsize(f) for f in source_files()}
+
+
+def is_key_path(rel, must):
+    """Files whose absence or truncation makes a near-copy verdict meaningless: every PDF (the books), the private and book sources, every holiday lesson.py,
+    the P5 and P6 content JS, and everything under a `must_exist` entry."""
+    return (rel.endswith('.pdf') or rel.startswith('docs/books/') or rel.startswith(('p5/content/', 'p6/content/'))
+            or (rel.startswith('practice/holiday/') and rel.endswith('lesson.py')) or any(rel == m or rel.startswith(m + '/') for m in must))
+
+
+def read_manifest():
+    out = {}
+    if os.path.exists(MANIFEST_FILE):
+        for line in open(MANIFEST_FILE, encoding='utf-8').read().splitlines():
+            if line.strip():
+                size, path = line.split('\t', 1)
+                out[path] = int(size)
+    return out
+
+
+def lock_problems(listing=None, manifest=None):
+    """The source lock (source_lock.json + source_manifest.tsv) says what a COMPLETE tree looks like.  Round 6 (AUDIT_ROUND6 M2): counts alone accepted a tree
+    in which 27% of the bytes were gone (files emptied, same paths), so the lock now also needs (a) a minimum of BYTES per source root and per near-copy folder,
+    and (b) a manifest of every source path with its size: key files (PDFs, books, holiday lessons, must_exist) may not be missing or cut to under half of their
+    recorded size, and at most 0.5% of all manifest paths may be missing or cut.  `listing` ({path: size}) lets the self-test hand in a damaged tree."""
     if not os.path.exists(LOCK_FILE):
         return ['source_lock.json is missing: run verify_bank.py --update-lock on the full working tree']
     lock = json.load(open(LOCK_FILE, encoding='utf-8'))
-    _, n, _, per = source_digest()
-    per = per_override if per_override is not None else per
+    listing = listing if listing is not None else source_listing()
+    manifest = manifest if manifest is not None else read_manifest()
+    per, perb = {}, {}
+    for rel, sz in listing.items():
+        r = rel.split('/')[0]
+        per[r] = per.get(r, 0) + 1
+        perb[r] = perb.get(r, 0) + sz
     bad = []
     for root, need in sorted(lock['min_files'].items()):
         if per.get(root, 0) < need:
             bad.append('source root %s has %d files, the lock needs at least %d (incomplete checkout?)' % (root, per.get(root, 0), need))
-    npdf = sum(1 for f in source_files() if f.endswith('.pdf'))
+    for root, need in sorted((lock.get('min_bytes') or {}).items()):
+        if perb.get(root, 0) < need:
+            bad.append('source root %s holds %d bytes, the lock needs at least %d (files emptied or cut?)' % (root, perb.get(root, 0), need))
+    if not lock.get('min_bytes') or not manifest:
+        bad.append('source_lock.json has no byte minimums or source_manifest.tsv is missing: run verify_bank.py --update-lock on the full working tree')
+    npdf = sum(1 for r in listing if r.endswith('.pdf'))
     if npdf < lock.get('min_pdfs', 0):
         bad.append('only %d PDFs among the sources, the lock needs at least %d (PDFs are read as text since round 4; incomplete checkout?)' % (npdf, lock['min_pdfs']))
-    rels = [os.path.relpath(f, ROOT).replace(os.sep, '/') for f in source_files()]
     for prefix, need in sorted((lock.get('min_under') or {}).items()):
-        have = sum(1 for r in rels if r == prefix or r.startswith(prefix + '/'))
+        have = sum(1 for r in listing if r == prefix or r.startswith(prefix + '/'))
         if have < need:
             bad.append('source folder %s has %d files, the lock needs at least %d (round 5: the folders behind the near-copy checks must be complete)' % (prefix, have, need))
+    for prefix, need in sorted((lock.get('min_bytes_under') or {}).items()):
+        have = sum(sz for r, sz in listing.items() if r == prefix or r.startswith(prefix + '/'))
+        if have < need:
+            bad.append('source folder %s holds %d bytes, the lock needs at least %d (files emptied or cut?)' % (prefix, have, need))
     for d in lock.get('must_exist', []):
         if not glob.glob(os.path.join(ROOT, d)):
             bad.append('required source %s is missing (git-ignored private sources not present?)' % d)
+    must = lock.get('must_exist', [])
+    miss_key, cut_key, miss_all, cut_all = [], [], 0, 0
+    for rel, size in manifest.items():
+        key = is_key_path(rel, must)
+        have = listing.get(rel)
+        if have is None:
+            miss_all += 1
+            if key:
+                miss_key.append(rel)
+        elif size >= 1000 and have < SHRINK * size:
+            cut_all += 1
+            if key:
+                cut_key.append(rel)
+    if miss_key:
+        bad.append('%d key source files of the manifest are missing, for example %s' % (len(miss_key), ', '.join(miss_key[:3])))
+    if cut_key:
+        bad.append('%d key source files are cut to under half of their recorded size, for example %s' % (len(cut_key), ', '.join(cut_key[:3])))
+    if manifest and miss_all > MANIFEST_MISS_TOL * len(manifest):
+        bad.append('%d of %d manifest paths are missing (more than %.1f%%)' % (miss_all, len(manifest), 100 * MANIFEST_MISS_TOL))
+    if manifest and cut_all > MANIFEST_MISS_TOL * len(manifest):
+        bad.append('%d of %d manifest files are cut to under half of their size (more than %.1f%%)' % (cut_all, len(manifest), 100 * MANIFEST_MISS_TOL))
     return bad
 
 
 def update_lock():
     _, n, total, per = source_digest()
-    rels = [os.path.relpath(f, ROOT).replace(os.sep, '/') for f in source_files()]
+    listing = source_listing()
+    rels = sorted(listing)
     under = ['practice', 'practice/holiday', 'practice/holiday/p2', 'practice/holiday/p3', 'practice/holiday/p4', 'practice/holiday/p5', 'practice/holiday/p6',
              'term/l1', 'outputs/designed', 'outputs/print', 'split', 'school/p3', 'school/p4', 'school/p5', 'school/p6', 'docs/books', 'docs/sasmo']
-    lock = {'note': 'Minimum number of source files per root (and per folder behind the near-copy checks) for a valid verification (written by verify_bank.py --update-lock; round 5: 99% of the counts when the lock was written). The verifier refuses to give a verdict on a checkout with fewer.',
+    perb = {}
+    for r, sz in listing.items():
+        perb[r.split('/')[0]] = perb.get(r.split('/')[0], 0) + sz
+    old = json.load(open(LOCK_FILE, encoding='utf-8')) if os.path.exists(LOCK_FILE) else {}
+    lock = {'note': 'Minimum number of source files AND bytes per source root (and per folder behind the near-copy checks) for a valid verification, plus source_manifest.tsv (every source path with its size). Written by verify_bank.py --update-lock; round 6: 99% of the counts and 97% of the bytes when the lock was written. The verifier refuses to give a verdict on a checkout with fewer, or with key files (PDFs, books, holiday lessons) missing or cut.',
             'min_files': {r: int(c * 0.99) for r, c in sorted(per.items())},
+            'min_bytes': {r: int(c * 0.97) for r, c in sorted(perb.items())},
             'min_under': {u: int(sum(1 for r in rels if r == u or r.startswith(u + '/')) * 0.99) for u in under},
-            'min_pdfs': int(sum(1 for f in source_files() if f.endswith('.pdf')) * 0.99),
-            'must_exist': ['docs/books/private_p1_papers', 'docs/books/private_p6_papers', 'docs/books/private_word_problems_notes.md', 'extension/data', 'outputs/skill_additions', 'practice/holiday', 'docs/audit', 'term/l1/lessons', 'term/l1/out', 'outputs/workbook/Math_Inquirers_P1_Student_Workbook_Designed.pdf', 'school/p3/out', 'p2/Math_Inquirers_P2_Tutor_Guide.html',
-                           'practice/holiday/p6/06/lesson.py', 'practice/holiday/p2/03/lesson.py', 'practice/holiday/p5/05', 'practice/holiday/p3/04', 'split/p5l5', 'outputs/designed/Math_Inquirers_P2_Question_Bank.pdf', 'outputs/designed/Math_Inquirers_P5_Question_Bank.pdf',
-                           'outputs/designed/Math_Inquirers_P6_Question_Bank.pdf', 'outputs/schemes/Math_Inquirers_P5_Scheme_of_Work.pdf', 'outputs/diagnostics/Math_Inquirers_Level3_Placement_Check.pdf', 'p5/content/l5.js', 'p5/content/l8.js',
-                           'school/p4/out/P4_S2_Puzzles.pdf', 'extension/data/l3_u03.json', 'docs/sasmo/g2_original_problems_draft.md', 'docs/books/p6_non_routine_catalogue.md', 'docs/audit/gifted_fixes_p3.md'],
+            'min_bytes_under': {u: int(sum(sz for r, sz in listing.items() if r == u or r.startswith(u + '/')) * 0.97) for u in under},
+            'min_pdfs': int(sum(1 for r in rels if r.endswith('.pdf')) * 0.99),
+            'must_exist': old.get('must_exist') or [],
             'files_at_update': n, 'bytes_at_update': total}
     json.dump(lock, open(LOCK_FILE, 'w', encoding='utf-8'), indent=1)
-    print('source lock written:', lock['min_files'])
+    with open(MANIFEST_FILE, 'w', encoding='utf-8') as fh:
+        for r in rels:
+            fh.write('%d\t%s\n' % (listing[r], r))
+    print('source lock written: %d files, %.1f MB; manifest of %d paths' % (n, total / 1e6, len(rels)))
 
 
 def chunks_of(path):
@@ -346,7 +416,6 @@ def structure_index():
 
 
 TEXT_TARGET = 40    # text-answer puzzles a year per level (TEXT_ANSWER_PLAN.md)
-MAX_SMALL = 4       # single-digit answers: the same digit may be the answer of at most this many puzzles of a level (only 10 values exist for 61 puzzles)
 GENERIC = 120       # a skeleton 4-gram found in more than this many source questions says nothing about structure
 
 
@@ -863,12 +932,36 @@ def quarter_rules(lv, items, fails):
                         if msg not in seen:
                             seen.add(msg)
                             fails.append(msg)
-    seen_ans = {}
-    for mm, e in items:
-        seen_ans.setdefault(e['ans'], []).append(e['id'])
-    for a, ids in seen_ans.items():
-        if (not is_small(a) and len(ids) > 1) or (is_small(a) and len(ids) > MAX_SMALL):
-            fails.append('L%d: answer %s repeats (%s)' % (lv, a, ', '.join(ids)))
+    answer_window_rules(lv, items, fails)
+
+
+def answer_window_rules(lv, items, fails):
+    """Levels 3 to 6, ANSWER-WINDOW (adopted default of the owner's delegate, round 6; replaces the full-year answer rule that AUDIT_ROUND6 H2 showed to be
+    unreachable): the same answer value may not recur within a level within answer_window_l36_days (60) days, counted round the year in a 365- and a
+    366-day year; and the same answer with the same sub-structure (or same-idea group) never within answer_same_sub_days (92, one quarter).
+    Single digits are NOT exempt here (at most nine of them can fall in any 60 days); Levels 1 and 2 keep their own window rule (gap_rules)."""
+    R = TAX.RULES
+    win, qwin = R['answer_window_l36_days'], R['answer_same_sub_days']
+    seen = set()
+    for N in (365, 366):
+        pos = [(daynum(e['date'], N), e) for _, e in items]
+        by_ans = {}
+        for p, e in pos:
+            if p is not None:
+                by_ans.setdefault(e['ans'], []).append((p, e))
+        for a, us in sorted(by_ans.items()):
+            for i in range(len(us)):
+                for j in range(i + 1, len(us)):
+                    d = cdist(us[i][0], us[j][0], N)
+                    msg = None
+                    if d < win:
+                        msg = 'L%d: answer %s repeats within %d days (%s and %s, %d days apart; ANSWER-WINDOW)' % (lv, a, win, us[i][1]['id'], us[j][1]['id'], d)
+                    elif d < qwin and gsub(us[i][1]) == gsub(us[j][1]):
+                        msg = 'L%d: answer %s repeats with the same sub-structure %s within %d days (%s and %s, %d days apart; ANSWER-WINDOW)' % (
+                            lv, a, gsub(us[i][1]), qwin, us[i][1]['id'], us[j][1]['id'], d)
+                    if msg and msg not in seen:
+                        seen.add(msg)
+                        fails.append(msg)
 
 
 def masked_tokens(text):
@@ -893,6 +986,122 @@ UNITS = set('cm m km kg g l ml mm minutes minute seconds second hours hour days 
 def has_content(gram):
     """A four-gram counts only when it carries a word that is not a function word, a mask or a unit ('# cm # cm' is a list of measurements, not a sentence frame)."""
     return any(w not in FUNC and w not in UNITS and w not in ('#', '@') for w in gram.split())
+
+
+# ------------------------------------------------------------------ round 6 (AUDIT_ROUND6 H1, G1): the sentence frame at ONE level only
+# Owner ruling: a story or sentence frame appears at ONE level only.  The masked four-word runs of round 5 cannot see a frame whose nouns changed, so every
+# sentence is reduced to a function-word skeleton (content words 'W', numbers '#', names 'N', function words kept; with a second form in which runs of 'W'
+# collapse) and the best sentence pair of two puzzles of the SAME sub-structure (or same-idea group) at DIFFERENT levels is scored by its sequence ratio.
+# 0.80 or more is a REVIEW line (a ledger of accepted pairs, frame_ledger.json, marks the ones a reader accepted); 0.90 or more is a FAIL unless the pair is in
+# the ledger.  No exemption for common runs: only the stock comparison sentence ("X is taller than Y") is exempt.
+FRAME_FUNC = FUNC | set('shall may might him us whom whose'.split())
+FRAME_TOK = re.compile(r"\d[\d,]*\.?\d*|[A-Za-z]+(?:'[a-z]+)?")
+FRAME_MIN_WORDS = 10          # a window of one or two neighbouring sentences must have at least this many words: a bare ask ("How many different ways can it take?") is no frame
+FRAME_WINDOW = 2
+FRAME_STOCK = {'N is W than N', 'N is W than the W', 'the W is W than the W', 'the W is W than N', 'N is not W than N'}
+FRAME_LEDGER_FILE = os.path.join(HERE, 'frame_ledger.json')
+
+
+FRAME_LIST = re.compile(r'(?:[$]?\d[\d,]*\.?\d*(?:\s?(?:[a-zA-Z%\u00b0]{1,12}))?)(?:(?:,\s*(?:and\s+|or\s+)?|\s+and\s+|\s+or\s+)(?:then\s+)?(?:[a-z]+\s+)?[$]?\d[\d,]*\.?\d*(?:\s?(?:[a-zA-Z%\u00b0]{1,12}))?){2,}')
+
+
+def frame_skeleton(sentence):
+    """Function-word skeleton of one sentence: numbers '#', names 'N', function words kept, every other word 'W'; a list of three or more numbers
+    ("14 cm, 9 cm, 21 cm and 17 cm") is one token 'L', so that two lists do not look like one frame."""
+    sentence = FRAME_LIST.sub(' LISTITEMS ', sentence)
+    out = []
+    for t in FRAME_TOK.findall(sentence):
+        if t == 'LISTITEMS':
+            out.append('L')
+            continue
+        if t[0].isdigit():
+            out.append('#')
+        else:
+            w = t.lower().replace("'s", '').replace('\u2019s', '')
+            out.append('N' if w in NAMES else (w if w in FRAME_FUNC else 'W'))
+    return out
+
+
+def frame_collapse(sk):
+    o = []
+    for t in sk:
+        if t in ('W', 'N') and o and o[-1] == t:
+            continue
+        o.append(t)
+    return o
+
+
+def frame_forms(q):
+    """[(raw skeleton, collapsed skeleton)] for every window of one or two neighbouring sentences of the question that has at least FRAME_MIN_WORDS words
+    and is not the stock comparison sentence."""
+    sents = [s for s in re.split(r'(?<=[.?!])\s+(?=[A-Z0-9"(\$])', q) if s.strip()]
+    out = []
+    for i in range(len(sents)):
+        for k in range(1, FRAME_WINDOW + 1):
+            seg = sents[i:i + k]
+            if len(seg) < k or len(' '.join(seg).split()) < FRAME_MIN_WORDS:
+                continue
+            sk = []
+            for s in seg:
+                sk += frame_skeleton(s)
+            if all(' '.join(frame_collapse(frame_skeleton(s))) in FRAME_STOCK or len(s.split()) < 5 for s in seg):
+                continue                  # only stock comparison sentences ("Ali is taller than Ben.") and bare asks ("Who is the shortest?") in the window
+            out.append((sk, frame_collapse(sk)))
+    return out
+
+
+def frame_score(qa, qb, fa=None, fb=None):
+    import difflib
+    fa = fa if fa is not None else frame_forms(qa)
+    fb = fb if fb is not None else frame_forms(qb)
+    best = 0.0
+    for (ra, ca) in fa:
+        for (rb, cb) in fb:
+            for x, y in ((ra, rb), (ca, cb)):
+                r = difflib.SequenceMatcher(None, x, y, autojunk=False).ratio()
+                if r > best:
+                    best = r
+    return best
+
+
+def frame_hash(qa, qb):
+    h = hashlib.sha1()
+    for q in sorted((qa, qb)):
+        h.update(('|'.join(' '.join(c) for _, c in frame_forms(q)) + '\n').encode())
+    return h.hexdigest()[:12]
+
+
+def frame_ledger():
+    if not os.path.exists(FRAME_LEDGER_FILE):
+        return {}
+    return {tuple(sorted((r['a'], r['b']))): r for r in json.load(open(FRAME_LEDGER_FILE, encoding='utf-8')).get('accepted', [])}
+
+
+def frame_rule(flat_all, fails, lines, ledger=None):
+    """Cross-level frame similarity for the same sub-structure or same-idea group.  Appends FAIL strings to `fails` and REVIEW lines to `lines`."""
+    ledger = frame_ledger() if ledger is None else ledger
+    R = TAX.RULES
+    rv, fl = R['frame_review'], R['frame_fail']
+    forms = {e['id']: frame_forms(e['q']) for _, e in flat_all}
+    n_rev = n_acc = 0
+    for i in range(len(flat_all)):
+        for j in range(i + 1, len(flat_all)):
+            (la, a), (lb, b) = flat_all[i], flat_all[j]
+            if la == lb or gsub(a) != gsub(b):
+                continue
+            sc = frame_score(a['q'], b['q'], forms[a['id']], forms[b['id']])
+            if sc < rv:
+                continue
+            led = ledger.get(tuple(sorted((a['id'], b['id']))))
+            accepted = bool(led and led.get('hash') == frame_hash(a['q'], b['q']) and sc <= led.get('score', 0) + 0.02)
+            tag = '%s (L%d) and %s (L%d): sentence frame %.2f alike, %s' % (a['id'], la, b['id'], lb, sc, gsub(a))
+            if sc >= fl and not accepted:
+                fails.append('%s: the same sentence frame at two levels (function-word skeleton %.2f; %.2f is a FAIL unless the pair is in frame_ledger.json with a reason)' % (tag.split(': sentence')[0], sc, fl))
+            else:
+                n_rev += 1
+                n_acc += accepted
+                lines.append('- REVIEW frame %s%s' % (tag, ' [ledger: %s]' % led['reason'] if accepted else ''))
+    lines.insert(0, '- Frame rule (function-word skeleton, same sub-structure at two levels): %d pairs at %.2f or more reviewed, %d of them accepted in the ledger' % (n_rev, rv, n_acc))
 
 
 def structure_rules(all_by_level, stock):
@@ -1006,6 +1215,9 @@ def structure_rules(all_by_level, stock):
             if (same and len(sh) >= 6) or len(sh) >= 8:
                 global_fails.append('%s (L%d) and %s (L%d): the same sentence frame at two levels (%d shared four-word runs, e.g. "%s"%s)' % (
                     a['id'], la, b['id'], lb, len(sh), sorted(sh)[0], ', same sub-structure' if same else ''))
+    frame_lines = []
+    frame_rule(flat_all, global_fails, frame_lines)
+    struct_lines += frame_lines
     return global_fails, struct_lines
 
 
@@ -1048,22 +1260,43 @@ def capacity_lines(levels, bank_counts=None):
     return out, fails
 
 
-def answer_feasibility(all_by_level):
-    """Levels 3 to 6 keep the full-year answer rule (an answer of 10 or more once per level, a single digit at most MAX_SMALL times): report whether a year can fit."""
-    out = ['', '## Full-year answer rule at Levels 3 to 6 (feasibility)', '',
-           '| Level | Puzzles so far | Single-digit answers so far | Share | Projected single-digit answers in 365 | Allowed (9 values x %d) | Verdict |' % MAX_SMALL, '|---|---|---|---|---|---|---|']
+def answer_budget(all_by_level):
+    """ANSWER-WINDOW budget (round 6, AUDIT_ROUND6 H2).  Per level: how the answers of the released puzzles are spread and how full the tightest 60-day
+    window is.  Levels 3 to 6: no answer value twice in 60 days, so a 60-day window holds at most 9 single-digit answers (1 to 9) and 90 two-digit answers;
+    Levels 1 and 2: a single digit at most twice in 60 days (18), any other answer once.  Returns (lines, warnings)."""
+    R = TAX.RULES
+    out = ['', '## Answer budget (ANSWER-WINDOW, replaces the full-year answer rule of rounds 3 to 5)', '',
+           'Levels 3 to 6: the same answer value never twice within %d days (and never with the same sub-structure within %d days). A 60-day window can hold at most 9 different '
+           'single-digit answers and 90 different two-digit answers; every other answer (100 or more, a fraction, a decimal, a word) is limited only by the window. '
+           'Levels 1 and 2: a single digit at most twice in 60 days (18), any other answer once.' % (R['answer_window_l36_days'], R['answer_same_sub_days']), '',
+           '| Level | Puzzles | Single digit | 10 to 99 | 100 or more | Fraction, decimal | Text | Peak single digits in 60 days (limit) | Peak 10 to 99 in 60 days (limit 90) |',
+           '|---|---|---|---|---|---|---|---|---|']
     warn = []
+
+    def kind_of(e):
+        a = e['ans']
+        if e['type'] == 's':
+            return 'text'
+        if re.fullmatch(r'-?\d+', a):
+            v = abs(int(a))
+            return 'single' if v < 10 else ('two' if v < 100 else 'big')
+        return 'frac'
     for lv in sorted(all_by_level):
-        if lv < 3:
-            continue
         items = all_by_level[lv]
-        small = sum(1 for _, e in items if is_small(e['ans']))
-        share = small / len(items)
-        proj = round(share * 365)
-        ok = proj <= 9 * MAX_SMALL
-        if not ok:
-            warn.append('Level %d: %d%% single-digit answers so far, a year would need about %d (limit %d)' % (lv, round(share * 100), proj, 9 * MAX_SMALL))
-        out.append('| %d | %d | %d | %d%% | %d | %d | %s |' % (lv, len(items), small, round(share * 100), proj, 9 * MAX_SMALL, 'ok' if ok else 'WARNING: aim for fewer single-digit answers'))
+        cnt = {}
+        for _, e in items:
+            cnt[kind_of(e)] = cnt.get(kind_of(e), 0) + 1
+        pk = {'single': 0, 'two': 0}
+        for N in (365, 366):
+            pos = sorted((daynum(e['date'], N), kind_of(e)) for _, e in items if daynum(e['date'], N) is not None)
+            for p0, _ in pos:
+                for k in pk:
+                    pk[k] = max(pk[k], sum(1 for p, kk in pos if (p - p0) % N < R['answer_window_l36_days'] and kk == k))
+        lim = 18 if str(lv) in R['min_gap_days'] else 9
+        if pk['single'] > lim:
+            warn.append('Level %d: %d single-digit answers in one 60-day window (limit %d)' % (lv, pk['single'], lim))
+        out.append('| %d | %d | %d | %d | %d | %d | %d | %d (%d) | %d |' % (lv, len(items), cnt.get('single', 0), cnt.get('two', 0), cnt.get('big', 0), cnt.get('frac', 0),
+                                                                    cnt.get('text', 0), pk['single'], lim, pk['two']))
     # round 5 (C6, TEXT_ANSWER_PLAN.md): text answers (a name, a word, a letter) are a different kind of answer; the plan wants about 40 a year at every level
     out += ['', '## Text answers per level (TEXT_ANSWER_PLAN.md)', '',
             'Target: about 3 or 4 text-answer puzzles a month at every level, so that a year holds 40 or more (every text answer is used once per level).', '',
@@ -1133,7 +1366,16 @@ def selftest():
     expect('L4 sub 30 days apart across 31 Mar / 30 Apr passes', synth(4, [('03-31', S, F, '11'), ('04-30', S, F, '12')]), None)
     expect('L5 the same sub twice in a quarter fails', synth(5, [('05-01', S, F, '11'), ('06-30', S, F, '12')]), 'sub-structure')
     expect('L6 four puzzles of one family in a quarter fails', synth(6, [('05-01', 'a.s1', F, '11'), ('05-09', 'a.s2', F, '12'), ('05-17', 'a.s3', F, '13'), ('05-25', 'a.s4', F, '14')]), 'family')
-    expect('L3 the same answer (10 or more) twice in a level fails', synth(3, [('05-01', 'a.s1', 'a', '55'), ('09-01', 'b.s2', 'b', '55')]), 'answer')
+    # --- ANSWER-WINDOW (round 6): the same answer not twice within 60 days at Levels 3 to 6 (single digits included); never with the same sub-structure within 92 days
+    expect('L3 the same answer 59 days apart fails (ANSWER-WINDOW)', synth(3, [('05-01', 'a.s1', 'a', '55'), ('06-29', 'b.s2', 'b', '55')]), 'repeats within 60 days')
+    expect('L3 the same answer 60 days apart passes (ANSWER-WINDOW)', synth(3, [('05-01', 'a.s1', 'a', '55'), ('06-30', 'b.s2', 'b', '55')]), None)
+    expect('L3 the same answer in January and in September passes (no full-year rule any more)', synth(3, [('01-15', 'a.s1', 'a', '55'), ('09-01', 'b.s2', 'b', '55')]), None)
+    expect('L4 a single digit twice within 60 days fails (no single-digit exemption at Levels 3 to 6)', synth(4, [('05-01', 'a.s1', 'a', '7'), ('05-20', 'b.s2', 'b', '7')]), 'repeats within 60 days')
+    expect('L4 a single digit 60 days apart passes', synth(4, [('05-01', 'a.s1', 'a', '7'), ('06-30', 'b.s2', 'b', '7')]), None)
+    expect('L5 the same answer with the same sub-structure 90 days apart (other quarter) fails', synth(5, [('03-20', S, F, '55'), ('06-18', S, F, '55')]), 'same sub-structure')
+    expect('L5 the same answer with the same sub-structure 92 days apart passes', synth(5, [('03-20', S, F, '55'), ('06-20', S, F, '55')]), None)
+    expect('L5 the same answer in a text answer 40 days apart fails', synth(5, [('05-01', 'a.s1', 'a', 'south'), ('06-10', 'b.s2', 'b', 'south')]), 'repeats within 60 days')
+    expect('L5 the same answer across 31 Dec / 1 Jan within 60 days fails (circular)', synth(5, [('12-20', 'a.s1', 'a', '55'), ('01-25', 'b.s2', 'b', '55')]), 'repeats within 60 days')
 
     # --- the real bank: break it in known ways (the old probes)
     def mutate(name, fn, want):
@@ -1194,6 +1436,34 @@ def selftest():
     cases.append(('cross-level frame rule: the weekday sentence at Levels 3 and 5 is a FAIL', any('same sentence frame' in x for x in two_levels(wk3, wk5)), two_levels(wk3, wk5)[:1]))
     newq = 'Hana swims on every Saturday. Her first lesson of the month is on the 6th. What is the date of her lesson in week 4 of that month?'
     cases.append(('cross-level frame rule: a new sentence for the same maths is not a FAIL', not any('same sentence frame' in x for x in two_levels(wk3, newq)), two_levels(wk3, newq)[:1]))
+    # round 6 (H1/G1): the function-word skeleton rule on the audit's pairs (their round-5 wording is in selftest_probes.json 'round6_frames')
+    fr = probes.get('round6_frames', {})
+    caught = 0
+    for pr in fr.get('pairs', []):
+        sc = frame_score(pr['qa'], pr['qb'])
+        caught += sc >= TAX.RULES['frame_review']
+        if pr['expect'] == 'caught':
+            cases.append(('frame skeleton rule: %s / %s (round-5 wording) scores %.2f, a REVIEW (0.80) or FAIL (0.90)' % (pr['a'], pr['b'], sc), sc >= TAX.RULES['frame_review'], round(sc, 2)))
+    if fr.get('pairs'):
+        print('frame skeleton rule: %d of the %d audit pairs (round-5 wording) score 0.80 or more' % (caught, len(fr['pairs'])))
+        cases.append(('frame skeleton rule catches at least 60%% of the audit pairs (%d of %d)' % (caught, len(fr['pairs'])), caught >= 0.6 * len(fr['pairs']), caught))
+    def frame_pair(qa, qb, ledger=None):
+        d = [(3, dict(id='L3-fa', date='12-01', level=3, frame='fa', sub='x.s', family='x', ans='1', q=qa, type='n')),
+             (5, dict(id='L5-fb', date='12-02', level=5, frame='fb', sub='x.s', family='x', ans='2', q=qb, type='n'))]
+        f, ln = [], []
+        frame_rule(d, f, ln, ledger or {})
+        return f, ln
+    qa = 'A school needs 24 badges for a prize-giving. Shop A sells badges at $8 each. Shop B gives 1 badge free for every 3 badges that you buy. The school chooses the cheaper shop. How much does it pay?'
+    qb = 'A club needs 30 tickets for a show. Shop A sells tickets at $9 each. Shop B gives 1 ticket free for every 4 tickets that you buy. The club chooses the cheaper shop. How much does it pay?'
+    qc = 'Hana wants 12 paper cups for her birthday. One stall sells them at 40 cents a cup. A second stall sells them in sleeves of 6 for $2 a sleeve. Which stall is cheaper, and by how many cents?'
+    f1, _ = frame_pair(qa, qb)
+    cases.append(('frame skeleton rule: the same frame with other nouns and numbers (0.90 or more) is a FAIL', any('same sentence frame' in x for x in f1), f1[:1]))
+    f2, l2 = frame_pair(qa, qb, {('L3-fa', 'L5-fb'): dict(a='L3-fa', b='L5-fb', hash=frame_hash(qa, qb), score=1.0, reason='test')})
+    cases.append(('frame skeleton rule: a pair in the ledger with the same text is a REVIEW line, not a FAIL', not f2 and any('ledger' in x for x in l2), f2[:1] + l2[:2]))
+    f3, _ = frame_pair(qa, qb + ' ', {('L3-fa', 'L5-fb'): dict(a='L3-fa', b='L5-fb', hash='0' * 12, score=1.0, reason='test')})
+    cases.append(('frame skeleton rule: a ledger entry whose hash no longer matches (the wording changed) does not protect the pair', bool(f3), f3[:1]))
+    f4, _ = frame_pair(qa, qc)
+    cases.append(('frame skeleton rule: a new sentence frame for the same maths is not a FAIL', not f4, f4[:1]))
     cases.append(('cross-level frame rule: the real bank has no repeated sentence frame', not any('same sentence frame' in x for x in clean), [x for x in clean if 'same sentence frame' in x][:2]))
     # text answers with options (C6): the options must be in the question, the answer one of them
     good = dict(q='Which way does she face now: (A) north (B) east (C) south or (D) west?', ans='south', type='s', choices=['north', 'east', 'south', 'west'], labels=True)
@@ -1201,11 +1471,25 @@ def selftest():
     cases.append(('choice answers: an option missing from the question is caught', bool(choice_problems(dict(good, q='Which way does she face now: (A) north (B) east (C) south?'))), ''))
     cases.append(('choice answers: an answer that is not an option is caught', bool(choice_problems(dict(good, ans='up'))), ''))
     cases.append(('choice answers: a missing letter is caught', bool(choice_problems(dict(good, q='Which way does she face now: (A) north (B) east (C) south or west?'))), ''))
-    # the source lock: 99% of the counts and the near-copy folders must stay complete
+    # the source lock: counts, BYTES and a path manifest (round 6, M2): a tree with the right number of EMPTY files, or with files missing, is refused
     lk = json.load(open(LOCK_FILE, encoding='utf-8'))
-    _, _, _, per_now = source_digest()
+    listing = source_listing()
+    mani = read_manifest()
+    per_now = {}
+    for r in listing:
+        per_now[r.split('/')[0]] = per_now.get(r.split('/')[0], 0) + 1
     cases.append(('the source lock needs 99% of the practice, term, outputs, docs and school files', all(lk['min_files'][r] >= int(per_now[r] * 0.98) for r in ('practice', 'term', 'outputs', 'docs', 'school')), {r: (lk['min_files'][r], per_now[r]) for r in ('practice', 'term', 'outputs', 'docs', 'school')}))
-    cases.append(('the source lock refuses a tree that lost 2% of the practice files', bool(lock_problems(dict(per_now, practice=int(per_now['practice'] * 0.98)))), ''))
+    cases.append(('the source lock holds byte minimums and a manifest of %d paths' % len(mani), bool(lk.get('min_bytes')) and len(mani) >= 0.98 * len(listing), len(mani)))
+    lost2 = {r: s_ for i, (r, s_) in enumerate(sorted(listing.items())) if not (r.startswith('practice/') and i % 50 == 0)}
+    cases.append(('the source lock refuses a tree that lost 2% of the practice files', any('practice' in p for p in lock_problems(lost2, mani)), lock_problems(lost2, mani)[:2]))
+    emptied = {r: (0 if (r.startswith('docs/books/') or r.endswith('.pdf') or r.endswith('lesson.py')) else s_) for r, s_ in listing.items()}
+    cases.append(('the source lock refuses a tree whose book text, PDFs and holiday lessons are EMPTY files (paths and counts kept)', bool(lock_problems(emptied, mani)), lock_problems(emptied, mani)[:2]))
+    third = {r: (0 if i % 3 == 0 else s_) for i, (r, s_) in enumerate(sorted(listing.items()))}
+    cases.append(('the source lock refuses a tree with a third of its files emptied (the 27%-of-the-bytes case of AUDIT_ROUND6)', bool(lock_problems(third, mani)), lock_problems(third, mani)[:2]))
+    gone = {r: s_ for r, s_ in listing.items() if not r.endswith('.pdf')}
+    cases.append(('the source lock refuses a tree with no PDFs (paths missing)', bool(lock_problems(gone, mani)), lock_problems(gone, mani)[:2]))
+    one_pdf = {r: s_ for r, s_ in listing.items() if r != sorted(r_ for r_ in listing if r_.endswith('.pdf'))[7]}
+    cases.append(('the source lock refuses a tree that lacks even one PDF of the manifest', any('key source files' in p for p in lock_problems(one_pdf, mani)), lock_problems(one_pdf, mani)[:2]))
     for must in ('practice/holiday/p6/06/lesson.py', 'split/p5l5', 'outputs/designed/Math_Inquirers_P5_Question_Bank.pdf'):
         cases.append(('the source lock requires %s' % must, must in lk['must_exist'], ''))
     for pid, sub in probes['retired_sub'].items():
@@ -1215,7 +1499,7 @@ def selftest():
         cases.append(('source list includes %s' % r, r in rels, ''))
     cases.append(('source list is the same on a second run (sorted, reproducible)', [os.path.relpath(f, ROOT) for f in source_files()] == [os.path.relpath(f, ROOT) for f in source_files()], ''))
     cases.append(('the source lock is satisfied on this tree', not lock_problems(), lock_problems()))
-    cases.append(('the source lock refuses a tracked-only tree (no docs, no private sources)', bool(lock_problems({'docs': 3, 'extension': 1})), ''))
+    cases.append(('the source lock refuses a tracked-only tree (no docs, no private sources)', bool(lock_problems({'website/x.md': 10, 'extension/a.md': 10}, mani)), ''))
     a1 = story_hits(probes['must_fail_text']['L3-nightbus'], sidx)
     a2 = story_hits(probes['must_fail_text']['L3-nightbus'], sidx)
     cases.append(('the same question gives the same verdict twice', a1 == a2, ''))
@@ -1234,8 +1518,10 @@ def selftest():
     import kinds
     import samples_r2
     import samples_r3
+    import samples_r4
     allsamples = dict(samples_r2.SAMPLES)
     allsamples.update(samples_r3.SAMPLES)
+    allsamples.update(samples_r4.SAMPLES)
     for k, plist in allsamples.items():
         for p in plist:
             try:
@@ -1248,9 +1534,30 @@ def selftest():
             if not good:
                 print('FAIL kind %s %s: solver %s checker %s' % (k, p, a, b))
                 bad.append('kind ' + k)
-    print('kinds checked: %d (round 2: %d, round 3: %d)' % (len(allsamples), len(samples_r2.SAMPLES), len(samples_r3.SAMPLES)))
+    print('kinds checked: %d (round 2: %d, round 3: %d, round 6: %d)' % (len(allsamples), len(samples_r2.SAMPLES), len(samples_r3.SAMPLES), len(samples_r4.SAMPLES)))
+    # round 6: the example puzzles of the new sub-structures: the solver, the independent checker and the written answer agree, and every new Level 5 sub-structure has examples
+    per_sub = {}
+    for sub, k, p, q, ans in samples_r4.EXAMPLES:
+        per_sub[sub] = per_sub.get(sub, 0) + 1
+        try:
+            a, _ = kinds.SOLVE[k](**p)
+            b = brute.BRUTE[k](**p)
+            want = Fr(ans) if re.fullmatch(r'[\d./]+', ans) else ans.lower()
+            got = {Fr(x) if not isinstance(x, str) else x.lower() for x in b}
+            good = got == {want} and (Fr(a) == want if not isinstance(a, str) else a.lower() == want) and sub in TAX.SUBS and k in TAX.SUBS[sub]['kinds']
+        except Exception as ex:
+            good, a, b = False, repr(ex), ''
+        if not good:
+            print('FAIL example %s %s: solver %s checker %s written %s' % (sub, k, a, b, ans))
+            bad.append('example ' + sub)
+    r6 = sorted(sid for sid, d in TAX.SUBS.items() if d.get('round') == 6)
+    l5new = [sid for sid in r6 if 5 in TAX.SUBS[sid]['levels']]
+    short = [sid for sid in r6 if per_sub.get(sid, 0) < 1]
+    print('round 6: %d new sub-structures (%d at Level 5), %d example puzzles; without an example: %s' % (len(r6), len(l5new), len(samples_r4.EXAMPLES), short))
+    if len([sid for sid in r6 if TAX.SUBS[sid]['levels'] == [5]]) < 4 or short:
+        bad.append('round 6 sub-structures')
     for d in TAX.SUBS.values():
-        if d.get('round') in (2, 3) and not any(k in allsamples for k in d['kinds']) and d['kinds'] != ['rect']:
+        if d.get('round') in (2, 3, 6) and not any(k in allsamples for k in d['kinds']) and d['kinds'] != ['rect']:
             print('FAIL no sample for', d['name'])
             bad.append(d['name'])
     print('selftest: %d problems' % len(bad))
@@ -1516,8 +1823,15 @@ def main():
         nfiles, nbytes / 1e6, digest[:24], ', '.join('%s %d' % kv for kv in sorted(per_root.items()))))
     months = [a for a in sys.argv[1:] if not a.startswith('--')] or man['released']
     banks = {}
-    for mm in man['released']:
-        banks[mm] = json.load(open(os.path.join(HERE, 'batches', 'm%s' % mm, 'bank.json'), encoding='utf-8'))
+    # round 6 (G1): a month named on the command line that is not released yet is a DRAFT; it is checked against every released month and the other drafts
+    drafts = [m for m in months if m not in man['released']]
+    order = list(man['released']) + sorted(set(drafts))
+    for mm in order:
+        path = os.path.join(HERE, 'batches', 'm%s' % mm, 'bank.json')
+        if not os.path.exists(path):
+            print('no bank for month %s: run build_bank.py %s first' % (mm, mm))
+            sys.exit(2)
+        banks[mm] = json.load(open(path, encoding='utf-8'))
     levels = sorted({int(lv) for b in banks.values() for lv in b['levels']})
     fails_all = 0
     global_fails = []
@@ -1548,16 +1862,16 @@ def main():
     R = TAX.RULES
     struct_lines = ['# Structure report (taxonomy.json)', '', SRC_LINE, '',
                     'Rules. Levels 3 to 6 (TEASER-STRICT): per level and calendar quarter at most %d puzzle per sub-structure and %d per family; the same sub-structure never within %d days of itself across a quarter boundary; '
-                    'an answer of 10 or more appears once per level and a single digit at most %d times. '
+                    'and (ANSWER-WINDOW, round 6) the same answer value never twice within %d days and never with the same sub-structure within %d days. '
                     'Levels 1 and 2 (L1L2-GAP60): the same sub-structure at least %d days apart (circular, 365- and 366-day year), a family at most %d times in any %d days and never on consecutive days, '
                     'an answer not repeated within %d days and a single-digit answer at most %d times in %d days. '
                     'All levels: no repeated frame, no two puzzles with most numbers or the same story in common; '
                     'the sub-structures used by the fixed puzzles on the level pages (%s) are never used by the bank.' % (
-                        R['max_per_sub_per_quarter'], R['max_per_family_per_quarter'], R['min_gap_days_across_quarters'], MAX_SMALL,
+                        R['max_per_sub_per_quarter'], R['max_per_family_per_quarter'], R['min_gap_days_across_quarters'], R['answer_window_l36_days'], R['answer_same_sub_days'],
                         R['min_gap_days']['1'], R['family_max_in_window'], R['family_window_days'], R['answer_window_days'], R['answer_small_max_in_window'], R['answer_window_days'],
                         ', '.join(sorted(TAX.FIXED.values()))), '']
     all_by_level = {lv: [] for lv in levels}
-    for mm in man['released']:
+    for mm in order:
         for lv, items in banks[mm]['levels'].items():
             for e in items:
                 all_by_level[int(lv)].append((mm, e))
@@ -1569,7 +1883,7 @@ def main():
     struct_lines += ['', '## Retired sub-structures (the frame is in our own books, so no level may use it)', ''] + ['- `%s`: %s' % kv for kv in ret]
     notyet = sorted(sid for sid, d in TAX.SUBS.items() if d['levels'] and d.get('round') == 3 and not any(e['sub'] == sid for items in all_by_level.values() for _, e in items))
     struct_lines += ['', 'Usable sub-structures of round 3 that no released puzzle uses yet (each has a solver, an independent checker, a sample and a citation; their stories are checked when a month uses them): %d.' % len(notyet)]
-    ans_lines, ans_warn = answer_feasibility(all_by_level)
+    ans_lines, ans_warn = answer_budget(all_by_level)
     struct_lines += ans_lines
     sidx = story_index()
     cwidx = cw_index(sidx)
@@ -1719,6 +2033,11 @@ def main():
                     for sev, detail in story_hits(e['q'], mini):
                         if sev == 'FAIL':
                             fails.append('%s: same story as the fixed website puzzle %s: %s' % (tag, k, detail))
+            # round 6 (G4): from January a month needs text answers at every level (3; 4 at Levels 5 and 6); November and December are exempt (released before the gate)
+            ntxt = sum(1 for e in items if e['type'] == 's')
+            need_txt = R['text_min_per_month'][str(lv)]
+            if mm not in R['text_gate_months_exempt'] and ntxt < need_txt:
+                fails.append('L%d: only %d text-answer puzzles in month %s, the gate from January is %d (TEXT_ANSWER_PLAN.md section 5)' % (lv, ntxt, mm, need_txt))
             stats[lv] = (len(items), len(kinds_ct), max(kinds_ct.values()), len(fam_ct), max(fam_ct.values()), len({e['sub'] for e in items}))
         lines.append('# Teaser batch m%s verification report' % mm)
         lines.append('')

@@ -755,3 +755,7 @@ SOLVE.update(_r2.SOLVE)
 
 import kinds_r3 as _r3   # noqa: E402  (fix round 3: solvers for the new sub-structures)
 SOLVE.update(_r3.SOLVE)
+
+
+import kinds_r4 as _r4   # noqa: E402  (fix round 6: five new Level 5 sub-structures and six text-answer asks)
+SOLVE.update(_r4.SOLVE)

@@ -1,24 +1,69 @@
 # Structure report (taxonomy.json)
 
-Sources searched (whole working tree, tracked or not): 6748 files, 1361.5 MB, sha256 abfbdf45c7897d835e62395c.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 373, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
+Sources searched (whole working tree, tracked or not): 6748 files, 1361.6 MB, sha256 f6519738a14b47891f6d10bf.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 373, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
 
-Rules. Levels 3 to 6 (TEASER-STRICT): per level and calendar quarter at most 1 puzzle per sub-structure and 3 per family; the same sub-structure never within 30 days of itself across a quarter boundary; an answer of 10 or more appears once per level and a single digit at most 4 times. Levels 1 and 2 (L1L2-GAP60): the same sub-structure at least 60 days apart (circular, 365- and 366-day year), a family at most 3 times in any 60 days and never on consecutive days, an answer not repeated within 60 days and a single-digit answer at most 2 times in 60 days. All levels: no repeated frame, no two puzzles with most numbers or the same story in common; the sub-structures used by the fixed puzzles on the level pages (counting_choices.digit_cards_arrangements, fractions.fraction_of_remainder, multiples.common_multiple, remainders.two_conditions, sequence.count_on, sequence.which_term) are never used by the bank.
+Rules. Levels 3 to 6 (TEASER-STRICT): per level and calendar quarter at most 1 puzzle per sub-structure and 3 per family; the same sub-structure never within 30 days of itself across a quarter boundary; and (ANSWER-WINDOW, round 6) the same answer value never twice within 60 days and never with the same sub-structure within 92 days. Levels 1 and 2 (L1L2-GAP60): the same sub-structure at least 60 days apart (circular, 365- and 366-day year), a family at most 3 times in any 60 days and never on consecutive days, an answer not repeated within 60 days and a single-digit answer at most 2 times in 60 days. All levels: no repeated frame, no two puzzles with most numbers or the same story in common; the sub-structures used by the fixed puzzles on the level pages (counting_choices.digit_cards_arrangements, fractions.fraction_of_remainder, multiples.common_multiple, remainders.two_conditions, sequence.count_on, sequence.which_term) are never used by the bank.
 
-- Level 1 (gap rule, 60 days): 61 puzzles, 61 distinct sub-structures (none twice within the gap), 36 families, most in one family 3
+- Level 1 (gap rule, 60 days): 61 puzzles, 61 distinct sub-structures (none twice within the gap), 35 families, most in one family 3
 - Level 2 (gap rule, 60 days): 61 puzzles, 61 distinct sub-structures (none twice within the gap), 44 families, most in one family 3
 - Level 3, quarter 4: 61 puzzles, 61 distinct sub-structures, 39 families, most in one family 3
-- Level 4, quarter 4: 61 puzzles, 61 distinct sub-structures, 37 families, most in one family 3
-- Level 5, quarter 4: 61 puzzles, 61 distinct sub-structures, 39 families, most in one family 3
-- Level 6, quarter 4: 61 puzzles, 61 distinct sub-structures, 35 families, most in one family 3
-- REVIEW L1-twodice (L1) and L5-spinners8 (L5): 5 shared four-word runs (e.g. "different ways can this"), same sub-structure
+- Level 4, quarter 4: 61 puzzles, 61 distinct sub-structures, 38 families, most in one family 4
+- Level 5, quarter 4: 61 puzzles, 61 distinct sub-structures, 38 families, most in one family 4
+- Level 6, quarter 4: 61 puzzles, 61 distinct sub-structures, 34 families, most in one family 3
 - REVIEW L1-shortestkid (L1) and L4-fivechildren (L4): 5 shared four-word runs (e.g. "@ @ is taller"), same sub-structure
 - REVIEW L1-shortestkid (L1) and L6-secondtallest (L6): 5 shared four-word runs (e.g. "@ @ is taller"), same sub-structure
-- REVIEW L2-deliveryrobot (L2) and L5-lilypads (L5): 5 shared four-word runs (e.g. "any order to reach"), same sub-structure
-- REVIEW L2-racesecond (L2) and L3-race (L3): 5 shared four-word runs (e.g. "@ @ is faster"), same sub-structure
-- REVIEW L3-harbourcruise (L3) and L6-ferrytrip24 (L6): 5 shared four-word runs (e.g. "as four digits like"), same sub-structure
-- REVIEW L4-sunflower (L4) and L6-savingsbox (L6): 5 shared four-word runs (e.g. "a line graph shows"), same sub-structure
-- REVIEW L4-brushoffer (L4) and L5-badgeshops (L5): 5 shared four-word runs (e.g. "# a pack shop"), same sub-structure
 - REVIEW L4-fivechildren (L4) and L6-secondtallest (L6): 5 shared four-word runs (e.g. "@ @ is taller"), same sub-structure
+- Frame rule (function-word skeleton, same sub-structure at two levels): 50 pairs at 0.80 or more reviewed, 0 of them accepted in the ledger
+- REVIEW frame L1-rpsgames (L1) and L5-busroutes5 (L5): sentence frame 0.80 alike, counting_pairs.handshakes
+- REVIEW frame L1-noodleset (L1) and L4-sundaes (L4): sentence frame 0.86 alike, counting_choices.combinations
+- REVIEW frame L1-campdays (L1) and L3-funrun (L3): sentence frame 0.80 alike, calendar.weeks_and_days
+- REVIEW frame L1-bibscores (L1) and L3-cardsorder (L3): sentence frame 0.82 alike, sorting.order_by_digit_rule
+- REVIEW frame L1-ants (L1) and L5-culture (L5): sentence frame 0.80 alike, growing_pattern.doubling
+- REVIEW frame L1-rulerbill (L1) and L2-barleycafe (L2): sentence frame 0.83 alike, money.shopping
+- REVIEW frame L1-rulerbill (L1) and L3-kuih (L3): sentence frame 0.83 alike, money.shopping
+- REVIEW frame L1-lockerdigits (L1) and L3-albumpages (L3): sentence frame 0.88 alike, place_value.digits_written
+- REVIEW frame L1-flagline (L1) and L2-scarf (L2): sentence frame 0.81 alike, repeating_pattern.cycle
+- REVIEW frame L1-marblesmore (L1) and L4-dollarshare (L4): sentence frame 0.82 alike, word_problems.compare_amounts
+- REVIEW frame L1-stickersheets (L1) and L4-gluesticks (L4): sentence frame 0.89 alike, money.offers
+- REVIEW frame L1-stickersheets (L1) and L5-nametagpacks (L5): sentence frame 0.80 alike, money.offers
+- REVIEW frame L1-paperchain (L1) and L2-hosepieces (L2): sentence frame 0.80 alike, measurement.overlapping_chain
+- REVIEW frame L1-paperchain (L1) and L4-bannerstrips (L4): sentence frame 0.80 alike, measurement.overlapping_chain
+- REVIEW frame L1-circlekids (L1) and L3-carousel (L3): sentence frame 0.80 alike, spatial.circle_opposite
+- REVIEW frame L1-whichsun (L1) and L6-lettersums (L6): sentence frame 0.83 alike, symbols.symbol_equations
+- REVIEW frame L1-streetwalk (L1) and L2-beetle (L2): sentence frame 0.84 alike, spatial.net_displacement
+- REVIEW frame L1-fruitmatch (L1) and L5-subjects (L5): sentence frame 0.86 alike, logic_match.match_people_things
+- REVIEW frame L2-lunchsets (L2) and L5-cafemenu (L5): sentence frame 0.86 alike, counting_choices.combinations
+- REVIEW frame L2-swaphana (L2) and L6-bigswap (L6): sentence frame 0.89 alike, place_value.swap_digits
+- REVIEW frame L2-ttgames (L2) and L3-handshake8 (L3): sentence frame 0.83 alike, counting_pairs.handshakes
+- REVIEW frame L2-ttgames (L2) and L5-busroutes5 (L5): sentence frame 0.80 alike, counting_pairs.handshakes
+- REVIEW frame L2-flourgrams (L2) and L5-ropecm (L5): sentence frame 0.83 alike, measurement.unit_convert
+- REVIEW frame L2-toyboxshape (L2) and L3-cuboidclue (L3): sentence frame 0.87 alike, shapes.name_the_shape
+- REVIEW frame L2-busroutes (L2) and L3-mapshort (L3): sentence frame 0.86 alike, networks.shortest_route
+- REVIEW frame L2-tinstack (L2) and L5-stairs60 (L5): sentence frame 0.83 alike, series_sum.add_in_pairs
+- REVIEW frame L2-libraryhalves (L2) and L4-mooncakes (L4): sentence frame 0.89 alike, bar_model.sum_difference
+- REVIEW frame L2-twonumbers (L2) and L3-pairproduct (L3): sentence frame 0.88 alike, guess_check.sum_product
+- REVIEW frame L2-barleycafe (L2) and L4-books (L4): sentence frame 0.83 alike, money.shopping
+- REVIEW frame L2-clubmatch (L2) and L3-bandmatch (L3): sentence frame 0.83 alike, logic_match.match_people_things
+- REVIEW frame L2-gardenfence (L2) and L3-posterribbon (L3): sentence frame 0.82 alike, perimeter_area.perimeter_basic
+- REVIEW frame L2-sortrule2 (L2) and L3-cardkeep (L3): sentence frame 0.83 alike, sorting.rule_count
+- REVIEW frame L3-sticksdisplay (L3) and L5-pricedisplay (L5): sentence frame 0.87 alike, digit_display.segments
+- REVIEW frame L3-eggtrays (L3) and L5-mangoes (L5): sentence frame 0.80 alike, backwards.undo_steps
+- REVIEW frame L3-kuih (L3) and L4-books (L4): sentence frame 0.83 alike, money.shopping
+- REVIEW frame L3-lanes5 (L3) and L5-committee (L5): sentence frame 0.84 alike, counting_choices.orders
+- REVIEW frame L3-bandmatch (L3) and L5-subjects (L5): sentence frame 0.80 alike, logic_match.match_people_things
+- REVIEW frame L3-floortiles2 (L3) and L4-muralwall (L4): sentence frame 0.83 alike, perimeter_area.area_rectangle
+- REVIEW frame L3-fishmass (L3) and L4-trailmetres (L4): sentence frame 0.88 alike, measurement.unit_convert
+- REVIEW frame L3-longride (L3) and L4-vanroute (L4): sentence frame 0.80 alike, measurement.compound_units
+- REVIEW frame L3-mapshort (L3) and L5-routeplan (L5): sentence frame 0.86 alike, networks.shortest_route
+- REVIEW frame L3-mealset (L3) and L5-cafemenu (L5): sentence frame 0.86 alike, counting_choices.combinations
+- REVIEW frame L4-schoolwalk (L4) and L6-islandroutes (L6): sentence frame 0.88 alike, networks.first_stop
+- REVIEW frame L4-secretspread (L4) and L6-jarcoins (L6): sentence frame 0.82 alike, growing_pattern.doubling
+- REVIEW frame L4-gainingclock (L4) and L5-fastwatch (L5): sentence frame 0.80 alike, clock_reading.faulty_clock
+- REVIEW frame L4-heightline (L4) and L6-parcelbelt (L6): sentence frame 0.88 alike, sorting.fewest_swaps
+- REVIEW frame L4-hobbies (L4) and L5-subjects (L5): sentence frame 0.88 alike, logic_match.match_people_things
+- REVIEW frame L4-sundaes (L4) and L5-cafemenu (L5): sentence frame 0.86 alike, counting_choices.combinations
+- REVIEW frame L4-stallbows (L4) and L5-busroutes5 (L5): sentence frame 0.83 alike, counting_pairs.handshakes
+- REVIEW frame L5-bakeryprices (L5) and L6-lettersums (L6): sentence frame 0.80 alike, symbols.symbol_equations
 
 ## Capacity of the taxonomy (true numbers, after merging look-alike sub-structures)
 
@@ -27,12 +72,12 @@ Levels 3 to 6 (quarter rule): one use per sub-structure and at most 3 per family
 
 | Level | Sub-structures | Families | Rule | Uses per sub a year | Needed | Slack | True capacity (family-capped) | Verdict |
 |---|---|---|---|---|---|---|---|---|
-| 1 | 71 | 41 | gap 60 days | 6 | 61 | 10 | 414 a year | ok |
-| 2 | 87 | 46 | gap 60 days | 6 | 61 | 26 | 492 a year | ok |
-| 3 | 108 | 50 | once a quarter | 1 per quarter | 92 | 6 | 98 per quarter | ok |
-| 4 | 106 | 54 | once a quarter | 1 per quarter | 92 | 5 | 97 per quarter | ok |
-| 5 | 102 | 56 | once a quarter | 1 per quarter | 92 | 2 | 94 per quarter | ok |
-| 6 | 104 | 58 | once a quarter | 1 per quarter | 92 | 7 | 99 per quarter | ok |
+| 1 | 73 | 41 | gap 60 days | 6 | 61 | 12 | 420 a year | ok |
+| 2 | 91 | 46 | gap 60 days | 6 | 61 | 30 | 510 a year | ok |
+| 3 | 114 | 50 | once a quarter | 1 per quarter | 92 | 9 | 101 per quarter | ok |
+| 4 | 112 | 54 | once a quarter | 1 per quarter | 92 | 8 | 100 per quarter | ok |
+| 5 | 113 | 56 | once a quarter | 1 per quarter | 92 | 10 | 102 per quarter | ok |
+| 6 | 108 | 58 | once a quarter | 1 per quarter | 92 | 11 | 103 per quarter | ok |
 
 ## Retired sub-structures (the frame is in our own books, so no level may use it)
 
@@ -77,14 +122,18 @@ Levels 3 to 6 (quarter rule): one use per sub-structure and at most 3 per family
 
 Usable sub-structures of round 3 that no released puzzle uses yet (each has a solver, an independent checker, a sample and a citation; their stories are checked when a month uses them): 0.
 
-## Full-year answer rule at Levels 3 to 6 (feasibility)
+## Answer budget (ANSWER-WINDOW, replaces the full-year answer rule of rounds 3 to 5)
 
-| Level | Puzzles so far | Single-digit answers so far | Share | Projected single-digit answers in 365 | Allowed (9 values x 4) | Verdict |
-|---|---|---|---|---|---|---|
-| 3 | 61 | 7 | 11% | 42 | 36 | WARNING: aim for fewer single-digit answers |
-| 4 | 61 | 6 | 10% | 36 | 36 | ok |
-| 5 | 61 | 3 | 5% | 18 | 36 | ok |
-| 6 | 61 | 4 | 7% | 24 | 36 | ok |
+Levels 3 to 6: the same answer value never twice within 60 days (and never with the same sub-structure within 92 days). A 60-day window can hold at most 9 different single-digit answers and 90 different two-digit answers; every other answer (100 or more, a fraction, a decimal, a word) is limited only by the window. Levels 1 and 2: a single digit at most twice in 60 days (18), any other answer once.
+
+| Level | Puzzles | Single digit | 10 to 99 | 100 or more | Fraction, decimal | Text | Peak single digits in 60 days (limit) | Peak 10 to 99 in 60 days (limit 90) |
+|---|---|---|---|---|---|---|---|---|
+| 1 | 61 | 11 | 43 | 0 | 0 | 7 | 11 (18) | 42 |
+| 2 | 61 | 11 | 34 | 9 | 1 | 6 | 11 (18) | 33 |
+| 3 | 61 | 8 | 27 | 18 | 4 | 4 | 8 (9) | 27 |
+| 4 | 61 | 6 | 25 | 19 | 5 | 6 | 6 (9) | 25 |
+| 5 | 61 | 1 | 30 | 21 | 5 | 4 | 1 (9) | 30 |
+| 6 | 61 | 3 | 36 | 12 | 6 | 4 | 3 (9) | 36 |
 
 ## Text answers per level (TEXT_ANSWER_PLAN.md)
 
@@ -92,22 +141,116 @@ Target: about 3 or 4 text-answer puzzles a month at every level, so that a year 
 
 | Level | Puzzles so far | Text-answer puzzles | Per 30 days | Projected in 365 | Target | Verdict |
 |---|---|---|---|---|---|---|
-| 1 | 61 | 6 | 3.0 | 36 | 40 | WARNING: below the plan |
-| 2 | 61 | 5 | 2.5 | 30 | 40 | WARNING: below the plan |
+| 1 | 61 | 7 | 3.4 | 42 | 40 | ok |
+| 2 | 61 | 6 | 3.0 | 36 | 40 | WARNING: below the plan |
 | 3 | 61 | 4 | 2.0 | 24 | 40 | WARNING: below the plan |
-| 4 | 61 | 4 | 2.0 | 24 | 40 | WARNING: below the plan |
-| 5 | 61 | 3 | 1.5 | 18 | 40 | WARNING: below the plan |
-| 6 | 61 | 3 | 1.5 | 18 | 40 | WARNING: below the plan |
+| 4 | 61 | 6 | 3.0 | 36 | 40 | WARNING: below the plan |
+| 5 | 61 | 4 | 2.0 | 24 | 40 | WARNING: below the plan |
+| 6 | 61 | 4 | 2.0 | 24 | 40 | WARNING: below the plan |
 
-Structure FAIL count (all released months): 0
+Structure FAIL count (all released months): 96
+- FAIL L1: answer 11 repeats within 60 days (L1-swimturn and L1-busminute)
+- FAIL L1: answer 24 repeats within 60 days (L1-ribbonpieces and L1-queuebus)
+- FAIL L1: answer 14 repeats within 60 days (L1-noticeboard and L1-threefifty)
+- FAIL L1: answer 39 repeats within 60 days (L1-lockerdigits and L1-tenwords)
+- FAIL L1: L1-ribbonpieces and L1-cardtriple share the numbers ['12', '18', '7']
+- FAIL L1: L1-ribbonpieces and L1-bibscores share the numbers ['12', '26', '7']
+- FAIL L1: L1-ribbonpieces and L1-oddbig share the numbers ['12', '26', '31']
+- FAIL L2: answer 21 repeats within 60 days (L2-ticketstrips and L2-cyclerace)
+- FAIL L3: answer 16 repeats within 60 days (L3-petvotes and L3-carousel, 21 days apart; ANSWER-WINDOW)
+- FAIL L3: answer 8 repeats within 60 days (L3-magic and L3-raffledigits, 20 days apart; ANSWER-WINDOW)
+- FAIL L3: answer 8 repeats within 60 days (L3-magic and L3-barpieces, 42 days apart; ANSWER-WINDOW)
+- FAIL L3: answer 8 repeats within 60 days (L3-raffledigits and L3-barpieces, 22 days apart; ANSWER-WINDOW)
+- FAIL L3: answer 9 repeats within 60 days (L3-missednumber and L3-cryptsum, 53 days apart; ANSWER-WINDOW)
+- FAIL L4 quarter 4: family measurement used 4 times (cap 3): L4-parcelweights, L4-vanroute, L4-bannerstrips, L4-trailmetres
+- FAIL L4: answer 10 repeats within 60 days (L4-symmetry and L4-spellingbee, 35 days apart; ANSWER-WINDOW)
+- FAIL L4: answer 12 repeats within 60 days (L4-sunflower and L4-liftfloors, 15 days apart; ANSWER-WINDOW)
+- FAIL L4: answer 210 repeats within 60 days (L4-photoline and L4-grandchildren, 39 days apart; ANSWER-WINDOW)
+- FAIL L4: answer 4 repeats within 60 days (L4-fakecoin and L4-reachtotal, 18 days apart; ANSWER-WINDOW)
+- FAIL L4: L4-longestwalk and L4-schoolwalk share the numbers ['3', '4', '5', '6', '9']
+- FAIL L5 quarter 4: family fractions used 4 times (cap 3): L5-henstock, L5-moneyleft, L5-bottleshare, L5-cakeshare
+- FAIL L5: answer 16 repeats within 60 days (L5-codelock and L5-rectsides, 7 days apart; ANSWER-WINDOW)
+- FAIL L5: answer 18 repeats within 60 days (L5-pumpjob and L5-pondlevel, 48 days apart; ANSWER-WINDOW)
+- FAIL L5: answer 34 repeats within 60 days (L5-dronepaths and L5-routeplan, 17 days apart; ANSWER-WINDOW)
+- FAIL L5: answer 62 repeats within 60 days (L5-rhombuscut and L5-mangoes, 1 days apart; ANSWER-WINDOW)
+- FAIL L6 quarter 4: sub-structure group:ratio_after_a_change used 2 times: L6-beadratio, L6-stickerratio
+- FAIL L6: answer 11 repeats within 60 days (L6-bannerheight and L6-parcelbelt, 5 days apart; ANSWER-WINDOW)
+- FAIL L6: answer 30 repeats within 60 days (L6-beadratio and L6-intsum, 38 days apart; ANSWER-WINDOW)
+- FAIL L6: answer 5 repeats within 60 days (L6-clockafter and L6-goldbach, 53 days apart; ANSWER-WINDOW)
+- FAIL L6: answer 96 repeats within 60 days (L6-helmetsale and L6-upthendown, 7 days apart; ANSWER-WINDOW)
+- FAIL L6: L6-sweettin and L6-islandroutes share the numbers ['4', '5', '6', '9']
+- FAIL L1: L1-lockerdigits and L1-stonehops share the 7-word run "numbered 1 2 3 and so on"
+- FAIL L1-busminute (L1) and L6-parcelbelt (L6): same answer 11 and shared numbers ['20', '35'] at two levels
+- FAIL L1-bibscores (L1) and L5-ladybirdgrid (L5): same answer 26 and shared numbers ['3', '5'] at two levels
+- FAIL L1-twobags (L1) and L4-liftfloors (L4): same answer 12 and shared numbers ['5', '24'] at two levels
+- FAIL L3-mapshort (L3) and L4-schoolwalk (L4): the same story skeleton at two levels (shared words home,library,park,school,shortest)
+- FAIL L3-mapshort (L3) and L4-schoolwalk (L4): the same sentence frame at two levels (9 shared four-word runs, e.g. "# library to park")
+- FAIL L1-rpsgames (L1) and L2-ttgames (L2): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L1-secret63 (L1) and L2-blocknumber (L2): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L1-noodleset (L1) and L2-lunchsets (L2): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L1-noodleset (L1) and L3-mealset (L3): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L1-noodleset (L1) and L5-cafemenu (L5): the same sentence frame at two levels (function-word skeleton 0.95; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L1-ribbonpieces (L1) and L5-shoptakings (L5): the same sentence frame at two levels (function-word skeleton 0.92; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L1-threefifty (L1) and L4-page5 (L4): the same sentence frame at two levels (function-word skeleton 0.90; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L1-matchhouse (L1) and L3-sticksdisplay (L3): the same sentence frame at two levels (function-word skeleton 0.96; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L1-matchhouse (L1) and L5-pricedisplay (L5): the same sentence frame at two levels (function-word skeleton 0.92; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L1-rulerbill (L1) and L4-books (L4): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L1-twodice (L1) and L5-codelock (L5): the same sentence frame at two levels (function-word skeleton 0.92; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L1-lampbench (L1) and L4-postoffice (L4): the same sentence frame at two levels (function-word skeleton 0.94; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L1-marblesmore (L1) and L5-stampgive (L5): the same sentence frame at two levels (function-word skeleton 0.95; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L1-hiddensum (L1) and L2-inkblot (L2): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L1-eggtrays (L1) and L2-pencilboxes (L2): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L1-fruitmatch (L1) and L2-clubmatch (L2): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L1-fruitmatch (L1) and L3-bandmatch (L3): the same sentence frame at two levels (function-word skeleton 0.91; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L1-fruitmatch (L1) and L4-hobbies (L4): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L1-fruitmatch (L1) and L6-sixclubs (L6): the same sentence frame at two levels (function-word skeleton 0.91; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L1-oddbig (L1) and L2-sortrule2 (L2): the same sentence frame at two levels (function-word skeleton 0.97; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L1-shortestkid (L1) and L4-fivechildren (L4): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L1-shortestkid (L1) and L5-queue5 (L5): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L2-lunchsets (L2) and L3-mealset (L3): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L2-lunchsets (L2) and L4-sundaes (L4): the same sentence frame at two levels (function-word skeleton 0.92; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L2-threesavers (L2) and L3-shells3 (L3): the same sentence frame at two levels (function-word skeleton 0.92; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L2-deliveryrobot (L2) and L5-ladybirdgrid (L5): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L2-hosepieces (L2) and L4-bannerstrips (L4): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L2-busroutes (L2) and L5-routeplan (L5): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L2-bookcase (L2) and L3-bakery (L3): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L2-barleycafe (L2) and L3-kuih (L3): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L2-clubmatch (L2) and L4-hobbies (L4): the same sentence frame at two levels (function-word skeleton 0.92; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L2-clubmatch (L2) and L5-subjects (L5): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L2-clubmatch (L2) and L6-sixclubs (L6): the same sentence frame at two levels (function-word skeleton 0.96; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L2-gardenfence (L2) and L4-gate (L4): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L2-notebooks (L2) and L3-cupoffer (L3): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L2-notebooks (L2) and L4-gluesticks (L4): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L2-notebooks (L2) and L5-nametagpacks (L5): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L2-beetle (L2) and L5-dronepaths (L5): the same sentence frame at two levels (function-word skeleton 0.92; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L3-missednumber (L3) and L5-lostnumber (L5): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L3-houses (L3) and L4-evens4 (L4): the same sentence frame at two levels (function-word skeleton 0.92; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L3-houses (L3) and L5-sixpages (L5): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L3-raffledays (L3) and L4-visitortable (L4): the same sentence frame at two levels (function-word skeleton 0.90; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L3-bandmatch (L3) and L4-hobbies (L4): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L3-bandmatch (L3) and L6-sixclubs (L6): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L3-mat168 (L3) and L4-noticeboard (L4): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L3-cupoffer (L3) and L4-gluesticks (L4): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L3-cupoffer (L3) and L5-nametagpacks (L5): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L3-cryptsum (L3) and L4-cryptA (L4): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L3-mealset (L3) and L4-sundaes (L4): the same sentence frame at two levels (function-word skeleton 0.95; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L4-attendance (L4) and L5-town (L5): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L4-attendance (L4) and L6-parkvisitors (L6): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L4-piechart (L4) and L5-busline (L5): the same sentence frame at two levels (function-word skeleton 0.94; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L4-evens4 (L4) and L6-step3 (L6): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L4-gluesticks (L4) and L5-nametagpacks (L5): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L4-hobbies (L4) and L6-sixclubs (L6): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L4-fivechildren (L4) and L5-queue5 (L5): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L4-stamps4 (L4) and L5-henstock (L5): the same sentence frame at two levels (function-word skeleton 0.93; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L5-orangeprofit (L5) and L6-tvprofit (L6): the same sentence frame at two levels (function-word skeleton 0.90; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L5-subjects (L5) and L6-sixclubs (L6): the same sentence frame at two levels (function-word skeleton 1.00; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
+- FAIL L5-pondlevel (L5) and L6-coffeecups (L6): the same sentence frame at two levels (function-word skeleton 0.93; 0.90 is a FAIL unless the pair is in frame_ledger.json with a reason)
 
 Capacity verdict for the full year (a plan for January to October, not a defect of the released months): 0 CAPACITY FAIL
-- WARNING Level 3: 11% single-digit answers so far, a year would need about 42 (limit 36)
-- WARNING Level 1: 6 text-answer puzzles in 61 (about 36 a year; the plan wants 40 or more: see TEXT_ANSWER_PLAN.md)
-- WARNING Level 2: 5 text-answer puzzles in 61 (about 30 a year; the plan wants 40 or more: see TEXT_ANSWER_PLAN.md)
+- WARNING Level 2: 6 text-answer puzzles in 61 (about 36 a year; the plan wants 40 or more: see TEXT_ANSWER_PLAN.md)
 - WARNING Level 3: 4 text-answer puzzles in 61 (about 24 a year; the plan wants 40 or more: see TEXT_ANSWER_PLAN.md)
-- WARNING Level 4: 4 text-answer puzzles in 61 (about 24 a year; the plan wants 40 or more: see TEXT_ANSWER_PLAN.md)
-- WARNING Level 5: 3 text-answer puzzles in 61 (about 18 a year; the plan wants 40 or more: see TEXT_ANSWER_PLAN.md)
-- WARNING Level 6: 3 text-answer puzzles in 61 (about 18 a year; the plan wants 40 or more: see TEXT_ANSWER_PLAN.md)
+- WARNING Level 4: 6 text-answer puzzles in 61 (about 36 a year; the plan wants 40 or more: see TEXT_ANSWER_PLAN.md)
+- WARNING Level 5: 4 text-answer puzzles in 61 (about 24 a year; the plan wants 40 or more: see TEXT_ANSWER_PLAN.md)
+- WARNING Level 6: 4 text-answer puzzles in 61 (about 24 a year; the plan wants 40 or more: see TEXT_ANSWER_PLAN.md)
 
 Skeleton matches with our own sources that were reviewed by hand (same masked wording, but no shared numbers): 0

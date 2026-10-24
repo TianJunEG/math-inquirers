@@ -42,51 +42,51 @@
     "date": "11-01"
    },
    {
-    "id": "L1-racerun",
+    "id": "L1-swimturn",
     "level": 1,
-    "frame": "racerun",
+    "frame": "swimturn",
     "kind": "pass_places",
     "topic": "Race places",
     "sub": "counting_line.race_places",
     "family": "counting_line",
     "p": {
-     "start": 19,
+     "start": 20,
      "moves": [
-      [
-       "pass",
-       5
-      ],
       [
        "passed",
        2
+      ],
+      [
+       "pass",
+       4
       ]
      ],
-     "total": 30,
+     "total": 26,
      "ask": "place"
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "16",
-    "shown": "16",
+    "ans": "18",
+    "shown": "18",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
+     "19",
      "17",
-     "15",
-     "18",
-     "14",
-     "32",
+     "20",
+     "16",
+     "36",
+     "9",
+     "28",
      "8",
-     "26",
-     "6",
-     "160"
+     "180"
     ],
-    "q": "Mei starts a school race in 19th place. There are 30 runners. She passes 5 runners. Then 2 runners pass her. What place is Mei in now? Write the number only.",
-    "hint": "Passing runners moves Mei forward in the order. Being passed moves her back. Do the two steps one at a time.",
-    "why": "Passing 5 runners moves Mei forward: 19 − 5 = 14. Then 2 runners pass her, so she moves back: 14 + 2 = 16.",
+    "q": "26 children swim in a race. At the turn, Rui is in 20th place. In the second half, 2 swimmers overtake him, and then he overtakes 4 swimmers. What place is Rui in at the finish?",
+    "hint": "Each swimmer who overtakes Rui moves him back one place. Each swimmer he overtakes moves him forward one place. Work one step at a time.",
+    "why": "2 swimmers overtake him, so he moves back: 20 + 2 = 22. Then he overtakes 4 swimmers: 22 − 4 = 18.",
     "date": "11-02"
    },
    {
@@ -227,37 +227,37 @@
     "date": "11-05"
    },
    {
-    "id": "L1-kiteheights",
+    "id": "L1-ribbonpieces",
     "level": 1,
-    "frame": "kiteheights",
+    "frame": "ribbonpieces",
     "kind": "stats",
     "topic": "Biggest and smallest",
     "sub": "graphs.most_least_gap",
     "family": "graphs",
     "p": {
      "data": [
-      16,
-      42,
-      25,
-      33,
-      11
+      19,
+      7,
+      27,
+      38,
+      14
      ],
      "ask": "range"
     },
     "t": {
-     "mx": 42,
-     "mn": 11
+     "mx": 38,
+     "mn": 7
     },
     "fmt": "int",
     "type": "n",
     "ans": "31",
-    "shown": "31 m",
+    "shown": "31 cm",
     "units": [
-     "m",
-     "metre",
-     "metres",
-     "meter",
-     "meters"
+     "cm",
+     "centimetre",
+     "centimetres",
+     "centimeter",
+     "centimeters"
     ],
     "prefix": [],
     "accept": [],
@@ -272,9 +272,9 @@
      "21",
      "310"
     ],
-    "q": "Five kites fly over a field. Their heights are 16 m, 42 m, 25 m, 33 m and 11 m. How much higher is the highest kite than the lowest kite?",
-    "hint": "Find the highest kite and the lowest kite first.",
-    "why": "The highest kite is 42 m and the lowest is 11 m. 42 − 11 = 31 m.",
+    "q": "A tailor has five pieces of ribbon, and their lengths are 19 cm, 7 cm, 27 cm, 38 cm and 14 cm. What is the difference in length between the longest piece and the shortest piece?",
+    "hint": "Find the longest piece and the shortest piece first.",
+    "why": "The longest piece is 38 cm and the shortest is 7 cm. 38 − 7 = 31 cm.",
     "date": "11-06"
    },
    {
@@ -399,44 +399,43 @@
     "date": "11-09"
    },
    {
-    "id": "L1-kitchenfloor",
+    "id": "L1-noticeboard",
     "level": 1,
-    "frame": "kitchenfloor",
+    "frame": "noticeboard",
     "kind": "checkerboard",
     "topic": "Patterns",
     "sub": "arrays.checkerboard",
     "family": "arrays",
     "p": {
      "rows": 5,
-     "cols": 7,
+     "cols": 9,
      "ask": "dark"
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "18",
-    "shown": "18 tiles",
+    "ans": "23",
+    "shown": "23 cards",
     "units": [
-     "tiles",
-     "tile"
+     "cards",
+     "card"
     ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "19",
-     "17",
-     "20",
-     "16",
-     "36",
-     "9",
-     "28",
-     "8",
-     "180"
+     "24",
+     "22",
+     "25",
+     "21",
+     "46",
+     "33",
+     "13",
+     "230"
     ],
-    "q": "A kitchen floor has 5 rows of 7 square tiles. The tiles are orange and cream, and no two tiles that share a side have the same colour. The tile in the top left corner is orange. How many orange tiles are on the floor?",
-    "hint": "Count all the tiles first. Orange and cream tiles alternate.",
-    "why": "There are 5 × 7 = 35 tiles. The orange and cream tiles alternate and the corner tile is orange, so there is one more orange tile than cream tiles. 35 + 1 = 36, and 36 ÷ 2 = 18 tiles.",
+    "q": "Hana covers a noticeboard with 5 rows of 9 square cards. Each card has a different colour from the cards that touch its sides. The first card in the top row is red, and the other colour is blue. How many red cards are on the board?",
+    "hint": "Count all the cards first. Then think about how red and blue take turns.",
+    "why": "There are 5 × 9 = 45 cards. Red and blue take turns and the first card is red, so there is one more red card than blue cards. 45 + 1 = 46, and 46 ÷ 2 = 23 cards.",
     "date": "11-10"
    },
    {
@@ -1523,9 +1522,9 @@
     "date": "11-05"
    },
    {
-    "id": "L2-lockernumber",
+    "id": "L2-blocknumber",
     "level": 2,
-    "frame": "lockernumber",
+    "frame": "blocknumber",
     "kind": "scan",
     "topic": "Digit clues",
     "sub": "digit_puzzles.digit_clues",
@@ -1535,23 +1534,20 @@
      "hi": 999,
      "preds": [
       [
-       "digit_sum",
-       13
-      ],
-      [
-       "digit_eq",
-       [
-        1,
-        5
-       ]
-      ],
-      [
-       "digit_plus",
+       "digit_times",
        [
         0,
         2,
         2
        ]
+      ],
+      [
+       "digit_sum",
+       12
+      ],
+      [
+       "contains",
+       3
       ]
      ],
      "ask": "only"
@@ -1559,25 +1555,25 @@
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "553",
-    "shown": "553",
+    "ans": "633",
+    "shown": "633",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "554",
-     "552",
-     "555",
-     "551",
-     "1106",
-     "563",
-     "543",
-     "5530"
+     "634",
+     "632",
+     "635",
+     "631",
+     "1266",
+     "643",
+     "623",
+     "6330"
     ],
-    "q": "A locker has a 3-digit number. The three digits make a total of 13. The middle digit is 5. The first digit is 2 bigger than the last digit. What is the locker number?",
-    "hint": "The middle digit is 5. How much do the two outer digits add up to?",
-    "why": "The two outer digits must add up to 13 − 5 = 8. The first digit is 2 bigger than the last digit, and 5 + 3 = 8 fits: the last digit is 3 and the first digit is 5. The number is 553.",
+    "q": "Grandma lives in a block with a 3-digit number. The first digit is double the last digit. The three digits add up to 12. One of the digits is a 3. What is the block number?",
+    "hint": "The first digit is double the last digit. Try the last digits one at a time, and check the total.",
+    "why": "The first digit is double the last digit and the digits add up to 12, so the number is 291, 462, 633 or 804. Only 633 has a digit 3 in it. The block number is 633.",
     "date": "11-06"
    },
    {
@@ -1781,17 +1777,17 @@
     "date": "11-11"
    },
    {
-    "id": "L2-hallseats",
+    "id": "L2-ferrybenches",
     "level": 2,
-    "frame": "hallseats",
+    "frame": "ferrybenches",
     "kind": "seat_number",
     "topic": "Rows and places",
     "sub": "arrays.seat_number",
     "family": "arrays",
     "p": {
-     "per_row": 5,
+     "per_row": 6,
      "ask": "row",
-     "seat": 62
+     "seat": 75
     },
     "t": {},
     "fmt": "int",
@@ -1812,35 +1808,35 @@
      "3",
      "130"
     ],
-    "q": "Mrs Goh labels the seats of a school hall. Every row has 5 seats, and the seats are numbered 1, 2, 3 and so on, starting in the front row. In which row is seat number 62?",
-    "hint": "Count how many full rows come before seat 62. A row has 5 seats.",
-    "why": "12 full rows hold 12 × 5 = 60 seats. Seat 62 comes after them, so it is in row 12 + 1 = 13.",
+    "q": "On a ferry, every bench has 6 seats. Passengers get tickets numbered 1, 2, 3 and so on, as they board. Ticket 1 to ticket 6 sit on the first bench, the next 6 tickets sit on the second bench, and so on. On which bench does the passenger with ticket 75 sit?",
+    "hint": "Find how many full benches come before ticket 75. Each bench has 6 seats.",
+    "why": "12 full benches hold 12 × 6 = 72 seats. Ticket 75 comes after them, so it is on bench 12 + 1 = 13.",
     "date": "11-12"
    },
    {
-    "id": "L2-fewestswaps",
+    "id": "L2-beadsticks",
     "level": 2,
-    "frame": "fewestswaps",
+    "frame": "beadsticks",
     "kind": "swaps",
     "topic": "Putting in order",
     "sub": "sorting.fewest_swaps",
     "family": "sorting",
     "p": {
      "order": [
-      4,
-      2,
+      3,
       5,
-      1,
-      3
+      2,
+      4,
+      1
      ]
     },
     "t": {
-     "row": "4  2  5  1  3"
+     "row": "3, 5, 2, 4 and 1"
     },
     "fmt": "int",
     "type": "n",
-    "ans": "6",
-    "shown": "6 swaps",
+    "ans": "7",
+    "shown": "7 swaps",
     "units": [
      "swaps",
      "swap"
@@ -1849,24 +1845,23 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "7",
-     "5",
      "8",
-     "4",
-     "12",
-     "3",
-     "16",
-     "60"
+     "6",
+     "9",
+     "5",
+     "14",
+     "17",
+     "70"
     ],
-    "q": "Five number cards lie in a row: 4  2  5  1  3. You may only swap two cards that are next to each other. What is the fewest number of swaps that puts the cards in order, from 1 to 5?",
-    "hint": "Look for pairs where a bigger card is to the left of a smaller card. A swap of two neighbours can fix only one such pair.",
-    "why": "The pairs the wrong way round are 4 and 2, 4 and 1, 4 and 3, 2 and 1, 5 and 1, and 5 and 3. One swap of neighbours fixes exactly one pair, so 6 swaps are needed.",
+    "q": "A toy stick has five beads, and the numbers printed on them are 3, 5, 2, 4 and 1, in that order from left to right. A child may swap two beads only if they touch each other. At least how many swaps are needed to put the beads in order, from the smallest number to the biggest?",
+    "hint": "Count the pairs of beads that are the wrong way round. A swap of two touching beads can put only one pair right.",
+    "why": "The pairs the wrong way round are 3 and 2, 3 and 1, 5 and 2, 5 and 4, 5 and 1, 2 and 1, and 4 and 1. One swap puts one pair right, so 7 swaps are needed.",
     "date": "11-13"
    },
    {
-    "id": "L2-cardtriple2",
+    "id": "L2-tilescore",
     "level": 2,
-    "frame": "cardtriple2",
+    "frame": "tilescore",
     "kind": "triple_sum",
     "topic": "Number cards",
     "sub": "bonds.three_cards_total",
@@ -1887,8 +1882,11 @@
     "fmt": "int",
     "type": "n",
     "ans": "38",
-    "shown": "38",
-    "units": [],
+    "shown": "38 points",
+    "units": [
+     "points",
+     "point"
+    ],
     "prefix": [],
     "accept": [],
     "exact": false,
@@ -1903,9 +1901,9 @@
      "28",
      "380"
     ],
-    "q": "Six number cards lie on Priya's desk: 14, 23, 31, 38, 45 and 52. Priya finds that only one set of three cards adds up to 135. What is the smallest card in that set?",
-    "hint": "Start with the biggest card, and ask which two cards would be needed to reach the total.",
-    "why": "38 + 45 + 52 = 135. The three cards are 38, 45 and 52, so the smallest is 38.",
+    "q": "A game has six tiles worth 14, 23, 31, 38, 45 and 52 points. A player picks three tiles and scores exactly 135 points. Only one choice of three tiles gives that score. How many points is the lowest tile in that choice worth?",
+    "hint": "Think about the highest tile first. Which two other tiles would make the score?",
+    "why": "38 + 45 + 52 = 135. The three tiles are worth 38, 45 and 52 points, so the lowest is worth 38 points.",
     "date": "11-14"
    },
    {
@@ -1957,16 +1955,16 @@
     "date": "11-15"
    },
    {
-    "id": "L2-ticketnotes",
+    "id": "L2-ticketstrips",
     "level": 2,
-    "frame": "ticketnotes",
+    "frame": "ticketstrips",
     "kind": "cannot_pay",
     "topic": "Money",
     "sub": "coins.cannot_pay",
     "family": "coins",
     "p": {
      "coins": [
-      2,
+      3,
       5
      ],
      "amounts": [
@@ -1996,38 +1994,34 @@
       24,
       25,
       26,
-      27,
-      28,
-      29,
-      30
+      27
      ]
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "28",
-    "shown": "28 items",
+    "ans": "23",
+    "shown": "23 prizes",
     "units": [
-     "items",
-     "item"
+     "prizes",
+     "prize"
     ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "29",
-     "27",
-     "30",
-     "26",
-     "56",
-     "14",
-     "38",
-     "18",
-     "280"
+     "24",
+     "22",
+     "25",
+     "21",
+     "46",
+     "33",
+     "13",
+     "230"
     ],
-    "q": "A fair stall accepts $2 notes and $5 notes only, and it cannot give any change. It sells items for $1, $2, $3 and so on, right up to $30. How many of the 30 items can be bought by paying exactly?",
-    "hint": "Find the items that cannot be bought exactly. Try the smallest prices first.",
-    "why": "Only $1 and $3 cannot be paid. Every other price can be, for example $4 = $2 + $2, $6 = $2 + $2 + $2 and $7 = $5 + $2. That is 30 − 2 = 28 items.",
+    "q": "At a school fair, every prize costs a whole number of tickets, from 1 ticket up to 27 tickets. Raj has plenty of 3-ticket strips and 5-ticket strips, and the stall gives no change. For how many of the 27 prizes can he pay the exact number of tickets?",
+    "hint": "Find the prizes that he cannot pay for exactly. Try the small prices first.",
+    "why": "He cannot pay 1, 2, 4 or 7 tickets. Every price from 8 upwards can be made, for example 8 = 3 + 5, 9 = 3 + 3 + 3 and 10 = 5 + 5. That is 27 − 4 = 23 prizes.",
     "date": "11-16"
    },
    {
@@ -2427,39 +2421,40 @@
     "date": "11-25"
    },
    {
-    "id": "L2-wordorder",
+    "id": "L2-numbershelf",
     "level": 2,
-    "frame": "wordorder",
+    "frame": "numbershelf",
     "kind": "alpha_numbers",
     "topic": "Number words",
     "sub": "number_names.alphabetical",
     "family": "number_names",
     "p": {
      "lo": 1,
-     "hi": 12,
-     "place": 5
+     "hi": 14,
+     "place": 9
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "9",
-    "shown": "9",
+    "ans": "6",
+    "shown": "6",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "10",
-     "8",
-     "11",
      "7",
-     "18",
-     "19",
-     "90"
+     "5",
+     "8",
+     "4",
+     "12",
+     "3",
+     "16",
+     "60"
     ],
-    "q": "Mei writes the numbers from 1 to 12 in words: one, two, three and so on. Then she puts the words in dictionary order, like the words in a dictionary. Which number is in 5th place?",
-    "hint": "Write all the number words. Look at the first letter of each word, then at the second letter if two words start the same.",
-    "why": "In dictionary order the words are eight, eleven, five, four, nine, one, seven, six, ten, three, twelve, two. The 5th word is nine, which is the number 9.",
+    "q": "A librarian puts a book on a shelf for each of the numbers from 1 to 14. The title of each book is the number written in words, such as One or Two. The books stand in A to Z order of their titles. Counting from the left, which number is the title of the book in place 9?",
+    "hint": "Write the title of every book. Sort them by first letter, and by the second letter when two titles start the same.",
+    "why": "In A to Z order the titles are eight, eleven, five, four, fourteen, nine, one, seven, six, ten, thirteen, three, twelve, two. Place 9 holds six, which is the number 6.",
     "date": "11-26"
    },
    {
@@ -2642,30 +2637,32 @@
     "sub": "series_sum.missing_term",
     "family": "series_sum",
     "p": {
-     "n": 14,
-     "got": 96
+     "n": 16,
+     "got": 124
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "9",
-    "shown": "9",
+    "ans": "12",
+    "shown": "12",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "10",
-     "8",
+     "13",
      "11",
-     "7",
-     "18",
-     "19",
-     "90"
+     "14",
+     "10",
+     "24",
+     "6",
+     "22",
+     "2",
+     "120"
     ],
-    "q": "Hana adds all the whole numbers from 1 to 14. She gets 96, but she left out one number by mistake. Which number did she leave out?",
-    "hint": "Work out what the total of 1 to 14 should be. You can add them in a row, or look for a quicker way.",
-    "why": "The numbers 1 to 14 make 7 pairs that each add to 1 + 14 = 15, so the total should be 7 × 15 = 105. 105 − 96 = 9.",
+    "q": "Hana adds all the whole numbers from 1 to 16. She gets 124, but she left out one number by mistake. Which number did she leave out?",
+    "hint": "Work out what the total of 1 to 16 should be. You can add them in a row, or look for a quicker way.",
+    "why": "The numbers 1 to 16 make 8 pairs that each add to 1 + 16 = 17, so the total should be 8 × 17 = 136. 136 − 124 = 12.",
     "date": "11-01"
    },
    {
@@ -2709,49 +2706,52 @@
     "date": "11-02"
    },
    {
-    "id": "L3-books",
+    "id": "L3-petvotes",
     "level": 3,
-    "frame": "books",
+    "frame": "petvotes",
     "kind": "stats",
     "topic": "Reading a chart",
     "sub": "graphs.most_least_gap",
     "family": "graphs",
     "p": {
      "data": [
-      24,
+      19,
+      8,
+      26,
       13,
-      49,
-      31,
-      20
+      22
      ],
      "ask": "range"
     },
-    "t": {},
+    "t": {
+     "mx": 26,
+     "mn": 8
+    },
     "fmt": "int",
     "type": "n",
-    "ans": "36",
-    "shown": "36 books",
+    "ans": "18",
+    "shown": "18 votes",
     "units": [
-     "books",
-     "book"
+     "votes",
+     "vote"
     ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "37",
-     "35",
-     "38",
-     "34",
-     "72",
-     "18",
-     "46",
-     "26",
-     "360"
+     "19",
+     "17",
+     "20",
+     "16",
+     "36",
+     "9",
+     "28",
+     "8",
+     "180"
     ],
-    "q": "Five children read books during the school year. Mei Ling read 24, Ben read 13, Aisha read 49, Ravi read 31 and Siti read 20. How many more books did the child who read the most read than the child who read the least?",
-    "hint": "Find the biggest number and the smallest number first.",
-    "why": "The most is 49 and the least is 13. 49 − 13 = 36 books.",
+    "q": "Mia's class votes for a class pet. The votes are rabbit 19, hamster 8, fish 26, turtle 13 and gecko 22. By how many votes did the winning pet beat the pet that came last?",
+    "hint": "Find the pet with the most votes and the pet with the fewest votes.",
+    "why": "The winner got 26 votes and the last pet got 8 votes. 26 − 8 = 18 votes.",
     "date": "11-03"
    },
    {
@@ -3568,32 +3568,32 @@
     "sub": "guess_check.sum_product",
     "family": "guess_check",
     "p": {
-     "s": 43,
-     "p": 462,
+     "s": 53,
+     "p": 282,
      "ask": "smaller"
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "21",
-    "shown": "21",
+    "ans": "6",
+    "shown": "6",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "22",
-     "20",
-     "23",
-     "19",
-     "42",
-     "31",
-     "11",
-     "210"
+     "7",
+     "5",
+     "8",
+     "4",
+     "12",
+     "3",
+     "16",
+     "60"
     ],
-    "q": "Ana thinks of two whole numbers. Their sum is 43 and their product is 462. What is the smaller of her two numbers?",
-    "hint": "List pairs that add to 43, such as 20 and 23. Multiply each pair. Is the product too big or too small?",
-    "why": "21 and 22 add up to 43 and multiply to 462. The smaller number is 21.",
+    "q": "Ana thinks of two whole numbers. Their sum is 53 and their product is 282. What is the smaller of her two numbers?",
+    "hint": "List pairs that add to 53, such as 10 and 43. Multiply each pair. Is the product too big or too small?",
+    "why": "6 and 47 add up to 53 and multiply to 282. The smaller number is 6.",
     "date": "11-22"
    },
    {
@@ -4185,45 +4185,57 @@
     "date": "11-05"
    },
    {
-    "id": "L4-seedshop",
+    "id": "L4-moneypurse",
     "level": 4,
-    "frame": "seedshop",
-    "kind": "regroup",
-    "topic": "Place value",
-    "sub": "place_value.build_number",
-    "family": "place_value",
+    "frame": "moneypurse",
+    "kind": "gift_who",
+    "topic": "Who has more?",
+    "sub": "word_problems.who_has_more",
+    "family": "word_problems",
     "p": {
-     "thousands": 5,
-     "hundreds": 2,
-     "tens": 6,
-     "ones": 8
+     "names": [
+      "Ravi",
+      "Sue"
+     ],
+     "start": [
+      85,
+      62
+     ],
+     "steps": [
+      [
+       "give",
+       0,
+       1,
+       20
+      ],
+      [
+       "spend",
+       1,
+       35
+      ],
+      [
+       "spend",
+       0,
+       12
+      ]
+     ],
+     "ask": "more"
     },
     "t": {},
     "fmt": "int",
-    "type": "n",
-    "ans": "5268",
-    "shown": "5268 seeds",
-    "units": [
-     "seeds",
-     "seed"
-    ],
+    "type": "s",
+    "ans": "ravi",
+    "shown": "Ravi",
+    "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "5269",
-     "5267",
-     "5270",
-     "5266",
-     "10536",
-     "2634",
-     "5278",
-     "5258",
-     "52680"
+     "Sue"
     ],
-    "q": "A seed shop has 5 sacks of 1000 seeds, 2 bags of 100 seeds, 6 cups of 10 seeds and 8 loose seeds. How many seeds is that in all?",
-    "hint": "Work out the seeds in the sacks, then the bags, then the cups. Then add the loose seeds.",
-    "why": "5000 + 200 + 60 + 8 = 5268 seeds.",
+    "q": "Ravi has $85 and Sue has $62. Ravi gives Sue $20. Then Sue spends $35 on a book and Ravi spends $12 on lunch. Who has more money left: Ravi or Sue?",
+    "hint": "Keep a running total for each person. Change one person's money at each step.",
+    "why": "After the gift Ravi has $85 − $20 = $65 and Sue has $62 + $20 = $82. Sue spends $35, so she has $82 − $35 = $47. Ravi spends $12, so he has $65 − $12 = $53. $53 is more than $47, so Ravi has more money left.",
     "date": "11-06"
    },
    {
@@ -4311,45 +4323,45 @@
     "date": "11-08"
    },
    {
-    "id": "L4-oddtable",
+    "id": "L4-bluelockers",
     "level": 4,
-    "frame": "oddtable",
+    "frame": "bluelockers",
     "kind": "odd_one_out",
     "topic": "Odd one out",
     "sub": "sorting.odd_one_out",
     "family": "sorting",
     "p": {
      "numbers": [
-      48,
-      84,
-      132,
-      156,
-      170
+      45,
+      63,
+      81,
+      99,
+      112
      ]
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "170",
-    "shown": "170",
+    "ans": "112",
+    "shown": "112",
     "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "171",
-     "169",
-     "172",
-     "168",
-     "340",
-     "85",
-     "180",
-     "160",
-     "1700"
+     "113",
+     "111",
+     "114",
+     "110",
+     "224",
+     "56",
+     "122",
+     "102",
+     "1120"
     ],
-    "q": "Four of these five numbers belong to the same times table, from the 2 times table to the 10 times table. One does not: 48, 84, 132, 156 and 170. Which number is the odd one out?",
-    "hint": "Try the times tables one at a time. Which one has four of the five numbers?",
-    "why": "48, 84, 132 and 156 are all in the 3, 4 and 6 times tables, but 170 is not in any of them. The number that does not belong is 170.",
+    "q": "Five lockers have the numbers 45, 63, 81, 99 and 112. Four of the lockers are painted blue because their numbers can all be divided exactly by the same number from 2 to 9. Which locker is not painted blue?",
+    "hint": "Try dividing the numbers by 2, then by 3, then by 4, and so on. Which divisor works for four of the five?",
+    "why": "45, 63, 81 and 99 can all be divided exactly by 3 and by 9, but 112 cannot be divided exactly by either of them. The locker that is not blue is 112.",
     "date": "11-09"
    },
    {
@@ -4393,9 +4405,9 @@
     "date": "11-10"
    },
    {
-    "id": "L4-podium",
+    "id": "L4-photoline",
     "level": 4,
-    "frame": "podium",
+    "frame": "photoline",
     "kind": "perm_count",
     "topic": "Choosing in order",
     "sub": "counting_choices.orders",
@@ -4408,8 +4420,10 @@
     "fmt": "int",
     "type": "n",
     "ans": "210",
-    "shown": "210 ways",
+    "shown": "210 lines",
     "units": [
+     "lines",
+     "line",
      "ways",
      "way"
     ],
@@ -4427,9 +4441,9 @@
      "200",
      "2100"
     ],
-    "q": "A team has 7 pupils. The coach picks one pupil to be captain, another pupil to be vice-captain and a third pupil to be reporter. In how many different ways can the three jobs be given?",
-    "hint": "Choose the captain first. Then see how many pupils are left for vice-captain.",
-    "why": "7 choices for captain, then 6 for vice-captain, then 5 for reporter. 7 × 6 × 5 = 210 ways.",
+    "q": "A photographer lines up 3 of the 7 children in a club for a photo, one child after another from left to right. How many different photo lines are possible?",
+    "hint": "Think about who can stand on the left. Then see how many children are left for the next place.",
+    "why": "7 children can stand on the left, then 6 children for the middle place, then 5 children for the right place. 7 × 6 × 5 = 210 lines.",
     "date": "11-11"
    },
    {
@@ -4704,62 +4718,71 @@
     "date": "11-17"
    },
    {
-    "id": "L4-sciencevideos",
+    "id": "L4-parkpaths",
     "level": 4,
-    "frame": "sciencevideos",
-    "kind": "minutes_seconds",
-    "topic": "Time",
-    "sub": "durations.minutes_seconds",
-    "family": "durations",
+    "frame": "parkpaths",
+    "kind": "route_via",
+    "topic": "Which way?",
+    "sub": "networks.first_stop",
+    "family": "networks",
     "p": {
-     "songs": [
+     "edges": [
       [
-       8,
-       40
+       "House",
+       "Bridge",
+       150
       ],
       [
-       4,
-       25
+       "House",
+       "Pool",
+       90
       ],
       [
-       10,
-       15
+       "Pool",
+       "Temple",
+       140
       ],
       [
-       3,
-       50
+       "Bridge",
+       "Temple",
+       60
+      ],
+      [
+       "Bridge",
+       "Market",
+       240
+      ],
+      [
+       "Temple",
+       "Market",
+       110
       ]
-     ]
+     ],
+     "start": "House",
+     "end": "Market",
+     "ask": "first"
     },
     "t": {},
     "fmt": "int",
-    "type": "n",
-    "ans": "1630",
-    "shown": "1630 seconds",
-    "units": [
-     "s",
-     "sec",
-     "secs",
-     "second",
-     "seconds"
-    ],
+    "type": "s",
+    "ans": "bridge",
+    "shown": "Bridge",
+    "units": [],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "1631",
-     "1629",
-     "1632",
-     "1628",
-     "3260",
-     "815",
-     "1640",
-     "1620",
-     "16300"
+     "pool",
+     "temple"
     ],
-    "q": "A science channel has four videos. They last 8 minutes 40 seconds, 4 minutes 25 seconds, 10 minutes 15 seconds and 3 minutes 50 seconds. How many seconds do the four videos last altogether?",
-    "hint": "Change each video to seconds first. One minute is 60 seconds.",
-    "why": "8 min 40 s is 520 s, 4 min 25 s is 265 s, 10 min 15 s is 615 s and 3 min 50 s is 230 s. 520 + 265 + 615 + 230 = 1630 seconds.",
+    "q": "The paths in a park join these places: House and Bridge (150 m), House and Pool (90 m), Pool and Temple (140 m), Bridge and Temple (60 m), Bridge and Market (240 m), and Temple and Market (110 m). Mei walks from House to Market by the shortest way. Which place does she reach first after leaving House: Bridge, Pool or Temple?",
+    "hint": "Add up the lengths along every way from House to Market. Which way is the shortest?",
+    "why": "House, Bridge, Temple, Market is 150 + 60 + 110 = 320 m. House, Pool, Temple, Market is 90 + 140 + 110 = 340 m, and House, Bridge, Market is 150 + 240 = 390 m. The shortest way goes first to Bridge.",
+    "choices": [
+     "Bridge",
+     "Pool",
+     "Temple"
+    ],
     "date": "11-18"
    },
    {
@@ -5209,54 +5232,53 @@
     "date": "11-28"
    },
    {
-    "id": "L4-shuttlehours",
+    "id": "L4-airportshuttle",
     "level": 4,
-    "frame": "shuttlehours",
-    "kind": "am_pm",
+    "frame": "airportshuttle",
+    "kind": "clock_span",
     "topic": "Time",
     "sub": "clock_reading.am_pm",
     "family": "clock_reading",
     "p": {
-     "times": [
-      [
-       7,
-       "am"
-      ],
-      [
-       10,
-       "pm"
-      ]
+     "start": [
+      6,
+      40,
+      "am"
      ],
-     "ask": "hours"
+     "end": [
+      10,
+      20,
+      "pm"
+     ],
+     "less": 75
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "15",
-    "shown": "15 hours",
+    "ans": "865",
+    "shown": "865 minutes",
     "units": [
-     "h",
-     "hr",
-     "hrs",
-     "hour",
-     "hours"
+     "min",
+     "mins",
+     "minute",
+     "minutes"
     ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "16",
-     "14",
-     "17",
-     "13",
-     "30",
-     "25",
-     "5",
-     "150"
+     "866",
+     "864",
+     "867",
+     "863",
+     "1730",
+     "875",
+     "855",
+     "8650"
     ],
-    "q": "The airport shuttle bus runs from 7 am until 10 pm every day. For how many hours does the shuttle run each day?",
-    "hint": "Count the hours from 7 am to 12 noon. Then count the hours from 12 noon to 10 pm.",
-    "why": "From 7 am to 12 noon is 5 hours. From 12 noon to 10 pm is 10 hours. 5 + 10 = 15 hours.",
+    "q": "An airport shuttle bus runs from 6:40 am until 10:20 pm, but it stops for a 75-minute break in the middle of the day. For how many minutes does the shuttle bus run in a day?",
+    "hint": "Find the time from 6:40 am to 10:20 pm in hours and minutes first. Then take off the break.",
+    "why": "From 6:40 am to 10:20 pm is 15 hours 40 minutes, which is 15 × 60 + 40 = 940 minutes. 940 − 75 = 865 minutes.",
     "date": "11-29"
    },
    {
@@ -5649,9 +5671,9 @@
     "date": "11-08"
    },
    {
-    "id": "L5-badgeshops",
+    "id": "L5-nametagpacks",
     "level": 5,
-    "frame": "badgeshops",
+    "frame": "nametagpacks",
     "kind": "best_deal",
     "topic": "Shop offers",
     "sub": "money.offers",
@@ -5659,29 +5681,29 @@
     "p": {
      "offers": [
       [
-       "each",
-       8
+       "pack",
+       12,
+       34
       ],
       [
        "pack",
-       4,
-       26
+       15,
+       41
       ],
       [
-       "free",
-       3,
-       1,
-       8
+       "pack",
+       20,
+       55
       ]
      ],
-     "want": 24,
+     "want": 60,
      "ask": "min"
     },
     "t": {},
     "fmt": "money",
     "type": "n",
-    "ans": "144",
-    "shown": "$144",
+    "ans": "164",
+    "shown": "$164",
     "units": [
      "dollars",
      "dollar"
@@ -5693,20 +5715,20 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "145",
-     "143",
-     "146",
-     "142",
-     "288",
-     "72",
+     "165",
+     "163",
+     "166",
+     "162",
+     "328",
+     "82",
+     "174",
      "154",
-     "134",
-     "144.5",
-     "1440"
+     "164.5",
+     "1640"
     ],
-    "q": "A school needs 24 badges for a prize-giving. Shop A sells badges at $8 each. Shop B sells packs of 4 badges for $26 a pack. Shop C sells badges at $8 each, but gives 1 badge free for every 3 badges that you buy. The school chooses the cheapest shop. How much does it pay?",
-    "hint": "Work out the cost at each of the three shops. Then compare.",
-    "why": "Shop A: 24 × $8 = $192. Shop B: 24 ÷ 4 = 6 packs, and 6 × $26 = $156. Shop C: every 4 badges cost 3 × $8 = $24, and 24 ÷ 4 = 6 sets, so 6 × $24 = $144. The cheapest is $144.",
+    "q": "A school office needs 60 name tags. Supplier A sells packs of 12 tags for $34 a pack. Supplier B sells packs of 15 tags for $41 a pack. Supplier C sells packs of 20 tags for $55 a pack. Packs cannot be split. What is the least amount the office can pay for exactly 60 tags?",
+    "hint": "Find how many packs of each size make 60 tags. Then work out all three costs.",
+    "why": "A: 60 ÷ 12 = 5 packs, and 5 × $34 = $170. B: 60 ÷ 15 = 4 packs, and 4 × $41 = $164. C: 60 ÷ 20 = 3 packs, and 3 × $55 = $165. The least is $164.",
     "date": "11-09"
    },
    {
@@ -5821,18 +5843,18 @@
     "family": "symmetry",
     "p": {
      "shapes": [
-      "regular pentagon",
-      "regular hexagon",
-      "regular octagon",
+      "square",
+      "rectangle",
+      "equilateral triangle",
       "rhombus",
-      "kite"
+      "isosceles triangle"
      ]
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "22",
-    "shown": "22 lines",
+    "ans": "12",
+    "shown": "12 lines",
     "units": [
      "lines",
      "line"
@@ -5841,19 +5863,19 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "23",
-     "21",
-     "24",
-     "20",
-     "44",
+     "13",
      "11",
-     "32",
-     "12",
-     "220"
+     "14",
+     "10",
+     "24",
+     "6",
+     "22",
+     "2",
+     "120"
     ],
-    "q": "A designer marks the lines of symmetry on five shapes: a regular pentagon, a regular hexagon, a regular octagon, a rhombus that is not a square, and a kite. How many lines of symmetry does she mark in total?",
-    "hint": "A regular shape has as many lines of symmetry as it has sides. The rhombus and the kite are special.",
-    "why": "Pentagon 5, hexagon 6, octagon 8, rhombus 2, kite 1. 5 + 6 + 8 + 2 + 1 = 22 lines.",
+    "q": "A designer marks the lines of symmetry on five shapes: a square, a rectangle that is not a square, an equilateral triangle, a rhombus that is not a square, and an isosceles triangle that is not equilateral. How many lines of symmetry does she mark in total?",
+    "hint": "A square has 4 lines of symmetry and an equilateral triangle has 3. Think carefully about the other three shapes.",
+    "why": "Square 4, rectangle 2, equilateral triangle 3, rhombus 2, isosceles triangle 1. 4 + 2 + 3 + 2 + 1 = 12 lines.",
     "date": "11-12"
    },
    {
@@ -5945,24 +5967,26 @@
     "date": "11-14"
    },
    {
-    "id": "L5-spinners8",
+    "id": "L5-codelock",
     "level": 5,
-    "frame": "spinners8",
+    "frame": "codelock",
     "kind": "dice_ways",
     "topic": "Counting ways",
     "sub": "counting_pairs.dice_sum_ways",
     "family": "counting_pairs",
     "p": {
-     "sides": 8,
-     "total": 10,
+     "sides": 22,
+     "total": 30,
      "ordered": true
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "7",
-    "shown": "7 ways",
+    "ans": "15",
+    "shown": "15 pairs",
     "units": [
+     "pairs",
+     "pair",
      "ways",
      "way"
     ],
@@ -5970,17 +5994,18 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "8",
-     "6",
-     "9",
-     "5",
+     "16",
      "14",
      "17",
-     "70"
+     "13",
+     "30",
+     "25",
+     "5",
+     "150"
     ],
-    "q": "Two fair spinners each show a number from 1 to 8. They are spun together, and the two numbers add up to 10. A 3 on the first spinner and a 7 on the second spinner is different from a 7 on the first spinner and a 3 on the second spinner. In how many different ways can this happen?",
-    "hint": "List the number on the first spinner, starting with the smallest one that can work. For each one, ask what the second spinner must show.",
-    "why": "The first spinner can show 2, 3, 4, 5, 6, 7 or 8, and the second spinner shows the number that makes 10. That gives 2 and 8, 3 and 7, 4 and 6, 5 and 5, 6 and 4, 7 and 3, 8 and 2. That is 7 ways.",
+    "q": "A digital lock asks for two code numbers, and each code number is from 1 to 22. The first code is typed in before the second, so 9 then 21 is different from 21 then 9. The two codes must add up to 30. How many different pairs of codes could open the lock?",
+    "hint": "List the first code, starting with the smallest number that can work. For each one, find what the second code must be.",
+    "why": "The second code can be at most 22, so the first code must be at least 30 − 22 = 8. The first code can be any number from 8 to 22, and each one fixes the second code. That is 22 − 8 + 1 = 15 pairs.",
     "date": "11-15"
    },
    {
@@ -6209,22 +6234,22 @@
     "date": "11-20"
    },
    {
-    "id": "L5-scaleround",
+    "id": "L5-postalscale",
     "level": 5,
-    "frame": "scaleround",
+    "frame": "postalscale",
     "kind": "rounding_count",
     "topic": "Rounding",
     "sub": "rounding.count_that_round",
     "family": "rounding",
     "p": {
-     "place": 50,
-     "center": 750
+     "place": 1000,
+     "center": 4000
     },
     "t": {},
     "fmt": "int",
     "type": "n",
-    "ans": "50",
-    "shown": "50 masses",
+    "ans": "1000",
+    "shown": "1000 masses",
     "units": [
      "masses",
      "mass",
@@ -6234,19 +6259,19 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "51",
-     "49",
-     "52",
-     "48",
-     "100",
-     "25",
-     "60",
-     "40",
-     "500"
+     "1001",
+     "999",
+     "1002",
+     "998",
+     "2000",
+     "500",
+     "1010",
+     "990",
+     "10000"
     ],
-    "q": "A kitchen scale rounds every mass to the nearest 50 g. A mass exactly halfway between two rounded masses is rounded up. How many different whole-gram masses does the scale show as 750 g?",
-    "hint": "A mass rounds to 750 g if it is within 25 g of 750 g. Does a mass exactly halfway go up or down?",
-    "why": "Masses from 725 g to 774 g are shown as 750 g, because 725 g rounds up to 750 g and 775 g rounds up to 800 g. That is 50 masses.",
+    "q": "A postal scale shows every mass to the nearest kilogram, and a mass exactly halfway between two kilograms is shown as the larger one. A parcel is shown as 4 kg. How many different whole-gram masses could the parcel have?",
+    "hint": "A mass is shown as 4 kg if it is within 500 g of 4,000 g. Is a mass exactly halfway shown as the smaller or the larger kilogram?",
+    "why": "Masses from 3,500 g to 4,499 g are shown as 4 kg, because 3,500 g is exactly halfway between 3 kg and 4 kg and is shown as 4 kg, and 4,500 g is shown as 5 kg. That is 1000 masses.",
     "date": "11-21"
    },
    {
@@ -7354,16 +7379,17 @@
     "sub": "percentage.add_or_take_off",
     "family": "percentage",
     "p": {
-     "kind": "discount",
-     "price": 85,
-     "p": 20,
-     "ask": "pay"
+     "kind": "whole",
+     "part": 63,
+     "p": 70
     },
-    "t": {},
+    "t": {
+     "d": 30
+    },
     "fmt": "money",
     "type": "n",
-    "ans": "68",
-    "shown": "$68",
+    "ans": "90",
+    "shown": "$90",
     "units": [
      "dollars",
      "dollar"
@@ -7375,20 +7401,20 @@
     "accept": [],
     "exact": false,
     "wrong": [
-     "69",
-     "67",
-     "70",
-     "66",
-     "136",
-     "34",
-     "78",
-     "58",
-     "68.5",
-     "680"
+     "91",
+     "89",
+     "92",
+     "88",
+     "180",
+     "45",
+     "100",
+     "80",
+     "90.5",
+     "900"
     ],
-    "q": "A bicycle helmet costs $85. In a sale, the shop takes 20% off the price. How much does the helmet cost in the sale?",
-    "hint": "Find how much 20% of the price is. Then take it away from the price.",
-    "why": "10% of $85 is $8.50, so 20% is $17. $85 − $17 = $68.",
+    "q": "A bicycle helmet is sold at a discount of 30%. The sale price is $63. What was the price of the helmet before the discount?",
+    "hint": "If 30% is taken off, what percentage of the old price do you still pay? The sale price is that percentage of the old price.",
+    "why": "The sale price is 100% − 30% = 70% of the old price. 70% is $63, so 1% is $63 ÷ 70 = $0.90. The old price was 100 × $0.90 = $90.",
     "date": "11-17"
    },
    {
@@ -7595,47 +7621,44 @@
     "date": "11-22"
    },
    {
-    "id": "L6-juiceleft",
+    "id": "L6-fishtank",
     "level": 6,
-    "frame": "juiceleft",
-    "kind": "decimals",
-    "topic": "Decimals",
-    "sub": "decimals.add_subtract",
-    "family": "decimals",
+    "frame": "fishtank",
+    "kind": "volume_litres",
+    "topic": "Volume",
+    "sub": "volume.capacity_in_litres",
+    "family": "volume",
     "p": {
-     "op": "-",
-     "a": "12.4",
-     "b": "3.75"
+     "l": 75,
+     "w": 40,
+     "h": 60
     },
     "t": {},
-    "fmt": "dec",
+    "fmt": "int",
     "type": "n",
-    "ans": "8.65",
-    "shown": "8.65 L",
+    "ans": "180",
+    "shown": "180 litres",
     "units": [
-     "l",
-     "litre",
      "litres",
-     "liter",
-     "liters"
+     "litre"
     ],
     "prefix": [],
     "accept": [],
     "exact": false,
     "wrong": [
-     "9.65",
-     "7.65",
-     "10.65",
-     "6.65",
-     "17.3",
-     "4.325",
-     "18.65",
-     "9.15",
-     "86.5"
+     "181",
+     "179",
+     "182",
+     "178",
+     "360",
+     "90",
+     "190",
+     "170",
+     "1800"
     ],
-    "q": "A jug holds 12.4 L of orange juice. Aisha pours out 3.75 L for her guests. How many litres of juice are left in the jug?",
-    "hint": "Line up the decimal points before you subtract.",
-    "why": "12.4 − 3.75 = 8.65 L.",
+    "q": "The inside of a glass fish tank measures 75 cm by 40 cm by 60 cm. The tank is filled right up to the top with water. How many litres of water does it hold? (1 litre is 1000 cm³.)",
+    "hint": "Find the volume of the tank in cm³ first. Then change cm³ to litres.",
+    "why": "The volume is 75 × 40 × 60 = 180000 cm³. 180000 ÷ 1000 = 180.",
     "date": "11-23"
    },
    {

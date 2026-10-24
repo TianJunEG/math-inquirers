@@ -16,7 +16,23 @@
   "capacity_min_slack": 10,
   "run_words_fail": 7,
   "number_overlap_fail": 3,
-  "note": "Levels 3 to 6 (owner TEASER-STRICT): a sub-structure at most once per calendar quarter and also at least min_gap_days_across_quarters apart (circular); a family at most max_per_family_per_quarter times per quarter; an answer of 10 or more (and every text answer) once per level, a single-digit answer at most 4 times per level. Levels 1 and 2 (owner L1L2-GAP60): a sub-structure returns after at least min_gap_days days (circular over the year, leap and non-leap), a family at most family_max_in_window times in any family_window_days consecutive days and never on two consecutive days, an answer not twice within answer_window_days days and a single-digit answer at most answer_small_max_in_window times in that window. sub = the specific maths structure (what has to be worked out and how); family = the broad kind (topic). A different story or different numbers is NOT a different sub-structure."
+  "note": "Levels 3 to 6 (owner TEASER-STRICT): a sub-structure at most once per calendar quarter and also at least min_gap_days_across_quarters apart (circular); a family at most max_per_family_per_quarter times per quarter; (ANSWER-WINDOW, round 6, adopted default of the owner's delegate, revocable) the same answer value not twice within answer_window_l36_days (60) days and never with the same sub-structure within answer_same_sub_days (92) days; this replaces the full-year answer rule. Levels 1 and 2 (owner L1L2-GAP60): a sub-structure returns after at least min_gap_days days (circular over the year, leap and non-leap), a family at most family_max_in_window times in any family_window_days consecutive days and never on two consecutive days, an answer not twice within answer_window_days days and a single-digit answer at most answer_small_max_in_window times in that window. sub = the specific maths structure (what has to be worked out and how); family = the broad kind (topic). A different story or different numbers is NOT a different sub-structure.",
+  "answer_window_l36_days": 60,
+  "answer_same_sub_days": 92,
+  "frame_review": 0.8,
+  "frame_fail": 0.9,
+  "text_min_per_month": {
+   "1": 3,
+   "2": 3,
+   "3": 3,
+   "4": 3,
+   "5": 4,
+   "6": 4
+  },
+  "text_gate_months_exempt": [
+   "11",
+   "12"
+  ]
  },
  "fixed_fallback": {
   "1": "sequence.count_on",
@@ -695,10 +711,12 @@
     4
    ],
    "kinds": [
-    "am_pm"
+    "am_pm",
+    "clock_span"
    ],
    "cite": "MOE P1 MG Time 2.2 use of am and pm, p.32; P2 hours and minutes, p.34",
-   "round": 2
+   "round": 2,
+   "note": "round 6: clock_span added (the stall or shuttle is open for a number of minutes, with or without a break): hours-only questions were P1 to P2 content at Levels 3 and 4 (AUDIT_ROUND6 section 5)."
   },
   "clock_reading.hours_on": {
    "name": "count on whole hours round a clock face",
@@ -2266,7 +2284,8 @@
     5
    ],
    "kinds": [
-    "halfway"
+    "halfway",
+    "halfway_end"
    ],
    "cite": "MOE P1 NA Whole Numbers 1.5 comparing and ordering numbers and 1.6 patterns, p.31; P2 numbers to 1000, p.33",
    "round": 2,
@@ -3698,6 +3717,149 @@
     ]
    },
    "round": 5
+  },
+  "angles.parallelogram_rhombus": {
+   "name": "unknown angles in a parallelogram, a rhombus or a trapezium (opposite angles, angles between the parallel sides, a diagonal that halves an angle)",
+   "levels": [
+    5
+   ],
+   "kinds": [
+    "quad_angles"
+   ],
+   "cite": "MOE P5 MG Geometry, p.42: parallelogram, rhombus and trapezium, their properties and unknown angles; P4 MG angles, p.39",
+   "round": 6
+  },
+  "fractions.whole_division": {
+   "name": "a whole number shared by a whole number as a fraction or a decimal (7 m cut into 4 equal pieces: 7/4 m = 1.75 m)",
+   "levels": [
+    5
+   ],
+   "kinds": [
+    "frac_quotient"
+   ],
+   "cite": "MOE P5 NA Fractions 1.1 divide a whole number by a whole number with a fraction quotient, 1.2 express fractions as decimals, p.41",
+   "round": 6
+  },
+  "rate.compare_rates": {
+   "name": "which of three amounts per time is the fastest or slowest, or by how much (taps, typing, printing); text answer: a name",
+   "levels": [
+    5
+   ],
+   "kinds": [
+    "rate_compare"
+   ],
+   "cite": "MOE P5 NA Rate: the rate as the amount of one quantity per unit of another, find the rate, p.41",
+   "round": 6
+  },
+  "order_ops.bracket_placements": {
+   "name": "where one pair of brackets can go in a sum with + - x: the greatest value, how many different values, how many placements give a target",
+   "levels": [
+    5
+   ],
+   "kinds": [
+    "bracket_values"
+   ],
+   "cite": "MOE P5 NA Whole Numbers 2.2 order of operations and 2.3 brackets without a calculator, p.41",
+   "round": 6
+  },
+  "triangle_area.two_heights": {
+   "name": "the height of a right-angled triangle when its longest side is the base (area from the two short sides)",
+   "levels": [
+    5
+   ],
+   "kinds": [
+    "right_triangle_height"
+   ],
+   "cite": "MOE P5 MG Area of triangle: the concepts of base and height, area, p.42",
+   "round": 6
+  },
+  "graphs.who_has_most": {
+   "name": "who has the most, the least or the second most in a table of named children; text answer: a name",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "table_who"
+   ],
+   "cite": "MOE P1 ST picture graph p.32; P2 picture graph with scales p.34; P3 bar graph p.36; P4 read tables p.40",
+   "round": 6
+  },
+  "money.cheaper_shop": {
+   "name": "which of three shops is the cheapest for a given number of items (each price, a pack price, or one free for every few bought); text answer: a shop letter",
+   "levels": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "kinds": [
+    "shop_choice"
+   ],
+   "cite": "MOE P2 NA Money compare two or three amounts of money, p.33; P3 add and subtract money, p.35; P4 money in decimal form, p.38",
+   "round": 6
+  },
+  "word_problems.who_has_more": {
+   "name": "who has more after gifts, earnings and spending; text answer: a name",
+   "levels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "gift_who"
+   ],
+   "cite": "MOE P1 NA add and subtract within 100, p.31; P3 add and subtract money, p.35; Problem solving: draw a model, p.13",
+   "round": 6
+  },
+  "networks.first_stop": {
+   "name": "which place is passed first (or last) on the shortest of several routes on a map of roads; text answer: a place name",
+   "levels": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "route_via"
+   ],
+   "cite": "MOE P2 MG length in m and cm, compare and order, p.34; P3 km and m, p.36; Problem solving: make a list, p.13",
+   "round": 6
+  },
+  "shapes.classify_triangle": {
+   "name": "what kind of triangle: by its sides (equilateral, isosceles, scalene) or by two of its angles (acute, right-angled, obtuse); text answer: a word",
+   "levels": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "classify_triangle"
+   ],
+   "cite": "MOE P3 MG right angle, p.36; P4 MG angles measure, p.39; P5 MG triangle: properties of isosceles, equilateral and right-angled triangles, angle sum, p.42",
+   "round": 6
+  },
+  "measurement.heavier_after_units": {
+   "name": "which of three amounts written in different ways (3 kg 250 g, 3,300 g, 3.2 kg) is the heaviest or lightest; text answer: a letter",
+   "levels": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "kinds": [
+    "unit_heavier"
+   ],
+   "cite": "MOE P3 MG compound units of mass, length, volume, p.36; P5 NA Decimals 1.2 convert a measure to a larger or smaller unit in decimal form, p.41",
+   "round": 6
   }
  },
  "same_idea_groups": {
