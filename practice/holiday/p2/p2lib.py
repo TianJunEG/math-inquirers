@@ -217,3 +217,201 @@ def towers_fig(cubes=(2, 5, 8)):
         b += T(x + u / 2, top + 20, f'Tower {i + 1}', 14, 'middle', 800) + T(x + u / 2, top + 38, f'{n} cubes', 14, 'middle', 700, TEAL)
     b += T(32 + len(cubes) * 66 + 6, top - 40, '... and so on', 15, 'start', 800, TEAL, True)
     return _svg(340, top + 48, b, 'Towers of cubes: tower 1 has ' + ', tower '.join(f'{i + 1} has {n}' for i, n in enumerate(cubes)) + ' cubes; the towers keep growing in the same way')
+
+
+# ---------------------------------------------------------------- week 3 additions (lessons 5 and 6): number machines, bar models, money lines, price tags
+SKY = '#DDEBF7'
+GREY = '#EDEDED'
+BAR_FILL = {'a': YEL, 'b': SKY, 'h': '#F8D5C2', 'w': '#FFFFFF', 'g': GREY}
+
+
+def machine_fig(steps, start='?', out='?', caption='', small=False):
+    """A number machine drawn as boxes in a row: IN box (yellow), one grey box for each step, OUT box (blue).  start / out may be '?' or a number."""
+    boxes = [('in', str(start))] + [('step', s) for s in steps] + [('out', str(out))]
+    n = len(boxes)
+    if n <= 4:
+        bw, gap, x0 = 64, 22, 8
+    elif n <= 5:
+        bw, gap, x0 = 54, 18, 8
+    else:
+        bw, gap, x0 = 44, 12, 8
+    W = x0 * 2 + n * bw + (n - 1) * gap
+    h = 54
+    b = ''
+    for k, (kind, txt) in enumerate(boxes):
+        x = x0 + k * (bw + gap)
+        fill = YEL if kind == 'in' else (GREY if kind == 'step' else SKY)
+        b += Re(x, 6, bw, h, fill, NAVY, 2.4, 8) + T(x + bw / 2, 6 + h / 2 + 7, txt, 20 if n <= 4 else 17, 'middle', 800)
+        if k < n - 1:
+            ax = x + bw + 2
+            b += Ln(ax, 6 + h / 2, ax + gap - 6, 6 + h / 2, 2.2) + f'<polygon points="{ax + gap - 3},{6 + h / 2} {ax + gap - 10},{6 + h / 2 - 5} {ax + gap - 10},{6 + h / 2 + 5}" fill="{NAVY}"/>'
+    b += T(x0 + bw / 2, 6 + h + 18, 'IN', 14, 'middle', 800, TEAL) + T(x0 + (n - 1) * (bw + gap) + bw / 2, 6 + h + 18, 'OUT', 14, 'middle', 800, TEAL)
+    return _svg(W, 6 + h + 26, b, caption or ('A number machine: IN ' + ', then '.join(steps) + ', OUT ' + str(out)).replace('IN ', 'IN, then ', 1))
+
+
+def bar_fig(rows, W=340, label_w=96, right=0, vbrace=None, unit=None, caption='', row_h=34, gap=18):
+    """Bar model rows.  rows: [dict(label, segs=[(units, text, kind)], brace=(from_units, to_units, text, 'top'|'bottom'))].  kind: a yellow, b blue, h orange, w white dashed, g grey.
+    A label may have a line break ('\\n').  vbrace=(from_row, to_row, text): a bracket on the right of those rows.  Everything is drawn from the same unit, so equal parts are equal."""
+    widest = max(sum(s[0] for s in r['segs']) for r in rows)
+    unit = unit or (W - label_w - 16 - right) / widest
+    y = 6
+    b = ''
+    ys = []
+    for r in rows:
+        br = r.get('brace')
+        if br and br[3] == 'top':
+            y += 28
+        ys.append(y)
+        lab = r['label'].split('\n')
+        for k, ln in enumerate(lab):
+            b += T(4, y + row_h / 2 + 5 - (len(lab) - 1) * 8 + k * 16, ln, 15, 'start', 800)
+        x = label_w
+        for u, txt, kind in r['segs']:
+            dash = '6 4' if kind == 'w' else None
+            b += Re(x, y, u * unit, row_h, BAR_FILL[kind], NAVY, 2.4, 0, dash) + T(x + u * unit / 2, y + row_h / 2 + 5, txt, 16, 'middle', 800)
+            x += u * unit
+        if br:
+            f, t, txt, pos = br
+            bx0, bx1 = label_w + f * unit, label_w + t * unit
+            if pos == 'top':
+                yy = y - 8
+                b += Ln(bx0, yy, bx1, yy, 2.2, TEAL) + Ln(bx0, yy, bx0, yy + 6, 2.2, TEAL) + Ln(bx1, yy, bx1, yy + 6, 2.2, TEAL) + T((bx0 + bx1) / 2, yy - 6, txt, 15, 'middle', 800, TEAL)
+            else:
+                yy = y + row_h + 8
+                b += Ln(bx0, yy, bx1, yy, 2.2, TEAL) + Ln(bx0, yy, bx0, yy - 6, 2.2, TEAL) + Ln(bx1, yy, bx1, yy - 6, 2.2, TEAL) + T((bx0 + bx1) / 2, yy + 18, txt, 15, 'middle', 800, TEAL)
+                y += 24
+        y += row_h + gap
+    if vbrace:
+        a, c, txt = vbrace
+        bx = label_w + widest * unit + 12
+        y0, y1 = ys[a] + 2, ys[c] + row_h - 2
+        b += Ln(bx, y0, bx + 8, y0, 2.2, TEAL) + Ln(bx + 8, y0, bx + 8, y1, 2.2, TEAL) + Ln(bx, y1, bx + 8, y1, 2.2, TEAL)
+        lines = txt.split('\n')
+        for k, ln in enumerate(lines):
+            b += T(bx + 14, (y0 + y1) / 2 + 5 + (k - (len(lines) - 1) / 2) * 16, ln, 15, 'start', 800, TEAL)
+    return _svg(W, y - gap + 8, b, caption or 'Bar model')
+
+
+def bags_fig(caption='Ravi puts all his sweets into 3 bags with the same number in each bag. He takes some sweets out of bag 3.'):
+    """Lesson 5 No.4: a bar for all the sweets cut into 3 equal bags; bag 3 is split into 'taken out' and 'left'."""
+    x0, bw, y0, h = 10, 100, 40, 54
+    b = Ln(x0, y0 - 10, x0, y0 - 18, 2.4, TEAL) + Ln(x0, y0 - 18, x0 + 3 * bw, y0 - 18, 2.4, TEAL) + Ln(x0 + 3 * bw, y0 - 18, x0 + 3 * bw, y0 - 10, 2.4, TEAL)
+    b += T(x0 + 1.5 * bw, y0 - 26, 'all of Ravi’s sweets: ?', 16, 'middle', 800, TEAL)
+    for i in range(3):
+        fill = SKY if i < 2 else '#fff'
+        b += Re(x0 + i * bw, y0, bw, h, fill, NAVY, 2.4)
+        if i < 2:
+            b += T(x0 + i * bw + bw / 2, y0 + h / 2 + 5, f'bag {i + 1}', 16, 'middle', 800)
+    cut = x0 + 2 * bw + 40
+    b += Re(x0 + 2 * bw, y0, 40, h, YEL, NAVY, 2.4) + Ln(cut, y0, cut, y0 + h, 2.4, NAVY, '5 4')
+    b += T(x0 + 2 * bw + 20, y0 + h + 20, 'taken', 14, 'middle', 800, TEAL) + T(x0 + 2 * bw + 20, y0 + h + 36, 'out', 14, 'middle', 800, TEAL)
+    b += T(cut + 30, y0 + h / 2 + 5, 'left', 16, 'middle', 800) + T(cut + 30, y0 + h + 20, 'bag 3', 14, 'middle', 800, TEAL)
+    return _svg(320, y0 + h + 44, b, caption)
+
+
+def count_line(lo, hi, label_every, step_every=1, fmt='{}', caption='', mark_ends=True):
+    """A number line for counting up (change): ticks every `step_every`, numbers every `label_every`, both ends ringed in yellow.  Nothing is drawn for the answer."""
+    x0, x1, y = 22, 318, 64
+    px = lambda v: x0 + (v - lo) * (x1 - x0) / (hi - lo)
+    b = T(4, 18, caption, 15, 'start', 800) if caption else ''
+    b += Ln(x0 - 8, y, x1 + 8, y, 3)
+    v = lo
+    while v <= hi:
+        major = (v - lo) % label_every == 0
+        b += Ln(px(v), y - (8 if major else 5), px(v), y + (8 if major else 5), 2.4 if major else 1.6)
+        if major:
+            b += T(px(v), y + 28, fmt.format(v), 14, 'middle', 700)
+        v += step_every
+    if mark_ends:
+        for v in (lo, hi):
+            b += Ci(px(v), y, 8, YEL, NAVY, 2.4)
+    return _svg(340, 104, b, caption or f'A number line from {lo} to {hi}')
+
+
+def tags_fig(items, caption=''):
+    """Price tags, two in a row (name and price only: no coin or note pictures)."""
+    tw, th, gx, gy = 150, 62, 14, 12
+    b = ''
+    for k, (name, price) in enumerate(items):
+        x = 10 + (k % 2) * (tw + gx)
+        y = 6 + (k // 2) * (th + gy)
+        b += f'<polygon points="{x},{y + th / 2} {x + 24},{y} {x + tw},{y} {x + tw},{y + th} {x + 24},{y + th}" fill="{YEL}" stroke="{NAVY}" stroke-width="2.6" stroke-linejoin="round"/>'
+        b += Ci(x + 20, y + th / 2, 5, '#fff', NAVY, 2.2) + T(x + 92, y + 26, name, 17, 'middle', 800) + T(x + 92, y + 52, price, 22, 'middle', 800)
+    rows = (len(items) + 1) // 2
+    return _svg(340, 12 + rows * (th + gy), b, caption or 'Price tags: ' + ', '.join(f'{n} {p}' for n, p in items))
+
+
+def money_list_fig():
+    """The coins and notes we have, written as plain text (no pictures)."""
+    b = T(8, 24, 'Coins: 5¢, 10¢, 20¢, 50¢, $1', 17, 'start', 800) + T(8, 52, 'Notes: $2, $5, $10, $50, $100', 17, 'start', 800)
+    b += T(8, 78, '(There is no $20 note.)', 15, 'start', 700, TEAL)
+    return _svg(300, 88, b, 'The coins are 5 cents, 10 cents, 20 cents, 50 cents and 1 dollar. The notes are 2, 5, 10, 50 and 100 dollars. There is no 20 dollar note.')
+
+
+def price_chips(chips, caption=''):
+    """Two or three price chips side by side, text only: [('Sticker', '20¢ each'), ('Eraser', '50¢ each')]."""
+    n = len(chips)
+    w = (320 - (n - 1) * 12) / n
+    b = ''
+    for k, (a, p) in enumerate(chips):
+        x = 10 + k * (w + 12)
+        b += Re(x, 6, w, 58, PALE, NAVY, 2.4, 10) + T(x + w / 2, 30, a, 17, 'middle', 800) + T(x + w / 2, 54, p, 19, 'middle', 800, TEAL)
+    return _svg(340, 72, b, caption or ', '.join(f'{a} {p}' for a, p in chips))
+
+
+# ---------------------------------------------------------------- money checkers (independent: dynamic programming and enumeration, not greedy)
+COINS = [5, 10, 20, 50, 100]                 # cents: 5c 10c 20c 50c $1
+NOTES = [200, 500, 1000, 5000, 10000]        # cents: $2 $5 $10 $50 $100
+
+
+def money_name(c):
+    return f'{c // 100}' if False else (f'${c // 100}' if c >= 100 else f'{c}¢')
+
+
+def all_multisets(total, dens, max_pieces=None):
+    """Every way (as a sorted tuple, biggest first) to make `total` from the denominations `dens` (each as often as you like)."""
+    dens = sorted(dens, reverse=True)
+    out = []
+
+    def go(rest, i, cur):
+        if rest == 0:
+            out.append(tuple(cur)); return
+        if i == len(dens) or (max_pieces is not None and len(cur) >= max_pieces):
+            return
+        d = dens[i]
+        k = rest // d
+        while k >= 0:
+            go(rest - k * d, i + 1, cur + [d] * k)
+            k -= 1
+    go(total, 0, [])
+    return out
+
+
+def fewest_pieces(total, dens):
+    """(smallest number of pieces, [every way that uses that many pieces]).  The smallest number comes from counting up from 0 (dynamic programming, no greedy rule);
+    the ways are then listed by trying every way with at most that many pieces."""
+    best = {0: 0}
+    for amt in range(1, total + 1):
+        opts = [best[amt - d] + 1 for d in dens if (amt - d) in best]
+        if opts:
+            best[amt] = min(opts)
+    m = best[total]
+    return m, [w for w in all_multisets(total, dens, max_pieces=m) if len(w) == m]
+
+
+def money_accept(cents):
+    """Every way a child may write an amount of money: cents (35, 35¢, 35 cents, 35c), dollars ($0.35, 0.35, $2.75, 2.75, $2, 2 dollars, $2.00, 100 cents ...)."""
+    out = [str(cents), f'{cents}¢', f'{cents} ¢', f'{cents}c', f'{cents} c', f'{cents} cents', f'{cents}cents', f'{cents} cent']
+    d, c = divmod(cents, 100)
+    out += [f'${d}.{c:02d}', f'{d}.{c:02d}', f'$ {d}.{c:02d}', f'{d}.{c:02d} dollars', f'${d}.{c:02d} dollars']
+    if c == 0:
+        out += [f'${d}', f'{d} dollar', f'{d} dollars', f'${d} dollars', f'$ {d}']
+    if cents < 100:
+        out += [f'$0.{c:02d}', f'0.{c:02d}', f'$.{c:02d}', f'.{c:02d}']
+    elif c:
+        out += [f'{d} dollars and {c} cents', f'${d} and {c}¢', f'{d} dollar and {c} cents' if d == 1 else f'{d} dollars and {c}c']
+    seen, res = set(), []
+    for x in out:
+        if x not in seen:
+            seen.add(x); res.append(x)
+    return res

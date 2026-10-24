@@ -576,3 +576,397 @@ def finish(items, sol_px=250):
                 return _re.sub(r'font-size="([\d.]+)"', lambda k: 'font-size="%g"' % max(float(k.group(1)), need), s)
             it['sol_fig'] = wrap
     return items
+
+
+# ================================================================ WEEK 3 (lessons 5 and 6): decimals, then angles and turns
+import math                                                     # noqa: E402
+from decimal import Decimal as Dec, ROUND_HALF_UP               # noqa: E402
+
+
+def dtext(x, dp=None):
+    """A decimal as text. dp=None: the shortest writing (6.30 -> '6.3', 10.00 -> '10'); dp=2: exactly 2 decimal places ('6.30')."""
+    x = Dec(str(x))
+    if dp is None:
+        return format(x.normalize(), 'f')
+    return format(x.quantize(Dec(1).scaleb(-dp)), 'f')
+
+
+def round_half_up(x, dp):
+    """Round a decimal to dp places; exactly halfway rounds UP (the rule children are taught)."""
+    return Dec(str(x)).quantize(Dec(1).scaleb(-dp), rounding=ROUND_HALF_UP)
+
+
+def grid(lo, hi, dp):
+    """Every decimal from lo to hi (inclusive) with dp decimal places, found by stepping one place at a time."""
+    step, v, out = Dec(1).scaleb(-dp), Dec(str(lo)), []
+    while v <= Dec(str(hi)):
+        out.append(v); v += step
+    return out
+
+
+def dec_forms(x, pad=3, lead_dot=True):
+    """How a child may write the decimal x: the shortest way first, then the same number with trailing zeros (6.3, 6.30, 6.300) and without the leading 0 (.247)."""
+    x = Dec(str(x))
+    base = dtext(x)
+    mindp = len(base.split('.')[1]) if '.' in base else 0
+    out = [dtext(x, dp) for dp in range(mindp, max(pad, mindp) + 1)]
+    if base.startswith('0.') and lead_dot:
+        out.append(base[1:])
+    return list(dict.fromkeys(out))
+
+
+def dec_accepts(x, pad=3, money=False, unit=None):
+    """Accepted ways to type one decimal answer. money: $5.30, 5.30, $5.3, 5.3 and '5.30 dollars'. unit ('kg', 'm'): '0.4 kg', '0.4kg' as well."""
+    x = Dec(str(x))
+    nums = dec_forms(x, 2 if money else pad)
+    if money:
+        canon = '$' + dtext(x, 2)
+        forms = [canon] + ['$' + n for n in nums] + nums + [n + ' dollars' for n in nums]
+    elif unit:
+        forms = nums + [f'{n} {unit}' for n in nums] + [f'{n}{unit}' for n in nums]
+    else:
+        forms = nums
+    return list(dict.fromkeys(forms))
+
+
+def dec_list_accepts(vals, ordered=True, pad=3, lead_dot=False):
+    """A list of decimals typed as 'a, b, c' (comma, semicolon, space, 'and' before the last; with '<' too when ordered). Each number may carry trailing zeros (3.5, 3.50, 3.500).
+    The first form is the plain 'a, b, c'. ordered=False: any order."""
+    vals = [Dec(str(v)) for v in vals]
+    out = []
+    orders = [vals] if ordered else [list(p) for p in itertools.permutations(vals)]
+    for o in orders:
+        per = [dec_forms(v, pad, lead_dot) for v in o]
+        for combo in itertools.product(*per):
+            seps = [', ', ';', ' '] + ([' < '] if ordered else [])
+            for sp in seps:
+                out.append(sp.join(combo))
+            if len(combo) > 1:
+                out.append(', '.join(combo[:-1]) + ' and ' + combo[-1])
+    out = list(dict.fromkeys(out))
+    assert len(out) < 6000, len(out)
+    return out
+
+
+def between_forms(lo, hi, dps=(3, 4, 5)):
+    """Every decimal strictly between lo and hi with at most max(dps) decimal places, in the shortest writing and (for 3 and 4 places) with trailing zeros."""
+    lo, hi = Dec(str(lo)), Dec(str(hi))
+    out = []
+    for dp in range(min(dps), max(dps) + 1):
+        for v in grid(lo, hi, dp):
+            if lo < v < hi:
+                out.append(dtext(v))
+    return list(dict.fromkeys(out))
+
+
+# ---------------------------------------------------------------- figures for lesson 5
+def dec_line(lo, hi, arrows=(), label=''):
+    """A number line cut into 10 equal steps; the two ends and the middle are labelled. arrows: ((letter, steps from the left end), ...), steps may be 8.5."""
+    lo, hi = Dec(str(lo)), Dec(str(hi))
+    x0, x1, y = 40, 300, 96
+    k = (x1 - x0) / 10
+    b = Ln(x0 - 14, y, x1 + 14, y, 3)
+    for i in range(11):
+        big = i in (0, 5, 10)
+        b += Ln(x0 + i * k, y - (13 if big else 8), x0 + i * k, y + (13 if big else 8), 3.4 if big else 2)
+    for i, v in ((0, lo), (5, (lo + hi) / 2), (10, hi)):
+        b += T(x0 + i * k, y + 36, dtext(v), 16, 'middle', 700)
+    for letter, st in arrows:
+        x = round(x0 + float(Dec(str(st))) * k, 1)
+        b += Ci(x, 20, 14, YEL, NAVY, 2.4) + T(x, 27, letter, 17) + Ln(x, 35, x, y - 26, 2.8, TEAL) + f'<polygon points="{x},{y - 15} {x - 6},{y - 27} {x + 6},{y - 27}" fill="{TEAL}"/>'
+    return svg(340, 140, b, label or f'A number line from {dtext(lo)} to {dtext(hi)} cut into 10 equal steps, with the two ends and the middle labelled' + (', and arrows ' + ', '.join(a for a, _ in arrows) if arrows else '') + '.')
+
+
+def round_line():
+    x0, x1, y = 30, 310, 40
+    k = (x1 - x0) / 20
+    b = Ln(x0 - 12, y, x1 + 12, y, 3)
+    for i in range(21):
+        big = i % 10 == 0
+        b += Ln(x0 + i * k, y - (14 if big else 8), x0 + i * k, y + (14 if big else 8), 4 if big else 2)
+        if big:
+            b += T(x0 + i * k, y + 36, f'7.{3 + i // 10}', 16)
+    b += Ci(x0 + 10 * k, y, 9, YEL, NAVY, 3)
+    return svg(340, 86, b, 'A number line from 7.30 to 7.50 marked in hundredths, with 7.3, 7.4 and 7.5 labelled and a dot at 7.4.')
+
+
+def dec_cards(items):
+    """Digit cards; the string '.' is drawn as the decimal point card."""
+    w, gp = 46, 12
+    W = len(items) * w + (len(items) - 1) * gp + 12
+    b = ''
+    for i, d in enumerate(items):
+        x = 6 + i * (w + gp)
+        if d == '.':
+            b += Re(x, 6, w, 62, '#fff', NAVY, 2.6, 9) + Ci(x + w / 2, 46, 5.5, NAVY, NAVY, 1) + T(x + w / 2, 24, 'point', 13, 'middle', 700, TEAL)
+        else:
+            b += Re(x, 6, w, 62, YEL, NAVY, 2.6, 9) + T(x + w / 2, 49, d, 34)
+    names = ', '.join('a decimal point card' if d == '.' else str(d) for d in items)
+    return svg(W, 76, b, 'Cards: ' + names)
+
+
+def money_bars(top_name, bot_name, units, extra_units, extra_label, total_label, unit=44):
+    """Two bars: the top bar is `units` equal parts, the bottom bar the same plus an extra shaded part (labelled); a brace on the right marks the total."""
+    left = 74
+    b = T(left - 8, 36, top_name, 15, 'end') + cells_row(left, 12, units, unit, 36, units, '#CDE8F7')
+    b += T(left - 8, 84, bot_name, 15, 'end') + cells_row(left, 60, units, unit, 36, units, YEL) + cells_row(left + units * unit, 60, extra_units, unit, 36, extra_units, '#F2B8A2')
+    b += hbrace(left + units * unit, left + (units + extra_units) * unit, 96, extra_label, False, 15)
+    b += vbrace(left + (units + extra_units) * unit + 8, 12, 96, total_label)
+    return svg(left + (units + extra_units) * unit + 76, 136, b,
+               f'Two bars. {top_name} has {units} equal parts. {bot_name} has the same {units} parts and one more shaded part marked {extra_label}. A brace on the right marks {total_label} altogether.')
+
+
+def three_money_bars():
+    """Ali: 3 units. Ben: 3 units + $0.50. Siti: Ben's bar + $1.30 more. A brace on the right marks $9.20."""
+    u, left = 36, 56
+    def row(y, name, parts):
+        s, x = T(left - 8, y + 24, name, 15, 'end'), left
+        for w, fill in parts:
+            s += Re(x, y, w * u, 32, fill, NAVY, 2.4)
+            x += w * u
+        return s, x
+    b, e1 = row(10, 'Ali', [(3, '#CDE8F7')])
+    s, e2 = row(80, 'Ben', [(3, '#CDE8F7'), (0.8, '#F2B8A2')])
+    b += s
+    s, e3 = row(150, 'Siti', [(3, '#CDE8F7'), (0.8, '#F2B8A2'), (1.8, '#FFE08A')])
+    b += s
+    b += hbrace(left + 3 * u, left + 3.8 * u, 112, '$0.50 more than Ali', False, 15)
+    b += hbrace(left + 3.8 * u, left + 5.6 * u, 182, '$1.30 more than Ben', False, 15)
+    b += vbrace(left + 5.6 * u + 8, 10, 182, '$9.20')
+    return svg(left + 5.6 * u + 80, 232, b, 'Three bars. Ali has a bar of 3 equal parts. Ben has the same bar and an extra part marked 50 cents more than Ali. Siti has Ben\'s bar and an extra part marked $1.30 more than Ben. A brace on the right marks $9.20 altogether.')
+
+
+def can_scales():
+    def scale(cx, title, reading, cans):
+        s = T(cx, 18, title, 15, 'middle', 800, TEAL) + Re(cx - 62, 32, 124, 66, '#fff', NAVY, 2.6, 6)
+        for i in range(cans):
+            x, y = cx - 56 + (i % 3) * 38, 38 + (i // 3) * 28
+            s += Re(x, y, 34, 24, '#E58C6B', NAVY, 2, 4) + Ln(x, y + 12, x + 34, y + 12, 1.6, '#fff')
+        s += Re(cx - 76, 98, 152, 42, SKY, NAVY, 2.6, 8) + Re(cx - 46, 106, 92, 26, '#fff', NAVY, 2, 4) + T(cx, 125, reading, 16)
+        return s
+    return svg(340, 150, scale(90, 'box with 6 cans', '2.85 kg', 6) + scale(250, 'empty box', '0.45 kg', 0),
+               'A box with 6 cans on a scale reads 2.85 kilograms. The empty box on a scale reads 0.45 kilograms.')
+
+
+def can_bar():
+    w = 48
+    b = hbrace(10, 10 + 6 * w, 44, 'all 6 cans together', True, 15)
+    for i in range(6):
+        b += Re(10 + i * w, 44, w, 40, '#fff', NAVY, 2.6) + T(10 + i * w + w / 2, 69, 'can', 14, 'middle', 700, '#44506F')
+    return svg(6 * w + 20, 96, b, 'A bar cut into 6 equal parts, one part for each can. The whole bar is the mass of all 6 cans together.')
+
+
+def jugs():
+    def jug(cx, level, cap, kg):
+        top, h, w = 14, 100, 70
+        s = Re(cx - w / 2, top, w, h, '#fff', NAVY, 3.2, 4)
+        lv = level * h
+        s += Re(cx - w / 2 + 2, top + h - lv, w - 4, lv - 2, '#BFE3F5', 'none', 0)
+        s += f'<path d="M{cx + w / 2} {top + 18} q22 0 22 22 q0 22 -22 22" fill="none" stroke="{NAVY}" stroke-width="3.2"/>'
+        return s + T(cx, top + h + 24, cap, 15, 'middle', 800) + T(cx, top + h + 46, 'scale reads ' + kg, 15, 'middle', 800, TEAL)
+    return svg(340, 190, jug(86, 0.94, 'jug full of water', '1.45 kg') + jug(256, 0.5, 'jug half full', '0.85 kg'),
+               'Two jugs. The first is full of water and the scale reads 1.45 kilograms. The second is half full and the scale reads 0.85 kilograms.')
+
+
+# ---------------------------------------------------------------- figures for lesson 6
+def _pt(cx, cy, r, deg):
+    return cx + r * math.cos(math.radians(deg)), cy - r * math.sin(math.radians(deg))
+
+
+def _arc(cx, cy, r, d0, d1, c=TEAL, w=2.5):
+    a, b = _pt(cx, cy, r, d0), _pt(cx, cy, r, d1)
+    return f'<path d="M{a[0]:.1f} {a[1]:.1f} A{r} {r} 0 {1 if d1 - d0 > 180 else 0} 0 {b[0]:.1f} {b[1]:.1f}" fill="none" stroke="{c}" stroke-width="{w}"/>'
+
+
+def _ray(cx, cy, r, deg, w=3, c=NAVY):
+    x, y = _pt(cx, cy, r, deg)
+    return Ln(round(cx, 1), round(cy, 1), round(x, 1), round(y, 1), w, c)
+
+
+# the four angles of Q1 (arms from d0 to d1 in maths degrees, arm length r): the size is d1 - d0
+FOUR = {'a': (0, 40, 78), 'b': (20, 135, 66), 'c': (200, 275, 66), 'd': (12, 162, 66)}
+
+
+def _panel(px, py, pw, ph, d0, d1, r, name, title=''):
+    pts = [(0, 0), _pt(0, 0, r, d0), _pt(0, 0, r, d1)]
+    xs, ys = [p[0] for p in pts], [p[1] for p in pts]
+    cx, cy = px + pw / 2 - (min(xs) + max(xs)) / 2, py + ph / 2 - (min(ys) + max(ys)) / 2 + (8 if title else 0)
+    lab = _pt(cx, cy, 50, (d0 + d1) / 2)
+    s = _ray(cx, cy, r, d0) + _ray(cx, cy, r, d1) + _arc(cx, cy, 28, d0, d1) + T(round(lab[0], 1), round(lab[1] + 6, 1), name, 20, 'middle', 800, TEAL)
+    s += Ci(round(cx, 1), round(cy, 1), 3.5, NAVY, NAVY, 1)
+    if title:
+        s += T(px + 10, py + 22, title, 17, 'start', 800, WARM)
+    return s
+
+
+def four_angles(sizes=False):
+    """The four angles of Q1, drawn to size. sizes=True: the measured size is written in each corner of the panel (for the answer picture)."""
+    pw, ph = 170, 150
+    b = Re(2, 2, 2 * pw - 4, 2 * ph - 4, '#fff', '#C9D4EC', 2, 10) + Ln(pw, 8, pw, 2 * ph - 8, 2, '#C9D4EC') + Ln(8, ph, 2 * pw - 8, ph, 2, '#C9D4EC')
+    for k, name in enumerate('abcd'):
+        d0, d1, r = FOUR[name]
+        b += _panel((k % 2) * pw, (k // 2) * ph, pw, ph, d0, d1, r, name, f'{name} = {d1 - d0}°' if sizes else '')
+    return svg(2 * pw, 2 * ph, b, ('Four angles drawn to size. ' + ', '.join(f'{n} is {FOUR[n][1] - FOUR[n][0]} degrees' for n in 'abcd') if sizes else 'Four angles drawn to size: a, b, c and d.'))
+
+
+FAN = [(0, 'A'), (30, 'B'), (90, 'C'), (135, 'D')]
+
+
+def fan_figure():
+    O, R = (112, 172), 132
+    b = ''
+    for d, n in FAN:
+        q = _pt(O[0], O[1], R + 17, d)
+        b += _ray(O[0], O[1], R, d) + T(round(q[0], 1), round(q[1] + 7, 1), n, 20, 'middle', 800)
+    b += _arc(O[0], O[1], 98, 0, 30) + _arc(O[0], O[1], 48, 30, 90) + _arc(O[0], O[1], 72, 90, 135)
+    for ang, rr, txt, dx in ((15, 114, '30°', 4), (60, 70, '60°', 6), (112.5, 92, '45°', -4)):
+        q = _pt(O[0], O[1], rr, ang)
+        b += T(round(q[0] + dx, 1), round(q[1] + 6, 1), txt, 16, 'middle', 800, TEAL)
+    b += Ci(O[0], O[1], 4, NAVY, NAVY, 1) + T(O[0] - 8, O[1] + 24, 'O', 19)
+    return svg(290, 200, b, 'Four rays OA, OB, OC and OD from one point O. The angle between OA and OB is 30 degrees, between OB and OC is 60 degrees, and between OC and OD is 45 degrees.')
+
+
+def _cpt(cx, cy, L, theta):
+    """A point at distance L from (cx, cy), theta degrees clockwise from 12 o'clock."""
+    return cx + L * math.sin(math.radians(theta)), cy - L * math.cos(math.radians(theta))
+
+
+def _clock(cx, cy, r, h, m, hands, shade, cap):
+    s = Ci(cx, cy, r, '#fff', NAVY, 3)
+    if shade:
+        t0, t1 = shade
+        a, b = _cpt(cx, cy, r * 0.62, t0), _cpt(cx, cy, r * 0.62, t1)
+        s += f'<path d="M{cx} {cy} L{a[0]:.1f} {a[1]:.1f} A{r * 0.62:.1f} {r * 0.62:.1f} 0 {1 if t1 - t0 > 180 else 0} 1 {b[0]:.1f} {b[1]:.1f} Z" fill="{YEL}" fill-opacity="0.7" stroke="{WARM}" stroke-width="1.6"/>'
+    for i in range(12):
+        a, b = _cpt(cx, cy, r, 30 * i), _cpt(cx, cy, r - 6, 30 * i)
+        s += Ln(round(a[0], 1), round(a[1], 1), round(b[0], 1), round(b[1], 1), 2)
+        q = _cpt(cx, cy, r - 17, 30 * i)
+        s += T(round(q[0], 1), round(q[1] + 4.5, 1), 12 if i == 0 else i, 13, 'middle', 700)
+    if hands:
+        hh, mm = _cpt(cx, cy, r * 0.5, 30 * (h % 12) + m / 2), _cpt(cx, cy, r * 0.76, 6 * m)
+        s += Ln(cx, cy, round(hh[0], 1), round(hh[1], 1), 5, TEAL) + Ln(cx, cy, round(mm[0], 1), round(mm[1], 1), 3.4, NAVY)
+    s += Ci(cx, cy, 4, NAVY, NAVY, 1)
+    if cap:
+        s += T(cx, cy + r + 24, cap, 15, 'middle', 800, TEAL)
+    return s
+
+
+def smaller_sector(h, m=0):
+    """(from, to) in degrees clockwise from 12 for the smaller angle between the two hands."""
+    a, b = sorted([30 * (h % 12) + m / 2, 6 * m])
+    return (a, b) if b - a <= 180 else (b, a + 360)
+
+
+def clocks(specs, r=66, label=''):
+    """specs: dicts(h, m, hands=True, shade=False, cap=''). One svg with the clocks side by side."""
+    n = len(specs)
+    cw = 2 * r + 28
+    b = ''
+    desc = []
+    for k, sp in enumerate(specs):
+        cx = cw * k + cw / 2
+        h, m, hands = sp.get('h', 12), sp.get('m', 0), sp.get('hands', True)
+        sh = smaller_sector(h, m) if sp.get('shade') else None
+        b += _clock(cx, r + 8, r, h, m, hands, sh, sp.get('cap', ''))
+        desc.append((f'{h}:{m:02d}' if m else f'{h} o\'clock') if hands else 'a blank clock face')
+    return svg(cw * n, 2 * r + 40, b, label or ('Clock faces showing ' + ' and '.join(desc) + '.'))
+
+
+DIRS = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW']      # clockwise from the top
+
+
+def compass(hi=(), s=1.25):
+    c = (120 * s, 110 * s)
+    def P(r, mdeg):
+        return _pt(c[0], c[1], r * s, mdeg)
+    b = Ci(c[0], c[1], 84 * s, SKY, NAVY, 2.6)
+    for i, n in enumerate(DIRS):
+        md = 90 - 45 * i
+        main = i % 2 == 0
+        a = P(84, md)
+        b += Ln(round(c[0], 1), round(c[1], 1), round(a[0], 1), round(a[1], 1), 3.4 if main else 2, NAVY if main else '#6F7FA3')
+        q = P(104 if main else 103, md)
+        if n in hi:
+            b += Ci(round(q[0], 1), round(q[1], 1), (19 if main else 22) * s * 0.9, YEL, NAVY, 2)
+        b += T(round(q[0], 1), round(q[1] + 8 * s, 1), n, round((26 if main else 22) * s * 0.85, 1), 'middle', 800 if main else 700, NAVY if main else TEAL)
+    a0, a1 = P(66, -10 - 0), P(66, -50)
+    b += f'<path d="M{a0[0]:.1f} {a0[1]:.1f} A{66 * s:.1f} {66 * s:.1f} 0 0 1 {a1[0]:.1f} {a1[1]:.1f}" fill="none" stroke="{TEAL}" stroke-width="3.6"/>'
+    tip, b1, b2 = P(66, -58), P(74, -44), P(58, -44)
+    b += f'<polygon points="{tip[0]:.1f},{tip[1]:.1f} {b1[0]:.1f},{b1[1]:.1f} {b2[0]:.1f},{b2[1]:.1f}" fill="{TEAL}"/>'
+    b += _arc(c[0], c[1], 40 * s, 45, 90, WARM, 3.2)
+    q = P(58, 67.5)
+    b += T(round(q[0], 1), round(q[1] + 6, 1), '45°', round(17 * s * 0.85, 1), 'middle', 800, WARM)
+    b += Ci(c[0], c[1], 6, YEL, NAVY, 2.5) + T(c[0], 246 * s, 'clockwise: like clock hands', 15, 'middle', 700, TEAL)
+    return svg(round(240 * s), round(254 * s), b, 'An 8-point compass rose: N at the top, then NE, E, SE, S, SW, W, NW going clockwise. One step from a direction to the next is 45 degrees. An arrow shows the clockwise way.')
+
+
+def rect_corner(a_known=58):
+    A = (28, 24)
+    t = math.radians(90 - a_known)         # the line makes (90 - a_known) degrees with the top side
+    end = (178, 24 + 150 * math.tan(t))
+    b = Re(28, 24, 150, 112, SKY, NAVY, 3) + Ln(A[0], A[1], round(end[0], 1), round(end[1], 1), 3.2)
+    b += _arc(A[0], A[1], 36, -90, -(90 - a_known), TEAL) + _arc(A[0], A[1], 36, -(90 - a_known), 0, TEAL)
+    q = _pt(A[0], A[1], 66, -(90 - (90 - a_known) / 2) + 0)
+    q1 = _pt(A[0], A[1], 64, -(90 - a_known) - a_known / 2)
+    q2 = _pt(A[0], A[1], 92, -(90 - a_known) / 2)
+    b += T(round(q1[0] + 4, 1), round(q1[1] + 6, 1), f'{a_known}°', 17, 'middle', 800, TEAL) + T(round(q2[0], 1), round(q2[1] + 6, 1), 'a', 19, 'middle', 800, TEAL)
+    return svg(210, 150, b, f'A rectangle with a line from its top left corner. The angle between the left side and the line is {a_known} degrees. Angle a is between the line and the top side.')
+
+
+def square_corner(x1=15, x2=48):
+    B = (28, 150)
+    b = Re(28, 10, 140, 140, SKY, NAVY, 3)
+    for ang in (x1, 90 - x2):
+        e = (168, 150 - 140 * math.tan(math.radians(ang)))
+        b += Ln(B[0], B[1], 168, round(e[1], 1), 3.2)
+    b += _arc(B[0], B[1], 62, 0, x1) + _arc(B[0], B[1], 44, x1, 90 - x2) + _arc(B[0], B[1], 30, 90 - x2, 90)
+    for ang, rr, txt in ((x1 / 2, 92, f'{x1}°'), ((x1 + 90 - x2) / 2, 66, 'b'), ((90 - x2 + 90) / 2, 50, f'{x2}°')):
+        q = _pt(B[0], B[1], rr, ang)
+        b += T(round(q[0], 1), round(q[1] + 6, 1), txt, 17, 'middle', 800, TEAL)
+    return svg(210, 162, b, f'A square. Two lines from its bottom left corner make three angles: {x1} degrees, angle b, and {x2} degrees.')
+
+
+def overlap_figure(outer=160):
+    O, S = (116, 140), 86
+    def poly(d0):
+        pts = [O, _pt(O[0], O[1], S, d0), _pt(O[0], O[1], S * math.sqrt(2), d0 + 45), _pt(O[0], O[1], S, d0 + 90)]
+        return ' '.join(f'{x:.1f},{y:.1f}' for x, y in pts)
+    s2 = outer - 90
+    b = f'<polygon points="{poly(0)}" fill="{SKY}" stroke="{NAVY}" stroke-width="3"/><polygon points="{poly(s2)}" fill="{YEL}" fill-opacity="0.5" stroke="{NAVY}" stroke-width="3"/>'
+    b += _arc(O[0], O[1], 34, s2, 90, WARM, 3) + _arc(O[0], O[1], 70, 0, outer, TEAL, 3)
+    a, c = _pt(O[0], O[1], 34, (s2 + 90) / 2), _pt(O[0], O[1], 104, (s2 + 90) / 2)
+    b += Ln(round(a[0], 1), round(a[1], 1), round(c[0], 1), round(c[1], 1), 2, WARM)
+    q = _pt(O[0], O[1], 120, (s2 + 90) / 2)
+    b += T(round(q[0], 1), round(q[1] + 8, 1), '?', 24, 'middle', 800, WARM)
+    q = _pt(O[0], O[1], 54, outer * 0.78)
+    b += T(round(q[0] - 14, 1), round(q[1] + 14, 1), f'{outer}°', 16, 'middle', 800, TEAL) + Ci(O[0], O[1], 3.5, NAVY, NAVY, 1) + T(O[0] + 12, O[1] + 20, 'O', 17)
+    return svg(250, 168, b, f'Two squares share the corner O and overlap. The angle between their outside sides is {outer} degrees. The angle where they overlap is marked with a question mark.')
+
+
+def right_corner():
+    O = (50, 120)
+    b = _ray(O[0], O[1], 100, 0) + _ray(O[0], O[1], 100, 90) + Re(O[0], O[1] - 16, 16, 16, 'none', TEAL, 2.4) + T(O[0] + 36, O[1] - 30, '90°', 17, 'middle', 800, TEAL)
+    return svg(180, 140, b, 'A square corner, a right angle of 90 degrees.')
+
+
+def combine(figs, label, gap=10, target=340):
+    """Several svg figures one above the other as ONE svg (the runner shows one svg per question). A figure wider than `target` is scaled down to it
+    (its text is lifted first, so it is still readable on a phone); the others keep their size and are centred."""
+    import re as _re
+    parts = []
+    for f in figs:
+        root = _re.match(r'<svg[^>]*>', f).group(0)
+        vb = [float(v) for v in _re.search(r'viewBox="([\d. -]+)"', root).group(1).split()]
+        inner = f[len(root):f.rindex('</svg>')]
+        sc = min(1.0, target / vb[2])
+        if sc < 1.0:
+            inner = lift_text(vb[2], inner)
+        parts.append((vb, inner, sc))
+    W = max(vb[2] * sc for vb, _, sc in parts)
+    y, body = 0, ''
+    for vb, inner, sc in parts:
+        w, h = vb[2] * sc, vb[3] * sc
+        body += (f'<svg x="{(W - w) / 2:g}" y="{y:g}" width="{w:g}" height="{h:g}" viewBox="{vb[0]:g} {vb[1]:g} {vb[2]:g} {vb[3]:g}" overflow="visible" '
+                 f'style="width:{w:g}px;height:{h:g}px;max-width:none">{inner}</svg>')
+        y += h + gap
+    return svg(W, y - gap, body, label)

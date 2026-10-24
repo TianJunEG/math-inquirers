@@ -86,8 +86,8 @@ def holds(cond, v):
     return bool(eval(c, {'__builtins__': {}}, dict(v)))
 
 
-def run(prog, v=None, limit=200000):
-    """Runs a nested program [[kind, text, kids?], ...]. Returns (said values in order, final variables)."""
+def run(prog, v=None, limit=200000, trace=None):
+    """Runs a nested program [[kind, text, kids?], ...]. Returns (said values in order, final variables). If `trace` is a list, a copy of the variables is appended each time the sprite says something."""
     v = dict(v or {})
     said = []
     steps = [0]
@@ -109,7 +109,10 @@ def run(prog, v=None, limit=200000):
                 v[m.group(1)] += _expr(m.group(2), v); continue
             m = re.fullmatch(r'say (.+?)(?: for \d+ seconds)?', text)
             if m:
-                said.append(_expr(m.group(1), v)); continue
+                said.append(_expr(m.group(1), v))
+                if trace is not None:
+                    trace.append(dict(v))
+                continue
             m = re.fullmatch(r'repeat (.+)', text)
             if m:
                 for _ in range(_expr(m.group(1), v)):
