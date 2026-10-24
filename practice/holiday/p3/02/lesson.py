@@ -108,7 +108,7 @@ SOL_MAGIC = magic_solve([1200, 1700, 1600], 1500)
 
 ITEMS = [
     # ================= Start here (workbook lesson 2, No.1 to No.6)
-    I(id='1a', tier='core', no='1(a)', type='fields', skill='missing digits in an addition', answer=[4, 7, 6], svg=FIG['l2_q1'], frame='3 {f1} 4 7  +  2 5 {f2} 8  =  {f3} 0 2 5',
+    I(id='1a', tier='core', no='1(a)', type='fields', skill='missing digits in an addition', answer=[4, 7, 6], svg=FIG['l2_q1'], frame='The missing digits in (a), from left to right in the picture: {f1}, {f2}, {f3}',
       q='Find the missing digits. Write them in the boxes. Example: 3_2 + 115 = 467. Ones: 2 + 5 = 7. Tens: _ + 1 = 6, so the missing digit is 5. Now (a): find the three missing digits.',
       check=lambda: one([[a, b, c] for a in range(10) for b in range(10) for c in range(10) if 3000 + a * 100 + 47 + 2500 + b * 10 + 8 == c * 1000 + 25]),
       sol_fig=lambda got: FIG['l2_q1_sol'],
