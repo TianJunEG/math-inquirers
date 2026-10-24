@@ -24,11 +24,38 @@
   // opt.pre = text printed just before the box ('6:' for a box in '6:{f1}'), which the child may repeat ('6:20').
   function str(s) { return String(s == null ? '' : s); }
   function minus(s) { return str(s).replace(/[−–—‐‑]/g, '-'); }
+  // Number words ('five', 'twenty-five', 'one hundred and five', 'minus five') are read ONLY when the item declares words:true (no default).
+  var NW = { zero: 0, one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10, eleven: 11, twelve: 12, thirteen: 13, fourteen: 14, fifteen: 15, sixteen: 16, seventeen: 17, eighteen: 18, nineteen: 19, twenty: 20, thirty: 30, forty: 40, fifty: 50, sixty: 60, seventy: 70, eighty: 80, ninety: 90 };
+  function wordsToNum(s) {
+    var t = str(s).normalize('NFKC').toLowerCase().replace(/[-,]/g, ' ').replace(/\band\b/g, ' ').replace(/\s+/g, ' ').trim().replace(/[.!]+$/, ''), neg = false, ws, i, w, chunk = 0, cur = 0, total = 0, hund = false, seen = false;
+    if (/^(minus|negative) /.test(t)) { neg = true; t = t.replace(/^\S+ /, ''); }
+    if (!t) return null;
+    ws = t.split(' ');
+    for (i = 0; i < ws.length; i++) {
+      w = ws[i];
+      if (NW[w] !== undefined) {
+        if (NW[w] >= 20) { if (chunk) return null; chunk = NW[w]; }
+        else if (NW[w] > 0 || ws.length === 1) { if (chunk && !(chunk >= 20 && chunk % 10 === 0 && NW[w] < 10)) return null; chunk += NW[w]; }
+        else return null;
+        seen = true;
+      } else if (w === 'hundred') { if (hund || chunk < 1 || chunk > 9) return null; cur = chunk * 100; chunk = 0; hund = true; }
+      else if (w === 'thousand') { if (cur + chunk < 1 || total) return null; total = (cur + chunk) * 1000; cur = 0; chunk = 0; hund = false; }
+      else return null;
+    }
+    if (!seen && !total && !cur) return null;
+    var v = total + cur + chunk; return neg ? -v : v;
+  }
+  // Units after the number: a word ('301 sticks', '20 minutes', 'sq cm'), a word with an attached power ('84 cm2', '84cm^2', '84 cm²'), a rate ('km/h') or a degree sign ('-25 °C', '11°C', '44°').
+  // A single pair of brackets round the whole answer is ignored ('(-25)'). Two numbers ('4 or 5', '1 2') are never a unit.
+  var UW = '[a-z][a-z.]*(?:\\^?[23]|\\s?[²³])?', UNITRE = new RegExp('^(-?\\d[\\d, ]*?(?:\\.0+)?)\\s*(?:[°º]\\s*[a-z]?|' + UW + '(?:\\s+' + UW + ')*(?:\\/[a-z]+)?)$', 'i');
   function toNum(s, opt) {
-    s = minus(s).trim().replace(/^\$\s*/, '');
+    s = minus(s).trim();
+    var pb = /^\(\s*([^()]*?)\s*\)\s*(.*)$/.exec(s); if (pb) s = pb[2] ? pb[1] + ' ' + pb[2] : pb[1];   // '(-25)' and '(-25) °C'
+    if (opt && opt.words) { var wn = wordsToNum(s); if (wn !== null) return wn; }
+    s = s.replace(/^\$\s*/, '');
     if (opt && opt.pre && s.indexOf(opt.pre) === 0) s = s.slice(opt.pre.length).trim();
     s = s.replace(/\.0*$/, '');
-    if (!opt || opt.unit !== false) { var u = /^(-?\d[\d, ]*?)\s*[a-z][a-z .²³]*$/i.exec(s); if (u) s = u[1].trim(); }
+    if (!opt || opt.unit !== false) { var u = UNITRE.exec(s); if (u) s = u[1].trim().replace(/\.0+$/, ''); }
     if (/^-?\d{1,3}(?:[, ]\d{3})+$/.test(s)) s = s.replace(/[, ]/g, '');
     return /^-?\d+$/.test(s) ? +s : null;
   }
@@ -74,6 +101,60 @@
     if (m2) { var r2 = evalExpr(m2[1].replace(/(\d) (\d+\/\d)/, '($1+$2)').replace(/ /g, '')), l2 = evalExpr(m2[2]); if (l2 != null && r2 != null && Math.abs(l2 - r2) < 1e-9) cands.push(m2[2]); }
     return keys.some(function (x) { return cands.some(function (c) { return normText(x) === normText(c) || squash(x) === squash(c); }); });
   }
+  // Equal fractions in a typed list (item flag equiv_frac): '7/12, 8/12, 10/12' is right for the key '7/12, 2/3, 5/6'. Same order, same number of fractions, each equal in value
+  // (cross-multiplied); any other symbol (such as < or >) must match the key. Without the flag only the printed forms are accepted.
+  function fracTok(s) {
+    var t = [], rest = minus(str(s).normalize('NFKC')).replace(/\s*\/\s*/g, '/').replace(/(-?)(\d+)\s+(\d+)\/(\d+)|(-?\d+)\/(\d+)|-?\d+/g, function (m, sg, w, a, b, n2, d2) {
+      var f = w !== undefined ? { n: (+w * +b + +a) * (sg ? -1 : 1), d: +b } : n2 !== undefined ? { n: +n2, d: +d2 } : { n: +m, d: 1 };
+      t.push(f); return ' ';
+    });
+    return { t: t, rest: rest.replace(/[\s,;]+/g, '').replace(/[.!]+$/, '') };
+  }
+  function fracListOK(keys, v) {
+    var V = fracTok(v);
+    return V.t.length > 0 && V.t.every(function (f) { return f.d > 0; }) && keys.some(function (k) {
+      var K = fracTok(k);
+      return K.t.length === V.t.length && K.rest === V.rest && K.t.every(function (f, i) { return f.d > 0 && f.n * V.t[i].d === V.t[i].n * f.d; });
+    });
+  }
+  // Algebra rules (item flag poly:'n'): the typed rule is compared with the key as a POLYNOMIAL in n. A tiny recursive-descent parser (digits, the letter, + - x * / ( ) ^ and writing side by side
+  // such as 4n or 4(n+3)); division only by a number. Nothing is ever evaluated as code. '(n+3)x4 = 4n+12' and 'OUT = 4(n+3)' are chains of '=': every side that is not the word OUT must equal the key.
+  function polyParse(s, vr) {
+    s = minus(str(s).replace(/²/g, '^2').replace(/³/g, '^3').normalize('NFKC')).toLowerCase().replace(/[×·⋅*]/g, '*').replace(/÷/g, '/');   // the powers first: NFKC would turn ² into a plain 2
+    if (vr !== 'x') s = s.replace(/x/g, '*');
+    if (/\d\s+\d/.test(s)) return null;
+    var t = s.replace(/\s+/g, '').match(/\d+\.?\d*|\.\d+|[-+*\/()^]|./g) || [], p = 0, bad = false;
+    function num(x) { return x != null && /^(\d+\.?\d*|\.\d+)$/.test(x); }
+    function mul(a, b) { var r = [], i, j; if (a.length + b.length > 10) { bad = true; return [0]; } for (i = 0; i < a.length; i++) for (j = 0; j < b.length; j++) r[i + j] = (r[i + j] || 0) + a[i] * b[j]; return r; }
+    function atom() { var x = t[p++]; if (x === '(') { var v = sum(); if (t[p++] !== ')') bad = true; return v; } if (x === vr) return [0, 1]; if (num(x)) return [parseFloat(x)]; bad = true; return [0]; }
+    function pw() { var b = atom(), e, r, i; if (t[p] === '^') { p++; e = t[p++]; if (!/^[0-4]$/.test(e || '')) { bad = true; return b; } r = [1]; for (i = 0; i < +e; i++) r = mul(r, b); return r; } return b; }
+    function un() { if (t[p] === '-') { p++; return mul([-1], un()); } if (t[p] === '+') { p++; return un(); } return pw(); }
+    function prod() {
+      var v = un(), o, d;
+      for (;;) {
+        o = t[p];
+        if (o === '*') { p++; v = mul(v, un()); }
+        else if (o === '/') { p++; d = un(); if (d.length !== 1 || d[0] === 0) { bad = true; return v; } v = v.map(function (c) { return c / d[0]; }); }
+        else if (o === '(' || o === vr || (num(o) && !num(t[p - 1]))) v = mul(v, pw());
+        else return v;
+      }
+    }
+    function sum() { var v = prod(), o, r, i, n; while (t[p] === '+' || t[p] === '-') { o = t[p++]; r = prod(); n = Math.max(v.length, r.length); for (i = 0; i < n; i++) v[i] = (v[i] || 0) + (o === '+' ? 1 : -1) * (r[i] || 0); } return v; }
+    var out = sum();
+    if (bad || p < t.length) return null;
+    while (out.length > 1 && Math.abs(out[out.length - 1]) < 1e-12) out.pop();
+    return out.every(isFinite) ? out : null;
+  }
+  function polyEq(a, b) { return a.length === b.length && a.every(function (c, i) { return Math.abs(c - b[i]) < 1e-9 * (1 + Math.abs(c)); }); }
+  function ruleSides(s) { return minus(str(s)).trim().replace(/[.!]+$/, '').split('=').map(function (x) { return x.trim(); }).filter(function (x) { return !/^out$/i.test(x); }); }
+  function polyOK(keys, v, vr) {
+    vr = typeof vr === 'string' && vr.length === 1 && vr !== 'x' ? vr.toLowerCase() : 'n';
+    var kp = [], sides = ruleSides(v);
+    keys.forEach(function (k) { ruleSides(k).forEach(function (sd) { var q = polyParse(sd, vr); if (q) kp.push(q); }); });
+    return sides.length > 0 && kp.length > 0 && sides.every(function (sd) { var q = polyParse(sd, vr); return !!q && kp.some(function (k) { return polyEq(q, k); }); });
+  }
+  // One text answer: the printed forms (textOK), plus, only when the item says so, equal fractions (equiv_frac) or an equal polynomial (poly).
+  function textMatch(o, keys, v) { return textOK(keys, v) || !!(o && o.equiv_frac && fracListOK(keys, v)) || !!(o && o.poly && polyOK(keys, v, o.poly)); }
   // END SHARED
   function answered(type, v) {
     if (v == null) return false;
@@ -106,8 +187,8 @@
   }
   function decEqual(a, b) { return a.neg === b.neg && a.i === b.i && a.f === b.f; }
 
-  function nopt(rec) { return { unit: rec.unit }; }
-  function fopt(rec, i) { return { unit: rec.unit, pre: rec.pre && rec.pre[i] || '' }; }
+  function nopt(rec) { return { unit: rec.unit, words: rec.words }; }
+  function fopt(rec, i) { return { unit: rec.unit, words: rec.words, pre: rec.pre && rec.pre[i] || '' }; }
   function matchSlip(rec, v) { // which listed wrong answer (if any) the child gave: its index, so a report can say why
     var slips = rec.slips || [], got, i;
     for (i = 0; i < slips.length; i++) {
@@ -141,7 +222,7 @@
         else ok = true;
         break; }
       case 'decimal': { var d = parseDecimal(v), kd = parseDecimal(key); ok = !!(d && kd && decEqual(d, kd)); break; }
-      case 'text': { var keys = Array.isArray(key) ? key : [key]; ok = textOK(keys, v); break; }
+      case 'text': { var keys = Array.isArray(key) ? key : [key]; ok = textMatch(rec, keys, v); break; }
       default: throw new Error('unknown item type ' + rec.type);
     }
     r = { mark: ok ? 'right' : 'wrong' };

@@ -13,23 +13,19 @@ Method: every puzzle is re-solved by `brute.py` (independent of the author solve
 
 Similarity sources checked: holiday banks, own term lessons, all extension workbook data, the school booklets, our book drafts and catalogues, external private source files, and the seven fixed website puzzles.
 
-FAIL count: 120. REVIEW items: 65.
+FAIL count: 109. REVIEW items: 75.
 
 - FAIL L1-corners [12-01]: unknown sub-structure 'shapes.corners_total'
-- FAIL L1-corners [12-01]: same story as a source: same objects (4 of 5 story words) and a same number: "Ask      Expect       How many sides has a triangle? 3      How many corners has a square? 4      Wh ..." (hp/Math_Inquirers_P1_Tutor_Guide.html) words corner,shape,square,triangle
 - FAIL L1-lineup [12-02]: unknown sub-structure 'counting_choices.line_up'
-- FAIL L1-pyramid [12-03]: same story as a source: same objects (4 of 5 story words) and a same number: "| 6 | Which round piece fills the hole in a brick wall | option 2 | moderate | Matching along the to ..." (docs/sasmo/private_solution_notes_k.md) words bottom,brick,row,top
+- FAIL L1-pyramid [12-03]: same story as a source: same objects (4 of 5 story words) and 2 same numbers: "| 6 | Which round piece fills the hole in a brick wall | option 2 | moderate | Matching along the to ..." (docs/sasmo/private_solution_notes_k.md) words bottom,brick,row,top
 - FAIL L1-doublemarbles [12-04]: unknown sub-structure 'backwards.undo_double'
-- FAIL L1-fruitclass [12-06]: same story as a source: same objects (4 of 7 story words) and 3 same numbers: "&emsp;Class A has 10 children: apple 6, orange 4. Class B has 20 children: apple 8, orange 12. Which ..." (hp/Math_Inquirers_P1_Question_Bank.html) words apple,children,class,fruit
 - FAIL L1-stickerhop [12-07]: unknown sub-structure 'word_problems.chain_more_than'
 - FAIL L1-card42 [12-08]: unknown sub-structure 'perimeter_area.perimeter_rectangle'
 - FAIL L1-sweetboxes [12-11]: unknown sub-structure 'multiplication.groups_of_groups'
-- FAIL L1-sweetboxes [12-11]: same story as a source: same objects (3 of 4 story words) and 2 same numbers: "- **ACSJ21BA3 Q4** | 1 mk | mass | DIAG | d2 | pic Y - Q: [Balance: cereal box and bag of sweets; sc ..." (docs/books/private_p2_papers/non_routine_questions.md) words bag,box,sweet
 - FAIL L1-between [12-12]: unknown sub-structure 'counting_range.exclusive'
 - FAIL L1-coinpurse [12-13]: unknown sub-structure 'coins.coin_total'
 - FAIL L1-giftstickers [12-14]: unknown sub-structure 'missing_number.missing_addend'
 - FAIL L1-bundles [12-15]: unknown sub-structure 'place_value.regroup'
-- FAIL L1-bundles [12-15]: same story as a source: same objects (4 of 4 story words) and a same number: "], "hint": "Take 10 of the loose sticks and tie them into a bundle. How many bundles now? How many s ..." (term/l1/lessons/l01.json) words bundle,single,stick,tie
 - FAIL L1-twocards [12-17]: unknown sub-structure 'digit_cards.largest_two_digit'
 - FAIL L1-cardpairs [12-20]: unknown sub-structure 'counting_pairs.pairs_with_sum'
 - FAIL L1-squares22 [12-22]: sub-structure counting_grid.squares_in_grid is not allowed at level 1 (levels [3, 4, 5, 6])
@@ -39,7 +35,6 @@ FAIL count: 120. REVIEW items: 65.
 - FAIL L1-fewestcoins [12-27]: unknown sub-structure 'coins.fewest_coins'
 - FAIL L1-bluebeads [12-28]: unknown sub-structure 'repeating_pattern.cycle_count'
 - FAIL L1-orangebags [12-30]: unknown sub-structure 'division.groups_count'
-- FAIL L1-orangebags [12-30]: same story as a source: same objects (3 of 4 story words) and 2 same numbers: "CBC-11 teacher       Car Multiplication &ndash; Teacher Answers           Teacher answers: each answ ..." (school/colour_by_code/out/p1/html/CBC-11_car_mult_teacher.html) words bag,fill,orange
 - FAIL L2-concert [12-02]: unknown sub-structure 'time.hours_to_minutes'
 - FAIL L2-stickerchain [12-04]: unknown sub-structure 'word_problems.chain_more_than'
 - FAIL L2-lineup4 [12-05]: unknown sub-structure 'counting_choices.line_up'
@@ -54,19 +49,17 @@ FAIL count: 120. REVIEW items: 65.
 - FAIL L2-floortiles [12-21]: unknown sub-structure 'repeating_pattern.cycle_at'
 - FAIL L2-stickerpages [12-22]: unknown sub-structure 'division.groups_count'
 - FAIL L2-digitvalue [12-23]: unknown sub-structure 'place_value.digit_value_gap'
-- FAIL L2-pyramid4 [12-24]: same story as a source: same objects (4 of 5 story words) and a same number: "| 6 | Which round piece fills the hole in a brick wall | option 2 | moderate | Matching along the to ..." (docs/sasmo/private_solution_notes_k.md) words bottom,brick,row,top
+- FAIL L2-pyramid4 [12-24]: same story as a source: same objects (4 of 5 story words) and 2 same numbers: "| 6 | Which round piece fills the hole in a brick wall | option 2 | moderate | Matching along the to ..." (docs/sasmo/private_solution_notes_k.md) words bottom,brick,row,top
 - FAIL L2-lunchtotal [12-26]: unknown sub-structure 'money.total_cost'
 - FAIL L2-fewestcoins [12-27]: unknown sub-structure 'coins.fewest_coins'
 - FAIL L2-pentagon [12-31]: unknown sub-structure 'perimeter_area.perimeter_regular'
 - FAIL L3-ricebag [12-01]: same story as a source: same wording with other numbers (9 of 12 word triples): "m      3   Rice weighs 4 kg 400 g. Flour weighs 2 kg 950 g. How many grams is that in all? ..." (school/p3/out/S2_pupil.html) words gram,rice,weigh
-- FAIL L3-bigsumcards [12-03]: same story as a source: same objects (4 of 4 story words) and a same number: "warmQs: [['4 hundreds, 6 tens, 2 ones = ?', '462'], ['What is the 8 worth in 384?', '80'], ['10 more ..." (p2/content/l1.js) words biggest,card,once,using
+- FAIL L3-bigsumcards [12-03]: same story as a source: same objects (3 of 4 story words) and 3 same numbers: "Round 1: biggest number wins. Round 2: closest to 50 000 wins.', explore: 'Pairs use the digit cards ..." (p4/content/l2.js) words biggest,card,once
 - FAIL L3-cartons [12-04]: unknown sub-structure 'place_value.regroup'
-- FAIL L3-cartons [12-04]: same story as a source: same objects (4 of 6 story words) and 2 same numbers: ""tier": "start", "page": 1, "text": "A shop has 3 boxes of 1000 pins, 14 packs of 100 pins and 6 loo ..." (extension/data/l3_u01.json) words box,loose,pack,shop
 - FAIL L3-mat96 [12-05]: unknown sub-structure 'perimeter_area.missing_side_from_area'
 - FAIL L3-canscollect [12-06]: unknown sub-structure 'word_problems.chain_more_than'
 - FAIL L3-tables47 [12-07]: unknown sub-structure 'division.boxes_needed'
 - FAIL L3-nearest100 [12-09]: sub-structure rounding.round_to_place is not allowed at level 3 (levels [4, 5, 6])
-- FAIL L3-brickpyramid [12-10]: same story as a source: same objects (4 of 8 story words) and 3 same numbers: "| 6 | Which round piece fills the hole in a brick wall | option 2 | moderate | Matching along the to ..." (docs/sasmo/private_solution_notes_k.md) words bottom,brick,row,top
 - FAIL L3-ropestring [12-12]: unknown sub-structure 'bar_model.times_difference'
 - FAIL L3-petshop [12-13]: same story as a source: same specific objects (badminton, football, sport, swimm, tenni): "400 pupils each chose their favourite sport. Football  15%   Swimming  10%   Badminton  ? Tennis  20 ..." (school/p6/out/S2_pupil.html) words badminton,football,sport,swimm,tenni
 - FAIL L3-flagstrip [12-14]: unknown sub-structure 'repeating_pattern.cycle_count'
@@ -80,16 +73,15 @@ FAIL count: 120. REVIEW items: 65.
 - FAIL L4-fivecards [12-04]: unknown sub-structure 'digit_cards.smallest_odd'
 - FAIL L4-fivecards [12-04]: same story as a source: same objects (3 of 3 story words) and 3 same numbers: "| ID | Tier | Lessons | Question | Answer | |---|---|---|---|---| | EX-LIST-1 | Think harder | 1, 34 ..." (docs/books/p3_non_routine_catalogue.md) words card,odd,smallest
 - FAIL L4-ropecut [12-05]: unknown sub-structure 'fractions.subtract'
-- FAIL L4-ropecut [12-05]: same story as a source: same objects (3 of 4 story words) and 2 same numbers: ""text": "Ali cuts 4 cubes off a rope, then 3 more cubes. ..." (extension/data/l1_u10.json) words cut,off,rope
 - FAIL L4-bracketcalc [12-06]: unknown sub-structure 'order_ops.brackets_first'
-- FAIL L4-brickpyramid [12-07]: same story as a source: same objects (4 of 6 story words) and 2 same numbers: "| 6 | Which round piece fills the hole in a brick wall | option 2 | moderate | Matching along the to ..." (docs/sasmo/private_solution_notes_k.md) words bottom,brick,row,top
+- FAIL L4-brickpyramid [12-07]: same story as a source: same objects (4 of 6 story words) and 3 same numbers: "| 6 | Which round piece fills the hole in a brick wall | option 2 | moderate | Matching along the to ..." (docs/sasmo/private_solution_notes_k.md) words bottom,brick,row,top
 - FAIL L4-unpainted [12-08]: unknown sub-structure 'cubes.unpainted_inside'
 - FAIL L4-unpainted [12-08]: same story as a source: same wording with other numbers (13 of 28 word triples): "What is the greatest number of cubes you can add without changing either view? | 6 | | EX-DIAG-3 | T ..." (docs/books/p6_non_routine_catalogue.md) words cube,cut,paint
 - FAIL L4-liftmin [12-09]: unknown sub-structure 'moves.max_reach'
 - FAIL L4-nametags [12-11]: unknown sub-structure 'division.boxes_needed'
 - FAIL L4-coins60 [12-12]: unknown sub-structure 'coins.coin_ways'
 - FAIL L4-fivechildren [12-13]: unknown sub-structure 'logic_order.order_five'
-- FAIL L4-shellpiles [12-14]: same story as a source: same objects (4 of 5 story words) and a same number: "{ q: 'Siti builds towers of cubes. Tower 1 has 2 cubes, tower 2 has 5 cubes, tower 3 has 8 cubes. Th ..." (p2/content/l4.js) words build,cube,grow,tower
+- FAIL L4-shellpiles [12-14]: same story as a source: same objects (4 of 5 story words) and 3 same numbers: "{ q: 'Siti builds towers of cubes. Tower 1 has 2 cubes, tower 2 has 5 cubes, tower 3 has 8 cubes. Th ..." (p2/content/l4.js) words build,cube,grow,tower
 - FAIL L4-yearlater [12-16]: same story as a source: same wording with other numbers (9 of 13 word triples): "], [ "Today is Wednesday. What day of the week will it be in 100 days? ..." (p6/content/gaps.json) words day,today,wednesday,week
 - FAIL L4-divcalc [12-17]: unknown sub-structure 'order_ops.divide_then_multiply'
 - FAIL L4-dollarshare [12-19]: unknown sub-structure 'word_problems.equalise'
@@ -104,28 +96,25 @@ FAIL count: 120. REVIEW items: 65.
 - FAIL L5-committee [12-03]: unknown sub-structure 'counting_choices.permutations_k'
 - FAIL L5-blockedroute [12-05]: unknown sub-structure 'counting_routes.routes_avoiding_point'
 - FAIL L5-penboxes [12-07]: not an instance of sub-structure bar_model.times_as_many (parameters ['diff'] are missing)
-- FAIL L5-penboxes [12-07]: same story as a source: same objects (4 of 5 story words) and a same number: "**CMP-246** | 2025 | Raffles Girls | EOY | Q25 | 4 marks | MULT | difficulty 5 | picture no Q: 112 p ..." (docs/books/private_p3_papers/non_routine_questions.md) words blue,box,pen,red
 - FAIL L5-redeye [12-10]: unknown sub-structure 'time.across_midnight'
 - FAIL L5-mangoes [12-12]: unknown sub-structure 'backwards.two_step'
 - FAIL L5-stampgive [12-13]: unknown sub-structure 'word_problems.equalise'
 - FAIL L5-flag [12-14]: unknown sub-structure 'triangle_area.triangle_area'
-- FAIL L5-flag [12-14]: same story as a source: same objects (3 of 5 story words) and 2 same numbers: "| 81 | | Prelim | 2025 | Nanyang | P2-11 | 4 | Pour tank H into tank G (base area 5000) | 3 | 1 | H  ..." (docs/books/private_p6_papers/non_routine_questions.md) words area,base,height
+- FAIL L5-flag [12-14]: same story as a source: same wording with other numbers (9 of 15 word triples): "What is the area of the triangle joining P, Q and the bottom-left corner?', a: '36 cm² (96 − 24 − 12 ..." (p5/content/l4.js) words area,base,height
 - FAIL L5-sevendigit [12-15]: unknown sub-structure 'place_value.digit_value_gap'
 - FAIL L5-flourbags [12-16]: unknown sub-structure 'decimals.multiply_whole'
 - FAIL L5-twobrackets [12-17]: unknown sub-structure 'order_ops.bracket_times_bracket'
 - FAIL L5-sumproducts [12-19]: unknown sub-structure 'order_ops.two_products'
 - FAIL L5-fiftycents [12-23]: unknown sub-structure 'coins.coin_ways'
 - FAIL L5-fourside [12-28]: unknown sub-structure 'angles.quadrilateral_sum'
-- FAIL L6-pyramid5 [12-01]: same story as a source: same objects (4 of 6 story words) and 2 same numbers: "| 6 | Which round piece fills the hole in a brick wall | option 2 | moderate | Matching along the to ..." (docs/sasmo/private_solution_notes_k.md) words bottom,brick,row,top
 - FAIL L6-cakeshare [12-02]: unknown sub-structure 'fractions.multiply'
 - FAIL L6-days500 [12-03]: same story as a source: same wording with other numbers (6 of 12 word triples): "With the range 20 to 60, 52 would fit too.' }, { q: 'Today is Monday. What day of the week will it b ..." (p3/content/l5.js) words day,today,week
 - FAIL L6-machine3 [12-04]: unknown sub-structure 'backwards.three_step'
 - FAIL L6-classratio [12-05]: unknown sub-structure 'ratio.whole_from_part'
-- FAIL L6-classratio [12-05]: same story as a source: same objects (4 of 5 story words) and a same number: "| EX-MULTI-3 | Go further | 3/5 of a class are girls. 1/4 of the girls and 1/3 of the boys wear glas ..." (docs/books/p5_non_routine_catalogue.md) words boy,class,girl,pupil
+- FAIL L6-classratio [12-05]: same story as a source: same objects (4 of 5 story words) and 2 same numbers: "There are 18 red beads. How many beads are in the bag? 5   The ratio of boys to girls in a class is  ..." (school/p6/out/S2_pupil.html) words boy,class,girl,ratio
 - FAIL L6-podium10 [12-09]: unknown sub-structure 'counting_choices.permutations_k'
-- FAIL L6-clockhours [12-11]: same story as a source: same wording with other numbers (6 of 13 word triples): "Sides? ____'), H.sub('d', 'It is 9 o’clock. What time will a 12-hour clock show 100 hours from now? ..." (p6/content/l10.js) words clock,hour
+- FAIL L6-clockhours [12-11]: same story as a source: same wording with other numbers (6 of 13 word triples): "____'), H.sub('d', 'It is 9 o’clock. What time will a 12-hour clock show 100 hours from now? ..." (p6/content/l10.js) words clock,hour
 - FAIL L6-tankdiff [12-15]: unknown sub-structure 'bar_model.times_difference'
-- FAIL L6-tankdiff [12-15]: same story as a source: same objects (4 of 4 story words) and a same number: "| EX-DIAG-3 | Go further | 8, 24 | A tank is filled with 4 jugs of water. A jug holds 3 bottles. A b ..." (docs/books/p2_non_routine_catalogue.md) words hold,litre,tank,water
 - FAIL L6-whileloop [12-17]: unknown sub-structure 'programs.while_loop'
 - FAIL L6-secondtallest [12-18]: unknown sub-structure 'logic_order.order_five'
 - FAIL L6-savingspct [12-20]: unknown sub-structure 'percentage.find_whole'
@@ -133,18 +122,23 @@ FAIL count: 120. REVIEW items: 65.
 - FAIL L6-quizmean [12-25]: unknown sub-structure 'averages.missing_value'
 - FAIL L6-moneyshare [12-26]: unknown sub-structure 'ratio.share'
 - FAIL L6-gaussjar [12-28]: unknown sub-structure 'series_sum.arithmetic_series'
-- FAIL L6-ribbonpieces [12-29]: same story as a source: same objects (3 of 3 story words) and 2 same numbers: "| EX-DIAG-3 | Go further | 9, 31 | A ribbon is 24 cm long. Mei cuts it into pieces of 4 cm. ..." (docs/books/p1_non_routine_catalogue.md) words cut,piece,ribbon
+- FAIL L6-ribbonpieces [12-29]: same story as a source: same objects (3 of 3 story words) and 3 same numbers: "| Prelim | 2021 | NanHua | B2-3 | 2 | factors | 3 | 0 | Sum of greatest and smallest factor of a num ..." (docs/books/private_p6_papers/non_routine_questions.md) words cut,piece,ribbon
 - FAIL L6-removed [12-30]: unknown sub-structure 'averages.remove_one'
 
-- REVIEW L1-lineup [12-02]: story words 3 of 5 like "Q4: each row is its own story. Q5: count in jumps of 5 along the line. Q6: 4 friends with  ..." (term/l1/lessons/l17.json)
+- REVIEW L1-corners [12-01]: story words 4 of 5 like "2D Shapes  •  Week 4 CORE (low floor: start with objects, drawing or counting) C1. &emsp;H ..." (hp/Math_Inquirers_P1_Question_Bank.html)
+- REVIEW L1-lineup [12-02]: story words 3 of 5 like "G3. &emsp;Ali, Ben and Mei stand in a line. List every different order they can stand in. ..." (hp/Math_Inquirers_P1_Question_Bank.html)
+- REVIEW L1-fruitclass [12-06]: story words 6 of 7 like "Each child votes for ONE fruit. Make a tally mark for each vote.',{before:140,after:100})) ..." (p1/build.js)
 - REVIEW L1-bondten [12-10]: number 0 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-sweetboxes [12-11]: story words 3 of 4 like "- **ACSJ21BA3 Q4** | 1 mk | mass | DIAG | d2 | pic Y - Q: [Balance: cereal box and bag of  ..." (docs/books/private_p2_papers/non_routine_questions.md)
 - REVIEW L1-bundles [12-15]: number 10 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-bundles [12-15]: story words 4 of 4 like "], "note": "Show ten single sticks, then tie them into one bundle. ..." (term/l1/lessons/l01.json)
 - REVIEW L1-traycounters [12-16]: story words 5 of 8 like "## 5. Worst case, pigeonhole and unattainable totals [draft, not yet in the program] (sugg ..." (docs/sasmo/g6_original_problems_draft.md)
 - REVIEW L1-twocards [12-17]: story words 3 of 3 like "## 9. Possible or impossible [draft, not yet in the program] (suggested for L10) **9.1** R ..." (docs/sasmo/g3_original_problems_draft.md)
 - REVIEW L1-squares22 [12-22]: story words 3 of 5 like "Never announce who is on which page, and do not split a pair unless both children agree. T ..." (hp/Math_Inquirers_P1_Tutor_Guide.html)
 - REVIEW L1-ruler [12-29]: story words 4 of 6 like "&emsp;A pencil is 8 cm long. It starts at the 3 cm mark on a ruler. At which mark does it  ..." (hp/Math_Inquirers_P1_Question_Bank.html)
+- REVIEW L1-orangebags [12-30]: story words 3 of 4 like "A: 14 **GC-037** | 2024 | Henry Park | EOY | Q7 | 2 marks | DIV | difficulty 2 | picture n ..." (docs/books/private_p3_papers/non_routine_questions.md)
 - REVIEW L2-concert [12-02]: story words 3 of 4 like "- Q: James left his house for school in the morning. He took 30 minutes to wash up and get ..." (docs/books/private_p2_papers/non_routine_questions.md)
-- REVIEW L2-lineup4 [12-05]: story words 3 of 5 like "Q4: each row is its own story. Q5: count in jumps of 5 along the line. Q6: 4 friends with  ..." (term/l1/lessons/l17.json)
+- REVIEW L2-lineup4 [12-05]: story words 3 of 5 like "G3. &emsp;Ali, Ben and Mei stand in a line. List every different order they can stand in. ..." (hp/Math_Inquirers_P1_Question_Bank.html)
 - REVIEW L2-bigtens [12-07]: number 31 in the question is not a parameter (written in the wording; check)
 - REVIEW L2-stickershare [12-12]: story words 3 of 4 like "The barrel and one pail can hold 175 litres. How much water can 1 pail hold?|15 l BA3|2021 ..." (docs/books/private_p3_papers/records.txt)
 - REVIEW L2-squares33 [12-15]: story words 3 of 4 like "Never announce who is on which page, and do not split a pair unless both children agree. T ..." (hp/Math_Inquirers_P1_Tutor_Guide.html)
@@ -156,6 +150,7 @@ FAIL count: 120. REVIEW items: 65.
 - REVIEW L3-cartons [12-04]: number 1000 in the question is not a parameter (written in the wording; check)
 - REVIEW L3-cartons [12-04]: number 100 in the question is not a parameter (written in the wording; check)
 - REVIEW L3-cartons [12-04]: number 10 in the question is not a parameter (written in the wording; check)
+- REVIEW L3-cartons [12-04]: story words 4 of 6 like ""tier": "start", "page": 1, "text": "A shop has 3 boxes of 1000 pins, 14 packs of 100 pins ..." (extension/data/l3_u01.json)
 - REVIEW L3-tables47 [12-07]: story words 3 of 5 like "- [EOY_2025_CatholicHigh Q18, 2m, Table, diff 2] The table below shows the favourite snack ..." (docs/books/private_p4_papers/non_routine_questions.md)
 - REVIEW L3-smalldigitsum [12-08]: number 3 in the question is not a parameter (written in the wording; check)
 - REVIEW L3-slicesequal [12-11]: story words 4 of 6 like "What fraction is left?', a: '3/4 eaten, 1/4 left.' }, { q: 'A pizza is cut into 12 equal s ..." (p5/content/l2.js)
@@ -164,11 +159,12 @@ FAIL count: 120. REVIEW items: 65.
 - REVIEW L3-watertank [12-16]: number 12 in the question is not a parameter (written in the wording; check)
 - REVIEW L3-watertank [12-16]: number 3 in the question is not a parameter (written in the wording; check)
 - REVIEW L3-dotgaps [12-17]: number 1 in the question is not a parameter (written in the wording; check)
-- REVIEW L3-secondthursday [12-18]: story words 3 of 4 like ""tool_name": "Make a table", "q": "A month has 30 days. The 1st of the month is a Tuesday. ..." (p2/qbank_skills.json)
+- REVIEW L3-secondthursday [12-18]: story words 3 of 4 like "b) Wednesday. c) Thursday.", "say": "Write the dates in rows of 7 under the days of the we ..." (p2/qbank_skills.json)
 - REVIEW L3-beadbag [12-20]: story words 5 of 5 like "Solution: Ben has 5 units and Siti 3 units; after the gift they are equal, so the 2-unit g ..." (docs/sasmo/g5_original_problems_draft.md)
 - REVIEW L3-strawbridge [12-21]: number 5 in the question is not a parameter (written in the wording; check)
 - REVIEW L3-cryptsum [12-22]: number 3 in the question is not a parameter (written in the wording; check)
 - REVIEW L3-frame32 [12-25]: story words 4 of 5 like "**GEO-020** | 2022 | Red Swastika | RV1 | Q45 | 4 marks | AREA | difficulty 3 | picture ye ..." (docs/books/private_p3_papers/non_routine_questions.md)
+- REVIEW L4-ropecut [12-05]: story words 3 of 4 like ""page": 1, "text": "A rope is 15 cubes long. Ali cuts off 6 cubes. ..." (extension/data/l1_u09.json)
 - REVIEW L4-unpainted [12-08]: number 64 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-liftmin [12-09]: number 9 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-liftmin [12-09]: number 4 in the question is not a parameter (written in the wording; check)
@@ -179,12 +175,13 @@ FAIL count: 120. REVIEW items: 65.
 - REVIEW L4-stationery [12-20]: number 1000 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-stationery [12-20]: number 100 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-stationery [12-20]: number 10 in the question is not a parameter (written in the wording; check)
-- REVIEW L4-notebooks [12-25]: story words 3 of 4 like "| | EX-BACK-2 | Think harder | 5 | Aisha bought 4 notebooks the same price. She paid with  ..." (docs/books/p2_non_routine_catalogue.md)
+- REVIEW L4-notebooks [12-25]: story words 3 of 4 like "- Recurring structure: the pictured price list comes first ("items for sale in a toy shop" ..." (docs/books/p1_school_paper_patterns.md)
 - REVIEW L4-palyears [12-29]: number 1331 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-palyears [12-29]: number 4 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-palyears [12-29]: story words 4 of 6 like "How much does the total change for each swap?”'], hints: ['Hint 1: “Make a table: figure n ..." (p5/content/l9.js)
 - REVIEW L5-climbing [12-02]: number 358 in the question is not a parameter (written in the wording; check)
 - REVIEW L5-rects43 [12-04]: story words 5 of 7 like "Solution: the heights of PAB and PCD from P add up to the height of the parallelogram, so  ..." (docs/sasmo/g6_original_problems_draft.md)
+- REVIEW L5-penboxes [12-07]: story words 5 of 5 like "Suggested home: Lesson 17 Think harder. **A5.1** [T] Box A holds 15 red pens and 21 blue p ..." (docs/books/word_problems_g1_g2_original_draft.md)
 - REVIEW L5-redeye [12-10]: story words 3 of 5 like "Solution: the day before yesterday plus 2 days is today, so today is Monday. **5.2** A fil ..." (docs/sasmo/g1_original_problems_draft.md)
 - REVIEW L5-teams16 [12-11]: story words 3 of 5 like "ANSWER: 40 - [SA2_2021_SCGS P1-25, 2m, Tennis round robin matches, diff 3] 5 players each  ..." (docs/books/private_p5_papers/non_routine_questions.md)
 - REVIEW L5-flourbags [12-16]: story words 4 of 5 like "What was the mass of the box when it was empty? (Give your answer in kilograms)  ANSWER: 0 ..." (docs/books/private_p4_papers/non_routine_questions.md)
@@ -192,9 +189,11 @@ FAIL count: 120. REVIEW items: 65.
 - REVIEW L5-wormpole [12-27]: story words 6 of 9 like "&emsp;A snail climbs 3 cm each day and slides back 1 cm each night. It starts at the botto ..." (hp/Math_Inquirers_P1_Question_Bank.html)
 - REVIEW L5-fourside [12-28]: story words 3 of 3 like "ANSWER: F,T,F... ; rectangle - [EOY_2023_MahaBodhi Q15, 2m, Shape properties, diff 2] Alli ..." (docs/books/private_p4_papers/non_routine_questions.md)
 - REVIEW L5-fourthwednesday [12-30]: story words 3 of 4 like ""first": "A month has 31 days. The 1st is a Wednesday. Write the dates of every Wednesday. ..." (term/l1/lessons/l27.json)
+- REVIEW L6-pyramid5 [12-01]: story words 4 of 6 like "| 6 | Which round piece fills the hole in a brick wall | option 2 | moderate | Matching al ..." (docs/sasmo/private_solution_notes_k.md)
 - REVIEW L6-cakeshare [12-02]: story words 3 of 4 like "Draw the cake. What fraction of the WHOLE cake did Ali eat?', a: '1/4 of the whole cake.'  ..." (p5/content/l2.js)
 - REVIEW L6-jarcoins [12-13]: number 1 in the question is not a parameter (written in the wording; check)
 - REVIEW L6-jarcoins [12-13]: story words 3 of 5 like "A few days later Bernard started, saving an equal amount each day. ..." (docs/books/private_p5_papers/non_routine_questions.md)
+- REVIEW L6-tankdiff [12-15]: story words 4 of 4 like "| EX-DIAG-3 | Go further | 8, 24 | A tank is filled with 4 jugs of water. A jug holds 3 bo ..." (docs/books/p2_non_routine_catalogue.md)
 - REVIEW L6-decagon [12-21]: story words 4 of 5 like "Turns 60°, 90° and 120° (round 2, 3, 4 times) just redraw a hexagon, square or triangle, a ..." (p6/content/l7.js)
 - REVIEW L6-tilepattern6 [12-24]: number 3 in the question is not a parameter (written in the wording; check)
 - REVIEW L6-quizmean [12-25]: story words 3 of 5 like "- **MB23R3 Q13b** | 3 mk | graph | CMP | d2 | pic Y - Q: The graph shows the number of poi ..." (docs/books/private_p2_papers/non_routine_questions.md)

@@ -87,12 +87,12 @@ def beads_example():
 def example_beads_fig(colour):
     """The worked example of C3: beads of a pattern of 5 and where place 33 falls."""
     body = ''
-    x0, y0, pitch = 10, 6, 34
+    x0, y0, pitch = 12, 6, 36
     for i, c in enumerate(repeat(EXAMPLE5, 10)):
-        body += draw_item(c, x0 + (i % 5) * pitch + pitch / 2 + (0 if i < 5 else 0), y0 + 14 + (i // 5) * 52, 28) + T(x0 + (i % 5) * pitch + pitch / 2, y0 + 44 + (i // 5) * 52, i + 1, 14, 'middle', 700, '#44506F')
-    body += T(10, y0 + 126, 'Each set has 5 beads. Places 5, 10, 15 ... 30', 14, 'start', 600) + T(10, y0 + 144, 'end a set. So place 33 is bead 3 of a set:', 14, 'start', 600)
-    body += draw_item(colour, 24, y0 + 166, 28) + T(46, y0 + 172, colour, 15, 'start', 800)
-    return svg(330, y0 + 158, body, f'An example pattern of 5 beads. Place 33 is {colour}.')
+        body += draw_item(c, x0 + (i % 5) * pitch + pitch / 2, y0 + 14 + (i // 5) * 52, 28) + T(x0 + (i % 5) * pitch + pitch / 2, y0 + 44 + (i // 5) * 52, i + 1, 14, 'middle', 700, '#44506F')
+    body += T(12, y0 + 128, 'Each set has 5 beads.', 14, 'start', 600) + T(12, y0 + 148, 'Places 5, 10, 15 ... 30 end a set.', 14, 'start', 600) + T(12, y0 + 168, 'So place 33 is bead 3 of a set:', 14, 'start', 600)
+    body += draw_item(colour, 28, y0 + 196, 28) + T(52, y0 + 202, colour, 15, 'start', 800)
+    return svg(270, y0 + 222, body, f'An example pattern of 5 beads. Place 33 is {colour}.')
 
 
 def cores_of_three(symbols='abc'):
@@ -156,12 +156,12 @@ ITEMS = [
       steps=['The set is A, B, C, D.', 'Places 4 and 8 finish a set. Place 9 is A and place 10 is B.', 'Place 11 is C.'],
       src=['The pattern is A, B, C, D, A, B, C … What is the 11th one? (Write the letters in a row and number them.)']),
 
-    D(id='7a', tier='core', no='7(a)', type='fields', skill='growing patterns', answer=[9, 11, 13, 15, 17, 19, 21],
-      q='Ben makes a row of triangles with sticks. 1 triangle needs 3 sticks, 2 triangles need 5 and 3 triangles need 7. Keep going. How many sticks do 4 to 10 triangles need?',
-      frame='4\u00a0triangles: {f1}   5\u00a0triangles: {f2}   6\u00a0triangles: {f3}   7\u00a0triangles: {f4}   8\u00a0triangles: {f5}   9\u00a0triangles: {f6}   10\u00a0triangles: {f7}',
-      svg=triangle_rows(), check=lambda: [triangle_sticks(n) for n in range(4, 11)],
+    D(id='7a', tier='core', no='7(a)', type='fields', skill='growing patterns', answer=[9, 11, 13],
+      q='Ben makes a row of triangles with sticks. 1 triangle needs 3 sticks, 2 triangles need 5 and 3 triangles need 7. Keep going. How many sticks do 4, 5 and 6 triangles need?',
+      frame='4\u00a0triangles: {f1}   5\u00a0triangles: {f2}   6\u00a0triangles: {f3}',
+      svg=triangle_rows(), check=lambda: [triangle_sticks(n) for n in range(4, 7)],
       hint='Look at 3, 5, 7. What comes next? You can check by drawing the 4 triangles on paper and counting the sticks.',
-      steps=['1 triangle: 3 sticks. 2 triangles: 5. 3 triangles: 7.', 'The numbers go up by the same amount each time: 3, 5, 7, 9, 11, 13, 15, 17, 19, 21.', 'The boxes are 9, 11, 13, 15, 17, 19 and 21.'],
+      steps=['1 triangle: 3 sticks. 2 triangles: 5. 3 triangles: 7.', 'The numbers go up by the same amount each time: 3, 5, 7, 9, 11, 13.', 'The boxes are 9, 11 and 13.'],
       src=['Ben makes a row of triangles with sticks.', 'Count the sticks. Fill in the table. Keep going until you reach 10 triangles.']),
     D(id='7b', tier='core', no='7(b)', type='number', skill='growing patterns', answer=2,
       q='Ben makes a row of triangles with sticks. Each time Ben adds 1 more triangle, how many more sticks does he need?', svg=triangle_rows(),
@@ -177,7 +177,7 @@ ITEMS = [
       src=['Why does he need only that many more sticks? (Look at the picture.)']),
     D(id='7d', tier='core', no='7(d)', type='number', skill='growing patterns', answer=21,
       q='Ben makes a row of triangles with sticks. How many sticks are needed for 10 triangles?', svg=triangle_rows(), check=lambda: triangle_sticks(10),
-      hint='Use your table, or keep adding on until you reach 10 triangles.',
+      hint='Use the numbers you have found, and keep adding on until you reach 10 triangles.',
       steps=['The sticks are 3, 5, 7, 9, 11, 13, 15, 17, 19, 21.', '10 triangles need 21 sticks.'],
       src=['How many sticks are needed for 10 triangles?']),
     D(id='8a', tier='core', no='8(a)', type='number', skill='growing patterns', answer=7,
@@ -294,3 +294,7 @@ VARIANTS = {
                  steps=['The sticks needed are 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 40 ...', 'Stop at the last number that is not more than {s}.', 'The answers are {ans}.']),
         oracle=lambda e: dict(zip(('f1', 'f2'), most_with(square_sticks, e['s'])))),
 }
+
+for _d in ITEMS:
+    if _d['type'] == 'selfcheck' and not _d.get('open'):
+        _d['marking_mode'] = 'self'

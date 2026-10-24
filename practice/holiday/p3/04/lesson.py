@@ -41,17 +41,27 @@ def find(pred, hi=5000):
 
 def give_fig(caption):
     """The model of the example in Go further 5: Ali 50 stickers, Ben 20 stickers, Ali gives 15 so that each has 35 (the correct drawing shown after Submit)."""
-    sc, x0 = 7, 62
+    sc, x0 = 5, 56
     b = T(8, 38, 'Ali', 16, 'start', 800) + T(8, 92, 'Ben', 16, 'start', 800)
     b += Re(x0, 14, 35 * sc, 36, YEL, NAVY, 2.4) + T(x0 + 17 * sc, 38, '35', 18) + Re(x0 + 35 * sc, 14, 15 * sc, 36, '#fff', NAVY, 2.4, 0, '6 4') + T(x0 + 42.5 * sc, 38, '15', 16, 'middle', 800, TEAL)
     b += Re(x0, 68, 20 * sc, 36, YEL, NAVY, 2.4) + T(x0 + 10 * sc, 92, '20', 18) + Re(x0 + 20 * sc, 68, 15 * sc, 36, '#D3F1E4', NAVY, 2.4, 0, '6 4') + T(x0 + 27.5 * sc, 92, '+15', 16, 'middle', 800, TEAL)
-    b += Ln(x0 + 35 * sc, 6, x0 + 35 * sc, 112, 2, TEAL, '5 4') + T(x0 + 35 * sc, 130, 'same number: 35 each', 15, 'middle', 800, TEAL)
+    b += Ln(x0 + 35 * sc, 6, x0 + 35 * sc, 112, 2, TEAL, '5 4') + T(x0 + 35 * sc, 130, 'same number: 35 each', 16, 'middle', 800, TEAL)
     b += T(x0 + 50 * sc + 8, 38, '50', 16, 'start', 800)
     return svg(x0 + 50 * sc + 50, 140, b, caption)
 
 
 YN = ['Yes', 'No']
-SAME = ['The difference got bigger', 'The difference got smaller', 'The difference stayed the same']
+SAME = ['The difference became bigger', 'The difference became smaller', 'The difference stayed the same']
+
+
+def cmp_fig(a, b, caption):
+    """Two bars side by side for a comparison: the morning and afternoon amounts, and a ? for the difference."""
+    sc, x0 = 0.55, 96
+    body = T(8, 36, 'Morning', 16, 'start', 800) + T(8, 86, 'Afternoon', 16, 'start', 800)
+    body += Re(x0, 14, a * sc, 36, YEL, NAVY, 2.4) + T(x0 + a * sc / 2, 38, str(a), 18)
+    body += Re(x0, 64, b * sc, 36, YEL, NAVY, 2.4) + T(x0 + b * sc / 2, 88, str(b), 18)
+    body += Re(x0 + b * sc, 64, (a - b) * sc, 36, '#fff', NAVY, 2.4, 0, '6 4') + T(x0 + (a + b) * sc / 2, 88, '?', 20, 'middle', 800, TEAL)
+    return svg(x0 + a * sc + 12, 112, body, caption)
 
 
 def ages(years, mei=13, bro=5):
@@ -66,7 +76,7 @@ ITEMS = [
       hint='Add the two amounts sold first (486 + 378). Then take that away from 1250.',
       steps=['Add the buns sold: 486 + 378 = 864.', 'Take that away from the whole bar: 1250 - 864 = 386.', '386 buns were left. Check: 486 + 378 + 386 = 1250.'],
       src=['A bakery made 1250 buns. It sold 486 buns in the morning and 378 buns in the afternoon.', 'How many buns were left?']),
-    I(id='1b', tier='core', no='1(b)', type='number', skill='comparison model', answer=108, svg=FIG['l4_q1'],
+    I(id='1b', tier='core', no='1(b)', type='number', skill='comparison model', answer=108, svg=cmp_fig(486, 378, 'Two bars: morning 486 buns and afternoon 378 buns. The ? is how many more were sold in the morning.'),
       q='A bakery sold 486 buns in the morning and 378 buns in the afternoon. How many more buns were sold in the morning than in the afternoon? Type the number.',
       check=lambda: find(lambda d: 378 + d == 486),
       hint='Put the two amounts side by side as two bars. How much longer is the morning bar?',
@@ -152,7 +162,7 @@ ITEMS = [
 
     # ================= Investigation (Investigation and look back page, No.8: What stays the same?)
     I(id='I8-easy', tier='invest', no='8 easy', type='fields', skill='what stays the same', answer=[8, 20], frame=grp('The difference is {f1}.      The total of both ages is {f2}.'),
-      q='Investigation: What stays the same? Mei is 13 years old and her brother is 5. Easy first step: fill in the first row. In 1 year Mei is 14 and her brother is 6. What is the difference between their ages, and what is the total of both ages?',
+      q='What stays the same? Mei is 13 and her brother is 5. Easy first step: in 1 year Mei is 14 and her brother is 6. What is the difference between their ages, and what is the total of both ages?',
       check=lambda: [14 - 6, 14 + 6],
       hint='The difference is how much older Mei is: take the smaller age away from the bigger. The total is both ages added together.',
       steps=['The difference is 14 - 6 = 8.', 'The total of both ages is 14 + 6 = 20.'],
@@ -172,10 +182,10 @@ ITEMS = [
       steps=['Now: 13 and 5. Difference 13 - 5 = 8, total 13 + 5 = 18.', 'In 2 years: 15 and 7: difference 8, total 22. In 3 years: 16 and 8: difference 8, total 24.', 'In 4 years: 17 and 9: difference 8, total 26. In 5 years: 18 and 10: difference 8, total 28.'],
       src=['Fill in the table for the next 5 years.']),
     I(id='I8b-same', tier='invest', no='8(b) same', type='choice', skill='what stays the same',
-      options=["Mei's age", "Her brother's age", 'The difference between their ages', 'The total of both ages'], answer='The difference between their ages',
+      options=['How old Mei is each year', 'How old her brother is each year', 'The difference between their ages', 'The two ages added together'], answer='The difference between their ages',
       q='Mei is 13 years old and her brother is 5. Look at your table for the next 5 years. What stays the same every year?',
-      check=lambda: (lambda cols: [n for n, v in cols if len(set(v)) == 1][0])([("Mei's age", [ages(y)[0] for y in range(6)]), ("Her brother's age", [ages(y)[1] for y in range(6)]),
-                                                                              ('The difference between their ages', [ages(y)[0] - ages(y)[1] for y in range(6)]), ('The total of both ages', [sum(ages(y)) for y in range(6)])]),
+      check=lambda: (lambda cols: [n for n, v in cols if len(set(v)) == 1][0])([('How old Mei is each year', [ages(y)[0] for y in range(6)]), ('How old her brother is each year', [ages(y)[1] for y in range(6)]),
+                                                                              ('The difference between their ages', [ages(y)[0] - ages(y)[1] for y in range(6)]), ('The two ages added together', [sum(ages(y)) for y in range(6)])]),
       hint='Look down each column of your table. Which column has the same number in every row?',
       steps=['Mei\'s age goes up by 1 each year. Her brother\'s age goes up by 1 each year.', 'The total goes up each year too.', 'The difference is 8 in every row: the difference stays the same.'],
       src=['What stays the same every year? What changes? How does it change?']),
@@ -200,7 +210,7 @@ ITEMS = [
     I(id='I8c-why', tier='invest', no='8(c) explain', type='selfcheck', open=True, skill='explaining why',
       q='Explain how you know when Mei is double her brother\'s age, and why she is never triple his age from now on. Write your idea, then compare with the answer shown.',
       check=lambda: [(y, 13 + y, 5 + y) for y in range(0, 10) if 13 + y == 2 * (5 + y)] + [(y, 13 + y, 5 + y) for y in range(-5, 100) if 13 + y == 3 * (5 + y)],
-      hint='The difference between their ages is 8 every year. When Mei is double, how big is her brother\'s age compared with the difference?',
+      hint='Think about the gap between the two ages and how it changes (or not) every year. When Mei is double, how does her brother\'s age compare with that gap?',
       steps=['The difference between their ages is always 8. Mei is double her brother\'s age when her brother\'s age equals the difference: 8. That is in 3 years (16 and 8).', 'Triple would mean her brother\'s age is half the difference, 4. He was 4 last year (Mei 12), and he only gets older, so it will never be triple again.', 'A bar model helps: the difference is the part of Mei\'s bar that is longer than her brother\'s bar.'],
       src=["Will Mei ever be exactly DOUBLE her brother's age? When? What about TRIPLE? Explain."]),
 
@@ -381,3 +391,7 @@ VARIANTS = {
                  hint='Fewer than means the bar is shorter. Take away the difference.', steps=['Siti has {d} fewer than Mei.', 'Take {d} away from {m}.', 'Siti has {ans}.']),
         oracle=lambda e: find(lambda s: e['m'] - s == e['d'], 500)),
 }
+
+for _d in ITEMS:
+    if _d['type'] == 'selfcheck':
+        _d['marking_mode'] = 'self'

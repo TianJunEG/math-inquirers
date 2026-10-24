@@ -9,6 +9,7 @@
   var key = window.MI_LESSON, $ = function (id) { return document.getElementById(id); };
   var TIERS = [['core', 'Start here'], ['invest', 'Investigation'], ['stretch', 'Think harder'], ['challenge', 'Go further'], ['check', 'Check yourself']];
   var L, cur = 0, S = { a: {}, sub: false, sid: '', rev: 0, sent: 0, self: {} }, ask = false, sim = {};
+  var EXPLAIN_MAX = 500;   // characters of a typed explanation that may be sent to the tutor (the server enforces the same cap)
   var CFG = (typeof window.MI_SUBMIT === 'object' && window.MI_SUBMIT) || null, SY = { msg: '', busy: false, tries: 0, timer: 0, selfTimer: 0 }, VER = '';
   function load() { try { var o = JSON.parse(localStorage.getItem('mi-sheet-' + key) || '{}'); if (o && o.a) S = { a: o.a, sub: !!o.sub, sid: String(o.sid || ''), rev: o.rev | 0, sent: o.sent | 0, self: o.self || {} }; } catch (e) {} }
   function save() { try { localStorage.setItem('mi-sheet-' + key, JSON.stringify(S)); } catch (e) {} }
@@ -25,7 +26,9 @@
       '.skip{position:absolute;left:8px;top:-4rem;z-index:5;background:var(--ink);color:var(--card,#fff);padding:.7rem 1rem;border-radius:10px;font-weight:800;text-decoration:none}.skip:focus{top:8px;outline:3px solid var(--focus)}' +
       '.q:focus,#summary:focus,#askbox:focus,#hintbox:focus{outline:3px solid var(--focus);outline-offset:4px;border-radius:6px}' +
       'fieldset.row{border:0;padding:0;margin:0;min-width:0}textarea::placeholder,input::placeholder{color:var(--mut);opacity:1}.nb{padding:0 .45rem}.nb b{white-space:nowrap}' +
-      '.helper{margin:0 0 .5rem;font-weight:700}';
+      '.helper{margin:0 0 .5rem;font-weight:700}' +
+      '.fg{display:inline-flex;flex-wrap:nowrap;align-items:center;gap:.25rem;max-width:100%;vertical-align:middle}.fg .fl{flex:0 1 auto;min-width:2.5rem}.fg .ft,.fg input{flex:0 0 auto}.fg .ft{white-space:nowrap}' +
+      '.card svg,.fb svg{overflow:visible}';
     document.head.appendChild(st);
   })();
   // ---- reading and judging
@@ -35,11 +38,38 @@
   // opt.pre = text printed just before the box ('6:' for a box in '6:{f1}'), which the child may repeat ('6:20').
   function str(s) { return String(s == null ? '' : s); }
   function minus(s) { return str(s).replace(/[−–—‐‑]/g, '-'); }
+  // Number words ('five', 'twenty-five', 'one hundred and five', 'minus five') are read ONLY when the item declares words:true (no default).
+  var NW = { zero: 0, one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10, eleven: 11, twelve: 12, thirteen: 13, fourteen: 14, fifteen: 15, sixteen: 16, seventeen: 17, eighteen: 18, nineteen: 19, twenty: 20, thirty: 30, forty: 40, fifty: 50, sixty: 60, seventy: 70, eighty: 80, ninety: 90 };
+  function wordsToNum(s) {
+    var t = str(s).normalize('NFKC').toLowerCase().replace(/[-,]/g, ' ').replace(/\band\b/g, ' ').replace(/\s+/g, ' ').trim().replace(/[.!]+$/, ''), neg = false, ws, i, w, chunk = 0, cur = 0, total = 0, hund = false, seen = false;
+    if (/^(minus|negative) /.test(t)) { neg = true; t = t.replace(/^\S+ /, ''); }
+    if (!t) return null;
+    ws = t.split(' ');
+    for (i = 0; i < ws.length; i++) {
+      w = ws[i];
+      if (NW[w] !== undefined) {
+        if (NW[w] >= 20) { if (chunk) return null; chunk = NW[w]; }
+        else if (NW[w] > 0 || ws.length === 1) { if (chunk && !(chunk >= 20 && chunk % 10 === 0 && NW[w] < 10)) return null; chunk += NW[w]; }
+        else return null;
+        seen = true;
+      } else if (w === 'hundred') { if (hund || chunk < 1 || chunk > 9) return null; cur = chunk * 100; chunk = 0; hund = true; }
+      else if (w === 'thousand') { if (cur + chunk < 1 || total) return null; total = (cur + chunk) * 1000; cur = 0; chunk = 0; hund = false; }
+      else return null;
+    }
+    if (!seen && !total && !cur) return null;
+    var v = total + cur + chunk; return neg ? -v : v;
+  }
+  // Units after the number: a word ('301 sticks', '20 minutes', 'sq cm'), a word with an attached power ('84 cm2', '84cm^2', '84 cm²'), a rate ('km/h') or a degree sign ('-25 °C', '11°C', '44°').
+  // A single pair of brackets round the whole answer is ignored ('(-25)'). Two numbers ('4 or 5', '1 2') are never a unit.
+  var UW = '[a-z][a-z.]*(?:\\^?[23]|\\s?[²³])?', UNITRE = new RegExp('^(-?\\d[\\d, ]*?(?:\\.0+)?)\\s*(?:[°º]\\s*[a-z]?|' + UW + '(?:\\s+' + UW + ')*(?:\\/[a-z]+)?)$', 'i');
   function toNum(s, opt) {
-    s = minus(s).trim().replace(/^\$\s*/, '');
+    s = minus(s).trim();
+    var pb = /^\(\s*([^()]*?)\s*\)\s*(.*)$/.exec(s); if (pb) s = pb[2] ? pb[1] + ' ' + pb[2] : pb[1];   // '(-25)' and '(-25) °C'
+    if (opt && opt.words) { var wn = wordsToNum(s); if (wn !== null) return wn; }
+    s = s.replace(/^\$\s*/, '');
     if (opt && opt.pre && s.indexOf(opt.pre) === 0) s = s.slice(opt.pre.length).trim();
     s = s.replace(/\.0*$/, '');
-    if (!opt || opt.unit !== false) { var u = /^(-?\d[\d, ]*?)\s*[a-z][a-z .²³]*$/i.exec(s); if (u) s = u[1].trim(); }
+    if (!opt || opt.unit !== false) { var u = UNITRE.exec(s); if (u) s = u[1].trim().replace(/\.0+$/, ''); }
     if (/^-?\d{1,3}(?:[, ]\d{3})+$/.test(s)) s = s.replace(/[, ]/g, '');
     return /^-?\d+$/.test(s) ? +s : null;
   }
@@ -85,6 +115,60 @@
     if (m2) { var r2 = evalExpr(m2[1].replace(/(\d) (\d+\/\d)/, '($1+$2)').replace(/ /g, '')), l2 = evalExpr(m2[2]); if (l2 != null && r2 != null && Math.abs(l2 - r2) < 1e-9) cands.push(m2[2]); }
     return keys.some(function (x) { return cands.some(function (c) { return normText(x) === normText(c) || squash(x) === squash(c); }); });
   }
+  // Equal fractions in a typed list (item flag equiv_frac): '7/12, 8/12, 10/12' is right for the key '7/12, 2/3, 5/6'. Same order, same number of fractions, each equal in value
+  // (cross-multiplied); any other symbol (such as < or >) must match the key. Without the flag only the printed forms are accepted.
+  function fracTok(s) {
+    var t = [], rest = minus(str(s).normalize('NFKC')).replace(/\s*\/\s*/g, '/').replace(/(-?)(\d+)\s+(\d+)\/(\d+)|(-?\d+)\/(\d+)|-?\d+/g, function (m, sg, w, a, b, n2, d2) {
+      var f = w !== undefined ? { n: (+w * +b + +a) * (sg ? -1 : 1), d: +b } : n2 !== undefined ? { n: +n2, d: +d2 } : { n: +m, d: 1 };
+      t.push(f); return ' ';
+    });
+    return { t: t, rest: rest.replace(/[\s,;]+/g, '').replace(/[.!]+$/, '') };
+  }
+  function fracListOK(keys, v) {
+    var V = fracTok(v);
+    return V.t.length > 0 && V.t.every(function (f) { return f.d > 0; }) && keys.some(function (k) {
+      var K = fracTok(k);
+      return K.t.length === V.t.length && K.rest === V.rest && K.t.every(function (f, i) { return f.d > 0 && f.n * V.t[i].d === V.t[i].n * f.d; });
+    });
+  }
+  // Algebra rules (item flag poly:'n'): the typed rule is compared with the key as a POLYNOMIAL in n. A tiny recursive-descent parser (digits, the letter, + - x * / ( ) ^ and writing side by side
+  // such as 4n or 4(n+3)); division only by a number. Nothing is ever evaluated as code. '(n+3)x4 = 4n+12' and 'OUT = 4(n+3)' are chains of '=': every side that is not the word OUT must equal the key.
+  function polyParse(s, vr) {
+    s = minus(str(s).replace(/²/g, '^2').replace(/³/g, '^3').normalize('NFKC')).toLowerCase().replace(/[×·⋅*]/g, '*').replace(/÷/g, '/');   // the powers first: NFKC would turn ² into a plain 2
+    if (vr !== 'x') s = s.replace(/x/g, '*');
+    if (/\d\s+\d/.test(s)) return null;
+    var t = s.replace(/\s+/g, '').match(/\d+\.?\d*|\.\d+|[-+*\/()^]|./g) || [], p = 0, bad = false;
+    function num(x) { return x != null && /^(\d+\.?\d*|\.\d+)$/.test(x); }
+    function mul(a, b) { var r = [], i, j; if (a.length + b.length > 10) { bad = true; return [0]; } for (i = 0; i < a.length; i++) for (j = 0; j < b.length; j++) r[i + j] = (r[i + j] || 0) + a[i] * b[j]; return r; }
+    function atom() { var x = t[p++]; if (x === '(') { var v = sum(); if (t[p++] !== ')') bad = true; return v; } if (x === vr) return [0, 1]; if (num(x)) return [parseFloat(x)]; bad = true; return [0]; }
+    function pw() { var b = atom(), e, r, i; if (t[p] === '^') { p++; e = t[p++]; if (!/^[0-4]$/.test(e || '')) { bad = true; return b; } r = [1]; for (i = 0; i < +e; i++) r = mul(r, b); return r; } return b; }
+    function un() { if (t[p] === '-') { p++; return mul([-1], un()); } if (t[p] === '+') { p++; return un(); } return pw(); }
+    function prod() {
+      var v = un(), o, d;
+      for (;;) {
+        o = t[p];
+        if (o === '*') { p++; v = mul(v, un()); }
+        else if (o === '/') { p++; d = un(); if (d.length !== 1 || d[0] === 0) { bad = true; return v; } v = v.map(function (c) { return c / d[0]; }); }
+        else if (o === '(' || o === vr || (num(o) && !num(t[p - 1]))) v = mul(v, pw());
+        else return v;
+      }
+    }
+    function sum() { var v = prod(), o, r, i, n; while (t[p] === '+' || t[p] === '-') { o = t[p++]; r = prod(); n = Math.max(v.length, r.length); for (i = 0; i < n; i++) v[i] = (v[i] || 0) + (o === '+' ? 1 : -1) * (r[i] || 0); } return v; }
+    var out = sum();
+    if (bad || p < t.length) return null;
+    while (out.length > 1 && Math.abs(out[out.length - 1]) < 1e-12) out.pop();
+    return out.every(isFinite) ? out : null;
+  }
+  function polyEq(a, b) { return a.length === b.length && a.every(function (c, i) { return Math.abs(c - b[i]) < 1e-9 * (1 + Math.abs(c)); }); }
+  function ruleSides(s) { return minus(str(s)).trim().replace(/[.!]+$/, '').split('=').map(function (x) { return x.trim(); }).filter(function (x) { return !/^out$/i.test(x); }); }
+  function polyOK(keys, v, vr) {
+    vr = typeof vr === 'string' && vr.length === 1 && vr !== 'x' ? vr.toLowerCase() : 'n';
+    var kp = [], sides = ruleSides(v);
+    keys.forEach(function (k) { ruleSides(k).forEach(function (sd) { var q = polyParse(sd, vr); if (q) kp.push(q); }); });
+    return sides.length > 0 && kp.length > 0 && sides.every(function (sd) { var q = polyParse(sd, vr); return !!q && kp.some(function (k) { return polyEq(q, k); }); });
+  }
+  // One text answer: the printed forms (textOK), plus, only when the item says so, equal fractions (equiv_frac) or an equal polynomial (poly).
+  function textMatch(o, keys, v) { return textOK(keys, v) || !!(o && o.equiv_frac && fracListOK(keys, v)) || !!(o && o.poly && polyOK(keys, v, o.poly)); }
   // END SHARED
   function answered(it, v) {
     if (v == null) return false;
@@ -95,9 +179,9 @@
     if (it.type === 'selfcheck') return 'self';
     if (!answered(it, v)) return 'blank';
     if (it.type === 'choice') return v === it.answer ? 'right' : 'wrong';
-    if (it.type === 'text') return textOK(it.answer, v) ? 'right' : 'wrong';
-    if (it.type === 'number') return toNum(v, { unit: it.unit }) === it.answer ? 'right' : 'wrong';
-    if (it.type === 'fields') return it.fields.every(function (f, i) { return toNum(v[i], { unit: it.unit, pre: f.pre }) === f.answer; }) ? 'right' : 'wrong';
+    if (it.type === 'text') return textMatch(it, it.answer, v) ? 'right' : 'wrong';
+    if (it.type === 'number') return toNum(v, { unit: it.unit, words: it.words }) === it.answer ? 'right' : 'wrong';
+    if (it.type === 'fields') return it.fields.every(function (f, i) { return toNum(v[i], { unit: it.unit, words: it.words, pre: f.pre }) === f.answer; }) ? 'right' : 'wrong';
     return setMatch(v, it.answer, it.ordered, it.grouped).ok ? 'right' : 'wrong';
   }
   function show(it) {
@@ -131,7 +215,24 @@
   function status(it, i) { var j = judge(it, S.a[it.id]); if (S.sub) return j === 'right' ? 'right' : j === 'wrong' ? 'wrong' : j === 'self' ? 'self' : 'blank'; return answered(it, S.a[it.id]) ? 'done' : 'open'; }
   var MARK = { done: 'answered', open: 'not answered yet', right: 'right', wrong: 'to look at again', blank: 'no answer', self: 'self-check' };
   var SYM = { done: '●', open: '○', right: '✓', wrong: '✗', blank: '–', self: '✎' };
-  function qlabel(it, i) { return String(it.no || (i + 1)).split(' ')[0]; }
+  // Short, distinct labels for the question buttons, derived from the printed number (it.no); a lesson may set item.label to override. 'Investigation 2' -> 'Inv 2',
+  // 'Think harder 3 (why)' -> 'T3', 'Go further 6' -> 'G6', '1(c) explain' -> '1(c)'. Two questions with the same label get a suffix: '3(d)-a', '3(d)-b'.
+  var PREF = [[/^(?:investigation|inv)\b\.?\s*/i, 'Inv', ' '], [/^think harder\b\s*/i, 'T', ''], [/^go further\b\s*/i, 'G', ''], [/^exit slip\b\s*/i, 'Exit', ' '], [/^take-home\b\s*/i, 'Home', ' '], [/^make up your own\b\s*/i, 'Make', ' '], [/^extra\b\s*/i, 'Extra', ' ']];
+  var CORE = /^((?:[A-Za-z]?\d+|[A-Z](?![A-Za-z]))\s?(?:\([a-z]\d?\)|\(\d{1,3}\))?|\([a-z]\d?\))/, LBL = { lab: [], dup: [] };
+  function shortLabel(it, i) {
+    if (it.label) return String(it.label);
+    var no = String(it.no == null || String(it.no).trim() === '' ? i + 1 : it.no).trim(), pre = '', sep = '', rest = no, m, k, core = '';
+    for (k = 0; k < PREF.length; k++) { m = PREF[k][0].exec(no); if (m) { pre = PREF[k][1]; sep = PREF[k][2]; rest = no.slice(m[0].length); break; } }
+    m = CORE.exec(rest); if (m) core = m[1].replace(/\s+/g, ' ').trim();
+    if (!pre && it.tier === 'invest' && /^\d/.test(core)) { pre = 'Inv'; sep = ' '; }
+    if (pre) return pre + (core ? sep + core : '');
+    return core || no.split(/\s+/)[0].slice(0, 8);
+  }
+  function labelsAll() {
+    var base = L.items.map(shortLabel), cnt = {}, seen = {};
+    base.forEach(function (b) { cnt[b] = (cnt[b] || 0) + 1; });
+    return { lab: base.map(function (b) { if (cnt[b] < 2) return b; seen[b] = (seen[b] || 0) + 1; return b + '-' + (seen[b] <= 26 ? String.fromCharCode(96 + seen[b]) : seen[b]); }), dup: base.map(function (b) { return cnt[b] > 1; }) };
+  }
   function say(t) { var a = $('announce'); if (a) a.textContent = t; }
   function focusTo(sel) { var e = sel && document.querySelector(sel); if (e) { try { e.focus(); } catch (x) {} } }
   function nav() {
@@ -142,7 +243,7 @@
       var g = h('div', { class: 'ng', role: 'group', 'aria-label': t[1] }, [h('span', { class: 'nt', text: t[1] })]);
       its.forEach(function (p) {
         var st = status(p[0], p[1]);
-        g.appendChild(h('button', { type: 'button', class: 'nb ' + st, 'data-i': String(p[1]), 'aria-current': String(p[1] === cur), 'aria-label': 'Question ' + (p[0].no || (p[1] + 1)) + ', ' + MARK[st], title: MARK[st], on: { click: function () { cur = p[1]; ask = false; render('.q'); say('Question ' + (p[0].no || (p[1] + 1)) + ' of ' + L.items.length); } } }, [h('b', { text: qlabel(p[0], p[1]) }), h('i', { text: SYM[st], 'aria-hidden': 'true' })]));
+        g.appendChild(h('button', { type: 'button', class: 'nb ' + st, 'data-i': String(p[1]), 'aria-current': String(p[1] === cur), 'aria-label': 'Question ' + (p[0].no || (p[1] + 1)) + (LBL.dup[p[1]] ? ' (button ' + LBL.lab[p[1]] + ')' : '') + ', ' + MARK[st], title: MARK[st], on: { click: function () { cur = p[1]; ask = false; render('.q'); say('Question ' + (p[0].no || (p[1] + 1)) + ' of ' + L.items.length); } } }, [h('b', { text: LBL.lab[p[1]] }), h('i', { text: SYM[st], 'aria-hidden': 'true' })]));
       });
       n.appendChild(g);
     });
@@ -152,23 +253,35 @@
   function fig(it) { if (!it.svg) return null; var d = new DOMParser().parseFromString(it.svg, 'image/svg+xml').documentElement; if (!d || d.nodeName !== 'svg') return null; Array.prototype.forEach.call(d.querySelectorAll('script,foreignObject'), function (x) { x.remove(); }); var w = h('div', { class: 'fig' }); w.appendChild(document.importNode(d, true)); return w; }
   function negAns(it) { var a = it.type === 'fields' ? it.fields.map(function (f) { return f.answer; }) : [].concat(it.answer); return a.some(function (x) { return typeof x === 'number' && x < 0; }); }
   function imode(it) { return it.type === 'set' || negAns(it) ? 'text' : 'numeric'; }   // the iPhone number pad has no comma, space or minus
+  function labelTail(s) { // [text before the label, the label] for the words just before a box
+    var core = s.replace(/\s+$/, ''), re = /\n|\s{2,}|;/g, start = 0, mm, words, lab = [], len = 0, j;
+    while ((mm = re.exec(core))) start = mm.index + mm[0].length;
+    words = core.slice(start).split(' ').filter(function (w) { return w !== ''; });
+    for (j = words.length - 1; j >= 0; j--) {
+      if (lab.length && (len + words[j].length + 1 > 34 || /[,.!?]$/.test(words[j]))) break;
+      lab.unshift(words[j]); len += words[j].length + 1;
+    }
+    if (!lab.length) return [s, ''];
+    var txt = lab.join(' '), at = core.lastIndexOf(txt);
+    return [core.slice(0, at) + ' ', txt];
+  }
   function qn(it) { return it.no ? 'question ' + it.no : 'question ' + (cur + 1); }
   function control(it, locked) {
     var v = S.a[it.id], box = h('div', { id: 'ans', class: 'row' });
     function set(val) { S.a[it.id] = val; save(); nav(); bar(); }
     if (it.type === 'fields') {
       var cur_ = Array.isArray(v) ? v : it.fields.map(function () { return ''; });
-      // the word just before a box (and the punctuation just after it) stays with the box, so '1/' and its box never split over two lines
-      var fparts = it.frame.split(/(\{\w+\})/), prevG = null, tail = '';
+      // A box keeps its label in ONE non-breaking group (flex, no wrap): the label is the words just before the box, back to a clause break (a semicolon, two or more spaces, a new line, or a word ending in a comma or full stop),
+      // at most 34 characters; the first word or unit after the box (and punctuation such as '.') stays with it. So 'FCD (cm²):' can never be left at the end of the line beside another question's box.
+      var fparts = it.frame.split(/(\{\w+\})/), prevG = null, pend = '', ids = it.fields.map(function (f) { return f.id; });
       fparts.forEach(function (part, pi) {
-        var m = /^\{(\w+)\}$/.exec(part), idx = m ? it.fields.map(function (f) { return f.id; }).indexOf(m[1]) : -1;
+        var m = /^\{(\w+)\}$/.exec(part), idx = m ? ids.indexOf(m[1]) : -1;
         if (idx > -1) {
           var inp = h('input', { type: 'text', inputmode: imode(it), autocomplete: 'off', 'data-f': m[1], 'aria-label': 'Box ' + (idx + 1) + ' of ' + qn(it), style: 'width:5rem;text-align:center' }); inp.value = cur_[idx] || ''; if (locked) inp.disabled = true; inp.addEventListener('input', function () { var a = it.fields.map(function (f, i) { return i === idx ? inp.value : (cur_[i] || ''); }); cur_ = a; set(a); });
-          prevG = h('span', { class: 'fg', style: 'display:inline-flex;align-items:center;gap:.25rem;white-space:nowrap' }, [tail ? h('span', { class: 'fr', text: tail }) : null, inp]); tail = ''; box.appendChild(prevG);
+          prevG = h('span', { class: 'fg' }, [pend ? h('span', { class: 'fr fl', text: pend }) : null, inp]); pend = ''; box.appendChild(prevG);
         } else if (part) {
-          if (prevG) { var lead = /^[^ \n\t]+/.exec(part); if (lead) { prevG.appendChild(h('span', { class: 'fr', text: lead[0] })); part = part.slice(lead[0].length); } }
-          var nextIsBox = pi + 1 < fparts.length && /^\{\w+\}$/.test(fparts[pi + 1]);
-          if (nextIsBox) { var tl = /[^ \n\t]+(?=[ \n\t]*$)/.exec(part); if (tl) { tail = tl[0]; part = part.slice(0, tl.index); } }
+          if (prevG) { var lead = /^[^ \n\t]+/.exec(part); if (lead) { prevG.appendChild(h('span', { class: 'fr ft', text: lead[0] })); part = part.slice(lead[0].length); } }
+          if (pi + 1 < fparts.length && /^\{\w+\}$/.test(fparts[pi + 1])) { var lt = labelTail(part); pend = lt[1]; part = lt[0]; }
           prevG = null;
           if (part.trim()) box.appendChild(h('span', { class: 'fr', text: part }));
         }
@@ -218,6 +331,19 @@
     }
     return w;
   }
+  // A figure whose content reaches past its viewBox (text made larger for phones, a long caption, a bead at the edge) gets a wider viewBox, so nothing is cut off.
+  function fitFigs() {
+    function fit() {
+      Array.prototype.forEach.call(document.querySelectorAll('#card .fig svg, #card .fb svg'), function (sv) {
+        try {
+          var vb = (sv.getAttribute('viewBox') || '').split(/[\s,]+/).map(Number); if (vb.length !== 4 || vb.some(isNaN)) return;
+          var bb = sv.getBBox(), pd = 4, x0 = Math.min(vb[0], bb.x - pd), y0 = Math.min(vb[1], bb.y - pd), x1 = Math.max(vb[0] + vb[2], bb.x + bb.width + pd), y1 = Math.max(vb[1] + vb[3], bb.y + bb.height + pd);
+          if (x0 < vb[0] - 0.5 || y0 < vb[1] - 0.5 || x1 > vb[0] + vb[2] + 0.5 || y1 > vb[1] + vb[3] + 0.5) sv.setAttribute('viewBox', [x0, y0, x1 - x0, y1 - y0].map(function (v) { return Math.round(v * 10) / 10; }).join(' '));
+        } catch (e) {}
+      });
+    }
+    fit(); try { if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit); } catch (e) {}
+  }
   var hintOpen = {};
   function render(foc) {
     nav();
@@ -240,7 +366,7 @@
       h('button', { type: 'button', class: 'act quiet', text: 'Previous', on: { click: function () { cur = (cur + L.items.length - 1) % L.items.length; render('.q'); window.scrollTo(0, 0); say('Question ' + (L.items[cur].no || (cur + 1)) + ' of ' + L.items.length); } } }),
       h('button', { type: 'button', class: 'act quiet', text: S.sub ? 'Next' : 'Skip to next', on: { click: function () { cur = (cur + 1) % L.items.length; render('.q'); window.scrollTo(0, 0); say('Question ' + (L.items[cur].no || (cur + 1)) + ' of ' + L.items.length); } } })]);
     card.appendChild(pn);
-    bar();
+    bar(); fitFigs();
     if (foc) focusTo(foc === '.q' ? '#card .q' : foc);
   }
   function bar() {
@@ -268,15 +394,21 @@
       var x = Array.prototype.map.call(b, function (v) { return ('0' + v.toString(16)).slice(-2); }).join(''); return x.slice(0, 8) + '-' + x.slice(8, 12) + '-' + x.slice(12, 16) + '-' + x.slice(16, 20) + '-' + x.slice(20); } catch (e) { return ''; }
   }
   function payload() {
-    var ans = {};
+    var ans = {}, ex = {}, nex = 0;
     L.items.forEach(function (it) {
       var v = S.a[it.id];
-      // free text of a self-check item is never sent: only that something was written
-      if (it.type === 'selfcheck') ans[it.id] = answered(it, v) ? '(written)' : null;
+      // a self-check answer is never marked: answers[id] only says that something was written. EXPLAIN-TO-TUTOR: the typed explanation itself (trimmed, at most EXPLAIN_MAX characters) goes in the separate
+      // 'explain' map, only while sending is switched on (this function runs only then), so the tutor can read it. The server never returns it and the page never shows it as a mark.
+      if (it.type === 'selfcheck') {
+        ans[it.id] = answered(it, v) ? '(written)' : null;
+        if (!it.paper && answered(it, v)) { var tx = String(v).replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g, '').trim().slice(0, EXPLAIN_MAX).trim(); if (tx && nex < 400) { ex[it.id] = tx; nex++; } }
+      }
       else ans[it.id] = answered(it, v) ? (Array.isArray(v) ? v.map(String) : String(v)) : null;
     });
     var self = {}; Object.keys(S.self || {}).forEach(function (k) { self[k] = S.self[k]; });
-    return { v: 1, unit: CFG.unit || ('ext-' + key), unit_version: CFG.version || VER, sid: S.sid, rev: S.rev, answers: ans, self: self };
+    var out = { v: 1, unit: CFG.unit || ('ext-' + key), unit_version: CFG.version || VER, sid: S.sid, rev: S.rev, answers: ans, self: self };
+    if (nex) out.explain = ex;
+    return out;
   }
   function note(t) { SY.msg = t; var n = $('syncnote'); if (n) n.textContent = t; }
   function retry() {
@@ -318,7 +450,7 @@
   }
   // the privacy line in the page footer must be true for the mode the page is in: sending off = on this device only; sending on = sent to the tutor
   function footer() {
-    var f = document.querySelector('.foot'), t = syncOn() ? 'Your answers are sent to your tutor so they can help you.' : 'Your answers stay on this device.';
+    var f = document.querySelector('.foot'), t = syncOn() ? 'Your answers, and what you write in the explanation boxes, are sent to your tutor so they can help you.' : 'Your answers stay on this device.';
     if (!f) return;
     var sp = $('footpriv');
     if (sp) sp.textContent = t;
@@ -332,7 +464,7 @@
     if (syncOn() && !CFG.version && window.crypto && crypto.subtle) vp = crypto.subtle.digest('SHA-256', new TextEncoder().encode(txt)).then(function (b) { return Array.prototype.map.call(new Uint8Array(b), function (v) { return ('0' + v.toString(16)).slice(-2); }).join('').slice(0, 8); }, function () { return ''; });
     return vp.then(function (v) { VER = v; return d; });
   }).then(function (d) {
-    L = d; document.title = 'Practice: ' + L.title + ' | Math Inquirers';
+    L = d; LBL = labelsAll(); document.title = 'Practice: ' + L.title + ' | Math Inquirers';
     $('title').textContent = L.title + ' practice'; $('sub').textContent = 'Level ' + L.level + ' · ' + (L.unit_label || 'Lesson ' + L.lesson) + ' · ' + L.topic;
     footer(); render();
     if (S.sub && S.sent < S.rev) send();   // a tab closed before the send finished: try again when the page is opened again

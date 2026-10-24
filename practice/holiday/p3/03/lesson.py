@@ -52,6 +52,10 @@ def diffs(seq):
 UD = ['They go up by 1 each time', 'They go down by 1 each time', 'They stay the same', 'They go up by 2 each time']
 UD_OF = {1: UD[0], -1: UD[1], 0: UD[2], 2: UD[3]}
 YN = ['Yes', 'No']
+I8B_3 = 'Every digit sum is in the 3 times table'
+I8B_9 = 'Every digit sum is 9, as in the 9 times table'
+I8B_ODD = 'Every digit sum is an odd number, like 3, 5 or 9'
+I8B_DIFF = 'The digit sums are all different numbers'
 
 # ---- the grid puzzle (Q4): rows 7, ?, ?  columns ?, ?, ?;  given 56 (row 1, col 1), 81 (row 2, col 3), 48 (row 3, col 1), 36 (row 3, col 2)
 
@@ -177,7 +181,7 @@ ITEMS = [
       frame=grp('Row numbers (top to bottom): 7, {f1}, {f2}.      Column numbers (left to right): {f3}, {f4}, {f5}.'),
       q='(if time) Grid puzzle. Each number in the grid is the row number × the column number. The row and column numbers are all from 1 to 10. Find the missing row numbers and column numbers. The first row number, 7, is given.',
       check=lambda: grid_solve()[0] if len(grid_solve()) == 1 else None, sol_fig=lambda got: GRID_SOL,
-      hint='56 ÷ 7 gives the first column number. For the number 81, which two numbers from 1 to 10 can you multiply to make it?',
+      hint='Start with the row that has a number you know: which row number and column number make 56? Then use the other given numbers one at a time.',
       steps=['Row 7 and the number 56: 56 ÷ 7 = 8, so the first column number is 8.', 'The first column has 48 in the third row: 48 ÷ 8 = 6, so the third row number is 6. Then 36 ÷ 6 = 6, so the second column number is 6.', '81 can only be 9 × 9 (with numbers from 1 to 10), so the second row number is 9 and the third column number is 9.', 'Row numbers: 7, 9, 6. Column numbers: 8, 6, 9.'],
       src=['(if time) Grid puzzle. Each number in the grid is the row number × the column number. The row and column numbers are all from 1 to 10.', 'Hint: 56 ÷ 7 = ? gives the first column number.']),
     I(id='4b', tier='core', no='4(b)', type='fields', skill='grid puzzle', answer=[GRID_CELLS[0][1], GRID_CELLS[0][2], GRID_CELLS[1][0], GRID_CELLS[1][1], GRID_CELLS[2][2]] if GRID else None, svg=GRID_Q,
@@ -189,7 +193,7 @@ ITEMS = [
       src=['(if time) Grid puzzle. Each number in the grid is the row number × the column number.', 'then fill in the grid.']),
 
     I(id='5a-rows', tier='core', no='5(a) rows', type='set', ordered=True, grouped=False, skill='systematic list', answer=[r for r, _ in chair_ways()],
-      q='Ben puts 36 chairs in equal rows (at least 2 rows, at least 2 chairs in each row). Find ALL the ways. Try 2 rows, then 3 rows, then 4 rows, and so on. Type every number of rows that works, smallest first, with a comma between. (A way with 2 rows of 5 is different from a way with 5 rows of 2.)',
+      q='Ben puts 36 chairs in equal rows (at least 2 rows, at least 2 chairs in each row). Find ALL the ways. Try 2 rows, then 3 rows, and so on. Type every number of rows that works, smallest first, with a comma between. (2 rows of 5 and 5 rows of 2 are different ways.)',
       check=lambda: [r for r, _ in chair_ways()],
       hint='Try 2 rows, then 3 rows, then 4 rows. For each, can 36 chairs be shared into that many equal rows with none left over? Keep going in order so you do not miss any.',
       steps=['2 rows: 18 chairs in each row. 3 rows: 12. 4 rows: 9. 5 rows: 36 does not share equally. 6 rows: 6.', '7 rows and 8 rows do not work. 9 rows: 4. 10 and 11 rows do not work. 12 rows: 3.', '13 to 17 rows do not work. 18 rows: 2. More rows would leave fewer than 2 chairs in each row, so stop.', 'The numbers of rows that work are 2, 3, 4, 6, 9, 12 and 18.'],
@@ -214,14 +218,14 @@ ITEMS = [
       steps=['Turned round, 2 rows of 18 becomes 18 rows of 2. Every way has a partner like this ...', '... except 6 rows of 6. Turned round it is still 6 rows of 6.', 'So 6 rows of 6 is the way with no partner.'],
       src=['Most ways come in pairs, like 2 rows of 18 and 18 rows of 2. Which way has no partner? Why?']),
     I(id='5c-why', tier='core', no='5(c) why', type='selfcheck', open=True, skill='explaining a pattern',
-      q='Why does that way have no partner? How does that tell you why the number of ways is odd? Write your idea, then compare with the answer shown.',
+      q='Why does that way have no partner? What does that tell you about all the ways together? Write your idea, then compare with the answer shown.',
       check=lambda: [len(chair_ways()), [w for w in chair_ways() if (w[1], w[0]) == w]],
       hint='Think about what happens to 6 rows of 6 when you turn it round. What about the other ways?',
       steps=['Turned round, 6 rows of 6 is the same way, so it has no partner.', 'All the other ways come in pairs, so they make an even number of ways.', 'One way with no partner plus an even number gives an odd number of ways: 7.'],
       src=['Most ways come in pairs, like 2 rows of 18 and 18 rows of 2. Which way has no partner? Why?']),
 
     I(id='6a', tier='core', no='6(a)', type='set', ordered=False, grouped=False, skill='common multiples', answer=[24, 48, 72, 96],
-      q='(if time) Number riddle. Find ALL the 2-digit numbers that can be divided exactly by 6 AND by 8. Here are the 2-digit numbers in the 8 times table: 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96. Type the ones that are also in the 6 times table (6, 12, 18 ...), with a comma between.',
+      q='(if time) Number riddle. Find ALL the 2-digit numbers divided exactly by 6 AND by 8. The 2-digit numbers in the 8 times table are 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96. Type those that are also in the 6 times table, with a comma between.',
       check=lambda: in_both(6, 8),
       hint='Count in 6s: 6, 12, 18 ... up to 96. Which of the numbers in the 8 times table list do you land on?',
       steps=['Count in 6s up to 96: 6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84, 90, 96.', 'The numbers from the 8 times table list that are also here are 24, 48, 72 and 96.', 'These are the 2-digit numbers that can be divided exactly by 6 and by 8.'],
@@ -235,7 +239,7 @@ ITEMS = [
 
     # ================= Investigation (Investigation and look back page, No.8: Is it always true? Digit sums)
     I(id='I8-easy', tier='invest', no='8 easy', type='fields', skill='digit sums', answer=[45, 9, 54, 9], frame=grp('9 × 5 = {f1}, the digits add up to {f2}.      9 × 6 = {f3}, the digits add up to {f4}.'),
-      q='Investigation: Is it always true? Digit sums. In the 9 times table the digits of each answer add up to 9: 9, 18 (1 + 8), 27 (2 + 7), 36 (3 + 6) ... Easy first step: write the 9 times table up to 9 × 6 and add the digits of each answer. Fill in the last two.',
+      q='Is it always true? Digit sums. In the 9 times table the digits of each answer add up to 9: 9, 18 (1 + 8), 27 (2 + 7) ... Easy first step: add the digits of the answers up to 9 × 6. Fill in the last two.',
       check=lambda: [T9[4], digit_sum(T9[4]), T9[5], digit_sum(T9[5])],
       hint='Count on in 9s from 36. Then add the two digits of each answer.',
       steps=['9 × 5 = 45 and 4 + 5 = 9.', '9 × 6 = 54 and 5 + 4 = 9.', 'So far every answer has digits that add up to 9.'],
@@ -253,12 +257,12 @@ ITEMS = [
       steps=['The digit sums of 9, 18, 27, ... 90 are all 9.', 'But 9 × 11 = 99, and 9 + 9 = 18. So the total is not always 9.', 'Look again: 18 is in the 9 times table, and its digits add up to 9. So the digit sum of an answer in the 9 times table is 9, or a number that is itself in the 9 times table.'],
       src=['Carry on the 9 times table to 9 × 12. Add the digits of each answer. Is the total ALWAYS 9? Write what you find.']),
     I(id='I8b', tier='invest', no='8(b)', type='choice', skill='digit sums',
-      options=['Every digit sum is in the 3 times table (3, 6, 9, 12 ...)', 'Every digit sum is 9', 'Every digit sum is odd', 'The digit sums are all different'],
-      answer='Every digit sum is in the 3 times table (3, 6, 9, 12 ...)',
+      options=[I8B_9, I8B_ODD, I8B_3, I8B_DIFF],
+      answer=I8B_3,
       q='Try the 3 times table and the 6 times table up to × 12. Add the digits of each answer. What do you notice about the digit sums?',
-      check=lambda: (lambda s: 'Every digit sum is in the 3 times table (3, 6, 9, 12 ...)' if (all(x in set(times(3, 20)) for x in s) and not all(x == 9 for x in s) and not all(x % 2 == 1 for x in s) and len(set(s)) < len(s)) else None)([digit_sum(v) for v in times(3, 12) + times(6, 12)]),
+      check=lambda: (lambda s: I8B_3 if (all(x in set(times(3, 20)) for x in s) and not all(x == 9 for x in s) and not all(x % 2 == 1 for x in s) and len(set(s)) < len(s)) else None)([digit_sum(v) for v in times(3, 12) + times(6, 12)]),
       hint='Write the 3 times table and the 6 times table up to × 12 and add the digits of each answer. Look at the list of totals you get.',
-      steps=['3 times table: 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36 have digit sums 3, 6, 9, 3, 6, 9, 3, 6, 9, 3, 6, 9.', '6 times table: 6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66, 72 have digit sums 6, 3, 9, 6, 3, 9, 6, 3, 9, 6, 3, 9.', 'Every digit sum is 3, 6 or 9: a number in the 3 times table.'],
+      steps=['3 times table: 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36 have digit sums 3, 6, 9, 3, 6, 9, 3, 6, 9, 3, 6, 9.', '6 times table: 6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66, 72 have digit sums 6, 3, 9, 6, 3, 9, 6, 12, 9, 6, 12, 9. (48 gives 4 + 8 = 12 and 66 gives 6 + 6 = 12.)', 'Every digit sum is 3, 6, 9 or 12: a number in the 3 times table.'],
       src=['Try the 3 times table and the 6 times table up to × 12. Add the digits of each answer. What do you notice?']),
     I(id='I8c-fill', tier='invest', no='8(c)', type='fields', skill='digit sums', answer=[4, 8, 3, 7, 2, 6, 10, 5],
       frame=grp('4 → {f1}    8 → {f2}    12 → {f3}    16 → {f4}    20 → {f5}    24 → {f6}    28 → {f7}    32 → {f8}'),
@@ -314,7 +318,7 @@ ITEMS = [
 
     # ================= Go further (workbook Go further, No.5 to No.7)
     I(id='G5', tier='challenge', no='G5', type='selfcheck', open=True, skill='making up a riddle',
-      q='Make up your own riddle: "I am a 2-digit number in the ___ times table ..." Write 2 or 3 clues (about odd or even, the digits, being between two numbers). Check that only ONE number fits, by listing the table. Swap with a partner. Do this on paper, then compare with the example shown.',
+      q='Make up your own riddle: "I am a 2-digit number in the ___ times table ..." Write 2 or 3 clues (odd or even, the digits). Check that only ONE number fits, by listing the table. Do this on paper, then compare with the example shown.',
       check=lambda: [n for n in times(7, 14) if 10 <= n <= 99 and n % 2 == 1 and digit_sum(n) == 10],
       hint='Pick a table and write its 2-digit numbers. Choose one as your secret number. Then write clues until only your number is left on the list.',
       steps=['Answers vary. Check that the secret number is in the table, every clue is true, and the list leaves exactly one number.', 'Example: "I am a 2-digit number in the 7 times table. I am odd. My digits add up to 10." The odd 2-digit numbers in the 7 times table are 21, 35, 49, 63, 77 and 91, and only 91 has digits that add up to 10.'],
@@ -334,7 +338,7 @@ ITEMS = [
     I(id='G7', tier='challenge', no='G7', type='number', skill='common multiples', answer=126,
       q='I am a 3-digit number less than 200. I can be divided exactly by 7 and by 9. My digits add up to 9. What number am I?',
       check=lambda: one([n for n in range(100, 200) if n in set(times(7, 30)) and n in set(times(9, 23)) and digit_sum(n) == 9]),
-      hint='A number in both the 7 times table and the 9 times table is in the 63 times table. List those numbers up to 200 and add the digits of each.',
+      hint='Use the 7 times table and the 9 times table. Which 3-digit numbers less than 200 are in both? Then check the digits.',
       steps=['Numbers in both the 7 and 9 times tables are 63, 126, 189 ...', 'The 3-digit ones less than 200 are 126 and 189.', '1 + 2 + 6 = 9 but 1 + 8 + 9 = 18, so the number is 126.'],
       src=['I am a 3-digit number less than 200. I can be divided exactly by 7 and by 9. My digits add up to 9. What number am I?']),
 ]
@@ -373,3 +377,7 @@ VARIANTS = {
                  steps=['The tens digit of 9 × {n} is 1 less than {n}.', 'The ones digit is what makes the digits add up to 9.', '9 × {n} = {ans}.']),
         oracle=lambda e: _times_n(9, e['n'])),
 }
+
+for _d in ITEMS:
+    if _d['type'] == 'selfcheck':
+        _d['marking_mode'] = 'self'

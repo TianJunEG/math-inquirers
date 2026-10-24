@@ -118,7 +118,7 @@ ITEMS = [
     D(id='6a', tier='core', no='6(a)', type='choice', skill='what a graph tells us', options=['Yes', 'No'], answer='No',
       q='Mei says, "Orange is the best fruit for the whole school!" Is Mei right?', svg=GRAPH,
       check=lambda: 'Yes' if VOTERS == 'whole school' else 'No',
-      hint='Think about who voted. Read the sentence above the graph again.',
+      hint='Think about which children voted. Do the pictures show every child in the whole school?',
       steps=['The graph shows the votes of one class, not the whole school.', 'Other classes may like different fruits, so Mei cannot say orange is the best for the whole school.'],
       src=['Mei says, “Orange is the best fruit for the whole school!”', 'Is Mei right?']),
     D(id='6b', tier='core', no='6(b)', type='selfcheck', open=False, skill='what a graph tells us',
@@ -180,7 +180,7 @@ ITEMS = [
       src=['Could you use 1 picture = 3 children?']),
     D(id='I5', tier='invest', no='Investigation 5', type='selfcheck', open=False, skill='choosing the key',
       q='Cats 4, Dogs 6, Fish 2. Why can you or can you not use 1 picture = 3 children?', facts=[4, 2], check=lambda: [c for c in PETS.values() if pictures_for(c, 3) is None],
-      hint='Count in 3s for each row: 3, 6, 9 ... Which counts do you land on?',
+      hint='For each row, try counting in 3s. Does your count land exactly on the number of children?',
       steps=['Counting in 3s goes 3, 6, 9 ... It lands on 6 for the dogs, but it does not land on 4 or on 2.', 'A key only works when every count is in its counting pattern. Here the keys 1 and 2 work, but 3 does not.', 'Any reason that talks about counting in 2s or 3s is good.'],
       src=['Why or why not?']),
 
@@ -224,7 +224,7 @@ ITEMS = [
       steps=['20 children is 10 pictures in all (count in 2s to 20).', 'A has 3 pictures. B has 2 more, so B has 5 pictures.', 'A and B have 3 + 5 = 8 pictures, so C has 10 - 8 = 2 pictures.', '2 pictures is 2 + 2 = 4 children.'],
       src=['1 picture = 2 children. 20 children voted for three fruits. A has 3 pictures. B has 2 more pictures than A. How many children chose C?']),
     D(id='C3', tier='challenge', no='C3', type='selfcheck', paper=True, skill='making a graph from clues',
-      q='Make up your own: 15 children vote for three fruits. Draw a picture graph where banana wins by exactly 2 votes (banana has 2 more than the fruit in second place) and no two fruits are tied. Then try to find a second graph that works.',
+      q='Make up your own: 15 children vote for three fruits. Draw a picture graph where banana wins by exactly 2 votes (2 more than second place) and no two fruits are tied. Then find a second graph that works.',
       facts=[(7, 5, 3), (8, 6, 1)], check=lambda: graphs_with_banana_two_ahead(15), sol_fig=lambda f: two_graphs(f),
       hint='Try a number for second place. Add 2 to get banana. Is there something left for the third fruit?',
       steps=['Try banana 7, second place 5. That leaves 15 - 7 - 5 = 3 for the third fruit. 7, 5 and 3 are all different.', 'Another way: banana 8, second place 6. That leaves 1 for the third fruit.', 'These are the only two graphs. Any graph that adds to 15, has banana exactly 2 ahead of second place, and has no ties is good.'],
@@ -258,3 +258,7 @@ VARIANTS = {
                  steps=['{n} children is {pt} pictures in all (count in {k}s).', 'A and B have {pa} pictures together, so C has {c} pictures.', '{c} pictures of {k} children is {ans} children.']),
         oracle=lambda e: next(e['k'] * c for c in range(20) if e['a'] + (e['a'] + e['d']) + c == pictures_for(e['k'] * (2 * e['a'] + e['d'] + e['c']), e['k']))),
 }
+
+for _d in ITEMS:
+    if _d['type'] == 'selfcheck' and not _d.get('open'):
+        _d['marking_mode'] = 'self'

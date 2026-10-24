@@ -35,7 +35,24 @@ await rej({ ...base, answers: { q1: 'x'.repeat(201) } }, {}, 400, 'too_long'); a
 await rej({ ...base, sid: 'nope' }, {}, 400, 'sid'); await rej({ ...base, extra: 1 }, {}, 400, 'unknown_field'); await rej({ ...base, unit: 'No Such!' }, {}, 400, 'unit');
 await rej({ ...base, unit: 'ext-l9u99' }, {}, 404, 'unit'); await rej({ ...base, self: { q1: 'maybe' } }, {}, 400, 'self');
 await rej({ ...base, answers: { ['i' + 'x'.repeat(41)]: '1' } }, {}, 400, 'item_id');
-await rej({ ...base, answers: { q1: '1' }, pad: 'x'.repeat(21000) }, {}, 413, 'too_large');
+await rej({ ...base, answers: { q1: '1' }, pad: 'x'.repeat(70000) }, {}, 413, 'too_large');
+// EXPLAIN-TO-TUTOR: the typed explanation of a self-check or open item is kept (trimmed, at most 500 characters), never for an auto-marked or paper-only item, never sent back
+r = await call({ ...base, rev: 5, answers: { q1: '9', q6: '(written)', q10: '(written)' }, explain: { q6: '  Because 9 is one less than 10.  ', q10: 'x'.repeat(500), q1: 'sneaky', q8: 'a drawing note' } });
+j = await r.json(); ok(r.status === 200 && j.ok, 'explain accepted');
+const exrows = store.data.get(SID).rows, exrow = (id) => exrows.find((x) => x.item_id === id);
+ok(exrow('q6').explain_text === 'Because 9 is one less than 10.', 'explanation trimmed and stored for a self-check item');
+ok(exrow('q10').explain_text === 'x'.repeat(500), 'a 500 character explanation is kept whole for an open item');
+ok(exrow('q1').explain_text === null && exrow('q8').explain_text === null && exrow('q2').explain_text === null, 'no explanation text for auto-marked, paper-only or absent items');
+ok(exrow('q6').answer_text === null && exrow('q6').mark === 'self', 'the explanation is not an answer and never changes a mark');
+ok(!JSON.stringify(j).includes('Because') && !('explain' in j) && Object.values(j.marks).every((m) => typeof m === 'string'), 'the explanation is never in the reply');
+ok(markAll(KEYS, {}, {}, { q6: '\u0000\u0007hi\u001f there' }).rows.find((x) => x.item_id === 'q6').explain_text === 'hi there', 'control characters removed');
+ok(markAll(KEYS, {}, {}, { q6: '   ' }).rows.find((x) => x.item_id === 'q6').explain_text === null, 'blank explanation is null');
+ok(validate({ ...base, explain: { q6: 'ok' } }) === null && validate({ ...base }) === null, 'validate: explain optional');
+await rej({ ...base, rev: 6, explain: { q6: 'x'.repeat(501) } }, {}, 400, 'too_long'); await rej({ ...base, rev: 6, explain: { q6: 5 } }, {}, 400, 'explain');
+await rej({ ...base, rev: 6, explain: ['a'] }, {}, 400, 'explain'); await rej({ ...base, rev: 6, explain: 'text' }, {}, 400, 'explain'); await rej({ ...base, rev: 6, explain: { 'bad id!': 'a' } }, {}, 400, 'explain');
+await rej({ ...base, rev: 6, explain: { zz: 'a' } }, {}, 400, 'unknown_item');
+await rej({ ...base, rev: 6, explain: Object.fromEntries(Array.from({ length: 61 }, (_, i) => ['e' + i, 'a'])) }, {}, 400, 'too_many');
+assert.equal(store.data.get(SID).rev, 5); n++;   // none of the rejected ones was stored
 // consent withdrawn / session expired in the store
 store.consent = false; await rej({ ...base, sid: '22222222-2222-4222-8222-222222222222' }, {}, 403, 'consent'); store.consent = true;
 store.rateLeft = 0; await rej({ ...base, sid: '33333333-3333-4333-8333-333333333333' }, {}, 429, 'rate'); store.rateLeft = 99;

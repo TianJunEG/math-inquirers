@@ -119,13 +119,13 @@ ITEMS = [
                 'Any idea that uses the rows and the cups you can see is a good one.'],
          src=['How did you work it out without lifting the cloth?']),
 
-    dict(id='3t', tier='core', no='3 (table)', type='fields', skill='guess and check with a table', answer=[16, 18, 20, 22],
-         q='A pen has hens and goats. A hen has 2 legs and a goat has 4 legs. There are 7 animals and 20 legs altogether. Start with all hens: 7 hens have 14 legs. '
-           'Then swap one hen for a goat each time. How many legs are there after 1 swap, 2 swaps, 3 swaps and 4 swaps? Type them in order.',
-         svg=combine([HENS7, TABLE3], 'A pen with 7 hens, and the hens and goats table. The first column says 7 hens, 0 goats, 14 legs. The other five columns are empty.'), frame='Legs: 14, {f1}, {f2}, {f3}, {f4}',
-         check=lambda: [(7 - s) * 2 + s * 4 for s in (1, 2, 3, 4)],
-         hint='A hen has 2 legs and a goat has 4. What happens to the legs when one hen is swapped for a goat?',
-         steps=['Each swap takes away a hen (2 legs) and puts in a goat (4 legs), so the legs go up by 2.', '14, then 16, 18, 20, 22.', 'After 1 swap: 16. After 2 swaps: 18. After 3 swaps: 20. After 4 swaps: 22.'],
+    dict(id='3t', tier='core', no='3 (table)', type='fields', skill='guess and check with a table', answer=[16, 18, 22, 24],
+         q='A pen has 7 animals, hens (2 legs) and goats (4 legs). Start with all hens: 7 hens have 14 legs. '
+           'Then swap one hen for a goat each time. How many legs are there after 1 swap, 2 swaps, 4 swaps and 5 swaps? Type them in order.',
+         svg=combine([HENS7, TABLE3], 'A pen with 7 hens, and the hens and goats table. The first column says 7 hens, 0 goats, 14 legs. The other five columns are empty.'), frame='After 1 swap: {f1}   2 swaps: {f2}   4 swaps: {f3}   5 swaps: {f4}',
+         check=lambda: [(7 - s) * 2 + s * 4 for s in (1, 2, 4, 5)],
+         hint='A hen has 2 legs and a goat has 4. What happens to the legs when one hen is swapped for a goat? You can fill in the swaps in between on paper.',
+         steps=['Each swap takes away a hen (2 legs) and puts in a goat (4 legs), so the legs go up by 2.', '14, then 16, 18, 20, 22, 24.', 'After 1 swap: 16. After 2 swaps: 18. After 4 swaps: 22. After 5 swaps: 24. (After 3 swaps it is 20.)'],
          src=['A pen has hens and goats. A hen has 2 legs and a goat has 4 legs. There are 7 animals and 20 legs altogether.']),
     dict(id='3a', tier='core', no='3(a)', type='fields', skill='guess and check with a table', answer=[4, 3],
          q='The pen has 7 animals, all hens (2 legs) or goats (4 legs), and 20 legs altogether. How many hens and how many goats?', svg=HENS7,
@@ -218,8 +218,8 @@ ITEMS = [
 
     # ================= Think harder
     dict(id='T1a', tier='stretch', no='Think harder 1', type='set', ordered=False, skill='two kinds, find all the ways', answer=[1, 3, 5],
-         q='A shop has some bicycles (2 wheels) and some tricycles (3 wheels), at least one of each. There are 17 wheels altogether. Find ALL the ways. '
-           'Start with 1 tricycle, then 2 tricycles, and so on. How many tricycles can there be? Type every number of tricycles that works, with a comma between.', svg=CYCLES,
+         q='A shop has bicycles (2 wheels) and tricycles (3 wheels), at least one of each, and 17 wheels altogether. Find ALL the ways. '
+           'Try 1 tricycle, then 2, and so on. Type every number of tricycles that works, with a comma between.', svg=CYCLES,
          check=lambda: [t for t in range(1, 9) for b in range(1, 9) if 2 * b + 3 * t == 17],
          hint='Start with 1 tricycle (3 wheels). How many wheels are left for the bicycles? Can bicycles use up exactly that many?',
          steps=['1 tricycle: 3 wheels. 14 wheels are left, and 7 bicycles have 14 wheels. It works.', '2 tricycles: 6 wheels. 11 are left, which is odd. Bicycles need an even number, so it does not work.',
@@ -258,7 +258,7 @@ ITEMS = [
          q='Why can the other person NOT be right? Write your idea in the box.',
          facts=dict(all_totals_even=True),
          check=lambda: dict(all_totals_even=all((h * 2 + (9 - h) * 4) % 2 == 0 for h in range(10))),
-         hint='Think about the legs of a hen (2) and of a goat (4). What kind of number is the total legs each time: odd or even?',
+         hint='Think about the legs of a hen (2) and of a goat (4). Try adding up the legs of a few different groups of animals. What do you notice about the totals?',
          steps=['Hens have 2 legs and goats have 4 legs. Both are in the 2 times table.', 'So any group of hens and goats has an even number of legs: 18, 20, 22, 24, 26 ...', '25 is odd, so nobody can count 25 legs. Any answer that says this is a good one.'],
          src=['Only one of them can be right. Who?']),
 
@@ -277,7 +277,7 @@ ITEMS = [
 
     # ================= Go further
     dict(id='C5a', tier='challenge', no='Go further 5', type='choice', options=['Yes', 'No'], answer='Yes', skill='totals that skip or not',
-         q='A shop has 12 vehicles. Each one is a bicycle (2 wheels) or a tricycle (3 wheels). Mei says: "Ravi could count 24 wheels, or 25, or 26, or any number of wheels up to 36." Is she right?',
+         q='A shop has 12 vehicles. Each one is a bicycle (2 wheels) or a tricycle (3 wheels). Mei says: "Ravi could count 24 wheels, or 25, or 26, or any number of wheels from 24 up to the most the shop can have." Is she right?',
          check=lambda: 'Yes' if LEG_TOTALS == list(range(24, 37)) else 'No',
          hint='Start with 12 bicycles and swap one bicycle for a tricycle at a time. What happens to the number of wheels each time?',
          steps=['12 bicycles have 24 wheels. 12 tricycles have 36 wheels.', 'Each swap of a bicycle for a tricycle adds exactly 1 wheel: 24, 25, 26, 27 ... 36.', 'Every number from 24 to 36 can be counted, so Mei is right.'],
@@ -289,7 +289,7 @@ ITEMS = [
          steps=['The most wheels is when all 12 vehicles are tricycles: 12 × 3 = 36.', '37 is more than 36, so Ravi could not count 37 wheels.'],
          src=['Could he count 37?']),
     dict(id='C5c', tier='challenge', no='Go further 5 (legs)', type='selfcheck', open=False, skill='totals that skip or not',
-         q='Ravi counts the wheels in a shop with 12 bicycles and tricycles, and the legs in a pen with 12 hens (2 legs) and goats (4 legs). Why can he never count 25 legs in the pen? How is that different from counting the wheels in the shop? Write your idea in the box.',
+         q='Ravi counts wheels in a shop with 12 bicycles and tricycles, and legs in a pen with 12 hens and goats. Why can he never count 25 legs? How is that different from the wheels? Write your idea in the box.',
          facts=dict(wheels_25=[(11, 1)], legs_25_possible=False),
          check=lambda: dict(wheels_25=vehicles(12, 25), legs_25_possible=25 in GOAT_LEGS),
          hint='Try one swap in the shop: what happens to the wheels? Then try one swap in the pen: what happens to the legs?',
@@ -355,3 +355,7 @@ VARIANTS = {
                  steps=['Start with {an} hens: that is {an} × 2 legs. Each swap adds 2 legs.', 'Keep swapping until you reach {legs} legs.', 'There are {ans} (hens, then goats). Check the legs and the number of animals.']),
         oracle=lambda e: (lambda s: dict(f1=s[0], f2=s[1]))(one(mix(e['an'], 2 * e['an'] + 2 * e['g']), 'hens and goats'))),
 }
+
+for _d in ITEMS:
+    if _d['type'] == 'selfcheck':
+        _d['marking_mode'] = 'self'

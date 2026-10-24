@@ -270,7 +270,7 @@ STORY_STOP_EXTRA = set('north south east west face turn left right clockwise cen
                        'long short much many one two three four five six seven eight nine ten hundred thousand'.split())
 DF_MAX = 6000          # a word found in more source windows than this says nothing about the story
 RARE_DF = 400          # a word found in fewer source windows than this is a specific object (snail, lolly, jacket, carton ...)
-STORY_VERSION = "story-v6"
+STORY_VERSION = "story-v8"
 
 
 def stem(w):
@@ -357,11 +357,10 @@ def story_hits(q, sidx, own_words=None):
     """Same story and same quantities as a source window.  Returns [(severity, detail)] with severity 'FAIL' or 'REVIEW'.
     Let S = the teaser's story words, W = the words of one source window, cov = |S & W| / |S|, spec = shared words of document frequency
     below SPEC_DF, sn = shared numbers other than 0, 1, 2 and dn = shared distinctive numbers (not in COMMON_NUMS).  FAIL when
-      (F1) cov >= 0.8, >= 4 shared words, spec >= 2 and sn >= 1: same objects and a same quantity;
-      (F2) cov >= 0.6, >= 3 shared words, spec >= 2 and sn >= 2;
-      (F3) cov >= 0.4, >= 3 shared words, spec >= 1 and sn >= 3;
+      (F1) cov >= 0.8, >= 4 shared words, spec >= 2 and sn >= 2: same objects and two same quantities;
+      (F2) cov >= 0.6, >= 3 shared words, spec >= 2 and sn >= 3;
       (F4) >= 4 shared specific objects (document frequency <= RARE_DF) and cov >= 0.6: the same specific story (snail ... wall, frog ... well);
-      (F5) cov >= 0.4, >= 2 shared words and >= 2 shared distinctive numbers ($120 and 15%);
+      (F5) cov >= 0.4, >= 2 shared words and >= 2 shared distinctive numbers ($120 and 15%) in a short window;
       (W)  at least 45% of the question's word triples (numbers masked) and 6 or more are found in the window: the same wording with other numbers.
     REVIEW when cov >= 0.6 with >= 3 shared words and spec >= 2 and none of the above."""
     wins, df, inv = sidx
@@ -375,8 +374,8 @@ def story_hits(q, sidx, own_words=None):
             score[i] = score.get(i, 0) + 1
     cand = [i for i, c in sorted(score.items(), key=lambda kv: -kv[1])[:60] if c >= 2]
     if len(S) <= 4:       # short questions: every window that has all the story words
-        full = [i for i, c in score.items() if c == len(S)]
-        cand = list(dict.fromkeys(cand + full[:3000]))
+        full = sorted((i for i, c in score.items() if c == len(S)), key=lambda i: len(wins[i][2]))
+        cand = list(dict.fromkeys(cand + full[:4000]))
     G = wgrams(q)
     review = None
     for i in cand:
@@ -389,15 +388,13 @@ def story_hits(q, sidx, own_words=None):
         dn = len({n for n in mine & nums if n not in COMMON_NUMS})
         why = None
         if len(S) >= 3:
-            if cov >= 0.8 and len(shared) >= 4 and len(spec) >= 2 and sn >= 1:
-                why = 'same objects (%d of %d story words) and a same number' % (len(shared), len(S))
-            elif cov >= 0.6 and len(shared) >= 3 and len(spec) >= 2 and sn >= 2:
+            if cov >= 0.8 and len(shared) >= 4 and len(spec) >= 2 and sn >= 2:
                 why = 'same objects (%d of %d story words) and %d same numbers' % (len(shared), len(S), sn)
-            elif cov >= 0.4 and len(shared) >= 3 and len(spec) >= 1 and sn >= 3:
+            elif cov >= 0.6 and len(shared) >= 3 and len(spec) >= 2 and sn >= 3:
                 why = 'same objects (%d of %d story words) and %d same numbers' % (len(shared), len(S), sn)
             elif len(rare) >= 4 and cov >= 0.6:
                 why = 'same specific objects (%s)' % ', '.join(sorted(rare))
-        if not why and cov >= 0.4 and len(shared) >= 2 and dn >= 2:
+        if not why and cov >= 0.4 and len(shared) >= 2 and dn >= 2 and len(txt.split()) <= 120:
             why = 'same story (%d of %d words) and the same numbers %s' % (len(shared), len(S), sorted(n for n in mine & nums if n not in COMMON_NUMS))
         if not why and len(G) >= 6 and cov >= 0.5:
             common = G & wgrams(txt)

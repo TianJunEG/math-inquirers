@@ -265,10 +265,10 @@ ITEMS = [
          steps=['Check the numbers 1, 2, 3, 4, 5, 6 ...: 1 is in A, 2 is in B, 3 is in C, 4 is in A ...', 'Every number from 1 to 30 is in one of the lists. No number is left out.'],
          src=['Can a number be in none?']),
     dict(id='I7', tier='invest', no='Investigation (c)', type='selfcheck', open=False, skill='three counting patterns',
-         q='Why does this happen? Why is every number in exactly one of the patterns? Write your idea in the box.',
+         q='Why does this happen? Write your idea in the box.',
          facts=dict(each_number_in_exactly_one=True),
          check=lambda: dict(each_number_in_exactly_one=all(sum(n in ap(s, 3, 40) for s in (1, 2, 3)) == 1 for n in range(1, 100))),
-         hint='Think about counting in 3s. Where can a number sit, compared with the numbers in the 3 times table?',
+         hint='Think about counting in 3s. Where can any number sit, compared with the numbers in the 3 times table?',
          steps=['Counting in 3s: a number is either on the 3s (pattern C), or 1 more than a number on the 3s (pattern A), or 2 more (pattern B).', 'There is no other choice, so every number is in exactly one pattern.', 'Any answer that uses the 3 times table is a good one.'],
          src=['(c) Why does this happen?']),
 
@@ -418,3 +418,7 @@ VARIANTS = {
                  steps=['Each tower has 3 more cubes: 2, 5, 8, 11 ...', 'Keep adding 3 until you reach {x}. It is tower {ans}.']),
         oracle=lambda e: ap(2, 3, 60).index(3 * e['k'] - 1) + 1),
 }
+
+for _d in ITEMS:
+    if _d['type'] == 'selfcheck':
+        _d['marking_mode'] = 'self'

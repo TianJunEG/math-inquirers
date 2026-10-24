@@ -7,7 +7,8 @@
 //   import { onRequest as practiceSubmit } from '../practice/submit/handler.js';  ROUTES['/api/practice/submit'] = practiceSubmit;
 import M from './mark.js';   // UMD file: default import works in Workers (esbuild) and Node
 
-export const LIMITS = { bodyBytes: 20000, items: 400, answerChars: 200, boxes: 12 };
+// explainChars / explainItems: the typed explanation of a self-check item (EXPLAIN-TO-TUTOR); only the tutor's report reads it, it is never sent back to the browser.
+export const LIMITS = { bodyBytes: 64000, items: 400, answerChars: 200, boxes: 12, explainChars: 500, explainItems: 60 };
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 const UNIT = /^[a-z0-9][a-z0-9-]{2,39}$/, VER = /^[A-Za-z0-9._-]{1,30}$/, TOKEN = /^[A-Za-z0-9_-]{32,128}$/, ITEM = /^[A-Za-z0-9_.-]{1,40}$/;
 const enc = new TextEncoder();
@@ -22,7 +23,7 @@ export async function sha256Hex(s) {
 // Returns the cleaned payload or an error word.
 export function validate(b) {
   if (!b || typeof b !== 'object' || Array.isArray(b)) return 'shape';
-  const allowed = ['v', 'unit', 'unit_version', 'sid', 'rev', 'answers', 'self', 'client_marks'];
+  const allowed = ['v', 'unit', 'unit_version', 'sid', 'rev', 'answers', 'self', 'explain', 'client_marks'];
   if (Object.keys(b).some((k) => !allowed.includes(k))) return 'unknown_field';
   if (b.v !== 1) return 'version';
   if (!UNIT.test(String(b.unit || '')) || !VER.test(String(b.unit_version || ''))) return 'unit';
@@ -42,14 +43,26 @@ export function validate(b) {
   const self = b.self || {};
   if (typeof self !== 'object' || Array.isArray(self)) return 'self';
   for (const [id, r] of Object.entries(self)) if (!ITEM.test(id) || !['got', 'not_yet', 'checked'].includes(r)) return 'self';
+  const ex = b.explain === undefined ? {} : b.explain;
+  if (!ex || typeof ex !== 'object' || Array.isArray(ex)) return 'explain';
+  const eids = Object.keys(ex);
+  if (eids.length > LIMITS.explainItems) return 'too_many';
+  for (const id of eids) {
+    if (!ITEM.test(id) || typeof ex[id] !== 'string') return 'explain';
+    if (ex[id].length > LIMITS.explainChars) return 'too_long';
+  }
   return null;
 }
 
+// Clean a typed explanation: control characters out, trimmed, at most explainChars characters, empty -> null.
+export const cleanExplain = (t) => (typeof t === 'string' ? t.replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/g, '').trim().slice(0, LIMITS.explainChars).trim() || null : null);
+
 // keys: [{id, marking_mode, type, key, ordered, equivalent, slips, paper_only}]  ->  rows ready to store
-export function markAll(keys, answers, self) {
+export function markAll(keys, answers, self, explain) {
   const byId = new Map(keys.map((k) => [k.id, k]));
   for (const id of Object.keys(answers)) if (!byId.has(id)) return { error: 'unknown_item' };
   for (const id of Object.keys(self || {})) if (!byId.has(id)) return { error: 'unknown_item' };
+  for (const id of Object.keys(explain || {})) if (!byId.has(id)) return { error: 'unknown_item' };
   const rows = [], counts = { auto: 0, right: 0, wrong: 0, skipped: 0, self: 0, self_got: 0, open: 0 };
   for (const k of keys) {
     const v = Object.prototype.hasOwnProperty.call(answers, k.id) ? answers[k.id] : null;   // an item the browser did not send is a skipped item
@@ -57,11 +70,13 @@ export function markAll(keys, answers, self) {
     const typed = k.marking_mode === 'auto' && M.answered(k.type, v);
     rows.push({
       item_id: k.id, marking_mode: k.marking_mode, mark: r.mark,
-      // free text from self-checked and open items is NEVER stored (could hold anything); only that something was written
+      // free text of a self-checked or open item is not stored as an answer (answer_text stays null); only that something was written. The typed EXPLANATION (explain_text, at most 500 characters)
+      // is kept for the tutor's report only for self and open items: never for an auto-marked item, and never returned to the browser.
       answer_text: typed ? (Array.isArray(v) ? v.join(' | ') : String(v)).slice(0, LIMITS.answerChars) : null,
       answered: M.answered(k.type, v),
       partial_found: d.found ?? (d.boxes ? d.boxes.filter(Boolean).length : null), partial_of: d.of ?? (d.boxes ? d.boxes.length : null),
       slip_idx: r.slip ?? null, note: d.reason ?? null,
+      explain_text: k.marking_mode !== 'auto' && !k.paper_only ? cleanExplain((explain || {})[k.id]) : null,
       self_result: k.marking_mode === 'self' ? ((self || {})[k.id] || null) : null,
     });
     if (r.mark === 'self') { counts.self++; if (rows[rows.length - 1].self_result === 'got') counts.self_got++; }
@@ -87,7 +102,7 @@ export async function handle(request, env, store) {
   const th = await sha256Hex(token);
   const g = await store.getKeys(th, body.unit, body.unit_version);          // checks session, consent and rate in the database too
   if (!g.ok) return bad(g.error, { session: 401, consent: 403, entitlement: 403, unit: 404, rate: 429 }[g.error] || 400);
-  const m = markAll(g.keys, body.answers, body.self);
+  const m = markAll(g.keys, body.answers, body.self, body.explain);
   if (m.error) return bad(m.error);
   const rec = await store.record(th, { unit: body.unit, unit_version: body.unit_version, sid: body.sid, rev: body.rev, rows: m.rows, counts: m.counts });
   if (!rec.ok) return bad(rec.error, { session: 401, consent: 403, entitlement: 403, rate: 429 }[rec.error] || 400);

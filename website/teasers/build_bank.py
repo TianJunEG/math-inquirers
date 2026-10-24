@@ -111,18 +111,28 @@ def render(d, ans, ctx, fin):
     return r
 
 
-def order(level, items):
-    """Deterministic interleave: no two neighbours (cyclically) share a topic or a kind."""
+def order(level, items, left=None, right=None):
+    """Deterministic interleave: no two neighbours share a family (topic) or a kind; `left` / `right` are the families and kinds of the last puzzle of the
+    month before and the first of the month after (when those months already exist), so the rule also holds across a month boundary."""
     rnd = random.Random(1000 + level)
     best = None
-    for _ in range(20000):
+
+    def clash(a, b):
+        return a['family'] == b['family'] or a['kind'] == b['kind']
+    for _ in range(40000):
         rnd.shuffle(items)
         n = len(items)
-        bad = sum(1 for i in range(n) if items[i]['family'] == items[(i + 1) % n]['family'] or items[i]['kind'] == items[(i + 1) % n]['kind'])
+        bad = sum(1 for i in range(n - 1) if clash(items[i], items[i + 1]))
+        if left and clash(left, items[0]):
+            bad += 1
+        if right and clash(items[-1], right):
+            bad += 1
         if best is None or bad < best[0]:
             best = (bad, list(items))
         if bad == 0:
             break
+    if best[0]:
+        print('WARNING level %d: %d neighbouring puzzles share a family or kind' % (level, best[0]))
     return best[1]
 
 
@@ -132,6 +142,20 @@ DAYS_IN = {'01': 31, '02': 29, '03': 31, '04': 30, '05': 31, '06': 30, '07': 31,
 
 def manifest():
     return json.load(open(os.path.join(HERE, 'manifest.json')))
+
+
+def edge(mm, lv, which):
+    """The family/kind of the last puzzle of the previous month (which = -1) or the first of the next month (which = 0), if that month's bank exists."""
+    other = '%02d' % ((int(mm) - 2) % 12 + 1 if which == -1 else int(mm) % 12 + 1)
+    p = os.path.join(HERE, 'batches', 'm%s' % other, 'bank.json')
+    if not os.path.exists(p):
+        return None
+    try:
+        items = json.load(open(p, encoding='utf-8'))['levels'][str(lv)]
+    except Exception:
+        return None
+    e = items[-1] if which == -1 else items[0]
+    return {'family': e['family'], 'kind': e['kind']}
 
 
 def build_month(mm):
@@ -154,7 +178,7 @@ def build_month(mm):
         want = DAYS_IN[mm]
         if len(items) != want:
             print('WARNING month %s level %d has %d puzzles (want %d)' % (mm, lv, len(items), want))
-        items = order(lv * 100 + int(mm), items)
+        items = order(lv * 100 + int(mm), items, edge(mm, lv, -1), edge(mm, lv, 0))
         for i, e in enumerate(items):
             e['date'] = '%s-%02d' % (mm, i + 1)
         out[str(lv)] = items
