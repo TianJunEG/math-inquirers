@@ -40,23 +40,23 @@ def Re(x, y, w, h, fill='none', stroke=NAVY, sw=2.4, rx=0, dash=None):
 # ---------------------------------------------------------------- number line with hops (frog)
 def number_line(lo=0, hi=20, hops=None, circled=(), crosses=(), caption='', first_hop_only=False):
     """A number line lo..hi, one label per number. hops: list of (from, to). circled: numbers ringed. crosses: numbers marked with an X above the line."""
-    sp, x0 = 20, 20
-    W = (hi - lo) * sp + 2 * x0 + 6
+    sp, x0 = 17, 18
+    W = (hi - lo) * sp + 2 * x0 + 4
     y = 62
     px = lambda n: x0 + (n - lo) * sp
     b = ''
     if caption:
-        b += T(x0 - 8, 16, caption, 14, 'start', 800)
+        b += T(x0 - 8, 16, caption, 15, 'start', 800)
     b += Ln(px(lo) - 10, y, px(hi) + 12, y, 3)
     for n in range(lo, hi + 1):
-        b += Ln(px(n), y - 6, px(n), y + 6, 2.2) + T(px(n), y + 26, n, 15)
+        b += Ln(px(n), y - 6, px(n), y + 6, 2.2) + T(px(n), y + 26, n, 14)
     for a, c in (hops or []):
         mx = (px(a) + px(c)) / 2
         b += f'<path d="M{px(a)} {y - 9} Q{mx} {y - 46} {px(c)} {y - 9}" fill="none" stroke="{TEAL}" stroke-width="2.4"/>'
         b += f'<polygon points="{px(c)},{y - 8} {px(c) - 5},{y - 17} {px(c) + 4},{y - 16}" fill="{TEAL}"/>'
         b += T(mx, y - 38, c - a, 14, 'middle', 800, TEAL)
     for n in circled:
-        b += Ci(px(n), y, 11, YEL, NAVY, 2.2) + T(px(n), y + 5, n, 14)
+        b += Ci(px(n), y, 10, YEL, NAVY, 2.2) + T(px(n), y + 5, n, 14)
     for n in crosses:
         b += T(px(n), y - 14, '×', 24, 'middle', 800, WARM)
     return svg(W, 96, b, caption or f'Number line from {lo} to {hi}')
@@ -70,20 +70,20 @@ def stack(*figs):
 # ---------------------------------------------------------------- boxes of dots (stickers)
 def dot_boxes(counts, blank_from=None, caption=''):
     """Boxes 1..n, each shows `counts[i]` dots; boxes with None are empty dashed 'draw here' boxes."""
-    bw, bh, gp, x0, y0 = 84, 64, 22, 8, 26
+    bw, bh, gp, x0, y0 = 66, 58, 28, 6, 26
     W = x0 * 2 + len(counts) * bw + (len(counts) - 1) * gp
     b = ''
     for i, n in enumerate(counts):
         x = x0 + i * (bw + gp)
         b += T(x + bw / 2, y0 - 8, f'Box {i + 1}', 15) + Re(x, y0, bw, bh, '#fff' if n is None else PALE, NAVY, 2.4, 8, '5 4' if n is None else None)
         if n is None:
-            b += T(x + bw / 2, y0 + bh / 2 + 5, 'draw here', 13, 'middle', 600, '#44506F', True)
+            b += T(x + bw / 2, y0 + bh / 2 - 2, 'draw', 14, 'middle', 600, '#44506F', True) + T(x + bw / 2, y0 + bh / 2 + 14, 'here', 14, 'middle', 600, '#44506F', True)
         else:
             for k in range(n):
-                cx, cy = x + 14 + (k % 4) * 19, y0 + 14 + (k // 4) * 19
-                b += Ci(cx, cy, 7, YEL, NAVY, 1.6)
+                cx, cy = x + 11 + (k % 4) * 15, y0 + 12 + (k // 4) * 15
+                b += Ci(cx, cy, 6, YEL, NAVY, 1.5)
         if i < len(counts) - 1:
-            b += T(x + bw + gp / 2, y0 + bh / 2 + 5, '+3', 13, 'middle', 800, TEAL)
+            b += T(x + bw + gp / 2, y0 + bh / 2 + 5, '+3', 14, 'middle', 800, TEAL)
     return svg(W, y0 + bh + 8, b, caption or 'Boxes of sticker dots')
 
 
