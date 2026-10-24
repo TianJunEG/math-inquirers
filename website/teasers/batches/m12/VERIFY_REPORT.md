@@ -7,22 +7,23 @@ Method: every puzzle is re-solved by `brute.py` (independent of the author solve
 | 1 | 31 | 31 | 1 | 21 | 3 | 31 |
 | 2 | 31 | 31 | 1 | 27 | 3 | 31 |
 | 3 | 31 | 29 | 2 | 26 | 3 | 31 |
-| 4 | 31 | 31 | 1 | 28 | 2 | 31 |
+| 4 | 31 | 31 | 1 | 29 | 2 | 31 |
 | 5 | 31 | 29 | 2 | 26 | 2 | 31 |
 | 6 | 31 | 30 | 2 | 24 | 2 | 31 |
 
-Sources searched (whole working tree, tracked or not): 6655 files, 1357.2 MB, sha256 b1b4de7d8f2e476ff5e96915.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 178, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 282, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
+Sources searched (whole working tree, tracked or not): 6664 files, 1357.7 MB, sha256 c17c2fa611467bda52942393.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 289, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
 
 Similarity sources checked: holiday banks, own term lessons, all extension workbook data, the school booklets, our book drafts and catalogues, external private source files, and the seven fixed website puzzles.
 
-FAIL count: 4. REVIEW items: 99.
+FAIL count: 3. REVIEW items: 105.
 
-- FAIL L1-twodice [12-05]: same story as a source: rule N (the question's numbers and the answer all in one source window): ['3', '4', '5', '6', '9'] with the shared story words: "Two dice: 36 equally likely outcomes blue die red die 1 1 2 2 3 3 4 4 5 5 6 6 2 3 4 5 6 7 3 4 5 6 7  ..." (split/p6l6/project/slides/p6l6-teachtwo.html) words die,happen
-- FAIL L2-sevens [12-23]: doubled word "numbers numbers" in why
-- FAIL L2-clubmatch [12-24]: shares a 7-word run with holiday: "each have one pet a cat a"
-- FAIL L5-pupilpie [12-12]: same story as a source: rule A (content words): same story skeleton, 5 of 7 story words (2 rare) with other numbers: "| Prelim | 2022 | NanChiau | B1-30 | 4 | statistics | 2 | 1 | Pie chart travel to school; complete b ..." (docs/books/private_p6_papers/non_routine_questions.md) words chart,pie,school,sector,travel
+- FAIL L1-twodice [12-05]: same story as a source: rule N (the question's numbers and the answer all in one source window): ['3', '5', '6', '7', '9'] with the shared story words: "24 yellow 28 red 35 blue 40 green 45 orange 5 × 7 = 35 (blue) 8 bags, 3 in each. Altogether 24 (yell ..." (school/colour_by_code/out/p2/html/CBC-P2-14_dinosaur_mult_teacher.html) words bag,green,yellow
+- FAIL L4-grandmaages [12-19]: shares a 7-word run with external: "old in how many years' time will"
+- FAIL L4-grandmaages [12-19]: same story as a source: same wording with other numbers (10 of 22 word triples): "- [EOY_2024_CatholicHigh Q36, 2m, Ages, diff 2] Isaac is 7 years old and his sister is 3 years old.  ..." (docs/books/private_p4_papers/non_routine_questions.md) words age,year
 
 - REVIEW L1-rulerbill [12-01]: rule B: 3 of the same numbers ['3', '4', '9'] as "Picture-dependent items re-solved from the picture, not the key: B1 L1 S1 (26),  ..." (term/l1/audit/AUDIT_BOOKS_1_4_ROUND2.md)
+- REVIEW L1-twodice [12-05]: question has 54 words (limit 48)
+- REVIEW L1-twodice [12-05]: number 1 in the question is not a parameter (written in the wording; check)
 - REVIEW L1-traysame [12-08]: story words 5 of 7 like "Pupils colour their own copy. Colour key: 1260 = yellow, 1680 = red, 2520 = blue, 3360 = g ..." (school/p4/out/S1_key.html)
 - REVIEW L1-chartwalk [12-09]: number 100 in the question is not a parameter (written in the wording; check)
 - REVIEW L1-toycars [12-10]: rule B: 3 of the same numbers ['3', '8', '9'] as "7 Student-led inquiry: 2 - Explore round 3 is a free build; the Investigation as ..." (term/l1/AUDIT_L32.md)
@@ -48,10 +49,8 @@ FAIL count: 4. REVIEW items: 99.
 - REVIEW L2-seesaw [12-11]: story words 5 of 8 like "l2_scale level balance scales: scales [{left: [obj, ...], right: [obj, ...], label?}], obj ..." (extension/tools/figs_l2_u09.py)
 - REVIEW L2-busroutes [12-12]: longest sentence 26 words (limit 22)
 - REVIEW L2-tinstack [12-14]: longest sentence 33 words (limit 22)
-- REVIEW L2-tinstack [12-14]: rule B: 3 of the same numbers ['3', '4', '8'] as "b: a triangle with 2 lines from the top corner to the bottom and 1 line across t ..." (practice/holiday/p2/08/dist/data/p2l08.json)
 - REVIEW L2-stickgame [12-18]: number 1 in the question is not a parameter (written in the wording; check)
 - REVIEW L2-sevens [12-23]: rule B: 3 of the same numbers ['12', '4', '8'] as "He reads for half an hour. What time does he stop?", "hint": "The long hand goes ..." (term/l1/out/l23/practice/data/t3l23.json)
-- REVIEW L2-clubmatch [12-24]: story words 4 of 6 like "('Pets: Dog 6, Cat 4, Fish 6, Bird 2. ..." (hp/qbank.py)
 - REVIEW L2-tankwater [12-25]: number 35 in the question is not a parameter (written in the wording; check)
 - REVIEW L2-tankwater [12-25]: number 39 in the question is not a parameter (written in the wording; check)
 - REVIEW L2-tankwater [12-25]: story words 4 of 6 like "How many points did each team score? Tank A has 80 litres of water and loses 6 litres ever ..." (outputs/designed/Math_Inquirers_P4_Question_Bank.pdf)
@@ -65,6 +64,7 @@ FAIL count: 4. REVIEW items: 99.
 - REVIEW L3-mapshort [12-08]: longest sentence 31 words (limit 26)
 - REVIEW L3-moneybox [12-10]: longest sentence 28 words (limit 26)
 - REVIEW L3-moneybox [12-10]: number 2 in the question is not a parameter (written in the wording; check)
+- REVIEW L3-moneybox [12-10]: number 4 in the question is not a parameter (written in the wording; check)
 - REVIEW L3-cryptsum [12-11]: number 3 in the question is not a parameter (written in the wording; check)
 - REVIEW L3-ricejar [12-14]: story words 4 of 6 like "When it is half full, it weighs 0.85 kg. What is the mass of the empty jug, in kilograms?' ..." (practice/holiday/p4/05/lesson.py)
 - REVIEW L3-smalldigitsum [12-15]: number 3 in the question is not a parameter (written in the wording; check)
@@ -82,11 +82,9 @@ FAIL count: 4. REVIEW items: 99.
 - REVIEW L4-gainingclock [12-01]: number 00 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-gainingclock [12-01]: number 9 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-gainingclock [12-01]: number 00 in the question is not a parameter (written in the wording; check)
-- REVIEW L4-cubenet [12-02]: story words 5 of 8 like "today: 'Find out which shapes fold into a cube, find opposite faces on a dice net, and com ..." (p4/content/l8.js)
+- REVIEW L4-threedigitsum [12-02]: rule B: 3 of the same numbers ['3', '5', '8'] as "(a) value of $2 vouchers (b) least cash | (a) $210 | | WA1 | 2025 | ACSJ | B2-18 ..." (docs/books/private_p6_papers/non_routine_questions.md)
 - REVIEW L4-liftmin [12-04]: number 9 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-liftmin [12-04]: number 4 in the question is not a parameter (written in the wording; check)
-- REVIEW L4-concert [12-06]: number 2105 in the question is not a parameter (written in the wording; check)
-- REVIEW L4-concert [12-06]: rule B: 3 of the same numbers ['3', '35', '5'] as "The plan's T1.5 (a bill like $3.50, 350 cents) is right; it needs comparing pric ..." (docs/books/p2_school_paper_patterns.md)
 - REVIEW L4-notebooks [12-08]: rule C: two four-word runs shared with "**A12.1** [T] 2 pens cost $8. How much do 5 pens cost? ..." (docs/books/word_problems_g1_g2_original_draft.md): # pens cost # / do # pens cost
 - REVIEW L4-digitfive [12-09]: rule B: 3 of the same numbers ['3', '4', '5'] as "Fill in the blanks.", "Counting in 2s: 2, 4, 6, ____, ____, 12, ____, 16"], "q": ..." (practice/holiday/p1/01/dist/data/p1l01.json)
 - REVIEW L4-nametags [12-12]: rule C: two four-word runs shared with "G2 **CTX.** Cans are sold in packs of 6 for $5.40 and 8 for $6.80. ..." (docs/terms/l4_preflight.md): are sold in packs / sold in packs of
@@ -100,6 +98,14 @@ FAIL count: 4. REVIEW items: 99.
 - REVIEW L4-reachtotal [12-29]: number 1 in the question is not a parameter (written in the wording; check)
 - REVIEW L5-climbing [12-02]: number 358 in the question is not a parameter (written in the wording; check)
 - REVIEW L5-redeye [12-08]: story words 3 of 4 like "| 31 | Factors, Multiples and Tests | Every number is a rectangle in waiting, and its digi ..." (docs/pedagogy/term_review.md)
+- REVIEW L5-zoogates [12-12]: longest sentence 35 words (limit 34)
+- REVIEW L5-zoogates [12-12]: number 1 in the question is not a parameter (written in the wording; check)
+- REVIEW L5-zoogates [12-12]: number 2 in the question is not a parameter (written in the wording; check)
+- REVIEW L5-zoogates [12-12]: number 3 in the question is not a parameter (written in the wording; check)
+- REVIEW L5-zoogates [12-12]: number 4 in the question is not a parameter (written in the wording; check)
+- REVIEW L5-zoogates [12-12]: number 5 in the question is not a parameter (written in the wording; check)
+- REVIEW L5-zoogates [12-12]: number 6 in the question is not a parameter (written in the wording; check)
+- REVIEW L5-zoogates [12-12]: rule B: 4 of the same numbers ['3', '4', '5', '6'] as "P4-30 item 5 "Two 10 cm by 3 cm rectangles are joined along their long sides." ( ..." (docs/audit_final/p4_semester_booklets_audit.md)
 - REVIEW L5-roundtable [12-15]: story words 5 of 7 like "- **Go further.** Six children sit round a table; clues give next to, opposite; place ever ..." (docs/terms/l1_term2_preflight.md)
 - REVIEW L5-routeplan [12-20]: longest sentence 37 words (limit 34)
 - REVIEW L5-lostnumber [12-23]: number 3 in the question is not a parameter (written in the wording; check)
@@ -120,4 +126,3 @@ FAIL count: 4. REVIEW items: 99.
 - REVIEW L6-gaussjar [12-27]: number 15 in the question is not a parameter (written in the wording; check)
 - REVIEW L6-tankdepth [12-28]: number 1 in the question is not a parameter (written in the wording; check)
 - REVIEW L6-tankdepth [12-28]: number 1000 in the question is not a parameter (written in the wording; check)
-- REVIEW L6-tankdepth [12-28]: story words 6 of 10 like "All of it is poured into an empty tank with a base 50 cm by 32 cm. How deep is the water i ..." (outputs/designed/Math_Inquirers_P5_Question_Bank.pdf)
