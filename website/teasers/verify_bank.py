@@ -1291,30 +1291,43 @@ def extra_hits(q, ans, sol, cw):
             txt = ' '.join(ix.txt[a:b + 1])
             shared = S & ws
             why = None
-            # S, one sentence against one sentence
+            # S, one sentence against one sentence (content-word Jaccard >= 0.6 and the words really are the same words)
             if ln == 1:
+                tb = wtoks2(ix.txt[a])
                 for s, sw in qs:
+                    ta = wtoks2(s)
+                    short, long_ = (ta, tb) if len(ta) <= len(tb) else (tb, ta)
+                    ssh = set(short)
+                    contain = len(ssh & set(long_)) / max(1, len(ssh))
+                    ratio = len(short) / max(1, len(long_))
+                    has_num = '#' in ta
+                    # S3: the same long sentence with other numbers
+                    if len(ssh) >= 7 and len(ssh & set(long_)) >= 7 and contain >= 0.85 and len(sw & cw.words[a]) >= 3:
+                        if ratio >= 0.65 and (has_num or len(ta) >= 10):
+                            why = 'rule S3 (the same sentence with other numbers, %d words): "%s" is like "%s"' % (len(short), s[:80], ix.txt[a][:90])
+                            break
+                        elif ratio >= 0.65 and review is None:
+                            review = ('REVIEW', 'rule S3: the sentence "%s" is like "%s" (%s)' % (s[:80], ix.txt[a][:80], ix.rels[ix.file[a]]))
                     if len(sw) >= 4:
                         sh = sw & cw.words[a]
                         union = len(sw | cw.words[a])
                         if len(sh) >= 4 and len(sh) / union >= 0.6 and len(cw.words[a]) >= 4:
-                            why = 'rule S (one sentence, Jaccard %.2f, %d shared content words): "%s" is like "%s"' % (len(sh) / union, len(sh), s[:80], ix.txt[a][:90])
-                            break
-            # S3, the same long sentence with other numbers: every word of the shorter sentence is in the longer one
-            if not why and ln == 1:
-                tb = set(wtoks2(ix.txt[a]))
-                for s, sw in qs:
-                    ta = set(wtoks2(s))
-                    short, long_ = (ta, tb) if len(ta) <= len(tb) else (tb, ta)
-                    if len(short) >= 7 and len(short & long_) >= 7 and len(short & long_) / len(short) >= 0.85 and len(sw & cw.words[a]) >= 3:
-                        why = 'rule S3 (the same sentence with other numbers, %d words): "%s" is like "%s"' % (len(short), s[:80], ix.txt[a][:90])
-                        break
+                            if contain >= 0.7 and ratio >= 0.5 and (has_num or len(ta) >= 10):
+                                why = 'rule S (one sentence, Jaccard %.2f, %d shared content words): "%s" is like "%s"' % (len(sh) / union, len(sh), s[:80], ix.txt[a][:90])
+                                break
+                            elif review is None:
+                                review = ('REVIEW', 'rule S: sentence "%s" shares %d content words with "%s" (%s)' % (s[:70], len(sh), ix.txt[a][:70], ix.rels[ix.file[a]]))
             # S, whole question against a window
             if not why and len(S) >= 5 and len(shared) >= 5 and len(shared) / len(S) >= 0.7 and (not mine or mine <= nums):
-                why = 'rule S (window): %d of %d content words (%s) and all the numbers in "%s ..."' % (len(shared), len(S), ','.join(sorted(shared)), txt[:90])
+                if mine or len(shared) >= 7:
+                    why = 'rule S (window): %d of %d content words (%s) and all the numbers in "%s ..."' % (len(shared), len(S), ','.join(sorted(shared)), txt[:90])
+                elif review is None:
+                    review = ('REVIEW', 'rule S (window): %d of %d content words (%s) in "%s ..." (%s)' % (len(shared), len(S), ','.join(sorted(shared)), txt[:70], ix.rels[ix.file[a]]))
             # N2: the answer and two more numbers
-            if not why and ans_n and ans_n in nums and len(mine & nums) >= 2 and len(txt) <= 400 and len(shared) >= 3 and len(nums) <= 14:
-                why = 'rule N2 (the answer %s and the numbers %s in one source window with %d shared content words): "%s ..."' % (ans_n, sorted(mine & nums, key=float), len(shared), txt[:90])
+            if not why and ans_n and ans_n in nums and len(txt) <= 400 and len(shared) >= 4 and len(nums) <= 14:
+                big = [n for n in mine & nums if float(n) >= 12]
+                if len(big) >= 2:
+                    why = 'rule N2 (the answer %s and the numbers %s in one source window with %d shared content words): "%s ..."' % (ans_n, sorted(mine & nums, key=float), len(shared), txt[:90])
             # G
             if not why and grams:
                 got = set()

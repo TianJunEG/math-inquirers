@@ -312,7 +312,7 @@ PATS = ['hz', 'dt', 'hx', 'hh', 'hv']
 def drinks_fig(lime=None):
     """The bar graph of cups of drinks sold. lime=None: the Lime juice bar is missing (a dashed '?' slot); lime=50: its bar is drawn."""
     h = _h()
-    x0, y0, k, slot, bw = 40, 218, 3.2, 50, 34
+    x0, y0, k, slot, bw = 34, 230, 3.2, 48, 34
     defs = ('<defs>'
             f'<pattern id="hz" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><line x1="0" y1="0" x2="0" y2="8" stroke="{h.NAVY}" stroke-width="2.2"/></pattern>'
             f'<pattern id="dt" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#fff"/><circle cx="4" cy="4" r="1.7" fill="{h.NAVY}"/></pattern>'
@@ -333,10 +333,13 @@ def drinks_fig(lime=None):
         else:
             body += h.Re(x, y0 - 5, bw, 5, 'none', h.NAVY, 2.2, 0, '6 4') + h.T(x + bw / 2, y0 - 14, '?', 22, 'middle', 800)
         cx = x + bw / 2
-        body += h.T(cx + 4, y0 + 20, name, 14, 'end', 700).replace('<text ', f'<text transform="rotate(-40 {cx + 4} {y0 + 20})" ')
-    body += h.T(10, y0 - 100, 'Number of cups', 14, 'middle', 700).replace('<text ', f'<text transform="rotate(-90 10 {y0 - 100})" ')
+        if i % 2 == 0:            # every other name sits one line lower, so a long name such as Bandung or Lime juice never touches its neighbours
+            body += h.Ln(cx, y0 + 3, cx, y0 + 25, 1.4, '#7C86A2', '3 3') + h.T(cx, y0 + 39, name, 14, 'middle', 700)
+        else:
+            body += h.T(cx, y0 + 20, name, 14, 'middle', 700)
+    body += h.T(x0 - 28, 12, 'Number of cups', 14, 'start', 700)
     label = 'Bar graph of cups of drinks sold: Milo 45, Teh 30, Kopi 55, Bandung 20, and ' + ('Lime juice 50' if lime is not None else 'the bar for Lime juice is missing')
-    return h.svg(300, y0 + 62, body, label)
+    return h.svg(300, y0 + 46, body, label)
 
 
 def queue_fig(front, back, who='Ben'):
