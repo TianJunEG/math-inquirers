@@ -105,7 +105,7 @@ def tutor_child(k):
     for s in SKILLS:
         ms = [m[i[0]] for i in ITEMS if i[1] == s and i[2] == 'auto']; st = skill_state(k, s)
         h.append(f'<tr><td>{E(s)}</td><td>{ms.count("R")}</td><td>{ms.count("W")}</td><td>{ms.count("S")}</td><td>{WORD[st][0]} {WORD[st][1]}</td></tr>')
-    h.append('</table><p class="sub">Percentages cover auto-marked questions only. Checked-on-paper and open questions are shown separately and are never in a percentage. “Skills” come from the MOE strand and skill tags on each item (tutor-facing labels).</p></section>')
+    h.append('</table><p class="sub">Counts cover auto-marked questions only. Checked-on-paper and open questions are shown separately and are never in a percentage. “Skills” come from the MOE strand and skill tags on each item (tutor-facing labels).</p></section>')
     return ''.join(h)
 
 def tutor_group():

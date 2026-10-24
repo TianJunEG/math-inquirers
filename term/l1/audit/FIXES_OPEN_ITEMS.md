@@ -1,6 +1,6 @@
 # Fixes for the open items left by the Books 1-4 round 2 and Books 5-8 round 3 fixes (24 Oct 2026)
 
-Sources: the "Not closed" rows of `FIXES_BOOKS_1_4_ROUND2.md` and `FIXES_BOOKS_5_8_ROUND3.md`. Lessons 12, 23, 36 and 40 rebuilt (`bash term/l1/build.sh NN`), all 8 colour books and 8 B&W books rebuilt (`print/make_term_books.py --last 40`, `print/make_bw_print.py`), `validate.py` 0 FAIL on all 40 lessons, `print/check_bw.py` see the end. Page counts unchanged and all even: workbooks 46/44/46/46/42/44/48/42, keys 22/32/22/30/22/32/22/32, home packs 12/14/12/14/12/14/12/14. Nothing was published to Artifact.
+Sources: the "Not closed" rows of `FIXES_BOOKS_1_4_ROUND2.md` and `FIXES_BOOKS_5_8_ROUND3.md`. Lessons 12, 23, 36 and 40 rebuilt (`bash term/l1/build.sh NN`), all 8 colour books and 8 B&W books rebuilt (`print/make_term_books.py --last 40`, `print/make_bw_print.py`), `validate.py` 0 FAIL on all 40 lessons, `print/check_bw.py` ok on all 24 term B&W files (0 FAIL, max non-grey 0.00000). The first B&W run hung in its worker pool on the last two Book 8 files; they were re-run on their own (`--only Book8`) and the outputs are complete. Page counts unchanged and all even: workbooks 46/44/46/46/42/44/48/42, keys 22/32/22/30/22/32/22/32, home packs 12/14/12/14/12/14/12/14. Nothing was published to Artifact.
 
 | Open item | Status | What was done (every answer hand-solved, then checked by the brute-force oracles in `verify/`) |
 |---|---|---|
