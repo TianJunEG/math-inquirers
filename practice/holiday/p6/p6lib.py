@@ -86,7 +86,7 @@ def _place(svg, x, y, scale=1.0):
     head_end = svg.index('>')
     head = svg[:head_end]
     head = re.sub(r'\s(width|height|style)="[^"]*"', '', head)
-    return f'{head} x="{x:.1f}" y="{y:.1f}" width="{w * scale:.1f}" height="{h * scale:.1f}"' + svg[head_end:], w * scale, h * scale
+    return f'{head} x="{x:.1f}" y="{y:.1f}" width="{w * scale:.1f}" height="{h * scale:.1f}" style="width:{w * scale:.1f}px;height:{h * scale:.1f}px;max-width:none"' + svg[head_end:], w * scale, h * scale
 
 
 def compose(rows, label, width=None, gap=10, pad=4, align='center'):

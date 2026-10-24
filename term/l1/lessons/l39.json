@@ -2841,10 +2841,10 @@
     {
       "id": "H5",
       "tier": "start",
-      "text": "The heart is 4. What is the heart + the heart + the heart? ___",
-      "answer": "12",
-      "val": 12,
-      "solution": "4 + 4 + 4 = 12.",
+      "text": "The moon is 6. The star is 2 more than the moon. What is the moon + the star? ___",
+      "answer": "14",
+      "val": 14,
+      "solution": "The star is 6 and 2 more, which is 8. The moon + the star is 6 + 8 = 14.",
       "rewind_of": "Term 2 Lesson 3"
     }
   ],

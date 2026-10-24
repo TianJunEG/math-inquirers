@@ -91,7 +91,7 @@ SUBS = printed_fig('Two subtractions with missing digits')
 SQUARE = printed_fig('Magic square with 80')
 TRI_A = magic_triangle((110, 120, None), (None, None, None), 'Magic triangle (a). 110 is in the top corner and 120 in the bottom left corner. The bottom right corner and the three middle circles are empty. Each side adds up to 390.')
 TRI_B = magic_triangle((None, None, None), (None, None, None), 'Magic triangle (b). All six circles are empty. Each side adds up to 420.')
-BARS = printed_fig('Two bars: the long bar')
+BARS = two_bars_model(700, 200)
 sol390 = one(triangle_solutions(390, {0: 110, 1: 120}), 'triangle 390')
 sol420 = min(triangle_solutions(420))
 

@@ -122,7 +122,7 @@ ITEMS = [
       src=['how much of a whole pizza is each child short of? Compare the two shortfalls.']),
 
     D(id='2a', tier='core', no='2(a)', type='set', ordered=False, skill='unit fractions', answer=[4, 5],
-      q='Write each fraction as the sum of two DIFFERENT unit fractions (1 on top): take away one unit fraction. Is what is left a unit fraction?\nWorked example: 7/10 − 1/2 = 7/10 − 5/10 = 2/10 = 1/5, so 7/10 = 1/2 + 1/5.\n9/20 = 1/□ + 1/□   (try 1/3, 1/4, 1/5 … in turn). Type the two bottom numbers.',
+      q='Write each fraction as the sum of two DIFFERENT unit fractions (1 on top): take away one unit fraction. Is what is left a unit fraction?\nWorked example: 7/10 − 1/2 = 7/10 − 5/10 = 2/10 = 1/5, so 7/10 = 1/2 + 1/5.\n9/20 = 1/□ + 1/□ (try 1/3, 1/4, 1/5 … in turn). Type the two bottom numbers.',
       check=lambda: sorted(unit_pairs_search(F(9, 20))[0]) if len(unit_pairs_search(F(9, 20))) == 1 else None,
       hint='Try 1/3: 9/20 − 1/3 is not a unit fraction. Try 1/4 next: write 1/4 as twentieths.',
       steps=['Try 1/3: 9/20 − 1/3 = 27/60 − 20/60 = 7/60. That is not a unit fraction.', 'Try 1/4: 9/20 − 5/20 = 4/20 = 1/5. Yes!', 'So 9/20 = 1/4 + 1/5. The bottom numbers are 4 and 5.'],
@@ -175,7 +175,7 @@ ITEMS = [
             'Use sixtieths (60 is a multiple of 2, 6, 12 and 20).', ['In sixtieths: 30/60 + 10/60 + 5/60 + 3/60 = 48/60.', '48/60 = 4/5 in its simplest form.'],
             ['Work out each sum. Give each answer in its simplest form.'], simplest=True),
     fr_item('4c', 'core', '4(c)', 'patterns in fractions', F(9, 10),
-            'Predict: 1/2 + 1/6 + 1/12 + … + 1/90 = ?  Explain how you know. Type the answer as a fraction.',
+            'Predict: 1/2 + 1/6 + 1/12 + … + 1/90 = ? Explain how you know. Type the answer as a fraction.',
             lambda: frac_text(sum((F(1, b) for b in gap_bottoms(Q4_BOTTOMS, 9)), F(0))) if gap_bottoms(Q4_BOTTOMS, 9)[-1] == 90 else None,
             'Look at your three sums: 2/3, 3/4, 4/5. What is the pattern? How many terms are there up to 1/90?',
             ['The sums so far are 2/3, 3/4 and 4/5. Each is 1 take away the next unit fraction: 1 − 1/3, 1 − 1/4, 1 − 1/5.', '1/90 is the 9th fraction (9 × 10 = 90), so the sum is 1 − 1/10.', 'The answer is 9/10.'],

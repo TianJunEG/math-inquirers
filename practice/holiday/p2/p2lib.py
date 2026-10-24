@@ -86,3 +86,16 @@ def split_two(digits6):
     """All (x, y) of two 3-digit numbers that use the six cards once each."""
     for p in set(itertools.permutations(digits6)):
         yield p[0] * 100 + p[1] * 10 + p[2], p[3] * 100 + p[4] * 10 + p[5]
+
+
+def two_bars_model(total, diff):
+    """The model of 'two numbers add up to <total>, the long one is <diff> more': the long bar is the short bar plus a hatched piece.  Readable on a phone (340 wide)."""
+    sw, ew, x0 = 120, 56, 84
+    b = ('<defs><pattern id="hz2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#fff"/>'
+         f'<line x1="0" y1="0" x2="0" y2="6" stroke="{NAVY}" stroke-width="2"/></pattern></defs>')
+    b += T(4, 30, 'short bar', 15, 'start', 800) + T(4, 76, 'long bar', 15, 'start', 800)
+    b += Re(x0, 10, sw, 30, '#FFE08A', NAVY, 2.4) + T(x0 + sw / 2, 31, '?', 18)
+    b += Re(x0, 56, sw, 30, '#FFE08A', NAVY, 2.4) + T(x0 + sw / 2, 77, '?', 18)
+    b += Re(x0 + sw, 56, ew, 30, 'url(#hz2)', NAVY, 2.4) + Re(x0 + sw + 8, 62, ew - 16, 18, '#fff', 'none', 0) + T(x0 + sw + ew / 2, 77, diff, 15, 'middle', 800, NAVY)
+    b += Ln(x0, 100, x0 + sw + ew, 100, 2.4) + T(x0 + (sw + ew) / 2, 122, f'{total} altogether', 15, 'middle', 800, TEAL)
+    return _svg(340, 130, b, f'Two bars: the long bar is {diff} longer than the short bar; together they make {total}')
