@@ -4,61 +4,53 @@ Method: every puzzle is re-solved by `brute.py` (independent of the author solve
 
 | Level | Puzzles | Solver kinds | Most uses of one solver kind | Families | Most in one family | Sub-structures |
 |---|---|---|---|---|---|---|
-| 1 | 30 | 28 | 2 | 19 | 3 | 30 |
-| 2 | 30 | 30 | 1 | 25 | 2 | 30 |
+| 1 | 30 | 29 | 2 | 20 | 3 | 30 |
+| 2 | 30 | 30 | 1 | 26 | 2 | 30 |
 | 3 | 30 | 30 | 1 | 22 | 3 | 30 |
-| 4 | 30 | 28 | 2 | 24 | 2 | 30 |
+| 4 | 30 | 28 | 2 | 25 | 2 | 30 |
 | 5 | 30 | 30 | 1 | 22 | 3 | 30 |
 | 6 | 30 | 24 | 3 | 20 | 3 | 30 |
 
-Sources searched (whole working tree, tracked or not): 6748 files, 1361.6 MB, sha256 f6519738a14b47891f6d10bf.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 373, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
+Sources searched (whole working tree, tracked or not): 6748 files, 1361.7 MB, sha256 7e7f8fef1f3051217646c887.  Files per root: deck 158, diag 12, docs 416, extension 257, hp 41, k2 5, levels 20, mascot 4, ops 14, outputs 180, p1 1, p2 27, p3 27, p4 27, p5 28, p6 38, portal 45, practice 373, print 6, rebuild 87, releases 1, review 1, school 474, split 1801, taster 2, term 2530, tutor 130, website 42, worker 1.
 
 Similarity sources checked: holiday banks, own term lessons, all extension workbook data, the school booklets, our book drafts and catalogues, external private source files, and the seven fixed website puzzles.
 
-FAIL count: 7. REVIEW items: 107.
+FAIL count: 0. REVIEW items: 111.
 
-- FAIL L1-ribbonpieces [11-06]: same story as a source: rule B (numbers): 3 of the same numbers ['18', '26', '7'] (2 distinctive) and 3 shared story words: "Or look at which ribbon reaches furthest to the right.", "steps": ["Count the squares: ribbon A has  ..." (practice/holiday/p1/09/dist/data/p1l09.json) words length,longest,ribbon
-- FAIL L2-beadsticks [11-13]: same story as a source: rule N (the question's numbers and the answer all in one source window): ['3', '4', '5', '7'] with the shared story words: "Fill in the gaps: 3, __, __, 17, __', a: '3, 7, 10, 17, 27.' }, { q: 'Use each of the numbers 2, 3,  ..." (p4/content/l3.js) words biggest,order,smallest
-- FAIL L4-photoline [11-11]: forbidden word in q: photo
-- FAIL L5-shapelines [11-12]: shares a 7-word run with the extension workbooks: "a rectangle that is not a square"
-- FAIL L5-codelock [11-15]: doubled word "pairs pairs" in why
-- FAIL L5-postalscale [11-21]: same story as a source: rule N (the question's numbers and the answer all in one source window): ['3', '4', '5', '1000'] with the shared story words: "How the pupil checks: Code word (6 letters). Answers: 1) 9 kg; 2) 8 kg; 3) 250 g; 4) 150 g; 5) 1 kg; ..." (school/p2/out/P2_S2_Answer_Key.pdf) words gram,halfway,kilogram,scale
-- FAIL L6-beadratio [11-23]: rule S3 (the same sentence with other numbers, 13 words): "A bag holds red beads and blue beads in the ratio 3 : 5." is like "**5.2** A bag holds red, blue and green beads in the ratio 2 : 3 : 5." (docs/sasmo/g5_original_problems_draft.md)
 
-- REVIEW L1-secret63 [11-04]: number 2 in the question is not a parameter (written in the wording; check)
-- REVIEW L1-noodleset [11-05]: story words 4 of 6 like "She ordered 1 side dish, 1 main dish and 1 drink for lunch. What did she eat? [menu: Frenc ..." (docs/books/private_p2_papers/non_routine_questions.md)
-- REVIEW L1-ribbonpieces [11-06]: longest sentence 22 words (limit 20)
-- REVIEW L1-mrtdays [11-12]: rule B: 3 of the same numbers ['14', '16', '8'] as "Clue 3: Mei does not go by car." style="width:100%;max-width:348px;height:auto;d ..." (practice/holiday/p2/10/dist/data/p2l10.json)
+- REVIEW L1-busminute [11-03]: rule B: 3 of the same numbers ['20', '35', '4'] as "| 14 | 5 Machines; 6 Market Day; 7 Fair Shares | Before-and-after bars; three ch ..." (docs/terms/l2_preflight.md)
+- REVIEW L1-drinksmachine [11-04]: story words 3 of 5 like "**LIST-051** | 2025 | Raffles Girls | EOY | Q8 | 2 marks | MONEY | difficulty 3 | picture  ..." (docs/books/private_p3_papers/non_routine_questions.md)
+- REVIEW L1-craneboard [11-06]: rule B: 3 of the same numbers ['19', '23', '28'] as "TITLES={1:'Number Lines to 10 000',2:'Write It Down, Check It',3:'Multiply by Sp ..." (docs/books/private_p3_papers/assign_p3.py)
+- REVIEW L1-twobags [11-07]: number 5 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-twobags [11-07]: number 19 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-twobags [11-07]: number 19 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-twobags [11-07]: number 5 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-secret63 [11-10]: number 2 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-stripmarks [11-11]: story words 3 of 5 like "**DIAG-019** | 2020 | Catholic High | SA2 | Q38 | 3 marks | LEN | difficulty 3 | picture y ..." (docs/books/private_p3_papers/non_routine_questions.md)
+- REVIEW L1-openingtimes [11-12]: rule B: 3 of the same numbers ['11', '4', '6'] as "| 4 | Pattern Machines | Far places in a repeating pattern come from the groups  ..." (docs/pedagogy/holiday_review.md)
 - REVIEW L1-threefifty [11-14]: number 35 in the question is not a parameter (written in the wording; check)
-- REVIEW L1-stripmarks [11-17]: story words 3 of 5 like "**DIAG-019** | 2020 | Catholic High | SA2 | Q38 | 3 marks | LEN | difficulty 3 | picture y ..." (docs/books/private_p3_papers/non_routine_questions.md)
-- REVIEW L1-busminute [11-18]: rule B: 3 of the same numbers ['20', '35', '4'] as "| 14 | 5 Machines; 6 Market Day; 7 Fair Shares | Before-and-after bars; three ch ..." (docs/terms/l2_preflight.md)
-- REVIEW L1-bibscores [11-19]: number 52 in the question is not a parameter (written in the wording; check)
-- REVIEW L1-bibscores [11-19]: number 2 in the question is not a parameter (written in the wording; check)
-- REVIEW L1-bibscores [11-19]: number 7 in the question is not a parameter (written in the wording; check)
-- REVIEW L1-bibscores [11-19]: rule B: 3 of the same numbers ['12', '5', '7'] as "Malik will qualify if the total score for three out of the four games is 30 or m ..." (docs/books/private_p4_papers/non_routine_questions.md)
-- REVIEW L1-seatrow [11-23]: number 1 in the question is not a parameter (written in the wording; check)
-- REVIEW L1-seatrow [11-23]: number 2 in the question is not a parameter (written in the wording; check)
-- REVIEW L1-seatrow [11-23]: rule B: 3 of the same numbers ['3', '4', '5'] as "- [WA_2020_TA1_StNicholas Q15, 2m, Cinema seats rows behind in front, diff 3] 5  ..." (docs/books/private_p5_papers/non_routine_questions.md)
-- REVIEW L1-woodpecker [11-24]: rule B: 3 of the same numbers ['12', '4', '6'] as "| L6 Think harder No.2, Go further No.6, No.7 grids | 31, 32 | OK; 6 x 6, 6 x 6, ..." (docs/audit_final/holiday_diagram_review_L4_6.md)
-- REVIEW L1-twobags [11-27]: number 5 in the question is not a parameter (written in the wording; check)
-- REVIEW L1-twobags [11-27]: number 19 in the question is not a parameter (written in the wording; check)
-- REVIEW L1-twobags [11-27]: number 19 in the question is not a parameter (written in the wording; check)
-- REVIEW L1-twobags [11-27]: number 5 in the question is not a parameter (written in the wording; check)
-- REVIEW L1-openingtimes [11-28]: rule B: 3 of the same numbers ['11', '4', '6'] as "| 4 | Pattern Machines | Far places in a repeating pattern come from the groups  ..." (docs/pedagogy/holiday_review.md)
-- REVIEW L1-drinksmachine [11-29]: story words 3 of 5 like "**LIST-051** | 2025 | Raffles Girls | EOY | Q8 | 2 marks | MONEY | difficulty 3 | picture  ..." (docs/books/private_p3_papers/non_routine_questions.md)
-- REVIEW L2-birdfish [11-04]: story words 3 of 5 like "P3 L10 3(a) picture shows both counts in two rows (printed). - **L4 Statements that are lo ..." (practice/holiday/AUDIT_WEEK5_L1_3.md)
-- REVIEW L2-signsscale [11-08]: story words 3 of 4 like "EOY|2023|Rosyth|34|2|GRAPH|PAT|3|Y|Pictograph: total 360 beads for four children. How many ..." (docs/books/private_p3_papers/records.txt)
-- REVIEW L2-jarcoins [11-09]: rule S3: the sentence "A school library has 500 books on its shelves." is like "A library has 84 books on 2 shelves." (extension/l3/build_extras/Math_Inquirers_L3_Extension_Workbook_Print_BW_vector.pdf)
-- REVIEW L2-cakeparts [11-11]: rule C: two four-word runs shared with "How many glasses can be filled? M 2 S 1 18 Z 1 2 2 8 9 of the garden is split in ..." (school/p6/out/S1_pupil.html): of the whole garden / the whole garden is
-- REVIEW L2-ferrybenches [11-12]: number 2 in the question is not a parameter (written in the wording; check)
-- REVIEW L2-ferrybenches [11-12]: number 3 in the question is not a parameter (written in the wording; check)
-- REVIEW L2-beadsticks [11-13]: question has 58 words (limit 55)
-- REVIEW L2-beadsticks [11-13]: longest sentence 26 words (limit 22)
-- REVIEW L2-fruitbags [11-21]: rule B: 3 of the same numbers ['3', '4', '5'] as "24 yellow 28 red 35 blue 40 green 45 orange 5 × 7 = 35 (blue) 8 bags, 3 in each. ..." (school/colour_by_code/out/p2/html/CBC-P2-14_dinosaur_mult_teacher.html)
-- REVIEW L2-lockcode [11-22]: rule B: 3 of the same numbers ['4', '5', '9'] as "Answer: smallest 9, biggest 12. Solution: the three sides add to 21 plus the cor ..." (docs/sasmo/g3_original_problems_draft.md)
-- REVIEW L2-cyclerace [11-24]: rule B: 3 of the same numbers ['3', '30', '4'] as "| Prelim | 2022 | MGS | B1-22 | 2 | tariff | 2 | 0 | Bicycle rental first hour t ..." (docs/books/private_p6_papers/non_routine_questions.md)
-- REVIEW L2-oddboxes [11-25]: rule S (window): 5 of 6 content words (count,even,hold,marble,odd) in "| Finding | Action | | WB 1 / GD 3 S3(b) is the Explore example | S3(b ..." (term/l1/audit/FIXES_T3_L30.md)
-- REVIEW L2-numbershelf [11-26]: question has 59 words (limit 55)
+- REVIEW L1-woodpecker [11-18]: rule B: 3 of the same numbers ['12', '4', '6'] as "| L6 Think harder No.2, Go further No.6, No.7 grids | 31, 32 | OK; 6 x 6, 6 x 6, ..." (docs/audit_final/holiday_diagram_review_L4_6.md)
+- REVIEW L1-seatrow [11-22]: number 1 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-seatrow [11-22]: number 2 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-seatrow [11-22]: rule B: 3 of the same numbers ['3', '4', '5'] as "- [WA_2020_TA1_StNicholas Q15, 2m, Cinema seats rows behind in front, diff 3] 5  ..." (docs/books/private_p5_papers/non_routine_questions.md)
+- REVIEW L1-bibscores [11-26]: number 52 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-bibscores [11-26]: number 2 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-bibscores [11-26]: number 7 in the question is not a parameter (written in the wording; check)
+- REVIEW L1-bibscores [11-26]: rule B: 3 of the same numbers ['12', '5', '7'] as "Malik will qualify if the total score for three out of the four games is 30 or m ..." (docs/books/private_p4_papers/non_routine_questions.md)
+- REVIEW L1-mrtdays [11-28]: rule B: 3 of the same numbers ['14', '16', '8'] as "Clue 3: Mei does not go by car." style="width:100%;max-width:348px;height:auto;d ..." (practice/holiday/p2/10/dist/data/p2l10.json)
+- REVIEW L1-westturns [11-29]: rule S (window): 7 of 9 content words (face,north,right,south,turn,way,west) in "(b) 3 turns: west. (c) 2 turns to the left from north: west, then sout ..." (extension/l3/src/u08.py)
+- REVIEW L1-noodleset [11-30]: story words 4 of 6 like "She ordered 1 side dish, 1 main dish and 1 drink for lunch. What did she eat? [menu: Frenc ..." (docs/books/private_p2_papers/non_routine_questions.md)
+- REVIEW L2-jarcoins [11-03]: rule S3: the sentence "A school library has 500 books on its shelves." is like "A library has 84 books on 2 shelves." (extension/l3/build_extras/Math_Inquirers_L3_Extension_Workbook_Print_BW_vector.pdf)
+- REVIEW L2-ferrybenches [11-04]: number 2 in the question is not a parameter (written in the wording; check)
+- REVIEW L2-ferrybenches [11-04]: number 3 in the question is not a parameter (written in the wording; check)
+- REVIEW L2-cakeparts [11-05]: rule C: two four-word runs shared with "How many glasses can be filled? M 2 S 1 18 Z 1 2 2 8 9 of the garden is split in ..." (school/p6/out/S1_pupil.html): of the whole garden / the whole garden is
+- REVIEW L2-oddboxes [11-08]: rule S (window): 5 of 6 content words (count,even,hold,marble,odd) in "| Finding | Action | | WB 1 / GD 3 S3(b) is the Explore example | S3(b ..." (term/l1/audit/FIXES_T3_L30.md)
+- REVIEW L2-fruitbags [11-15]: rule B: 3 of the same numbers ['3', '4', '5'] as "24 yellow 28 red 35 blue 40 green 45 orange 5 × 7 = 35 (blue) 8 bags, 3 in each. ..." (school/colour_by_code/out/p2/html/CBC-P2-14_dinosaur_mult_teacher.html)
+- REVIEW L2-cakeshare [11-17]: rule B: 3 of the same numbers ['3', '4', '8'] as "What fraction of the cake do they eat altogether?", "hint": "The slices are all  ..." (practice/holiday/p2/07/dist/data/p2l07.json)
+- REVIEW L2-cyclerace [11-19]: rule B: 3 of the same numbers ['3', '30', '4'] as "| Prelim | 2022 | MGS | B1-22 | 2 | tariff | 2 | 0 | Bicycle rental first hour t ..." (docs/books/private_p6_papers/non_routine_questions.md)
+- REVIEW L2-lockcode [11-21]: rule B: 3 of the same numbers ['4', '5', '9'] as "Answer: smallest 9, biggest 12. Solution: the three sides add to 21 plus the cor ..." (docs/sasmo/g3_original_problems_draft.md)
+- REVIEW L2-birdfish [11-23]: story words 3 of 5 like "P3 L10 3(a) picture shows both counts in two rows (printed). - **L4 Statements that are lo ..." (practice/holiday/AUDIT_WEEK5_L1_3.md)
+- REVIEW L2-signsscale [11-26]: story words 3 of 4 like "EOY|2023|Rosyth|34|2|GRAPH|PAT|3|Y|Pictograph: total 360 beads for four children. How many ..." (docs/books/private_p3_papers/records.txt)
 - REVIEW L3-harbourcruise [11-06]: number 0915 in the question is not a parameter (written in the wording; check)
 - REVIEW L3-cuboidclue [11-09]: rule S: sentence "Is the solid a cube, a cuboid, a cone or a cylinder?" shares 5 content words with "SOLID_FLAT = {"cube": 6, "cuboid": 6, "cylinder": 2, "cone": 1, "spher" (school/colour_by_code/art.py)
 - REVIEW L3-houses [11-11]: number 21 in the question is not a parameter (written in the wording; check)
@@ -75,13 +67,12 @@ FAIL count: 7. REVIEW items: 107.
 - REVIEW L3-cardkeep [11-28]: rule B: 4 of the same numbers ['16', '24', '36', '4'] as "Cut every part of 2/3 and 3/4 into smaller equal parts, so that there is room be ..." (practice/holiday/p3/06/dist/data/p3l06.json)
 - REVIEW L3-badmintonko [11-29]: number 2 in the question is not a parameter (written in the wording; check)
 - REVIEW L4-ferry [11-05]: rule B: 3 of the same numbers ['13', '7', '9'] as "Notes on the tag: 1.3, 1.7 (reading and writing numbers in numerals and in words ..." (school/p1/out/P1_S1_Answer_Key.pdf)
+- REVIEW L4-moneypurse [11-06]: story words 3 of 3 like "def forward_money(start, lunch): """Spend 1/3 on a book, then `lunch` dollars, then half o ..." (practice/holiday/p5/10/lesson.py)
 - REVIEW L4-roundprices [11-07]: story words 4 of 6 like "mini2: { head: 'Work backwards: what rounds to 25 000?', body: ['Rounded to the nearest th ..." (p4/content/l2.js)
 - REVIEW L4-longestwalk [11-13]: rule B: 3 of the same numbers ['3', '4', '5'] as "- **Think harder (4).** (1) Post charges $0.60 for the first 50 g and $0.25 for  ..." (docs/terms/l5_preflight.md)
 - REVIEW L4-gate [11-14]: story words 4 of 6 like "Show your puzzle to your tutor or a grown-up and check each other's lists."], "slips": [], ..." (practice/holiday/p4/07/dist/data/p4l07.json)
 - REVIEW L4-pencilshare [11-15]: rule B: 3 of the same numbers ['12', '5', '8'] as "Answer: 4, 3, 4 8 sweets among 2 friends is 4 each. 12 sweets among 4 friends is ..." (outputs/print/term/Math_Inquirers_L1_T2_Book4_Lessons06-10_AnswerKey_TUTOR_PRINT.pdf)
 - REVIEW L4-milkjugs [11-17]: story words 3 of 4 like ""text": "A jug holds 2 1/2 litres of juice. ..." (extension/data/l4_u04.json)
-- REVIEW L4-schoolwalk [11-18]: longest sentence 40 words (limit 30)
-- REVIEW L4-schoolwalk [11-18]: rule C: two four-word runs shared with "Solution: 4 sides of 8 is 32, but the 4 corners were counted twice, so 32 − 4 =  ..." (docs/sasmo/g2_original_problems_draft.md): from home to school / walks from home to
 - REVIEW L4-sunflower [11-19]: rule B: 3 of the same numbers ['15', '18', '7'] as "The side goes from 0 to 60 dollars, a number every 20 and a line every 5." style ..." (practice/holiday/p4/09/dist/data/p4l09.json)
 - REVIEW L4-piechart [11-21]: story words 5 of 7 like "| Prelim | 2026 | Raffles | P2-2 | 2 | Pie chart: true, false or not possible to tell | 3  ..." (docs/books/private_p6_papers/non_routine_questions.md)
 - REVIEW L4-secretspread [11-22]: story words 3 of 5 like "Old: What day of the week is it 1000 days after a Monday? New: Write your own secret messa ..." (docs/audit/gifted_fixes_p6.md)
@@ -90,12 +81,17 @@ FAIL count: 7. REVIEW items: 107.
 - REVIEW L5-pumpjob [11-08]: story words 3 of 5 like "- [SA2_2020_StNicholas P1-13, 2m, Postage table by steps, diff 2] Postage rates by mass st ..." (docs/books/private_p5_papers/non_routine_questions.md)
 - REVIEW L5-queue5 [11-10]: story words 3 of 5 like "| Level 2 (ages 7-9) is the next most complete. Older levels read and write more on paper  ..." (docs/product/face_to_face_pilot_plan.md)
 - REVIEW L5-savingsinterest [11-11]: story words 5 of 8 like "ANSWER: 750 ml;0.25 l - [EOY_2025_NanHua P2-6, 3m, Interest (annual), diff 2] Beatrice dep ..." (docs/books/private_p5_papers/non_routine_questions.md)
-- REVIEW L5-savingsinterest [11-11]: rule S: sentence "The bank pays 4% simple interest each year on the $3,500." shares 4 content words with "The bank pays 3% interest at the end of the year." (school/p5/out/P5_S2_Complete_Pack.pdf)
-- REVIEW L5-shapelines [11-12]: longest sentence 37 words (limit 34)
-- REVIEW L5-shapelines [11-12]: rule S (window): 8 of 11 content words (equilateral,isoscele,line,rectangle,rhombu,shape,square,triangle) in "| G2 | 4-digit numbers; 1/2 and 1/4; column add/sub; **multiplication  ..." (docs/audit/intl_mapping_east_asia.md)
+- REVIEW L5-savingsinterest [11-11]: rule S: sentence "The bank pays 4% simple interest each year on the $3,500." shares 4 content words with "The bank pays {r}% interest at the end of the year." (school/p5/gen/pages_s2a.py)
+- REVIEW L5-shapelines [11-12]: story words 5 of 7 like "- **Kit (KT11 `shape_cards`, one page, 12 pieces to cut).** 12 cards: square, rectangle, r ..." (docs/terms/l5_preflight.md)
+- REVIEW L5-shapelines [11-12]: rule S (window): 10 of 13 content words (angle,line,mark,parallelogram,rectangle,rhombu,right,shape,square,symmetry) in "- **Kit (KT11 `shape_cards`, one page, 12 pieces to cut).** 12 cards:  ..." (docs/terms/l5_preflight.md)
 - REVIEW L5-cubes [11-14]: number 1 in the question is not a parameter (written in the wording; check)
 - REVIEW L5-cubes [11-14]: rule B: 3 of the same numbers ['4', '5', '6'] as "| **Total** | | | | | **76** | plus about 8 for term-wide audits and a trial les ..." (docs/terms/l1_term2_preflight.md)
 - REVIEW L5-cubes [11-14]: rule S3: the sentence "A box is 6 cm long, 5 cm wide and 4 cm tall." is like "Puzzle Listen for Puzzle 1 (access): A box is 4 cubes long, 3 cubes wide and 2 c" (p5/Math_Inquirers_P5_Tutor_Guide.html)
+- REVIEW L5-codelock [11-15]: number 9 in the question is not a parameter (written in the wording; check)
+- REVIEW L5-codelock [11-15]: number 21 in the question is not a parameter (written in the wording; check)
+- REVIEW L5-codelock [11-15]: number 21 in the question is not a parameter (written in the wording; check)
+- REVIEW L5-codelock [11-15]: number 9 in the question is not a parameter (written in the wording; check)
+- REVIEW L5-codelock [11-15]: story words 3 of 5 like "| | P D F C M S | Evidence | | LOW | 2 1 3 2 3 2 | Lost early: `setup` (10-11 min, 125 wor ..." (docs/audit/journey_p6.md)
 - REVIEW L5-cutcard [11-17]: rule B: 3 of the same numbers ['3', '4', '5'] as "| Prelim | 2025 | SCGS | P2-12 | 4 | String of rectangular lights along a 12 m w ..." (docs/books/private_p6_papers/non_routine_questions.md)
 - REVIEW L5-cutcard [11-17]: rule G: 3 shared number-unit grams (4 cm by / a rectangle 4 / rectangle 4 cm) in "Write its area and its perimeter.", "label": "Inv easy", "svg": "<svg viewBox="- ..." (practice/holiday/p4/07/dist/data/p4l07.json)
 - REVIEW L5-moneyleft [11-18]: rule B: 3 of the same numbers ['3', '50', '8'] as "**Same type, new numbers (round 1 accepted; listed so the owner can decide):** U ..." (extension/l2/AUDIT_ROUND2.md)
@@ -121,12 +117,13 @@ FAIL count: 7. REVIEW items: 107.
 - REVIEW L6-diagonals [11-13]: story words 3 of 4 like "cxo = sum(a for a, b in op[:8]) / 8; cyo = sum(b for a, b in op[:8]) / 8 labs = ''.join(T( ..." (rebuild/gen_p6l7.py)
 - REVIEW L6-sixfactors [11-15]: rule B: 3 of the same numbers ['3', '4', '6'] as "In units of 10°, you need three whole numbers that add up to 9.", "steps": ["In  ..." (practice/holiday/p4/06/dist/data/p4l06.json)
 - REVIEW L6-helmetsale [11-17]: story words 5 of 6 like "How much money is saved? What is the sale price? (Type the number of dollars.)", "marking_ ..." (practice/holiday/p5/07/dist/data/p5l07.json)
-- REVIEW L6-helmetsale [11-17]: rule S3: the sentence "A bicycle helmet is sold at a discount of 25%." is like "A $250 bicycle is sold at a 12% discount." (outputs/designed/Math_Inquirers_P5_Question_Bank.pdf)
+- REVIEW L6-helmetsale [11-17]: rule S3: the sentence "A bicycle helmet is sold at a discount of 30%." is like "A $250 bicycle is sold at a 12% discount." (outputs/designed/Math_Inquirers_P5_Question_Bank.pdf)
 - REVIEW L6-primes100 [11-18]: number 1 in the question is not a parameter (written in the wording; check)
 - REVIEW L6-primes100 [11-18]: number 1 in the question is not a parameter (written in the wording; check)
 - REVIEW L6-reverse [11-20]: rule C: two four-word runs shared with "(if time) Letter puzzle: AB + AB + AB = CAB. Each letter stands for a digit. ..." (outputs/print/Math_Inquirers_P3_Workbook_PRINT.pdf): each letter stands for / letter stands for a
 - REVIEW L6-phoneplan [11-21]: rule B: 3 of the same numbers ['4', '63', '7'] as "Ali leaves at 1.15 p.m." style="width:100%;max-width:368px;height:auto;display:b ..." (practice/holiday/p5/06/dist/data/p5l06.json)
-- REVIEW L6-beadratio [11-23]: rule C: two four-word runs shared with "- Q: There are 480 blue and red beads altogether. There are 130 blue beads. How  ..." (docs/books/private_p2_papers/non_routine_questions.md): blue beads how many / more red beads are
+- REVIEW L6-fishtank [11-23]: number 1 in the question is not a parameter (written in the wording; check)
+- REVIEW L6-fishtank [11-23]: rule G: 3 shared number-unit grams (40 cm by / by 40 cm / cm by 40) in "How many ℓ of water does it hold when full? A jug holds 45 ℓ. A sink measures 80 ..." (school/p5/out/P5_S2_Complete_Pack.pdf)
 - REVIEW L6-twored [11-25]: rule S3: the sentence "Give your answer as a fraction in its simplest form." is like "Give your answer as a fraction in simplest form."," (diag/content/p5.json)
 - REVIEW L6-bin45 [11-29]: number 6 in the question is not a parameter (written in the wording; check)
 - REVIEW L6-bin45 [11-29]: number 0 in the question is not a parameter (written in the wording; check)

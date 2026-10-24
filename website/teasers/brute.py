@@ -810,6 +810,8 @@ def _poly(name):
         return [(-2, -1), (2, -1), (2, 1), (-2, 1)]
     if name == 'rhombus':
         return [(-2, 0), (0, -1), (2, 0), (0, 1)]
+    if name == 'parallelogram':
+        return [(-2, -1), (1, -1), (2, 1), (-1, 1)]
     if name == 'isosceles triangle':
         return [(-1, 0), (1, 0), (0, 3)]
     if name == 'kite':

@@ -712,7 +712,7 @@ def painted_cube(n, faces):
 
 
 SHAPE_LINES = {'square': 4, 'rectangle': 2, 'equilateral triangle': 3, 'regular hexagon': 6, 'rhombus': 2,
-               'regular pentagon': 5, 'isosceles triangle': 1, 'kite': 1, 'regular octagon': 8}
+               'regular pentagon': 5, 'isosceles triangle': 1, 'kite': 1, 'regular octagon': 8, 'parallelogram': 0}
 
 
 def symmetry(shapes):

@@ -118,10 +118,21 @@ def order(level, items, left=None, right=None):
     month before and the first of the month after (when those months already exist), so the rule also holds across a month boundary."""
     rnd = random.Random(1000 + level)
     best = None
+    lv = level // 100
 
     def clash(a, b):
         return a['family'] == b['family'] or a['kind'] == b['kind']
-    for _ in range(40000):
+
+    def spread_ok(its):
+        """Levels 1 and 2 repeat the released order every 61 days, so a calendar month of the year is a window of the released order.  Round 6 (text-answer gate:
+        3 text answers a month): the text-answer puzzles must be spread evenly over the month, so that every window of about 28 days holds at least 3."""
+        pos = [i for i, e in enumerate(its) if e.get('type') == 's']
+        t, n = len(pos), len(its)
+        if lv > 2 or t < 3:
+            return True
+        gmax = -(-n // t) + 1
+        return pos[0] <= gmax // 2 + 1 and n - 1 - pos[-1] <= gmax // 2 + 1 and all(b - a <= gmax for a, b in zip(pos, pos[1:]))
+    for _ in range(80000):
         rnd.shuffle(items)
         n = len(items)
         bad = sum(1 for i in range(n - 1) if clash(items[i], items[i + 1]))
@@ -129,11 +140,15 @@ def order(level, items, left=None, right=None):
             bad += 1
         if right and clash(items[-1], right):
             bad += 1
+        if not spread_ok(items):
+            bad += 100
         if best is None or bad < best[0]:
             best = (bad, list(items))
         if bad == 0:
             break
-    if best[0]:
+    if best[0] >= 100:
+        print('WARNING level %d: the text-answer puzzles could not be spread over the month' % level)
+    elif best[0]:
         print('WARNING level %d: %d neighbouring puzzles share a family or kind' % (level, best[0]))
     return best[1]
 
@@ -211,7 +226,7 @@ def plan_year():
     months = [('11', 30), ('12', 31)] + [(m, DAYS_IN[m]) for m in ('01', '02', '03', '04', '05', '06', '07', '08', '09', '10')]
     dates = ['%s-%02d' % (m, d) for m, n in months for d in range(1, n + 1)]
     assert len(dates) == 366
-    lines = ['# Year plan for Levels 1 and 2 (owner L1L2-GAP60)', '',
+    lines = ['# Year plan: the Level 1 and 2 rotation (owner L1L2-GAP60) and the answer budget for all levels (ANSWER-WINDOW)', '',
              'Day k of the year, counted from 1 Nov (366 dates, 29 Feb included), uses the sub-structure of released day k mod 61.  366 = 6 x 61, so a sub-structure '
              'returns exactly 61 days later (60 days in an ordinary year, because 29 Feb is missing).  A new story and new numbers are written for every return; '
              'the answer of a puzzle must not equal any answer within 60 days (checked by verify_bank.py as the months are written).', '']
@@ -239,6 +254,52 @@ def plan_year():
             lines.append('| %d | %s | %s | %s |' % (i + 1, r['date'], r['sub'], ', '.join(ret)))
         lines.append('')
         bad += fails
+    # ---- round 6: text answers per calendar month under the rotation (the January gate of verify_bank.py also holds for every later month)
+    R = TAX.RULES
+    lines += ['## Text answers per calendar month under the rotation (Levels 1 and 2)', '',
+              'A calendar month is a window of the released order, so the number of text-answer puzzles in each month of the year is fixed by the 61 released days. '
+              'From January a month needs %d text answers at Levels 1 and 2 (`text_min_per_month`); the table is the smallest and the largest count over a 365-day and a 366-day year.' % R['text_min_per_month']['1'], '',
+              '| Level | Text answers in the 61 released days | Fewest in a month | Month | Most in a month | Verdict |', '|---|---|---|---|---|---|']
+    for lv in (1, 2):
+        released = []
+        for mm in man['released']:
+            released += json.load(open(os.path.join(HERE, 'batches', 'm%s' % mm, 'bank.json'), encoding='utf-8'))['levels'][str(lv)]
+        released = sorted(released, key=lambda e: (0 if e['date'][:2] == '11' else 1, e['date']))
+        lo = (99, None)
+        hi = 0
+        for leap in (False, True):
+            ds = [d for d in dates if leap or d != '02-29']
+            cnt = {}
+            for k, d in enumerate(ds):
+                cnt[d[:2]] = cnt.get(d[:2], 0) + (released[k % 61]['type'] == 's')
+            for m_, c in cnt.items():
+                if m_ not in ('11', '12') and c < lo[0]:
+                    lo = (c, m_ + (' (leap year)' if leap else ''))
+                hi = max(hi, c)
+        need = R['text_min_per_month'][str(lv)]
+        ok = lo[0] >= need
+        if not ok:
+            bad.append('L%d: a month of the year would hold only %d text answers under the rotation (need %d): month %s' % (lv, lo[0], need, lo[1]))
+        lines.append('| %d | %d | %d | %s | %d | %s |' % (lv, sum(e['type'] == 's' for e in released), lo[0], lo[1], hi, 'ok' if ok else 'BELOW %d' % need))
+    lines.append('')
+    # ---- round 6: the answer budget (ANSWER-WINDOW)
+    all_by = {}
+    for mm in man['released']:
+        for lv_, its in json.load(open(os.path.join(HERE, 'batches', 'm%s' % mm, 'bank.json'), encoding='utf-8'))['levels'].items():
+            all_by.setdefault(int(lv_), []).extend((mm, e) for e in its)
+    bl, _bw = V.answer_budget(all_by)
+    lines += bl
+    lines += ['', '### What is left for January to October (305 puzzles a level)', '',
+              'ANSWER-WINDOW (owner delegate, adopted default, revocable: `docs/terms/owner_decisions.md`) replaces the rule "an answer of 10 or more once per level and year", which AUDIT_ROUND6 H2 showed '
+              'to be unreachable at Levels 3 to 6 (29 to 31% of the remaining puzzles could be a whole number below 100). The new limits are per window of 60 days, so they renew all year:', '',
+              '| Level | Single-digit answers | Two-digit answers (10 to 99) | 100 or more, fraction, decimal, word | Same answer and same sub-structure |',
+              '|---|---|---|---|---|',
+              '| 1, 2 | at most 2 of each digit in 60 days (18 in all) | each value once in 60 days (90 values) | each value once in 60 days | not twice within 60 days (the sub-structure gap) |',
+              '| 3 to 6 | each digit once in 60 days (**9 in all, about 15% of the puzzles**) | each value once in 60 days (90 values: never the binding limit) | each value once in 60 days | never twice within 92 days, also across a quarter boundary |', '',
+              'Over the 305 puzzles still to write, a level may therefore hold at most 46 single-digit answers (Levels 3 to 6) or 92 (Levels 1 and 2). The released Nov and Dec bank uses '
+              + ', '.join('%d at Level %d' % (sum(1 for _, e in all_by[l] if e['type'] == 'n' and e['ans'].lstrip('-').isdigit() and abs(int(e['ans'])) < 10), l) for l in sorted(all_by)) +
+              ' in its 61 days. The two-digit values (90 a window) and everything from 100 up are never the binding limit; the window of 9 single digits is, so counting puzzles (handshakes, patterns, ways) must be scaled up. '
+              'A text answer counts like any other value: the same word may not be the answer twice within 60 days at Levels 3 to 6, so a closed set of 4 words (the compass, odd or even) can supply at most 4 answers in a window of 60 days.', '']
     open(os.path.join(HERE, 'batches', 'YEAR_PLAN.md'), 'w', encoding='utf-8').write('\n'.join(lines) + '\n')
     print('year plan written: %d violation(s)' % len(bad))
     for b in bad:

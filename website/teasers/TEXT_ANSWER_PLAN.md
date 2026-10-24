@@ -1,4 +1,6 @@
-# Plan for text answers (audit round 5, condition C6)
+# Plan for text answers (audit round 5, condition C6; round 6 update in section 6)
+
+Sections 1 to 5 are the round-5 plan with the round-5 counts. **Section 6 is the round-6 update**: the counts now (Nov and Dec, 61 days: L1 8, L2 9, L3 4, L4 6, L5 4, L6 4), the asks that are coded, the January allocation and the gate in the verifier.
 
 Written 24 Oct 2026 for `website/teasers/`. Nothing here is released: it is the plan and the small amount of data and page support that the plan needs. The Jan to Oct puzzles are **not** written yet.
 
@@ -82,3 +84,45 @@ Nothing in this list changes what a visitor sees until January: no puzzle of Nov
 3. **Every month:** the verifier's "Text answers per level" table must show at least 3 text answers in the month at every level; a month below that is not released.
 4. **Before the last batch:** a count of the position of the right option in choice questions (about even over A, B, C, D) and of each closed-set value (at most 3 a level a year).
 5. **Independent check:** every new text-answer puzzle is hand-solved by someone other than the author, in the same sample as the numeric ones (15 a level, new items first).
+
+## 6. Round 6 (AUDIT_ROUND6 G4, condition 5 of the round-6 brief): the asks are coded, January is gated
+
+Written 24 Oct 2026. The January to October puzzles are still not written, so this section is the plan and the checks, not a batch.
+
+**Coded (solver in `kinds_r4.py`, independent checker in `brute_r4.py`, worked instances in `samples_r4.py`, taxonomy line with its MOE cite, proved by `verify_bank.py --selftest`):**
+
+| Ask (kind) | Sub-structure | Levels | Answer |
+|---|---|---|---|
+| who has the most, the least or the second most in a short table (`table_who`) | `graphs.who_has_most` | 1 to 5 | a name |
+| which of three shops is cheapest (`shop_choice`) | `money.cheaper_shop` | 2 to 5 | `Shop A`, `Shop B` or `Shop C` |
+| who has more after gifts, winnings and spending (`gift_who`) | `word_problems.who_has_more` | 1 to 6 | a name |
+| which place is passed first (or last) on the shortest route (`route_via`) | `networks.first_stop` | 2 to 6 | a place name |
+| what kind of triangle: by its sides or by two of its angles (`classify_triangle`) | `shapes.classify_triangle` | 3 to 6 | a word |
+| which of three amounts written in different ways is the heaviest or the lightest (`unit_heavier`) | `measurement.heavier_after_units` | 3 to 6 | a letter |
+| which of three rates is the fastest (`rate_compare`) | `rate.compare_rates` | 5 | a name |
+
+That is at least two new text-answer asks at every level (Level 1: 2, Level 2: 4, Levels 3 and 4: 6 each, Level 5: 7, Level 6: 4), on top of the older text-capable sub-structures. Ten puzzles of the released Nov and Dec bank use them (`L1-craneboard`, `L1-marbleswap`, `L2-quizscores`, `L2-markershops`, `L2-schoolwalks`, `L2-cardgame`, `L4-moneypurse`, `L4-parkpaths`, `L5-snailrace`, `L6-islandroutes`): they replace puzzles that were above or below their level, or that were the second copy of a frame, and they give Levels 1 and 2 the text answers that the rotation needs for January.
+
+**Text-capable sub-structures per level after round 6** (the count a year needs is 10 at Levels 3 to 6 and 7 at Levels 1 and 2, because a sub-structure returns four times a year at Levels 3 to 6 and six times at Levels 1 and 2): Level 1 9, Level 2 12, Level 3 14, Level 4 13, Level 5 12, Level 6 10. Level 6 has the thinnest margin (10 for a need of 10).
+
+**January allocation (plan).** From January a month is gated by `verify_bank.py` (below): at least 3 text answers at every level, 4 at Levels 5 and 6.
+
+| Level | Need in January | Where they come from |
+|---|---|---|
+| 1 | 3 | fixed by the 61-day rotation (the Nov puzzle of the same day): `batches/YEAR_PLAN.md` proves at least 4 text answers in every calendar month of the year at Levels 1 and 2 (the order of the released days was changed so that the text puzzles are spread: `build_bank.py order()`) |
+| 2 | 3 | the same, at least 4 in every month |
+| 3 | 3 | choose 3 of: `graphs.who_has_most`, `money.cheaper_shop`, `networks.first_stop`, `shapes.classify_triangle`, `measurement.heavier_after_units`, `word_problems.who_has_more`, `logic_truth.truth_tellers`, `spatial.turns_facing`, `fractions.unit_compare` (none of them used in Nov or Dec at Level 3) |
+| 4 | 3 | choose 3 of: `graphs.who_has_most`, `money.cheaper_shop`, `shapes.classify_triangle`, `measurement.heavier_after_units`, `number_properties.odd_even_rule`, `spatial.turns_facing` |
+| 5 | 4 | choose 4 of: `graphs.who_has_most`, `money.cheaper_shop`, `networks.first_stop`, `shapes.classify_triangle`, `measurement.heavier_after_units`, `word_problems.who_has_more`, `logic_truth.truth_tellers`, `spatial.turns_facing` |
+| 6 | 4 | choose 4 of: `measurement.heavier_after_units` (decimal form, P5 cite), `logic_truth.truth_tellers`, `shapes.classify_triangle` (angles of a triangle), `word_problems.who_has_more`, `number_properties.odd_even_rule`, `spatial.turns_facing` |
+
+A text-capable sub-structure used in December must wait 30 days (a December sub-structure on 20 December is free again on 19 January). The new asks are free of that wait at Levels 3 to 6 because Nov and Dec do not use them (except `networks.first_stop` at Levels 4 and 6, `rate.compare_rates` and `money.cheaper_shop` where Level 2 and Level 5 have one).
+
+**What the verifier checks now.**
+
+* `text_min_per_month` in `taxonomy.json` (3, and 4 at Levels 5 and 6) is a **FAIL**, not a warning, for every month that is verified except November and December (`text_gate_months_exempt`): "L5: only 3 text-answer puzzles in month 01, the gate from January is 4".
+* A text answer is an answer value like any other: the same word may not be the answer twice within 60 days at Levels 3 to 6 (ANSWER-WINDOW), so a closed set of four words supplies at most four answers in a window of 60 days.
+* The choice rules of section 4 hold for every asks of this table that lists its options (`choice_problems`).
+* A month named on the command line that is not released yet (`verify_bank.py 01`) is checked as a **draft** against every released month and the other drafts, with all structure, frame and answer-window rules.
+
+**Still to do before the first 2027 batch:** the position of the right option among A, B, C (an even spread over a month) is not counted yet; it is only needed for the lettered `unit_heavier` puzzles and will be added when the first one is written.
