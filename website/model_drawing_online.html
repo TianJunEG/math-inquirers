@@ -133,12 +133,28 @@ input.ans{font:800 20px var(--body);color:var(--fg);background:var(--card);borde
 .bt{fill:var(--red);font:800 13px var(--body);text-anchor:middle}
 .reset{background:none;border:none;color:var(--muted);text-decoration:underline;cursor:pointer;font:inherit;padding:8px 0;min-height:44px;touch-action:manipulation}
 @media (prefers-reduced-motion:no-preference){.msg,.note,.step.cur{animation:in .18s ease-out}@keyframes in{from{opacity:.4;transform:translateY(-2px)}to{opacity:1;transform:none}}}
+
+.acct{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;border:2.5px solid var(--ink);border-radius:18px;background:var(--card);color:var(--fg);padding:12px 14px;box-shadow:4px 4px 0 var(--ink);margin-bottom:14px}
+.acct .who{font-weight:800;font-size:15px}.acct .who small{display:block;font-weight:600;opacity:.75}
+.acct .row{display:flex;gap:8px;flex-wrap:wrap}
+.demo{font:700 12.5px var(--body);background:var(--yellow,#ffd84d);color:#222;border-radius:10px;padding:6px 10px;margin-bottom:10px;display:inline-block}
+.flow{border:2.5px dashed var(--ink);border-radius:18px;padding:16px;margin-bottom:14px;background:var(--card);color:var(--fg);display:grid;gap:10px}
+.flow label{font-weight:700;font-size:14px;display:grid;gap:4px}
+.flow input[type=text],.flow input[type=email]{font:600 16px var(--body);padding:10px 12px;border:2px solid var(--ink);border-radius:12px;min-height:44px;background:#fff;color:#222}
+.tab.lk{opacity:.7;border-style:dashed}
+.lockcard{border:2.5px solid var(--ink);border-radius:22px;padding:20px;background:var(--card);color:var(--fg);box-shadow:5px 5px 0 var(--ink);display:grid;gap:12px}
+.plans{display:grid;gap:12px}.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.plan{border:2.5px solid var(--ink);border-radius:18px;padding:16px;display:grid;gap:8px;align-content:start;background:var(--card)}
+.plan.hot{background:var(--mint)}.plan h4{font:800 18px var(--head,var(--body))}
+.price{font:800 34px var(--head,var(--body))}.price small{font-size:15px;font-weight:700}
+.agree{display:flex;gap:10px;align-items:flex-start;font-weight:700;font-size:14.5px}.agree input{width:22px;height:22px;margin-top:2px;flex:none}
+.small{font-size:13.5px;opacity:.8}
 </style>
 <div class="wrap">
 <header class="bar"><a class="brand" href="model_drawing_signup.html"><i>?</i><span>Math Inquirers</span></a><nav class="nav" aria-label="Page"><a class="nl" href="model_drawing_online.html" aria-current="page">Practice</a><a class="btn yel sm" href="model_drawing_signup.html#reserve" style="margin-left:6px">Reserve a place</a></nav></header>
 <main>
 <section class="hero"><div class="sec"><span class="eyebrow">Model drawing · Primary 4 to 6</span><h1>Model Drawing <mark>Online</mark></h1><p class="slogan">Notice it. Test it. Explain why.</p><p class="lead">Read the problem, say it in plain words, then build the bar model one step at a time. Every step is checked and has a hint.</p>
-<div class="chips"><span class="chip">38 questions</span><span class="chip">13 model types</span><span class="chip">Hint at every step</span><span class="chip">Type your answer</span></div></div>
+<div class="chips"><span class="chip">Free sample: types A and D</span><span class="chip">38 questions</span><span class="chip">13 model types</span><span class="chip">Hint at every step</span><span class="chip">Type your answer</span></div></div>
 <svg class="art" viewBox="0 0 520 330" role="img" aria-label="Bar models: a fraction bar with three of five parts shaded, and a ratio of 3 to 5">
 <rect x="8" y="10" width="504" height="310" rx="44" fill="#D6E9FB" stroke="#1B2A49" stroke-width="3"/>
 <text x="44" y="62" font-size="20" fill="#1B2A49">Stickers</text>
@@ -150,11 +166,11 @@ input.ans{font:800 20px var(--body);color:var(--fg);background:var(--card);borde
 </svg></section>
 
 <section class="sec"><div class="shead"><span class="eyebrow">Pick a question</span><h2>13 model types, A to M</h2><p class="muted">Draw each bar on paper or a whiteboard first, then use the steps to check your model.</p></div>
-<nav class="tabs" role="tablist" aria-label="Questions" id="tabs"></nav>
+<div class="demo">Preview: sign-in and payment are pretend, no money is taken</div><div id="acct"></div><nav class="tabs" role="tablist" aria-label="Questions" id="tabs"></nav>
 <p class="how">Every step starts with <b>Say it plain</b> (the parsing) and every step has a <b>Hint</b>. Wrong answer? Tap <b>Hint</b>, then try again.</p>
 <section id="stage" aria-live="polite"></section></section>
 </main>
-<footer><div><b>Math Inquirers</b><p style="margin-top:6px">Model drawing practice by Preciouslyours Pte Ltd, Singapore.</p></div><div><b>Practice</b><p style="margin-top:6px">Progress is saved on this device only.<br><button class="reset" id="reset" type="button">Start again</button></p></div><div><b>Class</b><p style="margin-top:6px"><a href="model_drawing_signup.html">See the class and reserve a place</a></p></div></footer>
+<footer><div><b>Math Inquirers</b><p style="margin-top:6px">Model drawing practice by Preciouslyours Pte Ltd, Singapore.</p></div><div><b>Practice</b><p style="margin-top:6px">Progress is saved on this device only.<br><button class="reset" id="reset" type="button">Start again</button></p></div><div><b>Class</b><p style="margin-top:6px"><a href="model_drawing_signup.html">See the class and reserve a place</a><br><a href="model_drawing_teacher.html">Teacher page (preview only)</a></p></div></footer>
 </div>
 <script>
 /* Each question: type label, text, and steps. A step has a prompt, a kind (choice or num), the right answer,
@@ -399,6 +415,61 @@ var BANK=[["A","Sum and difference of two quantities"],["B","Giving items from o
     BANK.forEach(function(b){if(b[0]===t)q.g="Type "+t+": "+b[1]});return q});
 })();
 
+
+var SAMPLE=["A","D"],AK="mi_md_demo_acct",LK="mi_md_demo_log",acct=null,flow=null,flowErr="";
+function loadAcct(){try{acct=JSON.parse(localStorage.getItem(AK)||"null")}catch(e){acct=null}}
+function saveAcct(){try{localStorage.setItem(AK,JSON.stringify(acct))}catch(e){}}
+function hasFull(){return !!(acct&&acct.plan)}
+function isLocked(i){return !hasFull()&&SAMPLE.indexOf(Q[i].bt)<0}
+function logStep(ok,step){try{var l=JSON.parse(localStorage.getItem(LK)||"[]");l.push({t:Date.now(),email:acct&&acct.email||"(not signed in)",child:acct&&acct.child||"Guest",q:Q[cur].lab,qid:Q[cur].id,step:step+1,ok:ok,hint:hints[cur+"-"+step]?1:0});if(l.length>800)l=l.slice(-800);localStorage.setItem(LK,JSON.stringify(l))}catch(e){}}
+function planName(){if(!acct||!acct.plan)return "";return acct.plan==="monthly"?"Monthly, renews each month":acct.plan==="annual"?"Annual, paid in full":"Free for tuition families"}
+function renderAcct(){
+  var h='<div class="acct"><div class="who">';
+  if(!acct)h+='Free sample<small>Types A and D are open. Sign in to save progress.</small>';
+  else if(!acct.plan)h+='Signed in as '+esc(acct.email)+'<small>Free sample. Choose a plan for all 13 types.</small>';
+  else h+='Full access: '+esc(planName())+'<small>'+esc(acct.child)+' · '+esc(acct.email)+(acct.ends?' · until '+esc(acct.ends):'')+'</small>';
+  h+='</div><div class="row">';
+  if(!acct)h+='<button class="btn sm" type="button" data-act="signin">Sign in</button>';
+  if(!hasFull())h+='<button class="btn yel sm" type="button" data-act="plans">See plans</button>';
+  if(acct)h+='<button class="btn ghost sm" type="button" data-act="signout">Sign out</button>';
+  h+='</div></div>';
+  if(flow)h+=flowHTML();
+  document.getElementById("acct").innerHTML=h}
+function priceOf(p){return p==="monthly"?"$7":"$67"}
+function flowHTML(){var f=flow,h='<div class="flow">';
+  if(flowErr)h+='<div class="msg no">'+esc(flowErr)+'</div>';
+  if(f.stage==="email"){
+    h+='<b>Sign in or create an account</b><label>Parent email<input type="email" id="fl_email" autocomplete="email" placeholder="parent@example.com" value="'+esc(f.email||"")+'"></label><label>Child\'s first name<input type="text" id="fl_child" autocomplete="off" placeholder="e.g. Ethan" value="'+esc(f.child||"")+'"></label><label>Invite code (tuition families only)<input type="text" id="fl_code" autocomplete="off" placeholder="Leave blank if you do not have one" value="'+esc(f.code||"")+'"></label><div class="row"><button class="btn" type="button" id="fl_send">Email me a sign-in link</button><button class="btn ghost" type="button" id="fl_cancel">Cancel</button></div><p class="small">Demo: no email is sent. For the invite code, type FREE-TUITION to try a tuition family.</p>'}
+  else if(f.stage==="link"){
+    h+='<b>Check your email</b><p>We sent a one-tap sign-in link to '+esc(f.email)+'.</p><div class="row"><button class="btn" type="button" id="fl_link">Tap the link (demo)</button><button class="btn ghost" type="button" id="fl_cancel">Cancel</button></div>'}
+  else if(f.stage==="pay"){
+    h+='<b>Pay securely (demo checkout)</b><p>'+(f.plan==="monthly"?'Monthly plan: <b>$7 a month</b>, charged to your card each month until you cancel. You can cancel any time before the next payment.':'Annual plan: <b>$67 once</b> for 12 months. Paid in full and not refundable.')+'</p><div class="row"><button class="btn yel" type="button" id="fl_pay">Pay '+priceOf(f.plan)+' (pretend)</button><button class="btn ghost" type="button" id="fl_cancel">Cancel</button></div><p class="small">Real payments will use Stripe checkout. Card details never touch this page.</p>'}
+  return h+'</div>'}
+function plansHTML(){return '<div class="plans"><label class="agree"><input type="checkbox" id="agree"><span>I understand the annual plan is paid in full and is not refundable, and the monthly plan renews every month until I cancel.</span></label><div class="pgrid"><div class="plan"><h4>Monthly</h4><div class="price">$7<small>/month</small></div><p>All 13 types, 38 questions. Renews each month by card. Cancel any time before the next payment.</p><button class="btn" type="button" data-plan="monthly">Choose monthly</button></div><div class="plan hot"><h4>Annual</h4><div class="price">$67<small>/year</small></div><p>All 13 types for 12 months. Paid once. Not refundable.</p><button class="btn yel" type="button" data-plan="annual">Choose annual</button></div></div><div id="planmsg"></div></div>'}
+function paywall(){var q=Q[cur];return '<div class="lockcard"><div class="hd"><div class="big">'+q.lab+'</div><div><div class="tp">'+esc(q.type)+'</div><h2>Full access question</h2></div></div><p>'+esc(q.g)+' is part of full access. Types A and D are free to try.</p>'+plansHTML()+'<p class="small">Tuition families: use the invite link Mdm Hon sent you on WhatsApp.</p></div>'}
+function flowClick(t){
+  if(t.dataset.act==="signin"){flow={stage:"email",plan:null};flowErr="";renderAcct();return true}
+  if(t.dataset.act==="signout"){acct=null;saveAcct();flow=null;render();return true}
+  if(t.dataset.act==="plans"){for(var i=0;i<Q.length;i++)if(isLocked(i)){cur=i;break}render();var pl=document.querySelector(".plans");if(pl)pl.scrollIntoView({behavior:"smooth",block:"center"});return true}
+  if(t.dataset.plan){var ag=document.getElementById("agree");
+    if(!ag||!ag.checked){var m=document.getElementById("planmsg");if(m)m.innerHTML='<div class="msg no">Please tick the box to confirm you have read the plan terms.</div>';return true}
+    flow={stage:acct?"pay":"email",plan:t.dataset.plan};flowErr="";renderAcct();document.getElementById("acct").scrollIntoView({behavior:"smooth",block:"start"});return true}
+  if(t.id==="fl_cancel"){flow=null;flowErr="";renderAcct();return true}
+  if(t.id==="fl_send"){var em=document.getElementById("fl_email").value.trim(),ch=document.getElementById("fl_child").value.trim(),cd=document.getElementById("fl_code").value.trim().toUpperCase();
+    flow.email=em;flow.child=ch;flow.code=cd;
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){flowErr="Please enter a valid email.";renderAcct();return true}
+    if(!ch){flowErr="Please enter your child's first name.";renderAcct();return true}
+    if(cd&&cd!=="FREE-TUITION"){flowErr="That invite code is not valid. Check the link Mdm Hon sent you.";renderAcct();return true}
+    flow={stage:"link",plan:flow.plan,email:em,child:ch,code:cd};flowErr="";renderAcct();return true}
+  if(t.id==="fl_link"){acct={email:flow.email,child:flow.child,plan:null};
+    if(flow.code==="FREE-TUITION"){acct.plan="tuition_free";flow=null}
+    else if(flow.plan){flow={stage:"pay",plan:flow.plan}}
+    else flow=null;
+    saveAcct();render();return true}
+  if(t.id==="fl_pay"){var d=new Date();if(flow.plan==="monthly")d.setMonth(d.getMonth()+1);else d.setFullYear(d.getFullYear()+1);
+    acct.plan=flow.plan;acct.ends=d.toLocaleDateString("en-SG",{day:"numeric",month:"short",year:"numeric"});saveAcct();flow=null;render();return true}
+  return false}
+
 var KEY="mi_modeldrawing_v4", cur=0, prog={}, hints={}, wrong={};
 function load(){try{var s=localStorage.getItem(KEY);if(s)prog=JSON.parse(s)||{}}catch(e){prog={}}}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(prog))}catch(e){}}
@@ -426,8 +497,10 @@ function render(){
   var tg="",lastG="";
   Q.forEach(function(x,i){
     if(x.g!==lastG){if(lastG)tg+='</div></div>';tg+='<div class="grp"><div class="gl">'+esc(x.g)+'</div><div class="gt">';lastG=x.g}
-    tg+='<button class="tab'+(stepOf(i)>=x.steps.length?' done':'')+'" role="tab" aria-selected="'+(i===cur)+'" data-i="'+i+'">'+x.lab+' <small>'+esc(x.type)+'</small></button>'});
+    tg+='<button class="tab'+(stepOf(i)>=x.steps.length?' done':'')+(isLocked(i)?' lk':'')+'" role="tab" aria-selected="'+(i===cur)+'" data-i="'+i+'">'+(isLocked(i)?'🔒 ':'')+x.lab+' <small>'+esc(x.type)+'</small></button>'});
   document.getElementById("tabs").innerHTML=tg+'</div></div>';
+  renderAcct();
+  if(isLocked(cur)){document.getElementById("stage").innerHTML=paywall();return}
   var model=st>0?q.steps[Math.min(st,n)-1].m:[];
   h+='<div class="hd"><div class="big">'+q.lab+'</div><div><div class="tp">'+esc(q.type)+'</div><h2>Step by step</h2></div></div>';
   h+='<p class="problem">'+esc(q.text)+'</p><div class="cols"><div>';
@@ -452,7 +525,7 @@ function render(){
 
 function advance(){prog[Q[cur].id]=stepOf(cur)+1;save();render();var f=document.querySelector(".step.cur input");if(f)f.focus()}
 function attempt(ok){
-  var key=cur+"-"+stepOf(cur);
+  var key=cur+"-"+stepOf(cur);logStep(ok,stepOf(cur));
   if(ok){delete wrong[key];advance()}
   else{wrong[key]=1;var fb=document.getElementById("fb");
     if(fb&&!fb.querySelector(".msg"))fb.insertAdjacentHTML("afterbegin",'<div class="msg no">Not quite. Have another go.</div>');
@@ -462,6 +535,7 @@ function checkNum(){var s=Q[cur].steps[stepOf(cur)],v=num(document.getElementByI
 
 document.addEventListener("click",function(e){
   var t=e.target.closest("button");if(!t)return;
+  if(flowClick(t))return;
   if(t.dataset.i!==undefined){cur=+t.dataset.i;render();return}
   if(t.dataset.c!==undefined){attempt(+t.dataset.c===Q[cur].steps[stepOf(cur)].a);return}
   if(t.id==="chk"){checkNum();return}
@@ -470,5 +544,5 @@ document.addEventListener("click",function(e){
   if(t.id==="redo"){prog[Q[cur].id]=0;save();render();return}
   if(t.id==="reset"){prog={};save();cur=0;render();}});
 document.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.id==="ans")checkNum()});
-load();render();
+loadAcct();load();render();
 </script>
